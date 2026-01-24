@@ -1,0 +1,12 @@
+includes:
+ - useless.yaml
+ - cm7.yaml
+ - imxrt1064/renames.yaml
+ - imxrt/adc_hc_r.yaml
+ - imxrt/iomuxc.yaml
+ - imxrt/gpio.yaml
+ - imxrt/dma.yaml
+ - imxrt/pit.yaml
+ - imxrt/lpuart.yaml
+transforms:
+  - !Sort
