@@ -1,0 +1,99 @@
+transforms:
+  # Pick a prototype Pcr register and apply it to all ports for all Pcr registers.
+  # Some ports do not have some Pcr registers, but we will ignore that in the PAC and fix that in the HAL.
+  - !Rename
+    from: port0::regs::Pcr2
+    to: port::regs::Pcr
+
+  - !ModifyRegisters
+    blocks: port(\d+)::Port(\d+)
+    registers: pcr(\d+)
+    fieldset: port::regs::Pcr
+
+  - !DeleteFieldsets
+    from: port(\d+)::regs::Pcr(\d+)
+
+  # Roughly merge all port blocks together.
+  - !MergeBlocks
+    from: port(\d+)::Port(\d+)
+    to: port0::Port0
+    main: port0::Port0
+    check: Layout
+
+  - !Rename
+    from: port0::(.*)
+    to: port::$1
+    type: All
+
+  - !Rename
+    from: port::Port0
+    to: port::Port
+    type: Block
+
+  - !Delete
+    from: port(\d+)::(.*)
+
+    # Merge all Mux into the most capable variant of it with bitsize = 4.
+    # Pcr 0, 1 and 7 have a smaller Mux set for ports 0 and 4.
+    # In the HAL we will enforce this constraint, but for the PAC this only makes the types more complex.
+  - !DeleteEnums
+    from: port::vals::Pcr(\d+)Mux
+    bit_size: 3
+  - !MergeEnums
+    from: port::vals::Pcr(\d+)Mux
+    to: port::vals::Mux
+
+  - !DeleteEnumVariants
+    enum: port::vals::Mux
+    from: .*
+  
+  - !AddEnumVariants
+    enum: port::vals::Mux
+    variants:
+    - { name: MUX0, value: 0 }
+    - { name: MUX1, value: 1 }
+    - { name: MUX2, value: 2 }
+    - { name: MUX3, value: 3 }
+    - { name: MUX4, value: 4 }
+    - { name: MUX5, value: 5 }
+    - { name: MUX6, value: 6 }
+    - { name: MUX7, value: 7 }
+    - { name: MUX8, value: 8 }
+    - { name: MUX9, value: 9 }
+    - { name: MUX10, value: 10 }
+    - { name: MUX11, value: 11 }
+    - { name: MUX12, value: 12 }
+    - { name: MUX13, value: 13 }
+
+  - !MergeEnums
+    from: port::vals::Gpwe(\d+)
+    to: port::vals::Gpwe
+
+  # Delete uncommon fields that we will not expose in the HAL regardless.
+  # In the future, you may consider re-adding them.
+  - !DeleteFields
+    fieldset: port::regs::Pcr(\d+)
+    from: (dse1|pfe|pv)
+
+  - !DeleteEnums
+    from: port::vals::Pcr(\d+)(Dse1|Pfe)
+  - !DeleteEnums
+    from: port::vals::Pv
+
+  - !MergeEnums
+    from: port::vals::Pcr(\d+)(.+)
+    to: port::vals::$2
+
+  - !MergeFieldsets
+    from: port::regs::Pcr(\d+)
+    to: port::regs::Pcr
+
+  - !MakeRegisterArray
+    blocks: port::Port
+    from: pcr(\d+)
+    to: pcr
+
+  - !MakeFieldArray
+    fieldsets: port::regs::Gpc(l|h)r
+    from: gpwe(\d+)
+    to: gpwe

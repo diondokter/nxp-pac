@@ -1,0 +1,52 @@
+transforms:
+  - !Rename
+    from: hsadc::(.*)
+    to: adc::$1
+    type: All
+  
+  - !Rename
+    from: adc::Hsadc
+    to: adc::Adc
+    type: Block
+
+  - !AddPeripherals
+    devices: .*
+    peripherals:
+      - name: ADC2
+        base_address: 0x400f0000
+        block: adc::Adc
+
+  - !AddPeripherals
+    devices: .*
+    peripherals:
+      - name: ADC3
+        base_address: 0x400f1000
+        block: adc::Adc
+
+  - !MergeEnums
+    from: adc::vals::Cmdl(\d+)(.+)
+    to: adc::vals::$2
+
+  - !MergeFieldsets
+    from: adc::regs::Cmdl(\d+)
+    to: adc::regs::Cmdl
+
+  - !MergeEnums
+    from: adc::vals::Cmdh(\d+)(.+)
+    to: adc::vals::$2
+
+  - !MergeFieldsets
+    from: adc::regs::Cmdh(\d+)
+    to: adc::regs::Cmdh
+  
+  - !DeleteEnums
+    from: adc::vals::Swt(\d+)
+
+  # ADC channel select is not correct at all, better use bare u8.
+  - !DeleteEnums
+    from: adc::vals::Adch
+
+  - !MakeFieldArray
+    fieldsets: adc::regs::Swtrig
+    from: swt(\d+)
+    to: swt

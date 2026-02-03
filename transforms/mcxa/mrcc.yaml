@@ -1,0 +1,22 @@
+transforms:
+  - !MergeEnums
+    from: mrcc0::vals::Mrcc(.+)(\d+)(.+)
+    to: mrcc0::vals::Mrcc$3
+    skip_unmergeable: true
+  
+  # Merge unmergeable per number, but keep the group intact.
+  - !MergeEnums
+    from: mrcc0::vals::Mrcc(.+)(\d+)(.+)
+    to: mrcc0::vals::Mrcc$1$3
+
+  - !MergeEnums
+    from: mrcc0::vals::Mrcc(.*)(\d*)(ClkdivReset|ClkdivHalt|ClkdivUnstab)
+    to: mrcc0::vals::Mrcc$3
+
+  - !Rename
+    from: mrcc0::vals::Mrcc(.+)
+    to: mrcc0::vals::$1
+
+  - !MergeFieldsets
+    from: mrcc0::regs::Mrcc(.+)(\d+)(.+)
+    to: mrcc0::regs::$1$3

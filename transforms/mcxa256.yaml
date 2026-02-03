@@ -1,0 +1,26 @@
+includes:
+  - cm33.yaml
+  - useless.yaml
+  - mcxa/mrcc.yaml
+  - mcxa/port.yaml
+  - mcxa/gpio.yaml
+  - mcxa/dma.yaml
+  - mcxa/wwdt.yaml
+  - mcxa/trng.yaml
+  - mcxa/adc.yaml
+  - mcxa/crc.yaml
+  - mcxa/lpi2c.yaml
+  - mcxa/lpuart.yaml
+  - mcxa/rtc.yaml
+  - mcxa/ostimer.yaml
+  - mcxa/scg.yaml
+  - mcxa/spc.yaml
+  - mcxa/cdog.yaml
+  - mcxa/i3c.yaml
+  - mcxa/can.yaml
+  - mcxa/mbc.yaml
+  - mcxa/inputmux.yaml
+  - mcxa/flexpwm.yaml
+  - remove-suffix.yaml
+transforms:
+  - !Sort
