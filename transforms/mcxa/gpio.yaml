@@ -11,7 +11,7 @@ transforms:
     type: All
 
   - !DeleteEnums
-    from: gpio::vals::(Ptto|Pdi)(\d+)
+    from: gpio::vals::(Ptto|Pdi|Pdo)(\d+)
 
   - !MergeEnums
     from: gpio::vals::(Pdd|Pid|Ptso|Ptco)(\d+)
@@ -46,3 +46,8 @@ transforms:
     fieldsets: gpio::regs::Pdir
     from: pdi(\d+)
     to: pdi
+
+  - !MakeFieldArray
+    fieldsets: gpio::regs::Pdor
+    from: pdo(\d+)
+    to: pdo

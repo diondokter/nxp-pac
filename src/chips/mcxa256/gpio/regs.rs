@@ -1424,386 +1424,18 @@ impl Pdor {
     #[doc = "Port Data Output"]
     #[must_use]
     #[inline(always)]
-    pub const fn pdo0(&self) -> super::vals::Pdo0 {
-        let val = (self.0 >> 0usize) & 0x01;
-        super::vals::Pdo0::from_bits(val as u8)
+    pub const fn pdo(&self, n: usize) -> bool {
+        assert!(n < 32usize);
+        let offs = 0usize + n * 1usize;
+        let val = (self.0 >> offs) & 0x01;
+        val != 0
     }
     #[doc = "Port Data Output"]
     #[inline(always)]
-    pub const fn set_pdo0(&mut self, val: super::vals::Pdo0) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
-    }
-    #[doc = "Port Data Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdo1(&self) -> super::vals::Pdo1 {
-        let val = (self.0 >> 1usize) & 0x01;
-        super::vals::Pdo1::from_bits(val as u8)
-    }
-    #[doc = "Port Data Output"]
-    #[inline(always)]
-    pub const fn set_pdo1(&mut self, val: super::vals::Pdo1) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
-    }
-    #[doc = "Port Data Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdo2(&self) -> super::vals::Pdo2 {
-        let val = (self.0 >> 2usize) & 0x01;
-        super::vals::Pdo2::from_bits(val as u8)
-    }
-    #[doc = "Port Data Output"]
-    #[inline(always)]
-    pub const fn set_pdo2(&mut self, val: super::vals::Pdo2) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
-    }
-    #[doc = "Port Data Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdo3(&self) -> super::vals::Pdo3 {
-        let val = (self.0 >> 3usize) & 0x01;
-        super::vals::Pdo3::from_bits(val as u8)
-    }
-    #[doc = "Port Data Output"]
-    #[inline(always)]
-    pub const fn set_pdo3(&mut self, val: super::vals::Pdo3) {
-        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
-    }
-    #[doc = "Port Data Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdo4(&self) -> super::vals::Pdo4 {
-        let val = (self.0 >> 4usize) & 0x01;
-        super::vals::Pdo4::from_bits(val as u8)
-    }
-    #[doc = "Port Data Output"]
-    #[inline(always)]
-    pub const fn set_pdo4(&mut self, val: super::vals::Pdo4) {
-        self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
-    }
-    #[doc = "Port Data Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdo5(&self) -> super::vals::Pdo5 {
-        let val = (self.0 >> 5usize) & 0x01;
-        super::vals::Pdo5::from_bits(val as u8)
-    }
-    #[doc = "Port Data Output"]
-    #[inline(always)]
-    pub const fn set_pdo5(&mut self, val: super::vals::Pdo5) {
-        self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
-    }
-    #[doc = "Port Data Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdo6(&self) -> super::vals::Pdo6 {
-        let val = (self.0 >> 6usize) & 0x01;
-        super::vals::Pdo6::from_bits(val as u8)
-    }
-    #[doc = "Port Data Output"]
-    #[inline(always)]
-    pub const fn set_pdo6(&mut self, val: super::vals::Pdo6) {
-        self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
-    }
-    #[doc = "Port Data Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdo7(&self) -> super::vals::Pdo7 {
-        let val = (self.0 >> 7usize) & 0x01;
-        super::vals::Pdo7::from_bits(val as u8)
-    }
-    #[doc = "Port Data Output"]
-    #[inline(always)]
-    pub const fn set_pdo7(&mut self, val: super::vals::Pdo7) {
-        self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
-    }
-    #[doc = "Port Data Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdo8(&self) -> super::vals::Pdo8 {
-        let val = (self.0 >> 8usize) & 0x01;
-        super::vals::Pdo8::from_bits(val as u8)
-    }
-    #[doc = "Port Data Output"]
-    #[inline(always)]
-    pub const fn set_pdo8(&mut self, val: super::vals::Pdo8) {
-        self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
-    }
-    #[doc = "Port Data Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdo9(&self) -> super::vals::Pdo9 {
-        let val = (self.0 >> 9usize) & 0x01;
-        super::vals::Pdo9::from_bits(val as u8)
-    }
-    #[doc = "Port Data Output"]
-    #[inline(always)]
-    pub const fn set_pdo9(&mut self, val: super::vals::Pdo9) {
-        self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
-    }
-    #[doc = "Port Data Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdo10(&self) -> super::vals::Pdo10 {
-        let val = (self.0 >> 10usize) & 0x01;
-        super::vals::Pdo10::from_bits(val as u8)
-    }
-    #[doc = "Port Data Output"]
-    #[inline(always)]
-    pub const fn set_pdo10(&mut self, val: super::vals::Pdo10) {
-        self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
-    }
-    #[doc = "Port Data Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdo11(&self) -> super::vals::Pdo11 {
-        let val = (self.0 >> 11usize) & 0x01;
-        super::vals::Pdo11::from_bits(val as u8)
-    }
-    #[doc = "Port Data Output"]
-    #[inline(always)]
-    pub const fn set_pdo11(&mut self, val: super::vals::Pdo11) {
-        self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
-    }
-    #[doc = "Port Data Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdo12(&self) -> super::vals::Pdo12 {
-        let val = (self.0 >> 12usize) & 0x01;
-        super::vals::Pdo12::from_bits(val as u8)
-    }
-    #[doc = "Port Data Output"]
-    #[inline(always)]
-    pub const fn set_pdo12(&mut self, val: super::vals::Pdo12) {
-        self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
-    }
-    #[doc = "Port Data Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdo13(&self) -> super::vals::Pdo13 {
-        let val = (self.0 >> 13usize) & 0x01;
-        super::vals::Pdo13::from_bits(val as u8)
-    }
-    #[doc = "Port Data Output"]
-    #[inline(always)]
-    pub const fn set_pdo13(&mut self, val: super::vals::Pdo13) {
-        self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
-    }
-    #[doc = "Port Data Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdo14(&self) -> super::vals::Pdo14 {
-        let val = (self.0 >> 14usize) & 0x01;
-        super::vals::Pdo14::from_bits(val as u8)
-    }
-    #[doc = "Port Data Output"]
-    #[inline(always)]
-    pub const fn set_pdo14(&mut self, val: super::vals::Pdo14) {
-        self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
-    }
-    #[doc = "Port Data Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdo15(&self) -> super::vals::Pdo15 {
-        let val = (self.0 >> 15usize) & 0x01;
-        super::vals::Pdo15::from_bits(val as u8)
-    }
-    #[doc = "Port Data Output"]
-    #[inline(always)]
-    pub const fn set_pdo15(&mut self, val: super::vals::Pdo15) {
-        self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
-    }
-    #[doc = "Port Data Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdo16(&self) -> super::vals::Pdo16 {
-        let val = (self.0 >> 16usize) & 0x01;
-        super::vals::Pdo16::from_bits(val as u8)
-    }
-    #[doc = "Port Data Output"]
-    #[inline(always)]
-    pub const fn set_pdo16(&mut self, val: super::vals::Pdo16) {
-        self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
-    }
-    #[doc = "Port Data Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdo17(&self) -> super::vals::Pdo17 {
-        let val = (self.0 >> 17usize) & 0x01;
-        super::vals::Pdo17::from_bits(val as u8)
-    }
-    #[doc = "Port Data Output"]
-    #[inline(always)]
-    pub const fn set_pdo17(&mut self, val: super::vals::Pdo17) {
-        self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
-    }
-    #[doc = "Port Data Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdo18(&self) -> super::vals::Pdo18 {
-        let val = (self.0 >> 18usize) & 0x01;
-        super::vals::Pdo18::from_bits(val as u8)
-    }
-    #[doc = "Port Data Output"]
-    #[inline(always)]
-    pub const fn set_pdo18(&mut self, val: super::vals::Pdo18) {
-        self.0 = (self.0 & !(0x01 << 18usize)) | (((val.to_bits() as u32) & 0x01) << 18usize);
-    }
-    #[doc = "Port Data Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdo19(&self) -> super::vals::Pdo19 {
-        let val = (self.0 >> 19usize) & 0x01;
-        super::vals::Pdo19::from_bits(val as u8)
-    }
-    #[doc = "Port Data Output"]
-    #[inline(always)]
-    pub const fn set_pdo19(&mut self, val: super::vals::Pdo19) {
-        self.0 = (self.0 & !(0x01 << 19usize)) | (((val.to_bits() as u32) & 0x01) << 19usize);
-    }
-    #[doc = "Port Data Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdo20(&self) -> super::vals::Pdo20 {
-        let val = (self.0 >> 20usize) & 0x01;
-        super::vals::Pdo20::from_bits(val as u8)
-    }
-    #[doc = "Port Data Output"]
-    #[inline(always)]
-    pub const fn set_pdo20(&mut self, val: super::vals::Pdo20) {
-        self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
-    }
-    #[doc = "Port Data Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdo21(&self) -> super::vals::Pdo21 {
-        let val = (self.0 >> 21usize) & 0x01;
-        super::vals::Pdo21::from_bits(val as u8)
-    }
-    #[doc = "Port Data Output"]
-    #[inline(always)]
-    pub const fn set_pdo21(&mut self, val: super::vals::Pdo21) {
-        self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
-    }
-    #[doc = "Port Data Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdo22(&self) -> super::vals::Pdo22 {
-        let val = (self.0 >> 22usize) & 0x01;
-        super::vals::Pdo22::from_bits(val as u8)
-    }
-    #[doc = "Port Data Output"]
-    #[inline(always)]
-    pub const fn set_pdo22(&mut self, val: super::vals::Pdo22) {
-        self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
-    }
-    #[doc = "Port Data Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdo23(&self) -> super::vals::Pdo23 {
-        let val = (self.0 >> 23usize) & 0x01;
-        super::vals::Pdo23::from_bits(val as u8)
-    }
-    #[doc = "Port Data Output"]
-    #[inline(always)]
-    pub const fn set_pdo23(&mut self, val: super::vals::Pdo23) {
-        self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
-    }
-    #[doc = "Port Data Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdo24(&self) -> super::vals::Pdo24 {
-        let val = (self.0 >> 24usize) & 0x01;
-        super::vals::Pdo24::from_bits(val as u8)
-    }
-    #[doc = "Port Data Output"]
-    #[inline(always)]
-    pub const fn set_pdo24(&mut self, val: super::vals::Pdo24) {
-        self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
-    }
-    #[doc = "Port Data Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdo25(&self) -> super::vals::Pdo25 {
-        let val = (self.0 >> 25usize) & 0x01;
-        super::vals::Pdo25::from_bits(val as u8)
-    }
-    #[doc = "Port Data Output"]
-    #[inline(always)]
-    pub const fn set_pdo25(&mut self, val: super::vals::Pdo25) {
-        self.0 = (self.0 & !(0x01 << 25usize)) | (((val.to_bits() as u32) & 0x01) << 25usize);
-    }
-    #[doc = "Port Data Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdo26(&self) -> super::vals::Pdo26 {
-        let val = (self.0 >> 26usize) & 0x01;
-        super::vals::Pdo26::from_bits(val as u8)
-    }
-    #[doc = "Port Data Output"]
-    #[inline(always)]
-    pub const fn set_pdo26(&mut self, val: super::vals::Pdo26) {
-        self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
-    }
-    #[doc = "Port Data Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdo27(&self) -> super::vals::Pdo27 {
-        let val = (self.0 >> 27usize) & 0x01;
-        super::vals::Pdo27::from_bits(val as u8)
-    }
-    #[doc = "Port Data Output"]
-    #[inline(always)]
-    pub const fn set_pdo27(&mut self, val: super::vals::Pdo27) {
-        self.0 = (self.0 & !(0x01 << 27usize)) | (((val.to_bits() as u32) & 0x01) << 27usize);
-    }
-    #[doc = "Port Data Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdo28(&self) -> super::vals::Pdo28 {
-        let val = (self.0 >> 28usize) & 0x01;
-        super::vals::Pdo28::from_bits(val as u8)
-    }
-    #[doc = "Port Data Output"]
-    #[inline(always)]
-    pub const fn set_pdo28(&mut self, val: super::vals::Pdo28) {
-        self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
-    }
-    #[doc = "Port Data Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdo29(&self) -> super::vals::Pdo29 {
-        let val = (self.0 >> 29usize) & 0x01;
-        super::vals::Pdo29::from_bits(val as u8)
-    }
-    #[doc = "Port Data Output"]
-    #[inline(always)]
-    pub const fn set_pdo29(&mut self, val: super::vals::Pdo29) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
-    }
-    #[doc = "Port Data Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdo30(&self) -> super::vals::Pdo30 {
-        let val = (self.0 >> 30usize) & 0x01;
-        super::vals::Pdo30::from_bits(val as u8)
-    }
-    #[doc = "Port Data Output"]
-    #[inline(always)]
-    pub const fn set_pdo30(&mut self, val: super::vals::Pdo30) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
-    }
-    #[doc = "Port Data Output"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pdo31(&self) -> super::vals::Pdo31 {
-        let val = (self.0 >> 31usize) & 0x01;
-        super::vals::Pdo31::from_bits(val as u8)
-    }
-    #[doc = "Port Data Output"]
-    #[inline(always)]
-    pub const fn set_pdo31(&mut self, val: super::vals::Pdo31) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
+    pub const fn set_pdo(&mut self, n: usize, val: bool) {
+        assert!(n < 32usize);
+        let offs = 0usize + n * 1usize;
+        self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
     }
 }
 impl Default for Pdor {
@@ -1815,38 +1447,38 @@ impl Default for Pdor {
 impl core::fmt::Debug for Pdor {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Pdor")
-            .field("pdo0", &self.pdo0())
-            .field("pdo1", &self.pdo1())
-            .field("pdo2", &self.pdo2())
-            .field("pdo3", &self.pdo3())
-            .field("pdo4", &self.pdo4())
-            .field("pdo5", &self.pdo5())
-            .field("pdo6", &self.pdo6())
-            .field("pdo7", &self.pdo7())
-            .field("pdo8", &self.pdo8())
-            .field("pdo9", &self.pdo9())
-            .field("pdo10", &self.pdo10())
-            .field("pdo11", &self.pdo11())
-            .field("pdo12", &self.pdo12())
-            .field("pdo13", &self.pdo13())
-            .field("pdo14", &self.pdo14())
-            .field("pdo15", &self.pdo15())
-            .field("pdo16", &self.pdo16())
-            .field("pdo17", &self.pdo17())
-            .field("pdo18", &self.pdo18())
-            .field("pdo19", &self.pdo19())
-            .field("pdo20", &self.pdo20())
-            .field("pdo21", &self.pdo21())
-            .field("pdo22", &self.pdo22())
-            .field("pdo23", &self.pdo23())
-            .field("pdo24", &self.pdo24())
-            .field("pdo25", &self.pdo25())
-            .field("pdo26", &self.pdo26())
-            .field("pdo27", &self.pdo27())
-            .field("pdo28", &self.pdo28())
-            .field("pdo29", &self.pdo29())
-            .field("pdo30", &self.pdo30())
-            .field("pdo31", &self.pdo31())
+            .field("pdo[0]", &self.pdo(0usize))
+            .field("pdo[1]", &self.pdo(1usize))
+            .field("pdo[2]", &self.pdo(2usize))
+            .field("pdo[3]", &self.pdo(3usize))
+            .field("pdo[4]", &self.pdo(4usize))
+            .field("pdo[5]", &self.pdo(5usize))
+            .field("pdo[6]", &self.pdo(6usize))
+            .field("pdo[7]", &self.pdo(7usize))
+            .field("pdo[8]", &self.pdo(8usize))
+            .field("pdo[9]", &self.pdo(9usize))
+            .field("pdo[10]", &self.pdo(10usize))
+            .field("pdo[11]", &self.pdo(11usize))
+            .field("pdo[12]", &self.pdo(12usize))
+            .field("pdo[13]", &self.pdo(13usize))
+            .field("pdo[14]", &self.pdo(14usize))
+            .field("pdo[15]", &self.pdo(15usize))
+            .field("pdo[16]", &self.pdo(16usize))
+            .field("pdo[17]", &self.pdo(17usize))
+            .field("pdo[18]", &self.pdo(18usize))
+            .field("pdo[19]", &self.pdo(19usize))
+            .field("pdo[20]", &self.pdo(20usize))
+            .field("pdo[21]", &self.pdo(21usize))
+            .field("pdo[22]", &self.pdo(22usize))
+            .field("pdo[23]", &self.pdo(23usize))
+            .field("pdo[24]", &self.pdo(24usize))
+            .field("pdo[25]", &self.pdo(25usize))
+            .field("pdo[26]", &self.pdo(26usize))
+            .field("pdo[27]", &self.pdo(27usize))
+            .field("pdo[28]", &self.pdo(28usize))
+            .field("pdo[29]", &self.pdo(29usize))
+            .field("pdo[30]", &self.pdo(30usize))
+            .field("pdo[31]", &self.pdo(31usize))
             .finish()
     }
 }
@@ -1855,39 +1487,39 @@ impl defmt::Format for Pdor {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Pdor {{ pdo0: {:?}, pdo1: {:?}, pdo2: {:?}, pdo3: {:?}, pdo4: {:?}, pdo5: {:?}, pdo6: {:?}, pdo7: {:?}, pdo8: {:?}, pdo9: {:?}, pdo10: {:?}, pdo11: {:?}, pdo12: {:?}, pdo13: {:?}, pdo14: {:?}, pdo15: {:?}, pdo16: {:?}, pdo17: {:?}, pdo18: {:?}, pdo19: {:?}, pdo20: {:?}, pdo21: {:?}, pdo22: {:?}, pdo23: {:?}, pdo24: {:?}, pdo25: {:?}, pdo26: {:?}, pdo27: {:?}, pdo28: {:?}, pdo29: {:?}, pdo30: {:?}, pdo31: {:?} }}",
-            self.pdo0(),
-            self.pdo1(),
-            self.pdo2(),
-            self.pdo3(),
-            self.pdo4(),
-            self.pdo5(),
-            self.pdo6(),
-            self.pdo7(),
-            self.pdo8(),
-            self.pdo9(),
-            self.pdo10(),
-            self.pdo11(),
-            self.pdo12(),
-            self.pdo13(),
-            self.pdo14(),
-            self.pdo15(),
-            self.pdo16(),
-            self.pdo17(),
-            self.pdo18(),
-            self.pdo19(),
-            self.pdo20(),
-            self.pdo21(),
-            self.pdo22(),
-            self.pdo23(),
-            self.pdo24(),
-            self.pdo25(),
-            self.pdo26(),
-            self.pdo27(),
-            self.pdo28(),
-            self.pdo29(),
-            self.pdo30(),
-            self.pdo31()
+            "Pdor {{ pdo[0]: {=bool:?}, pdo[1]: {=bool:?}, pdo[2]: {=bool:?}, pdo[3]: {=bool:?}, pdo[4]: {=bool:?}, pdo[5]: {=bool:?}, pdo[6]: {=bool:?}, pdo[7]: {=bool:?}, pdo[8]: {=bool:?}, pdo[9]: {=bool:?}, pdo[10]: {=bool:?}, pdo[11]: {=bool:?}, pdo[12]: {=bool:?}, pdo[13]: {=bool:?}, pdo[14]: {=bool:?}, pdo[15]: {=bool:?}, pdo[16]: {=bool:?}, pdo[17]: {=bool:?}, pdo[18]: {=bool:?}, pdo[19]: {=bool:?}, pdo[20]: {=bool:?}, pdo[21]: {=bool:?}, pdo[22]: {=bool:?}, pdo[23]: {=bool:?}, pdo[24]: {=bool:?}, pdo[25]: {=bool:?}, pdo[26]: {=bool:?}, pdo[27]: {=bool:?}, pdo[28]: {=bool:?}, pdo[29]: {=bool:?}, pdo[30]: {=bool:?}, pdo[31]: {=bool:?} }}",
+            self.pdo(0usize),
+            self.pdo(1usize),
+            self.pdo(2usize),
+            self.pdo(3usize),
+            self.pdo(4usize),
+            self.pdo(5usize),
+            self.pdo(6usize),
+            self.pdo(7usize),
+            self.pdo(8usize),
+            self.pdo(9usize),
+            self.pdo(10usize),
+            self.pdo(11usize),
+            self.pdo(12usize),
+            self.pdo(13usize),
+            self.pdo(14usize),
+            self.pdo(15usize),
+            self.pdo(16usize),
+            self.pdo(17usize),
+            self.pdo(18usize),
+            self.pdo(19usize),
+            self.pdo(20usize),
+            self.pdo(21usize),
+            self.pdo(22usize),
+            self.pdo(23usize),
+            self.pdo(24usize),
+            self.pdo(25usize),
+            self.pdo(26usize),
+            self.pdo(27usize),
+            self.pdo(28usize),
+            self.pdo(29usize),
+            self.pdo(30usize),
+            self.pdo(31usize)
         )
     }
 }
