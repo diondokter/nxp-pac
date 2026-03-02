@@ -1,4 +1,5 @@
 unsafe extern "C" {
+    fn RESERVED16();
     fn CMC();
     fn DMA0_CH0();
     fn DMA0_CH1();
@@ -69,14 +70,20 @@ unsafe extern "C" {
     fn LPSPI5();
     fn LPI2C4();
     fn I3C3();
+    fn USB1_HS();
+    fn USB1_HS_PHY();
     fn FLEXSPI0();
+    fn SMARTDMA();
     fn CDOG1();
     fn PKC();
     fn SGI();
     fn SPI_FILTER();
     fn TRNG0();
     fn SECURE_ERR();
+    fn SEC_HYPERVISOR_CALL();
     fn RTC();
+    fn GDET();
+    fn EWM0();
     fn TSI_END_OF_SCAN();
     fn TSI_OUT_OF_SCAN();
     fn GPIO0_1();
@@ -102,7 +109,9 @@ pub union Vector {
 #[unsafe(link_section = ".vector_table.interrupts")]
 #[unsafe(no_mangle)]
 pub static __INTERRUPTS: [Vector; 146] = [
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: RESERVED16,
+    },
     Vector { _handler: CMC },
     Vector { _handler: DMA0_CH0 },
     Vector { _handler: DMA0_CH1 },
@@ -215,12 +224,14 @@ pub static __INTERRUPTS: [Vector; 146] = [
     Vector { _handler: LPI2C4 },
     Vector { _handler: I3C3 },
     Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector { _handler: USB1_HS },
+    Vector {
+        _handler: USB1_HS_PHY,
+    },
     Vector { _reserved: 0 },
     Vector { _handler: FLEXSPI0 },
     Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector { _handler: SMARTDMA },
     Vector { _handler: CDOG1 },
     Vector { _handler: PKC },
     Vector { _handler: SGI },
@@ -231,15 +242,17 @@ pub static __INTERRUPTS: [Vector; 146] = [
     Vector {
         _handler: SECURE_ERR,
     },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: SEC_HYPERVISOR_CALL,
+    },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _handler: RTC },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector { _handler: GDET },
+    Vector { _handler: EWM0 },
     Vector {
         _handler: TSI_END_OF_SCAN,
     },

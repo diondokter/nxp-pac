@@ -4,6 +4,8 @@
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Interrupt {
+    #[doc = "0 - RESERVED16"]
+    RESERVED16 = 0,
     #[doc = "1 - CMC"]
     CMC = 1,
     #[doc = "2 - DMA0_CH0"]
@@ -144,8 +146,14 @@ pub enum Interrupt {
     LPI2C4 = 100,
     #[doc = "101 - I3C3"]
     I3C3 = 101,
+    #[doc = "103 - USB1_HS"]
+    USB1_HS = 103,
+    #[doc = "104 - USB1_HS_PHY"]
+    USB1_HS_PHY = 104,
     #[doc = "106 - FLEXSPI0"]
     FLEXSPI0 = 106,
+    #[doc = "108 - SMARTDMA"]
+    SMARTDMA = 108,
     #[doc = "109 - CDOG1"]
     CDOG1 = 109,
     #[doc = "110 - PKC"]
@@ -158,8 +166,14 @@ pub enum Interrupt {
     TRNG0 = 113,
     #[doc = "114 - SECURE_ERR"]
     SECURE_ERR = 114,
+    #[doc = "115 - SEC_HYPERVISOR_CALL"]
+    SEC_HYPERVISOR_CALL = 115,
     #[doc = "119 - RTC"]
     RTC = 119,
+    #[doc = "122 - GDET"]
+    GDET = 122,
+    #[doc = "123 - EWM0"]
+    EWM0 = 123,
     #[doc = "124 - TSI_END_OF_SCAN"]
     TSI_END_OF_SCAN = 124,
     #[doc = "125 - TSI_OUT_OF_SCAN"]
@@ -420,6 +434,8 @@ pub const UDF0: udf::Udf = unsafe { udf::Udf::from_ptr(0x400e_d000usize as _) };
 pub const RTC0: rtc::Rtc = unsafe { rtc::Rtc::from_ptr(0x400e_e000usize as _) };
 pub const ADC2: adc::Adc = unsafe { adc::Adc::from_ptr(0x400f_0000usize as _) };
 pub const ADC3: adc::Adc = unsafe { adc::Adc::from_ptr(0x400f_1000usize as _) };
+#[doc = "System Control not in System Control Block"]
+pub const SCNSCB: scn_scb::ScnScb = unsafe { scn_scb::ScnScb::from_ptr(0xe000_e000usize as _) };
 #[doc = r" Number available in the NVIC for configuring priority"]
 #[cfg(feature = "rt")]
 pub const NVIC_PRIO_BITS: u8 = 3;
@@ -476,6 +492,7 @@ pub mod pkc;
 pub mod port;
 pub mod rtc;
 pub mod scg;
+pub mod scn_scb;
 pub mod seccon;
 pub mod sgi;
 pub mod smartdma;
