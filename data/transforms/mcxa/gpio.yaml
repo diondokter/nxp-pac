@@ -51,3 +51,12 @@ transforms:
     fieldsets: gpio::regs::Pdor
     from: pdo(\d+)
     to: pdo
+
+  - !MakeRegisterArray
+    blocks: gpio::Gpio
+    from: isfr(\d+)
+    to: isfr
+
+  - !MergeFieldsets
+    from: gpio::regs::Isfr\d
+    to: gpio::regs::Isfr

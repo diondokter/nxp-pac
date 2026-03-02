@@ -83,8 +83,11 @@ impl Gpio {
     }
     #[doc = "Interrupt Status Flag"]
     #[inline(always)]
-    pub const fn isfr0(self) -> crate::common::Reg<regs::Isfr0, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0120usize) as _) }
+    pub const fn isfr(self, n: usize) -> crate::common::Reg<regs::Isfr, crate::common::RW> {
+        assert!(n < 1usize);
+        unsafe {
+            crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0120usize + n * 0usize) as _)
+        }
     }
 }
 pub mod regs;
