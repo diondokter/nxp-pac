@@ -586,8 +586,8 @@ impl defmt::Format for Icr {
 #[doc = "Interrupt Status Flag"]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Isfr0(pub u32);
-impl Isfr0 {
+pub struct Isfr(pub u32);
+impl Isfr {
     #[doc = "Interrupt Status Flag"]
     #[must_use]
     #[inline(always)]
@@ -973,15 +973,15 @@ impl Isfr0 {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
     }
 }
-impl Default for Isfr0 {
+impl Default for Isfr {
     #[inline(always)]
-    fn default() -> Isfr0 {
-        Isfr0(0)
+    fn default() -> Isfr {
+        Isfr(0)
     }
 }
-impl core::fmt::Debug for Isfr0 {
+impl core::fmt::Debug for Isfr {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Isfr0")
+        f.debug_struct("Isfr")
             .field("isf0", &self.isf0())
             .field("isf1", &self.isf1())
             .field("isf2", &self.isf2())
@@ -1018,11 +1018,11 @@ impl core::fmt::Debug for Isfr0 {
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for Isfr0 {
+impl defmt::Format for Isfr {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Isfr0 {{ isf0: {:?}, isf1: {:?}, isf2: {:?}, isf3: {:?}, isf4: {:?}, isf5: {:?}, isf6: {:?}, isf7: {:?}, isf8: {:?}, isf9: {:?}, isf10: {:?}, isf11: {:?}, isf12: {:?}, isf13: {:?}, isf14: {:?}, isf15: {:?}, isf16: {:?}, isf17: {:?}, isf18: {:?}, isf19: {:?}, isf20: {:?}, isf21: {:?}, isf22: {:?}, isf23: {:?}, isf24: {:?}, isf25: {:?}, isf26: {:?}, isf27: {:?}, isf28: {:?}, isf29: {:?}, isf30: {:?}, isf31: {:?} }}",
+            "Isfr {{ isf0: {:?}, isf1: {:?}, isf2: {:?}, isf3: {:?}, isf4: {:?}, isf5: {:?}, isf6: {:?}, isf7: {:?}, isf8: {:?}, isf9: {:?}, isf10: {:?}, isf11: {:?}, isf12: {:?}, isf13: {:?}, isf14: {:?}, isf15: {:?}, isf16: {:?}, isf17: {:?}, isf18: {:?}, isf19: {:?}, isf20: {:?}, isf21: {:?}, isf22: {:?}, isf23: {:?}, isf24: {:?}, isf25: {:?}, isf26: {:?}, isf27: {:?}, isf28: {:?}, isf29: {:?}, isf30: {:?}, isf31: {:?} }}",
             self.isf0(),
             self.isf1(),
             self.isf2(),
