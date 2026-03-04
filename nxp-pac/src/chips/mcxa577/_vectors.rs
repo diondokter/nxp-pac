@@ -95,8 +95,8 @@ unsafe extern "C" {
     fn ITRC0();
     fn DMA_CH8();
     fn DMA_CH9();
-    fn DMA0_CH10();
-    fn DMA0_CH11();
+    fn DMA_CH10();
+    fn DMA_CH11();
     fn DMA1_CH0();
     fn DMA1_CH1();
     fn DMA1_CH2();
@@ -269,12 +269,8 @@ pub static __INTERRUPTS: [Vector; 146] = [
     Vector { _handler: ITRC0 },
     Vector { _handler: DMA_CH8 },
     Vector { _handler: DMA_CH9 },
-    Vector {
-        _handler: DMA0_CH10,
-    },
-    Vector {
-        _handler: DMA0_CH11,
-    },
+    Vector { _handler: DMA_CH10 },
+    Vector { _handler: DMA_CH11 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },

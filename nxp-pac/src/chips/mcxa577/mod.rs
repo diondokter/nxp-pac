@@ -1,5 +1,6 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
+#![no_std]
 #![doc = "Peripheral access API (generated using chiptool v0.1.0 (6a8c2aa 2026-01-27))"]
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
@@ -196,10 +197,10 @@ pub enum Interrupt {
     DMA_CH8 = 134,
     #[doc = "135 - DMA_CH9"]
     DMA_CH9 = 135,
-    #[doc = "136 - DMA0_CH10"]
-    DMA0_CH10 = 136,
-    #[doc = "137 - DMA0_CH11"]
-    DMA0_CH11 = 137,
+    #[doc = "136 - DMA_CH10"]
+    DMA_CH10 = 136,
+    #[doc = "137 - DMA_CH11"]
+    DMA_CH11 = 137,
     #[doc = "142 - DMA1_CH0"]
     DMA1_CH0 = 142,
     #[doc = "143 - DMA1_CH1"]
@@ -252,8 +253,8 @@ pub const PKC0: pkc::Pkc = unsafe { pkc::Pkc::from_ptr(0x4001_2000usize as _) };
 #[doc = "DMA MP"]
 pub const DMA1: dma1::Dma1 = unsafe { dma1::Dma1::from_ptr(0x4001_3000usize as _) };
 #[doc = "DMA TCD"]
-pub const EDMA1_TCD0: edma1_tcd::Edma1Tcd =
-    unsafe { edma1_tcd::Edma1Tcd::from_ptr(0x4001_4000usize as _) };
+pub const EDMA1_TCD0: edma_1_tcd::Edma1Tcd =
+    unsafe { edma_1_tcd::Edma1Tcd::from_ptr(0x4001_4000usize as _) };
 #[doc = "no description available"]
 pub const ENET0: enet::Enet = unsafe { enet::Enet::from_ptr(0x4001_c000usize as _) };
 #[doc = "no description available"]
@@ -313,8 +314,8 @@ pub const GPIO4: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4005_0000usize as 
 #[doc = "DMA MP"]
 pub const DMA0: dma::Dma = unsafe { dma::Dma::from_ptr(0x4008_0000usize as _) };
 #[doc = "DMA TCD"]
-pub const EDMA0_TCD0: edma0_tcd::Edma0Tcd =
-    unsafe { edma0_tcd::Edma0Tcd::from_ptr(0x4008_1000usize as _) };
+pub const EDMA0_TCD0: edma_0_tcd::Edma0Tcd =
+    unsafe { edma_0_tcd::Edma0Tcd::from_ptr(0x4008_1000usize as _) };
 #[doc = "SYSCON"]
 pub const SYSCON: syscon::Syscon = unsafe { syscon::Syscon::from_ptr(0x4009_1000usize as _) };
 #[doc = "MRCC"]
@@ -456,9 +457,8 @@ pub mod dbgmailbox;
 pub mod dgdet;
 pub mod dma;
 pub mod dma1;
-pub mod edma0_tcd;
-pub mod edma1_tcd;
 pub mod edma_0_tcd;
+pub mod edma_1_tcd;
 pub mod eim;
 pub mod enet;
 pub mod enet0__eqos_dma;
