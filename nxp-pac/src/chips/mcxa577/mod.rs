@@ -223,7 +223,7 @@ pub const INPUTMUX0: inputmux::Inputmux =
 #[doc = "Improved Inter-Integrated Circuit"]
 pub const I3C0: i3c::I3c = unsafe { i3c::I3c::from_ptr(0x4000_2000usize as _) };
 #[doc = "Improved Inter-Integrated Circuit"]
-pub const I3C1: i3c1::I3c1 = unsafe { i3c1::I3c1::from_ptr(0x4000_3000usize as _) };
+pub const I3C1: i3c::I3c = unsafe { i3c::I3c::from_ptr(0x4000_3000usize as _) };
 #[doc = "Standard Counter or Timer"]
 pub const CTIMER0: ctimer::Ctimer = unsafe { ctimer::Ctimer::from_ptr(0x4000_4000usize as _) };
 #[doc = "Standard Counter or Timer"]
@@ -475,7 +475,6 @@ pub mod freqme;
 pub mod glikey;
 pub mod gpio;
 pub mod i3c;
-pub mod i3c1;
 pub mod inputmux;
 pub mod itrc;
 pub mod lpi2c;
