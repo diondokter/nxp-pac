@@ -1,0 +1,2913 @@
+block/HSADC:
+  description: ADC.
+  items:
+  - name: VERID
+    description: Version ID Register.
+    byte_offset: 0
+    access: Read
+    fieldset: VERID
+  - name: PARAM
+    description: Parameter Register.
+    byte_offset: 4
+    access: Read
+    fieldset: PARAM
+  - name: CTRL
+    description: Control Register.
+    byte_offset: 16
+    fieldset: CTRL
+  - name: STAT
+    description: Status Register.
+    byte_offset: 20
+    fieldset: STAT
+  - name: IE
+    description: Interrupt Enable Register.
+    byte_offset: 24
+    fieldset: IE
+  - name: DE
+    description: DMA Enable Register.
+    byte_offset: 28
+    fieldset: DE
+  - name: CFG
+    description: Configuration Register.
+    byte_offset: 32
+    fieldset: CFG
+  - name: PAUSE
+    description: Pause Register.
+    byte_offset: 36
+    fieldset: PAUSE
+  - name: SWTRIG
+    description: Software Trigger Register.
+    byte_offset: 52
+    fieldset: SWTRIG
+  - name: TSTAT
+    description: Trigger Status Register.
+    byte_offset: 56
+    fieldset: TSTAT
+  - name: OFSTRIM
+    description: Offset Trim Register.
+    byte_offset: 64
+    fieldset: OFSTRIM
+  - name: HSTRIM
+    description: High Speed Trim Register.
+    byte_offset: 72
+    fieldset: HSTRIM
+  - name: TCTRL
+    description: Trigger Control Register.
+    array:
+      len: 4
+      stride: 4
+    byte_offset: 160
+    fieldset: TCTRL
+  - name: FCTRL0
+    description: FIFO Control Register.
+    byte_offset: 224
+    fieldset: FCTRL0
+  - name: GCC0
+    description: Gain Calibration Control.
+    byte_offset: 240
+    access: Read
+    fieldset: GCC0
+  - name: GCR0
+    description: Gain Calculation Result.
+    byte_offset: 248
+    fieldset: GCR0
+  - name: CMDL1
+    description: Command Low Buffer Register.
+    byte_offset: 256
+    fieldset: CMDL1
+  - name: CMDH1
+    description: Command High Buffer Register.
+    byte_offset: 260
+    fieldset: CMDH1
+  - name: CMDL2
+    description: Command Low Buffer Register.
+    byte_offset: 264
+    fieldset: CMDL2
+  - name: CMDH2
+    description: Command High Buffer Register.
+    byte_offset: 268
+    fieldset: CMDH2
+  - name: CMDL3
+    description: Command Low Buffer Register.
+    byte_offset: 272
+    fieldset: CMDL3
+  - name: CMDH3
+    description: Command High Buffer Register.
+    byte_offset: 276
+    fieldset: CMDH3
+  - name: CMDL4
+    description: Command Low Buffer Register.
+    byte_offset: 280
+    fieldset: CMDL4
+  - name: CMDH4
+    description: Command High Buffer Register.
+    byte_offset: 284
+    fieldset: CMDH4
+  - name: CMDL5
+    description: Command Low Buffer Register.
+    byte_offset: 288
+    fieldset: CMDL5
+  - name: CMDH5
+    description: Command High Buffer Register.
+    byte_offset: 292
+    fieldset: CMDH5
+  - name: CMDL6
+    description: Command Low Buffer Register.
+    byte_offset: 296
+    fieldset: CMDL6
+  - name: CMDH6
+    description: Command High Buffer Register.
+    byte_offset: 300
+    fieldset: CMDH6
+  - name: CMDL7
+    description: Command Low Buffer Register.
+    byte_offset: 304
+    fieldset: CMDL7
+  - name: CMDH7
+    description: Command High Buffer Register.
+    byte_offset: 308
+    fieldset: CMDH7
+  - name: CV
+    description: Compare Value Register.
+    array:
+      len: 7
+      stride: 4
+    byte_offset: 512
+    fieldset: CV
+  - name: RESFIFO0
+    description: Data Result FIFO Register.
+    byte_offset: 768
+    access: Read
+    fieldset: RESFIFO0
+  - name: CAL_GAR
+    description: Calibration General A-Side Registers.
+    array:
+      len: 34
+      stride: 4
+    byte_offset: 1024
+    fieldset: CAL_GAR
+  - name: CFG2
+    description: Configuration 2 Register.
+    byte_offset: 4088
+    fieldset: CFG2
+fieldset/CAL_GAR:
+  description: Calibration General A-Side Registers.
+  fields:
+  - name: CAL_GAR_VAL
+    description: Calibration General A Side Register Element.
+    bit_offset: 0
+    bit_size: 16
+fieldset/CFG:
+  description: Configuration Register.
+  fields:
+  - name: TPRICTRL
+    description: ADC Trigger Priority Control.
+    bit_offset: 0
+    bit_size: 2
+    enum: TPRICTRL
+  - name: PWRSEL
+    description: Power Configuration Select.
+    bit_offset: 5
+    bit_size: 1
+    enum: PWRSEL
+  - name: REFSEL
+    description: Voltage Reference Selection.
+    bit_offset: 6
+    bit_size: 2
+    enum: REFSEL
+  - name: TRES
+    description: Trigger Resume Enable.
+    bit_offset: 8
+    bit_size: 1
+  - name: TCMDRES
+    description: Trigger Command Resume.
+    bit_offset: 9
+    bit_size: 1
+  - name: HPT_EXDI
+    description: High Priority Trigger Exception Disable.
+    bit_offset: 10
+    bit_size: 1
+    enum: HPT_EXDI
+  - name: PUDLY
+    description: Power Up Delay.
+    bit_offset: 16
+    bit_size: 8
+  - name: PWREN
+    description: ADC Analog Pre-Enable.
+    bit_offset: 28
+    bit_size: 1
+fieldset/CFG2:
+  description: Configuration 2 Register.
+  fields:
+  - name: JLEFT
+    description: Justified Left Enable register.
+    bit_offset: 8
+    bit_size: 1
+  - name: HS
+    description: High Speed Enable register.
+    bit_offset: 9
+    bit_size: 1
+  - name: HSEXTRA
+    description: High Speed Extra register.
+    bit_offset: 10
+    bit_size: 1
+    enum: HSEXTRA
+  - name: TUNE
+    description: Tune Mode register.
+    bit_offset: 12
+    bit_size: 2
+fieldset/CMDH1:
+  description: Command High Buffer Register.
+  fields:
+  - name: CMPEN
+    description: Compare Function Enable.
+    bit_offset: 0
+    bit_size: 2
+    enum: CMDH1_CMPEN
+  - name: WAIT_TRIG
+    description: Wait for Trigger Assertion before Execution.
+    bit_offset: 2
+    bit_size: 1
+  - name: LWI
+    description: Loop with Increment.
+    bit_offset: 7
+    bit_size: 1
+  - name: STS
+    description: Sample Time Select.
+    bit_offset: 8
+    bit_size: 3
+    enum: CMDH1_STS
+  - name: AVGS
+    description: Hardware Average Select.
+    bit_offset: 12
+    bit_size: 4
+    enum: CMDH1_AVGS
+  - name: LOOP
+    description: Loop Count Select.
+    bit_offset: 16
+    bit_size: 4
+    enum: CMDH1_LOOP
+  - name: NEXT
+    description: Next Command Select.
+    bit_offset: 24
+    bit_size: 3
+    enum: CMDH1_NEXT
+fieldset/CMDH2:
+  description: Command High Buffer Register.
+  fields:
+  - name: CMPEN
+    description: Compare Function Enable.
+    bit_offset: 0
+    bit_size: 2
+    enum: CMDH2_CMPEN
+  - name: WAIT_TRIG
+    description: Wait for Trigger Assertion before Execution.
+    bit_offset: 2
+    bit_size: 1
+  - name: LWI
+    description: Loop with Increment.
+    bit_offset: 7
+    bit_size: 1
+  - name: STS
+    description: Sample Time Select.
+    bit_offset: 8
+    bit_size: 3
+    enum: CMDH2_STS
+  - name: AVGS
+    description: Hardware Average Select.
+    bit_offset: 12
+    bit_size: 4
+    enum: CMDH2_AVGS
+  - name: LOOP
+    description: Loop Count Select.
+    bit_offset: 16
+    bit_size: 4
+    enum: CMDH2_LOOP
+  - name: NEXT
+    description: Next Command Select.
+    bit_offset: 24
+    bit_size: 3
+    enum: CMDH2_NEXT
+fieldset/CMDH3:
+  description: Command High Buffer Register.
+  fields:
+  - name: CMPEN
+    description: Compare Function Enable.
+    bit_offset: 0
+    bit_size: 2
+    enum: CMDH3_CMPEN
+  - name: WAIT_TRIG
+    description: Wait for Trigger Assertion before Execution.
+    bit_offset: 2
+    bit_size: 1
+  - name: LWI
+    description: Loop with Increment.
+    bit_offset: 7
+    bit_size: 1
+  - name: STS
+    description: Sample Time Select.
+    bit_offset: 8
+    bit_size: 3
+    enum: CMDH3_STS
+  - name: AVGS
+    description: Hardware Average Select.
+    bit_offset: 12
+    bit_size: 4
+    enum: CMDH3_AVGS
+  - name: LOOP
+    description: Loop Count Select.
+    bit_offset: 16
+    bit_size: 4
+    enum: CMDH3_LOOP
+  - name: NEXT
+    description: Next Command Select.
+    bit_offset: 24
+    bit_size: 3
+    enum: CMDH3_NEXT
+fieldset/CMDH4:
+  description: Command High Buffer Register.
+  fields:
+  - name: CMPEN
+    description: Compare Function Enable.
+    bit_offset: 0
+    bit_size: 2
+    enum: CMDH4_CMPEN
+  - name: WAIT_TRIG
+    description: Wait for Trigger Assertion before Execution.
+    bit_offset: 2
+    bit_size: 1
+  - name: LWI
+    description: Loop with Increment.
+    bit_offset: 7
+    bit_size: 1
+  - name: STS
+    description: Sample Time Select.
+    bit_offset: 8
+    bit_size: 3
+    enum: CMDH4_STS
+  - name: AVGS
+    description: Hardware Average Select.
+    bit_offset: 12
+    bit_size: 4
+    enum: CMDH4_AVGS
+  - name: LOOP
+    description: Loop Count Select.
+    bit_offset: 16
+    bit_size: 4
+    enum: CMDH4_LOOP
+  - name: NEXT
+    description: Next Command Select.
+    bit_offset: 24
+    bit_size: 3
+    enum: CMDH4_NEXT
+fieldset/CMDH5:
+  description: Command High Buffer Register.
+  fields:
+  - name: CMPEN
+    description: Compare Function Enable.
+    bit_offset: 0
+    bit_size: 2
+    enum: CMDH5_CMPEN
+  - name: WAIT_TRIG
+    description: Wait for Trigger Assertion before Execution.
+    bit_offset: 2
+    bit_size: 1
+  - name: LWI
+    description: Loop with Increment.
+    bit_offset: 7
+    bit_size: 1
+  - name: STS
+    description: Sample Time Select.
+    bit_offset: 8
+    bit_size: 3
+    enum: CMDH5_STS
+  - name: AVGS
+    description: Hardware Average Select.
+    bit_offset: 12
+    bit_size: 4
+    enum: CMDH5_AVGS
+  - name: LOOP
+    description: Loop Count Select.
+    bit_offset: 16
+    bit_size: 4
+    enum: CMDH5_LOOP
+  - name: NEXT
+    description: Next Command Select.
+    bit_offset: 24
+    bit_size: 3
+    enum: CMDH5_NEXT
+fieldset/CMDH6:
+  description: Command High Buffer Register.
+  fields:
+  - name: CMPEN
+    description: Compare Function Enable.
+    bit_offset: 0
+    bit_size: 2
+    enum: CMDH6_CMPEN
+  - name: WAIT_TRIG
+    description: Wait for Trigger Assertion before Execution.
+    bit_offset: 2
+    bit_size: 1
+  - name: LWI
+    description: Loop with Increment.
+    bit_offset: 7
+    bit_size: 1
+  - name: STS
+    description: Sample Time Select.
+    bit_offset: 8
+    bit_size: 3
+    enum: CMDH6_STS
+  - name: AVGS
+    description: Hardware Average Select.
+    bit_offset: 12
+    bit_size: 4
+    enum: CMDH6_AVGS
+  - name: LOOP
+    description: Loop Count Select.
+    bit_offset: 16
+    bit_size: 4
+    enum: CMDH6_LOOP
+  - name: NEXT
+    description: Next Command Select.
+    bit_offset: 24
+    bit_size: 3
+    enum: CMDH6_NEXT
+fieldset/CMDH7:
+  description: Command High Buffer Register.
+  fields:
+  - name: CMPEN
+    description: Compare Function Enable.
+    bit_offset: 0
+    bit_size: 2
+    enum: CMDH7_CMPEN
+  - name: WAIT_TRIG
+    description: Wait for Trigger Assertion before Execution.
+    bit_offset: 2
+    bit_size: 1
+  - name: LWI
+    description: Loop with Increment.
+    bit_offset: 7
+    bit_size: 1
+  - name: STS
+    description: Sample Time Select.
+    bit_offset: 8
+    bit_size: 3
+    enum: CMDH7_STS
+  - name: AVGS
+    description: Hardware Average Select.
+    bit_offset: 12
+    bit_size: 4
+    enum: CMDH7_AVGS
+  - name: LOOP
+    description: Loop Count Select.
+    bit_offset: 16
+    bit_size: 4
+    enum: CMDH7_LOOP
+  - name: NEXT
+    description: Next Command Select.
+    bit_offset: 24
+    bit_size: 3
+    enum: CMDH7_NEXT
+fieldset/CMDL1:
+  description: Command Low Buffer Register.
+  fields:
+  - name: ADCH
+    description: Input Channel Select.
+    bit_offset: 0
+    bit_size: 5
+    enum: CMDL1_ADCH
+  - name: CTYPE
+    description: Conversion Type.
+    bit_offset: 5
+    bit_size: 2
+    enum: CMDL1_CTYPE
+  - name: MODE
+    description: Select Resolution of Conversions.
+    bit_offset: 7
+    bit_size: 1
+    enum: CMDL1_MODE
+fieldset/CMDL2:
+  description: Command Low Buffer Register.
+  fields:
+  - name: ADCH
+    description: Input Channel Select.
+    bit_offset: 0
+    bit_size: 5
+    enum: CMDL2_ADCH
+  - name: CTYPE
+    description: Conversion Type.
+    bit_offset: 5
+    bit_size: 2
+    enum: CMDL2_CTYPE
+  - name: MODE
+    description: Select Resolution of Conversions.
+    bit_offset: 7
+    bit_size: 1
+    enum: CMDL2_MODE
+fieldset/CMDL3:
+  description: Command Low Buffer Register.
+  fields:
+  - name: ADCH
+    description: Input Channel Select.
+    bit_offset: 0
+    bit_size: 5
+    enum: CMDL3_ADCH
+  - name: CTYPE
+    description: Conversion Type.
+    bit_offset: 5
+    bit_size: 2
+    enum: CMDL3_CTYPE
+  - name: MODE
+    description: Select Resolution of Conversions.
+    bit_offset: 7
+    bit_size: 1
+    enum: CMDL3_MODE
+fieldset/CMDL4:
+  description: Command Low Buffer Register.
+  fields:
+  - name: ADCH
+    description: Input Channel Select.
+    bit_offset: 0
+    bit_size: 5
+    enum: CMDL4_ADCH
+  - name: CTYPE
+    description: Conversion Type.
+    bit_offset: 5
+    bit_size: 2
+    enum: CMDL4_CTYPE
+  - name: MODE
+    description: Select Resolution of Conversions.
+    bit_offset: 7
+    bit_size: 1
+    enum: CMDL4_MODE
+fieldset/CMDL5:
+  description: Command Low Buffer Register.
+  fields:
+  - name: ADCH
+    description: Input Channel Select.
+    bit_offset: 0
+    bit_size: 5
+    enum: CMDL5_ADCH
+  - name: CTYPE
+    description: Conversion Type.
+    bit_offset: 5
+    bit_size: 2
+    enum: CMDL5_CTYPE
+  - name: MODE
+    description: Select Resolution of Conversions.
+    bit_offset: 7
+    bit_size: 1
+    enum: CMDL5_MODE
+fieldset/CMDL6:
+  description: Command Low Buffer Register.
+  fields:
+  - name: ADCH
+    description: Input Channel Select.
+    bit_offset: 0
+    bit_size: 5
+    enum: CMDL6_ADCH
+  - name: CTYPE
+    description: Conversion Type.
+    bit_offset: 5
+    bit_size: 2
+    enum: CMDL6_CTYPE
+  - name: MODE
+    description: Select Resolution of Conversions.
+    bit_offset: 7
+    bit_size: 1
+    enum: CMDL6_MODE
+fieldset/CMDL7:
+  description: Command Low Buffer Register.
+  fields:
+  - name: ADCH
+    description: Input Channel Select.
+    bit_offset: 0
+    bit_size: 5
+    enum: CMDL7_ADCH
+  - name: CTYPE
+    description: Conversion Type.
+    bit_offset: 5
+    bit_size: 2
+    enum: CMDL7_CTYPE
+  - name: MODE
+    description: Select Resolution of Conversions.
+    bit_offset: 7
+    bit_size: 1
+    enum: CMDL7_MODE
+fieldset/CTRL:
+  description: Control Register.
+  fields:
+  - name: ADCEN
+    description: ADC Enable.
+    bit_offset: 0
+    bit_size: 1
+  - name: RST
+    description: Software Reset.
+    bit_offset: 1
+    bit_size: 1
+    enum: RST
+  - name: DOZEN
+    description: Doze Enable.
+    bit_offset: 2
+    bit_size: 1
+    enum: DOZEN
+  - name: CAL_REQ
+    description: Auto-Calibration Request.
+    bit_offset: 3
+    bit_size: 1
+    enum: CAL_REQ
+  - name: CALOFS
+    description: Offset Calibration Request.
+    bit_offset: 4
+    bit_size: 1
+    enum: CALOFS
+  - name: CALHS
+    description: High Speed Mode Trim Request.
+    bit_offset: 6
+    bit_size: 1
+    enum: CALHS
+  - name: RSTFIFO0
+    description: Reset FIFO 0.
+    bit_offset: 8
+    bit_size: 1
+    enum: RSTFIFO0
+  - name: CAL_AVGS
+    description: Auto-Calibration Averages.
+    bit_offset: 16
+    bit_size: 4
+    enum: CAL_AVGS
+fieldset/CV:
+  description: Compare Value Register.
+  fields:
+  - name: CVL
+    description: Compare Value Low.
+    bit_offset: 0
+    bit_size: 16
+  - name: CVH
+    description: Compare Value High.
+    bit_offset: 16
+    bit_size: 16
+fieldset/DE:
+  description: DMA Enable Register.
+  fields:
+  - name: FWMDE0
+    description: FIFO 0 Watermark DMA Enable.
+    bit_offset: 0
+    bit_size: 1
+fieldset/FCTRL0:
+  description: FIFO Control Register.
+  fields:
+  - name: FCOUNT
+    description: Result FIFO Counter.
+    bit_offset: 0
+    bit_size: 4
+  - name: FWMARK
+    description: Watermark Level Selection.
+    bit_offset: 16
+    bit_size: 3
+fieldset/GCC0:
+  description: Gain Calibration Control.
+  fields:
+  - name: GAIN_CAL
+    description: Gain Calibration Value.
+    bit_offset: 0
+    bit_size: 16
+  - name: RDY
+    description: Gain Calibration Value Valid.
+    bit_offset: 24
+    bit_size: 1
+    enum: GCC0_RDY
+fieldset/GCR0:
+  description: Gain Calculation Result.
+  fields:
+  - name: GCALR
+    description: Gain Calculation Result.
+    bit_offset: 0
+    bit_size: 17
+  - name: RDY
+    description: Gain Calculation Ready.
+    bit_offset: 24
+    bit_size: 1
+fieldset/HSTRIM:
+  description: High Speed Trim Register.
+  fields:
+  - name: HSTRIM
+    description: Trim for High Speed Conversions.
+    bit_offset: 0
+    bit_size: 5
+fieldset/IE:
+  description: Interrupt Enable Register.
+  fields:
+  - name: FWMIE0
+    description: FIFO 0 Watermark Interrupt Enable.
+    bit_offset: 0
+    bit_size: 1
+  - name: FOFIE0
+    description: Result FIFO 0 Overflow Interrupt Enable.
+    bit_offset: 1
+    bit_size: 1
+  - name: TEXC_IE
+    description: Trigger Exception Interrupt Enable.
+    bit_offset: 8
+    bit_size: 1
+  - name: TCOMP_IE
+    description: Trigger Completion Interrupt Enable.
+    bit_offset: 16
+    bit_size: 4
+    enum: TCOMP_IE
+fieldset/OFSTRIM:
+  description: Offset Trim Register.
+  fields:
+  - name: OFSTRIM
+    description: Trim for Offset.
+    bit_offset: 0
+    bit_size: 10
+fieldset/PARAM:
+  description: Parameter Register.
+  fields:
+  - name: TRIG_NUM
+    description: Trigger Number.
+    bit_offset: 0
+    bit_size: 8
+  - name: FIFOSIZE
+    description: Result FIFO Depth.
+    bit_offset: 8
+    bit_size: 8
+    enum: FIFOSIZE
+  - name: CV_NUM
+    description: Compare Value Number.
+    bit_offset: 16
+    bit_size: 8
+  - name: CMD_NUM
+    description: Command Buffer Number.
+    bit_offset: 24
+    bit_size: 8
+fieldset/PAUSE:
+  description: Pause Register.
+  fields:
+  - name: PAUSEDLY
+    description: Pause Delay.
+    bit_offset: 0
+    bit_size: 9
+  - name: PAUSEEN
+    description: PAUSE Option Enable.
+    bit_offset: 31
+    bit_size: 1
+fieldset/RESFIFO0:
+  description: Data Result FIFO Register.
+  fields:
+  - name: D
+    description: Data Result.
+    bit_offset: 0
+    bit_size: 16
+  - name: TSRC
+    description: Trigger Source.
+    bit_offset: 16
+    bit_size: 2
+    enum: TSRC
+  - name: LOOPCNT
+    description: Loop Count Value.
+    bit_offset: 20
+    bit_size: 4
+    enum: LOOPCNT
+  - name: CMDSRC
+    description: Command Buffer Source.
+    bit_offset: 24
+    bit_size: 3
+    enum: CMDSRC
+  - name: VALID
+    description: FIFO Entry is Valid.
+    bit_offset: 31
+    bit_size: 1
+fieldset/STAT:
+  description: Status Register.
+  fields:
+  - name: RDY0
+    description: Result FIFO 0 Ready Flag.
+    bit_offset: 0
+    bit_size: 1
+    enum: RDY0
+  - name: FOF0
+    description: Result FIFO 0 Overflow Flag.
+    bit_offset: 1
+    bit_size: 1
+    enum: FOF0
+  - name: TEXC_INT
+    description: Interrupt Flag For High Priority Trigger Exception.
+    bit_offset: 8
+    bit_size: 1
+    enum: TEXC_INT
+  - name: TCOMP_INT
+    description: Interrupt Flag For Trigger Completion.
+    bit_offset: 9
+    bit_size: 1
+    enum: TCOMP_INT
+  - name: CAL_RDY
+    description: Calibration Ready.
+    bit_offset: 10
+    bit_size: 1
+    enum: CAL_RDY
+  - name: ADC_ACTIVE
+    description: ADC Active.
+    bit_offset: 11
+    bit_size: 1
+    enum: ADC_ACTIVE
+  - name: TRGACT
+    description: Trigger Active.
+    bit_offset: 16
+    bit_size: 2
+    enum: TRGACT
+  - name: CMDACT
+    description: Command Active.
+    bit_offset: 24
+    bit_size: 3
+    enum: CMDACT
+fieldset/SWTRIG:
+  description: Software Trigger Register.
+  fields:
+  - name: SWT0
+    description: Software Trigger 0 Event.
+    bit_offset: 0
+    bit_size: 1
+    enum: SWT0
+  - name: SWT1
+    description: Software Trigger 1 Event.
+    bit_offset: 1
+    bit_size: 1
+    enum: SWT1
+  - name: SWT2
+    description: Software Trigger 2 Event.
+    bit_offset: 2
+    bit_size: 1
+    enum: SWT2
+  - name: SWT3
+    description: Software Trigger 3 Event.
+    bit_offset: 3
+    bit_size: 1
+    enum: SWT3
+fieldset/TCTRL:
+  description: Trigger Control Register.
+  fields:
+  - name: HTEN
+    description: Trigger Enable.
+    bit_offset: 0
+    bit_size: 1
+  - name: TPRI
+    description: Trigger Priority Setting.
+    bit_offset: 8
+    bit_size: 2
+    enum: TPRI
+  - name: RSYNC
+    description: Trigger Resync.
+    bit_offset: 15
+    bit_size: 1
+  - name: TDLY
+    description: Trigger Delay Select.
+    bit_offset: 16
+    bit_size: 4
+  - name: TSYNC
+    description: Trigger Synchronous Select.
+    bit_offset: 23
+    bit_size: 1
+  - name: TCMD
+    description: Trigger Command Select.
+    bit_offset: 24
+    bit_size: 3
+    enum: TCMD
+fieldset/TSTAT:
+  description: Trigger Status Register.
+  fields:
+  - name: TEXC_NUM
+    description: Trigger Exception Number.
+    bit_offset: 0
+    bit_size: 4
+    enum: TEXC_NUM
+  - name: TCOMP_FLAG
+    description: Trigger Completion Flag.
+    bit_offset: 16
+    bit_size: 4
+    enum: TCOMP_FLAG
+fieldset/VERID:
+  description: Version ID Register.
+  fields:
+  - name: RES
+    description: Resolution.
+    bit_offset: 0
+    bit_size: 1
+    enum: RES
+  - name: DIFFEN
+    description: Differential Supported.
+    bit_offset: 1
+    bit_size: 1
+    enum: DIFFEN
+  - name: MVI
+    description: Multi Vref Implemented.
+    bit_offset: 3
+    bit_size: 1
+    enum: MVI
+  - name: CSW
+    description: Channel Scale Width.
+    bit_offset: 4
+    bit_size: 3
+    enum: CSW
+  - name: VR1RNGI
+    description: Voltage Reference 1 Range Control Bit Implemented.
+    bit_offset: 8
+    bit_size: 1
+    enum: VR1RNGI
+  - name: IADCKI
+    description: Internal ADC Clock Implemented.
+    bit_offset: 9
+    bit_size: 1
+    enum: IADCKI
+  - name: CALOFSI
+    description: Calibration Function Implemented.
+    bit_offset: 10
+    bit_size: 1
+    enum: CALOFSI
+  - name: NUM_SEC
+    description: Number of Single Ended Outputs Supported.
+    bit_offset: 11
+    bit_size: 1
+    enum: NUM_SEC
+  - name: NUM_FIFO
+    description: Number of FIFOs.
+    bit_offset: 12
+    bit_size: 3
+    enum: NUM_FIFO
+  - name: MINOR
+    description: Minor Version Number.
+    bit_offset: 16
+    bit_size: 8
+  - name: MAJOR
+    description: Major Version Number.
+    bit_offset: 24
+    bit_size: 8
+enum/ADC_ACTIVE:
+  bit_size: 1
+  variants:
+  - name: NOT_ACTIVE
+    description: The ADC is IDLE. There are no pending triggers to service and no active commands are being processed.
+    value: 0
+  - name: BUSY
+    description: The ADC is processing a conversion, running through the power up delay, or servicing a trigger.
+    value: 1
+enum/CALHS:
+  bit_size: 1
+  variants:
+  - name: NO_ACTIVE_HS_TRIM_REQUEST
+    description: No request for high speed mode trim has been made.
+    value: 0
+  - name: HS_TRIM_REQUEST_PENDING
+    description: Request for high speed mode trim has been made.
+    value: 1
+enum/CALOFS:
+  bit_size: 1
+  variants:
+  - name: NO_ACTIVE_OFFSET_CALIBRATION_REQUEST
+    description: No request for offset calibration has been made.
+    value: 0
+  - name: OFFSET_CALIBRATION_REQUEST_PENDING
+    description: Request for offset calibration function.
+    value: 1
+enum/CALOFSI:
+  bit_size: 1
+  variants:
+  - name: CAL_FUNCTION_NOT_AVAILABLE
+    description: Calibration Not Implemented.
+    value: 0
+  - name: CAL_FUNCTION_AVAILABLE
+    description: Calibration Implemented.
+    value: 1
+enum/CAL_AVGS:
+  bit_size: 4
+  variants:
+  - name: NO_AVERAGE
+    description: Single conversion.
+    value: 0
+  - name: AVERAGE_2
+    description: 2 conversions averaged.
+    value: 1
+  - name: AVERAGE_4
+    description: 4 conversions averaged.
+    value: 2
+  - name: AVERAGE_8
+    description: 8 conversions averaged.
+    value: 3
+  - name: AVERAGE_16
+    description: 16 conversions averaged.
+    value: 4
+  - name: AVERAGE_32
+    description: 32 conversions averaged.
+    value: 5
+  - name: AVERAGE_64
+    description: 64 conversions averaged.
+    value: 6
+  - name: AVERAGE_128
+    description: 128 conversions averaged.
+    value: 7
+  - name: AVERAGE_256
+    description: 256 conversions averaged.
+    value: 8
+  - name: AVERAGE_512
+    description: 512 conversions averaged.
+    value: 9
+  - name: AVERAGE_1024
+    description: 1024 conversions averaged.
+    value: 10
+enum/CAL_RDY:
+  bit_size: 1
+  variants:
+  - name: NOT_SET
+    description: Calibration is incomplete or hasn't been ran.
+    value: 0
+  - name: HARDWARE_CAL_STEP_COMPLETED
+    description: The ADC is calibrated.
+    value: 1
+enum/CAL_REQ:
+  bit_size: 1
+  variants:
+  - name: NO_CALIBRATION_REQUEST
+    description: No request for hardware calibration has been made.
+    value: 0
+  - name: CALIBRATION_REQUEST_PENDING
+    description: A request for hardware calibration has been made.
+    value: 1
+enum/CMDACT:
+  bit_size: 3
+  variants:
+  - name: NO_COMMAND_ACTIVE
+    description: No command is currently in progress.
+    value: 0
+  - name: COMMAND_1
+    description: Command 1 currently being executed.
+    value: 1
+  - name: COMMAND_2
+    description: Command 2 currently being executed.
+    value: 2
+  - name: COMMAND_x_3
+    description: Associated command number is currently being executed.
+    value: 3
+  - name: COMMAND_x_4
+    description: Associated command number is currently being executed.
+    value: 4
+  - name: COMMAND_x_5
+    description: Associated command number is currently being executed.
+    value: 5
+  - name: COMMAND_x_6
+    description: Associated command number is currently being executed.
+    value: 6
+  - name: COMMAND_x_7
+    description: Associated command number is currently being executed.
+    value: 7
+enum/CMDH1_AVGS:
+  bit_size: 4
+  variants:
+  - name: NO_AVERAGE
+    description: Single conversion.
+    value: 0
+  - name: AVERAGE_2
+    description: 2 conversions averaged.
+    value: 1
+  - name: AVERAGE_4
+    description: 4 conversions averaged.
+    value: 2
+  - name: AVERAGE_8
+    description: 8 conversions averaged.
+    value: 3
+  - name: AVERAGE_16
+    description: 16 conversions averaged.
+    value: 4
+  - name: AVERAGE_32
+    description: 32 conversions averaged.
+    value: 5
+  - name: AVERAGE_64
+    description: 64 conversions averaged.
+    value: 6
+  - name: AVERAGE_128
+    description: 128 conversions averaged.
+    value: 7
+  - name: AVERAGE_256
+    description: 256 conversions averaged.
+    value: 8
+  - name: AVERAGE_512
+    description: 512 conversions averaged.
+    value: 9
+  - name: AVERAGE_1024
+    description: 1024 conversions averaged.
+    value: 10
+enum/CMDH1_CMPEN:
+  bit_size: 2
+  variants:
+  - name: DISABLED_ALWAYS_STORE_RESULT
+    description: Compare disabled.
+    value: 0
+  - name: COMPARE_RESULT_STORE_IF_TRUE
+    description: Compare enabled. Store on true.
+    value: 2
+  - name: COMPARE_RESULT_KEEP_CONVERTING_UNTIL_TRUE_STORE_IF_TRUE
+    description: Compare enabled. Repeat channel acquisition (sample/convert/compare) until true.
+    value: 3
+enum/CMDH1_LOOP:
+  bit_size: 4
+  variants:
+  - name: CMD_EXEC_1x
+    description: Looping not enabled. Command executes 1 time.
+    value: 0
+  - name: CMD_EXEC_2x
+    description: Loop 1 time. Command executes 2 times.
+    value: 1
+  - name: CMD_EXEC_3x
+    description: Loop 2 times. Command executes 3 times.
+    value: 2
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_3
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 3
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_4
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 4
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_5
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 5
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_6
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 6
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_7
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 7
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_8
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 8
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_9
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 9
+  - name: CMD_EXEC_15x
+    description: Loop 15 times. Command executes 16 times.
+    value: 15
+enum/CMDH1_NEXT:
+  bit_size: 3
+  variants:
+  - name: NO_NEXT_CMD_TERMINATE_ON_FINISH
+    description: No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger.
+    value: 0
+  - name: DO_CMD1_NEXT
+    description: Select CMD1 command buffer register as next command.
+    value: 1
+  - name: DO_CORRESPONDING_CMD_NEXT_2
+    description: Select corresponding CMD command buffer register as next command.
+    value: 2
+  - name: DO_CORRESPONDING_CMD_NEXT_3
+    description: Select corresponding CMD command buffer register as next command.
+    value: 3
+  - name: DO_CORRESPONDING_CMD_NEXT_4
+    description: Select corresponding CMD command buffer register as next command.
+    value: 4
+  - name: DO_CORRESPONDING_CMD_NEXT_5
+    description: Select corresponding CMD command buffer register as next command.
+    value: 5
+  - name: DO_CORRESPONDING_CMD_NEXT_6
+    description: Select corresponding CMD command buffer register as next command.
+    value: 6
+  - name: DO_CMD7_NEXT
+    description: Select CMD7 command buffer register as next command.
+    value: 7
+enum/CMDH1_STS:
+  bit_size: 3
+  variants:
+  - name: SAMPLE_3p5
+    description: Minimum sample time of 3.5 ADCK cycles.
+    value: 0
+  - name: SAMPLE_5p5
+    description: 3.5 + 21 ADCK cycles; 5.5 ADCK cycles total sample time.
+    value: 1
+  - name: SAMPLE_7p5
+    description: 3.5 + 22 ADCK cycles; 7.5 ADCK cycles total sample time.
+    value: 2
+  - name: SAMPLE_11p5
+    description: 3.5 + 23 ADCK cycles; 11.5 ADCK cycles total sample time.
+    value: 3
+  - name: SAMPLE_19p5
+    description: 3.5 + 24 ADCK cycles; 19.5 ADCK cycles total sample time.
+    value: 4
+  - name: SAMPLE_35p5
+    description: 3.5 + 25 ADCK cycles; 35.5 ADCK cycles total sample time.
+    value: 5
+  - name: SAMPLE_67p5
+    description: 3.5 + 26 ADCK cycles; 67.5 ADCK cycles total sample time.
+    value: 6
+  - name: SAMPLE_131p5
+    description: 3.5 + 27 ADCK cycles; 131.5 ADCK cycles total sample time.
+    value: 7
+enum/CMDH2_AVGS:
+  bit_size: 4
+  variants:
+  - name: NO_AVERAGE
+    description: Single conversion.
+    value: 0
+  - name: AVERAGE_2
+    description: 2 conversions averaged.
+    value: 1
+  - name: AVERAGE_4
+    description: 4 conversions averaged.
+    value: 2
+  - name: AVERAGE_8
+    description: 8 conversions averaged.
+    value: 3
+  - name: AVERAGE_16
+    description: 16 conversions averaged.
+    value: 4
+  - name: AVERAGE_32
+    description: 32 conversions averaged.
+    value: 5
+  - name: AVERAGE_64
+    description: 64 conversions averaged.
+    value: 6
+  - name: AVERAGE_128
+    description: 128 conversions averaged.
+    value: 7
+  - name: AVERAGE_256
+    description: 256 conversions averaged.
+    value: 8
+  - name: AVERAGE_512
+    description: 512 conversions averaged.
+    value: 9
+  - name: AVERAGE_1024
+    description: 1024 conversions averaged.
+    value: 10
+enum/CMDH2_CMPEN:
+  bit_size: 2
+  variants:
+  - name: DISABLED_ALWAYS_STORE_RESULT
+    description: Compare disabled.
+    value: 0
+  - name: COMPARE_RESULT_STORE_IF_TRUE
+    description: Compare enabled. Store on true.
+    value: 2
+  - name: COMPARE_RESULT_KEEP_CONVERTING_UNTIL_TRUE_STORE_IF_TRUE
+    description: Compare enabled. Repeat channel acquisition (sample/convert/compare) until true.
+    value: 3
+enum/CMDH2_LOOP:
+  bit_size: 4
+  variants:
+  - name: CMD_EXEC_1x
+    description: Looping not enabled. Command executes 1 time.
+    value: 0
+  - name: CMD_EXEC_2x
+    description: Loop 1 time. Command executes 2 times.
+    value: 1
+  - name: CMD_EXEC_3x
+    description: Loop 2 times. Command executes 3 times.
+    value: 2
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_3
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 3
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_4
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 4
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_5
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 5
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_6
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 6
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_7
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 7
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_8
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 8
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_9
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 9
+  - name: CMD_EXEC_15x
+    description: Loop 15 times. Command executes 16 times.
+    value: 15
+enum/CMDH2_NEXT:
+  bit_size: 3
+  variants:
+  - name: NO_NEXT_CMD_TERMINATE_ON_FINISH
+    description: No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger.
+    value: 0
+  - name: DO_CMD1_NEXT
+    description: Select CMD1 command buffer register as next command.
+    value: 1
+  - name: DO_CORRESPONDING_CMD_NEXT_2
+    description: Select corresponding CMD command buffer register as next command.
+    value: 2
+  - name: DO_CORRESPONDING_CMD_NEXT_3
+    description: Select corresponding CMD command buffer register as next command.
+    value: 3
+  - name: DO_CORRESPONDING_CMD_NEXT_4
+    description: Select corresponding CMD command buffer register as next command.
+    value: 4
+  - name: DO_CORRESPONDING_CMD_NEXT_5
+    description: Select corresponding CMD command buffer register as next command.
+    value: 5
+  - name: DO_CORRESPONDING_CMD_NEXT_6
+    description: Select corresponding CMD command buffer register as next command.
+    value: 6
+  - name: DO_CMD7_NEXT
+    description: Select CMD7 command buffer register as next command.
+    value: 7
+enum/CMDH2_STS:
+  bit_size: 3
+  variants:
+  - name: SAMPLE_3p5
+    description: Minimum sample time of 3.5 ADCK cycles.
+    value: 0
+  - name: SAMPLE_5p5
+    description: 3.5 + 21 ADCK cycles; 5.5 ADCK cycles total sample time.
+    value: 1
+  - name: SAMPLE_7p5
+    description: 3.5 + 22 ADCK cycles; 7.5 ADCK cycles total sample time.
+    value: 2
+  - name: SAMPLE_11p5
+    description: 3.5 + 23 ADCK cycles; 11.5 ADCK cycles total sample time.
+    value: 3
+  - name: SAMPLE_19p5
+    description: 3.5 + 24 ADCK cycles; 19.5 ADCK cycles total sample time.
+    value: 4
+  - name: SAMPLE_35p5
+    description: 3.5 + 25 ADCK cycles; 35.5 ADCK cycles total sample time.
+    value: 5
+  - name: SAMPLE_67p5
+    description: 3.5 + 26 ADCK cycles; 67.5 ADCK cycles total sample time.
+    value: 6
+  - name: SAMPLE_131p5
+    description: 3.5 + 27 ADCK cycles; 131.5 ADCK cycles total sample time.
+    value: 7
+enum/CMDH3_AVGS:
+  bit_size: 4
+  variants:
+  - name: NO_AVERAGE
+    description: Single conversion.
+    value: 0
+  - name: AVERAGE_2
+    description: 2 conversions averaged.
+    value: 1
+  - name: AVERAGE_4
+    description: 4 conversions averaged.
+    value: 2
+  - name: AVERAGE_8
+    description: 8 conversions averaged.
+    value: 3
+  - name: AVERAGE_16
+    description: 16 conversions averaged.
+    value: 4
+  - name: AVERAGE_32
+    description: 32 conversions averaged.
+    value: 5
+  - name: AVERAGE_64
+    description: 64 conversions averaged.
+    value: 6
+  - name: AVERAGE_128
+    description: 128 conversions averaged.
+    value: 7
+  - name: AVERAGE_256
+    description: 256 conversions averaged.
+    value: 8
+  - name: AVERAGE_512
+    description: 512 conversions averaged.
+    value: 9
+  - name: AVERAGE_1024
+    description: 1024 conversions averaged.
+    value: 10
+enum/CMDH3_CMPEN:
+  bit_size: 2
+  variants:
+  - name: DISABLED_ALWAYS_STORE_RESULT
+    description: Compare disabled.
+    value: 0
+  - name: COMPARE_RESULT_STORE_IF_TRUE
+    description: Compare enabled. Store on true.
+    value: 2
+  - name: COMPARE_RESULT_KEEP_CONVERTING_UNTIL_TRUE_STORE_IF_TRUE
+    description: Compare enabled. Repeat channel acquisition (sample/convert/compare) until true.
+    value: 3
+enum/CMDH3_LOOP:
+  bit_size: 4
+  variants:
+  - name: CMD_EXEC_1x
+    description: Looping not enabled. Command executes 1 time.
+    value: 0
+  - name: CMD_EXEC_2x
+    description: Loop 1 time. Command executes 2 times.
+    value: 1
+  - name: CMD_EXEC_3x
+    description: Loop 2 times. Command executes 3 times.
+    value: 2
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_3
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 3
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_4
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 4
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_5
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 5
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_6
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 6
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_7
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 7
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_8
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 8
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_9
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 9
+  - name: CMD_EXEC_15x
+    description: Loop 15 times. Command executes 16 times.
+    value: 15
+enum/CMDH3_NEXT:
+  bit_size: 3
+  variants:
+  - name: NO_NEXT_CMD_TERMINATE_ON_FINISH
+    description: No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger.
+    value: 0
+  - name: DO_CMD1_NEXT
+    description: Select CMD1 command buffer register as next command.
+    value: 1
+  - name: DO_CORRESPONDING_CMD_NEXT_2
+    description: Select corresponding CMD command buffer register as next command.
+    value: 2
+  - name: DO_CORRESPONDING_CMD_NEXT_3
+    description: Select corresponding CMD command buffer register as next command.
+    value: 3
+  - name: DO_CORRESPONDING_CMD_NEXT_4
+    description: Select corresponding CMD command buffer register as next command.
+    value: 4
+  - name: DO_CORRESPONDING_CMD_NEXT_5
+    description: Select corresponding CMD command buffer register as next command.
+    value: 5
+  - name: DO_CORRESPONDING_CMD_NEXT_6
+    description: Select corresponding CMD command buffer register as next command.
+    value: 6
+  - name: DO_CMD7_NEXT
+    description: Select CMD7 command buffer register as next command.
+    value: 7
+enum/CMDH3_STS:
+  bit_size: 3
+  variants:
+  - name: SAMPLE_3p5
+    description: Minimum sample time of 3.5 ADCK cycles.
+    value: 0
+  - name: SAMPLE_5p5
+    description: 3.5 + 21 ADCK cycles; 5.5 ADCK cycles total sample time.
+    value: 1
+  - name: SAMPLE_7p5
+    description: 3.5 + 22 ADCK cycles; 7.5 ADCK cycles total sample time.
+    value: 2
+  - name: SAMPLE_11p5
+    description: 3.5 + 23 ADCK cycles; 11.5 ADCK cycles total sample time.
+    value: 3
+  - name: SAMPLE_19p5
+    description: 3.5 + 24 ADCK cycles; 19.5 ADCK cycles total sample time.
+    value: 4
+  - name: SAMPLE_35p5
+    description: 3.5 + 25 ADCK cycles; 35.5 ADCK cycles total sample time.
+    value: 5
+  - name: SAMPLE_67p5
+    description: 3.5 + 26 ADCK cycles; 67.5 ADCK cycles total sample time.
+    value: 6
+  - name: SAMPLE_131p5
+    description: 3.5 + 27 ADCK cycles; 131.5 ADCK cycles total sample time.
+    value: 7
+enum/CMDH4_AVGS:
+  bit_size: 4
+  variants:
+  - name: NO_AVERAGE
+    description: Single conversion.
+    value: 0
+  - name: AVERAGE_2
+    description: 2 conversions averaged.
+    value: 1
+  - name: AVERAGE_4
+    description: 4 conversions averaged.
+    value: 2
+  - name: AVERAGE_8
+    description: 8 conversions averaged.
+    value: 3
+  - name: AVERAGE_16
+    description: 16 conversions averaged.
+    value: 4
+  - name: AVERAGE_32
+    description: 32 conversions averaged.
+    value: 5
+  - name: AVERAGE_64
+    description: 64 conversions averaged.
+    value: 6
+  - name: AVERAGE_128
+    description: 128 conversions averaged.
+    value: 7
+  - name: AVERAGE_256
+    description: 256 conversions averaged.
+    value: 8
+  - name: AVERAGE_512
+    description: 512 conversions averaged.
+    value: 9
+  - name: AVERAGE_1024
+    description: 1024 conversions averaged.
+    value: 10
+enum/CMDH4_CMPEN:
+  bit_size: 2
+  variants:
+  - name: DISABLED_ALWAYS_STORE_RESULT
+    description: Compare disabled.
+    value: 0
+  - name: COMPARE_RESULT_STORE_IF_TRUE
+    description: Compare enabled. Store on true.
+    value: 2
+  - name: COMPARE_RESULT_KEEP_CONVERTING_UNTIL_TRUE_STORE_IF_TRUE
+    description: Compare enabled. Repeat channel acquisition (sample/convert/compare) until true.
+    value: 3
+enum/CMDH4_LOOP:
+  bit_size: 4
+  variants:
+  - name: CMD_EXEC_1x
+    description: Looping not enabled. Command executes 1 time.
+    value: 0
+  - name: CMD_EXEC_2x
+    description: Loop 1 time. Command executes 2 times.
+    value: 1
+  - name: CMD_EXEC_3x
+    description: Loop 2 times. Command executes 3 times.
+    value: 2
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_3
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 3
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_4
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 4
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_5
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 5
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_6
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 6
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_7
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 7
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_8
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 8
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_9
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 9
+  - name: CMD_EXEC_15x
+    description: Loop 15 times. Command executes 16 times.
+    value: 15
+enum/CMDH4_NEXT:
+  bit_size: 3
+  variants:
+  - name: NO_NEXT_CMD_TERMINATE_ON_FINISH
+    description: No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger.
+    value: 0
+  - name: DO_CMD1_NEXT
+    description: Select CMD1 command buffer register as next command.
+    value: 1
+  - name: DO_CORRESPONDING_CMD_NEXT_2
+    description: Select corresponding CMD command buffer register as next command.
+    value: 2
+  - name: DO_CORRESPONDING_CMD_NEXT_3
+    description: Select corresponding CMD command buffer register as next command.
+    value: 3
+  - name: DO_CORRESPONDING_CMD_NEXT_4
+    description: Select corresponding CMD command buffer register as next command.
+    value: 4
+  - name: DO_CORRESPONDING_CMD_NEXT_5
+    description: Select corresponding CMD command buffer register as next command.
+    value: 5
+  - name: DO_CORRESPONDING_CMD_NEXT_6
+    description: Select corresponding CMD command buffer register as next command.
+    value: 6
+  - name: DO_CMD7_NEXT
+    description: Select CMD7 command buffer register as next command.
+    value: 7
+enum/CMDH4_STS:
+  bit_size: 3
+  variants:
+  - name: SAMPLE_3p5
+    description: Minimum sample time of 3.5 ADCK cycles.
+    value: 0
+  - name: SAMPLE_5p5
+    description: 3.5 + 21 ADCK cycles; 5.5 ADCK cycles total sample time.
+    value: 1
+  - name: SAMPLE_7p5
+    description: 3.5 + 22 ADCK cycles; 7.5 ADCK cycles total sample time.
+    value: 2
+  - name: SAMPLE_11p5
+    description: 3.5 + 23 ADCK cycles; 11.5 ADCK cycles total sample time.
+    value: 3
+  - name: SAMPLE_19p5
+    description: 3.5 + 24 ADCK cycles; 19.5 ADCK cycles total sample time.
+    value: 4
+  - name: SAMPLE_35p5
+    description: 3.5 + 25 ADCK cycles; 35.5 ADCK cycles total sample time.
+    value: 5
+  - name: SAMPLE_67p5
+    description: 3.5 + 26 ADCK cycles; 67.5 ADCK cycles total sample time.
+    value: 6
+  - name: SAMPLE_131p5
+    description: 3.5 + 27 ADCK cycles; 131.5 ADCK cycles total sample time.
+    value: 7
+enum/CMDH5_AVGS:
+  bit_size: 4
+  variants:
+  - name: NO_AVERAGE
+    description: Single conversion.
+    value: 0
+  - name: AVERAGE_2
+    description: 2 conversions averaged.
+    value: 1
+  - name: AVERAGE_4
+    description: 4 conversions averaged.
+    value: 2
+  - name: AVERAGE_8
+    description: 8 conversions averaged.
+    value: 3
+  - name: AVERAGE_16
+    description: 16 conversions averaged.
+    value: 4
+  - name: AVERAGE_32
+    description: 32 conversions averaged.
+    value: 5
+  - name: AVERAGE_64
+    description: 64 conversions averaged.
+    value: 6
+  - name: AVERAGE_128
+    description: 128 conversions averaged.
+    value: 7
+  - name: AVERAGE_256
+    description: 256 conversions averaged.
+    value: 8
+  - name: AVERAGE_512
+    description: 512 conversions averaged.
+    value: 9
+  - name: AVERAGE_1024
+    description: 1024 conversions averaged.
+    value: 10
+enum/CMDH5_CMPEN:
+  bit_size: 2
+  variants:
+  - name: DISABLED_ALWAYS_STORE_RESULT
+    description: Compare disabled.
+    value: 0
+  - name: COMPARE_RESULT_STORE_IF_TRUE
+    description: Compare enabled. Store on true.
+    value: 2
+  - name: COMPARE_RESULT_KEEP_CONVERTING_UNTIL_TRUE_STORE_IF_TRUE
+    description: Compare enabled. Repeat channel acquisition (sample/convert/compare) until true.
+    value: 3
+enum/CMDH5_LOOP:
+  bit_size: 4
+  variants:
+  - name: CMD_EXEC_1x
+    description: Looping not enabled. Command executes 1 time.
+    value: 0
+  - name: CMD_EXEC_2x
+    description: Loop 1 time. Command executes 2 times.
+    value: 1
+  - name: CMD_EXEC_3x
+    description: Loop 2 times. Command executes 3 times.
+    value: 2
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_3
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 3
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_4
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 4
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_5
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 5
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_6
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 6
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_7
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 7
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_8
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 8
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_9
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 9
+  - name: CMD_EXEC_15x
+    description: Loop 15 times. Command executes 16 times.
+    value: 15
+enum/CMDH5_NEXT:
+  bit_size: 3
+  variants:
+  - name: NO_NEXT_CMD_TERMINATE_ON_FINISH
+    description: No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger.
+    value: 0
+  - name: DO_CMD1_NEXT
+    description: Select CMD1 command buffer register as next command.
+    value: 1
+  - name: DO_CORRESPONDING_CMD_NEXT_2
+    description: Select corresponding CMD command buffer register as next command.
+    value: 2
+  - name: DO_CORRESPONDING_CMD_NEXT_3
+    description: Select corresponding CMD command buffer register as next command.
+    value: 3
+  - name: DO_CORRESPONDING_CMD_NEXT_4
+    description: Select corresponding CMD command buffer register as next command.
+    value: 4
+  - name: DO_CORRESPONDING_CMD_NEXT_5
+    description: Select corresponding CMD command buffer register as next command.
+    value: 5
+  - name: DO_CORRESPONDING_CMD_NEXT_6
+    description: Select corresponding CMD command buffer register as next command.
+    value: 6
+  - name: DO_CMD7_NEXT
+    description: Select CMD7 command buffer register as next command.
+    value: 7
+enum/CMDH5_STS:
+  bit_size: 3
+  variants:
+  - name: SAMPLE_3p5
+    description: Minimum sample time of 3.5 ADCK cycles.
+    value: 0
+  - name: SAMPLE_5p5
+    description: 3.5 + 21 ADCK cycles; 5.5 ADCK cycles total sample time.
+    value: 1
+  - name: SAMPLE_7p5
+    description: 3.5 + 22 ADCK cycles; 7.5 ADCK cycles total sample time.
+    value: 2
+  - name: SAMPLE_11p5
+    description: 3.5 + 23 ADCK cycles; 11.5 ADCK cycles total sample time.
+    value: 3
+  - name: SAMPLE_19p5
+    description: 3.5 + 24 ADCK cycles; 19.5 ADCK cycles total sample time.
+    value: 4
+  - name: SAMPLE_35p5
+    description: 3.5 + 25 ADCK cycles; 35.5 ADCK cycles total sample time.
+    value: 5
+  - name: SAMPLE_67p5
+    description: 3.5 + 26 ADCK cycles; 67.5 ADCK cycles total sample time.
+    value: 6
+  - name: SAMPLE_131p5
+    description: 3.5 + 27 ADCK cycles; 131.5 ADCK cycles total sample time.
+    value: 7
+enum/CMDH6_AVGS:
+  bit_size: 4
+  variants:
+  - name: NO_AVERAGE
+    description: Single conversion.
+    value: 0
+  - name: AVERAGE_2
+    description: 2 conversions averaged.
+    value: 1
+  - name: AVERAGE_4
+    description: 4 conversions averaged.
+    value: 2
+  - name: AVERAGE_8
+    description: 8 conversions averaged.
+    value: 3
+  - name: AVERAGE_16
+    description: 16 conversions averaged.
+    value: 4
+  - name: AVERAGE_32
+    description: 32 conversions averaged.
+    value: 5
+  - name: AVERAGE_64
+    description: 64 conversions averaged.
+    value: 6
+  - name: AVERAGE_128
+    description: 128 conversions averaged.
+    value: 7
+  - name: AVERAGE_256
+    description: 256 conversions averaged.
+    value: 8
+  - name: AVERAGE_512
+    description: 512 conversions averaged.
+    value: 9
+  - name: AVERAGE_1024
+    description: 1024 conversions averaged.
+    value: 10
+enum/CMDH6_CMPEN:
+  bit_size: 2
+  variants:
+  - name: DISABLED_ALWAYS_STORE_RESULT
+    description: Compare disabled.
+    value: 0
+  - name: COMPARE_RESULT_STORE_IF_TRUE
+    description: Compare enabled. Store on true.
+    value: 2
+  - name: COMPARE_RESULT_KEEP_CONVERTING_UNTIL_TRUE_STORE_IF_TRUE
+    description: Compare enabled. Repeat channel acquisition (sample/convert/compare) until true.
+    value: 3
+enum/CMDH6_LOOP:
+  bit_size: 4
+  variants:
+  - name: CMD_EXEC_1x
+    description: Looping not enabled. Command executes 1 time.
+    value: 0
+  - name: CMD_EXEC_2x
+    description: Loop 1 time. Command executes 2 times.
+    value: 1
+  - name: CMD_EXEC_3x
+    description: Loop 2 times. Command executes 3 times.
+    value: 2
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_3
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 3
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_4
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 4
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_5
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 5
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_6
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 6
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_7
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 7
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_8
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 8
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_9
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 9
+  - name: CMD_EXEC_15x
+    description: Loop 15 times. Command executes 16 times.
+    value: 15
+enum/CMDH6_NEXT:
+  bit_size: 3
+  variants:
+  - name: NO_NEXT_CMD_TERMINATE_ON_FINISH
+    description: No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger.
+    value: 0
+  - name: DO_CMD1_NEXT
+    description: Select CMD1 command buffer register as next command.
+    value: 1
+  - name: DO_CORRESPONDING_CMD_NEXT_2
+    description: Select corresponding CMD command buffer register as next command.
+    value: 2
+  - name: DO_CORRESPONDING_CMD_NEXT_3
+    description: Select corresponding CMD command buffer register as next command.
+    value: 3
+  - name: DO_CORRESPONDING_CMD_NEXT_4
+    description: Select corresponding CMD command buffer register as next command.
+    value: 4
+  - name: DO_CORRESPONDING_CMD_NEXT_5
+    description: Select corresponding CMD command buffer register as next command.
+    value: 5
+  - name: DO_CORRESPONDING_CMD_NEXT_6
+    description: Select corresponding CMD command buffer register as next command.
+    value: 6
+  - name: DO_CMD7_NEXT
+    description: Select CMD7 command buffer register as next command.
+    value: 7
+enum/CMDH6_STS:
+  bit_size: 3
+  variants:
+  - name: SAMPLE_3p5
+    description: Minimum sample time of 3.5 ADCK cycles.
+    value: 0
+  - name: SAMPLE_5p5
+    description: 3.5 + 21 ADCK cycles; 5.5 ADCK cycles total sample time.
+    value: 1
+  - name: SAMPLE_7p5
+    description: 3.5 + 22 ADCK cycles; 7.5 ADCK cycles total sample time.
+    value: 2
+  - name: SAMPLE_11p5
+    description: 3.5 + 23 ADCK cycles; 11.5 ADCK cycles total sample time.
+    value: 3
+  - name: SAMPLE_19p5
+    description: 3.5 + 24 ADCK cycles; 19.5 ADCK cycles total sample time.
+    value: 4
+  - name: SAMPLE_35p5
+    description: 3.5 + 25 ADCK cycles; 35.5 ADCK cycles total sample time.
+    value: 5
+  - name: SAMPLE_67p5
+    description: 3.5 + 26 ADCK cycles; 67.5 ADCK cycles total sample time.
+    value: 6
+  - name: SAMPLE_131p5
+    description: 3.5 + 27 ADCK cycles; 131.5 ADCK cycles total sample time.
+    value: 7
+enum/CMDH7_AVGS:
+  bit_size: 4
+  variants:
+  - name: NO_AVERAGE
+    description: Single conversion.
+    value: 0
+  - name: AVERAGE_2
+    description: 2 conversions averaged.
+    value: 1
+  - name: AVERAGE_4
+    description: 4 conversions averaged.
+    value: 2
+  - name: AVERAGE_8
+    description: 8 conversions averaged.
+    value: 3
+  - name: AVERAGE_16
+    description: 16 conversions averaged.
+    value: 4
+  - name: AVERAGE_32
+    description: 32 conversions averaged.
+    value: 5
+  - name: AVERAGE_64
+    description: 64 conversions averaged.
+    value: 6
+  - name: AVERAGE_128
+    description: 128 conversions averaged.
+    value: 7
+  - name: AVERAGE_256
+    description: 256 conversions averaged.
+    value: 8
+  - name: AVERAGE_512
+    description: 512 conversions averaged.
+    value: 9
+  - name: AVERAGE_1024
+    description: 1024 conversions averaged.
+    value: 10
+enum/CMDH7_CMPEN:
+  bit_size: 2
+  variants:
+  - name: DISABLED_ALWAYS_STORE_RESULT
+    description: Compare disabled.
+    value: 0
+  - name: COMPARE_RESULT_STORE_IF_TRUE
+    description: Compare enabled. Store on true.
+    value: 2
+  - name: COMPARE_RESULT_KEEP_CONVERTING_UNTIL_TRUE_STORE_IF_TRUE
+    description: Compare enabled. Repeat channel acquisition (sample/convert/compare) until true.
+    value: 3
+enum/CMDH7_LOOP:
+  bit_size: 4
+  variants:
+  - name: CMD_EXEC_1x
+    description: Looping not enabled. Command executes 1 time.
+    value: 0
+  - name: CMD_EXEC_2x
+    description: Loop 1 time. Command executes 2 times.
+    value: 1
+  - name: CMD_EXEC_3x
+    description: Loop 2 times. Command executes 3 times.
+    value: 2
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_3
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 3
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_4
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 4
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_5
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 5
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_6
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 6
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_7
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 7
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_8
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 8
+  - name: CMD_EXECUTES_CORRESPONDING_TIMES_9
+    description: Loop corresponding number of times. Command executes LOOP+1 times.
+    value: 9
+  - name: CMD_EXEC_15x
+    description: Loop 15 times. Command executes 16 times.
+    value: 15
+enum/CMDH7_NEXT:
+  bit_size: 3
+  variants:
+  - name: NO_NEXT_CMD_TERMINATE_ON_FINISH
+    description: No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger.
+    value: 0
+  - name: DO_CMD1_NEXT
+    description: Select CMD1 command buffer register as next command.
+    value: 1
+  - name: DO_CORRESPONDING_CMD_NEXT_2
+    description: Select corresponding CMD command buffer register as next command.
+    value: 2
+  - name: DO_CORRESPONDING_CMD_NEXT_3
+    description: Select corresponding CMD command buffer register as next command.
+    value: 3
+  - name: DO_CORRESPONDING_CMD_NEXT_4
+    description: Select corresponding CMD command buffer register as next command.
+    value: 4
+  - name: DO_CORRESPONDING_CMD_NEXT_5
+    description: Select corresponding CMD command buffer register as next command.
+    value: 5
+  - name: DO_CORRESPONDING_CMD_NEXT_6
+    description: Select corresponding CMD command buffer register as next command.
+    value: 6
+  - name: DO_CMD7_NEXT
+    description: Select CMD7 command buffer register as next command.
+    value: 7
+enum/CMDH7_STS:
+  bit_size: 3
+  variants:
+  - name: SAMPLE_3p5
+    description: Minimum sample time of 3.5 ADCK cycles.
+    value: 0
+  - name: SAMPLE_5p5
+    description: 3.5 + 21 ADCK cycles; 5.5 ADCK cycles total sample time.
+    value: 1
+  - name: SAMPLE_7p5
+    description: 3.5 + 22 ADCK cycles; 7.5 ADCK cycles total sample time.
+    value: 2
+  - name: SAMPLE_11p5
+    description: 3.5 + 23 ADCK cycles; 11.5 ADCK cycles total sample time.
+    value: 3
+  - name: SAMPLE_19p5
+    description: 3.5 + 24 ADCK cycles; 19.5 ADCK cycles total sample time.
+    value: 4
+  - name: SAMPLE_35p5
+    description: 3.5 + 25 ADCK cycles; 35.5 ADCK cycles total sample time.
+    value: 5
+  - name: SAMPLE_67p5
+    description: 3.5 + 26 ADCK cycles; 67.5 ADCK cycles total sample time.
+    value: 6
+  - name: SAMPLE_131p5
+    description: 3.5 + 27 ADCK cycles; 131.5 ADCK cycles total sample time.
+    value: 7
+enum/CMDL1_ADCH:
+  bit_size: 5
+  variants:
+  - name: SELECT_CH0
+    description: Select CH0A.
+    value: 0
+  - name: SELECT_CH1
+    description: Select CH1A.
+    value: 1
+  - name: SELECT_CH2
+    description: Select CH2A.
+    value: 2
+  - name: SELECT_CH3
+    description: Select CH3A.
+    value: 3
+  - name: SELECT_CORRESPONDING_CHANNEL_4
+    description: Select corresponding channel CHnA.
+    value: 4
+  - name: SELECT_CORRESPONDING_CHANNEL_5
+    description: Select corresponding channel CHnA.
+    value: 5
+  - name: SELECT_CORRESPONDING_CHANNEL_6
+    description: Select corresponding channel CHnA.
+    value: 6
+  - name: SELECT_CORRESPONDING_CHANNEL_7
+    description: Select corresponding channel CHnA.
+    value: 7
+  - name: SELECT_CORRESPONDING_CHANNEL_8
+    description: Select corresponding channel CHnA.
+    value: 8
+  - name: SELECT_CORRESPONDING_CHANNEL_9
+    description: Select corresponding channel CHnA.
+    value: 9
+  - name: SELECT_CH30
+    description: Select CH30A.
+    value: 30
+  - name: SELECT_CH31
+    description: Select CH31A.
+    value: 31
+enum/CMDL1_CTYPE:
+  bit_size: 2
+  variants:
+  - name: SINGLE_ENDED_A_SIDE_CHANNEL
+    description: Single-Ended Mode. Only A side channel is converted.
+    value: 0
+enum/CMDL1_MODE:
+  bit_size: 1
+  variants:
+  - name: DATA_12_BITS
+    description: Standard resolution. Single-ended 12-bit conversion.
+    value: 0
+  - name: DATA_16_BITS
+    description: High resolution. Single-ended 16-bit conversion.
+    value: 1
+enum/CMDL2_ADCH:
+  bit_size: 5
+  variants:
+  - name: SELECT_CH0
+    description: Select CH0A.
+    value: 0
+  - name: SELECT_CH1
+    description: Select CH1A.
+    value: 1
+  - name: SELECT_CH2
+    description: Select CH2A.
+    value: 2
+  - name: SELECT_CH3
+    description: Select CH3A.
+    value: 3
+  - name: SELECT_CORRESPONDING_CHANNEL_4
+    description: Select corresponding channel CHnA.
+    value: 4
+  - name: SELECT_CORRESPONDING_CHANNEL_5
+    description: Select corresponding channel CHnA.
+    value: 5
+  - name: SELECT_CORRESPONDING_CHANNEL_6
+    description: Select corresponding channel CHnA.
+    value: 6
+  - name: SELECT_CORRESPONDING_CHANNEL_7
+    description: Select corresponding channel CHnA.
+    value: 7
+  - name: SELECT_CORRESPONDING_CHANNEL_8
+    description: Select corresponding channel CHnA.
+    value: 8
+  - name: SELECT_CORRESPONDING_CHANNEL_9
+    description: Select corresponding channel CHnA.
+    value: 9
+  - name: SELECT_CH30
+    description: Select CH30A.
+    value: 30
+  - name: SELECT_CH31
+    description: Select CH31A.
+    value: 31
+enum/CMDL2_CTYPE:
+  bit_size: 2
+  variants:
+  - name: SINGLE_ENDED_A_SIDE_CHANNEL
+    description: Single-Ended Mode. Only A side channel is converted.
+    value: 0
+enum/CMDL2_MODE:
+  bit_size: 1
+  variants:
+  - name: DATA_12_BITS
+    description: Standard resolution. Single-ended 12-bit conversion.
+    value: 0
+  - name: DATA_16_BITS
+    description: High resolution. Single-ended 16-bit conversion.
+    value: 1
+enum/CMDL3_ADCH:
+  bit_size: 5
+  variants:
+  - name: SELECT_CH0
+    description: Select CH0A.
+    value: 0
+  - name: SELECT_CH1
+    description: Select CH1A.
+    value: 1
+  - name: SELECT_CH2
+    description: Select CH2A.
+    value: 2
+  - name: SELECT_CH3
+    description: Select CH3A.
+    value: 3
+  - name: SELECT_CORRESPONDING_CHANNEL_4
+    description: Select corresponding channel CHnA.
+    value: 4
+  - name: SELECT_CORRESPONDING_CHANNEL_5
+    description: Select corresponding channel CHnA.
+    value: 5
+  - name: SELECT_CORRESPONDING_CHANNEL_6
+    description: Select corresponding channel CHnA.
+    value: 6
+  - name: SELECT_CORRESPONDING_CHANNEL_7
+    description: Select corresponding channel CHnA.
+    value: 7
+  - name: SELECT_CORRESPONDING_CHANNEL_8
+    description: Select corresponding channel CHnA.
+    value: 8
+  - name: SELECT_CORRESPONDING_CHANNEL_9
+    description: Select corresponding channel CHnA.
+    value: 9
+  - name: SELECT_CH30
+    description: Select CH30A.
+    value: 30
+  - name: SELECT_CH31
+    description: Select CH31A.
+    value: 31
+enum/CMDL3_CTYPE:
+  bit_size: 2
+  variants:
+  - name: SINGLE_ENDED_A_SIDE_CHANNEL
+    description: Single-Ended Mode. Only A side channel is converted.
+    value: 0
+enum/CMDL3_MODE:
+  bit_size: 1
+  variants:
+  - name: DATA_12_BITS
+    description: Standard resolution. Single-ended 12-bit conversion.
+    value: 0
+  - name: DATA_16_BITS
+    description: High resolution. Single-ended 16-bit conversion.
+    value: 1
+enum/CMDL4_ADCH:
+  bit_size: 5
+  variants:
+  - name: SELECT_CH0
+    description: Select CH0A.
+    value: 0
+  - name: SELECT_CH1
+    description: Select CH1A.
+    value: 1
+  - name: SELECT_CH2
+    description: Select CH2A.
+    value: 2
+  - name: SELECT_CH3
+    description: Select CH3A.
+    value: 3
+  - name: SELECT_CORRESPONDING_CHANNEL_4
+    description: Select corresponding channel CHnA.
+    value: 4
+  - name: SELECT_CORRESPONDING_CHANNEL_5
+    description: Select corresponding channel CHnA.
+    value: 5
+  - name: SELECT_CORRESPONDING_CHANNEL_6
+    description: Select corresponding channel CHnA.
+    value: 6
+  - name: SELECT_CORRESPONDING_CHANNEL_7
+    description: Select corresponding channel CHnA.
+    value: 7
+  - name: SELECT_CORRESPONDING_CHANNEL_8
+    description: Select corresponding channel CHnA.
+    value: 8
+  - name: SELECT_CORRESPONDING_CHANNEL_9
+    description: Select corresponding channel CHnA.
+    value: 9
+  - name: SELECT_CH30
+    description: Select CH30A.
+    value: 30
+  - name: SELECT_CH31
+    description: Select CH31A.
+    value: 31
+enum/CMDL4_CTYPE:
+  bit_size: 2
+  variants:
+  - name: SINGLE_ENDED_A_SIDE_CHANNEL
+    description: Single-Ended Mode. Only A side channel is converted.
+    value: 0
+enum/CMDL4_MODE:
+  bit_size: 1
+  variants:
+  - name: DATA_12_BITS
+    description: Standard resolution. Single-ended 12-bit conversion.
+    value: 0
+  - name: DATA_16_BITS
+    description: High resolution. Single-ended 16-bit conversion.
+    value: 1
+enum/CMDL5_ADCH:
+  bit_size: 5
+  variants:
+  - name: SELECT_CH0
+    description: Select CH0A.
+    value: 0
+  - name: SELECT_CH1
+    description: Select CH1A.
+    value: 1
+  - name: SELECT_CH2
+    description: Select CH2A.
+    value: 2
+  - name: SELECT_CH3
+    description: Select CH3A.
+    value: 3
+  - name: SELECT_CORRESPONDING_CHANNEL_4
+    description: Select corresponding channel CHnA.
+    value: 4
+  - name: SELECT_CORRESPONDING_CHANNEL_5
+    description: Select corresponding channel CHnA.
+    value: 5
+  - name: SELECT_CORRESPONDING_CHANNEL_6
+    description: Select corresponding channel CHnA.
+    value: 6
+  - name: SELECT_CORRESPONDING_CHANNEL_7
+    description: Select corresponding channel CHnA.
+    value: 7
+  - name: SELECT_CORRESPONDING_CHANNEL_8
+    description: Select corresponding channel CHnA.
+    value: 8
+  - name: SELECT_CORRESPONDING_CHANNEL_9
+    description: Select corresponding channel CHnA.
+    value: 9
+  - name: SELECT_CH30
+    description: Select CH30A.
+    value: 30
+  - name: SELECT_CH31
+    description: Select CH31A.
+    value: 31
+enum/CMDL5_CTYPE:
+  bit_size: 2
+  variants:
+  - name: SINGLE_ENDED_A_SIDE_CHANNEL
+    description: Single-Ended Mode. Only A side channel is converted.
+    value: 0
+enum/CMDL5_MODE:
+  bit_size: 1
+  variants:
+  - name: DATA_12_BITS
+    description: Standard resolution. Single-ended 12-bit conversion.
+    value: 0
+  - name: DATA_16_BITS
+    description: High resolution. Single-ended 16-bit conversion.
+    value: 1
+enum/CMDL6_ADCH:
+  bit_size: 5
+  variants:
+  - name: SELECT_CH0
+    description: Select CH0A.
+    value: 0
+  - name: SELECT_CH1
+    description: Select CH1A.
+    value: 1
+  - name: SELECT_CH2
+    description: Select CH2A.
+    value: 2
+  - name: SELECT_CH3
+    description: Select CH3A.
+    value: 3
+  - name: SELECT_CORRESPONDING_CHANNEL_4
+    description: Select corresponding channel CHnA.
+    value: 4
+  - name: SELECT_CORRESPONDING_CHANNEL_5
+    description: Select corresponding channel CHnA.
+    value: 5
+  - name: SELECT_CORRESPONDING_CHANNEL_6
+    description: Select corresponding channel CHnA.
+    value: 6
+  - name: SELECT_CORRESPONDING_CHANNEL_7
+    description: Select corresponding channel CHnA.
+    value: 7
+  - name: SELECT_CORRESPONDING_CHANNEL_8
+    description: Select corresponding channel CHnA.
+    value: 8
+  - name: SELECT_CORRESPONDING_CHANNEL_9
+    description: Select corresponding channel CHnA.
+    value: 9
+  - name: SELECT_CH30
+    description: Select CH30A.
+    value: 30
+  - name: SELECT_CH31
+    description: Select CH31A.
+    value: 31
+enum/CMDL6_CTYPE:
+  bit_size: 2
+  variants:
+  - name: SINGLE_ENDED_A_SIDE_CHANNEL
+    description: Single-Ended Mode. Only A side channel is converted.
+    value: 0
+enum/CMDL6_MODE:
+  bit_size: 1
+  variants:
+  - name: DATA_12_BITS
+    description: Standard resolution. Single-ended 12-bit conversion.
+    value: 0
+  - name: DATA_16_BITS
+    description: High resolution. Single-ended 16-bit conversion.
+    value: 1
+enum/CMDL7_ADCH:
+  bit_size: 5
+  variants:
+  - name: SELECT_CH0
+    description: Select CH0A.
+    value: 0
+  - name: SELECT_CH1
+    description: Select CH1A.
+    value: 1
+  - name: SELECT_CH2
+    description: Select CH2A.
+    value: 2
+  - name: SELECT_CH3
+    description: Select CH3A.
+    value: 3
+  - name: SELECT_CORRESPONDING_CHANNEL_4
+    description: Select corresponding channel CHnA.
+    value: 4
+  - name: SELECT_CORRESPONDING_CHANNEL_5
+    description: Select corresponding channel CHnA.
+    value: 5
+  - name: SELECT_CORRESPONDING_CHANNEL_6
+    description: Select corresponding channel CHnA.
+    value: 6
+  - name: SELECT_CORRESPONDING_CHANNEL_7
+    description: Select corresponding channel CHnA.
+    value: 7
+  - name: SELECT_CORRESPONDING_CHANNEL_8
+    description: Select corresponding channel CHnA.
+    value: 8
+  - name: SELECT_CORRESPONDING_CHANNEL_9
+    description: Select corresponding channel CHnA.
+    value: 9
+  - name: SELECT_CH30
+    description: Select CH30A.
+    value: 30
+  - name: SELECT_CH31
+    description: Select CH31A.
+    value: 31
+enum/CMDL7_CTYPE:
+  bit_size: 2
+  variants:
+  - name: SINGLE_ENDED_A_SIDE_CHANNEL
+    description: Single-Ended Mode. Only A side channel is converted.
+    value: 0
+enum/CMDL7_MODE:
+  bit_size: 1
+  variants:
+  - name: DATA_12_BITS
+    description: Standard resolution. Single-ended 12-bit conversion.
+    value: 0
+  - name: DATA_16_BITS
+    description: High resolution. Single-ended 16-bit conversion.
+    value: 1
+enum/CMDSRC:
+  bit_size: 3
+  variants:
+  - name: NOT_VALID
+    description: Not a valid value CMDSRC value for a dataword in RESFIFO. 0x0 is only found in initial FIFO state prior to an ADC conversion result dataword being stored to a RESFIFO buffer.
+    value: 0
+  - name: CMD1
+    description: CMD1 buffer used as control settings for this conversion.
+    value: 1
+  - name: CORRESPONDING_CMD_2
+    description: Corresponding command buffer used as control settings for this conversion.
+    value: 2
+  - name: CORRESPONDING_CMD_3
+    description: Corresponding command buffer used as control settings for this conversion.
+    value: 3
+  - name: CORRESPONDING_CMD_4
+    description: Corresponding command buffer used as control settings for this conversion.
+    value: 4
+  - name: CORRESPONDING_CMD_5
+    description: Corresponding command buffer used as control settings for this conversion.
+    value: 5
+  - name: CORRESPONDING_CMD_6
+    description: Corresponding command buffer used as control settings for this conversion.
+    value: 6
+  - name: CMD7
+    description: CMD7 buffer used as control settings for this conversion.
+    value: 7
+enum/CSW:
+  bit_size: 3
+  variants:
+  - name: CSCALE_NOT_SUPPORTED
+    description: Channel scaling not supported.
+    value: 0
+  - name: BIT_WIDTH_1
+    description: Channel scaling supported. 1-bit CSCALE control field.
+    value: 1
+  - name: BIT_WIDTH_6
+    description: Channel scaling supported. 6-bit CSCALE control field.
+    value: 6
+enum/DIFFEN:
+  bit_size: 1
+  variants:
+  - name: DIFFERENTIAL_NOT_SUPPORTED
+    description: Differential operation not supported.
+    value: 0
+  - name: DIFFERENTIAL_SUPPORTED
+    description: Differential operation supported.
+    value: 1
+enum/DOZEN:
+  bit_size: 1
+  variants:
+  - name: ENABLED
+    description: ADC is enabled in low power mode.
+    value: 0
+  - name: DISABLED
+    description: ADC is disabled in low power mode.
+    value: 1
+enum/FIFOSIZE:
+  bit_size: 8
+  variants:
+  - name: ENTRIES_2
+    description: Result FIFO depth = 2 dataword.
+    value: 1
+  - name: ENTRIES_4
+    description: Result FIFO depth = 4 datawords.
+    value: 4
+  - name: ENTRIES_8
+    description: Result FIFO depth = 8 datawords.
+    value: 8
+  - name: ENTRIES_16
+    description: Result FIFO depth = 16 datawords.
+    value: 16
+  - name: ENTRIES_32
+    description: Result FIFO depth = 32 datawords.
+    value: 32
+  - name: ENTRIES_64
+    description: Result FIFO depth = 64 datawords.
+    value: 64
+enum/FOF0:
+  bit_size: 1
+  variants:
+  - name: NO_OVERFLOW
+    description: No result FIFO 0 overflow has occurred since the last time the flag was cleared.
+    value: 0
+  - name: OVERFLOW_DETECTED
+    description: At least one result FIFO 0 overflow has occurred since the last time the flag was cleared.
+    value: 1
+enum/GCC0_RDY:
+  bit_size: 1
+  variants:
+  - name: GAIN_CAL_NOT_VALID
+    description: The GAIN_CAL value is invalid. Run the hardware calibration routine for this value to be set.
+    value: 0
+  - name: HARDWARE_CAL_ROUTINE_COMPLETED
+    description: The GAIN_CAL value is valid. GAIN_CAL should be used by software to derive GCRa[GCALR].
+    value: 1
+enum/HPT_EXDI:
+  bit_size: 1
+  variants:
+  - name: ENABLED
+    description: High priority trigger exceptions are enabled.
+    value: 0
+  - name: DISABLED
+    description: High priority trigger exceptions are disabled.
+    value: 1
+enum/HSEXTRA:
+  bit_size: 1
+  variants:
+  - name: HSEXTRA_0
+    description: No extra cycle added.
+    value: 0
+  - name: HSEXTRA_1
+    description: Extra cycle added.
+    value: 1
+enum/IADCKI:
+  bit_size: 1
+  variants:
+  - name: INTERNAL_CLK_NOT_AVAILABLE
+    description: Internal clock source not implemented.
+    value: 0
+  - name: INTERNAL_CLK_AVAILABLE
+    description: Internal clock source (and CFG[ADCKEN]) implemented.
+    value: 1
+enum/LOOPCNT:
+  bit_size: 4
+  variants:
+  - name: RESULT_1
+    description: Result is from initial conversion in command.
+    value: 0
+  - name: RESULT_2
+    description: Result is from second conversion in command.
+    value: 1
+  - name: CORRESPONDING_RESULT_2
+    description: Result is from LOOPCNT+1 conversion in command.
+    value: 2
+  - name: CORRESPONDING_RESULT_3
+    description: Result is from LOOPCNT+1 conversion in command.
+    value: 3
+  - name: CORRESPONDING_RESULT_4
+    description: Result is from LOOPCNT+1 conversion in command.
+    value: 4
+  - name: CORRESPONDING_RESULT_5
+    description: Result is from LOOPCNT+1 conversion in command.
+    value: 5
+  - name: CORRESPONDING_RESULT_6
+    description: Result is from LOOPCNT+1 conversion in command.
+    value: 6
+  - name: CORRESPONDING_RESULT_7
+    description: Result is from LOOPCNT+1 conversion in command.
+    value: 7
+  - name: CORRESPONDING_RESULT_8
+    description: Result is from LOOPCNT+1 conversion in command.
+    value: 8
+  - name: CORRESPONDING_RESULT_9
+    description: Result is from LOOPCNT+1 conversion in command.
+    value: 9
+  - name: RESULT_16
+    description: Result is from 16th conversion in command.
+    value: 15
+enum/MVI:
+  bit_size: 1
+  variants:
+  - name: MULTIPLE_REF_NOT_SUPPORTED
+    description: Single voltage reference high (VREFH) input supported.
+    value: 0
+  - name: MULTIPLE_REF_SUPPORTED
+    description: Multiple voltage reference high (VREFH) inputs supported.
+    value: 1
+enum/NUM_FIFO:
+  bit_size: 3
+  variants:
+  - name: NO_FIFO_IMPLEMENTED
+    description: N/A.
+    value: 0
+  - name: CNT_1
+    description: This design supports one result FIFO.
+    value: 1
+  - name: CNT_2
+    description: This design supports two result FIFOs.
+    value: 2
+  - name: CNT_3
+    description: This design supports three result FIFOs.
+    value: 3
+  - name: CNT_4
+    description: This design supports four result FIFOs.
+    value: 4
+enum/NUM_SEC:
+  bit_size: 1
+  variants:
+  - name: SINGLE_CONVERTOR
+    description: This design supports one single ended conversion at a time.
+    value: 0
+  - name: DUAL_CONVERTOR
+    description: This design supports two simultaneous single ended conversions.
+    value: 1
+enum/PWRSEL:
+  bit_size: 1
+  variants:
+  - name: LOWEST
+    description: Low power.
+    value: 0
+  - name: HIGHEST
+    description: High power.
+    value: 1
+enum/RDY0:
+  bit_size: 1
+  variants:
+  - name: BELOW_THRESHOLD
+    description: Result FIFO 0 data level not above watermark level.
+    value: 0
+  - name: ABOVE_THRESHOLD
+    description: Result FIFO 0 holding data above watermark level.
+    value: 1
+enum/REFSEL:
+  bit_size: 2
+  variants:
+  - name: OPTION_1
+    description: (Default) Option 1 setting.
+    value: 0
+  - name: OPTION_2
+    description: Option 2 setting.
+    value: 1
+  - name: OPTION_3
+    description: Option 3 setting.
+    value: 2
+enum/RES:
+  bit_size: 1
+  variants:
+  - name: MAX_13_bit
+    description: Up to 12-bit single ended resolution supported (and 13-bit differential resolution if VERID[DIFFEN] = 1b).
+    value: 0
+  - name: MAX_16_bit
+    description: Up to 16-bit single ended resolution supported (and 16-bit differential resolution if VERID[DIFFEN] = 1b).
+    value: 1
+enum/RST:
+  bit_size: 1
+  variants:
+  - name: RELEASED_FROM_RESET
+    description: ADC logic is not reset.
+    value: 0
+  - name: HELD_IN_RESET
+    description: ADC logic is reset.
+    value: 1
+enum/RSTFIFO0:
+  bit_size: 1
+  variants:
+  - name: NO_ACTION
+    description: No effect.
+    value: 0
+  - name: TRIGGER_RESET
+    description: FIFO 0 is reset.
+    value: 1
+enum/SWT0:
+  bit_size: 1
+  variants:
+  - name: NO_TRIGGER
+    description: No trigger 0 event generated.
+    value: 0
+  - name: INITIATE_TRIGGER_0
+    description: Trigger 0 event generated.
+    value: 1
+enum/SWT1:
+  bit_size: 1
+  variants:
+  - name: NO_TRIGGER
+    description: No trigger 1 event generated.
+    value: 0
+  - name: INITIATE_TRIGGER_1
+    description: Trigger 1 event generated.
+    value: 1
+enum/SWT2:
+  bit_size: 1
+  variants:
+  - name: NO_TRIGGER
+    description: No trigger 2 event generated.
+    value: 0
+  - name: INITIATE_TRIGGER_2
+    description: Trigger 2 event generated.
+    value: 1
+enum/SWT3:
+  bit_size: 1
+  variants:
+  - name: NO_TRIGGER
+    description: No trigger 3 event generated.
+    value: 0
+  - name: INITIATE_TRIGGER_3
+    description: Trigger 3 event generated.
+    value: 1
+enum/TCMD:
+  bit_size: 3
+  variants:
+  - name: NOT_VALID
+    description: Not a valid selection from the command buffer. Trigger event is ignored.
+    value: 0
+  - name: EXECUTE_CMD1
+    description: CMD1 is executed.
+    value: 1
+  - name: EXECUTE_CORRESPONDING_CMD_2
+    description: Corresponding CMD is executed.
+    value: 2
+  - name: EXECUTE_CORRESPONDING_CMD_3
+    description: Corresponding CMD is executed.
+    value: 3
+  - name: EXECUTE_CORRESPONDING_CMD_4
+    description: Corresponding CMD is executed.
+    value: 4
+  - name: EXECUTE_CORRESPONDING_CMD_5
+    description: Corresponding CMD is executed.
+    value: 5
+  - name: EXECUTE_CORRESPONDING_CMD_6
+    description: Corresponding CMD is executed.
+    value: 6
+  - name: EXECUTE_CMD7
+    description: CMD7 is executed.
+    value: 7
+enum/TCOMP_FLAG:
+  bit_size: 4
+  variants:
+  - name: NO_TRIGGER
+    description: No triggers have been completed. Trigger completion interrupts are disabled.
+    value: 0
+  - name: BIT0_MEANS_TRIGGER_0_COMPLETED
+    description: Trigger 0 has been completed and trigger 0 has enabled completion interrupts.
+    value: 1
+  - name: BIT1_MEANS_TRIGGER_1_COMPLETED
+    description: Trigger 1 has been completed and trigger 1 has enabled completion interrupts.
+    value: 2
+  - name: SET_BITS_INDICATE_TRIGGER_x_COMPLETED_3
+    description: Associated trigger sequence has completed and has enabled completion interrupts.
+    value: 3
+  - name: SET_BITS_INDICATE_TRIGGER_x_COMPLETED_4
+    description: Associated trigger sequence has completed and has enabled completion interrupts.
+    value: 4
+  - name: SET_BITS_INDICATE_TRIGGER_x_COMPLETED_5
+    description: Associated trigger sequence has completed and has enabled completion interrupts.
+    value: 5
+  - name: SET_BITS_INDICATE_TRIGGER_x_COMPLETED_6
+    description: Associated trigger sequence has completed and has enabled completion interrupts.
+    value: 6
+  - name: SET_BITS_INDICATE_TRIGGER_x_COMPLETED_7
+    description: Associated trigger sequence has completed and has enabled completion interrupts.
+    value: 7
+  - name: SET_BITS_INDICATE_TRIGGER_x_COMPLETED_8
+    description: Associated trigger sequence has completed and has enabled completion interrupts.
+    value: 8
+  - name: SET_BITS_INDICATE_TRIGGER_x_COMPLETED_9
+    description: Associated trigger sequence has completed and has enabled completion interrupts.
+    value: 9
+  - name: ALL_BITS_SET_INDICATE_ALL_TRIGGERS_COMPLETED
+    description: Every trigger sequence has been completed and every trigger has enabled completion interrupts.
+    value: 15
+enum/TCOMP_IE:
+  bit_size: 4
+  variants:
+  - name: DISABLED
+    description: Trigger completion interrupts are disabled.
+    value: 0
+  - name: TRIGGER_0_COMPLETE_ENABLED
+    description: Trigger completion interrupts are enabled for trigger source 0 only.
+    value: 1
+  - name: TRIGGER_1_COMPLETE_ENABLED
+    description: Trigger completion interrupts are enabled for trigger source 1 only.
+    value: 2
+  - name: TRIGGER_x_COMPLETE_ENABLED_3
+    description: Associated trigger completion interrupts are enabled.
+    value: 3
+  - name: TRIGGER_x_COMPLETE_ENABLED_4
+    description: Associated trigger completion interrupts are enabled.
+    value: 4
+  - name: TRIGGER_x_COMPLETE_ENABLED_5
+    description: Associated trigger completion interrupts are enabled.
+    value: 5
+  - name: TRIGGER_x_COMPLETE_ENABLED_6
+    description: Associated trigger completion interrupts are enabled.
+    value: 6
+  - name: TRIGGER_x_COMPLETE_ENABLED_7
+    description: Associated trigger completion interrupts are enabled.
+    value: 7
+  - name: TRIGGER_x_COMPLETE_ENABLED_8
+    description: Associated trigger completion interrupts are enabled.
+    value: 8
+  - name: TRIGGER_x_COMPLETE_ENABLED_9
+    description: Associated trigger completion interrupts are enabled.
+    value: 9
+  - name: ALL_TRIGGER_COMPLETES_ENABLED
+    description: Trigger completion interrupts are enabled for every trigger source.
+    value: 15
+enum/TCOMP_INT:
+  bit_size: 1
+  variants:
+  - name: FLAG_CLEAR
+    description: Either IE[TCOMP_IE] is set to 0, or no trigger sequences have run to completion.
+    value: 0
+  - name: COMPLETION_DETECTED
+    description: Trigger sequence has been completed and all data is stored in the associated FIFO.
+    value: 1
+enum/TEXC_INT:
+  bit_size: 1
+  variants:
+  - name: NO_EXCEPTION
+    description: No trigger exceptions have occurred.
+    value: 0
+  - name: EXCEPTION_DETECTED
+    description: A trigger exception has occurred and is pending acknowledgement.
+    value: 1
+enum/TEXC_NUM:
+  bit_size: 4
+  variants:
+  - name: NO_EXCEPTIONS
+    description: No triggers have been interrupted by a high priority exception. Or CFG[TRES] = 1.
+    value: 0
+  - name: BIT0_MEANS_TRIGGER_0_INTERRUPTED
+    description: Trigger 0 has been interrupted by a high priority exception.
+    value: 1
+  - name: BIT1_MEANS_TRIGGER_1_INTERRUPTED
+    description: Trigger 1 has been interrupted by a high priority exception.
+    value: 2
+  - name: SET_BITS_INDICATE_TRIGGER_x_INTERRUPTED_3
+    description: Associated trigger sequence has interrupted by a high priority exception.
+    value: 3
+  - name: SET_BITS_INDICATE_TRIGGER_x_INTERRUPTED_4
+    description: Associated trigger sequence has interrupted by a high priority exception.
+    value: 4
+  - name: SET_BITS_INDICATE_TRIGGER_x_INTERRUPTED_5
+    description: Associated trigger sequence has interrupted by a high priority exception.
+    value: 5
+  - name: SET_BITS_INDICATE_TRIGGER_x_INTERRUPTED_6
+    description: Associated trigger sequence has interrupted by a high priority exception.
+    value: 6
+  - name: SET_BITS_INDICATE_TRIGGER_x_INTERRUPTED_7
+    description: Associated trigger sequence has interrupted by a high priority exception.
+    value: 7
+  - name: SET_BITS_INDICATE_TRIGGER_x_INTERRUPTED_8
+    description: Associated trigger sequence has interrupted by a high priority exception.
+    value: 8
+  - name: SET_BITS_INDICATE_TRIGGER_x_INTERRUPTED_9
+    description: Associated trigger sequence has interrupted by a high priority exception.
+    value: 9
+  - name: ALL_BITS_SET_INDICATE_ALL_TRIGGERS_INTERRUPTED
+    description: Every trigger sequence has been interrupted by a high priority exception.
+    value: 15
+enum/TPRI:
+  bit_size: 2
+  variants:
+  - name: HIGHEST_PRIORITY
+    description: Set to highest priority, Level 1.
+    value: 0
+  - name: CORRESPONDING_LOWER_PRIORITY_1
+    description: Set to corresponding priority level.
+    value: 1
+  - name: CORRESPONDING_LOWER_PRIORITY_2
+    description: Set to corresponding priority level.
+    value: 2
+  - name: LOWEST_PRIORITY
+    description: Set to lowest priority, Level 4.
+    value: 3
+enum/TPRICTRL:
+  bit_size: 2
+  variants:
+  - name: ABORT_CURRENT_ON_PRIORITY
+    description: If a higher priority trigger is detected during command processing, the current conversion is aborted and the new command specified by the trigger is started.
+    value: 0
+  - name: FINISH_CURRENT_ON_PRIORITY
+    description: If a higher priority trigger is received during command processing, the current command is stopped after completing the current conversion. If averaging is enabled, the averaging loop will be completed. However, CMDHa[LOOP] will be ignored and the higher priority trigger will be serviced.
+    value: 1
+  - name: FINISH_SEQUENCE_ON_PRIORITY
+    description: If a higher priority trigger is received during command processing, the current command will be completed (averaging, looping, compare) before servicing the higher priority trigger.
+    value: 2
+enum/TRGACT:
+  bit_size: 2
+  variants:
+  - name: TRIG_0
+    description: Command (sequence) associated with Trigger 0 currently being executed.
+    value: 0
+  - name: TRIG_1
+    description: Command (sequence) associated with Trigger 1 currently being executed.
+    value: 1
+  - name: TRIG_2
+    description: Command (sequence) associated with Trigger 2 currently being executed.
+    value: 2
+  - name: TRIG_3
+    description: Command (sequence) associated with Trigger 3 currently being executed.
+    value: 3
+enum/TSRC:
+  bit_size: 2
+  variants:
+  - name: TRIGGER_0
+    description: Trigger source 0 initiated this conversion.
+    value: 0
+  - name: TRIGGER_1
+    description: Trigger source 1 initiated this conversion.
+    value: 1
+  - name: TRIGGER_2
+    description: Trigger source 2 initiated this conversion.
+    value: 2
+  - name: TRIGGER_3
+    description: Trigger source 3 initiated this conversion.
+    value: 3
+enum/VR1RNGI:
+  bit_size: 1
+  variants:
+  - name: REF1_FIXED_VOLTAGE_RANGE
+    description: Range control not required. CFG[VREF1RNG] is not implemented.
+    value: 0
+  - name: REF1_SELECTABLE_VOLTAGE_RANGE
+    description: Range control required. CFG[VREF1RNG] is implemented.
+    value: 1

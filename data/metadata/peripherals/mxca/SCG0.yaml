@@ -1,0 +1,1003 @@
+block/SCG0:
+  description: System Clock Generator.
+  items:
+  - name: VERID
+    description: Version ID Register.
+    byte_offset: 0
+    access: Read
+    fieldset: VERID
+  - name: PARAM
+    description: Parameter Register.
+    byte_offset: 4
+    access: Read
+    fieldset: PARAM
+  - name: TRIM_LOCK
+    description: Trim Lock register.
+    byte_offset: 8
+    fieldset: TRIM_LOCK
+  - name: CSR
+    description: Clock Status Register.
+    byte_offset: 16
+    access: Read
+    fieldset: CSR
+  - name: RCCR
+    description: Run Clock Control Register.
+    byte_offset: 20
+    fieldset: RCCR
+  - name: SOSCCSR
+    description: SOSC Control Status Register.
+    byte_offset: 256
+    fieldset: SOSCCSR
+  - name: SOSCCFG
+    description: SOSC Configuration Register.
+    byte_offset: 264
+    fieldset: SOSCCFG
+  - name: SIRCCSR
+    description: SIRC Control Status Register.
+    byte_offset: 512
+    fieldset: SIRCCSR
+  - name: SIRCTCFG
+    description: SIRC Trim Configuration Register.
+    byte_offset: 524
+    fieldset: SIRCTCFG
+  - name: SIRCTRIM
+    description: SIRC Trim Register.
+    byte_offset: 528
+    fieldset: SIRCTRIM
+  - name: SIRCSTAT
+    description: SIRC Auto-trimming Status Register.
+    byte_offset: 536
+    fieldset: SIRCSTAT
+  - name: FIRCCSR
+    description: FIRC Control Status Register.
+    byte_offset: 768
+    fieldset: FIRCCSR
+  - name: FIRCCFG
+    description: FIRC Configuration Register.
+    byte_offset: 776
+    fieldset: FIRCCFG
+  - name: FIRCTRIM
+    description: FIRC Trim Register.
+    byte_offset: 784
+    fieldset: FIRCTRIM
+  - name: ROSCCSR
+    description: ROSC Control Status Register.
+    byte_offset: 1024
+    fieldset: ROSCCSR
+  - name: SPLLCSR
+    description: SPLL Control Status Register.
+    byte_offset: 1536
+    fieldset: SPLLCSR
+  - name: SPLLCTRL
+    description: SPLL Control Register.
+    byte_offset: 1540
+    fieldset: SPLLCTRL
+  - name: SPLLSTAT
+    description: SPLL Status Register.
+    byte_offset: 1544
+    access: Read
+    fieldset: SPLLSTAT
+  - name: SPLLNDIV
+    description: SPLL N Divider Register.
+    byte_offset: 1548
+    fieldset: SPLLNDIV
+  - name: SPLLMDIV
+    description: SPLL M Divider Register.
+    byte_offset: 1552
+    fieldset: SPLLMDIV
+  - name: SPLLPDIV
+    description: SPLL P Divider Register.
+    byte_offset: 1556
+    fieldset: SPLLPDIV
+  - name: SPLLLOCK_CNFG
+    description: SPLL LOCK Configuration Register.
+    byte_offset: 1560
+    fieldset: SPLLLOCK_CNFG
+  - name: SPLLSSCGSTAT
+    description: SPLL SSCG Status Register.
+    byte_offset: 1568
+    access: Read
+    fieldset: SPLLSSCGSTAT
+  - name: SPLLSSCG0
+    description: SPLL Spread Spectrum Control 0 Register.
+    byte_offset: 1572
+    fieldset: SPLLSSCG0
+  - name: SPLLSSCG1
+    description: SPLL Spread Spectrum Control 1 Register.
+    byte_offset: 1576
+    fieldset: SPLLSSCG1
+  - name: LDOCSR
+    description: LDO Control and Status Register.
+    byte_offset: 2048
+    fieldset: LDOCSR
+fieldset/CSR:
+  description: Clock Status Register.
+  fields:
+  - name: SCS
+    description: System Clock Source.
+    bit_offset: 24
+    bit_size: 3
+    enum: CSR_SCS
+fieldset/FIRCCFG:
+  description: FIRC Configuration Register.
+  fields:
+  - name: FREQ_SEL
+    description: Frequency select.
+    bit_offset: 1
+    bit_size: 3
+    enum: FREQ_SEL
+fieldset/FIRCCSR:
+  description: FIRC Control Status Register.
+  fields:
+  - name: FIRCEN
+    description: FIRC Enable.
+    bit_offset: 0
+    bit_size: 1
+  - name: FIRCSTEN
+    description: FIRC Stop Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: FIRCSTEN
+  - name: FIRC_SCLK_PERIPH_EN
+    description: FIRC 45 MHz Clock to peripherals Enable.
+    bit_offset: 4
+    bit_size: 1
+  - name: FIRC_FCLK_PERIPH_EN
+    description: FRO_HF Clock to peripherals Enable.
+    bit_offset: 5
+    bit_size: 1
+  - name: LK
+    description: Lock Register.
+    bit_offset: 23
+    bit_size: 1
+    enum: FIRCCSR_LK
+  - name: FIRCVLD
+    description: FIRC Valid status.
+    bit_offset: 24
+    bit_size: 1
+    enum: FIRCVLD
+  - name: FIRCSEL
+    description: FIRC Selected.
+    bit_offset: 25
+    bit_size: 1
+  - name: FIRCERR
+    description: FIRC Clock Error.
+    bit_offset: 26
+    bit_size: 1
+    enum: FIRCERR
+  - name: FIRCERR_IE
+    description: FIRC Clock Error Interrupt Enable.
+    bit_offset: 27
+    bit_size: 1
+    enum: FIRCERR_IE
+  - name: FIRCACC_IE
+    description: FIRC Accurate Interrupt Enable.
+    bit_offset: 30
+    bit_size: 1
+    enum: FIRCACC_IE
+  - name: FIRCACC
+    description: FIRC Frequency Accurate.
+    bit_offset: 31
+    bit_size: 1
+    enum: FIRCACC
+fieldset/FIRCTRIM:
+  description: FIRC Trim Register.
+  fields:
+  - name: TRIMFINE
+    description: Trim Fine.
+    bit_offset: 0
+    bit_size: 8
+  - name: TRIMCOAR
+    description: Trim Coarse.
+    bit_offset: 8
+    bit_size: 6
+  - name: TRIMTEMP
+    description: Trim Temperature.
+    bit_offset: 16
+    bit_size: 4
+  - name: TRIMSTART
+    description: Trim Start.
+    bit_offset: 24
+    bit_size: 6
+fieldset/LDOCSR:
+  description: LDO Control and Status Register.
+  fields:
+  - name: LDOEN
+    description: LDO Enable.
+    bit_offset: 0
+    bit_size: 1
+  - name: VOUT_SEL
+    description: LDO output voltage select.
+    bit_offset: 1
+    bit_size: 3
+    enum: VOUT_SEL
+  - name: LDOBYPASS
+    description: LDO Bypass.
+    bit_offset: 4
+    bit_size: 1
+  - name: VOUT_OK
+    description: LDO VOUT OK Inform.
+    bit_offset: 31
+    bit_size: 1
+fieldset/PARAM:
+  description: Parameter Register.
+  fields:
+  - name: SOSCCLKPRES
+    description: SOSC Clock Present.
+    bit_offset: 1
+    bit_size: 1
+  - name: SIRCCLKPRES
+    description: SIRC Clock Present.
+    bit_offset: 2
+    bit_size: 1
+  - name: FIRCCLKPRES
+    description: FIRC Clock Present.
+    bit_offset: 3
+    bit_size: 1
+  - name: ROSCCLKPRES
+    description: ROSC Clock Present.
+    bit_offset: 4
+    bit_size: 1
+  - name: SPLLCLKPRES
+    description: SPLL Clock Present.
+    bit_offset: 6
+    bit_size: 1
+fieldset/RCCR:
+  description: Run Clock Control Register.
+  fields:
+  - name: SCS
+    description: System Clock Source.
+    bit_offset: 24
+    bit_size: 3
+    enum: RCCR_SCS
+fieldset/ROSCCSR:
+  description: ROSC Control Status Register.
+  fields:
+  - name: LK
+    description: Lock Register.
+    bit_offset: 23
+    bit_size: 1
+    enum: ROSCCSR_LK
+  - name: ROSCVLD
+    description: ROSC Valid.
+    bit_offset: 24
+    bit_size: 1
+    enum: ROSCVLD
+  - name: ROSCSEL
+    description: ROSC Selected.
+    bit_offset: 25
+    bit_size: 1
+  - name: ROSCERR
+    description: ROSC Clock Error.
+    bit_offset: 26
+    bit_size: 1
+    enum: ROSCERR
+fieldset/SIRCCSR:
+  description: SIRC Control Status Register.
+  fields:
+  - name: SIRCSTEN
+    description: SIRC Stop Enable.
+    bit_offset: 1
+    bit_size: 1
+  - name: SIRC_CLK_PERIPH_EN
+    description: SIRC Clock to Peripherals Enable.
+    bit_offset: 5
+    bit_size: 1
+  - name: SIRCTREN
+    description: SIRC 12 MHz Trim Enable (SIRCCFG[RANGE]=1).
+    bit_offset: 8
+    bit_size: 1
+  - name: SIRCTRUP
+    description: SIRC Trim Update.
+    bit_offset: 9
+    bit_size: 1
+  - name: TRIM_LOCK
+    description: SIRC TRIM LOCK.
+    bit_offset: 10
+    bit_size: 1
+    enum: TRIM_LOCK
+  - name: COARSE_TRIM_BYPASS
+    description: Coarse Auto Trim Bypass.
+    bit_offset: 11
+    bit_size: 1
+  - name: LK
+    description: Lock Register.
+    bit_offset: 23
+    bit_size: 1
+    enum: SIRCCSR_LK
+  - name: SIRCVLD
+    description: SIRC Valid.
+    bit_offset: 24
+    bit_size: 1
+    enum: SIRCVLD
+  - name: SIRCSEL
+    description: SIRC Selected.
+    bit_offset: 25
+    bit_size: 1
+  - name: SIRCERR
+    description: SIRC Clock Error.
+    bit_offset: 26
+    bit_size: 1
+    enum: SIRCERR
+  - name: SIRCERR_IE
+    description: SIRC Clock Error Interrupt Enable.
+    bit_offset: 27
+    bit_size: 1
+    enum: SIRCERR_IE
+fieldset/SIRCSTAT:
+  description: SIRC Auto-trimming Status Register.
+  fields:
+  - name: CCOTRIM
+    description: CCO Trim.
+    bit_offset: 0
+    bit_size: 6
+  - name: CLTRIM
+    description: CL Trim.
+    bit_offset: 8
+    bit_size: 6
+fieldset/SIRCTCFG:
+  description: SIRC Trim Configuration Register.
+  fields:
+  - name: TRIMSRC
+    description: Trim Source.
+    bit_offset: 0
+    bit_size: 2
+    enum: TRIMSRC
+  - name: TRIMDIV
+    description: SIRC Trim Pre-divider.
+    bit_offset: 16
+    bit_size: 7
+fieldset/SIRCTRIM:
+  description: SIRC Trim Register.
+  fields:
+  - name: CCOTRIM
+    description: CCO Trim.
+    bit_offset: 0
+    bit_size: 6
+  - name: CLTRIM
+    description: CL Trim.
+    bit_offset: 8
+    bit_size: 6
+  - name: TCTRIM
+    description: Trim Temp.
+    bit_offset: 16
+    bit_size: 5
+  - name: FVCHTRIM
+    description: Calibrates the replica voltage in FSU for CCO to get well frequency at initial period.
+    bit_offset: 24
+    bit_size: 5
+fieldset/SOSCCFG:
+  description: SOSC Configuration Register.
+  fields:
+  - name: EREFS
+    description: External Reference Select.
+    bit_offset: 2
+    bit_size: 1
+    enum: EREFS
+  - name: RANGE
+    description: SOSC Range Select.
+    bit_offset: 4
+    bit_size: 2
+    enum: RANGE
+fieldset/SOSCCSR:
+  description: SOSC Control Status Register.
+  fields:
+  - name: SOSCEN
+    description: SOSC Enable.
+    bit_offset: 0
+    bit_size: 1
+  - name: SOSCSTEN
+    description: SOSC Stop Enable.
+    bit_offset: 1
+    bit_size: 1
+  - name: SOSCCM
+    description: SOSC Clock Monitor Enable.
+    bit_offset: 16
+    bit_size: 1
+  - name: SOSCCMRE
+    description: SOSC Clock Monitor Reset Enable.
+    bit_offset: 17
+    bit_size: 1
+    enum: SOSCCMRE
+  - name: LK
+    description: Lock Register.
+    bit_offset: 23
+    bit_size: 1
+    enum: SOSCCSR_LK
+  - name: SOSCVLD
+    description: SOSC Valid.
+    bit_offset: 24
+    bit_size: 1
+  - name: SOSCSEL
+    description: SOSC Selected.
+    bit_offset: 25
+    bit_size: 1
+  - name: SOSCERR
+    description: SOSC Clock Error.
+    bit_offset: 26
+    bit_size: 1
+    enum: SOSCERR
+  - name: SOSCVLD_IE
+    description: SOSC Valid Interrupt Enable.
+    bit_offset: 30
+    bit_size: 1
+  - name: SOSC_SAFE_EN
+    description: SOSC clock safety enable.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SPLLCSR:
+  description: SPLL Control Status Register.
+  fields:
+  - name: SPLLPWREN
+    description: SPLL Power Enable.
+    bit_offset: 0
+    bit_size: 1
+  - name: SPLLCLKEN
+    description: SPLL Clock Enable.
+    bit_offset: 1
+    bit_size: 1
+  - name: SPLLSTEN
+    description: SPLL Stop Enable.
+    bit_offset: 2
+    bit_size: 1
+    enum: SPLLSTEN
+  - name: FRM_CLOCKSTABLE
+    description: Free running mode clock stable.
+    bit_offset: 3
+    bit_size: 1
+  - name: SPLLCM
+    description: SPLL Clock Monitor.
+    bit_offset: 16
+    bit_size: 1
+  - name: SPLLCMRE
+    description: SPLL Clock Monitor Reset Enable.
+    bit_offset: 17
+    bit_size: 1
+    enum: SPLLCMRE
+  - name: LK
+    description: Lock Register.
+    bit_offset: 23
+    bit_size: 1
+    enum: SPLLCSR_LK
+  - name: SPLL_LOCK
+    description: SPLL LOCK.
+    bit_offset: 24
+    bit_size: 1
+    enum: SPLL_LOCK
+  - name: SPLLSEL
+    description: SPLL Selected.
+    bit_offset: 25
+    bit_size: 1
+  - name: SPLLERR
+    description: SPLL Clock Error.
+    bit_offset: 26
+    bit_size: 1
+    enum: SPLLERR
+  - name: SPLL_LOCK_IE
+    description: SPLL LOCK Interrupt Enable.
+    bit_offset: 30
+    bit_size: 1
+fieldset/SPLLCTRL:
+  description: SPLL Control Register.
+  fields:
+  - name: SELR
+    description: Bandwidth select R (resistor) value.
+    bit_offset: 0
+    bit_size: 4
+  - name: SELI
+    description: Bandwidth select I (interation) value.
+    bit_offset: 4
+    bit_size: 6
+  - name: SELP
+    description: Bandwidth select P (proportional) value.
+    bit_offset: 10
+    bit_size: 5
+  - name: BYPASSPOSTDIV2
+    description: Bypass of the divide-by-2 divider.
+    bit_offset: 16
+    bit_size: 1
+  - name: LIMUPOFF
+    description: Up Limiter.
+    bit_offset: 17
+    bit_size: 1
+  - name: BANDDIRECT
+    description: Control of the bandwidth of the PLL.
+    bit_offset: 18
+    bit_size: 1
+  - name: BYPASSPREDIV
+    description: Bypass of the pre-divider.
+    bit_offset: 19
+    bit_size: 1
+  - name: BYPASSPOSTDIV
+    description: Bypass of the post-divider.
+    bit_offset: 20
+    bit_size: 1
+  - name: FRM
+    description: Free Running Mode Enable.
+    bit_offset: 22
+    bit_size: 1
+  - name: SOURCE
+    description: Clock Source.
+    bit_offset: 25
+    bit_size: 2
+    enum: SOURCE
+fieldset/SPLLLOCK_CNFG:
+  description: SPLL LOCK Configuration Register.
+  fields:
+  - name: LOCK_TIME
+    description: Configures the number of reference clocks to count before SPLL is considered locked.
+    bit_offset: 0
+    bit_size: 17
+fieldset/SPLLMDIV:
+  description: SPLL M Divider Register.
+  fields:
+  - name: MDIV
+    description: Feedback divider ratio (M-divider).
+    bit_offset: 0
+    bit_size: 16
+  - name: MREQ
+    description: Feedback ratio change request.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SPLLNDIV:
+  description: SPLL N Divider Register.
+  fields:
+  - name: NDIV
+    description: Pre-divider divider ratio (N-divider).
+    bit_offset: 0
+    bit_size: 8
+  - name: NREQ
+    description: Pre-divider ratio change request.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SPLLPDIV:
+  description: SPLL P Divider Register.
+  fields:
+  - name: PDIV
+    description: Post-divider divider ratio (P-divider).
+    bit_offset: 0
+    bit_size: 5
+  - name: PREQ
+    description: Post-divider ratio change request.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SPLLSSCG0:
+  description: SPLL Spread Spectrum Control 0 Register.
+  fields:
+  - name: SS_MDIV_LSB
+    description: SS_MDIV[31:0].
+    bit_offset: 0
+    bit_size: 32
+fieldset/SPLLSSCG1:
+  description: SPLL Spread Spectrum Control 1 Register.
+  fields:
+  - name: SS_MDIV_MSB
+    description: SS_MDIV[32].
+    bit_offset: 0
+    bit_size: 1
+  - name: SS_MDIV_REQ
+    description: SS_MDIV[32:0] change request.
+    bit_offset: 1
+    bit_size: 1
+  - name: MF
+    description: Modulation Frequency Control.
+    bit_offset: 2
+    bit_size: 3
+  - name: MR
+    description: Modulation Depth Control.
+    bit_offset: 5
+    bit_size: 3
+  - name: MC
+    description: Modulation Waveform Control.
+    bit_offset: 8
+    bit_size: 2
+  - name: DITHER
+    description: Dither Enable.
+    bit_offset: 10
+    bit_size: 1
+  - name: SEL_SS_MDIV
+    description: SS_MDIV select.
+    bit_offset: 11
+    bit_size: 1
+  - name: SS_PD
+    description: SSCG Power Down.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SPLLSSCGSTAT:
+  description: SPLL SSCG Status Register.
+  fields:
+  - name: SS_MDIV_ACK
+    description: SS_MDIV change acknowledge.
+    bit_offset: 0
+    bit_size: 1
+fieldset/SPLLSTAT:
+  description: SPLL Status Register.
+  fields:
+  - name: NDIVACK
+    description: Pre-divider (N) ratio change acknowledge.
+    bit_offset: 1
+    bit_size: 1
+  - name: MDIVACK
+    description: Feedback (M) divider ratio change acknowledge.
+    bit_offset: 2
+    bit_size: 1
+  - name: PDIVACK
+    description: Post-divider (P) ratio change acknowledge.
+    bit_offset: 3
+    bit_size: 1
+  - name: FRMDET
+    description: Free running detector (active high).
+    bit_offset: 4
+    bit_size: 1
+fieldset/TRIM_LOCK:
+  description: Trim Lock register.
+  fields:
+  - name: TRIM_UNLOCK
+    description: TRIM_UNLOCK.
+    bit_offset: 0
+    bit_size: 1
+    enum: TRIM_UNLOCK
+  - name: IFR_DISABLE
+    description: IFR_DISABLE.
+    bit_offset: 1
+    bit_size: 1
+    enum: IFR_DISABLE
+  - name: TRIM_LOCK_KEY
+    description: TRIM_LOCK_KEY.
+    bit_offset: 16
+    bit_size: 16
+fieldset/VERID:
+  description: Version ID Register.
+  fields:
+  - name: VERSION
+    description: SCG Version Number.
+    bit_offset: 0
+    bit_size: 32
+enum/CSR_SCS:
+  bit_size: 3
+  variants:
+  - name: SOSC
+    description: SOSC.
+    value: 1
+  - name: SIRC
+    description: SIRC.
+    value: 2
+  - name: FIRC
+    description: FIRC.
+    value: 3
+  - name: ROSC
+    description: ROSC.
+    value: 4
+  - name: SPLL
+    description: SPLL.
+    value: 6
+enum/EREFS:
+  bit_size: 1
+  variants:
+  - name: EXTERNAL
+    description: External reference clock selected.
+    value: 0
+  - name: INTERNAL
+    description: Internal crystal oscillator of OSC selected.
+    value: 1
+enum/FIRCACC:
+  bit_size: 1
+  variants:
+  - name: NOT_ENABLED_OR_NOT_VALID
+    description: FIRC is not enabled or clock is not accurate.
+    value: 0
+  - name: ENABLED_AND_VALID
+    description: FIRC is enabled and output clock is accurate after some preparation time which is obtained by counting FRO_HF clock.
+    value: 1
+enum/FIRCACC_IE:
+  bit_size: 1
+  variants:
+  - name: FIRCACCNOT
+    description: FIRCACC interrupt is not enabled.
+    value: 0
+  - name: FIRCACCYES
+    description: FIRCACC interrupt is enabled.
+    value: 1
+enum/FIRCCSR_LK:
+  bit_size: 1
+  variants:
+  - name: WRITE_ENABLED
+    description: Control Status Register can be written.
+    value: 0
+  - name: WRITE_DISABLED
+    description: Control Status Register cannot be written.
+    value: 1
+enum/FIRCERR:
+  bit_size: 1
+  variants:
+  - name: ERROR_NOT_DETECTED
+    description: Error not detected with the FIRC trimming.
+    value: 0
+  - name: ERROR_DETECTED
+    description: Error detected with the FIRC trimming.
+    value: 1
+enum/FIRCERR_IE:
+  bit_size: 1
+  variants:
+  - name: ERROR_NOT_DETECTED
+    description: FIRCERR interrupt is not enabled.
+    value: 0
+  - name: ERROR_DETECTED
+    description: FIRCERR interrupt is enabled.
+    value: 1
+enum/FIRCSTEN:
+  bit_size: 1
+  variants:
+  - name: DISABLED_IN_STOP_MODES
+    description: FIRC is disabled in Deep Sleep mode.
+    value: 0
+  - name: ENABLED_IN_STOP_MODES
+    description: FIRC is enabled in Deep Sleep mode.
+    value: 1
+enum/FIRCVLD:
+  bit_size: 1
+  variants:
+  - name: NOT_ENABLED_OR_NOT_VALID
+    description: FIRC is not enabled or clock is not valid.
+    value: 0
+  - name: ENABLED_AND_VALID
+    description: FIRC is enabled and output clock is valid. The clock is valid after there is an output clock from the FIRC analog.
+    value: 1
+enum/FREQ_SEL:
+  bit_size: 3
+  variants:
+  - name: FIRC_48MHz_192S
+    description: 45 MHz FIRC clock selected, divided from 180 MHz.
+    value: 1
+  - name: FIRC_64MHz
+    description: 60 MHz FIRC clock selected.
+    value: 3
+  - name: FIRC_96MHz
+    description: 90 MHz FIRC clock selected.
+    value: 5
+  - name: FIRC_192MHz
+    description: 180 MHz FIRC clock selected.
+    value: 7
+enum/IFR_DISABLE:
+  bit_size: 1
+  variants:
+  - name: ENABLED
+    description: IFR write access to SCG trim registers not disabled. The SCG Trim registers are reprogrammed with the IFR values after any system reset.
+    value: 0
+  - name: DISABLED
+    description: IFR write access to SCG trim registers during system reset is blocked.
+    value: 1
+enum/RANGE:
+  bit_size: 2
+  variants:
+  - name: FREQ_16TO20MHz
+    description: Frequency range select of 8-16 MHz.
+    value: 0
+  - name: LOW_FREQ
+    description: Frequency range select of 16-25 MHz.
+    value: 1
+  - name: MEDIUM_FREQ
+    description: Frequency range select of 25-40 MHz.
+    value: 2
+  - name: HIGH_FREQ
+    description: Frequency range select of 40-50 MHz.
+    value: 3
+enum/RCCR_SCS:
+  bit_size: 3
+  variants:
+  - name: SOSC
+    description: SOSC.
+    value: 1
+  - name: SIRC
+    description: SIRC.
+    value: 2
+  - name: FIRC
+    description: FIRC.
+    value: 3
+  - name: ROSC
+    description: ROSC.
+    value: 4
+  - name: SPLL
+    description: SPLL.
+    value: 6
+enum/ROSCCSR_LK:
+  bit_size: 1
+  variants:
+  - name: WRITE_ENABLED
+    description: Control Status Register can be written.
+    value: 0
+  - name: WRITE_DISABLED
+    description: Control Status Register cannot be written.
+    value: 1
+enum/ROSCERR:
+  bit_size: 1
+  variants:
+  - name: DISABLED_OR_NO_ERROR
+    description: ROSC Clock has not detected an error.
+    value: 0
+  - name: ENABLED_AND_ERROR
+    description: ROSC Clock has detected an error.
+    value: 1
+enum/ROSCVLD:
+  bit_size: 1
+  variants:
+  - name: DISABLED_OR_NOT_VALID
+    description: ROSC is not enabled or clock is not valid.
+    value: 0
+  - name: ENABLED_AND_VALID
+    description: ROSC is enabled and output clock is valid.
+    value: 1
+enum/SIRCCSR_LK:
+  bit_size: 1
+  variants:
+  - name: WRITE_ENABLED
+    description: Control Status Register can be written.
+    value: 0
+  - name: WRITE_DISABLED
+    description: Control Status Register cannot be written.
+    value: 1
+enum/SIRCERR:
+  bit_size: 1
+  variants:
+  - name: ERROR_NOT_DETECTED
+    description: Error not detected with the SIRC trimming.
+    value: 0
+  - name: ERROR_DETECTED
+    description: Error detected with the SIRC trimming.
+    value: 1
+enum/SIRCERR_IE:
+  bit_size: 1
+  variants:
+  - name: ERROR_NOT_DETECTED
+    description: SIRCERR interrupt is not enabled.
+    value: 0
+  - name: ERROR_DETECTED
+    description: SIRCERR interrupt is enabled.
+    value: 1
+enum/SIRCVLD:
+  bit_size: 1
+  variants:
+  - name: DISABLED_OR_NOT_VALID
+    description: SIRC is not enabled or clock is not valid.
+    value: 0
+  - name: ENABLED_AND_VALID
+    description: SIRC is enabled and output clock is valid.
+    value: 1
+enum/SOSCCMRE:
+  bit_size: 1
+  variants:
+  - name: GENERATE_INTERRUPT
+    description: Clock monitor generates an interrupt when an error is detected.
+    value: 0
+  - name: GENERATE_RESET
+    description: Clock monitor generates a reset when an error is detected.
+    value: 1
+enum/SOSCCSR_LK:
+  bit_size: 1
+  variants:
+  - name: WRITE_ENABLED
+    description: This Control Status Register can be written.
+    value: 0
+  - name: WRITE_DISABLED
+    description: This Control Status Register cannot be written.
+    value: 1
+enum/SOSCERR:
+  bit_size: 1
+  variants:
+  - name: DISABLED_OR_NO_ERROR
+    description: SOSC Clock Monitor is disabled or has not detected an error.
+    value: 0
+  - name: ENABLED_AND_ERROR
+    description: SOSC Clock Monitor is enabled and detected an error.
+    value: 1
+enum/SOURCE:
+  bit_size: 2
+  variants:
+  - name: SOSC
+    description: SOSC.
+    value: 0
+  - name: FIRC
+    description: FIRC 45 MHz clock. FIRC_SCLK_PERIPH_EN needs to be set to use FIRC 45 MHz clock.
+    value: 1
+  - name: ROSC
+    description: ROSC.
+    value: 2
+  - name: SIRC
+    description: SIRC 12 MHz clock.
+    value: 3
+enum/SPLLCMRE:
+  bit_size: 1
+  variants:
+  - name: GENERATE_INTERRUPT
+    description: Clock monitor generates an interrupt when an error is detected.
+    value: 0
+  - name: GENERATE_RESET
+    description: Clock monitor generates a reset when an error is detected.
+    value: 1
+enum/SPLLCSR_LK:
+  bit_size: 1
+  variants:
+  - name: WRITE_ENABLED
+    description: Control Status Register can be written.
+    value: 0
+  - name: WRITE_DISABLED
+    description: Control Status Register cannot be written.
+    value: 1
+enum/SPLLERR:
+  bit_size: 1
+  variants:
+  - name: DISABLED_OR_NO_ERROR
+    description: SPLL Clock Monitor is disabled or has not detected an error.
+    value: 0
+  - name: ENABLED_AND_ERROR
+    description: SPLL Clock Monitor is enabled and detected an error.
+    value: 1
+enum/SPLLSTEN:
+  bit_size: 1
+  variants:
+  - name: DISABLED_IN_STOP
+    description: SPLL is disabled in Deep Sleep mode.
+    value: 0
+  - name: ENABLED_IN_STOP
+    description: SPLL is enabled in Deep Sleep mode.
+    value: 1
+enum/SPLL_LOCK:
+  bit_size: 1
+  variants:
+  - name: DISABLED_OR_NOT_VALID
+    description: SPLL is not powered on or not locked.
+    value: 0
+  - name: ENABLED_AND_VALID
+    description: SPLL is locked.
+    value: 1
+enum/TRIMSRC:
+  bit_size: 2
+  variants:
+  - name: SOSC
+    description: SOSC. This option requires that SOSC be divided using the TRIMDIV field to get a frequency of 1 MHz.
+    value: 2
+enum/TRIM_LOCK:
+  bit_size: 1
+  variants:
+  - name: SIRC_NOT_LOCKED
+    description: SIRC auto trim not locked to target frequency range.
+    value: 0
+  - name: SIRC_LOCKED
+    description: SIRC auto trim locked to target frequency range.
+    value: 1
+enum/TRIM_UNLOCK:
+  bit_size: 1
+  variants:
+  - name: LOCKED
+    description: SCG Trim Registers locked and not writable.
+    value: 0
+  - name: NOT_LOCKED
+    description: SCG Trim registers unlocked and writable.
+    value: 1
+enum/VOUT_SEL:
+  bit_size: 3
+  variants:
+  - name: VOUT_1V_1
+    description: VOUT = 1V.
+    value: 0
+  - name: VOUT_1V_2
+    description: VOUT = 1V.
+    value: 1
+  - name: VOUT_1V_3
+    description: VOUT = 1V.
+    value: 2
+  - name: VOUT_105V
+    description: VOUT = 1.05V.
+    value: 3
+  - name: VOUT_11V
+    description: VOUT = 1.1V.
+    value: 4
+  - name: VOUT_115V
+    description: VOUT = 1.15V.
+    value: 5
+  - name: VOUT_12V
+    description: VOUT = 1.2V.
+    value: 6
+  - name: VOUT_125V
+    description: VOUT = 1.25V.
+    value: 7

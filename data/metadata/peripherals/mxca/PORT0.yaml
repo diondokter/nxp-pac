@@ -1,0 +1,5575 @@
+block/PORT0:
+  description: PORT.
+  items:
+  - name: VERID
+    description: Version ID.
+    byte_offset: 0
+    access: Read
+    fieldset: VERID
+  - name: GPCLR
+    description: Global Pin Control Low.
+    byte_offset: 16
+    fieldset: GPCLR
+  - name: GPCHR
+    description: Global Pin Control High.
+    byte_offset: 20
+    fieldset: GPCHR
+  - name: CONFIG
+    description: Configuration.
+    byte_offset: 32
+    fieldset: CONFIG
+  - name: CALIB0
+    description: Calibration 0.
+    byte_offset: 96
+    fieldset: CALIB0
+  - name: CALIB1
+    description: Calibration 1.
+    byte_offset: 100
+    fieldset: CALIB1
+  - name: PCR0
+    description: Pin Control 0.
+    byte_offset: 128
+    fieldset: PCR0
+  - name: PCR1
+    description: Pin Control 1.
+    byte_offset: 132
+    fieldset: PCR1
+  - name: PCR2
+    description: Pin Control 2.
+    byte_offset: 136
+    fieldset: PCR2
+  - name: PCR3
+    description: Pin Control 3.
+    byte_offset: 140
+    fieldset: PCR3
+  - name: PCR4
+    description: Pin Control 4.
+    byte_offset: 144
+    fieldset: PCR4
+  - name: PCR5
+    description: Pin Control 5.
+    byte_offset: 148
+    fieldset: PCR5
+  - name: PCR6
+    description: Pin Control 6.
+    byte_offset: 152
+    fieldset: PCR6
+  - name: PCR7
+    description: Pin Control 7.
+    byte_offset: 156
+    fieldset: PCR7
+  - name: PCR8
+    description: Pin Control 8.
+    byte_offset: 160
+    fieldset: PCR8
+  - name: PCR9
+    description: Pin Control 9.
+    byte_offset: 164
+    fieldset: PCR9
+  - name: PCR10
+    description: Pin Control 10.
+    byte_offset: 168
+    fieldset: PCR10
+  - name: PCR11
+    description: Pin Control 11.
+    byte_offset: 172
+    fieldset: PCR11
+  - name: PCR12
+    description: Pin Control 12.
+    byte_offset: 176
+    fieldset: PCR12
+  - name: PCR13
+    description: Pin Control 13.
+    byte_offset: 180
+    fieldset: PCR13
+  - name: PCR14
+    description: Pin Control 14.
+    byte_offset: 184
+    fieldset: PCR14
+  - name: PCR15
+    description: Pin Control 15.
+    byte_offset: 188
+    fieldset: PCR15
+  - name: PCR16
+    description: Pin Control 16.
+    byte_offset: 192
+    fieldset: PCR16
+  - name: PCR17
+    description: Pin Control 17.
+    byte_offset: 196
+    fieldset: PCR17
+  - name: PCR18
+    description: Pin Control 18.
+    byte_offset: 200
+    fieldset: PCR18
+  - name: PCR19
+    description: Pin Control 19.
+    byte_offset: 204
+    fieldset: PCR19
+  - name: PCR20
+    description: Pin Control 20.
+    byte_offset: 208
+    fieldset: PCR20
+  - name: PCR21
+    description: Pin Control 21.
+    byte_offset: 212
+    fieldset: PCR21
+  - name: PCR22
+    description: Pin Control 22.
+    byte_offset: 216
+    fieldset: PCR22
+  - name: PCR23
+    description: Pin Control 23.
+    byte_offset: 220
+    fieldset: PCR23
+  - name: PCR24
+    description: Pin Control 24.
+    byte_offset: 224
+    fieldset: PCR24
+  - name: PCR25
+    description: Pin Control 25.
+    byte_offset: 228
+    fieldset: PCR25
+  - name: PCR26
+    description: Pin Control 26.
+    byte_offset: 232
+    fieldset: PCR26
+  - name: PCR27
+    description: Pin Control 27.
+    byte_offset: 236
+    fieldset: PCR27
+  - name: PCR28
+    description: Pin Control 28.
+    byte_offset: 240
+    fieldset: PCR28
+  - name: PCR29
+    description: Pin Control 29.
+    byte_offset: 244
+    fieldset: PCR29
+  - name: PCR30
+    description: Pin Control 30.
+    byte_offset: 248
+    fieldset: PCR30
+  - name: PCR31
+    description: Pin Control 31.
+    byte_offset: 252
+    fieldset: PCR31
+fieldset/CALIB0:
+  description: Calibration 0.
+  fields:
+  - name: NCAL
+    description: Calibration of NMOS Output Driver.
+    bit_offset: 0
+    bit_size: 6
+  - name: PCAL
+    description: Calibration of PMOS Output Driver.
+    bit_offset: 16
+    bit_size: 6
+fieldset/CALIB1:
+  description: Calibration 1.
+  fields:
+  - name: NCAL
+    description: Calibration of NMOS Output Driver.
+    bit_offset: 0
+    bit_size: 6
+  - name: PCAL
+    description: Calibration of PMOS Output Driver.
+    bit_offset: 16
+    bit_size: 6
+fieldset/CONFIG:
+  description: Configuration.
+  fields:
+  - name: RANGE
+    description: Port Voltage Range.
+    bit_offset: 0
+    bit_size: 1
+    enum: RANGE
+fieldset/GPCHR:
+  description: Global Pin Control High.
+  fields:
+  - name: GPWD
+    description: Global Pin Write Data.
+    bit_offset: 0
+    bit_size: 16
+  - name: GPWE16
+    description: Global Pin Write Enable.
+    bit_offset: 16
+    bit_size: 1
+    enum: GPWE16
+  - name: GPWE17
+    description: Global Pin Write Enable.
+    bit_offset: 17
+    bit_size: 1
+    enum: GPWE17
+  - name: GPWE18
+    description: Global Pin Write Enable.
+    bit_offset: 18
+    bit_size: 1
+    enum: GPWE18
+  - name: GPWE19
+    description: Global Pin Write Enable.
+    bit_offset: 19
+    bit_size: 1
+    enum: GPWE19
+  - name: GPWE20
+    description: Global Pin Write Enable.
+    bit_offset: 20
+    bit_size: 1
+    enum: GPWE20
+  - name: GPWE21
+    description: Global Pin Write Enable.
+    bit_offset: 21
+    bit_size: 1
+    enum: GPWE21
+  - name: GPWE22
+    description: Global Pin Write Enable.
+    bit_offset: 22
+    bit_size: 1
+    enum: GPWE22
+  - name: GPWE23
+    description: Global Pin Write Enable.
+    bit_offset: 23
+    bit_size: 1
+    enum: GPWE23
+  - name: GPWE24
+    description: Global Pin Write Enable.
+    bit_offset: 24
+    bit_size: 1
+    enum: GPWE24
+  - name: GPWE25
+    description: Global Pin Write Enable.
+    bit_offset: 25
+    bit_size: 1
+    enum: GPWE25
+  - name: GPWE26
+    description: Global Pin Write Enable.
+    bit_offset: 26
+    bit_size: 1
+    enum: GPWE26
+  - name: GPWE27
+    description: Global Pin Write Enable.
+    bit_offset: 27
+    bit_size: 1
+    enum: GPWE27
+  - name: GPWE28
+    description: Global Pin Write Enable.
+    bit_offset: 28
+    bit_size: 1
+    enum: GPWE28
+  - name: GPWE29
+    description: Global Pin Write Enable.
+    bit_offset: 29
+    bit_size: 1
+    enum: GPWE29
+  - name: GPWE30
+    description: Global Pin Write Enable.
+    bit_offset: 30
+    bit_size: 1
+    enum: GPWE30
+  - name: GPWE31
+    description: Global Pin Write Enable.
+    bit_offset: 31
+    bit_size: 1
+    enum: GPWE31
+fieldset/GPCLR:
+  description: Global Pin Control Low.
+  fields:
+  - name: GPWD
+    description: Global Pin Write Data.
+    bit_offset: 0
+    bit_size: 16
+  - name: GPWE0
+    description: Global Pin Write Enable.
+    bit_offset: 16
+    bit_size: 1
+    enum: GPWE0
+  - name: GPWE1
+    description: Global Pin Write Enable.
+    bit_offset: 17
+    bit_size: 1
+    enum: GPWE1
+  - name: GPWE2
+    description: Global Pin Write Enable.
+    bit_offset: 18
+    bit_size: 1
+    enum: GPWE2
+  - name: GPWE3
+    description: Global Pin Write Enable.
+    bit_offset: 19
+    bit_size: 1
+    enum: GPWE3
+  - name: GPWE4
+    description: Global Pin Write Enable.
+    bit_offset: 20
+    bit_size: 1
+    enum: GPWE4
+  - name: GPWE5
+    description: Global Pin Write Enable.
+    bit_offset: 21
+    bit_size: 1
+    enum: GPWE5
+  - name: GPWE6
+    description: Global Pin Write Enable.
+    bit_offset: 22
+    bit_size: 1
+    enum: GPWE6
+  - name: GPWE7
+    description: Global Pin Write Enable.
+    bit_offset: 23
+    bit_size: 1
+    enum: GPWE7
+  - name: GPWE8
+    description: Global Pin Write Enable.
+    bit_offset: 24
+    bit_size: 1
+    enum: GPWE8
+  - name: GPWE9
+    description: Global Pin Write Enable.
+    bit_offset: 25
+    bit_size: 1
+    enum: GPWE9
+  - name: GPWE10
+    description: Global Pin Write Enable.
+    bit_offset: 26
+    bit_size: 1
+    enum: GPWE10
+  - name: GPWE11
+    description: Global Pin Write Enable.
+    bit_offset: 27
+    bit_size: 1
+    enum: GPWE11
+  - name: GPWE12
+    description: Global Pin Write Enable.
+    bit_offset: 28
+    bit_size: 1
+    enum: GPWE12
+  - name: GPWE13
+    description: Global Pin Write Enable.
+    bit_offset: 29
+    bit_size: 1
+    enum: GPWE13
+  - name: GPWE14
+    description: Global Pin Write Enable.
+    bit_offset: 30
+    bit_size: 1
+    enum: GPWE14
+  - name: GPWE15
+    description: Global Pin Write Enable.
+    bit_offset: 31
+    bit_size: 1
+    enum: GPWE15
+fieldset/PCR0:
+  description: Pin Control 0.
+  fields:
+  - name: PS
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: PCR0_PS
+  - name: PE
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: PCR0_PE
+  - name: SRE
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: PCR0_SRE
+  - name: ODE
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: PCR0_ODE
+  - name: DSE
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: PCR0_DSE
+  - name: MUX
+    description: Pin Multiplex Control.
+    bit_offset: 8
+    bit_size: 3
+    enum: PCR0_MUX
+  - name: IBE
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: PCR0_IBE
+  - name: INV
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: PCR0_INV
+  - name: LK
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: PCR0_LK
+fieldset/PCR1:
+  description: Pin Control 1.
+  fields:
+  - name: PS
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: PCR1_PS
+  - name: PE
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: PCR1_PE
+  - name: SRE
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: PCR1_SRE
+  - name: ODE
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: PCR1_ODE
+  - name: DSE
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: PCR1_DSE
+  - name: MUX
+    description: Pin Multiplex Control.
+    bit_offset: 8
+    bit_size: 3
+    enum: PCR1_MUX
+  - name: IBE
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: PCR1_IBE
+  - name: INV
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: PCR1_INV
+  - name: LK
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: PCR1_LK
+fieldset/PCR10:
+  description: Pin Control 10.
+  fields:
+  - name: PS
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: PCR10_PS
+  - name: PE
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: PCR10_PE
+  - name: SRE
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: PCR10_SRE
+  - name: ODE
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: PCR10_ODE
+  - name: DSE
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: PCR10_DSE
+  - name: IBE
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: PCR10_IBE
+  - name: INV
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: PCR10_INV
+  - name: LK
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: PCR10_LK
+fieldset/PCR11:
+  description: Pin Control 11.
+  fields:
+  - name: PS
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: PCR11_PS
+  - name: PE
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: PCR11_PE
+  - name: SRE
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: PCR11_SRE
+  - name: ODE
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: PCR11_ODE
+  - name: DSE
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: PCR11_DSE
+  - name: IBE
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: PCR11_IBE
+  - name: INV
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: PCR11_INV
+  - name: LK
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: PCR11_LK
+fieldset/PCR12:
+  description: Pin Control 12.
+  fields:
+  - name: PS
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: PCR12_PS
+  - name: PE
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: PCR12_PE
+  - name: SRE
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: PCR12_SRE
+  - name: ODE
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: PCR12_ODE
+  - name: DSE
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: PCR12_DSE
+  - name: MUX
+    description: Pin Multiplex Control.
+    bit_offset: 8
+    bit_size: 4
+    enum: PCR12_MUX
+  - name: IBE
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: PCR12_IBE
+  - name: INV
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: PCR12_INV
+  - name: LK
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: PCR12_LK
+fieldset/PCR13:
+  description: Pin Control 13.
+  fields:
+  - name: PS
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: PCR13_PS
+  - name: PE
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: PCR13_PE
+  - name: SRE
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: PCR13_SRE
+  - name: ODE
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: PCR13_ODE
+  - name: DSE
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: PCR13_DSE
+  - name: MUX
+    description: Pin Multiplex Control.
+    bit_offset: 8
+    bit_size: 4
+    enum: PCR13_MUX
+  - name: IBE
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: PCR13_IBE
+  - name: INV
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: PCR13_INV
+  - name: LK
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: PCR13_LK
+fieldset/PCR14:
+  description: Pin Control 14.
+  fields:
+  - name: PS
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: PCR14_PS
+  - name: PE
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: PCR14_PE
+  - name: SRE
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: PCR14_SRE
+  - name: ODE
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: PCR14_ODE
+  - name: DSE
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: PCR14_DSE
+  - name: MUX
+    description: Pin Multiplex Control.
+    bit_offset: 8
+    bit_size: 4
+    enum: PCR14_MUX
+  - name: IBE
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: PCR14_IBE
+  - name: INV
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: PCR14_INV
+  - name: LK
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: PCR14_LK
+fieldset/PCR15:
+  description: Pin Control 15.
+  fields:
+  - name: PS
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: PCR15_PS
+  - name: PE
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: PCR15_PE
+  - name: SRE
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: PCR15_SRE
+  - name: ODE
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: PCR15_ODE
+  - name: DSE
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: PCR15_DSE
+  - name: MUX
+    description: Pin Multiplex Control.
+    bit_offset: 8
+    bit_size: 4
+    enum: PCR15_MUX
+  - name: IBE
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: PCR15_IBE
+  - name: INV
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: PCR15_INV
+  - name: LK
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: PCR15_LK
+fieldset/PCR16:
+  description: Pin Control 16.
+  fields:
+  - name: PS
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: PCR16_PS
+  - name: PE
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: PCR16_PE
+  - name: PV
+    description: Pull Value.
+    bit_offset: 2
+    bit_size: 1
+    enum: PV
+  - name: SRE
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: PCR16_SRE
+  - name: PFE
+    description: Passive Filter Enable.
+    bit_offset: 4
+    bit_size: 1
+    enum: PCR16_PFE
+  - name: ODE
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: PCR16_ODE
+  - name: DSE
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: PCR16_DSE
+  - name: DSE1
+    description: Drive Strength Enable.
+    bit_offset: 7
+    bit_size: 1
+    enum: PCR16_DSE1
+  - name: MUX
+    description: Pin Multiplex Control.
+    bit_offset: 8
+    bit_size: 4
+    enum: PCR16_MUX
+  - name: IBE
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: PCR16_IBE
+  - name: INV
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: PCR16_INV
+  - name: LK
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: PCR16_LK
+fieldset/PCR17:
+  description: Pin Control 17.
+  fields:
+  - name: PS
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: PCR17_PS
+  - name: PE
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: PCR17_PE
+  - name: SRE
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: PCR17_SRE
+  - name: PFE
+    description: Passive Filter Enable.
+    bit_offset: 4
+    bit_size: 1
+    enum: PCR17_PFE
+  - name: ODE
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: PCR17_ODE
+  - name: DSE
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: PCR17_DSE
+  - name: DSE1
+    description: Drive Strength Enable.
+    bit_offset: 7
+    bit_size: 1
+    enum: PCR17_DSE1
+  - name: MUX
+    description: Pin Multiplex Control.
+    bit_offset: 8
+    bit_size: 4
+    enum: PCR17_MUX
+  - name: IBE
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: PCR17_IBE
+  - name: INV
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: PCR17_INV
+  - name: LK
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: PCR17_LK
+fieldset/PCR18:
+  description: Pin Control 18.
+  fields:
+  - name: PS
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: PCR18_PS
+  - name: PE
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: PCR18_PE
+  - name: SRE
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: PCR18_SRE
+  - name: ODE
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: PCR18_ODE
+  - name: DSE
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: PCR18_DSE
+  - name: MUX
+    description: Pin Multiplex Control.
+    bit_offset: 8
+    bit_size: 4
+    enum: PCR18_MUX
+  - name: IBE
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: PCR18_IBE
+  - name: INV
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: PCR18_INV
+  - name: LK
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: PCR18_LK
+fieldset/PCR19:
+  description: Pin Control 19.
+  fields:
+  - name: PS
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: PCR19_PS
+  - name: PE
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: PCR19_PE
+  - name: SRE
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: PCR19_SRE
+  - name: ODE
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: PCR19_ODE
+  - name: DSE
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: PCR19_DSE
+  - name: MUX
+    description: Pin Multiplex Control.
+    bit_offset: 8
+    bit_size: 4
+    enum: PCR19_MUX
+  - name: IBE
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: PCR19_IBE
+  - name: INV
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: PCR19_INV
+  - name: LK
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: PCR19_LK
+fieldset/PCR2:
+  description: Pin Control 2.
+  fields:
+  - name: PS
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: PCR2_PS
+  - name: PE
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: PCR2_PE
+  - name: SRE
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: PCR2_SRE
+  - name: ODE
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: PCR2_ODE
+  - name: DSE
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: PCR2_DSE
+  - name: MUX
+    description: Pin Multiplex Control.
+    bit_offset: 8
+    bit_size: 4
+    enum: PCR2_MUX
+  - name: IBE
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: PCR2_IBE
+  - name: INV
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: PCR2_INV
+  - name: LK
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: PCR2_LK
+fieldset/PCR20:
+  description: Pin Control 20.
+  fields:
+  - name: PS
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: PCR20_PS
+  - name: PE
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: PCR20_PE
+  - name: SRE
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: PCR20_SRE
+  - name: ODE
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: PCR20_ODE
+  - name: DSE
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: PCR20_DSE
+  - name: MUX
+    description: Pin Multiplex Control.
+    bit_offset: 8
+    bit_size: 4
+    enum: PCR20_MUX
+  - name: IBE
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: PCR20_IBE
+  - name: INV
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: PCR20_INV
+  - name: LK
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: PCR20_LK
+fieldset/PCR21:
+  description: Pin Control 21.
+  fields:
+  - name: PS
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: PCR21_PS
+  - name: PE
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: PCR21_PE
+  - name: SRE
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: PCR21_SRE
+  - name: ODE
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: PCR21_ODE
+  - name: DSE
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: PCR21_DSE
+  - name: MUX
+    description: Pin Multiplex Control.
+    bit_offset: 8
+    bit_size: 4
+    enum: PCR21_MUX
+  - name: IBE
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: PCR21_IBE
+  - name: INV
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: PCR21_INV
+  - name: LK
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: PCR21_LK
+fieldset/PCR22:
+  description: Pin Control 22.
+  fields:
+  - name: PS
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: PCR22_PS
+  - name: PE
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: PCR22_PE
+  - name: SRE
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: PCR22_SRE
+  - name: ODE
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: PCR22_ODE
+  - name: DSE
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: PCR22_DSE
+  - name: MUX
+    description: Pin Multiplex Control.
+    bit_offset: 8
+    bit_size: 4
+    enum: PCR22_MUX
+  - name: IBE
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: PCR22_IBE
+  - name: INV
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: PCR22_INV
+  - name: LK
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: PCR22_LK
+fieldset/PCR23:
+  description: Pin Control 23.
+  fields:
+  - name: PS
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: PCR23_PS
+  - name: PE
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: PCR23_PE
+  - name: SRE
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: PCR23_SRE
+  - name: ODE
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: PCR23_ODE
+  - name: DSE
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: PCR23_DSE
+  - name: MUX
+    description: Pin Multiplex Control.
+    bit_offset: 8
+    bit_size: 4
+    enum: PCR23_MUX
+  - name: IBE
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: PCR23_IBE
+  - name: INV
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: PCR23_INV
+  - name: LK
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: PCR23_LK
+fieldset/PCR24:
+  description: Pin Control 24.
+  fields:
+  - name: PS
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: PCR24_PS
+  - name: PE
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: PCR24_PE
+  - name: SRE
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: PCR24_SRE
+  - name: ODE
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: PCR24_ODE
+  - name: DSE
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: PCR24_DSE
+  - name: MUX
+    description: Pin Multiplex Control.
+    bit_offset: 8
+    bit_size: 4
+    enum: PCR24_MUX
+  - name: IBE
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: PCR24_IBE
+  - name: INV
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: PCR24_INV
+  - name: LK
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: PCR24_LK
+fieldset/PCR25:
+  description: Pin Control 25.
+  fields:
+  - name: PS
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: PCR25_PS
+  - name: PE
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: PCR25_PE
+  - name: SRE
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: PCR25_SRE
+  - name: ODE
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: PCR25_ODE
+  - name: DSE
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: PCR25_DSE
+  - name: MUX
+    description: Pin Multiplex Control.
+    bit_offset: 8
+    bit_size: 4
+    enum: PCR25_MUX
+  - name: IBE
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: PCR25_IBE
+  - name: INV
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: PCR25_INV
+  - name: LK
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: PCR25_LK
+fieldset/PCR26:
+  description: Pin Control 26.
+  fields:
+  - name: PS
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: PCR26_PS
+  - name: PE
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: PCR26_PE
+  - name: SRE
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: PCR26_SRE
+  - name: ODE
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: PCR26_ODE
+  - name: DSE
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: PCR26_DSE
+  - name: MUX
+    description: Pin Multiplex Control.
+    bit_offset: 8
+    bit_size: 4
+    enum: PCR26_MUX
+  - name: IBE
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: PCR26_IBE
+  - name: INV
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: PCR26_INV
+  - name: LK
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: PCR26_LK
+fieldset/PCR27:
+  description: Pin Control 27.
+  fields:
+  - name: PS
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: PCR27_PS
+  - name: PE
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: PCR27_PE
+  - name: SRE
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: PCR27_SRE
+  - name: ODE
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: PCR27_ODE
+  - name: DSE
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: PCR27_DSE
+  - name: MUX
+    description: Pin Multiplex Control.
+    bit_offset: 8
+    bit_size: 4
+    enum: PCR27_MUX
+  - name: IBE
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: PCR27_IBE
+  - name: INV
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: PCR27_INV
+  - name: LK
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: PCR27_LK
+fieldset/PCR28:
+  description: Pin Control 28.
+  fields:
+  - name: PS
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: PCR28_PS
+  - name: PE
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: PCR28_PE
+  - name: SRE
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: PCR28_SRE
+  - name: ODE
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: PCR28_ODE
+  - name: DSE
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: PCR28_DSE
+  - name: IBE
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: PCR28_IBE
+  - name: INV
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: PCR28_INV
+  - name: LK
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: PCR28_LK
+fieldset/PCR29:
+  description: Pin Control 29.
+  fields:
+  - name: PS
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: PCR29_PS
+  - name: PE
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: PCR29_PE
+  - name: SRE
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: PCR29_SRE
+  - name: ODE
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: PCR29_ODE
+  - name: DSE
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: PCR29_DSE
+  - name: IBE
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: PCR29_IBE
+  - name: INV
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: PCR29_INV
+  - name: LK
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: PCR29_LK
+fieldset/PCR3:
+  description: Pin Control 3.
+  fields:
+  - name: PS
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: PCR3_PS
+  - name: PE
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: PCR3_PE
+  - name: SRE
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: PCR3_SRE
+  - name: ODE
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: PCR3_ODE
+  - name: DSE
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: PCR3_DSE
+  - name: MUX
+    description: Pin Multiplex Control.
+    bit_offset: 8
+    bit_size: 4
+    enum: PCR3_MUX
+  - name: IBE
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: PCR3_IBE
+  - name: INV
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: PCR3_INV
+  - name: LK
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: PCR3_LK
+fieldset/PCR30:
+  description: Pin Control 30.
+  fields:
+  - name: PS
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: PCR30_PS
+  - name: PE
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: PCR30_PE
+  - name: SRE
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: PCR30_SRE
+  - name: ODE
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: PCR30_ODE
+  - name: DSE
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: PCR30_DSE
+  - name: IBE
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: PCR30_IBE
+  - name: INV
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: PCR30_INV
+  - name: LK
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: PCR30_LK
+fieldset/PCR31:
+  description: Pin Control 31.
+  fields:
+  - name: PS
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: PCR31_PS
+  - name: PE
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: PCR31_PE
+  - name: SRE
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: PCR31_SRE
+  - name: ODE
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: PCR31_ODE
+  - name: DSE
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: PCR31_DSE
+  - name: IBE
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: PCR31_IBE
+  - name: INV
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: PCR31_INV
+  - name: LK
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: PCR31_LK
+fieldset/PCR4:
+  description: Pin Control 4.
+  fields:
+  - name: PS
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: PCR4_PS
+  - name: PE
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: PCR4_PE
+  - name: SRE
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: PCR4_SRE
+  - name: ODE
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: PCR4_ODE
+  - name: DSE
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: PCR4_DSE
+  - name: MUX
+    description: Pin Multiplex Control.
+    bit_offset: 8
+    bit_size: 4
+    enum: PCR4_MUX
+  - name: IBE
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: PCR4_IBE
+  - name: INV
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: PCR4_INV
+  - name: LK
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: PCR4_LK
+fieldset/PCR5:
+  description: Pin Control 5.
+  fields:
+  - name: PS
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: PCR5_PS
+  - name: PE
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: PCR5_PE
+  - name: SRE
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: PCR5_SRE
+  - name: ODE
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: PCR5_ODE
+  - name: DSE
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: PCR5_DSE
+  - name: MUX
+    description: Pin Multiplex Control.
+    bit_offset: 8
+    bit_size: 4
+    enum: PCR5_MUX
+  - name: IBE
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: PCR5_IBE
+  - name: INV
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: PCR5_INV
+  - name: LK
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: PCR5_LK
+fieldset/PCR6:
+  description: Pin Control 6.
+  fields:
+  - name: PS
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: PCR6_PS
+  - name: PE
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: PCR6_PE
+  - name: SRE
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: PCR6_SRE
+  - name: ODE
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: PCR6_ODE
+  - name: DSE
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: PCR6_DSE
+  - name: MUX
+    description: Pin Multiplex Control.
+    bit_offset: 8
+    bit_size: 4
+    enum: PCR6_MUX
+  - name: IBE
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: PCR6_IBE
+  - name: INV
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: PCR6_INV
+  - name: LK
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: PCR6_LK
+fieldset/PCR7:
+  description: Pin Control 7.
+  fields:
+  - name: PS
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: PCR7_PS
+  - name: PE
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: PCR7_PE
+  - name: SRE
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: PCR7_SRE
+  - name: ODE
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: PCR7_ODE
+  - name: DSE
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: PCR7_DSE
+  - name: MUX
+    description: Pin Multiplex Control.
+    bit_offset: 8
+    bit_size: 3
+    enum: PCR7_MUX
+  - name: IBE
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: PCR7_IBE
+  - name: INV
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: PCR7_INV
+  - name: LK
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: PCR7_LK
+fieldset/PCR8:
+  description: Pin Control 8.
+  fields:
+  - name: PS
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: PCR8_PS
+  - name: PE
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: PCR8_PE
+  - name: SRE
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: PCR8_SRE
+  - name: ODE
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: PCR8_ODE
+  - name: DSE
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: PCR8_DSE
+  - name: IBE
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: PCR8_IBE
+  - name: INV
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: PCR8_INV
+  - name: LK
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: PCR8_LK
+fieldset/PCR9:
+  description: Pin Control 9.
+  fields:
+  - name: PS
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: PCR9_PS
+  - name: PE
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: PCR9_PE
+  - name: SRE
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: PCR9_SRE
+  - name: ODE
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: PCR9_ODE
+  - name: DSE
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: PCR9_DSE
+  - name: IBE
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: PCR9_IBE
+  - name: INV
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: PCR9_INV
+  - name: LK
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: PCR9_LK
+fieldset/VERID:
+  description: Version ID.
+  fields:
+  - name: FEATURE
+    description: Feature Specification Number.
+    bit_offset: 0
+    bit_size: 16
+    enum: FEATURE
+  - name: MINOR
+    description: Minor Version Number.
+    bit_offset: 16
+    bit_size: 8
+  - name: MAJOR
+    description: Major Version Number.
+    bit_offset: 24
+    bit_size: 8
+enum/FEATURE:
+  bit_size: 16
+  variants:
+  - name: feature0
+    description: Basic implementation.
+    value: 0
+enum/GPWE0:
+  bit_size: 1
+  variants:
+  - name: gpwe0
+    description: Not updated.
+    value: 0
+  - name: gpwe1
+    description: Updated.
+    value: 1
+enum/GPWE1:
+  bit_size: 1
+  variants:
+  - name: gpwe0
+    description: Not updated.
+    value: 0
+  - name: gpwe1
+    description: Updated.
+    value: 1
+enum/GPWE10:
+  bit_size: 1
+  variants:
+  - name: gpwe0
+    description: Not updated.
+    value: 0
+  - name: gpwe1
+    description: Updated.
+    value: 1
+enum/GPWE11:
+  bit_size: 1
+  variants:
+  - name: gpwe0
+    description: Not updated.
+    value: 0
+  - name: gpwe1
+    description: Updated.
+    value: 1
+enum/GPWE12:
+  bit_size: 1
+  variants:
+  - name: gpwe0
+    description: Not updated.
+    value: 0
+  - name: gpwe1
+    description: Updated.
+    value: 1
+enum/GPWE13:
+  bit_size: 1
+  variants:
+  - name: gpwe0
+    description: Not updated.
+    value: 0
+  - name: gpwe1
+    description: Updated.
+    value: 1
+enum/GPWE14:
+  bit_size: 1
+  variants:
+  - name: gpwe0
+    description: Not updated.
+    value: 0
+  - name: gpwe1
+    description: Updated.
+    value: 1
+enum/GPWE15:
+  bit_size: 1
+  variants:
+  - name: gpwe0
+    description: Not updated.
+    value: 0
+  - name: gpwe1
+    description: Updated.
+    value: 1
+enum/GPWE16:
+  bit_size: 1
+  variants:
+  - name: gpwe0
+    description: Not updated.
+    value: 0
+  - name: gpwe1
+    description: Updated.
+    value: 1
+enum/GPWE17:
+  bit_size: 1
+  variants:
+  - name: gpwe0
+    description: Not updated.
+    value: 0
+  - name: gpwe1
+    description: Updated.
+    value: 1
+enum/GPWE18:
+  bit_size: 1
+  variants:
+  - name: gpwe0
+    description: Not updated.
+    value: 0
+  - name: gpwe1
+    description: Updated.
+    value: 1
+enum/GPWE19:
+  bit_size: 1
+  variants:
+  - name: gpwe0
+    description: Not updated.
+    value: 0
+  - name: gpwe1
+    description: Updated.
+    value: 1
+enum/GPWE2:
+  bit_size: 1
+  variants:
+  - name: gpwe0
+    description: Not updated.
+    value: 0
+  - name: gpwe1
+    description: Updated.
+    value: 1
+enum/GPWE20:
+  bit_size: 1
+  variants:
+  - name: gpwe0
+    description: Not updated.
+    value: 0
+  - name: gpwe1
+    description: Updated.
+    value: 1
+enum/GPWE21:
+  bit_size: 1
+  variants:
+  - name: gpwe0
+    description: Not updated.
+    value: 0
+  - name: gpwe1
+    description: Updated.
+    value: 1
+enum/GPWE22:
+  bit_size: 1
+  variants:
+  - name: gpwe0
+    description: Not updated.
+    value: 0
+  - name: gpwe1
+    description: Updated.
+    value: 1
+enum/GPWE23:
+  bit_size: 1
+  variants:
+  - name: gpwe0
+    description: Not updated.
+    value: 0
+  - name: gpwe1
+    description: Updated.
+    value: 1
+enum/GPWE24:
+  bit_size: 1
+  variants:
+  - name: gpwe0
+    description: Not updated.
+    value: 0
+  - name: gpwe1
+    description: Updated.
+    value: 1
+enum/GPWE25:
+  bit_size: 1
+  variants:
+  - name: gpwe0
+    description: Not updated.
+    value: 0
+  - name: gpwe1
+    description: Updated.
+    value: 1
+enum/GPWE26:
+  bit_size: 1
+  variants:
+  - name: gpwe0
+    description: Not updated.
+    value: 0
+  - name: gpwe1
+    description: Updated.
+    value: 1
+enum/GPWE27:
+  bit_size: 1
+  variants:
+  - name: gpwe0
+    description: Not updated.
+    value: 0
+  - name: gpwe1
+    description: Updated.
+    value: 1
+enum/GPWE28:
+  bit_size: 1
+  variants:
+  - name: gpwe0
+    description: Not updated.
+    value: 0
+  - name: gpwe1
+    description: Updated.
+    value: 1
+enum/GPWE29:
+  bit_size: 1
+  variants:
+  - name: gpwe0
+    description: Not updated.
+    value: 0
+  - name: gpwe1
+    description: Updated.
+    value: 1
+enum/GPWE3:
+  bit_size: 1
+  variants:
+  - name: gpwe0
+    description: Not updated.
+    value: 0
+  - name: gpwe1
+    description: Updated.
+    value: 1
+enum/GPWE30:
+  bit_size: 1
+  variants:
+  - name: gpwe0
+    description: Not updated.
+    value: 0
+  - name: gpwe1
+    description: Updated.
+    value: 1
+enum/GPWE31:
+  bit_size: 1
+  variants:
+  - name: gpwe0
+    description: Not updated.
+    value: 0
+  - name: gpwe1
+    description: Updated.
+    value: 1
+enum/GPWE4:
+  bit_size: 1
+  variants:
+  - name: gpwe0
+    description: Not updated.
+    value: 0
+  - name: gpwe1
+    description: Updated.
+    value: 1
+enum/GPWE5:
+  bit_size: 1
+  variants:
+  - name: gpwe0
+    description: Not updated.
+    value: 0
+  - name: gpwe1
+    description: Updated.
+    value: 1
+enum/GPWE6:
+  bit_size: 1
+  variants:
+  - name: gpwe0
+    description: Not updated.
+    value: 0
+  - name: gpwe1
+    description: Updated.
+    value: 1
+enum/GPWE7:
+  bit_size: 1
+  variants:
+  - name: gpwe0
+    description: Not updated.
+    value: 0
+  - name: gpwe1
+    description: Updated.
+    value: 1
+enum/GPWE8:
+  bit_size: 1
+  variants:
+  - name: gpwe0
+    description: Not updated.
+    value: 0
+  - name: gpwe1
+    description: Updated.
+    value: 1
+enum/GPWE9:
+  bit_size: 1
+  variants:
+  - name: gpwe0
+    description: Not updated.
+    value: 0
+  - name: gpwe1
+    description: Updated.
+    value: 1
+enum/PCR0_DSE:
+  bit_size: 1
+  variants:
+  - name: dse0
+    description: Low.
+    value: 0
+  - name: dse1
+    description: High.
+    value: 1
+enum/PCR0_IBE:
+  bit_size: 1
+  variants:
+  - name: ibe0
+    description: Disables.
+    value: 0
+  - name: ibe1
+    description: Enables.
+    value: 1
+enum/PCR0_INV:
+  bit_size: 1
+  variants:
+  - name: inv0
+    description: Does not invert.
+    value: 0
+  - name: inv1
+    description: Inverts.
+    value: 1
+enum/PCR0_LK:
+  bit_size: 1
+  variants:
+  - name: lk0
+    description: Does not lock.
+    value: 0
+  - name: lk1
+    description: Locks.
+    value: 1
+enum/PCR0_MUX:
+  bit_size: 3
+  variants:
+  - name: mux00
+    description: Alternative 0 (GPIO).
+    value: 0
+  - name: mux01
+    description: Alternative 1 (chip-specific).
+    value: 1
+  - name: mux10
+    description: Alternative 2 (chip-specific).
+    value: 2
+  - name: mux11
+    description: Alternative 3 (chip-specific).
+    value: 3
+  - name: mux100
+    description: Alternative 4 (chip-specific).
+    value: 4
+  - name: mux101
+    description: Alternative 5 (chip-specific).
+    value: 5
+  - name: mux110
+    description: Alternative 6 (chip-specific).
+    value: 6
+  - name: mux111
+    description: Alternative 7 (chip-specific).
+    value: 7
+enum/PCR0_ODE:
+  bit_size: 1
+  variants:
+  - name: ode0
+    description: Disables.
+    value: 0
+  - name: ode1
+    description: Enables.
+    value: 1
+enum/PCR0_PE:
+  bit_size: 1
+  variants:
+  - name: pe0
+    description: Disables.
+    value: 0
+  - name: pe1
+    description: Enables.
+    value: 1
+enum/PCR0_PS:
+  bit_size: 1
+  variants:
+  - name: ps0
+    description: Enables internal pulldown resistor.
+    value: 0
+  - name: ps1
+    description: Enables internal pullup resistor.
+    value: 1
+enum/PCR0_SRE:
+  bit_size: 1
+  variants:
+  - name: sre0
+    description: Fast.
+    value: 0
+  - name: sre1
+    description: Slow.
+    value: 1
+enum/PCR10_DSE:
+  bit_size: 1
+  variants:
+  - name: dse0
+    description: Low.
+    value: 0
+  - name: dse1
+    description: High.
+    value: 1
+enum/PCR10_IBE:
+  bit_size: 1
+  variants:
+  - name: ibe0
+    description: Disables.
+    value: 0
+  - name: ibe1
+    description: Enables.
+    value: 1
+enum/PCR10_INV:
+  bit_size: 1
+  variants:
+  - name: inv0
+    description: Does not invert.
+    value: 0
+  - name: inv1
+    description: Inverts.
+    value: 1
+enum/PCR10_LK:
+  bit_size: 1
+  variants:
+  - name: lk0
+    description: Does not lock.
+    value: 0
+  - name: lk1
+    description: Locks.
+    value: 1
+enum/PCR10_ODE:
+  bit_size: 1
+  variants:
+  - name: ode0
+    description: Disables.
+    value: 0
+  - name: ode1
+    description: Enables.
+    value: 1
+enum/PCR10_PE:
+  bit_size: 1
+  variants:
+  - name: pe0
+    description: Disables.
+    value: 0
+  - name: pe1
+    description: Enables.
+    value: 1
+enum/PCR10_PS:
+  bit_size: 1
+  variants:
+  - name: ps0
+    description: Enables internal pulldown resistor.
+    value: 0
+  - name: ps1
+    description: Enables internal pullup resistor.
+    value: 1
+enum/PCR10_SRE:
+  bit_size: 1
+  variants:
+  - name: sre0
+    description: Fast.
+    value: 0
+  - name: sre1
+    description: Slow.
+    value: 1
+enum/PCR11_DSE:
+  bit_size: 1
+  variants:
+  - name: dse0
+    description: Low.
+    value: 0
+  - name: dse1
+    description: High.
+    value: 1
+enum/PCR11_IBE:
+  bit_size: 1
+  variants:
+  - name: ibe0
+    description: Disables.
+    value: 0
+  - name: ibe1
+    description: Enables.
+    value: 1
+enum/PCR11_INV:
+  bit_size: 1
+  variants:
+  - name: inv0
+    description: Does not invert.
+    value: 0
+  - name: inv1
+    description: Inverts.
+    value: 1
+enum/PCR11_LK:
+  bit_size: 1
+  variants:
+  - name: lk0
+    description: Does not lock.
+    value: 0
+  - name: lk1
+    description: Locks.
+    value: 1
+enum/PCR11_ODE:
+  bit_size: 1
+  variants:
+  - name: ode0
+    description: Disables.
+    value: 0
+  - name: ode1
+    description: Enables.
+    value: 1
+enum/PCR11_PE:
+  bit_size: 1
+  variants:
+  - name: pe0
+    description: Disables.
+    value: 0
+  - name: pe1
+    description: Enables.
+    value: 1
+enum/PCR11_PS:
+  bit_size: 1
+  variants:
+  - name: ps0
+    description: Enables internal pulldown resistor.
+    value: 0
+  - name: ps1
+    description: Enables internal pullup resistor.
+    value: 1
+enum/PCR11_SRE:
+  bit_size: 1
+  variants:
+  - name: sre0
+    description: Fast.
+    value: 0
+  - name: sre1
+    description: Slow.
+    value: 1
+enum/PCR12_DSE:
+  bit_size: 1
+  variants:
+  - name: dse0
+    description: Low.
+    value: 0
+  - name: dse1
+    description: High.
+    value: 1
+enum/PCR12_IBE:
+  bit_size: 1
+  variants:
+  - name: ibe0
+    description: Disables.
+    value: 0
+  - name: ibe1
+    description: Enables.
+    value: 1
+enum/PCR12_INV:
+  bit_size: 1
+  variants:
+  - name: inv0
+    description: Does not invert.
+    value: 0
+  - name: inv1
+    description: Inverts.
+    value: 1
+enum/PCR12_LK:
+  bit_size: 1
+  variants:
+  - name: lk0
+    description: Does not lock.
+    value: 0
+  - name: lk1
+    description: Locks.
+    value: 1
+enum/PCR12_MUX:
+  bit_size: 4
+  variants:
+  - name: mux00
+    description: Alternative 0 (GPIO).
+    value: 0
+  - name: mux01
+    description: Alternative 1 (chip-specific).
+    value: 1
+  - name: mux10
+    description: Alternative 2 (chip-specific).
+    value: 2
+  - name: mux11
+    description: Alternative 3 (chip-specific).
+    value: 3
+  - name: mux100
+    description: Alternative 4 (chip-specific).
+    value: 4
+  - name: mux101
+    description: Alternative 5 (chip-specific).
+    value: 5
+  - name: mux110
+    description: Alternative 6 (chip-specific).
+    value: 6
+  - name: mux111
+    description: Alternative 7 (chip-specific).
+    value: 7
+  - name: mux1000
+    description: Alternative 8 (chip-specific).
+    value: 8
+  - name: mux1001
+    description: Alternative 9 (chip-specific).
+    value: 9
+  - name: mux1010
+    description: Alternative 10 (chip-specific).
+    value: 10
+  - name: mux1011
+    description: Alternative 11 (chip-specific).
+    value: 11
+  - name: mux1100
+    description: Alternative 12 (chip-specific).
+    value: 12
+  - name: mux1101
+    description: Alternative 13 (chip-specific).
+    value: 13
+enum/PCR12_ODE:
+  bit_size: 1
+  variants:
+  - name: ode0
+    description: Disables.
+    value: 0
+  - name: ode1
+    description: Enables.
+    value: 1
+enum/PCR12_PE:
+  bit_size: 1
+  variants:
+  - name: pe0
+    description: Disables.
+    value: 0
+  - name: pe1
+    description: Enables.
+    value: 1
+enum/PCR12_PS:
+  bit_size: 1
+  variants:
+  - name: ps0
+    description: Enables internal pulldown resistor.
+    value: 0
+  - name: ps1
+    description: Enables internal pullup resistor.
+    value: 1
+enum/PCR12_SRE:
+  bit_size: 1
+  variants:
+  - name: sre0
+    description: Fast.
+    value: 0
+  - name: sre1
+    description: Slow.
+    value: 1
+enum/PCR13_DSE:
+  bit_size: 1
+  variants:
+  - name: dse0
+    description: Low.
+    value: 0
+  - name: dse1
+    description: High.
+    value: 1
+enum/PCR13_IBE:
+  bit_size: 1
+  variants:
+  - name: ibe0
+    description: Disables.
+    value: 0
+  - name: ibe1
+    description: Enables.
+    value: 1
+enum/PCR13_INV:
+  bit_size: 1
+  variants:
+  - name: inv0
+    description: Does not invert.
+    value: 0
+  - name: inv1
+    description: Inverts.
+    value: 1
+enum/PCR13_LK:
+  bit_size: 1
+  variants:
+  - name: lk0
+    description: Does not lock.
+    value: 0
+  - name: lk1
+    description: Locks.
+    value: 1
+enum/PCR13_MUX:
+  bit_size: 4
+  variants:
+  - name: mux00
+    description: Alternative 0 (GPIO).
+    value: 0
+  - name: mux01
+    description: Alternative 1 (chip-specific).
+    value: 1
+  - name: mux10
+    description: Alternative 2 (chip-specific).
+    value: 2
+  - name: mux11
+    description: Alternative 3 (chip-specific).
+    value: 3
+  - name: mux100
+    description: Alternative 4 (chip-specific).
+    value: 4
+  - name: mux101
+    description: Alternative 5 (chip-specific).
+    value: 5
+  - name: mux110
+    description: Alternative 6 (chip-specific).
+    value: 6
+  - name: mux111
+    description: Alternative 7 (chip-specific).
+    value: 7
+  - name: mux1000
+    description: Alternative 8 (chip-specific).
+    value: 8
+  - name: mux1001
+    description: Alternative 9 (chip-specific).
+    value: 9
+  - name: mux1010
+    description: Alternative 10 (chip-specific).
+    value: 10
+  - name: mux1011
+    description: Alternative 11 (chip-specific).
+    value: 11
+  - name: mux1100
+    description: Alternative 12 (chip-specific).
+    value: 12
+  - name: mux1101
+    description: Alternative 13 (chip-specific).
+    value: 13
+enum/PCR13_ODE:
+  bit_size: 1
+  variants:
+  - name: ode0
+    description: Disables.
+    value: 0
+  - name: ode1
+    description: Enables.
+    value: 1
+enum/PCR13_PE:
+  bit_size: 1
+  variants:
+  - name: pe0
+    description: Disables.
+    value: 0
+  - name: pe1
+    description: Enables.
+    value: 1
+enum/PCR13_PS:
+  bit_size: 1
+  variants:
+  - name: ps0
+    description: Enables internal pulldown resistor.
+    value: 0
+  - name: ps1
+    description: Enables internal pullup resistor.
+    value: 1
+enum/PCR13_SRE:
+  bit_size: 1
+  variants:
+  - name: sre0
+    description: Fast.
+    value: 0
+  - name: sre1
+    description: Slow.
+    value: 1
+enum/PCR14_DSE:
+  bit_size: 1
+  variants:
+  - name: dse0
+    description: Low.
+    value: 0
+  - name: dse1
+    description: High.
+    value: 1
+enum/PCR14_IBE:
+  bit_size: 1
+  variants:
+  - name: ibe0
+    description: Disables.
+    value: 0
+  - name: ibe1
+    description: Enables.
+    value: 1
+enum/PCR14_INV:
+  bit_size: 1
+  variants:
+  - name: inv0
+    description: Does not invert.
+    value: 0
+  - name: inv1
+    description: Inverts.
+    value: 1
+enum/PCR14_LK:
+  bit_size: 1
+  variants:
+  - name: lk0
+    description: Does not lock.
+    value: 0
+  - name: lk1
+    description: Locks.
+    value: 1
+enum/PCR14_MUX:
+  bit_size: 4
+  variants:
+  - name: mux00
+    description: Alternative 0 (GPIO).
+    value: 0
+  - name: mux01
+    description: Alternative 1 (chip-specific).
+    value: 1
+  - name: mux10
+    description: Alternative 2 (chip-specific).
+    value: 2
+  - name: mux11
+    description: Alternative 3 (chip-specific).
+    value: 3
+  - name: mux100
+    description: Alternative 4 (chip-specific).
+    value: 4
+  - name: mux101
+    description: Alternative 5 (chip-specific).
+    value: 5
+  - name: mux110
+    description: Alternative 6 (chip-specific).
+    value: 6
+  - name: mux111
+    description: Alternative 7 (chip-specific).
+    value: 7
+  - name: mux1000
+    description: Alternative 8 (chip-specific).
+    value: 8
+  - name: mux1001
+    description: Alternative 9 (chip-specific).
+    value: 9
+  - name: mux1010
+    description: Alternative 10 (chip-specific).
+    value: 10
+  - name: mux1011
+    description: Alternative 11 (chip-specific).
+    value: 11
+  - name: mux1100
+    description: Alternative 12 (chip-specific).
+    value: 12
+  - name: mux1101
+    description: Alternative 13 (chip-specific).
+    value: 13
+enum/PCR14_ODE:
+  bit_size: 1
+  variants:
+  - name: ode0
+    description: Disables.
+    value: 0
+  - name: ode1
+    description: Enables.
+    value: 1
+enum/PCR14_PE:
+  bit_size: 1
+  variants:
+  - name: pe0
+    description: Disables.
+    value: 0
+  - name: pe1
+    description: Enables.
+    value: 1
+enum/PCR14_PS:
+  bit_size: 1
+  variants:
+  - name: ps0
+    description: Enables internal pulldown resistor.
+    value: 0
+  - name: ps1
+    description: Enables internal pullup resistor.
+    value: 1
+enum/PCR14_SRE:
+  bit_size: 1
+  variants:
+  - name: sre0
+    description: Fast.
+    value: 0
+  - name: sre1
+    description: Slow.
+    value: 1
+enum/PCR15_DSE:
+  bit_size: 1
+  variants:
+  - name: dse0
+    description: Low.
+    value: 0
+  - name: dse1
+    description: High.
+    value: 1
+enum/PCR15_IBE:
+  bit_size: 1
+  variants:
+  - name: ibe0
+    description: Disables.
+    value: 0
+  - name: ibe1
+    description: Enables.
+    value: 1
+enum/PCR15_INV:
+  bit_size: 1
+  variants:
+  - name: inv0
+    description: Does not invert.
+    value: 0
+  - name: inv1
+    description: Inverts.
+    value: 1
+enum/PCR15_LK:
+  bit_size: 1
+  variants:
+  - name: lk0
+    description: Does not lock.
+    value: 0
+  - name: lk1
+    description: Locks.
+    value: 1
+enum/PCR15_MUX:
+  bit_size: 4
+  variants:
+  - name: mux00
+    description: Alternative 0 (GPIO).
+    value: 0
+  - name: mux01
+    description: Alternative 1 (chip-specific).
+    value: 1
+  - name: mux10
+    description: Alternative 2 (chip-specific).
+    value: 2
+  - name: mux11
+    description: Alternative 3 (chip-specific).
+    value: 3
+  - name: mux100
+    description: Alternative 4 (chip-specific).
+    value: 4
+  - name: mux101
+    description: Alternative 5 (chip-specific).
+    value: 5
+  - name: mux110
+    description: Alternative 6 (chip-specific).
+    value: 6
+  - name: mux111
+    description: Alternative 7 (chip-specific).
+    value: 7
+  - name: mux1000
+    description: Alternative 8 (chip-specific).
+    value: 8
+  - name: mux1001
+    description: Alternative 9 (chip-specific).
+    value: 9
+  - name: mux1010
+    description: Alternative 10 (chip-specific).
+    value: 10
+  - name: mux1011
+    description: Alternative 11 (chip-specific).
+    value: 11
+  - name: mux1100
+    description: Alternative 12 (chip-specific).
+    value: 12
+  - name: mux1101
+    description: Alternative 13 (chip-specific).
+    value: 13
+enum/PCR15_ODE:
+  bit_size: 1
+  variants:
+  - name: ode0
+    description: Disables.
+    value: 0
+  - name: ode1
+    description: Enables.
+    value: 1
+enum/PCR15_PE:
+  bit_size: 1
+  variants:
+  - name: pe0
+    description: Disables.
+    value: 0
+  - name: pe1
+    description: Enables.
+    value: 1
+enum/PCR15_PS:
+  bit_size: 1
+  variants:
+  - name: ps0
+    description: Enables internal pulldown resistor.
+    value: 0
+  - name: ps1
+    description: Enables internal pullup resistor.
+    value: 1
+enum/PCR15_SRE:
+  bit_size: 1
+  variants:
+  - name: sre0
+    description: Fast.
+    value: 0
+  - name: sre1
+    description: Slow.
+    value: 1
+enum/PCR16_DSE:
+  bit_size: 1
+  variants:
+  - name: dse0
+    description: Low.
+    value: 0
+  - name: dse1
+    description: High.
+    value: 1
+enum/PCR16_DSE1:
+  bit_size: 1
+  variants:
+  - name: dse10
+    description: Normal.
+    value: 0
+  - name: dse11
+    description: Double.
+    value: 1
+enum/PCR16_IBE:
+  bit_size: 1
+  variants:
+  - name: ibe0
+    description: Disables.
+    value: 0
+  - name: ibe1
+    description: Enables.
+    value: 1
+enum/PCR16_INV:
+  bit_size: 1
+  variants:
+  - name: inv0
+    description: Does not invert.
+    value: 0
+  - name: inv1
+    description: Inverts.
+    value: 1
+enum/PCR16_LK:
+  bit_size: 1
+  variants:
+  - name: lk0
+    description: Does not lock.
+    value: 0
+  - name: lk1
+    description: Locks.
+    value: 1
+enum/PCR16_MUX:
+  bit_size: 4
+  variants:
+  - name: mux00
+    description: Alternative 0 (GPIO).
+    value: 0
+  - name: mux01
+    description: Alternative 1 (chip-specific).
+    value: 1
+  - name: mux10
+    description: Alternative 2 (chip-specific).
+    value: 2
+  - name: mux11
+    description: Alternative 3 (chip-specific).
+    value: 3
+  - name: mux100
+    description: Alternative 4 (chip-specific).
+    value: 4
+  - name: mux101
+    description: Alternative 5 (chip-specific).
+    value: 5
+  - name: mux110
+    description: Alternative 6 (chip-specific).
+    value: 6
+  - name: mux111
+    description: Alternative 7 (chip-specific).
+    value: 7
+  - name: mux1000
+    description: Alternative 8 (chip-specific).
+    value: 8
+  - name: mux1001
+    description: Alternative 9 (chip-specific).
+    value: 9
+  - name: mux1010
+    description: Alternative 10 (chip-specific).
+    value: 10
+  - name: mux1011
+    description: Alternative 11 (chip-specific).
+    value: 11
+  - name: mux1100
+    description: Alternative 12 (chip-specific).
+    value: 12
+  - name: mux1101
+    description: Alternative 13 (chip-specific).
+    value: 13
+enum/PCR16_ODE:
+  bit_size: 1
+  variants:
+  - name: ode0
+    description: Disables.
+    value: 0
+  - name: ode1
+    description: Enables.
+    value: 1
+enum/PCR16_PE:
+  bit_size: 1
+  variants:
+  - name: pe0
+    description: Disables.
+    value: 0
+  - name: pe1
+    description: Enables.
+    value: 1
+enum/PCR16_PFE:
+  bit_size: 1
+  variants:
+  - name: pfe0
+    description: Disables.
+    value: 0
+  - name: pfe1
+    description: Enables.
+    value: 1
+enum/PCR16_PS:
+  bit_size: 1
+  variants:
+  - name: ps0
+    description: Enables internal pulldown resistor.
+    value: 0
+  - name: ps1
+    description: Enables internal pullup resistor.
+    value: 1
+enum/PCR16_SRE:
+  bit_size: 1
+  variants:
+  - name: sre0
+    description: Fast.
+    value: 0
+  - name: sre1
+    description: Slow.
+    value: 1
+enum/PCR17_DSE:
+  bit_size: 1
+  variants:
+  - name: dse0
+    description: Low.
+    value: 0
+  - name: dse1
+    description: High.
+    value: 1
+enum/PCR17_DSE1:
+  bit_size: 1
+  variants:
+  - name: dse10
+    description: Normal.
+    value: 0
+  - name: dse11
+    description: Double.
+    value: 1
+enum/PCR17_IBE:
+  bit_size: 1
+  variants:
+  - name: ibe0
+    description: Disables.
+    value: 0
+  - name: ibe1
+    description: Enables.
+    value: 1
+enum/PCR17_INV:
+  bit_size: 1
+  variants:
+  - name: inv0
+    description: Does not invert.
+    value: 0
+  - name: inv1
+    description: Inverts.
+    value: 1
+enum/PCR17_LK:
+  bit_size: 1
+  variants:
+  - name: lk0
+    description: Does not lock.
+    value: 0
+  - name: lk1
+    description: Locks.
+    value: 1
+enum/PCR17_MUX:
+  bit_size: 4
+  variants:
+  - name: mux00
+    description: Alternative 0 (GPIO).
+    value: 0
+  - name: mux01
+    description: Alternative 1 (chip-specific).
+    value: 1
+  - name: mux10
+    description: Alternative 2 (chip-specific).
+    value: 2
+  - name: mux11
+    description: Alternative 3 (chip-specific).
+    value: 3
+  - name: mux100
+    description: Alternative 4 (chip-specific).
+    value: 4
+  - name: mux101
+    description: Alternative 5 (chip-specific).
+    value: 5
+  - name: mux110
+    description: Alternative 6 (chip-specific).
+    value: 6
+  - name: mux111
+    description: Alternative 7 (chip-specific).
+    value: 7
+  - name: mux1000
+    description: Alternative 8 (chip-specific).
+    value: 8
+  - name: mux1001
+    description: Alternative 9 (chip-specific).
+    value: 9
+  - name: mux1010
+    description: Alternative 10 (chip-specific).
+    value: 10
+  - name: mux1011
+    description: Alternative 11 (chip-specific).
+    value: 11
+  - name: mux1100
+    description: Alternative 12 (chip-specific).
+    value: 12
+  - name: mux1101
+    description: Alternative 13 (chip-specific).
+    value: 13
+enum/PCR17_ODE:
+  bit_size: 1
+  variants:
+  - name: ode0
+    description: Disables.
+    value: 0
+  - name: ode1
+    description: Enables.
+    value: 1
+enum/PCR17_PE:
+  bit_size: 1
+  variants:
+  - name: pe0
+    description: Disables.
+    value: 0
+  - name: pe1
+    description: Enables.
+    value: 1
+enum/PCR17_PFE:
+  bit_size: 1
+  variants:
+  - name: pfe0
+    description: Disables.
+    value: 0
+  - name: pfe1
+    description: Enables.
+    value: 1
+enum/PCR17_PS:
+  bit_size: 1
+  variants:
+  - name: ps0
+    description: Enables internal pulldown resistor.
+    value: 0
+  - name: ps1
+    description: Enables internal pullup resistor.
+    value: 1
+enum/PCR17_SRE:
+  bit_size: 1
+  variants:
+  - name: sre0
+    description: Fast.
+    value: 0
+  - name: sre1
+    description: Slow.
+    value: 1
+enum/PCR18_DSE:
+  bit_size: 1
+  variants:
+  - name: dse0
+    description: Low.
+    value: 0
+  - name: dse1
+    description: High.
+    value: 1
+enum/PCR18_IBE:
+  bit_size: 1
+  variants:
+  - name: ibe0
+    description: Disables.
+    value: 0
+  - name: ibe1
+    description: Enables.
+    value: 1
+enum/PCR18_INV:
+  bit_size: 1
+  variants:
+  - name: inv0
+    description: Does not invert.
+    value: 0
+  - name: inv1
+    description: Inverts.
+    value: 1
+enum/PCR18_LK:
+  bit_size: 1
+  variants:
+  - name: lk0
+    description: Does not lock.
+    value: 0
+  - name: lk1
+    description: Locks.
+    value: 1
+enum/PCR18_MUX:
+  bit_size: 4
+  variants:
+  - name: mux00
+    description: Alternative 0 (GPIO).
+    value: 0
+  - name: mux01
+    description: Alternative 1 (chip-specific).
+    value: 1
+  - name: mux10
+    description: Alternative 2 (chip-specific).
+    value: 2
+  - name: mux11
+    description: Alternative 3 (chip-specific).
+    value: 3
+  - name: mux100
+    description: Alternative 4 (chip-specific).
+    value: 4
+  - name: mux101
+    description: Alternative 5 (chip-specific).
+    value: 5
+  - name: mux110
+    description: Alternative 6 (chip-specific).
+    value: 6
+  - name: mux111
+    description: Alternative 7 (chip-specific).
+    value: 7
+  - name: mux1000
+    description: Alternative 8 (chip-specific).
+    value: 8
+  - name: mux1001
+    description: Alternative 9 (chip-specific).
+    value: 9
+  - name: mux1010
+    description: Alternative 10 (chip-specific).
+    value: 10
+  - name: mux1011
+    description: Alternative 11 (chip-specific).
+    value: 11
+  - name: mux1100
+    description: Alternative 12 (chip-specific).
+    value: 12
+  - name: mux1101
+    description: Alternative 13 (chip-specific).
+    value: 13
+enum/PCR18_ODE:
+  bit_size: 1
+  variants:
+  - name: ode0
+    description: Disables.
+    value: 0
+  - name: ode1
+    description: Enables.
+    value: 1
+enum/PCR18_PE:
+  bit_size: 1
+  variants:
+  - name: pe0
+    description: Disables.
+    value: 0
+  - name: pe1
+    description: Enables.
+    value: 1
+enum/PCR18_PS:
+  bit_size: 1
+  variants:
+  - name: ps0
+    description: Enables internal pulldown resistor.
+    value: 0
+  - name: ps1
+    description: Enables internal pullup resistor.
+    value: 1
+enum/PCR18_SRE:
+  bit_size: 1
+  variants:
+  - name: sre0
+    description: Fast.
+    value: 0
+  - name: sre1
+    description: Slow.
+    value: 1
+enum/PCR19_DSE:
+  bit_size: 1
+  variants:
+  - name: dse0
+    description: Low.
+    value: 0
+  - name: dse1
+    description: High.
+    value: 1
+enum/PCR19_IBE:
+  bit_size: 1
+  variants:
+  - name: ibe0
+    description: Disables.
+    value: 0
+  - name: ibe1
+    description: Enables.
+    value: 1
+enum/PCR19_INV:
+  bit_size: 1
+  variants:
+  - name: inv0
+    description: Does not invert.
+    value: 0
+  - name: inv1
+    description: Inverts.
+    value: 1
+enum/PCR19_LK:
+  bit_size: 1
+  variants:
+  - name: lk0
+    description: Does not lock.
+    value: 0
+  - name: lk1
+    description: Locks.
+    value: 1
+enum/PCR19_MUX:
+  bit_size: 4
+  variants:
+  - name: mux00
+    description: Alternative 0 (GPIO).
+    value: 0
+  - name: mux01
+    description: Alternative 1 (chip-specific).
+    value: 1
+  - name: mux10
+    description: Alternative 2 (chip-specific).
+    value: 2
+  - name: mux11
+    description: Alternative 3 (chip-specific).
+    value: 3
+  - name: mux100
+    description: Alternative 4 (chip-specific).
+    value: 4
+  - name: mux101
+    description: Alternative 5 (chip-specific).
+    value: 5
+  - name: mux110
+    description: Alternative 6 (chip-specific).
+    value: 6
+  - name: mux111
+    description: Alternative 7 (chip-specific).
+    value: 7
+  - name: mux1000
+    description: Alternative 8 (chip-specific).
+    value: 8
+  - name: mux1001
+    description: Alternative 9 (chip-specific).
+    value: 9
+  - name: mux1010
+    description: Alternative 10 (chip-specific).
+    value: 10
+  - name: mux1011
+    description: Alternative 11 (chip-specific).
+    value: 11
+  - name: mux1100
+    description: Alternative 12 (chip-specific).
+    value: 12
+  - name: mux1101
+    description: Alternative 13 (chip-specific).
+    value: 13
+enum/PCR19_ODE:
+  bit_size: 1
+  variants:
+  - name: ode0
+    description: Disables.
+    value: 0
+  - name: ode1
+    description: Enables.
+    value: 1
+enum/PCR19_PE:
+  bit_size: 1
+  variants:
+  - name: pe0
+    description: Disables.
+    value: 0
+  - name: pe1
+    description: Enables.
+    value: 1
+enum/PCR19_PS:
+  bit_size: 1
+  variants:
+  - name: ps0
+    description: Enables internal pulldown resistor.
+    value: 0
+  - name: ps1
+    description: Enables internal pullup resistor.
+    value: 1
+enum/PCR19_SRE:
+  bit_size: 1
+  variants:
+  - name: sre0
+    description: Fast.
+    value: 0
+  - name: sre1
+    description: Slow.
+    value: 1
+enum/PCR1_DSE:
+  bit_size: 1
+  variants:
+  - name: dse0
+    description: Low.
+    value: 0
+  - name: dse1
+    description: High.
+    value: 1
+enum/PCR1_IBE:
+  bit_size: 1
+  variants:
+  - name: ibe0
+    description: Disables.
+    value: 0
+  - name: ibe1
+    description: Enables.
+    value: 1
+enum/PCR1_INV:
+  bit_size: 1
+  variants:
+  - name: inv0
+    description: Does not invert.
+    value: 0
+  - name: inv1
+    description: Inverts.
+    value: 1
+enum/PCR1_LK:
+  bit_size: 1
+  variants:
+  - name: lk0
+    description: Does not lock.
+    value: 0
+  - name: lk1
+    description: Locks.
+    value: 1
+enum/PCR1_MUX:
+  bit_size: 3
+  variants:
+  - name: mux00
+    description: Alternative 0 (GPIO).
+    value: 0
+  - name: mux01
+    description: Alternative 1 (chip-specific).
+    value: 1
+  - name: mux10
+    description: Alternative 2 (chip-specific).
+    value: 2
+  - name: mux11
+    description: Alternative 3 (chip-specific).
+    value: 3
+  - name: mux100
+    description: Alternative 4 (chip-specific).
+    value: 4
+  - name: mux101
+    description: Alternative 5 (chip-specific).
+    value: 5
+  - name: mux110
+    description: Alternative 6 (chip-specific).
+    value: 6
+  - name: mux111
+    description: Alternative 7 (chip-specific).
+    value: 7
+enum/PCR1_ODE:
+  bit_size: 1
+  variants:
+  - name: ode0
+    description: Disables.
+    value: 0
+  - name: ode1
+    description: Enables.
+    value: 1
+enum/PCR1_PE:
+  bit_size: 1
+  variants:
+  - name: pe0
+    description: Disables.
+    value: 0
+  - name: pe1
+    description: Enables.
+    value: 1
+enum/PCR1_PS:
+  bit_size: 1
+  variants:
+  - name: ps0
+    description: Enables internal pulldown resistor.
+    value: 0
+  - name: ps1
+    description: Enables internal pullup resistor.
+    value: 1
+enum/PCR1_SRE:
+  bit_size: 1
+  variants:
+  - name: sre0
+    description: Fast.
+    value: 0
+  - name: sre1
+    description: Slow.
+    value: 1
+enum/PCR20_DSE:
+  bit_size: 1
+  variants:
+  - name: dse0
+    description: Low.
+    value: 0
+  - name: dse1
+    description: High.
+    value: 1
+enum/PCR20_IBE:
+  bit_size: 1
+  variants:
+  - name: ibe0
+    description: Disables.
+    value: 0
+  - name: ibe1
+    description: Enables.
+    value: 1
+enum/PCR20_INV:
+  bit_size: 1
+  variants:
+  - name: inv0
+    description: Does not invert.
+    value: 0
+  - name: inv1
+    description: Inverts.
+    value: 1
+enum/PCR20_LK:
+  bit_size: 1
+  variants:
+  - name: lk0
+    description: Does not lock.
+    value: 0
+  - name: lk1
+    description: Locks.
+    value: 1
+enum/PCR20_MUX:
+  bit_size: 4
+  variants:
+  - name: mux00
+    description: Alternative 0 (GPIO).
+    value: 0
+  - name: mux01
+    description: Alternative 1 (chip-specific).
+    value: 1
+  - name: mux10
+    description: Alternative 2 (chip-specific).
+    value: 2
+  - name: mux11
+    description: Alternative 3 (chip-specific).
+    value: 3
+  - name: mux100
+    description: Alternative 4 (chip-specific).
+    value: 4
+  - name: mux101
+    description: Alternative 5 (chip-specific).
+    value: 5
+  - name: mux110
+    description: Alternative 6 (chip-specific).
+    value: 6
+  - name: mux111
+    description: Alternative 7 (chip-specific).
+    value: 7
+  - name: mux1000
+    description: Alternative 8 (chip-specific).
+    value: 8
+  - name: mux1001
+    description: Alternative 9 (chip-specific).
+    value: 9
+  - name: mux1010
+    description: Alternative 10 (chip-specific).
+    value: 10
+  - name: mux1011
+    description: Alternative 11 (chip-specific).
+    value: 11
+  - name: mux1100
+    description: Alternative 12 (chip-specific).
+    value: 12
+  - name: mux1101
+    description: Alternative 13 (chip-specific).
+    value: 13
+enum/PCR20_ODE:
+  bit_size: 1
+  variants:
+  - name: ode0
+    description: Disables.
+    value: 0
+  - name: ode1
+    description: Enables.
+    value: 1
+enum/PCR20_PE:
+  bit_size: 1
+  variants:
+  - name: pe0
+    description: Disables.
+    value: 0
+  - name: pe1
+    description: Enables.
+    value: 1
+enum/PCR20_PS:
+  bit_size: 1
+  variants:
+  - name: ps0
+    description: Enables internal pulldown resistor.
+    value: 0
+  - name: ps1
+    description: Enables internal pullup resistor.
+    value: 1
+enum/PCR20_SRE:
+  bit_size: 1
+  variants:
+  - name: sre0
+    description: Fast.
+    value: 0
+  - name: sre1
+    description: Slow.
+    value: 1
+enum/PCR21_DSE:
+  bit_size: 1
+  variants:
+  - name: dse0
+    description: Low.
+    value: 0
+  - name: dse1
+    description: High.
+    value: 1
+enum/PCR21_IBE:
+  bit_size: 1
+  variants:
+  - name: ibe0
+    description: Disables.
+    value: 0
+  - name: ibe1
+    description: Enables.
+    value: 1
+enum/PCR21_INV:
+  bit_size: 1
+  variants:
+  - name: inv0
+    description: Does not invert.
+    value: 0
+  - name: inv1
+    description: Inverts.
+    value: 1
+enum/PCR21_LK:
+  bit_size: 1
+  variants:
+  - name: lk0
+    description: Does not lock.
+    value: 0
+  - name: lk1
+    description: Locks.
+    value: 1
+enum/PCR21_MUX:
+  bit_size: 4
+  variants:
+  - name: mux00
+    description: Alternative 0 (GPIO).
+    value: 0
+  - name: mux01
+    description: Alternative 1 (chip-specific).
+    value: 1
+  - name: mux10
+    description: Alternative 2 (chip-specific).
+    value: 2
+  - name: mux11
+    description: Alternative 3 (chip-specific).
+    value: 3
+  - name: mux100
+    description: Alternative 4 (chip-specific).
+    value: 4
+  - name: mux101
+    description: Alternative 5 (chip-specific).
+    value: 5
+  - name: mux110
+    description: Alternative 6 (chip-specific).
+    value: 6
+  - name: mux111
+    description: Alternative 7 (chip-specific).
+    value: 7
+  - name: mux1000
+    description: Alternative 8 (chip-specific).
+    value: 8
+  - name: mux1001
+    description: Alternative 9 (chip-specific).
+    value: 9
+  - name: mux1010
+    description: Alternative 10 (chip-specific).
+    value: 10
+  - name: mux1011
+    description: Alternative 11 (chip-specific).
+    value: 11
+  - name: mux1100
+    description: Alternative 12 (chip-specific).
+    value: 12
+  - name: mux1101
+    description: Alternative 13 (chip-specific).
+    value: 13
+enum/PCR21_ODE:
+  bit_size: 1
+  variants:
+  - name: ode0
+    description: Disables.
+    value: 0
+  - name: ode1
+    description: Enables.
+    value: 1
+enum/PCR21_PE:
+  bit_size: 1
+  variants:
+  - name: pe0
+    description: Disables.
+    value: 0
+  - name: pe1
+    description: Enables.
+    value: 1
+enum/PCR21_PS:
+  bit_size: 1
+  variants:
+  - name: ps0
+    description: Enables internal pulldown resistor.
+    value: 0
+  - name: ps1
+    description: Enables internal pullup resistor.
+    value: 1
+enum/PCR21_SRE:
+  bit_size: 1
+  variants:
+  - name: sre0
+    description: Fast.
+    value: 0
+  - name: sre1
+    description: Slow.
+    value: 1
+enum/PCR22_DSE:
+  bit_size: 1
+  variants:
+  - name: dse0
+    description: Low.
+    value: 0
+  - name: dse1
+    description: High.
+    value: 1
+enum/PCR22_IBE:
+  bit_size: 1
+  variants:
+  - name: ibe0
+    description: Disables.
+    value: 0
+  - name: ibe1
+    description: Enables.
+    value: 1
+enum/PCR22_INV:
+  bit_size: 1
+  variants:
+  - name: inv0
+    description: Does not invert.
+    value: 0
+  - name: inv1
+    description: Inverts.
+    value: 1
+enum/PCR22_LK:
+  bit_size: 1
+  variants:
+  - name: lk0
+    description: Does not lock.
+    value: 0
+  - name: lk1
+    description: Locks.
+    value: 1
+enum/PCR22_MUX:
+  bit_size: 4
+  variants:
+  - name: mux00
+    description: Alternative 0 (GPIO).
+    value: 0
+  - name: mux01
+    description: Alternative 1 (chip-specific).
+    value: 1
+  - name: mux10
+    description: Alternative 2 (chip-specific).
+    value: 2
+  - name: mux11
+    description: Alternative 3 (chip-specific).
+    value: 3
+  - name: mux100
+    description: Alternative 4 (chip-specific).
+    value: 4
+  - name: mux101
+    description: Alternative 5 (chip-specific).
+    value: 5
+  - name: mux110
+    description: Alternative 6 (chip-specific).
+    value: 6
+  - name: mux111
+    description: Alternative 7 (chip-specific).
+    value: 7
+  - name: mux1000
+    description: Alternative 8 (chip-specific).
+    value: 8
+  - name: mux1001
+    description: Alternative 9 (chip-specific).
+    value: 9
+  - name: mux1010
+    description: Alternative 10 (chip-specific).
+    value: 10
+  - name: mux1011
+    description: Alternative 11 (chip-specific).
+    value: 11
+  - name: mux1100
+    description: Alternative 12 (chip-specific).
+    value: 12
+  - name: mux1101
+    description: Alternative 13 (chip-specific).
+    value: 13
+enum/PCR22_ODE:
+  bit_size: 1
+  variants:
+  - name: ode0
+    description: Disables.
+    value: 0
+  - name: ode1
+    description: Enables.
+    value: 1
+enum/PCR22_PE:
+  bit_size: 1
+  variants:
+  - name: pe0
+    description: Disables.
+    value: 0
+  - name: pe1
+    description: Enables.
+    value: 1
+enum/PCR22_PS:
+  bit_size: 1
+  variants:
+  - name: ps0
+    description: Enables internal pulldown resistor.
+    value: 0
+  - name: ps1
+    description: Enables internal pullup resistor.
+    value: 1
+enum/PCR22_SRE:
+  bit_size: 1
+  variants:
+  - name: sre0
+    description: Fast.
+    value: 0
+  - name: sre1
+    description: Slow.
+    value: 1
+enum/PCR23_DSE:
+  bit_size: 1
+  variants:
+  - name: dse0
+    description: Low.
+    value: 0
+  - name: dse1
+    description: High.
+    value: 1
+enum/PCR23_IBE:
+  bit_size: 1
+  variants:
+  - name: ibe0
+    description: Disables.
+    value: 0
+  - name: ibe1
+    description: Enables.
+    value: 1
+enum/PCR23_INV:
+  bit_size: 1
+  variants:
+  - name: inv0
+    description: Does not invert.
+    value: 0
+  - name: inv1
+    description: Inverts.
+    value: 1
+enum/PCR23_LK:
+  bit_size: 1
+  variants:
+  - name: lk0
+    description: Does not lock.
+    value: 0
+  - name: lk1
+    description: Locks.
+    value: 1
+enum/PCR23_MUX:
+  bit_size: 4
+  variants:
+  - name: mux00
+    description: Alternative 0 (GPIO).
+    value: 0
+  - name: mux01
+    description: Alternative 1 (chip-specific).
+    value: 1
+  - name: mux10
+    description: Alternative 2 (chip-specific).
+    value: 2
+  - name: mux11
+    description: Alternative 3 (chip-specific).
+    value: 3
+  - name: mux100
+    description: Alternative 4 (chip-specific).
+    value: 4
+  - name: mux101
+    description: Alternative 5 (chip-specific).
+    value: 5
+  - name: mux110
+    description: Alternative 6 (chip-specific).
+    value: 6
+  - name: mux111
+    description: Alternative 7 (chip-specific).
+    value: 7
+  - name: mux1000
+    description: Alternative 8 (chip-specific).
+    value: 8
+  - name: mux1001
+    description: Alternative 9 (chip-specific).
+    value: 9
+  - name: mux1010
+    description: Alternative 10 (chip-specific).
+    value: 10
+  - name: mux1011
+    description: Alternative 11 (chip-specific).
+    value: 11
+  - name: mux1100
+    description: Alternative 12 (chip-specific).
+    value: 12
+  - name: mux1101
+    description: Alternative 13 (chip-specific).
+    value: 13
+enum/PCR23_ODE:
+  bit_size: 1
+  variants:
+  - name: ode0
+    description: Disables.
+    value: 0
+  - name: ode1
+    description: Enables.
+    value: 1
+enum/PCR23_PE:
+  bit_size: 1
+  variants:
+  - name: pe0
+    description: Disables.
+    value: 0
+  - name: pe1
+    description: Enables.
+    value: 1
+enum/PCR23_PS:
+  bit_size: 1
+  variants:
+  - name: ps0
+    description: Enables internal pulldown resistor.
+    value: 0
+  - name: ps1
+    description: Enables internal pullup resistor.
+    value: 1
+enum/PCR23_SRE:
+  bit_size: 1
+  variants:
+  - name: sre0
+    description: Fast.
+    value: 0
+  - name: sre1
+    description: Slow.
+    value: 1
+enum/PCR24_DSE:
+  bit_size: 1
+  variants:
+  - name: dse0
+    description: Low.
+    value: 0
+  - name: dse1
+    description: High.
+    value: 1
+enum/PCR24_IBE:
+  bit_size: 1
+  variants:
+  - name: ibe0
+    description: Disables.
+    value: 0
+  - name: ibe1
+    description: Enables.
+    value: 1
+enum/PCR24_INV:
+  bit_size: 1
+  variants:
+  - name: inv0
+    description: Does not invert.
+    value: 0
+  - name: inv1
+    description: Inverts.
+    value: 1
+enum/PCR24_LK:
+  bit_size: 1
+  variants:
+  - name: lk0
+    description: Does not lock.
+    value: 0
+  - name: lk1
+    description: Locks.
+    value: 1
+enum/PCR24_MUX:
+  bit_size: 4
+  variants:
+  - name: mux00
+    description: Alternative 0 (GPIO).
+    value: 0
+  - name: mux01
+    description: Alternative 1 (chip-specific).
+    value: 1
+  - name: mux10
+    description: Alternative 2 (chip-specific).
+    value: 2
+  - name: mux11
+    description: Alternative 3 (chip-specific).
+    value: 3
+  - name: mux100
+    description: Alternative 4 (chip-specific).
+    value: 4
+  - name: mux101
+    description: Alternative 5 (chip-specific).
+    value: 5
+  - name: mux110
+    description: Alternative 6 (chip-specific).
+    value: 6
+  - name: mux111
+    description: Alternative 7 (chip-specific).
+    value: 7
+  - name: mux1000
+    description: Alternative 8 (chip-specific).
+    value: 8
+  - name: mux1001
+    description: Alternative 9 (chip-specific).
+    value: 9
+  - name: mux1010
+    description: Alternative 10 (chip-specific).
+    value: 10
+  - name: mux1011
+    description: Alternative 11 (chip-specific).
+    value: 11
+  - name: mux1100
+    description: Alternative 12 (chip-specific).
+    value: 12
+  - name: mux1101
+    description: Alternative 13 (chip-specific).
+    value: 13
+enum/PCR24_ODE:
+  bit_size: 1
+  variants:
+  - name: ode0
+    description: Disables.
+    value: 0
+  - name: ode1
+    description: Enables.
+    value: 1
+enum/PCR24_PE:
+  bit_size: 1
+  variants:
+  - name: pe0
+    description: Disables.
+    value: 0
+  - name: pe1
+    description: Enables.
+    value: 1
+enum/PCR24_PS:
+  bit_size: 1
+  variants:
+  - name: ps0
+    description: Enables internal pulldown resistor.
+    value: 0
+  - name: ps1
+    description: Enables internal pullup resistor.
+    value: 1
+enum/PCR24_SRE:
+  bit_size: 1
+  variants:
+  - name: sre0
+    description: Fast.
+    value: 0
+  - name: sre1
+    description: Slow.
+    value: 1
+enum/PCR25_DSE:
+  bit_size: 1
+  variants:
+  - name: dse0
+    description: Low.
+    value: 0
+  - name: dse1
+    description: High.
+    value: 1
+enum/PCR25_IBE:
+  bit_size: 1
+  variants:
+  - name: ibe0
+    description: Disables.
+    value: 0
+  - name: ibe1
+    description: Enables.
+    value: 1
+enum/PCR25_INV:
+  bit_size: 1
+  variants:
+  - name: inv0
+    description: Does not invert.
+    value: 0
+  - name: inv1
+    description: Inverts.
+    value: 1
+enum/PCR25_LK:
+  bit_size: 1
+  variants:
+  - name: lk0
+    description: Does not lock.
+    value: 0
+  - name: lk1
+    description: Locks.
+    value: 1
+enum/PCR25_MUX:
+  bit_size: 4
+  variants:
+  - name: mux00
+    description: Alternative 0 (GPIO).
+    value: 0
+  - name: mux01
+    description: Alternative 1 (chip-specific).
+    value: 1
+  - name: mux10
+    description: Alternative 2 (chip-specific).
+    value: 2
+  - name: mux11
+    description: Alternative 3 (chip-specific).
+    value: 3
+  - name: mux100
+    description: Alternative 4 (chip-specific).
+    value: 4
+  - name: mux101
+    description: Alternative 5 (chip-specific).
+    value: 5
+  - name: mux110
+    description: Alternative 6 (chip-specific).
+    value: 6
+  - name: mux111
+    description: Alternative 7 (chip-specific).
+    value: 7
+  - name: mux1000
+    description: Alternative 8 (chip-specific).
+    value: 8
+  - name: mux1001
+    description: Alternative 9 (chip-specific).
+    value: 9
+  - name: mux1010
+    description: Alternative 10 (chip-specific).
+    value: 10
+  - name: mux1011
+    description: Alternative 11 (chip-specific).
+    value: 11
+  - name: mux1100
+    description: Alternative 12 (chip-specific).
+    value: 12
+  - name: mux1101
+    description: Alternative 13 (chip-specific).
+    value: 13
+enum/PCR25_ODE:
+  bit_size: 1
+  variants:
+  - name: ode0
+    description: Disables.
+    value: 0
+  - name: ode1
+    description: Enables.
+    value: 1
+enum/PCR25_PE:
+  bit_size: 1
+  variants:
+  - name: pe0
+    description: Disables.
+    value: 0
+  - name: pe1
+    description: Enables.
+    value: 1
+enum/PCR25_PS:
+  bit_size: 1
+  variants:
+  - name: ps0
+    description: Enables internal pulldown resistor.
+    value: 0
+  - name: ps1
+    description: Enables internal pullup resistor.
+    value: 1
+enum/PCR25_SRE:
+  bit_size: 1
+  variants:
+  - name: sre0
+    description: Fast.
+    value: 0
+  - name: sre1
+    description: Slow.
+    value: 1
+enum/PCR26_DSE:
+  bit_size: 1
+  variants:
+  - name: dse0
+    description: Low.
+    value: 0
+  - name: dse1
+    description: High.
+    value: 1
+enum/PCR26_IBE:
+  bit_size: 1
+  variants:
+  - name: ibe0
+    description: Disables.
+    value: 0
+  - name: ibe1
+    description: Enables.
+    value: 1
+enum/PCR26_INV:
+  bit_size: 1
+  variants:
+  - name: inv0
+    description: Does not invert.
+    value: 0
+  - name: inv1
+    description: Inverts.
+    value: 1
+enum/PCR26_LK:
+  bit_size: 1
+  variants:
+  - name: lk0
+    description: Does not lock.
+    value: 0
+  - name: lk1
+    description: Locks.
+    value: 1
+enum/PCR26_MUX:
+  bit_size: 4
+  variants:
+  - name: mux00
+    description: Alternative 0 (GPIO).
+    value: 0
+  - name: mux01
+    description: Alternative 1 (chip-specific).
+    value: 1
+  - name: mux10
+    description: Alternative 2 (chip-specific).
+    value: 2
+  - name: mux11
+    description: Alternative 3 (chip-specific).
+    value: 3
+  - name: mux100
+    description: Alternative 4 (chip-specific).
+    value: 4
+  - name: mux101
+    description: Alternative 5 (chip-specific).
+    value: 5
+  - name: mux110
+    description: Alternative 6 (chip-specific).
+    value: 6
+  - name: mux111
+    description: Alternative 7 (chip-specific).
+    value: 7
+  - name: mux1000
+    description: Alternative 8 (chip-specific).
+    value: 8
+  - name: mux1001
+    description: Alternative 9 (chip-specific).
+    value: 9
+  - name: mux1010
+    description: Alternative 10 (chip-specific).
+    value: 10
+  - name: mux1011
+    description: Alternative 11 (chip-specific).
+    value: 11
+  - name: mux1100
+    description: Alternative 12 (chip-specific).
+    value: 12
+  - name: mux1101
+    description: Alternative 13 (chip-specific).
+    value: 13
+enum/PCR26_ODE:
+  bit_size: 1
+  variants:
+  - name: ode0
+    description: Disables.
+    value: 0
+  - name: ode1
+    description: Enables.
+    value: 1
+enum/PCR26_PE:
+  bit_size: 1
+  variants:
+  - name: pe0
+    description: Disables.
+    value: 0
+  - name: pe1
+    description: Enables.
+    value: 1
+enum/PCR26_PS:
+  bit_size: 1
+  variants:
+  - name: ps0
+    description: Enables internal pulldown resistor.
+    value: 0
+  - name: ps1
+    description: Enables internal pullup resistor.
+    value: 1
+enum/PCR26_SRE:
+  bit_size: 1
+  variants:
+  - name: sre0
+    description: Fast.
+    value: 0
+  - name: sre1
+    description: Slow.
+    value: 1
+enum/PCR27_DSE:
+  bit_size: 1
+  variants:
+  - name: dse0
+    description: Low.
+    value: 0
+  - name: dse1
+    description: High.
+    value: 1
+enum/PCR27_IBE:
+  bit_size: 1
+  variants:
+  - name: ibe0
+    description: Disables.
+    value: 0
+  - name: ibe1
+    description: Enables.
+    value: 1
+enum/PCR27_INV:
+  bit_size: 1
+  variants:
+  - name: inv0
+    description: Does not invert.
+    value: 0
+  - name: inv1
+    description: Inverts.
+    value: 1
+enum/PCR27_LK:
+  bit_size: 1
+  variants:
+  - name: lk0
+    description: Does not lock.
+    value: 0
+  - name: lk1
+    description: Locks.
+    value: 1
+enum/PCR27_MUX:
+  bit_size: 4
+  variants:
+  - name: mux00
+    description: Alternative 0 (GPIO).
+    value: 0
+  - name: mux01
+    description: Alternative 1 (chip-specific).
+    value: 1
+  - name: mux10
+    description: Alternative 2 (chip-specific).
+    value: 2
+  - name: mux11
+    description: Alternative 3 (chip-specific).
+    value: 3
+  - name: mux100
+    description: Alternative 4 (chip-specific).
+    value: 4
+  - name: mux101
+    description: Alternative 5 (chip-specific).
+    value: 5
+  - name: mux110
+    description: Alternative 6 (chip-specific).
+    value: 6
+  - name: mux111
+    description: Alternative 7 (chip-specific).
+    value: 7
+  - name: mux1000
+    description: Alternative 8 (chip-specific).
+    value: 8
+  - name: mux1001
+    description: Alternative 9 (chip-specific).
+    value: 9
+  - name: mux1010
+    description: Alternative 10 (chip-specific).
+    value: 10
+  - name: mux1011
+    description: Alternative 11 (chip-specific).
+    value: 11
+  - name: mux1100
+    description: Alternative 12 (chip-specific).
+    value: 12
+  - name: mux1101
+    description: Alternative 13 (chip-specific).
+    value: 13
+enum/PCR27_ODE:
+  bit_size: 1
+  variants:
+  - name: ode0
+    description: Disables.
+    value: 0
+  - name: ode1
+    description: Enables.
+    value: 1
+enum/PCR27_PE:
+  bit_size: 1
+  variants:
+  - name: pe0
+    description: Disables.
+    value: 0
+  - name: pe1
+    description: Enables.
+    value: 1
+enum/PCR27_PS:
+  bit_size: 1
+  variants:
+  - name: ps0
+    description: Enables internal pulldown resistor.
+    value: 0
+  - name: ps1
+    description: Enables internal pullup resistor.
+    value: 1
+enum/PCR27_SRE:
+  bit_size: 1
+  variants:
+  - name: sre0
+    description: Fast.
+    value: 0
+  - name: sre1
+    description: Slow.
+    value: 1
+enum/PCR28_DSE:
+  bit_size: 1
+  variants:
+  - name: dse0
+    description: Low.
+    value: 0
+  - name: dse1
+    description: High.
+    value: 1
+enum/PCR28_IBE:
+  bit_size: 1
+  variants:
+  - name: ibe0
+    description: Disables.
+    value: 0
+  - name: ibe1
+    description: Enables.
+    value: 1
+enum/PCR28_INV:
+  bit_size: 1
+  variants:
+  - name: inv0
+    description: Does not invert.
+    value: 0
+  - name: inv1
+    description: Inverts.
+    value: 1
+enum/PCR28_LK:
+  bit_size: 1
+  variants:
+  - name: lk0
+    description: Does not lock.
+    value: 0
+  - name: lk1
+    description: Locks.
+    value: 1
+enum/PCR28_ODE:
+  bit_size: 1
+  variants:
+  - name: ode0
+    description: Disables.
+    value: 0
+  - name: ode1
+    description: Enables.
+    value: 1
+enum/PCR28_PE:
+  bit_size: 1
+  variants:
+  - name: pe0
+    description: Disables.
+    value: 0
+  - name: pe1
+    description: Enables.
+    value: 1
+enum/PCR28_PS:
+  bit_size: 1
+  variants:
+  - name: ps0
+    description: Enables internal pulldown resistor.
+    value: 0
+  - name: ps1
+    description: Enables internal pullup resistor.
+    value: 1
+enum/PCR28_SRE:
+  bit_size: 1
+  variants:
+  - name: sre0
+    description: Fast.
+    value: 0
+  - name: sre1
+    description: Slow.
+    value: 1
+enum/PCR29_DSE:
+  bit_size: 1
+  variants:
+  - name: dse0
+    description: Low.
+    value: 0
+  - name: dse1
+    description: High.
+    value: 1
+enum/PCR29_IBE:
+  bit_size: 1
+  variants:
+  - name: ibe0
+    description: Disables.
+    value: 0
+  - name: ibe1
+    description: Enables.
+    value: 1
+enum/PCR29_INV:
+  bit_size: 1
+  variants:
+  - name: inv0
+    description: Does not invert.
+    value: 0
+  - name: inv1
+    description: Inverts.
+    value: 1
+enum/PCR29_LK:
+  bit_size: 1
+  variants:
+  - name: lk0
+    description: Does not lock.
+    value: 0
+  - name: lk1
+    description: Locks.
+    value: 1
+enum/PCR29_ODE:
+  bit_size: 1
+  variants:
+  - name: ode0
+    description: Disables.
+    value: 0
+  - name: ode1
+    description: Enables.
+    value: 1
+enum/PCR29_PE:
+  bit_size: 1
+  variants:
+  - name: pe0
+    description: Disables.
+    value: 0
+  - name: pe1
+    description: Enables.
+    value: 1
+enum/PCR29_PS:
+  bit_size: 1
+  variants:
+  - name: ps0
+    description: Enables internal pulldown resistor.
+    value: 0
+  - name: ps1
+    description: Enables internal pullup resistor.
+    value: 1
+enum/PCR29_SRE:
+  bit_size: 1
+  variants:
+  - name: sre0
+    description: Fast.
+    value: 0
+  - name: sre1
+    description: Slow.
+    value: 1
+enum/PCR2_DSE:
+  bit_size: 1
+  variants:
+  - name: dse0
+    description: Low.
+    value: 0
+  - name: dse1
+    description: High.
+    value: 1
+enum/PCR2_IBE:
+  bit_size: 1
+  variants:
+  - name: ibe0
+    description: Disables.
+    value: 0
+  - name: ibe1
+    description: Enables.
+    value: 1
+enum/PCR2_INV:
+  bit_size: 1
+  variants:
+  - name: inv0
+    description: Does not invert.
+    value: 0
+  - name: inv1
+    description: Inverts.
+    value: 1
+enum/PCR2_LK:
+  bit_size: 1
+  variants:
+  - name: lk0
+    description: Does not lock.
+    value: 0
+  - name: lk1
+    description: Locks.
+    value: 1
+enum/PCR2_MUX:
+  bit_size: 4
+  variants:
+  - name: mux00
+    description: Alternative 0 (GPIO).
+    value: 0
+  - name: mux01
+    description: Alternative 1 (chip-specific).
+    value: 1
+  - name: mux10
+    description: Alternative 2 (chip-specific).
+    value: 2
+  - name: mux11
+    description: Alternative 3 (chip-specific).
+    value: 3
+  - name: mux100
+    description: Alternative 4 (chip-specific).
+    value: 4
+  - name: mux101
+    description: Alternative 5 (chip-specific).
+    value: 5
+  - name: mux110
+    description: Alternative 6 (chip-specific).
+    value: 6
+  - name: mux111
+    description: Alternative 7 (chip-specific).
+    value: 7
+  - name: mux1000
+    description: Alternative 8 (chip-specific).
+    value: 8
+  - name: mux1001
+    description: Alternative 9 (chip-specific).
+    value: 9
+  - name: mux1010
+    description: Alternative 10 (chip-specific).
+    value: 10
+  - name: mux1011
+    description: Alternative 11 (chip-specific).
+    value: 11
+  - name: mux1100
+    description: Alternative 12 (chip-specific).
+    value: 12
+  - name: mux1101
+    description: Alternative 13 (chip-specific).
+    value: 13
+enum/PCR2_ODE:
+  bit_size: 1
+  variants:
+  - name: ode0
+    description: Disables.
+    value: 0
+  - name: ode1
+    description: Enables.
+    value: 1
+enum/PCR2_PE:
+  bit_size: 1
+  variants:
+  - name: pe0
+    description: Disables.
+    value: 0
+  - name: pe1
+    description: Enables.
+    value: 1
+enum/PCR2_PS:
+  bit_size: 1
+  variants:
+  - name: ps0
+    description: Enables internal pulldown resistor.
+    value: 0
+  - name: ps1
+    description: Enables internal pullup resistor.
+    value: 1
+enum/PCR2_SRE:
+  bit_size: 1
+  variants:
+  - name: sre0
+    description: Fast.
+    value: 0
+  - name: sre1
+    description: Slow.
+    value: 1
+enum/PCR30_DSE:
+  bit_size: 1
+  variants:
+  - name: dse0
+    description: Low.
+    value: 0
+  - name: dse1
+    description: High.
+    value: 1
+enum/PCR30_IBE:
+  bit_size: 1
+  variants:
+  - name: ibe0
+    description: Disables.
+    value: 0
+  - name: ibe1
+    description: Enables.
+    value: 1
+enum/PCR30_INV:
+  bit_size: 1
+  variants:
+  - name: inv0
+    description: Does not invert.
+    value: 0
+  - name: inv1
+    description: Inverts.
+    value: 1
+enum/PCR30_LK:
+  bit_size: 1
+  variants:
+  - name: lk0
+    description: Does not lock.
+    value: 0
+  - name: lk1
+    description: Locks.
+    value: 1
+enum/PCR30_ODE:
+  bit_size: 1
+  variants:
+  - name: ode0
+    description: Disables.
+    value: 0
+  - name: ode1
+    description: Enables.
+    value: 1
+enum/PCR30_PE:
+  bit_size: 1
+  variants:
+  - name: pe0
+    description: Disables.
+    value: 0
+  - name: pe1
+    description: Enables.
+    value: 1
+enum/PCR30_PS:
+  bit_size: 1
+  variants:
+  - name: ps0
+    description: Enables internal pulldown resistor.
+    value: 0
+  - name: ps1
+    description: Enables internal pullup resistor.
+    value: 1
+enum/PCR30_SRE:
+  bit_size: 1
+  variants:
+  - name: sre0
+    description: Fast.
+    value: 0
+  - name: sre1
+    description: Slow.
+    value: 1
+enum/PCR31_DSE:
+  bit_size: 1
+  variants:
+  - name: dse0
+    description: Low.
+    value: 0
+  - name: dse1
+    description: High.
+    value: 1
+enum/PCR31_IBE:
+  bit_size: 1
+  variants:
+  - name: ibe0
+    description: Disables.
+    value: 0
+  - name: ibe1
+    description: Enables.
+    value: 1
+enum/PCR31_INV:
+  bit_size: 1
+  variants:
+  - name: inv0
+    description: Does not invert.
+    value: 0
+  - name: inv1
+    description: Inverts.
+    value: 1
+enum/PCR31_LK:
+  bit_size: 1
+  variants:
+  - name: lk0
+    description: Does not lock.
+    value: 0
+  - name: lk1
+    description: Locks.
+    value: 1
+enum/PCR31_ODE:
+  bit_size: 1
+  variants:
+  - name: ode0
+    description: Disables.
+    value: 0
+  - name: ode1
+    description: Enables.
+    value: 1
+enum/PCR31_PE:
+  bit_size: 1
+  variants:
+  - name: pe0
+    description: Disables.
+    value: 0
+  - name: pe1
+    description: Enables.
+    value: 1
+enum/PCR31_PS:
+  bit_size: 1
+  variants:
+  - name: ps0
+    description: Enables internal pulldown resistor.
+    value: 0
+  - name: ps1
+    description: Enables internal pullup resistor.
+    value: 1
+enum/PCR31_SRE:
+  bit_size: 1
+  variants:
+  - name: sre0
+    description: Fast.
+    value: 0
+  - name: sre1
+    description: Slow.
+    value: 1
+enum/PCR3_DSE:
+  bit_size: 1
+  variants:
+  - name: dse0
+    description: Low.
+    value: 0
+  - name: dse1
+    description: High.
+    value: 1
+enum/PCR3_IBE:
+  bit_size: 1
+  variants:
+  - name: ibe0
+    description: Disables.
+    value: 0
+  - name: ibe1
+    description: Enables.
+    value: 1
+enum/PCR3_INV:
+  bit_size: 1
+  variants:
+  - name: inv0
+    description: Does not invert.
+    value: 0
+  - name: inv1
+    description: Inverts.
+    value: 1
+enum/PCR3_LK:
+  bit_size: 1
+  variants:
+  - name: lk0
+    description: Does not lock.
+    value: 0
+  - name: lk1
+    description: Locks.
+    value: 1
+enum/PCR3_MUX:
+  bit_size: 4
+  variants:
+  - name: mux00
+    description: Alternative 0 (GPIO).
+    value: 0
+  - name: mux01
+    description: Alternative 1 (chip-specific).
+    value: 1
+  - name: mux10
+    description: Alternative 2 (chip-specific).
+    value: 2
+  - name: mux11
+    description: Alternative 3 (chip-specific).
+    value: 3
+  - name: mux100
+    description: Alternative 4 (chip-specific).
+    value: 4
+  - name: mux101
+    description: Alternative 5 (chip-specific).
+    value: 5
+  - name: mux110
+    description: Alternative 6 (chip-specific).
+    value: 6
+  - name: mux111
+    description: Alternative 7 (chip-specific).
+    value: 7
+  - name: mux1000
+    description: Alternative 8 (chip-specific).
+    value: 8
+  - name: mux1001
+    description: Alternative 9 (chip-specific).
+    value: 9
+  - name: mux1010
+    description: Alternative 10 (chip-specific).
+    value: 10
+  - name: mux1011
+    description: Alternative 11 (chip-specific).
+    value: 11
+  - name: mux1100
+    description: Alternative 12 (chip-specific).
+    value: 12
+  - name: mux1101
+    description: Alternative 13 (chip-specific).
+    value: 13
+enum/PCR3_ODE:
+  bit_size: 1
+  variants:
+  - name: ode0
+    description: Disables.
+    value: 0
+  - name: ode1
+    description: Enables.
+    value: 1
+enum/PCR3_PE:
+  bit_size: 1
+  variants:
+  - name: pe0
+    description: Disables.
+    value: 0
+  - name: pe1
+    description: Enables.
+    value: 1
+enum/PCR3_PS:
+  bit_size: 1
+  variants:
+  - name: ps0
+    description: Enables internal pulldown resistor.
+    value: 0
+  - name: ps1
+    description: Enables internal pullup resistor.
+    value: 1
+enum/PCR3_SRE:
+  bit_size: 1
+  variants:
+  - name: sre0
+    description: Fast.
+    value: 0
+  - name: sre1
+    description: Slow.
+    value: 1
+enum/PCR4_DSE:
+  bit_size: 1
+  variants:
+  - name: dse0
+    description: Low.
+    value: 0
+  - name: dse1
+    description: High.
+    value: 1
+enum/PCR4_IBE:
+  bit_size: 1
+  variants:
+  - name: ibe0
+    description: Disables.
+    value: 0
+  - name: ibe1
+    description: Enables.
+    value: 1
+enum/PCR4_INV:
+  bit_size: 1
+  variants:
+  - name: inv0
+    description: Does not invert.
+    value: 0
+  - name: inv1
+    description: Inverts.
+    value: 1
+enum/PCR4_LK:
+  bit_size: 1
+  variants:
+  - name: lk0
+    description: Does not lock.
+    value: 0
+  - name: lk1
+    description: Locks.
+    value: 1
+enum/PCR4_MUX:
+  bit_size: 4
+  variants:
+  - name: mux00
+    description: Alternative 0 (GPIO).
+    value: 0
+  - name: mux01
+    description: Alternative 1 (chip-specific).
+    value: 1
+  - name: mux10
+    description: Alternative 2 (chip-specific).
+    value: 2
+  - name: mux11
+    description: Alternative 3 (chip-specific).
+    value: 3
+  - name: mux100
+    description: Alternative 4 (chip-specific).
+    value: 4
+  - name: mux101
+    description: Alternative 5 (chip-specific).
+    value: 5
+  - name: mux110
+    description: Alternative 6 (chip-specific).
+    value: 6
+  - name: mux111
+    description: Alternative 7 (chip-specific).
+    value: 7
+  - name: mux1000
+    description: Alternative 8 (chip-specific).
+    value: 8
+  - name: mux1001
+    description: Alternative 9 (chip-specific).
+    value: 9
+  - name: mux1010
+    description: Alternative 10 (chip-specific).
+    value: 10
+  - name: mux1011
+    description: Alternative 11 (chip-specific).
+    value: 11
+  - name: mux1100
+    description: Alternative 12 (chip-specific).
+    value: 12
+  - name: mux1101
+    description: Alternative 13 (chip-specific).
+    value: 13
+enum/PCR4_ODE:
+  bit_size: 1
+  variants:
+  - name: ode0
+    description: Disables.
+    value: 0
+  - name: ode1
+    description: Enables.
+    value: 1
+enum/PCR4_PE:
+  bit_size: 1
+  variants:
+  - name: pe0
+    description: Disables.
+    value: 0
+  - name: pe1
+    description: Enables.
+    value: 1
+enum/PCR4_PS:
+  bit_size: 1
+  variants:
+  - name: ps0
+    description: Enables internal pulldown resistor.
+    value: 0
+  - name: ps1
+    description: Enables internal pullup resistor.
+    value: 1
+enum/PCR4_SRE:
+  bit_size: 1
+  variants:
+  - name: sre0
+    description: Fast.
+    value: 0
+  - name: sre1
+    description: Slow.
+    value: 1
+enum/PCR5_DSE:
+  bit_size: 1
+  variants:
+  - name: dse0
+    description: Low.
+    value: 0
+  - name: dse1
+    description: High.
+    value: 1
+enum/PCR5_IBE:
+  bit_size: 1
+  variants:
+  - name: ibe0
+    description: Disables.
+    value: 0
+  - name: ibe1
+    description: Enables.
+    value: 1
+enum/PCR5_INV:
+  bit_size: 1
+  variants:
+  - name: inv0
+    description: Does not invert.
+    value: 0
+  - name: inv1
+    description: Inverts.
+    value: 1
+enum/PCR5_LK:
+  bit_size: 1
+  variants:
+  - name: lk0
+    description: Does not lock.
+    value: 0
+  - name: lk1
+    description: Locks.
+    value: 1
+enum/PCR5_MUX:
+  bit_size: 4
+  variants:
+  - name: mux00
+    description: Alternative 0 (GPIO).
+    value: 0
+  - name: mux01
+    description: Alternative 1 (chip-specific).
+    value: 1
+  - name: mux10
+    description: Alternative 2 (chip-specific).
+    value: 2
+  - name: mux11
+    description: Alternative 3 (chip-specific).
+    value: 3
+  - name: mux100
+    description: Alternative 4 (chip-specific).
+    value: 4
+  - name: mux101
+    description: Alternative 5 (chip-specific).
+    value: 5
+  - name: mux110
+    description: Alternative 6 (chip-specific).
+    value: 6
+  - name: mux111
+    description: Alternative 7 (chip-specific).
+    value: 7
+  - name: mux1000
+    description: Alternative 8 (chip-specific).
+    value: 8
+  - name: mux1001
+    description: Alternative 9 (chip-specific).
+    value: 9
+  - name: mux1010
+    description: Alternative 10 (chip-specific).
+    value: 10
+  - name: mux1011
+    description: Alternative 11 (chip-specific).
+    value: 11
+  - name: mux1100
+    description: Alternative 12 (chip-specific).
+    value: 12
+  - name: mux1101
+    description: Alternative 13 (chip-specific).
+    value: 13
+enum/PCR5_ODE:
+  bit_size: 1
+  variants:
+  - name: ode0
+    description: Disables.
+    value: 0
+  - name: ode1
+    description: Enables.
+    value: 1
+enum/PCR5_PE:
+  bit_size: 1
+  variants:
+  - name: pe0
+    description: Disables.
+    value: 0
+  - name: pe1
+    description: Enables.
+    value: 1
+enum/PCR5_PS:
+  bit_size: 1
+  variants:
+  - name: ps0
+    description: Enables internal pulldown resistor.
+    value: 0
+  - name: ps1
+    description: Enables internal pullup resistor.
+    value: 1
+enum/PCR5_SRE:
+  bit_size: 1
+  variants:
+  - name: sre0
+    description: Fast.
+    value: 0
+  - name: sre1
+    description: Slow.
+    value: 1
+enum/PCR6_DSE:
+  bit_size: 1
+  variants:
+  - name: dse0
+    description: Low.
+    value: 0
+  - name: dse1
+    description: High.
+    value: 1
+enum/PCR6_IBE:
+  bit_size: 1
+  variants:
+  - name: ibe0
+    description: Disables.
+    value: 0
+  - name: ibe1
+    description: Enables.
+    value: 1
+enum/PCR6_INV:
+  bit_size: 1
+  variants:
+  - name: inv0
+    description: Does not invert.
+    value: 0
+  - name: inv1
+    description: Inverts.
+    value: 1
+enum/PCR6_LK:
+  bit_size: 1
+  variants:
+  - name: lk0
+    description: Does not lock.
+    value: 0
+  - name: lk1
+    description: Locks.
+    value: 1
+enum/PCR6_MUX:
+  bit_size: 4
+  variants:
+  - name: mux00
+    description: Alternative 0 (GPIO).
+    value: 0
+  - name: mux01
+    description: Alternative 1 (chip-specific).
+    value: 1
+  - name: mux10
+    description: Alternative 2 (chip-specific).
+    value: 2
+  - name: mux11
+    description: Alternative 3 (chip-specific).
+    value: 3
+  - name: mux100
+    description: Alternative 4 (chip-specific).
+    value: 4
+  - name: mux101
+    description: Alternative 5 (chip-specific).
+    value: 5
+  - name: mux110
+    description: Alternative 6 (chip-specific).
+    value: 6
+  - name: mux111
+    description: Alternative 7 (chip-specific).
+    value: 7
+  - name: mux1000
+    description: Alternative 8 (chip-specific).
+    value: 8
+  - name: mux1001
+    description: Alternative 9 (chip-specific).
+    value: 9
+  - name: mux1010
+    description: Alternative 10 (chip-specific).
+    value: 10
+  - name: mux1011
+    description: Alternative 11 (chip-specific).
+    value: 11
+  - name: mux1100
+    description: Alternative 12 (chip-specific).
+    value: 12
+  - name: mux1101
+    description: Alternative 13 (chip-specific).
+    value: 13
+enum/PCR6_ODE:
+  bit_size: 1
+  variants:
+  - name: ode0
+    description: Disables.
+    value: 0
+  - name: ode1
+    description: Enables.
+    value: 1
+enum/PCR6_PE:
+  bit_size: 1
+  variants:
+  - name: pe0
+    description: Disables.
+    value: 0
+  - name: pe1
+    description: Enables.
+    value: 1
+enum/PCR6_PS:
+  bit_size: 1
+  variants:
+  - name: ps0
+    description: Enables internal pulldown resistor.
+    value: 0
+  - name: ps1
+    description: Enables internal pullup resistor.
+    value: 1
+enum/PCR6_SRE:
+  bit_size: 1
+  variants:
+  - name: sre0
+    description: Fast.
+    value: 0
+  - name: sre1
+    description: Slow.
+    value: 1
+enum/PCR7_DSE:
+  bit_size: 1
+  variants:
+  - name: dse0
+    description: Low.
+    value: 0
+  - name: dse1
+    description: High.
+    value: 1
+enum/PCR7_IBE:
+  bit_size: 1
+  variants:
+  - name: ibe0
+    description: Disables.
+    value: 0
+  - name: ibe1
+    description: Enables.
+    value: 1
+enum/PCR7_INV:
+  bit_size: 1
+  variants:
+  - name: inv0
+    description: Does not invert.
+    value: 0
+  - name: inv1
+    description: Inverts.
+    value: 1
+enum/PCR7_LK:
+  bit_size: 1
+  variants:
+  - name: lk0
+    description: Does not lock.
+    value: 0
+  - name: lk1
+    description: Locks.
+    value: 1
+enum/PCR7_MUX:
+  bit_size: 3
+  variants:
+  - name: mux00
+    description: Alternative 0 (GPIO).
+    value: 0
+  - name: mux01
+    description: Alternative 1 (chip-specific).
+    value: 1
+  - name: mux10
+    description: Alternative 2 (chip-specific).
+    value: 2
+  - name: mux11
+    description: Alternative 3 (chip-specific).
+    value: 3
+  - name: mux100
+    description: Alternative 4 (chip-specific).
+    value: 4
+  - name: mux101
+    description: Alternative 5 (chip-specific).
+    value: 5
+  - name: mux110
+    description: Alternative 6 (chip-specific).
+    value: 6
+  - name: mux111
+    description: Alternative 7 (chip-specific).
+    value: 7
+enum/PCR7_ODE:
+  bit_size: 1
+  variants:
+  - name: ode0
+    description: Disables.
+    value: 0
+  - name: ode1
+    description: Enables.
+    value: 1
+enum/PCR7_PE:
+  bit_size: 1
+  variants:
+  - name: pe0
+    description: Disables.
+    value: 0
+  - name: pe1
+    description: Enables.
+    value: 1
+enum/PCR7_PS:
+  bit_size: 1
+  variants:
+  - name: ps0
+    description: Enables internal pulldown resistor.
+    value: 0
+  - name: ps1
+    description: Enables internal pullup resistor.
+    value: 1
+enum/PCR7_SRE:
+  bit_size: 1
+  variants:
+  - name: sre0
+    description: Fast.
+    value: 0
+  - name: sre1
+    description: Slow.
+    value: 1
+enum/PCR8_DSE:
+  bit_size: 1
+  variants:
+  - name: dse0
+    description: Low.
+    value: 0
+  - name: dse1
+    description: High.
+    value: 1
+enum/PCR8_IBE:
+  bit_size: 1
+  variants:
+  - name: ibe0
+    description: Disables.
+    value: 0
+  - name: ibe1
+    description: Enables.
+    value: 1
+enum/PCR8_INV:
+  bit_size: 1
+  variants:
+  - name: inv0
+    description: Does not invert.
+    value: 0
+  - name: inv1
+    description: Inverts.
+    value: 1
+enum/PCR8_LK:
+  bit_size: 1
+  variants:
+  - name: lk0
+    description: Does not lock.
+    value: 0
+  - name: lk1
+    description: Locks.
+    value: 1
+enum/PCR8_ODE:
+  bit_size: 1
+  variants:
+  - name: ode0
+    description: Disables.
+    value: 0
+  - name: ode1
+    description: Enables.
+    value: 1
+enum/PCR8_PE:
+  bit_size: 1
+  variants:
+  - name: pe0
+    description: Disables.
+    value: 0
+  - name: pe1
+    description: Enables.
+    value: 1
+enum/PCR8_PS:
+  bit_size: 1
+  variants:
+  - name: ps0
+    description: Enables internal pulldown resistor.
+    value: 0
+  - name: ps1
+    description: Enables internal pullup resistor.
+    value: 1
+enum/PCR8_SRE:
+  bit_size: 1
+  variants:
+  - name: sre0
+    description: Fast.
+    value: 0
+  - name: sre1
+    description: Slow.
+    value: 1
+enum/PCR9_DSE:
+  bit_size: 1
+  variants:
+  - name: dse0
+    description: Low.
+    value: 0
+  - name: dse1
+    description: High.
+    value: 1
+enum/PCR9_IBE:
+  bit_size: 1
+  variants:
+  - name: ibe0
+    description: Disables.
+    value: 0
+  - name: ibe1
+    description: Enables.
+    value: 1
+enum/PCR9_INV:
+  bit_size: 1
+  variants:
+  - name: inv0
+    description: Does not invert.
+    value: 0
+  - name: inv1
+    description: Inverts.
+    value: 1
+enum/PCR9_LK:
+  bit_size: 1
+  variants:
+  - name: lk0
+    description: Does not lock.
+    value: 0
+  - name: lk1
+    description: Locks.
+    value: 1
+enum/PCR9_ODE:
+  bit_size: 1
+  variants:
+  - name: ode0
+    description: Disables.
+    value: 0
+  - name: ode1
+    description: Enables.
+    value: 1
+enum/PCR9_PE:
+  bit_size: 1
+  variants:
+  - name: pe0
+    description: Disables.
+    value: 0
+  - name: pe1
+    description: Enables.
+    value: 1
+enum/PCR9_PS:
+  bit_size: 1
+  variants:
+  - name: ps0
+    description: Enables internal pulldown resistor.
+    value: 0
+  - name: ps1
+    description: Enables internal pullup resistor.
+    value: 1
+enum/PCR9_SRE:
+  bit_size: 1
+  variants:
+  - name: sre0
+    description: Fast.
+    value: 0
+  - name: sre1
+    description: Slow.
+    value: 1
+enum/PV:
+  bit_size: 1
+  variants:
+  - name: pv0
+    description: Low.
+    value: 0
+  - name: pv1
+    description: High.
+    value: 1
+enum/RANGE:
+  bit_size: 1
+  variants:
+  - name: range0
+    description: 1.71 V-3.6 V.
+    value: 0
+  - name: range1
+    description: 2.70 V-3.6 V.
+    value: 1

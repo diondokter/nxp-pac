@@ -1,0 +1,4256 @@
+block/RGPIO:
+  description: GPIO.
+  items:
+  - name: VERID
+    description: Version ID.
+    byte_offset: 0
+    access: Read
+    fieldset: VERID
+  - name: PARAM
+    description: Parameter.
+    byte_offset: 4
+    access: Read
+    fieldset: PARAM
+  - name: PDOR
+    description: Port Data Output.
+    byte_offset: 64
+    fieldset: PDOR
+  - name: PSOR
+    description: Port Set Output.
+    byte_offset: 68
+    fieldset: PSOR
+  - name: PCOR
+    description: Port Clear Output.
+    byte_offset: 72
+    fieldset: PCOR
+  - name: PTOR
+    description: Port Toggle Output.
+    byte_offset: 76
+    fieldset: PTOR
+  - name: PDIR
+    description: Port Data Input.
+    byte_offset: 80
+    access: Read
+    fieldset: PDIR
+  - name: PDDR
+    description: Port Data Direction.
+    byte_offset: 84
+    fieldset: PDDR
+  - name: PIDR
+    description: Port Input Disable.
+    byte_offset: 88
+    fieldset: PIDR
+  - name: PDR
+    description: Pin Data.
+    array:
+      len: 32
+      stride: 1
+    byte_offset: 96
+    bit_size: 8
+    fieldset: PDR
+  - name: ICR
+    description: Interrupt Control index.
+    array:
+      len: 32
+      stride: 4
+    byte_offset: 128
+    fieldset: ICR
+  - name: GICLR
+    description: Global Interrupt Control Low.
+    byte_offset: 256
+    fieldset: GICLR
+  - name: GICHR
+    description: Global Interrupt Control High.
+    byte_offset: 260
+    fieldset: GICHR
+  - name: ISFR0
+    description: Interrupt Status Flag.
+    byte_offset: 288
+    fieldset: ISFR0
+fieldset/GICHR:
+  description: Global Interrupt Control High.
+  fields:
+  - name: GIWE16
+    description: Global Interrupt Write Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: GIWE16
+  - name: GIWE17
+    description: Global Interrupt Write Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: GIWE17
+  - name: GIWE18
+    description: Global Interrupt Write Enable.
+    bit_offset: 2
+    bit_size: 1
+    enum: GIWE18
+  - name: GIWE19
+    description: Global Interrupt Write Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: GIWE19
+  - name: GIWE20
+    description: Global Interrupt Write Enable.
+    bit_offset: 4
+    bit_size: 1
+    enum: GIWE20
+  - name: GIWE21
+    description: Global Interrupt Write Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: GIWE21
+  - name: GIWE22
+    description: Global Interrupt Write Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: GIWE22
+  - name: GIWE23
+    description: Global Interrupt Write Enable.
+    bit_offset: 7
+    bit_size: 1
+    enum: GIWE23
+  - name: GIWE24
+    description: Global Interrupt Write Enable.
+    bit_offset: 8
+    bit_size: 1
+    enum: GIWE24
+  - name: GIWE25
+    description: Global Interrupt Write Enable.
+    bit_offset: 9
+    bit_size: 1
+    enum: GIWE25
+  - name: GIWE26
+    description: Global Interrupt Write Enable.
+    bit_offset: 10
+    bit_size: 1
+    enum: GIWE26
+  - name: GIWE27
+    description: Global Interrupt Write Enable.
+    bit_offset: 11
+    bit_size: 1
+    enum: GIWE27
+  - name: GIWE28
+    description: Global Interrupt Write Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: GIWE28
+  - name: GIWE29
+    description: Global Interrupt Write Enable.
+    bit_offset: 13
+    bit_size: 1
+    enum: GIWE29
+  - name: GIWE30
+    description: Global Interrupt Write Enable.
+    bit_offset: 14
+    bit_size: 1
+    enum: GIWE30
+  - name: GIWE31
+    description: Global Interrupt Write Enable.
+    bit_offset: 15
+    bit_size: 1
+    enum: GIWE31
+  - name: GIWD
+    description: Global Interrupt Write Data.
+    bit_offset: 16
+    bit_size: 16
+fieldset/GICLR:
+  description: Global Interrupt Control Low.
+  fields:
+  - name: GIWE0
+    description: Global Interrupt Write Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: GIWE0
+  - name: GIWE1
+    description: Global Interrupt Write Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: GIWE1
+  - name: GIWE2
+    description: Global Interrupt Write Enable.
+    bit_offset: 2
+    bit_size: 1
+    enum: GIWE2
+  - name: GIWE3
+    description: Global Interrupt Write Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: GIWE3
+  - name: GIWE4
+    description: Global Interrupt Write Enable.
+    bit_offset: 4
+    bit_size: 1
+    enum: GIWE4
+  - name: GIWE5
+    description: Global Interrupt Write Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: GIWE5
+  - name: GIWE6
+    description: Global Interrupt Write Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: GIWE6
+  - name: GIWE7
+    description: Global Interrupt Write Enable.
+    bit_offset: 7
+    bit_size: 1
+    enum: GIWE7
+  - name: GIWE8
+    description: Global Interrupt Write Enable.
+    bit_offset: 8
+    bit_size: 1
+    enum: GIWE8
+  - name: GIWE9
+    description: Global Interrupt Write Enable.
+    bit_offset: 9
+    bit_size: 1
+    enum: GIWE9
+  - name: GIWE10
+    description: Global Interrupt Write Enable.
+    bit_offset: 10
+    bit_size: 1
+    enum: GIWE10
+  - name: GIWE11
+    description: Global Interrupt Write Enable.
+    bit_offset: 11
+    bit_size: 1
+    enum: GIWE11
+  - name: GIWE12
+    description: Global Interrupt Write Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: GIWE12
+  - name: GIWE13
+    description: Global Interrupt Write Enable.
+    bit_offset: 13
+    bit_size: 1
+    enum: GIWE13
+  - name: GIWE14
+    description: Global Interrupt Write Enable.
+    bit_offset: 14
+    bit_size: 1
+    enum: GIWE14
+  - name: GIWE15
+    description: Global Interrupt Write Enable.
+    bit_offset: 15
+    bit_size: 1
+    enum: GIWE15
+  - name: GIWD
+    description: Global Interrupt Write Data.
+    bit_offset: 16
+    bit_size: 16
+fieldset/ICR:
+  description: Interrupt Control index.
+  fields:
+  - name: IRQC
+    description: Interrupt Configuration.
+    bit_offset: 16
+    bit_size: 4
+    enum: IRQC
+  - name: ISF
+    description: Interrupt Status Flag.
+    bit_offset: 24
+    bit_size: 1
+    enum: ISF
+fieldset/ISFR0:
+  description: Interrupt Status Flag.
+  fields:
+  - name: ISF0
+    description: Interrupt Status Flag.
+    bit_offset: 0
+    bit_size: 1
+    enum: ISF0
+  - name: ISF1
+    description: Interrupt Status Flag.
+    bit_offset: 1
+    bit_size: 1
+    enum: ISF1
+  - name: ISF2
+    description: Interrupt Status Flag.
+    bit_offset: 2
+    bit_size: 1
+    enum: ISF2
+  - name: ISF3
+    description: Interrupt Status Flag.
+    bit_offset: 3
+    bit_size: 1
+    enum: ISF3
+  - name: ISF4
+    description: Interrupt Status Flag.
+    bit_offset: 4
+    bit_size: 1
+    enum: ISF4
+  - name: ISF5
+    description: Interrupt Status Flag.
+    bit_offset: 5
+    bit_size: 1
+    enum: ISF5
+  - name: ISF6
+    description: Interrupt Status Flag.
+    bit_offset: 6
+    bit_size: 1
+    enum: ISF6
+  - name: ISF7
+    description: Interrupt Status Flag.
+    bit_offset: 7
+    bit_size: 1
+    enum: ISF7
+  - name: ISF8
+    description: Interrupt Status Flag.
+    bit_offset: 8
+    bit_size: 1
+    enum: ISF8
+  - name: ISF9
+    description: Interrupt Status Flag.
+    bit_offset: 9
+    bit_size: 1
+    enum: ISF9
+  - name: ISF10
+    description: Interrupt Status Flag.
+    bit_offset: 10
+    bit_size: 1
+    enum: ISF10
+  - name: ISF11
+    description: Interrupt Status Flag.
+    bit_offset: 11
+    bit_size: 1
+    enum: ISF11
+  - name: ISF12
+    description: Interrupt Status Flag.
+    bit_offset: 12
+    bit_size: 1
+    enum: ISF12
+  - name: ISF13
+    description: Interrupt Status Flag.
+    bit_offset: 13
+    bit_size: 1
+    enum: ISF13
+  - name: ISF14
+    description: Interrupt Status Flag.
+    bit_offset: 14
+    bit_size: 1
+    enum: ISF14
+  - name: ISF15
+    description: Interrupt Status Flag.
+    bit_offset: 15
+    bit_size: 1
+    enum: ISF15
+  - name: ISF16
+    description: Interrupt Status Flag.
+    bit_offset: 16
+    bit_size: 1
+    enum: ISF16
+  - name: ISF17
+    description: Interrupt Status Flag.
+    bit_offset: 17
+    bit_size: 1
+    enum: ISF17
+  - name: ISF18
+    description: Interrupt Status Flag.
+    bit_offset: 18
+    bit_size: 1
+    enum: ISF18
+  - name: ISF19
+    description: Interrupt Status Flag.
+    bit_offset: 19
+    bit_size: 1
+    enum: ISF19
+  - name: ISF20
+    description: Interrupt Status Flag.
+    bit_offset: 20
+    bit_size: 1
+    enum: ISF20
+  - name: ISF21
+    description: Interrupt Status Flag.
+    bit_offset: 21
+    bit_size: 1
+    enum: ISF21
+  - name: ISF22
+    description: Interrupt Status Flag.
+    bit_offset: 22
+    bit_size: 1
+    enum: ISF22
+  - name: ISF23
+    description: Interrupt Status Flag.
+    bit_offset: 23
+    bit_size: 1
+    enum: ISF23
+  - name: ISF24
+    description: Interrupt Status Flag.
+    bit_offset: 24
+    bit_size: 1
+    enum: ISF24
+  - name: ISF25
+    description: Interrupt Status Flag.
+    bit_offset: 25
+    bit_size: 1
+    enum: ISF25
+  - name: ISF26
+    description: Interrupt Status Flag.
+    bit_offset: 26
+    bit_size: 1
+    enum: ISF26
+  - name: ISF27
+    description: Interrupt Status Flag.
+    bit_offset: 27
+    bit_size: 1
+    enum: ISF27
+  - name: ISF28
+    description: Interrupt Status Flag.
+    bit_offset: 28
+    bit_size: 1
+    enum: ISF28
+  - name: ISF29
+    description: Interrupt Status Flag.
+    bit_offset: 29
+    bit_size: 1
+    enum: ISF29
+  - name: ISF30
+    description: Interrupt Status Flag.
+    bit_offset: 30
+    bit_size: 1
+    enum: ISF30
+  - name: ISF31
+    description: Interrupt Status Flag.
+    bit_offset: 31
+    bit_size: 1
+    enum: ISF31
+fieldset/PARAM:
+  description: Parameter.
+  fields:
+  - name: IRQNUM
+    description: Interrupt Number.
+    bit_offset: 0
+    bit_size: 4
+fieldset/PCOR:
+  description: Port Clear Output.
+  fields:
+  - name: PTCO0
+    description: Port Clear Output.
+    bit_offset: 0
+    bit_size: 1
+    enum: PTCO0
+  - name: PTCO1
+    description: Port Clear Output.
+    bit_offset: 1
+    bit_size: 1
+    enum: PTCO1
+  - name: PTCO2
+    description: Port Clear Output.
+    bit_offset: 2
+    bit_size: 1
+    enum: PTCO2
+  - name: PTCO3
+    description: Port Clear Output.
+    bit_offset: 3
+    bit_size: 1
+    enum: PTCO3
+  - name: PTCO4
+    description: Port Clear Output.
+    bit_offset: 4
+    bit_size: 1
+    enum: PTCO4
+  - name: PTCO5
+    description: Port Clear Output.
+    bit_offset: 5
+    bit_size: 1
+    enum: PTCO5
+  - name: PTCO6
+    description: Port Clear Output.
+    bit_offset: 6
+    bit_size: 1
+    enum: PTCO6
+  - name: PTCO7
+    description: Port Clear Output.
+    bit_offset: 7
+    bit_size: 1
+    enum: PTCO7
+  - name: PTCO8
+    description: Port Clear Output.
+    bit_offset: 8
+    bit_size: 1
+    enum: PTCO8
+  - name: PTCO9
+    description: Port Clear Output.
+    bit_offset: 9
+    bit_size: 1
+    enum: PTCO9
+  - name: PTCO10
+    description: Port Clear Output.
+    bit_offset: 10
+    bit_size: 1
+    enum: PTCO10
+  - name: PTCO11
+    description: Port Clear Output.
+    bit_offset: 11
+    bit_size: 1
+    enum: PTCO11
+  - name: PTCO12
+    description: Port Clear Output.
+    bit_offset: 12
+    bit_size: 1
+    enum: PTCO12
+  - name: PTCO13
+    description: Port Clear Output.
+    bit_offset: 13
+    bit_size: 1
+    enum: PTCO13
+  - name: PTCO14
+    description: Port Clear Output.
+    bit_offset: 14
+    bit_size: 1
+    enum: PTCO14
+  - name: PTCO15
+    description: Port Clear Output.
+    bit_offset: 15
+    bit_size: 1
+    enum: PTCO15
+  - name: PTCO16
+    description: Port Clear Output.
+    bit_offset: 16
+    bit_size: 1
+    enum: PTCO16
+  - name: PTCO17
+    description: Port Clear Output.
+    bit_offset: 17
+    bit_size: 1
+    enum: PTCO17
+  - name: PTCO18
+    description: Port Clear Output.
+    bit_offset: 18
+    bit_size: 1
+    enum: PTCO18
+  - name: PTCO19
+    description: Port Clear Output.
+    bit_offset: 19
+    bit_size: 1
+    enum: PTCO19
+  - name: PTCO20
+    description: Port Clear Output.
+    bit_offset: 20
+    bit_size: 1
+    enum: PTCO20
+  - name: PTCO21
+    description: Port Clear Output.
+    bit_offset: 21
+    bit_size: 1
+    enum: PTCO21
+  - name: PTCO22
+    description: Port Clear Output.
+    bit_offset: 22
+    bit_size: 1
+    enum: PTCO22
+  - name: PTCO23
+    description: Port Clear Output.
+    bit_offset: 23
+    bit_size: 1
+    enum: PTCO23
+  - name: PTCO24
+    description: Port Clear Output.
+    bit_offset: 24
+    bit_size: 1
+    enum: PTCO24
+  - name: PTCO25
+    description: Port Clear Output.
+    bit_offset: 25
+    bit_size: 1
+    enum: PTCO25
+  - name: PTCO26
+    description: Port Clear Output.
+    bit_offset: 26
+    bit_size: 1
+    enum: PTCO26
+  - name: PTCO27
+    description: Port Clear Output.
+    bit_offset: 27
+    bit_size: 1
+    enum: PTCO27
+  - name: PTCO28
+    description: Port Clear Output.
+    bit_offset: 28
+    bit_size: 1
+    enum: PTCO28
+  - name: PTCO29
+    description: Port Clear Output.
+    bit_offset: 29
+    bit_size: 1
+    enum: PTCO29
+  - name: PTCO30
+    description: Port Clear Output.
+    bit_offset: 30
+    bit_size: 1
+    enum: PTCO30
+  - name: PTCO31
+    description: Port Clear Output.
+    bit_offset: 31
+    bit_size: 1
+    enum: PTCO31
+fieldset/PDDR:
+  description: Port Data Direction.
+  fields:
+  - name: PDD0
+    description: Port Data Direction.
+    bit_offset: 0
+    bit_size: 1
+    enum: PDD0
+  - name: PDD1
+    description: Port Data Direction.
+    bit_offset: 1
+    bit_size: 1
+    enum: PDD1
+  - name: PDD2
+    description: Port Data Direction.
+    bit_offset: 2
+    bit_size: 1
+    enum: PDD2
+  - name: PDD3
+    description: Port Data Direction.
+    bit_offset: 3
+    bit_size: 1
+    enum: PDD3
+  - name: PDD4
+    description: Port Data Direction.
+    bit_offset: 4
+    bit_size: 1
+    enum: PDD4
+  - name: PDD5
+    description: Port Data Direction.
+    bit_offset: 5
+    bit_size: 1
+    enum: PDD5
+  - name: PDD6
+    description: Port Data Direction.
+    bit_offset: 6
+    bit_size: 1
+    enum: PDD6
+  - name: PDD7
+    description: Port Data Direction.
+    bit_offset: 7
+    bit_size: 1
+    enum: PDD7
+  - name: PDD8
+    description: Port Data Direction.
+    bit_offset: 8
+    bit_size: 1
+    enum: PDD8
+  - name: PDD9
+    description: Port Data Direction.
+    bit_offset: 9
+    bit_size: 1
+    enum: PDD9
+  - name: PDD10
+    description: Port Data Direction.
+    bit_offset: 10
+    bit_size: 1
+    enum: PDD10
+  - name: PDD11
+    description: Port Data Direction.
+    bit_offset: 11
+    bit_size: 1
+    enum: PDD11
+  - name: PDD12
+    description: Port Data Direction.
+    bit_offset: 12
+    bit_size: 1
+    enum: PDD12
+  - name: PDD13
+    description: Port Data Direction.
+    bit_offset: 13
+    bit_size: 1
+    enum: PDD13
+  - name: PDD14
+    description: Port Data Direction.
+    bit_offset: 14
+    bit_size: 1
+    enum: PDD14
+  - name: PDD15
+    description: Port Data Direction.
+    bit_offset: 15
+    bit_size: 1
+    enum: PDD15
+  - name: PDD16
+    description: Port Data Direction.
+    bit_offset: 16
+    bit_size: 1
+    enum: PDD16
+  - name: PDD17
+    description: Port Data Direction.
+    bit_offset: 17
+    bit_size: 1
+    enum: PDD17
+  - name: PDD18
+    description: Port Data Direction.
+    bit_offset: 18
+    bit_size: 1
+    enum: PDD18
+  - name: PDD19
+    description: Port Data Direction.
+    bit_offset: 19
+    bit_size: 1
+    enum: PDD19
+  - name: PDD20
+    description: Port Data Direction.
+    bit_offset: 20
+    bit_size: 1
+    enum: PDD20
+  - name: PDD21
+    description: Port Data Direction.
+    bit_offset: 21
+    bit_size: 1
+    enum: PDD21
+  - name: PDD22
+    description: Port Data Direction.
+    bit_offset: 22
+    bit_size: 1
+    enum: PDD22
+  - name: PDD23
+    description: Port Data Direction.
+    bit_offset: 23
+    bit_size: 1
+    enum: PDD23
+  - name: PDD24
+    description: Port Data Direction.
+    bit_offset: 24
+    bit_size: 1
+    enum: PDD24
+  - name: PDD25
+    description: Port Data Direction.
+    bit_offset: 25
+    bit_size: 1
+    enum: PDD25
+  - name: PDD26
+    description: Port Data Direction.
+    bit_offset: 26
+    bit_size: 1
+    enum: PDD26
+  - name: PDD27
+    description: Port Data Direction.
+    bit_offset: 27
+    bit_size: 1
+    enum: PDD27
+  - name: PDD28
+    description: Port Data Direction.
+    bit_offset: 28
+    bit_size: 1
+    enum: PDD28
+  - name: PDD29
+    description: Port Data Direction.
+    bit_offset: 29
+    bit_size: 1
+    enum: PDD29
+  - name: PDD30
+    description: Port Data Direction.
+    bit_offset: 30
+    bit_size: 1
+    enum: PDD30
+  - name: PDD31
+    description: Port Data Direction.
+    bit_offset: 31
+    bit_size: 1
+    enum: PDD31
+fieldset/PDIR:
+  description: Port Data Input.
+  fields:
+  - name: PDI0
+    description: Port Data Input.
+    bit_offset: 0
+    bit_size: 1
+    enum: PDI0
+  - name: PDI1
+    description: Port Data Input.
+    bit_offset: 1
+    bit_size: 1
+    enum: PDI1
+  - name: PDI2
+    description: Port Data Input.
+    bit_offset: 2
+    bit_size: 1
+    enum: PDI2
+  - name: PDI3
+    description: Port Data Input.
+    bit_offset: 3
+    bit_size: 1
+    enum: PDI3
+  - name: PDI4
+    description: Port Data Input.
+    bit_offset: 4
+    bit_size: 1
+    enum: PDI4
+  - name: PDI5
+    description: Port Data Input.
+    bit_offset: 5
+    bit_size: 1
+    enum: PDI5
+  - name: PDI6
+    description: Port Data Input.
+    bit_offset: 6
+    bit_size: 1
+    enum: PDI6
+  - name: PDI7
+    description: Port Data Input.
+    bit_offset: 7
+    bit_size: 1
+    enum: PDI7
+  - name: PDI8
+    description: Port Data Input.
+    bit_offset: 8
+    bit_size: 1
+    enum: PDI8
+  - name: PDI9
+    description: Port Data Input.
+    bit_offset: 9
+    bit_size: 1
+    enum: PDI9
+  - name: PDI10
+    description: Port Data Input.
+    bit_offset: 10
+    bit_size: 1
+    enum: PDI10
+  - name: PDI11
+    description: Port Data Input.
+    bit_offset: 11
+    bit_size: 1
+    enum: PDI11
+  - name: PDI12
+    description: Port Data Input.
+    bit_offset: 12
+    bit_size: 1
+    enum: PDI12
+  - name: PDI13
+    description: Port Data Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: PDI13
+  - name: PDI14
+    description: Port Data Input.
+    bit_offset: 14
+    bit_size: 1
+    enum: PDI14
+  - name: PDI15
+    description: Port Data Input.
+    bit_offset: 15
+    bit_size: 1
+    enum: PDI15
+  - name: PDI16
+    description: Port Data Input.
+    bit_offset: 16
+    bit_size: 1
+    enum: PDI16
+  - name: PDI17
+    description: Port Data Input.
+    bit_offset: 17
+    bit_size: 1
+    enum: PDI17
+  - name: PDI18
+    description: Port Data Input.
+    bit_offset: 18
+    bit_size: 1
+    enum: PDI18
+  - name: PDI19
+    description: Port Data Input.
+    bit_offset: 19
+    bit_size: 1
+    enum: PDI19
+  - name: PDI20
+    description: Port Data Input.
+    bit_offset: 20
+    bit_size: 1
+    enum: PDI20
+  - name: PDI21
+    description: Port Data Input.
+    bit_offset: 21
+    bit_size: 1
+    enum: PDI21
+  - name: PDI22
+    description: Port Data Input.
+    bit_offset: 22
+    bit_size: 1
+    enum: PDI22
+  - name: PDI23
+    description: Port Data Input.
+    bit_offset: 23
+    bit_size: 1
+    enum: PDI23
+  - name: PDI24
+    description: Port Data Input.
+    bit_offset: 24
+    bit_size: 1
+    enum: PDI24
+  - name: PDI25
+    description: Port Data Input.
+    bit_offset: 25
+    bit_size: 1
+    enum: PDI25
+  - name: PDI26
+    description: Port Data Input.
+    bit_offset: 26
+    bit_size: 1
+    enum: PDI26
+  - name: PDI27
+    description: Port Data Input.
+    bit_offset: 27
+    bit_size: 1
+    enum: PDI27
+  - name: PDI28
+    description: Port Data Input.
+    bit_offset: 28
+    bit_size: 1
+    enum: PDI28
+  - name: PDI29
+    description: Port Data Input.
+    bit_offset: 29
+    bit_size: 1
+    enum: PDI29
+  - name: PDI30
+    description: Port Data Input.
+    bit_offset: 30
+    bit_size: 1
+    enum: PDI30
+  - name: PDI31
+    description: Port Data Input.
+    bit_offset: 31
+    bit_size: 1
+    enum: PDI31
+fieldset/PDOR:
+  description: Port Data Output.
+  fields:
+  - name: PDO0
+    description: Port Data Output.
+    bit_offset: 0
+    bit_size: 1
+    enum: PDO0
+  - name: PDO1
+    description: Port Data Output.
+    bit_offset: 1
+    bit_size: 1
+    enum: PDO1
+  - name: PDO2
+    description: Port Data Output.
+    bit_offset: 2
+    bit_size: 1
+    enum: PDO2
+  - name: PDO3
+    description: Port Data Output.
+    bit_offset: 3
+    bit_size: 1
+    enum: PDO3
+  - name: PDO4
+    description: Port Data Output.
+    bit_offset: 4
+    bit_size: 1
+    enum: PDO4
+  - name: PDO5
+    description: Port Data Output.
+    bit_offset: 5
+    bit_size: 1
+    enum: PDO5
+  - name: PDO6
+    description: Port Data Output.
+    bit_offset: 6
+    bit_size: 1
+    enum: PDO6
+  - name: PDO7
+    description: Port Data Output.
+    bit_offset: 7
+    bit_size: 1
+    enum: PDO7
+  - name: PDO8
+    description: Port Data Output.
+    bit_offset: 8
+    bit_size: 1
+    enum: PDO8
+  - name: PDO9
+    description: Port Data Output.
+    bit_offset: 9
+    bit_size: 1
+    enum: PDO9
+  - name: PDO10
+    description: Port Data Output.
+    bit_offset: 10
+    bit_size: 1
+    enum: PDO10
+  - name: PDO11
+    description: Port Data Output.
+    bit_offset: 11
+    bit_size: 1
+    enum: PDO11
+  - name: PDO12
+    description: Port Data Output.
+    bit_offset: 12
+    bit_size: 1
+    enum: PDO12
+  - name: PDO13
+    description: Port Data Output.
+    bit_offset: 13
+    bit_size: 1
+    enum: PDO13
+  - name: PDO14
+    description: Port Data Output.
+    bit_offset: 14
+    bit_size: 1
+    enum: PDO14
+  - name: PDO15
+    description: Port Data Output.
+    bit_offset: 15
+    bit_size: 1
+    enum: PDO15
+  - name: PDO16
+    description: Port Data Output.
+    bit_offset: 16
+    bit_size: 1
+    enum: PDO16
+  - name: PDO17
+    description: Port Data Output.
+    bit_offset: 17
+    bit_size: 1
+    enum: PDO17
+  - name: PDO18
+    description: Port Data Output.
+    bit_offset: 18
+    bit_size: 1
+    enum: PDO18
+  - name: PDO19
+    description: Port Data Output.
+    bit_offset: 19
+    bit_size: 1
+    enum: PDO19
+  - name: PDO20
+    description: Port Data Output.
+    bit_offset: 20
+    bit_size: 1
+    enum: PDO20
+  - name: PDO21
+    description: Port Data Output.
+    bit_offset: 21
+    bit_size: 1
+    enum: PDO21
+  - name: PDO22
+    description: Port Data Output.
+    bit_offset: 22
+    bit_size: 1
+    enum: PDO22
+  - name: PDO23
+    description: Port Data Output.
+    bit_offset: 23
+    bit_size: 1
+    enum: PDO23
+  - name: PDO24
+    description: Port Data Output.
+    bit_offset: 24
+    bit_size: 1
+    enum: PDO24
+  - name: PDO25
+    description: Port Data Output.
+    bit_offset: 25
+    bit_size: 1
+    enum: PDO25
+  - name: PDO26
+    description: Port Data Output.
+    bit_offset: 26
+    bit_size: 1
+    enum: PDO26
+  - name: PDO27
+    description: Port Data Output.
+    bit_offset: 27
+    bit_size: 1
+    enum: PDO27
+  - name: PDO28
+    description: Port Data Output.
+    bit_offset: 28
+    bit_size: 1
+    enum: PDO28
+  - name: PDO29
+    description: Port Data Output.
+    bit_offset: 29
+    bit_size: 1
+    enum: PDO29
+  - name: PDO30
+    description: Port Data Output.
+    bit_offset: 30
+    bit_size: 1
+    enum: PDO30
+  - name: PDO31
+    description: Port Data Output.
+    bit_offset: 31
+    bit_size: 1
+    enum: PDO31
+fieldset/PDR:
+  description: Pin Data.
+  bit_size: 8
+  fields:
+  - name: PD
+    description: Pin Data (I/O).
+    bit_offset: 0
+    bit_size: 1
+    enum: PD
+fieldset/PIDR:
+  description: Port Input Disable.
+  fields:
+  - name: PID0
+    description: Port Input Disable.
+    bit_offset: 0
+    bit_size: 1
+    enum: PID0
+  - name: PID1
+    description: Port Input Disable.
+    bit_offset: 1
+    bit_size: 1
+    enum: PID1
+  - name: PID2
+    description: Port Input Disable.
+    bit_offset: 2
+    bit_size: 1
+    enum: PID2
+  - name: PID3
+    description: Port Input Disable.
+    bit_offset: 3
+    bit_size: 1
+    enum: PID3
+  - name: PID4
+    description: Port Input Disable.
+    bit_offset: 4
+    bit_size: 1
+    enum: PID4
+  - name: PID5
+    description: Port Input Disable.
+    bit_offset: 5
+    bit_size: 1
+    enum: PID5
+  - name: PID6
+    description: Port Input Disable.
+    bit_offset: 6
+    bit_size: 1
+    enum: PID6
+  - name: PID7
+    description: Port Input Disable.
+    bit_offset: 7
+    bit_size: 1
+    enum: PID7
+  - name: PID8
+    description: Port Input Disable.
+    bit_offset: 8
+    bit_size: 1
+    enum: PID8
+  - name: PID9
+    description: Port Input Disable.
+    bit_offset: 9
+    bit_size: 1
+    enum: PID9
+  - name: PID10
+    description: Port Input Disable.
+    bit_offset: 10
+    bit_size: 1
+    enum: PID10
+  - name: PID11
+    description: Port Input Disable.
+    bit_offset: 11
+    bit_size: 1
+    enum: PID11
+  - name: PID12
+    description: Port Input Disable.
+    bit_offset: 12
+    bit_size: 1
+    enum: PID12
+  - name: PID13
+    description: Port Input Disable.
+    bit_offset: 13
+    bit_size: 1
+    enum: PID13
+  - name: PID14
+    description: Port Input Disable.
+    bit_offset: 14
+    bit_size: 1
+    enum: PID14
+  - name: PID15
+    description: Port Input Disable.
+    bit_offset: 15
+    bit_size: 1
+    enum: PID15
+  - name: PID16
+    description: Port Input Disable.
+    bit_offset: 16
+    bit_size: 1
+    enum: PID16
+  - name: PID17
+    description: Port Input Disable.
+    bit_offset: 17
+    bit_size: 1
+    enum: PID17
+  - name: PID18
+    description: Port Input Disable.
+    bit_offset: 18
+    bit_size: 1
+    enum: PID18
+  - name: PID19
+    description: Port Input Disable.
+    bit_offset: 19
+    bit_size: 1
+    enum: PID19
+  - name: PID20
+    description: Port Input Disable.
+    bit_offset: 20
+    bit_size: 1
+    enum: PID20
+  - name: PID21
+    description: Port Input Disable.
+    bit_offset: 21
+    bit_size: 1
+    enum: PID21
+  - name: PID22
+    description: Port Input Disable.
+    bit_offset: 22
+    bit_size: 1
+    enum: PID22
+  - name: PID23
+    description: Port Input Disable.
+    bit_offset: 23
+    bit_size: 1
+    enum: PID23
+  - name: PID24
+    description: Port Input Disable.
+    bit_offset: 24
+    bit_size: 1
+    enum: PID24
+  - name: PID25
+    description: Port Input Disable.
+    bit_offset: 25
+    bit_size: 1
+    enum: PID25
+  - name: PID26
+    description: Port Input Disable.
+    bit_offset: 26
+    bit_size: 1
+    enum: PID26
+  - name: PID27
+    description: Port Input Disable.
+    bit_offset: 27
+    bit_size: 1
+    enum: PID27
+  - name: PID28
+    description: Port Input Disable.
+    bit_offset: 28
+    bit_size: 1
+    enum: PID28
+  - name: PID29
+    description: Port Input Disable.
+    bit_offset: 29
+    bit_size: 1
+    enum: PID29
+  - name: PID30
+    description: Port Input Disable.
+    bit_offset: 30
+    bit_size: 1
+    enum: PID30
+  - name: PID31
+    description: Port Input Disable.
+    bit_offset: 31
+    bit_size: 1
+    enum: PID31
+fieldset/PSOR:
+  description: Port Set Output.
+  fields:
+  - name: PTSO0
+    description: Port Set Output.
+    bit_offset: 0
+    bit_size: 1
+    enum: PTSO0
+  - name: PTSO1
+    description: Port Set Output.
+    bit_offset: 1
+    bit_size: 1
+    enum: PTSO1
+  - name: PTSO2
+    description: Port Set Output.
+    bit_offset: 2
+    bit_size: 1
+    enum: PTSO2
+  - name: PTSO3
+    description: Port Set Output.
+    bit_offset: 3
+    bit_size: 1
+    enum: PTSO3
+  - name: PTSO4
+    description: Port Set Output.
+    bit_offset: 4
+    bit_size: 1
+    enum: PTSO4
+  - name: PTSO5
+    description: Port Set Output.
+    bit_offset: 5
+    bit_size: 1
+    enum: PTSO5
+  - name: PTSO6
+    description: Port Set Output.
+    bit_offset: 6
+    bit_size: 1
+    enum: PTSO6
+  - name: PTSO7
+    description: Port Set Output.
+    bit_offset: 7
+    bit_size: 1
+    enum: PTSO7
+  - name: PTSO8
+    description: Port Set Output.
+    bit_offset: 8
+    bit_size: 1
+    enum: PTSO8
+  - name: PTSO9
+    description: Port Set Output.
+    bit_offset: 9
+    bit_size: 1
+    enum: PTSO9
+  - name: PTSO10
+    description: Port Set Output.
+    bit_offset: 10
+    bit_size: 1
+    enum: PTSO10
+  - name: PTSO11
+    description: Port Set Output.
+    bit_offset: 11
+    bit_size: 1
+    enum: PTSO11
+  - name: PTSO12
+    description: Port Set Output.
+    bit_offset: 12
+    bit_size: 1
+    enum: PTSO12
+  - name: PTSO13
+    description: Port Set Output.
+    bit_offset: 13
+    bit_size: 1
+    enum: PTSO13
+  - name: PTSO14
+    description: Port Set Output.
+    bit_offset: 14
+    bit_size: 1
+    enum: PTSO14
+  - name: PTSO15
+    description: Port Set Output.
+    bit_offset: 15
+    bit_size: 1
+    enum: PTSO15
+  - name: PTSO16
+    description: Port Set Output.
+    bit_offset: 16
+    bit_size: 1
+    enum: PTSO16
+  - name: PTSO17
+    description: Port Set Output.
+    bit_offset: 17
+    bit_size: 1
+    enum: PTSO17
+  - name: PTSO18
+    description: Port Set Output.
+    bit_offset: 18
+    bit_size: 1
+    enum: PTSO18
+  - name: PTSO19
+    description: Port Set Output.
+    bit_offset: 19
+    bit_size: 1
+    enum: PTSO19
+  - name: PTSO20
+    description: Port Set Output.
+    bit_offset: 20
+    bit_size: 1
+    enum: PTSO20
+  - name: PTSO21
+    description: Port Set Output.
+    bit_offset: 21
+    bit_size: 1
+    enum: PTSO21
+  - name: PTSO22
+    description: Port Set Output.
+    bit_offset: 22
+    bit_size: 1
+    enum: PTSO22
+  - name: PTSO23
+    description: Port Set Output.
+    bit_offset: 23
+    bit_size: 1
+    enum: PTSO23
+  - name: PTSO24
+    description: Port Set Output.
+    bit_offset: 24
+    bit_size: 1
+    enum: PTSO24
+  - name: PTSO25
+    description: Port Set Output.
+    bit_offset: 25
+    bit_size: 1
+    enum: PTSO25
+  - name: PTSO26
+    description: Port Set Output.
+    bit_offset: 26
+    bit_size: 1
+    enum: PTSO26
+  - name: PTSO27
+    description: Port Set Output.
+    bit_offset: 27
+    bit_size: 1
+    enum: PTSO27
+  - name: PTSO28
+    description: Port Set Output.
+    bit_offset: 28
+    bit_size: 1
+    enum: PTSO28
+  - name: PTSO29
+    description: Port Set Output.
+    bit_offset: 29
+    bit_size: 1
+    enum: PTSO29
+  - name: PTSO30
+    description: Port Set Output.
+    bit_offset: 30
+    bit_size: 1
+    enum: PTSO30
+  - name: PTSO31
+    description: Port Set Output.
+    bit_offset: 31
+    bit_size: 1
+    enum: PTSO31
+fieldset/PTOR:
+  description: Port Toggle Output.
+  fields:
+  - name: PTTO0
+    description: Port Toggle Output.
+    bit_offset: 0
+    bit_size: 1
+    enum: PTTO0
+  - name: PTTO1
+    description: Port Toggle Output.
+    bit_offset: 1
+    bit_size: 1
+    enum: PTTO1
+  - name: PTTO2
+    description: Port Toggle Output.
+    bit_offset: 2
+    bit_size: 1
+    enum: PTTO2
+  - name: PTTO3
+    description: Port Toggle Output.
+    bit_offset: 3
+    bit_size: 1
+    enum: PTTO3
+  - name: PTTO4
+    description: Port Toggle Output.
+    bit_offset: 4
+    bit_size: 1
+    enum: PTTO4
+  - name: PTTO5
+    description: Port Toggle Output.
+    bit_offset: 5
+    bit_size: 1
+    enum: PTTO5
+  - name: PTTO6
+    description: Port Toggle Output.
+    bit_offset: 6
+    bit_size: 1
+    enum: PTTO6
+  - name: PTTO7
+    description: Port Toggle Output.
+    bit_offset: 7
+    bit_size: 1
+    enum: PTTO7
+  - name: PTTO8
+    description: Port Toggle Output.
+    bit_offset: 8
+    bit_size: 1
+    enum: PTTO8
+  - name: PTTO9
+    description: Port Toggle Output.
+    bit_offset: 9
+    bit_size: 1
+    enum: PTTO9
+  - name: PTTO10
+    description: Port Toggle Output.
+    bit_offset: 10
+    bit_size: 1
+    enum: PTTO10
+  - name: PTTO11
+    description: Port Toggle Output.
+    bit_offset: 11
+    bit_size: 1
+    enum: PTTO11
+  - name: PTTO12
+    description: Port Toggle Output.
+    bit_offset: 12
+    bit_size: 1
+    enum: PTTO12
+  - name: PTTO13
+    description: Port Toggle Output.
+    bit_offset: 13
+    bit_size: 1
+    enum: PTTO13
+  - name: PTTO14
+    description: Port Toggle Output.
+    bit_offset: 14
+    bit_size: 1
+    enum: PTTO14
+  - name: PTTO15
+    description: Port Toggle Output.
+    bit_offset: 15
+    bit_size: 1
+    enum: PTTO15
+  - name: PTTO16
+    description: Port Toggle Output.
+    bit_offset: 16
+    bit_size: 1
+    enum: PTTO16
+  - name: PTTO17
+    description: Port Toggle Output.
+    bit_offset: 17
+    bit_size: 1
+    enum: PTTO17
+  - name: PTTO18
+    description: Port Toggle Output.
+    bit_offset: 18
+    bit_size: 1
+    enum: PTTO18
+  - name: PTTO19
+    description: Port Toggle Output.
+    bit_offset: 19
+    bit_size: 1
+    enum: PTTO19
+  - name: PTTO20
+    description: Port Toggle Output.
+    bit_offset: 20
+    bit_size: 1
+    enum: PTTO20
+  - name: PTTO21
+    description: Port Toggle Output.
+    bit_offset: 21
+    bit_size: 1
+    enum: PTTO21
+  - name: PTTO22
+    description: Port Toggle Output.
+    bit_offset: 22
+    bit_size: 1
+    enum: PTTO22
+  - name: PTTO23
+    description: Port Toggle Output.
+    bit_offset: 23
+    bit_size: 1
+    enum: PTTO23
+  - name: PTTO24
+    description: Port Toggle Output.
+    bit_offset: 24
+    bit_size: 1
+    enum: PTTO24
+  - name: PTTO25
+    description: Port Toggle Output.
+    bit_offset: 25
+    bit_size: 1
+    enum: PTTO25
+  - name: PTTO26
+    description: Port Toggle Output.
+    bit_offset: 26
+    bit_size: 1
+    enum: PTTO26
+  - name: PTTO27
+    description: Port Toggle Output.
+    bit_offset: 27
+    bit_size: 1
+    enum: PTTO27
+  - name: PTTO28
+    description: Port Toggle Output.
+    bit_offset: 28
+    bit_size: 1
+    enum: PTTO28
+  - name: PTTO29
+    description: Port Toggle Output.
+    bit_offset: 29
+    bit_size: 1
+    enum: PTTO29
+  - name: PTTO30
+    description: Port Toggle Output.
+    bit_offset: 30
+    bit_size: 1
+    enum: PTTO30
+  - name: PTTO31
+    description: Port Toggle Output.
+    bit_offset: 31
+    bit_size: 1
+    enum: PTTO31
+fieldset/VERID:
+  description: Version ID.
+  fields:
+  - name: FEATURE
+    description: Feature Specification Number.
+    bit_offset: 0
+    bit_size: 16
+    enum: FEATURE
+  - name: MINOR
+    description: Minor Version Number.
+    bit_offset: 16
+    bit_size: 8
+  - name: MAJOR
+    description: Major Version Number.
+    bit_offset: 24
+    bit_size: 8
+enum/FEATURE:
+  bit_size: 16
+  variants:
+  - name: feature0
+    description: Basic implementation.
+    value: 0
+  - name: feature1
+    description: Protection registers implemented.
+    value: 1
+enum/GIWE0:
+  bit_size: 1
+  variants:
+  - name: giwe0
+    description: Not updated.
+    value: 0
+  - name: giwe1
+    description: Updated.
+    value: 1
+enum/GIWE1:
+  bit_size: 1
+  variants:
+  - name: giwe0
+    description: Not updated.
+    value: 0
+  - name: giwe1
+    description: Updated.
+    value: 1
+enum/GIWE10:
+  bit_size: 1
+  variants:
+  - name: giwe0
+    description: Not updated.
+    value: 0
+  - name: giwe1
+    description: Updated.
+    value: 1
+enum/GIWE11:
+  bit_size: 1
+  variants:
+  - name: giwe0
+    description: Not updated.
+    value: 0
+  - name: giwe1
+    description: Updated.
+    value: 1
+enum/GIWE12:
+  bit_size: 1
+  variants:
+  - name: giwe0
+    description: Not updated.
+    value: 0
+  - name: giwe1
+    description: Updated.
+    value: 1
+enum/GIWE13:
+  bit_size: 1
+  variants:
+  - name: giwe0
+    description: Not updated.
+    value: 0
+  - name: giwe1
+    description: Updated.
+    value: 1
+enum/GIWE14:
+  bit_size: 1
+  variants:
+  - name: giwe0
+    description: Not updated.
+    value: 0
+  - name: giwe1
+    description: Updated.
+    value: 1
+enum/GIWE15:
+  bit_size: 1
+  variants:
+  - name: giwe0
+    description: Not updated.
+    value: 0
+  - name: giwe1
+    description: Updated.
+    value: 1
+enum/GIWE16:
+  bit_size: 1
+  variants:
+  - name: giwe0
+    description: Not updated.
+    value: 0
+  - name: giwe1
+    description: Updated.
+    value: 1
+enum/GIWE17:
+  bit_size: 1
+  variants:
+  - name: giwe0
+    description: Not updated.
+    value: 0
+  - name: giwe1
+    description: Updated.
+    value: 1
+enum/GIWE18:
+  bit_size: 1
+  variants:
+  - name: giwe0
+    description: Not updated.
+    value: 0
+  - name: giwe1
+    description: Updated.
+    value: 1
+enum/GIWE19:
+  bit_size: 1
+  variants:
+  - name: giwe0
+    description: Not updated.
+    value: 0
+  - name: giwe1
+    description: Updated.
+    value: 1
+enum/GIWE2:
+  bit_size: 1
+  variants:
+  - name: giwe0
+    description: Not updated.
+    value: 0
+  - name: giwe1
+    description: Updated.
+    value: 1
+enum/GIWE20:
+  bit_size: 1
+  variants:
+  - name: giwe0
+    description: Not updated.
+    value: 0
+  - name: giwe1
+    description: Updated.
+    value: 1
+enum/GIWE21:
+  bit_size: 1
+  variants:
+  - name: giwe0
+    description: Not updated.
+    value: 0
+  - name: giwe1
+    description: Updated.
+    value: 1
+enum/GIWE22:
+  bit_size: 1
+  variants:
+  - name: giwe0
+    description: Not updated.
+    value: 0
+  - name: giwe1
+    description: Updated.
+    value: 1
+enum/GIWE23:
+  bit_size: 1
+  variants:
+  - name: giwe0
+    description: Not updated.
+    value: 0
+  - name: giwe1
+    description: Updated.
+    value: 1
+enum/GIWE24:
+  bit_size: 1
+  variants:
+  - name: giwe0
+    description: Not updated.
+    value: 0
+  - name: giwe1
+    description: Updated.
+    value: 1
+enum/GIWE25:
+  bit_size: 1
+  variants:
+  - name: giwe0
+    description: Not updated.
+    value: 0
+  - name: giwe1
+    description: Updated.
+    value: 1
+enum/GIWE26:
+  bit_size: 1
+  variants:
+  - name: giwe0
+    description: Not updated.
+    value: 0
+  - name: giwe1
+    description: Updated.
+    value: 1
+enum/GIWE27:
+  bit_size: 1
+  variants:
+  - name: giwe0
+    description: Not updated.
+    value: 0
+  - name: giwe1
+    description: Updated.
+    value: 1
+enum/GIWE28:
+  bit_size: 1
+  variants:
+  - name: giwe0
+    description: Not updated.
+    value: 0
+  - name: giwe1
+    description: Updated.
+    value: 1
+enum/GIWE29:
+  bit_size: 1
+  variants:
+  - name: giwe0
+    description: Not updated.
+    value: 0
+  - name: giwe1
+    description: Updated.
+    value: 1
+enum/GIWE3:
+  bit_size: 1
+  variants:
+  - name: giwe0
+    description: Not updated.
+    value: 0
+  - name: giwe1
+    description: Updated.
+    value: 1
+enum/GIWE30:
+  bit_size: 1
+  variants:
+  - name: giwe0
+    description: Not updated.
+    value: 0
+  - name: giwe1
+    description: Updated.
+    value: 1
+enum/GIWE31:
+  bit_size: 1
+  variants:
+  - name: giwe0
+    description: Not updated.
+    value: 0
+  - name: giwe1
+    description: Updated.
+    value: 1
+enum/GIWE4:
+  bit_size: 1
+  variants:
+  - name: giwe0
+    description: Not updated.
+    value: 0
+  - name: giwe1
+    description: Updated.
+    value: 1
+enum/GIWE5:
+  bit_size: 1
+  variants:
+  - name: giwe0
+    description: Not updated.
+    value: 0
+  - name: giwe1
+    description: Updated.
+    value: 1
+enum/GIWE6:
+  bit_size: 1
+  variants:
+  - name: giwe0
+    description: Not updated.
+    value: 0
+  - name: giwe1
+    description: Updated.
+    value: 1
+enum/GIWE7:
+  bit_size: 1
+  variants:
+  - name: giwe0
+    description: Not updated.
+    value: 0
+  - name: giwe1
+    description: Updated.
+    value: 1
+enum/GIWE8:
+  bit_size: 1
+  variants:
+  - name: giwe0
+    description: Not updated.
+    value: 0
+  - name: giwe1
+    description: Updated.
+    value: 1
+enum/GIWE9:
+  bit_size: 1
+  variants:
+  - name: giwe0
+    description: Not updated.
+    value: 0
+  - name: giwe1
+    description: Updated.
+    value: 1
+enum/IRQC:
+  bit_size: 4
+  variants:
+  - name: irqc0
+    description: ISF is disabled.
+    value: 0
+  - name: irqc1
+    description: ISF and DMA request on rising edge.
+    value: 1
+  - name: irqc2
+    description: ISF and DMA request on falling edge.
+    value: 2
+  - name: irqc3
+    description: ISF and DMA request on either edge.
+    value: 3
+  - name: irqc5
+    description: ISF sets on rising edge.
+    value: 5
+  - name: irqc6
+    description: ISF sets on falling edge.
+    value: 6
+  - name: irqc7
+    description: ISF sets on either edge.
+    value: 7
+  - name: irqc8
+    description: ISF and interrupt when logic 0.
+    value: 8
+  - name: irqc9
+    description: ISF and interrupt on rising edge.
+    value: 9
+  - name: irqc10
+    description: ISF and interrupt on falling edge.
+    value: 10
+  - name: irqc11
+    description: ISF and Interrupt on either edge.
+    value: 11
+  - name: irqc12
+    description: ISF and interrupt when logic 1.
+    value: 12
+  - name: irqc13
+    description: Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals).
+    value: 13
+  - name: irqc14
+    description: Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals).
+    value: 14
+enum/ISF:
+  bit_size: 1
+  variants:
+  - name: isf0
+    description: Not detected.
+    value: 0
+  - name: isf1
+    description: Detected.
+    value: 1
+enum/ISF0:
+  bit_size: 1
+  variants:
+  - name: isf0
+    description: Not detected.
+    value: 0
+  - name: isf1
+    description: Detected.
+    value: 1
+enum/ISF1:
+  bit_size: 1
+  variants:
+  - name: isf0
+    description: Not detected.
+    value: 0
+  - name: isf1
+    description: Detected.
+    value: 1
+enum/ISF10:
+  bit_size: 1
+  variants:
+  - name: isf0
+    description: Not detected.
+    value: 0
+  - name: isf1
+    description: Detected.
+    value: 1
+enum/ISF11:
+  bit_size: 1
+  variants:
+  - name: isf0
+    description: Not detected.
+    value: 0
+  - name: isf1
+    description: Detected.
+    value: 1
+enum/ISF12:
+  bit_size: 1
+  variants:
+  - name: isf0
+    description: Not detected.
+    value: 0
+  - name: isf1
+    description: Detected.
+    value: 1
+enum/ISF13:
+  bit_size: 1
+  variants:
+  - name: isf0
+    description: Not detected.
+    value: 0
+  - name: isf1
+    description: Detected.
+    value: 1
+enum/ISF14:
+  bit_size: 1
+  variants:
+  - name: isf0
+    description: Not detected.
+    value: 0
+  - name: isf1
+    description: Detected.
+    value: 1
+enum/ISF15:
+  bit_size: 1
+  variants:
+  - name: isf0
+    description: Not detected.
+    value: 0
+  - name: isf1
+    description: Detected.
+    value: 1
+enum/ISF16:
+  bit_size: 1
+  variants:
+  - name: isf0
+    description: Not detected.
+    value: 0
+  - name: isf1
+    description: Detected.
+    value: 1
+enum/ISF17:
+  bit_size: 1
+  variants:
+  - name: isf0
+    description: Not detected.
+    value: 0
+  - name: isf1
+    description: Detected.
+    value: 1
+enum/ISF18:
+  bit_size: 1
+  variants:
+  - name: isf0
+    description: Not detected.
+    value: 0
+  - name: isf1
+    description: Detected.
+    value: 1
+enum/ISF19:
+  bit_size: 1
+  variants:
+  - name: isf0
+    description: Not detected.
+    value: 0
+  - name: isf1
+    description: Detected.
+    value: 1
+enum/ISF2:
+  bit_size: 1
+  variants:
+  - name: isf0
+    description: Not detected.
+    value: 0
+  - name: isf1
+    description: Detected.
+    value: 1
+enum/ISF20:
+  bit_size: 1
+  variants:
+  - name: isf0
+    description: Not detected.
+    value: 0
+  - name: isf1
+    description: Detected.
+    value: 1
+enum/ISF21:
+  bit_size: 1
+  variants:
+  - name: isf0
+    description: Not detected.
+    value: 0
+  - name: isf1
+    description: Detected.
+    value: 1
+enum/ISF22:
+  bit_size: 1
+  variants:
+  - name: isf0
+    description: Not detected.
+    value: 0
+  - name: isf1
+    description: Detected.
+    value: 1
+enum/ISF23:
+  bit_size: 1
+  variants:
+  - name: isf0
+    description: Not detected.
+    value: 0
+  - name: isf1
+    description: Detected.
+    value: 1
+enum/ISF24:
+  bit_size: 1
+  variants:
+  - name: isf0
+    description: Not detected.
+    value: 0
+  - name: isf1
+    description: Detected.
+    value: 1
+enum/ISF25:
+  bit_size: 1
+  variants:
+  - name: isf0
+    description: Not detected.
+    value: 0
+  - name: isf1
+    description: Detected.
+    value: 1
+enum/ISF26:
+  bit_size: 1
+  variants:
+  - name: isf0
+    description: Not detected.
+    value: 0
+  - name: isf1
+    description: Detected.
+    value: 1
+enum/ISF27:
+  bit_size: 1
+  variants:
+  - name: isf0
+    description: Not detected.
+    value: 0
+  - name: isf1
+    description: Detected.
+    value: 1
+enum/ISF28:
+  bit_size: 1
+  variants:
+  - name: isf0
+    description: Not detected.
+    value: 0
+  - name: isf1
+    description: Detected.
+    value: 1
+enum/ISF29:
+  bit_size: 1
+  variants:
+  - name: isf0
+    description: Not detected.
+    value: 0
+  - name: isf1
+    description: Detected.
+    value: 1
+enum/ISF3:
+  bit_size: 1
+  variants:
+  - name: isf0
+    description: Not detected.
+    value: 0
+  - name: isf1
+    description: Detected.
+    value: 1
+enum/ISF30:
+  bit_size: 1
+  variants:
+  - name: isf0
+    description: Not detected.
+    value: 0
+  - name: isf1
+    description: Detected.
+    value: 1
+enum/ISF31:
+  bit_size: 1
+  variants:
+  - name: isf0
+    description: Not detected.
+    value: 0
+  - name: isf1
+    description: Detected.
+    value: 1
+enum/ISF4:
+  bit_size: 1
+  variants:
+  - name: isf0
+    description: Not detected.
+    value: 0
+  - name: isf1
+    description: Detected.
+    value: 1
+enum/ISF5:
+  bit_size: 1
+  variants:
+  - name: isf0
+    description: Not detected.
+    value: 0
+  - name: isf1
+    description: Detected.
+    value: 1
+enum/ISF6:
+  bit_size: 1
+  variants:
+  - name: isf0
+    description: Not detected.
+    value: 0
+  - name: isf1
+    description: Detected.
+    value: 1
+enum/ISF7:
+  bit_size: 1
+  variants:
+  - name: isf0
+    description: Not detected.
+    value: 0
+  - name: isf1
+    description: Detected.
+    value: 1
+enum/ISF8:
+  bit_size: 1
+  variants:
+  - name: isf0
+    description: Not detected.
+    value: 0
+  - name: isf1
+    description: Detected.
+    value: 1
+enum/ISF9:
+  bit_size: 1
+  variants:
+  - name: isf0
+    description: Not detected.
+    value: 0
+  - name: isf1
+    description: Detected.
+    value: 1
+enum/PD:
+  bit_size: 1
+  variants:
+  - name: pd0
+    description: Logic zero.
+    value: 0
+  - name: pd1
+    description: Logic one.
+    value: 1
+enum/PDD0:
+  bit_size: 1
+  variants:
+  - name: pdd0
+    description: Input.
+    value: 0
+  - name: pdd1
+    description: Output.
+    value: 1
+enum/PDD1:
+  bit_size: 1
+  variants:
+  - name: pdd0
+    description: Input.
+    value: 0
+  - name: pdd1
+    description: Output.
+    value: 1
+enum/PDD10:
+  bit_size: 1
+  variants:
+  - name: pdd0
+    description: Input.
+    value: 0
+  - name: pdd1
+    description: Output.
+    value: 1
+enum/PDD11:
+  bit_size: 1
+  variants:
+  - name: pdd0
+    description: Input.
+    value: 0
+  - name: pdd1
+    description: Output.
+    value: 1
+enum/PDD12:
+  bit_size: 1
+  variants:
+  - name: pdd0
+    description: Input.
+    value: 0
+  - name: pdd1
+    description: Output.
+    value: 1
+enum/PDD13:
+  bit_size: 1
+  variants:
+  - name: pdd0
+    description: Input.
+    value: 0
+  - name: pdd1
+    description: Output.
+    value: 1
+enum/PDD14:
+  bit_size: 1
+  variants:
+  - name: pdd0
+    description: Input.
+    value: 0
+  - name: pdd1
+    description: Output.
+    value: 1
+enum/PDD15:
+  bit_size: 1
+  variants:
+  - name: pdd0
+    description: Input.
+    value: 0
+  - name: pdd1
+    description: Output.
+    value: 1
+enum/PDD16:
+  bit_size: 1
+  variants:
+  - name: pdd0
+    description: Input.
+    value: 0
+  - name: pdd1
+    description: Output.
+    value: 1
+enum/PDD17:
+  bit_size: 1
+  variants:
+  - name: pdd0
+    description: Input.
+    value: 0
+  - name: pdd1
+    description: Output.
+    value: 1
+enum/PDD18:
+  bit_size: 1
+  variants:
+  - name: pdd0
+    description: Input.
+    value: 0
+  - name: pdd1
+    description: Output.
+    value: 1
+enum/PDD19:
+  bit_size: 1
+  variants:
+  - name: pdd0
+    description: Input.
+    value: 0
+  - name: pdd1
+    description: Output.
+    value: 1
+enum/PDD2:
+  bit_size: 1
+  variants:
+  - name: pdd0
+    description: Input.
+    value: 0
+  - name: pdd1
+    description: Output.
+    value: 1
+enum/PDD20:
+  bit_size: 1
+  variants:
+  - name: pdd0
+    description: Input.
+    value: 0
+  - name: pdd1
+    description: Output.
+    value: 1
+enum/PDD21:
+  bit_size: 1
+  variants:
+  - name: pdd0
+    description: Input.
+    value: 0
+  - name: pdd1
+    description: Output.
+    value: 1
+enum/PDD22:
+  bit_size: 1
+  variants:
+  - name: pdd0
+    description: Input.
+    value: 0
+  - name: pdd1
+    description: Output.
+    value: 1
+enum/PDD23:
+  bit_size: 1
+  variants:
+  - name: pdd0
+    description: Input.
+    value: 0
+  - name: pdd1
+    description: Output.
+    value: 1
+enum/PDD24:
+  bit_size: 1
+  variants:
+  - name: pdd0
+    description: Input.
+    value: 0
+  - name: pdd1
+    description: Output.
+    value: 1
+enum/PDD25:
+  bit_size: 1
+  variants:
+  - name: pdd0
+    description: Input.
+    value: 0
+  - name: pdd1
+    description: Output.
+    value: 1
+enum/PDD26:
+  bit_size: 1
+  variants:
+  - name: pdd0
+    description: Input.
+    value: 0
+  - name: pdd1
+    description: Output.
+    value: 1
+enum/PDD27:
+  bit_size: 1
+  variants:
+  - name: pdd0
+    description: Input.
+    value: 0
+  - name: pdd1
+    description: Output.
+    value: 1
+enum/PDD28:
+  bit_size: 1
+  variants:
+  - name: pdd0
+    description: Input.
+    value: 0
+  - name: pdd1
+    description: Output.
+    value: 1
+enum/PDD29:
+  bit_size: 1
+  variants:
+  - name: pdd0
+    description: Input.
+    value: 0
+  - name: pdd1
+    description: Output.
+    value: 1
+enum/PDD3:
+  bit_size: 1
+  variants:
+  - name: pdd0
+    description: Input.
+    value: 0
+  - name: pdd1
+    description: Output.
+    value: 1
+enum/PDD30:
+  bit_size: 1
+  variants:
+  - name: pdd0
+    description: Input.
+    value: 0
+  - name: pdd1
+    description: Output.
+    value: 1
+enum/PDD31:
+  bit_size: 1
+  variants:
+  - name: pdd0
+    description: Input.
+    value: 0
+  - name: pdd1
+    description: Output.
+    value: 1
+enum/PDD4:
+  bit_size: 1
+  variants:
+  - name: pdd0
+    description: Input.
+    value: 0
+  - name: pdd1
+    description: Output.
+    value: 1
+enum/PDD5:
+  bit_size: 1
+  variants:
+  - name: pdd0
+    description: Input.
+    value: 0
+  - name: pdd1
+    description: Output.
+    value: 1
+enum/PDD6:
+  bit_size: 1
+  variants:
+  - name: pdd0
+    description: Input.
+    value: 0
+  - name: pdd1
+    description: Output.
+    value: 1
+enum/PDD7:
+  bit_size: 1
+  variants:
+  - name: pdd0
+    description: Input.
+    value: 0
+  - name: pdd1
+    description: Output.
+    value: 1
+enum/PDD8:
+  bit_size: 1
+  variants:
+  - name: pdd0
+    description: Input.
+    value: 0
+  - name: pdd1
+    description: Output.
+    value: 1
+enum/PDD9:
+  bit_size: 1
+  variants:
+  - name: pdd0
+    description: Input.
+    value: 0
+  - name: pdd1
+    description: Output.
+    value: 1
+enum/PDI0:
+  bit_size: 1
+  variants:
+  - name: pdi0
+    description: Logic 0.
+    value: 0
+  - name: pdi1
+    description: Logic 1.
+    value: 1
+enum/PDI1:
+  bit_size: 1
+  variants:
+  - name: pdi0
+    description: Logic 0.
+    value: 0
+  - name: pdi1
+    description: Logic 1.
+    value: 1
+enum/PDI10:
+  bit_size: 1
+  variants:
+  - name: pdi0
+    description: Logic 0.
+    value: 0
+  - name: pdi1
+    description: Logic 1.
+    value: 1
+enum/PDI11:
+  bit_size: 1
+  variants:
+  - name: pdi0
+    description: Logic 0.
+    value: 0
+  - name: pdi1
+    description: Logic 1.
+    value: 1
+enum/PDI12:
+  bit_size: 1
+  variants:
+  - name: pdi0
+    description: Logic 0.
+    value: 0
+  - name: pdi1
+    description: Logic 1.
+    value: 1
+enum/PDI13:
+  bit_size: 1
+  variants:
+  - name: pdi0
+    description: Logic 0.
+    value: 0
+  - name: pdi1
+    description: Logic 1.
+    value: 1
+enum/PDI14:
+  bit_size: 1
+  variants:
+  - name: pdi0
+    description: Logic 0.
+    value: 0
+  - name: pdi1
+    description: Logic 1.
+    value: 1
+enum/PDI15:
+  bit_size: 1
+  variants:
+  - name: pdi0
+    description: Logic 0.
+    value: 0
+  - name: pdi1
+    description: Logic 1.
+    value: 1
+enum/PDI16:
+  bit_size: 1
+  variants:
+  - name: pdi0
+    description: Logic 0.
+    value: 0
+  - name: pdi1
+    description: Logic 1.
+    value: 1
+enum/PDI17:
+  bit_size: 1
+  variants:
+  - name: pdi0
+    description: Logic 0.
+    value: 0
+  - name: pdi1
+    description: Logic 1.
+    value: 1
+enum/PDI18:
+  bit_size: 1
+  variants:
+  - name: pdi0
+    description: Logic 0.
+    value: 0
+  - name: pdi1
+    description: Logic 1.
+    value: 1
+enum/PDI19:
+  bit_size: 1
+  variants:
+  - name: pdi0
+    description: Logic 0.
+    value: 0
+  - name: pdi1
+    description: Logic 1.
+    value: 1
+enum/PDI2:
+  bit_size: 1
+  variants:
+  - name: pdi0
+    description: Logic 0.
+    value: 0
+  - name: pdi1
+    description: Logic 1.
+    value: 1
+enum/PDI20:
+  bit_size: 1
+  variants:
+  - name: pdi0
+    description: Logic 0.
+    value: 0
+  - name: pdi1
+    description: Logic 1.
+    value: 1
+enum/PDI21:
+  bit_size: 1
+  variants:
+  - name: pdi0
+    description: Logic 0.
+    value: 0
+  - name: pdi1
+    description: Logic 1.
+    value: 1
+enum/PDI22:
+  bit_size: 1
+  variants:
+  - name: pdi0
+    description: Logic 0.
+    value: 0
+  - name: pdi1
+    description: Logic 1.
+    value: 1
+enum/PDI23:
+  bit_size: 1
+  variants:
+  - name: pdi0
+    description: Logic 0.
+    value: 0
+  - name: pdi1
+    description: Logic 1.
+    value: 1
+enum/PDI24:
+  bit_size: 1
+  variants:
+  - name: pdi0
+    description: Logic 0.
+    value: 0
+  - name: pdi1
+    description: Logic 1.
+    value: 1
+enum/PDI25:
+  bit_size: 1
+  variants:
+  - name: pdi0
+    description: Logic 0.
+    value: 0
+  - name: pdi1
+    description: Logic 1.
+    value: 1
+enum/PDI26:
+  bit_size: 1
+  variants:
+  - name: pdi0
+    description: Logic 0.
+    value: 0
+  - name: pdi1
+    description: Logic 1.
+    value: 1
+enum/PDI27:
+  bit_size: 1
+  variants:
+  - name: pdi0
+    description: Logic 0.
+    value: 0
+  - name: pdi1
+    description: Logic 1.
+    value: 1
+enum/PDI28:
+  bit_size: 1
+  variants:
+  - name: pdi0
+    description: Logic 0.
+    value: 0
+  - name: pdi1
+    description: Logic 1.
+    value: 1
+enum/PDI29:
+  bit_size: 1
+  variants:
+  - name: pdi0
+    description: Logic 0.
+    value: 0
+  - name: pdi1
+    description: Logic 1.
+    value: 1
+enum/PDI3:
+  bit_size: 1
+  variants:
+  - name: pdi0
+    description: Logic 0.
+    value: 0
+  - name: pdi1
+    description: Logic 1.
+    value: 1
+enum/PDI30:
+  bit_size: 1
+  variants:
+  - name: pdi0
+    description: Logic 0.
+    value: 0
+  - name: pdi1
+    description: Logic 1.
+    value: 1
+enum/PDI31:
+  bit_size: 1
+  variants:
+  - name: pdi0
+    description: Logic 0.
+    value: 0
+  - name: pdi1
+    description: Logic 1.
+    value: 1
+enum/PDI4:
+  bit_size: 1
+  variants:
+  - name: pdi0
+    description: Logic 0.
+    value: 0
+  - name: pdi1
+    description: Logic 1.
+    value: 1
+enum/PDI5:
+  bit_size: 1
+  variants:
+  - name: pdi0
+    description: Logic 0.
+    value: 0
+  - name: pdi1
+    description: Logic 1.
+    value: 1
+enum/PDI6:
+  bit_size: 1
+  variants:
+  - name: pdi0
+    description: Logic 0.
+    value: 0
+  - name: pdi1
+    description: Logic 1.
+    value: 1
+enum/PDI7:
+  bit_size: 1
+  variants:
+  - name: pdi0
+    description: Logic 0.
+    value: 0
+  - name: pdi1
+    description: Logic 1.
+    value: 1
+enum/PDI8:
+  bit_size: 1
+  variants:
+  - name: pdi0
+    description: Logic 0.
+    value: 0
+  - name: pdi1
+    description: Logic 1.
+    value: 1
+enum/PDI9:
+  bit_size: 1
+  variants:
+  - name: pdi0
+    description: Logic 0.
+    value: 0
+  - name: pdi1
+    description: Logic 1.
+    value: 1
+enum/PDO0:
+  bit_size: 1
+  variants:
+  - name: pdo0
+    description: Logic level 0.
+    value: 0
+  - name: pdo1
+    description: Logic level 1.
+    value: 1
+enum/PDO1:
+  bit_size: 1
+  variants:
+  - name: pdo0
+    description: Logic level 0.
+    value: 0
+  - name: pdo1
+    description: Logic level 1.
+    value: 1
+enum/PDO10:
+  bit_size: 1
+  variants:
+  - name: pdo0
+    description: Logic level 0.
+    value: 0
+  - name: pdo1
+    description: Logic level 1.
+    value: 1
+enum/PDO11:
+  bit_size: 1
+  variants:
+  - name: pdo0
+    description: Logic level 0.
+    value: 0
+  - name: pdo1
+    description: Logic level 1.
+    value: 1
+enum/PDO12:
+  bit_size: 1
+  variants:
+  - name: pdo0
+    description: Logic level 0.
+    value: 0
+  - name: pdo1
+    description: Logic level 1.
+    value: 1
+enum/PDO13:
+  bit_size: 1
+  variants:
+  - name: pdo0
+    description: Logic level 0.
+    value: 0
+  - name: pdo1
+    description: Logic level 1.
+    value: 1
+enum/PDO14:
+  bit_size: 1
+  variants:
+  - name: pdo0
+    description: Logic level 0.
+    value: 0
+  - name: pdo1
+    description: Logic level 1.
+    value: 1
+enum/PDO15:
+  bit_size: 1
+  variants:
+  - name: pdo0
+    description: Logic level 0.
+    value: 0
+  - name: pdo1
+    description: Logic level 1.
+    value: 1
+enum/PDO16:
+  bit_size: 1
+  variants:
+  - name: pdo0
+    description: Logic level 0.
+    value: 0
+  - name: pdo1
+    description: Logic level 1.
+    value: 1
+enum/PDO17:
+  bit_size: 1
+  variants:
+  - name: pdo0
+    description: Logic level 0.
+    value: 0
+  - name: pdo1
+    description: Logic level 1.
+    value: 1
+enum/PDO18:
+  bit_size: 1
+  variants:
+  - name: pdo0
+    description: Logic level 0.
+    value: 0
+  - name: pdo1
+    description: Logic level 1.
+    value: 1
+enum/PDO19:
+  bit_size: 1
+  variants:
+  - name: pdo0
+    description: Logic level 0.
+    value: 0
+  - name: pdo1
+    description: Logic level 1.
+    value: 1
+enum/PDO2:
+  bit_size: 1
+  variants:
+  - name: pdo0
+    description: Logic level 0.
+    value: 0
+  - name: pdo1
+    description: Logic level 1.
+    value: 1
+enum/PDO20:
+  bit_size: 1
+  variants:
+  - name: pdo0
+    description: Logic level 0.
+    value: 0
+  - name: pdo1
+    description: Logic level 1.
+    value: 1
+enum/PDO21:
+  bit_size: 1
+  variants:
+  - name: pdo0
+    description: Logic level 0.
+    value: 0
+  - name: pdo1
+    description: Logic level 1.
+    value: 1
+enum/PDO22:
+  bit_size: 1
+  variants:
+  - name: pdo0
+    description: Logic level 0.
+    value: 0
+  - name: pdo1
+    description: Logic level 1.
+    value: 1
+enum/PDO23:
+  bit_size: 1
+  variants:
+  - name: pdo0
+    description: Logic level 0.
+    value: 0
+  - name: pdo1
+    description: Logic level 1.
+    value: 1
+enum/PDO24:
+  bit_size: 1
+  variants:
+  - name: pdo0
+    description: Logic level 0.
+    value: 0
+  - name: pdo1
+    description: Logic level 1.
+    value: 1
+enum/PDO25:
+  bit_size: 1
+  variants:
+  - name: pdo0
+    description: Logic level 0.
+    value: 0
+  - name: pdo1
+    description: Logic level 1.
+    value: 1
+enum/PDO26:
+  bit_size: 1
+  variants:
+  - name: pdo0
+    description: Logic level 0.
+    value: 0
+  - name: pdo1
+    description: Logic level 1.
+    value: 1
+enum/PDO27:
+  bit_size: 1
+  variants:
+  - name: pdo0
+    description: Logic level 0.
+    value: 0
+  - name: pdo1
+    description: Logic level 1.
+    value: 1
+enum/PDO28:
+  bit_size: 1
+  variants:
+  - name: pdo0
+    description: Logic level 0.
+    value: 0
+  - name: pdo1
+    description: Logic level 1.
+    value: 1
+enum/PDO29:
+  bit_size: 1
+  variants:
+  - name: pdo0
+    description: Logic level 0.
+    value: 0
+  - name: pdo1
+    description: Logic level 1.
+    value: 1
+enum/PDO3:
+  bit_size: 1
+  variants:
+  - name: pdo0
+    description: Logic level 0.
+    value: 0
+  - name: pdo1
+    description: Logic level 1.
+    value: 1
+enum/PDO30:
+  bit_size: 1
+  variants:
+  - name: pdo0
+    description: Logic level 0.
+    value: 0
+  - name: pdo1
+    description: Logic level 1.
+    value: 1
+enum/PDO31:
+  bit_size: 1
+  variants:
+  - name: pdo0
+    description: Logic level 0.
+    value: 0
+  - name: pdo1
+    description: Logic level 1.
+    value: 1
+enum/PDO4:
+  bit_size: 1
+  variants:
+  - name: pdo0
+    description: Logic level 0.
+    value: 0
+  - name: pdo1
+    description: Logic level 1.
+    value: 1
+enum/PDO5:
+  bit_size: 1
+  variants:
+  - name: pdo0
+    description: Logic level 0.
+    value: 0
+  - name: pdo1
+    description: Logic level 1.
+    value: 1
+enum/PDO6:
+  bit_size: 1
+  variants:
+  - name: pdo0
+    description: Logic level 0.
+    value: 0
+  - name: pdo1
+    description: Logic level 1.
+    value: 1
+enum/PDO7:
+  bit_size: 1
+  variants:
+  - name: pdo0
+    description: Logic level 0.
+    value: 0
+  - name: pdo1
+    description: Logic level 1.
+    value: 1
+enum/PDO8:
+  bit_size: 1
+  variants:
+  - name: pdo0
+    description: Logic level 0.
+    value: 0
+  - name: pdo1
+    description: Logic level 1.
+    value: 1
+enum/PDO9:
+  bit_size: 1
+  variants:
+  - name: pdo0
+    description: Logic level 0.
+    value: 0
+  - name: pdo1
+    description: Logic level 1.
+    value: 1
+enum/PID0:
+  bit_size: 1
+  variants:
+  - name: pid0
+    description: Configured for general-purpose input.
+    value: 0
+  - name: pid1
+    description: Disabled for general-purpose input.
+    value: 1
+enum/PID1:
+  bit_size: 1
+  variants:
+  - name: pid0
+    description: Configured for general-purpose input.
+    value: 0
+  - name: pid1
+    description: Disabled for general-purpose input.
+    value: 1
+enum/PID10:
+  bit_size: 1
+  variants:
+  - name: pid0
+    description: Configured for general-purpose input.
+    value: 0
+  - name: pid1
+    description: Disabled for general-purpose input.
+    value: 1
+enum/PID11:
+  bit_size: 1
+  variants:
+  - name: pid0
+    description: Configured for general-purpose input.
+    value: 0
+  - name: pid1
+    description: Disabled for general-purpose input.
+    value: 1
+enum/PID12:
+  bit_size: 1
+  variants:
+  - name: pid0
+    description: Configured for general-purpose input.
+    value: 0
+  - name: pid1
+    description: Disabled for general-purpose input.
+    value: 1
+enum/PID13:
+  bit_size: 1
+  variants:
+  - name: pid0
+    description: Configured for general-purpose input.
+    value: 0
+  - name: pid1
+    description: Disabled for general-purpose input.
+    value: 1
+enum/PID14:
+  bit_size: 1
+  variants:
+  - name: pid0
+    description: Configured for general-purpose input.
+    value: 0
+  - name: pid1
+    description: Disabled for general-purpose input.
+    value: 1
+enum/PID15:
+  bit_size: 1
+  variants:
+  - name: pid0
+    description: Configured for general-purpose input.
+    value: 0
+  - name: pid1
+    description: Disabled for general-purpose input.
+    value: 1
+enum/PID16:
+  bit_size: 1
+  variants:
+  - name: pid0
+    description: Configured for general-purpose input.
+    value: 0
+  - name: pid1
+    description: Disabled for general-purpose input.
+    value: 1
+enum/PID17:
+  bit_size: 1
+  variants:
+  - name: pid0
+    description: Configured for general-purpose input.
+    value: 0
+  - name: pid1
+    description: Disabled for general-purpose input.
+    value: 1
+enum/PID18:
+  bit_size: 1
+  variants:
+  - name: pid0
+    description: Configured for general-purpose input.
+    value: 0
+  - name: pid1
+    description: Disabled for general-purpose input.
+    value: 1
+enum/PID19:
+  bit_size: 1
+  variants:
+  - name: pid0
+    description: Configured for general-purpose input.
+    value: 0
+  - name: pid1
+    description: Disabled for general-purpose input.
+    value: 1
+enum/PID2:
+  bit_size: 1
+  variants:
+  - name: pid0
+    description: Configured for general-purpose input.
+    value: 0
+  - name: pid1
+    description: Disabled for general-purpose input.
+    value: 1
+enum/PID20:
+  bit_size: 1
+  variants:
+  - name: pid0
+    description: Configured for general-purpose input.
+    value: 0
+  - name: pid1
+    description: Disabled for general-purpose input.
+    value: 1
+enum/PID21:
+  bit_size: 1
+  variants:
+  - name: pid0
+    description: Configured for general-purpose input.
+    value: 0
+  - name: pid1
+    description: Disabled for general-purpose input.
+    value: 1
+enum/PID22:
+  bit_size: 1
+  variants:
+  - name: pid0
+    description: Configured for general-purpose input.
+    value: 0
+  - name: pid1
+    description: Disabled for general-purpose input.
+    value: 1
+enum/PID23:
+  bit_size: 1
+  variants:
+  - name: pid0
+    description: Configured for general-purpose input.
+    value: 0
+  - name: pid1
+    description: Disabled for general-purpose input.
+    value: 1
+enum/PID24:
+  bit_size: 1
+  variants:
+  - name: pid0
+    description: Configured for general-purpose input.
+    value: 0
+  - name: pid1
+    description: Disabled for general-purpose input.
+    value: 1
+enum/PID25:
+  bit_size: 1
+  variants:
+  - name: pid0
+    description: Configured for general-purpose input.
+    value: 0
+  - name: pid1
+    description: Disabled for general-purpose input.
+    value: 1
+enum/PID26:
+  bit_size: 1
+  variants:
+  - name: pid0
+    description: Configured for general-purpose input.
+    value: 0
+  - name: pid1
+    description: Disabled for general-purpose input.
+    value: 1
+enum/PID27:
+  bit_size: 1
+  variants:
+  - name: pid0
+    description: Configured for general-purpose input.
+    value: 0
+  - name: pid1
+    description: Disabled for general-purpose input.
+    value: 1
+enum/PID28:
+  bit_size: 1
+  variants:
+  - name: pid0
+    description: Configured for general-purpose input.
+    value: 0
+  - name: pid1
+    description: Disabled for general-purpose input.
+    value: 1
+enum/PID29:
+  bit_size: 1
+  variants:
+  - name: pid0
+    description: Configured for general-purpose input.
+    value: 0
+  - name: pid1
+    description: Disabled for general-purpose input.
+    value: 1
+enum/PID3:
+  bit_size: 1
+  variants:
+  - name: pid0
+    description: Configured for general-purpose input.
+    value: 0
+  - name: pid1
+    description: Disabled for general-purpose input.
+    value: 1
+enum/PID30:
+  bit_size: 1
+  variants:
+  - name: pid0
+    description: Configured for general-purpose input.
+    value: 0
+  - name: pid1
+    description: Disabled for general-purpose input.
+    value: 1
+enum/PID31:
+  bit_size: 1
+  variants:
+  - name: pid0
+    description: Configured for general-purpose input.
+    value: 0
+  - name: pid1
+    description: Disabled for general-purpose input.
+    value: 1
+enum/PID4:
+  bit_size: 1
+  variants:
+  - name: pid0
+    description: Configured for general-purpose input.
+    value: 0
+  - name: pid1
+    description: Disabled for general-purpose input.
+    value: 1
+enum/PID5:
+  bit_size: 1
+  variants:
+  - name: pid0
+    description: Configured for general-purpose input.
+    value: 0
+  - name: pid1
+    description: Disabled for general-purpose input.
+    value: 1
+enum/PID6:
+  bit_size: 1
+  variants:
+  - name: pid0
+    description: Configured for general-purpose input.
+    value: 0
+  - name: pid1
+    description: Disabled for general-purpose input.
+    value: 1
+enum/PID7:
+  bit_size: 1
+  variants:
+  - name: pid0
+    description: Configured for general-purpose input.
+    value: 0
+  - name: pid1
+    description: Disabled for general-purpose input.
+    value: 1
+enum/PID8:
+  bit_size: 1
+  variants:
+  - name: pid0
+    description: Configured for general-purpose input.
+    value: 0
+  - name: pid1
+    description: Disabled for general-purpose input.
+    value: 1
+enum/PID9:
+  bit_size: 1
+  variants:
+  - name: pid0
+    description: Configured for general-purpose input.
+    value: 0
+  - name: pid1
+    description: Disabled for general-purpose input.
+    value: 1
+enum/PTCO0:
+  bit_size: 1
+  variants:
+  - name: ptco0
+    description: No change.
+    value: 0
+  - name: ptco1
+    description: Corresponding field in PDOR becomes 0.
+    value: 1
+enum/PTCO1:
+  bit_size: 1
+  variants:
+  - name: ptco0
+    description: No change.
+    value: 0
+  - name: ptco1
+    description: Corresponding field in PDOR becomes 0.
+    value: 1
+enum/PTCO10:
+  bit_size: 1
+  variants:
+  - name: ptco0
+    description: No change.
+    value: 0
+  - name: ptco1
+    description: Corresponding field in PDOR becomes 0.
+    value: 1
+enum/PTCO11:
+  bit_size: 1
+  variants:
+  - name: ptco0
+    description: No change.
+    value: 0
+  - name: ptco1
+    description: Corresponding field in PDOR becomes 0.
+    value: 1
+enum/PTCO12:
+  bit_size: 1
+  variants:
+  - name: ptco0
+    description: No change.
+    value: 0
+  - name: ptco1
+    description: Corresponding field in PDOR becomes 0.
+    value: 1
+enum/PTCO13:
+  bit_size: 1
+  variants:
+  - name: ptco0
+    description: No change.
+    value: 0
+  - name: ptco1
+    description: Corresponding field in PDOR becomes 0.
+    value: 1
+enum/PTCO14:
+  bit_size: 1
+  variants:
+  - name: ptco0
+    description: No change.
+    value: 0
+  - name: ptco1
+    description: Corresponding field in PDOR becomes 0.
+    value: 1
+enum/PTCO15:
+  bit_size: 1
+  variants:
+  - name: ptco0
+    description: No change.
+    value: 0
+  - name: ptco1
+    description: Corresponding field in PDOR becomes 0.
+    value: 1
+enum/PTCO16:
+  bit_size: 1
+  variants:
+  - name: ptco0
+    description: No change.
+    value: 0
+  - name: ptco1
+    description: Corresponding field in PDOR becomes 0.
+    value: 1
+enum/PTCO17:
+  bit_size: 1
+  variants:
+  - name: ptco0
+    description: No change.
+    value: 0
+  - name: ptco1
+    description: Corresponding field in PDOR becomes 0.
+    value: 1
+enum/PTCO18:
+  bit_size: 1
+  variants:
+  - name: ptco0
+    description: No change.
+    value: 0
+  - name: ptco1
+    description: Corresponding field in PDOR becomes 0.
+    value: 1
+enum/PTCO19:
+  bit_size: 1
+  variants:
+  - name: ptco0
+    description: No change.
+    value: 0
+  - name: ptco1
+    description: Corresponding field in PDOR becomes 0.
+    value: 1
+enum/PTCO2:
+  bit_size: 1
+  variants:
+  - name: ptco0
+    description: No change.
+    value: 0
+  - name: ptco1
+    description: Corresponding field in PDOR becomes 0.
+    value: 1
+enum/PTCO20:
+  bit_size: 1
+  variants:
+  - name: ptco0
+    description: No change.
+    value: 0
+  - name: ptco1
+    description: Corresponding field in PDOR becomes 0.
+    value: 1
+enum/PTCO21:
+  bit_size: 1
+  variants:
+  - name: ptco0
+    description: No change.
+    value: 0
+  - name: ptco1
+    description: Corresponding field in PDOR becomes 0.
+    value: 1
+enum/PTCO22:
+  bit_size: 1
+  variants:
+  - name: ptco0
+    description: No change.
+    value: 0
+  - name: ptco1
+    description: Corresponding field in PDOR becomes 0.
+    value: 1
+enum/PTCO23:
+  bit_size: 1
+  variants:
+  - name: ptco0
+    description: No change.
+    value: 0
+  - name: ptco1
+    description: Corresponding field in PDOR becomes 0.
+    value: 1
+enum/PTCO24:
+  bit_size: 1
+  variants:
+  - name: ptco0
+    description: No change.
+    value: 0
+  - name: ptco1
+    description: Corresponding field in PDOR becomes 0.
+    value: 1
+enum/PTCO25:
+  bit_size: 1
+  variants:
+  - name: ptco0
+    description: No change.
+    value: 0
+  - name: ptco1
+    description: Corresponding field in PDOR becomes 0.
+    value: 1
+enum/PTCO26:
+  bit_size: 1
+  variants:
+  - name: ptco0
+    description: No change.
+    value: 0
+  - name: ptco1
+    description: Corresponding field in PDOR becomes 0.
+    value: 1
+enum/PTCO27:
+  bit_size: 1
+  variants:
+  - name: ptco0
+    description: No change.
+    value: 0
+  - name: ptco1
+    description: Corresponding field in PDOR becomes 0.
+    value: 1
+enum/PTCO28:
+  bit_size: 1
+  variants:
+  - name: ptco0
+    description: No change.
+    value: 0
+  - name: ptco1
+    description: Corresponding field in PDOR becomes 0.
+    value: 1
+enum/PTCO29:
+  bit_size: 1
+  variants:
+  - name: ptco0
+    description: No change.
+    value: 0
+  - name: ptco1
+    description: Corresponding field in PDOR becomes 0.
+    value: 1
+enum/PTCO3:
+  bit_size: 1
+  variants:
+  - name: ptco0
+    description: No change.
+    value: 0
+  - name: ptco1
+    description: Corresponding field in PDOR becomes 0.
+    value: 1
+enum/PTCO30:
+  bit_size: 1
+  variants:
+  - name: ptco0
+    description: No change.
+    value: 0
+  - name: ptco1
+    description: Corresponding field in PDOR becomes 0.
+    value: 1
+enum/PTCO31:
+  bit_size: 1
+  variants:
+  - name: ptco0
+    description: No change.
+    value: 0
+  - name: ptco1
+    description: Corresponding field in PDOR becomes 0.
+    value: 1
+enum/PTCO4:
+  bit_size: 1
+  variants:
+  - name: ptco0
+    description: No change.
+    value: 0
+  - name: ptco1
+    description: Corresponding field in PDOR becomes 0.
+    value: 1
+enum/PTCO5:
+  bit_size: 1
+  variants:
+  - name: ptco0
+    description: No change.
+    value: 0
+  - name: ptco1
+    description: Corresponding field in PDOR becomes 0.
+    value: 1
+enum/PTCO6:
+  bit_size: 1
+  variants:
+  - name: ptco0
+    description: No change.
+    value: 0
+  - name: ptco1
+    description: Corresponding field in PDOR becomes 0.
+    value: 1
+enum/PTCO7:
+  bit_size: 1
+  variants:
+  - name: ptco0
+    description: No change.
+    value: 0
+  - name: ptco1
+    description: Corresponding field in PDOR becomes 0.
+    value: 1
+enum/PTCO8:
+  bit_size: 1
+  variants:
+  - name: ptco0
+    description: No change.
+    value: 0
+  - name: ptco1
+    description: Corresponding field in PDOR becomes 0.
+    value: 1
+enum/PTCO9:
+  bit_size: 1
+  variants:
+  - name: ptco0
+    description: No change.
+    value: 0
+  - name: ptco1
+    description: Corresponding field in PDOR becomes 0.
+    value: 1
+enum/PTSO0:
+  bit_size: 1
+  variants:
+  - name: ptso0
+    description: No change.
+    value: 0
+  - name: ptso1
+    description: Corresponding field in PDOR becomes 1.
+    value: 1
+enum/PTSO1:
+  bit_size: 1
+  variants:
+  - name: ptso0
+    description: No change.
+    value: 0
+  - name: ptso1
+    description: Corresponding field in PDOR becomes 1.
+    value: 1
+enum/PTSO10:
+  bit_size: 1
+  variants:
+  - name: ptso0
+    description: No change.
+    value: 0
+  - name: ptso1
+    description: Corresponding field in PDOR becomes 1.
+    value: 1
+enum/PTSO11:
+  bit_size: 1
+  variants:
+  - name: ptso0
+    description: No change.
+    value: 0
+  - name: ptso1
+    description: Corresponding field in PDOR becomes 1.
+    value: 1
+enum/PTSO12:
+  bit_size: 1
+  variants:
+  - name: ptso0
+    description: No change.
+    value: 0
+  - name: ptso1
+    description: Corresponding field in PDOR becomes 1.
+    value: 1
+enum/PTSO13:
+  bit_size: 1
+  variants:
+  - name: ptso0
+    description: No change.
+    value: 0
+  - name: ptso1
+    description: Corresponding field in PDOR becomes 1.
+    value: 1
+enum/PTSO14:
+  bit_size: 1
+  variants:
+  - name: ptso0
+    description: No change.
+    value: 0
+  - name: ptso1
+    description: Corresponding field in PDOR becomes 1.
+    value: 1
+enum/PTSO15:
+  bit_size: 1
+  variants:
+  - name: ptso0
+    description: No change.
+    value: 0
+  - name: ptso1
+    description: Corresponding field in PDOR becomes 1.
+    value: 1
+enum/PTSO16:
+  bit_size: 1
+  variants:
+  - name: ptso0
+    description: No change.
+    value: 0
+  - name: ptso1
+    description: Corresponding field in PDOR becomes 1.
+    value: 1
+enum/PTSO17:
+  bit_size: 1
+  variants:
+  - name: ptso0
+    description: No change.
+    value: 0
+  - name: ptso1
+    description: Corresponding field in PDOR becomes 1.
+    value: 1
+enum/PTSO18:
+  bit_size: 1
+  variants:
+  - name: ptso0
+    description: No change.
+    value: 0
+  - name: ptso1
+    description: Corresponding field in PDOR becomes 1.
+    value: 1
+enum/PTSO19:
+  bit_size: 1
+  variants:
+  - name: ptso0
+    description: No change.
+    value: 0
+  - name: ptso1
+    description: Corresponding field in PDOR becomes 1.
+    value: 1
+enum/PTSO2:
+  bit_size: 1
+  variants:
+  - name: ptso0
+    description: No change.
+    value: 0
+  - name: ptso1
+    description: Corresponding field in PDOR becomes 1.
+    value: 1
+enum/PTSO20:
+  bit_size: 1
+  variants:
+  - name: ptso0
+    description: No change.
+    value: 0
+  - name: ptso1
+    description: Corresponding field in PDOR becomes 1.
+    value: 1
+enum/PTSO21:
+  bit_size: 1
+  variants:
+  - name: ptso0
+    description: No change.
+    value: 0
+  - name: ptso1
+    description: Corresponding field in PDOR becomes 1.
+    value: 1
+enum/PTSO22:
+  bit_size: 1
+  variants:
+  - name: ptso0
+    description: No change.
+    value: 0
+  - name: ptso1
+    description: Corresponding field in PDOR becomes 1.
+    value: 1
+enum/PTSO23:
+  bit_size: 1
+  variants:
+  - name: ptso0
+    description: No change.
+    value: 0
+  - name: ptso1
+    description: Corresponding field in PDOR becomes 1.
+    value: 1
+enum/PTSO24:
+  bit_size: 1
+  variants:
+  - name: ptso0
+    description: No change.
+    value: 0
+  - name: ptso1
+    description: Corresponding field in PDOR becomes 1.
+    value: 1
+enum/PTSO25:
+  bit_size: 1
+  variants:
+  - name: ptso0
+    description: No change.
+    value: 0
+  - name: ptso1
+    description: Corresponding field in PDOR becomes 1.
+    value: 1
+enum/PTSO26:
+  bit_size: 1
+  variants:
+  - name: ptso0
+    description: No change.
+    value: 0
+  - name: ptso1
+    description: Corresponding field in PDOR becomes 1.
+    value: 1
+enum/PTSO27:
+  bit_size: 1
+  variants:
+  - name: ptso0
+    description: No change.
+    value: 0
+  - name: ptso1
+    description: Corresponding field in PDOR becomes 1.
+    value: 1
+enum/PTSO28:
+  bit_size: 1
+  variants:
+  - name: ptso0
+    description: No change.
+    value: 0
+  - name: ptso1
+    description: Corresponding field in PDOR becomes 1.
+    value: 1
+enum/PTSO29:
+  bit_size: 1
+  variants:
+  - name: ptso0
+    description: No change.
+    value: 0
+  - name: ptso1
+    description: Corresponding field in PDOR becomes 1.
+    value: 1
+enum/PTSO3:
+  bit_size: 1
+  variants:
+  - name: ptso0
+    description: No change.
+    value: 0
+  - name: ptso1
+    description: Corresponding field in PDOR becomes 1.
+    value: 1
+enum/PTSO30:
+  bit_size: 1
+  variants:
+  - name: ptso0
+    description: No change.
+    value: 0
+  - name: ptso1
+    description: Corresponding field in PDOR becomes 1.
+    value: 1
+enum/PTSO31:
+  bit_size: 1
+  variants:
+  - name: ptso0
+    description: No change.
+    value: 0
+  - name: ptso1
+    description: Corresponding field in PDOR becomes 1.
+    value: 1
+enum/PTSO4:
+  bit_size: 1
+  variants:
+  - name: ptso0
+    description: No change.
+    value: 0
+  - name: ptso1
+    description: Corresponding field in PDOR becomes 1.
+    value: 1
+enum/PTSO5:
+  bit_size: 1
+  variants:
+  - name: ptso0
+    description: No change.
+    value: 0
+  - name: ptso1
+    description: Corresponding field in PDOR becomes 1.
+    value: 1
+enum/PTSO6:
+  bit_size: 1
+  variants:
+  - name: ptso0
+    description: No change.
+    value: 0
+  - name: ptso1
+    description: Corresponding field in PDOR becomes 1.
+    value: 1
+enum/PTSO7:
+  bit_size: 1
+  variants:
+  - name: ptso0
+    description: No change.
+    value: 0
+  - name: ptso1
+    description: Corresponding field in PDOR becomes 1.
+    value: 1
+enum/PTSO8:
+  bit_size: 1
+  variants:
+  - name: ptso0
+    description: No change.
+    value: 0
+  - name: ptso1
+    description: Corresponding field in PDOR becomes 1.
+    value: 1
+enum/PTSO9:
+  bit_size: 1
+  variants:
+  - name: ptso0
+    description: No change.
+    value: 0
+  - name: ptso1
+    description: Corresponding field in PDOR becomes 1.
+    value: 1
+enum/PTTO0:
+  bit_size: 1
+  variants:
+  - name: ptto0
+    description: No change.
+    value: 0
+  - name: ptto1
+    description: Set to the inverse of its current logic state.
+    value: 1
+enum/PTTO1:
+  bit_size: 1
+  variants:
+  - name: ptto0
+    description: No change.
+    value: 0
+  - name: ptto1
+    description: Set to the inverse of its current logic state.
+    value: 1
+enum/PTTO10:
+  bit_size: 1
+  variants:
+  - name: ptto0
+    description: No change.
+    value: 0
+  - name: ptto1
+    description: Set to the inverse of its current logic state.
+    value: 1
+enum/PTTO11:
+  bit_size: 1
+  variants:
+  - name: ptto0
+    description: No change.
+    value: 0
+  - name: ptto1
+    description: Set to the inverse of its current logic state.
+    value: 1
+enum/PTTO12:
+  bit_size: 1
+  variants:
+  - name: ptto0
+    description: No change.
+    value: 0
+  - name: ptto1
+    description: Set to the inverse of its current logic state.
+    value: 1
+enum/PTTO13:
+  bit_size: 1
+  variants:
+  - name: ptto0
+    description: No change.
+    value: 0
+  - name: ptto1
+    description: Set to the inverse of its current logic state.
+    value: 1
+enum/PTTO14:
+  bit_size: 1
+  variants:
+  - name: ptto0
+    description: No change.
+    value: 0
+  - name: ptto1
+    description: Set to the inverse of its current logic state.
+    value: 1
+enum/PTTO15:
+  bit_size: 1
+  variants:
+  - name: ptto0
+    description: No change.
+    value: 0
+  - name: ptto1
+    description: Set to the inverse of its current logic state.
+    value: 1
+enum/PTTO16:
+  bit_size: 1
+  variants:
+  - name: ptto0
+    description: No change.
+    value: 0
+  - name: ptto1
+    description: Set to the inverse of its current logic state.
+    value: 1
+enum/PTTO17:
+  bit_size: 1
+  variants:
+  - name: ptto0
+    description: No change.
+    value: 0
+  - name: ptto1
+    description: Set to the inverse of its current logic state.
+    value: 1
+enum/PTTO18:
+  bit_size: 1
+  variants:
+  - name: ptto0
+    description: No change.
+    value: 0
+  - name: ptto1
+    description: Set to the inverse of its current logic state.
+    value: 1
+enum/PTTO19:
+  bit_size: 1
+  variants:
+  - name: ptto0
+    description: No change.
+    value: 0
+  - name: ptto1
+    description: Set to the inverse of its current logic state.
+    value: 1
+enum/PTTO2:
+  bit_size: 1
+  variants:
+  - name: ptto0
+    description: No change.
+    value: 0
+  - name: ptto1
+    description: Set to the inverse of its current logic state.
+    value: 1
+enum/PTTO20:
+  bit_size: 1
+  variants:
+  - name: ptto0
+    description: No change.
+    value: 0
+  - name: ptto1
+    description: Set to the inverse of its current logic state.
+    value: 1
+enum/PTTO21:
+  bit_size: 1
+  variants:
+  - name: ptto0
+    description: No change.
+    value: 0
+  - name: ptto1
+    description: Set to the inverse of its current logic state.
+    value: 1
+enum/PTTO22:
+  bit_size: 1
+  variants:
+  - name: ptto0
+    description: No change.
+    value: 0
+  - name: ptto1
+    description: Set to the inverse of its current logic state.
+    value: 1
+enum/PTTO23:
+  bit_size: 1
+  variants:
+  - name: ptto0
+    description: No change.
+    value: 0
+  - name: ptto1
+    description: Set to the inverse of its current logic state.
+    value: 1
+enum/PTTO24:
+  bit_size: 1
+  variants:
+  - name: ptto0
+    description: No change.
+    value: 0
+  - name: ptto1
+    description: Set to the inverse of its current logic state.
+    value: 1
+enum/PTTO25:
+  bit_size: 1
+  variants:
+  - name: ptto0
+    description: No change.
+    value: 0
+  - name: ptto1
+    description: Set to the inverse of its current logic state.
+    value: 1
+enum/PTTO26:
+  bit_size: 1
+  variants:
+  - name: ptto0
+    description: No change.
+    value: 0
+  - name: ptto1
+    description: Set to the inverse of its current logic state.
+    value: 1
+enum/PTTO27:
+  bit_size: 1
+  variants:
+  - name: ptto0
+    description: No change.
+    value: 0
+  - name: ptto1
+    description: Set to the inverse of its current logic state.
+    value: 1
+enum/PTTO28:
+  bit_size: 1
+  variants:
+  - name: ptto0
+    description: No change.
+    value: 0
+  - name: ptto1
+    description: Set to the inverse of its current logic state.
+    value: 1
+enum/PTTO29:
+  bit_size: 1
+  variants:
+  - name: ptto0
+    description: No change.
+    value: 0
+  - name: ptto1
+    description: Set to the inverse of its current logic state.
+    value: 1
+enum/PTTO3:
+  bit_size: 1
+  variants:
+  - name: ptto0
+    description: No change.
+    value: 0
+  - name: ptto1
+    description: Set to the inverse of its current logic state.
+    value: 1
+enum/PTTO30:
+  bit_size: 1
+  variants:
+  - name: ptto0
+    description: No change.
+    value: 0
+  - name: ptto1
+    description: Set to the inverse of its current logic state.
+    value: 1
+enum/PTTO31:
+  bit_size: 1
+  variants:
+  - name: ptto0
+    description: No change.
+    value: 0
+  - name: ptto1
+    description: Set to the inverse of its current logic state.
+    value: 1
+enum/PTTO4:
+  bit_size: 1
+  variants:
+  - name: ptto0
+    description: No change.
+    value: 0
+  - name: ptto1
+    description: Set to the inverse of its current logic state.
+    value: 1
+enum/PTTO5:
+  bit_size: 1
+  variants:
+  - name: ptto0
+    description: No change.
+    value: 0
+  - name: ptto1
+    description: Set to the inverse of its current logic state.
+    value: 1
+enum/PTTO6:
+  bit_size: 1
+  variants:
+  - name: ptto0
+    description: No change.
+    value: 0
+  - name: ptto1
+    description: Set to the inverse of its current logic state.
+    value: 1
+enum/PTTO7:
+  bit_size: 1
+  variants:
+  - name: ptto0
+    description: No change.
+    value: 0
+  - name: ptto1
+    description: Set to the inverse of its current logic state.
+    value: 1
+enum/PTTO8:
+  bit_size: 1
+  variants:
+  - name: ptto0
+    description: No change.
+    value: 0
+  - name: ptto1
+    description: Set to the inverse of its current logic state.
+    value: 1
+enum/PTTO9:
+  bit_size: 1
+  variants:
+  - name: ptto0
+    description: No change.
+    value: 0
+  - name: ptto1
+    description: Set to the inverse of its current logic state.
+    value: 1

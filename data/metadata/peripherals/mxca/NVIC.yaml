@@ -1,0 +1,1189 @@
+block/NVIC:
+  description: Nested Vectored Interrupt Controller.
+  items:
+  - name: ISER
+    description: Interrupt Set Enable Register.
+    array:
+      len: 16
+      stride: 4
+    byte_offset: 0
+    fieldset: ISER
+  - name: ICER
+    description: Interrupt Clear Enable Register.
+    array:
+      len: 16
+      stride: 4
+    byte_offset: 128
+    fieldset: ICER
+  - name: ISPR
+    description: Interrupt Set Pending Register.
+    array:
+      len: 16
+      stride: 4
+    byte_offset: 256
+    fieldset: ISPR
+  - name: ICPR
+    description: Interrupt Clear Pending Register.
+    array:
+      len: 16
+      stride: 4
+    byte_offset: 384
+    fieldset: ICPR
+  - name: IABR
+    description: Interrupt Active Bit Register.
+    array:
+      len: 16
+      stride: 4
+    byte_offset: 512
+    fieldset: IABR
+  - name: ITNS
+    description: Interrupt Target Non-secure Register.
+    array:
+      len: 16
+      stride: 4
+    byte_offset: 640
+    fieldset: ITNS
+  - name: IPR
+    description: Interrupt Priority Register.
+    array:
+      len: 120
+      stride: 4
+    byte_offset: 768
+    fieldset: IPR
+  - name: STIR
+    description: Software Trigger Interrupt Register.
+    byte_offset: 3584
+    access: Write
+    fieldset: STIR
+fieldset/IABR:
+  description: Interrupt Active Bit Register.
+  fields:
+  - name: ACTIVE0
+    description: Active state bits.
+    bit_offset: 0
+    bit_size: 1
+  - name: ACTIVE1
+    description: Active state bits.
+    bit_offset: 1
+    bit_size: 1
+  - name: ACTIVE2
+    description: Active state bits.
+    bit_offset: 2
+    bit_size: 1
+  - name: ACTIVE3
+    description: Active state bits.
+    bit_offset: 3
+    bit_size: 1
+  - name: ACTIVE4
+    description: Active state bits.
+    bit_offset: 4
+    bit_size: 1
+  - name: ACTIVE5
+    description: Active state bits.
+    bit_offset: 5
+    bit_size: 1
+  - name: ACTIVE6
+    description: Active state bits.
+    bit_offset: 6
+    bit_size: 1
+  - name: ACTIVE7
+    description: Active state bits.
+    bit_offset: 7
+    bit_size: 1
+  - name: ACTIVE8
+    description: Active state bits.
+    bit_offset: 8
+    bit_size: 1
+  - name: ACTIVE9
+    description: Active state bits.
+    bit_offset: 9
+    bit_size: 1
+  - name: ACTIVE10
+    description: Active state bits.
+    bit_offset: 10
+    bit_size: 1
+  - name: ACTIVE11
+    description: Active state bits.
+    bit_offset: 11
+    bit_size: 1
+  - name: ACTIVE12
+    description: Active state bits.
+    bit_offset: 12
+    bit_size: 1
+  - name: ACTIVE13
+    description: Active state bits.
+    bit_offset: 13
+    bit_size: 1
+  - name: ACTIVE14
+    description: Active state bits.
+    bit_offset: 14
+    bit_size: 1
+  - name: ACTIVE15
+    description: Active state bits.
+    bit_offset: 15
+    bit_size: 1
+  - name: ACTIVE16
+    description: Active state bits.
+    bit_offset: 16
+    bit_size: 1
+  - name: ACTIVE17
+    description: Active state bits.
+    bit_offset: 17
+    bit_size: 1
+  - name: ACTIVE18
+    description: Active state bits.
+    bit_offset: 18
+    bit_size: 1
+  - name: ACTIVE19
+    description: Active state bits.
+    bit_offset: 19
+    bit_size: 1
+  - name: ACTIVE20
+    description: Active state bits.
+    bit_offset: 20
+    bit_size: 1
+  - name: ACTIVE21
+    description: Active state bits.
+    bit_offset: 21
+    bit_size: 1
+  - name: ACTIVE22
+    description: Active state bits.
+    bit_offset: 22
+    bit_size: 1
+  - name: ACTIVE23
+    description: Active state bits.
+    bit_offset: 23
+    bit_size: 1
+  - name: ACTIVE24
+    description: Active state bits.
+    bit_offset: 24
+    bit_size: 1
+  - name: ACTIVE25
+    description: Active state bits.
+    bit_offset: 25
+    bit_size: 1
+  - name: ACTIVE26
+    description: Active state bits.
+    bit_offset: 26
+    bit_size: 1
+  - name: ACTIVE27
+    description: Active state bits.
+    bit_offset: 27
+    bit_size: 1
+  - name: ACTIVE28
+    description: Active state bits.
+    bit_offset: 28
+    bit_size: 1
+  - name: ACTIVE29
+    description: Active state bits.
+    bit_offset: 29
+    bit_size: 1
+  - name: ACTIVE30
+    description: Active state bits.
+    bit_offset: 30
+    bit_size: 1
+  - name: ACTIVE31
+    description: Active state bits.
+    bit_offset: 31
+    bit_size: 1
+fieldset/ICER:
+  description: Interrupt Clear Enable Register.
+  fields:
+  - name: CLRENA0
+    description: Interrupt clear-enable bits.
+    bit_offset: 0
+    bit_size: 1
+  - name: CLRENA1
+    description: Interrupt clear-enable bits.
+    bit_offset: 1
+    bit_size: 1
+  - name: CLRENA2
+    description: Interrupt clear-enable bits.
+    bit_offset: 2
+    bit_size: 1
+  - name: CLRENA3
+    description: Interrupt clear-enable bits.
+    bit_offset: 3
+    bit_size: 1
+  - name: CLRENA4
+    description: Interrupt clear-enable bits.
+    bit_offset: 4
+    bit_size: 1
+  - name: CLRENA5
+    description: Interrupt clear-enable bits.
+    bit_offset: 5
+    bit_size: 1
+  - name: CLRENA6
+    description: Interrupt clear-enable bits.
+    bit_offset: 6
+    bit_size: 1
+  - name: CLRENA7
+    description: Interrupt clear-enable bits.
+    bit_offset: 7
+    bit_size: 1
+  - name: CLRENA8
+    description: Interrupt clear-enable bits.
+    bit_offset: 8
+    bit_size: 1
+  - name: CLRENA9
+    description: Interrupt clear-enable bits.
+    bit_offset: 9
+    bit_size: 1
+  - name: CLRENA10
+    description: Interrupt clear-enable bits.
+    bit_offset: 10
+    bit_size: 1
+  - name: CLRENA11
+    description: Interrupt clear-enable bits.
+    bit_offset: 11
+    bit_size: 1
+  - name: CLRENA12
+    description: Interrupt clear-enable bits.
+    bit_offset: 12
+    bit_size: 1
+  - name: CLRENA13
+    description: Interrupt clear-enable bits.
+    bit_offset: 13
+    bit_size: 1
+  - name: CLRENA14
+    description: Interrupt clear-enable bits.
+    bit_offset: 14
+    bit_size: 1
+  - name: CLRENA15
+    description: Interrupt clear-enable bits.
+    bit_offset: 15
+    bit_size: 1
+  - name: CLRENA16
+    description: Interrupt clear-enable bits.
+    bit_offset: 16
+    bit_size: 1
+  - name: CLRENA17
+    description: Interrupt clear-enable bits.
+    bit_offset: 17
+    bit_size: 1
+  - name: CLRENA18
+    description: Interrupt clear-enable bits.
+    bit_offset: 18
+    bit_size: 1
+  - name: CLRENA19
+    description: Interrupt clear-enable bits.
+    bit_offset: 19
+    bit_size: 1
+  - name: CLRENA20
+    description: Interrupt clear-enable bits.
+    bit_offset: 20
+    bit_size: 1
+  - name: CLRENA21
+    description: Interrupt clear-enable bits.
+    bit_offset: 21
+    bit_size: 1
+  - name: CLRENA22
+    description: Interrupt clear-enable bits.
+    bit_offset: 22
+    bit_size: 1
+  - name: CLRENA23
+    description: Interrupt clear-enable bits.
+    bit_offset: 23
+    bit_size: 1
+  - name: CLRENA24
+    description: Interrupt clear-enable bits.
+    bit_offset: 24
+    bit_size: 1
+  - name: CLRENA25
+    description: Interrupt clear-enable bits.
+    bit_offset: 25
+    bit_size: 1
+  - name: CLRENA26
+    description: Interrupt clear-enable bits.
+    bit_offset: 26
+    bit_size: 1
+  - name: CLRENA27
+    description: Interrupt clear-enable bits.
+    bit_offset: 27
+    bit_size: 1
+  - name: CLRENA28
+    description: Interrupt clear-enable bits.
+    bit_offset: 28
+    bit_size: 1
+  - name: CLRENA29
+    description: Interrupt clear-enable bits.
+    bit_offset: 29
+    bit_size: 1
+  - name: CLRENA30
+    description: Interrupt clear-enable bits.
+    bit_offset: 30
+    bit_size: 1
+  - name: CLRENA31
+    description: Interrupt clear-enable bits.
+    bit_offset: 31
+    bit_size: 1
+fieldset/ICPR:
+  description: Interrupt Clear Pending Register.
+  fields:
+  - name: CLRPEND0
+    description: Interrupt clear-pending bits.
+    bit_offset: 0
+    bit_size: 1
+  - name: CLRPEND1
+    description: Interrupt clear-pending bits.
+    bit_offset: 1
+    bit_size: 1
+  - name: CLRPEND2
+    description: Interrupt clear-pending bits.
+    bit_offset: 2
+    bit_size: 1
+  - name: CLRPEND3
+    description: Interrupt clear-pending bits.
+    bit_offset: 3
+    bit_size: 1
+  - name: CLRPEND4
+    description: Interrupt clear-pending bits.
+    bit_offset: 4
+    bit_size: 1
+  - name: CLRPEND5
+    description: Interrupt clear-pending bits.
+    bit_offset: 5
+    bit_size: 1
+  - name: CLRPEND6
+    description: Interrupt clear-pending bits.
+    bit_offset: 6
+    bit_size: 1
+  - name: CLRPEND7
+    description: Interrupt clear-pending bits.
+    bit_offset: 7
+    bit_size: 1
+  - name: CLRPEND8
+    description: Interrupt clear-pending bits.
+    bit_offset: 8
+    bit_size: 1
+  - name: CLRPEND9
+    description: Interrupt clear-pending bits.
+    bit_offset: 9
+    bit_size: 1
+  - name: CLRPEND10
+    description: Interrupt clear-pending bits.
+    bit_offset: 10
+    bit_size: 1
+  - name: CLRPEND11
+    description: Interrupt clear-pending bits.
+    bit_offset: 11
+    bit_size: 1
+  - name: CLRPEND12
+    description: Interrupt clear-pending bits.
+    bit_offset: 12
+    bit_size: 1
+  - name: CLRPEND13
+    description: Interrupt clear-pending bits.
+    bit_offset: 13
+    bit_size: 1
+  - name: CLRPEND14
+    description: Interrupt clear-pending bits.
+    bit_offset: 14
+    bit_size: 1
+  - name: CLRPEND15
+    description: Interrupt clear-pending bits.
+    bit_offset: 15
+    bit_size: 1
+  - name: CLRPEND16
+    description: Interrupt clear-pending bits.
+    bit_offset: 16
+    bit_size: 1
+  - name: CLRPEND17
+    description: Interrupt clear-pending bits.
+    bit_offset: 17
+    bit_size: 1
+  - name: CLRPEND18
+    description: Interrupt clear-pending bits.
+    bit_offset: 18
+    bit_size: 1
+  - name: CLRPEND19
+    description: Interrupt clear-pending bits.
+    bit_offset: 19
+    bit_size: 1
+  - name: CLRPEND20
+    description: Interrupt clear-pending bits.
+    bit_offset: 20
+    bit_size: 1
+  - name: CLRPEND21
+    description: Interrupt clear-pending bits.
+    bit_offset: 21
+    bit_size: 1
+  - name: CLRPEND22
+    description: Interrupt clear-pending bits.
+    bit_offset: 22
+    bit_size: 1
+  - name: CLRPEND23
+    description: Interrupt clear-pending bits.
+    bit_offset: 23
+    bit_size: 1
+  - name: CLRPEND24
+    description: Interrupt clear-pending bits.
+    bit_offset: 24
+    bit_size: 1
+  - name: CLRPEND25
+    description: Interrupt clear-pending bits.
+    bit_offset: 25
+    bit_size: 1
+  - name: CLRPEND26
+    description: Interrupt clear-pending bits.
+    bit_offset: 26
+    bit_size: 1
+  - name: CLRPEND27
+    description: Interrupt clear-pending bits.
+    bit_offset: 27
+    bit_size: 1
+  - name: CLRPEND28
+    description: Interrupt clear-pending bits.
+    bit_offset: 28
+    bit_size: 1
+  - name: CLRPEND29
+    description: Interrupt clear-pending bits.
+    bit_offset: 29
+    bit_size: 1
+  - name: CLRPEND30
+    description: Interrupt clear-pending bits.
+    bit_offset: 30
+    bit_size: 1
+  - name: CLRPEND31
+    description: Interrupt clear-pending bits.
+    bit_offset: 31
+    bit_size: 1
+fieldset/IPR:
+  description: Interrupt Priority Register.
+  fields:
+  - name: PRI_0
+    description: no description available.
+    bit_offset: 0
+    bit_size: 8
+  - name: PRI_1
+    description: no description available.
+    bit_offset: 8
+    bit_size: 8
+  - name: PRI_2
+    description: no description available.
+    bit_offset: 16
+    bit_size: 8
+  - name: PRI_3
+    description: no description available.
+    bit_offset: 24
+    bit_size: 8
+fieldset/ISER:
+  description: Interrupt Set Enable Register.
+  fields:
+  - name: SETENA0
+    description: Interrupt set-enable bits.
+    bit_offset: 0
+    bit_size: 1
+  - name: SETENA1
+    description: Interrupt set-enable bits.
+    bit_offset: 1
+    bit_size: 1
+  - name: SETENA2
+    description: Interrupt set-enable bits.
+    bit_offset: 2
+    bit_size: 1
+  - name: SETENA3
+    description: Interrupt set-enable bits.
+    bit_offset: 3
+    bit_size: 1
+  - name: SETENA4
+    description: Interrupt set-enable bits.
+    bit_offset: 4
+    bit_size: 1
+  - name: SETENA5
+    description: Interrupt set-enable bits.
+    bit_offset: 5
+    bit_size: 1
+  - name: SETENA6
+    description: Interrupt set-enable bits.
+    bit_offset: 6
+    bit_size: 1
+  - name: SETENA7
+    description: Interrupt set-enable bits.
+    bit_offset: 7
+    bit_size: 1
+  - name: SETENA8
+    description: Interrupt set-enable bits.
+    bit_offset: 8
+    bit_size: 1
+  - name: SETENA9
+    description: Interrupt set-enable bits.
+    bit_offset: 9
+    bit_size: 1
+  - name: SETENA10
+    description: Interrupt set-enable bits.
+    bit_offset: 10
+    bit_size: 1
+  - name: SETENA11
+    description: Interrupt set-enable bits.
+    bit_offset: 11
+    bit_size: 1
+  - name: SETENA12
+    description: Interrupt set-enable bits.
+    bit_offset: 12
+    bit_size: 1
+  - name: SETENA13
+    description: Interrupt set-enable bits.
+    bit_offset: 13
+    bit_size: 1
+  - name: SETENA14
+    description: Interrupt set-enable bits.
+    bit_offset: 14
+    bit_size: 1
+  - name: SETENA15
+    description: Interrupt set-enable bits.
+    bit_offset: 15
+    bit_size: 1
+  - name: SETENA16
+    description: Interrupt set-enable bits.
+    bit_offset: 16
+    bit_size: 1
+  - name: SETENA17
+    description: Interrupt set-enable bits.
+    bit_offset: 17
+    bit_size: 1
+  - name: SETENA18
+    description: Interrupt set-enable bits.
+    bit_offset: 18
+    bit_size: 1
+  - name: SETENA19
+    description: Interrupt set-enable bits.
+    bit_offset: 19
+    bit_size: 1
+  - name: SETENA20
+    description: Interrupt set-enable bits.
+    bit_offset: 20
+    bit_size: 1
+  - name: SETENA21
+    description: Interrupt set-enable bits.
+    bit_offset: 21
+    bit_size: 1
+  - name: SETENA22
+    description: Interrupt set-enable bits.
+    bit_offset: 22
+    bit_size: 1
+  - name: SETENA23
+    description: Interrupt set-enable bits.
+    bit_offset: 23
+    bit_size: 1
+  - name: SETENA24
+    description: Interrupt set-enable bits.
+    bit_offset: 24
+    bit_size: 1
+  - name: SETENA25
+    description: Interrupt set-enable bits.
+    bit_offset: 25
+    bit_size: 1
+  - name: SETENA26
+    description: Interrupt set-enable bits.
+    bit_offset: 26
+    bit_size: 1
+  - name: SETENA27
+    description: Interrupt set-enable bits.
+    bit_offset: 27
+    bit_size: 1
+  - name: SETENA28
+    description: Interrupt set-enable bits.
+    bit_offset: 28
+    bit_size: 1
+  - name: SETENA29
+    description: Interrupt set-enable bits.
+    bit_offset: 29
+    bit_size: 1
+  - name: SETENA30
+    description: Interrupt set-enable bits.
+    bit_offset: 30
+    bit_size: 1
+  - name: SETENA31
+    description: Interrupt set-enable bits.
+    bit_offset: 31
+    bit_size: 1
+fieldset/ISPR:
+  description: Interrupt Set Pending Register.
+  fields:
+  - name: SETPEND0
+    description: Interrupt set-pending bits.
+    bit_offset: 0
+    bit_size: 1
+  - name: SETPEND1
+    description: Interrupt set-pending bits.
+    bit_offset: 1
+    bit_size: 1
+  - name: SETPEND2
+    description: Interrupt set-pending bits.
+    bit_offset: 2
+    bit_size: 1
+  - name: SETPEND3
+    description: Interrupt set-pending bits.
+    bit_offset: 3
+    bit_size: 1
+  - name: SETPEND4
+    description: Interrupt set-pending bits.
+    bit_offset: 4
+    bit_size: 1
+  - name: SETPEND5
+    description: Interrupt set-pending bits.
+    bit_offset: 5
+    bit_size: 1
+  - name: SETPEND6
+    description: Interrupt set-pending bits.
+    bit_offset: 6
+    bit_size: 1
+  - name: SETPEND7
+    description: Interrupt set-pending bits.
+    bit_offset: 7
+    bit_size: 1
+  - name: SETPEND8
+    description: Interrupt set-pending bits.
+    bit_offset: 8
+    bit_size: 1
+  - name: SETPEND9
+    description: Interrupt set-pending bits.
+    bit_offset: 9
+    bit_size: 1
+  - name: SETPEND10
+    description: Interrupt set-pending bits.
+    bit_offset: 10
+    bit_size: 1
+  - name: SETPEND11
+    description: Interrupt set-pending bits.
+    bit_offset: 11
+    bit_size: 1
+  - name: SETPEND12
+    description: Interrupt set-pending bits.
+    bit_offset: 12
+    bit_size: 1
+  - name: SETPEND13
+    description: Interrupt set-pending bits.
+    bit_offset: 13
+    bit_size: 1
+  - name: SETPEND14
+    description: Interrupt set-pending bits.
+    bit_offset: 14
+    bit_size: 1
+  - name: SETPEND15
+    description: Interrupt set-pending bits.
+    bit_offset: 15
+    bit_size: 1
+  - name: SETPEND16
+    description: Interrupt set-pending bits.
+    bit_offset: 16
+    bit_size: 1
+  - name: SETPEND17
+    description: Interrupt set-pending bits.
+    bit_offset: 17
+    bit_size: 1
+  - name: SETPEND18
+    description: Interrupt set-pending bits.
+    bit_offset: 18
+    bit_size: 1
+  - name: SETPEND19
+    description: Interrupt set-pending bits.
+    bit_offset: 19
+    bit_size: 1
+  - name: SETPEND20
+    description: Interrupt set-pending bits.
+    bit_offset: 20
+    bit_size: 1
+  - name: SETPEND21
+    description: Interrupt set-pending bits.
+    bit_offset: 21
+    bit_size: 1
+  - name: SETPEND22
+    description: Interrupt set-pending bits.
+    bit_offset: 22
+    bit_size: 1
+  - name: SETPEND23
+    description: Interrupt set-pending bits.
+    bit_offset: 23
+    bit_size: 1
+  - name: SETPEND24
+    description: Interrupt set-pending bits.
+    bit_offset: 24
+    bit_size: 1
+  - name: SETPEND25
+    description: Interrupt set-pending bits.
+    bit_offset: 25
+    bit_size: 1
+  - name: SETPEND26
+    description: Interrupt set-pending bits.
+    bit_offset: 26
+    bit_size: 1
+  - name: SETPEND27
+    description: Interrupt set-pending bits.
+    bit_offset: 27
+    bit_size: 1
+  - name: SETPEND28
+    description: Interrupt set-pending bits.
+    bit_offset: 28
+    bit_size: 1
+  - name: SETPEND29
+    description: Interrupt set-pending bits.
+    bit_offset: 29
+    bit_size: 1
+  - name: SETPEND30
+    description: Interrupt set-pending bits.
+    bit_offset: 30
+    bit_size: 1
+  - name: SETPEND31
+    description: Interrupt set-pending bits.
+    bit_offset: 31
+    bit_size: 1
+fieldset/ITNS:
+  description: Interrupt Target Non-secure Register.
+  fields:
+  - name: INTS0
+    description: Interrupt Targets Non-secure bits.
+    bit_offset: 0
+    bit_size: 1
+    enum: INTS0
+  - name: INTS1
+    description: Interrupt Targets Non-secure bits.
+    bit_offset: 1
+    bit_size: 1
+    enum: INTS1
+  - name: INTS2
+    description: Interrupt Targets Non-secure bits.
+    bit_offset: 2
+    bit_size: 1
+    enum: INTS2
+  - name: INTS3
+    description: Interrupt Targets Non-secure bits.
+    bit_offset: 3
+    bit_size: 1
+    enum: INTS3
+  - name: INTS4
+    description: Interrupt Targets Non-secure bits.
+    bit_offset: 4
+    bit_size: 1
+    enum: INTS4
+  - name: INTS5
+    description: Interrupt Targets Non-secure bits.
+    bit_offset: 5
+    bit_size: 1
+    enum: INTS5
+  - name: INTS6
+    description: Interrupt Targets Non-secure bits.
+    bit_offset: 6
+    bit_size: 1
+    enum: INTS6
+  - name: INTS7
+    description: Interrupt Targets Non-secure bits.
+    bit_offset: 7
+    bit_size: 1
+    enum: INTS7
+  - name: INTS8
+    description: Interrupt Targets Non-secure bits.
+    bit_offset: 8
+    bit_size: 1
+    enum: INTS8
+  - name: INTS9
+    description: Interrupt Targets Non-secure bits.
+    bit_offset: 9
+    bit_size: 1
+    enum: INTS9
+  - name: INTS10
+    description: Interrupt Targets Non-secure bits.
+    bit_offset: 10
+    bit_size: 1
+    enum: INTS10
+  - name: INTS11
+    description: Interrupt Targets Non-secure bits.
+    bit_offset: 11
+    bit_size: 1
+    enum: INTS11
+  - name: INTS12
+    description: Interrupt Targets Non-secure bits.
+    bit_offset: 12
+    bit_size: 1
+    enum: INTS12
+  - name: INTS13
+    description: Interrupt Targets Non-secure bits.
+    bit_offset: 13
+    bit_size: 1
+    enum: INTS13
+  - name: INTS14
+    description: Interrupt Targets Non-secure bits.
+    bit_offset: 14
+    bit_size: 1
+    enum: INTS14
+  - name: INTS15
+    description: Interrupt Targets Non-secure bits.
+    bit_offset: 15
+    bit_size: 1
+    enum: INTS15
+  - name: INTS16
+    description: Interrupt Targets Non-secure bits.
+    bit_offset: 16
+    bit_size: 1
+    enum: INTS16
+  - name: INTS17
+    description: Interrupt Targets Non-secure bits.
+    bit_offset: 17
+    bit_size: 1
+    enum: INTS17
+  - name: INTS18
+    description: Interrupt Targets Non-secure bits.
+    bit_offset: 18
+    bit_size: 1
+    enum: INTS18
+  - name: INTS19
+    description: Interrupt Targets Non-secure bits.
+    bit_offset: 19
+    bit_size: 1
+    enum: INTS19
+  - name: INTS20
+    description: Interrupt Targets Non-secure bits.
+    bit_offset: 20
+    bit_size: 1
+    enum: INTS20
+  - name: INTS21
+    description: Interrupt Targets Non-secure bits.
+    bit_offset: 21
+    bit_size: 1
+    enum: INTS21
+  - name: INTS22
+    description: Interrupt Targets Non-secure bits.
+    bit_offset: 22
+    bit_size: 1
+    enum: INTS22
+  - name: INTS23
+    description: Interrupt Targets Non-secure bits.
+    bit_offset: 23
+    bit_size: 1
+    enum: INTS23
+  - name: INTS24
+    description: Interrupt Targets Non-secure bits.
+    bit_offset: 24
+    bit_size: 1
+    enum: INTS24
+  - name: INTS25
+    description: Interrupt Targets Non-secure bits.
+    bit_offset: 25
+    bit_size: 1
+    enum: INTS25
+  - name: INTS26
+    description: Interrupt Targets Non-secure bits.
+    bit_offset: 26
+    bit_size: 1
+    enum: INTS26
+  - name: INTS27
+    description: Interrupt Targets Non-secure bits.
+    bit_offset: 27
+    bit_size: 1
+    enum: INTS27
+  - name: INTS28
+    description: Interrupt Targets Non-secure bits.
+    bit_offset: 28
+    bit_size: 1
+    enum: INTS28
+  - name: INTS29
+    description: Interrupt Targets Non-secure bits.
+    bit_offset: 29
+    bit_size: 1
+    enum: INTS29
+  - name: INTS30
+    description: Interrupt Targets Non-secure bits.
+    bit_offset: 30
+    bit_size: 1
+    enum: INTS30
+  - name: INTS31
+    description: Interrupt Targets Non-secure bits.
+    bit_offset: 31
+    bit_size: 1
+    enum: INTS31
+fieldset/STIR:
+  description: Software Trigger Interrupt Register.
+  fields:
+  - name: INTID
+    description: Interrupt ID of the interrupt to trigger, in the range 0-479.
+    bit_offset: 0
+    bit_size: 9
+enum/INTS0:
+  bit_size: 1
+  variants:
+  - name: SECURE_STATE
+    description: The interrupt targets Secure state.
+    value: 0
+  - name: NON_SECURE_STATE
+    description: The interrupt targets Non-secure state.
+    value: 1
+enum/INTS1:
+  bit_size: 1
+  variants:
+  - name: SECURE_STATE
+    description: The interrupt targets Secure state.
+    value: 0
+  - name: NON_SECURE_STATE
+    description: The interrupt targets Non-secure state.
+    value: 1
+enum/INTS10:
+  bit_size: 1
+  variants:
+  - name: SECURE_STATE
+    description: The interrupt targets Secure state.
+    value: 0
+  - name: NON_SECURE_STATE
+    description: The interrupt targets Non-secure state.
+    value: 1
+enum/INTS11:
+  bit_size: 1
+  variants:
+  - name: SECURE_STATE
+    description: The interrupt targets Secure state.
+    value: 0
+  - name: NON_SECURE_STATE
+    description: The interrupt targets Non-secure state.
+    value: 1
+enum/INTS12:
+  bit_size: 1
+  variants:
+  - name: SECURE_STATE
+    description: The interrupt targets Secure state.
+    value: 0
+  - name: NON_SECURE_STATE
+    description: The interrupt targets Non-secure state.
+    value: 1
+enum/INTS13:
+  bit_size: 1
+  variants:
+  - name: SECURE_STATE
+    description: The interrupt targets Secure state.
+    value: 0
+  - name: NON_SECURE_STATE
+    description: The interrupt targets Non-secure state.
+    value: 1
+enum/INTS14:
+  bit_size: 1
+  variants:
+  - name: SECURE_STATE
+    description: The interrupt targets Secure state.
+    value: 0
+  - name: NON_SECURE_STATE
+    description: The interrupt targets Non-secure state.
+    value: 1
+enum/INTS15:
+  bit_size: 1
+  variants:
+  - name: SECURE_STATE
+    description: The interrupt targets Secure state.
+    value: 0
+  - name: NON_SECURE_STATE
+    description: The interrupt targets Non-secure state.
+    value: 1
+enum/INTS16:
+  bit_size: 1
+  variants:
+  - name: SECURE_STATE
+    description: The interrupt targets Secure state.
+    value: 0
+  - name: NON_SECURE_STATE
+    description: The interrupt targets Non-secure state.
+    value: 1
+enum/INTS17:
+  bit_size: 1
+  variants:
+  - name: SECURE_STATE
+    description: The interrupt targets Secure state.
+    value: 0
+  - name: NON_SECURE_STATE
+    description: The interrupt targets Non-secure state.
+    value: 1
+enum/INTS18:
+  bit_size: 1
+  variants:
+  - name: SECURE_STATE
+    description: The interrupt targets Secure state.
+    value: 0
+  - name: NON_SECURE_STATE
+    description: The interrupt targets Non-secure state.
+    value: 1
+enum/INTS19:
+  bit_size: 1
+  variants:
+  - name: SECURE_STATE
+    description: The interrupt targets Secure state.
+    value: 0
+  - name: NON_SECURE_STATE
+    description: The interrupt targets Non-secure state.
+    value: 1
+enum/INTS2:
+  bit_size: 1
+  variants:
+  - name: SECURE_STATE
+    description: The interrupt targets Secure state.
+    value: 0
+  - name: NON_SECURE_STATE
+    description: The interrupt targets Non-secure state.
+    value: 1
+enum/INTS20:
+  bit_size: 1
+  variants:
+  - name: SECURE_STATE
+    description: The interrupt targets Secure state.
+    value: 0
+  - name: NON_SECURE_STATE
+    description: The interrupt targets Non-secure state.
+    value: 1
+enum/INTS21:
+  bit_size: 1
+  variants:
+  - name: SECURE_STATE
+    description: The interrupt targets Secure state.
+    value: 0
+  - name: NON_SECURE_STATE
+    description: The interrupt targets Non-secure state.
+    value: 1
+enum/INTS22:
+  bit_size: 1
+  variants:
+  - name: SECURE_STATE
+    description: The interrupt targets Secure state.
+    value: 0
+  - name: NON_SECURE_STATE
+    description: The interrupt targets Non-secure state.
+    value: 1
+enum/INTS23:
+  bit_size: 1
+  variants:
+  - name: SECURE_STATE
+    description: The interrupt targets Secure state.
+    value: 0
+  - name: NON_SECURE_STATE
+    description: The interrupt targets Non-secure state.
+    value: 1
+enum/INTS24:
+  bit_size: 1
+  variants:
+  - name: SECURE_STATE
+    description: The interrupt targets Secure state.
+    value: 0
+  - name: NON_SECURE_STATE
+    description: The interrupt targets Non-secure state.
+    value: 1
+enum/INTS25:
+  bit_size: 1
+  variants:
+  - name: SECURE_STATE
+    description: The interrupt targets Secure state.
+    value: 0
+  - name: NON_SECURE_STATE
+    description: The interrupt targets Non-secure state.
+    value: 1
+enum/INTS26:
+  bit_size: 1
+  variants:
+  - name: SECURE_STATE
+    description: The interrupt targets Secure state.
+    value: 0
+  - name: NON_SECURE_STATE
+    description: The interrupt targets Non-secure state.
+    value: 1
+enum/INTS27:
+  bit_size: 1
+  variants:
+  - name: SECURE_STATE
+    description: The interrupt targets Secure state.
+    value: 0
+  - name: NON_SECURE_STATE
+    description: The interrupt targets Non-secure state.
+    value: 1
+enum/INTS28:
+  bit_size: 1
+  variants:
+  - name: SECURE_STATE
+    description: The interrupt targets Secure state.
+    value: 0
+  - name: NON_SECURE_STATE
+    description: The interrupt targets Non-secure state.
+    value: 1
+enum/INTS29:
+  bit_size: 1
+  variants:
+  - name: SECURE_STATE
+    description: The interrupt targets Secure state.
+    value: 0
+  - name: NON_SECURE_STATE
+    description: The interrupt targets Non-secure state.
+    value: 1
+enum/INTS3:
+  bit_size: 1
+  variants:
+  - name: SECURE_STATE
+    description: The interrupt targets Secure state.
+    value: 0
+  - name: NON_SECURE_STATE
+    description: The interrupt targets Non-secure state.
+    value: 1
+enum/INTS30:
+  bit_size: 1
+  variants:
+  - name: SECURE_STATE
+    description: The interrupt targets Secure state.
+    value: 0
+  - name: NON_SECURE_STATE
+    description: The interrupt targets Non-secure state.
+    value: 1
+enum/INTS31:
+  bit_size: 1
+  variants:
+  - name: SECURE_STATE
+    description: The interrupt targets Secure state.
+    value: 0
+  - name: NON_SECURE_STATE
+    description: The interrupt targets Non-secure state.
+    value: 1
+enum/INTS4:
+  bit_size: 1
+  variants:
+  - name: SECURE_STATE
+    description: The interrupt targets Secure state.
+    value: 0
+  - name: NON_SECURE_STATE
+    description: The interrupt targets Non-secure state.
+    value: 1
+enum/INTS5:
+  bit_size: 1
+  variants:
+  - name: SECURE_STATE
+    description: The interrupt targets Secure state.
+    value: 0
+  - name: NON_SECURE_STATE
+    description: The interrupt targets Non-secure state.
+    value: 1
+enum/INTS6:
+  bit_size: 1
+  variants:
+  - name: SECURE_STATE
+    description: The interrupt targets Secure state.
+    value: 0
+  - name: NON_SECURE_STATE
+    description: The interrupt targets Non-secure state.
+    value: 1
+enum/INTS7:
+  bit_size: 1
+  variants:
+  - name: SECURE_STATE
+    description: The interrupt targets Secure state.
+    value: 0
+  - name: NON_SECURE_STATE
+    description: The interrupt targets Non-secure state.
+    value: 1
+enum/INTS8:
+  bit_size: 1
+  variants:
+  - name: SECURE_STATE
+    description: The interrupt targets Secure state.
+    value: 0
+  - name: NON_SECURE_STATE
+    description: The interrupt targets Non-secure state.
+    value: 1
+enum/INTS9:
+  bit_size: 1
+  variants:
+  - name: SECURE_STATE
+    description: The interrupt targets Secure state.
+    value: 0
+  - name: NON_SECURE_STATE
+    description: The interrupt targets Non-secure state.
+    value: 1

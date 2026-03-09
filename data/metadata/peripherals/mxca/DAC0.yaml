@@ -1,0 +1,378 @@
+block/DAC0:
+  description: 12-bit DAC.
+  items:
+  - name: VERID
+    description: Version Identifier.
+    byte_offset: 0
+    access: Read
+    fieldset: VERID
+  - name: PARAM
+    description: Parameter.
+    byte_offset: 4
+    access: Read
+    fieldset: PARAM
+  - name: DATA
+    description: Data.
+    byte_offset: 8
+    fieldset: DATA
+  - name: GCR
+    description: Global Control.
+    byte_offset: 12
+    fieldset: GCR
+  - name: FCR
+    description: DAC FIFO Control.
+    byte_offset: 16
+    fieldset: FCR
+  - name: FPR
+    description: DAC FIFO Pointer.
+    byte_offset: 20
+    access: Read
+    fieldset: FPR
+  - name: FSR
+    description: FIFO Status.
+    byte_offset: 24
+    fieldset: FSR
+  - name: IER
+    description: Interrupt Enable.
+    byte_offset: 28
+    fieldset: IER
+  - name: DER
+    description: DMA Enable.
+    byte_offset: 32
+    fieldset: DER
+  - name: RCR
+    description: Reset Control.
+    byte_offset: 36
+    fieldset: RCR
+  - name: TCR
+    description: Trigger Control.
+    byte_offset: 40
+    fieldset: TCR
+  - name: PCR
+    description: Periodic Trigger Control.
+    byte_offset: 44
+    fieldset: PCR
+fieldset/DATA:
+  description: Data.
+  fields:
+  - name: DATA
+    description: FIFO Entry or Buffer Entry.
+    bit_offset: 0
+    bit_size: 12
+fieldset/DER:
+  description: DMA Enable.
+  fields:
+  - name: EMPTY_DMAEN
+    description: FIFO Empty DMA Enable.
+    bit_offset: 1
+    bit_size: 1
+  - name: WM_DMAEN
+    description: FIFO Watermark DMA Enable.
+    bit_offset: 2
+    bit_size: 1
+fieldset/FCR:
+  description: DAC FIFO Control.
+  fields:
+  - name: WML
+    description: Watermark Level.
+    bit_offset: 0
+    bit_size: 4
+fieldset/FPR:
+  description: DAC FIFO Pointer.
+  fields:
+  - name: FIFO_RPT
+    description: FIFO Read Pointer.
+    bit_offset: 0
+    bit_size: 4
+  - name: FIFO_WPT
+    description: FIFO Write Pointer.
+    bit_offset: 16
+    bit_size: 4
+fieldset/FSR:
+  description: FIFO Status.
+  fields:
+  - name: FULL
+    description: FIFO Full Flag.
+    bit_offset: 0
+    bit_size: 1
+  - name: EMPTY
+    description: FIFO Empty Flag.
+    bit_offset: 1
+    bit_size: 1
+  - name: WM
+    description: FIFO Watermark Status Flag.
+    bit_offset: 2
+    bit_size: 1
+    enum: WM
+  - name: SWBK
+    description: Swing Back One Cycle Complete Flag.
+    bit_offset: 3
+    bit_size: 1
+    enum: SWBK
+  - name: OF
+    description: FIFO Overflow Flag.
+    bit_offset: 6
+    bit_size: 1
+  - name: UF
+    description: FIFO Underflow Flag.
+    bit_offset: 7
+    bit_size: 1
+  - name: PTGCOCO
+    description: Period Trigger Mode Conversion Complete Flag.
+    bit_offset: 8
+    bit_size: 1
+    enum: PTGCOCO
+fieldset/GCR:
+  description: Global Control.
+  fields:
+  - name: DACEN
+    description: DAC Enable.
+    bit_offset: 0
+    bit_size: 1
+  - name: DACRFS
+    description: DAC Reference Select.
+    bit_offset: 1
+    bit_size: 2
+    enum: DACRFS
+  - name: FIFOEN
+    description: FIFO Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: FIFOEN
+  - name: SWMD
+    description: Swing Back Mode.
+    bit_offset: 4
+    bit_size: 1
+  - name: TRGSEL
+    description: DAC Trigger Select.
+    bit_offset: 5
+    bit_size: 1
+    enum: TRGSEL
+  - name: PTGEN
+    description: DAC Periodic Trigger Mode Enable.
+    bit_offset: 6
+    bit_size: 1
+  - name: LATCH_CYC
+    description: RCLK Cycles Before Data Latch.
+    bit_offset: 8
+    bit_size: 4
+  - name: BUF_EN
+    description: Buffer Enable.
+    bit_offset: 17
+    bit_size: 1
+    enum: BUF_EN
+  - name: IREF_PTAT_EXT_SEL
+    description: External On-Chip PTAT Current Reference Select.
+    bit_offset: 20
+    bit_size: 1
+  - name: IREF_ZTC_EXT_SEL
+    description: External On-Chip ZTC Current Reference Select.
+    bit_offset: 21
+    bit_size: 1
+  - name: BUF_SPD_CTRL
+    description: OPAMP as Buffer, Speed Control Signal.
+    bit_offset: 23
+    bit_size: 1
+    enum: BUF_SPD_CTRL
+fieldset/IER:
+  description: Interrupt Enable.
+  fields:
+  - name: FULL_IE
+    description: FIFO Full Interrupt Enable.
+    bit_offset: 0
+    bit_size: 1
+  - name: EMPTY_IE
+    description: FIFO Empty Interrupt Enable.
+    bit_offset: 1
+    bit_size: 1
+  - name: WM_IE
+    description: FIFO Watermark Interrupt Enable.
+    bit_offset: 2
+    bit_size: 1
+  - name: SWBK_IE
+    description: Swing Back One Cycle Complete Interrupt Enable.
+    bit_offset: 3
+    bit_size: 1
+  - name: OF_IE
+    description: FIFO Overflow Interrupt Enable.
+    bit_offset: 6
+    bit_size: 1
+  - name: UF_IE
+    description: FIFO Underflow Interrupt Enable.
+    bit_offset: 7
+    bit_size: 1
+  - name: PTGCOCO_IE
+    description: PTG Mode Conversion Complete Interrupt Enable.
+    bit_offset: 8
+    bit_size: 1
+fieldset/PARAM:
+  description: Parameter.
+  fields:
+  - name: FIFOSZ
+    description: FIFO Size.
+    bit_offset: 0
+    bit_size: 3
+    enum: FIFOSZ
+fieldset/PCR:
+  description: Periodic Trigger Control.
+  fields:
+  - name: PTG_NUM
+    description: Periodic Trigger Number.
+    bit_offset: 0
+    bit_size: 16
+  - name: PTG_PERIOD
+    description: Periodic Trigger Period Width.
+    bit_offset: 16
+    bit_size: 16
+fieldset/RCR:
+  description: Reset Control.
+  fields:
+  - name: SWRST
+    description: Software Reset.
+    bit_offset: 0
+    bit_size: 1
+    enum: SWRST
+  - name: FIFORST
+    description: FIFO Reset.
+    bit_offset: 1
+    bit_size: 1
+    enum: FIFORST
+fieldset/TCR:
+  description: Trigger Control.
+  fields:
+  - name: SWTRG
+    description: Software Trigger.
+    bit_offset: 0
+    bit_size: 1
+fieldset/VERID:
+  description: Version Identifier.
+  fields:
+  - name: FEATURE
+    description: Feature Identification Number.
+    bit_offset: 0
+    bit_size: 16
+  - name: MINOR
+    description: Minor Version Number.
+    bit_offset: 16
+    bit_size: 8
+  - name: MAJOR
+    description: Major Version Number.
+    bit_offset: 24
+    bit_size: 8
+enum/BUF_EN:
+  bit_size: 1
+  variants:
+  - name: USE_BUF
+    description: Not used.
+    value: 0
+  - name: NO_USE_BUF
+    description: Used.
+    value: 1
+enum/BUF_SPD_CTRL:
+  bit_size: 1
+  variants:
+  - name: LLP_MODE
+    description: Lower Low-Power mode.
+    value: 0
+  - name: LP_MODE
+    description: Low-Power mode.
+    value: 1
+enum/DACRFS:
+  bit_size: 2
+  variants:
+  - name: VREFH0
+    description: Selects VREFH0 as the reference voltage.
+    value: 0
+  - name: VREFH1
+    description: Selects VREFH1 as the reference voltage.
+    value: 1
+  - name: VREFH2
+    description: Selects VREFH2 as the reference voltage.
+    value: 2
+enum/FIFOEN:
+  bit_size: 1
+  variants:
+  - name: BUFFER_MODE
+    description: Disables FIFO mode and enables Buffer mode. Any data written to DATA[DATA] goes to buffer then goes to conversion.
+    value: 0
+  - name: FIFO_MODE
+    description: Enables FIFO mode. Data will be first read from FIFO to buffer and then goes to conversion.
+    value: 1
+enum/FIFORST:
+  bit_size: 1
+  variants:
+  - name: NO_EFFECT
+    description: No effect.
+    value: 0
+  - name: FIFO_RESET
+    description: FIFO reset.
+    value: 1
+enum/FIFOSZ:
+  bit_size: 3
+  variants:
+  - name: VAL_1
+    description: FIFO depth is 4.
+    value: 1
+  - name: VAL_2
+    description: FIFO depth is 8.
+    value: 2
+  - name: VAL_3
+    description: FIFO depth is 16.
+    value: 3
+  - name: VAL_4
+    description: FIFO depth is 32.
+    value: 4
+  - name: VAL_5
+    description: FIFO depth is 64.
+    value: 5
+  - name: VAL_6
+    description: FIFO depth is 128.
+    value: 6
+  - name: VAL_7
+    description: FIFO depth is 256.
+    value: 7
+enum/PTGCOCO:
+  bit_size: 1
+  variants:
+  - name: NOT_START
+    description: Not completed or not started.
+    value: 0
+  - name: COMPLETED
+    description: Completed.
+    value: 1
+enum/SWBK:
+  bit_size: 1
+  variants:
+  - name: NO_SWING
+    description: No swing back cycle has completed since the last time the flag was cleared.
+    value: 0
+  - name: SWING_BACK
+    description: At least one swing back cycle has occurred since the last time the flag was cleared.
+    value: 1
+enum/SWRST:
+  bit_size: 1
+  variants:
+  - name: NO_EFFECT
+    description: No effect.
+    value: 0
+  - name: SOFTWARE_RESET
+    description: Software reset.
+    value: 1
+enum/TRGSEL:
+  bit_size: 1
+  variants:
+  - name: HARDWARE
+    description: Hardware trigger.
+    value: 0
+  - name: SOFTWARE
+    description: Software trigger.
+    value: 1
+enum/WM:
+  bit_size: 1
+  variants:
+  - name: MORE_THAN_WLEVEL
+    description: Data in FIFO is more than watermark level.
+    value: 0
+  - name: LESS_THAN_WLEVEL
+    description: Data in FIFO is less than or equal to watermark level.
+    value: 1

@@ -1,0 +1,32 @@
+block/FMC0:
+  description: NPX.
+  items:
+  - name: REMAP
+    description: Data Remap.
+    byte_offset: 32
+    fieldset: REMAP
+fieldset/REMAP:
+  description: Data Remap.
+  fields:
+  - name: REMAPLK
+    description: Remap Lock Enable.
+    bit_offset: 0
+    bit_size: 1
+    enum: REMAPLK
+  - name: LIM
+    description: LIM Remapping Address.
+    bit_offset: 16
+    bit_size: 7
+  - name: LIMDP
+    description: LIMDP Remapping Address.
+    bit_offset: 24
+    bit_size: 7
+enum/REMAPLK:
+  bit_size: 1
+  variants:
+  - name: LOCK_DISABLED
+    description: 'Lock disabled: can write to REMAP.'
+    value: 0
+  - name: LOCK_ENABLED
+    description: 'Lock enabled: cannot write to REMAP.'
+    value: 1

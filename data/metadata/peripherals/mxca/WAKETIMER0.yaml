@@ -1,0 +1,37 @@
+block/WAKETIMER0:
+  description: WAKE_TIMER.
+  items:
+  - name: WAKE_TIMER_CTRL
+    description: Wake Timer Control.
+    byte_offset: 0
+    fieldset: WAKE_TIMER_CTRL
+  - name: WAKE_TIMER_CNT
+    description: Wake Timer Counter.
+    byte_offset: 12
+    fieldset: WAKE_TIMER_CNT
+fieldset/WAKE_TIMER_CNT:
+  description: Wake Timer Counter.
+  fields:
+  - name: WAKE_CNT
+    description: Wake Counter.
+    bit_offset: 0
+    bit_size: 32
+fieldset/WAKE_TIMER_CTRL:
+  description: Wake Timer Control.
+  fields:
+  - name: WAKE_FLAG
+    description: Wake Timer Status Flag.
+    bit_offset: 1
+    bit_size: 1
+  - name: CLR_WAKE_TIMER
+    description: Clear Wake Timer.
+    bit_offset: 2
+    bit_size: 1
+  - name: OSC_DIV_ENA
+    description: OSC Divide Enable.
+    bit_offset: 4
+    bit_size: 1
+  - name: INTR_EN
+    description: Enable Interrupt.
+    bit_offset: 5
+    bit_size: 1

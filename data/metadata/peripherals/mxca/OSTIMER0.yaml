@@ -1,0 +1,106 @@
+block/OSTIMER0:
+  description: OS Event Timer.
+  items:
+  - name: EVTIMERL
+    description: EVTIMER Low.
+    byte_offset: 0
+    access: Read
+    fieldset: EVTIMERL
+  - name: EVTIMERH
+    description: EVTIMER High.
+    byte_offset: 4
+    access: Read
+    fieldset: EVTIMERH
+  - name: CAPTURE_L
+    description: Local Capture Low for CPU.
+    byte_offset: 8
+    access: Read
+    fieldset: CAPTURE_L
+  - name: CAPTURE_H
+    description: Local Capture High for CPU.
+    byte_offset: 12
+    access: Read
+    fieldset: CAPTURE_H
+  - name: MATCH_L
+    description: Local Match Low for CPU.
+    byte_offset: 16
+    fieldset: MATCH_L
+  - name: MATCH_H
+    description: Local Match High for CPU.
+    byte_offset: 20
+    fieldset: MATCH_H
+  - name: OSEVENT_CTRL
+    description: OSTIMER Control for CPU.
+    byte_offset: 28
+    fieldset: OSEVENT_CTRL
+fieldset/CAPTURE_H:
+  description: Local Capture High for CPU.
+  fields:
+  - name: CAPTURE_VALUE
+    description: EVTimer Capture Value.
+    bit_offset: 0
+    bit_size: 10
+fieldset/CAPTURE_L:
+  description: Local Capture Low for CPU.
+  fields:
+  - name: CAPTURE_VALUE
+    description: EVTimer Capture Value.
+    bit_offset: 0
+    bit_size: 32
+fieldset/EVTIMERH:
+  description: EVTIMER High.
+  fields:
+  - name: EVTIMER_COUNT_VALUE
+    description: EVTimer Count Value.
+    bit_offset: 0
+    bit_size: 10
+fieldset/EVTIMERL:
+  description: EVTIMER Low.
+  fields:
+  - name: EVTIMER_COUNT_VALUE
+    description: EVTimer Count Value.
+    bit_offset: 0
+    bit_size: 32
+fieldset/MATCH_H:
+  description: Local Match High for CPU.
+  fields:
+  - name: MATCH_VALUE
+    description: EVTimer Match Value.
+    bit_offset: 0
+    bit_size: 10
+fieldset/MATCH_L:
+  description: Local Match Low for CPU.
+  fields:
+  - name: MATCH_VALUE
+    description: EVTimer Match Value.
+    bit_offset: 0
+    bit_size: 32
+fieldset/OSEVENT_CTRL:
+  description: OSTIMER Control for CPU.
+  fields:
+  - name: OSTIMER_INTRFLAG
+    description: Interrupt Flag.
+    bit_offset: 0
+    bit_size: 1
+  - name: OSTIMER_INTENA
+    description: Interrupt or Wake-Up Request.
+    bit_offset: 1
+    bit_size: 1
+    enum: OSTIMER_INTENA
+  - name: MATCH_WR_RDY
+    description: EVTimer Match Write Ready.
+    bit_offset: 2
+    bit_size: 1
+  - name: DEBUG_EN
+    description: Debug Enable.
+    bit_offset: 3
+    bit_size: 1
+enum/OSTIMER_INTENA:
+  bit_size: 1
+  variants:
+  - name: INTERRUPTS_BLOCKED
+    description: Interrupts blocked.
+    value: 0
+  - name: INTERRUPTS_ENABLED
+    description: Interrupts enabled.
+    value: 1

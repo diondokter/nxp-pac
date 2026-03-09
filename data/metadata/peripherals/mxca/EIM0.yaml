@@ -1,0 +1,47 @@
+block/EIM0:
+  description: Error Injection Module.
+  items:
+  - name: EIMCR
+    description: Error Injection Module Configuration Register.
+    byte_offset: 0
+    fieldset: EIMCR
+  - name: EICHEN
+    description: Error Injection Channel Enable register.
+    byte_offset: 4
+    fieldset: EICHEN
+  - name: EICHD0_WORD0
+    description: Error Injection Channel Descriptor 0, Word0.
+    byte_offset: 256
+    fieldset: EICHD0_WORD0
+  - name: EICHD0_WORD1
+    description: Error Injection Channel Descriptor 0, Word1.
+    byte_offset: 260
+    fieldset: EICHD0_WORD1
+fieldset/EICHD0_WORD0:
+  description: Error Injection Channel Descriptor 0, Word0.
+  fields:
+  - name: CHKBIT_MASK
+    description: Checkbit Mask.
+    bit_offset: 25
+    bit_size: 7
+fieldset/EICHD0_WORD1:
+  description: Error Injection Channel Descriptor 0, Word1.
+  fields:
+  - name: B0_3DATA_MASK
+    description: Data Mask Bytes 0-3.
+    bit_offset: 0
+    bit_size: 32
+fieldset/EICHEN:
+  description: Error Injection Channel Enable register.
+  fields:
+  - name: EICH0EN
+    description: Error Injection Channel 0 Enable.
+    bit_offset: 31
+    bit_size: 1
+fieldset/EIMCR:
+  description: Error Injection Module Configuration Register.
+  fields:
+  - name: GEIEN
+    description: Global Error Injection Enable.
+    bit_offset: 0
+    bit_size: 1

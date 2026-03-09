@@ -1,0 +1,836 @@
+block/CTIMER:
+  description: Standard Counter or Timer.
+  items:
+  - name: IR
+    description: Interrupt.
+    byte_offset: 0
+    fieldset: IR
+  - name: TCR
+    description: Timer Control.
+    byte_offset: 4
+    fieldset: TCR
+  - name: TC
+    description: Timer Counter.
+    byte_offset: 8
+    fieldset: TC
+  - name: PR
+    description: Prescale.
+    byte_offset: 12
+    fieldset: PR
+  - name: PC
+    description: Prescale Counter.
+    byte_offset: 16
+    fieldset: PC
+  - name: MCR
+    description: Match Control.
+    byte_offset: 20
+    fieldset: MCR
+  - name: MR
+    description: Match.
+    array:
+      len: 4
+      stride: 4
+    byte_offset: 24
+    fieldset: MR
+  - name: CCR
+    description: Capture Control.
+    byte_offset: 40
+    fieldset: CCR
+  - name: CR
+    description: Capture.
+    array:
+      len: 4
+      stride: 4
+    byte_offset: 44
+    access: Read
+    fieldset: CR
+  - name: EMR
+    description: External Match.
+    byte_offset: 60
+    fieldset: EMR
+  - name: CTCR
+    description: Count Control.
+    byte_offset: 112
+    fieldset: CTCR
+  - name: PWMC
+    description: PWM Control.
+    byte_offset: 116
+    fieldset: PWMC
+  - name: MSR
+    description: Match Shadow.
+    array:
+      len: 4
+      stride: 4
+    byte_offset: 120
+    fieldset: MSR
+fieldset/CCR:
+  description: Capture Control.
+  fields:
+  - name: CAP0RE
+    description: Rising Edge of Capture Channel 0.
+    bit_offset: 0
+    bit_size: 1
+    enum: CAP0RE
+  - name: CAP0FE
+    description: Falling Edge of Capture Channel 0.
+    bit_offset: 1
+    bit_size: 1
+    enum: CAP0FE
+  - name: CAP0I
+    description: Generate Interrupt on Channel 0 Capture Event.
+    bit_offset: 2
+    bit_size: 1
+    enum: CAP0I
+  - name: CAP1RE
+    description: Rising Edge of Capture Channel 1.
+    bit_offset: 3
+    bit_size: 1
+    enum: CAP1RE
+  - name: CAP1FE
+    description: Falling Edge of Capture Channel 1.
+    bit_offset: 4
+    bit_size: 1
+    enum: CAP1FE
+  - name: CAP1I
+    description: Generate Interrupt on Channel 1 Capture Event.
+    bit_offset: 5
+    bit_size: 1
+    enum: CAP1I
+  - name: CAP2RE
+    description: Rising Edge of Capture Channel 2.
+    bit_offset: 6
+    bit_size: 1
+    enum: CAP2RE
+  - name: CAP2FE
+    description: Falling Edge of Capture Channel 2.
+    bit_offset: 7
+    bit_size: 1
+    enum: CAP2FE
+  - name: CAP2I
+    description: Generate Interrupt on Channel 2 Capture Event.
+    bit_offset: 8
+    bit_size: 1
+    enum: CAP2I
+  - name: CAP3RE
+    description: Rising Edge of Capture Channel 3.
+    bit_offset: 9
+    bit_size: 1
+    enum: CAP3RE
+  - name: CAP3FE
+    description: Falling Edge of Capture Channel 3.
+    bit_offset: 10
+    bit_size: 1
+    enum: CAP3FE
+  - name: CAP3I
+    description: Generate Interrupt on Channel 3 Capture Event.
+    bit_offset: 11
+    bit_size: 1
+    enum: CAP3I
+fieldset/CR:
+  description: Capture.
+  fields:
+  - name: CAP
+    description: Timer Counter Capture Value.
+    bit_offset: 0
+    bit_size: 32
+fieldset/CTCR:
+  description: Count Control.
+  fields:
+  - name: CTMODE
+    description: Counter Timer Mode.
+    bit_offset: 0
+    bit_size: 2
+    enum: CTMODE
+  - name: CINSEL
+    description: Count Input Select.
+    bit_offset: 2
+    bit_size: 2
+    enum: CINSEL
+  - name: ENCC
+    description: Capture Channel Enable.
+    bit_offset: 4
+    bit_size: 1
+  - name: SELCC
+    description: Edge Select.
+    bit_offset: 5
+    bit_size: 3
+    enum: SELCC
+fieldset/EMR:
+  description: External Match.
+  fields:
+  - name: EM0
+    description: External Match 0.
+    bit_offset: 0
+    bit_size: 1
+    enum: EM0
+  - name: EM1
+    description: External Match 1.
+    bit_offset: 1
+    bit_size: 1
+    enum: EM1
+  - name: EM2
+    description: External Match 2.
+    bit_offset: 2
+    bit_size: 1
+    enum: EM2
+  - name: EM3
+    description: External Match 3.
+    bit_offset: 3
+    bit_size: 1
+    enum: EM3
+  - name: EMC0
+    description: External Match Control 0.
+    bit_offset: 4
+    bit_size: 2
+    enum: EMC0
+  - name: EMC1
+    description: External Match Control 1.
+    bit_offset: 6
+    bit_size: 2
+    enum: EMC1
+  - name: EMC2
+    description: External Match Control 2.
+    bit_offset: 8
+    bit_size: 2
+    enum: EMC2
+  - name: EMC3
+    description: External Match Control 3.
+    bit_offset: 10
+    bit_size: 2
+    enum: EMC3
+fieldset/IR:
+  description: Interrupt.
+  fields:
+  - name: MR0INT
+    description: Interrupt Flag for Match Channel 0 Event.
+    bit_offset: 0
+    bit_size: 1
+  - name: MR1INT
+    description: Interrupt Flag for Match Channel 1 Event.
+    bit_offset: 1
+    bit_size: 1
+  - name: MR2INT
+    description: Interrupt Flag for Match Channel 2 Event.
+    bit_offset: 2
+    bit_size: 1
+  - name: MR3INT
+    description: Interrupt Flag for Match Channel 3 Event.
+    bit_offset: 3
+    bit_size: 1
+  - name: CR0INT
+    description: Interrupt Flag for Capture Channel 0 Event.
+    bit_offset: 4
+    bit_size: 1
+  - name: CR1INT
+    description: Interrupt Flag for Capture Channel 1 Event.
+    bit_offset: 5
+    bit_size: 1
+  - name: CR2INT
+    description: Interrupt Flag for Capture Channel 2 Event.
+    bit_offset: 6
+    bit_size: 1
+  - name: CR3INT
+    description: Interrupt Flag for Capture Channel 3 Event.
+    bit_offset: 7
+    bit_size: 1
+fieldset/MCR:
+  description: Match Control.
+  fields:
+  - name: MR0I
+    description: Interrupt on MR0.
+    bit_offset: 0
+    bit_size: 1
+    enum: MR0I
+  - name: MR0R
+    description: Reset on MR0.
+    bit_offset: 1
+    bit_size: 1
+    enum: MR0R
+  - name: MR0S
+    description: Stop on MR0.
+    bit_offset: 2
+    bit_size: 1
+    enum: MR0S
+  - name: MR1I
+    description: Interrupt on MR1.
+    bit_offset: 3
+    bit_size: 1
+    enum: MR1I
+  - name: MR1R
+    description: Reset on MR1.
+    bit_offset: 4
+    bit_size: 1
+    enum: MR1R
+  - name: MR1S
+    description: Stop on MR1.
+    bit_offset: 5
+    bit_size: 1
+    enum: MR1S
+  - name: MR2I
+    description: Interrupt on MR2.
+    bit_offset: 6
+    bit_size: 1
+    enum: MR2I
+  - name: MR2R
+    description: Reset on MR2.
+    bit_offset: 7
+    bit_size: 1
+    enum: MR2R
+  - name: MR2S
+    description: Stop on MR2.
+    bit_offset: 8
+    bit_size: 1
+    enum: MR2S
+  - name: MR3I
+    description: Interrupt on MR3.
+    bit_offset: 9
+    bit_size: 1
+    enum: MR3I
+  - name: MR3R
+    description: Reset on MR3.
+    bit_offset: 10
+    bit_size: 1
+    enum: MR3R
+  - name: MR3S
+    description: Stop on MR3.
+    bit_offset: 11
+    bit_size: 1
+    enum: MR3S
+  - name: MR0RL
+    description: Reload MR.
+    bit_offset: 24
+    bit_size: 1
+    enum: MR0RL
+  - name: MR1RL
+    description: Reload MR.
+    bit_offset: 25
+    bit_size: 1
+    enum: MR1RL
+  - name: MR2RL
+    description: Reload MR.
+    bit_offset: 26
+    bit_size: 1
+    enum: MR2RL
+  - name: MR3RL
+    description: Reload MR.
+    bit_offset: 27
+    bit_size: 1
+    enum: MR3RL
+fieldset/MR:
+  description: Match.
+  fields:
+  - name: MATCH
+    description: Timer Counter Match Value.
+    bit_offset: 0
+    bit_size: 32
+fieldset/MSR:
+  description: Match Shadow.
+  fields:
+  - name: MATCH_SHADOW
+    description: Timer Counter Match Shadow Value.
+    bit_offset: 0
+    bit_size: 32
+fieldset/PC:
+  description: Prescale Counter.
+  fields:
+  - name: PCVAL
+    description: Prescale Counter Value.
+    bit_offset: 0
+    bit_size: 32
+fieldset/PR:
+  description: Prescale.
+  fields:
+  - name: PRVAL
+    description: Prescale Reload Value.
+    bit_offset: 0
+    bit_size: 32
+fieldset/PWMC:
+  description: PWM Control.
+  fields:
+  - name: PWMEN0
+    description: PWM Mode Enable for Channel 0.
+    bit_offset: 0
+    bit_size: 1
+    enum: PWMEN0
+  - name: PWMEN1
+    description: PWM Mode Enable for Channel 1.
+    bit_offset: 1
+    bit_size: 1
+    enum: PWMEN1
+  - name: PWMEN2
+    description: PWM Mode Enable for Channel 2.
+    bit_offset: 2
+    bit_size: 1
+    enum: PWMEN2
+  - name: PWMEN3
+    description: PWM Mode Enable for Channel 3.
+    bit_offset: 3
+    bit_size: 1
+    enum: PWMEN3
+fieldset/TC:
+  description: Timer Counter.
+  fields:
+  - name: TCVAL
+    description: Timer Counter Value.
+    bit_offset: 0
+    bit_size: 32
+fieldset/TCR:
+  description: Timer Control.
+  fields:
+  - name: CEN
+    description: Counter Enable.
+    bit_offset: 0
+    bit_size: 1
+  - name: CRST
+    description: Counter Reset Enable.
+    bit_offset: 1
+    bit_size: 1
+  - name: AGCEN
+    description: Allow Global Count Enable.
+    bit_offset: 4
+    bit_size: 1
+  - name: ATCEN
+    description: Allow Trigger Count Enable.
+    bit_offset: 5
+    bit_size: 1
+enum/CAP0FE:
+  bit_size: 1
+  variants:
+  - name: CAP0FE_0
+    description: Does not load.
+    value: 0
+  - name: CAPOFE_1
+    description: Loads.
+    value: 1
+enum/CAP0I:
+  bit_size: 1
+  variants:
+  - name: CAP0I_0
+    description: Does not generate.
+    value: 0
+  - name: CAPOI_1
+    description: Generates.
+    value: 1
+enum/CAP0RE:
+  bit_size: 1
+  variants:
+  - name: CAP0RE_0
+    description: Does not load.
+    value: 0
+  - name: CAPORE_1
+    description: Loads.
+    value: 1
+enum/CAP1FE:
+  bit_size: 1
+  variants:
+  - name: CAP1FE_0
+    description: Does not load.
+    value: 0
+  - name: CAP1FE_1
+    description: Loads.
+    value: 1
+enum/CAP1I:
+  bit_size: 1
+  variants:
+  - name: CAP1I_0
+    description: Does not generates.
+    value: 0
+  - name: CAP1I_1
+    description: Generates.
+    value: 1
+enum/CAP1RE:
+  bit_size: 1
+  variants:
+  - name: CAP1RE_0
+    description: Does not load.
+    value: 0
+  - name: CAP1RE_1
+    description: Loads.
+    value: 1
+enum/CAP2FE:
+  bit_size: 1
+  variants:
+  - name: CAP2FE_0
+    description: Does not load.
+    value: 0
+  - name: CAP2FE_1
+    description: Loads.
+    value: 1
+enum/CAP2I:
+  bit_size: 1
+  variants:
+  - name: CAP2I_0
+    description: Does not generate.
+    value: 0
+  - name: CAP2I_1
+    description: Generates.
+    value: 1
+enum/CAP2RE:
+  bit_size: 1
+  variants:
+  - name: CAP2RE_0
+    description: Does not load.
+    value: 0
+  - name: CAP2RE_1
+    description: Loads.
+    value: 1
+enum/CAP3FE:
+  bit_size: 1
+  variants:
+  - name: CAP3FE_0
+    description: Does not load.
+    value: 0
+  - name: CAP3FE_1
+    description: Loads.
+    value: 1
+enum/CAP3I:
+  bit_size: 1
+  variants:
+  - name: CAP3I_0
+    description: Does not generate.
+    value: 0
+  - name: CAP3I_1
+    description: Generates.
+    value: 1
+enum/CAP3RE:
+  bit_size: 1
+  variants:
+  - name: CAP3RE_0
+    description: Does not load.
+    value: 0
+  - name: CAP3RE_1
+    description: Loads.
+    value: 1
+enum/CINSEL:
+  bit_size: 2
+  variants:
+  - name: CHANNEL_0
+    description: Channel 0, CAPn[0] for CTIMERn.
+    value: 0
+  - name: CHANNEL_1
+    description: Channel 1, CAPn[1] for CTIMERn.
+    value: 1
+  - name: CHANNEL_2
+    description: Channel 2, CAPn[2] for CTIMERn.
+    value: 2
+  - name: CHANNEL_3
+    description: Channel 3, CAPn[3] for CTIMERn.
+    value: 3
+enum/CTMODE:
+  bit_size: 2
+  variants:
+  - name: TIMER
+    description: Timer mode.
+    value: 0
+  - name: COUNTER_RISING_EDGE
+    description: Counter mode rising edge.
+    value: 1
+  - name: COUNTER_FALLING_EDGE
+    description: Counter mode falling edge.
+    value: 2
+  - name: COUNTER_DUAL_EDGE
+    description: Counter mode dual edge.
+    value: 3
+enum/EM0:
+  bit_size: 1
+  variants:
+  - name: CLEAR
+    description: Low.
+    value: 0
+  - name: SET
+    description: High.
+    value: 1
+enum/EM1:
+  bit_size: 1
+  variants:
+  - name: CLEAR
+    description: Low.
+    value: 0
+  - name: SET
+    description: High.
+    value: 1
+enum/EM2:
+  bit_size: 1
+  variants:
+  - name: CLEAR
+    description: Low.
+    value: 0
+  - name: SET
+    description: High.
+    value: 1
+enum/EM3:
+  bit_size: 1
+  variants:
+  - name: CLEAR
+    description: Low.
+    value: 0
+  - name: SET
+    description: High.
+    value: 1
+enum/EMC0:
+  bit_size: 2
+  variants:
+  - name: DO_NOTHING
+    description: Does nothing.
+    value: 0
+  - name: CLEAR
+    description: Goes low.
+    value: 1
+  - name: SET
+    description: Goes high.
+    value: 2
+  - name: TOGGLE
+    description: Toggles.
+    value: 3
+enum/EMC1:
+  bit_size: 2
+  variants:
+  - name: DO_NOTHING
+    description: Does nothing.
+    value: 0
+  - name: CLEAR
+    description: Goes low.
+    value: 1
+  - name: SET
+    description: Goes high.
+    value: 2
+  - name: TOGGLE
+    description: Toggles.
+    value: 3
+enum/EMC2:
+  bit_size: 2
+  variants:
+  - name: DO_NOTHING
+    description: Does nothing.
+    value: 0
+  - name: CLEAR
+    description: Goes low.
+    value: 1
+  - name: SET
+    description: Goes high.
+    value: 2
+  - name: TOGGLE
+    description: Toggles.
+    value: 3
+enum/EMC3:
+  bit_size: 2
+  variants:
+  - name: DO_NOTHING
+    description: Does nothing.
+    value: 0
+  - name: CLEAR
+    description: Goes low.
+    value: 1
+  - name: SET
+    description: Goes high.
+    value: 2
+  - name: TOGGLE
+    description: Toggles.
+    value: 3
+enum/MR0I:
+  bit_size: 1
+  variants:
+  - name: MR0I_0
+    description: Does not generate.
+    value: 0
+  - name: MR0I_1
+    description: Generates.
+    value: 1
+enum/MR0R:
+  bit_size: 1
+  variants:
+  - name: MR0R_0
+    description: Does not reset.
+    value: 0
+  - name: MR0R_1
+    description: Resets.
+    value: 1
+enum/MR0RL:
+  bit_size: 1
+  variants:
+  - name: MR0RL_0
+    description: Does not reload.
+    value: 0
+  - name: MR0RL_1
+    description: Reloads.
+    value: 1
+enum/MR0S:
+  bit_size: 1
+  variants:
+  - name: MR0S_0
+    description: Does not stop.
+    value: 0
+  - name: MR0S_1
+    description: Stops.
+    value: 1
+enum/MR1I:
+  bit_size: 1
+  variants:
+  - name: MR1I_0
+    description: Does not generate.
+    value: 0
+  - name: MR1I_1
+    description: Generates.
+    value: 1
+enum/MR1R:
+  bit_size: 1
+  variants:
+  - name: MR1R_0
+    description: Does not reset.
+    value: 0
+  - name: MR1R_1
+    description: Resets.
+    value: 1
+enum/MR1RL:
+  bit_size: 1
+  variants:
+  - name: MR1RL_0
+    description: Does not reload.
+    value: 0
+  - name: MR1RL_1
+    description: Reloads.
+    value: 1
+enum/MR1S:
+  bit_size: 1
+  variants:
+  - name: MRIS_0
+    description: Does not stop.
+    value: 0
+  - name: MRIS_1
+    description: Stops.
+    value: 1
+enum/MR2I:
+  bit_size: 1
+  variants:
+  - name: MR2I_0
+    description: Does not generate.
+    value: 0
+  - name: MR2I_1
+    description: Generates.
+    value: 1
+enum/MR2R:
+  bit_size: 1
+  variants:
+  - name: MR2R_0
+    description: Does not reset.
+    value: 0
+  - name: MR2R_1
+    description: Resets.
+    value: 1
+enum/MR2RL:
+  bit_size: 1
+  variants:
+  - name: MR2RL_0
+    description: Does not reload.
+    value: 0
+  - name: MR2RL_1
+    description: Reloads.
+    value: 1
+enum/MR2S:
+  bit_size: 1
+  variants:
+  - name: MR2S_0
+    description: Does not stop.
+    value: 0
+  - name: MR2S_1
+    description: Stops.
+    value: 1
+enum/MR3I:
+  bit_size: 1
+  variants:
+  - name: MR3I_0
+    description: Does not generate.
+    value: 0
+  - name: MR3I_1
+    description: Generates.
+    value: 1
+enum/MR3R:
+  bit_size: 1
+  variants:
+  - name: MR3R_0
+    description: Does not reset.
+    value: 0
+  - name: MR3R_1
+    description: Resets.
+    value: 1
+enum/MR3RL:
+  bit_size: 1
+  variants:
+  - name: MR3RL_0
+    description: Does not reload.
+    value: 0
+  - name: MR3RL_1
+    description: Reloads.
+    value: 1
+enum/MR3S:
+  bit_size: 1
+  variants:
+  - name: MR3S_0
+    description: Does not stop.
+    value: 0
+  - name: MR3S_1
+    description: Stops.
+    value: 1
+enum/PWMEN0:
+  bit_size: 1
+  variants:
+  - name: MATCH
+    description: Disable.
+    value: 0
+  - name: PWM
+    description: Enable.
+    value: 1
+enum/PWMEN1:
+  bit_size: 1
+  variants:
+  - name: MATCH
+    description: Disable.
+    value: 0
+  - name: PWM
+    description: Enable.
+    value: 1
+enum/PWMEN2:
+  bit_size: 1
+  variants:
+  - name: MATCH
+    description: Disable.
+    value: 0
+  - name: PWM
+    description: Enable.
+    value: 1
+enum/PWMEN3:
+  bit_size: 1
+  variants:
+  - name: MATCH
+    description: Disable.
+    value: 0
+  - name: PWM
+    description: Enable.
+    value: 1
+enum/SELCC:
+  bit_size: 3
+  variants:
+  - name: CHANNEL_0_RISING
+    description: Capture channel 0 rising edge.
+    value: 0
+  - name: CHANNEL_0_FALLING
+    description: Capture channel 0 falling edge.
+    value: 1
+  - name: CHANNEL_1_RISING
+    description: Capture channel 1 rising edge.
+    value: 2
+  - name: CHANNEL_1_FALLING
+    description: Capture channel 1 falling edge.
+    value: 3
+  - name: CHANNEL_2_RISING
+    description: Capture channel 2 rising edge.
+    value: 4
+  - name: CHANNEL_2_FALLING
+    description: Capture channel 2 falling edge.
+    value: 5
+  - name: CHANNEL_3_RISING
+    description: Capture channel 3 rising edge.
+    value: 6
+  - name: CHANNEL_3_FALLING
+    description: Capture channel 3 falling edge.
+    value: 7

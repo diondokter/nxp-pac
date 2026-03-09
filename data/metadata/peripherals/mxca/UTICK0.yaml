@@ -1,0 +1,255 @@
+block/UTICK0:
+  description: UTICK.
+  items:
+  - name: CTRL
+    description: Control.
+    byte_offset: 0
+    fieldset: CTRL
+  - name: STAT
+    description: Status.
+    byte_offset: 4
+    fieldset: STAT
+  - name: CFG
+    description: Capture Configuration.
+    byte_offset: 8
+    fieldset: CFG
+  - name: CAPCLR
+    description: Capture Clear.
+    byte_offset: 12
+    access: Write
+    fieldset: CAPCLR
+  - name: CAP
+    description: Capture.
+    array:
+      len: 4
+      stride: 4
+    byte_offset: 16
+    access: Read
+    fieldset: CAP
+fieldset/CAP:
+  description: Capture.
+  fields:
+  - name: CAP_VALUE
+    description: Captured Value for the Related Capture Event.
+    bit_offset: 0
+    bit_size: 31
+  - name: VALID
+    description: Captured Value Valid Flag.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CAPCLR:
+  description: Capture Clear.
+  fields:
+  - name: CAPCLR0
+    description: Clear Capture 0.
+    bit_offset: 0
+    bit_size: 1
+    enum: CAPCLR0
+  - name: CAPCLR1
+    description: Clear Capture 1.
+    bit_offset: 1
+    bit_size: 1
+    enum: CAPCLR1
+  - name: CAPCLR2
+    description: Clear Capture 2.
+    bit_offset: 2
+    bit_size: 1
+    enum: CAPCLR2
+  - name: CAPCLR3
+    description: Clear Capture 3.
+    bit_offset: 3
+    bit_size: 1
+    enum: CAPCLR3
+fieldset/CFG:
+  description: Capture Configuration.
+  fields:
+  - name: CAPEN0
+    description: Enable Capture 0.
+    bit_offset: 0
+    bit_size: 1
+    enum: CAPEN0
+  - name: CAPEN1
+    description: Enable Capture 1.
+    bit_offset: 1
+    bit_size: 1
+    enum: CAPEN1
+  - name: CAPEN2
+    description: Enable Capture 2.
+    bit_offset: 2
+    bit_size: 1
+    enum: CAPEN2
+  - name: CAPEN3
+    description: Enable Capture 3.
+    bit_offset: 3
+    bit_size: 1
+    enum: CAPEN3
+  - name: CAPPOL0
+    description: Capture Polarity 0.
+    bit_offset: 8
+    bit_size: 1
+    enum: CAPPOL0
+  - name: CAPPOL1
+    description: Capture-Polarity 1.
+    bit_offset: 9
+    bit_size: 1
+    enum: CAPPOL1
+  - name: CAPPOL2
+    description: Capture Polarity 2.
+    bit_offset: 10
+    bit_size: 1
+    enum: CAPPOL2
+  - name: CAPPOL3
+    description: Capture Polarity 3.
+    bit_offset: 11
+    bit_size: 1
+    enum: CAPPOL3
+fieldset/CTRL:
+  description: Control.
+  fields:
+  - name: DELAYVAL
+    description: Tick Interval.
+    bit_offset: 0
+    bit_size: 31
+  - name: REPEAT
+    description: Repeat Delay.
+    bit_offset: 31
+    bit_size: 1
+    enum: REPEAT
+fieldset/STAT:
+  description: Status.
+  fields:
+  - name: INTR
+    description: Interrupt Flag.
+    bit_offset: 0
+    bit_size: 1
+  - name: ACTIVE
+    description: Timer Active Flag.
+    bit_offset: 1
+    bit_size: 1
+    enum: ACTIVE
+enum/ACTIVE:
+  bit_size: 1
+  variants:
+  - name: TIMERISNOTACTIVE
+    description: Inactive (stopped).
+    value: 0
+  - name: TIMERISACTIVE
+    description: Active.
+    value: 1
+enum/CAPCLR0:
+  bit_size: 1
+  variants:
+  - name: CAPCLR0NOTHING
+    description: Does nothing.
+    value: 0
+  - name: CAPCLR0CLEARED
+    description: Clears the CAP0 register value.
+    value: 1
+enum/CAPCLR1:
+  bit_size: 1
+  variants:
+  - name: CAPCLR1NOTHING
+    description: Does nothing.
+    value: 0
+  - name: CAPCLR1CLEARED
+    description: Clears the CAP1 register value.
+    value: 1
+enum/CAPCLR2:
+  bit_size: 1
+  variants:
+  - name: CAPCLR2NOTHING
+    description: Does nothing.
+    value: 0
+  - name: CAPCLR2CLEARED
+    description: Clears the CAP2 register value.
+    value: 1
+enum/CAPCLR3:
+  bit_size: 1
+  variants:
+  - name: CAPCLR3NOTHING
+    description: Does nothing.
+    value: 0
+  - name: CAPCLR3CLEARED
+    description: Clears the CAP3 register value.
+    value: 1
+enum/CAPEN0:
+  bit_size: 1
+  variants:
+  - name: CAPEN0ISDISABLED
+    description: Disable.
+    value: 0
+  - name: CAPEN0ISENABLED
+    description: Enable.
+    value: 1
+enum/CAPEN1:
+  bit_size: 1
+  variants:
+  - name: CAPEN1ISDISABLED
+    description: Disable.
+    value: 0
+  - name: CAPEN1ISENABLED
+    description: Enable.
+    value: 1
+enum/CAPEN2:
+  bit_size: 1
+  variants:
+  - name: CAPEN2ISDISABLED
+    description: Disable.
+    value: 0
+  - name: CAPEN2ISENABLED
+    description: Enable.
+    value: 1
+enum/CAPEN3:
+  bit_size: 1
+  variants:
+  - name: CAPEN3ISDISABLED
+    description: Disable.
+    value: 0
+  - name: CAPEN3ISENABLED
+    description: Enable.
+    value: 1
+enum/CAPPOL0:
+  bit_size: 1
+  variants:
+  - name: CAPPOL0POSEDGECAPTURE
+    description: Positive.
+    value: 0
+  - name: CAPPOL0NEGEDGECAPTURE
+    description: Negative.
+    value: 1
+enum/CAPPOL1:
+  bit_size: 1
+  variants:
+  - name: CAPPOL1POSEDGECAPTURE
+    description: Positive.
+    value: 0
+  - name: CAPPOL1NEGEDGECAPTURE
+    description: Negative.
+    value: 1
+enum/CAPPOL2:
+  bit_size: 1
+  variants:
+  - name: CAPPOL2POSEDGECAPTURE
+    description: Positive.
+    value: 0
+  - name: CAPPOL2NEGEDGECAPTURE
+    description: Negative.
+    value: 1
+enum/CAPPOL3:
+  bit_size: 1
+  variants:
+  - name: CAPPOL3POSEDGECAPTURE
+    description: Positive.
+    value: 0
+  - name: CAPPOL3NEGEDGECAPTURE
+    description: Negative.
+    value: 1
+enum/REPEAT:
+  bit_size: 1
+  variants:
+  - name: DELAYONCE
+    description: One-time delay.
+    value: 0
+  - name: DELAYREPEATS
+    description: Delay repeats continuously.
+    value: 1

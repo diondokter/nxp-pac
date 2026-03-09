@@ -1,0 +1,114 @@
+block/SMARTDMA0:
+  description: Smart DMA Controller.
+  items:
+  - name: BOOTADR
+    description: Boot Address.
+    byte_offset: 32
+    fieldset: BOOTADR
+  - name: CTRL
+    description: Control.
+    byte_offset: 36
+    fieldset: CTRL
+  - name: PC
+    description: Program Counter.
+    byte_offset: 40
+    access: Read
+    fieldset: PC
+  - name: SP
+    description: Stack Pointer.
+    byte_offset: 44
+    access: Read
+    fieldset: SP
+  - name: ARM2EZH
+    description: ARM to EZH Interrupt Control.
+    byte_offset: 64
+    fieldset: ARM2EZH
+  - name: EZH2ARM
+    description: EZH to ARM Trigger.
+    byte_offset: 68
+    fieldset: EZH2ARM
+  - name: PENDTRAP
+    description: Pending Trap Control.
+    byte_offset: 72
+    fieldset: PENDTRAP
+fieldset/ARM2EZH:
+  description: ARM to EZH Interrupt Control.
+  fields:
+  - name: IE
+    description: Interrupt Enable.
+    bit_offset: 0
+    bit_size: 2
+  - name: GP
+    description: General purpose register bits.
+    bit_offset: 2
+    bit_size: 30
+fieldset/BOOTADR:
+  description: Boot Address.
+  fields:
+  - name: ADDR
+    description: 32-bit boot address, the boot address should be 4-byte aligned.
+    bit_offset: 2
+    bit_size: 30
+fieldset/CTRL:
+  description: Control.
+  fields:
+  - name: START
+    description: Start Bit Ignition.
+    bit_offset: 0
+    bit_size: 1
+  - name: EXF
+    description: External Flag.
+    bit_offset: 1
+    bit_size: 1
+  - name: ERRDIS
+    description: Error Disable.
+    bit_offset: 2
+    bit_size: 1
+  - name: BUFEN
+    description: Buffer Enable.
+    bit_offset: 3
+    bit_size: 1
+  - name: SYNCEN
+    description: Sync Enable.
+    bit_offset: 4
+    bit_size: 1
+  - name: WKEY
+    description: Write Key.
+    bit_offset: 16
+    bit_size: 16
+fieldset/EZH2ARM:
+  description: EZH to ARM Trigger.
+  fields:
+  - name: GP
+    description: General purpose register bits Writing to EZH2ARM triggers the ARM interrupt when ARM2EZH [1:0] == 2h.
+    bit_offset: 0
+    bit_size: 32
+fieldset/PC:
+  description: Program Counter.
+  fields:
+  - name: PC
+    description: Program Counter.
+    bit_offset: 0
+    bit_size: 32
+fieldset/PENDTRAP:
+  description: Pending Trap Control.
+  fields:
+  - name: STATUS
+    description: Status Flag or Pending Trap Request.
+    bit_offset: 0
+    bit_size: 8
+  - name: POL
+    description: Polarity.
+    bit_offset: 8
+    bit_size: 8
+  - name: EN
+    description: Enable Pending Trap.
+    bit_offset: 16
+    bit_size: 8
+fieldset/SP:
+  description: Stack Pointer.
+  fields:
+  - name: SP
+    description: Stack Pointer.
+    bit_offset: 0
+    bit_size: 32

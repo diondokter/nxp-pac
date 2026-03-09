@@ -1,0 +1,130 @@
+block/CRC0:
+  description: CRC.
+  items:
+  - name: DATA
+    description: Data.
+    byte_offset: 0
+    fieldset: DATA
+  - name: GPOLY
+    description: Polynomial.
+    byte_offset: 4
+    fieldset: GPOLY
+  - name: CTRL
+    description: Control.
+    byte_offset: 8
+    fieldset: CTRL
+fieldset/CTRL:
+  description: Control.
+  fields:
+  - name: TCRC
+    description: TCRC.
+    bit_offset: 24
+    bit_size: 1
+    enum: TCRC
+  - name: WAS
+    description: Write as Seed.
+    bit_offset: 25
+    bit_size: 1
+    enum: WAS
+  - name: FXOR
+    description: Complement Read of CRC Data Register.
+    bit_offset: 26
+    bit_size: 1
+    enum: FXOR
+  - name: TOTR
+    description: Transpose Type for Read.
+    bit_offset: 28
+    bit_size: 2
+    enum: TOTR
+  - name: TOT
+    description: Transpose Type for Write.
+    bit_offset: 30
+    bit_size: 2
+    enum: TOT
+fieldset/DATA:
+  description: Data.
+  fields:
+  - name: LL
+    description: Lower Part of Low Byte.
+    bit_offset: 0
+    bit_size: 8
+  - name: LU
+    description: Upper Part of Low Byte.
+    bit_offset: 8
+    bit_size: 8
+  - name: HL
+    description: Lower Part of High Byte.
+    bit_offset: 16
+    bit_size: 8
+  - name: HU
+    description: Upper Part of High Byte.
+    bit_offset: 24
+    bit_size: 8
+fieldset/GPOLY:
+  description: Polynomial.
+  fields:
+  - name: LOW
+    description: Low Half-Word.
+    bit_offset: 0
+    bit_size: 16
+  - name: HIGH
+    description: High Half-Word.
+    bit_offset: 16
+    bit_size: 16
+enum/FXOR:
+  bit_size: 1
+  variants:
+  - name: NOXOR
+    description: Disables XOR on reading data.
+    value: 0
+  - name: INVERT
+    description: Inverts or complements the read value of the CRC Data.
+    value: 1
+enum/TCRC:
+  bit_size: 1
+  variants:
+  - name: B16
+    description: 16 bits.
+    value: 0
+  - name: B32
+    description: 32 bits.
+    value: 1
+enum/TOT:
+  bit_size: 2
+  variants:
+  - name: NOTRNPS
+    description: No transposition.
+    value: 0
+  - name: BTS_TRNPS
+    description: Bits in bytes are transposed, but bytes are not transposed.
+    value: 1
+  - name: BYTS_BTS_TRNPS
+    description: Both bits in bytes and bytes are transposed.
+    value: 2
+  - name: BYTS_TRNPS
+    description: Only bytes are transposed, no bits in a byte are transposed.
+    value: 3
+enum/TOTR:
+  bit_size: 2
+  variants:
+  - name: NOTRNPS
+    description: No transposition.
+    value: 0
+  - name: BTS_TRNPS
+    description: Bits in bytes are transposed, but bytes are not transposed.
+    value: 1
+  - name: BYTS_BTS_TRNPS
+    description: Both bits in bytes and bytes are transposed.
+    value: 2
+  - name: BYTS_TRNPS
+    description: Only bytes are transposed, no bits in a byte are transposed.
+    value: 3
+enum/WAS:
+  bit_size: 1
+  variants:
+  - name: DATA
+    description: Data values.
+    value: 0
+  - name: SEED
+    description: Seed values.
+    value: 1

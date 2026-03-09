@@ -1,0 +1,718 @@
+block/TRNG0:
+  description: pd_main.trng0.
+  items:
+  - name: MCTL
+    description: Miscellaneous Control Register.
+    byte_offset: 0
+    fieldset: MCTL
+  - name: SCMISC
+    description: Statistical Check Miscellaneous Register.
+    byte_offset: 4
+    fieldset: SCMISC
+  - name: SDCTL
+    description: Seed Control Register.
+    byte_offset: 16
+    fieldset: SDCTL
+  - name: FRQMIN
+    description: Frequency Count Minimum Limit Register.
+    byte_offset: 24
+    fieldset: FRQMIN
+  - name: OSC2_FRQCNT
+    description: Oscillator-2 Frequency Count Register.
+    byte_offset: 24
+    access: Read
+    fieldset: OSC2_FRQCNT
+  - name: FRQCNT
+    description: Frequency Count Register.
+    byte_offset: 28
+    access: Read
+    fieldset: FRQCNT
+  - name: FRQMAX
+    description: Frequency Count Maximum Limit Register.
+    byte_offset: 28
+    fieldset: FRQMAX
+  - name: SCMC
+    description: Statistical Check Monobit Count Register.
+    byte_offset: 32
+    access: Read
+    fieldset: SCMC
+  - name: SCML
+    description: Statistical Check Monobit Limit Register.
+    byte_offset: 32
+    fieldset: SCML
+  - name: SCR1C
+    description: Statistical Check Run Length 1 Count Register.
+    byte_offset: 36
+    access: Read
+    fieldset: SCR1C
+  - name: SCR1L
+    description: Statistical Check Run Length 1 Limit Register.
+    byte_offset: 36
+    fieldset: SCR1L
+  - name: SCR2C
+    description: Statistical Check Run Length 2 Count Register.
+    byte_offset: 40
+    access: Read
+    fieldset: SCR2C
+  - name: SCR2L
+    description: Statistical Check Run Length 2 Limit Register.
+    byte_offset: 40
+    fieldset: SCR2L
+  - name: SCR3C
+    description: Statistical Check Run Length 3 Count Register.
+    byte_offset: 44
+    access: Read
+    fieldset: SCR3C
+  - name: SCR3L
+    description: Statistical Check Run Length 3 Limit Register.
+    byte_offset: 44
+    fieldset: SCR3L
+  - name: STATUS
+    description: Status Register.
+    byte_offset: 60
+    access: Read
+    fieldset: STATUS
+  - name: ENT
+    description: Entropy Read Register.
+    array:
+      len: 8
+      stride: 4
+    byte_offset: 64
+    access: Read
+    fieldset: ENT
+  - name: SEC_CFG
+    description: Security Configuration Register.
+    byte_offset: 160
+    fieldset: SEC_CFG
+  - name: INT_CTRL
+    description: Interrupt Control Register.
+    byte_offset: 164
+    fieldset: INT_CTRL
+  - name: INT_MASK
+    description: Mask Register.
+    byte_offset: 168
+    fieldset: INT_MASK
+  - name: INT_STATUS
+    description: Interrupt Status Register.
+    byte_offset: 172
+    access: Read
+    fieldset: INT_STATUS
+  - name: OSC2_CTL
+    description: TRNG Oscillator 2 Control Register.
+    byte_offset: 236
+    fieldset: OSC2_CTL
+  - name: VID1
+    description: Version ID Register (MS).
+    byte_offset: 240
+    access: Read
+    fieldset: VID1
+  - name: VID2
+    description: Version ID Register (LS).
+    byte_offset: 244
+    access: Read
+    fieldset: VID2
+fieldset/ENT:
+  description: Entropy Read Register.
+  fields:
+  - name: ENT
+    description: Entropy Value.
+    bit_offset: 0
+    bit_size: 32
+fieldset/FRQCNT:
+  description: Frequency Count Register.
+  fields:
+  - name: FRQ_CT
+    description: Frequency Count.
+    bit_offset: 0
+    bit_size: 22
+fieldset/FRQMAX:
+  description: Frequency Count Maximum Limit Register.
+  fields:
+  - name: FRQ_MAX
+    description: Frequency Counter Maximum Limit.
+    bit_offset: 0
+    bit_size: 22
+fieldset/FRQMIN:
+  description: Frequency Count Minimum Limit Register.
+  fields:
+  - name: FRQ_MIN
+    description: Frequency Count Minimum Limit.
+    bit_offset: 0
+    bit_size: 22
+fieldset/INT_CTRL:
+  description: Interrupt Control Register.
+  fields:
+  - name: HW_ERR
+    description: Clear the HW_ERR interrupt.
+    bit_offset: 0
+    bit_size: 1
+    enum: INT_CTRL_HW_ERR
+  - name: ENT_VAL
+    description: Clear the ENT_VAL interrupt.
+    bit_offset: 1
+    bit_size: 1
+    enum: INT_CTRL_ENT_VAL
+  - name: FRQ_CT_FAIL
+    description: Clear the FRQ_CT_FAIL interrupt.
+    bit_offset: 2
+    bit_size: 1
+    enum: INT_CTRL_FRQ_CT_FAIL
+  - name: INTG_FLT
+    description: Clear the INTG_FLT interrupt.
+    bit_offset: 3
+    bit_size: 1
+    enum: INT_CTRL_INTG_FLT
+fieldset/INT_MASK:
+  description: Mask Register.
+  fields:
+  - name: HW_ERR
+    description: Mask the HW_ERR interrupt.
+    bit_offset: 0
+    bit_size: 1
+    enum: INT_MASK_HW_ERR
+  - name: ENT_VAL
+    description: Mask the ENT_VAL interrupt.
+    bit_offset: 1
+    bit_size: 1
+    enum: INT_MASK_ENT_VAL
+  - name: FRQ_CT_FAIL
+    description: Mask the FRQ_CT_FAIL interrupt.
+    bit_offset: 2
+    bit_size: 1
+    enum: INT_MASK_FRQ_CT_FAIL
+  - name: INTG_FLT
+    description: Mask the INTG_FLT interrupt.
+    bit_offset: 3
+    bit_size: 1
+    enum: INT_MASK_INTG_FLT
+fieldset/INT_STATUS:
+  description: Interrupt Status Register.
+  fields:
+  - name: HW_ERR
+    description: 'Read: TRNG Error. Any error in the TRNG will trigger this interrupt.'
+    bit_offset: 0
+    bit_size: 1
+    enum: INT_STATUS_HW_ERR
+  - name: ENT_VAL
+    description: Entropy Valid.
+    bit_offset: 1
+    bit_size: 1
+    enum: INT_STATUS_ENT_VAL
+  - name: FRQ_CT_FAIL
+    description: Frequency Count Fail.
+    bit_offset: 2
+    bit_size: 1
+    enum: INT_STATUS_FRQ_CT_FAIL
+  - name: INTG_FLT
+    description: Integrity Fault. An internal fault has occurred.
+    bit_offset: 3
+    bit_size: 1
+    enum: INT_STATUS_INTG_FLT
+fieldset/MCTL:
+  description: Miscellaneous Control Register.
+  fields:
+  - name: OSC_DIV
+    description: Oscillator1 Divide.
+    bit_offset: 2
+    bit_size: 2
+    enum: OSC_DIV
+  - name: CLK_OUT_EN
+    description: Clock Output Enable.
+    bit_offset: 4
+    bit_size: 1
+  - name: TRNG_ACC
+    description: TRNG Access Mode.
+    bit_offset: 5
+    bit_size: 1
+  - name: RST_DEF
+    description: Reset Defaults.
+    bit_offset: 6
+    bit_size: 1
+  - name: FCT_FAIL
+    description: Frequency Count Fail.
+    bit_offset: 8
+    bit_size: 1
+  - name: FCT_VAL
+    description: Frequency Count Valid.
+    bit_offset: 9
+    bit_size: 1
+  - name: ENT_VAL
+    description: Entropy Valid.
+    bit_offset: 10
+    bit_size: 1
+  - name: ERR
+    description: Error Status.
+    bit_offset: 12
+    bit_size: 1
+  - name: TSTOP_OK
+    description: TRNG is ok to stop.
+    bit_offset: 13
+    bit_size: 1
+  - name: OSC2_FAIL
+    description: Oscillator 2 Failure.
+    bit_offset: 15
+    bit_size: 1
+  - name: PRGM
+    description: Program Mode.
+    bit_offset: 16
+    bit_size: 1
+fieldset/OSC2_CTL:
+  description: TRNG Oscillator 2 Control Register.
+  fields:
+  - name: TRNG_ENT_CTL
+    description: TRNG entropy generation control.
+    bit_offset: 0
+    bit_size: 2
+    enum: TRNG_ENT_CTL
+  - name: OSC2_DIV
+    description: Oscillator 2 Divide.
+    bit_offset: 2
+    bit_size: 2
+    enum: OSC2_DIV
+  - name: OSC2_OUT_EN
+    description: Oscillator 2 Clock Output Enable.
+    bit_offset: 4
+    bit_size: 1
+    enum: OSC2_OUT_EN
+  - name: OSC2_FCT_VAL
+    description: TRNG Oscillator 2 Frequency Count Valid.
+    bit_offset: 9
+    bit_size: 1
+  - name: OSC_FAILSAFE_LMT
+    description: Oscillator fail safe limit.
+    bit_offset: 12
+    bit_size: 2
+    enum: OSC_FAILSAFE_LMT
+  - name: OSC_FAILSAFE_TEST
+    description: Oscillator fail safe test.
+    bit_offset: 14
+    bit_size: 1
+fieldset/OSC2_FRQCNT:
+  description: Oscillator-2 Frequency Count Register.
+  fields:
+  - name: OSC2_FRQ_CT
+    description: Frequency Count.
+    bit_offset: 0
+    bit_size: 22
+fieldset/SCMC:
+  description: Statistical Check Monobit Count Register.
+  fields:
+  - name: MONO_CT
+    description: Monobit Count.
+    bit_offset: 0
+    bit_size: 16
+fieldset/SCMISC:
+  description: Statistical Check Miscellaneous Register.
+  fields:
+  - name: LRUN_MAX
+    description: Long run max limit.
+    bit_offset: 0
+    bit_size: 8
+  - name: RTY_CT
+    description: Retry count.
+    bit_offset: 16
+    bit_size: 4
+fieldset/SCML:
+  description: Statistical Check Monobit Limit Register.
+  fields:
+  - name: MONO_MAX
+    description: Monobit Maximum Limit.
+    bit_offset: 0
+    bit_size: 16
+  - name: MONO_RNG
+    description: Monobit Range.
+    bit_offset: 16
+    bit_size: 16
+fieldset/SCR1C:
+  description: Statistical Check Run Length 1 Count Register.
+  fields:
+  - name: R1_0_CT
+    description: Runs of Zero, Length 1 Count.
+    bit_offset: 0
+    bit_size: 15
+  - name: R1_1_CT
+    description: Runs of One, Length 1 Count.
+    bit_offset: 16
+    bit_size: 15
+fieldset/SCR1L:
+  description: Statistical Check Run Length 1 Limit Register.
+  fields:
+  - name: RUN1_MAX
+    description: Run Length 1 Maximum Limit.
+    bit_offset: 0
+    bit_size: 15
+  - name: RUN1_RNG
+    description: Run Length 1 Range.
+    bit_offset: 16
+    bit_size: 15
+fieldset/SCR2C:
+  description: Statistical Check Run Length 2 Count Register.
+  fields:
+  - name: R2_0_CT
+    description: Runs of Zero, Length 2 Count.
+    bit_offset: 0
+    bit_size: 14
+  - name: R2_1_CT
+    description: Runs of One, Length 2 Count.
+    bit_offset: 16
+    bit_size: 14
+fieldset/SCR2L:
+  description: Statistical Check Run Length 2 Limit Register.
+  fields:
+  - name: RUN2_MAX
+    description: Run Length 2 Maximum Limit.
+    bit_offset: 0
+    bit_size: 14
+  - name: RUN2_RNG
+    description: Run Length 2 Range.
+    bit_offset: 16
+    bit_size: 14
+fieldset/SCR3C:
+  description: Statistical Check Run Length 3 Count Register.
+  fields:
+  - name: R3_0_CT
+    description: Runs of Zeroes, Length 3 Count.
+    bit_offset: 0
+    bit_size: 13
+  - name: R3_1_CT
+    description: Runs of Ones, Length 3 Count.
+    bit_offset: 16
+    bit_size: 13
+fieldset/SCR3L:
+  description: Statistical Check Run Length 3 Limit Register.
+  fields:
+  - name: RUN3_MAX
+    description: Run Length 3 Maximum Limit.
+    bit_offset: 0
+    bit_size: 13
+  - name: RUN3_RNG
+    description: Run Length 3 Range.
+    bit_offset: 16
+    bit_size: 13
+fieldset/SDCTL:
+  description: Seed Control Register.
+  fields:
+  - name: SAMP_SIZE
+    description: Sample Size.
+    bit_offset: 0
+    bit_size: 16
+  - name: ENT_DLY
+    description: Entropy Delay.
+    bit_offset: 16
+    bit_size: 16
+fieldset/SEC_CFG:
+  description: Security Configuration Register.
+  fields:
+  - name: NO_PRGM
+    description: 'If set, below mentioned TRNG configuration registers cannot be programmed: Oscillator 2 Control Register (OSC2_CTL): TRNG Entropy Generation Control [1:0] Oscillator 2 Divider [3:2] Oscillator Fail Safe Limit [13:12] Oscillator Fail Safe Test [14] TRNG Seed Control Register (SDCTL) TRNG Frequency Count Minimum Limit Register (FRQMIN) TRNG Frequency Count Maximum Limit Register (FRQMAX) TRNG Statistical Check Monobit Limit Register (SCML) TRNG Statistical Check Run Length 1 Limit Register (SCR1L) TRNG Statistical Check Run Length 2 Limit Register (SCR2L) TRNG Statistical Check Run Length 3 Limit Register (SCR3L) TRNG Miscellaneous Control Register (MCTL): Sample Mode [1:0] Oscillator Divider [3:2] Reset Defaults [6] Force System Clock [7] Long Runs Continuation Mode [14] After this bit has been written to a 1, it cannot be changed.'
+    bit_offset: 1
+    bit_size: 1
+    enum: NO_PRGM
+fieldset/STATUS:
+  description: Status Register.
+  fields:
+  - name: TF1BR0
+    description: Test Fail, 1-Bit Run, Sampling 0s.
+    bit_offset: 0
+    bit_size: 1
+  - name: TF1BR1
+    description: Test Fail, 1-Bit Run, Sampling 1s.
+    bit_offset: 1
+    bit_size: 1
+  - name: TF2BR0
+    description: Test Fail, 2-Bit Run, Sampling 0s.
+    bit_offset: 2
+    bit_size: 1
+  - name: TF2BR1
+    description: Test Fail, 2-Bit Run, Sampling 1s.
+    bit_offset: 3
+    bit_size: 1
+  - name: TF3BR0
+    description: Test Fail, 3-Bit Run, Sampling 0s.
+    bit_offset: 4
+    bit_size: 1
+  - name: TF3BR1
+    description: Test Fail.
+    bit_offset: 5
+    bit_size: 1
+  - name: TFLR
+    description: Test Fail, Long Run.
+    bit_offset: 13
+    bit_size: 1
+  - name: TFMB
+    description: Test Fail, Mono Bit.
+    bit_offset: 15
+    bit_size: 1
+  - name: RETRY_CT
+    description: RETRY COUNT.
+    bit_offset: 16
+    bit_size: 4
+fieldset/VID1:
+  description: Version ID Register (MS).
+  fields:
+  - name: MIN_REV
+    description: Shows the IP's Minor revision of the TRNG.
+    bit_offset: 0
+    bit_size: 8
+    enum: MIN_REV
+  - name: MAJ_REV
+    description: Shows the IP's Major revision of the TRNG.
+    bit_offset: 8
+    bit_size: 8
+    enum: MAJ_REV
+  - name: IP_ID
+    description: Shows the IP ID.
+    bit_offset: 16
+    bit_size: 16
+    enum: IP_ID
+fieldset/VID2:
+  description: Version ID Register (LS).
+  fields:
+  - name: CONFIG_OPT
+    description: Shows the IP's Configuaration options for the TRNG.
+    bit_offset: 0
+    bit_size: 8
+    enum: CONFIG_OPT
+  - name: ECO_REV
+    description: Shows the IP's ECO revision of the TRNG.
+    bit_offset: 8
+    bit_size: 8
+    enum: ECO_REV
+  - name: INTG_OPT
+    description: Shows the integration options for the TRNG.
+    bit_offset: 16
+    bit_size: 8
+    enum: INTG_OPT
+  - name: ERA
+    description: Shows the ERA of the TRNG.
+    bit_offset: 24
+    bit_size: 8
+    enum: ERA
+enum/CONFIG_OPT:
+  bit_size: 8
+  variants:
+  - name: CONFIG_OPT_VAL
+    description: TRNG_CONFIG_OPT for TRNG.
+    value: 0
+enum/ECO_REV:
+  bit_size: 8
+  variants:
+  - name: ECO_REV_VAL
+    description: TRNG_ECO_REV for TRNG.
+    value: 0
+enum/ERA:
+  bit_size: 8
+  variants:
+  - name: ERA_VAL
+    description: ERA of the TRNG.
+    value: 12
+enum/INTG_OPT:
+  bit_size: 8
+  variants:
+  - name: INTG_OPT_VAL
+    description: INTG_OPT for TRNG.
+    value: 10
+enum/INT_CTRL_ENT_VAL:
+  bit_size: 1
+  variants:
+  - name: ENT_VAL_CLEAR
+    description: Clears the INT_STATUS[ENT_VAL] bit. Will automatically set after writing.
+    value: 0
+  - name: ENT_VAL_ON
+    description: Enables the INT_STATUS[ENT_VAL] bit to be set, thereby enabling interrupt generation for the ENT_VAL condition.
+    value: 1
+enum/INT_CTRL_FRQ_CT_FAIL:
+  bit_size: 1
+  variants:
+  - name: FRQ_CT_FAIL_CLEAR
+    description: Clears the INT_STATUS[FRQ_CT_FAIL] bit. Will automatically set after writing.
+    value: 0
+  - name: FRQ_CT_FAIL_ON
+    description: Enables the INT_STATUS[FRQ_CT_FAIL] bit to be set, thereby enabling interrupt generation for the FRQ_CT_FAIL condition.
+    value: 1
+enum/INT_CTRL_HW_ERR:
+  bit_size: 1
+  variants:
+  - name: HW_ERR_CLEAR
+    description: Clears the INT_STATUS[HW_ERR] bit. Will automatically set after writing.
+    value: 0
+  - name: HW_ERR_ON
+    description: Enables the INT_STATUS[HW_ERR] bit to be set, thereby enabling interrupt generation for the HW_ERR condition.
+    value: 1
+enum/INT_CTRL_INTG_FLT:
+  bit_size: 1
+  variants:
+  - name: INTG_FLT_CLEAR
+    description: Clears the INT_STATUS[INTG_FLT] bit. Will automatically set after writing.
+    value: 0
+  - name: INTG_FLT_ON
+    description: Enables the INT_STATUS[INTG_FLT] bit to be set, thereby enabling interrupt generation for the INTG_FLT condition.
+    value: 1
+enum/INT_MASK_ENT_VAL:
+  bit_size: 1
+  variants:
+  - name: ENT_VAL_MASKED
+    description: ENT_VAL interrupt is disabled.
+    value: 0
+  - name: ENT_VAL_ACTIVE
+    description: ENT_VAL interrupt is enabled.
+    value: 1
+enum/INT_MASK_FRQ_CT_FAIL:
+  bit_size: 1
+  variants:
+  - name: FRQ_CT_FAIL_MASKED
+    description: FRQ_CT_FAIL interrupt is disabled.
+    value: 0
+  - name: FRQ_CT_FAIL_ACTIVE
+    description: FRQ_CT_FAIL interrupt is enabled.
+    value: 1
+enum/INT_MASK_HW_ERR:
+  bit_size: 1
+  variants:
+  - name: HW_ERR_MASKED
+    description: HW_ERR interrupt is disabled.
+    value: 0
+  - name: HW_ERR_ACTIVE
+    description: HW_ERR interrupt is enabled.
+    value: 1
+enum/INT_MASK_INTG_FLT:
+  bit_size: 1
+  variants:
+  - name: INTG_FLT_MASKED
+    description: INTG_FLT interrupt is disabled.
+    value: 0
+  - name: INTG_FLT_ACTIVE
+    description: INTG_FLT interrupt is enabled.
+    value: 1
+enum/INT_STATUS_ENT_VAL:
+  bit_size: 1
+  variants:
+  - name: ENT_VAL_INVALID
+    description: Busy generating entropy. Any value read from the Entropy registers is invalid.
+    value: 0
+  - name: ENT_VAL_VALID
+    description: Values read from the Entropy registers are valid.
+    value: 1
+enum/INT_STATUS_FRQ_CT_FAIL:
+  bit_size: 1
+  variants:
+  - name: FRQ_CT_FAIL_NO_ERR
+    description: No hardware nor self test frequency errors.
+    value: 0
+  - name: FRQ_CT_FAIL_ERR
+    description: The frequency counter has detected a failure.
+    value: 1
+enum/INT_STATUS_HW_ERR:
+  bit_size: 1
+  variants:
+  - name: HW_ERR_NO
+    description: No error.
+    value: 0
+  - name: HW_ERR_YES
+    description: Error detected.
+    value: 1
+enum/INT_STATUS_INTG_FLT:
+  bit_size: 1
+  variants:
+  - name: INTG_FLT_NO_ERR
+    description: No internal fault has been detected.
+    value: 0
+  - name: INTG_FLT_ERR
+    description: TRNG has detected internal fault.
+    value: 1
+enum/IP_ID:
+  bit_size: 16
+  variants:
+  - name: IP_ID_VAL
+    description: ID for TRNG.
+    value: 48
+enum/MAJ_REV:
+  bit_size: 8
+  variants:
+  - name: MAJ_REV_VAL
+    description: Major revision number for TRNG.
+    value: 20
+enum/MIN_REV:
+  bit_size: 8
+  variants:
+  - name: MIN_REV_VAL
+    description: Minor revision number for TRNG.
+    value: 12
+enum/NO_PRGM:
+  bit_size: 1
+  variants:
+  - name: NO_PRGM_OFF
+    description: TRNG configuration registers can be modified.
+    value: 0
+  - name: NO_PRGM_ON
+    description: TRNG configuration registers cannot be modified.
+    value: 1
+enum/OSC2_DIV:
+  bit_size: 2
+  variants:
+  - name: OSC2_DIV_DIV1
+    description: Use ring oscillator 2 with no divide.
+    value: 0
+  - name: OSC2_DIV_DIV2
+    description: Use ring oscillator 2 divided-by-2.
+    value: 1
+  - name: OSC2_DIV_DIV4
+    description: Use ring oscillator 2 divided-by-4.
+    value: 2
+  - name: OSC2_DIV_DIV8
+    description: Use ring oscillator 2 divided-by-8.
+    value: 3
+enum/OSC2_OUT_EN:
+  bit_size: 1
+  variants:
+  - name: OSC2_OUT_EN_0
+    description: Ring oscillator 2 output is gated to an output pad.
+    value: 0
+  - name: OSC2_OUT_EN_1
+    description: Allows external viewing of divided-by-2 ring oscillator 2 if MCTL[PRGM] = 1 mode is also selected, else ring oscillator 2 output is gated to an output pad.
+    value: 1
+enum/OSC_DIV:
+  bit_size: 2
+  variants:
+  - name: OSC_DIV_DIV1
+    description: use ring oscillator with no divide.
+    value: 0
+  - name: OSC_DIV_DIV2
+    description: use ring oscillator divided-by-2.
+    value: 1
+  - name: OSC_DIV_DIV4
+    description: use ring oscillator divided-by-4.
+    value: 2
+  - name: OSC_DIV_DIV8
+    description: use ring oscillator divided-by-8.
+    value: 3
+enum/OSC_FAILSAFE_LMT:
+  bit_size: 2
+  variants:
+  - name: OSC_FAILSAFE_LMT_4K
+    description: The limit N is 4096 (2^12) system clocks.
+    value: 0
+  - name: OSC_FAILSAFE_LMT_64K
+    description: The limit N is 65536 (2^16) system clocks. (default).
+    value: 1
+  - name: OSC_FAILSAFE_LMT_1M
+    description: N is 2^20 system clocks.
+    value: 2
+  - name: OSC_FAILSAFE_LMT_4M
+    description: N is 2^22 system clocks (full range of the counter being used).
+    value: 3
+enum/TRNG_ENT_CTL:
+  bit_size: 2
+  variants:
+  - name: TRNG_ENT_CTL_SINGLE_OSC1
+    description: Single oscillator mode, using OSC1 (default).
+    value: 0
+  - name: TRNG_ENT_CTL_DUAL_OSCS
+    description: Dual oscillator mode.
+    value: 1
+  - name: TRNG_ENT_CTL_SINGLE_OSC2
+    description: Single oscillator mode, using OSC2.
+    value: 2
+  - name: OSC2_DIV_DIV8
+    description: Unused, (bit field cannot be written to this value).
+    value: 3
