@@ -13,7 +13,7 @@ use serde::Deserialize;
 use crate::rustfmt;
 
 #[derive(Debug, Clone, Deserialize)]
-pub struct PinMetadata {
+pub struct Metadata {
     pub chips: Vec<String>,
     pub pins: Vec<Pin>,
     pub peripherals: Vec<Peripheral>,
@@ -44,6 +44,7 @@ pub struct PinIomuxc {
 #[derive(Debug, Clone, Deserialize)]
 pub struct Peripheral {
     pub name: String,
+    pub peripheral_type: Option<String>,
     pub signals: Vec<Signal>,
     pub flexcomm: Option<String>,
     #[serde(default)]
@@ -84,7 +85,7 @@ pub struct DmaMux {
 }
 
 /// Validate that common errors, such as conflicting alt modes and daisy registers are not duplicated.
-fn validate(metadata: &PinMetadata) -> anyhow::Result<()> {
+fn validate(metadata: &Metadata) -> anyhow::Result<()> {
     if metadata.chips.is_empty() {
         bail!("No chips");
     }
@@ -188,7 +189,7 @@ fn validate(metadata: &PinMetadata) -> anyhow::Result<()> {
     Ok(())
 }
 
-fn generate_metadata(name: &str, interrupts: &[String], metadata: &PinMetadata) -> TokenStream {
+fn generate_metadata(name: &str, interrupts: &[String], metadata: &Metadata) -> TokenStream {
     let pins = metadata.pins.iter().map(|pin| {
         let name = &pin.name;
         let iomuxc = pin
@@ -318,10 +319,9 @@ pub fn generate_core(
     svd: &Path,
     metadata: &Path,
     core: &str,
-) -> anyhow::Result<()> {
+) -> anyhow::Result<Metadata> {
     let metadata = fs::read_to_string(metadata).context("Read metadata")?;
-    let metadata =
-        serde_json::from_str::<PinMetadata>(&metadata).context("Deserialize metadata")?;
+    let metadata = serde_json::from_str::<Metadata>(&metadata).context("Deserialize metadata")?;
     validate(&metadata)?;
 
     let svd_contents = fs::read_to_string(svd).context("Read SVD")?;
@@ -351,5 +351,5 @@ pub fn generate_core(
     fs::write(&metadata_rs, metadata_out)?;
     rustfmt(&metadata_rs)?;
 
-    Ok(())
+    Ok(metadata)
 }

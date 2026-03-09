@@ -30,5 +30,7 @@
 mod pac;
 pub use pac::*;
 
+pub(crate) mod meta_peripherals;
+
 #[cfg(feature = "metadata")]
 pub mod metadata;

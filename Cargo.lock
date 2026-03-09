@@ -172,6 +172,7 @@ dependencies = [
  "proc-macro2",
  "quote",
  "rayon",
+ "read-dir-all",
  "serde",
  "serde_json",
  "svd-parser",
@@ -318,6 +319,12 @@ dependencies = [
  "crossbeam-deque",
  "crossbeam-utils",
 ]
+
+[[package]]
+name = "read-dir-all"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e8375ddee477bd7ddd795a17f4448cfc2600cd649318cc5e542635cefd0c438c"
 
 [[package]]
 name = "regex"

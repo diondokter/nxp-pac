@@ -13,7 +13,6 @@ pub fn generate_core(
     svd: &Path,
     chip_dir: &Path,
     transforms_dir: &Path,
-    metadata_dir: &Path,
     core: &str,
 ) -> anyhow::Result<()> {
     if !fs::exists(&svd)? {
@@ -34,11 +33,11 @@ pub fn generate_core(
         );
     }
 
-    generate_peripherals(svd, metadata_dir, core, &transform).context("Generating peripherals")?;
-
     let temp = TempDir::new()
         .context("Creating temp dir")?
         .dont_delete_on_drop();
+
+    println!("{}", temp.path().display());
 
     let output = Command::new("chiptool")
         .arg("generate")
@@ -86,17 +85,27 @@ pub fn generate_core(
     Ok(())
 }
 
-fn generate_peripherals(
+pub fn generate_peripherals(
     svd: &Path,
     metadata_dir: &Path,
     core: &str,
-    transform: &Path,
+    transforms_dir: &Path,
 ) -> Result<(), anyhow::Error> {
+    let transform = transforms_dir
+        .join(core.to_lowercase())
+        .with_extension("yaml");
+
+    if !fs::exists(&transform)? {
+        bail!(
+            "transform for core \"{}\" does not exist?",
+            core.to_lowercase()
+        );
+    }
+
     let raw_peripherals_dir = metadata_dir.join("peripherals/raw");
     for file in fs::read_dir(&raw_peripherals_dir)? {
         let file = file?;
         if file.file_name().to_string_lossy() != ".gitignore" {
-            println!("Removing: {}", file.file_name().display());
             fs::remove_file(file.path())?;
         }
     }
