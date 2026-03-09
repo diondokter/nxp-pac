@@ -92,9 +92,9 @@ impl From<Fflag> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ffull {
-    #[doc = "PWM outputs are not re-enabled at the start of a full cycle"]
+    #[doc = "PWM outputs are not re-enabled at the start of a full cycle."]
     PWM_OUTPUTS_NOT_REENABLED = 0x0,
-    #[doc = "PWM outputs are re-enabled at the start of a full cycle"]
+    #[doc = "PWM outputs are re-enabled at the start of a full cycle."]
     PWM_OUTPUTS_REENABLED = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -497,13 +497,13 @@ impl From<Run> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SmcaptctrlxEdgx {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED = 0x0,
-    #[doc = "Capture falling edges"]
+    #[doc = "Capture falling edges."]
     FALLING_EDGE = 0x01,
-    #[doc = "Capture rising edges"]
+    #[doc = "Capture rising edges."]
     RISING_EDGE = 0x02,
-    #[doc = "Capture any edge"]
+    #[doc = "Capture any edge."]
     ANY_EDGE = 0x03,
 }
 impl SmcaptctrlxEdgx {
@@ -534,7 +534,7 @@ impl From<SmcaptctrlxEdgx> for u8 {
 pub enum SmcaptctrlxInpSelx {
     #[doc = "Raw PWM_X input signal selected as source."]
     PWM_X = 0x0,
-    #[doc = "Edge Counter"]
+    #[doc = "Edge Counter."]
     EDGE_COUNTER = 0x01,
 }
 impl SmcaptctrlxInpSelx {
@@ -563,9 +563,9 @@ impl From<SmcaptctrlxInpSelx> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SmcaptctrlxOneshotx {
-    #[doc = "Free Running"]
+    #[doc = "Free Running."]
     FREE_RUNNING = 0x0,
-    #[doc = "One Shot"]
+    #[doc = "One Shot."]
     ONE_SHOT = 0x01,
 }
 impl SmcaptctrlxOneshotx {
@@ -768,37 +768,37 @@ impl From<SmctrlInitSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SmctrlLdfq {
-    #[doc = "Every PWM opportunity"]
+    #[doc = "Every PWM opportunity."]
     EVERYPWM = 0x0,
-    #[doc = "Every 2 PWM opportunities"]
+    #[doc = "Every 2 PWM opportunities."]
     EVERY2PWM = 0x01,
-    #[doc = "Every 3 PWM opportunities"]
+    #[doc = "Every 3 PWM opportunities."]
     EVERY3PWM = 0x02,
-    #[doc = "Every 4 PWM opportunities"]
+    #[doc = "Every 4 PWM opportunities."]
     EVERY4PWM = 0x03,
-    #[doc = "Every 5 PWM opportunities"]
+    #[doc = "Every 5 PWM opportunities."]
     EVERY5PWM = 0x04,
-    #[doc = "Every 6 PWM opportunities"]
+    #[doc = "Every 6 PWM opportunities."]
     EVERY6PWM = 0x05,
-    #[doc = "Every 7 PWM opportunities"]
+    #[doc = "Every 7 PWM opportunities."]
     EVERY7PWM = 0x06,
-    #[doc = "Every 8 PWM opportunities"]
+    #[doc = "Every 8 PWM opportunities."]
     EVERY8PWM = 0x07,
-    #[doc = "Every 9 PWM opportunities"]
+    #[doc = "Every 9 PWM opportunities."]
     EVERY9PWM = 0x08,
-    #[doc = "Every 10 PWM opportunities"]
+    #[doc = "Every 10 PWM opportunities."]
     EVERY10PWM = 0x09,
-    #[doc = "Every 11 PWM opportunities"]
+    #[doc = "Every 11 PWM opportunities."]
     EVERY11PWM = 0x0a,
-    #[doc = "Every 12 PWM opportunities"]
+    #[doc = "Every 12 PWM opportunities."]
     EVERY12PWM = 0x0b,
-    #[doc = "Every 13 PWM opportunities"]
+    #[doc = "Every 13 PWM opportunities."]
     EVERY13PWM = 0x0c,
-    #[doc = "Every 14 PWM opportunities"]
+    #[doc = "Every 14 PWM opportunities."]
     EVERY14PWM = 0x0d,
-    #[doc = "Every 15 PWM opportunities"]
+    #[doc = "Every 15 PWM opportunities."]
     EVERY15PWM = 0x0e,
-    #[doc = "Every 16 PWM opportunities"]
+    #[doc = "Every 16 PWM opportunities."]
     EVERY16PWM = 0x0f,
 }
 impl SmctrlLdfq {
@@ -858,21 +858,21 @@ impl From<SmctrlLdmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SmctrlPrsc {
-    #[doc = "Prescaler 1"]
+    #[doc = "Prescaler 1."]
     ONE = 0x0,
-    #[doc = "Prescaler 2"]
+    #[doc = "Prescaler 2."]
     TWO = 0x01,
-    #[doc = "Prescaler 4"]
+    #[doc = "Prescaler 4."]
     FOUR = 0x02,
-    #[doc = "Prescaler 8"]
+    #[doc = "Prescaler 8."]
     EIGHT = 0x03,
-    #[doc = "Prescaler 16"]
+    #[doc = "Prescaler 16."]
     SIXTEEN = 0x04,
-    #[doc = "Prescaler 32"]
+    #[doc = "Prescaler 32."]
     THIRTYTWO = 0x05,
-    #[doc = "Prescaler 64"]
+    #[doc = "Prescaler 64."]
     SIXTYFOUR = 0x06,
-    #[doc = "Prescaler 128"]
+    #[doc = "Prescaler 128."]
     HUNDREDTWENTYEIGHT = 0x07,
 }
 impl SmctrlPrsc {

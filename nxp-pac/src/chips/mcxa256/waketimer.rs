@@ -1,4 +1,4 @@
-#[doc = "WAKE_TIMER"]
+#[doc = "WAKE_TIMER."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Waketimer {
     ptr: *mut u8,
@@ -14,14 +14,14 @@ impl Waketimer {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "Wake Timer Control"]
+    #[doc = "Wake Timer Control."]
     #[inline(always)]
     pub const fn wake_timer_ctrl(
         self,
     ) -> crate::common::Reg<regs::WakeTimerCtrl, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
     }
-    #[doc = "Wake Timer Counter"]
+    #[doc = "Wake Timer Counter."]
     #[inline(always)]
     pub const fn wake_timer_cnt(self) -> crate::common::Reg<regs::WakeTimerCnt, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }

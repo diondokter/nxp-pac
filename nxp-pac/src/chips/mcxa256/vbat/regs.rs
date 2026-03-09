@@ -1,16 +1,16 @@
-#[doc = "FRO16K Clock Enable"]
+#[doc = "FRO16K Clock Enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Froclke(pub u32);
 impl Froclke {
-    #[doc = "Clock Enable"]
+    #[doc = "Clock Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn clke(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x03;
         val as u8
     }
-    #[doc = "Clock Enable"]
+    #[doc = "Clock Enable."]
     #[inline(always)]
     pub const fn set_clke(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val as u32) & 0x03) << 0usize);
@@ -35,19 +35,19 @@ impl defmt::Format for Froclke {
         defmt::write!(f, "Froclke {{ clke: {=u8:?} }}", self.clke())
     }
 }
-#[doc = "FRO16K Control A"]
+#[doc = "FRO16K Control A."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Froctla(pub u32);
 impl Froctla {
-    #[doc = "FRO16K Enable"]
+    #[doc = "FRO16K Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn fro_en(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "FRO16K Enable"]
+    #[doc = "FRO16K Enable."]
     #[inline(always)]
     pub const fn set_fro_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -72,19 +72,19 @@ impl defmt::Format for Froctla {
         defmt::write!(f, "Froctla {{ fro_en: {=bool:?} }}", self.fro_en())
     }
 }
-#[doc = "FRO16K Lock A"]
+#[doc = "FRO16K Lock A."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Frolcka(pub u32);
 impl Frolcka {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     #[must_use]
     #[inline(always)]
     pub const fn lock(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     #[inline(always)]
     pub const fn set_lock(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -109,43 +109,43 @@ impl defmt::Format for Frolcka {
         defmt::write!(f, "Frolcka {{ lock: {=bool:?} }}", self.lock())
     }
 }
-#[doc = "Version ID"]
+#[doc = "Version ID."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Verid(pub u32);
 impl Verid {
-    #[doc = "Feature Specification Number"]
+    #[doc = "Feature Specification Number."]
     #[must_use]
     #[inline(always)]
     pub const fn feature(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Feature Specification Number"]
+    #[doc = "Feature Specification Number."]
     #[inline(always)]
     pub const fn set_feature(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Minor Version Number"]
+    #[doc = "Minor Version Number."]
     #[must_use]
     #[inline(always)]
     pub const fn minor(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0xff;
         val as u8
     }
-    #[doc = "Minor Version Number"]
+    #[doc = "Minor Version Number."]
     #[inline(always)]
     pub const fn set_minor(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
     }
-    #[doc = "Major Version Number"]
+    #[doc = "Major Version Number."]
     #[must_use]
     #[inline(always)]
     pub const fn major(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "Major Version Number"]
+    #[doc = "Major Version Number."]
     #[inline(always)]
     pub const fn set_major(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);
@@ -178,19 +178,19 @@ impl defmt::Format for Verid {
         )
     }
 }
-#[doc = "Wakeup 0 Register A"]
+#[doc = "Wakeup 0 Register A."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Wakeupa(pub u32);
 impl Wakeupa {
-    #[doc = "Register"]
+    #[doc = "Register."]
     #[must_use]
     #[inline(always)]
     pub const fn reg(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Register"]
+    #[doc = "Register."]
     #[inline(always)]
     pub const fn set_reg(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -213,19 +213,19 @@ impl defmt::Format for Wakeupa {
         defmt::write!(f, "Wakeupa {{ reg: {=u32:?} }}", self.reg())
     }
 }
-#[doc = "Wakeup Lock A"]
+#[doc = "Wakeup Lock A."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Waklcka(pub u32);
 impl Waklcka {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     #[must_use]
     #[inline(always)]
     pub const fn lock(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     #[inline(always)]
     pub const fn set_lock(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);

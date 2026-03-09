@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbclkdivUnstab {
-    #[doc = "Divider clock is stable"]
+    #[doc = "Divider clock is stable."]
     STABLE = 0x0,
-    #[doc = "Clock frequency is not stable"]
+    #[doc = "Clock frequency is not stable."]
     ONGOING = 0x01,
 }
 impl AhbclkdivUnstab {
@@ -33,13 +33,13 @@ impl From<AhbclkdivUnstab> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbmatprioCpu0Sbus {
-    #[doc = "level 0"]
+    #[doc = "level 0."]
     LEVEL0 = 0x0,
-    #[doc = "level 1"]
+    #[doc = "level 1."]
     LEVEL1 = 0x01,
-    #[doc = "level 2"]
+    #[doc = "level 2."]
     LEVEL2 = 0x02,
-    #[doc = "level 3"]
+    #[doc = "level 3."]
     LEVEL3 = 0x03,
 }
 impl AhbmatprioCpu0Sbus {
@@ -68,13 +68,13 @@ impl From<AhbmatprioCpu0Sbus> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbmatprioDma0 {
-    #[doc = "level 0"]
+    #[doc = "level 0."]
     LEVEL0 = 0x0,
-    #[doc = "level 1"]
+    #[doc = "level 1."]
     LEVEL1 = 0x01,
-    #[doc = "level 2"]
+    #[doc = "level 2."]
     LEVEL2 = 0x02,
-    #[doc = "level 3"]
+    #[doc = "level 3."]
     LEVEL3 = 0x03,
 }
 impl AhbmatprioDma0 {
@@ -103,9 +103,9 @@ impl From<AhbmatprioDma0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum BusclkdivHalt {
-    #[doc = "Divider clock is running"]
+    #[doc = "Divider clock is running."]
     RUN = 0x0,
-    #[doc = "Divider clock is stopped"]
+    #[doc = "Divider clock is stopped."]
     HALT = 0x01,
 }
 impl BusclkdivHalt {
@@ -134,9 +134,9 @@ impl From<BusclkdivHalt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum BusclkdivReset {
-    #[doc = "Divider is not reset"]
+    #[doc = "Divider is not reset."]
     RELEASED = 0x0,
-    #[doc = "Divider is reset"]
+    #[doc = "Divider is reset."]
     ASSERTED = 0x01,
 }
 impl BusclkdivReset {
@@ -165,9 +165,9 @@ impl From<BusclkdivReset> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum BusclkdivUnstab {
-    #[doc = "Divider clock is stable"]
+    #[doc = "Divider clock is stable."]
     STABLE = 0x0,
-    #[doc = "Clock frequency is not stable"]
+    #[doc = "Clock frequency is not stable."]
     ONGOING = 0x01,
 }
 impl BusclkdivUnstab {
@@ -196,9 +196,9 @@ impl From<BusclkdivUnstab> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ClrLpcac {
-    #[doc = "Unclears the cache"]
+    #[doc = "Unclears the cache."]
     ENABLE = 0x0,
-    #[doc = "Clears the cache"]
+    #[doc = "Clears the cache."]
     DISABLE = 0x01,
 }
 impl ClrLpcac {
@@ -227,13 +227,13 @@ impl From<ClrLpcac> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cpu0Cbus {
-    #[doc = "level 0"]
+    #[doc = "level 0."]
     LEVEL0 = 0x0,
-    #[doc = "level 1"]
+    #[doc = "level 1."]
     LEVEL1 = 0x01,
-    #[doc = "level 2"]
+    #[doc = "level 2."]
     LEVEL2 = 0x02,
-    #[doc = "level 3"]
+    #[doc = "level 3."]
     LEVEL3 = 0x03,
 }
 impl Cpu0Cbus {
@@ -262,9 +262,9 @@ impl From<Cpu0Cbus> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cpu0lockup {
-    #[doc = "CPU is not in lockup"]
+    #[doc = "CPU is not in lockup."]
     AWAKE = 0x0,
-    #[doc = "CPU is in lockup"]
+    #[doc = "CPU is in lockup."]
     SLEEPING = 0x01,
 }
 impl Cpu0lockup {
@@ -293,9 +293,9 @@ impl From<Cpu0lockup> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cpu0sleeping {
-    #[doc = "CPU is not sleeping"]
+    #[doc = "CPU is not sleeping."]
     AWAKE = 0x0,
-    #[doc = "CPU is sleeping"]
+    #[doc = "CPU is sleeping."]
     SLEEPING = 0x01,
 }
 impl Cpu0sleeping {
@@ -324,13 +324,13 @@ impl From<Cpu0sleeping> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cpu1CbusSmartDmaI {
-    #[doc = "level 0"]
+    #[doc = "level 0."]
     LEVEL0 = 0x0,
-    #[doc = "level 1"]
+    #[doc = "level 1."]
     LEVEL1 = 0x01,
-    #[doc = "level 2"]
+    #[doc = "level 2."]
     LEVEL2 = 0x02,
-    #[doc = "level 3"]
+    #[doc = "level 3."]
     LEVEL3 = 0x03,
 }
 impl Cpu1CbusSmartDmaI {
@@ -359,13 +359,13 @@ impl From<Cpu1CbusSmartDmaI> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cpu1SbusSmartDmaD {
-    #[doc = "level 0"]
+    #[doc = "level 0."]
     LEVEL0 = 0x0,
-    #[doc = "level 1"]
+    #[doc = "level 1."]
     LEVEL1 = 0x01,
-    #[doc = "level 2"]
+    #[doc = "level 2."]
     LEVEL2 = 0x02,
-    #[doc = "level 3"]
+    #[doc = "level 3."]
     LEVEL3 = 0x03,
 }
 impl Cpu1SbusSmartDmaD {
@@ -395,9 +395,9 @@ impl From<Cpu1SbusSmartDmaD> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DebugFeaturesCpu0Dbgen {
     _RESERVED_0 = 0x0,
-    #[doc = "Disables debug"]
+    #[doc = "Disables debug."]
     DISABLE = 0x01,
-    #[doc = "Enables debug"]
+    #[doc = "Enables debug."]
     ENABLE = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -428,9 +428,9 @@ impl From<DebugFeaturesCpu0Dbgen> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DebugFeaturesCpu0Niden {
     _RESERVED_0 = 0x0,
-    #[doc = "Disables debug"]
+    #[doc = "Disables debug."]
     DISABLE = 0x01,
-    #[doc = "Enables debug"]
+    #[doc = "Enables debug."]
     ENABLE = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -461,9 +461,9 @@ impl From<DebugFeaturesCpu0Niden> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DebugFeaturesDpCpu0Dbgen {
     _RESERVED_0 = 0x0,
-    #[doc = "Disables debug"]
+    #[doc = "Disables debug."]
     DISABLE = 0x01,
-    #[doc = "Enables debug"]
+    #[doc = "Enables debug."]
     ENABLE = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -494,9 +494,9 @@ impl From<DebugFeaturesDpCpu0Dbgen> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DebugFeaturesDpCpu0Niden {
     _RESERVED_0 = 0x0,
-    #[doc = "Disables debug"]
+    #[doc = "Disables debug."]
     DISABLE = 0x01,
-    #[doc = "Enables debug"]
+    #[doc = "Enables debug."]
     ENABLE = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -526,19 +526,19 @@ impl From<DebugFeaturesDpCpu0Niden> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DeviceTypePkg {
-    #[doc = "HLQFP"]
+    #[doc = "HLQFP."]
     HLQFP = 0x0,
-    #[doc = "HTQFP"]
+    #[doc = "HTQFP."]
     HTQFP = 0x01,
-    #[doc = "BGA"]
+    #[doc = "BGA."]
     BGA = 0x02,
-    #[doc = "HDQFP"]
+    #[doc = "HDQFP."]
     HDQFP = 0x03,
-    #[doc = "QFN"]
+    #[doc = "QFN."]
     QFN = 0x04,
-    #[doc = "CSP"]
+    #[doc = "CSP."]
     CSP = 0x05,
-    #[doc = "LQFP"]
+    #[doc = "LQFP."]
     LQFP = 0x06,
     _RESERVED_7 = 0x07,
     _RESERVED_8 = 0x08,
@@ -576,9 +576,9 @@ impl From<DeviceTypePkg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DeviceTypeSec {
-    #[doc = "Non Secure"]
+    #[doc = "Non Secure."]
     NON_SEC = 0x0,
-    #[doc = "Secure"]
+    #[doc = "Secure."]
     SEC = 0x01,
 }
 impl DeviceTypeSec {
@@ -607,9 +607,9 @@ impl From<DeviceTypeSec> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DisDataSpec {
-    #[doc = "Enables data speculation"]
+    #[doc = "Enables data speculation."]
     ENABLE = 0x0,
-    #[doc = "Disables data speculation"]
+    #[doc = "Disables data speculation."]
     DISABLE = 0x01,
 }
 impl DisDataSpec {
@@ -638,9 +638,9 @@ impl From<DisDataSpec> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DisFlashSpec {
-    #[doc = "Enables flash speculation"]
+    #[doc = "Enables flash speculation."]
     ENABLE = 0x0,
-    #[doc = "Disables flash speculation"]
+    #[doc = "Disables flash speculation."]
     DISABLE = 0x01,
 }
 impl DisFlashSpec {
@@ -669,9 +669,9 @@ impl From<DisFlashSpec> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DisLpcac {
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     ENABLE = 0x0,
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLE = 0x01,
 }
 impl DisLpcac {
@@ -700,9 +700,9 @@ impl From<DisLpcac> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DisMbeccErrData {
-    #[doc = "Enables bus error on multi-bit ECC error for data"]
+    #[doc = "Enables bus error on multi-bit ECC error for data."]
     ENABLE = 0x0,
-    #[doc = "Disables bus error on multi-bit ECC error for data"]
+    #[doc = "Disables bus error on multi-bit ECC error for data."]
     DISABLE = 0x01,
 }
 impl DisMbeccErrData {
@@ -731,9 +731,9 @@ impl From<DisMbeccErrData> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DisMbeccErrInst {
-    #[doc = "Enables bus error on multi-bit ECC error for instruction"]
+    #[doc = "Enables bus error on multi-bit ECC error for instruction."]
     ENABLE = 0x0,
-    #[doc = "Disables bus error on multi-bit ECC error for instruction"]
+    #[doc = "Disables bus error on multi-bit ECC error for instruction."]
     DISABLE = 0x01,
 }
 impl DisMbeccErrInst {
@@ -814,9 +814,9 @@ impl From<FlashSize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlashStallEn {
-    #[doc = "No stall on FLASH busy"]
+    #[doc = "No stall on FLASH busy."]
     ENABLE = 0x0,
-    #[doc = "Stall on FLASH busy"]
+    #[doc = "Stall on FLASH busy."]
     DISABLE = 0x01,
 }
 impl FlashStallEn {
@@ -845,9 +845,9 @@ impl From<FlashStallEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FrcNoAlloc {
-    #[doc = "Forces allocation"]
+    #[doc = "Forces allocation."]
     ENABLE = 0x0,
-    #[doc = "Forces no allocation"]
+    #[doc = "Forces no allocation."]
     DISABLE = 0x01,
 }
 impl FrcNoAlloc {
@@ -876,9 +876,9 @@ impl From<FrcNoAlloc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FrohfdivHalt {
-    #[doc = "Divider clock is running"]
+    #[doc = "Divider clock is running."]
     RUN = 0x0,
-    #[doc = "Divider clock is stopped"]
+    #[doc = "Divider clock is stopped."]
     HALT = 0x01,
 }
 impl FrohfdivHalt {
@@ -907,9 +907,9 @@ impl From<FrohfdivHalt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FrohfdivReset {
-    #[doc = "Divider is not reset"]
+    #[doc = "Divider is not reset."]
     RELEASED = 0x0,
-    #[doc = "Divider is reset"]
+    #[doc = "Divider is reset."]
     ASSERTED = 0x01,
 }
 impl FrohfdivReset {
@@ -938,9 +938,9 @@ impl From<FrohfdivReset> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FrohfdivUnstab {
-    #[doc = "Divider clock is stable"]
+    #[doc = "Divider clock is stable."]
     STABLE = 0x0,
-    #[doc = "Clock frequency is not stable"]
+    #[doc = "Clock frequency is not stable."]
     ONGOING = 0x01,
 }
 impl FrohfdivUnstab {
@@ -969,9 +969,9 @@ impl From<FrohfdivUnstab> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FrolfdivHalt {
-    #[doc = "Divider clock is running"]
+    #[doc = "Divider clock is running."]
     RUN = 0x0,
-    #[doc = "Divider clock is stopped"]
+    #[doc = "Divider clock is stopped."]
     HALT = 0x01,
 }
 impl FrolfdivHalt {
@@ -1000,9 +1000,9 @@ impl From<FrolfdivHalt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FrolfdivReset {
-    #[doc = "Divider is not reset"]
+    #[doc = "Divider is not reset."]
     RELEASED = 0x0,
-    #[doc = "Divider is reset"]
+    #[doc = "Divider is reset."]
     ASSERTED = 0x01,
 }
 impl FrolfdivReset {
@@ -1031,9 +1031,9 @@ impl From<FrolfdivReset> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FrolfdivUnstab {
-    #[doc = "Divider clock is stable"]
+    #[doc = "Divider clock is stable."]
     STABLE = 0x0,
-    #[doc = "Clock frequency is not stable"]
+    #[doc = "Clock frequency is not stable."]
     ONGOING = 0x01,
 }
 impl FrolfdivUnstab {
@@ -1217,7 +1217,7 @@ impl From<Interleave> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LockAll {
-    #[doc = "Any other value than b1010: disables write access to all registers"]
+    #[doc = "Any other value than b1010: disables write access to all registers."]
     DISABLE = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
@@ -1228,7 +1228,7 @@ pub enum LockAll {
     _RESERVED_7 = 0x07,
     _RESERVED_8 = 0x08,
     _RESERVED_9 = 0x09,
-    #[doc = "Enables write access to all registers"]
+    #[doc = "Enables write access to all registers."]
     ENABLE = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
@@ -1293,7 +1293,7 @@ impl From<Locknsmpu> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MassEraseDis {
-    #[doc = "Enables mass erase"]
+    #[doc = "Enables mass erase."]
     ENABLE = 0x0,
     #[doc = "Disables mass erase, write one lock until a system reset."]
     DISABLE = 0x01,
@@ -1324,9 +1324,9 @@ impl From<MassEraseDis> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Noref {
-    #[doc = "Reference clock is provided"]
+    #[doc = "Reference clock is provided."]
     YES_REF = 0x0,
-    #[doc = "No reference clock is provided"]
+    #[doc = "No reference clock is provided."]
     NO_REF = 0x01,
 }
 impl Noref {
@@ -1357,7 +1357,7 @@ impl From<Noref> for u8 {
 pub enum Pkc {
     #[doc = "RAMX0: alias space is disabled."]
     PKC_0 = 0x0,
-    #[doc = "RAMX0: same alias space as CPU0_SBUS"]
+    #[doc = "RAMX0: same alias space as CPU0_SBUS."]
     PKC_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -1388,13 +1388,13 @@ impl From<Pkc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PkcEls {
-    #[doc = "level 0"]
+    #[doc = "level 0."]
     LEVEL0 = 0x0,
-    #[doc = "level 1"]
+    #[doc = "level 1."]
     LEVEL1 = 0x01,
-    #[doc = "level 2"]
+    #[doc = "level 2."]
     LEVEL2 = 0x02,
-    #[doc = "level 3"]
+    #[doc = "level 3."]
     LEVEL3 = 0x03,
 }
 impl PkcEls {
@@ -1423,9 +1423,9 @@ impl From<PkcEls> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pll1clkdivHalt {
-    #[doc = "Divider clock is running"]
+    #[doc = "Divider clock is running."]
     RUN = 0x0,
-    #[doc = "Divider clock is stopped"]
+    #[doc = "Divider clock is stopped."]
     HALT = 0x01,
 }
 impl Pll1clkdivHalt {
@@ -1454,9 +1454,9 @@ impl From<Pll1clkdivHalt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pll1clkdivReset {
-    #[doc = "Divider is not reset"]
+    #[doc = "Divider is not reset."]
     RELEASED = 0x0,
-    #[doc = "Divider is reset"]
+    #[doc = "Divider is reset."]
     ASSERTED = 0x01,
 }
 impl Pll1clkdivReset {
@@ -1485,9 +1485,9 @@ impl From<Pll1clkdivReset> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pll1clkdivUnstab {
-    #[doc = "Divider clock is stable"]
+    #[doc = "Divider clock is stable."]
     STABLE = 0x0,
-    #[doc = "Clock frequency is not stable"]
+    #[doc = "Clock frequency is not stable."]
     ONGOING = 0x01,
 }
 impl Pll1clkdivUnstab {
@@ -1637,7 +1637,7 @@ impl From<RemapCpu0Sbus> for u8 {
 pub enum RemapDma0 {
     #[doc = "RAMX0: alias space is disabled."]
     DMA0_0 = 0x0,
-    #[doc = "RAMX0: same alias space as CPU0_SBUS"]
+    #[doc = "RAMX0: same alias space as CPU0_SBUS."]
     DMA0_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -1792,9 +1792,9 @@ impl From<Security> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Skew {
-    #[doc = "TENMS value is exact"]
+    #[doc = "TENMS value is exact."]
     EXACT = 0x0,
-    #[doc = "TENMS value is not exact or not given"]
+    #[doc = "TENMS value is not exact or not given."]
     INEXACT = 0x01,
 }
 impl Skew {
@@ -1823,9 +1823,9 @@ impl From<Skew> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SlowclkdivHalt {
-    #[doc = "Divider clock is running"]
+    #[doc = "Divider clock is running."]
     RUN = 0x0,
-    #[doc = "Divider clock is stopped"]
+    #[doc = "Divider clock is stopped."]
     HALT = 0x01,
 }
 impl SlowclkdivHalt {
@@ -1854,9 +1854,9 @@ impl From<SlowclkdivHalt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SlowclkdivReset {
-    #[doc = "Divider is not reset"]
+    #[doc = "Divider is not reset."]
     RELEASED = 0x0,
-    #[doc = "Divider is reset"]
+    #[doc = "Divider is reset."]
     ASSERTED = 0x01,
 }
 impl SlowclkdivReset {
@@ -1885,9 +1885,9 @@ impl From<SlowclkdivReset> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SlowclkdivUnstab {
-    #[doc = "Divider clock is stable"]
+    #[doc = "Divider clock is stable."]
     STABLE = 0x0,
-    #[doc = "Clock frequency is not stable"]
+    #[doc = "Clock frequency is not stable."]
     ONGOING = 0x01,
 }
 impl SlowclkdivUnstab {
@@ -1918,7 +1918,7 @@ impl From<SlowclkdivUnstab> for u8 {
 pub enum SmartDmaD {
     #[doc = "RAMX0: alias space is disabled."]
     SMART_DMA_D_0 = 0x0,
-    #[doc = "RAMX0: same alias space as CPU0_SBUS"]
+    #[doc = "RAMX0: same alias space as CPU0_SBUS."]
     SMART_DMA_D_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -1951,7 +1951,7 @@ impl From<SmartDmaD> for u8 {
 pub enum SmartDmaI {
     #[doc = "RAMX0: alias space is disabled."]
     SMART_DMA_I_0 = 0x0,
-    #[doc = "RAMX0: same alias space as CPU0_SBUS"]
+    #[doc = "RAMX0: same alias space as CPU0_SBUS."]
     SMART_DMA_I_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -2013,7 +2013,7 @@ impl From<SramXenLock> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Unlock {
-    #[doc = "Updates are allowed to all clock configuration registers"]
+    #[doc = "Updates are allowed to all clock configuration registers."]
     ENABLE = 0x0,
     #[doc = "Freezes all clock configuration registers update."]
     FREEZE = 0x01,
@@ -2046,7 +2046,7 @@ impl From<Unlock> for u8 {
 pub enum Usb0 {
     #[doc = "RAMX0: alias space is disabled."]
     USB0_0 = 0x0,
-    #[doc = "RAMX0: same alias space as CPU0_SBUS"]
+    #[doc = "RAMX0: same alias space as CPU0_SBUS."]
     USB0_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -2077,13 +2077,13 @@ impl From<Usb0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum UsbFsEnet {
-    #[doc = "level 0"]
+    #[doc = "level 0."]
     LEVEL0 = 0x0,
-    #[doc = "level 1"]
+    #[doc = "level 1."]
     LEVEL1 = 0x01,
-    #[doc = "level 2"]
+    #[doc = "level 2."]
     LEVEL2 = 0x02,
-    #[doc = "level 3"]
+    #[doc = "level 3."]
     LEVEL3 = 0x03,
 }
 impl UsbFsEnet {

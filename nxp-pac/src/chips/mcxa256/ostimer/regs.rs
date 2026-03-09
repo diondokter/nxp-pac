@@ -1,16 +1,16 @@
-#[doc = "Local Capture High for CPU"]
+#[doc = "Local Capture High for CPU."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CaptureH(pub u32);
 impl CaptureH {
-    #[doc = "EVTimer Capture Value"]
+    #[doc = "EVTimer Capture Value."]
     #[must_use]
     #[inline(always)]
     pub const fn capture_value(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x03ff;
         val as u16
     }
-    #[doc = "EVTimer Capture Value"]
+    #[doc = "EVTimer Capture Value."]
     #[inline(always)]
     pub const fn set_capture_value(&mut self, val: u16) {
         self.0 = (self.0 & !(0x03ff << 0usize)) | (((val as u32) & 0x03ff) << 0usize);
@@ -39,19 +39,19 @@ impl defmt::Format for CaptureH {
         )
     }
 }
-#[doc = "Local Capture Low for CPU"]
+#[doc = "Local Capture Low for CPU."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CaptureL(pub u32);
 impl CaptureL {
-    #[doc = "EVTimer Capture Value"]
+    #[doc = "EVTimer Capture Value."]
     #[must_use]
     #[inline(always)]
     pub const fn capture_value(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "EVTimer Capture Value"]
+    #[doc = "EVTimer Capture Value."]
     #[inline(always)]
     pub const fn set_capture_value(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -80,19 +80,19 @@ impl defmt::Format for CaptureL {
         )
     }
 }
-#[doc = "EVTIMER High"]
+#[doc = "EVTIMER High."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Evtimerh(pub u32);
 impl Evtimerh {
-    #[doc = "EVTimer Count Value"]
+    #[doc = "EVTimer Count Value."]
     #[must_use]
     #[inline(always)]
     pub const fn evtimer_count_value(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x03ff;
         val as u16
     }
-    #[doc = "EVTimer Count Value"]
+    #[doc = "EVTimer Count Value."]
     #[inline(always)]
     pub const fn set_evtimer_count_value(&mut self, val: u16) {
         self.0 = (self.0 & !(0x03ff << 0usize)) | (((val as u32) & 0x03ff) << 0usize);
@@ -121,19 +121,19 @@ impl defmt::Format for Evtimerh {
         )
     }
 }
-#[doc = "EVTIMER Low"]
+#[doc = "EVTIMER Low."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Evtimerl(pub u32);
 impl Evtimerl {
-    #[doc = "EVTimer Count Value"]
+    #[doc = "EVTimer Count Value."]
     #[must_use]
     #[inline(always)]
     pub const fn evtimer_count_value(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "EVTimer Count Value"]
+    #[doc = "EVTimer Count Value."]
     #[inline(always)]
     pub const fn set_evtimer_count_value(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -162,19 +162,19 @@ impl defmt::Format for Evtimerl {
         )
     }
 }
-#[doc = "Local Match High for CPU"]
+#[doc = "Local Match High for CPU."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct MatchH(pub u32);
 impl MatchH {
-    #[doc = "EVTimer Match Value"]
+    #[doc = "EVTimer Match Value."]
     #[must_use]
     #[inline(always)]
     pub const fn match_value(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x03ff;
         val as u16
     }
-    #[doc = "EVTimer Match Value"]
+    #[doc = "EVTimer Match Value."]
     #[inline(always)]
     pub const fn set_match_value(&mut self, val: u16) {
         self.0 = (self.0 & !(0x03ff << 0usize)) | (((val as u32) & 0x03ff) << 0usize);
@@ -199,19 +199,19 @@ impl defmt::Format for MatchH {
         defmt::write!(f, "MatchH {{ match_value: {=u16:?} }}", self.match_value())
     }
 }
-#[doc = "Local Match Low for CPU"]
+#[doc = "Local Match Low for CPU."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct MatchL(pub u32);
 impl MatchL {
-    #[doc = "EVTimer Match Value"]
+    #[doc = "EVTimer Match Value."]
     #[must_use]
     #[inline(always)]
     pub const fn match_value(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "EVTimer Match Value"]
+    #[doc = "EVTimer Match Value."]
     #[inline(always)]
     pub const fn set_match_value(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -236,55 +236,55 @@ impl defmt::Format for MatchL {
         defmt::write!(f, "MatchL {{ match_value: {=u32:?} }}", self.match_value())
     }
 }
-#[doc = "OSTIMER Control for CPU"]
+#[doc = "OSTIMER Control for CPU."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OseventCtrl(pub u32);
 impl OseventCtrl {
-    #[doc = "Interrupt Flag"]
+    #[doc = "Interrupt Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn ostimer_intrflag(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Interrupt Flag"]
+    #[doc = "Interrupt Flag."]
     #[inline(always)]
     pub const fn set_ostimer_intrflag(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Interrupt or Wake-Up Request"]
+    #[doc = "Interrupt or Wake-Up Request."]
     #[must_use]
     #[inline(always)]
     pub const fn ostimer_intena(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Interrupt or Wake-Up Request"]
+    #[doc = "Interrupt or Wake-Up Request."]
     #[inline(always)]
     pub const fn set_ostimer_intena(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "EVTimer Match Write Ready"]
+    #[doc = "EVTimer Match Write Ready."]
     #[must_use]
     #[inline(always)]
     pub const fn match_wr_rdy(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "EVTimer Match Write Ready"]
+    #[doc = "EVTimer Match Write Ready."]
     #[inline(always)]
     pub const fn set_match_wr_rdy(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Debug Enable"]
+    #[doc = "Debug Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn debug_en(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Debug Enable"]
+    #[doc = "Debug Enable."]
     #[inline(always)]
     pub const fn set_debug_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);

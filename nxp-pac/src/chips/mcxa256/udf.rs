@@ -1,4 +1,4 @@
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Udf {
     ptr: *mut u8,
@@ -14,22 +14,22 @@ impl Udf {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "Control register"]
+    #[doc = "Control register."]
     #[inline(always)]
     pub const fn udf_ctrl(self) -> crate::common::Reg<regs::UdfCtrl, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
     }
-    #[doc = "Status register"]
+    #[doc = "Status register."]
     #[inline(always)]
     pub const fn udf_status(self) -> crate::common::Reg<regs::UdfStatus, crate::common::R> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
     }
-    #[doc = "Data In Register"]
+    #[doc = "Data In Register."]
     #[inline(always)]
     pub const fn udf_wr_data(self) -> crate::common::Reg<regs::UdfWrData, crate::common::W> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
     }
-    #[doc = "Data Out Register"]
+    #[doc = "Data Out Register."]
     #[inline(always)]
     pub const fn udf_rd_data(self) -> crate::common::Reg<regs::UdfRdData, crate::common::R> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }

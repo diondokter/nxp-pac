@@ -1,208 +1,208 @@
-#[doc = "Global Interrupt Control High"]
+#[doc = "Global Interrupt Control High."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gichr(pub u32);
 impl Gichr {
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe16(&self) -> super::vals::Giwe16 {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Giwe16::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe16(&mut self, val: super::vals::Giwe16) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe17(&self) -> super::vals::Giwe17 {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Giwe17::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe17(&mut self, val: super::vals::Giwe17) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe18(&self) -> super::vals::Giwe18 {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Giwe18::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe18(&mut self, val: super::vals::Giwe18) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe19(&self) -> super::vals::Giwe19 {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Giwe19::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe19(&mut self, val: super::vals::Giwe19) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe20(&self) -> super::vals::Giwe20 {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::Giwe20::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe20(&mut self, val: super::vals::Giwe20) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe21(&self) -> super::vals::Giwe21 {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::Giwe21::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe21(&mut self, val: super::vals::Giwe21) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe22(&self) -> super::vals::Giwe22 {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::Giwe22::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe22(&mut self, val: super::vals::Giwe22) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe23(&self) -> super::vals::Giwe23 {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Giwe23::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe23(&mut self, val: super::vals::Giwe23) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe24(&self) -> super::vals::Giwe24 {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::Giwe24::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe24(&mut self, val: super::vals::Giwe24) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe25(&self) -> super::vals::Giwe25 {
         let val = (self.0 >> 9usize) & 0x01;
         super::vals::Giwe25::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe25(&mut self, val: super::vals::Giwe25) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe26(&self) -> super::vals::Giwe26 {
         let val = (self.0 >> 10usize) & 0x01;
         super::vals::Giwe26::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe26(&mut self, val: super::vals::Giwe26) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe27(&self) -> super::vals::Giwe27 {
         let val = (self.0 >> 11usize) & 0x01;
         super::vals::Giwe27::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe27(&mut self, val: super::vals::Giwe27) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe28(&self) -> super::vals::Giwe28 {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Giwe28::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe28(&mut self, val: super::vals::Giwe28) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe29(&self) -> super::vals::Giwe29 {
         let val = (self.0 >> 13usize) & 0x01;
         super::vals::Giwe29::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe29(&mut self, val: super::vals::Giwe29) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe30(&self) -> super::vals::Giwe30 {
         let val = (self.0 >> 14usize) & 0x01;
         super::vals::Giwe30::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe30(&mut self, val: super::vals::Giwe30) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe31(&self) -> super::vals::Giwe31 {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::Giwe31::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe31(&mut self, val: super::vals::Giwe31) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "Global Interrupt Write Data"]
+    #[doc = "Global Interrupt Write Data."]
     #[must_use]
     #[inline(always)]
     pub const fn giwd(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "Global Interrupt Write Data"]
+    #[doc = "Global Interrupt Write Data."]
     #[inline(always)]
     pub const fn set_giwd(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -263,211 +263,211 @@ impl defmt::Format for Gichr {
         )
     }
 }
-#[doc = "Global Interrupt Control Low"]
+#[doc = "Global Interrupt Control Low."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Giclr(pub u32);
 impl Giclr {
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe0(&self) -> super::vals::Giwe0 {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Giwe0::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe0(&mut self, val: super::vals::Giwe0) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe1(&self) -> super::vals::Giwe1 {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Giwe1::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe1(&mut self, val: super::vals::Giwe1) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe2(&self) -> super::vals::Giwe2 {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Giwe2::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe2(&mut self, val: super::vals::Giwe2) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe3(&self) -> super::vals::Giwe3 {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Giwe3::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe3(&mut self, val: super::vals::Giwe3) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe4(&self) -> super::vals::Giwe4 {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::Giwe4::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe4(&mut self, val: super::vals::Giwe4) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe5(&self) -> super::vals::Giwe5 {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::Giwe5::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe5(&mut self, val: super::vals::Giwe5) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe6(&self) -> super::vals::Giwe6 {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::Giwe6::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe6(&mut self, val: super::vals::Giwe6) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe7(&self) -> super::vals::Giwe7 {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Giwe7::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe7(&mut self, val: super::vals::Giwe7) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe8(&self) -> super::vals::Giwe8 {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::Giwe8::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe8(&mut self, val: super::vals::Giwe8) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe9(&self) -> super::vals::Giwe9 {
         let val = (self.0 >> 9usize) & 0x01;
         super::vals::Giwe9::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe9(&mut self, val: super::vals::Giwe9) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe10(&self) -> super::vals::Giwe10 {
         let val = (self.0 >> 10usize) & 0x01;
         super::vals::Giwe10::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe10(&mut self, val: super::vals::Giwe10) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe11(&self) -> super::vals::Giwe11 {
         let val = (self.0 >> 11usize) & 0x01;
         super::vals::Giwe11::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe11(&mut self, val: super::vals::Giwe11) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe12(&self) -> super::vals::Giwe12 {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Giwe12::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe12(&mut self, val: super::vals::Giwe12) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe13(&self) -> super::vals::Giwe13 {
         let val = (self.0 >> 13usize) & 0x01;
         super::vals::Giwe13::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe13(&mut self, val: super::vals::Giwe13) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe14(&self) -> super::vals::Giwe14 {
         let val = (self.0 >> 14usize) & 0x01;
         super::vals::Giwe14::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe14(&mut self, val: super::vals::Giwe14) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe15(&self) -> super::vals::Giwe15 {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::Giwe15::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe15(&mut self, val: super::vals::Giwe15) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "Global Interrupt Write Data"]
+    #[doc = "Global Interrupt Write Data."]
     #[must_use]
     #[inline(always)]
     pub const fn giwd(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "Global Interrupt Write Data"]
+    #[doc = "Global Interrupt Write Data."]
     #[inline(always)]
     pub const fn set_giwd(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -528,31 +528,31 @@ impl defmt::Format for Giclr {
         )
     }
 }
-#[doc = "Interrupt Control index"]
+#[doc = "Interrupt Control index."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Icr(pub u32);
 impl Icr {
-    #[doc = "Interrupt Configuration"]
+    #[doc = "Interrupt Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn irqc(&self) -> super::vals::Irqc {
         let val = (self.0 >> 16usize) & 0x0f;
         super::vals::Irqc::from_bits(val as u8)
     }
-    #[doc = "Interrupt Configuration"]
+    #[doc = "Interrupt Configuration."]
     #[inline(always)]
     pub const fn set_irqc(&mut self, val: super::vals::Irqc) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val.to_bits() as u32) & 0x0f) << 16usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf(&self) -> super::vals::Isf {
         let val = (self.0 >> 24usize) & 0x01;
         super::vals::Isf::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf(&mut self, val: super::vals::Isf) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
@@ -583,391 +583,391 @@ impl defmt::Format for Icr {
         )
     }
 }
-#[doc = "Interrupt Status Flag"]
+#[doc = "Interrupt Status Flag."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Isfr(pub u32);
 impl Isfr {
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf0(&self) -> super::vals::Isf0 {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Isf0::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf0(&mut self, val: super::vals::Isf0) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf1(&self) -> super::vals::Isf1 {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Isf1::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf1(&mut self, val: super::vals::Isf1) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf2(&self) -> super::vals::Isf2 {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Isf2::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf2(&mut self, val: super::vals::Isf2) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf3(&self) -> super::vals::Isf3 {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Isf3::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf3(&mut self, val: super::vals::Isf3) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf4(&self) -> super::vals::Isf4 {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::Isf4::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf4(&mut self, val: super::vals::Isf4) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf5(&self) -> super::vals::Isf5 {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::Isf5::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf5(&mut self, val: super::vals::Isf5) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf6(&self) -> super::vals::Isf6 {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::Isf6::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf6(&mut self, val: super::vals::Isf6) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf7(&self) -> super::vals::Isf7 {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Isf7::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf7(&mut self, val: super::vals::Isf7) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf8(&self) -> super::vals::Isf8 {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::Isf8::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf8(&mut self, val: super::vals::Isf8) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf9(&self) -> super::vals::Isf9 {
         let val = (self.0 >> 9usize) & 0x01;
         super::vals::Isf9::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf9(&mut self, val: super::vals::Isf9) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf10(&self) -> super::vals::Isf10 {
         let val = (self.0 >> 10usize) & 0x01;
         super::vals::Isf10::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf10(&mut self, val: super::vals::Isf10) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf11(&self) -> super::vals::Isf11 {
         let val = (self.0 >> 11usize) & 0x01;
         super::vals::Isf11::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf11(&mut self, val: super::vals::Isf11) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf12(&self) -> super::vals::Isf12 {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Isf12::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf12(&mut self, val: super::vals::Isf12) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf13(&self) -> super::vals::Isf13 {
         let val = (self.0 >> 13usize) & 0x01;
         super::vals::Isf13::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf13(&mut self, val: super::vals::Isf13) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf14(&self) -> super::vals::Isf14 {
         let val = (self.0 >> 14usize) & 0x01;
         super::vals::Isf14::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf14(&mut self, val: super::vals::Isf14) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf15(&self) -> super::vals::Isf15 {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::Isf15::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf15(&mut self, val: super::vals::Isf15) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf16(&self) -> super::vals::Isf16 {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::Isf16::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf16(&mut self, val: super::vals::Isf16) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf17(&self) -> super::vals::Isf17 {
         let val = (self.0 >> 17usize) & 0x01;
         super::vals::Isf17::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf17(&mut self, val: super::vals::Isf17) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf18(&self) -> super::vals::Isf18 {
         let val = (self.0 >> 18usize) & 0x01;
         super::vals::Isf18::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf18(&mut self, val: super::vals::Isf18) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val.to_bits() as u32) & 0x01) << 18usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf19(&self) -> super::vals::Isf19 {
         let val = (self.0 >> 19usize) & 0x01;
         super::vals::Isf19::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf19(&mut self, val: super::vals::Isf19) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val.to_bits() as u32) & 0x01) << 19usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf20(&self) -> super::vals::Isf20 {
         let val = (self.0 >> 20usize) & 0x01;
         super::vals::Isf20::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf20(&mut self, val: super::vals::Isf20) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf21(&self) -> super::vals::Isf21 {
         let val = (self.0 >> 21usize) & 0x01;
         super::vals::Isf21::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf21(&mut self, val: super::vals::Isf21) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf22(&self) -> super::vals::Isf22 {
         let val = (self.0 >> 22usize) & 0x01;
         super::vals::Isf22::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf22(&mut self, val: super::vals::Isf22) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf23(&self) -> super::vals::Isf23 {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::Isf23::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf23(&mut self, val: super::vals::Isf23) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf24(&self) -> super::vals::Isf24 {
         let val = (self.0 >> 24usize) & 0x01;
         super::vals::Isf24::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf24(&mut self, val: super::vals::Isf24) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf25(&self) -> super::vals::Isf25 {
         let val = (self.0 >> 25usize) & 0x01;
         super::vals::Isf25::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf25(&mut self, val: super::vals::Isf25) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val.to_bits() as u32) & 0x01) << 25usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf26(&self) -> super::vals::Isf26 {
         let val = (self.0 >> 26usize) & 0x01;
         super::vals::Isf26::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf26(&mut self, val: super::vals::Isf26) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf27(&self) -> super::vals::Isf27 {
         let val = (self.0 >> 27usize) & 0x01;
         super::vals::Isf27::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf27(&mut self, val: super::vals::Isf27) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val.to_bits() as u32) & 0x01) << 27usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf28(&self) -> super::vals::Isf28 {
         let val = (self.0 >> 28usize) & 0x01;
         super::vals::Isf28::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf28(&mut self, val: super::vals::Isf28) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf29(&self) -> super::vals::Isf29 {
         let val = (self.0 >> 29usize) & 0x01;
         super::vals::Isf29::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf29(&mut self, val: super::vals::Isf29) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf30(&self) -> super::vals::Isf30 {
         let val = (self.0 >> 30usize) & 0x01;
         super::vals::Isf30::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf30(&mut self, val: super::vals::Isf30) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf31(&self) -> super::vals::Isf31 {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::Isf31::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf31(&mut self, val: super::vals::Isf31) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -1058,19 +1058,19 @@ impl defmt::Format for Isfr {
         )
     }
 }
-#[doc = "Parameter"]
+#[doc = "Parameter."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Param(pub u32);
 impl Param {
-    #[doc = "Interrupt Number"]
+    #[doc = "Interrupt Number."]
     #[must_use]
     #[inline(always)]
     pub const fn irqnum(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "Interrupt Number"]
+    #[doc = "Interrupt Number."]
     #[inline(always)]
     pub const fn set_irqnum(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
@@ -1095,12 +1095,12 @@ impl defmt::Format for Param {
         defmt::write!(f, "Param {{ irqnum: {=u8:?} }}", self.irqnum())
     }
 }
-#[doc = "Port Clear Output"]
+#[doc = "Port Clear Output."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pcor(pub u32);
 impl Pcor {
-    #[doc = "Port Clear Output"]
+    #[doc = "Port Clear Output."]
     #[must_use]
     #[inline(always)]
     pub const fn ptco(&self, n: usize) -> super::vals::Ptco {
@@ -1109,7 +1109,7 @@ impl Pcor {
         let val = (self.0 >> offs) & 0x01;
         super::vals::Ptco::from_bits(val as u8)
     }
-    #[doc = "Port Clear Output"]
+    #[doc = "Port Clear Output."]
     #[inline(always)]
     pub const fn set_ptco(&mut self, n: usize, val: super::vals::Ptco) {
         assert!(n < 32usize);
@@ -1202,12 +1202,12 @@ impl defmt::Format for Pcor {
         )
     }
 }
-#[doc = "Port Data Direction"]
+#[doc = "Port Data Direction."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pddr(pub u32);
 impl Pddr {
-    #[doc = "Port Data Direction"]
+    #[doc = "Port Data Direction."]
     #[must_use]
     #[inline(always)]
     pub const fn pdd(&self, n: usize) -> super::vals::Pdd {
@@ -1216,7 +1216,7 @@ impl Pddr {
         let val = (self.0 >> offs) & 0x01;
         super::vals::Pdd::from_bits(val as u8)
     }
-    #[doc = "Port Data Direction"]
+    #[doc = "Port Data Direction."]
     #[inline(always)]
     pub const fn set_pdd(&mut self, n: usize, val: super::vals::Pdd) {
         assert!(n < 32usize);
@@ -1309,12 +1309,12 @@ impl defmt::Format for Pddr {
         )
     }
 }
-#[doc = "Port Data Input"]
+#[doc = "Port Data Input."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pdir(pub u32);
 impl Pdir {
-    #[doc = "Port Data Input"]
+    #[doc = "Port Data Input."]
     #[must_use]
     #[inline(always)]
     pub const fn pdi(&self, n: usize) -> bool {
@@ -1323,7 +1323,7 @@ impl Pdir {
         let val = (self.0 >> offs) & 0x01;
         val != 0
     }
-    #[doc = "Port Data Input"]
+    #[doc = "Port Data Input."]
     #[inline(always)]
     pub const fn set_pdi(&mut self, n: usize, val: bool) {
         assert!(n < 32usize);
@@ -1416,12 +1416,12 @@ impl defmt::Format for Pdir {
         )
     }
 }
-#[doc = "Port Data Output"]
+#[doc = "Port Data Output."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pdor(pub u32);
 impl Pdor {
-    #[doc = "Port Data Output"]
+    #[doc = "Port Data Output."]
     #[must_use]
     #[inline(always)]
     pub const fn pdo(&self, n: usize) -> bool {
@@ -1430,7 +1430,7 @@ impl Pdor {
         let val = (self.0 >> offs) & 0x01;
         val != 0
     }
-    #[doc = "Port Data Output"]
+    #[doc = "Port Data Output."]
     #[inline(always)]
     pub const fn set_pdo(&mut self, n: usize, val: bool) {
         assert!(n < 32usize);
@@ -1523,19 +1523,19 @@ impl defmt::Format for Pdor {
         )
     }
 }
-#[doc = "Pin Data"]
+#[doc = "Pin Data."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pdr(pub u8);
 impl Pdr {
-    #[doc = "Pin Data (I/O)"]
+    #[doc = "Pin Data (I/O)."]
     #[must_use]
     #[inline(always)]
     pub const fn pd(&self) -> super::vals::Pd {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Pd::from_bits(val as u8)
     }
-    #[doc = "Pin Data (I/O)"]
+    #[doc = "Pin Data (I/O)."]
     #[inline(always)]
     pub const fn set_pd(&mut self, val: super::vals::Pd) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u8) & 0x01) << 0usize);
@@ -1558,12 +1558,12 @@ impl defmt::Format for Pdr {
         defmt::write!(f, "Pdr {{ pd: {:?} }}", self.pd())
     }
 }
-#[doc = "Port Input Disable"]
+#[doc = "Port Input Disable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pidr(pub u32);
 impl Pidr {
-    #[doc = "Port Input Disable"]
+    #[doc = "Port Input Disable."]
     #[must_use]
     #[inline(always)]
     pub const fn pid(&self, n: usize) -> super::vals::Pid {
@@ -1572,7 +1572,7 @@ impl Pidr {
         let val = (self.0 >> offs) & 0x01;
         super::vals::Pid::from_bits(val as u8)
     }
-    #[doc = "Port Input Disable"]
+    #[doc = "Port Input Disable."]
     #[inline(always)]
     pub const fn set_pid(&mut self, n: usize, val: super::vals::Pid) {
         assert!(n < 32usize);
@@ -1665,12 +1665,12 @@ impl defmt::Format for Pidr {
         )
     }
 }
-#[doc = "Port Set Output"]
+#[doc = "Port Set Output."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Psor(pub u32);
 impl Psor {
-    #[doc = "Port Set Output"]
+    #[doc = "Port Set Output."]
     #[must_use]
     #[inline(always)]
     pub const fn ptso(&self, n: usize) -> super::vals::Ptso {
@@ -1679,7 +1679,7 @@ impl Psor {
         let val = (self.0 >> offs) & 0x01;
         super::vals::Ptso::from_bits(val as u8)
     }
-    #[doc = "Port Set Output"]
+    #[doc = "Port Set Output."]
     #[inline(always)]
     pub const fn set_ptso(&mut self, n: usize, val: super::vals::Ptso) {
         assert!(n < 32usize);
@@ -1772,12 +1772,12 @@ impl defmt::Format for Psor {
         )
     }
 }
-#[doc = "Port Toggle Output"]
+#[doc = "Port Toggle Output."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ptor(pub u32);
 impl Ptor {
-    #[doc = "Port Toggle Output"]
+    #[doc = "Port Toggle Output."]
     #[must_use]
     #[inline(always)]
     pub const fn ptto(&self, n: usize) -> bool {
@@ -1786,7 +1786,7 @@ impl Ptor {
         let val = (self.0 >> offs) & 0x01;
         val != 0
     }
-    #[doc = "Port Toggle Output"]
+    #[doc = "Port Toggle Output."]
     #[inline(always)]
     pub const fn set_ptto(&mut self, n: usize, val: bool) {
         assert!(n < 32usize);
@@ -1879,43 +1879,43 @@ impl defmt::Format for Ptor {
         )
     }
 }
-#[doc = "Version ID"]
+#[doc = "Version ID."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Verid(pub u32);
 impl Verid {
-    #[doc = "Feature Specification Number"]
+    #[doc = "Feature Specification Number."]
     #[must_use]
     #[inline(always)]
     pub const fn feature(&self) -> super::vals::Feature {
         let val = (self.0 >> 0usize) & 0xffff;
         super::vals::Feature::from_bits(val as u16)
     }
-    #[doc = "Feature Specification Number"]
+    #[doc = "Feature Specification Number."]
     #[inline(always)]
     pub const fn set_feature(&mut self, val: super::vals::Feature) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val.to_bits() as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Minor Version Number"]
+    #[doc = "Minor Version Number."]
     #[must_use]
     #[inline(always)]
     pub const fn minor(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0xff;
         val as u8
     }
-    #[doc = "Minor Version Number"]
+    #[doc = "Minor Version Number."]
     #[inline(always)]
     pub const fn set_minor(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
     }
-    #[doc = "Major Version Number"]
+    #[doc = "Major Version Number."]
     #[must_use]
     #[inline(always)]
     pub const fn major(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "Major Version Number"]
+    #[doc = "Major Version Number."]
     #[inline(always)]
     pub const fn set_major(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);

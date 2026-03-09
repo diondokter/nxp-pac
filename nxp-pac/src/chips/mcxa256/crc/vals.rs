@@ -33,9 +33,9 @@ impl From<Fxor> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcrc {
-    #[doc = "16 bits"]
+    #[doc = "16 bits."]
     B16 = 0x0,
-    #[doc = "32 bits"]
+    #[doc = "32 bits."]
     B32 = 0x01,
 }
 impl Tcrc {
@@ -64,7 +64,7 @@ impl From<Tcrc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tot {
-    #[doc = "No transposition"]
+    #[doc = "No transposition."]
     NOTRNPS = 0x0,
     #[doc = "Bits in bytes are transposed, but bytes are not transposed."]
     BTS_TRNPS = 0x01,
@@ -99,7 +99,7 @@ impl From<Tot> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Totr {
-    #[doc = "No transposition"]
+    #[doc = "No transposition."]
     NOTRNPS = 0x0,
     #[doc = "Bits in bytes are transposed, but bytes are not transposed."]
     BTS_TRNPS = 0x01,
@@ -134,9 +134,9 @@ impl From<Totr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Was {
-    #[doc = "Data values"]
+    #[doc = "Data values."]
     DATA = 0x0,
-    #[doc = "Seed values"]
+    #[doc = "Seed values."]
     SEED = 0x01,
 }
 impl Was {

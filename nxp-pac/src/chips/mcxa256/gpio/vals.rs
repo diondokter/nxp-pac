@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Feature(u16);
 impl Feature {
-    #[doc = "Basic implementation"]
+    #[doc = "Basic implementation."]
     pub const FEATURE0: Self = Self(0x0);
-    #[doc = "Protection registers implemented"]
+    #[doc = "Protection registers implemented."]
     pub const FEATURE1: Self = Self(0x01);
 }
 impl Feature {
@@ -50,9 +50,9 @@ impl From<Feature> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe0 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe0 {
@@ -81,9 +81,9 @@ impl From<Giwe0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe1 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe1 {
@@ -112,9 +112,9 @@ impl From<Giwe1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe10 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe10 {
@@ -143,9 +143,9 @@ impl From<Giwe10> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe11 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe11 {
@@ -174,9 +174,9 @@ impl From<Giwe11> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe12 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe12 {
@@ -205,9 +205,9 @@ impl From<Giwe12> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe13 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe13 {
@@ -236,9 +236,9 @@ impl From<Giwe13> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe14 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe14 {
@@ -267,9 +267,9 @@ impl From<Giwe14> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe15 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe15 {
@@ -300,7 +300,7 @@ impl From<Giwe15> for u8 {
 pub enum Giwe16 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe16 {
@@ -331,7 +331,7 @@ impl From<Giwe16> for u8 {
 pub enum Giwe17 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe17 {
@@ -362,7 +362,7 @@ impl From<Giwe17> for u8 {
 pub enum Giwe18 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe18 {
@@ -393,7 +393,7 @@ impl From<Giwe18> for u8 {
 pub enum Giwe19 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe19 {
@@ -422,9 +422,9 @@ impl From<Giwe19> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe2 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe2 {
@@ -455,7 +455,7 @@ impl From<Giwe2> for u8 {
 pub enum Giwe20 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe20 {
@@ -486,7 +486,7 @@ impl From<Giwe20> for u8 {
 pub enum Giwe21 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe21 {
@@ -517,7 +517,7 @@ impl From<Giwe21> for u8 {
 pub enum Giwe22 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe22 {
@@ -548,7 +548,7 @@ impl From<Giwe22> for u8 {
 pub enum Giwe23 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe23 {
@@ -579,7 +579,7 @@ impl From<Giwe23> for u8 {
 pub enum Giwe24 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe24 {
@@ -610,7 +610,7 @@ impl From<Giwe24> for u8 {
 pub enum Giwe25 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe25 {
@@ -641,7 +641,7 @@ impl From<Giwe25> for u8 {
 pub enum Giwe26 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe26 {
@@ -672,7 +672,7 @@ impl From<Giwe26> for u8 {
 pub enum Giwe27 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe27 {
@@ -703,7 +703,7 @@ impl From<Giwe27> for u8 {
 pub enum Giwe28 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe28 {
@@ -734,7 +734,7 @@ impl From<Giwe28> for u8 {
 pub enum Giwe29 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe29 {
@@ -763,9 +763,9 @@ impl From<Giwe29> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe3 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe3 {
@@ -796,7 +796,7 @@ impl From<Giwe3> for u8 {
 pub enum Giwe30 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe30 {
@@ -827,7 +827,7 @@ impl From<Giwe30> for u8 {
 pub enum Giwe31 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe31 {
@@ -856,9 +856,9 @@ impl From<Giwe31> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe4 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe4 {
@@ -887,9 +887,9 @@ impl From<Giwe4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe5 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe5 {
@@ -918,9 +918,9 @@ impl From<Giwe5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe6 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe6 {
@@ -949,9 +949,9 @@ impl From<Giwe6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe7 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe7 {
@@ -980,9 +980,9 @@ impl From<Giwe7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe8 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe8 {
@@ -1011,9 +1011,9 @@ impl From<Giwe8> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe9 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe9 {
@@ -1042,34 +1042,34 @@ impl From<Giwe9> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Irqc {
-    #[doc = "ISF is disabled"]
+    #[doc = "ISF is disabled."]
     IRQC0 = 0x0,
-    #[doc = "ISF and DMA request on rising edge"]
+    #[doc = "ISF and DMA request on rising edge."]
     IRQC1 = 0x01,
-    #[doc = "ISF and DMA request on falling edge"]
+    #[doc = "ISF and DMA request on falling edge."]
     IRQC2 = 0x02,
-    #[doc = "ISF and DMA request on either edge"]
+    #[doc = "ISF and DMA request on either edge."]
     IRQC3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "ISF sets on rising edge"]
+    #[doc = "ISF sets on rising edge."]
     IRQC5 = 0x05,
-    #[doc = "ISF sets on falling edge"]
+    #[doc = "ISF sets on falling edge."]
     IRQC6 = 0x06,
-    #[doc = "ISF sets on either edge"]
+    #[doc = "ISF sets on either edge."]
     IRQC7 = 0x07,
-    #[doc = "ISF and interrupt when logic 0"]
+    #[doc = "ISF and interrupt when logic 0."]
     IRQC8 = 0x08,
-    #[doc = "ISF and interrupt on rising edge"]
+    #[doc = "ISF and interrupt on rising edge."]
     IRQC9 = 0x09,
-    #[doc = "ISF and interrupt on falling edge"]
+    #[doc = "ISF and interrupt on falling edge."]
     IRQC10 = 0x0a,
-    #[doc = "ISF and Interrupt on either edge"]
+    #[doc = "ISF and Interrupt on either edge."]
     IRQC11 = 0x0b,
-    #[doc = "ISF and interrupt when logic 1"]
+    #[doc = "ISF and interrupt when logic 1."]
     IRQC12 = 0x0c,
-    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC13 = 0x0d,
-    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC14 = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -1099,9 +1099,9 @@ impl From<Irqc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf {
@@ -1130,9 +1130,9 @@ impl From<Isf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf0 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf0 {
@@ -1161,9 +1161,9 @@ impl From<Isf0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf1 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf1 {
@@ -1192,9 +1192,9 @@ impl From<Isf1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf10 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf10 {
@@ -1223,9 +1223,9 @@ impl From<Isf10> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf11 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf11 {
@@ -1254,9 +1254,9 @@ impl From<Isf11> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf12 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf12 {
@@ -1285,9 +1285,9 @@ impl From<Isf12> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf13 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf13 {
@@ -1316,9 +1316,9 @@ impl From<Isf13> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf14 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf14 {
@@ -1347,9 +1347,9 @@ impl From<Isf14> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf15 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf15 {
@@ -1378,9 +1378,9 @@ impl From<Isf15> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf16 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf16 {
@@ -1409,9 +1409,9 @@ impl From<Isf16> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf17 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf17 {
@@ -1440,9 +1440,9 @@ impl From<Isf17> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf18 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf18 {
@@ -1471,9 +1471,9 @@ impl From<Isf18> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf19 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf19 {
@@ -1502,9 +1502,9 @@ impl From<Isf19> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf2 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf2 {
@@ -1533,9 +1533,9 @@ impl From<Isf2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf20 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf20 {
@@ -1564,9 +1564,9 @@ impl From<Isf20> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf21 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf21 {
@@ -1595,9 +1595,9 @@ impl From<Isf21> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf22 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf22 {
@@ -1626,9 +1626,9 @@ impl From<Isf22> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf23 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf23 {
@@ -1657,9 +1657,9 @@ impl From<Isf23> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf24 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf24 {
@@ -1688,9 +1688,9 @@ impl From<Isf24> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf25 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf25 {
@@ -1719,9 +1719,9 @@ impl From<Isf25> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf26 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf26 {
@@ -1750,9 +1750,9 @@ impl From<Isf26> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf27 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf27 {
@@ -1781,9 +1781,9 @@ impl From<Isf27> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf28 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf28 {
@@ -1812,9 +1812,9 @@ impl From<Isf28> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf29 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf29 {
@@ -1843,9 +1843,9 @@ impl From<Isf29> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf3 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf3 {
@@ -1874,9 +1874,9 @@ impl From<Isf3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf30 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf30 {
@@ -1905,9 +1905,9 @@ impl From<Isf30> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf31 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf31 {
@@ -1936,9 +1936,9 @@ impl From<Isf31> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf4 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf4 {
@@ -1967,9 +1967,9 @@ impl From<Isf4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf5 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf5 {
@@ -1998,9 +1998,9 @@ impl From<Isf5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf6 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf6 {
@@ -2029,9 +2029,9 @@ impl From<Isf6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf7 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf7 {
@@ -2060,9 +2060,9 @@ impl From<Isf7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf8 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf8 {
@@ -2091,9 +2091,9 @@ impl From<Isf8> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf9 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf9 {
@@ -2122,9 +2122,9 @@ impl From<Isf9> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pd {
-    #[doc = "Logic zero"]
+    #[doc = "Logic zero."]
     PD0 = 0x0,
-    #[doc = "Logic one"]
+    #[doc = "Logic one."]
     PD1 = 0x01,
 }
 impl Pd {
@@ -2153,9 +2153,9 @@ impl From<Pd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdd {
-    #[doc = "Input"]
+    #[doc = "Input."]
     PDD0 = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     PDD1 = 0x01,
 }
 impl Pdd {
@@ -2184,9 +2184,9 @@ impl From<Pdd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pid {
-    #[doc = "Configured for general-purpose input"]
+    #[doc = "Configured for general-purpose input."]
     PID0 = 0x0,
-    #[doc = "Disabled for general-purpose input"]
+    #[doc = "Disabled for general-purpose input."]
     PID1 = 0x01,
 }
 impl Pid {
@@ -2215,9 +2215,9 @@ impl From<Pid> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptco {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTCO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 0"]
+    #[doc = "Corresponding field in PDOR becomes 0."]
     PTCO1 = 0x01,
 }
 impl Ptco {
@@ -2246,9 +2246,9 @@ impl From<Ptco> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptso {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTSO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 1"]
+    #[doc = "Corresponding field in PDOR becomes 1."]
     PTSO1 = 0x01,
 }
 impl Ptso {

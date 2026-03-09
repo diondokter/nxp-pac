@@ -2,17 +2,17 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AdcClkselMux {
-    #[doc = "FRO_LF_DIV"]
+    #[doc = "FRO_LF_DIV."]
     CLKROOT_FUNC_0 = 0x0,
-    #[doc = "FRO_HF_GATED"]
+    #[doc = "FRO_HF_GATED."]
     CLKROOT_FUNC_1 = 0x01,
     _RESERVED_2 = 0x02,
-    #[doc = "CLK_IN"]
+    #[doc = "CLK_IN."]
     CLKROOT_FUNC_3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "CLK_1M"]
+    #[doc = "CLK_1M."]
     CLKROOT_FUNC_5 = 0x05,
-    #[doc = "PLL1_CLK_DIV"]
+    #[doc = "PLL1_CLK_DIV."]
     CLKROOT_FUNC_6 = 0x06,
     _RESERVED_7 = 0x07,
 }
@@ -42,9 +42,9 @@ impl From<AdcClkselMux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ClkdivHalt {
-    #[doc = "Divider clock is running"]
+    #[doc = "Divider clock is running."]
     ON = 0x0,
-    #[doc = "Divider clock is stopped"]
+    #[doc = "Divider clock is stopped."]
     OFF = 0x01,
 }
 impl ClkdivHalt {
@@ -73,9 +73,9 @@ impl From<ClkdivHalt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ClkdivReset {
-    #[doc = "Divider isn't reset"]
+    #[doc = "Divider isn't reset."]
     ON = 0x0,
-    #[doc = "Divider is reset"]
+    #[doc = "Divider is reset."]
     OFF = 0x01,
 }
 impl ClkdivReset {
@@ -104,9 +104,9 @@ impl From<ClkdivReset> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ClkdivUnstab {
-    #[doc = "Divider clock is stable"]
+    #[doc = "Divider clock is stable."]
     ON = 0x0,
-    #[doc = "Clock frequency isn't stable"]
+    #[doc = "Clock frequency isn't stable."]
     OFF = 0x01,
 }
 impl ClkdivUnstab {
@@ -135,18 +135,18 @@ impl From<ClkdivUnstab> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ClkoutClkselMux {
-    #[doc = "FRO_12M"]
+    #[doc = "FRO_12M."]
     CLKROOT_12M = 0x0,
-    #[doc = "FRO_HF_DIV"]
+    #[doc = "FRO_HF_DIV."]
     CLKROOT_FIRC_DIV = 0x01,
-    #[doc = "CLK_IN"]
+    #[doc = "CLK_IN."]
     CLKROOT_SOSC = 0x02,
-    #[doc = "CLK_16K"]
+    #[doc = "CLK_16K."]
     CLKROOT_16K = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "PLL1_CLK"]
+    #[doc = "PLL1_CLK."]
     CLKROOT_SPLL = 0x05,
-    #[doc = "SLOW_CLK"]
+    #[doc = "SLOW_CLK."]
     CLKROOT_SLOW = 0x06,
     _RESERVED_7 = 0x07,
 }
@@ -176,18 +176,18 @@ impl From<ClkoutClkselMux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtimerClkselMux {
-    #[doc = "FRO_LF_DIV"]
+    #[doc = "FRO_LF_DIV."]
     CLKROOT_FUNC_0 = 0x0,
-    #[doc = "FRO_HF_GATED"]
+    #[doc = "FRO_HF_GATED."]
     CLKROOT_FUNC_1 = 0x01,
     _RESERVED_2 = 0x02,
-    #[doc = "CLK_IN"]
+    #[doc = "CLK_IN."]
     CLKROOT_FUNC_3 = 0x03,
-    #[doc = "CLK_16K"]
+    #[doc = "CLK_16K."]
     CLKROOT_FUNC_4 = 0x04,
-    #[doc = "CLK_1M"]
+    #[doc = "CLK_1M."]
     CLKROOT_FUNC_5 = 0x05,
-    #[doc = "PLL1_CLK_DIV"]
+    #[doc = "PLL1_CLK_DIV."]
     CLKROOT_FUNC_6 = 0x06,
     _RESERVED_7 = 0x07,
 }
@@ -217,17 +217,17 @@ impl From<CtimerClkselMux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DacClkselMux {
-    #[doc = "FRO_LF_DIV"]
+    #[doc = "FRO_LF_DIV."]
     CLKROOT_FUNC_0 = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "FRO_HF_DIV"]
+    #[doc = "FRO_HF_DIV."]
     CLKROOT_FUNC_2 = 0x02,
-    #[doc = "CLK_IN"]
+    #[doc = "CLK_IN."]
     CLKROOT_FUNC_3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "CLK_1M"]
+    #[doc = "CLK_1M."]
     CLKROOT_FUNC_5 = 0x05,
-    #[doc = "PLL1_CLK_DIV"]
+    #[doc = "PLL1_CLK_DIV."]
     CLKROOT_FUNC_6 = 0x06,
     _RESERVED_7 = 0x07,
 }
@@ -257,11 +257,11 @@ impl From<DacClkselMux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DbgTraceClkselMux {
-    #[doc = "CPU_CLK"]
+    #[doc = "CPU_CLK."]
     CLKROOT_CPU = 0x0,
-    #[doc = "CLK_1M"]
+    #[doc = "CLK_1M."]
     CLKROOT_1M = 0x01,
-    #[doc = "CLK_16K"]
+    #[doc = "CLK_16K."]
     CLKROOT_16K = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -291,17 +291,17 @@ impl From<DbgTraceClkselMux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FclkClkselMux {
-    #[doc = "FRO_LF_DIV"]
+    #[doc = "FRO_LF_DIV."]
     CLKROOT_FUNC_0 = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "FRO_HF_DIV"]
+    #[doc = "FRO_HF_DIV."]
     CLKROOT_FUNC_2 = 0x02,
-    #[doc = "CLK_IN"]
+    #[doc = "CLK_IN."]
     CLKROOT_FUNC_3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "CLK_1M"]
+    #[doc = "CLK_1M."]
     CLKROOT_FUNC_5 = 0x05,
-    #[doc = "PLL1_CLK_DIV"]
+    #[doc = "PLL1_CLK_DIV."]
     CLKROOT_FUNC_6 = 0x06,
     _RESERVED_7 = 0x07,
 }
@@ -332,15 +332,15 @@ impl From<FclkClkselMux> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlexcanClkselMux {
     _RESERVED_0 = 0x0,
-    #[doc = "FRO_HF_GATED"]
+    #[doc = "FRO_HF_GATED."]
     CLKROOT_FIRC_GATED = 0x01,
-    #[doc = "FRO_HF_DIV"]
+    #[doc = "FRO_HF_DIV."]
     CLKROOT_FIRC_DIV = 0x02,
-    #[doc = "CLK_IN"]
+    #[doc = "CLK_IN."]
     CLKROOT_SOSC = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
-    #[doc = "PLL1_CLK"]
+    #[doc = "PLL1_CLK."]
     CLKROOT_SPLL = 0x06,
     _RESERVED_7 = 0x07,
 }
@@ -370,17 +370,17 @@ impl From<FlexcanClkselMux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlexioClkselMux {
-    #[doc = "FRO_LF_DIV"]
+    #[doc = "FRO_LF_DIV."]
     CLKROOT_FUNC_0 = 0x0,
-    #[doc = "FRO_HF_GATED"]
+    #[doc = "FRO_HF_GATED."]
     CLKROOT_FUNC_1 = 0x01,
     _RESERVED_2 = 0x02,
-    #[doc = "CLK_IN"]
+    #[doc = "CLK_IN."]
     CLKROOT_FUNC_3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "CLK_1M"]
+    #[doc = "CLK_1M."]
     CLKROOT_FUNC_5 = 0x05,
-    #[doc = "PLL1_CLK_DIV"]
+    #[doc = "PLL1_CLK_DIV."]
     CLKROOT_FUNC_6 = 0x06,
     _RESERVED_7 = 0x07,
 }
@@ -410,17 +410,17 @@ impl From<FlexioClkselMux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpi2cClkselMux {
-    #[doc = "FRO_LF_DIV"]
+    #[doc = "FRO_LF_DIV."]
     CLKROOT_FUNC_0 = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "FRO_HF_DIV"]
+    #[doc = "FRO_HF_DIV."]
     CLKROOT_FUNC_2 = 0x02,
-    #[doc = "CLK_IN"]
+    #[doc = "CLK_IN."]
     CLKROOT_FUNC_3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "CLK_1M"]
+    #[doc = "CLK_1M."]
     CLKROOT_FUNC_5 = 0x05,
-    #[doc = "PLL1_CLK_DIV"]
+    #[doc = "PLL1_CLK_DIV."]
     CLKROOT_FUNC_6 = 0x06,
     _RESERVED_7 = 0x07,
 }
@@ -450,17 +450,17 @@ impl From<Lpi2cClkselMux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpspiClkselMux {
-    #[doc = "FRO_LF_DIV"]
+    #[doc = "FRO_LF_DIV."]
     CLKROOT_FUNC_0 = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "FRO_HF_DIV"]
+    #[doc = "FRO_HF_DIV."]
     CLKROOT_FUNC_2 = 0x02,
-    #[doc = "CLK_IN"]
+    #[doc = "CLK_IN."]
     CLKROOT_FUNC_3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "CLK_1M"]
+    #[doc = "CLK_1M."]
     CLKROOT_FUNC_5 = 0x05,
-    #[doc = "PLL1_CLK_DIV"]
+    #[doc = "PLL1_CLK_DIV."]
     CLKROOT_FUNC_6 = 0x06,
     _RESERVED_7 = 0x07,
 }
@@ -490,17 +490,17 @@ impl From<LpspiClkselMux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LptmrClkselMux {
-    #[doc = "FRO_LF_DIV"]
+    #[doc = "FRO_LF_DIV."]
     CLKROOT_FUNC_0 = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "FRO_HF_DIV"]
+    #[doc = "FRO_HF_DIV."]
     CLKROOT_FUNC_2 = 0x02,
-    #[doc = "CLK_IN"]
+    #[doc = "CLK_IN."]
     CLKROOT_FUNC_3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "CLK_1M"]
+    #[doc = "CLK_1M."]
     CLKROOT_FUNC_5 = 0x05,
-    #[doc = "PLL1_CLK_DIV"]
+    #[doc = "PLL1_CLK_DIV."]
     CLKROOT_FUNC_6 = 0x06,
     _RESERVED_7 = 0x07,
 }
@@ -530,18 +530,18 @@ impl From<LptmrClkselMux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpuartClkselMux {
-    #[doc = "FRO_LF_DIV"]
+    #[doc = "FRO_LF_DIV."]
     CLKROOT_FUNC_0 = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "FRO_HF_DIV"]
+    #[doc = "FRO_HF_DIV."]
     CLKROOT_FUNC_2 = 0x02,
-    #[doc = "CLK_IN"]
+    #[doc = "CLK_IN."]
     CLKROOT_FUNC_3 = 0x03,
-    #[doc = "CLK_16K"]
+    #[doc = "CLK_16K."]
     CLKROOT_FUNC_4 = 0x04,
-    #[doc = "CLK_1M"]
+    #[doc = "CLK_1M."]
     CLKROOT_FUNC_5 = 0x05,
-    #[doc = "PLL1_CLK_DIV"]
+    #[doc = "PLL1_CLK_DIV."]
     CLKROOT_FUNC_6 = 0x06,
     _RESERVED_7 = 0x07,
 }
@@ -571,10 +571,10 @@ impl From<LpuartClkselMux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum OstimerClkselMux {
-    #[doc = "CLK_16K"]
+    #[doc = "CLK_16K."]
     CLKROOT_16K = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "CLK_1M"]
+    #[doc = "CLK_1M."]
     CLKROOT_1M = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -604,17 +604,17 @@ impl From<OstimerClkselMux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RrClkselMux {
-    #[doc = "FRO_LF_DIV"]
+    #[doc = "FRO_LF_DIV."]
     CLKROOT_FUNC_0 = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "FRO_HF_DIV"]
+    #[doc = "FRO_HF_DIV."]
     CLKROOT_FUNC_2 = 0x02,
-    #[doc = "CLK_IN"]
+    #[doc = "CLK_IN."]
     CLKROOT_FUNC_3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "CLK_1M"]
+    #[doc = "CLK_1M."]
     CLKROOT_FUNC_5 = 0x05,
-    #[doc = "PLL1_CLK_DIV"]
+    #[doc = "PLL1_CLK_DIV."]
     CLKROOT_FUNC_6 = 0x06,
     _RESERVED_7 = 0x07,
 }
@@ -644,11 +644,11 @@ impl From<RrClkselMux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SystickClkselMux {
-    #[doc = "CPU_CLK"]
+    #[doc = "CPU_CLK."]
     CLKROOT_CPU = 0x0,
-    #[doc = "CLK_1M"]
+    #[doc = "CLK_1M."]
     CLKROOT_1M = 0x01,
-    #[doc = "CLK_16K"]
+    #[doc = "CLK_16K."]
     CLKROOT_16K = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -678,11 +678,11 @@ impl From<SystickClkselMux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum UsbClkselMux {
-    #[doc = "PLL1_CLK"]
+    #[doc = "PLL1_CLK."]
     CLKROOT_SPLL = 0x0,
-    #[doc = "CLK_48M"]
+    #[doc = "CLK_48M."]
     SCG_SCG_FIRC_48MHZ_CLK = 0x01,
-    #[doc = "CLK_IN"]
+    #[doc = "CLK_IN."]
     CLKROOT_SOSC = 0x02,
     _RESERVED_3 = 0x03,
 }

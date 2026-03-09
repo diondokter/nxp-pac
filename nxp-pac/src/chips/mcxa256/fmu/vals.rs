@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Abtreq {
-    #[doc = "No request to abort a command write sequence"]
+    #[doc = "No request to abort a command write sequence."]
     ABTREQ0 = 0x0,
-    #[doc = "Request to abort a command write sequence"]
+    #[doc = "Request to abort a command write sequence."]
     ABTREQ1 = 0x01,
 }
 impl Abtreq {
@@ -33,9 +33,9 @@ impl From<Abtreq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Accerr {
-    #[doc = "No access error detected"]
+    #[doc = "No access error detected."]
     ACCERR0 = 0x0,
-    #[doc = "Access error detected"]
+    #[doc = "Access error detected."]
     ACCERR1 = 0x01,
 }
 impl Accerr {
@@ -64,9 +64,9 @@ impl From<Accerr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ccie {
-    #[doc = "Command complete interrupt disabled"]
+    #[doc = "Command complete interrupt disabled."]
     CCIE0 = 0x0,
-    #[doc = "Command complete interrupt enabled"]
+    #[doc = "Command complete interrupt enabled."]
     CCIE1 = 0x01,
 }
 impl Ccie {
@@ -95,9 +95,9 @@ impl From<Ccie> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ccif {
-    #[doc = "Flash command, initialization, or power mode recovery in progress"]
+    #[doc = "Flash command, initialization, or power mode recovery in progress."]
     CCIF0 = 0x0,
-    #[doc = "Flash command, initialization, or power mode recovery has completed"]
+    #[doc = "Flash command, initialization, or power mode recovery has completed."]
     CCIF1 = 0x01,
 }
 impl Ccif {
@@ -126,9 +126,9 @@ impl From<Ccif> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdabt {
-    #[doc = "No command abort detected"]
+    #[doc = "No command abort detected."]
     CMDABT0 = 0x0,
-    #[doc = "Command abort detected"]
+    #[doc = "Command abort detected."]
     CMDABT1 = 0x01,
 }
 impl Cmdabt {
@@ -157,9 +157,9 @@ impl From<Cmdabt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdp {
-    #[doc = "Command protection level and domain ID are stale"]
+    #[doc = "Command protection level and domain ID are stale."]
     CMDP0 = 0x0,
-    #[doc = "Command protection level (CMDPRT) and domain ID (CMDDID) are set"]
+    #[doc = "Command protection level (CMDPRT) and domain ID (CMDDID) are set."]
     CMDP1 = 0x01,
 }
 impl Cmdp {
@@ -188,13 +188,13 @@ impl From<Cmdp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdprt {
-    #[doc = "Secure, normal access"]
+    #[doc = "Secure, normal access."]
     CMDPRT00 = 0x0,
-    #[doc = "Secure, privileged access"]
+    #[doc = "Secure, privileged access."]
     CMDPRT01 = 0x01,
-    #[doc = "Nonsecure, normal access"]
+    #[doc = "Nonsecure, normal access."]
     CMDPRT10 = 0x02,
-    #[doc = "Nonsecure, privileged access"]
+    #[doc = "Nonsecure, privileged access."]
     CMDPRT11 = 0x03,
 }
 impl Cmdprt {
@@ -223,9 +223,9 @@ impl From<Cmdprt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cwsabt {
-    #[doc = "Command write sequence not aborted"]
+    #[doc = "Command write sequence not aborted."]
     CWSABT0 = 0x0,
-    #[doc = "Command write sequence aborted"]
+    #[doc = "Command write sequence aborted."]
     CWSABT1 = 0x01,
 }
 impl Cwsabt {
@@ -254,9 +254,9 @@ impl From<Cwsabt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dfdie {
-    #[doc = "Double bit fault detect interrupt disabled"]
+    #[doc = "Double bit fault detect interrupt disabled."]
     DFDIE0 = 0x0,
-    #[doc = "Double bit fault detect interrupt enabled"]
+    #[doc = "Double bit fault detect interrupt enabled."]
     DFDIE1 = 0x01,
 }
 impl Dfdie {
@@ -285,9 +285,9 @@ impl From<Dfdie> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dfdif {
-    #[doc = "Double bit fault not detected during a valid flash read access"]
+    #[doc = "Double bit fault not detected during a valid flash read access."]
     DFDIF0 = 0x0,
-    #[doc = "Double bit fault detected (or FCTRL\\[FDFD\\] is set) during a valid flash read access"]
+    #[doc = "Double bit fault detected (or FCTRL\\[FDFD\\] is set) during a valid flash read access."]
     DFDIF1 = 0x01,
 }
 impl Dfdif {
@@ -316,9 +316,9 @@ impl From<Dfdif> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ersien0 {
-    #[doc = "Block 0 IFR Sector X is protected from erase by ERSSCR command"]
+    #[doc = "Block 0 IFR Sector X is protected from erase by ERSSCR command."]
     ERSIEN00 = 0x0,
-    #[doc = "Block 0 IFR Sector X is not protected from erase by ERSSCR command"]
+    #[doc = "Block 0 IFR Sector X is not protected from erase by ERSSCR command."]
     ERSIEN01 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -361,9 +361,9 @@ impl From<Ersien0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ersien1 {
-    #[doc = "Block 1 IFR Sector X is protected from erase by ERSSCR command"]
+    #[doc = "Block 1 IFR Sector X is protected from erase by ERSSCR command."]
     ERSIEN10 = 0x0,
-    #[doc = "Block 1 IFR Sector X is not protected from erase by ERSSCR command"]
+    #[doc = "Block 1 IFR Sector X is not protected from erase by ERSSCR command."]
     ERSIEN11 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -406,9 +406,9 @@ impl From<Ersien1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ersreq {
-    #[doc = "No request or request complete"]
+    #[doc = "No request or request complete."]
     ERSREQ0 = 0x0,
-    #[doc = "Request to run the Mass Erase operation"]
+    #[doc = "Request to run the Mass Erase operation."]
     ERSREQ1 = 0x01,
 }
 impl Ersreq {
@@ -437,9 +437,9 @@ impl From<Ersreq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fail {
-    #[doc = "Error not detected"]
+    #[doc = "Error not detected."]
     FAIL0 = 0x0,
-    #[doc = "Error detected"]
+    #[doc = "Error detected."]
     FAIL1 = 0x01,
 }
 impl Fail {
@@ -468,7 +468,7 @@ impl From<Fail> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fdfd {
-    #[doc = "FSTAT\\[DFDIF\\] sets only if a double bit fault is detected during a valid flash read access from the platform flash controller"]
+    #[doc = "FSTAT\\[DFDIF\\] sets only if a double bit fault is detected during a valid flash read access from the platform flash controller."]
     FDFD0 = 0x0,
     #[doc = "FSTAT\\[DFDIF\\] sets during any valid flash read access from the platform flash controller. An interrupt request is generated if the DFDIE bit is set."]
     FDFD1 = 0x01,
@@ -499,9 +499,9 @@ impl From<Fdfd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lsactive {
-    #[doc = "Full speed active mode requested"]
+    #[doc = "Full speed active mode requested."]
     LSACTIVE0 = 0x0,
-    #[doc = "Low speed active mode requested"]
+    #[doc = "Low speed active mode requested."]
     LSACTIVE1 = 0x01,
 }
 impl Lsactive {
@@ -530,9 +530,9 @@ impl From<Lsactive> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Perdy {
-    #[doc = "Program or sector erase command operation not stalled"]
+    #[doc = "Program or sector erase command operation not stalled."]
     PERDY0 = 0x0,
-    #[doc = "Program or sector erase command operation ready to execute"]
+    #[doc = "Program or sector erase command operation ready to execute."]
     PERDY1 = 0x01,
 }
 impl Perdy {
@@ -561,11 +561,11 @@ impl From<Perdy> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pewen {
-    #[doc = "Writes are not enabled"]
+    #[doc = "Writes are not enabled."]
     PEWEN00 = 0x0,
-    #[doc = "Writes are enabled for one flash or IFR phrase (phrase programming, sector erase)"]
+    #[doc = "Writes are enabled for one flash or IFR phrase (phrase programming, sector erase)."]
     PEWEN01 = 0x01,
-    #[doc = "Writes are enabled for one flash or IFR page (page programming)"]
+    #[doc = "Writes are enabled for one flash or IFR page (page programming)."]
     PEWEN10 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -595,9 +595,9 @@ impl From<Pewen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pviol {
-    #[doc = "No protection violation detected"]
+    #[doc = "No protection violation detected."]
     PVIOL0 = 0x0,
-    #[doc = "Protection violation detected"]
+    #[doc = "Protection violation detected."]
     PVIOL1 = 0x01,
 }
 impl Pviol {
@@ -626,9 +626,9 @@ impl From<Pviol> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SalvUsed {
-    #[doc = "Salvage not used during last operation"]
+    #[doc = "Salvage not used during last operation."]
     SALV_USED0 = 0x0,
-    #[doc = "Salvage used during the last erase operation"]
+    #[doc = "Salvage used during the last erase operation."]
     SALV_USED1 = 0x01,
 }
 impl SalvUsed {

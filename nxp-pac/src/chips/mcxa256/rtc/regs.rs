@@ -1,40 +1,40 @@
-#[doc = "RTC Control"]
+#[doc = "RTC Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cr(pub u32);
 impl Cr {
-    #[doc = "Software Reset"]
+    #[doc = "Software Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn swr(&self) -> super::vals::Swr {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Swr::from_bits(val as u8)
     }
-    #[doc = "Software Reset"]
+    #[doc = "Software Reset."]
     #[inline(always)]
     pub const fn set_swr(&mut self, val: super::vals::Swr) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Update Mode"]
+    #[doc = "Update Mode."]
     #[must_use]
     #[inline(always)]
     pub const fn um(&self) -> super::vals::Um {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Um::from_bits(val as u8)
     }
-    #[doc = "Update Mode"]
+    #[doc = "Update Mode."]
     #[inline(always)]
     pub const fn set_um(&mut self, val: super::vals::Um) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "LPO Select"]
+    #[doc = "LPO Select."]
     #[must_use]
     #[inline(always)]
     pub const fn lpos(&self) -> super::vals::Lpos {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Lpos::from_bits(val as u8)
     }
-    #[doc = "LPO Select"]
+    #[doc = "LPO Select."]
     #[inline(always)]
     pub const fn set_lpos(&mut self, val: super::vals::Lpos) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
@@ -67,67 +67,67 @@ impl defmt::Format for Cr {
         )
     }
 }
-#[doc = "RTC Interrupt Enable"]
+#[doc = "RTC Interrupt Enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ier(pub u32);
 impl Ier {
-    #[doc = "Time Invalid Interrupt Enable"]
+    #[doc = "Time Invalid Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn tiie(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Time Invalid Interrupt Enable"]
+    #[doc = "Time Invalid Interrupt Enable."]
     #[inline(always)]
     pub const fn set_tiie(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Time Overflow Interrupt Enable"]
+    #[doc = "Time Overflow Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn toie(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Time Overflow Interrupt Enable"]
+    #[doc = "Time Overflow Interrupt Enable."]
     #[inline(always)]
     pub const fn set_toie(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Time Alarm Interrupt Enable"]
+    #[doc = "Time Alarm Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn taie(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Time Alarm Interrupt Enable"]
+    #[doc = "Time Alarm Interrupt Enable."]
     #[inline(always)]
     pub const fn set_taie(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Time Seconds Interrupt Enable"]
+    #[doc = "Time Seconds Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn tsie(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "Time Seconds Interrupt Enable"]
+    #[doc = "Time Seconds Interrupt Enable."]
     #[inline(always)]
     pub const fn set_tsie(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "Timer Seconds Interrupt Configuration"]
+    #[doc = "Timer Seconds Interrupt Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn tsic(&self) -> super::vals::Tsic {
         let val = (self.0 >> 16usize) & 0x07;
         super::vals::Tsic::from_bits(val as u8)
     }
-    #[doc = "Timer Seconds Interrupt Configuration"]
+    #[doc = "Timer Seconds Interrupt Configuration."]
     #[inline(always)]
     pub const fn set_tsic(&mut self, val: super::vals::Tsic) {
         self.0 = (self.0 & !(0x07 << 16usize)) | (((val.to_bits() as u32) & 0x07) << 16usize);
@@ -164,55 +164,55 @@ impl defmt::Format for Ier {
         )
     }
 }
-#[doc = "RTC Lock"]
+#[doc = "RTC Lock."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lr(pub u32);
 impl Lr {
-    #[doc = "Time Compensation Lock"]
+    #[doc = "Time Compensation Lock."]
     #[must_use]
     #[inline(always)]
     pub const fn tcl(&self) -> super::vals::Tcl {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Tcl::from_bits(val as u8)
     }
-    #[doc = "Time Compensation Lock"]
+    #[doc = "Time Compensation Lock."]
     #[inline(always)]
     pub const fn set_tcl(&mut self, val: super::vals::Tcl) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "Control Register Lock"]
+    #[doc = "Control Register Lock."]
     #[must_use]
     #[inline(always)]
     pub const fn crl(&self) -> super::vals::Crl {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::Crl::from_bits(val as u8)
     }
-    #[doc = "Control Register Lock"]
+    #[doc = "Control Register Lock."]
     #[inline(always)]
     pub const fn set_crl(&mut self, val: super::vals::Crl) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
-    #[doc = "Status Register Lock"]
+    #[doc = "Status Register Lock."]
     #[must_use]
     #[inline(always)]
     pub const fn srl(&self) -> super::vals::Srl {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::Srl::from_bits(val as u8)
     }
-    #[doc = "Status Register Lock"]
+    #[doc = "Status Register Lock."]
     #[inline(always)]
     pub const fn set_srl(&mut self, val: super::vals::Srl) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
-    #[doc = "Lock Register Lock"]
+    #[doc = "Lock Register Lock."]
     #[must_use]
     #[inline(always)]
     pub const fn lrl(&self) -> super::vals::Lrl {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::Lrl::from_bits(val as u8)
     }
-    #[doc = "Lock Register Lock"]
+    #[doc = "Lock Register Lock."]
     #[inline(always)]
     pub const fn set_lrl(&mut self, val: super::vals::Lrl) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
@@ -247,55 +247,55 @@ impl defmt::Format for Lr {
         )
     }
 }
-#[doc = "RTC Status"]
+#[doc = "RTC Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sr(pub u32);
 impl Sr {
-    #[doc = "Time Invalid Flag"]
+    #[doc = "Time Invalid Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn tif(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Time Invalid Flag"]
+    #[doc = "Time Invalid Flag."]
     #[inline(always)]
     pub const fn set_tif(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Time Overflow Flag"]
+    #[doc = "Time Overflow Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn tof(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Time Overflow Flag"]
+    #[doc = "Time Overflow Flag."]
     #[inline(always)]
     pub const fn set_tof(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Time Alarm Flag"]
+    #[doc = "Time Alarm Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn taf(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Time Alarm Flag"]
+    #[doc = "Time Alarm Flag."]
     #[inline(always)]
     pub const fn set_taf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Time Counter Enable"]
+    #[doc = "Time Counter Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn tce(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "Time Counter Enable"]
+    #[doc = "Time Counter Enable."]
     #[inline(always)]
     pub const fn set_tce(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
@@ -330,19 +330,19 @@ impl defmt::Format for Sr {
         )
     }
 }
-#[doc = "RTC Time Alarm"]
+#[doc = "RTC Time Alarm."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tar(pub u32);
 impl Tar {
-    #[doc = "Time Alarm Register"]
+    #[doc = "Time Alarm Register."]
     #[must_use]
     #[inline(always)]
     pub const fn tar(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Time Alarm Register"]
+    #[doc = "Time Alarm Register."]
     #[inline(always)]
     pub const fn set_tar(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -365,55 +365,55 @@ impl defmt::Format for Tar {
         defmt::write!(f, "Tar {{ tar: {=u32:?} }}", self.tar())
     }
 }
-#[doc = "RTC Time Compensation"]
+#[doc = "RTC Time Compensation."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tcr(pub u32);
 impl Tcr {
-    #[doc = "Time Compensation Register"]
+    #[doc = "Time Compensation Register."]
     #[must_use]
     #[inline(always)]
     pub const fn tcr(&self) -> super::vals::Tcr {
         let val = (self.0 >> 0usize) & 0xff;
         super::vals::Tcr::from_bits(val as u8)
     }
-    #[doc = "Time Compensation Register"]
+    #[doc = "Time Compensation Register."]
     #[inline(always)]
     pub const fn set_tcr(&mut self, val: super::vals::Tcr) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val.to_bits() as u32) & 0xff) << 0usize);
     }
-    #[doc = "Compensation Interval Register"]
+    #[doc = "Compensation Interval Register."]
     #[must_use]
     #[inline(always)]
     pub const fn cir(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0xff;
         val as u8
     }
-    #[doc = "Compensation Interval Register"]
+    #[doc = "Compensation Interval Register."]
     #[inline(always)]
     pub const fn set_cir(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
     }
-    #[doc = "Time Compensation Value"]
+    #[doc = "Time Compensation Value."]
     #[must_use]
     #[inline(always)]
     pub const fn tcv(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0xff;
         val as u8
     }
-    #[doc = "Time Compensation Value"]
+    #[doc = "Time Compensation Value."]
     #[inline(always)]
     pub const fn set_tcv(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
     }
-    #[doc = "Compensation Interval Counter"]
+    #[doc = "Compensation Interval Counter."]
     #[must_use]
     #[inline(always)]
     pub const fn cic(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "Compensation Interval Counter"]
+    #[doc = "Compensation Interval Counter."]
     #[inline(always)]
     pub const fn set_cic(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);
@@ -448,19 +448,19 @@ impl defmt::Format for Tcr {
         )
     }
 }
-#[doc = "RTC Time Prescaler"]
+#[doc = "RTC Time Prescaler."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tpr(pub u32);
 impl Tpr {
-    #[doc = "Time Prescaler Register"]
+    #[doc = "Time Prescaler Register."]
     #[must_use]
     #[inline(always)]
     pub const fn tpr(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Time Prescaler Register"]
+    #[doc = "Time Prescaler Register."]
     #[inline(always)]
     pub const fn set_tpr(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
@@ -483,19 +483,19 @@ impl defmt::Format for Tpr {
         defmt::write!(f, "Tpr {{ tpr: {=u16:?} }}", self.tpr())
     }
 }
-#[doc = "RTC Time Seconds"]
+#[doc = "RTC Time Seconds."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tsr(pub u32);
 impl Tsr {
-    #[doc = "Time Seconds Register"]
+    #[doc = "Time Seconds Register."]
     #[must_use]
     #[inline(always)]
     pub const fn tsr(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Time Seconds Register"]
+    #[doc = "Time Seconds Register."]
     #[inline(always)]
     pub const fn set_tsr(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);

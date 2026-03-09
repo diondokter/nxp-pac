@@ -2,12 +2,12 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bwc {
-    #[doc = "No eDMA engine stalls"]
+    #[doc = "No eDMA engine stalls."]
     NO_STALL = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "eDMA engine stalls for 4 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     ENGINE_STALLS_FOUR = 0x02,
-    #[doc = "eDMA engine stalls for 8 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     ENGINE_STALLS_EIGHT = 0x03,
 }
 impl Bwc {
@@ -36,9 +36,9 @@ impl From<Bwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dpa {
-    #[doc = "Channel can suspend a lower-priority channel"]
+    #[doc = "Channel can suspend a lower-priority channel."]
     SUSPEND = 0x0,
-    #[doc = "Channel cannot suspend any other channel, regardless of channel priority"]
+    #[doc = "Channel cannot suspend any other channel, regardless of channel priority."]
     CANNOT_SUSPEND = 0x01,
 }
 impl Dpa {
@@ -67,9 +67,9 @@ impl From<Dpa> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dreq {
-    #[doc = "No operation"]
+    #[doc = "No operation."]
     CHANNEL_NOT_AFFECTED = 0x0,
-    #[doc = "Clear the ERQ field to 0 upon major loop completion, thus disabling hardware service requests"]
+    #[doc = "Clear the ERQ field to 0 upon major loop completion, thus disabling hardware service requests."]
     ERQ_FIELD_CLEAR = 0x01,
 }
 impl Dreq {
@@ -98,9 +98,9 @@ impl From<Dreq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ecp {
-    #[doc = "Channel cannot be suspended by a higher-priority channel's service request"]
+    #[doc = "Channel cannot be suspended by a higher-priority channel's service request."]
     CANNOT_SUSPEND = 0x0,
-    #[doc = "Channel can be temporarily suspended by a higher-priority channel's service request"]
+    #[doc = "Channel can be temporarily suspended by a higher-priority channel's service request."]
     SUSPEND = 0x01,
 }
 impl Ecp {
@@ -129,7 +129,7 @@ impl From<Ecp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Esg {
-    #[doc = "Current channel's TCD is normal format"]
+    #[doc = "Current channel's TCD is normal format."]
     NORMAL_FORMAT = 0x0,
     #[doc = "Current channel's TCD specifies scatter/gather format."]
     SCATTER_GATHER_FORMAT = 0x01,
@@ -160,9 +160,9 @@ impl From<Esg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pal {
-    #[doc = "User protection level for DMA transfers"]
+    #[doc = "User protection level for DMA transfers."]
     USER_PROTECTION = 0x0,
-    #[doc = "Privileged protection level for DMA transfers"]
+    #[doc = "Privileged protection level for DMA transfers."]
     PRIVILEGED_PROTECTION = 0x01,
 }
 impl Pal {
@@ -191,17 +191,17 @@ impl From<Pal> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Size {
-    #[doc = "8-bit"]
+    #[doc = "8-bit."]
     EIGHT_BIT = 0x0,
-    #[doc = "16-bit"]
+    #[doc = "16-bit."]
     SIXTEEN_BIT = 0x01,
-    #[doc = "32-bit"]
+    #[doc = "32-bit."]
     THIRTYTWO_BIT = 0x02,
-    #[doc = "64-bit"]
+    #[doc = "64-bit."]
     SIXTYFOUR_BIT = 0x03,
-    #[doc = "16-byte"]
+    #[doc = "16-byte."]
     SIXTEEN_BYTE = 0x04,
-    #[doc = "32-byte"]
+    #[doc = "32-byte."]
     THIRTYTWO_BYTE = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -232,9 +232,9 @@ impl From<Size> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Start {
-    #[doc = "Channel not explicitly started"]
+    #[doc = "Channel not explicitly started."]
     CHANNEL_NOT_STARTED = 0x0,
-    #[doc = "Channel explicitly started via a software-initiated service request"]
+    #[doc = "Channel explicitly started via a software-initiated service request."]
     CHANNEL_STARTED = 0x01,
 }
 impl Start {
@@ -263,9 +263,9 @@ impl From<Start> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TcdNbytesMloffnoDmloe {
-    #[doc = "Minor loop offset not applied to DADDR"]
+    #[doc = "Minor loop offset not applied to DADDR."]
     OFFSET_NOT_APPLIED = 0x0,
-    #[doc = "Minor loop offset applied to DADDR"]
+    #[doc = "Minor loop offset applied to DADDR."]
     OFFSET_APPLIED = 0x01,
 }
 impl TcdNbytesMloffnoDmloe {
@@ -294,9 +294,9 @@ impl From<TcdNbytesMloffnoDmloe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TcdNbytesMloffnoSmloe {
-    #[doc = "Minor loop offset not applied to SADDR"]
+    #[doc = "Minor loop offset not applied to SADDR."]
     OFFSET_NOT_APPLIED = 0x0,
-    #[doc = "Minor loop offset applied to SADDR"]
+    #[doc = "Minor loop offset applied to SADDR."]
     OFFSET_APPLIED = 0x01,
 }
 impl TcdNbytesMloffnoSmloe {
@@ -325,9 +325,9 @@ impl From<TcdNbytesMloffnoSmloe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TcdNbytesMloffyesDmloe {
-    #[doc = "Minor loop offset not applied to DADDR"]
+    #[doc = "Minor loop offset not applied to DADDR."]
     OFFSET_NOT_APPLIED = 0x0,
-    #[doc = "Minor loop offset applied to DADDR"]
+    #[doc = "Minor loop offset applied to DADDR."]
     OFFSET_APPLIED = 0x01,
 }
 impl TcdNbytesMloffyesDmloe {
@@ -356,9 +356,9 @@ impl From<TcdNbytesMloffyesDmloe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TcdNbytesMloffyesSmloe {
-    #[doc = "Minor loop offset not applied to SADDR"]
+    #[doc = "Minor loop offset not applied to SADDR."]
     OFFSET_NOT_APPLIED = 0x0,
-    #[doc = "Minor loop offset applied to SADDR"]
+    #[doc = "Minor loop offset applied to SADDR."]
     OFFSET_APPLIED = 0x01,
 }
 impl TcdNbytesMloffyesSmloe {

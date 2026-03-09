@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Brk13 {
-    #[doc = "9 to 13 bit times"]
+    #[doc = "9 to 13 bit times."]
     SHORT = 0x0,
-    #[doc = "12 to 15 bit times"]
+    #[doc = "12 to 15 bit times."]
     LONG = 0x01,
 }
 impl Brk13 {
@@ -33,9 +33,9 @@ impl From<Brk13> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dozeen {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     ENABLED = 0x0,
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLED = 0x01,
 }
 impl Dozeen {
@@ -64,9 +64,9 @@ impl From<Dozeen> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Feature(u16);
 impl Feature {
-    #[doc = "Standard feature set"]
+    #[doc = "Standard feature set."]
     pub const STANDARD: Self = Self(0x01);
-    #[doc = "Standard feature set with MODEM and IrDA support"]
+    #[doc = "Standard feature set with MODEM and IrDA support."]
     pub const MODEM: Self = Self(0x03);
 }
 impl Feature {
@@ -112,21 +112,21 @@ impl From<Feature> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Idlecfg {
-    #[doc = "1"]
+    #[doc = "1."]
     IDLE_1 = 0x0,
-    #[doc = "2"]
+    #[doc = "2."]
     IDLE_2 = 0x01,
-    #[doc = "4"]
+    #[doc = "4."]
     IDLE_4 = 0x02,
-    #[doc = "8"]
+    #[doc = "8."]
     IDLE_8 = 0x03,
-    #[doc = "16"]
+    #[doc = "16."]
     IDLE_16 = 0x04,
-    #[doc = "32"]
+    #[doc = "32."]
     IDLE_32 = 0x05,
-    #[doc = "64"]
+    #[doc = "64."]
     IDLE_64 = 0x06,
-    #[doc = "128"]
+    #[doc = "128."]
     IDLE_128 = 0x07,
 }
 impl Idlecfg {
@@ -155,9 +155,9 @@ impl From<Idlecfg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ilt {
-    #[doc = "After the start bit"]
+    #[doc = "After the start bit."]
     FROM_START = 0x0,
-    #[doc = "After the stop bit"]
+    #[doc = "After the stop bit."]
     FROM_STOP = 0x01,
 }
 impl Ilt {
@@ -186,9 +186,9 @@ impl From<Ilt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Loops {
-    #[doc = "Normal operation: RXD and TXD use separate pins"]
+    #[doc = "Normal operation: RXD and TXD use separate pins."]
     NOFFECT = 0x0,
-    #[doc = "Loop mode or Single-Wire mode"]
+    #[doc = "Loop mode or Single-Wire mode."]
     LOOPBACK = 0x01,
 }
 impl Loops {
@@ -217,9 +217,9 @@ impl From<Loops> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum M {
-    #[doc = "8-bit"]
+    #[doc = "8-bit."]
     DATA8 = 0x0,
-    #[doc = "9-bit"]
+    #[doc = "9-bit."]
     DATA9 = 0x01,
 }
 impl M {
@@ -248,9 +248,9 @@ impl From<M> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum M7 {
-    #[doc = "8-bit to 10-bit"]
+    #[doc = "8-bit to 10-bit."]
     NO_EFFECT = 0x0,
-    #[doc = "7-bit"]
+    #[doc = "7-bit."]
     DATA7 = 0x01,
 }
 impl M7 {
@@ -279,13 +279,13 @@ impl From<M7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Matcfg {
-    #[doc = "Address match wake-up"]
+    #[doc = "Address match wake-up."]
     ADDR_MATCH = 0x0,
-    #[doc = "Idle match wake-up"]
+    #[doc = "Idle match wake-up."]
     IDLE_MATCH = 0x01,
-    #[doc = "Match on and match off"]
+    #[doc = "Match on and match off."]
     ONOFF_MATCH = 0x02,
-    #[doc = "Enables RWU on data match and match on or off for the transmitter CTS input"]
+    #[doc = "Enables RWU on data match and match on or off for the transmitter CTS input."]
     RWU_MATCH = 0x03,
 }
 impl Matcfg {
@@ -314,9 +314,9 @@ impl From<Matcfg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Msbf {
-    #[doc = "LSB"]
+    #[doc = "LSB."]
     LSB_FIRST = 0x0,
-    #[doc = "MSB"]
+    #[doc = "MSB."]
     MSB_FIRST = 0x01,
 }
 impl Msbf {
@@ -345,9 +345,9 @@ impl From<Msbf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pt {
-    #[doc = "Even parity"]
+    #[doc = "Even parity."]
     EVEN = 0x0,
-    #[doc = "Odd parity"]
+    #[doc = "Odd parity."]
     ODD = 0x01,
 }
 impl Pt {
@@ -376,9 +376,9 @@ impl From<Pt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Raf {
-    #[doc = "Idle, waiting for a start bit"]
+    #[doc = "Idle, waiting for a start bit."]
     IDLE = 0x0,
-    #[doc = "Receiver active (RXD pin input not idle)"]
+    #[doc = "Receiver active (RXD pin input not idle)."]
     ACTIVE = 0x01,
 }
 impl Raf {
@@ -407,9 +407,9 @@ impl From<Raf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Resyncdis {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     RESYNC = 0x0,
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     NO_RESYNC = 0x01,
 }
 impl Resyncdis {
@@ -438,9 +438,9 @@ impl From<Resyncdis> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rsrc {
-    #[doc = "Internal Loopback mode"]
+    #[doc = "Internal Loopback mode."]
     NO_EFFECT = 0x0,
-    #[doc = "Single-wire mode"]
+    #[doc = "Single-wire mode."]
     ONEWIRE = 0x01,
 }
 impl Rsrc {
@@ -469,9 +469,9 @@ impl From<Rsrc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rst {
-    #[doc = "Not reset"]
+    #[doc = "Not reset."]
     NO_EFFECT = 0x0,
-    #[doc = "Reset"]
+    #[doc = "Reset."]
     RESET = 0x01,
 }
 impl Rst {
@@ -500,9 +500,9 @@ impl From<Rst> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rwu {
-    #[doc = "Normal receiver operation"]
+    #[doc = "Normal receiver operation."]
     NO_EFFECT = 0x0,
-    #[doc = "LPUART receiver in standby, waiting for a wake-up condition"]
+    #[doc = "LPUART receiver in standby, waiting for a wake-up condition."]
     RX_WAKEUP = 0x01,
 }
 impl Rwu {
@@ -531,9 +531,9 @@ impl From<Rwu> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rwuid {
-    #[doc = "STAT\\[IDLE\\] does not become 1"]
+    #[doc = "STAT\\[IDLE\\] does not become 1."]
     IDLE_NOTSET = 0x0,
-    #[doc = "STAT\\[IDLE\\] becomes 1"]
+    #[doc = "STAT\\[IDLE\\] becomes 1."]
     IDLE_SET = 0x01,
 }
 impl Rwuid {
@@ -562,21 +562,21 @@ impl From<Rwuid> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rxfifosize {
-    #[doc = "1"]
+    #[doc = "1."]
     FIFO_1 = 0x0,
-    #[doc = "4"]
+    #[doc = "4."]
     FIFO_4 = 0x01,
-    #[doc = "8"]
+    #[doc = "8."]
     FIFO_8 = 0x02,
-    #[doc = "16"]
+    #[doc = "16."]
     FIFO_16 = 0x03,
-    #[doc = "32"]
+    #[doc = "32."]
     FIFO_32 = 0x04,
-    #[doc = "64"]
+    #[doc = "64."]
     FIFO_64 = 0x05,
-    #[doc = "128"]
+    #[doc = "128."]
     FIFO_128 = 0x06,
-    #[doc = "256"]
+    #[doc = "256."]
     FIFO_256 = 0x07,
 }
 impl Rxfifosize {
@@ -605,9 +605,9 @@ impl From<Rxfifosize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rxflush {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "All data flushed out"]
+    #[doc = "All data flushed out."]
     RXFIFO_RST = 0x01,
 }
 impl Rxflush {
@@ -636,21 +636,21 @@ impl From<Rxflush> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rxiden {
-    #[doc = "Disable STAT\\[RDRF\\] to become 1 because of partially filled FIFO when the receiver is idle"]
+    #[doc = "Disable STAT\\[RDRF\\] to become 1 because of partially filled FIFO when the receiver is idle."]
     DISABLED = 0x0,
-    #[doc = "Enable STAT\\[RDRF\\] to become 1 because of partially filled FIFO when the receiver is idle for one character"]
+    #[doc = "Enable STAT\\[RDRF\\] to become 1 because of partially filled FIFO when the receiver is idle for one character."]
     IDLE_1 = 0x01,
-    #[doc = "Enable STAT\\[RDRF\\] to become 1 because of partially filled FIFO when the receiver is idle for two characters"]
+    #[doc = "Enable STAT\\[RDRF\\] to become 1 because of partially filled FIFO when the receiver is idle for two characters."]
     IDLE_2 = 0x02,
-    #[doc = "Enable STAT\\[RDRF\\] to become 1 because of partially filled FIFO when the receiver is idle for four characters"]
+    #[doc = "Enable STAT\\[RDRF\\] to become 1 because of partially filled FIFO when the receiver is idle for four characters."]
     IDLE_4 = 0x03,
-    #[doc = "Enable STAT\\[RDRF\\] to become 1 because of partially filled FIFO when the receiver is idle for eight characters"]
+    #[doc = "Enable STAT\\[RDRF\\] to become 1 because of partially filled FIFO when the receiver is idle for eight characters."]
     IDLE_8 = 0x04,
-    #[doc = "Enable STAT\\[RDRF\\] to become 1 because of partially filled FIFO when the receiver is idle for 16 characters"]
+    #[doc = "Enable STAT\\[RDRF\\] to become 1 because of partially filled FIFO when the receiver is idle for 16 characters."]
     IDLE_16 = 0x05,
-    #[doc = "Enable STAT\\[RDRF\\] to become 1 because of partially filled FIFO when the receiver is idle for 32 characters"]
+    #[doc = "Enable STAT\\[RDRF\\] to become 1 because of partially filled FIFO when the receiver is idle for 32 characters."]
     IDLE_32 = 0x06,
-    #[doc = "Enable STAT\\[RDRF\\] to become 1 because of partially filled FIFO when the receiver is idle for 64 characters"]
+    #[doc = "Enable STAT\\[RDRF\\] to become 1 because of partially filled FIFO when the receiver is idle for 64 characters."]
     IDLE_64 = 0x07,
 }
 impl Rxiden {
@@ -679,9 +679,9 @@ impl From<Rxiden> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sbk {
-    #[doc = "Normal transmitter operation"]
+    #[doc = "Normal transmitter operation."]
     NO_EFFECT = 0x0,
-    #[doc = "Queue break character(s) to be sent"]
+    #[doc = "Queue break character(s) to be sent."]
     TX_BREAK = 0x01,
 }
 impl Sbk {
@@ -710,9 +710,9 @@ impl From<Sbk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sbns {
-    #[doc = "One stop bit"]
+    #[doc = "One stop bit."]
     ONE = 0x0,
-    #[doc = "Two stop bits"]
+    #[doc = "Two stop bits."]
     TWO = 0x01,
 }
 impl Sbns {
@@ -741,9 +741,9 @@ impl From<Sbns> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Swap {
-    #[doc = "Use the standard way"]
+    #[doc = "Use the standard way."]
     STANDARD = 0x0,
-    #[doc = "Swap"]
+    #[doc = "Swap."]
     SWAP = 0x01,
 }
 impl Swap {
@@ -772,9 +772,9 @@ impl From<Swap> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tc {
-    #[doc = "Transmitter active"]
+    #[doc = "Transmitter active."]
     ACTIVE = 0x0,
-    #[doc = "Transmitter idle"]
+    #[doc = "Transmitter idle."]
     COMPLETE = 0x01,
 }
 impl Tc {
@@ -803,9 +803,9 @@ impl From<Tc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tdre {
-    #[doc = "Greater than watermark"]
+    #[doc = "Greater than watermark."]
     TXDATA = 0x0,
-    #[doc = "Equal to or less than watermark"]
+    #[doc = "Equal to or less than watermark."]
     NO_TXDATA = 0x01,
 }
 impl Tdre {
@@ -834,13 +834,13 @@ impl From<Tdre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tnp {
-    #[doc = "1 / OSR"]
+    #[doc = "1 / OSR."]
     ONE_SAMPLE = 0x0,
-    #[doc = "2 / OSR"]
+    #[doc = "2 / OSR."]
     TWO_SAMPLE = 0x01,
-    #[doc = "3 / OSR"]
+    #[doc = "3 / OSR."]
     THREE_SAMPLE = 0x02,
-    #[doc = "4 / OSR"]
+    #[doc = "4 / OSR."]
     FOUR_SAMPLE = 0x03,
 }
 impl Tnp {
@@ -869,13 +869,13 @@ impl From<Tnp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trgsel {
-    #[doc = "Input trigger disabled"]
+    #[doc = "Input trigger disabled."]
     DISABLED = 0x0,
-    #[doc = "Input trigger used instead of the RXD pin input"]
+    #[doc = "Input trigger used instead of the RXD pin input."]
     TRG_RXD = 0x01,
-    #[doc = "Input trigger used instead of the CTS_B pin input"]
+    #[doc = "Input trigger used instead of the CTS_B pin input."]
     TRG_CTS = 0x02,
-    #[doc = "Input trigger used to modulate the TXD pin output, which (after TXINV configuration) is internally ANDed with the input trigger"]
+    #[doc = "Input trigger used to modulate the TXD pin output, which (after TXINV configuration) is internally ANDed with the input trigger."]
     TRG_TXD = 0x03,
 }
 impl Trgsel {
@@ -904,9 +904,9 @@ impl From<Trgsel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Txctsc {
-    #[doc = "Sampled at the start of each character"]
+    #[doc = "Sampled at the start of each character."]
     START = 0x0,
-    #[doc = "Sampled when the transmitter is idle"]
+    #[doc = "Sampled when the transmitter is idle."]
     IDLE = 0x01,
 }
 impl Txctsc {
@@ -935,9 +935,9 @@ impl From<Txctsc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Txctssrc {
-    #[doc = "The CTS_B pin"]
+    #[doc = "The CTS_B pin."]
     CTS = 0x0,
-    #[doc = "An internal connection to the receiver address match result"]
+    #[doc = "An internal connection to the receiver address match result."]
     MATCH = 0x01,
 }
 impl Txctssrc {
@@ -966,9 +966,9 @@ impl From<Txctssrc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Txdir {
-    #[doc = "Input"]
+    #[doc = "Input."]
     TX_INPUT = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     TX_OUTPUT = 0x01,
 }
 impl Txdir {
@@ -997,21 +997,21 @@ impl From<Txdir> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Txfifosize {
-    #[doc = "1"]
+    #[doc = "1."]
     FIFO_1 = 0x0,
-    #[doc = "4"]
+    #[doc = "4."]
     FIFO_4 = 0x01,
-    #[doc = "8"]
+    #[doc = "8."]
     FIFO_8 = 0x02,
-    #[doc = "16"]
+    #[doc = "16."]
     FIFO_16 = 0x03,
-    #[doc = "32"]
+    #[doc = "32."]
     FIFO_32 = 0x04,
-    #[doc = "64"]
+    #[doc = "64."]
     FIFO_64 = 0x05,
-    #[doc = "128"]
+    #[doc = "128."]
     FIFO_128 = 0x06,
-    #[doc = "256"]
+    #[doc = "256."]
     FIFO_256 = 0x07,
 }
 impl Txfifosize {
@@ -1040,9 +1040,9 @@ impl From<Txfifosize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Txflush {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "All data flushed out"]
+    #[doc = "All data flushed out."]
     TXFIFO_RST = 0x01,
 }
 impl Txflush {
@@ -1071,9 +1071,9 @@ impl From<Txflush> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Txrtspol {
-    #[doc = "Active low"]
+    #[doc = "Active low."]
     LOW = 0x0,
-    #[doc = "Active high"]
+    #[doc = "Active high."]
     HIGH = 0x01,
 }
 impl Txrtspol {
@@ -1102,9 +1102,9 @@ impl From<Txrtspol> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wake {
-    #[doc = "Idle"]
+    #[doc = "Idle."]
     IDLE = 0x0,
-    #[doc = "Mark"]
+    #[doc = "Mark."]
     MARK = 0x01,
 }
 impl Wake {

@@ -3,12 +3,12 @@
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl {
     _RESERVED_0 = 0x0,
-    #[doc = "Enable reset"]
+    #[doc = "Enable reset."]
     ENABLE_RESET = 0x01,
-    #[doc = "Enable interrupt"]
+    #[doc = "Enable interrupt."]
     ENABLE_INTERRUPT = 0x02,
     _RESERVED_3 = 0x03,
-    #[doc = "Disable both reset and interrupt"]
+    #[doc = "Disable both reset and interrupt."]
     DISABLE_BOTH = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
@@ -41,9 +41,9 @@ impl From<Ctrl> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DebugHaltCtrl {
     _RESERVED_0 = 0x0,
-    #[doc = "Keep the timer running"]
+    #[doc = "Keep the timer running."]
     RUN_TIMER = 0x01,
-    #[doc = "Stop the timer"]
+    #[doc = "Stop the timer."]
     PAUSE_TIMER = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -74,9 +74,9 @@ impl From<DebugHaltCtrl> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IrqPause {
     _RESERVED_0 = 0x0,
-    #[doc = "Keep the timer running"]
+    #[doc = "Keep the timer running."]
     RUN_TIMER = 0x01,
-    #[doc = "Stop the timer"]
+    #[doc = "Stop the timer."]
     PAUSE_TIMER = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -107,9 +107,9 @@ impl From<IrqPause> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LockCtrl {
     _RESERVED_0 = 0x0,
-    #[doc = "Locked"]
+    #[doc = "Locked."]
     LOCKED = 0x01,
-    #[doc = "Unlocked"]
+    #[doc = "Unlocked."]
     UNLOCKED = 0x02,
     _RESERVED_3 = 0x03,
 }

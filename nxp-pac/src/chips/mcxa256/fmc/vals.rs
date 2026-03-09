@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Remaplk {
-    #[doc = "Lock disabled: can write to REMAP"]
+    #[doc = "Lock disabled: can write to REMAP."]
     LOCK_DISABLED = 0x0,
-    #[doc = "Lock enabled: cannot write to REMAP"]
+    #[doc = "Lock enabled: cannot write to REMAP."]
     LOCK_ENABLED = 0x01,
 }
 impl Remaplk {

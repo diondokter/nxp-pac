@@ -1,16 +1,16 @@
-#[doc = "Entropy Read Register"]
+#[doc = "Entropy Read Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ent(pub u32);
 impl Ent {
-    #[doc = "Entropy Value"]
+    #[doc = "Entropy Value."]
     #[must_use]
     #[inline(always)]
     pub const fn ent(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Entropy Value"]
+    #[doc = "Entropy Value."]
     #[inline(always)]
     pub const fn set_ent(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -33,19 +33,19 @@ impl defmt::Format for Ent {
         defmt::write!(f, "Ent {{ ent: {=u32:?} }}", self.ent())
     }
 }
-#[doc = "Frequency Count Register"]
+#[doc = "Frequency Count Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Frqcnt(pub u32);
 impl Frqcnt {
-    #[doc = "Frequency Count"]
+    #[doc = "Frequency Count."]
     #[must_use]
     #[inline(always)]
     pub const fn frq_ct(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x003f_ffff;
         val as u32
     }
-    #[doc = "Frequency Count"]
+    #[doc = "Frequency Count."]
     #[inline(always)]
     pub const fn set_frq_ct(&mut self, val: u32) {
         self.0 = (self.0 & !(0x003f_ffff << 0usize)) | (((val as u32) & 0x003f_ffff) << 0usize);
@@ -70,19 +70,19 @@ impl defmt::Format for Frqcnt {
         defmt::write!(f, "Frqcnt {{ frq_ct: {=u32:?} }}", self.frq_ct())
     }
 }
-#[doc = "Frequency Count Maximum Limit Register"]
+#[doc = "Frequency Count Maximum Limit Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Frqmax(pub u32);
 impl Frqmax {
-    #[doc = "Frequency Counter Maximum Limit"]
+    #[doc = "Frequency Counter Maximum Limit."]
     #[must_use]
     #[inline(always)]
     pub const fn frq_max(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x003f_ffff;
         val as u32
     }
-    #[doc = "Frequency Counter Maximum Limit"]
+    #[doc = "Frequency Counter Maximum Limit."]
     #[inline(always)]
     pub const fn set_frq_max(&mut self, val: u32) {
         self.0 = (self.0 & !(0x003f_ffff << 0usize)) | (((val as u32) & 0x003f_ffff) << 0usize);
@@ -107,19 +107,19 @@ impl defmt::Format for Frqmax {
         defmt::write!(f, "Frqmax {{ frq_max: {=u32:?} }}", self.frq_max())
     }
 }
-#[doc = "Frequency Count Minimum Limit Register"]
+#[doc = "Frequency Count Minimum Limit Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Frqmin(pub u32);
 impl Frqmin {
-    #[doc = "Frequency Count Minimum Limit"]
+    #[doc = "Frequency Count Minimum Limit."]
     #[must_use]
     #[inline(always)]
     pub const fn frq_min(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x003f_ffff;
         val as u32
     }
-    #[doc = "Frequency Count Minimum Limit"]
+    #[doc = "Frequency Count Minimum Limit."]
     #[inline(always)]
     pub const fn set_frq_min(&mut self, val: u32) {
         self.0 = (self.0 & !(0x003f_ffff << 0usize)) | (((val as u32) & 0x003f_ffff) << 0usize);
@@ -144,7 +144,7 @@ impl defmt::Format for Frqmin {
         defmt::write!(f, "Frqmin {{ frq_min: {=u32:?} }}", self.frq_min())
     }
 }
-#[doc = "Interrupt Control Register"]
+#[doc = "Interrupt Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct IntCtrl(pub u32);
@@ -227,7 +227,7 @@ impl defmt::Format for IntCtrl {
         )
     }
 }
-#[doc = "Mask Register"]
+#[doc = "Mask Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct IntMask(pub u32);
@@ -310,7 +310,7 @@ impl defmt::Format for IntMask {
         )
     }
 }
-#[doc = "Interrupt Status Register"]
+#[doc = "Interrupt Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct IntStatus(pub u32);
@@ -327,26 +327,26 @@ impl IntStatus {
     pub const fn set_hw_err(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Entropy Valid"]
+    #[doc = "Entropy Valid."]
     #[must_use]
     #[inline(always)]
     pub const fn ent_val(&self) -> super::vals::IntStatusEntVal {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::IntStatusEntVal::from_bits(val as u8)
     }
-    #[doc = "Entropy Valid"]
+    #[doc = "Entropy Valid."]
     #[inline(always)]
     pub const fn set_ent_val(&mut self, val: super::vals::IntStatusEntVal) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Frequency Count Fail"]
+    #[doc = "Frequency Count Fail."]
     #[must_use]
     #[inline(always)]
     pub const fn frq_ct_fail(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Frequency Count Fail"]
+    #[doc = "Frequency Count Fail."]
     #[inline(always)]
     pub const fn set_frq_ct_fail(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
@@ -393,139 +393,139 @@ impl defmt::Format for IntStatus {
         )
     }
 }
-#[doc = "Miscellaneous Control Register"]
+#[doc = "Miscellaneous Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mctl(pub u32);
 impl Mctl {
-    #[doc = "Oscillator1 Divide"]
+    #[doc = "Oscillator1 Divide."]
     #[must_use]
     #[inline(always)]
     pub const fn osc_div(&self) -> super::vals::OscDiv {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::OscDiv::from_bits(val as u8)
     }
-    #[doc = "Oscillator1 Divide"]
+    #[doc = "Oscillator1 Divide."]
     #[inline(always)]
     pub const fn set_osc_div(&mut self, val: super::vals::OscDiv) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
-    #[doc = "Clock Output Enable"]
+    #[doc = "Clock Output Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn clk_out_en(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "Clock Output Enable"]
+    #[doc = "Clock Output Enable."]
     #[inline(always)]
     pub const fn set_clk_out_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "TRNG Access Mode"]
+    #[doc = "TRNG Access Mode."]
     #[must_use]
     #[inline(always)]
     pub const fn trng_acc(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "TRNG Access Mode"]
+    #[doc = "TRNG Access Mode."]
     #[inline(always)]
     pub const fn set_trng_acc(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "Reset Defaults"]
+    #[doc = "Reset Defaults."]
     #[must_use]
     #[inline(always)]
     pub const fn rst_def(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "Reset Defaults"]
+    #[doc = "Reset Defaults."]
     #[inline(always)]
     pub const fn set_rst_def(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Frequency Count Fail"]
+    #[doc = "Frequency Count Fail."]
     #[must_use]
     #[inline(always)]
     pub const fn fct_fail(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Frequency Count Fail"]
+    #[doc = "Frequency Count Fail."]
     #[inline(always)]
     pub const fn set_fct_fail(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Frequency Count Valid"]
+    #[doc = "Frequency Count Valid."]
     #[must_use]
     #[inline(always)]
     pub const fn fct_val(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Frequency Count Valid"]
+    #[doc = "Frequency Count Valid."]
     #[inline(always)]
     pub const fn set_fct_val(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "Entropy Valid"]
+    #[doc = "Entropy Valid."]
     #[must_use]
     #[inline(always)]
     pub const fn ent_val(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "Entropy Valid"]
+    #[doc = "Entropy Valid."]
     #[inline(always)]
     pub const fn set_ent_val(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "Error Status"]
+    #[doc = "Error Status."]
     #[must_use]
     #[inline(always)]
     pub const fn err(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "Error Status"]
+    #[doc = "Error Status."]
     #[inline(always)]
     pub const fn set_err(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "TRNG is ok to stop"]
+    #[doc = "TRNG is ok to stop."]
     #[must_use]
     #[inline(always)]
     pub const fn tstop_ok(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "TRNG is ok to stop"]
+    #[doc = "TRNG is ok to stop."]
     #[inline(always)]
     pub const fn set_tstop_ok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "Oscillator 2 Failure"]
+    #[doc = "Oscillator 2 Failure."]
     #[must_use]
     #[inline(always)]
     pub const fn osc2_fail(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Oscillator 2 Failure"]
+    #[doc = "Oscillator 2 Failure."]
     #[inline(always)]
     pub const fn set_osc2_fail(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "Program Mode"]
+    #[doc = "Program Mode."]
     #[must_use]
     #[inline(always)]
     pub const fn prgm(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Program Mode"]
+    #[doc = "Program Mode."]
     #[inline(always)]
     pub const fn set_prgm(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
@@ -574,7 +574,7 @@ impl defmt::Format for Mctl {
         )
     }
 }
-#[doc = "TRNG Oscillator 2 Control Register"]
+#[doc = "TRNG Oscillator 2 Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Osc2Ctl(pub u32);
@@ -603,26 +603,26 @@ impl Osc2Ctl {
     pub const fn set_osc2_div(&mut self, val: super::vals::Osc2Div) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
-    #[doc = "Oscillator 2 Clock Output Enable"]
+    #[doc = "Oscillator 2 Clock Output Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn osc2_out_en(&self) -> super::vals::Osc2OutEn {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::Osc2OutEn::from_bits(val as u8)
     }
-    #[doc = "Oscillator 2 Clock Output Enable"]
+    #[doc = "Oscillator 2 Clock Output Enable."]
     #[inline(always)]
     pub const fn set_osc2_out_en(&mut self, val: super::vals::Osc2OutEn) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
-    #[doc = "TRNG Oscillator 2 Frequency Count Valid"]
+    #[doc = "TRNG Oscillator 2 Frequency Count Valid."]
     #[must_use]
     #[inline(always)]
     pub const fn osc2_fct_val(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "TRNG Oscillator 2 Frequency Count Valid"]
+    #[doc = "TRNG Oscillator 2 Frequency Count Valid."]
     #[inline(always)]
     pub const fn set_osc2_fct_val(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
@@ -685,19 +685,19 @@ impl defmt::Format for Osc2Ctl {
         )
     }
 }
-#[doc = "Oscillator-2 Frequency Count Register"]
+#[doc = "Oscillator-2 Frequency Count Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Osc2Frqcnt(pub u32);
 impl Osc2Frqcnt {
-    #[doc = "Frequency Count"]
+    #[doc = "Frequency Count."]
     #[must_use]
     #[inline(always)]
     pub const fn osc2_frq_ct(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x003f_ffff;
         val as u32
     }
-    #[doc = "Frequency Count"]
+    #[doc = "Frequency Count."]
     #[inline(always)]
     pub const fn set_osc2_frq_ct(&mut self, val: u32) {
         self.0 = (self.0 & !(0x003f_ffff << 0usize)) | (((val as u32) & 0x003f_ffff) << 0usize);
@@ -726,19 +726,19 @@ impl defmt::Format for Osc2Frqcnt {
         )
     }
 }
-#[doc = "Statistical Check Monobit Count Register"]
+#[doc = "Statistical Check Monobit Count Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Scmc(pub u32);
 impl Scmc {
-    #[doc = "Monobit Count"]
+    #[doc = "Monobit Count."]
     #[must_use]
     #[inline(always)]
     pub const fn mono_ct(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Monobit Count"]
+    #[doc = "Monobit Count."]
     #[inline(always)]
     pub const fn set_mono_ct(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
@@ -763,31 +763,31 @@ impl defmt::Format for Scmc {
         defmt::write!(f, "Scmc {{ mono_ct: {=u16:?} }}", self.mono_ct())
     }
 }
-#[doc = "Statistical Check Miscellaneous Register"]
+#[doc = "Statistical Check Miscellaneous Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Scmisc(pub u32);
 impl Scmisc {
-    #[doc = "Long run max limit"]
+    #[doc = "Long run max limit."]
     #[must_use]
     #[inline(always)]
     pub const fn lrun_max(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Long run max limit"]
+    #[doc = "Long run max limit."]
     #[inline(always)]
     pub const fn set_lrun_max(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "Retry count"]
+    #[doc = "Retry count."]
     #[must_use]
     #[inline(always)]
     pub const fn rty_ct(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x0f;
         val as u8
     }
-    #[doc = "Retry count"]
+    #[doc = "Retry count."]
     #[inline(always)]
     pub const fn set_rty_ct(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
@@ -818,31 +818,31 @@ impl defmt::Format for Scmisc {
         )
     }
 }
-#[doc = "Statistical Check Monobit Limit Register"]
+#[doc = "Statistical Check Monobit Limit Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Scml(pub u32);
 impl Scml {
-    #[doc = "Monobit Maximum Limit"]
+    #[doc = "Monobit Maximum Limit."]
     #[must_use]
     #[inline(always)]
     pub const fn mono_max(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Monobit Maximum Limit"]
+    #[doc = "Monobit Maximum Limit."]
     #[inline(always)]
     pub const fn set_mono_max(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Monobit Range"]
+    #[doc = "Monobit Range."]
     #[must_use]
     #[inline(always)]
     pub const fn mono_rng(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "Monobit Range"]
+    #[doc = "Monobit Range."]
     #[inline(always)]
     pub const fn set_mono_rng(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -873,31 +873,31 @@ impl defmt::Format for Scml {
         )
     }
 }
-#[doc = "Statistical Check Run Length 1 Count Register"]
+#[doc = "Statistical Check Run Length 1 Count Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Scr1c(pub u32);
 impl Scr1c {
-    #[doc = "Runs of Zero, Length 1 Count"]
+    #[doc = "Runs of Zero, Length 1 Count."]
     #[must_use]
     #[inline(always)]
     pub const fn r1_0_ct(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x7fff;
         val as u16
     }
-    #[doc = "Runs of Zero, Length 1 Count"]
+    #[doc = "Runs of Zero, Length 1 Count."]
     #[inline(always)]
     pub const fn set_r1_0_ct(&mut self, val: u16) {
         self.0 = (self.0 & !(0x7fff << 0usize)) | (((val as u32) & 0x7fff) << 0usize);
     }
-    #[doc = "Runs of One, Length 1 Count"]
+    #[doc = "Runs of One, Length 1 Count."]
     #[must_use]
     #[inline(always)]
     pub const fn r1_1_ct(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x7fff;
         val as u16
     }
-    #[doc = "Runs of One, Length 1 Count"]
+    #[doc = "Runs of One, Length 1 Count."]
     #[inline(always)]
     pub const fn set_r1_1_ct(&mut self, val: u16) {
         self.0 = (self.0 & !(0x7fff << 16usize)) | (((val as u32) & 0x7fff) << 16usize);
@@ -928,31 +928,31 @@ impl defmt::Format for Scr1c {
         )
     }
 }
-#[doc = "Statistical Check Run Length 1 Limit Register"]
+#[doc = "Statistical Check Run Length 1 Limit Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Scr1l(pub u32);
 impl Scr1l {
-    #[doc = "Run Length 1 Maximum Limit"]
+    #[doc = "Run Length 1 Maximum Limit."]
     #[must_use]
     #[inline(always)]
     pub const fn run1_max(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x7fff;
         val as u16
     }
-    #[doc = "Run Length 1 Maximum Limit"]
+    #[doc = "Run Length 1 Maximum Limit."]
     #[inline(always)]
     pub const fn set_run1_max(&mut self, val: u16) {
         self.0 = (self.0 & !(0x7fff << 0usize)) | (((val as u32) & 0x7fff) << 0usize);
     }
-    #[doc = "Run Length 1 Range"]
+    #[doc = "Run Length 1 Range."]
     #[must_use]
     #[inline(always)]
     pub const fn run1_rng(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x7fff;
         val as u16
     }
-    #[doc = "Run Length 1 Range"]
+    #[doc = "Run Length 1 Range."]
     #[inline(always)]
     pub const fn set_run1_rng(&mut self, val: u16) {
         self.0 = (self.0 & !(0x7fff << 16usize)) | (((val as u32) & 0x7fff) << 16usize);
@@ -983,31 +983,31 @@ impl defmt::Format for Scr1l {
         )
     }
 }
-#[doc = "Statistical Check Run Length 2 Count Register"]
+#[doc = "Statistical Check Run Length 2 Count Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Scr2c(pub u32);
 impl Scr2c {
-    #[doc = "Runs of Zero, Length 2 Count"]
+    #[doc = "Runs of Zero, Length 2 Count."]
     #[must_use]
     #[inline(always)]
     pub const fn r2_0_ct(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x3fff;
         val as u16
     }
-    #[doc = "Runs of Zero, Length 2 Count"]
+    #[doc = "Runs of Zero, Length 2 Count."]
     #[inline(always)]
     pub const fn set_r2_0_ct(&mut self, val: u16) {
         self.0 = (self.0 & !(0x3fff << 0usize)) | (((val as u32) & 0x3fff) << 0usize);
     }
-    #[doc = "Runs of One, Length 2 Count"]
+    #[doc = "Runs of One, Length 2 Count."]
     #[must_use]
     #[inline(always)]
     pub const fn r2_1_ct(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x3fff;
         val as u16
     }
-    #[doc = "Runs of One, Length 2 Count"]
+    #[doc = "Runs of One, Length 2 Count."]
     #[inline(always)]
     pub const fn set_r2_1_ct(&mut self, val: u16) {
         self.0 = (self.0 & !(0x3fff << 16usize)) | (((val as u32) & 0x3fff) << 16usize);
@@ -1038,31 +1038,31 @@ impl defmt::Format for Scr2c {
         )
     }
 }
-#[doc = "Statistical Check Run Length 2 Limit Register"]
+#[doc = "Statistical Check Run Length 2 Limit Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Scr2l(pub u32);
 impl Scr2l {
-    #[doc = "Run Length 2 Maximum Limit"]
+    #[doc = "Run Length 2 Maximum Limit."]
     #[must_use]
     #[inline(always)]
     pub const fn run2_max(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x3fff;
         val as u16
     }
-    #[doc = "Run Length 2 Maximum Limit"]
+    #[doc = "Run Length 2 Maximum Limit."]
     #[inline(always)]
     pub const fn set_run2_max(&mut self, val: u16) {
         self.0 = (self.0 & !(0x3fff << 0usize)) | (((val as u32) & 0x3fff) << 0usize);
     }
-    #[doc = "Run Length 2 Range"]
+    #[doc = "Run Length 2 Range."]
     #[must_use]
     #[inline(always)]
     pub const fn run2_rng(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x3fff;
         val as u16
     }
-    #[doc = "Run Length 2 Range"]
+    #[doc = "Run Length 2 Range."]
     #[inline(always)]
     pub const fn set_run2_rng(&mut self, val: u16) {
         self.0 = (self.0 & !(0x3fff << 16usize)) | (((val as u32) & 0x3fff) << 16usize);
@@ -1093,31 +1093,31 @@ impl defmt::Format for Scr2l {
         )
     }
 }
-#[doc = "Statistical Check Run Length 3 Count Register"]
+#[doc = "Statistical Check Run Length 3 Count Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Scr3c(pub u32);
 impl Scr3c {
-    #[doc = "Runs of Zeroes, Length 3 Count"]
+    #[doc = "Runs of Zeroes, Length 3 Count."]
     #[must_use]
     #[inline(always)]
     pub const fn r3_0_ct(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x1fff;
         val as u16
     }
-    #[doc = "Runs of Zeroes, Length 3 Count"]
+    #[doc = "Runs of Zeroes, Length 3 Count."]
     #[inline(always)]
     pub const fn set_r3_0_ct(&mut self, val: u16) {
         self.0 = (self.0 & !(0x1fff << 0usize)) | (((val as u32) & 0x1fff) << 0usize);
     }
-    #[doc = "Runs of Ones, Length 3 Count"]
+    #[doc = "Runs of Ones, Length 3 Count."]
     #[must_use]
     #[inline(always)]
     pub const fn r3_1_ct(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x1fff;
         val as u16
     }
-    #[doc = "Runs of Ones, Length 3 Count"]
+    #[doc = "Runs of Ones, Length 3 Count."]
     #[inline(always)]
     pub const fn set_r3_1_ct(&mut self, val: u16) {
         self.0 = (self.0 & !(0x1fff << 16usize)) | (((val as u32) & 0x1fff) << 16usize);
@@ -1148,31 +1148,31 @@ impl defmt::Format for Scr3c {
         )
     }
 }
-#[doc = "Statistical Check Run Length 3 Limit Register"]
+#[doc = "Statistical Check Run Length 3 Limit Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Scr3l(pub u32);
 impl Scr3l {
-    #[doc = "Run Length 3 Maximum Limit"]
+    #[doc = "Run Length 3 Maximum Limit."]
     #[must_use]
     #[inline(always)]
     pub const fn run3_max(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x1fff;
         val as u16
     }
-    #[doc = "Run Length 3 Maximum Limit"]
+    #[doc = "Run Length 3 Maximum Limit."]
     #[inline(always)]
     pub const fn set_run3_max(&mut self, val: u16) {
         self.0 = (self.0 & !(0x1fff << 0usize)) | (((val as u32) & 0x1fff) << 0usize);
     }
-    #[doc = "Run Length 3 Range"]
+    #[doc = "Run Length 3 Range."]
     #[must_use]
     #[inline(always)]
     pub const fn run3_rng(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x1fff;
         val as u16
     }
-    #[doc = "Run Length 3 Range"]
+    #[doc = "Run Length 3 Range."]
     #[inline(always)]
     pub const fn set_run3_rng(&mut self, val: u16) {
         self.0 = (self.0 & !(0x1fff << 16usize)) | (((val as u32) & 0x1fff) << 16usize);
@@ -1203,31 +1203,31 @@ impl defmt::Format for Scr3l {
         )
     }
 }
-#[doc = "Seed Control Register"]
+#[doc = "Seed Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sdctl(pub u32);
 impl Sdctl {
-    #[doc = "Sample Size"]
+    #[doc = "Sample Size."]
     #[must_use]
     #[inline(always)]
     pub const fn samp_size(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Sample Size"]
+    #[doc = "Sample Size."]
     #[inline(always)]
     pub const fn set_samp_size(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Entropy Delay"]
+    #[doc = "Entropy Delay."]
     #[must_use]
     #[inline(always)]
     pub const fn ent_dly(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "Entropy Delay"]
+    #[doc = "Entropy Delay."]
     #[inline(always)]
     pub const fn set_ent_dly(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -1258,19 +1258,19 @@ impl defmt::Format for Sdctl {
         )
     }
 }
-#[doc = "Security Configuration Register"]
+#[doc = "Security Configuration Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SecCfg(pub u32);
 impl SecCfg {
-    #[doc = "If set, below mentioned TRNG configuration registers cannot be programmed: Oscillator 2 Control Register (OSC2_CTL): TRNG Entropy Generation Control \\[1:0\\] Oscillator 2 Divider \\[3:2\\] Oscillator Fail Safe Limit \\[13:12\\] Oscillator Fail Safe Test \\[14\\] TRNG Seed Control Register (SDCTL) TRNG Frequency Count Minimum Limit Register (FRQMIN) TRNG Frequency Count Maximum Limit Register (FRQMAX) TRNG Statistical Check Monobit Limit Register (SCML) TRNG Statistical Check Run Length 1 Limit Register (SCR1L) TRNG Statistical Check Run Length 2 Limit Register (SCR2L) TRNG Statistical Check Run Length 3 Limit Register (SCR3L) TRNG Miscellaneous Control Register (MCTL): Sample Mode \\[1:0\\] Oscillator Divider \\[3:2\\] Reset Defaults \\[6\\] Force System Clock \\[7\\] Long Runs Continuation Mode \\[14\\] After this bit has been written to a 1, it cannot be changed"]
+    #[doc = "If set, below mentioned TRNG configuration registers cannot be programmed: Oscillator 2 Control Register (OSC2_CTL): TRNG Entropy Generation Control \\[1:0\\] Oscillator 2 Divider \\[3:2\\] Oscillator Fail Safe Limit \\[13:12\\] Oscillator Fail Safe Test \\[14\\] TRNG Seed Control Register (SDCTL) TRNG Frequency Count Minimum Limit Register (FRQMIN) TRNG Frequency Count Maximum Limit Register (FRQMAX) TRNG Statistical Check Monobit Limit Register (SCML) TRNG Statistical Check Run Length 1 Limit Register (SCR1L) TRNG Statistical Check Run Length 2 Limit Register (SCR2L) TRNG Statistical Check Run Length 3 Limit Register (SCR3L) TRNG Miscellaneous Control Register (MCTL): Sample Mode \\[1:0\\] Oscillator Divider \\[3:2\\] Reset Defaults \\[6\\] Force System Clock \\[7\\] Long Runs Continuation Mode \\[14\\] After this bit has been written to a 1, it cannot be changed."]
     #[must_use]
     #[inline(always)]
     pub const fn no_prgm(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "If set, below mentioned TRNG configuration registers cannot be programmed: Oscillator 2 Control Register (OSC2_CTL): TRNG Entropy Generation Control \\[1:0\\] Oscillator 2 Divider \\[3:2\\] Oscillator Fail Safe Limit \\[13:12\\] Oscillator Fail Safe Test \\[14\\] TRNG Seed Control Register (SDCTL) TRNG Frequency Count Minimum Limit Register (FRQMIN) TRNG Frequency Count Maximum Limit Register (FRQMAX) TRNG Statistical Check Monobit Limit Register (SCML) TRNG Statistical Check Run Length 1 Limit Register (SCR1L) TRNG Statistical Check Run Length 2 Limit Register (SCR2L) TRNG Statistical Check Run Length 3 Limit Register (SCR3L) TRNG Miscellaneous Control Register (MCTL): Sample Mode \\[1:0\\] Oscillator Divider \\[3:2\\] Reset Defaults \\[6\\] Force System Clock \\[7\\] Long Runs Continuation Mode \\[14\\] After this bit has been written to a 1, it cannot be changed"]
+    #[doc = "If set, below mentioned TRNG configuration registers cannot be programmed: Oscillator 2 Control Register (OSC2_CTL): TRNG Entropy Generation Control \\[1:0\\] Oscillator 2 Divider \\[3:2\\] Oscillator Fail Safe Limit \\[13:12\\] Oscillator Fail Safe Test \\[14\\] TRNG Seed Control Register (SDCTL) TRNG Frequency Count Minimum Limit Register (FRQMIN) TRNG Frequency Count Maximum Limit Register (FRQMAX) TRNG Statistical Check Monobit Limit Register (SCML) TRNG Statistical Check Run Length 1 Limit Register (SCR1L) TRNG Statistical Check Run Length 2 Limit Register (SCR2L) TRNG Statistical Check Run Length 3 Limit Register (SCR3L) TRNG Miscellaneous Control Register (MCTL): Sample Mode \\[1:0\\] Oscillator Divider \\[3:2\\] Reset Defaults \\[6\\] Force System Clock \\[7\\] Long Runs Continuation Mode \\[14\\] After this bit has been written to a 1, it cannot be changed."]
     #[inline(always)]
     pub const fn set_no_prgm(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
@@ -1295,7 +1295,7 @@ impl defmt::Format for SecCfg {
         defmt::write!(f, "SecCfg {{ no_prgm: {=bool:?} }}", self.no_prgm())
     }
 }
-#[doc = "Status Register"]
+#[doc = "Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Status(pub u32);
@@ -1360,14 +1360,14 @@ impl Status {
     pub const fn set_tf3br0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "Test Fail"]
+    #[doc = "Test Fail."]
     #[must_use]
     #[inline(always)]
     pub const fn tf3br1(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Test Fail"]
+    #[doc = "Test Fail."]
     #[inline(always)]
     pub const fn set_tf3br1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
@@ -1396,14 +1396,14 @@ impl Status {
     pub const fn set_tfmb(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "RETRY COUNT"]
+    #[doc = "RETRY COUNT."]
     #[must_use]
     #[inline(always)]
     pub const fn retry_ct(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x0f;
         val as u8
     }
-    #[doc = "RETRY COUNT"]
+    #[doc = "RETRY COUNT."]
     #[inline(always)]
     pub const fn set_retry_ct(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
@@ -1448,7 +1448,7 @@ impl defmt::Format for Status {
         )
     }
 }
-#[doc = "Version ID Register (MS)"]
+#[doc = "Version ID Register (MS)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Vid1(pub u32);
@@ -1465,14 +1465,14 @@ impl Vid1 {
     pub const fn set_min_rev(&mut self, val: super::vals::MinRev) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val.to_bits() as u32) & 0xff) << 0usize);
     }
-    #[doc = "Shows the IP's Major revision of the TRNG"]
+    #[doc = "Shows the IP's Major revision of the TRNG."]
     #[must_use]
     #[inline(always)]
     pub const fn maj_rev(&self) -> super::vals::MajRev {
         let val = (self.0 >> 8usize) & 0xff;
         super::vals::MajRev::from_bits(val as u8)
     }
-    #[doc = "Shows the IP's Major revision of the TRNG"]
+    #[doc = "Shows the IP's Major revision of the TRNG."]
     #[inline(always)]
     pub const fn set_maj_rev(&mut self, val: super::vals::MajRev) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val.to_bits() as u32) & 0xff) << 8usize);
@@ -1517,7 +1517,7 @@ impl defmt::Format for Vid1 {
         )
     }
 }
-#[doc = "Version ID Register (LS)"]
+#[doc = "Version ID Register (LS)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Vid2(pub u32);

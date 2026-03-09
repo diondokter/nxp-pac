@@ -1,64 +1,64 @@
-#[doc = "FLEXIO Control"]
+#[doc = "FLEXIO Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl(pub u32);
 impl Ctrl {
-    #[doc = "FLEXIO Enable"]
+    #[doc = "FLEXIO Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn flexen(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "FLEXIO Enable"]
+    #[doc = "FLEXIO Enable."]
     #[inline(always)]
     pub const fn set_flexen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Software Reset"]
+    #[doc = "Software Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn swrst(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Software Reset"]
+    #[doc = "Software Reset."]
     #[inline(always)]
     pub const fn set_swrst(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Fast Access"]
+    #[doc = "Fast Access."]
     #[must_use]
     #[inline(always)]
     pub const fn fastacc(&self) -> super::vals::Fastacc {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Fastacc::from_bits(val as u8)
     }
-    #[doc = "Fast Access"]
+    #[doc = "Fast Access."]
     #[inline(always)]
     pub const fn set_fastacc(&mut self, val: super::vals::Fastacc) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "Debug Enable"]
+    #[doc = "Debug Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dbge(&self) -> super::vals::Dbge {
         let val = (self.0 >> 30usize) & 0x01;
         super::vals::Dbge::from_bits(val as u8)
     }
-    #[doc = "Debug Enable"]
+    #[doc = "Debug Enable."]
     #[inline(always)]
     pub const fn set_dbge(&mut self, val: super::vals::Dbge) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
-    #[doc = "Doze Enable"]
+    #[doc = "Doze Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dozen(&self) -> super::vals::Dozen {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::Dozen::from_bits(val as u8)
     }
-    #[doc = "Doze Enable"]
+    #[doc = "Doze Enable."]
     #[inline(always)]
     pub const fn set_dozen(&mut self, val: super::vals::Dozen) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -95,55 +95,55 @@ impl defmt::Format for Ctrl {
         )
     }
 }
-#[doc = "Parameter"]
+#[doc = "Parameter."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Param(pub u32);
 impl Param {
-    #[doc = "Shifter Number"]
+    #[doc = "Shifter Number."]
     #[must_use]
     #[inline(always)]
     pub const fn shifter(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Shifter Number"]
+    #[doc = "Shifter Number."]
     #[inline(always)]
     pub const fn set_shifter(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "Timer Number"]
+    #[doc = "Timer Number."]
     #[must_use]
     #[inline(always)]
     pub const fn timer(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0xff;
         val as u8
     }
-    #[doc = "Timer Number"]
+    #[doc = "Timer Number."]
     #[inline(always)]
     pub const fn set_timer(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
     }
-    #[doc = "Pin Number"]
+    #[doc = "Pin Number."]
     #[must_use]
     #[inline(always)]
     pub const fn pin(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0xff;
         val as u8
     }
-    #[doc = "Pin Number"]
+    #[doc = "Pin Number."]
     #[inline(always)]
     pub const fn set_pin(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
     }
-    #[doc = "Trigger Number"]
+    #[doc = "Trigger Number."]
     #[must_use]
     #[inline(always)]
     pub const fn trigger(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "Trigger Number"]
+    #[doc = "Trigger Number."]
     #[inline(always)]
     pub const fn set_trigger(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);
@@ -178,19 +178,19 @@ impl defmt::Format for Param {
         )
     }
 }
-#[doc = "Pin State"]
+#[doc = "Pin State."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pin(pub u32);
 impl Pin {
-    #[doc = "Pin Data Input"]
+    #[doc = "Pin Data Input."]
     #[must_use]
     #[inline(always)]
     pub const fn pdi(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Pin Data Input"]
+    #[doc = "Pin Data Input."]
     #[inline(always)]
     pub const fn set_pdi(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -213,19 +213,19 @@ impl defmt::Format for Pin {
         defmt::write!(f, "Pin {{ pdi: {=u32:?} }}", self.pdi())
     }
 }
-#[doc = "Pin Falling Edge Enable"]
+#[doc = "Pin Falling Edge Enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pinfen(pub u32);
 impl Pinfen {
-    #[doc = "Pin Falling Edge"]
+    #[doc = "Pin Falling Edge."]
     #[must_use]
     #[inline(always)]
     pub const fn pfe(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Pin Falling Edge"]
+    #[doc = "Pin Falling Edge."]
     #[inline(always)]
     pub const fn set_pfe(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -248,19 +248,19 @@ impl defmt::Format for Pinfen {
         defmt::write!(f, "Pinfen {{ pfe: {=u32:?} }}", self.pfe())
     }
 }
-#[doc = "Pin Interrupt Enable"]
+#[doc = "Pin Interrupt Enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pinien(pub u32);
 impl Pinien {
-    #[doc = "Pin Status Interrupt Enable"]
+    #[doc = "Pin Status Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn psie(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Pin Status Interrupt Enable"]
+    #[doc = "Pin Status Interrupt Enable."]
     #[inline(always)]
     pub const fn set_psie(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -285,19 +285,19 @@ impl defmt::Format for Pinien {
         defmt::write!(f, "Pinien {{ psie: {=u32:?} }}", self.psie())
     }
 }
-#[doc = "Pin Output Clear"]
+#[doc = "Pin Output Clear."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pinoutclr(pub u32);
 impl Pinoutclr {
-    #[doc = "Output Clear"]
+    #[doc = "Output Clear."]
     #[must_use]
     #[inline(always)]
     pub const fn outclr(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Output Clear"]
+    #[doc = "Output Clear."]
     #[inline(always)]
     pub const fn set_outclr(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -322,19 +322,19 @@ impl defmt::Format for Pinoutclr {
         defmt::write!(f, "Pinoutclr {{ outclr: {=u32:?} }}", self.outclr())
     }
 }
-#[doc = "Pin Output Data"]
+#[doc = "Pin Output Data."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pinoutd(pub u32);
 impl Pinoutd {
-    #[doc = "Output Data"]
+    #[doc = "Output Data."]
     #[must_use]
     #[inline(always)]
     pub const fn outd(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Output Data"]
+    #[doc = "Output Data."]
     #[inline(always)]
     pub const fn set_outd(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -359,19 +359,19 @@ impl defmt::Format for Pinoutd {
         defmt::write!(f, "Pinoutd {{ outd: {=u32:?} }}", self.outd())
     }
 }
-#[doc = "Pin Output Disable"]
+#[doc = "Pin Output Disable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pinoutdis(pub u32);
 impl Pinoutdis {
-    #[doc = "Output Disable"]
+    #[doc = "Output Disable."]
     #[must_use]
     #[inline(always)]
     pub const fn outdis(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Output Disable"]
+    #[doc = "Output Disable."]
     #[inline(always)]
     pub const fn set_outdis(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -396,19 +396,19 @@ impl defmt::Format for Pinoutdis {
         defmt::write!(f, "Pinoutdis {{ outdis: {=u32:?} }}", self.outdis())
     }
 }
-#[doc = "Pin Output Enable"]
+#[doc = "Pin Output Enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pinoute(pub u32);
 impl Pinoute {
-    #[doc = "Output Enable"]
+    #[doc = "Output Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn oute(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Output Enable"]
+    #[doc = "Output Enable."]
     #[inline(always)]
     pub const fn set_oute(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -433,19 +433,19 @@ impl defmt::Format for Pinoute {
         defmt::write!(f, "Pinoute {{ oute: {=u32:?} }}", self.oute())
     }
 }
-#[doc = "Pin Output Set"]
+#[doc = "Pin Output Set."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pinoutset(pub u32);
 impl Pinoutset {
-    #[doc = "Output Set"]
+    #[doc = "Output Set."]
     #[must_use]
     #[inline(always)]
     pub const fn outset(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Output Set"]
+    #[doc = "Output Set."]
     #[inline(always)]
     pub const fn set_outset(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -470,19 +470,19 @@ impl defmt::Format for Pinoutset {
         defmt::write!(f, "Pinoutset {{ outset: {=u32:?} }}", self.outset())
     }
 }
-#[doc = "Pin Output Toggle"]
+#[doc = "Pin Output Toggle."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pinouttog(pub u32);
 impl Pinouttog {
-    #[doc = "Output Toggle"]
+    #[doc = "Output Toggle."]
     #[must_use]
     #[inline(always)]
     pub const fn outtog(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Output Toggle"]
+    #[doc = "Output Toggle."]
     #[inline(always)]
     pub const fn set_outtog(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -507,19 +507,19 @@ impl defmt::Format for Pinouttog {
         defmt::write!(f, "Pinouttog {{ outtog: {=u32:?} }}", self.outtog())
     }
 }
-#[doc = "Pin Rising Edge Enable"]
+#[doc = "Pin Rising Edge Enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pinren(pub u32);
 impl Pinren {
-    #[doc = "Pin Rising Edge"]
+    #[doc = "Pin Rising Edge."]
     #[must_use]
     #[inline(always)]
     pub const fn pre(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Pin Rising Edge"]
+    #[doc = "Pin Rising Edge."]
     #[inline(always)]
     pub const fn set_pre(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -542,19 +542,19 @@ impl defmt::Format for Pinren {
         defmt::write!(f, "Pinren {{ pre: {=u32:?} }}", self.pre())
     }
 }
-#[doc = "Pin Status"]
+#[doc = "Pin Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pinstat(pub u32);
 impl Pinstat {
-    #[doc = "Pin Status Flag"]
+    #[doc = "Pin Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn psf(&self) -> super::vals::Psf {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         super::vals::Psf::from_bits(val as u32)
     }
-    #[doc = "Pin Status Flag"]
+    #[doc = "Pin Status Flag."]
     #[inline(always)]
     pub const fn set_psf(&mut self, val: super::vals::Psf) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize))
@@ -578,19 +578,19 @@ impl defmt::Format for Pinstat {
         defmt::write!(f, "Pinstat {{ psf: {:?} }}", self.psf())
     }
 }
-#[doc = "Shifter Buffer"]
+#[doc = "Shifter Buffer."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Shiftbuf(pub u32);
 impl Shiftbuf {
-    #[doc = "Shift Buffer"]
+    #[doc = "Shift Buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn shiftbuf(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Shift Buffer"]
+    #[doc = "Shift Buffer."]
     #[inline(always)]
     pub const fn set_shiftbuf(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -615,19 +615,19 @@ impl defmt::Format for Shiftbuf {
         defmt::write!(f, "Shiftbuf {{ shiftbuf: {=u32:?} }}", self.shiftbuf())
     }
 }
-#[doc = "Shifter Buffer Bit Byte Swapped"]
+#[doc = "Shifter Buffer Bit Byte Swapped."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Shiftbufbbs(pub u32);
 impl Shiftbufbbs {
-    #[doc = "Shift Buffer"]
+    #[doc = "Shift Buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn shiftbufbbs(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Shift Buffer"]
+    #[doc = "Shift Buffer."]
     #[inline(always)]
     pub const fn set_shiftbufbbs(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -656,19 +656,19 @@ impl defmt::Format for Shiftbufbbs {
         )
     }
 }
-#[doc = "Shifter Buffer Bit Swapped"]
+#[doc = "Shifter Buffer Bit Swapped."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Shiftbufbis(pub u32);
 impl Shiftbufbis {
-    #[doc = "Shift Buffer"]
+    #[doc = "Shift Buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn shiftbufbis(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Shift Buffer"]
+    #[doc = "Shift Buffer."]
     #[inline(always)]
     pub const fn set_shiftbufbis(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -697,19 +697,19 @@ impl defmt::Format for Shiftbufbis {
         )
     }
 }
-#[doc = "Shifter Buffer Byte Swapped"]
+#[doc = "Shifter Buffer Byte Swapped."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Shiftbufbys(pub u32);
 impl Shiftbufbys {
-    #[doc = "Shift Buffer"]
+    #[doc = "Shift Buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn shiftbufbys(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Shift Buffer"]
+    #[doc = "Shift Buffer."]
     #[inline(always)]
     pub const fn set_shiftbufbys(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -738,19 +738,19 @@ impl defmt::Format for Shiftbufbys {
         )
     }
 }
-#[doc = "Shifter Buffer Even Odd Swapped"]
+#[doc = "Shifter Buffer Even Odd Swapped."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Shiftbufeos(pub u32);
 impl Shiftbufeos {
-    #[doc = "Shift Buffer"]
+    #[doc = "Shift Buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn shiftbufeos(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Shift Buffer"]
+    #[doc = "Shift Buffer."]
     #[inline(always)]
     pub const fn set_shiftbufeos(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -779,19 +779,19 @@ impl defmt::Format for Shiftbufeos {
         )
     }
 }
-#[doc = "Shifter Buffer Halfword Byte Swapped"]
+#[doc = "Shifter Buffer Halfword Byte Swapped."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Shiftbufhbs(pub u32);
 impl Shiftbufhbs {
-    #[doc = "Shift Buffer"]
+    #[doc = "Shift Buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn shiftbufhbs(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Shift Buffer"]
+    #[doc = "Shift Buffer."]
     #[inline(always)]
     pub const fn set_shiftbufhbs(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -820,19 +820,19 @@ impl defmt::Format for Shiftbufhbs {
         )
     }
 }
-#[doc = "Shifter Buffer Halfword Swapped"]
+#[doc = "Shifter Buffer Halfword Swapped."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Shiftbufhws(pub u32);
 impl Shiftbufhws {
-    #[doc = "Shift Buffer"]
+    #[doc = "Shift Buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn shiftbufhws(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Shift Buffer"]
+    #[doc = "Shift Buffer."]
     #[inline(always)]
     pub const fn set_shiftbufhws(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -861,19 +861,19 @@ impl defmt::Format for Shiftbufhws {
         )
     }
 }
-#[doc = "Shifter Buffer Nibble Byte Swapped"]
+#[doc = "Shifter Buffer Nibble Byte Swapped."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Shiftbufnbs(pub u32);
 impl Shiftbufnbs {
-    #[doc = "Shift Buffer"]
+    #[doc = "Shift Buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn shiftbufnbs(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Shift Buffer"]
+    #[doc = "Shift Buffer."]
     #[inline(always)]
     pub const fn set_shiftbufnbs(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -902,19 +902,19 @@ impl defmt::Format for Shiftbufnbs {
         )
     }
 }
-#[doc = "Shifter Buffer Nibble Swapped"]
+#[doc = "Shifter Buffer Nibble Swapped."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Shiftbufnis(pub u32);
 impl Shiftbufnis {
-    #[doc = "Shift Buffer"]
+    #[doc = "Shift Buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn shiftbufnis(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Shift Buffer"]
+    #[doc = "Shift Buffer."]
     #[inline(always)]
     pub const fn set_shiftbufnis(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -943,19 +943,19 @@ impl defmt::Format for Shiftbufnis {
         )
     }
 }
-#[doc = "Shifter Buffer Odd Even Swapped"]
+#[doc = "Shifter Buffer Odd Even Swapped."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Shiftbufoes(pub u32);
 impl Shiftbufoes {
-    #[doc = "Shift Buffer"]
+    #[doc = "Shift Buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn shiftbufoes(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Shift Buffer"]
+    #[doc = "Shift Buffer."]
     #[inline(always)]
     pub const fn set_shiftbufoes(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -984,79 +984,79 @@ impl defmt::Format for Shiftbufoes {
         )
     }
 }
-#[doc = "Shifter Configuration"]
+#[doc = "Shifter Configuration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Shiftcfg(pub u32);
 impl Shiftcfg {
-    #[doc = "Shifter Start"]
+    #[doc = "Shifter Start."]
     #[must_use]
     #[inline(always)]
     pub const fn sstart(&self) -> super::vals::Sstart {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Sstart::from_bits(val as u8)
     }
-    #[doc = "Shifter Start"]
+    #[doc = "Shifter Start."]
     #[inline(always)]
     pub const fn set_sstart(&mut self, val: super::vals::Sstart) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "Shifter Stop"]
+    #[doc = "Shifter Stop."]
     #[must_use]
     #[inline(always)]
     pub const fn sstop(&self) -> super::vals::Sstop {
         let val = (self.0 >> 4usize) & 0x03;
         super::vals::Sstop::from_bits(val as u8)
     }
-    #[doc = "Shifter Stop"]
+    #[doc = "Shifter Stop."]
     #[inline(always)]
     pub const fn set_sstop(&mut self, val: super::vals::Sstop) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
-    #[doc = "Input Source"]
+    #[doc = "Input Source."]
     #[must_use]
     #[inline(always)]
     pub const fn insrc(&self) -> super::vals::Insrc {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::Insrc::from_bits(val as u8)
     }
-    #[doc = "Input Source"]
+    #[doc = "Input Source."]
     #[inline(always)]
     pub const fn set_insrc(&mut self, val: super::vals::Insrc) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
-    #[doc = "Late Store"]
+    #[doc = "Late Store."]
     #[must_use]
     #[inline(always)]
     pub const fn latst(&self) -> super::vals::Latst {
         let val = (self.0 >> 9usize) & 0x01;
         super::vals::Latst::from_bits(val as u8)
     }
-    #[doc = "Late Store"]
+    #[doc = "Late Store."]
     #[inline(always)]
     pub const fn set_latst(&mut self, val: super::vals::Latst) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
     }
-    #[doc = "Shifter Size"]
+    #[doc = "Shifter Size."]
     #[must_use]
     #[inline(always)]
     pub const fn ssize(&self) -> super::vals::Ssize {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Ssize::from_bits(val as u8)
     }
-    #[doc = "Shifter Size"]
+    #[doc = "Shifter Size."]
     #[inline(always)]
     pub const fn set_ssize(&mut self, val: super::vals::Ssize) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "Parallel Width"]
+    #[doc = "Parallel Width."]
     #[must_use]
     #[inline(always)]
     pub const fn pwidth(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x1f;
         val as u8
     }
-    #[doc = "Parallel Width"]
+    #[doc = "Parallel Width."]
     #[inline(always)]
     pub const fn set_pwidth(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 16usize)) | (((val as u32) & 0x1f) << 16usize);
@@ -1095,79 +1095,79 @@ impl defmt::Format for Shiftcfg {
         )
     }
 }
-#[doc = "Shifter Control"]
+#[doc = "Shifter Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Shiftctl(pub u32);
 impl Shiftctl {
-    #[doc = "Shifter Mode"]
+    #[doc = "Shifter Mode."]
     #[must_use]
     #[inline(always)]
     pub const fn smod(&self) -> super::vals::Smod {
         let val = (self.0 >> 0usize) & 0x07;
         super::vals::Smod::from_bits(val as u8)
     }
-    #[doc = "Shifter Mode"]
+    #[doc = "Shifter Mode."]
     #[inline(always)]
     pub const fn set_smod(&mut self, val: super::vals::Smod) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
     }
-    #[doc = "Shifter Pin Polarity"]
+    #[doc = "Shifter Pin Polarity."]
     #[must_use]
     #[inline(always)]
     pub const fn pinpol(&self) -> super::vals::ShiftctlPinpol {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::ShiftctlPinpol::from_bits(val as u8)
     }
-    #[doc = "Shifter Pin Polarity"]
+    #[doc = "Shifter Pin Polarity."]
     #[inline(always)]
     pub const fn set_pinpol(&mut self, val: super::vals::ShiftctlPinpol) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "Shifter Pin Select"]
+    #[doc = "Shifter Pin Select."]
     #[must_use]
     #[inline(always)]
     pub const fn pinsel(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x1f;
         val as u8
     }
-    #[doc = "Shifter Pin Select"]
+    #[doc = "Shifter Pin Select."]
     #[inline(always)]
     pub const fn set_pinsel(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 8usize)) | (((val as u32) & 0x1f) << 8usize);
     }
-    #[doc = "Shifter Pin Configuration"]
+    #[doc = "Shifter Pin Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pincfg(&self) -> super::vals::ShiftctlPincfg {
         let val = (self.0 >> 16usize) & 0x03;
         super::vals::ShiftctlPincfg::from_bits(val as u8)
     }
-    #[doc = "Shifter Pin Configuration"]
+    #[doc = "Shifter Pin Configuration."]
     #[inline(always)]
     pub const fn set_pincfg(&mut self, val: super::vals::ShiftctlPincfg) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
-    #[doc = "Timer Polarity"]
+    #[doc = "Timer Polarity."]
     #[must_use]
     #[inline(always)]
     pub const fn timpol(&self) -> super::vals::Timpol {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::Timpol::from_bits(val as u8)
     }
-    #[doc = "Timer Polarity"]
+    #[doc = "Timer Polarity."]
     #[inline(always)]
     pub const fn set_timpol(&mut self, val: super::vals::Timpol) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
     }
-    #[doc = "Timer Select"]
+    #[doc = "Timer Select."]
     #[must_use]
     #[inline(always)]
     pub const fn timsel(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0x03;
         val as u8
     }
-    #[doc = "Timer Select"]
+    #[doc = "Timer Select."]
     #[inline(always)]
     pub const fn set_timsel(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val as u32) & 0x03) << 24usize);
@@ -1206,19 +1206,19 @@ impl defmt::Format for Shiftctl {
         )
     }
 }
-#[doc = "Shifter Error Interrupt Enable"]
+#[doc = "Shifter Error Interrupt Enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Shifteien(pub u32);
 impl Shifteien {
-    #[doc = "Shifter Error Interrupt Enable"]
+    #[doc = "Shifter Error Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn seie(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "Shifter Error Interrupt Enable"]
+    #[doc = "Shifter Error Interrupt Enable."]
     #[inline(always)]
     pub const fn set_seie(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
@@ -1243,19 +1243,19 @@ impl defmt::Format for Shifteien {
         defmt::write!(f, "Shifteien {{ seie: {=u8:?} }}", self.seie())
     }
 }
-#[doc = "Shifter Error"]
+#[doc = "Shifter Error."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Shifterr(pub u32);
 impl Shifterr {
-    #[doc = "Shifter Error Flag"]
+    #[doc = "Shifter Error Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn sef(&self) -> super::vals::Sef {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Sef::from_bits(val as u8)
     }
-    #[doc = "Shifter Error Flag"]
+    #[doc = "Shifter Error Flag."]
     #[inline(always)]
     pub const fn set_sef(&mut self, val: super::vals::Sef) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
@@ -1280,19 +1280,19 @@ impl defmt::Format for Shifterr {
         defmt::write!(f, "Shifterr {{ sef: {:?} }}", self.sef())
     }
 }
-#[doc = "Shifter Status DMA Enable"]
+#[doc = "Shifter Status DMA Enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Shiftsden(pub u32);
 impl Shiftsden {
-    #[doc = "Shifter Status DMA Enable"]
+    #[doc = "Shifter Status DMA Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ssde(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "Shifter Status DMA Enable"]
+    #[doc = "Shifter Status DMA Enable."]
     #[inline(always)]
     pub const fn set_ssde(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
@@ -1317,19 +1317,19 @@ impl defmt::Format for Shiftsden {
         defmt::write!(f, "Shiftsden {{ ssde: {=u8:?} }}", self.ssde())
     }
 }
-#[doc = "Shifter Status Interrupt Enable"]
+#[doc = "Shifter Status Interrupt Enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Shiftsien(pub u32);
 impl Shiftsien {
-    #[doc = "Shifter Status Interrupt Enable"]
+    #[doc = "Shifter Status Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ssie(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "Shifter Status Interrupt Enable"]
+    #[doc = "Shifter Status Interrupt Enable."]
     #[inline(always)]
     pub const fn set_ssie(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
@@ -1354,19 +1354,19 @@ impl defmt::Format for Shiftsien {
         defmt::write!(f, "Shiftsien {{ ssie: {=u8:?} }}", self.ssie())
     }
 }
-#[doc = "Shifter Status"]
+#[doc = "Shifter Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Shiftstat(pub u32);
 impl Shiftstat {
-    #[doc = "Shifter Status Flag"]
+    #[doc = "Shifter Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn ssf(&self) -> super::vals::Ssf {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Ssf::from_bits(val as u8)
     }
-    #[doc = "Shifter Status Flag"]
+    #[doc = "Shifter Status Flag."]
     #[inline(always)]
     pub const fn set_ssf(&mut self, val: super::vals::Ssf) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
@@ -1391,19 +1391,19 @@ impl defmt::Format for Shiftstat {
         defmt::write!(f, "Shiftstat {{ ssf: {:?} }}", self.ssf())
     }
 }
-#[doc = "Shifter State"]
+#[doc = "Shifter State."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Shiftstate(pub u32);
 impl Shiftstate {
-    #[doc = "Current State Pointer"]
+    #[doc = "Current State Pointer."]
     #[must_use]
     #[inline(always)]
     pub const fn state(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x07;
         val as u8
     }
-    #[doc = "Current State Pointer"]
+    #[doc = "Current State Pointer."]
     #[inline(always)]
     pub const fn set_state(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val as u32) & 0x07) << 0usize);
@@ -1428,91 +1428,91 @@ impl defmt::Format for Shiftstate {
         defmt::write!(f, "Shiftstate {{ state: {=u8:?} }}", self.state())
     }
 }
-#[doc = "Timer Configuration"]
+#[doc = "Timer Configuration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Timcfg(pub u32);
 impl Timcfg {
-    #[doc = "Timer Start"]
+    #[doc = "Timer Start."]
     #[must_use]
     #[inline(always)]
     pub const fn tstart(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Timer Start"]
+    #[doc = "Timer Start."]
     #[inline(always)]
     pub const fn set_tstart(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Timer Stop"]
+    #[doc = "Timer Stop."]
     #[must_use]
     #[inline(always)]
     pub const fn tstop(&self) -> super::vals::Tstop {
         let val = (self.0 >> 4usize) & 0x03;
         super::vals::Tstop::from_bits(val as u8)
     }
-    #[doc = "Timer Stop"]
+    #[doc = "Timer Stop."]
     #[inline(always)]
     pub const fn set_tstop(&mut self, val: super::vals::Tstop) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
-    #[doc = "Timer Enable"]
+    #[doc = "Timer Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn timena(&self) -> super::vals::Timena {
         let val = (self.0 >> 8usize) & 0x07;
         super::vals::Timena::from_bits(val as u8)
     }
-    #[doc = "Timer Enable"]
+    #[doc = "Timer Enable."]
     #[inline(always)]
     pub const fn set_timena(&mut self, val: super::vals::Timena) {
         self.0 = (self.0 & !(0x07 << 8usize)) | (((val.to_bits() as u32) & 0x07) << 8usize);
     }
-    #[doc = "Timer Disable"]
+    #[doc = "Timer Disable."]
     #[must_use]
     #[inline(always)]
     pub const fn timdis(&self) -> super::vals::Timdis {
         let val = (self.0 >> 12usize) & 0x07;
         super::vals::Timdis::from_bits(val as u8)
     }
-    #[doc = "Timer Disable"]
+    #[doc = "Timer Disable."]
     #[inline(always)]
     pub const fn set_timdis(&mut self, val: super::vals::Timdis) {
         self.0 = (self.0 & !(0x07 << 12usize)) | (((val.to_bits() as u32) & 0x07) << 12usize);
     }
-    #[doc = "Timer Reset"]
+    #[doc = "Timer Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn timrst(&self) -> super::vals::Timrst {
         let val = (self.0 >> 16usize) & 0x07;
         super::vals::Timrst::from_bits(val as u8)
     }
-    #[doc = "Timer Reset"]
+    #[doc = "Timer Reset."]
     #[inline(always)]
     pub const fn set_timrst(&mut self, val: super::vals::Timrst) {
         self.0 = (self.0 & !(0x07 << 16usize)) | (((val.to_bits() as u32) & 0x07) << 16usize);
     }
-    #[doc = "Timer Decrement"]
+    #[doc = "Timer Decrement."]
     #[must_use]
     #[inline(always)]
     pub const fn timdec(&self) -> super::vals::Timdec {
         let val = (self.0 >> 20usize) & 0x07;
         super::vals::Timdec::from_bits(val as u8)
     }
-    #[doc = "Timer Decrement"]
+    #[doc = "Timer Decrement."]
     #[inline(always)]
     pub const fn set_timdec(&mut self, val: super::vals::Timdec) {
         self.0 = (self.0 & !(0x07 << 20usize)) | (((val.to_bits() as u32) & 0x07) << 20usize);
     }
-    #[doc = "Timer Output"]
+    #[doc = "Timer Output."]
     #[must_use]
     #[inline(always)]
     pub const fn timout(&self) -> super::vals::Timout {
         let val = (self.0 >> 24usize) & 0x03;
         super::vals::Timout::from_bits(val as u8)
     }
-    #[doc = "Timer Output"]
+    #[doc = "Timer Output."]
     #[inline(always)]
     pub const fn set_timout(&mut self, val: super::vals::Timout) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
@@ -1553,19 +1553,19 @@ impl defmt::Format for Timcfg {
         )
     }
 }
-#[doc = "Timer Compare"]
+#[doc = "Timer Compare."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Timcmp(pub u32);
 impl Timcmp {
-    #[doc = "Timer Compare Value"]
+    #[doc = "Timer Compare Value."]
     #[must_use]
     #[inline(always)]
     pub const fn cmp(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Timer Compare Value"]
+    #[doc = "Timer Compare Value."]
     #[inline(always)]
     pub const fn set_cmp(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
@@ -1588,115 +1588,115 @@ impl defmt::Format for Timcmp {
         defmt::write!(f, "Timcmp {{ cmp: {=u16:?} }}", self.cmp())
     }
 }
-#[doc = "Timer Control"]
+#[doc = "Timer Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Timctl(pub u32);
 impl Timctl {
-    #[doc = "Timer Mode"]
+    #[doc = "Timer Mode."]
     #[must_use]
     #[inline(always)]
     pub const fn timod(&self) -> super::vals::Timod {
         let val = (self.0 >> 0usize) & 0x07;
         super::vals::Timod::from_bits(val as u8)
     }
-    #[doc = "Timer Mode"]
+    #[doc = "Timer Mode."]
     #[inline(always)]
     pub const fn set_timod(&mut self, val: super::vals::Timod) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
     }
-    #[doc = "Timer One Time Operation"]
+    #[doc = "Timer One Time Operation."]
     #[must_use]
     #[inline(always)]
     pub const fn onetim(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Timer One Time Operation"]
+    #[doc = "Timer One Time Operation."]
     #[inline(always)]
     pub const fn set_onetim(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "Timer Pin Input Select"]
+    #[doc = "Timer Pin Input Select."]
     #[must_use]
     #[inline(always)]
     pub const fn pinins(&self) -> super::vals::Pinins {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::Pinins::from_bits(val as u8)
     }
-    #[doc = "Timer Pin Input Select"]
+    #[doc = "Timer Pin Input Select."]
     #[inline(always)]
     pub const fn set_pinins(&mut self, val: super::vals::Pinins) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "Timer Pin Polarity"]
+    #[doc = "Timer Pin Polarity."]
     #[must_use]
     #[inline(always)]
     pub const fn pinpol(&self) -> super::vals::TimctlPinpol {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::TimctlPinpol::from_bits(val as u8)
     }
-    #[doc = "Timer Pin Polarity"]
+    #[doc = "Timer Pin Polarity."]
     #[inline(always)]
     pub const fn set_pinpol(&mut self, val: super::vals::TimctlPinpol) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "Timer Pin Select"]
+    #[doc = "Timer Pin Select."]
     #[must_use]
     #[inline(always)]
     pub const fn pinsel(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x1f;
         val as u8
     }
-    #[doc = "Timer Pin Select"]
+    #[doc = "Timer Pin Select."]
     #[inline(always)]
     pub const fn set_pinsel(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 8usize)) | (((val as u32) & 0x1f) << 8usize);
     }
-    #[doc = "Timer Pin Configuration"]
+    #[doc = "Timer Pin Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pincfg(&self) -> super::vals::TimctlPincfg {
         let val = (self.0 >> 16usize) & 0x03;
         super::vals::TimctlPincfg::from_bits(val as u8)
     }
-    #[doc = "Timer Pin Configuration"]
+    #[doc = "Timer Pin Configuration."]
     #[inline(always)]
     pub const fn set_pincfg(&mut self, val: super::vals::TimctlPincfg) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
-    #[doc = "Trigger Source"]
+    #[doc = "Trigger Source."]
     #[must_use]
     #[inline(always)]
     pub const fn trgsrc(&self) -> super::vals::Trgsrc {
         let val = (self.0 >> 22usize) & 0x01;
         super::vals::Trgsrc::from_bits(val as u8)
     }
-    #[doc = "Trigger Source"]
+    #[doc = "Trigger Source."]
     #[inline(always)]
     pub const fn set_trgsrc(&mut self, val: super::vals::Trgsrc) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
     }
-    #[doc = "Trigger Polarity"]
+    #[doc = "Trigger Polarity."]
     #[must_use]
     #[inline(always)]
     pub const fn trgpol(&self) -> super::vals::Trgpol {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::Trgpol::from_bits(val as u8)
     }
-    #[doc = "Trigger Polarity"]
+    #[doc = "Trigger Polarity."]
     #[inline(always)]
     pub const fn set_trgpol(&mut self, val: super::vals::Trgpol) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
     }
-    #[doc = "Trigger Select"]
+    #[doc = "Trigger Select."]
     #[must_use]
     #[inline(always)]
     pub const fn trgsel(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0x3f;
         val as u8
     }
-    #[doc = "Trigger Select"]
+    #[doc = "Trigger Select."]
     #[inline(always)]
     pub const fn set_trgsel(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 24usize)) | (((val as u32) & 0x3f) << 24usize);
@@ -1741,19 +1741,19 @@ impl defmt::Format for Timctl {
         )
     }
 }
-#[doc = "Timer Status DMA Enable"]
+#[doc = "Timer Status DMA Enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Timersden(pub u32);
 impl Timersden {
-    #[doc = "Timer Status DMA Enable"]
+    #[doc = "Timer Status DMA Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn tsde(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "Timer Status DMA Enable"]
+    #[doc = "Timer Status DMA Enable."]
     #[inline(always)]
     pub const fn set_tsde(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
@@ -1778,19 +1778,19 @@ impl defmt::Format for Timersden {
         defmt::write!(f, "Timersden {{ tsde: {=u8:?} }}", self.tsde())
     }
 }
-#[doc = "Timer Interrupt Enable"]
+#[doc = "Timer Interrupt Enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Timien(pub u32);
 impl Timien {
-    #[doc = "Timer Status Interrupt Enable"]
+    #[doc = "Timer Status Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn teie(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "Timer Status Interrupt Enable"]
+    #[doc = "Timer Status Interrupt Enable."]
     #[inline(always)]
     pub const fn set_teie(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
@@ -1815,19 +1815,19 @@ impl defmt::Format for Timien {
         defmt::write!(f, "Timien {{ teie: {=u8:?} }}", self.teie())
     }
 }
-#[doc = "Timer Status Flag"]
+#[doc = "Timer Status Flag."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Timstat(pub u32);
 impl Timstat {
-    #[doc = "Timer Status Flag"]
+    #[doc = "Timer Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn tsf(&self) -> super::vals::Tsf {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Tsf::from_bits(val as u8)
     }
-    #[doc = "Timer Status Flag"]
+    #[doc = "Timer Status Flag."]
     #[inline(always)]
     pub const fn set_tsf(&mut self, val: super::vals::Tsf) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
@@ -1850,19 +1850,19 @@ impl defmt::Format for Timstat {
         defmt::write!(f, "Timstat {{ tsf: {:?} }}", self.tsf())
     }
 }
-#[doc = "Trigger Status"]
+#[doc = "Trigger Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trgstat(pub u32);
 impl Trgstat {
-    #[doc = "External Trigger Status Flag"]
+    #[doc = "External Trigger Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn etsf(&self) -> super::vals::Etsf {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Etsf::from_bits(val as u8)
     }
-    #[doc = "External Trigger Status Flag"]
+    #[doc = "External Trigger Status Flag."]
     #[inline(always)]
     pub const fn set_etsf(&mut self, val: super::vals::Etsf) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
@@ -1887,19 +1887,19 @@ impl defmt::Format for Trgstat {
         defmt::write!(f, "Trgstat {{ etsf: {:?} }}", self.etsf())
     }
 }
-#[doc = "External Trigger Interrupt Enable"]
+#[doc = "External Trigger Interrupt Enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trigien(pub u32);
 impl Trigien {
-    #[doc = "External Trigger Interrupt Enable"]
+    #[doc = "External Trigger Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn trie(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "External Trigger Interrupt Enable"]
+    #[doc = "External Trigger Interrupt Enable."]
     #[inline(always)]
     pub const fn set_trie(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
@@ -1924,43 +1924,43 @@ impl defmt::Format for Trigien {
         defmt::write!(f, "Trigien {{ trie: {=u8:?} }}", self.trie())
     }
 }
-#[doc = "Version ID"]
+#[doc = "Version ID."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Verid(pub u32);
 impl Verid {
-    #[doc = "Feature Specification Number"]
+    #[doc = "Feature Specification Number."]
     #[must_use]
     #[inline(always)]
     pub const fn feature(&self) -> super::vals::Feature {
         let val = (self.0 >> 0usize) & 0xffff;
         super::vals::Feature::from_bits(val as u16)
     }
-    #[doc = "Feature Specification Number"]
+    #[doc = "Feature Specification Number."]
     #[inline(always)]
     pub const fn set_feature(&mut self, val: super::vals::Feature) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val.to_bits() as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Minor Version Number"]
+    #[doc = "Minor Version Number."]
     #[must_use]
     #[inline(always)]
     pub const fn minor(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0xff;
         val as u8
     }
-    #[doc = "Minor Version Number"]
+    #[doc = "Minor Version Number."]
     #[inline(always)]
     pub const fn set_minor(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
     }
-    #[doc = "Major Version Number"]
+    #[doc = "Major Version Number."]
     #[must_use]
     #[inline(always)]
     pub const fn major(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "Major Version Number"]
+    #[doc = "Major Version Number."]
     #[inline(always)]
     pub const fn set_major(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);

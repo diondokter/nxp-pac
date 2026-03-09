@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ChipResetReq {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFF = 0x0,
-    #[doc = "Reset"]
+    #[doc = "Reset."]
     RESET = 0x01,
 }
 impl ChipResetReq {
@@ -33,9 +33,9 @@ impl From<ChipResetReq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SoftReset {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFF = 0x0,
-    #[doc = "Reset"]
+    #[doc = "Reset."]
     RESET = 0x01,
 }
 impl SoftReset {

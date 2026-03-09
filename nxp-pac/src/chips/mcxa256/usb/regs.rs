@@ -1,16 +1,16 @@
-#[doc = "Peripheral Additional Information"]
+#[doc = "Peripheral Additional Information."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Addinfo(pub u8);
 impl Addinfo {
-    #[doc = "Host Mode Enable"]
+    #[doc = "Host Mode Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn iehost(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Host Mode Enable"]
+    #[doc = "Host Mode Enable."]
     #[inline(always)]
     pub const fn set_iehost(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u8) & 0x01) << 0usize);
@@ -35,31 +35,31 @@ impl defmt::Format for Addinfo {
         defmt::write!(f, "Addinfo {{ iehost: {=bool:?} }}", self.iehost())
     }
 }
-#[doc = "Address"]
+#[doc = "Address."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Addr(pub u8);
 impl Addr {
-    #[doc = "USB Address"]
+    #[doc = "USB Address."]
     #[must_use]
     #[inline(always)]
     pub const fn addr(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "USB Address"]
+    #[doc = "USB Address."]
     #[inline(always)]
     pub const fn set_addr(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u8) & 0x7f) << 0usize);
     }
-    #[doc = "Low Speed Enable"]
+    #[doc = "Low Speed Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn lsen(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Low Speed Enable"]
+    #[doc = "Low Speed Enable."]
     #[inline(always)]
     pub const fn set_lsen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u8) & 0x01) << 7usize);
@@ -90,19 +90,19 @@ impl defmt::Format for Addr {
         )
     }
 }
-#[doc = "BDT Page 1"]
+#[doc = "BDT Page 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Bdtpage1(pub u8);
 impl Bdtpage1 {
-    #[doc = "BDT Base Address"]
+    #[doc = "BDT Base Address."]
     #[must_use]
     #[inline(always)]
     pub const fn bdtba(&self) -> u8 {
         let val = (self.0 >> 1usize) & 0x7f;
         val as u8
     }
-    #[doc = "BDT Base Address"]
+    #[doc = "BDT Base Address."]
     #[inline(always)]
     pub const fn set_bdtba(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 1usize)) | (((val as u8) & 0x7f) << 1usize);
@@ -127,19 +127,19 @@ impl defmt::Format for Bdtpage1 {
         defmt::write!(f, "Bdtpage1 {{ bdtba: {=u8:?} }}", self.bdtba())
     }
 }
-#[doc = "BDT Page 2"]
+#[doc = "BDT Page 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Bdtpage2(pub u8);
 impl Bdtpage2 {
-    #[doc = "BDT Base Address"]
+    #[doc = "BDT Base Address."]
     #[must_use]
     #[inline(always)]
     pub const fn bdtba(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "BDT Base Address"]
+    #[doc = "BDT Base Address."]
     #[inline(always)]
     pub const fn set_bdtba(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u8) & 0xff) << 0usize);
@@ -164,19 +164,19 @@ impl defmt::Format for Bdtpage2 {
         defmt::write!(f, "Bdtpage2 {{ bdtba: {=u8:?} }}", self.bdtba())
     }
 }
-#[doc = "BDT Page 3"]
+#[doc = "BDT Page 3."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Bdtpage3(pub u8);
 impl Bdtpage3 {
-    #[doc = "BDT Base Address"]
+    #[doc = "BDT Base Address."]
     #[must_use]
     #[inline(always)]
     pub const fn bdtba(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "BDT Base Address"]
+    #[doc = "BDT Base Address."]
     #[inline(always)]
     pub const fn set_bdtba(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u8) & 0xff) << 0usize);
@@ -201,7 +201,7 @@ impl defmt::Format for Bdtpage3 {
         defmt::write!(f, "Bdtpage3 {{ bdtba: {=u8:?} }}", self.bdtba())
     }
 }
-#[doc = "USB Clock Recovery Control"]
+#[doc = "USB Clock Recovery Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ClkRecoverCtrl(pub u8);
@@ -218,38 +218,38 @@ impl ClkRecoverCtrl {
     pub const fn set_trim_init_val_sel(&mut self, val: super::vals::TrimInitValSel) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u8) & 0x01) << 3usize);
     }
-    #[doc = "Restart from IFR Trim Value"]
+    #[doc = "Restart from IFR Trim Value."]
     #[must_use]
     #[inline(always)]
     pub const fn restart_ifrtrim_en(&self) -> super::vals::RestartIfrtrimEn {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::RestartIfrtrimEn::from_bits(val as u8)
     }
-    #[doc = "Restart from IFR Trim Value"]
+    #[doc = "Restart from IFR Trim Value."]
     #[inline(always)]
     pub const fn set_restart_ifrtrim_en(&mut self, val: super::vals::RestartIfrtrimEn) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u8) & 0x01) << 5usize);
     }
-    #[doc = "Reset or Resume to Rough Phase Enable"]
+    #[doc = "Reset or Resume to Rough Phase Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn reset_resume_rough_en(&self) -> super::vals::ResetResumeRoughEn {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::ResetResumeRoughEn::from_bits(val as u8)
     }
-    #[doc = "Reset or Resume to Rough Phase Enable"]
+    #[doc = "Reset or Resume to Rough Phase Enable."]
     #[inline(always)]
     pub const fn set_reset_resume_rough_en(&mut self, val: super::vals::ResetResumeRoughEn) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u8) & 0x01) << 6usize);
     }
-    #[doc = "Crystal-Less USB Enable"]
+    #[doc = "Crystal-Less USB Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn clock_recover_en(&self) -> super::vals::ClockRecoverEn {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::ClockRecoverEn::from_bits(val as u8)
     }
-    #[doc = "Crystal-Less USB Enable"]
+    #[doc = "Crystal-Less USB Enable."]
     #[inline(always)]
     pub const fn set_clock_recover_en(&mut self, val: super::vals::ClockRecoverEn) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u8) & 0x01) << 7usize);
@@ -284,19 +284,19 @@ impl defmt::Format for ClkRecoverCtrl {
         )
     }
 }
-#[doc = "Clock Recovery Combined Interrupt Enable"]
+#[doc = "Clock Recovery Combined Interrupt Enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ClkRecoverIntEn(pub u8);
 impl ClkRecoverIntEn {
-    #[doc = "Overflow error interrupt enable"]
+    #[doc = "Overflow error interrupt enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ovf_error_en(&self) -> super::vals::OvfErrorEn {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::OvfErrorEn::from_bits(val as u8)
     }
-    #[doc = "Overflow error interrupt enable"]
+    #[doc = "Overflow error interrupt enable."]
     #[inline(always)]
     pub const fn set_ovf_error_en(&mut self, val: super::vals::OvfErrorEn) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u8) & 0x01) << 4usize);
@@ -325,19 +325,19 @@ impl defmt::Format for ClkRecoverIntEn {
         )
     }
 }
-#[doc = "Clock Recovery Separated Interrupt Status"]
+#[doc = "Clock Recovery Separated Interrupt Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ClkRecoverIntStatus(pub u8);
 impl ClkRecoverIntStatus {
-    #[doc = "Overflow Error Interrupt Status Flag"]
+    #[doc = "Overflow Error Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn ovf_error(&self) -> super::vals::OvfError {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::OvfError::from_bits(val as u8)
     }
-    #[doc = "Overflow Error Interrupt Status Flag"]
+    #[doc = "Overflow Error Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_ovf_error(&mut self, val: super::vals::OvfError) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u8) & 0x01) << 4usize);
@@ -366,19 +366,19 @@ impl defmt::Format for ClkRecoverIntStatus {
         )
     }
 }
-#[doc = "FIRC Oscillator Enable"]
+#[doc = "FIRC Oscillator Enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ClkRecoverIrcEn(pub u8);
 impl ClkRecoverIrcEn {
-    #[doc = "Fast IRC enable"]
+    #[doc = "Fast IRC enable."]
     #[must_use]
     #[inline(always)]
     pub const fn irc_en(&self) -> super::vals::IrcEn {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::IrcEn::from_bits(val as u8)
     }
-    #[doc = "Fast IRC enable"]
+    #[doc = "Fast IRC enable."]
     #[inline(always)]
     pub const fn set_irc_en(&mut self, val: super::vals::IrcEn) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u8) & 0x01) << 1usize);
@@ -403,43 +403,43 @@ impl defmt::Format for ClkRecoverIrcEn {
         defmt::write!(f, "ClkRecoverIrcEn {{ irc_en: {:?} }}", self.irc_en())
     }
 }
-#[doc = "USB OTG Control"]
+#[doc = "USB OTG Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Control(pub u8);
 impl Control {
-    #[doc = "VBUS Monitoring Source Select"]
+    #[doc = "VBUS Monitoring Source Select."]
     #[must_use]
     #[inline(always)]
     pub const fn vbus_source_sel(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "VBUS Monitoring Source Select"]
+    #[doc = "VBUS Monitoring Source Select."]
     #[inline(always)]
     pub const fn set_vbus_source_sel(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u8) & 0x01) << 0usize);
     }
-    #[doc = "VBUS Session Valid status"]
+    #[doc = "VBUS Session Valid status."]
     #[must_use]
     #[inline(always)]
     pub const fn sess_vld(&self) -> super::vals::SessVld {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::SessVld::from_bits(val as u8)
     }
-    #[doc = "VBUS Session Valid status"]
+    #[doc = "VBUS Session Valid status."]
     #[inline(always)]
     pub const fn set_sess_vld(&mut self, val: super::vals::SessVld) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u8) & 0x01) << 1usize);
     }
-    #[doc = "DP Pullup in Non-OTG Device Mode"]
+    #[doc = "DP Pullup in Non-OTG Device Mode."]
     #[must_use]
     #[inline(always)]
     pub const fn dppullupnonotg(&self) -> super::vals::Dppullupnonotg {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::Dppullupnonotg::from_bits(val as u8)
     }
-    #[doc = "DP Pullup in Non-OTG Device Mode"]
+    #[doc = "DP Pullup in Non-OTG Device Mode."]
     #[inline(always)]
     pub const fn set_dppullupnonotg(&mut self, val: super::vals::Dppullupnonotg) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u8) & 0x01) << 4usize);
@@ -472,103 +472,103 @@ impl defmt::Format for Control {
         )
     }
 }
-#[doc = "Control"]
+#[doc = "Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctl(pub u8);
 impl Ctl {
-    #[doc = "USB Enable"]
+    #[doc = "USB Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn usbensofen(&self) -> super::vals::Usbensofen {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Usbensofen::from_bits(val as u8)
     }
-    #[doc = "USB Enable"]
+    #[doc = "USB Enable."]
     #[inline(always)]
     pub const fn set_usbensofen(&mut self, val: super::vals::Usbensofen) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u8) & 0x01) << 0usize);
     }
-    #[doc = "Odd Reset"]
+    #[doc = "Odd Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn oddrst(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Odd Reset"]
+    #[doc = "Odd Reset."]
     #[inline(always)]
     pub const fn set_oddrst(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u8) & 0x01) << 1usize);
     }
-    #[doc = "Resume"]
+    #[doc = "Resume."]
     #[must_use]
     #[inline(always)]
     pub const fn resume(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Resume"]
+    #[doc = "Resume."]
     #[inline(always)]
     pub const fn set_resume(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u8) & 0x01) << 2usize);
     }
-    #[doc = "Host Mode Enable"]
+    #[doc = "Host Mode Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn hostmodeen(&self) -> super::vals::Hostmodeen {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Hostmodeen::from_bits(val as u8)
     }
-    #[doc = "Host Mode Enable"]
+    #[doc = "Host Mode Enable."]
     #[inline(always)]
     pub const fn set_hostmodeen(&mut self, val: super::vals::Hostmodeen) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u8) & 0x01) << 3usize);
     }
-    #[doc = "Reset Signaling Enable"]
+    #[doc = "Reset Signaling Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn reset(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "Reset Signaling Enable"]
+    #[doc = "Reset Signaling Enable."]
     #[inline(always)]
     pub const fn set_reset(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u8) & 0x01) << 4usize);
     }
-    #[doc = "TXD Suspend And Token Busy"]
+    #[doc = "TXD Suspend And Token Busy."]
     #[must_use]
     #[inline(always)]
     pub const fn txsuspendtokenbusy(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "TXD Suspend And Token Busy"]
+    #[doc = "TXD Suspend And Token Busy."]
     #[inline(always)]
     pub const fn set_txsuspendtokenbusy(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u8) & 0x01) << 5usize);
     }
-    #[doc = "Live USB Single-Ended Zero signal"]
+    #[doc = "Live USB Single-Ended Zero signal."]
     #[must_use]
     #[inline(always)]
     pub const fn se0(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "Live USB Single-Ended Zero signal"]
+    #[doc = "Live USB Single-Ended Zero signal."]
     #[inline(always)]
     pub const fn set_se0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u8) & 0x01) << 6usize);
     }
-    #[doc = "Live USB Differential Receiver JSTATE Signal"]
+    #[doc = "Live USB Differential Receiver JSTATE Signal."]
     #[must_use]
     #[inline(always)]
     pub const fn jstate(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Live USB Differential Receiver JSTATE Signal"]
+    #[doc = "Live USB Differential Receiver JSTATE Signal."]
     #[inline(always)]
     pub const fn set_jstate(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u8) & 0x01) << 7usize);
@@ -611,91 +611,91 @@ impl defmt::Format for Ctl {
         )
     }
 }
-#[doc = "Endpoint Control"]
+#[doc = "Endpoint Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Endpt(pub u8);
 impl Endpt {
-    #[doc = "Endpoint Handshaking Enable"]
+    #[doc = "Endpoint Handshaking Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ephshk(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Endpoint Handshaking Enable"]
+    #[doc = "Endpoint Handshaking Enable."]
     #[inline(always)]
     pub const fn set_ephshk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u8) & 0x01) << 0usize);
     }
-    #[doc = "Endpoint Stalled"]
+    #[doc = "Endpoint Stalled."]
     #[must_use]
     #[inline(always)]
     pub const fn epstall(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Endpoint Stalled"]
+    #[doc = "Endpoint Stalled."]
     #[inline(always)]
     pub const fn set_epstall(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u8) & 0x01) << 1usize);
     }
-    #[doc = "Endpoint for TX transfers enable"]
+    #[doc = "Endpoint for TX transfers enable."]
     #[must_use]
     #[inline(always)]
     pub const fn eptxen(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Endpoint for TX transfers enable"]
+    #[doc = "Endpoint for TX transfers enable."]
     #[inline(always)]
     pub const fn set_eptxen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u8) & 0x01) << 2usize);
     }
-    #[doc = "Endpoint for RX transfers enable"]
+    #[doc = "Endpoint for RX transfers enable."]
     #[must_use]
     #[inline(always)]
     pub const fn eprxen(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Endpoint for RX transfers enable"]
+    #[doc = "Endpoint for RX transfers enable."]
     #[inline(always)]
     pub const fn set_eprxen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u8) & 0x01) << 3usize);
     }
-    #[doc = "Control Transfer Disable"]
+    #[doc = "Control Transfer Disable."]
     #[must_use]
     #[inline(always)]
     pub const fn epctldis(&self) -> super::vals::Epctldis {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::Epctldis::from_bits(val as u8)
     }
-    #[doc = "Control Transfer Disable"]
+    #[doc = "Control Transfer Disable."]
     #[inline(always)]
     pub const fn set_epctldis(&mut self, val: super::vals::Epctldis) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u8) & 0x01) << 4usize);
     }
-    #[doc = "Retry Disable"]
+    #[doc = "Retry Disable."]
     #[must_use]
     #[inline(always)]
     pub const fn retrydis(&self) -> super::vals::Retrydis {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::Retrydis::from_bits(val as u8)
     }
-    #[doc = "Retry Disable"]
+    #[doc = "Retry Disable."]
     #[inline(always)]
     pub const fn set_retrydis(&mut self, val: super::vals::Retrydis) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u8) & 0x01) << 6usize);
     }
-    #[doc = "Host Without A Hub"]
+    #[doc = "Host Without A Hub."]
     #[must_use]
     #[inline(always)]
     pub const fn hostwohub(&self) -> super::vals::Hostwohub {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Hostwohub::from_bits(val as u8)
     }
-    #[doc = "Host Without A Hub"]
+    #[doc = "Host Without A Hub."]
     #[inline(always)]
     pub const fn set_hostwohub(&mut self, val: super::vals::Hostwohub) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u8) & 0x01) << 7usize);
@@ -736,103 +736,103 @@ impl defmt::Format for Endpt {
         )
     }
 }
-#[doc = "Error Interrupt Enable"]
+#[doc = "Error Interrupt Enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Erren(pub u8);
 impl Erren {
-    #[doc = "PIDERR Interrupt Enable"]
+    #[doc = "PIDERR Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn piderren(&self) -> super::vals::Piderren {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Piderren::from_bits(val as u8)
     }
-    #[doc = "PIDERR Interrupt Enable"]
+    #[doc = "PIDERR Interrupt Enable."]
     #[inline(always)]
     pub const fn set_piderren(&mut self, val: super::vals::Piderren) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u8) & 0x01) << 0usize);
     }
-    #[doc = "CRC5/EOF Interrupt Enable"]
+    #[doc = "CRC5/EOF Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn crc5eofen(&self) -> super::vals::Crc5eofen {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Crc5eofen::from_bits(val as u8)
     }
-    #[doc = "CRC5/EOF Interrupt Enable"]
+    #[doc = "CRC5/EOF Interrupt Enable."]
     #[inline(always)]
     pub const fn set_crc5eofen(&mut self, val: super::vals::Crc5eofen) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u8) & 0x01) << 1usize);
     }
-    #[doc = "CRC16 Interrupt Enable"]
+    #[doc = "CRC16 Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn crc16en(&self) -> super::vals::Crc16en {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Crc16en::from_bits(val as u8)
     }
-    #[doc = "CRC16 Interrupt Enable"]
+    #[doc = "CRC16 Interrupt Enable."]
     #[inline(always)]
     pub const fn set_crc16en(&mut self, val: super::vals::Crc16en) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u8) & 0x01) << 2usize);
     }
-    #[doc = "DFN8 (Data Field Not Integer Number of Bytes) Interrupt Enable"]
+    #[doc = "DFN8 (Data Field Not Integer Number of Bytes) Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dfn8en(&self) -> super::vals::Dfn8en {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Dfn8en::from_bits(val as u8)
     }
-    #[doc = "DFN8 (Data Field Not Integer Number of Bytes) Interrupt Enable"]
+    #[doc = "DFN8 (Data Field Not Integer Number of Bytes) Interrupt Enable."]
     #[inline(always)]
     pub const fn set_dfn8en(&mut self, val: super::vals::Dfn8en) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u8) & 0x01) << 3usize);
     }
-    #[doc = "BTOERR (Bus Timeout Error) Interrupt Enable"]
+    #[doc = "BTOERR (Bus Timeout Error) Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn btoerren(&self) -> super::vals::Btoerren {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::Btoerren::from_bits(val as u8)
     }
-    #[doc = "BTOERR (Bus Timeout Error) Interrupt Enable"]
+    #[doc = "BTOERR (Bus Timeout Error) Interrupt Enable."]
     #[inline(always)]
     pub const fn set_btoerren(&mut self, val: super::vals::Btoerren) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u8) & 0x01) << 4usize);
     }
-    #[doc = "DMAERR Interrupt Enable"]
+    #[doc = "DMAERR Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dmaerren(&self) -> super::vals::Dmaerren {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::Dmaerren::from_bits(val as u8)
     }
-    #[doc = "DMAERR Interrupt Enable"]
+    #[doc = "DMAERR Interrupt Enable."]
     #[inline(always)]
     pub const fn set_dmaerren(&mut self, val: super::vals::Dmaerren) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u8) & 0x01) << 5usize);
     }
-    #[doc = "OWNERR Interrupt Enable"]
+    #[doc = "OWNERR Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ownerren(&self) -> super::vals::Ownerren {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::Ownerren::from_bits(val as u8)
     }
-    #[doc = "OWNERR Interrupt Enable"]
+    #[doc = "OWNERR Interrupt Enable."]
     #[inline(always)]
     pub const fn set_ownerren(&mut self, val: super::vals::Ownerren) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u8) & 0x01) << 6usize);
     }
-    #[doc = "BTSERR (Bit Stuff Error) Interrupt Enable"]
+    #[doc = "BTSERR (Bit Stuff Error) Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn btserren(&self) -> super::vals::Btserren {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Btserren::from_bits(val as u8)
     }
-    #[doc = "BTSERR (Bit Stuff Error) Interrupt Enable"]
+    #[doc = "BTSERR (Bit Stuff Error) Interrupt Enable."]
     #[inline(always)]
     pub const fn set_btserren(&mut self, val: super::vals::Btserren) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u8) & 0x01) << 7usize);
@@ -875,103 +875,103 @@ impl defmt::Format for Erren {
         )
     }
 }
-#[doc = "Error Interrupt Status"]
+#[doc = "Error Interrupt Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Errstat(pub u8);
 impl Errstat {
-    #[doc = "PID Error Flag"]
+    #[doc = "PID Error Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn piderr(&self) -> super::vals::Piderr {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Piderr::from_bits(val as u8)
     }
-    #[doc = "PID Error Flag"]
+    #[doc = "PID Error Flag."]
     #[inline(always)]
     pub const fn set_piderr(&mut self, val: super::vals::Piderr) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u8) & 0x01) << 0usize);
     }
-    #[doc = "CRC5 Error or End of Frame Error Flag"]
+    #[doc = "CRC5 Error or End of Frame Error Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn crc5eof(&self) -> super::vals::Crc5eof {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Crc5eof::from_bits(val as u8)
     }
-    #[doc = "CRC5 Error or End of Frame Error Flag"]
+    #[doc = "CRC5 Error or End of Frame Error Flag."]
     #[inline(always)]
     pub const fn set_crc5eof(&mut self, val: super::vals::Crc5eof) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u8) & 0x01) << 1usize);
     }
-    #[doc = "CRC16 Error Flag"]
+    #[doc = "CRC16 Error Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn crc16(&self) -> super::vals::Crc16 {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Crc16::from_bits(val as u8)
     }
-    #[doc = "CRC16 Error Flag"]
+    #[doc = "CRC16 Error Flag."]
     #[inline(always)]
     pub const fn set_crc16(&mut self, val: super::vals::Crc16) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u8) & 0x01) << 2usize);
     }
-    #[doc = "Data Field Not 8 Bits Flag"]
+    #[doc = "Data Field Not 8 Bits Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn dfn8(&self) -> super::vals::Dfn8 {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Dfn8::from_bits(val as u8)
     }
-    #[doc = "Data Field Not 8 Bits Flag"]
+    #[doc = "Data Field Not 8 Bits Flag."]
     #[inline(always)]
     pub const fn set_dfn8(&mut self, val: super::vals::Dfn8) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u8) & 0x01) << 3usize);
     }
-    #[doc = "Bus Turnaround Timeout Error Flag"]
+    #[doc = "Bus Turnaround Timeout Error Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn btoerr(&self) -> super::vals::Btoerr {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::Btoerr::from_bits(val as u8)
     }
-    #[doc = "Bus Turnaround Timeout Error Flag"]
+    #[doc = "Bus Turnaround Timeout Error Flag."]
     #[inline(always)]
     pub const fn set_btoerr(&mut self, val: super::vals::Btoerr) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u8) & 0x01) << 4usize);
     }
-    #[doc = "DMA Access Error Flag"]
+    #[doc = "DMA Access Error Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn dmaerr(&self) -> super::vals::Dmaerr {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::Dmaerr::from_bits(val as u8)
     }
-    #[doc = "DMA Access Error Flag"]
+    #[doc = "DMA Access Error Flag."]
     #[inline(always)]
     pub const fn set_dmaerr(&mut self, val: super::vals::Dmaerr) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u8) & 0x01) << 5usize);
     }
-    #[doc = "BD Unavailable Error Flag"]
+    #[doc = "BD Unavailable Error Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn ownerr(&self) -> super::vals::Ownerr {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::Ownerr::from_bits(val as u8)
     }
-    #[doc = "BD Unavailable Error Flag"]
+    #[doc = "BD Unavailable Error Flag."]
     #[inline(always)]
     pub const fn set_ownerr(&mut self, val: super::vals::Ownerr) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u8) & 0x01) << 6usize);
     }
-    #[doc = "Bit Stuff Error Flag"]
+    #[doc = "Bit Stuff Error Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn btserr(&self) -> super::vals::Btserr {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Btserr::from_bits(val as u8)
     }
-    #[doc = "Bit Stuff Error Flag"]
+    #[doc = "Bit Stuff Error Flag."]
     #[inline(always)]
     pub const fn set_btserr(&mut self, val: super::vals::Btserr) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u8) & 0x01) << 7usize);
@@ -1014,19 +1014,19 @@ impl defmt::Format for Errstat {
         )
     }
 }
-#[doc = "Frame Number Register High"]
+#[doc = "Frame Number Register High."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Frmnumh(pub u8);
 impl Frmnumh {
-    #[doc = "Frame Number, Bits 8-10"]
+    #[doc = "Frame Number, Bits 8-10."]
     #[must_use]
     #[inline(always)]
     pub const fn frm(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x07;
         val as u8
     }
-    #[doc = "Frame Number, Bits 8-10"]
+    #[doc = "Frame Number, Bits 8-10."]
     #[inline(always)]
     pub const fn set_frm(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val as u8) & 0x07) << 0usize);
@@ -1049,19 +1049,19 @@ impl defmt::Format for Frmnumh {
         defmt::write!(f, "Frmnumh {{ frm: {=u8:?} }}", self.frm())
     }
 }
-#[doc = "Frame Number Register Low"]
+#[doc = "Frame Number Register Low."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Frmnuml(pub u8);
 impl Frmnuml {
-    #[doc = "Frame Number, Bits 0-7"]
+    #[doc = "Frame Number, Bits 0-7."]
     #[must_use]
     #[inline(always)]
     pub const fn frm(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Frame Number, Bits 0-7"]
+    #[doc = "Frame Number, Bits 0-7."]
     #[inline(always)]
     pub const fn set_frm(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u8) & 0xff) << 0usize);
@@ -1084,19 +1084,19 @@ impl defmt::Format for Frmnuml {
         defmt::write!(f, "Frmnuml {{ frm: {=u8:?} }}", self.frm())
     }
 }
-#[doc = "Peripheral ID Complement"]
+#[doc = "Peripheral ID Complement."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Idcomp(pub u8);
 impl Idcomp {
-    #[doc = "Negative Peripheral ID"]
+    #[doc = "Negative Peripheral ID."]
     #[must_use]
     #[inline(always)]
     pub const fn nid(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x3f;
         val as u8
     }
-    #[doc = "Negative Peripheral ID"]
+    #[doc = "Negative Peripheral ID."]
     #[inline(always)]
     pub const fn set_nid(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val as u8) & 0x3f) << 0usize);
@@ -1119,103 +1119,103 @@ impl defmt::Format for Idcomp {
         defmt::write!(f, "Idcomp {{ nid: {=u8:?} }}", self.nid())
     }
 }
-#[doc = "Interrupt Enable"]
+#[doc = "Interrupt Enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Inten(pub u8);
 impl Inten {
-    #[doc = "USBRST Interrupt Enable"]
+    #[doc = "USBRST Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn usbrsten(&self) -> super::vals::Usbrsten {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Usbrsten::from_bits(val as u8)
     }
-    #[doc = "USBRST Interrupt Enable"]
+    #[doc = "USBRST Interrupt Enable."]
     #[inline(always)]
     pub const fn set_usbrsten(&mut self, val: super::vals::Usbrsten) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u8) & 0x01) << 0usize);
     }
-    #[doc = "ERROR Interrupt Enable"]
+    #[doc = "ERROR Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn erroren(&self) -> super::vals::Erroren {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Erroren::from_bits(val as u8)
     }
-    #[doc = "ERROR Interrupt Enable"]
+    #[doc = "ERROR Interrupt Enable."]
     #[inline(always)]
     pub const fn set_erroren(&mut self, val: super::vals::Erroren) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u8) & 0x01) << 1usize);
     }
-    #[doc = "SOFTOK Interrupt Enable"]
+    #[doc = "SOFTOK Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn softoken(&self) -> super::vals::Softoken {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Softoken::from_bits(val as u8)
     }
-    #[doc = "SOFTOK Interrupt Enable"]
+    #[doc = "SOFTOK Interrupt Enable."]
     #[inline(always)]
     pub const fn set_softoken(&mut self, val: super::vals::Softoken) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u8) & 0x01) << 2usize);
     }
-    #[doc = "TOKDNE Interrupt Enable"]
+    #[doc = "TOKDNE Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn tokdneen(&self) -> super::vals::Tokdneen {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Tokdneen::from_bits(val as u8)
     }
-    #[doc = "TOKDNE Interrupt Enable"]
+    #[doc = "TOKDNE Interrupt Enable."]
     #[inline(always)]
     pub const fn set_tokdneen(&mut self, val: super::vals::Tokdneen) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u8) & 0x01) << 3usize);
     }
-    #[doc = "SLEEP Interrupt Enable"]
+    #[doc = "SLEEP Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn sleepen(&self) -> super::vals::Sleepen {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::Sleepen::from_bits(val as u8)
     }
-    #[doc = "SLEEP Interrupt Enable"]
+    #[doc = "SLEEP Interrupt Enable."]
     #[inline(always)]
     pub const fn set_sleepen(&mut self, val: super::vals::Sleepen) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u8) & 0x01) << 4usize);
     }
-    #[doc = "RESUME Interrupt Enable"]
+    #[doc = "RESUME Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn resumeen(&self) -> super::vals::Resumeen {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::Resumeen::from_bits(val as u8)
     }
-    #[doc = "RESUME Interrupt Enable"]
+    #[doc = "RESUME Interrupt Enable."]
     #[inline(always)]
     pub const fn set_resumeen(&mut self, val: super::vals::Resumeen) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u8) & 0x01) << 5usize);
     }
-    #[doc = "ATTACH Interrupt Enable"]
+    #[doc = "ATTACH Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn attachen(&self) -> super::vals::Attachen {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::Attachen::from_bits(val as u8)
     }
-    #[doc = "ATTACH Interrupt Enable"]
+    #[doc = "ATTACH Interrupt Enable."]
     #[inline(always)]
     pub const fn set_attachen(&mut self, val: super::vals::Attachen) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u8) & 0x01) << 6usize);
     }
-    #[doc = "STALL Interrupt Enable"]
+    #[doc = "STALL Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn stallen(&self) -> super::vals::Stallen {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Stallen::from_bits(val as u8)
     }
-    #[doc = "STALL Interrupt Enable"]
+    #[doc = "STALL Interrupt Enable."]
     #[inline(always)]
     pub const fn set_stallen(&mut self, val: super::vals::Stallen) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u8) & 0x01) << 7usize);
@@ -1258,103 +1258,103 @@ impl defmt::Format for Inten {
         )
     }
 }
-#[doc = "Interrupt Status"]
+#[doc = "Interrupt Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Istat(pub u8);
 impl Istat {
-    #[doc = "USB Reset Flag"]
+    #[doc = "USB Reset Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn usbrst(&self) -> super::vals::Usbrst {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Usbrst::from_bits(val as u8)
     }
-    #[doc = "USB Reset Flag"]
+    #[doc = "USB Reset Flag."]
     #[inline(always)]
     pub const fn set_usbrst(&mut self, val: super::vals::Usbrst) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u8) & 0x01) << 0usize);
     }
-    #[doc = "Error Flag"]
+    #[doc = "Error Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn error(&self) -> super::vals::Error {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Error::from_bits(val as u8)
     }
-    #[doc = "Error Flag"]
+    #[doc = "Error Flag."]
     #[inline(always)]
     pub const fn set_error(&mut self, val: super::vals::Error) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u8) & 0x01) << 1usize);
     }
-    #[doc = "Start Of Frame (SOF) Token Flag"]
+    #[doc = "Start Of Frame (SOF) Token Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn softok(&self) -> super::vals::Softok {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Softok::from_bits(val as u8)
     }
-    #[doc = "Start Of Frame (SOF) Token Flag"]
+    #[doc = "Start Of Frame (SOF) Token Flag."]
     #[inline(always)]
     pub const fn set_softok(&mut self, val: super::vals::Softok) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u8) & 0x01) << 2usize);
     }
-    #[doc = "Current Token Processing Flag"]
+    #[doc = "Current Token Processing Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn tokdne(&self) -> super::vals::Tokdne {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Tokdne::from_bits(val as u8)
     }
-    #[doc = "Current Token Processing Flag"]
+    #[doc = "Current Token Processing Flag."]
     #[inline(always)]
     pub const fn set_tokdne(&mut self, val: super::vals::Tokdne) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u8) & 0x01) << 3usize);
     }
-    #[doc = "Sleep Flag"]
+    #[doc = "Sleep Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn sleep(&self) -> super::vals::Sleep {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::Sleep::from_bits(val as u8)
     }
-    #[doc = "Sleep Flag"]
+    #[doc = "Sleep Flag."]
     #[inline(always)]
     pub const fn set_sleep(&mut self, val: super::vals::Sleep) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u8) & 0x01) << 4usize);
     }
-    #[doc = "Resume Flag"]
+    #[doc = "Resume Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn resume(&self) -> super::vals::Resume {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::Resume::from_bits(val as u8)
     }
-    #[doc = "Resume Flag"]
+    #[doc = "Resume Flag."]
     #[inline(always)]
     pub const fn set_resume(&mut self, val: super::vals::Resume) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u8) & 0x01) << 5usize);
     }
-    #[doc = "Attach Interrupt Flag"]
+    #[doc = "Attach Interrupt Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn attach(&self) -> super::vals::Attach {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::Attach::from_bits(val as u8)
     }
-    #[doc = "Attach Interrupt Flag"]
+    #[doc = "Attach Interrupt Flag."]
     #[inline(always)]
     pub const fn set_attach(&mut self, val: super::vals::Attach) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u8) & 0x01) << 6usize);
     }
-    #[doc = "Stall Interrupt Flag"]
+    #[doc = "Stall Interrupt Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn stall(&self) -> super::vals::Stall {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Stall::from_bits(val as u8)
     }
-    #[doc = "Stall Interrupt Flag"]
+    #[doc = "Stall Interrupt Flag."]
     #[inline(always)]
     pub const fn set_stall(&mut self, val: super::vals::Stall) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u8) & 0x01) << 7usize);
@@ -1397,79 +1397,79 @@ impl defmt::Format for Istat {
         )
     }
 }
-#[doc = "Miscellaneous Control"]
+#[doc = "Miscellaneous Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Miscctrl(pub u8);
 impl Miscctrl {
-    #[doc = "Dynamic SOF Threshold Compare mode"]
+    #[doc = "Dynamic SOF Threshold Compare mode."]
     #[must_use]
     #[inline(always)]
     pub const fn sofdynthld(&self) -> super::vals::Sofdynthld {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Sofdynthld::from_bits(val as u8)
     }
-    #[doc = "Dynamic SOF Threshold Compare mode"]
+    #[doc = "Dynamic SOF Threshold Compare mode."]
     #[inline(always)]
     pub const fn set_sofdynthld(&mut self, val: super::vals::Sofdynthld) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u8) & 0x01) << 0usize);
     }
-    #[doc = "SOF_TOK Interrupt Generation Mode Select"]
+    #[doc = "SOF_TOK Interrupt Generation Mode Select."]
     #[must_use]
     #[inline(always)]
     pub const fn sofbusset(&self) -> super::vals::Sofbusset {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Sofbusset::from_bits(val as u8)
     }
-    #[doc = "SOF_TOK Interrupt Generation Mode Select"]
+    #[doc = "SOF_TOK Interrupt Generation Mode Select."]
     #[inline(always)]
     pub const fn set_sofbusset(&mut self, val: super::vals::Sofbusset) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u8) & 0x01) << 1usize);
     }
-    #[doc = "OWN Error Detect for ISO IN and ISO OUT Disable"]
+    #[doc = "OWN Error Detect for ISO IN and ISO OUT Disable."]
     #[must_use]
     #[inline(always)]
     pub const fn ownerrisodis(&self) -> super::vals::Ownerrisodis {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Ownerrisodis::from_bits(val as u8)
     }
-    #[doc = "OWN Error Detect for ISO IN and ISO OUT Disable"]
+    #[doc = "OWN Error Detect for ISO IN and ISO OUT Disable."]
     #[inline(always)]
     pub const fn set_ownerrisodis(&mut self, val: super::vals::Ownerrisodis) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u8) & 0x01) << 2usize);
     }
-    #[doc = "VREGIN Rising Edge Interrupt Enable"]
+    #[doc = "VREGIN Rising Edge Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn vredg_en(&self) -> super::vals::VredgEn {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::VredgEn::from_bits(val as u8)
     }
-    #[doc = "VREGIN Rising Edge Interrupt Enable"]
+    #[doc = "VREGIN Rising Edge Interrupt Enable."]
     #[inline(always)]
     pub const fn set_vredg_en(&mut self, val: super::vals::VredgEn) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u8) & 0x01) << 3usize);
     }
-    #[doc = "VREGIN Falling Edge Interrupt Enable"]
+    #[doc = "VREGIN Falling Edge Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn vfedg_en(&self) -> super::vals::VfedgEn {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::VfedgEn::from_bits(val as u8)
     }
-    #[doc = "VREGIN Falling Edge Interrupt Enable"]
+    #[doc = "VREGIN Falling Edge Interrupt Enable."]
     #[inline(always)]
     pub const fn set_vfedg_en(&mut self, val: super::vals::VfedgEn) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u8) & 0x01) << 4usize);
     }
-    #[doc = "USB Peripheral Mode Stall Adjust Enable"]
+    #[doc = "USB Peripheral Mode Stall Adjust Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn stl_adj_en(&self) -> super::vals::StlAdjEn {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::StlAdjEn::from_bits(val as u8)
     }
-    #[doc = "USB Peripheral Mode Stall Adjust Enable"]
+    #[doc = "USB Peripheral Mode Stall Adjust Enable."]
     #[inline(always)]
     pub const fn set_stl_adj_en(&mut self, val: super::vals::StlAdjEn) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u8) & 0x01) << 7usize);
@@ -1508,43 +1508,43 @@ impl defmt::Format for Miscctrl {
         )
     }
 }
-#[doc = "USB OTG Observe"]
+#[doc = "USB OTG Observe."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Observe(pub u8);
 impl Observe {
-    #[doc = "D- Pulldown"]
+    #[doc = "D- Pulldown."]
     #[must_use]
     #[inline(always)]
     pub const fn dmpd(&self) -> super::vals::Dmpd {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::Dmpd::from_bits(val as u8)
     }
-    #[doc = "D- Pulldown"]
+    #[doc = "D- Pulldown."]
     #[inline(always)]
     pub const fn set_dmpd(&mut self, val: super::vals::Dmpd) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u8) & 0x01) << 4usize);
     }
-    #[doc = "D+ Pulldown"]
+    #[doc = "D+ Pulldown."]
     #[must_use]
     #[inline(always)]
     pub const fn dppd(&self) -> super::vals::Dppd {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::Dppd::from_bits(val as u8)
     }
-    #[doc = "D+ Pulldown"]
+    #[doc = "D+ Pulldown."]
     #[inline(always)]
     pub const fn set_dppd(&mut self, val: super::vals::Dppd) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u8) & 0x01) << 6usize);
     }
-    #[doc = "D+ Pullup"]
+    #[doc = "D+ Pullup."]
     #[must_use]
     #[inline(always)]
     pub const fn dppu(&self) -> super::vals::Dppu {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Dppu::from_bits(val as u8)
     }
-    #[doc = "D+ Pullup"]
+    #[doc = "D+ Pullup."]
     #[inline(always)]
     pub const fn set_dppu(&mut self, val: super::vals::Dppu) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u8) & 0x01) << 7usize);
@@ -1577,55 +1577,55 @@ impl defmt::Format for Observe {
         )
     }
 }
-#[doc = "OTG Control"]
+#[doc = "OTG Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Otgctl(pub u8);
 impl Otgctl {
-    #[doc = "On-The-Go Pullup and Pulldown Resistor Enable"]
+    #[doc = "On-The-Go Pullup and Pulldown Resistor Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn otgen(&self) -> super::vals::Otgen {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Otgen::from_bits(val as u8)
     }
-    #[doc = "On-The-Go Pullup and Pulldown Resistor Enable"]
+    #[doc = "On-The-Go Pullup and Pulldown Resistor Enable."]
     #[inline(always)]
     pub const fn set_otgen(&mut self, val: super::vals::Otgen) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u8) & 0x01) << 2usize);
     }
-    #[doc = "D- Data Line Pulldown Resistor Enable"]
+    #[doc = "D- Data Line Pulldown Resistor Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dmlow(&self) -> super::vals::Dmlow {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::Dmlow::from_bits(val as u8)
     }
-    #[doc = "D- Data Line Pulldown Resistor Enable"]
+    #[doc = "D- Data Line Pulldown Resistor Enable."]
     #[inline(always)]
     pub const fn set_dmlow(&mut self, val: super::vals::Dmlow) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u8) & 0x01) << 4usize);
     }
-    #[doc = "D+ Data Line pulldown Resistor Enable"]
+    #[doc = "D+ Data Line pulldown Resistor Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dplow(&self) -> super::vals::Dplow {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::Dplow::from_bits(val as u8)
     }
-    #[doc = "D+ Data Line pulldown Resistor Enable"]
+    #[doc = "D+ Data Line pulldown Resistor Enable."]
     #[inline(always)]
     pub const fn set_dplow(&mut self, val: super::vals::Dplow) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u8) & 0x01) << 5usize);
     }
-    #[doc = "D+ Data Line Pullup Resistor Enable"]
+    #[doc = "D+ Data Line Pullup Resistor Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dphigh(&self) -> super::vals::Dphigh {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Dphigh::from_bits(val as u8)
     }
-    #[doc = "D+ Data Line Pullup Resistor Enable"]
+    #[doc = "D+ Data Line Pullup Resistor Enable."]
     #[inline(always)]
     pub const fn set_dphigh(&mut self, val: super::vals::Dphigh) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u8) & 0x01) << 7usize);
@@ -1660,31 +1660,31 @@ impl defmt::Format for Otgctl {
         )
     }
 }
-#[doc = "OTG Interrupt Control"]
+#[doc = "OTG Interrupt Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Otgicr(pub u8);
 impl Otgicr {
-    #[doc = "Line State Change Interrupt Enable"]
+    #[doc = "Line State Change Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn linestateen(&self) -> super::vals::Linestateen {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::Linestateen::from_bits(val as u8)
     }
-    #[doc = "Line State Change Interrupt Enable"]
+    #[doc = "Line State Change Interrupt Enable."]
     #[inline(always)]
     pub const fn set_linestateen(&mut self, val: super::vals::Linestateen) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u8) & 0x01) << 5usize);
     }
-    #[doc = "1-Millisecond Interrupt Enable"]
+    #[doc = "1-Millisecond Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn onemsecen(&self) -> super::vals::Onemsecen {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::Onemsecen::from_bits(val as u8)
     }
-    #[doc = "1-Millisecond Interrupt Enable"]
+    #[doc = "1-Millisecond Interrupt Enable."]
     #[inline(always)]
     pub const fn set_onemsecen(&mut self, val: super::vals::Onemsecen) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u8) & 0x01) << 6usize);
@@ -1715,31 +1715,31 @@ impl defmt::Format for Otgicr {
         )
     }
 }
-#[doc = "OTG Interrupt Status"]
+#[doc = "OTG Interrupt Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Otgistat(pub u8);
 impl Otgistat {
-    #[doc = "Line State Change Interrupt Flag"]
+    #[doc = "Line State Change Interrupt Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn line_state_chg(&self) -> super::vals::LineStateChg {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::LineStateChg::from_bits(val as u8)
     }
-    #[doc = "Line State Change Interrupt Flag"]
+    #[doc = "Line State Change Interrupt Flag."]
     #[inline(always)]
     pub const fn set_line_state_chg(&mut self, val: super::vals::LineStateChg) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u8) & 0x01) << 5usize);
     }
-    #[doc = "One Millisecond Timer Timeout Flag"]
+    #[doc = "One Millisecond Timer Timeout Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn onemsec(&self) -> super::vals::Onemsec {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::Onemsec::from_bits(val as u8)
     }
-    #[doc = "One Millisecond Timer Timeout Flag"]
+    #[doc = "One Millisecond Timer Timeout Flag."]
     #[inline(always)]
     pub const fn set_onemsec(&mut self, val: super::vals::Onemsec) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u8) & 0x01) << 6usize);
@@ -1770,31 +1770,31 @@ impl defmt::Format for Otgistat {
         )
     }
 }
-#[doc = "OTG Status"]
+#[doc = "OTG Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Otgstat(pub u8);
 impl Otgstat {
-    #[doc = "Line State Stable"]
+    #[doc = "Line State Stable."]
     #[must_use]
     #[inline(always)]
     pub const fn linestatestable(&self) -> super::vals::Linestatestable {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::Linestatestable::from_bits(val as u8)
     }
-    #[doc = "Line State Stable"]
+    #[doc = "Line State Stable."]
     #[inline(always)]
     pub const fn set_linestatestable(&mut self, val: super::vals::Linestatestable) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u8) & 0x01) << 5usize);
     }
-    #[doc = "Reserved for 1 ms count"]
+    #[doc = "Reserved for 1 ms count."]
     #[must_use]
     #[inline(always)]
     pub const fn onemsec(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "Reserved for 1 ms count"]
+    #[doc = "Reserved for 1 ms count."]
     #[inline(always)]
     pub const fn set_onemsec(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u8) & 0x01) << 6usize);
@@ -1825,19 +1825,19 @@ impl defmt::Format for Otgstat {
         )
     }
 }
-#[doc = "Peripheral ID"]
+#[doc = "Peripheral ID."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Perid(pub u8);
 impl Perid {
-    #[doc = "Peripheral Identification"]
+    #[doc = "Peripheral Identification."]
     #[must_use]
     #[inline(always)]
     pub const fn id(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x3f;
         val as u8
     }
-    #[doc = "Peripheral Identification"]
+    #[doc = "Peripheral Identification."]
     #[inline(always)]
     pub const fn set_id(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val as u8) & 0x3f) << 0usize);
@@ -1860,19 +1860,19 @@ impl defmt::Format for Perid {
         defmt::write!(f, "Perid {{ id: {=u8:?} }}", self.id())
     }
 }
-#[doc = "Peripheral Revision"]
+#[doc = "Peripheral Revision."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Rev(pub u8);
 impl Rev {
-    #[doc = "Revision"]
+    #[doc = "Revision."]
     #[must_use]
     #[inline(always)]
     pub const fn rev(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Revision"]
+    #[doc = "Revision."]
     #[inline(always)]
     pub const fn set_rev(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u8) & 0xff) << 0usize);
@@ -1895,19 +1895,19 @@ impl defmt::Format for Rev {
         defmt::write!(f, "Rev {{ rev: {=u8:?} }}", self.rev())
     }
 }
-#[doc = "SOF Threshold"]
+#[doc = "SOF Threshold."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Softhld(pub u8);
 impl Softhld {
-    #[doc = "SOF Count Threshold"]
+    #[doc = "SOF Count Threshold."]
     #[must_use]
     #[inline(always)]
     pub const fn cnt(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "SOF Count Threshold"]
+    #[doc = "SOF Count Threshold."]
     #[inline(always)]
     pub const fn set_cnt(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u8) & 0xff) << 0usize);
@@ -1930,103 +1930,103 @@ impl defmt::Format for Softhld {
         defmt::write!(f, "Softhld {{ cnt: {=u8:?} }}", self.cnt())
     }
 }
-#[doc = "Peripheral Mode Stall Disable for Endpoints 15 to 8 in IN Direction"]
+#[doc = "Peripheral Mode Stall Disable for Endpoints 15 to 8 in IN Direction."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct StallIhDis(pub u8);
 impl StallIhDis {
-    #[doc = "Disable Endpoint 8 IN Direction"]
+    #[doc = "Disable Endpoint 8 IN Direction."]
     #[must_use]
     #[inline(always)]
     pub const fn stall_i_dis8(&self) -> super::vals::StallIDis8 {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::StallIDis8::from_bits(val as u8)
     }
-    #[doc = "Disable Endpoint 8 IN Direction"]
+    #[doc = "Disable Endpoint 8 IN Direction."]
     #[inline(always)]
     pub const fn set_stall_i_dis8(&mut self, val: super::vals::StallIDis8) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u8) & 0x01) << 0usize);
     }
-    #[doc = "Disable Endpoint 9 IN Direction"]
+    #[doc = "Disable Endpoint 9 IN Direction."]
     #[must_use]
     #[inline(always)]
     pub const fn stall_i_dis9(&self) -> super::vals::StallIDis9 {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::StallIDis9::from_bits(val as u8)
     }
-    #[doc = "Disable Endpoint 9 IN Direction"]
+    #[doc = "Disable Endpoint 9 IN Direction."]
     #[inline(always)]
     pub const fn set_stall_i_dis9(&mut self, val: super::vals::StallIDis9) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u8) & 0x01) << 1usize);
     }
-    #[doc = "Disable Endpoint 10 IN Direction"]
+    #[doc = "Disable Endpoint 10 IN Direction."]
     #[must_use]
     #[inline(always)]
     pub const fn stall_i_dis10(&self) -> super::vals::StallIDis10 {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::StallIDis10::from_bits(val as u8)
     }
-    #[doc = "Disable Endpoint 10 IN Direction"]
+    #[doc = "Disable Endpoint 10 IN Direction."]
     #[inline(always)]
     pub const fn set_stall_i_dis10(&mut self, val: super::vals::StallIDis10) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u8) & 0x01) << 2usize);
     }
-    #[doc = "Disable Endpoint 11 IN Direction"]
+    #[doc = "Disable Endpoint 11 IN Direction."]
     #[must_use]
     #[inline(always)]
     pub const fn stall_i_dis11(&self) -> super::vals::StallIDis11 {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::StallIDis11::from_bits(val as u8)
     }
-    #[doc = "Disable Endpoint 11 IN Direction"]
+    #[doc = "Disable Endpoint 11 IN Direction."]
     #[inline(always)]
     pub const fn set_stall_i_dis11(&mut self, val: super::vals::StallIDis11) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u8) & 0x01) << 3usize);
     }
-    #[doc = "Disable Endpoint 12 IN Direction"]
+    #[doc = "Disable Endpoint 12 IN Direction."]
     #[must_use]
     #[inline(always)]
     pub const fn stall_i_dis12(&self) -> super::vals::StallIDis12 {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::StallIDis12::from_bits(val as u8)
     }
-    #[doc = "Disable Endpoint 12 IN Direction"]
+    #[doc = "Disable Endpoint 12 IN Direction."]
     #[inline(always)]
     pub const fn set_stall_i_dis12(&mut self, val: super::vals::StallIDis12) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u8) & 0x01) << 4usize);
     }
-    #[doc = "Disable Endpoint 13 IN Direction"]
+    #[doc = "Disable Endpoint 13 IN Direction."]
     #[must_use]
     #[inline(always)]
     pub const fn stall_i_dis13(&self) -> super::vals::StallIDis13 {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::StallIDis13::from_bits(val as u8)
     }
-    #[doc = "Disable Endpoint 13 IN Direction"]
+    #[doc = "Disable Endpoint 13 IN Direction."]
     #[inline(always)]
     pub const fn set_stall_i_dis13(&mut self, val: super::vals::StallIDis13) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u8) & 0x01) << 5usize);
     }
-    #[doc = "Disable Endpoint 14 IN Direction"]
+    #[doc = "Disable Endpoint 14 IN Direction."]
     #[must_use]
     #[inline(always)]
     pub const fn stall_i_dis14(&self) -> super::vals::StallIDis14 {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::StallIDis14::from_bits(val as u8)
     }
-    #[doc = "Disable Endpoint 14 IN Direction"]
+    #[doc = "Disable Endpoint 14 IN Direction."]
     #[inline(always)]
     pub const fn set_stall_i_dis14(&mut self, val: super::vals::StallIDis14) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u8) & 0x01) << 6usize);
     }
-    #[doc = "Disable Endpoint 15 IN Direction"]
+    #[doc = "Disable Endpoint 15 IN Direction."]
     #[must_use]
     #[inline(always)]
     pub const fn stall_i_dis15(&self) -> super::vals::StallIDis15 {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::StallIDis15::from_bits(val as u8)
     }
-    #[doc = "Disable Endpoint 15 IN Direction"]
+    #[doc = "Disable Endpoint 15 IN Direction."]
     #[inline(always)]
     pub const fn set_stall_i_dis15(&mut self, val: super::vals::StallIDis15) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u8) & 0x01) << 7usize);
@@ -2069,103 +2069,103 @@ impl defmt::Format for StallIhDis {
         )
     }
 }
-#[doc = "Peripheral Mode Stall Disable for Endpoints 7 to 0 in IN Direction"]
+#[doc = "Peripheral Mode Stall Disable for Endpoints 7 to 0 in IN Direction."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct StallIlDis(pub u8);
 impl StallIlDis {
-    #[doc = "Disable Endpoint 0 IN Direction"]
+    #[doc = "Disable Endpoint 0 IN Direction."]
     #[must_use]
     #[inline(always)]
     pub const fn stall_i_dis0(&self) -> super::vals::StallIDis0 {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::StallIDis0::from_bits(val as u8)
     }
-    #[doc = "Disable Endpoint 0 IN Direction"]
+    #[doc = "Disable Endpoint 0 IN Direction."]
     #[inline(always)]
     pub const fn set_stall_i_dis0(&mut self, val: super::vals::StallIDis0) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u8) & 0x01) << 0usize);
     }
-    #[doc = "Disable Endpoint 1 IN Direction"]
+    #[doc = "Disable Endpoint 1 IN Direction."]
     #[must_use]
     #[inline(always)]
     pub const fn stall_i_dis1(&self) -> super::vals::StallIDis1 {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::StallIDis1::from_bits(val as u8)
     }
-    #[doc = "Disable Endpoint 1 IN Direction"]
+    #[doc = "Disable Endpoint 1 IN Direction."]
     #[inline(always)]
     pub const fn set_stall_i_dis1(&mut self, val: super::vals::StallIDis1) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u8) & 0x01) << 1usize);
     }
-    #[doc = "Disable Endpoint 2 IN Direction"]
+    #[doc = "Disable Endpoint 2 IN Direction."]
     #[must_use]
     #[inline(always)]
     pub const fn stall_i_dis2(&self) -> super::vals::StallIDis2 {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::StallIDis2::from_bits(val as u8)
     }
-    #[doc = "Disable Endpoint 2 IN Direction"]
+    #[doc = "Disable Endpoint 2 IN Direction."]
     #[inline(always)]
     pub const fn set_stall_i_dis2(&mut self, val: super::vals::StallIDis2) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u8) & 0x01) << 2usize);
     }
-    #[doc = "Disable Endpoint 3 IN Direction"]
+    #[doc = "Disable Endpoint 3 IN Direction."]
     #[must_use]
     #[inline(always)]
     pub const fn stall_i_dis3(&self) -> super::vals::StallIDis3 {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::StallIDis3::from_bits(val as u8)
     }
-    #[doc = "Disable Endpoint 3 IN Direction"]
+    #[doc = "Disable Endpoint 3 IN Direction."]
     #[inline(always)]
     pub const fn set_stall_i_dis3(&mut self, val: super::vals::StallIDis3) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u8) & 0x01) << 3usize);
     }
-    #[doc = "Disable Endpoint 4 IN Direction"]
+    #[doc = "Disable Endpoint 4 IN Direction."]
     #[must_use]
     #[inline(always)]
     pub const fn stall_i_dis4(&self) -> super::vals::StallIDis4 {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::StallIDis4::from_bits(val as u8)
     }
-    #[doc = "Disable Endpoint 4 IN Direction"]
+    #[doc = "Disable Endpoint 4 IN Direction."]
     #[inline(always)]
     pub const fn set_stall_i_dis4(&mut self, val: super::vals::StallIDis4) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u8) & 0x01) << 4usize);
     }
-    #[doc = "Disable Endpoint 5 IN Direction"]
+    #[doc = "Disable Endpoint 5 IN Direction."]
     #[must_use]
     #[inline(always)]
     pub const fn stall_i_dis5(&self) -> super::vals::StallIDis5 {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::StallIDis5::from_bits(val as u8)
     }
-    #[doc = "Disable Endpoint 5 IN Direction"]
+    #[doc = "Disable Endpoint 5 IN Direction."]
     #[inline(always)]
     pub const fn set_stall_i_dis5(&mut self, val: super::vals::StallIDis5) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u8) & 0x01) << 5usize);
     }
-    #[doc = "Disable Endpoint 6 IN Direction"]
+    #[doc = "Disable Endpoint 6 IN Direction."]
     #[must_use]
     #[inline(always)]
     pub const fn stall_i_dis6(&self) -> super::vals::StallIDis6 {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::StallIDis6::from_bits(val as u8)
     }
-    #[doc = "Disable Endpoint 6 IN Direction"]
+    #[doc = "Disable Endpoint 6 IN Direction."]
     #[inline(always)]
     pub const fn set_stall_i_dis6(&mut self, val: super::vals::StallIDis6) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u8) & 0x01) << 6usize);
     }
-    #[doc = "Disable Endpoint 7 IN Direction"]
+    #[doc = "Disable Endpoint 7 IN Direction."]
     #[must_use]
     #[inline(always)]
     pub const fn stall_i_dis7(&self) -> super::vals::StallIDis7 {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::StallIDis7::from_bits(val as u8)
     }
-    #[doc = "Disable Endpoint 7 IN Direction"]
+    #[doc = "Disable Endpoint 7 IN Direction."]
     #[inline(always)]
     pub const fn set_stall_i_dis7(&mut self, val: super::vals::StallIDis7) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u8) & 0x01) << 7usize);
@@ -2208,103 +2208,103 @@ impl defmt::Format for StallIlDis {
         )
     }
 }
-#[doc = "Peripheral Mode Stall Disable for Endpoints 15 to 8 in OUT Direction"]
+#[doc = "Peripheral Mode Stall Disable for Endpoints 15 to 8 in OUT Direction."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct StallOhDis(pub u8);
 impl StallOhDis {
-    #[doc = "Disable Endpoint 8 OUT Direction"]
+    #[doc = "Disable Endpoint 8 OUT Direction."]
     #[must_use]
     #[inline(always)]
     pub const fn stall_o_dis8(&self) -> super::vals::StallODis8 {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::StallODis8::from_bits(val as u8)
     }
-    #[doc = "Disable Endpoint 8 OUT Direction"]
+    #[doc = "Disable Endpoint 8 OUT Direction."]
     #[inline(always)]
     pub const fn set_stall_o_dis8(&mut self, val: super::vals::StallODis8) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u8) & 0x01) << 0usize);
     }
-    #[doc = "Disable Endpoint 9 OUT Direction"]
+    #[doc = "Disable Endpoint 9 OUT Direction."]
     #[must_use]
     #[inline(always)]
     pub const fn stall_o_dis9(&self) -> super::vals::StallODis9 {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::StallODis9::from_bits(val as u8)
     }
-    #[doc = "Disable Endpoint 9 OUT Direction"]
+    #[doc = "Disable Endpoint 9 OUT Direction."]
     #[inline(always)]
     pub const fn set_stall_o_dis9(&mut self, val: super::vals::StallODis9) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u8) & 0x01) << 1usize);
     }
-    #[doc = "Disable Endpoint 10 OUT Direction"]
+    #[doc = "Disable Endpoint 10 OUT Direction."]
     #[must_use]
     #[inline(always)]
     pub const fn stall_o_dis10(&self) -> super::vals::StallODis10 {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::StallODis10::from_bits(val as u8)
     }
-    #[doc = "Disable Endpoint 10 OUT Direction"]
+    #[doc = "Disable Endpoint 10 OUT Direction."]
     #[inline(always)]
     pub const fn set_stall_o_dis10(&mut self, val: super::vals::StallODis10) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u8) & 0x01) << 2usize);
     }
-    #[doc = "Disable Endpoint 11 OUT Direction"]
+    #[doc = "Disable Endpoint 11 OUT Direction."]
     #[must_use]
     #[inline(always)]
     pub const fn stall_o_dis11(&self) -> super::vals::StallODis11 {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::StallODis11::from_bits(val as u8)
     }
-    #[doc = "Disable Endpoint 11 OUT Direction"]
+    #[doc = "Disable Endpoint 11 OUT Direction."]
     #[inline(always)]
     pub const fn set_stall_o_dis11(&mut self, val: super::vals::StallODis11) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u8) & 0x01) << 3usize);
     }
-    #[doc = "Disable endpoint 12 OUT direction"]
+    #[doc = "Disable endpoint 12 OUT direction."]
     #[must_use]
     #[inline(always)]
     pub const fn stall_o_dis12(&self) -> super::vals::StallODis12 {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::StallODis12::from_bits(val as u8)
     }
-    #[doc = "Disable endpoint 12 OUT direction"]
+    #[doc = "Disable endpoint 12 OUT direction."]
     #[inline(always)]
     pub const fn set_stall_o_dis12(&mut self, val: super::vals::StallODis12) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u8) & 0x01) << 4usize);
     }
-    #[doc = "Disable Endpoint 13 OUT Direction"]
+    #[doc = "Disable Endpoint 13 OUT Direction."]
     #[must_use]
     #[inline(always)]
     pub const fn stall_o_dis13(&self) -> super::vals::StallODis13 {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::StallODis13::from_bits(val as u8)
     }
-    #[doc = "Disable Endpoint 13 OUT Direction"]
+    #[doc = "Disable Endpoint 13 OUT Direction."]
     #[inline(always)]
     pub const fn set_stall_o_dis13(&mut self, val: super::vals::StallODis13) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u8) & 0x01) << 5usize);
     }
-    #[doc = "Disable Endpoint 14 OUT Direction"]
+    #[doc = "Disable Endpoint 14 OUT Direction."]
     #[must_use]
     #[inline(always)]
     pub const fn stall_o_dis14(&self) -> super::vals::StallODis14 {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::StallODis14::from_bits(val as u8)
     }
-    #[doc = "Disable Endpoint 14 OUT Direction"]
+    #[doc = "Disable Endpoint 14 OUT Direction."]
     #[inline(always)]
     pub const fn set_stall_o_dis14(&mut self, val: super::vals::StallODis14) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u8) & 0x01) << 6usize);
     }
-    #[doc = "Disable Endpoint 15 OUT Direction"]
+    #[doc = "Disable Endpoint 15 OUT Direction."]
     #[must_use]
     #[inline(always)]
     pub const fn stall_o_dis15(&self) -> super::vals::StallODis15 {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::StallODis15::from_bits(val as u8)
     }
-    #[doc = "Disable Endpoint 15 OUT Direction"]
+    #[doc = "Disable Endpoint 15 OUT Direction."]
     #[inline(always)]
     pub const fn set_stall_o_dis15(&mut self, val: super::vals::StallODis15) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u8) & 0x01) << 7usize);
@@ -2347,103 +2347,103 @@ impl defmt::Format for StallOhDis {
         )
     }
 }
-#[doc = "Peripheral Mode Stall Disable for Endpoints 7 to 0 in OUT Direction"]
+#[doc = "Peripheral Mode Stall Disable for Endpoints 7 to 0 in OUT Direction."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct StallOlDis(pub u8);
 impl StallOlDis {
-    #[doc = "Disable Endpoint 0 OUT Direction"]
+    #[doc = "Disable Endpoint 0 OUT Direction."]
     #[must_use]
     #[inline(always)]
     pub const fn stall_o_dis0(&self) -> super::vals::StallODis0 {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::StallODis0::from_bits(val as u8)
     }
-    #[doc = "Disable Endpoint 0 OUT Direction"]
+    #[doc = "Disable Endpoint 0 OUT Direction."]
     #[inline(always)]
     pub const fn set_stall_o_dis0(&mut self, val: super::vals::StallODis0) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u8) & 0x01) << 0usize);
     }
-    #[doc = "Disable Endpoint 1 OUT Direction"]
+    #[doc = "Disable Endpoint 1 OUT Direction."]
     #[must_use]
     #[inline(always)]
     pub const fn stall_o_dis1(&self) -> super::vals::StallODis1 {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::StallODis1::from_bits(val as u8)
     }
-    #[doc = "Disable Endpoint 1 OUT Direction"]
+    #[doc = "Disable Endpoint 1 OUT Direction."]
     #[inline(always)]
     pub const fn set_stall_o_dis1(&mut self, val: super::vals::StallODis1) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u8) & 0x01) << 1usize);
     }
-    #[doc = "Disable Endpoint 2 OUT Direction"]
+    #[doc = "Disable Endpoint 2 OUT Direction."]
     #[must_use]
     #[inline(always)]
     pub const fn stall_o_dis2(&self) -> super::vals::StallODis2 {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::StallODis2::from_bits(val as u8)
     }
-    #[doc = "Disable Endpoint 2 OUT Direction"]
+    #[doc = "Disable Endpoint 2 OUT Direction."]
     #[inline(always)]
     pub const fn set_stall_o_dis2(&mut self, val: super::vals::StallODis2) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u8) & 0x01) << 2usize);
     }
-    #[doc = "Disable Endpoint 3 OUT Direction"]
+    #[doc = "Disable Endpoint 3 OUT Direction."]
     #[must_use]
     #[inline(always)]
     pub const fn stall_o_dis3(&self) -> super::vals::StallODis3 {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::StallODis3::from_bits(val as u8)
     }
-    #[doc = "Disable Endpoint 3 OUT Direction"]
+    #[doc = "Disable Endpoint 3 OUT Direction."]
     #[inline(always)]
     pub const fn set_stall_o_dis3(&mut self, val: super::vals::StallODis3) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u8) & 0x01) << 3usize);
     }
-    #[doc = "Disable Endpoint 4 OUT Direction"]
+    #[doc = "Disable Endpoint 4 OUT Direction."]
     #[must_use]
     #[inline(always)]
     pub const fn stall_o_dis4(&self) -> super::vals::StallODis4 {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::StallODis4::from_bits(val as u8)
     }
-    #[doc = "Disable Endpoint 4 OUT Direction"]
+    #[doc = "Disable Endpoint 4 OUT Direction."]
     #[inline(always)]
     pub const fn set_stall_o_dis4(&mut self, val: super::vals::StallODis4) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u8) & 0x01) << 4usize);
     }
-    #[doc = "Disable Endpoint 5 OUT Direction"]
+    #[doc = "Disable Endpoint 5 OUT Direction."]
     #[must_use]
     #[inline(always)]
     pub const fn stall_o_dis5(&self) -> super::vals::StallODis5 {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::StallODis5::from_bits(val as u8)
     }
-    #[doc = "Disable Endpoint 5 OUT Direction"]
+    #[doc = "Disable Endpoint 5 OUT Direction."]
     #[inline(always)]
     pub const fn set_stall_o_dis5(&mut self, val: super::vals::StallODis5) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u8) & 0x01) << 5usize);
     }
-    #[doc = "Disable Endpoint 6 OUT Direction"]
+    #[doc = "Disable Endpoint 6 OUT Direction."]
     #[must_use]
     #[inline(always)]
     pub const fn stall_o_dis6(&self) -> super::vals::StallODis6 {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::StallODis6::from_bits(val as u8)
     }
-    #[doc = "Disable Endpoint 6 OUT Direction"]
+    #[doc = "Disable Endpoint 6 OUT Direction."]
     #[inline(always)]
     pub const fn set_stall_o_dis6(&mut self, val: super::vals::StallODis6) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u8) & 0x01) << 6usize);
     }
-    #[doc = "Disable Endpoint 7 OUT Direction"]
+    #[doc = "Disable Endpoint 7 OUT Direction."]
     #[must_use]
     #[inline(always)]
     pub const fn stall_o_dis7(&self) -> super::vals::StallODis7 {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::StallODis7::from_bits(val as u8)
     }
-    #[doc = "Disable Endpoint 7 OUT Direction"]
+    #[doc = "Disable Endpoint 7 OUT Direction."]
     #[inline(always)]
     pub const fn set_stall_o_dis7(&mut self, val: super::vals::StallODis7) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u8) & 0x01) << 7usize);
@@ -2486,43 +2486,43 @@ impl defmt::Format for StallOlDis {
         )
     }
 }
-#[doc = "Status"]
+#[doc = "Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Stat(pub u8);
 impl Stat {
-    #[doc = "Odd Bank"]
+    #[doc = "Odd Bank."]
     #[must_use]
     #[inline(always)]
     pub const fn odd(&self) -> super::vals::Odd {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Odd::from_bits(val as u8)
     }
-    #[doc = "Odd Bank"]
+    #[doc = "Odd Bank."]
     #[inline(always)]
     pub const fn set_odd(&mut self, val: super::vals::Odd) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u8) & 0x01) << 2usize);
     }
-    #[doc = "Transmit Indicator"]
+    #[doc = "Transmit Indicator."]
     #[must_use]
     #[inline(always)]
     pub const fn tx(&self) -> super::vals::Tx {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Tx::from_bits(val as u8)
     }
-    #[doc = "Transmit Indicator"]
+    #[doc = "Transmit Indicator."]
     #[inline(always)]
     pub const fn set_tx(&mut self, val: super::vals::Tx) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u8) & 0x01) << 3usize);
     }
-    #[doc = "Endpoint address"]
+    #[doc = "Endpoint address."]
     #[must_use]
     #[inline(always)]
     pub const fn endp(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x0f;
         val as u8
     }
-    #[doc = "Endpoint address"]
+    #[doc = "Endpoint address."]
     #[inline(always)]
     pub const fn set_endp(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u8) & 0x0f) << 4usize);
@@ -2555,31 +2555,31 @@ impl defmt::Format for Stat {
         )
     }
 }
-#[doc = "Token"]
+#[doc = "Token."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Token(pub u8);
 impl Token {
-    #[doc = "Token Endpoint Address"]
+    #[doc = "Token Endpoint Address."]
     #[must_use]
     #[inline(always)]
     pub const fn tokenendpt(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "Token Endpoint Address"]
+    #[doc = "Token Endpoint Address."]
     #[inline(always)]
     pub const fn set_tokenendpt(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u8) & 0x0f) << 0usize);
     }
-    #[doc = "Token Type"]
+    #[doc = "Token Type."]
     #[must_use]
     #[inline(always)]
     pub const fn tokenpid(&self) -> super::vals::Tokenpid {
         let val = (self.0 >> 4usize) & 0x0f;
         super::vals::Tokenpid::from_bits(val as u8)
     }
-    #[doc = "Token Type"]
+    #[doc = "Token Type."]
     #[inline(always)]
     pub const fn set_tokenpid(&mut self, val: super::vals::Tokenpid) {
         self.0 = (self.0 & !(0x0f << 4usize)) | (((val.to_bits() as u8) & 0x0f) << 4usize);
@@ -2610,79 +2610,79 @@ impl defmt::Format for Token {
         )
     }
 }
-#[doc = "USB Control"]
+#[doc = "USB Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Usbctrl(pub u8);
 impl Usbctrl {
-    #[doc = "DP and DM Lane Reversal Control"]
+    #[doc = "DP and DM Lane Reversal Control."]
     #[must_use]
     #[inline(always)]
     pub const fn dpdm_lane_reverse(&self) -> super::vals::DpdmLaneReverse {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::DpdmLaneReverse::from_bits(val as u8)
     }
-    #[doc = "DP and DM Lane Reversal Control"]
+    #[doc = "DP and DM Lane Reversal Control."]
     #[inline(always)]
     pub const fn set_dpdm_lane_reverse(&mut self, val: super::vals::DpdmLaneReverse) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u8) & 0x01) << 2usize);
     }
-    #[doc = "Host-Mode-Only Low-Speed Device EOP Signaling"]
+    #[doc = "Host-Mode-Only Low-Speed Device EOP Signaling."]
     #[must_use]
     #[inline(always)]
     pub const fn host_ls_eop(&self) -> super::vals::HostLsEop {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::HostLsEop::from_bits(val as u8)
     }
-    #[doc = "Host-Mode-Only Low-Speed Device EOP Signaling"]
+    #[doc = "Host-Mode-Only Low-Speed Device EOP Signaling."]
     #[inline(always)]
     pub const fn set_host_ls_eop(&mut self, val: super::vals::HostLsEop) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u8) & 0x01) << 3usize);
     }
-    #[doc = "UART Select"]
+    #[doc = "UART Select."]
     #[must_use]
     #[inline(always)]
     pub const fn uartsel(&self) -> super::vals::Uartsel {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::Uartsel::from_bits(val as u8)
     }
-    #[doc = "UART Select"]
+    #[doc = "UART Select."]
     #[inline(always)]
     pub const fn set_uartsel(&mut self, val: super::vals::Uartsel) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u8) & 0x01) << 4usize);
     }
-    #[doc = "UART Signal Channel Select"]
+    #[doc = "UART Signal Channel Select."]
     #[must_use]
     #[inline(always)]
     pub const fn uartchls(&self) -> super::vals::Uartchls {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::Uartchls::from_bits(val as u8)
     }
-    #[doc = "UART Signal Channel Select"]
+    #[doc = "UART Signal Channel Select."]
     #[inline(always)]
     pub const fn set_uartchls(&mut self, val: super::vals::Uartchls) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u8) & 0x01) << 5usize);
     }
-    #[doc = "Pulldown Enable"]
+    #[doc = "Pulldown Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn pde(&self) -> super::vals::Pde {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::Pde::from_bits(val as u8)
     }
-    #[doc = "Pulldown Enable"]
+    #[doc = "Pulldown Enable."]
     #[inline(always)]
     pub const fn set_pde(&mut self, val: super::vals::Pde) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u8) & 0x01) << 6usize);
     }
-    #[doc = "Suspend"]
+    #[doc = "Suspend."]
     #[must_use]
     #[inline(always)]
     pub const fn susp(&self) -> super::vals::Susp {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Susp::from_bits(val as u8)
     }
-    #[doc = "Suspend"]
+    #[doc = "Suspend."]
     #[inline(always)]
     pub const fn set_susp(&mut self, val: super::vals::Susp) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u8) & 0x01) << 7usize);
@@ -2721,19 +2721,19 @@ impl defmt::Format for Usbctrl {
         )
     }
 }
-#[doc = "Frame Adjust"]
+#[doc = "Frame Adjust."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Usbfrmadjust(pub u8);
 impl Usbfrmadjust {
-    #[doc = "Frame Adjustment"]
+    #[doc = "Frame Adjustment."]
     #[must_use]
     #[inline(always)]
     pub const fn adj(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Frame Adjustment"]
+    #[doc = "Frame Adjustment."]
     #[inline(always)]
     pub const fn set_adj(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u8) & 0xff) << 0usize);
@@ -2758,103 +2758,103 @@ impl defmt::Format for Usbfrmadjust {
         defmt::write!(f, "Usbfrmadjust {{ adj: {=u8:?} }}", self.adj())
     }
 }
-#[doc = "USB Transceiver Control 0"]
+#[doc = "USB Transceiver Control 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Usbtrc0(pub u8);
 impl Usbtrc0 {
-    #[doc = "USB Asynchronous Interrupt"]
+    #[doc = "USB Asynchronous Interrupt."]
     #[must_use]
     #[inline(always)]
     pub const fn usb_resume_int(&self) -> super::vals::UsbResumeInt {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::UsbResumeInt::from_bits(val as u8)
     }
-    #[doc = "USB Asynchronous Interrupt"]
+    #[doc = "USB Asynchronous Interrupt."]
     #[inline(always)]
     pub const fn set_usb_resume_int(&mut self, val: super::vals::UsbResumeInt) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u8) & 0x01) << 0usize);
     }
-    #[doc = "Synchronous USB Interrupt Detect"]
+    #[doc = "Synchronous USB Interrupt Detect."]
     #[must_use]
     #[inline(always)]
     pub const fn sync_det(&self) -> super::vals::SyncDet {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::SyncDet::from_bits(val as u8)
     }
-    #[doc = "Synchronous USB Interrupt Detect"]
+    #[doc = "Synchronous USB Interrupt Detect."]
     #[inline(always)]
     pub const fn set_sync_det(&mut self, val: super::vals::SyncDet) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u8) & 0x01) << 1usize);
     }
-    #[doc = "Combined USB Clock Recovery interrupt status"]
+    #[doc = "Combined USB Clock Recovery interrupt status."]
     #[must_use]
     #[inline(always)]
     pub const fn usb_clk_recovery_int(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Combined USB Clock Recovery interrupt status"]
+    #[doc = "Combined USB Clock Recovery interrupt status."]
     #[inline(always)]
     pub const fn set_usb_clk_recovery_int(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u8) & 0x01) << 2usize);
     }
-    #[doc = "VREGIN Rising Edge Interrupt Detect"]
+    #[doc = "VREGIN Rising Edge Interrupt Detect."]
     #[must_use]
     #[inline(always)]
     pub const fn vredg_det(&self) -> super::vals::VredgDet {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::VredgDet::from_bits(val as u8)
     }
-    #[doc = "VREGIN Rising Edge Interrupt Detect"]
+    #[doc = "VREGIN Rising Edge Interrupt Detect."]
     #[inline(always)]
     pub const fn set_vredg_det(&mut self, val: super::vals::VredgDet) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u8) & 0x01) << 3usize);
     }
-    #[doc = "VREGIN Falling Edge Interrupt Detect"]
+    #[doc = "VREGIN Falling Edge Interrupt Detect."]
     #[must_use]
     #[inline(always)]
     pub const fn vfedg_det(&self) -> super::vals::VfedgDet {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::VfedgDet::from_bits(val as u8)
     }
-    #[doc = "VREGIN Falling Edge Interrupt Detect"]
+    #[doc = "VREGIN Falling Edge Interrupt Detect."]
     #[inline(always)]
     pub const fn set_vfedg_det(&mut self, val: super::vals::VfedgDet) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u8) & 0x01) << 4usize);
     }
-    #[doc = "Asynchronous Resume Interrupt Enable"]
+    #[doc = "Asynchronous Resume Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn usbresmen(&self) -> super::vals::Usbresmen {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::Usbresmen::from_bits(val as u8)
     }
-    #[doc = "Asynchronous Resume Interrupt Enable"]
+    #[doc = "Asynchronous Resume Interrupt Enable."]
     #[inline(always)]
     pub const fn set_usbresmen(&mut self, val: super::vals::Usbresmen) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u8) & 0x01) << 5usize);
     }
-    #[doc = "VREGIN Status"]
+    #[doc = "VREGIN Status."]
     #[must_use]
     #[inline(always)]
     pub const fn vregin_sts(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "VREGIN Status"]
+    #[doc = "VREGIN Status."]
     #[inline(always)]
     pub const fn set_vregin_sts(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u8) & 0x01) << 6usize);
     }
-    #[doc = "USB Reset"]
+    #[doc = "USB Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn usbreset(&self) -> super::vals::Usbreset {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Usbreset::from_bits(val as u8)
     }
-    #[doc = "USB Reset"]
+    #[doc = "USB Reset."]
     #[inline(always)]
     pub const fn set_usbreset(&mut self, val: super::vals::Usbreset) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u8) & 0x01) << 7usize);

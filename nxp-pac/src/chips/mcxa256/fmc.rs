@@ -1,4 +1,4 @@
-#[doc = "NPX"]
+#[doc = "NPX."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Fmc {
     ptr: *mut u8,
@@ -14,7 +14,7 @@ impl Fmc {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "Data Remap"]
+    #[doc = "Data Remap."]
     #[inline(always)]
     pub const fn remap(self) -> crate::common::Reg<regs::Remap, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x20usize) as _) }

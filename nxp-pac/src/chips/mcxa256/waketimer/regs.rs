@@ -1,16 +1,16 @@
-#[doc = "Wake Timer Counter"]
+#[doc = "Wake Timer Counter."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct WakeTimerCnt(pub u32);
 impl WakeTimerCnt {
-    #[doc = "Wake Counter"]
+    #[doc = "Wake Counter."]
     #[must_use]
     #[inline(always)]
     pub const fn wake_cnt(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Wake Counter"]
+    #[doc = "Wake Counter."]
     #[inline(always)]
     pub const fn set_wake_cnt(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -35,55 +35,55 @@ impl defmt::Format for WakeTimerCnt {
         defmt::write!(f, "WakeTimerCnt {{ wake_cnt: {=u32:?} }}", self.wake_cnt())
     }
 }
-#[doc = "Wake Timer Control"]
+#[doc = "Wake Timer Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct WakeTimerCtrl(pub u32);
 impl WakeTimerCtrl {
-    #[doc = "Wake Timer Status Flag"]
+    #[doc = "Wake Timer Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn wake_flag(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake Timer Status Flag"]
+    #[doc = "Wake Timer Status Flag."]
     #[inline(always)]
     pub const fn set_wake_flag(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Clear Wake Timer"]
+    #[doc = "Clear Wake Timer."]
     #[must_use]
     #[inline(always)]
     pub const fn clr_wake_timer(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Clear Wake Timer"]
+    #[doc = "Clear Wake Timer."]
     #[inline(always)]
     pub const fn set_clr_wake_timer(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "OSC Divide Enable"]
+    #[doc = "OSC Divide Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn osc_div_ena(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "OSC Divide Enable"]
+    #[doc = "OSC Divide Enable."]
     #[inline(always)]
     pub const fn set_osc_div_ena(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "Enable Interrupt"]
+    #[doc = "Enable Interrupt."]
     #[must_use]
     #[inline(always)]
     pub const fn intr_en(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable Interrupt"]
+    #[doc = "Enable Interrupt."]
     #[inline(always)]
     pub const fn set_intr_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);

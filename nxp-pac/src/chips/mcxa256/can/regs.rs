@@ -1,76 +1,76 @@
-#[doc = "CAN Bit Timing"]
+#[doc = "CAN Bit Timing."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cbt(pub u32);
 impl Cbt {
-    #[doc = "Extended Phase Segment 2"]
+    #[doc = "Extended Phase Segment 2."]
     #[must_use]
     #[inline(always)]
     pub const fn epseg2(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x1f;
         val as u8
     }
-    #[doc = "Extended Phase Segment 2"]
+    #[doc = "Extended Phase Segment 2."]
     #[inline(always)]
     pub const fn set_epseg2(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val as u32) & 0x1f) << 0usize);
     }
-    #[doc = "Extended Phase Segment 1"]
+    #[doc = "Extended Phase Segment 1."]
     #[must_use]
     #[inline(always)]
     pub const fn epseg1(&self) -> u8 {
         let val = (self.0 >> 5usize) & 0x1f;
         val as u8
     }
-    #[doc = "Extended Phase Segment 1"]
+    #[doc = "Extended Phase Segment 1."]
     #[inline(always)]
     pub const fn set_epseg1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 5usize)) | (((val as u32) & 0x1f) << 5usize);
     }
-    #[doc = "Extended Propagation Segment"]
+    #[doc = "Extended Propagation Segment."]
     #[must_use]
     #[inline(always)]
     pub const fn epropseg(&self) -> u8 {
         let val = (self.0 >> 10usize) & 0x3f;
         val as u8
     }
-    #[doc = "Extended Propagation Segment"]
+    #[doc = "Extended Propagation Segment."]
     #[inline(always)]
     pub const fn set_epropseg(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 10usize)) | (((val as u32) & 0x3f) << 10usize);
     }
-    #[doc = "Extended Resync Jump Width"]
+    #[doc = "Extended Resync Jump Width."]
     #[must_use]
     #[inline(always)]
     pub const fn erjw(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x1f;
         val as u8
     }
-    #[doc = "Extended Resync Jump Width"]
+    #[doc = "Extended Resync Jump Width."]
     #[inline(always)]
     pub const fn set_erjw(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 16usize)) | (((val as u32) & 0x1f) << 16usize);
     }
-    #[doc = "Extended Prescaler Division Factor"]
+    #[doc = "Extended Prescaler Division Factor."]
     #[must_use]
     #[inline(always)]
     pub const fn epresdiv(&self) -> u16 {
         let val = (self.0 >> 21usize) & 0x03ff;
         val as u16
     }
-    #[doc = "Extended Prescaler Division Factor"]
+    #[doc = "Extended Prescaler Division Factor."]
     #[inline(always)]
     pub const fn set_epresdiv(&mut self, val: u16) {
         self.0 = (self.0 & !(0x03ff << 21usize)) | (((val as u32) & 0x03ff) << 21usize);
     }
-    #[doc = "Bit Timing Format Enable"]
+    #[doc = "Bit Timing Format Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn btf(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Bit Timing Format Enable"]
+    #[doc = "Bit Timing Format Enable."]
     #[inline(always)]
     pub const fn set_btf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -109,31 +109,31 @@ impl defmt::Format for Cbt {
         )
     }
 }
-#[doc = "Cyclic Redundancy Check"]
+#[doc = "Cyclic Redundancy Check."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Crcr(pub u32);
 impl Crcr {
-    #[doc = "Transmitted CRC value"]
+    #[doc = "Transmitted CRC value."]
     #[must_use]
     #[inline(always)]
     pub const fn txcrc(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x7fff;
         val as u16
     }
-    #[doc = "Transmitted CRC value"]
+    #[doc = "Transmitted CRC value."]
     #[inline(always)]
     pub const fn set_txcrc(&mut self, val: u16) {
         self.0 = (self.0 & !(0x7fff << 0usize)) | (((val as u32) & 0x7fff) << 0usize);
     }
-    #[doc = "CRC Message Buffer"]
+    #[doc = "CRC Message Buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn mbcrc(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x7f;
         val as u8
     }
-    #[doc = "CRC Message Buffer"]
+    #[doc = "CRC Message Buffer."]
     #[inline(always)]
     pub const fn set_mbcrc(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 16usize)) | (((val as u32) & 0x7f) << 16usize);
@@ -164,7 +164,7 @@ impl defmt::Format for Crcr {
         )
     }
 }
-#[doc = "Message Buffer 0 CS Register"]
+#[doc = "Message Buffer 0 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cs0(pub u32);
@@ -317,7 +317,7 @@ impl defmt::Format for Cs0 {
         )
     }
 }
-#[doc = "Message Buffer 1 CS Register"]
+#[doc = "Message Buffer 1 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cs1(pub u32);
@@ -470,7 +470,7 @@ impl defmt::Format for Cs1 {
         )
     }
 }
-#[doc = "Message Buffer 10 CS Register"]
+#[doc = "Message Buffer 10 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cs10(pub u32);
@@ -623,7 +623,7 @@ impl defmt::Format for Cs10 {
         )
     }
 }
-#[doc = "Message Buffer 11 CS Register"]
+#[doc = "Message Buffer 11 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cs11(pub u32);
@@ -776,7 +776,7 @@ impl defmt::Format for Cs11 {
         )
     }
 }
-#[doc = "Message Buffer 12 CS Register"]
+#[doc = "Message Buffer 12 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cs12(pub u32);
@@ -929,7 +929,7 @@ impl defmt::Format for Cs12 {
         )
     }
 }
-#[doc = "Message Buffer 13 CS Register"]
+#[doc = "Message Buffer 13 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cs13(pub u32);
@@ -1082,7 +1082,7 @@ impl defmt::Format for Cs13 {
         )
     }
 }
-#[doc = "Message Buffer 14 CS Register"]
+#[doc = "Message Buffer 14 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cs14(pub u32);
@@ -1235,7 +1235,7 @@ impl defmt::Format for Cs14 {
         )
     }
 }
-#[doc = "Message Buffer 15 CS Register"]
+#[doc = "Message Buffer 15 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cs15(pub u32);
@@ -1388,7 +1388,7 @@ impl defmt::Format for Cs15 {
         )
     }
 }
-#[doc = "Message Buffer 16 CS Register"]
+#[doc = "Message Buffer 16 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cs16(pub u32);
@@ -1541,7 +1541,7 @@ impl defmt::Format for Cs16 {
         )
     }
 }
-#[doc = "Message Buffer 17 CS Register"]
+#[doc = "Message Buffer 17 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cs17(pub u32);
@@ -1694,7 +1694,7 @@ impl defmt::Format for Cs17 {
         )
     }
 }
-#[doc = "Message Buffer 18 CS Register"]
+#[doc = "Message Buffer 18 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cs18(pub u32);
@@ -1847,7 +1847,7 @@ impl defmt::Format for Cs18 {
         )
     }
 }
-#[doc = "Message Buffer 19 CS Register"]
+#[doc = "Message Buffer 19 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cs19(pub u32);
@@ -2000,7 +2000,7 @@ impl defmt::Format for Cs19 {
         )
     }
 }
-#[doc = "Message Buffer 2 CS Register"]
+#[doc = "Message Buffer 2 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cs2(pub u32);
@@ -2153,7 +2153,7 @@ impl defmt::Format for Cs2 {
         )
     }
 }
-#[doc = "Message Buffer 20 CS Register"]
+#[doc = "Message Buffer 20 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cs20(pub u32);
@@ -2306,7 +2306,7 @@ impl defmt::Format for Cs20 {
         )
     }
 }
-#[doc = "Message Buffer 21 CS Register"]
+#[doc = "Message Buffer 21 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cs21(pub u32);
@@ -2459,7 +2459,7 @@ impl defmt::Format for Cs21 {
         )
     }
 }
-#[doc = "Message Buffer 22 CS Register"]
+#[doc = "Message Buffer 22 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cs22(pub u32);
@@ -2612,7 +2612,7 @@ impl defmt::Format for Cs22 {
         )
     }
 }
-#[doc = "Message Buffer 23 CS Register"]
+#[doc = "Message Buffer 23 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cs23(pub u32);
@@ -2765,7 +2765,7 @@ impl defmt::Format for Cs23 {
         )
     }
 }
-#[doc = "Message Buffer 24 CS Register"]
+#[doc = "Message Buffer 24 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cs24(pub u32);
@@ -2918,7 +2918,7 @@ impl defmt::Format for Cs24 {
         )
     }
 }
-#[doc = "Message Buffer 25 CS Register"]
+#[doc = "Message Buffer 25 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cs25(pub u32);
@@ -3071,7 +3071,7 @@ impl defmt::Format for Cs25 {
         )
     }
 }
-#[doc = "Message Buffer 26 CS Register"]
+#[doc = "Message Buffer 26 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cs26(pub u32);
@@ -3224,7 +3224,7 @@ impl defmt::Format for Cs26 {
         )
     }
 }
-#[doc = "Message Buffer 27 CS Register"]
+#[doc = "Message Buffer 27 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cs27(pub u32);
@@ -3377,7 +3377,7 @@ impl defmt::Format for Cs27 {
         )
     }
 }
-#[doc = "Message Buffer 28 CS Register"]
+#[doc = "Message Buffer 28 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cs28(pub u32);
@@ -3530,7 +3530,7 @@ impl defmt::Format for Cs28 {
         )
     }
 }
-#[doc = "Message Buffer 29 CS Register"]
+#[doc = "Message Buffer 29 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cs29(pub u32);
@@ -3683,7 +3683,7 @@ impl defmt::Format for Cs29 {
         )
     }
 }
-#[doc = "Message Buffer 3 CS Register"]
+#[doc = "Message Buffer 3 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cs3(pub u32);
@@ -3836,7 +3836,7 @@ impl defmt::Format for Cs3 {
         )
     }
 }
-#[doc = "Message Buffer 30 CS Register"]
+#[doc = "Message Buffer 30 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cs30(pub u32);
@@ -3989,7 +3989,7 @@ impl defmt::Format for Cs30 {
         )
     }
 }
-#[doc = "Message Buffer 31 CS Register"]
+#[doc = "Message Buffer 31 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cs31(pub u32);
@@ -4142,7 +4142,7 @@ impl defmt::Format for Cs31 {
         )
     }
 }
-#[doc = "Message Buffer 4 CS Register"]
+#[doc = "Message Buffer 4 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cs4(pub u32);
@@ -4295,7 +4295,7 @@ impl defmt::Format for Cs4 {
         )
     }
 }
-#[doc = "Message Buffer 5 CS Register"]
+#[doc = "Message Buffer 5 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cs5(pub u32);
@@ -4448,7 +4448,7 @@ impl defmt::Format for Cs5 {
         )
     }
 }
-#[doc = "Message Buffer 6 CS Register"]
+#[doc = "Message Buffer 6 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cs6(pub u32);
@@ -4601,7 +4601,7 @@ impl defmt::Format for Cs6 {
         )
     }
 }
-#[doc = "Message Buffer 7 CS Register"]
+#[doc = "Message Buffer 7 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cs7(pub u32);
@@ -4754,7 +4754,7 @@ impl defmt::Format for Cs7 {
         )
     }
 }
-#[doc = "Message Buffer 8 CS Register"]
+#[doc = "Message Buffer 8 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cs8(pub u32);
@@ -4907,7 +4907,7 @@ impl defmt::Format for Cs8 {
         )
     }
 }
-#[doc = "Message Buffer 9 CS Register"]
+#[doc = "Message Buffer 9 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cs9(pub u32);
@@ -5060,187 +5060,187 @@ impl defmt::Format for Cs9 {
         )
     }
 }
-#[doc = "Control 1"]
+#[doc = "Control 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl1(pub u32);
 impl Ctrl1 {
-    #[doc = "Propagation Segment"]
+    #[doc = "Propagation Segment."]
     #[must_use]
     #[inline(always)]
     pub const fn propseg(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x07;
         val as u8
     }
-    #[doc = "Propagation Segment"]
+    #[doc = "Propagation Segment."]
     #[inline(always)]
     pub const fn set_propseg(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val as u32) & 0x07) << 0usize);
     }
-    #[doc = "Listen-Only Mode"]
+    #[doc = "Listen-Only Mode."]
     #[must_use]
     #[inline(always)]
     pub const fn lom(&self) -> super::vals::Lom {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Lom::from_bits(val as u8)
     }
-    #[doc = "Listen-Only Mode"]
+    #[doc = "Listen-Only Mode."]
     #[inline(always)]
     pub const fn set_lom(&mut self, val: super::vals::Lom) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "Lowest Buffer Transmitted First"]
+    #[doc = "Lowest Buffer Transmitted First."]
     #[must_use]
     #[inline(always)]
     pub const fn lbuf(&self) -> super::vals::Lbuf {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::Lbuf::from_bits(val as u8)
     }
-    #[doc = "Lowest Buffer Transmitted First"]
+    #[doc = "Lowest Buffer Transmitted First."]
     #[inline(always)]
     pub const fn set_lbuf(&mut self, val: super::vals::Lbuf) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
-    #[doc = "Timer Sync"]
+    #[doc = "Timer Sync."]
     #[must_use]
     #[inline(always)]
     pub const fn tsyn(&self) -> super::vals::Tsyn {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::Tsyn::from_bits(val as u8)
     }
-    #[doc = "Timer Sync"]
+    #[doc = "Timer Sync."]
     #[inline(always)]
     pub const fn set_tsyn(&mut self, val: super::vals::Tsyn) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
-    #[doc = "Bus Off Recovery"]
+    #[doc = "Bus Off Recovery."]
     #[must_use]
     #[inline(always)]
     pub const fn boffrec(&self) -> super::vals::Boffrec {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::Boffrec::from_bits(val as u8)
     }
-    #[doc = "Bus Off Recovery"]
+    #[doc = "Bus Off Recovery."]
     #[inline(always)]
     pub const fn set_boffrec(&mut self, val: super::vals::Boffrec) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "CAN Bit Sampling"]
+    #[doc = "CAN Bit Sampling."]
     #[must_use]
     #[inline(always)]
     pub const fn smp(&self) -> super::vals::Smp {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Smp::from_bits(val as u8)
     }
-    #[doc = "CAN Bit Sampling"]
+    #[doc = "CAN Bit Sampling."]
     #[inline(always)]
     pub const fn set_smp(&mut self, val: super::vals::Smp) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "RX Warning Interrupt Mask"]
+    #[doc = "RX Warning Interrupt Mask."]
     #[must_use]
     #[inline(always)]
     pub const fn rwrnmsk(&self) -> super::vals::Rwrnmsk {
         let val = (self.0 >> 10usize) & 0x01;
         super::vals::Rwrnmsk::from_bits(val as u8)
     }
-    #[doc = "RX Warning Interrupt Mask"]
+    #[doc = "RX Warning Interrupt Mask."]
     #[inline(always)]
     pub const fn set_rwrnmsk(&mut self, val: super::vals::Rwrnmsk) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
-    #[doc = "TX Warning Interrupt Mask"]
+    #[doc = "TX Warning Interrupt Mask."]
     #[must_use]
     #[inline(always)]
     pub const fn twrnmsk(&self) -> super::vals::Twrnmsk {
         let val = (self.0 >> 11usize) & 0x01;
         super::vals::Twrnmsk::from_bits(val as u8)
     }
-    #[doc = "TX Warning Interrupt Mask"]
+    #[doc = "TX Warning Interrupt Mask."]
     #[inline(always)]
     pub const fn set_twrnmsk(&mut self, val: super::vals::Twrnmsk) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
     }
-    #[doc = "Loopback Mode"]
+    #[doc = "Loopback Mode."]
     #[must_use]
     #[inline(always)]
     pub const fn lpb(&self) -> super::vals::Lpb {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Lpb::from_bits(val as u8)
     }
-    #[doc = "Loopback Mode"]
+    #[doc = "Loopback Mode."]
     #[inline(always)]
     pub const fn set_lpb(&mut self, val: super::vals::Lpb) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "Error Interrupt Mask"]
+    #[doc = "Error Interrupt Mask."]
     #[must_use]
     #[inline(always)]
     pub const fn errmsk(&self) -> super::vals::Errmsk {
         let val = (self.0 >> 14usize) & 0x01;
         super::vals::Errmsk::from_bits(val as u8)
     }
-    #[doc = "Error Interrupt Mask"]
+    #[doc = "Error Interrupt Mask."]
     #[inline(always)]
     pub const fn set_errmsk(&mut self, val: super::vals::Errmsk) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
     }
-    #[doc = "Bus Off Interrupt Mask"]
+    #[doc = "Bus Off Interrupt Mask."]
     #[must_use]
     #[inline(always)]
     pub const fn boffmsk(&self) -> super::vals::Boffmsk {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::Boffmsk::from_bits(val as u8)
     }
-    #[doc = "Bus Off Interrupt Mask"]
+    #[doc = "Bus Off Interrupt Mask."]
     #[inline(always)]
     pub const fn set_boffmsk(&mut self, val: super::vals::Boffmsk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "Phase Segment 2"]
+    #[doc = "Phase Segment 2."]
     #[must_use]
     #[inline(always)]
     pub const fn pseg2(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x07;
         val as u8
     }
-    #[doc = "Phase Segment 2"]
+    #[doc = "Phase Segment 2."]
     #[inline(always)]
     pub const fn set_pseg2(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 16usize)) | (((val as u32) & 0x07) << 16usize);
     }
-    #[doc = "Phase Segment 1"]
+    #[doc = "Phase Segment 1."]
     #[must_use]
     #[inline(always)]
     pub const fn pseg1(&self) -> u8 {
         let val = (self.0 >> 19usize) & 0x07;
         val as u8
     }
-    #[doc = "Phase Segment 1"]
+    #[doc = "Phase Segment 1."]
     #[inline(always)]
     pub const fn set_pseg1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 19usize)) | (((val as u32) & 0x07) << 19usize);
     }
-    #[doc = "Resync Jump Width"]
+    #[doc = "Resync Jump Width."]
     #[must_use]
     #[inline(always)]
     pub const fn rjw(&self) -> u8 {
         let val = (self.0 >> 22usize) & 0x03;
         val as u8
     }
-    #[doc = "Resync Jump Width"]
+    #[doc = "Resync Jump Width."]
     #[inline(always)]
     pub const fn set_rjw(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 22usize)) | (((val as u32) & 0x03) << 22usize);
     }
-    #[doc = "Prescaler Division Factor"]
+    #[doc = "Prescaler Division Factor."]
     #[must_use]
     #[inline(always)]
     pub const fn presdiv(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "Prescaler Division Factor"]
+    #[doc = "Prescaler Division Factor."]
     #[inline(always)]
     pub const fn set_presdiv(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);
@@ -5297,79 +5297,79 @@ impl defmt::Format for Ctrl1 {
         )
     }
 }
-#[doc = "Pretended Networking Control 1"]
+#[doc = "Pretended Networking Control 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl1Pn(pub u32);
 impl Ctrl1Pn {
-    #[doc = "Filtering Combination Selection"]
+    #[doc = "Filtering Combination Selection."]
     #[must_use]
     #[inline(always)]
     pub const fn fcs(&self) -> super::vals::Fcs {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Fcs::from_bits(val as u8)
     }
-    #[doc = "Filtering Combination Selection"]
+    #[doc = "Filtering Combination Selection."]
     #[inline(always)]
     pub const fn set_fcs(&mut self, val: super::vals::Fcs) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "ID Filtering Selection"]
+    #[doc = "ID Filtering Selection."]
     #[must_use]
     #[inline(always)]
     pub const fn idfs(&self) -> super::vals::Idfs {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::Idfs::from_bits(val as u8)
     }
-    #[doc = "ID Filtering Selection"]
+    #[doc = "ID Filtering Selection."]
     #[inline(always)]
     pub const fn set_idfs(&mut self, val: super::vals::Idfs) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
-    #[doc = "Payload Filtering Selection"]
+    #[doc = "Payload Filtering Selection."]
     #[must_use]
     #[inline(always)]
     pub const fn plfs(&self) -> super::vals::Plfs {
         let val = (self.0 >> 4usize) & 0x03;
         super::vals::Plfs::from_bits(val as u8)
     }
-    #[doc = "Payload Filtering Selection"]
+    #[doc = "Payload Filtering Selection."]
     #[inline(always)]
     pub const fn set_plfs(&mut self, val: super::vals::Plfs) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
-    #[doc = "Number of Messages Matching the Same Filtering Criteria"]
+    #[doc = "Number of Messages Matching the Same Filtering Criteria."]
     #[must_use]
     #[inline(always)]
     pub const fn nmatch(&self) -> super::vals::Nmatch {
         let val = (self.0 >> 8usize) & 0xff;
         super::vals::Nmatch::from_bits(val as u8)
     }
-    #[doc = "Number of Messages Matching the Same Filtering Criteria"]
+    #[doc = "Number of Messages Matching the Same Filtering Criteria."]
     #[inline(always)]
     pub const fn set_nmatch(&mut self, val: super::vals::Nmatch) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val.to_bits() as u32) & 0xff) << 8usize);
     }
-    #[doc = "Wake-up by Matching Flag Mask"]
+    #[doc = "Wake-up by Matching Flag Mask."]
     #[must_use]
     #[inline(always)]
     pub const fn wumf_msk(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-up by Matching Flag Mask"]
+    #[doc = "Wake-up by Matching Flag Mask."]
     #[inline(always)]
     pub const fn set_wumf_msk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Wake-up by Timeout Flag Mask"]
+    #[doc = "Wake-up by Timeout Flag Mask."]
     #[must_use]
     #[inline(always)]
     pub const fn wtof_msk(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-up by Timeout Flag Mask"]
+    #[doc = "Wake-up by Timeout Flag Mask."]
     #[inline(always)]
     pub const fn set_wtof_msk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
@@ -5408,163 +5408,163 @@ impl defmt::Format for Ctrl1Pn {
         )
     }
 }
-#[doc = "Control 2"]
+#[doc = "Control 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl2(pub u32);
 impl Ctrl2 {
-    #[doc = "Payload Byte and Bit Order Selection"]
+    #[doc = "Payload Byte and Bit Order Selection."]
     #[must_use]
     #[inline(always)]
     pub const fn pes(&self) -> super::vals::Pes {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Pes::from_bits(val as u8)
     }
-    #[doc = "Payload Byte and Bit Order Selection"]
+    #[doc = "Payload Byte and Bit Order Selection."]
     #[inline(always)]
     pub const fn set_pes(&mut self, val: super::vals::Pes) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "ACK Suppression Disable"]
+    #[doc = "ACK Suppression Disable."]
     #[must_use]
     #[inline(always)]
     pub const fn asd(&self) -> super::vals::Asd {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Asd::from_bits(val as u8)
     }
-    #[doc = "ACK Suppression Disable"]
+    #[doc = "ACK Suppression Disable."]
     #[inline(always)]
     pub const fn set_asd(&mut self, val: super::vals::Asd) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Edge Filter Disable"]
+    #[doc = "Edge Filter Disable."]
     #[must_use]
     #[inline(always)]
     pub const fn edfltdis(&self) -> super::vals::Edfltdis {
         let val = (self.0 >> 11usize) & 0x01;
         super::vals::Edfltdis::from_bits(val as u8)
     }
-    #[doc = "Edge Filter Disable"]
+    #[doc = "Edge Filter Disable."]
     #[inline(always)]
     pub const fn set_edfltdis(&mut self, val: super::vals::Edfltdis) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
     }
-    #[doc = "ISO CAN FD Enable"]
+    #[doc = "ISO CAN FD Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn isocanfden(&self) -> super::vals::Isocanfden {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Isocanfden::from_bits(val as u8)
     }
-    #[doc = "ISO CAN FD Enable"]
+    #[doc = "ISO CAN FD Enable."]
     #[inline(always)]
     pub const fn set_isocanfden(&mut self, val: super::vals::Isocanfden) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "Bit Timing Expansion Enable"]
+    #[doc = "Bit Timing Expansion Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn bte(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "Bit Timing Expansion Enable"]
+    #[doc = "Bit Timing Expansion Enable."]
     #[inline(always)]
     pub const fn set_bte(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "Protocol Exception Enable"]
+    #[doc = "Protocol Exception Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn prexcen(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "Protocol Exception Enable"]
+    #[doc = "Protocol Exception Enable."]
     #[inline(always)]
     pub const fn set_prexcen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Entire Frame Arbitration Field Comparison Enable for RX Message Buffers"]
+    #[doc = "Entire Frame Arbitration Field Comparison Enable for RX Message Buffers."]
     #[must_use]
     #[inline(always)]
     pub const fn eacen(&self) -> super::vals::Eacen {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::Eacen::from_bits(val as u8)
     }
-    #[doc = "Entire Frame Arbitration Field Comparison Enable for RX Message Buffers"]
+    #[doc = "Entire Frame Arbitration Field Comparison Enable for RX Message Buffers."]
     #[inline(always)]
     pub const fn set_eacen(&mut self, val: super::vals::Eacen) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
     }
-    #[doc = "Remote Request Storing"]
+    #[doc = "Remote Request Storing."]
     #[must_use]
     #[inline(always)]
     pub const fn rrs(&self) -> super::vals::Rrs {
         let val = (self.0 >> 17usize) & 0x01;
         super::vals::Rrs::from_bits(val as u8)
     }
-    #[doc = "Remote Request Storing"]
+    #[doc = "Remote Request Storing."]
     #[inline(always)]
     pub const fn set_rrs(&mut self, val: super::vals::Rrs) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
     }
-    #[doc = "Message Buffers Reception Priority"]
+    #[doc = "Message Buffers Reception Priority."]
     #[must_use]
     #[inline(always)]
     pub const fn mrp(&self) -> super::vals::Mrp {
         let val = (self.0 >> 18usize) & 0x01;
         super::vals::Mrp::from_bits(val as u8)
     }
-    #[doc = "Message Buffers Reception Priority"]
+    #[doc = "Message Buffers Reception Priority."]
     #[inline(always)]
     pub const fn set_mrp(&mut self, val: super::vals::Mrp) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val.to_bits() as u32) & 0x01) << 18usize);
     }
-    #[doc = "Transmission Arbitration Start Delay"]
+    #[doc = "Transmission Arbitration Start Delay."]
     #[must_use]
     #[inline(always)]
     pub const fn tasd(&self) -> u8 {
         let val = (self.0 >> 19usize) & 0x1f;
         val as u8
     }
-    #[doc = "Transmission Arbitration Start Delay"]
+    #[doc = "Transmission Arbitration Start Delay."]
     #[inline(always)]
     pub const fn set_tasd(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 19usize)) | (((val as u32) & 0x1f) << 19usize);
     }
-    #[doc = "Number of Legacy Receive FIFO Filters"]
+    #[doc = "Number of Legacy Receive FIFO Filters."]
     #[must_use]
     #[inline(always)]
     pub const fn rffn(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0x0f;
         val as u8
     }
-    #[doc = "Number of Legacy Receive FIFO Filters"]
+    #[doc = "Number of Legacy Receive FIFO Filters."]
     #[inline(always)]
     pub const fn set_rffn(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 24usize)) | (((val as u32) & 0x0f) << 24usize);
     }
-    #[doc = "Bus Off Done Interrupt Mask"]
+    #[doc = "Bus Off Done Interrupt Mask."]
     #[must_use]
     #[inline(always)]
     pub const fn boffdonemsk(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "Bus Off Done Interrupt Mask"]
+    #[doc = "Bus Off Done Interrupt Mask."]
     #[inline(always)]
     pub const fn set_boffdonemsk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "Error Interrupt Mask for Errors Detected in the Data Phase of Fast CAN FD Frames"]
+    #[doc = "Error Interrupt Mask for Errors Detected in the Data Phase of Fast CAN FD Frames."]
     #[must_use]
     #[inline(always)]
     pub const fn errmsk_fast(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Error Interrupt Mask for Errors Detected in the Data Phase of Fast CAN FD Frames"]
+    #[doc = "Error Interrupt Mask for Errors Detected in the Data Phase of Fast CAN FD Frames."]
     #[inline(always)]
     pub const fn set_errmsk_fast(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -5617,19 +5617,19 @@ impl defmt::Format for Ctrl2 {
         )
     }
 }
-#[doc = "Pretended Networking Control 2"]
+#[doc = "Pretended Networking Control 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl2Pn(pub u32);
 impl Ctrl2Pn {
-    #[doc = "Timeout for No Message Matching the Filtering Criteria"]
+    #[doc = "Timeout for No Message Matching the Filtering Criteria."]
     #[must_use]
     #[inline(always)]
     pub const fn matchto(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Timeout for No Message Matching the Filtering Criteria"]
+    #[doc = "Timeout for No Message Matching the Filtering Criteria."]
     #[inline(always)]
     pub const fn set_matchto(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
@@ -5654,55 +5654,55 @@ impl defmt::Format for Ctrl2Pn {
         defmt::write!(f, "Ctrl2Pn {{ matchto: {=u16:?} }}", self.matchto())
     }
 }
-#[doc = "Error Counter"]
+#[doc = "Error Counter."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ecr(pub u32);
 impl Ecr {
-    #[doc = "Transmit Error Counter"]
+    #[doc = "Transmit Error Counter."]
     #[must_use]
     #[inline(always)]
     pub const fn txerrcnt(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Transmit Error Counter"]
+    #[doc = "Transmit Error Counter."]
     #[inline(always)]
     pub const fn set_txerrcnt(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "Receive Error Counter"]
+    #[doc = "Receive Error Counter."]
     #[must_use]
     #[inline(always)]
     pub const fn rxerrcnt(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0xff;
         val as u8
     }
-    #[doc = "Receive Error Counter"]
+    #[doc = "Receive Error Counter."]
     #[inline(always)]
     pub const fn set_rxerrcnt(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
     }
-    #[doc = "Transmit Error Counter for Fast Bits"]
+    #[doc = "Transmit Error Counter for Fast Bits."]
     #[must_use]
     #[inline(always)]
     pub const fn txerrcnt_fast(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0xff;
         val as u8
     }
-    #[doc = "Transmit Error Counter for Fast Bits"]
+    #[doc = "Transmit Error Counter for Fast Bits."]
     #[inline(always)]
     pub const fn set_txerrcnt_fast(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
     }
-    #[doc = "Receive Error Counter for Fast Bits"]
+    #[doc = "Receive Error Counter for Fast Bits."]
     #[must_use]
     #[inline(always)]
     pub const fn rxerrcnt_fast(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "Receive Error Counter for Fast Bits"]
+    #[doc = "Receive Error Counter for Fast Bits."]
     #[inline(always)]
     pub const fn set_rxerrcnt_fast(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);
@@ -5737,43 +5737,43 @@ impl defmt::Format for Ecr {
         )
     }
 }
-#[doc = "Enhanced Data Phase CAN Bit Timing"]
+#[doc = "Enhanced Data Phase CAN Bit Timing."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Edcbt(pub u32);
 impl Edcbt {
-    #[doc = "Data Phase Segment 1"]
+    #[doc = "Data Phase Segment 1."]
     #[must_use]
     #[inline(always)]
     pub const fn dtseg1(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x1f;
         val as u8
     }
-    #[doc = "Data Phase Segment 1"]
+    #[doc = "Data Phase Segment 1."]
     #[inline(always)]
     pub const fn set_dtseg1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val as u32) & 0x1f) << 0usize);
     }
-    #[doc = "Data Phase Time Segment 2"]
+    #[doc = "Data Phase Time Segment 2."]
     #[must_use]
     #[inline(always)]
     pub const fn dtseg2(&self) -> u8 {
         let val = (self.0 >> 12usize) & 0x0f;
         val as u8
     }
-    #[doc = "Data Phase Time Segment 2"]
+    #[doc = "Data Phase Time Segment 2."]
     #[inline(always)]
     pub const fn set_dtseg2(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 12usize)) | (((val as u32) & 0x0f) << 12usize);
     }
-    #[doc = "Data Phase Resynchronization Jump Width"]
+    #[doc = "Data Phase Resynchronization Jump Width."]
     #[must_use]
     #[inline(always)]
     pub const fn drjw(&self) -> u8 {
         let val = (self.0 >> 22usize) & 0x0f;
         val as u8
     }
-    #[doc = "Data Phase Resynchronization Jump Width"]
+    #[doc = "Data Phase Resynchronization Jump Width."]
     #[inline(always)]
     pub const fn set_drjw(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 22usize)) | (((val as u32) & 0x0f) << 22usize);
@@ -5806,43 +5806,43 @@ impl defmt::Format for Edcbt {
         )
     }
 }
-#[doc = "Enhanced Nominal CAN Bit Timing"]
+#[doc = "Enhanced Nominal CAN Bit Timing."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Encbt(pub u32);
 impl Encbt {
-    #[doc = "Nominal Time Segment 1"]
+    #[doc = "Nominal Time Segment 1."]
     #[must_use]
     #[inline(always)]
     pub const fn ntseg1(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Nominal Time Segment 1"]
+    #[doc = "Nominal Time Segment 1."]
     #[inline(always)]
     pub const fn set_ntseg1(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "Nominal Time Segment 2"]
+    #[doc = "Nominal Time Segment 2."]
     #[must_use]
     #[inline(always)]
     pub const fn ntseg2(&self) -> u8 {
         let val = (self.0 >> 12usize) & 0x7f;
         val as u8
     }
-    #[doc = "Nominal Time Segment 2"]
+    #[doc = "Nominal Time Segment 2."]
     #[inline(always)]
     pub const fn set_ntseg2(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 12usize)) | (((val as u32) & 0x7f) << 12usize);
     }
-    #[doc = "Nominal Resynchronization Jump Width"]
+    #[doc = "Nominal Resynchronization Jump Width."]
     #[must_use]
     #[inline(always)]
     pub const fn nrjw(&self) -> u8 {
         let val = (self.0 >> 22usize) & 0x7f;
         val as u8
     }
-    #[doc = "Nominal Resynchronization Jump Width"]
+    #[doc = "Nominal Resynchronization Jump Width."]
     #[inline(always)]
     pub const fn set_nrjw(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 22usize)) | (((val as u32) & 0x7f) << 22usize);
@@ -5875,31 +5875,31 @@ impl defmt::Format for Encbt {
         )
     }
 }
-#[doc = "Enhanced CAN Bit Timing Prescalers"]
+#[doc = "Enhanced CAN Bit Timing Prescalers."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Eprs(pub u32);
 impl Eprs {
-    #[doc = "Extended Nominal Prescaler Division Factor"]
+    #[doc = "Extended Nominal Prescaler Division Factor."]
     #[must_use]
     #[inline(always)]
     pub const fn enpresdiv(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x03ff;
         val as u16
     }
-    #[doc = "Extended Nominal Prescaler Division Factor"]
+    #[doc = "Extended Nominal Prescaler Division Factor."]
     #[inline(always)]
     pub const fn set_enpresdiv(&mut self, val: u16) {
         self.0 = (self.0 & !(0x03ff << 0usize)) | (((val as u32) & 0x03ff) << 0usize);
     }
-    #[doc = "Extended Data Phase Prescaler Division Factor"]
+    #[doc = "Extended Data Phase Prescaler Division Factor."]
     #[must_use]
     #[inline(always)]
     pub const fn edpresdiv(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x03ff;
         val as u16
     }
-    #[doc = "Extended Data Phase Prescaler Division Factor"]
+    #[doc = "Extended Data Phase Prescaler Division Factor."]
     #[inline(always)]
     pub const fn set_edpresdiv(&mut self, val: u16) {
         self.0 = (self.0 & !(0x03ff << 16usize)) | (((val as u32) & 0x03ff) << 16usize);
@@ -5930,67 +5930,67 @@ impl defmt::Format for Eprs {
         )
     }
 }
-#[doc = "Enhanced RX FIFO Control"]
+#[doc = "Enhanced RX FIFO Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Erfcr(pub u32);
 impl Erfcr {
-    #[doc = "Enhanced RX FIFO Watermark"]
+    #[doc = "Enhanced RX FIFO Watermark."]
     #[must_use]
     #[inline(always)]
     pub const fn erfwm(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x1f;
         val as u8
     }
-    #[doc = "Enhanced RX FIFO Watermark"]
+    #[doc = "Enhanced RX FIFO Watermark."]
     #[inline(always)]
     pub const fn set_erfwm(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val as u32) & 0x1f) << 0usize);
     }
-    #[doc = "Number of Enhanced RX FIFO Filter Elements"]
+    #[doc = "Number of Enhanced RX FIFO Filter Elements."]
     #[must_use]
     #[inline(always)]
     pub const fn nfe(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x3f;
         val as u8
     }
-    #[doc = "Number of Enhanced RX FIFO Filter Elements"]
+    #[doc = "Number of Enhanced RX FIFO Filter Elements."]
     #[inline(always)]
     pub const fn set_nfe(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 8usize)) | (((val as u32) & 0x3f) << 8usize);
     }
-    #[doc = "Number of Extended ID Filter Elements"]
+    #[doc = "Number of Extended ID Filter Elements."]
     #[must_use]
     #[inline(always)]
     pub const fn nexif(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x7f;
         val as u8
     }
-    #[doc = "Number of Extended ID Filter Elements"]
+    #[doc = "Number of Extended ID Filter Elements."]
     #[inline(always)]
     pub const fn set_nexif(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 16usize)) | (((val as u32) & 0x7f) << 16usize);
     }
-    #[doc = "DMA Last Word"]
+    #[doc = "DMA Last Word."]
     #[must_use]
     #[inline(always)]
     pub const fn dmalw(&self) -> u8 {
         let val = (self.0 >> 26usize) & 0x1f;
         val as u8
     }
-    #[doc = "DMA Last Word"]
+    #[doc = "DMA Last Word."]
     #[inline(always)]
     pub const fn set_dmalw(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 26usize)) | (((val as u32) & 0x1f) << 26usize);
     }
-    #[doc = "Enhanced RX FIFO enable"]
+    #[doc = "Enhanced RX FIFO enable."]
     #[must_use]
     #[inline(always)]
     pub const fn erfen(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Enhanced RX FIFO enable"]
+    #[doc = "Enhanced RX FIFO enable."]
     #[inline(always)]
     pub const fn set_erfen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -6027,19 +6027,19 @@ impl defmt::Format for Erfcr {
         )
     }
 }
-#[doc = "Enhanced RX FIFO Filter Element"]
+#[doc = "Enhanced RX FIFO Filter Element."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Erffel(pub u32);
 impl Erffel {
-    #[doc = "Filter Element Bits"]
+    #[doc = "Filter Element Bits."]
     #[must_use]
     #[inline(always)]
     pub const fn fel(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Filter Element Bits"]
+    #[doc = "Filter Element Bits."]
     #[inline(always)]
     pub const fn set_fel(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -6062,55 +6062,55 @@ impl defmt::Format for Erffel {
         defmt::write!(f, "Erffel {{ fel: {=u32:?} }}", self.fel())
     }
 }
-#[doc = "Enhanced RX FIFO Interrupt Enable"]
+#[doc = "Enhanced RX FIFO Interrupt Enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Erfier(pub u32);
 impl Erfier {
-    #[doc = "Enhanced RX FIFO Data Available Interrupt Enable"]
+    #[doc = "Enhanced RX FIFO Data Available Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn erfdaie(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "Enhanced RX FIFO Data Available Interrupt Enable"]
+    #[doc = "Enhanced RX FIFO Data Available Interrupt Enable."]
     #[inline(always)]
     pub const fn set_erfdaie(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "Enhanced RX FIFO Watermark Indication Interrupt Enable"]
+    #[doc = "Enhanced RX FIFO Watermark Indication Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn erfwmiie(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "Enhanced RX FIFO Watermark Indication Interrupt Enable"]
+    #[doc = "Enhanced RX FIFO Watermark Indication Interrupt Enable."]
     #[inline(always)]
     pub const fn set_erfwmiie(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "Enhanced RX FIFO Overflow Interrupt Enable"]
+    #[doc = "Enhanced RX FIFO Overflow Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn erfovfie(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "Enhanced RX FIFO Overflow Interrupt Enable"]
+    #[doc = "Enhanced RX FIFO Overflow Interrupt Enable."]
     #[inline(always)]
     pub const fn set_erfovfie(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "Enhanced RX FIFO Underflow Interrupt Enable"]
+    #[doc = "Enhanced RX FIFO Underflow Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn erfufwie(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Enhanced RX FIFO Underflow Interrupt Enable"]
+    #[doc = "Enhanced RX FIFO Underflow Interrupt Enable."]
     #[inline(always)]
     pub const fn set_erfufwie(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -6145,103 +6145,103 @@ impl defmt::Format for Erfier {
         )
     }
 }
-#[doc = "Enhanced RX FIFO Status"]
+#[doc = "Enhanced RX FIFO Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Erfsr(pub u32);
 impl Erfsr {
-    #[doc = "Enhanced RX FIFO Elements"]
+    #[doc = "Enhanced RX FIFO Elements."]
     #[must_use]
     #[inline(always)]
     pub const fn erfel(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x3f;
         val as u8
     }
-    #[doc = "Enhanced RX FIFO Elements"]
+    #[doc = "Enhanced RX FIFO Elements."]
     #[inline(always)]
     pub const fn set_erfel(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val as u32) & 0x3f) << 0usize);
     }
-    #[doc = "Enhanced RX FIFO Full Flag"]
+    #[doc = "Enhanced RX FIFO Full Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn erff(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Enhanced RX FIFO Full Flag"]
+    #[doc = "Enhanced RX FIFO Full Flag."]
     #[inline(always)]
     pub const fn set_erff(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Enhanced RX FIFO Empty Flag"]
+    #[doc = "Enhanced RX FIFO Empty Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn erfe(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Enhanced RX FIFO Empty Flag"]
+    #[doc = "Enhanced RX FIFO Empty Flag."]
     #[inline(always)]
     pub const fn set_erfe(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Enhanced RX FIFO Clear"]
+    #[doc = "Enhanced RX FIFO Clear."]
     #[must_use]
     #[inline(always)]
     pub const fn erfclr(&self) -> super::vals::Erfclr {
         let val = (self.0 >> 27usize) & 0x01;
         super::vals::Erfclr::from_bits(val as u8)
     }
-    #[doc = "Enhanced RX FIFO Clear"]
+    #[doc = "Enhanced RX FIFO Clear."]
     #[inline(always)]
     pub const fn set_erfclr(&mut self, val: super::vals::Erfclr) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val.to_bits() as u32) & 0x01) << 27usize);
     }
-    #[doc = "Enhanced RX FIFO Data Available Flag"]
+    #[doc = "Enhanced RX FIFO Data Available Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn erfda(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "Enhanced RX FIFO Data Available Flag"]
+    #[doc = "Enhanced RX FIFO Data Available Flag."]
     #[inline(always)]
     pub const fn set_erfda(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "Enhanced RX FIFO Watermark Indication Flag"]
+    #[doc = "Enhanced RX FIFO Watermark Indication Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn erfwmi(&self) -> super::vals::Erfwmi {
         let val = (self.0 >> 29usize) & 0x01;
         super::vals::Erfwmi::from_bits(val as u8)
     }
-    #[doc = "Enhanced RX FIFO Watermark Indication Flag"]
+    #[doc = "Enhanced RX FIFO Watermark Indication Flag."]
     #[inline(always)]
     pub const fn set_erfwmi(&mut self, val: super::vals::Erfwmi) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
-    #[doc = "Enhanced RX FIFO Overflow Flag"]
+    #[doc = "Enhanced RX FIFO Overflow Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn erfovf(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "Enhanced RX FIFO Overflow Flag"]
+    #[doc = "Enhanced RX FIFO Overflow Flag."]
     #[inline(always)]
     pub const fn set_erfovf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "Enhanced RX FIFO Underflow Flag"]
+    #[doc = "Enhanced RX FIFO Underflow Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn erfufw(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Enhanced RX FIFO Underflow Flag"]
+    #[doc = "Enhanced RX FIFO Underflow Flag."]
     #[inline(always)]
     pub const fn set_erfufw(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -6284,319 +6284,319 @@ impl defmt::Format for Erfsr {
         )
     }
 }
-#[doc = "Error and Status 1"]
+#[doc = "Error and Status 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Esr1(pub u32);
 impl Esr1 {
-    #[doc = "Wake-up Interrupt Flag"]
+    #[doc = "Wake-up Interrupt Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn wakint(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-up Interrupt Flag"]
+    #[doc = "Wake-up Interrupt Flag."]
     #[inline(always)]
     pub const fn set_wakint(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Error Interrupt Flag"]
+    #[doc = "Error Interrupt Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn errint(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Error Interrupt Flag"]
+    #[doc = "Error Interrupt Flag."]
     #[inline(always)]
     pub const fn set_errint(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Bus Off Interrupt Flag"]
+    #[doc = "Bus Off Interrupt Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn boffint(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Bus Off Interrupt Flag"]
+    #[doc = "Bus Off Interrupt Flag."]
     #[inline(always)]
     pub const fn set_boffint(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "FlexCAN in Reception Flag"]
+    #[doc = "FlexCAN in Reception Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn rx(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "FlexCAN in Reception Flag"]
+    #[doc = "FlexCAN in Reception Flag."]
     #[inline(always)]
     pub const fn set_rx(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "Fault Confinement State"]
+    #[doc = "Fault Confinement State."]
     #[must_use]
     #[inline(always)]
     pub const fn fltconf(&self) -> super::vals::Fltconf {
         let val = (self.0 >> 4usize) & 0x03;
         super::vals::Fltconf::from_bits(val as u8)
     }
-    #[doc = "Fault Confinement State"]
+    #[doc = "Fault Confinement State."]
     #[inline(always)]
     pub const fn set_fltconf(&mut self, val: super::vals::Fltconf) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
-    #[doc = "FlexCAN In Transmission"]
+    #[doc = "FlexCAN In Transmission."]
     #[must_use]
     #[inline(always)]
     pub const fn tx(&self) -> super::vals::Tx {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::Tx::from_bits(val as u8)
     }
-    #[doc = "FlexCAN In Transmission"]
+    #[doc = "FlexCAN In Transmission."]
     #[inline(always)]
     pub const fn set_tx(&mut self, val: super::vals::Tx) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "Idle"]
+    #[doc = "Idle."]
     #[must_use]
     #[inline(always)]
     pub const fn idle(&self) -> super::vals::Idle {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Idle::from_bits(val as u8)
     }
-    #[doc = "Idle"]
+    #[doc = "Idle."]
     #[inline(always)]
     pub const fn set_idle(&mut self, val: super::vals::Idle) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "RX Error Warning Flag"]
+    #[doc = "RX Error Warning Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn rxwrn(&self) -> super::vals::Rxwrn {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::Rxwrn::from_bits(val as u8)
     }
-    #[doc = "RX Error Warning Flag"]
+    #[doc = "RX Error Warning Flag."]
     #[inline(always)]
     pub const fn set_rxwrn(&mut self, val: super::vals::Rxwrn) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
-    #[doc = "TX Error Warning Flag"]
+    #[doc = "TX Error Warning Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn txwrn(&self) -> super::vals::Txwrn {
         let val = (self.0 >> 9usize) & 0x01;
         super::vals::Txwrn::from_bits(val as u8)
     }
-    #[doc = "TX Error Warning Flag"]
+    #[doc = "TX Error Warning Flag."]
     #[inline(always)]
     pub const fn set_txwrn(&mut self, val: super::vals::Txwrn) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
     }
-    #[doc = "Stuffing Error Flag"]
+    #[doc = "Stuffing Error Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn stferr(&self) -> super::vals::Stferr {
         let val = (self.0 >> 10usize) & 0x01;
         super::vals::Stferr::from_bits(val as u8)
     }
-    #[doc = "Stuffing Error Flag"]
+    #[doc = "Stuffing Error Flag."]
     #[inline(always)]
     pub const fn set_stferr(&mut self, val: super::vals::Stferr) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
-    #[doc = "Form Error Flag"]
+    #[doc = "Form Error Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn frmerr(&self) -> super::vals::Frmerr {
         let val = (self.0 >> 11usize) & 0x01;
         super::vals::Frmerr::from_bits(val as u8)
     }
-    #[doc = "Form Error Flag"]
+    #[doc = "Form Error Flag."]
     #[inline(always)]
     pub const fn set_frmerr(&mut self, val: super::vals::Frmerr) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
     }
-    #[doc = "Cyclic Redundancy Check Error Flag"]
+    #[doc = "Cyclic Redundancy Check Error Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn crcerr(&self) -> super::vals::Crcerr {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Crcerr::from_bits(val as u8)
     }
-    #[doc = "Cyclic Redundancy Check Error Flag"]
+    #[doc = "Cyclic Redundancy Check Error Flag."]
     #[inline(always)]
     pub const fn set_crcerr(&mut self, val: super::vals::Crcerr) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "Acknowledge Error Flag"]
+    #[doc = "Acknowledge Error Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn ackerr(&self) -> super::vals::Ackerr {
         let val = (self.0 >> 13usize) & 0x01;
         super::vals::Ackerr::from_bits(val as u8)
     }
-    #[doc = "Acknowledge Error Flag"]
+    #[doc = "Acknowledge Error Flag."]
     #[inline(always)]
     pub const fn set_ackerr(&mut self, val: super::vals::Ackerr) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
-    #[doc = "Bit0 Error Flag"]
+    #[doc = "Bit0 Error Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn bit0err(&self) -> super::vals::Bit0err {
         let val = (self.0 >> 14usize) & 0x01;
         super::vals::Bit0err::from_bits(val as u8)
     }
-    #[doc = "Bit0 Error Flag"]
+    #[doc = "Bit0 Error Flag."]
     #[inline(always)]
     pub const fn set_bit0err(&mut self, val: super::vals::Bit0err) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
     }
-    #[doc = "Bit1 Error Flag"]
+    #[doc = "Bit1 Error Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn bit1err(&self) -> super::vals::Bit1err {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::Bit1err::from_bits(val as u8)
     }
-    #[doc = "Bit1 Error Flag"]
+    #[doc = "Bit1 Error Flag."]
     #[inline(always)]
     pub const fn set_bit1err(&mut self, val: super::vals::Bit1err) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "RX Warning Interrupt Flag"]
+    #[doc = "RX Warning Interrupt Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn rwrnint(&self) -> super::vals::Rwrnint {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::Rwrnint::from_bits(val as u8)
     }
-    #[doc = "RX Warning Interrupt Flag"]
+    #[doc = "RX Warning Interrupt Flag."]
     #[inline(always)]
     pub const fn set_rwrnint(&mut self, val: super::vals::Rwrnint) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
     }
-    #[doc = "TX Warning Interrupt Flag"]
+    #[doc = "TX Warning Interrupt Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn twrnint(&self) -> super::vals::Twrnint {
         let val = (self.0 >> 17usize) & 0x01;
         super::vals::Twrnint::from_bits(val as u8)
     }
-    #[doc = "TX Warning Interrupt Flag"]
+    #[doc = "TX Warning Interrupt Flag."]
     #[inline(always)]
     pub const fn set_twrnint(&mut self, val: super::vals::Twrnint) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
     }
-    #[doc = "CAN Synchronization Status Flag"]
+    #[doc = "CAN Synchronization Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn synch(&self) -> super::vals::Synch {
         let val = (self.0 >> 18usize) & 0x01;
         super::vals::Synch::from_bits(val as u8)
     }
-    #[doc = "CAN Synchronization Status Flag"]
+    #[doc = "CAN Synchronization Status Flag."]
     #[inline(always)]
     pub const fn set_synch(&mut self, val: super::vals::Synch) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val.to_bits() as u32) & 0x01) << 18usize);
     }
-    #[doc = "Bus Off Done Interrupt Flag"]
+    #[doc = "Bus Off Done Interrupt Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn boffdoneint(&self) -> super::vals::Boffdoneint {
         let val = (self.0 >> 19usize) & 0x01;
         super::vals::Boffdoneint::from_bits(val as u8)
     }
-    #[doc = "Bus Off Done Interrupt Flag"]
+    #[doc = "Bus Off Done Interrupt Flag."]
     #[inline(always)]
     pub const fn set_boffdoneint(&mut self, val: super::vals::Boffdoneint) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val.to_bits() as u32) & 0x01) << 19usize);
     }
-    #[doc = "Fast Error Interrupt Flag"]
+    #[doc = "Fast Error Interrupt Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn errint_fast(&self) -> super::vals::ErrintFast {
         let val = (self.0 >> 20usize) & 0x01;
         super::vals::ErrintFast::from_bits(val as u8)
     }
-    #[doc = "Fast Error Interrupt Flag"]
+    #[doc = "Fast Error Interrupt Flag."]
     #[inline(always)]
     pub const fn set_errint_fast(&mut self, val: super::vals::ErrintFast) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
     }
-    #[doc = "Error Overrun Flag"]
+    #[doc = "Error Overrun Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn errovr(&self) -> super::vals::Errovr {
         let val = (self.0 >> 21usize) & 0x01;
         super::vals::Errovr::from_bits(val as u8)
     }
-    #[doc = "Error Overrun Flag"]
+    #[doc = "Error Overrun Flag."]
     #[inline(always)]
     pub const fn set_errovr(&mut self, val: super::vals::Errovr) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
     }
-    #[doc = "Fast Stuffing Error Flag"]
+    #[doc = "Fast Stuffing Error Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn stferr_fast(&self) -> super::vals::StferrFast {
         let val = (self.0 >> 26usize) & 0x01;
         super::vals::StferrFast::from_bits(val as u8)
     }
-    #[doc = "Fast Stuffing Error Flag"]
+    #[doc = "Fast Stuffing Error Flag."]
     #[inline(always)]
     pub const fn set_stferr_fast(&mut self, val: super::vals::StferrFast) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
     }
-    #[doc = "Fast Form Error Flag"]
+    #[doc = "Fast Form Error Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn frmerr_fast(&self) -> super::vals::FrmerrFast {
         let val = (self.0 >> 27usize) & 0x01;
         super::vals::FrmerrFast::from_bits(val as u8)
     }
-    #[doc = "Fast Form Error Flag"]
+    #[doc = "Fast Form Error Flag."]
     #[inline(always)]
     pub const fn set_frmerr_fast(&mut self, val: super::vals::FrmerrFast) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val.to_bits() as u32) & 0x01) << 27usize);
     }
-    #[doc = "Fast Cyclic Redundancy Check Error Flag"]
+    #[doc = "Fast Cyclic Redundancy Check Error Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn crcerr_fast(&self) -> super::vals::CrcerrFast {
         let val = (self.0 >> 28usize) & 0x01;
         super::vals::CrcerrFast::from_bits(val as u8)
     }
-    #[doc = "Fast Cyclic Redundancy Check Error Flag"]
+    #[doc = "Fast Cyclic Redundancy Check Error Flag."]
     #[inline(always)]
     pub const fn set_crcerr_fast(&mut self, val: super::vals::CrcerrFast) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
     }
-    #[doc = "Fast Bit0 Error Flag"]
+    #[doc = "Fast Bit0 Error Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn bit0err_fast(&self) -> super::vals::Bit0errFast {
         let val = (self.0 >> 30usize) & 0x01;
         super::vals::Bit0errFast::from_bits(val as u8)
     }
-    #[doc = "Fast Bit0 Error Flag"]
+    #[doc = "Fast Bit0 Error Flag."]
     #[inline(always)]
     pub const fn set_bit0err_fast(&mut self, val: super::vals::Bit0errFast) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
-    #[doc = "Fast Bit1 Error Flag"]
+    #[doc = "Fast Bit1 Error Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn bit1err_fast(&self) -> super::vals::Bit1errFast {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::Bit1errFast::from_bits(val as u8)
     }
-    #[doc = "Fast Bit1 Error Flag"]
+    #[doc = "Fast Bit1 Error Flag."]
     #[inline(always)]
     pub const fn set_bit1err_fast(&mut self, val: super::vals::Bit1errFast) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -6675,43 +6675,43 @@ impl defmt::Format for Esr1 {
         )
     }
 }
-#[doc = "Error and Status 2"]
+#[doc = "Error and Status 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Esr2(pub u32);
 impl Esr2 {
-    #[doc = "Inactive Message Buffer"]
+    #[doc = "Inactive Message Buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn imb(&self) -> super::vals::Imb {
         let val = (self.0 >> 13usize) & 0x01;
         super::vals::Imb::from_bits(val as u8)
     }
-    #[doc = "Inactive Message Buffer"]
+    #[doc = "Inactive Message Buffer."]
     #[inline(always)]
     pub const fn set_imb(&mut self, val: super::vals::Imb) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
-    #[doc = "Valid Priority Status"]
+    #[doc = "Valid Priority Status."]
     #[must_use]
     #[inline(always)]
     pub const fn vps(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "Valid Priority Status"]
+    #[doc = "Valid Priority Status."]
     #[inline(always)]
     pub const fn set_vps(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Lowest Priority TX Message Buffer"]
+    #[doc = "Lowest Priority TX Message Buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn lptm(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x7f;
         val as u8
     }
-    #[doc = "Lowest Priority TX Message Buffer"]
+    #[doc = "Lowest Priority TX Message Buffer."]
     #[inline(always)]
     pub const fn set_lptm(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 16usize)) | (((val as u32) & 0x7f) << 16usize);
@@ -6744,67 +6744,67 @@ impl defmt::Format for Esr2 {
         )
     }
 }
-#[doc = "Enhanced Transceiver Delay Compensation"]
+#[doc = "Enhanced Transceiver Delay Compensation."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Etdc(pub u32);
 impl Etdc {
-    #[doc = "Enhanced Transceiver Delay Compensation Value"]
+    #[doc = "Enhanced Transceiver Delay Compensation Value."]
     #[must_use]
     #[inline(always)]
     pub const fn etdcval(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Enhanced Transceiver Delay Compensation Value"]
+    #[doc = "Enhanced Transceiver Delay Compensation Value."]
     #[inline(always)]
     pub const fn set_etdcval(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "Transceiver Delay Compensation Fail"]
+    #[doc = "Transceiver Delay Compensation Fail."]
     #[must_use]
     #[inline(always)]
     pub const fn etdcfail(&self) -> super::vals::Etdcfail {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::Etdcfail::from_bits(val as u8)
     }
-    #[doc = "Transceiver Delay Compensation Fail"]
+    #[doc = "Transceiver Delay Compensation Fail."]
     #[inline(always)]
     pub const fn set_etdcfail(&mut self, val: super::vals::Etdcfail) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "Enhanced Transceiver Delay Compensation Offset"]
+    #[doc = "Enhanced Transceiver Delay Compensation Offset."]
     #[must_use]
     #[inline(always)]
     pub const fn etdcoff(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x7f;
         val as u8
     }
-    #[doc = "Enhanced Transceiver Delay Compensation Offset"]
+    #[doc = "Enhanced Transceiver Delay Compensation Offset."]
     #[inline(always)]
     pub const fn set_etdcoff(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 16usize)) | (((val as u32) & 0x7f) << 16usize);
     }
-    #[doc = "Transceiver Delay Measurement Disable"]
+    #[doc = "Transceiver Delay Measurement Disable."]
     #[must_use]
     #[inline(always)]
     pub const fn tdmdis(&self) -> super::vals::Tdmdis {
         let val = (self.0 >> 30usize) & 0x01;
         super::vals::Tdmdis::from_bits(val as u8)
     }
-    #[doc = "Transceiver Delay Measurement Disable"]
+    #[doc = "Transceiver Delay Measurement Disable."]
     #[inline(always)]
     pub const fn set_tdmdis(&mut self, val: super::vals::Tdmdis) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
-    #[doc = "Transceiver Delay Compensation Enable"]
+    #[doc = "Transceiver Delay Compensation Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn etdcen(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Transceiver Delay Compensation Enable"]
+    #[doc = "Transceiver Delay Compensation Enable."]
     #[inline(always)]
     pub const fn set_etdcen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -6841,67 +6841,67 @@ impl defmt::Format for Etdc {
         )
     }
 }
-#[doc = "CAN FD Bit Timing"]
+#[doc = "CAN FD Bit Timing."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Fdcbt(pub u32);
 impl Fdcbt {
-    #[doc = "Fast Phase Segment 2"]
+    #[doc = "Fast Phase Segment 2."]
     #[must_use]
     #[inline(always)]
     pub const fn fpseg2(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x07;
         val as u8
     }
-    #[doc = "Fast Phase Segment 2"]
+    #[doc = "Fast Phase Segment 2."]
     #[inline(always)]
     pub const fn set_fpseg2(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val as u32) & 0x07) << 0usize);
     }
-    #[doc = "Fast Phase Segment 1"]
+    #[doc = "Fast Phase Segment 1."]
     #[must_use]
     #[inline(always)]
     pub const fn fpseg1(&self) -> u8 {
         let val = (self.0 >> 5usize) & 0x07;
         val as u8
     }
-    #[doc = "Fast Phase Segment 1"]
+    #[doc = "Fast Phase Segment 1."]
     #[inline(always)]
     pub const fn set_fpseg1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 5usize)) | (((val as u32) & 0x07) << 5usize);
     }
-    #[doc = "Fast Propagation Segment"]
+    #[doc = "Fast Propagation Segment."]
     #[must_use]
     #[inline(always)]
     pub const fn fpropseg(&self) -> u8 {
         let val = (self.0 >> 10usize) & 0x1f;
         val as u8
     }
-    #[doc = "Fast Propagation Segment"]
+    #[doc = "Fast Propagation Segment."]
     #[inline(always)]
     pub const fn set_fpropseg(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 10usize)) | (((val as u32) & 0x1f) << 10usize);
     }
-    #[doc = "Fast Resync Jump Width"]
+    #[doc = "Fast Resync Jump Width."]
     #[must_use]
     #[inline(always)]
     pub const fn frjw(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x07;
         val as u8
     }
-    #[doc = "Fast Resync Jump Width"]
+    #[doc = "Fast Resync Jump Width."]
     #[inline(always)]
     pub const fn set_frjw(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 16usize)) | (((val as u32) & 0x07) << 16usize);
     }
-    #[doc = "Fast Prescaler Division Factor"]
+    #[doc = "Fast Prescaler Division Factor."]
     #[must_use]
     #[inline(always)]
     pub const fn fpresdiv(&self) -> u16 {
         let val = (self.0 >> 20usize) & 0x03ff;
         val as u16
     }
-    #[doc = "Fast Prescaler Division Factor"]
+    #[doc = "Fast Prescaler Division Factor."]
     #[inline(always)]
     pub const fn set_fpresdiv(&mut self, val: u16) {
         self.0 = (self.0 & !(0x03ff << 20usize)) | (((val as u32) & 0x03ff) << 20usize);
@@ -6938,31 +6938,31 @@ impl defmt::Format for Fdcbt {
         )
     }
 }
-#[doc = "CAN FD CRC"]
+#[doc = "CAN FD CRC."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Fdcrc(pub u32);
 impl Fdcrc {
-    #[doc = "Extended Transmitted CRC value"]
+    #[doc = "Extended Transmitted CRC value."]
     #[must_use]
     #[inline(always)]
     pub const fn fd_txcrc(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x001f_ffff;
         val as u32
     }
-    #[doc = "Extended Transmitted CRC value"]
+    #[doc = "Extended Transmitted CRC value."]
     #[inline(always)]
     pub const fn set_fd_txcrc(&mut self, val: u32) {
         self.0 = (self.0 & !(0x001f_ffff << 0usize)) | (((val as u32) & 0x001f_ffff) << 0usize);
     }
-    #[doc = "CRC Message Buffer Number for FD_TXCRC"]
+    #[doc = "CRC Message Buffer Number for FD_TXCRC."]
     #[must_use]
     #[inline(always)]
     pub const fn fd_mbcrc(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0x7f;
         val as u8
     }
-    #[doc = "CRC Message Buffer Number for FD_TXCRC"]
+    #[doc = "CRC Message Buffer Number for FD_TXCRC."]
     #[inline(always)]
     pub const fn set_fd_mbcrc(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 24usize)) | (((val as u32) & 0x7f) << 24usize);
@@ -6993,79 +6993,79 @@ impl defmt::Format for Fdcrc {
         )
     }
 }
-#[doc = "CAN FD Control"]
+#[doc = "CAN FD Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Fdctrl(pub u32);
 impl Fdctrl {
-    #[doc = "Transceiver Delay Compensation Value"]
+    #[doc = "Transceiver Delay Compensation Value."]
     #[must_use]
     #[inline(always)]
     pub const fn tdcval(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x3f;
         val as u8
     }
-    #[doc = "Transceiver Delay Compensation Value"]
+    #[doc = "Transceiver Delay Compensation Value."]
     #[inline(always)]
     pub const fn set_tdcval(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val as u32) & 0x3f) << 0usize);
     }
-    #[doc = "Transceiver Delay Compensation Offset"]
+    #[doc = "Transceiver Delay Compensation Offset."]
     #[must_use]
     #[inline(always)]
     pub const fn tdcoff(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x1f;
         val as u8
     }
-    #[doc = "Transceiver Delay Compensation Offset"]
+    #[doc = "Transceiver Delay Compensation Offset."]
     #[inline(always)]
     pub const fn set_tdcoff(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 8usize)) | (((val as u32) & 0x1f) << 8usize);
     }
-    #[doc = "Transceiver Delay Compensation Fail"]
+    #[doc = "Transceiver Delay Compensation Fail."]
     #[must_use]
     #[inline(always)]
     pub const fn tdcfail(&self) -> super::vals::Tdcfail {
         let val = (self.0 >> 14usize) & 0x01;
         super::vals::Tdcfail::from_bits(val as u8)
     }
-    #[doc = "Transceiver Delay Compensation Fail"]
+    #[doc = "Transceiver Delay Compensation Fail."]
     #[inline(always)]
     pub const fn set_tdcfail(&mut self, val: super::vals::Tdcfail) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
     }
-    #[doc = "Transceiver Delay Compensation Enable"]
+    #[doc = "Transceiver Delay Compensation Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn tdcen(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Transceiver Delay Compensation Enable"]
+    #[doc = "Transceiver Delay Compensation Enable."]
     #[inline(always)]
     pub const fn set_tdcen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "Message Buffer Data Size for Region 0"]
+    #[doc = "Message Buffer Data Size for Region 0."]
     #[must_use]
     #[inline(always)]
     pub const fn mbdsr0(&self) -> super::vals::Mbdsr0 {
         let val = (self.0 >> 16usize) & 0x03;
         super::vals::Mbdsr0::from_bits(val as u8)
     }
-    #[doc = "Message Buffer Data Size for Region 0"]
+    #[doc = "Message Buffer Data Size for Region 0."]
     #[inline(always)]
     pub const fn set_mbdsr0(&mut self, val: super::vals::Mbdsr0) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
-    #[doc = "Bit Rate Switch Enable"]
+    #[doc = "Bit Rate Switch Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn fdrate(&self) -> super::vals::Fdrate {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::Fdrate::from_bits(val as u8)
     }
-    #[doc = "Bit Rate Switch Enable"]
+    #[doc = "Bit Rate Switch Enable."]
     #[inline(always)]
     pub const fn set_fdrate(&mut self, val: super::vals::Fdrate) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -7104,31 +7104,31 @@ impl defmt::Format for Fdctrl {
         )
     }
 }
-#[doc = "Pretended Networking Data Length Code (DLC) Filter"]
+#[doc = "Pretended Networking Data Length Code (DLC) Filter."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FltDlc(pub u32);
 impl FltDlc {
-    #[doc = "Upper Limit for Length of Data Bytes Filter"]
+    #[doc = "Upper Limit for Length of Data Bytes Filter."]
     #[must_use]
     #[inline(always)]
     pub const fn flt_dlc_hi(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "Upper Limit for Length of Data Bytes Filter"]
+    #[doc = "Upper Limit for Length of Data Bytes Filter."]
     #[inline(always)]
     pub const fn set_flt_dlc_hi(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Lower Limit for Length of Data Bytes Filter"]
+    #[doc = "Lower Limit for Length of Data Bytes Filter."]
     #[must_use]
     #[inline(always)]
     pub const fn flt_dlc_lo(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x0f;
         val as u8
     }
-    #[doc = "Lower Limit for Length of Data Bytes Filter"]
+    #[doc = "Lower Limit for Length of Data Bytes Filter."]
     #[inline(always)]
     pub const fn set_flt_dlc_lo(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
@@ -7159,43 +7159,43 @@ impl defmt::Format for FltDlc {
         )
     }
 }
-#[doc = "Pretended Networking ID Filter 1"]
+#[doc = "Pretended Networking ID Filter 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FltId1(pub u32);
 impl FltId1 {
-    #[doc = "ID Filter 1 for Pretended Networking filtering"]
+    #[doc = "ID Filter 1 for Pretended Networking filtering."]
     #[must_use]
     #[inline(always)]
     pub const fn flt_id1(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x1fff_ffff;
         val as u32
     }
-    #[doc = "ID Filter 1 for Pretended Networking filtering"]
+    #[doc = "ID Filter 1 for Pretended Networking filtering."]
     #[inline(always)]
     pub const fn set_flt_id1(&mut self, val: u32) {
         self.0 = (self.0 & !(0x1fff_ffff << 0usize)) | (((val as u32) & 0x1fff_ffff) << 0usize);
     }
-    #[doc = "Remote Transmission Request Filter"]
+    #[doc = "Remote Transmission Request Filter."]
     #[must_use]
     #[inline(always)]
     pub const fn flt_rtr(&self) -> super::vals::FltRtr {
         let val = (self.0 >> 29usize) & 0x01;
         super::vals::FltRtr::from_bits(val as u8)
     }
-    #[doc = "Remote Transmission Request Filter"]
+    #[doc = "Remote Transmission Request Filter."]
     #[inline(always)]
     pub const fn set_flt_rtr(&mut self, val: super::vals::FltRtr) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
-    #[doc = "ID Extended Filter"]
+    #[doc = "ID Extended Filter."]
     #[must_use]
     #[inline(always)]
     pub const fn flt_ide(&self) -> super::vals::FltIde {
         let val = (self.0 >> 30usize) & 0x01;
         super::vals::FltIde::from_bits(val as u8)
     }
-    #[doc = "ID Extended Filter"]
+    #[doc = "ID Extended Filter."]
     #[inline(always)]
     pub const fn set_flt_ide(&mut self, val: super::vals::FltIde) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
@@ -7228,43 +7228,43 @@ impl defmt::Format for FltId1 {
         )
     }
 }
-#[doc = "Pretended Networking ID Filter 2 or ID Mask"]
+#[doc = "Pretended Networking ID Filter 2 or ID Mask."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FltId2Idmask(pub u32);
 impl FltId2Idmask {
-    #[doc = "ID Filter 2 for Pretended Networking Filtering or ID Mask Bits for Pretended Networking ID Filtering"]
+    #[doc = "ID Filter 2 for Pretended Networking Filtering or ID Mask Bits for Pretended Networking ID Filtering."]
     #[must_use]
     #[inline(always)]
     pub const fn flt_id2_idmask(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x1fff_ffff;
         val as u32
     }
-    #[doc = "ID Filter 2 for Pretended Networking Filtering or ID Mask Bits for Pretended Networking ID Filtering"]
+    #[doc = "ID Filter 2 for Pretended Networking Filtering or ID Mask Bits for Pretended Networking ID Filtering."]
     #[inline(always)]
     pub const fn set_flt_id2_idmask(&mut self, val: u32) {
         self.0 = (self.0 & !(0x1fff_ffff << 0usize)) | (((val as u32) & 0x1fff_ffff) << 0usize);
     }
-    #[doc = "Remote Transmission Request Mask"]
+    #[doc = "Remote Transmission Request Mask."]
     #[must_use]
     #[inline(always)]
     pub const fn rtr_msk(&self) -> super::vals::RtrMsk {
         let val = (self.0 >> 29usize) & 0x01;
         super::vals::RtrMsk::from_bits(val as u8)
     }
-    #[doc = "Remote Transmission Request Mask"]
+    #[doc = "Remote Transmission Request Mask."]
     #[inline(always)]
     pub const fn set_rtr_msk(&mut self, val: super::vals::RtrMsk) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
-    #[doc = "ID Extended Mask"]
+    #[doc = "ID Extended Mask."]
     #[must_use]
     #[inline(always)]
     pub const fn ide_msk(&self) -> super::vals::IdeMsk {
         let val = (self.0 >> 30usize) & 0x01;
         super::vals::IdeMsk::from_bits(val as u8)
     }
-    #[doc = "ID Extended Mask"]
+    #[doc = "ID Extended Mask."]
     #[inline(always)]
     pub const fn set_ide_msk(&mut self, val: super::vals::IdeMsk) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
@@ -7297,7 +7297,7 @@ impl defmt::Format for FltId2Idmask {
         )
     }
 }
-#[doc = "Message Buffer 0 ID Register"]
+#[doc = "Message Buffer 0 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Id0(pub u32);
@@ -7366,7 +7366,7 @@ impl defmt::Format for Id0 {
         )
     }
 }
-#[doc = "Message Buffer 1 ID Register"]
+#[doc = "Message Buffer 1 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Id1(pub u32);
@@ -7435,7 +7435,7 @@ impl defmt::Format for Id1 {
         )
     }
 }
-#[doc = "Message Buffer 10 ID Register"]
+#[doc = "Message Buffer 10 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Id10(pub u32);
@@ -7504,7 +7504,7 @@ impl defmt::Format for Id10 {
         )
     }
 }
-#[doc = "Message Buffer 11 ID Register"]
+#[doc = "Message Buffer 11 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Id11(pub u32);
@@ -7573,7 +7573,7 @@ impl defmt::Format for Id11 {
         )
     }
 }
-#[doc = "Message Buffer 12 ID Register"]
+#[doc = "Message Buffer 12 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Id12(pub u32);
@@ -7642,7 +7642,7 @@ impl defmt::Format for Id12 {
         )
     }
 }
-#[doc = "Message Buffer 13 ID Register"]
+#[doc = "Message Buffer 13 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Id13(pub u32);
@@ -7711,7 +7711,7 @@ impl defmt::Format for Id13 {
         )
     }
 }
-#[doc = "Message Buffer 14 ID Register"]
+#[doc = "Message Buffer 14 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Id14(pub u32);
@@ -7780,7 +7780,7 @@ impl defmt::Format for Id14 {
         )
     }
 }
-#[doc = "Message Buffer 15 ID Register"]
+#[doc = "Message Buffer 15 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Id15(pub u32);
@@ -7849,7 +7849,7 @@ impl defmt::Format for Id15 {
         )
     }
 }
-#[doc = "Message Buffer 16 ID Register"]
+#[doc = "Message Buffer 16 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Id16(pub u32);
@@ -7918,7 +7918,7 @@ impl defmt::Format for Id16 {
         )
     }
 }
-#[doc = "Message Buffer 17 ID Register"]
+#[doc = "Message Buffer 17 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Id17(pub u32);
@@ -7987,7 +7987,7 @@ impl defmt::Format for Id17 {
         )
     }
 }
-#[doc = "Message Buffer 18 ID Register"]
+#[doc = "Message Buffer 18 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Id18(pub u32);
@@ -8056,7 +8056,7 @@ impl defmt::Format for Id18 {
         )
     }
 }
-#[doc = "Message Buffer 19 ID Register"]
+#[doc = "Message Buffer 19 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Id19(pub u32);
@@ -8125,7 +8125,7 @@ impl defmt::Format for Id19 {
         )
     }
 }
-#[doc = "Message Buffer 2 ID Register"]
+#[doc = "Message Buffer 2 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Id2(pub u32);
@@ -8194,7 +8194,7 @@ impl defmt::Format for Id2 {
         )
     }
 }
-#[doc = "Message Buffer 20 ID Register"]
+#[doc = "Message Buffer 20 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Id20(pub u32);
@@ -8263,7 +8263,7 @@ impl defmt::Format for Id20 {
         )
     }
 }
-#[doc = "Message Buffer 21 ID Register"]
+#[doc = "Message Buffer 21 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Id21(pub u32);
@@ -8332,7 +8332,7 @@ impl defmt::Format for Id21 {
         )
     }
 }
-#[doc = "Message Buffer 22 ID Register"]
+#[doc = "Message Buffer 22 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Id22(pub u32);
@@ -8401,7 +8401,7 @@ impl defmt::Format for Id22 {
         )
     }
 }
-#[doc = "Message Buffer 23 ID Register"]
+#[doc = "Message Buffer 23 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Id23(pub u32);
@@ -8470,7 +8470,7 @@ impl defmt::Format for Id23 {
         )
     }
 }
-#[doc = "Message Buffer 24 ID Register"]
+#[doc = "Message Buffer 24 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Id24(pub u32);
@@ -8539,7 +8539,7 @@ impl defmt::Format for Id24 {
         )
     }
 }
-#[doc = "Message Buffer 25 ID Register"]
+#[doc = "Message Buffer 25 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Id25(pub u32);
@@ -8608,7 +8608,7 @@ impl defmt::Format for Id25 {
         )
     }
 }
-#[doc = "Message Buffer 26 ID Register"]
+#[doc = "Message Buffer 26 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Id26(pub u32);
@@ -8677,7 +8677,7 @@ impl defmt::Format for Id26 {
         )
     }
 }
-#[doc = "Message Buffer 27 ID Register"]
+#[doc = "Message Buffer 27 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Id27(pub u32);
@@ -8746,7 +8746,7 @@ impl defmt::Format for Id27 {
         )
     }
 }
-#[doc = "Message Buffer 28 ID Register"]
+#[doc = "Message Buffer 28 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Id28(pub u32);
@@ -8815,7 +8815,7 @@ impl defmt::Format for Id28 {
         )
     }
 }
-#[doc = "Message Buffer 29 ID Register"]
+#[doc = "Message Buffer 29 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Id29(pub u32);
@@ -8884,7 +8884,7 @@ impl defmt::Format for Id29 {
         )
     }
 }
-#[doc = "Message Buffer 3 ID Register"]
+#[doc = "Message Buffer 3 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Id3(pub u32);
@@ -8953,7 +8953,7 @@ impl defmt::Format for Id3 {
         )
     }
 }
-#[doc = "Message Buffer 30 ID Register"]
+#[doc = "Message Buffer 30 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Id30(pub u32);
@@ -9022,7 +9022,7 @@ impl defmt::Format for Id30 {
         )
     }
 }
-#[doc = "Message Buffer 31 ID Register"]
+#[doc = "Message Buffer 31 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Id31(pub u32);
@@ -9091,7 +9091,7 @@ impl defmt::Format for Id31 {
         )
     }
 }
-#[doc = "Message Buffer 4 ID Register"]
+#[doc = "Message Buffer 4 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Id4(pub u32);
@@ -9160,7 +9160,7 @@ impl defmt::Format for Id4 {
         )
     }
 }
-#[doc = "Message Buffer 5 ID Register"]
+#[doc = "Message Buffer 5 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Id5(pub u32);
@@ -9229,7 +9229,7 @@ impl defmt::Format for Id5 {
         )
     }
 }
-#[doc = "Message Buffer 6 ID Register"]
+#[doc = "Message Buffer 6 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Id6(pub u32);
@@ -9298,7 +9298,7 @@ impl defmt::Format for Id6 {
         )
     }
 }
-#[doc = "Message Buffer 7 ID Register"]
+#[doc = "Message Buffer 7 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Id7(pub u32);
@@ -9367,7 +9367,7 @@ impl defmt::Format for Id7 {
         )
     }
 }
-#[doc = "Message Buffer 8 ID Register"]
+#[doc = "Message Buffer 8 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Id8(pub u32);
@@ -9436,7 +9436,7 @@ impl defmt::Format for Id8 {
         )
     }
 }
-#[doc = "Message Buffer 9 ID Register"]
+#[doc = "Message Buffer 9 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Id9(pub u32);
@@ -9505,79 +9505,79 @@ impl defmt::Format for Id9 {
         )
     }
 }
-#[doc = "Interrupt Flags 1"]
+#[doc = "Interrupt Flags 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Iflag1(pub u32);
 impl Iflag1 {
-    #[doc = "Buffer MB0 Interrupt or Clear Legacy FIFO bit"]
+    #[doc = "Buffer MB0 Interrupt or Clear Legacy FIFO bit."]
     #[must_use]
     #[inline(always)]
     pub const fn buf0i(&self) -> super::vals::Buf0i {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Buf0i::from_bits(val as u8)
     }
-    #[doc = "Buffer MB0 Interrupt or Clear Legacy FIFO bit"]
+    #[doc = "Buffer MB0 Interrupt or Clear Legacy FIFO bit."]
     #[inline(always)]
     pub const fn set_buf0i(&mut self, val: super::vals::Buf0i) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Buffer MBi Interrupt or Reserved"]
+    #[doc = "Buffer MBi Interrupt or Reserved."]
     #[must_use]
     #[inline(always)]
     pub const fn buf4to1i(&self) -> u8 {
         let val = (self.0 >> 1usize) & 0x0f;
         val as u8
     }
-    #[doc = "Buffer MBi Interrupt or Reserved"]
+    #[doc = "Buffer MBi Interrupt or Reserved."]
     #[inline(always)]
     pub const fn set_buf4to1i(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 1usize)) | (((val as u32) & 0x0f) << 1usize);
     }
-    #[doc = "Buffer MB5 Interrupt or Frames available in Legacy RX FIFO"]
+    #[doc = "Buffer MB5 Interrupt or Frames available in Legacy RX FIFO."]
     #[must_use]
     #[inline(always)]
     pub const fn buf5i(&self) -> super::vals::Buf5i {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::Buf5i::from_bits(val as u8)
     }
-    #[doc = "Buffer MB5 Interrupt or Frames available in Legacy RX FIFO"]
+    #[doc = "Buffer MB5 Interrupt or Frames available in Legacy RX FIFO."]
     #[inline(always)]
     pub const fn set_buf5i(&mut self, val: super::vals::Buf5i) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
-    #[doc = "Buffer MB6 Interrupt or Legacy RX FIFO Warning"]
+    #[doc = "Buffer MB6 Interrupt or Legacy RX FIFO Warning."]
     #[must_use]
     #[inline(always)]
     pub const fn buf6i(&self) -> super::vals::Buf6i {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::Buf6i::from_bits(val as u8)
     }
-    #[doc = "Buffer MB6 Interrupt or Legacy RX FIFO Warning"]
+    #[doc = "Buffer MB6 Interrupt or Legacy RX FIFO Warning."]
     #[inline(always)]
     pub const fn set_buf6i(&mut self, val: super::vals::Buf6i) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "Buffer MB7 Interrupt or Legacy RX FIFO Overflow"]
+    #[doc = "Buffer MB7 Interrupt or Legacy RX FIFO Overflow."]
     #[must_use]
     #[inline(always)]
     pub const fn buf7i(&self) -> super::vals::Buf7i {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Buf7i::from_bits(val as u8)
     }
-    #[doc = "Buffer MB7 Interrupt or Legacy RX FIFO Overflow"]
+    #[doc = "Buffer MB7 Interrupt or Legacy RX FIFO Overflow."]
     #[inline(always)]
     pub const fn set_buf7i(&mut self, val: super::vals::Buf7i) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "Buffer MBi Interrupt"]
+    #[doc = "Buffer MBi Interrupt."]
     #[must_use]
     #[inline(always)]
     pub const fn buf31to8i(&self) -> u32 {
         let val = (self.0 >> 8usize) & 0x00ff_ffff;
         val as u32
     }
-    #[doc = "Buffer MBi Interrupt"]
+    #[doc = "Buffer MBi Interrupt."]
     #[inline(always)]
     pub const fn set_buf31to8i(&mut self, val: u32) {
         self.0 = (self.0 & !(0x00ff_ffff << 8usize)) | (((val as u32) & 0x00ff_ffff) << 8usize);
@@ -9616,19 +9616,19 @@ impl defmt::Format for Iflag1 {
         )
     }
 }
-#[doc = "Interrupt Masks 1"]
+#[doc = "Interrupt Masks 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Imask1(pub u32);
 impl Imask1 {
-    #[doc = "Buffer MBi Mask"]
+    #[doc = "Buffer MBi Mask."]
     #[must_use]
     #[inline(always)]
     pub const fn buf31to0m(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Buffer MBi Mask"]
+    #[doc = "Buffer MBi Mask."]
     #[inline(always)]
     pub const fn set_buf31to0m(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -9653,7 +9653,7 @@ impl defmt::Format for Imask1 {
         defmt::write!(f, "Imask1 {{ buf31to0m: {=u32:?} }}", self.buf31to0m())
     }
 }
-#[doc = "Message Buffer 0 CS Register"]
+#[doc = "Message Buffer 0 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb016bCs(pub u32);
@@ -9806,7 +9806,7 @@ impl defmt::Format for Mb016bCs {
         )
     }
 }
-#[doc = "Message Buffer 0 ID Register"]
+#[doc = "Message Buffer 0 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb016bId(pub u32);
@@ -9875,7 +9875,7 @@ impl defmt::Format for Mb016bId {
         )
     }
 }
-#[doc = "Message Buffer 0 WORD_16B Register"]
+#[doc = "Message Buffer 0 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb016bWord0(pub u32);
@@ -9958,7 +9958,7 @@ impl defmt::Format for Mb016bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 0 WORD_16B Register"]
+#[doc = "Message Buffer 0 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb016bWord1(pub u32);
@@ -10041,7 +10041,7 @@ impl defmt::Format for Mb016bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 0 WORD_16B Register"]
+#[doc = "Message Buffer 0 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb016bWord2(pub u32);
@@ -10124,7 +10124,7 @@ impl defmt::Format for Mb016bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 0 WORD_16B Register"]
+#[doc = "Message Buffer 0 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb016bWord3(pub u32);
@@ -10207,7 +10207,7 @@ impl defmt::Format for Mb016bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 0 CS Register"]
+#[doc = "Message Buffer 0 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb032bCs(pub u32);
@@ -10360,7 +10360,7 @@ impl defmt::Format for Mb032bCs {
         )
     }
 }
-#[doc = "Message Buffer 0 ID Register"]
+#[doc = "Message Buffer 0 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb032bId(pub u32);
@@ -10429,7 +10429,7 @@ impl defmt::Format for Mb032bId {
         )
     }
 }
-#[doc = "Message Buffer 0 WORD_32B Register"]
+#[doc = "Message Buffer 0 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb032bWord0(pub u32);
@@ -10512,7 +10512,7 @@ impl defmt::Format for Mb032bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 0 WORD_32B Register"]
+#[doc = "Message Buffer 0 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb032bWord1(pub u32);
@@ -10595,7 +10595,7 @@ impl defmt::Format for Mb032bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 0 WORD_32B Register"]
+#[doc = "Message Buffer 0 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb032bWord2(pub u32);
@@ -10678,7 +10678,7 @@ impl defmt::Format for Mb032bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 0 WORD_32B Register"]
+#[doc = "Message Buffer 0 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb032bWord3(pub u32);
@@ -10761,7 +10761,7 @@ impl defmt::Format for Mb032bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 0 WORD_32B Register"]
+#[doc = "Message Buffer 0 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb032bWord4(pub u32);
@@ -10844,7 +10844,7 @@ impl defmt::Format for Mb032bWord4 {
         )
     }
 }
-#[doc = "Message Buffer 0 WORD_32B Register"]
+#[doc = "Message Buffer 0 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb032bWord5(pub u32);
@@ -10927,7 +10927,7 @@ impl defmt::Format for Mb032bWord5 {
         )
     }
 }
-#[doc = "Message Buffer 0 WORD_32B Register"]
+#[doc = "Message Buffer 0 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb032bWord6(pub u32);
@@ -11010,7 +11010,7 @@ impl defmt::Format for Mb032bWord6 {
         )
     }
 }
-#[doc = "Message Buffer 0 WORD_32B Register"]
+#[doc = "Message Buffer 0 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb032bWord7(pub u32);
@@ -11093,7 +11093,7 @@ impl defmt::Format for Mb032bWord7 {
         )
     }
 }
-#[doc = "Message Buffer 0 CS Register"]
+#[doc = "Message Buffer 0 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb064bCs(pub u32);
@@ -11246,7 +11246,7 @@ impl defmt::Format for Mb064bCs {
         )
     }
 }
-#[doc = "Message Buffer 0 ID Register"]
+#[doc = "Message Buffer 0 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb064bId(pub u32);
@@ -11315,7 +11315,7 @@ impl defmt::Format for Mb064bId {
         )
     }
 }
-#[doc = "Message Buffer 0 WORD_64B Register"]
+#[doc = "Message Buffer 0 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb064bWord0(pub u32);
@@ -11398,7 +11398,7 @@ impl defmt::Format for Mb064bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 0 WORD_64B Register"]
+#[doc = "Message Buffer 0 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb064bWord1(pub u32);
@@ -11481,7 +11481,7 @@ impl defmt::Format for Mb064bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 0 WORD_64B Register"]
+#[doc = "Message Buffer 0 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb064bWord10(pub u32);
@@ -11564,7 +11564,7 @@ impl defmt::Format for Mb064bWord10 {
         )
     }
 }
-#[doc = "Message Buffer 0 WORD_64B Register"]
+#[doc = "Message Buffer 0 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb064bWord11(pub u32);
@@ -11647,7 +11647,7 @@ impl defmt::Format for Mb064bWord11 {
         )
     }
 }
-#[doc = "Message Buffer 0 WORD_64B Register"]
+#[doc = "Message Buffer 0 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb064bWord12(pub u32);
@@ -11730,7 +11730,7 @@ impl defmt::Format for Mb064bWord12 {
         )
     }
 }
-#[doc = "Message Buffer 0 WORD_64B Register"]
+#[doc = "Message Buffer 0 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb064bWord13(pub u32);
@@ -11813,7 +11813,7 @@ impl defmt::Format for Mb064bWord13 {
         )
     }
 }
-#[doc = "Message Buffer 0 WORD_64B Register"]
+#[doc = "Message Buffer 0 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb064bWord14(pub u32);
@@ -11896,7 +11896,7 @@ impl defmt::Format for Mb064bWord14 {
         )
     }
 }
-#[doc = "Message Buffer 0 WORD_64B Register"]
+#[doc = "Message Buffer 0 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb064bWord15(pub u32);
@@ -11979,7 +11979,7 @@ impl defmt::Format for Mb064bWord15 {
         )
     }
 }
-#[doc = "Message Buffer 0 WORD_64B Register"]
+#[doc = "Message Buffer 0 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb064bWord2(pub u32);
@@ -12062,7 +12062,7 @@ impl defmt::Format for Mb064bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 0 WORD_64B Register"]
+#[doc = "Message Buffer 0 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb064bWord3(pub u32);
@@ -12145,7 +12145,7 @@ impl defmt::Format for Mb064bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 0 WORD_64B Register"]
+#[doc = "Message Buffer 0 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb064bWord4(pub u32);
@@ -12228,7 +12228,7 @@ impl defmt::Format for Mb064bWord4 {
         )
     }
 }
-#[doc = "Message Buffer 0 WORD_64B Register"]
+#[doc = "Message Buffer 0 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb064bWord5(pub u32);
@@ -12311,7 +12311,7 @@ impl defmt::Format for Mb064bWord5 {
         )
     }
 }
-#[doc = "Message Buffer 0 WORD_64B Register"]
+#[doc = "Message Buffer 0 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb064bWord6(pub u32);
@@ -12394,7 +12394,7 @@ impl defmt::Format for Mb064bWord6 {
         )
     }
 }
-#[doc = "Message Buffer 0 WORD_64B Register"]
+#[doc = "Message Buffer 0 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb064bWord7(pub u32);
@@ -12477,7 +12477,7 @@ impl defmt::Format for Mb064bWord7 {
         )
     }
 }
-#[doc = "Message Buffer 0 WORD_64B Register"]
+#[doc = "Message Buffer 0 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb064bWord8(pub u32);
@@ -12560,7 +12560,7 @@ impl defmt::Format for Mb064bWord8 {
         )
     }
 }
-#[doc = "Message Buffer 0 WORD_64B Register"]
+#[doc = "Message Buffer 0 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb064bWord9(pub u32);
@@ -12643,7 +12643,7 @@ impl defmt::Format for Mb064bWord9 {
         )
     }
 }
-#[doc = "Message Buffer 0 CS Register"]
+#[doc = "Message Buffer 0 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb08bCs(pub u32);
@@ -12796,7 +12796,7 @@ impl defmt::Format for Mb08bCs {
         )
     }
 }
-#[doc = "Message Buffer 0 ID Register"]
+#[doc = "Message Buffer 0 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb08bId(pub u32);
@@ -12865,7 +12865,7 @@ impl defmt::Format for Mb08bId {
         )
     }
 }
-#[doc = "Message Buffer 0 WORD_8B Register"]
+#[doc = "Message Buffer 0 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb08bWord0(pub u32);
@@ -12948,7 +12948,7 @@ impl defmt::Format for Mb08bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 0 WORD_8B Register"]
+#[doc = "Message Buffer 0 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb08bWord1(pub u32);
@@ -13031,7 +13031,7 @@ impl defmt::Format for Mb08bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 10 CS Register"]
+#[doc = "Message Buffer 10 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1016bCs(pub u32);
@@ -13184,7 +13184,7 @@ impl defmt::Format for Mb1016bCs {
         )
     }
 }
-#[doc = "Message Buffer 10 ID Register"]
+#[doc = "Message Buffer 10 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1016bId(pub u32);
@@ -13253,7 +13253,7 @@ impl defmt::Format for Mb1016bId {
         )
     }
 }
-#[doc = "Message Buffer 10 WORD_16B Register"]
+#[doc = "Message Buffer 10 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1016bWord0(pub u32);
@@ -13336,7 +13336,7 @@ impl defmt::Format for Mb1016bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 10 WORD_16B Register"]
+#[doc = "Message Buffer 10 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1016bWord1(pub u32);
@@ -13419,7 +13419,7 @@ impl defmt::Format for Mb1016bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 10 WORD_16B Register"]
+#[doc = "Message Buffer 10 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1016bWord2(pub u32);
@@ -13502,7 +13502,7 @@ impl defmt::Format for Mb1016bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 10 WORD_16B Register"]
+#[doc = "Message Buffer 10 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1016bWord3(pub u32);
@@ -13585,7 +13585,7 @@ impl defmt::Format for Mb1016bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 10 CS Register"]
+#[doc = "Message Buffer 10 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1032bCs(pub u32);
@@ -13738,7 +13738,7 @@ impl defmt::Format for Mb1032bCs {
         )
     }
 }
-#[doc = "Message Buffer 10 ID Register"]
+#[doc = "Message Buffer 10 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1032bId(pub u32);
@@ -13807,7 +13807,7 @@ impl defmt::Format for Mb1032bId {
         )
     }
 }
-#[doc = "Message Buffer 10 WORD_32B Register"]
+#[doc = "Message Buffer 10 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1032bWord0(pub u32);
@@ -13890,7 +13890,7 @@ impl defmt::Format for Mb1032bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 10 WORD_32B Register"]
+#[doc = "Message Buffer 10 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1032bWord1(pub u32);
@@ -13973,7 +13973,7 @@ impl defmt::Format for Mb1032bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 10 WORD_32B Register"]
+#[doc = "Message Buffer 10 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1032bWord2(pub u32);
@@ -14056,7 +14056,7 @@ impl defmt::Format for Mb1032bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 10 WORD_32B Register"]
+#[doc = "Message Buffer 10 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1032bWord3(pub u32);
@@ -14139,7 +14139,7 @@ impl defmt::Format for Mb1032bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 10 WORD_32B Register"]
+#[doc = "Message Buffer 10 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1032bWord4(pub u32);
@@ -14222,7 +14222,7 @@ impl defmt::Format for Mb1032bWord4 {
         )
     }
 }
-#[doc = "Message Buffer 10 WORD_32B Register"]
+#[doc = "Message Buffer 10 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1032bWord5(pub u32);
@@ -14305,7 +14305,7 @@ impl defmt::Format for Mb1032bWord5 {
         )
     }
 }
-#[doc = "Message Buffer 10 WORD_32B Register"]
+#[doc = "Message Buffer 10 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1032bWord6(pub u32);
@@ -14388,7 +14388,7 @@ impl defmt::Format for Mb1032bWord6 {
         )
     }
 }
-#[doc = "Message Buffer 10 WORD_32B Register"]
+#[doc = "Message Buffer 10 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1032bWord7(pub u32);
@@ -14471,7 +14471,7 @@ impl defmt::Format for Mb1032bWord7 {
         )
     }
 }
-#[doc = "Message Buffer 10 CS Register"]
+#[doc = "Message Buffer 10 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb108bCs(pub u32);
@@ -14624,7 +14624,7 @@ impl defmt::Format for Mb108bCs {
         )
     }
 }
-#[doc = "Message Buffer 10 ID Register"]
+#[doc = "Message Buffer 10 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb108bId(pub u32);
@@ -14693,7 +14693,7 @@ impl defmt::Format for Mb108bId {
         )
     }
 }
-#[doc = "Message Buffer 10 WORD_8B Register"]
+#[doc = "Message Buffer 10 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb108bWord0(pub u32);
@@ -14776,7 +14776,7 @@ impl defmt::Format for Mb108bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 10 WORD_8B Register"]
+#[doc = "Message Buffer 10 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb108bWord1(pub u32);
@@ -14859,7 +14859,7 @@ impl defmt::Format for Mb108bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 11 CS Register"]
+#[doc = "Message Buffer 11 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1116bCs(pub u32);
@@ -15012,7 +15012,7 @@ impl defmt::Format for Mb1116bCs {
         )
     }
 }
-#[doc = "Message Buffer 11 ID Register"]
+#[doc = "Message Buffer 11 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1116bId(pub u32);
@@ -15081,7 +15081,7 @@ impl defmt::Format for Mb1116bId {
         )
     }
 }
-#[doc = "Message Buffer 11 WORD_16B Register"]
+#[doc = "Message Buffer 11 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1116bWord0(pub u32);
@@ -15164,7 +15164,7 @@ impl defmt::Format for Mb1116bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 11 WORD_16B Register"]
+#[doc = "Message Buffer 11 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1116bWord1(pub u32);
@@ -15247,7 +15247,7 @@ impl defmt::Format for Mb1116bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 11 WORD_16B Register"]
+#[doc = "Message Buffer 11 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1116bWord2(pub u32);
@@ -15330,7 +15330,7 @@ impl defmt::Format for Mb1116bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 11 WORD_16B Register"]
+#[doc = "Message Buffer 11 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1116bWord3(pub u32);
@@ -15413,7 +15413,7 @@ impl defmt::Format for Mb1116bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 11 CS Register"]
+#[doc = "Message Buffer 11 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1132bCs(pub u32);
@@ -15566,7 +15566,7 @@ impl defmt::Format for Mb1132bCs {
         )
     }
 }
-#[doc = "Message Buffer 11 ID Register"]
+#[doc = "Message Buffer 11 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1132bId(pub u32);
@@ -15635,7 +15635,7 @@ impl defmt::Format for Mb1132bId {
         )
     }
 }
-#[doc = "Message Buffer 11 WORD_32B Register"]
+#[doc = "Message Buffer 11 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1132bWord0(pub u32);
@@ -15718,7 +15718,7 @@ impl defmt::Format for Mb1132bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 11 WORD_32B Register"]
+#[doc = "Message Buffer 11 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1132bWord1(pub u32);
@@ -15801,7 +15801,7 @@ impl defmt::Format for Mb1132bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 11 WORD_32B Register"]
+#[doc = "Message Buffer 11 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1132bWord2(pub u32);
@@ -15884,7 +15884,7 @@ impl defmt::Format for Mb1132bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 11 WORD_32B Register"]
+#[doc = "Message Buffer 11 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1132bWord3(pub u32);
@@ -15967,7 +15967,7 @@ impl defmt::Format for Mb1132bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 11 WORD_32B Register"]
+#[doc = "Message Buffer 11 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1132bWord4(pub u32);
@@ -16050,7 +16050,7 @@ impl defmt::Format for Mb1132bWord4 {
         )
     }
 }
-#[doc = "Message Buffer 11 WORD_32B Register"]
+#[doc = "Message Buffer 11 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1132bWord5(pub u32);
@@ -16133,7 +16133,7 @@ impl defmt::Format for Mb1132bWord5 {
         )
     }
 }
-#[doc = "Message Buffer 11 WORD_32B Register"]
+#[doc = "Message Buffer 11 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1132bWord6(pub u32);
@@ -16216,7 +16216,7 @@ impl defmt::Format for Mb1132bWord6 {
         )
     }
 }
-#[doc = "Message Buffer 11 WORD_32B Register"]
+#[doc = "Message Buffer 11 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1132bWord7(pub u32);
@@ -16299,7 +16299,7 @@ impl defmt::Format for Mb1132bWord7 {
         )
     }
 }
-#[doc = "Message Buffer 1 CS Register"]
+#[doc = "Message Buffer 1 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb116bCs(pub u32);
@@ -16452,7 +16452,7 @@ impl defmt::Format for Mb116bCs {
         )
     }
 }
-#[doc = "Message Buffer 1 ID Register"]
+#[doc = "Message Buffer 1 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb116bId(pub u32);
@@ -16521,7 +16521,7 @@ impl defmt::Format for Mb116bId {
         )
     }
 }
-#[doc = "Message Buffer 1 WORD_16B Register"]
+#[doc = "Message Buffer 1 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb116bWord0(pub u32);
@@ -16604,7 +16604,7 @@ impl defmt::Format for Mb116bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 1 WORD_16B Register"]
+#[doc = "Message Buffer 1 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb116bWord1(pub u32);
@@ -16687,7 +16687,7 @@ impl defmt::Format for Mb116bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 1 WORD_16B Register"]
+#[doc = "Message Buffer 1 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb116bWord2(pub u32);
@@ -16770,7 +16770,7 @@ impl defmt::Format for Mb116bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 1 WORD_16B Register"]
+#[doc = "Message Buffer 1 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb116bWord3(pub u32);
@@ -16853,7 +16853,7 @@ impl defmt::Format for Mb116bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 11 CS Register"]
+#[doc = "Message Buffer 11 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb118bCs(pub u32);
@@ -17006,7 +17006,7 @@ impl defmt::Format for Mb118bCs {
         )
     }
 }
-#[doc = "Message Buffer 11 ID Register"]
+#[doc = "Message Buffer 11 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb118bId(pub u32);
@@ -17075,7 +17075,7 @@ impl defmt::Format for Mb118bId {
         )
     }
 }
-#[doc = "Message Buffer 11 WORD_8B Register"]
+#[doc = "Message Buffer 11 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb118bWord0(pub u32);
@@ -17158,7 +17158,7 @@ impl defmt::Format for Mb118bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 11 WORD_8B Register"]
+#[doc = "Message Buffer 11 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb118bWord1(pub u32);
@@ -17241,7 +17241,7 @@ impl defmt::Format for Mb118bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 12 CS Register"]
+#[doc = "Message Buffer 12 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1216bCs(pub u32);
@@ -17394,7 +17394,7 @@ impl defmt::Format for Mb1216bCs {
         )
     }
 }
-#[doc = "Message Buffer 12 ID Register"]
+#[doc = "Message Buffer 12 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1216bId(pub u32);
@@ -17463,7 +17463,7 @@ impl defmt::Format for Mb1216bId {
         )
     }
 }
-#[doc = "Message Buffer 12 WORD_16B Register"]
+#[doc = "Message Buffer 12 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1216bWord0(pub u32);
@@ -17546,7 +17546,7 @@ impl defmt::Format for Mb1216bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 12 WORD_16B Register"]
+#[doc = "Message Buffer 12 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1216bWord1(pub u32);
@@ -17629,7 +17629,7 @@ impl defmt::Format for Mb1216bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 12 WORD_16B Register"]
+#[doc = "Message Buffer 12 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1216bWord2(pub u32);
@@ -17712,7 +17712,7 @@ impl defmt::Format for Mb1216bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 12 WORD_16B Register"]
+#[doc = "Message Buffer 12 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1216bWord3(pub u32);
@@ -17795,7 +17795,7 @@ impl defmt::Format for Mb1216bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 12 CS Register"]
+#[doc = "Message Buffer 12 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb128bCs(pub u32);
@@ -17948,7 +17948,7 @@ impl defmt::Format for Mb128bCs {
         )
     }
 }
-#[doc = "Message Buffer 12 ID Register"]
+#[doc = "Message Buffer 12 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb128bId(pub u32);
@@ -18017,7 +18017,7 @@ impl defmt::Format for Mb128bId {
         )
     }
 }
-#[doc = "Message Buffer 12 WORD_8B Register"]
+#[doc = "Message Buffer 12 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb128bWord0(pub u32);
@@ -18100,7 +18100,7 @@ impl defmt::Format for Mb128bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 12 WORD_8B Register"]
+#[doc = "Message Buffer 12 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb128bWord1(pub u32);
@@ -18183,7 +18183,7 @@ impl defmt::Format for Mb128bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 13 CS Register"]
+#[doc = "Message Buffer 13 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1316bCs(pub u32);
@@ -18336,7 +18336,7 @@ impl defmt::Format for Mb1316bCs {
         )
     }
 }
-#[doc = "Message Buffer 13 ID Register"]
+#[doc = "Message Buffer 13 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1316bId(pub u32);
@@ -18405,7 +18405,7 @@ impl defmt::Format for Mb1316bId {
         )
     }
 }
-#[doc = "Message Buffer 13 WORD_16B Register"]
+#[doc = "Message Buffer 13 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1316bWord0(pub u32);
@@ -18488,7 +18488,7 @@ impl defmt::Format for Mb1316bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 13 WORD_16B Register"]
+#[doc = "Message Buffer 13 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1316bWord1(pub u32);
@@ -18571,7 +18571,7 @@ impl defmt::Format for Mb1316bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 13 WORD_16B Register"]
+#[doc = "Message Buffer 13 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1316bWord2(pub u32);
@@ -18654,7 +18654,7 @@ impl defmt::Format for Mb1316bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 13 WORD_16B Register"]
+#[doc = "Message Buffer 13 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1316bWord3(pub u32);
@@ -18737,7 +18737,7 @@ impl defmt::Format for Mb1316bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 1 CS Register"]
+#[doc = "Message Buffer 1 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb132bCs(pub u32);
@@ -18890,7 +18890,7 @@ impl defmt::Format for Mb132bCs {
         )
     }
 }
-#[doc = "Message Buffer 1 ID Register"]
+#[doc = "Message Buffer 1 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb132bId(pub u32);
@@ -18959,7 +18959,7 @@ impl defmt::Format for Mb132bId {
         )
     }
 }
-#[doc = "Message Buffer 1 WORD_32B Register"]
+#[doc = "Message Buffer 1 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb132bWord0(pub u32);
@@ -19042,7 +19042,7 @@ impl defmt::Format for Mb132bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 1 WORD_32B Register"]
+#[doc = "Message Buffer 1 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb132bWord1(pub u32);
@@ -19125,7 +19125,7 @@ impl defmt::Format for Mb132bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 1 WORD_32B Register"]
+#[doc = "Message Buffer 1 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb132bWord2(pub u32);
@@ -19208,7 +19208,7 @@ impl defmt::Format for Mb132bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 1 WORD_32B Register"]
+#[doc = "Message Buffer 1 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb132bWord3(pub u32);
@@ -19291,7 +19291,7 @@ impl defmt::Format for Mb132bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 1 WORD_32B Register"]
+#[doc = "Message Buffer 1 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb132bWord4(pub u32);
@@ -19374,7 +19374,7 @@ impl defmt::Format for Mb132bWord4 {
         )
     }
 }
-#[doc = "Message Buffer 1 WORD_32B Register"]
+#[doc = "Message Buffer 1 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb132bWord5(pub u32);
@@ -19457,7 +19457,7 @@ impl defmt::Format for Mb132bWord5 {
         )
     }
 }
-#[doc = "Message Buffer 1 WORD_32B Register"]
+#[doc = "Message Buffer 1 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb132bWord6(pub u32);
@@ -19540,7 +19540,7 @@ impl defmt::Format for Mb132bWord6 {
         )
     }
 }
-#[doc = "Message Buffer 1 WORD_32B Register"]
+#[doc = "Message Buffer 1 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb132bWord7(pub u32);
@@ -19623,7 +19623,7 @@ impl defmt::Format for Mb132bWord7 {
         )
     }
 }
-#[doc = "Message Buffer 13 CS Register"]
+#[doc = "Message Buffer 13 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb138bCs(pub u32);
@@ -19776,7 +19776,7 @@ impl defmt::Format for Mb138bCs {
         )
     }
 }
-#[doc = "Message Buffer 13 ID Register"]
+#[doc = "Message Buffer 13 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb138bId(pub u32);
@@ -19845,7 +19845,7 @@ impl defmt::Format for Mb138bId {
         )
     }
 }
-#[doc = "Message Buffer 13 WORD_8B Register"]
+#[doc = "Message Buffer 13 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb138bWord0(pub u32);
@@ -19928,7 +19928,7 @@ impl defmt::Format for Mb138bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 13 WORD_8B Register"]
+#[doc = "Message Buffer 13 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb138bWord1(pub u32);
@@ -20011,7 +20011,7 @@ impl defmt::Format for Mb138bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 14 CS Register"]
+#[doc = "Message Buffer 14 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1416bCs(pub u32);
@@ -20164,7 +20164,7 @@ impl defmt::Format for Mb1416bCs {
         )
     }
 }
-#[doc = "Message Buffer 14 ID Register"]
+#[doc = "Message Buffer 14 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1416bId(pub u32);
@@ -20233,7 +20233,7 @@ impl defmt::Format for Mb1416bId {
         )
     }
 }
-#[doc = "Message Buffer 14 WORD_16B Register"]
+#[doc = "Message Buffer 14 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1416bWord0(pub u32);
@@ -20316,7 +20316,7 @@ impl defmt::Format for Mb1416bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 14 WORD_16B Register"]
+#[doc = "Message Buffer 14 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1416bWord1(pub u32);
@@ -20399,7 +20399,7 @@ impl defmt::Format for Mb1416bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 14 WORD_16B Register"]
+#[doc = "Message Buffer 14 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1416bWord2(pub u32);
@@ -20482,7 +20482,7 @@ impl defmt::Format for Mb1416bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 14 WORD_16B Register"]
+#[doc = "Message Buffer 14 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1416bWord3(pub u32);
@@ -20565,7 +20565,7 @@ impl defmt::Format for Mb1416bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 14 CS Register"]
+#[doc = "Message Buffer 14 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb148bCs(pub u32);
@@ -20718,7 +20718,7 @@ impl defmt::Format for Mb148bCs {
         )
     }
 }
-#[doc = "Message Buffer 14 ID Register"]
+#[doc = "Message Buffer 14 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb148bId(pub u32);
@@ -20787,7 +20787,7 @@ impl defmt::Format for Mb148bId {
         )
     }
 }
-#[doc = "Message Buffer 14 WORD_8B Register"]
+#[doc = "Message Buffer 14 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb148bWord0(pub u32);
@@ -20870,7 +20870,7 @@ impl defmt::Format for Mb148bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 14 WORD_8B Register"]
+#[doc = "Message Buffer 14 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb148bWord1(pub u32);
@@ -20953,7 +20953,7 @@ impl defmt::Format for Mb148bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 15 CS Register"]
+#[doc = "Message Buffer 15 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1516bCs(pub u32);
@@ -21106,7 +21106,7 @@ impl defmt::Format for Mb1516bCs {
         )
     }
 }
-#[doc = "Message Buffer 15 ID Register"]
+#[doc = "Message Buffer 15 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1516bId(pub u32);
@@ -21175,7 +21175,7 @@ impl defmt::Format for Mb1516bId {
         )
     }
 }
-#[doc = "Message Buffer 15 WORD_16B Register"]
+#[doc = "Message Buffer 15 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1516bWord0(pub u32);
@@ -21258,7 +21258,7 @@ impl defmt::Format for Mb1516bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 15 WORD_16B Register"]
+#[doc = "Message Buffer 15 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1516bWord1(pub u32);
@@ -21341,7 +21341,7 @@ impl defmt::Format for Mb1516bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 15 WORD_16B Register"]
+#[doc = "Message Buffer 15 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1516bWord2(pub u32);
@@ -21424,7 +21424,7 @@ impl defmt::Format for Mb1516bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 15 WORD_16B Register"]
+#[doc = "Message Buffer 15 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1516bWord3(pub u32);
@@ -21507,7 +21507,7 @@ impl defmt::Format for Mb1516bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 15 CS Register"]
+#[doc = "Message Buffer 15 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb158bCs(pub u32);
@@ -21660,7 +21660,7 @@ impl defmt::Format for Mb158bCs {
         )
     }
 }
-#[doc = "Message Buffer 15 ID Register"]
+#[doc = "Message Buffer 15 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb158bId(pub u32);
@@ -21729,7 +21729,7 @@ impl defmt::Format for Mb158bId {
         )
     }
 }
-#[doc = "Message Buffer 15 WORD_8B Register"]
+#[doc = "Message Buffer 15 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb158bWord0(pub u32);
@@ -21812,7 +21812,7 @@ impl defmt::Format for Mb158bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 15 WORD_8B Register"]
+#[doc = "Message Buffer 15 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb158bWord1(pub u32);
@@ -21895,7 +21895,7 @@ impl defmt::Format for Mb158bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 16 CS Register"]
+#[doc = "Message Buffer 16 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1616bCs(pub u32);
@@ -22048,7 +22048,7 @@ impl defmt::Format for Mb1616bCs {
         )
     }
 }
-#[doc = "Message Buffer 16 ID Register"]
+#[doc = "Message Buffer 16 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1616bId(pub u32);
@@ -22117,7 +22117,7 @@ impl defmt::Format for Mb1616bId {
         )
     }
 }
-#[doc = "Message Buffer 16 WORD_16B Register"]
+#[doc = "Message Buffer 16 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1616bWord0(pub u32);
@@ -22200,7 +22200,7 @@ impl defmt::Format for Mb1616bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 16 WORD_16B Register"]
+#[doc = "Message Buffer 16 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1616bWord1(pub u32);
@@ -22283,7 +22283,7 @@ impl defmt::Format for Mb1616bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 16 WORD_16B Register"]
+#[doc = "Message Buffer 16 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1616bWord2(pub u32);
@@ -22366,7 +22366,7 @@ impl defmt::Format for Mb1616bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 16 WORD_16B Register"]
+#[doc = "Message Buffer 16 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1616bWord3(pub u32);
@@ -22449,7 +22449,7 @@ impl defmt::Format for Mb1616bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 1 CS Register"]
+#[doc = "Message Buffer 1 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb164bCs(pub u32);
@@ -22602,7 +22602,7 @@ impl defmt::Format for Mb164bCs {
         )
     }
 }
-#[doc = "Message Buffer 1 ID Register"]
+#[doc = "Message Buffer 1 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb164bId(pub u32);
@@ -22671,7 +22671,7 @@ impl defmt::Format for Mb164bId {
         )
     }
 }
-#[doc = "Message Buffer 1 WORD_64B Register"]
+#[doc = "Message Buffer 1 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb164bWord0(pub u32);
@@ -22754,7 +22754,7 @@ impl defmt::Format for Mb164bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 1 WORD_64B Register"]
+#[doc = "Message Buffer 1 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb164bWord1(pub u32);
@@ -22837,7 +22837,7 @@ impl defmt::Format for Mb164bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 1 WORD_64B Register"]
+#[doc = "Message Buffer 1 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb164bWord10(pub u32);
@@ -22920,7 +22920,7 @@ impl defmt::Format for Mb164bWord10 {
         )
     }
 }
-#[doc = "Message Buffer 1 WORD_64B Register"]
+#[doc = "Message Buffer 1 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb164bWord11(pub u32);
@@ -23003,7 +23003,7 @@ impl defmt::Format for Mb164bWord11 {
         )
     }
 }
-#[doc = "Message Buffer 1 WORD_64B Register"]
+#[doc = "Message Buffer 1 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb164bWord12(pub u32);
@@ -23086,7 +23086,7 @@ impl defmt::Format for Mb164bWord12 {
         )
     }
 }
-#[doc = "Message Buffer 1 WORD_64B Register"]
+#[doc = "Message Buffer 1 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb164bWord13(pub u32);
@@ -23169,7 +23169,7 @@ impl defmt::Format for Mb164bWord13 {
         )
     }
 }
-#[doc = "Message Buffer 1 WORD_64B Register"]
+#[doc = "Message Buffer 1 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb164bWord14(pub u32);
@@ -23252,7 +23252,7 @@ impl defmt::Format for Mb164bWord14 {
         )
     }
 }
-#[doc = "Message Buffer 1 WORD_64B Register"]
+#[doc = "Message Buffer 1 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb164bWord15(pub u32);
@@ -23335,7 +23335,7 @@ impl defmt::Format for Mb164bWord15 {
         )
     }
 }
-#[doc = "Message Buffer 1 WORD_64B Register"]
+#[doc = "Message Buffer 1 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb164bWord2(pub u32);
@@ -23418,7 +23418,7 @@ impl defmt::Format for Mb164bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 1 WORD_64B Register"]
+#[doc = "Message Buffer 1 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb164bWord3(pub u32);
@@ -23501,7 +23501,7 @@ impl defmt::Format for Mb164bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 1 WORD_64B Register"]
+#[doc = "Message Buffer 1 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb164bWord4(pub u32);
@@ -23584,7 +23584,7 @@ impl defmt::Format for Mb164bWord4 {
         )
     }
 }
-#[doc = "Message Buffer 1 WORD_64B Register"]
+#[doc = "Message Buffer 1 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb164bWord5(pub u32);
@@ -23667,7 +23667,7 @@ impl defmt::Format for Mb164bWord5 {
         )
     }
 }
-#[doc = "Message Buffer 1 WORD_64B Register"]
+#[doc = "Message Buffer 1 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb164bWord6(pub u32);
@@ -23750,7 +23750,7 @@ impl defmt::Format for Mb164bWord6 {
         )
     }
 }
-#[doc = "Message Buffer 1 WORD_64B Register"]
+#[doc = "Message Buffer 1 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb164bWord7(pub u32);
@@ -23833,7 +23833,7 @@ impl defmt::Format for Mb164bWord7 {
         )
     }
 }
-#[doc = "Message Buffer 1 WORD_64B Register"]
+#[doc = "Message Buffer 1 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb164bWord8(pub u32);
@@ -23916,7 +23916,7 @@ impl defmt::Format for Mb164bWord8 {
         )
     }
 }
-#[doc = "Message Buffer 1 WORD_64B Register"]
+#[doc = "Message Buffer 1 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb164bWord9(pub u32);
@@ -23999,7 +23999,7 @@ impl defmt::Format for Mb164bWord9 {
         )
     }
 }
-#[doc = "Message Buffer 16 CS Register"]
+#[doc = "Message Buffer 16 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb168bCs(pub u32);
@@ -24152,7 +24152,7 @@ impl defmt::Format for Mb168bCs {
         )
     }
 }
-#[doc = "Message Buffer 16 ID Register"]
+#[doc = "Message Buffer 16 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb168bId(pub u32);
@@ -24221,7 +24221,7 @@ impl defmt::Format for Mb168bId {
         )
     }
 }
-#[doc = "Message Buffer 16 WORD_8B Register"]
+#[doc = "Message Buffer 16 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb168bWord0(pub u32);
@@ -24304,7 +24304,7 @@ impl defmt::Format for Mb168bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 16 WORD_8B Register"]
+#[doc = "Message Buffer 16 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb168bWord1(pub u32);
@@ -24387,7 +24387,7 @@ impl defmt::Format for Mb168bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 17 CS Register"]
+#[doc = "Message Buffer 17 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1716bCs(pub u32);
@@ -24540,7 +24540,7 @@ impl defmt::Format for Mb1716bCs {
         )
     }
 }
-#[doc = "Message Buffer 17 ID Register"]
+#[doc = "Message Buffer 17 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1716bId(pub u32);
@@ -24609,7 +24609,7 @@ impl defmt::Format for Mb1716bId {
         )
     }
 }
-#[doc = "Message Buffer 17 WORD_16B Register"]
+#[doc = "Message Buffer 17 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1716bWord0(pub u32);
@@ -24692,7 +24692,7 @@ impl defmt::Format for Mb1716bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 17 WORD_16B Register"]
+#[doc = "Message Buffer 17 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1716bWord1(pub u32);
@@ -24775,7 +24775,7 @@ impl defmt::Format for Mb1716bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 17 WORD_16B Register"]
+#[doc = "Message Buffer 17 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1716bWord2(pub u32);
@@ -24858,7 +24858,7 @@ impl defmt::Format for Mb1716bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 17 WORD_16B Register"]
+#[doc = "Message Buffer 17 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1716bWord3(pub u32);
@@ -24941,7 +24941,7 @@ impl defmt::Format for Mb1716bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 17 CS Register"]
+#[doc = "Message Buffer 17 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb178bCs(pub u32);
@@ -25094,7 +25094,7 @@ impl defmt::Format for Mb178bCs {
         )
     }
 }
-#[doc = "Message Buffer 17 ID Register"]
+#[doc = "Message Buffer 17 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb178bId(pub u32);
@@ -25163,7 +25163,7 @@ impl defmt::Format for Mb178bId {
         )
     }
 }
-#[doc = "Message Buffer 17 WORD_8B Register"]
+#[doc = "Message Buffer 17 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb178bWord0(pub u32);
@@ -25246,7 +25246,7 @@ impl defmt::Format for Mb178bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 17 WORD_8B Register"]
+#[doc = "Message Buffer 17 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb178bWord1(pub u32);
@@ -25329,7 +25329,7 @@ impl defmt::Format for Mb178bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 18 CS Register"]
+#[doc = "Message Buffer 18 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1816bCs(pub u32);
@@ -25482,7 +25482,7 @@ impl defmt::Format for Mb1816bCs {
         )
     }
 }
-#[doc = "Message Buffer 18 ID Register"]
+#[doc = "Message Buffer 18 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1816bId(pub u32);
@@ -25551,7 +25551,7 @@ impl defmt::Format for Mb1816bId {
         )
     }
 }
-#[doc = "Message Buffer 18 WORD_16B Register"]
+#[doc = "Message Buffer 18 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1816bWord0(pub u32);
@@ -25634,7 +25634,7 @@ impl defmt::Format for Mb1816bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 18 WORD_16B Register"]
+#[doc = "Message Buffer 18 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1816bWord1(pub u32);
@@ -25717,7 +25717,7 @@ impl defmt::Format for Mb1816bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 18 WORD_16B Register"]
+#[doc = "Message Buffer 18 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1816bWord2(pub u32);
@@ -25800,7 +25800,7 @@ impl defmt::Format for Mb1816bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 18 WORD_16B Register"]
+#[doc = "Message Buffer 18 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1816bWord3(pub u32);
@@ -25883,7 +25883,7 @@ impl defmt::Format for Mb1816bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 18 CS Register"]
+#[doc = "Message Buffer 18 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb188bCs(pub u32);
@@ -26036,7 +26036,7 @@ impl defmt::Format for Mb188bCs {
         )
     }
 }
-#[doc = "Message Buffer 18 ID Register"]
+#[doc = "Message Buffer 18 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb188bId(pub u32);
@@ -26105,7 +26105,7 @@ impl defmt::Format for Mb188bId {
         )
     }
 }
-#[doc = "Message Buffer 18 WORD_8B Register"]
+#[doc = "Message Buffer 18 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb188bWord0(pub u32);
@@ -26188,7 +26188,7 @@ impl defmt::Format for Mb188bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 18 WORD_8B Register"]
+#[doc = "Message Buffer 18 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb188bWord1(pub u32);
@@ -26271,7 +26271,7 @@ impl defmt::Format for Mb188bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 1 CS Register"]
+#[doc = "Message Buffer 1 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb18bCs(pub u32);
@@ -26424,7 +26424,7 @@ impl defmt::Format for Mb18bCs {
         )
     }
 }
-#[doc = "Message Buffer 1 ID Register"]
+#[doc = "Message Buffer 1 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb18bId(pub u32);
@@ -26493,7 +26493,7 @@ impl defmt::Format for Mb18bId {
         )
     }
 }
-#[doc = "Message Buffer 1 WORD_8B Register"]
+#[doc = "Message Buffer 1 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb18bWord0(pub u32);
@@ -26576,7 +26576,7 @@ impl defmt::Format for Mb18bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 1 WORD_8B Register"]
+#[doc = "Message Buffer 1 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb18bWord1(pub u32);
@@ -26659,7 +26659,7 @@ impl defmt::Format for Mb18bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 19 CS Register"]
+#[doc = "Message Buffer 19 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1916bCs(pub u32);
@@ -26812,7 +26812,7 @@ impl defmt::Format for Mb1916bCs {
         )
     }
 }
-#[doc = "Message Buffer 19 ID Register"]
+#[doc = "Message Buffer 19 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1916bId(pub u32);
@@ -26881,7 +26881,7 @@ impl defmt::Format for Mb1916bId {
         )
     }
 }
-#[doc = "Message Buffer 19 WORD_16B Register"]
+#[doc = "Message Buffer 19 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1916bWord0(pub u32);
@@ -26964,7 +26964,7 @@ impl defmt::Format for Mb1916bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 19 WORD_16B Register"]
+#[doc = "Message Buffer 19 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1916bWord1(pub u32);
@@ -27047,7 +27047,7 @@ impl defmt::Format for Mb1916bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 19 WORD_16B Register"]
+#[doc = "Message Buffer 19 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1916bWord2(pub u32);
@@ -27130,7 +27130,7 @@ impl defmt::Format for Mb1916bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 19 WORD_16B Register"]
+#[doc = "Message Buffer 19 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb1916bWord3(pub u32);
@@ -27213,7 +27213,7 @@ impl defmt::Format for Mb1916bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 19 CS Register"]
+#[doc = "Message Buffer 19 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb198bCs(pub u32);
@@ -27366,7 +27366,7 @@ impl defmt::Format for Mb198bCs {
         )
     }
 }
-#[doc = "Message Buffer 19 ID Register"]
+#[doc = "Message Buffer 19 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb198bId(pub u32);
@@ -27435,7 +27435,7 @@ impl defmt::Format for Mb198bId {
         )
     }
 }
-#[doc = "Message Buffer 19 WORD_8B Register"]
+#[doc = "Message Buffer 19 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb198bWord0(pub u32);
@@ -27518,7 +27518,7 @@ impl defmt::Format for Mb198bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 19 WORD_8B Register"]
+#[doc = "Message Buffer 19 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb198bWord1(pub u32);
@@ -27601,7 +27601,7 @@ impl defmt::Format for Mb198bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 20 CS Register"]
+#[doc = "Message Buffer 20 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb2016bCs(pub u32);
@@ -27754,7 +27754,7 @@ impl defmt::Format for Mb2016bCs {
         )
     }
 }
-#[doc = "Message Buffer 20 ID Register"]
+#[doc = "Message Buffer 20 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb2016bId(pub u32);
@@ -27823,7 +27823,7 @@ impl defmt::Format for Mb2016bId {
         )
     }
 }
-#[doc = "Message Buffer 20 WORD_16B Register"]
+#[doc = "Message Buffer 20 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb2016bWord0(pub u32);
@@ -27906,7 +27906,7 @@ impl defmt::Format for Mb2016bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 20 WORD_16B Register"]
+#[doc = "Message Buffer 20 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb2016bWord1(pub u32);
@@ -27989,7 +27989,7 @@ impl defmt::Format for Mb2016bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 20 WORD_16B Register"]
+#[doc = "Message Buffer 20 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb2016bWord2(pub u32);
@@ -28072,7 +28072,7 @@ impl defmt::Format for Mb2016bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 20 WORD_16B Register"]
+#[doc = "Message Buffer 20 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb2016bWord3(pub u32);
@@ -28155,7 +28155,7 @@ impl defmt::Format for Mb2016bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 20 CS Register"]
+#[doc = "Message Buffer 20 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb208bCs(pub u32);
@@ -28308,7 +28308,7 @@ impl defmt::Format for Mb208bCs {
         )
     }
 }
-#[doc = "Message Buffer 20 ID Register"]
+#[doc = "Message Buffer 20 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb208bId(pub u32);
@@ -28377,7 +28377,7 @@ impl defmt::Format for Mb208bId {
         )
     }
 }
-#[doc = "Message Buffer 20 WORD_8B Register"]
+#[doc = "Message Buffer 20 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb208bWord0(pub u32);
@@ -28460,7 +28460,7 @@ impl defmt::Format for Mb208bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 20 WORD_8B Register"]
+#[doc = "Message Buffer 20 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb208bWord1(pub u32);
@@ -28543,7 +28543,7 @@ impl defmt::Format for Mb208bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 2 CS Register"]
+#[doc = "Message Buffer 2 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb216bCs(pub u32);
@@ -28696,7 +28696,7 @@ impl defmt::Format for Mb216bCs {
         )
     }
 }
-#[doc = "Message Buffer 2 ID Register"]
+#[doc = "Message Buffer 2 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb216bId(pub u32);
@@ -28765,7 +28765,7 @@ impl defmt::Format for Mb216bId {
         )
     }
 }
-#[doc = "Message Buffer 2 WORD_16B Register"]
+#[doc = "Message Buffer 2 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb216bWord0(pub u32);
@@ -28848,7 +28848,7 @@ impl defmt::Format for Mb216bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 2 WORD_16B Register"]
+#[doc = "Message Buffer 2 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb216bWord1(pub u32);
@@ -28931,7 +28931,7 @@ impl defmt::Format for Mb216bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 2 WORD_16B Register"]
+#[doc = "Message Buffer 2 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb216bWord2(pub u32);
@@ -29014,7 +29014,7 @@ impl defmt::Format for Mb216bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 2 WORD_16B Register"]
+#[doc = "Message Buffer 2 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb216bWord3(pub u32);
@@ -29097,7 +29097,7 @@ impl defmt::Format for Mb216bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 21 CS Register"]
+#[doc = "Message Buffer 21 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb218bCs(pub u32);
@@ -29250,7 +29250,7 @@ impl defmt::Format for Mb218bCs {
         )
     }
 }
-#[doc = "Message Buffer 21 ID Register"]
+#[doc = "Message Buffer 21 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb218bId(pub u32);
@@ -29319,7 +29319,7 @@ impl defmt::Format for Mb218bId {
         )
     }
 }
-#[doc = "Message Buffer 21 WORD_8B Register"]
+#[doc = "Message Buffer 21 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb218bWord0(pub u32);
@@ -29402,7 +29402,7 @@ impl defmt::Format for Mb218bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 21 WORD_8B Register"]
+#[doc = "Message Buffer 21 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb218bWord1(pub u32);
@@ -29485,7 +29485,7 @@ impl defmt::Format for Mb218bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 22 CS Register"]
+#[doc = "Message Buffer 22 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb228bCs(pub u32);
@@ -29638,7 +29638,7 @@ impl defmt::Format for Mb228bCs {
         )
     }
 }
-#[doc = "Message Buffer 22 ID Register"]
+#[doc = "Message Buffer 22 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb228bId(pub u32);
@@ -29707,7 +29707,7 @@ impl defmt::Format for Mb228bId {
         )
     }
 }
-#[doc = "Message Buffer 22 WORD_8B Register"]
+#[doc = "Message Buffer 22 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb228bWord0(pub u32);
@@ -29790,7 +29790,7 @@ impl defmt::Format for Mb228bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 22 WORD_8B Register"]
+#[doc = "Message Buffer 22 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb228bWord1(pub u32);
@@ -29873,7 +29873,7 @@ impl defmt::Format for Mb228bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 2 CS Register"]
+#[doc = "Message Buffer 2 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb232bCs(pub u32);
@@ -30026,7 +30026,7 @@ impl defmt::Format for Mb232bCs {
         )
     }
 }
-#[doc = "Message Buffer 2 ID Register"]
+#[doc = "Message Buffer 2 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb232bId(pub u32);
@@ -30095,7 +30095,7 @@ impl defmt::Format for Mb232bId {
         )
     }
 }
-#[doc = "Message Buffer 2 WORD_32B Register"]
+#[doc = "Message Buffer 2 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb232bWord0(pub u32);
@@ -30178,7 +30178,7 @@ impl defmt::Format for Mb232bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 2 WORD_32B Register"]
+#[doc = "Message Buffer 2 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb232bWord1(pub u32);
@@ -30261,7 +30261,7 @@ impl defmt::Format for Mb232bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 2 WORD_32B Register"]
+#[doc = "Message Buffer 2 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb232bWord2(pub u32);
@@ -30344,7 +30344,7 @@ impl defmt::Format for Mb232bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 2 WORD_32B Register"]
+#[doc = "Message Buffer 2 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb232bWord3(pub u32);
@@ -30427,7 +30427,7 @@ impl defmt::Format for Mb232bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 2 WORD_32B Register"]
+#[doc = "Message Buffer 2 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb232bWord4(pub u32);
@@ -30510,7 +30510,7 @@ impl defmt::Format for Mb232bWord4 {
         )
     }
 }
-#[doc = "Message Buffer 2 WORD_32B Register"]
+#[doc = "Message Buffer 2 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb232bWord5(pub u32);
@@ -30593,7 +30593,7 @@ impl defmt::Format for Mb232bWord5 {
         )
     }
 }
-#[doc = "Message Buffer 2 WORD_32B Register"]
+#[doc = "Message Buffer 2 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb232bWord6(pub u32);
@@ -30676,7 +30676,7 @@ impl defmt::Format for Mb232bWord6 {
         )
     }
 }
-#[doc = "Message Buffer 2 WORD_32B Register"]
+#[doc = "Message Buffer 2 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb232bWord7(pub u32);
@@ -30759,7 +30759,7 @@ impl defmt::Format for Mb232bWord7 {
         )
     }
 }
-#[doc = "Message Buffer 23 CS Register"]
+#[doc = "Message Buffer 23 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb238bCs(pub u32);
@@ -30912,7 +30912,7 @@ impl defmt::Format for Mb238bCs {
         )
     }
 }
-#[doc = "Message Buffer 23 ID Register"]
+#[doc = "Message Buffer 23 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb238bId(pub u32);
@@ -30981,7 +30981,7 @@ impl defmt::Format for Mb238bId {
         )
     }
 }
-#[doc = "Message Buffer 23 WORD_8B Register"]
+#[doc = "Message Buffer 23 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb238bWord0(pub u32);
@@ -31064,7 +31064,7 @@ impl defmt::Format for Mb238bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 23 WORD_8B Register"]
+#[doc = "Message Buffer 23 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb238bWord1(pub u32);
@@ -31147,7 +31147,7 @@ impl defmt::Format for Mb238bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 24 CS Register"]
+#[doc = "Message Buffer 24 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb248bCs(pub u32);
@@ -31300,7 +31300,7 @@ impl defmt::Format for Mb248bCs {
         )
     }
 }
-#[doc = "Message Buffer 24 ID Register"]
+#[doc = "Message Buffer 24 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb248bId(pub u32);
@@ -31369,7 +31369,7 @@ impl defmt::Format for Mb248bId {
         )
     }
 }
-#[doc = "Message Buffer 24 WORD_8B Register"]
+#[doc = "Message Buffer 24 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb248bWord0(pub u32);
@@ -31452,7 +31452,7 @@ impl defmt::Format for Mb248bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 24 WORD_8B Register"]
+#[doc = "Message Buffer 24 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb248bWord1(pub u32);
@@ -31535,7 +31535,7 @@ impl defmt::Format for Mb248bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 25 CS Register"]
+#[doc = "Message Buffer 25 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb258bCs(pub u32);
@@ -31688,7 +31688,7 @@ impl defmt::Format for Mb258bCs {
         )
     }
 }
-#[doc = "Message Buffer 25 ID Register"]
+#[doc = "Message Buffer 25 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb258bId(pub u32);
@@ -31757,7 +31757,7 @@ impl defmt::Format for Mb258bId {
         )
     }
 }
-#[doc = "Message Buffer 25 WORD_8B Register"]
+#[doc = "Message Buffer 25 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb258bWord0(pub u32);
@@ -31840,7 +31840,7 @@ impl defmt::Format for Mb258bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 25 WORD_8B Register"]
+#[doc = "Message Buffer 25 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb258bWord1(pub u32);
@@ -31923,7 +31923,7 @@ impl defmt::Format for Mb258bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 2 CS Register"]
+#[doc = "Message Buffer 2 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb264bCs(pub u32);
@@ -32076,7 +32076,7 @@ impl defmt::Format for Mb264bCs {
         )
     }
 }
-#[doc = "Message Buffer 2 ID Register"]
+#[doc = "Message Buffer 2 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb264bId(pub u32);
@@ -32145,7 +32145,7 @@ impl defmt::Format for Mb264bId {
         )
     }
 }
-#[doc = "Message Buffer 2 WORD_64B Register"]
+#[doc = "Message Buffer 2 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb264bWord0(pub u32);
@@ -32228,7 +32228,7 @@ impl defmt::Format for Mb264bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 2 WORD_64B Register"]
+#[doc = "Message Buffer 2 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb264bWord1(pub u32);
@@ -32311,7 +32311,7 @@ impl defmt::Format for Mb264bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 2 WORD_64B Register"]
+#[doc = "Message Buffer 2 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb264bWord10(pub u32);
@@ -32394,7 +32394,7 @@ impl defmt::Format for Mb264bWord10 {
         )
     }
 }
-#[doc = "Message Buffer 2 WORD_64B Register"]
+#[doc = "Message Buffer 2 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb264bWord11(pub u32);
@@ -32477,7 +32477,7 @@ impl defmt::Format for Mb264bWord11 {
         )
     }
 }
-#[doc = "Message Buffer 2 WORD_64B Register"]
+#[doc = "Message Buffer 2 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb264bWord12(pub u32);
@@ -32560,7 +32560,7 @@ impl defmt::Format for Mb264bWord12 {
         )
     }
 }
-#[doc = "Message Buffer 2 WORD_64B Register"]
+#[doc = "Message Buffer 2 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb264bWord13(pub u32);
@@ -32643,7 +32643,7 @@ impl defmt::Format for Mb264bWord13 {
         )
     }
 }
-#[doc = "Message Buffer 2 WORD_64B Register"]
+#[doc = "Message Buffer 2 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb264bWord14(pub u32);
@@ -32726,7 +32726,7 @@ impl defmt::Format for Mb264bWord14 {
         )
     }
 }
-#[doc = "Message Buffer 2 WORD_64B Register"]
+#[doc = "Message Buffer 2 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb264bWord15(pub u32);
@@ -32809,7 +32809,7 @@ impl defmt::Format for Mb264bWord15 {
         )
     }
 }
-#[doc = "Message Buffer 2 WORD_64B Register"]
+#[doc = "Message Buffer 2 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb264bWord2(pub u32);
@@ -32892,7 +32892,7 @@ impl defmt::Format for Mb264bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 2 WORD_64B Register"]
+#[doc = "Message Buffer 2 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb264bWord3(pub u32);
@@ -32975,7 +32975,7 @@ impl defmt::Format for Mb264bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 2 WORD_64B Register"]
+#[doc = "Message Buffer 2 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb264bWord4(pub u32);
@@ -33058,7 +33058,7 @@ impl defmt::Format for Mb264bWord4 {
         )
     }
 }
-#[doc = "Message Buffer 2 WORD_64B Register"]
+#[doc = "Message Buffer 2 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb264bWord5(pub u32);
@@ -33141,7 +33141,7 @@ impl defmt::Format for Mb264bWord5 {
         )
     }
 }
-#[doc = "Message Buffer 2 WORD_64B Register"]
+#[doc = "Message Buffer 2 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb264bWord6(pub u32);
@@ -33224,7 +33224,7 @@ impl defmt::Format for Mb264bWord6 {
         )
     }
 }
-#[doc = "Message Buffer 2 WORD_64B Register"]
+#[doc = "Message Buffer 2 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb264bWord7(pub u32);
@@ -33307,7 +33307,7 @@ impl defmt::Format for Mb264bWord7 {
         )
     }
 }
-#[doc = "Message Buffer 2 WORD_64B Register"]
+#[doc = "Message Buffer 2 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb264bWord8(pub u32);
@@ -33390,7 +33390,7 @@ impl defmt::Format for Mb264bWord8 {
         )
     }
 }
-#[doc = "Message Buffer 2 WORD_64B Register"]
+#[doc = "Message Buffer 2 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb264bWord9(pub u32);
@@ -33473,7 +33473,7 @@ impl defmt::Format for Mb264bWord9 {
         )
     }
 }
-#[doc = "Message Buffer 26 CS Register"]
+#[doc = "Message Buffer 26 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb268bCs(pub u32);
@@ -33626,7 +33626,7 @@ impl defmt::Format for Mb268bCs {
         )
     }
 }
-#[doc = "Message Buffer 26 ID Register"]
+#[doc = "Message Buffer 26 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb268bId(pub u32);
@@ -33695,7 +33695,7 @@ impl defmt::Format for Mb268bId {
         )
     }
 }
-#[doc = "Message Buffer 26 WORD_8B Register"]
+#[doc = "Message Buffer 26 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb268bWord0(pub u32);
@@ -33778,7 +33778,7 @@ impl defmt::Format for Mb268bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 26 WORD_8B Register"]
+#[doc = "Message Buffer 26 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb268bWord1(pub u32);
@@ -33861,7 +33861,7 @@ impl defmt::Format for Mb268bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 27 CS Register"]
+#[doc = "Message Buffer 27 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb278bCs(pub u32);
@@ -34014,7 +34014,7 @@ impl defmt::Format for Mb278bCs {
         )
     }
 }
-#[doc = "Message Buffer 27 ID Register"]
+#[doc = "Message Buffer 27 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb278bId(pub u32);
@@ -34083,7 +34083,7 @@ impl defmt::Format for Mb278bId {
         )
     }
 }
-#[doc = "Message Buffer 27 WORD_8B Register"]
+#[doc = "Message Buffer 27 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb278bWord0(pub u32);
@@ -34166,7 +34166,7 @@ impl defmt::Format for Mb278bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 27 WORD_8B Register"]
+#[doc = "Message Buffer 27 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb278bWord1(pub u32);
@@ -34249,7 +34249,7 @@ impl defmt::Format for Mb278bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 28 CS Register"]
+#[doc = "Message Buffer 28 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb288bCs(pub u32);
@@ -34402,7 +34402,7 @@ impl defmt::Format for Mb288bCs {
         )
     }
 }
-#[doc = "Message Buffer 28 ID Register"]
+#[doc = "Message Buffer 28 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb288bId(pub u32);
@@ -34471,7 +34471,7 @@ impl defmt::Format for Mb288bId {
         )
     }
 }
-#[doc = "Message Buffer 28 WORD_8B Register"]
+#[doc = "Message Buffer 28 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb288bWord0(pub u32);
@@ -34554,7 +34554,7 @@ impl defmt::Format for Mb288bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 28 WORD_8B Register"]
+#[doc = "Message Buffer 28 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb288bWord1(pub u32);
@@ -34637,7 +34637,7 @@ impl defmt::Format for Mb288bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 2 CS Register"]
+#[doc = "Message Buffer 2 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb28bCs(pub u32);
@@ -34790,7 +34790,7 @@ impl defmt::Format for Mb28bCs {
         )
     }
 }
-#[doc = "Message Buffer 2 ID Register"]
+#[doc = "Message Buffer 2 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb28bId(pub u32);
@@ -34859,7 +34859,7 @@ impl defmt::Format for Mb28bId {
         )
     }
 }
-#[doc = "Message Buffer 2 WORD_8B Register"]
+#[doc = "Message Buffer 2 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb28bWord0(pub u32);
@@ -34942,7 +34942,7 @@ impl defmt::Format for Mb28bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 2 WORD_8B Register"]
+#[doc = "Message Buffer 2 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb28bWord1(pub u32);
@@ -35025,7 +35025,7 @@ impl defmt::Format for Mb28bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 29 CS Register"]
+#[doc = "Message Buffer 29 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb298bCs(pub u32);
@@ -35178,7 +35178,7 @@ impl defmt::Format for Mb298bCs {
         )
     }
 }
-#[doc = "Message Buffer 29 ID Register"]
+#[doc = "Message Buffer 29 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb298bId(pub u32);
@@ -35247,7 +35247,7 @@ impl defmt::Format for Mb298bId {
         )
     }
 }
-#[doc = "Message Buffer 29 WORD_8B Register"]
+#[doc = "Message Buffer 29 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb298bWord0(pub u32);
@@ -35330,7 +35330,7 @@ impl defmt::Format for Mb298bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 29 WORD_8B Register"]
+#[doc = "Message Buffer 29 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb298bWord1(pub u32);
@@ -35413,7 +35413,7 @@ impl defmt::Format for Mb298bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 30 CS Register"]
+#[doc = "Message Buffer 30 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb308bCs(pub u32);
@@ -35566,7 +35566,7 @@ impl defmt::Format for Mb308bCs {
         )
     }
 }
-#[doc = "Message Buffer 30 ID Register"]
+#[doc = "Message Buffer 30 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb308bId(pub u32);
@@ -35635,7 +35635,7 @@ impl defmt::Format for Mb308bId {
         )
     }
 }
-#[doc = "Message Buffer 30 WORD_8B Register"]
+#[doc = "Message Buffer 30 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb308bWord0(pub u32);
@@ -35718,7 +35718,7 @@ impl defmt::Format for Mb308bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 30 WORD_8B Register"]
+#[doc = "Message Buffer 30 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb308bWord1(pub u32);
@@ -35801,7 +35801,7 @@ impl defmt::Format for Mb308bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 3 CS Register"]
+#[doc = "Message Buffer 3 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb316bCs(pub u32);
@@ -35954,7 +35954,7 @@ impl defmt::Format for Mb316bCs {
         )
     }
 }
-#[doc = "Message Buffer 3 ID Register"]
+#[doc = "Message Buffer 3 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb316bId(pub u32);
@@ -36023,7 +36023,7 @@ impl defmt::Format for Mb316bId {
         )
     }
 }
-#[doc = "Message Buffer 3 WORD_16B Register"]
+#[doc = "Message Buffer 3 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb316bWord0(pub u32);
@@ -36106,7 +36106,7 @@ impl defmt::Format for Mb316bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 3 WORD_16B Register"]
+#[doc = "Message Buffer 3 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb316bWord1(pub u32);
@@ -36189,7 +36189,7 @@ impl defmt::Format for Mb316bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 3 WORD_16B Register"]
+#[doc = "Message Buffer 3 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb316bWord2(pub u32);
@@ -36272,7 +36272,7 @@ impl defmt::Format for Mb316bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 3 WORD_16B Register"]
+#[doc = "Message Buffer 3 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb316bWord3(pub u32);
@@ -36355,7 +36355,7 @@ impl defmt::Format for Mb316bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 31 CS Register"]
+#[doc = "Message Buffer 31 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb318bCs(pub u32);
@@ -36508,7 +36508,7 @@ impl defmt::Format for Mb318bCs {
         )
     }
 }
-#[doc = "Message Buffer 31 ID Register"]
+#[doc = "Message Buffer 31 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb318bId(pub u32);
@@ -36577,7 +36577,7 @@ impl defmt::Format for Mb318bId {
         )
     }
 }
-#[doc = "Message Buffer 31 WORD_8B Register"]
+#[doc = "Message Buffer 31 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb318bWord0(pub u32);
@@ -36660,7 +36660,7 @@ impl defmt::Format for Mb318bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 31 WORD_8B Register"]
+#[doc = "Message Buffer 31 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb318bWord1(pub u32);
@@ -36743,7 +36743,7 @@ impl defmt::Format for Mb318bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 3 CS Register"]
+#[doc = "Message Buffer 3 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb332bCs(pub u32);
@@ -36896,7 +36896,7 @@ impl defmt::Format for Mb332bCs {
         )
     }
 }
-#[doc = "Message Buffer 3 ID Register"]
+#[doc = "Message Buffer 3 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb332bId(pub u32);
@@ -36965,7 +36965,7 @@ impl defmt::Format for Mb332bId {
         )
     }
 }
-#[doc = "Message Buffer 3 WORD_32B Register"]
+#[doc = "Message Buffer 3 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb332bWord0(pub u32);
@@ -37048,7 +37048,7 @@ impl defmt::Format for Mb332bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 3 WORD_32B Register"]
+#[doc = "Message Buffer 3 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb332bWord1(pub u32);
@@ -37131,7 +37131,7 @@ impl defmt::Format for Mb332bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 3 WORD_32B Register"]
+#[doc = "Message Buffer 3 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb332bWord2(pub u32);
@@ -37214,7 +37214,7 @@ impl defmt::Format for Mb332bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 3 WORD_32B Register"]
+#[doc = "Message Buffer 3 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb332bWord3(pub u32);
@@ -37297,7 +37297,7 @@ impl defmt::Format for Mb332bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 3 WORD_32B Register"]
+#[doc = "Message Buffer 3 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb332bWord4(pub u32);
@@ -37380,7 +37380,7 @@ impl defmt::Format for Mb332bWord4 {
         )
     }
 }
-#[doc = "Message Buffer 3 WORD_32B Register"]
+#[doc = "Message Buffer 3 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb332bWord5(pub u32);
@@ -37463,7 +37463,7 @@ impl defmt::Format for Mb332bWord5 {
         )
     }
 }
-#[doc = "Message Buffer 3 WORD_32B Register"]
+#[doc = "Message Buffer 3 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb332bWord6(pub u32);
@@ -37546,7 +37546,7 @@ impl defmt::Format for Mb332bWord6 {
         )
     }
 }
-#[doc = "Message Buffer 3 WORD_32B Register"]
+#[doc = "Message Buffer 3 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb332bWord7(pub u32);
@@ -37629,7 +37629,7 @@ impl defmt::Format for Mb332bWord7 {
         )
     }
 }
-#[doc = "Message Buffer 3 CS Register"]
+#[doc = "Message Buffer 3 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb364bCs(pub u32);
@@ -37782,7 +37782,7 @@ impl defmt::Format for Mb364bCs {
         )
     }
 }
-#[doc = "Message Buffer 3 ID Register"]
+#[doc = "Message Buffer 3 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb364bId(pub u32);
@@ -37851,7 +37851,7 @@ impl defmt::Format for Mb364bId {
         )
     }
 }
-#[doc = "Message Buffer 3 WORD_64B Register"]
+#[doc = "Message Buffer 3 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb364bWord0(pub u32);
@@ -37934,7 +37934,7 @@ impl defmt::Format for Mb364bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 3 WORD_64B Register"]
+#[doc = "Message Buffer 3 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb364bWord1(pub u32);
@@ -38017,7 +38017,7 @@ impl defmt::Format for Mb364bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 3 WORD_64B Register"]
+#[doc = "Message Buffer 3 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb364bWord10(pub u32);
@@ -38100,7 +38100,7 @@ impl defmt::Format for Mb364bWord10 {
         )
     }
 }
-#[doc = "Message Buffer 3 WORD_64B Register"]
+#[doc = "Message Buffer 3 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb364bWord11(pub u32);
@@ -38183,7 +38183,7 @@ impl defmt::Format for Mb364bWord11 {
         )
     }
 }
-#[doc = "Message Buffer 3 WORD_64B Register"]
+#[doc = "Message Buffer 3 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb364bWord12(pub u32);
@@ -38266,7 +38266,7 @@ impl defmt::Format for Mb364bWord12 {
         )
     }
 }
-#[doc = "Message Buffer 3 WORD_64B Register"]
+#[doc = "Message Buffer 3 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb364bWord13(pub u32);
@@ -38349,7 +38349,7 @@ impl defmt::Format for Mb364bWord13 {
         )
     }
 }
-#[doc = "Message Buffer 3 WORD_64B Register"]
+#[doc = "Message Buffer 3 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb364bWord14(pub u32);
@@ -38432,7 +38432,7 @@ impl defmt::Format for Mb364bWord14 {
         )
     }
 }
-#[doc = "Message Buffer 3 WORD_64B Register"]
+#[doc = "Message Buffer 3 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb364bWord15(pub u32);
@@ -38515,7 +38515,7 @@ impl defmt::Format for Mb364bWord15 {
         )
     }
 }
-#[doc = "Message Buffer 3 WORD_64B Register"]
+#[doc = "Message Buffer 3 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb364bWord2(pub u32);
@@ -38598,7 +38598,7 @@ impl defmt::Format for Mb364bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 3 WORD_64B Register"]
+#[doc = "Message Buffer 3 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb364bWord3(pub u32);
@@ -38681,7 +38681,7 @@ impl defmt::Format for Mb364bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 3 WORD_64B Register"]
+#[doc = "Message Buffer 3 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb364bWord4(pub u32);
@@ -38764,7 +38764,7 @@ impl defmt::Format for Mb364bWord4 {
         )
     }
 }
-#[doc = "Message Buffer 3 WORD_64B Register"]
+#[doc = "Message Buffer 3 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb364bWord5(pub u32);
@@ -38847,7 +38847,7 @@ impl defmt::Format for Mb364bWord5 {
         )
     }
 }
-#[doc = "Message Buffer 3 WORD_64B Register"]
+#[doc = "Message Buffer 3 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb364bWord6(pub u32);
@@ -38930,7 +38930,7 @@ impl defmt::Format for Mb364bWord6 {
         )
     }
 }
-#[doc = "Message Buffer 3 WORD_64B Register"]
+#[doc = "Message Buffer 3 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb364bWord7(pub u32);
@@ -39013,7 +39013,7 @@ impl defmt::Format for Mb364bWord7 {
         )
     }
 }
-#[doc = "Message Buffer 3 WORD_64B Register"]
+#[doc = "Message Buffer 3 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb364bWord8(pub u32);
@@ -39096,7 +39096,7 @@ impl defmt::Format for Mb364bWord8 {
         )
     }
 }
-#[doc = "Message Buffer 3 WORD_64B Register"]
+#[doc = "Message Buffer 3 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb364bWord9(pub u32);
@@ -39179,7 +39179,7 @@ impl defmt::Format for Mb364bWord9 {
         )
     }
 }
-#[doc = "Message Buffer 3 CS Register"]
+#[doc = "Message Buffer 3 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb38bCs(pub u32);
@@ -39332,7 +39332,7 @@ impl defmt::Format for Mb38bCs {
         )
     }
 }
-#[doc = "Message Buffer 3 ID Register"]
+#[doc = "Message Buffer 3 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb38bId(pub u32);
@@ -39401,7 +39401,7 @@ impl defmt::Format for Mb38bId {
         )
     }
 }
-#[doc = "Message Buffer 3 WORD_8B Register"]
+#[doc = "Message Buffer 3 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb38bWord0(pub u32);
@@ -39484,7 +39484,7 @@ impl defmt::Format for Mb38bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 3 WORD_8B Register"]
+#[doc = "Message Buffer 3 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb38bWord1(pub u32);
@@ -39567,7 +39567,7 @@ impl defmt::Format for Mb38bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 4 CS Register"]
+#[doc = "Message Buffer 4 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb416bCs(pub u32);
@@ -39720,7 +39720,7 @@ impl defmt::Format for Mb416bCs {
         )
     }
 }
-#[doc = "Message Buffer 4 ID Register"]
+#[doc = "Message Buffer 4 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb416bId(pub u32);
@@ -39789,7 +39789,7 @@ impl defmt::Format for Mb416bId {
         )
     }
 }
-#[doc = "Message Buffer 4 WORD_16B Register"]
+#[doc = "Message Buffer 4 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb416bWord0(pub u32);
@@ -39872,7 +39872,7 @@ impl defmt::Format for Mb416bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 4 WORD_16B Register"]
+#[doc = "Message Buffer 4 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb416bWord1(pub u32);
@@ -39955,7 +39955,7 @@ impl defmt::Format for Mb416bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 4 WORD_16B Register"]
+#[doc = "Message Buffer 4 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb416bWord2(pub u32);
@@ -40038,7 +40038,7 @@ impl defmt::Format for Mb416bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 4 WORD_16B Register"]
+#[doc = "Message Buffer 4 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb416bWord3(pub u32);
@@ -40121,7 +40121,7 @@ impl defmt::Format for Mb416bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 4 CS Register"]
+#[doc = "Message Buffer 4 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb432bCs(pub u32);
@@ -40274,7 +40274,7 @@ impl defmt::Format for Mb432bCs {
         )
     }
 }
-#[doc = "Message Buffer 4 ID Register"]
+#[doc = "Message Buffer 4 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb432bId(pub u32);
@@ -40343,7 +40343,7 @@ impl defmt::Format for Mb432bId {
         )
     }
 }
-#[doc = "Message Buffer 4 WORD_32B Register"]
+#[doc = "Message Buffer 4 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb432bWord0(pub u32);
@@ -40426,7 +40426,7 @@ impl defmt::Format for Mb432bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 4 WORD_32B Register"]
+#[doc = "Message Buffer 4 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb432bWord1(pub u32);
@@ -40509,7 +40509,7 @@ impl defmt::Format for Mb432bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 4 WORD_32B Register"]
+#[doc = "Message Buffer 4 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb432bWord2(pub u32);
@@ -40592,7 +40592,7 @@ impl defmt::Format for Mb432bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 4 WORD_32B Register"]
+#[doc = "Message Buffer 4 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb432bWord3(pub u32);
@@ -40675,7 +40675,7 @@ impl defmt::Format for Mb432bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 4 WORD_32B Register"]
+#[doc = "Message Buffer 4 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb432bWord4(pub u32);
@@ -40758,7 +40758,7 @@ impl defmt::Format for Mb432bWord4 {
         )
     }
 }
-#[doc = "Message Buffer 4 WORD_32B Register"]
+#[doc = "Message Buffer 4 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb432bWord5(pub u32);
@@ -40841,7 +40841,7 @@ impl defmt::Format for Mb432bWord5 {
         )
     }
 }
-#[doc = "Message Buffer 4 WORD_32B Register"]
+#[doc = "Message Buffer 4 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb432bWord6(pub u32);
@@ -40924,7 +40924,7 @@ impl defmt::Format for Mb432bWord6 {
         )
     }
 }
-#[doc = "Message Buffer 4 WORD_32B Register"]
+#[doc = "Message Buffer 4 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb432bWord7(pub u32);
@@ -41007,7 +41007,7 @@ impl defmt::Format for Mb432bWord7 {
         )
     }
 }
-#[doc = "Message Buffer 4 CS Register"]
+#[doc = "Message Buffer 4 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb464bCs(pub u32);
@@ -41160,7 +41160,7 @@ impl defmt::Format for Mb464bCs {
         )
     }
 }
-#[doc = "Message Buffer 4 ID Register"]
+#[doc = "Message Buffer 4 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb464bId(pub u32);
@@ -41229,7 +41229,7 @@ impl defmt::Format for Mb464bId {
         )
     }
 }
-#[doc = "Message Buffer 4 WORD_64B Register"]
+#[doc = "Message Buffer 4 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb464bWord0(pub u32);
@@ -41312,7 +41312,7 @@ impl defmt::Format for Mb464bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 4 WORD_64B Register"]
+#[doc = "Message Buffer 4 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb464bWord1(pub u32);
@@ -41395,7 +41395,7 @@ impl defmt::Format for Mb464bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 4 WORD_64B Register"]
+#[doc = "Message Buffer 4 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb464bWord10(pub u32);
@@ -41478,7 +41478,7 @@ impl defmt::Format for Mb464bWord10 {
         )
     }
 }
-#[doc = "Message Buffer 4 WORD_64B Register"]
+#[doc = "Message Buffer 4 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb464bWord11(pub u32);
@@ -41561,7 +41561,7 @@ impl defmt::Format for Mb464bWord11 {
         )
     }
 }
-#[doc = "Message Buffer 4 WORD_64B Register"]
+#[doc = "Message Buffer 4 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb464bWord12(pub u32);
@@ -41644,7 +41644,7 @@ impl defmt::Format for Mb464bWord12 {
         )
     }
 }
-#[doc = "Message Buffer 4 WORD_64B Register"]
+#[doc = "Message Buffer 4 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb464bWord13(pub u32);
@@ -41727,7 +41727,7 @@ impl defmt::Format for Mb464bWord13 {
         )
     }
 }
-#[doc = "Message Buffer 4 WORD_64B Register"]
+#[doc = "Message Buffer 4 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb464bWord14(pub u32);
@@ -41810,7 +41810,7 @@ impl defmt::Format for Mb464bWord14 {
         )
     }
 }
-#[doc = "Message Buffer 4 WORD_64B Register"]
+#[doc = "Message Buffer 4 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb464bWord15(pub u32);
@@ -41893,7 +41893,7 @@ impl defmt::Format for Mb464bWord15 {
         )
     }
 }
-#[doc = "Message Buffer 4 WORD_64B Register"]
+#[doc = "Message Buffer 4 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb464bWord2(pub u32);
@@ -41976,7 +41976,7 @@ impl defmt::Format for Mb464bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 4 WORD_64B Register"]
+#[doc = "Message Buffer 4 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb464bWord3(pub u32);
@@ -42059,7 +42059,7 @@ impl defmt::Format for Mb464bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 4 WORD_64B Register"]
+#[doc = "Message Buffer 4 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb464bWord4(pub u32);
@@ -42142,7 +42142,7 @@ impl defmt::Format for Mb464bWord4 {
         )
     }
 }
-#[doc = "Message Buffer 4 WORD_64B Register"]
+#[doc = "Message Buffer 4 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb464bWord5(pub u32);
@@ -42225,7 +42225,7 @@ impl defmt::Format for Mb464bWord5 {
         )
     }
 }
-#[doc = "Message Buffer 4 WORD_64B Register"]
+#[doc = "Message Buffer 4 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb464bWord6(pub u32);
@@ -42308,7 +42308,7 @@ impl defmt::Format for Mb464bWord6 {
         )
     }
 }
-#[doc = "Message Buffer 4 WORD_64B Register"]
+#[doc = "Message Buffer 4 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb464bWord7(pub u32);
@@ -42391,7 +42391,7 @@ impl defmt::Format for Mb464bWord7 {
         )
     }
 }
-#[doc = "Message Buffer 4 WORD_64B Register"]
+#[doc = "Message Buffer 4 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb464bWord8(pub u32);
@@ -42474,7 +42474,7 @@ impl defmt::Format for Mb464bWord8 {
         )
     }
 }
-#[doc = "Message Buffer 4 WORD_64B Register"]
+#[doc = "Message Buffer 4 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb464bWord9(pub u32);
@@ -42557,7 +42557,7 @@ impl defmt::Format for Mb464bWord9 {
         )
     }
 }
-#[doc = "Message Buffer 4 CS Register"]
+#[doc = "Message Buffer 4 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb48bCs(pub u32);
@@ -42710,7 +42710,7 @@ impl defmt::Format for Mb48bCs {
         )
     }
 }
-#[doc = "Message Buffer 4 ID Register"]
+#[doc = "Message Buffer 4 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb48bId(pub u32);
@@ -42779,7 +42779,7 @@ impl defmt::Format for Mb48bId {
         )
     }
 }
-#[doc = "Message Buffer 4 WORD_8B Register"]
+#[doc = "Message Buffer 4 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb48bWord0(pub u32);
@@ -42862,7 +42862,7 @@ impl defmt::Format for Mb48bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 4 WORD_8B Register"]
+#[doc = "Message Buffer 4 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb48bWord1(pub u32);
@@ -42945,7 +42945,7 @@ impl defmt::Format for Mb48bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 5 CS Register"]
+#[doc = "Message Buffer 5 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb516bCs(pub u32);
@@ -43098,7 +43098,7 @@ impl defmt::Format for Mb516bCs {
         )
     }
 }
-#[doc = "Message Buffer 5 ID Register"]
+#[doc = "Message Buffer 5 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb516bId(pub u32);
@@ -43167,7 +43167,7 @@ impl defmt::Format for Mb516bId {
         )
     }
 }
-#[doc = "Message Buffer 5 WORD_16B Register"]
+#[doc = "Message Buffer 5 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb516bWord0(pub u32);
@@ -43250,7 +43250,7 @@ impl defmt::Format for Mb516bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 5 WORD_16B Register"]
+#[doc = "Message Buffer 5 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb516bWord1(pub u32);
@@ -43333,7 +43333,7 @@ impl defmt::Format for Mb516bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 5 WORD_16B Register"]
+#[doc = "Message Buffer 5 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb516bWord2(pub u32);
@@ -43416,7 +43416,7 @@ impl defmt::Format for Mb516bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 5 WORD_16B Register"]
+#[doc = "Message Buffer 5 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb516bWord3(pub u32);
@@ -43499,7 +43499,7 @@ impl defmt::Format for Mb516bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 5 CS Register"]
+#[doc = "Message Buffer 5 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb532bCs(pub u32);
@@ -43652,7 +43652,7 @@ impl defmt::Format for Mb532bCs {
         )
     }
 }
-#[doc = "Message Buffer 5 ID Register"]
+#[doc = "Message Buffer 5 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb532bId(pub u32);
@@ -43721,7 +43721,7 @@ impl defmt::Format for Mb532bId {
         )
     }
 }
-#[doc = "Message Buffer 5 WORD_32B Register"]
+#[doc = "Message Buffer 5 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb532bWord0(pub u32);
@@ -43804,7 +43804,7 @@ impl defmt::Format for Mb532bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 5 WORD_32B Register"]
+#[doc = "Message Buffer 5 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb532bWord1(pub u32);
@@ -43887,7 +43887,7 @@ impl defmt::Format for Mb532bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 5 WORD_32B Register"]
+#[doc = "Message Buffer 5 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb532bWord2(pub u32);
@@ -43970,7 +43970,7 @@ impl defmt::Format for Mb532bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 5 WORD_32B Register"]
+#[doc = "Message Buffer 5 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb532bWord3(pub u32);
@@ -44053,7 +44053,7 @@ impl defmt::Format for Mb532bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 5 WORD_32B Register"]
+#[doc = "Message Buffer 5 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb532bWord4(pub u32);
@@ -44136,7 +44136,7 @@ impl defmt::Format for Mb532bWord4 {
         )
     }
 }
-#[doc = "Message Buffer 5 WORD_32B Register"]
+#[doc = "Message Buffer 5 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb532bWord5(pub u32);
@@ -44219,7 +44219,7 @@ impl defmt::Format for Mb532bWord5 {
         )
     }
 }
-#[doc = "Message Buffer 5 WORD_32B Register"]
+#[doc = "Message Buffer 5 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb532bWord6(pub u32);
@@ -44302,7 +44302,7 @@ impl defmt::Format for Mb532bWord6 {
         )
     }
 }
-#[doc = "Message Buffer 5 WORD_32B Register"]
+#[doc = "Message Buffer 5 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb532bWord7(pub u32);
@@ -44385,7 +44385,7 @@ impl defmt::Format for Mb532bWord7 {
         )
     }
 }
-#[doc = "Message Buffer 5 CS Register"]
+#[doc = "Message Buffer 5 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb564bCs(pub u32);
@@ -44538,7 +44538,7 @@ impl defmt::Format for Mb564bCs {
         )
     }
 }
-#[doc = "Message Buffer 5 ID Register"]
+#[doc = "Message Buffer 5 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb564bId(pub u32);
@@ -44607,7 +44607,7 @@ impl defmt::Format for Mb564bId {
         )
     }
 }
-#[doc = "Message Buffer 5 WORD_64B Register"]
+#[doc = "Message Buffer 5 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb564bWord0(pub u32);
@@ -44690,7 +44690,7 @@ impl defmt::Format for Mb564bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 5 WORD_64B Register"]
+#[doc = "Message Buffer 5 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb564bWord1(pub u32);
@@ -44773,7 +44773,7 @@ impl defmt::Format for Mb564bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 5 WORD_64B Register"]
+#[doc = "Message Buffer 5 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb564bWord10(pub u32);
@@ -44856,7 +44856,7 @@ impl defmt::Format for Mb564bWord10 {
         )
     }
 }
-#[doc = "Message Buffer 5 WORD_64B Register"]
+#[doc = "Message Buffer 5 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb564bWord11(pub u32);
@@ -44939,7 +44939,7 @@ impl defmt::Format for Mb564bWord11 {
         )
     }
 }
-#[doc = "Message Buffer 5 WORD_64B Register"]
+#[doc = "Message Buffer 5 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb564bWord12(pub u32);
@@ -45022,7 +45022,7 @@ impl defmt::Format for Mb564bWord12 {
         )
     }
 }
-#[doc = "Message Buffer 5 WORD_64B Register"]
+#[doc = "Message Buffer 5 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb564bWord13(pub u32);
@@ -45105,7 +45105,7 @@ impl defmt::Format for Mb564bWord13 {
         )
     }
 }
-#[doc = "Message Buffer 5 WORD_64B Register"]
+#[doc = "Message Buffer 5 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb564bWord14(pub u32);
@@ -45188,7 +45188,7 @@ impl defmt::Format for Mb564bWord14 {
         )
     }
 }
-#[doc = "Message Buffer 5 WORD_64B Register"]
+#[doc = "Message Buffer 5 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb564bWord15(pub u32);
@@ -45271,7 +45271,7 @@ impl defmt::Format for Mb564bWord15 {
         )
     }
 }
-#[doc = "Message Buffer 5 WORD_64B Register"]
+#[doc = "Message Buffer 5 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb564bWord2(pub u32);
@@ -45354,7 +45354,7 @@ impl defmt::Format for Mb564bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 5 WORD_64B Register"]
+#[doc = "Message Buffer 5 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb564bWord3(pub u32);
@@ -45437,7 +45437,7 @@ impl defmt::Format for Mb564bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 5 WORD_64B Register"]
+#[doc = "Message Buffer 5 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb564bWord4(pub u32);
@@ -45520,7 +45520,7 @@ impl defmt::Format for Mb564bWord4 {
         )
     }
 }
-#[doc = "Message Buffer 5 WORD_64B Register"]
+#[doc = "Message Buffer 5 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb564bWord5(pub u32);
@@ -45603,7 +45603,7 @@ impl defmt::Format for Mb564bWord5 {
         )
     }
 }
-#[doc = "Message Buffer 5 WORD_64B Register"]
+#[doc = "Message Buffer 5 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb564bWord6(pub u32);
@@ -45686,7 +45686,7 @@ impl defmt::Format for Mb564bWord6 {
         )
     }
 }
-#[doc = "Message Buffer 5 WORD_64B Register"]
+#[doc = "Message Buffer 5 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb564bWord7(pub u32);
@@ -45769,7 +45769,7 @@ impl defmt::Format for Mb564bWord7 {
         )
     }
 }
-#[doc = "Message Buffer 5 WORD_64B Register"]
+#[doc = "Message Buffer 5 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb564bWord8(pub u32);
@@ -45852,7 +45852,7 @@ impl defmt::Format for Mb564bWord8 {
         )
     }
 }
-#[doc = "Message Buffer 5 WORD_64B Register"]
+#[doc = "Message Buffer 5 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb564bWord9(pub u32);
@@ -45935,7 +45935,7 @@ impl defmt::Format for Mb564bWord9 {
         )
     }
 }
-#[doc = "Message Buffer 5 CS Register"]
+#[doc = "Message Buffer 5 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb58bCs(pub u32);
@@ -46088,7 +46088,7 @@ impl defmt::Format for Mb58bCs {
         )
     }
 }
-#[doc = "Message Buffer 5 ID Register"]
+#[doc = "Message Buffer 5 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb58bId(pub u32);
@@ -46157,7 +46157,7 @@ impl defmt::Format for Mb58bId {
         )
     }
 }
-#[doc = "Message Buffer 5 WORD_8B Register"]
+#[doc = "Message Buffer 5 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb58bWord0(pub u32);
@@ -46240,7 +46240,7 @@ impl defmt::Format for Mb58bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 5 WORD_8B Register"]
+#[doc = "Message Buffer 5 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb58bWord1(pub u32);
@@ -46323,7 +46323,7 @@ impl defmt::Format for Mb58bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 6 CS Register"]
+#[doc = "Message Buffer 6 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb616bCs(pub u32);
@@ -46476,7 +46476,7 @@ impl defmt::Format for Mb616bCs {
         )
     }
 }
-#[doc = "Message Buffer 6 ID Register"]
+#[doc = "Message Buffer 6 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb616bId(pub u32);
@@ -46545,7 +46545,7 @@ impl defmt::Format for Mb616bId {
         )
     }
 }
-#[doc = "Message Buffer 6 WORD_16B Register"]
+#[doc = "Message Buffer 6 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb616bWord0(pub u32);
@@ -46628,7 +46628,7 @@ impl defmt::Format for Mb616bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 6 WORD_16B Register"]
+#[doc = "Message Buffer 6 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb616bWord1(pub u32);
@@ -46711,7 +46711,7 @@ impl defmt::Format for Mb616bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 6 WORD_16B Register"]
+#[doc = "Message Buffer 6 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb616bWord2(pub u32);
@@ -46794,7 +46794,7 @@ impl defmt::Format for Mb616bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 6 WORD_16B Register"]
+#[doc = "Message Buffer 6 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb616bWord3(pub u32);
@@ -46877,7 +46877,7 @@ impl defmt::Format for Mb616bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 6 CS Register"]
+#[doc = "Message Buffer 6 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb632bCs(pub u32);
@@ -47030,7 +47030,7 @@ impl defmt::Format for Mb632bCs {
         )
     }
 }
-#[doc = "Message Buffer 6 ID Register"]
+#[doc = "Message Buffer 6 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb632bId(pub u32);
@@ -47099,7 +47099,7 @@ impl defmt::Format for Mb632bId {
         )
     }
 }
-#[doc = "Message Buffer 6 WORD_32B Register"]
+#[doc = "Message Buffer 6 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb632bWord0(pub u32);
@@ -47182,7 +47182,7 @@ impl defmt::Format for Mb632bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 6 WORD_32B Register"]
+#[doc = "Message Buffer 6 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb632bWord1(pub u32);
@@ -47265,7 +47265,7 @@ impl defmt::Format for Mb632bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 6 WORD_32B Register"]
+#[doc = "Message Buffer 6 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb632bWord2(pub u32);
@@ -47348,7 +47348,7 @@ impl defmt::Format for Mb632bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 6 WORD_32B Register"]
+#[doc = "Message Buffer 6 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb632bWord3(pub u32);
@@ -47431,7 +47431,7 @@ impl defmt::Format for Mb632bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 6 WORD_32B Register"]
+#[doc = "Message Buffer 6 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb632bWord4(pub u32);
@@ -47514,7 +47514,7 @@ impl defmt::Format for Mb632bWord4 {
         )
     }
 }
-#[doc = "Message Buffer 6 WORD_32B Register"]
+#[doc = "Message Buffer 6 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb632bWord5(pub u32);
@@ -47597,7 +47597,7 @@ impl defmt::Format for Mb632bWord5 {
         )
     }
 }
-#[doc = "Message Buffer 6 WORD_32B Register"]
+#[doc = "Message Buffer 6 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb632bWord6(pub u32);
@@ -47680,7 +47680,7 @@ impl defmt::Format for Mb632bWord6 {
         )
     }
 }
-#[doc = "Message Buffer 6 WORD_32B Register"]
+#[doc = "Message Buffer 6 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb632bWord7(pub u32);
@@ -47763,7 +47763,7 @@ impl defmt::Format for Mb632bWord7 {
         )
     }
 }
-#[doc = "Message Buffer 6 CS Register"]
+#[doc = "Message Buffer 6 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb664bCs(pub u32);
@@ -47916,7 +47916,7 @@ impl defmt::Format for Mb664bCs {
         )
     }
 }
-#[doc = "Message Buffer 6 ID Register"]
+#[doc = "Message Buffer 6 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb664bId(pub u32);
@@ -47985,7 +47985,7 @@ impl defmt::Format for Mb664bId {
         )
     }
 }
-#[doc = "Message Buffer 6 WORD_64B Register"]
+#[doc = "Message Buffer 6 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb664bWord0(pub u32);
@@ -48068,7 +48068,7 @@ impl defmt::Format for Mb664bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 6 WORD_64B Register"]
+#[doc = "Message Buffer 6 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb664bWord1(pub u32);
@@ -48151,7 +48151,7 @@ impl defmt::Format for Mb664bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 6 WORD_64B Register"]
+#[doc = "Message Buffer 6 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb664bWord10(pub u32);
@@ -48234,7 +48234,7 @@ impl defmt::Format for Mb664bWord10 {
         )
     }
 }
-#[doc = "Message Buffer 6 WORD_64B Register"]
+#[doc = "Message Buffer 6 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb664bWord11(pub u32);
@@ -48317,7 +48317,7 @@ impl defmt::Format for Mb664bWord11 {
         )
     }
 }
-#[doc = "Message Buffer 6 WORD_64B Register"]
+#[doc = "Message Buffer 6 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb664bWord12(pub u32);
@@ -48400,7 +48400,7 @@ impl defmt::Format for Mb664bWord12 {
         )
     }
 }
-#[doc = "Message Buffer 6 WORD_64B Register"]
+#[doc = "Message Buffer 6 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb664bWord13(pub u32);
@@ -48483,7 +48483,7 @@ impl defmt::Format for Mb664bWord13 {
         )
     }
 }
-#[doc = "Message Buffer 6 WORD_64B Register"]
+#[doc = "Message Buffer 6 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb664bWord14(pub u32);
@@ -48566,7 +48566,7 @@ impl defmt::Format for Mb664bWord14 {
         )
     }
 }
-#[doc = "Message Buffer 6 WORD_64B Register"]
+#[doc = "Message Buffer 6 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb664bWord15(pub u32);
@@ -48649,7 +48649,7 @@ impl defmt::Format for Mb664bWord15 {
         )
     }
 }
-#[doc = "Message Buffer 6 WORD_64B Register"]
+#[doc = "Message Buffer 6 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb664bWord2(pub u32);
@@ -48732,7 +48732,7 @@ impl defmt::Format for Mb664bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 6 WORD_64B Register"]
+#[doc = "Message Buffer 6 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb664bWord3(pub u32);
@@ -48815,7 +48815,7 @@ impl defmt::Format for Mb664bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 6 WORD_64B Register"]
+#[doc = "Message Buffer 6 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb664bWord4(pub u32);
@@ -48898,7 +48898,7 @@ impl defmt::Format for Mb664bWord4 {
         )
     }
 }
-#[doc = "Message Buffer 6 WORD_64B Register"]
+#[doc = "Message Buffer 6 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb664bWord5(pub u32);
@@ -48981,7 +48981,7 @@ impl defmt::Format for Mb664bWord5 {
         )
     }
 }
-#[doc = "Message Buffer 6 WORD_64B Register"]
+#[doc = "Message Buffer 6 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb664bWord6(pub u32);
@@ -49064,7 +49064,7 @@ impl defmt::Format for Mb664bWord6 {
         )
     }
 }
-#[doc = "Message Buffer 6 WORD_64B Register"]
+#[doc = "Message Buffer 6 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb664bWord7(pub u32);
@@ -49147,7 +49147,7 @@ impl defmt::Format for Mb664bWord7 {
         )
     }
 }
-#[doc = "Message Buffer 6 WORD_64B Register"]
+#[doc = "Message Buffer 6 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb664bWord8(pub u32);
@@ -49230,7 +49230,7 @@ impl defmt::Format for Mb664bWord8 {
         )
     }
 }
-#[doc = "Message Buffer 6 WORD_64B Register"]
+#[doc = "Message Buffer 6 WORD_64B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb664bWord9(pub u32);
@@ -49313,7 +49313,7 @@ impl defmt::Format for Mb664bWord9 {
         )
     }
 }
-#[doc = "Message Buffer 6 CS Register"]
+#[doc = "Message Buffer 6 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb68bCs(pub u32);
@@ -49466,7 +49466,7 @@ impl defmt::Format for Mb68bCs {
         )
     }
 }
-#[doc = "Message Buffer 6 ID Register"]
+#[doc = "Message Buffer 6 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb68bId(pub u32);
@@ -49535,7 +49535,7 @@ impl defmt::Format for Mb68bId {
         )
     }
 }
-#[doc = "Message Buffer 6 WORD_8B Register"]
+#[doc = "Message Buffer 6 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb68bWord0(pub u32);
@@ -49618,7 +49618,7 @@ impl defmt::Format for Mb68bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 6 WORD_8B Register"]
+#[doc = "Message Buffer 6 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb68bWord1(pub u32);
@@ -49701,7 +49701,7 @@ impl defmt::Format for Mb68bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 7 CS Register"]
+#[doc = "Message Buffer 7 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb716bCs(pub u32);
@@ -49854,7 +49854,7 @@ impl defmt::Format for Mb716bCs {
         )
     }
 }
-#[doc = "Message Buffer 7 ID Register"]
+#[doc = "Message Buffer 7 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb716bId(pub u32);
@@ -49923,7 +49923,7 @@ impl defmt::Format for Mb716bId {
         )
     }
 }
-#[doc = "Message Buffer 7 WORD_16B Register"]
+#[doc = "Message Buffer 7 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb716bWord0(pub u32);
@@ -50006,7 +50006,7 @@ impl defmt::Format for Mb716bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 7 WORD_16B Register"]
+#[doc = "Message Buffer 7 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb716bWord1(pub u32);
@@ -50089,7 +50089,7 @@ impl defmt::Format for Mb716bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 7 WORD_16B Register"]
+#[doc = "Message Buffer 7 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb716bWord2(pub u32);
@@ -50172,7 +50172,7 @@ impl defmt::Format for Mb716bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 7 WORD_16B Register"]
+#[doc = "Message Buffer 7 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb716bWord3(pub u32);
@@ -50255,7 +50255,7 @@ impl defmt::Format for Mb716bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 7 CS Register"]
+#[doc = "Message Buffer 7 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb732bCs(pub u32);
@@ -50408,7 +50408,7 @@ impl defmt::Format for Mb732bCs {
         )
     }
 }
-#[doc = "Message Buffer 7 ID Register"]
+#[doc = "Message Buffer 7 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb732bId(pub u32);
@@ -50477,7 +50477,7 @@ impl defmt::Format for Mb732bId {
         )
     }
 }
-#[doc = "Message Buffer 7 WORD_32B Register"]
+#[doc = "Message Buffer 7 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb732bWord0(pub u32);
@@ -50560,7 +50560,7 @@ impl defmt::Format for Mb732bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 7 WORD_32B Register"]
+#[doc = "Message Buffer 7 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb732bWord1(pub u32);
@@ -50643,7 +50643,7 @@ impl defmt::Format for Mb732bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 7 WORD_32B Register"]
+#[doc = "Message Buffer 7 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb732bWord2(pub u32);
@@ -50726,7 +50726,7 @@ impl defmt::Format for Mb732bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 7 WORD_32B Register"]
+#[doc = "Message Buffer 7 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb732bWord3(pub u32);
@@ -50809,7 +50809,7 @@ impl defmt::Format for Mb732bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 7 WORD_32B Register"]
+#[doc = "Message Buffer 7 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb732bWord4(pub u32);
@@ -50892,7 +50892,7 @@ impl defmt::Format for Mb732bWord4 {
         )
     }
 }
-#[doc = "Message Buffer 7 WORD_32B Register"]
+#[doc = "Message Buffer 7 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb732bWord5(pub u32);
@@ -50975,7 +50975,7 @@ impl defmt::Format for Mb732bWord5 {
         )
     }
 }
-#[doc = "Message Buffer 7 WORD_32B Register"]
+#[doc = "Message Buffer 7 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb732bWord6(pub u32);
@@ -51058,7 +51058,7 @@ impl defmt::Format for Mb732bWord6 {
         )
     }
 }
-#[doc = "Message Buffer 7 WORD_32B Register"]
+#[doc = "Message Buffer 7 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb732bWord7(pub u32);
@@ -51141,7 +51141,7 @@ impl defmt::Format for Mb732bWord7 {
         )
     }
 }
-#[doc = "Message Buffer 7 CS Register"]
+#[doc = "Message Buffer 7 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb78bCs(pub u32);
@@ -51294,7 +51294,7 @@ impl defmt::Format for Mb78bCs {
         )
     }
 }
-#[doc = "Message Buffer 7 ID Register"]
+#[doc = "Message Buffer 7 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb78bId(pub u32);
@@ -51363,7 +51363,7 @@ impl defmt::Format for Mb78bId {
         )
     }
 }
-#[doc = "Message Buffer 7 WORD_8B Register"]
+#[doc = "Message Buffer 7 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb78bWord0(pub u32);
@@ -51446,7 +51446,7 @@ impl defmt::Format for Mb78bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 7 WORD_8B Register"]
+#[doc = "Message Buffer 7 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb78bWord1(pub u32);
@@ -51529,7 +51529,7 @@ impl defmt::Format for Mb78bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 8 CS Register"]
+#[doc = "Message Buffer 8 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb816bCs(pub u32);
@@ -51682,7 +51682,7 @@ impl defmt::Format for Mb816bCs {
         )
     }
 }
-#[doc = "Message Buffer 8 ID Register"]
+#[doc = "Message Buffer 8 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb816bId(pub u32);
@@ -51751,7 +51751,7 @@ impl defmt::Format for Mb816bId {
         )
     }
 }
-#[doc = "Message Buffer 8 WORD_16B Register"]
+#[doc = "Message Buffer 8 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb816bWord0(pub u32);
@@ -51834,7 +51834,7 @@ impl defmt::Format for Mb816bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 8 WORD_16B Register"]
+#[doc = "Message Buffer 8 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb816bWord1(pub u32);
@@ -51917,7 +51917,7 @@ impl defmt::Format for Mb816bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 8 WORD_16B Register"]
+#[doc = "Message Buffer 8 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb816bWord2(pub u32);
@@ -52000,7 +52000,7 @@ impl defmt::Format for Mb816bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 8 WORD_16B Register"]
+#[doc = "Message Buffer 8 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb816bWord3(pub u32);
@@ -52083,7 +52083,7 @@ impl defmt::Format for Mb816bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 8 CS Register"]
+#[doc = "Message Buffer 8 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb832bCs(pub u32);
@@ -52236,7 +52236,7 @@ impl defmt::Format for Mb832bCs {
         )
     }
 }
-#[doc = "Message Buffer 8 ID Register"]
+#[doc = "Message Buffer 8 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb832bId(pub u32);
@@ -52305,7 +52305,7 @@ impl defmt::Format for Mb832bId {
         )
     }
 }
-#[doc = "Message Buffer 8 WORD_32B Register"]
+#[doc = "Message Buffer 8 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb832bWord0(pub u32);
@@ -52388,7 +52388,7 @@ impl defmt::Format for Mb832bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 8 WORD_32B Register"]
+#[doc = "Message Buffer 8 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb832bWord1(pub u32);
@@ -52471,7 +52471,7 @@ impl defmt::Format for Mb832bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 8 WORD_32B Register"]
+#[doc = "Message Buffer 8 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb832bWord2(pub u32);
@@ -52554,7 +52554,7 @@ impl defmt::Format for Mb832bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 8 WORD_32B Register"]
+#[doc = "Message Buffer 8 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb832bWord3(pub u32);
@@ -52637,7 +52637,7 @@ impl defmt::Format for Mb832bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 8 WORD_32B Register"]
+#[doc = "Message Buffer 8 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb832bWord4(pub u32);
@@ -52720,7 +52720,7 @@ impl defmt::Format for Mb832bWord4 {
         )
     }
 }
-#[doc = "Message Buffer 8 WORD_32B Register"]
+#[doc = "Message Buffer 8 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb832bWord5(pub u32);
@@ -52803,7 +52803,7 @@ impl defmt::Format for Mb832bWord5 {
         )
     }
 }
-#[doc = "Message Buffer 8 WORD_32B Register"]
+#[doc = "Message Buffer 8 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb832bWord6(pub u32);
@@ -52886,7 +52886,7 @@ impl defmt::Format for Mb832bWord6 {
         )
     }
 }
-#[doc = "Message Buffer 8 WORD_32B Register"]
+#[doc = "Message Buffer 8 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb832bWord7(pub u32);
@@ -52969,7 +52969,7 @@ impl defmt::Format for Mb832bWord7 {
         )
     }
 }
-#[doc = "Message Buffer 8 CS Register"]
+#[doc = "Message Buffer 8 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb88bCs(pub u32);
@@ -53122,7 +53122,7 @@ impl defmt::Format for Mb88bCs {
         )
     }
 }
-#[doc = "Message Buffer 8 ID Register"]
+#[doc = "Message Buffer 8 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb88bId(pub u32);
@@ -53191,7 +53191,7 @@ impl defmt::Format for Mb88bId {
         )
     }
 }
-#[doc = "Message Buffer 8 WORD_8B Register"]
+#[doc = "Message Buffer 8 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb88bWord0(pub u32);
@@ -53274,7 +53274,7 @@ impl defmt::Format for Mb88bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 8 WORD_8B Register"]
+#[doc = "Message Buffer 8 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb88bWord1(pub u32);
@@ -53357,7 +53357,7 @@ impl defmt::Format for Mb88bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 9 CS Register"]
+#[doc = "Message Buffer 9 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb916bCs(pub u32);
@@ -53510,7 +53510,7 @@ impl defmt::Format for Mb916bCs {
         )
     }
 }
-#[doc = "Message Buffer 9 ID Register"]
+#[doc = "Message Buffer 9 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb916bId(pub u32);
@@ -53579,7 +53579,7 @@ impl defmt::Format for Mb916bId {
         )
     }
 }
-#[doc = "Message Buffer 9 WORD_16B Register"]
+#[doc = "Message Buffer 9 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb916bWord0(pub u32);
@@ -53662,7 +53662,7 @@ impl defmt::Format for Mb916bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 9 WORD_16B Register"]
+#[doc = "Message Buffer 9 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb916bWord1(pub u32);
@@ -53745,7 +53745,7 @@ impl defmt::Format for Mb916bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 9 WORD_16B Register"]
+#[doc = "Message Buffer 9 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb916bWord2(pub u32);
@@ -53828,7 +53828,7 @@ impl defmt::Format for Mb916bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 9 WORD_16B Register"]
+#[doc = "Message Buffer 9 WORD_16B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb916bWord3(pub u32);
@@ -53911,7 +53911,7 @@ impl defmt::Format for Mb916bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 9 CS Register"]
+#[doc = "Message Buffer 9 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb932bCs(pub u32);
@@ -54064,7 +54064,7 @@ impl defmt::Format for Mb932bCs {
         )
     }
 }
-#[doc = "Message Buffer 9 ID Register"]
+#[doc = "Message Buffer 9 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb932bId(pub u32);
@@ -54133,7 +54133,7 @@ impl defmt::Format for Mb932bId {
         )
     }
 }
-#[doc = "Message Buffer 9 WORD_32B Register"]
+#[doc = "Message Buffer 9 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb932bWord0(pub u32);
@@ -54216,7 +54216,7 @@ impl defmt::Format for Mb932bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 9 WORD_32B Register"]
+#[doc = "Message Buffer 9 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb932bWord1(pub u32);
@@ -54299,7 +54299,7 @@ impl defmt::Format for Mb932bWord1 {
         )
     }
 }
-#[doc = "Message Buffer 9 WORD_32B Register"]
+#[doc = "Message Buffer 9 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb932bWord2(pub u32);
@@ -54382,7 +54382,7 @@ impl defmt::Format for Mb932bWord2 {
         )
     }
 }
-#[doc = "Message Buffer 9 WORD_32B Register"]
+#[doc = "Message Buffer 9 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb932bWord3(pub u32);
@@ -54465,7 +54465,7 @@ impl defmt::Format for Mb932bWord3 {
         )
     }
 }
-#[doc = "Message Buffer 9 WORD_32B Register"]
+#[doc = "Message Buffer 9 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb932bWord4(pub u32);
@@ -54548,7 +54548,7 @@ impl defmt::Format for Mb932bWord4 {
         )
     }
 }
-#[doc = "Message Buffer 9 WORD_32B Register"]
+#[doc = "Message Buffer 9 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb932bWord5(pub u32);
@@ -54631,7 +54631,7 @@ impl defmt::Format for Mb932bWord5 {
         )
     }
 }
-#[doc = "Message Buffer 9 WORD_32B Register"]
+#[doc = "Message Buffer 9 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb932bWord6(pub u32);
@@ -54714,7 +54714,7 @@ impl defmt::Format for Mb932bWord6 {
         )
     }
 }
-#[doc = "Message Buffer 9 WORD_32B Register"]
+#[doc = "Message Buffer 9 WORD_32B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb932bWord7(pub u32);
@@ -54797,7 +54797,7 @@ impl defmt::Format for Mb932bWord7 {
         )
     }
 }
-#[doc = "Message Buffer 9 CS Register"]
+#[doc = "Message Buffer 9 CS Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb98bCs(pub u32);
@@ -54950,7 +54950,7 @@ impl defmt::Format for Mb98bCs {
         )
     }
 }
-#[doc = "Message Buffer 9 ID Register"]
+#[doc = "Message Buffer 9 ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb98bId(pub u32);
@@ -55019,7 +55019,7 @@ impl defmt::Format for Mb98bId {
         )
     }
 }
-#[doc = "Message Buffer 9 WORD_8B Register"]
+#[doc = "Message Buffer 9 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb98bWord0(pub u32);
@@ -55102,7 +55102,7 @@ impl defmt::Format for Mb98bWord0 {
         )
     }
 }
-#[doc = "Message Buffer 9 WORD_8B Register"]
+#[doc = "Message Buffer 9 WORD_8B Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mb98bWord1(pub u32);
@@ -55185,283 +55185,283 @@ impl defmt::Format for Mb98bWord1 {
         )
     }
 }
-#[doc = "Module Configuration"]
+#[doc = "Module Configuration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mcr(pub u32);
 impl Mcr {
-    #[doc = "Number of the Last Message Buffer"]
+    #[doc = "Number of the Last Message Buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn maxmb(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Number of the Last Message Buffer"]
+    #[doc = "Number of the Last Message Buffer."]
     #[inline(always)]
     pub const fn set_maxmb(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u32) & 0x7f) << 0usize);
     }
-    #[doc = "ID Acceptance Mode"]
+    #[doc = "ID Acceptance Mode."]
     #[must_use]
     #[inline(always)]
     pub const fn idam(&self) -> super::vals::Idam {
         let val = (self.0 >> 8usize) & 0x03;
         super::vals::Idam::from_bits(val as u8)
     }
-    #[doc = "ID Acceptance Mode"]
+    #[doc = "ID Acceptance Mode."]
     #[inline(always)]
     pub const fn set_idam(&mut self, val: super::vals::Idam) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
-    #[doc = "CAN FD Operation Enable"]
+    #[doc = "CAN FD Operation Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn fden(&self) -> super::vals::Fden {
         let val = (self.0 >> 11usize) & 0x01;
         super::vals::Fden::from_bits(val as u8)
     }
-    #[doc = "CAN FD Operation Enable"]
+    #[doc = "CAN FD Operation Enable."]
     #[inline(always)]
     pub const fn set_fden(&mut self, val: super::vals::Fden) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
     }
-    #[doc = "Abort Enable"]
+    #[doc = "Abort Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn aen(&self) -> super::vals::Aen {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Aen::from_bits(val as u8)
     }
-    #[doc = "Abort Enable"]
+    #[doc = "Abort Enable."]
     #[inline(always)]
     pub const fn set_aen(&mut self, val: super::vals::Aen) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "Local Priority Enable"]
+    #[doc = "Local Priority Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn lprioen(&self) -> super::vals::Lprioen {
         let val = (self.0 >> 13usize) & 0x01;
         super::vals::Lprioen::from_bits(val as u8)
     }
-    #[doc = "Local Priority Enable"]
+    #[doc = "Local Priority Enable."]
     #[inline(always)]
     pub const fn set_lprioen(&mut self, val: super::vals::Lprioen) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
-    #[doc = "Pretended Networking Enable"]
+    #[doc = "Pretended Networking Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn pnet_en(&self) -> super::vals::PnetEn {
         let val = (self.0 >> 14usize) & 0x01;
         super::vals::PnetEn::from_bits(val as u8)
     }
-    #[doc = "Pretended Networking Enable"]
+    #[doc = "Pretended Networking Enable."]
     #[inline(always)]
     pub const fn set_pnet_en(&mut self, val: super::vals::PnetEn) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
     }
-    #[doc = "DMA Enable"]
+    #[doc = "DMA Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dma(&self) -> super::vals::Dma {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::Dma::from_bits(val as u8)
     }
-    #[doc = "DMA Enable"]
+    #[doc = "DMA Enable."]
     #[inline(always)]
     pub const fn set_dma(&mut self, val: super::vals::Dma) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "Individual RX Masking and Queue Enable"]
+    #[doc = "Individual RX Masking and Queue Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn irmq(&self) -> super::vals::Irmq {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::Irmq::from_bits(val as u8)
     }
-    #[doc = "Individual RX Masking and Queue Enable"]
+    #[doc = "Individual RX Masking and Queue Enable."]
     #[inline(always)]
     pub const fn set_irmq(&mut self, val: super::vals::Irmq) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
     }
-    #[doc = "Self-Reception Disable"]
+    #[doc = "Self-Reception Disable."]
     #[must_use]
     #[inline(always)]
     pub const fn srxdis(&self) -> super::vals::Srxdis {
         let val = (self.0 >> 17usize) & 0x01;
         super::vals::Srxdis::from_bits(val as u8)
     }
-    #[doc = "Self-Reception Disable"]
+    #[doc = "Self-Reception Disable."]
     #[inline(always)]
     pub const fn set_srxdis(&mut self, val: super::vals::Srxdis) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
     }
-    #[doc = "Doze Mode Enable"]
+    #[doc = "Doze Mode Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn doze(&self) -> super::vals::Doze {
         let val = (self.0 >> 18usize) & 0x01;
         super::vals::Doze::from_bits(val as u8)
     }
-    #[doc = "Doze Mode Enable"]
+    #[doc = "Doze Mode Enable."]
     #[inline(always)]
     pub const fn set_doze(&mut self, val: super::vals::Doze) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val.to_bits() as u32) & 0x01) << 18usize);
     }
-    #[doc = "Wake-Up Source"]
+    #[doc = "Wake-Up Source."]
     #[must_use]
     #[inline(always)]
     pub const fn waksrc(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-Up Source"]
+    #[doc = "Wake-Up Source."]
     #[inline(always)]
     pub const fn set_waksrc(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Low-Power Mode Acknowledge"]
+    #[doc = "Low-Power Mode Acknowledge."]
     #[must_use]
     #[inline(always)]
     pub const fn lpmack(&self) -> super::vals::Lpmack {
         let val = (self.0 >> 20usize) & 0x01;
         super::vals::Lpmack::from_bits(val as u8)
     }
-    #[doc = "Low-Power Mode Acknowledge"]
+    #[doc = "Low-Power Mode Acknowledge."]
     #[inline(always)]
     pub const fn set_lpmack(&mut self, val: super::vals::Lpmack) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
     }
-    #[doc = "Warning Interrupt Enable"]
+    #[doc = "Warning Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn wrnen(&self) -> super::vals::Wrnen {
         let val = (self.0 >> 21usize) & 0x01;
         super::vals::Wrnen::from_bits(val as u8)
     }
-    #[doc = "Warning Interrupt Enable"]
+    #[doc = "Warning Interrupt Enable."]
     #[inline(always)]
     pub const fn set_wrnen(&mut self, val: super::vals::Wrnen) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
     }
-    #[doc = "Self Wake-up"]
+    #[doc = "Self Wake-up."]
     #[must_use]
     #[inline(always)]
     pub const fn slfwak(&self) -> super::vals::Slfwak {
         let val = (self.0 >> 22usize) & 0x01;
         super::vals::Slfwak::from_bits(val as u8)
     }
-    #[doc = "Self Wake-up"]
+    #[doc = "Self Wake-up."]
     #[inline(always)]
     pub const fn set_slfwak(&mut self, val: super::vals::Slfwak) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
     }
-    #[doc = "Supervisor Mode"]
+    #[doc = "Supervisor Mode."]
     #[must_use]
     #[inline(always)]
     pub const fn supv(&self) -> super::vals::Supv {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::Supv::from_bits(val as u8)
     }
-    #[doc = "Supervisor Mode"]
+    #[doc = "Supervisor Mode."]
     #[inline(always)]
     pub const fn set_supv(&mut self, val: super::vals::Supv) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
     }
-    #[doc = "Freeze Mode Acknowledge"]
+    #[doc = "Freeze Mode Acknowledge."]
     #[must_use]
     #[inline(always)]
     pub const fn frzack(&self) -> super::vals::Frzack {
         let val = (self.0 >> 24usize) & 0x01;
         super::vals::Frzack::from_bits(val as u8)
     }
-    #[doc = "Freeze Mode Acknowledge"]
+    #[doc = "Freeze Mode Acknowledge."]
     #[inline(always)]
     pub const fn set_frzack(&mut self, val: super::vals::Frzack) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
     }
-    #[doc = "Soft Reset"]
+    #[doc = "Soft Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn softrst(&self) -> super::vals::Softrst {
         let val = (self.0 >> 25usize) & 0x01;
         super::vals::Softrst::from_bits(val as u8)
     }
-    #[doc = "Soft Reset"]
+    #[doc = "Soft Reset."]
     #[inline(always)]
     pub const fn set_softrst(&mut self, val: super::vals::Softrst) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val.to_bits() as u32) & 0x01) << 25usize);
     }
-    #[doc = "Wake-up Interrupt Mask"]
+    #[doc = "Wake-up Interrupt Mask."]
     #[must_use]
     #[inline(always)]
     pub const fn wakmsk(&self) -> super::vals::Wakmsk {
         let val = (self.0 >> 26usize) & 0x01;
         super::vals::Wakmsk::from_bits(val as u8)
     }
-    #[doc = "Wake-up Interrupt Mask"]
+    #[doc = "Wake-up Interrupt Mask."]
     #[inline(always)]
     pub const fn set_wakmsk(&mut self, val: super::vals::Wakmsk) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
     }
-    #[doc = "FlexCAN Not Ready"]
+    #[doc = "FlexCAN Not Ready."]
     #[must_use]
     #[inline(always)]
     pub const fn notrdy(&self) -> super::vals::Notrdy {
         let val = (self.0 >> 27usize) & 0x01;
         super::vals::Notrdy::from_bits(val as u8)
     }
-    #[doc = "FlexCAN Not Ready"]
+    #[doc = "FlexCAN Not Ready."]
     #[inline(always)]
     pub const fn set_notrdy(&mut self, val: super::vals::Notrdy) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val.to_bits() as u32) & 0x01) << 27usize);
     }
-    #[doc = "Halt FlexCAN"]
+    #[doc = "Halt FlexCAN."]
     #[must_use]
     #[inline(always)]
     pub const fn halt(&self) -> super::vals::Halt {
         let val = (self.0 >> 28usize) & 0x01;
         super::vals::Halt::from_bits(val as u8)
     }
-    #[doc = "Halt FlexCAN"]
+    #[doc = "Halt FlexCAN."]
     #[inline(always)]
     pub const fn set_halt(&mut self, val: super::vals::Halt) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
     }
-    #[doc = "Legacy RX FIFO Enable"]
+    #[doc = "Legacy RX FIFO Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn rfen(&self) -> super::vals::Rfen {
         let val = (self.0 >> 29usize) & 0x01;
         super::vals::Rfen::from_bits(val as u8)
     }
-    #[doc = "Legacy RX FIFO Enable"]
+    #[doc = "Legacy RX FIFO Enable."]
     #[inline(always)]
     pub const fn set_rfen(&mut self, val: super::vals::Rfen) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
-    #[doc = "Freeze Enable"]
+    #[doc = "Freeze Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn frz(&self) -> super::vals::Frz {
         let val = (self.0 >> 30usize) & 0x01;
         super::vals::Frz::from_bits(val as u8)
     }
-    #[doc = "Freeze Enable"]
+    #[doc = "Freeze Enable."]
     #[inline(always)]
     pub const fn set_frz(&mut self, val: super::vals::Frz) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
-    #[doc = "Module Disable"]
+    #[doc = "Module Disable."]
     #[must_use]
     #[inline(always)]
     pub const fn mdis(&self) -> super::vals::Mdis {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::Mdis::from_bits(val as u8)
     }
-    #[doc = "Module Disable"]
+    #[doc = "Module Disable."]
     #[inline(always)]
     pub const fn set_mdis(&mut self, val: super::vals::Mdis) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -55534,55 +55534,55 @@ impl defmt::Format for Mcr {
         )
     }
 }
-#[doc = "Pretended Networking Payload High Filter 1"]
+#[doc = "Pretended Networking Payload High Filter 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pl1Hi(pub u32);
 impl Pl1Hi {
-    #[doc = "Data byte 7"]
+    #[doc = "Data byte 7."]
     #[must_use]
     #[inline(always)]
     pub const fn data_byte_7(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Data byte 7"]
+    #[doc = "Data byte 7."]
     #[inline(always)]
     pub const fn set_data_byte_7(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "Data byte 6"]
+    #[doc = "Data byte 6."]
     #[must_use]
     #[inline(always)]
     pub const fn data_byte_6(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0xff;
         val as u8
     }
-    #[doc = "Data byte 6"]
+    #[doc = "Data byte 6."]
     #[inline(always)]
     pub const fn set_data_byte_6(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
     }
-    #[doc = "Data byte 5"]
+    #[doc = "Data byte 5."]
     #[must_use]
     #[inline(always)]
     pub const fn data_byte_5(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0xff;
         val as u8
     }
-    #[doc = "Data byte 5"]
+    #[doc = "Data byte 5."]
     #[inline(always)]
     pub const fn set_data_byte_5(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
     }
-    #[doc = "Data byte 4"]
+    #[doc = "Data byte 4."]
     #[must_use]
     #[inline(always)]
     pub const fn data_byte_4(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "Data byte 4"]
+    #[doc = "Data byte 4."]
     #[inline(always)]
     pub const fn set_data_byte_4(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);
@@ -55617,55 +55617,55 @@ impl defmt::Format for Pl1Hi {
         )
     }
 }
-#[doc = "Pretended Networking Payload Low Filter 1"]
+#[doc = "Pretended Networking Payload Low Filter 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pl1Lo(pub u32);
 impl Pl1Lo {
-    #[doc = "Data byte 3"]
+    #[doc = "Data byte 3."]
     #[must_use]
     #[inline(always)]
     pub const fn data_byte_3(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Data byte 3"]
+    #[doc = "Data byte 3."]
     #[inline(always)]
     pub const fn set_data_byte_3(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "Data byte 2"]
+    #[doc = "Data byte 2."]
     #[must_use]
     #[inline(always)]
     pub const fn data_byte_2(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0xff;
         val as u8
     }
-    #[doc = "Data byte 2"]
+    #[doc = "Data byte 2."]
     #[inline(always)]
     pub const fn set_data_byte_2(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
     }
-    #[doc = "Data byte 1"]
+    #[doc = "Data byte 1."]
     #[must_use]
     #[inline(always)]
     pub const fn data_byte_1(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0xff;
         val as u8
     }
-    #[doc = "Data byte 1"]
+    #[doc = "Data byte 1."]
     #[inline(always)]
     pub const fn set_data_byte_1(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
     }
-    #[doc = "Data byte 0"]
+    #[doc = "Data byte 0."]
     #[must_use]
     #[inline(always)]
     pub const fn data_byte_0(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "Data byte 0"]
+    #[doc = "Data byte 0."]
     #[inline(always)]
     pub const fn set_data_byte_0(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);
@@ -55700,55 +55700,55 @@ impl defmt::Format for Pl1Lo {
         )
     }
 }
-#[doc = "Pretended Networking Payload High Filter 2 and Payload High Mask"]
+#[doc = "Pretended Networking Payload High Filter 2 and Payload High Mask."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pl2PlmaskHi(pub u32);
 impl Pl2PlmaskHi {
-    #[doc = "Data Byte 7"]
+    #[doc = "Data Byte 7."]
     #[must_use]
     #[inline(always)]
     pub const fn data_byte_7(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Data Byte 7"]
+    #[doc = "Data Byte 7."]
     #[inline(always)]
     pub const fn set_data_byte_7(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "Data Byte 6"]
+    #[doc = "Data Byte 6."]
     #[must_use]
     #[inline(always)]
     pub const fn data_byte_6(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0xff;
         val as u8
     }
-    #[doc = "Data Byte 6"]
+    #[doc = "Data Byte 6."]
     #[inline(always)]
     pub const fn set_data_byte_6(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
     }
-    #[doc = "Data Byte 5"]
+    #[doc = "Data Byte 5."]
     #[must_use]
     #[inline(always)]
     pub const fn data_byte_5(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0xff;
         val as u8
     }
-    #[doc = "Data Byte 5"]
+    #[doc = "Data Byte 5."]
     #[inline(always)]
     pub const fn set_data_byte_5(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
     }
-    #[doc = "Data Byte 4"]
+    #[doc = "Data Byte 4."]
     #[must_use]
     #[inline(always)]
     pub const fn data_byte_4(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "Data Byte 4"]
+    #[doc = "Data Byte 4."]
     #[inline(always)]
     pub const fn set_data_byte_4(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);
@@ -55783,55 +55783,55 @@ impl defmt::Format for Pl2PlmaskHi {
         )
     }
 }
-#[doc = "Pretended Networking Payload Low Filter 2 and Payload Low Mask"]
+#[doc = "Pretended Networking Payload Low Filter 2 and Payload Low Mask."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pl2PlmaskLo(pub u32);
 impl Pl2PlmaskLo {
-    #[doc = "Data Byte 3"]
+    #[doc = "Data Byte 3."]
     #[must_use]
     #[inline(always)]
     pub const fn data_byte_3(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Data Byte 3"]
+    #[doc = "Data Byte 3."]
     #[inline(always)]
     pub const fn set_data_byte_3(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "Data Byte 2"]
+    #[doc = "Data Byte 2."]
     #[must_use]
     #[inline(always)]
     pub const fn data_byte_2(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0xff;
         val as u8
     }
-    #[doc = "Data Byte 2"]
+    #[doc = "Data Byte 2."]
     #[inline(always)]
     pub const fn set_data_byte_2(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
     }
-    #[doc = "Data Byte 1"]
+    #[doc = "Data Byte 1."]
     #[must_use]
     #[inline(always)]
     pub const fn data_byte_1(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0xff;
         val as u8
     }
-    #[doc = "Data Byte 1"]
+    #[doc = "Data Byte 1."]
     #[inline(always)]
     pub const fn set_data_byte_1(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
     }
-    #[doc = "Data Byte 0"]
+    #[doc = "Data Byte 0."]
     #[must_use]
     #[inline(always)]
     pub const fn data_byte_0(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "Data Byte 0"]
+    #[doc = "Data Byte 0."]
     #[inline(always)]
     pub const fn set_data_byte_0(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);
@@ -55866,19 +55866,19 @@ impl defmt::Format for Pl2PlmaskLo {
         )
     }
 }
-#[doc = "Receive 14 Mask"]
+#[doc = "Receive 14 Mask."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Rx14mask(pub u32);
 impl Rx14mask {
-    #[doc = "RX Buffer 14 Mask Bits"]
+    #[doc = "RX Buffer 14 Mask Bits."]
     #[must_use]
     #[inline(always)]
     pub const fn rx14m(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "RX Buffer 14 Mask Bits"]
+    #[doc = "RX Buffer 14 Mask Bits."]
     #[inline(always)]
     pub const fn set_rx14m(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -55903,19 +55903,19 @@ impl defmt::Format for Rx14mask {
         defmt::write!(f, "Rx14mask {{ rx14m: {=u32:?} }}", self.rx14m())
     }
 }
-#[doc = "Receive 15 Mask"]
+#[doc = "Receive 15 Mask."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Rx15mask(pub u32);
 impl Rx15mask {
-    #[doc = "RX Buffer 15 Mask Bits"]
+    #[doc = "RX Buffer 15 Mask Bits."]
     #[must_use]
     #[inline(always)]
     pub const fn rx15m(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "RX Buffer 15 Mask Bits"]
+    #[doc = "RX Buffer 15 Mask Bits."]
     #[inline(always)]
     pub const fn set_rx15m(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -55940,19 +55940,19 @@ impl defmt::Format for Rx15mask {
         defmt::write!(f, "Rx15mask {{ rx15m: {=u32:?} }}", self.rx15m())
     }
 }
-#[doc = "Legacy RX FIFO Global Mask"]
+#[doc = "Legacy RX FIFO Global Mask."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Rxfgmask(pub u32);
 impl Rxfgmask {
-    #[doc = "Legacy RX FIFO Global Mask Bits"]
+    #[doc = "Legacy RX FIFO Global Mask Bits."]
     #[must_use]
     #[inline(always)]
     pub const fn fgm(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Legacy RX FIFO Global Mask Bits"]
+    #[doc = "Legacy RX FIFO Global Mask Bits."]
     #[inline(always)]
     pub const fn set_fgm(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -55977,19 +55977,19 @@ impl defmt::Format for Rxfgmask {
         defmt::write!(f, "Rxfgmask {{ fgm: {=u32:?} }}", self.fgm())
     }
 }
-#[doc = "Legacy RX FIFO Information"]
+#[doc = "Legacy RX FIFO Information."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Rxfir(pub u32);
 impl Rxfir {
-    #[doc = "Identifier Acceptance Filter Hit Indicator"]
+    #[doc = "Identifier Acceptance Filter Hit Indicator."]
     #[must_use]
     #[inline(always)]
     pub const fn idhit(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x01ff;
         val as u16
     }
-    #[doc = "Identifier Acceptance Filter Hit Indicator"]
+    #[doc = "Identifier Acceptance Filter Hit Indicator."]
     #[inline(always)]
     pub const fn set_idhit(&mut self, val: u16) {
         self.0 = (self.0 & !(0x01ff << 0usize)) | (((val as u32) & 0x01ff) << 0usize);
@@ -56014,19 +56014,19 @@ impl defmt::Format for Rxfir {
         defmt::write!(f, "Rxfir {{ idhit: {=u16:?} }}", self.idhit())
     }
 }
-#[doc = "Receive Individual Mask"]
+#[doc = "Receive Individual Mask."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Rximr(pub u32);
 impl Rximr {
-    #[doc = "Individual Mask Bits"]
+    #[doc = "Individual Mask Bits."]
     #[must_use]
     #[inline(always)]
     pub const fn mi(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Individual Mask Bits"]
+    #[doc = "Individual Mask Bits."]
     #[inline(always)]
     pub const fn set_mi(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -56049,19 +56049,19 @@ impl defmt::Format for Rximr {
         defmt::write!(f, "Rximr {{ mi: {=u32:?} }}", self.mi())
     }
 }
-#[doc = "RX Message Buffers Global Mask"]
+#[doc = "RX Message Buffers Global Mask."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Rxmgmask(pub u32);
 impl Rxmgmask {
-    #[doc = "Global Mask for RX Message Buffers"]
+    #[doc = "Global Mask for RX Message Buffers."]
     #[must_use]
     #[inline(always)]
     pub const fn mg(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Global Mask for RX Message Buffers"]
+    #[doc = "Global Mask for RX Message Buffers."]
     #[inline(always)]
     pub const fn set_mg(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -56084,19 +56084,19 @@ impl defmt::Format for Rxmgmask {
         defmt::write!(f, "Rxmgmask {{ mg: {=u32:?} }}", self.mg())
     }
 }
-#[doc = "Free-Running Timer"]
+#[doc = "Free-Running Timer."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Timer(pub u32);
 impl Timer {
-    #[doc = "Timer Value"]
+    #[doc = "Timer Value."]
     #[must_use]
     #[inline(always)]
     pub const fn timer(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Timer Value"]
+    #[doc = "Timer Value."]
     #[inline(always)]
     pub const fn set_timer(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
@@ -56121,55 +56121,55 @@ impl defmt::Format for Timer {
         defmt::write!(f, "Timer {{ timer: {=u16:?} }}", self.timer())
     }
 }
-#[doc = "Wake-Up Message Buffer"]
+#[doc = "Wake-Up Message Buffer."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct WmbCs(pub u32);
 impl WmbCs {
-    #[doc = "Length of Data in Bytes"]
+    #[doc = "Length of Data in Bytes."]
     #[must_use]
     #[inline(always)]
     pub const fn dlc(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x0f;
         val as u8
     }
-    #[doc = "Length of Data in Bytes"]
+    #[doc = "Length of Data in Bytes."]
     #[inline(always)]
     pub const fn set_dlc(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
     }
-    #[doc = "Remote Transmission Request"]
+    #[doc = "Remote Transmission Request."]
     #[must_use]
     #[inline(always)]
     pub const fn rtr(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Remote Transmission Request"]
+    #[doc = "Remote Transmission Request."]
     #[inline(always)]
     pub const fn set_rtr(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "ID Extended Bit"]
+    #[doc = "ID Extended Bit."]
     #[must_use]
     #[inline(always)]
     pub const fn ide(&self) -> super::vals::Ide {
         let val = (self.0 >> 21usize) & 0x01;
         super::vals::Ide::from_bits(val as u8)
     }
-    #[doc = "ID Extended Bit"]
+    #[doc = "ID Extended Bit."]
     #[inline(always)]
     pub const fn set_ide(&mut self, val: super::vals::Ide) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
     }
-    #[doc = "Substitute Remote Request"]
+    #[doc = "Substitute Remote Request."]
     #[must_use]
     #[inline(always)]
     pub const fn srr(&self) -> super::vals::Srr {
         let val = (self.0 >> 22usize) & 0x01;
         super::vals::Srr::from_bits(val as u8)
     }
-    #[doc = "Substitute Remote Request"]
+    #[doc = "Substitute Remote Request."]
     #[inline(always)]
     pub const fn set_srr(&mut self, val: super::vals::Srr) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
@@ -56204,55 +56204,55 @@ impl defmt::Format for WmbCs {
         )
     }
 }
-#[doc = "Wake-Up Message Buffer for Data 0-3"]
+#[doc = "Wake-Up Message Buffer for Data 0-3."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct WmbD03(pub u32);
 impl WmbD03 {
-    #[doc = "Data Byte 3"]
+    #[doc = "Data Byte 3."]
     #[must_use]
     #[inline(always)]
     pub const fn data_byte_3(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Data Byte 3"]
+    #[doc = "Data Byte 3."]
     #[inline(always)]
     pub const fn set_data_byte_3(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "Data Byte 2"]
+    #[doc = "Data Byte 2."]
     #[must_use]
     #[inline(always)]
     pub const fn data_byte_2(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0xff;
         val as u8
     }
-    #[doc = "Data Byte 2"]
+    #[doc = "Data Byte 2."]
     #[inline(always)]
     pub const fn set_data_byte_2(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
     }
-    #[doc = "Data Byte 1"]
+    #[doc = "Data Byte 1."]
     #[must_use]
     #[inline(always)]
     pub const fn data_byte_1(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0xff;
         val as u8
     }
-    #[doc = "Data Byte 1"]
+    #[doc = "Data Byte 1."]
     #[inline(always)]
     pub const fn set_data_byte_1(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
     }
-    #[doc = "Data Byte 0"]
+    #[doc = "Data Byte 0."]
     #[must_use]
     #[inline(always)]
     pub const fn data_byte_0(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "Data Byte 0"]
+    #[doc = "Data Byte 0."]
     #[inline(always)]
     pub const fn set_data_byte_0(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);
@@ -56287,55 +56287,55 @@ impl defmt::Format for WmbD03 {
         )
     }
 }
-#[doc = "Wake-Up Message Buffer Register Data 4-7"]
+#[doc = "Wake-Up Message Buffer Register Data 4-7."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct WmbD47(pub u32);
 impl WmbD47 {
-    #[doc = "Data Byte 7"]
+    #[doc = "Data Byte 7."]
     #[must_use]
     #[inline(always)]
     pub const fn data_byte_7(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Data Byte 7"]
+    #[doc = "Data Byte 7."]
     #[inline(always)]
     pub const fn set_data_byte_7(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "Data Byte 6"]
+    #[doc = "Data Byte 6."]
     #[must_use]
     #[inline(always)]
     pub const fn data_byte_6(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0xff;
         val as u8
     }
-    #[doc = "Data Byte 6"]
+    #[doc = "Data Byte 6."]
     #[inline(always)]
     pub const fn set_data_byte_6(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
     }
-    #[doc = "Data Byte 5"]
+    #[doc = "Data Byte 5."]
     #[must_use]
     #[inline(always)]
     pub const fn data_byte_5(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0xff;
         val as u8
     }
-    #[doc = "Data Byte 5"]
+    #[doc = "Data Byte 5."]
     #[inline(always)]
     pub const fn set_data_byte_5(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
     }
-    #[doc = "Data Byte 4"]
+    #[doc = "Data Byte 4."]
     #[must_use]
     #[inline(always)]
     pub const fn data_byte_4(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "Data Byte 4"]
+    #[doc = "Data Byte 4."]
     #[inline(always)]
     pub const fn set_data_byte_4(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);
@@ -56370,19 +56370,19 @@ impl defmt::Format for WmbD47 {
         )
     }
 }
-#[doc = "Wake-Up Message Buffer for ID"]
+#[doc = "Wake-Up Message Buffer for ID."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct WmbId(pub u32);
 impl WmbId {
-    #[doc = "Received ID in Pretended Networking Mode"]
+    #[doc = "Received ID in Pretended Networking Mode."]
     #[must_use]
     #[inline(always)]
     pub const fn id(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x1fff_ffff;
         val as u32
     }
-    #[doc = "Received ID in Pretended Networking Mode"]
+    #[doc = "Received ID in Pretended Networking Mode."]
     #[inline(always)]
     pub const fn set_id(&mut self, val: u32) {
         self.0 = (self.0 & !(0x1fff_ffff << 0usize)) | (((val as u32) & 0x1fff_ffff) << 0usize);
@@ -56405,7 +56405,7 @@ impl defmt::Format for WmbId {
         defmt::write!(f, "WmbId {{ id: {=u32:?} }}", self.id())
     }
 }
-#[doc = "Message Buffer 0 WORD0 Register"]
+#[doc = "Message Buffer 0 WORD0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word00(pub u32);
@@ -56488,7 +56488,7 @@ impl defmt::Format for Word00 {
         )
     }
 }
-#[doc = "Message Buffer 1 WORD0 Register"]
+#[doc = "Message Buffer 1 WORD0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word01(pub u32);
@@ -56571,7 +56571,7 @@ impl defmt::Format for Word01 {
         )
     }
 }
-#[doc = "Message Buffer 10 WORD0 Register"]
+#[doc = "Message Buffer 10 WORD0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word010(pub u32);
@@ -56654,7 +56654,7 @@ impl defmt::Format for Word010 {
         )
     }
 }
-#[doc = "Message Buffer 11 WORD0 Register"]
+#[doc = "Message Buffer 11 WORD0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word011(pub u32);
@@ -56737,7 +56737,7 @@ impl defmt::Format for Word011 {
         )
     }
 }
-#[doc = "Message Buffer 12 WORD0 Register"]
+#[doc = "Message Buffer 12 WORD0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word012(pub u32);
@@ -56820,7 +56820,7 @@ impl defmt::Format for Word012 {
         )
     }
 }
-#[doc = "Message Buffer 13 WORD0 Register"]
+#[doc = "Message Buffer 13 WORD0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word013(pub u32);
@@ -56903,7 +56903,7 @@ impl defmt::Format for Word013 {
         )
     }
 }
-#[doc = "Message Buffer 14 WORD0 Register"]
+#[doc = "Message Buffer 14 WORD0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word014(pub u32);
@@ -56986,7 +56986,7 @@ impl defmt::Format for Word014 {
         )
     }
 }
-#[doc = "Message Buffer 15 WORD0 Register"]
+#[doc = "Message Buffer 15 WORD0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word015(pub u32);
@@ -57069,7 +57069,7 @@ impl defmt::Format for Word015 {
         )
     }
 }
-#[doc = "Message Buffer 16 WORD0 Register"]
+#[doc = "Message Buffer 16 WORD0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word016(pub u32);
@@ -57152,7 +57152,7 @@ impl defmt::Format for Word016 {
         )
     }
 }
-#[doc = "Message Buffer 17 WORD0 Register"]
+#[doc = "Message Buffer 17 WORD0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word017(pub u32);
@@ -57235,7 +57235,7 @@ impl defmt::Format for Word017 {
         )
     }
 }
-#[doc = "Message Buffer 18 WORD0 Register"]
+#[doc = "Message Buffer 18 WORD0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word018(pub u32);
@@ -57318,7 +57318,7 @@ impl defmt::Format for Word018 {
         )
     }
 }
-#[doc = "Message Buffer 19 WORD0 Register"]
+#[doc = "Message Buffer 19 WORD0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word019(pub u32);
@@ -57401,7 +57401,7 @@ impl defmt::Format for Word019 {
         )
     }
 }
-#[doc = "Message Buffer 2 WORD0 Register"]
+#[doc = "Message Buffer 2 WORD0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word02(pub u32);
@@ -57484,7 +57484,7 @@ impl defmt::Format for Word02 {
         )
     }
 }
-#[doc = "Message Buffer 20 WORD0 Register"]
+#[doc = "Message Buffer 20 WORD0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word020(pub u32);
@@ -57567,7 +57567,7 @@ impl defmt::Format for Word020 {
         )
     }
 }
-#[doc = "Message Buffer 21 WORD0 Register"]
+#[doc = "Message Buffer 21 WORD0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word021(pub u32);
@@ -57650,7 +57650,7 @@ impl defmt::Format for Word021 {
         )
     }
 }
-#[doc = "Message Buffer 22 WORD0 Register"]
+#[doc = "Message Buffer 22 WORD0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word022(pub u32);
@@ -57733,7 +57733,7 @@ impl defmt::Format for Word022 {
         )
     }
 }
-#[doc = "Message Buffer 23 WORD0 Register"]
+#[doc = "Message Buffer 23 WORD0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word023(pub u32);
@@ -57816,7 +57816,7 @@ impl defmt::Format for Word023 {
         )
     }
 }
-#[doc = "Message Buffer 24 WORD0 Register"]
+#[doc = "Message Buffer 24 WORD0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word024(pub u32);
@@ -57899,7 +57899,7 @@ impl defmt::Format for Word024 {
         )
     }
 }
-#[doc = "Message Buffer 25 WORD0 Register"]
+#[doc = "Message Buffer 25 WORD0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word025(pub u32);
@@ -57982,7 +57982,7 @@ impl defmt::Format for Word025 {
         )
     }
 }
-#[doc = "Message Buffer 26 WORD0 Register"]
+#[doc = "Message Buffer 26 WORD0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word026(pub u32);
@@ -58065,7 +58065,7 @@ impl defmt::Format for Word026 {
         )
     }
 }
-#[doc = "Message Buffer 27 WORD0 Register"]
+#[doc = "Message Buffer 27 WORD0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word027(pub u32);
@@ -58148,7 +58148,7 @@ impl defmt::Format for Word027 {
         )
     }
 }
-#[doc = "Message Buffer 28 WORD0 Register"]
+#[doc = "Message Buffer 28 WORD0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word028(pub u32);
@@ -58231,7 +58231,7 @@ impl defmt::Format for Word028 {
         )
     }
 }
-#[doc = "Message Buffer 29 WORD0 Register"]
+#[doc = "Message Buffer 29 WORD0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word029(pub u32);
@@ -58314,7 +58314,7 @@ impl defmt::Format for Word029 {
         )
     }
 }
-#[doc = "Message Buffer 3 WORD0 Register"]
+#[doc = "Message Buffer 3 WORD0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word03(pub u32);
@@ -58397,7 +58397,7 @@ impl defmt::Format for Word03 {
         )
     }
 }
-#[doc = "Message Buffer 30 WORD0 Register"]
+#[doc = "Message Buffer 30 WORD0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word030(pub u32);
@@ -58480,7 +58480,7 @@ impl defmt::Format for Word030 {
         )
     }
 }
-#[doc = "Message Buffer 31 WORD0 Register"]
+#[doc = "Message Buffer 31 WORD0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word031(pub u32);
@@ -58563,7 +58563,7 @@ impl defmt::Format for Word031 {
         )
     }
 }
-#[doc = "Message Buffer 4 WORD0 Register"]
+#[doc = "Message Buffer 4 WORD0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word04(pub u32);
@@ -58646,7 +58646,7 @@ impl defmt::Format for Word04 {
         )
     }
 }
-#[doc = "Message Buffer 5 WORD0 Register"]
+#[doc = "Message Buffer 5 WORD0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word05(pub u32);
@@ -58729,7 +58729,7 @@ impl defmt::Format for Word05 {
         )
     }
 }
-#[doc = "Message Buffer 6 WORD0 Register"]
+#[doc = "Message Buffer 6 WORD0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word06(pub u32);
@@ -58812,7 +58812,7 @@ impl defmt::Format for Word06 {
         )
     }
 }
-#[doc = "Message Buffer 7 WORD0 Register"]
+#[doc = "Message Buffer 7 WORD0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word07(pub u32);
@@ -58895,7 +58895,7 @@ impl defmt::Format for Word07 {
         )
     }
 }
-#[doc = "Message Buffer 8 WORD0 Register"]
+#[doc = "Message Buffer 8 WORD0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word08(pub u32);
@@ -58978,7 +58978,7 @@ impl defmt::Format for Word08 {
         )
     }
 }
-#[doc = "Message Buffer 9 WORD0 Register"]
+#[doc = "Message Buffer 9 WORD0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word09(pub u32);
@@ -59061,7 +59061,7 @@ impl defmt::Format for Word09 {
         )
     }
 }
-#[doc = "Message Buffer 0 WORD1 Register"]
+#[doc = "Message Buffer 0 WORD1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word10(pub u32);
@@ -59144,7 +59144,7 @@ impl defmt::Format for Word10 {
         )
     }
 }
-#[doc = "Message Buffer 1 WORD1 Register"]
+#[doc = "Message Buffer 1 WORD1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word11(pub u32);
@@ -59227,7 +59227,7 @@ impl defmt::Format for Word11 {
         )
     }
 }
-#[doc = "Message Buffer 10 WORD1 Register"]
+#[doc = "Message Buffer 10 WORD1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word110(pub u32);
@@ -59310,7 +59310,7 @@ impl defmt::Format for Word110 {
         )
     }
 }
-#[doc = "Message Buffer 11 WORD1 Register"]
+#[doc = "Message Buffer 11 WORD1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word111(pub u32);
@@ -59393,7 +59393,7 @@ impl defmt::Format for Word111 {
         )
     }
 }
-#[doc = "Message Buffer 12 WORD1 Register"]
+#[doc = "Message Buffer 12 WORD1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word112(pub u32);
@@ -59476,7 +59476,7 @@ impl defmt::Format for Word112 {
         )
     }
 }
-#[doc = "Message Buffer 13 WORD1 Register"]
+#[doc = "Message Buffer 13 WORD1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word113(pub u32);
@@ -59559,7 +59559,7 @@ impl defmt::Format for Word113 {
         )
     }
 }
-#[doc = "Message Buffer 14 WORD1 Register"]
+#[doc = "Message Buffer 14 WORD1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word114(pub u32);
@@ -59642,7 +59642,7 @@ impl defmt::Format for Word114 {
         )
     }
 }
-#[doc = "Message Buffer 15 WORD1 Register"]
+#[doc = "Message Buffer 15 WORD1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word115(pub u32);
@@ -59725,7 +59725,7 @@ impl defmt::Format for Word115 {
         )
     }
 }
-#[doc = "Message Buffer 16 WORD1 Register"]
+#[doc = "Message Buffer 16 WORD1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word116(pub u32);
@@ -59808,7 +59808,7 @@ impl defmt::Format for Word116 {
         )
     }
 }
-#[doc = "Message Buffer 17 WORD1 Register"]
+#[doc = "Message Buffer 17 WORD1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word117(pub u32);
@@ -59891,7 +59891,7 @@ impl defmt::Format for Word117 {
         )
     }
 }
-#[doc = "Message Buffer 18 WORD1 Register"]
+#[doc = "Message Buffer 18 WORD1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word118(pub u32);
@@ -59974,7 +59974,7 @@ impl defmt::Format for Word118 {
         )
     }
 }
-#[doc = "Message Buffer 19 WORD1 Register"]
+#[doc = "Message Buffer 19 WORD1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word119(pub u32);
@@ -60057,7 +60057,7 @@ impl defmt::Format for Word119 {
         )
     }
 }
-#[doc = "Message Buffer 2 WORD1 Register"]
+#[doc = "Message Buffer 2 WORD1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word12(pub u32);
@@ -60140,7 +60140,7 @@ impl defmt::Format for Word12 {
         )
     }
 }
-#[doc = "Message Buffer 20 WORD1 Register"]
+#[doc = "Message Buffer 20 WORD1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word120(pub u32);
@@ -60223,7 +60223,7 @@ impl defmt::Format for Word120 {
         )
     }
 }
-#[doc = "Message Buffer 21 WORD1 Register"]
+#[doc = "Message Buffer 21 WORD1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word121(pub u32);
@@ -60306,7 +60306,7 @@ impl defmt::Format for Word121 {
         )
     }
 }
-#[doc = "Message Buffer 22 WORD1 Register"]
+#[doc = "Message Buffer 22 WORD1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word122(pub u32);
@@ -60389,7 +60389,7 @@ impl defmt::Format for Word122 {
         )
     }
 }
-#[doc = "Message Buffer 23 WORD1 Register"]
+#[doc = "Message Buffer 23 WORD1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word123(pub u32);
@@ -60472,7 +60472,7 @@ impl defmt::Format for Word123 {
         )
     }
 }
-#[doc = "Message Buffer 24 WORD1 Register"]
+#[doc = "Message Buffer 24 WORD1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word124(pub u32);
@@ -60555,7 +60555,7 @@ impl defmt::Format for Word124 {
         )
     }
 }
-#[doc = "Message Buffer 25 WORD1 Register"]
+#[doc = "Message Buffer 25 WORD1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word125(pub u32);
@@ -60638,7 +60638,7 @@ impl defmt::Format for Word125 {
         )
     }
 }
-#[doc = "Message Buffer 26 WORD1 Register"]
+#[doc = "Message Buffer 26 WORD1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word126(pub u32);
@@ -60721,7 +60721,7 @@ impl defmt::Format for Word126 {
         )
     }
 }
-#[doc = "Message Buffer 27 WORD1 Register"]
+#[doc = "Message Buffer 27 WORD1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word127(pub u32);
@@ -60804,7 +60804,7 @@ impl defmt::Format for Word127 {
         )
     }
 }
-#[doc = "Message Buffer 28 WORD1 Register"]
+#[doc = "Message Buffer 28 WORD1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word128(pub u32);
@@ -60887,7 +60887,7 @@ impl defmt::Format for Word128 {
         )
     }
 }
-#[doc = "Message Buffer 29 WORD1 Register"]
+#[doc = "Message Buffer 29 WORD1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word129(pub u32);
@@ -60970,7 +60970,7 @@ impl defmt::Format for Word129 {
         )
     }
 }
-#[doc = "Message Buffer 3 WORD1 Register"]
+#[doc = "Message Buffer 3 WORD1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word13(pub u32);
@@ -61053,7 +61053,7 @@ impl defmt::Format for Word13 {
         )
     }
 }
-#[doc = "Message Buffer 30 WORD1 Register"]
+#[doc = "Message Buffer 30 WORD1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word130(pub u32);
@@ -61136,7 +61136,7 @@ impl defmt::Format for Word130 {
         )
     }
 }
-#[doc = "Message Buffer 31 WORD1 Register"]
+#[doc = "Message Buffer 31 WORD1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word131(pub u32);
@@ -61219,7 +61219,7 @@ impl defmt::Format for Word131 {
         )
     }
 }
-#[doc = "Message Buffer 4 WORD1 Register"]
+#[doc = "Message Buffer 4 WORD1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word14(pub u32);
@@ -61302,7 +61302,7 @@ impl defmt::Format for Word14 {
         )
     }
 }
-#[doc = "Message Buffer 5 WORD1 Register"]
+#[doc = "Message Buffer 5 WORD1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word15(pub u32);
@@ -61385,7 +61385,7 @@ impl defmt::Format for Word15 {
         )
     }
 }
-#[doc = "Message Buffer 6 WORD1 Register"]
+#[doc = "Message Buffer 6 WORD1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word16(pub u32);
@@ -61468,7 +61468,7 @@ impl defmt::Format for Word16 {
         )
     }
 }
-#[doc = "Message Buffer 7 WORD1 Register"]
+#[doc = "Message Buffer 7 WORD1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word17(pub u32);
@@ -61551,7 +61551,7 @@ impl defmt::Format for Word17 {
         )
     }
 }
-#[doc = "Message Buffer 8 WORD1 Register"]
+#[doc = "Message Buffer 8 WORD1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word18(pub u32);
@@ -61634,7 +61634,7 @@ impl defmt::Format for Word18 {
         )
     }
 }
-#[doc = "Message Buffer 9 WORD1 Register"]
+#[doc = "Message Buffer 9 WORD1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Word19(pub u32);
@@ -61717,43 +61717,43 @@ impl defmt::Format for Word19 {
         )
     }
 }
-#[doc = "Pretended Networking Wake-Up Match"]
+#[doc = "Pretended Networking Wake-Up Match."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct WuMtc(pub u32);
 impl WuMtc {
-    #[doc = "Number of Matches in Pretended Networking"]
+    #[doc = "Number of Matches in Pretended Networking."]
     #[must_use]
     #[inline(always)]
     pub const fn mcounter(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0xff;
         val as u8
     }
-    #[doc = "Number of Matches in Pretended Networking"]
+    #[doc = "Number of Matches in Pretended Networking."]
     #[inline(always)]
     pub const fn set_mcounter(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
     }
-    #[doc = "Wake-up by Match Flag"]
+    #[doc = "Wake-up by Match Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn wumf(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-up by Match Flag"]
+    #[doc = "Wake-up by Match Flag."]
     #[inline(always)]
     pub const fn set_wumf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Wake-up by Timeout Flag Bit"]
+    #[doc = "Wake-up by Timeout Flag Bit."]
     #[must_use]
     #[inline(always)]
     pub const fn wtof(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-up by Timeout Flag Bit"]
+    #[doc = "Wake-up by Timeout Flag Bit."]
     #[inline(always)]
     pub const fn set_wtof(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);

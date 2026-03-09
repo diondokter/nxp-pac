@@ -2,13 +2,13 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum OpaBcSel {
-    #[doc = "Default value. Keep power consumption constant"]
+    #[doc = "Default value. Keep power consumption constant."]
     TBD1 = 0x0,
-    #[doc = "Reduce power consumption to 1/4"]
+    #[doc = "Reduce power consumption to 1/4."]
     TBD2 = 0x01,
-    #[doc = "Reduce power consumption to 1/2"]
+    #[doc = "Reduce power consumption to 1/2."]
     TBD3 = 0x02,
-    #[doc = "Double the power consumption"]
+    #[doc = "Double the power consumption."]
     TBD4 = 0x03,
 }
 impl OpaBcSel {
@@ -37,13 +37,13 @@ impl From<OpaBcSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum OpaCcSel {
-    #[doc = "Fit 2X gains"]
+    #[doc = "Fit 2X gains."]
     TBD1 = 0x0,
-    #[doc = "Fit 4X gains"]
+    #[doc = "Fit 4X gains."]
     TBD2 = 0x01,
-    #[doc = "Fit 8X gains"]
+    #[doc = "Fit 8X gains."]
     TBD3 = 0x02,
-    #[doc = "Fit 16X gains"]
+    #[doc = "Fit 16X gains."]
     TBD4 = 0x03,
 }
 impl OpaCcSel {

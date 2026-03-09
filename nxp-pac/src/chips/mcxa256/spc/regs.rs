@@ -1,88 +1,88 @@
-#[doc = "Active Power Mode Configuration"]
+#[doc = "Active Power Mode Configuration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ActiveCfg(pub u32);
 impl ActiveCfg {
-    #[doc = "LDO_CORE VDD Drive Strength"]
+    #[doc = "LDO_CORE VDD Drive Strength."]
     #[must_use]
     #[inline(always)]
     pub const fn coreldo_vdd_ds(&self) -> super::vals::ActiveCfgCoreldoVddDs {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::ActiveCfgCoreldoVddDs::from_bits(val as u8)
     }
-    #[doc = "LDO_CORE VDD Drive Strength"]
+    #[doc = "LDO_CORE VDD Drive Strength."]
     #[inline(always)]
     pub const fn set_coreldo_vdd_ds(&mut self, val: super::vals::ActiveCfgCoreldoVddDs) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "LDO_CORE VDD Regulator Voltage Level"]
+    #[doc = "LDO_CORE VDD Regulator Voltage Level."]
     #[must_use]
     #[inline(always)]
     pub const fn coreldo_vdd_lvl(&self) -> super::vals::ActiveCfgCoreldoVddLvl {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::ActiveCfgCoreldoVddLvl::from_bits(val as u8)
     }
-    #[doc = "LDO_CORE VDD Regulator Voltage Level"]
+    #[doc = "LDO_CORE VDD Regulator Voltage Level."]
     #[inline(always)]
     pub const fn set_coreldo_vdd_lvl(&mut self, val: super::vals::ActiveCfgCoreldoVddLvl) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
-    #[doc = "Bandgap Mode"]
+    #[doc = "Bandgap Mode."]
     #[must_use]
     #[inline(always)]
     pub const fn bgmode(&self) -> super::vals::ActiveCfgBgmode {
         let val = (self.0 >> 20usize) & 0x03;
         super::vals::ActiveCfgBgmode::from_bits(val as u8)
     }
-    #[doc = "Bandgap Mode"]
+    #[doc = "Bandgap Mode."]
     #[inline(always)]
     pub const fn set_bgmode(&mut self, val: super::vals::ActiveCfgBgmode) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
     }
-    #[doc = "VDD Voltage Detect Disable"]
+    #[doc = "VDD Voltage Detect Disable."]
     #[must_use]
     #[inline(always)]
     pub const fn vdd_vd_disable(&self) -> super::vals::VddVdDisable {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::VddVdDisable::from_bits(val as u8)
     }
-    #[doc = "VDD Voltage Detect Disable"]
+    #[doc = "VDD Voltage Detect Disable."]
     #[inline(always)]
     pub const fn set_vdd_vd_disable(&mut self, val: super::vals::VddVdDisable) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
     }
-    #[doc = "Core Low-Voltage Detection Enable"]
+    #[doc = "Core Low-Voltage Detection Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn core_lvde(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "Core Low-Voltage Detection Enable"]
+    #[doc = "Core Low-Voltage Detection Enable."]
     #[inline(always)]
     pub const fn set_core_lvde(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "System Low-Voltage Detection Enable"]
+    #[doc = "System Low-Voltage Detection Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn sys_lvde(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "System Low-Voltage Detection Enable"]
+    #[doc = "System Low-Voltage Detection Enable."]
     #[inline(always)]
     pub const fn set_sys_lvde(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "System High-Voltage Detection Enable"]
+    #[doc = "System High-Voltage Detection Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn sys_hvde(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "System High-Voltage Detection Enable"]
+    #[doc = "System High-Voltage Detection Enable."]
     #[inline(always)]
     pub const fn set_sys_hvde(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
@@ -123,19 +123,19 @@ impl defmt::Format for ActiveCfg {
         )
     }
 }
-#[doc = "Active Power Mode Configuration 1"]
+#[doc = "Active Power Mode Configuration 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ActiveCfg1(pub u32);
 impl ActiveCfg1 {
-    #[doc = "Active Config Chip Control"]
+    #[doc = "Active Config Chip Control."]
     #[must_use]
     #[inline(always)]
     pub const fn soc_cntrl(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Active Config Chip Control"]
+    #[doc = "Active Config Chip Control."]
     #[inline(always)]
     pub const fn set_soc_cntrl(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -160,19 +160,19 @@ impl defmt::Format for ActiveCfg1 {
         defmt::write!(f, "ActiveCfg1 {{ soc_cntrl: {=u32:?} }}", self.soc_cntrl())
     }
 }
-#[doc = "Active Voltage Trim Delay"]
+#[doc = "Active Voltage Trim Delay."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ActiveVdelay(pub u32);
 impl ActiveVdelay {
-    #[doc = "Active Voltage Delay"]
+    #[doc = "Active Voltage Delay."]
     #[must_use]
     #[inline(always)]
     pub const fn active_vdelay(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Active Voltage Delay"]
+    #[doc = "Active Voltage Delay."]
     #[inline(always)]
     pub const fn set_active_vdelay(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
@@ -201,19 +201,19 @@ impl defmt::Format for ActiveVdelay {
         )
     }
 }
-#[doc = "LDO_CORE Configuration"]
+#[doc = "LDO_CORE Configuration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CoreldoCfg(pub u32);
 impl CoreldoCfg {
-    #[doc = "CORELDO SPARE0"]
+    #[doc = "CORELDO SPARE0."]
     #[must_use]
     #[inline(always)]
     pub const fn coreldo_spare0(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "CORELDO SPARE0"]
+    #[doc = "CORELDO SPARE0."]
     #[inline(always)]
     pub const fn set_coreldo_spare0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
@@ -242,43 +242,43 @@ impl defmt::Format for CoreldoCfg {
         )
     }
 }
-#[doc = "External Voltage Domain Configuration"]
+#[doc = "External Voltage Domain Configuration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct EvdCfg(pub u32);
 impl EvdCfg {
-    #[doc = "External Voltage Domain Isolation"]
+    #[doc = "External Voltage Domain Isolation."]
     #[must_use]
     #[inline(always)]
     pub const fn evdiso(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x07;
         val as u8
     }
-    #[doc = "External Voltage Domain Isolation"]
+    #[doc = "External Voltage Domain Isolation."]
     #[inline(always)]
     pub const fn set_evdiso(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val as u32) & 0x07) << 0usize);
     }
-    #[doc = "External Voltage Domain Low-Power Isolation"]
+    #[doc = "External Voltage Domain Low-Power Isolation."]
     #[must_use]
     #[inline(always)]
     pub const fn evdlpiso(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x07;
         val as u8
     }
-    #[doc = "External Voltage Domain Low-Power Isolation"]
+    #[doc = "External Voltage Domain Low-Power Isolation."]
     #[inline(always)]
     pub const fn set_evdlpiso(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 8usize)) | (((val as u32) & 0x07) << 8usize);
     }
-    #[doc = "External Voltage Domain Status"]
+    #[doc = "External Voltage Domain Status."]
     #[must_use]
     #[inline(always)]
     pub const fn evdstat(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x07;
         val as u8
     }
-    #[doc = "External Voltage Domain Status"]
+    #[doc = "External Voltage Domain Status."]
     #[inline(always)]
     pub const fn set_evdstat(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 16usize)) | (((val as u32) & 0x07) << 16usize);
@@ -311,103 +311,103 @@ impl defmt::Format for EvdCfg {
         )
     }
 }
-#[doc = "Low-Power Mode Configuration"]
+#[doc = "Low-Power Mode Configuration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct LpCfg(pub u32);
 impl LpCfg {
-    #[doc = "LDO_CORE VDD Drive Strength"]
+    #[doc = "LDO_CORE VDD Drive Strength."]
     #[must_use]
     #[inline(always)]
     pub const fn coreldo_vdd_ds(&self) -> super::vals::LpCfgCoreldoVddDs {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::LpCfgCoreldoVddDs::from_bits(val as u8)
     }
-    #[doc = "LDO_CORE VDD Drive Strength"]
+    #[doc = "LDO_CORE VDD Drive Strength."]
     #[inline(always)]
     pub const fn set_coreldo_vdd_ds(&mut self, val: super::vals::LpCfgCoreldoVddDs) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "LDO_CORE VDD Regulator Voltage Level"]
+    #[doc = "LDO_CORE VDD Regulator Voltage Level."]
     #[must_use]
     #[inline(always)]
     pub const fn coreldo_vdd_lvl(&self) -> super::vals::LpCfgCoreldoVddLvl {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::LpCfgCoreldoVddLvl::from_bits(val as u8)
     }
-    #[doc = "LDO_CORE VDD Regulator Voltage Level"]
+    #[doc = "LDO_CORE VDD Regulator Voltage Level."]
     #[inline(always)]
     pub const fn set_coreldo_vdd_lvl(&mut self, val: super::vals::LpCfgCoreldoVddLvl) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
-    #[doc = "SRAM_LDO Deep Power Low Power IREF Enable"]
+    #[doc = "SRAM_LDO Deep Power Low Power IREF Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn sramldo_dpd_on(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "SRAM_LDO Deep Power Low Power IREF Enable"]
+    #[doc = "SRAM_LDO Deep Power Low Power IREF Enable."]
     #[inline(always)]
     pub const fn set_sramldo_dpd_on(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Bandgap Mode"]
+    #[doc = "Bandgap Mode."]
     #[must_use]
     #[inline(always)]
     pub const fn bgmode(&self) -> super::vals::LpCfgBgmode {
         let val = (self.0 >> 20usize) & 0x03;
         super::vals::LpCfgBgmode::from_bits(val as u8)
     }
-    #[doc = "Bandgap Mode"]
+    #[doc = "Bandgap Mode."]
     #[inline(always)]
     pub const fn set_bgmode(&mut self, val: super::vals::LpCfgBgmode) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
     }
-    #[doc = "Low-Power IREF Enable"]
+    #[doc = "Low-Power IREF Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn lp_irefen(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "Low-Power IREF Enable"]
+    #[doc = "Low-Power IREF Enable."]
     #[inline(always)]
     pub const fn set_lp_irefen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
-    #[doc = "Core Low Voltage Detect Enable"]
+    #[doc = "Core Low Voltage Detect Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn core_lvde(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "Core Low Voltage Detect Enable"]
+    #[doc = "Core Low Voltage Detect Enable."]
     #[inline(always)]
     pub const fn set_core_lvde(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "System Low Voltage Detect Enable"]
+    #[doc = "System Low Voltage Detect Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn sys_lvde(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "System Low Voltage Detect Enable"]
+    #[doc = "System Low Voltage Detect Enable."]
     #[inline(always)]
     pub const fn set_sys_lvde(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "System High Voltage Detect Enable"]
+    #[doc = "System High Voltage Detect Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn sys_hvde(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "System High Voltage Detect Enable"]
+    #[doc = "System High Voltage Detect Enable."]
     #[inline(always)]
     pub const fn set_sys_hvde(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
@@ -450,19 +450,19 @@ impl defmt::Format for LpCfg {
         )
     }
 }
-#[doc = "Low Power Mode Configuration 1"]
+#[doc = "Low Power Mode Configuration 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct LpCfg1(pub u32);
 impl LpCfg1 {
-    #[doc = "Low-Power Configuration Chip Control"]
+    #[doc = "Low-Power Configuration Chip Control."]
     #[must_use]
     #[inline(always)]
     pub const fn soc_cntrl(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Low-Power Configuration Chip Control"]
+    #[doc = "Low-Power Configuration Chip Control."]
     #[inline(always)]
     pub const fn set_soc_cntrl(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -487,43 +487,43 @@ impl defmt::Format for LpCfg1 {
         defmt::write!(f, "LpCfg1 {{ soc_cntrl: {=u32:?} }}", self.soc_cntrl())
     }
 }
-#[doc = "Low-Power Request Configuration"]
+#[doc = "Low-Power Request Configuration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct LpreqCfg(pub u32);
 impl LpreqCfg {
-    #[doc = "Low-Power Request Output Enable"]
+    #[doc = "Low-Power Request Output Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn lpreqoe(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Low-Power Request Output Enable"]
+    #[doc = "Low-Power Request Output Enable."]
     #[inline(always)]
     pub const fn set_lpreqoe(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Low-Power Request Output Pin Polarity Control"]
+    #[doc = "Low-Power Request Output Pin Polarity Control."]
     #[must_use]
     #[inline(always)]
     pub const fn lpreqpol(&self) -> super::vals::Lpreqpol {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Lpreqpol::from_bits(val as u8)
     }
-    #[doc = "Low-Power Request Output Pin Polarity Control"]
+    #[doc = "Low-Power Request Output Pin Polarity Control."]
     #[inline(always)]
     pub const fn set_lpreqpol(&mut self, val: super::vals::Lpreqpol) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Low-Power Request Output Override"]
+    #[doc = "Low-Power Request Output Override."]
     #[must_use]
     #[inline(always)]
     pub const fn lpreqov(&self) -> super::vals::Lpreqov {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::Lpreqov::from_bits(val as u8)
     }
-    #[doc = "Low-Power Request Output Override"]
+    #[doc = "Low-Power Request Output Override."]
     #[inline(always)]
     pub const fn set_lpreqov(&mut self, val: super::vals::Lpreqov) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
@@ -556,19 +556,19 @@ impl defmt::Format for LpreqCfg {
         )
     }
 }
-#[doc = "Low Power Wake-Up Delay"]
+#[doc = "Low Power Wake-Up Delay."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct LpwkupDelay(pub u32);
 impl LpwkupDelay {
-    #[doc = "Low-Power Wake-Up Delay"]
+    #[doc = "Low-Power Wake-Up Delay."]
     #[must_use]
     #[inline(always)]
     pub const fn lpwkup_delay(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Low-Power Wake-Up Delay"]
+    #[doc = "Low-Power Wake-Up Delay."]
     #[inline(always)]
     pub const fn set_lpwkup_delay(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
@@ -597,43 +597,43 @@ impl defmt::Format for LpwkupDelay {
         )
     }
 }
-#[doc = "SPC Power Domain Mode Status"]
+#[doc = "SPC Power Domain Mode Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PdStatus0(pub u32);
 impl PdStatus0 {
-    #[doc = "Power Request Status Flag"]
+    #[doc = "Power Request Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn pwr_req_status(&self) -> super::vals::PwrReqStatus {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::PwrReqStatus::from_bits(val as u8)
     }
-    #[doc = "Power Request Status Flag"]
+    #[doc = "Power Request Status Flag."]
     #[inline(always)]
     pub const fn set_pwr_req_status(&mut self, val: super::vals::PwrReqStatus) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Power Domain Low Power Request Flag"]
+    #[doc = "Power Domain Low Power Request Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn pd_lp_req(&self) -> super::vals::PdLpReq {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::PdLpReq::from_bits(val as u8)
     }
-    #[doc = "Power Domain Low Power Request Flag"]
+    #[doc = "Power Domain Low Power Request Flag."]
     #[inline(always)]
     pub const fn set_pd_lp_req(&mut self, val: super::vals::PdLpReq) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
-    #[doc = "Power Domain Low Power Mode Request"]
+    #[doc = "Power Domain Low Power Mode Request."]
     #[must_use]
     #[inline(always)]
     pub const fn lp_mode(&self) -> super::vals::LpMode {
         let val = (self.0 >> 8usize) & 0x0f;
         super::vals::LpMode::from_bits(val as u8)
     }
-    #[doc = "Power Domain Low Power Mode Request"]
+    #[doc = "Power Domain Low Power Mode Request."]
     #[inline(always)]
     pub const fn set_lp_mode(&mut self, val: super::vals::LpMode) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
@@ -666,55 +666,55 @@ impl defmt::Format for PdStatus0 {
         )
     }
 }
-#[doc = "Status Control"]
+#[doc = "Status Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sc(pub u32);
 impl Sc {
-    #[doc = "SPC Busy Status Flag"]
+    #[doc = "SPC Busy Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn busy(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "SPC Busy Status Flag"]
+    #[doc = "SPC Busy Status Flag."]
     #[inline(always)]
     pub const fn set_busy(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "SPC Power Mode Configuration Status Flag"]
+    #[doc = "SPC Power Mode Configuration Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn spc_lp_req(&self) -> super::vals::SpcLpReq {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::SpcLpReq::from_bits(val as u8)
     }
-    #[doc = "SPC Power Mode Configuration Status Flag"]
+    #[doc = "SPC Power Mode Configuration Status Flag."]
     #[inline(always)]
     pub const fn set_spc_lp_req(&mut self, val: super::vals::SpcLpReq) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Power Domain Low-Power Mode Request"]
+    #[doc = "Power Domain Low-Power Mode Request."]
     #[must_use]
     #[inline(always)]
     pub const fn spc_lp_mode(&self) -> super::vals::SpcLpMode {
         let val = (self.0 >> 4usize) & 0x0f;
         super::vals::SpcLpMode::from_bits(val as u8)
     }
-    #[doc = "Power Domain Low-Power Mode Request"]
+    #[doc = "Power Domain Low-Power Mode Request."]
     #[inline(always)]
     pub const fn set_spc_lp_mode(&mut self, val: super::vals::SpcLpMode) {
         self.0 = (self.0 & !(0x0f << 4usize)) | (((val.to_bits() as u32) & 0x0f) << 4usize);
     }
-    #[doc = "Isolation Clear Flags"]
+    #[doc = "Isolation Clear Flags."]
     #[must_use]
     #[inline(always)]
     pub const fn iso_clr(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Isolation Clear Flags"]
+    #[doc = "Isolation Clear Flags."]
     #[inline(always)]
     pub const fn set_iso_clr(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
@@ -749,43 +749,43 @@ impl defmt::Format for Sc {
         )
     }
 }
-#[doc = "SRAM Control"]
+#[doc = "SRAM Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sramctl(pub u32);
 impl Sramctl {
-    #[doc = "Voltage Select Margin"]
+    #[doc = "Voltage Select Margin."]
     #[must_use]
     #[inline(always)]
     pub const fn vsm(&self) -> super::vals::Vsm {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Vsm::from_bits(val as u8)
     }
-    #[doc = "Voltage Select Margin"]
+    #[doc = "Voltage Select Margin."]
     #[inline(always)]
     pub const fn set_vsm(&mut self, val: super::vals::Vsm) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "SRAM Voltage Update Request"]
+    #[doc = "SRAM Voltage Update Request."]
     #[must_use]
     #[inline(always)]
     pub const fn req(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "SRAM Voltage Update Request"]
+    #[doc = "SRAM Voltage Update Request."]
     #[inline(always)]
     pub const fn set_req(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "SRAM Voltage Update Request Acknowledge"]
+    #[doc = "SRAM Voltage Update Request Acknowledge."]
     #[must_use]
     #[inline(always)]
     pub const fn ack(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "SRAM Voltage Update Request Acknowledge"]
+    #[doc = "SRAM Voltage Update Request Acknowledge."]
     #[inline(always)]
     pub const fn set_ack(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -818,31 +818,31 @@ impl defmt::Format for Sramctl {
         )
     }
 }
-#[doc = "SRAM Retention LDO Control"]
+#[doc = "SRAM Retention LDO Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SramretldoCntrl(pub u32);
 impl SramretldoCntrl {
-    #[doc = "SRAM LDO Regulator Enable"]
+    #[doc = "SRAM LDO Regulator Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn sramldo_on(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "SRAM LDO Regulator Enable"]
+    #[doc = "SRAM LDO Regulator Enable."]
     #[inline(always)]
     pub const fn set_sramldo_on(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "SRAM Retention"]
+    #[doc = "SRAM Retention."]
     #[must_use]
     #[inline(always)]
     pub const fn sram_ret_en(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x0f;
         val as u8
     }
-    #[doc = "SRAM Retention"]
+    #[doc = "SRAM Retention."]
     #[inline(always)]
     pub const fn set_sram_ret_en(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val as u32) & 0x0f) << 8usize);
@@ -873,7 +873,7 @@ impl defmt::Format for SramretldoCntrl {
         )
     }
 }
-#[doc = "SRAM Retention Reference Trim"]
+#[doc = "SRAM Retention Reference Trim."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SramretldoReftrim(pub u32);
@@ -914,43 +914,43 @@ impl defmt::Format for SramretldoReftrim {
         )
     }
 }
-#[doc = "Core Voltage Detect Configuration"]
+#[doc = "Core Voltage Detect Configuration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct VdCoreCfg(pub u32);
 impl VdCoreCfg {
-    #[doc = "Core LVD Reset Enable"]
+    #[doc = "Core LVD Reset Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn lvdre(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Core LVD Reset Enable"]
+    #[doc = "Core LVD Reset Enable."]
     #[inline(always)]
     pub const fn set_lvdre(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Core LVD Interrupt Enable"]
+    #[doc = "Core LVD Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn lvdie(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Core LVD Interrupt Enable"]
+    #[doc = "Core LVD Interrupt Enable."]
     #[inline(always)]
     pub const fn set_lvdie(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Core Voltage Detect Reset Enable Lock"]
+    #[doc = "Core Voltage Detect Reset Enable Lock."]
     #[must_use]
     #[inline(always)]
     pub const fn lock(&self) -> super::vals::VdCoreCfgLock {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::VdCoreCfgLock::from_bits(val as u8)
     }
-    #[doc = "Core Voltage Detect Reset Enable Lock"]
+    #[doc = "Core Voltage Detect Reset Enable Lock."]
     #[inline(always)]
     pub const fn set_lock(&mut self, val: super::vals::VdCoreCfgLock) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
@@ -983,43 +983,43 @@ impl defmt::Format for VdCoreCfg {
         )
     }
 }
-#[doc = "Voltage Detect Status"]
+#[doc = "Voltage Detect Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct VdStat(pub u32);
 impl VdStat {
-    #[doc = "Core Low-Voltage Detect Flag"]
+    #[doc = "Core Low-Voltage Detect Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn corevdd_lvdf(&self) -> super::vals::CorevddLvdf {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::CorevddLvdf::from_bits(val as u8)
     }
-    #[doc = "Core Low-Voltage Detect Flag"]
+    #[doc = "Core Low-Voltage Detect Flag."]
     #[inline(always)]
     pub const fn set_corevdd_lvdf(&mut self, val: super::vals::CorevddLvdf) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "System Low-Voltage Detect Flag"]
+    #[doc = "System Low-Voltage Detect Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn sysvdd_lvdf(&self) -> super::vals::SysvddLvdf {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::SysvddLvdf::from_bits(val as u8)
     }
-    #[doc = "System Low-Voltage Detect Flag"]
+    #[doc = "System Low-Voltage Detect Flag."]
     #[inline(always)]
     pub const fn set_sysvdd_lvdf(&mut self, val: super::vals::SysvddLvdf) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "System HVD Flag"]
+    #[doc = "System HVD Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn sysvdd_hvdf(&self) -> super::vals::SysvddHvdf {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::SysvddHvdf::from_bits(val as u8)
     }
-    #[doc = "System HVD Flag"]
+    #[doc = "System HVD Flag."]
     #[inline(always)]
     pub const fn set_sysvdd_hvdf(&mut self, val: super::vals::SysvddHvdf) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
@@ -1052,67 +1052,67 @@ impl defmt::Format for VdStat {
         )
     }
 }
-#[doc = "System Voltage Detect Configuration"]
+#[doc = "System Voltage Detect Configuration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct VdSysCfg(pub u32);
 impl VdSysCfg {
-    #[doc = "System LVD Reset Enable"]
+    #[doc = "System LVD Reset Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn lvdre(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "System LVD Reset Enable"]
+    #[doc = "System LVD Reset Enable."]
     #[inline(always)]
     pub const fn set_lvdre(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "System LVD Interrupt Enable"]
+    #[doc = "System LVD Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn lvdie(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "System LVD Interrupt Enable"]
+    #[doc = "System LVD Interrupt Enable."]
     #[inline(always)]
     pub const fn set_lvdie(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "System HVD Reset Enable"]
+    #[doc = "System HVD Reset Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn hvdre(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "System HVD Reset Enable"]
+    #[doc = "System HVD Reset Enable."]
     #[inline(always)]
     pub const fn set_hvdre(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "System HVD Interrupt Enable"]
+    #[doc = "System HVD Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn hvdie(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "System HVD Interrupt Enable"]
+    #[doc = "System HVD Interrupt Enable."]
     #[inline(always)]
     pub const fn set_hvdie(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "System Voltage Detect Reset Enable Lock"]
+    #[doc = "System Voltage Detect Reset Enable Lock."]
     #[must_use]
     #[inline(always)]
     pub const fn lock(&self) -> super::vals::VdSysCfgLock {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::VdSysCfgLock::from_bits(val as u8)
     }
-    #[doc = "System Voltage Detect Reset Enable Lock"]
+    #[doc = "System Voltage Detect Reset Enable Lock."]
     #[inline(always)]
     pub const fn set_lock(&mut self, val: super::vals::VdSysCfgLock) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
@@ -1149,43 +1149,43 @@ impl defmt::Format for VdSysCfg {
         )
     }
 }
-#[doc = "Version ID"]
+#[doc = "Version ID."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Verid(pub u32);
 impl Verid {
-    #[doc = "Feature Specification Number"]
+    #[doc = "Feature Specification Number."]
     #[must_use]
     #[inline(always)]
     pub const fn feature(&self) -> super::vals::Feature {
         let val = (self.0 >> 0usize) & 0xffff;
         super::vals::Feature::from_bits(val as u16)
     }
-    #[doc = "Feature Specification Number"]
+    #[doc = "Feature Specification Number."]
     #[inline(always)]
     pub const fn set_feature(&mut self, val: super::vals::Feature) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val.to_bits() as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Minor Version Number"]
+    #[doc = "Minor Version Number."]
     #[must_use]
     #[inline(always)]
     pub const fn minor(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0xff;
         val as u8
     }
-    #[doc = "Minor Version Number"]
+    #[doc = "Minor Version Number."]
     #[inline(always)]
     pub const fn set_minor(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
     }
-    #[doc = "Major Version Number"]
+    #[doc = "Major Version Number."]
     #[must_use]
     #[inline(always)]
     pub const fn major(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "Major Version Number"]
+    #[doc = "Major Version Number."]
     #[inline(always)]
     pub const fn set_major(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);
