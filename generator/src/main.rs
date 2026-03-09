@@ -143,7 +143,8 @@ fn generate_chip(current_dir: &Path, feature: &Feature) -> anyhow::Result<()> {
         let chips_dir = pac_dir.join("src").join("chips");
 
         info!("Generating {}/{}", feature.chip, core);
-        pac::generate_core(&svd, &chips_dir, &transforms_dir, &core).context("Generating PAC")?;
+        pac::generate_core(&svd, &chips_dir, &transforms_dir, &metadata_dir, &core)
+            .context("Generating PAC")?;
 
         // TODO: MCXN947 metadata to remove this hack
         if !feature.metadata.is_empty() {

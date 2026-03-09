@@ -13,6 +13,7 @@ pub fn generate_core(
     svd: &Path,
     chip_dir: &Path,
     transforms_dir: &Path,
+    metadata_dir: &Path,
     core: &str,
 ) -> anyhow::Result<()> {
     if !fs::exists(&svd)? {
@@ -32,6 +33,8 @@ pub fn generate_core(
             core.to_lowercase()
         );
     }
+
+    generate_peripherals(svd, metadata_dir, core, &transform).context("Generating peripherals")?;
 
     let temp = TempDir::new()
         .context("Creating temp dir")?
@@ -79,6 +82,44 @@ pub fn generate_core(
         .context("Running the `form` command. Make sure to have it installed: https://crates.io/crates/form")?;
 
     fs::rename(output_dir.join("lib.rs"), output_dir.join("mod.rs"))?;
+
+    Ok(())
+}
+
+fn generate_peripherals(
+    svd: &Path,
+    metadata_dir: &Path,
+    core: &str,
+    transform: &Path,
+) -> Result<(), anyhow::Error> {
+    let raw_peripherals_dir = metadata_dir.join("peripherals/raw");
+    for file in fs::read_dir(&raw_peripherals_dir)? {
+        let file = file?;
+        if file.file_name().to_string_lossy() != ".gitignore" {
+            println!("Removing: {}", file.file_name().display());
+            fs::remove_file(file.path())?;
+        }
+    }
+
+    println!("{}", transform.display());
+    let output = Command::new("chiptool")
+        .arg("extract-all")
+        .arg("--svd")
+        .arg(svd.canonicalize()?)
+        .arg("--output")
+        .arg(raw_peripherals_dir.canonicalize()?)
+        .arg("--transform")
+        .arg(transform.canonicalize()?)
+        .stdout(Stdio::inherit())
+        .stderr(Stdio::inherit())
+        .output()?;
+
+    if !output.status.success() {
+        bail!(
+            "Error generating peripheral yamls for {core}:\nSTDERR:\n{}",
+            String::from_utf8_lossy(&output.stderr)
+        );
+    }
 
     Ok(())
 }
