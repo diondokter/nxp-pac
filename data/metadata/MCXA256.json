@@ -1,0 +1,15 @@
+{
+    "$schema": "./schema.json",
+    "chips": [
+        "MXCA256"
+    ],
+    "pins": [],
+    "peripherals": [
+        {
+            "name": "TRNG0",
+            "address": "0x400e_c000",
+            "type": "mcxa/TRNG",
+            "signals": []
+        }
+    ]
+}

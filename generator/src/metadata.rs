@@ -44,7 +44,10 @@ pub struct PinIomuxc {
 #[derive(Debug, Clone, Deserialize)]
 pub struct Peripheral {
     pub name: String,
+    #[serde(rename = "type")]
     pub peripheral_type: Option<String>,
+    #[serde(rename = "address")]
+    pub peripheral_address: Option<String>,
     pub signals: Vec<Signal>,
     pub flexcomm: Option<String>,
     #[serde(default)]
@@ -189,7 +192,9 @@ fn validate(metadata: &Metadata) -> anyhow::Result<()> {
     Ok(())
 }
 
-fn generate_metadata(name: &str, interrupts: &[String], metadata: &Metadata) -> TokenStream {
+pub type Interrupts = Vec<(String, u32)>;
+
+fn generate_metadata(name: &str, interrupts: &Interrupts, metadata: &Metadata) -> TokenStream {
     let pins = metadata.pins.iter().map(|pin| {
         let name = &pin.name;
         let iomuxc = pin
@@ -298,6 +303,10 @@ fn generate_metadata(name: &str, interrupts: &[String], metadata: &Metadata) -> 
         }
     });
 
+    let interrupts = interrupts
+        .iter()
+        .map(|(name, val)| quote! { (#name, #val) });
+
     quote! {
         use crate::metadata::*;
 
@@ -310,7 +319,7 @@ fn generate_metadata(name: &str, interrupts: &[String], metadata: &Metadata) -> 
 
         pub const PINS: &[Pin] = &[#(#pins),*];
         pub const PERIPHERALS: &[Peripheral] = &[#(#peripherals),*];
-        pub const INTERRUPTS: &[&str] = &[#(#interrupts),*];
+        pub const INTERRUPTS: &[(&str, u32)] = &[#(#interrupts),*];
     }
 }
 
@@ -319,7 +328,7 @@ pub fn generate_core(
     svd: &Path,
     metadata: &Path,
     core: &str,
-) -> anyhow::Result<Metadata> {
+) -> anyhow::Result<(Metadata, Interrupts)> {
     let metadata = fs::read_to_string(metadata).context("Read metadata")?;
     let metadata = serde_json::from_str::<Metadata>(&metadata).context("Deserialize metadata")?;
     validate(&metadata)?;
@@ -332,12 +341,12 @@ pub fn generate_core(
     for peripheral in svd.peripherals.iter() {
         for interrupt in peripheral.interrupt.iter() {
             // Rust uses fully capitalized interrupt names for singletons.
-            interrupts.push(interrupt.name.clone().to_uppercase());
+            interrupts.push((interrupt.name.clone().to_uppercase(), interrupt.value));
         }
     }
 
     // LPC55S6x has duplicate FLEXCOMM entries. dedup requires sorting to work.
-    interrupts.sort();
+    interrupts.sort_unstable_by_key(|(_, val)| *val);
     interrupts.dedup();
 
     let mut metadata_out = String::new();
@@ -348,8 +357,15 @@ pub fn generate_core(
     )?;
 
     let metadata_rs = chips_dir.join(core.to_lowercase()).join("metadata.rs");
+    if !metadata_rs
+        .parent()
+        .context("getting metadata.rs parent")?
+        .exists()
+    {
+        fs::create_dir_all(metadata_rs.parent().context("getting metadata.rs parent")?)?;
+    }
     fs::write(&metadata_rs, metadata_out)?;
-    rustfmt(&metadata_rs)?;
+    rustfmt(&metadata_rs).context("Formatting metadata")?;
 
-    Ok(metadata)
+    Ok((metadata, interrupts))
 }

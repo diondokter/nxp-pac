@@ -75,6 +75,14 @@
           "description": "Peripheral name",
           "type": "string"
         },
+        "type": {
+          "description": "The type of the peripheral. Should point to a file in 'data/metadata/peripherals'",
+          "type": "string"
+        },
+        "address": {
+          "description": "The memory address of this peripheral instance. Specified as a hex string",
+          "type": "string"
+        },
         "signals": {
           "description": "Signals provided by this peripheral",
           "type": "array",

@@ -17,7 +17,7 @@ mod metapac;
 mod pac;
 
 use std::{
-    env, fs,
+    env,
     path::Path,
     process::{Command, Stdio},
 };
@@ -55,17 +55,19 @@ const GENERATE: &[Feature] = &[
 
     // TODO: metadata
     Feature { chip: "MCXN947", metadata: "", cores: &["MCXN947_cm33_core0", "MCXN947_cm33_core1"], metapac: false},
+    Feature { chip: "MCXA256", metadata: "MCXA256", cores: &["MCXA256"], metapac: true },
     // TODO: metadata
-    Feature { chip: "MCXA256", metadata: "", cores: &["MCXA256"], metapac: false},
-    // TODO: metadata
-    Feature { chip: "MCXA577", metadata: "", cores: &["MCXA577"], metapac: false},
+    Feature { chip: "MCXA577", metadata: "", cores: &["MCXA577"], metapac: false },
 ];
 
 fn main() -> anyhow::Result<()> {
     tracing_subscriber::fmt()
         .with_writer(std::io::stderr)
-        .with_max_level(LevelFilter::INFO)
-        .with_env_filter(EnvFilter::from_default_env())
+        .with_env_filter(
+            EnvFilter::builder()
+                .with_default_directive(LevelFilter::INFO.into())
+                .from_env_lossy(),
+        )
         .init();
 
     verify_chiptool().context("chiptool is not installed")?;
@@ -116,7 +118,8 @@ fn main() -> anyhow::Result<()> {
         .current_dir(current)
         .stdout(Stdio::inherit())
         .stderr(Stdio::inherit())
-        .status()?;
+        .status()
+        .context("Formatting pac code with `cargo fmt`")?;
 
     Ok(())
 }
@@ -136,8 +139,6 @@ fn generate_chip(current_dir: &Path, feature: &Feature) -> anyhow::Result<()> {
         .join(feature.chip);
     let metadata_dir = current_dir.join("data").join("metadata");
     let pac_dir = current_dir.join("nxp-pac");
-    let peripherals_dir = metadata_dir.join("peripherals");
-    let meta_peripherals_dir = pac_dir.join("src").join("meta_peripherals");
 
     for core in feature.cores {
         let svd = chip_src_dir.join(core).with_extension("xml");
@@ -157,13 +158,18 @@ fn generate_chip(current_dir: &Path, feature: &Feature) -> anyhow::Result<()> {
 
         // TODO: MCXN947 metadata to remove this hack
         if !feature.metadata.is_empty() {
-            let metadata = metadata::generate_core(
+            let (metadata, interrupts) = metadata::generate_core(
                 &chips_dir,
                 &svd,
                 &metadata_dir.join(feature.metadata).with_extension("json"),
                 &core,
             )
             .context("Generating metadata")?;
+
+            if feature.metapac {
+                metapac::assemble_metapac(current_dir, core, &metadata, &interrupts)
+                    .context(format!("Assembling metapac for {core}"))?
+            }
         }
     }
 

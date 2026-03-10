@@ -37,8 +37,6 @@ pub fn generate_core(
         .context("Creating temp dir")?
         .dont_delete_on_drop();
 
-    println!("{}", temp.path().display());
-
     let output = Command::new("chiptool")
         .arg("generate")
         .arg("--svd")
@@ -58,7 +56,7 @@ pub fn generate_core(
     }
 
     let lib_temp = temp.path().join("lib.rs");
-    rustfmt(&lib_temp)?;
+    rustfmt(&lib_temp).context("Formatting lib.rs")?;
 
     let device_x = temp.path().join("device.x");
     let output_dir = chip_dir.join(core.to_lowercase());
@@ -110,7 +108,6 @@ pub fn generate_peripherals(
         }
     }
 
-    println!("{}", transform.display());
     let output = Command::new("chiptool")
         .arg("extract-all")
         .arg("--svd")
