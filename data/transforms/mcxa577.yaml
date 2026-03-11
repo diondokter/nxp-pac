@@ -8,7 +8,6 @@ includes:
   - mcxa/crc.yaml
   - mcxa/ctimer.yaml
   - mcxa/dma.yaml
-  - mcxa/mcxa5/dma.yaml
   - mcxa/flexpwm.yaml
   - mcxa/gpio.yaml
   - mcxa/i3c.yaml
@@ -24,6 +23,9 @@ includes:
   - mcxa/spc.yaml
   - mcxa/trng.yaml
   - mcxa/wwdt.yaml
+
+  - mcxa/mcxa5/dma.yaml
+  - mcxa/mcxa5/rtc.yaml
 
   - remove-suffix.yaml
 transforms:
