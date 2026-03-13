@@ -324,14 +324,14 @@ impl Ctrl {
     #[doc = "Alarm Match"]
     #[must_use]
     #[inline(always)]
-    pub const fn alm_match(&self) -> super::vals::AlmMatch {
+    pub const fn alm_match(&self) -> u8 {
         let val = (self.0 >> 2usize) & 0x03;
-        super::vals::AlmMatch::from_bits(val as u8)
+        val as u8
     }
     #[doc = "Alarm Match"]
     #[inline(always)]
-    pub const fn set_alm_match(&mut self, val: super::vals::AlmMatch) {
-        self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u16) & 0x03) << 2usize);
+    pub const fn set_alm_match(&mut self, val: u8) {
+        self.0 = (self.0 & !(0x03 << 2usize)) | (((val as u16) & 0x03) << 2usize);
     }
     #[doc = "Alarm Subseconds Match Enable Signal"]
     #[must_use]
@@ -372,38 +372,38 @@ impl Ctrl {
     #[doc = "RTC Clock Select"]
     #[must_use]
     #[inline(always)]
-    pub const fn clk_sel(&self) -> super::vals::ClkSel {
+    pub const fn clk_sel(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
-        super::vals::ClkSel::from_bits(val as u8)
+        val != 0
     }
     #[doc = "RTC Clock Select"]
     #[inline(always)]
-    pub const fn set_clk_sel(&mut self, val: super::vals::ClkSel) {
-        self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u16) & 0x01) << 9usize);
+    pub const fn set_clk_sel(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u16) & 0x01) << 9usize);
     }
     #[doc = "Clock Output Disable"]
     #[must_use]
     #[inline(always)]
-    pub const fn clko_dis(&self) -> super::vals::ClkoDis {
+    pub const fn clko_dis(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
-        super::vals::ClkoDis::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Clock Output Disable"]
     #[inline(always)]
-    pub const fn set_clko_dis(&mut self, val: super::vals::ClkoDis) {
-        self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u16) & 0x01) << 10usize);
+    pub const fn set_clko_dis(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u16) & 0x01) << 10usize);
     }
     #[doc = "RTC Clock Output Selection"]
     #[must_use]
     #[inline(always)]
-    pub const fn clkout(&self) -> super::vals::Clkout {
+    pub const fn clkout(&self) -> u8 {
         let val = (self.0 >> 13usize) & 0x03;
-        super::vals::Clkout::from_bits(val as u8)
+        val as u8
     }
     #[doc = "RTC Clock Output Selection"]
     #[inline(always)]
-    pub const fn set_clkout(&mut self, val: super::vals::Clkout) {
-        self.0 = (self.0 & !(0x03 << 13usize)) | (((val.to_bits() as u16) & 0x03) << 13usize);
+    pub const fn set_clkout(&mut self, val: u8) {
+        self.0 = (self.0 & !(0x03 << 13usize)) | (((val as u16) & 0x03) << 13usize);
     }
 }
 impl Default for Ctrl {
@@ -432,7 +432,7 @@ impl defmt::Format for Ctrl {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Ctrl {{ fineen: {=bool:?}, comp_en: {=bool:?}, alm_match: {:?}, alm_subsecs_match_en: {=bool:?}, dst_en: {=bool:?}, swr: {:?}, clk_sel: {:?}, clko_dis: {:?}, clkout: {:?} }}",
+            "Ctrl {{ fineen: {=bool:?}, comp_en: {=bool:?}, alm_match: {=u8:?}, alm_subsecs_match_en: {=bool:?}, dst_en: {=bool:?}, swr: {:?}, clk_sel: {=bool:?}, clko_dis: {=bool:?}, clkout: {=u8:?} }}",
             self.fineen(),
             self.comp_en(),
             self.alm_match(),
@@ -465,14 +465,14 @@ impl Days {
     #[doc = "Day of Week Counter Value"]
     #[must_use]
     #[inline(always)]
-    pub const fn dow(&self) -> super::vals::Dow {
+    pub const fn dow(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x07;
-        super::vals::Dow::from_bits(val as u8)
+        val as u8
     }
     #[doc = "Day of Week Counter Value"]
     #[inline(always)]
-    pub const fn set_dow(&mut self, val: super::vals::Dow) {
-        self.0 = (self.0 & !(0x07 << 8usize)) | (((val.to_bits() as u16) & 0x07) << 8usize);
+    pub const fn set_dow(&mut self, val: u8) {
+        self.0 = (self.0 & !(0x07 << 8usize)) | (((val as u16) & 0x07) << 8usize);
     }
 }
 impl Default for Days {
@@ -494,7 +494,7 @@ impl defmt::Format for Days {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Days {{ day_cnt: {=u8:?}, dow: {:?} }}",
+            "Days {{ day_cnt: {=u8:?}, dow: {=u8:?} }}",
             self.day_cnt(),
             self.dow()
         )
@@ -1211,14 +1211,14 @@ impl Status {
     #[doc = "Invalidate CPU Read/Write Access"]
     #[must_use]
     #[inline(always)]
-    pub const fn inval_bit(&self) -> super::vals::InvalBit {
+    pub const fn inval_bit(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
-        super::vals::InvalBit::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Invalidate CPU Read/Write Access"]
     #[inline(always)]
-    pub const fn set_inval_bit(&mut self, val: super::vals::InvalBit) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u16) & 0x01) << 0usize);
+    pub const fn set_inval_bit(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u16) & 0x01) << 0usize);
     }
     #[doc = "Write Protect Enable Status"]
     #[must_use]
@@ -1247,14 +1247,14 @@ impl Status {
     #[doc = "Write Enable"]
     #[must_use]
     #[inline(always)]
-    pub const fn we(&self) -> super::vals::We {
+    pub const fn we(&self) -> u8 {
         let val = (self.0 >> 6usize) & 0x03;
-        super::vals::We::from_bits(val as u8)
+        val as u8
     }
     #[doc = "Write Enable"]
     #[inline(always)]
-    pub const fn set_we(&mut self, val: super::vals::We) {
-        self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u16) & 0x03) << 6usize);
+    pub const fn set_we(&mut self, val: u8) {
+        self.0 = (self.0 & !(0x03 << 6usize)) | (((val as u16) & 0x03) << 6usize);
     }
     #[doc = "Bus Error"]
     #[must_use]
@@ -1304,7 +1304,7 @@ impl defmt::Format for Status {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Status {{ inval_bit: {:?}, write_prot_en: {=bool:?}, cmp_int: {=bool:?}, we: {:?}, bus_err: {:?}, cmp_done: {=bool:?} }}",
+            "Status {{ inval_bit: {=bool:?}, write_prot_en: {=bool:?}, cmp_int: {=bool:?}, we: {=u8:?}, bus_err: {:?}, cmp_done: {=bool:?} }}",
             self.inval_bit(),
             self.write_prot_en(),
             self.cmp_int(),
@@ -1322,14 +1322,14 @@ impl Yearmon {
     #[doc = "Month Counter"]
     #[must_use]
     #[inline(always)]
-    pub const fn mon_cnt(&self) -> super::vals::MonCnt {
+    pub const fn mon_cnt(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
-        super::vals::MonCnt::from_bits(val as u8)
+        val as u8
     }
     #[doc = "Month Counter"]
     #[inline(always)]
-    pub const fn set_mon_cnt(&mut self, val: super::vals::MonCnt) {
-        self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u16) & 0x0f) << 0usize);
+    pub const fn set_mon_cnt(&mut self, val: u8) {
+        self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u16) & 0x0f) << 0usize);
     }
     #[doc = "Year Offset Count Value"]
     #[must_use]
@@ -1363,7 +1363,7 @@ impl defmt::Format for Yearmon {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Yearmon {{ mon_cnt: {:?}, yrofst: {=u8:?} }}",
+            "Yearmon {{ mon_cnt: {=u8:?}, yrofst: {=u8:?} }}",
             self.mon_cnt(),
             self.yrofst()
         )
