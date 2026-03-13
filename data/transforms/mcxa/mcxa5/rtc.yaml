@@ -1,3 +1,12 @@
 transforms:
   - !DeleteEnums
     from: rtc0::vals::(InvalBit|ClkSel|Clkout|ClkoDis|Dow|MonCnt|AlmMatch|We)
+
+  - !AddRegisters
+    block: rtc0::Rtc0
+    registers:
+      - name: status8
+        description: Byte Access to Status
+        byte_offset: 18
+        bit_size: 8
+        access: Write
