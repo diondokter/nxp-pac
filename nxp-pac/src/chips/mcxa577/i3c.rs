@@ -59,6 +59,16 @@ impl I3c {
     pub const fn sdmactrl(self) -> crate::common::Reg<regs::Sdmactrl, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x20usize) as _) }
     }
+    #[doc = "Target HDR-BT Configuration"]
+    #[inline(always)]
+    pub const fn shdrbtcfg(self) -> crate::common::Reg<u32, crate::common::RW> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x24usize) as _) }
+    }
+    #[doc = "Target HDR-Last"]
+    #[inline(always)]
+    pub const fn shdrbtlast(self) -> crate::common::Reg<u32, crate::common::R> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x28usize) as _) }
+    }
     #[doc = "Target Data Control"]
     #[inline(always)]
     pub const fn sdatactrl(self) -> crate::common::Reg<regs::Sdatactrl, crate::common::RW> {
@@ -186,6 +196,16 @@ impl I3c {
     pub const fn mdmactrl(self) -> crate::common::Reg<regs::Mdmactrl, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xa0usize) as _) }
     }
+    #[doc = "Controller HDR-BT Configuration"]
+    #[inline(always)]
+    pub const fn mhdrbtcfg(self) -> crate::common::Reg<u32, crate::common::RW> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xa4usize) as _) }
+    }
+    #[doc = "Controller HDR-Last"]
+    #[inline(always)]
+    pub const fn mhdrbtlast(self) -> crate::common::Reg<u32, crate::common::R> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xa8usize) as _) }
+    }
     #[doc = "Controller Data Control"]
     #[inline(always)]
     pub const fn mdatactrl(self) -> crate::common::Reg<regs::Mdatactrl, crate::common::RW> {
@@ -272,6 +292,16 @@ impl I3c {
     pub const fn mdynaddr(self) -> crate::common::Reg<regs::Mdynaddr, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xe4usize) as _) }
     }
+    #[doc = "Write Word Data (to Bus)"]
+    #[inline(always)]
+    pub const fn mwdataw(self) -> crate::common::Reg<u32, crate::common::W> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xf0usize) as _) }
+    }
+    #[doc = "Read Word Data (from Bus)"]
+    #[inline(always)]
+    pub const fn mrdataw(self) -> crate::common::Reg<u32, crate::common::R> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xf8usize) as _) }
+    }
     #[doc = "Map Feature Control 0"]
     #[inline(always)]
     pub const fn smapctrl0(self) -> crate::common::Reg<regs::Smapctrl0, crate::common::R> {
@@ -291,6 +321,16 @@ impl I3c {
     #[inline(always)]
     pub const fn ibiext2(self) -> crate::common::Reg<regs::Ibiext2, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0144usize) as _) }
+    }
+    #[doc = "Target Write Word Data (to Bus)"]
+    #[inline(always)]
+    pub const fn swdataw(self) -> crate::common::Reg<u32, crate::common::W> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0150usize) as _) }
+    }
+    #[doc = "Target Read Word Data (from Bus)"]
+    #[inline(always)]
+    pub const fn srdataw(self) -> crate::common::Reg<u32, crate::common::R> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0158usize) as _) }
     }
     #[doc = "Target Module ID"]
     #[inline(always)]
