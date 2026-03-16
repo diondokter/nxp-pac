@@ -282,3 +282,12 @@ transforms:
   - !Delete
     from: i3c1::(.+)
     type: All
+
+  - !DeleteEnums
+    from: i3c::vals::Mintclr(.+)
+
+  - !DeleteEnums
+    from: i3c::vals::(.+)Flush(f|t)b
+
+  - !DeleteEnums
+    from: i3c::vals::Mstatus(Txnotfull|Rxpend)

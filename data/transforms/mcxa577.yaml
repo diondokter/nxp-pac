@@ -2,6 +2,10 @@ includes:
   - cm33.yaml
   - useless.yaml
 
+  - mcxa/mcxa5/dma.yaml
+  - mcxa/mcxa5/i3c.yaml
+  - mcxa/mcxa5/rtc.yaml
+
   - mcxa/adc.yaml
   - mcxa/can.yaml
   - mcxa/cdog.yaml
@@ -23,10 +27,6 @@ includes:
   - mcxa/spc.yaml
   - mcxa/trng.yaml
   - mcxa/wwdt.yaml
-
-  - mcxa/mcxa5/dma.yaml
-  - mcxa/mcxa5/i3c.yaml
-  - mcxa/mcxa5/rtc.yaml
 
   - remove-suffix.yaml
 
