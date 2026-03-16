@@ -158,7 +158,7 @@ fn generate_chip(current_dir: &Path, feature: &Feature) -> anyhow::Result<()> {
 
         // TODO: MCXN947 metadata to remove this hack
         if !feature.metadata.is_empty() {
-            let (metadata, interrupts) = metadata::generate_core(
+            let metadata = metadata::generate_core(
                 &chips_dir,
                 &svd,
                 &metadata_dir.join(feature.metadata).with_extension("json"),
@@ -167,7 +167,7 @@ fn generate_chip(current_dir: &Path, feature: &Feature) -> anyhow::Result<()> {
             .context("Generating metadata")?;
 
             if feature.metapac {
-                metapac::assemble_metapac(current_dir, core, &metadata, &interrupts)
+                metapac::assemble_metapac(current_dir, core, &metadata)
                     .context(format!("Assembling metapac for {core}"))?
             }
         }

@@ -1,3 +1,4 @@
+#[cfg_attr(feature = "mcxa256", path = "./chips/mcxa256/metadata.rs")]
 #[cfg_attr(feature = "mimxrt1011", path = "./chips/mimxrt1011/metadata.rs")]
 #[cfg_attr(feature = "mimxrt1062", path = "./chips/mimxrt1062/metadata.rs")]
 #[cfg_attr(feature = "mimxrt1064", path = "./chips/mimxrt1064/metadata.rs")]
@@ -19,7 +20,7 @@ pub struct Metadata {
     pub name: &'static str,
     pub pins: &'static [Pin],
     pub peripherals: &'static [Peripheral],
-    pub interrupts: &'static [&'static str],
+    pub interrupts: &'static [(&'static str, u32)],
 }
 
 pub struct Pin {
@@ -34,6 +35,7 @@ pub struct PinIomuxc {
 
 pub struct Peripheral {
     pub name: &'static str,
+    pub address: u32,
     pub signals: &'static [Signal],
     pub flexcomm: Option<&'static str>,
     pub dma_muxing: &'static [DmaMux],

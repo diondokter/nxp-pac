@@ -8,6 +8,7 @@ pub const METADATA: Metadata = Metadata {
 pub const PINS: &[Pin] = &[];
 pub const PERIPHERALS: &[Peripheral] = &[Peripheral {
     name: "TRNG0",
+    address: 0x400e_c000,
     signals: &[],
     flexcomm: None,
     dma_muxing: &[],

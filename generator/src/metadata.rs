@@ -6,6 +6,7 @@ use std::{
 };
 
 use anyhow::{Context, bail};
+use indexmap::IndexMap;
 use proc_macro2::{Literal, TokenStream};
 use quote::quote;
 use serde::Deserialize;
@@ -16,6 +17,8 @@ use crate::rustfmt;
 pub struct Metadata {
     pub chips: Vec<String>,
     pub pins: Vec<Pin>,
+    pub nvic_prio_bits: u32,
+    pub interrupts: IndexMap<String, u32>,
     pub peripherals: Vec<Peripheral>,
 }
 
@@ -192,9 +195,7 @@ fn validate(metadata: &Metadata) -> anyhow::Result<()> {
     Ok(())
 }
 
-pub type Interrupts = Vec<(String, u32)>;
-
-fn generate_metadata(name: &str, interrupts: &Interrupts, metadata: &Metadata) -> TokenStream {
+fn generate_metadata(name: &str, metadata: &Metadata) -> TokenStream {
     let pins = metadata.pins.iter().map(|pin| {
         let name = &pin.name;
         let iomuxc = pin
@@ -293,9 +294,20 @@ fn generate_metadata(name: &str, interrupts: &Interrupts, metadata: &Metadata) -
             }
         });
 
+        let address = match peripheral.peripheral_address.as_ref() {
+            Some(val) => {
+                let val: TokenStream = val
+                    .parse()
+                    .expect("Peripheral address is parsed to tokenstream");
+                quote! { #val }
+            }
+            None => quote! { 0 },
+        };
+
         quote! {
             Peripheral {
                 name: #name,
+                address: #address,
                 signals: &[#(#signals),*],
                 flexcomm: #flexcomm,
                 dma_muxing: &[#(#dma_muxing),*],
@@ -303,7 +315,8 @@ fn generate_metadata(name: &str, interrupts: &Interrupts, metadata: &Metadata) -
         }
     });
 
-    let interrupts = interrupts
+    let interrupts = metadata
+        .interrupts
         .iter()
         .map(|(name, val)| quote! { (#name, #val) });
 
@@ -328,33 +341,32 @@ pub fn generate_core(
     svd: &Path,
     metadata: &Path,
     core: &str,
-) -> anyhow::Result<(Metadata, Interrupts)> {
+) -> anyhow::Result<Metadata> {
     let metadata = fs::read_to_string(metadata).context("Read metadata")?;
-    let metadata = serde_json::from_str::<Metadata>(&metadata).context("Deserialize metadata")?;
+    let mut metadata =
+        serde_json::from_str::<Metadata>(&metadata).context("Deserialize metadata")?;
     validate(&metadata)?;
 
-    let svd_contents = fs::read_to_string(svd).context("Read SVD")?;
-    let svd = svd_parser::parse(&svd_contents).context("Parse SVD")?;
+    if metadata.interrupts.is_empty() {
+        // If the metadata doesn't define the interrupts, we'll get it from the SVD
 
-    let mut interrupts = Vec::new();
+        let svd_contents = fs::read_to_string(svd).context("Read SVD")?;
+        let svd = svd_parser::parse(&svd_contents).context("Parse SVD")?;
 
-    for peripheral in svd.peripherals.iter() {
-        for interrupt in peripheral.interrupt.iter() {
-            // Rust uses fully capitalized interrupt names for singletons.
-            interrupts.push((interrupt.name.clone().to_uppercase(), interrupt.value));
+        for peripheral in svd.peripherals.iter() {
+            for interrupt in peripheral.interrupt.iter() {
+                // Rust uses fully capitalized interrupt names for singletons.
+                metadata
+                    .interrupts
+                    .insert(interrupt.name.clone().to_uppercase(), interrupt.value);
+            }
         }
+
+        metadata.interrupts.sort_unstable_by_key(|_, val| *val);
     }
 
-    // LPC55S6x has duplicate FLEXCOMM entries. dedup requires sorting to work.
-    interrupts.sort_unstable_by_key(|(_, val)| *val);
-    interrupts.dedup();
-
     let mut metadata_out = String::new();
-    write!(
-        metadata_out,
-        "{}",
-        generate_metadata(core, &interrupts, &metadata)
-    )?;
+    write!(metadata_out, "{}", generate_metadata(core, &metadata))?;
 
     let metadata_rs = chips_dir.join(core.to_lowercase()).join("metadata.rs");
     if !metadata_rs
@@ -367,5 +379,5 @@ pub fn generate_core(
     fs::write(&metadata_rs, metadata_out)?;
     rustfmt(&metadata_rs).context("Formatting metadata")?;
 
-    Ok((metadata, interrupts))
+    Ok(metadata)
 }

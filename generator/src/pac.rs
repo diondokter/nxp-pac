@@ -89,6 +89,8 @@ pub fn generate_peripherals(
     core: &str,
     transforms_dir: &Path,
 ) -> Result<(), anyhow::Error> {
+    use std::fmt::Write;
+
     let transform = transforms_dir
         .join(core.to_lowercase())
         .with_extension("yaml");
@@ -126,6 +128,45 @@ pub fn generate_peripherals(
             String::from_utf8_lossy(&output.stderr)
         );
     }
+
+    let svd_contents = fs::read_to_string(svd).context("Read SVD")?;
+    let svd = svd_parser::parse(&svd_contents).context("Parse SVD")?;
+
+    let nvic_priority_bits = svd
+        .cpu
+        .map(|cpu| cpu.nvic_priority_bits)
+        .unwrap_or_default();
+
+    let mut interrupts = Vec::new();
+
+    for peripheral in svd.peripherals.iter() {
+        for interrupt in peripheral.interrupt.iter() {
+            // Rust uses fully capitalized interrupt names for singletons.
+            interrupts.push((interrupt.name.clone().to_uppercase(), interrupt.value));
+        }
+    }
+
+    interrupts.sort_unstable_by_key(|(_, val)| *val);
+    interrupts.dedup();
+
+    let mut interrupts_json = String::new();
+    writeln!(
+        &mut interrupts_json,
+        "{{\n  \"nvic_prio_bits\": {nvic_priority_bits},\n  \"interrupts\": {{"
+    )?;
+    for (i, (name, num)) in interrupts.iter().enumerate() {
+        writeln!(
+            &mut interrupts_json,
+            "    \"{name}\": {num}{}",
+            if i != interrupts.len() - 1 { "," } else { "" }
+        )?;
+    }
+    writeln!(&mut interrupts_json, "  }}\n}}")?;
+
+    fs::write(
+        raw_peripherals_dir.join("interrupts.json"),
+        interrupts_json.as_bytes(),
+    )?;
 
     Ok(())
 }

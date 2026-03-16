@@ -190,3 +190,16 @@ unsafe impl cortex_m::interrupt::InterruptNumber for Interrupt {
         self as u16
     }
 }
+#[cfg(feature = "rt")]
+mod _vectors;
+#[doc = r" Number available in the NVIC for configuring priority"]
+#[cfg(feature = "rt")]
+pub const NVIC_PRIO_BITS: u8 = 3;
+#[cfg(feature = "rt")]
+pub use Interrupt as interrupt;
+#[cfg(feature = "rt")]
+pub use cortex_m_rt::interrupt;
+pub const TRNG0: trng::Trng = unsafe { trng::Trng::from_ptr(0x400e_c000 as _) };
+pub mod common;
+#[path = "../../meta_peripherals/mcxa/TRNG.rs"]
+pub mod trng;
