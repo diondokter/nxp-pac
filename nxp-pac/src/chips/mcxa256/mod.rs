@@ -199,7 +199,4 @@ pub const NVIC_PRIO_BITS: u8 = 3;
 pub use Interrupt as interrupt;
 #[cfg(feature = "rt")]
 pub use cortex_m_rt::interrupt;
-pub const TRNG0: trng::Trng = unsafe { trng::Trng::from_ptr(0x400e_c000 as _) };
 pub mod common;
-#[path = "../../meta_peripherals/mcxa/TRNG.rs"]
-pub mod trng;

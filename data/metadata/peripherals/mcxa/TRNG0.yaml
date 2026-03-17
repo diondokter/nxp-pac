@@ -1,5 +1,5 @@
-block/TRNG:
-  description: pd_main.trng.
+block/TRNG0:
+  description: pd_main.trng0.
   items:
   - name: MCTL
     description: Miscellaneous Control Register.
