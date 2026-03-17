@@ -2,10 +2,15 @@ includes:
   - cm33.yaml
   - useless.yaml
 
+  - mcxa/mcxa5/dma.yaml
+  - mcxa/mcxa5/i3c.yaml
+  - mcxa/mcxa5/rtc.yaml
+
   - mcxa/adc.yaml
   - mcxa/can.yaml
   - mcxa/cdog.yaml
   - mcxa/crc.yaml
+  - mcxa/ctimer.yaml
   - mcxa/dma.yaml
   - mcxa/flexpwm.yaml
   - mcxa/gpio.yaml
@@ -24,5 +29,6 @@ includes:
   - mcxa/wwdt.yaml
 
   - remove-suffix.yaml
+
 transforms:
   - !Sort

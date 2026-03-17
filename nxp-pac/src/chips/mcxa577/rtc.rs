@@ -64,6 +64,11 @@ impl Rtc {
     pub const fn status(self) -> crate::common::Reg<regs::Status, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x12usize) as _) }
     }
+    #[doc = "Byte Access to Status"]
+    #[inline(always)]
+    pub const fn status8(self) -> crate::common::Reg<u8, crate::common::W> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x12usize) as _) }
+    }
     #[doc = "Interrupt Status"]
     #[inline(always)]
     pub const fn isr(self) -> crate::common::Reg<regs::Isr, crate::common::RW> {

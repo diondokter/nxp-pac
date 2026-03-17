@@ -8,22 +8,22 @@ pub enum Interrupt {
     RESERVED16 = 0,
     #[doc = "1 - CMC"]
     CMC = 1,
-    #[doc = "2 - DMA0_CH0"]
-    DMA0_CH0 = 2,
-    #[doc = "3 - DMA0_CH1"]
-    DMA0_CH1 = 3,
-    #[doc = "4 - DMA0_CH2"]
-    DMA0_CH2 = 4,
-    #[doc = "5 - DMA0_CH3"]
-    DMA0_CH3 = 5,
-    #[doc = "6 - DMA0_CH4"]
-    DMA0_CH4 = 6,
-    #[doc = "7 - DMA0_CH5"]
-    DMA0_CH5 = 7,
-    #[doc = "8 - DMA0_CH6"]
-    DMA0_CH6 = 8,
-    #[doc = "9 - DMA0_CH7"]
-    DMA0_CH7 = 9,
+    #[doc = "2 - DMA_CH0"]
+    DMA_CH0 = 2,
+    #[doc = "3 - DMA_CH1"]
+    DMA_CH1 = 3,
+    #[doc = "4 - DMA_CH2"]
+    DMA_CH2 = 4,
+    #[doc = "5 - DMA_CH3"]
+    DMA_CH3 = 5,
+    #[doc = "6 - DMA_CH4"]
+    DMA_CH4 = 6,
+    #[doc = "7 - DMA_CH5"]
+    DMA_CH5 = 7,
+    #[doc = "8 - DMA_CH6"]
+    DMA_CH6 = 8,
+    #[doc = "9 - DMA_CH7"]
+    DMA_CH7 = 9,
     #[doc = "10 - ERM0_SINGLE_BIT"]
     ERM0_SINGLE_BIT = 10,
     #[doc = "11 - ERM0_MULTI_BIT"]
@@ -192,14 +192,14 @@ pub enum Interrupt {
     GPIO5_1 = 131,
     #[doc = "133 - ITRC0"]
     ITRC0 = 133,
-    #[doc = "134 - DMA0_CH8"]
-    DMA0_CH8 = 134,
-    #[doc = "135 - DMA0_CH9"]
-    DMA0_CH9 = 135,
-    #[doc = "136 - DMA0_CH10"]
-    DMA0_CH10 = 136,
-    #[doc = "137 - DMA0_CH11"]
-    DMA0_CH11 = 137,
+    #[doc = "134 - DMA_CH8"]
+    DMA_CH8 = 134,
+    #[doc = "135 - DMA_CH9"]
+    DMA_CH9 = 135,
+    #[doc = "136 - DMA_CH10"]
+    DMA_CH10 = 136,
+    #[doc = "137 - DMA_CH11"]
+    DMA_CH11 = 137,
     #[doc = "142 - DMA1_CH0"]
     DMA1_CH0 = 142,
     #[doc = "143 - DMA1_CH1"]
@@ -223,7 +223,7 @@ pub const INPUTMUX0: inputmux::Inputmux =
 #[doc = "Improved Inter-Integrated Circuit"]
 pub const I3C0: i3c::I3c = unsafe { i3c::I3c::from_ptr(0x4000_2000usize as _) };
 #[doc = "Improved Inter-Integrated Circuit"]
-pub const I3C1: i3c1::I3c1 = unsafe { i3c1::I3c1::from_ptr(0x4000_3000usize as _) };
+pub const I3C1: i3c::I3c = unsafe { i3c::I3c::from_ptr(0x4000_3000usize as _) };
 #[doc = "Standard Counter or Timer"]
 pub const CTIMER0: ctimer::Ctimer = unsafe { ctimer::Ctimer::from_ptr(0x4000_4000usize as _) };
 #[doc = "Standard Counter or Timer"]
@@ -252,8 +252,8 @@ pub const PKC0: pkc::Pkc = unsafe { pkc::Pkc::from_ptr(0x4001_2000usize as _) };
 #[doc = "DMA MP"]
 pub const DMA1: dma1::Dma1 = unsafe { dma1::Dma1::from_ptr(0x4001_3000usize as _) };
 #[doc = "DMA TCD"]
-pub const EDMA1_TCD0: edma1_tcd::Edma1Tcd =
-    unsafe { edma1_tcd::Edma1Tcd::from_ptr(0x4001_4000usize as _) };
+pub const EDMA_1_TCD0: edma_1_tcd::Edma1Tcd =
+    unsafe { edma_1_tcd::Edma1Tcd::from_ptr(0x4001_4000usize as _) };
 #[doc = "no description available"]
 pub const ENET0: enet::Enet = unsafe { enet::Enet::from_ptr(0x4001_c000usize as _) };
 #[doc = "no description available"]
@@ -313,8 +313,8 @@ pub const GPIO4: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4005_0000usize as 
 #[doc = "DMA MP"]
 pub const DMA0: dma::Dma = unsafe { dma::Dma::from_ptr(0x4008_0000usize as _) };
 #[doc = "DMA TCD"]
-pub const EDMA0_TCD0: edma0_tcd::Edma0Tcd =
-    unsafe { edma0_tcd::Edma0Tcd::from_ptr(0x4008_1000usize as _) };
+pub const EDMA_0_TCD0: edma_0_tcd::Edma0Tcd =
+    unsafe { edma_0_tcd::Edma0Tcd::from_ptr(0x4008_1000usize as _) };
 #[doc = "SYSCON"]
 pub const SYSCON: syscon::Syscon = unsafe { syscon::Syscon::from_ptr(0x4009_1000usize as _) };
 #[doc = "MRCC"]
@@ -432,8 +432,6 @@ pub const TRNG0: trng::Trng = unsafe { trng::Trng::from_ptr(0x400e_c000usize as 
 pub const UDF0: udf::Udf = unsafe { udf::Udf::from_ptr(0x400e_d000usize as _) };
 #[doc = "Real Time Clock"]
 pub const RTC0: rtc::Rtc = unsafe { rtc::Rtc::from_ptr(0x400e_e000usize as _) };
-pub const ADC2: adc::Adc = unsafe { adc::Adc::from_ptr(0x400f_0000usize as _) };
-pub const ADC3: adc::Adc = unsafe { adc::Adc::from_ptr(0x400f_1000usize as _) };
 #[doc = "System Control not in System Control Block"]
 pub const SCNSCB: scn_scb::ScnScb = unsafe { scn_scb::ScnScb::from_ptr(0xe000_e000usize as _) };
 #[doc = r" Number available in the NVIC for configuring priority"]
@@ -458,9 +456,8 @@ pub mod dbgmailbox;
 pub mod dgdet;
 pub mod dma;
 pub mod dma1;
-pub mod edma0_tcd;
-pub mod edma1_tcd;
 pub mod edma_0_tcd;
+pub mod edma_1_tcd;
 pub mod eim;
 pub mod enet;
 pub mod enet0__eqos_dma;
@@ -478,7 +475,6 @@ pub mod freqme;
 pub mod glikey;
 pub mod gpio;
 pub mod i3c;
-pub mod i3c1;
 pub mod inputmux;
 pub mod itrc;
 pub mod lpi2c;
