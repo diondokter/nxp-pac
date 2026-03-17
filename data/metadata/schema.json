@@ -12,8 +12,20 @@
         "type": "string"
       }
     },
-    "pins": { "$ref": "#/$defs/pins" },
-    "peripherals": { "$ref": "#/$defs/peripherals" }
+    "nvic_prio_bits": {
+      "description": "The amount of bits used for the nvic priority",
+      "type": "integer"
+    },
+    "interrupts": {
+      "description": "A map of the interrupts of the chip",
+      "type": "object"
+    },
+    "pins": {
+      "$ref": "#/$defs/pins"
+    },
+    "peripherals": {
+      "$ref": "#/$defs/peripherals"
+    }
   },
   "required": [
     "chips",
@@ -24,7 +36,9 @@
     "pins": {
       "description": "Chip pins",
       "type": "array",
-      "items": { "$ref": "#/$defs/pin" }
+      "items": {
+        "$ref": "#/$defs/pin"
+      }
     },
     "pin": {
       "description": "Pin provided on a chip. This does not include power pins.",
@@ -65,7 +79,9 @@
     "peripherals": {
       "description": "Chip peripherals",
       "type": "array",
-      "items": { "$ref": "#/$defs/peripheral" }
+      "items": {
+        "$ref": "#/$defs/peripheral"
+      }
     },
     "peripheral": {
       "description": "Peripheral",
@@ -76,7 +92,7 @@
           "type": "string"
         },
         "type": {
-          "description": "The type of the peripheral. Should point to a file in 'data/metadata/peripherals'",
+          "description": "The type of the peripheral. Should point to a file in 'data/metadata/peripherals' without extension",
           "type": "string"
         },
         "address": {
@@ -86,7 +102,9 @@
         "signals": {
           "description": "Signals provided by this peripheral",
           "type": "array",
-          "items": { "$ref": "#/$defs/signal" }
+          "items": {
+            "$ref": "#/$defs/signal"
+          }
         },
         "flexcomm": {
           "description": "Indicates which (LP)FLEXCOMM instance this peripheral belongs to. Optional if the chip does not have FLEXCOMM instances, or the peripheral does not belong to FLEXCOMM",
@@ -99,7 +117,9 @@
             "LPC55 uses fixed DMA channels for peripherals.",
             "RT1xxx, S32 and MCX use the DMA mux to select the request channel for a peripheral"
           ],
-          "items": { "$ref": "#/$defs/dma_mux" }
+          "items": {
+            "$ref": "#/$defs/dma_mux"
+          }
         },
         "only_in": {
           "description": "A regular expression to specify which chips this peripheral is available for. This can be used to define a superset chip and share most mappings with subset chips",
@@ -122,7 +142,9 @@
         "pins": {
           "description": "Pins where the signal is available",
           "type": "array",
-          "items": { "$ref": "#/$defs/peripheral_pin" }
+          "items": {
+            "$ref": "#/$defs/peripheral_pin"
+          }
         },
         "iomuxc_daisy": {
           "description": "IOMUXC Daisy register used for this signal. Depending on the signal this may be optional. Only allowed on RT1xxx devices. Hexadecimal value",

@@ -164,8 +164,32 @@ pub fn generate_peripherals(
     writeln!(&mut interrupts_json, "  }}\n}}")?;
 
     fs::write(
-        raw_peripherals_dir.join("interrupts.json"),
+        raw_peripherals_dir.join("_interrupts.json"),
         interrupts_json.as_bytes(),
+    )?;
+
+    let peripheral_addresses = svd
+        .peripherals
+        .iter()
+        .map(|p| (&p.name, p.base_address))
+        .collect::<Vec<_>>();
+    let mut addresses_json = String::new();
+    writeln!(&mut addresses_json, "{{")?;
+    for (i, (name, address)) in peripheral_addresses.iter().enumerate() {
+        writeln!(
+            &mut addresses_json,
+            "  \"{name}\": \"{address:#010X}\"{}",
+            if i != peripheral_addresses.len() - 1 {
+                ","
+            } else {
+                ""
+            }
+        )?;
+    }
+    writeln!(&mut addresses_json, "}}")?;
+    fs::write(
+        raw_peripherals_dir.join("_addresses.json"),
+        addresses_json.as_bytes(),
     )?;
 
     Ok(())
