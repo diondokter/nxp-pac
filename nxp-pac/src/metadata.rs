@@ -37,6 +37,7 @@ pub struct PinIomuxc {
 pub struct Peripheral {
     pub name: &'static str,
     pub address: u32,
+    pub driver_name: &'static str,
     pub signals: &'static [Signal],
     pub flexcomm: Option<&'static str>,
     pub dma_muxing: &'static [DmaMux],

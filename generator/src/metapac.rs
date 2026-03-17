@@ -34,7 +34,10 @@ pub fn export_meta_peripherals(current: &Path) -> anyhow::Result<()> {
             let entry_path = entry.path().to_path_buf();
 
             let relative_entry_path = entry_path.strip_prefix(&yaml_peri_dir)?;
-            if relative_entry_path.starts_with("raw") || entry_path.is_dir() {
+            if relative_entry_path.starts_with("raw")
+                || entry_path.is_dir()
+                || entry_path.extension().map(|e| e.to_string_lossy()) != Some("yaml".into())
+            {
                 return Ok(());
             }
 

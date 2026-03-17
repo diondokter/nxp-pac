@@ -199,10 +199,13 @@ fn generate_metadata(name: &str, metadata: &Metadata) -> TokenStream {
             None => quote! { 0 },
         };
 
+        let driver_name = peripheral.peripheral_type.as_deref().unwrap_or_default();
+
         quote! {
             Peripheral {
                 name: #name,
                 address: #address,
+                driver_name: #driver_name,
                 signals: &[#(#signals),*],
                 flexcomm: #flexcomm,
                 dma_muxing: &[#(#dma_muxing),*],
