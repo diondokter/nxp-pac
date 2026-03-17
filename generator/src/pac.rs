@@ -102,7 +102,10 @@ pub fn generate_peripherals(
         );
     }
 
-    let raw_peripherals_dir = metadata_dir.join("peripherals/raw");
+    let raw_peripherals_dir = metadata_dir.join("peripherals/raw").join(core);
+    if !fs::exists(&raw_peripherals_dir).context("checking raw_peripherals_dir existance")? {
+        fs::create_dir(&raw_peripherals_dir).context("creating raw_peripherals_dir")?;
+    }
     for file in fs::read_dir(&raw_peripherals_dir).context("reading raw peripherals dir")? {
         let file = file?;
         if file.file_name().to_string_lossy() != ".gitignore" {
