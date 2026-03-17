@@ -295,7 +295,7 @@ fieldset/SIRCCSR:
     description: SIRC TRIM LOCK.
     bit_offset: 10
     bit_size: 1
-    enum: TRIM_LOCK
+    enum: TRIM_LOCK_VAL
   - name: COARSE_TRIM_BYPASS
     description: Coarse Auto Trim Bypass.
     bit_offset: 11
@@ -956,7 +956,7 @@ enum/TRIMSRC:
   - name: SOSC
     description: SOSC. This option requires that SOSC be divided using the TRIMDIV field to get a frequency of 1 MHz.
     value: 2
-enum/TRIM_LOCK:
+enum/TRIM_LOCK_VAL:
   bit_size: 1
   variants:
   - name: SIRC_NOT_LOCKED

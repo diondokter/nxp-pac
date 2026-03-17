@@ -5,8 +5,8 @@ use std::{
 };
 
 use anyhow::{Context, bail};
-use convert_case::Casing;
 use indexmap::IndexSet;
+use inflections::Inflect;
 use proc_macro2::{Ident, Literal, Span, TokenStream};
 use quote::quote;
 use rayon::iter::{ParallelBridge, ParallelIterator};
@@ -64,6 +64,7 @@ pub fn export_meta_peripherals(current: &Path) -> anyhow::Result<()> {
                 .arg(&output_path)
                 .arg("--common-module")
                 .arg("crate::pac::common")
+                .arg("--skip-no-std")
                 .stdout(Stdio::inherit())
                 .stderr(Stdio::inherit())
                 .output()?;
@@ -149,10 +150,7 @@ fn export_mod_rs(chip_dir: &Path, metadata: &Metadata) -> anyhow::Result<()> {
             .last()
             .with_context(|| format!("Getting driver name from path: {}", driver_path))?;
         let driver_name_mod = Ident::new(&driver_name.to_lowercase(), Span::call_site());
-        let driver_name_type = Ident::new(
-            &driver_name.to_case(convert_case::Case::Pascal),
-            Span::call_site(),
-        );
+        let driver_name_type = Ident::new(&driver_name.to_pascal_case(), Span::call_site());
 
         let peripheral_name = Ident::new(&peripheral.name, Span::call_site());
         let Some(peripheral_address) = peripheral.peripheral_address.as_ref() else {

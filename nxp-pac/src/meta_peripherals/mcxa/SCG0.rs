@@ -1,6 +1,5 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
-#![no_std]
 #![doc = "Peripheral access API (generated using chiptool v0.1.0 (6a8c2aa 2026-01-27))"]
 #[doc = "System Clock Generator."]
 #[derive(Copy, Clone, Eq, PartialEq)]
@@ -843,13 +842,13 @@ impl Sirccsr {
     #[doc = "SIRC TRIM LOCK."]
     #[must_use]
     #[inline(always)]
-    pub const fn trim_lock(&self) -> TrimLock {
+    pub const fn trim_lock(&self) -> TrimLockVal {
         let val = (self.0 >> 10usize) & 0x01;
-        TrimLock::from_bits(val as u8)
+        TrimLockVal::from_bits(val as u8)
     }
     #[doc = "SIRC TRIM LOCK."]
     #[inline(always)]
-    pub const fn set_trim_lock(&mut self, val: TrimLock) {
+    pub const fn set_trim_lock(&mut self, val: TrimLockVal) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
     #[doc = "Coarse Auto Trim Bypass."]
@@ -3283,15 +3282,15 @@ impl From<Spllsten> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum TrimLock {
+pub enum TrimLockVal {
     #[doc = "SIRC auto trim not locked to target frequency range."]
     SIRC_NOT_LOCKED = 0x0,
     #[doc = "SIRC auto trim locked to target frequency range."]
     SIRC_LOCKED = 0x01,
 }
-impl TrimLock {
+impl TrimLockVal {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> TrimLock {
+    pub const fn from_bits(val: u8) -> TrimLockVal {
         unsafe { core::mem::transmute(val & 0x01) }
     }
     #[inline(always)]
@@ -3299,16 +3298,16 @@ impl TrimLock {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for TrimLock {
+impl From<u8> for TrimLockVal {
     #[inline(always)]
-    fn from(val: u8) -> TrimLock {
-        TrimLock::from_bits(val)
+    fn from(val: u8) -> TrimLockVal {
+        TrimLockVal::from_bits(val)
     }
 }
-impl From<TrimLock> for u8 {
+impl From<TrimLockVal> for u8 {
     #[inline(always)]
-    fn from(val: TrimLock) -> u8 {
-        TrimLock::to_bits(val)
+    fn from(val: TrimLockVal) -> u8 {
+        TrimLockVal::to_bits(val)
     }
 }
 #[repr(u8)]

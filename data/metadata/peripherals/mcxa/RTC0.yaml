@@ -139,7 +139,7 @@ fieldset/TCR:
     description: Time Compensation Register.
     bit_offset: 0
     bit_size: 8
-    enum: TCR
+    enum: TCR_VAL
   - name: CIR
     description: Compensation Interval Register.
     bit_offset: 8
@@ -247,7 +247,7 @@ enum/TCL:
   - name: TCL_1
     description: Time Compensation Register is not locked and writes complete as normal.
     value: 1
-enum/TCR:
+enum/TCR_VAL:
   bit_size: 8
   variants:
   - name: TCR_0

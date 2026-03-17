@@ -1,6 +1,5 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
-#![no_std]
 #![doc = "Peripheral access API (generated using chiptool v0.1.0 (6a8c2aa 2026-01-27))"]
 #[doc = "Quadrature_Decoder."]
 #[derive(Copy, Clone, Eq, PartialEq)]
@@ -347,13 +346,13 @@ impl Ctrl {
     #[doc = "Enable Reverse Direction Counting."]
     #[must_use]
     #[inline(always)]
-    pub const fn rev(&self) -> Rev {
+    pub const fn rev(&self) -> RevVal {
         let val = (self.0 >> 10usize) & 0x01;
-        Rev::from_bits(val as u8)
+        RevVal::from_bits(val as u8)
     }
     #[doc = "Enable Reverse Direction Counting."]
     #[inline(always)]
-    pub const fn set_rev(&mut self, val: Rev) {
+    pub const fn set_rev(&mut self, val: RevVal) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u16) & 0x01) << 10usize);
     }
     #[doc = "Software-Triggered Initialization of Position Counters UPOS and LPOS."]
@@ -3509,15 +3508,15 @@ impl From<Qdn> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Rev {
+pub enum RevVal {
     #[doc = "Count normally and the position counter initialization uses upper/lower initialization register UINIT/LINIT."]
     REV0 = 0x0,
     #[doc = "Count in the reverse direction and the position counter initialization uses upper/lower modulus register UMOD/LMOD."]
     REV1 = 0x01,
 }
-impl Rev {
+impl RevVal {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> Rev {
+    pub const fn from_bits(val: u8) -> RevVal {
         unsafe { core::mem::transmute(val & 0x01) }
     }
     #[inline(always)]
@@ -3525,16 +3524,16 @@ impl Rev {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for Rev {
+impl From<u8> for RevVal {
     #[inline(always)]
-    fn from(val: u8) -> Rev {
-        Rev::from_bits(val)
+    fn from(val: u8) -> RevVal {
+        RevVal::from_bits(val)
     }
 }
-impl From<Rev> for u8 {
+impl From<RevVal> for u8 {
     #[inline(always)]
-    fn from(val: Rev) -> u8 {
-        Rev::to_bits(val)
+    fn from(val: RevVal) -> u8 {
+        RevVal::to_bits(val)
     }
 }
 #[repr(u8)]

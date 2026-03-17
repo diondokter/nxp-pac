@@ -282,7 +282,7 @@ fieldset/CTRL:
     description: Enable Reverse Direction Counting.
     bit_offset: 10
     bit_size: 1
-    enum: REV
+    enum: REV_VAL
   - name: SWIP
     description: Software-Triggered Initialization of Position Counters UPOS and LPOS.
     bit_offset: 11
@@ -1112,7 +1112,7 @@ enum/QDN:
   - name: QDN1
     description: Generates a negative quadrature decoder signal.
     value: 1
-enum/REV:
+enum/REV_VAL:
   bit_size: 1
   variants:
   - name: REV0

@@ -1,4 +1,4 @@
-block/RGPIO:
+block/GPIO:
   description: GPIO.
   items:
   - name: VERID

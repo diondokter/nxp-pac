@@ -1,6 +1,5 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
-#![no_std]
 #![doc = "Peripheral access API (generated using chiptool v0.1.0 (6a8c2aa 2026-01-27))"]
 #[doc = "SYSCON."]
 #[derive(Copy, Clone, Eq, PartialEq)]

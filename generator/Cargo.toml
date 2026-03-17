@@ -19,4 +19,4 @@ tracing = "0.1.44"
 tracing-subscriber = { version = "0.3.22", features = ["env-filter"] }
 read-dir-all = "1.0.0"
 indexmap = { version = "2.13.0", features = ["serde"] }
-convert_case = "0.11.0"
+inflections = "1.1"
