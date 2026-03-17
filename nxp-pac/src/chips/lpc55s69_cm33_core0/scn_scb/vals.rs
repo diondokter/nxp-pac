@@ -66,7 +66,7 @@ impl From<Su1> for u8 {
 pub enum Su10 {
     #[doc = "The floating-point state is not permitted to become UNKNOWN."]
     UNKNOWN_NOT_PERMITTED = 0x0,
-    #[doc = "The floating-point state is permitted to become UNKNOWN"]
+    #[doc = "The floating-point state is permitted to become UNKNOWN."]
     UNKNOWN_PERMITTED = 0x01,
 }
 impl Su10 {

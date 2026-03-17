@@ -47,9 +47,9 @@ impl From<ConfigType> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ConfigWrap {
-    #[doc = "Indicates that Wrap is not included"]
+    #[doc = "Indicates that Wrap is not included."]
     ENABLE = 0x0,
-    #[doc = "Indicates that Wrap is included"]
+    #[doc = "Indicates that Wrap is included."]
     DISABLE = 0x01,
 }
 impl ConfigWrap {
@@ -84,7 +84,7 @@ impl LastOperation {
     pub const LO_ENROLL: Self = Self(0x01);
     #[doc = "Indicates that the last operation was Start."]
     pub const LO_START: Self = Self(0x02);
-    #[doc = "Indicates that the last operation was Reconstruct"]
+    #[doc = "Indicates that the last operation was Reconstruct."]
     pub const LO_RECONSTRUCT: Self = Self(0x03);
     #[doc = "Indicates that the last operation was Stop."]
     pub const LO_STOP: Self = Self(0x05);
@@ -174,19 +174,19 @@ impl From<LastOperation> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct LcState(u8);
 impl LcState {
-    #[doc = "OEM Develop"]
+    #[doc = "OEM Develop."]
     pub const OEM_OPEN: Self = Self(0x03);
-    #[doc = "OEM Develop 2"]
+    #[doc = "OEM Develop 2."]
     pub const OEM_SECURE_WORLD: Self = Self(0x07);
-    #[doc = "OEM In-field"]
+    #[doc = "OEM In-field."]
     pub const OEM_CLOSED: Self = Self(0x0f);
-    #[doc = "OEM Field return"]
+    #[doc = "OEM Field return."]
     pub const OEM_FIELD_RETURN: Self = Self(0x1f);
-    #[doc = "NXP Field Return/Failure Analysis"]
+    #[doc = "NXP Field Return/Failure Analysis."]
     pub const FIELD_RETURN_NXP: Self = Self(0x3f);
-    #[doc = "In-field Locked"]
+    #[doc = "In-field Locked."]
     pub const OEM_LOCKED: Self = Self(0xcf);
-    #[doc = "Bricked"]
+    #[doc = "Bricked."]
     pub const OEM_SHREDDED: Self = Self(0xff);
 }
 impl LcState {

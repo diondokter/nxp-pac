@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Adc {
-    #[doc = "no effect"]
+    #[doc = "no effect."]
     NO_EFFECT = 0x0,
-    #[doc = "override"]
+    #[doc = "override."]
     OVERRIDE = 0x01,
 }
 impl Adc {
@@ -33,9 +33,9 @@ impl From<Adc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ahb2apb0 {
-    #[doc = "Enable Auto-Clk"]
+    #[doc = "Enable Auto-Clk."]
     ENABLED = 0x0,
-    #[doc = "Disable Auto-Clk"]
+    #[doc = "Disable Auto-Clk."]
     DISABLED = 0x01,
 }
 impl Ahb2apb0 {
@@ -64,9 +64,9 @@ impl From<Ahb2apb0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ahb2apb1 {
-    #[doc = "Enable Auto-Clk"]
+    #[doc = "Enable Auto-Clk."]
     ENABLED = 0x0,
-    #[doc = "Disable Auto-Clk"]
+    #[doc = "Disable Auto-Clk."]
     DISABLED = 0x01,
 }
 impl Ahb2apb1 {
@@ -95,9 +95,9 @@ impl From<Ahb2apb1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbFlexspiAccessDisable {
-    #[doc = "Enable AHB access to FLEXSPI"]
+    #[doc = "Enable AHB access to FLEXSPI."]
     ENABLE = 0x0,
-    #[doc = "Disable AHB access to FLEXSPI"]
+    #[doc = "Disable AHB access to FLEXSPI."]
     DISABLE = 0x01,
 }
 impl AhbFlexspiAccessDisable {
@@ -126,9 +126,9 @@ impl From<AhbFlexspiAccessDisable> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSramAccessDisableSram00If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl AhbSramAccessDisableSram00If {
@@ -157,9 +157,9 @@ impl From<AhbSramAccessDisableSram00If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSramAccessDisableSram01If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl AhbSramAccessDisableSram01If {
@@ -188,9 +188,9 @@ impl From<AhbSramAccessDisableSram01If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSramAccessDisableSram02If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl AhbSramAccessDisableSram02If {
@@ -219,9 +219,9 @@ impl From<AhbSramAccessDisableSram02If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSramAccessDisableSram03If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl AhbSramAccessDisableSram03If {
@@ -250,9 +250,9 @@ impl From<AhbSramAccessDisableSram03If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSramAccessDisableSram04If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl AhbSramAccessDisableSram04If {
@@ -281,9 +281,9 @@ impl From<AhbSramAccessDisableSram04If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSramAccessDisableSram05If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl AhbSramAccessDisableSram05If {
@@ -312,9 +312,9 @@ impl From<AhbSramAccessDisableSram05If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSramAccessDisableSram06If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl AhbSramAccessDisableSram06If {
@@ -343,9 +343,9 @@ impl From<AhbSramAccessDisableSram06If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSramAccessDisableSram07If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl AhbSramAccessDisableSram07If {
@@ -374,9 +374,9 @@ impl From<AhbSramAccessDisableSram07If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSramAccessDisableSram08If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl AhbSramAccessDisableSram08If {
@@ -405,9 +405,9 @@ impl From<AhbSramAccessDisableSram08If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSramAccessDisableSram09If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl AhbSramAccessDisableSram09If {
@@ -436,9 +436,9 @@ impl From<AhbSramAccessDisableSram09If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSramAccessDisableSram10If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl AhbSramAccessDisableSram10If {
@@ -467,9 +467,9 @@ impl From<AhbSramAccessDisableSram10If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSramAccessDisableSram11If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl AhbSramAccessDisableSram11If {
@@ -498,9 +498,9 @@ impl From<AhbSramAccessDisableSram11If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSramAccessDisableSram12If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl AhbSramAccessDisableSram12If {
@@ -529,9 +529,9 @@ impl From<AhbSramAccessDisableSram12If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSramAccessDisableSram13If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl AhbSramAccessDisableSram13If {
@@ -560,9 +560,9 @@ impl From<AhbSramAccessDisableSram13If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSramAccessDisableSram14If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl AhbSramAccessDisableSram14If {
@@ -591,9 +591,9 @@ impl From<AhbSramAccessDisableSram14If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSramAccessDisableSram15If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl AhbSramAccessDisableSram15If {
@@ -622,9 +622,9 @@ impl From<AhbSramAccessDisableSram15If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSramAccessDisableSram16If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl AhbSramAccessDisableSram16If {
@@ -653,9 +653,9 @@ impl From<AhbSramAccessDisableSram16If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSramAccessDisableSram17If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl AhbSramAccessDisableSram17If {
@@ -684,9 +684,9 @@ impl From<AhbSramAccessDisableSram17If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSramAccessDisableSram18If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl AhbSramAccessDisableSram18If {
@@ -715,9 +715,9 @@ impl From<AhbSramAccessDisableSram18If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSramAccessDisableSram19If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl AhbSramAccessDisableSram19If {
@@ -746,9 +746,9 @@ impl From<AhbSramAccessDisableSram19If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSramAccessDisableSram20If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl AhbSramAccessDisableSram20If {
@@ -777,9 +777,9 @@ impl From<AhbSramAccessDisableSram20If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSramAccessDisableSram21If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl AhbSramAccessDisableSram21If {
@@ -808,9 +808,9 @@ impl From<AhbSramAccessDisableSram21If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSramAccessDisableSram22If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl AhbSramAccessDisableSram22If {
@@ -839,9 +839,9 @@ impl From<AhbSramAccessDisableSram22If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSramAccessDisableSram23If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl AhbSramAccessDisableSram23If {
@@ -870,9 +870,9 @@ impl From<AhbSramAccessDisableSram23If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSramAccessDisableSram24If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl AhbSramAccessDisableSram24If {
@@ -901,9 +901,9 @@ impl From<AhbSramAccessDisableSram24If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSramAccessDisableSram25If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl AhbSramAccessDisableSram25If {
@@ -932,9 +932,9 @@ impl From<AhbSramAccessDisableSram25If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSramAccessDisableSram26If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl AhbSramAccessDisableSram26If {
@@ -963,9 +963,9 @@ impl From<AhbSramAccessDisableSram26If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSramAccessDisableSram27If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl AhbSramAccessDisableSram27If {
@@ -994,9 +994,9 @@ impl From<AhbSramAccessDisableSram27If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSramAccessDisableSram28If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl AhbSramAccessDisableSram28If {
@@ -1025,9 +1025,9 @@ impl From<AhbSramAccessDisableSram28If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSramAccessDisableSram29If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl AhbSramAccessDisableSram29If {
@@ -1118,9 +1118,9 @@ impl From<ApHostClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Autoclkgateoverride0Dmac0 {
-    #[doc = "Enable Auto-Clk"]
+    #[doc = "Enable Auto-Clk."]
     ENABLED = 0x0,
-    #[doc = "Disable Auto-Clk"]
+    #[doc = "Disable Auto-Clk."]
     DISABLED = 0x01,
 }
 impl Autoclkgateoverride0Dmac0 {
@@ -1149,9 +1149,9 @@ impl From<Autoclkgateoverride0Dmac0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Autoclkgateoverride0Dmac1 {
-    #[doc = "Enable Auto-Clk"]
+    #[doc = "Enable Auto-Clk."]
     ENABLED = 0x0,
-    #[doc = "Disable Auto-Clk"]
+    #[doc = "Disable Auto-Clk."]
     DISABLED = 0x01,
 }
 impl Autoclkgateoverride0Dmac1 {
@@ -1180,9 +1180,9 @@ impl From<Autoclkgateoverride0Dmac1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Casper {
-    #[doc = "Enable Auto-Clk"]
+    #[doc = "Enable Auto-Clk."]
     ENABLED = 0x0,
-    #[doc = "Disable Auto-Clk"]
+    #[doc = "Disable Auto-Clk."]
     DISABLED = 0x01,
 }
 impl Casper {
@@ -1211,9 +1211,9 @@ impl From<Casper> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Clkgateoverride0Acmp {
-    #[doc = "no effect"]
+    #[doc = "no effect."]
     NO_EFFECT = 0x0,
-    #[doc = "override"]
+    #[doc = "override."]
     OVERRIDE = 0x01,
 }
 impl Clkgateoverride0Acmp {
@@ -1242,9 +1242,9 @@ impl From<Clkgateoverride0Acmp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Clkgateoverride0Mu {
-    #[doc = "no effect"]
+    #[doc = "no effect."]
     NO_EFFECT = 0x0,
-    #[doc = "override"]
+    #[doc = "override."]
     OVERRIDE = 0x01,
 }
 impl Clkgateoverride0Mu {
@@ -1273,9 +1273,9 @@ impl From<Clkgateoverride0Mu> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CrcEngine {
-    #[doc = "Enable Auto-Clk"]
+    #[doc = "Enable Auto-Clk."]
     ENABLED = 0x0,
-    #[doc = "Disable Auto-Clk"]
+    #[doc = "Disable Auto-Clk."]
     DISABLED = 0x01,
 }
 impl CrcEngine {
@@ -1304,13 +1304,13 @@ impl From<CrcEngine> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DbgFeaturesDbgen {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "disabled"]
+    #[doc = "disabled."]
     DISBALED1 = 0x01,
-    #[doc = "disabled"]
+    #[doc = "disabled."]
     DISABLED2 = 0x02,
-    #[doc = "disabled"]
+    #[doc = "disabled."]
     DISABLED3 = 0x03,
 }
 impl DbgFeaturesDbgen {
@@ -1339,13 +1339,13 @@ impl From<DbgFeaturesDbgen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DbgFeaturesDpDbgen {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "disabled"]
+    #[doc = "disabled."]
     DISBALED1 = 0x01,
-    #[doc = "disabled"]
+    #[doc = "disabled."]
     DISABLED2 = 0x02,
-    #[doc = "disabled"]
+    #[doc = "disabled."]
     DISABLED3 = 0x03,
 }
 impl DbgFeaturesDpDbgen {
@@ -1374,13 +1374,13 @@ impl From<DbgFeaturesDpDbgen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DbgFeaturesDpNiden {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "disabled"]
+    #[doc = "disabled."]
     DISBALED1 = 0x01,
-    #[doc = "disabled"]
+    #[doc = "disabled."]
     DISABLED2 = 0x02,
-    #[doc = "disabled"]
+    #[doc = "disabled."]
     DISABLED3 = 0x03,
 }
 impl DbgFeaturesDpNiden {
@@ -1409,13 +1409,13 @@ impl From<DbgFeaturesDpNiden> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DbgFeaturesDpSpiden {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "disabled"]
+    #[doc = "disabled."]
     DISBALED1 = 0x01,
-    #[doc = "disabled"]
+    #[doc = "disabled."]
     DISABLED2 = 0x02,
-    #[doc = "disabled"]
+    #[doc = "disabled."]
     DISABLED3 = 0x03,
 }
 impl DbgFeaturesDpSpiden {
@@ -1444,13 +1444,13 @@ impl From<DbgFeaturesDpSpiden> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DbgFeaturesDpSpniden {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "disabled"]
+    #[doc = "disabled."]
     DISBALED1 = 0x01,
-    #[doc = "disabled"]
+    #[doc = "disabled."]
     DISABLED2 = 0x02,
-    #[doc = "disabled"]
+    #[doc = "disabled."]
     DISABLED3 = 0x03,
 }
 impl DbgFeaturesDpSpniden {
@@ -1479,13 +1479,13 @@ impl From<DbgFeaturesDpSpniden> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DbgFeaturesNiden {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "disabled"]
+    #[doc = "disabled."]
     DISBALED1 = 0x01,
-    #[doc = "disabled"]
+    #[doc = "disabled."]
     DISABLED2 = 0x02,
-    #[doc = "disabled"]
+    #[doc = "disabled."]
     DISABLED3 = 0x03,
 }
 impl DbgFeaturesNiden {
@@ -1514,13 +1514,13 @@ impl From<DbgFeaturesNiden> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DbgFeaturesSpiden {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "disabled"]
+    #[doc = "disabled."]
     DISBALED1 = 0x01,
-    #[doc = "disabled"]
+    #[doc = "disabled."]
     DISABLED2 = 0x02,
-    #[doc = "disabled"]
+    #[doc = "disabled."]
     DISABLED3 = 0x03,
 }
 impl DbgFeaturesSpiden {
@@ -1549,13 +1549,13 @@ impl From<DbgFeaturesSpiden> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DbgFeaturesSpniden {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "disabled"]
+    #[doc = "disabled."]
     DISBALED1 = 0x01,
-    #[doc = "disabled"]
+    #[doc = "disabled."]
     DISABLED2 = 0x02,
-    #[doc = "disabled"]
+    #[doc = "disabled."]
     DISABLED3 = 0x03,
 }
 impl DbgFeaturesSpniden {
@@ -1584,9 +1584,9 @@ impl From<DbgFeaturesSpniden> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DeepPd {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl DeepPd {
@@ -1615,9 +1615,9 @@ impl From<DeepPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DevNeedClkst {
-    #[doc = "low"]
+    #[doc = "low."]
     LOW = 0x0,
-    #[doc = "high"]
+    #[doc = "high."]
     HIGH = 0x01,
 }
 impl DevNeedClkst {
@@ -1646,9 +1646,9 @@ impl From<DevNeedClkst> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DspFlexspiAccessDisable {
-    #[doc = "Enable DSP access to FLEXSPI"]
+    #[doc = "Enable DSP access to FLEXSPI."]
     ENABLE = 0x0,
-    #[doc = "Disable DSP access to FLEXSPI"]
+    #[doc = "Disable DSP access to FLEXSPI."]
     DISABLE = 0x01,
 }
 impl DspFlexspiAccessDisable {
@@ -1677,9 +1677,9 @@ impl From<DspFlexspiAccessDisable> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DspSramAccessDisableSram00If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl DspSramAccessDisableSram00If {
@@ -1708,9 +1708,9 @@ impl From<DspSramAccessDisableSram00If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DspSramAccessDisableSram01If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl DspSramAccessDisableSram01If {
@@ -1739,9 +1739,9 @@ impl From<DspSramAccessDisableSram01If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DspSramAccessDisableSram02If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl DspSramAccessDisableSram02If {
@@ -1770,9 +1770,9 @@ impl From<DspSramAccessDisableSram02If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DspSramAccessDisableSram03If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl DspSramAccessDisableSram03If {
@@ -1801,9 +1801,9 @@ impl From<DspSramAccessDisableSram03If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DspSramAccessDisableSram04If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl DspSramAccessDisableSram04If {
@@ -1832,9 +1832,9 @@ impl From<DspSramAccessDisableSram04If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DspSramAccessDisableSram05If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl DspSramAccessDisableSram05If {
@@ -1863,9 +1863,9 @@ impl From<DspSramAccessDisableSram05If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DspSramAccessDisableSram06If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl DspSramAccessDisableSram06If {
@@ -1894,9 +1894,9 @@ impl From<DspSramAccessDisableSram06If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DspSramAccessDisableSram07If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl DspSramAccessDisableSram07If {
@@ -1925,9 +1925,9 @@ impl From<DspSramAccessDisableSram07If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DspSramAccessDisableSram08If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl DspSramAccessDisableSram08If {
@@ -1956,9 +1956,9 @@ impl From<DspSramAccessDisableSram08If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DspSramAccessDisableSram09If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl DspSramAccessDisableSram09If {
@@ -1987,9 +1987,9 @@ impl From<DspSramAccessDisableSram09If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DspSramAccessDisableSram10If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl DspSramAccessDisableSram10If {
@@ -2018,9 +2018,9 @@ impl From<DspSramAccessDisableSram10If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DspSramAccessDisableSram11If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl DspSramAccessDisableSram11If {
@@ -2049,9 +2049,9 @@ impl From<DspSramAccessDisableSram11If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DspSramAccessDisableSram12If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl DspSramAccessDisableSram12If {
@@ -2080,9 +2080,9 @@ impl From<DspSramAccessDisableSram12If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DspSramAccessDisableSram13If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl DspSramAccessDisableSram13If {
@@ -2111,9 +2111,9 @@ impl From<DspSramAccessDisableSram13If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DspSramAccessDisableSram14If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl DspSramAccessDisableSram14If {
@@ -2142,9 +2142,9 @@ impl From<DspSramAccessDisableSram14If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DspSramAccessDisableSram15If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl DspSramAccessDisableSram15If {
@@ -2173,9 +2173,9 @@ impl From<DspSramAccessDisableSram15If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DspSramAccessDisableSram16If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl DspSramAccessDisableSram16If {
@@ -2204,9 +2204,9 @@ impl From<DspSramAccessDisableSram16If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DspSramAccessDisableSram17If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl DspSramAccessDisableSram17If {
@@ -2235,9 +2235,9 @@ impl From<DspSramAccessDisableSram17If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DspSramAccessDisableSram18If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl DspSramAccessDisableSram18If {
@@ -2266,9 +2266,9 @@ impl From<DspSramAccessDisableSram18If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DspSramAccessDisableSram19If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl DspSramAccessDisableSram19If {
@@ -2297,9 +2297,9 @@ impl From<DspSramAccessDisableSram19If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DspSramAccessDisableSram20If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl DspSramAccessDisableSram20If {
@@ -2328,9 +2328,9 @@ impl From<DspSramAccessDisableSram20If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DspSramAccessDisableSram21If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl DspSramAccessDisableSram21If {
@@ -2359,9 +2359,9 @@ impl From<DspSramAccessDisableSram21If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DspSramAccessDisableSram22If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl DspSramAccessDisableSram22If {
@@ -2390,9 +2390,9 @@ impl From<DspSramAccessDisableSram22If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DspSramAccessDisableSram23If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl DspSramAccessDisableSram23If {
@@ -2421,9 +2421,9 @@ impl From<DspSramAccessDisableSram23If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DspSramAccessDisableSram24If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl DspSramAccessDisableSram24If {
@@ -2452,9 +2452,9 @@ impl From<DspSramAccessDisableSram24If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DspSramAccessDisableSram25If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl DspSramAccessDisableSram25If {
@@ -2483,9 +2483,9 @@ impl From<DspSramAccessDisableSram25If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DspSramAccessDisableSram26If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl DspSramAccessDisableSram26If {
@@ -2514,9 +2514,9 @@ impl From<DspSramAccessDisableSram26If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DspSramAccessDisableSram27If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl DspSramAccessDisableSram27If {
@@ -2545,9 +2545,9 @@ impl From<DspSramAccessDisableSram27If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DspSramAccessDisableSram28If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl DspSramAccessDisableSram28If {
@@ -2576,9 +2576,9 @@ impl From<DspSramAccessDisableSram28If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DspSramAccessDisableSram29If {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "disable"]
+    #[doc = "disable."]
     DISABLED = 0x01,
 }
 impl DspSramAccessDisableSram29If {
@@ -2638,9 +2638,9 @@ impl From<Dspstall> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fbbkeepst {
-    #[doc = "Use value of FBB_PD in PDRUNCFG on wakeup"]
+    #[doc = "Use value of FBB_PD in PDRUNCFG on wakeup."]
     FBBKEEPST_0 = 0x0,
-    #[doc = "Copy PDSLEEPCFG FBB_PD value to PDRUNCFG FBB_PD on wakeup to keep FBB state"]
+    #[doc = "Copy PDSLEEPCFG FBB_PD value to PDRUNCFG FBB_PD on wakeup to keep FBB state."]
     FBBKEEPST_1 = 0x01,
 }
 impl Fbbkeepst {
@@ -2669,9 +2669,9 @@ impl From<Fbbkeepst> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HostNeedClkst {
-    #[doc = "low"]
+    #[doc = "low."]
     LOW = 0x0,
-    #[doc = "high"]
+    #[doc = "high."]
     HIGH = 0x01,
 }
 impl HostNeedClkst {
@@ -2731,9 +2731,9 @@ impl From<HsDevWakeupN> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MainclkShutoff {
-    #[doc = "Clocks enabled"]
+    #[doc = "Clocks enabled."]
     CLOCK_ENABLED = 0x0,
-    #[doc = "Clocks gated"]
+    #[doc = "Clocks gated."]
     CLOCK_GATED = 0x01,
 }
 impl MainclkShutoff {
@@ -2762,9 +2762,9 @@ impl From<MainclkShutoff> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0AcmpPd {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg0AcmpPd {
@@ -2793,9 +2793,9 @@ impl From<Pdruncfg0AcmpPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0AdcLp {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg0AdcLp {
@@ -2824,9 +2824,9 @@ impl From<Pdruncfg0AdcLp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0AdcPd {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg0AdcPd {
@@ -2855,9 +2855,9 @@ impl From<Pdruncfg0AdcPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0AdctempsnsPd {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg0AdctempsnsPd {
@@ -2886,9 +2886,9 @@ impl From<Pdruncfg0AdctempsnsPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0AudpllanaPd {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg0AudpllanaPd {
@@ -2917,9 +2917,9 @@ impl From<Pdruncfg0AudpllanaPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0AudpllldoPd {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg0AudpllldoPd {
@@ -2948,9 +2948,9 @@ impl From<Pdruncfg0AudpllldoPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0ClrAcmpPd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG0 Bit"]
+    #[doc = "Clears the PDRUNCFG0 Bit."]
     CLR_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0ClrAcmpPd {
@@ -2979,9 +2979,9 @@ impl From<Pdruncfg0ClrAcmpPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0ClrAdcLp {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG0 Bit"]
+    #[doc = "Clears the PDRUNCFG0 Bit."]
     CLR_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0ClrAdcLp {
@@ -3010,9 +3010,9 @@ impl From<Pdruncfg0ClrAdcLp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0ClrAdcPd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG0 Bit"]
+    #[doc = "Clears the PDRUNCFG0 Bit."]
     CLR_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0ClrAdcPd {
@@ -3041,9 +3041,9 @@ impl From<Pdruncfg0ClrAdcPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0ClrAdctempsnsPd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG0 Bit"]
+    #[doc = "Clears the PDRUNCFG0 Bit."]
     CLR_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0ClrAdctempsnsPd {
@@ -3072,9 +3072,9 @@ impl From<Pdruncfg0ClrAdctempsnsPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0ClrAudpllanaPd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG0 Bit"]
+    #[doc = "Clears the PDRUNCFG0 Bit."]
     CLR_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0ClrAudpllanaPd {
@@ -3103,9 +3103,9 @@ impl From<Pdruncfg0ClrAudpllanaPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0ClrAudpllldoPd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG0 Bit"]
+    #[doc = "Clears the PDRUNCFG0 Bit."]
     CLR_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0ClrAudpllldoPd {
@@ -3134,9 +3134,9 @@ impl From<Pdruncfg0ClrAudpllldoPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0ClrFbbPd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG0 Bit"]
+    #[doc = "Clears the PDRUNCFG0 Bit."]
     CLR_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0ClrFbbPd {
@@ -3165,9 +3165,9 @@ impl From<Pdruncfg0ClrFbbPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0ClrFfroPd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG0 Bit"]
+    #[doc = "Clears the PDRUNCFG0 Bit."]
     CLR_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0ClrFfroPd {
@@ -3196,9 +3196,9 @@ impl From<Pdruncfg0ClrFfroPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0ClrHspad0RefPd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG0 Bit"]
+    #[doc = "Clears the PDRUNCFG0 Bit."]
     CLR_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0ClrHspad0RefPd {
@@ -3227,9 +3227,9 @@ impl From<Pdruncfg0ClrHspad0RefPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0ClrHspad0VdetLp {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG0 Bit"]
+    #[doc = "Clears the PDRUNCFG0 Bit."]
     CLR_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0ClrHspad0VdetLp {
@@ -3258,9 +3258,9 @@ impl From<Pdruncfg0ClrHspad0VdetLp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0ClrHspad2RefPd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG0 Bit"]
+    #[doc = "Clears the PDRUNCFG0 Bit."]
     CLR_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0ClrHspad2RefPd {
@@ -3289,9 +3289,9 @@ impl From<Pdruncfg0ClrHspad2RefPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0ClrHspad2VdetLp {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG0 Bit"]
+    #[doc = "Clears the PDRUNCFG0 Bit."]
     CLR_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0ClrHspad2VdetLp {
@@ -3320,9 +3320,9 @@ impl From<Pdruncfg0ClrHspad2VdetLp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0ClrHvd1v8Pd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG0 Bit"]
+    #[doc = "Clears the PDRUNCFG0 Bit."]
     CLR_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0ClrHvd1v8Pd {
@@ -3351,9 +3351,9 @@ impl From<Pdruncfg0ClrHvd1v8Pd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0ClrHvdcorePd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG0 Bit"]
+    #[doc = "Clears the PDRUNCFG0 Bit."]
     CLR_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0ClrHvdcorePd {
@@ -3382,9 +3382,9 @@ impl From<Pdruncfg0ClrHvdcorePd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0ClrLposcPd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG0 Bit"]
+    #[doc = "Clears the PDRUNCFG0 Bit."]
     CLR_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0ClrLposcPd {
@@ -3413,9 +3413,9 @@ impl From<Pdruncfg0ClrLposcPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0ClrLvdcoreLp {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG0 Bit"]
+    #[doc = "Clears the PDRUNCFG0 Bit."]
     CLR_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0ClrLvdcoreLp {
@@ -3444,9 +3444,9 @@ impl From<Pdruncfg0ClrLvdcoreLp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0ClrPmcrefLp {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG0 Bit"]
+    #[doc = "Clears the PDRUNCFG0 Bit."]
     CLR_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0ClrPmcrefLp {
@@ -3475,9 +3475,9 @@ impl From<Pdruncfg0ClrPmcrefLp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0ClrPmicMode0 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG0 Bit"]
+    #[doc = "Clears the PDRUNCFG0 Bit."]
     CLR_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0ClrPmicMode0 {
@@ -3506,9 +3506,9 @@ impl From<Pdruncfg0ClrPmicMode0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0ClrPmicMode1 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG0 Bit"]
+    #[doc = "Clears the PDRUNCFG0 Bit."]
     CLR_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0ClrPmicMode1 {
@@ -3537,9 +3537,9 @@ impl From<Pdruncfg0ClrPmicMode1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0ClrPorcoreLp {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG0 Bit"]
+    #[doc = "Clears the PDRUNCFG0 Bit."]
     CLR_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0ClrPorcoreLp {
@@ -3568,9 +3568,9 @@ impl From<Pdruncfg0ClrPorcoreLp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0ClrRbbPd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG0 Bit"]
+    #[doc = "Clears the PDRUNCFG0 Bit."]
     CLR_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0ClrRbbPd {
@@ -3599,9 +3599,9 @@ impl From<Pdruncfg0ClrRbbPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0ClrSfroPd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG0 Bit"]
+    #[doc = "Clears the PDRUNCFG0 Bit."]
     CLR_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0ClrSfroPd {
@@ -3630,9 +3630,9 @@ impl From<Pdruncfg0ClrSfroPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0ClrSyspllanaPd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG0 Bit"]
+    #[doc = "Clears the PDRUNCFG0 Bit."]
     CLR_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0ClrSyspllanaPd {
@@ -3661,9 +3661,9 @@ impl From<Pdruncfg0ClrSyspllanaPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0ClrSyspllldoPd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG0 Bit"]
+    #[doc = "Clears the PDRUNCFG0 Bit."]
     CLR_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0ClrSyspllldoPd {
@@ -3692,9 +3692,9 @@ impl From<Pdruncfg0ClrSyspllldoPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0ClrSysxtalPd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG0 Bit"]
+    #[doc = "Clears the PDRUNCFG0 Bit."]
     CLR_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0ClrSysxtalPd {
@@ -3723,9 +3723,9 @@ impl From<Pdruncfg0ClrSysxtalPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0ClrVddcoreregLp {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG0 Bit"]
+    #[doc = "Clears the PDRUNCFG0 Bit."]
     CLR_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0ClrVddcoreregLp {
@@ -3754,9 +3754,9 @@ impl From<Pdruncfg0ClrVddcoreregLp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0FfroPd {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg0FfroPd {
@@ -3785,9 +3785,9 @@ impl From<Pdruncfg0FfroPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0Hspad0RefPd {
-    #[doc = "High Speed Pad VREF Enabled"]
+    #[doc = "High Speed Pad VREF Enabled."]
     ENABLED = 0x0,
-    #[doc = "High Speed Pad VREF in Power Down"]
+    #[doc = "High Speed Pad VREF in Power Down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg0Hspad0RefPd {
@@ -3816,9 +3816,9 @@ impl From<Pdruncfg0Hspad0RefPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0Hspad0VdetLp {
-    #[doc = "High Speed Pad VDET in Normal Mode"]
+    #[doc = "High Speed Pad VDET in Normal Mode."]
     NORMAL_MODE = 0x0,
-    #[doc = "High Speed Pad VDET in Sleep Mode"]
+    #[doc = "High Speed Pad VDET in Sleep Mode."]
     SLEEP_MODE = 0x01,
 }
 impl Pdruncfg0Hspad0VdetLp {
@@ -3847,9 +3847,9 @@ impl From<Pdruncfg0Hspad0VdetLp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0Hspad2RefPd {
-    #[doc = "High Speed Pad VREF Enabled"]
+    #[doc = "High Speed Pad VREF Enabled."]
     ENABLED = 0x0,
-    #[doc = "High Speed Pad VREF in Power Down"]
+    #[doc = "High Speed Pad VREF in Power Down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg0Hspad2RefPd {
@@ -3878,9 +3878,9 @@ impl From<Pdruncfg0Hspad2RefPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0Hspad2VdetLp {
-    #[doc = "High Speed Pad VDET in Normal Mode"]
+    #[doc = "High Speed Pad VDET in Normal Mode."]
     NORMAL_MODE = 0x0,
-    #[doc = "High Speed Pad VDET in Sleep Mode"]
+    #[doc = "High Speed Pad VDET in Sleep Mode."]
     SLEEP_MODE = 0x01,
 }
 impl Pdruncfg0Hspad2VdetLp {
@@ -3909,9 +3909,9 @@ impl From<Pdruncfg0Hspad2VdetLp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0Hvd1v8Pd {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg0Hvd1v8Pd {
@@ -3940,9 +3940,9 @@ impl From<Pdruncfg0Hvd1v8Pd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0HvdcorePd {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg0HvdcorePd {
@@ -3971,9 +3971,9 @@ impl From<Pdruncfg0HvdcorePd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0LposcPd {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg0LposcPd {
@@ -4002,7 +4002,7 @@ impl From<Pdruncfg0LposcPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0LvdcoreLp {
-    #[doc = "LVD0V85 HP Mode"]
+    #[doc = "LVD0V85 HP Mode."]
     HP_MODE = 0x0,
     #[doc = "LVD0V85 LP Mode."]
     LP_MODE = 0x01,
@@ -4033,9 +4033,9 @@ impl From<Pdruncfg0LvdcoreLp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0PmcrefLp {
-    #[doc = "PMCREF HP Mode"]
+    #[doc = "PMCREF HP Mode."]
     HP_MODE = 0x0,
-    #[doc = "PMCREF LP Mode"]
+    #[doc = "PMCREF LP Mode."]
     LP_MODE = 0x01,
 }
 impl Pdruncfg0PmcrefLp {
@@ -4126,9 +4126,9 @@ impl From<Pdruncfg0PmicMode1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0PorcoreLp {
-    #[doc = "LVD0V6 HP Mode"]
+    #[doc = "LVD0V6 HP Mode."]
     HP_MODE = 0x0,
-    #[doc = "LVD0V6 LP Mode"]
+    #[doc = "LVD0V6 LP Mode."]
     LP_MODE = 0x01,
 }
 impl Pdruncfg0PorcoreLp {
@@ -4157,9 +4157,9 @@ impl From<Pdruncfg0PorcoreLp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0SetAcmpPd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG0 Bit"]
+    #[doc = "Sets the PDRUNCFG0 Bit."]
     SET_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0SetAcmpPd {
@@ -4188,9 +4188,9 @@ impl From<Pdruncfg0SetAcmpPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0SetAdcLp {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG0 Bit"]
+    #[doc = "Sets the PDRUNCFG0 Bit."]
     SET_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0SetAdcLp {
@@ -4219,9 +4219,9 @@ impl From<Pdruncfg0SetAdcLp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0SetAdcPd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG0 Bit"]
+    #[doc = "Sets the PDRUNCFG0 Bit."]
     SET_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0SetAdcPd {
@@ -4250,9 +4250,9 @@ impl From<Pdruncfg0SetAdcPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0SetAdctempsnsPd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG0 Bit"]
+    #[doc = "Sets the PDRUNCFG0 Bit."]
     SET_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0SetAdctempsnsPd {
@@ -4281,9 +4281,9 @@ impl From<Pdruncfg0SetAdctempsnsPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0SetAudpllanaPd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG0 Bit"]
+    #[doc = "Sets the PDRUNCFG0 Bit."]
     SET_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0SetAudpllanaPd {
@@ -4312,9 +4312,9 @@ impl From<Pdruncfg0SetAudpllanaPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0SetAudpllldoPd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG0 Bit"]
+    #[doc = "Sets the PDRUNCFG0 Bit."]
     SET_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0SetAudpllldoPd {
@@ -4343,9 +4343,9 @@ impl From<Pdruncfg0SetAudpllldoPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0SetFbbPd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG0 Bit"]
+    #[doc = "Sets the PDRUNCFG0 Bit."]
     SET_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0SetFbbPd {
@@ -4374,9 +4374,9 @@ impl From<Pdruncfg0SetFbbPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0SetFfroPd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG0 Bit"]
+    #[doc = "Sets the PDRUNCFG0 Bit."]
     SET_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0SetFfroPd {
@@ -4405,9 +4405,9 @@ impl From<Pdruncfg0SetFfroPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0SetHspad0RefPd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG0 Bit"]
+    #[doc = "Sets the PDRUNCFG0 Bit."]
     SET_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0SetHspad0RefPd {
@@ -4436,9 +4436,9 @@ impl From<Pdruncfg0SetHspad0RefPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0SetHspad0VdetLp {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG0 Bit"]
+    #[doc = "Sets the PDRUNCFG0 Bit."]
     SET_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0SetHspad0VdetLp {
@@ -4467,9 +4467,9 @@ impl From<Pdruncfg0SetHspad0VdetLp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0SetHspad2RefPd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG0 Bit"]
+    #[doc = "Sets the PDRUNCFG0 Bit."]
     SET_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0SetHspad2RefPd {
@@ -4498,9 +4498,9 @@ impl From<Pdruncfg0SetHspad2RefPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0SetHspad2VdetLp {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG0 Bit"]
+    #[doc = "Sets the PDRUNCFG0 Bit."]
     SET_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0SetHspad2VdetLp {
@@ -4529,9 +4529,9 @@ impl From<Pdruncfg0SetHspad2VdetLp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0SetHvd1v8Pd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG0 Bit"]
+    #[doc = "Sets the PDRUNCFG0 Bit."]
     SET_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0SetHvd1v8Pd {
@@ -4560,9 +4560,9 @@ impl From<Pdruncfg0SetHvd1v8Pd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0SetHvdcorePd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG0 Bit"]
+    #[doc = "Sets the PDRUNCFG0 Bit."]
     SET_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0SetHvdcorePd {
@@ -4591,9 +4591,9 @@ impl From<Pdruncfg0SetHvdcorePd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0SetLposcPd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG0 Bit"]
+    #[doc = "Sets the PDRUNCFG0 Bit."]
     SET_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0SetLposcPd {
@@ -4622,9 +4622,9 @@ impl From<Pdruncfg0SetLposcPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0SetLvdcoreLp {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG0 Bit"]
+    #[doc = "Sets the PDRUNCFG0 Bit."]
     SET_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0SetLvdcoreLp {
@@ -4653,9 +4653,9 @@ impl From<Pdruncfg0SetLvdcoreLp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0SetPmcrefLp {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG0 Bit"]
+    #[doc = "Sets the PDRUNCFG0 Bit."]
     SET_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0SetPmcrefLp {
@@ -4684,9 +4684,9 @@ impl From<Pdruncfg0SetPmcrefLp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0SetPmicMode0 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG0 Bit"]
+    #[doc = "Sets the PDRUNCFG0 Bit."]
     SET_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0SetPmicMode0 {
@@ -4715,9 +4715,9 @@ impl From<Pdruncfg0SetPmicMode0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0SetPmicMode1 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG0 Bit"]
+    #[doc = "Sets the PDRUNCFG0 Bit."]
     SET_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0SetPmicMode1 {
@@ -4746,9 +4746,9 @@ impl From<Pdruncfg0SetPmicMode1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0SetPorcoreLp {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG0 Bit"]
+    #[doc = "Sets the PDRUNCFG0 Bit."]
     SET_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0SetPorcoreLp {
@@ -4777,9 +4777,9 @@ impl From<Pdruncfg0SetPorcoreLp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0SetRbbPd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG0 Bit"]
+    #[doc = "Sets the PDRUNCFG0 Bit."]
     SET_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0SetRbbPd {
@@ -4808,9 +4808,9 @@ impl From<Pdruncfg0SetRbbPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0SetSfroPd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG0 Bit"]
+    #[doc = "Sets the PDRUNCFG0 Bit."]
     SET_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0SetSfroPd {
@@ -4839,9 +4839,9 @@ impl From<Pdruncfg0SetSfroPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0SetSyspllanaPd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG0 Bit"]
+    #[doc = "Sets the PDRUNCFG0 Bit."]
     SET_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0SetSyspllanaPd {
@@ -4870,9 +4870,9 @@ impl From<Pdruncfg0SetSyspllanaPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0SetSyspllldoPd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG0 Bit"]
+    #[doc = "Sets the PDRUNCFG0 Bit."]
     SET_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0SetSyspllldoPd {
@@ -4901,9 +4901,9 @@ impl From<Pdruncfg0SetSyspllldoPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0SetSysxtalPd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG0 Bit"]
+    #[doc = "Sets the PDRUNCFG0 Bit."]
     SET_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0SetSysxtalPd {
@@ -4932,9 +4932,9 @@ impl From<Pdruncfg0SetSysxtalPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0SetVddcoreregLp {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG0 Bit"]
+    #[doc = "Sets the PDRUNCFG0 Bit."]
     SET_PDRUNCFG0 = 0x01,
 }
 impl Pdruncfg0SetVddcoreregLp {
@@ -4963,9 +4963,9 @@ impl From<Pdruncfg0SetVddcoreregLp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0SfroPd {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg0SfroPd {
@@ -4994,9 +4994,9 @@ impl From<Pdruncfg0SfroPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0SyspllanaPd {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg0SyspllanaPd {
@@ -5025,9 +5025,9 @@ impl From<Pdruncfg0SyspllanaPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0SyspllldoPd {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg0SyspllldoPd {
@@ -5056,9 +5056,9 @@ impl From<Pdruncfg0SyspllldoPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0SysxtalPd {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg0SysxtalPd {
@@ -5087,9 +5087,9 @@ impl From<Pdruncfg0SysxtalPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg0VddcoreregLp {
-    #[doc = "VDDCOREREG HP Mode"]
+    #[doc = "VDDCOREREG HP Mode."]
     HP_MODE = 0x0,
-    #[doc = "LP Mode"]
+    #[doc = "LP Mode."]
     LP_MODE = 0x01,
 }
 impl Pdruncfg0VddcoreregLp {
@@ -5118,9 +5118,9 @@ impl From<Pdruncfg0VddcoreregLp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1CasperSramApd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg1CasperSramApd {
@@ -5149,9 +5149,9 @@ impl From<Pdruncfg1CasperSramApd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1CasperSramPpd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg1CasperSramPpd {
@@ -5180,9 +5180,9 @@ impl From<Pdruncfg1CasperSramPpd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1ClrCasperSramApd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG1 Bit"]
+    #[doc = "Clears the PDRUNCFG1 Bit."]
     CLR_PDRUNCFG1 = 0x01,
 }
 impl Pdruncfg1ClrCasperSramApd {
@@ -5211,9 +5211,9 @@ impl From<Pdruncfg1ClrCasperSramApd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1ClrCasperSramPpd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG1 Bit"]
+    #[doc = "Clears the PDRUNCFG1 Bit."]
     CLR_PDRUNCFG1 = 0x01,
 }
 impl Pdruncfg1ClrCasperSramPpd {
@@ -5242,9 +5242,9 @@ impl From<Pdruncfg1ClrCasperSramPpd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1ClrDspcacheRegfApd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG1 Bit"]
+    #[doc = "Clears the PDRUNCFG1 Bit."]
     CLR_PDRUNCFG1 = 0x01,
 }
 impl Pdruncfg1ClrDspcacheRegfApd {
@@ -5273,9 +5273,9 @@ impl From<Pdruncfg1ClrDspcacheRegfApd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1ClrDspcacheRegfPpd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG1 Bit"]
+    #[doc = "Clears the PDRUNCFG1 Bit."]
     CLR_PDRUNCFG1 = 0x01,
 }
 impl Pdruncfg1ClrDspcacheRegfPpd {
@@ -5304,9 +5304,9 @@ impl From<Pdruncfg1ClrDspcacheRegfPpd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1ClrDsptcmRegfApd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG1 Bit"]
+    #[doc = "Clears the PDRUNCFG1 Bit."]
     CLR_PDRUNCFG1 = 0x01,
 }
 impl Pdruncfg1ClrDsptcmRegfApd {
@@ -5335,9 +5335,9 @@ impl From<Pdruncfg1ClrDsptcmRegfApd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1ClrDsptcmRegfPpd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG1 Bit"]
+    #[doc = "Clears the PDRUNCFG1 Bit."]
     CLR_PDRUNCFG1 = 0x01,
 }
 impl Pdruncfg1ClrDsptcmRegfPpd {
@@ -5366,9 +5366,9 @@ impl From<Pdruncfg1ClrDsptcmRegfPpd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1ClrFlexspiSramApd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG1 Bit"]
+    #[doc = "Clears the PDRUNCFG1 Bit."]
     CLR_PDRUNCFG1 = 0x01,
 }
 impl Pdruncfg1ClrFlexspiSramApd {
@@ -5397,9 +5397,9 @@ impl From<Pdruncfg1ClrFlexspiSramApd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1ClrFlexspiSramPpd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG1 Bit"]
+    #[doc = "Clears the PDRUNCFG1 Bit."]
     CLR_PDRUNCFG1 = 0x01,
 }
 impl Pdruncfg1ClrFlexspiSramPpd {
@@ -5428,9 +5428,9 @@ impl From<Pdruncfg1ClrFlexspiSramPpd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1ClrPqSramApd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG1 Bit"]
+    #[doc = "Clears the PDRUNCFG1 Bit."]
     CLR_PDRUNCFG1 = 0x01,
 }
 impl Pdruncfg1ClrPqSramApd {
@@ -5459,9 +5459,9 @@ impl From<Pdruncfg1ClrPqSramApd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1ClrPqSramPpd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG1 Bit"]
+    #[doc = "Clears the PDRUNCFG1 Bit."]
     CLR_PDRUNCFG1 = 0x01,
 }
 impl Pdruncfg1ClrPqSramPpd {
@@ -5490,9 +5490,9 @@ impl From<Pdruncfg1ClrPqSramPpd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1ClrRomPd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG1 Bit"]
+    #[doc = "Clears the PDRUNCFG1 Bit."]
     CLR_PDRUNCFG1 = 0x01,
 }
 impl Pdruncfg1ClrRomPd {
@@ -5521,9 +5521,9 @@ impl From<Pdruncfg1ClrRomPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1ClrSramSleep {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG1 Bit"]
+    #[doc = "Clears the PDRUNCFG1 Bit."]
     CLR_PDRUNCFG1 = 0x01,
 }
 impl Pdruncfg1ClrSramSleep {
@@ -5552,9 +5552,9 @@ impl From<Pdruncfg1ClrSramSleep> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1ClrUsbhsSramApd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG1 Bit"]
+    #[doc = "Clears the PDRUNCFG1 Bit."]
     CLR_PDRUNCFG1 = 0x01,
 }
 impl Pdruncfg1ClrUsbhsSramApd {
@@ -5583,9 +5583,9 @@ impl From<Pdruncfg1ClrUsbhsSramApd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1ClrUsbhsSramPpd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG1 Bit"]
+    #[doc = "Clears the PDRUNCFG1 Bit."]
     CLR_PDRUNCFG1 = 0x01,
 }
 impl Pdruncfg1ClrUsbhsSramPpd {
@@ -5614,9 +5614,9 @@ impl From<Pdruncfg1ClrUsbhsSramPpd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1ClrUsdhc0SramApd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG1 Bit"]
+    #[doc = "Clears the PDRUNCFG1 Bit."]
     CLR_PDRUNCFG1 = 0x01,
 }
 impl Pdruncfg1ClrUsdhc0SramApd {
@@ -5645,9 +5645,9 @@ impl From<Pdruncfg1ClrUsdhc0SramApd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1ClrUsdhc0SramPpd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG1 Bit"]
+    #[doc = "Clears the PDRUNCFG1 Bit."]
     CLR_PDRUNCFG1 = 0x01,
 }
 impl Pdruncfg1ClrUsdhc0SramPpd {
@@ -5676,9 +5676,9 @@ impl From<Pdruncfg1ClrUsdhc0SramPpd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1ClrUsdhc1SramApd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG1 Bit"]
+    #[doc = "Clears the PDRUNCFG1 Bit."]
     CLR_PDRUNCFG1 = 0x01,
 }
 impl Pdruncfg1ClrUsdhc1SramApd {
@@ -5707,9 +5707,9 @@ impl From<Pdruncfg1ClrUsdhc1SramApd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1ClrUsdhc1SramPpd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG1 Bit"]
+    #[doc = "Clears the PDRUNCFG1 Bit."]
     CLR_PDRUNCFG1 = 0x01,
 }
 impl Pdruncfg1ClrUsdhc1SramPpd {
@@ -5738,9 +5738,9 @@ impl From<Pdruncfg1ClrUsdhc1SramPpd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1DspcacheRegfApd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg1DspcacheRegfApd {
@@ -5769,9 +5769,9 @@ impl From<Pdruncfg1DspcacheRegfApd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1DspcacheRegfPpd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg1DspcacheRegfPpd {
@@ -5800,9 +5800,9 @@ impl From<Pdruncfg1DspcacheRegfPpd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1DsptcmRegfApd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg1DsptcmRegfApd {
@@ -5831,9 +5831,9 @@ impl From<Pdruncfg1DsptcmRegfApd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1DsptcmRegfPpd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg1DsptcmRegfPpd {
@@ -5862,9 +5862,9 @@ impl From<Pdruncfg1DsptcmRegfPpd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1FlexspiSramApd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg1FlexspiSramApd {
@@ -5893,9 +5893,9 @@ impl From<Pdruncfg1FlexspiSramApd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1FlexspiSramPpd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg1FlexspiSramPpd {
@@ -5924,9 +5924,9 @@ impl From<Pdruncfg1FlexspiSramPpd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1PqSramApd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg1PqSramApd {
@@ -5955,9 +5955,9 @@ impl From<Pdruncfg1PqSramApd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1PqSramPpd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg1PqSramPpd {
@@ -5986,9 +5986,9 @@ impl From<Pdruncfg1PqSramPpd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1RomPd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg1RomPd {
@@ -6017,9 +6017,9 @@ impl From<Pdruncfg1RomPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1SetCasperSramApd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG1 Bit"]
+    #[doc = "Sets the PDRUNCFG1 Bit."]
     SET_PDRUNCFG1 = 0x01,
 }
 impl Pdruncfg1SetCasperSramApd {
@@ -6048,9 +6048,9 @@ impl From<Pdruncfg1SetCasperSramApd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1SetCasperSramPpd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG1 Bit"]
+    #[doc = "Sets the PDRUNCFG1 Bit."]
     SET_PDRUNCFG1 = 0x01,
 }
 impl Pdruncfg1SetCasperSramPpd {
@@ -6079,9 +6079,9 @@ impl From<Pdruncfg1SetCasperSramPpd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1SetDspcacheRegfApd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG1 Bit"]
+    #[doc = "Sets the PDRUNCFG1 Bit."]
     SET_PDRUNCFG1 = 0x01,
 }
 impl Pdruncfg1SetDspcacheRegfApd {
@@ -6110,9 +6110,9 @@ impl From<Pdruncfg1SetDspcacheRegfApd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1SetDspcacheRegfPpd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG1 Bit"]
+    #[doc = "Sets the PDRUNCFG1 Bit."]
     SET_PDRUNCFG1 = 0x01,
 }
 impl Pdruncfg1SetDspcacheRegfPpd {
@@ -6141,9 +6141,9 @@ impl From<Pdruncfg1SetDspcacheRegfPpd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1SetDsptcmRegfApd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG1 Bit"]
+    #[doc = "Sets the PDRUNCFG1 Bit."]
     SET_PDRUNCFG1 = 0x01,
 }
 impl Pdruncfg1SetDsptcmRegfApd {
@@ -6172,9 +6172,9 @@ impl From<Pdruncfg1SetDsptcmRegfApd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1SetDsptcmRegfPpd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG1 Bit"]
+    #[doc = "Sets the PDRUNCFG1 Bit."]
     SET_PDRUNCFG1 = 0x01,
 }
 impl Pdruncfg1SetDsptcmRegfPpd {
@@ -6203,9 +6203,9 @@ impl From<Pdruncfg1SetDsptcmRegfPpd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1SetFlexspiSramApd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG1 Bit"]
+    #[doc = "Sets the PDRUNCFG1 Bit."]
     SET_PDRUNCFG1 = 0x01,
 }
 impl Pdruncfg1SetFlexspiSramApd {
@@ -6234,9 +6234,9 @@ impl From<Pdruncfg1SetFlexspiSramApd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1SetFlexspiSramPpd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG1 Bit"]
+    #[doc = "Sets the PDRUNCFG1 Bit."]
     SET_PDRUNCFG1 = 0x01,
 }
 impl Pdruncfg1SetFlexspiSramPpd {
@@ -6265,9 +6265,9 @@ impl From<Pdruncfg1SetFlexspiSramPpd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1SetPqSramApd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG1 Bit"]
+    #[doc = "Sets the PDRUNCFG1 Bit."]
     SET_PDRUNCFG1 = 0x01,
 }
 impl Pdruncfg1SetPqSramApd {
@@ -6296,9 +6296,9 @@ impl From<Pdruncfg1SetPqSramApd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1SetPqSramPpd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG1 Bit"]
+    #[doc = "Sets the PDRUNCFG1 Bit."]
     SET_PDRUNCFG1 = 0x01,
 }
 impl Pdruncfg1SetPqSramPpd {
@@ -6327,9 +6327,9 @@ impl From<Pdruncfg1SetPqSramPpd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1SetRomPd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG1 Bit"]
+    #[doc = "Sets the PDRUNCFG1 Bit."]
     SET_PDRUNCFG1 = 0x01,
 }
 impl Pdruncfg1SetRomPd {
@@ -6358,9 +6358,9 @@ impl From<Pdruncfg1SetRomPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1SetSramSleep {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG1 Bit"]
+    #[doc = "Sets the PDRUNCFG1 Bit."]
     SET_PDRUNCFG1 = 0x01,
 }
 impl Pdruncfg1SetSramSleep {
@@ -6389,9 +6389,9 @@ impl From<Pdruncfg1SetSramSleep> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1SetUsbhsSramApd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG1 Bit"]
+    #[doc = "Sets the PDRUNCFG1 Bit."]
     SET_PDRUNCFG1 = 0x01,
 }
 impl Pdruncfg1SetUsbhsSramApd {
@@ -6420,9 +6420,9 @@ impl From<Pdruncfg1SetUsbhsSramApd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1SetUsbhsSramPpd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG1 Bit"]
+    #[doc = "Sets the PDRUNCFG1 Bit."]
     SET_PDRUNCFG1 = 0x01,
 }
 impl Pdruncfg1SetUsbhsSramPpd {
@@ -6451,9 +6451,9 @@ impl From<Pdruncfg1SetUsbhsSramPpd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1SetUsdhc0SramApd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG1 Bit"]
+    #[doc = "Sets the PDRUNCFG1 Bit."]
     SET_PDRUNCFG1 = 0x01,
 }
 impl Pdruncfg1SetUsdhc0SramApd {
@@ -6482,9 +6482,9 @@ impl From<Pdruncfg1SetUsdhc0SramApd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1SetUsdhc0SramPpd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG1 Bit"]
+    #[doc = "Sets the PDRUNCFG1 Bit."]
     SET_PDRUNCFG1 = 0x01,
 }
 impl Pdruncfg1SetUsdhc0SramPpd {
@@ -6513,9 +6513,9 @@ impl From<Pdruncfg1SetUsdhc0SramPpd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1SetUsdhc1SramApd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG1 Bit"]
+    #[doc = "Sets the PDRUNCFG1 Bit."]
     SET_PDRUNCFG1 = 0x01,
 }
 impl Pdruncfg1SetUsdhc1SramApd {
@@ -6544,9 +6544,9 @@ impl From<Pdruncfg1SetUsdhc1SramApd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1SetUsdhc1SramPpd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG1 Bit"]
+    #[doc = "Sets the PDRUNCFG1 Bit."]
     SET_PDRUNCFG1 = 0x01,
 }
 impl Pdruncfg1SetUsdhc1SramPpd {
@@ -6575,7 +6575,7 @@ impl From<Pdruncfg1SetUsdhc1SramPpd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1SramSleep {
-    #[doc = "RAM Normal Mode"]
+    #[doc = "RAM Normal Mode."]
     NORMAL_MODE = 0x0,
     #[doc = "RAM Sleep Mode."]
     SLEEP_MODE = 0x01,
@@ -6606,9 +6606,9 @@ impl From<Pdruncfg1SramSleep> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1UsbhsSramApd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg1UsbhsSramApd {
@@ -6637,9 +6637,9 @@ impl From<Pdruncfg1UsbhsSramApd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1UsbhsSramPpd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg1UsbhsSramPpd {
@@ -6668,9 +6668,9 @@ impl From<Pdruncfg1UsbhsSramPpd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1Usdhc0SramApd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg1Usdhc0SramApd {
@@ -6699,9 +6699,9 @@ impl From<Pdruncfg1Usdhc0SramApd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1Usdhc0SramPpd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg1Usdhc0SramPpd {
@@ -6730,9 +6730,9 @@ impl From<Pdruncfg1Usdhc0SramPpd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1Usdhc1SramApd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg1Usdhc1SramApd {
@@ -6761,9 +6761,9 @@ impl From<Pdruncfg1Usdhc1SramApd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg1Usdhc1SramPpd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg1Usdhc1SramPpd {
@@ -6792,9 +6792,9 @@ impl From<Pdruncfg1Usdhc1SramPpd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2ClrSramIf0Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG2 Bit"]
+    #[doc = "Clears the PDRUNCFG2 Bit."]
     CLR_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2ClrSramIf0Apd {
@@ -6823,9 +6823,9 @@ impl From<Pdruncfg2ClrSramIf0Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2ClrSramIf10Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG2 Bit"]
+    #[doc = "Clears the PDRUNCFG2 Bit."]
     CLR_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2ClrSramIf10Apd {
@@ -6854,9 +6854,9 @@ impl From<Pdruncfg2ClrSramIf10Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2ClrSramIf11Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG2 Bit"]
+    #[doc = "Clears the PDRUNCFG2 Bit."]
     CLR_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2ClrSramIf11Apd {
@@ -6885,9 +6885,9 @@ impl From<Pdruncfg2ClrSramIf11Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2ClrSramIf12Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG2 Bit"]
+    #[doc = "Clears the PDRUNCFG2 Bit."]
     CLR_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2ClrSramIf12Apd {
@@ -6916,9 +6916,9 @@ impl From<Pdruncfg2ClrSramIf12Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2ClrSramIf13Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG2 Bit"]
+    #[doc = "Clears the PDRUNCFG2 Bit."]
     CLR_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2ClrSramIf13Apd {
@@ -6947,9 +6947,9 @@ impl From<Pdruncfg2ClrSramIf13Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2ClrSramIf14Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG2 Bit"]
+    #[doc = "Clears the PDRUNCFG2 Bit."]
     CLR_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2ClrSramIf14Apd {
@@ -6978,9 +6978,9 @@ impl From<Pdruncfg2ClrSramIf14Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2ClrSramIf15Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG2 Bit"]
+    #[doc = "Clears the PDRUNCFG2 Bit."]
     CLR_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2ClrSramIf15Apd {
@@ -7009,9 +7009,9 @@ impl From<Pdruncfg2ClrSramIf15Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2ClrSramIf16Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG2 Bit"]
+    #[doc = "Clears the PDRUNCFG2 Bit."]
     CLR_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2ClrSramIf16Apd {
@@ -7040,9 +7040,9 @@ impl From<Pdruncfg2ClrSramIf16Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2ClrSramIf17Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG2 Bit"]
+    #[doc = "Clears the PDRUNCFG2 Bit."]
     CLR_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2ClrSramIf17Apd {
@@ -7071,9 +7071,9 @@ impl From<Pdruncfg2ClrSramIf17Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2ClrSramIf18Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG2 Bit"]
+    #[doc = "Clears the PDRUNCFG2 Bit."]
     CLR_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2ClrSramIf18Apd {
@@ -7102,9 +7102,9 @@ impl From<Pdruncfg2ClrSramIf18Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2ClrSramIf19Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG2 Bit"]
+    #[doc = "Clears the PDRUNCFG2 Bit."]
     CLR_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2ClrSramIf19Apd {
@@ -7133,9 +7133,9 @@ impl From<Pdruncfg2ClrSramIf19Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2ClrSramIf1Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG2 Bit"]
+    #[doc = "Clears the PDRUNCFG2 Bit."]
     CLR_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2ClrSramIf1Apd {
@@ -7164,9 +7164,9 @@ impl From<Pdruncfg2ClrSramIf1Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2ClrSramIf20Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG2 Bit"]
+    #[doc = "Clears the PDRUNCFG2 Bit."]
     CLR_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2ClrSramIf20Apd {
@@ -7195,9 +7195,9 @@ impl From<Pdruncfg2ClrSramIf20Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2ClrSramIf21Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG2 Bit"]
+    #[doc = "Clears the PDRUNCFG2 Bit."]
     CLR_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2ClrSramIf21Apd {
@@ -7226,9 +7226,9 @@ impl From<Pdruncfg2ClrSramIf21Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2ClrSramIf22Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG2 Bit"]
+    #[doc = "Clears the PDRUNCFG2 Bit."]
     CLR_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2ClrSramIf22Apd {
@@ -7257,9 +7257,9 @@ impl From<Pdruncfg2ClrSramIf22Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2ClrSramIf23Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG2 Bit"]
+    #[doc = "Clears the PDRUNCFG2 Bit."]
     CLR_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2ClrSramIf23Apd {
@@ -7288,9 +7288,9 @@ impl From<Pdruncfg2ClrSramIf23Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2ClrSramIf24Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG2 Bit"]
+    #[doc = "Clears the PDRUNCFG2 Bit."]
     CLR_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2ClrSramIf24Apd {
@@ -7319,9 +7319,9 @@ impl From<Pdruncfg2ClrSramIf24Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2ClrSramIf25Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG2 Bit"]
+    #[doc = "Clears the PDRUNCFG2 Bit."]
     CLR_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2ClrSramIf25Apd {
@@ -7350,9 +7350,9 @@ impl From<Pdruncfg2ClrSramIf25Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2ClrSramIf26Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG2 Bit"]
+    #[doc = "Clears the PDRUNCFG2 Bit."]
     CLR_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2ClrSramIf26Apd {
@@ -7381,9 +7381,9 @@ impl From<Pdruncfg2ClrSramIf26Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2ClrSramIf27Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG2 Bit"]
+    #[doc = "Clears the PDRUNCFG2 Bit."]
     CLR_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2ClrSramIf27Apd {
@@ -7412,9 +7412,9 @@ impl From<Pdruncfg2ClrSramIf27Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2ClrSramIf28Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG2 Bit"]
+    #[doc = "Clears the PDRUNCFG2 Bit."]
     CLR_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2ClrSramIf28Apd {
@@ -7443,9 +7443,9 @@ impl From<Pdruncfg2ClrSramIf28Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2ClrSramIf29Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG2 Bit"]
+    #[doc = "Clears the PDRUNCFG2 Bit."]
     CLR_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2ClrSramIf29Apd {
@@ -7474,9 +7474,9 @@ impl From<Pdruncfg2ClrSramIf29Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2ClrSramIf2Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG2 Bit"]
+    #[doc = "Clears the PDRUNCFG2 Bit."]
     CLR_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2ClrSramIf2Apd {
@@ -7505,9 +7505,9 @@ impl From<Pdruncfg2ClrSramIf2Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2ClrSramIf3Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG2 Bit"]
+    #[doc = "Clears the PDRUNCFG2 Bit."]
     CLR_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2ClrSramIf3Apd {
@@ -7536,9 +7536,9 @@ impl From<Pdruncfg2ClrSramIf3Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2ClrSramIf4Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG2 Bit"]
+    #[doc = "Clears the PDRUNCFG2 Bit."]
     CLR_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2ClrSramIf4Apd {
@@ -7567,9 +7567,9 @@ impl From<Pdruncfg2ClrSramIf4Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2ClrSramIf5Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG2 Bit"]
+    #[doc = "Clears the PDRUNCFG2 Bit."]
     CLR_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2ClrSramIf5Apd {
@@ -7598,9 +7598,9 @@ impl From<Pdruncfg2ClrSramIf5Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2ClrSramIf6Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG2 Bit"]
+    #[doc = "Clears the PDRUNCFG2 Bit."]
     CLR_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2ClrSramIf6Apd {
@@ -7629,9 +7629,9 @@ impl From<Pdruncfg2ClrSramIf6Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2ClrSramIf7Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG2 Bit"]
+    #[doc = "Clears the PDRUNCFG2 Bit."]
     CLR_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2ClrSramIf7Apd {
@@ -7660,9 +7660,9 @@ impl From<Pdruncfg2ClrSramIf7Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2ClrSramIf8Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG2 Bit"]
+    #[doc = "Clears the PDRUNCFG2 Bit."]
     CLR_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2ClrSramIf8Apd {
@@ -7691,9 +7691,9 @@ impl From<Pdruncfg2ClrSramIf8Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2ClrSramIf9Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG2 Bit"]
+    #[doc = "Clears the PDRUNCFG2 Bit."]
     CLR_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2ClrSramIf9Apd {
@@ -7722,9 +7722,9 @@ impl From<Pdruncfg2ClrSramIf9Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SetSramIf0Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG2 Bit"]
+    #[doc = "Sets the PDRUNCFG2 Bit."]
     SET_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2SetSramIf0Apd {
@@ -7753,9 +7753,9 @@ impl From<Pdruncfg2SetSramIf0Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SetSramIf10Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG2 Bit"]
+    #[doc = "Sets the PDRUNCFG2 Bit."]
     SET_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2SetSramIf10Apd {
@@ -7784,9 +7784,9 @@ impl From<Pdruncfg2SetSramIf10Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SetSramIf11Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG2 Bit"]
+    #[doc = "Sets the PDRUNCFG2 Bit."]
     SET_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2SetSramIf11Apd {
@@ -7815,9 +7815,9 @@ impl From<Pdruncfg2SetSramIf11Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SetSramIf12Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG2 Bit"]
+    #[doc = "Sets the PDRUNCFG2 Bit."]
     SET_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2SetSramIf12Apd {
@@ -7846,9 +7846,9 @@ impl From<Pdruncfg2SetSramIf12Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SetSramIf13Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG2 Bit"]
+    #[doc = "Sets the PDRUNCFG2 Bit."]
     SET_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2SetSramIf13Apd {
@@ -7877,9 +7877,9 @@ impl From<Pdruncfg2SetSramIf13Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SetSramIf14Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG2 Bit"]
+    #[doc = "Sets the PDRUNCFG2 Bit."]
     SET_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2SetSramIf14Apd {
@@ -7908,9 +7908,9 @@ impl From<Pdruncfg2SetSramIf14Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SetSramIf15Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG2 Bit"]
+    #[doc = "Sets the PDRUNCFG2 Bit."]
     SET_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2SetSramIf15Apd {
@@ -7939,9 +7939,9 @@ impl From<Pdruncfg2SetSramIf15Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SetSramIf16Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG2 Bit"]
+    #[doc = "Sets the PDRUNCFG2 Bit."]
     SET_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2SetSramIf16Apd {
@@ -7970,9 +7970,9 @@ impl From<Pdruncfg2SetSramIf16Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SetSramIf17Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG2 Bit"]
+    #[doc = "Sets the PDRUNCFG2 Bit."]
     SET_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2SetSramIf17Apd {
@@ -8001,9 +8001,9 @@ impl From<Pdruncfg2SetSramIf17Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SetSramIf18Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG2 Bit"]
+    #[doc = "Sets the PDRUNCFG2 Bit."]
     SET_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2SetSramIf18Apd {
@@ -8032,9 +8032,9 @@ impl From<Pdruncfg2SetSramIf18Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SetSramIf19Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG2 Bit"]
+    #[doc = "Sets the PDRUNCFG2 Bit."]
     SET_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2SetSramIf19Apd {
@@ -8063,9 +8063,9 @@ impl From<Pdruncfg2SetSramIf19Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SetSramIf1Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG2 Bit"]
+    #[doc = "Sets the PDRUNCFG2 Bit."]
     SET_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2SetSramIf1Apd {
@@ -8094,9 +8094,9 @@ impl From<Pdruncfg2SetSramIf1Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SetSramIf20Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG2 Bit"]
+    #[doc = "Sets the PDRUNCFG2 Bit."]
     SET_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2SetSramIf20Apd {
@@ -8125,9 +8125,9 @@ impl From<Pdruncfg2SetSramIf20Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SetSramIf21Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG2 Bit"]
+    #[doc = "Sets the PDRUNCFG2 Bit."]
     SET_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2SetSramIf21Apd {
@@ -8156,9 +8156,9 @@ impl From<Pdruncfg2SetSramIf21Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SetSramIf22Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG2 Bit"]
+    #[doc = "Sets the PDRUNCFG2 Bit."]
     SET_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2SetSramIf22Apd {
@@ -8187,9 +8187,9 @@ impl From<Pdruncfg2SetSramIf22Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SetSramIf23Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG2 Bit"]
+    #[doc = "Sets the PDRUNCFG2 Bit."]
     SET_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2SetSramIf23Apd {
@@ -8218,9 +8218,9 @@ impl From<Pdruncfg2SetSramIf23Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SetSramIf24Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG2 Bit"]
+    #[doc = "Sets the PDRUNCFG2 Bit."]
     SET_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2SetSramIf24Apd {
@@ -8249,9 +8249,9 @@ impl From<Pdruncfg2SetSramIf24Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SetSramIf25Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG2 Bit"]
+    #[doc = "Sets the PDRUNCFG2 Bit."]
     SET_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2SetSramIf25Apd {
@@ -8280,9 +8280,9 @@ impl From<Pdruncfg2SetSramIf25Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SetSramIf26Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG2 Bit"]
+    #[doc = "Sets the PDRUNCFG2 Bit."]
     SET_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2SetSramIf26Apd {
@@ -8311,9 +8311,9 @@ impl From<Pdruncfg2SetSramIf26Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SetSramIf27Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG2 Bit"]
+    #[doc = "Sets the PDRUNCFG2 Bit."]
     SET_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2SetSramIf27Apd {
@@ -8342,9 +8342,9 @@ impl From<Pdruncfg2SetSramIf27Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SetSramIf28Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG2 Bit"]
+    #[doc = "Sets the PDRUNCFG2 Bit."]
     SET_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2SetSramIf28Apd {
@@ -8373,9 +8373,9 @@ impl From<Pdruncfg2SetSramIf28Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SetSramIf29Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG2 Bit"]
+    #[doc = "Sets the PDRUNCFG2 Bit."]
     SET_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2SetSramIf29Apd {
@@ -8404,9 +8404,9 @@ impl From<Pdruncfg2SetSramIf29Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SetSramIf2Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG2 Bit"]
+    #[doc = "Sets the PDRUNCFG2 Bit."]
     SET_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2SetSramIf2Apd {
@@ -8435,9 +8435,9 @@ impl From<Pdruncfg2SetSramIf2Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SetSramIf3Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG2 Bit"]
+    #[doc = "Sets the PDRUNCFG2 Bit."]
     SET_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2SetSramIf3Apd {
@@ -8466,9 +8466,9 @@ impl From<Pdruncfg2SetSramIf3Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SetSramIf4Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG2 Bit"]
+    #[doc = "Sets the PDRUNCFG2 Bit."]
     SET_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2SetSramIf4Apd {
@@ -8497,9 +8497,9 @@ impl From<Pdruncfg2SetSramIf4Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SetSramIf5Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG2 Bit"]
+    #[doc = "Sets the PDRUNCFG2 Bit."]
     SET_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2SetSramIf5Apd {
@@ -8528,9 +8528,9 @@ impl From<Pdruncfg2SetSramIf5Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SetSramIf6Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG2 Bit"]
+    #[doc = "Sets the PDRUNCFG2 Bit."]
     SET_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2SetSramIf6Apd {
@@ -8559,9 +8559,9 @@ impl From<Pdruncfg2SetSramIf6Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SetSramIf7Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG2 Bit"]
+    #[doc = "Sets the PDRUNCFG2 Bit."]
     SET_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2SetSramIf7Apd {
@@ -8590,9 +8590,9 @@ impl From<Pdruncfg2SetSramIf7Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SetSramIf8Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG2 Bit"]
+    #[doc = "Sets the PDRUNCFG2 Bit."]
     SET_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2SetSramIf8Apd {
@@ -8621,9 +8621,9 @@ impl From<Pdruncfg2SetSramIf8Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SetSramIf9Apd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG2 Bit"]
+    #[doc = "Sets the PDRUNCFG2 Bit."]
     SET_PDRUNCFG2 = 0x01,
 }
 impl Pdruncfg2SetSramIf9Apd {
@@ -8652,9 +8652,9 @@ impl From<Pdruncfg2SetSramIf9Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SramIf0Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg2SramIf0Apd {
@@ -8683,9 +8683,9 @@ impl From<Pdruncfg2SramIf0Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SramIf10Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg2SramIf10Apd {
@@ -8714,9 +8714,9 @@ impl From<Pdruncfg2SramIf10Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SramIf11Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg2SramIf11Apd {
@@ -8745,9 +8745,9 @@ impl From<Pdruncfg2SramIf11Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SramIf12Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg2SramIf12Apd {
@@ -8776,9 +8776,9 @@ impl From<Pdruncfg2SramIf12Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SramIf13Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg2SramIf13Apd {
@@ -8807,9 +8807,9 @@ impl From<Pdruncfg2SramIf13Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SramIf14Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg2SramIf14Apd {
@@ -8838,9 +8838,9 @@ impl From<Pdruncfg2SramIf14Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SramIf15Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg2SramIf15Apd {
@@ -8869,9 +8869,9 @@ impl From<Pdruncfg2SramIf15Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SramIf16Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg2SramIf16Apd {
@@ -8900,9 +8900,9 @@ impl From<Pdruncfg2SramIf16Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SramIf17Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg2SramIf17Apd {
@@ -8931,9 +8931,9 @@ impl From<Pdruncfg2SramIf17Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SramIf18Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg2SramIf18Apd {
@@ -8962,9 +8962,9 @@ impl From<Pdruncfg2SramIf18Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SramIf19Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg2SramIf19Apd {
@@ -8993,9 +8993,9 @@ impl From<Pdruncfg2SramIf19Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SramIf1Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg2SramIf1Apd {
@@ -9024,9 +9024,9 @@ impl From<Pdruncfg2SramIf1Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SramIf20Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg2SramIf20Apd {
@@ -9055,9 +9055,9 @@ impl From<Pdruncfg2SramIf20Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SramIf21Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg2SramIf21Apd {
@@ -9086,9 +9086,9 @@ impl From<Pdruncfg2SramIf21Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SramIf22Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg2SramIf22Apd {
@@ -9117,9 +9117,9 @@ impl From<Pdruncfg2SramIf22Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SramIf23Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg2SramIf23Apd {
@@ -9148,9 +9148,9 @@ impl From<Pdruncfg2SramIf23Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SramIf24Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg2SramIf24Apd {
@@ -9179,9 +9179,9 @@ impl From<Pdruncfg2SramIf24Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SramIf25Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg2SramIf25Apd {
@@ -9210,9 +9210,9 @@ impl From<Pdruncfg2SramIf25Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SramIf26Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg2SramIf26Apd {
@@ -9241,9 +9241,9 @@ impl From<Pdruncfg2SramIf26Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SramIf27Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg2SramIf27Apd {
@@ -9272,9 +9272,9 @@ impl From<Pdruncfg2SramIf27Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SramIf28Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg2SramIf28Apd {
@@ -9303,9 +9303,9 @@ impl From<Pdruncfg2SramIf28Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SramIf29Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg2SramIf29Apd {
@@ -9334,9 +9334,9 @@ impl From<Pdruncfg2SramIf29Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SramIf2Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg2SramIf2Apd {
@@ -9365,9 +9365,9 @@ impl From<Pdruncfg2SramIf2Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SramIf3Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg2SramIf3Apd {
@@ -9396,9 +9396,9 @@ impl From<Pdruncfg2SramIf3Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SramIf4Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg2SramIf4Apd {
@@ -9427,9 +9427,9 @@ impl From<Pdruncfg2SramIf4Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SramIf5Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg2SramIf5Apd {
@@ -9458,9 +9458,9 @@ impl From<Pdruncfg2SramIf5Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SramIf6Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg2SramIf6Apd {
@@ -9489,9 +9489,9 @@ impl From<Pdruncfg2SramIf6Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SramIf7Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg2SramIf7Apd {
@@ -9520,9 +9520,9 @@ impl From<Pdruncfg2SramIf7Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SramIf8Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg2SramIf8Apd {
@@ -9551,9 +9551,9 @@ impl From<Pdruncfg2SramIf8Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg2SramIf9Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg2SramIf9Apd {
@@ -9582,9 +9582,9 @@ impl From<Pdruncfg2SramIf9Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3ClrSramIf0Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG3 Bit"]
+    #[doc = "Clears the PDRUNCFG3 Bit."]
     CLR_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3ClrSramIf0Ppd {
@@ -9613,9 +9613,9 @@ impl From<Pdruncfg3ClrSramIf0Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3ClrSramIf10Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG3 Bit"]
+    #[doc = "Clears the PDRUNCFG3 Bit."]
     CLR_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3ClrSramIf10Ppd {
@@ -9644,9 +9644,9 @@ impl From<Pdruncfg3ClrSramIf10Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3ClrSramIf11Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG3 Bit"]
+    #[doc = "Clears the PDRUNCFG3 Bit."]
     CLR_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3ClrSramIf11Ppd {
@@ -9675,9 +9675,9 @@ impl From<Pdruncfg3ClrSramIf11Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3ClrSramIf12Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG3 Bit"]
+    #[doc = "Clears the PDRUNCFG3 Bit."]
     CLR_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3ClrSramIf12Ppd {
@@ -9706,9 +9706,9 @@ impl From<Pdruncfg3ClrSramIf12Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3ClrSramIf13Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG3 Bit"]
+    #[doc = "Clears the PDRUNCFG3 Bit."]
     CLR_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3ClrSramIf13Ppd {
@@ -9737,9 +9737,9 @@ impl From<Pdruncfg3ClrSramIf13Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3ClrSramIf14Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG3 Bit"]
+    #[doc = "Clears the PDRUNCFG3 Bit."]
     CLR_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3ClrSramIf14Ppd {
@@ -9768,9 +9768,9 @@ impl From<Pdruncfg3ClrSramIf14Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3ClrSramIf15Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG3 Bit"]
+    #[doc = "Clears the PDRUNCFG3 Bit."]
     CLR_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3ClrSramIf15Ppd {
@@ -9799,9 +9799,9 @@ impl From<Pdruncfg3ClrSramIf15Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3ClrSramIf16Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG3 Bit"]
+    #[doc = "Clears the PDRUNCFG3 Bit."]
     CLR_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3ClrSramIf16Ppd {
@@ -9830,9 +9830,9 @@ impl From<Pdruncfg3ClrSramIf16Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3ClrSramIf17Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG3 Bit"]
+    #[doc = "Clears the PDRUNCFG3 Bit."]
     CLR_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3ClrSramIf17Ppd {
@@ -9861,9 +9861,9 @@ impl From<Pdruncfg3ClrSramIf17Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3ClrSramIf18Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG3 Bit"]
+    #[doc = "Clears the PDRUNCFG3 Bit."]
     CLR_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3ClrSramIf18Ppd {
@@ -9892,9 +9892,9 @@ impl From<Pdruncfg3ClrSramIf18Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3ClrSramIf19Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG3 Bit"]
+    #[doc = "Clears the PDRUNCFG3 Bit."]
     CLR_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3ClrSramIf19Ppd {
@@ -9923,9 +9923,9 @@ impl From<Pdruncfg3ClrSramIf19Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3ClrSramIf1Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG3 Bit"]
+    #[doc = "Clears the PDRUNCFG3 Bit."]
     CLR_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3ClrSramIf1Ppd {
@@ -9954,9 +9954,9 @@ impl From<Pdruncfg3ClrSramIf1Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3ClrSramIf20Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG3 Bit"]
+    #[doc = "Clears the PDRUNCFG3 Bit."]
     CLR_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3ClrSramIf20Ppd {
@@ -9985,9 +9985,9 @@ impl From<Pdruncfg3ClrSramIf20Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3ClrSramIf21Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG3 Bit"]
+    #[doc = "Clears the PDRUNCFG3 Bit."]
     CLR_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3ClrSramIf21Ppd {
@@ -10016,9 +10016,9 @@ impl From<Pdruncfg3ClrSramIf21Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3ClrSramIf22Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG3 Bit"]
+    #[doc = "Clears the PDRUNCFG3 Bit."]
     CLR_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3ClrSramIf22Ppd {
@@ -10047,9 +10047,9 @@ impl From<Pdruncfg3ClrSramIf22Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3ClrSramIf23Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG3 Bit"]
+    #[doc = "Clears the PDRUNCFG3 Bit."]
     CLR_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3ClrSramIf23Ppd {
@@ -10078,9 +10078,9 @@ impl From<Pdruncfg3ClrSramIf23Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3ClrSramIf24Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG3 Bit"]
+    #[doc = "Clears the PDRUNCFG3 Bit."]
     CLR_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3ClrSramIf24Ppd {
@@ -10109,9 +10109,9 @@ impl From<Pdruncfg3ClrSramIf24Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3ClrSramIf25Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG3 Bit"]
+    #[doc = "Clears the PDRUNCFG3 Bit."]
     CLR_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3ClrSramIf25Ppd {
@@ -10140,9 +10140,9 @@ impl From<Pdruncfg3ClrSramIf25Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3ClrSramIf26Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG3 Bit"]
+    #[doc = "Clears the PDRUNCFG3 Bit."]
     CLR_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3ClrSramIf26Ppd {
@@ -10171,9 +10171,9 @@ impl From<Pdruncfg3ClrSramIf26Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3ClrSramIf27Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG3 Bit"]
+    #[doc = "Clears the PDRUNCFG3 Bit."]
     CLR_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3ClrSramIf27Ppd {
@@ -10202,9 +10202,9 @@ impl From<Pdruncfg3ClrSramIf27Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3ClrSramIf28Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG3 Bit"]
+    #[doc = "Clears the PDRUNCFG3 Bit."]
     CLR_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3ClrSramIf28Ppd {
@@ -10233,9 +10233,9 @@ impl From<Pdruncfg3ClrSramIf28Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3ClrSramIf29Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG3 Bit"]
+    #[doc = "Clears the PDRUNCFG3 Bit."]
     CLR_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3ClrSramIf29Ppd {
@@ -10264,9 +10264,9 @@ impl From<Pdruncfg3ClrSramIf29Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3ClrSramIf2Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG3 Bit"]
+    #[doc = "Clears the PDRUNCFG3 Bit."]
     CLR_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3ClrSramIf2Ppd {
@@ -10295,9 +10295,9 @@ impl From<Pdruncfg3ClrSramIf2Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3ClrSramIf3Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG3 Bit"]
+    #[doc = "Clears the PDRUNCFG3 Bit."]
     CLR_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3ClrSramIf3Ppd {
@@ -10326,9 +10326,9 @@ impl From<Pdruncfg3ClrSramIf3Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3ClrSramIf4Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG3 Bit"]
+    #[doc = "Clears the PDRUNCFG3 Bit."]
     CLR_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3ClrSramIf4Ppd {
@@ -10357,9 +10357,9 @@ impl From<Pdruncfg3ClrSramIf4Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3ClrSramIf5Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG3 Bit"]
+    #[doc = "Clears the PDRUNCFG3 Bit."]
     CLR_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3ClrSramIf5Ppd {
@@ -10388,9 +10388,9 @@ impl From<Pdruncfg3ClrSramIf5Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3ClrSramIf6Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG3 Bit"]
+    #[doc = "Clears the PDRUNCFG3 Bit."]
     CLR_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3ClrSramIf6Ppd {
@@ -10419,9 +10419,9 @@ impl From<Pdruncfg3ClrSramIf6Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3ClrSramIf7Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG3 Bit"]
+    #[doc = "Clears the PDRUNCFG3 Bit."]
     CLR_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3ClrSramIf7Ppd {
@@ -10450,9 +10450,9 @@ impl From<Pdruncfg3ClrSramIf7Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3ClrSramIf8Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG3 Bit"]
+    #[doc = "Clears the PDRUNCFG3 Bit."]
     CLR_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3ClrSramIf8Ppd {
@@ -10481,9 +10481,9 @@ impl From<Pdruncfg3ClrSramIf8Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3ClrSramIf9Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PDRUNCFG3 Bit"]
+    #[doc = "Clears the PDRUNCFG3 Bit."]
     CLR_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3ClrSramIf9Ppd {
@@ -10512,9 +10512,9 @@ impl From<Pdruncfg3ClrSramIf9Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SetSramIf0Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG3 Bit"]
+    #[doc = "Sets the PDRUNCFG3 Bit."]
     SET_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3SetSramIf0Ppd {
@@ -10543,9 +10543,9 @@ impl From<Pdruncfg3SetSramIf0Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SetSramIf10Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG3 Bit"]
+    #[doc = "Sets the PDRUNCFG3 Bit."]
     SET_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3SetSramIf10Ppd {
@@ -10574,9 +10574,9 @@ impl From<Pdruncfg3SetSramIf10Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SetSramIf11Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG3 Bit"]
+    #[doc = "Sets the PDRUNCFG3 Bit."]
     SET_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3SetSramIf11Ppd {
@@ -10605,9 +10605,9 @@ impl From<Pdruncfg3SetSramIf11Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SetSramIf12Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG3 Bit"]
+    #[doc = "Sets the PDRUNCFG3 Bit."]
     SET_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3SetSramIf12Ppd {
@@ -10636,9 +10636,9 @@ impl From<Pdruncfg3SetSramIf12Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SetSramIf13Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG3 Bit"]
+    #[doc = "Sets the PDRUNCFG3 Bit."]
     SET_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3SetSramIf13Ppd {
@@ -10667,9 +10667,9 @@ impl From<Pdruncfg3SetSramIf13Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SetSramIf14Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG3 Bit"]
+    #[doc = "Sets the PDRUNCFG3 Bit."]
     SET_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3SetSramIf14Ppd {
@@ -10698,9 +10698,9 @@ impl From<Pdruncfg3SetSramIf14Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SetSramIf15Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG3 Bit"]
+    #[doc = "Sets the PDRUNCFG3 Bit."]
     SET_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3SetSramIf15Ppd {
@@ -10729,9 +10729,9 @@ impl From<Pdruncfg3SetSramIf15Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SetSramIf16Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG3 Bit"]
+    #[doc = "Sets the PDRUNCFG3 Bit."]
     SET_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3SetSramIf16Ppd {
@@ -10760,9 +10760,9 @@ impl From<Pdruncfg3SetSramIf16Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SetSramIf17Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG3 Bit"]
+    #[doc = "Sets the PDRUNCFG3 Bit."]
     SET_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3SetSramIf17Ppd {
@@ -10791,9 +10791,9 @@ impl From<Pdruncfg3SetSramIf17Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SetSramIf18Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG3 Bit"]
+    #[doc = "Sets the PDRUNCFG3 Bit."]
     SET_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3SetSramIf18Ppd {
@@ -10822,9 +10822,9 @@ impl From<Pdruncfg3SetSramIf18Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SetSramIf19Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG3 Bit"]
+    #[doc = "Sets the PDRUNCFG3 Bit."]
     SET_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3SetSramIf19Ppd {
@@ -10853,9 +10853,9 @@ impl From<Pdruncfg3SetSramIf19Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SetSramIf1Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG3 Bit"]
+    #[doc = "Sets the PDRUNCFG3 Bit."]
     SET_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3SetSramIf1Ppd {
@@ -10884,9 +10884,9 @@ impl From<Pdruncfg3SetSramIf1Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SetSramIf20Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG3 Bit"]
+    #[doc = "Sets the PDRUNCFG3 Bit."]
     SET_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3SetSramIf20Ppd {
@@ -10915,9 +10915,9 @@ impl From<Pdruncfg3SetSramIf20Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SetSramIf21Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG3 Bit"]
+    #[doc = "Sets the PDRUNCFG3 Bit."]
     SET_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3SetSramIf21Ppd {
@@ -10946,9 +10946,9 @@ impl From<Pdruncfg3SetSramIf21Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SetSramIf22Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG3 Bit"]
+    #[doc = "Sets the PDRUNCFG3 Bit."]
     SET_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3SetSramIf22Ppd {
@@ -10977,9 +10977,9 @@ impl From<Pdruncfg3SetSramIf22Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SetSramIf23Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG3 Bit"]
+    #[doc = "Sets the PDRUNCFG3 Bit."]
     SET_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3SetSramIf23Ppd {
@@ -11008,9 +11008,9 @@ impl From<Pdruncfg3SetSramIf23Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SetSramIf24Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG3 Bit"]
+    #[doc = "Sets the PDRUNCFG3 Bit."]
     SET_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3SetSramIf24Ppd {
@@ -11039,9 +11039,9 @@ impl From<Pdruncfg3SetSramIf24Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SetSramIf25Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG3 Bit"]
+    #[doc = "Sets the PDRUNCFG3 Bit."]
     SET_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3SetSramIf25Ppd {
@@ -11070,9 +11070,9 @@ impl From<Pdruncfg3SetSramIf25Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SetSramIf26Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG3 Bit"]
+    #[doc = "Sets the PDRUNCFG3 Bit."]
     SET_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3SetSramIf26Ppd {
@@ -11101,9 +11101,9 @@ impl From<Pdruncfg3SetSramIf26Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SetSramIf27Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG3 Bit"]
+    #[doc = "Sets the PDRUNCFG3 Bit."]
     SET_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3SetSramIf27Ppd {
@@ -11132,9 +11132,9 @@ impl From<Pdruncfg3SetSramIf27Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SetSramIf28Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG3 Bit"]
+    #[doc = "Sets the PDRUNCFG3 Bit."]
     SET_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3SetSramIf28Ppd {
@@ -11163,9 +11163,9 @@ impl From<Pdruncfg3SetSramIf28Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SetSramIf29Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG3 Bit"]
+    #[doc = "Sets the PDRUNCFG3 Bit."]
     SET_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3SetSramIf29Ppd {
@@ -11194,9 +11194,9 @@ impl From<Pdruncfg3SetSramIf29Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SetSramIf2Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG3 Bit"]
+    #[doc = "Sets the PDRUNCFG3 Bit."]
     SET_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3SetSramIf2Ppd {
@@ -11225,9 +11225,9 @@ impl From<Pdruncfg3SetSramIf2Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SetSramIf3Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG3 Bit"]
+    #[doc = "Sets the PDRUNCFG3 Bit."]
     SET_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3SetSramIf3Ppd {
@@ -11256,9 +11256,9 @@ impl From<Pdruncfg3SetSramIf3Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SetSramIf4Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG3 Bit"]
+    #[doc = "Sets the PDRUNCFG3 Bit."]
     SET_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3SetSramIf4Ppd {
@@ -11287,9 +11287,9 @@ impl From<Pdruncfg3SetSramIf4Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SetSramIf5Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG3 Bit"]
+    #[doc = "Sets the PDRUNCFG3 Bit."]
     SET_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3SetSramIf5Ppd {
@@ -11318,9 +11318,9 @@ impl From<Pdruncfg3SetSramIf5Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SetSramIf6Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG3 Bit"]
+    #[doc = "Sets the PDRUNCFG3 Bit."]
     SET_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3SetSramIf6Ppd {
@@ -11349,9 +11349,9 @@ impl From<Pdruncfg3SetSramIf6Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SetSramIf7Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG3 Bit"]
+    #[doc = "Sets the PDRUNCFG3 Bit."]
     SET_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3SetSramIf7Ppd {
@@ -11380,9 +11380,9 @@ impl From<Pdruncfg3SetSramIf7Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SetSramIf8Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG3 Bit"]
+    #[doc = "Sets the PDRUNCFG3 Bit."]
     SET_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3SetSramIf8Ppd {
@@ -11411,9 +11411,9 @@ impl From<Pdruncfg3SetSramIf8Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SetSramIf9Ppd {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PDRUNCFG3 Bit"]
+    #[doc = "Sets the PDRUNCFG3 Bit."]
     SET_PDRUNCFG3 = 0x01,
 }
 impl Pdruncfg3SetSramIf9Ppd {
@@ -11442,9 +11442,9 @@ impl From<Pdruncfg3SetSramIf9Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SramIf0Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg3SramIf0Ppd {
@@ -11473,9 +11473,9 @@ impl From<Pdruncfg3SramIf0Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SramIf10Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg3SramIf10Ppd {
@@ -11504,9 +11504,9 @@ impl From<Pdruncfg3SramIf10Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SramIf11Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg3SramIf11Ppd {
@@ -11535,9 +11535,9 @@ impl From<Pdruncfg3SramIf11Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SramIf12Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg3SramIf12Ppd {
@@ -11566,9 +11566,9 @@ impl From<Pdruncfg3SramIf12Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SramIf13Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg3SramIf13Ppd {
@@ -11597,9 +11597,9 @@ impl From<Pdruncfg3SramIf13Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SramIf14Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg3SramIf14Ppd {
@@ -11628,9 +11628,9 @@ impl From<Pdruncfg3SramIf14Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SramIf15Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg3SramIf15Ppd {
@@ -11659,9 +11659,9 @@ impl From<Pdruncfg3SramIf15Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SramIf16Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg3SramIf16Ppd {
@@ -11690,9 +11690,9 @@ impl From<Pdruncfg3SramIf16Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SramIf17Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg3SramIf17Ppd {
@@ -11721,9 +11721,9 @@ impl From<Pdruncfg3SramIf17Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SramIf18Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg3SramIf18Ppd {
@@ -11752,9 +11752,9 @@ impl From<Pdruncfg3SramIf18Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SramIf19Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg3SramIf19Ppd {
@@ -11783,9 +11783,9 @@ impl From<Pdruncfg3SramIf19Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SramIf1Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg3SramIf1Ppd {
@@ -11814,9 +11814,9 @@ impl From<Pdruncfg3SramIf1Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SramIf20Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg3SramIf20Ppd {
@@ -11845,9 +11845,9 @@ impl From<Pdruncfg3SramIf20Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SramIf21Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg3SramIf21Ppd {
@@ -11876,9 +11876,9 @@ impl From<Pdruncfg3SramIf21Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SramIf22Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg3SramIf22Ppd {
@@ -11907,9 +11907,9 @@ impl From<Pdruncfg3SramIf22Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SramIf23Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg3SramIf23Ppd {
@@ -11938,9 +11938,9 @@ impl From<Pdruncfg3SramIf23Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SramIf24Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg3SramIf24Ppd {
@@ -11969,9 +11969,9 @@ impl From<Pdruncfg3SramIf24Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SramIf25Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg3SramIf25Ppd {
@@ -12000,9 +12000,9 @@ impl From<Pdruncfg3SramIf25Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SramIf26Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg3SramIf26Ppd {
@@ -12031,9 +12031,9 @@ impl From<Pdruncfg3SramIf26Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SramIf27Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg3SramIf27Ppd {
@@ -12062,9 +12062,9 @@ impl From<Pdruncfg3SramIf27Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SramIf28Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg3SramIf28Ppd {
@@ -12093,9 +12093,9 @@ impl From<Pdruncfg3SramIf28Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SramIf29Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg3SramIf29Ppd {
@@ -12124,9 +12124,9 @@ impl From<Pdruncfg3SramIf29Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SramIf2Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg3SramIf2Ppd {
@@ -12155,9 +12155,9 @@ impl From<Pdruncfg3SramIf2Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SramIf3Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg3SramIf3Ppd {
@@ -12186,9 +12186,9 @@ impl From<Pdruncfg3SramIf3Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SramIf4Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg3SramIf4Ppd {
@@ -12217,9 +12217,9 @@ impl From<Pdruncfg3SramIf4Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SramIf5Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg3SramIf5Ppd {
@@ -12248,9 +12248,9 @@ impl From<Pdruncfg3SramIf5Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SramIf6Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg3SramIf6Ppd {
@@ -12279,9 +12279,9 @@ impl From<Pdruncfg3SramIf6Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SramIf7Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg3SramIf7Ppd {
@@ -12310,9 +12310,9 @@ impl From<Pdruncfg3SramIf7Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SramIf8Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg3SramIf8Ppd {
@@ -12341,9 +12341,9 @@ impl From<Pdruncfg3SramIf8Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdruncfg3SramIf9Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdruncfg3SramIf9Ppd {
@@ -12372,9 +12372,9 @@ impl From<Pdruncfg3SramIf9Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg0AcmpPd {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg0AcmpPd {
@@ -12403,9 +12403,9 @@ impl From<Pdsleepcfg0AcmpPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg0AdcLp {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg0AdcLp {
@@ -12434,9 +12434,9 @@ impl From<Pdsleepcfg0AdcLp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg0AdcPd {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg0AdcPd {
@@ -12465,9 +12465,9 @@ impl From<Pdsleepcfg0AdcPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg0AdctempsnsPd {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg0AdctempsnsPd {
@@ -12496,9 +12496,9 @@ impl From<Pdsleepcfg0AdctempsnsPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg0AudpllanaPd {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg0AudpllanaPd {
@@ -12527,9 +12527,9 @@ impl From<Pdsleepcfg0AudpllanaPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg0AudpllldoPd {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg0AudpllldoPd {
@@ -12558,9 +12558,9 @@ impl From<Pdsleepcfg0AudpllldoPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg0FbbPd {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg0FbbPd {
@@ -12589,9 +12589,9 @@ impl From<Pdsleepcfg0FbbPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg0FfroPd {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg0FfroPd {
@@ -12620,9 +12620,9 @@ impl From<Pdsleepcfg0FfroPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg0Hspad0RefPd {
-    #[doc = "High Speed Pad VREF Enabled"]
+    #[doc = "High Speed Pad VREF Enabled."]
     ENABLED = 0x0,
-    #[doc = "High Speed Pad VREF in Power Down"]
+    #[doc = "High Speed Pad VREF in Power Down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg0Hspad0RefPd {
@@ -12651,9 +12651,9 @@ impl From<Pdsleepcfg0Hspad0RefPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg0Hspad0VdetLp {
-    #[doc = "High Speed Pad VDET in Normal Mode"]
+    #[doc = "High Speed Pad VDET in Normal Mode."]
     NORMAL_MODE = 0x0,
-    #[doc = "High Speed Pad VDET in Sleep Mode"]
+    #[doc = "High Speed Pad VDET in Sleep Mode."]
     SLEEP_MODE = 0x01,
 }
 impl Pdsleepcfg0Hspad0VdetLp {
@@ -12682,9 +12682,9 @@ impl From<Pdsleepcfg0Hspad0VdetLp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg0Hspad2RefPd {
-    #[doc = "High Speed Pad VREF Enabled"]
+    #[doc = "High Speed Pad VREF Enabled."]
     ENABLED = 0x0,
-    #[doc = "High Speed Pad VREF in Power Down"]
+    #[doc = "High Speed Pad VREF in Power Down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg0Hspad2RefPd {
@@ -12713,9 +12713,9 @@ impl From<Pdsleepcfg0Hspad2RefPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg0Hspad2VdetLp {
-    #[doc = "High Speed Pad VDET in Normal Mode"]
+    #[doc = "High Speed Pad VDET in Normal Mode."]
     NORMAL_MODE = 0x0,
-    #[doc = "High Speed Pad VDET in Sleep Mode"]
+    #[doc = "High Speed Pad VDET in Sleep Mode."]
     SLEEP_MODE = 0x01,
 }
 impl Pdsleepcfg0Hspad2VdetLp {
@@ -12744,9 +12744,9 @@ impl From<Pdsleepcfg0Hspad2VdetLp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg0Hvd1v8Pd {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg0Hvd1v8Pd {
@@ -12775,9 +12775,9 @@ impl From<Pdsleepcfg0Hvd1v8Pd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg0HvdcorePd {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg0HvdcorePd {
@@ -12806,9 +12806,9 @@ impl From<Pdsleepcfg0HvdcorePd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg0LposcPd {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg0LposcPd {
@@ -12837,7 +12837,7 @@ impl From<Pdsleepcfg0LposcPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg0LvdcoreLp {
-    #[doc = "LVD0V85 HP Mode"]
+    #[doc = "LVD0V85 HP Mode."]
     HP_MODE = 0x0,
     #[doc = "LVD0V85 LP Mode."]
     LP_MODE = 0x01,
@@ -12868,9 +12868,9 @@ impl From<Pdsleepcfg0LvdcoreLp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg0PmcrefLp {
-    #[doc = "PMCREF HP Mode"]
+    #[doc = "PMCREF HP Mode."]
     HP_MODE = 0x0,
-    #[doc = "PMCREF LP Mode"]
+    #[doc = "PMCREF LP Mode."]
     LP_MODE = 0x01,
 }
 impl Pdsleepcfg0PmcrefLp {
@@ -12961,9 +12961,9 @@ impl From<Pdsleepcfg0PmicMode1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg0PorcoreLp {
-    #[doc = "LVD0V6 HP Mode"]
+    #[doc = "LVD0V6 HP Mode."]
     HP_MODE = 0x0,
-    #[doc = "LVD0V6 LP Mode"]
+    #[doc = "LVD0V6 LP Mode."]
     LP_MODE = 0x01,
 }
 impl Pdsleepcfg0PorcoreLp {
@@ -12992,9 +12992,9 @@ impl From<Pdsleepcfg0PorcoreLp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg0RbbPd {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg0RbbPd {
@@ -13023,9 +13023,9 @@ impl From<Pdsleepcfg0RbbPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg0SfroPd {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg0SfroPd {
@@ -13054,9 +13054,9 @@ impl From<Pdsleepcfg0SfroPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg0SyspllanaPd {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg0SyspllanaPd {
@@ -13085,9 +13085,9 @@ impl From<Pdsleepcfg0SyspllanaPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg0SyspllldoPd {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg0SyspllldoPd {
@@ -13116,9 +13116,9 @@ impl From<Pdsleepcfg0SyspllldoPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg0SysxtalPd {
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg0SysxtalPd {
@@ -13147,9 +13147,9 @@ impl From<Pdsleepcfg0SysxtalPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg0VddcoreregLp {
-    #[doc = "VDDCOREREG HP Mode"]
+    #[doc = "VDDCOREREG HP Mode."]
     HP_MODE = 0x0,
-    #[doc = "LP Mode"]
+    #[doc = "LP Mode."]
     LP_MODE = 0x01,
 }
 impl Pdsleepcfg0VddcoreregLp {
@@ -13178,9 +13178,9 @@ impl From<Pdsleepcfg0VddcoreregLp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg1CasperSramApd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg1CasperSramApd {
@@ -13209,9 +13209,9 @@ impl From<Pdsleepcfg1CasperSramApd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg1CasperSramPpd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg1CasperSramPpd {
@@ -13240,9 +13240,9 @@ impl From<Pdsleepcfg1CasperSramPpd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg1DspcacheRegfApd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg1DspcacheRegfApd {
@@ -13271,9 +13271,9 @@ impl From<Pdsleepcfg1DspcacheRegfApd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg1DspcacheRegfPpd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg1DspcacheRegfPpd {
@@ -13302,9 +13302,9 @@ impl From<Pdsleepcfg1DspcacheRegfPpd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg1DsptcmRegfApd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg1DsptcmRegfApd {
@@ -13333,9 +13333,9 @@ impl From<Pdsleepcfg1DsptcmRegfApd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg1DsptcmRegfPpd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg1DsptcmRegfPpd {
@@ -13364,9 +13364,9 @@ impl From<Pdsleepcfg1DsptcmRegfPpd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg1FlexspiSramApd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg1FlexspiSramApd {
@@ -13395,9 +13395,9 @@ impl From<Pdsleepcfg1FlexspiSramApd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg1FlexspiSramPpd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg1FlexspiSramPpd {
@@ -13426,9 +13426,9 @@ impl From<Pdsleepcfg1FlexspiSramPpd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg1PqSramApd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg1PqSramApd {
@@ -13457,9 +13457,9 @@ impl From<Pdsleepcfg1PqSramApd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg1PqSramPpd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg1PqSramPpd {
@@ -13488,9 +13488,9 @@ impl From<Pdsleepcfg1PqSramPpd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg1RomPd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg1RomPd {
@@ -13519,7 +13519,7 @@ impl From<Pdsleepcfg1RomPd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg1SramSleep {
-    #[doc = "RAM Normal Mode"]
+    #[doc = "RAM Normal Mode."]
     NORMAL_MODE = 0x0,
     #[doc = "RAM Sleep Mode."]
     SLEEP_MODE = 0x01,
@@ -13550,9 +13550,9 @@ impl From<Pdsleepcfg1SramSleep> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg1UsbhsSramApd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg1UsbhsSramApd {
@@ -13581,9 +13581,9 @@ impl From<Pdsleepcfg1UsbhsSramApd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg1UsbhsSramPpd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg1UsbhsSramPpd {
@@ -13612,9 +13612,9 @@ impl From<Pdsleepcfg1UsbhsSramPpd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg1Usdhc0SramApd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg1Usdhc0SramApd {
@@ -13643,9 +13643,9 @@ impl From<Pdsleepcfg1Usdhc0SramApd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg1Usdhc0SramPpd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg1Usdhc0SramPpd {
@@ -13674,9 +13674,9 @@ impl From<Pdsleepcfg1Usdhc0SramPpd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg1Usdhc1SramApd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg1Usdhc1SramApd {
@@ -13705,9 +13705,9 @@ impl From<Pdsleepcfg1Usdhc1SramApd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg1Usdhc1SramPpd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg1Usdhc1SramPpd {
@@ -13736,9 +13736,9 @@ impl From<Pdsleepcfg1Usdhc1SramPpd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg2SramIf0Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg2SramIf0Apd {
@@ -13767,9 +13767,9 @@ impl From<Pdsleepcfg2SramIf0Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg2SramIf10Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg2SramIf10Apd {
@@ -13798,9 +13798,9 @@ impl From<Pdsleepcfg2SramIf10Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg2SramIf11Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg2SramIf11Apd {
@@ -13829,9 +13829,9 @@ impl From<Pdsleepcfg2SramIf11Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg2SramIf12Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg2SramIf12Apd {
@@ -13860,9 +13860,9 @@ impl From<Pdsleepcfg2SramIf12Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg2SramIf13Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg2SramIf13Apd {
@@ -13891,9 +13891,9 @@ impl From<Pdsleepcfg2SramIf13Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg2SramIf14Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg2SramIf14Apd {
@@ -13922,9 +13922,9 @@ impl From<Pdsleepcfg2SramIf14Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg2SramIf15Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg2SramIf15Apd {
@@ -13953,9 +13953,9 @@ impl From<Pdsleepcfg2SramIf15Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg2SramIf16Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg2SramIf16Apd {
@@ -13984,9 +13984,9 @@ impl From<Pdsleepcfg2SramIf16Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg2SramIf17Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg2SramIf17Apd {
@@ -14015,9 +14015,9 @@ impl From<Pdsleepcfg2SramIf17Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg2SramIf18Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg2SramIf18Apd {
@@ -14046,9 +14046,9 @@ impl From<Pdsleepcfg2SramIf18Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg2SramIf19Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg2SramIf19Apd {
@@ -14077,9 +14077,9 @@ impl From<Pdsleepcfg2SramIf19Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg2SramIf1Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg2SramIf1Apd {
@@ -14108,9 +14108,9 @@ impl From<Pdsleepcfg2SramIf1Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg2SramIf20Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg2SramIf20Apd {
@@ -14139,9 +14139,9 @@ impl From<Pdsleepcfg2SramIf20Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg2SramIf21Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg2SramIf21Apd {
@@ -14170,9 +14170,9 @@ impl From<Pdsleepcfg2SramIf21Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg2SramIf22Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg2SramIf22Apd {
@@ -14201,9 +14201,9 @@ impl From<Pdsleepcfg2SramIf22Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg2SramIf23Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg2SramIf23Apd {
@@ -14232,9 +14232,9 @@ impl From<Pdsleepcfg2SramIf23Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg2SramIf24Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg2SramIf24Apd {
@@ -14263,9 +14263,9 @@ impl From<Pdsleepcfg2SramIf24Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg2SramIf25Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg2SramIf25Apd {
@@ -14294,9 +14294,9 @@ impl From<Pdsleepcfg2SramIf25Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg2SramIf26Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg2SramIf26Apd {
@@ -14325,9 +14325,9 @@ impl From<Pdsleepcfg2SramIf26Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg2SramIf27Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg2SramIf27Apd {
@@ -14356,9 +14356,9 @@ impl From<Pdsleepcfg2SramIf27Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg2SramIf28Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg2SramIf28Apd {
@@ -14387,9 +14387,9 @@ impl From<Pdsleepcfg2SramIf28Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg2SramIf29Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg2SramIf29Apd {
@@ -14418,9 +14418,9 @@ impl From<Pdsleepcfg2SramIf29Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg2SramIf2Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg2SramIf2Apd {
@@ -14449,9 +14449,9 @@ impl From<Pdsleepcfg2SramIf2Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg2SramIf3Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg2SramIf3Apd {
@@ -14480,9 +14480,9 @@ impl From<Pdsleepcfg2SramIf3Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg2SramIf4Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg2SramIf4Apd {
@@ -14511,9 +14511,9 @@ impl From<Pdsleepcfg2SramIf4Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg2SramIf5Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg2SramIf5Apd {
@@ -14542,9 +14542,9 @@ impl From<Pdsleepcfg2SramIf5Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg2SramIf6Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg2SramIf6Apd {
@@ -14573,9 +14573,9 @@ impl From<Pdsleepcfg2SramIf6Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg2SramIf7Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg2SramIf7Apd {
@@ -14604,9 +14604,9 @@ impl From<Pdsleepcfg2SramIf7Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg2SramIf8Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg2SramIf8Apd {
@@ -14635,9 +14635,9 @@ impl From<Pdsleepcfg2SramIf8Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg2SramIf9Apd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg2SramIf9Apd {
@@ -14666,9 +14666,9 @@ impl From<Pdsleepcfg2SramIf9Apd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg3SramIf0Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg3SramIf0Ppd {
@@ -14697,9 +14697,9 @@ impl From<Pdsleepcfg3SramIf0Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg3SramIf10Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg3SramIf10Ppd {
@@ -14728,9 +14728,9 @@ impl From<Pdsleepcfg3SramIf10Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg3SramIf11Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg3SramIf11Ppd {
@@ -14759,9 +14759,9 @@ impl From<Pdsleepcfg3SramIf11Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg3SramIf12Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg3SramIf12Ppd {
@@ -14790,9 +14790,9 @@ impl From<Pdsleepcfg3SramIf12Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg3SramIf13Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg3SramIf13Ppd {
@@ -14821,9 +14821,9 @@ impl From<Pdsleepcfg3SramIf13Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg3SramIf14Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg3SramIf14Ppd {
@@ -14852,9 +14852,9 @@ impl From<Pdsleepcfg3SramIf14Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg3SramIf15Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg3SramIf15Ppd {
@@ -14883,9 +14883,9 @@ impl From<Pdsleepcfg3SramIf15Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg3SramIf16Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg3SramIf16Ppd {
@@ -14914,9 +14914,9 @@ impl From<Pdsleepcfg3SramIf16Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg3SramIf17Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg3SramIf17Ppd {
@@ -14945,9 +14945,9 @@ impl From<Pdsleepcfg3SramIf17Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg3SramIf18Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg3SramIf18Ppd {
@@ -14976,9 +14976,9 @@ impl From<Pdsleepcfg3SramIf18Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg3SramIf19Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg3SramIf19Ppd {
@@ -15007,9 +15007,9 @@ impl From<Pdsleepcfg3SramIf19Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg3SramIf1Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg3SramIf1Ppd {
@@ -15038,9 +15038,9 @@ impl From<Pdsleepcfg3SramIf1Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg3SramIf20Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg3SramIf20Ppd {
@@ -15069,9 +15069,9 @@ impl From<Pdsleepcfg3SramIf20Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg3SramIf21Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg3SramIf21Ppd {
@@ -15100,9 +15100,9 @@ impl From<Pdsleepcfg3SramIf21Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg3SramIf22Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg3SramIf22Ppd {
@@ -15131,9 +15131,9 @@ impl From<Pdsleepcfg3SramIf22Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg3SramIf23Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg3SramIf23Ppd {
@@ -15162,9 +15162,9 @@ impl From<Pdsleepcfg3SramIf23Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg3SramIf24Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg3SramIf24Ppd {
@@ -15193,9 +15193,9 @@ impl From<Pdsleepcfg3SramIf24Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg3SramIf25Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg3SramIf25Ppd {
@@ -15224,9 +15224,9 @@ impl From<Pdsleepcfg3SramIf25Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg3SramIf26Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg3SramIf26Ppd {
@@ -15255,9 +15255,9 @@ impl From<Pdsleepcfg3SramIf26Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg3SramIf27Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg3SramIf27Ppd {
@@ -15286,9 +15286,9 @@ impl From<Pdsleepcfg3SramIf27Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg3SramIf28Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg3SramIf28Ppd {
@@ -15317,9 +15317,9 @@ impl From<Pdsleepcfg3SramIf28Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg3SramIf29Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg3SramIf29Ppd {
@@ -15348,9 +15348,9 @@ impl From<Pdsleepcfg3SramIf29Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg3SramIf2Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg3SramIf2Ppd {
@@ -15379,9 +15379,9 @@ impl From<Pdsleepcfg3SramIf2Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg3SramIf3Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg3SramIf3Ppd {
@@ -15410,9 +15410,9 @@ impl From<Pdsleepcfg3SramIf3Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg3SramIf4Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg3SramIf4Ppd {
@@ -15441,9 +15441,9 @@ impl From<Pdsleepcfg3SramIf4Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg3SramIf5Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg3SramIf5Ppd {
@@ -15472,9 +15472,9 @@ impl From<Pdsleepcfg3SramIf5Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg3SramIf6Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg3SramIf6Ppd {
@@ -15503,9 +15503,9 @@ impl From<Pdsleepcfg3SramIf6Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg3SramIf7Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg3SramIf7Ppd {
@@ -15534,9 +15534,9 @@ impl From<Pdsleepcfg3SramIf7Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg3SramIf8Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg3SramIf8Ppd {
@@ -15565,9 +15565,9 @@ impl From<Pdsleepcfg3SramIf8Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdsleepcfg3SramIf9Ppd {
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLED = 0x0,
-    #[doc = "power down"]
+    #[doc = "power down."]
     POWER_DOWN = 0x01,
 }
 impl Pdsleepcfg3SramIf9Ppd {
@@ -15596,9 +15596,9 @@ impl From<Pdsleepcfg3SramIf9Ppd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pmc {
-    #[doc = "no effect"]
+    #[doc = "no effect."]
     NO_EFFECT = 0x0,
-    #[doc = "override"]
+    #[doc = "override."]
     OVERRIDE = 0x01,
 }
 impl Pmc {
@@ -15720,9 +15720,9 @@ impl From<Rbbkeepst> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sdio0 {
-    #[doc = "no effect"]
+    #[doc = "no effect."]
     NO_EFFECT = 0x0,
-    #[doc = "override"]
+    #[doc = "override."]
     OVERRIDE = 0x01,
 }
 impl Sdio0 {
@@ -15751,9 +15751,9 @@ impl From<Sdio0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sdio1 {
-    #[doc = "no effect"]
+    #[doc = "no effect."]
     NO_EFFECT = 0x0,
-    #[doc = "override"]
+    #[doc = "override."]
     OVERRIDE = 0x01,
 }
 impl Sdio1 {
@@ -15782,9 +15782,9 @@ impl From<Sdio1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SramIf0 {
-    #[doc = "Enable Auto-Clk"]
+    #[doc = "Enable Auto-Clk."]
     ENABLED = 0x0,
-    #[doc = "Disable Auto-Clk"]
+    #[doc = "Disable Auto-Clk."]
     DISABLED = 0x01,
 }
 impl SramIf0 {
@@ -15813,9 +15813,9 @@ impl From<SramIf0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SramIf1 {
-    #[doc = "Enable Auto-Clk"]
+    #[doc = "Enable Auto-Clk."]
     ENABLED = 0x0,
-    #[doc = "Disable Auto-Clk"]
+    #[doc = "Disable Auto-Clk."]
     DISABLED = 0x01,
 }
 impl SramIf1 {
@@ -15844,9 +15844,9 @@ impl From<SramIf1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SramIf10 {
-    #[doc = "Enable Auto-Clk"]
+    #[doc = "Enable Auto-Clk."]
     ENABLED = 0x0,
-    #[doc = "Disable Auto-Clk"]
+    #[doc = "Disable Auto-Clk."]
     DISABLED = 0x01,
 }
 impl SramIf10 {
@@ -15875,9 +15875,9 @@ impl From<SramIf10> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SramIf11 {
-    #[doc = "Enable Auto-Clk"]
+    #[doc = "Enable Auto-Clk."]
     ENABLED = 0x0,
-    #[doc = "Disable Auto-Clk"]
+    #[doc = "Disable Auto-Clk."]
     DISABLED = 0x01,
 }
 impl SramIf11 {
@@ -15906,9 +15906,9 @@ impl From<SramIf11> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SramIf12 {
-    #[doc = "Enable Auto-Clk"]
+    #[doc = "Enable Auto-Clk."]
     ENABLED = 0x0,
-    #[doc = "Disable Auto-Clk"]
+    #[doc = "Disable Auto-Clk."]
     DISABLED = 0x01,
 }
 impl SramIf12 {
@@ -15937,9 +15937,9 @@ impl From<SramIf12> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SramIf13 {
-    #[doc = "Enable Auto-Clk"]
+    #[doc = "Enable Auto-Clk."]
     ENABLED = 0x0,
-    #[doc = "Disable Auto-Clk"]
+    #[doc = "Disable Auto-Clk."]
     DISABLED = 0x01,
 }
 impl SramIf13 {
@@ -15968,9 +15968,9 @@ impl From<SramIf13> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SramIf14 {
-    #[doc = "Enable Auto-Clk"]
+    #[doc = "Enable Auto-Clk."]
     ENABLED = 0x0,
-    #[doc = "Disable Auto-Clk"]
+    #[doc = "Disable Auto-Clk."]
     DISABLED = 0x01,
 }
 impl SramIf14 {
@@ -15999,9 +15999,9 @@ impl From<SramIf14> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SramIf15 {
-    #[doc = "Enable Auto-Clk"]
+    #[doc = "Enable Auto-Clk."]
     ENABLED = 0x0,
-    #[doc = "Disable Auto-Clk"]
+    #[doc = "Disable Auto-Clk."]
     DISABLED = 0x01,
 }
 impl SramIf15 {
@@ -16030,9 +16030,9 @@ impl From<SramIf15> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SramIf16 {
-    #[doc = "Enable Auto-Clk"]
+    #[doc = "Enable Auto-Clk."]
     ENABLED = 0x0,
-    #[doc = "Disable Auto-Clk"]
+    #[doc = "Disable Auto-Clk."]
     DISABLED = 0x01,
 }
 impl SramIf16 {
@@ -16061,9 +16061,9 @@ impl From<SramIf16> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SramIf17 {
-    #[doc = "Enable Auto-Clk"]
+    #[doc = "Enable Auto-Clk."]
     ENABLED = 0x0,
-    #[doc = "Disable Auto-Clk"]
+    #[doc = "Disable Auto-Clk."]
     DISABLED = 0x01,
 }
 impl SramIf17 {
@@ -16092,9 +16092,9 @@ impl From<SramIf17> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SramIf19 {
-    #[doc = "Enable Auto-Clk"]
+    #[doc = "Enable Auto-Clk."]
     ENABLED = 0x0,
-    #[doc = "Disable Auto-Clk"]
+    #[doc = "Disable Auto-Clk."]
     DISABLED = 0x01,
 }
 impl SramIf19 {
@@ -16123,9 +16123,9 @@ impl From<SramIf19> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SramIf2 {
-    #[doc = "Enable Auto-Clk"]
+    #[doc = "Enable Auto-Clk."]
     ENABLED = 0x0,
-    #[doc = "Disable Auto-Clk"]
+    #[doc = "Disable Auto-Clk."]
     DISABLED = 0x01,
 }
 impl SramIf2 {
@@ -16154,9 +16154,9 @@ impl From<SramIf2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SramIf20 {
-    #[doc = "Enable Auto-Clk"]
+    #[doc = "Enable Auto-Clk."]
     ENABLED = 0x0,
-    #[doc = "Disable Auto-Clk"]
+    #[doc = "Disable Auto-Clk."]
     DISABLED = 0x01,
 }
 impl SramIf20 {
@@ -16185,9 +16185,9 @@ impl From<SramIf20> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SramIf21 {
-    #[doc = "Enable Auto-Clk"]
+    #[doc = "Enable Auto-Clk."]
     ENABLED = 0x0,
-    #[doc = "Disable Auto-Clk"]
+    #[doc = "Disable Auto-Clk."]
     DISABLED = 0x01,
 }
 impl SramIf21 {
@@ -16216,9 +16216,9 @@ impl From<SramIf21> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SramIf22 {
-    #[doc = "Enable Auto-Clk"]
+    #[doc = "Enable Auto-Clk."]
     ENABLED = 0x0,
-    #[doc = "Disable Auto-Clk"]
+    #[doc = "Disable Auto-Clk."]
     DISABLED = 0x01,
 }
 impl SramIf22 {
@@ -16247,9 +16247,9 @@ impl From<SramIf22> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SramIf23 {
-    #[doc = "Enable Auto-Clk"]
+    #[doc = "Enable Auto-Clk."]
     ENABLED = 0x0,
-    #[doc = "Disable Auto-Clk"]
+    #[doc = "Disable Auto-Clk."]
     DISABLED = 0x01,
 }
 impl SramIf23 {
@@ -16278,9 +16278,9 @@ impl From<SramIf23> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SramIf24 {
-    #[doc = "Enable Auto-Clk"]
+    #[doc = "Enable Auto-Clk."]
     ENABLED = 0x0,
-    #[doc = "Disable Auto-Clk"]
+    #[doc = "Disable Auto-Clk."]
     DISABLED = 0x01,
 }
 impl SramIf24 {
@@ -16309,9 +16309,9 @@ impl From<SramIf24> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SramIf25 {
-    #[doc = "Enable Auto-Clk"]
+    #[doc = "Enable Auto-Clk."]
     ENABLED = 0x0,
-    #[doc = "Disable Auto-Clk"]
+    #[doc = "Disable Auto-Clk."]
     DISABLED = 0x01,
 }
 impl SramIf25 {
@@ -16340,9 +16340,9 @@ impl From<SramIf25> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SramIf26 {
-    #[doc = "Enable Auto-Clk"]
+    #[doc = "Enable Auto-Clk."]
     ENABLED = 0x0,
-    #[doc = "Disable Auto-Clk"]
+    #[doc = "Disable Auto-Clk."]
     DISABLED = 0x01,
 }
 impl SramIf26 {
@@ -16371,9 +16371,9 @@ impl From<SramIf26> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SramIf27 {
-    #[doc = "Enable Auto-Clk"]
+    #[doc = "Enable Auto-Clk."]
     ENABLED = 0x0,
-    #[doc = "Disable Auto-Clk"]
+    #[doc = "Disable Auto-Clk."]
     DISABLED = 0x01,
 }
 impl SramIf27 {
@@ -16402,9 +16402,9 @@ impl From<SramIf27> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SramIf28 {
-    #[doc = "Enable Auto-Clk"]
+    #[doc = "Enable Auto-Clk."]
     ENABLED = 0x0,
-    #[doc = "Disable Auto-Clk"]
+    #[doc = "Disable Auto-Clk."]
     DISABLED = 0x01,
 }
 impl SramIf28 {
@@ -16433,9 +16433,9 @@ impl From<SramIf28> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SramIf29 {
-    #[doc = "Enable Auto-Clk"]
+    #[doc = "Enable Auto-Clk."]
     ENABLED = 0x0,
-    #[doc = "Disable Auto-Clk"]
+    #[doc = "Disable Auto-Clk."]
     DISABLED = 0x01,
 }
 impl SramIf29 {
@@ -16464,9 +16464,9 @@ impl From<SramIf29> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SramIf3 {
-    #[doc = "Enable Auto-Clk"]
+    #[doc = "Enable Auto-Clk."]
     ENABLED = 0x0,
-    #[doc = "Disable Auto-Clk"]
+    #[doc = "Disable Auto-Clk."]
     DISABLED = 0x01,
 }
 impl SramIf3 {
@@ -16495,9 +16495,9 @@ impl From<SramIf3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SramIf4 {
-    #[doc = "Enable Auto-Clk"]
+    #[doc = "Enable Auto-Clk."]
     ENABLED = 0x0,
-    #[doc = "Disable Auto-Clk"]
+    #[doc = "Disable Auto-Clk."]
     DISABLED = 0x01,
 }
 impl SramIf4 {
@@ -16526,9 +16526,9 @@ impl From<SramIf4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SramIf5 {
-    #[doc = "Enable Auto-Clk"]
+    #[doc = "Enable Auto-Clk."]
     ENABLED = 0x0,
-    #[doc = "Disable Auto-Clk"]
+    #[doc = "Disable Auto-Clk."]
     DISABLED = 0x01,
 }
 impl SramIf5 {
@@ -16557,9 +16557,9 @@ impl From<SramIf5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SramIf6 {
-    #[doc = "Enable Auto-Clk"]
+    #[doc = "Enable Auto-Clk."]
     ENABLED = 0x0,
-    #[doc = "Disable Auto-Clk"]
+    #[doc = "Disable Auto-Clk."]
     DISABLED = 0x01,
 }
 impl SramIf6 {
@@ -16588,9 +16588,9 @@ impl From<SramIf6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SramIf7 {
-    #[doc = "Enable Auto-Clk"]
+    #[doc = "Enable Auto-Clk."]
     ENABLED = 0x0,
-    #[doc = "Disable Auto-Clk"]
+    #[doc = "Disable Auto-Clk."]
     DISABLED = 0x01,
 }
 impl SramIf7 {
@@ -16619,9 +16619,9 @@ impl From<SramIf7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SramIf8 {
-    #[doc = "Enable Auto-Clk"]
+    #[doc = "Enable Auto-Clk."]
     ENABLED = 0x0,
-    #[doc = "Disable Auto-Clk"]
+    #[doc = "Disable Auto-Clk."]
     DISABLED = 0x01,
 }
 impl SramIf8 {
@@ -16650,9 +16650,9 @@ impl From<SramIf8> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SramIf9 {
-    #[doc = "Enable Auto-Clk"]
+    #[doc = "Enable Auto-Clk."]
     ENABLED = 0x0,
-    #[doc = "Disable Auto-Clk"]
+    #[doc = "Disable Auto-Clk."]
     DISABLED = 0x01,
 }
 impl SramIf9 {
@@ -16681,9 +16681,9 @@ impl From<SramIf9> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0ClrAcmp {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN0 Bit"]
+    #[doc = "Clears the START_EN0 Bit."]
     CLR_START_EN0 = 0x01,
 }
 impl Starten0ClrAcmp {
@@ -16712,9 +16712,9 @@ impl From<Starten0ClrAcmp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0ClrAdc0 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN0 Bit"]
+    #[doc = "Clears the START_EN0 Bit."]
     CLR_START_EN0 = 0x01,
 }
 impl Starten0ClrAdc0 {
@@ -16743,9 +16743,9 @@ impl From<Starten0ClrAdc0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0ClrCt32bit0 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN0 Bit"]
+    #[doc = "Clears the START_EN0 Bit."]
     CLR_START_EN0 = 0x01,
 }
 impl Starten0ClrCt32bit0 {
@@ -16774,9 +16774,9 @@ impl From<Starten0ClrCt32bit0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0ClrCt32bit1 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN0 Bit"]
+    #[doc = "Clears the START_EN0 Bit."]
     CLR_START_EN0 = 0x01,
 }
 impl Starten0ClrCt32bit1 {
@@ -16805,9 +16805,9 @@ impl From<Starten0ClrCt32bit1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0ClrCt32bit3 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN0 Bit"]
+    #[doc = "Clears the START_EN0 Bit."]
     CLR_START_EN0 = 0x01,
 }
 impl Starten0ClrCt32bit3 {
@@ -16836,9 +16836,9 @@ impl From<Starten0ClrCt32bit3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0ClrDmac0 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN0 Bit"]
+    #[doc = "Clears the START_EN0 Bit."]
     CLR_START_EN0 = 0x01,
 }
 impl Starten0ClrDmac0 {
@@ -16867,9 +16867,9 @@ impl From<Starten0ClrDmac0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0ClrDmic0 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN0 Bit"]
+    #[doc = "Clears the START_EN0 Bit."]
     CLR_START_EN0 = 0x01,
 }
 impl Starten0ClrDmic0 {
@@ -16898,9 +16898,9 @@ impl From<Starten0ClrDmic0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0ClrFlexcomm0 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN0 Bit"]
+    #[doc = "Clears the START_EN0 Bit."]
     CLR_START_EN0 = 0x01,
 }
 impl Starten0ClrFlexcomm0 {
@@ -16929,9 +16929,9 @@ impl From<Starten0ClrFlexcomm0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0ClrFlexcomm1 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN0 Bit"]
+    #[doc = "Clears the START_EN0 Bit."]
     CLR_START_EN0 = 0x01,
 }
 impl Starten0ClrFlexcomm1 {
@@ -16960,9 +16960,9 @@ impl From<Starten0ClrFlexcomm1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0ClrFlexcomm14 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN0 Bit"]
+    #[doc = "Clears the START_EN0 Bit."]
     CLR_START_EN0 = 0x01,
 }
 impl Starten0ClrFlexcomm14 {
@@ -16991,9 +16991,9 @@ impl From<Starten0ClrFlexcomm14> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0ClrFlexcomm15 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN0 Bit"]
+    #[doc = "Clears the START_EN0 Bit."]
     CLR_START_EN0 = 0x01,
 }
 impl Starten0ClrFlexcomm15 {
@@ -17022,9 +17022,9 @@ impl From<Starten0ClrFlexcomm15> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0ClrFlexcomm2 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN0 Bit"]
+    #[doc = "Clears the START_EN0 Bit."]
     CLR_START_EN0 = 0x01,
 }
 impl Starten0ClrFlexcomm2 {
@@ -17053,9 +17053,9 @@ impl From<Starten0ClrFlexcomm2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0ClrFlexcomm3 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN0 Bit"]
+    #[doc = "Clears the START_EN0 Bit."]
     CLR_START_EN0 = 0x01,
 }
 impl Starten0ClrFlexcomm3 {
@@ -17084,9 +17084,9 @@ impl From<Starten0ClrFlexcomm3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0ClrFlexcomm4 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN0 Bit"]
+    #[doc = "Clears the START_EN0 Bit."]
     CLR_START_EN0 = 0x01,
 }
 impl Starten0ClrFlexcomm4 {
@@ -17115,9 +17115,9 @@ impl From<Starten0ClrFlexcomm4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0ClrFlexcomm5 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN0 Bit"]
+    #[doc = "Clears the START_EN0 Bit."]
     CLR_START_EN0 = 0x01,
 }
 impl Starten0ClrFlexcomm5 {
@@ -17146,9 +17146,9 @@ impl From<Starten0ClrFlexcomm5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0ClrGpioInt0Irq0 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN0 Bit"]
+    #[doc = "Clears the START_EN0 Bit."]
     CLR_START_EN0 = 0x01,
 }
 impl Starten0ClrGpioInt0Irq0 {
@@ -17177,9 +17177,9 @@ impl From<Starten0ClrGpioInt0Irq0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0ClrGpioInt0Irq1 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN0 Bit"]
+    #[doc = "Clears the START_EN0 Bit."]
     CLR_START_EN0 = 0x01,
 }
 impl Starten0ClrGpioInt0Irq1 {
@@ -17208,9 +17208,9 @@ impl From<Starten0ClrGpioInt0Irq1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0ClrGpioInt0Irq2 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN0 Bit"]
+    #[doc = "Clears the START_EN0 Bit."]
     CLR_START_EN0 = 0x01,
 }
 impl Starten0ClrGpioInt0Irq2 {
@@ -17239,9 +17239,9 @@ impl From<Starten0ClrGpioInt0Irq2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0ClrGpioInt0Irq3 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN0 Bit"]
+    #[doc = "Clears the START_EN0 Bit."]
     CLR_START_EN0 = 0x01,
 }
 impl Starten0ClrGpioInt0Irq3 {
@@ -17270,9 +17270,9 @@ impl From<Starten0ClrGpioInt0Irq3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0ClrHwvad0 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN0 Bit"]
+    #[doc = "Clears the START_EN0 Bit."]
     CLR_START_EN0 = 0x01,
 }
 impl Starten0ClrHwvad0 {
@@ -17301,9 +17301,9 @@ impl From<Starten0ClrHwvad0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0ClrHypervisor {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN0 Bit"]
+    #[doc = "Clears the START_EN0 Bit."]
     CLR_START_EN0 = 0x01,
 }
 impl Starten0ClrHypervisor {
@@ -17332,9 +17332,9 @@ impl From<Starten0ClrHypervisor> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0ClrMrt0 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN0 Bit"]
+    #[doc = "Clears the START_EN0 Bit."]
     CLR_START_EN0 = 0x01,
 }
 impl Starten0ClrMrt0 {
@@ -17363,9 +17363,9 @@ impl From<Starten0ClrMrt0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0ClrNshsgpioInt0 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN0 Bit"]
+    #[doc = "Clears the START_EN0 Bit."]
     CLR_START_EN0 = 0x01,
 }
 impl Starten0ClrNshsgpioInt0 {
@@ -17394,9 +17394,9 @@ impl From<Starten0ClrNshsgpioInt0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0ClrNshsgpioInt1 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN0 Bit"]
+    #[doc = "Clears the START_EN0 Bit."]
     CLR_START_EN0 = 0x01,
 }
 impl Starten0ClrNshsgpioInt1 {
@@ -17425,9 +17425,9 @@ impl From<Starten0ClrNshsgpioInt1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0ClrRng {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN0 Bit"]
+    #[doc = "Clears the START_EN0 Bit."]
     CLR_START_EN0 = 0x01,
 }
 impl Starten0ClrRng {
@@ -17456,9 +17456,9 @@ impl From<Starten0ClrRng> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0ClrSct0 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN0 Bit"]
+    #[doc = "Clears the START_EN0 Bit."]
     CLR_START_EN0 = 0x01,
 }
 impl Starten0ClrSct0 {
@@ -17487,9 +17487,9 @@ impl From<Starten0ClrSct0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0ClrSecureviolation {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN0 Bit"]
+    #[doc = "Clears the START_EN0 Bit."]
     CLR_START_EN0 = 0x01,
 }
 impl Starten0ClrSecureviolation {
@@ -17518,9 +17518,9 @@ impl From<Starten0ClrSecureviolation> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0ClrUtick0 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN0 Bit"]
+    #[doc = "Clears the START_EN0 Bit."]
     CLR_START_EN0 = 0x01,
 }
 impl Starten0ClrUtick0 {
@@ -17549,9 +17549,9 @@ impl From<Starten0ClrUtick0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0ClrWdt0 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN0 Bit"]
+    #[doc = "Clears the START_EN0 Bit."]
     CLR_START_EN0 = 0x01,
 }
 impl Starten0ClrWdt0 {
@@ -17580,9 +17580,9 @@ impl From<Starten0ClrWdt0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0SetAcmp {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN0 Bit"]
+    #[doc = "Sets the START_EN0 Bit."]
     SET_START_EN0 = 0x01,
 }
 impl Starten0SetAcmp {
@@ -17611,9 +17611,9 @@ impl From<Starten0SetAcmp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0SetAdc0 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN0 Bit"]
+    #[doc = "Sets the START_EN0 Bit."]
     SET_START_EN0 = 0x01,
 }
 impl Starten0SetAdc0 {
@@ -17642,9 +17642,9 @@ impl From<Starten0SetAdc0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0SetCt32bit0 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN0 Bit"]
+    #[doc = "Sets the START_EN0 Bit."]
     SET_START_EN0 = 0x01,
 }
 impl Starten0SetCt32bit0 {
@@ -17673,9 +17673,9 @@ impl From<Starten0SetCt32bit0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0SetCt32bit1 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN0 Bit"]
+    #[doc = "Sets the START_EN0 Bit."]
     SET_START_EN0 = 0x01,
 }
 impl Starten0SetCt32bit1 {
@@ -17704,9 +17704,9 @@ impl From<Starten0SetCt32bit1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0SetCt32bit3 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN0 Bit"]
+    #[doc = "Sets the START_EN0 Bit."]
     SET_START_EN0 = 0x01,
 }
 impl Starten0SetCt32bit3 {
@@ -17735,9 +17735,9 @@ impl From<Starten0SetCt32bit3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0SetDmac0 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN0 Bit"]
+    #[doc = "Sets the START_EN0 Bit."]
     SET_START_EN0 = 0x01,
 }
 impl Starten0SetDmac0 {
@@ -17766,9 +17766,9 @@ impl From<Starten0SetDmac0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0SetDmic0 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN0 Bit"]
+    #[doc = "Sets the START_EN0 Bit."]
     SET_START_EN0 = 0x01,
 }
 impl Starten0SetDmic0 {
@@ -17797,9 +17797,9 @@ impl From<Starten0SetDmic0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0SetFlexcomm0 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN0 Bit"]
+    #[doc = "Sets the START_EN0 Bit."]
     SET_START_EN0 = 0x01,
 }
 impl Starten0SetFlexcomm0 {
@@ -17828,9 +17828,9 @@ impl From<Starten0SetFlexcomm0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0SetFlexcomm1 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN0 Bit"]
+    #[doc = "Sets the START_EN0 Bit."]
     SET_START_EN0 = 0x01,
 }
 impl Starten0SetFlexcomm1 {
@@ -17859,9 +17859,9 @@ impl From<Starten0SetFlexcomm1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0SetFlexcomm14 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN0 Bit"]
+    #[doc = "Sets the START_EN0 Bit."]
     SET_START_EN0 = 0x01,
 }
 impl Starten0SetFlexcomm14 {
@@ -17890,9 +17890,9 @@ impl From<Starten0SetFlexcomm14> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0SetFlexcomm15 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN0 Bit"]
+    #[doc = "Sets the START_EN0 Bit."]
     SET_START_EN0 = 0x01,
 }
 impl Starten0SetFlexcomm15 {
@@ -17921,9 +17921,9 @@ impl From<Starten0SetFlexcomm15> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0SetFlexcomm2 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN0 Bit"]
+    #[doc = "Sets the START_EN0 Bit."]
     SET_START_EN0 = 0x01,
 }
 impl Starten0SetFlexcomm2 {
@@ -17952,9 +17952,9 @@ impl From<Starten0SetFlexcomm2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0SetFlexcomm3 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN0 Bit"]
+    #[doc = "Sets the START_EN0 Bit."]
     SET_START_EN0 = 0x01,
 }
 impl Starten0SetFlexcomm3 {
@@ -17983,9 +17983,9 @@ impl From<Starten0SetFlexcomm3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0SetFlexcomm4 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN0 Bit"]
+    #[doc = "Sets the START_EN0 Bit."]
     SET_START_EN0 = 0x01,
 }
 impl Starten0SetFlexcomm4 {
@@ -18014,9 +18014,9 @@ impl From<Starten0SetFlexcomm4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0SetFlexcomm5 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN0 Bit"]
+    #[doc = "Sets the START_EN0 Bit."]
     SET_START_EN0 = 0x01,
 }
 impl Starten0SetFlexcomm5 {
@@ -18045,9 +18045,9 @@ impl From<Starten0SetFlexcomm5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0SetGpioInt0Irq0 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN0 Bit"]
+    #[doc = "Sets the START_EN0 Bit."]
     SET_START_EN0 = 0x01,
 }
 impl Starten0SetGpioInt0Irq0 {
@@ -18076,9 +18076,9 @@ impl From<Starten0SetGpioInt0Irq0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0SetGpioInt0Irq1 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN0 Bit"]
+    #[doc = "Sets the START_EN0 Bit."]
     SET_START_EN0 = 0x01,
 }
 impl Starten0SetGpioInt0Irq1 {
@@ -18107,9 +18107,9 @@ impl From<Starten0SetGpioInt0Irq1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0SetGpioInt0Irq2 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN0 Bit"]
+    #[doc = "Sets the START_EN0 Bit."]
     SET_START_EN0 = 0x01,
 }
 impl Starten0SetGpioInt0Irq2 {
@@ -18138,9 +18138,9 @@ impl From<Starten0SetGpioInt0Irq2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0SetGpioInt0Irq3 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN0 Bit"]
+    #[doc = "Sets the START_EN0 Bit."]
     SET_START_EN0 = 0x01,
 }
 impl Starten0SetGpioInt0Irq3 {
@@ -18169,9 +18169,9 @@ impl From<Starten0SetGpioInt0Irq3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0SetHwvad0 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN0 Bit"]
+    #[doc = "Sets the START_EN0 Bit."]
     SET_START_EN0 = 0x01,
 }
 impl Starten0SetHwvad0 {
@@ -18200,9 +18200,9 @@ impl From<Starten0SetHwvad0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0SetHypervisor {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN0 Bit"]
+    #[doc = "Sets the START_EN0 Bit."]
     SET_START_EN0 = 0x01,
 }
 impl Starten0SetHypervisor {
@@ -18231,9 +18231,9 @@ impl From<Starten0SetHypervisor> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0SetMrt0 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN0 Bit"]
+    #[doc = "Sets the START_EN0 Bit."]
     SET_START_EN0 = 0x01,
 }
 impl Starten0SetMrt0 {
@@ -18262,9 +18262,9 @@ impl From<Starten0SetMrt0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0SetNshsgpioInt0 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN0 Bit"]
+    #[doc = "Sets the START_EN0 Bit."]
     SET_START_EN0 = 0x01,
 }
 impl Starten0SetNshsgpioInt0 {
@@ -18293,9 +18293,9 @@ impl From<Starten0SetNshsgpioInt0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0SetNshsgpioInt1 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN0 Bit"]
+    #[doc = "Sets the START_EN0 Bit."]
     SET_START_EN0 = 0x01,
 }
 impl Starten0SetNshsgpioInt1 {
@@ -18324,9 +18324,9 @@ impl From<Starten0SetNshsgpioInt1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0SetRng {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN0 Bit"]
+    #[doc = "Sets the START_EN0 Bit."]
     SET_START_EN0 = 0x01,
 }
 impl Starten0SetRng {
@@ -18355,9 +18355,9 @@ impl From<Starten0SetRng> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0SetSct0 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN0 Bit"]
+    #[doc = "Sets the START_EN0 Bit."]
     SET_START_EN0 = 0x01,
 }
 impl Starten0SetSct0 {
@@ -18386,9 +18386,9 @@ impl From<Starten0SetSct0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0SetSecureviolation {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN0 Bit"]
+    #[doc = "Sets the START_EN0 Bit."]
     SET_START_EN0 = 0x01,
 }
 impl Starten0SetSecureviolation {
@@ -18417,9 +18417,9 @@ impl From<Starten0SetSecureviolation> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0SetUtick0 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN0 Bit"]
+    #[doc = "Sets the START_EN0 Bit."]
     SET_START_EN0 = 0x01,
 }
 impl Starten0SetUtick0 {
@@ -18448,9 +18448,9 @@ impl From<Starten0SetUtick0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten0SetWdt0 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN0 Bit"]
+    #[doc = "Sets the START_EN0 Bit."]
     SET_START_EN0 = 0x01,
 }
 impl Starten0SetWdt0 {
@@ -18479,9 +18479,9 @@ impl From<Starten0SetWdt0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1ClrCasper {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN1 Bit"]
+    #[doc = "Clears the START_EN1 Bit."]
     CLR_START_EN1 = 0x01,
 }
 impl Starten1ClrCasper {
@@ -18510,9 +18510,9 @@ impl From<Starten1ClrCasper> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1ClrCt32bit2 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN1 Bit"]
+    #[doc = "Clears the START_EN1 Bit."]
     CLR_START_EN1 = 0x01,
 }
 impl Starten1ClrCt32bit2 {
@@ -18541,9 +18541,9 @@ impl From<Starten1ClrCt32bit2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1ClrCt32bit4 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN1 Bit"]
+    #[doc = "Clears the START_EN1 Bit."]
     CLR_START_EN1 = 0x01,
 }
 impl Starten1ClrCt32bit4 {
@@ -18572,9 +18572,9 @@ impl From<Starten1ClrCt32bit4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1ClrDmac1 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN1 Bit"]
+    #[doc = "Clears the START_EN1 Bit."]
     CLR_START_EN1 = 0x01,
 }
 impl Starten1ClrDmac1 {
@@ -18603,9 +18603,9 @@ impl From<Starten1ClrDmac1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1ClrFlexcomm6 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN1 Bit"]
+    #[doc = "Clears the START_EN1 Bit."]
     CLR_START_EN1 = 0x01,
 }
 impl Starten1ClrFlexcomm6 {
@@ -18634,9 +18634,9 @@ impl From<Starten1ClrFlexcomm6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1ClrFlexcomm7 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN1 Bit"]
+    #[doc = "Clears the START_EN1 Bit."]
     CLR_START_EN1 = 0x01,
 }
 impl Starten1ClrFlexcomm7 {
@@ -18665,9 +18665,9 @@ impl From<Starten1ClrFlexcomm7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1ClrFlexspi {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN1 Bit"]
+    #[doc = "Clears the START_EN1 Bit."]
     CLR_START_EN1 = 0x01,
 }
 impl Starten1ClrFlexspi {
@@ -18696,9 +18696,9 @@ impl From<Starten1ClrFlexspi> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1ClrGpioInt0Irq4 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN1 Bit"]
+    #[doc = "Clears the START_EN1 Bit."]
     CLR_START_EN1 = 0x01,
 }
 impl Starten1ClrGpioInt0Irq4 {
@@ -18727,9 +18727,9 @@ impl From<Starten1ClrGpioInt0Irq4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1ClrGpioInt0Irq5 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN1 Bit"]
+    #[doc = "Clears the START_EN1 Bit."]
     CLR_START_EN1 = 0x01,
 }
 impl Starten1ClrGpioInt0Irq5 {
@@ -18758,9 +18758,9 @@ impl From<Starten1ClrGpioInt0Irq5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1ClrGpioInt0Irq6 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN1 Bit"]
+    #[doc = "Clears the START_EN1 Bit."]
     CLR_START_EN1 = 0x01,
 }
 impl Starten1ClrGpioInt0Irq6 {
@@ -18789,9 +18789,9 @@ impl From<Starten1ClrGpioInt0Irq6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1ClrGpioInt0Irq7 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN1 Bit"]
+    #[doc = "Clears the START_EN1 Bit."]
     CLR_START_EN1 = 0x01,
 }
 impl Starten1ClrGpioInt0Irq7 {
@@ -18820,9 +18820,9 @@ impl From<Starten1ClrGpioInt0Irq7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1ClrI3c0 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN1 Bit"]
+    #[doc = "Clears the START_EN1 Bit."]
     CLR_START_EN1 = 0x01,
 }
 impl Starten1ClrI3c0 {
@@ -18851,9 +18851,9 @@ impl From<Starten1ClrI3c0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1ClrMu {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN1 Bit"]
+    #[doc = "Clears the START_EN1 Bit."]
     CLR_START_EN1 = 0x01,
 }
 impl Starten1ClrMu {
@@ -18882,9 +18882,9 @@ impl From<Starten1ClrMu> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1ClrOsEventTimerWu {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN1 Bit"]
+    #[doc = "Clears the START_EN1 Bit."]
     CLR_START_EN1 = 0x01,
 }
 impl Starten1ClrOsEventTimerWu {
@@ -18913,9 +18913,9 @@ impl From<Starten1ClrOsEventTimerWu> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1ClrPmic {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN1 Bit"]
+    #[doc = "Clears the START_EN1 Bit."]
     CLR_START_EN1 = 0x01,
 }
 impl Starten1ClrPmic {
@@ -18944,9 +18944,9 @@ impl From<Starten1ClrPmic> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1ClrPowerquad {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN1 Bit"]
+    #[doc = "Clears the START_EN1 Bit."]
     CLR_START_EN1 = 0x01,
 }
 impl Starten1ClrPowerquad {
@@ -18975,9 +18975,9 @@ impl From<Starten1ClrPowerquad> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1ClrPuf {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN1 Bit"]
+    #[doc = "Clears the START_EN1 Bit."]
     CLR_START_EN1 = 0x01,
 }
 impl Starten1ClrPuf {
@@ -19006,9 +19006,9 @@ impl From<Starten1ClrPuf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1ClrRtcLite0AlarmOrWakeup {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN1 Bit"]
+    #[doc = "Clears the START_EN1 Bit."]
     CLR_START_EN1 = 0x01,
 }
 impl Starten1ClrRtcLite0AlarmOrWakeup {
@@ -19037,9 +19037,9 @@ impl From<Starten1ClrRtcLite0AlarmOrWakeup> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1ClrSdio0 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN1 Bit"]
+    #[doc = "Clears the START_EN1 Bit."]
     CLR_START_EN1 = 0x01,
 }
 impl Starten1ClrSdio0 {
@@ -19068,9 +19068,9 @@ impl From<Starten1ClrSdio0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1ClrSdio1 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN1 Bit"]
+    #[doc = "Clears the START_EN1 Bit."]
     CLR_START_EN1 = 0x01,
 }
 impl Starten1ClrSdio1 {
@@ -19099,9 +19099,9 @@ impl From<Starten1ClrSdio1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1ClrSha {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN1 Bit"]
+    #[doc = "Clears the START_EN1 Bit."]
     CLR_START_EN1 = 0x01,
 }
 impl Starten1ClrSha {
@@ -19130,9 +19130,9 @@ impl From<Starten1ClrSha> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1ClrShsgpioInt0 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN1 Bit"]
+    #[doc = "Clears the START_EN1 Bit."]
     CLR_START_EN1 = 0x01,
 }
 impl Starten1ClrShsgpioInt0 {
@@ -19161,9 +19161,9 @@ impl From<Starten1ClrShsgpioInt0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1ClrShsgpioInt1 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN1 Bit"]
+    #[doc = "Clears the START_EN1 Bit."]
     CLR_START_EN1 = 0x01,
 }
 impl Starten1ClrShsgpioInt1 {
@@ -19192,9 +19192,9 @@ impl From<Starten1ClrShsgpioInt1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1ClrUsbIrq {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN1 Bit"]
+    #[doc = "Clears the START_EN1 Bit."]
     CLR_START_EN1 = 0x01,
 }
 impl Starten1ClrUsbIrq {
@@ -19223,9 +19223,9 @@ impl From<Starten1ClrUsbIrq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1ClrUsbNeedclk {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the START_EN1 Bit"]
+    #[doc = "Clears the START_EN1 Bit."]
     CLR_START_EN1 = 0x01,
 }
 impl Starten1ClrUsbNeedclk {
@@ -19254,9 +19254,9 @@ impl From<Starten1ClrUsbNeedclk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1SetCasper {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN1 Bit"]
+    #[doc = "Sets the START_EN1 Bit."]
     SET_START_EN1 = 0x01,
 }
 impl Starten1SetCasper {
@@ -19285,9 +19285,9 @@ impl From<Starten1SetCasper> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1SetCt32bit2 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN1 Bit"]
+    #[doc = "Sets the START_EN1 Bit."]
     SET_START_EN1 = 0x01,
 }
 impl Starten1SetCt32bit2 {
@@ -19316,9 +19316,9 @@ impl From<Starten1SetCt32bit2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1SetCt32bit4 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN1 Bit"]
+    #[doc = "Sets the START_EN1 Bit."]
     SET_START_EN1 = 0x01,
 }
 impl Starten1SetCt32bit4 {
@@ -19347,9 +19347,9 @@ impl From<Starten1SetCt32bit4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1SetDmac1 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN1 Bit"]
+    #[doc = "Sets the START_EN1 Bit."]
     SET_START_EN1 = 0x01,
 }
 impl Starten1SetDmac1 {
@@ -19378,9 +19378,9 @@ impl From<Starten1SetDmac1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1SetFlexcomm6 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN1 Bit"]
+    #[doc = "Sets the START_EN1 Bit."]
     SET_START_EN1 = 0x01,
 }
 impl Starten1SetFlexcomm6 {
@@ -19409,9 +19409,9 @@ impl From<Starten1SetFlexcomm6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1SetFlexcomm7 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN1 Bit"]
+    #[doc = "Sets the START_EN1 Bit."]
     SET_START_EN1 = 0x01,
 }
 impl Starten1SetFlexcomm7 {
@@ -19440,9 +19440,9 @@ impl From<Starten1SetFlexcomm7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1SetFlexspi {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN1 Bit"]
+    #[doc = "Sets the START_EN1 Bit."]
     SET_START_EN1 = 0x01,
 }
 impl Starten1SetFlexspi {
@@ -19471,9 +19471,9 @@ impl From<Starten1SetFlexspi> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1SetGpioInt0Irq4 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN1 Bit"]
+    #[doc = "Sets the START_EN1 Bit."]
     SET_START_EN1 = 0x01,
 }
 impl Starten1SetGpioInt0Irq4 {
@@ -19502,9 +19502,9 @@ impl From<Starten1SetGpioInt0Irq4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1SetGpioInt0Irq5 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN1 Bit"]
+    #[doc = "Sets the START_EN1 Bit."]
     SET_START_EN1 = 0x01,
 }
 impl Starten1SetGpioInt0Irq5 {
@@ -19533,9 +19533,9 @@ impl From<Starten1SetGpioInt0Irq5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1SetGpioInt0Irq6 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN1 Bit"]
+    #[doc = "Sets the START_EN1 Bit."]
     SET_START_EN1 = 0x01,
 }
 impl Starten1SetGpioInt0Irq6 {
@@ -19564,9 +19564,9 @@ impl From<Starten1SetGpioInt0Irq6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1SetGpioInt0Irq7 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN1 Bit"]
+    #[doc = "Sets the START_EN1 Bit."]
     SET_START_EN1 = 0x01,
 }
 impl Starten1SetGpioInt0Irq7 {
@@ -19595,9 +19595,9 @@ impl From<Starten1SetGpioInt0Irq7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1SetI3c0 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN1 Bit"]
+    #[doc = "Sets the START_EN1 Bit."]
     SET_START_EN1 = 0x01,
 }
 impl Starten1SetI3c0 {
@@ -19626,9 +19626,9 @@ impl From<Starten1SetI3c0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1SetMu {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN1 Bit"]
+    #[doc = "Sets the START_EN1 Bit."]
     SET_START_EN1 = 0x01,
 }
 impl Starten1SetMu {
@@ -19657,9 +19657,9 @@ impl From<Starten1SetMu> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1SetOsEventTimerWu {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN1 Bit"]
+    #[doc = "Sets the START_EN1 Bit."]
     SET_START_EN1 = 0x01,
 }
 impl Starten1SetOsEventTimerWu {
@@ -19688,9 +19688,9 @@ impl From<Starten1SetOsEventTimerWu> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1SetPmic {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN1 Bit"]
+    #[doc = "Sets the START_EN1 Bit."]
     SET_START_EN1 = 0x01,
 }
 impl Starten1SetPmic {
@@ -19719,9 +19719,9 @@ impl From<Starten1SetPmic> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1SetPowerquad {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN1 Bit"]
+    #[doc = "Sets the START_EN1 Bit."]
     SET_START_EN1 = 0x01,
 }
 impl Starten1SetPowerquad {
@@ -19750,9 +19750,9 @@ impl From<Starten1SetPowerquad> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1SetPuf {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN1 Bit"]
+    #[doc = "Sets the START_EN1 Bit."]
     SET_START_EN1 = 0x01,
 }
 impl Starten1SetPuf {
@@ -19781,9 +19781,9 @@ impl From<Starten1SetPuf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1SetRtcLite0AlarmOrWakeup {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN1 Bit"]
+    #[doc = "Sets the START_EN1 Bit."]
     SET_START_EN1 = 0x01,
 }
 impl Starten1SetRtcLite0AlarmOrWakeup {
@@ -19812,9 +19812,9 @@ impl From<Starten1SetRtcLite0AlarmOrWakeup> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1SetSdio0 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN1 Bit"]
+    #[doc = "Sets the START_EN1 Bit."]
     SET_START_EN1 = 0x01,
 }
 impl Starten1SetSdio0 {
@@ -19843,9 +19843,9 @@ impl From<Starten1SetSdio0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1SetSdio1 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN1 Bit"]
+    #[doc = "Sets the START_EN1 Bit."]
     SET_START_EN1 = 0x01,
 }
 impl Starten1SetSdio1 {
@@ -19874,9 +19874,9 @@ impl From<Starten1SetSdio1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1SetSha {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN1 Bit"]
+    #[doc = "Sets the START_EN1 Bit."]
     SET_START_EN1 = 0x01,
 }
 impl Starten1SetSha {
@@ -19905,9 +19905,9 @@ impl From<Starten1SetSha> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1SetShsgpioInt0 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN1 Bit"]
+    #[doc = "Sets the START_EN1 Bit."]
     SET_START_EN1 = 0x01,
 }
 impl Starten1SetShsgpioInt0 {
@@ -19936,9 +19936,9 @@ impl From<Starten1SetShsgpioInt0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1SetShsgpioInt1 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN1 Bit"]
+    #[doc = "Sets the START_EN1 Bit."]
     SET_START_EN1 = 0x01,
 }
 impl Starten1SetShsgpioInt1 {
@@ -19967,9 +19967,9 @@ impl From<Starten1SetShsgpioInt1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1SetUsbIrq {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN1 Bit"]
+    #[doc = "Sets the START_EN1 Bit."]
     SET_START_EN1 = 0x01,
 }
 impl Starten1SetUsbIrq {
@@ -19998,9 +19998,9 @@ impl From<Starten1SetUsbIrq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Starten1SetUsbNeedclk {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the START_EN1 Bit"]
+    #[doc = "Sets the START_EN1 Bit."]
     SET_START_EN1 = 0x01,
 }
 impl Starten1SetUsbNeedclk {
@@ -20029,9 +20029,9 @@ impl From<Starten1SetUsbNeedclk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usbhsphy {
-    #[doc = "no effect"]
+    #[doc = "no effect."]
     NO_EFFECT = 0x0,
-    #[doc = "override"]
+    #[doc = "override."]
     OVERRIDE = 0x01,
 }
 impl Usbhsphy {

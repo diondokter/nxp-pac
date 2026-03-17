@@ -1,4 +1,4 @@
-#[doc = "SCT capture register of capture channel"]
+#[doc = "SCT capture register of capture channel."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cap0(pub u32);
@@ -53,7 +53,7 @@ impl defmt::Format for Cap0 {
         )
     }
 }
-#[doc = "SCT capture register of capture channel"]
+#[doc = "SCT capture register of capture channel."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cap1(pub u32);
@@ -108,7 +108,7 @@ impl defmt::Format for Cap1 {
         )
     }
 }
-#[doc = "SCT capture register of capture channel"]
+#[doc = "SCT capture register of capture channel."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cap10(pub u32);
@@ -163,7 +163,7 @@ impl defmt::Format for Cap10 {
         )
     }
 }
-#[doc = "SCT capture register of capture channel"]
+#[doc = "SCT capture register of capture channel."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cap11(pub u32);
@@ -218,7 +218,7 @@ impl defmt::Format for Cap11 {
         )
     }
 }
-#[doc = "SCT capture register of capture channel"]
+#[doc = "SCT capture register of capture channel."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cap12(pub u32);
@@ -273,7 +273,7 @@ impl defmt::Format for Cap12 {
         )
     }
 }
-#[doc = "SCT capture register of capture channel"]
+#[doc = "SCT capture register of capture channel."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cap13(pub u32);
@@ -328,7 +328,7 @@ impl defmt::Format for Cap13 {
         )
     }
 }
-#[doc = "SCT capture register of capture channel"]
+#[doc = "SCT capture register of capture channel."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cap14(pub u32);
@@ -383,7 +383,7 @@ impl defmt::Format for Cap14 {
         )
     }
 }
-#[doc = "SCT capture register of capture channel"]
+#[doc = "SCT capture register of capture channel."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cap15(pub u32);
@@ -438,7 +438,7 @@ impl defmt::Format for Cap15 {
         )
     }
 }
-#[doc = "SCT capture register of capture channel"]
+#[doc = "SCT capture register of capture channel."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cap2(pub u32);
@@ -493,7 +493,7 @@ impl defmt::Format for Cap2 {
         )
     }
 }
-#[doc = "SCT capture register of capture channel"]
+#[doc = "SCT capture register of capture channel."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cap3(pub u32);
@@ -548,7 +548,7 @@ impl defmt::Format for Cap3 {
         )
     }
 }
-#[doc = "SCT capture register of capture channel"]
+#[doc = "SCT capture register of capture channel."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cap4(pub u32);
@@ -603,7 +603,7 @@ impl defmt::Format for Cap4 {
         )
     }
 }
-#[doc = "SCT capture register of capture channel"]
+#[doc = "SCT capture register of capture channel."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cap5(pub u32);
@@ -658,7 +658,7 @@ impl defmt::Format for Cap5 {
         )
     }
 }
-#[doc = "SCT capture register of capture channel"]
+#[doc = "SCT capture register of capture channel."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cap6(pub u32);
@@ -713,7 +713,7 @@ impl defmt::Format for Cap6 {
         )
     }
 }
-#[doc = "SCT capture register of capture channel"]
+#[doc = "SCT capture register of capture channel."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cap7(pub u32);
@@ -768,7 +768,7 @@ impl defmt::Format for Cap7 {
         )
     }
 }
-#[doc = "SCT capture register of capture channel"]
+#[doc = "SCT capture register of capture channel."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cap8(pub u32);
@@ -823,7 +823,7 @@ impl defmt::Format for Cap8 {
         )
     }
 }
-#[doc = "SCT capture register of capture channel"]
+#[doc = "SCT capture register of capture channel."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cap9(pub u32);
@@ -878,7 +878,7 @@ impl defmt::Format for Cap9 {
         )
     }
 }
-#[doc = "SCT capture control register"]
+#[doc = "SCT capture control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Capctrl0(pub u32);
@@ -933,7 +933,7 @@ impl defmt::Format for Capctrl0 {
         )
     }
 }
-#[doc = "SCT capture control register"]
+#[doc = "SCT capture control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Capctrl1(pub u32);
@@ -988,7 +988,7 @@ impl defmt::Format for Capctrl1 {
         )
     }
 }
-#[doc = "SCT capture control register"]
+#[doc = "SCT capture control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Capctrl10(pub u32);
@@ -1043,7 +1043,7 @@ impl defmt::Format for Capctrl10 {
         )
     }
 }
-#[doc = "SCT capture control register"]
+#[doc = "SCT capture control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Capctrl11(pub u32);
@@ -1098,7 +1098,7 @@ impl defmt::Format for Capctrl11 {
         )
     }
 }
-#[doc = "SCT capture control register"]
+#[doc = "SCT capture control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Capctrl12(pub u32);
@@ -1153,7 +1153,7 @@ impl defmt::Format for Capctrl12 {
         )
     }
 }
-#[doc = "SCT capture control register"]
+#[doc = "SCT capture control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Capctrl13(pub u32);
@@ -1208,7 +1208,7 @@ impl defmt::Format for Capctrl13 {
         )
     }
 }
-#[doc = "SCT capture control register"]
+#[doc = "SCT capture control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Capctrl14(pub u32);
@@ -1263,7 +1263,7 @@ impl defmt::Format for Capctrl14 {
         )
     }
 }
-#[doc = "SCT capture control register"]
+#[doc = "SCT capture control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Capctrl15(pub u32);
@@ -1318,7 +1318,7 @@ impl defmt::Format for Capctrl15 {
         )
     }
 }
-#[doc = "SCT capture control register"]
+#[doc = "SCT capture control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Capctrl2(pub u32);
@@ -1373,7 +1373,7 @@ impl defmt::Format for Capctrl2 {
         )
     }
 }
-#[doc = "SCT capture control register"]
+#[doc = "SCT capture control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Capctrl3(pub u32);
@@ -1428,7 +1428,7 @@ impl defmt::Format for Capctrl3 {
         )
     }
 }
-#[doc = "SCT capture control register"]
+#[doc = "SCT capture control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Capctrl4(pub u32);
@@ -1483,7 +1483,7 @@ impl defmt::Format for Capctrl4 {
         )
     }
 }
-#[doc = "SCT capture control register"]
+#[doc = "SCT capture control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Capctrl5(pub u32);
@@ -1538,7 +1538,7 @@ impl defmt::Format for Capctrl5 {
         )
     }
 }
-#[doc = "SCT capture control register"]
+#[doc = "SCT capture control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Capctrl6(pub u32);
@@ -1593,7 +1593,7 @@ impl defmt::Format for Capctrl6 {
         )
     }
 }
-#[doc = "SCT capture control register"]
+#[doc = "SCT capture control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Capctrl7(pub u32);
@@ -1648,7 +1648,7 @@ impl defmt::Format for Capctrl7 {
         )
     }
 }
-#[doc = "SCT capture control register"]
+#[doc = "SCT capture control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Capctrl8(pub u32);
@@ -1703,7 +1703,7 @@ impl defmt::Format for Capctrl8 {
         )
     }
 }
-#[doc = "SCT capture control register"]
+#[doc = "SCT capture control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Capctrl9(pub u32);
@@ -1758,7 +1758,7 @@ impl defmt::Format for Capctrl9 {
         )
     }
 }
-#[doc = "SCT conflict interrupt enable register"]
+#[doc = "SCT conflict interrupt enable register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Conen(pub u32);
@@ -1793,31 +1793,31 @@ impl defmt::Format for Conen {
         defmt::write!(f, "Conen {{ ncen: {=u16:?} }}", self.ncen())
     }
 }
-#[doc = "SCT configuration register"]
+#[doc = "SCT configuration register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Config(pub u32);
 impl Config {
-    #[doc = "SCT operation"]
+    #[doc = "SCT operation."]
     #[must_use]
     #[inline(always)]
     pub const fn unify(&self) -> super::vals::Unify {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Unify::from_bits(val as u8)
     }
-    #[doc = "SCT operation"]
+    #[doc = "SCT operation."]
     #[inline(always)]
     pub const fn set_unify(&mut self, val: super::vals::Unify) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "SCT clock mode"]
+    #[doc = "SCT clock mode."]
     #[must_use]
     #[inline(always)]
     pub const fn clkmode(&self) -> super::vals::Clkmode {
         let val = (self.0 >> 1usize) & 0x03;
         super::vals::Clkmode::from_bits(val as u8)
     }
-    #[doc = "SCT clock mode"]
+    #[doc = "SCT clock mode."]
     #[inline(always)]
     pub const fn set_clkmode(&mut self, val: super::vals::Clkmode) {
         self.0 = (self.0 & !(0x03 << 1usize)) | (((val.to_bits() as u32) & 0x03) << 1usize);
@@ -1932,7 +1932,7 @@ impl defmt::Format for Config {
         )
     }
 }
-#[doc = "SCT conflict flag register"]
+#[doc = "SCT conflict flag register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Conflag(pub u32);
@@ -2001,7 +2001,7 @@ impl defmt::Format for Conflag {
         )
     }
 }
-#[doc = "SCT counter register"]
+#[doc = "SCT counter register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Count(pub u32);
@@ -2056,7 +2056,7 @@ impl defmt::Format for Count {
         )
     }
 }
-#[doc = "SCT control register"]
+#[doc = "SCT control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl(pub u32);
@@ -2109,14 +2109,14 @@ impl Ctrl {
     pub const fn set_clrctr_l(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "L or unified counter direction select"]
+    #[doc = "L or unified counter direction select."]
     #[must_use]
     #[inline(always)]
     pub const fn bidir_l(&self) -> super::vals::BidirL {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::BidirL::from_bits(val as u8)
     }
-    #[doc = "L or unified counter direction select"]
+    #[doc = "L or unified counter direction select."]
     #[inline(always)]
     pub const fn set_bidir_l(&mut self, val: super::vals::BidirL) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
@@ -2181,14 +2181,14 @@ impl Ctrl {
     pub const fn set_clrctr_h(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Direction select"]
+    #[doc = "Direction select."]
     #[must_use]
     #[inline(always)]
     pub const fn bidir_h(&self) -> super::vals::BidirH {
         let val = (self.0 >> 20usize) & 0x01;
         super::vals::BidirH::from_bits(val as u8)
     }
-    #[doc = "Direction select"]
+    #[doc = "Direction select."]
     #[inline(always)]
     pub const fn set_bidir_h(&mut self, val: super::vals::BidirH) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
@@ -2251,7 +2251,7 @@ impl defmt::Format for Ctrl {
         )
     }
 }
-#[doc = "SCT DMA request 0 register"]
+#[doc = "SCT DMA request 0 register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dmareq0(pub u32);
@@ -2320,7 +2320,7 @@ impl defmt::Format for Dmareq0 {
         )
     }
 }
-#[doc = "SCT DMA request 1 register"]
+#[doc = "SCT DMA request 1 register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dmareq1(pub u32);
@@ -2389,7 +2389,7 @@ impl defmt::Format for Dmareq1 {
         )
     }
 }
-#[doc = "SCT event control register 0"]
+#[doc = "SCT event control register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct EvCtrl(pub u32);
@@ -2418,14 +2418,14 @@ impl EvCtrl {
     pub const fn set_hevent(&mut self, val: super::vals::Hevent) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
-    #[doc = "Input/output select"]
+    #[doc = "Input/output select."]
     #[must_use]
     #[inline(always)]
     pub const fn outsel(&self) -> super::vals::Outsel {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::Outsel::from_bits(val as u8)
     }
-    #[doc = "Input/output select"]
+    #[doc = "Input/output select."]
     #[inline(always)]
     pub const fn set_outsel(&mut self, val: super::vals::Outsel) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
@@ -2442,14 +2442,14 @@ impl EvCtrl {
     pub const fn set_iosel(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 6usize)) | (((val as u32) & 0x0f) << 6usize);
     }
-    #[doc = "Selects the I/O condition for event n. (The detection of edges on outputs lag the conditions that switch the outputs by one SCT clock). In order to guarantee proper edge/state detection, an input must have a minimum pulse width of at least one SCT clock period ."]
+    #[doc = "Selects the I/O condition for event n. (The detection of edges on outputs lag the conditions that switch the outputs by one SCT clock). In order to guarantee proper edge/state detection, an input must have a minimum pulse width of at least one SCT clock period."]
     #[must_use]
     #[inline(always)]
     pub const fn iocond(&self) -> super::vals::Iocond {
         let val = (self.0 >> 10usize) & 0x03;
         super::vals::Iocond::from_bits(val as u8)
     }
-    #[doc = "Selects the I/O condition for event n. (The detection of edges on outputs lag the conditions that switch the outputs by one SCT clock). In order to guarantee proper edge/state detection, an input must have a minimum pulse width of at least one SCT clock period ."]
+    #[doc = "Selects the I/O condition for event n. (The detection of edges on outputs lag the conditions that switch the outputs by one SCT clock). In order to guarantee proper edge/state detection, an input must have a minimum pulse width of at least one SCT clock period."]
     #[inline(always)]
     pub const fn set_iocond(&mut self, val: super::vals::Iocond) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u32) & 0x03) << 10usize);
@@ -2556,7 +2556,7 @@ impl defmt::Format for EvCtrl {
         )
     }
 }
-#[doc = "SCT event state register 0"]
+#[doc = "SCT event state register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct EvState(pub u32);
@@ -2593,7 +2593,7 @@ impl defmt::Format for EvState {
         defmt::write!(f, "EvState {{ statemskn: {=u16:?} }}", self.statemskn())
     }
 }
-#[doc = "SCT event interrupt enable register"]
+#[doc = "SCT event interrupt enable register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Even(pub u32);
@@ -2628,7 +2628,7 @@ impl defmt::Format for Even {
         defmt::write!(f, "Even {{ ien: {=u16:?} }}", self.ien())
     }
 }
-#[doc = "SCT event flag register"]
+#[doc = "SCT event flag register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Evflag(pub u32);
@@ -2665,7 +2665,7 @@ impl defmt::Format for Evflag {
         defmt::write!(f, "Evflag {{ flag: {=u16:?} }}", self.flag())
     }
 }
-#[doc = "SCT halt event select register"]
+#[doc = "SCT halt event select register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Halt(pub u32);
@@ -2720,7 +2720,7 @@ impl defmt::Format for Halt {
         )
     }
 }
-#[doc = "SCT input register"]
+#[doc = "SCT input register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Input(pub u32);
@@ -3195,7 +3195,7 @@ impl defmt::Format for Input {
         )
     }
 }
-#[doc = "SCT limit event select register"]
+#[doc = "SCT limit event select register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Limit(pub u32);
@@ -3250,7 +3250,7 @@ impl defmt::Format for Limit {
         )
     }
 }
-#[doc = "SCT match value register of match channels"]
+#[doc = "SCT match value register of match channels."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Match0(pub u32);
@@ -3305,7 +3305,7 @@ impl defmt::Format for Match0 {
         )
     }
 }
-#[doc = "SCT match value register of match channels"]
+#[doc = "SCT match value register of match channels."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Match1(pub u32);
@@ -3360,7 +3360,7 @@ impl defmt::Format for Match1 {
         )
     }
 }
-#[doc = "SCT match value register of match channels"]
+#[doc = "SCT match value register of match channels."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Match10(pub u32);
@@ -3415,7 +3415,7 @@ impl defmt::Format for Match10 {
         )
     }
 }
-#[doc = "SCT match value register of match channels"]
+#[doc = "SCT match value register of match channels."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Match11(pub u32);
@@ -3470,7 +3470,7 @@ impl defmt::Format for Match11 {
         )
     }
 }
-#[doc = "SCT match value register of match channels"]
+#[doc = "SCT match value register of match channels."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Match12(pub u32);
@@ -3525,7 +3525,7 @@ impl defmt::Format for Match12 {
         )
     }
 }
-#[doc = "SCT match value register of match channels"]
+#[doc = "SCT match value register of match channels."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Match13(pub u32);
@@ -3580,7 +3580,7 @@ impl defmt::Format for Match13 {
         )
     }
 }
-#[doc = "SCT match value register of match channels"]
+#[doc = "SCT match value register of match channels."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Match14(pub u32);
@@ -3635,7 +3635,7 @@ impl defmt::Format for Match14 {
         )
     }
 }
-#[doc = "SCT match value register of match channels"]
+#[doc = "SCT match value register of match channels."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Match15(pub u32);
@@ -3690,7 +3690,7 @@ impl defmt::Format for Match15 {
         )
     }
 }
-#[doc = "SCT match value register of match channels"]
+#[doc = "SCT match value register of match channels."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Match2(pub u32);
@@ -3745,7 +3745,7 @@ impl defmt::Format for Match2 {
         )
     }
 }
-#[doc = "SCT match value register of match channels"]
+#[doc = "SCT match value register of match channels."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Match3(pub u32);
@@ -3800,7 +3800,7 @@ impl defmt::Format for Match3 {
         )
     }
 }
-#[doc = "SCT match value register of match channels"]
+#[doc = "SCT match value register of match channels."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Match4(pub u32);
@@ -3855,7 +3855,7 @@ impl defmt::Format for Match4 {
         )
     }
 }
-#[doc = "SCT match value register of match channels"]
+#[doc = "SCT match value register of match channels."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Match5(pub u32);
@@ -3910,7 +3910,7 @@ impl defmt::Format for Match5 {
         )
     }
 }
-#[doc = "SCT match value register of match channels"]
+#[doc = "SCT match value register of match channels."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Match6(pub u32);
@@ -3965,7 +3965,7 @@ impl defmt::Format for Match6 {
         )
     }
 }
-#[doc = "SCT match value register of match channels"]
+#[doc = "SCT match value register of match channels."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Match7(pub u32);
@@ -4020,7 +4020,7 @@ impl defmt::Format for Match7 {
         )
     }
 }
-#[doc = "SCT match value register of match channels"]
+#[doc = "SCT match value register of match channels."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Match8(pub u32);
@@ -4075,7 +4075,7 @@ impl defmt::Format for Match8 {
         )
     }
 }
-#[doc = "SCT match value register of match channels"]
+#[doc = "SCT match value register of match channels."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Match9(pub u32);
@@ -4130,7 +4130,7 @@ impl defmt::Format for Match9 {
         )
     }
 }
-#[doc = "SCT match reload value register"]
+#[doc = "SCT match reload value register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Matchrel0(pub u32);
@@ -4185,7 +4185,7 @@ impl defmt::Format for Matchrel0 {
         )
     }
 }
-#[doc = "SCT match reload value register"]
+#[doc = "SCT match reload value register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Matchrel1(pub u32);
@@ -4240,7 +4240,7 @@ impl defmt::Format for Matchrel1 {
         )
     }
 }
-#[doc = "SCT match reload value register"]
+#[doc = "SCT match reload value register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Matchrel10(pub u32);
@@ -4295,7 +4295,7 @@ impl defmt::Format for Matchrel10 {
         )
     }
 }
-#[doc = "SCT match reload value register"]
+#[doc = "SCT match reload value register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Matchrel11(pub u32);
@@ -4350,7 +4350,7 @@ impl defmt::Format for Matchrel11 {
         )
     }
 }
-#[doc = "SCT match reload value register"]
+#[doc = "SCT match reload value register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Matchrel12(pub u32);
@@ -4405,7 +4405,7 @@ impl defmt::Format for Matchrel12 {
         )
     }
 }
-#[doc = "SCT match reload value register"]
+#[doc = "SCT match reload value register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Matchrel13(pub u32);
@@ -4460,7 +4460,7 @@ impl defmt::Format for Matchrel13 {
         )
     }
 }
-#[doc = "SCT match reload value register"]
+#[doc = "SCT match reload value register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Matchrel14(pub u32);
@@ -4515,7 +4515,7 @@ impl defmt::Format for Matchrel14 {
         )
     }
 }
-#[doc = "SCT match reload value register"]
+#[doc = "SCT match reload value register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Matchrel15(pub u32);
@@ -4570,7 +4570,7 @@ impl defmt::Format for Matchrel15 {
         )
     }
 }
-#[doc = "SCT match reload value register"]
+#[doc = "SCT match reload value register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Matchrel2(pub u32);
@@ -4625,7 +4625,7 @@ impl defmt::Format for Matchrel2 {
         )
     }
 }
-#[doc = "SCT match reload value register"]
+#[doc = "SCT match reload value register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Matchrel3(pub u32);
@@ -4680,7 +4680,7 @@ impl defmt::Format for Matchrel3 {
         )
     }
 }
-#[doc = "SCT match reload value register"]
+#[doc = "SCT match reload value register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Matchrel4(pub u32);
@@ -4735,7 +4735,7 @@ impl defmt::Format for Matchrel4 {
         )
     }
 }
-#[doc = "SCT match reload value register"]
+#[doc = "SCT match reload value register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Matchrel5(pub u32);
@@ -4790,7 +4790,7 @@ impl defmt::Format for Matchrel5 {
         )
     }
 }
-#[doc = "SCT match reload value register"]
+#[doc = "SCT match reload value register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Matchrel6(pub u32);
@@ -4845,7 +4845,7 @@ impl defmt::Format for Matchrel6 {
         )
     }
 }
-#[doc = "SCT match reload value register"]
+#[doc = "SCT match reload value register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Matchrel7(pub u32);
@@ -4900,7 +4900,7 @@ impl defmt::Format for Matchrel7 {
         )
     }
 }
-#[doc = "SCT match reload value register"]
+#[doc = "SCT match reload value register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Matchrel8(pub u32);
@@ -4955,7 +4955,7 @@ impl defmt::Format for Matchrel8 {
         )
     }
 }
-#[doc = "SCT match reload value register"]
+#[doc = "SCT match reload value register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Matchrel9(pub u32);
@@ -5010,7 +5010,7 @@ impl defmt::Format for Matchrel9 {
         )
     }
 }
-#[doc = "SCT output 0 clear register"]
+#[doc = "SCT output 0 clear register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OutClr(pub u32);
@@ -5045,7 +5045,7 @@ impl defmt::Format for OutClr {
         defmt::write!(f, "OutClr {{ clr: {=u16:?} }}", self.clr())
     }
 }
-#[doc = "SCT output 0 set register"]
+#[doc = "SCT output 0 set register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OutSet(pub u32);
@@ -5080,7 +5080,7 @@ impl defmt::Format for OutSet {
         defmt::write!(f, "OutSet {{ set: {=u16:?} }}", self.set())
     }
 }
-#[doc = "SCT output register"]
+#[doc = "SCT output register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Output(pub u32);
@@ -5115,7 +5115,7 @@ impl defmt::Format for Output {
         defmt::write!(f, "Output {{ out: {=u16:?} }}", self.out())
     }
 }
-#[doc = "SCT output counter direction control register"]
+#[doc = "SCT output counter direction control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Outputdirctrl(pub u32);
@@ -5366,7 +5366,7 @@ impl defmt::Format for Outputdirctrl {
         )
     }
 }
-#[doc = "SCT match/capture mode register"]
+#[doc = "SCT match/capture mode register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Regmode(pub u32);
@@ -5421,7 +5421,7 @@ impl defmt::Format for Regmode {
         )
     }
 }
-#[doc = "SCT conflict resolution register"]
+#[doc = "SCT conflict resolution register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Res(pub u32);
@@ -5672,7 +5672,7 @@ impl defmt::Format for Res {
         )
     }
 }
-#[doc = "SCT start event select register"]
+#[doc = "SCT start event select register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Start(pub u32);
@@ -5727,7 +5727,7 @@ impl defmt::Format for Start {
         )
     }
 }
-#[doc = "SCT state register"]
+#[doc = "SCT state register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct State(pub u32);
@@ -5782,7 +5782,7 @@ impl defmt::Format for State {
         )
     }
 }
-#[doc = "SCT stop event select register"]
+#[doc = "SCT stop event select register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Stop(pub u32);

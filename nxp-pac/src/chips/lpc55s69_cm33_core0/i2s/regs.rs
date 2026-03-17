@@ -3,14 +3,14 @@
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cfg1(pub u32);
 impl Cfg1 {
-    #[doc = "Main enable for I 2S function in this Flexcomm"]
+    #[doc = "Main enable for I 2S function in this Flexcomm."]
     #[must_use]
     #[inline(always)]
     pub const fn mainenable(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Main enable for I 2S function in this Flexcomm"]
+    #[doc = "Main enable for I 2S function in this Flexcomm."]
     #[inline(always)]
     pub const fn set_mainenable(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -123,14 +123,14 @@ impl Cfg1 {
     pub const fn set_ws_pol(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "Data Length, minus 1 encoded, defines the number of data bits to be transmitted or received for all I2S channel pairs in this Flexcomm. Note that data is only driven to or received from SDA for the number of bits defined by DATALEN. DATALEN is also used in these ways by the I2S: Determines the size of data transfers between the FIFO and the I2S serializer/deserializer. See FIFO buffer configurations and usage In mode 1, 2, and 3, determines the location of right data following left data in the frame. In mode 3 (where WS has a one data slot long pulse at the beginning of each data frame) determines the duration of the WS pulse. Values: 0x00 to 0x02 = not supported 0x03 = data is 4 bits in length 0x04 = data is 5 bits in length 0x1F = data is 32 bits in length"]
+    #[doc = "Data Length, minus 1 encoded, defines the number of data bits to be transmitted or received for all I2S channel pairs in this Flexcomm. Note that data is only driven to or received from SDA for the number of bits defined by DATALEN. DATALEN is also used in these ways by the I2S: Determines the size of data transfers between the FIFO and the I2S serializer/deserializer. See FIFO buffer configurations and usage In mode 1, 2, and 3, determines the location of right data following left data in the frame. In mode 3 (where WS has a one data slot long pulse at the beginning of each data frame) determines the duration of the WS pulse. Values: 0x00 to 0x02 = not supported 0x03 = data is 4 bits in length 0x04 = data is 5 bits in length 0x1F = data is 32 bits in length."]
     #[must_use]
     #[inline(always)]
     pub const fn datalen(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x1f;
         val as u8
     }
-    #[doc = "Data Length, minus 1 encoded, defines the number of data bits to be transmitted or received for all I2S channel pairs in this Flexcomm. Note that data is only driven to or received from SDA for the number of bits defined by DATALEN. DATALEN is also used in these ways by the I2S: Determines the size of data transfers between the FIFO and the I2S serializer/deserializer. See FIFO buffer configurations and usage In mode 1, 2, and 3, determines the location of right data following left data in the frame. In mode 3 (where WS has a one data slot long pulse at the beginning of each data frame) determines the duration of the WS pulse. Values: 0x00 to 0x02 = not supported 0x03 = data is 4 bits in length 0x04 = data is 5 bits in length 0x1F = data is 32 bits in length"]
+    #[doc = "Data Length, minus 1 encoded, defines the number of data bits to be transmitted or received for all I2S channel pairs in this Flexcomm. Note that data is only driven to or received from SDA for the number of bits defined by DATALEN. DATALEN is also used in these ways by the I2S: Determines the size of data transfers between the FIFO and the I2S serializer/deserializer. See FIFO buffer configurations and usage In mode 1, 2, and 3, determines the location of right data following left data in the frame. In mode 3 (where WS has a one data slot long pulse at the beginning of each data frame) determines the duration of the WS pulse. Values: 0x00 to 0x02 = not supported 0x03 = data is 4 bits in length 0x04 = data is 5 bits in length 0x1F = data is 32 bits in length."]
     #[inline(always)]
     pub const fn set_datalen(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 16usize)) | (((val as u32) & 0x1f) << 16usize);
@@ -861,7 +861,7 @@ impl defmt::Format for Fifordnopop {
         defmt::write!(f, "Fifordnopop {{ rxdata: {=u32:?} }}", self.rxdata())
     }
 }
-#[doc = "FIFO size register"]
+#[doc = "FIFO size register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Fifosize(pub u32);
@@ -1208,7 +1208,7 @@ impl defmt::Format for Fifowr48h {
         defmt::write!(f, "Fifowr48h {{ txdata: {=u32:?} }}", self.txdata())
     }
 }
-#[doc = "I2S Module identification"]
+#[doc = "I2S Module identification."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Id(pub u32);
@@ -1332,14 +1332,14 @@ impl Stat {
     pub const fn set_lr(&mut self, val: super::vals::Lr) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "Data Paused status flag. Applies to all I2S channels"]
+    #[doc = "Data Paused status flag. Applies to all I2S channels."]
     #[must_use]
     #[inline(always)]
     pub const fn datapaused(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Data Paused status flag. Applies to all I2S channels"]
+    #[doc = "Data Paused status flag. Applies to all I2S channels."]
     #[inline(always)]
     pub const fn set_datapaused(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);

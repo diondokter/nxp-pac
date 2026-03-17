@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Crl {
-    #[doc = "Locked and writes are ignored"]
+    #[doc = "Locked and writes are ignored."]
     LOCK = 0x0,
-    #[doc = "Not locked and writes complete as normal"]
+    #[doc = "Not locked and writes complete as normal."]
     NOT_LOCK = 0x01,
 }
 impl Crl {
@@ -95,9 +95,9 @@ impl From<Crw> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Distam {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Automatically disables the prescaler after tamper detection"]
+    #[doc = "Automatically disables the prescaler after tamper detection."]
     AUTO_DIS = 0x01,
 }
 impl Distam {
@@ -126,9 +126,9 @@ impl From<Distam> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gfe {
-    #[doc = "Bypasses"]
+    #[doc = "Bypasses."]
     BYPASS = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ENABLE = 0x01,
 }
 impl Gfe {
@@ -157,9 +157,9 @@ impl From<Gfe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gfl0 {
-    #[doc = "Locked and writes are ignored"]
+    #[doc = "Locked and writes are ignored."]
     LOCK = 0x0,
-    #[doc = "Not locked and writes complete as normal"]
+    #[doc = "Not locked and writes complete as normal."]
     NOT_LOCK = 0x01,
 }
 impl Gfl0 {
@@ -188,9 +188,9 @@ impl From<Gfl0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gfl1 {
-    #[doc = "Locked and writes are ignored"]
+    #[doc = "Locked and writes are ignored."]
     LOCK = 0x0,
-    #[doc = "Not locked and writes complete as normal"]
+    #[doc = "Not locked and writes complete as normal."]
     NOT_LOCK = 0x01,
 }
 impl Gfl1 {
@@ -219,9 +219,9 @@ impl From<Gfl1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gfl2 {
-    #[doc = "Locked and writes are ignored"]
+    #[doc = "Locked and writes are ignored."]
     LOCK = 0x0,
-    #[doc = "Not locked and writes complete as normal"]
+    #[doc = "Not locked and writes complete as normal."]
     NOT_LOCK = 0x01,
 }
 impl Gfl2 {
@@ -250,9 +250,9 @@ impl From<Gfl2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gfl3 {
-    #[doc = "Locked and writes are ignored"]
+    #[doc = "Locked and writes are ignored."]
     LOCK = 0x0,
-    #[doc = "Not locked and writes complete as normal"]
+    #[doc = "Not locked and writes complete as normal."]
     NOT_LOCK = 0x01,
 }
 impl Gfl3 {
@@ -281,9 +281,9 @@ impl From<Gfl3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gfl4 {
-    #[doc = "Locked and writes are ignored"]
+    #[doc = "Locked and writes are ignored."]
     LOCK = 0x0,
-    #[doc = "Not locked and writes complete as normal"]
+    #[doc = "Not locked and writes complete as normal."]
     NOT_LOCK = 0x01,
 }
 impl Gfl4 {
@@ -312,9 +312,9 @@ impl From<Gfl4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gfl5 {
-    #[doc = "Locked and writes are ignored"]
+    #[doc = "Locked and writes are ignored."]
     LOCK = 0x0,
-    #[doc = "Not locked and writes complete as normal"]
+    #[doc = "Not locked and writes complete as normal."]
     NOT_LOCK = 0x01,
 }
 impl Gfl5 {
@@ -343,9 +343,9 @@ impl From<Gfl5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gfl6 {
-    #[doc = "Locked and writes are ignored"]
+    #[doc = "Locked and writes are ignored."]
     LOCK = 0x0,
-    #[doc = "Not locked and writes complete as normal"]
+    #[doc = "Not locked and writes complete as normal."]
     NOT_LOCK = 0x01,
 }
 impl Gfl6 {
@@ -374,9 +374,9 @@ impl From<Gfl6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gfl7 {
-    #[doc = "Locked and writes are ignored"]
+    #[doc = "Locked and writes are ignored."]
     LOCK = 0x0,
-    #[doc = "Not locked and writes complete as normal"]
+    #[doc = "Not locked and writes complete as normal."]
     NOT_LOCK = 0x01,
 }
 impl Gfl7 {
@@ -405,9 +405,9 @@ impl From<Gfl7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gfp {
-    #[doc = "512 Hz prescaler clock"]
+    #[doc = "512 Hz prescaler clock."]
     FREQ_512_HZ = 0x0,
-    #[doc = "32.768 kHz clock"]
+    #[doc = "32.768 kHz clock."]
     FREQ_32_KHZ = 0x01,
 }
 impl Gfp {
@@ -436,9 +436,9 @@ impl From<Gfp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gfr0 {
-    #[doc = "Reads are ignored"]
+    #[doc = "Reads are ignored."]
     IGNORED = 0x0,
-    #[doc = "Reads complete as normal"]
+    #[doc = "Reads complete as normal."]
     NORMAL = 0x01,
 }
 impl Gfr0 {
@@ -467,9 +467,9 @@ impl From<Gfr0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gfr1 {
-    #[doc = "Reads are ignored"]
+    #[doc = "Reads are ignored."]
     IGNORED = 0x0,
-    #[doc = "Reads complete as normal"]
+    #[doc = "Reads complete as normal."]
     NORMAL = 0x01,
 }
 impl Gfr1 {
@@ -498,9 +498,9 @@ impl From<Gfr1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gfr2 {
-    #[doc = "Reads are ignored"]
+    #[doc = "Reads are ignored."]
     IGNORED = 0x0,
-    #[doc = "Reads complete as normal"]
+    #[doc = "Reads complete as normal."]
     NORMAL = 0x01,
 }
 impl Gfr2 {
@@ -529,9 +529,9 @@ impl From<Gfr2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gfr3 {
-    #[doc = "Reads are ignored"]
+    #[doc = "Reads are ignored."]
     IGNORED = 0x0,
-    #[doc = "Reads complete as normal"]
+    #[doc = "Reads complete as normal."]
     NORMAL = 0x01,
 }
 impl Gfr3 {
@@ -560,9 +560,9 @@ impl From<Gfr3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gfr4 {
-    #[doc = "Reads are ignored"]
+    #[doc = "Reads are ignored."]
     IGNORED = 0x0,
-    #[doc = "Reads complete as normal"]
+    #[doc = "Reads complete as normal."]
     NORMAL = 0x01,
 }
 impl Gfr4 {
@@ -591,9 +591,9 @@ impl From<Gfr4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gfr5 {
-    #[doc = "Reads are ignored"]
+    #[doc = "Reads are ignored."]
     IGNORED = 0x0,
-    #[doc = "Reads complete as normal"]
+    #[doc = "Reads complete as normal."]
     NORMAL = 0x01,
 }
 impl Gfr5 {
@@ -622,9 +622,9 @@ impl From<Gfr5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gfr6 {
-    #[doc = "Reads are ignored"]
+    #[doc = "Reads are ignored."]
     IGNORED = 0x0,
-    #[doc = "Reads complete as normal"]
+    #[doc = "Reads complete as normal."]
     NORMAL = 0x01,
 }
 impl Gfr6 {
@@ -653,9 +653,9 @@ impl From<Gfr6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gfr7 {
-    #[doc = "Reads are ignored"]
+    #[doc = "Reads are ignored."]
     IGNORED = 0x0,
-    #[doc = "Reads complete as normal"]
+    #[doc = "Reads complete as normal."]
     NORMAL = 0x01,
 }
 impl Gfr7 {
@@ -684,9 +684,9 @@ impl From<Gfr7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gfw0 {
-    #[doc = "Writes are ignored"]
+    #[doc = "Writes are ignored."]
     IGNORED = 0x0,
-    #[doc = "Writes complete as normal"]
+    #[doc = "Writes complete as normal."]
     NORMAL = 0x01,
 }
 impl Gfw0 {
@@ -715,9 +715,9 @@ impl From<Gfw0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gfw1 {
-    #[doc = "Writes are ignored"]
+    #[doc = "Writes are ignored."]
     IGNORED = 0x0,
-    #[doc = "Writes complete as normal"]
+    #[doc = "Writes complete as normal."]
     NORMAL = 0x01,
 }
 impl Gfw1 {
@@ -746,9 +746,9 @@ impl From<Gfw1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gfw2 {
-    #[doc = "Writes are ignored"]
+    #[doc = "Writes are ignored."]
     IGNORED = 0x0,
-    #[doc = "Writes complete as normal"]
+    #[doc = "Writes complete as normal."]
     NORMAL = 0x01,
 }
 impl Gfw2 {
@@ -777,9 +777,9 @@ impl From<Gfw2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gfw3 {
-    #[doc = "Writes are ignored"]
+    #[doc = "Writes are ignored."]
     IGNORED = 0x0,
-    #[doc = "Writes complete as normal"]
+    #[doc = "Writes complete as normal."]
     NORMAL = 0x01,
 }
 impl Gfw3 {
@@ -808,9 +808,9 @@ impl From<Gfw3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gfw4 {
-    #[doc = "Writes are ignored"]
+    #[doc = "Writes are ignored."]
     IGNORED = 0x0,
-    #[doc = "Writes complete as normal"]
+    #[doc = "Writes complete as normal."]
     NORMAL = 0x01,
 }
 impl Gfw4 {
@@ -839,9 +839,9 @@ impl From<Gfw4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gfw5 {
-    #[doc = "Writes are ignored"]
+    #[doc = "Writes are ignored."]
     IGNORED = 0x0,
-    #[doc = "Writes complete as normal"]
+    #[doc = "Writes complete as normal."]
     NORMAL = 0x01,
 }
 impl Gfw5 {
@@ -870,9 +870,9 @@ impl From<Gfw5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gfw6 {
-    #[doc = "Writes are ignored"]
+    #[doc = "Writes are ignored."]
     IGNORED = 0x0,
-    #[doc = "Writes complete as normal"]
+    #[doc = "Writes complete as normal."]
     NORMAL = 0x01,
 }
 impl Gfw6 {
@@ -901,9 +901,9 @@ impl From<Gfw6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gfw7 {
-    #[doc = "Writes are ignored"]
+    #[doc = "Writes are ignored."]
     IGNORED = 0x0,
-    #[doc = "Writes complete as normal"]
+    #[doc = "Writes complete as normal."]
     NORMAL = 0x01,
 }
 impl Gfw7 {
@@ -932,9 +932,9 @@ impl From<Gfw7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Iel {
-    #[doc = "Locked and writes are ignored"]
+    #[doc = "Locked and writes are ignored."]
     LOCK = 0x0,
-    #[doc = "Not locked and writes complete as normal"]
+    #[doc = "Not locked and writes complete as normal."]
     NOT_LOCK = 0x01,
 }
 impl Iel {
@@ -1025,9 +1025,9 @@ impl From<Iew> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lrl {
-    #[doc = "Locked and writes are ignored"]
+    #[doc = "Locked and writes are ignored."]
     LOCK = 0x0,
-    #[doc = "Not locked and writes complete as normal"]
+    #[doc = "Not locked and writes complete as normal."]
     NOT_LOCK = 0x01,
 }
 impl Lrl {
@@ -1118,9 +1118,9 @@ impl From<Lrw> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ppl {
-    #[doc = "Locked and writes are ignored"]
+    #[doc = "Locked and writes are ignored."]
     LOCK = 0x0,
-    #[doc = "Not locked and writes complete as normal"]
+    #[doc = "Not locked and writes complete as normal."]
     NOT_LOCK = 0x01,
 }
 impl Ppl {
@@ -1211,9 +1211,9 @@ impl From<Ppw> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Srl {
-    #[doc = "Locked and writes are ignored"]
+    #[doc = "Locked and writes are ignored."]
     LOCK = 0x0,
-    #[doc = "Not locked and writes complete as normal"]
+    #[doc = "Not locked and writes complete as normal."]
     NOT_LOCK = 0x01,
 }
 impl Srl {
@@ -1304,9 +1304,9 @@ impl From<Srw> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Swr {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Perform a software reset"]
+    #[doc = "Perform a software reset."]
     SW_RESET = 0x01,
 }
 impl Swr {
@@ -1335,9 +1335,9 @@ impl From<Swr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tel {
-    #[doc = "Locked and writes are ignored"]
+    #[doc = "Locked and writes are ignored."]
     LOCK = 0x0,
-    #[doc = "Not locked and writes complete as normal"]
+    #[doc = "Not locked and writes complete as normal."]
     NOT_LOCK = 0x01,
 }
 impl Tel {
@@ -1428,9 +1428,9 @@ impl From<Tew> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tps {
-    #[doc = "Asserts"]
+    #[doc = "Asserts."]
     ASSERT = 0x0,
-    #[doc = "Negates"]
+    #[doc = "Negates."]
     NEGATE = 0x01,
 }
 impl Tps {
@@ -1459,13 +1459,13 @@ impl From<Tps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tpsf {
-    #[doc = "Every 8 cycles"]
+    #[doc = "Every 8 cycles."]
     CYCLES_8 = 0x0,
-    #[doc = "Every 32 cycles"]
+    #[doc = "Every 32 cycles."]
     CYCLES_32 = 0x01,
-    #[doc = "Every 128 cycles"]
+    #[doc = "Every 128 cycles."]
     CYCLES_128 = 0x02,
-    #[doc = "Every 512 cycles"]
+    #[doc = "Every 512 cycles."]
     CYCLES_512 = 0x03,
 }
 impl Tpsf {
@@ -1494,13 +1494,13 @@ impl From<Tpsf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tpsw {
-    #[doc = "Continuous monitoring, pin sampling disabled"]
+    #[doc = "Continuous monitoring, pin sampling disabled."]
     DISABLE = 0x0,
-    #[doc = "2 cycles for pull enable and 1 cycle for input buffer enable"]
+    #[doc = "2 cycles for pull enable and 1 cycle for input buffer enable."]
     CYCLES_2 = 0x01,
-    #[doc = "4 cycles for pull enable and 2 cycles for input buffer enable"]
+    #[doc = "4 cycles for pull enable and 2 cycles for input buffer enable."]
     CYCLES_4 = 0x02,
-    #[doc = "8 cycles for pull enable and 4 cycles for input buffer enable"]
+    #[doc = "8 cycles for pull enable and 4 cycles for input buffer enable."]
     CYCLES_8 = 0x03,
 }
 impl Tpsw {
@@ -1529,9 +1529,9 @@ impl From<Tpsw> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tsl {
-    #[doc = "Locked and writes are ignored"]
+    #[doc = "Locked and writes are ignored."]
     LOCK = 0x0,
-    #[doc = "Not locked and writes complete as normal"]
+    #[doc = "Not locked and writes complete as normal."]
     NOT_LOCK = 0x01,
 }
 impl Tsl {
@@ -1622,9 +1622,9 @@ impl From<Tsrw> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Um {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Allows the clearing of interrupts"]
+    #[doc = "Allows the clearing of interrupts."]
     CLEAR_INTS = 0x01,
 }
 impl Um {

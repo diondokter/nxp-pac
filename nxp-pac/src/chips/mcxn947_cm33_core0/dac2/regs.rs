@@ -1,16 +1,16 @@
-#[doc = "Data"]
+#[doc = "Data."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Data(pub u32);
 impl Data {
-    #[doc = "FIFO Entry or Buffer Entry"]
+    #[doc = "FIFO Entry or Buffer Entry."]
     #[must_use]
     #[inline(always)]
     pub const fn data(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x3fff;
         val as u16
     }
-    #[doc = "FIFO Entry or Buffer Entry"]
+    #[doc = "FIFO Entry or Buffer Entry."]
     #[inline(always)]
     pub const fn set_data(&mut self, val: u16) {
         self.0 = (self.0 & !(0x3fff << 0usize)) | (((val as u32) & 0x3fff) << 0usize);
@@ -33,31 +33,31 @@ impl defmt::Format for Data {
         defmt::write!(f, "Data {{ data: {=u16:?} }}", self.data())
     }
 }
-#[doc = "DMA Enable"]
+#[doc = "DMA Enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Der(pub u32);
 impl Der {
-    #[doc = "FIFO Empty DMA Enable"]
+    #[doc = "FIFO Empty DMA Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn empty_dmaen(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "FIFO Empty DMA Enable"]
+    #[doc = "FIFO Empty DMA Enable."]
     #[inline(always)]
     pub const fn set_empty_dmaen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "FIFO Watermark DMA Enable"]
+    #[doc = "FIFO Watermark DMA Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn wm_dmaen(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "FIFO Watermark DMA Enable"]
+    #[doc = "FIFO Watermark DMA Enable."]
     #[inline(always)]
     pub const fn set_wm_dmaen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
@@ -88,19 +88,19 @@ impl defmt::Format for Der {
         )
     }
 }
-#[doc = "DAC FIFO Control"]
+#[doc = "DAC FIFO Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Fcr(pub u32);
 impl Fcr {
-    #[doc = "Watermark Level"]
+    #[doc = "Watermark Level."]
     #[must_use]
     #[inline(always)]
     pub const fn wml(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x1f;
         val as u8
     }
-    #[doc = "Watermark Level"]
+    #[doc = "Watermark Level."]
     #[inline(always)]
     pub const fn set_wml(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val as u32) & 0x1f) << 0usize);
@@ -123,31 +123,31 @@ impl defmt::Format for Fcr {
         defmt::write!(f, "Fcr {{ wml: {=u8:?} }}", self.wml())
     }
 }
-#[doc = "DAC FIFO Pointer"]
+#[doc = "DAC FIFO Pointer."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Fpr(pub u32);
 impl Fpr {
-    #[doc = "FIFO Read Pointer"]
+    #[doc = "FIFO Read Pointer."]
     #[must_use]
     #[inline(always)]
     pub const fn fifo_rpt(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x1f;
         val as u8
     }
-    #[doc = "FIFO Read Pointer"]
+    #[doc = "FIFO Read Pointer."]
     #[inline(always)]
     pub const fn set_fifo_rpt(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val as u32) & 0x1f) << 0usize);
     }
-    #[doc = "FIFO Write Pointer"]
+    #[doc = "FIFO Write Pointer."]
     #[must_use]
     #[inline(always)]
     pub const fn fifo_wpt(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x1f;
         val as u8
     }
-    #[doc = "FIFO Write Pointer"]
+    #[doc = "FIFO Write Pointer."]
     #[inline(always)]
     pub const fn set_fifo_wpt(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 16usize)) | (((val as u32) & 0x1f) << 16usize);
@@ -178,91 +178,91 @@ impl defmt::Format for Fpr {
         )
     }
 }
-#[doc = "FIFO Status"]
+#[doc = "FIFO Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Fsr(pub u32);
 impl Fsr {
-    #[doc = "FIFO Full Flag"]
+    #[doc = "FIFO Full Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn full(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "FIFO Full Flag"]
+    #[doc = "FIFO Full Flag."]
     #[inline(always)]
     pub const fn set_full(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "FIFO Empty Flag"]
+    #[doc = "FIFO Empty Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn empty(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "FIFO Empty Flag"]
+    #[doc = "FIFO Empty Flag."]
     #[inline(always)]
     pub const fn set_empty(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "FIFO Watermark Status Flag"]
+    #[doc = "FIFO Watermark Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn wm(&self) -> super::vals::Wm {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Wm::from_bits(val as u8)
     }
-    #[doc = "FIFO Watermark Status Flag"]
+    #[doc = "FIFO Watermark Status Flag."]
     #[inline(always)]
     pub const fn set_wm(&mut self, val: super::vals::Wm) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "Swing Back One Cycle Complete Flag"]
+    #[doc = "Swing Back One Cycle Complete Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn swbk(&self) -> super::vals::Swbk {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Swbk::from_bits(val as u8)
     }
-    #[doc = "Swing Back One Cycle Complete Flag"]
+    #[doc = "Swing Back One Cycle Complete Flag."]
     #[inline(always)]
     pub const fn set_swbk(&mut self, val: super::vals::Swbk) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "FIFO Overflow Flag"]
+    #[doc = "FIFO Overflow Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn of(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "FIFO Overflow Flag"]
+    #[doc = "FIFO Overflow Flag."]
     #[inline(always)]
     pub const fn set_of(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "FIFO Underflow Flag"]
+    #[doc = "FIFO Underflow Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn uf(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "FIFO Underflow Flag"]
+    #[doc = "FIFO Underflow Flag."]
     #[inline(always)]
     pub const fn set_uf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Period Trigger Mode Conversion Complete Flag"]
+    #[doc = "Period Trigger Mode Conversion Complete Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn ptgcoco(&self) -> super::vals::Ptgcoco {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::Ptgcoco::from_bits(val as u8)
     }
-    #[doc = "Period Trigger Mode Conversion Complete Flag"]
+    #[doc = "Period Trigger Mode Conversion Complete Flag."]
     #[inline(always)]
     pub const fn set_ptgcoco(&mut self, val: super::vals::Ptgcoco) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
@@ -303,79 +303,79 @@ impl defmt::Format for Fsr {
         )
     }
 }
-#[doc = "Global Control"]
+#[doc = "Global Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gcr(pub u32);
 impl Gcr {
-    #[doc = "DAC Enable"]
+    #[doc = "DAC Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dacen(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "DAC Enable"]
+    #[doc = "DAC Enable."]
     #[inline(always)]
     pub const fn set_dacen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "FIFO Enable"]
+    #[doc = "FIFO Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn fifoen(&self) -> super::vals::Fifoen {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Fifoen::from_bits(val as u8)
     }
-    #[doc = "FIFO Enable"]
+    #[doc = "FIFO Enable."]
     #[inline(always)]
     pub const fn set_fifoen(&mut self, val: super::vals::Fifoen) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "Swing Back Mode"]
+    #[doc = "Swing Back Mode."]
     #[must_use]
     #[inline(always)]
     pub const fn swmd(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "Swing Back Mode"]
+    #[doc = "Swing Back Mode."]
     #[inline(always)]
     pub const fn set_swmd(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "DAC Trigger Select"]
+    #[doc = "DAC Trigger Select."]
     #[must_use]
     #[inline(always)]
     pub const fn trgsel(&self) -> super::vals::Trgsel {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::Trgsel::from_bits(val as u8)
     }
-    #[doc = "DAC Trigger Select"]
+    #[doc = "DAC Trigger Select."]
     #[inline(always)]
     pub const fn set_trgsel(&mut self, val: super::vals::Trgsel) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
-    #[doc = "DAC Periodic Trigger Mode Enable"]
+    #[doc = "DAC Periodic Trigger Mode Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ptgen(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "DAC Periodic Trigger Mode Enable"]
+    #[doc = "DAC Periodic Trigger Mode Enable."]
     #[inline(always)]
     pub const fn set_ptgen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Buffer Enable"]
+    #[doc = "Buffer Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn buf_en(&self) -> super::vals::BufEn {
         let val = (self.0 >> 17usize) & 0x01;
         super::vals::BufEn::from_bits(val as u8)
     }
-    #[doc = "Buffer Enable"]
+    #[doc = "Buffer Enable."]
     #[inline(always)]
     pub const fn set_buf_en(&mut self, val: super::vals::BufEn) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
@@ -414,91 +414,91 @@ impl defmt::Format for Gcr {
         )
     }
 }
-#[doc = "Interrupt Enable"]
+#[doc = "Interrupt Enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ier(pub u32);
 impl Ier {
-    #[doc = "FIFO Full Interrupt Enable"]
+    #[doc = "FIFO Full Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn full_ie(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "FIFO Full Interrupt Enable"]
+    #[doc = "FIFO Full Interrupt Enable."]
     #[inline(always)]
     pub const fn set_full_ie(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "FIFO Empty Interrupt Enable"]
+    #[doc = "FIFO Empty Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn empty_ie(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "FIFO Empty Interrupt Enable"]
+    #[doc = "FIFO Empty Interrupt Enable."]
     #[inline(always)]
     pub const fn set_empty_ie(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "FIFO Watermark Interrupt Enable"]
+    #[doc = "FIFO Watermark Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn wm_ie(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "FIFO Watermark Interrupt Enable"]
+    #[doc = "FIFO Watermark Interrupt Enable."]
     #[inline(always)]
     pub const fn set_wm_ie(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Swing Back One Cycle Complete Interrupt Enable"]
+    #[doc = "Swing Back One Cycle Complete Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn swbk_ie(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Swing Back One Cycle Complete Interrupt Enable"]
+    #[doc = "Swing Back One Cycle Complete Interrupt Enable."]
     #[inline(always)]
     pub const fn set_swbk_ie(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "FIFO Overflow Interrupt Enable"]
+    #[doc = "FIFO Overflow Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn of_ie(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "FIFO Overflow Interrupt Enable"]
+    #[doc = "FIFO Overflow Interrupt Enable."]
     #[inline(always)]
     pub const fn set_of_ie(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "FIFO Underflow Interrupt Enable"]
+    #[doc = "FIFO Underflow Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn uf_ie(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "FIFO Underflow Interrupt Enable"]
+    #[doc = "FIFO Underflow Interrupt Enable."]
     #[inline(always)]
     pub const fn set_uf_ie(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "PTG Mode Conversion Complete Interrupt Enable"]
+    #[doc = "PTG Mode Conversion Complete Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ptgcoco_ie(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "PTG Mode Conversion Complete Interrupt Enable"]
+    #[doc = "PTG Mode Conversion Complete Interrupt Enable."]
     #[inline(always)]
     pub const fn set_ptgcoco_ie(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
@@ -539,19 +539,19 @@ impl defmt::Format for Ier {
         )
     }
 }
-#[doc = "Parameter"]
+#[doc = "Parameter."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Param(pub u32);
 impl Param {
-    #[doc = "FIFO Size"]
+    #[doc = "FIFO Size."]
     #[must_use]
     #[inline(always)]
     pub const fn fifosz(&self) -> super::vals::Fifosz {
         let val = (self.0 >> 0usize) & 0x07;
         super::vals::Fifosz::from_bits(val as u8)
     }
-    #[doc = "FIFO Size"]
+    #[doc = "FIFO Size."]
     #[inline(always)]
     pub const fn set_fifosz(&mut self, val: super::vals::Fifosz) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
@@ -576,31 +576,31 @@ impl defmt::Format for Param {
         defmt::write!(f, "Param {{ fifosz: {:?} }}", self.fifosz())
     }
 }
-#[doc = "Periodic Trigger Control"]
+#[doc = "Periodic Trigger Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pcr(pub u32);
 impl Pcr {
-    #[doc = "Periodic Trigger Number"]
+    #[doc = "Periodic Trigger Number."]
     #[must_use]
     #[inline(always)]
     pub const fn ptg_num(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Periodic Trigger Number"]
+    #[doc = "Periodic Trigger Number."]
     #[inline(always)]
     pub const fn set_ptg_num(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Periodic Trigger Period Width"]
+    #[doc = "Periodic Trigger Period Width."]
     #[must_use]
     #[inline(always)]
     pub const fn ptg_period(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "Periodic Trigger Period Width"]
+    #[doc = "Periodic Trigger Period Width."]
     #[inline(always)]
     pub const fn set_ptg_period(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -631,31 +631,31 @@ impl defmt::Format for Pcr {
         )
     }
 }
-#[doc = "Reset Control"]
+#[doc = "Reset Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Rcr(pub u32);
 impl Rcr {
-    #[doc = "Software Reset"]
+    #[doc = "Software Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn swrst(&self) -> super::vals::Swrst {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Swrst::from_bits(val as u8)
     }
-    #[doc = "Software Reset"]
+    #[doc = "Software Reset."]
     #[inline(always)]
     pub const fn set_swrst(&mut self, val: super::vals::Swrst) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "FIFO Reset"]
+    #[doc = "FIFO Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn fiforst(&self) -> super::vals::Fiforst {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Fiforst::from_bits(val as u8)
     }
-    #[doc = "FIFO Reset"]
+    #[doc = "FIFO Reset."]
     #[inline(always)]
     pub const fn set_fiforst(&mut self, val: super::vals::Fiforst) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
@@ -686,19 +686,19 @@ impl defmt::Format for Rcr {
         )
     }
 }
-#[doc = "Trigger Control"]
+#[doc = "Trigger Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tcr(pub u32);
 impl Tcr {
-    #[doc = "Software Trigger"]
+    #[doc = "Software Trigger."]
     #[must_use]
     #[inline(always)]
     pub const fn swtrg(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Software Trigger"]
+    #[doc = "Software Trigger."]
     #[inline(always)]
     pub const fn set_swtrg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -721,43 +721,43 @@ impl defmt::Format for Tcr {
         defmt::write!(f, "Tcr {{ swtrg: {=bool:?} }}", self.swtrg())
     }
 }
-#[doc = "Version Identifier"]
+#[doc = "Version Identifier."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Verid(pub u32);
 impl Verid {
-    #[doc = "Feature Identification Number"]
+    #[doc = "Feature Identification Number."]
     #[must_use]
     #[inline(always)]
     pub const fn feature(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Feature Identification Number"]
+    #[doc = "Feature Identification Number."]
     #[inline(always)]
     pub const fn set_feature(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Minor Version Number"]
+    #[doc = "Minor Version Number."]
     #[must_use]
     #[inline(always)]
     pub const fn minor(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0xff;
         val as u8
     }
-    #[doc = "Minor Version Number"]
+    #[doc = "Minor Version Number."]
     #[inline(always)]
     pub const fn set_minor(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
     }
-    #[doc = "Major Version Number"]
+    #[doc = "Major Version Number."]
     #[must_use]
     #[inline(always)]
     pub const fn major(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "Major Version Number"]
+    #[doc = "Major Version Number."]
     #[inline(always)]
     pub const fn set_major(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);

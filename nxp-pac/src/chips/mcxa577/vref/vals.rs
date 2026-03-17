@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Buf21en {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     DIS = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ENA = 0x01,
 }
 impl Buf21en {
@@ -33,9 +33,9 @@ impl From<Buf21en> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Chopen {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     DIS = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ENA = 0x01,
 }
 impl Chopen {
@@ -64,9 +64,9 @@ impl From<Chopen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Hcbgen {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     DIS = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ENA = 0x01,
 }
 impl Hcbgen {
@@ -95,9 +95,9 @@ impl From<Hcbgen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HiPwrLv {
-    #[doc = "Low-power"]
+    #[doc = "Low-power."]
     LOW = 0x0,
-    #[doc = "High-power"]
+    #[doc = "High-power."]
     HIGH = 0x01,
 }
 impl HiPwrLv {
@@ -126,9 +126,9 @@ impl From<HiPwrLv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IbiasEn {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     DIS = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ENA = 0x01,
 }
 impl IbiasEn {
@@ -157,9 +157,9 @@ impl From<IbiasEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icompen {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     DIS = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ENA = 0x01,
 }
 impl Icompen {
@@ -188,9 +188,9 @@ impl From<Icompen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RefchselnEn {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     DIS = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ENA = 0x01,
 }
 impl RefchselnEn {
@@ -219,9 +219,9 @@ impl From<RefchselnEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RefchselpEn {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     DIS = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ENA = 0x01,
 }
 impl RefchselpEn {
@@ -250,9 +250,9 @@ impl From<RefchselpEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Regen {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     DIS = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ENA = 0x01,
 }
 impl Regen {
@@ -281,9 +281,9 @@ impl From<Regen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Vrefst {
-    #[doc = "Disabled and unstable"]
+    #[doc = "Disabled and unstable."]
     DIS_NOTSTABLE = 0x0,
-    #[doc = "Stable"]
+    #[doc = "Stable."]
     STABLE = 0x01,
 }
 impl Vrefst {

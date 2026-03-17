@@ -1,4 +1,4 @@
-#[doc = "Trigger Source IN0 to IN15 selector"]
+#[doc = "Trigger Source IN0 to IN15 selector."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OutSel(pub u32);
@@ -221,7 +221,7 @@ impl defmt::Format for OutSel {
         )
     }
 }
-#[doc = "Trigger Source IN16 to IN31 selector"]
+#[doc = "Trigger Source IN16 to IN31 selector."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OutSel1(pub u32);
@@ -318,7 +318,7 @@ impl defmt::Format for OutSel1 {
         )
     }
 }
-#[doc = "Trigger source IN32 to IN47 selector"]
+#[doc = "Trigger source IN32 to IN47 selector."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OutSel2(pub u32);
@@ -443,7 +443,7 @@ impl defmt::Format for OutSel2 {
         )
     }
 }
-#[doc = "ITRC outputs and IN0 to IN15 Status"]
+#[doc = "ITRC outputs and IN0 to IN15 Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Status(pub u32);
@@ -640,14 +640,14 @@ impl Status {
     pub const fn set_out1_status(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "OUT2_STATUS can initiate PoR reset. CORE domain is reset completely. System domain must be reset completely, except the registers in SPC which reset by PoR. VBAT domain is not affected. ."]
+    #[doc = "OUT2_STATUS can initiate PoR reset. CORE domain is reset completely. System domain must be reset completely, except the registers in SPC which reset by PoR. VBAT domain is not affected.."]
     #[must_use]
     #[inline(always)]
     pub const fn out2_status(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "OUT2_STATUS can initiate PoR reset. CORE domain is reset completely. System domain must be reset completely, except the registers in SPC which reset by PoR. VBAT domain is not affected. ."]
+    #[doc = "OUT2_STATUS can initiate PoR reset. CORE domain is reset completely. System domain must be reset completely, except the registers in SPC which reset by PoR. VBAT domain is not affected.."]
     #[inline(always)]
     pub const fn set_out2_status(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
@@ -764,7 +764,7 @@ impl defmt::Format for Status {
         )
     }
 }
-#[doc = "ITRC IN16 to IN47 Status"]
+#[doc = "ITRC IN16 to IN47 Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Status1(pub u32);
@@ -781,26 +781,26 @@ impl Status1 {
     pub const fn set_in16_status(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[must_use]
     #[inline(always)]
     pub const fn in18_status(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[inline(always)]
     pub const fn set_in18_status(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[must_use]
     #[inline(always)]
     pub const fn in19_status(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[inline(always)]
     pub const fn set_in19_status(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
@@ -817,14 +817,14 @@ impl Status1 {
     pub const fn set_in20_status(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "IN25_STATUS - SOCTRIM0_ERR to SOCTRIM7_ERR OR together; IN26_STATUS - Reserved IN27_STATUS - ERM Multibit Error Interrupt IN28_32_STATUS - reserved"]
+    #[doc = "IN25_STATUS - SOCTRIM0_ERR to SOCTRIM7_ERR OR together; IN26_STATUS - Reserved IN27_STATUS - ERM Multibit Error Interrupt IN28_32_STATUS - reserved."]
     #[must_use]
     #[inline(always)]
     pub const fn in32_25_status(&self) -> super::vals::In3225Status {
         let val = (self.0 >> 9usize) & 0xff;
         super::vals::In3225Status::from_bits(val as u8)
     }
-    #[doc = "IN25_STATUS - SOCTRIM0_ERR to SOCTRIM7_ERR OR together; IN26_STATUS - Reserved IN27_STATUS - ERM Multibit Error Interrupt IN28_32_STATUS - reserved"]
+    #[doc = "IN25_STATUS - SOCTRIM0_ERR to SOCTRIM7_ERR OR together; IN26_STATUS - Reserved IN27_STATUS - ERM Multibit Error Interrupt IN28_32_STATUS - reserved."]
     #[inline(always)]
     pub const fn set_in32_25_status(&mut self, val: super::vals::In3225Status) {
         self.0 = (self.0 & !(0xff << 9usize)) | (((val.to_bits() as u32) & 0xff) << 9usize);
@@ -889,14 +889,14 @@ impl Status1 {
     pub const fn set_in38_status(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "TRNG HW Error (TRNG_INT_STATUS\\[HW_ERR\\])"]
+    #[doc = "TRNG HW Error (TRNG_INT_STATUS\\[HW_ERR\\])."]
     #[must_use]
     #[inline(always)]
     pub const fn in47_status(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "TRNG HW Error (TRNG_INT_STATUS\\[HW_ERR\\])"]
+    #[doc = "TRNG HW Error (TRNG_INT_STATUS\\[HW_ERR\\])."]
     #[inline(always)]
     pub const fn set_in47_status(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -945,7 +945,7 @@ impl defmt::Format for Status1 {
         )
     }
 }
-#[doc = "Software event 0"]
+#[doc = "Software event 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SwEvent0(pub u32);
@@ -986,7 +986,7 @@ impl defmt::Format for SwEvent0 {
         )
     }
 }
-#[doc = "Software event 1"]
+#[doc = "Software event 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SwEvent1(pub u32);

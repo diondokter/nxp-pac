@@ -1,76 +1,76 @@
-#[doc = "Channel Control and Status"]
+#[doc = "Channel Control and Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ChCsr(pub u32);
 impl ChCsr {
-    #[doc = "Enable DMA Request"]
+    #[doc = "Enable DMA Request."]
     #[must_use]
     #[inline(always)]
     pub const fn erq(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable DMA Request"]
+    #[doc = "Enable DMA Request."]
     #[inline(always)]
     pub const fn set_erq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Enable Asynchronous DMA Request"]
+    #[doc = "Enable Asynchronous DMA Request."]
     #[must_use]
     #[inline(always)]
     pub const fn earq(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable Asynchronous DMA Request"]
+    #[doc = "Enable Asynchronous DMA Request."]
     #[inline(always)]
     pub const fn set_earq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Enable Error Interrupt"]
+    #[doc = "Enable Error Interrupt."]
     #[must_use]
     #[inline(always)]
     pub const fn eei(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable Error Interrupt"]
+    #[doc = "Enable Error Interrupt."]
     #[inline(always)]
     pub const fn set_eei(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Enable Buffered Writes"]
+    #[doc = "Enable Buffered Writes."]
     #[must_use]
     #[inline(always)]
     pub const fn ebw(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable Buffered Writes"]
+    #[doc = "Enable Buffered Writes."]
     #[inline(always)]
     pub const fn set_ebw(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "Channel Done"]
+    #[doc = "Channel Done."]
     #[must_use]
     #[inline(always)]
     pub const fn done(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "Channel Done"]
+    #[doc = "Channel Done."]
     #[inline(always)]
     pub const fn set_done(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "Channel Active"]
+    #[doc = "Channel Active."]
     #[must_use]
     #[inline(always)]
     pub const fn active(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Channel Active"]
+    #[doc = "Channel Active."]
     #[inline(always)]
     pub const fn set_active(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -109,115 +109,115 @@ impl defmt::Format for ChCsr {
         )
     }
 }
-#[doc = "Channel Error Status"]
+#[doc = "Channel Error Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ChEs(pub u32);
 impl ChEs {
-    #[doc = "Destination Bus Error"]
+    #[doc = "Destination Bus Error."]
     #[must_use]
     #[inline(always)]
     pub const fn dbe(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Destination Bus Error"]
+    #[doc = "Destination Bus Error."]
     #[inline(always)]
     pub const fn set_dbe(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Source Bus Error"]
+    #[doc = "Source Bus Error."]
     #[must_use]
     #[inline(always)]
     pub const fn sbe(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Source Bus Error"]
+    #[doc = "Source Bus Error."]
     #[inline(always)]
     pub const fn set_sbe(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Scatter/Gather Configuration Error"]
+    #[doc = "Scatter/Gather Configuration Error."]
     #[must_use]
     #[inline(always)]
     pub const fn sge(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Scatter/Gather Configuration Error"]
+    #[doc = "Scatter/Gather Configuration Error."]
     #[inline(always)]
     pub const fn set_sge(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "NBYTES/CITER Configuration Error"]
+    #[doc = "NBYTES/CITER Configuration Error."]
     #[must_use]
     #[inline(always)]
     pub const fn nce(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "NBYTES/CITER Configuration Error"]
+    #[doc = "NBYTES/CITER Configuration Error."]
     #[inline(always)]
     pub const fn set_nce(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "Destination Offset Error"]
+    #[doc = "Destination Offset Error."]
     #[must_use]
     #[inline(always)]
     pub const fn doe(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "Destination Offset Error"]
+    #[doc = "Destination Offset Error."]
     #[inline(always)]
     pub const fn set_doe(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "Destination Address Error"]
+    #[doc = "Destination Address Error."]
     #[must_use]
     #[inline(always)]
     pub const fn dae(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Destination Address Error"]
+    #[doc = "Destination Address Error."]
     #[inline(always)]
     pub const fn set_dae(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "Source Offset Error"]
+    #[doc = "Source Offset Error."]
     #[must_use]
     #[inline(always)]
     pub const fn soe(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "Source Offset Error"]
+    #[doc = "Source Offset Error."]
     #[inline(always)]
     pub const fn set_soe(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Source Address Error"]
+    #[doc = "Source Address Error."]
     #[must_use]
     #[inline(always)]
     pub const fn sae(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Source Address Error"]
+    #[doc = "Source Address Error."]
     #[inline(always)]
     pub const fn set_sae(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Error In Channel"]
+    #[doc = "Error In Channel."]
     #[must_use]
     #[inline(always)]
     pub const fn err(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Error In Channel"]
+    #[doc = "Error In Channel."]
     #[inline(always)]
     pub const fn set_err(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -262,19 +262,19 @@ impl defmt::Format for ChEs {
         )
     }
 }
-#[doc = "Channel Interrupt Status"]
+#[doc = "Channel Interrupt Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ChInt(pub u32);
 impl ChInt {
-    #[doc = "Interrupt Request"]
+    #[doc = "Interrupt Request."]
     #[must_use]
     #[inline(always)]
     pub const fn int(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Interrupt Request"]
+    #[doc = "Interrupt Request."]
     #[inline(always)]
     pub const fn set_int(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -297,19 +297,19 @@ impl defmt::Format for ChInt {
         defmt::write!(f, "ChInt {{ int: {=bool:?} }}", self.int())
     }
 }
-#[doc = "Channel Multiplexor Configuration"]
+#[doc = "Channel Multiplexor Configuration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ChMux(pub u32);
 impl ChMux {
-    #[doc = "Service Request Source"]
+    #[doc = "Service Request Source."]
     #[must_use]
     #[inline(always)]
     pub const fn src(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Service Request Source"]
+    #[doc = "Service Request Source."]
     #[inline(always)]
     pub const fn set_src(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
@@ -332,43 +332,43 @@ impl defmt::Format for ChMux {
         defmt::write!(f, "ChMux {{ src: {=u8:?} }}", self.src())
     }
 }
-#[doc = "Channel Priority"]
+#[doc = "Channel Priority."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ChPri(pub u32);
 impl ChPri {
-    #[doc = "Arbitration Priority Level"]
+    #[doc = "Arbitration Priority Level."]
     #[must_use]
     #[inline(always)]
     pub const fn apl(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x07;
         val as u8
     }
-    #[doc = "Arbitration Priority Level"]
+    #[doc = "Arbitration Priority Level."]
     #[inline(always)]
     pub const fn set_apl(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val as u32) & 0x07) << 0usize);
     }
-    #[doc = "Disable Preempt Ability"]
+    #[doc = "Disable Preempt Ability."]
     #[must_use]
     #[inline(always)]
     pub const fn dpa(&self) -> super::vals::Dpa {
         let val = (self.0 >> 30usize) & 0x01;
         super::vals::Dpa::from_bits(val as u8)
     }
-    #[doc = "Disable Preempt Ability"]
+    #[doc = "Disable Preempt Ability."]
     #[inline(always)]
     pub const fn set_dpa(&mut self, val: super::vals::Dpa) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
-    #[doc = "Enable Channel Preemption"]
+    #[doc = "Enable Channel Preemption."]
     #[must_use]
     #[inline(always)]
     pub const fn ecp(&self) -> super::vals::Ecp {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::Ecp::from_bits(val as u8)
     }
-    #[doc = "Enable Channel Preemption"]
+    #[doc = "Enable Channel Preemption."]
     #[inline(always)]
     pub const fn set_ecp(&mut self, val: super::vals::Ecp) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -401,55 +401,55 @@ impl defmt::Format for ChPri {
         )
     }
 }
-#[doc = "Channel System Bus"]
+#[doc = "Channel System Bus."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ChSbr(pub u32);
 impl ChSbr {
-    #[doc = "Initiator ID"]
+    #[doc = "Initiator ID."]
     #[must_use]
     #[inline(always)]
     pub const fn mid(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "Initiator ID"]
+    #[doc = "Initiator ID."]
     #[inline(always)]
     pub const fn set_mid(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Security Level"]
+    #[doc = "Security Level."]
     #[must_use]
     #[inline(always)]
     pub const fn sec(&self) -> super::vals::Sec {
         let val = (self.0 >> 14usize) & 0x01;
         super::vals::Sec::from_bits(val as u8)
     }
-    #[doc = "Security Level"]
+    #[doc = "Security Level."]
     #[inline(always)]
     pub const fn set_sec(&mut self, val: super::vals::Sec) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
     }
-    #[doc = "Privileged Access Level"]
+    #[doc = "Privileged Access Level."]
     #[must_use]
     #[inline(always)]
     pub const fn pal(&self) -> super::vals::Pal {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::Pal::from_bits(val as u8)
     }
-    #[doc = "Privileged Access Level"]
+    #[doc = "Privileged Access Level."]
     #[inline(always)]
     pub const fn set_pal(&mut self, val: super::vals::Pal) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "Enable Initiator ID Replication"]
+    #[doc = "Enable Initiator ID Replication."]
     #[must_use]
     #[inline(always)]
     pub const fn emi(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable Initiator ID Replication"]
+    #[doc = "Enable Initiator ID Replication."]
     #[inline(always)]
     pub const fn set_emi(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
@@ -484,55 +484,55 @@ impl defmt::Format for ChSbr {
         )
     }
 }
-#[doc = "TCD Transfer Attributes"]
+#[doc = "TCD Transfer Attributes."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct TcdAttr(pub u16);
 impl TcdAttr {
-    #[doc = "Destination Data Transfer Size"]
+    #[doc = "Destination Data Transfer Size."]
     #[must_use]
     #[inline(always)]
     pub const fn dsize(&self) -> super::vals::Size {
         let val = (self.0 >> 0usize) & 0x07;
         super::vals::Size::from_bits(val as u8)
     }
-    #[doc = "Destination Data Transfer Size"]
+    #[doc = "Destination Data Transfer Size."]
     #[inline(always)]
     pub const fn set_dsize(&mut self, val: super::vals::Size) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u16) & 0x07) << 0usize);
     }
-    #[doc = "Destination Address Modulo"]
+    #[doc = "Destination Address Modulo."]
     #[must_use]
     #[inline(always)]
     pub const fn dmod(&self) -> u8 {
         let val = (self.0 >> 3usize) & 0x1f;
         val as u8
     }
-    #[doc = "Destination Address Modulo"]
+    #[doc = "Destination Address Modulo."]
     #[inline(always)]
     pub const fn set_dmod(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 3usize)) | (((val as u16) & 0x1f) << 3usize);
     }
-    #[doc = "Source Data Transfer Size"]
+    #[doc = "Source Data Transfer Size."]
     #[must_use]
     #[inline(always)]
     pub const fn ssize(&self) -> super::vals::Size {
         let val = (self.0 >> 8usize) & 0x07;
         super::vals::Size::from_bits(val as u8)
     }
-    #[doc = "Source Data Transfer Size"]
+    #[doc = "Source Data Transfer Size."]
     #[inline(always)]
     pub const fn set_ssize(&mut self, val: super::vals::Size) {
         self.0 = (self.0 & !(0x07 << 8usize)) | (((val.to_bits() as u16) & 0x07) << 8usize);
     }
-    #[doc = "Source Address Modulo"]
+    #[doc = "Source Address Modulo."]
     #[must_use]
     #[inline(always)]
     pub const fn smod(&self) -> u8 {
         let val = (self.0 >> 11usize) & 0x1f;
         val as u8
     }
-    #[doc = "Source Address Modulo"]
+    #[doc = "Source Address Modulo."]
     #[inline(always)]
     pub const fn set_smod(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 11usize)) | (((val as u16) & 0x1f) << 11usize);
@@ -567,31 +567,31 @@ impl defmt::Format for TcdAttr {
         )
     }
 }
-#[doc = "TCD Beginning Major Loop Count (Minor Loop Channel Linking Disabled)"]
+#[doc = "TCD Beginning Major Loop Count (Minor Loop Channel Linking Disabled)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct TcdBiterElinkno(pub u16);
 impl TcdBiterElinkno {
-    #[doc = "Starting Major Iteration Count"]
+    #[doc = "Starting Major Iteration Count."]
     #[must_use]
     #[inline(always)]
     pub const fn biter(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x7fff;
         val as u16
     }
-    #[doc = "Starting Major Iteration Count"]
+    #[doc = "Starting Major Iteration Count."]
     #[inline(always)]
     pub const fn set_biter(&mut self, val: u16) {
         self.0 = (self.0 & !(0x7fff << 0usize)) | (((val as u16) & 0x7fff) << 0usize);
     }
-    #[doc = "Enables Link"]
+    #[doc = "Enables Link."]
     #[must_use]
     #[inline(always)]
     pub const fn elink(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables Link"]
+    #[doc = "Enables Link."]
     #[inline(always)]
     pub const fn set_elink(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u16) & 0x01) << 15usize);
@@ -622,43 +622,43 @@ impl defmt::Format for TcdBiterElinkno {
         )
     }
 }
-#[doc = "TCD Beginning Major Loop Count (Minor Loop Channel Linking Enabled)"]
+#[doc = "TCD Beginning Major Loop Count (Minor Loop Channel Linking Enabled)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct TcdBiterElinkyes(pub u16);
 impl TcdBiterElinkyes {
-    #[doc = "Starting Major Iteration Count"]
+    #[doc = "Starting Major Iteration Count."]
     #[must_use]
     #[inline(always)]
     pub const fn biter(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x01ff;
         val as u16
     }
-    #[doc = "Starting Major Iteration Count"]
+    #[doc = "Starting Major Iteration Count."]
     #[inline(always)]
     pub const fn set_biter(&mut self, val: u16) {
         self.0 = (self.0 & !(0x01ff << 0usize)) | (((val as u16) & 0x01ff) << 0usize);
     }
-    #[doc = "Link Channel Number"]
+    #[doc = "Link Channel Number."]
     #[must_use]
     #[inline(always)]
     pub const fn linkch(&self) -> u8 {
         let val = (self.0 >> 9usize) & 0x0f;
         val as u8
     }
-    #[doc = "Link Channel Number"]
+    #[doc = "Link Channel Number."]
     #[inline(always)]
     pub const fn set_linkch(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 9usize)) | (((val as u16) & 0x0f) << 9usize);
     }
-    #[doc = "Enable Link"]
+    #[doc = "Enable Link."]
     #[must_use]
     #[inline(always)]
     pub const fn elink(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable Link"]
+    #[doc = "Enable Link."]
     #[inline(always)]
     pub const fn set_elink(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u16) & 0x01) << 15usize);
@@ -691,31 +691,31 @@ impl defmt::Format for TcdBiterElinkyes {
         )
     }
 }
-#[doc = "TCD Current Major Loop Count (Minor Loop Channel Linking Disabled)"]
+#[doc = "TCD Current Major Loop Count (Minor Loop Channel Linking Disabled)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct TcdCiterElinkno(pub u16);
 impl TcdCiterElinkno {
-    #[doc = "Current Major Iteration Count"]
+    #[doc = "Current Major Iteration Count."]
     #[must_use]
     #[inline(always)]
     pub const fn citer(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x7fff;
         val as u16
     }
-    #[doc = "Current Major Iteration Count"]
+    #[doc = "Current Major Iteration Count."]
     #[inline(always)]
     pub const fn set_citer(&mut self, val: u16) {
         self.0 = (self.0 & !(0x7fff << 0usize)) | (((val as u16) & 0x7fff) << 0usize);
     }
-    #[doc = "Enable Link"]
+    #[doc = "Enable Link."]
     #[must_use]
     #[inline(always)]
     pub const fn elink(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable Link"]
+    #[doc = "Enable Link."]
     #[inline(always)]
     pub const fn set_elink(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u16) & 0x01) << 15usize);
@@ -746,43 +746,43 @@ impl defmt::Format for TcdCiterElinkno {
         )
     }
 }
-#[doc = "TCD Current Major Loop Count (Minor Loop Channel Linking Enabled)"]
+#[doc = "TCD Current Major Loop Count (Minor Loop Channel Linking Enabled)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct TcdCiterElinkyes(pub u16);
 impl TcdCiterElinkyes {
-    #[doc = "Current Major Iteration Count"]
+    #[doc = "Current Major Iteration Count."]
     #[must_use]
     #[inline(always)]
     pub const fn citer(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x01ff;
         val as u16
     }
-    #[doc = "Current Major Iteration Count"]
+    #[doc = "Current Major Iteration Count."]
     #[inline(always)]
     pub const fn set_citer(&mut self, val: u16) {
         self.0 = (self.0 & !(0x01ff << 0usize)) | (((val as u16) & 0x01ff) << 0usize);
     }
-    #[doc = "Minor Loop Link Channel Number"]
+    #[doc = "Minor Loop Link Channel Number."]
     #[must_use]
     #[inline(always)]
     pub const fn linkch(&self) -> u8 {
         let val = (self.0 >> 9usize) & 0x0f;
         val as u8
     }
-    #[doc = "Minor Loop Link Channel Number"]
+    #[doc = "Minor Loop Link Channel Number."]
     #[inline(always)]
     pub const fn set_linkch(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 9usize)) | (((val as u16) & 0x0f) << 9usize);
     }
-    #[doc = "Enable Link"]
+    #[doc = "Enable Link."]
     #[must_use]
     #[inline(always)]
     pub const fn elink(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable Link"]
+    #[doc = "Enable Link."]
     #[inline(always)]
     pub const fn set_elink(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u16) & 0x01) << 15usize);
@@ -815,127 +815,127 @@ impl defmt::Format for TcdCiterElinkyes {
         )
     }
 }
-#[doc = "TCD Control and Status"]
+#[doc = "TCD Control and Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct TcdCsr(pub u16);
 impl TcdCsr {
-    #[doc = "Channel Start"]
+    #[doc = "Channel Start."]
     #[must_use]
     #[inline(always)]
     pub const fn start(&self) -> super::vals::Start {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Start::from_bits(val as u8)
     }
-    #[doc = "Channel Start"]
+    #[doc = "Channel Start."]
     #[inline(always)]
     pub const fn set_start(&mut self, val: super::vals::Start) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u16) & 0x01) << 0usize);
     }
-    #[doc = "Enable Interrupt If Major count complete"]
+    #[doc = "Enable Interrupt If Major count complete."]
     #[must_use]
     #[inline(always)]
     pub const fn intmajor(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable Interrupt If Major count complete"]
+    #[doc = "Enable Interrupt If Major count complete."]
     #[inline(always)]
     pub const fn set_intmajor(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u16) & 0x01) << 1usize);
     }
-    #[doc = "Enable Interrupt If Major Counter Half-complete"]
+    #[doc = "Enable Interrupt If Major Counter Half-complete."]
     #[must_use]
     #[inline(always)]
     pub const fn inthalf(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable Interrupt If Major Counter Half-complete"]
+    #[doc = "Enable Interrupt If Major Counter Half-complete."]
     #[inline(always)]
     pub const fn set_inthalf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u16) & 0x01) << 2usize);
     }
-    #[doc = "Disable Request"]
+    #[doc = "Disable Request."]
     #[must_use]
     #[inline(always)]
     pub const fn dreq(&self) -> super::vals::Dreq {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Dreq::from_bits(val as u8)
     }
-    #[doc = "Disable Request"]
+    #[doc = "Disable Request."]
     #[inline(always)]
     pub const fn set_dreq(&mut self, val: super::vals::Dreq) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u16) & 0x01) << 3usize);
     }
-    #[doc = "Enable Scatter/Gather Processing"]
+    #[doc = "Enable Scatter/Gather Processing."]
     #[must_use]
     #[inline(always)]
     pub const fn esg(&self) -> super::vals::Esg {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::Esg::from_bits(val as u8)
     }
-    #[doc = "Enable Scatter/Gather Processing"]
+    #[doc = "Enable Scatter/Gather Processing."]
     #[inline(always)]
     pub const fn set_esg(&mut self, val: super::vals::Esg) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u16) & 0x01) << 4usize);
     }
-    #[doc = "Enable Link When Major Loop Complete"]
+    #[doc = "Enable Link When Major Loop Complete."]
     #[must_use]
     #[inline(always)]
     pub const fn majorelink(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable Link When Major Loop Complete"]
+    #[doc = "Enable Link When Major Loop Complete."]
     #[inline(always)]
     pub const fn set_majorelink(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u16) & 0x01) << 5usize);
     }
-    #[doc = "Enable End-Of-Packet Processing"]
+    #[doc = "Enable End-Of-Packet Processing."]
     #[must_use]
     #[inline(always)]
     pub const fn eeop(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable End-Of-Packet Processing"]
+    #[doc = "Enable End-Of-Packet Processing."]
     #[inline(always)]
     pub const fn set_eeop(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u16) & 0x01) << 6usize);
     }
-    #[doc = "Enable Store Destination Address"]
+    #[doc = "Enable Store Destination Address."]
     #[must_use]
     #[inline(always)]
     pub const fn esda(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable Store Destination Address"]
+    #[doc = "Enable Store Destination Address."]
     #[inline(always)]
     pub const fn set_esda(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u16) & 0x01) << 7usize);
     }
-    #[doc = "Major Loop Link Channel Number"]
+    #[doc = "Major Loop Link Channel Number."]
     #[must_use]
     #[inline(always)]
     pub const fn majorlinkch(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x0f;
         val as u8
     }
-    #[doc = "Major Loop Link Channel Number"]
+    #[doc = "Major Loop Link Channel Number."]
     #[inline(always)]
     pub const fn set_majorlinkch(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val as u16) & 0x0f) << 8usize);
     }
-    #[doc = "Bandwidth Control"]
+    #[doc = "Bandwidth Control."]
     #[must_use]
     #[inline(always)]
     pub const fn bwc(&self) -> super::vals::Bwc {
         let val = (self.0 >> 14usize) & 0x03;
         super::vals::Bwc::from_bits(val as u8)
     }
-    #[doc = "Bandwidth Control"]
+    #[doc = "Bandwidth Control."]
     #[inline(always)]
     pub const fn set_bwc(&mut self, val: super::vals::Bwc) {
         self.0 = (self.0 & !(0x03 << 14usize)) | (((val.to_bits() as u16) & 0x03) << 14usize);
@@ -982,19 +982,19 @@ impl defmt::Format for TcdCsr {
         )
     }
 }
-#[doc = "TCD Destination Address"]
+#[doc = "TCD Destination Address."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct TcdDaddr(pub u32);
 impl TcdDaddr {
-    #[doc = "Destination Address"]
+    #[doc = "Destination Address."]
     #[must_use]
     #[inline(always)]
     pub const fn daddr(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Destination Address"]
+    #[doc = "Destination Address."]
     #[inline(always)]
     pub const fn set_daddr(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1019,19 +1019,19 @@ impl defmt::Format for TcdDaddr {
         defmt::write!(f, "TcdDaddr {{ daddr: {=u32:?} }}", self.daddr())
     }
 }
-#[doc = "TCD Last Destination Address Adjustment / Scatter Gather Address"]
+#[doc = "TCD Last Destination Address Adjustment / Scatter Gather Address."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct TcdDlastSga(pub u32);
 impl TcdDlastSga {
-    #[doc = "Last Destination Address Adjustment / Scatter Gather Address"]
+    #[doc = "Last Destination Address Adjustment / Scatter Gather Address."]
     #[must_use]
     #[inline(always)]
     pub const fn dlast_sga(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Last Destination Address Adjustment / Scatter Gather Address"]
+    #[doc = "Last Destination Address Adjustment / Scatter Gather Address."]
     #[inline(always)]
     pub const fn set_dlast_sga(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1056,19 +1056,19 @@ impl defmt::Format for TcdDlastSga {
         defmt::write!(f, "TcdDlastSga {{ dlast_sga: {=u32:?} }}", self.dlast_sga())
     }
 }
-#[doc = "TCD Signed Destination Address Offset"]
+#[doc = "TCD Signed Destination Address Offset."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct TcdDoff(pub u16);
 impl TcdDoff {
-    #[doc = "Destination Address Signed Offset"]
+    #[doc = "Destination Address Signed Offset."]
     #[must_use]
     #[inline(always)]
     pub const fn doff(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Destination Address Signed Offset"]
+    #[doc = "Destination Address Signed Offset."]
     #[inline(always)]
     pub const fn set_doff(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u16) & 0xffff) << 0usize);
@@ -1093,43 +1093,43 @@ impl defmt::Format for TcdDoff {
         defmt::write!(f, "TcdDoff {{ doff: {=u16:?} }}", self.doff())
     }
 }
-#[doc = "TCD Transfer Size Without Minor Loop Offsets"]
+#[doc = "TCD Transfer Size Without Minor Loop Offsets."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct TcdNbytesMloffno(pub u32);
 impl TcdNbytesMloffno {
-    #[doc = "Number of Bytes To Transfer Per Service Request"]
+    #[doc = "Number of Bytes To Transfer Per Service Request."]
     #[must_use]
     #[inline(always)]
     pub const fn nbytes(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x3fff_ffff;
         val as u32
     }
-    #[doc = "Number of Bytes To Transfer Per Service Request"]
+    #[doc = "Number of Bytes To Transfer Per Service Request."]
     #[inline(always)]
     pub const fn set_nbytes(&mut self, val: u32) {
         self.0 = (self.0 & !(0x3fff_ffff << 0usize)) | (((val as u32) & 0x3fff_ffff) << 0usize);
     }
-    #[doc = "Destination Minor Loop Offset Enable"]
+    #[doc = "Destination Minor Loop Offset Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dmloe(&self) -> super::vals::TcdNbytesMloffnoDmloe {
         let val = (self.0 >> 30usize) & 0x01;
         super::vals::TcdNbytesMloffnoDmloe::from_bits(val as u8)
     }
-    #[doc = "Destination Minor Loop Offset Enable"]
+    #[doc = "Destination Minor Loop Offset Enable."]
     #[inline(always)]
     pub const fn set_dmloe(&mut self, val: super::vals::TcdNbytesMloffnoDmloe) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
-    #[doc = "Source Minor Loop Offset Enable"]
+    #[doc = "Source Minor Loop Offset Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn smloe(&self) -> super::vals::TcdNbytesMloffnoSmloe {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::TcdNbytesMloffnoSmloe::from_bits(val as u8)
     }
-    #[doc = "Source Minor Loop Offset Enable"]
+    #[doc = "Source Minor Loop Offset Enable."]
     #[inline(always)]
     pub const fn set_smloe(&mut self, val: super::vals::TcdNbytesMloffnoSmloe) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -1162,55 +1162,55 @@ impl defmt::Format for TcdNbytesMloffno {
         )
     }
 }
-#[doc = "TCD Transfer Size with Minor Loop Offsets"]
+#[doc = "TCD Transfer Size with Minor Loop Offsets."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct TcdNbytesMloffyes(pub u32);
 impl TcdNbytesMloffyes {
-    #[doc = "Number of Bytes To Transfer Per Service Request"]
+    #[doc = "Number of Bytes To Transfer Per Service Request."]
     #[must_use]
     #[inline(always)]
     pub const fn nbytes(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x03ff;
         val as u16
     }
-    #[doc = "Number of Bytes To Transfer Per Service Request"]
+    #[doc = "Number of Bytes To Transfer Per Service Request."]
     #[inline(always)]
     pub const fn set_nbytes(&mut self, val: u16) {
         self.0 = (self.0 & !(0x03ff << 0usize)) | (((val as u32) & 0x03ff) << 0usize);
     }
-    #[doc = "Minor Loop Offset"]
+    #[doc = "Minor Loop Offset."]
     #[must_use]
     #[inline(always)]
     pub const fn mloff(&self) -> u32 {
         let val = (self.0 >> 10usize) & 0x000f_ffff;
         val as u32
     }
-    #[doc = "Minor Loop Offset"]
+    #[doc = "Minor Loop Offset."]
     #[inline(always)]
     pub const fn set_mloff(&mut self, val: u32) {
         self.0 = (self.0 & !(0x000f_ffff << 10usize)) | (((val as u32) & 0x000f_ffff) << 10usize);
     }
-    #[doc = "Destination Minor Loop Offset Enable"]
+    #[doc = "Destination Minor Loop Offset Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dmloe(&self) -> super::vals::TcdNbytesMloffyesDmloe {
         let val = (self.0 >> 30usize) & 0x01;
         super::vals::TcdNbytesMloffyesDmloe::from_bits(val as u8)
     }
-    #[doc = "Destination Minor Loop Offset Enable"]
+    #[doc = "Destination Minor Loop Offset Enable."]
     #[inline(always)]
     pub const fn set_dmloe(&mut self, val: super::vals::TcdNbytesMloffyesDmloe) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
-    #[doc = "Source Minor Loop Offset Enable"]
+    #[doc = "Source Minor Loop Offset Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn smloe(&self) -> super::vals::TcdNbytesMloffyesSmloe {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::TcdNbytesMloffyesSmloe::from_bits(val as u8)
     }
-    #[doc = "Source Minor Loop Offset Enable"]
+    #[doc = "Source Minor Loop Offset Enable."]
     #[inline(always)]
     pub const fn set_smloe(&mut self, val: super::vals::TcdNbytesMloffyesSmloe) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -1245,19 +1245,19 @@ impl defmt::Format for TcdNbytesMloffyes {
         )
     }
 }
-#[doc = "TCD Source Address"]
+#[doc = "TCD Source Address."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct TcdSaddr(pub u32);
 impl TcdSaddr {
-    #[doc = "Source Address"]
+    #[doc = "Source Address."]
     #[must_use]
     #[inline(always)]
     pub const fn saddr(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Source Address"]
+    #[doc = "Source Address."]
     #[inline(always)]
     pub const fn set_saddr(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1282,19 +1282,19 @@ impl defmt::Format for TcdSaddr {
         defmt::write!(f, "TcdSaddr {{ saddr: {=u32:?} }}", self.saddr())
     }
 }
-#[doc = "TCD Last Source Address Adjustment / Store DADDR Address"]
+#[doc = "TCD Last Source Address Adjustment / Store DADDR Address."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct TcdSlastSda(pub u32);
 impl TcdSlastSda {
-    #[doc = "Last Source Address Adjustment / Store DADDR Address"]
+    #[doc = "Last Source Address Adjustment / Store DADDR Address."]
     #[must_use]
     #[inline(always)]
     pub const fn slast_sda(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Last Source Address Adjustment / Store DADDR Address"]
+    #[doc = "Last Source Address Adjustment / Store DADDR Address."]
     #[inline(always)]
     pub const fn set_slast_sda(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1319,19 +1319,19 @@ impl defmt::Format for TcdSlastSda {
         defmt::write!(f, "TcdSlastSda {{ slast_sda: {=u32:?} }}", self.slast_sda())
     }
 }
-#[doc = "TCD Signed Source Address Offset"]
+#[doc = "TCD Signed Source Address Offset."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct TcdSoff(pub u16);
 impl TcdSoff {
-    #[doc = "Source Address Signed Offset"]
+    #[doc = "Source Address Signed Offset."]
     #[must_use]
     #[inline(always)]
     pub const fn soff(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Source Address Signed Offset"]
+    #[doc = "Source Address Signed Offset."]
     #[inline(always)]
     pub const fn set_soff(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u16) & 0xffff) << 0usize);

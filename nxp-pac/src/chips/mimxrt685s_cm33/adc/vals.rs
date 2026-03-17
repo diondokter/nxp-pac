@@ -242,9 +242,9 @@ impl From<CmdhLoop> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CmdhLwi {
-    #[doc = "Auto channel increment disabled"]
+    #[doc = "Auto channel increment disabled."]
     LWI_0 = 0x0,
-    #[doc = "Auto channel increment enabled"]
+    #[doc = "Auto channel increment enabled."]
     LWI_1 = 0x01,
 }
 impl CmdhLwi {
@@ -277,21 +277,21 @@ pub enum CmdhNext {
     NEXT_0 = 0x0,
     #[doc = "Select CMD1 command buffer register as next command."]
     NEXT_1 = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_6 = 0x06,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_7 = 0x07,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_8 = 0x08,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -472,9 +472,9 @@ impl From<CmdlAdch> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CmdlCscale {
-    #[doc = "Scale selected analog channel (Factor of 30/64)"]
+    #[doc = "Scale selected analog channel (Factor of 30/64)."]
     CSCALE_0 = 0x0,
-    #[doc = "(Default) Full scale (Factor of 1)"]
+    #[doc = "(Default) Full scale (Factor of 1)."]
     CSCALE_1 = 0x01,
 }
 impl CmdlCscale {
@@ -876,9 +876,9 @@ impl From<Fwmie> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Hten {
-    #[doc = "Hardware trigger source disabled"]
+    #[doc = "Hardware trigger source disabled."]
     HTEN_0 = 0x0,
-    #[doc = "Hardware trigger source enabled"]
+    #[doc = "Hardware trigger source enabled."]
     HTEN_1 = 0x01,
 }
 impl Hten {
@@ -1023,9 +1023,9 @@ impl From<Mvi> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pauseen {
-    #[doc = "Pause operation disabled"]
+    #[doc = "Pause operation disabled."]
     PAUSEEN_0 = 0x0,
-    #[doc = "Pause operation enabled"]
+    #[doc = "Pause operation enabled."]
     PAUSEEN_1 = 0x01,
 }
 impl Pauseen {
@@ -1776,30 +1776,30 @@ impl From<Swt9> for u8 {
 pub enum Tcmd {
     #[doc = "Not a valid selection from the command buffer. Trigger event is ignored."]
     TCMD_0 = 0x0,
-    #[doc = "CMD1 is executed"]
+    #[doc = "CMD1 is executed."]
     TCMD_1 = 0x01,
-    #[doc = "Corresponding CMD is executed"]
+    #[doc = "Corresponding CMD is executed."]
     TCMD_2 = 0x02,
-    #[doc = "Corresponding CMD is executed"]
+    #[doc = "Corresponding CMD is executed."]
     TCMD_3 = 0x03,
-    #[doc = "Corresponding CMD is executed"]
+    #[doc = "Corresponding CMD is executed."]
     TCMD_4 = 0x04,
-    #[doc = "Corresponding CMD is executed"]
+    #[doc = "Corresponding CMD is executed."]
     TCMD_5 = 0x05,
-    #[doc = "Corresponding CMD is executed"]
+    #[doc = "Corresponding CMD is executed."]
     TCMD_6 = 0x06,
-    #[doc = "Corresponding CMD is executed"]
+    #[doc = "Corresponding CMD is executed."]
     TCMD_7 = 0x07,
-    #[doc = "Corresponding CMD is executed"]
+    #[doc = "Corresponding CMD is executed."]
     TCMD_8 = 0x08,
-    #[doc = "Corresponding CMD is executed"]
+    #[doc = "Corresponding CMD is executed."]
     TCMD_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "CMD15 is executed"]
+    #[doc = "CMD15 is executed."]
     TCMD_15 = 0x0f,
 }
 impl Tcmd {
@@ -1828,32 +1828,32 @@ impl From<Tcmd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tpri {
-    #[doc = "Set to highest priority, Level 1"]
+    #[doc = "Set to highest priority, Level 1."]
     TPRI_0 = 0x0,
-    #[doc = "Set to corresponding priority level"]
+    #[doc = "Set to corresponding priority level."]
     TPRI_1 = 0x01,
-    #[doc = "Set to corresponding priority level"]
+    #[doc = "Set to corresponding priority level."]
     TPRI_2 = 0x02,
-    #[doc = "Set to corresponding priority level"]
+    #[doc = "Set to corresponding priority level."]
     TPRI_3 = 0x03,
-    #[doc = "Set to corresponding priority level"]
+    #[doc = "Set to corresponding priority level."]
     TPRI_4 = 0x04,
-    #[doc = "Set to corresponding priority level"]
+    #[doc = "Set to corresponding priority level."]
     TPRI_5 = 0x05,
-    #[doc = "Set to corresponding priority level"]
+    #[doc = "Set to corresponding priority level."]
     TPRI_6 = 0x06,
-    #[doc = "Set to corresponding priority level"]
+    #[doc = "Set to corresponding priority level."]
     TPRI_7 = 0x07,
-    #[doc = "Set to corresponding priority level"]
+    #[doc = "Set to corresponding priority level."]
     TPRI_8 = 0x08,
-    #[doc = "Set to corresponding priority level"]
+    #[doc = "Set to corresponding priority level."]
     TPRI_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "Set to lowest priority, Level 16"]
+    #[doc = "Set to lowest priority, Level 16."]
     TPRI_15 = 0x0f,
 }
 impl Tpri {

@@ -1,100 +1,100 @@
-#[doc = "Crossbar A Control Register 0"]
+#[doc = "Crossbar A Control Register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl0(pub u16);
 impl Ctrl0 {
-    #[doc = "DMA Enable for XBAR_OUT0"]
+    #[doc = "DMA Enable for XBAR_OUT0."]
     #[must_use]
     #[inline(always)]
     pub const fn den0(&self) -> super::vals::Den0 {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Den0::from_bits(val as u8)
     }
-    #[doc = "DMA Enable for XBAR_OUT0"]
+    #[doc = "DMA Enable for XBAR_OUT0."]
     #[inline(always)]
     pub const fn set_den0(&mut self, val: super::vals::Den0) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u16) & 0x01) << 0usize);
     }
-    #[doc = "Interrupt Enable for XBAR_OUT0"]
+    #[doc = "Interrupt Enable for XBAR_OUT0."]
     #[must_use]
     #[inline(always)]
     pub const fn ien0(&self) -> super::vals::Ien0 {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Ien0::from_bits(val as u8)
     }
-    #[doc = "Interrupt Enable for XBAR_OUT0"]
+    #[doc = "Interrupt Enable for XBAR_OUT0."]
     #[inline(always)]
     pub const fn set_ien0(&mut self, val: super::vals::Ien0) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u16) & 0x01) << 1usize);
     }
-    #[doc = "Active edge for edge detection on XBAR_OUT0"]
+    #[doc = "Active edge for edge detection on XBAR_OUT0."]
     #[must_use]
     #[inline(always)]
     pub const fn edge0(&self) -> super::vals::Edge0 {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::Edge0::from_bits(val as u8)
     }
-    #[doc = "Active edge for edge detection on XBAR_OUT0"]
+    #[doc = "Active edge for edge detection on XBAR_OUT0."]
     #[inline(always)]
     pub const fn set_edge0(&mut self, val: super::vals::Edge0) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u16) & 0x03) << 2usize);
     }
-    #[doc = "Edge detection status for XBAR_OUT0"]
+    #[doc = "Edge detection status for XBAR_OUT0."]
     #[must_use]
     #[inline(always)]
     pub const fn sts0(&self) -> super::vals::Sts0 {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::Sts0::from_bits(val as u8)
     }
-    #[doc = "Edge detection status for XBAR_OUT0"]
+    #[doc = "Edge detection status for XBAR_OUT0."]
     #[inline(always)]
     pub const fn set_sts0(&mut self, val: super::vals::Sts0) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u16) & 0x01) << 4usize);
     }
-    #[doc = "DMA Enable for XBAR_OUT1"]
+    #[doc = "DMA Enable for XBAR_OUT1."]
     #[must_use]
     #[inline(always)]
     pub const fn den1(&self) -> super::vals::Den1 {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::Den1::from_bits(val as u8)
     }
-    #[doc = "DMA Enable for XBAR_OUT1"]
+    #[doc = "DMA Enable for XBAR_OUT1."]
     #[inline(always)]
     pub const fn set_den1(&mut self, val: super::vals::Den1) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u16) & 0x01) << 8usize);
     }
-    #[doc = "Interrupt Enable for XBAR_OUT1"]
+    #[doc = "Interrupt Enable for XBAR_OUT1."]
     #[must_use]
     #[inline(always)]
     pub const fn ien1(&self) -> super::vals::Ien1 {
         let val = (self.0 >> 9usize) & 0x01;
         super::vals::Ien1::from_bits(val as u8)
     }
-    #[doc = "Interrupt Enable for XBAR_OUT1"]
+    #[doc = "Interrupt Enable for XBAR_OUT1."]
     #[inline(always)]
     pub const fn set_ien1(&mut self, val: super::vals::Ien1) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u16) & 0x01) << 9usize);
     }
-    #[doc = "Active edge for edge detection on XBAR_OUT1"]
+    #[doc = "Active edge for edge detection on XBAR_OUT1."]
     #[must_use]
     #[inline(always)]
     pub const fn edge1(&self) -> super::vals::Edge1 {
         let val = (self.0 >> 10usize) & 0x03;
         super::vals::Edge1::from_bits(val as u8)
     }
-    #[doc = "Active edge for edge detection on XBAR_OUT1"]
+    #[doc = "Active edge for edge detection on XBAR_OUT1."]
     #[inline(always)]
     pub const fn set_edge1(&mut self, val: super::vals::Edge1) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u16) & 0x03) << 10usize);
     }
-    #[doc = "Edge detection status for XBAR_OUT1"]
+    #[doc = "Edge detection status for XBAR_OUT1."]
     #[must_use]
     #[inline(always)]
     pub const fn sts1(&self) -> super::vals::Sts1 {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Sts1::from_bits(val as u8)
     }
-    #[doc = "Edge detection status for XBAR_OUT1"]
+    #[doc = "Edge detection status for XBAR_OUT1."]
     #[inline(always)]
     pub const fn set_sts1(&mut self, val: super::vals::Sts1) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u16) & 0x01) << 12usize);
@@ -137,103 +137,103 @@ impl defmt::Format for Ctrl0 {
         )
     }
 }
-#[doc = "Crossbar A Control Register 1"]
+#[doc = "Crossbar A Control Register 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl1(pub u16);
 impl Ctrl1 {
-    #[doc = "DMA Enable for XBAR_OUT2"]
+    #[doc = "DMA Enable for XBAR_OUT2."]
     #[must_use]
     #[inline(always)]
     pub const fn den2(&self) -> super::vals::Den2 {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Den2::from_bits(val as u8)
     }
-    #[doc = "DMA Enable for XBAR_OUT2"]
+    #[doc = "DMA Enable for XBAR_OUT2."]
     #[inline(always)]
     pub const fn set_den2(&mut self, val: super::vals::Den2) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u16) & 0x01) << 0usize);
     }
-    #[doc = "Interrupt Enable for XBAR_OUT2"]
+    #[doc = "Interrupt Enable for XBAR_OUT2."]
     #[must_use]
     #[inline(always)]
     pub const fn ien2(&self) -> super::vals::Ien2 {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Ien2::from_bits(val as u8)
     }
-    #[doc = "Interrupt Enable for XBAR_OUT2"]
+    #[doc = "Interrupt Enable for XBAR_OUT2."]
     #[inline(always)]
     pub const fn set_ien2(&mut self, val: super::vals::Ien2) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u16) & 0x01) << 1usize);
     }
-    #[doc = "Active edge for edge detection on XBAR_OUT2"]
+    #[doc = "Active edge for edge detection on XBAR_OUT2."]
     #[must_use]
     #[inline(always)]
     pub const fn edge2(&self) -> super::vals::Edge2 {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::Edge2::from_bits(val as u8)
     }
-    #[doc = "Active edge for edge detection on XBAR_OUT2"]
+    #[doc = "Active edge for edge detection on XBAR_OUT2."]
     #[inline(always)]
     pub const fn set_edge2(&mut self, val: super::vals::Edge2) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u16) & 0x03) << 2usize);
     }
-    #[doc = "Edge detection status for XBAR_OUT2"]
+    #[doc = "Edge detection status for XBAR_OUT2."]
     #[must_use]
     #[inline(always)]
     pub const fn sts2(&self) -> super::vals::Sts2 {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::Sts2::from_bits(val as u8)
     }
-    #[doc = "Edge detection status for XBAR_OUT2"]
+    #[doc = "Edge detection status for XBAR_OUT2."]
     #[inline(always)]
     pub const fn set_sts2(&mut self, val: super::vals::Sts2) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u16) & 0x01) << 4usize);
     }
-    #[doc = "DMA Enable for XBAR_OUT3"]
+    #[doc = "DMA Enable for XBAR_OUT3."]
     #[must_use]
     #[inline(always)]
     pub const fn den3(&self) -> super::vals::Den3 {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::Den3::from_bits(val as u8)
     }
-    #[doc = "DMA Enable for XBAR_OUT3"]
+    #[doc = "DMA Enable for XBAR_OUT3."]
     #[inline(always)]
     pub const fn set_den3(&mut self, val: super::vals::Den3) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u16) & 0x01) << 8usize);
     }
-    #[doc = "Interrupt Enable for XBAR_OUT3"]
+    #[doc = "Interrupt Enable for XBAR_OUT3."]
     #[must_use]
     #[inline(always)]
     pub const fn ien3(&self) -> super::vals::Ien3 {
         let val = (self.0 >> 9usize) & 0x01;
         super::vals::Ien3::from_bits(val as u8)
     }
-    #[doc = "Interrupt Enable for XBAR_OUT3"]
+    #[doc = "Interrupt Enable for XBAR_OUT3."]
     #[inline(always)]
     pub const fn set_ien3(&mut self, val: super::vals::Ien3) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u16) & 0x01) << 9usize);
     }
-    #[doc = "Active edge for edge detection on XBAR_OUT3"]
+    #[doc = "Active edge for edge detection on XBAR_OUT3."]
     #[must_use]
     #[inline(always)]
     pub const fn edge3(&self) -> super::vals::Edge3 {
         let val = (self.0 >> 10usize) & 0x03;
         super::vals::Edge3::from_bits(val as u8)
     }
-    #[doc = "Active edge for edge detection on XBAR_OUT3"]
+    #[doc = "Active edge for edge detection on XBAR_OUT3."]
     #[inline(always)]
     pub const fn set_edge3(&mut self, val: super::vals::Edge3) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u16) & 0x03) << 10usize);
     }
-    #[doc = "Edge detection status for XBAR_OUT3"]
+    #[doc = "Edge detection status for XBAR_OUT3."]
     #[must_use]
     #[inline(always)]
     pub const fn sts3(&self) -> super::vals::Sts3 {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Sts3::from_bits(val as u8)
     }
-    #[doc = "Edge detection status for XBAR_OUT3"]
+    #[doc = "Edge detection status for XBAR_OUT3."]
     #[inline(always)]
     pub const fn set_sts3(&mut self, val: super::vals::Sts3) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u16) & 0x01) << 12usize);
@@ -276,31 +276,31 @@ impl defmt::Format for Ctrl1 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 0"]
+#[doc = "Crossbar A Select Register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel0(pub u16);
 impl Sel0 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT0 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT0 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel0(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT0 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT0 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT1 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT1 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel1(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT1 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT1 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -331,31 +331,31 @@ impl defmt::Format for Sel0 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 1"]
+#[doc = "Crossbar A Select Register 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel1(pub u16);
 impl Sel1 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT2 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT2 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel2(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT2 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT2 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel2(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT3 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT3 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel3(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT3 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT3 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel3(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -386,31 +386,31 @@ impl defmt::Format for Sel1 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 10"]
+#[doc = "Crossbar A Select Register 10."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel10(pub u16);
 impl Sel10 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT20 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT20 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel20(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT20 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT20 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel20(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT21 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT21 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel21(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT21 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT21 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel21(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -441,31 +441,31 @@ impl defmt::Format for Sel10 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 11"]
+#[doc = "Crossbar A Select Register 11."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel11(pub u16);
 impl Sel11 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT22 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT22 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel22(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT22 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT22 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel22(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT23 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT23 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel23(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT23 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT23 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel23(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -496,31 +496,31 @@ impl defmt::Format for Sel11 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 12"]
+#[doc = "Crossbar A Select Register 12."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel12(pub u16);
 impl Sel12 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT24 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT24 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel24(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT24 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT24 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel24(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT25 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT25 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel25(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT25 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT25 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel25(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -551,31 +551,31 @@ impl defmt::Format for Sel12 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 13"]
+#[doc = "Crossbar A Select Register 13."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel13(pub u16);
 impl Sel13 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT26 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT26 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel26(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT26 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT26 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel26(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT27 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT27 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel27(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT27 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT27 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel27(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -606,31 +606,31 @@ impl defmt::Format for Sel13 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 14"]
+#[doc = "Crossbar A Select Register 14."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel14(pub u16);
 impl Sel14 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT28 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT28 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel28(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT28 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT28 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel28(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT29 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT29 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel29(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT29 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT29 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel29(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -661,31 +661,31 @@ impl defmt::Format for Sel14 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 15"]
+#[doc = "Crossbar A Select Register 15."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel15(pub u16);
 impl Sel15 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT30 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT30 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel30(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT30 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT30 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel30(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT31 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT31 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel31(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT31 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT31 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel31(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -716,31 +716,31 @@ impl defmt::Format for Sel15 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 16"]
+#[doc = "Crossbar A Select Register 16."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel16(pub u16);
 impl Sel16 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT32 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT32 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel32(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT32 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT32 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel32(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT33 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT33 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel33(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT33 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT33 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel33(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -771,31 +771,31 @@ impl defmt::Format for Sel16 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 17"]
+#[doc = "Crossbar A Select Register 17."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel17(pub u16);
 impl Sel17 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT34 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT34 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel34(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT34 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT34 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel34(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT35 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT35 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel35(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT35 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT35 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel35(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -826,31 +826,31 @@ impl defmt::Format for Sel17 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 18"]
+#[doc = "Crossbar A Select Register 18."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel18(pub u16);
 impl Sel18 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT36 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT36 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel36(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT36 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT36 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel36(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT37 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT37 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel37(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT37 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT37 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel37(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -881,31 +881,31 @@ impl defmt::Format for Sel18 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 19"]
+#[doc = "Crossbar A Select Register 19."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel19(pub u16);
 impl Sel19 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT38 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT38 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel38(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT38 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT38 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel38(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT39 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT39 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel39(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT39 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT39 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel39(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -936,31 +936,31 @@ impl defmt::Format for Sel19 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 2"]
+#[doc = "Crossbar A Select Register 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel2(pub u16);
 impl Sel2 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT4 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT4 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel4(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT4 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT4 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel4(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT5 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT5 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel5(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT5 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT5 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel5(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -991,31 +991,31 @@ impl defmt::Format for Sel2 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 20"]
+#[doc = "Crossbar A Select Register 20."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel20(pub u16);
 impl Sel20 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT40 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT40 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel40(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT40 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT40 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel40(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT41 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT41 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel41(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT41 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT41 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel41(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -1046,31 +1046,31 @@ impl defmt::Format for Sel20 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 21"]
+#[doc = "Crossbar A Select Register 21."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel21(pub u16);
 impl Sel21 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT42 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT42 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel42(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT42 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT42 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel42(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT43 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT43 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel43(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT43 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT43 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel43(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -1101,31 +1101,31 @@ impl defmt::Format for Sel21 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 22"]
+#[doc = "Crossbar A Select Register 22."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel22(pub u16);
 impl Sel22 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT44 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT44 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel44(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT44 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT44 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel44(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT45 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT45 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel45(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT45 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT45 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel45(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -1156,31 +1156,31 @@ impl defmt::Format for Sel22 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 23"]
+#[doc = "Crossbar A Select Register 23."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel23(pub u16);
 impl Sel23 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT46 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT46 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel46(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT46 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT46 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel46(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT47 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT47 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel47(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT47 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT47 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel47(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -1211,31 +1211,31 @@ impl defmt::Format for Sel23 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 24"]
+#[doc = "Crossbar A Select Register 24."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel24(pub u16);
 impl Sel24 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT48 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT48 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel48(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT48 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT48 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel48(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT49 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT49 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel49(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT49 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT49 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel49(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -1266,31 +1266,31 @@ impl defmt::Format for Sel24 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 25"]
+#[doc = "Crossbar A Select Register 25."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel25(pub u16);
 impl Sel25 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT50 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT50 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel50(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT50 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT50 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel50(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT51 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT51 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel51(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT51 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT51 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel51(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -1321,31 +1321,31 @@ impl defmt::Format for Sel25 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 26"]
+#[doc = "Crossbar A Select Register 26."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel26(pub u16);
 impl Sel26 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT52 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT52 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel52(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT52 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT52 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel52(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT53 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT53 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel53(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT53 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT53 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel53(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -1376,31 +1376,31 @@ impl defmt::Format for Sel26 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 27"]
+#[doc = "Crossbar A Select Register 27."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel27(pub u16);
 impl Sel27 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT54 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT54 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel54(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT54 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT54 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel54(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT55 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT55 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel55(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT55 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT55 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel55(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -1431,31 +1431,31 @@ impl defmt::Format for Sel27 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 28"]
+#[doc = "Crossbar A Select Register 28."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel28(pub u16);
 impl Sel28 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT56 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT56 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel56(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT56 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT56 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel56(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT57 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT57 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel57(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT57 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT57 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel57(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -1486,31 +1486,31 @@ impl defmt::Format for Sel28 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 29"]
+#[doc = "Crossbar A Select Register 29."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel29(pub u16);
 impl Sel29 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT58 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT58 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel58(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT58 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT58 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel58(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT59 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT59 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel59(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT59 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT59 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel59(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -1541,31 +1541,31 @@ impl defmt::Format for Sel29 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 3"]
+#[doc = "Crossbar A Select Register 3."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel3(pub u16);
 impl Sel3 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT6 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT6 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel6(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT6 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT6 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel6(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT7 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT7 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel7(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT7 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT7 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel7(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -1596,31 +1596,31 @@ impl defmt::Format for Sel3 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 30"]
+#[doc = "Crossbar A Select Register 30."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel30(pub u16);
 impl Sel30 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT60 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT60 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel60(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT60 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT60 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel60(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT61 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT61 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel61(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT61 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT61 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel61(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -1651,31 +1651,31 @@ impl defmt::Format for Sel30 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 31"]
+#[doc = "Crossbar A Select Register 31."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel31(pub u16);
 impl Sel31 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT62 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT62 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel62(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT62 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT62 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel62(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT63 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT63 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel63(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT63 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT63 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel63(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -1706,31 +1706,31 @@ impl defmt::Format for Sel31 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 32"]
+#[doc = "Crossbar A Select Register 32."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel32(pub u16);
 impl Sel32 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT64 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT64 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel64(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT64 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT64 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel64(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT65 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT65 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel65(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT65 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT65 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel65(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -1761,31 +1761,31 @@ impl defmt::Format for Sel32 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 33"]
+#[doc = "Crossbar A Select Register 33."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel33(pub u16);
 impl Sel33 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT66 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT66 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel66(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT66 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT66 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel66(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT67 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT67 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel67(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT67 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT67 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel67(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -1816,31 +1816,31 @@ impl defmt::Format for Sel33 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 34"]
+#[doc = "Crossbar A Select Register 34."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel34(pub u16);
 impl Sel34 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT68 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT68 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel68(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT68 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT68 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel68(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT69 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT69 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel69(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT69 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT69 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel69(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -1871,31 +1871,31 @@ impl defmt::Format for Sel34 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 35"]
+#[doc = "Crossbar A Select Register 35."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel35(pub u16);
 impl Sel35 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT70 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT70 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel70(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT70 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT70 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel70(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT71 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT71 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel71(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT71 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT71 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel71(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -1926,31 +1926,31 @@ impl defmt::Format for Sel35 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 36"]
+#[doc = "Crossbar A Select Register 36."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel36(pub u16);
 impl Sel36 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT72 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT72 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel72(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT72 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT72 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel72(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT73 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT73 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel73(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT73 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT73 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel73(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -1981,31 +1981,31 @@ impl defmt::Format for Sel36 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 37"]
+#[doc = "Crossbar A Select Register 37."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel37(pub u16);
 impl Sel37 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT74 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT74 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel74(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT74 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT74 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel74(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT75 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT75 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel75(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT75 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT75 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel75(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -2036,31 +2036,31 @@ impl defmt::Format for Sel37 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 38"]
+#[doc = "Crossbar A Select Register 38."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel38(pub u16);
 impl Sel38 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT76 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT76 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel76(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT76 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT76 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel76(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT77 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT77 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel77(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT77 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT77 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel77(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -2091,31 +2091,31 @@ impl defmt::Format for Sel38 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 39"]
+#[doc = "Crossbar A Select Register 39."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel39(pub u16);
 impl Sel39 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT78 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT78 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel78(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT78 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT78 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel78(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT79 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT79 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel79(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT79 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT79 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel79(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -2146,31 +2146,31 @@ impl defmt::Format for Sel39 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 4"]
+#[doc = "Crossbar A Select Register 4."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel4(pub u16);
 impl Sel4 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT8 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT8 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel8(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT8 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT8 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel8(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT9 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT9 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel9(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT9 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT9 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel9(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -2201,31 +2201,31 @@ impl defmt::Format for Sel4 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 40"]
+#[doc = "Crossbar A Select Register 40."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel40(pub u16);
 impl Sel40 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT80 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT80 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel80(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT80 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT80 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel80(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT81 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT81 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel81(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT81 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT81 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel81(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -2256,31 +2256,31 @@ impl defmt::Format for Sel40 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 41"]
+#[doc = "Crossbar A Select Register 41."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel41(pub u16);
 impl Sel41 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT82 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT82 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel82(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT82 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT82 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel82(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT83 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT83 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel83(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT83 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT83 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel83(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -2311,31 +2311,31 @@ impl defmt::Format for Sel41 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 42"]
+#[doc = "Crossbar A Select Register 42."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel42(pub u16);
 impl Sel42 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT84 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT84 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel84(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT84 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT84 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel84(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT85 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT85 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel85(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT85 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT85 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel85(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -2366,31 +2366,31 @@ impl defmt::Format for Sel42 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 43"]
+#[doc = "Crossbar A Select Register 43."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel43(pub u16);
 impl Sel43 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT86 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT86 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel86(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT86 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT86 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel86(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT87 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT87 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel87(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT87 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT87 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel87(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -2421,31 +2421,31 @@ impl defmt::Format for Sel43 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 44"]
+#[doc = "Crossbar A Select Register 44."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel44(pub u16);
 impl Sel44 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT88 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT88 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel88(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT88 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT88 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel88(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT89 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT89 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel89(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT89 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT89 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel89(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -2476,31 +2476,31 @@ impl defmt::Format for Sel44 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 45"]
+#[doc = "Crossbar A Select Register 45."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel45(pub u16);
 impl Sel45 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT90 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT90 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel90(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT90 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT90 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel90(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT91 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT91 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel91(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT91 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT91 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel91(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -2531,31 +2531,31 @@ impl defmt::Format for Sel45 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 46"]
+#[doc = "Crossbar A Select Register 46."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel46(pub u16);
 impl Sel46 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT92 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT92 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel92(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT92 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT92 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel92(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT93 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT93 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel93(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT93 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT93 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel93(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -2586,31 +2586,31 @@ impl defmt::Format for Sel46 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 47"]
+#[doc = "Crossbar A Select Register 47."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel47(pub u16);
 impl Sel47 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT94 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT94 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel94(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT94 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT94 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel94(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT95 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT95 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel95(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT95 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT95 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel95(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -2641,31 +2641,31 @@ impl defmt::Format for Sel47 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 48"]
+#[doc = "Crossbar A Select Register 48."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel48(pub u16);
 impl Sel48 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT96 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT96 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel96(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT96 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT96 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel96(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT97 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT97 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel97(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT97 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT97 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel97(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -2696,31 +2696,31 @@ impl defmt::Format for Sel48 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 49"]
+#[doc = "Crossbar A Select Register 49."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel49(pub u16);
 impl Sel49 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT98 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT98 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel98(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT98 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT98 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel98(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT99 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT99 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel99(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT99 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT99 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel99(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -2751,31 +2751,31 @@ impl defmt::Format for Sel49 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 5"]
+#[doc = "Crossbar A Select Register 5."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel5(pub u16);
 impl Sel5 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT10 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT10 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel10(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT10 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT10 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel10(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT11 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT11 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel11(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT11 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT11 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel11(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -2806,31 +2806,31 @@ impl defmt::Format for Sel5 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 50"]
+#[doc = "Crossbar A Select Register 50."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel50(pub u16);
 impl Sel50 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT100 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT100 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel100(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT100 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT100 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel100(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT101 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT101 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel101(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT101 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT101 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel101(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -2861,31 +2861,31 @@ impl defmt::Format for Sel50 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 51"]
+#[doc = "Crossbar A Select Register 51."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel51(pub u16);
 impl Sel51 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT102 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT102 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel102(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT102 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT102 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel102(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT103 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT103 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel103(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT103 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT103 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel103(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -2916,31 +2916,31 @@ impl defmt::Format for Sel51 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 52"]
+#[doc = "Crossbar A Select Register 52."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel52(pub u16);
 impl Sel52 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT104 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT104 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel104(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT104 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT104 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel104(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT105 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT105 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel105(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT105 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT105 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel105(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -2971,31 +2971,31 @@ impl defmt::Format for Sel52 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 53"]
+#[doc = "Crossbar A Select Register 53."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel53(pub u16);
 impl Sel53 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT106 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT106 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel106(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT106 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT106 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel106(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT107 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT107 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel107(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT107 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT107 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel107(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -3026,31 +3026,31 @@ impl defmt::Format for Sel53 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 54"]
+#[doc = "Crossbar A Select Register 54."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel54(pub u16);
 impl Sel54 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT108 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT108 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel108(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT108 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT108 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel108(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT109 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT109 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel109(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT109 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT109 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel109(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -3081,31 +3081,31 @@ impl defmt::Format for Sel54 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 55"]
+#[doc = "Crossbar A Select Register 55."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel55(pub u16);
 impl Sel55 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT110 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT110 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel110(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT110 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT110 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel110(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT111 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT111 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel111(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT111 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT111 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel111(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -3136,31 +3136,31 @@ impl defmt::Format for Sel55 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 56"]
+#[doc = "Crossbar A Select Register 56."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel56(pub u16);
 impl Sel56 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT112 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT112 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel112(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT112 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT112 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel112(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT113 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT113 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel113(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT113 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT113 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel113(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -3191,31 +3191,31 @@ impl defmt::Format for Sel56 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 57"]
+#[doc = "Crossbar A Select Register 57."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel57(pub u16);
 impl Sel57 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT114 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT114 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel114(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT114 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT114 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel114(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT115 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT115 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel115(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT115 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT115 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel115(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -3246,31 +3246,31 @@ impl defmt::Format for Sel57 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 58"]
+#[doc = "Crossbar A Select Register 58."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel58(pub u16);
 impl Sel58 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT116 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT116 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel116(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT116 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT116 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel116(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT117 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT117 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel117(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT117 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT117 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel117(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -3301,31 +3301,31 @@ impl defmt::Format for Sel58 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 59"]
+#[doc = "Crossbar A Select Register 59."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel59(pub u16);
 impl Sel59 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT118 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT118 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel118(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT118 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT118 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel118(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT119 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT119 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel119(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT119 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT119 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel119(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -3356,31 +3356,31 @@ impl defmt::Format for Sel59 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 6"]
+#[doc = "Crossbar A Select Register 6."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel6(pub u16);
 impl Sel6 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT12 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT12 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel12(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT12 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT12 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel12(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT13 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT13 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel13(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT13 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT13 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel13(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -3411,31 +3411,31 @@ impl defmt::Format for Sel6 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 60"]
+#[doc = "Crossbar A Select Register 60."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel60(pub u16);
 impl Sel60 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT120 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT120 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel120(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT120 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT120 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel120(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT121 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT121 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel121(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT121 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT121 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel121(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -3466,31 +3466,31 @@ impl defmt::Format for Sel60 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 61"]
+#[doc = "Crossbar A Select Register 61."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel61(pub u16);
 impl Sel61 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT122 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT122 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel122(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT122 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT122 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel122(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT123 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT123 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel123(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT123 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT123 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel123(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -3521,31 +3521,31 @@ impl defmt::Format for Sel61 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 62"]
+#[doc = "Crossbar A Select Register 62."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel62(pub u16);
 impl Sel62 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT124 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT124 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel124(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT124 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT124 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel124(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT125 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT125 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel125(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT125 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT125 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel125(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -3576,31 +3576,31 @@ impl defmt::Format for Sel62 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 63"]
+#[doc = "Crossbar A Select Register 63."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel63(pub u16);
 impl Sel63 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT126 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT126 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel126(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT126 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT126 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel126(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT127 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT127 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel127(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT127 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT127 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel127(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -3631,31 +3631,31 @@ impl defmt::Format for Sel63 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 64"]
+#[doc = "Crossbar A Select Register 64."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel64(pub u16);
 impl Sel64 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT128 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT128 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel128(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT128 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT128 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel128(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT129 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT129 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel129(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT129 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT129 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel129(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -3686,31 +3686,31 @@ impl defmt::Format for Sel64 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 65"]
+#[doc = "Crossbar A Select Register 65."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel65(pub u16);
 impl Sel65 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT130 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT130 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel130(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT130 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT130 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel130(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT131 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT131 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel131(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT131 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT131 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel131(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -3741,31 +3741,31 @@ impl defmt::Format for Sel65 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 7"]
+#[doc = "Crossbar A Select Register 7."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel7(pub u16);
 impl Sel7 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT14 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT14 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel14(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT14 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT14 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel14(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT15 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT15 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel15(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT15 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT15 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel15(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -3796,31 +3796,31 @@ impl defmt::Format for Sel7 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 8"]
+#[doc = "Crossbar A Select Register 8."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel8(pub u16);
 impl Sel8 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT16 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT16 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel16(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT16 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT16 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel16(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT17 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT17 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel17(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT17 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT17 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel17(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);
@@ -3851,31 +3851,31 @@ impl defmt::Format for Sel8 {
         )
     }
 }
-#[doc = "Crossbar A Select Register 9"]
+#[doc = "Crossbar A Select Register 9."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sel9(pub u16);
 impl Sel9 {
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT18 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT18 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel18(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT18 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT18 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel18(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val as u16) & 0x7f) << 0usize);
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT19 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT19 (refer to Functional Description section for input/output assignment)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel19(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT19 (refer to Functional Description section for input/output assignment)"]
+    #[doc = "Input (XBARA_INn) to be muxed to XBARA_OUT19 (refer to Functional Description section for input/output assignment)."]
     #[inline(always)]
     pub const fn set_sel19(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u16) & 0x7f) << 8usize);

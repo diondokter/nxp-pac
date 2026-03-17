@@ -33,7 +33,7 @@ impl From<RtcOscBypass> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RtcOscPd {
-    #[doc = "See RTC_OSC_BYPASS"]
+    #[doc = "See RTC_OSC_BYPASS."]
     POWER_UP = 0x0,
     #[doc = "RTC oscillator is powered-down."]
     POWERED_DOWN = 0x01,

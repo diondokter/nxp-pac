@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DisPi {
-    #[doc = "Periodic interrupt will trigger a functional interrupt"]
+    #[doc = "Periodic interrupt will trigger a functional interrupt."]
     ENABLED = 0x0,
-    #[doc = "Disable periodic interrupt in the function interrupt"]
+    #[doc = "Disable periodic interrupt in the function interrupt."]
     DISABLED = 0x01,
 }
 impl DisPi {
@@ -157,9 +157,9 @@ impl From<GprHl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum GprSl {
-    #[doc = "Write access is allowed"]
+    #[doc = "Write access is allowed."]
     WRITE_ALLOWED = 0x0,
-    #[doc = "Write access is not allowed"]
+    #[doc = "Write access is not allowed."]
     WRITE_NOT_ALLOWED = 0x01,
 }
 impl GprSl {
@@ -188,9 +188,9 @@ impl From<GprSl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HacClear {
-    #[doc = "No Action"]
+    #[doc = "No Action."]
     NO_ACTION = 0x0,
-    #[doc = "Clear the HAC"]
+    #[doc = "Clear the HAC."]
     CLEAR_HAC = 0x01,
 }
 impl HacClear {
@@ -219,9 +219,9 @@ impl From<HacClear> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HacL {
-    #[doc = "Write access is allowed"]
+    #[doc = "Write access is allowed."]
     WRITE_ACCESS_ALLOWED = 0x0,
-    #[doc = "Write access is not allowed"]
+    #[doc = "Write access is not allowed."]
     WRITE_ACCESS_NOT_ALLOWED = 0x01,
 }
 impl HacL {
@@ -250,9 +250,9 @@ impl From<HacL> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HacLoad {
-    #[doc = "No Action"]
+    #[doc = "No Action."]
     NO_ACTION = 0x0,
-    #[doc = "Load the HAC"]
+    #[doc = "Load the HAC."]
     LOAD_HAC = 0x01,
 }
 impl HacLoad {
@@ -281,9 +281,9 @@ impl From<HacLoad> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HpTs {
-    #[doc = "No Action"]
+    #[doc = "No Action."]
     NO_ACTION = 0x0,
-    #[doc = "Synchronize the HP Time Counter to the LP Time Counter"]
+    #[doc = "Synchronize the HP Time Counter to the LP Time Counter."]
     SYNC_TIME = 0x01,
 }
 impl HpTs {
@@ -312,11 +312,11 @@ impl From<HpTs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HpcalbVal {
-    #[doc = "+0 counts per each 32768 ticks of the counter"]
+    #[doc = "+0 counts per each 32768 ticks of the counter."]
     ADD_0_PER_32768_TICKS = 0x0,
-    #[doc = "+1 counts per each 32768 ticks of the counter"]
+    #[doc = "+1 counts per each 32768 ticks of the counter."]
     ADD_1_PER_32768_TICKS = 0x01,
-    #[doc = "+2 counts per each 32768 ticks of the counter"]
+    #[doc = "+2 counts per each 32768 ticks of the counter."]
     ADD_2_PER_32768_TICKS = 0x02,
     _RESERVED_3 = 0x03,
     _RESERVED_4 = 0x04,
@@ -330,11 +330,11 @@ pub enum HpcalbVal {
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "+15 counts per each 32768 ticks of the counter"]
+    #[doc = "+15 counts per each 32768 ticks of the counter."]
     ADD_15_PER_32768_TICKS = 0x0f,
-    #[doc = "-16 counts per each 32768 ticks of the counter"]
+    #[doc = "-16 counts per each 32768 ticks of the counter."]
     SUB_16_PER_32768_TICKS = 0x10,
-    #[doc = "-15 counts per each 32768 ticks of the counter"]
+    #[doc = "-15 counts per each 32768 ticks of the counter."]
     SUB_15_PER_32768_TICKS = 0x11,
     _RESERVED_12 = 0x12,
     _RESERVED_13 = 0x13,
@@ -348,9 +348,9 @@ pub enum HpcalbVal {
     _RESERVED_1b = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
-    #[doc = "-2 counts per each 32768 ticks of the counter"]
+    #[doc = "-2 counts per each 32768 ticks of the counter."]
     SUB_2_PER_32768_TICKS = 0x1e,
-    #[doc = "-1 counts per each 32768 ticks of the counter"]
+    #[doc = "-1 counts per each 32768 ticks of the counter."]
     SUB_1_PER_32768_TICKS = 0x1f,
 }
 impl HpcalbVal {
@@ -379,9 +379,9 @@ impl From<HpcalbVal> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HpsicrL {
-    #[doc = "Write access is allowed"]
+    #[doc = "Write access is allowed."]
     WRITE_ACCESS_ALLOWED = 0x0,
-    #[doc = "Write access is not allowed"]
+    #[doc = "Write access is not allowed."]
     WRITE_ACCESS_NOT_ALLOWED = 0x01,
 }
 impl HpsicrL {
@@ -410,9 +410,9 @@ impl From<HpsicrL> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HpsvcrL {
-    #[doc = "Write access is allowed"]
+    #[doc = "Write access is allowed."]
     WRITE_ACCESS_ALLOWED = 0x0,
-    #[doc = "Write access is not allowed"]
+    #[doc = "Write access is not allowed."]
     WRITE_ACCESS_NOT_ALLOWED = 0x01,
 }
 impl HpsvcrL {
@@ -472,9 +472,9 @@ impl From<Hpta> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpSwr {
-    #[doc = "No Action"]
+    #[doc = "No Action."]
     NO_ACTION = 0x0,
-    #[doc = "Reset LP section"]
+    #[doc = "Reset LP section."]
     RESET = 0x01,
 }
 impl LpSwr {
@@ -503,9 +503,9 @@ impl From<LpSwr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpSwrDis {
-    #[doc = "LP software reset is enabled"]
+    #[doc = "LP software reset is enabled."]
     ENABLED = 0x0,
-    #[doc = "LP software reset is disabled"]
+    #[doc = "LP software reset is disabled."]
     DISABLED = 0x01,
 }
 impl LpSwrDis {
@@ -565,9 +565,9 @@ impl From<LpcalbHl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpcalbSl {
-    #[doc = "Write access is allowed"]
+    #[doc = "Write access is allowed."]
     WRITE_ALLOWED = 0x0,
-    #[doc = "Write access is not allowed"]
+    #[doc = "Write access is not allowed."]
     WRITE_NOT_ALLOWED = 0x01,
 }
 impl LpcalbSl {
@@ -596,11 +596,11 @@ impl From<LpcalbSl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpcalbVal {
-    #[doc = "+0 counts per each 32768 ticks of the counter clock"]
+    #[doc = "+0 counts per each 32768 ticks of the counter clock."]
     ADD_0_PER_32768_TICKS = 0x0,
-    #[doc = "+1 counts per each 32768 ticks of the counter clock"]
+    #[doc = "+1 counts per each 32768 ticks of the counter clock."]
     ADD_1_PER_32768_TICKS = 0x01,
-    #[doc = "+2 counts per each 32768 ticks of the counter clock"]
+    #[doc = "+2 counts per each 32768 ticks of the counter clock."]
     ADD_2_PER_32768_TICKS = 0x02,
     _RESERVED_3 = 0x03,
     _RESERVED_4 = 0x04,
@@ -614,11 +614,11 @@ pub enum LpcalbVal {
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "+15 counts per each 32768 ticks of the counter clock"]
+    #[doc = "+15 counts per each 32768 ticks of the counter clock."]
     ADD_15_PER_32768_TICKS = 0x0f,
-    #[doc = "-16 counts per each 32768 ticks of the counter clock"]
+    #[doc = "-16 counts per each 32768 ticks of the counter clock."]
     SUB_16_PER_32768_TICKS = 0x10,
-    #[doc = "-15 counts per each 32768 ticks of the counter clock"]
+    #[doc = "-15 counts per each 32768 ticks of the counter clock."]
     SUB_15_PER_32768_TICKS = 0x11,
     _RESERVED_12 = 0x12,
     _RESERVED_13 = 0x13,
@@ -632,9 +632,9 @@ pub enum LpcalbVal {
     _RESERVED_1b = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
-    #[doc = "-2 counts per each 32768 ticks of the counter clock"]
+    #[doc = "-2 counts per each 32768 ticks of the counter clock."]
     SUB_2_PER_32768_TICKS = 0x1e,
-    #[doc = "-1 counts per each 32768 ticks of the counter clock"]
+    #[doc = "-1 counts per each 32768 ticks of the counter clock."]
     SUB_1_PER_32768_TICKS = 0x1f,
 }
 impl LpcalbVal {
@@ -756,9 +756,9 @@ impl From<LpsecrHl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpsecrSl {
-    #[doc = "Write access is allowed"]
+    #[doc = "Write access is allowed."]
     WRITE_ACCESS_ALLOWED = 0x0,
-    #[doc = "Write access is not allowed"]
+    #[doc = "Write access is not allowed."]
     WRITE_ACCESS_NOT_ALLOWED = 0x01,
 }
 impl LpsecrSl {
@@ -787,11 +787,11 @@ impl From<LpsecrSl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpsvCfg {
-    #[doc = "LP security violation is disabled"]
+    #[doc = "LP security violation is disabled."]
     DISABLED = 0x0,
-    #[doc = "LP security violation is a non-fatal violation"]
+    #[doc = "LP security violation is a non-fatal violation."]
     NON_FATAL = 0x01,
-    #[doc = "LP security violation is a fatal violation"]
+    #[doc = "LP security violation is a fatal violation."]
     FATAL = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -852,9 +852,9 @@ impl From<LpsvcrHl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpsvcrSl {
-    #[doc = "Write access is allowed"]
+    #[doc = "Write access is allowed."]
     WRITE_ACCESS_ALLOWED = 0x0,
-    #[doc = "Write access is not allowed"]
+    #[doc = "Write access is not allowed."]
     WRITE_ACCESS_NOT_ALLOWED = 0x01,
 }
 impl LpsvcrSl {
@@ -948,9 +948,9 @@ pub enum MasterKeySel {
     #[doc = "Select one time programmable master key."]
     SELECT_OTPMK = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "Select zeroizable master key when MKS_EN bit is set ."]
+    #[doc = "Select zeroizable master key when MKS_EN bit is set."]
     SELECT_ZMK = 0x02,
-    #[doc = "Select combined master key when MKS_EN bit is set ."]
+    #[doc = "Select combined master key when MKS_EN bit is set."]
     SELECT_COMBO = 0x03,
 }
 impl MasterKeySel {
@@ -1010,9 +1010,9 @@ impl From<McHl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum McSl {
-    #[doc = "Write access (increment) is allowed"]
+    #[doc = "Write access (increment) is allowed."]
     WRITE_ALLOWED = 0x0,
-    #[doc = "Write access (increment) is not allowed"]
+    #[doc = "Write access (increment) is not allowed."]
     WRITE_NOT_ALLOWED = 0x01,
 }
 impl McSl {
@@ -1072,9 +1072,9 @@ impl From<Mcr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MksEn {
-    #[doc = "OTP master key is selected as an SNVS master key"]
+    #[doc = "OTP master key is selected as an SNVS master key."]
     SELECT_OTP = 0x0,
-    #[doc = "SNVS master key is selected according to the setting of the MASTER_KEY_SEL field of LPMKCR"]
+    #[doc = "SNVS master key is selected according to the setting of the MASTER_KEY_SEL field of LPMKCR."]
     SELECT_PER_LPMKCR = 0x01,
 }
 impl MksEn {
@@ -1134,9 +1134,9 @@ impl From<MksHl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MksSl {
-    #[doc = "Write access is allowed"]
+    #[doc = "Write access is allowed."]
     WRITE_ACCESS_ALLOWED = 0x0,
-    #[doc = "Write access is not allowed"]
+    #[doc = "Write access is not allowed."]
     WRITE_ACCESS_NOT_ALLOWED = 0x01,
 }
 impl MksSl {
@@ -1227,37 +1227,37 @@ impl From<Pi> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PiFreq {
-    #[doc = "- bit 0 of the HPRTCLR is selected as a source of the periodic interrupt"]
+    #[doc = "- bit 0 of the HPRTCLR is selected as a source of the periodic interrupt."]
     USE_BIT_0 = 0x0,
-    #[doc = "- bit 1 of the HPRTCLR is selected as a source of the periodic interrupt"]
+    #[doc = "- bit 1 of the HPRTCLR is selected as a source of the periodic interrupt."]
     USE_BIT_1 = 0x01,
-    #[doc = "- bit 2 of the HPRTCLR is selected as a source of the periodic interrupt"]
+    #[doc = "- bit 2 of the HPRTCLR is selected as a source of the periodic interrupt."]
     USE_BIT_2 = 0x02,
-    #[doc = "- bit 3 of the HPRTCLR is selected as a source of the periodic interrupt"]
+    #[doc = "- bit 3 of the HPRTCLR is selected as a source of the periodic interrupt."]
     USE_BIT_3 = 0x03,
-    #[doc = "- bit 4 of the HPRTCLR is selected as a source of the periodic interrupt"]
+    #[doc = "- bit 4 of the HPRTCLR is selected as a source of the periodic interrupt."]
     USE_BIT_4 = 0x04,
-    #[doc = "- bit 5 of the HPRTCLR is selected as a source of the periodic interrupt"]
+    #[doc = "- bit 5 of the HPRTCLR is selected as a source of the periodic interrupt."]
     USE_BIT_5 = 0x05,
-    #[doc = "- bit 6 of the HPRTCLR is selected as a source of the periodic interrupt"]
+    #[doc = "- bit 6 of the HPRTCLR is selected as a source of the periodic interrupt."]
     USE_BIT_6 = 0x06,
-    #[doc = "- bit 7 of the HPRTCLR is selected as a source of the periodic interrupt"]
+    #[doc = "- bit 7 of the HPRTCLR is selected as a source of the periodic interrupt."]
     USE_BIT_7 = 0x07,
-    #[doc = "- bit 8 of the HPRTCLR is selected as a source of the periodic interrupt"]
+    #[doc = "- bit 8 of the HPRTCLR is selected as a source of the periodic interrupt."]
     USE_BIT_8 = 0x08,
-    #[doc = "- bit 9 of the HPRTCLR is selected as a source of the periodic interrupt"]
+    #[doc = "- bit 9 of the HPRTCLR is selected as a source of the periodic interrupt."]
     USE_BIT_9 = 0x09,
-    #[doc = "- bit 10 of the HPRTCLR is selected as a source of the periodic interrupt"]
+    #[doc = "- bit 10 of the HPRTCLR is selected as a source of the periodic interrupt."]
     USE_BIT_10 = 0x0a,
-    #[doc = "- bit 11 of the HPRTCLR is selected as a source of the periodic interrupt"]
+    #[doc = "- bit 11 of the HPRTCLR is selected as a source of the periodic interrupt."]
     USE_BIT_11 = 0x0b,
-    #[doc = "- bit 12 of the HPRTCLR is selected as a source of the periodic interrupt"]
+    #[doc = "- bit 12 of the HPRTCLR is selected as a source of the periodic interrupt."]
     USE_BIT_12 = 0x0c,
-    #[doc = "- bit 13 of the HPRTCLR is selected as a source of the periodic interrupt"]
+    #[doc = "- bit 13 of the HPRTCLR is selected as a source of the periodic interrupt."]
     USE_BIT_13 = 0x0d,
-    #[doc = "- bit 14 of the HPRTCLR is selected as a source of the periodic interrupt"]
+    #[doc = "- bit 14 of the HPRTCLR is selected as a source of the periodic interrupt."]
     USE_BIT_14 = 0x0e,
-    #[doc = "- bit 15 of the HPRTCLR is selected as a source of the periodic interrupt"]
+    #[doc = "- bit 15 of the HPRTCLR is selected as a source of the periodic interrupt."]
     USE_BIT_1R5 = 0x0f,
 }
 impl PiFreq {
@@ -1286,9 +1286,9 @@ impl From<PiFreq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ProgZmk {
-    #[doc = "No Action"]
+    #[doc = "No Action."]
     NO_ACTION = 0x0,
-    #[doc = "Activate hardware key programming mechanism"]
+    #[doc = "Activate hardware key programming mechanism."]
     PROGRAM_KEY = 0x01,
 }
 impl ProgZmk {
@@ -1441,9 +1441,9 @@ impl From<SrtcInvEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SrtcSl {
-    #[doc = "Write access is allowed"]
+    #[doc = "Write access is allowed."]
     WRITE_ALLOWED = 0x0,
-    #[doc = "Write access is not allowed"]
+    #[doc = "Write access is not allowed."]
     WRITE_NOT_ALLOWED = 0x01,
 }
 impl SrtcSl {
@@ -1503,9 +1503,9 @@ impl From<Srtcr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SsmSfnsDis {
-    #[doc = "Soft Fail to Non-Secure State transition is enabled"]
+    #[doc = "Soft Fail to Non-Secure State transition is enabled."]
     ENABLED = 0x0,
-    #[doc = "Soft Fail to Non-Secure State transition is disabled"]
+    #[doc = "Soft Fail to Non-Secure State transition is disabled."]
     DISABLED = 0x01,
 }
 impl SsmSfnsDis {
@@ -1534,9 +1534,9 @@ impl From<SsmSfnsDis> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SsmStDis {
-    #[doc = "Secure to Trusted State transition is enabled"]
+    #[doc = "Secure to Trusted State transition is enabled."]
     ENABLED = 0x0,
-    #[doc = "Secure to Trusted State transition is disabled"]
+    #[doc = "Secure to Trusted State transition is disabled."]
     DISABLED = 0x01,
 }
 impl SsmStDis {
@@ -1565,29 +1565,29 @@ impl From<SsmStDis> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SsmState {
-    #[doc = "Init"]
+    #[doc = "Init."]
     INIT = 0x0,
-    #[doc = "Hard Fail"]
+    #[doc = "Hard Fail."]
     HARD_FAIL = 0x01,
     _RESERVED_2 = 0x02,
-    #[doc = "Soft Fail"]
+    #[doc = "Soft Fail."]
     SOFT_FAIL = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
-    #[doc = "Init Intermediate (transition state between Init and Check - SSM stays in this state only one clock cycle)"]
+    #[doc = "Init Intermediate (transition state between Init and Check - SSM stays in this state only one clock cycle)."]
     INTERMEDIATE = 0x08,
-    #[doc = "Check"]
+    #[doc = "Check."]
     CHECK = 0x09,
     _RESERVED_a = 0x0a,
-    #[doc = "Non-Secure"]
+    #[doc = "Non-Secure."]
     NON_SECURE = 0x0b,
     _RESERVED_c = 0x0c,
-    #[doc = "Trusted"]
+    #[doc = "Trusted."]
     TRUSTED = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "Secure"]
+    #[doc = "Secure."]
     SECURE = 0x0f,
 }
 impl SsmState {
@@ -1647,9 +1647,9 @@ impl From<Sv0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sv0Cfg {
-    #[doc = "Security Violation 0 is a non-fatal violation"]
+    #[doc = "Security Violation 0 is a non-fatal violation."]
     NON_FATAL = 0x0,
-    #[doc = "Security Violation 0 is a fatal violation"]
+    #[doc = "Security Violation 0 is a fatal violation."]
     FATAL = 0x01,
 }
 impl Sv0Cfg {
@@ -1709,9 +1709,9 @@ impl From<Sv1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sv1Cfg {
-    #[doc = "Security Violation 1 is a non-fatal violation"]
+    #[doc = "Security Violation 1 is a non-fatal violation."]
     NON_FATAL = 0x0,
-    #[doc = "Security Violation 1 is a fatal violation"]
+    #[doc = "Security Violation 1 is a fatal violation."]
     FATAL = 0x01,
 }
 impl Sv1Cfg {
@@ -1771,9 +1771,9 @@ impl From<Sv2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sv2Cfg {
-    #[doc = "Security Violation 2 is a non-fatal violation"]
+    #[doc = "Security Violation 2 is a non-fatal violation."]
     NON_FATAL = 0x0,
-    #[doc = "Security Violation 2 is a fatal violation"]
+    #[doc = "Security Violation 2 is a fatal violation."]
     FATAL = 0x01,
 }
 impl Sv2Cfg {
@@ -1833,9 +1833,9 @@ impl From<Sv3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sv3Cfg {
-    #[doc = "Security Violation 3 is a non-fatal violation"]
+    #[doc = "Security Violation 3 is a non-fatal violation."]
     NON_FATAL = 0x0,
-    #[doc = "Security Violation 3 is a fatal violation"]
+    #[doc = "Security Violation 3 is a fatal violation."]
     FATAL = 0x01,
 }
 impl Sv3Cfg {
@@ -1895,9 +1895,9 @@ impl From<Sv4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sv4Cfg {
-    #[doc = "Security Violation 4 is a non-fatal violation"]
+    #[doc = "Security Violation 4 is a non-fatal violation."]
     NON_FATAL = 0x0,
-    #[doc = "Security Violation 4 is a fatal violation"]
+    #[doc = "Security Violation 4 is a fatal violation."]
     FATAL = 0x01,
 }
 impl Sv4Cfg {
@@ -1957,11 +1957,11 @@ impl From<Sv5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sv5Cfg {
-    #[doc = "Security Violation 5 is disabled"]
+    #[doc = "Security Violation 5 is disabled."]
     DISABLED = 0x0,
-    #[doc = "Security Violation 5 is a non-fatal violation"]
+    #[doc = "Security Violation 5 is a non-fatal violation."]
     NON_FATAL = 0x01,
-    #[doc = "Security Violation 5 is a fatal violation"]
+    #[doc = "Security Violation 5 is a fatal violation."]
     FATAL = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -1991,17 +1991,17 @@ impl From<Sv5Cfg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SysSecurityCfg {
-    #[doc = "Fab Configuration - the default configuration of newly fabricated chips"]
+    #[doc = "Fab Configuration - the default configuration of newly fabricated chips."]
     FAB_CONFIG = 0x0,
-    #[doc = "Open Configuration - the configuration after NXP-programmable fuses have been blown"]
+    #[doc = "Open Configuration - the configuration after NXP-programmable fuses have been blown."]
     OPEN_CONFIG = 0x01,
     _RESERVED_2 = 0x02,
-    #[doc = "Closed Configuration - the configuration after OEM-programmable fuses have been blown"]
+    #[doc = "Closed Configuration - the configuration after OEM-programmable fuses have been blown."]
     CLOSED_CONFIG = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
-    #[doc = "Field Return Configuration - the configuration of chips that are returned to NXP for analysis"]
+    #[doc = "Field Return Configuration - the configuration of chips that are returned to NXP for analysis."]
     FIELD_RETURN_CONFIG = 0x07,
 }
 impl SysSecurityCfg {
@@ -2154,9 +2154,9 @@ impl From<ZmkRhl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ZmkRsl {
-    #[doc = "Read access is allowed (only in software Programming mode)"]
+    #[doc = "Read access is allowed (only in software Programming mode)."]
     READ_ALLOWED = 0x0,
-    #[doc = "Read access is not allowed"]
+    #[doc = "Read access is not allowed."]
     READ_NOT_ALLOWED = 0x01,
 }
 impl ZmkRsl {
@@ -2216,9 +2216,9 @@ impl From<ZmkWhl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ZmkWsl {
-    #[doc = "Write access is allowed"]
+    #[doc = "Write access is allowed."]
     WRITE_ALLOWED = 0x0,
-    #[doc = "Write access is not allowed"]
+    #[doc = "Write access is not allowed."]
     WRITE_NOT_ALLOWED = 0x01,
 }
 impl ZmkWsl {

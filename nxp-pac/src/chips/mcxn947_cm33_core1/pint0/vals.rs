@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Cenaf(u8);
 impl Cenaf {
-    #[doc = "No operation"]
+    #[doc = "No operation."]
     pub const CENAF_0: Self = Self(0x0);
-    #[doc = "LOW-active interrupt selected or falling-edge interrupt disabled"]
+    #[doc = "LOW-active interrupt selected or falling-edge interrupt disabled."]
     pub const CENAF_1: Self = Self(0x01);
 }
 impl Cenaf {
@@ -50,9 +50,9 @@ impl From<Cenaf> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Cenrl(u8);
 impl Cenrl {
-    #[doc = "No operation"]
+    #[doc = "No operation."]
     pub const CENRL_0: Self = Self(0x0);
-    #[doc = "Disable rising edge or level interrupt"]
+    #[doc = "Disable rising edge or level interrupt."]
     pub const CENRL_1: Self = Self(0x01);
 }
 impl Cenrl {
@@ -98,21 +98,21 @@ impl From<Cenrl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cfg0 {
-    #[doc = "Constant HIGH"]
+    #[doc = "Constant HIGH."]
     CONSTANT_HIGH = 0x0,
-    #[doc = "Sticky rising edge"]
+    #[doc = "Sticky rising edge."]
     STICKY_RISING_EDGE = 0x01,
-    #[doc = "Sticky falling edge"]
+    #[doc = "Sticky falling edge."]
     STICKY_FALLING_EDGE = 0x02,
-    #[doc = "Sticky rising or falling edge"]
+    #[doc = "Sticky rising or falling edge."]
     STICKY_RISING_FALLING_EDGE = 0x03,
-    #[doc = "High level"]
+    #[doc = "High level."]
     HIGH_LEVEL = 0x04,
-    #[doc = "Low level"]
+    #[doc = "Low level."]
     LOW_LEVEL = 0x05,
-    #[doc = "Constant 0"]
+    #[doc = "Constant 0."]
     CONSTANT_ZERO = 0x06,
-    #[doc = "Event (Nonsticky rising or falling edge)"]
+    #[doc = "Event (Nonsticky rising or falling edge)."]
     EVENT = 0x07,
 }
 impl Cfg0 {
@@ -141,21 +141,21 @@ impl From<Cfg0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cfg1 {
-    #[doc = "Constant HIGH"]
+    #[doc = "Constant HIGH."]
     CONSTANT_HIGH = 0x0,
-    #[doc = "Sticky rising edge"]
+    #[doc = "Sticky rising edge."]
     STICKY_RISING_EDGE = 0x01,
-    #[doc = "Sticky falling edge"]
+    #[doc = "Sticky falling edge."]
     STICKY_FALLING_EDGE = 0x02,
-    #[doc = "Sticky rising or falling edge"]
+    #[doc = "Sticky rising or falling edge."]
     STICKY_RISING_FALLING_EDGE = 0x03,
-    #[doc = "High level"]
+    #[doc = "High level."]
     HIGH_LEVEL = 0x04,
-    #[doc = "Low level"]
+    #[doc = "Low level."]
     LOW_LEVEL = 0x05,
-    #[doc = "Constant 0"]
+    #[doc = "Constant 0."]
     CONSTANT_ZERO = 0x06,
-    #[doc = "Event (Nonsticky rising or falling edge)"]
+    #[doc = "Event (Nonsticky rising or falling edge)."]
     EVENT = 0x07,
 }
 impl Cfg1 {
@@ -184,21 +184,21 @@ impl From<Cfg1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cfg2 {
-    #[doc = "Constant HIGH"]
+    #[doc = "Constant HIGH."]
     CONSTANT_HIGH = 0x0,
-    #[doc = "Sticky rising edge"]
+    #[doc = "Sticky rising edge."]
     STICKY_RISING_EDGE = 0x01,
-    #[doc = "Sticky falling edge"]
+    #[doc = "Sticky falling edge."]
     STICKY_FALLING_EDGE = 0x02,
-    #[doc = "Sticky rising or falling edge"]
+    #[doc = "Sticky rising or falling edge."]
     STICKY_RISING_FALLING_EDGE = 0x03,
-    #[doc = "High level"]
+    #[doc = "High level."]
     HIGH_LEVEL = 0x04,
-    #[doc = "Low level"]
+    #[doc = "Low level."]
     LOW_LEVEL = 0x05,
-    #[doc = "Constant 0"]
+    #[doc = "Constant 0."]
     CONSTANT_ZERO = 0x06,
-    #[doc = "Event (Nonsticky rising or falling edge)"]
+    #[doc = "Event (Nonsticky rising or falling edge)."]
     EVENT = 0x07,
 }
 impl Cfg2 {
@@ -227,21 +227,21 @@ impl From<Cfg2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cfg3 {
-    #[doc = "Constant HIGH"]
+    #[doc = "Constant HIGH."]
     CONSTANT_HIGH = 0x0,
-    #[doc = "Sticky rising edge"]
+    #[doc = "Sticky rising edge."]
     STICKY_RISING_EDGE = 0x01,
-    #[doc = "Sticky falling edge"]
+    #[doc = "Sticky falling edge."]
     STICKY_FALLING_EDGE = 0x02,
-    #[doc = "Sticky rising or falling edge"]
+    #[doc = "Sticky rising or falling edge."]
     STICKY_RISING_FALLING_EDGE = 0x03,
-    #[doc = "High level"]
+    #[doc = "High level."]
     HIGH_LEVEL = 0x04,
-    #[doc = "Low level"]
+    #[doc = "Low level."]
     LOW_LEVEL = 0x05,
-    #[doc = "Constant 0"]
+    #[doc = "Constant 0."]
     CONSTANT_ZERO = 0x06,
-    #[doc = "Event (Nonsticky rising or falling edge)"]
+    #[doc = "Event (Nonsticky rising or falling edge)."]
     EVENT = 0x07,
 }
 impl Cfg3 {
@@ -270,21 +270,21 @@ impl From<Cfg3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cfg4 {
-    #[doc = "Constant HIGH"]
+    #[doc = "Constant HIGH."]
     CONSTANT_HIGH = 0x0,
-    #[doc = "Sticky rising edge"]
+    #[doc = "Sticky rising edge."]
     STICKY_RISING_EDGE = 0x01,
-    #[doc = "Sticky falling edge"]
+    #[doc = "Sticky falling edge."]
     STICKY_FALLING_EDGE = 0x02,
-    #[doc = "Sticky rising or falling edge"]
+    #[doc = "Sticky rising or falling edge."]
     STICKY_RISING_FALLING_EDGE = 0x03,
-    #[doc = "High level"]
+    #[doc = "High level."]
     HIGH_LEVEL = 0x04,
-    #[doc = "Low level"]
+    #[doc = "Low level."]
     LOW_LEVEL = 0x05,
-    #[doc = "Constant 0"]
+    #[doc = "Constant 0."]
     CONSTANT_ZERO = 0x06,
-    #[doc = "Event (Nonsticky rising or falling edge)"]
+    #[doc = "Event (Nonsticky rising or falling edge)."]
     EVENT = 0x07,
 }
 impl Cfg4 {
@@ -313,21 +313,21 @@ impl From<Cfg4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cfg5 {
-    #[doc = "Constant HIGH"]
+    #[doc = "Constant HIGH."]
     CONSTANT_HIGH = 0x0,
-    #[doc = "Sticky rising edge"]
+    #[doc = "Sticky rising edge."]
     STICKY_RISING_EDGE = 0x01,
-    #[doc = "Sticky falling edge"]
+    #[doc = "Sticky falling edge."]
     STICKY_FALLING_EDGE = 0x02,
-    #[doc = "Sticky rising or falling edge"]
+    #[doc = "Sticky rising or falling edge."]
     STICKY_RISING_FALLING_EDGE = 0x03,
-    #[doc = "High level"]
+    #[doc = "High level."]
     HIGH_LEVEL = 0x04,
-    #[doc = "Low level"]
+    #[doc = "Low level."]
     LOW_LEVEL = 0x05,
-    #[doc = "Constant 0"]
+    #[doc = "Constant 0."]
     CONSTANT_ZERO = 0x06,
-    #[doc = "Event (Nonsticky rising or falling edge)"]
+    #[doc = "Event (Nonsticky rising or falling edge)."]
     EVENT = 0x07,
 }
 impl Cfg5 {
@@ -356,21 +356,21 @@ impl From<Cfg5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cfg6 {
-    #[doc = "Constant HIGH"]
+    #[doc = "Constant HIGH."]
     CONSTANT_HIGH = 0x0,
-    #[doc = "Sticky rising edge"]
+    #[doc = "Sticky rising edge."]
     STICKY_RISING_EDGE = 0x01,
-    #[doc = "Sticky falling edge"]
+    #[doc = "Sticky falling edge."]
     STICKY_FALLING_EDGE = 0x02,
-    #[doc = "Sticky rising or falling edge"]
+    #[doc = "Sticky rising or falling edge."]
     STICKY_RISING_FALLING_EDGE = 0x03,
-    #[doc = "High level"]
+    #[doc = "High level."]
     HIGH_LEVEL = 0x04,
-    #[doc = "Low level"]
+    #[doc = "Low level."]
     LOW_LEVEL = 0x05,
-    #[doc = "Constant 0"]
+    #[doc = "Constant 0."]
     CONSTANT_ZERO = 0x06,
-    #[doc = "Event (Nonsticky rising or falling edge)"]
+    #[doc = "Event (Nonsticky rising or falling edge)."]
     EVENT = 0x07,
 }
 impl Cfg6 {
@@ -399,21 +399,21 @@ impl From<Cfg6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cfg7 {
-    #[doc = "Constant HIGH"]
+    #[doc = "Constant HIGH."]
     CONSTANT_HIGH = 0x0,
-    #[doc = "Sticky rising edge"]
+    #[doc = "Sticky rising edge."]
     STICKY_RISING_EDGE = 0x01,
-    #[doc = "Sticky falling edge"]
+    #[doc = "Sticky falling edge."]
     STICKY_FALLING_EDGE = 0x02,
-    #[doc = "Sticky rising or falling edge"]
+    #[doc = "Sticky rising or falling edge."]
     STICKY_RISING_FALLING_EDGE = 0x03,
-    #[doc = "High level"]
+    #[doc = "High level."]
     HIGH_LEVEL = 0x04,
-    #[doc = "Low level"]
+    #[doc = "Low level."]
     LOW_LEVEL = 0x05,
-    #[doc = "Constant 0"]
+    #[doc = "Constant 0."]
     CONSTANT_ZERO = 0x06,
-    #[doc = "Event (Nonsticky rising or falling edge)"]
+    #[doc = "Event (Nonsticky rising or falling edge)."]
     EVENT = 0x07,
 }
 impl Cfg7 {
@@ -442,9 +442,9 @@ impl From<Cfg7> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Enaf(u8);
 impl Enaf {
-    #[doc = "Disable (set active interrupt level LOW)"]
+    #[doc = "Disable (set active interrupt level LOW)."]
     pub const ENAF_0: Self = Self(0x0);
-    #[doc = "Enable (set active interrupt level HIGH)"]
+    #[doc = "Enable (set active interrupt level HIGH)."]
     pub const ENAF_1: Self = Self(0x01);
 }
 impl Enaf {
@@ -490,9 +490,9 @@ impl From<Enaf> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Enrl(u8);
 impl Enrl {
-    #[doc = "In bit n disables the corresponding interrupt"]
+    #[doc = "In bit n disables the corresponding interrupt."]
     pub const ENRL_0: Self = Self(0x0);
-    #[doc = "In bit n enables the corresponding interrupt"]
+    #[doc = "In bit n enables the corresponding interrupt."]
     pub const ENRL_1: Self = Self(0x01);
 }
 impl Enrl {
@@ -538,9 +538,9 @@ impl From<Enrl> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Fdet(u8);
 impl Fdet {
-    #[doc = "Read 0- No falling edge (since Reset or you wrote a 1 to this field last time), Write 0- No operation"]
+    #[doc = "Read 0- No falling edge (since Reset or you wrote a 1 to this field last time), Write 0- No operation."]
     pub const FDET_0: Self = Self(0x0);
-    #[doc = "Read 1- Falling edge (since Reset or you wrote a 1 to this field last time), Write 1- Clear falling-edge detection for this bit"]
+    #[doc = "Read 1- Falling edge (since Reset or you wrote a 1 to this field last time), Write 1- Clear falling-edge detection for this bit."]
     pub const FDET_1: Self = Self(0x01);
 }
 impl Fdet {
@@ -586,7 +586,7 @@ impl From<Fdet> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pmat(u8);
 impl Pmat {
-    #[doc = "The corresponding product term is matched by the current state of the appropriate inputs"]
+    #[doc = "The corresponding product term is matched by the current state of the appropriate inputs."]
     pub const PMAT_1: Self = Self(0x01);
 }
 impl Pmat {
@@ -630,9 +630,9 @@ impl From<Pmat> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pmode(u8);
 impl Pmode {
-    #[doc = "In bit n configures the interrupt to be edge-sensitive"]
+    #[doc = "In bit n configures the interrupt to be edge-sensitive."]
     pub const ISEL_0: Self = Self(0x0);
-    #[doc = "In bit n configures the interrupt to be level-sensitive"]
+    #[doc = "In bit n configures the interrupt to be level-sensitive."]
     pub const ISEL_1: Self = Self(0x01);
 }
 impl Pmode {
@@ -678,9 +678,9 @@ impl From<Pmode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ProdEndpts0 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Endpoint"]
+    #[doc = "Endpoint."]
     ENDPOINT = 0x01,
 }
 impl ProdEndpts0 {
@@ -709,9 +709,9 @@ impl From<ProdEndpts0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ProdEndpts1 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Endpoint"]
+    #[doc = "Endpoint."]
     ENDPOINT = 0x01,
 }
 impl ProdEndpts1 {
@@ -740,9 +740,9 @@ impl From<ProdEndpts1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ProdEndpts2 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Endpoint"]
+    #[doc = "Endpoint."]
     ENDPOINT = 0x01,
 }
 impl ProdEndpts2 {
@@ -771,9 +771,9 @@ impl From<ProdEndpts2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ProdEndpts3 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Endpoint"]
+    #[doc = "Endpoint."]
     ENDPOINT = 0x01,
 }
 impl ProdEndpts3 {
@@ -802,9 +802,9 @@ impl From<ProdEndpts3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ProdEndpts4 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Endpoint"]
+    #[doc = "Endpoint."]
     ENDPOINT = 0x01,
 }
 impl ProdEndpts4 {
@@ -833,9 +833,9 @@ impl From<ProdEndpts4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ProdEndpts5 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Endpoint"]
+    #[doc = "Endpoint."]
     ENDPOINT = 0x01,
 }
 impl ProdEndpts5 {
@@ -864,9 +864,9 @@ impl From<ProdEndpts5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ProdEndpts6 {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Endpoint"]
+    #[doc = "Endpoint."]
     ENDPOINT = 0x01,
 }
 impl ProdEndpts6 {
@@ -895,9 +895,9 @@ impl From<ProdEndpts6> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pstat(u8);
 impl Pstat {
-    #[doc = "Read 0- Interrupt is not requested, Write 0- No operation"]
+    #[doc = "Read 0- Interrupt is not requested, Write 0- No operation."]
     pub const PSTAT_0: Self = Self(0x0);
-    #[doc = "Read 1- Interrupt is requested, Write 1 (edge-sensitive)- clear rising- and falling-edge detection for this pin, Write 1 (level-sensitive)- switch the active level for this pin in"]
+    #[doc = "Read 1- Interrupt is requested, Write 1 (edge-sensitive)- clear rising- and falling-edge detection for this pin, Write 1 (level-sensitive)- switch the active level for this pin in."]
     pub const PSTAT_1: Self = Self(0x01);
 }
 impl Pstat {
@@ -943,9 +943,9 @@ impl From<Pstat> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Rdet(u8);
 impl Rdet {
-    #[doc = "Read 0- No rising edge (since Reset or you wrote a 1 to this field last time), Write 0- No operation"]
+    #[doc = "Read 0- No rising edge (since Reset or you wrote a 1 to this field last time), Write 0- No operation."]
     pub const RDET_0: Self = Self(0x0);
-    #[doc = "Read 1- Rising edge (since Reset or you wrote a 1 to this field last time), Write 1- Clear rising-edge detection for this pin"]
+    #[doc = "Read 1- Rising edge (since Reset or you wrote a 1 to this field last time), Write 1- Clear rising-edge detection for this pin."]
     pub const RDET_1: Self = Self(0x01);
 }
 impl Rdet {
@@ -991,9 +991,9 @@ impl From<Rdet> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SelPmatch {
-    #[doc = "Pin interrupt"]
+    #[doc = "Pin interrupt."]
     PIN_INTERRUPT = 0x0,
-    #[doc = "Pattern match"]
+    #[doc = "Pattern match."]
     PATTERN_MATCH = 0x01,
 }
 impl SelPmatch {
@@ -1024,7 +1024,7 @@ pub struct Setenaf(u8);
 impl Setenaf {
     #[doc = "Writes 0 to IENF."]
     pub const SETENAF_0: Self = Self(0x0);
-    #[doc = "Select HIGH-active interrupt or enable falling-edge interrupt"]
+    #[doc = "Select HIGH-active interrupt or enable falling-edge interrupt."]
     pub const SETENAF_1: Self = Self(0x01);
 }
 impl Setenaf {
@@ -1070,9 +1070,9 @@ impl From<Setenaf> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Setenrl(u8);
 impl Setenrl {
-    #[doc = "No operation for interrupt n"]
+    #[doc = "No operation for interrupt n."]
     pub const SETENRL_0: Self = Self(0x0);
-    #[doc = "Enable rising edge or level interrupt for interrupt n"]
+    #[doc = "Enable rising edge or level interrupt for interrupt n."]
     pub const SETENRL_1: Self = Self(0x01);
 }
 impl Setenrl {
@@ -1118,21 +1118,21 @@ impl From<Setenrl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Src0 {
-    #[doc = "Input 0 (selects the pin identified in PINSEL0)"]
+    #[doc = "Input 0 (selects the pin identified in PINSEL0)."]
     INPUT0 = 0x0,
-    #[doc = "Input 1 (selects the pin identified in PINSEL1)"]
+    #[doc = "Input 1 (selects the pin identified in PINSEL1)."]
     INPUT1 = 0x01,
-    #[doc = "Input 2 (selects the pin identified in PINSEL2)"]
+    #[doc = "Input 2 (selects the pin identified in PINSEL2)."]
     INPUT2 = 0x02,
-    #[doc = "Input 3 (selects the pin identified in PINSEL3)"]
+    #[doc = "Input 3 (selects the pin identified in PINSEL3)."]
     INPUT3 = 0x03,
-    #[doc = "Input 4 (selects the pin identified in PINSEL4)"]
+    #[doc = "Input 4 (selects the pin identified in PINSEL4)."]
     INPUT4 = 0x04,
-    #[doc = "Input 5 (selects the pin identified in PINSEL5)"]
+    #[doc = "Input 5 (selects the pin identified in PINSEL5)."]
     INPUT5 = 0x05,
-    #[doc = "Input 6 (selects the pin identified in PINSEL6)"]
+    #[doc = "Input 6 (selects the pin identified in PINSEL6)."]
     INPUT6 = 0x06,
-    #[doc = "Input 7 (selects the pin identified in PINSEL7)"]
+    #[doc = "Input 7 (selects the pin identified in PINSEL7)."]
     INPUT7 = 0x07,
 }
 impl Src0 {
@@ -1161,21 +1161,21 @@ impl From<Src0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Src1 {
-    #[doc = "Input 0 (selects the pin identified in PINSEL0)"]
+    #[doc = "Input 0 (selects the pin identified in PINSEL0)."]
     INPUT0 = 0x0,
-    #[doc = "Input 1 (selects the pin identified in PINSEL1)"]
+    #[doc = "Input 1 (selects the pin identified in PINSEL1)."]
     INPUT1 = 0x01,
-    #[doc = "Input 2 (selects the pin identified in PINSEL2)"]
+    #[doc = "Input 2 (selects the pin identified in PINSEL2)."]
     INPUT2 = 0x02,
-    #[doc = "Input 3 (selects the pin identified in PINSEL3)"]
+    #[doc = "Input 3 (selects the pin identified in PINSEL3)."]
     INPUT3 = 0x03,
-    #[doc = "Input 4 (selects the pin identified in PINSEL4)"]
+    #[doc = "Input 4 (selects the pin identified in PINSEL4)."]
     INPUT4 = 0x04,
-    #[doc = "Input 5 (selects the pin identified in PINSEL5)"]
+    #[doc = "Input 5 (selects the pin identified in PINSEL5)."]
     INPUT5 = 0x05,
-    #[doc = "Input 6 (selects the pin identified in PINSEL6)"]
+    #[doc = "Input 6 (selects the pin identified in PINSEL6)."]
     INPUT6 = 0x06,
-    #[doc = "Input 7 (selects the pin identified in PINSEL7)"]
+    #[doc = "Input 7 (selects the pin identified in PINSEL7)."]
     INPUT7 = 0x07,
 }
 impl Src1 {
@@ -1204,21 +1204,21 @@ impl From<Src1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Src2 {
-    #[doc = "Input 0 (selects the pin identified in PINSEL0)"]
+    #[doc = "Input 0 (selects the pin identified in PINSEL0)."]
     INPUT0 = 0x0,
-    #[doc = "Input 1 (selects the pin identified in PINSEL1)"]
+    #[doc = "Input 1 (selects the pin identified in PINSEL1)."]
     INPUT1 = 0x01,
-    #[doc = "Input 2 (selects the pin identified in PINSEL2)"]
+    #[doc = "Input 2 (selects the pin identified in PINSEL2)."]
     INPUT2 = 0x02,
-    #[doc = "Input 3 (selects the pin identified in PINSEL3)"]
+    #[doc = "Input 3 (selects the pin identified in PINSEL3)."]
     INPUT3 = 0x03,
-    #[doc = "Input 4 (selects the pin identified in PINSEL4)"]
+    #[doc = "Input 4 (selects the pin identified in PINSEL4)."]
     INPUT4 = 0x04,
-    #[doc = "Input 5 (selects the pin identified in PINSEL5)"]
+    #[doc = "Input 5 (selects the pin identified in PINSEL5)."]
     INPUT5 = 0x05,
-    #[doc = "Input 6 (selects the pin identified in PINSEL6)"]
+    #[doc = "Input 6 (selects the pin identified in PINSEL6)."]
     INPUT6 = 0x06,
-    #[doc = "Input 7 (selects the pin identified in PINSEL7)"]
+    #[doc = "Input 7 (selects the pin identified in PINSEL7)."]
     INPUT7 = 0x07,
 }
 impl Src2 {
@@ -1247,21 +1247,21 @@ impl From<Src2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Src3 {
-    #[doc = "Input 0 (selects the pin identified in PINSEL0)"]
+    #[doc = "Input 0 (selects the pin identified in PINSEL0)."]
     INPUT0 = 0x0,
-    #[doc = "Input 1 (selects the pin identified in PINSEL1)"]
+    #[doc = "Input 1 (selects the pin identified in PINSEL1)."]
     INPUT1 = 0x01,
-    #[doc = "Input 2 (selects the pin identified in PINSEL2)"]
+    #[doc = "Input 2 (selects the pin identified in PINSEL2)."]
     INPUT2 = 0x02,
-    #[doc = "Input 3 (selects the pin identified in PINSEL3)"]
+    #[doc = "Input 3 (selects the pin identified in PINSEL3)."]
     INPUT3 = 0x03,
-    #[doc = "Input 4 (selects the pin identified in PINSEL4)"]
+    #[doc = "Input 4 (selects the pin identified in PINSEL4)."]
     INPUT4 = 0x04,
-    #[doc = "Input 5 (selects the pin identified in PINSEL5)"]
+    #[doc = "Input 5 (selects the pin identified in PINSEL5)."]
     INPUT5 = 0x05,
-    #[doc = "Input 6 (selects the pin identified in PINSEL6)"]
+    #[doc = "Input 6 (selects the pin identified in PINSEL6)."]
     INPUT6 = 0x06,
-    #[doc = "Input 7 (selects the pin identified in PINSEL7)"]
+    #[doc = "Input 7 (selects the pin identified in PINSEL7)."]
     INPUT7 = 0x07,
 }
 impl Src3 {
@@ -1290,21 +1290,21 @@ impl From<Src3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Src4 {
-    #[doc = "Input 0 (selects the pin identified in PINSEL0)"]
+    #[doc = "Input 0 (selects the pin identified in PINSEL0)."]
     INPUT0 = 0x0,
-    #[doc = "Input 1 (selects the pin identified in PINSEL1)"]
+    #[doc = "Input 1 (selects the pin identified in PINSEL1)."]
     INPUT1 = 0x01,
-    #[doc = "Input 2 (selects the pin identified in PINSEL2)"]
+    #[doc = "Input 2 (selects the pin identified in PINSEL2)."]
     INPUT2 = 0x02,
-    #[doc = "Input 3 (selects the pin identified in PINSEL3)"]
+    #[doc = "Input 3 (selects the pin identified in PINSEL3)."]
     INPUT3 = 0x03,
-    #[doc = "Input 4 (selects the pin identified in PINSEL4)"]
+    #[doc = "Input 4 (selects the pin identified in PINSEL4)."]
     INPUT4 = 0x04,
-    #[doc = "Input 5 (selects the pin identified in PINSEL5)"]
+    #[doc = "Input 5 (selects the pin identified in PINSEL5)."]
     INPUT5 = 0x05,
-    #[doc = "Input 6 (selects the pin identified in PINSEL6)"]
+    #[doc = "Input 6 (selects the pin identified in PINSEL6)."]
     INPUT6 = 0x06,
-    #[doc = "Input 7 (selects the pin identified in PINSEL7)"]
+    #[doc = "Input 7 (selects the pin identified in PINSEL7)."]
     INPUT7 = 0x07,
 }
 impl Src4 {
@@ -1333,21 +1333,21 @@ impl From<Src4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Src5 {
-    #[doc = "Input 0 (selects the pin identified in PINSEL0)"]
+    #[doc = "Input 0 (selects the pin identified in PINSEL0)."]
     INPUT0 = 0x0,
-    #[doc = "Input 1 (selects the pin identified in PINSEL1)"]
+    #[doc = "Input 1 (selects the pin identified in PINSEL1)."]
     INPUT1 = 0x01,
-    #[doc = "Input 2 (selects the pin identified in PINSEL2)"]
+    #[doc = "Input 2 (selects the pin identified in PINSEL2)."]
     INPUT2 = 0x02,
-    #[doc = "Input 3 (selects the pin identified in PINSEL3)"]
+    #[doc = "Input 3 (selects the pin identified in PINSEL3)."]
     INPUT3 = 0x03,
-    #[doc = "Input 4 (selects the pin identified in PINSEL4)"]
+    #[doc = "Input 4 (selects the pin identified in PINSEL4)."]
     INPUT4 = 0x04,
-    #[doc = "Input 5 (selects the pin identified in PINSEL5)"]
+    #[doc = "Input 5 (selects the pin identified in PINSEL5)."]
     INPUT5 = 0x05,
-    #[doc = "Input 6 (selects the pin identified in PINSEL6)"]
+    #[doc = "Input 6 (selects the pin identified in PINSEL6)."]
     INPUT6 = 0x06,
-    #[doc = "Input 7 (selects the pin identified in PINSEL7)"]
+    #[doc = "Input 7 (selects the pin identified in PINSEL7)."]
     INPUT7 = 0x07,
 }
 impl Src5 {
@@ -1376,21 +1376,21 @@ impl From<Src5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Src6 {
-    #[doc = "Input 0 (selects the pin identified in PINSEL0)"]
+    #[doc = "Input 0 (selects the pin identified in PINSEL0)."]
     INPUT0 = 0x0,
-    #[doc = "Input 1 (selects the pin identified in PINSEL1)"]
+    #[doc = "Input 1 (selects the pin identified in PINSEL1)."]
     INPUT1 = 0x01,
-    #[doc = "Input 2 (selects the pin identified in PINSEL2)"]
+    #[doc = "Input 2 (selects the pin identified in PINSEL2)."]
     INPUT2 = 0x02,
-    #[doc = "Input 3 (selects the pin identified in PINSEL3)"]
+    #[doc = "Input 3 (selects the pin identified in PINSEL3)."]
     INPUT3 = 0x03,
-    #[doc = "Input 4 (selects the pin identified in PINSEL4)"]
+    #[doc = "Input 4 (selects the pin identified in PINSEL4)."]
     INPUT4 = 0x04,
-    #[doc = "Input 5 (selects the pin identified in PINSEL5)"]
+    #[doc = "Input 5 (selects the pin identified in PINSEL5)."]
     INPUT5 = 0x05,
-    #[doc = "Input 6 (selects the pin identified in PINSEL6)"]
+    #[doc = "Input 6 (selects the pin identified in PINSEL6)."]
     INPUT6 = 0x06,
-    #[doc = "Input 7 (selects the pin identified in PINSEL7)"]
+    #[doc = "Input 7 (selects the pin identified in PINSEL7)."]
     INPUT7 = 0x07,
 }
 impl Src6 {
@@ -1419,21 +1419,21 @@ impl From<Src6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Src7 {
-    #[doc = "Input 0 (selects the pin identified in PINSEL0)"]
+    #[doc = "Input 0 (selects the pin identified in PINSEL0)."]
     INPUT0 = 0x0,
-    #[doc = "Input 1 (selects the pin identified in PINSEL1)"]
+    #[doc = "Input 1 (selects the pin identified in PINSEL1)."]
     INPUT1 = 0x01,
-    #[doc = "Input 2 (selects the pin identified in PINSEL2)"]
+    #[doc = "Input 2 (selects the pin identified in PINSEL2)."]
     INPUT2 = 0x02,
-    #[doc = "Input 3 (selects the pin identified in PINSEL3)"]
+    #[doc = "Input 3 (selects the pin identified in PINSEL3)."]
     INPUT3 = 0x03,
-    #[doc = "Input 4 (selects the pin identified in PINSEL4)"]
+    #[doc = "Input 4 (selects the pin identified in PINSEL4)."]
     INPUT4 = 0x04,
-    #[doc = "Input 5 (selects the pin identified in PINSEL5)"]
+    #[doc = "Input 5 (selects the pin identified in PINSEL5)."]
     INPUT5 = 0x05,
-    #[doc = "Input 6 (selects the pin identified in PINSEL6)"]
+    #[doc = "Input 6 (selects the pin identified in PINSEL6)."]
     INPUT6 = 0x06,
-    #[doc = "Input 7 (selects the pin identified in PINSEL7)"]
+    #[doc = "Input 7 (selects the pin identified in PINSEL7)."]
     INPUT7 = 0x07,
 }
 impl Src7 {

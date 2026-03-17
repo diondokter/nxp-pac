@@ -1,4 +1,4 @@
-#[doc = "A register"]
+#[doc = "A register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Areg(pub u32);
@@ -35,7 +35,7 @@ impl defmt::Format for Areg {
         defmt::write!(f, "Areg {{ reg_value: {=u32:?} }}", self.reg_value())
     }
 }
-#[doc = "B register"]
+#[doc = "B register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Breg(pub u32);
@@ -72,7 +72,7 @@ impl defmt::Format for Breg {
         defmt::write!(f, "Breg {{ reg_value: {=u32:?} }}", self.reg_value())
     }
 }
-#[doc = "C register"]
+#[doc = "C register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Creg(pub u32);
@@ -114,50 +114,50 @@ impl defmt::Format for Creg {
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl0(pub u32);
 impl Ctrl0 {
-    #[doc = "Which bank-pair the offset ABOFF is within. This must be 0 if only 2-up"]
+    #[doc = "Which bank-pair the offset ABOFF is within. This must be 0 if only 2-up."]
     #[must_use]
     #[inline(always)]
     pub const fn abbpair(&self) -> super::vals::Abbpair {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Abbpair::from_bits(val as u8)
     }
-    #[doc = "Which bank-pair the offset ABOFF is within. This must be 0 if only 2-up"]
+    #[doc = "Which bank-pair the offset ABOFF is within. This must be 0 if only 2-up."]
     #[inline(always)]
     pub const fn set_abbpair(&mut self, val: super::vals::Abbpair) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Word or DWord Offset of AB values, with B at \\[2\\]=0 and A at \\[2\\]=1 as far as the code sees (normally will be an interleaved bank so only sequential to AHB). Word offset only allowed if 32 bit operation. Ideally not in the same RAM as the CD values if 4-up"]
+    #[doc = "Word or DWord Offset of AB values, with B at \\[2\\]=0 and A at \\[2\\]=1 as far as the code sees (normally will be an interleaved bank so only sequential to AHB). Word offset only allowed if 32 bit operation. Ideally not in the same RAM as the CD values if 4-up."]
     #[must_use]
     #[inline(always)]
     pub const fn aboff(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Word or DWord Offset of AB values, with B at \\[2\\]=0 and A at \\[2\\]=1 as far as the code sees (normally will be an interleaved bank so only sequential to AHB). Word offset only allowed if 32 bit operation. Ideally not in the same RAM as the CD values if 4-up"]
+    #[doc = "Word or DWord Offset of AB values, with B at \\[2\\]=0 and A at \\[2\\]=1 as far as the code sees (normally will be an interleaved bank so only sequential to AHB). Word offset only allowed if 32 bit operation. Ideally not in the same RAM as the CD values if 4-up."]
     #[inline(always)]
     pub const fn set_aboff(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Which bank-pair the offset CDOFF is within. This must be 0 if only 2-up"]
+    #[doc = "Which bank-pair the offset CDOFF is within. This must be 0 if only 2-up."]
     #[must_use]
     #[inline(always)]
     pub const fn cdbpair(&self) -> super::vals::Cdbpair {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::Cdbpair::from_bits(val as u8)
     }
-    #[doc = "Which bank-pair the offset CDOFF is within. This must be 0 if only 2-up"]
+    #[doc = "Which bank-pair the offset CDOFF is within. This must be 0 if only 2-up."]
     #[inline(always)]
     pub const fn set_cdbpair(&mut self, val: super::vals::Cdbpair) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
     }
-    #[doc = "Word or DWord Offset of CD, with D at \\[2\\]=0 and C at \\[2\\]=1 as far as the code sees (normally will be an interleaved bank so only sequential to AHB). Word offset only allowed if 32 bit operation. Ideally not in the same RAM as the AB values"]
+    #[doc = "Word or DWord Offset of CD, with D at \\[2\\]=0 and C at \\[2\\]=1 as far as the code sees (normally will be an interleaved bank so only sequential to AHB). Word offset only allowed if 32 bit operation. Ideally not in the same RAM as the AB values."]
     #[must_use]
     #[inline(always)]
     pub const fn cdoff(&self) -> u16 {
         let val = (self.0 >> 18usize) & 0x07ff;
         val as u16
     }
-    #[doc = "Word or DWord Offset of CD, with D at \\[2\\]=0 and C at \\[2\\]=1 as far as the code sees (normally will be an interleaved bank so only sequential to AHB). Word offset only allowed if 32 bit operation. Ideally not in the same RAM as the AB values"]
+    #[doc = "Word or DWord Offset of CD, with D at \\[2\\]=0 and C at \\[2\\]=1 as far as the code sees (normally will be an interleaved bank so only sequential to AHB). Word offset only allowed if 32 bit operation. Ideally not in the same RAM as the AB values."]
     #[inline(always)]
     pub const fn set_cdoff(&mut self, val: u16) {
         self.0 = (self.0 & !(0x07ff << 18usize)) | (((val as u32) & 0x07ff) << 18usize);
@@ -221,38 +221,38 @@ impl Ctrl1 {
     pub const fn set_mode(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
     }
-    #[doc = "Which bank-pair the offset RESOFF is within. This must be 0 if only 2-up. Ideally this is not the same bank as ABBPAIR (when 4-up supported)"]
+    #[doc = "Which bank-pair the offset RESOFF is within. This must be 0 if only 2-up. Ideally this is not the same bank as ABBPAIR (when 4-up supported)."]
     #[must_use]
     #[inline(always)]
     pub const fn resbpair(&self) -> super::vals::Resbpair {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::Resbpair::from_bits(val as u8)
     }
-    #[doc = "Which bank-pair the offset RESOFF is within. This must be 0 if only 2-up. Ideally this is not the same bank as ABBPAIR (when 4-up supported)"]
+    #[doc = "Which bank-pair the offset RESOFF is within. This must be 0 if only 2-up. Ideally this is not the same bank as ABBPAIR (when 4-up supported)."]
     #[inline(always)]
     pub const fn set_resbpair(&mut self, val: super::vals::Resbpair) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
     }
-    #[doc = "Word or DWord Offset of result. Word offset only allowed if 32 bit operation. Ideally not in the same RAM as the AB and CD values"]
+    #[doc = "Word or DWord Offset of result. Word offset only allowed if 32 bit operation. Ideally not in the same RAM as the AB and CD values."]
     #[must_use]
     #[inline(always)]
     pub const fn resoff(&self) -> u16 {
         let val = (self.0 >> 18usize) & 0x07ff;
         val as u16
     }
-    #[doc = "Word or DWord Offset of result. Word offset only allowed if 32 bit operation. Ideally not in the same RAM as the AB and CD values"]
+    #[doc = "Word or DWord Offset of result. Word offset only allowed if 32 bit operation. Ideally not in the same RAM as the AB and CD values."]
     #[inline(always)]
     pub const fn set_resoff(&mut self, val: u16) {
         self.0 = (self.0 & !(0x07ff << 18usize)) | (((val as u32) & 0x07ff) << 18usize);
     }
-    #[doc = "Skip rules on Carry if needed. This operation will be skipped based on Carry value (from previous operation) if not 0:"]
+    #[doc = "Skip rules on Carry if needed. This operation will be skipped based on Carry value (from previous operation) if not 0:."]
     #[must_use]
     #[inline(always)]
     pub const fn cskip(&self) -> super::vals::Cskip {
         let val = (self.0 >> 30usize) & 0x03;
         super::vals::Cskip::from_bits(val as u8)
     }
-    #[doc = "Skip rules on Carry if needed. This operation will be skipped based on Carry value (from previous operation) if not 0:"]
+    #[doc = "Skip rules on Carry if needed. This operation will be skipped based on Carry value (from previous operation) if not 0:."]
     #[inline(always)]
     pub const fn set_cskip(&mut self, val: super::vals::Cskip) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val.to_bits() as u32) & 0x03) << 30usize);
@@ -289,7 +289,7 @@ impl defmt::Format for Ctrl1 {
         )
     }
 }
-#[doc = "D register"]
+#[doc = "D register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dreg(pub u32);
@@ -326,7 +326,7 @@ impl defmt::Format for Dreg {
         defmt::write!(f, "Dreg {{ reg_value: {=u32:?} }}", self.reg_value())
     }
 }
-#[doc = "Clears interrupts"]
+#[doc = "Clears interrupts."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Intenclr(pub u32);
@@ -363,7 +363,7 @@ impl defmt::Format for Intenclr {
         defmt::write!(f, "Intenclr {{ done: {:?} }}", self.done())
     }
 }
-#[doc = "Sets interrupts"]
+#[doc = "Sets interrupts."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Intenset(pub u32);
@@ -400,7 +400,7 @@ impl defmt::Format for Intenset {
         defmt::write!(f, "Intenset {{ done: {=bool:?} }}", self.done())
     }
 }
-#[doc = "Interrupt status bits (mask of INTENSET and STATUS)"]
+#[doc = "Interrupt status bits (mask of INTENSET and STATUS)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Intstat(pub u32);
@@ -437,7 +437,7 @@ impl defmt::Format for Intstat {
         defmt::write!(f, "Intstat {{ done: {=bool:?} }}", self.done())
     }
 }
-#[doc = "Security lock register"]
+#[doc = "Security lock register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lock(pub u32);
@@ -492,19 +492,19 @@ impl defmt::Format for Lock {
         )
     }
 }
-#[doc = "Optional mask register"]
+#[doc = "Optional mask register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mask(pub u32);
 impl Mask {
-    #[doc = "Mask to apply as side channel countermeasure. 0: No mask to be used. N: Mask to XOR onto values"]
+    #[doc = "Mask to apply as side channel countermeasure. 0: No mask to be used. N: Mask to XOR onto values."]
     #[must_use]
     #[inline(always)]
     pub const fn mask(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Mask to apply as side channel countermeasure. 0: No mask to be used. N: Mask to XOR onto values"]
+    #[doc = "Mask to apply as side channel countermeasure. 0: No mask to be used. N: Mask to XOR onto values."]
     #[inline(always)]
     pub const fn set_mask(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -527,19 +527,19 @@ impl defmt::Format for Mask {
         defmt::write!(f, "Mask {{ mask: {=u32:?} }}", self.mask())
     }
 }
-#[doc = "Optional re-mask register"]
+#[doc = "Optional re-mask register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Remask(pub u32);
 impl Remask {
-    #[doc = "Mask to apply as side channel countermeasure. 0: No mask to be used. N: Mask to XOR onto values"]
+    #[doc = "Mask to apply as side channel countermeasure. 0: No mask to be used. N: Mask to XOR onto values."]
     #[must_use]
     #[inline(always)]
     pub const fn mask(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Mask to apply as side channel countermeasure. 0: No mask to be used. N: Mask to XOR onto values"]
+    #[doc = "Mask to apply as side channel countermeasure. 0: No mask to be used. N: Mask to XOR onto values."]
     #[inline(always)]
     pub const fn set_mask(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -564,7 +564,7 @@ impl defmt::Format for Remask {
         defmt::write!(f, "Remask {{ mask: {=u32:?} }}", self.mask())
     }
 }
-#[doc = "Result register 0"]
+#[doc = "Result register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Res0(pub u32);
@@ -601,7 +601,7 @@ impl defmt::Format for Res0 {
         defmt::write!(f, "Res0 {{ reg_value: {=u32:?} }}", self.reg_value())
     }
 }
-#[doc = "Result register 1"]
+#[doc = "Result register 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Res1(pub u32);
@@ -638,7 +638,7 @@ impl defmt::Format for Res1 {
         defmt::write!(f, "Res1 {{ reg_value: {=u32:?} }}", self.reg_value())
     }
 }
-#[doc = "Result register 2"]
+#[doc = "Result register 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Res2(pub u32);
@@ -675,7 +675,7 @@ impl defmt::Format for Res2 {
         defmt::write!(f, "Res2 {{ reg_value: {=u32:?} }}", self.reg_value())
     }
 }
-#[doc = "Result register 3"]
+#[doc = "Result register 3."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Res3(pub u32);
@@ -729,26 +729,26 @@ impl Status {
     pub const fn set_done(&mut self, val: super::vals::StatusDone) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Last carry value if operation produced a carry bit"]
+    #[doc = "Last carry value if operation produced a carry bit."]
     #[must_use]
     #[inline(always)]
     pub const fn carry(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "Last carry value if operation produced a carry bit"]
+    #[doc = "Last carry value if operation produced a carry bit."]
     #[inline(always)]
     pub const fn set_carry(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "Indicates if the accelerator is busy performing an operation"]
+    #[doc = "Indicates if the accelerator is busy performing an operation."]
     #[must_use]
     #[inline(always)]
     pub const fn busy(&self) -> super::vals::Busy {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::Busy::from_bits(val as u8)
     }
-    #[doc = "Indicates if the accelerator is busy performing an operation"]
+    #[doc = "Indicates if the accelerator is busy performing an operation."]
     #[inline(always)]
     pub const fn set_busy(&mut self, val: super::vals::Busy) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);

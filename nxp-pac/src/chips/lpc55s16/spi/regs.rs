@@ -1,4 +1,4 @@
-#[doc = "SPI Configuration register"]
+#[doc = "SPI Configuration register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cfg(pub u32);
@@ -165,7 +165,7 @@ impl defmt::Format for Cfg {
         )
     }
 }
-#[doc = "SPI clock Divider"]
+#[doc = "SPI clock Divider."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Div(pub u32);
@@ -202,7 +202,7 @@ impl defmt::Format for Div {
         defmt::write!(f, "Div {{ divval: {=u16:?} }}", self.divval())
     }
 }
-#[doc = "SPI Delay register"]
+#[doc = "SPI Delay register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dly(pub u32);
@@ -923,7 +923,7 @@ impl defmt::Format for Fifordnopop {
         )
     }
 }
-#[doc = "FIFO size register"]
+#[doc = "FIFO size register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Fifosize(pub u32);
@@ -1584,7 +1584,7 @@ impl defmt::Format for Intenset {
         )
     }
 }
-#[doc = "SPI Interrupt Status"]
+#[doc = "SPI Interrupt Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Intstat(pub u32);

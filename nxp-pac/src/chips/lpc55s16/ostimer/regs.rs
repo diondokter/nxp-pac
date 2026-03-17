@@ -1,4 +1,4 @@
-#[doc = "Capture High Register"]
+#[doc = "Capture High Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CaptureH(pub u32);
@@ -39,7 +39,7 @@ impl defmt::Format for CaptureH {
         )
     }
 }
-#[doc = "Capture Low Register"]
+#[doc = "Capture Low Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CaptureL(pub u32);
@@ -80,7 +80,7 @@ impl defmt::Format for CaptureL {
         )
     }
 }
-#[doc = "EVTIMER High Register"]
+#[doc = "EVTIMER High Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Evtimerh(pub u32);
@@ -121,7 +121,7 @@ impl defmt::Format for Evtimerh {
         )
     }
 }
-#[doc = "EVTIMER Low Register"]
+#[doc = "EVTIMER Low Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Evtimerl(pub u32);
@@ -162,7 +162,7 @@ impl defmt::Format for Evtimerl {
         )
     }
 }
-#[doc = "Match High Register"]
+#[doc = "Match High Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct MatchH(pub u32);
@@ -199,7 +199,7 @@ impl defmt::Format for MatchH {
         defmt::write!(f, "MatchH {{ match_value: {=u16:?} }}", self.match_value())
     }
 }
-#[doc = "Match Low Register"]
+#[doc = "Match Low Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct MatchL(pub u32);
@@ -236,7 +236,7 @@ impl defmt::Format for MatchL {
         defmt::write!(f, "MatchL {{ match_value: {=u32:?} }}", self.match_value())
     }
 }
-#[doc = "OS_EVENT TIMER Control Register"]
+#[doc = "OS_EVENT TIMER Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OseventCtrl(pub u32);
@@ -265,14 +265,14 @@ impl OseventCtrl {
     pub const fn set_ostimer_intena(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "This bit will be low when it is safe to write to reload the Match Registers. In typical applications it should not be necessary to test this bit. \\[1\\]"]
+    #[doc = "This bit will be low when it is safe to write to reload the Match Registers. In typical applications it should not be necessary to test this bit. \\[1\\]."]
     #[must_use]
     #[inline(always)]
     pub const fn match_wr_rdy(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit will be low when it is safe to write to reload the Match Registers. In typical applications it should not be necessary to test this bit. \\[1\\]"]
+    #[doc = "This bit will be low when it is safe to write to reload the Match Registers. In typical applications it should not be necessary to test this bit. \\[1\\]."]
     #[inline(always)]
     pub const fn set_match_wr_rdy(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);

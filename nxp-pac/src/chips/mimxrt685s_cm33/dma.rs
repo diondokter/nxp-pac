@@ -1,4 +1,4 @@
-#[doc = "Array of registers: CFG, CTLSTAT, XFERCFG"]
+#[doc = "Array of registers: CFG, CTLSTAT, XFERCFG."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Channel {
     ptr: *mut u8,
@@ -14,23 +14,23 @@ impl Channel {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "Configuration register for DMA channel ."]
+    #[doc = "Configuration register for DMA channel."]
     #[inline(always)]
     pub const fn cfg(self) -> crate::common::Reg<regs::Cfg, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
     }
-    #[doc = "Control and status register for DMA channel ."]
+    #[doc = "Control and status register for DMA channel."]
     #[inline(always)]
     pub const fn ctlstat(self) -> crate::common::Reg<regs::Ctlstat, crate::common::R> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
     }
-    #[doc = "Transfer configuration register for DMA channel ."]
+    #[doc = "Transfer configuration register for DMA channel."]
     #[inline(always)]
     pub const fn xfercfg(self) -> crate::common::Reg<regs::Xfercfg, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
     }
 }
-#[doc = "LPC-Next0 DMA controller"]
+#[doc = "LPC-Next0 DMA controller."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma {
     ptr: *mut u8,
@@ -181,7 +181,7 @@ impl Dma {
     pub const fn abort1(self) -> crate::common::Reg<regs::Abort1, crate::common::W> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x7cusize) as _) }
     }
-    #[doc = "Array of registers: CFG, CTLSTAT, XFERCFG"]
+    #[doc = "Array of registers: CFG, CTLSTAT, XFERCFG."]
     #[inline(always)]
     pub const fn channel(self, n: usize) -> Channel {
         assert!(n < 33usize);

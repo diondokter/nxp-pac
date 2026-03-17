@@ -1,4 +1,4 @@
-#[doc = "Bus Master Error Status Register"]
+#[doc = "Bus Master Error Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct BmErrorStat(pub u32);
@@ -35,19 +35,19 @@ impl defmt::Format for BmErrorStat {
         defmt::write!(f, "BmErrorStat {{ addr: {=u32:?} }}", self.addr())
     }
 }
-#[doc = "CRC Status Register"]
+#[doc = "CRC Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CrcStat(pub u32);
 impl CrcStat {
-    #[doc = "Calculated CRC value"]
+    #[doc = "Calculated CRC value."]
     #[must_use]
     #[inline(always)]
     pub const fn crc_value(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Calculated CRC value"]
+    #[doc = "Calculated CRC value."]
     #[inline(always)]
     pub const fn set_crc_value(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -72,31 +72,31 @@ impl defmt::Format for CrcStat {
         defmt::write!(f, "CrcStat {{ crc_value: {=u32:?} }}", self.crc_value())
     }
 }
-#[doc = "LCDIF General Control Register"]
+#[doc = "LCDIF General Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl(pub u32);
 impl Ctrl {
-    #[doc = "When this bit is set by software, the LCDIF will begin transferring data between the SoC and the display"]
+    #[doc = "When this bit is set by software, the LCDIF will begin transferring data between the SoC and the display."]
     #[must_use]
     #[inline(always)]
     pub const fn run(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "When this bit is set by software, the LCDIF will begin transferring data between the SoC and the display"]
+    #[doc = "When this bit is set by software, the LCDIF will begin transferring data between the SoC and the display."]
     #[inline(always)]
     pub const fn set_run(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Used only when WORD_LENGTH = 3, i"]
+    #[doc = "Used only when WORD_LENGTH = 3, i."]
     #[must_use]
     #[inline(always)]
     pub const fn data_format_24_bit(&self) -> super::vals::CtrlDataFormat24Bit {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::CtrlDataFormat24Bit::from_bits(val as u8)
     }
-    #[doc = "Used only when WORD_LENGTH = 3, i"]
+    #[doc = "Used only when WORD_LENGTH = 3, i."]
     #[inline(always)]
     pub const fn set_data_format_24_bit(&mut self, val: super::vals::CtrlDataFormat24Bit) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
@@ -113,38 +113,38 @@ impl Ctrl {
     pub const fn set_data_format_18_bit(&mut self, val: super::vals::CtrlDataFormat18Bit) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "When this bit is 1 and WORD_LENGTH = 0, it implies that the 16-bit data is in ARGB555 format"]
+    #[doc = "When this bit is 1 and WORD_LENGTH = 0, it implies that the 16-bit data is in ARGB555 format."]
     #[must_use]
     #[inline(always)]
     pub const fn data_format_16_bit(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "When this bit is 1 and WORD_LENGTH = 0, it implies that the 16-bit data is in ARGB555 format"]
+    #[doc = "When this bit is 1 and WORD_LENGTH = 0, it implies that the 16-bit data is in ARGB555 format."]
     #[inline(always)]
     pub const fn set_data_format_16_bit(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "Set this bit to make the LCDIF act as a bus master"]
+    #[doc = "Set this bit to make the LCDIF act as a bus master."]
     #[must_use]
     #[inline(always)]
     pub const fn master(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Set this bit to make the LCDIF act as a bus master"]
+    #[doc = "Set this bit to make the LCDIF act as a bus master."]
     #[inline(always)]
     pub const fn set_master(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "If this bit is set and LCDIF_MASTER bit is set, the LCDIF will act as bus master and the handshake mechanism between LCDIF and PXP will be turned on"]
+    #[doc = "If this bit is set and LCDIF_MASTER bit is set, the LCDIF will act as bus master and the handshake mechanism between LCDIF and PXP will be turned on."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_pxp_handshake(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "If this bit is set and LCDIF_MASTER bit is set, the LCDIF will act as bus master and the handshake mechanism between LCDIF and PXP will be turned on"]
+    #[doc = "If this bit is set and LCDIF_MASTER bit is set, the LCDIF will act as bus master and the handshake mechanism between LCDIF and PXP will be turned on."]
     #[inline(always)]
     pub const fn set_enable_pxp_handshake(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
@@ -173,50 +173,50 @@ impl Ctrl {
     pub const fn set_lcd_databus_width(&mut self, val: super::vals::CtrlLcdDatabusWidth) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u32) & 0x03) << 10usize);
     }
-    #[doc = "This field specifies how to swap the bytes after the data has been converted into an internal representation of 24 bits per pixel and before it is transmitted over the LCD interface bus"]
+    #[doc = "This field specifies how to swap the bytes after the data has been converted into an internal representation of 24 bits per pixel and before it is transmitted over the LCD interface bus."]
     #[must_use]
     #[inline(always)]
     pub const fn csc_data_swizzle(&self) -> super::vals::CtrlCscDataSwizzle {
         let val = (self.0 >> 12usize) & 0x03;
         super::vals::CtrlCscDataSwizzle::from_bits(val as u8)
     }
-    #[doc = "This field specifies how to swap the bytes after the data has been converted into an internal representation of 24 bits per pixel and before it is transmitted over the LCD interface bus"]
+    #[doc = "This field specifies how to swap the bytes after the data has been converted into an internal representation of 24 bits per pixel and before it is transmitted over the LCD interface bus."]
     #[inline(always)]
     pub const fn set_csc_data_swizzle(&mut self, val: super::vals::CtrlCscDataSwizzle) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
     }
-    #[doc = "This field specifies how to swap the bytes fetched by the bus master interface"]
+    #[doc = "This field specifies how to swap the bytes fetched by the bus master interface."]
     #[must_use]
     #[inline(always)]
     pub const fn input_data_swizzle(&self) -> super::vals::CtrlInputDataSwizzle {
         let val = (self.0 >> 14usize) & 0x03;
         super::vals::CtrlInputDataSwizzle::from_bits(val as u8)
     }
-    #[doc = "This field specifies how to swap the bytes fetched by the bus master interface"]
+    #[doc = "This field specifies how to swap the bytes fetched by the bus master interface."]
     #[inline(always)]
     pub const fn set_input_data_swizzle(&mut self, val: super::vals::CtrlInputDataSwizzle) {
         self.0 = (self.0 & !(0x03 << 14usize)) | (((val.to_bits() as u32) & 0x03) << 14usize);
     }
-    #[doc = "Set this bit to 1 to make the hardware go into the DOTCLK mode, i"]
+    #[doc = "Set this bit to 1 to make the hardware go into the DOTCLK mode, i."]
     #[must_use]
     #[inline(always)]
     pub const fn dotclk_mode(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Set this bit to 1 to make the hardware go into the DOTCLK mode, i"]
+    #[doc = "Set this bit to 1 to make the hardware go into the DOTCLK mode, i."]
     #[inline(always)]
     pub const fn set_dotclk_mode(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "When this bit is 0, it means that LCDIF will stop the block operation and turn off the RUN bit after the amount of data indicated by the LCDIF_TRANSFER_COUNT register has been transferred out"]
+    #[doc = "When this bit is 0, it means that LCDIF will stop the block operation and turn off the RUN bit after the amount of data indicated by the LCDIF_TRANSFER_COUNT register has been transferred out."]
     #[must_use]
     #[inline(always)]
     pub const fn bypass_count(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "When this bit is 0, it means that LCDIF will stop the block operation and turn off the RUN bit after the amount of data indicated by the LCDIF_TRANSFER_COUNT register has been transferred out"]
+    #[doc = "When this bit is 0, it means that LCDIF will stop the block operation and turn off the RUN bit after the amount of data indicated by the LCDIF_TRANSFER_COUNT register has been transferred out."]
     #[inline(always)]
     pub const fn set_bypass_count(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
@@ -245,26 +245,26 @@ impl Ctrl {
     pub const fn set_data_shift_dir(&mut self, val: super::vals::CtrlDataShiftDir) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
     }
-    #[doc = "This bit must be set to zero for normal operation"]
+    #[doc = "This bit must be set to zero for normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn clkgate(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit must be set to zero for normal operation"]
+    #[doc = "This bit must be set to zero for normal operation."]
     #[inline(always)]
     pub const fn set_clkgate(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "This bit must be set to zero to enable normal operation of the LCDIF"]
+    #[doc = "This bit must be set to zero to enable normal operation of the LCDIF."]
     #[must_use]
     #[inline(always)]
     pub const fn sftrst(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit must be set to zero to enable normal operation of the LCDIF"]
+    #[doc = "This bit must be set to zero to enable normal operation of the LCDIF."]
     #[inline(always)]
     pub const fn set_sftrst(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -323,79 +323,79 @@ impl defmt::Format for Ctrl {
         )
     }
 }
-#[doc = "LCDIF General Control1 Register"]
+#[doc = "LCDIF General Control1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl1(pub u32);
 impl Ctrl1 {
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[must_use]
     #[inline(always)]
     pub const fn vsync_edge_irq(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[inline(always)]
     pub const fn set_vsync_edge_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[must_use]
     #[inline(always)]
     pub const fn cur_frame_done_irq(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[inline(always)]
     pub const fn set_cur_frame_done_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[must_use]
     #[inline(always)]
     pub const fn underflow_irq(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[inline(always)]
     pub const fn set_underflow_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[must_use]
     #[inline(always)]
     pub const fn overflow_irq(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[inline(always)]
     pub const fn set_overflow_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "This bit is set to enable an interrupt every time the hardware encounters the leading VSYNC edge in the VSYNC and DOTCLK modes, or the beginning of every field in DVI mode"]
+    #[doc = "This bit is set to enable an interrupt every time the hardware encounters the leading VSYNC edge in the VSYNC and DOTCLK modes, or the beginning of every field in DVI mode."]
     #[must_use]
     #[inline(always)]
     pub const fn vsync_edge_irq_en(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit is set to enable an interrupt every time the hardware encounters the leading VSYNC edge in the VSYNC and DOTCLK modes, or the beginning of every field in DVI mode"]
+    #[doc = "This bit is set to enable an interrupt every time the hardware encounters the leading VSYNC edge in the VSYNC and DOTCLK modes, or the beginning of every field in DVI mode."]
     #[inline(always)]
     pub const fn set_vsync_edge_irq_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "This bit is set to 1 enable an interrupt every time the hardware enters in the vertical blanking state"]
+    #[doc = "This bit is set to 1 enable an interrupt every time the hardware enters in the vertical blanking state."]
     #[must_use]
     #[inline(always)]
     pub const fn cur_frame_done_irq_en(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit is set to 1 enable an interrupt every time the hardware enters in the vertical blanking state"]
+    #[doc = "This bit is set to 1 enable an interrupt every time the hardware enters in the vertical blanking state."]
     #[inline(always)]
     pub const fn set_cur_frame_done_irq_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
@@ -424,26 +424,26 @@ impl Ctrl1 {
     pub const fn set_overflow_irq_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "This bitfield is used to show which data bytes in a 32-bit word are valid"]
+    #[doc = "This bitfield is used to show which data bytes in a 32-bit word are valid."]
     #[must_use]
     #[inline(always)]
     pub const fn byte_packing_format(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x0f;
         val as u8
     }
-    #[doc = "This bitfield is used to show which data bytes in a 32-bit word are valid"]
+    #[doc = "This bitfield is used to show which data bytes in a 32-bit word are valid."]
     #[inline(always)]
     pub const fn set_byte_packing_format(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
     }
-    #[doc = "If this bit is set, the LCDIF block will assert the cur_frame_done interrupt only on alternate fields, otherwise it will issue the interrupt on both odd and even field"]
+    #[doc = "If this bit is set, the LCDIF block will assert the cur_frame_done interrupt only on alternate fields, otherwise it will issue the interrupt on both odd and even field."]
     #[must_use]
     #[inline(always)]
     pub const fn irq_on_alternate_fields(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "If this bit is set, the LCDIF block will assert the cur_frame_done interrupt only on alternate fields, otherwise it will issue the interrupt on both odd and even field"]
+    #[doc = "If this bit is set, the LCDIF block will assert the cur_frame_done interrupt only on alternate fields, otherwise it will issue the interrupt on both odd and even field."]
     #[inline(always)]
     pub const fn set_irq_on_alternate_fields(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
@@ -460,50 +460,50 @@ impl Ctrl1 {
     pub const fn set_fifo_clear(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "The default is to grab the odd lines first and then the even lines"]
+    #[doc = "The default is to grab the odd lines first and then the even lines."]
     #[must_use]
     #[inline(always)]
     pub const fn start_interlace_from_second_field(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "The default is to grab the odd lines first and then the even lines"]
+    #[doc = "The default is to grab the odd lines first and then the even lines."]
     #[inline(always)]
     pub const fn set_start_interlace_from_second_field(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "Set this bit if it is required that the LCDIF block fetches odd lines in one field and even lines in the other field"]
+    #[doc = "Set this bit if it is required that the LCDIF block fetches odd lines in one field and even lines in the other field."]
     #[must_use]
     #[inline(always)]
     pub const fn interlace_fields(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "Set this bit if it is required that the LCDIF block fetches odd lines in one field and even lines in the other field"]
+    #[doc = "Set this bit if it is required that the LCDIF block fetches odd lines in one field and even lines in the other field."]
     #[inline(always)]
     pub const fn set_interlace_fields(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
-    #[doc = "Set this bit to enable the LCDIF block to recover in the next field/frame if there was an underflow in the current field/frame"]
+    #[doc = "Set this bit to enable the LCDIF block to recover in the next field/frame if there was an underflow in the current field/frame."]
     #[must_use]
     #[inline(always)]
     pub const fn recover_on_underflow(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "Set this bit to enable the LCDIF block to recover in the next field/frame if there was an underflow in the current field/frame"]
+    #[doc = "Set this bit to enable the LCDIF block to recover in the next field/frame if there was an underflow in the current field/frame."]
     #[inline(always)]
     pub const fn set_recover_on_underflow(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[must_use]
     #[inline(always)]
     pub const fn bm_error_irq(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[inline(always)]
     pub const fn set_bm_error_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
@@ -520,26 +520,26 @@ impl Ctrl1 {
     pub const fn set_bm_error_irq_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "This bit is CS0/CS1 valid select signals"]
+    #[doc = "This bit is CS0/CS1 valid select signals."]
     #[must_use]
     #[inline(always)]
     pub const fn cs_out_select(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit is CS0/CS1 valid select signals"]
+    #[doc = "This bit is CS0/CS1 valid select signals."]
     #[inline(always)]
     pub const fn set_cs_out_select(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "Command Mode MIPI image data select bit"]
+    #[doc = "Command Mode MIPI image data select bit."]
     #[must_use]
     #[inline(always)]
     pub const fn image_data_select(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Command Mode MIPI image data select bit"]
+    #[doc = "Command Mode MIPI image data select bit."]
     #[inline(always)]
     pub const fn set_image_data_select(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -605,79 +605,79 @@ impl defmt::Format for Ctrl1 {
         )
     }
 }
-#[doc = "LCDIF General Control1 Register"]
+#[doc = "LCDIF General Control1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl1Clr(pub u32);
 impl Ctrl1Clr {
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[must_use]
     #[inline(always)]
     pub const fn vsync_edge_irq(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[inline(always)]
     pub const fn set_vsync_edge_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[must_use]
     #[inline(always)]
     pub const fn cur_frame_done_irq(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[inline(always)]
     pub const fn set_cur_frame_done_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[must_use]
     #[inline(always)]
     pub const fn underflow_irq(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[inline(always)]
     pub const fn set_underflow_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[must_use]
     #[inline(always)]
     pub const fn overflow_irq(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[inline(always)]
     pub const fn set_overflow_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "This bit is set to enable an interrupt every time the hardware encounters the leading VSYNC edge in the VSYNC and DOTCLK modes, or the beginning of every field in DVI mode"]
+    #[doc = "This bit is set to enable an interrupt every time the hardware encounters the leading VSYNC edge in the VSYNC and DOTCLK modes, or the beginning of every field in DVI mode."]
     #[must_use]
     #[inline(always)]
     pub const fn vsync_edge_irq_en(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit is set to enable an interrupt every time the hardware encounters the leading VSYNC edge in the VSYNC and DOTCLK modes, or the beginning of every field in DVI mode"]
+    #[doc = "This bit is set to enable an interrupt every time the hardware encounters the leading VSYNC edge in the VSYNC and DOTCLK modes, or the beginning of every field in DVI mode."]
     #[inline(always)]
     pub const fn set_vsync_edge_irq_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "This bit is set to 1 enable an interrupt every time the hardware enters in the vertical blanking state"]
+    #[doc = "This bit is set to 1 enable an interrupt every time the hardware enters in the vertical blanking state."]
     #[must_use]
     #[inline(always)]
     pub const fn cur_frame_done_irq_en(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit is set to 1 enable an interrupt every time the hardware enters in the vertical blanking state"]
+    #[doc = "This bit is set to 1 enable an interrupt every time the hardware enters in the vertical blanking state."]
     #[inline(always)]
     pub const fn set_cur_frame_done_irq_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
@@ -706,26 +706,26 @@ impl Ctrl1Clr {
     pub const fn set_overflow_irq_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "This bitfield is used to show which data bytes in a 32-bit word are valid"]
+    #[doc = "This bitfield is used to show which data bytes in a 32-bit word are valid."]
     #[must_use]
     #[inline(always)]
     pub const fn byte_packing_format(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x0f;
         val as u8
     }
-    #[doc = "This bitfield is used to show which data bytes in a 32-bit word are valid"]
+    #[doc = "This bitfield is used to show which data bytes in a 32-bit word are valid."]
     #[inline(always)]
     pub const fn set_byte_packing_format(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
     }
-    #[doc = "If this bit is set, the LCDIF block will assert the cur_frame_done interrupt only on alternate fields, otherwise it will issue the interrupt on both odd and even field"]
+    #[doc = "If this bit is set, the LCDIF block will assert the cur_frame_done interrupt only on alternate fields, otherwise it will issue the interrupt on both odd and even field."]
     #[must_use]
     #[inline(always)]
     pub const fn irq_on_alternate_fields(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "If this bit is set, the LCDIF block will assert the cur_frame_done interrupt only on alternate fields, otherwise it will issue the interrupt on both odd and even field"]
+    #[doc = "If this bit is set, the LCDIF block will assert the cur_frame_done interrupt only on alternate fields, otherwise it will issue the interrupt on both odd and even field."]
     #[inline(always)]
     pub const fn set_irq_on_alternate_fields(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
@@ -742,50 +742,50 @@ impl Ctrl1Clr {
     pub const fn set_fifo_clear(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "The default is to grab the odd lines first and then the even lines"]
+    #[doc = "The default is to grab the odd lines first and then the even lines."]
     #[must_use]
     #[inline(always)]
     pub const fn start_interlace_from_second_field(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "The default is to grab the odd lines first and then the even lines"]
+    #[doc = "The default is to grab the odd lines first and then the even lines."]
     #[inline(always)]
     pub const fn set_start_interlace_from_second_field(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "Set this bit if it is required that the LCDIF block fetches odd lines in one field and even lines in the other field"]
+    #[doc = "Set this bit if it is required that the LCDIF block fetches odd lines in one field and even lines in the other field."]
     #[must_use]
     #[inline(always)]
     pub const fn interlace_fields(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "Set this bit if it is required that the LCDIF block fetches odd lines in one field and even lines in the other field"]
+    #[doc = "Set this bit if it is required that the LCDIF block fetches odd lines in one field and even lines in the other field."]
     #[inline(always)]
     pub const fn set_interlace_fields(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
-    #[doc = "Set this bit to enable the LCDIF block to recover in the next field/frame if there was an underflow in the current field/frame"]
+    #[doc = "Set this bit to enable the LCDIF block to recover in the next field/frame if there was an underflow in the current field/frame."]
     #[must_use]
     #[inline(always)]
     pub const fn recover_on_underflow(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "Set this bit to enable the LCDIF block to recover in the next field/frame if there was an underflow in the current field/frame"]
+    #[doc = "Set this bit to enable the LCDIF block to recover in the next field/frame if there was an underflow in the current field/frame."]
     #[inline(always)]
     pub const fn set_recover_on_underflow(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[must_use]
     #[inline(always)]
     pub const fn bm_error_irq(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[inline(always)]
     pub const fn set_bm_error_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
@@ -802,26 +802,26 @@ impl Ctrl1Clr {
     pub const fn set_bm_error_irq_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "This bit is CS0/CS1 valid select signals"]
+    #[doc = "This bit is CS0/CS1 valid select signals."]
     #[must_use]
     #[inline(always)]
     pub const fn cs_out_select(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit is CS0/CS1 valid select signals"]
+    #[doc = "This bit is CS0/CS1 valid select signals."]
     #[inline(always)]
     pub const fn set_cs_out_select(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "Command Mode MIPI image data select bit"]
+    #[doc = "Command Mode MIPI image data select bit."]
     #[must_use]
     #[inline(always)]
     pub const fn image_data_select(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Command Mode MIPI image data select bit"]
+    #[doc = "Command Mode MIPI image data select bit."]
     #[inline(always)]
     pub const fn set_image_data_select(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -887,79 +887,79 @@ impl defmt::Format for Ctrl1Clr {
         )
     }
 }
-#[doc = "LCDIF General Control1 Register"]
+#[doc = "LCDIF General Control1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl1Set(pub u32);
 impl Ctrl1Set {
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[must_use]
     #[inline(always)]
     pub const fn vsync_edge_irq(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[inline(always)]
     pub const fn set_vsync_edge_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[must_use]
     #[inline(always)]
     pub const fn cur_frame_done_irq(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[inline(always)]
     pub const fn set_cur_frame_done_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[must_use]
     #[inline(always)]
     pub const fn underflow_irq(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[inline(always)]
     pub const fn set_underflow_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[must_use]
     #[inline(always)]
     pub const fn overflow_irq(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[inline(always)]
     pub const fn set_overflow_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "This bit is set to enable an interrupt every time the hardware encounters the leading VSYNC edge in the VSYNC and DOTCLK modes, or the beginning of every field in DVI mode"]
+    #[doc = "This bit is set to enable an interrupt every time the hardware encounters the leading VSYNC edge in the VSYNC and DOTCLK modes, or the beginning of every field in DVI mode."]
     #[must_use]
     #[inline(always)]
     pub const fn vsync_edge_irq_en(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit is set to enable an interrupt every time the hardware encounters the leading VSYNC edge in the VSYNC and DOTCLK modes, or the beginning of every field in DVI mode"]
+    #[doc = "This bit is set to enable an interrupt every time the hardware encounters the leading VSYNC edge in the VSYNC and DOTCLK modes, or the beginning of every field in DVI mode."]
     #[inline(always)]
     pub const fn set_vsync_edge_irq_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "This bit is set to 1 enable an interrupt every time the hardware enters in the vertical blanking state"]
+    #[doc = "This bit is set to 1 enable an interrupt every time the hardware enters in the vertical blanking state."]
     #[must_use]
     #[inline(always)]
     pub const fn cur_frame_done_irq_en(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit is set to 1 enable an interrupt every time the hardware enters in the vertical blanking state"]
+    #[doc = "This bit is set to 1 enable an interrupt every time the hardware enters in the vertical blanking state."]
     #[inline(always)]
     pub const fn set_cur_frame_done_irq_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
@@ -988,26 +988,26 @@ impl Ctrl1Set {
     pub const fn set_overflow_irq_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "This bitfield is used to show which data bytes in a 32-bit word are valid"]
+    #[doc = "This bitfield is used to show which data bytes in a 32-bit word are valid."]
     #[must_use]
     #[inline(always)]
     pub const fn byte_packing_format(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x0f;
         val as u8
     }
-    #[doc = "This bitfield is used to show which data bytes in a 32-bit word are valid"]
+    #[doc = "This bitfield is used to show which data bytes in a 32-bit word are valid."]
     #[inline(always)]
     pub const fn set_byte_packing_format(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
     }
-    #[doc = "If this bit is set, the LCDIF block will assert the cur_frame_done interrupt only on alternate fields, otherwise it will issue the interrupt on both odd and even field"]
+    #[doc = "If this bit is set, the LCDIF block will assert the cur_frame_done interrupt only on alternate fields, otherwise it will issue the interrupt on both odd and even field."]
     #[must_use]
     #[inline(always)]
     pub const fn irq_on_alternate_fields(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "If this bit is set, the LCDIF block will assert the cur_frame_done interrupt only on alternate fields, otherwise it will issue the interrupt on both odd and even field"]
+    #[doc = "If this bit is set, the LCDIF block will assert the cur_frame_done interrupt only on alternate fields, otherwise it will issue the interrupt on both odd and even field."]
     #[inline(always)]
     pub const fn set_irq_on_alternate_fields(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
@@ -1024,50 +1024,50 @@ impl Ctrl1Set {
     pub const fn set_fifo_clear(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "The default is to grab the odd lines first and then the even lines"]
+    #[doc = "The default is to grab the odd lines first and then the even lines."]
     #[must_use]
     #[inline(always)]
     pub const fn start_interlace_from_second_field(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "The default is to grab the odd lines first and then the even lines"]
+    #[doc = "The default is to grab the odd lines first and then the even lines."]
     #[inline(always)]
     pub const fn set_start_interlace_from_second_field(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "Set this bit if it is required that the LCDIF block fetches odd lines in one field and even lines in the other field"]
+    #[doc = "Set this bit if it is required that the LCDIF block fetches odd lines in one field and even lines in the other field."]
     #[must_use]
     #[inline(always)]
     pub const fn interlace_fields(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "Set this bit if it is required that the LCDIF block fetches odd lines in one field and even lines in the other field"]
+    #[doc = "Set this bit if it is required that the LCDIF block fetches odd lines in one field and even lines in the other field."]
     #[inline(always)]
     pub const fn set_interlace_fields(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
-    #[doc = "Set this bit to enable the LCDIF block to recover in the next field/frame if there was an underflow in the current field/frame"]
+    #[doc = "Set this bit to enable the LCDIF block to recover in the next field/frame if there was an underflow in the current field/frame."]
     #[must_use]
     #[inline(always)]
     pub const fn recover_on_underflow(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "Set this bit to enable the LCDIF block to recover in the next field/frame if there was an underflow in the current field/frame"]
+    #[doc = "Set this bit to enable the LCDIF block to recover in the next field/frame if there was an underflow in the current field/frame."]
     #[inline(always)]
     pub const fn set_recover_on_underflow(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[must_use]
     #[inline(always)]
     pub const fn bm_error_irq(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[inline(always)]
     pub const fn set_bm_error_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
@@ -1084,26 +1084,26 @@ impl Ctrl1Set {
     pub const fn set_bm_error_irq_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "This bit is CS0/CS1 valid select signals"]
+    #[doc = "This bit is CS0/CS1 valid select signals."]
     #[must_use]
     #[inline(always)]
     pub const fn cs_out_select(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit is CS0/CS1 valid select signals"]
+    #[doc = "This bit is CS0/CS1 valid select signals."]
     #[inline(always)]
     pub const fn set_cs_out_select(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "Command Mode MIPI image data select bit"]
+    #[doc = "Command Mode MIPI image data select bit."]
     #[must_use]
     #[inline(always)]
     pub const fn image_data_select(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Command Mode MIPI image data select bit"]
+    #[doc = "Command Mode MIPI image data select bit."]
     #[inline(always)]
     pub const fn set_image_data_select(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -1169,79 +1169,79 @@ impl defmt::Format for Ctrl1Set {
         )
     }
 }
-#[doc = "LCDIF General Control1 Register"]
+#[doc = "LCDIF General Control1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl1Tog(pub u32);
 impl Ctrl1Tog {
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[must_use]
     #[inline(always)]
     pub const fn vsync_edge_irq(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[inline(always)]
     pub const fn set_vsync_edge_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[must_use]
     #[inline(always)]
     pub const fn cur_frame_done_irq(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[inline(always)]
     pub const fn set_cur_frame_done_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[must_use]
     #[inline(always)]
     pub const fn underflow_irq(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[inline(always)]
     pub const fn set_underflow_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[must_use]
     #[inline(always)]
     pub const fn overflow_irq(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[inline(always)]
     pub const fn set_overflow_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "This bit is set to enable an interrupt every time the hardware encounters the leading VSYNC edge in the VSYNC and DOTCLK modes, or the beginning of every field in DVI mode"]
+    #[doc = "This bit is set to enable an interrupt every time the hardware encounters the leading VSYNC edge in the VSYNC and DOTCLK modes, or the beginning of every field in DVI mode."]
     #[must_use]
     #[inline(always)]
     pub const fn vsync_edge_irq_en(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit is set to enable an interrupt every time the hardware encounters the leading VSYNC edge in the VSYNC and DOTCLK modes, or the beginning of every field in DVI mode"]
+    #[doc = "This bit is set to enable an interrupt every time the hardware encounters the leading VSYNC edge in the VSYNC and DOTCLK modes, or the beginning of every field in DVI mode."]
     #[inline(always)]
     pub const fn set_vsync_edge_irq_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "This bit is set to 1 enable an interrupt every time the hardware enters in the vertical blanking state"]
+    #[doc = "This bit is set to 1 enable an interrupt every time the hardware enters in the vertical blanking state."]
     #[must_use]
     #[inline(always)]
     pub const fn cur_frame_done_irq_en(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit is set to 1 enable an interrupt every time the hardware enters in the vertical blanking state"]
+    #[doc = "This bit is set to 1 enable an interrupt every time the hardware enters in the vertical blanking state."]
     #[inline(always)]
     pub const fn set_cur_frame_done_irq_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
@@ -1270,26 +1270,26 @@ impl Ctrl1Tog {
     pub const fn set_overflow_irq_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "This bitfield is used to show which data bytes in a 32-bit word are valid"]
+    #[doc = "This bitfield is used to show which data bytes in a 32-bit word are valid."]
     #[must_use]
     #[inline(always)]
     pub const fn byte_packing_format(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x0f;
         val as u8
     }
-    #[doc = "This bitfield is used to show which data bytes in a 32-bit word are valid"]
+    #[doc = "This bitfield is used to show which data bytes in a 32-bit word are valid."]
     #[inline(always)]
     pub const fn set_byte_packing_format(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
     }
-    #[doc = "If this bit is set, the LCDIF block will assert the cur_frame_done interrupt only on alternate fields, otherwise it will issue the interrupt on both odd and even field"]
+    #[doc = "If this bit is set, the LCDIF block will assert the cur_frame_done interrupt only on alternate fields, otherwise it will issue the interrupt on both odd and even field."]
     #[must_use]
     #[inline(always)]
     pub const fn irq_on_alternate_fields(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "If this bit is set, the LCDIF block will assert the cur_frame_done interrupt only on alternate fields, otherwise it will issue the interrupt on both odd and even field"]
+    #[doc = "If this bit is set, the LCDIF block will assert the cur_frame_done interrupt only on alternate fields, otherwise it will issue the interrupt on both odd and even field."]
     #[inline(always)]
     pub const fn set_irq_on_alternate_fields(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
@@ -1306,50 +1306,50 @@ impl Ctrl1Tog {
     pub const fn set_fifo_clear(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "The default is to grab the odd lines first and then the even lines"]
+    #[doc = "The default is to grab the odd lines first and then the even lines."]
     #[must_use]
     #[inline(always)]
     pub const fn start_interlace_from_second_field(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "The default is to grab the odd lines first and then the even lines"]
+    #[doc = "The default is to grab the odd lines first and then the even lines."]
     #[inline(always)]
     pub const fn set_start_interlace_from_second_field(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "Set this bit if it is required that the LCDIF block fetches odd lines in one field and even lines in the other field"]
+    #[doc = "Set this bit if it is required that the LCDIF block fetches odd lines in one field and even lines in the other field."]
     #[must_use]
     #[inline(always)]
     pub const fn interlace_fields(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "Set this bit if it is required that the LCDIF block fetches odd lines in one field and even lines in the other field"]
+    #[doc = "Set this bit if it is required that the LCDIF block fetches odd lines in one field and even lines in the other field."]
     #[inline(always)]
     pub const fn set_interlace_fields(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
-    #[doc = "Set this bit to enable the LCDIF block to recover in the next field/frame if there was an underflow in the current field/frame"]
+    #[doc = "Set this bit to enable the LCDIF block to recover in the next field/frame if there was an underflow in the current field/frame."]
     #[must_use]
     #[inline(always)]
     pub const fn recover_on_underflow(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "Set this bit to enable the LCDIF block to recover in the next field/frame if there was an underflow in the current field/frame"]
+    #[doc = "Set this bit to enable the LCDIF block to recover in the next field/frame if there was an underflow in the current field/frame."]
     #[inline(always)]
     pub const fn set_recover_on_underflow(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[must_use]
     #[inline(always)]
     pub const fn bm_error_irq(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block"]
+    #[doc = "This bit is set to indicate that an interrupt is requested by the LCDIF block."]
     #[inline(always)]
     pub const fn set_bm_error_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
@@ -1366,26 +1366,26 @@ impl Ctrl1Tog {
     pub const fn set_bm_error_irq_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "This bit is CS0/CS1 valid select signals"]
+    #[doc = "This bit is CS0/CS1 valid select signals."]
     #[must_use]
     #[inline(always)]
     pub const fn cs_out_select(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit is CS0/CS1 valid select signals"]
+    #[doc = "This bit is CS0/CS1 valid select signals."]
     #[inline(always)]
     pub const fn set_cs_out_select(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "Command Mode MIPI image data select bit"]
+    #[doc = "Command Mode MIPI image data select bit."]
     #[must_use]
     #[inline(always)]
     pub const fn image_data_select(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Command Mode MIPI image data select bit"]
+    #[doc = "Command Mode MIPI image data select bit."]
     #[inline(always)]
     pub const fn set_image_data_select(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -1451,55 +1451,55 @@ impl defmt::Format for Ctrl1Tog {
         )
     }
 }
-#[doc = "LCDIF General Control2 Register"]
+#[doc = "LCDIF General Control2 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl2(pub u32);
 impl Ctrl2 {
-    #[doc = "This field determines the order of the RGB components of each pixel in EVEN lines (line numbers 2,4,6,"]
+    #[doc = "This field determines the order of the RGB components of each pixel in EVEN lines (line numbers 2,4,6,."]
     #[must_use]
     #[inline(always)]
     pub const fn even_line_pattern(&self) -> super::vals::Ctrl2EvenLinePattern {
         let val = (self.0 >> 12usize) & 0x07;
         super::vals::Ctrl2EvenLinePattern::from_bits(val as u8)
     }
-    #[doc = "This field determines the order of the RGB components of each pixel in EVEN lines (line numbers 2,4,6,"]
+    #[doc = "This field determines the order of the RGB components of each pixel in EVEN lines (line numbers 2,4,6,."]
     #[inline(always)]
     pub const fn set_even_line_pattern(&mut self, val: super::vals::Ctrl2EvenLinePattern) {
         self.0 = (self.0 & !(0x07 << 12usize)) | (((val.to_bits() as u32) & 0x07) << 12usize);
     }
-    #[doc = "This field determines the order of the RGB components of each pixel in ODD lines (line numbers 1,3,5,"]
+    #[doc = "This field determines the order of the RGB components of each pixel in ODD lines (line numbers 1,3,5,."]
     #[must_use]
     #[inline(always)]
     pub const fn odd_line_pattern(&self) -> super::vals::Ctrl2OddLinePattern {
         let val = (self.0 >> 16usize) & 0x07;
         super::vals::Ctrl2OddLinePattern::from_bits(val as u8)
     }
-    #[doc = "This field determines the order of the RGB components of each pixel in ODD lines (line numbers 1,3,5,"]
+    #[doc = "This field determines the order of the RGB components of each pixel in ODD lines (line numbers 1,3,5,."]
     #[inline(always)]
     pub const fn set_odd_line_pattern(&mut self, val: super::vals::Ctrl2OddLinePattern) {
         self.0 = (self.0 & !(0x07 << 16usize)) | (((val.to_bits() as u32) & 0x07) << 16usize);
     }
-    #[doc = "By default, when the LCDIF is in the bus master mode, it will issue AXI bursts of length 16 (except when in packed 24 bpp mode, it will issue bursts of length 15)"]
+    #[doc = "By default, when the LCDIF is in the bus master mode, it will issue AXI bursts of length 16 (except when in packed 24 bpp mode, it will issue bursts of length 15)."]
     #[must_use]
     #[inline(always)]
     pub const fn burst_len_8(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "By default, when the LCDIF is in the bus master mode, it will issue AXI bursts of length 16 (except when in packed 24 bpp mode, it will issue bursts of length 15)"]
+    #[doc = "By default, when the LCDIF is in the bus master mode, it will issue AXI bursts of length 16 (except when in packed 24 bpp mode, it will issue bursts of length 15)."]
     #[inline(always)]
     pub const fn set_burst_len_8(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "This bitfield indicates the maximum number of outstanding transactions that LCDIF should request when it is acting as a bus master"]
+    #[doc = "This bitfield indicates the maximum number of outstanding transactions that LCDIF should request when it is acting as a bus master."]
     #[must_use]
     #[inline(always)]
     pub const fn outstanding_reqs(&self) -> super::vals::Ctrl2OutstandingReqs {
         let val = (self.0 >> 21usize) & 0x07;
         super::vals::Ctrl2OutstandingReqs::from_bits(val as u8)
     }
-    #[doc = "This bitfield indicates the maximum number of outstanding transactions that LCDIF should request when it is acting as a bus master"]
+    #[doc = "This bitfield indicates the maximum number of outstanding transactions that LCDIF should request when it is acting as a bus master."]
     #[inline(always)]
     pub const fn set_outstanding_reqs(&mut self, val: super::vals::Ctrl2OutstandingReqs) {
         self.0 = (self.0 & !(0x07 << 21usize)) | (((val.to_bits() as u32) & 0x07) << 21usize);
@@ -1534,55 +1534,55 @@ impl defmt::Format for Ctrl2 {
         )
     }
 }
-#[doc = "LCDIF General Control2 Register"]
+#[doc = "LCDIF General Control2 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl2Clr(pub u32);
 impl Ctrl2Clr {
-    #[doc = "This field determines the order of the RGB components of each pixel in EVEN lines (line numbers 2,4,6,"]
+    #[doc = "This field determines the order of the RGB components of each pixel in EVEN lines (line numbers 2,4,6,."]
     #[must_use]
     #[inline(always)]
     pub const fn even_line_pattern(&self) -> super::vals::Ctrl2ClrEvenLinePattern {
         let val = (self.0 >> 12usize) & 0x07;
         super::vals::Ctrl2ClrEvenLinePattern::from_bits(val as u8)
     }
-    #[doc = "This field determines the order of the RGB components of each pixel in EVEN lines (line numbers 2,4,6,"]
+    #[doc = "This field determines the order of the RGB components of each pixel in EVEN lines (line numbers 2,4,6,."]
     #[inline(always)]
     pub const fn set_even_line_pattern(&mut self, val: super::vals::Ctrl2ClrEvenLinePattern) {
         self.0 = (self.0 & !(0x07 << 12usize)) | (((val.to_bits() as u32) & 0x07) << 12usize);
     }
-    #[doc = "This field determines the order of the RGB components of each pixel in ODD lines (line numbers 1,3,5,"]
+    #[doc = "This field determines the order of the RGB components of each pixel in ODD lines (line numbers 1,3,5,."]
     #[must_use]
     #[inline(always)]
     pub const fn odd_line_pattern(&self) -> super::vals::Ctrl2ClrOddLinePattern {
         let val = (self.0 >> 16usize) & 0x07;
         super::vals::Ctrl2ClrOddLinePattern::from_bits(val as u8)
     }
-    #[doc = "This field determines the order of the RGB components of each pixel in ODD lines (line numbers 1,3,5,"]
+    #[doc = "This field determines the order of the RGB components of each pixel in ODD lines (line numbers 1,3,5,."]
     #[inline(always)]
     pub const fn set_odd_line_pattern(&mut self, val: super::vals::Ctrl2ClrOddLinePattern) {
         self.0 = (self.0 & !(0x07 << 16usize)) | (((val.to_bits() as u32) & 0x07) << 16usize);
     }
-    #[doc = "By default, when the LCDIF is in the bus master mode, it will issue AXI bursts of length 16 (except when in packed 24 bpp mode, it will issue bursts of length 15)"]
+    #[doc = "By default, when the LCDIF is in the bus master mode, it will issue AXI bursts of length 16 (except when in packed 24 bpp mode, it will issue bursts of length 15)."]
     #[must_use]
     #[inline(always)]
     pub const fn burst_len_8(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "By default, when the LCDIF is in the bus master mode, it will issue AXI bursts of length 16 (except when in packed 24 bpp mode, it will issue bursts of length 15)"]
+    #[doc = "By default, when the LCDIF is in the bus master mode, it will issue AXI bursts of length 16 (except when in packed 24 bpp mode, it will issue bursts of length 15)."]
     #[inline(always)]
     pub const fn set_burst_len_8(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "This bitfield indicates the maximum number of outstanding transactions that LCDIF should request when it is acting as a bus master"]
+    #[doc = "This bitfield indicates the maximum number of outstanding transactions that LCDIF should request when it is acting as a bus master."]
     #[must_use]
     #[inline(always)]
     pub const fn outstanding_reqs(&self) -> super::vals::Ctrl2ClrOutstandingReqs {
         let val = (self.0 >> 21usize) & 0x07;
         super::vals::Ctrl2ClrOutstandingReqs::from_bits(val as u8)
     }
-    #[doc = "This bitfield indicates the maximum number of outstanding transactions that LCDIF should request when it is acting as a bus master"]
+    #[doc = "This bitfield indicates the maximum number of outstanding transactions that LCDIF should request when it is acting as a bus master."]
     #[inline(always)]
     pub const fn set_outstanding_reqs(&mut self, val: super::vals::Ctrl2ClrOutstandingReqs) {
         self.0 = (self.0 & !(0x07 << 21usize)) | (((val.to_bits() as u32) & 0x07) << 21usize);
@@ -1617,55 +1617,55 @@ impl defmt::Format for Ctrl2Clr {
         )
     }
 }
-#[doc = "LCDIF General Control2 Register"]
+#[doc = "LCDIF General Control2 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl2Set(pub u32);
 impl Ctrl2Set {
-    #[doc = "This field determines the order of the RGB components of each pixel in EVEN lines (line numbers 2,4,6,"]
+    #[doc = "This field determines the order of the RGB components of each pixel in EVEN lines (line numbers 2,4,6,."]
     #[must_use]
     #[inline(always)]
     pub const fn even_line_pattern(&self) -> super::vals::Ctrl2SetEvenLinePattern {
         let val = (self.0 >> 12usize) & 0x07;
         super::vals::Ctrl2SetEvenLinePattern::from_bits(val as u8)
     }
-    #[doc = "This field determines the order of the RGB components of each pixel in EVEN lines (line numbers 2,4,6,"]
+    #[doc = "This field determines the order of the RGB components of each pixel in EVEN lines (line numbers 2,4,6,."]
     #[inline(always)]
     pub const fn set_even_line_pattern(&mut self, val: super::vals::Ctrl2SetEvenLinePattern) {
         self.0 = (self.0 & !(0x07 << 12usize)) | (((val.to_bits() as u32) & 0x07) << 12usize);
     }
-    #[doc = "This field determines the order of the RGB components of each pixel in ODD lines (line numbers 1,3,5,"]
+    #[doc = "This field determines the order of the RGB components of each pixel in ODD lines (line numbers 1,3,5,."]
     #[must_use]
     #[inline(always)]
     pub const fn odd_line_pattern(&self) -> super::vals::Ctrl2SetOddLinePattern {
         let val = (self.0 >> 16usize) & 0x07;
         super::vals::Ctrl2SetOddLinePattern::from_bits(val as u8)
     }
-    #[doc = "This field determines the order of the RGB components of each pixel in ODD lines (line numbers 1,3,5,"]
+    #[doc = "This field determines the order of the RGB components of each pixel in ODD lines (line numbers 1,3,5,."]
     #[inline(always)]
     pub const fn set_odd_line_pattern(&mut self, val: super::vals::Ctrl2SetOddLinePattern) {
         self.0 = (self.0 & !(0x07 << 16usize)) | (((val.to_bits() as u32) & 0x07) << 16usize);
     }
-    #[doc = "By default, when the LCDIF is in the bus master mode, it will issue AXI bursts of length 16 (except when in packed 24 bpp mode, it will issue bursts of length 15)"]
+    #[doc = "By default, when the LCDIF is in the bus master mode, it will issue AXI bursts of length 16 (except when in packed 24 bpp mode, it will issue bursts of length 15)."]
     #[must_use]
     #[inline(always)]
     pub const fn burst_len_8(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "By default, when the LCDIF is in the bus master mode, it will issue AXI bursts of length 16 (except when in packed 24 bpp mode, it will issue bursts of length 15)"]
+    #[doc = "By default, when the LCDIF is in the bus master mode, it will issue AXI bursts of length 16 (except when in packed 24 bpp mode, it will issue bursts of length 15)."]
     #[inline(always)]
     pub const fn set_burst_len_8(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "This bitfield indicates the maximum number of outstanding transactions that LCDIF should request when it is acting as a bus master"]
+    #[doc = "This bitfield indicates the maximum number of outstanding transactions that LCDIF should request when it is acting as a bus master."]
     #[must_use]
     #[inline(always)]
     pub const fn outstanding_reqs(&self) -> super::vals::Ctrl2SetOutstandingReqs {
         let val = (self.0 >> 21usize) & 0x07;
         super::vals::Ctrl2SetOutstandingReqs::from_bits(val as u8)
     }
-    #[doc = "This bitfield indicates the maximum number of outstanding transactions that LCDIF should request when it is acting as a bus master"]
+    #[doc = "This bitfield indicates the maximum number of outstanding transactions that LCDIF should request when it is acting as a bus master."]
     #[inline(always)]
     pub const fn set_outstanding_reqs(&mut self, val: super::vals::Ctrl2SetOutstandingReqs) {
         self.0 = (self.0 & !(0x07 << 21usize)) | (((val.to_bits() as u32) & 0x07) << 21usize);
@@ -1700,55 +1700,55 @@ impl defmt::Format for Ctrl2Set {
         )
     }
 }
-#[doc = "LCDIF General Control2 Register"]
+#[doc = "LCDIF General Control2 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl2Tog(pub u32);
 impl Ctrl2Tog {
-    #[doc = "This field determines the order of the RGB components of each pixel in EVEN lines (line numbers 2,4,6,"]
+    #[doc = "This field determines the order of the RGB components of each pixel in EVEN lines (line numbers 2,4,6,."]
     #[must_use]
     #[inline(always)]
     pub const fn even_line_pattern(&self) -> super::vals::Ctrl2TogEvenLinePattern {
         let val = (self.0 >> 12usize) & 0x07;
         super::vals::Ctrl2TogEvenLinePattern::from_bits(val as u8)
     }
-    #[doc = "This field determines the order of the RGB components of each pixel in EVEN lines (line numbers 2,4,6,"]
+    #[doc = "This field determines the order of the RGB components of each pixel in EVEN lines (line numbers 2,4,6,."]
     #[inline(always)]
     pub const fn set_even_line_pattern(&mut self, val: super::vals::Ctrl2TogEvenLinePattern) {
         self.0 = (self.0 & !(0x07 << 12usize)) | (((val.to_bits() as u32) & 0x07) << 12usize);
     }
-    #[doc = "This field determines the order of the RGB components of each pixel in ODD lines (line numbers 1,3,5,"]
+    #[doc = "This field determines the order of the RGB components of each pixel in ODD lines (line numbers 1,3,5,."]
     #[must_use]
     #[inline(always)]
     pub const fn odd_line_pattern(&self) -> super::vals::Ctrl2TogOddLinePattern {
         let val = (self.0 >> 16usize) & 0x07;
         super::vals::Ctrl2TogOddLinePattern::from_bits(val as u8)
     }
-    #[doc = "This field determines the order of the RGB components of each pixel in ODD lines (line numbers 1,3,5,"]
+    #[doc = "This field determines the order of the RGB components of each pixel in ODD lines (line numbers 1,3,5,."]
     #[inline(always)]
     pub const fn set_odd_line_pattern(&mut self, val: super::vals::Ctrl2TogOddLinePattern) {
         self.0 = (self.0 & !(0x07 << 16usize)) | (((val.to_bits() as u32) & 0x07) << 16usize);
     }
-    #[doc = "By default, when the LCDIF is in the bus master mode, it will issue AXI bursts of length 16 (except when in packed 24 bpp mode, it will issue bursts of length 15)"]
+    #[doc = "By default, when the LCDIF is in the bus master mode, it will issue AXI bursts of length 16 (except when in packed 24 bpp mode, it will issue bursts of length 15)."]
     #[must_use]
     #[inline(always)]
     pub const fn burst_len_8(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "By default, when the LCDIF is in the bus master mode, it will issue AXI bursts of length 16 (except when in packed 24 bpp mode, it will issue bursts of length 15)"]
+    #[doc = "By default, when the LCDIF is in the bus master mode, it will issue AXI bursts of length 16 (except when in packed 24 bpp mode, it will issue bursts of length 15)."]
     #[inline(always)]
     pub const fn set_burst_len_8(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "This bitfield indicates the maximum number of outstanding transactions that LCDIF should request when it is acting as a bus master"]
+    #[doc = "This bitfield indicates the maximum number of outstanding transactions that LCDIF should request when it is acting as a bus master."]
     #[must_use]
     #[inline(always)]
     pub const fn outstanding_reqs(&self) -> super::vals::Ctrl2TogOutstandingReqs {
         let val = (self.0 >> 21usize) & 0x07;
         super::vals::Ctrl2TogOutstandingReqs::from_bits(val as u8)
     }
-    #[doc = "This bitfield indicates the maximum number of outstanding transactions that LCDIF should request when it is acting as a bus master"]
+    #[doc = "This bitfield indicates the maximum number of outstanding transactions that LCDIF should request when it is acting as a bus master."]
     #[inline(always)]
     pub const fn set_outstanding_reqs(&mut self, val: super::vals::Ctrl2TogOutstandingReqs) {
         self.0 = (self.0 & !(0x07 << 21usize)) | (((val.to_bits() as u32) & 0x07) << 21usize);
@@ -1783,31 +1783,31 @@ impl defmt::Format for Ctrl2Tog {
         )
     }
 }
-#[doc = "LCDIF General Control Register"]
+#[doc = "LCDIF General Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CtrlClr(pub u32);
 impl CtrlClr {
-    #[doc = "When this bit is set by software, the LCDIF will begin transferring data between the SoC and the display"]
+    #[doc = "When this bit is set by software, the LCDIF will begin transferring data between the SoC and the display."]
     #[must_use]
     #[inline(always)]
     pub const fn run(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "When this bit is set by software, the LCDIF will begin transferring data between the SoC and the display"]
+    #[doc = "When this bit is set by software, the LCDIF will begin transferring data between the SoC and the display."]
     #[inline(always)]
     pub const fn set_run(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Used only when WORD_LENGTH = 3, i"]
+    #[doc = "Used only when WORD_LENGTH = 3, i."]
     #[must_use]
     #[inline(always)]
     pub const fn data_format_24_bit(&self) -> super::vals::CtrlClrDataFormat24Bit {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::CtrlClrDataFormat24Bit::from_bits(val as u8)
     }
-    #[doc = "Used only when WORD_LENGTH = 3, i"]
+    #[doc = "Used only when WORD_LENGTH = 3, i."]
     #[inline(always)]
     pub const fn set_data_format_24_bit(&mut self, val: super::vals::CtrlClrDataFormat24Bit) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
@@ -1824,38 +1824,38 @@ impl CtrlClr {
     pub const fn set_data_format_18_bit(&mut self, val: super::vals::CtrlClrDataFormat18Bit) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "When this bit is 1 and WORD_LENGTH = 0, it implies that the 16-bit data is in ARGB555 format"]
+    #[doc = "When this bit is 1 and WORD_LENGTH = 0, it implies that the 16-bit data is in ARGB555 format."]
     #[must_use]
     #[inline(always)]
     pub const fn data_format_16_bit(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "When this bit is 1 and WORD_LENGTH = 0, it implies that the 16-bit data is in ARGB555 format"]
+    #[doc = "When this bit is 1 and WORD_LENGTH = 0, it implies that the 16-bit data is in ARGB555 format."]
     #[inline(always)]
     pub const fn set_data_format_16_bit(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "Set this bit to make the LCDIF act as a bus master"]
+    #[doc = "Set this bit to make the LCDIF act as a bus master."]
     #[must_use]
     #[inline(always)]
     pub const fn master(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Set this bit to make the LCDIF act as a bus master"]
+    #[doc = "Set this bit to make the LCDIF act as a bus master."]
     #[inline(always)]
     pub const fn set_master(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "If this bit is set and LCDIF_MASTER bit is set, the LCDIF will act as bus master and the handshake mechanism between LCDIF and PXP will be turned on"]
+    #[doc = "If this bit is set and LCDIF_MASTER bit is set, the LCDIF will act as bus master and the handshake mechanism between LCDIF and PXP will be turned on."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_pxp_handshake(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "If this bit is set and LCDIF_MASTER bit is set, the LCDIF will act as bus master and the handshake mechanism between LCDIF and PXP will be turned on"]
+    #[doc = "If this bit is set and LCDIF_MASTER bit is set, the LCDIF will act as bus master and the handshake mechanism between LCDIF and PXP will be turned on."]
     #[inline(always)]
     pub const fn set_enable_pxp_handshake(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
@@ -1884,50 +1884,50 @@ impl CtrlClr {
     pub const fn set_lcd_databus_width(&mut self, val: super::vals::CtrlClrLcdDatabusWidth) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u32) & 0x03) << 10usize);
     }
-    #[doc = "This field specifies how to swap the bytes after the data has been converted into an internal representation of 24 bits per pixel and before it is transmitted over the LCD interface bus"]
+    #[doc = "This field specifies how to swap the bytes after the data has been converted into an internal representation of 24 bits per pixel and before it is transmitted over the LCD interface bus."]
     #[must_use]
     #[inline(always)]
     pub const fn csc_data_swizzle(&self) -> super::vals::CtrlClrCscDataSwizzle {
         let val = (self.0 >> 12usize) & 0x03;
         super::vals::CtrlClrCscDataSwizzle::from_bits(val as u8)
     }
-    #[doc = "This field specifies how to swap the bytes after the data has been converted into an internal representation of 24 bits per pixel and before it is transmitted over the LCD interface bus"]
+    #[doc = "This field specifies how to swap the bytes after the data has been converted into an internal representation of 24 bits per pixel and before it is transmitted over the LCD interface bus."]
     #[inline(always)]
     pub const fn set_csc_data_swizzle(&mut self, val: super::vals::CtrlClrCscDataSwizzle) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
     }
-    #[doc = "This field specifies how to swap the bytes fetched by the bus master interface"]
+    #[doc = "This field specifies how to swap the bytes fetched by the bus master interface."]
     #[must_use]
     #[inline(always)]
     pub const fn input_data_swizzle(&self) -> super::vals::CtrlClrInputDataSwizzle {
         let val = (self.0 >> 14usize) & 0x03;
         super::vals::CtrlClrInputDataSwizzle::from_bits(val as u8)
     }
-    #[doc = "This field specifies how to swap the bytes fetched by the bus master interface"]
+    #[doc = "This field specifies how to swap the bytes fetched by the bus master interface."]
     #[inline(always)]
     pub const fn set_input_data_swizzle(&mut self, val: super::vals::CtrlClrInputDataSwizzle) {
         self.0 = (self.0 & !(0x03 << 14usize)) | (((val.to_bits() as u32) & 0x03) << 14usize);
     }
-    #[doc = "Set this bit to 1 to make the hardware go into the DOTCLK mode, i"]
+    #[doc = "Set this bit to 1 to make the hardware go into the DOTCLK mode, i."]
     #[must_use]
     #[inline(always)]
     pub const fn dotclk_mode(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Set this bit to 1 to make the hardware go into the DOTCLK mode, i"]
+    #[doc = "Set this bit to 1 to make the hardware go into the DOTCLK mode, i."]
     #[inline(always)]
     pub const fn set_dotclk_mode(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "When this bit is 0, it means that LCDIF will stop the block operation and turn off the RUN bit after the amount of data indicated by the LCDIF_TRANSFER_COUNT register has been transferred out"]
+    #[doc = "When this bit is 0, it means that LCDIF will stop the block operation and turn off the RUN bit after the amount of data indicated by the LCDIF_TRANSFER_COUNT register has been transferred out."]
     #[must_use]
     #[inline(always)]
     pub const fn bypass_count(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "When this bit is 0, it means that LCDIF will stop the block operation and turn off the RUN bit after the amount of data indicated by the LCDIF_TRANSFER_COUNT register has been transferred out"]
+    #[doc = "When this bit is 0, it means that LCDIF will stop the block operation and turn off the RUN bit after the amount of data indicated by the LCDIF_TRANSFER_COUNT register has been transferred out."]
     #[inline(always)]
     pub const fn set_bypass_count(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
@@ -1956,26 +1956,26 @@ impl CtrlClr {
     pub const fn set_data_shift_dir(&mut self, val: super::vals::CtrlClrDataShiftDir) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
     }
-    #[doc = "This bit must be set to zero for normal operation"]
+    #[doc = "This bit must be set to zero for normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn clkgate(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit must be set to zero for normal operation"]
+    #[doc = "This bit must be set to zero for normal operation."]
     #[inline(always)]
     pub const fn set_clkgate(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "This bit must be set to zero to enable normal operation of the LCDIF"]
+    #[doc = "This bit must be set to zero to enable normal operation of the LCDIF."]
     #[must_use]
     #[inline(always)]
     pub const fn sftrst(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit must be set to zero to enable normal operation of the LCDIF"]
+    #[doc = "This bit must be set to zero to enable normal operation of the LCDIF."]
     #[inline(always)]
     pub const fn set_sftrst(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -2034,31 +2034,31 @@ impl defmt::Format for CtrlClr {
         )
     }
 }
-#[doc = "LCDIF General Control Register"]
+#[doc = "LCDIF General Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CtrlSet(pub u32);
 impl CtrlSet {
-    #[doc = "When this bit is set by software, the LCDIF will begin transferring data between the SoC and the display"]
+    #[doc = "When this bit is set by software, the LCDIF will begin transferring data between the SoC and the display."]
     #[must_use]
     #[inline(always)]
     pub const fn run(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "When this bit is set by software, the LCDIF will begin transferring data between the SoC and the display"]
+    #[doc = "When this bit is set by software, the LCDIF will begin transferring data between the SoC and the display."]
     #[inline(always)]
     pub const fn set_run(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Used only when WORD_LENGTH = 3, i"]
+    #[doc = "Used only when WORD_LENGTH = 3, i."]
     #[must_use]
     #[inline(always)]
     pub const fn data_format_24_bit(&self) -> super::vals::CtrlSetDataFormat24Bit {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::CtrlSetDataFormat24Bit::from_bits(val as u8)
     }
-    #[doc = "Used only when WORD_LENGTH = 3, i"]
+    #[doc = "Used only when WORD_LENGTH = 3, i."]
     #[inline(always)]
     pub const fn set_data_format_24_bit(&mut self, val: super::vals::CtrlSetDataFormat24Bit) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
@@ -2075,38 +2075,38 @@ impl CtrlSet {
     pub const fn set_data_format_18_bit(&mut self, val: super::vals::CtrlSetDataFormat18Bit) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "When this bit is 1 and WORD_LENGTH = 0, it implies that the 16-bit data is in ARGB555 format"]
+    #[doc = "When this bit is 1 and WORD_LENGTH = 0, it implies that the 16-bit data is in ARGB555 format."]
     #[must_use]
     #[inline(always)]
     pub const fn data_format_16_bit(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "When this bit is 1 and WORD_LENGTH = 0, it implies that the 16-bit data is in ARGB555 format"]
+    #[doc = "When this bit is 1 and WORD_LENGTH = 0, it implies that the 16-bit data is in ARGB555 format."]
     #[inline(always)]
     pub const fn set_data_format_16_bit(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "Set this bit to make the LCDIF act as a bus master"]
+    #[doc = "Set this bit to make the LCDIF act as a bus master."]
     #[must_use]
     #[inline(always)]
     pub const fn master(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Set this bit to make the LCDIF act as a bus master"]
+    #[doc = "Set this bit to make the LCDIF act as a bus master."]
     #[inline(always)]
     pub const fn set_master(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "If this bit is set and LCDIF_MASTER bit is set, the LCDIF will act as bus master and the handshake mechanism between LCDIF and PXP will be turned on"]
+    #[doc = "If this bit is set and LCDIF_MASTER bit is set, the LCDIF will act as bus master and the handshake mechanism between LCDIF and PXP will be turned on."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_pxp_handshake(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "If this bit is set and LCDIF_MASTER bit is set, the LCDIF will act as bus master and the handshake mechanism between LCDIF and PXP will be turned on"]
+    #[doc = "If this bit is set and LCDIF_MASTER bit is set, the LCDIF will act as bus master and the handshake mechanism between LCDIF and PXP will be turned on."]
     #[inline(always)]
     pub const fn set_enable_pxp_handshake(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
@@ -2135,50 +2135,50 @@ impl CtrlSet {
     pub const fn set_lcd_databus_width(&mut self, val: super::vals::CtrlSetLcdDatabusWidth) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u32) & 0x03) << 10usize);
     }
-    #[doc = "This field specifies how to swap the bytes after the data has been converted into an internal representation of 24 bits per pixel and before it is transmitted over the LCD interface bus"]
+    #[doc = "This field specifies how to swap the bytes after the data has been converted into an internal representation of 24 bits per pixel and before it is transmitted over the LCD interface bus."]
     #[must_use]
     #[inline(always)]
     pub const fn csc_data_swizzle(&self) -> super::vals::CtrlSetCscDataSwizzle {
         let val = (self.0 >> 12usize) & 0x03;
         super::vals::CtrlSetCscDataSwizzle::from_bits(val as u8)
     }
-    #[doc = "This field specifies how to swap the bytes after the data has been converted into an internal representation of 24 bits per pixel and before it is transmitted over the LCD interface bus"]
+    #[doc = "This field specifies how to swap the bytes after the data has been converted into an internal representation of 24 bits per pixel and before it is transmitted over the LCD interface bus."]
     #[inline(always)]
     pub const fn set_csc_data_swizzle(&mut self, val: super::vals::CtrlSetCscDataSwizzle) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
     }
-    #[doc = "This field specifies how to swap the bytes fetched by the bus master interface"]
+    #[doc = "This field specifies how to swap the bytes fetched by the bus master interface."]
     #[must_use]
     #[inline(always)]
     pub const fn input_data_swizzle(&self) -> super::vals::CtrlSetInputDataSwizzle {
         let val = (self.0 >> 14usize) & 0x03;
         super::vals::CtrlSetInputDataSwizzle::from_bits(val as u8)
     }
-    #[doc = "This field specifies how to swap the bytes fetched by the bus master interface"]
+    #[doc = "This field specifies how to swap the bytes fetched by the bus master interface."]
     #[inline(always)]
     pub const fn set_input_data_swizzle(&mut self, val: super::vals::CtrlSetInputDataSwizzle) {
         self.0 = (self.0 & !(0x03 << 14usize)) | (((val.to_bits() as u32) & 0x03) << 14usize);
     }
-    #[doc = "Set this bit to 1 to make the hardware go into the DOTCLK mode, i"]
+    #[doc = "Set this bit to 1 to make the hardware go into the DOTCLK mode, i."]
     #[must_use]
     #[inline(always)]
     pub const fn dotclk_mode(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Set this bit to 1 to make the hardware go into the DOTCLK mode, i"]
+    #[doc = "Set this bit to 1 to make the hardware go into the DOTCLK mode, i."]
     #[inline(always)]
     pub const fn set_dotclk_mode(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "When this bit is 0, it means that LCDIF will stop the block operation and turn off the RUN bit after the amount of data indicated by the LCDIF_TRANSFER_COUNT register has been transferred out"]
+    #[doc = "When this bit is 0, it means that LCDIF will stop the block operation and turn off the RUN bit after the amount of data indicated by the LCDIF_TRANSFER_COUNT register has been transferred out."]
     #[must_use]
     #[inline(always)]
     pub const fn bypass_count(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "When this bit is 0, it means that LCDIF will stop the block operation and turn off the RUN bit after the amount of data indicated by the LCDIF_TRANSFER_COUNT register has been transferred out"]
+    #[doc = "When this bit is 0, it means that LCDIF will stop the block operation and turn off the RUN bit after the amount of data indicated by the LCDIF_TRANSFER_COUNT register has been transferred out."]
     #[inline(always)]
     pub const fn set_bypass_count(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
@@ -2207,26 +2207,26 @@ impl CtrlSet {
     pub const fn set_data_shift_dir(&mut self, val: super::vals::CtrlSetDataShiftDir) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
     }
-    #[doc = "This bit must be set to zero for normal operation"]
+    #[doc = "This bit must be set to zero for normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn clkgate(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit must be set to zero for normal operation"]
+    #[doc = "This bit must be set to zero for normal operation."]
     #[inline(always)]
     pub const fn set_clkgate(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "This bit must be set to zero to enable normal operation of the LCDIF"]
+    #[doc = "This bit must be set to zero to enable normal operation of the LCDIF."]
     #[must_use]
     #[inline(always)]
     pub const fn sftrst(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit must be set to zero to enable normal operation of the LCDIF"]
+    #[doc = "This bit must be set to zero to enable normal operation of the LCDIF."]
     #[inline(always)]
     pub const fn set_sftrst(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -2285,31 +2285,31 @@ impl defmt::Format for CtrlSet {
         )
     }
 }
-#[doc = "LCDIF General Control Register"]
+#[doc = "LCDIF General Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CtrlTog(pub u32);
 impl CtrlTog {
-    #[doc = "When this bit is set by software, the LCDIF will begin transferring data between the SoC and the display"]
+    #[doc = "When this bit is set by software, the LCDIF will begin transferring data between the SoC and the display."]
     #[must_use]
     #[inline(always)]
     pub const fn run(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "When this bit is set by software, the LCDIF will begin transferring data between the SoC and the display"]
+    #[doc = "When this bit is set by software, the LCDIF will begin transferring data between the SoC and the display."]
     #[inline(always)]
     pub const fn set_run(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Used only when WORD_LENGTH = 3, i"]
+    #[doc = "Used only when WORD_LENGTH = 3, i."]
     #[must_use]
     #[inline(always)]
     pub const fn data_format_24_bit(&self) -> super::vals::CtrlTogDataFormat24Bit {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::CtrlTogDataFormat24Bit::from_bits(val as u8)
     }
-    #[doc = "Used only when WORD_LENGTH = 3, i"]
+    #[doc = "Used only when WORD_LENGTH = 3, i."]
     #[inline(always)]
     pub const fn set_data_format_24_bit(&mut self, val: super::vals::CtrlTogDataFormat24Bit) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
@@ -2326,38 +2326,38 @@ impl CtrlTog {
     pub const fn set_data_format_18_bit(&mut self, val: super::vals::CtrlTogDataFormat18Bit) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "When this bit is 1 and WORD_LENGTH = 0, it implies that the 16-bit data is in ARGB555 format"]
+    #[doc = "When this bit is 1 and WORD_LENGTH = 0, it implies that the 16-bit data is in ARGB555 format."]
     #[must_use]
     #[inline(always)]
     pub const fn data_format_16_bit(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "When this bit is 1 and WORD_LENGTH = 0, it implies that the 16-bit data is in ARGB555 format"]
+    #[doc = "When this bit is 1 and WORD_LENGTH = 0, it implies that the 16-bit data is in ARGB555 format."]
     #[inline(always)]
     pub const fn set_data_format_16_bit(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "Set this bit to make the LCDIF act as a bus master"]
+    #[doc = "Set this bit to make the LCDIF act as a bus master."]
     #[must_use]
     #[inline(always)]
     pub const fn master(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Set this bit to make the LCDIF act as a bus master"]
+    #[doc = "Set this bit to make the LCDIF act as a bus master."]
     #[inline(always)]
     pub const fn set_master(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "If this bit is set and LCDIF_MASTER bit is set, the LCDIF will act as bus master and the handshake mechanism between LCDIF and PXP will be turned on"]
+    #[doc = "If this bit is set and LCDIF_MASTER bit is set, the LCDIF will act as bus master and the handshake mechanism between LCDIF and PXP will be turned on."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_pxp_handshake(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "If this bit is set and LCDIF_MASTER bit is set, the LCDIF will act as bus master and the handshake mechanism between LCDIF and PXP will be turned on"]
+    #[doc = "If this bit is set and LCDIF_MASTER bit is set, the LCDIF will act as bus master and the handshake mechanism between LCDIF and PXP will be turned on."]
     #[inline(always)]
     pub const fn set_enable_pxp_handshake(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
@@ -2386,50 +2386,50 @@ impl CtrlTog {
     pub const fn set_lcd_databus_width(&mut self, val: super::vals::CtrlTogLcdDatabusWidth) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u32) & 0x03) << 10usize);
     }
-    #[doc = "This field specifies how to swap the bytes after the data has been converted into an internal representation of 24 bits per pixel and before it is transmitted over the LCD interface bus"]
+    #[doc = "This field specifies how to swap the bytes after the data has been converted into an internal representation of 24 bits per pixel and before it is transmitted over the LCD interface bus."]
     #[must_use]
     #[inline(always)]
     pub const fn csc_data_swizzle(&self) -> super::vals::CtrlTogCscDataSwizzle {
         let val = (self.0 >> 12usize) & 0x03;
         super::vals::CtrlTogCscDataSwizzle::from_bits(val as u8)
     }
-    #[doc = "This field specifies how to swap the bytes after the data has been converted into an internal representation of 24 bits per pixel and before it is transmitted over the LCD interface bus"]
+    #[doc = "This field specifies how to swap the bytes after the data has been converted into an internal representation of 24 bits per pixel and before it is transmitted over the LCD interface bus."]
     #[inline(always)]
     pub const fn set_csc_data_swizzle(&mut self, val: super::vals::CtrlTogCscDataSwizzle) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
     }
-    #[doc = "This field specifies how to swap the bytes fetched by the bus master interface"]
+    #[doc = "This field specifies how to swap the bytes fetched by the bus master interface."]
     #[must_use]
     #[inline(always)]
     pub const fn input_data_swizzle(&self) -> super::vals::CtrlTogInputDataSwizzle {
         let val = (self.0 >> 14usize) & 0x03;
         super::vals::CtrlTogInputDataSwizzle::from_bits(val as u8)
     }
-    #[doc = "This field specifies how to swap the bytes fetched by the bus master interface"]
+    #[doc = "This field specifies how to swap the bytes fetched by the bus master interface."]
     #[inline(always)]
     pub const fn set_input_data_swizzle(&mut self, val: super::vals::CtrlTogInputDataSwizzle) {
         self.0 = (self.0 & !(0x03 << 14usize)) | (((val.to_bits() as u32) & 0x03) << 14usize);
     }
-    #[doc = "Set this bit to 1 to make the hardware go into the DOTCLK mode, i"]
+    #[doc = "Set this bit to 1 to make the hardware go into the DOTCLK mode, i."]
     #[must_use]
     #[inline(always)]
     pub const fn dotclk_mode(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Set this bit to 1 to make the hardware go into the DOTCLK mode, i"]
+    #[doc = "Set this bit to 1 to make the hardware go into the DOTCLK mode, i."]
     #[inline(always)]
     pub const fn set_dotclk_mode(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "When this bit is 0, it means that LCDIF will stop the block operation and turn off the RUN bit after the amount of data indicated by the LCDIF_TRANSFER_COUNT register has been transferred out"]
+    #[doc = "When this bit is 0, it means that LCDIF will stop the block operation and turn off the RUN bit after the amount of data indicated by the LCDIF_TRANSFER_COUNT register has been transferred out."]
     #[must_use]
     #[inline(always)]
     pub const fn bypass_count(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "When this bit is 0, it means that LCDIF will stop the block operation and turn off the RUN bit after the amount of data indicated by the LCDIF_TRANSFER_COUNT register has been transferred out"]
+    #[doc = "When this bit is 0, it means that LCDIF will stop the block operation and turn off the RUN bit after the amount of data indicated by the LCDIF_TRANSFER_COUNT register has been transferred out."]
     #[inline(always)]
     pub const fn set_bypass_count(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
@@ -2458,26 +2458,26 @@ impl CtrlTog {
     pub const fn set_data_shift_dir(&mut self, val: super::vals::CtrlTogDataShiftDir) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
     }
-    #[doc = "This bit must be set to zero for normal operation"]
+    #[doc = "This bit must be set to zero for normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn clkgate(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit must be set to zero for normal operation"]
+    #[doc = "This bit must be set to zero for normal operation."]
     #[inline(always)]
     pub const fn set_clkgate(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "This bit must be set to zero to enable normal operation of the LCDIF"]
+    #[doc = "This bit must be set to zero to enable normal operation of the LCDIF."]
     #[must_use]
     #[inline(always)]
     pub const fn sftrst(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit must be set to zero to enable normal operation of the LCDIF"]
+    #[doc = "This bit must be set to zero to enable normal operation of the LCDIF."]
     #[inline(always)]
     pub const fn set_sftrst(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -2536,7 +2536,7 @@ impl defmt::Format for CtrlTog {
         )
     }
 }
-#[doc = "LCD Interface Current Buffer Address Register"]
+#[doc = "LCD Interface Current Buffer Address Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CurBuf(pub u32);
@@ -2573,19 +2573,19 @@ impl defmt::Format for CurBuf {
         defmt::write!(f, "CurBuf {{ addr: {=u32:?} }}", self.addr())
     }
 }
-#[doc = "Lookup Table 0 Index Register"]
+#[doc = "Lookup Table 0 Index Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lut0Addr(pub u32);
 impl Lut0Addr {
-    #[doc = "LUT indexed address pointer"]
+    #[doc = "LUT indexed address pointer."]
     #[must_use]
     #[inline(always)]
     pub const fn addr(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "LUT indexed address pointer"]
+    #[doc = "LUT indexed address pointer."]
     #[inline(always)]
     pub const fn set_addr(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
@@ -2610,19 +2610,19 @@ impl defmt::Format for Lut0Addr {
         defmt::write!(f, "Lut0Addr {{ addr: {=u8:?} }}", self.addr())
     }
 }
-#[doc = "Lookup Table 0 Data Register"]
+#[doc = "Lookup Table 0 Data Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lut0Data(pub u32);
 impl Lut0Data {
-    #[doc = "Writing this field will load 4 bytes, aligned to four byte boundaries, of data indexed by the ADDR field of the REG_LUT_CTRL register"]
+    #[doc = "Writing this field will load 4 bytes, aligned to four byte boundaries, of data indexed by the ADDR field of the REG_LUT_CTRL register."]
     #[must_use]
     #[inline(always)]
     pub const fn data(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Writing this field will load 4 bytes, aligned to four byte boundaries, of data indexed by the ADDR field of the REG_LUT_CTRL register"]
+    #[doc = "Writing this field will load 4 bytes, aligned to four byte boundaries, of data indexed by the ADDR field of the REG_LUT_CTRL register."]
     #[inline(always)]
     pub const fn set_data(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2647,19 +2647,19 @@ impl defmt::Format for Lut0Data {
         defmt::write!(f, "Lut0Data {{ data: {=u32:?} }}", self.data())
     }
 }
-#[doc = "Lookup Table 1 Index Register"]
+#[doc = "Lookup Table 1 Index Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lut1Addr(pub u32);
 impl Lut1Addr {
-    #[doc = "LUT indexed address pointer"]
+    #[doc = "LUT indexed address pointer."]
     #[must_use]
     #[inline(always)]
     pub const fn addr(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "LUT indexed address pointer"]
+    #[doc = "LUT indexed address pointer."]
     #[inline(always)]
     pub const fn set_addr(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
@@ -2684,19 +2684,19 @@ impl defmt::Format for Lut1Addr {
         defmt::write!(f, "Lut1Addr {{ addr: {=u8:?} }}", self.addr())
     }
 }
-#[doc = "Lookup Table 1 Data Register"]
+#[doc = "Lookup Table 1 Data Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lut1Data(pub u32);
 impl Lut1Data {
-    #[doc = "Writing this field will load 4 bytes, aligned to four byte boundaries, of data indexed by the ADDR field of the REG_LUT_CTRL register"]
+    #[doc = "Writing this field will load 4 bytes, aligned to four byte boundaries, of data indexed by the ADDR field of the REG_LUT_CTRL register."]
     #[must_use]
     #[inline(always)]
     pub const fn data(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Writing this field will load 4 bytes, aligned to four byte boundaries, of data indexed by the ADDR field of the REG_LUT_CTRL register"]
+    #[doc = "Writing this field will load 4 bytes, aligned to four byte boundaries, of data indexed by the ADDR field of the REG_LUT_CTRL register."]
     #[inline(always)]
     pub const fn set_data(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2721,19 +2721,19 @@ impl defmt::Format for Lut1Data {
         defmt::write!(f, "Lut1Data {{ data: {=u32:?} }}", self.data())
     }
 }
-#[doc = "Look Up Table Control Register"]
+#[doc = "Look Up Table Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct LutCtrl(pub u32);
 impl LutCtrl {
-    #[doc = "Setting this bit will bypass the LUT memory resource completely"]
+    #[doc = "Setting this bit will bypass the LUT memory resource completely."]
     #[must_use]
     #[inline(always)]
     pub const fn lut_bypass(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Setting this bit will bypass the LUT memory resource completely"]
+    #[doc = "Setting this bit will bypass the LUT memory resource completely."]
     #[inline(always)]
     pub const fn set_lut_bypass(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -2758,7 +2758,7 @@ impl defmt::Format for LutCtrl {
         defmt::write!(f, "LutCtrl {{ lut_bypass: {=bool:?} }}", self.lut_bypass())
     }
 }
-#[doc = "LCD Interface Next Buffer Address Register"]
+#[doc = "LCD Interface Next Buffer Address Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct NextBuf(pub u32);
@@ -2795,91 +2795,91 @@ impl defmt::Format for NextBuf {
         defmt::write!(f, "NextBuf {{ addr: {=u32:?} }}", self.addr())
     }
 }
-#[doc = "Panel Interface Signal Generator Register"]
+#[doc = "Panel Interface Signal Generator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeon00(pub u32);
 impl Pigeon00 {
-    #[doc = "Enable pigeon Mode on this signal"]
+    #[doc = "Enable pigeon Mode on this signal."]
     #[must_use]
     #[inline(always)]
     pub const fn en(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable pigeon Mode on this signal"]
+    #[doc = "Enable pigeon Mode on this signal."]
     #[inline(always)]
     pub const fn set_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Polarity of signal output"]
+    #[doc = "Polarity of signal output."]
     #[must_use]
     #[inline(always)]
     pub const fn pol(&self) -> super::vals::Pigeon00Pol {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Pigeon00Pol::from_bits(val as u8)
     }
-    #[doc = "Polarity of signal output"]
+    #[doc = "Polarity of signal output."]
     #[inline(always)]
     pub const fn set_pol(&mut self, val: super::vals::Pigeon00Pol) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Event to incrment local counter"]
+    #[doc = "Event to incrment local counter."]
     #[must_use]
     #[inline(always)]
     pub const fn inc_sel(&self) -> super::vals::Pigeon00IncSel {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::Pigeon00IncSel::from_bits(val as u8)
     }
-    #[doc = "Event to incrment local counter"]
+    #[doc = "Event to incrment local counter."]
     #[inline(always)]
     pub const fn set_inc_sel(&mut self, val: super::vals::Pigeon00IncSel) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
-    #[doc = "offset on pclk unit"]
+    #[doc = "offset on pclk unit."]
     #[must_use]
     #[inline(always)]
     pub const fn offset(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x0f;
         val as u8
     }
-    #[doc = "offset on pclk unit"]
+    #[doc = "offset on pclk unit."]
     #[inline(always)]
     pub const fn set_offset(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
     }
-    #[doc = "select global counters as mask condition, use together with MASK_CNT"]
+    #[doc = "select global counters as mask condition, use together with MASK_CNT."]
     #[must_use]
     #[inline(always)]
     pub const fn mask_cnt_sel(&self) -> super::vals::Pigeon00MaskCntSel {
         let val = (self.0 >> 8usize) & 0x0f;
         super::vals::Pigeon00MaskCntSel::from_bits(val as u8)
     }
-    #[doc = "select global counters as mask condition, use together with MASK_CNT"]
+    #[doc = "select global counters as mask condition, use together with MASK_CNT."]
     #[inline(always)]
     pub const fn set_mask_cnt_sel(&mut self, val: super::vals::Pigeon00MaskCntSel) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
-    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking"]
+    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking."]
     #[must_use]
     #[inline(always)]
     pub const fn mask_cnt(&self) -> u16 {
         let val = (self.0 >> 12usize) & 0x0fff;
         val as u16
     }
-    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking"]
+    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking."]
     #[inline(always)]
     pub const fn set_mask_cnt(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 12usize)) | (((val as u32) & 0x0fff) << 12usize);
     }
-    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking"]
+    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking."]
     #[must_use]
     #[inline(always)]
     pub const fn state_mask(&self) -> super::vals::Pigeon00StateMask {
         let val = (self.0 >> 24usize) & 0xff;
         super::vals::Pigeon00StateMask::from_bits(val as u8)
     }
-    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking"]
+    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking."]
     #[inline(always)]
     pub const fn set_state_mask(&mut self, val: super::vals::Pigeon00StateMask) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val.to_bits() as u32) & 0xff) << 24usize);
@@ -2920,31 +2920,31 @@ impl defmt::Format for Pigeon00 {
         )
     }
 }
-#[doc = "Panel Interface Signal Generator Register"]
+#[doc = "Panel Interface Signal Generator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeon01(pub u32);
 impl Pigeon01 {
-    #[doc = "Assert signal output when counter match this value"]
+    #[doc = "Assert signal output when counter match this value."]
     #[must_use]
     #[inline(always)]
     pub const fn set_cnt(&self) -> super::vals::Pigeon01SetCnt {
         let val = (self.0 >> 0usize) & 0xffff;
         super::vals::Pigeon01SetCnt::from_bits(val as u16)
     }
-    #[doc = "Assert signal output when counter match this value"]
+    #[doc = "Assert signal output when counter match this value."]
     #[inline(always)]
     pub const fn set_set_cnt(&mut self, val: super::vals::Pigeon01SetCnt) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val.to_bits() as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Deassert signal output when counter match this value"]
+    #[doc = "Deassert signal output when counter match this value."]
     #[must_use]
     #[inline(always)]
     pub const fn clr_cnt(&self) -> super::vals::Pigeon01ClrCnt {
         let val = (self.0 >> 16usize) & 0xffff;
         super::vals::Pigeon01ClrCnt::from_bits(val as u16)
     }
-    #[doc = "Deassert signal output when counter match this value"]
+    #[doc = "Deassert signal output when counter match this value."]
     #[inline(always)]
     pub const fn set_clr_cnt(&mut self, val: super::vals::Pigeon01ClrCnt) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val.to_bits() as u32) & 0xffff) << 16usize);
@@ -2975,31 +2975,31 @@ impl defmt::Format for Pigeon01 {
         )
     }
 }
-#[doc = "Panel Interface Signal Generator Register"]
+#[doc = "Panel Interface Signal Generator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeon02(pub u32);
 impl Pigeon02 {
-    #[doc = "Logic operation with another signal: DIS/AND/OR/COND"]
+    #[doc = "Logic operation with another signal: DIS/AND/OR/COND."]
     #[must_use]
     #[inline(always)]
     pub const fn sig_logic(&self) -> super::vals::Pigeon02SigLogic {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Pigeon02SigLogic::from_bits(val as u8)
     }
-    #[doc = "Logic operation with another signal: DIS/AND/OR/COND"]
+    #[doc = "Logic operation with another signal: DIS/AND/OR/COND."]
     #[inline(always)]
     pub const fn set_sig_logic(&mut self, val: super::vals::Pigeon02SigLogic) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Select another signal for logic operation or as mask or counter tick event"]
+    #[doc = "Select another signal for logic operation or as mask or counter tick event."]
     #[must_use]
     #[inline(always)]
     pub const fn sig_another(&self) -> super::vals::Pigeon02SigAnother {
         let val = (self.0 >> 4usize) & 0x1f;
         super::vals::Pigeon02SigAnother::from_bits(val as u8)
     }
-    #[doc = "Select another signal for logic operation or as mask or counter tick event"]
+    #[doc = "Select another signal for logic operation or as mask or counter tick event."]
     #[inline(always)]
     pub const fn set_sig_another(&mut self, val: super::vals::Pigeon02SigAnother) {
         self.0 = (self.0 & !(0x1f << 4usize)) | (((val.to_bits() as u32) & 0x1f) << 4usize);
@@ -3030,91 +3030,91 @@ impl defmt::Format for Pigeon02 {
         )
     }
 }
-#[doc = "Panel Interface Signal Generator Register"]
+#[doc = "Panel Interface Signal Generator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeon10(pub u32);
 impl Pigeon10 {
-    #[doc = "Enable pigeon Mode on this signal"]
+    #[doc = "Enable pigeon Mode on this signal."]
     #[must_use]
     #[inline(always)]
     pub const fn en(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable pigeon Mode on this signal"]
+    #[doc = "Enable pigeon Mode on this signal."]
     #[inline(always)]
     pub const fn set_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Polarity of signal output"]
+    #[doc = "Polarity of signal output."]
     #[must_use]
     #[inline(always)]
     pub const fn pol(&self) -> super::vals::Pigeon10Pol {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Pigeon10Pol::from_bits(val as u8)
     }
-    #[doc = "Polarity of signal output"]
+    #[doc = "Polarity of signal output."]
     #[inline(always)]
     pub const fn set_pol(&mut self, val: super::vals::Pigeon10Pol) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Event to incrment local counter"]
+    #[doc = "Event to incrment local counter."]
     #[must_use]
     #[inline(always)]
     pub const fn inc_sel(&self) -> super::vals::Pigeon10IncSel {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::Pigeon10IncSel::from_bits(val as u8)
     }
-    #[doc = "Event to incrment local counter"]
+    #[doc = "Event to incrment local counter."]
     #[inline(always)]
     pub const fn set_inc_sel(&mut self, val: super::vals::Pigeon10IncSel) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
-    #[doc = "offset on pclk unit"]
+    #[doc = "offset on pclk unit."]
     #[must_use]
     #[inline(always)]
     pub const fn offset(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x0f;
         val as u8
     }
-    #[doc = "offset on pclk unit"]
+    #[doc = "offset on pclk unit."]
     #[inline(always)]
     pub const fn set_offset(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
     }
-    #[doc = "select global counters as mask condition, use together with MASK_CNT"]
+    #[doc = "select global counters as mask condition, use together with MASK_CNT."]
     #[must_use]
     #[inline(always)]
     pub const fn mask_cnt_sel(&self) -> super::vals::Pigeon10MaskCntSel {
         let val = (self.0 >> 8usize) & 0x0f;
         super::vals::Pigeon10MaskCntSel::from_bits(val as u8)
     }
-    #[doc = "select global counters as mask condition, use together with MASK_CNT"]
+    #[doc = "select global counters as mask condition, use together with MASK_CNT."]
     #[inline(always)]
     pub const fn set_mask_cnt_sel(&mut self, val: super::vals::Pigeon10MaskCntSel) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
-    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking"]
+    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking."]
     #[must_use]
     #[inline(always)]
     pub const fn mask_cnt(&self) -> u16 {
         let val = (self.0 >> 12usize) & 0x0fff;
         val as u16
     }
-    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking"]
+    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking."]
     #[inline(always)]
     pub const fn set_mask_cnt(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 12usize)) | (((val as u32) & 0x0fff) << 12usize);
     }
-    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking"]
+    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking."]
     #[must_use]
     #[inline(always)]
     pub const fn state_mask(&self) -> super::vals::Pigeon10StateMask {
         let val = (self.0 >> 24usize) & 0xff;
         super::vals::Pigeon10StateMask::from_bits(val as u8)
     }
-    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking"]
+    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking."]
     #[inline(always)]
     pub const fn set_state_mask(&mut self, val: super::vals::Pigeon10StateMask) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val.to_bits() as u32) & 0xff) << 24usize);
@@ -3155,91 +3155,91 @@ impl defmt::Format for Pigeon10 {
         )
     }
 }
-#[doc = "Panel Interface Signal Generator Register"]
+#[doc = "Panel Interface Signal Generator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeon100(pub u32);
 impl Pigeon100 {
-    #[doc = "Enable pigeon Mode on this signal"]
+    #[doc = "Enable pigeon Mode on this signal."]
     #[must_use]
     #[inline(always)]
     pub const fn en(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable pigeon Mode on this signal"]
+    #[doc = "Enable pigeon Mode on this signal."]
     #[inline(always)]
     pub const fn set_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Polarity of signal output"]
+    #[doc = "Polarity of signal output."]
     #[must_use]
     #[inline(always)]
     pub const fn pol(&self) -> super::vals::Pigeon100Pol {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Pigeon100Pol::from_bits(val as u8)
     }
-    #[doc = "Polarity of signal output"]
+    #[doc = "Polarity of signal output."]
     #[inline(always)]
     pub const fn set_pol(&mut self, val: super::vals::Pigeon100Pol) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Event to incrment local counter"]
+    #[doc = "Event to incrment local counter."]
     #[must_use]
     #[inline(always)]
     pub const fn inc_sel(&self) -> super::vals::Pigeon100IncSel {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::Pigeon100IncSel::from_bits(val as u8)
     }
-    #[doc = "Event to incrment local counter"]
+    #[doc = "Event to incrment local counter."]
     #[inline(always)]
     pub const fn set_inc_sel(&mut self, val: super::vals::Pigeon100IncSel) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
-    #[doc = "offset on pclk unit"]
+    #[doc = "offset on pclk unit."]
     #[must_use]
     #[inline(always)]
     pub const fn offset(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x0f;
         val as u8
     }
-    #[doc = "offset on pclk unit"]
+    #[doc = "offset on pclk unit."]
     #[inline(always)]
     pub const fn set_offset(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
     }
-    #[doc = "select global counters as mask condition, use together with MASK_CNT"]
+    #[doc = "select global counters as mask condition, use together with MASK_CNT."]
     #[must_use]
     #[inline(always)]
     pub const fn mask_cnt_sel(&self) -> super::vals::Pigeon100MaskCntSel {
         let val = (self.0 >> 8usize) & 0x0f;
         super::vals::Pigeon100MaskCntSel::from_bits(val as u8)
     }
-    #[doc = "select global counters as mask condition, use together with MASK_CNT"]
+    #[doc = "select global counters as mask condition, use together with MASK_CNT."]
     #[inline(always)]
     pub const fn set_mask_cnt_sel(&mut self, val: super::vals::Pigeon100MaskCntSel) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
-    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking"]
+    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking."]
     #[must_use]
     #[inline(always)]
     pub const fn mask_cnt(&self) -> u16 {
         let val = (self.0 >> 12usize) & 0x0fff;
         val as u16
     }
-    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking"]
+    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking."]
     #[inline(always)]
     pub const fn set_mask_cnt(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 12usize)) | (((val as u32) & 0x0fff) << 12usize);
     }
-    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking"]
+    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking."]
     #[must_use]
     #[inline(always)]
     pub const fn state_mask(&self) -> super::vals::Pigeon100StateMask {
         let val = (self.0 >> 24usize) & 0xff;
         super::vals::Pigeon100StateMask::from_bits(val as u8)
     }
-    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking"]
+    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking."]
     #[inline(always)]
     pub const fn set_state_mask(&mut self, val: super::vals::Pigeon100StateMask) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val.to_bits() as u32) & 0xff) << 24usize);
@@ -3280,31 +3280,31 @@ impl defmt::Format for Pigeon100 {
         )
     }
 }
-#[doc = "Panel Interface Signal Generator Register"]
+#[doc = "Panel Interface Signal Generator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeon101(pub u32);
 impl Pigeon101 {
-    #[doc = "Assert signal output when counter match this value"]
+    #[doc = "Assert signal output when counter match this value."]
     #[must_use]
     #[inline(always)]
     pub const fn set_cnt(&self) -> super::vals::Pigeon101SetCnt {
         let val = (self.0 >> 0usize) & 0xffff;
         super::vals::Pigeon101SetCnt::from_bits(val as u16)
     }
-    #[doc = "Assert signal output when counter match this value"]
+    #[doc = "Assert signal output when counter match this value."]
     #[inline(always)]
     pub const fn set_set_cnt(&mut self, val: super::vals::Pigeon101SetCnt) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val.to_bits() as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Deassert signal output when counter match this value"]
+    #[doc = "Deassert signal output when counter match this value."]
     #[must_use]
     #[inline(always)]
     pub const fn clr_cnt(&self) -> super::vals::Pigeon101ClrCnt {
         let val = (self.0 >> 16usize) & 0xffff;
         super::vals::Pigeon101ClrCnt::from_bits(val as u16)
     }
-    #[doc = "Deassert signal output when counter match this value"]
+    #[doc = "Deassert signal output when counter match this value."]
     #[inline(always)]
     pub const fn set_clr_cnt(&mut self, val: super::vals::Pigeon101ClrCnt) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val.to_bits() as u32) & 0xffff) << 16usize);
@@ -3335,31 +3335,31 @@ impl defmt::Format for Pigeon101 {
         )
     }
 }
-#[doc = "Panel Interface Signal Generator Register"]
+#[doc = "Panel Interface Signal Generator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeon102(pub u32);
 impl Pigeon102 {
-    #[doc = "Logic operation with another signal: DIS/AND/OR/COND"]
+    #[doc = "Logic operation with another signal: DIS/AND/OR/COND."]
     #[must_use]
     #[inline(always)]
     pub const fn sig_logic(&self) -> super::vals::Pigeon102SigLogic {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Pigeon102SigLogic::from_bits(val as u8)
     }
-    #[doc = "Logic operation with another signal: DIS/AND/OR/COND"]
+    #[doc = "Logic operation with another signal: DIS/AND/OR/COND."]
     #[inline(always)]
     pub const fn set_sig_logic(&mut self, val: super::vals::Pigeon102SigLogic) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Select another signal for logic operation or as mask or counter tick event"]
+    #[doc = "Select another signal for logic operation or as mask or counter tick event."]
     #[must_use]
     #[inline(always)]
     pub const fn sig_another(&self) -> super::vals::Pigeon102SigAnother {
         let val = (self.0 >> 4usize) & 0x1f;
         super::vals::Pigeon102SigAnother::from_bits(val as u8)
     }
-    #[doc = "Select another signal for logic operation or as mask or counter tick event"]
+    #[doc = "Select another signal for logic operation or as mask or counter tick event."]
     #[inline(always)]
     pub const fn set_sig_another(&mut self, val: super::vals::Pigeon102SigAnother) {
         self.0 = (self.0 & !(0x1f << 4usize)) | (((val.to_bits() as u32) & 0x1f) << 4usize);
@@ -3390,31 +3390,31 @@ impl defmt::Format for Pigeon102 {
         )
     }
 }
-#[doc = "Panel Interface Signal Generator Register"]
+#[doc = "Panel Interface Signal Generator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeon11(pub u32);
 impl Pigeon11 {
-    #[doc = "Assert signal output when counter match this value"]
+    #[doc = "Assert signal output when counter match this value."]
     #[must_use]
     #[inline(always)]
     pub const fn set_cnt(&self) -> super::vals::Pigeon11SetCnt {
         let val = (self.0 >> 0usize) & 0xffff;
         super::vals::Pigeon11SetCnt::from_bits(val as u16)
     }
-    #[doc = "Assert signal output when counter match this value"]
+    #[doc = "Assert signal output when counter match this value."]
     #[inline(always)]
     pub const fn set_set_cnt(&mut self, val: super::vals::Pigeon11SetCnt) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val.to_bits() as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Deassert signal output when counter match this value"]
+    #[doc = "Deassert signal output when counter match this value."]
     #[must_use]
     #[inline(always)]
     pub const fn clr_cnt(&self) -> super::vals::Pigeon11ClrCnt {
         let val = (self.0 >> 16usize) & 0xffff;
         super::vals::Pigeon11ClrCnt::from_bits(val as u16)
     }
-    #[doc = "Deassert signal output when counter match this value"]
+    #[doc = "Deassert signal output when counter match this value."]
     #[inline(always)]
     pub const fn set_clr_cnt(&mut self, val: super::vals::Pigeon11ClrCnt) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val.to_bits() as u32) & 0xffff) << 16usize);
@@ -3445,91 +3445,91 @@ impl defmt::Format for Pigeon11 {
         )
     }
 }
-#[doc = "Panel Interface Signal Generator Register"]
+#[doc = "Panel Interface Signal Generator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeon110(pub u32);
 impl Pigeon110 {
-    #[doc = "Enable pigeon Mode on this signal"]
+    #[doc = "Enable pigeon Mode on this signal."]
     #[must_use]
     #[inline(always)]
     pub const fn en(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable pigeon Mode on this signal"]
+    #[doc = "Enable pigeon Mode on this signal."]
     #[inline(always)]
     pub const fn set_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Polarity of signal output"]
+    #[doc = "Polarity of signal output."]
     #[must_use]
     #[inline(always)]
     pub const fn pol(&self) -> super::vals::Pigeon110Pol {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Pigeon110Pol::from_bits(val as u8)
     }
-    #[doc = "Polarity of signal output"]
+    #[doc = "Polarity of signal output."]
     #[inline(always)]
     pub const fn set_pol(&mut self, val: super::vals::Pigeon110Pol) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Event to incrment local counter"]
+    #[doc = "Event to incrment local counter."]
     #[must_use]
     #[inline(always)]
     pub const fn inc_sel(&self) -> super::vals::Pigeon110IncSel {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::Pigeon110IncSel::from_bits(val as u8)
     }
-    #[doc = "Event to incrment local counter"]
+    #[doc = "Event to incrment local counter."]
     #[inline(always)]
     pub const fn set_inc_sel(&mut self, val: super::vals::Pigeon110IncSel) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
-    #[doc = "offset on pclk unit"]
+    #[doc = "offset on pclk unit."]
     #[must_use]
     #[inline(always)]
     pub const fn offset(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x0f;
         val as u8
     }
-    #[doc = "offset on pclk unit"]
+    #[doc = "offset on pclk unit."]
     #[inline(always)]
     pub const fn set_offset(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
     }
-    #[doc = "select global counters as mask condition, use together with MASK_CNT"]
+    #[doc = "select global counters as mask condition, use together with MASK_CNT."]
     #[must_use]
     #[inline(always)]
     pub const fn mask_cnt_sel(&self) -> super::vals::Pigeon110MaskCntSel {
         let val = (self.0 >> 8usize) & 0x0f;
         super::vals::Pigeon110MaskCntSel::from_bits(val as u8)
     }
-    #[doc = "select global counters as mask condition, use together with MASK_CNT"]
+    #[doc = "select global counters as mask condition, use together with MASK_CNT."]
     #[inline(always)]
     pub const fn set_mask_cnt_sel(&mut self, val: super::vals::Pigeon110MaskCntSel) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
-    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking"]
+    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking."]
     #[must_use]
     #[inline(always)]
     pub const fn mask_cnt(&self) -> u16 {
         let val = (self.0 >> 12usize) & 0x0fff;
         val as u16
     }
-    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking"]
+    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking."]
     #[inline(always)]
     pub const fn set_mask_cnt(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 12usize)) | (((val as u32) & 0x0fff) << 12usize);
     }
-    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking"]
+    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking."]
     #[must_use]
     #[inline(always)]
     pub const fn state_mask(&self) -> super::vals::Pigeon110StateMask {
         let val = (self.0 >> 24usize) & 0xff;
         super::vals::Pigeon110StateMask::from_bits(val as u8)
     }
-    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking"]
+    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking."]
     #[inline(always)]
     pub const fn set_state_mask(&mut self, val: super::vals::Pigeon110StateMask) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val.to_bits() as u32) & 0xff) << 24usize);
@@ -3570,31 +3570,31 @@ impl defmt::Format for Pigeon110 {
         )
     }
 }
-#[doc = "Panel Interface Signal Generator Register"]
+#[doc = "Panel Interface Signal Generator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeon111(pub u32);
 impl Pigeon111 {
-    #[doc = "Assert signal output when counter match this value"]
+    #[doc = "Assert signal output when counter match this value."]
     #[must_use]
     #[inline(always)]
     pub const fn set_cnt(&self) -> super::vals::Pigeon111SetCnt {
         let val = (self.0 >> 0usize) & 0xffff;
         super::vals::Pigeon111SetCnt::from_bits(val as u16)
     }
-    #[doc = "Assert signal output when counter match this value"]
+    #[doc = "Assert signal output when counter match this value."]
     #[inline(always)]
     pub const fn set_set_cnt(&mut self, val: super::vals::Pigeon111SetCnt) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val.to_bits() as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Deassert signal output when counter match this value"]
+    #[doc = "Deassert signal output when counter match this value."]
     #[must_use]
     #[inline(always)]
     pub const fn clr_cnt(&self) -> super::vals::Pigeon111ClrCnt {
         let val = (self.0 >> 16usize) & 0xffff;
         super::vals::Pigeon111ClrCnt::from_bits(val as u16)
     }
-    #[doc = "Deassert signal output when counter match this value"]
+    #[doc = "Deassert signal output when counter match this value."]
     #[inline(always)]
     pub const fn set_clr_cnt(&mut self, val: super::vals::Pigeon111ClrCnt) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val.to_bits() as u32) & 0xffff) << 16usize);
@@ -3625,31 +3625,31 @@ impl defmt::Format for Pigeon111 {
         )
     }
 }
-#[doc = "Panel Interface Signal Generator Register"]
+#[doc = "Panel Interface Signal Generator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeon112(pub u32);
 impl Pigeon112 {
-    #[doc = "Logic operation with another signal: DIS/AND/OR/COND"]
+    #[doc = "Logic operation with another signal: DIS/AND/OR/COND."]
     #[must_use]
     #[inline(always)]
     pub const fn sig_logic(&self) -> super::vals::Pigeon112SigLogic {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Pigeon112SigLogic::from_bits(val as u8)
     }
-    #[doc = "Logic operation with another signal: DIS/AND/OR/COND"]
+    #[doc = "Logic operation with another signal: DIS/AND/OR/COND."]
     #[inline(always)]
     pub const fn set_sig_logic(&mut self, val: super::vals::Pigeon112SigLogic) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Select another signal for logic operation or as mask or counter tick event"]
+    #[doc = "Select another signal for logic operation or as mask or counter tick event."]
     #[must_use]
     #[inline(always)]
     pub const fn sig_another(&self) -> super::vals::Pigeon112SigAnother {
         let val = (self.0 >> 4usize) & 0x1f;
         super::vals::Pigeon112SigAnother::from_bits(val as u8)
     }
-    #[doc = "Select another signal for logic operation or as mask or counter tick event"]
+    #[doc = "Select another signal for logic operation or as mask or counter tick event."]
     #[inline(always)]
     pub const fn set_sig_another(&mut self, val: super::vals::Pigeon112SigAnother) {
         self.0 = (self.0 & !(0x1f << 4usize)) | (((val.to_bits() as u32) & 0x1f) << 4usize);
@@ -3680,31 +3680,31 @@ impl defmt::Format for Pigeon112 {
         )
     }
 }
-#[doc = "Panel Interface Signal Generator Register"]
+#[doc = "Panel Interface Signal Generator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeon12(pub u32);
 impl Pigeon12 {
-    #[doc = "Logic operation with another signal: DIS/AND/OR/COND"]
+    #[doc = "Logic operation with another signal: DIS/AND/OR/COND."]
     #[must_use]
     #[inline(always)]
     pub const fn sig_logic(&self) -> super::vals::Pigeon12SigLogic {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Pigeon12SigLogic::from_bits(val as u8)
     }
-    #[doc = "Logic operation with another signal: DIS/AND/OR/COND"]
+    #[doc = "Logic operation with another signal: DIS/AND/OR/COND."]
     #[inline(always)]
     pub const fn set_sig_logic(&mut self, val: super::vals::Pigeon12SigLogic) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Select another signal for logic operation or as mask or counter tick event"]
+    #[doc = "Select another signal for logic operation or as mask or counter tick event."]
     #[must_use]
     #[inline(always)]
     pub const fn sig_another(&self) -> super::vals::Pigeon12SigAnother {
         let val = (self.0 >> 4usize) & 0x1f;
         super::vals::Pigeon12SigAnother::from_bits(val as u8)
     }
-    #[doc = "Select another signal for logic operation or as mask or counter tick event"]
+    #[doc = "Select another signal for logic operation or as mask or counter tick event."]
     #[inline(always)]
     pub const fn set_sig_another(&mut self, val: super::vals::Pigeon12SigAnother) {
         self.0 = (self.0 & !(0x1f << 4usize)) | (((val.to_bits() as u32) & 0x1f) << 4usize);
@@ -3735,91 +3735,91 @@ impl defmt::Format for Pigeon12 {
         )
     }
 }
-#[doc = "Panel Interface Signal Generator Register"]
+#[doc = "Panel Interface Signal Generator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeon20(pub u32);
 impl Pigeon20 {
-    #[doc = "Enable pigeon Mode on this signal"]
+    #[doc = "Enable pigeon Mode on this signal."]
     #[must_use]
     #[inline(always)]
     pub const fn en(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable pigeon Mode on this signal"]
+    #[doc = "Enable pigeon Mode on this signal."]
     #[inline(always)]
     pub const fn set_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Polarity of signal output"]
+    #[doc = "Polarity of signal output."]
     #[must_use]
     #[inline(always)]
     pub const fn pol(&self) -> super::vals::Pigeon20Pol {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Pigeon20Pol::from_bits(val as u8)
     }
-    #[doc = "Polarity of signal output"]
+    #[doc = "Polarity of signal output."]
     #[inline(always)]
     pub const fn set_pol(&mut self, val: super::vals::Pigeon20Pol) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Event to incrment local counter"]
+    #[doc = "Event to incrment local counter."]
     #[must_use]
     #[inline(always)]
     pub const fn inc_sel(&self) -> super::vals::Pigeon20IncSel {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::Pigeon20IncSel::from_bits(val as u8)
     }
-    #[doc = "Event to incrment local counter"]
+    #[doc = "Event to incrment local counter."]
     #[inline(always)]
     pub const fn set_inc_sel(&mut self, val: super::vals::Pigeon20IncSel) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
-    #[doc = "offset on pclk unit"]
+    #[doc = "offset on pclk unit."]
     #[must_use]
     #[inline(always)]
     pub const fn offset(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x0f;
         val as u8
     }
-    #[doc = "offset on pclk unit"]
+    #[doc = "offset on pclk unit."]
     #[inline(always)]
     pub const fn set_offset(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
     }
-    #[doc = "select global counters as mask condition, use together with MASK_CNT"]
+    #[doc = "select global counters as mask condition, use together with MASK_CNT."]
     #[must_use]
     #[inline(always)]
     pub const fn mask_cnt_sel(&self) -> super::vals::Pigeon20MaskCntSel {
         let val = (self.0 >> 8usize) & 0x0f;
         super::vals::Pigeon20MaskCntSel::from_bits(val as u8)
     }
-    #[doc = "select global counters as mask condition, use together with MASK_CNT"]
+    #[doc = "select global counters as mask condition, use together with MASK_CNT."]
     #[inline(always)]
     pub const fn set_mask_cnt_sel(&mut self, val: super::vals::Pigeon20MaskCntSel) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
-    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking"]
+    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking."]
     #[must_use]
     #[inline(always)]
     pub const fn mask_cnt(&self) -> u16 {
         let val = (self.0 >> 12usize) & 0x0fff;
         val as u16
     }
-    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking"]
+    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking."]
     #[inline(always)]
     pub const fn set_mask_cnt(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 12usize)) | (((val as u32) & 0x0fff) << 12usize);
     }
-    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking"]
+    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking."]
     #[must_use]
     #[inline(always)]
     pub const fn state_mask(&self) -> super::vals::Pigeon20StateMask {
         let val = (self.0 >> 24usize) & 0xff;
         super::vals::Pigeon20StateMask::from_bits(val as u8)
     }
-    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking"]
+    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking."]
     #[inline(always)]
     pub const fn set_state_mask(&mut self, val: super::vals::Pigeon20StateMask) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val.to_bits() as u32) & 0xff) << 24usize);
@@ -3860,31 +3860,31 @@ impl defmt::Format for Pigeon20 {
         )
     }
 }
-#[doc = "Panel Interface Signal Generator Register"]
+#[doc = "Panel Interface Signal Generator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeon21(pub u32);
 impl Pigeon21 {
-    #[doc = "Assert signal output when counter match this value"]
+    #[doc = "Assert signal output when counter match this value."]
     #[must_use]
     #[inline(always)]
     pub const fn set_cnt(&self) -> super::vals::Pigeon21SetCnt {
         let val = (self.0 >> 0usize) & 0xffff;
         super::vals::Pigeon21SetCnt::from_bits(val as u16)
     }
-    #[doc = "Assert signal output when counter match this value"]
+    #[doc = "Assert signal output when counter match this value."]
     #[inline(always)]
     pub const fn set_set_cnt(&mut self, val: super::vals::Pigeon21SetCnt) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val.to_bits() as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Deassert signal output when counter match this value"]
+    #[doc = "Deassert signal output when counter match this value."]
     #[must_use]
     #[inline(always)]
     pub const fn clr_cnt(&self) -> super::vals::Pigeon21ClrCnt {
         let val = (self.0 >> 16usize) & 0xffff;
         super::vals::Pigeon21ClrCnt::from_bits(val as u16)
     }
-    #[doc = "Deassert signal output when counter match this value"]
+    #[doc = "Deassert signal output when counter match this value."]
     #[inline(always)]
     pub const fn set_clr_cnt(&mut self, val: super::vals::Pigeon21ClrCnt) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val.to_bits() as u32) & 0xffff) << 16usize);
@@ -3915,31 +3915,31 @@ impl defmt::Format for Pigeon21 {
         )
     }
 }
-#[doc = "Panel Interface Signal Generator Register"]
+#[doc = "Panel Interface Signal Generator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeon22(pub u32);
 impl Pigeon22 {
-    #[doc = "Logic operation with another signal: DIS/AND/OR/COND"]
+    #[doc = "Logic operation with another signal: DIS/AND/OR/COND."]
     #[must_use]
     #[inline(always)]
     pub const fn sig_logic(&self) -> super::vals::Pigeon22SigLogic {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Pigeon22SigLogic::from_bits(val as u8)
     }
-    #[doc = "Logic operation with another signal: DIS/AND/OR/COND"]
+    #[doc = "Logic operation with another signal: DIS/AND/OR/COND."]
     #[inline(always)]
     pub const fn set_sig_logic(&mut self, val: super::vals::Pigeon22SigLogic) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Select another signal for logic operation or as mask or counter tick event"]
+    #[doc = "Select another signal for logic operation or as mask or counter tick event."]
     #[must_use]
     #[inline(always)]
     pub const fn sig_another(&self) -> super::vals::Pigeon22SigAnother {
         let val = (self.0 >> 4usize) & 0x1f;
         super::vals::Pigeon22SigAnother::from_bits(val as u8)
     }
-    #[doc = "Select another signal for logic operation or as mask or counter tick event"]
+    #[doc = "Select another signal for logic operation or as mask or counter tick event."]
     #[inline(always)]
     pub const fn set_sig_another(&mut self, val: super::vals::Pigeon22SigAnother) {
         self.0 = (self.0 & !(0x1f << 4usize)) | (((val.to_bits() as u32) & 0x1f) << 4usize);
@@ -3970,91 +3970,91 @@ impl defmt::Format for Pigeon22 {
         )
     }
 }
-#[doc = "Panel Interface Signal Generator Register"]
+#[doc = "Panel Interface Signal Generator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeon30(pub u32);
 impl Pigeon30 {
-    #[doc = "Enable pigeon Mode on this signal"]
+    #[doc = "Enable pigeon Mode on this signal."]
     #[must_use]
     #[inline(always)]
     pub const fn en(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable pigeon Mode on this signal"]
+    #[doc = "Enable pigeon Mode on this signal."]
     #[inline(always)]
     pub const fn set_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Polarity of signal output"]
+    #[doc = "Polarity of signal output."]
     #[must_use]
     #[inline(always)]
     pub const fn pol(&self) -> super::vals::Pigeon30Pol {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Pigeon30Pol::from_bits(val as u8)
     }
-    #[doc = "Polarity of signal output"]
+    #[doc = "Polarity of signal output."]
     #[inline(always)]
     pub const fn set_pol(&mut self, val: super::vals::Pigeon30Pol) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Event to incrment local counter"]
+    #[doc = "Event to incrment local counter."]
     #[must_use]
     #[inline(always)]
     pub const fn inc_sel(&self) -> super::vals::Pigeon30IncSel {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::Pigeon30IncSel::from_bits(val as u8)
     }
-    #[doc = "Event to incrment local counter"]
+    #[doc = "Event to incrment local counter."]
     #[inline(always)]
     pub const fn set_inc_sel(&mut self, val: super::vals::Pigeon30IncSel) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
-    #[doc = "offset on pclk unit"]
+    #[doc = "offset on pclk unit."]
     #[must_use]
     #[inline(always)]
     pub const fn offset(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x0f;
         val as u8
     }
-    #[doc = "offset on pclk unit"]
+    #[doc = "offset on pclk unit."]
     #[inline(always)]
     pub const fn set_offset(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
     }
-    #[doc = "select global counters as mask condition, use together with MASK_CNT"]
+    #[doc = "select global counters as mask condition, use together with MASK_CNT."]
     #[must_use]
     #[inline(always)]
     pub const fn mask_cnt_sel(&self) -> super::vals::Pigeon30MaskCntSel {
         let val = (self.0 >> 8usize) & 0x0f;
         super::vals::Pigeon30MaskCntSel::from_bits(val as u8)
     }
-    #[doc = "select global counters as mask condition, use together with MASK_CNT"]
+    #[doc = "select global counters as mask condition, use together with MASK_CNT."]
     #[inline(always)]
     pub const fn set_mask_cnt_sel(&mut self, val: super::vals::Pigeon30MaskCntSel) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
-    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking"]
+    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking."]
     #[must_use]
     #[inline(always)]
     pub const fn mask_cnt(&self) -> u16 {
         let val = (self.0 >> 12usize) & 0x0fff;
         val as u16
     }
-    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking"]
+    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking."]
     #[inline(always)]
     pub const fn set_mask_cnt(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 12usize)) | (((val as u32) & 0x0fff) << 12usize);
     }
-    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking"]
+    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking."]
     #[must_use]
     #[inline(always)]
     pub const fn state_mask(&self) -> super::vals::Pigeon30StateMask {
         let val = (self.0 >> 24usize) & 0xff;
         super::vals::Pigeon30StateMask::from_bits(val as u8)
     }
-    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking"]
+    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking."]
     #[inline(always)]
     pub const fn set_state_mask(&mut self, val: super::vals::Pigeon30StateMask) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val.to_bits() as u32) & 0xff) << 24usize);
@@ -4095,31 +4095,31 @@ impl defmt::Format for Pigeon30 {
         )
     }
 }
-#[doc = "Panel Interface Signal Generator Register"]
+#[doc = "Panel Interface Signal Generator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeon31(pub u32);
 impl Pigeon31 {
-    #[doc = "Assert signal output when counter match this value"]
+    #[doc = "Assert signal output when counter match this value."]
     #[must_use]
     #[inline(always)]
     pub const fn set_cnt(&self) -> super::vals::Pigeon31SetCnt {
         let val = (self.0 >> 0usize) & 0xffff;
         super::vals::Pigeon31SetCnt::from_bits(val as u16)
     }
-    #[doc = "Assert signal output when counter match this value"]
+    #[doc = "Assert signal output when counter match this value."]
     #[inline(always)]
     pub const fn set_set_cnt(&mut self, val: super::vals::Pigeon31SetCnt) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val.to_bits() as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Deassert signal output when counter match this value"]
+    #[doc = "Deassert signal output when counter match this value."]
     #[must_use]
     #[inline(always)]
     pub const fn clr_cnt(&self) -> super::vals::Pigeon31ClrCnt {
         let val = (self.0 >> 16usize) & 0xffff;
         super::vals::Pigeon31ClrCnt::from_bits(val as u16)
     }
-    #[doc = "Deassert signal output when counter match this value"]
+    #[doc = "Deassert signal output when counter match this value."]
     #[inline(always)]
     pub const fn set_clr_cnt(&mut self, val: super::vals::Pigeon31ClrCnt) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val.to_bits() as u32) & 0xffff) << 16usize);
@@ -4150,31 +4150,31 @@ impl defmt::Format for Pigeon31 {
         )
     }
 }
-#[doc = "Panel Interface Signal Generator Register"]
+#[doc = "Panel Interface Signal Generator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeon32(pub u32);
 impl Pigeon32 {
-    #[doc = "Logic operation with another signal: DIS/AND/OR/COND"]
+    #[doc = "Logic operation with another signal: DIS/AND/OR/COND."]
     #[must_use]
     #[inline(always)]
     pub const fn sig_logic(&self) -> super::vals::Pigeon32SigLogic {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Pigeon32SigLogic::from_bits(val as u8)
     }
-    #[doc = "Logic operation with another signal: DIS/AND/OR/COND"]
+    #[doc = "Logic operation with another signal: DIS/AND/OR/COND."]
     #[inline(always)]
     pub const fn set_sig_logic(&mut self, val: super::vals::Pigeon32SigLogic) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Select another signal for logic operation or as mask or counter tick event"]
+    #[doc = "Select another signal for logic operation or as mask or counter tick event."]
     #[must_use]
     #[inline(always)]
     pub const fn sig_another(&self) -> super::vals::Pigeon32SigAnother {
         let val = (self.0 >> 4usize) & 0x1f;
         super::vals::Pigeon32SigAnother::from_bits(val as u8)
     }
-    #[doc = "Select another signal for logic operation or as mask or counter tick event"]
+    #[doc = "Select another signal for logic operation or as mask or counter tick event."]
     #[inline(always)]
     pub const fn set_sig_another(&mut self, val: super::vals::Pigeon32SigAnother) {
         self.0 = (self.0 & !(0x1f << 4usize)) | (((val.to_bits() as u32) & 0x1f) << 4usize);
@@ -4205,91 +4205,91 @@ impl defmt::Format for Pigeon32 {
         )
     }
 }
-#[doc = "Panel Interface Signal Generator Register"]
+#[doc = "Panel Interface Signal Generator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeon40(pub u32);
 impl Pigeon40 {
-    #[doc = "Enable pigeon Mode on this signal"]
+    #[doc = "Enable pigeon Mode on this signal."]
     #[must_use]
     #[inline(always)]
     pub const fn en(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable pigeon Mode on this signal"]
+    #[doc = "Enable pigeon Mode on this signal."]
     #[inline(always)]
     pub const fn set_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Polarity of signal output"]
+    #[doc = "Polarity of signal output."]
     #[must_use]
     #[inline(always)]
     pub const fn pol(&self) -> super::vals::Pigeon40Pol {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Pigeon40Pol::from_bits(val as u8)
     }
-    #[doc = "Polarity of signal output"]
+    #[doc = "Polarity of signal output."]
     #[inline(always)]
     pub const fn set_pol(&mut self, val: super::vals::Pigeon40Pol) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Event to incrment local counter"]
+    #[doc = "Event to incrment local counter."]
     #[must_use]
     #[inline(always)]
     pub const fn inc_sel(&self) -> super::vals::Pigeon40IncSel {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::Pigeon40IncSel::from_bits(val as u8)
     }
-    #[doc = "Event to incrment local counter"]
+    #[doc = "Event to incrment local counter."]
     #[inline(always)]
     pub const fn set_inc_sel(&mut self, val: super::vals::Pigeon40IncSel) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
-    #[doc = "offset on pclk unit"]
+    #[doc = "offset on pclk unit."]
     #[must_use]
     #[inline(always)]
     pub const fn offset(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x0f;
         val as u8
     }
-    #[doc = "offset on pclk unit"]
+    #[doc = "offset on pclk unit."]
     #[inline(always)]
     pub const fn set_offset(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
     }
-    #[doc = "select global counters as mask condition, use together with MASK_CNT"]
+    #[doc = "select global counters as mask condition, use together with MASK_CNT."]
     #[must_use]
     #[inline(always)]
     pub const fn mask_cnt_sel(&self) -> super::vals::Pigeon40MaskCntSel {
         let val = (self.0 >> 8usize) & 0x0f;
         super::vals::Pigeon40MaskCntSel::from_bits(val as u8)
     }
-    #[doc = "select global counters as mask condition, use together with MASK_CNT"]
+    #[doc = "select global counters as mask condition, use together with MASK_CNT."]
     #[inline(always)]
     pub const fn set_mask_cnt_sel(&mut self, val: super::vals::Pigeon40MaskCntSel) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
-    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking"]
+    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking."]
     #[must_use]
     #[inline(always)]
     pub const fn mask_cnt(&self) -> u16 {
         let val = (self.0 >> 12usize) & 0x0fff;
         val as u16
     }
-    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking"]
+    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking."]
     #[inline(always)]
     pub const fn set_mask_cnt(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 12usize)) | (((val as u32) & 0x0fff) << 12usize);
     }
-    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking"]
+    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking."]
     #[must_use]
     #[inline(always)]
     pub const fn state_mask(&self) -> super::vals::Pigeon40StateMask {
         let val = (self.0 >> 24usize) & 0xff;
         super::vals::Pigeon40StateMask::from_bits(val as u8)
     }
-    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking"]
+    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking."]
     #[inline(always)]
     pub const fn set_state_mask(&mut self, val: super::vals::Pigeon40StateMask) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val.to_bits() as u32) & 0xff) << 24usize);
@@ -4330,31 +4330,31 @@ impl defmt::Format for Pigeon40 {
         )
     }
 }
-#[doc = "Panel Interface Signal Generator Register"]
+#[doc = "Panel Interface Signal Generator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeon41(pub u32);
 impl Pigeon41 {
-    #[doc = "Assert signal output when counter match this value"]
+    #[doc = "Assert signal output when counter match this value."]
     #[must_use]
     #[inline(always)]
     pub const fn set_cnt(&self) -> super::vals::Pigeon41SetCnt {
         let val = (self.0 >> 0usize) & 0xffff;
         super::vals::Pigeon41SetCnt::from_bits(val as u16)
     }
-    #[doc = "Assert signal output when counter match this value"]
+    #[doc = "Assert signal output when counter match this value."]
     #[inline(always)]
     pub const fn set_set_cnt(&mut self, val: super::vals::Pigeon41SetCnt) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val.to_bits() as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Deassert signal output when counter match this value"]
+    #[doc = "Deassert signal output when counter match this value."]
     #[must_use]
     #[inline(always)]
     pub const fn clr_cnt(&self) -> super::vals::Pigeon41ClrCnt {
         let val = (self.0 >> 16usize) & 0xffff;
         super::vals::Pigeon41ClrCnt::from_bits(val as u16)
     }
-    #[doc = "Deassert signal output when counter match this value"]
+    #[doc = "Deassert signal output when counter match this value."]
     #[inline(always)]
     pub const fn set_clr_cnt(&mut self, val: super::vals::Pigeon41ClrCnt) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val.to_bits() as u32) & 0xffff) << 16usize);
@@ -4385,31 +4385,31 @@ impl defmt::Format for Pigeon41 {
         )
     }
 }
-#[doc = "Panel Interface Signal Generator Register"]
+#[doc = "Panel Interface Signal Generator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeon42(pub u32);
 impl Pigeon42 {
-    #[doc = "Logic operation with another signal: DIS/AND/OR/COND"]
+    #[doc = "Logic operation with another signal: DIS/AND/OR/COND."]
     #[must_use]
     #[inline(always)]
     pub const fn sig_logic(&self) -> super::vals::Pigeon42SigLogic {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Pigeon42SigLogic::from_bits(val as u8)
     }
-    #[doc = "Logic operation with another signal: DIS/AND/OR/COND"]
+    #[doc = "Logic operation with another signal: DIS/AND/OR/COND."]
     #[inline(always)]
     pub const fn set_sig_logic(&mut self, val: super::vals::Pigeon42SigLogic) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Select another signal for logic operation or as mask or counter tick event"]
+    #[doc = "Select another signal for logic operation or as mask or counter tick event."]
     #[must_use]
     #[inline(always)]
     pub const fn sig_another(&self) -> super::vals::Pigeon42SigAnother {
         let val = (self.0 >> 4usize) & 0x1f;
         super::vals::Pigeon42SigAnother::from_bits(val as u8)
     }
-    #[doc = "Select another signal for logic operation or as mask or counter tick event"]
+    #[doc = "Select another signal for logic operation or as mask or counter tick event."]
     #[inline(always)]
     pub const fn set_sig_another(&mut self, val: super::vals::Pigeon42SigAnother) {
         self.0 = (self.0 & !(0x1f << 4usize)) | (((val.to_bits() as u32) & 0x1f) << 4usize);
@@ -4440,91 +4440,91 @@ impl defmt::Format for Pigeon42 {
         )
     }
 }
-#[doc = "Panel Interface Signal Generator Register"]
+#[doc = "Panel Interface Signal Generator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeon50(pub u32);
 impl Pigeon50 {
-    #[doc = "Enable pigeon Mode on this signal"]
+    #[doc = "Enable pigeon Mode on this signal."]
     #[must_use]
     #[inline(always)]
     pub const fn en(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable pigeon Mode on this signal"]
+    #[doc = "Enable pigeon Mode on this signal."]
     #[inline(always)]
     pub const fn set_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Polarity of signal output"]
+    #[doc = "Polarity of signal output."]
     #[must_use]
     #[inline(always)]
     pub const fn pol(&self) -> super::vals::Pigeon50Pol {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Pigeon50Pol::from_bits(val as u8)
     }
-    #[doc = "Polarity of signal output"]
+    #[doc = "Polarity of signal output."]
     #[inline(always)]
     pub const fn set_pol(&mut self, val: super::vals::Pigeon50Pol) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Event to incrment local counter"]
+    #[doc = "Event to incrment local counter."]
     #[must_use]
     #[inline(always)]
     pub const fn inc_sel(&self) -> super::vals::Pigeon50IncSel {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::Pigeon50IncSel::from_bits(val as u8)
     }
-    #[doc = "Event to incrment local counter"]
+    #[doc = "Event to incrment local counter."]
     #[inline(always)]
     pub const fn set_inc_sel(&mut self, val: super::vals::Pigeon50IncSel) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
-    #[doc = "offset on pclk unit"]
+    #[doc = "offset on pclk unit."]
     #[must_use]
     #[inline(always)]
     pub const fn offset(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x0f;
         val as u8
     }
-    #[doc = "offset on pclk unit"]
+    #[doc = "offset on pclk unit."]
     #[inline(always)]
     pub const fn set_offset(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
     }
-    #[doc = "select global counters as mask condition, use together with MASK_CNT"]
+    #[doc = "select global counters as mask condition, use together with MASK_CNT."]
     #[must_use]
     #[inline(always)]
     pub const fn mask_cnt_sel(&self) -> super::vals::Pigeon50MaskCntSel {
         let val = (self.0 >> 8usize) & 0x0f;
         super::vals::Pigeon50MaskCntSel::from_bits(val as u8)
     }
-    #[doc = "select global counters as mask condition, use together with MASK_CNT"]
+    #[doc = "select global counters as mask condition, use together with MASK_CNT."]
     #[inline(always)]
     pub const fn set_mask_cnt_sel(&mut self, val: super::vals::Pigeon50MaskCntSel) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
-    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking"]
+    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking."]
     #[must_use]
     #[inline(always)]
     pub const fn mask_cnt(&self) -> u16 {
         let val = (self.0 >> 12usize) & 0x0fff;
         val as u16
     }
-    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking"]
+    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking."]
     #[inline(always)]
     pub const fn set_mask_cnt(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 12usize)) | (((val as u32) & 0x0fff) << 12usize);
     }
-    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking"]
+    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking."]
     #[must_use]
     #[inline(always)]
     pub const fn state_mask(&self) -> super::vals::Pigeon50StateMask {
         let val = (self.0 >> 24usize) & 0xff;
         super::vals::Pigeon50StateMask::from_bits(val as u8)
     }
-    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking"]
+    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking."]
     #[inline(always)]
     pub const fn set_state_mask(&mut self, val: super::vals::Pigeon50StateMask) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val.to_bits() as u32) & 0xff) << 24usize);
@@ -4565,31 +4565,31 @@ impl defmt::Format for Pigeon50 {
         )
     }
 }
-#[doc = "Panel Interface Signal Generator Register"]
+#[doc = "Panel Interface Signal Generator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeon51(pub u32);
 impl Pigeon51 {
-    #[doc = "Assert signal output when counter match this value"]
+    #[doc = "Assert signal output when counter match this value."]
     #[must_use]
     #[inline(always)]
     pub const fn set_cnt(&self) -> super::vals::Pigeon51SetCnt {
         let val = (self.0 >> 0usize) & 0xffff;
         super::vals::Pigeon51SetCnt::from_bits(val as u16)
     }
-    #[doc = "Assert signal output when counter match this value"]
+    #[doc = "Assert signal output when counter match this value."]
     #[inline(always)]
     pub const fn set_set_cnt(&mut self, val: super::vals::Pigeon51SetCnt) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val.to_bits() as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Deassert signal output when counter match this value"]
+    #[doc = "Deassert signal output when counter match this value."]
     #[must_use]
     #[inline(always)]
     pub const fn clr_cnt(&self) -> super::vals::Pigeon51ClrCnt {
         let val = (self.0 >> 16usize) & 0xffff;
         super::vals::Pigeon51ClrCnt::from_bits(val as u16)
     }
-    #[doc = "Deassert signal output when counter match this value"]
+    #[doc = "Deassert signal output when counter match this value."]
     #[inline(always)]
     pub const fn set_clr_cnt(&mut self, val: super::vals::Pigeon51ClrCnt) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val.to_bits() as u32) & 0xffff) << 16usize);
@@ -4620,31 +4620,31 @@ impl defmt::Format for Pigeon51 {
         )
     }
 }
-#[doc = "Panel Interface Signal Generator Register"]
+#[doc = "Panel Interface Signal Generator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeon52(pub u32);
 impl Pigeon52 {
-    #[doc = "Logic operation with another signal: DIS/AND/OR/COND"]
+    #[doc = "Logic operation with another signal: DIS/AND/OR/COND."]
     #[must_use]
     #[inline(always)]
     pub const fn sig_logic(&self) -> super::vals::Pigeon52SigLogic {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Pigeon52SigLogic::from_bits(val as u8)
     }
-    #[doc = "Logic operation with another signal: DIS/AND/OR/COND"]
+    #[doc = "Logic operation with another signal: DIS/AND/OR/COND."]
     #[inline(always)]
     pub const fn set_sig_logic(&mut self, val: super::vals::Pigeon52SigLogic) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Select another signal for logic operation or as mask or counter tick event"]
+    #[doc = "Select another signal for logic operation or as mask or counter tick event."]
     #[must_use]
     #[inline(always)]
     pub const fn sig_another(&self) -> super::vals::Pigeon52SigAnother {
         let val = (self.0 >> 4usize) & 0x1f;
         super::vals::Pigeon52SigAnother::from_bits(val as u8)
     }
-    #[doc = "Select another signal for logic operation or as mask or counter tick event"]
+    #[doc = "Select another signal for logic operation or as mask or counter tick event."]
     #[inline(always)]
     pub const fn set_sig_another(&mut self, val: super::vals::Pigeon52SigAnother) {
         self.0 = (self.0 & !(0x1f << 4usize)) | (((val.to_bits() as u32) & 0x1f) << 4usize);
@@ -4675,91 +4675,91 @@ impl defmt::Format for Pigeon52 {
         )
     }
 }
-#[doc = "Panel Interface Signal Generator Register"]
+#[doc = "Panel Interface Signal Generator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeon60(pub u32);
 impl Pigeon60 {
-    #[doc = "Enable pigeon Mode on this signal"]
+    #[doc = "Enable pigeon Mode on this signal."]
     #[must_use]
     #[inline(always)]
     pub const fn en(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable pigeon Mode on this signal"]
+    #[doc = "Enable pigeon Mode on this signal."]
     #[inline(always)]
     pub const fn set_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Polarity of signal output"]
+    #[doc = "Polarity of signal output."]
     #[must_use]
     #[inline(always)]
     pub const fn pol(&self) -> super::vals::Pigeon60Pol {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Pigeon60Pol::from_bits(val as u8)
     }
-    #[doc = "Polarity of signal output"]
+    #[doc = "Polarity of signal output."]
     #[inline(always)]
     pub const fn set_pol(&mut self, val: super::vals::Pigeon60Pol) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Event to incrment local counter"]
+    #[doc = "Event to incrment local counter."]
     #[must_use]
     #[inline(always)]
     pub const fn inc_sel(&self) -> super::vals::Pigeon60IncSel {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::Pigeon60IncSel::from_bits(val as u8)
     }
-    #[doc = "Event to incrment local counter"]
+    #[doc = "Event to incrment local counter."]
     #[inline(always)]
     pub const fn set_inc_sel(&mut self, val: super::vals::Pigeon60IncSel) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
-    #[doc = "offset on pclk unit"]
+    #[doc = "offset on pclk unit."]
     #[must_use]
     #[inline(always)]
     pub const fn offset(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x0f;
         val as u8
     }
-    #[doc = "offset on pclk unit"]
+    #[doc = "offset on pclk unit."]
     #[inline(always)]
     pub const fn set_offset(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
     }
-    #[doc = "select global counters as mask condition, use together with MASK_CNT"]
+    #[doc = "select global counters as mask condition, use together with MASK_CNT."]
     #[must_use]
     #[inline(always)]
     pub const fn mask_cnt_sel(&self) -> super::vals::Pigeon60MaskCntSel {
         let val = (self.0 >> 8usize) & 0x0f;
         super::vals::Pigeon60MaskCntSel::from_bits(val as u8)
     }
-    #[doc = "select global counters as mask condition, use together with MASK_CNT"]
+    #[doc = "select global counters as mask condition, use together with MASK_CNT."]
     #[inline(always)]
     pub const fn set_mask_cnt_sel(&mut self, val: super::vals::Pigeon60MaskCntSel) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
-    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking"]
+    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking."]
     #[must_use]
     #[inline(always)]
     pub const fn mask_cnt(&self) -> u16 {
         let val = (self.0 >> 12usize) & 0x0fff;
         val as u16
     }
-    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking"]
+    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking."]
     #[inline(always)]
     pub const fn set_mask_cnt(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 12usize)) | (((val as u32) & 0x0fff) << 12usize);
     }
-    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking"]
+    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking."]
     #[must_use]
     #[inline(always)]
     pub const fn state_mask(&self) -> super::vals::Pigeon60StateMask {
         let val = (self.0 >> 24usize) & 0xff;
         super::vals::Pigeon60StateMask::from_bits(val as u8)
     }
-    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking"]
+    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking."]
     #[inline(always)]
     pub const fn set_state_mask(&mut self, val: super::vals::Pigeon60StateMask) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val.to_bits() as u32) & 0xff) << 24usize);
@@ -4800,31 +4800,31 @@ impl defmt::Format for Pigeon60 {
         )
     }
 }
-#[doc = "Panel Interface Signal Generator Register"]
+#[doc = "Panel Interface Signal Generator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeon61(pub u32);
 impl Pigeon61 {
-    #[doc = "Assert signal output when counter match this value"]
+    #[doc = "Assert signal output when counter match this value."]
     #[must_use]
     #[inline(always)]
     pub const fn set_cnt(&self) -> super::vals::Pigeon61SetCnt {
         let val = (self.0 >> 0usize) & 0xffff;
         super::vals::Pigeon61SetCnt::from_bits(val as u16)
     }
-    #[doc = "Assert signal output when counter match this value"]
+    #[doc = "Assert signal output when counter match this value."]
     #[inline(always)]
     pub const fn set_set_cnt(&mut self, val: super::vals::Pigeon61SetCnt) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val.to_bits() as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Deassert signal output when counter match this value"]
+    #[doc = "Deassert signal output when counter match this value."]
     #[must_use]
     #[inline(always)]
     pub const fn clr_cnt(&self) -> super::vals::Pigeon61ClrCnt {
         let val = (self.0 >> 16usize) & 0xffff;
         super::vals::Pigeon61ClrCnt::from_bits(val as u16)
     }
-    #[doc = "Deassert signal output when counter match this value"]
+    #[doc = "Deassert signal output when counter match this value."]
     #[inline(always)]
     pub const fn set_clr_cnt(&mut self, val: super::vals::Pigeon61ClrCnt) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val.to_bits() as u32) & 0xffff) << 16usize);
@@ -4855,31 +4855,31 @@ impl defmt::Format for Pigeon61 {
         )
     }
 }
-#[doc = "Panel Interface Signal Generator Register"]
+#[doc = "Panel Interface Signal Generator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeon62(pub u32);
 impl Pigeon62 {
-    #[doc = "Logic operation with another signal: DIS/AND/OR/COND"]
+    #[doc = "Logic operation with another signal: DIS/AND/OR/COND."]
     #[must_use]
     #[inline(always)]
     pub const fn sig_logic(&self) -> super::vals::Pigeon62SigLogic {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Pigeon62SigLogic::from_bits(val as u8)
     }
-    #[doc = "Logic operation with another signal: DIS/AND/OR/COND"]
+    #[doc = "Logic operation with another signal: DIS/AND/OR/COND."]
     #[inline(always)]
     pub const fn set_sig_logic(&mut self, val: super::vals::Pigeon62SigLogic) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Select another signal for logic operation or as mask or counter tick event"]
+    #[doc = "Select another signal for logic operation or as mask or counter tick event."]
     #[must_use]
     #[inline(always)]
     pub const fn sig_another(&self) -> super::vals::Pigeon62SigAnother {
         let val = (self.0 >> 4usize) & 0x1f;
         super::vals::Pigeon62SigAnother::from_bits(val as u8)
     }
-    #[doc = "Select another signal for logic operation or as mask or counter tick event"]
+    #[doc = "Select another signal for logic operation or as mask or counter tick event."]
     #[inline(always)]
     pub const fn set_sig_another(&mut self, val: super::vals::Pigeon62SigAnother) {
         self.0 = (self.0 & !(0x1f << 4usize)) | (((val.to_bits() as u32) & 0x1f) << 4usize);
@@ -4910,91 +4910,91 @@ impl defmt::Format for Pigeon62 {
         )
     }
 }
-#[doc = "Panel Interface Signal Generator Register"]
+#[doc = "Panel Interface Signal Generator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeon70(pub u32);
 impl Pigeon70 {
-    #[doc = "Enable pigeon Mode on this signal"]
+    #[doc = "Enable pigeon Mode on this signal."]
     #[must_use]
     #[inline(always)]
     pub const fn en(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable pigeon Mode on this signal"]
+    #[doc = "Enable pigeon Mode on this signal."]
     #[inline(always)]
     pub const fn set_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Polarity of signal output"]
+    #[doc = "Polarity of signal output."]
     #[must_use]
     #[inline(always)]
     pub const fn pol(&self) -> super::vals::Pigeon70Pol {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Pigeon70Pol::from_bits(val as u8)
     }
-    #[doc = "Polarity of signal output"]
+    #[doc = "Polarity of signal output."]
     #[inline(always)]
     pub const fn set_pol(&mut self, val: super::vals::Pigeon70Pol) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Event to incrment local counter"]
+    #[doc = "Event to incrment local counter."]
     #[must_use]
     #[inline(always)]
     pub const fn inc_sel(&self) -> super::vals::Pigeon70IncSel {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::Pigeon70IncSel::from_bits(val as u8)
     }
-    #[doc = "Event to incrment local counter"]
+    #[doc = "Event to incrment local counter."]
     #[inline(always)]
     pub const fn set_inc_sel(&mut self, val: super::vals::Pigeon70IncSel) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
-    #[doc = "offset on pclk unit"]
+    #[doc = "offset on pclk unit."]
     #[must_use]
     #[inline(always)]
     pub const fn offset(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x0f;
         val as u8
     }
-    #[doc = "offset on pclk unit"]
+    #[doc = "offset on pclk unit."]
     #[inline(always)]
     pub const fn set_offset(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
     }
-    #[doc = "select global counters as mask condition, use together with MASK_CNT"]
+    #[doc = "select global counters as mask condition, use together with MASK_CNT."]
     #[must_use]
     #[inline(always)]
     pub const fn mask_cnt_sel(&self) -> super::vals::Pigeon70MaskCntSel {
         let val = (self.0 >> 8usize) & 0x0f;
         super::vals::Pigeon70MaskCntSel::from_bits(val as u8)
     }
-    #[doc = "select global counters as mask condition, use together with MASK_CNT"]
+    #[doc = "select global counters as mask condition, use together with MASK_CNT."]
     #[inline(always)]
     pub const fn set_mask_cnt_sel(&mut self, val: super::vals::Pigeon70MaskCntSel) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
-    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking"]
+    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking."]
     #[must_use]
     #[inline(always)]
     pub const fn mask_cnt(&self) -> u16 {
         let val = (self.0 >> 12usize) & 0x0fff;
         val as u16
     }
-    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking"]
+    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking."]
     #[inline(always)]
     pub const fn set_mask_cnt(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 12usize)) | (((val as u32) & 0x0fff) << 12usize);
     }
-    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking"]
+    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking."]
     #[must_use]
     #[inline(always)]
     pub const fn state_mask(&self) -> super::vals::Pigeon70StateMask {
         let val = (self.0 >> 24usize) & 0xff;
         super::vals::Pigeon70StateMask::from_bits(val as u8)
     }
-    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking"]
+    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking."]
     #[inline(always)]
     pub const fn set_state_mask(&mut self, val: super::vals::Pigeon70StateMask) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val.to_bits() as u32) & 0xff) << 24usize);
@@ -5035,31 +5035,31 @@ impl defmt::Format for Pigeon70 {
         )
     }
 }
-#[doc = "Panel Interface Signal Generator Register"]
+#[doc = "Panel Interface Signal Generator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeon71(pub u32);
 impl Pigeon71 {
-    #[doc = "Assert signal output when counter match this value"]
+    #[doc = "Assert signal output when counter match this value."]
     #[must_use]
     #[inline(always)]
     pub const fn set_cnt(&self) -> super::vals::Pigeon71SetCnt {
         let val = (self.0 >> 0usize) & 0xffff;
         super::vals::Pigeon71SetCnt::from_bits(val as u16)
     }
-    #[doc = "Assert signal output when counter match this value"]
+    #[doc = "Assert signal output when counter match this value."]
     #[inline(always)]
     pub const fn set_set_cnt(&mut self, val: super::vals::Pigeon71SetCnt) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val.to_bits() as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Deassert signal output when counter match this value"]
+    #[doc = "Deassert signal output when counter match this value."]
     #[must_use]
     #[inline(always)]
     pub const fn clr_cnt(&self) -> super::vals::Pigeon71ClrCnt {
         let val = (self.0 >> 16usize) & 0xffff;
         super::vals::Pigeon71ClrCnt::from_bits(val as u16)
     }
-    #[doc = "Deassert signal output when counter match this value"]
+    #[doc = "Deassert signal output when counter match this value."]
     #[inline(always)]
     pub const fn set_clr_cnt(&mut self, val: super::vals::Pigeon71ClrCnt) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val.to_bits() as u32) & 0xffff) << 16usize);
@@ -5090,31 +5090,31 @@ impl defmt::Format for Pigeon71 {
         )
     }
 }
-#[doc = "Panel Interface Signal Generator Register"]
+#[doc = "Panel Interface Signal Generator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeon72(pub u32);
 impl Pigeon72 {
-    #[doc = "Logic operation with another signal: DIS/AND/OR/COND"]
+    #[doc = "Logic operation with another signal: DIS/AND/OR/COND."]
     #[must_use]
     #[inline(always)]
     pub const fn sig_logic(&self) -> super::vals::Pigeon72SigLogic {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Pigeon72SigLogic::from_bits(val as u8)
     }
-    #[doc = "Logic operation with another signal: DIS/AND/OR/COND"]
+    #[doc = "Logic operation with another signal: DIS/AND/OR/COND."]
     #[inline(always)]
     pub const fn set_sig_logic(&mut self, val: super::vals::Pigeon72SigLogic) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Select another signal for logic operation or as mask or counter tick event"]
+    #[doc = "Select another signal for logic operation or as mask or counter tick event."]
     #[must_use]
     #[inline(always)]
     pub const fn sig_another(&self) -> super::vals::Pigeon72SigAnother {
         let val = (self.0 >> 4usize) & 0x1f;
         super::vals::Pigeon72SigAnother::from_bits(val as u8)
     }
-    #[doc = "Select another signal for logic operation or as mask or counter tick event"]
+    #[doc = "Select another signal for logic operation or as mask or counter tick event."]
     #[inline(always)]
     pub const fn set_sig_another(&mut self, val: super::vals::Pigeon72SigAnother) {
         self.0 = (self.0 & !(0x1f << 4usize)) | (((val.to_bits() as u32) & 0x1f) << 4usize);
@@ -5145,91 +5145,91 @@ impl defmt::Format for Pigeon72 {
         )
     }
 }
-#[doc = "Panel Interface Signal Generator Register"]
+#[doc = "Panel Interface Signal Generator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeon80(pub u32);
 impl Pigeon80 {
-    #[doc = "Enable pigeon Mode on this signal"]
+    #[doc = "Enable pigeon Mode on this signal."]
     #[must_use]
     #[inline(always)]
     pub const fn en(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable pigeon Mode on this signal"]
+    #[doc = "Enable pigeon Mode on this signal."]
     #[inline(always)]
     pub const fn set_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Polarity of signal output"]
+    #[doc = "Polarity of signal output."]
     #[must_use]
     #[inline(always)]
     pub const fn pol(&self) -> super::vals::Pigeon80Pol {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Pigeon80Pol::from_bits(val as u8)
     }
-    #[doc = "Polarity of signal output"]
+    #[doc = "Polarity of signal output."]
     #[inline(always)]
     pub const fn set_pol(&mut self, val: super::vals::Pigeon80Pol) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Event to incrment local counter"]
+    #[doc = "Event to incrment local counter."]
     #[must_use]
     #[inline(always)]
     pub const fn inc_sel(&self) -> super::vals::Pigeon80IncSel {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::Pigeon80IncSel::from_bits(val as u8)
     }
-    #[doc = "Event to incrment local counter"]
+    #[doc = "Event to incrment local counter."]
     #[inline(always)]
     pub const fn set_inc_sel(&mut self, val: super::vals::Pigeon80IncSel) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
-    #[doc = "offset on pclk unit"]
+    #[doc = "offset on pclk unit."]
     #[must_use]
     #[inline(always)]
     pub const fn offset(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x0f;
         val as u8
     }
-    #[doc = "offset on pclk unit"]
+    #[doc = "offset on pclk unit."]
     #[inline(always)]
     pub const fn set_offset(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
     }
-    #[doc = "select global counters as mask condition, use together with MASK_CNT"]
+    #[doc = "select global counters as mask condition, use together with MASK_CNT."]
     #[must_use]
     #[inline(always)]
     pub const fn mask_cnt_sel(&self) -> super::vals::Pigeon80MaskCntSel {
         let val = (self.0 >> 8usize) & 0x0f;
         super::vals::Pigeon80MaskCntSel::from_bits(val as u8)
     }
-    #[doc = "select global counters as mask condition, use together with MASK_CNT"]
+    #[doc = "select global counters as mask condition, use together with MASK_CNT."]
     #[inline(always)]
     pub const fn set_mask_cnt_sel(&mut self, val: super::vals::Pigeon80MaskCntSel) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
-    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking"]
+    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking."]
     #[must_use]
     #[inline(always)]
     pub const fn mask_cnt(&self) -> u16 {
         let val = (self.0 >> 12usize) & 0x0fff;
         val as u16
     }
-    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking"]
+    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking."]
     #[inline(always)]
     pub const fn set_mask_cnt(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 12usize)) | (((val as u32) & 0x0fff) << 12usize);
     }
-    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking"]
+    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking."]
     #[must_use]
     #[inline(always)]
     pub const fn state_mask(&self) -> super::vals::Pigeon80StateMask {
         let val = (self.0 >> 24usize) & 0xff;
         super::vals::Pigeon80StateMask::from_bits(val as u8)
     }
-    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking"]
+    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking."]
     #[inline(always)]
     pub const fn set_state_mask(&mut self, val: super::vals::Pigeon80StateMask) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val.to_bits() as u32) & 0xff) << 24usize);
@@ -5270,31 +5270,31 @@ impl defmt::Format for Pigeon80 {
         )
     }
 }
-#[doc = "Panel Interface Signal Generator Register"]
+#[doc = "Panel Interface Signal Generator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeon81(pub u32);
 impl Pigeon81 {
-    #[doc = "Assert signal output when counter match this value"]
+    #[doc = "Assert signal output when counter match this value."]
     #[must_use]
     #[inline(always)]
     pub const fn set_cnt(&self) -> super::vals::Pigeon81SetCnt {
         let val = (self.0 >> 0usize) & 0xffff;
         super::vals::Pigeon81SetCnt::from_bits(val as u16)
     }
-    #[doc = "Assert signal output when counter match this value"]
+    #[doc = "Assert signal output when counter match this value."]
     #[inline(always)]
     pub const fn set_set_cnt(&mut self, val: super::vals::Pigeon81SetCnt) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val.to_bits() as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Deassert signal output when counter match this value"]
+    #[doc = "Deassert signal output when counter match this value."]
     #[must_use]
     #[inline(always)]
     pub const fn clr_cnt(&self) -> super::vals::Pigeon81ClrCnt {
         let val = (self.0 >> 16usize) & 0xffff;
         super::vals::Pigeon81ClrCnt::from_bits(val as u16)
     }
-    #[doc = "Deassert signal output when counter match this value"]
+    #[doc = "Deassert signal output when counter match this value."]
     #[inline(always)]
     pub const fn set_clr_cnt(&mut self, val: super::vals::Pigeon81ClrCnt) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val.to_bits() as u32) & 0xffff) << 16usize);
@@ -5325,31 +5325,31 @@ impl defmt::Format for Pigeon81 {
         )
     }
 }
-#[doc = "Panel Interface Signal Generator Register"]
+#[doc = "Panel Interface Signal Generator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeon82(pub u32);
 impl Pigeon82 {
-    #[doc = "Logic operation with another signal: DIS/AND/OR/COND"]
+    #[doc = "Logic operation with another signal: DIS/AND/OR/COND."]
     #[must_use]
     #[inline(always)]
     pub const fn sig_logic(&self) -> super::vals::Pigeon82SigLogic {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Pigeon82SigLogic::from_bits(val as u8)
     }
-    #[doc = "Logic operation with another signal: DIS/AND/OR/COND"]
+    #[doc = "Logic operation with another signal: DIS/AND/OR/COND."]
     #[inline(always)]
     pub const fn set_sig_logic(&mut self, val: super::vals::Pigeon82SigLogic) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Select another signal for logic operation or as mask or counter tick event"]
+    #[doc = "Select another signal for logic operation or as mask or counter tick event."]
     #[must_use]
     #[inline(always)]
     pub const fn sig_another(&self) -> super::vals::Pigeon82SigAnother {
         let val = (self.0 >> 4usize) & 0x1f;
         super::vals::Pigeon82SigAnother::from_bits(val as u8)
     }
-    #[doc = "Select another signal for logic operation or as mask or counter tick event"]
+    #[doc = "Select another signal for logic operation or as mask or counter tick event."]
     #[inline(always)]
     pub const fn set_sig_another(&mut self, val: super::vals::Pigeon82SigAnother) {
         self.0 = (self.0 & !(0x1f << 4usize)) | (((val.to_bits() as u32) & 0x1f) << 4usize);
@@ -5380,91 +5380,91 @@ impl defmt::Format for Pigeon82 {
         )
     }
 }
-#[doc = "Panel Interface Signal Generator Register"]
+#[doc = "Panel Interface Signal Generator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeon90(pub u32);
 impl Pigeon90 {
-    #[doc = "Enable pigeon Mode on this signal"]
+    #[doc = "Enable pigeon Mode on this signal."]
     #[must_use]
     #[inline(always)]
     pub const fn en(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable pigeon Mode on this signal"]
+    #[doc = "Enable pigeon Mode on this signal."]
     #[inline(always)]
     pub const fn set_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Polarity of signal output"]
+    #[doc = "Polarity of signal output."]
     #[must_use]
     #[inline(always)]
     pub const fn pol(&self) -> super::vals::Pigeon90Pol {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Pigeon90Pol::from_bits(val as u8)
     }
-    #[doc = "Polarity of signal output"]
+    #[doc = "Polarity of signal output."]
     #[inline(always)]
     pub const fn set_pol(&mut self, val: super::vals::Pigeon90Pol) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Event to incrment local counter"]
+    #[doc = "Event to incrment local counter."]
     #[must_use]
     #[inline(always)]
     pub const fn inc_sel(&self) -> super::vals::Pigeon90IncSel {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::Pigeon90IncSel::from_bits(val as u8)
     }
-    #[doc = "Event to incrment local counter"]
+    #[doc = "Event to incrment local counter."]
     #[inline(always)]
     pub const fn set_inc_sel(&mut self, val: super::vals::Pigeon90IncSel) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
-    #[doc = "offset on pclk unit"]
+    #[doc = "offset on pclk unit."]
     #[must_use]
     #[inline(always)]
     pub const fn offset(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x0f;
         val as u8
     }
-    #[doc = "offset on pclk unit"]
+    #[doc = "offset on pclk unit."]
     #[inline(always)]
     pub const fn set_offset(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
     }
-    #[doc = "select global counters as mask condition, use together with MASK_CNT"]
+    #[doc = "select global counters as mask condition, use together with MASK_CNT."]
     #[must_use]
     #[inline(always)]
     pub const fn mask_cnt_sel(&self) -> super::vals::Pigeon90MaskCntSel {
         let val = (self.0 >> 8usize) & 0x0f;
         super::vals::Pigeon90MaskCntSel::from_bits(val as u8)
     }
-    #[doc = "select global counters as mask condition, use together with MASK_CNT"]
+    #[doc = "select global counters as mask condition, use together with MASK_CNT."]
     #[inline(always)]
     pub const fn set_mask_cnt_sel(&mut self, val: super::vals::Pigeon90MaskCntSel) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
-    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking"]
+    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking."]
     #[must_use]
     #[inline(always)]
     pub const fn mask_cnt(&self) -> u16 {
         let val = (self.0 >> 12usize) & 0x0fff;
         val as u16
     }
-    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking"]
+    #[doc = "When the global counter selected through MASK_CNT_SEL matches value in this reg, pigeon local counter start ticking."]
     #[inline(always)]
     pub const fn set_mask_cnt(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 12usize)) | (((val as u32) & 0x0fff) << 12usize);
     }
-    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking"]
+    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking."]
     #[must_use]
     #[inline(always)]
     pub const fn state_mask(&self) -> super::vals::Pigeon90StateMask {
         let val = (self.0 >> 24usize) & 0xff;
         super::vals::Pigeon90StateMask::from_bits(val as u8)
     }
-    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking"]
+    #[doc = "state_mask = (FS|FB|FD|FE) and (LS|LB|LD|LE) , select any combination of scan states as reference point for local counter to start ticking."]
     #[inline(always)]
     pub const fn set_state_mask(&mut self, val: super::vals::Pigeon90StateMask) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val.to_bits() as u32) & 0xff) << 24usize);
@@ -5505,31 +5505,31 @@ impl defmt::Format for Pigeon90 {
         )
     }
 }
-#[doc = "Panel Interface Signal Generator Register"]
+#[doc = "Panel Interface Signal Generator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeon91(pub u32);
 impl Pigeon91 {
-    #[doc = "Assert signal output when counter match this value"]
+    #[doc = "Assert signal output when counter match this value."]
     #[must_use]
     #[inline(always)]
     pub const fn set_cnt(&self) -> super::vals::Pigeon91SetCnt {
         let val = (self.0 >> 0usize) & 0xffff;
         super::vals::Pigeon91SetCnt::from_bits(val as u16)
     }
-    #[doc = "Assert signal output when counter match this value"]
+    #[doc = "Assert signal output when counter match this value."]
     #[inline(always)]
     pub const fn set_set_cnt(&mut self, val: super::vals::Pigeon91SetCnt) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val.to_bits() as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Deassert signal output when counter match this value"]
+    #[doc = "Deassert signal output when counter match this value."]
     #[must_use]
     #[inline(always)]
     pub const fn clr_cnt(&self) -> super::vals::Pigeon91ClrCnt {
         let val = (self.0 >> 16usize) & 0xffff;
         super::vals::Pigeon91ClrCnt::from_bits(val as u16)
     }
-    #[doc = "Deassert signal output when counter match this value"]
+    #[doc = "Deassert signal output when counter match this value."]
     #[inline(always)]
     pub const fn set_clr_cnt(&mut self, val: super::vals::Pigeon91ClrCnt) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val.to_bits() as u32) & 0xffff) << 16usize);
@@ -5560,31 +5560,31 @@ impl defmt::Format for Pigeon91 {
         )
     }
 }
-#[doc = "Panel Interface Signal Generator Register"]
+#[doc = "Panel Interface Signal Generator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeon92(pub u32);
 impl Pigeon92 {
-    #[doc = "Logic operation with another signal: DIS/AND/OR/COND"]
+    #[doc = "Logic operation with another signal: DIS/AND/OR/COND."]
     #[must_use]
     #[inline(always)]
     pub const fn sig_logic(&self) -> super::vals::Pigeon92SigLogic {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Pigeon92SigLogic::from_bits(val as u8)
     }
-    #[doc = "Logic operation with another signal: DIS/AND/OR/COND"]
+    #[doc = "Logic operation with another signal: DIS/AND/OR/COND."]
     #[inline(always)]
     pub const fn set_sig_logic(&mut self, val: super::vals::Pigeon92SigLogic) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Select another signal for logic operation or as mask or counter tick event"]
+    #[doc = "Select another signal for logic operation or as mask or counter tick event."]
     #[must_use]
     #[inline(always)]
     pub const fn sig_another(&self) -> super::vals::Pigeon92SigAnother {
         let val = (self.0 >> 4usize) & 0x1f;
         super::vals::Pigeon92SigAnother::from_bits(val as u8)
     }
-    #[doc = "Select another signal for logic operation or as mask or counter tick event"]
+    #[doc = "Select another signal for logic operation or as mask or counter tick event."]
     #[inline(always)]
     pub const fn set_sig_another(&mut self, val: super::vals::Pigeon92SigAnother) {
         self.0 = (self.0 & !(0x1f << 4usize)) | (((val.to_bits() as u32) & 0x1f) << 4usize);
@@ -5615,31 +5615,31 @@ impl defmt::Format for Pigeon92 {
         )
     }
 }
-#[doc = "LCDIF Pigeon Mode Control0 Register"]
+#[doc = "LCDIF Pigeon Mode Control0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeonctrl0(pub u32);
 impl Pigeonctrl0 {
-    #[doc = "Period of line counter during FD phase"]
+    #[doc = "Period of line counter during FD phase."]
     #[must_use]
     #[inline(always)]
     pub const fn fd_period(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Period of line counter during FD phase"]
+    #[doc = "Period of line counter during FD phase."]
     #[inline(always)]
     pub const fn set_fd_period(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
     }
-    #[doc = "Period of pclk counter during LD phase"]
+    #[doc = "Period of pclk counter during LD phase."]
     #[must_use]
     #[inline(always)]
     pub const fn ld_period(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Period of pclk counter during LD phase"]
+    #[doc = "Period of pclk counter during LD phase."]
     #[inline(always)]
     pub const fn set_ld_period(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);
@@ -5670,31 +5670,31 @@ impl defmt::Format for Pigeonctrl0 {
         )
     }
 }
-#[doc = "LCDIF Pigeon Mode Control0 Register"]
+#[doc = "LCDIF Pigeon Mode Control0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeonctrl0Clr(pub u32);
 impl Pigeonctrl0Clr {
-    #[doc = "Period of line counter during FD phase"]
+    #[doc = "Period of line counter during FD phase."]
     #[must_use]
     #[inline(always)]
     pub const fn fd_period(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Period of line counter during FD phase"]
+    #[doc = "Period of line counter during FD phase."]
     #[inline(always)]
     pub const fn set_fd_period(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
     }
-    #[doc = "Period of pclk counter during LD phase"]
+    #[doc = "Period of pclk counter during LD phase."]
     #[must_use]
     #[inline(always)]
     pub const fn ld_period(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Period of pclk counter during LD phase"]
+    #[doc = "Period of pclk counter during LD phase."]
     #[inline(always)]
     pub const fn set_ld_period(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);
@@ -5725,31 +5725,31 @@ impl defmt::Format for Pigeonctrl0Clr {
         )
     }
 }
-#[doc = "LCDIF Pigeon Mode Control0 Register"]
+#[doc = "LCDIF Pigeon Mode Control0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeonctrl0Set(pub u32);
 impl Pigeonctrl0Set {
-    #[doc = "Period of line counter during FD phase"]
+    #[doc = "Period of line counter during FD phase."]
     #[must_use]
     #[inline(always)]
     pub const fn fd_period(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Period of line counter during FD phase"]
+    #[doc = "Period of line counter during FD phase."]
     #[inline(always)]
     pub const fn set_fd_period(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
     }
-    #[doc = "Period of pclk counter during LD phase"]
+    #[doc = "Period of pclk counter during LD phase."]
     #[must_use]
     #[inline(always)]
     pub const fn ld_period(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Period of pclk counter during LD phase"]
+    #[doc = "Period of pclk counter during LD phase."]
     #[inline(always)]
     pub const fn set_ld_period(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);
@@ -5780,31 +5780,31 @@ impl defmt::Format for Pigeonctrl0Set {
         )
     }
 }
-#[doc = "LCDIF Pigeon Mode Control0 Register"]
+#[doc = "LCDIF Pigeon Mode Control0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeonctrl0Tog(pub u32);
 impl Pigeonctrl0Tog {
-    #[doc = "Period of line counter during FD phase"]
+    #[doc = "Period of line counter during FD phase."]
     #[must_use]
     #[inline(always)]
     pub const fn fd_period(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Period of line counter during FD phase"]
+    #[doc = "Period of line counter during FD phase."]
     #[inline(always)]
     pub const fn set_fd_period(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
     }
-    #[doc = "Period of pclk counter during LD phase"]
+    #[doc = "Period of pclk counter during LD phase."]
     #[must_use]
     #[inline(always)]
     pub const fn ld_period(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Period of pclk counter during LD phase"]
+    #[doc = "Period of pclk counter during LD phase."]
     #[inline(always)]
     pub const fn set_ld_period(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);
@@ -5835,31 +5835,31 @@ impl defmt::Format for Pigeonctrl0Tog {
         )
     }
 }
-#[doc = "LCDIF Pigeon Mode Control1 Register"]
+#[doc = "LCDIF Pigeon Mode Control1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeonctrl1(pub u32);
 impl Pigeonctrl1 {
-    #[doc = "Period of frame counter"]
+    #[doc = "Period of frame counter."]
     #[must_use]
     #[inline(always)]
     pub const fn frame_cnt_period(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Period of frame counter"]
+    #[doc = "Period of frame counter."]
     #[inline(always)]
     pub const fn set_frame_cnt_period(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
     }
-    #[doc = "Max cycles of frame counter"]
+    #[doc = "Max cycles of frame counter."]
     #[must_use]
     #[inline(always)]
     pub const fn frame_cnt_cycles(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Max cycles of frame counter"]
+    #[doc = "Max cycles of frame counter."]
     #[inline(always)]
     pub const fn set_frame_cnt_cycles(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);
@@ -5890,31 +5890,31 @@ impl defmt::Format for Pigeonctrl1 {
         )
     }
 }
-#[doc = "LCDIF Pigeon Mode Control1 Register"]
+#[doc = "LCDIF Pigeon Mode Control1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeonctrl1Clr(pub u32);
 impl Pigeonctrl1Clr {
-    #[doc = "Period of frame counter"]
+    #[doc = "Period of frame counter."]
     #[must_use]
     #[inline(always)]
     pub const fn frame_cnt_period(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Period of frame counter"]
+    #[doc = "Period of frame counter."]
     #[inline(always)]
     pub const fn set_frame_cnt_period(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
     }
-    #[doc = "Max cycles of frame counter"]
+    #[doc = "Max cycles of frame counter."]
     #[must_use]
     #[inline(always)]
     pub const fn frame_cnt_cycles(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Max cycles of frame counter"]
+    #[doc = "Max cycles of frame counter."]
     #[inline(always)]
     pub const fn set_frame_cnt_cycles(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);
@@ -5945,31 +5945,31 @@ impl defmt::Format for Pigeonctrl1Clr {
         )
     }
 }
-#[doc = "LCDIF Pigeon Mode Control1 Register"]
+#[doc = "LCDIF Pigeon Mode Control1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeonctrl1Set(pub u32);
 impl Pigeonctrl1Set {
-    #[doc = "Period of frame counter"]
+    #[doc = "Period of frame counter."]
     #[must_use]
     #[inline(always)]
     pub const fn frame_cnt_period(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Period of frame counter"]
+    #[doc = "Period of frame counter."]
     #[inline(always)]
     pub const fn set_frame_cnt_period(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
     }
-    #[doc = "Max cycles of frame counter"]
+    #[doc = "Max cycles of frame counter."]
     #[must_use]
     #[inline(always)]
     pub const fn frame_cnt_cycles(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Max cycles of frame counter"]
+    #[doc = "Max cycles of frame counter."]
     #[inline(always)]
     pub const fn set_frame_cnt_cycles(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);
@@ -6000,31 +6000,31 @@ impl defmt::Format for Pigeonctrl1Set {
         )
     }
 }
-#[doc = "LCDIF Pigeon Mode Control1 Register"]
+#[doc = "LCDIF Pigeon Mode Control1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeonctrl1Tog(pub u32);
 impl Pigeonctrl1Tog {
-    #[doc = "Period of frame counter"]
+    #[doc = "Period of frame counter."]
     #[must_use]
     #[inline(always)]
     pub const fn frame_cnt_period(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Period of frame counter"]
+    #[doc = "Period of frame counter."]
     #[inline(always)]
     pub const fn set_frame_cnt_period(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
     }
-    #[doc = "Max cycles of frame counter"]
+    #[doc = "Max cycles of frame counter."]
     #[must_use]
     #[inline(always)]
     pub const fn frame_cnt_cycles(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Max cycles of frame counter"]
+    #[doc = "Max cycles of frame counter."]
     #[inline(always)]
     pub const fn set_frame_cnt_cycles(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);
@@ -6055,31 +6055,31 @@ impl defmt::Format for Pigeonctrl1Tog {
         )
     }
 }
-#[doc = "LCDIF Pigeon Mode Control2 Register"]
+#[doc = "LCDIF Pigeon Mode Control2 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeonctrl2(pub u32);
 impl Pigeonctrl2 {
-    #[doc = "Pigeon mode data enable"]
+    #[doc = "Pigeon mode data enable."]
     #[must_use]
     #[inline(always)]
     pub const fn pigeon_data_en(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Pigeon mode data enable"]
+    #[doc = "Pigeon mode data enable."]
     #[inline(always)]
     pub const fn set_pigeon_data_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Pigeon mode dot clock gate enable"]
+    #[doc = "Pigeon mode dot clock gate enable."]
     #[must_use]
     #[inline(always)]
     pub const fn pigeon_clk_gate(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Pigeon mode dot clock gate enable"]
+    #[doc = "Pigeon mode dot clock gate enable."]
     #[inline(always)]
     pub const fn set_pigeon_clk_gate(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
@@ -6110,31 +6110,31 @@ impl defmt::Format for Pigeonctrl2 {
         )
     }
 }
-#[doc = "LCDIF Pigeon Mode Control2 Register"]
+#[doc = "LCDIF Pigeon Mode Control2 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeonctrl2Clr(pub u32);
 impl Pigeonctrl2Clr {
-    #[doc = "Pigeon mode data enable"]
+    #[doc = "Pigeon mode data enable."]
     #[must_use]
     #[inline(always)]
     pub const fn pigeon_data_en(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Pigeon mode data enable"]
+    #[doc = "Pigeon mode data enable."]
     #[inline(always)]
     pub const fn set_pigeon_data_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Pigeon mode dot clock gate enable"]
+    #[doc = "Pigeon mode dot clock gate enable."]
     #[must_use]
     #[inline(always)]
     pub const fn pigeon_clk_gate(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Pigeon mode dot clock gate enable"]
+    #[doc = "Pigeon mode dot clock gate enable."]
     #[inline(always)]
     pub const fn set_pigeon_clk_gate(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
@@ -6165,31 +6165,31 @@ impl defmt::Format for Pigeonctrl2Clr {
         )
     }
 }
-#[doc = "LCDIF Pigeon Mode Control2 Register"]
+#[doc = "LCDIF Pigeon Mode Control2 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeonctrl2Set(pub u32);
 impl Pigeonctrl2Set {
-    #[doc = "Pigeon mode data enable"]
+    #[doc = "Pigeon mode data enable."]
     #[must_use]
     #[inline(always)]
     pub const fn pigeon_data_en(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Pigeon mode data enable"]
+    #[doc = "Pigeon mode data enable."]
     #[inline(always)]
     pub const fn set_pigeon_data_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Pigeon mode dot clock gate enable"]
+    #[doc = "Pigeon mode dot clock gate enable."]
     #[must_use]
     #[inline(always)]
     pub const fn pigeon_clk_gate(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Pigeon mode dot clock gate enable"]
+    #[doc = "Pigeon mode dot clock gate enable."]
     #[inline(always)]
     pub const fn set_pigeon_clk_gate(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
@@ -6220,31 +6220,31 @@ impl defmt::Format for Pigeonctrl2Set {
         )
     }
 }
-#[doc = "LCDIF Pigeon Mode Control2 Register"]
+#[doc = "LCDIF Pigeon Mode Control2 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pigeonctrl2Tog(pub u32);
 impl Pigeonctrl2Tog {
-    #[doc = "Pigeon mode data enable"]
+    #[doc = "Pigeon mode data enable."]
     #[must_use]
     #[inline(always)]
     pub const fn pigeon_data_en(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Pigeon mode data enable"]
+    #[doc = "Pigeon mode data enable."]
     #[inline(always)]
     pub const fn set_pigeon_data_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Pigeon mode dot clock gate enable"]
+    #[doc = "Pigeon mode dot clock gate enable."]
     #[must_use]
     #[inline(always)]
     pub const fn pigeon_clk_gate(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Pigeon mode dot clock gate enable"]
+    #[doc = "Pigeon mode dot clock gate enable."]
     #[inline(always)]
     pub const fn set_pigeon_clk_gate(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
@@ -6275,7 +6275,7 @@ impl defmt::Format for Pigeonctrl2Tog {
         )
     }
 }
-#[doc = "LCD Interface Status Register"]
+#[doc = "LCD Interface Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Stat(pub u32);
@@ -6340,14 +6340,14 @@ impl Stat {
     pub const fn set_lfifo_full(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "Reflects the current state of the DMA Request line for the LCDIF"]
+    #[doc = "Reflects the current state of the DMA Request line for the LCDIF."]
     #[must_use]
     #[inline(always)]
     pub const fn dma_req(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "Reflects the current state of the DMA Request line for the LCDIF"]
+    #[doc = "Reflects the current state of the DMA Request line for the LCDIF."]
     #[inline(always)]
     pub const fn set_dma_req(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
@@ -6400,31 +6400,31 @@ impl defmt::Format for Stat {
         )
     }
 }
-#[doc = "LCDIF Horizontal and Vertical Valid Data Count Register"]
+#[doc = "LCDIF Horizontal and Vertical Valid Data Count Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct TransferCount(pub u32);
 impl TransferCount {
-    #[doc = "Total valid data (pixels) in each horizontal line"]
+    #[doc = "Total valid data (pixels) in each horizontal line."]
     #[must_use]
     #[inline(always)]
     pub const fn h_count(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Total valid data (pixels) in each horizontal line"]
+    #[doc = "Total valid data (pixels) in each horizontal line."]
     #[inline(always)]
     pub const fn set_h_count(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Number of horizontal lines per frame which contain valid data"]
+    #[doc = "Number of horizontal lines per frame which contain valid data."]
     #[must_use]
     #[inline(always)]
     pub const fn v_count(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "Number of horizontal lines per frame which contain valid data"]
+    #[doc = "Number of horizontal lines per frame which contain valid data."]
     #[inline(always)]
     pub const fn set_v_count(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -6455,67 +6455,67 @@ impl defmt::Format for TransferCount {
         )
     }
 }
-#[doc = "LCDIF VSYNC Mode and Dotclk Mode Control Register0"]
+#[doc = "LCDIF VSYNC Mode and Dotclk Mode Control Register0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Vdctrl0(pub u32);
 impl Vdctrl0 {
-    #[doc = "Number of units for which VSYNC signal is active"]
+    #[doc = "Number of units for which VSYNC signal is active."]
     #[must_use]
     #[inline(always)]
     pub const fn vsync_pulse_width(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x0003_ffff;
         val as u32
     }
-    #[doc = "Number of units for which VSYNC signal is active"]
+    #[doc = "Number of units for which VSYNC signal is active."]
     #[inline(always)]
     pub const fn set_vsync_pulse_width(&mut self, val: u32) {
         self.0 = (self.0 & !(0x0003_ffff << 0usize)) | (((val as u32) & 0x0003_ffff) << 0usize);
     }
-    #[doc = "When this bit is 0, the first field (VSYNC period) will end in half a horizontal line and the second field will begin with half a horizontal line"]
+    #[doc = "When this bit is 0, the first field (VSYNC period) will end in half a horizontal line and the second field will begin with half a horizontal line."]
     #[must_use]
     #[inline(always)]
     pub const fn half_line_mode(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "When this bit is 0, the first field (VSYNC period) will end in half a horizontal line and the second field will begin with half a horizontal line"]
+    #[doc = "When this bit is 0, the first field (VSYNC period) will end in half a horizontal line and the second field will begin with half a horizontal line."]
     #[inline(always)]
     pub const fn set_half_line_mode(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Setting this bit to 1 will make the total VSYNC period equal to the VSYNC_PERIOD field plus half the HORIZONTAL_PERIOD field (i"]
+    #[doc = "Setting this bit to 1 will make the total VSYNC period equal to the VSYNC_PERIOD field plus half the HORIZONTAL_PERIOD field (i."]
     #[must_use]
     #[inline(always)]
     pub const fn half_line(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Setting this bit to 1 will make the total VSYNC period equal to the VSYNC_PERIOD field plus half the HORIZONTAL_PERIOD field (i"]
+    #[doc = "Setting this bit to 1 will make the total VSYNC period equal to the VSYNC_PERIOD field plus half the HORIZONTAL_PERIOD field (i."]
     #[inline(always)]
     pub const fn set_half_line(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Default 0 for counting VSYNC_PULSE_WIDTH in terms of DISPLAY CLOCK (pix_clk) cycles"]
+    #[doc = "Default 0 for counting VSYNC_PULSE_WIDTH in terms of DISPLAY CLOCK (pix_clk) cycles."]
     #[must_use]
     #[inline(always)]
     pub const fn vsync_pulse_width_unit(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Default 0 for counting VSYNC_PULSE_WIDTH in terms of DISPLAY CLOCK (pix_clk) cycles"]
+    #[doc = "Default 0 for counting VSYNC_PULSE_WIDTH in terms of DISPLAY CLOCK (pix_clk) cycles."]
     #[inline(always)]
     pub const fn set_vsync_pulse_width_unit(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Default 0 for counting VSYNC_PERIOD in terms of DISPLAY CLOCK (pix_clk) cycles"]
+    #[doc = "Default 0 for counting VSYNC_PERIOD in terms of DISPLAY CLOCK (pix_clk) cycles."]
     #[must_use]
     #[inline(always)]
     pub const fn vsync_period_unit(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Default 0 for counting VSYNC_PERIOD in terms of DISPLAY CLOCK (pix_clk) cycles"]
+    #[doc = "Default 0 for counting VSYNC_PERIOD in terms of DISPLAY CLOCK (pix_clk) cycles."]
     #[inline(always)]
     pub const fn set_vsync_period_unit(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
@@ -6532,50 +6532,50 @@ impl Vdctrl0 {
     pub const fn set_enable_pol(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "Default is data launched at negative edge of DOTCLK and captured at positive edge"]
+    #[doc = "Default is data launched at negative edge of DOTCLK and captured at positive edge."]
     #[must_use]
     #[inline(always)]
     pub const fn dotclk_pol(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "Default is data launched at negative edge of DOTCLK and captured at positive edge"]
+    #[doc = "Default is data launched at negative edge of DOTCLK and captured at positive edge."]
     #[inline(always)]
     pub const fn set_dotclk_pol(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "Default 0 active low during HSYNC_PULSE_WIDTH time and will be high during the rest of the HSYNC period"]
+    #[doc = "Default 0 active low during HSYNC_PULSE_WIDTH time and will be high during the rest of the HSYNC period."]
     #[must_use]
     #[inline(always)]
     pub const fn hsync_pol(&self) -> bool {
         let val = (self.0 >> 26usize) & 0x01;
         val != 0
     }
-    #[doc = "Default 0 active low during HSYNC_PULSE_WIDTH time and will be high during the rest of the HSYNC period"]
+    #[doc = "Default 0 active low during HSYNC_PULSE_WIDTH time and will be high during the rest of the HSYNC period."]
     #[inline(always)]
     pub const fn set_hsync_pol(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "Default 0 active low during VSYNC_PULSE_WIDTH time and will be high during the rest of the VSYNC period"]
+    #[doc = "Default 0 active low during VSYNC_PULSE_WIDTH time and will be high during the rest of the VSYNC period."]
     #[must_use]
     #[inline(always)]
     pub const fn vsync_pol(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "Default 0 active low during VSYNC_PULSE_WIDTH time and will be high during the rest of the VSYNC period"]
+    #[doc = "Default 0 active low during VSYNC_PULSE_WIDTH time and will be high during the rest of the VSYNC period."]
     #[inline(always)]
     pub const fn set_vsync_pol(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "Setting this bit to 1 will make the hardware generate the ENABLE signal in the DOTCLK mode, thereby making it the true RGB interface along with the remaining three signals VSYNC, HSYNC and DOTCLK"]
+    #[doc = "Setting this bit to 1 will make the hardware generate the ENABLE signal in the DOTCLK mode, thereby making it the true RGB interface along with the remaining three signals VSYNC, HSYNC and DOTCLK."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_present(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "Setting this bit to 1 will make the hardware generate the ENABLE signal in the DOTCLK mode, thereby making it the true RGB interface along with the remaining three signals VSYNC, HSYNC and DOTCLK"]
+    #[doc = "Setting this bit to 1 will make the hardware generate the ENABLE signal in the DOTCLK mode, thereby making it the true RGB interface along with the remaining three signals VSYNC, HSYNC and DOTCLK."]
     #[inline(always)]
     pub const fn set_enable_present(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
@@ -6622,67 +6622,67 @@ impl defmt::Format for Vdctrl0 {
         )
     }
 }
-#[doc = "LCDIF VSYNC Mode and Dotclk Mode Control Register0"]
+#[doc = "LCDIF VSYNC Mode and Dotclk Mode Control Register0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Vdctrl0Clr(pub u32);
 impl Vdctrl0Clr {
-    #[doc = "Number of units for which VSYNC signal is active"]
+    #[doc = "Number of units for which VSYNC signal is active."]
     #[must_use]
     #[inline(always)]
     pub const fn vsync_pulse_width(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x0003_ffff;
         val as u32
     }
-    #[doc = "Number of units for which VSYNC signal is active"]
+    #[doc = "Number of units for which VSYNC signal is active."]
     #[inline(always)]
     pub const fn set_vsync_pulse_width(&mut self, val: u32) {
         self.0 = (self.0 & !(0x0003_ffff << 0usize)) | (((val as u32) & 0x0003_ffff) << 0usize);
     }
-    #[doc = "When this bit is 0, the first field (VSYNC period) will end in half a horizontal line and the second field will begin with half a horizontal line"]
+    #[doc = "When this bit is 0, the first field (VSYNC period) will end in half a horizontal line and the second field will begin with half a horizontal line."]
     #[must_use]
     #[inline(always)]
     pub const fn half_line_mode(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "When this bit is 0, the first field (VSYNC period) will end in half a horizontal line and the second field will begin with half a horizontal line"]
+    #[doc = "When this bit is 0, the first field (VSYNC period) will end in half a horizontal line and the second field will begin with half a horizontal line."]
     #[inline(always)]
     pub const fn set_half_line_mode(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Setting this bit to 1 will make the total VSYNC period equal to the VSYNC_PERIOD field plus half the HORIZONTAL_PERIOD field (i"]
+    #[doc = "Setting this bit to 1 will make the total VSYNC period equal to the VSYNC_PERIOD field plus half the HORIZONTAL_PERIOD field (i."]
     #[must_use]
     #[inline(always)]
     pub const fn half_line(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Setting this bit to 1 will make the total VSYNC period equal to the VSYNC_PERIOD field plus half the HORIZONTAL_PERIOD field (i"]
+    #[doc = "Setting this bit to 1 will make the total VSYNC period equal to the VSYNC_PERIOD field plus half the HORIZONTAL_PERIOD field (i."]
     #[inline(always)]
     pub const fn set_half_line(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Default 0 for counting VSYNC_PULSE_WIDTH in terms of DISPLAY CLOCK (pix_clk) cycles"]
+    #[doc = "Default 0 for counting VSYNC_PULSE_WIDTH in terms of DISPLAY CLOCK (pix_clk) cycles."]
     #[must_use]
     #[inline(always)]
     pub const fn vsync_pulse_width_unit(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Default 0 for counting VSYNC_PULSE_WIDTH in terms of DISPLAY CLOCK (pix_clk) cycles"]
+    #[doc = "Default 0 for counting VSYNC_PULSE_WIDTH in terms of DISPLAY CLOCK (pix_clk) cycles."]
     #[inline(always)]
     pub const fn set_vsync_pulse_width_unit(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Default 0 for counting VSYNC_PERIOD in terms of DISPLAY CLOCK (pix_clk) cycles"]
+    #[doc = "Default 0 for counting VSYNC_PERIOD in terms of DISPLAY CLOCK (pix_clk) cycles."]
     #[must_use]
     #[inline(always)]
     pub const fn vsync_period_unit(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Default 0 for counting VSYNC_PERIOD in terms of DISPLAY CLOCK (pix_clk) cycles"]
+    #[doc = "Default 0 for counting VSYNC_PERIOD in terms of DISPLAY CLOCK (pix_clk) cycles."]
     #[inline(always)]
     pub const fn set_vsync_period_unit(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
@@ -6699,50 +6699,50 @@ impl Vdctrl0Clr {
     pub const fn set_enable_pol(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "Default is data launched at negative edge of DOTCLK and captured at positive edge"]
+    #[doc = "Default is data launched at negative edge of DOTCLK and captured at positive edge."]
     #[must_use]
     #[inline(always)]
     pub const fn dotclk_pol(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "Default is data launched at negative edge of DOTCLK and captured at positive edge"]
+    #[doc = "Default is data launched at negative edge of DOTCLK and captured at positive edge."]
     #[inline(always)]
     pub const fn set_dotclk_pol(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "Default 0 active low during HSYNC_PULSE_WIDTH time and will be high during the rest of the HSYNC period"]
+    #[doc = "Default 0 active low during HSYNC_PULSE_WIDTH time and will be high during the rest of the HSYNC period."]
     #[must_use]
     #[inline(always)]
     pub const fn hsync_pol(&self) -> bool {
         let val = (self.0 >> 26usize) & 0x01;
         val != 0
     }
-    #[doc = "Default 0 active low during HSYNC_PULSE_WIDTH time and will be high during the rest of the HSYNC period"]
+    #[doc = "Default 0 active low during HSYNC_PULSE_WIDTH time and will be high during the rest of the HSYNC period."]
     #[inline(always)]
     pub const fn set_hsync_pol(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "Default 0 active low during VSYNC_PULSE_WIDTH time and will be high during the rest of the VSYNC period"]
+    #[doc = "Default 0 active low during VSYNC_PULSE_WIDTH time and will be high during the rest of the VSYNC period."]
     #[must_use]
     #[inline(always)]
     pub const fn vsync_pol(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "Default 0 active low during VSYNC_PULSE_WIDTH time and will be high during the rest of the VSYNC period"]
+    #[doc = "Default 0 active low during VSYNC_PULSE_WIDTH time and will be high during the rest of the VSYNC period."]
     #[inline(always)]
     pub const fn set_vsync_pol(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "Setting this bit to 1 will make the hardware generate the ENABLE signal in the DOTCLK mode, thereby making it the true RGB interface along with the remaining three signals VSYNC, HSYNC and DOTCLK"]
+    #[doc = "Setting this bit to 1 will make the hardware generate the ENABLE signal in the DOTCLK mode, thereby making it the true RGB interface along with the remaining three signals VSYNC, HSYNC and DOTCLK."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_present(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "Setting this bit to 1 will make the hardware generate the ENABLE signal in the DOTCLK mode, thereby making it the true RGB interface along with the remaining three signals VSYNC, HSYNC and DOTCLK"]
+    #[doc = "Setting this bit to 1 will make the hardware generate the ENABLE signal in the DOTCLK mode, thereby making it the true RGB interface along with the remaining three signals VSYNC, HSYNC and DOTCLK."]
     #[inline(always)]
     pub const fn set_enable_present(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
@@ -6789,67 +6789,67 @@ impl defmt::Format for Vdctrl0Clr {
         )
     }
 }
-#[doc = "LCDIF VSYNC Mode and Dotclk Mode Control Register0"]
+#[doc = "LCDIF VSYNC Mode and Dotclk Mode Control Register0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Vdctrl0Set(pub u32);
 impl Vdctrl0Set {
-    #[doc = "Number of units for which VSYNC signal is active"]
+    #[doc = "Number of units for which VSYNC signal is active."]
     #[must_use]
     #[inline(always)]
     pub const fn vsync_pulse_width(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x0003_ffff;
         val as u32
     }
-    #[doc = "Number of units for which VSYNC signal is active"]
+    #[doc = "Number of units for which VSYNC signal is active."]
     #[inline(always)]
     pub const fn set_vsync_pulse_width(&mut self, val: u32) {
         self.0 = (self.0 & !(0x0003_ffff << 0usize)) | (((val as u32) & 0x0003_ffff) << 0usize);
     }
-    #[doc = "When this bit is 0, the first field (VSYNC period) will end in half a horizontal line and the second field will begin with half a horizontal line"]
+    #[doc = "When this bit is 0, the first field (VSYNC period) will end in half a horizontal line and the second field will begin with half a horizontal line."]
     #[must_use]
     #[inline(always)]
     pub const fn half_line_mode(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "When this bit is 0, the first field (VSYNC period) will end in half a horizontal line and the second field will begin with half a horizontal line"]
+    #[doc = "When this bit is 0, the first field (VSYNC period) will end in half a horizontal line and the second field will begin with half a horizontal line."]
     #[inline(always)]
     pub const fn set_half_line_mode(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Setting this bit to 1 will make the total VSYNC period equal to the VSYNC_PERIOD field plus half the HORIZONTAL_PERIOD field (i"]
+    #[doc = "Setting this bit to 1 will make the total VSYNC period equal to the VSYNC_PERIOD field plus half the HORIZONTAL_PERIOD field (i."]
     #[must_use]
     #[inline(always)]
     pub const fn half_line(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Setting this bit to 1 will make the total VSYNC period equal to the VSYNC_PERIOD field plus half the HORIZONTAL_PERIOD field (i"]
+    #[doc = "Setting this bit to 1 will make the total VSYNC period equal to the VSYNC_PERIOD field plus half the HORIZONTAL_PERIOD field (i."]
     #[inline(always)]
     pub const fn set_half_line(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Default 0 for counting VSYNC_PULSE_WIDTH in terms of DISPLAY CLOCK (pix_clk) cycles"]
+    #[doc = "Default 0 for counting VSYNC_PULSE_WIDTH in terms of DISPLAY CLOCK (pix_clk) cycles."]
     #[must_use]
     #[inline(always)]
     pub const fn vsync_pulse_width_unit(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Default 0 for counting VSYNC_PULSE_WIDTH in terms of DISPLAY CLOCK (pix_clk) cycles"]
+    #[doc = "Default 0 for counting VSYNC_PULSE_WIDTH in terms of DISPLAY CLOCK (pix_clk) cycles."]
     #[inline(always)]
     pub const fn set_vsync_pulse_width_unit(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Default 0 for counting VSYNC_PERIOD in terms of DISPLAY CLOCK (pix_clk) cycles"]
+    #[doc = "Default 0 for counting VSYNC_PERIOD in terms of DISPLAY CLOCK (pix_clk) cycles."]
     #[must_use]
     #[inline(always)]
     pub const fn vsync_period_unit(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Default 0 for counting VSYNC_PERIOD in terms of DISPLAY CLOCK (pix_clk) cycles"]
+    #[doc = "Default 0 for counting VSYNC_PERIOD in terms of DISPLAY CLOCK (pix_clk) cycles."]
     #[inline(always)]
     pub const fn set_vsync_period_unit(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
@@ -6866,50 +6866,50 @@ impl Vdctrl0Set {
     pub const fn set_enable_pol(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "Default is data launched at negative edge of DOTCLK and captured at positive edge"]
+    #[doc = "Default is data launched at negative edge of DOTCLK and captured at positive edge."]
     #[must_use]
     #[inline(always)]
     pub const fn dotclk_pol(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "Default is data launched at negative edge of DOTCLK and captured at positive edge"]
+    #[doc = "Default is data launched at negative edge of DOTCLK and captured at positive edge."]
     #[inline(always)]
     pub const fn set_dotclk_pol(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "Default 0 active low during HSYNC_PULSE_WIDTH time and will be high during the rest of the HSYNC period"]
+    #[doc = "Default 0 active low during HSYNC_PULSE_WIDTH time and will be high during the rest of the HSYNC period."]
     #[must_use]
     #[inline(always)]
     pub const fn hsync_pol(&self) -> bool {
         let val = (self.0 >> 26usize) & 0x01;
         val != 0
     }
-    #[doc = "Default 0 active low during HSYNC_PULSE_WIDTH time and will be high during the rest of the HSYNC period"]
+    #[doc = "Default 0 active low during HSYNC_PULSE_WIDTH time and will be high during the rest of the HSYNC period."]
     #[inline(always)]
     pub const fn set_hsync_pol(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "Default 0 active low during VSYNC_PULSE_WIDTH time and will be high during the rest of the VSYNC period"]
+    #[doc = "Default 0 active low during VSYNC_PULSE_WIDTH time and will be high during the rest of the VSYNC period."]
     #[must_use]
     #[inline(always)]
     pub const fn vsync_pol(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "Default 0 active low during VSYNC_PULSE_WIDTH time and will be high during the rest of the VSYNC period"]
+    #[doc = "Default 0 active low during VSYNC_PULSE_WIDTH time and will be high during the rest of the VSYNC period."]
     #[inline(always)]
     pub const fn set_vsync_pol(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "Setting this bit to 1 will make the hardware generate the ENABLE signal in the DOTCLK mode, thereby making it the true RGB interface along with the remaining three signals VSYNC, HSYNC and DOTCLK"]
+    #[doc = "Setting this bit to 1 will make the hardware generate the ENABLE signal in the DOTCLK mode, thereby making it the true RGB interface along with the remaining three signals VSYNC, HSYNC and DOTCLK."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_present(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "Setting this bit to 1 will make the hardware generate the ENABLE signal in the DOTCLK mode, thereby making it the true RGB interface along with the remaining three signals VSYNC, HSYNC and DOTCLK"]
+    #[doc = "Setting this bit to 1 will make the hardware generate the ENABLE signal in the DOTCLK mode, thereby making it the true RGB interface along with the remaining three signals VSYNC, HSYNC and DOTCLK."]
     #[inline(always)]
     pub const fn set_enable_present(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
@@ -6956,67 +6956,67 @@ impl defmt::Format for Vdctrl0Set {
         )
     }
 }
-#[doc = "LCDIF VSYNC Mode and Dotclk Mode Control Register0"]
+#[doc = "LCDIF VSYNC Mode and Dotclk Mode Control Register0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Vdctrl0Tog(pub u32);
 impl Vdctrl0Tog {
-    #[doc = "Number of units for which VSYNC signal is active"]
+    #[doc = "Number of units for which VSYNC signal is active."]
     #[must_use]
     #[inline(always)]
     pub const fn vsync_pulse_width(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x0003_ffff;
         val as u32
     }
-    #[doc = "Number of units for which VSYNC signal is active"]
+    #[doc = "Number of units for which VSYNC signal is active."]
     #[inline(always)]
     pub const fn set_vsync_pulse_width(&mut self, val: u32) {
         self.0 = (self.0 & !(0x0003_ffff << 0usize)) | (((val as u32) & 0x0003_ffff) << 0usize);
     }
-    #[doc = "When this bit is 0, the first field (VSYNC period) will end in half a horizontal line and the second field will begin with half a horizontal line"]
+    #[doc = "When this bit is 0, the first field (VSYNC period) will end in half a horizontal line and the second field will begin with half a horizontal line."]
     #[must_use]
     #[inline(always)]
     pub const fn half_line_mode(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "When this bit is 0, the first field (VSYNC period) will end in half a horizontal line and the second field will begin with half a horizontal line"]
+    #[doc = "When this bit is 0, the first field (VSYNC period) will end in half a horizontal line and the second field will begin with half a horizontal line."]
     #[inline(always)]
     pub const fn set_half_line_mode(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Setting this bit to 1 will make the total VSYNC period equal to the VSYNC_PERIOD field plus half the HORIZONTAL_PERIOD field (i"]
+    #[doc = "Setting this bit to 1 will make the total VSYNC period equal to the VSYNC_PERIOD field plus half the HORIZONTAL_PERIOD field (i."]
     #[must_use]
     #[inline(always)]
     pub const fn half_line(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Setting this bit to 1 will make the total VSYNC period equal to the VSYNC_PERIOD field plus half the HORIZONTAL_PERIOD field (i"]
+    #[doc = "Setting this bit to 1 will make the total VSYNC period equal to the VSYNC_PERIOD field plus half the HORIZONTAL_PERIOD field (i."]
     #[inline(always)]
     pub const fn set_half_line(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Default 0 for counting VSYNC_PULSE_WIDTH in terms of DISPLAY CLOCK (pix_clk) cycles"]
+    #[doc = "Default 0 for counting VSYNC_PULSE_WIDTH in terms of DISPLAY CLOCK (pix_clk) cycles."]
     #[must_use]
     #[inline(always)]
     pub const fn vsync_pulse_width_unit(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Default 0 for counting VSYNC_PULSE_WIDTH in terms of DISPLAY CLOCK (pix_clk) cycles"]
+    #[doc = "Default 0 for counting VSYNC_PULSE_WIDTH in terms of DISPLAY CLOCK (pix_clk) cycles."]
     #[inline(always)]
     pub const fn set_vsync_pulse_width_unit(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Default 0 for counting VSYNC_PERIOD in terms of DISPLAY CLOCK (pix_clk) cycles"]
+    #[doc = "Default 0 for counting VSYNC_PERIOD in terms of DISPLAY CLOCK (pix_clk) cycles."]
     #[must_use]
     #[inline(always)]
     pub const fn vsync_period_unit(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Default 0 for counting VSYNC_PERIOD in terms of DISPLAY CLOCK (pix_clk) cycles"]
+    #[doc = "Default 0 for counting VSYNC_PERIOD in terms of DISPLAY CLOCK (pix_clk) cycles."]
     #[inline(always)]
     pub const fn set_vsync_period_unit(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
@@ -7033,50 +7033,50 @@ impl Vdctrl0Tog {
     pub const fn set_enable_pol(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "Default is data launched at negative edge of DOTCLK and captured at positive edge"]
+    #[doc = "Default is data launched at negative edge of DOTCLK and captured at positive edge."]
     #[must_use]
     #[inline(always)]
     pub const fn dotclk_pol(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "Default is data launched at negative edge of DOTCLK and captured at positive edge"]
+    #[doc = "Default is data launched at negative edge of DOTCLK and captured at positive edge."]
     #[inline(always)]
     pub const fn set_dotclk_pol(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "Default 0 active low during HSYNC_PULSE_WIDTH time and will be high during the rest of the HSYNC period"]
+    #[doc = "Default 0 active low during HSYNC_PULSE_WIDTH time and will be high during the rest of the HSYNC period."]
     #[must_use]
     #[inline(always)]
     pub const fn hsync_pol(&self) -> bool {
         let val = (self.0 >> 26usize) & 0x01;
         val != 0
     }
-    #[doc = "Default 0 active low during HSYNC_PULSE_WIDTH time and will be high during the rest of the HSYNC period"]
+    #[doc = "Default 0 active low during HSYNC_PULSE_WIDTH time and will be high during the rest of the HSYNC period."]
     #[inline(always)]
     pub const fn set_hsync_pol(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "Default 0 active low during VSYNC_PULSE_WIDTH time and will be high during the rest of the VSYNC period"]
+    #[doc = "Default 0 active low during VSYNC_PULSE_WIDTH time and will be high during the rest of the VSYNC period."]
     #[must_use]
     #[inline(always)]
     pub const fn vsync_pol(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "Default 0 active low during VSYNC_PULSE_WIDTH time and will be high during the rest of the VSYNC period"]
+    #[doc = "Default 0 active low during VSYNC_PULSE_WIDTH time and will be high during the rest of the VSYNC period."]
     #[inline(always)]
     pub const fn set_vsync_pol(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "Setting this bit to 1 will make the hardware generate the ENABLE signal in the DOTCLK mode, thereby making it the true RGB interface along with the remaining three signals VSYNC, HSYNC and DOTCLK"]
+    #[doc = "Setting this bit to 1 will make the hardware generate the ENABLE signal in the DOTCLK mode, thereby making it the true RGB interface along with the remaining three signals VSYNC, HSYNC and DOTCLK."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_present(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "Setting this bit to 1 will make the hardware generate the ENABLE signal in the DOTCLK mode, thereby making it the true RGB interface along with the remaining three signals VSYNC, HSYNC and DOTCLK"]
+    #[doc = "Setting this bit to 1 will make the hardware generate the ENABLE signal in the DOTCLK mode, thereby making it the true RGB interface along with the remaining three signals VSYNC, HSYNC and DOTCLK."]
     #[inline(always)]
     pub const fn set_enable_present(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
@@ -7123,19 +7123,19 @@ impl defmt::Format for Vdctrl0Tog {
         )
     }
 }
-#[doc = "LCDIF VSYNC Mode and Dotclk Mode Control Register1"]
+#[doc = "LCDIF VSYNC Mode and Dotclk Mode Control Register1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Vdctrl1(pub u32);
 impl Vdctrl1 {
-    #[doc = "Total number of units between two positive or two negative edges of the VSYNC signal"]
+    #[doc = "Total number of units between two positive or two negative edges of the VSYNC signal."]
     #[must_use]
     #[inline(always)]
     pub const fn vsync_period(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Total number of units between two positive or two negative edges of the VSYNC signal"]
+    #[doc = "Total number of units between two positive or two negative edges of the VSYNC signal."]
     #[inline(always)]
     pub const fn set_vsync_period(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -7164,19 +7164,19 @@ impl defmt::Format for Vdctrl1 {
         )
     }
 }
-#[doc = "LCDIF VSYNC Mode and Dotclk Mode Control Register2"]
+#[doc = "LCDIF VSYNC Mode and Dotclk Mode Control Register2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Vdctrl2(pub u32);
 impl Vdctrl2 {
-    #[doc = "Total number of DISPLAY CLOCK (pix_clk) cycles between two positive or two negative edges of the HSYNC signal"]
+    #[doc = "Total number of DISPLAY CLOCK (pix_clk) cycles between two positive or two negative edges of the HSYNC signal."]
     #[must_use]
     #[inline(always)]
     pub const fn hsync_period(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x0003_ffff;
         val as u32
     }
-    #[doc = "Total number of DISPLAY CLOCK (pix_clk) cycles between two positive or two negative edges of the HSYNC signal"]
+    #[doc = "Total number of DISPLAY CLOCK (pix_clk) cycles between two positive or two negative edges of the HSYNC signal."]
     #[inline(always)]
     pub const fn set_hsync_period(&mut self, val: u32) {
         self.0 = (self.0 & !(0x0003_ffff << 0usize)) | (((val as u32) & 0x0003_ffff) << 0usize);
@@ -7219,31 +7219,31 @@ impl defmt::Format for Vdctrl2 {
         )
     }
 }
-#[doc = "LCDIF VSYNC Mode and Dotclk Mode Control Register3"]
+#[doc = "LCDIF VSYNC Mode and Dotclk Mode Control Register3."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Vdctrl3(pub u32);
 impl Vdctrl3 {
-    #[doc = "In the VSYNC interface mode, wait for this number of DISPLAY CLOCK (pix_clk) cycles from the falling VSYNC edge (or rising if VSYNC_POL is 1) before starting LCD transactions and is applicable only if WAIT_FOR_VSYNC_EDGE is set"]
+    #[doc = "In the VSYNC interface mode, wait for this number of DISPLAY CLOCK (pix_clk) cycles from the falling VSYNC edge (or rising if VSYNC_POL is 1) before starting LCD transactions and is applicable only if WAIT_FOR_VSYNC_EDGE is set."]
     #[must_use]
     #[inline(always)]
     pub const fn vertical_wait_cnt(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "In the VSYNC interface mode, wait for this number of DISPLAY CLOCK (pix_clk) cycles from the falling VSYNC edge (or rising if VSYNC_POL is 1) before starting LCD transactions and is applicable only if WAIT_FOR_VSYNC_EDGE is set"]
+    #[doc = "In the VSYNC interface mode, wait for this number of DISPLAY CLOCK (pix_clk) cycles from the falling VSYNC edge (or rising if VSYNC_POL is 1) before starting LCD transactions and is applicable only if WAIT_FOR_VSYNC_EDGE is set."]
     #[inline(always)]
     pub const fn set_vertical_wait_cnt(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "In the DOTCLK mode, wait for this number of clocks from falling edge (or rising if HSYNC_POL is 1) of HSYNC signal to account for horizontal back porch plus the number of DOTCLKs before the moving picture information begins"]
+    #[doc = "In the DOTCLK mode, wait for this number of clocks from falling edge (or rising if HSYNC_POL is 1) of HSYNC signal to account for horizontal back porch plus the number of DOTCLKs before the moving picture information begins."]
     #[must_use]
     #[inline(always)]
     pub const fn horizontal_wait_cnt(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x0fff;
         val as u16
     }
-    #[doc = "In the DOTCLK mode, wait for this number of clocks from falling edge (or rising if HSYNC_POL is 1) of HSYNC signal to account for horizontal back porch plus the number of DOTCLKs before the moving picture information begins"]
+    #[doc = "In the DOTCLK mode, wait for this number of clocks from falling edge (or rising if HSYNC_POL is 1) of HSYNC signal to account for horizontal back porch plus the number of DOTCLKs before the moving picture information begins."]
     #[inline(always)]
     pub const fn set_horizontal_wait_cnt(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);
@@ -7260,14 +7260,14 @@ impl Vdctrl3 {
     pub const fn set_vsync_only(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "When this bit is set, the LCDIF block will internally mux HSYNC with LCD_D14, DOTCLK with LCD_D13 and ENABLE with LCD_D12, otherwise these signals will go out on separate pins"]
+    #[doc = "When this bit is set, the LCDIF block will internally mux HSYNC with LCD_D14, DOTCLK with LCD_D13 and ENABLE with LCD_D12, otherwise these signals will go out on separate pins."]
     #[must_use]
     #[inline(always)]
     pub const fn mux_sync_signals(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "When this bit is set, the LCDIF block will internally mux HSYNC with LCD_D14, DOTCLK with LCD_D13 and ENABLE with LCD_D12, otherwise these signals will go out on separate pins"]
+    #[doc = "When this bit is set, the LCDIF block will internally mux HSYNC with LCD_D14, DOTCLK with LCD_D13 and ENABLE with LCD_D12, otherwise these signals will go out on separate pins."]
     #[inline(always)]
     pub const fn set_mux_sync_signals(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
@@ -7302,43 +7302,43 @@ impl defmt::Format for Vdctrl3 {
         )
     }
 }
-#[doc = "LCDIF VSYNC Mode and Dotclk Mode Control Register4"]
+#[doc = "LCDIF VSYNC Mode and Dotclk Mode Control Register4."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Vdctrl4(pub u32);
 impl Vdctrl4 {
-    #[doc = "Total number of DISPLAY CLOCK (pix_clk) cycles on each horizontal line that carry valid data in DOTCLK mode"]
+    #[doc = "Total number of DISPLAY CLOCK (pix_clk) cycles on each horizontal line that carry valid data in DOTCLK mode."]
     #[must_use]
     #[inline(always)]
     pub const fn dotclk_h_valid_data_cnt(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x0003_ffff;
         val as u32
     }
-    #[doc = "Total number of DISPLAY CLOCK (pix_clk) cycles on each horizontal line that carry valid data in DOTCLK mode"]
+    #[doc = "Total number of DISPLAY CLOCK (pix_clk) cycles on each horizontal line that carry valid data in DOTCLK mode."]
     #[inline(always)]
     pub const fn set_dotclk_h_valid_data_cnt(&mut self, val: u32) {
         self.0 = (self.0 & !(0x0003_ffff << 0usize)) | (((val as u32) & 0x0003_ffff) << 0usize);
     }
-    #[doc = "Set this field to 1 if the LCD controller requires that the VSYNC or VSYNC/HSYNC/DOTCLK control signals should be active at least one frame before the data transfers actually start and remain active at least one frame after the data transfers end"]
+    #[doc = "Set this field to 1 if the LCD controller requires that the VSYNC or VSYNC/HSYNC/DOTCLK control signals should be active at least one frame before the data transfers actually start and remain active at least one frame after the data transfers end."]
     #[must_use]
     #[inline(always)]
     pub const fn sync_signals_on(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Set this field to 1 if the LCD controller requires that the VSYNC or VSYNC/HSYNC/DOTCLK control signals should be active at least one frame before the data transfers actually start and remain active at least one frame after the data transfers end"]
+    #[doc = "Set this field to 1 if the LCD controller requires that the VSYNC or VSYNC/HSYNC/DOTCLK control signals should be active at least one frame before the data transfers actually start and remain active at least one frame after the data transfers end."]
     #[inline(always)]
     pub const fn set_sync_signals_on(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "This bitfield selects the amount of time by which the DOTCLK signal should be delayed before coming out of the LCD_DOTCK pin"]
+    #[doc = "This bitfield selects the amount of time by which the DOTCLK signal should be delayed before coming out of the LCD_DOTCK pin."]
     #[must_use]
     #[inline(always)]
     pub const fn dotclk_dly_sel(&self) -> u8 {
         let val = (self.0 >> 29usize) & 0x07;
         val as u8
     }
-    #[doc = "This bitfield selects the amount of time by which the DOTCLK signal should be delayed before coming out of the LCD_DOTCK pin"]
+    #[doc = "This bitfield selects the amount of time by which the DOTCLK signal should be delayed before coming out of the LCD_DOTCK pin."]
     #[inline(always)]
     pub const fn set_dotclk_dly_sel(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 29usize)) | (((val as u32) & 0x07) << 29usize);

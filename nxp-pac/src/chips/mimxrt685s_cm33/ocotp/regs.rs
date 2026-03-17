@@ -1,16 +1,16 @@
-#[doc = "OTP clock divider register"]
+#[doc = "OTP clock divider register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OtpClkDiv(pub u32);
 impl OtpClkDiv {
-    #[doc = "Clock divider value by -1 encoding. It's used to generate the clock to OTP memory (otp_clk) with apb_clk. The maximum otp_clk frequency is 120Mhz. 0: Divide by 1"]
+    #[doc = "Clock divider value by -1 encoding. It's used to generate the clock to OTP memory (otp_clk) with apb_clk. The maximum otp_clk frequency is 120Mhz. 0: Divide by 1."]
     #[must_use]
     #[inline(always)]
     pub const fn div(&self) -> super::vals::Div {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Div::from_bits(val as u8)
     }
-    #[doc = "Clock divider value by -1 encoding. It's used to generate the clock to OTP memory (otp_clk) with apb_clk. The maximum otp_clk frequency is 120Mhz. 0: Divide by 1"]
+    #[doc = "Clock divider value by -1 encoding. It's used to generate the clock to OTP memory (otp_clk) with apb_clk. The maximum otp_clk frequency is 120Mhz. 0: Divide by 1."]
     #[inline(always)]
     pub const fn set_div(&mut self, val: super::vals::Div) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
@@ -81,31 +81,31 @@ impl defmt::Format for OtpClkDiv {
         )
     }
 }
-#[doc = "CRC address range register"]
+#[doc = "CRC address range register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OtpCrcAddr(pub u32);
 impl OtpCrcAddr {
-    #[doc = "CRC starting fuse word address"]
+    #[doc = "CRC starting fuse word address."]
     #[must_use]
     #[inline(always)]
     pub const fn crc_start_addr(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x01ff;
         val as u16
     }
-    #[doc = "CRC starting fuse word address"]
+    #[doc = "CRC starting fuse word address."]
     #[inline(always)]
     pub const fn set_crc_start_addr(&mut self, val: u16) {
         self.0 = (self.0 & !(0x01ff << 0usize)) | (((val as u32) & 0x01ff) << 0usize);
     }
-    #[doc = "CRC ending fuse word address"]
+    #[doc = "CRC ending fuse word address."]
     #[must_use]
     #[inline(always)]
     pub const fn crc_end_addr(&self) -> u16 {
         let val = (self.0 >> 12usize) & 0x01ff;
         val as u16
     }
-    #[doc = "CRC ending fuse word address"]
+    #[doc = "CRC ending fuse word address."]
     #[inline(always)]
     pub const fn set_crc_end_addr(&mut self, val: u16) {
         self.0 = (self.0 & !(0x01ff << 12usize)) | (((val as u32) & 0x01ff) << 12usize);
@@ -150,19 +150,19 @@ impl defmt::Format for OtpCrcAddr {
         )
     }
 }
-#[doc = "CRC result register"]
+#[doc = "CRC result register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OtpCrcValue(pub u32);
 impl OtpCrcValue {
-    #[doc = "The CRC result value. When it is locked, reading from it returns value 32hBADA_BADA"]
+    #[doc = "The CRC result value. When it is locked, reading from it returns value 32hBADA_BADA."]
     #[must_use]
     #[inline(always)]
     pub const fn crc_value(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "The CRC result value. When it is locked, reading from it returns value 32hBADA_BADA"]
+    #[doc = "The CRC result value. When it is locked, reading from it returns value 32hBADA_BADA."]
     #[inline(always)]
     pub const fn set_crc_value(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -187,43 +187,43 @@ impl defmt::Format for OtpCrcValue {
         defmt::write!(f, "OtpCrcValue {{ crc_value: {=u32:?} }}", self.crc_value())
     }
 }
-#[doc = "Control/address register"]
+#[doc = "Control/address register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OtpCtrl(pub u32);
 impl OtpCtrl {
-    #[doc = "OTP word address for read/programming"]
+    #[doc = "OTP word address for read/programming."]
     #[must_use]
     #[inline(always)]
     pub const fn addr(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x01ff;
         val as u16
     }
-    #[doc = "OTP word address for read/programming"]
+    #[doc = "OTP word address for read/programming."]
     #[inline(always)]
     pub const fn set_addr(&mut self, val: u16) {
         self.0 = (self.0 & !(0x01ff << 0usize)) | (((val as u32) & 0x01ff) << 0usize);
     }
-    #[doc = "Set to force re-loading the shadow registers (HW/SW capability and LOCK). This operation will automatically set OTP_STATUS.BUSY. Once the shadow registers have been re-loaded, OTP_STATUS.BUSY and RELOAD_SHADOWS are automatically cleared by the controller"]
+    #[doc = "Set to force re-loading the shadow registers (HW/SW capability and LOCK). This operation will automatically set OTP_STATUS.BUSY. Once the shadow registers have been re-loaded, OTP_STATUS.BUSY and RELOAD_SHADOWS are automatically cleared by the controller."]
     #[must_use]
     #[inline(always)]
     pub const fn reload_shadows(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "Set to force re-loading the shadow registers (HW/SW capability and LOCK). This operation will automatically set OTP_STATUS.BUSY. Once the shadow registers have been re-loaded, OTP_STATUS.BUSY and RELOAD_SHADOWS are automatically cleared by the controller"]
+    #[doc = "Set to force re-loading the shadow registers (HW/SW capability and LOCK). This operation will automatically set OTP_STATUS.BUSY. Once the shadow registers have been re-loaded, OTP_STATUS.BUSY and RELOAD_SHADOWS are automatically cleared by the controller."]
     #[inline(always)]
     pub const fn set_reload_shadows(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "Set to start CRC calculation. This operation will automatically set OTP_STATUS.BUSY. Once CRC is calculation done, OTP_STATUS.BUSY and CRC_TEST are automatically cleared by the controller"]
+    #[doc = "Set to start CRC calculation. This operation will automatically set OTP_STATUS.BUSY. Once CRC is calculation done, OTP_STATUS.BUSY and CRC_TEST are automatically cleared by the controller."]
     #[must_use]
     #[inline(always)]
     pub const fn crc_test(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "Set to start CRC calculation. This operation will automatically set OTP_STATUS.BUSY. Once CRC is calculation done, OTP_STATUS.BUSY and CRC_TEST are automatically cleared by the controller"]
+    #[doc = "Set to start CRC calculation. This operation will automatically set OTP_STATUS.BUSY. Once CRC is calculation done, OTP_STATUS.BUSY and CRC_TEST are automatically cleared by the controller."]
     #[inline(always)]
     pub const fn set_crc_test(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
@@ -284,7 +284,7 @@ impl defmt::Format for OtpCtrl {
         )
     }
 }
-#[doc = "Power-down register"]
+#[doc = "Power-down register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OtpPdn(pub u32);
@@ -319,19 +319,19 @@ impl defmt::Format for OtpPdn {
         defmt::write!(f, "OtpPdn {{ pdn: {=bool:?} }}", self.pdn())
     }
 }
-#[doc = "OTP read start register"]
+#[doc = "OTP read start register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OtpReadCtrl(pub u32);
 impl OtpReadCtrl {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn read(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_read(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -356,19 +356,19 @@ impl defmt::Format for OtpReadCtrl {
         defmt::write!(f, "OtpReadCtrl {{ read: {=bool:?} }}", self.read())
     }
 }
-#[doc = "OTP read data register"]
+#[doc = "OTP read data register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OtpReadData(pub u32);
 impl OtpReadData {
-    #[doc = "Fuse word read data from read operation"]
+    #[doc = "Fuse word read data from read operation."]
     #[must_use]
     #[inline(always)]
     pub const fn read_data(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Fuse word read data from read operation"]
+    #[doc = "Fuse word read data from read operation."]
     #[inline(always)]
     pub const fn set_read_data(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -393,19 +393,19 @@ impl defmt::Format for OtpReadData {
         defmt::write!(f, "OtpReadData {{ read_data: {=u32:?} }}", self.read_data())
     }
 }
-#[doc = "OTP shadow register N"]
+#[doc = "OTP shadow register N."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OtpShadow(pub u32);
 impl OtpShadow {
-    #[doc = "OTP shadow register"]
+    #[doc = "OTP shadow register."]
     #[must_use]
     #[inline(always)]
     pub const fn shadow(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "OTP shadow register"]
+    #[doc = "OTP shadow register."]
     #[inline(always)]
     pub const fn set_shadow(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -430,7 +430,7 @@ impl defmt::Format for OtpShadow {
         defmt::write!(f, "OtpShadow {{ shadow: {=u32:?} }}", self.shadow())
     }
 }
-#[doc = "Status register"]
+#[doc = "Status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OtpStatus(pub u32);
@@ -483,14 +483,14 @@ impl OtpStatus {
     pub const fn set_progfail(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "OTP ACK value"]
+    #[doc = "OTP ACK value."]
     #[must_use]
     #[inline(always)]
     pub const fn ack(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "OTP ACK value"]
+    #[doc = "OTP ACK value."]
     #[inline(always)]
     pub const fn set_ack(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
@@ -625,43 +625,43 @@ impl defmt::Format for OtpStatus {
         )
     }
 }
-#[doc = "VERSION ID register"]
+#[doc = "VERSION ID register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OtpVersion(pub u32);
 impl OtpVersion {
-    #[doc = "OTP controller step version"]
+    #[doc = "OTP controller step version."]
     #[must_use]
     #[inline(always)]
     pub const fn step_ver(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "OTP controller step version"]
+    #[doc = "OTP controller step version."]
     #[inline(always)]
     pub const fn set_step_ver(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "OTP controller minor version"]
+    #[doc = "OTP controller minor version."]
     #[must_use]
     #[inline(always)]
     pub const fn minor_ver(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0xff;
         val as u8
     }
-    #[doc = "OTP controller minor version"]
+    #[doc = "OTP controller minor version."]
     #[inline(always)]
     pub const fn set_minor_ver(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
     }
-    #[doc = "OTP controller major version"]
+    #[doc = "OTP controller major version."]
     #[must_use]
     #[inline(always)]
     pub const fn major_ver(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "OTP controller major version"]
+    #[doc = "OTP controller major version."]
     #[inline(always)]
     pub const fn set_major_ver(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);
@@ -694,7 +694,7 @@ impl defmt::Format for OtpVersion {
         )
     }
 }
-#[doc = "OTP programming data register"]
+#[doc = "OTP programming data register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OtpWriteData(pub u32);

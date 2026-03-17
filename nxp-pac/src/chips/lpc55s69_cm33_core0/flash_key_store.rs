@@ -1,4 +1,4 @@
-#[doc = "FLASH_KEY_STORE"]
+#[doc = "FLASH_KEY_STORE."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FlashKeyStore {
     ptr: *mut u8,
@@ -14,7 +14,7 @@ impl FlashKeyStore {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "Valid Key Sore Header : 0x95959595"]
+    #[doc = "Valid Key Sore Header : 0x95959595."]
     #[inline(always)]
     pub const fn header(self) -> crate::common::Reg<regs::Header, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }

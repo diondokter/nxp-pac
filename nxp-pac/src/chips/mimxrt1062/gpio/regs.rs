@@ -1,4 +1,4 @@
-#[doc = "GPIO data register"]
+#[doc = "GPIO data register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dr(pub u32);
@@ -103,7 +103,7 @@ impl defmt::Format for Dr {
         )
     }
 }
-#[doc = "GPIO data register CLEAR"]
+#[doc = "GPIO data register CLEAR."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DrClear(pub u32);
@@ -208,7 +208,7 @@ impl defmt::Format for DrClear {
         )
     }
 }
-#[doc = "GPIO data register SET"]
+#[doc = "GPIO data register SET."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DrSet(pub u32);
@@ -313,7 +313,7 @@ impl defmt::Format for DrSet {
         )
     }
 }
-#[doc = "GPIO data register TOGGLE"]
+#[doc = "GPIO data register TOGGLE."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DrToggle(pub u32);
@@ -418,7 +418,7 @@ impl defmt::Format for DrToggle {
         )
     }
 }
-#[doc = "GPIO edge select register"]
+#[doc = "GPIO edge select register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct EdgeSel(pub u32);
@@ -523,7 +523,7 @@ impl defmt::Format for EdgeSel {
         )
     }
 }
-#[doc = "GPIO direction register"]
+#[doc = "GPIO direction register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gdir(pub u32);
@@ -628,12 +628,12 @@ impl defmt::Format for Gdir {
         )
     }
 }
-#[doc = "GPIO interrupt configuration register1"]
+#[doc = "GPIO interrupt configuration register1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Icr(pub u32);
 impl Icr {
-    #[doc = "Interrupt configuration field for GPIO interrupt 0"]
+    #[doc = "Interrupt configuration field for GPIO interrupt 0."]
     #[must_use]
     #[inline(always)]
     pub const fn pin(&self, n: usize) -> super::vals::Icr {
@@ -642,7 +642,7 @@ impl Icr {
         let val = (self.0 >> offs) & 0x03;
         super::vals::Icr::from_bits(val as u8)
     }
-    #[doc = "Interrupt configuration field for GPIO interrupt 0"]
+    #[doc = "Interrupt configuration field for GPIO interrupt 0."]
     #[inline(always)]
     pub const fn set_pin(&mut self, n: usize, val: super::vals::Icr) {
         assert!(n < 16usize);
@@ -703,7 +703,7 @@ impl defmt::Format for Icr {
         )
     }
 }
-#[doc = "GPIO interrupt mask register"]
+#[doc = "GPIO interrupt mask register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Imr(pub u32);
@@ -808,7 +808,7 @@ impl defmt::Format for Imr {
         )
     }
 }
-#[doc = "GPIO interrupt status register"]
+#[doc = "GPIO interrupt status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Isr(pub u32);
@@ -913,7 +913,7 @@ impl defmt::Format for Isr {
         )
     }
 }
-#[doc = "GPIO pad status register"]
+#[doc = "GPIO pad status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Psr(pub u32);

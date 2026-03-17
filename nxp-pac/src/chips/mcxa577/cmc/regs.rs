@@ -1,4 +1,4 @@
-#[doc = "BootROM Status Register"]
+#[doc = "BootROM Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Bsr(pub u32);
@@ -33,31 +33,31 @@ impl defmt::Format for Bsr {
         defmt::write!(f, "Bsr {{ stat: {=u32:?} }}", self.stat())
     }
 }
-#[doc = "Clock Control"]
+#[doc = "Clock Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ckctrl(pub u32);
 impl Ckctrl {
-    #[doc = "Clocking Mode"]
+    #[doc = "Clocking Mode."]
     #[must_use]
     #[inline(always)]
     pub const fn ckmode(&self) -> super::vals::CkctrlCkmode {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::CkctrlCkmode::from_bits(val as u8)
     }
-    #[doc = "Clocking Mode"]
+    #[doc = "Clocking Mode."]
     #[inline(always)]
     pub const fn set_ckmode(&mut self, val: super::vals::CkctrlCkmode) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     #[must_use]
     #[inline(always)]
     pub const fn lock(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     #[inline(always)]
     pub const fn set_lock(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -88,43 +88,43 @@ impl defmt::Format for Ckctrl {
         )
     }
 }
-#[doc = "Clock Status"]
+#[doc = "Clock Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ckstat(pub u32);
 impl Ckstat {
-    #[doc = "Low Power Status"]
+    #[doc = "Low Power Status."]
     #[must_use]
     #[inline(always)]
     pub const fn ckmode(&self) -> super::vals::CkstatCkmode {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::CkstatCkmode::from_bits(val as u8)
     }
-    #[doc = "Low Power Status"]
+    #[doc = "Low Power Status."]
     #[inline(always)]
     pub const fn set_ckmode(&mut self, val: super::vals::CkstatCkmode) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Wake-up Source"]
+    #[doc = "Wake-up Source."]
     #[must_use]
     #[inline(always)]
     pub const fn wakeup(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0xff;
         val as u8
     }
-    #[doc = "Wake-up Source"]
+    #[doc = "Wake-up Source."]
     #[inline(always)]
     pub const fn set_wakeup(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
     }
-    #[doc = "Clock Status Valid"]
+    #[doc = "Clock Status Valid."]
     #[must_use]
     #[inline(always)]
     pub const fn valid(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Clock Status Valid"]
+    #[doc = "Clock Status Valid."]
     #[inline(always)]
     pub const fn set_valid(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -157,19 +157,19 @@ impl defmt::Format for Ckstat {
         )
     }
 }
-#[doc = "Core Control"]
+#[doc = "Core Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Corectl(pub u32);
 impl Corectl {
-    #[doc = "Non-maskable Pin Interrupt Enable"]
+    #[doc = "Non-maskable Pin Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn npie(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Non-maskable Pin Interrupt Enable"]
+    #[doc = "Non-maskable Pin Interrupt Enable."]
     #[inline(always)]
     pub const fn set_npie(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -194,19 +194,19 @@ impl defmt::Format for Corectl {
         defmt::write!(f, "Corectl {{ npie: {=bool:?} }}", self.npie())
     }
 }
-#[doc = "Debug Control"]
+#[doc = "Debug Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dbgctl(pub u32);
 impl Dbgctl {
-    #[doc = "Sleep Or Debug"]
+    #[doc = "Sleep Or Debug."]
     #[must_use]
     #[inline(always)]
     pub const fn sod(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Sleep Or Debug"]
+    #[doc = "Sleep Or Debug."]
     #[inline(always)]
     pub const fn set_sod(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -229,43 +229,43 @@ impl defmt::Format for Dbgctl {
         defmt::write!(f, "Dbgctl {{ sod: {=bool:?} }}", self.sod())
     }
 }
-#[doc = "Flash Control"]
+#[doc = "Flash Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flashcr(pub u32);
 impl Flashcr {
-    #[doc = "Flash Disable"]
+    #[doc = "Flash Disable."]
     #[must_use]
     #[inline(always)]
     pub const fn flashdis(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Flash Disable"]
+    #[doc = "Flash Disable."]
     #[inline(always)]
     pub const fn set_flashdis(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Flash Doze"]
+    #[doc = "Flash Doze."]
     #[must_use]
     #[inline(always)]
     pub const fn flashdoze(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Flash Doze"]
+    #[doc = "Flash Doze."]
     #[inline(always)]
     pub const fn set_flashdoze(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Flash Wake"]
+    #[doc = "Flash Wake."]
     #[must_use]
     #[inline(always)]
     pub const fn flashwake(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Flash Wake"]
+    #[doc = "Flash Wake."]
     #[inline(always)]
     pub const fn set_flashwake(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
@@ -298,19 +298,19 @@ impl defmt::Format for Flashcr {
         )
     }
 }
-#[doc = "Force Mode"]
+#[doc = "Force Mode."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Fm0(pub u32);
 impl Fm0 {
-    #[doc = "Boot Configuration"]
+    #[doc = "Boot Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn forcecfg(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Boot Configuration"]
+    #[doc = "Boot Configuration."]
     #[inline(always)]
     pub const fn set_forcecfg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -335,19 +335,19 @@ impl defmt::Format for Fm0 {
         defmt::write!(f, "Fm0 {{ forcecfg: {=bool:?} }}", self.forcecfg())
     }
 }
-#[doc = "Global Power Mode Control"]
+#[doc = "Global Power Mode Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpmctrl(pub u32);
 impl Gpmctrl {
-    #[doc = "Low-Power Mode"]
+    #[doc = "Low-Power Mode."]
     #[must_use]
     #[inline(always)]
     pub const fn lpmode(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "Low-Power Mode"]
+    #[doc = "Low-Power Mode."]
     #[inline(always)]
     pub const fn set_lpmode(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
@@ -372,19 +372,19 @@ impl defmt::Format for Gpmctrl {
         defmt::write!(f, "Gpmctrl {{ lpmode: {=u8:?} }}", self.lpmode())
     }
 }
-#[doc = "Mode"]
+#[doc = "Mode."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mr0(pub u32);
 impl Mr0 {
-    #[doc = "Boot Configuration"]
+    #[doc = "Boot Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn ispmode_n(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Boot Configuration"]
+    #[doc = "Boot Configuration."]
     #[inline(always)]
     pub const fn set_ispmode_n(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -409,19 +409,19 @@ impl defmt::Format for Mr0 {
         defmt::write!(f, "Mr0 {{ ispmode_n: {=bool:?} }}", self.ispmode_n())
     }
 }
-#[doc = "Power Mode Control"]
+#[doc = "Power Mode Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pmctrlmain(pub u32);
 impl Pmctrlmain {
-    #[doc = "Low-Power Mode"]
+    #[doc = "Low-Power Mode."]
     #[must_use]
     #[inline(always)]
     pub const fn lpmode(&self) -> super::vals::PmctrlmainLpmode {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::PmctrlmainLpmode::from_bits(val as u8)
     }
-    #[doc = "Low-Power Mode"]
+    #[doc = "Low-Power Mode."]
     #[inline(always)]
     pub const fn set_lpmode(&mut self, val: super::vals::PmctrlmainLpmode) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
@@ -446,31 +446,31 @@ impl defmt::Format for Pmctrlmain {
         defmt::write!(f, "Pmctrlmain {{ lpmode: {:?} }}", self.lpmode())
     }
 }
-#[doc = "Power Mode Protection"]
+#[doc = "Power Mode Protection."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pmprot(pub u32);
 impl Pmprot {
-    #[doc = "Low-Power Mode"]
+    #[doc = "Low-Power Mode."]
     #[must_use]
     #[inline(always)]
     pub const fn lpmode(&self) -> super::vals::PmprotLpmode {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::PmprotLpmode::from_bits(val as u8)
     }
-    #[doc = "Low-Power Mode"]
+    #[doc = "Low-Power Mode."]
     #[inline(always)]
     pub const fn set_lpmode(&mut self, val: super::vals::PmprotLpmode) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Lock Register"]
+    #[doc = "Lock Register."]
     #[must_use]
     #[inline(always)]
     pub const fn lock(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Lock Register"]
+    #[doc = "Lock Register."]
     #[inline(always)]
     pub const fn set_lock(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -501,43 +501,43 @@ impl defmt::Format for Pmprot {
         )
     }
 }
-#[doc = "Reset Pin Control"]
+#[doc = "Reset Pin Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Rpc(pub u32);
 impl Rpc {
-    #[doc = "Reset Filter Configuration"]
+    #[doc = "Reset Filter Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn filtcfg(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x1f;
         val as u8
     }
-    #[doc = "Reset Filter Configuration"]
+    #[doc = "Reset Filter Configuration."]
     #[inline(always)]
     pub const fn set_filtcfg(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val as u32) & 0x1f) << 0usize);
     }
-    #[doc = "Filter Enable"]
+    #[doc = "Filter Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn filten(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Filter Enable"]
+    #[doc = "Filter Enable."]
     #[inline(always)]
     pub const fn set_filten(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Low-Power Filter Enable"]
+    #[doc = "Low-Power Filter Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn lpfen(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Low-Power Filter Enable"]
+    #[doc = "Low-Power Filter Enable."]
     #[inline(always)]
     pub const fn set_lpfen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
@@ -570,391 +570,391 @@ impl defmt::Format for Rpc {
         )
     }
 }
-#[doc = "SRAM Shut Down Register"]
+#[doc = "SRAM Shut Down Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sramdis0(pub u32);
 impl Sramdis0 {
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dis0(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[inline(always)]
     pub const fn set_dis0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dis1(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[inline(always)]
     pub const fn set_dis1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dis2(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[inline(always)]
     pub const fn set_dis2(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dis3(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[inline(always)]
     pub const fn set_dis3(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dis4(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[inline(always)]
     pub const fn set_dis4(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dis5(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[inline(always)]
     pub const fn set_dis5(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dis6(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[inline(always)]
     pub const fn set_dis6(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dis7(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[inline(always)]
     pub const fn set_dis7(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dis8(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[inline(always)]
     pub const fn set_dis8(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dis9(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[inline(always)]
     pub const fn set_dis9(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dis10(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[inline(always)]
     pub const fn set_dis10(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dis11(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[inline(always)]
     pub const fn set_dis11(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dis12(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[inline(always)]
     pub const fn set_dis12(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dis13(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[inline(always)]
     pub const fn set_dis13(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dis14(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[inline(always)]
     pub const fn set_dis14(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dis15(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[inline(always)]
     pub const fn set_dis15(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dis16(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[inline(always)]
     pub const fn set_dis16(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dis17(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[inline(always)]
     pub const fn set_dis17(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dis18(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[inline(always)]
     pub const fn set_dis18(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dis19(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[inline(always)]
     pub const fn set_dis19(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dis20(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[inline(always)]
     pub const fn set_dis20(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dis21(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[inline(always)]
     pub const fn set_dis21(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dis22(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[inline(always)]
     pub const fn set_dis22(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dis23(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[inline(always)]
     pub const fn set_dis23(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dis24(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[inline(always)]
     pub const fn set_dis24(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dis25(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[inline(always)]
     pub const fn set_dis25(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dis26(&self) -> bool {
         let val = (self.0 >> 26usize) & 0x01;
         val != 0
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[inline(always)]
     pub const fn set_dis26(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dis27(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[inline(always)]
     pub const fn set_dis27(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dis28(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[inline(always)]
     pub const fn set_dis28(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dis29(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[inline(always)]
     pub const fn set_dis29(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dis30(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[inline(always)]
     pub const fn set_dis30(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dis31(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Shut Down Enable"]
+    #[doc = "Shut Down Enable."]
     #[inline(always)]
     pub const fn set_dis31(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -1045,391 +1045,391 @@ impl defmt::Format for Sramdis0 {
         )
     }
 }
-#[doc = "SRAM Deep Sleep Register"]
+#[doc = "SRAM Deep Sleep Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sramret0(pub u32);
 impl Sramret0 {
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ret0(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[inline(always)]
     pub const fn set_ret0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ret1(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[inline(always)]
     pub const fn set_ret1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ret2(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[inline(always)]
     pub const fn set_ret2(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ret3(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[inline(always)]
     pub const fn set_ret3(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ret4(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[inline(always)]
     pub const fn set_ret4(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ret5(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[inline(always)]
     pub const fn set_ret5(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ret6(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[inline(always)]
     pub const fn set_ret6(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ret7(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[inline(always)]
     pub const fn set_ret7(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ret8(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[inline(always)]
     pub const fn set_ret8(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ret9(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[inline(always)]
     pub const fn set_ret9(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ret10(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[inline(always)]
     pub const fn set_ret10(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ret11(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[inline(always)]
     pub const fn set_ret11(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ret12(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[inline(always)]
     pub const fn set_ret12(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ret13(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[inline(always)]
     pub const fn set_ret13(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ret14(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[inline(always)]
     pub const fn set_ret14(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ret15(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[inline(always)]
     pub const fn set_ret15(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ret16(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[inline(always)]
     pub const fn set_ret16(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ret17(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[inline(always)]
     pub const fn set_ret17(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ret18(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[inline(always)]
     pub const fn set_ret18(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ret19(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[inline(always)]
     pub const fn set_ret19(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ret20(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[inline(always)]
     pub const fn set_ret20(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ret21(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[inline(always)]
     pub const fn set_ret21(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ret22(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[inline(always)]
     pub const fn set_ret22(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ret23(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[inline(always)]
     pub const fn set_ret23(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ret24(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[inline(always)]
     pub const fn set_ret24(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ret25(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[inline(always)]
     pub const fn set_ret25(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ret26(&self) -> bool {
         let val = (self.0 >> 26usize) & 0x01;
         val != 0
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[inline(always)]
     pub const fn set_ret26(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ret27(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[inline(always)]
     pub const fn set_ret27(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ret28(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[inline(always)]
     pub const fn set_ret28(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ret29(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[inline(always)]
     pub const fn set_ret29(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ret30(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[inline(always)]
     pub const fn set_ret30(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ret31(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Deep Sleep Enable"]
+    #[doc = "Deep Sleep Enable."]
     #[inline(always)]
     pub const fn set_ret31(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -1520,127 +1520,127 @@ impl defmt::Format for Sramret0 {
         )
     }
 }
-#[doc = "System Reset Interrupt Enable"]
+#[doc = "System Reset Interrupt Enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Srie(pub u32);
 impl Srie {
-    #[doc = "Pin Reset"]
+    #[doc = "Pin Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn pin(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Pin Reset"]
+    #[doc = "Pin Reset."]
     #[inline(always)]
     pub const fn set_pin(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "DAP Reset"]
+    #[doc = "DAP Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn dap(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "DAP Reset"]
+    #[doc = "DAP Reset."]
     #[inline(always)]
     pub const fn set_dap(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "Low Power Acknowledge Timeout Reset"]
+    #[doc = "Low Power Acknowledge Timeout Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn lpack(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "Low Power Acknowledge Timeout Reset"]
+    #[doc = "Low Power Acknowledge Timeout Reset."]
     #[inline(always)]
     pub const fn set_lpack(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "System Clock Generation Reset"]
+    #[doc = "System Clock Generation Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn scg(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "System Clock Generation Reset"]
+    #[doc = "System Clock Generation Reset."]
     #[inline(always)]
     pub const fn set_scg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "Watchdog 0 Reset"]
+    #[doc = "Watchdog 0 Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn wdog0(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "Watchdog 0 Reset"]
+    #[doc = "Watchdog 0 Reset."]
     #[inline(always)]
     pub const fn set_wdog0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "Software Reset"]
+    #[doc = "Software Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn sw(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "Software Reset"]
+    #[doc = "Software Reset."]
     #[inline(always)]
     pub const fn set_sw(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Lockup Reset"]
+    #[doc = "Lockup Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn lockup(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Lockup Reset"]
+    #[doc = "Lockup Reset."]
     #[inline(always)]
     pub const fn set_lockup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "Watchdog 1 Reset"]
+    #[doc = "Watchdog 1 Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn wdog1(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "Watchdog 1 Reset"]
+    #[doc = "Watchdog 1 Reset."]
     #[inline(always)]
     pub const fn set_wdog1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "Code Watchdog 0 Reset"]
+    #[doc = "Code Watchdog 0 Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn cdog0(&self) -> bool {
         let val = (self.0 >> 26usize) & 0x01;
         val != 0
     }
-    #[doc = "Code Watchdog 0 Reset"]
+    #[doc = "Code Watchdog 0 Reset."]
     #[inline(always)]
     pub const fn set_cdog0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "Code Watchdog 1 Reset"]
+    #[doc = "Code Watchdog 1 Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn cdog1(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "Code Watchdog 1 Reset"]
+    #[doc = "Code Watchdog 1 Reset."]
     #[inline(always)]
     pub const fn set_cdog1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
@@ -1687,115 +1687,115 @@ impl defmt::Format for Srie {
         )
     }
 }
-#[doc = "System Reset Interrupt Flag"]
+#[doc = "System Reset Interrupt Flag."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Srif(pub u32);
 impl Srif {
-    #[doc = "Pin Reset"]
+    #[doc = "Pin Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn pin(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Pin Reset"]
+    #[doc = "Pin Reset."]
     #[inline(always)]
     pub const fn set_pin(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "DAP Reset"]
+    #[doc = "DAP Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn dap(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "DAP Reset"]
+    #[doc = "DAP Reset."]
     #[inline(always)]
     pub const fn set_dap(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "Low Power Acknowledge Timeout Reset"]
+    #[doc = "Low Power Acknowledge Timeout Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn lpack(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "Low Power Acknowledge Timeout Reset"]
+    #[doc = "Low Power Acknowledge Timeout Reset."]
     #[inline(always)]
     pub const fn set_lpack(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "Watchdog 0 Reset"]
+    #[doc = "Watchdog 0 Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn wdog0(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "Watchdog 0 Reset"]
+    #[doc = "Watchdog 0 Reset."]
     #[inline(always)]
     pub const fn set_wdog0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "Software Reset"]
+    #[doc = "Software Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn sw(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "Software Reset"]
+    #[doc = "Software Reset."]
     #[inline(always)]
     pub const fn set_sw(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Lockup Reset"]
+    #[doc = "Lockup Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn lockup(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Lockup Reset"]
+    #[doc = "Lockup Reset."]
     #[inline(always)]
     pub const fn set_lockup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "Watchdog 1 Reset"]
+    #[doc = "Watchdog 1 Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn wdog1(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "Watchdog 1 Reset"]
+    #[doc = "Watchdog 1 Reset."]
     #[inline(always)]
     pub const fn set_wdog1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "Code Watchdog 0 Reset"]
+    #[doc = "Code Watchdog 0 Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn cdog0(&self) -> bool {
         let val = (self.0 >> 26usize) & 0x01;
         val != 0
     }
-    #[doc = "Code Watchdog 0 Reset"]
+    #[doc = "Code Watchdog 0 Reset."]
     #[inline(always)]
     pub const fn set_cdog0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "Code Watchdog 1 Reset"]
+    #[doc = "Code Watchdog 1 Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn cdog1(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "Code Watchdog 1 Reset"]
+    #[doc = "Code Watchdog 1 Reset."]
     #[inline(always)]
     pub const fn set_cdog1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
@@ -1840,247 +1840,247 @@ impl defmt::Format for Srif {
         )
     }
 }
-#[doc = "System Reset Status"]
+#[doc = "System Reset Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Srs(pub u32);
 impl Srs {
-    #[doc = "Wake-up Reset"]
+    #[doc = "Wake-up Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn wakeup(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-up Reset"]
+    #[doc = "Wake-up Reset."]
     #[inline(always)]
     pub const fn set_wakeup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Power-on Reset"]
+    #[doc = "Power-on Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn por(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Power-on Reset"]
+    #[doc = "Power-on Reset."]
     #[inline(always)]
     pub const fn set_por(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Low Voltage Detect Reset"]
+    #[doc = "Low Voltage Detect Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn lvd(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Low Voltage Detect Reset"]
+    #[doc = "Low Voltage Detect Reset."]
     #[inline(always)]
     pub const fn set_lvd(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "High Voltage Detect Reset"]
+    #[doc = "High Voltage Detect Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn hvd(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "High Voltage Detect Reset"]
+    #[doc = "High Voltage Detect Reset."]
     #[inline(always)]
     pub const fn set_hvd(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "Warm Reset"]
+    #[doc = "Warm Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn warm(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "Warm Reset"]
+    #[doc = "Warm Reset."]
     #[inline(always)]
     pub const fn set_warm(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "Fatal Reset"]
+    #[doc = "Fatal Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn fatal(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Fatal Reset"]
+    #[doc = "Fatal Reset."]
     #[inline(always)]
     pub const fn set_fatal(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "Pin Reset"]
+    #[doc = "Pin Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn pin(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Pin Reset"]
+    #[doc = "Pin Reset."]
     #[inline(always)]
     pub const fn set_pin(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Debug Access Port Reset"]
+    #[doc = "Debug Access Port Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn dap(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Debug Access Port Reset"]
+    #[doc = "Debug Access Port Reset."]
     #[inline(always)]
     pub const fn set_dap(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "Reset Timeout"]
+    #[doc = "Reset Timeout."]
     #[must_use]
     #[inline(always)]
     pub const fn rstack(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "Reset Timeout"]
+    #[doc = "Reset Timeout."]
     #[inline(always)]
     pub const fn set_rstack(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "Low Power Acknowledge Timeout Reset"]
+    #[doc = "Low Power Acknowledge Timeout Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn lpack(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "Low Power Acknowledge Timeout Reset"]
+    #[doc = "Low Power Acknowledge Timeout Reset."]
     #[inline(always)]
     pub const fn set_lpack(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "System Clock Generation Reset"]
+    #[doc = "System Clock Generation Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn scg(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "System Clock Generation Reset"]
+    #[doc = "System Clock Generation Reset."]
     #[inline(always)]
     pub const fn set_scg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "Watchdog 0 Reset"]
+    #[doc = "Watchdog 0 Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn wdog0(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "Watchdog 0 Reset"]
+    #[doc = "Watchdog 0 Reset."]
     #[inline(always)]
     pub const fn set_wdog0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "Software Reset"]
+    #[doc = "Software Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn sw(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "Software Reset"]
+    #[doc = "Software Reset."]
     #[inline(always)]
     pub const fn set_sw(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Lockup Reset"]
+    #[doc = "Lockup Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn lockup(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Lockup Reset"]
+    #[doc = "Lockup Reset."]
     #[inline(always)]
     pub const fn set_lockup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "Watchdog 1 Reset"]
+    #[doc = "Watchdog 1 Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn wdog1(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "Watchdog 1 Reset"]
+    #[doc = "Watchdog 1 Reset."]
     #[inline(always)]
     pub const fn set_wdog1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "Code Watchdog 0 Reset"]
+    #[doc = "Code Watchdog 0 Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn cdog0(&self) -> bool {
         let val = (self.0 >> 26usize) & 0x01;
         val != 0
     }
-    #[doc = "Code Watchdog 0 Reset"]
+    #[doc = "Code Watchdog 0 Reset."]
     #[inline(always)]
     pub const fn set_cdog0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "Code Watchdog 1 Reset"]
+    #[doc = "Code Watchdog 1 Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn cdog1(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "Code Watchdog 1 Reset"]
+    #[doc = "Code Watchdog 1 Reset."]
     #[inline(always)]
     pub const fn set_cdog1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "JTAG System Reset"]
+    #[doc = "JTAG System Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn jtag(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "JTAG System Reset"]
+    #[doc = "JTAG System Reset."]
     #[inline(always)]
     pub const fn set_jtag(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "Security Violation Reset"]
+    #[doc = "Security Violation Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn secvio(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "Security Violation Reset"]
+    #[doc = "Security Violation Reset."]
     #[inline(always)]
     pub const fn set_secvio(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "Tamper Reset"]
+    #[doc = "Tamper Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn tamper(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Tamper Reset"]
+    #[doc = "Tamper Reset."]
     #[inline(always)]
     pub const fn set_tamper(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -2147,247 +2147,247 @@ impl defmt::Format for Srs {
         )
     }
 }
-#[doc = "Sticky System Reset Status"]
+#[doc = "Sticky System Reset Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ssrs(pub u32);
 impl Ssrs {
-    #[doc = "Wake-up Reset"]
+    #[doc = "Wake-up Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn wakeup(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-up Reset"]
+    #[doc = "Wake-up Reset."]
     #[inline(always)]
     pub const fn set_wakeup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Power-on Reset"]
+    #[doc = "Power-on Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn por(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Power-on Reset"]
+    #[doc = "Power-on Reset."]
     #[inline(always)]
     pub const fn set_por(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Low Voltage Detect Reset"]
+    #[doc = "Low Voltage Detect Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn lvd(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Low Voltage Detect Reset"]
+    #[doc = "Low Voltage Detect Reset."]
     #[inline(always)]
     pub const fn set_lvd(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "High Voltage Detect Reset"]
+    #[doc = "High Voltage Detect Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn hvd(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "High Voltage Detect Reset"]
+    #[doc = "High Voltage Detect Reset."]
     #[inline(always)]
     pub const fn set_hvd(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "Warm Reset"]
+    #[doc = "Warm Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn warm(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "Warm Reset"]
+    #[doc = "Warm Reset."]
     #[inline(always)]
     pub const fn set_warm(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "Fatal Reset"]
+    #[doc = "Fatal Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn fatal(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Fatal Reset"]
+    #[doc = "Fatal Reset."]
     #[inline(always)]
     pub const fn set_fatal(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "Pin Reset"]
+    #[doc = "Pin Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn pin(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Pin Reset"]
+    #[doc = "Pin Reset."]
     #[inline(always)]
     pub const fn set_pin(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "DAP Reset"]
+    #[doc = "DAP Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn dap(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "DAP Reset"]
+    #[doc = "DAP Reset."]
     #[inline(always)]
     pub const fn set_dap(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "Reset Timeout"]
+    #[doc = "Reset Timeout."]
     #[must_use]
     #[inline(always)]
     pub const fn rstack(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "Reset Timeout"]
+    #[doc = "Reset Timeout."]
     #[inline(always)]
     pub const fn set_rstack(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "Low Power Acknowledge Timeout Reset"]
+    #[doc = "Low Power Acknowledge Timeout Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn lpack(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "Low Power Acknowledge Timeout Reset"]
+    #[doc = "Low Power Acknowledge Timeout Reset."]
     #[inline(always)]
     pub const fn set_lpack(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "System Clock Generation Reset"]
+    #[doc = "System Clock Generation Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn scg(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "System Clock Generation Reset"]
+    #[doc = "System Clock Generation Reset."]
     #[inline(always)]
     pub const fn set_scg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "Watchdog 0 Reset"]
+    #[doc = "Watchdog 0 Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn wdog0(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "Watchdog 0 Reset"]
+    #[doc = "Watchdog 0 Reset."]
     #[inline(always)]
     pub const fn set_wdog0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "Software Reset"]
+    #[doc = "Software Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn sw(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "Software Reset"]
+    #[doc = "Software Reset."]
     #[inline(always)]
     pub const fn set_sw(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Lockup Reset"]
+    #[doc = "Lockup Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn lockup(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Lockup Reset"]
+    #[doc = "Lockup Reset."]
     #[inline(always)]
     pub const fn set_lockup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "Watchdog 1 Reset"]
+    #[doc = "Watchdog 1 Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn wdog1(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "Watchdog 1 Reset"]
+    #[doc = "Watchdog 1 Reset."]
     #[inline(always)]
     pub const fn set_wdog1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "Code Watchdog 0 Reset"]
+    #[doc = "Code Watchdog 0 Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn cdog0(&self) -> bool {
         let val = (self.0 >> 26usize) & 0x01;
         val != 0
     }
-    #[doc = "Code Watchdog 0 Reset"]
+    #[doc = "Code Watchdog 0 Reset."]
     #[inline(always)]
     pub const fn set_cdog0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "Code Watchdog 1 Reset"]
+    #[doc = "Code Watchdog 1 Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn cdog1(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "Code Watchdog 1 Reset"]
+    #[doc = "Code Watchdog 1 Reset."]
     #[inline(always)]
     pub const fn set_cdog1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "JTAG System Reset"]
+    #[doc = "JTAG System Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn jtag(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "JTAG System Reset"]
+    #[doc = "JTAG System Reset."]
     #[inline(always)]
     pub const fn set_jtag(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "Security Violation Reset"]
+    #[doc = "Security Violation Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn secvio(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "Security Violation Reset"]
+    #[doc = "Security Violation Reset."]
     #[inline(always)]
     pub const fn set_secvio(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "Tamper Reset"]
+    #[doc = "Tamper Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn tamper(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Tamper Reset"]
+    #[doc = "Tamper Reset."]
     #[inline(always)]
     pub const fn set_tamper(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -2454,43 +2454,43 @@ impl defmt::Format for Ssrs {
         )
     }
 }
-#[doc = "Version ID"]
+#[doc = "Version ID."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Verid(pub u32);
 impl Verid {
-    #[doc = "Feature Specification Number"]
+    #[doc = "Feature Specification Number."]
     #[must_use]
     #[inline(always)]
     pub const fn feature(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Feature Specification Number"]
+    #[doc = "Feature Specification Number."]
     #[inline(always)]
     pub const fn set_feature(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Minor Version Number"]
+    #[doc = "Minor Version Number."]
     #[must_use]
     #[inline(always)]
     pub const fn minor(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0xff;
         val as u8
     }
-    #[doc = "Minor Version Number"]
+    #[doc = "Minor Version Number."]
     #[inline(always)]
     pub const fn set_minor(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
     }
-    #[doc = "Major Version Number"]
+    #[doc = "Major Version Number."]
     #[must_use]
     #[inline(always)]
     pub const fn major(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "Major Version Number"]
+    #[doc = "Major Version Number."]
     #[inline(always)]
     pub const fn set_major(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);

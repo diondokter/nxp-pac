@@ -157,9 +157,9 @@ impl From<P0ActSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P0BlkInt {
-    #[doc = "Indicates normal operation"]
+    #[doc = "Indicates normal operation."]
     P0_BLK_INT0 = 0x0,
-    #[doc = "Indicates that a blocked opcode has been detected"]
+    #[doc = "Indicates that a blocked opcode has been detected."]
     P0_BLK_INT1 = 0x01,
 }
 impl P0BlkInt {
@@ -219,9 +219,9 @@ impl From<P0BlkMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P0BypSel {
-    #[doc = "CS0"]
+    #[doc = "CS0."]
     P0_BYP_SEL_0 = 0x0,
-    #[doc = "CS1"]
+    #[doc = "CS1."]
     P0_BYP_SEL_1 = 0x01,
 }
 impl P0BypSel {
@@ -281,9 +281,9 @@ impl From<P0ByteMdRst> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P0ByteMode {
-    #[doc = "3-Byte Address Mode"]
+    #[doc = "3-Byte Address Mode."]
     P0_BYTE_MODE_0 = 0x0,
-    #[doc = "4-Byte Address Mode"]
+    #[doc = "4-Byte Address Mode."]
     P0_BYTE_MODE_1 = 0x01,
 }
 impl P0ByteMode {
@@ -312,9 +312,9 @@ impl From<P0ByteMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P0ByteSel {
-    #[doc = "Sets the filter to 3-byte address mode"]
+    #[doc = "Sets the filter to 3-byte address mode."]
     P0_BYTE_SEL0 = 0x0,
-    #[doc = "Sets the filter to 4-byte address mode"]
+    #[doc = "Sets the filter to 4-byte address mode."]
     P0_BYTE_SEL1 = 0x01,
 }
 impl P0ByteSel {
@@ -343,9 +343,9 @@ impl From<P0ByteSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P0ByteSelMd {
-    #[doc = "Normal Operation. The Address byte mode is determined by the Op Code Command"]
+    #[doc = "Normal Operation. The Address byte mode is determined by the Op Code Command."]
     P0_BYTE_SEL_MD0 = 0x0,
-    #[doc = "Sets the Byte Mode to 3-byte and gives control of the function to the P0_BYTE_SEL in the P0 Filter Control Register. In this mode, any changes to P0_BYTE_SEL are latched and the internal state of BYTE_SEL will retain this value when P0_BYTE_SEL_MD is cleared"]
+    #[doc = "Sets the Byte Mode to 3-byte and gives control of the function to the P0_BYTE_SEL in the P0 Filter Control Register. In this mode, any changes to P0_BYTE_SEL are latched and the internal state of BYTE_SEL will retain this value when P0_BYTE_SEL_MD is cleared."]
     P0_BYTE_SEL_MD1 = 0x01,
 }
 impl P0ByteSelMd {
@@ -374,9 +374,9 @@ impl From<P0ByteSelMd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P0BytemodeInt {
-    #[doc = "Indicates normal operation"]
+    #[doc = "Indicates normal operation."]
     P0_BYTEMODE_INT0 = 0x0,
-    #[doc = "Indicates that a Bytemode change has been detected (OpCode E9 or B7)"]
+    #[doc = "Indicates that a Bytemode change has been detected (OpCode E9 or B7)."]
     P0_BYTEMODE_INT1 = 0x01,
 }
 impl P0BytemodeInt {
@@ -436,7 +436,7 @@ impl From<P0BytemodeMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P0Dirty {
-    #[doc = "Indicates normal operation. No Writes have been directed to the inactive Flash"]
+    #[doc = "Indicates normal operation. No Writes have been directed to the inactive Flash."]
     P0_DIRTY_0 = 0x0,
     #[doc = "Indicates that a write to the inactive Flash has been detected and the state of the flash should be considered \"dirty\"."]
     P0_DIRTY_1 = 0x01,
@@ -467,7 +467,7 @@ impl From<P0Dirty> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P0DirtyInt {
-    #[doc = "Indicates normal operation"]
+    #[doc = "Indicates normal operation."]
     P0_DIRTY_INT0 = 0x0,
     #[doc = "Indicates that a write has occurred to the FW Code region of the inactive Flash and that flash is now considered corrupt."]
     P0_DIRTY_INT1 = 0x01,
@@ -529,9 +529,9 @@ impl From<P0DirtyMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P0F8Int {
-    #[doc = "Indicates normal operation"]
+    #[doc = "Indicates normal operation."]
     P0_F8_INT0 = 0x0,
-    #[doc = "Indicates an F8 command has been detected"]
+    #[doc = "Indicates an F8 command has been detected."]
     P0_F8_INT1 = 0x01,
 }
 impl P0F8Int {
@@ -622,11 +622,11 @@ impl From<P0FltEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P0MfgId {
-    #[doc = "Macronix"]
+    #[doc = "Macronix."]
     MACRONIX = 0x0,
-    #[doc = "Windbond"]
+    #[doc = "Windbond."]
     WINDBOND = 0x01,
-    #[doc = "Micron"]
+    #[doc = "Micron."]
     MICRON = 0x02,
     _RESERVED_3 = 0x03,
     _RESERVED_4 = 0x04,
@@ -792,9 +792,9 @@ impl From<P0SingleFlashChipSelect> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P0WeByteMd {
-    #[doc = "Write Enable command is not required to switch address byte mode"]
+    #[doc = "Write Enable command is not required to switch address byte mode."]
     P0_WE_BYTE_MD0 = 0x0,
-    #[doc = "Write Enable command is required prior to switching address byte mode"]
+    #[doc = "Write Enable command is required prior to switching address byte mode."]
     P0_WE_BYTE_MD1 = 0x01,
 }
 impl P0WeByteMd {
@@ -854,9 +854,9 @@ impl From<P1ActSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P1BlkInt {
-    #[doc = "Indicates normal operation"]
+    #[doc = "Indicates normal operation."]
     P1_BLK_INT0 = 0x0,
-    #[doc = "Indicates that a blocked opcode has been detected"]
+    #[doc = "Indicates that a blocked opcode has been detected."]
     P1_BLK_INT1 = 0x01,
 }
 impl P1BlkInt {
@@ -916,9 +916,9 @@ impl From<P1BlkMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P1BypSel {
-    #[doc = "CS0"]
+    #[doc = "CS0."]
     P1_BYP_SEL_0 = 0x0,
-    #[doc = "CS1"]
+    #[doc = "CS1."]
     P1_BYP_SEL_1 = 0x01,
 }
 impl P1BypSel {
@@ -978,9 +978,9 @@ impl From<P1ByteMdRst> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P1ByteMode {
-    #[doc = "3-Byte Address Mode"]
+    #[doc = "3-Byte Address Mode."]
     P1_BYTE_MODE_0 = 0x0,
-    #[doc = "4-Byte Address Mode"]
+    #[doc = "4-Byte Address Mode."]
     P1_BYTE_MODE_1 = 0x01,
 }
 impl P1ByteMode {
@@ -1071,9 +1071,9 @@ impl From<P1ByteSelMd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P1BytemodeInt {
-    #[doc = "Indicates normal operation"]
+    #[doc = "Indicates normal operation."]
     P1_BYTEMODE_INT0 = 0x0,
-    #[doc = "Indicates that a Bytemode change has been detected (OpCode E9 or B7)"]
+    #[doc = "Indicates that a Bytemode change has been detected (OpCode E9 or B7)."]
     P1_BYTEMODE_INT1 = 0x01,
 }
 impl P1BytemodeInt {
@@ -1133,9 +1133,9 @@ impl From<P1BytemodeMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P1DirtyInt {
-    #[doc = "Indicates normal operation"]
+    #[doc = "Indicates normal operation."]
     P1_DIRTY_INT0 = 0x0,
-    #[doc = "indicates that a write has occurred to the FW Code region of the inactive Flash and that flash is now considered corrupt"]
+    #[doc = "indicates that a write has occurred to the FW Code region of the inactive Flash and that flash is now considered corrupt."]
     P1_DIRTY_INT1 = 0x01,
 }
 impl P1DirtyInt {
@@ -1195,9 +1195,9 @@ impl From<P1DirtyMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P1F8Int {
-    #[doc = "Indicates normal operation"]
+    #[doc = "Indicates normal operation."]
     P1_F8_INT0 = 0x0,
-    #[doc = "Indicates an F8 command has been detected"]
+    #[doc = "Indicates an F8 command has been detected."]
     P1_F8_INT1 = 0x01,
 }
 impl P1F8Int {
@@ -1257,11 +1257,11 @@ impl From<P1FltEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P1MfgId {
-    #[doc = "Macronix"]
+    #[doc = "Macronix."]
     MACRONIX = 0x0,
-    #[doc = "Windbond"]
+    #[doc = "Windbond."]
     WINDBOND = 0x01,
-    #[doc = "Micron"]
+    #[doc = "Micron."]
     MICRON = 0x02,
     _RESERVED_3 = 0x03,
     _RESERVED_4 = 0x04,

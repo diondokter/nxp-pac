@@ -1,4 +1,4 @@
-#[doc = "Hash-Crypt peripheral"]
+#[doc = "Hash-Crypt peripheral."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hashcrypt {
     ptr: *mut u8,
@@ -14,7 +14,7 @@ impl Hashcrypt {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "Control register to enable and operate Hash and Crypto"]
+    #[doc = "Control register to enable and operate Hash and Crypto."]
     #[inline(always)]
     pub const fn ctrl(self) -> crate::common::Reg<regs::Ctrl, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
@@ -34,7 +34,7 @@ impl Hashcrypt {
     pub const fn intenclr(self) -> crate::common::Reg<regs::Intenclr, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }
     }
-    #[doc = "Setup Master to access memory (if available)"]
+    #[doc = "Setup Master to access memory (if available)."]
     #[inline(always)]
     pub const fn memctrl(self) -> crate::common::Reg<regs::Memctrl, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x10usize) as _) }
@@ -55,13 +55,13 @@ impl Hashcrypt {
         assert!(n < 7usize);
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x24usize + n * 4usize) as _) }
     }
-    #[doc = "Result digest (when status says so): Is 1st 5 words if SHA1 used Is all 8 words if SHA2 used Is all 8 words if crypto or SHA512"]
+    #[doc = "Result digest (when status says so): Is 1st 5 words if SHA1 used Is all 8 words if SHA2 used Is all 8 words if crypto or SHA512."]
     #[inline(always)]
     pub const fn digest0(self, n: usize) -> crate::common::Reg<regs::Digest0, crate::common::R> {
         assert!(n < 8usize);
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x40usize + n * 4usize) as _) }
     }
-    #[doc = "Crypto settings for AES and Salsa and ChaCha"]
+    #[doc = "Crypto settings for AES and Salsa and ChaCha."]
     #[inline(always)]
     pub const fn cryptcfg(self) -> crate::common::Reg<regs::Cryptcfg, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x80usize) as _) }
@@ -88,7 +88,7 @@ impl Hashcrypt {
         assert!(n < 8usize);
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xa0usize + n * 4usize) as _) }
     }
-    #[doc = "PRNG random input value used as an entropy source"]
+    #[doc = "PRNG random input value used as an entropy source."]
     #[inline(always)]
     pub const fn prng_seed(self) -> crate::common::Reg<regs::PrngSeed, crate::common::W> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xd0usize) as _) }

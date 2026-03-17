@@ -2724,7 +2724,7 @@ impl From<MiscCtrlRegDisableViolationAbort> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MiscCtrlRegEnableNsPrivCheck {
     _RESERVED_0 = 0x0,
-    #[doc = "Enabled (restricted mode)"]
+    #[doc = "Enabled (restricted mode)."]
     ENABLE = 0x01,
     #[doc = "Disable check."]
     DISABLE = 0x02,
@@ -2757,7 +2757,7 @@ impl From<MiscCtrlRegEnableNsPrivCheck> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MiscCtrlRegEnableSPrivCheck {
     _RESERVED_0 = 0x0,
-    #[doc = "Enabled (restricted mode)"]
+    #[doc = "Enabled (restricted mode)."]
     ENABLE = 0x01,
     #[doc = "Disable check."]
     DISABLE = 0x02,
@@ -2790,7 +2790,7 @@ impl From<MiscCtrlRegEnableSPrivCheck> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MiscCtrlRegEnableSecureChecking {
     _RESERVED_0 = 0x0,
-    #[doc = "Enabled (restricted mode)"]
+    #[doc = "Enabled (restricted mode)."]
     ENABLE = 0x01,
     #[doc = "Disable check."]
     DISABLE = 0x02,

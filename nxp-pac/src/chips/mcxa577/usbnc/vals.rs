@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ClockRecoverEn {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DIS_CLK_RECOVER = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     EN_CLK_RECOVER = 0x01,
 }
 impl ClockRecoverEn {
@@ -33,9 +33,9 @@ impl From<ClockRecoverEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FsIsoB2bFixen {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     FS_ISO_B2B_FIXEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     FS_ISO_B2B_FIXEN_1 = 0x01,
 }
 impl FsIsoB2bFixen {
@@ -64,9 +64,9 @@ impl From<FsIsoB2bFixen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IrcEn {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DIS_IRC = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     EN_IRC = 0x01,
 }
 impl IrcEn {
@@ -95,9 +95,9 @@ impl From<IrcEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpmAutoPhcd {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     LPM_AUTO_PHCD0 = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     LPM_AUTO_PHCD1 = 0x01,
 }
 impl LpmAutoPhcd {
@@ -126,37 +126,37 @@ impl From<LpmAutoPhcd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpmDevBeslthres {
-    #[doc = "75 us, if LPM_ERRATA_EN = 1; 50 us, if LPM_ERRATA_EN = 0"]
+    #[doc = "75 us, if LPM_ERRATA_EN = 1; 50 us, if LPM_ERRATA_EN = 0."]
     LPM_DEV_BESLTHRES0 = 0x0,
-    #[doc = "100 us, if LPM_ERRATA_EN = 1; 125 us, if LPM_ERRATA_EN = 0"]
+    #[doc = "100 us, if LPM_ERRATA_EN = 1; 125 us, if LPM_ERRATA_EN = 0."]
     LPM_DEV_BESLTHRES1 = 0x01,
-    #[doc = "150 us, if LPM_ERRATA_EN = 1; 200 us, if LPM_ERRATA_EN = 0"]
+    #[doc = "150 us, if LPM_ERRATA_EN = 1; 200 us, if LPM_ERRATA_EN = 0."]
     LPM_DEV_BESLTHRES2 = 0x02,
-    #[doc = "250 us, if LPM_ERRATA_EN = 1; 275 us, if LPM_ERRATA_EN = 0"]
+    #[doc = "250 us, if LPM_ERRATA_EN = 1; 275 us, if LPM_ERRATA_EN = 0."]
     LPM_DEV_BESLTHRES3 = 0x03,
-    #[doc = "350 us, if LPM_ERRATA_EN = 1; 350 us, if LPM_ERRATA_EN = 0"]
+    #[doc = "350 us, if LPM_ERRATA_EN = 1; 350 us, if LPM_ERRATA_EN = 0."]
     LPM_DEV_BESLTHRES4 = 0x04,
-    #[doc = "450 us, if LPM_ERRATA_EN = 1; 425 us, if LPM_ERRATA_EN = 0"]
+    #[doc = "450 us, if LPM_ERRATA_EN = 1; 425 us, if LPM_ERRATA_EN = 0."]
     LPM_DEV_BESLTHRES5 = 0x05,
-    #[doc = "950 us, if LPM_ERRATA_EN = 1; 500 us, if LPM_ERRATA_EN = 0"]
+    #[doc = "950 us, if LPM_ERRATA_EN = 1; 500 us, if LPM_ERRATA_EN = 0."]
     LPM_DEV_BESLTHRES6 = 0x06,
-    #[doc = "1950 us, if LPM_ERRATA_EN = 1; 575 us, if LPM_ERRATA_EN = 0"]
+    #[doc = "1950 us, if LPM_ERRATA_EN = 1; 575 us, if LPM_ERRATA_EN = 0."]
     LPM_DEV_BESLTHRES7 = 0x07,
-    #[doc = "2950 us, if LPM_ERRATA_EN = 1; 650 us, if LPM_ERRATA_EN = 0"]
+    #[doc = "2950 us, if LPM_ERRATA_EN = 1; 650 us, if LPM_ERRATA_EN = 0."]
     LPM_DEV_BESLTHRES8 = 0x08,
-    #[doc = "3950 us, if LPM_ERRATA_EN = 1; 725 us, if LPM_ERRATA_EN = 0"]
+    #[doc = "3950 us, if LPM_ERRATA_EN = 1; 725 us, if LPM_ERRATA_EN = 0."]
     LPM_DEV_BESLTHRES9 = 0x09,
-    #[doc = "4950 us, if LPM_ERRATA_EN = 1; 800 us, if LPM_ERRATA_EN = 0"]
+    #[doc = "4950 us, if LPM_ERRATA_EN = 1; 800 us, if LPM_ERRATA_EN = 0."]
     LPM_DEV_BESLTHRESA = 0x0a,
-    #[doc = "5950 us, if LPM_ERRATA_EN = 1; 875 us, if LPM_ERRATA_EN = 0"]
+    #[doc = "5950 us, if LPM_ERRATA_EN = 1; 875 us, if LPM_ERRATA_EN = 0."]
     LPM_DEV_BESLTHRESB = 0x0b,
-    #[doc = "6950 us, if LPM_ERRATA_EN = 1; 950 us, if LPM_ERRATA_EN = 0"]
+    #[doc = "6950 us, if LPM_ERRATA_EN = 1; 950 us, if LPM_ERRATA_EN = 0."]
     LPM_DEV_BESLTHRESC = 0x0c,
-    #[doc = "7950 us, if LPM_ERRATA_EN = 1; 1025 us, if LPM_ERRATA_EN = 0"]
+    #[doc = "7950 us, if LPM_ERRATA_EN = 1; 1025 us, if LPM_ERRATA_EN = 0."]
     LPM_DEV_BESLTHRESD = 0x0d,
-    #[doc = "8950 us, if LPM_ERRATA_EN = 1; 1100 us, if LPM_ERRATA_EN = 0"]
+    #[doc = "8950 us, if LPM_ERRATA_EN = 1; 1100 us, if LPM_ERRATA_EN = 0."]
     LPM_DEV_BESLTHRESE = 0x0e,
-    #[doc = "9950 us, if LPM_ERRATA_EN = 1; 1175 us, if LPM_ERRATA_EN = 0"]
+    #[doc = "9950 us, if LPM_ERRATA_EN = 1; 1175 us, if LPM_ERRATA_EN = 0."]
     LPM_DEV_BESLTHRESF = 0x0f,
 }
 impl LpmDevBeslthres {
@@ -185,9 +185,9 @@ impl From<LpmDevBeslthres> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpmDevDp {
-    #[doc = "Not pending"]
+    #[doc = "Not pending."]
     LPM_DEV_DP0 = 0x0,
-    #[doc = "Pending"]
+    #[doc = "Pending."]
     LPM_DEV_DP1 = 0x01,
 }
 impl LpmDevDp {
@@ -217,7 +217,7 @@ impl From<LpmDevDp> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpmDevLnkstrcvd {
     _RESERVED_0 = 0x0,
-    #[doc = "L1 (Sleep mode)"]
+    #[doc = "L1 (Sleep mode)."]
     LPM_DEV_LNKSTRCVD1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -260,9 +260,9 @@ impl From<LpmDevLnkstrcvd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpmDevRes {
-    #[doc = "Fourth condition not needed"]
+    #[doc = "Fourth condition not needed."]
     LPM_DEV_RES0 = 0x0,
-    #[doc = "Fourth condition needed"]
+    #[doc = "Fourth condition needed."]
     LPM_DEV_RES1 = 0x01,
 }
 impl LpmDevRes {
@@ -291,13 +291,13 @@ impl From<LpmDevRes> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpmDevRspsts {
-    #[doc = "Invalid"]
+    #[doc = "Invalid."]
     LPM_DEV_RSPSTS0 = 0x0,
-    #[doc = "ACK"]
+    #[doc = "ACK."]
     LPM_DEV_RSPSTS1 = 0x01,
-    #[doc = "NYET"]
+    #[doc = "NYET."]
     LPM_DEV_RSPSTS2 = 0x02,
-    #[doc = "STALL"]
+    #[doc = "STALL."]
     LPM_DEV_RSPSTS3 = 0x03,
 }
 impl LpmDevRspsts {
@@ -326,9 +326,9 @@ impl From<LpmDevRspsts> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpmDevRwkenrcvd {
-    #[doc = "0"]
+    #[doc = "0."]
     LPM_DEV_RWKENRCVD0 = 0x0,
-    #[doc = "1"]
+    #[doc = "1."]
     LPM_DEV_RWKENRCVD1 = 0x01,
 }
 impl LpmDevRwkenrcvd {
@@ -357,9 +357,9 @@ impl From<LpmDevRwkenrcvd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpmEn {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     LPM_EN0 = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     LPM_EN1 = 0x01,
 }
 impl LpmEn {
@@ -388,9 +388,9 @@ impl From<LpmEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpmEnEndpChk {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     LPM_EN_ENDP_CHK_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     LPM_EN_ENDP_CHK_1 = 0x01,
 }
 impl LpmEnEndpChk {
@@ -419,9 +419,9 @@ impl From<LpmEnEndpChk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpmErrataEn {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     LPM_ERRATA_EN0 = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     LPM_ERRATA_EN1 = 0x01,
 }
 impl LpmErrataEn {
@@ -450,9 +450,9 @@ impl From<LpmErrataEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpmHstRwken {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     LPM_HST_RWKEN0 = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     LPM_HST_RWKEN1 = 0x01,
 }
 impl LpmHstRwken {
@@ -481,9 +481,9 @@ impl From<LpmHstRwken> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpmHstSend {
-    #[doc = "LPM transaction did not happen or is complete"]
+    #[doc = "LPM transaction did not happen or is complete."]
     LPM_HST_SEND0 = 0x0,
-    #[doc = "LPM transaction is ongoing"]
+    #[doc = "LPM transaction is ongoing."]
     LPM_HST_SEND1 = 0x01,
 }
 impl LpmHstSend {
@@ -512,17 +512,17 @@ impl From<LpmHstSend> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpmHstStsrcvd {
-    #[doc = "Invalid"]
+    #[doc = "Invalid."]
     LPM_HST_STSRCVD0 = 0x0,
-    #[doc = "ACK"]
+    #[doc = "ACK."]
     LPM_HST_STSRCVD1 = 0x01,
-    #[doc = "NYET"]
+    #[doc = "NYET."]
     LPM_HST_STSRCVD2 = 0x02,
-    #[doc = "STALL"]
+    #[doc = "STALL."]
     LPM_HST_STSRCVD3 = 0x03,
-    #[doc = "Timeout"]
+    #[doc = "Timeout."]
     LPM_HST_STSRCVD4 = 0x04,
-    #[doc = "ERR"]
+    #[doc = "ERR."]
     LPM_HST_STSRCVD5 = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -553,9 +553,9 @@ impl From<LpmHstStsrcvd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpmL1Active {
-    #[doc = "Inactive"]
+    #[doc = "Inactive."]
     LPM_L1_ACTIVE0 = 0x0,
-    #[doc = "Active"]
+    #[doc = "Active."]
     LPM_L1_ACTIVE1 = 0x01,
 }
 impl LpmL1Active {
@@ -584,9 +584,9 @@ impl From<LpmL1Active> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpmResumeok {
-    #[doc = "Cannot resume"]
+    #[doc = "Cannot resume."]
     LPM_RESUMEOK0 = 0x0,
-    #[doc = "Can resume"]
+    #[doc = "Can resume."]
     LPM_RESUMEOK1 = 0x01,
 }
 impl LpmResumeok {
@@ -615,9 +615,9 @@ impl From<LpmResumeok> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum OverCurDis {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     OVRCRNT_DETCT_EN = 0x0,
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     OVRCRNT_DETCT_DIS = 0x01,
 }
 impl OverCurDis {
@@ -646,9 +646,9 @@ impl From<OverCurDis> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum OverCurPol {
-    #[doc = "Active high"]
+    #[doc = "Active high."]
     ACTIVE_HI_OVRCRNT = 0x0,
-    #[doc = "Active low"]
+    #[doc = "Active low."]
     ACTIVE_LOW_OVRCRNT = 0x01,
 }
 impl OverCurPol {
@@ -677,9 +677,9 @@ impl From<OverCurPol> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum OvfError {
-    #[doc = "Interrupt did not occur"]
+    #[doc = "Interrupt did not occur."]
     INT_NO = 0x0,
-    #[doc = "Unmasked interrupt occurred"]
+    #[doc = "Unmasked interrupt occurred."]
     INT_YES = 0x01,
 }
 impl OvfError {
@@ -708,9 +708,9 @@ impl From<OvfError> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum OvfErrorEn {
-    #[doc = "The interrupt is masked"]
+    #[doc = "The interrupt is masked."]
     MASK_OVF_ERR_INT = 0x0,
-    #[doc = "The interrupt is enabled"]
+    #[doc = "The interrupt is enabled."]
     EN_OVF_ERR_INT = 0x01,
 }
 impl OvfErrorEn {
@@ -739,9 +739,9 @@ impl From<OvfErrorEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PwrPol {
-    #[doc = "Active low"]
+    #[doc = "Active low."]
     ACTIVE_LO_PMIC = 0x0,
-    #[doc = "Active high"]
+    #[doc = "Active high."]
     ACTIVE_HI_PMIC = 0x01,
 }
 impl PwrPol {
@@ -770,9 +770,9 @@ impl From<PwrPol> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RemoteWakeupEn {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     REMOTE_WKUP_DIS = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     REMOTE_WKUP_EN = 0x01,
 }
 impl RemoteWakeupEn {
@@ -863,9 +863,9 @@ impl From<RestartIfrtrimEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TrimInitValSel {
-    #[doc = "Mid-scale"]
+    #[doc = "Mid-scale."]
     INIT_TRIM_FINE_MID = 0x0,
-    #[doc = "IFR"]
+    #[doc = "IFR."]
     INIT_TRIM_FINE_IFR = 0x01,
 }
 impl TrimInitValSel {
@@ -894,13 +894,13 @@ impl From<TrimInitValSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum VbusSourceSel {
-    #[doc = "vbus_valid"]
+    #[doc = "vbus_valid."]
     VBUS_VALID = 0x0,
-    #[doc = "sess_valid"]
+    #[doc = "sess_valid."]
     SESS_VALID_1 = 0x01,
-    #[doc = "sess_valid"]
+    #[doc = "sess_valid."]
     SESS_VALID_2 = 0x02,
-    #[doc = "sess_valid"]
+    #[doc = "sess_valid."]
     SESS_VALID_3 = 0x03,
 }
 impl VbusSourceSel {
@@ -929,9 +929,9 @@ impl From<VbusSourceSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wie {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     INT_DIS = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     INT_EN = 0x01,
 }
 impl Wie {
@@ -960,9 +960,9 @@ impl From<Wie> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum WkupDpdmEn {
-    #[doc = "Disable only when VBUS is invalid"]
+    #[doc = "Disable only when VBUS is invalid."]
     DPDM_WKUP_DIS = 0x0,
-    #[doc = "Enable (default)"]
+    #[doc = "Enable (default)."]
     DPDM_WKUP_EN = 0x01,
 }
 impl WkupDpdmEn {
@@ -991,9 +991,9 @@ impl From<WkupDpdmEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum WkupIdEn {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     WKUP_ID_DIS = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     WKUP_ID_EN = 0x01,
 }
 impl WkupIdEn {
@@ -1022,9 +1022,9 @@ impl From<WkupIdEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum WkupSw {
-    #[doc = "Inactive"]
+    #[doc = "Inactive."]
     INACTIVE = 0x0,
-    #[doc = "Force wake-up"]
+    #[doc = "Force wake-up."]
     FORCE_WKUP = 0x01,
 }
 impl WkupSw {
@@ -1053,9 +1053,9 @@ impl From<WkupSw> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum WkupSwEn {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     SW_WKUP_DIS = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     SW_WKUP_EN = 0x01,
 }
 impl WkupSwEn {
@@ -1084,9 +1084,9 @@ impl From<WkupSwEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum WkupVbusEn {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     WKUP_VBUS_DIS = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     WKUP_VBUS_EN = 0x01,
 }
 impl WkupVbusEn {

@@ -1,52 +1,52 @@
-#[doc = "PUF Allow register"]
+#[doc = "PUF Allow register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Allow(pub u32);
 impl Allow {
-    #[doc = "Enroll operation is allowed"]
+    #[doc = "Enroll operation is allowed."]
     #[must_use]
     #[inline(always)]
     pub const fn allowenroll(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Enroll operation is allowed"]
+    #[doc = "Enroll operation is allowed."]
     #[inline(always)]
     pub const fn set_allowenroll(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Start operation is allowed"]
+    #[doc = "Start operation is allowed."]
     #[must_use]
     #[inline(always)]
     pub const fn allowstart(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Start operation is allowed"]
+    #[doc = "Start operation is allowed."]
     #[inline(always)]
     pub const fn set_allowstart(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Set Key operations are allowed"]
+    #[doc = "Set Key operations are allowed."]
     #[must_use]
     #[inline(always)]
     pub const fn allowsetkey(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Set Key operations are allowed"]
+    #[doc = "Set Key operations are allowed."]
     #[inline(always)]
     pub const fn set_allowsetkey(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Get Key operation is allowed"]
+    #[doc = "Get Key operation is allowed."]
     #[must_use]
     #[inline(always)]
     pub const fn allowgetkey(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Get Key operation is allowed"]
+    #[doc = "Get Key operation is allowed."]
     #[inline(always)]
     pub const fn set_allowgetkey(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
@@ -81,7 +81,7 @@ impl defmt::Format for Allow {
         )
     }
 }
-#[doc = "PUF config register for block bits"]
+#[doc = "PUF config register for block bits."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cfg(pub u32);
@@ -136,19 +136,19 @@ impl defmt::Format for Cfg {
         )
     }
 }
-#[doc = "PUF Code Input register"]
+#[doc = "PUF Code Input register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Codeinput(pub u32);
 impl Codeinput {
-    #[doc = "AC/KC input data"]
+    #[doc = "AC/KC input data."]
     #[must_use]
     #[inline(always)]
     pub const fn codein(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "AC/KC input data"]
+    #[doc = "AC/KC input data."]
     #[inline(always)]
     pub const fn set_codein(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -173,19 +173,19 @@ impl defmt::Format for Codeinput {
         defmt::write!(f, "Codeinput {{ codein: {=u32:?} }}", self.codein())
     }
 }
-#[doc = "PUF Code Output register"]
+#[doc = "PUF Code Output register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Codeoutput(pub u32);
 impl Codeoutput {
-    #[doc = "AC/KC output data"]
+    #[doc = "AC/KC output data."]
     #[must_use]
     #[inline(always)]
     pub const fn codeout(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "AC/KC output data"]
+    #[doc = "AC/KC output data."]
     #[inline(always)]
     pub const fn set_codeout(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -210,79 +210,79 @@ impl defmt::Format for Codeoutput {
         defmt::write!(f, "Codeoutput {{ codeout: {=u32:?} }}", self.codeout())
     }
 }
-#[doc = "PUF Control register"]
+#[doc = "PUF Control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl(pub u32);
 impl Ctrl {
-    #[doc = "Begin Zeroize operation for PUF and go to Error state"]
+    #[doc = "Begin Zeroize operation for PUF and go to Error state."]
     #[must_use]
     #[inline(always)]
     pub const fn zeroize(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Begin Zeroize operation for PUF and go to Error state"]
+    #[doc = "Begin Zeroize operation for PUF and go to Error state."]
     #[inline(always)]
     pub const fn set_zeroize(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Begin Enroll operation"]
+    #[doc = "Begin Enroll operation."]
     #[must_use]
     #[inline(always)]
     pub const fn enroll(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Begin Enroll operation"]
+    #[doc = "Begin Enroll operation."]
     #[inline(always)]
     pub const fn set_enroll(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Begin Start operation"]
+    #[doc = "Begin Start operation."]
     #[must_use]
     #[inline(always)]
     pub const fn start(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Begin Start operation"]
+    #[doc = "Begin Start operation."]
     #[inline(always)]
     pub const fn set_start(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Begin Set Intrinsic Key operation"]
+    #[doc = "Begin Set Intrinsic Key operation."]
     #[must_use]
     #[inline(always)]
     pub const fn generatekey(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Begin Set Intrinsic Key operation"]
+    #[doc = "Begin Set Intrinsic Key operation."]
     #[inline(always)]
     pub const fn set_generatekey(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "Begin Set User Key operation"]
+    #[doc = "Begin Set User Key operation."]
     #[must_use]
     #[inline(always)]
     pub const fn setkey(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "Begin Set User Key operation"]
+    #[doc = "Begin Set User Key operation."]
     #[inline(always)]
     pub const fn set_setkey(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "Begin Get Key operation"]
+    #[doc = "Begin Get Key operation."]
     #[must_use]
     #[inline(always)]
     pub const fn getkey(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "Begin Get Key operation"]
+    #[doc = "Begin Get Key operation."]
     #[inline(always)]
     pub const fn set_getkey(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
@@ -321,199 +321,199 @@ impl defmt::Format for Ctrl {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Idxblk(pub u32);
 impl Idxblk {
-    #[doc = "Use to block PUF index 0"]
+    #[doc = "Use to block PUF index 0."]
     #[must_use]
     #[inline(always)]
     pub const fn idx0(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x03;
         val as u8
     }
-    #[doc = "Use to block PUF index 0"]
+    #[doc = "Use to block PUF index 0."]
     #[inline(always)]
     pub const fn set_idx0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val as u32) & 0x03) << 0usize);
     }
-    #[doc = "Use to block PUF index 1"]
+    #[doc = "Use to block PUF index 1."]
     #[must_use]
     #[inline(always)]
     pub const fn idx1(&self) -> u8 {
         let val = (self.0 >> 2usize) & 0x03;
         val as u8
     }
-    #[doc = "Use to block PUF index 1"]
+    #[doc = "Use to block PUF index 1."]
     #[inline(always)]
     pub const fn set_idx1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val as u32) & 0x03) << 2usize);
     }
-    #[doc = "Use to block PUF index 2"]
+    #[doc = "Use to block PUF index 2."]
     #[must_use]
     #[inline(always)]
     pub const fn idx2(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x03;
         val as u8
     }
-    #[doc = "Use to block PUF index 2"]
+    #[doc = "Use to block PUF index 2."]
     #[inline(always)]
     pub const fn set_idx2(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val as u32) & 0x03) << 4usize);
     }
-    #[doc = "Use to block PUF index 3"]
+    #[doc = "Use to block PUF index 3."]
     #[must_use]
     #[inline(always)]
     pub const fn idx3(&self) -> u8 {
         let val = (self.0 >> 6usize) & 0x03;
         val as u8
     }
-    #[doc = "Use to block PUF index 3"]
+    #[doc = "Use to block PUF index 3."]
     #[inline(always)]
     pub const fn set_idx3(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val as u32) & 0x03) << 6usize);
     }
-    #[doc = "Use to block PUF index 4"]
+    #[doc = "Use to block PUF index 4."]
     #[must_use]
     #[inline(always)]
     pub const fn idx4(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x03;
         val as u8
     }
-    #[doc = "Use to block PUF index 4"]
+    #[doc = "Use to block PUF index 4."]
     #[inline(always)]
     pub const fn set_idx4(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val as u32) & 0x03) << 8usize);
     }
-    #[doc = "Use to block PUF index 5"]
+    #[doc = "Use to block PUF index 5."]
     #[must_use]
     #[inline(always)]
     pub const fn idx5(&self) -> u8 {
         let val = (self.0 >> 10usize) & 0x03;
         val as u8
     }
-    #[doc = "Use to block PUF index 5"]
+    #[doc = "Use to block PUF index 5."]
     #[inline(always)]
     pub const fn set_idx5(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val as u32) & 0x03) << 10usize);
     }
-    #[doc = "Use to block PUF index 6"]
+    #[doc = "Use to block PUF index 6."]
     #[must_use]
     #[inline(always)]
     pub const fn idx6(&self) -> u8 {
         let val = (self.0 >> 12usize) & 0x03;
         val as u8
     }
-    #[doc = "Use to block PUF index 6"]
+    #[doc = "Use to block PUF index 6."]
     #[inline(always)]
     pub const fn set_idx6(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val as u32) & 0x03) << 12usize);
     }
-    #[doc = "Use to block PUF index 7"]
+    #[doc = "Use to block PUF index 7."]
     #[must_use]
     #[inline(always)]
     pub const fn idx7(&self) -> u8 {
         let val = (self.0 >> 14usize) & 0x03;
         val as u8
     }
-    #[doc = "Use to block PUF index 7"]
+    #[doc = "Use to block PUF index 7."]
     #[inline(always)]
     pub const fn set_idx7(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 14usize)) | (((val as u32) & 0x03) << 14usize);
     }
-    #[doc = "Use to block PUF index 8"]
+    #[doc = "Use to block PUF index 8."]
     #[must_use]
     #[inline(always)]
     pub const fn idx8(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x03;
         val as u8
     }
-    #[doc = "Use to block PUF index 8"]
+    #[doc = "Use to block PUF index 8."]
     #[inline(always)]
     pub const fn set_idx8(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val as u32) & 0x03) << 16usize);
     }
-    #[doc = "Use to block PUF index 9"]
+    #[doc = "Use to block PUF index 9."]
     #[must_use]
     #[inline(always)]
     pub const fn idx9(&self) -> u8 {
         let val = (self.0 >> 18usize) & 0x03;
         val as u8
     }
-    #[doc = "Use to block PUF index 9"]
+    #[doc = "Use to block PUF index 9."]
     #[inline(always)]
     pub const fn set_idx9(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 18usize)) | (((val as u32) & 0x03) << 18usize);
     }
-    #[doc = "Use to block PUF index 10"]
+    #[doc = "Use to block PUF index 10."]
     #[must_use]
     #[inline(always)]
     pub const fn idx10(&self) -> u8 {
         let val = (self.0 >> 20usize) & 0x03;
         val as u8
     }
-    #[doc = "Use to block PUF index 10"]
+    #[doc = "Use to block PUF index 10."]
     #[inline(always)]
     pub const fn set_idx10(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val as u32) & 0x03) << 20usize);
     }
-    #[doc = "Use to block PUF index 11"]
+    #[doc = "Use to block PUF index 11."]
     #[must_use]
     #[inline(always)]
     pub const fn idx11(&self) -> u8 {
         let val = (self.0 >> 22usize) & 0x03;
         val as u8
     }
-    #[doc = "Use to block PUF index 11"]
+    #[doc = "Use to block PUF index 11."]
     #[inline(always)]
     pub const fn set_idx11(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 22usize)) | (((val as u32) & 0x03) << 22usize);
     }
-    #[doc = "Use to block PUF index 12"]
+    #[doc = "Use to block PUF index 12."]
     #[must_use]
     #[inline(always)]
     pub const fn idx12(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0x03;
         val as u8
     }
-    #[doc = "Use to block PUF index 12"]
+    #[doc = "Use to block PUF index 12."]
     #[inline(always)]
     pub const fn set_idx12(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val as u32) & 0x03) << 24usize);
     }
-    #[doc = "Use to block PUF index 13"]
+    #[doc = "Use to block PUF index 13."]
     #[must_use]
     #[inline(always)]
     pub const fn idx13(&self) -> u8 {
         let val = (self.0 >> 26usize) & 0x03;
         val as u8
     }
-    #[doc = "Use to block PUF index 13"]
+    #[doc = "Use to block PUF index 13."]
     #[inline(always)]
     pub const fn set_idx13(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 26usize)) | (((val as u32) & 0x03) << 26usize);
     }
-    #[doc = "Use to block PUF index 14"]
+    #[doc = "Use to block PUF index 14."]
     #[must_use]
     #[inline(always)]
     pub const fn idx14(&self) -> u8 {
         let val = (self.0 >> 28usize) & 0x03;
         val as u8
     }
-    #[doc = "Use to block PUF index 14"]
+    #[doc = "Use to block PUF index 14."]
     #[inline(always)]
     pub const fn set_idx14(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val as u32) & 0x03) << 28usize);
     }
-    #[doc = "Use to block PUF index 15"]
+    #[doc = "Use to block PUF index 15."]
     #[must_use]
     #[inline(always)]
     pub const fn idx15(&self) -> u8 {
         let val = (self.0 >> 30usize) & 0x03;
         val as u8
     }
-    #[doc = "Use to block PUF index 15"]
+    #[doc = "Use to block PUF index 15."]
     #[inline(always)]
     pub const fn set_idx15(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val as u32) & 0x03) << 30usize);
@@ -572,199 +572,199 @@ impl defmt::Format for Idxblk {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct IdxblkDp(pub u32);
 impl IdxblkDp {
-    #[doc = "Use to block PUF index 0"]
+    #[doc = "Use to block PUF index 0."]
     #[must_use]
     #[inline(always)]
     pub const fn idx0(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x03;
         val as u8
     }
-    #[doc = "Use to block PUF index 0"]
+    #[doc = "Use to block PUF index 0."]
     #[inline(always)]
     pub const fn set_idx0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val as u32) & 0x03) << 0usize);
     }
-    #[doc = "Use to block PUF index 1"]
+    #[doc = "Use to block PUF index 1."]
     #[must_use]
     #[inline(always)]
     pub const fn idx1(&self) -> u8 {
         let val = (self.0 >> 2usize) & 0x03;
         val as u8
     }
-    #[doc = "Use to block PUF index 1"]
+    #[doc = "Use to block PUF index 1."]
     #[inline(always)]
     pub const fn set_idx1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val as u32) & 0x03) << 2usize);
     }
-    #[doc = "Use to block PUF index 2"]
+    #[doc = "Use to block PUF index 2."]
     #[must_use]
     #[inline(always)]
     pub const fn idx2(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x03;
         val as u8
     }
-    #[doc = "Use to block PUF index 2"]
+    #[doc = "Use to block PUF index 2."]
     #[inline(always)]
     pub const fn set_idx2(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val as u32) & 0x03) << 4usize);
     }
-    #[doc = "Use to block PUF index 3"]
+    #[doc = "Use to block PUF index 3."]
     #[must_use]
     #[inline(always)]
     pub const fn idx3(&self) -> u8 {
         let val = (self.0 >> 6usize) & 0x03;
         val as u8
     }
-    #[doc = "Use to block PUF index 3"]
+    #[doc = "Use to block PUF index 3."]
     #[inline(always)]
     pub const fn set_idx3(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val as u32) & 0x03) << 6usize);
     }
-    #[doc = "Use to block PUF index 4"]
+    #[doc = "Use to block PUF index 4."]
     #[must_use]
     #[inline(always)]
     pub const fn idx4(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x03;
         val as u8
     }
-    #[doc = "Use to block PUF index 4"]
+    #[doc = "Use to block PUF index 4."]
     #[inline(always)]
     pub const fn set_idx4(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val as u32) & 0x03) << 8usize);
     }
-    #[doc = "Use to block PUF index 5"]
+    #[doc = "Use to block PUF index 5."]
     #[must_use]
     #[inline(always)]
     pub const fn idx5(&self) -> u8 {
         let val = (self.0 >> 10usize) & 0x03;
         val as u8
     }
-    #[doc = "Use to block PUF index 5"]
+    #[doc = "Use to block PUF index 5."]
     #[inline(always)]
     pub const fn set_idx5(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val as u32) & 0x03) << 10usize);
     }
-    #[doc = "Use to block PUF index 6"]
+    #[doc = "Use to block PUF index 6."]
     #[must_use]
     #[inline(always)]
     pub const fn idx6(&self) -> u8 {
         let val = (self.0 >> 12usize) & 0x03;
         val as u8
     }
-    #[doc = "Use to block PUF index 6"]
+    #[doc = "Use to block PUF index 6."]
     #[inline(always)]
     pub const fn set_idx6(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val as u32) & 0x03) << 12usize);
     }
-    #[doc = "Use to block PUF index 7"]
+    #[doc = "Use to block PUF index 7."]
     #[must_use]
     #[inline(always)]
     pub const fn idx7(&self) -> u8 {
         let val = (self.0 >> 14usize) & 0x03;
         val as u8
     }
-    #[doc = "Use to block PUF index 7"]
+    #[doc = "Use to block PUF index 7."]
     #[inline(always)]
     pub const fn set_idx7(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 14usize)) | (((val as u32) & 0x03) << 14usize);
     }
-    #[doc = "Use to block PUF index 8"]
+    #[doc = "Use to block PUF index 8."]
     #[must_use]
     #[inline(always)]
     pub const fn idx8(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x03;
         val as u8
     }
-    #[doc = "Use to block PUF index 8"]
+    #[doc = "Use to block PUF index 8."]
     #[inline(always)]
     pub const fn set_idx8(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val as u32) & 0x03) << 16usize);
     }
-    #[doc = "Use to block PUF index 9"]
+    #[doc = "Use to block PUF index 9."]
     #[must_use]
     #[inline(always)]
     pub const fn idx9(&self) -> u8 {
         let val = (self.0 >> 18usize) & 0x03;
         val as u8
     }
-    #[doc = "Use to block PUF index 9"]
+    #[doc = "Use to block PUF index 9."]
     #[inline(always)]
     pub const fn set_idx9(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 18usize)) | (((val as u32) & 0x03) << 18usize);
     }
-    #[doc = "Use to block PUF index 10"]
+    #[doc = "Use to block PUF index 10."]
     #[must_use]
     #[inline(always)]
     pub const fn idx10(&self) -> u8 {
         let val = (self.0 >> 20usize) & 0x03;
         val as u8
     }
-    #[doc = "Use to block PUF index 10"]
+    #[doc = "Use to block PUF index 10."]
     #[inline(always)]
     pub const fn set_idx10(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val as u32) & 0x03) << 20usize);
     }
-    #[doc = "Use to block PUF index 11"]
+    #[doc = "Use to block PUF index 11."]
     #[must_use]
     #[inline(always)]
     pub const fn idx11(&self) -> u8 {
         let val = (self.0 >> 22usize) & 0x03;
         val as u8
     }
-    #[doc = "Use to block PUF index 11"]
+    #[doc = "Use to block PUF index 11."]
     #[inline(always)]
     pub const fn set_idx11(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 22usize)) | (((val as u32) & 0x03) << 22usize);
     }
-    #[doc = "Use to block PUF index 12"]
+    #[doc = "Use to block PUF index 12."]
     #[must_use]
     #[inline(always)]
     pub const fn idx12(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0x03;
         val as u8
     }
-    #[doc = "Use to block PUF index 12"]
+    #[doc = "Use to block PUF index 12."]
     #[inline(always)]
     pub const fn set_idx12(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val as u32) & 0x03) << 24usize);
     }
-    #[doc = "Use to block PUF index 13"]
+    #[doc = "Use to block PUF index 13."]
     #[must_use]
     #[inline(always)]
     pub const fn idx13(&self) -> u8 {
         let val = (self.0 >> 26usize) & 0x03;
         val as u8
     }
-    #[doc = "Use to block PUF index 13"]
+    #[doc = "Use to block PUF index 13."]
     #[inline(always)]
     pub const fn set_idx13(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 26usize)) | (((val as u32) & 0x03) << 26usize);
     }
-    #[doc = "Use to block PUF index 14"]
+    #[doc = "Use to block PUF index 14."]
     #[must_use]
     #[inline(always)]
     pub const fn idx14(&self) -> u8 {
         let val = (self.0 >> 28usize) & 0x03;
         val as u8
     }
-    #[doc = "Use to block PUF index 14"]
+    #[doc = "Use to block PUF index 14."]
     #[inline(always)]
     pub const fn set_idx14(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val as u32) & 0x03) << 28usize);
     }
-    #[doc = "Use to block PUF index 15"]
+    #[doc = "Use to block PUF index 15."]
     #[must_use]
     #[inline(always)]
     pub const fn idx15(&self) -> u8 {
         let val = (self.0 >> 30usize) & 0x03;
         val as u8
     }
-    #[doc = "Use to block PUF index 15"]
+    #[doc = "Use to block PUF index 15."]
     #[inline(always)]
     pub const fn set_idx15(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val as u32) & 0x03) << 30usize);
@@ -823,199 +823,199 @@ impl defmt::Format for IdxblkDp {
         )
     }
 }
-#[doc = "Index block status"]
+#[doc = "Index block status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct IdxblkStatus(pub u32);
 impl IdxblkStatus {
-    #[doc = "Status block index 0"]
+    #[doc = "Status block index 0."]
     #[must_use]
     #[inline(always)]
     pub const fn idx0(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x03;
         val as u8
     }
-    #[doc = "Status block index 0"]
+    #[doc = "Status block index 0."]
     #[inline(always)]
     pub const fn set_idx0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val as u32) & 0x03) << 0usize);
     }
-    #[doc = "Status block index 1"]
+    #[doc = "Status block index 1."]
     #[must_use]
     #[inline(always)]
     pub const fn idx1(&self) -> u8 {
         let val = (self.0 >> 2usize) & 0x03;
         val as u8
     }
-    #[doc = "Status block index 1"]
+    #[doc = "Status block index 1."]
     #[inline(always)]
     pub const fn set_idx1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val as u32) & 0x03) << 2usize);
     }
-    #[doc = "Status block index 2"]
+    #[doc = "Status block index 2."]
     #[must_use]
     #[inline(always)]
     pub const fn idx2(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x03;
         val as u8
     }
-    #[doc = "Status block index 2"]
+    #[doc = "Status block index 2."]
     #[inline(always)]
     pub const fn set_idx2(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val as u32) & 0x03) << 4usize);
     }
-    #[doc = "Status block index 3"]
+    #[doc = "Status block index 3."]
     #[must_use]
     #[inline(always)]
     pub const fn idx3(&self) -> u8 {
         let val = (self.0 >> 6usize) & 0x03;
         val as u8
     }
-    #[doc = "Status block index 3"]
+    #[doc = "Status block index 3."]
     #[inline(always)]
     pub const fn set_idx3(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val as u32) & 0x03) << 6usize);
     }
-    #[doc = "Status block index 4"]
+    #[doc = "Status block index 4."]
     #[must_use]
     #[inline(always)]
     pub const fn idx4(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x03;
         val as u8
     }
-    #[doc = "Status block index 4"]
+    #[doc = "Status block index 4."]
     #[inline(always)]
     pub const fn set_idx4(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val as u32) & 0x03) << 8usize);
     }
-    #[doc = "Status block index 5"]
+    #[doc = "Status block index 5."]
     #[must_use]
     #[inline(always)]
     pub const fn idx5(&self) -> u8 {
         let val = (self.0 >> 10usize) & 0x03;
         val as u8
     }
-    #[doc = "Status block index 5"]
+    #[doc = "Status block index 5."]
     #[inline(always)]
     pub const fn set_idx5(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val as u32) & 0x03) << 10usize);
     }
-    #[doc = "Status block index 6"]
+    #[doc = "Status block index 6."]
     #[must_use]
     #[inline(always)]
     pub const fn idx6(&self) -> u8 {
         let val = (self.0 >> 12usize) & 0x03;
         val as u8
     }
-    #[doc = "Status block index 6"]
+    #[doc = "Status block index 6."]
     #[inline(always)]
     pub const fn set_idx6(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val as u32) & 0x03) << 12usize);
     }
-    #[doc = "Status block index 7"]
+    #[doc = "Status block index 7."]
     #[must_use]
     #[inline(always)]
     pub const fn idx7(&self) -> u8 {
         let val = (self.0 >> 14usize) & 0x03;
         val as u8
     }
-    #[doc = "Status block index 7"]
+    #[doc = "Status block index 7."]
     #[inline(always)]
     pub const fn set_idx7(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 14usize)) | (((val as u32) & 0x03) << 14usize);
     }
-    #[doc = "Status block index 8"]
+    #[doc = "Status block index 8."]
     #[must_use]
     #[inline(always)]
     pub const fn idx8(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x03;
         val as u8
     }
-    #[doc = "Status block index 8"]
+    #[doc = "Status block index 8."]
     #[inline(always)]
     pub const fn set_idx8(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val as u32) & 0x03) << 16usize);
     }
-    #[doc = "Status block index 9"]
+    #[doc = "Status block index 9."]
     #[must_use]
     #[inline(always)]
     pub const fn idx9(&self) -> u8 {
         let val = (self.0 >> 18usize) & 0x03;
         val as u8
     }
-    #[doc = "Status block index 9"]
+    #[doc = "Status block index 9."]
     #[inline(always)]
     pub const fn set_idx9(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 18usize)) | (((val as u32) & 0x03) << 18usize);
     }
-    #[doc = "Status block index 10"]
+    #[doc = "Status block index 10."]
     #[must_use]
     #[inline(always)]
     pub const fn idx10(&self) -> u8 {
         let val = (self.0 >> 20usize) & 0x03;
         val as u8
     }
-    #[doc = "Status block index 10"]
+    #[doc = "Status block index 10."]
     #[inline(always)]
     pub const fn set_idx10(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val as u32) & 0x03) << 20usize);
     }
-    #[doc = "Status block index 11"]
+    #[doc = "Status block index 11."]
     #[must_use]
     #[inline(always)]
     pub const fn idx11(&self) -> u8 {
         let val = (self.0 >> 22usize) & 0x03;
         val as u8
     }
-    #[doc = "Status block index 11"]
+    #[doc = "Status block index 11."]
     #[inline(always)]
     pub const fn set_idx11(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 22usize)) | (((val as u32) & 0x03) << 22usize);
     }
-    #[doc = "Status block index 12"]
+    #[doc = "Status block index 12."]
     #[must_use]
     #[inline(always)]
     pub const fn idx12(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0x03;
         val as u8
     }
-    #[doc = "Status block index 12"]
+    #[doc = "Status block index 12."]
     #[inline(always)]
     pub const fn set_idx12(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val as u32) & 0x03) << 24usize);
     }
-    #[doc = "Status block index 13"]
+    #[doc = "Status block index 13."]
     #[must_use]
     #[inline(always)]
     pub const fn idx13(&self) -> u8 {
         let val = (self.0 >> 26usize) & 0x03;
         val as u8
     }
-    #[doc = "Status block index 13"]
+    #[doc = "Status block index 13."]
     #[inline(always)]
     pub const fn set_idx13(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 26usize)) | (((val as u32) & 0x03) << 26usize);
     }
-    #[doc = "Status block index 14"]
+    #[doc = "Status block index 14."]
     #[must_use]
     #[inline(always)]
     pub const fn idx14(&self) -> u8 {
         let val = (self.0 >> 28usize) & 0x03;
         val as u8
     }
-    #[doc = "Status block index 14"]
+    #[doc = "Status block index 14."]
     #[inline(always)]
     pub const fn set_idx14(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val as u32) & 0x03) << 28usize);
     }
-    #[doc = "Status block index 15"]
+    #[doc = "Status block index 15."]
     #[must_use]
     #[inline(always)]
     pub const fn idx15(&self) -> u8 {
         let val = (self.0 >> 30usize) & 0x03;
         val as u8
     }
-    #[doc = "Status block index 15"]
+    #[doc = "Status block index 15."]
     #[inline(always)]
     pub const fn set_idx15(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val as u32) & 0x03) << 30usize);
@@ -1074,19 +1074,19 @@ impl defmt::Format for IdxblkStatus {
         )
     }
 }
-#[doc = "PUF Interface Status and clear register"]
+#[doc = "PUF Interface Status and clear register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ifstat(pub u32);
 impl Ifstat {
-    #[doc = "Indicates that an APB error has occurred,Writing logic1 clears the if_error bit"]
+    #[doc = "Indicates that an APB error has occurred,Writing logic1 clears the if_error bit."]
     #[must_use]
     #[inline(always)]
     pub const fn error(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates that an APB error has occurred,Writing logic1 clears the if_error bit"]
+    #[doc = "Indicates that an APB error has occurred,Writing logic1 clears the if_error bit."]
     #[inline(always)]
     pub const fn set_error(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -1111,91 +1111,91 @@ impl defmt::Format for Ifstat {
         defmt::write!(f, "Ifstat {{ error: {=bool:?} }}", self.error())
     }
 }
-#[doc = "PUF Interrupt Enable"]
+#[doc = "PUF Interrupt Enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Inten(pub u32);
 impl Inten {
-    #[doc = "Enable corresponding interrupt. Note that bit numbers match those assigned in QK_SR (Quiddikey Status Register)"]
+    #[doc = "Enable corresponding interrupt. Note that bit numbers match those assigned in QK_SR (Quiddikey Status Register)."]
     #[must_use]
     #[inline(always)]
     pub const fn readyen(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable corresponding interrupt. Note that bit numbers match those assigned in QK_SR (Quiddikey Status Register)"]
+    #[doc = "Enable corresponding interrupt. Note that bit numbers match those assigned in QK_SR (Quiddikey Status Register)."]
     #[inline(always)]
     pub const fn set_readyen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Enable corresponding interrupt. Note that bit numbers match those assigned in QK_SR (Quiddikey Status Register)"]
+    #[doc = "Enable corresponding interrupt. Note that bit numbers match those assigned in QK_SR (Quiddikey Status Register)."]
     #[must_use]
     #[inline(always)]
     pub const fn succesen(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable corresponding interrupt. Note that bit numbers match those assigned in QK_SR (Quiddikey Status Register)"]
+    #[doc = "Enable corresponding interrupt. Note that bit numbers match those assigned in QK_SR (Quiddikey Status Register)."]
     #[inline(always)]
     pub const fn set_succesen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Enable corresponding interrupt. Note that bit numbers match those assigned in QK_SR (Quiddikey Status Register)"]
+    #[doc = "Enable corresponding interrupt. Note that bit numbers match those assigned in QK_SR (Quiddikey Status Register)."]
     #[must_use]
     #[inline(always)]
     pub const fn erroren(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable corresponding interrupt. Note that bit numbers match those assigned in QK_SR (Quiddikey Status Register)"]
+    #[doc = "Enable corresponding interrupt. Note that bit numbers match those assigned in QK_SR (Quiddikey Status Register)."]
     #[inline(always)]
     pub const fn set_erroren(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Enable corresponding interrupt. Note that bit numbers match those assigned in QK_SR (Quiddikey Status Register)"]
+    #[doc = "Enable corresponding interrupt. Note that bit numbers match those assigned in QK_SR (Quiddikey Status Register)."]
     #[must_use]
     #[inline(always)]
     pub const fn keyinreqen(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable corresponding interrupt. Note that bit numbers match those assigned in QK_SR (Quiddikey Status Register)"]
+    #[doc = "Enable corresponding interrupt. Note that bit numbers match those assigned in QK_SR (Quiddikey Status Register)."]
     #[inline(always)]
     pub const fn set_keyinreqen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "Enable corresponding interrupt. Note that bit numbers match those assigned in QK_SR (Quiddikey Status Register)"]
+    #[doc = "Enable corresponding interrupt. Note that bit numbers match those assigned in QK_SR (Quiddikey Status Register)."]
     #[must_use]
     #[inline(always)]
     pub const fn keyoutavailen(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable corresponding interrupt. Note that bit numbers match those assigned in QK_SR (Quiddikey Status Register)"]
+    #[doc = "Enable corresponding interrupt. Note that bit numbers match those assigned in QK_SR (Quiddikey Status Register)."]
     #[inline(always)]
     pub const fn set_keyoutavailen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "Enable corresponding interrupt. Note that bit numbers match those assigned in QK_SR (Quiddikey Status Register)"]
+    #[doc = "Enable corresponding interrupt. Note that bit numbers match those assigned in QK_SR (Quiddikey Status Register)."]
     #[must_use]
     #[inline(always)]
     pub const fn codeinreqen(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable corresponding interrupt. Note that bit numbers match those assigned in QK_SR (Quiddikey Status Register)"]
+    #[doc = "Enable corresponding interrupt. Note that bit numbers match those assigned in QK_SR (Quiddikey Status Register)."]
     #[inline(always)]
     pub const fn set_codeinreqen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Enable corresponding interrupt. Note that bit numbers match those assigned in QK_SR (Quiddikey Status Register)"]
+    #[doc = "Enable corresponding interrupt. Note that bit numbers match those assigned in QK_SR (Quiddikey Status Register)."]
     #[must_use]
     #[inline(always)]
     pub const fn codeoutavailen(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable corresponding interrupt. Note that bit numbers match those assigned in QK_SR (Quiddikey Status Register)"]
+    #[doc = "Enable corresponding interrupt. Note that bit numbers match those assigned in QK_SR (Quiddikey Status Register)."]
     #[inline(always)]
     pub const fn set_codeoutavailen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
@@ -1236,91 +1236,91 @@ impl defmt::Format for Inten {
         )
     }
 }
-#[doc = "PUF interrupt status"]
+#[doc = "PUF interrupt status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Intstat(pub u32);
 impl Intstat {
-    #[doc = "Triggers on falling edge of busy, write 1 to clear"]
+    #[doc = "Triggers on falling edge of busy, write 1 to clear."]
     #[must_use]
     #[inline(always)]
     pub const fn ready(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Triggers on falling edge of busy, write 1 to clear"]
+    #[doc = "Triggers on falling edge of busy, write 1 to clear."]
     #[inline(always)]
     pub const fn set_ready(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Level sensitive interrupt, cleared when interrupt source clears"]
+    #[doc = "Level sensitive interrupt, cleared when interrupt source clears."]
     #[must_use]
     #[inline(always)]
     pub const fn success(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Level sensitive interrupt, cleared when interrupt source clears"]
+    #[doc = "Level sensitive interrupt, cleared when interrupt source clears."]
     #[inline(always)]
     pub const fn set_success(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Level sensitive interrupt, cleared when interrupt source clears"]
+    #[doc = "Level sensitive interrupt, cleared when interrupt source clears."]
     #[must_use]
     #[inline(always)]
     pub const fn error(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Level sensitive interrupt, cleared when interrupt source clears"]
+    #[doc = "Level sensitive interrupt, cleared when interrupt source clears."]
     #[inline(always)]
     pub const fn set_error(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Level sensitive interrupt, cleared when interrupt source clears"]
+    #[doc = "Level sensitive interrupt, cleared when interrupt source clears."]
     #[must_use]
     #[inline(always)]
     pub const fn keyinreq(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "Level sensitive interrupt, cleared when interrupt source clears"]
+    #[doc = "Level sensitive interrupt, cleared when interrupt source clears."]
     #[inline(always)]
     pub const fn set_keyinreq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "Level sensitive interrupt, cleared when interrupt source clears"]
+    #[doc = "Level sensitive interrupt, cleared when interrupt source clears."]
     #[must_use]
     #[inline(always)]
     pub const fn keyoutavail(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Level sensitive interrupt, cleared when interrupt source clears"]
+    #[doc = "Level sensitive interrupt, cleared when interrupt source clears."]
     #[inline(always)]
     pub const fn set_keyoutavail(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "Level sensitive interrupt, cleared when interrupt source clears"]
+    #[doc = "Level sensitive interrupt, cleared when interrupt source clears."]
     #[must_use]
     #[inline(always)]
     pub const fn codeinreq(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "Level sensitive interrupt, cleared when interrupt source clears"]
+    #[doc = "Level sensitive interrupt, cleared when interrupt source clears."]
     #[inline(always)]
     pub const fn set_codeinreq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Level sensitive interrupt, cleared when interrupt source clears"]
+    #[doc = "Level sensitive interrupt, cleared when interrupt source clears."]
     #[must_use]
     #[inline(always)]
     pub const fn codeoutavail(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Level sensitive interrupt, cleared when interrupt source clears"]
+    #[doc = "Level sensitive interrupt, cleared when interrupt source clears."]
     #[inline(always)]
     pub const fn set_codeoutavail(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
@@ -1361,55 +1361,55 @@ impl defmt::Format for Intstat {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Keyenable(pub u32);
 impl Keyenable {
-    #[doc = "\"10: Data coming out from PUF Index 0 interface are shifted in KEY0 register. 00, 01, 11 : Data coming out from PUF Index 0 interface are NOT shifted in KEY0 register.\""]
+    #[doc = "\"10: Data coming out from PUF Index 0 interface are shifted in KEY0 register. 00, 01, 11 : Data coming out from PUF Index 0 interface are NOT shifted in KEY0 register.\"."]
     #[must_use]
     #[inline(always)]
     pub const fn key0(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x03;
         val as u8
     }
-    #[doc = "\"10: Data coming out from PUF Index 0 interface are shifted in KEY0 register. 00, 01, 11 : Data coming out from PUF Index 0 interface are NOT shifted in KEY0 register.\""]
+    #[doc = "\"10: Data coming out from PUF Index 0 interface are shifted in KEY0 register. 00, 01, 11 : Data coming out from PUF Index 0 interface are NOT shifted in KEY0 register.\"."]
     #[inline(always)]
     pub const fn set_key0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val as u32) & 0x03) << 0usize);
     }
-    #[doc = "\"10: Data coming out from PUF Index 0 interface are shifted in KEY1 register. 00, 01, 11 : Data coming out from PUF Index 0 interface are NOT shifted in KEY1 register.\""]
+    #[doc = "\"10: Data coming out from PUF Index 0 interface are shifted in KEY1 register. 00, 01, 11 : Data coming out from PUF Index 0 interface are NOT shifted in KEY1 register.\"."]
     #[must_use]
     #[inline(always)]
     pub const fn key1(&self) -> u8 {
         let val = (self.0 >> 2usize) & 0x03;
         val as u8
     }
-    #[doc = "\"10: Data coming out from PUF Index 0 interface are shifted in KEY1 register. 00, 01, 11 : Data coming out from PUF Index 0 interface are NOT shifted in KEY1 register.\""]
+    #[doc = "\"10: Data coming out from PUF Index 0 interface are shifted in KEY1 register. 00, 01, 11 : Data coming out from PUF Index 0 interface are NOT shifted in KEY1 register.\"."]
     #[inline(always)]
     pub const fn set_key1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val as u32) & 0x03) << 2usize);
     }
-    #[doc = "\"10: Data coming out from PUF Index 0 interface are shifted in KEY2 register. 00, 01, 11 : Data coming out from PUF Index 0 interface are NOT shifted in KEY2 register.\""]
+    #[doc = "\"10: Data coming out from PUF Index 0 interface are shifted in KEY2 register. 00, 01, 11 : Data coming out from PUF Index 0 interface are NOT shifted in KEY2 register.\"."]
     #[must_use]
     #[inline(always)]
     pub const fn key2(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x03;
         val as u8
     }
-    #[doc = "\"10: Data coming out from PUF Index 0 interface are shifted in KEY2 register. 00, 01, 11 : Data coming out from PUF Index 0 interface are NOT shifted in KEY2 register.\""]
+    #[doc = "\"10: Data coming out from PUF Index 0 interface are shifted in KEY2 register. 00, 01, 11 : Data coming out from PUF Index 0 interface are NOT shifted in KEY2 register.\"."]
     #[inline(always)]
     pub const fn set_key2(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val as u32) & 0x03) << 4usize);
     }
-    #[doc = "\"10: Data coming out from PUF Index 0 interface are shifted in KEY3 register. 00, 01, 11 : Data coming out from PUF Index 0 interface are NOT shifted in KEY3 register.\""]
+    #[doc = "\"10: Data coming out from PUF Index 0 interface are shifted in KEY3 register. 00, 01, 11 : Data coming out from PUF Index 0 interface are NOT shifted in KEY3 register.\"."]
     #[must_use]
     #[inline(always)]
     pub const fn key3(&self) -> u8 {
         let val = (self.0 >> 6usize) & 0x03;
         val as u8
     }
-    #[doc = "\"10: Data coming out from PUF Index 0 interface are shifted in KEY3 register. 00, 01, 11 : Data coming out from PUF Index 0 interface are NOT shifted in KEY3 register.\""]
+    #[doc = "\"10: Data coming out from PUF Index 0 interface are shifted in KEY3 register. 00, 01, 11 : Data coming out from PUF Index 0 interface are NOT shifted in KEY3 register.\"."]
     #[inline(always)]
     pub const fn set_key3(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val as u32) & 0x03) << 6usize);
@@ -1444,19 +1444,19 @@ impl defmt::Format for Keyenable {
         )
     }
 }
-#[doc = "PUF Key Index register"]
+#[doc = "PUF Key Index register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Keyindex(pub u32);
 impl Keyindex {
-    #[doc = "Key index for Set Key operations"]
+    #[doc = "Key index for Set Key operations."]
     #[must_use]
     #[inline(always)]
     pub const fn keyidx(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "Key index for Set Key operations"]
+    #[doc = "Key index for Set Key operations."]
     #[inline(always)]
     pub const fn set_keyidx(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
@@ -1481,19 +1481,19 @@ impl defmt::Format for Keyindex {
         defmt::write!(f, "Keyindex {{ keyidx: {=u8:?} }}", self.keyidx())
     }
 }
-#[doc = "PUF Key Input register"]
+#[doc = "PUF Key Input register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Keyinput(pub u32);
 impl Keyinput {
-    #[doc = "Key input data"]
+    #[doc = "Key input data."]
     #[must_use]
     #[inline(always)]
     pub const fn keyin(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Key input data"]
+    #[doc = "Key input data."]
     #[inline(always)]
     pub const fn set_keyin(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1518,55 +1518,55 @@ impl defmt::Format for Keyinput {
         defmt::write!(f, "Keyinput {{ keyin: {=u32:?} }}", self.keyin())
     }
 }
-#[doc = "Only reset in case of full IC reset"]
+#[doc = "Only reset in case of full IC reset."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Keylock(pub u32);
 impl Keylock {
-    #[doc = "\"10:Write access to KEY0MASK, KEYENABLE.KEY0 and KEYRESET.KEY0 is allowed. 00, 01, 11:Write access to KEY0MASK, KEYENABLE.KEY0 and KEYRESET.KEY0 is NOT allowed. Important Note : Once this field is written with a value different from '10', its value can no longer be modified until un Power On Reset occurs.\""]
+    #[doc = "\"10:Write access to KEY0MASK, KEYENABLE.KEY0 and KEYRESET.KEY0 is allowed. 00, 01, 11:Write access to KEY0MASK, KEYENABLE.KEY0 and KEYRESET.KEY0 is NOT allowed. Important Note : Once this field is written with a value different from '10', its value can no longer be modified until un Power On Reset occurs.\"."]
     #[must_use]
     #[inline(always)]
     pub const fn key0(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x03;
         val as u8
     }
-    #[doc = "\"10:Write access to KEY0MASK, KEYENABLE.KEY0 and KEYRESET.KEY0 is allowed. 00, 01, 11:Write access to KEY0MASK, KEYENABLE.KEY0 and KEYRESET.KEY0 is NOT allowed. Important Note : Once this field is written with a value different from '10', its value can no longer be modified until un Power On Reset occurs.\""]
+    #[doc = "\"10:Write access to KEY0MASK, KEYENABLE.KEY0 and KEYRESET.KEY0 is allowed. 00, 01, 11:Write access to KEY0MASK, KEYENABLE.KEY0 and KEYRESET.KEY0 is NOT allowed. Important Note : Once this field is written with a value different from '10', its value can no longer be modified until un Power On Reset occurs.\"."]
     #[inline(always)]
     pub const fn set_key0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val as u32) & 0x03) << 0usize);
     }
-    #[doc = "\"10:Write access to KEY1MASK, KEYENABLE.KEY1 and KEYRESET.KEY1 is allowed. 00, 01, 11:Write access to KEY1MASK, KEYENABLE.KEY1 and KEYRESET.KEY1 is NOT allowed. Important Note : Once this field is written with a value different from '10', its value can no longer be modified until un Power On Reset occurs.\""]
+    #[doc = "\"10:Write access to KEY1MASK, KEYENABLE.KEY1 and KEYRESET.KEY1 is allowed. 00, 01, 11:Write access to KEY1MASK, KEYENABLE.KEY1 and KEYRESET.KEY1 is NOT allowed. Important Note : Once this field is written with a value different from '10', its value can no longer be modified until un Power On Reset occurs.\"."]
     #[must_use]
     #[inline(always)]
     pub const fn key1(&self) -> u8 {
         let val = (self.0 >> 2usize) & 0x03;
         val as u8
     }
-    #[doc = "\"10:Write access to KEY1MASK, KEYENABLE.KEY1 and KEYRESET.KEY1 is allowed. 00, 01, 11:Write access to KEY1MASK, KEYENABLE.KEY1 and KEYRESET.KEY1 is NOT allowed. Important Note : Once this field is written with a value different from '10', its value can no longer be modified until un Power On Reset occurs.\""]
+    #[doc = "\"10:Write access to KEY1MASK, KEYENABLE.KEY1 and KEYRESET.KEY1 is allowed. 00, 01, 11:Write access to KEY1MASK, KEYENABLE.KEY1 and KEYRESET.KEY1 is NOT allowed. Important Note : Once this field is written with a value different from '10', its value can no longer be modified until un Power On Reset occurs.\"."]
     #[inline(always)]
     pub const fn set_key1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val as u32) & 0x03) << 2usize);
     }
-    #[doc = "\"10:Write access to KEY2MASK, KEYENABLE.KEY2 and KEYRESET.KEY2 is allowed. 00, 01, 11:Write access to KEY2MASK, KEYENABLE.KEY2 and KEYRESET.KEY2 is NOT allowed. Important Note : Once this field is written with a value different from '10', its value can no longer be modified until un Power On Reset occurs.\""]
+    #[doc = "\"10:Write access to KEY2MASK, KEYENABLE.KEY2 and KEYRESET.KEY2 is allowed. 00, 01, 11:Write access to KEY2MASK, KEYENABLE.KEY2 and KEYRESET.KEY2 is NOT allowed. Important Note : Once this field is written with a value different from '10', its value can no longer be modified until un Power On Reset occurs.\"."]
     #[must_use]
     #[inline(always)]
     pub const fn key2(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x03;
         val as u8
     }
-    #[doc = "\"10:Write access to KEY2MASK, KEYENABLE.KEY2 and KEYRESET.KEY2 is allowed. 00, 01, 11:Write access to KEY2MASK, KEYENABLE.KEY2 and KEYRESET.KEY2 is NOT allowed. Important Note : Once this field is written with a value different from '10', its value can no longer be modified until un Power On Reset occurs.\""]
+    #[doc = "\"10:Write access to KEY2MASK, KEYENABLE.KEY2 and KEYRESET.KEY2 is allowed. 00, 01, 11:Write access to KEY2MASK, KEYENABLE.KEY2 and KEYRESET.KEY2 is NOT allowed. Important Note : Once this field is written with a value different from '10', its value can no longer be modified until un Power On Reset occurs.\"."]
     #[inline(always)]
     pub const fn set_key2(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val as u32) & 0x03) << 4usize);
     }
-    #[doc = "\"10:Write access to KEY3MASK, KEYENABLE.KEY3 and KEYRESET.KEY3 is allowed. 00, 01, 11:Write access to KEY3MASK, KEYENABLE.KEY3 and KEYRESET.KEY3 is NOT allowed. Important Note : Once this field is written with a value different from '10', its value can no longer be modified until un Power On Reset occurs.\""]
+    #[doc = "\"10:Write access to KEY3MASK, KEYENABLE.KEY3 and KEYRESET.KEY3 is allowed. 00, 01, 11:Write access to KEY3MASK, KEYENABLE.KEY3 and KEYRESET.KEY3 is NOT allowed. Important Note : Once this field is written with a value different from '10', its value can no longer be modified until un Power On Reset occurs.\"."]
     #[must_use]
     #[inline(always)]
     pub const fn key3(&self) -> u8 {
         let val = (self.0 >> 6usize) & 0x03;
         val as u8
     }
-    #[doc = "\"10:Write access to KEY3MASK, KEYENABLE.KEY3 and KEYRESET.KEY3 is allowed. 00, 01, 11:Write access to KEY3MASK, KEYENABLE.KEY3 and KEYRESET.KEY3 is NOT allowed. Important Note : Once this field is written with a value different from '10', its value can no longer be modified until un Power On Reset occurs.\""]
+    #[doc = "\"10:Write access to KEY3MASK, KEYENABLE.KEY3 and KEYRESET.KEY3 is allowed. 00, 01, 11:Write access to KEY3MASK, KEYENABLE.KEY3 and KEYRESET.KEY3 is NOT allowed. Important Note : Once this field is written with a value different from '10', its value can no longer be modified until un Power On Reset occurs.\"."]
     #[inline(always)]
     pub const fn set_key3(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val as u32) & 0x03) << 6usize);
@@ -1601,19 +1601,19 @@ impl defmt::Format for Keylock {
         )
     }
 }
-#[doc = "Only reset in case of full IC reset"]
+#[doc = "Only reset in case of full IC reset."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Keymask(pub u32);
 impl Keymask {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn keymask(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_keymask(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1638,19 +1638,19 @@ impl defmt::Format for Keymask {
         defmt::write!(f, "Keymask {{ keymask: {=u32:?} }}", self.keymask())
     }
 }
-#[doc = "PUF Key Output Index register"]
+#[doc = "PUF Key Output Index register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Keyoutindex(pub u32);
 impl Keyoutindex {
-    #[doc = "Key index for the key that is currently output via the Key Output register"]
+    #[doc = "Key index for the key that is currently output via the Key Output register."]
     #[must_use]
     #[inline(always)]
     pub const fn keyoutidx(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "Key index for the key that is currently output via the Key Output register"]
+    #[doc = "Key index for the key that is currently output via the Key Output register."]
     #[inline(always)]
     pub const fn set_keyoutidx(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
@@ -1675,19 +1675,19 @@ impl defmt::Format for Keyoutindex {
         defmt::write!(f, "Keyoutindex {{ keyoutidx: {=u8:?} }}", self.keyoutidx())
     }
 }
-#[doc = "PUF Key Output register"]
+#[doc = "PUF Key Output register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Keyoutput(pub u32);
 impl Keyoutput {
-    #[doc = "Key output data"]
+    #[doc = "Key output data."]
     #[must_use]
     #[inline(always)]
     pub const fn keyout(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Key output data"]
+    #[doc = "Key output data."]
     #[inline(always)]
     pub const fn set_keyout(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1712,7 +1712,7 @@ impl defmt::Format for Keyoutput {
         defmt::write!(f, "Keyoutput {{ keyout: {=u32:?} }}", self.keyout())
     }
 }
-#[doc = "Reinitialize Keys shift registers counters"]
+#[doc = "Reinitialize Keys shift registers counters."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Keyreset(pub u32);
@@ -1795,19 +1795,19 @@ impl defmt::Format for Keyreset {
         )
     }
 }
-#[doc = "PUF Key Size register"]
+#[doc = "PUF Key Size register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Keysize(pub u32);
 impl Keysize {
-    #[doc = "Key size for Set Key operations"]
+    #[doc = "Key size for Set Key operations."]
     #[must_use]
     #[inline(always)]
     pub const fn keysize(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x3f;
         val as u8
     }
-    #[doc = "Key size for Set Key operations"]
+    #[doc = "Key size for Set Key operations."]
     #[inline(always)]
     pub const fn set_keysize(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val as u32) & 0x3f) << 0usize);
@@ -1832,55 +1832,55 @@ impl defmt::Format for Keysize {
         defmt::write!(f, "Keysize {{ keysize: {=u8:?} }}", self.keysize())
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ShiftStatus(pub u32);
 impl ShiftStatus {
-    #[doc = "Index counter from key 0 shift register"]
+    #[doc = "Index counter from key 0 shift register."]
     #[must_use]
     #[inline(always)]
     pub const fn key0(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "Index counter from key 0 shift register"]
+    #[doc = "Index counter from key 0 shift register."]
     #[inline(always)]
     pub const fn set_key0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Index counter from key 1 shift register"]
+    #[doc = "Index counter from key 1 shift register."]
     #[must_use]
     #[inline(always)]
     pub const fn key1(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x0f;
         val as u8
     }
-    #[doc = "Index counter from key 1 shift register"]
+    #[doc = "Index counter from key 1 shift register."]
     #[inline(always)]
     pub const fn set_key1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
     }
-    #[doc = "Index counter from key 2 shift register"]
+    #[doc = "Index counter from key 2 shift register."]
     #[must_use]
     #[inline(always)]
     pub const fn key2(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x0f;
         val as u8
     }
-    #[doc = "Index counter from key 2 shift register"]
+    #[doc = "Index counter from key 2 shift register."]
     #[inline(always)]
     pub const fn set_key2(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val as u32) & 0x0f) << 8usize);
     }
-    #[doc = "Index counter from key 3 shift register"]
+    #[doc = "Index counter from key 3 shift register."]
     #[must_use]
     #[inline(always)]
     pub const fn key3(&self) -> u8 {
         let val = (self.0 >> 12usize) & 0x0f;
         val as u8
     }
-    #[doc = "Index counter from key 3 shift register"]
+    #[doc = "Index counter from key 3 shift register."]
     #[inline(always)]
     pub const fn set_key3(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 12usize)) | (((val as u32) & 0x0f) << 12usize);
@@ -1915,91 +1915,91 @@ impl defmt::Format for ShiftStatus {
         )
     }
 }
-#[doc = "PUF Status register"]
+#[doc = "PUF Status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Stat(pub u32);
 impl Stat {
-    #[doc = "Indicates that operation is in progress"]
+    #[doc = "Indicates that operation is in progress."]
     #[must_use]
     #[inline(always)]
     pub const fn busy(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates that operation is in progress"]
+    #[doc = "Indicates that operation is in progress."]
     #[inline(always)]
     pub const fn set_busy(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Last operation was successful"]
+    #[doc = "Last operation was successful."]
     #[must_use]
     #[inline(always)]
     pub const fn success(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Last operation was successful"]
+    #[doc = "Last operation was successful."]
     #[inline(always)]
     pub const fn set_success(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "PUF is in the Error state and no operations can be performed"]
+    #[doc = "PUF is in the Error state and no operations can be performed."]
     #[must_use]
     #[inline(always)]
     pub const fn error(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "PUF is in the Error state and no operations can be performed"]
+    #[doc = "PUF is in the Error state and no operations can be performed."]
     #[inline(always)]
     pub const fn set_error(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Request for next part of key"]
+    #[doc = "Request for next part of key."]
     #[must_use]
     #[inline(always)]
     pub const fn keyinreq(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "Request for next part of key"]
+    #[doc = "Request for next part of key."]
     #[inline(always)]
     pub const fn set_keyinreq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "Next part of key is available"]
+    #[doc = "Next part of key is available."]
     #[must_use]
     #[inline(always)]
     pub const fn keyoutavail(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Next part of key is available"]
+    #[doc = "Next part of key is available."]
     #[inline(always)]
     pub const fn set_keyoutavail(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "Request for next part of AC/KC"]
+    #[doc = "Request for next part of AC/KC."]
     #[must_use]
     #[inline(always)]
     pub const fn codeinreq(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "Request for next part of AC/KC"]
+    #[doc = "Request for next part of AC/KC."]
     #[inline(always)]
     pub const fn set_codeinreq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Next part of AC/KC is available"]
+    #[doc = "Next part of AC/KC is available."]
     #[must_use]
     #[inline(always)]
     pub const fn codeoutavail(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Next part of AC/KC is available"]
+    #[doc = "Next part of AC/KC is available."]
     #[inline(always)]
     pub const fn set_codeoutavail(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);

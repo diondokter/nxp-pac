@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum BufEn {
-    #[doc = "Not used"]
+    #[doc = "Not used."]
     USE_BUF = 0x0,
-    #[doc = "Used"]
+    #[doc = "Used."]
     NO_USE_BUF = 0x01,
 }
 impl BufEn {
@@ -64,9 +64,9 @@ impl From<Fifoen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fiforst {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "FIFO reset"]
+    #[doc = "FIFO reset."]
     FIFO_RESET = 0x01,
 }
 impl Fiforst {
@@ -96,19 +96,19 @@ impl From<Fiforst> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fifosz {
     _RESERVED_0 = 0x0,
-    #[doc = "FIFO depth is 4"]
+    #[doc = "FIFO depth is 4."]
     VAL_1 = 0x01,
-    #[doc = "FIFO depth is 8"]
+    #[doc = "FIFO depth is 8."]
     VAL_2 = 0x02,
-    #[doc = "FIFO depth is 16"]
+    #[doc = "FIFO depth is 16."]
     VAL_3 = 0x03,
-    #[doc = "FIFO depth is 32"]
+    #[doc = "FIFO depth is 32."]
     VAL_4 = 0x04,
-    #[doc = "FIFO depth is 64"]
+    #[doc = "FIFO depth is 64."]
     VAL_5 = 0x05,
-    #[doc = "FIFO depth is 128"]
+    #[doc = "FIFO depth is 128."]
     VAL_6 = 0x06,
-    #[doc = "FIFO depth is 256"]
+    #[doc = "FIFO depth is 256."]
     VAL_7 = 0x07,
 }
 impl Fifosz {
@@ -137,9 +137,9 @@ impl From<Fifosz> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptgcoco {
-    #[doc = "Not completed or not started"]
+    #[doc = "Not completed or not started."]
     NOT_START = 0x0,
-    #[doc = "Completed"]
+    #[doc = "Completed."]
     COMPLETED = 0x01,
 }
 impl Ptgcoco {
@@ -168,9 +168,9 @@ impl From<Ptgcoco> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Swbk {
-    #[doc = "No swing back cycle has completed since the last time the flag was cleared"]
+    #[doc = "No swing back cycle has completed since the last time the flag was cleared."]
     NO_SWING = 0x0,
-    #[doc = "At least one swing back cycle has occurred since the last time the flag was cleared"]
+    #[doc = "At least one swing back cycle has occurred since the last time the flag was cleared."]
     SWING_BACK = 0x01,
 }
 impl Swbk {
@@ -199,9 +199,9 @@ impl From<Swbk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Swrst {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Software reset"]
+    #[doc = "Software reset."]
     SOFTWARE_RESET = 0x01,
 }
 impl Swrst {
@@ -230,9 +230,9 @@ impl From<Swrst> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trgsel {
-    #[doc = "Hardware trigger"]
+    #[doc = "Hardware trigger."]
     HARDWARE = 0x0,
-    #[doc = "Software trigger"]
+    #[doc = "Software trigger."]
     SOFTWARE = 0x01,
 }
 impl Trgsel {
@@ -261,9 +261,9 @@ impl From<Trgsel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wm {
-    #[doc = "Data in FIFO is more than watermark level"]
+    #[doc = "Data in FIFO is more than watermark level."]
     MORE_THAN_WLEVEL = 0x0,
-    #[doc = "Data in FIFO is less than or equal to watermark level"]
+    #[doc = "Data in FIFO is less than or equal to watermark level."]
     LESS_THAN_WLEVEL = 0x01,
 }
 impl Wm {

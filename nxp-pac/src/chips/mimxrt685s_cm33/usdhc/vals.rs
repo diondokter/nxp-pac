@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ac12WrChkbusyEn {
-    #[doc = "Do not check busy after auto CMD12 for write data packet"]
+    #[doc = "Do not check busy after auto CMD12 for write data packet."]
     AC12_WR_CHKBUSY_EN_0 = 0x0,
-    #[doc = "Check busy after auto CMD12 for write data packet"]
+    #[doc = "Check busy after auto CMD12 for write data packet."]
     AC12_WR_CHKBUSY_EN_1 = 0x01,
 }
 impl Ac12WrChkbusyEn {
@@ -33,9 +33,9 @@ impl From<Ac12WrChkbusyEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ac12ce {
-    #[doc = "No CRC error"]
+    #[doc = "No CRC error."]
     AC12CE_0 = 0x0,
-    #[doc = "CRC Error Met in Auto CMD12/23 Response"]
+    #[doc = "CRC Error Met in Auto CMD12/23 Response."]
     AC12CE_1 = 0x01,
 }
 impl Ac12ce {
@@ -64,9 +64,9 @@ impl From<Ac12ce> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ac12e {
-    #[doc = "No Error"]
+    #[doc = "No Error."]
     AC12E_0 = 0x0,
-    #[doc = "Error"]
+    #[doc = "Error."]
     AC12E_1 = 0x01,
 }
 impl Ac12e {
@@ -95,9 +95,9 @@ impl From<Ac12e> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ac12ebe {
-    #[doc = "No error"]
+    #[doc = "No error."]
     AC12EBE_0 = 0x0,
-    #[doc = "End Bit Error Generated"]
+    #[doc = "End Bit Error Generated."]
     AC12EBE_1 = 0x01,
 }
 impl Ac12ebe {
@@ -126,9 +126,9 @@ impl From<Ac12ebe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ac12eien {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     AC12EIEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     AC12EIEN_1 = 0x01,
 }
 impl Ac12eien {
@@ -157,9 +157,9 @@ impl From<Ac12eien> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ac12en {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     AC12EN_0 = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     AC12EN_1 = 0x01,
 }
 impl Ac12en {
@@ -188,9 +188,9 @@ impl From<Ac12en> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ac12esen {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     AC12ESEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     AC12ESEN_1 = 0x01,
 }
 impl Ac12esen {
@@ -219,9 +219,9 @@ impl From<Ac12esen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ac12ie {
-    #[doc = "No error"]
+    #[doc = "No error."]
     AC12IE_0 = 0x0,
-    #[doc = "Error, the CMD index in response is not CMD12/23"]
+    #[doc = "Error, the CMD index in response is not CMD12/23."]
     AC12IE_1 = 0x01,
 }
 impl Ac12ie {
@@ -250,9 +250,9 @@ impl From<Ac12ie> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ac12ne {
-    #[doc = "Executed"]
+    #[doc = "Executed."]
     AC12NE_0 = 0x0,
-    #[doc = "Not executed"]
+    #[doc = "Not executed."]
     AC12NE_1 = 0x01,
 }
 impl Ac12ne {
@@ -281,9 +281,9 @@ impl From<Ac12ne> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ac12toe {
-    #[doc = "No error"]
+    #[doc = "No error."]
     AC12TOE_0 = 0x0,
-    #[doc = "Time out"]
+    #[doc = "Time out."]
     AC12TOE_1 = 0x01,
 }
 impl Ac12toe {
@@ -312,7 +312,7 @@ impl From<Ac12toe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Acmd23Argu2En {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     ACMD23_ARGU2_EN_0 = 0x0,
     #[doc = "Argument2 register enable for ACMD23 sharing with SDMA system address register. Default is enable."]
     ACMD23_ARGU2_EN_1 = 0x01,
@@ -343,9 +343,9 @@ impl From<Acmd23Argu2En> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Admadce {
-    #[doc = "No Error"]
+    #[doc = "No Error."]
     ADMADCE_0 = 0x0,
-    #[doc = "Error"]
+    #[doc = "Error."]
     ADMADCE_1 = 0x01,
 }
 impl Admadce {
@@ -374,9 +374,9 @@ impl From<Admadce> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Admalme {
-    #[doc = "No Error"]
+    #[doc = "No Error."]
     ADMALME_0 = 0x0,
-    #[doc = "Error"]
+    #[doc = "Error."]
     ADMALME_1 = 0x01,
 }
 impl Admalme {
@@ -405,9 +405,9 @@ impl From<Admalme> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Admas {
-    #[doc = "Advanced DMA Not supported"]
+    #[doc = "Advanced DMA Not supported."]
     ADMAS_0 = 0x0,
-    #[doc = "Advanced DMA Supported"]
+    #[doc = "Advanced DMA Supported."]
     ADMAS_1 = 0x01,
 }
 impl Admas {
@@ -436,9 +436,9 @@ impl From<Admas> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AutoTuneEn {
-    #[doc = "Disable auto tuning"]
+    #[doc = "Disable auto tuning."]
     AUTO_TUNE_EN_0 = 0x0,
-    #[doc = "Enable auto tuning"]
+    #[doc = "Enable auto tuning."]
     AUTO_TUNE_EN_1 = 0x01,
 }
 impl AutoTuneEn {
@@ -467,9 +467,9 @@ impl From<AutoTuneEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Autocmd12ErrStatusSmpClkSel {
-    #[doc = "Fixed clock is used to sample data"]
+    #[doc = "Fixed clock is used to sample data."]
     SMP_CLK_SEL_0 = 0x0,
-    #[doc = "Tuned clock is used to sample data"]
+    #[doc = "Tuned clock is used to sample data."]
     SMP_CLK_SEL_1 = 0x01,
 }
 impl Autocmd12ErrStatusSmpClkSel {
@@ -498,9 +498,9 @@ impl From<Autocmd12ErrStatusSmpClkSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bcen {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     BCEN_0 = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     BCEN_1 = 0x01,
 }
 impl Bcen {
@@ -529,9 +529,9 @@ impl From<Bcen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bge {
-    #[doc = "No block gap event"]
+    #[doc = "No block gap event."]
     BGE_0 = 0x0,
-    #[doc = "Transaction stopped at block gap"]
+    #[doc = "Transaction stopped at block gap."]
     BGE_1 = 0x01,
 }
 impl Bge {
@@ -560,9 +560,9 @@ impl From<Bge> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bgeien {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     BGEIEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     BGEIEN_1 = 0x01,
 }
 impl Bgeien {
@@ -591,9 +591,9 @@ impl From<Bgeien> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bgesen {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     BGESEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     BGESEN_1 = 0x01,
 }
 impl Bgesen {
@@ -622,13 +622,13 @@ impl From<Bgesen> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Blkcnt(u16);
 impl Blkcnt {
-    #[doc = "Stop Count"]
+    #[doc = "Stop Count."]
     pub const BLKCNT_0: Self = Self(0x0);
-    #[doc = "1 block"]
+    #[doc = "1 block."]
     pub const BLKCNT_1: Self = Self(0x01);
-    #[doc = "2 blocks"]
+    #[doc = "2 blocks."]
     pub const BLKCNT_2: Self = Self(0x02);
-    #[doc = "65535 blocks"]
+    #[doc = "65535 blocks."]
     pub const BLKCNT_65535: Self = Self(0xffff);
 }
 impl Blkcnt {
@@ -678,23 +678,23 @@ impl From<Blkcnt> for u16 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Blksize(u16);
 impl Blksize {
-    #[doc = "No data transfer"]
+    #[doc = "No data transfer."]
     pub const BLKSIZE_0: Self = Self(0x0);
-    #[doc = "1 Byte"]
+    #[doc = "1 Byte."]
     pub const BLKSIZE_1: Self = Self(0x01);
-    #[doc = "2 Bytes"]
+    #[doc = "2 Bytes."]
     pub const BLKSIZE_2: Self = Self(0x02);
-    #[doc = "3 Bytes"]
+    #[doc = "3 Bytes."]
     pub const BLKSIZE_3: Self = Self(0x03);
-    #[doc = "4 Bytes"]
+    #[doc = "4 Bytes."]
     pub const BLKSIZE_4: Self = Self(0x04);
-    #[doc = "511 Bytes"]
+    #[doc = "511 Bytes."]
     pub const BLKSIZE_511: Self = Self(0x01ff);
-    #[doc = "512 Bytes"]
+    #[doc = "512 Bytes."]
     pub const BLKSIZE_512: Self = Self(0x0200);
-    #[doc = "2048 Bytes"]
+    #[doc = "2048 Bytes."]
     pub const BLKSIZE_2048: Self = Self(0x0800);
-    #[doc = "4096 Bytes"]
+    #[doc = "4096 Bytes."]
     pub const BLKSIZE_4096: Self = Self(0x1000);
 }
 impl Blksize {
@@ -754,9 +754,9 @@ impl From<Blksize> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum BootAck {
-    #[doc = "No ack"]
+    #[doc = "No ack."]
     BOOT_ACK_0 = 0x0,
-    #[doc = "Ack"]
+    #[doc = "Ack."]
     BOOT_ACK_1 = 0x01,
 }
 impl BootAck {
@@ -785,9 +785,9 @@ impl From<BootAck> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum BootEn {
-    #[doc = "Fast boot disable"]
+    #[doc = "Fast boot disable."]
     BOOT_EN_0 = 0x0,
-    #[doc = "Fast boot enable"]
+    #[doc = "Fast boot enable."]
     BOOT_EN_1 = 0x01,
 }
 impl BootEn {
@@ -816,9 +816,9 @@ impl From<BootEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum BootMode {
-    #[doc = "Normal boot"]
+    #[doc = "Normal boot."]
     BOOT_MODE_0 = 0x0,
-    #[doc = "Alternative boot"]
+    #[doc = "Alternative boot."]
     BOOT_MODE_1 = 0x01,
 }
 impl BootMode {
@@ -847,9 +847,9 @@ impl From<BootMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bren {
-    #[doc = "Read disable"]
+    #[doc = "Read disable."]
     BREN_0 = 0x0,
-    #[doc = "Read enable"]
+    #[doc = "Read enable."]
     BREN_1 = 0x01,
 }
 impl Bren {
@@ -878,9 +878,9 @@ impl From<Bren> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Brr {
-    #[doc = "Not ready to read buffer"]
+    #[doc = "Not ready to read buffer."]
     BRR_0 = 0x0,
-    #[doc = "Ready to read buffer"]
+    #[doc = "Ready to read buffer."]
     BRR_1 = 0x01,
 }
 impl Brr {
@@ -909,9 +909,9 @@ impl From<Brr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Brrien {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     BRRIEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     BRRIEN_1 = 0x01,
 }
 impl Brrien {
@@ -940,9 +940,9 @@ impl From<Brrien> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Brrsen {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     BRRSEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     BRRSEN_1 = 0x01,
 }
 impl Brrsen {
@@ -972,7 +972,7 @@ impl From<Brrsen> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum BurstLenEn {
     _RESERVED_0 = 0x0,
-    #[doc = "Burst length is enabled for INCR"]
+    #[doc = "Burst length is enabled for INCR."]
     BURST_LEN_EN_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -1007,9 +1007,9 @@ impl From<BurstLenEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bwen {
-    #[doc = "Write disable"]
+    #[doc = "Write disable."]
     BWEN_0 = 0x0,
-    #[doc = "Write enable"]
+    #[doc = "Write enable."]
     BWEN_1 = 0x01,
 }
 impl Bwen {
@@ -1038,9 +1038,9 @@ impl From<Bwen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bwr {
-    #[doc = "Not ready to write buffer"]
+    #[doc = "Not ready to write buffer."]
     BWR_0 = 0x0,
-    #[doc = "Ready to write buffer:"]
+    #[doc = "Ready to write buffer:."]
     BWR_1 = 0x01,
 }
 impl Bwr {
@@ -1069,9 +1069,9 @@ impl From<Bwr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bwrien {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     BWRIEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     BWRIEN_1 = 0x01,
 }
 impl Bwrien {
@@ -1100,9 +1100,9 @@ impl From<Bwrien> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bwrsen {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     BWRSEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     BWRSEN_1 = 0x01,
 }
 impl Bwrsen {
@@ -1162,9 +1162,9 @@ impl From<CardIntD3Test> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cc {
-    #[doc = "Command not complete"]
+    #[doc = "Command not complete."]
     CC_0 = 0x0,
-    #[doc = "Command complete"]
+    #[doc = "Command complete."]
     CC_1 = 0x01,
 }
 impl Cc {
@@ -1193,9 +1193,9 @@ impl From<Cc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cccen {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     CCCEN_0 = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     CCCEN_1 = 0x01,
 }
 impl Cccen {
@@ -1224,7 +1224,7 @@ impl From<Cccen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cce {
-    #[doc = "No Error"]
+    #[doc = "No Error."]
     CCE_0 = 0x0,
     #[doc = "CRC Error Generated."]
     CCE_1 = 0x01,
@@ -1255,9 +1255,9 @@ impl From<Cce> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cceien {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     CCEIEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     CCEIEN_1 = 0x01,
 }
 impl Cceien {
@@ -1286,9 +1286,9 @@ impl From<Cceien> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ccesen {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     CCESEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     CCESEN_1 = 0x01,
 }
 impl Ccesen {
@@ -1317,9 +1317,9 @@ impl From<Ccesen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ccien {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     CCIEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     CCIEN_1 = 0x01,
 }
 impl Ccien {
@@ -1348,9 +1348,9 @@ impl From<Ccien> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ccsen {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     CCSEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     CCSEN_1 = 0x01,
 }
 impl Ccsen {
@@ -1379,9 +1379,9 @@ impl From<Ccsen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cdihb {
-    #[doc = "Can issue command which uses the DATA line"]
+    #[doc = "Can issue command which uses the DATA line."]
     CDIHB_0 = 0x0,
-    #[doc = "Cannot issue command which uses the DATA line"]
+    #[doc = "Cannot issue command which uses the DATA line."]
     CDIHB_1 = 0x01,
 }
 impl Cdihb {
@@ -1410,9 +1410,9 @@ impl From<Cdihb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cdpl {
-    #[doc = "No card present (CD_B = 1)"]
+    #[doc = "No card present (CD_B = 1)."]
     CDPL_0 = 0x0,
-    #[doc = "Card present (CD_B = 0)"]
+    #[doc = "Card present (CD_B = 0)."]
     CDPL_1 = 0x01,
 }
 impl Cdpl {
@@ -1472,9 +1472,9 @@ impl From<Cdss> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cdtl {
-    #[doc = "Card Detect Test Level is 0, no card inserted"]
+    #[doc = "Card Detect Test Level is 0, no card inserted."]
     CDTL_0 = 0x0,
-    #[doc = "Card Detect Test Level is 1, card inserted"]
+    #[doc = "Card Detect Test Level is 1, card inserted."]
     CDTL_1 = 0x01,
 }
 impl Cdtl {
@@ -1503,9 +1503,9 @@ impl From<Cdtl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cebe {
-    #[doc = "No Error"]
+    #[doc = "No Error."]
     CEBE_0 = 0x0,
-    #[doc = "End Bit Error Generated"]
+    #[doc = "End Bit Error Generated."]
     CEBE_1 = 0x01,
 }
 impl Cebe {
@@ -1534,9 +1534,9 @@ impl From<Cebe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cebeien {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     CEBEIEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     CEBEIEN_1 = 0x01,
 }
 impl Cebeien {
@@ -1565,9 +1565,9 @@ impl From<Cebeien> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cebesen {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     CEBESEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     CEBESEN_1 = 0x01,
 }
 impl Cebesen {
@@ -1596,9 +1596,9 @@ impl From<Cebesen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cicen {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     CICEN_0 = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     CICEN_1 = 0x01,
 }
 impl Cicen {
@@ -1627,9 +1627,9 @@ impl From<Cicen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cie {
-    #[doc = "No Error"]
+    #[doc = "No Error."]
     CIE_0 = 0x0,
-    #[doc = "Error"]
+    #[doc = "Error."]
     CIE_1 = 0x01,
 }
 impl Cie {
@@ -1658,9 +1658,9 @@ impl From<Cie> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cieien {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     CIEIEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     CIEIEN_1 = 0x01,
 }
 impl Cieien {
@@ -1689,9 +1689,9 @@ impl From<Cieien> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ciesen {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     CIESEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     CIESEN_1 = 0x01,
 }
 impl Ciesen {
@@ -1720,9 +1720,9 @@ impl From<Ciesen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cihb {
-    #[doc = "Can issue command using only CMD line"]
+    #[doc = "Can issue command using only CMD line."]
     CIHB_0 = 0x0,
-    #[doc = "Cannot issue command"]
+    #[doc = "Cannot issue command."]
     CIHB_1 = 0x01,
 }
 impl Cihb {
@@ -1751,9 +1751,9 @@ impl From<Cihb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cins {
-    #[doc = "Card state unstable or removed"]
+    #[doc = "Card state unstable or removed."]
     CINS_0 = 0x0,
-    #[doc = "Card inserted"]
+    #[doc = "Card inserted."]
     CINS_1 = 0x01,
 }
 impl Cins {
@@ -1782,9 +1782,9 @@ impl From<Cins> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cinsien {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     CINSIEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     CINSIEN_1 = 0x01,
 }
 impl Cinsien {
@@ -1813,9 +1813,9 @@ impl From<Cinsien> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cinssen {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     CINSSEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     CINSSEN_1 = 0x01,
 }
 impl Cinssen {
@@ -1844,9 +1844,9 @@ impl From<Cinssen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cinst {
-    #[doc = "Power on Reset or No Card"]
+    #[doc = "Power on Reset or No Card."]
     CINST_0 = 0x0,
-    #[doc = "Card Inserted"]
+    #[doc = "Card Inserted."]
     CINST_1 = 0x01,
 }
 impl Cinst {
@@ -1875,9 +1875,9 @@ impl From<Cinst> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cint {
-    #[doc = "No Card Interrupt"]
+    #[doc = "No Card Interrupt."]
     CINT_0 = 0x0,
-    #[doc = "Generate Card Interrupt"]
+    #[doc = "Generate Card Interrupt."]
     CINT_1 = 0x01,
 }
 impl Cint {
@@ -1906,9 +1906,9 @@ impl From<Cint> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cintien {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     CINTIEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     CINTIEN_1 = 0x01,
 }
 impl Cintien {
@@ -1937,9 +1937,9 @@ impl From<Cintien> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cintsen {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     CINTSEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     CINTSEN_1 = 0x01,
 }
 impl Cintsen {
@@ -1968,9 +1968,9 @@ impl From<Cintsen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CmdByteEn {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     CMD_BYTE_EN_0 = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     CMD_BYTE_EN_1 = 0x01,
 }
 impl CmdByteEn {
@@ -1999,13 +1999,13 @@ impl From<CmdByteEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdtyp {
-    #[doc = "Normal Other commands"]
+    #[doc = "Normal Other commands."]
     CMDTYP_0 = 0x0,
-    #[doc = "Suspend CMD52 for writing Bus Suspend in CCCR"]
+    #[doc = "Suspend CMD52 for writing Bus Suspend in CCCR."]
     CMDTYP_1 = 0x01,
-    #[doc = "Resume CMD52 for writing Function Select in CCCR"]
+    #[doc = "Resume CMD52 for writing Function Select in CCCR."]
     CMDTYP_2 = 0x02,
-    #[doc = "Abort CMD12, CMD52 for writing I/O Abort in CCCR"]
+    #[doc = "Abort CMD12, CMD52 for writing I/O Abort in CCCR."]
     CMDTYP_3 = 0x03,
 }
 impl Cmdtyp {
@@ -2034,9 +2034,9 @@ impl From<Cmdtyp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cnibac12e {
-    #[doc = "No error"]
+    #[doc = "No error."]
     CNIBAC12E_0 = 0x0,
-    #[doc = "Not Issued"]
+    #[doc = "Not Issued."]
     CNIBAC12E_1 = 0x01,
 }
 impl Cnibac12e {
@@ -2065,9 +2065,9 @@ impl From<Cnibac12e> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CrcChkDis {
-    #[doc = "Check CRC16 for every read data packet and check CRC bits for every write data packet"]
+    #[doc = "Check CRC16 for every read data packet and check CRC bits for every write data packet."]
     CRC_CHK_DIS_0 = 0x0,
-    #[doc = "Ignore CRC16 check for every read data packet and ignore CRC bits check for every write data packet"]
+    #[doc = "Ignore CRC16 check for every read data packet and ignore CRC bits check for every write data packet."]
     CRC_CHK_DIS_1 = 0x01,
 }
 impl CrcChkDis {
@@ -2096,9 +2096,9 @@ impl From<CrcChkDis> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Creq {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     CREQ_0 = 0x0,
-    #[doc = "Restart"]
+    #[doc = "Restart."]
     CREQ_1 = 0x01,
 }
 impl Creq {
@@ -2127,9 +2127,9 @@ impl From<Creq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Crm {
-    #[doc = "Card state unstable or inserted"]
+    #[doc = "Card state unstable or inserted."]
     CRM_0 = 0x0,
-    #[doc = "Card removed"]
+    #[doc = "Card removed."]
     CRM_1 = 0x01,
 }
 impl Crm {
@@ -2158,9 +2158,9 @@ impl From<Crm> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Crmien {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     CRMIEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     CRMIEN_1 = 0x01,
 }
 impl Crmien {
@@ -2189,9 +2189,9 @@ impl From<Crmien> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Crmsen {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     CRMSEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     CRMSEN_1 = 0x01,
 }
 impl Crmsen {
@@ -2220,9 +2220,9 @@ impl From<Crmsen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctoe {
-    #[doc = "No Error"]
+    #[doc = "No Error."]
     CTOE_0 = 0x0,
-    #[doc = "Time out"]
+    #[doc = "Time out."]
     CTOE_1 = 0x01,
 }
 impl Ctoe {
@@ -2251,9 +2251,9 @@ impl From<Ctoe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctoeien {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     CTOEIEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     CTOEIEN_1 = 0x01,
 }
 impl Ctoeien {
@@ -2282,9 +2282,9 @@ impl From<Ctoeien> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctoesen {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     CTOESEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     CTOESEN_1 = 0x01,
 }
 impl Ctoesen {
@@ -2313,9 +2313,9 @@ impl From<Ctoesen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum D3cd {
-    #[doc = "DATA3 does not monitor Card Insertion"]
+    #[doc = "DATA3 does not monitor Card Insertion."]
     D3CD_0 = 0x0,
-    #[doc = "DATA3 as Card Detection Pin"]
+    #[doc = "DATA3 as Card Detection Pin."]
     D3CD_1 = 0x01,
 }
 impl D3cd {
@@ -2344,9 +2344,9 @@ impl From<D3cd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dce {
-    #[doc = "No Error"]
+    #[doc = "No Error."]
     DCE_0 = 0x0,
-    #[doc = "Error"]
+    #[doc = "Error."]
     DCE_1 = 0x01,
 }
 impl Dce {
@@ -2375,9 +2375,9 @@ impl From<Dce> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dceien {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     DCEIEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     DCEIEN_1 = 0x01,
 }
 impl Dceien {
@@ -2406,9 +2406,9 @@ impl From<Dceien> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dcesen {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     DCESEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     DCESEN_1 = 0x01,
 }
 impl Dcesen {
@@ -2437,9 +2437,9 @@ impl From<Dcesen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Debe {
-    #[doc = "No Error"]
+    #[doc = "No Error."]
     DEBE_0 = 0x0,
-    #[doc = "Error"]
+    #[doc = "Error."]
     DEBE_1 = 0x01,
 }
 impl Debe {
@@ -2468,9 +2468,9 @@ impl From<Debe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Debeien {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     DEBEIEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     DEBEIEN_1 = 0x01,
 }
 impl Debeien {
@@ -2499,9 +2499,9 @@ impl From<Debeien> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Debesen {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     DEBESEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     DEBESEN_1 = 0x01,
 }
 impl Debesen {
@@ -2530,9 +2530,9 @@ impl From<Debesen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dint {
-    #[doc = "No DMA Interrupt"]
+    #[doc = "No DMA Interrupt."]
     DINT_0 = 0x0,
-    #[doc = "DMA Interrupt is generated"]
+    #[doc = "DMA Interrupt is generated."]
     DINT_1 = 0x01,
 }
 impl Dint {
@@ -2561,9 +2561,9 @@ impl From<Dint> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dintien {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     DINTIEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     DINTIEN_1 = 0x01,
 }
 impl Dintien {
@@ -2592,9 +2592,9 @@ impl From<Dintien> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dintsen {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     DINTSEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     DINTSEN_1 = 0x01,
 }
 impl Dintsen {
@@ -2623,9 +2623,9 @@ impl From<Dintsen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DisableTimeOut {
-    #[doc = "Enable time out"]
+    #[doc = "Enable time out."]
     DISABLE_TIME_OUT_0 = 0x0,
-    #[doc = "Disable time out"]
+    #[doc = "Disable time out."]
     DISABLE_TIME_OUT_1 = 0x01,
 }
 impl DisableTimeOut {
@@ -2654,9 +2654,9 @@ impl From<DisableTimeOut> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dla {
-    #[doc = "DATA Line Inactive"]
+    #[doc = "DATA Line Inactive."]
     DLA_0 = 0x0,
-    #[doc = "DATA Line Active"]
+    #[doc = "DATA Line Active."]
     DLA_1 = 0x01,
 }
 impl Dla {
@@ -2685,21 +2685,21 @@ impl From<Dla> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Dlsl(u8);
 impl Dlsl {
-    #[doc = "Data 0 line signal level"]
+    #[doc = "Data 0 line signal level."]
     pub const DATA0: Self = Self(0x0);
-    #[doc = "Data 1 line signal level"]
+    #[doc = "Data 1 line signal level."]
     pub const DATA1: Self = Self(0x01);
-    #[doc = "Data 2 line signal level"]
+    #[doc = "Data 2 line signal level."]
     pub const DATA2: Self = Self(0x02);
-    #[doc = "Data 3 line signal level"]
+    #[doc = "Data 3 line signal level."]
     pub const DATA3: Self = Self(0x03);
-    #[doc = "Data 4 line signal level"]
+    #[doc = "Data 4 line signal level."]
     pub const DATA4: Self = Self(0x04);
-    #[doc = "Data 5 line signal level"]
+    #[doc = "Data 5 line signal level."]
     pub const DATA5: Self = Self(0x05);
-    #[doc = "Data 6 line signal level"]
+    #[doc = "Data 6 line signal level."]
     pub const DATA6: Self = Self(0x06);
-    #[doc = "Data 7 line signal level"]
+    #[doc = "Data 7 line signal level."]
     pub const DATA7: Self = Self(0x07);
 }
 impl Dlsl {
@@ -2757,9 +2757,9 @@ impl From<Dlsl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmae {
-    #[doc = "No Error"]
+    #[doc = "No Error."]
     DMAE_0 = 0x0,
-    #[doc = "Error"]
+    #[doc = "Error."]
     DMAE_1 = 0x01,
 }
 impl Dmae {
@@ -2788,9 +2788,9 @@ impl From<Dmae> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmaeien {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     DMAEIEN_0 = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     DMAEIEN_1 = 0x01,
 }
 impl Dmaeien {
@@ -2819,9 +2819,9 @@ impl From<Dmaeien> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmaen {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DMAEN_0 = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     DMAEN_1 = 0x01,
 }
 impl Dmaen {
@@ -2850,9 +2850,9 @@ impl From<Dmaen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmaesen {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     DMAESEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     DMAESEN_1 = 0x01,
 }
 impl Dmaesen {
@@ -2881,9 +2881,9 @@ impl From<Dmaesen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmas {
-    #[doc = "DMA not supported"]
+    #[doc = "DMA not supported."]
     DMAS_0 = 0x0,
-    #[doc = "DMA Supported"]
+    #[doc = "DMA Supported."]
     DMAS_1 = 0x01,
 }
 impl Dmas {
@@ -2912,11 +2912,11 @@ impl From<Dmas> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmasel {
-    #[doc = "No DMA or Simple DMA is selected"]
+    #[doc = "No DMA or Simple DMA is selected."]
     DMASEL_0 = 0x0,
-    #[doc = "ADMA1 is selected"]
+    #[doc = "ADMA1 is selected."]
     DMASEL_1 = 0x01,
-    #[doc = "ADMA2 is selected"]
+    #[doc = "ADMA2 is selected."]
     DMASEL_2 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -2946,9 +2946,9 @@ impl From<Dmasel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dpsel {
-    #[doc = "No Data Present"]
+    #[doc = "No Data Present."]
     DPSEL_0 = 0x0,
-    #[doc = "Data Present"]
+    #[doc = "Data Present."]
     DPSEL_1 = 0x01,
 }
 impl Dpsel {
@@ -2977,9 +2977,9 @@ impl From<Dpsel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dtdsel {
-    #[doc = "Write (Host to Card)"]
+    #[doc = "Write (Host to Card)."]
     DTDSEL_0 = 0x0,
-    #[doc = "Read (Card to Host)"]
+    #[doc = "Read (Card to Host)."]
     DTDSEL_1 = 0x01,
 }
 impl Dtdsel {
@@ -3008,9 +3008,9 @@ impl From<Dtdsel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dtocv {
-    #[doc = "SDCLK x 2 14"]
+    #[doc = "SDCLK x 2 14."]
     DTOCV_0 = 0x0,
-    #[doc = "SDCLK x 2 15"]
+    #[doc = "SDCLK x 2 15."]
     DTOCV_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -3023,11 +3023,11 @@ pub enum Dtocv {
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
-    #[doc = "SDCLK x 2 27"]
+    #[doc = "SDCLK x 2 27."]
     DTOCV_13 = 0x0d,
-    #[doc = "SDCLK x 2 28"]
+    #[doc = "SDCLK x 2 28."]
     DTOCV_14 = 0x0e,
-    #[doc = "SDCLK x 2 29"]
+    #[doc = "SDCLK x 2 29."]
     DTOCV_15 = 0x0f,
 }
 impl Dtocv {
@@ -3056,21 +3056,21 @@ impl From<Dtocv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DtocvAck {
-    #[doc = "SDCLK x 2^14"]
+    #[doc = "SDCLK x 2^14."]
     DTOCV_ACK_0 = 0x0,
-    #[doc = "SDCLK x 2^15"]
+    #[doc = "SDCLK x 2^15."]
     DTOCV_ACK_1 = 0x01,
-    #[doc = "SDCLK x 2^16"]
+    #[doc = "SDCLK x 2^16."]
     DTOCV_ACK_2 = 0x02,
-    #[doc = "SDCLK x 2^17"]
+    #[doc = "SDCLK x 2^17."]
     DTOCV_ACK_3 = 0x03,
-    #[doc = "SDCLK x 2^18"]
+    #[doc = "SDCLK x 2^18."]
     DTOCV_ACK_4 = 0x04,
-    #[doc = "SDCLK x 2^19"]
+    #[doc = "SDCLK x 2^19."]
     DTOCV_ACK_5 = 0x05,
-    #[doc = "SDCLK x 2^20"]
+    #[doc = "SDCLK x 2^20."]
     DTOCV_ACK_6 = 0x06,
-    #[doc = "SDCLK x 2^21"]
+    #[doc = "SDCLK x 2^21."]
     DTOCV_ACK_7 = 0x07,
     _RESERVED_8 = 0x08,
     _RESERVED_9 = 0x09,
@@ -3078,9 +3078,9 @@ pub enum DtocvAck {
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
-    #[doc = "SDCLK x 2^28"]
+    #[doc = "SDCLK x 2^28."]
     DTOCV_ACK_14 = 0x0e,
-    #[doc = "SDCLK x 2^29"]
+    #[doc = "SDCLK x 2^29."]
     DTOCV_ACK_15 = 0x0f,
 }
 impl DtocvAck {
@@ -3109,9 +3109,9 @@ impl From<DtocvAck> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dtoe {
-    #[doc = "No Error"]
+    #[doc = "No Error."]
     DTOE_0 = 0x0,
-    #[doc = "Time out"]
+    #[doc = "Time out."]
     DTOE_1 = 0x01,
 }
 impl Dtoe {
@@ -3140,9 +3140,9 @@ impl From<Dtoe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dtoeien {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     DTOEIEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     DTOEIEN_1 = 0x01,
 }
 impl Dtoeien {
@@ -3171,9 +3171,9 @@ impl From<Dtoeien> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dtoesen {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     DTOESEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     DTOESEN_1 = 0x01,
 }
 impl Dtoesen {
@@ -3202,11 +3202,11 @@ impl From<Dtoesen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dtw {
-    #[doc = "1-bit mode"]
+    #[doc = "1-bit mode."]
     DTW_0 = 0x0,
-    #[doc = "4-bit mode"]
+    #[doc = "4-bit mode."]
     DTW_1 = 0x01,
-    #[doc = "8-bit mode"]
+    #[doc = "8-bit mode."]
     DTW_2 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -3236,9 +3236,9 @@ impl From<Dtw> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dvs {
-    #[doc = "Divide-by-1"]
+    #[doc = "Divide-by-1."]
     DVS_0 = 0x0,
-    #[doc = "Divide-by-2"]
+    #[doc = "Divide-by-2."]
     DVS_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -3252,9 +3252,9 @@ pub enum Dvs {
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
-    #[doc = "Divide-by-15"]
+    #[doc = "Divide-by-15."]
     DVS_14 = 0x0e,
-    #[doc = "Divide-by-16"]
+    #[doc = "Divide-by-16."]
     DVS_15 = 0x0f,
 }
 impl Dvs {
@@ -3283,11 +3283,11 @@ impl From<Dvs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Emode {
-    #[doc = "Big Endian Mode"]
+    #[doc = "Big Endian Mode."]
     EMODE_0 = 0x0,
-    #[doc = "Half Word Big Endian Mode"]
+    #[doc = "Half Word Big Endian Mode."]
     EMODE_1 = 0x01,
-    #[doc = "Little Endian Mode"]
+    #[doc = "Little Endian Mode."]
     EMODE_2 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -3317,9 +3317,9 @@ impl From<Emode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ExeTune {
-    #[doc = "Not Tuned or Tuning Completed"]
+    #[doc = "Not Tuned or Tuning Completed."]
     EXE_TUNE_0 = 0x0,
-    #[doc = "Execute Tuning"]
+    #[doc = "Execute Tuning."]
     EXE_TUNE_1 = 0x01,
 }
 impl ExeTune {
@@ -3348,9 +3348,9 @@ impl From<ExeTune> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FbclkSel {
-    #[doc = "Feedback clock comes from the loopback CLK"]
+    #[doc = "Feedback clock comes from the loopback CLK."]
     FBCLK_SEL_0 = 0x0,
-    #[doc = "Feedback clock comes from the ipp_card_clk_out"]
+    #[doc = "Feedback clock comes from the ipp_card_clk_out."]
     FBCLK_SEL_1 = 0x01,
 }
 impl FbclkSel {
@@ -3441,9 +3441,9 @@ impl From<Hckoff> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Hss {
-    #[doc = "High Speed Not Supported"]
+    #[doc = "High Speed Not Supported."]
     HSS_0 = 0x0,
-    #[doc = "High Speed Supported"]
+    #[doc = "High Speed Supported."]
     HSS_1 = 0x01,
 }
 impl Hss {
@@ -3472,9 +3472,9 @@ impl From<Hss> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Iabg {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     IABG_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     IABG_1 = 0x01,
 }
 impl Iabg {
@@ -3534,13 +3534,13 @@ impl From<Ipgoff> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mbl {
-    #[doc = "512 bytes"]
+    #[doc = "512 bytes."]
     MBL_0 = 0x0,
-    #[doc = "1024 bytes"]
+    #[doc = "1024 bytes."]
     MBL_1 = 0x01,
-    #[doc = "2048 bytes"]
+    #[doc = "2048 bytes."]
     MBL_2 = 0x02,
-    #[doc = "4096 bytes"]
+    #[doc = "4096 bytes."]
     MBL_3 = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
@@ -3573,9 +3573,9 @@ impl From<Mbl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MixCtrlSmpClkSel {
-    #[doc = "Fixed clock is used to sample data / cmd"]
+    #[doc = "Fixed clock is used to sample data / cmd."]
     SMP_CLK_SEL_0 = 0x0,
-    #[doc = "Tuned clock is used to sample data / cmd"]
+    #[doc = "Tuned clock is used to sample data / cmd."]
     SMP_CLK_SEL_1 = 0x01,
 }
 impl MixCtrlSmpClkSel {
@@ -3604,9 +3604,9 @@ impl From<MixCtrlSmpClkSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Msbsel {
-    #[doc = "Single Block"]
+    #[doc = "Single Block."]
     MSBSEL_0 = 0x0,
-    #[doc = "Multiple Blocks"]
+    #[doc = "Multiple Blocks."]
     MSBSEL_1 = 0x01,
 }
 impl Msbsel {
@@ -3728,11 +3728,11 @@ impl From<RdNo8clkEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RetuningMode {
-    #[doc = "Mode 1"]
+    #[doc = "Mode 1."]
     RETUNING_MODE_0 = 0x0,
-    #[doc = "Mode 2"]
+    #[doc = "Mode 2."]
     RETUNING_MODE_1 = 0x01,
-    #[doc = "Mode 3"]
+    #[doc = "Mode 3."]
     RETUNING_MODE_2 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -3762,13 +3762,13 @@ impl From<RetuningMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rsptyp {
-    #[doc = "No Response"]
+    #[doc = "No Response."]
     RSPTYP_0 = 0x0,
-    #[doc = "Response Length 136"]
+    #[doc = "Response Length 136."]
     RSPTYP_1 = 0x01,
-    #[doc = "Response Length 48"]
+    #[doc = "Response Length 48."]
     RSPTYP_2 = 0x02,
-    #[doc = "Response Length 48, check Busy after response"]
+    #[doc = "Response Length 48, check Busy after response."]
     RSPTYP_3 = 0x03,
 }
 impl Rsptyp {
@@ -3797,9 +3797,9 @@ impl From<Rsptyp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rsta {
-    #[doc = "No Reset"]
+    #[doc = "No Reset."]
     RSTA_0 = 0x0,
-    #[doc = "Reset"]
+    #[doc = "Reset."]
     RSTA_1 = 0x01,
 }
 impl Rsta {
@@ -3828,9 +3828,9 @@ impl From<Rsta> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rstc {
-    #[doc = "No Reset"]
+    #[doc = "No Reset."]
     RSTC_0 = 0x0,
-    #[doc = "Reset"]
+    #[doc = "Reset."]
     RSTC_1 = 0x01,
 }
 impl Rstc {
@@ -3859,9 +3859,9 @@ impl From<Rstc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rstd {
-    #[doc = "No Reset"]
+    #[doc = "No Reset."]
     RSTD_0 = 0x0,
-    #[doc = "Reset"]
+    #[doc = "Reset."]
     RSTD_1 = 0x01,
 }
 impl Rstd {
@@ -3890,9 +3890,9 @@ impl From<Rstd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rta {
-    #[doc = "No valid data"]
+    #[doc = "No valid data."]
     RTA_0 = 0x0,
-    #[doc = "Transferring data"]
+    #[doc = "Transferring data."]
     RTA_1 = 0x01,
 }
 impl Rta {
@@ -3921,9 +3921,9 @@ impl From<Rta> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rte {
-    #[doc = "Re-Tuning is not required"]
+    #[doc = "Re-Tuning is not required."]
     RTE_0 = 0x0,
-    #[doc = "Re-Tuning should be performed"]
+    #[doc = "Re-Tuning should be performed."]
     RTE_1 = 0x01,
 }
 impl Rte {
@@ -3952,9 +3952,9 @@ impl From<Rte> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rteien {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     RTEIEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     RTEIEN_1 = 0x01,
 }
 impl Rteien {
@@ -3983,9 +3983,9 @@ impl From<Rteien> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rtesen {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     RTESEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     RTESEN_1 = 0x01,
 }
 impl Rtesen {
@@ -4014,9 +4014,9 @@ impl From<Rtesen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rtr {
-    #[doc = "Fixed or well tuned sampling clock"]
+    #[doc = "Fixed or well tuned sampling clock."]
     RTR_0 = 0x0,
-    #[doc = "Sampling clock needs re-tuning"]
+    #[doc = "Sampling clock needs re-tuning."]
     RTR_1 = 0x01,
 }
 impl Rtr {
@@ -4045,9 +4045,9 @@ impl From<Rtr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rwctl {
-    #[doc = "Disable Read Wait Control, and stop SD Clock at block gap when SABGREQ bit is set"]
+    #[doc = "Disable Read Wait Control, and stop SD Clock at block gap when SABGREQ bit is set."]
     RWCTL_0 = 0x0,
-    #[doc = "Enable Read Wait Control, and assert Read Wait without stopping SD Clock at block gap when SABGREQ bit is set"]
+    #[doc = "Enable Read Wait Control, and assert Read Wait without stopping SD Clock at block gap when SABGREQ bit is set."]
     RWCTL_1 = 0x01,
 }
 impl Rwctl {
@@ -4076,9 +4076,9 @@ impl From<Rwctl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sabgreq {
-    #[doc = "Transfer"]
+    #[doc = "Transfer."]
     SABGREQ_0 = 0x0,
-    #[doc = "Stop"]
+    #[doc = "Stop."]
     SABGREQ_1 = 0x01,
 }
 impl Sabgreq {
@@ -4169,9 +4169,9 @@ impl From<Sdstb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Srs {
-    #[doc = "Not supported"]
+    #[doc = "Not supported."]
     SRS_0 = 0x0,
-    #[doc = "Supported"]
+    #[doc = "Supported."]
     SRS_1 = 0x01,
 }
 impl Srs {
@@ -4200,9 +4200,9 @@ impl From<Srs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tc {
-    #[doc = "Transfer not complete"]
+    #[doc = "Transfer not complete."]
     TC_0 = 0x0,
-    #[doc = "Transfer complete"]
+    #[doc = "Transfer complete."]
     TC_1 = 0x01,
 }
 impl Tc {
@@ -4231,9 +4231,9 @@ impl From<Tc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcien {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     TCIEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     TCIEN_1 = 0x01,
 }
 impl Tcien {
@@ -4262,9 +4262,9 @@ impl From<Tcien> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcsen {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     TCSEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     TCSEN_1 = 0x01,
 }
 impl Tcsen {
@@ -4293,9 +4293,9 @@ impl From<Tcsen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tneien {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     TNEIEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     TNEIEN_1 = 0x01,
 }
 impl Tneien {
@@ -4324,9 +4324,9 @@ impl From<Tneien> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tnesen {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     TNESEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     TNESEN_1 = 0x01,
 }
 impl Tnesen {
@@ -4355,9 +4355,9 @@ impl From<Tnesen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tpien {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     TPIEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     TPIEN_1 = 0x01,
 }
 impl Tpien {
@@ -4386,9 +4386,9 @@ impl From<Tpien> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tpsen {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     TPSEN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     TPSEN_1 = 0x01,
 }
 impl Tpsen {
@@ -4479,9 +4479,9 @@ impl From<TuningCmdEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum UseTuningSdr50 {
-    #[doc = "SDR does not require tuning"]
+    #[doc = "SDR does not require tuning."]
     USE_TUNING_SDR50_0 = 0x0,
-    #[doc = "SDR50 requires tuning"]
+    #[doc = "SDR50 requires tuning."]
     USE_TUNING_SDR50_1 = 0x01,
 }
 impl UseTuningSdr50 {
@@ -4510,9 +4510,9 @@ impl From<UseTuningSdr50> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Vs18 {
-    #[doc = "1.8V not supported"]
+    #[doc = "1.8V not supported."]
     VS18_0 = 0x0,
-    #[doc = "1.8V supported"]
+    #[doc = "1.8V supported."]
     VS18_1 = 0x01,
 }
 impl Vs18 {
@@ -4541,9 +4541,9 @@ impl From<Vs18> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Vs30 {
-    #[doc = "3.0V not supported"]
+    #[doc = "3.0V not supported."]
     VS30_0 = 0x0,
-    #[doc = "3.0V supported"]
+    #[doc = "3.0V supported."]
     VS30_1 = 0x01,
 }
 impl Vs30 {
@@ -4572,9 +4572,9 @@ impl From<Vs30> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Vs33 {
-    #[doc = "3.3V not supported"]
+    #[doc = "3.3V not supported."]
     VS33_0 = 0x0,
-    #[doc = "3.3V supported"]
+    #[doc = "3.3V supported."]
     VS33_1 = 0x01,
 }
 impl Vs33 {
@@ -4603,9 +4603,9 @@ impl From<Vs33> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Vselect {
-    #[doc = "Change the voltage to high voltage range, around 3.0 V"]
+    #[doc = "Change the voltage to high voltage range, around 3.0 V."]
     VSELECT_0 = 0x0,
-    #[doc = "Change the voltage to low voltage range, around 1.8 V"]
+    #[doc = "Change the voltage to low voltage range, around 1.8 V."]
     VSELECT_1 = 0x01,
 }
 impl Vselect {
@@ -4634,9 +4634,9 @@ impl From<Vselect> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wecins {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     WECINS_0 = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     WECINS_1 = 0x01,
 }
 impl Wecins {
@@ -4665,9 +4665,9 @@ impl From<Wecins> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wecint {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     WECINT_0 = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     WECINT_1 = 0x01,
 }
 impl Wecint {
@@ -4696,9 +4696,9 @@ impl From<Wecint> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wecrm {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     WECRM_0 = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     WECRM_1 = 0x01,
 }
 impl Wecrm {
@@ -4727,9 +4727,9 @@ impl From<Wecrm> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wpspl {
-    #[doc = "Write protected (WP = 1)"]
+    #[doc = "Write protected (WP = 1)."]
     WPSPL_0 = 0x0,
-    #[doc = "Write enabled (WP = 0)"]
+    #[doc = "Write enabled (WP = 0)."]
     WPSPL_1 = 0x01,
 }
 impl Wpspl {
@@ -4758,9 +4758,9 @@ impl From<Wpspl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wta {
-    #[doc = "No valid data"]
+    #[doc = "No valid data."]
     WTA_0 = 0x0,
-    #[doc = "Transferring data"]
+    #[doc = "Transferring data."]
     WTA_1 = 0x01,
 }
 impl Wta {

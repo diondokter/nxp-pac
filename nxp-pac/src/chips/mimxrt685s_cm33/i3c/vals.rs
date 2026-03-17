@@ -2,13 +2,13 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Actstate {
-    #[doc = "NO_LATENCY: normal bus operations"]
+    #[doc = "NO_LATENCY: normal bus operations."]
     NO_LATENCY = 0x0,
-    #[doc = "LATENCY_1MS: 1 ms of latency"]
+    #[doc = "LATENCY_1MS: 1 ms of latency."]
     LATENCY_1MS = 0x01,
-    #[doc = "LATENCY_100MS: 100 ms of latency"]
+    #[doc = "LATENCY_100MS: 100 ms of latency."]
     LATENCY_100MS = 0x02,
-    #[doc = "LATENCY_10S: 10 seconds of latency"]
+    #[doc = "LATENCY_10S: 10 seconds of latency."]
     LATENCY_10S = 0x03,
 }
 impl Actstate {
@@ -37,9 +37,9 @@ impl From<Actstate> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Davalid {
-    #[doc = "DANOTASSIGNED: a Dynamic Address is not assigned"]
+    #[doc = "DANOTASSIGNED: a Dynamic Address is not assigned."]
     DANOTASSIGNED = 0x0,
-    #[doc = "DAASSIGNED: a Dynamic Address is assigned"]
+    #[doc = "DAASSIGNED: a Dynamic Address is assigned."]
     DAASSIGNED = 0x01,
 }
 impl Davalid {
@@ -68,9 +68,9 @@ impl From<Davalid> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dma {
-    #[doc = "DMA is not supported"]
+    #[doc = "DMA is not supported."]
     DMANO = 0x0,
-    #[doc = "DMA is supported"]
+    #[doc = "DMA is supported."]
     DMAYES = 0x01,
 }
 impl Dma {
@@ -99,7 +99,7 @@ impl From<Dma> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Evdet {
-    #[doc = "NONE: no event or no pending event"]
+    #[doc = "NONE: no event or no pending event."]
     NONE = 0x0,
     #[doc = "NO_REQUEST: Request not sent yet. Either there was no START yet, or is waiting for Bus-Available or Bus-Idle (HJ)."]
     NO_REQUEST = 0x01,
@@ -170,7 +170,7 @@ impl From<Event> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Extfifo {
     _RESERVED_0 = 0x0,
-    #[doc = "STD_EXT_FIFO: standard available/free external FIFO"]
+    #[doc = "STD_EXT_FIFO: standard available/free external FIFO."]
     STD_EXT_FIFO = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -205,13 +205,13 @@ impl From<Extfifo> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fiforx {
-    #[doc = "FIFO_2BYTE: 2 (or 3)-byte RX FIFO, the default FIFO receive value (FIFORX)"]
+    #[doc = "FIFO_2BYTE: 2 (or 3)-byte RX FIFO, the default FIFO receive value (FIFORX)."]
     FIFO_2BYTE = 0x0,
-    #[doc = "FIFO_4BYTE: 4-byte RX FIFO"]
+    #[doc = "FIFO_4BYTE: 4-byte RX FIFO."]
     FIFO_4BYTE = 0x01,
-    #[doc = "FIFO_8BYTE: 8-byte RX FIFO"]
+    #[doc = "FIFO_8BYTE: 8-byte RX FIFO."]
     FIFO_8BYTE = 0x02,
-    #[doc = "FIFO_16BYTE: 16-byte RX FIFO"]
+    #[doc = "FIFO_16BYTE: 16-byte RX FIFO."]
     FIFO_16BYTE = 0x03,
 }
 impl Fiforx {
@@ -240,13 +240,13 @@ impl From<Fiforx> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fifotx {
-    #[doc = "FIFO_2BYTE: 2-byte TX FIFO, the default FIFO transmit value (FIFOTX)"]
+    #[doc = "FIFO_2BYTE: 2-byte TX FIFO, the default FIFO transmit value (FIFOTX)."]
     FIFO_2BYTE = 0x0,
-    #[doc = "FIFO_4BYTE: 4-byte TX FIFO"]
+    #[doc = "FIFO_4BYTE: 4-byte TX FIFO."]
     FIFO_4BYTE = 0x01,
-    #[doc = "FIFO_8BYTE: 8-byte TX FIFO"]
+    #[doc = "FIFO_8BYTE: 8-byte TX FIFO."]
     FIFO_8BYTE = 0x02,
-    #[doc = "FIFO_16BYTE: 16-byte TX FIFO"]
+    #[doc = "FIFO_16BYTE: 16-byte TX FIFO."]
     FIFO_16BYTE = 0x03,
 }
 impl Fifotx {
@@ -310,9 +310,9 @@ impl From<Hkeep> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum I2c {
-    #[doc = "I3C message"]
+    #[doc = "I3C message."]
     I3CMESSAGE = 0x0,
-    #[doc = "I2C message"]
+    #[doc = "I2C message."]
     I2CMESSAGE = 0x01,
 }
 impl I2c {
@@ -343,11 +343,11 @@ impl From<I2c> for u8 {
 pub enum Ibiresp {
     #[doc = "ACK: Acknowledge. A mandatory byte (or not) is decided by the Master In-band Interrupt Registry and Rules Register (MIBIRULES). To limit the maximum number of IBI bytes, configure the Read Termination field (MCTRL.RDTERM)."]
     ACK = 0x0,
-    #[doc = "NACK: Not acknowledge"]
+    #[doc = "NACK: Not acknowledge."]
     NACK = 0x01,
     #[doc = "ACK_WITH_MANDATORY: Acknowledge with mandatory byte (ignores the MIBIRULES register). Acknowledge with mandatory byte should not be used, unless only slaves with a mandatory byte can cause an In-Band Interrupt."]
     ACK_WITH_MANDATORY = 0x02,
-    #[doc = "MANUAL: stop and wait for a decision using the IBIAckNack request"]
+    #[doc = "MANUAL: stop and wait for a decision using the IBIAckNack request."]
     MANUAL = 0x03,
 }
 impl Ibiresp {
@@ -376,13 +376,13 @@ impl From<Ibiresp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ibitype {
-    #[doc = "NONE: cleared when IBI Won bit (MSTATUS.IBIWON) is cleared"]
+    #[doc = "NONE: cleared when IBI Won bit (MSTATUS.IBIWON) is cleared."]
     NONE = 0x0,
-    #[doc = "IBI: In-Band Interrupt"]
+    #[doc = "IBI: In-Band Interrupt."]
     IBI = 0x01,
-    #[doc = "MR: Master Request"]
+    #[doc = "MR: Master Request."]
     MR = 0x02,
-    #[doc = "HJ: Hot-Join"]
+    #[doc = "HJ: Hot-Join."]
     HJ = 0x03,
 }
 impl Ibitype {
@@ -411,13 +411,13 @@ impl From<Ibitype> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Idena {
-    #[doc = "APPLICATION: Application handles ID 48b"]
+    #[doc = "APPLICATION: Application handles ID 48b."]
     APPLICATION = 0x0,
-    #[doc = "HW: Hardware handles ID 48b"]
+    #[doc = "HW: Hardware handles ID 48b."]
     HW = 0x01,
     #[doc = "HW_BUT: in hardware but the I3C module instance handles ID 48b."]
     HW_BUT = 0x02,
-    #[doc = "PARTNO: a part number register (PARTNO) handles ID 48b"]
+    #[doc = "PARTNO: a part number register (PARTNO) handles ID 48b."]
     PARTNO = 0x03,
 }
 impl Idena {
@@ -446,9 +446,9 @@ impl From<Idena> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int {
-    #[doc = "Interrupts are not supported"]
+    #[doc = "Interrupts are not supported."]
     INTERRUPTSNO = 0x0,
-    #[doc = "Interrupts are supported"]
+    #[doc = "Interrupts are supported."]
     INTERRUPTSYES = 0x01,
 }
 impl Int {
@@ -508,9 +508,9 @@ impl From<Master> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MctrlDir {
-    #[doc = "DIRWRITE: Write"]
+    #[doc = "DIRWRITE: Write."]
     DIRWRITE = 0x0,
-    #[doc = "DIRREAD: Read"]
+    #[doc = "DIRREAD: Read."]
     DIRREAD = 0x01,
 }
 impl MctrlDir {
@@ -539,7 +539,7 @@ impl From<MctrlDir> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MdmactrlDmafb {
-    #[doc = "NOT_USED: DMA is not used"]
+    #[doc = "NOT_USED: DMA is not used."]
     NOT_USED = 0x0,
     #[doc = "ENABLE_ONE_FRAME: DMA is enabled for 1 frame. DMAFB auto-clears on STOP or repeated START. See MCONFIG.MATCHSS."]
     ENABLE_ONE_FRAME = 0x01,
@@ -573,7 +573,7 @@ impl From<MdmactrlDmafb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MdmactrlDmatb {
-    #[doc = "NOT_USED: DMA is not used"]
+    #[doc = "NOT_USED: DMA is not used."]
     NOT_USED = 0x0,
     #[doc = "ENABLE_ONE_FRAME: DMA is enabled for 1 frame (ended by DMA or Terminated). DMATB auto-clears on STOP or START. See MCONFIG.MATCHSS."]
     ENABLE_ONE_FRAME = 0x01,
@@ -607,9 +607,9 @@ impl From<MdmactrlDmatb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MdmactrlDmawidth {
-    #[doc = "BYTE"]
+    #[doc = "BYTE."]
     BYTE = 0x0,
-    #[doc = "BYTE_AGAIN"]
+    #[doc = "BYTE_AGAIN."]
     BYTE_AGAIN = 0x01,
     #[doc = "HALF_WORD: Half-word (16 bits). This will make sure that 2 bytes are free/available in FIFO."]
     HALF_WORD = 0x02,
@@ -675,9 +675,9 @@ impl From<Mstena> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MwmsgSdrControlDir {
-    #[doc = "Write"]
+    #[doc = "Write."]
     WRITE = 0x0,
-    #[doc = "Read"]
+    #[doc = "Read."]
     READ = 0x01,
 }
 impl MwmsgSdrControlDir {
@@ -706,7 +706,7 @@ impl From<MwmsgSdrControlDir> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Request {
-    #[doc = "NONE: Returns to this when finished with any request. The MSTATUS register indicates the master's state. See also AutoIBI mode. NONE is only written as 0: when setting RDTERM to 1 (to stop a read in progress) or when setting IBI reponse field (IBIRESP) for MSG use"]
+    #[doc = "NONE: Returns to this when finished with any request. The MSTATUS register indicates the master's state. See also AutoIBI mode. NONE is only written as 0: when setting RDTERM to 1 (to stop a read in progress) or when setting IBI reponse field (IBIRESP) for MSG use."]
     NONE = 0x0,
     #[doc = "EMITSTARTADDR: Emit START with address and direction from a stopped state or in the middle of a Single Data Rate (SDR) message. If from a stopped state (IDLE), then emit start may be prevented by an event (like IBI, MR, HJ), in which case the appropriate interrupt is signaled; note that Emit START can be resubmitted."]
     EMITSTARTADDR = 0x01,
@@ -748,9 +748,9 @@ impl From<Request> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rxempty {
-    #[doc = "RX is not empty"]
+    #[doc = "RX is not empty."]
     RXISNOTEMPTY = 0x0,
-    #[doc = "RX is empty"]
+    #[doc = "RX is empty."]
     RXISEMPTY = 0x01,
 }
 impl Rxempty {
@@ -779,13 +779,13 @@ impl From<Rxempty> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rxtrig {
-    #[doc = "Trigger on not empty"]
+    #[doc = "Trigger on not empty."]
     TRIGGRNOTEMPTY = 0x0,
-    #[doc = "Trigger on or more full"]
+    #[doc = "Trigger on or more full."]
     TRIGGRONEFOURTH = 0x01,
-    #[doc = "Trigger on .5 or more full"]
+    #[doc = "Trigger on .5 or more full."]
     TRIGGRONEHALF = 0x02,
-    #[doc = "Trigger on 3/4 or more full"]
+    #[doc = "Trigger on 3/4 or more full."]
     TRIGGRTHREEFOURTHS = 0x03,
 }
 impl Rxtrig {
@@ -814,13 +814,13 @@ impl From<Rxtrig> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Saddr {
-    #[doc = "NO_STATIC: No static address"]
+    #[doc = "NO_STATIC: No static address."]
     NO_STATIC = 0x0,
-    #[doc = "STATIC: Static address is fixed in hardware"]
+    #[doc = "STATIC: Static address is fixed in hardware."]
     STATIC = 0x01,
-    #[doc = "HW_CONTROL: Hardware controls the static address dynamically (for example, from the pin strap)"]
+    #[doc = "HW_CONTROL: Hardware controls the static address dynamically (for example, from the pin strap)."]
     HW_CONTROL = 0x02,
-    #[doc = "CONFIG: SCONFIG register supplies the static address"]
+    #[doc = "CONFIG: SCONFIG register supplies the static address."]
     CONFIG = 0x03,
 }
 impl Saddr {
@@ -849,9 +849,9 @@ impl From<Saddr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ScapabilitiesTimectrl {
-    #[doc = "NO_TIME_CONTROL_TYPE: No time control is enabled"]
+    #[doc = "NO_TIME_CONTROL_TYPE: No time control is enabled."]
     NO_TIME_CONTROL_TYPE = 0x0,
-    #[doc = "ATLEAST1_TIME_CONTROL: at least one time-control type is supported"]
+    #[doc = "ATLEAST1_TIME_CONTROL: at least one time-control type is supported."]
     ATLEAST1_TIME_CONTROL = 0x01,
 }
 impl ScapabilitiesTimectrl {
@@ -880,11 +880,11 @@ impl From<ScapabilitiesTimectrl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SdmactrlDmafb {
-    #[doc = "DMA not used"]
+    #[doc = "DMA not used."]
     NOT_USED = 0x0,
-    #[doc = "DMA is enabled for 1 frame"]
+    #[doc = "DMA is enabled for 1 frame."]
     ENABLE_ONE_FRAME = 0x01,
-    #[doc = "DMA enable"]
+    #[doc = "DMA enable."]
     ENABLE = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -914,7 +914,7 @@ impl From<SdmactrlDmafb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SdmactrlDmatb {
-    #[doc = "NOT_USED: DMA is not used"]
+    #[doc = "NOT_USED: DMA is not used."]
     NOT_USED = 0x0,
     #[doc = "ENABLE_ONE_FRAME: DMA is enabled for 1 Frame (ended by DMA or terminated). DMATB auto-clears on a STOP or START (see the Match START or STOP bit (SCONFIG.MATCHSS)."]
     ENABLE_ONE_FRAME = 0x01,
@@ -948,9 +948,9 @@ impl From<SdmactrlDmatb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SdmactrlDmawidth {
-    #[doc = "BYTE"]
+    #[doc = "BYTE."]
     BYTE = 0x0,
-    #[doc = "BYTE_AGAIN"]
+    #[doc = "BYTE_AGAIN."]
     BYTE_AGAIN = 0x01,
     #[doc = "HALF_WORD: Half word (16 bits). This will make sure that 2 bytes are free/available in the FIFO."]
     HALF_WORD = 0x02,
@@ -982,10 +982,10 @@ impl From<SdmactrlDmawidth> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SstatusTimectrl {
-    #[doc = "NO_TIME_CONTROL: No time control is enabled"]
+    #[doc = "NO_TIME_CONTROL: No time control is enabled."]
     NO_TIME_CONTROL = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "ASYNC_MODE: Asynchronous standard mode (0) is enabled"]
+    #[doc = "ASYNC_MODE: Asynchronous standard mode (0) is enabled."]
     ASYNC_MODE = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -1019,15 +1019,15 @@ pub enum State {
     IDLE = 0x0,
     #[doc = "SLVREQ: (Slave Request state) the bus has STOPped but a slave is holding SDA low. If using auto-emit IBI (MCTRL.AutoIBI), then the master will not stay in the Slave Request state."]
     SLVREQ = 0x01,
-    #[doc = "MSGSDR: in Single Data Rate (SDR) Message state (from using MWMSG_SDR)"]
+    #[doc = "MSGSDR: in Single Data Rate (SDR) Message state (from using MWMSG_SDR)."]
     MSGSDR = 0x02,
     #[doc = "NORMACT: normal active Single Data Rate (SDR) state (from using MCTRL and MWDATAn and MRDATAn registers). The master will stay in the NORMACT state until a STOP is issued."]
     NORMACT = 0x03,
     #[doc = "MSGDDR: in Double Data Rate (DDR) Message mode (from using MWMSG_DDR or using the normal method with DDR). The master will stay in the DDR state, until the master exits using EXIT (emits the Exit pattern)."]
     DDR = 0x04,
-    #[doc = "DAA: in Enter Dynamic Address Assignment (ENTDAA) mode"]
+    #[doc = "DAA: in Enter Dynamic Address Assignment (ENTDAA) mode."]
     DAA = 0x05,
-    #[doc = "IBIACK: waiting for an In-Band Interrupt (IBI) ACK/NACK decision"]
+    #[doc = "IBIACK: waiting for an In-Band Interrupt (IBI) ACK/NACK decision."]
     IBIACK = 0x06,
     #[doc = "IBIRCV: Receiving an In-Band Interrupt (IBI); this IBIRCV state is used after IBI/MR/HJ has won the arbitration, and IBIRCV state is also used for IBI mandatory byte (if any) and any bytes that follow."]
     IBIRCV = 0x07,
@@ -1058,9 +1058,9 @@ impl From<State> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Txfull {
-    #[doc = "TX is not full"]
+    #[doc = "TX is not full."]
     TXISNOTFULL = 0x0,
-    #[doc = "TX is full"]
+    #[doc = "TX is full."]
     TXISFULL = 0x01,
 }
 impl Txfull {
@@ -1089,13 +1089,13 @@ impl From<Txfull> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Txtrig {
-    #[doc = "Trigger on empty"]
+    #[doc = "Trigger on empty."]
     TRIGGREMPTY = 0x0,
-    #[doc = "Trigger on full or less"]
+    #[doc = "Trigger on full or less."]
     TRIGGRONEFOURTH = 0x01,
-    #[doc = "Trigger on .5 full or less"]
+    #[doc = "Trigger on .5 full or less."]
     TRIGGRONEHALF = 0x02,
-    #[doc = "Trigger on 1 less than full or less (Default)"]
+    #[doc = "Trigger on 1 less than full or less (Default)."]
     TRIGGRONELESS = 0x03,
 }
 impl Txtrig {

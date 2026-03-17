@@ -1,4 +1,4 @@
-#[doc = "SPI Configuration register"]
+#[doc = "SPI Configuration register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cfg(pub u32);
@@ -165,7 +165,7 @@ impl defmt::Format for Cfg {
         )
     }
 }
-#[doc = "SPI clock Divider"]
+#[doc = "SPI clock Divider."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Div(pub u32);
@@ -202,7 +202,7 @@ impl defmt::Format for Div {
         defmt::write!(f, "Div {{ divval: {=u16:?} }}", self.divval())
     }
 }
-#[doc = "SPI Delay register"]
+#[doc = "SPI Delay register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dly(pub u32);
@@ -923,19 +923,19 @@ impl defmt::Format for Fifordnopop {
         )
     }
 }
-#[doc = "FIFO size register"]
+#[doc = "FIFO size register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Fifosize(pub u32);
 impl Fifosize {
-    #[doc = "the fifo size is equal to the template parameter \"fifo\"/2 ."]
+    #[doc = "the fifo size is equal to the template parameter \"fifo\"/2."]
     #[must_use]
     #[inline(always)]
     pub const fn fifosize(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x1f;
         val as u8
     }
-    #[doc = "the fifo size is equal to the template parameter \"fifo\"/2 ."]
+    #[doc = "the fifo size is equal to the template parameter \"fifo\"/2."]
     #[inline(always)]
     pub const fn set_fifosize(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val as u32) & 0x1f) << 0usize);
@@ -1297,14 +1297,14 @@ impl Fifowr {
     pub const fn set_rxignore(&mut self, val: super::vals::Rxignore) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
     }
-    #[doc = "Transmit Ignore"]
+    #[doc = "Transmit Ignore."]
     #[must_use]
     #[inline(always)]
     pub const fn txignore(&self) -> super::vals::Txignore {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::Txignore::from_bits(val as u8)
     }
-    #[doc = "Transmit Ignore"]
+    #[doc = "Transmit Ignore."]
     #[inline(always)]
     pub const fn set_txignore(&mut self, val: super::vals::Txignore) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
@@ -1584,7 +1584,7 @@ impl defmt::Format for Intenset {
         )
     }
 }
-#[doc = "SPI Interrupt Status"]
+#[doc = "SPI Interrupt Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Intstat(pub u32);

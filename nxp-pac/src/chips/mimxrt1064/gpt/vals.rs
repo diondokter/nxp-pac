@@ -2,17 +2,17 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Clksrc {
-    #[doc = "No clock"]
+    #[doc = "No clock."]
     CLKSRC_0 = 0x0,
-    #[doc = "Peripheral Clock (ipg_clk)"]
+    #[doc = "Peripheral Clock (ipg_clk)."]
     CLKSRC_1 = 0x01,
-    #[doc = "High Frequency Reference Clock (ipg_clk_highfreq)"]
+    #[doc = "High Frequency Reference Clock (ipg_clk_highfreq)."]
     CLKSRC_2 = 0x02,
-    #[doc = "External Clock"]
+    #[doc = "External Clock."]
     CLKSRC_3 = 0x03,
-    #[doc = "Low Frequency Reference Clock (ipg_clk_32k)"]
+    #[doc = "Low Frequency Reference Clock (ipg_clk_32k)."]
     CLKSRC_4 = 0x04,
-    #[doc = "Crystal oscillator as Reference Clock (ipg_clk_24M)"]
+    #[doc = "Crystal oscillator as Reference Clock (ipg_clk_24M)."]
     CLKSRC_5 = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -136,9 +136,9 @@ impl From<En> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum En24m {
-    #[doc = "24M clock disabled"]
+    #[doc = "24M clock disabled."]
     EN_24M_0 = 0x0,
-    #[doc = "24M clock enabled"]
+    #[doc = "24M clock enabled."]
     EN_24M_1 = 0x01,
 }
 impl En24m {
@@ -229,9 +229,9 @@ impl From<Fo3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Frr {
-    #[doc = "Restart mode"]
+    #[doc = "Restart mode."]
     FRR_0 = 0x0,
-    #[doc = "Free-Run mode"]
+    #[doc = "Free-Run mode."]
     FRR_1 = 0x01,
 }
 impl Frr {
@@ -322,13 +322,13 @@ impl From<If2ie> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Im2 {
-    #[doc = "capture disabled"]
+    #[doc = "capture disabled."]
     IM2_0 = 0x0,
-    #[doc = "capture on rising edge only"]
+    #[doc = "capture on rising edge only."]
     IM2_1 = 0x01,
-    #[doc = "capture on falling edge only"]
+    #[doc = "capture on falling edge only."]
     IM2_2 = 0x02,
-    #[doc = "capture on both edges"]
+    #[doc = "capture on both edges."]
     IM2_3 = 0x03,
 }
 impl Im2 {
@@ -421,11 +421,11 @@ impl From<Of3ie> for u8 {
 pub enum Om3 {
     #[doc = "Output disconnected. No response on pin."]
     OM3_0 = 0x0,
-    #[doc = "Toggle output pin"]
+    #[doc = "Toggle output pin."]
     OM3_1 = 0x01,
-    #[doc = "Clear output pin"]
+    #[doc = "Clear output pin."]
     OM3_2 = 0x02,
-    #[doc = "Set output pin"]
+    #[doc = "Set output pin."]
     OM3_3 = 0x03,
     #[doc = "Generate an active low pulse (that is one input clock wide) on the output pin."]
     OM3_4 = 0x04,
@@ -459,11 +459,11 @@ impl From<Om3> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Prescaler(u16);
 impl Prescaler {
-    #[doc = "Divide by 1"]
+    #[doc = "Divide by 1."]
     pub const PRESCALER_0: Self = Self(0x0);
-    #[doc = "Divide by 2"]
+    #[doc = "Divide by 2."]
     pub const PRESCALER_1: Self = Self(0x01);
-    #[doc = "Divide by 4096"]
+    #[doc = "Divide by 4096."]
     pub const PRESCALER_4095: Self = Self(0x0fff);
 }
 impl Prescaler {
@@ -511,9 +511,9 @@ impl From<Prescaler> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prescaler24m {
-    #[doc = "Divide by 1"]
+    #[doc = "Divide by 1."]
     PRESCALER24M_0 = 0x0,
-    #[doc = "Divide by 2"]
+    #[doc = "Divide by 2."]
     PRESCALER24M_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -528,7 +528,7 @@ pub enum Prescaler24m {
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "Divide by 16"]
+    #[doc = "Divide by 16."]
     PRESCALER24M_15 = 0x0f,
 }
 impl Prescaler24m {
@@ -650,9 +650,9 @@ impl From<Stopen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Swr {
-    #[doc = "GPT is not in reset state"]
+    #[doc = "GPT is not in reset state."]
     SWR_0 = 0x0,
-    #[doc = "GPT is in reset state"]
+    #[doc = "GPT is in reset state."]
     SWR_1 = 0x01,
 }
 impl Swr {

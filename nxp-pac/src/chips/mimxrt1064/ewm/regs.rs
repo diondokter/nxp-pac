@@ -1,16 +1,16 @@
-#[doc = "Clock Control Register"]
+#[doc = "Clock Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Clkctrl(pub u8);
 impl Clkctrl {
-    #[doc = "CLKSEL"]
+    #[doc = "CLKSEL."]
     #[must_use]
     #[inline(always)]
     pub const fn clksel(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x03;
         val as u8
     }
-    #[doc = "CLKSEL"]
+    #[doc = "CLKSEL."]
     #[inline(always)]
     pub const fn set_clksel(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val as u8) & 0x03) << 0usize);
@@ -35,19 +35,19 @@ impl defmt::Format for Clkctrl {
         defmt::write!(f, "Clkctrl {{ clksel: {=u8:?} }}", self.clksel())
     }
 }
-#[doc = "Clock Prescaler Register"]
+#[doc = "Clock Prescaler Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Clkprescaler(pub u8);
 impl Clkprescaler {
-    #[doc = "CLK_DIV"]
+    #[doc = "CLK_DIV."]
     #[must_use]
     #[inline(always)]
     pub const fn clk_div(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "CLK_DIV"]
+    #[doc = "CLK_DIV."]
     #[inline(always)]
     pub const fn set_clk_div(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u8) & 0xff) << 0usize);
@@ -72,19 +72,19 @@ impl defmt::Format for Clkprescaler {
         defmt::write!(f, "Clkprescaler {{ clk_div: {=u8:?} }}", self.clk_div())
     }
 }
-#[doc = "Compare High Register"]
+#[doc = "Compare High Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cmph(pub u8);
 impl Cmph {
-    #[doc = "COMPAREH"]
+    #[doc = "COMPAREH."]
     #[must_use]
     #[inline(always)]
     pub const fn compareh(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "COMPAREH"]
+    #[doc = "COMPAREH."]
     #[inline(always)]
     pub const fn set_compareh(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u8) & 0xff) << 0usize);
@@ -109,19 +109,19 @@ impl defmt::Format for Cmph {
         defmt::write!(f, "Cmph {{ compareh: {=u8:?} }}", self.compareh())
     }
 }
-#[doc = "Compare Low Register"]
+#[doc = "Compare Low Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cmpl(pub u8);
 impl Cmpl {
-    #[doc = "COMPAREL"]
+    #[doc = "COMPAREL."]
     #[must_use]
     #[inline(always)]
     pub const fn comparel(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "COMPAREL"]
+    #[doc = "COMPAREL."]
     #[inline(always)]
     pub const fn set_comparel(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u8) & 0xff) << 0usize);
@@ -146,7 +146,7 @@ impl defmt::Format for Cmpl {
         defmt::write!(f, "Cmpl {{ comparel: {=u8:?} }}", self.comparel())
     }
 }
-#[doc = "Control Register"]
+#[doc = "Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl(pub u8);
@@ -229,19 +229,19 @@ impl defmt::Format for Ctrl {
         )
     }
 }
-#[doc = "Service Register"]
+#[doc = "Service Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Serv(pub u8);
 impl Serv {
-    #[doc = "SERVICE"]
+    #[doc = "SERVICE."]
     #[must_use]
     #[inline(always)]
     pub const fn service(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "SERVICE"]
+    #[doc = "SERVICE."]
     #[inline(always)]
     pub const fn set_service(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u8) & 0xff) << 0usize);

@@ -1,4 +1,4 @@
-#[doc = "Array of registers: CTRL, INTVAL, STAT, TIMER"]
+#[doc = "Array of registers: CTRL, INTVAL, STAT, TIMER."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Channel {
     ptr: *mut u8,
@@ -35,7 +35,7 @@ impl Channel {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }
     }
 }
-#[doc = "LPC-Next0 Multi-Rate Timer (MRT)"]
+#[doc = "LPC-Next0 Multi-Rate Timer (MRT)."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mrt {
     ptr: *mut u8,
@@ -51,7 +51,7 @@ impl Mrt {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "Array of registers: CTRL, INTVAL, STAT, TIMER"]
+    #[doc = "Array of registers: CTRL, INTVAL, STAT, TIMER."]
     #[inline(always)]
     pub const fn channel(self, n: usize) -> Channel {
         assert!(n < 4usize);
@@ -67,7 +67,7 @@ impl Mrt {
     pub const fn idle_ch(self) -> crate::common::Reg<regs::IdleCh, crate::common::R> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xf4usize) as _) }
     }
-    #[doc = "Global interrupt flag register"]
+    #[doc = "Global interrupt flag register."]
     #[inline(always)]
     pub const fn irq_flag(self) -> crate::common::Reg<regs::IrqFlag, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xf8usize) as _) }

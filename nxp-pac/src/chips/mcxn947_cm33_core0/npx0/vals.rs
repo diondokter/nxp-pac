@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctx0lk {
-    #[doc = "Lock disabled: VMAPCTX0 remains read-write"]
+    #[doc = "Lock disabled: VMAPCTX0 remains read-write."]
     LOCK_DISABLED = 0x0,
-    #[doc = "Lock enabled: cannot write to VMAPCTX0 (becomes read-only)"]
+    #[doc = "Lock enabled: cannot write to VMAPCTX0 (becomes read-only)."]
     LOCK_ENABLED = 0x01,
 }
 impl Ctx0lk {
@@ -33,9 +33,9 @@ impl From<Ctx0lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctx1lk {
-    #[doc = "Lock disabled: VMAPCTX1 remains read-write"]
+    #[doc = "Lock disabled: VMAPCTX1 remains read-write."]
     LOCK_DISABLED = 0x0,
-    #[doc = "Lock enabled: cannot write to VMAPCTX1 (becomes read-only)"]
+    #[doc = "Lock enabled: cannot write to VMAPCTX1 (becomes read-only)."]
     LOCK_ENABLED = 0x01,
 }
 impl Ctx1lk {
@@ -64,9 +64,9 @@ impl From<Ctx1lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctx2lk {
-    #[doc = "Lock disabled: VMAPCTX2 remains read-write"]
+    #[doc = "Lock disabled: VMAPCTX2 remains read-write."]
     LOCK_DISABLED = 0x0,
-    #[doc = "Lock enabled: cannot write to VMAPCTX2 (becomes read-only)"]
+    #[doc = "Lock enabled: cannot write to VMAPCTX2 (becomes read-only)."]
     LOCK_ENABLED = 0x01,
 }
 impl Ctx2lk {
@@ -95,9 +95,9 @@ impl From<Ctx2lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctx3lk {
-    #[doc = "Lock disabled: VMAPCTX3 remains read-write"]
+    #[doc = "Lock disabled: VMAPCTX3 remains read-write."]
     LOCK_DISABLED = 0x0,
-    #[doc = "Lock enabled: cannot write to VMAPCTX3 (becomes read-only)"]
+    #[doc = "Lock enabled: cannot write to VMAPCTX3 (becomes read-only)."]
     LOCK_ENABLED = 0x01,
 }
 impl Ctx3lk {
@@ -250,15 +250,15 @@ impl From<Mlk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Numctx {
-    #[doc = "No (zero) implemented memory contexts"]
+    #[doc = "No (zero) implemented memory contexts."]
     ZERO_CTX = 0x0,
-    #[doc = "1 implemented memory contexts"]
+    #[doc = "1 implemented memory contexts."]
     ONE_CTX = 0x01,
-    #[doc = "2 implemented memory contexts"]
+    #[doc = "2 implemented memory contexts."]
     TWO_CTX = 0x02,
-    #[doc = "3 implemented memory contexts"]
+    #[doc = "3 implemented memory contexts."]
     THREE_CTX = 0x03,
-    #[doc = "4 implemented memory contexts"]
+    #[doc = "4 implemented memory contexts."]
     FOUR_CTX = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
@@ -298,9 +298,9 @@ impl From<Numctx> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Remaplk {
-    #[doc = "Lock disabled: can write to REMAP"]
+    #[doc = "Lock disabled: can write to REMAP."]
     LOCK_DISABLED = 0x0,
-    #[doc = "Lock enabled: cannot write to REMAP"]
+    #[doc = "Lock enabled: cannot write to REMAP."]
     LOCK_ENABLED = 0x01,
 }
 impl Remaplk {
@@ -329,9 +329,9 @@ impl From<Remaplk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum V0 {
-    #[doc = "Not valid"]
+    #[doc = "Not valid."]
     KEY_NOTVALID = 0x0,
-    #[doc = "Valid"]
+    #[doc = "Valid."]
     KEY_VALID = 0x01,
 }
 impl V0 {
@@ -360,9 +360,9 @@ impl From<V0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum V1 {
-    #[doc = "Not valid"]
+    #[doc = "Not valid."]
     KEY_NOTVALID = 0x0,
-    #[doc = "Valid"]
+    #[doc = "Valid."]
     KEY_VALID = 0x01,
 }
 impl V1 {
@@ -391,9 +391,9 @@ impl From<V1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum V2 {
-    #[doc = "Not valid"]
+    #[doc = "Not valid."]
     KEY_NOTVALID = 0x0,
-    #[doc = "Valid"]
+    #[doc = "Valid."]
     KEY_VALID = 0x01,
 }
 impl V2 {
@@ -422,9 +422,9 @@ impl From<V2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum V3 {
-    #[doc = "Not valid"]
+    #[doc = "Not valid."]
     KEY_NOTVALID = 0x0,
-    #[doc = "Valid"]
+    #[doc = "Valid."]
     KEY_VALID = 0x01,
 }
 impl V3 {

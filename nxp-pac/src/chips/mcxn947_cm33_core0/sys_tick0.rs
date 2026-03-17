@@ -1,4 +1,4 @@
-#[doc = "M33 Systick module"]
+#[doc = "M33 Systick module."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SysTick0 {
     ptr: *mut u8,
@@ -14,22 +14,22 @@ impl SysTick0 {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "SysTick Control and Status Register"]
+    #[doc = "SysTick Control and Status Register."]
     #[inline(always)]
     pub const fn syst_csr(self) -> crate::common::Reg<regs::SystCsr, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
     }
-    #[doc = "SysTick Reload Value Register"]
+    #[doc = "SysTick Reload Value Register."]
     #[inline(always)]
     pub const fn syst_rvr(self) -> crate::common::Reg<regs::SystRvr, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
     }
-    #[doc = "SysTick Current Value Register"]
+    #[doc = "SysTick Current Value Register."]
     #[inline(always)]
     pub const fn syst_cvr(self) -> crate::common::Reg<regs::SystCvr, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
     }
-    #[doc = "SysTick Calibration Value Register"]
+    #[doc = "SysTick Calibration Value Register."]
     #[inline(always)]
     pub const fn syst_calib(self) -> crate::common::Reg<regs::SystCalib, crate::common::R> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }

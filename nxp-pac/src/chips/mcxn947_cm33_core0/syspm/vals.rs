@@ -2,12 +2,12 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmode {
-    #[doc = "Counted in both User and Privileged modes"]
+    #[doc = "Counted in both User and Privileged modes."]
     USER_AND_PRIV = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "Counted only in User mode"]
+    #[doc = "Counted only in User mode."]
     USER_ONLY = 0x02,
-    #[doc = "Counted only in Privileged mode"]
+    #[doc = "Counted only in Privileged mode."]
     PRIV_ONLY = 0x03,
 }
 impl Cmode {
@@ -36,9 +36,9 @@ impl From<Cmode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rectr1 {
-    #[doc = "Run normally"]
+    #[doc = "Run normally."]
     RUN = 0x0,
-    #[doc = "Reset"]
+    #[doc = "Reset."]
     RESET = 0x01,
 }
 impl Rectr1 {
@@ -67,9 +67,9 @@ impl From<Rectr1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rectr2 {
-    #[doc = "Run normally"]
+    #[doc = "Run normally."]
     RUN = 0x0,
-    #[doc = "Reset"]
+    #[doc = "Reset."]
     RESET = 0x01,
 }
 impl Rectr2 {
@@ -98,9 +98,9 @@ impl From<Rectr2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rectr3 {
-    #[doc = "Run normally"]
+    #[doc = "Run normally."]
     RUN = 0x0,
-    #[doc = "Reset"]
+    #[doc = "Reset."]
     RESET = 0x01,
 }
 impl Rectr3 {
@@ -129,13 +129,13 @@ impl From<Rectr3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ssc {
-    #[doc = "Idle or no-op"]
+    #[doc = "Idle or no-op."]
     IDLE = 0x0,
-    #[doc = "Local stop"]
+    #[doc = "Local stop."]
     LSTOP = 0x01,
-    #[doc = "Local start"]
+    #[doc = "Local start."]
     LSTART_2 = 0x02,
-    #[doc = "Local start"]
+    #[doc = "Local start."]
     LSTART_3 = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,

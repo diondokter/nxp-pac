@@ -1,4 +1,4 @@
-#[doc = "Array of registers: VMAPCTX_WD%s, BIVCTX_WD%s"]
+#[doc = "Array of registers: BIVCTX_WD%s, VMAPCTX_WD%s."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CtxValidIvArray {
     ptr: *mut u8,
@@ -14,7 +14,7 @@ impl CtxValidIvArray {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "Bitmap of Valid Control for Memory Context n"]
+    #[doc = "Bitmap of Valid Control for Memory Context n."]
     #[inline(always)]
     pub const fn vmapctx_wd(
         self,
@@ -23,14 +23,14 @@ impl CtxValidIvArray {
         assert!(n < 2usize);
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize + n * 4usize) as _) }
     }
-    #[doc = "Block Initial Vector for Memory Context n"]
+    #[doc = "Block Initial Vector for Memory Context n."]
     #[inline(always)]
     pub const fn bivctx_wd(self, n: usize) -> crate::common::Reg<regs::BivctxWd, crate::common::W> {
         assert!(n < 2usize);
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize + n * 4usize) as _) }
     }
 }
-#[doc = "NPX"]
+#[doc = "NPX."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Npx0 {
     ptr: *mut u8,
@@ -46,27 +46,27 @@ impl Npx0 {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "NPX Control Register"]
+    #[doc = "NPX Control Register."]
     #[inline(always)]
     pub const fn npxcr(self) -> crate::common::Reg<regs::Npxcr, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
     }
-    #[doc = "NPX Status Register"]
+    #[doc = "NPX Status Register."]
     #[inline(always)]
     pub const fn npxsr(self) -> crate::common::Reg<regs::Npxsr, crate::common::R> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
     }
-    #[doc = "Flash Cache Obfuscation Mask"]
+    #[doc = "Flash Cache Obfuscation Mask."]
     #[inline(always)]
     pub const fn cacmsk(self) -> crate::common::Reg<regs::Cacmsk, crate::common::W> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x10usize) as _) }
     }
-    #[doc = "Data Remap"]
+    #[doc = "Data Remap."]
     #[inline(always)]
     pub const fn remap(self) -> crate::common::Reg<regs::Remap, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x20usize) as _) }
     }
-    #[doc = "Array of registers: VMAPCTX_WD%s, BIVCTX_WD%s"]
+    #[doc = "Array of registers: BIVCTX_WD%s, VMAPCTX_WD%s."]
     #[inline(always)]
     pub const fn ctx_valid_iv_array(self, n: usize) -> CtxValidIvArray {
         assert!(n < 4usize);

@@ -2,37 +2,37 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum BaseNochargeNum {
-    #[doc = "The SSC output bit 1's basic period will be 1 clock cycle of system clock"]
+    #[doc = "The SSC output bit 1's basic period will be 1 clock cycle of system clock."]
     BASE_NOCHARGE_NUM_0 = 0x0,
-    #[doc = "The SSC output bit 1's basic period will be 2 clock cycles of system clock"]
+    #[doc = "The SSC output bit 1's basic period will be 2 clock cycles of system clock."]
     BASE_NOCHARGE_NUM_1 = 0x01,
-    #[doc = "The SSC output bit 1's basic period will be 3 clock cycles of system clock"]
+    #[doc = "The SSC output bit 1's basic period will be 3 clock cycles of system clock."]
     BASE_NOCHARGE_NUM_2 = 0x02,
-    #[doc = "The SSC output bit 1's basic period will be 4 clock cycles of system clock"]
+    #[doc = "The SSC output bit 1's basic period will be 4 clock cycles of system clock."]
     BASE_NOCHARGE_NUM_3 = 0x03,
-    #[doc = "The SSC output bit 1's basic period will be 5 clock cycles of system clock"]
+    #[doc = "The SSC output bit 1's basic period will be 5 clock cycles of system clock."]
     BASE_NOCHARGE_NUM_4 = 0x04,
-    #[doc = "The SSC output bit 1's basic period will be 6 clock cycles of system clock"]
+    #[doc = "The SSC output bit 1's basic period will be 6 clock cycles of system clock."]
     BASE_NOCHARGE_NUM_5 = 0x05,
-    #[doc = "The SSC output bit 1's basic period will be 7 clock cycles of system clock"]
+    #[doc = "The SSC output bit 1's basic period will be 7 clock cycles of system clock."]
     BASE_NOCHARGE_NUM_6 = 0x06,
-    #[doc = "The SSC output bit 1's basic period will be 8 clock cycles of system clock"]
+    #[doc = "The SSC output bit 1's basic period will be 8 clock cycles of system clock."]
     BASE_NOCHARGE_NUM_7 = 0x07,
-    #[doc = "The SSC output bit 1's basic period will be 9 clock cycles of system clock"]
+    #[doc = "The SSC output bit 1's basic period will be 9 clock cycles of system clock."]
     BASE_NOCHARGE_NUM_8 = 0x08,
-    #[doc = "The SSC output bit 1's basic period will be 10 clock cycles of system clock"]
+    #[doc = "The SSC output bit 1's basic period will be 10 clock cycles of system clock."]
     BASE_NOCHARGE_NUM_9 = 0x09,
-    #[doc = "The SSC output bit 1's basic period will be 11 clock cycles of system clock"]
+    #[doc = "The SSC output bit 1's basic period will be 11 clock cycles of system clock."]
     BASE_NOCHARGE_NUM_10 = 0x0a,
-    #[doc = "The SSC output bit 1's basic period will be 12 clock cycles of system clock"]
+    #[doc = "The SSC output bit 1's basic period will be 12 clock cycles of system clock."]
     BASE_NOCHARGE_NUM_11 = 0x0b,
-    #[doc = "The SSC output bit 1's basic period will be 13 clock cycles of system clock"]
+    #[doc = "The SSC output bit 1's basic period will be 13 clock cycles of system clock."]
     BASE_NOCHARGE_NUM_12 = 0x0c,
-    #[doc = "The SSC output bit 1's basic period will be 14 clock cycles of system clock"]
+    #[doc = "The SSC output bit 1's basic period will be 14 clock cycles of system clock."]
     BASE_NOCHARGE_NUM_13 = 0x0d,
-    #[doc = "The SSC output bit 1's basic period will be 15 clock cycles of system clock"]
+    #[doc = "The SSC output bit 1's basic period will be 15 clock cycles of system clock."]
     BASE_NOCHARGE_NUM_14 = 0x0e,
-    #[doc = "The SSC output bit 1's basic period will be 16 clock cycles of system clock"]
+    #[doc = "The SSC output bit 1's basic period will be 16 clock cycles of system clock."]
     BASE_NOCHARGE_NUM_15 = 0x0f,
 }
 impl BaseNochargeNum {
@@ -61,37 +61,37 @@ impl From<BaseNochargeNum> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum BaseTraceDebounce {
-    #[doc = "The current counter value take 0 ratio"]
+    #[doc = "The current counter value take 0 ratio."]
     BASE_TRACE_DEBOUNCE_0 = 0x0,
-    #[doc = "The current counter value take 1/16 ratio"]
+    #[doc = "The current counter value take 1/16 ratio."]
     BASE_TRACE_DEBOUNCE_1 = 0x01,
-    #[doc = "The current counter value take 2/16 ratio"]
+    #[doc = "The current counter value take 2/16 ratio."]
     BASE_TRACE_DEBOUNCE_2 = 0x02,
-    #[doc = "The current counter value take 3/16 ratio"]
+    #[doc = "The current counter value take 3/16 ratio."]
     BASE_TRACE_DEBOUNCE_3 = 0x03,
-    #[doc = "The current counter value take 4/16 ratio"]
+    #[doc = "The current counter value take 4/16 ratio."]
     BASE_TRACE_DEBOUNCE_4 = 0x04,
-    #[doc = "The current counter value take 5/16 ratio"]
+    #[doc = "The current counter value take 5/16 ratio."]
     BASE_TRACE_DEBOUNCE_5 = 0x05,
-    #[doc = "The current counter value take 6/16 ratio"]
+    #[doc = "The current counter value take 6/16 ratio."]
     BASE_TRACE_DEBOUNCE_6 = 0x06,
-    #[doc = "The current counter value take 7/16 ratio"]
+    #[doc = "The current counter value take 7/16 ratio."]
     BASE_TRACE_DEBOUNCE_7 = 0x07,
-    #[doc = "The current counter value take 8/16 ratio"]
+    #[doc = "The current counter value take 8/16 ratio."]
     BASE_TRACE_DEBOUNCE_8 = 0x08,
-    #[doc = "The current counter value take 9/16 ratio"]
+    #[doc = "The current counter value take 9/16 ratio."]
     BASE_TRACE_DEBOUNCE_9 = 0x09,
-    #[doc = "The current counter value take 10/16 ratio"]
+    #[doc = "The current counter value take 10/16 ratio."]
     BASE_TRACE_DEBOUNCE_10 = 0x0a,
-    #[doc = "The current counter value take 11/16 ratio"]
+    #[doc = "The current counter value take 11/16 ratio."]
     BASE_TRACE_DEBOUNCE_11 = 0x0b,
-    #[doc = "The current counter value take 12/16 ratio"]
+    #[doc = "The current counter value take 12/16 ratio."]
     BASE_TRACE_DEBOUNCE_12 = 0x0c,
-    #[doc = "The current counter value take 13/16 ratio"]
+    #[doc = "The current counter value take 13/16 ratio."]
     BASE_TRACE_DEBOUNCE_13 = 0x0d,
-    #[doc = "The current counter value take 14/16 ratio"]
+    #[doc = "The current counter value take 14/16 ratio."]
     BASE_TRACE_DEBOUNCE_14 = 0x0e,
-    #[doc = "The current counter value take 15/16 ratio"]
+    #[doc = "The current counter value take 15/16 ratio."]
     BASE_TRACE_DEBOUNCE_15 = 0x0f,
 }
 impl BaseTraceDebounce {
@@ -120,21 +120,21 @@ impl From<BaseTraceDebounce> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CapBank148ff {
-    #[doc = "enable another 148 pF in cap bank"]
+    #[doc = "enable another 148 pF in cap bank."]
     CAP_BANK_148FF_0 = 0x0,
-    #[doc = "enable another 296 pF in cap bank"]
+    #[doc = "enable another 296 pF in cap bank."]
     CAP_BANK_148FF_1 = 0x01,
-    #[doc = "enable another 444 pF in cap bank"]
+    #[doc = "enable another 444 pF in cap bank."]
     CAP_BANK_148FF_2 = 0x02,
-    #[doc = "enable another 592 pF in cap bank"]
+    #[doc = "enable another 592 pF in cap bank."]
     CAP_BANK_148FF_3 = 0x03,
-    #[doc = "enable another 740 pF in cap bank"]
+    #[doc = "enable another 740 pF in cap bank."]
     CAP_BANK_148FF_4 = 0x04,
-    #[doc = "enable another 888 pF in cap bank"]
+    #[doc = "enable another 888 pF in cap bank."]
     CAP_BANK_148FF_5 = 0x05,
-    #[doc = "enable another 1036 pF in cap bank"]
+    #[doc = "enable another 1036 pF in cap bank."]
     CAP_BANK_148FF_6 = 0x06,
-    #[doc = "enable another 1184 pF in cap bank"]
+    #[doc = "enable another 1184 pF in cap bank."]
     CAP_BANK_148FF_7 = 0x07,
 }
 impl CapBank148ff {
@@ -163,21 +163,21 @@ impl From<CapBank148ff> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CapBank2500ff {
-    #[doc = "enable another 2.5 pF in cap bank"]
+    #[doc = "enable another 2.5 pF in cap bank."]
     CAP_BANK_2500FF_0 = 0x0,
-    #[doc = "enable another 5.0 pF in cap bank"]
+    #[doc = "enable another 5.0 pF in cap bank."]
     CAP_BANK_2500FF_1 = 0x01,
-    #[doc = "enable another 7.5 pF in cap bank"]
+    #[doc = "enable another 7.5 pF in cap bank."]
     CAP_BANK_2500FF_2 = 0x02,
-    #[doc = "enable another 10 pF in cap bank"]
+    #[doc = "enable another 10 pF in cap bank."]
     CAP_BANK_2500FF_3 = 0x03,
-    #[doc = "enable another 12.5 pF in cap bank"]
+    #[doc = "enable another 12.5 pF in cap bank."]
     CAP_BANK_2500FF_4 = 0x04,
-    #[doc = "enable another 15 pF in cap bank"]
+    #[doc = "enable another 15 pF in cap bank."]
     CAP_BANK_2500FF_5 = 0x05,
-    #[doc = "enable another 17.5 pF in cap bank"]
+    #[doc = "enable another 17.5 pF in cap bank."]
     CAP_BANK_2500FF_6 = 0x06,
-    #[doc = "enable another 20 pF in cap bank"]
+    #[doc = "enable another 20 pF in cap bank."]
     CAP_BANK_2500FF_7 = 0x07,
 }
 impl CapBank2500ff {
@@ -206,21 +206,21 @@ impl From<CapBank2500ff> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CapBank312ff {
-    #[doc = "enable another 0.3125 pF"]
+    #[doc = "enable another 0.3125 pF."]
     CAP_BANK_312FF_0 = 0x0,
-    #[doc = "enable another 0.625 pF"]
+    #[doc = "enable another 0.625 pF."]
     CAP_BANK_312FF_1 = 0x01,
-    #[doc = "enable another 0.936 pF"]
+    #[doc = "enable another 0.936 pF."]
     CAP_BANK_312FF_2 = 0x02,
-    #[doc = "enable another 1.25 pF"]
+    #[doc = "enable another 1.25 pF."]
     CAP_BANK_312FF_3 = 0x03,
-    #[doc = "enable another 1.56 pF"]
+    #[doc = "enable another 1.56 pF."]
     CAP_BANK_312FF_4 = 0x04,
-    #[doc = "enable another 1.87 pF"]
+    #[doc = "enable another 1.87 pF."]
     CAP_BANK_312FF_5 = 0x05,
-    #[doc = "enable another 2.19 pF"]
+    #[doc = "enable another 2.19 pF."]
     CAP_BANK_312FF_6 = 0x06,
-    #[doc = "enable another 2.5 pF"]
+    #[doc = "enable another 2.5 pF."]
     CAP_BANK_312FF_7 = 0x07,
 }
 impl CapBank312ff {
@@ -249,9 +249,9 @@ impl From<CapBank312ff> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CapBankEn {
-    #[doc = "Disable cap bank function"]
+    #[doc = "Disable cap bank function."]
     CAP_BANK_EN_0 = 0x0,
-    #[doc = "Enable cap bank function"]
+    #[doc = "Enable cap bank function."]
     CAP_BANK_EN_1 = 0x01,
 }
 impl CapBankEn {
@@ -280,37 +280,37 @@ impl From<CapBankEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ChargeNum {
-    #[doc = "The SSC output bit 0's period will be 1 clock cycle of system clock"]
+    #[doc = "The SSC output bit 0's period will be 1 clock cycle of system clock."]
     CHARGE_NUM_0 = 0x0,
-    #[doc = "The SSC output bit 0's period will be 2 clock cycles of system clock"]
+    #[doc = "The SSC output bit 0's period will be 2 clock cycles of system clock."]
     CHARGE_NUM_1 = 0x01,
-    #[doc = "The SSC output bit 0's period will be 3 clock cycles of system clock"]
+    #[doc = "The SSC output bit 0's period will be 3 clock cycles of system clock."]
     CHARGE_NUM_2 = 0x02,
-    #[doc = "The SSC output bit 0's period will be 4 clock cycles of system clock"]
+    #[doc = "The SSC output bit 0's period will be 4 clock cycles of system clock."]
     CHARGE_NUM_3 = 0x03,
-    #[doc = "The SSC output bit 0's period will be 5 clock cycles of system clock"]
+    #[doc = "The SSC output bit 0's period will be 5 clock cycles of system clock."]
     CHARGE_NUM_4 = 0x04,
-    #[doc = "The SSC output bit 0's period will be 6 clock cycles of system clock"]
+    #[doc = "The SSC output bit 0's period will be 6 clock cycles of system clock."]
     CHARGE_NUM_5 = 0x05,
-    #[doc = "The SSC output bit 0's period will be 7 clock cycles of system clock"]
+    #[doc = "The SSC output bit 0's period will be 7 clock cycles of system clock."]
     CHARGE_NUM_6 = 0x06,
-    #[doc = "The SSC output bit 0's period will be 8 clock cycles of system clock"]
+    #[doc = "The SSC output bit 0's period will be 8 clock cycles of system clock."]
     CHARGE_NUM_7 = 0x07,
-    #[doc = "The SSC output bit 0's period will be 9 clock cycles of system clock"]
+    #[doc = "The SSC output bit 0's period will be 9 clock cycles of system clock."]
     CHARGE_NUM_8 = 0x08,
-    #[doc = "The SSC output bit 0's period will be 10 clock cycles of system clock"]
+    #[doc = "The SSC output bit 0's period will be 10 clock cycles of system clock."]
     CHARGE_NUM_9 = 0x09,
-    #[doc = "The SSC output bit 0's period will be 11 clock cycles of system clock"]
+    #[doc = "The SSC output bit 0's period will be 11 clock cycles of system clock."]
     CHARGE_NUM_10 = 0x0a,
-    #[doc = "The SSC output bit 0's period will be 12 clock cycles of system clock"]
+    #[doc = "The SSC output bit 0's period will be 12 clock cycles of system clock."]
     CHARGE_NUM_11 = 0x0b,
-    #[doc = "The SSC output bit 0's period will be 13 clock cycles of system clock"]
+    #[doc = "The SSC output bit 0's period will be 13 clock cycles of system clock."]
     CHARGE_NUM_12 = 0x0c,
-    #[doc = "The SSC output bit 0's period will be 14 clock cycles of system clock"]
+    #[doc = "The SSC output bit 0's period will be 14 clock cycles of system clock."]
     CHARGE_NUM_13 = 0x0d,
-    #[doc = "The SSC output bit 0's period will be 15 clock cycles of system clock"]
+    #[doc = "The SSC output bit 0's period will be 15 clock cycles of system clock."]
     CHARGE_NUM_14 = 0x0e,
-    #[doc = "The SSC output bit 0's period will be 16 clock cycles of system clock"]
+    #[doc = "The SSC output bit 0's period will be 16 clock cycles of system clock."]
     CHARGE_NUM_15 = 0x0f,
 }
 impl ChargeNum {
@@ -339,9 +339,9 @@ impl From<ChargeNum> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ClkSel {
-    #[doc = "Select 32K clock to use"]
+    #[doc = "Select 32K clock to use."]
     CLK_SEL_0 = 0x0,
-    #[doc = "Select 16K clock to use"]
+    #[doc = "Select 16K clock to use."]
     CLK_SEL_1 = 0x01,
 }
 impl ClkSel {
@@ -370,9 +370,9 @@ impl From<ClkSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ConfigMode {
-    #[doc = "self-cap mode, this address is TSI_SEL_CONFIG"]
+    #[doc = "self-cap mode, this address is TSI_SEL_CONFIG."]
     MODE_0 = 0x0,
-    #[doc = "mutual-cap mode, this address is TSI_MUL_CONFIG"]
+    #[doc = "mutual-cap mode, this address is TSI_MUL_CONFIG."]
     MODE_1 = 0x01,
 }
 impl ConfigMode {
@@ -401,9 +401,9 @@ impl From<ConfigMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ConfigMutualMode {
-    #[doc = "self-cap mode, this address is TSI_CONFIG for self-cap"]
+    #[doc = "self-cap mode, this address is TSI_CONFIG for self-cap."]
     MODE_0 = 0x0,
-    #[doc = "mutual-cap mode, this address is TSI_CONFIG for mutual-cap"]
+    #[doc = "mutual-cap mode, this address is TSI_CONFIG for mutual-cap."]
     MODE_1 = 0x01,
 }
 impl ConfigMutualMode {
@@ -432,9 +432,9 @@ impl From<ConfigMutualMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CountingClkHigh {
-    #[doc = "Using default process inside SSC"]
+    #[doc = "Using default process inside SSC."]
     COUNTING_CLK_HIGH_0 = 0x0,
-    #[doc = "Follow the counting signal from AIP front end"]
+    #[doc = "Follow the counting signal from AIP front end."]
     COUNTING_CLK_HIGH_1 = 0x01,
 }
 impl CountingClkHigh {
@@ -463,69 +463,69 @@ impl From<CountingClkHigh> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DebounceCounterConfigured {
-    #[doc = "1 out of range event can generate interrupt"]
+    #[doc = "1 out of range event can generate interrupt."]
     DEBOUNCE_COUNTER_CONFIGURED_0 = 0x0,
-    #[doc = "2 out of range events can generate interrupt"]
+    #[doc = "2 out of range events can generate interrupt."]
     DEBOUNCE_COUNTER_CONFIGURED_1 = 0x01,
-    #[doc = "3 out of range events can generate interrupt"]
+    #[doc = "3 out of range events can generate interrupt."]
     DEBOUNCE_COUNTER_CONFIGURED_2 = 0x02,
-    #[doc = "4 out of range events can generate interrupt"]
+    #[doc = "4 out of range events can generate interrupt."]
     DEBOUNCE_COUNTER_CONFIGURED_3 = 0x03,
-    #[doc = "5 out of range events can generate interrupt"]
+    #[doc = "5 out of range events can generate interrupt."]
     DEBOUNCE_COUNTER_CONFIGURED_4 = 0x04,
-    #[doc = "6 out of range events can generate interrupt"]
+    #[doc = "6 out of range events can generate interrupt."]
     DEBOUNCE_COUNTER_CONFIGURED_5 = 0x05,
-    #[doc = "7 out of range events can generate interrupt"]
+    #[doc = "7 out of range events can generate interrupt."]
     DEBOUNCE_COUNTER_CONFIGURED_6 = 0x06,
-    #[doc = "8 out of range events can generate interrupt"]
+    #[doc = "8 out of range events can generate interrupt."]
     DEBOUNCE_COUNTER_CONFIGURED_7 = 0x07,
-    #[doc = "9 out of range events can generate interrupt"]
+    #[doc = "9 out of range events can generate interrupt."]
     DEBOUNCE_COUNTER_CONFIGURED_8 = 0x08,
-    #[doc = "10 out of range events can generate interrupt"]
+    #[doc = "10 out of range events can generate interrupt."]
     DEBOUNCE_COUNTER_CONFIGURED_9 = 0x09,
-    #[doc = "11 out of range events can generate interrupt"]
+    #[doc = "11 out of range events can generate interrupt."]
     DEBOUNCE_COUNTER_CONFIGURED_10 = 0x0a,
-    #[doc = "12 out of range events can generate interrupt"]
+    #[doc = "12 out of range events can generate interrupt."]
     DEBOUNCE_COUNTER_CONFIGURED_11 = 0x0b,
-    #[doc = "13 out of range events can generate interrupt"]
+    #[doc = "13 out of range events can generate interrupt."]
     DEBOUNCE_COUNTER_CONFIGURED_12 = 0x0c,
-    #[doc = "14 out of range events can generate interrupt"]
+    #[doc = "14 out of range events can generate interrupt."]
     DEBOUNCE_COUNTER_CONFIGURED_13 = 0x0d,
-    #[doc = "15 out of range events can generate interrupt"]
+    #[doc = "15 out of range events can generate interrupt."]
     DEBOUNCE_COUNTER_CONFIGURED_14 = 0x0e,
-    #[doc = "16 out of range events can generate interrupt"]
+    #[doc = "16 out of range events can generate interrupt."]
     DEBOUNCE_COUNTER_CONFIGURED_15 = 0x0f,
-    #[doc = "17 out of range events can generate interrupt"]
+    #[doc = "17 out of range events can generate interrupt."]
     DEBOUNCE_COUNTER_CONFIGURED_16 = 0x10,
-    #[doc = "18 out of range events can generate interrupt"]
+    #[doc = "18 out of range events can generate interrupt."]
     DEBOUNCE_COUNTER_CONFIGURED_17 = 0x11,
-    #[doc = "19 out of range events can generate interrupt"]
+    #[doc = "19 out of range events can generate interrupt."]
     DEBOUNCE_COUNTER_CONFIGURED_18 = 0x12,
-    #[doc = "20 out of range events can generate interrupt"]
+    #[doc = "20 out of range events can generate interrupt."]
     DEBOUNCE_COUNTER_CONFIGURED_19 = 0x13,
-    #[doc = "21 out of range events can generate interrupt"]
+    #[doc = "21 out of range events can generate interrupt."]
     DEBOUNCE_COUNTER_CONFIGURED_20 = 0x14,
-    #[doc = "22 out of range events can generate interrupt"]
+    #[doc = "22 out of range events can generate interrupt."]
     DEBOUNCE_COUNTER_CONFIGURED_21 = 0x15,
-    #[doc = "23 out of range events can generate interrupt"]
+    #[doc = "23 out of range events can generate interrupt."]
     DEBOUNCE_COUNTER_CONFIGURED_22 = 0x16,
-    #[doc = "24 out of range events can generate interrupt"]
+    #[doc = "24 out of range events can generate interrupt."]
     DEBOUNCE_COUNTER_CONFIGURED_23 = 0x17,
-    #[doc = "25 out of range events can generate interrupt"]
+    #[doc = "25 out of range events can generate interrupt."]
     DEBOUNCE_COUNTER_CONFIGURED_24 = 0x18,
-    #[doc = "26 out of range events can generate interrupt"]
+    #[doc = "26 out of range events can generate interrupt."]
     DEBOUNCE_COUNTER_CONFIGURED_25 = 0x19,
-    #[doc = "27 out of range events can generate interrupt"]
+    #[doc = "27 out of range events can generate interrupt."]
     DEBOUNCE_COUNTER_CONFIGURED_26 = 0x1a,
-    #[doc = "28 out of range events can generate interrupt"]
+    #[doc = "28 out of range events can generate interrupt."]
     DEBOUNCE_COUNTER_CONFIGURED_27 = 0x1b,
-    #[doc = "29 out of range events can generate interrupt"]
+    #[doc = "29 out of range events can generate interrupt."]
     DEBOUNCE_COUNTER_CONFIGURED_28 = 0x1c,
-    #[doc = "30 out of range events can generate interrupt"]
+    #[doc = "30 out of range events can generate interrupt."]
     DEBOUNCE_COUNTER_CONFIGURED_29 = 0x1d,
-    #[doc = "31 out of range events can generate interrupt"]
+    #[doc = "31 out of range events can generate interrupt."]
     DEBOUNCE_COUNTER_CONFIGURED_30 = 0x1e,
-    #[doc = "32 out of range events can generate interrupt"]
+    #[doc = "32 out of range events can generate interrupt."]
     DEBOUNCE_COUNTER_CONFIGURED_31 = 0x1f,
 }
 impl DebounceCounterConfigured {
@@ -554,9 +554,9 @@ impl From<DebounceCounterConfigured> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DmaenEos {
-    #[doc = "Disable DMA request at End of Scan event"]
+    #[doc = "Disable DMA request at End of Scan event."]
     DMAEN_EOS_0 = 0x0,
-    #[doc = "Enable DMA request at End of event"]
+    #[doc = "Enable DMA request at End of event."]
     DMAEN_EOS_1 = 0x01,
 }
 impl DmaenEos {
@@ -585,9 +585,9 @@ impl From<DmaenEos> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DmaenOutrg {
-    #[doc = "Disable DMA request at Out-of-Range event"]
+    #[doc = "Disable DMA request at Out-of-Range event."]
     DMAEN_OUTRG_0 = 0x0,
-    #[doc = "Enable DMA request at Out-of-Range event"]
+    #[doc = "Enable DMA request at Out-of-Range event."]
     DMAEN_OUTRG_1 = 0x01,
 }
 impl DmaenOutrg {
@@ -616,9 +616,9 @@ impl From<DmaenOutrg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DpdModeEnable {
-    #[doc = "configuration information in 3v domain logic is latched"]
+    #[doc = "configuration information in 3v domain logic is latched."]
     DPD_MODE_ENABLE_0 = 0x0,
-    #[doc = "configuration information in 3v domain logic is updating from configuration registers simultaneously"]
+    #[doc = "configuration information in 3v domain logic is updating from configuration registers simultaneously."]
     DPD_MODE_ENABLE_1 = 0x01,
 }
 impl DpdModeEnable {
@@ -647,9 +647,9 @@ impl From<DpdModeEnable> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DpdOutrgf {
-    #[doc = "the counter value is not out of range"]
+    #[doc = "the counter value is not out of range."]
     DPD_OUTRGF_0 = 0x0,
-    #[doc = "the counter value is out of range"]
+    #[doc = "the counter value is out of range."]
     DPD_OUTRGF_1 = 0x01,
 }
 impl DpdOutrgf {
@@ -678,9 +678,9 @@ impl From<DpdOutrgf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DpdTestEn {
-    #[doc = "IP is not entering dpd test mode"]
+    #[doc = "IP is not entering dpd test mode."]
     DPD_TEST_EN_0 = 0x0,
-    #[doc = "IP is entering dpd test mode"]
+    #[doc = "IP is entering dpd test mode."]
     DPD_TEST_EN_1 = 0x01,
 }
 impl DpdTestEn {
@@ -709,9 +709,9 @@ impl From<DpdTestEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DpdTestEosf {
-    #[doc = "scan is not done in DPD test mode"]
+    #[doc = "scan is not done in DPD test mode."]
     DPD_TEST_EOSF_0 = 0x0,
-    #[doc = "scan is done in DPD test mode"]
+    #[doc = "scan is done in DPD test mode."]
     DPD_TEST_EOSF_1 = 0x01,
 }
 impl DpdTestEosf {
@@ -740,37 +740,37 @@ impl From<DpdTestEosf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dvolt {
-    #[doc = "Vm=0.6 V, Vp=1.73 V"]
+    #[doc = "Vm=0.6 V, Vp=1.73 V."]
     DVOLT_0 = 0x0,
-    #[doc = "Vm=0.6 V, Vp=1.82 V"]
+    #[doc = "Vm=0.6 V, Vp=1.82 V."]
     DVOLT_1 = 0x01,
-    #[doc = "Vm=0.6 V, Vp=1.89 V"]
+    #[doc = "Vm=0.6 V, Vp=1.89 V."]
     DVOLT_2 = 0x02,
-    #[doc = "Vm=0.6 V, Vp=1.98 V"]
+    #[doc = "Vm=0.6 V, Vp=1.98 V."]
     DVOLT_3 = 0x03,
-    #[doc = "Vm=0.6 V, Vp=2.06 V"]
+    #[doc = "Vm=0.6 V, Vp=2.06 V."]
     DVOLT_4 = 0x04,
-    #[doc = "Vm=0.6 V, Vp=2.14 V"]
+    #[doc = "Vm=0.6 V, Vp=2.14 V."]
     DVOLT_5 = 0x05,
-    #[doc = "Vm=0.6 V, Vp=2.23 V"]
+    #[doc = "Vm=0.6 V, Vp=2.23 V."]
     DVOLT_6 = 0x06,
-    #[doc = "Vm=0.6 V, Vp=2.31 V"]
+    #[doc = "Vm=0.6 V, Vp=2.31 V."]
     DVOLT_7 = 0x07,
-    #[doc = "Vm=0.6 V, Vp=2.39 V"]
+    #[doc = "Vm=0.6 V, Vp=2.39 V."]
     DVOLT_8 = 0x08,
-    #[doc = "Vm=0.6 V, Vp=2.47 V"]
+    #[doc = "Vm=0.6 V, Vp=2.47 V."]
     DVOLT_9 = 0x09,
-    #[doc = "Vm=0.6 V, Vp=2.56 V"]
+    #[doc = "Vm=0.6 V, Vp=2.56 V."]
     DVOLT_10 = 0x0a,
-    #[doc = "Vm=0.6 V, Vp=2.64 V"]
+    #[doc = "Vm=0.6 V, Vp=2.64 V."]
     DVOLT_11 = 0x0b,
-    #[doc = "Vm=0.6 V, Vp=2.72 V"]
+    #[doc = "Vm=0.6 V, Vp=2.72 V."]
     DVOLT_12 = 0x0c,
-    #[doc = "Vm=0.6 V, Vp=2.81 V"]
+    #[doc = "Vm=0.6 V, Vp=2.81 V."]
     DVOLT_13 = 0x0d,
-    #[doc = "Vm=0.6 V, Vp=2.88 V"]
+    #[doc = "Vm=0.6 V, Vp=2.88 V."]
     DVOLT_14 = 0x0e,
-    #[doc = "Vm=0.6 V, Vp=2.97 V"]
+    #[doc = "Vm=0.6 V, Vp=2.97 V."]
     DVOLT_15 = 0x0f,
 }
 impl Dvolt {
@@ -799,9 +799,9 @@ impl From<Dvolt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Eosf {
-    #[doc = "scan is not done"]
+    #[doc = "scan is not done."]
     EOSF_0 = 0x0,
-    #[doc = "scan is done"]
+    #[doc = "scan is done."]
     EOSF_1 = 0x01,
 }
 impl Eosf {
@@ -830,9 +830,9 @@ impl From<Eosf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Esor {
-    #[doc = "End of Scan interrupt is disable"]
+    #[doc = "End of Scan interrupt is disable."]
     ESOR_0 = 0x0,
-    #[doc = "End of Scan interrupt is enabled"]
+    #[doc = "End of Scan interrupt is enabled."]
     ESOR_1 = 0x01,
 }
 impl Esor {
@@ -861,13 +861,13 @@ impl From<Esor> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FilterTrim {
-    #[doc = "filter bypass"]
+    #[doc = "filter bypass."]
     FILTER_TRIM_0 = 0x0,
-    #[doc = "5.3ns"]
+    #[doc = "5.3ns."]
     FILTER_TRIM_1 = 0x01,
-    #[doc = "21.1ns"]
+    #[doc = "21.1ns."]
     FILTER_TRIM_2 = 0x02,
-    #[doc = "25ns"]
+    #[doc = "25ns."]
     FILTER_TRIM_3 = 0x03,
 }
 impl FilterTrim {
@@ -896,9 +896,9 @@ impl From<FilterTrim> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MCntEn {
-    #[doc = "disable, the counter work in all scan process"]
+    #[doc = "disable, the counter work in all scan process."]
     M_CNT_EN_0 = 0x0,
-    #[doc = "enable, the counter only work when the capacitor does the integration"]
+    #[doc = "enable, the counter only work when the capacitor does the integration."]
     M_CNT_EN_1 = 0x01,
 }
 impl MCntEn {
@@ -927,13 +927,13 @@ impl From<MCntEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MMode {
-    #[doc = "sense both pos and neg side"]
+    #[doc = "sense both pos and neg side."]
     M_MODE_0 = 0x0,
-    #[doc = "sense pos side only"]
+    #[doc = "sense pos side only."]
     M_MODE_1 = 0x01,
-    #[doc = "sense neg side only"]
+    #[doc = "sense neg side only."]
     M_MODE_2 = 0x02,
-    #[doc = "not allowed"]
+    #[doc = "not allowed."]
     M_MODE_3 = 0x03,
 }
 impl MMode {
@@ -962,13 +962,13 @@ impl From<MMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MNmirror {
-    #[doc = "m=1"]
+    #[doc = "m=1."]
     M_NMIRROR_0 = 0x0,
-    #[doc = "m=2"]
+    #[doc = "m=2."]
     M_NMIRROR_1 = 0x01,
-    #[doc = "m=3"]
+    #[doc = "m=3."]
     M_NMIRROR_2 = 0x02,
-    #[doc = "m=4 (default)"]
+    #[doc = "m=4 (default)."]
     M_NMIRROR_3 = 0x03,
 }
 impl MNmirror {
@@ -997,21 +997,21 @@ impl From<MNmirror> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MPmirrorl {
-    #[doc = "m=4"]
+    #[doc = "m=4."]
     M_PMIRRORL_0 = 0x0,
-    #[doc = "m=8"]
+    #[doc = "m=8."]
     M_PMIRRORL_1 = 0x01,
-    #[doc = "m=12"]
+    #[doc = "m=12."]
     M_PMIRRORL_2 = 0x02,
-    #[doc = "m=16 (default)"]
+    #[doc = "m=16 (default)."]
     M_PMIRRORL_3 = 0x03,
-    #[doc = "m=20"]
+    #[doc = "m=20."]
     M_PMIRRORL_4 = 0x04,
-    #[doc = "m=24"]
+    #[doc = "m=24."]
     M_PMIRRORL_5 = 0x05,
-    #[doc = "m=28"]
+    #[doc = "m=28."]
     M_PMIRRORL_6 = 0x06,
-    #[doc = "m=32"]
+    #[doc = "m=32."]
     M_PMIRRORL_7 = 0x07,
 }
 impl MPmirrorl {
@@ -1040,13 +1040,13 @@ impl From<MPmirrorl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MPmirrorr {
-    #[doc = "m=1"]
+    #[doc = "m=1."]
     M_PMIRRORR_0 = 0x0,
-    #[doc = "m=2"]
+    #[doc = "m=2."]
     M_PMIRRORR_1 = 0x01,
-    #[doc = "m=3"]
+    #[doc = "m=3."]
     M_PMIRRORR_2 = 0x02,
-    #[doc = "m=4 (default)"]
+    #[doc = "m=4 (default)."]
     M_PMIRRORR_3 = 0x03,
 }
 impl MPmirrorr {
@@ -1075,21 +1075,21 @@ impl From<MPmirrorr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MPreCurrent {
-    #[doc = "1 uA"]
+    #[doc = "1 uA."]
     M_PRE_CURRENT_0 = 0x0,
-    #[doc = "2 uA"]
+    #[doc = "2 uA."]
     M_PRE_CURRENT_1 = 0x01,
-    #[doc = "3 uA"]
+    #[doc = "3 uA."]
     M_PRE_CURRENT_2 = 0x02,
-    #[doc = "4 uA"]
+    #[doc = "4 uA."]
     M_PRE_CURRENT_3 = 0x03,
-    #[doc = "5 uA"]
+    #[doc = "5 uA."]
     M_PRE_CURRENT_4 = 0x04,
-    #[doc = "6 uA"]
+    #[doc = "6 uA."]
     M_PRE_CURRENT_5 = 0x05,
-    #[doc = "7 uA"]
+    #[doc = "7 uA."]
     M_PRE_CURRENT_6 = 0x06,
-    #[doc = "8 uA"]
+    #[doc = "8 uA."]
     M_PRE_CURRENT_7 = 0x07,
 }
 impl MPreCurrent {
@@ -1118,21 +1118,21 @@ impl From<MPreCurrent> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MPreRes {
-    #[doc = "1 kohm"]
+    #[doc = "1 kohm."]
     M_PRE_RES_0 = 0x0,
-    #[doc = "2 kohm"]
+    #[doc = "2 kohm."]
     M_PRE_RES_1 = 0x01,
-    #[doc = "3 kohm"]
+    #[doc = "3 kohm."]
     M_PRE_RES_2 = 0x02,
-    #[doc = "4 kohm"]
+    #[doc = "4 kohm."]
     M_PRE_RES_3 = 0x03,
-    #[doc = "5 kohm"]
+    #[doc = "5 kohm."]
     M_PRE_RES_4 = 0x04,
-    #[doc = "6 kohm"]
+    #[doc = "6 kohm."]
     M_PRE_RES_5 = 0x05,
-    #[doc = "7 kohm"]
+    #[doc = "7 kohm."]
     M_PRE_RES_6 = 0x06,
-    #[doc = "8 kohm"]
+    #[doc = "8 kohm."]
     M_PRE_RES_7 = 0x07,
 }
 impl MPreRes {
@@ -1161,69 +1161,69 @@ impl From<MPreRes> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MSenBoost {
-    #[doc = "0 u"]
+    #[doc = "0 u."]
     M_SEN_BOOST_0 = 0x0,
-    #[doc = "2 u"]
+    #[doc = "2 u."]
     M_SEN_BOOST_1 = 0x01,
-    #[doc = "4 u"]
+    #[doc = "4 u."]
     M_SEN_BOOST_2 = 0x02,
-    #[doc = "6 u"]
+    #[doc = "6 u."]
     M_SEN_BOOST_3 = 0x03,
-    #[doc = "8 u"]
+    #[doc = "8 u."]
     M_SEN_BOOST_4 = 0x04,
-    #[doc = "10 u"]
+    #[doc = "10 u."]
     M_SEN_BOOST_5 = 0x05,
-    #[doc = "12 u"]
+    #[doc = "12 u."]
     M_SEN_BOOST_6 = 0x06,
-    #[doc = "14 u"]
+    #[doc = "14 u."]
     M_SEN_BOOST_7 = 0x07,
-    #[doc = "16 u"]
+    #[doc = "16 u."]
     M_SEN_BOOST_8 = 0x08,
-    #[doc = "18 u"]
+    #[doc = "18 u."]
     M_SEN_BOOST_9 = 0x09,
-    #[doc = "20 u"]
+    #[doc = "20 u."]
     M_SEN_BOOST_10 = 0x0a,
-    #[doc = "22 u"]
+    #[doc = "22 u."]
     M_SEN_BOOST_11 = 0x0b,
-    #[doc = "24 u"]
+    #[doc = "24 u."]
     M_SEN_BOOST_12 = 0x0c,
-    #[doc = "26 u"]
+    #[doc = "26 u."]
     M_SEN_BOOST_13 = 0x0d,
-    #[doc = "28 u"]
+    #[doc = "28 u."]
     M_SEN_BOOST_14 = 0x0e,
-    #[doc = "30 u"]
+    #[doc = "30 u."]
     M_SEN_BOOST_15 = 0x0f,
-    #[doc = "32 u"]
+    #[doc = "32 u."]
     M_SEN_BOOST_16 = 0x10,
-    #[doc = "34 u"]
+    #[doc = "34 u."]
     M_SEN_BOOST_17 = 0x11,
-    #[doc = "36 u"]
+    #[doc = "36 u."]
     M_SEN_BOOST_18 = 0x12,
-    #[doc = "38 u"]
+    #[doc = "38 u."]
     M_SEN_BOOST_19 = 0x13,
-    #[doc = "40 u"]
+    #[doc = "40 u."]
     M_SEN_BOOST_20 = 0x14,
-    #[doc = "42 u"]
+    #[doc = "42 u."]
     M_SEN_BOOST_21 = 0x15,
-    #[doc = "44 u"]
+    #[doc = "44 u."]
     M_SEN_BOOST_22 = 0x16,
-    #[doc = "46 u"]
+    #[doc = "46 u."]
     M_SEN_BOOST_23 = 0x17,
-    #[doc = "48 u"]
+    #[doc = "48 u."]
     M_SEN_BOOST_24 = 0x18,
-    #[doc = "50 u"]
+    #[doc = "50 u."]
     M_SEN_BOOST_25 = 0x19,
-    #[doc = "52 u"]
+    #[doc = "52 u."]
     M_SEN_BOOST_26 = 0x1a,
-    #[doc = "54 u"]
+    #[doc = "54 u."]
     M_SEN_BOOST_27 = 0x1b,
-    #[doc = "56 u"]
+    #[doc = "56 u."]
     M_SEN_BOOST_28 = 0x1c,
-    #[doc = "58 u"]
+    #[doc = "58 u."]
     M_SEN_BOOST_29 = 0x1d,
-    #[doc = "60 u"]
+    #[doc = "60 u."]
     M_SEN_BOOST_30 = 0x1e,
-    #[doc = "62 u"]
+    #[doc = "62 u."]
     M_SEN_BOOST_31 = 0x1f,
 }
 impl MSenBoost {
@@ -1252,11 +1252,11 @@ impl From<MSenBoost> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MSenRes {
-    #[doc = "10 k"]
+    #[doc = "10 k."]
     M_SEN_RES_0 = 0x0,
-    #[doc = "10 k + (2.5/3) k (just for auto-calibration)"]
+    #[doc = "10 k + (2.5/3) k (just for auto-calibration)."]
     M_SEN_RES_1 = 0x01,
-    #[doc = "12.5 k (default)"]
+    #[doc = "12.5 k (default)."]
     M_SEN_RES_2 = 0x02,
     _RESERVED_3 = 0x03,
     _RESERVED_4 = 0x04,
@@ -1269,7 +1269,7 @@ pub enum MSenRes {
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
-    #[doc = "25 k"]
+    #[doc = "25 k."]
     M_SEN_RES_14 = 0x0e,
     _RESERVED_f = 0x0f,
     _RESERVED_10 = 0x10,
@@ -1347,13 +1347,13 @@ impl From<MSenRes> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MTrimCap {
-    #[doc = "0 pF (default)"]
+    #[doc = "0 pF (default)."]
     M_TRIM_CAP_0 = 0x0,
-    #[doc = "10 pF"]
+    #[doc = "10 pF."]
     M_TRIM_CAP_1 = 0x01,
-    #[doc = "10 pF"]
+    #[doc = "10 pF."]
     M_TRIM_CAP_2 = 0x02,
-    #[doc = "20 pF"]
+    #[doc = "20 pF."]
     M_TRIM_CAP_3 = 0x03,
 }
 impl MTrimCap {
@@ -1382,9 +1382,9 @@ impl From<MTrimCap> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MTxPdEn {
-    #[doc = "disable"]
+    #[doc = "disable."]
     M_TX_PD_EN_0 = 0x0,
-    #[doc = "enable (default)"]
+    #[doc = "enable (default)."]
     M_TX_PD_EN_1 = 0x01,
 }
 impl MTxPdEn {
@@ -1413,9 +1413,9 @@ impl From<MTxPdEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MVpreChoose {
-    #[doc = "Internal 1.2 V voltage (default)"]
+    #[doc = "Internal 1.2 V voltage (default)."]
     M_VPRE_CHOOSE_0 = 0x0,
-    #[doc = "External 1.2 V voltage from PMC"]
+    #[doc = "External 1.2 V voltage from PMC."]
     M_VPRE_CHOOSE_1 = 0x01,
 }
 impl MVpreChoose {
@@ -1444,37 +1444,37 @@ impl From<MVpreChoose> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MoveNochargeMin {
-    #[doc = "The SSC output bit 1's min period will be (1 + TSI_SSC0\\[BASE_ NOCHARGE_NUM\\]) clock cycle of system clock"]
+    #[doc = "The SSC output bit 1's min period will be (1 + TSI_SSC0\\[BASE_ NOCHARGE_NUM\\]) clock cycle of system clock."]
     MOVE_NOCHARGE_MIN_0 = 0x0,
-    #[doc = "The SSC output bit 1's min period will be (2 + TSI_SSC0\\[BASE_ NOCHARGE_NUM\\]) clock cycles of system clock"]
+    #[doc = "The SSC output bit 1's min period will be (2 + TSI_SSC0\\[BASE_ NOCHARGE_NUM\\]) clock cycles of system clock."]
     MOVE_NOCHARGE_MIN_1 = 0x01,
-    #[doc = "The SSC output bit 1's min period will be (3 + TSI_SSC0\\[BASE_ NOCHARGE_NUM\\]) clock cycles of system clock"]
+    #[doc = "The SSC output bit 1's min period will be (3 + TSI_SSC0\\[BASE_ NOCHARGE_NUM\\]) clock cycles of system clock."]
     MOVE_NOCHARGE_MIN_2 = 0x02,
-    #[doc = "The SSC output bit 1's min period will be (4 + TSI_SSC0\\[BASE_ NOCHARGE_NUM\\]) clock cycles of system clock"]
+    #[doc = "The SSC output bit 1's min period will be (4 + TSI_SSC0\\[BASE_ NOCHARGE_NUM\\]) clock cycles of system clock."]
     MOVE_NOCHARGE_MIN_3 = 0x03,
-    #[doc = "The SSC output bit 1's min period will be (5 + TSI_SSC0\\[BASE_ NOCHARGE_NUM\\]) clock cycles of system clock"]
+    #[doc = "The SSC output bit 1's min period will be (5 + TSI_SSC0\\[BASE_ NOCHARGE_NUM\\]) clock cycles of system clock."]
     MOVE_NOCHARGE_MIN_4 = 0x04,
-    #[doc = "The SSC output bit 1's min period will be (6 + TSI_SSC0\\[BASE_ NOCHARGE_NUM\\]) clock cycles of system clock"]
+    #[doc = "The SSC output bit 1's min period will be (6 + TSI_SSC0\\[BASE_ NOCHARGE_NUM\\]) clock cycles of system clock."]
     MOVE_NOCHARGE_MIN_5 = 0x05,
-    #[doc = "The SSC output bit 1's min period will be (7 + TSI_SSC0\\[BASE_ NOCHARGE_NUM\\]) clock cycles of system clock"]
+    #[doc = "The SSC output bit 1's min period will be (7 + TSI_SSC0\\[BASE_ NOCHARGE_NUM\\]) clock cycles of system clock."]
     MOVE_NOCHARGE_MIN_6 = 0x06,
-    #[doc = "The SSC output bit 1's min period will be (8 + TSI_SSC0\\[BASE_ NOCHARGE_NUM\\]) clock cycles of system clock"]
+    #[doc = "The SSC output bit 1's min period will be (8 + TSI_SSC0\\[BASE_ NOCHARGE_NUM\\]) clock cycles of system clock."]
     MOVE_NOCHARGE_MIN_7 = 0x07,
-    #[doc = "The SSC output bit 1's min period will be (9 + TSI_SSC0\\[BASE_ NOCHARGE_NUM\\]) clock cycles of system clock"]
+    #[doc = "The SSC output bit 1's min period will be (9 + TSI_SSC0\\[BASE_ NOCHARGE_NUM\\]) clock cycles of system clock."]
     MOVE_NOCHARGE_MIN_8 = 0x08,
-    #[doc = "The SSC output bit 1's min period will be (10 + TSI_SSC0\\[BASE_ NOCHARGE_NUM\\]) clock cycles of system clock"]
+    #[doc = "The SSC output bit 1's min period will be (10 + TSI_SSC0\\[BASE_ NOCHARGE_NUM\\]) clock cycles of system clock."]
     MOVE_NOCHARGE_MIN_9 = 0x09,
-    #[doc = "The SSC output bit 1's min period will be (11 + TSI_SSC0\\[BASE_ NOCHARGE_NUM\\]) clock cycles of system clock"]
+    #[doc = "The SSC output bit 1's min period will be (11 + TSI_SSC0\\[BASE_ NOCHARGE_NUM\\]) clock cycles of system clock."]
     MOVE_NOCHARGE_MIN_10 = 0x0a,
-    #[doc = "The SSC output bit 1's min period will be (12 + TSI_SSC0\\[BASE_ NOCHARGE_NUM\\]) clock cycles of system clock"]
+    #[doc = "The SSC output bit 1's min period will be (12 + TSI_SSC0\\[BASE_ NOCHARGE_NUM\\]) clock cycles of system clock."]
     MOVE_NOCHARGE_MIN_11 = 0x0b,
-    #[doc = "The SSC output bit 1's min period will be (13 + TSI_SSC0\\[BASE_ NOCHARGE_NUM\\]) clock cycles of system clock"]
+    #[doc = "The SSC output bit 1's min period will be (13 + TSI_SSC0\\[BASE_ NOCHARGE_NUM\\]) clock cycles of system clock."]
     MOVE_NOCHARGE_MIN_12 = 0x0c,
-    #[doc = "The SSC output bit 1's min period will be (14 + TSI_SSC0\\[BASE_ NOCHARGE_NUM\\]) clock cycles of system clock"]
+    #[doc = "The SSC output bit 1's min period will be (14 + TSI_SSC0\\[BASE_ NOCHARGE_NUM\\]) clock cycles of system clock."]
     MOVE_NOCHARGE_MIN_13 = 0x0d,
-    #[doc = "The SSC output bit 1's min period will be (15 + TSI_SSC0\\[BASE_ NOCHARGE_NUM\\]) clock cycles of system clock"]
+    #[doc = "The SSC output bit 1's min period will be (15 + TSI_SSC0\\[BASE_ NOCHARGE_NUM\\]) clock cycles of system clock."]
     MOVE_NOCHARGE_MIN_14 = 0x0e,
-    #[doc = "The SSC output bit 1's min period will be (16 + TSI_SSC0\\[BASE_ NOCHARGE_NUM\\]) clock cycles of system clock"]
+    #[doc = "The SSC output bit 1's min period will be (16 + TSI_SSC0\\[BASE_ NOCHARGE_NUM\\]) clock cycles of system clock."]
     MOVE_NOCHARGE_MIN_15 = 0x0f,
 }
 impl MoveNochargeMin {
@@ -1503,19 +1503,19 @@ impl From<MoveNochargeMin> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MoveRepeatNum {
-    #[doc = "The up_down counter will be updated for every sample-charge cycle"]
+    #[doc = "The up_down counter will be updated for every sample-charge cycle."]
     MOVE_REPEAT_NUM_0 = 0x0,
-    #[doc = "The up_down counter will be updated for every 2 sample-charge cycles"]
+    #[doc = "The up_down counter will be updated for every 2 sample-charge cycles."]
     MOVE_REPEAT_NUM_1 = 0x01,
-    #[doc = "The up_down counter will be updated for every 3 sample-charge cycles"]
+    #[doc = "The up_down counter will be updated for every 3 sample-charge cycles."]
     MOVE_REPEAT_NUM_2 = 0x02,
-    #[doc = "The up_down counter will be updated for every 4 sample-charge cycles"]
+    #[doc = "The up_down counter will be updated for every 4 sample-charge cycles."]
     MOVE_REPEAT_NUM_3 = 0x03,
-    #[doc = "The up_down counter will be updated for every 5 sample-charge cycles"]
+    #[doc = "The up_down counter will be updated for every 5 sample-charge cycles."]
     MOVE_REPEAT_NUM_4 = 0x04,
-    #[doc = "The up_down counter will be updated for every 6 sample-charge cycles"]
+    #[doc = "The up_down counter will be updated for every 6 sample-charge cycles."]
     MOVE_REPEAT_NUM_5 = 0x05,
-    #[doc = "The up_down counter will be updated for every 7 sample-charge cycles"]
+    #[doc = "The up_down counter will be updated for every 7 sample-charge cycles."]
     MOVE_REPEAT_NUM_6 = 0x06,
     _RESERVED_7 = 0x07,
     _RESERVED_8 = 0x08,
@@ -1569,21 +1569,21 @@ impl From<MoveRepeatNum> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MoveStepsNum {
-    #[doc = "The added value for up-down counter is 0"]
+    #[doc = "The added value for up-down counter is 0."]
     MOVE_STEPS_NUM_0 = 0x0,
-    #[doc = "The added value for up-down counter is 1"]
+    #[doc = "The added value for up-down counter is 1."]
     MOVE_STEPS_NUM_1 = 0x01,
-    #[doc = "The added value for up-down counter is 2"]
+    #[doc = "The added value for up-down counter is 2."]
     MOVE_STEPS_NUM_2 = 0x02,
-    #[doc = "The added value for up-down counter is 3"]
+    #[doc = "The added value for up-down counter is 3."]
     MOVE_STEPS_NUM_3 = 0x03,
-    #[doc = "The added value for up-down counter is 4"]
+    #[doc = "The added value for up-down counter is 4."]
     MOVE_STEPS_NUM_4 = 0x04,
-    #[doc = "The added value for up-down counter is 5"]
+    #[doc = "The added value for up-down counter is 5."]
     MOVE_STEPS_NUM_5 = 0x05,
-    #[doc = "The added value for up-down counter is 6"]
+    #[doc = "The added value for up-down counter is 6."]
     MOVE_STEPS_NUM_6 = 0x06,
-    #[doc = "The added value for up-down counter is 7"]
+    #[doc = "The added value for up-down counter is 7."]
     MOVE_STEPS_NUM_7 = 0x07,
 }
 impl MoveStepsNum {
@@ -1612,9 +1612,9 @@ impl From<MoveStepsNum> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum OutrgEn {
-    #[doc = "Out-of-range interrupt is disable"]
+    #[doc = "Out-of-range interrupt is disable."]
     OUTRG_EN_0 = 0x0,
-    #[doc = "Out-of-range interrupt is enabled"]
+    #[doc = "Out-of-range interrupt is enabled."]
     OUTRG_EN_1 = 0x01,
 }
 impl OutrgEn {
@@ -1643,9 +1643,9 @@ impl From<OutrgEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Outrgf {
-    #[doc = "the counter value is not out of range"]
+    #[doc = "the counter value is not out of range."]
     OUTRGF_0 = 0x0,
-    #[doc = "the counter value is out of range"]
+    #[doc = "the counter value is out of range."]
     OUTRGF_1 = 0x01,
 }
 impl Outrgf {
@@ -1674,9 +1674,9 @@ impl From<Outrgf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Overrunf {
-    #[doc = "there is trigger or ips bus writing during scan progress"]
+    #[doc = "there is trigger or ips bus writing during scan progress."]
     OVERRUNF_0 = 0x0,
-    #[doc = "there is no trigger or ips bus writing during scan progress"]
+    #[doc = "there is no trigger or ips bus writing during scan progress."]
     OVERRUNF_1 = 0x01,
 }
 impl Overrunf {
@@ -1705,37 +1705,37 @@ impl From<Overrunf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PrbsOutsel {
-    #[doc = "NC"]
+    #[doc = "NC."]
     PRBS_OUTSEL_0 = 0x0,
-    #[doc = "NC"]
+    #[doc = "NC."]
     PRBS_OUTSEL_1 = 0x01,
-    #[doc = "The order of the primitive polynomial is 2"]
+    #[doc = "The order of the primitive polynomial is 2."]
     PRBS_OUTSEL_2 = 0x02,
-    #[doc = "The order of the primitive polynomial is 3"]
+    #[doc = "The order of the primitive polynomial is 3."]
     PRBS_OUTSEL_3 = 0x03,
-    #[doc = "The order of the primitive polynomial is 4"]
+    #[doc = "The order of the primitive polynomial is 4."]
     PRBS_OUTSEL_4 = 0x04,
-    #[doc = "The order of the primitive polynomial is 5"]
+    #[doc = "The order of the primitive polynomial is 5."]
     PRBS_OUTSEL_5 = 0x05,
-    #[doc = "The order of the primitive polynomial is 6"]
+    #[doc = "The order of the primitive polynomial is 6."]
     PRBS_OUTSEL_6 = 0x06,
-    #[doc = "The order of the primitive polynomial is 7"]
+    #[doc = "The order of the primitive polynomial is 7."]
     PRBS_OUTSEL_7 = 0x07,
-    #[doc = "The order of the primitive polynomial is 8"]
+    #[doc = "The order of the primitive polynomial is 8."]
     PRBS_OUTSEL_8 = 0x08,
-    #[doc = "The order of the primitive polynomial is 9"]
+    #[doc = "The order of the primitive polynomial is 9."]
     PRBS_OUTSEL_9 = 0x09,
-    #[doc = "The order of the primitive polynomial is 10"]
+    #[doc = "The order of the primitive polynomial is 10."]
     PRBS_OUTSEL_10 = 0x0a,
-    #[doc = "The order of the primitive polynomial is 11"]
+    #[doc = "The order of the primitive polynomial is 11."]
     PRBS_OUTSEL_11 = 0x0b,
-    #[doc = "The order of the primitive polynomial is 12"]
+    #[doc = "The order of the primitive polynomial is 12."]
     PRBS_OUTSEL_12 = 0x0c,
-    #[doc = "The order of the primitive polynomial is 13"]
+    #[doc = "The order of the primitive polynomial is 13."]
     PRBS_OUTSEL_13 = 0x0d,
-    #[doc = "The order of the primitive polynomial is 14"]
+    #[doc = "The order of the primitive polynomial is 14."]
     PRBS_OUTSEL_14 = 0x0e,
-    #[doc = "The order of the primitive polynomial is 15"]
+    #[doc = "The order of the primitive polynomial is 15."]
     PRBS_OUTSEL_15 = 0x0f,
 }
 impl PrbsOutsel {
@@ -1764,9 +1764,9 @@ impl From<PrbsOutsel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PreChrgMode {
-    #[doc = "mode 0"]
+    #[doc = "mode 0."]
     PRE_CHRG_MODE_0 = 0x0,
-    #[doc = "mode 1"]
+    #[doc = "mode 1."]
     PRE_CHRG_MODE_1 = 0x01,
 }
 impl PreChrgMode {
@@ -1795,9 +1795,9 @@ impl From<PreChrgMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RunCtrl {
-    #[doc = "gate analog switch clock"]
+    #[doc = "gate analog switch clock."]
     RUN_CTRL_0 = 0x0,
-    #[doc = "not gate analog switch clock"]
+    #[doc = "not gate analog switch clock."]
     RUN_CTRL_1 = 0x01,
 }
 impl RunCtrl {
@@ -1826,9 +1826,9 @@ impl From<RunCtrl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SNoise {
-    #[doc = "noise cancellation off (default)"]
+    #[doc = "noise cancellation off (default)."]
     S_NOISE_0 = 0x0,
-    #[doc = "noise cancellation on"]
+    #[doc = "noise cancellation on."]
     S_NOISE_1 = 0x01,
 }
 impl SNoise {
@@ -1857,9 +1857,9 @@ impl From<SNoise> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SSen {
-    #[doc = "Sensitivity boost off (default)"]
+    #[doc = "Sensitivity boost off (default)."]
     S_SEN_0 = 0x0,
-    #[doc = "Sensitivity boost on"]
+    #[doc = "Sensitivity boost on."]
     S_SEN_1 = 0x01,
 }
 impl SSen {
@@ -1888,21 +1888,21 @@ impl From<SSen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SXch {
-    #[doc = "1/16 (default)"]
+    #[doc = "1/16 (default)."]
     S_XCH_0 = 0x0,
-    #[doc = "1/8"]
+    #[doc = "1/8."]
     S_XCH_1 = 0x01,
-    #[doc = "1/4"]
+    #[doc = "1/4."]
     S_XCH_2 = 0x02,
-    #[doc = "1/2"]
+    #[doc = "1/2."]
     S_XCH_3 = 0x03,
-    #[doc = "1/1"]
+    #[doc = "1/1."]
     S_XCH_4 = 0x04,
-    #[doc = "2/1"]
+    #[doc = "2/1."]
     S_XCH_5 = 0x05,
-    #[doc = "4/1"]
+    #[doc = "4/1."]
     S_XCH_6 = 0x06,
-    #[doc = "8/1"]
+    #[doc = "8/1."]
     S_XCH_7 = 0x07,
 }
 impl SXch {
@@ -1931,21 +1931,21 @@ impl From<SXch> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SXdn {
-    #[doc = "1/16 (default)"]
+    #[doc = "1/16 (default)."]
     S_XDN_0 = 0x0,
-    #[doc = "1/8"]
+    #[doc = "1/8."]
     S_XDN_1 = 0x01,
-    #[doc = "1/4"]
+    #[doc = "1/4."]
     S_XDN_2 = 0x02,
-    #[doc = "1/2"]
+    #[doc = "1/2."]
     S_XDN_3 = 0x03,
-    #[doc = "NA"]
+    #[doc = "NA."]
     S_XDN_4 = 0x04,
-    #[doc = "NA"]
+    #[doc = "NA."]
     S_XDN_5 = 0x05,
-    #[doc = "NA"]
+    #[doc = "NA."]
     S_XDN_6 = 0x06,
-    #[doc = "NA"]
+    #[doc = "NA."]
     S_XDN_7 = 0x07,
 }
 impl SXdn {
@@ -1974,9 +1974,9 @@ impl From<SXdn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SXin {
-    #[doc = "1/8"]
+    #[doc = "1/8."]
     S_XIN_0 = 0x0,
-    #[doc = "1/4 (default)"]
+    #[doc = "1/4 (default)."]
     S_XIN_1 = 0x01,
 }
 impl SXin {
@@ -2005,9 +2005,9 @@ impl From<SXin> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SelfBoostMode {
-    #[doc = "cap boost mode (default)"]
+    #[doc = "cap boost mode (default)."]
     SELF_BOOST_MODE_0 = 0x0,
-    #[doc = "current boost mode"]
+    #[doc = "current boost mode."]
     SELF_BOOST_MODE_1 = 0x01,
 }
 impl SelfBoostMode {
@@ -2036,21 +2036,21 @@ impl From<SelfBoostMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SelfBoostScale {
-    #[doc = "500 nA (default)"]
+    #[doc = "500 nA (default)."]
     SELF_BOOST_SCALE_0 = 0x0,
-    #[doc = "1 uA"]
+    #[doc = "1 uA."]
     SELF_BOOST_SCALE_1 = 0x01,
-    #[doc = "1.5 uA"]
+    #[doc = "1.5 uA."]
     SELF_BOOST_SCALE_2 = 0x02,
-    #[doc = "2 uA"]
+    #[doc = "2 uA."]
     SELF_BOOST_SCALE_3 = 0x03,
-    #[doc = "2.5 uA"]
+    #[doc = "2.5 uA."]
     SELF_BOOST_SCALE_4 = 0x04,
-    #[doc = "3 uA"]
+    #[doc = "3 uA."]
     SELF_BOOST_SCALE_5 = 0x05,
-    #[doc = "3.5 uA"]
+    #[doc = "3.5 uA."]
     SELF_BOOST_SCALE_6 = 0x06,
-    #[doc = "4 uA"]
+    #[doc = "4 uA."]
     SELF_BOOST_SCALE_7 = 0x07,
 }
 impl SelfBoostScale {
@@ -2079,9 +2079,9 @@ impl From<SelfBoostScale> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SelfBypassFlt {
-    #[doc = "LPF is not bypassed (default)"]
+    #[doc = "LPF is not bypassed (default)."]
     SELF_BYPASS_FLT_0 = 0x0,
-    #[doc = "LPF is bypassed"]
+    #[doc = "LPF is bypassed."]
     SELF_BYPASS_FLT_1 = 0x01,
 }
 impl SelfBypassFlt {
@@ -2110,37 +2110,37 @@ impl From<SelfBypassFlt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SincCutoff {
-    #[doc = "div=0"]
+    #[doc = "div=0."]
     SINC_CUTOFF_0 = 0x0,
-    #[doc = "div=2"]
+    #[doc = "div=2."]
     SINC_CUTOFF_1 = 0x01,
-    #[doc = "div=4"]
+    #[doc = "div=4."]
     SINC_CUTOFF_2 = 0x02,
-    #[doc = "div=8"]
+    #[doc = "div=8."]
     SINC_CUTOFF_3 = 0x03,
-    #[doc = "div=16"]
+    #[doc = "div=16."]
     SINC_CUTOFF_4 = 0x04,
-    #[doc = "div=32"]
+    #[doc = "div=32."]
     SINC_CUTOFF_5 = 0x05,
-    #[doc = "div=64"]
+    #[doc = "div=64."]
     SINC_CUTOFF_6 = 0x06,
-    #[doc = "div=128"]
+    #[doc = "div=128."]
     SINC_CUTOFF_7 = 0x07,
-    #[doc = "NC"]
+    #[doc = "NC."]
     SINC_CUTOFF_8 = 0x08,
-    #[doc = "NC"]
+    #[doc = "NC."]
     SINC_CUTOFF_9 = 0x09,
-    #[doc = "NC"]
+    #[doc = "NC."]
     SINC_CUTOFF_10 = 0x0a,
-    #[doc = "NC"]
+    #[doc = "NC."]
     SINC_CUTOFF_11 = 0x0b,
-    #[doc = "NC"]
+    #[doc = "NC."]
     SINC_CUTOFF_12 = 0x0c,
-    #[doc = "NC"]
+    #[doc = "NC."]
     SINC_CUTOFF_13 = 0x0d,
-    #[doc = "NC"]
+    #[doc = "NC."]
     SINC_CUTOFF_14 = 0x0e,
-    #[doc = "NC"]
+    #[doc = "NC."]
     SINC_CUTOFF_15 = 0x0f,
 }
 impl SincCutoff {
@@ -2169,69 +2169,69 @@ impl From<SincCutoff> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SincDecimation {
-    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 1 triger period"]
+    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 1 triger period."]
     SINC_DECIMATION_0 = 0x0,
-    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 2 triger periods"]
+    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 2 triger periods."]
     SINC_DECIMATION_1 = 0x01,
-    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 3 triger periods"]
+    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 3 triger periods."]
     SINC_DECIMATION_2 = 0x02,
-    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 4 triger periods"]
+    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 4 triger periods."]
     SINC_DECIMATION_3 = 0x03,
-    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 5 triger periods"]
+    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 5 triger periods."]
     SINC_DECIMATION_4 = 0x04,
-    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 6 triger periods"]
+    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 6 triger periods."]
     SINC_DECIMATION_5 = 0x05,
-    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 7 triger periods"]
+    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 7 triger periods."]
     SINC_DECIMATION_6 = 0x06,
-    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 8 triger periods"]
+    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 8 triger periods."]
     SINC_DECIMATION_7 = 0x07,
-    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 9 triger periods"]
+    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 9 triger periods."]
     SINC_DECIMATION_8 = 0x08,
-    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 10 triger periods"]
+    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 10 triger periods."]
     SINC_DECIMATION_9 = 0x09,
-    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 11 triger periods"]
+    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 11 triger periods."]
     SINC_DECIMATION_10 = 0x0a,
-    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 12 triger periods"]
+    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 12 triger periods."]
     SINC_DECIMATION_11 = 0x0b,
-    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 13 triger periods"]
+    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 13 triger periods."]
     SINC_DECIMATION_12 = 0x0c,
-    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 14 triger periods"]
+    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 14 triger periods."]
     SINC_DECIMATION_13 = 0x0d,
-    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 15 triger periods"]
+    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 15 triger periods."]
     SINC_DECIMATION_14 = 0x0e,
-    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 16 triger periods"]
+    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 16 triger periods."]
     SINC_DECIMATION_15 = 0x0f,
-    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 17 triger periods"]
+    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 17 triger periods."]
     SINC_DECIMATION_16 = 0x10,
-    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 18 triger periods"]
+    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 18 triger periods."]
     SINC_DECIMATION_17 = 0x11,
-    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 19 triger periods"]
+    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 19 triger periods."]
     SINC_DECIMATION_18 = 0x12,
-    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 20 triger periods"]
+    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 20 triger periods."]
     SINC_DECIMATION_19 = 0x13,
-    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 21 triger periods"]
+    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 21 triger periods."]
     SINC_DECIMATION_20 = 0x14,
-    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 22 triger periods"]
+    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 22 triger periods."]
     SINC_DECIMATION_21 = 0x15,
-    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 23 triger periods"]
+    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 23 triger periods."]
     SINC_DECIMATION_22 = 0x16,
-    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 24 triger periods"]
+    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 24 triger periods."]
     SINC_DECIMATION_23 = 0x17,
-    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 25 triger periods"]
+    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 25 triger periods."]
     SINC_DECIMATION_24 = 0x18,
-    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 26 triger periods"]
+    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 26 triger periods."]
     SINC_DECIMATION_25 = 0x19,
-    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 27 triger periods"]
+    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 27 triger periods."]
     SINC_DECIMATION_26 = 0x1a,
-    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 28 triger periods"]
+    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 28 triger periods."]
     SINC_DECIMATION_27 = 0x1b,
-    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 29 triger periods"]
+    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 29 triger periods."]
     SINC_DECIMATION_28 = 0x1c,
-    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 30 triger periods"]
+    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 30 triger periods."]
     SINC_DECIMATION_29 = 0x1d,
-    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 31 triger periods"]
+    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 31 triger periods."]
     SINC_DECIMATION_30 = 0x1e,
-    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 32 triger periods"]
+    #[doc = "The TSI_DATA\\[TSICNT\\] bits is the counter value of 32 triger periods."]
     SINC_DECIMATION_31 = 0x1f,
 }
 impl SincDecimation {
@@ -2260,9 +2260,9 @@ impl From<SincDecimation> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SincOrder {
-    #[doc = "Using 1 order sinc filter"]
+    #[doc = "Using 1 order sinc filter."]
     SINC_ORDER_0 = 0x0,
-    #[doc = "Using 2 order sinc filter"]
+    #[doc = "Using 2 order sinc filter."]
     SINC_ORDER_1 = 0x01,
 }
 impl SincOrder {
@@ -2291,9 +2291,9 @@ impl From<SincOrder> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SincOverflowFlag {
-    #[doc = "The counter result has no overflow occurrence in the last scan process"]
+    #[doc = "The counter result has no overflow occurrence in the last scan process."]
     SINC_OVERFLOW_FLAG_0 = 0x0,
-    #[doc = "The counter result has an overflow occurrence in the last scan process"]
+    #[doc = "The counter result has an overflow occurrence in the last scan process."]
     SINC_OVERFLOW_FLAG_1 = 0x01,
 }
 impl SincOverflowFlag {
@@ -2322,9 +2322,9 @@ impl From<SincOverflowFlag> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SincValid {
-    #[doc = "SINC filter is disabled"]
+    #[doc = "SINC filter is disabled."]
     SINC_VALID_0 = 0x0,
-    #[doc = "SINC filter is enabled"]
+    #[doc = "SINC filter is enabled."]
     SINC_VALID_1 = 0x01,
 }
 impl SincValid {
@@ -2353,9 +2353,9 @@ impl From<SincValid> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SscControlOut {
-    #[doc = "SSC output value is 0"]
+    #[doc = "SSC output value is 0."]
     SSC_CONTROL_OUT_0 = 0x0,
-    #[doc = "SSC output value is 1"]
+    #[doc = "SSC output value is 1."]
     SSC_CONTROL_OUT_1 = 0x01,
 }
 impl SscControlOut {
@@ -2384,9 +2384,9 @@ impl From<SscControlOut> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SscControlReverse {
-    #[doc = "Keep the polarity of the SSC output bit"]
+    #[doc = "Keep the polarity of the SSC output bit."]
     SSC_CONTROL_REVERSE_0 = 0x0,
-    #[doc = "Reverse the polarity of the SSC output bit"]
+    #[doc = "Reverse the polarity of the SSC output bit."]
     SSC_CONTROL_REVERSE_1 = 0x01,
 }
 impl SscControlReverse {
@@ -2415,13 +2415,13 @@ impl From<SscControlReverse> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SscMode {
-    #[doc = "Using PRBS method generating SSC output bit"]
+    #[doc = "Using PRBS method generating SSC output bit."]
     SSC_MODE_0 = 0x0,
-    #[doc = "Using up-down counter generating SSC output bit"]
+    #[doc = "Using up-down counter generating SSC output bit."]
     SSC_MODE_1 = 0x01,
-    #[doc = "SSC function is disabled"]
+    #[doc = "SSC function is disabled."]
     SSC_MODE_2 = 0x02,
-    #[doc = "NC"]
+    #[doc = "NC."]
     SSC_MODE_3 = 0x03,
 }
 impl SscMode {
@@ -2450,23 +2450,23 @@ impl From<SscMode> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct SscPrescaleNum(u16);
 impl SscPrescaleNum {
-    #[doc = "div1"]
+    #[doc = "div1."]
     pub const SSC_PRESCALE_NUM_0: Self = Self(0x0);
-    #[doc = "div2"]
+    #[doc = "div2."]
     pub const SSC_PRESCALE_NUM_1: Self = Self(0x01);
-    #[doc = "div4"]
+    #[doc = "div4."]
     pub const SSC_PRESCALE_NUM_3: Self = Self(0x03);
-    #[doc = "div8"]
+    #[doc = "div8."]
     pub const SSC_PRESCALE_NUM_7: Self = Self(0x07);
-    #[doc = "div16"]
+    #[doc = "div16."]
     pub const SSC_PRESCALE_NUM_15: Self = Self(0x0f);
-    #[doc = "div32"]
+    #[doc = "div32."]
     pub const SSC_PRESCALE_NUM_31: Self = Self(0x1f);
-    #[doc = "div64"]
+    #[doc = "div64."]
     pub const SSC_PRESCALE_NUM_63: Self = Self(0x3f);
-    #[doc = "div128"]
+    #[doc = "div128."]
     pub const SSC_PRESCALE_NUM_127: Self = Self(0x7f);
-    #[doc = "div256"]
+    #[doc = "div256."]
     pub const SSC_PRESCALE_NUM_255: Self = Self(0xff);
 }
 impl SscPrescaleNum {
@@ -2526,9 +2526,9 @@ impl From<SscPrescaleNum> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Stm {
-    #[doc = "Software trigger scan"]
+    #[doc = "Software trigger scan."]
     STM_0 = 0x0,
-    #[doc = "Hardware trigger scan"]
+    #[doc = "Hardware trigger scan."]
     STM_1 = 0x01,
 }
 impl Stm {
@@ -2557,9 +2557,9 @@ impl From<Stm> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwitchEnable {
-    #[doc = "SSC function is disabled"]
+    #[doc = "SSC function is disabled."]
     SWITCH_ENABLE_0 = 0x0,
-    #[doc = "SSC function is enabled"]
+    #[doc = "SSC function is enabled."]
     SWITCH_ENABLE_1 = 0x01,
 }
 impl SwitchEnable {
@@ -2588,9 +2588,9 @@ impl From<SwitchEnable> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Swts {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     SWTS_0 = 0x0,
-    #[doc = "Takes effect"]
+    #[doc = "Takes effect."]
     SWTS_1 = 0x01,
 }
 impl Swts {
@@ -2619,21 +2619,21 @@ impl From<Swts> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ThesholdRatio {
-    #[doc = "The thresholdh = baseline+counter/2, and thresholdl = baseline-counter/2"]
+    #[doc = "The thresholdh = baseline+counter/2, and thresholdl = baseline-counter/2."]
     THESHOLD_RATIO_0 = 0x0,
-    #[doc = "The thresholdh = baseline+counter/4, and thresholdl = baseline-counter/4"]
+    #[doc = "The thresholdh = baseline+counter/4, and thresholdl = baseline-counter/4."]
     THESHOLD_RATIO_1 = 0x01,
-    #[doc = "The thresholdh = baseline+counter/8, and thresholdl = baseline-counter/8"]
+    #[doc = "The thresholdh = baseline+counter/8, and thresholdl = baseline-counter/8."]
     THESHOLD_RATIO_2 = 0x02,
-    #[doc = "The thresholdh = baseline+counter/16, and thresholdl = baseline-counter/16"]
+    #[doc = "The thresholdh = baseline+counter/16, and thresholdl = baseline-counter/16."]
     THESHOLD_RATIO_3 = 0x03,
-    #[doc = "The thresholdh = baseline+counter/32, and thresholdl = baseline-counter/32"]
+    #[doc = "The thresholdh = baseline+counter/32, and thresholdl = baseline-counter/32."]
     THESHOLD_RATIO_4 = 0x04,
-    #[doc = "The thresholdh = baseline+counter/64, and thresholdl = baseline-counter/64"]
+    #[doc = "The thresholdh = baseline+counter/64, and thresholdl = baseline-counter/64."]
     THESHOLD_RATIO_5 = 0x05,
-    #[doc = "The thresholdh = baseline+counter/128, and thresholdl = baseline-counter/128"]
+    #[doc = "The thresholdh = baseline+counter/128, and thresholdl = baseline-counter/128."]
     THESHOLD_RATIO_6 = 0x06,
-    #[doc = "The thresholdh = baseline+counter/256, and thresholdl = baseline-counter/256"]
+    #[doc = "The thresholdh = baseline+counter/256, and thresholdl = baseline-counter/256."]
     THESHOLD_RATIO_7 = 0x07,
 }
 impl ThesholdRatio {
@@ -2662,9 +2662,9 @@ impl From<ThesholdRatio> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ThresholdTraceEn {
-    #[doc = "Disable threshold trace function"]
+    #[doc = "Disable threshold trace function."]
     THRESHOLD_TRACE_EN_0 = 0x0,
-    #[doc = "Enable threshold trace function"]
+    #[doc = "Enable threshold trace function."]
     THRESHOLD_TRACE_EN_1 = 0x01,
 }
 impl ThresholdTraceEn {
@@ -2693,69 +2693,69 @@ impl From<ThresholdTraceEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TrigClkDivider {
-    #[doc = "No divider"]
+    #[doc = "No divider."]
     TRIG_CLK_DIVIDER_0 = 0x0,
-    #[doc = "Divided by 2"]
+    #[doc = "Divided by 2."]
     TRIG_CLK_DIVIDER_1 = 0x01,
-    #[doc = "Divided by 3"]
+    #[doc = "Divided by 3."]
     TRIG_CLK_DIVIDER_2 = 0x02,
-    #[doc = "Divided by 4"]
+    #[doc = "Divided by 4."]
     TRIG_CLK_DIVIDER_3 = 0x03,
-    #[doc = "Divided by 5"]
+    #[doc = "Divided by 5."]
     TRIG_CLK_DIVIDER_4 = 0x04,
-    #[doc = "Divided by 6"]
+    #[doc = "Divided by 6."]
     TRIG_CLK_DIVIDER_5 = 0x05,
-    #[doc = "Divided by 7"]
+    #[doc = "Divided by 7."]
     TRIG_CLK_DIVIDER_6 = 0x06,
-    #[doc = "Divided by 8"]
+    #[doc = "Divided by 8."]
     TRIG_CLK_DIVIDER_7 = 0x07,
-    #[doc = "Divided by 9"]
+    #[doc = "Divided by 9."]
     TRIG_CLK_DIVIDER_8 = 0x08,
-    #[doc = "Divided by 10"]
+    #[doc = "Divided by 10."]
     TRIG_CLK_DIVIDER_9 = 0x09,
-    #[doc = "Divided by 11"]
+    #[doc = "Divided by 11."]
     TRIG_CLK_DIVIDER_10 = 0x0a,
-    #[doc = "Divided by 12"]
+    #[doc = "Divided by 12."]
     TRIG_CLK_DIVIDER_11 = 0x0b,
-    #[doc = "Divided by 13"]
+    #[doc = "Divided by 13."]
     TRIG_CLK_DIVIDER_12 = 0x0c,
-    #[doc = "Divided by 14"]
+    #[doc = "Divided by 14."]
     TRIG_CLK_DIVIDER_13 = 0x0d,
-    #[doc = "Divided by 15"]
+    #[doc = "Divided by 15."]
     TRIG_CLK_DIVIDER_14 = 0x0e,
-    #[doc = "Divided by 16"]
+    #[doc = "Divided by 16."]
     TRIG_CLK_DIVIDER_15 = 0x0f,
-    #[doc = "Divided by 17"]
+    #[doc = "Divided by 17."]
     TRIG_CLK_DIVIDER_16 = 0x10,
-    #[doc = "Divided by 18"]
+    #[doc = "Divided by 18."]
     TRIG_CLK_DIVIDER_17 = 0x11,
-    #[doc = "Divided by 19"]
+    #[doc = "Divided by 19."]
     TRIG_CLK_DIVIDER_18 = 0x12,
-    #[doc = "Divided by 20"]
+    #[doc = "Divided by 20."]
     TRIG_CLK_DIVIDER_19 = 0x13,
-    #[doc = "Divided by 21"]
+    #[doc = "Divided by 21."]
     TRIG_CLK_DIVIDER_20 = 0x14,
-    #[doc = "Divided by 22"]
+    #[doc = "Divided by 22."]
     TRIG_CLK_DIVIDER_21 = 0x15,
-    #[doc = "Divided by 23"]
+    #[doc = "Divided by 23."]
     TRIG_CLK_DIVIDER_22 = 0x16,
-    #[doc = "Divided by 24"]
+    #[doc = "Divided by 24."]
     TRIG_CLK_DIVIDER_23 = 0x17,
-    #[doc = "Divided by 25"]
+    #[doc = "Divided by 25."]
     TRIG_CLK_DIVIDER_24 = 0x18,
-    #[doc = "Divided by 26"]
+    #[doc = "Divided by 26."]
     TRIG_CLK_DIVIDER_25 = 0x19,
-    #[doc = "Divided by 27"]
+    #[doc = "Divided by 27."]
     TRIG_CLK_DIVIDER_26 = 0x1a,
-    #[doc = "Divided by 28"]
+    #[doc = "Divided by 28."]
     TRIG_CLK_DIVIDER_27 = 0x1b,
-    #[doc = "Divided by 29"]
+    #[doc = "Divided by 29."]
     TRIG_CLK_DIVIDER_28 = 0x1c,
-    #[doc = "Divided by 30"]
+    #[doc = "Divided by 30."]
     TRIG_CLK_DIVIDER_29 = 0x1d,
-    #[doc = "Divided by 31"]
+    #[doc = "Divided by 31."]
     TRIG_CLK_DIVIDER_30 = 0x1e,
-    #[doc = "Divided by 32"]
+    #[doc = "Divided by 32."]
     TRIG_CLK_DIVIDER_31 = 0x1f,
 }
 impl TrigClkDivider {
@@ -2784,9 +2784,9 @@ impl From<TrigClkDivider> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TrigClkSel {
-    #[doc = "32 KHz clock"]
+    #[doc = "32 KHz clock."]
     TRIG_CLK_SEL_0 = 0x0,
-    #[doc = "clksoc"]
+    #[doc = "clksoc."]
     TRIG_CLK_SEL_1 = 0x01,
 }
 impl TrigClkSel {
@@ -2815,9 +2815,9 @@ impl From<TrigClkSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TrigEn {
-    #[doc = "disabled"]
+    #[doc = "disabled."]
     TRIG_EN_0 = 0x0,
-    #[doc = "enabled"]
+    #[doc = "enabled."]
     TRIG_EN_1 = 0x01,
 }
 impl TrigEn {
@@ -2846,21 +2846,21 @@ impl From<TrigEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TsiAnaTestSetting {
-    #[doc = "Normal operation mode"]
+    #[doc = "Normal operation mode."]
     TSI_ANA_TEST_SETTING_0 = 0x0,
-    #[doc = "Test mode 1, Vref test"]
+    #[doc = "Test mode 1, Vref test."]
     TSI_ANA_TEST_SETTING_1 = 0x01,
-    #[doc = "Test mode 2, Vprechrg voltage test"]
+    #[doc = "Test mode 2, Vprechrg voltage test."]
     TSI_ANA_TEST_SETTING_2 = 0x02,
-    #[doc = "Test mode 3, Comparator test"]
+    #[doc = "Test mode 3, Comparator test."]
     TSI_ANA_TEST_SETTING_3 = 0x03,
-    #[doc = "Test mode 4, Precharge function test"]
+    #[doc = "Test mode 4, Precharge function test."]
     TSI_ANA_TEST_SETTING_4 = 0x04,
-    #[doc = "Test mode 5, 4uA bias test"]
+    #[doc = "Test mode 5, 4uA bias test."]
     TSI_ANA_TEST_SETTING_5 = 0x05,
-    #[doc = "Test mode 6, 2uA bias test"]
+    #[doc = "Test mode 6, 2uA bias test."]
     TSI_ANA_TEST_SETTING_6 = 0x06,
-    #[doc = "Test mode 7, Function monitor test"]
+    #[doc = "Test mode 7, Function monitor test."]
     TSI_ANA_TEST_SETTING_7 = 0x07,
     _RESERVED_8 = 0x08,
     _RESERVED_9 = 0x09,
@@ -2897,9 +2897,9 @@ impl From<TsiAnaTestSetting> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TsiTestEn {
-    #[doc = "Test mode is disabled"]
+    #[doc = "Test mode is disabled."]
     TSI_TEST_EN_0 = 0x0,
-    #[doc = "Test mode is enabled"]
+    #[doc = "Test mode is enabled."]
     TSI_TEST_EN_1 = 0x01,
 }
 impl TsiTestEn {
@@ -2928,9 +2928,9 @@ impl From<TsiTestEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TsicntOverflowFlag {
-    #[doc = "The DATA\\[TSICNT\\] value has no overflow occurrence in the last scan process"]
+    #[doc = "The DATA\\[TSICNT\\] value has no overflow occurrence in the last scan process."]
     TSICNT_OVERFLOW_FLAG_0 = 0x0,
-    #[doc = "The DATA\\[TSICNT\\] value has an overflow occurrence in the last scan process"]
+    #[doc = "The DATA\\[TSICNT\\] value has an overflow occurrence in the last scan process."]
     TSICNT_OVERFLOW_FLAG_1 = 0x01,
 }
 impl TsicntOverflowFlag {
@@ -2959,9 +2959,9 @@ impl From<TsicntOverflowFlag> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tsien {
-    #[doc = "TSI module disabled"]
+    #[doc = "TSI module disabled."]
     TSIEN_0 = 0x0,
-    #[doc = "TSI module enabled"]
+    #[doc = "TSI module enabled."]
     TSIEN_1 = 0x01,
 }
 impl Tsien {
@@ -2990,9 +2990,9 @@ impl From<Tsien> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TsienDpd {
-    #[doc = "3v domain logic is disabled"]
+    #[doc = "3v domain logic is disabled."]
     TSIEN_DPD_0 = 0x0,
-    #[doc = "3v domain logic is enabled"]
+    #[doc = "3v domain logic is enabled."]
     TSIEN_DPD_1 = 0x01,
 }
 impl TsienDpd {
@@ -3021,21 +3021,21 @@ impl From<TsienDpd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum XinScaleDown {
-    #[doc = "1 (default)"]
+    #[doc = "1 (default)."]
     XIN_SCALE_DOWN_0 = 0x0,
-    #[doc = "1/2"]
+    #[doc = "1/2."]
     XIN_SCALE_DOWN_1 = 0x01,
-    #[doc = "1/3"]
+    #[doc = "1/3."]
     XIN_SCALE_DOWN_2 = 0x02,
-    #[doc = "1/4"]
+    #[doc = "1/4."]
     XIN_SCALE_DOWN_3 = 0x03,
-    #[doc = "1/5"]
+    #[doc = "1/5."]
     XIN_SCALE_DOWN_4 = 0x04,
-    #[doc = "1/6"]
+    #[doc = "1/6."]
     XIN_SCALE_DOWN_5 = 0x05,
-    #[doc = "1/7"]
+    #[doc = "1/7."]
     XIN_SCALE_DOWN_6 = 0x06,
-    #[doc = "1/8"]
+    #[doc = "1/8."]
     XIN_SCALE_DOWN_7 = 0x07,
     _RESERVED_8 = 0x08,
     _RESERVED_9 = 0x09,
@@ -3072,21 +3072,21 @@ impl From<XinScaleDown> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum XinScaleDownTrim {
-    #[doc = "1 (default)"]
+    #[doc = "1 (default)."]
     XIN_SCALE_DOWN_TRIM_0 = 0x0,
-    #[doc = "1/2"]
+    #[doc = "1/2."]
     XIN_SCALE_DOWN_TRIM_1 = 0x01,
-    #[doc = "1/3"]
+    #[doc = "1/3."]
     XIN_SCALE_DOWN_TRIM_2 = 0x02,
-    #[doc = "1/4"]
+    #[doc = "1/4."]
     XIN_SCALE_DOWN_TRIM_3 = 0x03,
-    #[doc = "1/5"]
+    #[doc = "1/5."]
     XIN_SCALE_DOWN_TRIM_4 = 0x04,
-    #[doc = "1/6"]
+    #[doc = "1/6."]
     XIN_SCALE_DOWN_TRIM_5 = 0x05,
-    #[doc = "1/7"]
+    #[doc = "1/7."]
     XIN_SCALE_DOWN_TRIM_6 = 0x06,
-    #[doc = "1/8"]
+    #[doc = "1/8."]
     XIN_SCALE_DOWN_TRIM_7 = 0x07,
     _RESERVED_8 = 0x08,
     _RESERVED_9 = 0x09,

@@ -1,28 +1,28 @@
-#[doc = "Configuration Register"]
+#[doc = "Configuration Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cfg(pub u32);
 impl Cfg {
-    #[doc = "PUF SRAM Controller activation"]
+    #[doc = "PUF SRAM Controller activation."]
     #[must_use]
     #[inline(always)]
     pub const fn enable(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "PUF SRAM Controller activation"]
+    #[doc = "PUF SRAM Controller activation."]
     #[inline(always)]
     pub const fn set_enable(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "PUF SRAM Clock Gating control"]
+    #[doc = "PUF SRAM Clock Gating control."]
     #[must_use]
     #[inline(always)]
     pub const fn ckgating(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "PUF SRAM Clock Gating control"]
+    #[doc = "PUF SRAM Clock Gating control."]
     #[inline(always)]
     pub const fn set_ckgating(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
@@ -53,31 +53,31 @@ impl defmt::Format for Cfg {
         )
     }
 }
-#[doc = "Interrupt Enable Clear Register"]
+#[doc = "Interrupt Enable Clear Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct IntClrEnable(pub u32);
 impl IntClrEnable {
-    #[doc = "READY Interrupt Enable clear"]
+    #[doc = "READY Interrupt Enable clear."]
     #[must_use]
     #[inline(always)]
     pub const fn ready(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "READY Interrupt Enable clear"]
+    #[doc = "READY Interrupt Enable clear."]
     #[inline(always)]
     pub const fn set_ready(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "APB_ERR Interrupt Enable clear"]
+    #[doc = "APB_ERR Interrupt Enable clear."]
     #[must_use]
     #[inline(always)]
     pub const fn apb_err(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "APB_ERR Interrupt Enable clear"]
+    #[doc = "APB_ERR Interrupt Enable clear."]
     #[inline(always)]
     pub const fn set_apb_err(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
@@ -108,31 +108,31 @@ impl defmt::Format for IntClrEnable {
         )
     }
 }
-#[doc = "Interrupt Status Clear Register"]
+#[doc = "Interrupt Status Clear Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct IntClrStatus(pub u32);
 impl IntClrStatus {
-    #[doc = "READY Interrupt Status clear"]
+    #[doc = "READY Interrupt Status clear."]
     #[must_use]
     #[inline(always)]
     pub const fn ready(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "READY Interrupt Status clear"]
+    #[doc = "READY Interrupt Status clear."]
     #[inline(always)]
     pub const fn set_ready(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "APB_ERR Interrupt Status Clear"]
+    #[doc = "APB_ERR Interrupt Status Clear."]
     #[must_use]
     #[inline(always)]
     pub const fn apb_err(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "APB_ERR Interrupt Status Clear"]
+    #[doc = "APB_ERR Interrupt Status Clear."]
     #[inline(always)]
     pub const fn set_apb_err(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
@@ -163,31 +163,31 @@ impl defmt::Format for IntClrStatus {
         )
     }
 }
-#[doc = "Interrupt Enable Register"]
+#[doc = "Interrupt Enable Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct IntEnable(pub u32);
 impl IntEnable {
-    #[doc = "READY Interrupt Enable"]
+    #[doc = "READY Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ready(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "READY Interrupt Enable"]
+    #[doc = "READY Interrupt Enable."]
     #[inline(always)]
     pub const fn set_ready(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "APB_ERR Interrupt Enable"]
+    #[doc = "APB_ERR Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn apb_err(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "APB_ERR Interrupt Enable"]
+    #[doc = "APB_ERR Interrupt Enable."]
     #[inline(always)]
     pub const fn set_apb_err(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
@@ -218,31 +218,31 @@ impl defmt::Format for IntEnable {
         )
     }
 }
-#[doc = "Interrupt Enable Set Register"]
+#[doc = "Interrupt Enable Set Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct IntSetEnable(pub u32);
 impl IntSetEnable {
-    #[doc = "READY Interrupt Enable set"]
+    #[doc = "READY Interrupt Enable set."]
     #[must_use]
     #[inline(always)]
     pub const fn ready(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "READY Interrupt Enable set"]
+    #[doc = "READY Interrupt Enable set."]
     #[inline(always)]
     pub const fn set_ready(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "APB_ERR Interrupt Enable set"]
+    #[doc = "APB_ERR Interrupt Enable set."]
     #[must_use]
     #[inline(always)]
     pub const fn apb_err(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "APB_ERR Interrupt Enable set"]
+    #[doc = "APB_ERR Interrupt Enable set."]
     #[inline(always)]
     pub const fn set_apb_err(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
@@ -273,31 +273,31 @@ impl defmt::Format for IntSetEnable {
         )
     }
 }
-#[doc = "Interrupt Status set"]
+#[doc = "Interrupt Status set."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct IntSetStatus(pub u32);
 impl IntSetStatus {
-    #[doc = "READY Interrupt Status set"]
+    #[doc = "READY Interrupt Status set."]
     #[must_use]
     #[inline(always)]
     pub const fn ready(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "READY Interrupt Status set"]
+    #[doc = "READY Interrupt Status set."]
     #[inline(always)]
     pub const fn set_ready(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "APB_ERR Interrupt Status Set"]
+    #[doc = "APB_ERR Interrupt Status Set."]
     #[must_use]
     #[inline(always)]
     pub const fn apb_err(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "APB_ERR Interrupt Status Set"]
+    #[doc = "APB_ERR Interrupt Status Set."]
     #[inline(always)]
     pub const fn set_apb_err(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
@@ -328,31 +328,31 @@ impl defmt::Format for IntSetStatus {
         )
     }
 }
-#[doc = "Interrupt Status Register"]
+#[doc = "Interrupt Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct IntStatus(pub u32);
 impl IntStatus {
-    #[doc = "READY Interrupt Status"]
+    #[doc = "READY Interrupt Status."]
     #[must_use]
     #[inline(always)]
     pub const fn ready(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "READY Interrupt Status"]
+    #[doc = "READY Interrupt Status."]
     #[inline(always)]
     pub const fn set_ready(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "APB_ERR Interrupt Status"]
+    #[doc = "APB_ERR Interrupt Status."]
     #[must_use]
     #[inline(always)]
     pub const fn apb_err(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "APB_ERR Interrupt Status"]
+    #[doc = "APB_ERR Interrupt Status."]
     #[inline(always)]
     pub const fn set_apb_err(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
@@ -383,19 +383,19 @@ impl defmt::Format for IntStatus {
         )
     }
 }
-#[doc = "Status Register"]
+#[doc = "Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Status(pub u32);
 impl Status {
-    #[doc = "PUF SRAM Controller State"]
+    #[doc = "PUF SRAM Controller State."]
     #[must_use]
     #[inline(always)]
     pub const fn ready(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "PUF SRAM Controller State"]
+    #[doc = "PUF SRAM Controller State."]
     #[inline(always)]
     pub const fn set_ready(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);

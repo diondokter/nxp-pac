@@ -8,7 +8,7 @@ pub enum Dcpole {
     HZ_155 = 0x01,
     #[doc = "78 Hz."]
     HZ_78 = 0x02,
-    #[doc = "39 Hz"]
+    #[doc = "39 Hz."]
     HZ_39 = 0x03,
 }
 impl Dcpole {
@@ -37,9 +37,9 @@ impl From<Dcpole> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Decreset(u8);
 impl Decreset {
-    #[doc = "release reset to decimator"]
+    #[doc = "release reset to decimator."]
     pub const RELEASE_RESET: Self = Self(0x0);
-    #[doc = "assert reset to decimator Note : resets are applied in pairs. So bit 0 corresponds to channels 0/1, bit1 corresponds to channels 2/3, bit2 to channel 4/5 and bit3 to channel 6/7"]
+    #[doc = "assert reset to decimator Note : resets are applied in pairs. So bit 0 corresponds to channels 0/1, bit1 corresponds to channels 2/3, bit2 to channel 4/5 and bit3 to channel 6/7."]
     pub const ASSERT_RESET: Self = Self(0x01);
 }
 impl Decreset {
@@ -183,7 +183,7 @@ impl From<PhyHalf> for u8 {
 pub enum Resetn {
     #[doc = "Reset the FIFO."]
     RESET = 0x0,
-    #[doc = "Normal operation"]
+    #[doc = "Normal operation."]
     NORMAL = 0x01,
 }
 impl Resetn {

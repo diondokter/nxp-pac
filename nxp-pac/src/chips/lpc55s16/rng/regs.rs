@@ -1,4 +1,4 @@
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CounterCfg(pub u32);
@@ -67,7 +67,7 @@ impl defmt::Format for CounterCfg {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CounterVal(pub u32);
@@ -122,7 +122,7 @@ impl defmt::Format for CounterVal {
         )
     }
 }
-#[doc = "This register contains a random 32 bit number which is pre-computed"]
+#[doc = "This register contains a random 32 bit number which is pre-computed."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct EncryptedNumber(pub u32);
@@ -163,7 +163,7 @@ impl defmt::Format for EncryptedNumber {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct EntropyInject(pub u32);
@@ -200,7 +200,7 @@ impl defmt::Format for EntropyInject {
         defmt::write!(f, "EntropyInject {{ entropy: {=u32:?} }}", self.entropy())
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct MiscCfg(pub u32);
@@ -255,7 +255,7 @@ impl defmt::Format for MiscCfg {
         )
     }
 }
-#[doc = "IP identifier"]
+#[doc = "IP identifier."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Moduleid(pub u32);
@@ -338,7 +338,7 @@ impl defmt::Format for Moduleid {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OnlineTestCfg(pub u32);
@@ -393,7 +393,7 @@ impl defmt::Format for OnlineTestCfg {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OnlineTestVal(pub u32);
@@ -462,7 +462,7 @@ impl defmt::Format for OnlineTestVal {
         )
     }
 }
-#[doc = "Powerdown mode (standard but certainly useless here)"]
+#[doc = "Powerdown mode (standard but certainly useless here)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Powerdown(pub u32);
@@ -531,7 +531,7 @@ impl defmt::Format for Powerdown {
         )
     }
 }
-#[doc = "This register contains a random 32 bit number which is computed on demand, at each time it is read"]
+#[doc = "This register contains a random 32 bit number which is computed on demand, at each time it is read."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct RandomNumber(pub u32);

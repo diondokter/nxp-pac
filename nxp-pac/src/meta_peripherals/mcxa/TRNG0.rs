@@ -2,14 +2,14 @@
 #![allow(non_snake_case)]
 #![no_std]
 #![doc = "Peripheral access API (generated using chiptool v0.1.0 (6a8c2aa 2026-01-27))"]
-#[doc = "pd_main.trng."]
+#[doc = "pd_main.trng0."]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Trng {
+pub struct Trng0 {
     ptr: *mut u8,
 }
-unsafe impl Send for Trng {}
-unsafe impl Sync for Trng {}
-impl Trng {
+unsafe impl Send for Trng0 {}
+unsafe impl Sync for Trng0 {}
+impl Trng0 {
     #[inline(always)]
     pub const unsafe fn from_ptr(ptr: *mut ()) -> Self {
         Self { ptr: ptr as _ }

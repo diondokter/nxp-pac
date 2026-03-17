@@ -2,7 +2,7 @@
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Feature(u16);
 impl Feature {
-    #[doc = "Standard feature set"]
+    #[doc = "Standard feature set."]
     pub const STANDARD: Self = Self(0x0);
 }
 impl Feature {
@@ -46,9 +46,9 @@ impl From<Feature> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Hvreq {
-    #[doc = "Turn off"]
+    #[doc = "Turn off."]
     TURN_OFF = 0x0,
-    #[doc = "Turn on"]
+    #[doc = "Turn on."]
     TURN_ON = 0x01,
 }
 impl Hvreq {
@@ -77,9 +77,9 @@ impl From<Hvreq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lvreq {
-    #[doc = "Turn off"]
+    #[doc = "Turn off."]
     TURN_OFF = 0x0,
-    #[doc = "Turn on"]
+    #[doc = "Turn on."]
     TURN_ON = 0x01,
 }
 impl Lvreq {
@@ -141,7 +141,7 @@ impl From<Pdreq> for u8 {
 pub enum ReadEfuse {
     #[doc = "Starts program operation when the WR_UNLOCK value is 0x9527; otherwise, takes no action."]
     PROGRAM = 0x0,
-    #[doc = "Starts read operation"]
+    #[doc = "Starts read operation."]
     READ = 0x01,
 }
 impl ReadEfuse {
@@ -170,9 +170,9 @@ impl From<ReadEfuse> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ReloadShadows {
-    #[doc = "No action (when writing) or reload complete (when reading)"]
+    #[doc = "No action (when writing) or reload complete (when reading)."]
     NO_ACTION = 0x0,
-    #[doc = "Reload"]
+    #[doc = "Reload."]
     RELOAD = 0x01,
 }
 impl ReloadShadows {
@@ -201,9 +201,9 @@ impl From<ReloadShadows> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum WrAll1s {
-    #[doc = "Uses the WDATA value"]
+    #[doc = "Uses the WDATA value."]
     USE_WDATA = 0x0,
-    #[doc = "Writes all 1s"]
+    #[doc = "Writes all 1s."]
     USE_ALL1S = 0x01,
 }
 impl WrAll1s {

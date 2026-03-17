@@ -231,13 +231,13 @@ impl From<FilterCnt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Hystctr {
-    #[doc = "Level 0"]
+    #[doc = "Level 0."]
     HYSTCTR_0 = 0x0,
-    #[doc = "Level 1"]
+    #[doc = "Level 1."]
     HYSTCTR_1 = 0x01,
-    #[doc = "Level 2"]
+    #[doc = "Level 2."]
     HYSTCTR_2 = 0x02,
-    #[doc = "Level 3"]
+    #[doc = "Level 3."]
     HYSTCTR_3 = 0x03,
 }
 impl Hystctr {
@@ -359,21 +359,21 @@ impl From<Inv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Msel {
-    #[doc = "IN0"]
+    #[doc = "IN0."]
     MSEL_0 = 0x0,
-    #[doc = "IN1"]
+    #[doc = "IN1."]
     MSEL_1 = 0x01,
-    #[doc = "IN2"]
+    #[doc = "IN2."]
     MSEL_2 = 0x02,
-    #[doc = "IN3"]
+    #[doc = "IN3."]
     MSEL_3 = 0x03,
-    #[doc = "IN4"]
+    #[doc = "IN4."]
     MSEL_4 = 0x04,
-    #[doc = "IN5"]
+    #[doc = "IN5."]
     MSEL_5 = 0x05,
-    #[doc = "IN6"]
+    #[doc = "IN6."]
     MSEL_6 = 0x06,
-    #[doc = "IN7"]
+    #[doc = "IN7."]
     MSEL_7 = 0x07,
 }
 impl Msel {
@@ -464,21 +464,21 @@ impl From<Pmode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Psel {
-    #[doc = "IN0"]
+    #[doc = "IN0."]
     PSEL_0 = 0x0,
-    #[doc = "IN1"]
+    #[doc = "IN1."]
     PSEL_1 = 0x01,
-    #[doc = "IN2"]
+    #[doc = "IN2."]
     PSEL_2 = 0x02,
-    #[doc = "IN3"]
+    #[doc = "IN3."]
     PSEL_3 = 0x03,
-    #[doc = "IN4"]
+    #[doc = "IN4."]
     PSEL_4 = 0x04,
-    #[doc = "IN5"]
+    #[doc = "IN5."]
     PSEL_5 = 0x05,
-    #[doc = "IN6"]
+    #[doc = "IN6."]
     PSEL_6 = 0x06,
-    #[doc = "IN7"]
+    #[doc = "IN7."]
     PSEL_7 = 0x07,
 }
 impl Psel {

@@ -1,28 +1,28 @@
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct AuxBiasCurveAmbient0(pub u32);
 impl AuxBiasCurveAmbient0 {
-    #[doc = "VREF1VCURVETRIM_0 (unit: 100uV)"]
+    #[doc = "VREF1VCURVETRIM_0 (unit: 100uV)."]
     #[must_use]
     #[inline(always)]
     pub const fn vref1vcurvetrim_0(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "VREF1VCURVETRIM_0 (unit: 100uV)"]
+    #[doc = "VREF1VCURVETRIM_0 (unit: 100uV)."]
     #[inline(always)]
     pub const fn set_vref1vcurvetrim_0(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "VREF1VCURVETRIM_1 (unit: 100uV)"]
+    #[doc = "VREF1VCURVETRIM_1 (unit: 100uV)."]
     #[must_use]
     #[inline(always)]
     pub const fn vref1vcurvetrim_1(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "VREF1VCURVETRIM_1 (unit: 100uV)"]
+    #[doc = "VREF1VCURVETRIM_1 (unit: 100uV)."]
     #[inline(always)]
     pub const fn set_vref1vcurvetrim_1(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -53,31 +53,31 @@ impl defmt::Format for AuxBiasCurveAmbient0 {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct AuxBiasCurveAmbient1(pub u32);
 impl AuxBiasCurveAmbient1 {
-    #[doc = "VREF1VCURVETRIM_2 (unit: 100uV)"]
+    #[doc = "VREF1VCURVETRIM_2 (unit: 100uV)."]
     #[must_use]
     #[inline(always)]
     pub const fn vref1vcurvetrim_2(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "VREF1VCURVETRIM_2 (unit: 100uV)"]
+    #[doc = "VREF1VCURVETRIM_2 (unit: 100uV)."]
     #[inline(always)]
     pub const fn set_vref1vcurvetrim_2(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "VREF1VCURVETRIM_3 (unit: 100uV)"]
+    #[doc = "VREF1VCURVETRIM_3 (unit: 100uV)."]
     #[must_use]
     #[inline(always)]
     pub const fn vref1vcurvetrim_3(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "VREF1VCURVETRIM_3 (unit: 100uV)"]
+    #[doc = "VREF1VCURVETRIM_3 (unit: 100uV)."]
     #[inline(always)]
     pub const fn set_vref1vcurvetrim_3(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -108,31 +108,31 @@ impl defmt::Format for AuxBiasCurveAmbient1 {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct AuxBiasCurveAmbient2(pub u32);
 impl AuxBiasCurveAmbient2 {
-    #[doc = "VREF1VCURVETRIM_4 (unit: 100uV)"]
+    #[doc = "VREF1VCURVETRIM_4 (unit: 100uV)."]
     #[must_use]
     #[inline(always)]
     pub const fn vref1vcurvetrim_4(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "VREF1VCURVETRIM_4 (unit: 100uV)"]
+    #[doc = "VREF1VCURVETRIM_4 (unit: 100uV)."]
     #[inline(always)]
     pub const fn set_vref1vcurvetrim_4(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "VREF1VCURVETRIM_5 (unit: 100uV)"]
+    #[doc = "VREF1VCURVETRIM_5 (unit: 100uV)."]
     #[must_use]
     #[inline(always)]
     pub const fn vref1vcurvetrim_5(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "VREF1VCURVETRIM_5 (unit: 100uV)"]
+    #[doc = "VREF1VCURVETRIM_5 (unit: 100uV)."]
     #[inline(always)]
     pub const fn set_vref1vcurvetrim_5(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -163,31 +163,31 @@ impl defmt::Format for AuxBiasCurveAmbient2 {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct AuxBiasCurveAmbient3(pub u32);
 impl AuxBiasCurveAmbient3 {
-    #[doc = "VREF1VCURVETRIM_6 (unit: 100uV)"]
+    #[doc = "VREF1VCURVETRIM_6 (unit: 100uV)."]
     #[must_use]
     #[inline(always)]
     pub const fn vref1vcurvetrim_6(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "VREF1VCURVETRIM_6 (unit: 100uV)"]
+    #[doc = "VREF1VCURVETRIM_6 (unit: 100uV)."]
     #[inline(always)]
     pub const fn set_vref1vcurvetrim_6(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "VREF1VCURVETRIM_7 (unit: 100uV)"]
+    #[doc = "VREF1VCURVETRIM_7 (unit: 100uV)."]
     #[must_use]
     #[inline(always)]
     pub const fn vref1vcurvetrim_7(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "VREF1VCURVETRIM_7 (unit: 100uV)"]
+    #[doc = "VREF1VCURVETRIM_7 (unit: 100uV)."]
     #[inline(always)]
     pub const fn set_vref1vcurvetrim_7(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -218,19 +218,19 @@ impl defmt::Format for AuxBiasCurveAmbient3 {
         )
     }
 }
-#[doc = "Aux Bias Curve Ambient (30degC)"]
+#[doc = "Aux Bias Curve Ambient (30degC)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct AuxBiasCurveAmbientArray0(pub u32);
 impl AuxBiasCurveAmbientArray0 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -259,19 +259,19 @@ impl defmt::Format for AuxBiasCurveAmbientArray0 {
         )
     }
 }
-#[doc = "Aux Bias Curve Ambient (30degC)"]
+#[doc = "Aux Bias Curve Ambient (30degC)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct AuxBiasCurveAmbientArray1(pub u32);
 impl AuxBiasCurveAmbientArray1 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -300,19 +300,19 @@ impl defmt::Format for AuxBiasCurveAmbientArray1 {
         )
     }
 }
-#[doc = "Aux Bias Curve Ambient (30degC)"]
+#[doc = "Aux Bias Curve Ambient (30degC)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct AuxBiasCurveAmbientArray2(pub u32);
 impl AuxBiasCurveAmbientArray2 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -341,19 +341,19 @@ impl defmt::Format for AuxBiasCurveAmbientArray2 {
         )
     }
 }
-#[doc = "Aux Bias Curve Ambient (30degC)"]
+#[doc = "Aux Bias Curve Ambient (30degC)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct AuxBiasCurveAmbientArray3(pub u32);
 impl AuxBiasCurveAmbientArray3 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -382,31 +382,31 @@ impl defmt::Format for AuxBiasCurveAmbientArray3 {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct AuxBiasCurveTemp0(pub u32);
 impl AuxBiasCurveTemp0 {
-    #[doc = "VREF1VCURVETRIM_0 (unit: 100uV)"]
+    #[doc = "VREF1VCURVETRIM_0 (unit: 100uV)."]
     #[must_use]
     #[inline(always)]
     pub const fn vref1vcurvetrim_0(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "VREF1VCURVETRIM_0 (unit: 100uV)"]
+    #[doc = "VREF1VCURVETRIM_0 (unit: 100uV)."]
     #[inline(always)]
     pub const fn set_vref1vcurvetrim_0(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "VREF1VCURVETRIM_1 (unit: 100uV)"]
+    #[doc = "VREF1VCURVETRIM_1 (unit: 100uV)."]
     #[must_use]
     #[inline(always)]
     pub const fn vref1vcurvetrim_1(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "VREF1VCURVETRIM_1 (unit: 100uV)"]
+    #[doc = "VREF1VCURVETRIM_1 (unit: 100uV)."]
     #[inline(always)]
     pub const fn set_vref1vcurvetrim_1(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -437,31 +437,31 @@ impl defmt::Format for AuxBiasCurveTemp0 {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct AuxBiasCurveTemp1(pub u32);
 impl AuxBiasCurveTemp1 {
-    #[doc = "VREF1VCURVETRIM_2 (unit: 100uV)"]
+    #[doc = "VREF1VCURVETRIM_2 (unit: 100uV)."]
     #[must_use]
     #[inline(always)]
     pub const fn vref1vcurvetrim_2(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "VREF1VCURVETRIM_2 (unit: 100uV)"]
+    #[doc = "VREF1VCURVETRIM_2 (unit: 100uV)."]
     #[inline(always)]
     pub const fn set_vref1vcurvetrim_2(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "VREF1VCURVETRIM_3 (unit: 100uV)"]
+    #[doc = "VREF1VCURVETRIM_3 (unit: 100uV)."]
     #[must_use]
     #[inline(always)]
     pub const fn vref1vcurvetrim_3(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "VREF1VCURVETRIM_3 (unit: 100uV)"]
+    #[doc = "VREF1VCURVETRIM_3 (unit: 100uV)."]
     #[inline(always)]
     pub const fn set_vref1vcurvetrim_3(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -492,31 +492,31 @@ impl defmt::Format for AuxBiasCurveTemp1 {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct AuxBiasCurveTemp2(pub u32);
 impl AuxBiasCurveTemp2 {
-    #[doc = "VREF1VCURVETRIM_4 (unit: 100uV)"]
+    #[doc = "VREF1VCURVETRIM_4 (unit: 100uV)."]
     #[must_use]
     #[inline(always)]
     pub const fn vref1vcurvetrim_4(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "VREF1VCURVETRIM_4 (unit: 100uV)"]
+    #[doc = "VREF1VCURVETRIM_4 (unit: 100uV)."]
     #[inline(always)]
     pub const fn set_vref1vcurvetrim_4(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "VREF1VCURVETRIM_5 (unit: 100uV)"]
+    #[doc = "VREF1VCURVETRIM_5 (unit: 100uV)."]
     #[must_use]
     #[inline(always)]
     pub const fn vref1vcurvetrim_5(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "VREF1VCURVETRIM_5 (unit: 100uV)"]
+    #[doc = "VREF1VCURVETRIM_5 (unit: 100uV)."]
     #[inline(always)]
     pub const fn set_vref1vcurvetrim_5(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -547,31 +547,31 @@ impl defmt::Format for AuxBiasCurveTemp2 {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct AuxBiasCurveTemp3(pub u32);
 impl AuxBiasCurveTemp3 {
-    #[doc = "VREF1VCURVETRIM_6 (unit: 100uV)"]
+    #[doc = "VREF1VCURVETRIM_6 (unit: 100uV)."]
     #[must_use]
     #[inline(always)]
     pub const fn vref1vcurvetrim_6(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "VREF1VCURVETRIM_6 (unit: 100uV)"]
+    #[doc = "VREF1VCURVETRIM_6 (unit: 100uV)."]
     #[inline(always)]
     pub const fn set_vref1vcurvetrim_6(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "VREF1VCURVETRIM_7 (unit: 100uV)"]
+    #[doc = "VREF1VCURVETRIM_7 (unit: 100uV)."]
     #[must_use]
     #[inline(always)]
     pub const fn vref1vcurvetrim_7(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "VREF1VCURVETRIM_7 (unit: 100uV)"]
+    #[doc = "VREF1VCURVETRIM_7 (unit: 100uV)."]
     #[inline(always)]
     pub const fn set_vref1vcurvetrim_7(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -602,19 +602,19 @@ impl defmt::Format for AuxBiasCurveTemp3 {
         )
     }
 }
-#[doc = "Aux Bias Curve TEMP (105degC)"]
+#[doc = "Aux Bias Curve TEMP (105degC)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct AuxBiasCurveTempArray0(pub u32);
 impl AuxBiasCurveTempArray0 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -643,19 +643,19 @@ impl defmt::Format for AuxBiasCurveTempArray0 {
         )
     }
 }
-#[doc = "Aux Bias Curve TEMP (105degC)"]
+#[doc = "Aux Bias Curve TEMP (105degC)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct AuxBiasCurveTempArray1(pub u32);
 impl AuxBiasCurveTempArray1 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -684,19 +684,19 @@ impl defmt::Format for AuxBiasCurveTempArray1 {
         )
     }
 }
-#[doc = "Aux Bias Curve TEMP (105degC)"]
+#[doc = "Aux Bias Curve TEMP (105degC)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct AuxBiasCurveTempArray2(pub u32);
 impl AuxBiasCurveTempArray2 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -725,19 +725,19 @@ impl defmt::Format for AuxBiasCurveTempArray2 {
         )
     }
 }
-#[doc = "Aux Bias Curve TEMP (105degC)"]
+#[doc = "Aux Bias Curve TEMP (105degC)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct AuxBiasCurveTempArray3(pub u32);
 impl AuxBiasCurveTempArray3 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -766,79 +766,79 @@ impl defmt::Format for AuxBiasCurveTempArray3 {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Bod(pub u32);
 impl Bod {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn bod_vbat_trim_valid(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_bod_vbat_trim_valid(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn bod_vbat_triglvl(&self) -> u8 {
         let val = (self.0 >> 1usize) & 0x1f;
         val as u8
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_bod_vbat_triglvl(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 1usize)) | (((val as u32) & 0x1f) << 1usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn bod_vbat_hyst(&self) -> u8 {
         let val = (self.0 >> 6usize) & 0x03;
         val as u8
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_bod_vbat_hyst(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val as u32) & 0x03) << 6usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn bod_core_trim_valid(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_bod_core_trim_valid(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn bod_core_triglvl(&self) -> u8 {
         let val = (self.0 >> 17usize) & 0x07;
         val as u8
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_bod_core_triglvl(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 17usize)) | (((val as u32) & 0x07) << 17usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn bod_core_hyst(&self) -> u8 {
         let val = (self.0 >> 21usize) & 0x03;
         val as u8
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_bod_core_hyst(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 21usize)) | (((val as u32) & 0x03) << 21usize);
@@ -877,7 +877,7 @@ impl defmt::Format for Bod {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DcdcPowerProfileHigh0(pub u32);
@@ -1058,7 +1058,7 @@ impl defmt::Format for DcdcPowerProfileHigh0 {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DcdcPowerProfileHigh1(pub u32);
@@ -1267,19 +1267,19 @@ impl defmt::Format for DcdcPowerProfileHigh1 {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DcdcPowerProfileHighArray0(pub u32);
 impl DcdcPowerProfileHighArray0 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1308,19 +1308,19 @@ impl defmt::Format for DcdcPowerProfileHighArray0 {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DcdcPowerProfileHighArray1(pub u32);
 impl DcdcPowerProfileHighArray1 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1349,7 +1349,7 @@ impl defmt::Format for DcdcPowerProfileHighArray1 {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DcdcPowerProfileLow0(pub u32);
@@ -1530,7 +1530,7 @@ impl defmt::Format for DcdcPowerProfileLow0 {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DcdcPowerProfileLow1(pub u32);
@@ -1739,19 +1739,19 @@ impl defmt::Format for DcdcPowerProfileLow1 {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DcdcPowerProfileLowArray0(pub u32);
 impl DcdcPowerProfileLowArray0 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1780,19 +1780,19 @@ impl defmt::Format for DcdcPowerProfileLowArray0 {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DcdcPowerProfileLowArray1(pub u32);
 impl DcdcPowerProfileLowArray1 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1821,7 +1821,7 @@ impl defmt::Format for DcdcPowerProfileLowArray1 {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DcdcPowerProfileMedium0(pub u32);
@@ -2002,7 +2002,7 @@ impl defmt::Format for DcdcPowerProfileMedium0 {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DcdcPowerProfileMedium1(pub u32);
@@ -2211,19 +2211,19 @@ impl defmt::Format for DcdcPowerProfileMedium1 {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DcdcPowerProfileMediumArray0(pub u32);
 impl DcdcPowerProfileMediumArray0 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2252,19 +2252,19 @@ impl defmt::Format for DcdcPowerProfileMediumArray0 {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DcdcPowerProfileMediumArray1(pub u32);
 impl DcdcPowerProfileMediumArray1 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2293,43 +2293,43 @@ impl defmt::Format for DcdcPowerProfileMediumArray1 {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DeviceType(pub u32);
 impl DeviceType {
-    #[doc = "Device type number. (E.g : LPC5569 stored as 5569 decimal)"]
+    #[doc = "Device type number. (E.g : LPC5569 stored as 5569 decimal)."]
     #[must_use]
     #[inline(always)]
     pub const fn device_type_num(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Device type number. (E.g : LPC5569 stored as 5569 decimal)"]
+    #[doc = "Device type number. (E.g : LPC5569 stored as 5569 decimal)."]
     #[inline(always)]
     pub const fn set_device_type_num(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Security device type: 0: LPC55xxx (Non Secure Familly) 1: LPC55Sxxx (Secure Familly)"]
+    #[doc = "Security device type: 0: LPC55xxx (Non Secure Familly) 1: LPC55Sxxx (Secure Familly)."]
     #[must_use]
     #[inline(always)]
     pub const fn device_type_sec(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Security device type: 0: LPC55xxx (Non Secure Familly) 1: LPC55Sxxx (Secure Familly)"]
+    #[doc = "Security device type: 0: LPC55xxx (Non Secure Familly) 1: LPC55Sxxx (Secure Familly)."]
     #[inline(always)]
     pub const fn set_device_type_sec(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Device package type: 0000 : HLQFP 0001 : HTQFP 0010 : HVQFN 0100 : VFBGA 1000 : WLCSP"]
+    #[doc = "Device package type: 0000 : HLQFP 0001 : HTQFP 0010 : HVQFN 0100 : VFBGA 1000 : WLCSP."]
     #[must_use]
     #[inline(always)]
     pub const fn device_type_pkg(&self) -> u8 {
         let val = (self.0 >> 20usize) & 0x0f;
         val as u8
     }
-    #[doc = "Device package type: 0000 : HLQFP 0001 : HTQFP 0010 : HVQFN 0100 : VFBGA 1000 : WLCSP"]
+    #[doc = "Device package type: 0000 : HLQFP 0001 : HTQFP 0010 : HVQFN 0100 : VFBGA 1000 : WLCSP."]
     #[inline(always)]
     pub const fn set_device_type_pkg(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 20usize)) | (((val as u32) & 0x0f) << 20usize);
@@ -2376,7 +2376,7 @@ impl defmt::Format for DeviceType {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DisRomHiding(pub u32);
@@ -2417,31 +2417,31 @@ impl defmt::Format for DisRomHiding {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct EcidBackup0(pub u32);
 impl EcidBackup0 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn coord_y(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_coord_y(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn coord_x(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_coord_x(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -2472,19 +2472,19 @@ impl defmt::Format for EcidBackup0 {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct EcidBackup1(pub u32);
 impl EcidBackup1 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn wafer(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_wafer(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
@@ -2509,19 +2509,19 @@ impl defmt::Format for EcidBackup1 {
         defmt::write!(f, "EcidBackup1 {{ wafer: {=u8:?} }}", self.wafer())
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct EcidBackup2(pub u32);
 impl EcidBackup2 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn lotid_lsb(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_lotid_lsb(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2546,19 +2546,19 @@ impl defmt::Format for EcidBackup2 {
         defmt::write!(f, "EcidBackup2 {{ lotid_lsb: {=u32:?} }}", self.lotid_lsb())
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct EcidBackup3(pub u32);
 impl EcidBackup3 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn lotid_msb(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_lotid_msb(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2583,19 +2583,19 @@ impl defmt::Format for EcidBackup3 {
         defmt::write!(f, "EcidBackup3 {{ lotid_msb: {=u32:?} }}", self.lotid_msb())
     }
 }
-#[doc = "ECID backup (the original is in page n-1)"]
+#[doc = "ECID backup (the original is in page n-1)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct EcidBackupArray0(pub u32);
 impl EcidBackupArray0 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2620,19 +2620,19 @@ impl defmt::Format for EcidBackupArray0 {
         defmt::write!(f, "EcidBackupArray0 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "ECID backup (the original is in page n-1)"]
+#[doc = "ECID backup (the original is in page n-1)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct EcidBackupArray1(pub u32);
 impl EcidBackupArray1 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2657,19 +2657,19 @@ impl defmt::Format for EcidBackupArray1 {
         defmt::write!(f, "EcidBackupArray1 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "ECID backup (the original is in page n-1)"]
+#[doc = "ECID backup (the original is in page n-1)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct EcidBackupArray2(pub u32);
 impl EcidBackupArray2 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2694,19 +2694,19 @@ impl defmt::Format for EcidBackupArray2 {
         defmt::write!(f, "EcidBackupArray2 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "ECID backup (the original is in page n-1)"]
+#[doc = "ECID backup (the original is in page n-1)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct EcidBackupArray3(pub u32);
 impl EcidBackupArray3 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2731,19 +2731,19 @@ impl defmt::Format for EcidBackupArray3 {
         defmt::write!(f, "EcidBackupArray3 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FinalTestBatchId0(pub u32);
 impl FinalTestBatchId0 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2768,19 +2768,19 @@ impl defmt::Format for FinalTestBatchId0 {
         defmt::write!(f, "FinalTestBatchId0 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FinalTestBatchId1(pub u32);
 impl FinalTestBatchId1 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2805,19 +2805,19 @@ impl defmt::Format for FinalTestBatchId1 {
         defmt::write!(f, "FinalTestBatchId1 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FinalTestBatchId2(pub u32);
 impl FinalTestBatchId2 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2842,19 +2842,19 @@ impl defmt::Format for FinalTestBatchId2 {
         defmt::write!(f, "FinalTestBatchId2 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FinalTestBatchId3(pub u32);
 impl FinalTestBatchId3 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2879,19 +2879,19 @@ impl defmt::Format for FinalTestBatchId3 {
         defmt::write!(f, "FinalTestBatchId3 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FinalTestBatchIdArray0(pub u32);
 impl FinalTestBatchIdArray0 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2920,19 +2920,19 @@ impl defmt::Format for FinalTestBatchIdArray0 {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FinalTestBatchIdArray1(pub u32);
 impl FinalTestBatchIdArray1 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2961,19 +2961,19 @@ impl defmt::Format for FinalTestBatchIdArray1 {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FinalTestBatchIdArray2(pub u32);
 impl FinalTestBatchIdArray2 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3002,19 +3002,19 @@ impl defmt::Format for FinalTestBatchIdArray2 {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FinalTestBatchIdArray3(pub u32);
 impl FinalTestBatchIdArray3 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3043,19 +3043,19 @@ impl defmt::Format for FinalTestBatchIdArray3 {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FinalTestDate(pub u32);
 impl FinalTestDate {
-    #[doc = "DATE \\[stored as : year*10000+month*100+day\\]"]
+    #[doc = "DATE \\[stored as : year*10000+month*100+day\\]."]
     #[must_use]
     #[inline(always)]
     pub const fn date(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "DATE \\[stored as : year*10000+month*100+day\\]"]
+    #[doc = "DATE \\[stored as : year*10000+month*100+day\\]."]
     #[inline(always)]
     pub const fn set_date(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3080,19 +3080,19 @@ impl defmt::Format for FinalTestDate {
         defmt::write!(f, "FinalTestDate {{ date: {=u32:?} }}", self.date())
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FinalTestProgramVersion(pub u32);
 impl FinalTestProgramVersion {
-    #[doc = "PROGRAM_VERSION \\[xx.yy stored as : 100*x+y\\]"]
+    #[doc = "PROGRAM_VERSION \\[xx.yy stored as : 100*x+y\\]."]
     #[must_use]
     #[inline(always)]
     pub const fn program_version(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "PROGRAM_VERSION \\[xx.yy stored as : 100*x+y\\]"]
+    #[doc = "PROGRAM_VERSION \\[xx.yy stored as : 100*x+y\\]."]
     #[inline(always)]
     pub const fn set_program_version(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3121,19 +3121,19 @@ impl defmt::Format for FinalTestProgramVersion {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FinalTestTime(pub u32);
 impl FinalTestTime {
-    #[doc = "TIME \\[stored as : hour*10000+minute*100+seconde\\]"]
+    #[doc = "TIME \\[stored as : hour*10000+minute*100+seconde\\]."]
     #[must_use]
     #[inline(always)]
     pub const fn time(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "TIME \\[stored as : hour*10000+minute*100+seconde\\]"]
+    #[doc = "TIME \\[stored as : hour*10000+minute*100+seconde\\]."]
     #[inline(always)]
     pub const fn set_time(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3158,19 +3158,19 @@ impl defmt::Format for FinalTestTime {
         defmt::write!(f, "FinalTestTime {{ time: {=u32:?} }}", self.time())
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flashsizecfg(pub u32);
 impl Flashsizecfg {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn flash_configuration(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_flash_configuration(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3199,19 +3199,19 @@ impl defmt::Format for Flashsizecfg {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Fro192mhz(pub u32);
 impl Fro192mhz {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn fro192m_trim_valid(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_fro192m_trim_valid(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -3282,19 +3282,19 @@ impl defmt::Format for Fro192mhz {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Fro1mhz(pub u32);
 impl Fro1mhz {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn fro1m_trim_valid(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_fro1m_trim_valid(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -3337,67 +3337,67 @@ impl defmt::Format for Fro1mhz {
         )
     }
 }
-#[doc = "GPO0 register 0 description"]
+#[doc = "GPO0 register 0 description."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpo00(pub u32);
 impl Gpo00 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn fro_trim_valid(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_fro_trim_valid(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn fro32k_ntat(&self) -> u8 {
         let val = (self.0 >> 1usize) & 0x07;
         val as u8
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_fro32k_ntat(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 1usize)) | (((val as u32) & 0x07) << 1usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn fro32k_ptat(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x07;
         val as u8
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_fro32k_ptat(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 4usize)) | (((val as u32) & 0x07) << 4usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn fro32k_capcal(&self) -> u16 {
         let val = (self.0 >> 7usize) & 0x01ff;
         val as u16
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_fro32k_capcal(&mut self, val: u16) {
         self.0 = (self.0 & !(0x01ff << 7usize)) | (((val as u32) & 0x01ff) << 7usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -3434,19 +3434,19 @@ impl defmt::Format for Gpo00 {
         )
     }
 }
-#[doc = "GPO0 register 1 description"]
+#[doc = "GPO0 register 1 description."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpo01(pub u32);
 impl Gpo01 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3471,43 +3471,43 @@ impl defmt::Format for Gpo01 {
         defmt::write!(f, "Gpo01 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "GPO0 register 2 description"]
+#[doc = "GPO0 register 2 description."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpo02(pub u32);
 impl Gpo02 {
-    #[doc = "00 : FRO12MHz 01 : FRO24MHz 10 : FRO48MHz 11 : FRO96MHz"]
+    #[doc = "00 : FRO12MHz 01 : FRO24MHz 10 : FRO48MHz 11 : FRO96MHz."]
     #[must_use]
     #[inline(always)]
     pub const fn system_speed_code(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x03;
         val as u8
     }
-    #[doc = "00 : FRO12MHz 01 : FRO24MHz 10 : FRO48MHz 11 : FRO96MHz"]
+    #[doc = "00 : FRO12MHz 01 : FRO24MHz 10 : FRO48MHz 11 : FRO96MHz."]
     #[inline(always)]
     pub const fn set_system_speed_code(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val as u32) & 0x03) << 0usize);
     }
-    #[doc = "00 : Delay Line 01 : RCLK (back up clock) 10 : PCLK (back up clock)"]
+    #[doc = "00 : Delay Line 01 : RCLK (back up clock) 10 : PCLK (back up clock)."]
     #[must_use]
     #[inline(always)]
     pub const fn flash_ctrl_opmode(&self) -> u8 {
         let val = (self.0 >> 2usize) & 0x03;
         val as u8
     }
-    #[doc = "00 : Delay Line 01 : RCLK (back up clock) 10 : PCLK (back up clock)"]
+    #[doc = "00 : Delay Line 01 : RCLK (back up clock) 10 : PCLK (back up clock)."]
     #[inline(always)]
     pub const fn set_flash_ctrl_opmode(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val as u32) & 0x03) << 2usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 4usize) & 0x0fff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0x0fff_ffff << 4usize)) | (((val as u32) & 0x0fff_ffff) << 4usize);
@@ -3540,19 +3540,19 @@ impl defmt::Format for Gpo02 {
         )
     }
 }
-#[doc = "GPO0 register 3 description"]
+#[doc = "GPO0 register 3 description."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpo03(pub u32);
 impl Gpo03 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3577,19 +3577,19 @@ impl defmt::Format for Gpo03 {
         defmt::write!(f, "Gpo03 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "GPO0 array description"]
+#[doc = "GPO0 array description."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpo0Array0(pub u32);
 impl Gpo0Array0 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3614,19 +3614,19 @@ impl defmt::Format for Gpo0Array0 {
         defmt::write!(f, "Gpo0Array0 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "GPO0 array description"]
+#[doc = "GPO0 array description."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpo0Array1(pub u32);
 impl Gpo0Array1 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3651,19 +3651,19 @@ impl defmt::Format for Gpo0Array1 {
         defmt::write!(f, "Gpo0Array1 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "GPO0 array description"]
+#[doc = "GPO0 array description."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpo0Array2(pub u32);
 impl Gpo0Array2 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3688,19 +3688,19 @@ impl defmt::Format for Gpo0Array2 {
         defmt::write!(f, "Gpo0Array2 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "GPO0 array description"]
+#[doc = "GPO0 array description."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpo0Array3(pub u32);
 impl Gpo0Array3 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3725,7 +3725,7 @@ impl defmt::Format for Gpo0Array3 {
         defmt::write!(f, "Gpo0Array3 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "GPO1 register 0 description"]
+#[doc = "GPO1 register 0 description."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpo10(pub u32);
@@ -3742,38 +3742,38 @@ impl Gpo10 {
     pub const fn set_final_test_not_done(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Device type number. (E.g : LPC5569 stored as 69 decimal)"]
+    #[doc = "Device type number. (E.g : LPC5569 stored as 69 decimal)."]
     #[must_use]
     #[inline(always)]
     pub const fn partconfig(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x7f;
         val as u8
     }
-    #[doc = "Device type number. (E.g : LPC5569 stored as 69 decimal)"]
+    #[doc = "Device type number. (E.g : LPC5569 stored as 69 decimal)."]
     #[inline(always)]
     pub const fn set_partconfig(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 4usize)) | (((val as u32) & 0x7f) << 4usize);
     }
-    #[doc = "Security device type: 0: LPC55xxx (Non Secure Familly) 1: LPC55Sxxx (Secure Familly)"]
+    #[doc = "Security device type: 0: LPC55xxx (Non Secure Familly) 1: LPC55Sxxx (Secure Familly)."]
     #[must_use]
     #[inline(always)]
     pub const fn device_type_sec(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "Security device type: 0: LPC55xxx (Non Secure Familly) 1: LPC55Sxxx (Secure Familly)"]
+    #[doc = "Security device type: 0: LPC55xxx (Non Secure Familly) 1: LPC55Sxxx (Secure Familly)."]
     #[inline(always)]
     pub const fn set_device_type_sec(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "SRAM_SIZE\\[3:0\\]: (For Niobe4) 0000 : 320 KB 0001 : 256 KB 0010 : 144 KB 0011 : 80 KB (For Niobe4 Mini) 0100 : 96 KB 0101 : 80 KB 0110 : 64 KB 0111 : 48 KB All others : RESERVED"]
+    #[doc = "SRAM_SIZE\\[3:0\\]: (For Niobe4) 0000 : 320 KB 0001 : 256 KB 0010 : 144 KB 0011 : 80 KB (For Niobe4 Mini) 0100 : 96 KB 0101 : 80 KB 0110 : 64 KB 0111 : 48 KB All others : RESERVED."]
     #[must_use]
     #[inline(always)]
     pub const fn sram_size(&self) -> u8 {
         let val = (self.0 >> 12usize) & 0x0f;
         val as u8
     }
-    #[doc = "SRAM_SIZE\\[3:0\\]: (For Niobe4) 0000 : 320 KB 0001 : 256 KB 0010 : 144 KB 0011 : 80 KB (For Niobe4 Mini) 0100 : 96 KB 0101 : 80 KB 0110 : 64 KB 0111 : 48 KB All others : RESERVED"]
+    #[doc = "SRAM_SIZE\\[3:0\\]: (For Niobe4) 0000 : 320 KB 0001 : 256 KB 0010 : 144 KB 0011 : 80 KB (For Niobe4 Mini) 0100 : 96 KB 0101 : 80 KB 0110 : 64 KB 0111 : 48 KB All others : RESERVED."]
     #[inline(always)]
     pub const fn set_sram_size(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 12usize)) | (((val as u32) & 0x0f) << 12usize);
@@ -3790,38 +3790,38 @@ impl Gpo10 {
     pub const fn set_cpu0_security_extension_disable(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u8 {
         let val = (self.0 >> 20usize) & 0x0f;
         val as u8
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 20usize)) | (((val as u32) & 0x0f) << 20usize);
     }
-    #[doc = "ROM Revision-Minor \\[3:0\\]"]
+    #[doc = "ROM Revision-Minor \\[3:0\\]."]
     #[must_use]
     #[inline(always)]
     pub const fn rom_revision_minor(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0x0f;
         val as u8
     }
-    #[doc = "ROM Revision-Minor \\[3:0\\]"]
+    #[doc = "ROM Revision-Minor \\[3:0\\]."]
     #[inline(always)]
     pub const fn set_rom_revision_minor(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 24usize)) | (((val as u32) & 0x0f) << 24usize);
     }
-    #[doc = "METAL REVISION ID\\[3:0\\]"]
+    #[doc = "METAL REVISION ID\\[3:0\\]."]
     #[must_use]
     #[inline(always)]
     pub const fn metal_revision_id(&self) -> u8 {
         let val = (self.0 >> 28usize) & 0x0f;
         val as u8
     }
-    #[doc = "METAL REVISION ID\\[3:0\\]"]
+    #[doc = "METAL REVISION ID\\[3:0\\]."]
     #[inline(always)]
     pub const fn set_metal_revision_id(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 28usize)) | (((val as u32) & 0x0f) << 28usize);
@@ -3867,43 +3867,43 @@ impl defmt::Format for Gpo10 {
         )
     }
 }
-#[doc = "GPO1 register 1 description"]
+#[doc = "GPO1 register 1 description."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpo11(pub u32);
 impl Gpo11 {
-    #[doc = "ROM Patch Version \\[3:0\\]"]
+    #[doc = "ROM Patch Version \\[3:0\\]."]
     #[must_use]
     #[inline(always)]
     pub const fn rom_patch_version(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "ROM Patch Version \\[3:0\\]"]
+    #[doc = "ROM Patch Version \\[3:0\\]."]
     #[inline(always)]
     pub const fn set_rom_patch_version(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
     }
-    #[doc = "CUSTOMER REVISION ID\\[3:0\\]"]
+    #[doc = "CUSTOMER REVISION ID\\[3:0\\]."]
     #[must_use]
     #[inline(always)]
     pub const fn customer_revision_id(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x0f;
         val as u8
     }
-    #[doc = "CUSTOMER REVISION ID\\[3:0\\]"]
+    #[doc = "CUSTOMER REVISION ID\\[3:0\\]."]
     #[inline(always)]
     pub const fn set_customer_revision_id(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 8usize) & 0x00ff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0x00ff_ffff << 8usize)) | (((val as u32) & 0x00ff_ffff) << 8usize);
@@ -3936,7 +3936,7 @@ impl defmt::Format for Gpo11 {
         )
     }
 }
-#[doc = "GPO1 register 2 description"]
+#[doc = "GPO1 register 2 description."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpo12(pub u32);
@@ -3953,14 +3953,14 @@ impl Gpo12 {
     pub const fn set_hvst(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 1usize) & 0x7fff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0x7fff_ffff << 1usize)) | (((val as u32) & 0x7fff_ffff) << 1usize);
@@ -3991,19 +3991,19 @@ impl defmt::Format for Gpo12 {
         )
     }
 }
-#[doc = "GPO1 register 3 description"]
+#[doc = "GPO1 register 3 description."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpo13(pub u32);
 impl Gpo13 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -4028,19 +4028,19 @@ impl defmt::Format for Gpo13 {
         defmt::write!(f, "Gpo13 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "GPO1 array description"]
+#[doc = "GPO1 array description."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpo1Array0(pub u32);
 impl Gpo1Array0 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -4065,19 +4065,19 @@ impl defmt::Format for Gpo1Array0 {
         defmt::write!(f, "Gpo1Array0 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "GPO1 array description"]
+#[doc = "GPO1 array description."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpo1Array1(pub u32);
 impl Gpo1Array1 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -4102,19 +4102,19 @@ impl defmt::Format for Gpo1Array1 {
         defmt::write!(f, "Gpo1Array1 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "GPO1 array description"]
+#[doc = "GPO1 array description."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpo1Array2(pub u32);
 impl Gpo1Array2 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -4139,19 +4139,19 @@ impl defmt::Format for Gpo1Array2 {
         defmt::write!(f, "Gpo1Array2 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "GPO1 array description"]
+#[doc = "GPO1 array description."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpo1Array3(pub u32);
 impl Gpo1Array3 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -4176,115 +4176,115 @@ impl defmt::Format for Gpo1Array3 {
         defmt::write!(f, "Gpo1Array3 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "GPO2 register 0 description"]
+#[doc = "GPO2 register 0 description."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpo20(pub u32);
 impl Gpo20 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn usbhs_phy_trim_valid(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_usbhs_phy_trim_valid(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn trim_usb_reg_env_tail_adj_vd(&self) -> u8 {
         let val = (self.0 >> 1usize) & 0x03;
         val as u8
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_trim_usb_reg_env_tail_adj_vd(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 1usize)) | (((val as u32) & 0x03) << 1usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn trim_usbphy_tx_d_cal(&self) -> u8 {
         let val = (self.0 >> 3usize) & 0x0f;
         val as u8
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_trim_usbphy_tx_d_cal(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 3usize)) | (((val as u32) & 0x0f) << 3usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn trim_usbphy_tx_cal45dp(&self) -> u8 {
         let val = (self.0 >> 7usize) & 0x1f;
         val as u8
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_trim_usbphy_tx_cal45dp(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 7usize)) | (((val as u32) & 0x1f) << 7usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn trim_usbphy_tx_cal45dn(&self) -> u8 {
         let val = (self.0 >> 12usize) & 0x1f;
         val as u8
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_trim_usbphy_tx_cal45dn(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 12usize)) | (((val as u32) & 0x1f) << 12usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn trim_usb2_refbias_tst(&self) -> u8 {
         let val = (self.0 >> 17usize) & 0x03;
         val as u8
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_trim_usb2_refbias_tst(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 17usize)) | (((val as u32) & 0x03) << 17usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn trim_usb2_refbias_vbgadj(&self) -> u8 {
         let val = (self.0 >> 19usize) & 0x07;
         val as u8
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_trim_usb2_refbias_vbgadj(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 19usize)) | (((val as u32) & 0x07) << 19usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn trim_pll_ctrl0_div_sel(&self) -> u8 {
         let val = (self.0 >> 22usize) & 0x07;
         val as u8
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_trim_pll_ctrl0_div_sel(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 22usize)) | (((val as u32) & 0x07) << 22usize);
     }
-    #[doc = "(For Niobe4) 000 : 640 KB 001 : 512 KB 010 : 256 KB 011 : 128 KB 100 : 0 KB All others : RESERVED (For Niobe4 Mini) FLASH_SIZE\\[2:0\\] 000 : 256 KB 001 : 128 KB 010 : 80 KB (reserved) 011 : 64 KB 100 : 0 kB (reserved) All others : RESERVED"]
+    #[doc = "(For Niobe4) 000 : 640 KB 001 : 512 KB 010 : 256 KB 011 : 128 KB 100 : 0 KB All others : RESERVED (For Niobe4 Mini) FLASH_SIZE\\[2:0\\] 000 : 256 KB 001 : 128 KB 010 : 80 KB (reserved) 011 : 64 KB 100 : 0 kB (reserved) All others : RESERVED."]
     #[must_use]
     #[inline(always)]
     pub const fn flash_size(&self) -> u8 {
         let val = (self.0 >> 25usize) & 0x07;
         val as u8
     }
-    #[doc = "(For Niobe4) 000 : 640 KB 001 : 512 KB 010 : 256 KB 011 : 128 KB 100 : 0 KB All others : RESERVED (For Niobe4 Mini) FLASH_SIZE\\[2:0\\] 000 : 256 KB 001 : 128 KB 010 : 80 KB (reserved) 011 : 64 KB 100 : 0 kB (reserved) All others : RESERVED"]
+    #[doc = "(For Niobe4) 000 : 640 KB 001 : 512 KB 010 : 256 KB 011 : 128 KB 100 : 0 KB All others : RESERVED (For Niobe4 Mini) FLASH_SIZE\\[2:0\\] 000 : 256 KB 001 : 128 KB 010 : 80 KB (reserved) 011 : 64 KB 100 : 0 kB (reserved) All others : RESERVED."]
     #[inline(always)]
     pub const fn set_flash_size(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 25usize)) | (((val as u32) & 0x07) << 25usize);
@@ -4349,19 +4349,19 @@ impl defmt::Format for Gpo20 {
         )
     }
 }
-#[doc = "GPO2 register 1 description"]
+#[doc = "GPO2 register 1 description."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpo21(pub u32);
 impl Gpo21 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -4386,19 +4386,19 @@ impl defmt::Format for Gpo21 {
         defmt::write!(f, "Gpo21 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "GPO2 register 2 description"]
+#[doc = "GPO2 register 2 description."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpo22(pub u32);
 impl Gpo22 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -4423,19 +4423,19 @@ impl defmt::Format for Gpo22 {
         defmt::write!(f, "Gpo22 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "GPO2 register 3 description"]
+#[doc = "GPO2 register 3 description."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpo23(pub u32);
 impl Gpo23 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -4460,19 +4460,19 @@ impl defmt::Format for Gpo23 {
         defmt::write!(f, "Gpo23 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "GPO2 array description"]
+#[doc = "GPO2 array description."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpo2Array0(pub u32);
 impl Gpo2Array0 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -4497,19 +4497,19 @@ impl defmt::Format for Gpo2Array0 {
         defmt::write!(f, "Gpo2Array0 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "GPO2 array description"]
+#[doc = "GPO2 array description."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpo2Array1(pub u32);
 impl Gpo2Array1 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -4534,19 +4534,19 @@ impl defmt::Format for Gpo2Array1 {
         defmt::write!(f, "Gpo2Array1 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "GPO2 array description"]
+#[doc = "GPO2 array description."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpo2Array2(pub u32);
 impl Gpo2Array2 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -4571,19 +4571,19 @@ impl defmt::Format for Gpo2Array2 {
         defmt::write!(f, "Gpo2Array2 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "GPO2 array description"]
+#[doc = "GPO2 array description."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpo2Array3(pub u32);
 impl Gpo2Array3 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -4608,91 +4608,91 @@ impl defmt::Format for Gpo2Array3 {
         defmt::write!(f, "Gpo2Array3 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "GPO3 register 0 description"]
+#[doc = "GPO3 register 0 description."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpo30(pub u32);
 impl Gpo30 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn aux_bias_trim_valid(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_aux_bias_trim_valid(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn aux_bias_itrim(&self) -> u8 {
         let val = (self.0 >> 1usize) & 0x1f;
         val as u8
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_aux_bias_itrim(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 1usize)) | (((val as u32) & 0x1f) << 1usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn aux_bias_ptat_itrim(&self) -> u8 {
         let val = (self.0 >> 6usize) & 0x1f;
         val as u8
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_aux_bias_ptat_itrim(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 6usize)) | (((val as u32) & 0x1f) << 6usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn aux_bias_vref1_vtrim(&self) -> u8 {
         let val = (self.0 >> 11usize) & 0x1f;
         val as u8
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_aux_bias_vref1_vtrim(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 11usize)) | (((val as u32) & 0x1f) << 11usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn aux_bias_vref1_vcurve_trim(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x07;
         val as u8
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_aux_bias_vref1_vcurve_trim(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 16usize)) | (((val as u32) & 0x07) << 16usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u8 {
         let val = (self.0 >> 19usize) & 0x3f;
         val as u8
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 19usize)) | (((val as u32) & 0x3f) << 19usize);
     }
-    #[doc = "ModelNumber extension\\[2:0\\]"]
+    #[doc = "ModelNumber extension\\[2:0\\]."]
     #[must_use]
     #[inline(always)]
     pub const fn modelnum_extension(&self) -> u8 {
         let val = (self.0 >> 25usize) & 0x07;
         val as u8
     }
-    #[doc = "ModelNumber extension\\[2:0\\]"]
+    #[doc = "ModelNumber extension\\[2:0\\]."]
     #[inline(always)]
     pub const fn set_modelnum_extension(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 25usize)) | (((val as u32) & 0x07) << 25usize);
@@ -4750,19 +4750,19 @@ impl defmt::Format for Gpo30 {
         )
     }
 }
-#[doc = "GPO3 register 1 description"]
+#[doc = "GPO3 register 1 description."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpo31(pub u32);
 impl Gpo31 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -4787,19 +4787,19 @@ impl defmt::Format for Gpo31 {
         defmt::write!(f, "Gpo31 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "GPO3 register 2 description"]
+#[doc = "GPO3 register 2 description."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpo32(pub u32);
 impl Gpo32 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -4824,19 +4824,19 @@ impl defmt::Format for Gpo32 {
         defmt::write!(f, "Gpo32 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "GPO3 register 3 description"]
+#[doc = "GPO3 register 3 description."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpo33(pub u32);
 impl Gpo33 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -4861,19 +4861,19 @@ impl defmt::Format for Gpo33 {
         defmt::write!(f, "Gpo33 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "GPO3 array description"]
+#[doc = "GPO3 array description."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpo3Array0(pub u32);
 impl Gpo3Array0 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -4898,19 +4898,19 @@ impl defmt::Format for Gpo3Array0 {
         defmt::write!(f, "Gpo3Array0 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "GPO3 array description"]
+#[doc = "GPO3 array description."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpo3Array1(pub u32);
 impl Gpo3Array1 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -4935,19 +4935,19 @@ impl defmt::Format for Gpo3Array1 {
         defmt::write!(f, "Gpo3Array1 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "GPO3 array description"]
+#[doc = "GPO3 array description."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpo3Array2(pub u32);
 impl Gpo3Array2 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -4972,19 +4972,19 @@ impl defmt::Format for Gpo3Array2 {
         defmt::write!(f, "Gpo3Array2 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "GPO3 array description"]
+#[doc = "GPO3 array description."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpo3Array3(pub u32);
 impl Gpo3Array3 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -5009,19 +5009,19 @@ impl defmt::Format for Gpo3Array3 {
         defmt::write!(f, "Gpo3Array3 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "checksum of the GPO data in words 0"]
+#[doc = "checksum of the GPO data in words 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct GpoChecksum0(pub u32);
 impl GpoChecksum0 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -5046,19 +5046,19 @@ impl defmt::Format for GpoChecksum0 {
         defmt::write!(f, "GpoChecksum0 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "checksum of the GPO data in words 1"]
+#[doc = "checksum of the GPO data in words 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct GpoChecksum1(pub u32);
 impl GpoChecksum1 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -5083,19 +5083,19 @@ impl defmt::Format for GpoChecksum1 {
         defmt::write!(f, "GpoChecksum1 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "checksum of the GPO data in words 2"]
+#[doc = "checksum of the GPO data in words 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct GpoChecksum2(pub u32);
 impl GpoChecksum2 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -5120,19 +5120,19 @@ impl defmt::Format for GpoChecksum2 {
         defmt::write!(f, "GpoChecksum2 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "checksum of the GPO data in words 3"]
+#[doc = "checksum of the GPO data in words 3."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct GpoChecksum3(pub u32);
 impl GpoChecksum3 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -5157,19 +5157,19 @@ impl defmt::Format for GpoChecksum3 {
         defmt::write!(f, "GpoChecksum3 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "checksum of the GPO data in words \\[3:0\\]"]
+#[doc = "checksum of the GPO data in words \\[3:0\\]."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct GpoChecksumArray0(pub u32);
 impl GpoChecksumArray0 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -5194,19 +5194,19 @@ impl defmt::Format for GpoChecksumArray0 {
         defmt::write!(f, "GpoChecksumArray0 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "checksum of the GPO data in words \\[3:0\\]"]
+#[doc = "checksum of the GPO data in words \\[3:0\\]."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct GpoChecksumArray1(pub u32);
 impl GpoChecksumArray1 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -5231,19 +5231,19 @@ impl defmt::Format for GpoChecksumArray1 {
         defmt::write!(f, "GpoChecksumArray1 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "checksum of the GPO data in words \\[3:0\\]"]
+#[doc = "checksum of the GPO data in words \\[3:0\\]."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct GpoChecksumArray2(pub u32);
 impl GpoChecksumArray2 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -5268,19 +5268,19 @@ impl defmt::Format for GpoChecksumArray2 {
         defmt::write!(f, "GpoChecksumArray2 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "checksum of the GPO data in words \\[3:0\\]"]
+#[doc = "checksum of the GPO data in words \\[3:0\\]."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct GpoChecksumArray3(pub u32);
 impl GpoChecksumArray3 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -5305,103 +5305,103 @@ impl defmt::Format for GpoChecksumArray3 {
         defmt::write!(f, "GpoChecksumArray3 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct LdoAo(pub u32);
 impl LdoAo {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn active_trim_valid(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_active_trim_valid(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn active_trim(&self) -> u8 {
         let val = (self.0 >> 1usize) & 0x1f;
         val as u8
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_active_trim(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 1usize)) | (((val as u32) & 0x1f) << 1usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn dslp_trim_valid(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_dslp_trim_valid(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn dslp_trim(&self) -> u8 {
         let val = (self.0 >> 9usize) & 0x1f;
         val as u8
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_dslp_trim(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 9usize)) | (((val as u32) & 0x1f) << 9usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn pdwn_trim_valid(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_pdwn_trim_valid(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn pdwn_trim(&self) -> u8 {
         let val = (self.0 >> 17usize) & 0x1f;
         val as u8
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_pdwn_trim(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 17usize)) | (((val as u32) & 0x1f) << 17usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn dpdw_trim_valid(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_dpdw_trim_valid(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn dpdw_trim(&self) -> u8 {
         let val = (self.0 >> 25usize) & 0x1f;
         val as u8
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_dpdw_trim(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 25usize)) | (((val as u32) & 0x1f) << 25usize);
@@ -5444,19 +5444,19 @@ impl defmt::Format for LdoAo {
         )
     }
 }
-#[doc = "NXP Device Certificate (ECDSA_sign - r\\[255:128\\])"]
+#[doc = "NXP Device Certificate (ECDSA_sign - r\\[255:128\\])."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct NxpDeviceCertificate0(pub u32);
 impl NxpDeviceCertificate0 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -5485,19 +5485,19 @@ impl defmt::Format for NxpDeviceCertificate0 {
         )
     }
 }
-#[doc = "NXP Device Certificate (ECDSA_sign - r\\[127:0\\])"]
+#[doc = "NXP Device Certificate (ECDSA_sign - r\\[127:0\\])."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct NxpDeviceCertificate1(pub u32);
 impl NxpDeviceCertificate1 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -5526,19 +5526,19 @@ impl defmt::Format for NxpDeviceCertificate1 {
         )
     }
 }
-#[doc = "NXP Device Certificate (ECDSA_sign - s\\[255:128\\])"]
+#[doc = "NXP Device Certificate (ECDSA_sign - s\\[255:128\\])."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct NxpDeviceCertificate2(pub u32);
 impl NxpDeviceCertificate2 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -5567,19 +5567,19 @@ impl defmt::Format for NxpDeviceCertificate2 {
         )
     }
 }
-#[doc = "NXP Device Certificate (ECDSA_sign - s\\[127:0\\])"]
+#[doc = "NXP Device Certificate (ECDSA_sign - s\\[127:0\\])."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct NxpDeviceCertificate3(pub u32);
 impl NxpDeviceCertificate3 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -5608,19 +5608,19 @@ impl defmt::Format for NxpDeviceCertificate3 {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct NxpDevicePrivateKey(pub u32);
 impl NxpDevicePrivateKey {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -5645,31 +5645,31 @@ impl defmt::Format for NxpDevicePrivateKey {
         defmt::write!(f, "NxpDevicePrivateKey {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Periphencfg(pub u32);
 impl Periphencfg {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn peripheral_configuration(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_peripheral_configuration(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn cpu1_enable(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_cpu1_enable(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -5700,7 +5700,7 @@ impl defmt::Format for Periphencfg {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PufSram(pub u32);
@@ -5717,26 +5717,26 @@ impl PufSram {
     pub const fn set_puf_sram_valid(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "PUF SRAM Controller operating mode"]
+    #[doc = "PUF SRAM Controller operating mode."]
     #[must_use]
     #[inline(always)]
     pub const fn mode(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "PUF SRAM Controller operating mode"]
+    #[doc = "PUF SRAM Controller operating mode."]
     #[inline(always)]
     pub const fn set_mode(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "PUF SRAM Clock Gating control"]
+    #[doc = "PUF SRAM Clock Gating control."]
     #[must_use]
     #[inline(always)]
     pub const fn ckgating(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "PUF SRAM Clock Gating control"]
+    #[doc = "PUF SRAM Clock Gating control."]
     #[inline(always)]
     pub const fn set_ckgating(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
@@ -5789,62 +5789,62 @@ impl PufSram {
     pub const fn set_wrme(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "SRAM Read Assist Enable"]
+    #[doc = "SRAM Read Assist Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn raen(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "SRAM Read Assist Enable"]
+    #[doc = "SRAM Read Assist Enable."]
     #[inline(always)]
     pub const fn set_raen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "SRAM Read Assist settings"]
+    #[doc = "SRAM Read Assist settings."]
     #[must_use]
     #[inline(always)]
     pub const fn ram(&self) -> u8 {
         let val = (self.0 >> 18usize) & 0x0f;
         val as u8
     }
-    #[doc = "SRAM Read Assist settings"]
+    #[doc = "SRAM Read Assist settings."]
     #[inline(always)]
     pub const fn set_ram(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 18usize)) | (((val as u32) & 0x0f) << 18usize);
     }
-    #[doc = "SRAM Write Assist Enable"]
+    #[doc = "SRAM Write Assist Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn waen(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "SRAM Write Assist Enable"]
+    #[doc = "SRAM Write Assist Enable."]
     #[inline(always)]
     pub const fn set_waen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "SRAM Write Assist settings"]
+    #[doc = "SRAM Write Assist settings."]
     #[must_use]
     #[inline(always)]
     pub const fn wam(&self) -> u8 {
         let val = (self.0 >> 23usize) & 0x03;
         val as u8
     }
-    #[doc = "SRAM Write Assist settings"]
+    #[doc = "SRAM Write Assist settings."]
     #[inline(always)]
     pub const fn set_wam(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 23usize)) | (((val as u32) & 0x03) << 23usize);
     }
-    #[doc = "STBP"]
+    #[doc = "STBP."]
     #[must_use]
     #[inline(always)]
     pub const fn stbp(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "STBP"]
+    #[doc = "STBP."]
     #[inline(always)]
     pub const fn set_stbp(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
@@ -5895,19 +5895,19 @@ impl defmt::Format for PufSram {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PvtMonitor0Array0(pub u32);
 impl PvtMonitor0Array0 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -5932,19 +5932,19 @@ impl defmt::Format for PvtMonitor0Array0 {
         defmt::write!(f, "PvtMonitor0Array0 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PvtMonitor0Array1(pub u32);
 impl PvtMonitor0Array1 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -5969,19 +5969,19 @@ impl defmt::Format for PvtMonitor0Array1 {
         defmt::write!(f, "PvtMonitor0Array1 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PvtMonitor0Array2(pub u32);
 impl PvtMonitor0Array2 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -6006,19 +6006,19 @@ impl defmt::Format for PvtMonitor0Array2 {
         defmt::write!(f, "PvtMonitor0Array2 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PvtMonitor0DelaysLsb(pub u32);
 impl PvtMonitor0DelaysLsb {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn delay_valid(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_delay_valid(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -6089,7 +6089,7 @@ impl defmt::Format for PvtMonitor0DelaysLsb {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PvtMonitor0DelaysMsb(pub u32);
@@ -6158,31 +6158,31 @@ impl defmt::Format for PvtMonitor0DelaysMsb {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PvtMonitor0Ringo(pub u32);
 impl PvtMonitor0Ringo {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn ringo_valid(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_ringo_valid(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn ringo_freq_hz(&self) -> u32 {
         let val = (self.0 >> 1usize) & 0x7fff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_ringo_freq_hz(&mut self, val: u32) {
         self.0 = (self.0 & !(0x7fff_ffff << 1usize)) | (((val as u32) & 0x7fff_ffff) << 1usize);
@@ -6213,19 +6213,19 @@ impl defmt::Format for PvtMonitor0Ringo {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PvtMonitor1Array0(pub u32);
 impl PvtMonitor1Array0 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -6250,19 +6250,19 @@ impl defmt::Format for PvtMonitor1Array0 {
         defmt::write!(f, "PvtMonitor1Array0 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PvtMonitor1Array1(pub u32);
 impl PvtMonitor1Array1 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -6287,19 +6287,19 @@ impl defmt::Format for PvtMonitor1Array1 {
         defmt::write!(f, "PvtMonitor1Array1 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PvtMonitor1Array2(pub u32);
 impl PvtMonitor1Array2 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -6324,19 +6324,19 @@ impl defmt::Format for PvtMonitor1Array2 {
         defmt::write!(f, "PvtMonitor1Array2 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PvtMonitor1DelaysLsb(pub u32);
 impl PvtMonitor1DelaysLsb {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn delay_valid(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_delay_valid(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -6407,7 +6407,7 @@ impl defmt::Format for PvtMonitor1DelaysLsb {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PvtMonitor1DelaysMsb(pub u32);
@@ -6476,31 +6476,31 @@ impl defmt::Format for PvtMonitor1DelaysMsb {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PvtMonitor1Ringo(pub u32);
 impl PvtMonitor1Ringo {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn ringo_valid(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_ringo_valid(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn ringo_freq_hz(&self) -> u32 {
         let val = (self.0 >> 1usize) & 0x7fff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_ringo_freq_hz(&mut self, val: u32) {
         self.0 = (self.0 & !(0x7fff_ffff << 1usize)) | (((val as u32) & 0x7fff_ffff) << 1usize);
@@ -6531,19 +6531,19 @@ impl defmt::Format for PvtMonitor1Ringo {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ramsizecfg(pub u32);
 impl Ramsizecfg {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn sram_configuration(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_sram_configuration(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -6572,7 +6572,7 @@ impl defmt::Format for Ramsizecfg {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ringo0(pub u32);
@@ -6589,14 +6589,14 @@ impl Ringo0 {
     pub const fn set_ringo_0_ctrl_valid(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "To copy RINGO_0_CTRL = ANACTRL->RINGO0_CTRL\\[30:0\\]"]
+    #[doc = "To copy RINGO_0_CTRL = ANACTRL->RINGO0_CTRL\\[30:0\\]."]
     #[must_use]
     #[inline(always)]
     pub const fn ringo_0_ctrl(&self) -> u32 {
         let val = (self.0 >> 1usize) & 0x7fff_ffff;
         val as u32
     }
-    #[doc = "To copy RINGO_0_CTRL = ANACTRL->RINGO0_CTRL\\[30:0\\]"]
+    #[doc = "To copy RINGO_0_CTRL = ANACTRL->RINGO0_CTRL\\[30:0\\]."]
     #[inline(always)]
     pub const fn set_ringo_0_ctrl(&mut self, val: u32) {
         self.0 = (self.0 & !(0x7fff_ffff << 1usize)) | (((val as u32) & 0x7fff_ffff) << 1usize);
@@ -6627,7 +6627,7 @@ impl defmt::Format for Ringo0 {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ringo1(pub u32);
@@ -6644,14 +6644,14 @@ impl Ringo1 {
     pub const fn set_ringo_1_ctrl_valid(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "To copy RINGO_1_CTRL = ANACTRL->RINGO1_CTRL\\[30:0\\]"]
+    #[doc = "To copy RINGO_1_CTRL = ANACTRL->RINGO1_CTRL\\[30:0\\]."]
     #[must_use]
     #[inline(always)]
     pub const fn ringo_1_ctrl(&self) -> u32 {
         let val = (self.0 >> 1usize) & 0x7fff_ffff;
         val as u32
     }
-    #[doc = "To copy RINGO_1_CTRL = ANACTRL->RINGO1_CTRL\\[30:0\\]"]
+    #[doc = "To copy RINGO_1_CTRL = ANACTRL->RINGO1_CTRL\\[30:0\\]."]
     #[inline(always)]
     pub const fn set_ringo_1_ctrl(&mut self, val: u32) {
         self.0 = (self.0 & !(0x7fff_ffff << 1usize)) | (((val as u32) & 0x7fff_ffff) << 1usize);
@@ -6682,7 +6682,7 @@ impl defmt::Format for Ringo1 {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ringo2(pub u32);
@@ -6699,14 +6699,14 @@ impl Ringo2 {
     pub const fn set_ringo_2_ctrl_valid(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "To copy RINGO_2_CTRL = ANACTRL->RINGO2_CTRL\\[30:0\\]"]
+    #[doc = "To copy RINGO_2_CTRL = ANACTRL->RINGO2_CTRL\\[30:0\\]."]
     #[must_use]
     #[inline(always)]
     pub const fn ringo_2_ctrl(&self) -> u32 {
         let val = (self.0 >> 1usize) & 0x7fff_ffff;
         val as u32
     }
-    #[doc = "To copy RINGO_2_CTRL = ANACTRL->RINGO2_CTRL\\[30:0\\]"]
+    #[doc = "To copy RINGO_2_CTRL = ANACTRL->RINGO2_CTRL\\[30:0\\]."]
     #[inline(always)]
     pub const fn set_ringo_2_ctrl(&mut self, val: u32) {
         self.0 = (self.0 & !(0x7fff_ffff << 1usize)) | (((val as u32) & 0x7fff_ffff) << 1usize);
@@ -6737,19 +6737,19 @@ impl defmt::Format for Ringo2 {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SdioDelay(pub u32);
 impl SdioDelay {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn sdio_0_valid(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_sdio_0_valid(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -6792,19 +6792,19 @@ impl defmt::Format for SdioDelay {
         )
     }
 }
-#[doc = "SHA-256 DIGEST (9EC00 - 9FDBC) ROM Patch Area + NXP Area (IMPORTANT NOTE: Pages used for Repair (N-8 to N-3) are excluded from the computation) SHA256_DIGESTindex for DIGEST\\[((index * 32) + 31):(index * 32)\\]"]
+#[doc = "SHA-256 DIGEST (9EC00 - 9FDBC) ROM Patch Area + NXP Area (IMPORTANT NOTE: Pages used for Repair (N-8 to N-3) are excluded from the computation) SHA256_DIGESTindex for DIGEST\\[((index * 32) + 31):(index * 32)\\]."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sha256Digest(pub u32);
 impl Sha256Digest {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -6829,31 +6829,31 @@ impl defmt::Format for Sha256Digest {
         defmt::write!(f, "Sha256Digest {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct TempSensOffset(pub u32);
 impl TempSensOffset {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn valid(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_valid(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "OFFSET_x1024\\[30:0\\]"]
+    #[doc = "OFFSET_x1024\\[30:0\\]."]
     #[must_use]
     #[inline(always)]
     pub const fn offset_x1024(&self) -> u32 {
         let val = (self.0 >> 1usize) & 0x7fff_ffff;
         val as u32
     }
-    #[doc = "OFFSET_x1024\\[30:0\\]"]
+    #[doc = "OFFSET_x1024\\[30:0\\]."]
     #[inline(always)]
     pub const fn set_offset_x1024(&mut self, val: u32) {
         self.0 = (self.0 & !(0x7fff_ffff << 1usize)) | (((val as u32) & 0x7fff_ffff) << 1usize);
@@ -6884,31 +6884,31 @@ impl defmt::Format for TempSensOffset {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct TempSensSlope(pub u32);
 impl TempSensSlope {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn valid(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_valid(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "SLOPE_x1024\\[30:0\\]"]
+    #[doc = "SLOPE_x1024\\[30:0\\]."]
     #[must_use]
     #[inline(always)]
     pub const fn slope_x1024(&self) -> u32 {
         let val = (self.0 >> 1usize) & 0x7fff_ffff;
         val as u32
     }
-    #[doc = "SLOPE_x1024\\[30:0\\]"]
+    #[doc = "SLOPE_x1024\\[30:0\\]."]
     #[inline(always)]
     pub const fn set_slope_x1024(&mut self, val: u32) {
         self.0 = (self.0 & !(0x7fff_ffff << 1usize)) | (((val as u32) & 0x7fff_ffff) << 1usize);
@@ -6939,31 +6939,31 @@ impl defmt::Format for TempSensSlope {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct TempSensVbe1vbe8Ref1(pub u32);
 impl TempSensVbe1vbe8Ref1 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn vbe1(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_vbe1(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn vbe8(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_vbe8(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -6994,31 +6994,31 @@ impl defmt::Format for TempSensVbe1vbe8Ref1 {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct TempSensVbe1vbe8Ref2(pub u32);
 impl TempSensVbe1vbe8Ref2 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn vbe1(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_vbe1(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn vbe8(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_vbe8(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -7049,31 +7049,31 @@ impl defmt::Format for TempSensVbe1vbe8Ref2 {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Usbcfg(pub u32);
 impl Usbcfg {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn xo32m_ready_time_out_ms(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_xo32m_ready_time_out_ms(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "USB_SPEED\\[7:0\\]= 0x00 : USB High Speed Module used for ISP 0x01 : USB Full SPeed Module used for ISP 0x02 : Neither USB High Speed module nor USB Full Speed module used for ISP 0x03 - 0xFF : RESERVED"]
+    #[doc = "USB_SPEED\\[7:0\\]= 0x00 : USB High Speed Module used for ISP 0x01 : USB Full SPeed Module used for ISP 0x02 : Neither USB High Speed module nor USB Full Speed module used for ISP 0x03 - 0xFF : RESERVED."]
     #[must_use]
     #[inline(always)]
     pub const fn usb_speed(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0xff;
         val as u8
     }
-    #[doc = "USB_SPEED\\[7:0\\]= 0x00 : USB High Speed Module used for ISP 0x01 : USB Full SPeed Module used for ISP 0x02 : Neither USB High Speed module nor USB Full Speed module used for ISP 0x03 - 0xFF : RESERVED"]
+    #[doc = "USB_SPEED\\[7:0\\]= 0x00 : USB High Speed Module used for ISP 0x01 : USB Full SPeed Module used for ISP 0x02 : Neither USB High Speed module nor USB Full Speed module used for ISP 0x03 - 0xFF : RESERVED."]
     #[inline(always)]
     pub const fn set_usb_speed(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
@@ -7118,19 +7118,19 @@ impl defmt::Format for Usbcfg {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Uuid0(pub u32);
 impl Uuid0 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -7155,19 +7155,19 @@ impl defmt::Format for Uuid0 {
         defmt::write!(f, "Uuid0 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Uuid1(pub u32);
 impl Uuid1 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -7192,19 +7192,19 @@ impl defmt::Format for Uuid1 {
         defmt::write!(f, "Uuid1 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Uuid2(pub u32);
 impl Uuid2 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -7229,19 +7229,19 @@ impl defmt::Format for Uuid2 {
         defmt::write!(f, "Uuid2 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Uuid3(pub u32);
 impl Uuid3 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -7266,19 +7266,19 @@ impl defmt::Format for Uuid3 {
         defmt::write!(f, "Uuid3 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct UuidArray0(pub u32);
 impl UuidArray0 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -7303,19 +7303,19 @@ impl defmt::Format for UuidArray0 {
         defmt::write!(f, "UuidArray0 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct UuidArray1(pub u32);
 impl UuidArray1 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -7340,19 +7340,19 @@ impl defmt::Format for UuidArray1 {
         defmt::write!(f, "UuidArray1 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct UuidArray2(pub u32);
 impl UuidArray2 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -7377,19 +7377,19 @@ impl defmt::Format for UuidArray2 {
         defmt::write!(f, "UuidArray2 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct UuidArray3(pub u32);
 impl UuidArray3 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn field(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_field(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -7414,19 +7414,19 @@ impl defmt::Format for UuidArray3 {
         defmt::write!(f, "UuidArray3 {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct WaferTest1Date(pub u32);
 impl WaferTest1Date {
-    #[doc = "WT1_DATE \\[stored as : year*10000+month*100+day\\]"]
+    #[doc = "WT1_DATE \\[stored as : year*10000+month*100+day\\]."]
     #[must_use]
     #[inline(always)]
     pub const fn wt1_date(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "WT1_DATE \\[stored as : year*10000+month*100+day\\]"]
+    #[doc = "WT1_DATE \\[stored as : year*10000+month*100+day\\]."]
     #[inline(always)]
     pub const fn set_wt1_date(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -7455,19 +7455,19 @@ impl defmt::Format for WaferTest1Date {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct WaferTest1ProgramVersion(pub u32);
 impl WaferTest1ProgramVersion {
-    #[doc = "WT1_PROGRAM_VERSION \\[xx.yy stored as : 100*x+y\\]"]
+    #[doc = "WT1_PROGRAM_VERSION \\[xx.yy stored as : 100*x+y\\]."]
     #[must_use]
     #[inline(always)]
     pub const fn wt1_program_version(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "WT1_PROGRAM_VERSION \\[xx.yy stored as : 100*x+y\\]"]
+    #[doc = "WT1_PROGRAM_VERSION \\[xx.yy stored as : 100*x+y\\]."]
     #[inline(always)]
     pub const fn set_wt1_program_version(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -7496,19 +7496,19 @@ impl defmt::Format for WaferTest1ProgramVersion {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct WaferTest1Time(pub u32);
 impl WaferTest1Time {
-    #[doc = "WT1_TIME \\[stored as : hour*10000+minute*100+seconde\\]"]
+    #[doc = "WT1_TIME \\[stored as : hour*10000+minute*100+seconde\\]."]
     #[must_use]
     #[inline(always)]
     pub const fn wt1_time(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "WT1_TIME \\[stored as : hour*10000+minute*100+seconde\\]"]
+    #[doc = "WT1_TIME \\[stored as : hour*10000+minute*100+seconde\\]."]
     #[inline(always)]
     pub const fn set_wt1_time(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -7537,19 +7537,19 @@ impl defmt::Format for WaferTest1Time {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct WaferTest2Date(pub u32);
 impl WaferTest2Date {
-    #[doc = "WT2_DATE \\[stored as : year*10000+month*100+day\\]"]
+    #[doc = "WT2_DATE \\[stored as : year*10000+month*100+day\\]."]
     #[must_use]
     #[inline(always)]
     pub const fn wt2_date(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "WT2_DATE \\[stored as : year*10000+month*100+day\\]"]
+    #[doc = "WT2_DATE \\[stored as : year*10000+month*100+day\\]."]
     #[inline(always)]
     pub const fn set_wt2_date(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -7578,19 +7578,19 @@ impl defmt::Format for WaferTest2Date {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct WaferTest2ProgramVersion(pub u32);
 impl WaferTest2ProgramVersion {
-    #[doc = "WT2_PROGRAM_VERSION \\[xx.yy stored as : 100*x+y\\]"]
+    #[doc = "WT2_PROGRAM_VERSION \\[xx.yy stored as : 100*x+y\\]."]
     #[must_use]
     #[inline(always)]
     pub const fn wt2_program_version(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "WT2_PROGRAM_VERSION \\[xx.yy stored as : 100*x+y\\]"]
+    #[doc = "WT2_PROGRAM_VERSION \\[xx.yy stored as : 100*x+y\\]."]
     #[inline(always)]
     pub const fn set_wt2_program_version(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -7619,19 +7619,19 @@ impl defmt::Format for WaferTest2ProgramVersion {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct WaferTest2Time(pub u32);
 impl WaferTest2Time {
-    #[doc = "WT2_TIME \\[stored as : hour*10000+minute*100+seconde\\]"]
+    #[doc = "WT2_TIME \\[stored as : hour*10000+minute*100+seconde\\]."]
     #[must_use]
     #[inline(always)]
     pub const fn wt2_time(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "WT2_TIME \\[stored as : hour*10000+minute*100+seconde\\]"]
+    #[doc = "WT2_TIME \\[stored as : hour*10000+minute*100+seconde\\]."]
     #[inline(always)]
     pub const fn set_wt2_time(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -7660,79 +7660,79 @@ impl defmt::Format for WaferTest2Time {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Xo32khz(pub u32);
 impl Xo32khz {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn xo32k_xin_trim_valid(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_xo32k_xin_trim_valid(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn xo32k_xin_capcal_6pf(&self) -> u8 {
         let val = (self.0 >> 1usize) & 0x7f;
         val as u8
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_xo32k_xin_capcal_6pf(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 1usize)) | (((val as u32) & 0x7f) << 1usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn xo32k_xin_capcal_8pf(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_xo32k_xin_capcal_8pf(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u32) & 0x7f) << 8usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn xo32k_xout_trim_valid(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_xo32k_xout_trim_valid(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn xo32k_xout_capcal_6pf(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x7f;
         val as u8
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_xo32k_xout_capcal_6pf(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 16usize)) | (((val as u32) & 0x7f) << 16usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn xo32k_xout_capcal_8pf(&self) -> u8 {
         let val = (self.0 >> 23usize) & 0x7f;
         val as u8
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_xo32k_xout_capcal_8pf(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 23usize)) | (((val as u32) & 0x7f) << 23usize);
@@ -7771,103 +7771,103 @@ impl defmt::Format for Xo32khz {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Xo32mhz(pub u32);
 impl Xo32mhz {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn xo32m_xin_trim_valid(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_xo32m_xin_trim_valid(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn xo32m_xin_capcal_6pf(&self) -> u8 {
         let val = (self.0 >> 1usize) & 0x7f;
         val as u8
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_xo32m_xin_capcal_6pf(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 1usize)) | (((val as u32) & 0x7f) << 1usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn xo32m_xin_capcal_8pf(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_xo32m_xin_capcal_8pf(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u32) & 0x7f) << 8usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn xo32m_xout_trim_valid(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_xo32m_xout_trim_valid(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn xo32m_xout_capcal_6pf(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x7f;
         val as u8
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_xo32m_xout_capcal_6pf(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 16usize)) | (((val as u32) & 0x7f) << 16usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn xo32m_xout_capcal_8pf(&self) -> u8 {
         let val = (self.0 >> 23usize) & 0x7f;
         val as u8
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_xo32m_xout_capcal_8pf(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 23usize)) | (((val as u32) & 0x7f) << 23usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn xo32m_xo_slave_status(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_xo32m_xo_slave_status(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn xo32m_xo_ac_buf_status(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_xo32m_xo_ac_buf_status(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);

@@ -1,4 +1,4 @@
-#[doc = "Pin interrupt active level or falling edge interrupt clear register"]
+#[doc = "Pin interrupt active level or falling edge interrupt clear register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cienf(pub u32);
@@ -35,7 +35,7 @@ impl defmt::Format for Cienf {
         defmt::write!(f, "Cienf {{ cenaf: {=u8:?} }}", self.cenaf())
     }
 }
-#[doc = "Pin interrupt level (rising edge interrupt) clear register"]
+#[doc = "Pin interrupt level (rising edge interrupt) clear register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cienr(pub u32);
@@ -72,7 +72,7 @@ impl defmt::Format for Cienr {
         defmt::write!(f, "Cienr {{ cenrl: {=u8:?} }}", self.cenrl())
     }
 }
-#[doc = "Pin interrupt falling edge register"]
+#[doc = "Pin interrupt falling edge register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Fall(pub u32);
@@ -107,7 +107,7 @@ impl defmt::Format for Fall {
         defmt::write!(f, "Fall {{ fdet: {=u8:?} }}", self.fdet())
     }
 }
-#[doc = "Pin interrupt active level or falling edge interrupt enable register"]
+#[doc = "Pin interrupt active level or falling edge interrupt enable register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ienf(pub u32);
@@ -142,7 +142,7 @@ impl defmt::Format for Ienf {
         defmt::write!(f, "Ienf {{ enaf: {=u8:?} }}", self.enaf())
     }
 }
-#[doc = "Pin interrupt level or rising edge interrupt enable register"]
+#[doc = "Pin interrupt level or rising edge interrupt enable register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ienr(pub u32);
@@ -177,19 +177,19 @@ impl defmt::Format for Ienr {
         defmt::write!(f, "Ienr {{ enrl: {=u8:?} }}", self.enrl())
     }
 }
-#[doc = "Pin Interrupt Mode register"]
+#[doc = "Pin Interrupt Mode register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Isel(pub u32);
 impl Isel {
-    #[doc = "Selects the interrupt mode for each pin interrupt. Bit n configures the pin interrupt selected in PINTSELn. 0 = Edge sensitive 1 = Level sensitive"]
+    #[doc = "Selects the interrupt mode for each pin interrupt. Bit n configures the pin interrupt selected in PINTSELn. 0 = Edge sensitive 1 = Level sensitive."]
     #[must_use]
     #[inline(always)]
     pub const fn pmode(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Selects the interrupt mode for each pin interrupt. Bit n configures the pin interrupt selected in PINTSELn. 0 = Edge sensitive 1 = Level sensitive"]
+    #[doc = "Selects the interrupt mode for each pin interrupt. Bit n configures the pin interrupt selected in PINTSELn. 0 = Edge sensitive 1 = Level sensitive."]
     #[inline(always)]
     pub const fn set_pmode(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
@@ -214,7 +214,7 @@ impl defmt::Format for Isel {
         defmt::write!(f, "Isel {{ pmode: {=u8:?} }}", self.pmode())
     }
 }
-#[doc = "Pin interrupt status register"]
+#[doc = "Pin interrupt status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ist(pub u32);
@@ -249,7 +249,7 @@ impl defmt::Format for Ist {
         defmt::write!(f, "Ist {{ pstat: {=u8:?} }}", self.pstat())
     }
 }
-#[doc = "Pattern match interrupt bit slice configuration register"]
+#[doc = "Pattern match interrupt bit slice configuration register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pmcfg(pub u32);
@@ -486,7 +486,7 @@ impl defmt::Format for Pmcfg {
         )
     }
 }
-#[doc = "Pattern match interrupt control register"]
+#[doc = "Pattern match interrupt control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pmctrl(pub u32);
@@ -555,103 +555,103 @@ impl defmt::Format for Pmctrl {
         )
     }
 }
-#[doc = "Pattern match interrupt bit-slice source register"]
+#[doc = "Pattern match interrupt bit-slice source register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pmsrc(pub u32);
 impl Pmsrc {
-    #[doc = "Selects the input source for bit slice 0"]
+    #[doc = "Selects the input source for bit slice 0."]
     #[must_use]
     #[inline(always)]
     pub const fn src0(&self) -> super::vals::Src0 {
         let val = (self.0 >> 8usize) & 0x07;
         super::vals::Src0::from_bits(val as u8)
     }
-    #[doc = "Selects the input source for bit slice 0"]
+    #[doc = "Selects the input source for bit slice 0."]
     #[inline(always)]
     pub const fn set_src0(&mut self, val: super::vals::Src0) {
         self.0 = (self.0 & !(0x07 << 8usize)) | (((val.to_bits() as u32) & 0x07) << 8usize);
     }
-    #[doc = "Selects the input source for bit slice 1"]
+    #[doc = "Selects the input source for bit slice 1."]
     #[must_use]
     #[inline(always)]
     pub const fn src1(&self) -> super::vals::Src1 {
         let val = (self.0 >> 11usize) & 0x07;
         super::vals::Src1::from_bits(val as u8)
     }
-    #[doc = "Selects the input source for bit slice 1"]
+    #[doc = "Selects the input source for bit slice 1."]
     #[inline(always)]
     pub const fn set_src1(&mut self, val: super::vals::Src1) {
         self.0 = (self.0 & !(0x07 << 11usize)) | (((val.to_bits() as u32) & 0x07) << 11usize);
     }
-    #[doc = "Selects the input source for bit slice 2"]
+    #[doc = "Selects the input source for bit slice 2."]
     #[must_use]
     #[inline(always)]
     pub const fn src2(&self) -> super::vals::Src2 {
         let val = (self.0 >> 14usize) & 0x07;
         super::vals::Src2::from_bits(val as u8)
     }
-    #[doc = "Selects the input source for bit slice 2"]
+    #[doc = "Selects the input source for bit slice 2."]
     #[inline(always)]
     pub const fn set_src2(&mut self, val: super::vals::Src2) {
         self.0 = (self.0 & !(0x07 << 14usize)) | (((val.to_bits() as u32) & 0x07) << 14usize);
     }
-    #[doc = "Selects the input source for bit slice 3"]
+    #[doc = "Selects the input source for bit slice 3."]
     #[must_use]
     #[inline(always)]
     pub const fn src3(&self) -> super::vals::Src3 {
         let val = (self.0 >> 17usize) & 0x07;
         super::vals::Src3::from_bits(val as u8)
     }
-    #[doc = "Selects the input source for bit slice 3"]
+    #[doc = "Selects the input source for bit slice 3."]
     #[inline(always)]
     pub const fn set_src3(&mut self, val: super::vals::Src3) {
         self.0 = (self.0 & !(0x07 << 17usize)) | (((val.to_bits() as u32) & 0x07) << 17usize);
     }
-    #[doc = "Selects the input source for bit slice 4"]
+    #[doc = "Selects the input source for bit slice 4."]
     #[must_use]
     #[inline(always)]
     pub const fn src4(&self) -> super::vals::Src4 {
         let val = (self.0 >> 20usize) & 0x07;
         super::vals::Src4::from_bits(val as u8)
     }
-    #[doc = "Selects the input source for bit slice 4"]
+    #[doc = "Selects the input source for bit slice 4."]
     #[inline(always)]
     pub const fn set_src4(&mut self, val: super::vals::Src4) {
         self.0 = (self.0 & !(0x07 << 20usize)) | (((val.to_bits() as u32) & 0x07) << 20usize);
     }
-    #[doc = "Selects the input source for bit slice 5"]
+    #[doc = "Selects the input source for bit slice 5."]
     #[must_use]
     #[inline(always)]
     pub const fn src5(&self) -> super::vals::Src5 {
         let val = (self.0 >> 23usize) & 0x07;
         super::vals::Src5::from_bits(val as u8)
     }
-    #[doc = "Selects the input source for bit slice 5"]
+    #[doc = "Selects the input source for bit slice 5."]
     #[inline(always)]
     pub const fn set_src5(&mut self, val: super::vals::Src5) {
         self.0 = (self.0 & !(0x07 << 23usize)) | (((val.to_bits() as u32) & 0x07) << 23usize);
     }
-    #[doc = "Selects the input source for bit slice 6"]
+    #[doc = "Selects the input source for bit slice 6."]
     #[must_use]
     #[inline(always)]
     pub const fn src6(&self) -> super::vals::Src6 {
         let val = (self.0 >> 26usize) & 0x07;
         super::vals::Src6::from_bits(val as u8)
     }
-    #[doc = "Selects the input source for bit slice 6"]
+    #[doc = "Selects the input source for bit slice 6."]
     #[inline(always)]
     pub const fn set_src6(&mut self, val: super::vals::Src6) {
         self.0 = (self.0 & !(0x07 << 26usize)) | (((val.to_bits() as u32) & 0x07) << 26usize);
     }
-    #[doc = "Selects the input source for bit slice 7"]
+    #[doc = "Selects the input source for bit slice 7."]
     #[must_use]
     #[inline(always)]
     pub const fn src7(&self) -> super::vals::Src7 {
         let val = (self.0 >> 29usize) & 0x07;
         super::vals::Src7::from_bits(val as u8)
     }
-    #[doc = "Selects the input source for bit slice 7"]
+    #[doc = "Selects the input source for bit slice 7."]
     #[inline(always)]
     pub const fn set_src7(&mut self, val: super::vals::Src7) {
         self.0 = (self.0 & !(0x07 << 29usize)) | (((val.to_bits() as u32) & 0x07) << 29usize);
@@ -694,7 +694,7 @@ impl defmt::Format for Pmsrc {
         )
     }
 }
-#[doc = "Pin interrupt rising edge register"]
+#[doc = "Pin interrupt rising edge register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Rise(pub u32);
@@ -729,7 +729,7 @@ impl defmt::Format for Rise {
         defmt::write!(f, "Rise {{ rdet: {=u8:?} }}", self.rdet())
     }
 }
-#[doc = "Pin interrupt active level or falling edge interrupt set register"]
+#[doc = "Pin interrupt active level or falling edge interrupt set register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sienf(pub u32);
@@ -766,7 +766,7 @@ impl defmt::Format for Sienf {
         defmt::write!(f, "Sienf {{ setenaf: {=u8:?} }}", self.setenaf())
     }
 }
-#[doc = "Pin interrupt level or rising edge interrupt set register"]
+#[doc = "Pin interrupt level or rising edge interrupt set register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sienr(pub u32);

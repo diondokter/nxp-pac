@@ -3,17 +3,17 @@
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum OStatus {
     _RESERVED_0 = 0x0,
-    #[doc = "5'b00001 = Reset"]
+    #[doc = "5'b00001 = Reset."]
     RESET = 0x01,
-    #[doc = "5'b00010 = Init"]
+    #[doc = "5'b00010 = Init."]
     INIT = 0x02,
     _RESERVED_3 = 0x03,
-    #[doc = "5'b00100 = Warmup"]
+    #[doc = "5'b00100 = Warmup."]
     WARMUP = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
-    #[doc = "5'b01000 = Ready"]
+    #[doc = "5'b01000 = Ready."]
     READY = 0x08,
     _RESERVED_9 = 0x09,
     _RESERVED_a = 0x0a,
@@ -22,7 +22,7 @@ pub enum OStatus {
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
-    #[doc = "5'b10000 = Error"]
+    #[doc = "5'b10000 = Error."]
     ERROR = 0x10,
     _RESERVED_11 = 0x11,
     _RESERVED_12 = 0x12,

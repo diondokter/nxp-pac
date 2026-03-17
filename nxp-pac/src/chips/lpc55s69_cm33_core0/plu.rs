@@ -1,4 +1,4 @@
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lut {
     ptr: *mut u8,
@@ -14,7 +14,7 @@ impl Lut {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "LUTn input x MUX"]
+    #[doc = "LUTn input x MUX."]
     #[inline(always)]
     pub const fn lut_inp_mux(
         self,
@@ -24,7 +24,7 @@ impl Lut {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize + n * 4usize) as _) }
     }
 }
-#[doc = "LPC80X Programmable Logic Unit (PLU)"]
+#[doc = "LPC80X Programmable Logic Unit (PLU)."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Plu {
     ptr: *mut u8,
@@ -40,13 +40,13 @@ impl Plu {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn lut(self, n: usize) -> Lut {
         assert!(n < 26usize);
         unsafe { Lut::from_ptr(self.ptr.wrapping_add(0x0usize + n * 32usize) as _) }
     }
-    #[doc = "Specifies the Truth Table contents for LUTLUTn"]
+    #[doc = "Specifies the Truth Table contents for LUTLUTn."]
     #[inline(always)]
     pub const fn lut_truth(
         self,
@@ -62,12 +62,12 @@ impl Plu {
     pub const fn outputs(self) -> crate::common::Reg<regs::Outputs, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0900usize) as _) }
     }
-    #[doc = "Wakeup interrupt control for PLU"]
+    #[doc = "Wakeup interrupt control for PLU."]
     #[inline(always)]
     pub const fn wakeint_ctrl(self) -> crate::common::Reg<regs::WakeintCtrl, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0904usize) as _) }
     }
-    #[doc = "Selects the source to be connected to PLU Output OUTPUT_n"]
+    #[doc = "Selects the source to be connected to PLU Output OUTPUT_n."]
     #[inline(always)]
     pub const fn output_mux(
         self,

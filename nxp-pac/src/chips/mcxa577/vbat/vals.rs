@@ -2,13 +2,13 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CapTrim {
-    #[doc = "Default (when CAP2_TRIM = 0 and CAP_TRIM\\[1:0\\] = 00 )"]
+    #[doc = "Default (when CAP2_TRIM = 0 and CAP_TRIM\\[1:0\\] = 00 )."]
     VAL0 = 0x0,
-    #[doc = "-1us (when CAP2_TRIM = 0 and CAP_TRIM\\[1:0\\] = 01)"]
+    #[doc = "-1us (when CAP2_TRIM = 0 and CAP_TRIM\\[1:0\\] = 01)."]
     VAL1 = 0x01,
-    #[doc = "-2us (when CAP2_TRIM = 0 and CAP_TRIM\\[1:0\\] = 10) or or +3.5us (when CAP2_TRIM = 1 and CAP_TRIM\\[1:0\\] = 10)"]
+    #[doc = "-2us (when CAP2_TRIM = 0 and CAP_TRIM\\[1:0\\] = 10) or or +3.5us (when CAP2_TRIM = 1 and CAP_TRIM\\[1:0\\] = 10)."]
     VAL2 = 0x02,
-    #[doc = "-2.5us (when CAP2_TRIM = 0 and CAP_TRIM\\[1:0\\] = 11) or +1us (when CAP2_TRIM = 1 and CAP_TRIM\\[1:0\\] = 11)"]
+    #[doc = "-2.5us (when CAP2_TRIM = 0 and CAP_TRIM\\[1:0\\] = 11) or +1us (when CAP2_TRIM = 1 and CAP_TRIM\\[1:0\\] = 11)."]
     VAL3 = 0x03,
 }
 impl CapTrim {
@@ -37,12 +37,12 @@ impl From<CapTrim> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CmpTrim {
-    #[doc = "760 mV"]
+    #[doc = "760 mV."]
     CMP_760 = 0x0,
-    #[doc = "770 mV"]
+    #[doc = "770 mV."]
     CMP_770 = 0x01,
     _RESERVED_2 = 0x02,
-    #[doc = "740 mV"]
+    #[doc = "740 mV."]
     CMP_740 = 0x03,
 }
 impl CmpTrim {
@@ -71,13 +71,13 @@ impl From<CmpTrim> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CoarseAmpGain {
-    #[doc = "ESR Range 0"]
+    #[doc = "ESR Range 0."]
     GAIN05 = 0x0,
-    #[doc = "ESR Range 1"]
+    #[doc = "ESR Range 1."]
     GAIN10 = 0x01,
-    #[doc = "ESR Range 2"]
+    #[doc = "ESR Range 2."]
     GAIN18 = 0x02,
-    #[doc = "ESR Range 3"]
+    #[doc = "ESR Range 3."]
     GAIN33 = 0x03,
 }
 impl CoarseAmpGain {
@@ -106,9 +106,9 @@ impl From<CoarseAmpGain> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DivideTrim {
-    #[doc = "Clock monitor operates at 1 kHz"]
+    #[doc = "Clock monitor operates at 1 kHz."]
     CFG0 = 0x0,
-    #[doc = "Clock monitor operates at 64 Hz"]
+    #[doc = "Clock monitor operates at 64 Hz."]
     CFG1 = 0x01,
 }
 impl DivideTrim {
@@ -137,26 +137,26 @@ impl From<DivideTrim> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DlyTrim {
-    #[doc = "P current 9(nA) and N Current 6(nA)"]
+    #[doc = "P current 9(nA) and N Current 6(nA)."]
     DLY_9_6 = 0x0,
-    #[doc = "P current 13(nA) and N Current 6(nA)"]
+    #[doc = "P current 13(nA) and N Current 6(nA)."]
     DLY_13_6 = 0x01,
     _RESERVED_2 = 0x02,
-    #[doc = "P current 4(nA) and N Current 6(nA)"]
+    #[doc = "P current 4(nA) and N Current 6(nA)."]
     DLY_4_6 = 0x03,
-    #[doc = "P current 9(nA) and N Current 4(nA)"]
+    #[doc = "P current 9(nA) and N Current 4(nA)."]
     DLY_9_4 = 0x04,
-    #[doc = "P current 13(nA) and N Current 4(nA)"]
+    #[doc = "P current 13(nA) and N Current 4(nA)."]
     DLY_13_4 = 0x05,
     _RESERVED_6 = 0x06,
-    #[doc = "P current 4(nA) and N Current 4(nA)"]
+    #[doc = "P current 4(nA) and N Current 4(nA)."]
     DLY_4_4 = 0x07,
-    #[doc = "P current 9(nA) and N Current 2(nA)"]
+    #[doc = "P current 9(nA) and N Current 2(nA)."]
     DLY_9_2 = 0x08,
-    #[doc = "P current 13(nA) and N Current 2(nA)"]
+    #[doc = "P current 13(nA) and N Current 2(nA)."]
     DLY_13_2 = 0x09,
     _RESERVED_a = 0x0a,
-    #[doc = "P current 4(nA) and N Current 2(nA)"]
+    #[doc = "P current 4(nA) and N Current 2(nA)."]
     DLY_4_2 = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
@@ -189,37 +189,37 @@ impl From<DlyTrim> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ExtalCapSel {
-    #[doc = "0 pF"]
+    #[doc = "0 pF."]
     SEL0 = 0x0,
-    #[doc = "2 pF"]
+    #[doc = "2 pF."]
     SEL2 = 0x01,
-    #[doc = "4 pF"]
+    #[doc = "4 pF."]
     SEL4 = 0x02,
-    #[doc = "6 pF"]
+    #[doc = "6 pF."]
     SEL6 = 0x03,
-    #[doc = "8 pF"]
+    #[doc = "8 pF."]
     SEL8 = 0x04,
-    #[doc = "10 pF"]
+    #[doc = "10 pF."]
     SEL10 = 0x05,
-    #[doc = "12 pF"]
+    #[doc = "12 pF."]
     SEL12 = 0x06,
-    #[doc = "14 pF"]
+    #[doc = "14 pF."]
     SEL14 = 0x07,
-    #[doc = "16 pF"]
+    #[doc = "16 pF."]
     SEL16 = 0x08,
-    #[doc = "18 pF"]
+    #[doc = "18 pF."]
     SEL18 = 0x09,
-    #[doc = "20 pF"]
+    #[doc = "20 pF."]
     SEL20 = 0x0a,
-    #[doc = "22 pF"]
+    #[doc = "22 pF."]
     SEL22 = 0x0b,
-    #[doc = "24 pF"]
+    #[doc = "24 pF."]
     SEL24 = 0x0c,
-    #[doc = "26 pF"]
+    #[doc = "26 pF."]
     SEL26 = 0x0d,
-    #[doc = "28 pF"]
+    #[doc = "28 pF."]
     SEL28 = 0x0e,
-    #[doc = "30 pF"]
+    #[doc = "30 pF."]
     SEL30 = 0x0f,
 }
 impl ExtalCapSel {
@@ -248,13 +248,13 @@ impl From<ExtalCapSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FreqTrim {
-    #[doc = "Clock monitor asserts 2 cycle after expected edge"]
+    #[doc = "Clock monitor asserts 2 cycle after expected edge."]
     CFG0 = 0x0,
-    #[doc = "Clock monitor asserts 4 cycles after expected edge"]
+    #[doc = "Clock monitor asserts 4 cycles after expected edge."]
     CFG1 = 0x01,
-    #[doc = "Clock monitor asserts 6 cycles after expected edge"]
+    #[doc = "Clock monitor asserts 6 cycles after expected edge."]
     CFG2 = 0x02,
-    #[doc = "Clock monitor asserts 8 cycles after expected edge"]
+    #[doc = "Clock monitor asserts 8 cycles after expected edge."]
     CFG3 = 0x03,
 }
 impl FreqTrim {
@@ -283,21 +283,21 @@ impl From<FreqTrim> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum InitTrim {
-    #[doc = "8 s"]
+    #[doc = "8 s."]
     SEL0 = 0x0,
-    #[doc = "4 s"]
+    #[doc = "4 s."]
     SEL1 = 0x01,
-    #[doc = "2 s"]
+    #[doc = "2 s."]
     SEL2 = 0x02,
-    #[doc = "1 s"]
+    #[doc = "1 s."]
     SEL3 = 0x03,
-    #[doc = "0.5 s"]
+    #[doc = "0.5 s."]
     SEL4 = 0x04,
-    #[doc = "0.25 s"]
+    #[doc = "0.25 s."]
     SEL5 = 0x05,
-    #[doc = "0.125 s"]
+    #[doc = "0.125 s."]
     SEL6 = 0x06,
-    #[doc = "0.5 ms"]
+    #[doc = "0.5 ms."]
     SEL7 = 0x07,
 }
 impl InitTrim {
@@ -326,9 +326,9 @@ impl From<InitTrim> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IrqenaWakeupFlag {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     CLR = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     SET = 0x01,
 }
 impl IrqenaWakeupFlag {
@@ -357,12 +357,12 @@ impl From<IrqenaWakeupFlag> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ModeEn {
-    #[doc = "Normal mode"]
+    #[doc = "Normal mode."]
     HP = 0x0,
-    #[doc = "Startup mode"]
+    #[doc = "Startup mode."]
     LP = 0x01,
     _RESERVED_2 = 0x02,
-    #[doc = "Low power mode"]
+    #[doc = "Low power mode."]
     SW = 0x03,
 }
 impl ModeEn {
@@ -391,9 +391,9 @@ impl From<ModeEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Out {
-    #[doc = "Logic zero (asserted)"]
+    #[doc = "Logic zero (asserted)."]
     ON = 0x0,
-    #[doc = "Logic one"]
+    #[doc = "Logic one."]
     OFF = 0x01,
 }
 impl Out {
@@ -422,9 +422,9 @@ impl From<Out> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sec0Det {
-    #[doc = "Security input 0 not detected"]
+    #[doc = "Security input 0 not detected."]
     CLR = 0x0,
-    #[doc = "Security input 0 detected"]
+    #[doc = "Security input 0 detected."]
     SET = 0x01,
 }
 impl Sec0Det {
@@ -453,9 +453,9 @@ impl From<Sec0Det> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatusaClockDet {
-    #[doc = "Clock error not detected"]
+    #[doc = "Clock error not detected."]
     CLR = 0x0,
-    #[doc = "Clock error detected"]
+    #[doc = "Clock error detected."]
     SET = 0x01,
 }
 impl StatusaClockDet {
@@ -484,9 +484,9 @@ impl From<StatusaClockDet> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatusaIrq0Det {
-    #[doc = "Not asserted"]
+    #[doc = "Not asserted."]
     CLR = 0x0,
-    #[doc = "Asserted"]
+    #[doc = "Asserted."]
     SET = 0x01,
 }
 impl StatusaIrq0Det {
@@ -515,9 +515,9 @@ impl From<StatusaIrq0Det> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatusaIrq1Det {
-    #[doc = "Not asserted"]
+    #[doc = "Not asserted."]
     CLR = 0x0,
-    #[doc = "Asserted"]
+    #[doc = "Asserted."]
     SET = 0x01,
 }
 impl StatusaIrq1Det {
@@ -546,9 +546,9 @@ impl From<StatusaIrq1Det> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatusaIrq2Det {
-    #[doc = "Not asserted"]
+    #[doc = "Not asserted."]
     CLR = 0x0,
-    #[doc = "Asserted"]
+    #[doc = "Asserted."]
     SET = 0x01,
 }
 impl StatusaIrq2Det {
@@ -577,9 +577,9 @@ impl From<StatusaIrq2Det> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatusaIrq3Det {
-    #[doc = "Not asserted"]
+    #[doc = "Not asserted."]
     CLR = 0x0,
-    #[doc = "Asserted"]
+    #[doc = "Asserted."]
     SET = 0x01,
 }
 impl StatusaIrq3Det {
@@ -608,9 +608,9 @@ impl From<StatusaIrq3Det> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatusaLdoRdy {
-    #[doc = "Disabled (not ready)"]
+    #[doc = "Disabled (not ready)."]
     CLR = 0x0,
-    #[doc = "Enabled (ready)"]
+    #[doc = "Enabled (ready)."]
     SET = 0x01,
 }
 impl StatusaLdoRdy {
@@ -639,9 +639,9 @@ impl From<StatusaLdoRdy> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatusaOscRdy {
-    #[doc = "Disabled (clock not ready)"]
+    #[doc = "Disabled (clock not ready)."]
     CLR = 0x0,
-    #[doc = "Enabled (clock ready)"]
+    #[doc = "Enabled (clock ready)."]
     SET = 0x01,
 }
 impl StatusaOscRdy {
@@ -670,9 +670,9 @@ impl From<StatusaOscRdy> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatusaPorDet {
-    #[doc = "Not reset"]
+    #[doc = "Not reset."]
     CLR = 0x0,
-    #[doc = "Reset"]
+    #[doc = "Reset."]
     SET = 0x01,
 }
 impl StatusaPorDet {
@@ -701,9 +701,9 @@ impl From<StatusaPorDet> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatusaTimer0Flag {
-    #[doc = "Not reached"]
+    #[doc = "Not reached."]
     CLR = 0x0,
-    #[doc = "Reached"]
+    #[doc = "Reached."]
     SET = 0x01,
 }
 impl StatusaTimer0Flag {
@@ -732,9 +732,9 @@ impl From<StatusaTimer0Flag> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatusaTimer1Flag {
-    #[doc = "Not reached"]
+    #[doc = "Not reached."]
     CLR = 0x0,
-    #[doc = "Reached"]
+    #[doc = "Reached."]
     SET = 0x01,
 }
 impl StatusaTimer1Flag {
@@ -763,9 +763,9 @@ impl From<StatusaTimer1Flag> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatusaWakeupFlag {
-    #[doc = "Not asserted"]
+    #[doc = "Not asserted."]
     CLR = 0x0,
-    #[doc = "Asserted"]
+    #[doc = "Asserted."]
     SET = 0x01,
 }
 impl StatusaWakeupFlag {
@@ -794,9 +794,9 @@ impl From<StatusaWakeupFlag> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SupplyDet {
-    #[doc = "VBAT supply is less than 3V"]
+    #[doc = "VBAT supply is less than 3V."]
     L3VSUPPLY = 0x0,
-    #[doc = "VBAT supply is greater than 3V"]
+    #[doc = "VBAT supply is greater than 3V."]
     G3VSUPPLY = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -827,21 +827,21 @@ impl From<SupplyDet> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Timcfg {
-    #[doc = "1 s"]
+    #[doc = "1 s."]
     CFG1000 = 0x0,
-    #[doc = "500 ms"]
+    #[doc = "500 ms."]
     CFG500 = 0x01,
-    #[doc = "250 ms"]
+    #[doc = "250 ms."]
     CFG250 = 0x02,
-    #[doc = "125 ms"]
+    #[doc = "125 ms."]
     CFG125 = 0x03,
-    #[doc = "62.5 ms"]
+    #[doc = "62.5 ms."]
     CFG62 = 0x04,
-    #[doc = "31.25 ms"]
+    #[doc = "31.25 ms."]
     CFG31 = 0x05,
-    #[doc = "15.625 ms"]
+    #[doc = "15.625 ms."]
     CFG15 = 0x06,
-    #[doc = "7.8125 ms"]
+    #[doc = "7.8125 ms."]
     CFG7 = 0x07,
 }
 impl Timcfg {
@@ -870,9 +870,9 @@ impl From<Timcfg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum WakenaWakeupFlag {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     CLR = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     SET = 0x01,
 }
 impl WakenaWakeupFlag {
@@ -901,37 +901,37 @@ impl From<WakenaWakeupFlag> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum XtalCapSel {
-    #[doc = "0 pF"]
+    #[doc = "0 pF."]
     SEL0 = 0x0,
-    #[doc = "2 pF"]
+    #[doc = "2 pF."]
     SEL2 = 0x01,
-    #[doc = "4 pF"]
+    #[doc = "4 pF."]
     SEL4 = 0x02,
-    #[doc = "6 pF"]
+    #[doc = "6 pF."]
     SEL6 = 0x03,
-    #[doc = "8 pF"]
+    #[doc = "8 pF."]
     SEL8 = 0x04,
-    #[doc = "10 pF"]
+    #[doc = "10 pF."]
     SEL10 = 0x05,
-    #[doc = "12 pF"]
+    #[doc = "12 pF."]
     SEL12 = 0x06,
-    #[doc = "14 pF"]
+    #[doc = "14 pF."]
     SEL14 = 0x07,
-    #[doc = "16 pF"]
+    #[doc = "16 pF."]
     SEL16 = 0x08,
-    #[doc = "18 pF"]
+    #[doc = "18 pF."]
     SEL18 = 0x09,
-    #[doc = "20 pF"]
+    #[doc = "20 pF."]
     SEL20 = 0x0a,
-    #[doc = "22 pF"]
+    #[doc = "22 pF."]
     SEL22 = 0x0b,
-    #[doc = "24 pF"]
+    #[doc = "24 pF."]
     SEL24 = 0x0c,
-    #[doc = "26 pF"]
+    #[doc = "26 pF."]
     SEL26 = 0x0d,
-    #[doc = "28 pF"]
+    #[doc = "28 pF."]
     SEL28 = 0x0e,
-    #[doc = "30 pF"]
+    #[doc = "30 pF."]
     SEL30 = 0x0f,
 }
 impl XtalCapSel {

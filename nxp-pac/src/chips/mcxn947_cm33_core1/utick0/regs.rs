@@ -1,28 +1,28 @@
-#[doc = "Capture"]
+#[doc = "Capture."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cap(pub u32);
 impl Cap {
-    #[doc = "Captured Value for the Related Capture Event"]
+    #[doc = "Captured Value for the Related Capture Event."]
     #[must_use]
     #[inline(always)]
     pub const fn cap_value(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x7fff_ffff;
         val as u32
     }
-    #[doc = "Captured Value for the Related Capture Event"]
+    #[doc = "Captured Value for the Related Capture Event."]
     #[inline(always)]
     pub const fn set_cap_value(&mut self, val: u32) {
         self.0 = (self.0 & !(0x7fff_ffff << 0usize)) | (((val as u32) & 0x7fff_ffff) << 0usize);
     }
-    #[doc = "Captured Value Valid Flag"]
+    #[doc = "Captured Value Valid Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn valid(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Captured Value Valid Flag"]
+    #[doc = "Captured Value Valid Flag."]
     #[inline(always)]
     pub const fn set_valid(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -53,55 +53,55 @@ impl defmt::Format for Cap {
         )
     }
 }
-#[doc = "Capture Clear"]
+#[doc = "Capture Clear."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Capclr(pub u32);
 impl Capclr {
-    #[doc = "Clear Capture 0"]
+    #[doc = "Clear Capture 0."]
     #[must_use]
     #[inline(always)]
     pub const fn capclr0(&self) -> super::vals::Capclr0 {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Capclr0::from_bits(val as u8)
     }
-    #[doc = "Clear Capture 0"]
+    #[doc = "Clear Capture 0."]
     #[inline(always)]
     pub const fn set_capclr0(&mut self, val: super::vals::Capclr0) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Clear Capture 1"]
+    #[doc = "Clear Capture 1."]
     #[must_use]
     #[inline(always)]
     pub const fn capclr1(&self) -> super::vals::Capclr1 {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Capclr1::from_bits(val as u8)
     }
-    #[doc = "Clear Capture 1"]
+    #[doc = "Clear Capture 1."]
     #[inline(always)]
     pub const fn set_capclr1(&mut self, val: super::vals::Capclr1) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Clear Capture 2"]
+    #[doc = "Clear Capture 2."]
     #[must_use]
     #[inline(always)]
     pub const fn capclr2(&self) -> super::vals::Capclr2 {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Capclr2::from_bits(val as u8)
     }
-    #[doc = "Clear Capture 2"]
+    #[doc = "Clear Capture 2."]
     #[inline(always)]
     pub const fn set_capclr2(&mut self, val: super::vals::Capclr2) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "Clear Capture 3"]
+    #[doc = "Clear Capture 3."]
     #[must_use]
     #[inline(always)]
     pub const fn capclr3(&self) -> super::vals::Capclr3 {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Capclr3::from_bits(val as u8)
     }
-    #[doc = "Clear Capture 3"]
+    #[doc = "Clear Capture 3."]
     #[inline(always)]
     pub const fn set_capclr3(&mut self, val: super::vals::Capclr3) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
@@ -136,103 +136,103 @@ impl defmt::Format for Capclr {
         )
     }
 }
-#[doc = "Capture Configuration"]
+#[doc = "Capture Configuration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cfg(pub u32);
 impl Cfg {
-    #[doc = "Enable Capture 0"]
+    #[doc = "Enable Capture 0."]
     #[must_use]
     #[inline(always)]
     pub const fn capen0(&self) -> super::vals::Capen0 {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Capen0::from_bits(val as u8)
     }
-    #[doc = "Enable Capture 0"]
+    #[doc = "Enable Capture 0."]
     #[inline(always)]
     pub const fn set_capen0(&mut self, val: super::vals::Capen0) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Enable Capture 1"]
+    #[doc = "Enable Capture 1."]
     #[must_use]
     #[inline(always)]
     pub const fn capen1(&self) -> super::vals::Capen1 {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Capen1::from_bits(val as u8)
     }
-    #[doc = "Enable Capture 1"]
+    #[doc = "Enable Capture 1."]
     #[inline(always)]
     pub const fn set_capen1(&mut self, val: super::vals::Capen1) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Enable Capture 2"]
+    #[doc = "Enable Capture 2."]
     #[must_use]
     #[inline(always)]
     pub const fn capen2(&self) -> super::vals::Capen2 {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Capen2::from_bits(val as u8)
     }
-    #[doc = "Enable Capture 2"]
+    #[doc = "Enable Capture 2."]
     #[inline(always)]
     pub const fn set_capen2(&mut self, val: super::vals::Capen2) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "Enable Capture 3"]
+    #[doc = "Enable Capture 3."]
     #[must_use]
     #[inline(always)]
     pub const fn capen3(&self) -> super::vals::Capen3 {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Capen3::from_bits(val as u8)
     }
-    #[doc = "Enable Capture 3"]
+    #[doc = "Enable Capture 3."]
     #[inline(always)]
     pub const fn set_capen3(&mut self, val: super::vals::Capen3) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "Capture Polarity 0"]
+    #[doc = "Capture Polarity 0."]
     #[must_use]
     #[inline(always)]
     pub const fn cappol0(&self) -> super::vals::Cappol0 {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::Cappol0::from_bits(val as u8)
     }
-    #[doc = "Capture Polarity 0"]
+    #[doc = "Capture Polarity 0."]
     #[inline(always)]
     pub const fn set_cappol0(&mut self, val: super::vals::Cappol0) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
-    #[doc = "Capture-Polarity 1"]
+    #[doc = "Capture-Polarity 1."]
     #[must_use]
     #[inline(always)]
     pub const fn cappol1(&self) -> super::vals::Cappol1 {
         let val = (self.0 >> 9usize) & 0x01;
         super::vals::Cappol1::from_bits(val as u8)
     }
-    #[doc = "Capture-Polarity 1"]
+    #[doc = "Capture-Polarity 1."]
     #[inline(always)]
     pub const fn set_cappol1(&mut self, val: super::vals::Cappol1) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
     }
-    #[doc = "Capture Polarity 2"]
+    #[doc = "Capture Polarity 2."]
     #[must_use]
     #[inline(always)]
     pub const fn cappol2(&self) -> super::vals::Cappol2 {
         let val = (self.0 >> 10usize) & 0x01;
         super::vals::Cappol2::from_bits(val as u8)
     }
-    #[doc = "Capture Polarity 2"]
+    #[doc = "Capture Polarity 2."]
     #[inline(always)]
     pub const fn set_cappol2(&mut self, val: super::vals::Cappol2) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
-    #[doc = "Capture Polarity 3"]
+    #[doc = "Capture Polarity 3."]
     #[must_use]
     #[inline(always)]
     pub const fn cappol3(&self) -> super::vals::Cappol3 {
         let val = (self.0 >> 11usize) & 0x01;
         super::vals::Cappol3::from_bits(val as u8)
     }
-    #[doc = "Capture Polarity 3"]
+    #[doc = "Capture Polarity 3."]
     #[inline(always)]
     pub const fn set_cappol3(&mut self, val: super::vals::Cappol3) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
@@ -275,31 +275,31 @@ impl defmt::Format for Cfg {
         )
     }
 }
-#[doc = "Control"]
+#[doc = "Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl(pub u32);
 impl Ctrl {
-    #[doc = "Tick Interval"]
+    #[doc = "Tick Interval."]
     #[must_use]
     #[inline(always)]
     pub const fn delayval(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x7fff_ffff;
         val as u32
     }
-    #[doc = "Tick Interval"]
+    #[doc = "Tick Interval."]
     #[inline(always)]
     pub const fn set_delayval(&mut self, val: u32) {
         self.0 = (self.0 & !(0x7fff_ffff << 0usize)) | (((val as u32) & 0x7fff_ffff) << 0usize);
     }
-    #[doc = "Repeat Delay"]
+    #[doc = "Repeat Delay."]
     #[must_use]
     #[inline(always)]
     pub const fn repeat(&self) -> super::vals::Repeat {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::Repeat::from_bits(val as u8)
     }
-    #[doc = "Repeat Delay"]
+    #[doc = "Repeat Delay."]
     #[inline(always)]
     pub const fn set_repeat(&mut self, val: super::vals::Repeat) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -330,31 +330,31 @@ impl defmt::Format for Ctrl {
         )
     }
 }
-#[doc = "Status"]
+#[doc = "Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Stat(pub u32);
 impl Stat {
-    #[doc = "Interrupt Flag"]
+    #[doc = "Interrupt Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn intr(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Interrupt Flag"]
+    #[doc = "Interrupt Flag."]
     #[inline(always)]
     pub const fn set_intr(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Timer Active Flag"]
+    #[doc = "Timer Active Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn active(&self) -> super::vals::Active {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Active::from_bits(val as u8)
     }
-    #[doc = "Timer Active Flag"]
+    #[doc = "Timer Active Flag."]
     #[inline(always)]
     pub const fn set_active(&mut self, val: super::vals::Active) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);

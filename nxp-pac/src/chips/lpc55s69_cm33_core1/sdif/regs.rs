@@ -1,4 +1,4 @@
-#[doc = "Power control"]
+#[doc = "Power control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Backendpwr(pub u32);
@@ -39,7 +39,7 @@ impl defmt::Format for Backendpwr {
         )
     }
 }
-#[doc = "Block Size register"]
+#[doc = "Block Size register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Blksiz(pub u32);
@@ -76,7 +76,7 @@ impl defmt::Format for Blksiz {
         defmt::write!(f, "Blksiz {{ block_size: {=u16:?} }}", self.block_size())
     }
 }
-#[doc = "Bus Mode register"]
+#[doc = "Bus Mode register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Bmod(pub u32);
@@ -173,7 +173,7 @@ impl defmt::Format for Bmod {
         )
     }
 }
-#[doc = "Current Buffer Descriptor Address register"]
+#[doc = "Current Buffer Descriptor Address register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Bufaddr(pub u32);
@@ -208,7 +208,7 @@ impl defmt::Format for Bufaddr {
         defmt::write!(f, "Bufaddr {{ hba: {=u32:?} }}", self.hba())
     }
 }
-#[doc = "Byte Count register"]
+#[doc = "Byte Count register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Bytcnt(pub u32);
@@ -245,7 +245,7 @@ impl defmt::Format for Bytcnt {
         defmt::write!(f, "Bytcnt {{ byte_count: {=u32:?} }}", self.byte_count())
     }
 }
-#[doc = "Card Threshold Control"]
+#[doc = "Card Threshold Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cardthrctl(pub u32);
@@ -314,31 +314,31 @@ impl defmt::Format for Cardthrctl {
         )
     }
 }
-#[doc = "Card Detect register"]
+#[doc = "Card Detect register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cdetect(pub u32);
 impl Cdetect {
-    #[doc = "Card 0 detect"]
+    #[doc = "Card 0 detect."]
     #[must_use]
     #[inline(always)]
     pub const fn card0_detect(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Card 0 detect"]
+    #[doc = "Card 0 detect."]
     #[inline(always)]
     pub const fn set_card0_detect(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Card 1 detect"]
+    #[doc = "Card 1 detect."]
     #[must_use]
     #[inline(always)]
     pub const fn card1_detect(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Card 1 detect"]
+    #[doc = "Card 1 detect."]
     #[inline(always)]
     pub const fn set_card1_detect(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
@@ -369,7 +369,7 @@ impl defmt::Format for Cdetect {
         )
     }
 }
-#[doc = "Clock Divider register"]
+#[doc = "Clock Divider register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Clkdiv(pub u32);
@@ -406,7 +406,7 @@ impl defmt::Format for Clkdiv {
         defmt::write!(f, "Clkdiv {{ clk_divider0: {=u8:?} }}", self.clk_divider0())
     }
 }
-#[doc = "Clock Enable register"]
+#[doc = "Clock Enable register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Clkena(pub u32);
@@ -489,7 +489,7 @@ impl defmt::Format for Clkena {
         )
     }
 }
-#[doc = "Command register"]
+#[doc = "Command register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cmd(pub u32);
@@ -626,14 +626,14 @@ impl Cmd {
     pub const fn set_send_initialization(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "Specifies the card number of SDCARD for which the current Command is being executed"]
+    #[doc = "Specifies the card number of SDCARD for which the current Command is being executed."]
     #[must_use]
     #[inline(always)]
     pub const fn card_number(&self) -> super::vals::CardNumber {
         let val = (self.0 >> 16usize) & 0x1f;
         super::vals::CardNumber::from_bits(val as u8)
     }
-    #[doc = "Specifies the card number of SDCARD for which the current Command is being executed"]
+    #[doc = "Specifies the card number of SDCARD for which the current Command is being executed."]
     #[inline(always)]
     pub const fn set_card_number(&mut self, val: super::vals::CardNumber) {
         self.0 = (self.0 & !(0x1f << 16usize)) | (((val.to_bits() as u32) & 0x1f) << 16usize);
@@ -827,7 +827,7 @@ impl defmt::Format for Cmd {
         )
     }
 }
-#[doc = "Command Argument register"]
+#[doc = "Command Argument register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cmdarg(pub u32);
@@ -864,7 +864,7 @@ impl defmt::Format for Cmdarg {
         defmt::write!(f, "Cmdarg {{ cmd_arg: {=u32:?} }}", self.cmd_arg())
     }
 }
-#[doc = "Control register"]
+#[doc = "Control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl(pub u32);
@@ -1090,7 +1090,7 @@ impl defmt::Format for Ctrl {
         )
     }
 }
-#[doc = "Card Type register"]
+#[doc = "Card Type register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctype(pub u32);
@@ -1173,7 +1173,7 @@ impl defmt::Format for Ctype {
         )
     }
 }
-#[doc = "Descriptor List Base Address register"]
+#[doc = "Descriptor List Base Address register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dbaddr(pub u32);
@@ -1208,7 +1208,7 @@ impl defmt::Format for Dbaddr {
         defmt::write!(f, "Dbaddr {{ sdl: {=u32:?} }}", self.sdl())
     }
 }
-#[doc = "Debounce Count register"]
+#[doc = "Debounce Count register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Debnce(pub u32);
@@ -1249,7 +1249,7 @@ impl defmt::Format for Debnce {
         )
     }
 }
-#[doc = "Current Host Descriptor Address register"]
+#[doc = "Current Host Descriptor Address register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dscaddr(pub u32);
@@ -1284,7 +1284,7 @@ impl defmt::Format for Dscaddr {
         defmt::write!(f, "Dscaddr {{ hda: {=u32:?} }}", self.hda())
     }
 }
-#[doc = "SDIF FIFO"]
+#[doc = "SDIF FIFO."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Fifo(pub u32);
@@ -1319,7 +1319,7 @@ impl defmt::Format for Fifo {
         defmt::write!(f, "Fifo {{ data: {=u32:?} }}", self.data())
     }
 }
-#[doc = "FIFO Threshold Watermark register"]
+#[doc = "FIFO Threshold Watermark register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Fifoth(pub u32);
@@ -1388,7 +1388,7 @@ impl defmt::Format for Fifoth {
         )
     }
 }
-#[doc = "Internal DMAC Interrupt Enable register"]
+#[doc = "Internal DMAC Interrupt Enable register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Idinten(pub u32);
@@ -1513,7 +1513,7 @@ impl defmt::Format for Idinten {
         )
     }
 }
-#[doc = "Internal DMAC Status register"]
+#[doc = "Internal DMAC Status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Idsts(pub u32);
@@ -1666,7 +1666,7 @@ impl defmt::Format for Idsts {
         )
     }
 }
-#[doc = "Interrupt Mask register"]
+#[doc = "Interrupt Mask register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Intmask(pub u32);
@@ -1931,7 +1931,7 @@ impl defmt::Format for Intmask {
         )
     }
 }
-#[doc = "Masked Interrupt Status register"]
+#[doc = "Masked Interrupt Status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mintsts(pub u32);
@@ -2196,7 +2196,7 @@ impl defmt::Format for Mintsts {
         )
     }
 }
-#[doc = "Poll Demand register"]
+#[doc = "Poll Demand register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pldmnd(pub u32);
@@ -2231,7 +2231,7 @@ impl defmt::Format for Pldmnd {
         defmt::write!(f, "Pldmnd {{ pd: {=u32:?} }}", self.pd())
     }
 }
-#[doc = "Power Enable register"]
+#[doc = "Power Enable register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pwren(pub u32);
@@ -2286,7 +2286,7 @@ impl defmt::Format for Pwren {
         )
     }
 }
-#[doc = "Response register"]
+#[doc = "Response register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Resp(pub u32);
@@ -2323,7 +2323,7 @@ impl defmt::Format for Resp {
         defmt::write!(f, "Resp {{ response: {=u32:?} }}", self.response())
     }
 }
-#[doc = "Raw Interrupt Status register"]
+#[doc = "Raw Interrupt Status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Rintsts(pub u32);
@@ -2588,7 +2588,7 @@ impl defmt::Format for Rintsts {
         )
     }
 }
-#[doc = "Hardware Reset"]
+#[doc = "Hardware Reset."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct RstN(pub u32);
@@ -2625,7 +2625,7 @@ impl defmt::Format for RstN {
         defmt::write!(f, "RstN {{ card_reset: {=bool:?} }}", self.card_reset())
     }
 }
-#[doc = "Status register"]
+#[doc = "Status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Status(pub u32);
@@ -2820,7 +2820,7 @@ impl defmt::Format for Status {
         )
     }
 }
-#[doc = "Transferred Host to BIU-FIFO Byte Count register"]
+#[doc = "Transferred Host to BIU-FIFO Byte Count register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tbbcnt(pub u32);
@@ -2861,7 +2861,7 @@ impl defmt::Format for Tbbcnt {
         )
     }
 }
-#[doc = "Transferred CIU Card Byte Count register"]
+#[doc = "Transferred CIU Card Byte Count register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tcbcnt(pub u32);
@@ -2902,7 +2902,7 @@ impl defmt::Format for Tcbcnt {
         )
     }
 }
-#[doc = "Time-out register"]
+#[doc = "Time-out register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tmout(pub u32);
@@ -2957,7 +2957,7 @@ impl defmt::Format for Tmout {
         )
     }
 }
-#[doc = "Write Protect register"]
+#[doc = "Write Protect register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Wrtprt(pub u32);

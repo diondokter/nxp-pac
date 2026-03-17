@@ -35,7 +35,7 @@ impl defmt::Format for Irq {
         defmt::write!(f, "Irq {{ intreq: {=u32:?} }}", self.intreq())
     }
 }
-#[doc = "Clear bits in IRQ0"]
+#[doc = "Clear bits in IRQ0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Irqclr(pub u32);
@@ -72,7 +72,7 @@ impl defmt::Format for Irqclr {
         defmt::write!(f, "Irqclr {{ intreqclr: {=u32:?} }}", self.intreqclr())
     }
 }
-#[doc = "Set bits in IRQ0"]
+#[doc = "Set bits in IRQ0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Irqset(pub u32);
@@ -109,7 +109,7 @@ impl defmt::Format for Irqset {
         defmt::write!(f, "Irqset {{ intreqset: {=u32:?} }}", self.intreqset())
     }
 }
-#[doc = "Mutual exclusion register\\[1\\]"]
+#[doc = "Mutual exclusion register\\[1\\]."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mutex(pub u32);

@@ -1,16 +1,16 @@
-#[doc = "Miscellaneous Register 0"]
+#[doc = "Miscellaneous Register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Misc0(pub u32);
 impl Misc0 {
-    #[doc = "Control bit to power-down the analog bandgap reference circuitry"]
+    #[doc = "Control bit to power-down the analog bandgap reference circuitry."]
     #[must_use]
     #[inline(always)]
     pub const fn reftop_pwd(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Control bit to power-down the analog bandgap reference circuitry"]
+    #[doc = "Control bit to power-down the analog bandgap reference circuitry."]
     #[inline(always)]
     pub const fn set_reftop_pwd(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -39,26 +39,26 @@ impl Misc0 {
     pub const fn set_reftop_lowpower(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Control bit to disable the self-bias circuit in the analog bandgap"]
+    #[doc = "Control bit to disable the self-bias circuit in the analog bandgap."]
     #[must_use]
     #[inline(always)]
     pub const fn reftop_selfbiasoff(&self) -> super::vals::Misc0ReftopSelfbiasoff {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Misc0ReftopSelfbiasoff::from_bits(val as u8)
     }
-    #[doc = "Control bit to disable the self-bias circuit in the analog bandgap"]
+    #[doc = "Control bit to disable the self-bias circuit in the analog bandgap."]
     #[inline(always)]
     pub const fn set_reftop_selfbiasoff(&mut self, val: super::vals::Misc0ReftopSelfbiasoff) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn reftop_vbgadj(&self) -> super::vals::Misc0ReftopVbgadj {
         let val = (self.0 >> 4usize) & 0x07;
         super::vals::Misc0ReftopVbgadj::from_bits(val as u8)
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_reftop_vbgadj(&mut self, val: super::vals::Misc0ReftopVbgadj) {
         self.0 = (self.0 & !(0x07 << 4usize)) | (((val.to_bits() as u32) & 0x07) << 4usize);
@@ -99,62 +99,62 @@ impl Misc0 {
     pub const fn set_discon_high_snvs(&mut self, val: super::vals::Misc0DisconHighSnvs) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "This field determines the bias current in the 24MHz oscillator"]
+    #[doc = "This field determines the bias current in the 24MHz oscillator."]
     #[must_use]
     #[inline(always)]
     pub const fn osc_i(&self) -> super::vals::Misc0OscI {
         let val = (self.0 >> 13usize) & 0x03;
         super::vals::Misc0OscI::from_bits(val as u8)
     }
-    #[doc = "This field determines the bias current in the 24MHz oscillator"]
+    #[doc = "This field determines the bias current in the 24MHz oscillator."]
     #[inline(always)]
     pub const fn set_osc_i(&mut self, val: super::vals::Misc0OscI) {
         self.0 = (self.0 & !(0x03 << 13usize)) | (((val.to_bits() as u32) & 0x03) << 13usize);
     }
-    #[doc = "Status bit that signals that the output of the 24-MHz crystal oscillator is stable"]
+    #[doc = "Status bit that signals that the output of the 24-MHz crystal oscillator is stable."]
     #[must_use]
     #[inline(always)]
     pub const fn osc_xtalok(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Status bit that signals that the output of the 24-MHz crystal oscillator is stable"]
+    #[doc = "Status bit that signals that the output of the 24-MHz crystal oscillator is stable."]
     #[inline(always)]
     pub const fn set_osc_xtalok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "This bit enables the detector that signals when the 24MHz crystal oscillator is stable"]
+    #[doc = "This bit enables the detector that signals when the 24MHz crystal oscillator is stable."]
     #[must_use]
     #[inline(always)]
     pub const fn osc_xtalok_en(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit enables the detector that signals when the 24MHz crystal oscillator is stable"]
+    #[doc = "This bit enables the detector that signals when the 24MHz crystal oscillator is stable."]
     #[inline(always)]
     pub const fn set_osc_xtalok_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "This bit allows disabling the clock gate (always ungated) for the xtal 24MHz clock that clocks the digital logic in the analog block"]
+    #[doc = "This bit allows disabling the clock gate (always ungated) for the xtal 24MHz clock that clocks the digital logic in the analog block."]
     #[must_use]
     #[inline(always)]
     pub const fn clkgate_ctrl(&self) -> super::vals::Misc0ClkgateCtrl {
         let val = (self.0 >> 25usize) & 0x01;
         super::vals::Misc0ClkgateCtrl::from_bits(val as u8)
     }
-    #[doc = "This bit allows disabling the clock gate (always ungated) for the xtal 24MHz clock that clocks the digital logic in the analog block"]
+    #[doc = "This bit allows disabling the clock gate (always ungated) for the xtal 24MHz clock that clocks the digital logic in the analog block."]
     #[inline(always)]
     pub const fn set_clkgate_ctrl(&mut self, val: super::vals::Misc0ClkgateCtrl) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val.to_bits() as u32) & 0x01) << 25usize);
     }
-    #[doc = "This field specifies the delay between powering up the XTAL 24MHz clock and releasing the clock to the digital logic inside the analog block"]
+    #[doc = "This field specifies the delay between powering up the XTAL 24MHz clock and releasing the clock to the digital logic inside the analog block."]
     #[must_use]
     #[inline(always)]
     pub const fn clkgate_delay(&self) -> super::vals::Misc0ClkgateDelay {
         let val = (self.0 >> 26usize) & 0x07;
         super::vals::Misc0ClkgateDelay::from_bits(val as u8)
     }
-    #[doc = "This field specifies the delay between powering up the XTAL 24MHz clock and releasing the clock to the digital logic inside the analog block"]
+    #[doc = "This field specifies the delay between powering up the XTAL 24MHz clock and releasing the clock to the digital logic inside the analog block."]
     #[inline(always)]
     pub const fn set_clkgate_delay(&mut self, val: super::vals::Misc0ClkgateDelay) {
         self.0 = (self.0 & !(0x07 << 26usize)) | (((val.to_bits() as u32) & 0x07) << 26usize);
@@ -249,19 +249,19 @@ impl defmt::Format for Misc0 {
         )
     }
 }
-#[doc = "Miscellaneous Register 0"]
+#[doc = "Miscellaneous Register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Misc0Clr(pub u32);
 impl Misc0Clr {
-    #[doc = "Control bit to power-down the analog bandgap reference circuitry"]
+    #[doc = "Control bit to power-down the analog bandgap reference circuitry."]
     #[must_use]
     #[inline(always)]
     pub const fn reftop_pwd(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Control bit to power-down the analog bandgap reference circuitry"]
+    #[doc = "Control bit to power-down the analog bandgap reference circuitry."]
     #[inline(always)]
     pub const fn set_reftop_pwd(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -290,26 +290,26 @@ impl Misc0Clr {
     pub const fn set_reftop_lowpower(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Control bit to disable the self-bias circuit in the analog bandgap"]
+    #[doc = "Control bit to disable the self-bias circuit in the analog bandgap."]
     #[must_use]
     #[inline(always)]
     pub const fn reftop_selfbiasoff(&self) -> super::vals::Misc0ClrReftopSelfbiasoff {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Misc0ClrReftopSelfbiasoff::from_bits(val as u8)
     }
-    #[doc = "Control bit to disable the self-bias circuit in the analog bandgap"]
+    #[doc = "Control bit to disable the self-bias circuit in the analog bandgap."]
     #[inline(always)]
     pub const fn set_reftop_selfbiasoff(&mut self, val: super::vals::Misc0ClrReftopSelfbiasoff) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn reftop_vbgadj(&self) -> super::vals::Misc0ClrReftopVbgadj {
         let val = (self.0 >> 4usize) & 0x07;
         super::vals::Misc0ClrReftopVbgadj::from_bits(val as u8)
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_reftop_vbgadj(&mut self, val: super::vals::Misc0ClrReftopVbgadj) {
         self.0 = (self.0 & !(0x07 << 4usize)) | (((val.to_bits() as u32) & 0x07) << 4usize);
@@ -350,62 +350,62 @@ impl Misc0Clr {
     pub const fn set_discon_high_snvs(&mut self, val: super::vals::Misc0ClrDisconHighSnvs) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "This field determines the bias current in the 24MHz oscillator"]
+    #[doc = "This field determines the bias current in the 24MHz oscillator."]
     #[must_use]
     #[inline(always)]
     pub const fn osc_i(&self) -> super::vals::Misc0ClrOscI {
         let val = (self.0 >> 13usize) & 0x03;
         super::vals::Misc0ClrOscI::from_bits(val as u8)
     }
-    #[doc = "This field determines the bias current in the 24MHz oscillator"]
+    #[doc = "This field determines the bias current in the 24MHz oscillator."]
     #[inline(always)]
     pub const fn set_osc_i(&mut self, val: super::vals::Misc0ClrOscI) {
         self.0 = (self.0 & !(0x03 << 13usize)) | (((val.to_bits() as u32) & 0x03) << 13usize);
     }
-    #[doc = "Status bit that signals that the output of the 24-MHz crystal oscillator is stable"]
+    #[doc = "Status bit that signals that the output of the 24-MHz crystal oscillator is stable."]
     #[must_use]
     #[inline(always)]
     pub const fn osc_xtalok(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Status bit that signals that the output of the 24-MHz crystal oscillator is stable"]
+    #[doc = "Status bit that signals that the output of the 24-MHz crystal oscillator is stable."]
     #[inline(always)]
     pub const fn set_osc_xtalok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "This bit enables the detector that signals when the 24MHz crystal oscillator is stable"]
+    #[doc = "This bit enables the detector that signals when the 24MHz crystal oscillator is stable."]
     #[must_use]
     #[inline(always)]
     pub const fn osc_xtalok_en(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit enables the detector that signals when the 24MHz crystal oscillator is stable"]
+    #[doc = "This bit enables the detector that signals when the 24MHz crystal oscillator is stable."]
     #[inline(always)]
     pub const fn set_osc_xtalok_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "This bit allows disabling the clock gate (always ungated) for the xtal 24MHz clock that clocks the digital logic in the analog block"]
+    #[doc = "This bit allows disabling the clock gate (always ungated) for the xtal 24MHz clock that clocks the digital logic in the analog block."]
     #[must_use]
     #[inline(always)]
     pub const fn clkgate_ctrl(&self) -> super::vals::Misc0ClrClkgateCtrl {
         let val = (self.0 >> 25usize) & 0x01;
         super::vals::Misc0ClrClkgateCtrl::from_bits(val as u8)
     }
-    #[doc = "This bit allows disabling the clock gate (always ungated) for the xtal 24MHz clock that clocks the digital logic in the analog block"]
+    #[doc = "This bit allows disabling the clock gate (always ungated) for the xtal 24MHz clock that clocks the digital logic in the analog block."]
     #[inline(always)]
     pub const fn set_clkgate_ctrl(&mut self, val: super::vals::Misc0ClrClkgateCtrl) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val.to_bits() as u32) & 0x01) << 25usize);
     }
-    #[doc = "This field specifies the delay between powering up the XTAL 24MHz clock and releasing the clock to the digital logic inside the analog block"]
+    #[doc = "This field specifies the delay between powering up the XTAL 24MHz clock and releasing the clock to the digital logic inside the analog block."]
     #[must_use]
     #[inline(always)]
     pub const fn clkgate_delay(&self) -> super::vals::Misc0ClrClkgateDelay {
         let val = (self.0 >> 26usize) & 0x07;
         super::vals::Misc0ClrClkgateDelay::from_bits(val as u8)
     }
-    #[doc = "This field specifies the delay between powering up the XTAL 24MHz clock and releasing the clock to the digital logic inside the analog block"]
+    #[doc = "This field specifies the delay between powering up the XTAL 24MHz clock and releasing the clock to the digital logic inside the analog block."]
     #[inline(always)]
     pub const fn set_clkgate_delay(&mut self, val: super::vals::Misc0ClrClkgateDelay) {
         self.0 = (self.0 & !(0x07 << 26usize)) | (((val.to_bits() as u32) & 0x07) << 26usize);
@@ -500,19 +500,19 @@ impl defmt::Format for Misc0Clr {
         )
     }
 }
-#[doc = "Miscellaneous Register 0"]
+#[doc = "Miscellaneous Register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Misc0Set(pub u32);
 impl Misc0Set {
-    #[doc = "Control bit to power-down the analog bandgap reference circuitry"]
+    #[doc = "Control bit to power-down the analog bandgap reference circuitry."]
     #[must_use]
     #[inline(always)]
     pub const fn reftop_pwd(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Control bit to power-down the analog bandgap reference circuitry"]
+    #[doc = "Control bit to power-down the analog bandgap reference circuitry."]
     #[inline(always)]
     pub const fn set_reftop_pwd(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -541,26 +541,26 @@ impl Misc0Set {
     pub const fn set_reftop_lowpower(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Control bit to disable the self-bias circuit in the analog bandgap"]
+    #[doc = "Control bit to disable the self-bias circuit in the analog bandgap."]
     #[must_use]
     #[inline(always)]
     pub const fn reftop_selfbiasoff(&self) -> super::vals::Misc0SetReftopSelfbiasoff {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Misc0SetReftopSelfbiasoff::from_bits(val as u8)
     }
-    #[doc = "Control bit to disable the self-bias circuit in the analog bandgap"]
+    #[doc = "Control bit to disable the self-bias circuit in the analog bandgap."]
     #[inline(always)]
     pub const fn set_reftop_selfbiasoff(&mut self, val: super::vals::Misc0SetReftopSelfbiasoff) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn reftop_vbgadj(&self) -> super::vals::Misc0SetReftopVbgadj {
         let val = (self.0 >> 4usize) & 0x07;
         super::vals::Misc0SetReftopVbgadj::from_bits(val as u8)
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_reftop_vbgadj(&mut self, val: super::vals::Misc0SetReftopVbgadj) {
         self.0 = (self.0 & !(0x07 << 4usize)) | (((val.to_bits() as u32) & 0x07) << 4usize);
@@ -601,62 +601,62 @@ impl Misc0Set {
     pub const fn set_discon_high_snvs(&mut self, val: super::vals::Misc0SetDisconHighSnvs) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "This field determines the bias current in the 24MHz oscillator"]
+    #[doc = "This field determines the bias current in the 24MHz oscillator."]
     #[must_use]
     #[inline(always)]
     pub const fn osc_i(&self) -> super::vals::Misc0SetOscI {
         let val = (self.0 >> 13usize) & 0x03;
         super::vals::Misc0SetOscI::from_bits(val as u8)
     }
-    #[doc = "This field determines the bias current in the 24MHz oscillator"]
+    #[doc = "This field determines the bias current in the 24MHz oscillator."]
     #[inline(always)]
     pub const fn set_osc_i(&mut self, val: super::vals::Misc0SetOscI) {
         self.0 = (self.0 & !(0x03 << 13usize)) | (((val.to_bits() as u32) & 0x03) << 13usize);
     }
-    #[doc = "Status bit that signals that the output of the 24-MHz crystal oscillator is stable"]
+    #[doc = "Status bit that signals that the output of the 24-MHz crystal oscillator is stable."]
     #[must_use]
     #[inline(always)]
     pub const fn osc_xtalok(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Status bit that signals that the output of the 24-MHz crystal oscillator is stable"]
+    #[doc = "Status bit that signals that the output of the 24-MHz crystal oscillator is stable."]
     #[inline(always)]
     pub const fn set_osc_xtalok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "This bit enables the detector that signals when the 24MHz crystal oscillator is stable"]
+    #[doc = "This bit enables the detector that signals when the 24MHz crystal oscillator is stable."]
     #[must_use]
     #[inline(always)]
     pub const fn osc_xtalok_en(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit enables the detector that signals when the 24MHz crystal oscillator is stable"]
+    #[doc = "This bit enables the detector that signals when the 24MHz crystal oscillator is stable."]
     #[inline(always)]
     pub const fn set_osc_xtalok_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "This bit allows disabling the clock gate (always ungated) for the xtal 24MHz clock that clocks the digital logic in the analog block"]
+    #[doc = "This bit allows disabling the clock gate (always ungated) for the xtal 24MHz clock that clocks the digital logic in the analog block."]
     #[must_use]
     #[inline(always)]
     pub const fn clkgate_ctrl(&self) -> super::vals::Misc0SetClkgateCtrl {
         let val = (self.0 >> 25usize) & 0x01;
         super::vals::Misc0SetClkgateCtrl::from_bits(val as u8)
     }
-    #[doc = "This bit allows disabling the clock gate (always ungated) for the xtal 24MHz clock that clocks the digital logic in the analog block"]
+    #[doc = "This bit allows disabling the clock gate (always ungated) for the xtal 24MHz clock that clocks the digital logic in the analog block."]
     #[inline(always)]
     pub const fn set_clkgate_ctrl(&mut self, val: super::vals::Misc0SetClkgateCtrl) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val.to_bits() as u32) & 0x01) << 25usize);
     }
-    #[doc = "This field specifies the delay between powering up the XTAL 24MHz clock and releasing the clock to the digital logic inside the analog block"]
+    #[doc = "This field specifies the delay between powering up the XTAL 24MHz clock and releasing the clock to the digital logic inside the analog block."]
     #[must_use]
     #[inline(always)]
     pub const fn clkgate_delay(&self) -> super::vals::Misc0SetClkgateDelay {
         let val = (self.0 >> 26usize) & 0x07;
         super::vals::Misc0SetClkgateDelay::from_bits(val as u8)
     }
-    #[doc = "This field specifies the delay between powering up the XTAL 24MHz clock and releasing the clock to the digital logic inside the analog block"]
+    #[doc = "This field specifies the delay between powering up the XTAL 24MHz clock and releasing the clock to the digital logic inside the analog block."]
     #[inline(always)]
     pub const fn set_clkgate_delay(&mut self, val: super::vals::Misc0SetClkgateDelay) {
         self.0 = (self.0 & !(0x07 << 26usize)) | (((val.to_bits() as u32) & 0x07) << 26usize);
@@ -751,19 +751,19 @@ impl defmt::Format for Misc0Set {
         )
     }
 }
-#[doc = "Miscellaneous Register 0"]
+#[doc = "Miscellaneous Register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Misc0Tog(pub u32);
 impl Misc0Tog {
-    #[doc = "Control bit to power-down the analog bandgap reference circuitry"]
+    #[doc = "Control bit to power-down the analog bandgap reference circuitry."]
     #[must_use]
     #[inline(always)]
     pub const fn reftop_pwd(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Control bit to power-down the analog bandgap reference circuitry"]
+    #[doc = "Control bit to power-down the analog bandgap reference circuitry."]
     #[inline(always)]
     pub const fn set_reftop_pwd(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -792,26 +792,26 @@ impl Misc0Tog {
     pub const fn set_reftop_lowpower(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Control bit to disable the self-bias circuit in the analog bandgap"]
+    #[doc = "Control bit to disable the self-bias circuit in the analog bandgap."]
     #[must_use]
     #[inline(always)]
     pub const fn reftop_selfbiasoff(&self) -> super::vals::Misc0TogReftopSelfbiasoff {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Misc0TogReftopSelfbiasoff::from_bits(val as u8)
     }
-    #[doc = "Control bit to disable the self-bias circuit in the analog bandgap"]
+    #[doc = "Control bit to disable the self-bias circuit in the analog bandgap."]
     #[inline(always)]
     pub const fn set_reftop_selfbiasoff(&mut self, val: super::vals::Misc0TogReftopSelfbiasoff) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn reftop_vbgadj(&self) -> super::vals::Misc0TogReftopVbgadj {
         let val = (self.0 >> 4usize) & 0x07;
         super::vals::Misc0TogReftopVbgadj::from_bits(val as u8)
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_reftop_vbgadj(&mut self, val: super::vals::Misc0TogReftopVbgadj) {
         self.0 = (self.0 & !(0x07 << 4usize)) | (((val.to_bits() as u32) & 0x07) << 4usize);
@@ -852,62 +852,62 @@ impl Misc0Tog {
     pub const fn set_discon_high_snvs(&mut self, val: super::vals::Misc0TogDisconHighSnvs) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "This field determines the bias current in the 24MHz oscillator"]
+    #[doc = "This field determines the bias current in the 24MHz oscillator."]
     #[must_use]
     #[inline(always)]
     pub const fn osc_i(&self) -> super::vals::Misc0TogOscI {
         let val = (self.0 >> 13usize) & 0x03;
         super::vals::Misc0TogOscI::from_bits(val as u8)
     }
-    #[doc = "This field determines the bias current in the 24MHz oscillator"]
+    #[doc = "This field determines the bias current in the 24MHz oscillator."]
     #[inline(always)]
     pub const fn set_osc_i(&mut self, val: super::vals::Misc0TogOscI) {
         self.0 = (self.0 & !(0x03 << 13usize)) | (((val.to_bits() as u32) & 0x03) << 13usize);
     }
-    #[doc = "Status bit that signals that the output of the 24-MHz crystal oscillator is stable"]
+    #[doc = "Status bit that signals that the output of the 24-MHz crystal oscillator is stable."]
     #[must_use]
     #[inline(always)]
     pub const fn osc_xtalok(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Status bit that signals that the output of the 24-MHz crystal oscillator is stable"]
+    #[doc = "Status bit that signals that the output of the 24-MHz crystal oscillator is stable."]
     #[inline(always)]
     pub const fn set_osc_xtalok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "This bit enables the detector that signals when the 24MHz crystal oscillator is stable"]
+    #[doc = "This bit enables the detector that signals when the 24MHz crystal oscillator is stable."]
     #[must_use]
     #[inline(always)]
     pub const fn osc_xtalok_en(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit enables the detector that signals when the 24MHz crystal oscillator is stable"]
+    #[doc = "This bit enables the detector that signals when the 24MHz crystal oscillator is stable."]
     #[inline(always)]
     pub const fn set_osc_xtalok_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "This bit allows disabling the clock gate (always ungated) for the xtal 24MHz clock that clocks the digital logic in the analog block"]
+    #[doc = "This bit allows disabling the clock gate (always ungated) for the xtal 24MHz clock that clocks the digital logic in the analog block."]
     #[must_use]
     #[inline(always)]
     pub const fn clkgate_ctrl(&self) -> super::vals::Misc0TogClkgateCtrl {
         let val = (self.0 >> 25usize) & 0x01;
         super::vals::Misc0TogClkgateCtrl::from_bits(val as u8)
     }
-    #[doc = "This bit allows disabling the clock gate (always ungated) for the xtal 24MHz clock that clocks the digital logic in the analog block"]
+    #[doc = "This bit allows disabling the clock gate (always ungated) for the xtal 24MHz clock that clocks the digital logic in the analog block."]
     #[inline(always)]
     pub const fn set_clkgate_ctrl(&mut self, val: super::vals::Misc0TogClkgateCtrl) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val.to_bits() as u32) & 0x01) << 25usize);
     }
-    #[doc = "This field specifies the delay between powering up the XTAL 24MHz clock and releasing the clock to the digital logic inside the analog block"]
+    #[doc = "This field specifies the delay between powering up the XTAL 24MHz clock and releasing the clock to the digital logic inside the analog block."]
     #[must_use]
     #[inline(always)]
     pub const fn clkgate_delay(&self) -> super::vals::Misc0TogClkgateDelay {
         let val = (self.0 >> 26usize) & 0x07;
         super::vals::Misc0TogClkgateDelay::from_bits(val as u8)
     }
-    #[doc = "This field specifies the delay between powering up the XTAL 24MHz clock and releasing the clock to the digital logic inside the analog block"]
+    #[doc = "This field specifies the delay between powering up the XTAL 24MHz clock and releasing the clock to the digital logic inside the analog block."]
     #[inline(always)]
     pub const fn set_clkgate_delay(&mut self, val: super::vals::Misc0TogClkgateDelay) {
         self.0 = (self.0 & !(0x07 << 26usize)) | (((val.to_bits() as u32) & 0x07) << 26usize);
@@ -1002,7 +1002,7 @@ impl defmt::Format for Misc0Tog {
         )
     }
 }
-#[doc = "Miscellaneous Register 1"]
+#[doc = "Miscellaneous Register 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Misc1(pub u32);
@@ -1031,134 +1031,134 @@ impl Misc1 {
     pub const fn set_lvds2_clk_sel(&mut self, val: super::vals::Misc1Lvds2ClkSel) {
         self.0 = (self.0 & !(0x1f << 5usize)) | (((val.to_bits() as u32) & 0x1f) << 5usize);
     }
-    #[doc = "This enables the LVDS output buffer for anaclk1/1b"]
+    #[doc = "This enables the LVDS output buffer for anaclk1/1b."]
     #[must_use]
     #[inline(always)]
     pub const fn lvdsclk1_oben(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "This enables the LVDS output buffer for anaclk1/1b"]
+    #[doc = "This enables the LVDS output buffer for anaclk1/1b."]
     #[inline(always)]
     pub const fn set_lvdsclk1_oben(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "This enables the LVDS output buffer for anaclk2/2b"]
+    #[doc = "This enables the LVDS output buffer for anaclk2/2b."]
     #[must_use]
     #[inline(always)]
     pub const fn lvdsclk2_oben(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "This enables the LVDS output buffer for anaclk2/2b"]
+    #[doc = "This enables the LVDS output buffer for anaclk2/2b."]
     #[inline(always)]
     pub const fn set_lvdsclk2_oben(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "This enables the LVDS input buffer for anaclk1/1b"]
+    #[doc = "This enables the LVDS input buffer for anaclk1/1b."]
     #[must_use]
     #[inline(always)]
     pub const fn lvdsclk1_iben(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "This enables the LVDS input buffer for anaclk1/1b"]
+    #[doc = "This enables the LVDS input buffer for anaclk1/1b."]
     #[inline(always)]
     pub const fn set_lvdsclk1_iben(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "This enables the LVDS input buffer for anaclk2/2b"]
+    #[doc = "This enables the LVDS input buffer for anaclk2/2b."]
     #[must_use]
     #[inline(always)]
     pub const fn lvdsclk2_iben(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "This enables the LVDS input buffer for anaclk2/2b"]
+    #[doc = "This enables the LVDS input buffer for anaclk2/2b."]
     #[inline(always)]
     pub const fn set_lvdsclk2_iben(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "This enables a feature that will clkgate (reset) all PFD_480 clocks anytime the USB1_PLL_480 is unlocked or powered off"]
+    #[doc = "This enables a feature that will clkgate (reset) all PFD_480 clocks anytime the USB1_PLL_480 is unlocked or powered off."]
     #[must_use]
     #[inline(always)]
     pub const fn pfd_480_autogate_en(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "This enables a feature that will clkgate (reset) all PFD_480 clocks anytime the USB1_PLL_480 is unlocked or powered off"]
+    #[doc = "This enables a feature that will clkgate (reset) all PFD_480 clocks anytime the USB1_PLL_480 is unlocked or powered off."]
     #[inline(always)]
     pub const fn set_pfd_480_autogate_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "This enables a feature that will clkgate (reset) all PFD_528 clocks anytime the PLL_528 is unlocked or powered off"]
+    #[doc = "This enables a feature that will clkgate (reset) all PFD_528 clocks anytime the PLL_528 is unlocked or powered off."]
     #[must_use]
     #[inline(always)]
     pub const fn pfd_528_autogate_en(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "This enables a feature that will clkgate (reset) all PFD_528 clocks anytime the PLL_528 is unlocked or powered off"]
+    #[doc = "This enables a feature that will clkgate (reset) all PFD_528 clocks anytime the PLL_528 is unlocked or powered off."]
     #[inline(always)]
     pub const fn set_pfd_528_autogate_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "This status bit is set to one when the temperature sensor panic interrupt asserts for a panic high temperature"]
+    #[doc = "This status bit is set to one when the temperature sensor panic interrupt asserts for a panic high temperature."]
     #[must_use]
     #[inline(always)]
     pub const fn irq_temppanic(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "This status bit is set to one when the temperature sensor panic interrupt asserts for a panic high temperature"]
+    #[doc = "This status bit is set to one when the temperature sensor panic interrupt asserts for a panic high temperature."]
     #[inline(always)]
     pub const fn set_irq_temppanic(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "This status bit is set to one when the temperature sensor low interrupt asserts for low temperature"]
+    #[doc = "This status bit is set to one when the temperature sensor low interrupt asserts for low temperature."]
     #[must_use]
     #[inline(always)]
     pub const fn irq_templow(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "This status bit is set to one when the temperature sensor low interrupt asserts for low temperature"]
+    #[doc = "This status bit is set to one when the temperature sensor low interrupt asserts for low temperature."]
     #[inline(always)]
     pub const fn set_irq_templow(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "This status bit is set to one when the temperature sensor high interrupt asserts for high temperature"]
+    #[doc = "This status bit is set to one when the temperature sensor high interrupt asserts for high temperature."]
     #[must_use]
     #[inline(always)]
     pub const fn irq_temphigh(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "This status bit is set to one when the temperature sensor high interrupt asserts for high temperature"]
+    #[doc = "This status bit is set to one when the temperature sensor high interrupt asserts for high temperature."]
     #[inline(always)]
     pub const fn set_irq_temphigh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "This status bit is set to one when when any of the analog regulator brownout interrupts assert"]
+    #[doc = "This status bit is set to one when when any of the analog regulator brownout interrupts assert."]
     #[must_use]
     #[inline(always)]
     pub const fn irq_ana_bo(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "This status bit is set to one when when any of the analog regulator brownout interrupts assert"]
+    #[doc = "This status bit is set to one when when any of the analog regulator brownout interrupts assert."]
     #[inline(always)]
     pub const fn set_irq_ana_bo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "This status bit is set to one when when any of the digital regulator brownout interrupts assert"]
+    #[doc = "This status bit is set to one when when any of the digital regulator brownout interrupts assert."]
     #[must_use]
     #[inline(always)]
     pub const fn irq_dig_bo(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "This status bit is set to one when when any of the digital regulator brownout interrupts assert"]
+    #[doc = "This status bit is set to one when when any of the digital regulator brownout interrupts assert."]
     #[inline(always)]
     pub const fn set_irq_dig_bo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -1211,7 +1211,7 @@ impl defmt::Format for Misc1 {
         )
     }
 }
-#[doc = "Miscellaneous Register 1"]
+#[doc = "Miscellaneous Register 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Misc1Clr(pub u32);
@@ -1240,134 +1240,134 @@ impl Misc1Clr {
     pub const fn set_lvds2_clk_sel(&mut self, val: super::vals::Misc1ClrLvds2ClkSel) {
         self.0 = (self.0 & !(0x1f << 5usize)) | (((val.to_bits() as u32) & 0x1f) << 5usize);
     }
-    #[doc = "This enables the LVDS output buffer for anaclk1/1b"]
+    #[doc = "This enables the LVDS output buffer for anaclk1/1b."]
     #[must_use]
     #[inline(always)]
     pub const fn lvdsclk1_oben(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "This enables the LVDS output buffer for anaclk1/1b"]
+    #[doc = "This enables the LVDS output buffer for anaclk1/1b."]
     #[inline(always)]
     pub const fn set_lvdsclk1_oben(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "This enables the LVDS output buffer for anaclk2/2b"]
+    #[doc = "This enables the LVDS output buffer for anaclk2/2b."]
     #[must_use]
     #[inline(always)]
     pub const fn lvdsclk2_oben(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "This enables the LVDS output buffer for anaclk2/2b"]
+    #[doc = "This enables the LVDS output buffer for anaclk2/2b."]
     #[inline(always)]
     pub const fn set_lvdsclk2_oben(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "This enables the LVDS input buffer for anaclk1/1b"]
+    #[doc = "This enables the LVDS input buffer for anaclk1/1b."]
     #[must_use]
     #[inline(always)]
     pub const fn lvdsclk1_iben(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "This enables the LVDS input buffer for anaclk1/1b"]
+    #[doc = "This enables the LVDS input buffer for anaclk1/1b."]
     #[inline(always)]
     pub const fn set_lvdsclk1_iben(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "This enables the LVDS input buffer for anaclk2/2b"]
+    #[doc = "This enables the LVDS input buffer for anaclk2/2b."]
     #[must_use]
     #[inline(always)]
     pub const fn lvdsclk2_iben(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "This enables the LVDS input buffer for anaclk2/2b"]
+    #[doc = "This enables the LVDS input buffer for anaclk2/2b."]
     #[inline(always)]
     pub const fn set_lvdsclk2_iben(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "This enables a feature that will clkgate (reset) all PFD_480 clocks anytime the USB1_PLL_480 is unlocked or powered off"]
+    #[doc = "This enables a feature that will clkgate (reset) all PFD_480 clocks anytime the USB1_PLL_480 is unlocked or powered off."]
     #[must_use]
     #[inline(always)]
     pub const fn pfd_480_autogate_en(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "This enables a feature that will clkgate (reset) all PFD_480 clocks anytime the USB1_PLL_480 is unlocked or powered off"]
+    #[doc = "This enables a feature that will clkgate (reset) all PFD_480 clocks anytime the USB1_PLL_480 is unlocked or powered off."]
     #[inline(always)]
     pub const fn set_pfd_480_autogate_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "This enables a feature that will clkgate (reset) all PFD_528 clocks anytime the PLL_528 is unlocked or powered off"]
+    #[doc = "This enables a feature that will clkgate (reset) all PFD_528 clocks anytime the PLL_528 is unlocked or powered off."]
     #[must_use]
     #[inline(always)]
     pub const fn pfd_528_autogate_en(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "This enables a feature that will clkgate (reset) all PFD_528 clocks anytime the PLL_528 is unlocked or powered off"]
+    #[doc = "This enables a feature that will clkgate (reset) all PFD_528 clocks anytime the PLL_528 is unlocked or powered off."]
     #[inline(always)]
     pub const fn set_pfd_528_autogate_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "This status bit is set to one when the temperature sensor panic interrupt asserts for a panic high temperature"]
+    #[doc = "This status bit is set to one when the temperature sensor panic interrupt asserts for a panic high temperature."]
     #[must_use]
     #[inline(always)]
     pub const fn irq_temppanic(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "This status bit is set to one when the temperature sensor panic interrupt asserts for a panic high temperature"]
+    #[doc = "This status bit is set to one when the temperature sensor panic interrupt asserts for a panic high temperature."]
     #[inline(always)]
     pub const fn set_irq_temppanic(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "This status bit is set to one when the temperature sensor low interrupt asserts for low temperature"]
+    #[doc = "This status bit is set to one when the temperature sensor low interrupt asserts for low temperature."]
     #[must_use]
     #[inline(always)]
     pub const fn irq_templow(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "This status bit is set to one when the temperature sensor low interrupt asserts for low temperature"]
+    #[doc = "This status bit is set to one when the temperature sensor low interrupt asserts for low temperature."]
     #[inline(always)]
     pub const fn set_irq_templow(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "This status bit is set to one when the temperature sensor high interrupt asserts for high temperature"]
+    #[doc = "This status bit is set to one when the temperature sensor high interrupt asserts for high temperature."]
     #[must_use]
     #[inline(always)]
     pub const fn irq_temphigh(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "This status bit is set to one when the temperature sensor high interrupt asserts for high temperature"]
+    #[doc = "This status bit is set to one when the temperature sensor high interrupt asserts for high temperature."]
     #[inline(always)]
     pub const fn set_irq_temphigh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "This status bit is set to one when when any of the analog regulator brownout interrupts assert"]
+    #[doc = "This status bit is set to one when when any of the analog regulator brownout interrupts assert."]
     #[must_use]
     #[inline(always)]
     pub const fn irq_ana_bo(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "This status bit is set to one when when any of the analog regulator brownout interrupts assert"]
+    #[doc = "This status bit is set to one when when any of the analog regulator brownout interrupts assert."]
     #[inline(always)]
     pub const fn set_irq_ana_bo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "This status bit is set to one when when any of the digital regulator brownout interrupts assert"]
+    #[doc = "This status bit is set to one when when any of the digital regulator brownout interrupts assert."]
     #[must_use]
     #[inline(always)]
     pub const fn irq_dig_bo(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "This status bit is set to one when when any of the digital regulator brownout interrupts assert"]
+    #[doc = "This status bit is set to one when when any of the digital regulator brownout interrupts assert."]
     #[inline(always)]
     pub const fn set_irq_dig_bo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -1420,7 +1420,7 @@ impl defmt::Format for Misc1Clr {
         )
     }
 }
-#[doc = "Miscellaneous Register 1"]
+#[doc = "Miscellaneous Register 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Misc1Set(pub u32);
@@ -1449,134 +1449,134 @@ impl Misc1Set {
     pub const fn set_lvds2_clk_sel(&mut self, val: super::vals::Misc1SetLvds2ClkSel) {
         self.0 = (self.0 & !(0x1f << 5usize)) | (((val.to_bits() as u32) & 0x1f) << 5usize);
     }
-    #[doc = "This enables the LVDS output buffer for anaclk1/1b"]
+    #[doc = "This enables the LVDS output buffer for anaclk1/1b."]
     #[must_use]
     #[inline(always)]
     pub const fn lvdsclk1_oben(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "This enables the LVDS output buffer for anaclk1/1b"]
+    #[doc = "This enables the LVDS output buffer for anaclk1/1b."]
     #[inline(always)]
     pub const fn set_lvdsclk1_oben(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "This enables the LVDS output buffer for anaclk2/2b"]
+    #[doc = "This enables the LVDS output buffer for anaclk2/2b."]
     #[must_use]
     #[inline(always)]
     pub const fn lvdsclk2_oben(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "This enables the LVDS output buffer for anaclk2/2b"]
+    #[doc = "This enables the LVDS output buffer for anaclk2/2b."]
     #[inline(always)]
     pub const fn set_lvdsclk2_oben(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "This enables the LVDS input buffer for anaclk1/1b"]
+    #[doc = "This enables the LVDS input buffer for anaclk1/1b."]
     #[must_use]
     #[inline(always)]
     pub const fn lvdsclk1_iben(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "This enables the LVDS input buffer for anaclk1/1b"]
+    #[doc = "This enables the LVDS input buffer for anaclk1/1b."]
     #[inline(always)]
     pub const fn set_lvdsclk1_iben(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "This enables the LVDS input buffer for anaclk2/2b"]
+    #[doc = "This enables the LVDS input buffer for anaclk2/2b."]
     #[must_use]
     #[inline(always)]
     pub const fn lvdsclk2_iben(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "This enables the LVDS input buffer for anaclk2/2b"]
+    #[doc = "This enables the LVDS input buffer for anaclk2/2b."]
     #[inline(always)]
     pub const fn set_lvdsclk2_iben(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "This enables a feature that will clkgate (reset) all PFD_480 clocks anytime the USB1_PLL_480 is unlocked or powered off"]
+    #[doc = "This enables a feature that will clkgate (reset) all PFD_480 clocks anytime the USB1_PLL_480 is unlocked or powered off."]
     #[must_use]
     #[inline(always)]
     pub const fn pfd_480_autogate_en(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "This enables a feature that will clkgate (reset) all PFD_480 clocks anytime the USB1_PLL_480 is unlocked or powered off"]
+    #[doc = "This enables a feature that will clkgate (reset) all PFD_480 clocks anytime the USB1_PLL_480 is unlocked or powered off."]
     #[inline(always)]
     pub const fn set_pfd_480_autogate_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "This enables a feature that will clkgate (reset) all PFD_528 clocks anytime the PLL_528 is unlocked or powered off"]
+    #[doc = "This enables a feature that will clkgate (reset) all PFD_528 clocks anytime the PLL_528 is unlocked or powered off."]
     #[must_use]
     #[inline(always)]
     pub const fn pfd_528_autogate_en(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "This enables a feature that will clkgate (reset) all PFD_528 clocks anytime the PLL_528 is unlocked or powered off"]
+    #[doc = "This enables a feature that will clkgate (reset) all PFD_528 clocks anytime the PLL_528 is unlocked or powered off."]
     #[inline(always)]
     pub const fn set_pfd_528_autogate_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "This status bit is set to one when the temperature sensor panic interrupt asserts for a panic high temperature"]
+    #[doc = "This status bit is set to one when the temperature sensor panic interrupt asserts for a panic high temperature."]
     #[must_use]
     #[inline(always)]
     pub const fn irq_temppanic(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "This status bit is set to one when the temperature sensor panic interrupt asserts for a panic high temperature"]
+    #[doc = "This status bit is set to one when the temperature sensor panic interrupt asserts for a panic high temperature."]
     #[inline(always)]
     pub const fn set_irq_temppanic(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "This status bit is set to one when the temperature sensor low interrupt asserts for low temperature"]
+    #[doc = "This status bit is set to one when the temperature sensor low interrupt asserts for low temperature."]
     #[must_use]
     #[inline(always)]
     pub const fn irq_templow(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "This status bit is set to one when the temperature sensor low interrupt asserts for low temperature"]
+    #[doc = "This status bit is set to one when the temperature sensor low interrupt asserts for low temperature."]
     #[inline(always)]
     pub const fn set_irq_templow(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "This status bit is set to one when the temperature sensor high interrupt asserts for high temperature"]
+    #[doc = "This status bit is set to one when the temperature sensor high interrupt asserts for high temperature."]
     #[must_use]
     #[inline(always)]
     pub const fn irq_temphigh(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "This status bit is set to one when the temperature sensor high interrupt asserts for high temperature"]
+    #[doc = "This status bit is set to one when the temperature sensor high interrupt asserts for high temperature."]
     #[inline(always)]
     pub const fn set_irq_temphigh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "This status bit is set to one when when any of the analog regulator brownout interrupts assert"]
+    #[doc = "This status bit is set to one when when any of the analog regulator brownout interrupts assert."]
     #[must_use]
     #[inline(always)]
     pub const fn irq_ana_bo(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "This status bit is set to one when when any of the analog regulator brownout interrupts assert"]
+    #[doc = "This status bit is set to one when when any of the analog regulator brownout interrupts assert."]
     #[inline(always)]
     pub const fn set_irq_ana_bo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "This status bit is set to one when when any of the digital regulator brownout interrupts assert"]
+    #[doc = "This status bit is set to one when when any of the digital regulator brownout interrupts assert."]
     #[must_use]
     #[inline(always)]
     pub const fn irq_dig_bo(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "This status bit is set to one when when any of the digital regulator brownout interrupts assert"]
+    #[doc = "This status bit is set to one when when any of the digital regulator brownout interrupts assert."]
     #[inline(always)]
     pub const fn set_irq_dig_bo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -1629,7 +1629,7 @@ impl defmt::Format for Misc1Set {
         )
     }
 }
-#[doc = "Miscellaneous Register 1"]
+#[doc = "Miscellaneous Register 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Misc1Tog(pub u32);
@@ -1658,134 +1658,134 @@ impl Misc1Tog {
     pub const fn set_lvds2_clk_sel(&mut self, val: super::vals::Misc1TogLvds2ClkSel) {
         self.0 = (self.0 & !(0x1f << 5usize)) | (((val.to_bits() as u32) & 0x1f) << 5usize);
     }
-    #[doc = "This enables the LVDS output buffer for anaclk1/1b"]
+    #[doc = "This enables the LVDS output buffer for anaclk1/1b."]
     #[must_use]
     #[inline(always)]
     pub const fn lvdsclk1_oben(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "This enables the LVDS output buffer for anaclk1/1b"]
+    #[doc = "This enables the LVDS output buffer for anaclk1/1b."]
     #[inline(always)]
     pub const fn set_lvdsclk1_oben(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "This enables the LVDS output buffer for anaclk2/2b"]
+    #[doc = "This enables the LVDS output buffer for anaclk2/2b."]
     #[must_use]
     #[inline(always)]
     pub const fn lvdsclk2_oben(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "This enables the LVDS output buffer for anaclk2/2b"]
+    #[doc = "This enables the LVDS output buffer for anaclk2/2b."]
     #[inline(always)]
     pub const fn set_lvdsclk2_oben(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "This enables the LVDS input buffer for anaclk1/1b"]
+    #[doc = "This enables the LVDS input buffer for anaclk1/1b."]
     #[must_use]
     #[inline(always)]
     pub const fn lvdsclk1_iben(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "This enables the LVDS input buffer for anaclk1/1b"]
+    #[doc = "This enables the LVDS input buffer for anaclk1/1b."]
     #[inline(always)]
     pub const fn set_lvdsclk1_iben(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "This enables the LVDS input buffer for anaclk2/2b"]
+    #[doc = "This enables the LVDS input buffer for anaclk2/2b."]
     #[must_use]
     #[inline(always)]
     pub const fn lvdsclk2_iben(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "This enables the LVDS input buffer for anaclk2/2b"]
+    #[doc = "This enables the LVDS input buffer for anaclk2/2b."]
     #[inline(always)]
     pub const fn set_lvdsclk2_iben(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "This enables a feature that will clkgate (reset) all PFD_480 clocks anytime the USB1_PLL_480 is unlocked or powered off"]
+    #[doc = "This enables a feature that will clkgate (reset) all PFD_480 clocks anytime the USB1_PLL_480 is unlocked or powered off."]
     #[must_use]
     #[inline(always)]
     pub const fn pfd_480_autogate_en(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "This enables a feature that will clkgate (reset) all PFD_480 clocks anytime the USB1_PLL_480 is unlocked or powered off"]
+    #[doc = "This enables a feature that will clkgate (reset) all PFD_480 clocks anytime the USB1_PLL_480 is unlocked or powered off."]
     #[inline(always)]
     pub const fn set_pfd_480_autogate_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "This enables a feature that will clkgate (reset) all PFD_528 clocks anytime the PLL_528 is unlocked or powered off"]
+    #[doc = "This enables a feature that will clkgate (reset) all PFD_528 clocks anytime the PLL_528 is unlocked or powered off."]
     #[must_use]
     #[inline(always)]
     pub const fn pfd_528_autogate_en(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "This enables a feature that will clkgate (reset) all PFD_528 clocks anytime the PLL_528 is unlocked or powered off"]
+    #[doc = "This enables a feature that will clkgate (reset) all PFD_528 clocks anytime the PLL_528 is unlocked or powered off."]
     #[inline(always)]
     pub const fn set_pfd_528_autogate_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "This status bit is set to one when the temperature sensor panic interrupt asserts for a panic high temperature"]
+    #[doc = "This status bit is set to one when the temperature sensor panic interrupt asserts for a panic high temperature."]
     #[must_use]
     #[inline(always)]
     pub const fn irq_temppanic(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "This status bit is set to one when the temperature sensor panic interrupt asserts for a panic high temperature"]
+    #[doc = "This status bit is set to one when the temperature sensor panic interrupt asserts for a panic high temperature."]
     #[inline(always)]
     pub const fn set_irq_temppanic(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "This status bit is set to one when the temperature sensor low interrupt asserts for low temperature"]
+    #[doc = "This status bit is set to one when the temperature sensor low interrupt asserts for low temperature."]
     #[must_use]
     #[inline(always)]
     pub const fn irq_templow(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "This status bit is set to one when the temperature sensor low interrupt asserts for low temperature"]
+    #[doc = "This status bit is set to one when the temperature sensor low interrupt asserts for low temperature."]
     #[inline(always)]
     pub const fn set_irq_templow(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "This status bit is set to one when the temperature sensor high interrupt asserts for high temperature"]
+    #[doc = "This status bit is set to one when the temperature sensor high interrupt asserts for high temperature."]
     #[must_use]
     #[inline(always)]
     pub const fn irq_temphigh(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "This status bit is set to one when the temperature sensor high interrupt asserts for high temperature"]
+    #[doc = "This status bit is set to one when the temperature sensor high interrupt asserts for high temperature."]
     #[inline(always)]
     pub const fn set_irq_temphigh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "This status bit is set to one when when any of the analog regulator brownout interrupts assert"]
+    #[doc = "This status bit is set to one when when any of the analog regulator brownout interrupts assert."]
     #[must_use]
     #[inline(always)]
     pub const fn irq_ana_bo(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "This status bit is set to one when when any of the analog regulator brownout interrupts assert"]
+    #[doc = "This status bit is set to one when when any of the analog regulator brownout interrupts assert."]
     #[inline(always)]
     pub const fn set_irq_ana_bo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "This status bit is set to one when when any of the digital regulator brownout interrupts assert"]
+    #[doc = "This status bit is set to one when when any of the digital regulator brownout interrupts assert."]
     #[must_use]
     #[inline(always)]
     pub const fn irq_dig_bo(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "This status bit is set to one when when any of the digital regulator brownout interrupts assert"]
+    #[doc = "This status bit is set to one when when any of the digital regulator brownout interrupts assert."]
     #[inline(always)]
     pub const fn set_irq_dig_bo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -1838,19 +1838,19 @@ impl defmt::Format for Misc1Tog {
         )
     }
 }
-#[doc = "Miscellaneous Control Register"]
+#[doc = "Miscellaneous Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Misc2(pub u32);
 impl Misc2 {
-    #[doc = "This field defines the brown out voltage offset for the CORE power domain"]
+    #[doc = "This field defines the brown out voltage offset for the CORE power domain."]
     #[must_use]
     #[inline(always)]
     pub const fn reg0_bo_offset(&self) -> super::vals::Misc2Reg0BoOffset {
         let val = (self.0 >> 0usize) & 0x07;
         super::vals::Misc2Reg0BoOffset::from_bits(val as u8)
     }
-    #[doc = "This field defines the brown out voltage offset for the CORE power domain"]
+    #[doc = "This field defines the brown out voltage offset for the CORE power domain."]
     #[inline(always)]
     pub const fn set_reg0_bo_offset(&mut self, val: super::vals::Misc2Reg0BoOffset) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
@@ -1879,26 +1879,26 @@ impl Misc2 {
     pub const fn set_reg0_enable_bo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "Default value of \"0\""]
+    #[doc = "Default value of \"0\"."]
     #[must_use]
     #[inline(always)]
     pub const fn pll3_disable(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Default value of \"0\""]
+    #[doc = "Default value of \"0\"."]
     #[inline(always)]
     pub const fn set_pll3_disable(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "This field defines the brown out voltage offset for the xPU power domain"]
+    #[doc = "This field defines the brown out voltage offset for the xPU power domain."]
     #[must_use]
     #[inline(always)]
     pub const fn reg1_bo_offset(&self) -> super::vals::Misc2Reg1BoOffset {
         let val = (self.0 >> 8usize) & 0x07;
         super::vals::Misc2Reg1BoOffset::from_bits(val as u8)
     }
-    #[doc = "This field defines the brown out voltage offset for the xPU power domain"]
+    #[doc = "This field defines the brown out voltage offset for the xPU power domain."]
     #[inline(always)]
     pub const fn set_reg1_bo_offset(&mut self, val: super::vals::Misc2Reg1BoOffset) {
         self.0 = (self.0 & !(0x07 << 8usize)) | (((val.to_bits() as u32) & 0x07) << 8usize);
@@ -1927,26 +1927,26 @@ impl Misc2 {
     pub const fn set_reg1_enable_bo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "LSB of Post-divider for Audio PLL"]
+    #[doc = "LSB of Post-divider for Audio PLL."]
     #[must_use]
     #[inline(always)]
     pub const fn audio_div_lsb(&self) -> super::vals::Misc2AudioDivLsb {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::Misc2AudioDivLsb::from_bits(val as u8)
     }
-    #[doc = "LSB of Post-divider for Audio PLL"]
+    #[doc = "LSB of Post-divider for Audio PLL."]
     #[inline(always)]
     pub const fn set_audio_div_lsb(&mut self, val: super::vals::Misc2AudioDivLsb) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "This field defines the brown out voltage offset for the xPU power domain"]
+    #[doc = "This field defines the brown out voltage offset for the xPU power domain."]
     #[must_use]
     #[inline(always)]
     pub const fn reg2_bo_offset(&self) -> super::vals::Misc2Reg2BoOffset {
         let val = (self.0 >> 16usize) & 0x07;
         super::vals::Misc2Reg2BoOffset::from_bits(val as u8)
     }
-    #[doc = "This field defines the brown out voltage offset for the xPU power domain"]
+    #[doc = "This field defines the brown out voltage offset for the xPU power domain."]
     #[inline(always)]
     pub const fn set_reg2_bo_offset(&mut self, val: super::vals::Misc2Reg2BoOffset) {
         self.0 = (self.0 & !(0x07 << 16usize)) | (((val.to_bits() as u32) & 0x07) << 16usize);
@@ -1975,26 +1975,26 @@ impl Misc2 {
     pub const fn set_reg2_enable_bo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "Signals that the voltage is above the brownout level for the SOC supply"]
+    #[doc = "Signals that the voltage is above the brownout level for the SOC supply."]
     #[must_use]
     #[inline(always)]
     pub const fn reg2_ok(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "Signals that the voltage is above the brownout level for the SOC supply"]
+    #[doc = "Signals that the voltage is above the brownout level for the SOC supply."]
     #[inline(always)]
     pub const fn set_reg2_ok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "MSB of Post-divider for Audio PLL"]
+    #[doc = "MSB of Post-divider for Audio PLL."]
     #[must_use]
     #[inline(always)]
     pub const fn audio_div_msb(&self) -> super::vals::Misc2AudioDivMsb {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::Misc2AudioDivMsb::from_bits(val as u8)
     }
-    #[doc = "MSB of Post-divider for Audio PLL"]
+    #[doc = "MSB of Post-divider for Audio PLL."]
     #[inline(always)]
     pub const fn set_audio_div_msb(&mut self, val: super::vals::Misc2AudioDivMsb) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
@@ -2035,14 +2035,14 @@ impl Misc2 {
     pub const fn set_reg2_step_time(&mut self, val: super::vals::Misc2Reg2StepTime) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
     }
-    #[doc = "Post-divider for video"]
+    #[doc = "Post-divider for video."]
     #[must_use]
     #[inline(always)]
     pub const fn video_div(&self) -> super::vals::Misc2VideoDiv {
         let val = (self.0 >> 30usize) & 0x03;
         super::vals::Misc2VideoDiv::from_bits(val as u8)
     }
-    #[doc = "Post-divider for video"]
+    #[doc = "Post-divider for video."]
     #[inline(always)]
     pub const fn set_video_div(&mut self, val: super::vals::Misc2VideoDiv) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val.to_bits() as u32) & 0x03) << 30usize);
@@ -2103,19 +2103,19 @@ impl defmt::Format for Misc2 {
         )
     }
 }
-#[doc = "Miscellaneous Control Register"]
+#[doc = "Miscellaneous Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Misc2Clr(pub u32);
 impl Misc2Clr {
-    #[doc = "This field defines the brown out voltage offset for the CORE power domain"]
+    #[doc = "This field defines the brown out voltage offset for the CORE power domain."]
     #[must_use]
     #[inline(always)]
     pub const fn reg0_bo_offset(&self) -> super::vals::Misc2ClrReg0BoOffset {
         let val = (self.0 >> 0usize) & 0x07;
         super::vals::Misc2ClrReg0BoOffset::from_bits(val as u8)
     }
-    #[doc = "This field defines the brown out voltage offset for the CORE power domain"]
+    #[doc = "This field defines the brown out voltage offset for the CORE power domain."]
     #[inline(always)]
     pub const fn set_reg0_bo_offset(&mut self, val: super::vals::Misc2ClrReg0BoOffset) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
@@ -2144,26 +2144,26 @@ impl Misc2Clr {
     pub const fn set_reg0_enable_bo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "Default value of \"0\""]
+    #[doc = "Default value of \"0\"."]
     #[must_use]
     #[inline(always)]
     pub const fn pll3_disable(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Default value of \"0\""]
+    #[doc = "Default value of \"0\"."]
     #[inline(always)]
     pub const fn set_pll3_disable(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "This field defines the brown out voltage offset for the xPU power domain"]
+    #[doc = "This field defines the brown out voltage offset for the xPU power domain."]
     #[must_use]
     #[inline(always)]
     pub const fn reg1_bo_offset(&self) -> super::vals::Misc2ClrReg1BoOffset {
         let val = (self.0 >> 8usize) & 0x07;
         super::vals::Misc2ClrReg1BoOffset::from_bits(val as u8)
     }
-    #[doc = "This field defines the brown out voltage offset for the xPU power domain"]
+    #[doc = "This field defines the brown out voltage offset for the xPU power domain."]
     #[inline(always)]
     pub const fn set_reg1_bo_offset(&mut self, val: super::vals::Misc2ClrReg1BoOffset) {
         self.0 = (self.0 & !(0x07 << 8usize)) | (((val.to_bits() as u32) & 0x07) << 8usize);
@@ -2192,26 +2192,26 @@ impl Misc2Clr {
     pub const fn set_reg1_enable_bo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "LSB of Post-divider for Audio PLL"]
+    #[doc = "LSB of Post-divider for Audio PLL."]
     #[must_use]
     #[inline(always)]
     pub const fn audio_div_lsb(&self) -> super::vals::Misc2ClrAudioDivLsb {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::Misc2ClrAudioDivLsb::from_bits(val as u8)
     }
-    #[doc = "LSB of Post-divider for Audio PLL"]
+    #[doc = "LSB of Post-divider for Audio PLL."]
     #[inline(always)]
     pub const fn set_audio_div_lsb(&mut self, val: super::vals::Misc2ClrAudioDivLsb) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "This field defines the brown out voltage offset for the xPU power domain"]
+    #[doc = "This field defines the brown out voltage offset for the xPU power domain."]
     #[must_use]
     #[inline(always)]
     pub const fn reg2_bo_offset(&self) -> super::vals::Misc2ClrReg2BoOffset {
         let val = (self.0 >> 16usize) & 0x07;
         super::vals::Misc2ClrReg2BoOffset::from_bits(val as u8)
     }
-    #[doc = "This field defines the brown out voltage offset for the xPU power domain"]
+    #[doc = "This field defines the brown out voltage offset for the xPU power domain."]
     #[inline(always)]
     pub const fn set_reg2_bo_offset(&mut self, val: super::vals::Misc2ClrReg2BoOffset) {
         self.0 = (self.0 & !(0x07 << 16usize)) | (((val.to_bits() as u32) & 0x07) << 16usize);
@@ -2240,26 +2240,26 @@ impl Misc2Clr {
     pub const fn set_reg2_enable_bo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "Signals that the voltage is above the brownout level for the SOC supply"]
+    #[doc = "Signals that the voltage is above the brownout level for the SOC supply."]
     #[must_use]
     #[inline(always)]
     pub const fn reg2_ok(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "Signals that the voltage is above the brownout level for the SOC supply"]
+    #[doc = "Signals that the voltage is above the brownout level for the SOC supply."]
     #[inline(always)]
     pub const fn set_reg2_ok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "MSB of Post-divider for Audio PLL"]
+    #[doc = "MSB of Post-divider for Audio PLL."]
     #[must_use]
     #[inline(always)]
     pub const fn audio_div_msb(&self) -> super::vals::Misc2ClrAudioDivMsb {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::Misc2ClrAudioDivMsb::from_bits(val as u8)
     }
-    #[doc = "MSB of Post-divider for Audio PLL"]
+    #[doc = "MSB of Post-divider for Audio PLL."]
     #[inline(always)]
     pub const fn set_audio_div_msb(&mut self, val: super::vals::Misc2ClrAudioDivMsb) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
@@ -2300,14 +2300,14 @@ impl Misc2Clr {
     pub const fn set_reg2_step_time(&mut self, val: super::vals::Misc2ClrReg2StepTime) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
     }
-    #[doc = "Post-divider for video"]
+    #[doc = "Post-divider for video."]
     #[must_use]
     #[inline(always)]
     pub const fn video_div(&self) -> super::vals::Misc2ClrVideoDiv {
         let val = (self.0 >> 30usize) & 0x03;
         super::vals::Misc2ClrVideoDiv::from_bits(val as u8)
     }
-    #[doc = "Post-divider for video"]
+    #[doc = "Post-divider for video."]
     #[inline(always)]
     pub const fn set_video_div(&mut self, val: super::vals::Misc2ClrVideoDiv) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val.to_bits() as u32) & 0x03) << 30usize);
@@ -2368,19 +2368,19 @@ impl defmt::Format for Misc2Clr {
         )
     }
 }
-#[doc = "Miscellaneous Control Register"]
+#[doc = "Miscellaneous Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Misc2Set(pub u32);
 impl Misc2Set {
-    #[doc = "This field defines the brown out voltage offset for the CORE power domain"]
+    #[doc = "This field defines the brown out voltage offset for the CORE power domain."]
     #[must_use]
     #[inline(always)]
     pub const fn reg0_bo_offset(&self) -> super::vals::Misc2SetReg0BoOffset {
         let val = (self.0 >> 0usize) & 0x07;
         super::vals::Misc2SetReg0BoOffset::from_bits(val as u8)
     }
-    #[doc = "This field defines the brown out voltage offset for the CORE power domain"]
+    #[doc = "This field defines the brown out voltage offset for the CORE power domain."]
     #[inline(always)]
     pub const fn set_reg0_bo_offset(&mut self, val: super::vals::Misc2SetReg0BoOffset) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
@@ -2409,26 +2409,26 @@ impl Misc2Set {
     pub const fn set_reg0_enable_bo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "Default value of \"0\""]
+    #[doc = "Default value of \"0\"."]
     #[must_use]
     #[inline(always)]
     pub const fn pll3_disable(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Default value of \"0\""]
+    #[doc = "Default value of \"0\"."]
     #[inline(always)]
     pub const fn set_pll3_disable(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "This field defines the brown out voltage offset for the xPU power domain"]
+    #[doc = "This field defines the brown out voltage offset for the xPU power domain."]
     #[must_use]
     #[inline(always)]
     pub const fn reg1_bo_offset(&self) -> super::vals::Misc2SetReg1BoOffset {
         let val = (self.0 >> 8usize) & 0x07;
         super::vals::Misc2SetReg1BoOffset::from_bits(val as u8)
     }
-    #[doc = "This field defines the brown out voltage offset for the xPU power domain"]
+    #[doc = "This field defines the brown out voltage offset for the xPU power domain."]
     #[inline(always)]
     pub const fn set_reg1_bo_offset(&mut self, val: super::vals::Misc2SetReg1BoOffset) {
         self.0 = (self.0 & !(0x07 << 8usize)) | (((val.to_bits() as u32) & 0x07) << 8usize);
@@ -2457,26 +2457,26 @@ impl Misc2Set {
     pub const fn set_reg1_enable_bo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "LSB of Post-divider for Audio PLL"]
+    #[doc = "LSB of Post-divider for Audio PLL."]
     #[must_use]
     #[inline(always)]
     pub const fn audio_div_lsb(&self) -> super::vals::Misc2SetAudioDivLsb {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::Misc2SetAudioDivLsb::from_bits(val as u8)
     }
-    #[doc = "LSB of Post-divider for Audio PLL"]
+    #[doc = "LSB of Post-divider for Audio PLL."]
     #[inline(always)]
     pub const fn set_audio_div_lsb(&mut self, val: super::vals::Misc2SetAudioDivLsb) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "This field defines the brown out voltage offset for the xPU power domain"]
+    #[doc = "This field defines the brown out voltage offset for the xPU power domain."]
     #[must_use]
     #[inline(always)]
     pub const fn reg2_bo_offset(&self) -> super::vals::Misc2SetReg2BoOffset {
         let val = (self.0 >> 16usize) & 0x07;
         super::vals::Misc2SetReg2BoOffset::from_bits(val as u8)
     }
-    #[doc = "This field defines the brown out voltage offset for the xPU power domain"]
+    #[doc = "This field defines the brown out voltage offset for the xPU power domain."]
     #[inline(always)]
     pub const fn set_reg2_bo_offset(&mut self, val: super::vals::Misc2SetReg2BoOffset) {
         self.0 = (self.0 & !(0x07 << 16usize)) | (((val.to_bits() as u32) & 0x07) << 16usize);
@@ -2505,26 +2505,26 @@ impl Misc2Set {
     pub const fn set_reg2_enable_bo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "Signals that the voltage is above the brownout level for the SOC supply"]
+    #[doc = "Signals that the voltage is above the brownout level for the SOC supply."]
     #[must_use]
     #[inline(always)]
     pub const fn reg2_ok(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "Signals that the voltage is above the brownout level for the SOC supply"]
+    #[doc = "Signals that the voltage is above the brownout level for the SOC supply."]
     #[inline(always)]
     pub const fn set_reg2_ok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "MSB of Post-divider for Audio PLL"]
+    #[doc = "MSB of Post-divider for Audio PLL."]
     #[must_use]
     #[inline(always)]
     pub const fn audio_div_msb(&self) -> super::vals::Misc2SetAudioDivMsb {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::Misc2SetAudioDivMsb::from_bits(val as u8)
     }
-    #[doc = "MSB of Post-divider for Audio PLL"]
+    #[doc = "MSB of Post-divider for Audio PLL."]
     #[inline(always)]
     pub const fn set_audio_div_msb(&mut self, val: super::vals::Misc2SetAudioDivMsb) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
@@ -2565,14 +2565,14 @@ impl Misc2Set {
     pub const fn set_reg2_step_time(&mut self, val: super::vals::Misc2SetReg2StepTime) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
     }
-    #[doc = "Post-divider for video"]
+    #[doc = "Post-divider for video."]
     #[must_use]
     #[inline(always)]
     pub const fn video_div(&self) -> super::vals::Misc2SetVideoDiv {
         let val = (self.0 >> 30usize) & 0x03;
         super::vals::Misc2SetVideoDiv::from_bits(val as u8)
     }
-    #[doc = "Post-divider for video"]
+    #[doc = "Post-divider for video."]
     #[inline(always)]
     pub const fn set_video_div(&mut self, val: super::vals::Misc2SetVideoDiv) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val.to_bits() as u32) & 0x03) << 30usize);
@@ -2633,19 +2633,19 @@ impl defmt::Format for Misc2Set {
         )
     }
 }
-#[doc = "Miscellaneous Control Register"]
+#[doc = "Miscellaneous Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Misc2Tog(pub u32);
 impl Misc2Tog {
-    #[doc = "This field defines the brown out voltage offset for the CORE power domain"]
+    #[doc = "This field defines the brown out voltage offset for the CORE power domain."]
     #[must_use]
     #[inline(always)]
     pub const fn reg0_bo_offset(&self) -> super::vals::Misc2TogReg0BoOffset {
         let val = (self.0 >> 0usize) & 0x07;
         super::vals::Misc2TogReg0BoOffset::from_bits(val as u8)
     }
-    #[doc = "This field defines the brown out voltage offset for the CORE power domain"]
+    #[doc = "This field defines the brown out voltage offset for the CORE power domain."]
     #[inline(always)]
     pub const fn set_reg0_bo_offset(&mut self, val: super::vals::Misc2TogReg0BoOffset) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
@@ -2674,26 +2674,26 @@ impl Misc2Tog {
     pub const fn set_reg0_enable_bo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "Default value of \"0\""]
+    #[doc = "Default value of \"0\"."]
     #[must_use]
     #[inline(always)]
     pub const fn pll3_disable(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Default value of \"0\""]
+    #[doc = "Default value of \"0\"."]
     #[inline(always)]
     pub const fn set_pll3_disable(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "This field defines the brown out voltage offset for the xPU power domain"]
+    #[doc = "This field defines the brown out voltage offset for the xPU power domain."]
     #[must_use]
     #[inline(always)]
     pub const fn reg1_bo_offset(&self) -> super::vals::Misc2TogReg1BoOffset {
         let val = (self.0 >> 8usize) & 0x07;
         super::vals::Misc2TogReg1BoOffset::from_bits(val as u8)
     }
-    #[doc = "This field defines the brown out voltage offset for the xPU power domain"]
+    #[doc = "This field defines the brown out voltage offset for the xPU power domain."]
     #[inline(always)]
     pub const fn set_reg1_bo_offset(&mut self, val: super::vals::Misc2TogReg1BoOffset) {
         self.0 = (self.0 & !(0x07 << 8usize)) | (((val.to_bits() as u32) & 0x07) << 8usize);
@@ -2722,26 +2722,26 @@ impl Misc2Tog {
     pub const fn set_reg1_enable_bo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "LSB of Post-divider for Audio PLL"]
+    #[doc = "LSB of Post-divider for Audio PLL."]
     #[must_use]
     #[inline(always)]
     pub const fn audio_div_lsb(&self) -> super::vals::Misc2TogAudioDivLsb {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::Misc2TogAudioDivLsb::from_bits(val as u8)
     }
-    #[doc = "LSB of Post-divider for Audio PLL"]
+    #[doc = "LSB of Post-divider for Audio PLL."]
     #[inline(always)]
     pub const fn set_audio_div_lsb(&mut self, val: super::vals::Misc2TogAudioDivLsb) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "This field defines the brown out voltage offset for the xPU power domain"]
+    #[doc = "This field defines the brown out voltage offset for the xPU power domain."]
     #[must_use]
     #[inline(always)]
     pub const fn reg2_bo_offset(&self) -> super::vals::Misc2TogReg2BoOffset {
         let val = (self.0 >> 16usize) & 0x07;
         super::vals::Misc2TogReg2BoOffset::from_bits(val as u8)
     }
-    #[doc = "This field defines the brown out voltage offset for the xPU power domain"]
+    #[doc = "This field defines the brown out voltage offset for the xPU power domain."]
     #[inline(always)]
     pub const fn set_reg2_bo_offset(&mut self, val: super::vals::Misc2TogReg2BoOffset) {
         self.0 = (self.0 & !(0x07 << 16usize)) | (((val.to_bits() as u32) & 0x07) << 16usize);
@@ -2770,26 +2770,26 @@ impl Misc2Tog {
     pub const fn set_reg2_enable_bo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "Signals that the voltage is above the brownout level for the SOC supply"]
+    #[doc = "Signals that the voltage is above the brownout level for the SOC supply."]
     #[must_use]
     #[inline(always)]
     pub const fn reg2_ok(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "Signals that the voltage is above the brownout level for the SOC supply"]
+    #[doc = "Signals that the voltage is above the brownout level for the SOC supply."]
     #[inline(always)]
     pub const fn set_reg2_ok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "MSB of Post-divider for Audio PLL"]
+    #[doc = "MSB of Post-divider for Audio PLL."]
     #[must_use]
     #[inline(always)]
     pub const fn audio_div_msb(&self) -> super::vals::Misc2TogAudioDivMsb {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::Misc2TogAudioDivMsb::from_bits(val as u8)
     }
-    #[doc = "MSB of Post-divider for Audio PLL"]
+    #[doc = "MSB of Post-divider for Audio PLL."]
     #[inline(always)]
     pub const fn set_audio_div_msb(&mut self, val: super::vals::Misc2TogAudioDivMsb) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
@@ -2830,14 +2830,14 @@ impl Misc2Tog {
     pub const fn set_reg2_step_time(&mut self, val: super::vals::Misc2TogReg2StepTime) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
     }
-    #[doc = "Post-divider for video"]
+    #[doc = "Post-divider for video."]
     #[must_use]
     #[inline(always)]
     pub const fn video_div(&self) -> super::vals::Misc2TogVideoDiv {
         let val = (self.0 >> 30usize) & 0x03;
         super::vals::Misc2TogVideoDiv::from_bits(val as u8)
     }
-    #[doc = "Post-divider for video"]
+    #[doc = "Post-divider for video."]
     #[inline(always)]
     pub const fn set_video_div(&mut self, val: super::vals::Misc2TogVideoDiv) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val.to_bits() as u32) & 0x03) << 30usize);
@@ -2898,7 +2898,7 @@ impl defmt::Format for Misc2Tog {
         )
     }
 }
-#[doc = "Regulator 1P1 Register"]
+#[doc = "Regulator 1P1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Reg1p1(pub u32);
@@ -2939,38 +2939,38 @@ impl Reg1p1 {
     pub const fn set_enable_ilimit(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Control bit to enable the pull-down circuitry in the regulator"]
+    #[doc = "Control bit to enable the pull-down circuitry in the regulator."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_pulldown(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Control bit to enable the pull-down circuitry in the regulator"]
+    #[doc = "Control bit to enable the pull-down circuitry in the regulator."]
     #[inline(always)]
     pub const fn set_enable_pulldown(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps"]
+    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps."]
     #[must_use]
     #[inline(always)]
     pub const fn bo_offset(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x07;
         val as u8
     }
-    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps"]
+    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps."]
     #[inline(always)]
     pub const fn set_bo_offset(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 4usize)) | (((val as u32) & 0x07) << 4usize);
     }
-    #[doc = "Control bits to adjust the regulator output voltage"]
+    #[doc = "Control bits to adjust the regulator output voltage."]
     #[must_use]
     #[inline(always)]
     pub const fn output_trg(&self) -> super::vals::Reg1p1OutputTrg {
         let val = (self.0 >> 8usize) & 0x1f;
         super::vals::Reg1p1OutputTrg::from_bits(val as u8)
     }
-    #[doc = "Control bits to adjust the regulator output voltage"]
+    #[doc = "Control bits to adjust the regulator output voltage."]
     #[inline(always)]
     pub const fn set_output_trg(&mut self, val: super::vals::Reg1p1OutputTrg) {
         self.0 = (self.0 & !(0x1f << 8usize)) | (((val.to_bits() as u32) & 0x1f) << 8usize);
@@ -2987,26 +2987,26 @@ impl Reg1p1 {
     pub const fn set_bo_vdd1p1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target"]
+    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target."]
     #[must_use]
     #[inline(always)]
     pub const fn ok_vdd1p1(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target"]
+    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target."]
     #[inline(always)]
     pub const fn set_ok_vdd1p1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Enables the weak 1p1 regulator"]
+    #[doc = "Enables the weak 1p1 regulator."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_weak_linreg(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables the weak 1p1 regulator"]
+    #[doc = "Enables the weak 1p1 regulator."]
     #[inline(always)]
     pub const fn set_enable_weak_linreg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
@@ -3065,7 +3065,7 @@ impl defmt::Format for Reg1p1 {
         )
     }
 }
-#[doc = "Regulator 1P1 Register"]
+#[doc = "Regulator 1P1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Reg1p1Clr(pub u32);
@@ -3106,38 +3106,38 @@ impl Reg1p1Clr {
     pub const fn set_enable_ilimit(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Control bit to enable the pull-down circuitry in the regulator"]
+    #[doc = "Control bit to enable the pull-down circuitry in the regulator."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_pulldown(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Control bit to enable the pull-down circuitry in the regulator"]
+    #[doc = "Control bit to enable the pull-down circuitry in the regulator."]
     #[inline(always)]
     pub const fn set_enable_pulldown(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps"]
+    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps."]
     #[must_use]
     #[inline(always)]
     pub const fn bo_offset(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x07;
         val as u8
     }
-    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps"]
+    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps."]
     #[inline(always)]
     pub const fn set_bo_offset(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 4usize)) | (((val as u32) & 0x07) << 4usize);
     }
-    #[doc = "Control bits to adjust the regulator output voltage"]
+    #[doc = "Control bits to adjust the regulator output voltage."]
     #[must_use]
     #[inline(always)]
     pub const fn output_trg(&self) -> super::vals::Reg1p1ClrOutputTrg {
         let val = (self.0 >> 8usize) & 0x1f;
         super::vals::Reg1p1ClrOutputTrg::from_bits(val as u8)
     }
-    #[doc = "Control bits to adjust the regulator output voltage"]
+    #[doc = "Control bits to adjust the regulator output voltage."]
     #[inline(always)]
     pub const fn set_output_trg(&mut self, val: super::vals::Reg1p1ClrOutputTrg) {
         self.0 = (self.0 & !(0x1f << 8usize)) | (((val.to_bits() as u32) & 0x1f) << 8usize);
@@ -3154,26 +3154,26 @@ impl Reg1p1Clr {
     pub const fn set_bo_vdd1p1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target"]
+    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target."]
     #[must_use]
     #[inline(always)]
     pub const fn ok_vdd1p1(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target"]
+    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target."]
     #[inline(always)]
     pub const fn set_ok_vdd1p1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Enables the weak 1p1 regulator"]
+    #[doc = "Enables the weak 1p1 regulator."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_weak_linreg(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables the weak 1p1 regulator"]
+    #[doc = "Enables the weak 1p1 regulator."]
     #[inline(always)]
     pub const fn set_enable_weak_linreg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
@@ -3232,7 +3232,7 @@ impl defmt::Format for Reg1p1Clr {
         )
     }
 }
-#[doc = "Regulator 1P1 Register"]
+#[doc = "Regulator 1P1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Reg1p1Set(pub u32);
@@ -3273,38 +3273,38 @@ impl Reg1p1Set {
     pub const fn set_enable_ilimit(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Control bit to enable the pull-down circuitry in the regulator"]
+    #[doc = "Control bit to enable the pull-down circuitry in the regulator."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_pulldown(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Control bit to enable the pull-down circuitry in the regulator"]
+    #[doc = "Control bit to enable the pull-down circuitry in the regulator."]
     #[inline(always)]
     pub const fn set_enable_pulldown(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps"]
+    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps."]
     #[must_use]
     #[inline(always)]
     pub const fn bo_offset(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x07;
         val as u8
     }
-    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps"]
+    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps."]
     #[inline(always)]
     pub const fn set_bo_offset(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 4usize)) | (((val as u32) & 0x07) << 4usize);
     }
-    #[doc = "Control bits to adjust the regulator output voltage"]
+    #[doc = "Control bits to adjust the regulator output voltage."]
     #[must_use]
     #[inline(always)]
     pub const fn output_trg(&self) -> super::vals::Reg1p1SetOutputTrg {
         let val = (self.0 >> 8usize) & 0x1f;
         super::vals::Reg1p1SetOutputTrg::from_bits(val as u8)
     }
-    #[doc = "Control bits to adjust the regulator output voltage"]
+    #[doc = "Control bits to adjust the regulator output voltage."]
     #[inline(always)]
     pub const fn set_output_trg(&mut self, val: super::vals::Reg1p1SetOutputTrg) {
         self.0 = (self.0 & !(0x1f << 8usize)) | (((val.to_bits() as u32) & 0x1f) << 8usize);
@@ -3321,26 +3321,26 @@ impl Reg1p1Set {
     pub const fn set_bo_vdd1p1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target"]
+    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target."]
     #[must_use]
     #[inline(always)]
     pub const fn ok_vdd1p1(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target"]
+    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target."]
     #[inline(always)]
     pub const fn set_ok_vdd1p1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Enables the weak 1p1 regulator"]
+    #[doc = "Enables the weak 1p1 regulator."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_weak_linreg(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables the weak 1p1 regulator"]
+    #[doc = "Enables the weak 1p1 regulator."]
     #[inline(always)]
     pub const fn set_enable_weak_linreg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
@@ -3399,7 +3399,7 @@ impl defmt::Format for Reg1p1Set {
         )
     }
 }
-#[doc = "Regulator 1P1 Register"]
+#[doc = "Regulator 1P1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Reg1p1Tog(pub u32);
@@ -3440,38 +3440,38 @@ impl Reg1p1Tog {
     pub const fn set_enable_ilimit(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Control bit to enable the pull-down circuitry in the regulator"]
+    #[doc = "Control bit to enable the pull-down circuitry in the regulator."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_pulldown(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Control bit to enable the pull-down circuitry in the regulator"]
+    #[doc = "Control bit to enable the pull-down circuitry in the regulator."]
     #[inline(always)]
     pub const fn set_enable_pulldown(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps"]
+    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps."]
     #[must_use]
     #[inline(always)]
     pub const fn bo_offset(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x07;
         val as u8
     }
-    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps"]
+    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps."]
     #[inline(always)]
     pub const fn set_bo_offset(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 4usize)) | (((val as u32) & 0x07) << 4usize);
     }
-    #[doc = "Control bits to adjust the regulator output voltage"]
+    #[doc = "Control bits to adjust the regulator output voltage."]
     #[must_use]
     #[inline(always)]
     pub const fn output_trg(&self) -> super::vals::Reg1p1TogOutputTrg {
         let val = (self.0 >> 8usize) & 0x1f;
         super::vals::Reg1p1TogOutputTrg::from_bits(val as u8)
     }
-    #[doc = "Control bits to adjust the regulator output voltage"]
+    #[doc = "Control bits to adjust the regulator output voltage."]
     #[inline(always)]
     pub const fn set_output_trg(&mut self, val: super::vals::Reg1p1TogOutputTrg) {
         self.0 = (self.0 & !(0x1f << 8usize)) | (((val.to_bits() as u32) & 0x1f) << 8usize);
@@ -3488,26 +3488,26 @@ impl Reg1p1Tog {
     pub const fn set_bo_vdd1p1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target"]
+    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target."]
     #[must_use]
     #[inline(always)]
     pub const fn ok_vdd1p1(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target"]
+    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target."]
     #[inline(always)]
     pub const fn set_ok_vdd1p1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Enables the weak 1p1 regulator"]
+    #[doc = "Enables the weak 1p1 regulator."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_weak_linreg(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables the weak 1p1 regulator"]
+    #[doc = "Enables the weak 1p1 regulator."]
     #[inline(always)]
     pub const fn set_enable_weak_linreg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
@@ -3566,7 +3566,7 @@ impl defmt::Format for Reg1p1Tog {
         )
     }
 }
-#[doc = "Regulator 2P5 Register"]
+#[doc = "Regulator 2P5 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Reg2p5(pub u32);
@@ -3607,38 +3607,38 @@ impl Reg2p5 {
     pub const fn set_enable_ilimit(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Control bit to enable the pull-down circuitry in the regulator"]
+    #[doc = "Control bit to enable the pull-down circuitry in the regulator."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_pulldown(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Control bit to enable the pull-down circuitry in the regulator"]
+    #[doc = "Control bit to enable the pull-down circuitry in the regulator."]
     #[inline(always)]
     pub const fn set_enable_pulldown(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps"]
+    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps."]
     #[must_use]
     #[inline(always)]
     pub const fn bo_offset(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x07;
         val as u8
     }
-    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps"]
+    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps."]
     #[inline(always)]
     pub const fn set_bo_offset(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 4usize)) | (((val as u32) & 0x07) << 4usize);
     }
-    #[doc = "Control bits to adjust the regulator output voltage"]
+    #[doc = "Control bits to adjust the regulator output voltage."]
     #[must_use]
     #[inline(always)]
     pub const fn output_trg(&self) -> super::vals::Reg2p5OutputTrg {
         let val = (self.0 >> 8usize) & 0x1f;
         super::vals::Reg2p5OutputTrg::from_bits(val as u8)
     }
-    #[doc = "Control bits to adjust the regulator output voltage"]
+    #[doc = "Control bits to adjust the regulator output voltage."]
     #[inline(always)]
     pub const fn set_output_trg(&mut self, val: super::vals::Reg2p5OutputTrg) {
         self.0 = (self.0 & !(0x1f << 8usize)) | (((val.to_bits() as u32) & 0x1f) << 8usize);
@@ -3655,26 +3655,26 @@ impl Reg2p5 {
     pub const fn set_bo_vdd2p5(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target"]
+    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target."]
     #[must_use]
     #[inline(always)]
     pub const fn ok_vdd2p5(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target"]
+    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target."]
     #[inline(always)]
     pub const fn set_ok_vdd2p5(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Enables the weak 2p5 regulator"]
+    #[doc = "Enables the weak 2p5 regulator."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_weak_linreg(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables the weak 2p5 regulator"]
+    #[doc = "Enables the weak 2p5 regulator."]
     #[inline(always)]
     pub const fn set_enable_weak_linreg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
@@ -3719,7 +3719,7 @@ impl defmt::Format for Reg2p5 {
         )
     }
 }
-#[doc = "Regulator 2P5 Register"]
+#[doc = "Regulator 2P5 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Reg2p5Clr(pub u32);
@@ -3760,38 +3760,38 @@ impl Reg2p5Clr {
     pub const fn set_enable_ilimit(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Control bit to enable the pull-down circuitry in the regulator"]
+    #[doc = "Control bit to enable the pull-down circuitry in the regulator."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_pulldown(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Control bit to enable the pull-down circuitry in the regulator"]
+    #[doc = "Control bit to enable the pull-down circuitry in the regulator."]
     #[inline(always)]
     pub const fn set_enable_pulldown(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps"]
+    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps."]
     #[must_use]
     #[inline(always)]
     pub const fn bo_offset(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x07;
         val as u8
     }
-    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps"]
+    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps."]
     #[inline(always)]
     pub const fn set_bo_offset(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 4usize)) | (((val as u32) & 0x07) << 4usize);
     }
-    #[doc = "Control bits to adjust the regulator output voltage"]
+    #[doc = "Control bits to adjust the regulator output voltage."]
     #[must_use]
     #[inline(always)]
     pub const fn output_trg(&self) -> super::vals::Reg2p5ClrOutputTrg {
         let val = (self.0 >> 8usize) & 0x1f;
         super::vals::Reg2p5ClrOutputTrg::from_bits(val as u8)
     }
-    #[doc = "Control bits to adjust the regulator output voltage"]
+    #[doc = "Control bits to adjust the regulator output voltage."]
     #[inline(always)]
     pub const fn set_output_trg(&mut self, val: super::vals::Reg2p5ClrOutputTrg) {
         self.0 = (self.0 & !(0x1f << 8usize)) | (((val.to_bits() as u32) & 0x1f) << 8usize);
@@ -3808,26 +3808,26 @@ impl Reg2p5Clr {
     pub const fn set_bo_vdd2p5(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target"]
+    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target."]
     #[must_use]
     #[inline(always)]
     pub const fn ok_vdd2p5(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target"]
+    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target."]
     #[inline(always)]
     pub const fn set_ok_vdd2p5(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Enables the weak 2p5 regulator"]
+    #[doc = "Enables the weak 2p5 regulator."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_weak_linreg(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables the weak 2p5 regulator"]
+    #[doc = "Enables the weak 2p5 regulator."]
     #[inline(always)]
     pub const fn set_enable_weak_linreg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
@@ -3872,7 +3872,7 @@ impl defmt::Format for Reg2p5Clr {
         )
     }
 }
-#[doc = "Regulator 2P5 Register"]
+#[doc = "Regulator 2P5 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Reg2p5Set(pub u32);
@@ -3913,38 +3913,38 @@ impl Reg2p5Set {
     pub const fn set_enable_ilimit(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Control bit to enable the pull-down circuitry in the regulator"]
+    #[doc = "Control bit to enable the pull-down circuitry in the regulator."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_pulldown(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Control bit to enable the pull-down circuitry in the regulator"]
+    #[doc = "Control bit to enable the pull-down circuitry in the regulator."]
     #[inline(always)]
     pub const fn set_enable_pulldown(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps"]
+    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps."]
     #[must_use]
     #[inline(always)]
     pub const fn bo_offset(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x07;
         val as u8
     }
-    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps"]
+    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps."]
     #[inline(always)]
     pub const fn set_bo_offset(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 4usize)) | (((val as u32) & 0x07) << 4usize);
     }
-    #[doc = "Control bits to adjust the regulator output voltage"]
+    #[doc = "Control bits to adjust the regulator output voltage."]
     #[must_use]
     #[inline(always)]
     pub const fn output_trg(&self) -> super::vals::Reg2p5SetOutputTrg {
         let val = (self.0 >> 8usize) & 0x1f;
         super::vals::Reg2p5SetOutputTrg::from_bits(val as u8)
     }
-    #[doc = "Control bits to adjust the regulator output voltage"]
+    #[doc = "Control bits to adjust the regulator output voltage."]
     #[inline(always)]
     pub const fn set_output_trg(&mut self, val: super::vals::Reg2p5SetOutputTrg) {
         self.0 = (self.0 & !(0x1f << 8usize)) | (((val.to_bits() as u32) & 0x1f) << 8usize);
@@ -3961,26 +3961,26 @@ impl Reg2p5Set {
     pub const fn set_bo_vdd2p5(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target"]
+    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target."]
     #[must_use]
     #[inline(always)]
     pub const fn ok_vdd2p5(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target"]
+    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target."]
     #[inline(always)]
     pub const fn set_ok_vdd2p5(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Enables the weak 2p5 regulator"]
+    #[doc = "Enables the weak 2p5 regulator."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_weak_linreg(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables the weak 2p5 regulator"]
+    #[doc = "Enables the weak 2p5 regulator."]
     #[inline(always)]
     pub const fn set_enable_weak_linreg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
@@ -4025,7 +4025,7 @@ impl defmt::Format for Reg2p5Set {
         )
     }
 }
-#[doc = "Regulator 2P5 Register"]
+#[doc = "Regulator 2P5 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Reg2p5Tog(pub u32);
@@ -4066,38 +4066,38 @@ impl Reg2p5Tog {
     pub const fn set_enable_ilimit(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Control bit to enable the pull-down circuitry in the regulator"]
+    #[doc = "Control bit to enable the pull-down circuitry in the regulator."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_pulldown(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Control bit to enable the pull-down circuitry in the regulator"]
+    #[doc = "Control bit to enable the pull-down circuitry in the regulator."]
     #[inline(always)]
     pub const fn set_enable_pulldown(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps"]
+    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps."]
     #[must_use]
     #[inline(always)]
     pub const fn bo_offset(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x07;
         val as u8
     }
-    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps"]
+    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps."]
     #[inline(always)]
     pub const fn set_bo_offset(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 4usize)) | (((val as u32) & 0x07) << 4usize);
     }
-    #[doc = "Control bits to adjust the regulator output voltage"]
+    #[doc = "Control bits to adjust the regulator output voltage."]
     #[must_use]
     #[inline(always)]
     pub const fn output_trg(&self) -> super::vals::Reg2p5TogOutputTrg {
         let val = (self.0 >> 8usize) & 0x1f;
         super::vals::Reg2p5TogOutputTrg::from_bits(val as u8)
     }
-    #[doc = "Control bits to adjust the regulator output voltage"]
+    #[doc = "Control bits to adjust the regulator output voltage."]
     #[inline(always)]
     pub const fn set_output_trg(&mut self, val: super::vals::Reg2p5TogOutputTrg) {
         self.0 = (self.0 & !(0x1f << 8usize)) | (((val.to_bits() as u32) & 0x1f) << 8usize);
@@ -4114,26 +4114,26 @@ impl Reg2p5Tog {
     pub const fn set_bo_vdd2p5(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target"]
+    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target."]
     #[must_use]
     #[inline(always)]
     pub const fn ok_vdd2p5(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target"]
+    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target."]
     #[inline(always)]
     pub const fn set_ok_vdd2p5(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Enables the weak 2p5 regulator"]
+    #[doc = "Enables the weak 2p5 regulator."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_weak_linreg(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables the weak 2p5 regulator"]
+    #[doc = "Enables the weak 2p5 regulator."]
     #[inline(always)]
     pub const fn set_enable_weak_linreg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
@@ -4178,19 +4178,19 @@ impl defmt::Format for Reg2p5Tog {
         )
     }
 }
-#[doc = "Regulator 3P0 Register"]
+#[doc = "Regulator 3P0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Reg3p0(pub u32);
 impl Reg3p0 {
-    #[doc = "Control bit to enable the regulator output to be set by the programmed target voltage setting and internal bandgap reference"]
+    #[doc = "Control bit to enable the regulator output to be set by the programmed target voltage setting and internal bandgap reference."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_linreg(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Control bit to enable the regulator output to be set by the programmed target voltage setting and internal bandgap reference"]
+    #[doc = "Control bit to enable the regulator output to be set by the programmed target voltage setting and internal bandgap reference."]
     #[inline(always)]
     pub const fn set_enable_linreg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -4219,38 +4219,38 @@ impl Reg3p0 {
     pub const fn set_enable_ilimit(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps"]
+    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps."]
     #[must_use]
     #[inline(always)]
     pub const fn bo_offset(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x07;
         val as u8
     }
-    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps"]
+    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps."]
     #[inline(always)]
     pub const fn set_bo_offset(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 4usize)) | (((val as u32) & 0x07) << 4usize);
     }
-    #[doc = "Select input voltage source for LDO_3P0 from either USB_OTG1_VBUS or USB_OTG2_VBUS"]
+    #[doc = "Select input voltage source for LDO_3P0 from either USB_OTG1_VBUS or USB_OTG2_VBUS."]
     #[must_use]
     #[inline(always)]
     pub const fn vbus_sel(&self) -> super::vals::Reg3p0VbusSel {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Reg3p0VbusSel::from_bits(val as u8)
     }
-    #[doc = "Select input voltage source for LDO_3P0 from either USB_OTG1_VBUS or USB_OTG2_VBUS"]
+    #[doc = "Select input voltage source for LDO_3P0 from either USB_OTG1_VBUS or USB_OTG2_VBUS."]
     #[inline(always)]
     pub const fn set_vbus_sel(&mut self, val: super::vals::Reg3p0VbusSel) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "Control bits to adjust the regulator output voltage"]
+    #[doc = "Control bits to adjust the regulator output voltage."]
     #[must_use]
     #[inline(always)]
     pub const fn output_trg(&self) -> super::vals::Reg3p0OutputTrg {
         let val = (self.0 >> 8usize) & 0x1f;
         super::vals::Reg3p0OutputTrg::from_bits(val as u8)
     }
-    #[doc = "Control bits to adjust the regulator output voltage"]
+    #[doc = "Control bits to adjust the regulator output voltage."]
     #[inline(always)]
     pub const fn set_output_trg(&mut self, val: super::vals::Reg3p0OutputTrg) {
         self.0 = (self.0 & !(0x1f << 8usize)) | (((val.to_bits() as u32) & 0x1f) << 8usize);
@@ -4267,14 +4267,14 @@ impl Reg3p0 {
     pub const fn set_bo_vdd3p0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target"]
+    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target."]
     #[must_use]
     #[inline(always)]
     pub const fn ok_vdd3p0(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target"]
+    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target."]
     #[inline(always)]
     pub const fn set_ok_vdd3p0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
@@ -4317,19 +4317,19 @@ impl defmt::Format for Reg3p0 {
         )
     }
 }
-#[doc = "Regulator 3P0 Register"]
+#[doc = "Regulator 3P0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Reg3p0Clr(pub u32);
 impl Reg3p0Clr {
-    #[doc = "Control bit to enable the regulator output to be set by the programmed target voltage setting and internal bandgap reference"]
+    #[doc = "Control bit to enable the regulator output to be set by the programmed target voltage setting and internal bandgap reference."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_linreg(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Control bit to enable the regulator output to be set by the programmed target voltage setting and internal bandgap reference"]
+    #[doc = "Control bit to enable the regulator output to be set by the programmed target voltage setting and internal bandgap reference."]
     #[inline(always)]
     pub const fn set_enable_linreg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -4358,38 +4358,38 @@ impl Reg3p0Clr {
     pub const fn set_enable_ilimit(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps"]
+    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps."]
     #[must_use]
     #[inline(always)]
     pub const fn bo_offset(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x07;
         val as u8
     }
-    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps"]
+    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps."]
     #[inline(always)]
     pub const fn set_bo_offset(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 4usize)) | (((val as u32) & 0x07) << 4usize);
     }
-    #[doc = "Select input voltage source for LDO_3P0 from either USB_OTG1_VBUS or USB_OTG2_VBUS"]
+    #[doc = "Select input voltage source for LDO_3P0 from either USB_OTG1_VBUS or USB_OTG2_VBUS."]
     #[must_use]
     #[inline(always)]
     pub const fn vbus_sel(&self) -> super::vals::Reg3p0ClrVbusSel {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Reg3p0ClrVbusSel::from_bits(val as u8)
     }
-    #[doc = "Select input voltage source for LDO_3P0 from either USB_OTG1_VBUS or USB_OTG2_VBUS"]
+    #[doc = "Select input voltage source for LDO_3P0 from either USB_OTG1_VBUS or USB_OTG2_VBUS."]
     #[inline(always)]
     pub const fn set_vbus_sel(&mut self, val: super::vals::Reg3p0ClrVbusSel) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "Control bits to adjust the regulator output voltage"]
+    #[doc = "Control bits to adjust the regulator output voltage."]
     #[must_use]
     #[inline(always)]
     pub const fn output_trg(&self) -> super::vals::Reg3p0ClrOutputTrg {
         let val = (self.0 >> 8usize) & 0x1f;
         super::vals::Reg3p0ClrOutputTrg::from_bits(val as u8)
     }
-    #[doc = "Control bits to adjust the regulator output voltage"]
+    #[doc = "Control bits to adjust the regulator output voltage."]
     #[inline(always)]
     pub const fn set_output_trg(&mut self, val: super::vals::Reg3p0ClrOutputTrg) {
         self.0 = (self.0 & !(0x1f << 8usize)) | (((val.to_bits() as u32) & 0x1f) << 8usize);
@@ -4406,14 +4406,14 @@ impl Reg3p0Clr {
     pub const fn set_bo_vdd3p0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target"]
+    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target."]
     #[must_use]
     #[inline(always)]
     pub const fn ok_vdd3p0(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target"]
+    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target."]
     #[inline(always)]
     pub const fn set_ok_vdd3p0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
@@ -4456,19 +4456,19 @@ impl defmt::Format for Reg3p0Clr {
         )
     }
 }
-#[doc = "Regulator 3P0 Register"]
+#[doc = "Regulator 3P0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Reg3p0Set(pub u32);
 impl Reg3p0Set {
-    #[doc = "Control bit to enable the regulator output to be set by the programmed target voltage setting and internal bandgap reference"]
+    #[doc = "Control bit to enable the regulator output to be set by the programmed target voltage setting and internal bandgap reference."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_linreg(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Control bit to enable the regulator output to be set by the programmed target voltage setting and internal bandgap reference"]
+    #[doc = "Control bit to enable the regulator output to be set by the programmed target voltage setting and internal bandgap reference."]
     #[inline(always)]
     pub const fn set_enable_linreg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -4497,38 +4497,38 @@ impl Reg3p0Set {
     pub const fn set_enable_ilimit(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps"]
+    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps."]
     #[must_use]
     #[inline(always)]
     pub const fn bo_offset(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x07;
         val as u8
     }
-    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps"]
+    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps."]
     #[inline(always)]
     pub const fn set_bo_offset(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 4usize)) | (((val as u32) & 0x07) << 4usize);
     }
-    #[doc = "Select input voltage source for LDO_3P0 from either USB_OTG1_VBUS or USB_OTG2_VBUS"]
+    #[doc = "Select input voltage source for LDO_3P0 from either USB_OTG1_VBUS or USB_OTG2_VBUS."]
     #[must_use]
     #[inline(always)]
     pub const fn vbus_sel(&self) -> super::vals::Reg3p0SetVbusSel {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Reg3p0SetVbusSel::from_bits(val as u8)
     }
-    #[doc = "Select input voltage source for LDO_3P0 from either USB_OTG1_VBUS or USB_OTG2_VBUS"]
+    #[doc = "Select input voltage source for LDO_3P0 from either USB_OTG1_VBUS or USB_OTG2_VBUS."]
     #[inline(always)]
     pub const fn set_vbus_sel(&mut self, val: super::vals::Reg3p0SetVbusSel) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "Control bits to adjust the regulator output voltage"]
+    #[doc = "Control bits to adjust the regulator output voltage."]
     #[must_use]
     #[inline(always)]
     pub const fn output_trg(&self) -> super::vals::Reg3p0SetOutputTrg {
         let val = (self.0 >> 8usize) & 0x1f;
         super::vals::Reg3p0SetOutputTrg::from_bits(val as u8)
     }
-    #[doc = "Control bits to adjust the regulator output voltage"]
+    #[doc = "Control bits to adjust the regulator output voltage."]
     #[inline(always)]
     pub const fn set_output_trg(&mut self, val: super::vals::Reg3p0SetOutputTrg) {
         self.0 = (self.0 & !(0x1f << 8usize)) | (((val.to_bits() as u32) & 0x1f) << 8usize);
@@ -4545,14 +4545,14 @@ impl Reg3p0Set {
     pub const fn set_bo_vdd3p0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target"]
+    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target."]
     #[must_use]
     #[inline(always)]
     pub const fn ok_vdd3p0(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target"]
+    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target."]
     #[inline(always)]
     pub const fn set_ok_vdd3p0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
@@ -4595,19 +4595,19 @@ impl defmt::Format for Reg3p0Set {
         )
     }
 }
-#[doc = "Regulator 3P0 Register"]
+#[doc = "Regulator 3P0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Reg3p0Tog(pub u32);
 impl Reg3p0Tog {
-    #[doc = "Control bit to enable the regulator output to be set by the programmed target voltage setting and internal bandgap reference"]
+    #[doc = "Control bit to enable the regulator output to be set by the programmed target voltage setting and internal bandgap reference."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_linreg(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Control bit to enable the regulator output to be set by the programmed target voltage setting and internal bandgap reference"]
+    #[doc = "Control bit to enable the regulator output to be set by the programmed target voltage setting and internal bandgap reference."]
     #[inline(always)]
     pub const fn set_enable_linreg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -4636,38 +4636,38 @@ impl Reg3p0Tog {
     pub const fn set_enable_ilimit(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps"]
+    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps."]
     #[must_use]
     #[inline(always)]
     pub const fn bo_offset(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x07;
         val as u8
     }
-    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps"]
+    #[doc = "Control bits to adjust the regulator brownout offset voltage in 25mV steps."]
     #[inline(always)]
     pub const fn set_bo_offset(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 4usize)) | (((val as u32) & 0x07) << 4usize);
     }
-    #[doc = "Select input voltage source for LDO_3P0 from either USB_OTG1_VBUS or USB_OTG2_VBUS"]
+    #[doc = "Select input voltage source for LDO_3P0 from either USB_OTG1_VBUS or USB_OTG2_VBUS."]
     #[must_use]
     #[inline(always)]
     pub const fn vbus_sel(&self) -> super::vals::Reg3p0TogVbusSel {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Reg3p0TogVbusSel::from_bits(val as u8)
     }
-    #[doc = "Select input voltage source for LDO_3P0 from either USB_OTG1_VBUS or USB_OTG2_VBUS"]
+    #[doc = "Select input voltage source for LDO_3P0 from either USB_OTG1_VBUS or USB_OTG2_VBUS."]
     #[inline(always)]
     pub const fn set_vbus_sel(&mut self, val: super::vals::Reg3p0TogVbusSel) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "Control bits to adjust the regulator output voltage"]
+    #[doc = "Control bits to adjust the regulator output voltage."]
     #[must_use]
     #[inline(always)]
     pub const fn output_trg(&self) -> super::vals::Reg3p0TogOutputTrg {
         let val = (self.0 >> 8usize) & 0x1f;
         super::vals::Reg3p0TogOutputTrg::from_bits(val as u8)
     }
-    #[doc = "Control bits to adjust the regulator output voltage"]
+    #[doc = "Control bits to adjust the regulator output voltage."]
     #[inline(always)]
     pub const fn set_output_trg(&mut self, val: super::vals::Reg3p0TogOutputTrg) {
         self.0 = (self.0 & !(0x1f << 8usize)) | (((val.to_bits() as u32) & 0x1f) << 8usize);
@@ -4684,14 +4684,14 @@ impl Reg3p0Tog {
     pub const fn set_bo_vdd3p0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target"]
+    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target."]
     #[must_use]
     #[inline(always)]
     pub const fn ok_vdd3p0(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target"]
+    #[doc = "Status bit that signals when the regulator output is ok. 1 = regulator output > brownout target."]
     #[inline(always)]
     pub const fn set_ok_vdd3p0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
@@ -4734,19 +4734,19 @@ impl defmt::Format for Reg3p0Tog {
         )
     }
 }
-#[doc = "Digital Regulator Core Register"]
+#[doc = "Digital Regulator Core Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct RegCore(pub u32);
 impl RegCore {
-    #[doc = "This field defines the target voltage for the Arm core power domain"]
+    #[doc = "This field defines the target voltage for the Arm core power domain."]
     #[must_use]
     #[inline(always)]
     pub const fn reg0_targ(&self) -> super::vals::RegCoreReg0Targ {
         let val = (self.0 >> 0usize) & 0x1f;
         super::vals::RegCoreReg0Targ::from_bits(val as u8)
     }
-    #[doc = "This field defines the target voltage for the Arm core power domain"]
+    #[doc = "This field defines the target voltage for the Arm core power domain."]
     #[inline(always)]
     pub const fn set_reg0_targ(&mut self, val: super::vals::RegCoreReg0Targ) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val.to_bits() as u32) & 0x1f) << 0usize);
@@ -4787,14 +4787,14 @@ impl RegCore {
     pub const fn set_reg1_adj(&mut self, val: super::vals::RegCoreReg1Adj) {
         self.0 = (self.0 & !(0x0f << 14usize)) | (((val.to_bits() as u32) & 0x0f) << 14usize);
     }
-    #[doc = "This field defines the target voltage for the SOC power domain"]
+    #[doc = "This field defines the target voltage for the SOC power domain."]
     #[must_use]
     #[inline(always)]
     pub const fn reg2_targ(&self) -> super::vals::RegCoreReg2Targ {
         let val = (self.0 >> 18usize) & 0x1f;
         super::vals::RegCoreReg2Targ::from_bits(val as u8)
     }
-    #[doc = "This field defines the target voltage for the SOC power domain"]
+    #[doc = "This field defines the target voltage for the SOC power domain."]
     #[inline(always)]
     pub const fn set_reg2_targ(&mut self, val: super::vals::RegCoreReg2Targ) {
         self.0 = (self.0 & !(0x1f << 18usize)) | (((val.to_bits() as u32) & 0x1f) << 18usize);
@@ -4823,14 +4823,14 @@ impl RegCore {
     pub const fn set_ramp_rate(&mut self, val: super::vals::RegCoreRampRate) {
         self.0 = (self.0 & !(0x03 << 27usize)) | (((val.to_bits() as u32) & 0x03) << 27usize);
     }
-    #[doc = "If set, increases the gate drive on power gating FETs to reduce leakage in the off state"]
+    #[doc = "If set, increases the gate drive on power gating FETs to reduce leakage in the off state."]
     #[must_use]
     #[inline(always)]
     pub const fn fet_odrive(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "If set, increases the gate drive on power gating FETs to reduce leakage in the off state"]
+    #[doc = "If set, increases the gate drive on power gating FETs to reduce leakage in the off state."]
     #[inline(always)]
     pub const fn set_fet_odrive(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
@@ -4873,19 +4873,19 @@ impl defmt::Format for RegCore {
         )
     }
 }
-#[doc = "Digital Regulator Core Register"]
+#[doc = "Digital Regulator Core Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct RegCoreClr(pub u32);
 impl RegCoreClr {
-    #[doc = "This field defines the target voltage for the Arm core power domain"]
+    #[doc = "This field defines the target voltage for the Arm core power domain."]
     #[must_use]
     #[inline(always)]
     pub const fn reg0_targ(&self) -> super::vals::RegCoreClrReg0Targ {
         let val = (self.0 >> 0usize) & 0x1f;
         super::vals::RegCoreClrReg0Targ::from_bits(val as u8)
     }
-    #[doc = "This field defines the target voltage for the Arm core power domain"]
+    #[doc = "This field defines the target voltage for the Arm core power domain."]
     #[inline(always)]
     pub const fn set_reg0_targ(&mut self, val: super::vals::RegCoreClrReg0Targ) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val.to_bits() as u32) & 0x1f) << 0usize);
@@ -4926,14 +4926,14 @@ impl RegCoreClr {
     pub const fn set_reg1_adj(&mut self, val: super::vals::RegCoreClrReg1Adj) {
         self.0 = (self.0 & !(0x0f << 14usize)) | (((val.to_bits() as u32) & 0x0f) << 14usize);
     }
-    #[doc = "This field defines the target voltage for the SOC power domain"]
+    #[doc = "This field defines the target voltage for the SOC power domain."]
     #[must_use]
     #[inline(always)]
     pub const fn reg2_targ(&self) -> super::vals::RegCoreClrReg2Targ {
         let val = (self.0 >> 18usize) & 0x1f;
         super::vals::RegCoreClrReg2Targ::from_bits(val as u8)
     }
-    #[doc = "This field defines the target voltage for the SOC power domain"]
+    #[doc = "This field defines the target voltage for the SOC power domain."]
     #[inline(always)]
     pub const fn set_reg2_targ(&mut self, val: super::vals::RegCoreClrReg2Targ) {
         self.0 = (self.0 & !(0x1f << 18usize)) | (((val.to_bits() as u32) & 0x1f) << 18usize);
@@ -4962,14 +4962,14 @@ impl RegCoreClr {
     pub const fn set_ramp_rate(&mut self, val: super::vals::RegCoreClrRampRate) {
         self.0 = (self.0 & !(0x03 << 27usize)) | (((val.to_bits() as u32) & 0x03) << 27usize);
     }
-    #[doc = "If set, increases the gate drive on power gating FETs to reduce leakage in the off state"]
+    #[doc = "If set, increases the gate drive on power gating FETs to reduce leakage in the off state."]
     #[must_use]
     #[inline(always)]
     pub const fn fet_odrive(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "If set, increases the gate drive on power gating FETs to reduce leakage in the off state"]
+    #[doc = "If set, increases the gate drive on power gating FETs to reduce leakage in the off state."]
     #[inline(always)]
     pub const fn set_fet_odrive(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
@@ -5012,19 +5012,19 @@ impl defmt::Format for RegCoreClr {
         )
     }
 }
-#[doc = "Digital Regulator Core Register"]
+#[doc = "Digital Regulator Core Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct RegCoreSet(pub u32);
 impl RegCoreSet {
-    #[doc = "This field defines the target voltage for the Arm core power domain"]
+    #[doc = "This field defines the target voltage for the Arm core power domain."]
     #[must_use]
     #[inline(always)]
     pub const fn reg0_targ(&self) -> super::vals::RegCoreSetReg0Targ {
         let val = (self.0 >> 0usize) & 0x1f;
         super::vals::RegCoreSetReg0Targ::from_bits(val as u8)
     }
-    #[doc = "This field defines the target voltage for the Arm core power domain"]
+    #[doc = "This field defines the target voltage for the Arm core power domain."]
     #[inline(always)]
     pub const fn set_reg0_targ(&mut self, val: super::vals::RegCoreSetReg0Targ) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val.to_bits() as u32) & 0x1f) << 0usize);
@@ -5065,14 +5065,14 @@ impl RegCoreSet {
     pub const fn set_reg1_adj(&mut self, val: super::vals::RegCoreSetReg1Adj) {
         self.0 = (self.0 & !(0x0f << 14usize)) | (((val.to_bits() as u32) & 0x0f) << 14usize);
     }
-    #[doc = "This field defines the target voltage for the SOC power domain"]
+    #[doc = "This field defines the target voltage for the SOC power domain."]
     #[must_use]
     #[inline(always)]
     pub const fn reg2_targ(&self) -> super::vals::RegCoreSetReg2Targ {
         let val = (self.0 >> 18usize) & 0x1f;
         super::vals::RegCoreSetReg2Targ::from_bits(val as u8)
     }
-    #[doc = "This field defines the target voltage for the SOC power domain"]
+    #[doc = "This field defines the target voltage for the SOC power domain."]
     #[inline(always)]
     pub const fn set_reg2_targ(&mut self, val: super::vals::RegCoreSetReg2Targ) {
         self.0 = (self.0 & !(0x1f << 18usize)) | (((val.to_bits() as u32) & 0x1f) << 18usize);
@@ -5101,14 +5101,14 @@ impl RegCoreSet {
     pub const fn set_ramp_rate(&mut self, val: super::vals::RegCoreSetRampRate) {
         self.0 = (self.0 & !(0x03 << 27usize)) | (((val.to_bits() as u32) & 0x03) << 27usize);
     }
-    #[doc = "If set, increases the gate drive on power gating FETs to reduce leakage in the off state"]
+    #[doc = "If set, increases the gate drive on power gating FETs to reduce leakage in the off state."]
     #[must_use]
     #[inline(always)]
     pub const fn fet_odrive(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "If set, increases the gate drive on power gating FETs to reduce leakage in the off state"]
+    #[doc = "If set, increases the gate drive on power gating FETs to reduce leakage in the off state."]
     #[inline(always)]
     pub const fn set_fet_odrive(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
@@ -5151,19 +5151,19 @@ impl defmt::Format for RegCoreSet {
         )
     }
 }
-#[doc = "Digital Regulator Core Register"]
+#[doc = "Digital Regulator Core Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct RegCoreTog(pub u32);
 impl RegCoreTog {
-    #[doc = "This field defines the target voltage for the Arm core power domain"]
+    #[doc = "This field defines the target voltage for the Arm core power domain."]
     #[must_use]
     #[inline(always)]
     pub const fn reg0_targ(&self) -> super::vals::RegCoreTogReg0Targ {
         let val = (self.0 >> 0usize) & 0x1f;
         super::vals::RegCoreTogReg0Targ::from_bits(val as u8)
     }
-    #[doc = "This field defines the target voltage for the Arm core power domain"]
+    #[doc = "This field defines the target voltage for the Arm core power domain."]
     #[inline(always)]
     pub const fn set_reg0_targ(&mut self, val: super::vals::RegCoreTogReg0Targ) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val.to_bits() as u32) & 0x1f) << 0usize);
@@ -5204,14 +5204,14 @@ impl RegCoreTog {
     pub const fn set_reg1_adj(&mut self, val: super::vals::RegCoreTogReg1Adj) {
         self.0 = (self.0 & !(0x0f << 14usize)) | (((val.to_bits() as u32) & 0x0f) << 14usize);
     }
-    #[doc = "This field defines the target voltage for the SOC power domain"]
+    #[doc = "This field defines the target voltage for the SOC power domain."]
     #[must_use]
     #[inline(always)]
     pub const fn reg2_targ(&self) -> super::vals::RegCoreTogReg2Targ {
         let val = (self.0 >> 18usize) & 0x1f;
         super::vals::RegCoreTogReg2Targ::from_bits(val as u8)
     }
-    #[doc = "This field defines the target voltage for the SOC power domain"]
+    #[doc = "This field defines the target voltage for the SOC power domain."]
     #[inline(always)]
     pub const fn set_reg2_targ(&mut self, val: super::vals::RegCoreTogReg2Targ) {
         self.0 = (self.0 & !(0x1f << 18usize)) | (((val.to_bits() as u32) & 0x1f) << 18usize);
@@ -5240,14 +5240,14 @@ impl RegCoreTog {
     pub const fn set_ramp_rate(&mut self, val: super::vals::RegCoreTogRampRate) {
         self.0 = (self.0 & !(0x03 << 27usize)) | (((val.to_bits() as u32) & 0x03) << 27usize);
     }
-    #[doc = "If set, increases the gate drive on power gating FETs to reduce leakage in the off state"]
+    #[doc = "If set, increases the gate drive on power gating FETs to reduce leakage in the off state."]
     #[must_use]
     #[inline(always)]
     pub const fn fet_odrive(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "If set, increases the gate drive on power gating FETs to reduce leakage in the off state"]
+    #[doc = "If set, increases the gate drive on power gating FETs to reduce leakage in the off state."]
     #[inline(always)]
     pub const fn set_fet_odrive(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);

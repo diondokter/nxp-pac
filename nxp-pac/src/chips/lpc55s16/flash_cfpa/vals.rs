@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DcfgCcSocuPinDbgen {
-    #[doc = "Use DAP to enable"]
+    #[doc = "Use DAP to enable."]
     ENABLE = 0x0,
-    #[doc = "Fixed state"]
+    #[doc = "Fixed state."]
     DISABLE = 0x01,
 }
 impl DcfgCcSocuPinDbgen {
@@ -33,9 +33,9 @@ impl From<DcfgCcSocuPinDbgen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DcfgCcSocuPinFaMeCmdEn {
-    #[doc = "Use DAP to enable"]
+    #[doc = "Use DAP to enable."]
     ENABLE = 0x0,
-    #[doc = "Fixed state"]
+    #[doc = "Fixed state."]
     DISABLE = 0x01,
 }
 impl DcfgCcSocuPinFaMeCmdEn {
@@ -64,9 +64,9 @@ impl From<DcfgCcSocuPinFaMeCmdEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DcfgCcSocuPinIspCmdEn {
-    #[doc = "Use DAP to enable"]
+    #[doc = "Use DAP to enable."]
     ENABLE = 0x0,
-    #[doc = "Fixed state"]
+    #[doc = "Fixed state."]
     DISABLE = 0x01,
 }
 impl DcfgCcSocuPinIspCmdEn {
@@ -95,9 +95,9 @@ impl From<DcfgCcSocuPinIspCmdEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DcfgCcSocuPinNiden {
-    #[doc = "Use DAP to enable"]
+    #[doc = "Use DAP to enable."]
     ENABLE = 0x0,
-    #[doc = "Fixed state"]
+    #[doc = "Fixed state."]
     DISABLE = 0x01,
 }
 impl DcfgCcSocuPinNiden {
@@ -126,9 +126,9 @@ impl From<DcfgCcSocuPinNiden> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DcfgCcSocuPinSpiden {
-    #[doc = "Use DAP to enable"]
+    #[doc = "Use DAP to enable."]
     ENABLE = 0x0,
-    #[doc = "Fixed state"]
+    #[doc = "Fixed state."]
     DISABLE = 0x01,
 }
 impl DcfgCcSocuPinSpiden {
@@ -157,9 +157,9 @@ impl From<DcfgCcSocuPinSpiden> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DcfgCcSocuPinSpniden {
-    #[doc = "Use DAP to enable"]
+    #[doc = "Use DAP to enable."]
     ENABLE = 0x0,
-    #[doc = "Fixed state"]
+    #[doc = "Fixed state."]
     DISABLE = 0x01,
 }
 impl DcfgCcSocuPinSpniden {
@@ -188,9 +188,9 @@ impl From<DcfgCcSocuPinSpniden> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DcfgCcSocuPinTapen {
-    #[doc = "Use DAP to enable"]
+    #[doc = "Use DAP to enable."]
     ENABLE = 0x0,
-    #[doc = "Fixed state"]
+    #[doc = "Fixed state."]
     DISABLE = 0x01,
 }
 impl DcfgCcSocuPinTapen {

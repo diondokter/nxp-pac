@@ -1,4 +1,4 @@
-#[doc = "Byte pin registers for all port GPIO pins"]
+#[doc = "Byte pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct B00(pub u8);
@@ -33,7 +33,7 @@ impl defmt::Format for B00 {
         defmt::write!(f, "B00 {{ pbyte: {=bool:?} }}", self.pbyte())
     }
 }
-#[doc = "Byte pin registers for all port GPIO pins"]
+#[doc = "Byte pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct B01(pub u8);
@@ -68,7 +68,7 @@ impl defmt::Format for B01 {
         defmt::write!(f, "B01 {{ pbyte: {=bool:?} }}", self.pbyte())
     }
 }
-#[doc = "Byte pin registers for all port GPIO pins"]
+#[doc = "Byte pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct B010(pub u8);
@@ -105,7 +105,7 @@ impl defmt::Format for B010 {
         defmt::write!(f, "B010 {{ pbyte: {=bool:?} }}", self.pbyte())
     }
 }
-#[doc = "Byte pin registers for all port GPIO pins"]
+#[doc = "Byte pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct B011(pub u8);
@@ -142,7 +142,7 @@ impl defmt::Format for B011 {
         defmt::write!(f, "B011 {{ pbyte: {=bool:?} }}", self.pbyte())
     }
 }
-#[doc = "Byte pin registers for all port GPIO pins"]
+#[doc = "Byte pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct B012(pub u8);
@@ -179,7 +179,7 @@ impl defmt::Format for B012 {
         defmt::write!(f, "B012 {{ pbyte: {=bool:?} }}", self.pbyte())
     }
 }
-#[doc = "Byte pin registers for all port GPIO pins"]
+#[doc = "Byte pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct B013(pub u8);
@@ -216,7 +216,7 @@ impl defmt::Format for B013 {
         defmt::write!(f, "B013 {{ pbyte: {=bool:?} }}", self.pbyte())
     }
 }
-#[doc = "Byte pin registers for all port GPIO pins"]
+#[doc = "Byte pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct B014(pub u8);
@@ -253,7 +253,7 @@ impl defmt::Format for B014 {
         defmt::write!(f, "B014 {{ pbyte: {=bool:?} }}", self.pbyte())
     }
 }
-#[doc = "Byte pin registers for all port GPIO pins"]
+#[doc = "Byte pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct B015(pub u8);
@@ -290,7 +290,7 @@ impl defmt::Format for B015 {
         defmt::write!(f, "B015 {{ pbyte: {=bool:?} }}", self.pbyte())
     }
 }
-#[doc = "Byte pin registers for all port GPIO pins"]
+#[doc = "Byte pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct B016(pub u8);
@@ -327,7 +327,7 @@ impl defmt::Format for B016 {
         defmt::write!(f, "B016 {{ pbyte: {=bool:?} }}", self.pbyte())
     }
 }
-#[doc = "Byte pin registers for all port GPIO pins"]
+#[doc = "Byte pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct B017(pub u8);
@@ -364,7 +364,7 @@ impl defmt::Format for B017 {
         defmt::write!(f, "B017 {{ pbyte: {=bool:?} }}", self.pbyte())
     }
 }
-#[doc = "Byte pin registers for all port GPIO pins"]
+#[doc = "Byte pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct B018(pub u8);
@@ -401,7 +401,7 @@ impl defmt::Format for B018 {
         defmt::write!(f, "B018 {{ pbyte: {=bool:?} }}", self.pbyte())
     }
 }
-#[doc = "Byte pin registers for all port GPIO pins"]
+#[doc = "Byte pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct B019(pub u8);
@@ -438,7 +438,7 @@ impl defmt::Format for B019 {
         defmt::write!(f, "B019 {{ pbyte: {=bool:?} }}", self.pbyte())
     }
 }
-#[doc = "Byte pin registers for all port GPIO pins"]
+#[doc = "Byte pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct B02(pub u8);
@@ -473,7 +473,7 @@ impl defmt::Format for B02 {
         defmt::write!(f, "B02 {{ pbyte: {=bool:?} }}", self.pbyte())
     }
 }
-#[doc = "Byte pin registers for all port GPIO pins"]
+#[doc = "Byte pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct B020(pub u8);
@@ -510,7 +510,7 @@ impl defmt::Format for B020 {
         defmt::write!(f, "B020 {{ pbyte: {=bool:?} }}", self.pbyte())
     }
 }
-#[doc = "Byte pin registers for all port GPIO pins"]
+#[doc = "Byte pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct B021(pub u8);
@@ -547,7 +547,7 @@ impl defmt::Format for B021 {
         defmt::write!(f, "B021 {{ pbyte: {=bool:?} }}", self.pbyte())
     }
 }
-#[doc = "Byte pin registers for all port GPIO pins"]
+#[doc = "Byte pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct B022(pub u8);
@@ -584,7 +584,7 @@ impl defmt::Format for B022 {
         defmt::write!(f, "B022 {{ pbyte: {=bool:?} }}", self.pbyte())
     }
 }
-#[doc = "Byte pin registers for all port GPIO pins"]
+#[doc = "Byte pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct B023(pub u8);
@@ -621,7 +621,7 @@ impl defmt::Format for B023 {
         defmt::write!(f, "B023 {{ pbyte: {=bool:?} }}", self.pbyte())
     }
 }
-#[doc = "Byte pin registers for all port GPIO pins"]
+#[doc = "Byte pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct B024(pub u8);
@@ -658,7 +658,7 @@ impl defmt::Format for B024 {
         defmt::write!(f, "B024 {{ pbyte: {=bool:?} }}", self.pbyte())
     }
 }
-#[doc = "Byte pin registers for all port GPIO pins"]
+#[doc = "Byte pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct B025(pub u8);
@@ -695,7 +695,7 @@ impl defmt::Format for B025 {
         defmt::write!(f, "B025 {{ pbyte: {=bool:?} }}", self.pbyte())
     }
 }
-#[doc = "Byte pin registers for all port GPIO pins"]
+#[doc = "Byte pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct B026(pub u8);
@@ -732,7 +732,7 @@ impl defmt::Format for B026 {
         defmt::write!(f, "B026 {{ pbyte: {=bool:?} }}", self.pbyte())
     }
 }
-#[doc = "Byte pin registers for all port GPIO pins"]
+#[doc = "Byte pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct B027(pub u8);
@@ -769,7 +769,7 @@ impl defmt::Format for B027 {
         defmt::write!(f, "B027 {{ pbyte: {=bool:?} }}", self.pbyte())
     }
 }
-#[doc = "Byte pin registers for all port GPIO pins"]
+#[doc = "Byte pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct B028(pub u8);
@@ -806,7 +806,7 @@ impl defmt::Format for B028 {
         defmt::write!(f, "B028 {{ pbyte: {=bool:?} }}", self.pbyte())
     }
 }
-#[doc = "Byte pin registers for all port GPIO pins"]
+#[doc = "Byte pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct B029(pub u8);
@@ -843,7 +843,7 @@ impl defmt::Format for B029 {
         defmt::write!(f, "B029 {{ pbyte: {=bool:?} }}", self.pbyte())
     }
 }
-#[doc = "Byte pin registers for all port GPIO pins"]
+#[doc = "Byte pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct B03(pub u8);
@@ -878,7 +878,7 @@ impl defmt::Format for B03 {
         defmt::write!(f, "B03 {{ pbyte: {=bool:?} }}", self.pbyte())
     }
 }
-#[doc = "Byte pin registers for all port GPIO pins"]
+#[doc = "Byte pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct B030(pub u8);
@@ -915,7 +915,7 @@ impl defmt::Format for B030 {
         defmt::write!(f, "B030 {{ pbyte: {=bool:?} }}", self.pbyte())
     }
 }
-#[doc = "Byte pin registers for all port GPIO pins"]
+#[doc = "Byte pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct B031(pub u8);
@@ -952,7 +952,7 @@ impl defmt::Format for B031 {
         defmt::write!(f, "B031 {{ pbyte: {=bool:?} }}", self.pbyte())
     }
 }
-#[doc = "Byte pin registers for all port GPIO pins"]
+#[doc = "Byte pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct B04(pub u8);
@@ -987,7 +987,7 @@ impl defmt::Format for B04 {
         defmt::write!(f, "B04 {{ pbyte: {=bool:?} }}", self.pbyte())
     }
 }
-#[doc = "Byte pin registers for all port GPIO pins"]
+#[doc = "Byte pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct B05(pub u8);
@@ -1022,7 +1022,7 @@ impl defmt::Format for B05 {
         defmt::write!(f, "B05 {{ pbyte: {=bool:?} }}", self.pbyte())
     }
 }
-#[doc = "Byte pin registers for all port GPIO pins"]
+#[doc = "Byte pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct B06(pub u8);
@@ -1057,7 +1057,7 @@ impl defmt::Format for B06 {
         defmt::write!(f, "B06 {{ pbyte: {=bool:?} }}", self.pbyte())
     }
 }
-#[doc = "Byte pin registers for all port GPIO pins"]
+#[doc = "Byte pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct B07(pub u8);
@@ -1092,7 +1092,7 @@ impl defmt::Format for B07 {
         defmt::write!(f, "B07 {{ pbyte: {=bool:?} }}", self.pbyte())
     }
 }
-#[doc = "Byte pin registers for all port GPIO pins"]
+#[doc = "Byte pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct B08(pub u8);
@@ -1127,7 +1127,7 @@ impl defmt::Format for B08 {
         defmt::write!(f, "B08 {{ pbyte: {=bool:?} }}", self.pbyte())
     }
 }
-#[doc = "Byte pin registers for all port GPIO pins"]
+#[doc = "Byte pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct B09(pub u8);
@@ -1162,7 +1162,7 @@ impl defmt::Format for B09 {
         defmt::write!(f, "B09 {{ pbyte: {=bool:?} }}", self.pbyte())
     }
 }
-#[doc = "Clear port for all port GPIO pins"]
+#[doc = "Clear port for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Clr0(pub u32);
@@ -1197,7 +1197,7 @@ impl defmt::Format for Clr0 {
         defmt::write!(f, "Clr0 {{ clrp: {=u32:?} }}", self.clrp())
     }
 }
-#[doc = "Direction registers for all port GPIO pins"]
+#[doc = "Direction registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dir0(pub u32);
@@ -1232,7 +1232,7 @@ impl defmt::Format for Dir0 {
         defmt::write!(f, "Dir0 {{ dirp: {=u32:?} }}", self.dirp())
     }
 }
-#[doc = "Clear pin direction bits for port"]
+#[doc = "Clear pin direction bits for port."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dirclr0(pub u32);
@@ -1269,7 +1269,7 @@ impl defmt::Format for Dirclr0 {
         defmt::write!(f, "Dirclr0 {{ dirclrp: {=u32:?} }}", self.dirclrp())
     }
 }
-#[doc = "Toggle pin direction bits for port"]
+#[doc = "Toggle pin direction bits for port."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dirnot0(pub u32);
@@ -1306,7 +1306,7 @@ impl defmt::Format for Dirnot0 {
         defmt::write!(f, "Dirnot0 {{ dirnotp: {=u32:?} }}", self.dirnotp())
     }
 }
-#[doc = "Set pin direction bits for port"]
+#[doc = "Set pin direction bits for port."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dirset0(pub u32);
@@ -1343,7 +1343,7 @@ impl defmt::Format for Dirset0 {
         defmt::write!(f, "Dirset0 {{ dirsetp: {=u32:?} }}", self.dirsetp())
     }
 }
-#[doc = "Mask register for all port GPIO pins"]
+#[doc = "Mask register for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mask0(pub u32);
@@ -1380,7 +1380,7 @@ impl defmt::Format for Mask0 {
         defmt::write!(f, "Mask0 {{ maskp: {=u32:?} }}", self.maskp())
     }
 }
-#[doc = "Masked port register for all port GPIO pins"]
+#[doc = "Masked port register for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mpin0(pub u32);
@@ -1417,7 +1417,7 @@ impl defmt::Format for Mpin0 {
         defmt::write!(f, "Mpin0 {{ mportp: {=u32:?} }}", self.mportp())
     }
 }
-#[doc = "Toggle port for all port GPIO pins"]
+#[doc = "Toggle port for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Not0(pub u32);
@@ -1452,7 +1452,7 @@ impl defmt::Format for Not0 {
         defmt::write!(f, "Not0 {{ notp: {=u32:?} }}", self.notp())
     }
 }
-#[doc = "Port pin register for all port GPIO pins"]
+#[doc = "Port pin register for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pin0(pub u32);
@@ -1487,7 +1487,7 @@ impl defmt::Format for Pin0 {
         defmt::write!(f, "Pin0 {{ port: {=u32:?} }}", self.port())
     }
 }
-#[doc = "Write: Set register for port. Read: output bits for port"]
+#[doc = "Write: Set register for port. Read: output bits for port."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Set0(pub u32);
@@ -1522,7 +1522,7 @@ impl defmt::Format for Set0 {
         defmt::write!(f, "Set0 {{ setp: {=u32:?} }}", self.setp())
     }
 }
-#[doc = "Word pin registers for all port GPIO pins"]
+#[doc = "Word pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct W00(pub u32);
@@ -1557,7 +1557,7 @@ impl defmt::Format for W00 {
         defmt::write!(f, "W00 {{ pword: {=u32:?} }}", self.pword())
     }
 }
-#[doc = "Word pin registers for all port GPIO pins"]
+#[doc = "Word pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct W01(pub u32);
@@ -1592,7 +1592,7 @@ impl defmt::Format for W01 {
         defmt::write!(f, "W01 {{ pword: {=u32:?} }}", self.pword())
     }
 }
-#[doc = "Word pin registers for all port GPIO pins"]
+#[doc = "Word pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct W010(pub u32);
@@ -1629,7 +1629,7 @@ impl defmt::Format for W010 {
         defmt::write!(f, "W010 {{ pword: {=u32:?} }}", self.pword())
     }
 }
-#[doc = "Word pin registers for all port GPIO pins"]
+#[doc = "Word pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct W011(pub u32);
@@ -1666,7 +1666,7 @@ impl defmt::Format for W011 {
         defmt::write!(f, "W011 {{ pword: {=u32:?} }}", self.pword())
     }
 }
-#[doc = "Word pin registers for all port GPIO pins"]
+#[doc = "Word pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct W012(pub u32);
@@ -1703,7 +1703,7 @@ impl defmt::Format for W012 {
         defmt::write!(f, "W012 {{ pword: {=u32:?} }}", self.pword())
     }
 }
-#[doc = "Word pin registers for all port GPIO pins"]
+#[doc = "Word pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct W013(pub u32);
@@ -1740,7 +1740,7 @@ impl defmt::Format for W013 {
         defmt::write!(f, "W013 {{ pword: {=u32:?} }}", self.pword())
     }
 }
-#[doc = "Word pin registers for all port GPIO pins"]
+#[doc = "Word pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct W014(pub u32);
@@ -1777,7 +1777,7 @@ impl defmt::Format for W014 {
         defmt::write!(f, "W014 {{ pword: {=u32:?} }}", self.pword())
     }
 }
-#[doc = "Word pin registers for all port GPIO pins"]
+#[doc = "Word pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct W015(pub u32);
@@ -1814,7 +1814,7 @@ impl defmt::Format for W015 {
         defmt::write!(f, "W015 {{ pword: {=u32:?} }}", self.pword())
     }
 }
-#[doc = "Word pin registers for all port GPIO pins"]
+#[doc = "Word pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct W016(pub u32);
@@ -1851,7 +1851,7 @@ impl defmt::Format for W016 {
         defmt::write!(f, "W016 {{ pword: {=u32:?} }}", self.pword())
     }
 }
-#[doc = "Word pin registers for all port GPIO pins"]
+#[doc = "Word pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct W017(pub u32);
@@ -1888,7 +1888,7 @@ impl defmt::Format for W017 {
         defmt::write!(f, "W017 {{ pword: {=u32:?} }}", self.pword())
     }
 }
-#[doc = "Word pin registers for all port GPIO pins"]
+#[doc = "Word pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct W018(pub u32);
@@ -1925,7 +1925,7 @@ impl defmt::Format for W018 {
         defmt::write!(f, "W018 {{ pword: {=u32:?} }}", self.pword())
     }
 }
-#[doc = "Word pin registers for all port GPIO pins"]
+#[doc = "Word pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct W019(pub u32);
@@ -1962,7 +1962,7 @@ impl defmt::Format for W019 {
         defmt::write!(f, "W019 {{ pword: {=u32:?} }}", self.pword())
     }
 }
-#[doc = "Word pin registers for all port GPIO pins"]
+#[doc = "Word pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct W02(pub u32);
@@ -1997,7 +1997,7 @@ impl defmt::Format for W02 {
         defmt::write!(f, "W02 {{ pword: {=u32:?} }}", self.pword())
     }
 }
-#[doc = "Word pin registers for all port GPIO pins"]
+#[doc = "Word pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct W020(pub u32);
@@ -2034,7 +2034,7 @@ impl defmt::Format for W020 {
         defmt::write!(f, "W020 {{ pword: {=u32:?} }}", self.pword())
     }
 }
-#[doc = "Word pin registers for all port GPIO pins"]
+#[doc = "Word pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct W021(pub u32);
@@ -2071,7 +2071,7 @@ impl defmt::Format for W021 {
         defmt::write!(f, "W021 {{ pword: {=u32:?} }}", self.pword())
     }
 }
-#[doc = "Word pin registers for all port GPIO pins"]
+#[doc = "Word pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct W022(pub u32);
@@ -2108,7 +2108,7 @@ impl defmt::Format for W022 {
         defmt::write!(f, "W022 {{ pword: {=u32:?} }}", self.pword())
     }
 }
-#[doc = "Word pin registers for all port GPIO pins"]
+#[doc = "Word pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct W023(pub u32);
@@ -2145,7 +2145,7 @@ impl defmt::Format for W023 {
         defmt::write!(f, "W023 {{ pword: {=u32:?} }}", self.pword())
     }
 }
-#[doc = "Word pin registers for all port GPIO pins"]
+#[doc = "Word pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct W024(pub u32);
@@ -2182,7 +2182,7 @@ impl defmt::Format for W024 {
         defmt::write!(f, "W024 {{ pword: {=u32:?} }}", self.pword())
     }
 }
-#[doc = "Word pin registers for all port GPIO pins"]
+#[doc = "Word pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct W025(pub u32);
@@ -2219,7 +2219,7 @@ impl defmt::Format for W025 {
         defmt::write!(f, "W025 {{ pword: {=u32:?} }}", self.pword())
     }
 }
-#[doc = "Word pin registers for all port GPIO pins"]
+#[doc = "Word pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct W026(pub u32);
@@ -2256,7 +2256,7 @@ impl defmt::Format for W026 {
         defmt::write!(f, "W026 {{ pword: {=u32:?} }}", self.pword())
     }
 }
-#[doc = "Word pin registers for all port GPIO pins"]
+#[doc = "Word pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct W027(pub u32);
@@ -2293,7 +2293,7 @@ impl defmt::Format for W027 {
         defmt::write!(f, "W027 {{ pword: {=u32:?} }}", self.pword())
     }
 }
-#[doc = "Word pin registers for all port GPIO pins"]
+#[doc = "Word pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct W028(pub u32);
@@ -2330,7 +2330,7 @@ impl defmt::Format for W028 {
         defmt::write!(f, "W028 {{ pword: {=u32:?} }}", self.pword())
     }
 }
-#[doc = "Word pin registers for all port GPIO pins"]
+#[doc = "Word pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct W029(pub u32);
@@ -2367,7 +2367,7 @@ impl defmt::Format for W029 {
         defmt::write!(f, "W029 {{ pword: {=u32:?} }}", self.pword())
     }
 }
-#[doc = "Word pin registers for all port GPIO pins"]
+#[doc = "Word pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct W03(pub u32);
@@ -2402,7 +2402,7 @@ impl defmt::Format for W03 {
         defmt::write!(f, "W03 {{ pword: {=u32:?} }}", self.pword())
     }
 }
-#[doc = "Word pin registers for all port GPIO pins"]
+#[doc = "Word pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct W030(pub u32);
@@ -2439,7 +2439,7 @@ impl defmt::Format for W030 {
         defmt::write!(f, "W030 {{ pword: {=u32:?} }}", self.pword())
     }
 }
-#[doc = "Word pin registers for all port GPIO pins"]
+#[doc = "Word pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct W031(pub u32);
@@ -2476,7 +2476,7 @@ impl defmt::Format for W031 {
         defmt::write!(f, "W031 {{ pword: {=u32:?} }}", self.pword())
     }
 }
-#[doc = "Word pin registers for all port GPIO pins"]
+#[doc = "Word pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct W04(pub u32);
@@ -2511,7 +2511,7 @@ impl defmt::Format for W04 {
         defmt::write!(f, "W04 {{ pword: {=u32:?} }}", self.pword())
     }
 }
-#[doc = "Word pin registers for all port GPIO pins"]
+#[doc = "Word pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct W05(pub u32);
@@ -2546,7 +2546,7 @@ impl defmt::Format for W05 {
         defmt::write!(f, "W05 {{ pword: {=u32:?} }}", self.pword())
     }
 }
-#[doc = "Word pin registers for all port GPIO pins"]
+#[doc = "Word pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct W06(pub u32);
@@ -2581,7 +2581,7 @@ impl defmt::Format for W06 {
         defmt::write!(f, "W06 {{ pword: {=u32:?} }}", self.pword())
     }
 }
-#[doc = "Word pin registers for all port GPIO pins"]
+#[doc = "Word pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct W07(pub u32);
@@ -2616,7 +2616,7 @@ impl defmt::Format for W07 {
         defmt::write!(f, "W07 {{ pword: {=u32:?} }}", self.pword())
     }
 }
-#[doc = "Word pin registers for all port GPIO pins"]
+#[doc = "Word pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct W08(pub u32);
@@ -2651,7 +2651,7 @@ impl defmt::Format for W08 {
         defmt::write!(f, "W08 {{ pword: {=u32:?} }}", self.pword())
     }
 }
-#[doc = "Word pin registers for all port GPIO pins"]
+#[doc = "Word pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct W09(pub u32);

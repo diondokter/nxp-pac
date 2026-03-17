@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Capfe {
-    #[doc = "Does not load"]
+    #[doc = "Does not load."]
     CAPFE0 = 0x0,
-    #[doc = "Loads"]
+    #[doc = "Loads."]
     CAPFE1 = 0x01,
 }
 impl Capfe {
@@ -33,9 +33,9 @@ impl From<Capfe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Capi {
-    #[doc = "Does not generate"]
+    #[doc = "Does not generate."]
     CAPI0 = 0x0,
-    #[doc = "Generates"]
+    #[doc = "Generates."]
     CAPI1 = 0x01,
 }
 impl Capi {
@@ -64,9 +64,9 @@ impl From<Capi> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Capre {
-    #[doc = "Does not load"]
+    #[doc = "Does not load."]
     CAPRE0 = 0x0,
-    #[doc = "Loads"]
+    #[doc = "Loads."]
     CAPRE1 = 0x01,
 }
 impl Capre {
@@ -95,13 +95,13 @@ impl From<Capre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cinsel {
-    #[doc = "Channel 0, CAPn\\[0\\] for CTIMERn"]
+    #[doc = "Channel 0, CAPn\\[0\\] for CTIMERn."]
     CHANNEL_0 = 0x0,
-    #[doc = "Channel 1, CAPn\\[1\\] for CTIMERn"]
+    #[doc = "Channel 1, CAPn\\[1\\] for CTIMERn."]
     CHANNEL_1 = 0x01,
-    #[doc = "Channel 2, CAPn\\[2\\] for CTIMERn"]
+    #[doc = "Channel 2, CAPn\\[2\\] for CTIMERn."]
     CHANNEL_2 = 0x02,
-    #[doc = "Channel 3, CAPn\\[3\\] for CTIMERn"]
+    #[doc = "Channel 3, CAPn\\[3\\] for CTIMERn."]
     CHANNEL_3 = 0x03,
 }
 impl Cinsel {
@@ -130,13 +130,13 @@ impl From<Cinsel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctmode {
-    #[doc = "Timer mode"]
+    #[doc = "Timer mode."]
     TIMER = 0x0,
-    #[doc = "Counter mode rising edge"]
+    #[doc = "Counter mode rising edge."]
     COUNTER_RISING_EDGE = 0x01,
-    #[doc = "Counter mode falling edge"]
+    #[doc = "Counter mode falling edge."]
     COUNTER_FALLING_EDGE = 0x02,
-    #[doc = "Counter mode dual edge"]
+    #[doc = "Counter mode dual edge."]
     COUNTER_DUAL_EDGE = 0x03,
 }
 impl Ctmode {
@@ -165,9 +165,9 @@ impl From<Ctmode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Em {
-    #[doc = "Low"]
+    #[doc = "Low."]
     CLEAR = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     SET = 0x01,
 }
 impl Em {
@@ -196,13 +196,13 @@ impl From<Em> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Emc {
-    #[doc = "Does nothing"]
+    #[doc = "Does nothing."]
     DO_NOTHING = 0x0,
-    #[doc = "Goes low"]
+    #[doc = "Goes low."]
     CLEAR = 0x01,
-    #[doc = "Goes high"]
+    #[doc = "Goes high."]
     SET = 0x02,
-    #[doc = "Toggles"]
+    #[doc = "Toggles."]
     TOGGLE = 0x03,
 }
 impl Emc {
@@ -231,9 +231,9 @@ impl From<Emc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mri {
-    #[doc = "Does not generate"]
+    #[doc = "Does not generate."]
     MRI0 = 0x0,
-    #[doc = "Generates"]
+    #[doc = "Generates."]
     MRI1 = 0x01,
 }
 impl Mri {
@@ -262,9 +262,9 @@ impl From<Mri> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mrr {
-    #[doc = "Does not reset"]
+    #[doc = "Does not reset."]
     MRR0 = 0x0,
-    #[doc = "Resets"]
+    #[doc = "Resets."]
     MRR1 = 0x01,
 }
 impl Mrr {
@@ -293,9 +293,9 @@ impl From<Mrr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mrrl {
-    #[doc = "Does not reload"]
+    #[doc = "Does not reload."]
     MRRL0 = 0x0,
-    #[doc = "Reloads"]
+    #[doc = "Reloads."]
     MRRL1 = 0x01,
 }
 impl Mrrl {
@@ -324,9 +324,9 @@ impl From<Mrrl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mrs {
-    #[doc = "Does not stop"]
+    #[doc = "Does not stop."]
     MRS0 = 0x0,
-    #[doc = "Stops"]
+    #[doc = "Stops."]
     MRS1 = 0x01,
 }
 impl Mrs {
@@ -355,9 +355,9 @@ impl From<Mrs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pwmen {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     MATCH = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     PWM = 0x01,
 }
 impl Pwmen {
@@ -386,21 +386,21 @@ impl From<Pwmen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Selcc {
-    #[doc = "Capture channel 0 rising edge"]
+    #[doc = "Capture channel 0 rising edge."]
     CHANNEL_0_RISING = 0x0,
-    #[doc = "Capture channel 0 falling edge"]
+    #[doc = "Capture channel 0 falling edge."]
     CHANNEL_0_FALLING = 0x01,
-    #[doc = "Capture channel 1 rising edge"]
+    #[doc = "Capture channel 1 rising edge."]
     CHANNEL_1_RISING = 0x02,
-    #[doc = "Capture channel 1 falling edge"]
+    #[doc = "Capture channel 1 falling edge."]
     CHANNEL_1_FALLING = 0x03,
-    #[doc = "Capture channel 2 rising edge"]
+    #[doc = "Capture channel 2 rising edge."]
     CHANNEL_2_RISING = 0x04,
-    #[doc = "Capture channel 2 falling edge"]
+    #[doc = "Capture channel 2 falling edge."]
     CHANNEL_2_FALLING = 0x05,
-    #[doc = "Capture channel 3 rising edge"]
+    #[doc = "Capture channel 3 rising edge."]
     CHANNEL_3_RISING = 0x06,
-    #[doc = "Capture channel 3 falling edge"]
+    #[doc = "Capture channel 3 falling edge."]
     CHANNEL_3_FALLING = 0x07,
 }
 impl Selcc {

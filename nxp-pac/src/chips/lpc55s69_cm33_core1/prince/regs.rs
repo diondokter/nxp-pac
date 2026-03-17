@@ -1,4 +1,4 @@
-#[doc = "Base Address for region 0 register"]
+#[doc = "Base Address for region 0 register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct BaseAddr0(pub u32);
@@ -53,7 +53,7 @@ impl defmt::Format for BaseAddr0 {
         )
     }
 }
-#[doc = "Base Address for region 1 register"]
+#[doc = "Base Address for region 1 register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct BaseAddr1(pub u32);
@@ -108,7 +108,7 @@ impl defmt::Format for BaseAddr1 {
         )
     }
 }
-#[doc = "Base Address for region 2 register"]
+#[doc = "Base Address for region 2 register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct BaseAddr2(pub u32);
@@ -163,7 +163,7 @@ impl defmt::Format for BaseAddr2 {
         )
     }
 }
-#[doc = "Encryption Enable register"]
+#[doc = "Encryption Enable register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct EncEnable(pub u32);
@@ -198,7 +198,7 @@ impl defmt::Format for EncEnable {
         defmt::write!(f, "EncEnable {{ en: {=bool:?} }}", self.en())
     }
 }
-#[doc = "Initial Vector register for region 0, Least Significant Bits"]
+#[doc = "Initial Vector register for region 0, Least Significant Bits."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct IvLsb0(pub u32);
@@ -235,7 +235,7 @@ impl defmt::Format for IvLsb0 {
         defmt::write!(f, "IvLsb0 {{ ivval: {=u32:?} }}", self.ivval())
     }
 }
-#[doc = "Initial Vector register for region 1, Least Significant Bits"]
+#[doc = "Initial Vector register for region 1, Least Significant Bits."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct IvLsb1(pub u32);
@@ -272,7 +272,7 @@ impl defmt::Format for IvLsb1 {
         defmt::write!(f, "IvLsb1 {{ ivval: {=u32:?} }}", self.ivval())
     }
 }
-#[doc = "Initial Vector register for region 2, Least Significant Bits"]
+#[doc = "Initial Vector register for region 2, Least Significant Bits."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct IvLsb2(pub u32);
@@ -309,7 +309,7 @@ impl defmt::Format for IvLsb2 {
         defmt::write!(f, "IvLsb2 {{ ivval: {=u32:?} }}", self.ivval())
     }
 }
-#[doc = "Initial Vector register for region 0, Most Significant Bits"]
+#[doc = "Initial Vector register for region 0, Most Significant Bits."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct IvMsb0(pub u32);
@@ -346,7 +346,7 @@ impl defmt::Format for IvMsb0 {
         defmt::write!(f, "IvMsb0 {{ ivval: {=u32:?} }}", self.ivval())
     }
 }
-#[doc = "Initial Vector register for region 1, Most Significant Bits"]
+#[doc = "Initial Vector register for region 1, Most Significant Bits."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct IvMsb1(pub u32);
@@ -383,7 +383,7 @@ impl defmt::Format for IvMsb1 {
         defmt::write!(f, "IvMsb1 {{ ivval: {=u32:?} }}", self.ivval())
     }
 }
-#[doc = "Initial Vector register for region 2, Most Significant Bits"]
+#[doc = "Initial Vector register for region 2, Most Significant Bits."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct IvMsb2(pub u32);
@@ -420,7 +420,7 @@ impl defmt::Format for IvMsb2 {
         defmt::write!(f, "IvMsb2 {{ ivval: {=u32:?} }}", self.ivval())
     }
 }
-#[doc = "Lock register"]
+#[doc = "Lock register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lock(pub u32);
@@ -503,7 +503,7 @@ impl defmt::Format for Lock {
         )
     }
 }
-#[doc = "Data Mask register, 32 Least Significant Bits"]
+#[doc = "Data Mask register, 32 Least Significant Bits."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct MaskLsb(pub u32);
@@ -540,7 +540,7 @@ impl defmt::Format for MaskLsb {
         defmt::write!(f, "MaskLsb {{ maskval: {=u32:?} }}", self.maskval())
     }
 }
-#[doc = "Data Mask register, 32 Most Significant Bits"]
+#[doc = "Data Mask register, 32 Most Significant Bits."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct MaskMsb(pub u32);
@@ -577,7 +577,7 @@ impl defmt::Format for MaskMsb {
         defmt::write!(f, "MaskMsb {{ maskval: {=u32:?} }}", self.maskval())
     }
 }
-#[doc = "Sub-Region Enable register for region 0"]
+#[doc = "Sub-Region Enable register for region 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SrEnable0(pub u32);
@@ -612,7 +612,7 @@ impl defmt::Format for SrEnable0 {
         defmt::write!(f, "SrEnable0 {{ en: {=u32:?} }}", self.en())
     }
 }
-#[doc = "Sub-Region Enable register for region 1"]
+#[doc = "Sub-Region Enable register for region 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SrEnable1(pub u32);
@@ -647,7 +647,7 @@ impl defmt::Format for SrEnable1 {
         defmt::write!(f, "SrEnable1 {{ en: {=u32:?} }}", self.en())
     }
 }
-#[doc = "Sub-Region Enable register for region 2"]
+#[doc = "Sub-Region Enable register for region 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SrEnable2(pub u32);

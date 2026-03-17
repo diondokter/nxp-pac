@@ -1,4 +1,4 @@
-#[doc = "Byte pin registers for all port GPIO pins"]
+#[doc = "Byte pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct B(pub u8);
@@ -33,7 +33,7 @@ impl defmt::Format for B {
         defmt::write!(f, "B {{ pbyte: {=bool:?} }}", self.pbyte())
     }
 }
-#[doc = "Clear port for all port GPIO pins"]
+#[doc = "Clear port for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Clr(pub u32);
@@ -68,7 +68,7 @@ impl defmt::Format for Clr {
         defmt::write!(f, "Clr {{ clrp: {=u32:?} }}", self.clrp())
     }
 }
-#[doc = "Direction registers for all port GPIO pins"]
+#[doc = "Direction registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dir(pub u32);
@@ -103,7 +103,7 @@ impl defmt::Format for Dir {
         defmt::write!(f, "Dir {{ dirp: {=u32:?} }}", self.dirp())
     }
 }
-#[doc = "Clear pin direction bits for port"]
+#[doc = "Clear pin direction bits for port."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dirclr(pub u32);
@@ -140,7 +140,7 @@ impl defmt::Format for Dirclr {
         defmt::write!(f, "Dirclr {{ dirclrp: {=u32:?} }}", self.dirclrp())
     }
 }
-#[doc = "Toggle pin direction bits for port"]
+#[doc = "Toggle pin direction bits for port."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dirnot(pub u32);
@@ -177,7 +177,7 @@ impl defmt::Format for Dirnot {
         defmt::write!(f, "Dirnot {{ dirnotp: {=u32:?} }}", self.dirnotp())
     }
 }
-#[doc = "Set pin direction bits for port"]
+#[doc = "Set pin direction bits for port."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dirset(pub u32);
@@ -214,7 +214,7 @@ impl defmt::Format for Dirset {
         defmt::write!(f, "Dirset {{ dirsetp: {=u32:?} }}", self.dirsetp())
     }
 }
-#[doc = "Mask register for all port GPIO pins"]
+#[doc = "Mask register for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mask(pub u32);
@@ -251,7 +251,7 @@ impl defmt::Format for Mask {
         defmt::write!(f, "Mask {{ maskp: {=u32:?} }}", self.maskp())
     }
 }
-#[doc = "Masked port register for all port GPIO pins"]
+#[doc = "Masked port register for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mpin(pub u32);
@@ -288,7 +288,7 @@ impl defmt::Format for Mpin {
         defmt::write!(f, "Mpin {{ mportp: {=u32:?} }}", self.mportp())
     }
 }
-#[doc = "Toggle port for all port GPIO pins"]
+#[doc = "Toggle port for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Not(pub u32);
@@ -323,7 +323,7 @@ impl defmt::Format for Not {
         defmt::write!(f, "Not {{ notp: {=u32:?} }}", self.notp())
     }
 }
-#[doc = "Port pin register for all port GPIO pins"]
+#[doc = "Port pin register for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pin(pub u32);
@@ -358,7 +358,7 @@ impl defmt::Format for Pin {
         defmt::write!(f, "Pin {{ port: {=u32:?} }}", self.port())
     }
 }
-#[doc = "Write: Set register for port. Read: output bits for port"]
+#[doc = "Write: Set register for port. Read: output bits for port."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Set(pub u32);
@@ -393,7 +393,7 @@ impl defmt::Format for Set {
         defmt::write!(f, "Set {{ setp: {=u32:?} }}", self.setp())
     }
 }
-#[doc = "Word pin registers for all port GPIO pins"]
+#[doc = "Word pin registers for all port GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct W(pub u32);

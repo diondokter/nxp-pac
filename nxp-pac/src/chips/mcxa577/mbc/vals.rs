@@ -2,21 +2,21 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mbacsel {
-    #[doc = "select MBC_MEMN_GLBAC0 access control policy for block B"]
+    #[doc = "select MBC_MEMN_GLBAC0 access control policy for block B."]
     GLBAC0 = 0x0,
-    #[doc = "select MBC_MEMN_GLBAC1 access control policy for block B"]
+    #[doc = "select MBC_MEMN_GLBAC1 access control policy for block B."]
     GLBAC1 = 0x01,
-    #[doc = "select MBC_MEMN_GLBAC2 access control policy for block B"]
+    #[doc = "select MBC_MEMN_GLBAC2 access control policy for block B."]
     GLBAC2 = 0x02,
-    #[doc = "select MBC_MEMN_GLBAC3 access control policy for block B"]
+    #[doc = "select MBC_MEMN_GLBAC3 access control policy for block B."]
     GLBAC3 = 0x03,
-    #[doc = "select MBC_MEMN_GLBAC4 access control policy for block B"]
+    #[doc = "select MBC_MEMN_GLBAC4 access control policy for block B."]
     GLBAC4 = 0x04,
-    #[doc = "select MBC_MEMN_GLBAC5 access control policy for block B"]
+    #[doc = "select MBC_MEMN_GLBAC5 access control policy for block B."]
     GLBAC5 = 0x05,
-    #[doc = "select MBC_MEMN_GLBAC6 access control policy for block B"]
+    #[doc = "select MBC_MEMN_GLBAC6 access control policy for block B."]
     GLBAC6 = 0x06,
-    #[doc = "select MBC_MEMN_GLBAC7 access control policy for block B"]
+    #[doc = "select MBC_MEMN_GLBAC7 access control policy for block B."]
     GLBAC7 = 0x07,
 }
 impl Mbacsel {

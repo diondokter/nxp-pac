@@ -2,17 +2,17 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CurSnsThrsh {
-    #[doc = "150 mA"]
+    #[doc = "150 mA."]
     SELECT_ZERO = 0x0,
-    #[doc = "250 mA"]
+    #[doc = "250 mA."]
     SELECT_ONE = 0x01,
-    #[doc = "350 mA"]
+    #[doc = "350 mA."]
     SELECT_TWO = 0x02,
-    #[doc = "450 mA"]
+    #[doc = "450 mA."]
     SELECT_THREE = 0x03,
-    #[doc = "550 mA"]
+    #[doc = "550 mA."]
     SELECT_FOUR = 0x04,
-    #[doc = "650 mA"]
+    #[doc = "650 mA."]
     SELECT_FIVE = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -43,9 +43,9 @@ impl From<CurSnsThrsh> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DisableAutoClkSwitch {
-    #[doc = "If DISABLE_AUTO_CLK_SWITCH is set to 0 and 24M xtal is OK, the clock source will switch from internal ring OSC to 24M xtal automatically"]
+    #[doc = "If DISABLE_AUTO_CLK_SWITCH is set to 0 and 24M xtal is OK, the clock source will switch from internal ring OSC to 24M xtal automatically."]
     XTAL_CLK = 0x0,
-    #[doc = "If DISABLE_AUTO_CLK_SWITCH is set to 1, SEL_CLK will determine which clock source the DCDC uses"]
+    #[doc = "If DISABLE_AUTO_CLK_SWITCH is set to 1, SEL_CLK will determine which clock source the DCDC uses."]
     SEL_CLK = 0x01,
 }
 impl DisableAutoClkSwitch {
@@ -105,9 +105,9 @@ impl From<DisablePulseSkip> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DisableStep {
-    #[doc = "Enable stepping for the output of VDD_SOC of DCDC"]
+    #[doc = "Enable stepping for the output of VDD_SOC of DCDC."]
     ENABLE = 0x0,
-    #[doc = "Disable stepping for the output of VDD_SOC of DCDC"]
+    #[doc = "Disable stepping for the output of VDD_SOC of DCDC."]
     DISABLE = 0x01,
 }
 impl DisableStep {
@@ -136,9 +136,9 @@ impl From<DisableStep> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LoopctrlHstThresh {
-    #[doc = "Lower hysteresis threshold (about 2.5mV in typical, but this value can vary with PVT corners"]
+    #[doc = "Lower hysteresis threshold (about 2.5mV in typical, but this value can vary with PVT corners."]
     LOW_HYST_THRESH = 0x0,
-    #[doc = "Higher hysteresis threshold (about 5mV in typical)"]
+    #[doc = "Higher hysteresis threshold (about 5mV in typical)."]
     HIGH_HYST_THRESH = 0x01,
 }
 impl LoopctrlHstThresh {
@@ -167,13 +167,13 @@ impl From<LoopctrlHstThresh> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpCmpIsrcSel {
-    #[doc = "50 nA"]
+    #[doc = "50 nA."]
     SEL0 = 0x0,
-    #[doc = "100 nA"]
+    #[doc = "100 nA."]
     SEL1 = 0x01,
-    #[doc = "200 nA"]
+    #[doc = "200 nA."]
     SEL2 = 0x02,
-    #[doc = "400 nA"]
+    #[doc = "400 nA."]
     SEL3 = 0x03,
 }
 impl LpCmpIsrcSel {
@@ -202,9 +202,9 @@ impl From<LpCmpIsrcSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpHighHys {
-    #[doc = "Adjust hysteretic value in low power to 12.5mV"]
+    #[doc = "Adjust hysteretic value in low power to 12.5mV."]
     LP_12P5M_V = 0x0,
-    #[doc = "Adjust hysteretic value in low power to 25mV"]
+    #[doc = "Adjust hysteretic value in low power to 25mV."]
     LP_25M_V = 0x01,
 }
 impl LpHighHys {
@@ -233,9 +233,9 @@ impl From<LpHighHys> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpOverloadFreqSel {
-    #[doc = "eight 32k cycle"]
+    #[doc = "eight 32k cycle."]
     EIGHT_32K_CYCLE = 0x0,
-    #[doc = "sixteen 32k cycle"]
+    #[doc = "sixteen 32k cycle."]
     SIXTEEN_32K_CYCLE = 0x01,
 }
 impl LpOverloadFreqSel {
@@ -264,13 +264,13 @@ impl From<LpOverloadFreqSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpOverloadThrsh {
-    #[doc = "32"]
+    #[doc = "32."]
     THRSH_32 = 0x0,
-    #[doc = "64"]
+    #[doc = "64."]
     THRSH_64 = 0x01,
-    #[doc = "16"]
+    #[doc = "16."]
     THRSH_16 = 0x02,
-    #[doc = "8"]
+    #[doc = "8."]
     THRSH_8 = 0x03,
 }
 impl LpOverloadThrsh {
@@ -299,9 +299,9 @@ impl From<LpOverloadThrsh> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MinpwrDcHalfclk {
-    #[doc = "DCDC clock remains at full frequency for continuous mode"]
+    #[doc = "DCDC clock remains at full frequency for continuous mode."]
     FULLFREQ = 0x0,
-    #[doc = "DCDC clock set to half frequency for continuous mode"]
+    #[doc = "DCDC clock set to half frequency for continuous mode."]
     HALFFREQ = 0x01,
 }
 impl MinpwrDcHalfclk {
@@ -330,13 +330,13 @@ impl From<MinpwrDcHalfclk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum OvercurTrigAdj {
-    #[doc = "In Run Mode, 1 A. In Power Save Mode, 0.25 A"]
+    #[doc = "In Run Mode, 1 A. In Power Save Mode, 0.25 A."]
     SELECT_ZERO = 0x0,
-    #[doc = "In Run Mode, 2 A. In Power Save Mode, 0.25 A"]
+    #[doc = "In Run Mode, 2 A. In Power Save Mode, 0.25 A."]
     SELECT_ONE = 0x01,
-    #[doc = "In Run Mode, 1 A. In Power Save Mode, 0.2 A"]
+    #[doc = "In Run Mode, 1 A. In Power Save Mode, 0.2 A."]
     SELECT_TWO = 0x02,
-    #[doc = "In Run Mode, 2 A. In Power Save Mode, 0.2 A"]
+    #[doc = "In Run Mode, 2 A. In Power Save Mode, 0.2 A."]
     SELECT_THREE = 0x03,
 }
 impl OvercurTrigAdj {
@@ -365,9 +365,9 @@ impl From<OvercurTrigAdj> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PwdCmpBattDet {
-    #[doc = "Low voltage detection comparator is enabled"]
+    #[doc = "Low voltage detection comparator is enabled."]
     ENABLED = 0x0,
-    #[doc = "Low voltage detection comparator is disabled"]
+    #[doc = "Low voltage detection comparator is disabled."]
     DISABLED = 0x01,
 }
 impl PwdCmpBattDet {
@@ -396,9 +396,9 @@ impl From<PwdCmpBattDet> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PwdCmpOffset {
-    #[doc = "Output range comparator powered up"]
+    #[doc = "Output range comparator powered up."]
     POWERED_UP = 0x0,
-    #[doc = "Output range comparator powered down"]
+    #[doc = "Output range comparator powered down."]
     POWERED_DOWN = 0x01,
 }
 impl PwdCmpOffset {
@@ -427,9 +427,9 @@ impl From<PwdCmpOffset> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PwdCurSnsCmp {
-    #[doc = "Current Detector powered up"]
+    #[doc = "Current Detector powered up."]
     POWERED_UP = 0x0,
-    #[doc = "Current Detector powered down"]
+    #[doc = "Current Detector powered down."]
     POWERED_DOWN = 0x01,
 }
 impl PwdCurSnsCmp {
@@ -458,9 +458,9 @@ impl From<PwdCurSnsCmp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PwdHighVoltDet {
-    #[doc = "Overvoltage detection comparator is enabled"]
+    #[doc = "Overvoltage detection comparator is enabled."]
     ENABLED = 0x0,
-    #[doc = "Overvoltage detection comparator is disabled"]
+    #[doc = "Overvoltage detection comparator is disabled."]
     DISABLED = 0x01,
 }
 impl PwdHighVoltDet {
@@ -489,9 +489,9 @@ impl From<PwdHighVoltDet> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PwdOscInt {
-    #[doc = "Internal oscillator powered up"]
+    #[doc = "Internal oscillator powered up."]
     POWERED_UP = 0x0,
-    #[doc = "Internal oscillator powered down"]
+    #[doc = "Internal oscillator powered down."]
     POWERED_DOWN = 0x01,
 }
 impl PwdOscInt {
@@ -520,9 +520,9 @@ impl From<PwdOscInt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PwdOvercurDet {
-    #[doc = "Overcurrent detection comparator is enabled"]
+    #[doc = "Overcurrent detection comparator is enabled."]
     ENABLED = 0x0,
-    #[doc = "Overcurrent detection comparator is disabled"]
+    #[doc = "Overcurrent detection comparator is disabled."]
     DISABLED = 0x01,
 }
 impl PwdOvercurDet {
@@ -551,9 +551,9 @@ impl From<PwdOvercurDet> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PwdZcd {
-    #[doc = "Zero cross detetion function powered up"]
+    #[doc = "Zero cross detetion function powered up."]
     POWERED_UP = 0x0,
-    #[doc = "Zero cross detetion function powered down"]
+    #[doc = "Zero cross detetion function powered down."]
     POWERED_DOWN = 0x01,
 }
 impl PwdZcd {
@@ -582,13 +582,13 @@ impl From<PwdZcd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegFbkSel {
-    #[doc = "The regulator outputs 1.0V with 1.2V reference voltage"]
+    #[doc = "The regulator outputs 1.0V with 1.2V reference voltage."]
     REG_FBK_SEL0 = 0x0,
-    #[doc = "The regulator outputs 1.1V with 1.2V reference voltage"]
+    #[doc = "The regulator outputs 1.1V with 1.2V reference voltage."]
     REG_FBK_SEL1 = 0x01,
-    #[doc = "The regulator outputs 1.0V with 1.3V reference voltage"]
+    #[doc = "The regulator outputs 1.0V with 1.3V reference voltage."]
     REG_FBK_SEL2 = 0x02,
-    #[doc = "The regulator outputs 1.1V with 1.3V reference voltage"]
+    #[doc = "The regulator outputs 1.1V with 1.3V reference voltage."]
     REG_FBK_SEL3 = 0x03,
 }
 impl RegFbkSel {
@@ -617,9 +617,9 @@ impl From<RegFbkSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegRloadSw {
-    #[doc = "Load resistor disconnected"]
+    #[doc = "Load resistor disconnected."]
     LOAD_R_DISCONNECT = 0x0,
-    #[doc = "Load resistor connected"]
+    #[doc = "Load resistor connected."]
     LOAD_R_CONNECT = 0x01,
 }
 impl RegRloadSw {
@@ -648,9 +648,9 @@ impl From<RegRloadSw> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SelClk {
-    #[doc = "DCDC uses internal ring oscillator"]
+    #[doc = "DCDC uses internal ring oscillator."]
     INT_RNG_OSC = 0x0,
-    #[doc = "DCDC uses 24M xtal"]
+    #[doc = "DCDC uses 24M xtal."]
     XTAL_24M = 0x01,
 }
 impl SelClk {
@@ -679,15 +679,15 @@ impl From<SelClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TargetLp {
-    #[doc = "0.9 V"]
+    #[doc = "0.9 V."]
     SEL0 = 0x0,
-    #[doc = "0.925 V"]
+    #[doc = "0.925 V."]
     SEL1 = 0x01,
-    #[doc = "0.95 V"]
+    #[doc = "0.95 V."]
     SEL2 = 0x02,
-    #[doc = "0.975 V"]
+    #[doc = "0.975 V."]
     SEL3 = 0x03,
-    #[doc = "1.0 V"]
+    #[doc = "1.0 V."]
     SEL4 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
@@ -719,9 +719,9 @@ impl From<TargetLp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Xtal24mOk {
-    #[doc = "DCDC uses internal ring OSC"]
+    #[doc = "DCDC uses internal ring OSC."]
     INT_RNG_OSC = 0x0,
-    #[doc = "DCDC uses xtal 24M"]
+    #[doc = "DCDC uses xtal 24M."]
     XTAL_24M = 0x01,
 }
 impl Xtal24mOk {
@@ -750,9 +750,9 @@ impl From<Xtal24mOk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum XtalokDisable {
-    #[doc = "Enable xtalok detection circuit"]
+    #[doc = "Enable xtalok detection circuit."]
     ENABLED = 0x0,
-    #[doc = "Disable xtalok detection circuit and always outputs OK signal \"1\""]
+    #[doc = "Disable xtalok detection circuit and always outputs OK signal \"1\"."]
     DISABLED = 0x01,
 }
 impl XtalokDisable {

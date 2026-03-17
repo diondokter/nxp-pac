@@ -1,4 +1,4 @@
-#[doc = "AHB secure controller"]
+#[doc = "AHB secure controller."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct AhbSecureCtrl {
     ptr: *mut u8,
@@ -231,7 +231,7 @@ impl AhbSecureCtrl {
     ) -> crate::common::Reg<regs::SecCtrlAhbSecCtrlMemRule, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0130usize) as _) }
     }
-    #[doc = "most recent security violation address for AHB layer n"]
+    #[doc = "most recent security violation address for AHB layer n."]
     #[inline(always)]
     pub const fn sec_vio_addr(
         self,
@@ -242,7 +242,7 @@ impl AhbSecureCtrl {
             crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0e00usize + n * 4usize) as _)
         }
     }
-    #[doc = "most recent security violation miscellaneous information for AHB layer n"]
+    #[doc = "most recent security violation miscellaneous information for AHB layer n."]
     #[inline(always)]
     pub const fn sec_vio_misc_info(
         self,
@@ -253,7 +253,7 @@ impl AhbSecureCtrl {
             crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0e80usize + n * 4usize) as _)
         }
     }
-    #[doc = "security violation address/information registers valid flags"]
+    #[doc = "security violation address/information registers valid flags."]
     #[inline(always)]
     pub const fn sec_vio_info_valid(
         self,
@@ -275,33 +275,33 @@ impl AhbSecureCtrl {
     pub const fn sec_mask_lock(self) -> crate::common::Reg<regs::SecMaskLock, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0fbcusize) as _) }
     }
-    #[doc = "master secure level register"]
+    #[doc = "master secure level register."]
     #[inline(always)]
     pub const fn master_sec_level(
         self,
     ) -> crate::common::Reg<regs::MasterSecLevel, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0fd0usize) as _) }
     }
-    #[doc = "master secure level anti-pole register"]
+    #[doc = "master secure level anti-pole register."]
     #[inline(always)]
     pub const fn master_sec_anti_pol_reg(
         self,
     ) -> crate::common::Reg<regs::MasterSecAntiPolReg, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0fd4usize) as _) }
     }
-    #[doc = "Miscalleneous control signals for in Cortex M33 (CPU0)"]
+    #[doc = "Miscalleneous control signals for in Cortex M33 (CPU0)."]
     #[inline(always)]
     pub const fn cpu0_lock_reg(self) -> crate::common::Reg<regs::Cpu0LockReg, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0fecusize) as _) }
     }
-    #[doc = "secure control duplicate register"]
+    #[doc = "secure control duplicate register."]
     #[inline(always)]
     pub const fn misc_ctrl_dp_reg(
         self,
     ) -> crate::common::Reg<regs::MiscCtrlDpReg, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0ff8usize) as _) }
     }
-    #[doc = "secure control register"]
+    #[doc = "secure control register."]
     #[inline(always)]
     pub const fn misc_ctrl_reg(self) -> crate::common::Reg<regs::MiscCtrlReg, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0ffcusize) as _) }

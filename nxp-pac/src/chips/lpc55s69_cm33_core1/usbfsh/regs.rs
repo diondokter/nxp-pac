@@ -1,4 +1,4 @@
-#[doc = "Contains the physical address of the current endpoint descriptor of the bulk list"]
+#[doc = "Contains the physical address of the current endpoint descriptor of the bulk list."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hcbulkcurrented(pub u32);
@@ -35,7 +35,7 @@ impl defmt::Format for Hcbulkcurrented {
         defmt::write!(f, "Hcbulkcurrented {{ bced: {=u32:?} }}", self.bced())
     }
 }
-#[doc = "Contains the physical address of the first endpoint descriptor of the bulk list"]
+#[doc = "Contains the physical address of the first endpoint descriptor of the bulk list."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hcbulkheaded(pub u32);
@@ -72,7 +72,7 @@ impl defmt::Format for Hcbulkheaded {
         defmt::write!(f, "Hcbulkheaded {{ bhed: {=u32:?} }}", self.bhed())
     }
 }
-#[doc = "This register is used to receive the commands from the Host Controller Driver (HCD)"]
+#[doc = "This register is used to receive the commands from the Host Controller Driver (HCD)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hccommandstatus(pub u32);
@@ -169,7 +169,7 @@ impl defmt::Format for Hccommandstatus {
         )
     }
 }
-#[doc = "Defines the operating modes of the HC"]
+#[doc = "Defines the operating modes of the HC."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hccontrol(pub u32);
@@ -322,7 +322,7 @@ impl defmt::Format for Hccontrol {
         )
     }
 }
-#[doc = "Contains the physical address of the current endpoint descriptor of the control list"]
+#[doc = "Contains the physical address of the current endpoint descriptor of the control list."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hccontrolcurrented(pub u32);
@@ -359,7 +359,7 @@ impl defmt::Format for Hccontrolcurrented {
         defmt::write!(f, "Hccontrolcurrented {{ cced: {=u32:?} }}", self.cced())
     }
 }
-#[doc = "Contains the physical address of the first endpoint descriptor of the control list"]
+#[doc = "Contains the physical address of the first endpoint descriptor of the control list."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hccontrolheaded(pub u32);
@@ -396,7 +396,7 @@ impl defmt::Format for Hccontrolheaded {
         defmt::write!(f, "Hccontrolheaded {{ ched: {=u32:?} }}", self.ched())
     }
 }
-#[doc = "Contains the physical address of the last transfer descriptor added to the 'Done' queue"]
+#[doc = "Contains the physical address of the last transfer descriptor added to the 'Done' queue."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hcdonehead(pub u32);
@@ -433,7 +433,7 @@ impl defmt::Format for Hcdonehead {
         defmt::write!(f, "Hcdonehead {{ dh: {=u32:?} }}", self.dh())
     }
 }
-#[doc = "Defines the bit time interval in a frame and the full speed maximum packet size which would not cause an overrun"]
+#[doc = "Defines the bit time interval in a frame and the full speed maximum packet size which would not cause an overrun."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hcfminterval(pub u32);
@@ -502,7 +502,7 @@ impl defmt::Format for Hcfminterval {
         )
     }
 }
-#[doc = "Contains a 16-bit counter and provides the timing reference among events happening in the HC and the HCD"]
+#[doc = "Contains a 16-bit counter and provides the timing reference among events happening in the HC and the HCD."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hcfmnumber(pub u32);
@@ -539,7 +539,7 @@ impl defmt::Format for Hcfmnumber {
         defmt::write!(f, "Hcfmnumber {{ fn_: {=u16:?} }}", self.fn_())
     }
 }
-#[doc = "A 14-bit counter showing the bit time remaining in the current frame"]
+#[doc = "A 14-bit counter showing the bit time remaining in the current frame."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hcfmremaining(pub u32);
@@ -594,7 +594,7 @@ impl defmt::Format for Hcfmremaining {
         )
     }
 }
-#[doc = "Contains the physical address of the host controller communication area"]
+#[doc = "Contains the physical address of the host controller communication area."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hchcca(pub u32);
@@ -631,7 +631,7 @@ impl defmt::Format for Hchcca {
         defmt::write!(f, "Hchcca {{ hcca: {=u32:?} }}", self.hcca())
     }
 }
-#[doc = "The bits in this register are used to disable corresponding bits in the HCInterruptStatus register and in turn disable that event leading to hardware interrupt"]
+#[doc = "The bits in this register are used to disable corresponding bits in the HCInterruptStatus register and in turn disable that event leading to hardware interrupt."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hcinterruptdisable(pub u32);
@@ -784,7 +784,7 @@ impl defmt::Format for Hcinterruptdisable {
         )
     }
 }
-#[doc = "Controls the bits in the HcInterruptStatus register and indicates which events will generate a hardware interrupt"]
+#[doc = "Controls the bits in the HcInterruptStatus register and indicates which events will generate a hardware interrupt."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hcinterruptenable(pub u32);
@@ -937,7 +937,7 @@ impl defmt::Format for Hcinterruptenable {
         )
     }
 }
-#[doc = "Indicates the status on various events that cause hardware interrupts by setting the appropriate bits"]
+#[doc = "Indicates the status on various events that cause hardware interrupts by setting the appropriate bits."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hcinterruptstatus(pub u32);
@@ -1076,7 +1076,7 @@ impl defmt::Format for Hcinterruptstatus {
         )
     }
 }
-#[doc = "Contains 11-bit value which is used by the HC to determine whether to commit to transfer a maximum of 8-byte LS packet before EOF"]
+#[doc = "Contains 11-bit value which is used by the HC to determine whether to commit to transfer a maximum of 8-byte LS packet before EOF."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hclsthreshold(pub u32);
@@ -1113,7 +1113,7 @@ impl defmt::Format for Hclsthreshold {
         defmt::write!(f, "Hclsthreshold {{ lst: {=u16:?} }}", self.lst())
     }
 }
-#[doc = "Contains the physical address of the current isochronous or interrupt endpoint descriptor"]
+#[doc = "Contains the physical address of the current isochronous or interrupt endpoint descriptor."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hcperiodcurrented(pub u32);
@@ -1150,7 +1150,7 @@ impl defmt::Format for Hcperiodcurrented {
         defmt::write!(f, "Hcperiodcurrented {{ pced: {=u32:?} }}", self.pced())
     }
 }
-#[doc = "Contains a programmable 14-bit value which determines the earliest time HC should start processing a periodic list"]
+#[doc = "Contains a programmable 14-bit value which determines the earliest time HC should start processing a periodic list."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hcperiodicstart(pub u32);
@@ -1187,7 +1187,7 @@ impl defmt::Format for Hcperiodicstart {
         defmt::write!(f, "Hcperiodicstart {{ ps: {=u16:?} }}", self.ps())
     }
 }
-#[doc = "BCD representation of the version of the HCI specification that is implemented by the Host Controller (HC)"]
+#[doc = "BCD representation of the version of the HCI specification that is implemented by the Host Controller (HC)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hcrevision(pub u32);
@@ -1224,7 +1224,7 @@ impl defmt::Format for Hcrevision {
         defmt::write!(f, "Hcrevision {{ rev: {=u8:?} }}", self.rev())
     }
 }
-#[doc = "First of the two registers which describes the characteristics of the root hub"]
+#[doc = "First of the two registers which describes the characteristics of the root hub."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hcrhdescriptora(pub u32);
@@ -1349,7 +1349,7 @@ impl defmt::Format for Hcrhdescriptora {
         )
     }
 }
-#[doc = "Second of the two registers which describes the characteristics of the Root Hub"]
+#[doc = "Second of the two registers which describes the characteristics of the Root Hub."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hcrhdescriptorb(pub u32);
@@ -1404,7 +1404,7 @@ impl defmt::Format for Hcrhdescriptorb {
         )
     }
 }
-#[doc = "Controls and reports the port events on a per-port basis"]
+#[doc = "Controls and reports the port events on a per-port basis."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hcrhportstatus(pub u32);
@@ -1599,7 +1599,7 @@ impl defmt::Format for Hcrhportstatus {
         )
     }
 }
-#[doc = "This register is divided into two parts"]
+#[doc = "This register is divided into two parts."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hcrhstatus(pub u32);
@@ -1710,7 +1710,7 @@ impl defmt::Format for Hcrhstatus {
         )
     }
 }
-#[doc = "Controls the port if it is attached to the host block or the device block"]
+#[doc = "Controls the port if it is attached to the host block or the device block."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Portmode(pub u32);

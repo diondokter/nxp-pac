@@ -1,16 +1,16 @@
-#[doc = "CFPA State Register"]
+#[doc = "CFPA State Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CfpaLcState(pub u32);
 impl CfpaLcState {
-    #[doc = "CFPA state"]
+    #[doc = "CFPA state."]
     #[must_use]
     #[inline(always)]
     pub const fn cfpa_lc_state(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "CFPA state"]
+    #[doc = "CFPA state."]
     #[inline(always)]
     pub const fn set_cfpa_lc_state(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -39,7 +39,7 @@ impl defmt::Format for CfpaLcState {
         )
     }
 }
-#[doc = "Secure CPU0 System Tick Calibration"]
+#[doc = "Secure CPU0 System Tick Calibration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cpu0stckcal(pub u32);
@@ -108,7 +108,7 @@ impl defmt::Format for Cpu0stckcal {
         )
     }
 }
-#[doc = "Debug Authentication BEACON"]
+#[doc = "Debug Authentication BEACON."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DebugAuthBeacon(pub u32);
@@ -145,55 +145,55 @@ impl defmt::Format for DebugAuthBeacon {
         defmt::write!(f, "DebugAuthBeacon {{ beacon: {=u32:?} }}", self.beacon())
     }
 }
-#[doc = "Cortex Debug Features Control"]
+#[doc = "Cortex Debug Features Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DebugFeatures(pub u32);
 impl DebugFeatures {
-    #[doc = "CPU0 invasive debug control"]
+    #[doc = "CPU0 invasive debug control."]
     #[must_use]
     #[inline(always)]
     pub const fn cpu0_dbgen(&self) -> super::vals::DebugFeaturesCpu0Dbgen {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::DebugFeaturesCpu0Dbgen::from_bits(val as u8)
     }
-    #[doc = "CPU0 invasive debug control"]
+    #[doc = "CPU0 invasive debug control."]
     #[inline(always)]
     pub const fn set_cpu0_dbgen(&mut self, val: super::vals::DebugFeaturesCpu0Dbgen) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "CPU0 non-invasive debug control"]
+    #[doc = "CPU0 non-invasive debug control."]
     #[must_use]
     #[inline(always)]
     pub const fn cpu0_niden(&self) -> super::vals::DebugFeaturesCpu0Niden {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::DebugFeaturesCpu0Niden::from_bits(val as u8)
     }
-    #[doc = "CPU0 non-invasive debug control"]
+    #[doc = "CPU0 non-invasive debug control."]
     #[inline(always)]
     pub const fn set_cpu0_niden(&mut self, val: super::vals::DebugFeaturesCpu0Niden) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
-    #[doc = "CPU0 secure privileged invasive debug control"]
+    #[doc = "CPU0 secure privileged invasive debug control."]
     #[must_use]
     #[inline(always)]
     pub const fn cpu0_spiden(&self) -> super::vals::DebugFeaturesCpu0Spiden {
         let val = (self.0 >> 4usize) & 0x03;
         super::vals::DebugFeaturesCpu0Spiden::from_bits(val as u8)
     }
-    #[doc = "CPU0 secure privileged invasive debug control"]
+    #[doc = "CPU0 secure privileged invasive debug control."]
     #[inline(always)]
     pub const fn set_cpu0_spiden(&mut self, val: super::vals::DebugFeaturesCpu0Spiden) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
-    #[doc = "CPU0 secure privileged non-invasive debug control"]
+    #[doc = "CPU0 secure privileged non-invasive debug control."]
     #[must_use]
     #[inline(always)]
     pub const fn cpu0_spniden(&self) -> super::vals::DebugFeaturesCpu0Spniden {
         let val = (self.0 >> 6usize) & 0x03;
         super::vals::DebugFeaturesCpu0Spniden::from_bits(val as u8)
     }
-    #[doc = "CPU0 secure privileged non-invasive debug control"]
+    #[doc = "CPU0 secure privileged non-invasive debug control."]
     #[inline(always)]
     pub const fn set_cpu0_spniden(&mut self, val: super::vals::DebugFeaturesCpu0Spniden) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u32) & 0x03) << 6usize);
@@ -228,55 +228,55 @@ impl defmt::Format for DebugFeatures {
         )
     }
 }
-#[doc = "Cortex Debug Features Control (Duplicate)"]
+#[doc = "Cortex Debug Features Control (Duplicate)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DebugFeaturesDp(pub u32);
 impl DebugFeaturesDp {
-    #[doc = "CPU0 invasive debug control"]
+    #[doc = "CPU0 invasive debug control."]
     #[must_use]
     #[inline(always)]
     pub const fn cpu0_dbgen(&self) -> super::vals::DebugFeaturesDpCpu0Dbgen {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::DebugFeaturesDpCpu0Dbgen::from_bits(val as u8)
     }
-    #[doc = "CPU0 invasive debug control"]
+    #[doc = "CPU0 invasive debug control."]
     #[inline(always)]
     pub const fn set_cpu0_dbgen(&mut self, val: super::vals::DebugFeaturesDpCpu0Dbgen) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "CPU0 non-invasive debug control"]
+    #[doc = "CPU0 non-invasive debug control."]
     #[must_use]
     #[inline(always)]
     pub const fn cpu0_niden(&self) -> super::vals::DebugFeaturesDpCpu0Niden {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::DebugFeaturesDpCpu0Niden::from_bits(val as u8)
     }
-    #[doc = "CPU0 non-invasive debug control"]
+    #[doc = "CPU0 non-invasive debug control."]
     #[inline(always)]
     pub const fn set_cpu0_niden(&mut self, val: super::vals::DebugFeaturesDpCpu0Niden) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
-    #[doc = "CPU0 secure privileged invasive debug control"]
+    #[doc = "CPU0 secure privileged invasive debug control."]
     #[must_use]
     #[inline(always)]
     pub const fn cpu0_spiden(&self) -> super::vals::DebugFeaturesDpCpu0Spiden {
         let val = (self.0 >> 4usize) & 0x03;
         super::vals::DebugFeaturesDpCpu0Spiden::from_bits(val as u8)
     }
-    #[doc = "CPU0 secure privileged invasive debug control"]
+    #[doc = "CPU0 secure privileged invasive debug control."]
     #[inline(always)]
     pub const fn set_cpu0_spiden(&mut self, val: super::vals::DebugFeaturesDpCpu0Spiden) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
-    #[doc = "CPU0 secure privileged non-invasive debug control"]
+    #[doc = "CPU0 secure privileged non-invasive debug control."]
     #[must_use]
     #[inline(always)]
     pub const fn cpu0_spniden(&self) -> super::vals::DebugFeaturesDpCpu0Spniden {
         let val = (self.0 >> 6usize) & 0x03;
         super::vals::DebugFeaturesDpCpu0Spniden::from_bits(val as u8)
     }
-    #[doc = "CPU0 secure privileged non-invasive debug control"]
+    #[doc = "CPU0 secure privileged non-invasive debug control."]
     #[inline(always)]
     pub const fn set_cpu0_spniden(&mut self, val: super::vals::DebugFeaturesDpCpu0Spniden) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u32) & 0x03) << 6usize);
@@ -311,19 +311,19 @@ impl defmt::Format for DebugFeaturesDp {
         )
     }
 }
-#[doc = "Control Write Access to Security"]
+#[doc = "Control Write Access to Security."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DebugLockEn(pub u32);
 impl DebugLockEn {
-    #[doc = "Controls write access to the security registers"]
+    #[doc = "Controls write access to the security registers."]
     #[must_use]
     #[inline(always)]
     pub const fn lock_all(&self) -> super::vals::LockAll {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::LockAll::from_bits(val as u8)
     }
-    #[doc = "Controls write access to the security registers"]
+    #[doc = "Controls write access to the security registers."]
     #[inline(always)]
     pub const fn set_lock_all(&mut self, val: super::vals::LockAll) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
@@ -348,19 +348,19 @@ impl defmt::Format for DebugLockEn {
         defmt::write!(f, "DebugLockEn {{ lock_all: {:?} }}", self.lock_all())
     }
 }
-#[doc = "Life Cycle State Register"]
+#[doc = "Life Cycle State Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ElsOtpLcState(pub u32);
 impl ElsOtpLcState {
-    #[doc = "OTP life cycle state"]
+    #[doc = "OTP life cycle state."]
     #[must_use]
     #[inline(always)]
     pub const fn otp_lc_state(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "OTP life cycle state"]
+    #[doc = "OTP life cycle state."]
     #[inline(always)]
     pub const fn set_otp_lc_state(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
@@ -389,19 +389,19 @@ impl defmt::Format for ElsOtpLcState {
         )
     }
 }
-#[doc = "Life Cycle State Register (Duplicate)"]
+#[doc = "Life Cycle State Register (Duplicate)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ElsOtpLcStateDp(pub u32);
 impl ElsOtpLcStateDp {
-    #[doc = "OTP life cycle state"]
+    #[doc = "OTP life cycle state."]
     #[must_use]
     #[inline(always)]
     pub const fn otp_lc_state_dp(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "OTP life cycle state"]
+    #[doc = "OTP life cycle state."]
     #[inline(always)]
     pub const fn set_otp_lc_state_dp(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
@@ -430,91 +430,91 @@ impl defmt::Format for ElsOtpLcStateDp {
         )
     }
 }
-#[doc = "GDET0 Control Register"]
+#[doc = "GDET0 Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gdet0Ctrl(pub u32);
 impl Gdet0Ctrl {
-    #[doc = "Controls the GDET0 clean event counter"]
+    #[doc = "Controls the GDET0 clean event counter."]
     #[must_use]
     #[inline(always)]
     pub const fn gdet_evtcnt_clr(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Controls the GDET0 clean event counter"]
+    #[doc = "Controls the GDET0 clean event counter."]
     #[inline(always)]
     pub const fn set_gdet_evtcnt_clr(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Clears GDET0 error status"]
+    #[doc = "Clears GDET0 error status."]
     #[must_use]
     #[inline(always)]
     pub const fn gdet_err_clr(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Clears GDET0 error status"]
+    #[doc = "Clears GDET0 error status."]
     #[inline(always)]
     pub const fn set_gdet_err_clr(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "GDET0 isolation control"]
+    #[doc = "GDET0 isolation control."]
     #[must_use]
     #[inline(always)]
     pub const fn gdet_iso_sw(&self) -> super::vals::GdetIsoSw {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::GdetIsoSw::from_bits(val as u8)
     }
-    #[doc = "GDET0 isolation control"]
+    #[doc = "GDET0 isolation control."]
     #[inline(always)]
     pub const fn set_gdet_iso_sw(&mut self, val: super::vals::GdetIsoSw) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
-    #[doc = "Event count value"]
+    #[doc = "Event count value."]
     #[must_use]
     #[inline(always)]
     pub const fn event_cnt(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0xff;
         val as u8
     }
-    #[doc = "Event count value"]
+    #[doc = "Event count value."]
     #[inline(always)]
     pub const fn set_event_cnt(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
     }
-    #[doc = "Positive glitch detected"]
+    #[doc = "Positive glitch detected."]
     #[must_use]
     #[inline(always)]
     pub const fn pos_sync(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Positive glitch detected"]
+    #[doc = "Positive glitch detected."]
     #[inline(always)]
     pub const fn set_pos_sync(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Negative glitch detected"]
+    #[doc = "Negative glitch detected."]
     #[must_use]
     #[inline(always)]
     pub const fn neg_sync(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Negative glitch detected"]
+    #[doc = "Negative glitch detected."]
     #[inline(always)]
     pub const fn set_neg_sync(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Event counter cleared"]
+    #[doc = "Event counter cleared."]
     #[must_use]
     #[inline(always)]
     pub const fn event_clr_flag(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Event counter cleared"]
+    #[doc = "Event counter cleared."]
     #[inline(always)]
     pub const fn set_event_clr_flag(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
@@ -555,127 +555,127 @@ impl defmt::Format for Gdet0Ctrl {
         )
     }
 }
-#[doc = "MSF Configuration"]
+#[doc = "MSF Configuration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Msfcfg(pub u32);
 impl Msfcfg {
-    #[doc = "user IFR block0 sector 0 erase control"]
+    #[doc = "user IFR block0 sector 0 erase control."]
     #[must_use]
     #[inline(always)]
     pub const fn ifr_block0_erase_dis0(&self) -> super::vals::IfrBlock0EraseDis0 {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::IfrBlock0EraseDis0::from_bits(val as u8)
     }
-    #[doc = "user IFR block0 sector 0 erase control"]
+    #[doc = "user IFR block0 sector 0 erase control."]
     #[inline(always)]
     pub const fn set_ifr_block0_erase_dis0(&mut self, val: super::vals::IfrBlock0EraseDis0) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "user IFR block0 sector 1 erase control"]
+    #[doc = "user IFR block0 sector 1 erase control."]
     #[must_use]
     #[inline(always)]
     pub const fn ifr_block0_erase_dis1(&self) -> super::vals::IfrBlock0EraseDis1 {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::IfrBlock0EraseDis1::from_bits(val as u8)
     }
-    #[doc = "user IFR block0 sector 1 erase control"]
+    #[doc = "user IFR block0 sector 1 erase control."]
     #[inline(always)]
     pub const fn set_ifr_block0_erase_dis1(&mut self, val: super::vals::IfrBlock0EraseDis1) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "user IFR block0 sector 2 erase control"]
+    #[doc = "user IFR block0 sector 2 erase control."]
     #[must_use]
     #[inline(always)]
     pub const fn ifr_block0_erase_dis2(&self) -> super::vals::IfrBlock0EraseDis2 {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::IfrBlock0EraseDis2::from_bits(val as u8)
     }
-    #[doc = "user IFR block0 sector 2 erase control"]
+    #[doc = "user IFR block0 sector 2 erase control."]
     #[inline(always)]
     pub const fn set_ifr_block0_erase_dis2(&mut self, val: super::vals::IfrBlock0EraseDis2) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "user IFR block0 sector 3 erase control"]
+    #[doc = "user IFR block0 sector 3 erase control."]
     #[must_use]
     #[inline(always)]
     pub const fn ifr_block0_erase_dis3(&self) -> super::vals::IfrBlock0EraseDis3 {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::IfrBlock0EraseDis3::from_bits(val as u8)
     }
-    #[doc = "user IFR block0 sector 3 erase control"]
+    #[doc = "user IFR block0 sector 3 erase control."]
     #[inline(always)]
     pub const fn set_ifr_block0_erase_dis3(&mut self, val: super::vals::IfrBlock0EraseDis3) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "user IFR block1 sector 0 erase control"]
+    #[doc = "user IFR block1 sector 0 erase control."]
     #[must_use]
     #[inline(always)]
     pub const fn ifr_block1_erase_dis0(&self) -> super::vals::IfrBlock1EraseDis0 {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::IfrBlock1EraseDis0::from_bits(val as u8)
     }
-    #[doc = "user IFR block1 sector 0 erase control"]
+    #[doc = "user IFR block1 sector 0 erase control."]
     #[inline(always)]
     pub const fn set_ifr_block1_erase_dis0(&mut self, val: super::vals::IfrBlock1EraseDis0) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
-    #[doc = "user IFR block1 sector 1 erase control"]
+    #[doc = "user IFR block1 sector 1 erase control."]
     #[must_use]
     #[inline(always)]
     pub const fn ifr_block1_erase_dis1(&self) -> super::vals::IfrBlock1EraseDis1 {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::IfrBlock1EraseDis1::from_bits(val as u8)
     }
-    #[doc = "user IFR block1 sector 1 erase control"]
+    #[doc = "user IFR block1 sector 1 erase control."]
     #[inline(always)]
     pub const fn set_ifr_block1_erase_dis1(&mut self, val: super::vals::IfrBlock1EraseDis1) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
-    #[doc = "user IFR block1 sector 2 erase control"]
+    #[doc = "user IFR block1 sector 2 erase control."]
     #[must_use]
     #[inline(always)]
     pub const fn ifr_block1_erase_dis2(&self) -> super::vals::IfrBlock1EraseDis2 {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::IfrBlock1EraseDis2::from_bits(val as u8)
     }
-    #[doc = "user IFR block1 sector 2 erase control"]
+    #[doc = "user IFR block1 sector 2 erase control."]
     #[inline(always)]
     pub const fn set_ifr_block1_erase_dis2(&mut self, val: super::vals::IfrBlock1EraseDis2) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "user IFR block1 sector 3 erase control"]
+    #[doc = "user IFR block1 sector 3 erase control."]
     #[must_use]
     #[inline(always)]
     pub const fn ifr_block1_erase_dis3(&self) -> super::vals::IfrBlock1EraseDis3 {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::IfrBlock1EraseDis3::from_bits(val as u8)
     }
-    #[doc = "user IFR block1 sector 3 erase control"]
+    #[doc = "user IFR block1 sector 3 erase control."]
     #[inline(always)]
     pub const fn set_ifr_block1_erase_dis3(&mut self, val: super::vals::IfrBlock1EraseDis3) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "Mass erase control"]
+    #[doc = "Mass erase control."]
     #[must_use]
     #[inline(always)]
     pub const fn mass_erase_dis(&self) -> super::vals::MassEraseDis {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::MassEraseDis::from_bits(val as u8)
     }
-    #[doc = "Mass erase control"]
+    #[doc = "Mass erase control."]
     #[inline(always)]
     pub const fn set_mass_erase_dis(&mut self, val: super::vals::MassEraseDis) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
-    #[doc = "FMU CG override"]
+    #[doc = "FMU CG override."]
     #[must_use]
     #[inline(always)]
     pub const fn cg_override(&self) -> super::vals::CgOverride {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::CgOverride::from_bits(val as u8)
     }
-    #[doc = "FMU CG override"]
+    #[doc = "FMU CG override."]
     #[inline(always)]
     pub const fn set_cg_override(&mut self, val: super::vals::CgOverride) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
@@ -722,7 +722,7 @@ impl defmt::Format for Msfcfg {
         )
     }
 }
-#[doc = "RAM XEN Control"]
+#[doc = "RAM XEN Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct RamXen(pub u32);
@@ -833,7 +833,7 @@ impl defmt::Format for RamXen {
         )
     }
 }
-#[doc = "RAM XEN Control (Duplicate)"]
+#[doc = "RAM XEN Control (Duplicate)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct RamXenDp(pub u32);
@@ -930,19 +930,19 @@ impl defmt::Format for RamXenDp {
         )
     }
 }
-#[doc = "CPU0 Software Debug Access"]
+#[doc = "CPU0 Software Debug Access."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SwdAccessCpu0(pub u32);
 impl SwdAccessCpu0 {
-    #[doc = "CPU0 SWD-AP: 0x12345678"]
+    #[doc = "CPU0 SWD-AP: 0x12345678."]
     #[must_use]
     #[inline(always)]
     pub const fn sec_code(&self) -> super::vals::SecCode {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         super::vals::SecCode::from_bits(val as u32)
     }
-    #[doc = "CPU0 SWD-AP: 0x12345678"]
+    #[doc = "CPU0 SWD-AP: 0x12345678."]
     #[inline(always)]
     pub const fn set_sec_code(&mut self, val: super::vals::SecCode) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize))

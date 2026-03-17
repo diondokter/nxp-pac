@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DisTcpEf {
-    #[doc = "Dropping of TCP/IP Checksum Error Packets is enabled"]
+    #[doc = "Dropping of TCP/IP Checksum Error Packets is enabled."]
     ENABLE = 0x0,
-    #[doc = "Dropping of TCP/IP Checksum Error Packets is disabled"]
+    #[doc = "Dropping of TCP/IP Checksum Error Packets is disabled."]
     DISABLE = 0x01,
 }
 impl DisTcpEf {
@@ -33,13 +33,13 @@ impl From<DisTcpEf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rrcsts {
-    #[doc = "Idle state"]
+    #[doc = "Idle state."]
     IDLE = 0x0,
-    #[doc = "Reading packet data"]
+    #[doc = "Reading packet data."]
     READ_DATA = 0x01,
-    #[doc = "Reading packet status (or timestamp)"]
+    #[doc = "Reading packet status (or timestamp)."]
     READ_STS = 0x02,
-    #[doc = "Flushing the packet data and status"]
+    #[doc = "Flushing the packet data and status."]
     FLUSH = 0x03,
 }
 impl Rrcsts {
@@ -68,13 +68,13 @@ impl From<Rrcsts> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rtc {
-    #[doc = "64"]
+    #[doc = "64."]
     M_64BYTE = 0x0,
-    #[doc = "32"]
+    #[doc = "32."]
     M_32BYTE = 0x01,
-    #[doc = "96"]
+    #[doc = "96."]
     M_96BYTE = 0x02,
-    #[doc = "128"]
+    #[doc = "128."]
     M_128BYTE = 0x03,
 }
 impl Rtc {
@@ -103,13 +103,13 @@ impl From<Rtc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rxqsts {
-    #[doc = "Rx Queue empty"]
+    #[doc = "Rx Queue empty."]
     EMPTY = 0x0,
-    #[doc = "Rx Queue fill-level below flow-control deactivate threshold"]
+    #[doc = "Rx Queue fill-level below flow-control deactivate threshold."]
     BLW_THR = 0x01,
-    #[doc = "Rx Queue fill-level above flow-control activate threshold"]
+    #[doc = "Rx Queue fill-level above flow-control activate threshold."]
     ABV_THR = 0x02,
-    #[doc = "Rx Queue full"]
+    #[doc = "Rx Queue full."]
     FULL = 0x03,
 }
 impl Rxqsts {
@@ -138,13 +138,13 @@ impl From<Rxqsts> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trcsts {
-    #[doc = "Idle state"]
+    #[doc = "Idle state."]
     IDLE = 0x0,
-    #[doc = "Read state (transferring data to the MAC transmitter)"]
+    #[doc = "Read state (transferring data to the MAC transmitter)."]
     READ = 0x01,
-    #[doc = "Waiting for pending Tx Status from the MAC transmitter"]
+    #[doc = "Waiting for pending Tx Status from the MAC transmitter."]
     WAIT = 0x02,
-    #[doc = "Flushing the Tx queue because of the Packet Abort request from the MAC"]
+    #[doc = "Flushing the Tx queue because of the Packet Abort request from the MAC."]
     FLUSH = 0x03,
 }
 impl Trcsts {
@@ -173,21 +173,21 @@ impl From<Trcsts> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ttc {
-    #[doc = "32"]
+    #[doc = "32."]
     M_32BYTES = 0x0,
-    #[doc = "64"]
+    #[doc = "64."]
     M_64BYTES = 0x01,
-    #[doc = "96"]
+    #[doc = "96."]
     M_96BYTES = 0x02,
-    #[doc = "128"]
+    #[doc = "128."]
     M_128BYTES = 0x03,
-    #[doc = "192"]
+    #[doc = "192."]
     M_192BYTES = 0x04,
-    #[doc = "256"]
+    #[doc = "256."]
     M_256BYTES = 0x05,
-    #[doc = "384"]
+    #[doc = "384."]
     M_384BYTES = 0x06,
-    #[doc = "512"]
+    #[doc = "512."]
     M_512BYTES = 0x07,
 }
 impl Ttc {

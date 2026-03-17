@@ -258,13 +258,13 @@ impl From<Pack48> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Paircount {
-    #[doc = "1 I2S channel pairs in this flexcomm"]
+    #[doc = "1 I2S channel pairs in this flexcomm."]
     PAIRS_1 = 0x0,
-    #[doc = "2 I2S channel pairs in this flexcomm"]
+    #[doc = "2 I2S channel pairs in this flexcomm."]
     PAIRS_2 = 0x01,
-    #[doc = "3 I2S channel pairs in this flexcomm"]
+    #[doc = "3 I2S channel pairs in this flexcomm."]
     PAIRS_3 = 0x02,
-    #[doc = "4 I2S channel pairs in this flexcomm"]
+    #[doc = "4 I2S channel pairs in this flexcomm."]
     PAIRS_4 = 0x03,
 }
 impl Paircount {

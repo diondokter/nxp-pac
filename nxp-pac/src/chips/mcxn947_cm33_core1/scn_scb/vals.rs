@@ -66,7 +66,7 @@ impl From<Su1> for u8 {
 pub enum Su10 {
     #[doc = "The floating-point state is not permitted to become UNKNOWN."]
     UNKNOWN_NOT_PERMITTED = 0x0,
-    #[doc = "The floating-point state is permitted to become UNKNOWN"]
+    #[doc = "The floating-point state is permitted to become UNKNOWN."]
     UNKNOWN_PERMITTED = 0x01,
 }
 impl Su10 {
@@ -312,9 +312,9 @@ impl From<Sus0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sus1 {
-    #[doc = "The SU7 field is accessible from both Security states."]
+    #[doc = "The SU1 field is accessible from both Security states."]
     SECURE_AND_NON_SECURE = 0x0,
-    #[doc = "The SU7 field is only accessible from the Secure state."]
+    #[doc = "The SU1 field is only accessible from the Secure state."]
     SECURE_ONLY = 0x01,
 }
 impl Sus1 {

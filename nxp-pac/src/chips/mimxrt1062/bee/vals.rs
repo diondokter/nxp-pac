@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum BeeEnable {
-    #[doc = "Disable BEE"]
+    #[doc = "Disable BEE."]
     BEE_ENABLE_0 = 0x0,
-    #[doc = "Enable BEE"]
+    #[doc = "Enable BEE."]
     BEE_ENABLE_1 = 0x01,
 }
 impl BeeEnable {
@@ -33,9 +33,9 @@ impl From<BeeEnable> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlAesModeR0 {
-    #[doc = "ECB"]
+    #[doc = "ECB."]
     CTRL_AES_MODE_R0_0 = 0x0,
-    #[doc = "CTR"]
+    #[doc = "CTR."]
     CTRL_AES_MODE_R0_1 = 0x01,
 }
 impl CtrlAesModeR0 {
@@ -64,9 +64,9 @@ impl From<CtrlAesModeR0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlAesModeR1 {
-    #[doc = "ECB"]
+    #[doc = "ECB."]
     CTRL_AES_MODE_R1_0 = 0x0,
-    #[doc = "CTR"]
+    #[doc = "CTR."]
     CTRL_AES_MODE_R1_1 = 0x01,
 }
 impl CtrlAesModeR1 {
@@ -95,9 +95,9 @@ impl From<CtrlAesModeR1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum KeyRegionSel {
-    #[doc = "Load AES key for region0"]
+    #[doc = "Load AES key for region0."]
     KEY_REGION_SEL_0 = 0x0,
-    #[doc = "Load AES key for region1"]
+    #[doc = "Load AES key for region1."]
     KEY_REGION_SEL_1 = 0x01,
 }
 impl KeyRegionSel {

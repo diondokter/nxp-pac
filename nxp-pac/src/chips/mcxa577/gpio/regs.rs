@@ -1,208 +1,208 @@
-#[doc = "Global Interrupt Control High"]
+#[doc = "Global Interrupt Control High."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gichr(pub u32);
 impl Gichr {
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe16(&self) -> super::vals::Giwe16 {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Giwe16::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe16(&mut self, val: super::vals::Giwe16) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe17(&self) -> super::vals::Giwe17 {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Giwe17::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe17(&mut self, val: super::vals::Giwe17) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe18(&self) -> super::vals::Giwe18 {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Giwe18::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe18(&mut self, val: super::vals::Giwe18) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe19(&self) -> super::vals::Giwe19 {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Giwe19::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe19(&mut self, val: super::vals::Giwe19) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe20(&self) -> super::vals::Giwe20 {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::Giwe20::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe20(&mut self, val: super::vals::Giwe20) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe21(&self) -> super::vals::Giwe21 {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::Giwe21::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe21(&mut self, val: super::vals::Giwe21) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe22(&self) -> super::vals::Giwe22 {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::Giwe22::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe22(&mut self, val: super::vals::Giwe22) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe23(&self) -> super::vals::Giwe23 {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Giwe23::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe23(&mut self, val: super::vals::Giwe23) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe24(&self) -> super::vals::Giwe24 {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::Giwe24::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe24(&mut self, val: super::vals::Giwe24) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe25(&self) -> super::vals::Giwe25 {
         let val = (self.0 >> 9usize) & 0x01;
         super::vals::Giwe25::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe25(&mut self, val: super::vals::Giwe25) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe26(&self) -> super::vals::Giwe26 {
         let val = (self.0 >> 10usize) & 0x01;
         super::vals::Giwe26::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe26(&mut self, val: super::vals::Giwe26) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe27(&self) -> super::vals::Giwe27 {
         let val = (self.0 >> 11usize) & 0x01;
         super::vals::Giwe27::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe27(&mut self, val: super::vals::Giwe27) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe28(&self) -> super::vals::Giwe28 {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Giwe28::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe28(&mut self, val: super::vals::Giwe28) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe29(&self) -> super::vals::Giwe29 {
         let val = (self.0 >> 13usize) & 0x01;
         super::vals::Giwe29::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe29(&mut self, val: super::vals::Giwe29) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe30(&self) -> super::vals::Giwe30 {
         let val = (self.0 >> 14usize) & 0x01;
         super::vals::Giwe30::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe30(&mut self, val: super::vals::Giwe30) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe31(&self) -> super::vals::Giwe31 {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::Giwe31::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe31(&mut self, val: super::vals::Giwe31) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "Global Interrupt Write Data"]
+    #[doc = "Global Interrupt Write Data."]
     #[must_use]
     #[inline(always)]
     pub const fn giwd(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "Global Interrupt Write Data"]
+    #[doc = "Global Interrupt Write Data."]
     #[inline(always)]
     pub const fn set_giwd(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -263,211 +263,211 @@ impl defmt::Format for Gichr {
         )
     }
 }
-#[doc = "Global Interrupt Control Low"]
+#[doc = "Global Interrupt Control Low."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Giclr(pub u32);
 impl Giclr {
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe0(&self) -> super::vals::Giwe0 {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Giwe0::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe0(&mut self, val: super::vals::Giwe0) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe1(&self) -> super::vals::Giwe1 {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Giwe1::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe1(&mut self, val: super::vals::Giwe1) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe2(&self) -> super::vals::Giwe2 {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Giwe2::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe2(&mut self, val: super::vals::Giwe2) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe3(&self) -> super::vals::Giwe3 {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Giwe3::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe3(&mut self, val: super::vals::Giwe3) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe4(&self) -> super::vals::Giwe4 {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::Giwe4::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe4(&mut self, val: super::vals::Giwe4) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe5(&self) -> super::vals::Giwe5 {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::Giwe5::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe5(&mut self, val: super::vals::Giwe5) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe6(&self) -> super::vals::Giwe6 {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::Giwe6::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe6(&mut self, val: super::vals::Giwe6) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe7(&self) -> super::vals::Giwe7 {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Giwe7::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe7(&mut self, val: super::vals::Giwe7) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe8(&self) -> super::vals::Giwe8 {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::Giwe8::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe8(&mut self, val: super::vals::Giwe8) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe9(&self) -> super::vals::Giwe9 {
         let val = (self.0 >> 9usize) & 0x01;
         super::vals::Giwe9::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe9(&mut self, val: super::vals::Giwe9) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe10(&self) -> super::vals::Giwe10 {
         let val = (self.0 >> 10usize) & 0x01;
         super::vals::Giwe10::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe10(&mut self, val: super::vals::Giwe10) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe11(&self) -> super::vals::Giwe11 {
         let val = (self.0 >> 11usize) & 0x01;
         super::vals::Giwe11::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe11(&mut self, val: super::vals::Giwe11) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe12(&self) -> super::vals::Giwe12 {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Giwe12::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe12(&mut self, val: super::vals::Giwe12) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe13(&self) -> super::vals::Giwe13 {
         let val = (self.0 >> 13usize) & 0x01;
         super::vals::Giwe13::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe13(&mut self, val: super::vals::Giwe13) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe14(&self) -> super::vals::Giwe14 {
         let val = (self.0 >> 14usize) & 0x01;
         super::vals::Giwe14::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe14(&mut self, val: super::vals::Giwe14) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn giwe15(&self) -> super::vals::Giwe15 {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::Giwe15::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt Write Enable"]
+    #[doc = "Global Interrupt Write Enable."]
     #[inline(always)]
     pub const fn set_giwe15(&mut self, val: super::vals::Giwe15) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "Global Interrupt Write Data"]
+    #[doc = "Global Interrupt Write Data."]
     #[must_use]
     #[inline(always)]
     pub const fn giwd(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "Global Interrupt Write Data"]
+    #[doc = "Global Interrupt Write Data."]
     #[inline(always)]
     pub const fn set_giwd(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -528,31 +528,31 @@ impl defmt::Format for Giclr {
         )
     }
 }
-#[doc = "Interrupt Control Nonprivilege"]
+#[doc = "Interrupt Control Nonprivilege."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Icnp(pub u32);
 impl Icnp {
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn npe0(&self) -> super::vals::IcnpNpe0 {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::IcnpNpe0::from_bits(val as u8)
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[inline(always)]
     pub const fn set_npe0(&mut self, val: super::vals::IcnpNpe0) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn npe1(&self) -> super::vals::IcnpNpe1 {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::IcnpNpe1::from_bits(val as u8)
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[inline(always)]
     pub const fn set_npe1(&mut self, val: super::vals::IcnpNpe1) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
@@ -583,31 +583,31 @@ impl defmt::Format for Icnp {
         )
     }
 }
-#[doc = "Interrupt Control Nonsecure"]
+#[doc = "Interrupt Control Nonsecure."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Icns(pub u32);
 impl Icns {
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn nse0(&self) -> super::vals::IcnsNse0 {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::IcnsNse0::from_bits(val as u8)
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[inline(always)]
     pub const fn set_nse0(&mut self, val: super::vals::IcnsNse0) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn nse1(&self) -> super::vals::IcnsNse1 {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::IcnsNse1::from_bits(val as u8)
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[inline(always)]
     pub const fn set_nse1(&mut self, val: super::vals::IcnsNse1) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
@@ -638,55 +638,55 @@ impl defmt::Format for Icns {
         )
     }
 }
-#[doc = "Interrupt Control index"]
+#[doc = "Interrupt Control index."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Icr(pub u32);
 impl Icr {
-    #[doc = "Interrupt Configuration"]
+    #[doc = "Interrupt Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn irqc(&self) -> super::vals::Irqc {
         let val = (self.0 >> 16usize) & 0x0f;
         super::vals::Irqc::from_bits(val as u8)
     }
-    #[doc = "Interrupt Configuration"]
+    #[doc = "Interrupt Configuration."]
     #[inline(always)]
     pub const fn set_irqc(&mut self, val: super::vals::Irqc) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val.to_bits() as u32) & 0x0f) << 16usize);
     }
-    #[doc = "Interrupt Select"]
+    #[doc = "Interrupt Select."]
     #[must_use]
     #[inline(always)]
     pub const fn irqs(&self) -> super::vals::Irqs {
         let val = (self.0 >> 20usize) & 0x01;
         super::vals::Irqs::from_bits(val as u8)
     }
-    #[doc = "Interrupt Select"]
+    #[doc = "Interrupt Select."]
     #[inline(always)]
     pub const fn set_irqs(&mut self, val: super::vals::Irqs) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
     }
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     #[must_use]
     #[inline(always)]
     pub const fn lk(&self) -> super::vals::Lk {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::Lk::from_bits(val as u8)
     }
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     #[inline(always)]
     pub const fn set_lk(&mut self, val: super::vals::Lk) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf(&self) -> super::vals::Isf {
         let val = (self.0 >> 24usize) & 0x01;
         super::vals::Isf::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf(&mut self, val: super::vals::Isf) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
@@ -721,391 +721,391 @@ impl defmt::Format for Icr {
         )
     }
 }
-#[doc = "Interrupt Status Flag"]
+#[doc = "Interrupt Status Flag."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Isfr(pub u32);
 impl Isfr {
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf0(&self) -> super::vals::Isf0 {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Isf0::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf0(&mut self, val: super::vals::Isf0) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf1(&self) -> super::vals::Isf1 {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Isf1::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf1(&mut self, val: super::vals::Isf1) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf2(&self) -> super::vals::Isf2 {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Isf2::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf2(&mut self, val: super::vals::Isf2) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf3(&self) -> super::vals::Isf3 {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Isf3::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf3(&mut self, val: super::vals::Isf3) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf4(&self) -> super::vals::Isf4 {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::Isf4::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf4(&mut self, val: super::vals::Isf4) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf5(&self) -> super::vals::Isf5 {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::Isf5::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf5(&mut self, val: super::vals::Isf5) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf6(&self) -> super::vals::Isf6 {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::Isf6::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf6(&mut self, val: super::vals::Isf6) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf7(&self) -> super::vals::Isf7 {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Isf7::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf7(&mut self, val: super::vals::Isf7) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf8(&self) -> super::vals::Isf8 {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::Isf8::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf8(&mut self, val: super::vals::Isf8) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf9(&self) -> super::vals::Isf9 {
         let val = (self.0 >> 9usize) & 0x01;
         super::vals::Isf9::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf9(&mut self, val: super::vals::Isf9) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf10(&self) -> super::vals::Isf10 {
         let val = (self.0 >> 10usize) & 0x01;
         super::vals::Isf10::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf10(&mut self, val: super::vals::Isf10) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf11(&self) -> super::vals::Isf11 {
         let val = (self.0 >> 11usize) & 0x01;
         super::vals::Isf11::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf11(&mut self, val: super::vals::Isf11) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf12(&self) -> super::vals::Isf12 {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Isf12::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf12(&mut self, val: super::vals::Isf12) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf13(&self) -> super::vals::Isf13 {
         let val = (self.0 >> 13usize) & 0x01;
         super::vals::Isf13::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf13(&mut self, val: super::vals::Isf13) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf14(&self) -> super::vals::Isf14 {
         let val = (self.0 >> 14usize) & 0x01;
         super::vals::Isf14::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf14(&mut self, val: super::vals::Isf14) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf15(&self) -> super::vals::Isf15 {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::Isf15::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf15(&mut self, val: super::vals::Isf15) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf16(&self) -> super::vals::Isf16 {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::Isf16::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf16(&mut self, val: super::vals::Isf16) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf17(&self) -> super::vals::Isf17 {
         let val = (self.0 >> 17usize) & 0x01;
         super::vals::Isf17::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf17(&mut self, val: super::vals::Isf17) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf18(&self) -> super::vals::Isf18 {
         let val = (self.0 >> 18usize) & 0x01;
         super::vals::Isf18::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf18(&mut self, val: super::vals::Isf18) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val.to_bits() as u32) & 0x01) << 18usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf19(&self) -> super::vals::Isf19 {
         let val = (self.0 >> 19usize) & 0x01;
         super::vals::Isf19::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf19(&mut self, val: super::vals::Isf19) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val.to_bits() as u32) & 0x01) << 19usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf20(&self) -> super::vals::Isf20 {
         let val = (self.0 >> 20usize) & 0x01;
         super::vals::Isf20::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf20(&mut self, val: super::vals::Isf20) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf21(&self) -> super::vals::Isf21 {
         let val = (self.0 >> 21usize) & 0x01;
         super::vals::Isf21::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf21(&mut self, val: super::vals::Isf21) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf22(&self) -> super::vals::Isf22 {
         let val = (self.0 >> 22usize) & 0x01;
         super::vals::Isf22::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf22(&mut self, val: super::vals::Isf22) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf23(&self) -> super::vals::Isf23 {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::Isf23::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf23(&mut self, val: super::vals::Isf23) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf24(&self) -> super::vals::Isf24 {
         let val = (self.0 >> 24usize) & 0x01;
         super::vals::Isf24::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf24(&mut self, val: super::vals::Isf24) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf25(&self) -> super::vals::Isf25 {
         let val = (self.0 >> 25usize) & 0x01;
         super::vals::Isf25::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf25(&mut self, val: super::vals::Isf25) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val.to_bits() as u32) & 0x01) << 25usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf26(&self) -> super::vals::Isf26 {
         let val = (self.0 >> 26usize) & 0x01;
         super::vals::Isf26::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf26(&mut self, val: super::vals::Isf26) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf27(&self) -> super::vals::Isf27 {
         let val = (self.0 >> 27usize) & 0x01;
         super::vals::Isf27::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf27(&mut self, val: super::vals::Isf27) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val.to_bits() as u32) & 0x01) << 27usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf28(&self) -> super::vals::Isf28 {
         let val = (self.0 >> 28usize) & 0x01;
         super::vals::Isf28::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf28(&mut self, val: super::vals::Isf28) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf29(&self) -> super::vals::Isf29 {
         let val = (self.0 >> 29usize) & 0x01;
         super::vals::Isf29::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf29(&mut self, val: super::vals::Isf29) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf30(&self) -> super::vals::Isf30 {
         let val = (self.0 >> 30usize) & 0x01;
         super::vals::Isf30::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf30(&mut self, val: super::vals::Isf30) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn isf31(&self) -> super::vals::Isf31 {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::Isf31::from_bits(val as u8)
     }
-    #[doc = "Interrupt Status Flag"]
+    #[doc = "Interrupt Status Flag."]
     #[inline(always)]
     pub const fn set_isf31(&mut self, val: super::vals::Isf31) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -1196,55 +1196,55 @@ impl defmt::Format for Isfr {
         )
     }
 }
-#[doc = "Lock"]
+#[doc = "Lock."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lock(pub u32);
 impl Lock {
-    #[doc = "Lock PCNS"]
+    #[doc = "Lock PCNS."]
     #[must_use]
     #[inline(always)]
     pub const fn pcns(&self) -> super::vals::Pcns {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Pcns::from_bits(val as u8)
     }
-    #[doc = "Lock PCNS"]
+    #[doc = "Lock PCNS."]
     #[inline(always)]
     pub const fn set_pcns(&mut self, val: super::vals::Pcns) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Lock ICNS"]
+    #[doc = "Lock ICNS."]
     #[must_use]
     #[inline(always)]
     pub const fn icns(&self) -> super::vals::Icns {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Icns::from_bits(val as u8)
     }
-    #[doc = "Lock ICNS"]
+    #[doc = "Lock ICNS."]
     #[inline(always)]
     pub const fn set_icns(&mut self, val: super::vals::Icns) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Lock PCNP"]
+    #[doc = "Lock PCNP."]
     #[must_use]
     #[inline(always)]
     pub const fn pcnp(&self) -> super::vals::Pcnp {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Pcnp::from_bits(val as u8)
     }
-    #[doc = "Lock PCNP"]
+    #[doc = "Lock PCNP."]
     #[inline(always)]
     pub const fn set_pcnp(&mut self, val: super::vals::Pcnp) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "Lock ICNP"]
+    #[doc = "Lock ICNP."]
     #[must_use]
     #[inline(always)]
     pub const fn icnp(&self) -> super::vals::Icnp {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Icnp::from_bits(val as u8)
     }
-    #[doc = "Lock ICNP"]
+    #[doc = "Lock ICNP."]
     #[inline(always)]
     pub const fn set_icnp(&mut self, val: super::vals::Icnp) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
@@ -1279,19 +1279,19 @@ impl defmt::Format for Lock {
         )
     }
 }
-#[doc = "Parameter"]
+#[doc = "Parameter."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Param(pub u32);
 impl Param {
-    #[doc = "Interrupt Number"]
+    #[doc = "Interrupt Number."]
     #[must_use]
     #[inline(always)]
     pub const fn irqnum(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "Interrupt Number"]
+    #[doc = "Interrupt Number."]
     #[inline(always)]
     pub const fn set_irqnum(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
@@ -1316,391 +1316,391 @@ impl defmt::Format for Param {
         defmt::write!(f, "Param {{ irqnum: {=u8:?} }}", self.irqnum())
     }
 }
-#[doc = "Pin Control Nonprivilege"]
+#[doc = "Pin Control Nonprivilege."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pcnp(pub u32);
 impl Pcnp {
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn npe0(&self) -> super::vals::PcnpNpe0 {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::PcnpNpe0::from_bits(val as u8)
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[inline(always)]
     pub const fn set_npe0(&mut self, val: super::vals::PcnpNpe0) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn npe1(&self) -> super::vals::PcnpNpe1 {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::PcnpNpe1::from_bits(val as u8)
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[inline(always)]
     pub const fn set_npe1(&mut self, val: super::vals::PcnpNpe1) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn npe2(&self) -> super::vals::Npe2 {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Npe2::from_bits(val as u8)
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[inline(always)]
     pub const fn set_npe2(&mut self, val: super::vals::Npe2) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn npe3(&self) -> super::vals::Npe3 {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Npe3::from_bits(val as u8)
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[inline(always)]
     pub const fn set_npe3(&mut self, val: super::vals::Npe3) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn npe4(&self) -> super::vals::Npe4 {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::Npe4::from_bits(val as u8)
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[inline(always)]
     pub const fn set_npe4(&mut self, val: super::vals::Npe4) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn npe5(&self) -> super::vals::Npe5 {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::Npe5::from_bits(val as u8)
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[inline(always)]
     pub const fn set_npe5(&mut self, val: super::vals::Npe5) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn npe6(&self) -> super::vals::Npe6 {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::Npe6::from_bits(val as u8)
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[inline(always)]
     pub const fn set_npe6(&mut self, val: super::vals::Npe6) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn npe7(&self) -> super::vals::Npe7 {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Npe7::from_bits(val as u8)
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[inline(always)]
     pub const fn set_npe7(&mut self, val: super::vals::Npe7) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn npe8(&self) -> super::vals::Npe8 {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::Npe8::from_bits(val as u8)
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[inline(always)]
     pub const fn set_npe8(&mut self, val: super::vals::Npe8) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn npe9(&self) -> super::vals::Npe9 {
         let val = (self.0 >> 9usize) & 0x01;
         super::vals::Npe9::from_bits(val as u8)
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[inline(always)]
     pub const fn set_npe9(&mut self, val: super::vals::Npe9) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn npe10(&self) -> super::vals::Npe10 {
         let val = (self.0 >> 10usize) & 0x01;
         super::vals::Npe10::from_bits(val as u8)
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[inline(always)]
     pub const fn set_npe10(&mut self, val: super::vals::Npe10) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn npe11(&self) -> super::vals::Npe11 {
         let val = (self.0 >> 11usize) & 0x01;
         super::vals::Npe11::from_bits(val as u8)
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[inline(always)]
     pub const fn set_npe11(&mut self, val: super::vals::Npe11) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn npe12(&self) -> super::vals::Npe12 {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Npe12::from_bits(val as u8)
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[inline(always)]
     pub const fn set_npe12(&mut self, val: super::vals::Npe12) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn npe13(&self) -> super::vals::Npe13 {
         let val = (self.0 >> 13usize) & 0x01;
         super::vals::Npe13::from_bits(val as u8)
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[inline(always)]
     pub const fn set_npe13(&mut self, val: super::vals::Npe13) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn npe14(&self) -> super::vals::Npe14 {
         let val = (self.0 >> 14usize) & 0x01;
         super::vals::Npe14::from_bits(val as u8)
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[inline(always)]
     pub const fn set_npe14(&mut self, val: super::vals::Npe14) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn npe15(&self) -> super::vals::Npe15 {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::Npe15::from_bits(val as u8)
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[inline(always)]
     pub const fn set_npe15(&mut self, val: super::vals::Npe15) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn npe16(&self) -> super::vals::Npe16 {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::Npe16::from_bits(val as u8)
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[inline(always)]
     pub const fn set_npe16(&mut self, val: super::vals::Npe16) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn npe17(&self) -> super::vals::Npe17 {
         let val = (self.0 >> 17usize) & 0x01;
         super::vals::Npe17::from_bits(val as u8)
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[inline(always)]
     pub const fn set_npe17(&mut self, val: super::vals::Npe17) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn npe18(&self) -> super::vals::Npe18 {
         let val = (self.0 >> 18usize) & 0x01;
         super::vals::Npe18::from_bits(val as u8)
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[inline(always)]
     pub const fn set_npe18(&mut self, val: super::vals::Npe18) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val.to_bits() as u32) & 0x01) << 18usize);
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn npe19(&self) -> super::vals::Npe19 {
         let val = (self.0 >> 19usize) & 0x01;
         super::vals::Npe19::from_bits(val as u8)
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[inline(always)]
     pub const fn set_npe19(&mut self, val: super::vals::Npe19) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val.to_bits() as u32) & 0x01) << 19usize);
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn npe20(&self) -> super::vals::Npe20 {
         let val = (self.0 >> 20usize) & 0x01;
         super::vals::Npe20::from_bits(val as u8)
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[inline(always)]
     pub const fn set_npe20(&mut self, val: super::vals::Npe20) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn npe21(&self) -> super::vals::Npe21 {
         let val = (self.0 >> 21usize) & 0x01;
         super::vals::Npe21::from_bits(val as u8)
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[inline(always)]
     pub const fn set_npe21(&mut self, val: super::vals::Npe21) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn npe22(&self) -> super::vals::Npe22 {
         let val = (self.0 >> 22usize) & 0x01;
         super::vals::Npe22::from_bits(val as u8)
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[inline(always)]
     pub const fn set_npe22(&mut self, val: super::vals::Npe22) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn npe23(&self) -> super::vals::Npe23 {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::Npe23::from_bits(val as u8)
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[inline(always)]
     pub const fn set_npe23(&mut self, val: super::vals::Npe23) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn npe24(&self) -> super::vals::Npe24 {
         let val = (self.0 >> 24usize) & 0x01;
         super::vals::Npe24::from_bits(val as u8)
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[inline(always)]
     pub const fn set_npe24(&mut self, val: super::vals::Npe24) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn npe25(&self) -> super::vals::Npe25 {
         let val = (self.0 >> 25usize) & 0x01;
         super::vals::Npe25::from_bits(val as u8)
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[inline(always)]
     pub const fn set_npe25(&mut self, val: super::vals::Npe25) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val.to_bits() as u32) & 0x01) << 25usize);
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn npe26(&self) -> super::vals::Npe26 {
         let val = (self.0 >> 26usize) & 0x01;
         super::vals::Npe26::from_bits(val as u8)
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[inline(always)]
     pub const fn set_npe26(&mut self, val: super::vals::Npe26) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn npe27(&self) -> super::vals::Npe27 {
         let val = (self.0 >> 27usize) & 0x01;
         super::vals::Npe27::from_bits(val as u8)
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[inline(always)]
     pub const fn set_npe27(&mut self, val: super::vals::Npe27) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val.to_bits() as u32) & 0x01) << 27usize);
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn npe28(&self) -> super::vals::Npe28 {
         let val = (self.0 >> 28usize) & 0x01;
         super::vals::Npe28::from_bits(val as u8)
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[inline(always)]
     pub const fn set_npe28(&mut self, val: super::vals::Npe28) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn npe29(&self) -> super::vals::Npe29 {
         let val = (self.0 >> 29usize) & 0x01;
         super::vals::Npe29::from_bits(val as u8)
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[inline(always)]
     pub const fn set_npe29(&mut self, val: super::vals::Npe29) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn npe30(&self) -> super::vals::Npe30 {
         let val = (self.0 >> 30usize) & 0x01;
         super::vals::Npe30::from_bits(val as u8)
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[inline(always)]
     pub const fn set_npe30(&mut self, val: super::vals::Npe30) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn npe31(&self) -> super::vals::Npe31 {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::Npe31::from_bits(val as u8)
     }
-    #[doc = "Nonprivilege Enable"]
+    #[doc = "Nonprivilege Enable."]
     #[inline(always)]
     pub const fn set_npe31(&mut self, val: super::vals::Npe31) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -1791,391 +1791,391 @@ impl defmt::Format for Pcnp {
         )
     }
 }
-#[doc = "Pin Control Nonsecure"]
+#[doc = "Pin Control Nonsecure."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pcns(pub u32);
 impl Pcns {
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn nse0(&self) -> super::vals::PcnsNse0 {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::PcnsNse0::from_bits(val as u8)
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[inline(always)]
     pub const fn set_nse0(&mut self, val: super::vals::PcnsNse0) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn nse1(&self) -> super::vals::PcnsNse1 {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::PcnsNse1::from_bits(val as u8)
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[inline(always)]
     pub const fn set_nse1(&mut self, val: super::vals::PcnsNse1) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn nse2(&self) -> super::vals::Nse2 {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Nse2::from_bits(val as u8)
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[inline(always)]
     pub const fn set_nse2(&mut self, val: super::vals::Nse2) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn nse3(&self) -> super::vals::Nse3 {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Nse3::from_bits(val as u8)
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[inline(always)]
     pub const fn set_nse3(&mut self, val: super::vals::Nse3) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn nse4(&self) -> super::vals::Nse4 {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::Nse4::from_bits(val as u8)
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[inline(always)]
     pub const fn set_nse4(&mut self, val: super::vals::Nse4) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn nse5(&self) -> super::vals::Nse5 {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::Nse5::from_bits(val as u8)
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[inline(always)]
     pub const fn set_nse5(&mut self, val: super::vals::Nse5) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn nse6(&self) -> super::vals::Nse6 {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::Nse6::from_bits(val as u8)
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[inline(always)]
     pub const fn set_nse6(&mut self, val: super::vals::Nse6) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn nse7(&self) -> super::vals::Nse7 {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Nse7::from_bits(val as u8)
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[inline(always)]
     pub const fn set_nse7(&mut self, val: super::vals::Nse7) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn nse8(&self) -> super::vals::Nse8 {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::Nse8::from_bits(val as u8)
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[inline(always)]
     pub const fn set_nse8(&mut self, val: super::vals::Nse8) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn nse9(&self) -> super::vals::Nse9 {
         let val = (self.0 >> 9usize) & 0x01;
         super::vals::Nse9::from_bits(val as u8)
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[inline(always)]
     pub const fn set_nse9(&mut self, val: super::vals::Nse9) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn nse10(&self) -> super::vals::Nse10 {
         let val = (self.0 >> 10usize) & 0x01;
         super::vals::Nse10::from_bits(val as u8)
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[inline(always)]
     pub const fn set_nse10(&mut self, val: super::vals::Nse10) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn nse11(&self) -> super::vals::Nse11 {
         let val = (self.0 >> 11usize) & 0x01;
         super::vals::Nse11::from_bits(val as u8)
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[inline(always)]
     pub const fn set_nse11(&mut self, val: super::vals::Nse11) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn nse12(&self) -> super::vals::Nse12 {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Nse12::from_bits(val as u8)
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[inline(always)]
     pub const fn set_nse12(&mut self, val: super::vals::Nse12) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn nse13(&self) -> super::vals::Nse13 {
         let val = (self.0 >> 13usize) & 0x01;
         super::vals::Nse13::from_bits(val as u8)
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[inline(always)]
     pub const fn set_nse13(&mut self, val: super::vals::Nse13) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn nse14(&self) -> super::vals::Nse14 {
         let val = (self.0 >> 14usize) & 0x01;
         super::vals::Nse14::from_bits(val as u8)
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[inline(always)]
     pub const fn set_nse14(&mut self, val: super::vals::Nse14) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn nse15(&self) -> super::vals::Nse15 {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::Nse15::from_bits(val as u8)
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[inline(always)]
     pub const fn set_nse15(&mut self, val: super::vals::Nse15) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn nse16(&self) -> super::vals::Nse16 {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::Nse16::from_bits(val as u8)
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[inline(always)]
     pub const fn set_nse16(&mut self, val: super::vals::Nse16) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn nse17(&self) -> super::vals::Nse17 {
         let val = (self.0 >> 17usize) & 0x01;
         super::vals::Nse17::from_bits(val as u8)
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[inline(always)]
     pub const fn set_nse17(&mut self, val: super::vals::Nse17) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn nse18(&self) -> super::vals::Nse18 {
         let val = (self.0 >> 18usize) & 0x01;
         super::vals::Nse18::from_bits(val as u8)
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[inline(always)]
     pub const fn set_nse18(&mut self, val: super::vals::Nse18) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val.to_bits() as u32) & 0x01) << 18usize);
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn nse19(&self) -> super::vals::Nse19 {
         let val = (self.0 >> 19usize) & 0x01;
         super::vals::Nse19::from_bits(val as u8)
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[inline(always)]
     pub const fn set_nse19(&mut self, val: super::vals::Nse19) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val.to_bits() as u32) & 0x01) << 19usize);
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn nse20(&self) -> super::vals::Nse20 {
         let val = (self.0 >> 20usize) & 0x01;
         super::vals::Nse20::from_bits(val as u8)
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[inline(always)]
     pub const fn set_nse20(&mut self, val: super::vals::Nse20) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn nse21(&self) -> super::vals::Nse21 {
         let val = (self.0 >> 21usize) & 0x01;
         super::vals::Nse21::from_bits(val as u8)
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[inline(always)]
     pub const fn set_nse21(&mut self, val: super::vals::Nse21) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn nse22(&self) -> super::vals::Nse22 {
         let val = (self.0 >> 22usize) & 0x01;
         super::vals::Nse22::from_bits(val as u8)
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[inline(always)]
     pub const fn set_nse22(&mut self, val: super::vals::Nse22) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn nse23(&self) -> super::vals::Nse23 {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::Nse23::from_bits(val as u8)
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[inline(always)]
     pub const fn set_nse23(&mut self, val: super::vals::Nse23) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn nse24(&self) -> super::vals::Nse24 {
         let val = (self.0 >> 24usize) & 0x01;
         super::vals::Nse24::from_bits(val as u8)
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[inline(always)]
     pub const fn set_nse24(&mut self, val: super::vals::Nse24) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn nse25(&self) -> super::vals::Nse25 {
         let val = (self.0 >> 25usize) & 0x01;
         super::vals::Nse25::from_bits(val as u8)
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[inline(always)]
     pub const fn set_nse25(&mut self, val: super::vals::Nse25) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val.to_bits() as u32) & 0x01) << 25usize);
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn nse26(&self) -> super::vals::Nse26 {
         let val = (self.0 >> 26usize) & 0x01;
         super::vals::Nse26::from_bits(val as u8)
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[inline(always)]
     pub const fn set_nse26(&mut self, val: super::vals::Nse26) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn nse27(&self) -> super::vals::Nse27 {
         let val = (self.0 >> 27usize) & 0x01;
         super::vals::Nse27::from_bits(val as u8)
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[inline(always)]
     pub const fn set_nse27(&mut self, val: super::vals::Nse27) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val.to_bits() as u32) & 0x01) << 27usize);
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn nse28(&self) -> super::vals::Nse28 {
         let val = (self.0 >> 28usize) & 0x01;
         super::vals::Nse28::from_bits(val as u8)
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[inline(always)]
     pub const fn set_nse28(&mut self, val: super::vals::Nse28) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn nse29(&self) -> super::vals::Nse29 {
         let val = (self.0 >> 29usize) & 0x01;
         super::vals::Nse29::from_bits(val as u8)
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[inline(always)]
     pub const fn set_nse29(&mut self, val: super::vals::Nse29) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn nse30(&self) -> super::vals::Nse30 {
         let val = (self.0 >> 30usize) & 0x01;
         super::vals::Nse30::from_bits(val as u8)
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[inline(always)]
     pub const fn set_nse30(&mut self, val: super::vals::Nse30) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn nse31(&self) -> super::vals::Nse31 {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::Nse31::from_bits(val as u8)
     }
-    #[doc = "Nonsecure Enable"]
+    #[doc = "Nonsecure Enable."]
     #[inline(always)]
     pub const fn set_nse31(&mut self, val: super::vals::Nse31) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -2266,12 +2266,12 @@ impl defmt::Format for Pcns {
         )
     }
 }
-#[doc = "Port Clear Output"]
+#[doc = "Port Clear Output."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pcor(pub u32);
 impl Pcor {
-    #[doc = "Port Clear Output"]
+    #[doc = "Port Clear Output."]
     #[must_use]
     #[inline(always)]
     pub const fn ptco(&self, n: usize) -> super::vals::Ptco {
@@ -2280,7 +2280,7 @@ impl Pcor {
         let val = (self.0 >> offs) & 0x01;
         super::vals::Ptco::from_bits(val as u8)
     }
-    #[doc = "Port Clear Output"]
+    #[doc = "Port Clear Output."]
     #[inline(always)]
     pub const fn set_ptco(&mut self, n: usize, val: super::vals::Ptco) {
         assert!(n < 32usize);
@@ -2373,12 +2373,12 @@ impl defmt::Format for Pcor {
         )
     }
 }
-#[doc = "Port Data Direction"]
+#[doc = "Port Data Direction."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pddr(pub u32);
 impl Pddr {
-    #[doc = "Port Data Direction"]
+    #[doc = "Port Data Direction."]
     #[must_use]
     #[inline(always)]
     pub const fn pdd(&self, n: usize) -> super::vals::Pdd {
@@ -2387,7 +2387,7 @@ impl Pddr {
         let val = (self.0 >> offs) & 0x01;
         super::vals::Pdd::from_bits(val as u8)
     }
-    #[doc = "Port Data Direction"]
+    #[doc = "Port Data Direction."]
     #[inline(always)]
     pub const fn set_pdd(&mut self, n: usize, val: super::vals::Pdd) {
         assert!(n < 32usize);
@@ -2480,12 +2480,12 @@ impl defmt::Format for Pddr {
         )
     }
 }
-#[doc = "Port Data Input"]
+#[doc = "Port Data Input."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pdir(pub u32);
 impl Pdir {
-    #[doc = "Port Data Input"]
+    #[doc = "Port Data Input."]
     #[must_use]
     #[inline(always)]
     pub const fn pdi(&self, n: usize) -> bool {
@@ -2494,7 +2494,7 @@ impl Pdir {
         let val = (self.0 >> offs) & 0x01;
         val != 0
     }
-    #[doc = "Port Data Input"]
+    #[doc = "Port Data Input."]
     #[inline(always)]
     pub const fn set_pdi(&mut self, n: usize, val: bool) {
         assert!(n < 32usize);
@@ -2587,12 +2587,12 @@ impl defmt::Format for Pdir {
         )
     }
 }
-#[doc = "Port Data Output"]
+#[doc = "Port Data Output."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pdor(pub u32);
 impl Pdor {
-    #[doc = "Port Data Output"]
+    #[doc = "Port Data Output."]
     #[must_use]
     #[inline(always)]
     pub const fn pdo(&self, n: usize) -> bool {
@@ -2601,7 +2601,7 @@ impl Pdor {
         let val = (self.0 >> offs) & 0x01;
         val != 0
     }
-    #[doc = "Port Data Output"]
+    #[doc = "Port Data Output."]
     #[inline(always)]
     pub const fn set_pdo(&mut self, n: usize, val: bool) {
         assert!(n < 32usize);
@@ -2694,19 +2694,19 @@ impl defmt::Format for Pdor {
         )
     }
 }
-#[doc = "Pin Data"]
+#[doc = "Pin Data."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pdr(pub u8);
 impl Pdr {
-    #[doc = "Pin Data (I/O)"]
+    #[doc = "Pin Data (I/O)."]
     #[must_use]
     #[inline(always)]
     pub const fn pd(&self) -> super::vals::Pd {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Pd::from_bits(val as u8)
     }
-    #[doc = "Pin Data (I/O)"]
+    #[doc = "Pin Data (I/O)."]
     #[inline(always)]
     pub const fn set_pd(&mut self, val: super::vals::Pd) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u8) & 0x01) << 0usize);
@@ -2729,12 +2729,12 @@ impl defmt::Format for Pdr {
         defmt::write!(f, "Pdr {{ pd: {:?} }}", self.pd())
     }
 }
-#[doc = "Port Input Disable"]
+#[doc = "Port Input Disable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pidr(pub u32);
 impl Pidr {
-    #[doc = "Port Input Disable"]
+    #[doc = "Port Input Disable."]
     #[must_use]
     #[inline(always)]
     pub const fn pid(&self, n: usize) -> super::vals::Pid {
@@ -2743,7 +2743,7 @@ impl Pidr {
         let val = (self.0 >> offs) & 0x01;
         super::vals::Pid::from_bits(val as u8)
     }
-    #[doc = "Port Input Disable"]
+    #[doc = "Port Input Disable."]
     #[inline(always)]
     pub const fn set_pid(&mut self, n: usize, val: super::vals::Pid) {
         assert!(n < 32usize);
@@ -2836,12 +2836,12 @@ impl defmt::Format for Pidr {
         )
     }
 }
-#[doc = "Port Set Output"]
+#[doc = "Port Set Output."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Psor(pub u32);
 impl Psor {
-    #[doc = "Port Set Output"]
+    #[doc = "Port Set Output."]
     #[must_use]
     #[inline(always)]
     pub const fn ptso(&self, n: usize) -> super::vals::Ptso {
@@ -2850,7 +2850,7 @@ impl Psor {
         let val = (self.0 >> offs) & 0x01;
         super::vals::Ptso::from_bits(val as u8)
     }
-    #[doc = "Port Set Output"]
+    #[doc = "Port Set Output."]
     #[inline(always)]
     pub const fn set_ptso(&mut self, n: usize, val: super::vals::Ptso) {
         assert!(n < 32usize);
@@ -2943,12 +2943,12 @@ impl defmt::Format for Psor {
         )
     }
 }
-#[doc = "Port Toggle Output"]
+#[doc = "Port Toggle Output."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ptor(pub u32);
 impl Ptor {
-    #[doc = "Port Toggle Output"]
+    #[doc = "Port Toggle Output."]
     #[must_use]
     #[inline(always)]
     pub const fn ptto(&self, n: usize) -> bool {
@@ -2957,7 +2957,7 @@ impl Ptor {
         let val = (self.0 >> offs) & 0x01;
         val != 0
     }
-    #[doc = "Port Toggle Output"]
+    #[doc = "Port Toggle Output."]
     #[inline(always)]
     pub const fn set_ptto(&mut self, n: usize, val: bool) {
         assert!(n < 32usize);
@@ -3050,43 +3050,43 @@ impl defmt::Format for Ptor {
         )
     }
 }
-#[doc = "Version ID"]
+#[doc = "Version ID."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Verid(pub u32);
 impl Verid {
-    #[doc = "Feature Specification Number"]
+    #[doc = "Feature Specification Number."]
     #[must_use]
     #[inline(always)]
     pub const fn feature(&self) -> super::vals::Feature {
         let val = (self.0 >> 0usize) & 0xffff;
         super::vals::Feature::from_bits(val as u16)
     }
-    #[doc = "Feature Specification Number"]
+    #[doc = "Feature Specification Number."]
     #[inline(always)]
     pub const fn set_feature(&mut self, val: super::vals::Feature) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val.to_bits() as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Minor Version Number"]
+    #[doc = "Minor Version Number."]
     #[must_use]
     #[inline(always)]
     pub const fn minor(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0xff;
         val as u8
     }
-    #[doc = "Minor Version Number"]
+    #[doc = "Minor Version Number."]
     #[inline(always)]
     pub const fn set_minor(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
     }
-    #[doc = "Major Version Number"]
+    #[doc = "Major Version Number."]
     #[must_use]
     #[inline(always)]
     pub const fn major(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "Major Version Number"]
+    #[doc = "Major Version Number."]
     #[inline(always)]
     pub const fn set_major(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);

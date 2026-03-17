@@ -33,9 +33,9 @@ impl From<BusErr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Swr {
-    #[doc = "Software Reset cleared"]
+    #[doc = "Software Reset cleared."]
     CLEARED = 0x0,
-    #[doc = "Software Reset asserted"]
+    #[doc = "Software Reset asserted."]
     ASSERTED = 0x01,
 }
 impl Swr {

@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Datafix(u8);
 impl Datafix {
-    #[doc = "Address comparator triggers a opcode patch"]
+    #[doc = "Address comparator triggers a opcode patch."]
     pub const DATAFIX_0: Self = Self(0x0);
-    #[doc = "Address comparator triggers a data fix"]
+    #[doc = "Address comparator triggers a data fix."]
     pub const DATAFIX_1: Self = Self(0x01);
 }
 impl Datafix {
@@ -50,9 +50,9 @@ impl From<Datafix> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dis {
-    #[doc = "Does not affect any ROMC functions (default)"]
+    #[doc = "Does not affect any ROMC functions (default)."]
     DIS_0 = 0x0,
-    #[doc = "Disable all ROMC functions: data fixing, and opcode patching"]
+    #[doc = "Disable all ROMC functions: data fixing, and opcode patching."]
     DIS_1 = 0x01,
 }
 impl Dis {
@@ -81,9 +81,9 @@ impl From<Dis> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Enable(u16);
 impl Enable {
-    #[doc = "Address comparator disabled"]
+    #[doc = "Address comparator disabled."]
     pub const ENABLE_0: Self = Self(0x0);
-    #[doc = "Address comparator enabled, ROMC will trigger a opcode patch or data fix event upon matching of the associated address"]
+    #[doc = "Address comparator enabled, ROMC will trigger a opcode patch or data fix event upon matching of the associated address."]
     pub const ENABLE_1: Self = Self(0x01);
 }
 impl Enable {
@@ -129,9 +129,9 @@ impl From<Enable> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Source {
-    #[doc = "Address Comparator 0 matched"]
+    #[doc = "Address Comparator 0 matched."]
     SOURCE_0 = 0x0,
-    #[doc = "Address Comparator 1 matched"]
+    #[doc = "Address Comparator 1 matched."]
     SOURCE_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -146,7 +146,7 @@ pub enum Source {
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "Address Comparator 15 matched"]
+    #[doc = "Address Comparator 15 matched."]
     SOURCE_15 = 0x0f,
     _RESERVED_10 = 0x10,
     _RESERVED_11 = 0x11,
@@ -223,9 +223,9 @@ impl From<Source> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sw {
-    #[doc = "no event or comparator collisions"]
+    #[doc = "no event or comparator collisions."]
     SW_0 = 0x0,
-    #[doc = "a collision has occurred"]
+    #[doc = "a collision has occurred."]
     SW_1 = 0x01,
 }
 impl Sw {
@@ -254,9 +254,9 @@ impl From<Sw> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Thumbx {
-    #[doc = "Arm patch"]
+    #[doc = "Arm patch."]
     THUMBX_0 = 0x0,
-    #[doc = "THUMB patch (ignore if data fix)"]
+    #[doc = "THUMB patch (ignore if data fix)."]
     THUMBX_1 = 0x01,
 }
 impl Thumbx {

@@ -1,124 +1,124 @@
-#[doc = "AHB Bus Control"]
+#[doc = "AHB Bus Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ahbcr(pub u32);
 impl Ahbcr {
-    #[doc = "AHB Parallel Mode Enable"]
+    #[doc = "AHB Parallel Mode Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn aparen(&self) -> super::vals::Aparen {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Aparen::from_bits(val as u8)
     }
-    #[doc = "AHB Parallel Mode Enable"]
+    #[doc = "AHB Parallel Mode Enable."]
     #[inline(always)]
     pub const fn set_aparen(&mut self, val: super::vals::Aparen) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Clear AHB Receive Buffer"]
+    #[doc = "Clear AHB Receive Buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn clrahbrxbuf(&self) -> super::vals::Clrahbrxbuf {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Clrahbrxbuf::from_bits(val as u8)
     }
-    #[doc = "Clear AHB Receive Buffer"]
+    #[doc = "Clear AHB Receive Buffer."]
     #[inline(always)]
     pub const fn set_clrahbrxbuf(&mut self, val: super::vals::Clrahbrxbuf) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Clear AHB Transmit Buffer"]
+    #[doc = "Clear AHB Transmit Buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn clrahbtxbuf(&self) -> super::vals::Clrahbtxbuf {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Clrahbtxbuf::from_bits(val as u8)
     }
-    #[doc = "Clear AHB Transmit Buffer"]
+    #[doc = "Clear AHB Transmit Buffer."]
     #[inline(always)]
     pub const fn set_clrahbtxbuf(&mut self, val: super::vals::Clrahbtxbuf) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "Cacheable Read Access Enable"]
+    #[doc = "Cacheable Read Access Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn cachableen(&self) -> super::vals::Cachableen {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Cachableen::from_bits(val as u8)
     }
-    #[doc = "Cacheable Read Access Enable"]
+    #[doc = "Cacheable Read Access Enable."]
     #[inline(always)]
     pub const fn set_cachableen(&mut self, val: super::vals::Cachableen) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "Bufferable Write Access Enable"]
+    #[doc = "Bufferable Write Access Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn bufferableen(&self) -> super::vals::Bufferableen {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::Bufferableen::from_bits(val as u8)
     }
-    #[doc = "Bufferable Write Access Enable"]
+    #[doc = "Bufferable Write Access Enable."]
     #[inline(always)]
     pub const fn set_bufferableen(&mut self, val: super::vals::Bufferableen) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
-    #[doc = "AHB Read Prefetch Enable"]
+    #[doc = "AHB Read Prefetch Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn prefetchen(&self) -> super::vals::AhbcrPrefetchen {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::AhbcrPrefetchen::from_bits(val as u8)
     }
-    #[doc = "AHB Read Prefetch Enable"]
+    #[doc = "AHB Read Prefetch Enable."]
     #[inline(always)]
     pub const fn set_prefetchen(&mut self, val: super::vals::AhbcrPrefetchen) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
-    #[doc = "AHB Read Address Option"]
+    #[doc = "AHB Read Address Option."]
     #[must_use]
     #[inline(always)]
     pub const fn readaddropt(&self) -> super::vals::Readaddropt {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::Readaddropt::from_bits(val as u8)
     }
-    #[doc = "AHB Read Address Option"]
+    #[doc = "AHB Read Address Option."]
     #[inline(always)]
     pub const fn set_readaddropt(&mut self, val: super::vals::Readaddropt) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "AHB Read Resume Disable"]
+    #[doc = "AHB Read Resume Disable."]
     #[must_use]
     #[inline(always)]
     pub const fn resumedisable(&self) -> super::vals::Resumedisable {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Resumedisable::from_bits(val as u8)
     }
-    #[doc = "AHB Read Resume Disable"]
+    #[doc = "AHB Read Resume Disable."]
     #[inline(always)]
     pub const fn set_resumedisable(&mut self, val: super::vals::Resumedisable) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "AHB Read Size Alignment"]
+    #[doc = "AHB Read Size Alignment."]
     #[must_use]
     #[inline(always)]
     pub const fn readszalign(&self) -> super::vals::Readszalign {
         let val = (self.0 >> 10usize) & 0x01;
         super::vals::Readszalign::from_bits(val as u8)
     }
-    #[doc = "AHB Read Size Alignment"]
+    #[doc = "AHB Read Size Alignment."]
     #[inline(always)]
     pub const fn set_readszalign(&mut self, val: super::vals::Readszalign) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
-    #[doc = "AHB Memory-Mapped Flash Base Address"]
+    #[doc = "AHB Memory-Mapped Flash Base Address."]
     #[must_use]
     #[inline(always)]
     pub const fn aflashbase(&self) -> u8 {
         let val = (self.0 >> 28usize) & 0x0f;
         val as u8
     }
-    #[doc = "AHB Memory-Mapped Flash Base Address"]
+    #[doc = "AHB Memory-Mapped Flash Base Address."]
     #[inline(always)]
     pub const fn set_aflashbase(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 28usize)) | (((val as u32) & 0x0f) << 28usize);
@@ -165,55 +165,55 @@ impl defmt::Format for Ahbcr {
         )
     }
 }
-#[doc = "AHB Receive Buffer 0 Control 0"]
+#[doc = "AHB Receive Buffer 0 Control 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ahbrxbuf0cr0(pub u32);
 impl Ahbrxbuf0cr0 {
-    #[doc = "AHB Receive Buffer Size"]
+    #[doc = "AHB Receive Buffer Size."]
     #[must_use]
     #[inline(always)]
     pub const fn bufsz(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "AHB Receive Buffer Size"]
+    #[doc = "AHB Receive Buffer Size."]
     #[inline(always)]
     pub const fn set_bufsz(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "AHB Controller ID"]
+    #[doc = "AHB Controller ID."]
     #[must_use]
     #[inline(always)]
     pub const fn mstrid(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x0f;
         val as u8
     }
-    #[doc = "AHB Controller ID"]
+    #[doc = "AHB Controller ID."]
     #[inline(always)]
     pub const fn set_mstrid(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
     }
-    #[doc = "AHB Controller Read Priority"]
+    #[doc = "AHB Controller Read Priority."]
     #[must_use]
     #[inline(always)]
     pub const fn priority(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0x07;
         val as u8
     }
-    #[doc = "AHB Controller Read Priority"]
+    #[doc = "AHB Controller Read Priority."]
     #[inline(always)]
     pub const fn set_priority(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 24usize)) | (((val as u32) & 0x07) << 24usize);
     }
-    #[doc = "AHB Read Prefetch Enable"]
+    #[doc = "AHB Read Prefetch Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn prefetchen(&self) -> super::vals::Ahbrxbuf0cr0Prefetchen {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::Ahbrxbuf0cr0Prefetchen::from_bits(val as u8)
     }
-    #[doc = "AHB Read Prefetch Enable"]
+    #[doc = "AHB Read Prefetch Enable."]
     #[inline(always)]
     pub const fn set_prefetchen(&mut self, val: super::vals::Ahbrxbuf0cr0Prefetchen) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -248,55 +248,55 @@ impl defmt::Format for Ahbrxbuf0cr0 {
         )
     }
 }
-#[doc = "AHB Receive Buffer 1 Control 0"]
+#[doc = "AHB Receive Buffer 1 Control 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ahbrxbuf1cr0(pub u32);
 impl Ahbrxbuf1cr0 {
-    #[doc = "AHB Receive Buffer Size"]
+    #[doc = "AHB Receive Buffer Size."]
     #[must_use]
     #[inline(always)]
     pub const fn bufsz(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "AHB Receive Buffer Size"]
+    #[doc = "AHB Receive Buffer Size."]
     #[inline(always)]
     pub const fn set_bufsz(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "AHB Controller ID"]
+    #[doc = "AHB Controller ID."]
     #[must_use]
     #[inline(always)]
     pub const fn mstrid(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x0f;
         val as u8
     }
-    #[doc = "AHB Controller ID"]
+    #[doc = "AHB Controller ID."]
     #[inline(always)]
     pub const fn set_mstrid(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
     }
-    #[doc = "AHB Controller Read Priority"]
+    #[doc = "AHB Controller Read Priority."]
     #[must_use]
     #[inline(always)]
     pub const fn priority(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0x07;
         val as u8
     }
-    #[doc = "AHB Controller Read Priority"]
+    #[doc = "AHB Controller Read Priority."]
     #[inline(always)]
     pub const fn set_priority(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 24usize)) | (((val as u32) & 0x07) << 24usize);
     }
-    #[doc = "AHB Read Prefetch Enable"]
+    #[doc = "AHB Read Prefetch Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn prefetchen(&self) -> super::vals::Ahbrxbuf1cr0Prefetchen {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::Ahbrxbuf1cr0Prefetchen::from_bits(val as u8)
     }
-    #[doc = "AHB Read Prefetch Enable"]
+    #[doc = "AHB Read Prefetch Enable."]
     #[inline(always)]
     pub const fn set_prefetchen(&mut self, val: super::vals::Ahbrxbuf1cr0Prefetchen) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -331,55 +331,55 @@ impl defmt::Format for Ahbrxbuf1cr0 {
         )
     }
 }
-#[doc = "AHB Receive Buffer 2 Control 0"]
+#[doc = "AHB Receive Buffer 2 Control 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ahbrxbuf2cr0(pub u32);
 impl Ahbrxbuf2cr0 {
-    #[doc = "AHB Receive Buffer Size"]
+    #[doc = "AHB Receive Buffer Size."]
     #[must_use]
     #[inline(always)]
     pub const fn bufsz(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "AHB Receive Buffer Size"]
+    #[doc = "AHB Receive Buffer Size."]
     #[inline(always)]
     pub const fn set_bufsz(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "AHB Controller ID"]
+    #[doc = "AHB Controller ID."]
     #[must_use]
     #[inline(always)]
     pub const fn mstrid(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x0f;
         val as u8
     }
-    #[doc = "AHB Controller ID"]
+    #[doc = "AHB Controller ID."]
     #[inline(always)]
     pub const fn set_mstrid(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
     }
-    #[doc = "AHB Controller Read Priority"]
+    #[doc = "AHB Controller Read Priority."]
     #[must_use]
     #[inline(always)]
     pub const fn priority(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0x07;
         val as u8
     }
-    #[doc = "AHB Controller Read Priority"]
+    #[doc = "AHB Controller Read Priority."]
     #[inline(always)]
     pub const fn set_priority(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 24usize)) | (((val as u32) & 0x07) << 24usize);
     }
-    #[doc = "AHB Read Prefetch Enable"]
+    #[doc = "AHB Read Prefetch Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn prefetchen(&self) -> super::vals::Ahbrxbuf2cr0Prefetchen {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::Ahbrxbuf2cr0Prefetchen::from_bits(val as u8)
     }
-    #[doc = "AHB Read Prefetch Enable"]
+    #[doc = "AHB Read Prefetch Enable."]
     #[inline(always)]
     pub const fn set_prefetchen(&mut self, val: super::vals::Ahbrxbuf2cr0Prefetchen) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -414,55 +414,55 @@ impl defmt::Format for Ahbrxbuf2cr0 {
         )
     }
 }
-#[doc = "AHB Receive Buffer 3 Control 0"]
+#[doc = "AHB Receive Buffer 3 Control 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ahbrxbuf3cr0(pub u32);
 impl Ahbrxbuf3cr0 {
-    #[doc = "AHB Receive Buffer Size"]
+    #[doc = "AHB Receive Buffer Size."]
     #[must_use]
     #[inline(always)]
     pub const fn bufsz(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "AHB Receive Buffer Size"]
+    #[doc = "AHB Receive Buffer Size."]
     #[inline(always)]
     pub const fn set_bufsz(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "AHB Controller ID"]
+    #[doc = "AHB Controller ID."]
     #[must_use]
     #[inline(always)]
     pub const fn mstrid(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x0f;
         val as u8
     }
-    #[doc = "AHB Controller ID"]
+    #[doc = "AHB Controller ID."]
     #[inline(always)]
     pub const fn set_mstrid(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
     }
-    #[doc = "AHB Controller Read Priority"]
+    #[doc = "AHB Controller Read Priority."]
     #[must_use]
     #[inline(always)]
     pub const fn priority(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0x07;
         val as u8
     }
-    #[doc = "AHB Controller Read Priority"]
+    #[doc = "AHB Controller Read Priority."]
     #[inline(always)]
     pub const fn set_priority(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 24usize)) | (((val as u32) & 0x07) << 24usize);
     }
-    #[doc = "AHB Read Prefetch Enable"]
+    #[doc = "AHB Read Prefetch Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn prefetchen(&self) -> super::vals::Ahbrxbuf3cr0Prefetchen {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::Ahbrxbuf3cr0Prefetchen::from_bits(val as u8)
     }
-    #[doc = "AHB Read Prefetch Enable"]
+    #[doc = "AHB Read Prefetch Enable."]
     #[inline(always)]
     pub const fn set_prefetchen(&mut self, val: super::vals::Ahbrxbuf3cr0Prefetchen) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -497,55 +497,55 @@ impl defmt::Format for Ahbrxbuf3cr0 {
         )
     }
 }
-#[doc = "AHB Receive Buffer 4 Control 0"]
+#[doc = "AHB Receive Buffer 4 Control 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ahbrxbuf4cr0(pub u32);
 impl Ahbrxbuf4cr0 {
-    #[doc = "AHB Receive Buffer Size"]
+    #[doc = "AHB Receive Buffer Size."]
     #[must_use]
     #[inline(always)]
     pub const fn bufsz(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "AHB Receive Buffer Size"]
+    #[doc = "AHB Receive Buffer Size."]
     #[inline(always)]
     pub const fn set_bufsz(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "AHB Controller ID"]
+    #[doc = "AHB Controller ID."]
     #[must_use]
     #[inline(always)]
     pub const fn mstrid(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x0f;
         val as u8
     }
-    #[doc = "AHB Controller ID"]
+    #[doc = "AHB Controller ID."]
     #[inline(always)]
     pub const fn set_mstrid(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
     }
-    #[doc = "AHB Controller Read Priority"]
+    #[doc = "AHB Controller Read Priority."]
     #[must_use]
     #[inline(always)]
     pub const fn priority(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0x07;
         val as u8
     }
-    #[doc = "AHB Controller Read Priority"]
+    #[doc = "AHB Controller Read Priority."]
     #[inline(always)]
     pub const fn set_priority(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 24usize)) | (((val as u32) & 0x07) << 24usize);
     }
-    #[doc = "AHB Read Prefetch Enable"]
+    #[doc = "AHB Read Prefetch Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn prefetchen(&self) -> super::vals::Ahbrxbuf4cr0Prefetchen {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::Ahbrxbuf4cr0Prefetchen::from_bits(val as u8)
     }
-    #[doc = "AHB Read Prefetch Enable"]
+    #[doc = "AHB Read Prefetch Enable."]
     #[inline(always)]
     pub const fn set_prefetchen(&mut self, val: super::vals::Ahbrxbuf4cr0Prefetchen) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -580,55 +580,55 @@ impl defmt::Format for Ahbrxbuf4cr0 {
         )
     }
 }
-#[doc = "AHB Receive Buffer 5 Control 0"]
+#[doc = "AHB Receive Buffer 5 Control 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ahbrxbuf5cr0(pub u32);
 impl Ahbrxbuf5cr0 {
-    #[doc = "AHB Receive Buffer Size"]
+    #[doc = "AHB Receive Buffer Size."]
     #[must_use]
     #[inline(always)]
     pub const fn bufsz(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "AHB Receive Buffer Size"]
+    #[doc = "AHB Receive Buffer Size."]
     #[inline(always)]
     pub const fn set_bufsz(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "AHB Controller ID"]
+    #[doc = "AHB Controller ID."]
     #[must_use]
     #[inline(always)]
     pub const fn mstrid(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x0f;
         val as u8
     }
-    #[doc = "AHB Controller ID"]
+    #[doc = "AHB Controller ID."]
     #[inline(always)]
     pub const fn set_mstrid(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
     }
-    #[doc = "AHB Controller Read Priority"]
+    #[doc = "AHB Controller Read Priority."]
     #[must_use]
     #[inline(always)]
     pub const fn priority(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0x07;
         val as u8
     }
-    #[doc = "AHB Controller Read Priority"]
+    #[doc = "AHB Controller Read Priority."]
     #[inline(always)]
     pub const fn set_priority(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 24usize)) | (((val as u32) & 0x07) << 24usize);
     }
-    #[doc = "AHB Read Prefetch Enable"]
+    #[doc = "AHB Read Prefetch Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn prefetchen(&self) -> super::vals::Ahbrxbuf5cr0Prefetchen {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::Ahbrxbuf5cr0Prefetchen::from_bits(val as u8)
     }
-    #[doc = "AHB Read Prefetch Enable"]
+    #[doc = "AHB Read Prefetch Enable."]
     #[inline(always)]
     pub const fn set_prefetchen(&mut self, val: super::vals::Ahbrxbuf5cr0Prefetchen) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -663,55 +663,55 @@ impl defmt::Format for Ahbrxbuf5cr0 {
         )
     }
 }
-#[doc = "AHB Receive Buffer 6 Control 0"]
+#[doc = "AHB Receive Buffer 6 Control 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ahbrxbuf6cr0(pub u32);
 impl Ahbrxbuf6cr0 {
-    #[doc = "AHB Receive Buffer Size"]
+    #[doc = "AHB Receive Buffer Size."]
     #[must_use]
     #[inline(always)]
     pub const fn bufsz(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "AHB Receive Buffer Size"]
+    #[doc = "AHB Receive Buffer Size."]
     #[inline(always)]
     pub const fn set_bufsz(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "AHB Controller ID"]
+    #[doc = "AHB Controller ID."]
     #[must_use]
     #[inline(always)]
     pub const fn mstrid(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x0f;
         val as u8
     }
-    #[doc = "AHB Controller ID"]
+    #[doc = "AHB Controller ID."]
     #[inline(always)]
     pub const fn set_mstrid(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
     }
-    #[doc = "AHB Controller Read Priority"]
+    #[doc = "AHB Controller Read Priority."]
     #[must_use]
     #[inline(always)]
     pub const fn priority(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0x07;
         val as u8
     }
-    #[doc = "AHB Controller Read Priority"]
+    #[doc = "AHB Controller Read Priority."]
     #[inline(always)]
     pub const fn set_priority(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 24usize)) | (((val as u32) & 0x07) << 24usize);
     }
-    #[doc = "AHB Read Prefetch Enable"]
+    #[doc = "AHB Read Prefetch Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn prefetchen(&self) -> super::vals::Ahbrxbuf6cr0Prefetchen {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::Ahbrxbuf6cr0Prefetchen::from_bits(val as u8)
     }
-    #[doc = "AHB Read Prefetch Enable"]
+    #[doc = "AHB Read Prefetch Enable."]
     #[inline(always)]
     pub const fn set_prefetchen(&mut self, val: super::vals::Ahbrxbuf6cr0Prefetchen) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -746,55 +746,55 @@ impl defmt::Format for Ahbrxbuf6cr0 {
         )
     }
 }
-#[doc = "AHB Receive Buffer 7 Control 0"]
+#[doc = "AHB Receive Buffer 7 Control 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ahbrxbuf7cr0(pub u32);
 impl Ahbrxbuf7cr0 {
-    #[doc = "AHB Receive Buffer Size"]
+    #[doc = "AHB Receive Buffer Size."]
     #[must_use]
     #[inline(always)]
     pub const fn bufsz(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "AHB Receive Buffer Size"]
+    #[doc = "AHB Receive Buffer Size."]
     #[inline(always)]
     pub const fn set_bufsz(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "AHB Controller ID"]
+    #[doc = "AHB Controller ID."]
     #[must_use]
     #[inline(always)]
     pub const fn mstrid(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x0f;
         val as u8
     }
-    #[doc = "AHB Controller ID"]
+    #[doc = "AHB Controller ID."]
     #[inline(always)]
     pub const fn set_mstrid(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
     }
-    #[doc = "AHB Controller Read Priority"]
+    #[doc = "AHB Controller Read Priority."]
     #[must_use]
     #[inline(always)]
     pub const fn priority(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0x07;
         val as u8
     }
-    #[doc = "AHB Controller Read Priority"]
+    #[doc = "AHB Controller Read Priority."]
     #[inline(always)]
     pub const fn set_priority(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 24usize)) | (((val as u32) & 0x07) << 24usize);
     }
-    #[doc = "AHB Read Prefetch Enable"]
+    #[doc = "AHB Read Prefetch Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn prefetchen(&self) -> super::vals::Ahbrxbuf7cr0Prefetchen {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::Ahbrxbuf7cr0Prefetchen::from_bits(val as u8)
     }
-    #[doc = "AHB Read Prefetch Enable"]
+    #[doc = "AHB Read Prefetch Enable."]
     #[inline(always)]
     pub const fn set_prefetchen(&mut self, val: super::vals::Ahbrxbuf7cr0Prefetchen) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -829,43 +829,43 @@ impl defmt::Format for Ahbrxbuf7cr0 {
         )
     }
 }
-#[doc = "AHB Suspend Status"]
+#[doc = "AHB Suspend Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ahbspndsts(pub u32);
 impl Ahbspndsts {
-    #[doc = "Active AHB Read Prefetch Suspended"]
+    #[doc = "Active AHB Read Prefetch Suspended."]
     #[must_use]
     #[inline(always)]
     pub const fn active(&self) -> super::vals::Active {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Active::from_bits(val as u8)
     }
-    #[doc = "Active AHB Read Prefetch Suspended"]
+    #[doc = "Active AHB Read Prefetch Suspended."]
     #[inline(always)]
     pub const fn set_active(&mut self, val: super::vals::Active) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "AHB Receive Buffer ID for Suspended Command Sequence"]
+    #[doc = "AHB Receive Buffer ID for Suspended Command Sequence."]
     #[must_use]
     #[inline(always)]
     pub const fn bufid(&self) -> u8 {
         let val = (self.0 >> 1usize) & 0x07;
         val as u8
     }
-    #[doc = "AHB Receive Buffer ID for Suspended Command Sequence"]
+    #[doc = "AHB Receive Buffer ID for Suspended Command Sequence."]
     #[inline(always)]
     pub const fn set_bufid(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 1usize)) | (((val as u32) & 0x07) << 1usize);
     }
-    #[doc = "Data Left"]
+    #[doc = "Data Left."]
     #[must_use]
     #[inline(always)]
     pub const fn datlft(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "Data Left"]
+    #[doc = "Data Left."]
     #[inline(always)]
     pub const fn set_datlft(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -898,67 +898,67 @@ impl defmt::Format for Ahbspndsts {
         )
     }
 }
-#[doc = "DLL Control 0"]
+#[doc = "DLL Control 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dllcr(pub u32);
 impl Dllcr {
-    #[doc = "DLL Calibration Enable"]
+    #[doc = "DLL Calibration Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dllen(&self) -> super::vals::Dllen {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Dllen::from_bits(val as u8)
     }
-    #[doc = "DLL Calibration Enable"]
+    #[doc = "DLL Calibration Enable."]
     #[inline(always)]
     pub const fn set_dllen(&mut self, val: super::vals::Dllen) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "DLL reset"]
+    #[doc = "DLL reset."]
     #[must_use]
     #[inline(always)]
     pub const fn dllreset(&self) -> super::vals::Dllreset {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Dllreset::from_bits(val as u8)
     }
-    #[doc = "DLL reset"]
+    #[doc = "DLL reset."]
     #[inline(always)]
     pub const fn set_dllreset(&mut self, val: super::vals::Dllreset) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Target Delay Line"]
+    #[doc = "Target Delay Line."]
     #[must_use]
     #[inline(always)]
     pub const fn slvdlytarget(&self) -> u8 {
         let val = (self.0 >> 3usize) & 0x0f;
         val as u8
     }
-    #[doc = "Target Delay Line"]
+    #[doc = "Target Delay Line."]
     #[inline(always)]
     pub const fn set_slvdlytarget(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 3usize)) | (((val as u32) & 0x0f) << 3usize);
     }
-    #[doc = "Target Clock Delay Line Override Value Enable"]
+    #[doc = "Target Clock Delay Line Override Value Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ovrden(&self) -> super::vals::Ovrden {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::Ovrden::from_bits(val as u8)
     }
-    #[doc = "Target Clock Delay Line Override Value Enable"]
+    #[doc = "Target Clock Delay Line Override Value Enable."]
     #[inline(always)]
     pub const fn set_ovrden(&mut self, val: super::vals::Ovrden) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
-    #[doc = "Target Clock Delay Line Override Value"]
+    #[doc = "Target Clock Delay Line Override Value."]
     #[must_use]
     #[inline(always)]
     pub const fn ovrdval(&self) -> u8 {
         let val = (self.0 >> 9usize) & 0x3f;
         val as u8
     }
-    #[doc = "Target Clock Delay Line Override Value"]
+    #[doc = "Target Clock Delay Line Override Value."]
     #[inline(always)]
     pub const fn set_ovrdval(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 9usize)) | (((val as u32) & 0x3f) << 9usize);
@@ -1009,19 +1009,19 @@ impl defmt::Format for Dllcr {
         )
     }
 }
-#[doc = "Data Learning Pattern"]
+#[doc = "Data Learning Pattern."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dlpr(pub u32);
 impl Dlpr {
-    #[doc = "Data Learning Pattern"]
+    #[doc = "Data Learning Pattern."]
     #[must_use]
     #[inline(always)]
     pub const fn dlp(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Data Learning Pattern"]
+    #[doc = "Data Learning Pattern."]
     #[inline(always)]
     pub const fn set_dlp(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1044,43 +1044,43 @@ impl defmt::Format for Dlpr {
         defmt::write!(f, "Dlpr {{ dlp: {=u32:?} }}", self.dlp())
     }
 }
-#[doc = "Flash Control 0"]
+#[doc = "Flash Control 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flsha1cr0(pub u32);
 impl Flsha1cr0 {
-    #[doc = "Flash Size in KB"]
+    #[doc = "Flash Size in KB."]
     #[must_use]
     #[inline(always)]
     pub const fn flshsz(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x007f_ffff;
         val as u32
     }
-    #[doc = "Flash Size in KB"]
+    #[doc = "Flash Size in KB."]
     #[inline(always)]
     pub const fn set_flshsz(&mut self, val: u32) {
         self.0 = (self.0 & !(0x007f_ffff << 0usize)) | (((val as u32) & 0x007f_ffff) << 0usize);
     }
-    #[doc = "AHB Write Access Split Function Enable"]
+    #[doc = "AHB Write Access Split Function Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn splitwren(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "AHB Write Access Split Function Enable"]
+    #[doc = "AHB Write Access Split Function Enable."]
     #[inline(always)]
     pub const fn set_splitwren(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "AHB Read Access Split Function Enable"]
+    #[doc = "AHB Read Access Split Function Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn splitrden(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "AHB Read Access Split Function Enable"]
+    #[doc = "AHB Read Access Split Function Enable."]
     #[inline(always)]
     pub const fn set_splitrden(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -1113,43 +1113,43 @@ impl defmt::Format for Flsha1cr0 {
         )
     }
 }
-#[doc = "Flash Control 0"]
+#[doc = "Flash Control 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flsha2cr0(pub u32);
 impl Flsha2cr0 {
-    #[doc = "Flash Size in KB"]
+    #[doc = "Flash Size in KB."]
     #[must_use]
     #[inline(always)]
     pub const fn flshsz(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x007f_ffff;
         val as u32
     }
-    #[doc = "Flash Size in KB"]
+    #[doc = "Flash Size in KB."]
     #[inline(always)]
     pub const fn set_flshsz(&mut self, val: u32) {
         self.0 = (self.0 & !(0x007f_ffff << 0usize)) | (((val as u32) & 0x007f_ffff) << 0usize);
     }
-    #[doc = "AHB Write Access Split Function Enable"]
+    #[doc = "AHB Write Access Split Function Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn splitwren(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "AHB Write Access Split Function Enable"]
+    #[doc = "AHB Write Access Split Function Enable."]
     #[inline(always)]
     pub const fn set_splitwren(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "AHB Read Access Split Function Enable"]
+    #[doc = "AHB Read Access Split Function Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn splitrden(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "AHB Read Access Split Function Enable"]
+    #[doc = "AHB Read Access Split Function Enable."]
     #[inline(always)]
     pub const fn set_splitrden(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -1182,43 +1182,43 @@ impl defmt::Format for Flsha2cr0 {
         )
     }
 }
-#[doc = "Flash Control 0"]
+#[doc = "Flash Control 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flshb1cr0(pub u32);
 impl Flshb1cr0 {
-    #[doc = "Flash Size in KB"]
+    #[doc = "Flash Size in KB."]
     #[must_use]
     #[inline(always)]
     pub const fn flshsz(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x007f_ffff;
         val as u32
     }
-    #[doc = "Flash Size in KB"]
+    #[doc = "Flash Size in KB."]
     #[inline(always)]
     pub const fn set_flshsz(&mut self, val: u32) {
         self.0 = (self.0 & !(0x007f_ffff << 0usize)) | (((val as u32) & 0x007f_ffff) << 0usize);
     }
-    #[doc = "AHB Write Access Split Function Enable"]
+    #[doc = "AHB Write Access Split Function Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn splitwren(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "AHB Write Access Split Function Enable"]
+    #[doc = "AHB Write Access Split Function Enable."]
     #[inline(always)]
     pub const fn set_splitwren(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "AHB Read Access Split Function Enable"]
+    #[doc = "AHB Read Access Split Function Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn splitrden(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "AHB Read Access Split Function Enable"]
+    #[doc = "AHB Read Access Split Function Enable."]
     #[inline(always)]
     pub const fn set_splitrden(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -1251,43 +1251,43 @@ impl defmt::Format for Flshb1cr0 {
         )
     }
 }
-#[doc = "Flash Control 0"]
+#[doc = "Flash Control 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flshb2cr0(pub u32);
 impl Flshb2cr0 {
-    #[doc = "Flash Size in KB"]
+    #[doc = "Flash Size in KB."]
     #[must_use]
     #[inline(always)]
     pub const fn flshsz(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x007f_ffff;
         val as u32
     }
-    #[doc = "Flash Size in KB"]
+    #[doc = "Flash Size in KB."]
     #[inline(always)]
     pub const fn set_flshsz(&mut self, val: u32) {
         self.0 = (self.0 & !(0x007f_ffff << 0usize)) | (((val as u32) & 0x007f_ffff) << 0usize);
     }
-    #[doc = "AHB Write Access Split Function Enable"]
+    #[doc = "AHB Write Access Split Function Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn splitwren(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "AHB Write Access Split Function Enable"]
+    #[doc = "AHB Write Access Split Function Enable."]
     #[inline(always)]
     pub const fn set_splitwren(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "AHB Read Access Split Function Enable"]
+    #[doc = "AHB Read Access Split Function Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn splitrden(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "AHB Read Access Split Function Enable"]
+    #[doc = "AHB Read Access Split Function Enable."]
     #[inline(always)]
     pub const fn set_splitrden(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -1320,79 +1320,79 @@ impl defmt::Format for Flshb2cr0 {
         )
     }
 }
-#[doc = "Flash Control 1"]
+#[doc = "Flash Control 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flshcr1(pub u32);
 impl Flshcr1 {
-    #[doc = "Serial Flash CS Setup Time"]
+    #[doc = "Serial Flash CS Setup Time."]
     #[must_use]
     #[inline(always)]
     pub const fn tcss(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x1f;
         val as u8
     }
-    #[doc = "Serial Flash CS Setup Time"]
+    #[doc = "Serial Flash CS Setup Time."]
     #[inline(always)]
     pub const fn set_tcss(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val as u32) & 0x1f) << 0usize);
     }
-    #[doc = "Serial Flash CS Hold Time"]
+    #[doc = "Serial Flash CS Hold Time."]
     #[must_use]
     #[inline(always)]
     pub const fn tcsh(&self) -> u8 {
         let val = (self.0 >> 5usize) & 0x1f;
         val as u8
     }
-    #[doc = "Serial Flash CS Hold Time"]
+    #[doc = "Serial Flash CS Hold Time."]
     #[inline(always)]
     pub const fn set_tcsh(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 5usize)) | (((val as u32) & 0x1f) << 5usize);
     }
-    #[doc = "Word-Addressable"]
+    #[doc = "Word-Addressable."]
     #[must_use]
     #[inline(always)]
     pub const fn wa(&self) -> super::vals::Wa {
         let val = (self.0 >> 10usize) & 0x01;
         super::vals::Wa::from_bits(val as u8)
     }
-    #[doc = "Word-Addressable"]
+    #[doc = "Word-Addressable."]
     #[inline(always)]
     pub const fn set_wa(&mut self, val: super::vals::Wa) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
-    #[doc = "Column Address Size"]
+    #[doc = "Column Address Size."]
     #[must_use]
     #[inline(always)]
     pub const fn cas(&self) -> u8 {
         let val = (self.0 >> 11usize) & 0x0f;
         val as u8
     }
-    #[doc = "Column Address Size"]
+    #[doc = "Column Address Size."]
     #[inline(always)]
     pub const fn set_cas(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 11usize)) | (((val as u32) & 0x0f) << 11usize);
     }
-    #[doc = "Chip Select Interval Unit"]
+    #[doc = "Chip Select Interval Unit."]
     #[must_use]
     #[inline(always)]
     pub const fn csintervalunit(&self) -> super::vals::Csintervalunit {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::Csintervalunit::from_bits(val as u8)
     }
-    #[doc = "Chip Select Interval Unit"]
+    #[doc = "Chip Select Interval Unit."]
     #[inline(always)]
     pub const fn set_csintervalunit(&mut self, val: super::vals::Csintervalunit) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "Chip Select Interval"]
+    #[doc = "Chip Select Interval."]
     #[must_use]
     #[inline(always)]
     pub const fn csinterval(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "Chip Select Interval"]
+    #[doc = "Chip Select Interval."]
     #[inline(always)]
     pub const fn set_csinterval(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -1431,91 +1431,91 @@ impl defmt::Format for Flshcr1 {
         )
     }
 }
-#[doc = "Flash Control 2"]
+#[doc = "Flash Control 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flshcr2(pub u32);
 impl Flshcr2 {
-    #[doc = "Sequence Index for AHB Read-Triggered Command in LUT"]
+    #[doc = "Sequence Index for AHB Read-Triggered Command in LUT."]
     #[must_use]
     #[inline(always)]
     pub const fn ardseqid(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "Sequence Index for AHB Read-Triggered Command in LUT"]
+    #[doc = "Sequence Index for AHB Read-Triggered Command in LUT."]
     #[inline(always)]
     pub const fn set_ardseqid(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Sequence Number for AHB Read-Triggered Command"]
+    #[doc = "Sequence Number for AHB Read-Triggered Command."]
     #[must_use]
     #[inline(always)]
     pub const fn ardseqnum(&self) -> u8 {
         let val = (self.0 >> 5usize) & 0x07;
         val as u8
     }
-    #[doc = "Sequence Number for AHB Read-Triggered Command"]
+    #[doc = "Sequence Number for AHB Read-Triggered Command."]
     #[inline(always)]
     pub const fn set_ardseqnum(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 5usize)) | (((val as u32) & 0x07) << 5usize);
     }
-    #[doc = "Sequence Index for AHB Write-Triggered Command"]
+    #[doc = "Sequence Index for AHB Write-Triggered Command."]
     #[must_use]
     #[inline(always)]
     pub const fn awrseqid(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x0f;
         val as u8
     }
-    #[doc = "Sequence Index for AHB Write-Triggered Command"]
+    #[doc = "Sequence Index for AHB Write-Triggered Command."]
     #[inline(always)]
     pub const fn set_awrseqid(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val as u32) & 0x0f) << 8usize);
     }
-    #[doc = "Sequence Number for AHB Write-Triggered Command"]
+    #[doc = "Sequence Number for AHB Write-Triggered Command."]
     #[must_use]
     #[inline(always)]
     pub const fn awrseqnum(&self) -> u8 {
         let val = (self.0 >> 13usize) & 0x07;
         val as u8
     }
-    #[doc = "Sequence Number for AHB Write-Triggered Command"]
+    #[doc = "Sequence Number for AHB Write-Triggered Command."]
     #[inline(always)]
     pub const fn set_awrseqnum(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 13usize)) | (((val as u32) & 0x07) << 13usize);
     }
-    #[doc = "AHB Write Wait"]
+    #[doc = "AHB Write Wait."]
     #[must_use]
     #[inline(always)]
     pub const fn awrwait(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x0fff;
         val as u16
     }
-    #[doc = "AHB Write Wait"]
+    #[doc = "AHB Write Wait."]
     #[inline(always)]
     pub const fn set_awrwait(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);
     }
-    #[doc = "AWRWAIT Unit"]
+    #[doc = "AWRWAIT Unit."]
     #[must_use]
     #[inline(always)]
     pub const fn awrwaitunit(&self) -> super::vals::Awrwaitunit {
         let val = (self.0 >> 28usize) & 0x07;
         super::vals::Awrwaitunit::from_bits(val as u8)
     }
-    #[doc = "AWRWAIT Unit"]
+    #[doc = "AWRWAIT Unit."]
     #[inline(always)]
     pub const fn set_awrwaitunit(&mut self, val: super::vals::Awrwaitunit) {
         self.0 = (self.0 & !(0x07 << 28usize)) | (((val.to_bits() as u32) & 0x07) << 28usize);
     }
-    #[doc = "Clear Instruction Pointer"]
+    #[doc = "Clear Instruction Pointer."]
     #[must_use]
     #[inline(always)]
     pub const fn clrinstrptr(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Clear Instruction Pointer"]
+    #[doc = "Clear Instruction Pointer."]
     #[inline(always)]
     pub const fn set_clrinstrptr(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -1556,55 +1556,55 @@ impl defmt::Format for Flshcr2 {
         )
     }
 }
-#[doc = "Flash Control 4"]
+#[doc = "Flash Control 4."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flshcr4(pub u32);
 impl Flshcr4 {
-    #[doc = "Write Mask Option 1"]
+    #[doc = "Write Mask Option 1."]
     #[must_use]
     #[inline(always)]
     pub const fn wmopt1(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Write Mask Option 1"]
+    #[doc = "Write Mask Option 1."]
     #[inline(always)]
     pub const fn set_wmopt1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Write Mask Option 2"]
+    #[doc = "Write Mask Option 2."]
     #[must_use]
     #[inline(always)]
     pub const fn wmopt2(&self) -> super::vals::Wmopt2 {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Wmopt2::from_bits(val as u8)
     }
-    #[doc = "Write Mask Option 2"]
+    #[doc = "Write Mask Option 2."]
     #[inline(always)]
     pub const fn set_wmopt2(&mut self, val: super::vals::Wmopt2) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Write Mask Enable for Port A"]
+    #[doc = "Write Mask Enable for Port A."]
     #[must_use]
     #[inline(always)]
     pub const fn wmena(&self) -> super::vals::Wmena {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Wmena::from_bits(val as u8)
     }
-    #[doc = "Write Mask Enable for Port A"]
+    #[doc = "Write Mask Enable for Port A."]
     #[inline(always)]
     pub const fn set_wmena(&mut self, val: super::vals::Wmena) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "Write Mask Enable for Port B"]
+    #[doc = "Write Mask Enable for Port B."]
     #[must_use]
     #[inline(always)]
     pub const fn wmenb(&self) -> super::vals::Wmenb {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Wmenb::from_bits(val as u8)
     }
-    #[doc = "Write Mask Enable for Port B"]
+    #[doc = "Write Mask Enable for Port B."]
     #[inline(always)]
     pub const fn set_wmenb(&mut self, val: super::vals::Wmenb) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
@@ -1639,19 +1639,19 @@ impl defmt::Format for Flshcr4 {
         )
     }
 }
-#[doc = "HADDR REMAP END ADDR"]
+#[doc = "HADDR REMAP END ADDR."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Haddrend(pub u32);
 impl Haddrend {
-    #[doc = "End Address of HADDR Remap Range"]
+    #[doc = "End Address of HADDR Remap Range."]
     #[must_use]
     #[inline(always)]
     pub const fn endstart(&self) -> u32 {
         let val = (self.0 >> 12usize) & 0x000f_ffff;
         val as u32
     }
-    #[doc = "End Address of HADDR Remap Range"]
+    #[doc = "End Address of HADDR Remap Range."]
     #[inline(always)]
     pub const fn set_endstart(&mut self, val: u32) {
         self.0 = (self.0 & !(0x000f_ffff << 12usize)) | (((val as u32) & 0x000f_ffff) << 12usize);
@@ -1676,19 +1676,19 @@ impl defmt::Format for Haddrend {
         defmt::write!(f, "Haddrend {{ endstart: {=u32:?} }}", self.endstart())
     }
 }
-#[doc = "HADDR Remap Offset"]
+#[doc = "HADDR Remap Offset."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Haddroffset(pub u32);
 impl Haddroffset {
-    #[doc = "HADDR Offset"]
+    #[doc = "HADDR Offset."]
     #[must_use]
     #[inline(always)]
     pub const fn addroffset(&self) -> u32 {
         let val = (self.0 >> 12usize) & 0x000f_ffff;
         val as u32
     }
-    #[doc = "HADDR Offset"]
+    #[doc = "HADDR Offset."]
     #[inline(always)]
     pub const fn set_addroffset(&mut self, val: u32) {
         self.0 = (self.0 & !(0x000f_ffff << 12usize)) | (((val as u32) & 0x000f_ffff) << 12usize);
@@ -1717,43 +1717,43 @@ impl defmt::Format for Haddroffset {
         )
     }
 }
-#[doc = "HADDR REMAP Start Address"]
+#[doc = "HADDR REMAP Start Address."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Haddrstart(pub u32);
 impl Haddrstart {
-    #[doc = "AHB Bus Address Remap Enable"]
+    #[doc = "AHB Bus Address Remap Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn remapen(&self) -> super::vals::Remapen {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Remapen::from_bits(val as u8)
     }
-    #[doc = "AHB Bus Address Remap Enable"]
+    #[doc = "AHB Bus Address Remap Enable."]
     #[inline(always)]
     pub const fn set_remapen(&mut self, val: super::vals::Remapen) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "AHB or IP Bus Address Swap Enable"]
+    #[doc = "AHB or IP Bus Address Swap Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn swapen(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "AHB or IP Bus Address Swap Enable"]
+    #[doc = "AHB or IP Bus Address Swap Enable."]
     #[inline(always)]
     pub const fn set_swapen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "HADDR Start Address"]
+    #[doc = "HADDR Start Address."]
     #[must_use]
     #[inline(always)]
     pub const fn addrstart(&self) -> u32 {
         let val = (self.0 >> 12usize) & 0x000f_ffff;
         val as u32
     }
-    #[doc = "HADDR Start Address"]
+    #[doc = "HADDR Start Address."]
     #[inline(always)]
     pub const fn set_addrstart(&mut self, val: u32) {
         self.0 = (self.0 & !(0x000f_ffff << 12usize)) | (((val as u32) & 0x000f_ffff) << 12usize);
@@ -1786,31 +1786,31 @@ impl defmt::Format for Haddrstart {
         )
     }
 }
-#[doc = "Interrupt Enable"]
+#[doc = "Interrupt Enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Inten(pub u32);
 impl Inten {
-    #[doc = "IP-Triggered Command Sequences Execution Finished Interrupt Enable"]
+    #[doc = "IP-Triggered Command Sequences Execution Finished Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ipcmddoneen(&self) -> super::vals::Ipcmddoneen {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Ipcmddoneen::from_bits(val as u8)
     }
-    #[doc = "IP-Triggered Command Sequences Execution Finished Interrupt Enable"]
+    #[doc = "IP-Triggered Command Sequences Execution Finished Interrupt Enable."]
     #[inline(always)]
     pub const fn set_ipcmddoneen(&mut self, val: super::vals::Ipcmddoneen) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "IP-Triggered Command Sequences Grant Timeout Interrupt Enable"]
+    #[doc = "IP-Triggered Command Sequences Grant Timeout Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ipcmdgeen(&self) -> super::vals::Ipcmdgeen {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Ipcmdgeen::from_bits(val as u8)
     }
-    #[doc = "IP-Triggered Command Sequences Grant Timeout Interrupt Enable"]
+    #[doc = "IP-Triggered Command Sequences Grant Timeout Interrupt Enable."]
     #[inline(always)]
     pub const fn set_ipcmdgeen(&mut self, val: super::vals::Ipcmdgeen) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
@@ -1827,122 +1827,122 @@ impl Inten {
     pub const fn set_ahbcmdgeen(&mut self, val: super::vals::Ahbcmdgeen) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "IP-Triggered Command Sequences Error Detected Interrupt Enable"]
+    #[doc = "IP-Triggered Command Sequences Error Detected Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ipcmderren(&self) -> super::vals::Ipcmderren {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Ipcmderren::from_bits(val as u8)
     }
-    #[doc = "IP-Triggered Command Sequences Error Detected Interrupt Enable"]
+    #[doc = "IP-Triggered Command Sequences Error Detected Interrupt Enable."]
     #[inline(always)]
     pub const fn set_ipcmderren(&mut self, val: super::vals::Ipcmderren) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "AHB-Triggered Command Sequences Error Detected Interrupt Enable"]
+    #[doc = "AHB-Triggered Command Sequences Error Detected Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ahbcmderren(&self) -> super::vals::Ahbcmderren {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::Ahbcmderren::from_bits(val as u8)
     }
-    #[doc = "AHB-Triggered Command Sequences Error Detected Interrupt Enable"]
+    #[doc = "AHB-Triggered Command Sequences Error Detected Interrupt Enable."]
     #[inline(always)]
     pub const fn set_ahbcmderren(&mut self, val: super::vals::Ahbcmderren) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
-    #[doc = "IP Receive FIFO Watermark Available Interrupt Enable"]
+    #[doc = "IP Receive FIFO Watermark Available Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn iprxwaen(&self) -> super::vals::Iprxwaen {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::Iprxwaen::from_bits(val as u8)
     }
-    #[doc = "IP Receive FIFO Watermark Available Interrupt Enable"]
+    #[doc = "IP Receive FIFO Watermark Available Interrupt Enable."]
     #[inline(always)]
     pub const fn set_iprxwaen(&mut self, val: super::vals::Iprxwaen) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
-    #[doc = "IP Transmit FIFO Watermark Empty Interrupt Enable"]
+    #[doc = "IP Transmit FIFO Watermark Empty Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn iptxween(&self) -> super::vals::Iptxween {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::Iptxween::from_bits(val as u8)
     }
-    #[doc = "IP Transmit FIFO Watermark Empty Interrupt Enable"]
+    #[doc = "IP Transmit FIFO Watermark Empty Interrupt Enable."]
     #[inline(always)]
     pub const fn set_iptxween(&mut self, val: super::vals::Iptxween) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "Data Learning Failed Interrupt Enable"]
+    #[doc = "Data Learning Failed Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn datalearnfailen(&self) -> super::vals::Datalearnfailen {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Datalearnfailen::from_bits(val as u8)
     }
-    #[doc = "Data Learning Failed Interrupt Enable"]
+    #[doc = "Data Learning Failed Interrupt Enable."]
     #[inline(always)]
     pub const fn set_datalearnfailen(&mut self, val: super::vals::Datalearnfailen) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "SCLK Stopped By Read Interrupt Enable"]
+    #[doc = "SCLK Stopped By Read Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn sckstopbyrden(&self) -> super::vals::Sckstopbyrden {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::Sckstopbyrden::from_bits(val as u8)
     }
-    #[doc = "SCLK Stopped By Read Interrupt Enable"]
+    #[doc = "SCLK Stopped By Read Interrupt Enable."]
     #[inline(always)]
     pub const fn set_sckstopbyrden(&mut self, val: super::vals::Sckstopbyrden) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
-    #[doc = "SCLK Stopped By Write Interrupt Enable"]
+    #[doc = "SCLK Stopped By Write Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn sckstopbywren(&self) -> super::vals::Sckstopbywren {
         let val = (self.0 >> 9usize) & 0x01;
         super::vals::Sckstopbywren::from_bits(val as u8)
     }
-    #[doc = "SCLK Stopped By Write Interrupt Enable"]
+    #[doc = "SCLK Stopped By Write Interrupt Enable."]
     #[inline(always)]
     pub const fn set_sckstopbywren(&mut self, val: super::vals::Sckstopbywren) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
     }
-    #[doc = "AHB Bus Timeout Interrupt Enable"]
+    #[doc = "AHB Bus Timeout Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ahbbustimeouten(&self) -> super::vals::Ahbbustimeouten {
         let val = (self.0 >> 10usize) & 0x01;
         super::vals::Ahbbustimeouten::from_bits(val as u8)
     }
-    #[doc = "AHB Bus Timeout Interrupt Enable"]
+    #[doc = "AHB Bus Timeout Interrupt Enable."]
     #[inline(always)]
     pub const fn set_ahbbustimeouten(&mut self, val: super::vals::Ahbbustimeouten) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
-    #[doc = "Sequence execution Timeout Interrupt Enable"]
+    #[doc = "Sequence execution Timeout Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn seqtimeouten(&self) -> super::vals::Seqtimeouten {
         let val = (self.0 >> 11usize) & 0x01;
         super::vals::Seqtimeouten::from_bits(val as u8)
     }
-    #[doc = "Sequence execution Timeout Interrupt Enable"]
+    #[doc = "Sequence execution Timeout Interrupt Enable."]
     #[inline(always)]
     pub const fn set_seqtimeouten(&mut self, val: super::vals::Seqtimeouten) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
     }
-    #[doc = "AHB Read GCM Error Interrupt Enable"]
+    #[doc = "AHB Read GCM Error Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ahbgcmerren(&self) -> super::vals::Ahbgcmerren {
         let val = (self.0 >> 17usize) & 0x01;
         super::vals::Ahbgcmerren::from_bits(val as u8)
     }
-    #[doc = "AHB Read GCM Error Interrupt Enable"]
+    #[doc = "AHB Read GCM Error Interrupt Enable."]
     #[inline(always)]
     pub const fn set_ahbgcmerren(&mut self, val: super::vals::Ahbgcmerren) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
@@ -1995,163 +1995,163 @@ impl defmt::Format for Inten {
         )
     }
 }
-#[doc = "Interrupt"]
+#[doc = "Interrupt."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Intr(pub u32);
 impl Intr {
-    #[doc = "IP-Triggered Command Sequences Execution Finished"]
+    #[doc = "IP-Triggered Command Sequences Execution Finished."]
     #[must_use]
     #[inline(always)]
     pub const fn ipcmddone(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "IP-Triggered Command Sequences Execution Finished"]
+    #[doc = "IP-Triggered Command Sequences Execution Finished."]
     #[inline(always)]
     pub const fn set_ipcmddone(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "IP-Triggered Command Sequences Grant Timeout"]
+    #[doc = "IP-Triggered Command Sequences Grant Timeout."]
     #[must_use]
     #[inline(always)]
     pub const fn ipcmdge(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "IP-Triggered Command Sequences Grant Timeout"]
+    #[doc = "IP-Triggered Command Sequences Grant Timeout."]
     #[inline(always)]
     pub const fn set_ipcmdge(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "AHB-Triggered Command Sequences Grant Timeout"]
+    #[doc = "AHB-Triggered Command Sequences Grant Timeout."]
     #[must_use]
     #[inline(always)]
     pub const fn ahbcmdge(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "AHB-Triggered Command Sequences Grant Timeout"]
+    #[doc = "AHB-Triggered Command Sequences Grant Timeout."]
     #[inline(always)]
     pub const fn set_ahbcmdge(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "IP-Triggered Command Sequences Error"]
+    #[doc = "IP-Triggered Command Sequences Error."]
     #[must_use]
     #[inline(always)]
     pub const fn ipcmderr(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "IP-Triggered Command Sequences Error"]
+    #[doc = "IP-Triggered Command Sequences Error."]
     #[inline(always)]
     pub const fn set_ipcmderr(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "AHB-Triggered Command Sequences Error"]
+    #[doc = "AHB-Triggered Command Sequences Error."]
     #[must_use]
     #[inline(always)]
     pub const fn ahbcmderr(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "AHB-Triggered Command Sequences Error"]
+    #[doc = "AHB-Triggered Command Sequences Error."]
     #[inline(always)]
     pub const fn set_ahbcmderr(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "IP Receive FIFO Watermark Available"]
+    #[doc = "IP Receive FIFO Watermark Available."]
     #[must_use]
     #[inline(always)]
     pub const fn iprxwa(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "IP Receive FIFO Watermark Available"]
+    #[doc = "IP Receive FIFO Watermark Available."]
     #[inline(always)]
     pub const fn set_iprxwa(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "IP Transmit FIFO Watermark Empty"]
+    #[doc = "IP Transmit FIFO Watermark Empty."]
     #[must_use]
     #[inline(always)]
     pub const fn iptxwe(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "IP Transmit FIFO Watermark Empty"]
+    #[doc = "IP Transmit FIFO Watermark Empty."]
     #[inline(always)]
     pub const fn set_iptxwe(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Data Learning Failed"]
+    #[doc = "Data Learning Failed."]
     #[must_use]
     #[inline(always)]
     pub const fn datalearnfail(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Data Learning Failed"]
+    #[doc = "Data Learning Failed."]
     #[inline(always)]
     pub const fn set_datalearnfail(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "SCLK Stopped Due To Full Receive FIFO"]
+    #[doc = "SCLK Stopped Due To Full Receive FIFO."]
     #[must_use]
     #[inline(always)]
     pub const fn sckstopbyrd(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "SCLK Stopped Due To Full Receive FIFO"]
+    #[doc = "SCLK Stopped Due To Full Receive FIFO."]
     #[inline(always)]
     pub const fn set_sckstopbyrd(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "SCLK Stopped Due To Empty Transmit FIFO"]
+    #[doc = "SCLK Stopped Due To Empty Transmit FIFO."]
     #[must_use]
     #[inline(always)]
     pub const fn sckstopbywr(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "SCLK Stopped Due To Empty Transmit FIFO"]
+    #[doc = "SCLK Stopped Due To Empty Transmit FIFO."]
     #[inline(always)]
     pub const fn set_sckstopbywr(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "AHB Bus Timeout"]
+    #[doc = "AHB Bus Timeout."]
     #[must_use]
     #[inline(always)]
     pub const fn ahbbustimeout(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "AHB Bus Timeout"]
+    #[doc = "AHB Bus Timeout."]
     #[inline(always)]
     pub const fn set_ahbbustimeout(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "Sequence Execution Timeout"]
+    #[doc = "Sequence Execution Timeout."]
     #[must_use]
     #[inline(always)]
     pub const fn seqtimeout(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "Sequence Execution Timeout"]
+    #[doc = "Sequence Execution Timeout."]
     #[inline(always)]
     pub const fn set_seqtimeout(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "AHB Read GCM Error"]
+    #[doc = "AHB Read GCM Error."]
     #[must_use]
     #[inline(always)]
     pub const fn ahbgcmerr(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "AHB Read GCM Error"]
+    #[doc = "AHB Read GCM Error."]
     #[inline(always)]
     pub const fn set_ahbgcmerr(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
@@ -2204,19 +2204,19 @@ impl defmt::Format for Intr {
         )
     }
 }
-#[doc = "IP Command"]
+#[doc = "IP Command."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipcmd(pub u32);
 impl Ipcmd {
-    #[doc = "Command Trigger"]
+    #[doc = "Command Trigger."]
     #[must_use]
     #[inline(always)]
     pub const fn trg(&self) -> super::vals::Trg {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Trg::from_bits(val as u8)
     }
-    #[doc = "Command Trigger"]
+    #[doc = "Command Trigger."]
     #[inline(always)]
     pub const fn set_trg(&mut self, val: super::vals::Trg) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
@@ -2239,19 +2239,19 @@ impl defmt::Format for Ipcmd {
         defmt::write!(f, "Ipcmd {{ trg: {:?} }}", self.trg())
     }
 }
-#[doc = "IP Control 0"]
+#[doc = "IP Control 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipcr0(pub u32);
 impl Ipcr0 {
-    #[doc = "Serial Flash Address"]
+    #[doc = "Serial Flash Address."]
     #[must_use]
     #[inline(always)]
     pub const fn sfar(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Serial Flash Address"]
+    #[doc = "Serial Flash Address."]
     #[inline(always)]
     pub const fn set_sfar(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2274,7 +2274,7 @@ impl defmt::Format for Ipcr0 {
         defmt::write!(f, "Ipcr0 {{ sfar: {=u32:?} }}", self.sfar())
     }
 }
-#[doc = "IP Control 1"]
+#[doc = "IP Control 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipcr1(pub u32);
@@ -2315,14 +2315,14 @@ impl Ipcr1 {
     pub const fn set_iseqnum(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 24usize)) | (((val as u32) & 0x07) << 24usize);
     }
-    #[doc = "Parallel Mode Enable for IP Commands"]
+    #[doc = "Parallel Mode Enable for IP Commands."]
     #[must_use]
     #[inline(always)]
     pub const fn iparen(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Parallel Mode Enable for IP Commands"]
+    #[doc = "Parallel Mode Enable for IP Commands."]
     #[inline(always)]
     pub const fn set_iparen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -2357,43 +2357,43 @@ impl defmt::Format for Ipcr1 {
         )
     }
 }
-#[doc = "IPED Function Control"]
+#[doc = "IPED Function Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctrl(pub u32);
 impl Ipedctrl {
-    #[doc = "IPED Mode Select"]
+    #[doc = "IPED Mode Select."]
     #[must_use]
     #[inline(always)]
     pub const fn config(&self) -> super::vals::Config {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Config::from_bits(val as u8)
     }
-    #[doc = "IPED Mode Select"]
+    #[doc = "IPED Mode Select."]
     #[inline(always)]
     pub const fn set_config(&mut self, val: super::vals::Config) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "IPED Encryption and Decryption Enable"]
+    #[doc = "IPED Encryption and Decryption Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn iped_en(&self) -> super::vals::IpedEn {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::IpedEn::from_bits(val as u8)
     }
-    #[doc = "IPED Encryption and Decryption Enable"]
+    #[doc = "IPED Encryption and Decryption Enable."]
     #[inline(always)]
     pub const fn set_iped_en(&mut self, val: super::vals::IpedEn) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "IP Write IPED CTR Mode Encryption Enable"]
+    #[doc = "IP Write IPED CTR Mode Encryption Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ipwr_en(&self) -> super::vals::IpwrEn {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::IpwrEn::from_bits(val as u8)
     }
-    #[doc = "IP Write IPED CTR Mode Encryption Enable"]
+    #[doc = "IP Write IPED CTR Mode Encryption Enable."]
     #[inline(always)]
     pub const fn set_ipwr_en(&mut self, val: super::vals::IpwrEn) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
@@ -2410,74 +2410,74 @@ impl Ipedctrl {
     pub const fn set_ahbwr_en(&mut self, val: super::vals::AhbwrEn) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "AHB Read IPED CTR Mode Decryption Enable"]
+    #[doc = "AHB Read IPED CTR Mode Decryption Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ahbrd_en(&self) -> super::vals::AhbrdEn {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::AhbrdEn::from_bits(val as u8)
     }
-    #[doc = "AHB Read IPED CTR Mode Decryption Enable"]
+    #[doc = "AHB Read IPED CTR Mode Decryption Enable."]
     #[inline(always)]
     pub const fn set_ahbrd_en(&mut self, val: super::vals::AhbrdEn) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
-    #[doc = "IP Write GCM Mode Enable"]
+    #[doc = "IP Write GCM Mode Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ipgcmwr(&self) -> super::vals::Ipgcmwr {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::Ipgcmwr::from_bits(val as u8)
     }
-    #[doc = "IP Write GCM Mode Enable"]
+    #[doc = "IP Write GCM Mode Enable."]
     #[inline(always)]
     pub const fn set_ipgcmwr(&mut self, val: super::vals::Ipgcmwr) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "AHB Write IPED GCM Mode Encryption Enable"]
+    #[doc = "AHB Write IPED GCM Mode Encryption Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ahgcmwr(&self) -> super::vals::Ahgcmwr {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Ahgcmwr::from_bits(val as u8)
     }
-    #[doc = "AHB Write IPED GCM Mode Encryption Enable"]
+    #[doc = "AHB Write IPED GCM Mode Encryption Enable."]
     #[inline(always)]
     pub const fn set_ahgcmwr(&mut self, val: super::vals::Ahgcmwr) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "AHB Read IPED GCM Mode Decryption Enable"]
+    #[doc = "AHB Read IPED GCM Mode Decryption Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ahbgcmrd(&self) -> super::vals::Ahbgcmrd {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::Ahbgcmrd::from_bits(val as u8)
     }
-    #[doc = "AHB Read IPED GCM Mode Decryption Enable"]
+    #[doc = "AHB Read IPED GCM Mode Decryption Enable."]
     #[inline(always)]
     pub const fn set_ahbgcmrd(&mut self, val: super::vals::Ahbgcmrd) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
-    #[doc = "IPED Protection"]
+    #[doc = "IPED Protection."]
     #[must_use]
     #[inline(always)]
     pub const fn iped_protect(&self) -> super::vals::IpedProtect {
         let val = (self.0 >> 9usize) & 0x01;
         super::vals::IpedProtect::from_bits(val as u8)
     }
-    #[doc = "IPED Protection"]
+    #[doc = "IPED Protection."]
     #[inline(always)]
     pub const fn set_iped_protect(&mut self, val: super::vals::IpedProtect) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
     }
-    #[doc = "Abort Current Decryption or Encryption"]
+    #[doc = "Abort Current Decryption or Encryption."]
     #[must_use]
     #[inline(always)]
     pub const fn iped_swreset(&self) -> super::vals::IpedSwreset {
         let val = (self.0 >> 10usize) & 0x01;
         super::vals::IpedSwreset::from_bits(val as u8)
     }
-    #[doc = "Abort Current Decryption or Encryption"]
+    #[doc = "Abort Current Decryption or Encryption."]
     #[inline(always)]
     pub const fn set_iped_swreset(&mut self, val: super::vals::IpedSwreset) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
@@ -2524,19 +2524,19 @@ impl defmt::Format for Ipedctrl {
         )
     }
 }
-#[doc = "IPED Context0 Additional Authenticated Data0"]
+#[doc = "IPED Context0 Additional Authenticated Data0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx0aad0(pub u32);
 impl Ipedctx0aad0 {
-    #[doc = "CTX AAD"]
+    #[doc = "CTX AAD."]
     #[must_use]
     #[inline(always)]
     pub const fn ctx0_aad0(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "CTX AAD"]
+    #[doc = "CTX AAD."]
     #[inline(always)]
     pub const fn set_ctx0_aad0(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2565,19 +2565,19 @@ impl defmt::Format for Ipedctx0aad0 {
         )
     }
 }
-#[doc = "IPED Context0 Additional Authenticated Data1"]
+#[doc = "IPED Context0 Additional Authenticated Data1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx0aad1(pub u32);
 impl Ipedctx0aad1 {
-    #[doc = "CTX AAD"]
+    #[doc = "CTX AAD."]
     #[must_use]
     #[inline(always)]
     pub const fn ctx0_aad1(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "CTX AAD"]
+    #[doc = "CTX AAD."]
     #[inline(always)]
     pub const fn set_ctx0_aad1(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2606,19 +2606,19 @@ impl defmt::Format for Ipedctx0aad1 {
         )
     }
 }
-#[doc = "End Address of Region"]
+#[doc = "End Address of Region."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx0end(pub u32);
 impl Ipedctx0end {
-    #[doc = "End Address of IPED Region"]
+    #[doc = "End Address of IPED Region."]
     #[must_use]
     #[inline(always)]
     pub const fn end_address(&self) -> u32 {
         let val = (self.0 >> 8usize) & 0x00ff_ffff;
         val as u32
     }
-    #[doc = "End Address of IPED Region"]
+    #[doc = "End Address of IPED Region."]
     #[inline(always)]
     pub const fn set_end_address(&mut self, val: u32) {
         self.0 = (self.0 & !(0x00ff_ffff << 8usize)) | (((val as u32) & 0x00ff_ffff) << 8usize);
@@ -2647,7 +2647,7 @@ impl defmt::Format for Ipedctx0end {
         )
     }
 }
-#[doc = "IPED Context0 IV0"]
+#[doc = "IPED Context0 IV0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx0iv0(pub u32);
@@ -2684,7 +2684,7 @@ impl defmt::Format for Ipedctx0iv0 {
         defmt::write!(f, "Ipedctx0iv0 {{ ctx0_iv0: {=u32:?} }}", self.ctx0_iv0())
     }
 }
-#[doc = "IPED Context0 IV1"]
+#[doc = "IPED Context0 IV1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx0iv1(pub u32);
@@ -2721,43 +2721,43 @@ impl defmt::Format for Ipedctx0iv1 {
         defmt::write!(f, "Ipedctx0iv1 {{ ctx0_iv1: {=u32:?} }}", self.ctx0_iv1())
     }
 }
-#[doc = "Start Address of Region"]
+#[doc = "Start Address of Region."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx0start(pub u32);
 impl Ipedctx0start {
-    #[doc = "GCM Mode Enable"]
+    #[doc = "GCM Mode Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn gcm(&self) -> super::vals::Ipedctx0startGcm {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Ipedctx0startGcm::from_bits(val as u8)
     }
-    #[doc = "GCM Mode Enable"]
+    #[doc = "GCM Mode Enable."]
     #[inline(always)]
     pub const fn set_gcm(&mut self, val: super::vals::Ipedctx0startGcm) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "AHB Bus Error Disable"]
+    #[doc = "AHB Bus Error Disable."]
     #[must_use]
     #[inline(always)]
     pub const fn ahbbuserror_dis(&self) -> super::vals::Ipedctx0startAhbbuserrorDis {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Ipedctx0startAhbbuserrorDis::from_bits(val as u8)
     }
-    #[doc = "AHB Bus Error Disable"]
+    #[doc = "AHB Bus Error Disable."]
     #[inline(always)]
     pub const fn set_ahbbuserror_dis(&mut self, val: super::vals::Ipedctx0startAhbbuserrorDis) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Start Address"]
+    #[doc = "Start Address."]
     #[must_use]
     #[inline(always)]
     pub const fn start_address(&self) -> u32 {
         let val = (self.0 >> 8usize) & 0x00ff_ffff;
         val as u32
     }
-    #[doc = "Start Address"]
+    #[doc = "Start Address."]
     #[inline(always)]
     pub const fn set_start_address(&mut self, val: u32) {
         self.0 = (self.0 & !(0x00ff_ffff << 8usize)) | (((val as u32) & 0x00ff_ffff) << 8usize);
@@ -2790,19 +2790,19 @@ impl defmt::Format for Ipedctx0start {
         )
     }
 }
-#[doc = "IPED Context1 Additional Authenticated Data0"]
+#[doc = "IPED Context1 Additional Authenticated Data0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx1aad0(pub u32);
 impl Ipedctx1aad0 {
-    #[doc = "CTX AAD"]
+    #[doc = "CTX AAD."]
     #[must_use]
     #[inline(always)]
     pub const fn ctx1_aad0(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "CTX AAD"]
+    #[doc = "CTX AAD."]
     #[inline(always)]
     pub const fn set_ctx1_aad0(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2831,19 +2831,19 @@ impl defmt::Format for Ipedctx1aad0 {
         )
     }
 }
-#[doc = "IPED Context1 Additional Authenticated Data1"]
+#[doc = "IPED Context1 Additional Authenticated Data1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx1aad1(pub u32);
 impl Ipedctx1aad1 {
-    #[doc = "CTX AAD"]
+    #[doc = "CTX AAD."]
     #[must_use]
     #[inline(always)]
     pub const fn ctx1_aad1(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "CTX AAD"]
+    #[doc = "CTX AAD."]
     #[inline(always)]
     pub const fn set_ctx1_aad1(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2872,19 +2872,19 @@ impl defmt::Format for Ipedctx1aad1 {
         )
     }
 }
-#[doc = "End Address of Region"]
+#[doc = "End Address of Region."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx1end(pub u32);
 impl Ipedctx1end {
-    #[doc = "End Address of IPED Region"]
+    #[doc = "End Address of IPED Region."]
     #[must_use]
     #[inline(always)]
     pub const fn end_address(&self) -> u32 {
         let val = (self.0 >> 8usize) & 0x00ff_ffff;
         val as u32
     }
-    #[doc = "End Address of IPED Region"]
+    #[doc = "End Address of IPED Region."]
     #[inline(always)]
     pub const fn set_end_address(&mut self, val: u32) {
         self.0 = (self.0 & !(0x00ff_ffff << 8usize)) | (((val as u32) & 0x00ff_ffff) << 8usize);
@@ -2913,7 +2913,7 @@ impl defmt::Format for Ipedctx1end {
         )
     }
 }
-#[doc = "IPED Context1 IV0"]
+#[doc = "IPED Context1 IV0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx1iv0(pub u32);
@@ -2950,7 +2950,7 @@ impl defmt::Format for Ipedctx1iv0 {
         defmt::write!(f, "Ipedctx1iv0 {{ ctx1_iv0: {=u32:?} }}", self.ctx1_iv0())
     }
 }
-#[doc = "IPED Context1 IV1"]
+#[doc = "IPED Context1 IV1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx1iv1(pub u32);
@@ -2987,43 +2987,43 @@ impl defmt::Format for Ipedctx1iv1 {
         defmt::write!(f, "Ipedctx1iv1 {{ ctx1_iv1: {=u32:?} }}", self.ctx1_iv1())
     }
 }
-#[doc = "Start Address of Region"]
+#[doc = "Start Address of Region."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx1start(pub u32);
 impl Ipedctx1start {
-    #[doc = "GCM Mode Enable"]
+    #[doc = "GCM Mode Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn gcm(&self) -> super::vals::Ipedctx1startGcm {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Ipedctx1startGcm::from_bits(val as u8)
     }
-    #[doc = "GCM Mode Enable"]
+    #[doc = "GCM Mode Enable."]
     #[inline(always)]
     pub const fn set_gcm(&mut self, val: super::vals::Ipedctx1startGcm) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "AHB Bus Error Disable"]
+    #[doc = "AHB Bus Error Disable."]
     #[must_use]
     #[inline(always)]
     pub const fn ahbbuserror_dis(&self) -> super::vals::Ipedctx1startAhbbuserrorDis {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Ipedctx1startAhbbuserrorDis::from_bits(val as u8)
     }
-    #[doc = "AHB Bus Error Disable"]
+    #[doc = "AHB Bus Error Disable."]
     #[inline(always)]
     pub const fn set_ahbbuserror_dis(&mut self, val: super::vals::Ipedctx1startAhbbuserrorDis) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Start Address"]
+    #[doc = "Start Address."]
     #[must_use]
     #[inline(always)]
     pub const fn start_address(&self) -> u32 {
         let val = (self.0 >> 8usize) & 0x00ff_ffff;
         val as u32
     }
-    #[doc = "Start Address"]
+    #[doc = "Start Address."]
     #[inline(always)]
     pub const fn set_start_address(&mut self, val: u32) {
         self.0 = (self.0 & !(0x00ff_ffff << 8usize)) | (((val as u32) & 0x00ff_ffff) << 8usize);
@@ -3056,19 +3056,19 @@ impl defmt::Format for Ipedctx1start {
         )
     }
 }
-#[doc = "IPED Context2 Additional Authenticated Data0"]
+#[doc = "IPED Context2 Additional Authenticated Data0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx2aad0(pub u32);
 impl Ipedctx2aad0 {
-    #[doc = "CTX AAD"]
+    #[doc = "CTX AAD."]
     #[must_use]
     #[inline(always)]
     pub const fn ctx2_aad0(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "CTX AAD"]
+    #[doc = "CTX AAD."]
     #[inline(always)]
     pub const fn set_ctx2_aad0(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3097,19 +3097,19 @@ impl defmt::Format for Ipedctx2aad0 {
         )
     }
 }
-#[doc = "IPED Context2 Additional Authenticated Data1"]
+#[doc = "IPED Context2 Additional Authenticated Data1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx2aad1(pub u32);
 impl Ipedctx2aad1 {
-    #[doc = "CTX AAD"]
+    #[doc = "CTX AAD."]
     #[must_use]
     #[inline(always)]
     pub const fn ctx2_aad1(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "CTX AAD"]
+    #[doc = "CTX AAD."]
     #[inline(always)]
     pub const fn set_ctx2_aad1(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3138,19 +3138,19 @@ impl defmt::Format for Ipedctx2aad1 {
         )
     }
 }
-#[doc = "End Address of Region"]
+#[doc = "End Address of Region."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx2end(pub u32);
 impl Ipedctx2end {
-    #[doc = "End Address of IPED Region"]
+    #[doc = "End Address of IPED Region."]
     #[must_use]
     #[inline(always)]
     pub const fn end_address(&self) -> u32 {
         let val = (self.0 >> 8usize) & 0x00ff_ffff;
         val as u32
     }
-    #[doc = "End Address of IPED Region"]
+    #[doc = "End Address of IPED Region."]
     #[inline(always)]
     pub const fn set_end_address(&mut self, val: u32) {
         self.0 = (self.0 & !(0x00ff_ffff << 8usize)) | (((val as u32) & 0x00ff_ffff) << 8usize);
@@ -3179,7 +3179,7 @@ impl defmt::Format for Ipedctx2end {
         )
     }
 }
-#[doc = "IPED Context2 IV0"]
+#[doc = "IPED Context2 IV0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx2iv0(pub u32);
@@ -3216,7 +3216,7 @@ impl defmt::Format for Ipedctx2iv0 {
         defmt::write!(f, "Ipedctx2iv0 {{ ctx2_iv0: {=u32:?} }}", self.ctx2_iv0())
     }
 }
-#[doc = "IPED Context2 IV1"]
+#[doc = "IPED Context2 IV1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx2iv1(pub u32);
@@ -3253,43 +3253,43 @@ impl defmt::Format for Ipedctx2iv1 {
         defmt::write!(f, "Ipedctx2iv1 {{ ctx2_iv1: {=u32:?} }}", self.ctx2_iv1())
     }
 }
-#[doc = "Start Address of Region"]
+#[doc = "Start Address of Region."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx2start(pub u32);
 impl Ipedctx2start {
-    #[doc = "GCM Mode Enable"]
+    #[doc = "GCM Mode Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn gcm(&self) -> super::vals::Ipedctx2startGcm {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Ipedctx2startGcm::from_bits(val as u8)
     }
-    #[doc = "GCM Mode Enable"]
+    #[doc = "GCM Mode Enable."]
     #[inline(always)]
     pub const fn set_gcm(&mut self, val: super::vals::Ipedctx2startGcm) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "AHB Bus Error Disable"]
+    #[doc = "AHB Bus Error Disable."]
     #[must_use]
     #[inline(always)]
     pub const fn ahbbuserror_dis(&self) -> super::vals::Ipedctx2startAhbbuserrorDis {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Ipedctx2startAhbbuserrorDis::from_bits(val as u8)
     }
-    #[doc = "AHB Bus Error Disable"]
+    #[doc = "AHB Bus Error Disable."]
     #[inline(always)]
     pub const fn set_ahbbuserror_dis(&mut self, val: super::vals::Ipedctx2startAhbbuserrorDis) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Start Address"]
+    #[doc = "Start Address."]
     #[must_use]
     #[inline(always)]
     pub const fn start_address(&self) -> u32 {
         let val = (self.0 >> 8usize) & 0x00ff_ffff;
         val as u32
     }
-    #[doc = "Start Address"]
+    #[doc = "Start Address."]
     #[inline(always)]
     pub const fn set_start_address(&mut self, val: u32) {
         self.0 = (self.0 & !(0x00ff_ffff << 8usize)) | (((val as u32) & 0x00ff_ffff) << 8usize);
@@ -3322,19 +3322,19 @@ impl defmt::Format for Ipedctx2start {
         )
     }
 }
-#[doc = "IPED Context3 Additional Authenticated Data0"]
+#[doc = "IPED Context3 Additional Authenticated Data0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx3aad0(pub u32);
 impl Ipedctx3aad0 {
-    #[doc = "CTX AAD"]
+    #[doc = "CTX AAD."]
     #[must_use]
     #[inline(always)]
     pub const fn ctx3_aad0(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "CTX AAD"]
+    #[doc = "CTX AAD."]
     #[inline(always)]
     pub const fn set_ctx3_aad0(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3363,19 +3363,19 @@ impl defmt::Format for Ipedctx3aad0 {
         )
     }
 }
-#[doc = "IPED Context3 Additional Authenticated Data1"]
+#[doc = "IPED Context3 Additional Authenticated Data1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx3aad1(pub u32);
 impl Ipedctx3aad1 {
-    #[doc = "CTX AAD"]
+    #[doc = "CTX AAD."]
     #[must_use]
     #[inline(always)]
     pub const fn ctx3_aad1(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "CTX AAD"]
+    #[doc = "CTX AAD."]
     #[inline(always)]
     pub const fn set_ctx3_aad1(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3404,19 +3404,19 @@ impl defmt::Format for Ipedctx3aad1 {
         )
     }
 }
-#[doc = "End Address of Region"]
+#[doc = "End Address of Region."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx3end(pub u32);
 impl Ipedctx3end {
-    #[doc = "End Address of IPED Region"]
+    #[doc = "End Address of IPED Region."]
     #[must_use]
     #[inline(always)]
     pub const fn end_address(&self) -> u32 {
         let val = (self.0 >> 8usize) & 0x00ff_ffff;
         val as u32
     }
-    #[doc = "End Address of IPED Region"]
+    #[doc = "End Address of IPED Region."]
     #[inline(always)]
     pub const fn set_end_address(&mut self, val: u32) {
         self.0 = (self.0 & !(0x00ff_ffff << 8usize)) | (((val as u32) & 0x00ff_ffff) << 8usize);
@@ -3445,7 +3445,7 @@ impl defmt::Format for Ipedctx3end {
         )
     }
 }
-#[doc = "IPED Context3 IV0"]
+#[doc = "IPED Context3 IV0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx3iv0(pub u32);
@@ -3482,7 +3482,7 @@ impl defmt::Format for Ipedctx3iv0 {
         defmt::write!(f, "Ipedctx3iv0 {{ ctx3_iv0: {=u32:?} }}", self.ctx3_iv0())
     }
 }
-#[doc = "IPED Context3 IV1"]
+#[doc = "IPED Context3 IV1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx3iv1(pub u32);
@@ -3519,43 +3519,43 @@ impl defmt::Format for Ipedctx3iv1 {
         defmt::write!(f, "Ipedctx3iv1 {{ ctx3_iv1: {=u32:?} }}", self.ctx3_iv1())
     }
 }
-#[doc = "Start Address of Region"]
+#[doc = "Start Address of Region."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx3start(pub u32);
 impl Ipedctx3start {
-    #[doc = "GCM Mode Enable"]
+    #[doc = "GCM Mode Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn gcm(&self) -> super::vals::Ipedctx3startGcm {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Ipedctx3startGcm::from_bits(val as u8)
     }
-    #[doc = "GCM Mode Enable"]
+    #[doc = "GCM Mode Enable."]
     #[inline(always)]
     pub const fn set_gcm(&mut self, val: super::vals::Ipedctx3startGcm) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "AHB Bus Error Disable"]
+    #[doc = "AHB Bus Error Disable."]
     #[must_use]
     #[inline(always)]
     pub const fn ahbbuserror_dis(&self) -> super::vals::Ipedctx3startAhbbuserrorDis {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Ipedctx3startAhbbuserrorDis::from_bits(val as u8)
     }
-    #[doc = "AHB Bus Error Disable"]
+    #[doc = "AHB Bus Error Disable."]
     #[inline(always)]
     pub const fn set_ahbbuserror_dis(&mut self, val: super::vals::Ipedctx3startAhbbuserrorDis) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Start Address"]
+    #[doc = "Start Address."]
     #[must_use]
     #[inline(always)]
     pub const fn start_address(&self) -> u32 {
         let val = (self.0 >> 8usize) & 0x00ff_ffff;
         val as u32
     }
-    #[doc = "Start Address"]
+    #[doc = "Start Address."]
     #[inline(always)]
     pub const fn set_start_address(&mut self, val: u32) {
         self.0 = (self.0 & !(0x00ff_ffff << 8usize)) | (((val as u32) & 0x00ff_ffff) << 8usize);
@@ -3588,19 +3588,19 @@ impl defmt::Format for Ipedctx3start {
         )
     }
 }
-#[doc = "IPED Context4 Additional Authenticated Data0"]
+#[doc = "IPED Context4 Additional Authenticated Data0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx4aad0(pub u32);
 impl Ipedctx4aad0 {
-    #[doc = "CTX AAD"]
+    #[doc = "CTX AAD."]
     #[must_use]
     #[inline(always)]
     pub const fn ctx4_aad0(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "CTX AAD"]
+    #[doc = "CTX AAD."]
     #[inline(always)]
     pub const fn set_ctx4_aad0(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3629,19 +3629,19 @@ impl defmt::Format for Ipedctx4aad0 {
         )
     }
 }
-#[doc = "IPED Context4 Additional Authenticated Data1"]
+#[doc = "IPED Context4 Additional Authenticated Data1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx4aad1(pub u32);
 impl Ipedctx4aad1 {
-    #[doc = "CTX AAD"]
+    #[doc = "CTX AAD."]
     #[must_use]
     #[inline(always)]
     pub const fn ctx4_aad1(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "CTX AAD"]
+    #[doc = "CTX AAD."]
     #[inline(always)]
     pub const fn set_ctx4_aad1(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3670,19 +3670,19 @@ impl defmt::Format for Ipedctx4aad1 {
         )
     }
 }
-#[doc = "End Address of Region"]
+#[doc = "End Address of Region."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx4end(pub u32);
 impl Ipedctx4end {
-    #[doc = "End Address of IPED Region"]
+    #[doc = "End Address of IPED Region."]
     #[must_use]
     #[inline(always)]
     pub const fn end_address(&self) -> u32 {
         let val = (self.0 >> 8usize) & 0x00ff_ffff;
         val as u32
     }
-    #[doc = "End Address of IPED Region"]
+    #[doc = "End Address of IPED Region."]
     #[inline(always)]
     pub const fn set_end_address(&mut self, val: u32) {
         self.0 = (self.0 & !(0x00ff_ffff << 8usize)) | (((val as u32) & 0x00ff_ffff) << 8usize);
@@ -3711,7 +3711,7 @@ impl defmt::Format for Ipedctx4end {
         )
     }
 }
-#[doc = "IPED Context4 IV0"]
+#[doc = "IPED Context4 IV0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx4iv0(pub u32);
@@ -3748,7 +3748,7 @@ impl defmt::Format for Ipedctx4iv0 {
         defmt::write!(f, "Ipedctx4iv0 {{ ctx4_iv0: {=u32:?} }}", self.ctx4_iv0())
     }
 }
-#[doc = "IPED Context4 IV1"]
+#[doc = "IPED Context4 IV1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx4iv1(pub u32);
@@ -3785,43 +3785,43 @@ impl defmt::Format for Ipedctx4iv1 {
         defmt::write!(f, "Ipedctx4iv1 {{ ctx4_iv1: {=u32:?} }}", self.ctx4_iv1())
     }
 }
-#[doc = "Start Address of Region"]
+#[doc = "Start Address of Region."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx4start(pub u32);
 impl Ipedctx4start {
-    #[doc = "GCM Mode Enable"]
+    #[doc = "GCM Mode Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn gcm(&self) -> super::vals::Ipedctx4startGcm {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Ipedctx4startGcm::from_bits(val as u8)
     }
-    #[doc = "GCM Mode Enable"]
+    #[doc = "GCM Mode Enable."]
     #[inline(always)]
     pub const fn set_gcm(&mut self, val: super::vals::Ipedctx4startGcm) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "AHB Bus Error Disable"]
+    #[doc = "AHB Bus Error Disable."]
     #[must_use]
     #[inline(always)]
     pub const fn ahbbuserror_dis(&self) -> super::vals::Ipedctx4startAhbbuserrorDis {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Ipedctx4startAhbbuserrorDis::from_bits(val as u8)
     }
-    #[doc = "AHB Bus Error Disable"]
+    #[doc = "AHB Bus Error Disable."]
     #[inline(always)]
     pub const fn set_ahbbuserror_dis(&mut self, val: super::vals::Ipedctx4startAhbbuserrorDis) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Start Address"]
+    #[doc = "Start Address."]
     #[must_use]
     #[inline(always)]
     pub const fn start_address(&self) -> u32 {
         let val = (self.0 >> 8usize) & 0x00ff_ffff;
         val as u32
     }
-    #[doc = "Start Address"]
+    #[doc = "Start Address."]
     #[inline(always)]
     pub const fn set_start_address(&mut self, val: u32) {
         self.0 = (self.0 & !(0x00ff_ffff << 8usize)) | (((val as u32) & 0x00ff_ffff) << 8usize);
@@ -3854,19 +3854,19 @@ impl defmt::Format for Ipedctx4start {
         )
     }
 }
-#[doc = "IPED Context5 Additional Authenticated Data0"]
+#[doc = "IPED Context5 Additional Authenticated Data0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx5aad0(pub u32);
 impl Ipedctx5aad0 {
-    #[doc = "CTX AAD"]
+    #[doc = "CTX AAD."]
     #[must_use]
     #[inline(always)]
     pub const fn ctx5_aad0(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "CTX AAD"]
+    #[doc = "CTX AAD."]
     #[inline(always)]
     pub const fn set_ctx5_aad0(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3895,19 +3895,19 @@ impl defmt::Format for Ipedctx5aad0 {
         )
     }
 }
-#[doc = "IPED Context5 Additional Authenticated Data1"]
+#[doc = "IPED Context5 Additional Authenticated Data1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx5aad1(pub u32);
 impl Ipedctx5aad1 {
-    #[doc = "CTX AAD"]
+    #[doc = "CTX AAD."]
     #[must_use]
     #[inline(always)]
     pub const fn ctx5_aad1(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "CTX AAD"]
+    #[doc = "CTX AAD."]
     #[inline(always)]
     pub const fn set_ctx5_aad1(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3936,19 +3936,19 @@ impl defmt::Format for Ipedctx5aad1 {
         )
     }
 }
-#[doc = "End Address of Region"]
+#[doc = "End Address of Region."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx5end(pub u32);
 impl Ipedctx5end {
-    #[doc = "End Address of IPED Region"]
+    #[doc = "End Address of IPED Region."]
     #[must_use]
     #[inline(always)]
     pub const fn end_address(&self) -> u32 {
         let val = (self.0 >> 8usize) & 0x00ff_ffff;
         val as u32
     }
-    #[doc = "End Address of IPED Region"]
+    #[doc = "End Address of IPED Region."]
     #[inline(always)]
     pub const fn set_end_address(&mut self, val: u32) {
         self.0 = (self.0 & !(0x00ff_ffff << 8usize)) | (((val as u32) & 0x00ff_ffff) << 8usize);
@@ -3977,7 +3977,7 @@ impl defmt::Format for Ipedctx5end {
         )
     }
 }
-#[doc = "IPED Context5 IV0"]
+#[doc = "IPED Context5 IV0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx5iv0(pub u32);
@@ -4014,7 +4014,7 @@ impl defmt::Format for Ipedctx5iv0 {
         defmt::write!(f, "Ipedctx5iv0 {{ ctx5_iv0: {=u32:?} }}", self.ctx5_iv0())
     }
 }
-#[doc = "IPED Context5 IV1"]
+#[doc = "IPED Context5 IV1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx5iv1(pub u32);
@@ -4051,43 +4051,43 @@ impl defmt::Format for Ipedctx5iv1 {
         defmt::write!(f, "Ipedctx5iv1 {{ ctx5_iv1: {=u32:?} }}", self.ctx5_iv1())
     }
 }
-#[doc = "Start Address of Region"]
+#[doc = "Start Address of Region."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx5start(pub u32);
 impl Ipedctx5start {
-    #[doc = "GCM Mode Enable"]
+    #[doc = "GCM Mode Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn gcm(&self) -> super::vals::Ipedctx5startGcm {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Ipedctx5startGcm::from_bits(val as u8)
     }
-    #[doc = "GCM Mode Enable"]
+    #[doc = "GCM Mode Enable."]
     #[inline(always)]
     pub const fn set_gcm(&mut self, val: super::vals::Ipedctx5startGcm) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "AHB Bus Error Disable"]
+    #[doc = "AHB Bus Error Disable."]
     #[must_use]
     #[inline(always)]
     pub const fn ahbbuserror_dis(&self) -> super::vals::Ipedctx5startAhbbuserrorDis {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Ipedctx5startAhbbuserrorDis::from_bits(val as u8)
     }
-    #[doc = "AHB Bus Error Disable"]
+    #[doc = "AHB Bus Error Disable."]
     #[inline(always)]
     pub const fn set_ahbbuserror_dis(&mut self, val: super::vals::Ipedctx5startAhbbuserrorDis) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Start Address"]
+    #[doc = "Start Address."]
     #[must_use]
     #[inline(always)]
     pub const fn start_address(&self) -> u32 {
         let val = (self.0 >> 8usize) & 0x00ff_ffff;
         val as u32
     }
-    #[doc = "Start Address"]
+    #[doc = "Start Address."]
     #[inline(always)]
     pub const fn set_start_address(&mut self, val: u32) {
         self.0 = (self.0 & !(0x00ff_ffff << 8usize)) | (((val as u32) & 0x00ff_ffff) << 8usize);
@@ -4120,19 +4120,19 @@ impl defmt::Format for Ipedctx5start {
         )
     }
 }
-#[doc = "IPED Context6 Additional Authenticated Data0"]
+#[doc = "IPED Context6 Additional Authenticated Data0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx6aad0(pub u32);
 impl Ipedctx6aad0 {
-    #[doc = "CTX AAD"]
+    #[doc = "CTX AAD."]
     #[must_use]
     #[inline(always)]
     pub const fn ctx6_aad0(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "CTX AAD"]
+    #[doc = "CTX AAD."]
     #[inline(always)]
     pub const fn set_ctx6_aad0(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -4161,19 +4161,19 @@ impl defmt::Format for Ipedctx6aad0 {
         )
     }
 }
-#[doc = "IPED Context6 Additional Authenticated Data1"]
+#[doc = "IPED Context6 Additional Authenticated Data1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx6aad1(pub u32);
 impl Ipedctx6aad1 {
-    #[doc = "CTX AAD"]
+    #[doc = "CTX AAD."]
     #[must_use]
     #[inline(always)]
     pub const fn ctx6_aad1(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "CTX AAD"]
+    #[doc = "CTX AAD."]
     #[inline(always)]
     pub const fn set_ctx6_aad1(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -4202,19 +4202,19 @@ impl defmt::Format for Ipedctx6aad1 {
         )
     }
 }
-#[doc = "End Address of Region"]
+#[doc = "End Address of Region."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx6end(pub u32);
 impl Ipedctx6end {
-    #[doc = "End Address of IPED Region"]
+    #[doc = "End Address of IPED Region."]
     #[must_use]
     #[inline(always)]
     pub const fn end_address(&self) -> u32 {
         let val = (self.0 >> 8usize) & 0x00ff_ffff;
         val as u32
     }
-    #[doc = "End Address of IPED Region"]
+    #[doc = "End Address of IPED Region."]
     #[inline(always)]
     pub const fn set_end_address(&mut self, val: u32) {
         self.0 = (self.0 & !(0x00ff_ffff << 8usize)) | (((val as u32) & 0x00ff_ffff) << 8usize);
@@ -4243,7 +4243,7 @@ impl defmt::Format for Ipedctx6end {
         )
     }
 }
-#[doc = "IPED Context6 IV0"]
+#[doc = "IPED Context6 IV0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx6iv0(pub u32);
@@ -4280,7 +4280,7 @@ impl defmt::Format for Ipedctx6iv0 {
         defmt::write!(f, "Ipedctx6iv0 {{ ctx6_iv0: {=u32:?} }}", self.ctx6_iv0())
     }
 }
-#[doc = "IPED Context6 IV1"]
+#[doc = "IPED Context6 IV1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx6iv1(pub u32);
@@ -4317,43 +4317,43 @@ impl defmt::Format for Ipedctx6iv1 {
         defmt::write!(f, "Ipedctx6iv1 {{ ctx6_iv1: {=u32:?} }}", self.ctx6_iv1())
     }
 }
-#[doc = "Start Address of Region"]
+#[doc = "Start Address of Region."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctx6start(pub u32);
 impl Ipedctx6start {
-    #[doc = "GCM Mode Enable"]
+    #[doc = "GCM Mode Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn gcm(&self) -> super::vals::Ipedctx6startGcm {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Ipedctx6startGcm::from_bits(val as u8)
     }
-    #[doc = "GCM Mode Enable"]
+    #[doc = "GCM Mode Enable."]
     #[inline(always)]
     pub const fn set_gcm(&mut self, val: super::vals::Ipedctx6startGcm) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "AHB Bus Error Disable"]
+    #[doc = "AHB Bus Error Disable."]
     #[must_use]
     #[inline(always)]
     pub const fn ahbbuserror_dis(&self) -> super::vals::Ipedctx6startAhbbuserrorDis {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Ipedctx6startAhbbuserrorDis::from_bits(val as u8)
     }
-    #[doc = "AHB Bus Error Disable"]
+    #[doc = "AHB Bus Error Disable."]
     #[inline(always)]
     pub const fn set_ahbbuserror_dis(&mut self, val: super::vals::Ipedctx6startAhbbuserrorDis) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Start Address"]
+    #[doc = "Start Address."]
     #[must_use]
     #[inline(always)]
     pub const fn start_address(&self) -> u32 {
         let val = (self.0 >> 8usize) & 0x00ff_ffff;
         val as u32
     }
-    #[doc = "Start Address"]
+    #[doc = "Start Address."]
     #[inline(always)]
     pub const fn set_start_address(&mut self, val: u32) {
         self.0 = (self.0 & !(0x00ff_ffff << 8usize)) | (((val as u32) & 0x00ff_ffff) << 8usize);
@@ -4386,91 +4386,91 @@ impl defmt::Format for Ipedctx6start {
         )
     }
 }
-#[doc = "IPED context control 0"]
+#[doc = "IPED context control 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctxctrl0(pub u32);
 impl Ipedctxctrl0 {
-    #[doc = "Context Register Freeze for Region 0"]
+    #[doc = "Context Register Freeze for Region 0."]
     #[must_use]
     #[inline(always)]
     pub const fn ctx0_freeze0(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x03;
         val as u8
     }
-    #[doc = "Context Register Freeze for Region 0"]
+    #[doc = "Context Register Freeze for Region 0."]
     #[inline(always)]
     pub const fn set_ctx0_freeze0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val as u32) & 0x03) << 0usize);
     }
-    #[doc = "Context Register Freeze for Region 1"]
+    #[doc = "Context Register Freeze for Region 1."]
     #[must_use]
     #[inline(always)]
     pub const fn ctx1_freeze0(&self) -> u8 {
         let val = (self.0 >> 2usize) & 0x03;
         val as u8
     }
-    #[doc = "Context Register Freeze for Region 1"]
+    #[doc = "Context Register Freeze for Region 1."]
     #[inline(always)]
     pub const fn set_ctx1_freeze0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val as u32) & 0x03) << 2usize);
     }
-    #[doc = "Context Register Freeze for Region 2"]
+    #[doc = "Context Register Freeze for Region 2."]
     #[must_use]
     #[inline(always)]
     pub const fn ctx2_freeze0(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x03;
         val as u8
     }
-    #[doc = "Context Register Freeze for Region 2"]
+    #[doc = "Context Register Freeze for Region 2."]
     #[inline(always)]
     pub const fn set_ctx2_freeze0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val as u32) & 0x03) << 4usize);
     }
-    #[doc = "Context Register Freeze for Region 3"]
+    #[doc = "Context Register Freeze for Region 3."]
     #[must_use]
     #[inline(always)]
     pub const fn ctx3_freeze0(&self) -> u8 {
         let val = (self.0 >> 6usize) & 0x03;
         val as u8
     }
-    #[doc = "Context Register Freeze for Region 3"]
+    #[doc = "Context Register Freeze for Region 3."]
     #[inline(always)]
     pub const fn set_ctx3_freeze0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val as u32) & 0x03) << 6usize);
     }
-    #[doc = "Context Register Freeze for Region 4"]
+    #[doc = "Context Register Freeze for Region 4."]
     #[must_use]
     #[inline(always)]
     pub const fn ctx4_freeze0(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x03;
         val as u8
     }
-    #[doc = "Context Register Freeze for Region 4"]
+    #[doc = "Context Register Freeze for Region 4."]
     #[inline(always)]
     pub const fn set_ctx4_freeze0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val as u32) & 0x03) << 8usize);
     }
-    #[doc = "Context Register Freeze for Region 5"]
+    #[doc = "Context Register Freeze for Region 5."]
     #[must_use]
     #[inline(always)]
     pub const fn ctx5_freeze0(&self) -> u8 {
         let val = (self.0 >> 10usize) & 0x03;
         val as u8
     }
-    #[doc = "Context Register Freeze for Region 5"]
+    #[doc = "Context Register Freeze for Region 5."]
     #[inline(always)]
     pub const fn set_ctx5_freeze0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val as u32) & 0x03) << 10usize);
     }
-    #[doc = "Context Register Freeze for Region 6"]
+    #[doc = "Context Register Freeze for Region 6."]
     #[must_use]
     #[inline(always)]
     pub const fn ctx6_freeze0(&self) -> u8 {
         let val = (self.0 >> 12usize) & 0x03;
         val as u8
     }
-    #[doc = "Context Register Freeze for Region 6"]
+    #[doc = "Context Register Freeze for Region 6."]
     #[inline(always)]
     pub const fn set_ctx6_freeze0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val as u32) & 0x03) << 12usize);
@@ -4511,91 +4511,91 @@ impl defmt::Format for Ipedctxctrl0 {
         )
     }
 }
-#[doc = "IPED context control 1"]
+#[doc = "IPED context control 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipedctxctrl1(pub u32);
 impl Ipedctxctrl1 {
-    #[doc = "Context Register Freeze for Region 0"]
+    #[doc = "Context Register Freeze for Region 0."]
     #[must_use]
     #[inline(always)]
     pub const fn ctx0_freeze1(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x03;
         val as u8
     }
-    #[doc = "Context Register Freeze for Region 0"]
+    #[doc = "Context Register Freeze for Region 0."]
     #[inline(always)]
     pub const fn set_ctx0_freeze1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val as u32) & 0x03) << 0usize);
     }
-    #[doc = "Context Register Freeze for Region 1"]
+    #[doc = "Context Register Freeze for Region 1."]
     #[must_use]
     #[inline(always)]
     pub const fn ctx1_freeze1(&self) -> u8 {
         let val = (self.0 >> 2usize) & 0x03;
         val as u8
     }
-    #[doc = "Context Register Freeze for Region 1"]
+    #[doc = "Context Register Freeze for Region 1."]
     #[inline(always)]
     pub const fn set_ctx1_freeze1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val as u32) & 0x03) << 2usize);
     }
-    #[doc = "Context Register Freeze for Region 2"]
+    #[doc = "Context Register Freeze for Region 2."]
     #[must_use]
     #[inline(always)]
     pub const fn ctx2_freeze1(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x03;
         val as u8
     }
-    #[doc = "Context Register Freeze for Region 2"]
+    #[doc = "Context Register Freeze for Region 2."]
     #[inline(always)]
     pub const fn set_ctx2_freeze1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val as u32) & 0x03) << 4usize);
     }
-    #[doc = "Context Register Freeze for Region 3"]
+    #[doc = "Context Register Freeze for Region 3."]
     #[must_use]
     #[inline(always)]
     pub const fn ctx3_freeze1(&self) -> u8 {
         let val = (self.0 >> 6usize) & 0x03;
         val as u8
     }
-    #[doc = "Context Register Freeze for Region 3"]
+    #[doc = "Context Register Freeze for Region 3."]
     #[inline(always)]
     pub const fn set_ctx3_freeze1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val as u32) & 0x03) << 6usize);
     }
-    #[doc = "Context Register Freeze for Region 4"]
+    #[doc = "Context Register Freeze for Region 4."]
     #[must_use]
     #[inline(always)]
     pub const fn ctx4_freeze1(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x03;
         val as u8
     }
-    #[doc = "Context Register Freeze for Region 4"]
+    #[doc = "Context Register Freeze for Region 4."]
     #[inline(always)]
     pub const fn set_ctx4_freeze1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val as u32) & 0x03) << 8usize);
     }
-    #[doc = "Context Register Freeze for Region 5"]
+    #[doc = "Context Register Freeze for Region 5."]
     #[must_use]
     #[inline(always)]
     pub const fn ctx5_freeze1(&self) -> u8 {
         let val = (self.0 >> 10usize) & 0x03;
         val as u8
     }
-    #[doc = "Context Register Freeze for Region 5"]
+    #[doc = "Context Register Freeze for Region 5."]
     #[inline(always)]
     pub const fn set_ctx5_freeze1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val as u32) & 0x03) << 10usize);
     }
-    #[doc = "Context Register Freeze for Region 6"]
+    #[doc = "Context Register Freeze for Region 6."]
     #[must_use]
     #[inline(always)]
     pub const fn ctx6_freeze1(&self) -> u8 {
         let val = (self.0 >> 12usize) & 0x03;
         val as u8
     }
-    #[doc = "Context Register Freeze for Region 6"]
+    #[doc = "Context Register Freeze for Region 6."]
     #[inline(always)]
     pub const fn set_ctx6_freeze1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val as u32) & 0x03) << 12usize);
@@ -4636,43 +4636,43 @@ impl defmt::Format for Ipedctxctrl1 {
         )
     }
 }
-#[doc = "IP Receive FIFO Control"]
+#[doc = "IP Receive FIFO Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Iprxfcr(pub u32);
 impl Iprxfcr {
-    #[doc = "Clear IP Receive FIFO"]
+    #[doc = "Clear IP Receive FIFO."]
     #[must_use]
     #[inline(always)]
     pub const fn clriprxf(&self) -> super::vals::Clriprxf {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Clriprxf::from_bits(val as u8)
     }
-    #[doc = "Clear IP Receive FIFO"]
+    #[doc = "Clear IP Receive FIFO."]
     #[inline(always)]
     pub const fn set_clriprxf(&mut self, val: super::vals::Clriprxf) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "IP Receive FIFO Reading by DMA Enable"]
+    #[doc = "IP Receive FIFO Reading by DMA Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn rxdmaen(&self) -> super::vals::Rxdmaen {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Rxdmaen::from_bits(val as u8)
     }
-    #[doc = "IP Receive FIFO Reading by DMA Enable"]
+    #[doc = "IP Receive FIFO Reading by DMA Enable."]
     #[inline(always)]
     pub const fn set_rxdmaen(&mut self, val: super::vals::Rxdmaen) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "IP Receive FIFO Watermark Level"]
+    #[doc = "IP Receive FIFO Watermark Level."]
     #[must_use]
     #[inline(always)]
     pub const fn rxwmrk(&self) -> u8 {
         let val = (self.0 >> 2usize) & 0x7f;
         val as u8
     }
-    #[doc = "IP Receive FIFO Watermark Level"]
+    #[doc = "IP Receive FIFO Watermark Level."]
     #[inline(always)]
     pub const fn set_rxwmrk(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 2usize)) | (((val as u32) & 0x7f) << 2usize);
@@ -4705,31 +4705,31 @@ impl defmt::Format for Iprxfcr {
         )
     }
 }
-#[doc = "IP Receive FIFO Status"]
+#[doc = "IP Receive FIFO Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Iprxfsts(pub u32);
 impl Iprxfsts {
-    #[doc = "Fill Level of IP Receive FIFO"]
+    #[doc = "Fill Level of IP Receive FIFO."]
     #[must_use]
     #[inline(always)]
     pub const fn fill(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Fill Level of IP Receive FIFO"]
+    #[doc = "Fill Level of IP Receive FIFO."]
     #[inline(always)]
     pub const fn set_fill(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "Read Data Counter"]
+    #[doc = "Read Data Counter."]
     #[must_use]
     #[inline(always)]
     pub const fn rdcntr(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "Read Data Counter"]
+    #[doc = "Read Data Counter."]
     #[inline(always)]
     pub const fn set_rdcntr(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -4760,43 +4760,43 @@ impl defmt::Format for Iprxfsts {
         )
     }
 }
-#[doc = "IP Transmit FIFO Control"]
+#[doc = "IP Transmit FIFO Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Iptxfcr(pub u32);
 impl Iptxfcr {
-    #[doc = "Clear IP Transmit FIFO"]
+    #[doc = "Clear IP Transmit FIFO."]
     #[must_use]
     #[inline(always)]
     pub const fn clriptxf(&self) -> super::vals::Clriptxf {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Clriptxf::from_bits(val as u8)
     }
-    #[doc = "Clear IP Transmit FIFO"]
+    #[doc = "Clear IP Transmit FIFO."]
     #[inline(always)]
     pub const fn set_clriptxf(&mut self, val: super::vals::Clriptxf) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Transmit FIFO DMA Enable"]
+    #[doc = "Transmit FIFO DMA Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn txdmaen(&self) -> super::vals::Txdmaen {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Txdmaen::from_bits(val as u8)
     }
-    #[doc = "Transmit FIFO DMA Enable"]
+    #[doc = "Transmit FIFO DMA Enable."]
     #[inline(always)]
     pub const fn set_txdmaen(&mut self, val: super::vals::Txdmaen) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Transmit Watermark Level"]
+    #[doc = "Transmit Watermark Level."]
     #[must_use]
     #[inline(always)]
     pub const fn txwmrk(&self) -> u8 {
         let val = (self.0 >> 2usize) & 0x7f;
         val as u8
     }
-    #[doc = "Transmit Watermark Level"]
+    #[doc = "Transmit Watermark Level."]
     #[inline(always)]
     pub const fn set_txwmrk(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 2usize)) | (((val as u32) & 0x7f) << 2usize);
@@ -4829,31 +4829,31 @@ impl defmt::Format for Iptxfcr {
         )
     }
 }
-#[doc = "IP Transmit FIFO Status"]
+#[doc = "IP Transmit FIFO Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Iptxfsts(pub u32);
 impl Iptxfsts {
-    #[doc = "Fill Level of IP Transmit FIFO"]
+    #[doc = "Fill Level of IP Transmit FIFO."]
     #[must_use]
     #[inline(always)]
     pub const fn fill(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Fill Level of IP Transmit FIFO"]
+    #[doc = "Fill Level of IP Transmit FIFO."]
     #[inline(always)]
     pub const fn set_fill(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "Write Data Counter"]
+    #[doc = "Write Data Counter."]
     #[must_use]
     #[inline(always)]
     pub const fn wrcntr(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "Write Data Counter"]
+    #[doc = "Write Data Counter."]
     #[inline(always)]
     pub const fn set_wrcntr(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -4884,79 +4884,79 @@ impl defmt::Format for Iptxfsts {
         )
     }
 }
-#[doc = "Lookup Table x"]
+#[doc = "Lookup Table x."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lut(pub u32);
 impl Lut {
-    #[doc = "OPERAND0"]
+    #[doc = "OPERAND0."]
     #[must_use]
     #[inline(always)]
     pub const fn operand0(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "OPERAND0"]
+    #[doc = "OPERAND0."]
     #[inline(always)]
     pub const fn set_operand0(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "NUM_PADS0"]
+    #[doc = "NUM_PADS0."]
     #[must_use]
     #[inline(always)]
     pub const fn num_pads0(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x03;
         val as u8
     }
-    #[doc = "NUM_PADS0"]
+    #[doc = "NUM_PADS0."]
     #[inline(always)]
     pub const fn set_num_pads0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val as u32) & 0x03) << 8usize);
     }
-    #[doc = "OPCODE"]
+    #[doc = "OPCODE."]
     #[must_use]
     #[inline(always)]
     pub const fn opcode0(&self) -> u8 {
         let val = (self.0 >> 10usize) & 0x3f;
         val as u8
     }
-    #[doc = "OPCODE"]
+    #[doc = "OPCODE."]
     #[inline(always)]
     pub const fn set_opcode0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 10usize)) | (((val as u32) & 0x3f) << 10usize);
     }
-    #[doc = "OPERAND1"]
+    #[doc = "OPERAND1."]
     #[must_use]
     #[inline(always)]
     pub const fn operand1(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0xff;
         val as u8
     }
-    #[doc = "OPERAND1"]
+    #[doc = "OPERAND1."]
     #[inline(always)]
     pub const fn set_operand1(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
     }
-    #[doc = "NUM_PADS1"]
+    #[doc = "NUM_PADS1."]
     #[must_use]
     #[inline(always)]
     pub const fn num_pads1(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0x03;
         val as u8
     }
-    #[doc = "NUM_PADS1"]
+    #[doc = "NUM_PADS1."]
     #[inline(always)]
     pub const fn set_num_pads1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val as u32) & 0x03) << 24usize);
     }
-    #[doc = "OPCODE1"]
+    #[doc = "OPCODE1."]
     #[must_use]
     #[inline(always)]
     pub const fn opcode1(&self) -> u8 {
         let val = (self.0 >> 26usize) & 0x3f;
         val as u8
     }
-    #[doc = "OPCODE1"]
+    #[doc = "OPCODE1."]
     #[inline(always)]
     pub const fn set_opcode1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 26usize)) | (((val as u32) & 0x3f) << 26usize);
@@ -4995,31 +4995,31 @@ impl defmt::Format for Lut {
         )
     }
 }
-#[doc = "LUT Control"]
+#[doc = "LUT Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lutcr(pub u32);
 impl Lutcr {
-    #[doc = "Lock LUT"]
+    #[doc = "Lock LUT."]
     #[must_use]
     #[inline(always)]
     pub const fn lock(&self) -> super::vals::Lock {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Lock::from_bits(val as u8)
     }
-    #[doc = "Lock LUT"]
+    #[doc = "Lock LUT."]
     #[inline(always)]
     pub const fn set_lock(&mut self, val: super::vals::Lock) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Unlock LUT"]
+    #[doc = "Unlock LUT."]
     #[must_use]
     #[inline(always)]
     pub const fn unlock(&self) -> super::vals::Unlock {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Unlock::from_bits(val as u8)
     }
-    #[doc = "Unlock LUT"]
+    #[doc = "Unlock LUT."]
     #[inline(always)]
     pub const fn set_unlock(&mut self, val: super::vals::Unlock) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
@@ -5050,19 +5050,19 @@ impl defmt::Format for Lutcr {
         )
     }
 }
-#[doc = "LUT Key"]
+#[doc = "LUT Key."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lutkey(pub u32);
 impl Lutkey {
-    #[doc = "LUT Key"]
+    #[doc = "LUT Key."]
     #[must_use]
     #[inline(always)]
     pub const fn key(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "LUT Key"]
+    #[doc = "LUT Key."]
     #[inline(always)]
     pub const fn set_key(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -5085,139 +5085,139 @@ impl defmt::Format for Lutkey {
         defmt::write!(f, "Lutkey {{ key: {=u32:?} }}", self.key())
     }
 }
-#[doc = "Module Control 0"]
+#[doc = "Module Control 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mcr0(pub u32);
 impl Mcr0 {
-    #[doc = "Software Reset"]
+    #[doc = "Software Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn swreset(&self) -> super::vals::Swreset {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Swreset::from_bits(val as u8)
     }
-    #[doc = "Software Reset"]
+    #[doc = "Software Reset."]
     #[inline(always)]
     pub const fn set_swreset(&mut self, val: super::vals::Swreset) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Module Disable"]
+    #[doc = "Module Disable."]
     #[must_use]
     #[inline(always)]
     pub const fn mdis(&self) -> super::vals::Mdis {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Mdis::from_bits(val as u8)
     }
-    #[doc = "Module Disable"]
+    #[doc = "Module Disable."]
     #[inline(always)]
     pub const fn set_mdis(&mut self, val: super::vals::Mdis) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Sample Clock Source for Flash Reading"]
+    #[doc = "Sample Clock Source for Flash Reading."]
     #[must_use]
     #[inline(always)]
     pub const fn rxclksrc(&self) -> super::vals::Rxclksrc {
         let val = (self.0 >> 4usize) & 0x03;
         super::vals::Rxclksrc::from_bits(val as u8)
     }
-    #[doc = "Sample Clock Source for Flash Reading"]
+    #[doc = "Sample Clock Source for Flash Reading."]
     #[inline(always)]
     pub const fn set_rxclksrc(&mut self, val: super::vals::Rxclksrc) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
-    #[doc = "Serial Root Clock Divider"]
+    #[doc = "Serial Root Clock Divider."]
     #[must_use]
     #[inline(always)]
     pub const fn serclkdiv(&self) -> super::vals::Serclkdiv {
         let val = (self.0 >> 8usize) & 0x07;
         super::vals::Serclkdiv::from_bits(val as u8)
     }
-    #[doc = "Serial Root Clock Divider"]
+    #[doc = "Serial Root Clock Divider."]
     #[inline(always)]
     pub const fn set_serclkdiv(&mut self, val: super::vals::Serclkdiv) {
         self.0 = (self.0 & !(0x07 << 8usize)) | (((val.to_bits() as u32) & 0x07) << 8usize);
     }
-    #[doc = "Half Speed Serial Flash Memory Access Enable"]
+    #[doc = "Half Speed Serial Flash Memory Access Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn hsen(&self) -> super::vals::Hsen {
         let val = (self.0 >> 11usize) & 0x01;
         super::vals::Hsen::from_bits(val as u8)
     }
-    #[doc = "Half Speed Serial Flash Memory Access Enable"]
+    #[doc = "Half Speed Serial Flash Memory Access Enable."]
     #[inline(always)]
     pub const fn set_hsen(&mut self, val: super::vals::Hsen) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
     }
-    #[doc = "Doze Mode Enable"]
+    #[doc = "Doze Mode Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dozeen(&self) -> super::vals::Dozeen {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Dozeen::from_bits(val as u8)
     }
-    #[doc = "Doze Mode Enable"]
+    #[doc = "Doze Mode Enable."]
     #[inline(always)]
     pub const fn set_dozeen(&mut self, val: super::vals::Dozeen) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "Combination Mode Enable"]
+    #[doc = "Combination Mode Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn combinationen(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "Combination Mode Enable"]
+    #[doc = "Combination Mode Enable."]
     #[inline(always)]
     pub const fn set_combinationen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "SCLK Free-running Enable"]
+    #[doc = "SCLK Free-running Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn sckfreerunen(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "SCLK Free-running Enable"]
+    #[doc = "SCLK Free-running Enable."]
     #[inline(always)]
     pub const fn set_sckfreerunen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Data Learning Enable"]
+    #[doc = "Data Learning Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn learnen(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Data Learning Enable"]
+    #[doc = "Data Learning Enable."]
     #[inline(always)]
     pub const fn set_learnen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "Timeout Wait Cycle for IP Command Grant"]
+    #[doc = "Timeout Wait Cycle for IP Command Grant."]
     #[must_use]
     #[inline(always)]
     pub const fn ipgrantwait(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0xff;
         val as u8
     }
-    #[doc = "Timeout Wait Cycle for IP Command Grant"]
+    #[doc = "Timeout Wait Cycle for IP Command Grant."]
     #[inline(always)]
     pub const fn set_ipgrantwait(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
     }
-    #[doc = "Timeouts Wait Cycle for AHB command Grant"]
+    #[doc = "Timeouts Wait Cycle for AHB command Grant."]
     #[must_use]
     #[inline(always)]
     pub const fn ahbgrantwait(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "Timeouts Wait Cycle for AHB command Grant"]
+    #[doc = "Timeouts Wait Cycle for AHB command Grant."]
     #[inline(always)]
     pub const fn set_ahbgrantwait(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);
@@ -5266,31 +5266,31 @@ impl defmt::Format for Mcr0 {
         )
     }
 }
-#[doc = "Module Control 1"]
+#[doc = "Module Control 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mcr1(pub u32);
 impl Mcr1 {
-    #[doc = "AHB Bus Wait"]
+    #[doc = "AHB Bus Wait."]
     #[must_use]
     #[inline(always)]
     pub const fn ahbbuswait(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "AHB Bus Wait"]
+    #[doc = "AHB Bus Wait."]
     #[inline(always)]
     pub const fn set_ahbbuswait(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Command Sequence Wait"]
+    #[doc = "Command Sequence Wait."]
     #[must_use]
     #[inline(always)]
     pub const fn seqwait(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "Command Sequence Wait"]
+    #[doc = "Command Sequence Wait."]
     #[inline(always)]
     pub const fn set_seqwait(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -5321,67 +5321,67 @@ impl defmt::Format for Mcr1 {
         )
     }
 }
-#[doc = "Module Control 2"]
+#[doc = "Module Control 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mcr2(pub u32);
 impl Mcr2 {
-    #[doc = "Clear AHB Buffer"]
+    #[doc = "Clear AHB Buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn clrahbbufopt(&self) -> super::vals::Clrahbbufopt {
         let val = (self.0 >> 11usize) & 0x01;
         super::vals::Clrahbbufopt::from_bits(val as u8)
     }
-    #[doc = "Clear AHB Buffer"]
+    #[doc = "Clear AHB Buffer."]
     #[inline(always)]
     pub const fn set_clrahbbufopt(&mut self, val: super::vals::Clrahbbufopt) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
     }
-    #[doc = "Clear Learn Phase Selection"]
+    #[doc = "Clear Learn Phase Selection."]
     #[must_use]
     #[inline(always)]
     pub const fn clrlearnphase(&self) -> super::vals::Clrlearnphase {
         let val = (self.0 >> 14usize) & 0x01;
         super::vals::Clrlearnphase::from_bits(val as u8)
     }
-    #[doc = "Clear Learn Phase Selection"]
+    #[doc = "Clear Learn Phase Selection."]
     #[inline(always)]
     pub const fn set_clrlearnphase(&mut self, val: super::vals::Clrlearnphase) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
     }
-    #[doc = "Same Device Enable"]
+    #[doc = "Same Device Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn samedeviceen(&self) -> super::vals::Samedeviceen {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::Samedeviceen::from_bits(val as u8)
     }
-    #[doc = "Same Device Enable"]
+    #[doc = "Same Device Enable."]
     #[inline(always)]
     pub const fn set_samedeviceen(&mut self, val: super::vals::Samedeviceen) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "SCLK Port B Differential Output"]
+    #[doc = "SCLK Port B Differential Output."]
     #[must_use]
     #[inline(always)]
     pub const fn sckbdiffopt(&self) -> super::vals::Sckbdiffopt {
         let val = (self.0 >> 19usize) & 0x01;
         super::vals::Sckbdiffopt::from_bits(val as u8)
     }
-    #[doc = "SCLK Port B Differential Output"]
+    #[doc = "SCLK Port B Differential Output."]
     #[inline(always)]
     pub const fn set_sckbdiffopt(&mut self, val: super::vals::Sckbdiffopt) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val.to_bits() as u32) & 0x01) << 19usize);
     }
-    #[doc = "Resume Wait Duration"]
+    #[doc = "Resume Wait Duration."]
     #[must_use]
     #[inline(always)]
     pub const fn resumewait(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "Resume Wait Duration"]
+    #[doc = "Resume Wait Duration."]
     #[inline(always)]
     pub const fn set_resumewait(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);
@@ -5418,19 +5418,19 @@ impl defmt::Format for Mcr2 {
         )
     }
 }
-#[doc = "IP Receive FIFO Data x"]
+#[doc = "IP Receive FIFO Data x."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Rfdr(pub u32);
 impl Rfdr {
-    #[doc = "Receive Data"]
+    #[doc = "Receive Data."]
     #[must_use]
     #[inline(always)]
     pub const fn rxdata(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Receive Data"]
+    #[doc = "Receive Data."]
     #[inline(always)]
     pub const fn set_rxdata(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -5455,67 +5455,67 @@ impl defmt::Format for Rfdr {
         defmt::write!(f, "Rfdr {{ rxdata: {=u32:?} }}", self.rxdata())
     }
 }
-#[doc = "Status 0"]
+#[doc = "Status 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sts0(pub u32);
 impl Sts0 {
-    #[doc = "SEQ_CTL State Machine Idle"]
+    #[doc = "SEQ_CTL State Machine Idle."]
     #[must_use]
     #[inline(always)]
     pub const fn seqidle(&self) -> super::vals::Seqidle {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Seqidle::from_bits(val as u8)
     }
-    #[doc = "SEQ_CTL State Machine Idle"]
+    #[doc = "SEQ_CTL State Machine Idle."]
     #[inline(always)]
     pub const fn set_seqidle(&mut self, val: super::vals::Seqidle) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "ARB_CTL State Machine Idle"]
+    #[doc = "ARB_CTL State Machine Idle."]
     #[must_use]
     #[inline(always)]
     pub const fn arbidle(&self) -> super::vals::Arbidle {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Arbidle::from_bits(val as u8)
     }
-    #[doc = "ARB_CTL State Machine Idle"]
+    #[doc = "ARB_CTL State Machine Idle."]
     #[inline(always)]
     pub const fn set_arbidle(&mut self, val: super::vals::Arbidle) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "ARB Command Source"]
+    #[doc = "ARB Command Source."]
     #[must_use]
     #[inline(always)]
     pub const fn arbcmdsrc(&self) -> super::vals::Arbcmdsrc {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::Arbcmdsrc::from_bits(val as u8)
     }
-    #[doc = "ARB Command Source"]
+    #[doc = "ARB Command Source."]
     #[inline(always)]
     pub const fn set_arbcmdsrc(&mut self, val: super::vals::Arbcmdsrc) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
-    #[doc = "Data Learning Phase Selection on Port A"]
+    #[doc = "Data Learning Phase Selection on Port A."]
     #[must_use]
     #[inline(always)]
     pub const fn datalearnphasea(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x0f;
         val as u8
     }
-    #[doc = "Data Learning Phase Selection on Port A"]
+    #[doc = "Data Learning Phase Selection on Port A."]
     #[inline(always)]
     pub const fn set_datalearnphasea(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
     }
-    #[doc = "Data Learning Phase Selection on Port B"]
+    #[doc = "Data Learning Phase Selection on Port B."]
     #[must_use]
     #[inline(always)]
     pub const fn datalearnphaseb(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x0f;
         val as u8
     }
-    #[doc = "Data Learning Phase Selection on Port B"]
+    #[doc = "Data Learning Phase Selection on Port B."]
     #[inline(always)]
     pub const fn set_datalearnphaseb(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val as u32) & 0x0f) << 8usize);
@@ -5552,55 +5552,55 @@ impl defmt::Format for Sts0 {
         )
     }
 }
-#[doc = "Status 1"]
+#[doc = "Status 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sts1(pub u32);
 impl Sts1 {
-    #[doc = "AHB Command Error ID"]
+    #[doc = "AHB Command Error ID."]
     #[must_use]
     #[inline(always)]
     pub const fn ahbcmderrid(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "AHB Command Error ID"]
+    #[doc = "AHB Command Error ID."]
     #[inline(always)]
     pub const fn set_ahbcmderrid(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
     }
-    #[doc = "AHB Command Error Code"]
+    #[doc = "AHB Command Error Code."]
     #[must_use]
     #[inline(always)]
     pub const fn ahbcmderrcode(&self) -> super::vals::Ahbcmderrcode {
         let val = (self.0 >> 8usize) & 0x0f;
         super::vals::Ahbcmderrcode::from_bits(val as u8)
     }
-    #[doc = "AHB Command Error Code"]
+    #[doc = "AHB Command Error Code."]
     #[inline(always)]
     pub const fn set_ahbcmderrcode(&mut self, val: super::vals::Ahbcmderrcode) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
-    #[doc = "IP Command Error ID"]
+    #[doc = "IP Command Error ID."]
     #[must_use]
     #[inline(always)]
     pub const fn ipcmderrid(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x0f;
         val as u8
     }
-    #[doc = "IP Command Error ID"]
+    #[doc = "IP Command Error ID."]
     #[inline(always)]
     pub const fn set_ipcmderrid(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
     }
-    #[doc = "IP Command Error Code"]
+    #[doc = "IP Command Error Code."]
     #[must_use]
     #[inline(always)]
     pub const fn ipcmderrcode(&self) -> super::vals::Ipcmderrcode {
         let val = (self.0 >> 24usize) & 0x0f;
         super::vals::Ipcmderrcode::from_bits(val as u8)
     }
-    #[doc = "IP Command Error Code"]
+    #[doc = "IP Command Error Code."]
     #[inline(always)]
     pub const fn set_ipcmderrcode(&mut self, val: super::vals::Ipcmderrcode) {
         self.0 = (self.0 & !(0x0f << 24usize)) | (((val.to_bits() as u32) & 0x0f) << 24usize);
@@ -5635,55 +5635,55 @@ impl defmt::Format for Sts1 {
         )
     }
 }
-#[doc = "Status 2"]
+#[doc = "Status 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sts2(pub u32);
 impl Sts2 {
-    #[doc = "Flash A Sample Target Delay Line Locked"]
+    #[doc = "Flash A Sample Target Delay Line Locked."]
     #[must_use]
     #[inline(always)]
     pub const fn aslvlock(&self) -> super::vals::Aslvlock {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Aslvlock::from_bits(val as u8)
     }
-    #[doc = "Flash A Sample Target Delay Line Locked"]
+    #[doc = "Flash A Sample Target Delay Line Locked."]
     #[inline(always)]
     pub const fn set_aslvlock(&mut self, val: super::vals::Aslvlock) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Flash A Sample Clock Reference Delay Line Locked"]
+    #[doc = "Flash A Sample Clock Reference Delay Line Locked."]
     #[must_use]
     #[inline(always)]
     pub const fn areflock(&self) -> super::vals::Areflock {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Areflock::from_bits(val as u8)
     }
-    #[doc = "Flash A Sample Clock Reference Delay Line Locked"]
+    #[doc = "Flash A Sample Clock Reference Delay Line Locked."]
     #[inline(always)]
     pub const fn set_areflock(&mut self, val: super::vals::Areflock) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Flash A Sample Clock Target Delay Line Delay Cell Number"]
+    #[doc = "Flash A Sample Clock Target Delay Line Delay Cell Number."]
     #[must_use]
     #[inline(always)]
     pub const fn aslvsel(&self) -> u8 {
         let val = (self.0 >> 2usize) & 0x3f;
         val as u8
     }
-    #[doc = "Flash A Sample Clock Target Delay Line Delay Cell Number"]
+    #[doc = "Flash A Sample Clock Target Delay Line Delay Cell Number."]
     #[inline(always)]
     pub const fn set_aslvsel(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 2usize)) | (((val as u32) & 0x3f) << 2usize);
     }
-    #[doc = "Flash A Sample Clock Reference Delay Line Delay Cell Number"]
+    #[doc = "Flash A Sample Clock Reference Delay Line Delay Cell Number."]
     #[must_use]
     #[inline(always)]
     pub const fn arefsel(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x3f;
         val as u8
     }
-    #[doc = "Flash A Sample Clock Reference Delay Line Delay Cell Number"]
+    #[doc = "Flash A Sample Clock Reference Delay Line Delay Cell Number."]
     #[inline(always)]
     pub const fn set_arefsel(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 8usize)) | (((val as u32) & 0x3f) << 8usize);
@@ -5712,50 +5712,50 @@ impl Sts2 {
     pub const fn set_aref_all_zero_err(&mut self, val: super::vals::ArefAllZeroErr) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "Flash B Sample Target Reference Delay Line Locked"]
+    #[doc = "Flash B Sample Target Reference Delay Line Locked."]
     #[must_use]
     #[inline(always)]
     pub const fn bslvlock(&self) -> super::vals::Bslvlock {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::Bslvlock::from_bits(val as u8)
     }
-    #[doc = "Flash B Sample Target Reference Delay Line Locked"]
+    #[doc = "Flash B Sample Target Reference Delay Line Locked."]
     #[inline(always)]
     pub const fn set_bslvlock(&mut self, val: super::vals::Bslvlock) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
     }
-    #[doc = "Flash B Sample Clock Reference Delay Line Locked"]
+    #[doc = "Flash B Sample Clock Reference Delay Line Locked."]
     #[must_use]
     #[inline(always)]
     pub const fn breflock(&self) -> super::vals::Breflock {
         let val = (self.0 >> 17usize) & 0x01;
         super::vals::Breflock::from_bits(val as u8)
     }
-    #[doc = "Flash B Sample Clock Reference Delay Line Locked"]
+    #[doc = "Flash B Sample Clock Reference Delay Line Locked."]
     #[inline(always)]
     pub const fn set_breflock(&mut self, val: super::vals::Breflock) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
     }
-    #[doc = "Flash B Sample Clock Target Delay Line Delay Cell Number"]
+    #[doc = "Flash B Sample Clock Target Delay Line Delay Cell Number."]
     #[must_use]
     #[inline(always)]
     pub const fn bslvsel(&self) -> u8 {
         let val = (self.0 >> 18usize) & 0x3f;
         val as u8
     }
-    #[doc = "Flash B Sample Clock Target Delay Line Delay Cell Number"]
+    #[doc = "Flash B Sample Clock Target Delay Line Delay Cell Number."]
     #[inline(always)]
     pub const fn set_bslvsel(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 18usize)) | (((val as u32) & 0x3f) << 18usize);
     }
-    #[doc = "Flash B Sample Clock Reference Delay Line Delay Cell Number"]
+    #[doc = "Flash B Sample Clock Reference Delay Line Delay Cell Number."]
     #[must_use]
     #[inline(always)]
     pub const fn brefsel(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0x3f;
         val as u8
     }
-    #[doc = "Flash B Sample Clock Reference Delay Line Delay Cell Number"]
+    #[doc = "Flash B Sample Clock Reference Delay Line Delay Cell Number."]
     #[inline(always)]
     pub const fn set_brefsel(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 24usize)) | (((val as u32) & 0x3f) << 24usize);
@@ -5830,19 +5830,19 @@ impl defmt::Format for Sts2 {
         )
     }
 }
-#[doc = "IP TX FIFO Data x"]
+#[doc = "IP TX FIFO Data x."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tfdr(pub u32);
 impl Tfdr {
-    #[doc = "Transmit Data"]
+    #[doc = "Transmit Data."]
     #[must_use]
     #[inline(always)]
     pub const fn txdata(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Transmit Data"]
+    #[doc = "Transmit Data."]
     #[inline(always)]
     pub const fn set_txdata(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);

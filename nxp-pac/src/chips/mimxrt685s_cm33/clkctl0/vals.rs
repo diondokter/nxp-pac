@@ -44,7 +44,7 @@ impl From<Adc0fclksel0Sel> for u8 {
 pub enum Adc0fclksel1Sel {
     #[doc = "ADC0FCLKSEL0 Multiplexed Output."]
     ADC0FCLKSEL0_MUX_OUT = 0x0,
-    #[doc = "SYSPLL0 MAIN_CLK (PFD0 Output)"]
+    #[doc = "SYSPLL0 MAIN_CLK (PFD0 Output)."]
     SYSPLL0_MAIN_CLK = 0x01,
     _RESERVED_2 = 0x02,
     #[doc = "SYSPLL0 AUX0_PLL_Clock."]
@@ -84,7 +84,7 @@ impl From<Adc0fclksel1Sel> for u8 {
 pub enum Bypass {
     #[doc = "PFD output is PFD programmed clock."]
     PROGRAMMED_CLK = 0x0,
-    #[doc = "PFD output is PLL Input clock. (Bypass)"]
+    #[doc = "PFD output is PLL Input clock. (Bypass)."]
     BYPASS = 0x01,
 }
 impl Bypass {
@@ -222,9 +222,9 @@ impl From<FlexspifclkselSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HoldringoffEna {
-    #[doc = "disbale"]
+    #[doc = "disbale."]
     DSIABLE = 0x0,
-    #[doc = "enable"]
+    #[doc = "enable."]
     ENABLE = 0x01,
 }
 impl HoldringoffEna {
@@ -354,17 +354,17 @@ impl From<MainclkselbSel> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Mult(u8);
 impl Mult {
-    #[doc = "Div 16"]
+    #[doc = "Div 16."]
     pub const DIV_16: Self = Self(0x10);
-    #[doc = "Div 17"]
+    #[doc = "Div 17."]
     pub const DIV_17: Self = Self(0x11);
-    #[doc = "Div 20"]
+    #[doc = "Div 20."]
     pub const DIV_20: Self = Self(0x14);
-    #[doc = "Div 22"]
+    #[doc = "Div 22."]
     pub const DIV_22: Self = Self(0x16);
-    #[doc = "Div 27"]
+    #[doc = "Div 27."]
     pub const DIV_27: Self = Self(0x1b);
-    #[doc = "Div 33"]
+    #[doc = "Div 33."]
     pub const DIV_33: Self = Self(0x21);
 }
 impl Mult {
@@ -418,9 +418,9 @@ impl From<Mult> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0CasperClk {
-    #[doc = "Disable Clock"]
+    #[doc = "Disable Clock."]
     DISABLE_CLOCK = 0x0,
-    #[doc = "Enable Clock"]
+    #[doc = "Enable Clock."]
     ENABLE_CLOCK = 0x01,
 }
 impl Pscctl0CasperClk {
@@ -449,9 +449,9 @@ impl From<Pscctl0CasperClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0ClrCasperClk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PSCCTL0 Bit"]
+    #[doc = "Clears the PSCCTL0 Bit."]
     CLR_CLOCK = 0x01,
 }
 impl Pscctl0ClrCasperClk {
@@ -480,9 +480,9 @@ impl From<Pscctl0ClrCasperClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0ClrFlexspiOtfadClk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PSCCTL0 Bit"]
+    #[doc = "Clears the PSCCTL0 Bit."]
     CLR_CLOCK = 0x01,
 }
 impl Pscctl0ClrFlexspiOtfadClk {
@@ -511,9 +511,9 @@ impl From<Pscctl0ClrFlexspiOtfadClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0ClrHashcryptClk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PSCCTL0 Bit"]
+    #[doc = "Clears the PSCCTL0 Bit."]
     CLR_CLOCK = 0x01,
 }
 impl Pscctl0ClrHashcryptClk {
@@ -542,9 +542,9 @@ impl From<Pscctl0ClrHashcryptClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0ClrOtpClk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PSCCTL0 Bit"]
+    #[doc = "Clears the PSCCTL0 Bit."]
     CLR_CLOCK = 0x01,
 }
 impl Pscctl0ClrOtpClk {
@@ -573,9 +573,9 @@ impl From<Pscctl0ClrOtpClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0ClrPowerquadClk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PSCCTL0 Bit"]
+    #[doc = "Clears the PSCCTL0 Bit."]
     CLR_CLOCK = 0x01,
 }
 impl Pscctl0ClrPowerquadClk {
@@ -604,9 +604,9 @@ impl From<Pscctl0ClrPowerquadClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0ClrPufClk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PSCCTL0 Bit"]
+    #[doc = "Clears the PSCCTL0 Bit."]
     CLR_CLOCK = 0x01,
 }
 impl Pscctl0ClrPufClk {
@@ -635,9 +635,9 @@ impl From<Pscctl0ClrPufClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0ClrRngClk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PSCCTL0 Bit"]
+    #[doc = "Clears the PSCCTL0 Bit."]
     CLR_CLOCK = 0x01,
 }
 impl Pscctl0ClrRngClk {
@@ -666,9 +666,9 @@ impl From<Pscctl0ClrRngClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0ClrRomCtl128kbClk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PSCCTL0 Bit"]
+    #[doc = "Clears the PSCCTL0 Bit."]
     CLR_CLOCK = 0x01,
 }
 impl Pscctl0ClrRomCtl128kbClk {
@@ -697,9 +697,9 @@ impl From<Pscctl0ClrRomCtl128kbClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0ClrSctClk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PSCCTL0 Bit"]
+    #[doc = "Clears the PSCCTL0 Bit."]
     CLR_CLOCK = 0x01,
 }
 impl Pscctl0ClrSctClk {
@@ -728,9 +728,9 @@ impl From<Pscctl0ClrSctClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0ClrUsbhsDeviceClk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PSCCTL0 Bit"]
+    #[doc = "Clears the PSCCTL0 Bit."]
     CLR_CLOCK = 0x01,
 }
 impl Pscctl0ClrUsbhsDeviceClk {
@@ -759,9 +759,9 @@ impl From<Pscctl0ClrUsbhsDeviceClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0ClrUsbhsHostClk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PSCCTL0 Bit"]
+    #[doc = "Clears the PSCCTL0 Bit."]
     CLR_CLOCK = 0x01,
 }
 impl Pscctl0ClrUsbhsHostClk {
@@ -790,9 +790,9 @@ impl From<Pscctl0ClrUsbhsHostClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0ClrUsbhsPhyClk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PSCCTL0 Bit"]
+    #[doc = "Clears the PSCCTL0 Bit."]
     CLR_CLOCK = 0x01,
 }
 impl Pscctl0ClrUsbhsPhyClk {
@@ -821,9 +821,9 @@ impl From<Pscctl0ClrUsbhsPhyClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0ClrUsbhsSramClk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PSCCTL0 Bit"]
+    #[doc = "Clears the PSCCTL0 Bit."]
     CLR_CLOCK = 0x01,
 }
 impl Pscctl0ClrUsbhsSramClk {
@@ -852,9 +852,9 @@ impl From<Pscctl0ClrUsbhsSramClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0FlexspiOtfadClk {
-    #[doc = "Disable Clock"]
+    #[doc = "Disable Clock."]
     DISABLE_CLOCK = 0x0,
-    #[doc = "Enable Clock"]
+    #[doc = "Enable Clock."]
     ENABLE_CLOCK = 0x01,
 }
 impl Pscctl0FlexspiOtfadClk {
@@ -883,9 +883,9 @@ impl From<Pscctl0FlexspiOtfadClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0HashcryptClk {
-    #[doc = "Disable Clock"]
+    #[doc = "Disable Clock."]
     DISABLE_CLOCK = 0x0,
-    #[doc = "Enable Clock"]
+    #[doc = "Enable Clock."]
     ENABLE_CLOCK = 0x01,
 }
 impl Pscctl0HashcryptClk {
@@ -914,9 +914,9 @@ impl From<Pscctl0HashcryptClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0OtpClk {
-    #[doc = "Disable Clock"]
+    #[doc = "Disable Clock."]
     DISABLE_CLOCK = 0x0,
-    #[doc = "Enable Clock"]
+    #[doc = "Enable Clock."]
     ENABLE_CLOCK = 0x01,
 }
 impl Pscctl0OtpClk {
@@ -945,9 +945,9 @@ impl From<Pscctl0OtpClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0PowerquadClk {
-    #[doc = "Disable Clock"]
+    #[doc = "Disable Clock."]
     DISABLE_CLOCK = 0x0,
-    #[doc = "Enable Clock"]
+    #[doc = "Enable Clock."]
     ENABLE_CLOCK = 0x01,
 }
 impl Pscctl0PowerquadClk {
@@ -976,9 +976,9 @@ impl From<Pscctl0PowerquadClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0PufClk {
-    #[doc = "Disable Clock"]
+    #[doc = "Disable Clock."]
     DISABLE_CLOCK = 0x0,
-    #[doc = "Enable Clock"]
+    #[doc = "Enable Clock."]
     ENABLE_CLOCK = 0x01,
 }
 impl Pscctl0PufClk {
@@ -1007,9 +1007,9 @@ impl From<Pscctl0PufClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0RngClk {
-    #[doc = "Disable Clock"]
+    #[doc = "Disable Clock."]
     DISABLE_CLOCK = 0x0,
-    #[doc = "Enable Clock"]
+    #[doc = "Enable Clock."]
     ENABLE_CLOCK = 0x01,
 }
 impl Pscctl0RngClk {
@@ -1038,9 +1038,9 @@ impl From<Pscctl0RngClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0SctClk {
-    #[doc = "Disable Clock"]
+    #[doc = "Disable Clock."]
     DISABLE_CLOCK = 0x0,
-    #[doc = "Enable Clock"]
+    #[doc = "Enable Clock."]
     ENABLE_CLOCK = 0x01,
 }
 impl Pscctl0SctClk {
@@ -1069,9 +1069,9 @@ impl From<Pscctl0SctClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0SetCasperClk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PSCCTL0 Bit"]
+    #[doc = "Sets the PSCCTL0 Bit."]
     SET_CLOCK = 0x01,
 }
 impl Pscctl0SetCasperClk {
@@ -1100,9 +1100,9 @@ impl From<Pscctl0SetCasperClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0SetFlexspiOtfadClk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PSCCTL0 Bit"]
+    #[doc = "Sets the PSCCTL0 Bit."]
     SET_CLOCK = 0x01,
 }
 impl Pscctl0SetFlexspiOtfadClk {
@@ -1131,9 +1131,9 @@ impl From<Pscctl0SetFlexspiOtfadClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0SetHashcryptClk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PSCCTL0 Bit"]
+    #[doc = "Sets the PSCCTL0 Bit."]
     SET_CLOCK = 0x01,
 }
 impl Pscctl0SetHashcryptClk {
@@ -1162,9 +1162,9 @@ impl From<Pscctl0SetHashcryptClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0SetOtpClk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PSCCTL0 Bit"]
+    #[doc = "Sets the PSCCTL0 Bit."]
     SET_CLOCK = 0x01,
 }
 impl Pscctl0SetOtpClk {
@@ -1193,9 +1193,9 @@ impl From<Pscctl0SetOtpClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0SetPowerquadClk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PSCCTL0 Bit"]
+    #[doc = "Sets the PSCCTL0 Bit."]
     SET_CLOCK = 0x01,
 }
 impl Pscctl0SetPowerquadClk {
@@ -1224,9 +1224,9 @@ impl From<Pscctl0SetPowerquadClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0SetPufClk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PSCCTL0 Bit"]
+    #[doc = "Sets the PSCCTL0 Bit."]
     SET_CLOCK = 0x01,
 }
 impl Pscctl0SetPufClk {
@@ -1255,9 +1255,9 @@ impl From<Pscctl0SetPufClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0SetRngClk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PSCCTL0 Bit"]
+    #[doc = "Sets the PSCCTL0 Bit."]
     SET_CLOCK = 0x01,
 }
 impl Pscctl0SetRngClk {
@@ -1286,9 +1286,9 @@ impl From<Pscctl0SetRngClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0SetRomCtl128kbClk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PSCCTL0 Bit"]
+    #[doc = "Sets the PSCCTL0 Bit."]
     SET_CLOCK = 0x01,
 }
 impl Pscctl0SetRomCtl128kbClk {
@@ -1317,9 +1317,9 @@ impl From<Pscctl0SetRomCtl128kbClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0SetSctClk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PSCCTL0 Bit"]
+    #[doc = "Sets the PSCCTL0 Bit."]
     SET_CLOCK = 0x01,
 }
 impl Pscctl0SetSctClk {
@@ -1348,9 +1348,9 @@ impl From<Pscctl0SetSctClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0SetUsbhsDeviceClk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PSCCTL0 Bit"]
+    #[doc = "Sets the PSCCTL0 Bit."]
     SET_CLOCK = 0x01,
 }
 impl Pscctl0SetUsbhsDeviceClk {
@@ -1379,9 +1379,9 @@ impl From<Pscctl0SetUsbhsDeviceClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0SetUsbhsHostClk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PSCCTL0 Bit"]
+    #[doc = "Sets the PSCCTL0 Bit."]
     SET_CLOCK = 0x01,
 }
 impl Pscctl0SetUsbhsHostClk {
@@ -1410,9 +1410,9 @@ impl From<Pscctl0SetUsbhsHostClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0SetUsbhsPhyClk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PSCCTL0 Bit"]
+    #[doc = "Sets the PSCCTL0 Bit."]
     SET_CLOCK = 0x01,
 }
 impl Pscctl0SetUsbhsPhyClk {
@@ -1441,9 +1441,9 @@ impl From<Pscctl0SetUsbhsPhyClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0SetUsbhsSramClk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PSCCTL0 Bit"]
+    #[doc = "Sets the PSCCTL0 Bit."]
     SET_CLOCK = 0x01,
 }
 impl Pscctl0SetUsbhsSramClk {
@@ -1472,9 +1472,9 @@ impl From<Pscctl0SetUsbhsSramClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0UsbhsDeviceClk {
-    #[doc = "Disable Clock"]
+    #[doc = "Disable Clock."]
     DISABLE_CLOCK = 0x0,
-    #[doc = "Enable Clock"]
+    #[doc = "Enable Clock."]
     ENABLE_CLOCK = 0x01,
 }
 impl Pscctl0UsbhsDeviceClk {
@@ -1503,9 +1503,9 @@ impl From<Pscctl0UsbhsDeviceClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0UsbhsHostClk {
-    #[doc = "Disable Clock"]
+    #[doc = "Disable Clock."]
     DISABLE_CLOCK = 0x0,
-    #[doc = "Enable Clock"]
+    #[doc = "Enable Clock."]
     ENABLE_CLOCK = 0x01,
 }
 impl Pscctl0UsbhsHostClk {
@@ -1534,9 +1534,9 @@ impl From<Pscctl0UsbhsHostClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0UsbhsPhyClk {
-    #[doc = "Disable Clock"]
+    #[doc = "Disable Clock."]
     DISABLE_CLOCK = 0x0,
-    #[doc = "Enable Clock"]
+    #[doc = "Enable Clock."]
     ENABLE_CLOCK = 0x01,
 }
 impl Pscctl0UsbhsPhyClk {
@@ -1565,9 +1565,9 @@ impl From<Pscctl0UsbhsPhyClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl0UsbhsSramClk {
-    #[doc = "Disable Clock"]
+    #[doc = "Disable Clock."]
     DISABLE_CLOCK = 0x0,
-    #[doc = "Enable Clock"]
+    #[doc = "Enable Clock."]
     ENABLE_CLOCK = 0x01,
 }
 impl Pscctl0UsbhsSramClk {
@@ -1596,9 +1596,9 @@ impl From<Pscctl0UsbhsSramClk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl1Acmp0Clk {
-    #[doc = "Disable Clock"]
+    #[doc = "Disable Clock."]
     DISABLE_CLOCK = 0x0,
-    #[doc = "Enable Clock"]
+    #[doc = "Enable Clock."]
     ENABLE_CLOCK = 0x01,
 }
 impl Pscctl1Acmp0Clk {
@@ -1627,9 +1627,9 @@ impl From<Pscctl1Acmp0Clk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl1Adc0Clk {
-    #[doc = "Disable Clock"]
+    #[doc = "Disable Clock."]
     DISABLE_CLOCK = 0x0,
-    #[doc = "Enable Clock"]
+    #[doc = "Enable Clock."]
     ENABLE_CLOCK = 0x01,
 }
 impl Pscctl1Adc0Clk {
@@ -1658,9 +1658,9 @@ impl From<Pscctl1Adc0Clk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl1ClrAcmp0Clk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PSCCTL1 Bit"]
+    #[doc = "Clears the PSCCTL1 Bit."]
     CLR_CLOCK = 0x01,
 }
 impl Pscctl1ClrAcmp0Clk {
@@ -1689,9 +1689,9 @@ impl From<Pscctl1ClrAcmp0Clk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl1ClrAdc0Clk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PSCCTL1 Bit"]
+    #[doc = "Clears the PSCCTL1 Bit."]
     CLR_CLOCK = 0x01,
 }
 impl Pscctl1ClrAdc0Clk {
@@ -1720,9 +1720,9 @@ impl From<Pscctl1ClrAdc0Clk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl1ClrSdio0Clk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PSCCTL1 Bit"]
+    #[doc = "Clears the PSCCTL1 Bit."]
     CLR_CLOCK = 0x01,
 }
 impl Pscctl1ClrSdio0Clk {
@@ -1751,9 +1751,9 @@ impl From<Pscctl1ClrSdio0Clk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl1ClrSdio1Clk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PSCCTL1 Bit"]
+    #[doc = "Clears the PSCCTL1 Bit."]
     CLR_CLOCK = 0x01,
 }
 impl Pscctl1ClrSdio1Clk {
@@ -1782,9 +1782,9 @@ impl From<Pscctl1ClrSdio1Clk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl1ClrShsgpio0Clk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PSCCTL1 Bit"]
+    #[doc = "Clears the PSCCTL1 Bit."]
     CLR_CLOCK = 0x01,
 }
 impl Pscctl1ClrShsgpio0Clk {
@@ -1813,9 +1813,9 @@ impl From<Pscctl1ClrShsgpio0Clk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl1Sdio0Clk {
-    #[doc = "Disable Clock"]
+    #[doc = "Disable Clock."]
     DISABLE_CLOCK = 0x0,
-    #[doc = "Enable Clock"]
+    #[doc = "Enable Clock."]
     ENABLE_CLOCK = 0x01,
 }
 impl Pscctl1Sdio0Clk {
@@ -1844,9 +1844,9 @@ impl From<Pscctl1Sdio0Clk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl1Sdio1Clk {
-    #[doc = "Disable Clock"]
+    #[doc = "Disable Clock."]
     DISABLE_CLOCK = 0x0,
-    #[doc = "Enable Clock"]
+    #[doc = "Enable Clock."]
     ENABLE_CLOCK = 0x01,
 }
 impl Pscctl1Sdio1Clk {
@@ -1875,9 +1875,9 @@ impl From<Pscctl1Sdio1Clk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl1SetAcmp0Clk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PSCCTL1 Bit"]
+    #[doc = "Sets the PSCCTL1 Bit."]
     SET_CLOCK = 0x01,
 }
 impl Pscctl1SetAcmp0Clk {
@@ -1906,9 +1906,9 @@ impl From<Pscctl1SetAcmp0Clk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl1SetAdc0Clk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PSCCTL1 Bit"]
+    #[doc = "Sets the PSCCTL1 Bit."]
     SET_CLOCK = 0x01,
 }
 impl Pscctl1SetAdc0Clk {
@@ -1937,9 +1937,9 @@ impl From<Pscctl1SetAdc0Clk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl1SetSdio0Clk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PSCCTL1 Bit"]
+    #[doc = "Sets the PSCCTL1 Bit."]
     SET_CLOCK = 0x01,
 }
 impl Pscctl1SetSdio0Clk {
@@ -1968,9 +1968,9 @@ impl From<Pscctl1SetSdio0Clk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl1SetSdio1Clk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PSCCTL1 Bit"]
+    #[doc = "Sets the PSCCTL1 Bit."]
     SET_CLOCK = 0x01,
 }
 impl Pscctl1SetSdio1Clk {
@@ -1999,9 +1999,9 @@ impl From<Pscctl1SetSdio1Clk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl1SetShsgpio0Clk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PSCCTL1 Bit"]
+    #[doc = "Sets the PSCCTL1 Bit."]
     SET_CLOCK = 0x01,
 }
 impl Pscctl1SetShsgpio0Clk {
@@ -2030,9 +2030,9 @@ impl From<Pscctl1SetShsgpio0Clk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl1Shsgpio0Clk {
-    #[doc = "Disable Clock"]
+    #[doc = "Disable Clock."]
     DISABLE_CLOCK = 0x0,
-    #[doc = "Enable Clock"]
+    #[doc = "Enable Clock."]
     ENABLE_CLOCK = 0x01,
 }
 impl Pscctl1Shsgpio0Clk {
@@ -2061,9 +2061,9 @@ impl From<Pscctl1Shsgpio0Clk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl2ClrUtick0Clk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PSCCTL2 Bit"]
+    #[doc = "Clears the PSCCTL2 Bit."]
     CLR_CLOCK = 0x01,
 }
 impl Pscctl2ClrUtick0Clk {
@@ -2092,9 +2092,9 @@ impl From<Pscctl2ClrUtick0Clk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl2ClrWwdt0Clk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PSCCTL2 Bit"]
+    #[doc = "Clears the PSCCTL2 Bit."]
     CLR_CLOCK = 0x01,
 }
 impl Pscctl2ClrWwdt0Clk {
@@ -2123,9 +2123,9 @@ impl From<Pscctl2ClrWwdt0Clk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl2SetUtick0Clk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PSCCTL2 Bit"]
+    #[doc = "Sets the PSCCTL2 Bit."]
     SET_CLOCK = 0x01,
 }
 impl Pscctl2SetUtick0Clk {
@@ -2154,9 +2154,9 @@ impl From<Pscctl2SetUtick0Clk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl2SetWwdt0Clk {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PSCCTL2 Bit"]
+    #[doc = "Sets the PSCCTL2 Bit."]
     SET_CLOCK = 0x01,
 }
 impl Pscctl2SetWwdt0Clk {
@@ -2185,9 +2185,9 @@ impl From<Pscctl2SetWwdt0Clk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl2Utick0Clk {
-    #[doc = "Disable Clock"]
+    #[doc = "Disable Clock."]
     DISABLE_CLOCK = 0x0,
-    #[doc = "Enable Clock"]
+    #[doc = "Enable Clock."]
     ENABLE_CLOCK = 0x01,
 }
 impl Pscctl2Utick0Clk {
@@ -2216,9 +2216,9 @@ impl From<Pscctl2Utick0Clk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pscctl2Wwdt0Clk {
-    #[doc = "Disable Clock"]
+    #[doc = "Disable Clock."]
     DISABLE_CLOCK = 0x0,
-    #[doc = "Enable Clock"]
+    #[doc = "Enable Clock."]
     ENABLE_CLOCK = 0x01,
 }
 impl Pscctl2Wwdt0Clk {
@@ -2278,9 +2278,9 @@ impl From<Reset> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RomCtl128kb {
-    #[doc = "Disable Clock"]
+    #[doc = "Disable Clock."]
     DISABLE_CLOCK = 0x0,
-    #[doc = "Enable Clock"]
+    #[doc = "Enable Clock."]
     ENABLE_CLOCK = 0x01,
 }
 impl RomCtl128kb {
@@ -2319,7 +2319,7 @@ pub enum SctfclkselSel {
     FFRO_CLK = 0x03,
     #[doc = "SYSPLL0 AUX1_PLL_Clock."]
     SYSPLL0_AUX1_PLL_CLOCK = 0x04,
-    #[doc = "AUDIO PLL Clock"]
+    #[doc = "AUDIO PLL Clock."]
     AUDIO_PLL_CLK = 0x05,
     _RESERVED_6 = 0x06,
     #[doc = "None, this may be selected in order to reduce power when no output is needed."]
@@ -2689,7 +2689,7 @@ impl From<UtickfclkselSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wakeclk32khzselSel {
-    #[doc = "32KHz"]
+    #[doc = "32KHz."]
     FREQ_32KHZ = 0x0,
     #[doc = "LPOSC (Divided by 32 by default)."]
     LPOSC = 0x01,

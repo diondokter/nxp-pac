@@ -1,16 +1,16 @@
-#[doc = "Error Injection Channel Descriptor 0, Word0"]
+#[doc = "Error Injection Channel Descriptor 0, Word0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Eichd0Word0(pub u32);
 impl Eichd0Word0 {
-    #[doc = "Checkbit Mask"]
+    #[doc = "Checkbit Mask."]
     #[must_use]
     #[inline(always)]
     pub const fn chkbit_mask(&self) -> u8 {
         let val = (self.0 >> 25usize) & 0x7f;
         val as u8
     }
-    #[doc = "Checkbit Mask"]
+    #[doc = "Checkbit Mask."]
     #[inline(always)]
     pub const fn set_chkbit_mask(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 25usize)) | (((val as u32) & 0x7f) << 25usize);
@@ -39,19 +39,19 @@ impl defmt::Format for Eichd0Word0 {
         )
     }
 }
-#[doc = "Error Injection Channel Descriptor 0, Word1"]
+#[doc = "Error Injection Channel Descriptor 0, Word1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Eichd0Word1(pub u32);
 impl Eichd0Word1 {
-    #[doc = "Data Mask Field"]
+    #[doc = "Data Mask Field."]
     #[must_use]
     #[inline(always)]
     pub const fn b0_3data_mask(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Data Mask Field"]
+    #[doc = "Data Mask Field."]
     #[inline(always)]
     pub const fn set_b0_3data_mask(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -80,19 +80,19 @@ impl defmt::Format for Eichd0Word1 {
         )
     }
 }
-#[doc = "Error Injection Channel Enable register"]
+#[doc = "Error Injection Channel Enable register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Eichen(pub u32);
 impl Eichen {
-    #[doc = "Error Injection Channel 0 Enable"]
+    #[doc = "Error Injection Channel 0 Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn eich0en(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Error Injection Channel 0 Enable"]
+    #[doc = "Error Injection Channel 0 Enable."]
     #[inline(always)]
     pub const fn set_eich0en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -117,19 +117,19 @@ impl defmt::Format for Eichen {
         defmt::write!(f, "Eichen {{ eich0en: {=bool:?} }}", self.eich0en())
     }
 }
-#[doc = "Error Injection Module Configuration Register"]
+#[doc = "Error Injection Module Configuration Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Eimcr(pub u32);
 impl Eimcr {
-    #[doc = "Global Error Injection Enable"]
+    #[doc = "Global Error Injection Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn geien(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Global Error Injection Enable"]
+    #[doc = "Global Error Injection Enable."]
     #[inline(always)]
     pub const fn set_geien(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);

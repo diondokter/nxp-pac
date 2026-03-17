@@ -95,7 +95,7 @@ impl From<Go> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Invw0 {
-    #[doc = "No operation"]
+    #[doc = "No operation."]
     NO_OPERATION = 0x0,
     #[doc = "When setting the GO bit, invalidate all lines in way 0."]
     INVW0 = 0x01,
@@ -126,9 +126,9 @@ impl From<Invw0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Invw1 {
-    #[doc = "No operation"]
+    #[doc = "No operation."]
     NO_OPERATION = 0x0,
-    #[doc = "When setting the GO bit, invalidate all lines in way 1"]
+    #[doc = "When setting the GO bit, invalidate all lines in way 1."]
     INVW1 = 0x01,
 }
 impl Invw1 {
@@ -157,9 +157,9 @@ impl From<Invw1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lacc {
-    #[doc = "Read"]
+    #[doc = "Read."]
     READ = 0x0,
-    #[doc = "Write"]
+    #[doc = "Write."]
     WRITE = 0x01,
 }
 impl Lacc {
@@ -188,9 +188,9 @@ impl From<Lacc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ladsel {
-    #[doc = "Cache address"]
+    #[doc = "Cache address."]
     CACHE_ADDR = 0x0,
-    #[doc = "Physical address"]
+    #[doc = "Physical address."]
     PHYS_ADDR = 0x01,
 }
 impl Ladsel {
@@ -219,13 +219,13 @@ impl From<Ladsel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lcmd {
-    #[doc = "Search and read or write"]
+    #[doc = "Search and read or write."]
     SEARCH_RW = 0x0,
-    #[doc = "Invalidate"]
+    #[doc = "Invalidate."]
     INVALIDATE = 0x01,
-    #[doc = "Push"]
+    #[doc = "Push."]
     PUSH = 0x02,
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLEAR = 0x03,
 }
 impl Lcmd {
@@ -254,9 +254,9 @@ impl From<Lcmd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pushw0 {
-    #[doc = "No operation"]
+    #[doc = "No operation."]
     NO_OPERATION = 0x0,
-    #[doc = "When setting the GO bit, push all modified lines in way 0"]
+    #[doc = "When setting the GO bit, push all modified lines in way 0."]
     PUSHW0 = 0x01,
 }
 impl Pushw0 {
@@ -285,9 +285,9 @@ impl From<Pushw0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pushw1 {
-    #[doc = "No operation"]
+    #[doc = "No operation."]
     NO_OPERATION = 0x0,
-    #[doc = "When setting the GO bit, push all modified lines in way 1"]
+    #[doc = "When setting the GO bit, push all modified lines in way 1."]
     PUSHW1 = 0x01,
 }
 impl Pushw1 {
@@ -316,9 +316,9 @@ impl From<Pushw1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tdsel {
-    #[doc = "Data"]
+    #[doc = "Data."]
     DATA = 0x0,
-    #[doc = "Tag"]
+    #[doc = "Tag."]
     TAG = 0x01,
 }
 impl Tdsel {
@@ -347,9 +347,9 @@ impl From<Tdsel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wsel {
-    #[doc = "Way 0"]
+    #[doc = "Way 0."]
     WAY0 = 0x0,
-    #[doc = "Way 1"]
+    #[doc = "Way 1."]
     WAY1 = 0x01,
 }
 impl Wsel {

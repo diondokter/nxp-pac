@@ -126,7 +126,7 @@ impl From<Eventtimeout> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Hscapable {
-    #[doc = "Fast-mode plus. The I 2C interface will support Standard-mode, Fast-mode, and Fast-mode Plus, to the extent that the pin electronics support these modes. Any changes that need to be made to the pin controls, such as changing the drive strength or filtering, must be made by software via the IOCON register associated with each I2C pin,"]
+    #[doc = "Fast-mode plus. The I 2C interface will support Standard-mode, Fast-mode, and Fast-mode Plus, to the extent that the pin electronics support these modes. Any changes that need to be made to the pin controls, such as changing the drive strength or filtering, must be made by software via the IOCON register associated with each I2C pin,."]
     FAST_MODE_PLUS = 0x0,
     #[doc = "High-speed. In addition to Standard-mode, Fast-mode, and Fast-mode Plus, the I 2C interface will support High-speed mode to the extent that the pin electronics support these modes. See Section 25.7.2.2 for more information."]
     HIGH_SPEED = 0x01,
@@ -314,7 +314,7 @@ impl From<Mstpending> for u8 {
 pub enum Mstsclhigh {
     #[doc = "2 clocks. Minimum SCL high time is 2 clock of the I2C clock pre-divider."]
     CLOCKS_2 = 0x0,
-    #[doc = "3 clocks. Minimum SCL high time is 3 clocks of the I2C clock pre-divider ."]
+    #[doc = "3 clocks. Minimum SCL high time is 3 clocks of the I2C clock pre-divider."]
     CLOCKS_3 = 0x01,
     #[doc = "4 clocks. Minimum SCL high time is 4 clock of the I2C clock pre-divider."]
     CLOCKS_4 = 0x02,

@@ -1,28 +1,28 @@
-#[doc = "USB OTG1 Control Register"]
+#[doc = "USB OTG1 Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct UsbOtg1Ctrl(pub u32);
 impl UsbOtg1Ctrl {
-    #[doc = "Disable OTG1 Overcurrent Detection"]
+    #[doc = "Disable OTG1 Overcurrent Detection."]
     #[must_use]
     #[inline(always)]
     pub const fn over_cur_dis(&self) -> super::vals::OverCurDis {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::OverCurDis::from_bits(val as u8)
     }
-    #[doc = "Disable OTG1 Overcurrent Detection"]
+    #[doc = "Disable OTG1 Overcurrent Detection."]
     #[inline(always)]
     pub const fn set_over_cur_dis(&mut self, val: super::vals::OverCurDis) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "OTG1 Polarity of Overcurrent The polarity of OTG1 port overcurrent event"]
+    #[doc = "OTG1 Polarity of Overcurrent The polarity of OTG1 port overcurrent event."]
     #[must_use]
     #[inline(always)]
     pub const fn over_cur_pol(&self) -> super::vals::OverCurPol {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::OverCurPol::from_bits(val as u8)
     }
-    #[doc = "OTG1 Polarity of Overcurrent The polarity of OTG1 port overcurrent event"]
+    #[doc = "OTG1 Polarity of Overcurrent The polarity of OTG1 port overcurrent event."]
     #[inline(always)]
     pub const fn set_over_cur_pol(&mut self, val: super::vals::OverCurPol) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
@@ -39,86 +39,86 @@ impl UsbOtg1Ctrl {
     pub const fn set_pwr_pol(&mut self, val: super::vals::PwrPol) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
     }
-    #[doc = "OTG1 Wake-up Interrupt Enable This bit enables or disables the OTG1 wake-up interrupt"]
+    #[doc = "OTG1 Wake-up Interrupt Enable This bit enables or disables the OTG1 wake-up interrupt."]
     #[must_use]
     #[inline(always)]
     pub const fn wie(&self) -> super::vals::Wie {
         let val = (self.0 >> 10usize) & 0x01;
         super::vals::Wie::from_bits(val as u8)
     }
-    #[doc = "OTG1 Wake-up Interrupt Enable This bit enables or disables the OTG1 wake-up interrupt"]
+    #[doc = "OTG1 Wake-up Interrupt Enable This bit enables or disables the OTG1 wake-up interrupt."]
     #[inline(always)]
     pub const fn set_wie(&mut self, val: super::vals::Wie) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
-    #[doc = "OTG1 Software Wake-up Enable"]
+    #[doc = "OTG1 Software Wake-up Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn wkup_sw_en(&self) -> super::vals::WkupSwEn {
         let val = (self.0 >> 14usize) & 0x01;
         super::vals::WkupSwEn::from_bits(val as u8)
     }
-    #[doc = "OTG1 Software Wake-up Enable"]
+    #[doc = "OTG1 Software Wake-up Enable."]
     #[inline(always)]
     pub const fn set_wkup_sw_en(&mut self, val: super::vals::WkupSwEn) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
     }
-    #[doc = "OTG1 Software Wake-up"]
+    #[doc = "OTG1 Software Wake-up."]
     #[must_use]
     #[inline(always)]
     pub const fn wkup_sw(&self) -> super::vals::WkupSw {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::WkupSw::from_bits(val as u8)
     }
-    #[doc = "OTG1 Software Wake-up"]
+    #[doc = "OTG1 Software Wake-up."]
     #[inline(always)]
     pub const fn set_wkup_sw(&mut self, val: super::vals::WkupSw) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "OTG1 Wake-up on ID change enable"]
+    #[doc = "OTG1 Wake-up on ID change enable."]
     #[must_use]
     #[inline(always)]
     pub const fn wkup_id_en(&self) -> super::vals::WkupIdEn {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::WkupIdEn::from_bits(val as u8)
     }
-    #[doc = "OTG1 Wake-up on ID change enable"]
+    #[doc = "OTG1 Wake-up on ID change enable."]
     #[inline(always)]
     pub const fn set_wkup_id_en(&mut self, val: super::vals::WkupIdEn) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
     }
-    #[doc = "OTG1 wake-up on VBUS change enable"]
+    #[doc = "OTG1 wake-up on VBUS change enable."]
     #[must_use]
     #[inline(always)]
     pub const fn wkup_vbus_en(&self) -> super::vals::WkupVbusEn {
         let val = (self.0 >> 17usize) & 0x01;
         super::vals::WkupVbusEn::from_bits(val as u8)
     }
-    #[doc = "OTG1 wake-up on VBUS change enable"]
+    #[doc = "OTG1 wake-up on VBUS change enable."]
     #[inline(always)]
     pub const fn set_wkup_vbus_en(&mut self, val: super::vals::WkupVbusEn) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
     }
-    #[doc = "Wake-up on DPDM change enable"]
+    #[doc = "Wake-up on DPDM change enable."]
     #[must_use]
     #[inline(always)]
     pub const fn wkup_dpdm_en(&self) -> super::vals::WkupDpdmEn {
         let val = (self.0 >> 29usize) & 0x01;
         super::vals::WkupDpdmEn::from_bits(val as u8)
     }
-    #[doc = "Wake-up on DPDM change enable"]
+    #[doc = "Wake-up on DPDM change enable."]
     #[inline(always)]
     pub const fn set_wkup_dpdm_en(&mut self, val: super::vals::WkupDpdmEn) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
-    #[doc = "OTG1 Wake-up Interrupt Request This bit indicates that a wake-up interrupt request is received on the OTG1 port"]
+    #[doc = "OTG1 Wake-up Interrupt Request This bit indicates that a wake-up interrupt request is received on the OTG1 port."]
     #[must_use]
     #[inline(always)]
     pub const fn wir(&self) -> super::vals::Wir {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::Wir::from_bits(val as u8)
     }
-    #[doc = "OTG1 Wake-up Interrupt Request This bit indicates that a wake-up interrupt request is received on the OTG1 port"]
+    #[doc = "OTG1 Wake-up Interrupt Request This bit indicates that a wake-up interrupt request is received on the OTG1 port."]
     #[inline(always)]
     pub const fn set_wir(&mut self, val: super::vals::Wir) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -165,19 +165,19 @@ impl defmt::Format for UsbOtg1Ctrl {
         )
     }
 }
-#[doc = "OTG1 UTMI PHY Control 0 Register"]
+#[doc = "OTG1 UTMI PHY Control 0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct UsbOtg1PhyCtrl0(pub u32);
 impl UsbOtg1PhyCtrl0 {
-    #[doc = "Indicating whether OTG1 UTMI PHY clock is valid"]
+    #[doc = "Indicating whether OTG1 UTMI PHY clock is valid."]
     #[must_use]
     #[inline(always)]
     pub const fn utmi_clk_vld(&self) -> super::vals::UtmiClkVld {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::UtmiClkVld::from_bits(val as u8)
     }
-    #[doc = "Indicating whether OTG1 UTMI PHY clock is valid"]
+    #[doc = "Indicating whether OTG1 UTMI PHY clock is valid."]
     #[inline(always)]
     pub const fn set_utmi_clk_vld(&mut self, val: super::vals::UtmiClkVld) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);

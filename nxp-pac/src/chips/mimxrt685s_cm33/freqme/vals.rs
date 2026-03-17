@@ -126,11 +126,11 @@ impl From<PulsePol> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RefScale {
-    #[doc = "Count cycle = 2^0 = 1"]
+    #[doc = "Count cycle = 2^0 = 1."]
     COUNTCYCLE_1 = 0x0,
-    #[doc = "Count cycle = 2^1 = 2"]
+    #[doc = "Count cycle = 2^1 = 2."]
     COUNTCYCLE_2 = 0x01,
-    #[doc = "Count cycle = 2^4 = 4"]
+    #[doc = "Count cycle = 2^4 = 4."]
     COUNTCYCLE_4 = 0x02,
     _RESERVED_3 = 0x03,
     _RESERVED_4 = 0x04,
@@ -160,7 +160,7 @@ pub enum RefScale {
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
     _RESERVED_1e = 0x1e,
-    #[doc = "Count cycle = 2^31 = 2,147,483,648"]
+    #[doc = "Count cycle = 2^31 = 2,147,483,648."]
     COUNTCYCLE_31 = 0x1f,
 }
 impl RefScale {

@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Avalid {
-    #[doc = "Below threshold"]
+    #[doc = "Below threshold."]
     AVALID_LO = 0x0,
-    #[doc = "Above threshold"]
+    #[doc = "Above threshold."]
     AVALID_HI = 0x01,
 }
 impl Avalid {
@@ -33,9 +33,9 @@ impl From<Avalid> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bvalid {
-    #[doc = "Below threshold"]
+    #[doc = "Below threshold."]
     BVALID_LO = 0x0,
-    #[doc = "Above threshold"]
+    #[doc = "Above threshold."]
     BVALID_HI = 0x01,
 }
 impl Bvalid {
@@ -64,9 +64,9 @@ impl From<Bvalid> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ChkChrgB {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     BC_CHRGDET_ENABLE = 0x0,
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     BC_CHRGDET_DISABLE = 0x01,
 }
 impl ChkChrgB {
@@ -95,9 +95,9 @@ impl From<ChkChrgB> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ChkContact {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     BC_DCD_DISABLE = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     BC_DCD_ENABLE = 0x01,
 }
 impl ChkContact {
@@ -126,9 +126,9 @@ impl From<ChkContact> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ChrgDetected {
-    #[doc = "SDP detected"]
+    #[doc = "SDP detected."]
     SDP_DETECT = 0x0,
-    #[doc = "Charging port detected"]
+    #[doc = "Charging port detected."]
     CHRG_PORT_DETECT = 0x01,
 }
 impl ChrgDetected {
@@ -157,9 +157,9 @@ impl From<ChrgDetected> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Clkgate {
-    #[doc = "Run clocks"]
+    #[doc = "Run clocks."]
     RUN_CLOCKS = 0x0,
-    #[doc = "Gate clocks"]
+    #[doc = "Gate clocks."]
     GATE_CLOCKS = 0x01,
 }
 impl Clkgate {
@@ -188,7 +188,7 @@ impl From<Clkgate> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DCal {
-    #[doc = "Maximum current, approximately 19% above nominal"]
+    #[doc = "Maximum current, approximately 19% above nominal."]
     MAX_CURRENT = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
@@ -196,7 +196,7 @@ pub enum DCal {
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
-    #[doc = "Nominal"]
+    #[doc = "Nominal."]
     NOMINAL = 0x07,
     _RESERVED_8 = 0x08,
     _RESERVED_9 = 0x09,
@@ -205,7 +205,7 @@ pub enum DCal {
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "Minimum current, approximately 19% below nominal"]
+    #[doc = "Minimum current, approximately 19% below nominal."]
     MIN_CURRENT = 0x0f,
 }
 impl DCal {
@@ -234,9 +234,9 @@ impl From<DCal> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dcdsel {
-    #[doc = "Fields in USB1_CHRG_DETECT"]
+    #[doc = "Fields in USB1_CHRG_DETECT."]
     CHRGDET_CTRL = 0x0,
-    #[doc = "Fields and state machines in the USBHSDCD module"]
+    #[doc = "Fields and state machines in the USBHSDCD module."]
     USBHSDCD_CTRL = 0x01,
 }
 impl Dcdsel {
@@ -265,9 +265,9 @@ impl From<Dcdsel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DetectSec {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     BC_SECDET_DISABLE = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     BC_SECDET_ENABLE = 0x01,
 }
 impl DetectSec {
@@ -296,9 +296,9 @@ impl From<DetectSec> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DevPulldown {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DEV_PULLDOWN_DIS = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     DEV_PULLDOWN_EN = 0x01,
 }
 impl DevPulldown {
@@ -327,9 +327,9 @@ impl From<DevPulldown> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DevpluginPolarity {
-    #[doc = "Plugged in"]
+    #[doc = "Plugged in."]
     PLUGGED_IN = 0x0,
-    #[doc = "Unplugged"]
+    #[doc = "Unplugged."]
     UNPLUGGED = 0x01,
 }
 impl DevpluginPolarity {
@@ -358,9 +358,9 @@ impl From<DevpluginPolarity> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DevpluginStatus {
-    #[doc = "No attachment detected"]
+    #[doc = "No attachment detected."]
     NO_CABLE = 0x0,
-    #[doc = "Cable attachment detected"]
+    #[doc = "Cable attachment detected."]
     CABLE_ATTACH = 0x01,
 }
 impl DevpluginStatus {
@@ -389,9 +389,9 @@ impl From<DevpluginStatus> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DischargeVbus {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     VBUS_DCHG_OFF = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     VBUS_DCHG_ON = 0x01,
 }
 impl DischargeVbus {
@@ -420,13 +420,13 @@ impl From<DischargeVbus> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Disconadj {
-    #[doc = "0.56875 V"]
+    #[doc = "0.56875 V."]
     DISCON_TRIM_NOM = 0x0,
-    #[doc = "0.55000 V"]
+    #[doc = "0.55000 V."]
     DISCON_TRIM_LO = 0x01,
-    #[doc = "0.58125 V"]
+    #[doc = "0.58125 V."]
     DISCON_TRIM_MEDHI = 0x02,
-    #[doc = "0.60000 V"]
+    #[doc = "0.60000 V."]
     DISCON_TRIM_HI = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
@@ -459,9 +459,9 @@ impl From<Disconadj> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DivSelOverride {
-    #[doc = "TRIM_OVERRIDE_EN"]
+    #[doc = "TRIM_OVERRIDE_EN."]
     USE_TRIM0_PLLDIV = 0x0,
-    #[doc = "PLL_SIC"]
+    #[doc = "PLL_SIC."]
     USE_PLL_SIC_PLLDIV = 0x01,
 }
 impl DivSelOverride {
@@ -490,9 +490,9 @@ impl From<DivSelOverride> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DmState {
-    #[doc = "USB_DM pin voltage is <= 0.8 V"]
+    #[doc = "USB_DM pin voltage is <= 0.8 V."]
     DM_SERX_LO = 0x0,
-    #[doc = "USB_DM pin voltage is >= 2.0 V"]
+    #[doc = "USB_DM pin voltage is >= 2.0 V."]
     DM_SERX_HI = 0x01,
 }
 impl DmState {
@@ -521,9 +521,9 @@ impl From<DmState> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DpState {
-    #[doc = "USB_DP pin voltage is <= 0.8 V"]
+    #[doc = "USB_DP pin voltage is <= 0.8 V."]
     DP_SERX_LO = 0x0,
-    #[doc = "USB_DP pin voltage is >= 2.0 V"]
+    #[doc = "USB_DP pin voltage is >= 2.0 V."]
     DP_SERX_HI = 0x01,
 }
 impl DpState {
@@ -552,9 +552,9 @@ impl From<DpState> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EnB {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     BC_ENABLE = 0x0,
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     BC_DISABLE = 0x01,
 }
 impl EnB {
@@ -583,9 +583,9 @@ impl From<EnB> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Endevplugindetect {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     PLUGIN_DISABLE = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     PLUGIN_ENABLE = 0x01,
 }
 impl Endevplugindetect {
@@ -614,9 +614,9 @@ impl From<Endevplugindetect> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Enhstpulldown {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLE = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     ENABLE = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -647,9 +647,9 @@ impl From<Enhstpulldown> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Enotgiddetect {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     ID_DET_DISABLE = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     ID_DET_ENABLE = 0x01,
 }
 impl Enotgiddetect {
@@ -678,13 +678,13 @@ impl From<Enotgiddetect> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Envadj {
-    #[doc = "0.1000 V"]
+    #[doc = "0.1000 V."]
     ENV_TRIM_NOM = 0x0,
-    #[doc = "0.1125 V"]
+    #[doc = "0.1125 V."]
     ENV_TRIM_MEDHI = 0x01,
-    #[doc = "0.1250 V"]
+    #[doc = "0.1250 V."]
     ENV_TRIM_HI = 0x02,
-    #[doc = "0.0875 V"]
+    #[doc = "0.0875 V."]
     ENV_TRIM_LO = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
@@ -717,9 +717,9 @@ impl From<Envadj> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ExtIdOverrideEn {
-    #[doc = "Internal detector or local override"]
+    #[doc = "Internal detector or local override."]
     USE_PHY_ID = 0x0,
-    #[doc = "External ID signal value"]
+    #[doc = "External ID signal value."]
     USE_EXT_ID = 0x01,
 }
 impl ExtIdOverrideEn {
@@ -748,9 +748,9 @@ impl From<ExtIdOverrideEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ExtVbusOverrideEn {
-    #[doc = "Internal detector or local override"]
+    #[doc = "Internal detector or local override."]
     USE_PHY_VBUS = 0x0,
-    #[doc = "External VBUS_VALID value"]
+    #[doc = "External VBUS_VALID value."]
     USB_EXT_VBUS = 0x01,
 }
 impl ExtVbusOverrideEn {
@@ -779,9 +779,9 @@ impl From<ExtVbusOverrideEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HostdiscondetectIrq {
-    #[doc = "Connected"]
+    #[doc = "Connected."]
     CONNECTED = 0x0,
-    #[doc = "Disconnected"]
+    #[doc = "Disconnected."]
     DISCONNECTED = 0x01,
 }
 impl HostdiscondetectIrq {
@@ -810,9 +810,9 @@ impl From<HostdiscondetectIrq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Hstpulldown {
-    #[doc = "Disconnect"]
+    #[doc = "Disconnect."]
     DISCONNECT = 0x0,
-    #[doc = "Connect"]
+    #[doc = "Connect."]
     CONNECT = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -843,9 +843,9 @@ impl From<Hstpulldown> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IdOverrideEn {
-    #[doc = "Use ID pin detector or external override"]
+    #[doc = "Use ID pin detector or external override."]
     NO_PHY_ID_OVERRIDE = 0x0,
-    #[doc = "Allow local override of ID pin detection status"]
+    #[doc = "Allow local override of ID pin detection status."]
     USE_PHY_ID_OVERRIDE = 0x01,
 }
 impl IdOverrideEn {
@@ -874,9 +874,9 @@ impl From<IdOverrideEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LviEn {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     LVI_3V_DISABLE = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     LVI_3V_ENABLE = 0x01,
 }
 impl LviEn {
@@ -905,9 +905,9 @@ impl From<LviEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2Control0 {
-    #[doc = "Power up PLL"]
+    #[doc = "Power up PLL."]
     PLL_ON_SUSPEND = 0x0,
-    #[doc = "Power down PLL"]
+    #[doc = "Power down PLL."]
     PLL_OFF_SUSPEND = 0x01,
 }
 impl Misc2Control0 {
@@ -936,9 +936,9 @@ impl From<Misc2Control0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum OkStatus3v {
-    #[doc = "Not powered"]
+    #[doc = "Not powered."]
     POWER_3_1P8_OK = 0x0,
-    #[doc = "Powered"]
+    #[doc = "Powered."]
     POWER_3_1P8_BAD = 0x01,
 }
 impl OkStatus3v {
@@ -967,9 +967,9 @@ impl From<OkStatus3v> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum OtgIdValue {
-    #[doc = "Host"]
+    #[doc = "Host."]
     ID_HOST = 0x0,
-    #[doc = "Device"]
+    #[doc = "Device."]
     ID_DEVICE = 0x01,
 }
 impl OtgIdValue {
@@ -998,9 +998,9 @@ impl From<OtgIdValue> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum OtgidStatus {
-    #[doc = "Host"]
+    #[doc = "Host."]
     ID_HOST = 0x0,
-    #[doc = "Device"]
+    #[doc = "Device."]
     ID_DEVICE = 0x01,
 }
 impl OtgidStatus {
@@ -1029,9 +1029,9 @@ impl From<OtgidStatus> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pfd0Clkgate {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     PFD0_CLK_EN = 0x0,
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     PFD0_CLK_DIS = 0x01,
 }
 impl Pfd0Clkgate {
@@ -1060,13 +1060,13 @@ impl From<Pfd0Clkgate> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PfdClkSel {
-    #[doc = "USB1PFDCLK = USB PLL reference clock"]
+    #[doc = "USB1PFDCLK = USB PLL reference clock."]
     PFD_CLK_BYPASS = 0x0,
-    #[doc = "USB1PFDCLK = pfd_clk / 4"]
+    #[doc = "USB1PFDCLK = pfd_clk / 4."]
     PFD_CLK_DIV_4 = 0x01,
-    #[doc = "USB1PFDCLK frequency = pfd_clk / 2"]
+    #[doc = "USB1PFDCLK frequency = pfd_clk / 2."]
     PFD_CLK_DIV_2 = 0x02,
-    #[doc = "USB1PFDCLK = pfd_clk"]
+    #[doc = "USB1PFDCLK = pfd_clk."]
     PFD_CLK_DIV_1 = 0x03,
 }
 impl PfdClkSel {
@@ -1095,9 +1095,9 @@ impl From<PfdClkSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PllBypass {
-    #[doc = "480 MHz output clock"]
+    #[doc = "480 MHz output clock."]
     PLL_NO_BYPASS = 0x0,
-    #[doc = "Input reference clock"]
+    #[doc = "Input reference clock."]
     PLL_BYPASS = 0x01,
 }
 impl PllBypass {
@@ -1126,20 +1126,20 @@ impl From<PllBypass> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PllDivSel {
-    #[doc = "Configure for a 32 MHz input clock (divide by 15)"]
+    #[doc = "Configure for a 32 MHz input clock (divide by 15)."]
     PLL_DIV_15 = 0x0,
-    #[doc = "Configure for a 30 MHz input clock (divide by 16)"]
+    #[doc = "Configure for a 30 MHz input clock (divide by 16)."]
     PLL_DIV_16 = 0x01,
-    #[doc = "Configure for a 24 MHz input clock (divide by 20)"]
+    #[doc = "Configure for a 24 MHz input clock (divide by 20)."]
     PLL_DIV_20 = 0x02,
     _RESERVED_3 = 0x03,
-    #[doc = "Configure for a 20 MHz input clock (divide by 24)"]
+    #[doc = "Configure for a 20 MHz input clock (divide by 24)."]
     PLL_DIV_24 = 0x04,
-    #[doc = "Configure for a 19.2 MHz input clock (divide by 25)"]
+    #[doc = "Configure for a 19.2 MHz input clock (divide by 25)."]
     PLL_DIV_25 = 0x05,
-    #[doc = "Configure for a 16 MHz input clock (divide by 30)"]
+    #[doc = "Configure for a 16 MHz input clock (divide by 30)."]
     PLL_DIV_30 = 0x06,
-    #[doc = "Configure for a 12 MHz input clock (divide by 40)"]
+    #[doc = "Configure for a 12 MHz input clock (divide by 40)."]
     PLL_DIV_32 = 0x07,
 }
 impl PllDivSel {
@@ -1168,9 +1168,9 @@ impl From<PllDivSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PllEnUsbClks {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     PLL_MP_DISABLE = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     PLL_MP_ENABLE = 0x01,
 }
 impl PllEnUsbClks {
@@ -1199,9 +1199,9 @@ impl From<PllEnUsbClks> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PllEnable {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     PLL_OUT_DISABLE = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     PLL_OUT_ENABLE = 0x01,
 }
 impl PllEnable {
@@ -1230,9 +1230,9 @@ impl From<PllEnable> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PllLock {
-    #[doc = "Not locked"]
+    #[doc = "Not locked."]
     PLL_NOT_LOCKED = 0x0,
-    #[doc = "Locked"]
+    #[doc = "Locked."]
     PLL_LOCKED = 0x01,
 }
 impl PllLock {
@@ -1261,9 +1261,9 @@ impl From<PllLock> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PllPower {
-    #[doc = "Power down"]
+    #[doc = "Power down."]
     PLL_FORCE_PWD = 0x0,
-    #[doc = "Allow powerup"]
+    #[doc = "Allow powerup."]
     PLL_ALLOW_POWERUP = 0x01,
 }
 impl PllPower {
@@ -1292,9 +1292,9 @@ impl From<PllPower> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PllRegEnable {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     PLL_REG_DISABLE = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     PLL_REG_ENABLE = 0x01,
 }
 impl PllRegEnable {
@@ -1323,9 +1323,9 @@ impl From<PllRegEnable> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PlugContact {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     NO_DC_DETECTED = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     DC_DETECED = 0x01,
 }
 impl PlugContact {
@@ -1354,9 +1354,9 @@ impl From<PlugContact> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PullupDp {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DP_PUE_NORMAL = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     DP_PUE_OVERRIDE = 0x01,
 }
 impl PullupDp {
@@ -1385,9 +1385,9 @@ impl From<PullupDp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RefbiasPwd {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     REFBIAS_ENABLED = 0x0,
-    #[doc = "Disable or power down"]
+    #[doc = "Disable or power down."]
     REFBIAS_PWD = 0x01,
 }
 impl RefbiasPwd {
@@ -1416,9 +1416,9 @@ impl From<RefbiasPwd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RefbiasPwdSel {
-    #[doc = "PLL_POWER internal state signal"]
+    #[doc = "PLL_POWER internal state signal."]
     BIAS_PLLPOWER = 0x0,
-    #[doc = "REFBIAS_PWD"]
+    #[doc = "REFBIAS_PWD."]
     BIAS_REFBIAS_PWD = 0x01,
 }
 impl RefbiasPwdSel {
@@ -1447,9 +1447,9 @@ impl From<RefbiasPwdSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rxpwd1pt1 {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     FS_RXDIFF_ENABLE = 0x0,
-    #[doc = "Disable or power down"]
+    #[doc = "Disable or power down."]
     FS_RXDIFF_PWD = 0x01,
 }
 impl Rxpwd1pt1 {
@@ -1478,9 +1478,9 @@ impl From<Rxpwd1pt1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rxpwddiff {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     HS_RXDIFF_ENABLE = 0x0,
-    #[doc = "Disable or power down"]
+    #[doc = "Disable or power down."]
     HS_RXDIFF_PWD = 0x01,
 }
 impl Rxpwddiff {
@@ -1509,9 +1509,9 @@ impl From<Rxpwddiff> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rxpwdenv {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     RX_ENVHD_ENABLE = 0x0,
-    #[doc = "Disable or power down"]
+    #[doc = "Disable or power down."]
     RX_ENVHD_PWD = 0x01,
 }
 impl Rxpwdenv {
@@ -1540,9 +1540,9 @@ impl From<Rxpwdenv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rxpwdrx {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     RX_BIAS_ENABLE = 0x0,
-    #[doc = "Disable or power down"]
+    #[doc = "Disable or power down."]
     RX_BIAS_PWD = 0x01,
 }
 impl Rxpwdrx {
@@ -1571,9 +1571,9 @@ impl From<Rxpwdrx> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecdetDcp {
-    #[doc = "CDP detected"]
+    #[doc = "CDP detected."]
     SECDET_CDP = 0x0,
-    #[doc = "DCP detected"]
+    #[doc = "DCP detected."]
     SECDET_DCP = 0x01,
 }
 impl SecdetDcp {
@@ -1602,9 +1602,9 @@ impl From<SecdetDcp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sessend {
-    #[doc = "Above threshold"]
+    #[doc = "Above threshold."]
     SESSEND_LO = 0x0,
-    #[doc = "Below threshold"]
+    #[doc = "Below threshold."]
     SESSEND_HI = 0x01,
 }
 impl Sessend {
@@ -1633,9 +1633,9 @@ impl From<Sessend> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sftrst {
-    #[doc = "Release from reset"]
+    #[doc = "Release from reset."]
     RELEASE_RESET = 0x0,
-    #[doc = "Soft-reset"]
+    #[doc = "Soft-reset."]
     SOFT_RESET = 0x01,
 }
 impl Sftrst {
@@ -1664,9 +1664,9 @@ impl From<Sftrst> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TxCal45dmOverride {
-    #[doc = "TRIM_OVERRIDE_EN"]
+    #[doc = "TRIM_OVERRIDE_EN."]
     USE_TRIM0_CAL45DN = 0x0,
-    #[doc = "TX"]
+    #[doc = "TX."]
     USE_TX_CAL45DN = 0x01,
 }
 impl TxCal45dmOverride {
@@ -1695,9 +1695,9 @@ impl From<TxCal45dmOverride> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TxCal45dpOverride {
-    #[doc = "TRIM_OVERRIDE_EN"]
+    #[doc = "TRIM_OVERRIDE_EN."]
     USE_TRIM0_CAL45DP = 0x0,
-    #[doc = "TX"]
+    #[doc = "TX."]
     USE_TX_CAL45DP = 0x01,
 }
 impl TxCal45dpOverride {
@@ -1726,9 +1726,9 @@ impl From<TxCal45dpOverride> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TxDCalOverride {
-    #[doc = "TRIM_OVERRIDE_EN"]
+    #[doc = "TRIM_OVERRIDE_EN."]
     USE_TRIM0_DCAL = 0x0,
-    #[doc = "TX"]
+    #[doc = "TX."]
     USE_TX_DCAL = 0x01,
 }
 impl TxDCalOverride {
@@ -1757,9 +1757,9 @@ impl From<TxDCalOverride> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Txpwdfs {
-    #[doc = "Provide bias to enable"]
+    #[doc = "Provide bias to enable."]
     FSTX_BIAS_ENABLE = 0x0,
-    #[doc = "Disable or power down"]
+    #[doc = "Disable or power down."]
     FSTX_BIAS_PWD = 0x01,
 }
 impl Txpwdfs {
@@ -1788,9 +1788,9 @@ impl From<Txpwdfs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Txpwdibias {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     IBIAS_ENABLE = 0x0,
-    #[doc = "Disable or power down"]
+    #[doc = "Disable or power down."]
     IBIAS_PWD = 0x01,
 }
 impl Txpwdibias {
@@ -1819,9 +1819,9 @@ impl From<Txpwdibias> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Txpwdv2i {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     V2I_BIAS_ENABLE = 0x0,
-    #[doc = "Disable or power down"]
+    #[doc = "Disable or power down."]
     V2I_BIAS_PWD = 0x01,
 }
 impl Txpwdv2i {
@@ -1850,7 +1850,7 @@ impl From<Txpwdv2i> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum UsbphyTxDCal {
-    #[doc = "Maximum current, approximately 19% above nominal"]
+    #[doc = "Maximum current, approximately 19% above nominal."]
     MAX_CURRENT = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
@@ -1858,7 +1858,7 @@ pub enum UsbphyTxDCal {
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
-    #[doc = "Nominal"]
+    #[doc = "Nominal."]
     NOMINAL = 0x07,
     _RESERVED_8 = 0x08,
     _RESERVED_9 = 0x09,
@@ -1867,7 +1867,7 @@ pub enum UsbphyTxDCal {
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "Minimum current, approximately 19% below nominal"]
+    #[doc = "Minimum current, approximately 19% below nominal."]
     MIN_CURRENT = 0x0f,
 }
 impl UsbphyTxDCal {
@@ -1896,9 +1896,9 @@ impl From<UsbphyTxDCal> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum VbusOverrideEn {
-    #[doc = "Results of VBUS_VALID and session valid comparators for VBUS_VALID, AVALID, BVALID, and SESSEND"]
+    #[doc = "Results of VBUS_VALID and session valid comparators for VBUS_VALID, AVALID, BVALID, and SESSEND."]
     VBUS_NO_OVERRIDE = 0x0,
-    #[doc = "Override values for VBUS_VALID, AVALID, BVALID, and SESSEND"]
+    #[doc = "Override values for VBUS_VALID, AVALID, BVALID, and SESSEND."]
     VBUS_OVERRIDE = 0x01,
 }
 impl VbusOverrideEn {
@@ -1927,11 +1927,11 @@ impl From<VbusOverrideEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum VbusSourceSel {
-    #[doc = "VBUS_VALID comparator result"]
+    #[doc = "VBUS_VALID comparator result."]
     USE_VBUS_VLD = 0x0,
-    #[doc = "Session valid comparator result"]
+    #[doc = "Session valid comparator result."]
     USE_ASESS_VLD = 0x01,
-    #[doc = "Session valid comparator result"]
+    #[doc = "Session valid comparator result."]
     USE_BSESS_VLD = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -1961,9 +1961,9 @@ impl From<VbusSourceSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum VbusValid {
-    #[doc = "Below threshold"]
+    #[doc = "Below threshold."]
     VBUS_LO = 0x0,
-    #[doc = "Above threshold"]
+    #[doc = "Above threshold."]
     VBUS_HI = 0x01,
 }
 impl VbusValid {
@@ -1992,9 +1992,9 @@ impl From<VbusValid> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum VbusValid3v {
-    #[doc = "Below threshold"]
+    #[doc = "Below threshold."]
     VBUS_VLD3V_LO = 0x0,
-    #[doc = "Above threshold"]
+    #[doc = "Above threshold."]
     VBUS_VLD3V_HI = 0x01,
 }
 impl VbusValid3v {
@@ -2023,9 +2023,9 @@ impl From<VbusValid3v> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum VbusvalidPwrupCmps {
-    #[doc = "Disable or power down the VBUS_VALID comparator"]
+    #[doc = "Disable or power down the VBUS_VALID comparator."]
     VBUS_VALID_DISABLE = 0x0,
-    #[doc = "Enable the VBUS_VALID comparator"]
+    #[doc = "Enable the VBUS_VALID comparator."]
     VBUS_VALID_ENABLE = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -2060,9 +2060,9 @@ impl From<VbusvalidPwrupCmps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum VbusvalidSel {
-    #[doc = "VBUS_VALID comparator result"]
+    #[doc = "VBUS_VALID comparator result."]
     VBUS_VLD_OUT = 0x0,
-    #[doc = "VBUS_VALID_3V comparator result"]
+    #[doc = "VBUS_VALID_3V comparator result."]
     VBUS_VLD_3V_OUT = 0x01,
 }
 impl VbusvalidSel {
@@ -2091,21 +2091,21 @@ impl From<VbusvalidSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum VbusvalidThresh {
-    #[doc = "4.0 V"]
+    #[doc = "4.0 V."]
     VBUS_VLD_4P0 = 0x0,
-    #[doc = "4.1 V"]
+    #[doc = "4.1 V."]
     VBUS_VLD_4P1 = 0x01,
-    #[doc = "4.2 V"]
+    #[doc = "4.2 V."]
     VBUS_VLD_4P2 = 0x02,
-    #[doc = "4.3 V"]
+    #[doc = "4.3 V."]
     VBUS_VLD_4P3 = 0x03,
-    #[doc = "4.4 V"]
+    #[doc = "4.4 V."]
     VBUS_VLD_4P4 = 0x04,
-    #[doc = "4.5 V"]
+    #[doc = "4.5 V."]
     VBUS_VLD_4P5 = 0x05,
-    #[doc = "4.6 V"]
+    #[doc = "4.6 V."]
     VBUS_VLD_4P6 = 0x06,
-    #[doc = "4.7 V"]
+    #[doc = "4.7 V."]
     VBUS_VLD_4P7 = 0x07,
 }
 impl VbusvalidThresh {
@@ -2134,9 +2134,9 @@ impl From<VbusvalidThresh> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum VbusvalidToB {
-    #[doc = "VBUS_VALID comparator"]
+    #[doc = "VBUS_VALID comparator."]
     USE_VBUS_VLD = 0x0,
-    #[doc = "Session valid detector"]
+    #[doc = "Session valid detector."]
     USE_SESS_VLD = 0x01,
 }
 impl VbusvalidToB {
@@ -2165,9 +2165,9 @@ impl From<VbusvalidToB> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum VdmSrcEnable {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DCD_VDM_SRC_DISABLE = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     DCD_VDM_SRC_ENABLE = 0x01,
 }
 impl VdmSrcEnable {

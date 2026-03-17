@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Abbpair {
-    #[doc = "Bank-pair 0 (1st)"]
+    #[doc = "Bank-pair 0 (1st)."]
     PAIR0 = 0x0,
-    #[doc = "Bank-pair 1 (2nd)"]
+    #[doc = "Bank-pair 1 (2nd)."]
     PAIR1 = 0x01,
 }
 impl Abbpair {
@@ -33,9 +33,9 @@ impl From<Abbpair> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Busy {
-    #[doc = "Not busy - is idle"]
+    #[doc = "Not busy - is idle."]
     IDLE = 0x0,
-    #[doc = "Is busy"]
+    #[doc = "Is busy."]
     BUSY = 0x01,
 }
 impl Busy {
@@ -64,9 +64,9 @@ impl From<Busy> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cdbpair {
-    #[doc = "Bank-pair 0 (1st)"]
+    #[doc = "Bank-pair 0 (1st)."]
     PAIR0 = 0x0,
-    #[doc = "Bank-pair 1 (2nd)"]
+    #[doc = "Bank-pair 1 (2nd)."]
     PAIR1 = 0x01,
 }
 impl Cdbpair {
@@ -95,13 +95,13 @@ impl From<Cdbpair> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cskip {
-    #[doc = "No Skip"]
+    #[doc = "No Skip."]
     NO_SKIP = 0x0,
-    #[doc = "Skip if Carry is 1"]
+    #[doc = "Skip if Carry is 1."]
     SKIP_IF_1 = 0x01,
-    #[doc = "Skip if Carry is 0"]
+    #[doc = "Skip if Carry is 0."]
     SKIP_IF_0 = 0x02,
-    #[doc = "Set CTRLOFF to CDOFF and Skip"]
+    #[doc = "Set CTRLOFF to CDOFF and Skip."]
     SET_AND_SKIP = 0x03,
 }
 impl Cskip {
@@ -130,9 +130,9 @@ impl From<Cskip> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrlbpair {
-    #[doc = "Bank-pair 0 (1st)"]
+    #[doc = "Bank-pair 0 (1st)."]
     PAIR0 = 0x0,
-    #[doc = "Bank-pair 1 (2nd)"]
+    #[doc = "Bank-pair 1 (2nd)."]
     PAIR1 = 0x01,
 }
 impl Ctrlbpair {
@@ -161,9 +161,9 @@ impl From<Ctrlbpair> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IntenclrDone {
-    #[doc = "If written 0, ignored"]
+    #[doc = "If written 0, ignored."]
     IGNORED = 0x0,
-    #[doc = "If written 1, do not Interrupt when done"]
+    #[doc = "If written 1, do not Interrupt when done."]
     NO_INTERRUPT = 0x01,
 }
 impl IntenclrDone {
@@ -192,7 +192,7 @@ impl From<IntenclrDone> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Key(u16);
 impl Key {
-    #[doc = "If set during write, will allow lock or unlock"]
+    #[doc = "If set during write, will allow lock or unlock."]
     pub const KWY_VALUE: Self = Self(0x073d);
 }
 impl Key {
@@ -236,9 +236,9 @@ impl From<Key> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Resbpair {
-    #[doc = "Bank-pair 0 (1st)"]
+    #[doc = "Bank-pair 0 (1st)."]
     PAIR0 = 0x0,
-    #[doc = "Bank-pair 1 (2nd)"]
+    #[doc = "Bank-pair 1 (2nd)."]
     PAIR1 = 0x01,
 }
 impl Resbpair {
@@ -267,9 +267,9 @@ impl From<Resbpair> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatusDone {
-    #[doc = "Busy or just cleared"]
+    #[doc = "Busy or just cleared."]
     BUSY = 0x0,
-    #[doc = "Completed last operation"]
+    #[doc = "Completed last operation."]
     COMPLETED = 0x01,
 }
 impl StatusDone {

@@ -1,4 +1,4 @@
-#[doc = "LPC_Next0 USARTs"]
+#[doc = "LPC_Next0 USARTs."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Usart {
     ptr: *mut u8,
@@ -104,7 +104,7 @@ impl Usart {
     pub const fn fifordnopop(self) -> crate::common::Reg<regs::Fifordnopop, crate::common::R> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0e40usize) as _) }
     }
-    #[doc = "FIFO size register"]
+    #[doc = "FIFO size register."]
     #[inline(always)]
     pub const fn fifosize(self) -> crate::common::Reg<regs::Fifosize, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0e48usize) as _) }

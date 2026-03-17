@@ -1,40 +1,40 @@
-#[doc = "Access Error"]
+#[doc = "Access Error."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiAccessErr(pub u32);
 impl SgiAccessErr {
-    #[doc = "APB Error: address not available"]
+    #[doc = "APB Error: address not available."]
     #[must_use]
     #[inline(always)]
     pub const fn apb_notav(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "APB Error: address not available"]
+    #[doc = "APB Error: address not available."]
     #[inline(always)]
     pub const fn set_apb_notav(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "APB Error: Wrong access mode"]
+    #[doc = "APB Error: Wrong access mode."]
     #[must_use]
     #[inline(always)]
     pub const fn apb_wrgmd(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "APB Error: Wrong access mode"]
+    #[doc = "APB Error: Wrong access mode."]
     #[inline(always)]
     pub const fn set_apb_wrgmd(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "APB Master that triggered first APB error (APB_WRGMD or APB_NOTAV)"]
+    #[doc = "APB Master that triggered first APB error (APB_WRGMD or APB_NOTAV)."]
     #[must_use]
     #[inline(always)]
     pub const fn apb_master(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x0f;
         val as u8
     }
-    #[doc = "APB Master that triggered first APB error (APB_WRGMD or APB_NOTAV)"]
+    #[doc = "APB Master that triggered first APB error (APB_WRGMD or APB_NOTAV)."]
     #[inline(always)]
     pub const fn set_apb_master(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
@@ -67,7 +67,7 @@ impl defmt::Format for SgiAccessErr {
         )
     }
 }
-#[doc = "Clear Access Error"]
+#[doc = "Clear Access Error."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiAccessErrClr(pub u32);
@@ -108,31 +108,31 @@ impl defmt::Format for SgiAccessErrClr {
         )
     }
 }
-#[doc = "SGI Auto Mode Control register"]
+#[doc = "SGI Auto Mode Control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiAutoDmaCtrl(pub u32);
 impl SgiAutoDmaCtrl {
-    #[doc = "Input FIFO DMA Enable"]
+    #[doc = "Input FIFO DMA Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ife(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Input FIFO DMA Enable"]
+    #[doc = "Input FIFO DMA Enable."]
     #[inline(always)]
     pub const fn set_ife(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Ouput FIFO DMA Enable"]
+    #[doc = "Ouput FIFO DMA Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ofe(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Ouput FIFO DMA Enable"]
+    #[doc = "Ouput FIFO DMA Enable."]
     #[inline(always)]
     pub const fn set_ofe(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
@@ -163,55 +163,55 @@ impl defmt::Format for SgiAutoDmaCtrl {
         )
     }
 }
-#[doc = "SGI Auto Mode Control register"]
+#[doc = "SGI Auto Mode Control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiAutoMode(pub u32);
 impl SgiAutoMode {
-    #[doc = "auto_start_en"]
+    #[doc = "auto_start_en."]
     #[must_use]
     #[inline(always)]
     pub const fn auto_mode_en(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "auto_start_en"]
+    #[doc = "auto_start_en."]
     #[inline(always)]
     pub const fn set_auto_mode_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "auto_mode_stop"]
+    #[doc = "auto_mode_stop."]
     #[must_use]
     #[inline(always)]
     pub const fn auto_mode_stop(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "auto_mode_stop"]
+    #[doc = "auto_mode_stop."]
     #[inline(always)]
     pub const fn set_auto_mode_stop(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "CTR increment mode"]
+    #[doc = "CTR increment mode."]
     #[must_use]
     #[inline(always)]
     pub const fn incr_mode(&self) -> super::vals::IncrMode {
         let val = (self.0 >> 4usize) & 0x03;
         super::vals::IncrMode::from_bits(val as u8)
     }
-    #[doc = "CTR increment mode"]
+    #[doc = "CTR increment mode."]
     #[inline(always)]
     pub const fn set_incr_mode(&mut self, val: super::vals::IncrMode) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
-    #[doc = "Auto mode of operation"]
+    #[doc = "Auto mode of operation."]
     #[must_use]
     #[inline(always)]
     pub const fn cmd(&self) -> super::vals::Cmd {
         let val = (self.0 >> 8usize) & 0xff;
         super::vals::Cmd::from_bits(val as u8)
     }
-    #[doc = "Auto mode of operation"]
+    #[doc = "Auto mode of operation."]
     #[inline(always)]
     pub const fn set_cmd(&mut self, val: super::vals::Cmd) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val.to_bits() as u32) & 0xff) << 8usize);
@@ -246,247 +246,247 @@ impl defmt::Format for SgiAutoMode {
         )
     }
 }
-#[doc = "SHA Configuration Reg"]
+#[doc = "SHA Configuration Reg."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiConfig(pub u32);
 impl SgiConfig {
-    #[doc = "SGI Diversified for 'ROW'"]
+    #[doc = "SGI Diversified for 'ROW'."]
     #[must_use]
     #[inline(always)]
     pub const fn row(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "SGI Diversified for 'ROW'"]
+    #[doc = "SGI Diversified for 'ROW'."]
     #[inline(always)]
     pub const fn set_row(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "SGI Diversified for 'CHINA'"]
+    #[doc = "SGI Diversified for 'CHINA'."]
     #[must_use]
     #[inline(always)]
     pub const fn china(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "SGI Diversified for 'CHINA'"]
+    #[doc = "SGI Diversified for 'CHINA'."]
     #[inline(always)]
     pub const fn set_china(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "SGI Diversified for 'CC'"]
+    #[doc = "SGI Diversified for 'CC'."]
     #[must_use]
     #[inline(always)]
     pub const fn cc(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "SGI Diversified for 'CC'"]
+    #[doc = "SGI Diversified for 'CC'."]
     #[inline(always)]
     pub const fn set_cc(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "HAS AES"]
+    #[doc = "HAS AES."]
     #[must_use]
     #[inline(always)]
     pub const fn has_aes(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "HAS AES"]
+    #[doc = "HAS AES."]
     #[inline(always)]
     pub const fn set_has_aes(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "HAS DES"]
+    #[doc = "HAS DES."]
     #[must_use]
     #[inline(always)]
     pub const fn has_des(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "HAS DES"]
+    #[doc = "HAS DES."]
     #[inline(always)]
     pub const fn set_has_des(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "HAS SHA"]
+    #[doc = "HAS SHA."]
     #[must_use]
     #[inline(always)]
     pub const fn has_sha(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "HAS SHA"]
+    #[doc = "HAS SHA."]
     #[inline(always)]
     pub const fn set_has_sha(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "HAS MOVEM"]
+    #[doc = "HAS MOVEM."]
     #[must_use]
     #[inline(always)]
     pub const fn has_movem(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "HAS MOVEM"]
+    #[doc = "HAS MOVEM."]
     #[inline(always)]
     pub const fn set_has_movem(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "HAS GFMUL"]
+    #[doc = "HAS GFMUL."]
     #[must_use]
     #[inline(always)]
     pub const fn has_gfmul(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "HAS GFMUL"]
+    #[doc = "HAS GFMUL."]
     #[inline(always)]
     pub const fn set_has_gfmul(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "HAS INTERNAL PRNG"]
+    #[doc = "HAS INTERNAL PRNG."]
     #[must_use]
     #[inline(always)]
     pub const fn internal_prng(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "HAS INTERNAL PRNG"]
+    #[doc = "HAS INTERNAL PRNG."]
     #[inline(always)]
     pub const fn set_internal_prng(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "HAS KEY DIGEST"]
+    #[doc = "HAS KEY DIGEST."]
     #[must_use]
     #[inline(always)]
     pub const fn key_digest(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "HAS KEY DIGEST"]
+    #[doc = "HAS KEY DIGEST."]
     #[inline(always)]
     pub const fn set_key_digest(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "0 - COUNT=16, 1 - COUNT=32"]
+    #[doc = "0 - COUNT=16, 1 - COUNT=32."]
     #[must_use]
     #[inline(always)]
     pub const fn count_size(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "0 - COUNT=16, 1 - COUNT=32"]
+    #[doc = "0 - COUNT=16, 1 - COUNT=32."]
     #[inline(always)]
     pub const fn set_count_size(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "HAS FA protection"]
+    #[doc = "HAS FA protection."]
     #[must_use]
     #[inline(always)]
     pub const fn fa(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "HAS FA protection"]
+    #[doc = "HAS FA protection."]
     #[inline(always)]
     pub const fn set_fa(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "0 - BUS_WIDTH=16, 1 - BUS_WIDTH=32"]
+    #[doc = "0 - BUS_WIDTH=16, 1 - BUS_WIDTH=32."]
     #[must_use]
     #[inline(always)]
     pub const fn bus_width(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "0 - BUS_WIDTH=16, 1 - BUS_WIDTH=32"]
+    #[doc = "0 - BUS_WIDTH=16, 1 - BUS_WIDTH=32."]
     #[inline(always)]
     pub const fn set_bus_width(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "NUMBER OF DATIN REGBANKS"]
+    #[doc = "NUMBER OF DATIN REGBANKS."]
     #[must_use]
     #[inline(always)]
     pub const fn num_datin(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x03;
         val as u8
     }
-    #[doc = "NUMBER OF DATIN REGBANKS"]
+    #[doc = "NUMBER OF DATIN REGBANKS."]
     #[inline(always)]
     pub const fn set_num_datin(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val as u32) & 0x03) << 16usize);
     }
-    #[doc = "NUMBER OR KEY REGBANKS"]
+    #[doc = "NUMBER OR KEY REGBANKS."]
     #[must_use]
     #[inline(always)]
     pub const fn num_key(&self) -> u8 {
         let val = (self.0 >> 18usize) & 0x07;
         val as u8
     }
-    #[doc = "NUMBER OR KEY REGBANKS"]
+    #[doc = "NUMBER OR KEY REGBANKS."]
     #[inline(always)]
     pub const fn set_num_key(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 18usize)) | (((val as u32) & 0x07) << 18usize);
     }
-    #[doc = "DATIN to KERNEL End-to-end EDC is enabled"]
+    #[doc = "DATIN to KERNEL End-to-end EDC is enabled."]
     #[must_use]
     #[inline(always)]
     pub const fn edc(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "DATIN to KERNEL End-to-end EDC is enabled"]
+    #[doc = "DATIN to KERNEL End-to-end EDC is enabled."]
     #[inline(always)]
     pub const fn set_edc(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "HAS SHA-256 ONLY"]
+    #[doc = "HAS SHA-256 ONLY."]
     #[must_use]
     #[inline(always)]
     pub const fn sha_256_only(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "HAS SHA-256 ONLY"]
+    #[doc = "HAS SHA-256 ONLY."]
     #[inline(always)]
     pub const fn set_sha_256_only(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "ID_CFG_SGI_SPB_SUPPORT is set"]
+    #[doc = "ID_CFG_SGI_SPB_SUPPORT is set."]
     #[must_use]
     #[inline(always)]
     pub const fn spb_support(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "ID_CFG_SGI_SPB_SUPPORT is set"]
+    #[doc = "ID_CFG_SGI_SPB_SUPPORT is set."]
     #[inline(always)]
     pub const fn set_spb_support(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "ID_CFG_SGI_SPB_MASKING is set"]
+    #[doc = "ID_CFG_SGI_SPB_MASKING is set."]
     #[must_use]
     #[inline(always)]
     pub const fn spb_masking(&self) -> bool {
         let val = (self.0 >> 26usize) & 0x01;
         val != 0
     }
-    #[doc = "ID_CFG_SGI_SPB_MASKING is set"]
+    #[doc = "ID_CFG_SGI_SPB_MASKING is set."]
     #[inline(always)]
     pub const fn set_spb_masking(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "ID_CFG_SGI_USE_SFR_SW_MASK is set"]
+    #[doc = "ID_CFG_SGI_USE_SFR_SW_MASK is set."]
     #[must_use]
     #[inline(always)]
     pub const fn sfr_sw_mask(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "ID_CFG_SGI_USE_SFR_SW_MASK is set"]
+    #[doc = "ID_CFG_SGI_USE_SFR_SW_MASK is set."]
     #[inline(always)]
     pub const fn set_sfr_sw_mask(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
@@ -553,31 +553,31 @@ impl defmt::Format for SgiConfig {
         )
     }
 }
-#[doc = "SHA Configuration 2 Reg"]
+#[doc = "SHA Configuration 2 Reg."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiConfig2(pub u32);
 impl SgiConfig2 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn aes_used(&self) -> super::vals::AesUsed {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::AesUsed::from_bits(val as u8)
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_aes_used(&mut self, val: super::vals::AesUsed) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Number of AES sboxes"]
+    #[doc = "Number of AES sboxes."]
     #[must_use]
     #[inline(always)]
     pub const fn aes_num_sboxes(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x1f;
         val as u8
     }
-    #[doc = "Number of AES sboxes"]
+    #[doc = "Number of AES sboxes."]
     #[inline(always)]
     pub const fn set_aes_num_sboxes(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 4usize)) | (((val as u32) & 0x1f) << 4usize);
@@ -594,26 +594,26 @@ impl SgiConfig2 {
     pub const fn set_aes_keysize(&mut self, val: super::vals::AesKeysize) {
         self.0 = (self.0 & !(0x03 << 9usize)) | (((val.to_bits() as u32) & 0x03) << 9usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn des_used(&self) -> super::vals::DesUsed {
         let val = (self.0 >> 16usize) & 0x0f;
         super::vals::DesUsed::from_bits(val as u8)
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_des_used(&mut self, val: super::vals::DesUsed) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val.to_bits() as u32) & 0x0f) << 16usize);
     }
-    #[doc = "Number of DES sboxes"]
+    #[doc = "Number of DES sboxes."]
     #[must_use]
     #[inline(always)]
     pub const fn des_num_sboxes(&self) -> u8 {
         let val = (self.0 >> 20usize) & 0x1f;
         val as u8
     }
-    #[doc = "Number of DES sboxes"]
+    #[doc = "Number of DES sboxes."]
     #[inline(always)]
     pub const fn set_des_num_sboxes(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 20usize)) | (((val as u32) & 0x1f) << 20usize);
@@ -650,7 +650,7 @@ impl defmt::Format for SgiConfig2 {
         )
     }
 }
-#[doc = "Calculation counter"]
+#[doc = "Calculation counter."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiCount(pub u32);
@@ -687,163 +687,163 @@ impl defmt::Format for SgiCount {
         defmt::write!(f, "SgiCount {{ count: {=u32:?} }}", self.count())
     }
 }
-#[doc = "SGI Control register"]
+#[doc = "SGI Control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiCtrl(pub u32);
 impl SgiCtrl {
-    #[doc = "Start crypto operation"]
+    #[doc = "Start crypto operation."]
     #[must_use]
     #[inline(always)]
     pub const fn start(&self) -> super::vals::Start {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Start::from_bits(val as u8)
     }
-    #[doc = "Start crypto operation"]
+    #[doc = "Start crypto operation."]
     #[inline(always)]
     pub const fn set_start(&mut self, val: super::vals::Start) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Sets cipher direction (AES)"]
+    #[doc = "Sets cipher direction (AES)."]
     #[must_use]
     #[inline(always)]
     pub const fn decrypt(&self) -> super::vals::Decrypt {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Decrypt::from_bits(val as u8)
     }
-    #[doc = "Sets cipher direction (AES)"]
+    #[doc = "Sets cipher direction (AES)."]
     #[inline(always)]
     pub const fn set_decrypt(&mut self, val: super::vals::Decrypt) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Sets AES key size"]
+    #[doc = "Sets AES key size."]
     #[must_use]
     #[inline(always)]
     pub const fn aeskeysz(&self) -> super::vals::Aeskeysz {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::Aeskeysz::from_bits(val as u8)
     }
-    #[doc = "Sets AES key size"]
+    #[doc = "Sets AES key size."]
     #[inline(always)]
     pub const fn set_aeskeysz(&mut self, val: super::vals::Aeskeysz) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
-    #[doc = "Sets 'Crypto Operation' type"]
+    #[doc = "Sets 'Crypto Operation' type."]
     #[must_use]
     #[inline(always)]
     pub const fn crypto_op(&self) -> super::vals::CryptoOp {
         let val = (self.0 >> 4usize) & 0x07;
         super::vals::CryptoOp::from_bits(val as u8)
     }
-    #[doc = "Sets 'Crypto Operation' type"]
+    #[doc = "Sets 'Crypto Operation' type."]
     #[inline(always)]
     pub const fn set_crypto_op(&mut self, val: super::vals::CryptoOp) {
         self.0 = (self.0 & !(0x07 << 4usize)) | (((val.to_bits() as u32) & 0x07) << 4usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn insel(&self) -> super::vals::Insel {
         let val = (self.0 >> 7usize) & 0x0f;
         super::vals::Insel::from_bits(val as u8)
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_insel(&mut self, val: super::vals::Insel) {
         self.0 = (self.0 & !(0x0f << 7usize)) | (((val.to_bits() as u32) & 0x0f) << 7usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn outsel(&self) -> super::vals::Outsel {
         let val = (self.0 >> 11usize) & 0x07;
         super::vals::Outsel::from_bits(val as u8)
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_outsel(&mut self, val: super::vals::Outsel) {
         self.0 = (self.0 & !(0x07 << 11usize)) | (((val.to_bits() as u32) & 0x07) << 11usize);
     }
-    #[doc = "Kernels data out options"]
+    #[doc = "Kernels data out options."]
     #[must_use]
     #[inline(always)]
     pub const fn datout_res(&self) -> super::vals::DatoutRes {
         let val = (self.0 >> 14usize) & 0x03;
         super::vals::DatoutRes::from_bits(val as u8)
     }
-    #[doc = "Kernels data out options"]
+    #[doc = "Kernels data out options."]
     #[inline(always)]
     pub const fn set_datout_res(&mut self, val: super::vals::DatoutRes) {
         self.0 = (self.0 & !(0x03 << 14usize)) | (((val.to_bits() as u32) & 0x03) << 14usize);
     }
-    #[doc = "AES Kernel Enable"]
+    #[doc = "AES Kernel Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn aes_en(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "AES Kernel Enable"]
+    #[doc = "AES Kernel Enable."]
     #[inline(always)]
     pub const fn set_aes_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "GFMUL Kernel Enable"]
+    #[doc = "GFMUL Kernel Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn gcm_en(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "GFMUL Kernel Enable"]
+    #[doc = "GFMUL Kernel Enable."]
     #[inline(always)]
     pub const fn set_gcm_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "PRNG Enable (only if SGI has internal PRNG)"]
+    #[doc = "PRNG Enable (only if SGI has internal PRNG)."]
     #[must_use]
     #[inline(always)]
     pub const fn prng_en(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "PRNG Enable (only if SGI has internal PRNG)"]
+    #[doc = "PRNG Enable (only if SGI has internal PRNG)."]
     #[inline(always)]
     pub const fn set_prng_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Input key selection"]
+    #[doc = "Input key selection."]
     #[must_use]
     #[inline(always)]
     pub const fn inkeysel(&self) -> u8 {
         let val = (self.0 >> 20usize) & 0x1f;
         val as u8
     }
-    #[doc = "Input key selection"]
+    #[doc = "Input key selection."]
     #[inline(always)]
     pub const fn set_inkeysel(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 20usize)) | (((val as u32) & 0x1f) << 20usize);
     }
-    #[doc = "AES No decryption key schedule"]
+    #[doc = "AES No decryption key schedule."]
     #[must_use]
     #[inline(always)]
     pub const fn aes_no_kl(&self) -> super::vals::AesNoKl {
         let val = (self.0 >> 26usize) & 0x01;
         super::vals::AesNoKl::from_bits(val as u8)
     }
-    #[doc = "AES No decryption key schedule"]
+    #[doc = "AES No decryption key schedule."]
     #[inline(always)]
     pub const fn set_aes_no_kl(&mut self, val: super::vals::AesNoKl) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
     }
-    #[doc = "AES Dual Selection"]
+    #[doc = "AES Dual Selection."]
     #[must_use]
     #[inline(always)]
     pub const fn aes_sel(&self) -> super::vals::AesSel {
         let val = (self.0 >> 27usize) & 0x01;
         super::vals::AesSel::from_bits(val as u8)
     }
-    #[doc = "AES Dual Selection"]
+    #[doc = "AES Dual Selection."]
     #[inline(always)]
     pub const fn set_aes_sel(&mut self, val: super::vals::AesSel) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val.to_bits() as u32) & 0x01) << 27usize);
@@ -896,187 +896,187 @@ impl defmt::Format for SgiCtrl {
         )
     }
 }
-#[doc = "SGI Control register 2"]
+#[doc = "SGI Control register 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiCtrl2(pub u32);
 impl SgiCtrl2 {
-    #[doc = "Start Full SGI Flush"]
+    #[doc = "Start Full SGI Flush."]
     #[must_use]
     #[inline(always)]
     pub const fn flush(&self) -> super::vals::Flush {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Flush::from_bits(val as u8)
     }
-    #[doc = "Start Full SGI Flush"]
+    #[doc = "Start Full SGI Flush."]
     #[inline(always)]
     pub const fn set_flush(&mut self, val: super::vals::Flush) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Start KEY register-bank Flush"]
+    #[doc = "Start KEY register-bank Flush."]
     #[must_use]
     #[inline(always)]
     pub const fn key_flush(&self) -> super::vals::KeyFlush {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::KeyFlush::from_bits(val as u8)
     }
-    #[doc = "Start KEY register-bank Flush"]
+    #[doc = "Start KEY register-bank Flush."]
     #[inline(always)]
     pub const fn set_key_flush(&mut self, val: super::vals::KeyFlush) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Start DATIN register-bank Flush"]
+    #[doc = "Start DATIN register-bank Flush."]
     #[must_use]
     #[inline(always)]
     pub const fn datin_flush(&self) -> super::vals::DatinFlush {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::DatinFlush::from_bits(val as u8)
     }
-    #[doc = "Start DATIN register-bank Flush"]
+    #[doc = "Start DATIN register-bank Flush."]
     #[inline(always)]
     pub const fn set_datin_flush(&mut self, val: super::vals::DatinFlush) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "Increment(Triggered by SFR write)"]
+    #[doc = "Increment(Triggered by SFR write)."]
     #[must_use]
     #[inline(always)]
     pub const fn incr(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Increment(Triggered by SFR write)"]
+    #[doc = "Increment(Triggered by SFR write)."]
     #[inline(always)]
     pub const fn set_incr(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "Write-XOR control"]
+    #[doc = "Write-XOR control."]
     #[must_use]
     #[inline(always)]
     pub const fn xorwr(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "Write-XOR control"]
+    #[doc = "Write-XOR control."]
     #[inline(always)]
     pub const fn set_xorwr(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "Flush Write control"]
+    #[doc = "Flush Write control."]
     #[must_use]
     #[inline(always)]
     pub const fn flushwr(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Flush Write control"]
+    #[doc = "Flush Write control."]
     #[inline(always)]
     pub const fn set_flushwr(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "Increment Carry-In control"]
+    #[doc = "Increment Carry-In control."]
     #[must_use]
     #[inline(always)]
     pub const fn incr_cin(&self) -> super::vals::IncrCin {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::IncrCin::from_bits(val as u8)
     }
-    #[doc = "Increment Carry-In control"]
+    #[doc = "Increment Carry-In control."]
     #[inline(always)]
     pub const fn set_incr_cin(&mut self, val: super::vals::IncrCin) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "SFRMASK Enable"]
+    #[doc = "SFRMASK Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn smasken(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "SFRMASK Enable"]
+    #[doc = "SFRMASK Enable."]
     #[inline(always)]
     pub const fn set_smasken(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "SFRSEED increment control"]
+    #[doc = "SFRSEED increment control."]
     #[must_use]
     #[inline(always)]
     pub const fn smaskstep(&self) -> super::vals::Smaskstep {
         let val = (self.0 >> 9usize) & 0x01;
         super::vals::Smaskstep::from_bits(val as u8)
     }
-    #[doc = "SFRSEED increment control"]
+    #[doc = "SFRSEED increment control."]
     #[inline(always)]
     pub const fn set_smaskstep(&mut self, val: super::vals::Smaskstep) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
     }
-    #[doc = "SFRMASK MASK control"]
+    #[doc = "SFRMASK MASK control."]
     #[must_use]
     #[inline(always)]
     pub const fn smasksw(&self) -> super::vals::Smasksw {
         let val = (self.0 >> 10usize) & 0x01;
         super::vals::Smasksw::from_bits(val as u8)
     }
-    #[doc = "SFRMASK MASK control"]
+    #[doc = "SFRMASK MASK control."]
     #[inline(always)]
     pub const fn set_smasksw(&mut self, val: super::vals::Smasksw) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
-    #[doc = "4-bit optional input for MOVEM feature"]
+    #[doc = "4-bit optional input for MOVEM feature."]
     #[must_use]
     #[inline(always)]
     pub const fn movem(&self) -> u8 {
         let val = (self.0 >> 12usize) & 0x0f;
         val as u8
     }
-    #[doc = "4-bit optional input for MOVEM feature"]
+    #[doc = "4-bit optional input for MOVEM feature."]
     #[inline(always)]
     pub const fn set_movem(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 12usize)) | (((val as u32) & 0x0f) << 12usize);
     }
-    #[doc = "Selects key registers to be updated when rkey=1"]
+    #[doc = "Selects key registers to be updated when rkey=1."]
     #[must_use]
     #[inline(always)]
     pub const fn keyres(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x1f;
         val as u8
     }
-    #[doc = "Selects key registers to be updated when rkey=1"]
+    #[doc = "Selects key registers to be updated when rkey=1."]
     #[inline(always)]
     pub const fn set_keyres(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 16usize)) | (((val as u32) & 0x1f) << 16usize);
     }
-    #[doc = "Crypto result location"]
+    #[doc = "Crypto result location."]
     #[must_use]
     #[inline(always)]
     pub const fn rkey(&self) -> super::vals::Rkey {
         let val = (self.0 >> 21usize) & 0x01;
         super::vals::Rkey::from_bits(val as u8)
     }
-    #[doc = "Crypto result location"]
+    #[doc = "Crypto result location."]
     #[inline(always)]
     pub const fn set_rkey(&mut self, val: super::vals::Rkey) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
     }
-    #[doc = "Byte order of regbank read/write data"]
+    #[doc = "Byte order of regbank read/write data."]
     #[must_use]
     #[inline(always)]
     pub const fn bytes_order(&self) -> super::vals::BytesOrder {
         let val = (self.0 >> 22usize) & 0x01;
         super::vals::BytesOrder::from_bits(val as u8)
     }
-    #[doc = "Byte order of regbank read/write data"]
+    #[doc = "Byte order of regbank read/write data."]
     #[inline(always)]
     pub const fn set_bytes_order(&mut self, val: super::vals::BytesOrder) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
     }
-    #[doc = "GCM INXOR"]
+    #[doc = "GCM INXOR."]
     #[must_use]
     #[inline(always)]
     pub const fn gcm_inxor(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "GCM INXOR"]
+    #[doc = "GCM INXOR."]
     #[inline(always)]
     pub const fn set_gcm_inxor(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
@@ -1133,19 +1133,19 @@ impl defmt::Format for SgiCtrl2 {
         )
     }
 }
-#[doc = "Input Data register 0 - Word-3"]
+#[doc = "Input Data register 0 - Word-3."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiDatin0a(pub u32);
 impl SgiDatin0a {
-    #[doc = "Input Data register"]
+    #[doc = "Input Data register."]
     #[must_use]
     #[inline(always)]
     pub const fn datin0a(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Data register"]
+    #[doc = "Input Data register."]
     #[inline(always)]
     pub const fn set_datin0a(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1170,19 +1170,19 @@ impl defmt::Format for SgiDatin0a {
         defmt::write!(f, "SgiDatin0a {{ datin0a: {=u32:?} }}", self.datin0a())
     }
 }
-#[doc = "Input Data register 0 - Word-2"]
+#[doc = "Input Data register 0 - Word-2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiDatin0b(pub u32);
 impl SgiDatin0b {
-    #[doc = "Input Data register"]
+    #[doc = "Input Data register."]
     #[must_use]
     #[inline(always)]
     pub const fn datin0b(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Data register"]
+    #[doc = "Input Data register."]
     #[inline(always)]
     pub const fn set_datin0b(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1207,19 +1207,19 @@ impl defmt::Format for SgiDatin0b {
         defmt::write!(f, "SgiDatin0b {{ datin0b: {=u32:?} }}", self.datin0b())
     }
 }
-#[doc = "Input Data register 0 - Word-1"]
+#[doc = "Input Data register 0 - Word-1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiDatin0c(pub u32);
 impl SgiDatin0c {
-    #[doc = "Input Data register"]
+    #[doc = "Input Data register."]
     #[must_use]
     #[inline(always)]
     pub const fn datin0c(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Data register"]
+    #[doc = "Input Data register."]
     #[inline(always)]
     pub const fn set_datin0c(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1244,19 +1244,19 @@ impl defmt::Format for SgiDatin0c {
         defmt::write!(f, "SgiDatin0c {{ datin0c: {=u32:?} }}", self.datin0c())
     }
 }
-#[doc = "Input Data register 0 - Word-0"]
+#[doc = "Input Data register 0 - Word-0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiDatin0d(pub u32);
 impl SgiDatin0d {
-    #[doc = "Input Data register"]
+    #[doc = "Input Data register."]
     #[must_use]
     #[inline(always)]
     pub const fn datin0d(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Data register"]
+    #[doc = "Input Data register."]
     #[inline(always)]
     pub const fn set_datin0d(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1281,19 +1281,19 @@ impl defmt::Format for SgiDatin0d {
         defmt::write!(f, "SgiDatin0d {{ datin0d: {=u32:?} }}", self.datin0d())
     }
 }
-#[doc = "Input Data register 1 - Word-3"]
+#[doc = "Input Data register 1 - Word-3."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiDatin1a(pub u32);
 impl SgiDatin1a {
-    #[doc = "Input Data register"]
+    #[doc = "Input Data register."]
     #[must_use]
     #[inline(always)]
     pub const fn datin1a(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Data register"]
+    #[doc = "Input Data register."]
     #[inline(always)]
     pub const fn set_datin1a(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1318,19 +1318,19 @@ impl defmt::Format for SgiDatin1a {
         defmt::write!(f, "SgiDatin1a {{ datin1a: {=u32:?} }}", self.datin1a())
     }
 }
-#[doc = "Input Data register 1 - Word-2"]
+#[doc = "Input Data register 1 - Word-2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiDatin1b(pub u32);
 impl SgiDatin1b {
-    #[doc = "Input Data register"]
+    #[doc = "Input Data register."]
     #[must_use]
     #[inline(always)]
     pub const fn datin1b(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Data register"]
+    #[doc = "Input Data register."]
     #[inline(always)]
     pub const fn set_datin1b(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1355,19 +1355,19 @@ impl defmt::Format for SgiDatin1b {
         defmt::write!(f, "SgiDatin1b {{ datin1b: {=u32:?} }}", self.datin1b())
     }
 }
-#[doc = "Input Data register 1 - Word-1"]
+#[doc = "Input Data register 1 - Word-1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiDatin1c(pub u32);
 impl SgiDatin1c {
-    #[doc = "Input Data register"]
+    #[doc = "Input Data register."]
     #[must_use]
     #[inline(always)]
     pub const fn datin1c(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Data register"]
+    #[doc = "Input Data register."]
     #[inline(always)]
     pub const fn set_datin1c(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1392,19 +1392,19 @@ impl defmt::Format for SgiDatin1c {
         defmt::write!(f, "SgiDatin1c {{ datin1c: {=u32:?} }}", self.datin1c())
     }
 }
-#[doc = "Input Data register 1 - Word-0"]
+#[doc = "Input Data register 1 - Word-0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiDatin1d(pub u32);
 impl SgiDatin1d {
-    #[doc = "Input Data register"]
+    #[doc = "Input Data register."]
     #[must_use]
     #[inline(always)]
     pub const fn datin1d(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Data register"]
+    #[doc = "Input Data register."]
     #[inline(always)]
     pub const fn set_datin1d(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1429,19 +1429,19 @@ impl defmt::Format for SgiDatin1d {
         defmt::write!(f, "SgiDatin1d {{ datin1d: {=u32:?} }}", self.datin1d())
     }
 }
-#[doc = "Input Data register 2 - Word-3"]
+#[doc = "Input Data register 2 - Word-3."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiDatin2a(pub u32);
 impl SgiDatin2a {
-    #[doc = "Input Data register"]
+    #[doc = "Input Data register."]
     #[must_use]
     #[inline(always)]
     pub const fn datin2a(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Data register"]
+    #[doc = "Input Data register."]
     #[inline(always)]
     pub const fn set_datin2a(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1466,19 +1466,19 @@ impl defmt::Format for SgiDatin2a {
         defmt::write!(f, "SgiDatin2a {{ datin2a: {=u32:?} }}", self.datin2a())
     }
 }
-#[doc = "Input Data register 2 - Word-2"]
+#[doc = "Input Data register 2 - Word-2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiDatin2b(pub u32);
 impl SgiDatin2b {
-    #[doc = "Input Data register"]
+    #[doc = "Input Data register."]
     #[must_use]
     #[inline(always)]
     pub const fn datin2b(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Data register"]
+    #[doc = "Input Data register."]
     #[inline(always)]
     pub const fn set_datin2b(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1503,19 +1503,19 @@ impl defmt::Format for SgiDatin2b {
         defmt::write!(f, "SgiDatin2b {{ datin2b: {=u32:?} }}", self.datin2b())
     }
 }
-#[doc = "Input Data register 2 - Word-1"]
+#[doc = "Input Data register 2 - Word-1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiDatin2c(pub u32);
 impl SgiDatin2c {
-    #[doc = "Input Data register"]
+    #[doc = "Input Data register."]
     #[must_use]
     #[inline(always)]
     pub const fn datin2c(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Data register"]
+    #[doc = "Input Data register."]
     #[inline(always)]
     pub const fn set_datin2c(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1540,19 +1540,19 @@ impl defmt::Format for SgiDatin2c {
         defmt::write!(f, "SgiDatin2c {{ datin2c: {=u32:?} }}", self.datin2c())
     }
 }
-#[doc = "Input Data register 2 - Word-0"]
+#[doc = "Input Data register 2 - Word-0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiDatin2d(pub u32);
 impl SgiDatin2d {
-    #[doc = "Input Data register"]
+    #[doc = "Input Data register."]
     #[must_use]
     #[inline(always)]
     pub const fn datin2d(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Data register"]
+    #[doc = "Input Data register."]
     #[inline(always)]
     pub const fn set_datin2d(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1577,19 +1577,19 @@ impl defmt::Format for SgiDatin2d {
         defmt::write!(f, "SgiDatin2d {{ datin2d: {=u32:?} }}", self.datin2d())
     }
 }
-#[doc = "Input Data register 3 - Word-3"]
+#[doc = "Input Data register 3 - Word-3."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiDatin3a(pub u32);
 impl SgiDatin3a {
-    #[doc = "Input Data register"]
+    #[doc = "Input Data register."]
     #[must_use]
     #[inline(always)]
     pub const fn datin3a(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Data register"]
+    #[doc = "Input Data register."]
     #[inline(always)]
     pub const fn set_datin3a(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1614,19 +1614,19 @@ impl defmt::Format for SgiDatin3a {
         defmt::write!(f, "SgiDatin3a {{ datin3a: {=u32:?} }}", self.datin3a())
     }
 }
-#[doc = "Input Data register 3 - Word-2"]
+#[doc = "Input Data register 3 - Word-2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiDatin3b(pub u32);
 impl SgiDatin3b {
-    #[doc = "Input Data register"]
+    #[doc = "Input Data register."]
     #[must_use]
     #[inline(always)]
     pub const fn datin3b(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Data register"]
+    #[doc = "Input Data register."]
     #[inline(always)]
     pub const fn set_datin3b(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1651,19 +1651,19 @@ impl defmt::Format for SgiDatin3b {
         defmt::write!(f, "SgiDatin3b {{ datin3b: {=u32:?} }}", self.datin3b())
     }
 }
-#[doc = "Input Data register 3 - Word-1"]
+#[doc = "Input Data register 3 - Word-1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiDatin3c(pub u32);
 impl SgiDatin3c {
-    #[doc = "Input Data register"]
+    #[doc = "Input Data register."]
     #[must_use]
     #[inline(always)]
     pub const fn datin3c(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Data register"]
+    #[doc = "Input Data register."]
     #[inline(always)]
     pub const fn set_datin3c(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1688,19 +1688,19 @@ impl defmt::Format for SgiDatin3c {
         defmt::write!(f, "SgiDatin3c {{ datin3c: {=u32:?} }}", self.datin3c())
     }
 }
-#[doc = "Input Data register 3 - Word-0"]
+#[doc = "Input Data register 3 - Word-0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiDatin3d(pub u32);
 impl SgiDatin3d {
-    #[doc = "Input Data register"]
+    #[doc = "Input Data register."]
     #[must_use]
     #[inline(always)]
     pub const fn datin3d(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Data register"]
+    #[doc = "Input Data register."]
     #[inline(always)]
     pub const fn set_datin3d(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1725,19 +1725,19 @@ impl defmt::Format for SgiDatin3d {
         defmt::write!(f, "SgiDatin3d {{ datin3d: {=u32:?} }}", self.datin3d())
     }
 }
-#[doc = "Output Data register - Word-3"]
+#[doc = "Output Data register - Word-3."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiDatouta(pub u32);
 impl SgiDatouta {
-    #[doc = "Output Data register"]
+    #[doc = "Output Data register."]
     #[must_use]
     #[inline(always)]
     pub const fn datouta(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Output Data register"]
+    #[doc = "Output Data register."]
     #[inline(always)]
     pub const fn set_datouta(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1762,19 +1762,19 @@ impl defmt::Format for SgiDatouta {
         defmt::write!(f, "SgiDatouta {{ datouta: {=u32:?} }}", self.datouta())
     }
 }
-#[doc = "Output Data register - Word-2"]
+#[doc = "Output Data register - Word-2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiDatoutb(pub u32);
 impl SgiDatoutb {
-    #[doc = "Output Data register"]
+    #[doc = "Output Data register."]
     #[must_use]
     #[inline(always)]
     pub const fn datoutb(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Output Data register"]
+    #[doc = "Output Data register."]
     #[inline(always)]
     pub const fn set_datoutb(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1799,19 +1799,19 @@ impl defmt::Format for SgiDatoutb {
         defmt::write!(f, "SgiDatoutb {{ datoutb: {=u32:?} }}", self.datoutb())
     }
 }
-#[doc = "Output Data register - Word-1"]
+#[doc = "Output Data register - Word-1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiDatoutc(pub u32);
 impl SgiDatoutc {
-    #[doc = "Output Data register"]
+    #[doc = "Output Data register."]
     #[must_use]
     #[inline(always)]
     pub const fn datoutc(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Output Data register"]
+    #[doc = "Output Data register."]
     #[inline(always)]
     pub const fn set_datoutc(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1836,19 +1836,19 @@ impl defmt::Format for SgiDatoutc {
         defmt::write!(f, "SgiDatoutc {{ datoutc: {=u32:?} }}", self.datoutc())
     }
 }
-#[doc = "Output Data register - Word-0"]
+#[doc = "Output Data register - Word-0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiDatoutd(pub u32);
 impl SgiDatoutd {
-    #[doc = "Output Data register"]
+    #[doc = "Output Data register."]
     #[must_use]
     #[inline(always)]
     pub const fn datoutd(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Output Data register"]
+    #[doc = "Output Data register."]
     #[inline(always)]
     pub const fn set_datoutd(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1873,19 +1873,19 @@ impl defmt::Format for SgiDatoutd {
         defmt::write!(f, "SgiDatoutd {{ datoutd: {=u32:?} }}", self.datoutd())
     }
 }
-#[doc = "Configuration of dummy controls"]
+#[doc = "Configuration of dummy controls."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiDummyCtrl(pub u32);
 impl SgiDummyCtrl {
-    #[doc = "AES dummy controlPlease refer to the relevant kernel document for details on dummy ctrl"]
+    #[doc = "AES dummy controlPlease refer to the relevant kernel document for details on dummy ctrl."]
     #[must_use]
     #[inline(always)]
     pub const fn adctrl(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x03ff;
         val as u16
     }
-    #[doc = "AES dummy controlPlease refer to the relevant kernel document for details on dummy ctrl"]
+    #[doc = "AES dummy controlPlease refer to the relevant kernel document for details on dummy ctrl."]
     #[inline(always)]
     pub const fn set_adctrl(&mut self, val: u16) {
         self.0 = (self.0 & !(0x03ff << 16usize)) | (((val as u32) & 0x03ff) << 16usize);
@@ -1910,19 +1910,19 @@ impl defmt::Format for SgiDummyCtrl {
         defmt::write!(f, "SgiDummyCtrl {{ adctrl: {=u16:?} }}", self.adctrl())
     }
 }
-#[doc = "Interrupt enable"]
+#[doc = "Interrupt enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiIntEnable(pub u32);
 impl SgiIntEnable {
-    #[doc = "Interrupt enable bit"]
+    #[doc = "Interrupt enable bit."]
     #[must_use]
     #[inline(always)]
     pub const fn int_en(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Interrupt enable bit"]
+    #[doc = "Interrupt enable bit."]
     #[inline(always)]
     pub const fn set_int_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -1947,19 +1947,19 @@ impl defmt::Format for SgiIntEnable {
         defmt::write!(f, "SgiIntEnable {{ int_en: {=bool:?} }}", self.int_en())
     }
 }
-#[doc = "Interrupt status"]
+#[doc = "Interrupt status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiIntStatus(pub u32);
 impl SgiIntStatus {
-    #[doc = "Interrupt status flag: INT_PDONE is set independent from the interrupt enable SGI_INT_ENABLE"]
+    #[doc = "Interrupt status flag: INT_PDONE is set independent from the interrupt enable SGI_INT_ENABLE."]
     #[must_use]
     #[inline(always)]
     pub const fn int_pdone(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Interrupt status flag: INT_PDONE is set independent from the interrupt enable SGI_INT_ENABLE"]
+    #[doc = "Interrupt status flag: INT_PDONE is set independent from the interrupt enable SGI_INT_ENABLE."]
     #[inline(always)]
     pub const fn set_int_pdone(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -1988,7 +1988,7 @@ impl defmt::Format for SgiIntStatus {
         )
     }
 }
-#[doc = "Interrupt status clear"]
+#[doc = "Interrupt status clear."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiIntStatusClr(pub u32);
@@ -2029,7 +2029,7 @@ impl defmt::Format for SgiIntStatusClr {
         )
     }
 }
-#[doc = "Interrupt status set"]
+#[doc = "Interrupt status set."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiIntStatusSet(pub u32);
@@ -2070,19 +2070,19 @@ impl defmt::Format for SgiIntStatusSet {
         )
     }
 }
-#[doc = "Input Key register 0 - Word-3"]
+#[doc = "Input Key register 0 - Word-3."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiKey0a(pub u32);
 impl SgiKey0a {
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[must_use]
     #[inline(always)]
     pub const fn key0a(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[inline(always)]
     pub const fn set_key0a(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2107,19 +2107,19 @@ impl defmt::Format for SgiKey0a {
         defmt::write!(f, "SgiKey0a {{ key0a: {=u32:?} }}", self.key0a())
     }
 }
-#[doc = "Input Key register 0 - Word-2"]
+#[doc = "Input Key register 0 - Word-2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiKey0b(pub u32);
 impl SgiKey0b {
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[must_use]
     #[inline(always)]
     pub const fn key0b(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[inline(always)]
     pub const fn set_key0b(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2144,19 +2144,19 @@ impl defmt::Format for SgiKey0b {
         defmt::write!(f, "SgiKey0b {{ key0b: {=u32:?} }}", self.key0b())
     }
 }
-#[doc = "Input Key register 0 - Word-1"]
+#[doc = "Input Key register 0 - Word-1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiKey0c(pub u32);
 impl SgiKey0c {
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[must_use]
     #[inline(always)]
     pub const fn key0c(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[inline(always)]
     pub const fn set_key0c(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2181,19 +2181,19 @@ impl defmt::Format for SgiKey0c {
         defmt::write!(f, "SgiKey0c {{ key0c: {=u32:?} }}", self.key0c())
     }
 }
-#[doc = "Input Key register 0 - Word-0"]
+#[doc = "Input Key register 0 - Word-0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiKey0d(pub u32);
 impl SgiKey0d {
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[must_use]
     #[inline(always)]
     pub const fn key0d(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[inline(always)]
     pub const fn set_key0d(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2218,19 +2218,19 @@ impl defmt::Format for SgiKey0d {
         defmt::write!(f, "SgiKey0d {{ key0d: {=u32:?} }}", self.key0d())
     }
 }
-#[doc = "Input Key register 1 - Word-3"]
+#[doc = "Input Key register 1 - Word-3."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiKey1a(pub u32);
 impl SgiKey1a {
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[must_use]
     #[inline(always)]
     pub const fn key1a(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[inline(always)]
     pub const fn set_key1a(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2255,19 +2255,19 @@ impl defmt::Format for SgiKey1a {
         defmt::write!(f, "SgiKey1a {{ key1a: {=u32:?} }}", self.key1a())
     }
 }
-#[doc = "Input Key register 1 - Word-2"]
+#[doc = "Input Key register 1 - Word-2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiKey1b(pub u32);
 impl SgiKey1b {
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[must_use]
     #[inline(always)]
     pub const fn key1b(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[inline(always)]
     pub const fn set_key1b(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2292,19 +2292,19 @@ impl defmt::Format for SgiKey1b {
         defmt::write!(f, "SgiKey1b {{ key1b: {=u32:?} }}", self.key1b())
     }
 }
-#[doc = "Input Key register 1 - Word-1"]
+#[doc = "Input Key register 1 - Word-1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiKey1c(pub u32);
 impl SgiKey1c {
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[must_use]
     #[inline(always)]
     pub const fn key1c(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[inline(always)]
     pub const fn set_key1c(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2329,19 +2329,19 @@ impl defmt::Format for SgiKey1c {
         defmt::write!(f, "SgiKey1c {{ key1c: {=u32:?} }}", self.key1c())
     }
 }
-#[doc = "Input Key register 1 - Word-0"]
+#[doc = "Input Key register 1 - Word-0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiKey1d(pub u32);
 impl SgiKey1d {
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[must_use]
     #[inline(always)]
     pub const fn key1d(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[inline(always)]
     pub const fn set_key1d(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2366,19 +2366,19 @@ impl defmt::Format for SgiKey1d {
         defmt::write!(f, "SgiKey1d {{ key1d: {=u32:?} }}", self.key1d())
     }
 }
-#[doc = "Input Key register 2 - Word-3"]
+#[doc = "Input Key register 2 - Word-3."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiKey2a(pub u32);
 impl SgiKey2a {
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[must_use]
     #[inline(always)]
     pub const fn key2a(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[inline(always)]
     pub const fn set_key2a(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2403,19 +2403,19 @@ impl defmt::Format for SgiKey2a {
         defmt::write!(f, "SgiKey2a {{ key2a: {=u32:?} }}", self.key2a())
     }
 }
-#[doc = "Input Key register 2 - Word-2"]
+#[doc = "Input Key register 2 - Word-2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiKey2b(pub u32);
 impl SgiKey2b {
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[must_use]
     #[inline(always)]
     pub const fn key2b(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[inline(always)]
     pub const fn set_key2b(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2440,19 +2440,19 @@ impl defmt::Format for SgiKey2b {
         defmt::write!(f, "SgiKey2b {{ key2b: {=u32:?} }}", self.key2b())
     }
 }
-#[doc = "Input Key register 2 - Word-1"]
+#[doc = "Input Key register 2 - Word-1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiKey2c(pub u32);
 impl SgiKey2c {
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[must_use]
     #[inline(always)]
     pub const fn key2c(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[inline(always)]
     pub const fn set_key2c(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2477,19 +2477,19 @@ impl defmt::Format for SgiKey2c {
         defmt::write!(f, "SgiKey2c {{ key2c: {=u32:?} }}", self.key2c())
     }
 }
-#[doc = "Input Key register 2 - Word-0"]
+#[doc = "Input Key register 2 - Word-0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiKey2d(pub u32);
 impl SgiKey2d {
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[must_use]
     #[inline(always)]
     pub const fn key2d(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[inline(always)]
     pub const fn set_key2d(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2514,19 +2514,19 @@ impl defmt::Format for SgiKey2d {
         defmt::write!(f, "SgiKey2d {{ key2d: {=u32:?} }}", self.key2d())
     }
 }
-#[doc = "Input Key register 3 - Word-3"]
+#[doc = "Input Key register 3 - Word-3."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiKey3a(pub u32);
 impl SgiKey3a {
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[must_use]
     #[inline(always)]
     pub const fn key3a(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[inline(always)]
     pub const fn set_key3a(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2551,19 +2551,19 @@ impl defmt::Format for SgiKey3a {
         defmt::write!(f, "SgiKey3a {{ key3a: {=u32:?} }}", self.key3a())
     }
 }
-#[doc = "Input Key register 3 - Word-2"]
+#[doc = "Input Key register 3 - Word-2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiKey3b(pub u32);
 impl SgiKey3b {
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[must_use]
     #[inline(always)]
     pub const fn key3b(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[inline(always)]
     pub const fn set_key3b(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2588,19 +2588,19 @@ impl defmt::Format for SgiKey3b {
         defmt::write!(f, "SgiKey3b {{ key3b: {=u32:?} }}", self.key3b())
     }
 }
-#[doc = "Input Key register 3 - Word-1"]
+#[doc = "Input Key register 3 - Word-1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiKey3c(pub u32);
 impl SgiKey3c {
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[must_use]
     #[inline(always)]
     pub const fn key3c(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[inline(always)]
     pub const fn set_key3c(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2625,19 +2625,19 @@ impl defmt::Format for SgiKey3c {
         defmt::write!(f, "SgiKey3c {{ key3c: {=u32:?} }}", self.key3c())
     }
 }
-#[doc = "Input Key register 3 - Word-0"]
+#[doc = "Input Key register 3 - Word-0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiKey3d(pub u32);
 impl SgiKey3d {
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[must_use]
     #[inline(always)]
     pub const fn key3d(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[inline(always)]
     pub const fn set_key3d(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2662,19 +2662,19 @@ impl defmt::Format for SgiKey3d {
         defmt::write!(f, "SgiKey3d {{ key3d: {=u32:?} }}", self.key3d())
     }
 }
-#[doc = "Input Key register 4 - Word-3"]
+#[doc = "Input Key register 4 - Word-3."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiKey4a(pub u32);
 impl SgiKey4a {
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[must_use]
     #[inline(always)]
     pub const fn key4a(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[inline(always)]
     pub const fn set_key4a(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2699,19 +2699,19 @@ impl defmt::Format for SgiKey4a {
         defmt::write!(f, "SgiKey4a {{ key4a: {=u32:?} }}", self.key4a())
     }
 }
-#[doc = "Input Key register 4 - Word-2"]
+#[doc = "Input Key register 4 - Word-2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiKey4b(pub u32);
 impl SgiKey4b {
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[must_use]
     #[inline(always)]
     pub const fn key4b(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[inline(always)]
     pub const fn set_key4b(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2736,19 +2736,19 @@ impl defmt::Format for SgiKey4b {
         defmt::write!(f, "SgiKey4b {{ key4b: {=u32:?} }}", self.key4b())
     }
 }
-#[doc = "Input Key register 4 - Word-1"]
+#[doc = "Input Key register 4 - Word-1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiKey4c(pub u32);
 impl SgiKey4c {
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[must_use]
     #[inline(always)]
     pub const fn key4c(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[inline(always)]
     pub const fn set_key4c(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2773,19 +2773,19 @@ impl defmt::Format for SgiKey4c {
         defmt::write!(f, "SgiKey4c {{ key4c: {=u32:?} }}", self.key4c())
     }
 }
-#[doc = "Input Key register 4 - Word-0"]
+#[doc = "Input Key register 4 - Word-0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiKey4d(pub u32);
 impl SgiKey4d {
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[must_use]
     #[inline(always)]
     pub const fn key4d(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[inline(always)]
     pub const fn set_key4d(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2810,19 +2810,19 @@ impl defmt::Format for SgiKey4d {
         defmt::write!(f, "SgiKey4d {{ key4d: {=u32:?} }}", self.key4d())
     }
 }
-#[doc = "Input Key register 5 - Word-3"]
+#[doc = "Input Key register 5 - Word-3."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiKey5a(pub u32);
 impl SgiKey5a {
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[must_use]
     #[inline(always)]
     pub const fn key5a(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[inline(always)]
     pub const fn set_key5a(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2847,19 +2847,19 @@ impl defmt::Format for SgiKey5a {
         defmt::write!(f, "SgiKey5a {{ key5a: {=u32:?} }}", self.key5a())
     }
 }
-#[doc = "Input Key register 5 - Word-2"]
+#[doc = "Input Key register 5 - Word-2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiKey5b(pub u32);
 impl SgiKey5b {
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[must_use]
     #[inline(always)]
     pub const fn key5b(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[inline(always)]
     pub const fn set_key5b(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2884,19 +2884,19 @@ impl defmt::Format for SgiKey5b {
         defmt::write!(f, "SgiKey5b {{ key5b: {=u32:?} }}", self.key5b())
     }
 }
-#[doc = "Input Key register 5 - Word-1"]
+#[doc = "Input Key register 5 - Word-1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiKey5c(pub u32);
 impl SgiKey5c {
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[must_use]
     #[inline(always)]
     pub const fn key5c(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[inline(always)]
     pub const fn set_key5c(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2921,19 +2921,19 @@ impl defmt::Format for SgiKey5c {
         defmt::write!(f, "SgiKey5c {{ key5c: {=u32:?} }}", self.key5c())
     }
 }
-#[doc = "Input Key register 5 - Word-0"]
+#[doc = "Input Key register 5 - Word-0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiKey5d(pub u32);
 impl SgiKey5d {
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[must_use]
     #[inline(always)]
     pub const fn key5d(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[inline(always)]
     pub const fn set_key5d(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2958,19 +2958,19 @@ impl defmt::Format for SgiKey5d {
         defmt::write!(f, "SgiKey5d {{ key5d: {=u32:?} }}", self.key5d())
     }
 }
-#[doc = "Input Key register 6 - Word-3"]
+#[doc = "Input Key register 6 - Word-3."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiKey6a(pub u32);
 impl SgiKey6a {
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[must_use]
     #[inline(always)]
     pub const fn key6a(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[inline(always)]
     pub const fn set_key6a(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2995,19 +2995,19 @@ impl defmt::Format for SgiKey6a {
         defmt::write!(f, "SgiKey6a {{ key6a: {=u32:?} }}", self.key6a())
     }
 }
-#[doc = "Input Key register 6 - Word-2"]
+#[doc = "Input Key register 6 - Word-2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiKey6b(pub u32);
 impl SgiKey6b {
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[must_use]
     #[inline(always)]
     pub const fn key6b(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[inline(always)]
     pub const fn set_key6b(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3032,19 +3032,19 @@ impl defmt::Format for SgiKey6b {
         defmt::write!(f, "SgiKey6b {{ key6b: {=u32:?} }}", self.key6b())
     }
 }
-#[doc = "Input Key register 6 - Word-1"]
+#[doc = "Input Key register 6 - Word-1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiKey6c(pub u32);
 impl SgiKey6c {
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[must_use]
     #[inline(always)]
     pub const fn key6c(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[inline(always)]
     pub const fn set_key6c(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3069,19 +3069,19 @@ impl defmt::Format for SgiKey6c {
         defmt::write!(f, "SgiKey6c {{ key6c: {=u32:?} }}", self.key6c())
     }
 }
-#[doc = "Input Key register 6 - Word-0"]
+#[doc = "Input Key register 6 - Word-0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiKey6d(pub u32);
 impl SgiKey6d {
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[must_use]
     #[inline(always)]
     pub const fn key6d(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[inline(always)]
     pub const fn set_key6d(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3106,19 +3106,19 @@ impl defmt::Format for SgiKey6d {
         defmt::write!(f, "SgiKey6d {{ key6d: {=u32:?} }}", self.key6d())
     }
 }
-#[doc = "Input Key register 7 - Word-3"]
+#[doc = "Input Key register 7 - Word-3."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiKey7a(pub u32);
 impl SgiKey7a {
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[must_use]
     #[inline(always)]
     pub const fn key7a(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[inline(always)]
     pub const fn set_key7a(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3143,19 +3143,19 @@ impl defmt::Format for SgiKey7a {
         defmt::write!(f, "SgiKey7a {{ key7a: {=u32:?} }}", self.key7a())
     }
 }
-#[doc = "Input Key register 7 - Word-2"]
+#[doc = "Input Key register 7 - Word-2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiKey7b(pub u32);
 impl SgiKey7b {
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[must_use]
     #[inline(always)]
     pub const fn key7b(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[inline(always)]
     pub const fn set_key7b(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3180,19 +3180,19 @@ impl defmt::Format for SgiKey7b {
         defmt::write!(f, "SgiKey7b {{ key7b: {=u32:?} }}", self.key7b())
     }
 }
-#[doc = "Input Key register 7 - Word-1"]
+#[doc = "Input Key register 7 - Word-1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiKey7c(pub u32);
 impl SgiKey7c {
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[must_use]
     #[inline(always)]
     pub const fn key7c(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[inline(always)]
     pub const fn set_key7c(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3217,19 +3217,19 @@ impl defmt::Format for SgiKey7c {
         defmt::write!(f, "SgiKey7c {{ key7c: {=u32:?} }}", self.key7c())
     }
 }
-#[doc = "Input Key register 7 - Word-0"]
+#[doc = "Input Key register 7 - Word-0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiKey7d(pub u32);
 impl SgiKey7d {
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[must_use]
     #[inline(always)]
     pub const fn key7d(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Input Key register"]
+    #[doc = "Input Key register."]
     #[inline(always)]
     pub const fn set_key7d(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3254,19 +3254,19 @@ impl defmt::Format for SgiKey7d {
         defmt::write!(f, "SgiKey7d {{ key7d: {=u32:?} }}", self.key7d())
     }
 }
-#[doc = "SGI Key Control SFR"]
+#[doc = "SGI Key Control SFR."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiKeyCtrl(pub u32);
 impl SgiKeyCtrl {
-    #[doc = "SGI Key control register(1-bit per KEY SFR) 1'b0 - Key SFR is readable 1'b1 - Key SFR is not-readable(write-only)"]
+    #[doc = "SGI Key control register(1-bit per KEY SFR) 1'b0 - Key SFR is readable 1'b1 - Key SFR is not-readable(write-only)."]
     #[must_use]
     #[inline(always)]
     pub const fn key_wo(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "SGI Key control register(1-bit per KEY SFR) 1'b0 - Key SFR is readable 1'b1 - Key SFR is not-readable(write-only)"]
+    #[doc = "SGI Key control register(1-bit per KEY SFR) 1'b0 - Key SFR is readable 1'b1 - Key SFR is not-readable(write-only)."]
     #[inline(always)]
     pub const fn set_key_wo(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3291,19 +3291,19 @@ impl defmt::Format for SgiKeyCtrl {
         defmt::write!(f, "SgiKeyCtrl {{ key_wo: {=u32:?} }}", self.key_wo())
     }
 }
-#[doc = "Wrapped key read SFR"]
+#[doc = "Wrapped key read SFR."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiKeyWrap(pub u32);
 impl SgiKeyWrap {
-    #[doc = "Field contains wrapped key, auto-updated by HW for each word"]
+    #[doc = "Field contains wrapped key, auto-updated by HW for each word."]
     #[must_use]
     #[inline(always)]
     pub const fn kw_data(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Field contains wrapped key, auto-updated by HW for each word"]
+    #[doc = "Field contains wrapped key, auto-updated by HW for each word."]
     #[inline(always)]
     pub const fn set_kw_data(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3328,7 +3328,7 @@ impl defmt::Format for SgiKeyWrap {
         defmt::write!(f, "SgiKeyWrap {{ kw_data: {=u32:?} }}", self.kw_data())
     }
 }
-#[doc = "Key checksum register"]
+#[doc = "Key checksum register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiKeychk(pub u32);
@@ -3365,19 +3365,19 @@ impl defmt::Format for SgiKeychk {
         defmt::write!(f, "SgiKeychk {{ keychksum: {=u32:?} }}", self.keychksum())
     }
 }
-#[doc = "Module ID"]
+#[doc = "Module ID."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiModuleId(pub u32);
 impl SgiModuleId {
-    #[doc = "Module ID"]
+    #[doc = "Module ID."]
     #[must_use]
     #[inline(always)]
     pub const fn placeholder(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Module ID"]
+    #[doc = "Module ID."]
     #[inline(always)]
     pub const fn set_placeholder(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3406,19 +3406,19 @@ impl defmt::Format for SgiModuleId {
         )
     }
 }
-#[doc = "SGI PRNG read register"]
+#[doc = "SGI PRNG read register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiPrngSwRead(pub u32);
 impl SgiPrngSwRead {
-    #[doc = "32-bit field to return random data from PRNG"]
+    #[doc = "32-bit field to return random data from PRNG."]
     #[must_use]
     #[inline(always)]
     pub const fn random(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "32-bit field to return random data from PRNG"]
+    #[doc = "32-bit field to return random data from PRNG."]
     #[inline(always)]
     pub const fn set_random(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3443,19 +3443,19 @@ impl defmt::Format for SgiPrngSwRead {
         defmt::write!(f, "SgiPrngSwRead {{ random: {=u32:?} }}", self.random())
     }
 }
-#[doc = "SGI internal PRNG SW seeding register"]
+#[doc = "SGI internal PRNG SW seeding register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiPrngSwSeed(pub u32);
 impl SgiPrngSwSeed {
-    #[doc = "32-bits SEED field. A write to the SEED field will seed the internal PRNG"]
+    #[doc = "32-bits SEED field. A write to the SEED field will seed the internal PRNG."]
     #[must_use]
     #[inline(always)]
     pub const fn seed(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "32-bits SEED field. A write to the SEED field will seed the internal PRNG"]
+    #[doc = "32-bits SEED field. A write to the SEED field will seed the internal PRNG."]
     #[inline(always)]
     pub const fn set_seed(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3480,19 +3480,19 @@ impl defmt::Format for SgiPrngSwSeed {
         defmt::write!(f, "SgiPrngSwSeed {{ seed: {=u32:?} }}", self.seed())
     }
 }
-#[doc = "SFRSEED register for SFRMASK feature"]
+#[doc = "SFRSEED register for SFRMASK feature."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiSfrseed(pub u32);
 impl SgiSfrseed {
-    #[doc = "Seed/mask used for sw level masking"]
+    #[doc = "Seed/mask used for sw level masking."]
     #[must_use]
     #[inline(always)]
     pub const fn sfrseed(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Seed/mask used for sw level masking"]
+    #[doc = "Seed/mask used for sw level masking."]
     #[inline(always)]
     pub const fn set_sfrseed(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3517,115 +3517,115 @@ impl defmt::Format for SgiSfrseed {
         defmt::write!(f, "SgiSfrseed {{ sfrseed: {=u32:?} }}", self.sfrseed())
     }
 }
-#[doc = "SHA Control Register"]
+#[doc = "SHA Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiSha2Ctrl(pub u32);
 impl SgiSha2Ctrl {
-    #[doc = "SHA enable"]
+    #[doc = "SHA enable."]
     #[must_use]
     #[inline(always)]
     pub const fn sha2_en(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "SHA enable"]
+    #[doc = "SHA enable."]
     #[inline(always)]
     pub const fn set_sha2_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "SHA mode normal or automatic"]
+    #[doc = "SHA mode normal or automatic."]
     #[must_use]
     #[inline(always)]
     pub const fn sha2_mode(&self) -> super::vals::Sha2Mode {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Sha2Mode::from_bits(val as u8)
     }
-    #[doc = "SHA mode normal or automatic"]
+    #[doc = "SHA mode normal or automatic."]
     #[inline(always)]
     pub const fn set_sha2_mode(&mut self, val: super::vals::Sha2Mode) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Indicates SHA size"]
+    #[doc = "Indicates SHA size."]
     #[must_use]
     #[inline(always)]
     pub const fn sha2_size(&self) -> super::vals::Sha2Size {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::Sha2Size::from_bits(val as u8)
     }
-    #[doc = "Indicates SHA size"]
+    #[doc = "Indicates SHA size."]
     #[inline(always)]
     pub const fn set_sha2_size(&mut self, val: super::vals::Sha2Size) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
-    #[doc = "SHA FIFO low limit"]
+    #[doc = "SHA FIFO low limit."]
     #[must_use]
     #[inline(always)]
     pub const fn sha2_low_lim(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x0f;
         val as u8
     }
-    #[doc = "SHA FIFO low limit"]
+    #[doc = "SHA FIFO low limit."]
     #[inline(always)]
     pub const fn set_sha2_low_lim(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
     }
-    #[doc = "SHA FIFO high limit"]
+    #[doc = "SHA FIFO high limit."]
     #[must_use]
     #[inline(always)]
     pub const fn sha2_high_lim(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x0f;
         val as u8
     }
-    #[doc = "SHA FIFO high limit"]
+    #[doc = "SHA FIFO high limit."]
     #[inline(always)]
     pub const fn set_sha2_high_lim(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val as u32) & 0x0f) << 8usize);
     }
-    #[doc = "SHA Calculation counter enable"]
+    #[doc = "SHA Calculation counter enable."]
     #[must_use]
     #[inline(always)]
     pub const fn sha2_count_en(&self) -> super::vals::Sha2CountEn {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Sha2CountEn::from_bits(val as u8)
     }
-    #[doc = "SHA Calculation counter enable"]
+    #[doc = "SHA Calculation counter enable."]
     #[inline(always)]
     pub const fn set_sha2_count_en(&mut self, val: super::vals::Sha2CountEn) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "SHA HASH reload"]
+    #[doc = "SHA HASH reload."]
     #[must_use]
     #[inline(always)]
     pub const fn hash_reload(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "SHA HASH reload"]
+    #[doc = "SHA HASH reload."]
     #[inline(always)]
     pub const fn set_hash_reload(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "STOP SHA AUTO mode"]
+    #[doc = "STOP SHA AUTO mode."]
     #[must_use]
     #[inline(always)]
     pub const fn sha2_stop(&self) -> super::vals::Sha2Stop {
         let val = (self.0 >> 14usize) & 0x01;
         super::vals::Sha2Stop::from_bits(val as u8)
     }
-    #[doc = "STOP SHA AUTO mode"]
+    #[doc = "STOP SHA AUTO mode."]
     #[inline(always)]
     pub const fn set_sha2_stop(&mut self, val: super::vals::Sha2Stop) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
     }
-    #[doc = "SHA no automatic HASH initialisation"]
+    #[doc = "SHA no automatic HASH initialisation."]
     #[must_use]
     #[inline(always)]
     pub const fn no_auto_init(&self) -> super::vals::NoAutoInit {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::NoAutoInit::from_bits(val as u8)
     }
-    #[doc = "SHA no automatic HASH initialisation"]
+    #[doc = "SHA no automatic HASH initialisation."]
     #[inline(always)]
     pub const fn set_no_auto_init(&mut self, val: super::vals::NoAutoInit) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
@@ -3670,19 +3670,19 @@ impl defmt::Format for SgiSha2Ctrl {
         )
     }
 }
-#[doc = "SHA FIFO lower-bank low"]
+#[doc = "SHA FIFO lower-bank low."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiShaFifo(pub u32);
 impl SgiShaFifo {
-    #[doc = "SHA FIFO register"]
+    #[doc = "SHA FIFO register."]
     #[must_use]
     #[inline(always)]
     pub const fn fifo(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "SHA FIFO register"]
+    #[doc = "SHA FIFO register."]
     #[inline(always)]
     pub const fn set_fifo(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3707,139 +3707,139 @@ impl defmt::Format for SgiShaFifo {
         defmt::write!(f, "SgiShaFifo {{ fifo: {=u32:?} }}", self.fifo())
     }
 }
-#[doc = "Status register"]
+#[doc = "Status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiStatus(pub u32);
 impl SgiStatus {
-    #[doc = "Combined busy flag that remains high until end of calculation"]
+    #[doc = "Combined busy flag that remains high until end of calculation."]
     #[must_use]
     #[inline(always)]
     pub const fn busy(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Combined busy flag that remains high until end of calculation"]
+    #[doc = "Combined busy flag that remains high until end of calculation."]
     #[inline(always)]
     pub const fn set_busy(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Overflow in INCR operation flag"]
+    #[doc = "Overflow in INCR operation flag."]
     #[must_use]
     #[inline(always)]
     pub const fn oflow(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Overflow in INCR operation flag"]
+    #[doc = "Overflow in INCR operation flag."]
     #[inline(always)]
     pub const fn set_oflow(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Indicates if PRNG is ready after boot-up phase"]
+    #[doc = "Indicates if PRNG is ready after boot-up phase."]
     #[must_use]
     #[inline(always)]
     pub const fn prng_rdy(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates if PRNG is ready after boot-up phase"]
+    #[doc = "Indicates if PRNG is ready after boot-up phase."]
     #[inline(always)]
     pub const fn set_prng_rdy(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Error detected"]
+    #[doc = "Error detected."]
     #[must_use]
     #[inline(always)]
     pub const fn error(&self) -> super::vals::Error {
         let val = (self.0 >> 3usize) & 0x07;
         super::vals::Error::from_bits(val as u8)
     }
-    #[doc = "Error detected"]
+    #[doc = "Error detected."]
     #[inline(always)]
     pub const fn set_error(&mut self, val: super::vals::Error) {
         self.0 = (self.0 & !(0x07 << 3usize)) | (((val.to_bits() as u32) & 0x07) << 3usize);
     }
-    #[doc = "Indicates if SHA2 kernal is busy"]
+    #[doc = "Indicates if SHA2 kernal is busy."]
     #[must_use]
     #[inline(always)]
     pub const fn sha2_busy(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates if SHA2 kernal is busy"]
+    #[doc = "Indicates if SHA2 kernal is busy."]
     #[inline(always)]
     pub const fn set_sha2_busy(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Interrupt status bit"]
+    #[doc = "Interrupt status bit."]
     #[must_use]
     #[inline(always)]
     pub const fn irq(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Interrupt status bit"]
+    #[doc = "Interrupt status bit."]
     #[inline(always)]
     pub const fn set_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Indicates if SHA FIFO is full"]
+    #[doc = "Indicates if SHA FIFO is full."]
     #[must_use]
     #[inline(always)]
     pub const fn sha_fifo_full(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates if SHA FIFO is full"]
+    #[doc = "Indicates if SHA FIFO is full."]
     #[inline(always)]
     pub const fn set_sha_fifo_full(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "SHA FIFO level (0x00 indicates empty, and 0x1F indicates full)"]
+    #[doc = "SHA FIFO level (0x00 indicates empty, and 0x1F indicates full)."]
     #[must_use]
     #[inline(always)]
     pub const fn sha_fifo_level(&self) -> u8 {
         let val = (self.0 >> 9usize) & 0x3f;
         val as u8
     }
-    #[doc = "SHA FIFO level (0x00 indicates empty, and 0x1F indicates full)"]
+    #[doc = "SHA FIFO level (0x00 indicates empty, and 0x1F indicates full)."]
     #[inline(always)]
     pub const fn set_sha_fifo_level(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 9usize)) | (((val as u32) & 0x3f) << 9usize);
     }
-    #[doc = "SHA error (see SHA errors for details)"]
+    #[doc = "SHA error (see SHA errors for details)."]
     #[must_use]
     #[inline(always)]
     pub const fn sha_error(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "SHA error (see SHA errors for details)"]
+    #[doc = "SHA error (see SHA errors for details)."]
     #[inline(always)]
     pub const fn set_sha_error(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "KEY SFR READ ERROR, sticky, cleared only with reset or flush"]
+    #[doc = "KEY SFR READ ERROR, sticky, cleared only with reset or flush."]
     #[must_use]
     #[inline(always)]
     pub const fn key_read_err(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "KEY SFR READ ERROR, sticky, cleared only with reset or flush"]
+    #[doc = "KEY SFR READ ERROR, sticky, cleared only with reset or flush."]
     #[inline(always)]
     pub const fn set_key_read_err(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "KEY UNWRAP ERROR , sticky, cleared only with reset or flush"]
+    #[doc = "KEY UNWRAP ERROR , sticky, cleared only with reset or flush."]
     #[must_use]
     #[inline(always)]
     pub const fn key_unwrap_err(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "KEY UNWRAP ERROR , sticky, cleared only with reset or flush"]
+    #[doc = "KEY UNWRAP ERROR , sticky, cleared only with reset or flush."]
     #[inline(always)]
     pub const fn set_key_unwrap_err(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
@@ -3888,7 +3888,7 @@ impl defmt::Format for SgiStatus {
         )
     }
 }
-#[doc = "SGI Version"]
+#[doc = "SGI Version."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SgiVersion(pub u32);
@@ -3941,14 +3941,14 @@ impl SgiVersion {
     pub const fn set_x(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 12usize)) | (((val as u32) & 0x0f) << 12usize);
     }
-    #[doc = "Release milestone"]
+    #[doc = "Release milestone."]
     #[must_use]
     #[inline(always)]
     pub const fn milestone(&self) -> super::vals::Milestone {
         let val = (self.0 >> 16usize) & 0x03;
         super::vals::Milestone::from_bits(val as u8)
     }
-    #[doc = "Release milestone"]
+    #[doc = "Release milestone."]
     #[inline(always)]
     pub const fn set_milestone(&mut self, val: super::vals::Milestone) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);

@@ -1,4 +1,4 @@
-#[doc = "USB PHY General Control Register"]
+#[doc = "USB PHY General Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl(pub u32);
@@ -15,38 +15,38 @@ impl Ctrl {
     pub const fn set_enotg_id_chg_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "For host mode, enables high-speed disconnect detector"]
+    #[doc = "For host mode, enables high-speed disconnect detector."]
     #[must_use]
     #[inline(always)]
     pub const fn enhostdiscondetect(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "For host mode, enables high-speed disconnect detector"]
+    #[doc = "For host mode, enables high-speed disconnect detector."]
     #[inline(always)]
     pub const fn set_enhostdiscondetect(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Enables interrupt for detection of disconnection to Device when in high-speed host mode"]
+    #[doc = "Enables interrupt for detection of disconnection to Device when in high-speed host mode."]
     #[must_use]
     #[inline(always)]
     pub const fn enirqhostdiscon(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables interrupt for detection of disconnection to Device when in high-speed host mode"]
+    #[doc = "Enables interrupt for detection of disconnection to Device when in high-speed host mode."]
     #[inline(always)]
     pub const fn set_enirqhostdiscon(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Indicates that the device has disconnected in high-speed mode"]
+    #[doc = "Indicates that the device has disconnected in high-speed mode."]
     #[must_use]
     #[inline(always)]
     pub const fn hostdiscondetect_irq(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates that the device has disconnected in high-speed mode"]
+    #[doc = "Indicates that the device has disconnected in high-speed mode."]
     #[inline(always)]
     pub const fn set_hostdiscondetect_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
@@ -63,14 +63,14 @@ impl Ctrl {
     pub const fn set_endevplugindetect(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "For device mode, if this bit is cleared to 0, then it trips the interrupt if the device is plugged in"]
+    #[doc = "For device mode, if this bit is cleared to 0, then it trips the interrupt if the device is plugged in."]
     #[must_use]
     #[inline(always)]
     pub const fn devplugin_polarity(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "For device mode, if this bit is cleared to 0, then it trips the interrupt if the device is plugged in"]
+    #[doc = "For device mode, if this bit is cleared to 0, then it trips the interrupt if the device is plugged in."]
     #[inline(always)]
     pub const fn set_devplugin_polarity(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
@@ -99,38 +99,38 @@ impl Ctrl {
     pub const fn set_enotgiddetect(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Set to 1 will make RESUME_IRQ bit a sticky bit until software clear it"]
+    #[doc = "Set to 1 will make RESUME_IRQ bit a sticky bit until software clear it."]
     #[must_use]
     #[inline(always)]
     pub const fn resumeirqsticky(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Set to 1 will make RESUME_IRQ bit a sticky bit until software clear it"]
+    #[doc = "Set to 1 will make RESUME_IRQ bit a sticky bit until software clear it."]
     #[inline(always)]
     pub const fn set_resumeirqsticky(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Enables interrupt for detection of a non-J state on the USB line"]
+    #[doc = "Enables interrupt for detection of a non-J state on the USB line."]
     #[must_use]
     #[inline(always)]
     pub const fn enirqresumedetect(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables interrupt for detection of a non-J state on the USB line"]
+    #[doc = "Enables interrupt for detection of a non-J state on the USB line."]
     #[inline(always)]
     pub const fn set_enirqresumedetect(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "Indicates that the host is sending a wake-up after suspend"]
+    #[doc = "Indicates that the host is sending a wake-up after suspend."]
     #[must_use]
     #[inline(always)]
     pub const fn resume_irq(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates that the host is sending a wake-up after suspend"]
+    #[doc = "Indicates that the host is sending a wake-up after suspend."]
     #[inline(always)]
     pub const fn set_resume_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
@@ -147,14 +147,14 @@ impl Ctrl {
     pub const fn set_enirqdevplugin(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "Indicates that the device is connected"]
+    #[doc = "Indicates that the device is connected."]
     #[must_use]
     #[inline(always)]
     pub const fn devplugin_irq(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates that the device is connected"]
+    #[doc = "Indicates that the device is connected."]
     #[inline(always)]
     pub const fn set_devplugin_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
@@ -171,26 +171,26 @@ impl Ctrl {
     pub const fn set_data_on_lradc(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "Enables UTMI+ Level2. This should be enabled if needs to support LS device"]
+    #[doc = "Enables UTMI+ Level2. This should be enabled if needs to support LS device."]
     #[must_use]
     #[inline(always)]
     pub const fn enutmilevel2(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables UTMI+ Level2. This should be enabled if needs to support LS device"]
+    #[doc = "Enables UTMI+ Level2. This should be enabled if needs to support LS device."]
     #[inline(always)]
     pub const fn set_enutmilevel2(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Enables UTMI+ Level3"]
+    #[doc = "Enables UTMI+ Level3."]
     #[must_use]
     #[inline(always)]
     pub const fn enutmilevel3(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables UTMI+ Level3"]
+    #[doc = "Enables UTMI+ Level3."]
     #[inline(always)]
     pub const fn set_enutmilevel3(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
@@ -207,62 +207,62 @@ impl Ctrl {
     pub const fn set_enirqwakeup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Indicates that there is a wakeup event"]
+    #[doc = "Indicates that there is a wakeup event."]
     #[must_use]
     #[inline(always)]
     pub const fn wakeup_irq(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates that there is a wakeup event"]
+    #[doc = "Indicates that there is a wakeup event."]
     #[inline(always)]
     pub const fn set_wakeup_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Enables the feature to auto-enable the POWER bit of HW_CLKCTRL_PLLxCTRL0 if there is wakeup event if USB is suspended"]
+    #[doc = "Enables the feature to auto-enable the POWER bit of HW_CLKCTRL_PLLxCTRL0 if there is wakeup event if USB is suspended."]
     #[must_use]
     #[inline(always)]
     pub const fn enauto_pwron_pll(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables the feature to auto-enable the POWER bit of HW_CLKCTRL_PLLxCTRL0 if there is wakeup event if USB is suspended"]
+    #[doc = "Enables the feature to auto-enable the POWER bit of HW_CLKCTRL_PLLxCTRL0 if there is wakeup event if USB is suspended."]
     #[inline(always)]
     pub const fn set_enauto_pwron_pll(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Enables the feature to auto-clear the CLKGATE bit if there is wakeup event while USB is suspended"]
+    #[doc = "Enables the feature to auto-clear the CLKGATE bit if there is wakeup event while USB is suspended."]
     #[must_use]
     #[inline(always)]
     pub const fn enautoclr_clkgate(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables the feature to auto-clear the CLKGATE bit if there is wakeup event while USB is suspended"]
+    #[doc = "Enables the feature to auto-clear the CLKGATE bit if there is wakeup event while USB is suspended."]
     #[inline(always)]
     pub const fn set_enautoclr_clkgate(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Enables the feature to auto-clear the PWD register bits in USBPHYx_PWD if there is wakeup event while USB is suspended"]
+    #[doc = "Enables the feature to auto-clear the PWD register bits in USBPHYx_PWD if there is wakeup event while USB is suspended."]
     #[must_use]
     #[inline(always)]
     pub const fn enautoclr_phy_pwd(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables the feature to auto-clear the PWD register bits in USBPHYx_PWD if there is wakeup event while USB is suspended"]
+    #[doc = "Enables the feature to auto-clear the PWD register bits in USBPHYx_PWD if there is wakeup event while USB is suspended."]
     #[inline(always)]
     pub const fn set_enautoclr_phy_pwd(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Enables the feature to wakeup USB if DP/DM is toggled when USB is suspended"]
+    #[doc = "Enables the feature to wakeup USB if DP/DM is toggled when USB is suspended."]
     #[must_use]
     #[inline(always)]
     pub const fn endpdmchg_wkup(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables the feature to wakeup USB if DP/DM is toggled when USB is suspended"]
+    #[doc = "Enables the feature to wakeup USB if DP/DM is toggled when USB is suspended."]
     #[inline(always)]
     pub const fn set_endpdmchg_wkup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
@@ -315,62 +315,62 @@ impl Ctrl {
     pub const fn set_rsvd1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 25usize)) | (((val as u32) & 0x03) << 25usize);
     }
-    #[doc = "Almost same as OTGID_STATUS in USBPHYx_STATUS Register"]
+    #[doc = "Almost same as OTGID_STATUS in USBPHYx_STATUS Register."]
     #[must_use]
     #[inline(always)]
     pub const fn otg_id_value(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "Almost same as OTGID_STATUS in USBPHYx_STATUS Register"]
+    #[doc = "Almost same as OTGID_STATUS in USBPHYx_STATUS Register."]
     #[inline(always)]
     pub const fn set_otg_id_value(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "Forces the next FS packet that is transmitted to have a EOP with LS timing"]
+    #[doc = "Forces the next FS packet that is transmitted to have a EOP with LS timing."]
     #[must_use]
     #[inline(always)]
     pub const fn host_force_ls_se0(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "Forces the next FS packet that is transmitted to have a EOP with LS timing"]
+    #[doc = "Forces the next FS packet that is transmitted to have a EOP with LS timing."]
     #[inline(always)]
     pub const fn set_host_force_ls_se0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "Used by the PHY to indicate a powered-down state"]
+    #[doc = "Used by the PHY to indicate a powered-down state."]
     #[must_use]
     #[inline(always)]
     pub const fn utmi_suspendm(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "Used by the PHY to indicate a powered-down state"]
+    #[doc = "Used by the PHY to indicate a powered-down state."]
     #[inline(always)]
     pub const fn set_utmi_suspendm(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "Gate UTMI Clocks"]
+    #[doc = "Gate UTMI Clocks."]
     #[must_use]
     #[inline(always)]
     pub const fn clkgate(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "Gate UTMI Clocks"]
+    #[doc = "Gate UTMI Clocks."]
     #[inline(always)]
     pub const fn set_clkgate(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "Writing a 1 to this bit will soft-reset the USBPHYx_PWD, USBPHYx_TX, USBPHYx_RX, and USBPHYx_CTRL registers"]
+    #[doc = "Writing a 1 to this bit will soft-reset the USBPHYx_PWD, USBPHYx_TX, USBPHYx_RX, and USBPHYx_CTRL registers."]
     #[must_use]
     #[inline(always)]
     pub const fn sftrst(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to this bit will soft-reset the USBPHYx_PWD, USBPHYx_TX, USBPHYx_RX, and USBPHYx_CTRL registers"]
+    #[doc = "Writing a 1 to this bit will soft-reset the USBPHYx_PWD, USBPHYx_TX, USBPHYx_RX, and USBPHYx_CTRL registers."]
     #[inline(always)]
     pub const fn set_sftrst(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -459,7 +459,7 @@ impl defmt::Format for Ctrl {
         )
     }
 }
-#[doc = "USB PHY General Control Register"]
+#[doc = "USB PHY General Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CtrlClr(pub u32);
@@ -476,38 +476,38 @@ impl CtrlClr {
     pub const fn set_enotg_id_chg_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "For host mode, enables high-speed disconnect detector"]
+    #[doc = "For host mode, enables high-speed disconnect detector."]
     #[must_use]
     #[inline(always)]
     pub const fn enhostdiscondetect(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "For host mode, enables high-speed disconnect detector"]
+    #[doc = "For host mode, enables high-speed disconnect detector."]
     #[inline(always)]
     pub const fn set_enhostdiscondetect(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Enables interrupt for detection of disconnection to Device when in high-speed host mode"]
+    #[doc = "Enables interrupt for detection of disconnection to Device when in high-speed host mode."]
     #[must_use]
     #[inline(always)]
     pub const fn enirqhostdiscon(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables interrupt for detection of disconnection to Device when in high-speed host mode"]
+    #[doc = "Enables interrupt for detection of disconnection to Device when in high-speed host mode."]
     #[inline(always)]
     pub const fn set_enirqhostdiscon(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Indicates that the device has disconnected in high-speed mode"]
+    #[doc = "Indicates that the device has disconnected in high-speed mode."]
     #[must_use]
     #[inline(always)]
     pub const fn hostdiscondetect_irq(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates that the device has disconnected in high-speed mode"]
+    #[doc = "Indicates that the device has disconnected in high-speed mode."]
     #[inline(always)]
     pub const fn set_hostdiscondetect_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
@@ -524,14 +524,14 @@ impl CtrlClr {
     pub const fn set_endevplugindetect(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "For device mode, if this bit is cleared to 0, then it trips the interrupt if the device is plugged in"]
+    #[doc = "For device mode, if this bit is cleared to 0, then it trips the interrupt if the device is plugged in."]
     #[must_use]
     #[inline(always)]
     pub const fn devplugin_polarity(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "For device mode, if this bit is cleared to 0, then it trips the interrupt if the device is plugged in"]
+    #[doc = "For device mode, if this bit is cleared to 0, then it trips the interrupt if the device is plugged in."]
     #[inline(always)]
     pub const fn set_devplugin_polarity(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
@@ -560,38 +560,38 @@ impl CtrlClr {
     pub const fn set_enotgiddetect(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Set to 1 will make RESUME_IRQ bit a sticky bit until software clear it"]
+    #[doc = "Set to 1 will make RESUME_IRQ bit a sticky bit until software clear it."]
     #[must_use]
     #[inline(always)]
     pub const fn resumeirqsticky(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Set to 1 will make RESUME_IRQ bit a sticky bit until software clear it"]
+    #[doc = "Set to 1 will make RESUME_IRQ bit a sticky bit until software clear it."]
     #[inline(always)]
     pub const fn set_resumeirqsticky(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Enables interrupt for detection of a non-J state on the USB line"]
+    #[doc = "Enables interrupt for detection of a non-J state on the USB line."]
     #[must_use]
     #[inline(always)]
     pub const fn enirqresumedetect(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables interrupt for detection of a non-J state on the USB line"]
+    #[doc = "Enables interrupt for detection of a non-J state on the USB line."]
     #[inline(always)]
     pub const fn set_enirqresumedetect(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "Indicates that the host is sending a wake-up after suspend"]
+    #[doc = "Indicates that the host is sending a wake-up after suspend."]
     #[must_use]
     #[inline(always)]
     pub const fn resume_irq(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates that the host is sending a wake-up after suspend"]
+    #[doc = "Indicates that the host is sending a wake-up after suspend."]
     #[inline(always)]
     pub const fn set_resume_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
@@ -608,14 +608,14 @@ impl CtrlClr {
     pub const fn set_enirqdevplugin(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "Indicates that the device is connected"]
+    #[doc = "Indicates that the device is connected."]
     #[must_use]
     #[inline(always)]
     pub const fn devplugin_irq(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates that the device is connected"]
+    #[doc = "Indicates that the device is connected."]
     #[inline(always)]
     pub const fn set_devplugin_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
@@ -632,26 +632,26 @@ impl CtrlClr {
     pub const fn set_data_on_lradc(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "Enables UTMI+ Level2. This should be enabled if needs to support LS device"]
+    #[doc = "Enables UTMI+ Level2. This should be enabled if needs to support LS device."]
     #[must_use]
     #[inline(always)]
     pub const fn enutmilevel2(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables UTMI+ Level2. This should be enabled if needs to support LS device"]
+    #[doc = "Enables UTMI+ Level2. This should be enabled if needs to support LS device."]
     #[inline(always)]
     pub const fn set_enutmilevel2(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Enables UTMI+ Level3"]
+    #[doc = "Enables UTMI+ Level3."]
     #[must_use]
     #[inline(always)]
     pub const fn enutmilevel3(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables UTMI+ Level3"]
+    #[doc = "Enables UTMI+ Level3."]
     #[inline(always)]
     pub const fn set_enutmilevel3(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
@@ -668,62 +668,62 @@ impl CtrlClr {
     pub const fn set_enirqwakeup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Indicates that there is a wakeup event"]
+    #[doc = "Indicates that there is a wakeup event."]
     #[must_use]
     #[inline(always)]
     pub const fn wakeup_irq(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates that there is a wakeup event"]
+    #[doc = "Indicates that there is a wakeup event."]
     #[inline(always)]
     pub const fn set_wakeup_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Enables the feature to auto-enable the POWER bit of HW_CLKCTRL_PLLxCTRL0 if there is wakeup event if USB is suspended"]
+    #[doc = "Enables the feature to auto-enable the POWER bit of HW_CLKCTRL_PLLxCTRL0 if there is wakeup event if USB is suspended."]
     #[must_use]
     #[inline(always)]
     pub const fn enauto_pwron_pll(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables the feature to auto-enable the POWER bit of HW_CLKCTRL_PLLxCTRL0 if there is wakeup event if USB is suspended"]
+    #[doc = "Enables the feature to auto-enable the POWER bit of HW_CLKCTRL_PLLxCTRL0 if there is wakeup event if USB is suspended."]
     #[inline(always)]
     pub const fn set_enauto_pwron_pll(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Enables the feature to auto-clear the CLKGATE bit if there is wakeup event while USB is suspended"]
+    #[doc = "Enables the feature to auto-clear the CLKGATE bit if there is wakeup event while USB is suspended."]
     #[must_use]
     #[inline(always)]
     pub const fn enautoclr_clkgate(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables the feature to auto-clear the CLKGATE bit if there is wakeup event while USB is suspended"]
+    #[doc = "Enables the feature to auto-clear the CLKGATE bit if there is wakeup event while USB is suspended."]
     #[inline(always)]
     pub const fn set_enautoclr_clkgate(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Enables the feature to auto-clear the PWD register bits in USBPHYx_PWD if there is wakeup event while USB is suspended"]
+    #[doc = "Enables the feature to auto-clear the PWD register bits in USBPHYx_PWD if there is wakeup event while USB is suspended."]
     #[must_use]
     #[inline(always)]
     pub const fn enautoclr_phy_pwd(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables the feature to auto-clear the PWD register bits in USBPHYx_PWD if there is wakeup event while USB is suspended"]
+    #[doc = "Enables the feature to auto-clear the PWD register bits in USBPHYx_PWD if there is wakeup event while USB is suspended."]
     #[inline(always)]
     pub const fn set_enautoclr_phy_pwd(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Enables the feature to wakeup USB if DP/DM is toggled when USB is suspended"]
+    #[doc = "Enables the feature to wakeup USB if DP/DM is toggled when USB is suspended."]
     #[must_use]
     #[inline(always)]
     pub const fn endpdmchg_wkup(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables the feature to wakeup USB if DP/DM is toggled when USB is suspended"]
+    #[doc = "Enables the feature to wakeup USB if DP/DM is toggled when USB is suspended."]
     #[inline(always)]
     pub const fn set_endpdmchg_wkup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
@@ -776,62 +776,62 @@ impl CtrlClr {
     pub const fn set_rsvd1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 25usize)) | (((val as u32) & 0x03) << 25usize);
     }
-    #[doc = "Almost same as OTGID_STATUS in USBPHYx_STATUS Register"]
+    #[doc = "Almost same as OTGID_STATUS in USBPHYx_STATUS Register."]
     #[must_use]
     #[inline(always)]
     pub const fn otg_id_value(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "Almost same as OTGID_STATUS in USBPHYx_STATUS Register"]
+    #[doc = "Almost same as OTGID_STATUS in USBPHYx_STATUS Register."]
     #[inline(always)]
     pub const fn set_otg_id_value(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "Forces the next FS packet that is transmitted to have a EOP with LS timing"]
+    #[doc = "Forces the next FS packet that is transmitted to have a EOP with LS timing."]
     #[must_use]
     #[inline(always)]
     pub const fn host_force_ls_se0(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "Forces the next FS packet that is transmitted to have a EOP with LS timing"]
+    #[doc = "Forces the next FS packet that is transmitted to have a EOP with LS timing."]
     #[inline(always)]
     pub const fn set_host_force_ls_se0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "Used by the PHY to indicate a powered-down state"]
+    #[doc = "Used by the PHY to indicate a powered-down state."]
     #[must_use]
     #[inline(always)]
     pub const fn utmi_suspendm(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "Used by the PHY to indicate a powered-down state"]
+    #[doc = "Used by the PHY to indicate a powered-down state."]
     #[inline(always)]
     pub const fn set_utmi_suspendm(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "Gate UTMI Clocks"]
+    #[doc = "Gate UTMI Clocks."]
     #[must_use]
     #[inline(always)]
     pub const fn clkgate(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "Gate UTMI Clocks"]
+    #[doc = "Gate UTMI Clocks."]
     #[inline(always)]
     pub const fn set_clkgate(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "Writing a 1 to this bit will soft-reset the USBPHYx_PWD, USBPHYx_TX, USBPHYx_RX, and USBPHYx_CTRL registers"]
+    #[doc = "Writing a 1 to this bit will soft-reset the USBPHYx_PWD, USBPHYx_TX, USBPHYx_RX, and USBPHYx_CTRL registers."]
     #[must_use]
     #[inline(always)]
     pub const fn sftrst(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to this bit will soft-reset the USBPHYx_PWD, USBPHYx_TX, USBPHYx_RX, and USBPHYx_CTRL registers"]
+    #[doc = "Writing a 1 to this bit will soft-reset the USBPHYx_PWD, USBPHYx_TX, USBPHYx_RX, and USBPHYx_CTRL registers."]
     #[inline(always)]
     pub const fn set_sftrst(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -920,7 +920,7 @@ impl defmt::Format for CtrlClr {
         )
     }
 }
-#[doc = "USB PHY General Control Register"]
+#[doc = "USB PHY General Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CtrlSet(pub u32);
@@ -937,38 +937,38 @@ impl CtrlSet {
     pub const fn set_enotg_id_chg_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "For host mode, enables high-speed disconnect detector"]
+    #[doc = "For host mode, enables high-speed disconnect detector."]
     #[must_use]
     #[inline(always)]
     pub const fn enhostdiscondetect(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "For host mode, enables high-speed disconnect detector"]
+    #[doc = "For host mode, enables high-speed disconnect detector."]
     #[inline(always)]
     pub const fn set_enhostdiscondetect(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Enables interrupt for detection of disconnection to Device when in high-speed host mode"]
+    #[doc = "Enables interrupt for detection of disconnection to Device when in high-speed host mode."]
     #[must_use]
     #[inline(always)]
     pub const fn enirqhostdiscon(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables interrupt for detection of disconnection to Device when in high-speed host mode"]
+    #[doc = "Enables interrupt for detection of disconnection to Device when in high-speed host mode."]
     #[inline(always)]
     pub const fn set_enirqhostdiscon(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Indicates that the device has disconnected in high-speed mode"]
+    #[doc = "Indicates that the device has disconnected in high-speed mode."]
     #[must_use]
     #[inline(always)]
     pub const fn hostdiscondetect_irq(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates that the device has disconnected in high-speed mode"]
+    #[doc = "Indicates that the device has disconnected in high-speed mode."]
     #[inline(always)]
     pub const fn set_hostdiscondetect_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
@@ -985,14 +985,14 @@ impl CtrlSet {
     pub const fn set_endevplugindetect(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "For device mode, if this bit is cleared to 0, then it trips the interrupt if the device is plugged in"]
+    #[doc = "For device mode, if this bit is cleared to 0, then it trips the interrupt if the device is plugged in."]
     #[must_use]
     #[inline(always)]
     pub const fn devplugin_polarity(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "For device mode, if this bit is cleared to 0, then it trips the interrupt if the device is plugged in"]
+    #[doc = "For device mode, if this bit is cleared to 0, then it trips the interrupt if the device is plugged in."]
     #[inline(always)]
     pub const fn set_devplugin_polarity(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
@@ -1021,38 +1021,38 @@ impl CtrlSet {
     pub const fn set_enotgiddetect(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Set to 1 will make RESUME_IRQ bit a sticky bit until software clear it"]
+    #[doc = "Set to 1 will make RESUME_IRQ bit a sticky bit until software clear it."]
     #[must_use]
     #[inline(always)]
     pub const fn resumeirqsticky(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Set to 1 will make RESUME_IRQ bit a sticky bit until software clear it"]
+    #[doc = "Set to 1 will make RESUME_IRQ bit a sticky bit until software clear it."]
     #[inline(always)]
     pub const fn set_resumeirqsticky(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Enables interrupt for detection of a non-J state on the USB line"]
+    #[doc = "Enables interrupt for detection of a non-J state on the USB line."]
     #[must_use]
     #[inline(always)]
     pub const fn enirqresumedetect(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables interrupt for detection of a non-J state on the USB line"]
+    #[doc = "Enables interrupt for detection of a non-J state on the USB line."]
     #[inline(always)]
     pub const fn set_enirqresumedetect(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "Indicates that the host is sending a wake-up after suspend"]
+    #[doc = "Indicates that the host is sending a wake-up after suspend."]
     #[must_use]
     #[inline(always)]
     pub const fn resume_irq(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates that the host is sending a wake-up after suspend"]
+    #[doc = "Indicates that the host is sending a wake-up after suspend."]
     #[inline(always)]
     pub const fn set_resume_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
@@ -1069,14 +1069,14 @@ impl CtrlSet {
     pub const fn set_enirqdevplugin(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "Indicates that the device is connected"]
+    #[doc = "Indicates that the device is connected."]
     #[must_use]
     #[inline(always)]
     pub const fn devplugin_irq(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates that the device is connected"]
+    #[doc = "Indicates that the device is connected."]
     #[inline(always)]
     pub const fn set_devplugin_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
@@ -1093,26 +1093,26 @@ impl CtrlSet {
     pub const fn set_data_on_lradc(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "Enables UTMI+ Level2. This should be enabled if needs to support LS device"]
+    #[doc = "Enables UTMI+ Level2. This should be enabled if needs to support LS device."]
     #[must_use]
     #[inline(always)]
     pub const fn enutmilevel2(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables UTMI+ Level2. This should be enabled if needs to support LS device"]
+    #[doc = "Enables UTMI+ Level2. This should be enabled if needs to support LS device."]
     #[inline(always)]
     pub const fn set_enutmilevel2(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Enables UTMI+ Level3"]
+    #[doc = "Enables UTMI+ Level3."]
     #[must_use]
     #[inline(always)]
     pub const fn enutmilevel3(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables UTMI+ Level3"]
+    #[doc = "Enables UTMI+ Level3."]
     #[inline(always)]
     pub const fn set_enutmilevel3(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
@@ -1129,62 +1129,62 @@ impl CtrlSet {
     pub const fn set_enirqwakeup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Indicates that there is a wakeup event"]
+    #[doc = "Indicates that there is a wakeup event."]
     #[must_use]
     #[inline(always)]
     pub const fn wakeup_irq(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates that there is a wakeup event"]
+    #[doc = "Indicates that there is a wakeup event."]
     #[inline(always)]
     pub const fn set_wakeup_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Enables the feature to auto-enable the POWER bit of HW_CLKCTRL_PLLxCTRL0 if there is wakeup event if USB is suspended"]
+    #[doc = "Enables the feature to auto-enable the POWER bit of HW_CLKCTRL_PLLxCTRL0 if there is wakeup event if USB is suspended."]
     #[must_use]
     #[inline(always)]
     pub const fn enauto_pwron_pll(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables the feature to auto-enable the POWER bit of HW_CLKCTRL_PLLxCTRL0 if there is wakeup event if USB is suspended"]
+    #[doc = "Enables the feature to auto-enable the POWER bit of HW_CLKCTRL_PLLxCTRL0 if there is wakeup event if USB is suspended."]
     #[inline(always)]
     pub const fn set_enauto_pwron_pll(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Enables the feature to auto-clear the CLKGATE bit if there is wakeup event while USB is suspended"]
+    #[doc = "Enables the feature to auto-clear the CLKGATE bit if there is wakeup event while USB is suspended."]
     #[must_use]
     #[inline(always)]
     pub const fn enautoclr_clkgate(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables the feature to auto-clear the CLKGATE bit if there is wakeup event while USB is suspended"]
+    #[doc = "Enables the feature to auto-clear the CLKGATE bit if there is wakeup event while USB is suspended."]
     #[inline(always)]
     pub const fn set_enautoclr_clkgate(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Enables the feature to auto-clear the PWD register bits in USBPHYx_PWD if there is wakeup event while USB is suspended"]
+    #[doc = "Enables the feature to auto-clear the PWD register bits in USBPHYx_PWD if there is wakeup event while USB is suspended."]
     #[must_use]
     #[inline(always)]
     pub const fn enautoclr_phy_pwd(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables the feature to auto-clear the PWD register bits in USBPHYx_PWD if there is wakeup event while USB is suspended"]
+    #[doc = "Enables the feature to auto-clear the PWD register bits in USBPHYx_PWD if there is wakeup event while USB is suspended."]
     #[inline(always)]
     pub const fn set_enautoclr_phy_pwd(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Enables the feature to wakeup USB if DP/DM is toggled when USB is suspended"]
+    #[doc = "Enables the feature to wakeup USB if DP/DM is toggled when USB is suspended."]
     #[must_use]
     #[inline(always)]
     pub const fn endpdmchg_wkup(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables the feature to wakeup USB if DP/DM is toggled when USB is suspended"]
+    #[doc = "Enables the feature to wakeup USB if DP/DM is toggled when USB is suspended."]
     #[inline(always)]
     pub const fn set_endpdmchg_wkup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
@@ -1237,62 +1237,62 @@ impl CtrlSet {
     pub const fn set_rsvd1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 25usize)) | (((val as u32) & 0x03) << 25usize);
     }
-    #[doc = "Almost same as OTGID_STATUS in USBPHYx_STATUS Register"]
+    #[doc = "Almost same as OTGID_STATUS in USBPHYx_STATUS Register."]
     #[must_use]
     #[inline(always)]
     pub const fn otg_id_value(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "Almost same as OTGID_STATUS in USBPHYx_STATUS Register"]
+    #[doc = "Almost same as OTGID_STATUS in USBPHYx_STATUS Register."]
     #[inline(always)]
     pub const fn set_otg_id_value(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "Forces the next FS packet that is transmitted to have a EOP with LS timing"]
+    #[doc = "Forces the next FS packet that is transmitted to have a EOP with LS timing."]
     #[must_use]
     #[inline(always)]
     pub const fn host_force_ls_se0(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "Forces the next FS packet that is transmitted to have a EOP with LS timing"]
+    #[doc = "Forces the next FS packet that is transmitted to have a EOP with LS timing."]
     #[inline(always)]
     pub const fn set_host_force_ls_se0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "Used by the PHY to indicate a powered-down state"]
+    #[doc = "Used by the PHY to indicate a powered-down state."]
     #[must_use]
     #[inline(always)]
     pub const fn utmi_suspendm(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "Used by the PHY to indicate a powered-down state"]
+    #[doc = "Used by the PHY to indicate a powered-down state."]
     #[inline(always)]
     pub const fn set_utmi_suspendm(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "Gate UTMI Clocks"]
+    #[doc = "Gate UTMI Clocks."]
     #[must_use]
     #[inline(always)]
     pub const fn clkgate(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "Gate UTMI Clocks"]
+    #[doc = "Gate UTMI Clocks."]
     #[inline(always)]
     pub const fn set_clkgate(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "Writing a 1 to this bit will soft-reset the USBPHYx_PWD, USBPHYx_TX, USBPHYx_RX, and USBPHYx_CTRL registers"]
+    #[doc = "Writing a 1 to this bit will soft-reset the USBPHYx_PWD, USBPHYx_TX, USBPHYx_RX, and USBPHYx_CTRL registers."]
     #[must_use]
     #[inline(always)]
     pub const fn sftrst(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to this bit will soft-reset the USBPHYx_PWD, USBPHYx_TX, USBPHYx_RX, and USBPHYx_CTRL registers"]
+    #[doc = "Writing a 1 to this bit will soft-reset the USBPHYx_PWD, USBPHYx_TX, USBPHYx_RX, and USBPHYx_CTRL registers."]
     #[inline(always)]
     pub const fn set_sftrst(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -1381,7 +1381,7 @@ impl defmt::Format for CtrlSet {
         )
     }
 }
-#[doc = "USB PHY General Control Register"]
+#[doc = "USB PHY General Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CtrlTog(pub u32);
@@ -1398,38 +1398,38 @@ impl CtrlTog {
     pub const fn set_enotg_id_chg_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "For host mode, enables high-speed disconnect detector"]
+    #[doc = "For host mode, enables high-speed disconnect detector."]
     #[must_use]
     #[inline(always)]
     pub const fn enhostdiscondetect(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "For host mode, enables high-speed disconnect detector"]
+    #[doc = "For host mode, enables high-speed disconnect detector."]
     #[inline(always)]
     pub const fn set_enhostdiscondetect(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Enables interrupt for detection of disconnection to Device when in high-speed host mode"]
+    #[doc = "Enables interrupt for detection of disconnection to Device when in high-speed host mode."]
     #[must_use]
     #[inline(always)]
     pub const fn enirqhostdiscon(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables interrupt for detection of disconnection to Device when in high-speed host mode"]
+    #[doc = "Enables interrupt for detection of disconnection to Device when in high-speed host mode."]
     #[inline(always)]
     pub const fn set_enirqhostdiscon(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Indicates that the device has disconnected in high-speed mode"]
+    #[doc = "Indicates that the device has disconnected in high-speed mode."]
     #[must_use]
     #[inline(always)]
     pub const fn hostdiscondetect_irq(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates that the device has disconnected in high-speed mode"]
+    #[doc = "Indicates that the device has disconnected in high-speed mode."]
     #[inline(always)]
     pub const fn set_hostdiscondetect_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
@@ -1446,14 +1446,14 @@ impl CtrlTog {
     pub const fn set_endevplugindetect(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "For device mode, if this bit is cleared to 0, then it trips the interrupt if the device is plugged in"]
+    #[doc = "For device mode, if this bit is cleared to 0, then it trips the interrupt if the device is plugged in."]
     #[must_use]
     #[inline(always)]
     pub const fn devplugin_polarity(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "For device mode, if this bit is cleared to 0, then it trips the interrupt if the device is plugged in"]
+    #[doc = "For device mode, if this bit is cleared to 0, then it trips the interrupt if the device is plugged in."]
     #[inline(always)]
     pub const fn set_devplugin_polarity(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
@@ -1482,38 +1482,38 @@ impl CtrlTog {
     pub const fn set_enotgiddetect(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Set to 1 will make RESUME_IRQ bit a sticky bit until software clear it"]
+    #[doc = "Set to 1 will make RESUME_IRQ bit a sticky bit until software clear it."]
     #[must_use]
     #[inline(always)]
     pub const fn resumeirqsticky(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Set to 1 will make RESUME_IRQ bit a sticky bit until software clear it"]
+    #[doc = "Set to 1 will make RESUME_IRQ bit a sticky bit until software clear it."]
     #[inline(always)]
     pub const fn set_resumeirqsticky(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Enables interrupt for detection of a non-J state on the USB line"]
+    #[doc = "Enables interrupt for detection of a non-J state on the USB line."]
     #[must_use]
     #[inline(always)]
     pub const fn enirqresumedetect(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables interrupt for detection of a non-J state on the USB line"]
+    #[doc = "Enables interrupt for detection of a non-J state on the USB line."]
     #[inline(always)]
     pub const fn set_enirqresumedetect(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "Indicates that the host is sending a wake-up after suspend"]
+    #[doc = "Indicates that the host is sending a wake-up after suspend."]
     #[must_use]
     #[inline(always)]
     pub const fn resume_irq(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates that the host is sending a wake-up after suspend"]
+    #[doc = "Indicates that the host is sending a wake-up after suspend."]
     #[inline(always)]
     pub const fn set_resume_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
@@ -1530,14 +1530,14 @@ impl CtrlTog {
     pub const fn set_enirqdevplugin(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "Indicates that the device is connected"]
+    #[doc = "Indicates that the device is connected."]
     #[must_use]
     #[inline(always)]
     pub const fn devplugin_irq(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates that the device is connected"]
+    #[doc = "Indicates that the device is connected."]
     #[inline(always)]
     pub const fn set_devplugin_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
@@ -1554,26 +1554,26 @@ impl CtrlTog {
     pub const fn set_data_on_lradc(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "Enables UTMI+ Level2. This should be enabled if needs to support LS device"]
+    #[doc = "Enables UTMI+ Level2. This should be enabled if needs to support LS device."]
     #[must_use]
     #[inline(always)]
     pub const fn enutmilevel2(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables UTMI+ Level2. This should be enabled if needs to support LS device"]
+    #[doc = "Enables UTMI+ Level2. This should be enabled if needs to support LS device."]
     #[inline(always)]
     pub const fn set_enutmilevel2(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Enables UTMI+ Level3"]
+    #[doc = "Enables UTMI+ Level3."]
     #[must_use]
     #[inline(always)]
     pub const fn enutmilevel3(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables UTMI+ Level3"]
+    #[doc = "Enables UTMI+ Level3."]
     #[inline(always)]
     pub const fn set_enutmilevel3(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
@@ -1590,62 +1590,62 @@ impl CtrlTog {
     pub const fn set_enirqwakeup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Indicates that there is a wakeup event"]
+    #[doc = "Indicates that there is a wakeup event."]
     #[must_use]
     #[inline(always)]
     pub const fn wakeup_irq(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates that there is a wakeup event"]
+    #[doc = "Indicates that there is a wakeup event."]
     #[inline(always)]
     pub const fn set_wakeup_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Enables the feature to auto-enable the POWER bit of HW_CLKCTRL_PLLxCTRL0 if there is wakeup event if USB is suspended"]
+    #[doc = "Enables the feature to auto-enable the POWER bit of HW_CLKCTRL_PLLxCTRL0 if there is wakeup event if USB is suspended."]
     #[must_use]
     #[inline(always)]
     pub const fn enauto_pwron_pll(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables the feature to auto-enable the POWER bit of HW_CLKCTRL_PLLxCTRL0 if there is wakeup event if USB is suspended"]
+    #[doc = "Enables the feature to auto-enable the POWER bit of HW_CLKCTRL_PLLxCTRL0 if there is wakeup event if USB is suspended."]
     #[inline(always)]
     pub const fn set_enauto_pwron_pll(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Enables the feature to auto-clear the CLKGATE bit if there is wakeup event while USB is suspended"]
+    #[doc = "Enables the feature to auto-clear the CLKGATE bit if there is wakeup event while USB is suspended."]
     #[must_use]
     #[inline(always)]
     pub const fn enautoclr_clkgate(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables the feature to auto-clear the CLKGATE bit if there is wakeup event while USB is suspended"]
+    #[doc = "Enables the feature to auto-clear the CLKGATE bit if there is wakeup event while USB is suspended."]
     #[inline(always)]
     pub const fn set_enautoclr_clkgate(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Enables the feature to auto-clear the PWD register bits in USBPHYx_PWD if there is wakeup event while USB is suspended"]
+    #[doc = "Enables the feature to auto-clear the PWD register bits in USBPHYx_PWD if there is wakeup event while USB is suspended."]
     #[must_use]
     #[inline(always)]
     pub const fn enautoclr_phy_pwd(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables the feature to auto-clear the PWD register bits in USBPHYx_PWD if there is wakeup event while USB is suspended"]
+    #[doc = "Enables the feature to auto-clear the PWD register bits in USBPHYx_PWD if there is wakeup event while USB is suspended."]
     #[inline(always)]
     pub const fn set_enautoclr_phy_pwd(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Enables the feature to wakeup USB if DP/DM is toggled when USB is suspended"]
+    #[doc = "Enables the feature to wakeup USB if DP/DM is toggled when USB is suspended."]
     #[must_use]
     #[inline(always)]
     pub const fn endpdmchg_wkup(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables the feature to wakeup USB if DP/DM is toggled when USB is suspended"]
+    #[doc = "Enables the feature to wakeup USB if DP/DM is toggled when USB is suspended."]
     #[inline(always)]
     pub const fn set_endpdmchg_wkup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
@@ -1698,62 +1698,62 @@ impl CtrlTog {
     pub const fn set_rsvd1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 25usize)) | (((val as u32) & 0x03) << 25usize);
     }
-    #[doc = "Almost same as OTGID_STATUS in USBPHYx_STATUS Register"]
+    #[doc = "Almost same as OTGID_STATUS in USBPHYx_STATUS Register."]
     #[must_use]
     #[inline(always)]
     pub const fn otg_id_value(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "Almost same as OTGID_STATUS in USBPHYx_STATUS Register"]
+    #[doc = "Almost same as OTGID_STATUS in USBPHYx_STATUS Register."]
     #[inline(always)]
     pub const fn set_otg_id_value(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "Forces the next FS packet that is transmitted to have a EOP with LS timing"]
+    #[doc = "Forces the next FS packet that is transmitted to have a EOP with LS timing."]
     #[must_use]
     #[inline(always)]
     pub const fn host_force_ls_se0(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "Forces the next FS packet that is transmitted to have a EOP with LS timing"]
+    #[doc = "Forces the next FS packet that is transmitted to have a EOP with LS timing."]
     #[inline(always)]
     pub const fn set_host_force_ls_se0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "Used by the PHY to indicate a powered-down state"]
+    #[doc = "Used by the PHY to indicate a powered-down state."]
     #[must_use]
     #[inline(always)]
     pub const fn utmi_suspendm(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "Used by the PHY to indicate a powered-down state"]
+    #[doc = "Used by the PHY to indicate a powered-down state."]
     #[inline(always)]
     pub const fn set_utmi_suspendm(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "Gate UTMI Clocks"]
+    #[doc = "Gate UTMI Clocks."]
     #[must_use]
     #[inline(always)]
     pub const fn clkgate(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "Gate UTMI Clocks"]
+    #[doc = "Gate UTMI Clocks."]
     #[inline(always)]
     pub const fn set_clkgate(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "Writing a 1 to this bit will soft-reset the USBPHYx_PWD, USBPHYx_TX, USBPHYx_RX, and USBPHYx_CTRL registers"]
+    #[doc = "Writing a 1 to this bit will soft-reset the USBPHYx_PWD, USBPHYx_TX, USBPHYx_RX, and USBPHYx_CTRL registers."]
     #[must_use]
     #[inline(always)]
     pub const fn sftrst(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to this bit will soft-reset the USBPHYx_PWD, USBPHYx_TX, USBPHYx_RX, and USBPHYx_CTRL registers"]
+    #[doc = "Writing a 1 to this bit will soft-reset the USBPHYx_PWD, USBPHYx_TX, USBPHYx_RX, and USBPHYx_CTRL registers."]
     #[inline(always)]
     pub const fn set_sftrst(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -1842,19 +1842,19 @@ impl defmt::Format for CtrlTog {
         )
     }
 }
-#[doc = "USB PHY Debug Register"]
+#[doc = "USB PHY Debug Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Debug(pub u32);
 impl Debug {
-    #[doc = "Once OTG ID from USBPHYx_STATUS_OTGID_STATUS, use this to hold the value"]
+    #[doc = "Once OTG ID from USBPHYx_STATUS_OTGID_STATUS, use this to hold the value."]
     #[must_use]
     #[inline(always)]
     pub const fn otgidpiolock(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Once OTG ID from USBPHYx_STATUS_OTGID_STATUS, use this to hold the value"]
+    #[doc = "Once OTG ID from USBPHYx_STATUS_OTGID_STATUS, use this to hold the value."]
     #[inline(always)]
     pub const fn set_otgidpiolock(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -1871,26 +1871,26 @@ impl Debug {
     pub const fn set_debug_interface_hold(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Set bit 3 to 1 to pull down 15-KOhm on USB_DP line"]
+    #[doc = "Set bit 3 to 1 to pull down 15-KOhm on USB_DP line."]
     #[must_use]
     #[inline(always)]
     pub const fn hstpulldown(&self) -> u8 {
         let val = (self.0 >> 2usize) & 0x03;
         val as u8
     }
-    #[doc = "Set bit 3 to 1 to pull down 15-KOhm on USB_DP line"]
+    #[doc = "Set bit 3 to 1 to pull down 15-KOhm on USB_DP line."]
     #[inline(always)]
     pub const fn set_hstpulldown(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val as u32) & 0x03) << 2usize);
     }
-    #[doc = "Set bit 5 to 1 to override the control of the USB_DP 15-KOhm pulldown"]
+    #[doc = "Set bit 5 to 1 to override the control of the USB_DP 15-KOhm pulldown."]
     #[must_use]
     #[inline(always)]
     pub const fn enhstpulldown(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x03;
         val as u8
     }
-    #[doc = "Set bit 5 to 1 to override the control of the USB_DP 15-KOhm pulldown"]
+    #[doc = "Set bit 5 to 1 to override the control of the USB_DP 15-KOhm pulldown."]
     #[inline(always)]
     pub const fn set_enhstpulldown(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val as u32) & 0x03) << 4usize);
@@ -1907,14 +1907,14 @@ impl Debug {
     pub const fn set_rsvd0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val as u32) & 0x03) << 6usize);
     }
-    #[doc = "Delay in between the end of transmit to the beginning of receive"]
+    #[doc = "Delay in between the end of transmit to the beginning of receive."]
     #[must_use]
     #[inline(always)]
     pub const fn tx2rxcount(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x0f;
         val as u8
     }
-    #[doc = "Delay in between the end of transmit to the beginning of receive"]
+    #[doc = "Delay in between the end of transmit to the beginning of receive."]
     #[inline(always)]
     pub const fn set_tx2rxcount(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val as u32) & 0x0f) << 8usize);
@@ -2003,14 +2003,14 @@ impl Debug {
     pub const fn set_host_resume_debug(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "Gate Test Clocks"]
+    #[doc = "Gate Test Clocks."]
     #[must_use]
     #[inline(always)]
     pub const fn clkgate(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "Gate Test Clocks"]
+    #[doc = "Gate Test Clocks."]
     #[inline(always)]
     pub const fn set_clkgate(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
@@ -2079,19 +2079,19 @@ impl defmt::Format for Debug {
         )
     }
 }
-#[doc = "UTMI Debug Status Register 0"]
+#[doc = "UTMI Debug Status Register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Debug0Status(pub u32);
 impl Debug0Status {
-    #[doc = "Running count of the failed pseudo-random generator loopback"]
+    #[doc = "Running count of the failed pseudo-random generator loopback."]
     #[must_use]
     #[inline(always)]
     pub const fn loop_back_fail_count(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Running count of the failed pseudo-random generator loopback"]
+    #[doc = "Running count of the failed pseudo-random generator loopback."]
     #[inline(always)]
     pub const fn set_loop_back_fail_count(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
@@ -2148,7 +2148,7 @@ impl defmt::Format for Debug0Status {
         )
     }
 }
-#[doc = "UTMI Debug Status Register 1"]
+#[doc = "UTMI Debug Status Register 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Debug1(pub u32);
@@ -2165,14 +2165,14 @@ impl Debug1 {
     pub const fn set_rsvd0(&mut self, val: u16) {
         self.0 = (self.0 & !(0x1fff << 0usize)) | (((val as u32) & 0x1fff) << 0usize);
     }
-    #[doc = "Delay increment of the rise of squelch: 00 = Delay is nominal 01 = Delay is +20% 10 = Delay is -20% 11 = Delay is -40%"]
+    #[doc = "Delay increment of the rise of squelch: 00 = Delay is nominal 01 = Delay is +20% 10 = Delay is -20% 11 = Delay is -40%."]
     #[must_use]
     #[inline(always)]
     pub const fn entailadjvd(&self) -> u8 {
         let val = (self.0 >> 13usize) & 0x03;
         val as u8
     }
-    #[doc = "Delay increment of the rise of squelch: 00 = Delay is nominal 01 = Delay is +20% 10 = Delay is -20% 11 = Delay is -40%"]
+    #[doc = "Delay increment of the rise of squelch: 00 = Delay is nominal 01 = Delay is +20% 10 = Delay is -20% 11 = Delay is -40%."]
     #[inline(always)]
     pub const fn set_entailadjvd(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 13usize)) | (((val as u32) & 0x03) << 13usize);
@@ -2217,7 +2217,7 @@ impl defmt::Format for Debug1 {
         )
     }
 }
-#[doc = "UTMI Debug Status Register 1"]
+#[doc = "UTMI Debug Status Register 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Debug1Clr(pub u32);
@@ -2234,14 +2234,14 @@ impl Debug1Clr {
     pub const fn set_rsvd0(&mut self, val: u16) {
         self.0 = (self.0 & !(0x1fff << 0usize)) | (((val as u32) & 0x1fff) << 0usize);
     }
-    #[doc = "Delay increment of the rise of squelch: 00 = Delay is nominal 01 = Delay is +20% 10 = Delay is -20% 11 = Delay is -40%"]
+    #[doc = "Delay increment of the rise of squelch: 00 = Delay is nominal 01 = Delay is +20% 10 = Delay is -20% 11 = Delay is -40%."]
     #[must_use]
     #[inline(always)]
     pub const fn entailadjvd(&self) -> u8 {
         let val = (self.0 >> 13usize) & 0x03;
         val as u8
     }
-    #[doc = "Delay increment of the rise of squelch: 00 = Delay is nominal 01 = Delay is +20% 10 = Delay is -20% 11 = Delay is -40%"]
+    #[doc = "Delay increment of the rise of squelch: 00 = Delay is nominal 01 = Delay is +20% 10 = Delay is -20% 11 = Delay is -40%."]
     #[inline(always)]
     pub const fn set_entailadjvd(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 13usize)) | (((val as u32) & 0x03) << 13usize);
@@ -2286,7 +2286,7 @@ impl defmt::Format for Debug1Clr {
         )
     }
 }
-#[doc = "UTMI Debug Status Register 1"]
+#[doc = "UTMI Debug Status Register 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Debug1Set(pub u32);
@@ -2303,14 +2303,14 @@ impl Debug1Set {
     pub const fn set_rsvd0(&mut self, val: u16) {
         self.0 = (self.0 & !(0x1fff << 0usize)) | (((val as u32) & 0x1fff) << 0usize);
     }
-    #[doc = "Delay increment of the rise of squelch: 00 = Delay is nominal 01 = Delay is +20% 10 = Delay is -20% 11 = Delay is -40%"]
+    #[doc = "Delay increment of the rise of squelch: 00 = Delay is nominal 01 = Delay is +20% 10 = Delay is -20% 11 = Delay is -40%."]
     #[must_use]
     #[inline(always)]
     pub const fn entailadjvd(&self) -> u8 {
         let val = (self.0 >> 13usize) & 0x03;
         val as u8
     }
-    #[doc = "Delay increment of the rise of squelch: 00 = Delay is nominal 01 = Delay is +20% 10 = Delay is -20% 11 = Delay is -40%"]
+    #[doc = "Delay increment of the rise of squelch: 00 = Delay is nominal 01 = Delay is +20% 10 = Delay is -20% 11 = Delay is -40%."]
     #[inline(always)]
     pub const fn set_entailadjvd(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 13usize)) | (((val as u32) & 0x03) << 13usize);
@@ -2355,7 +2355,7 @@ impl defmt::Format for Debug1Set {
         )
     }
 }
-#[doc = "UTMI Debug Status Register 1"]
+#[doc = "UTMI Debug Status Register 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Debug1Tog(pub u32);
@@ -2372,14 +2372,14 @@ impl Debug1Tog {
     pub const fn set_rsvd0(&mut self, val: u16) {
         self.0 = (self.0 & !(0x1fff << 0usize)) | (((val as u32) & 0x1fff) << 0usize);
     }
-    #[doc = "Delay increment of the rise of squelch: 00 = Delay is nominal 01 = Delay is +20% 10 = Delay is -20% 11 = Delay is -40%"]
+    #[doc = "Delay increment of the rise of squelch: 00 = Delay is nominal 01 = Delay is +20% 10 = Delay is -20% 11 = Delay is -40%."]
     #[must_use]
     #[inline(always)]
     pub const fn entailadjvd(&self) -> u8 {
         let val = (self.0 >> 13usize) & 0x03;
         val as u8
     }
-    #[doc = "Delay increment of the rise of squelch: 00 = Delay is nominal 01 = Delay is +20% 10 = Delay is -20% 11 = Delay is -40%"]
+    #[doc = "Delay increment of the rise of squelch: 00 = Delay is nominal 01 = Delay is +20% 10 = Delay is -20% 11 = Delay is -40%."]
     #[inline(always)]
     pub const fn set_entailadjvd(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 13usize)) | (((val as u32) & 0x03) << 13usize);
@@ -2424,19 +2424,19 @@ impl defmt::Format for Debug1Tog {
         )
     }
 }
-#[doc = "USB PHY Debug Register"]
+#[doc = "USB PHY Debug Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DebugClr(pub u32);
 impl DebugClr {
-    #[doc = "Once OTG ID from USBPHYx_STATUS_OTGID_STATUS, use this to hold the value"]
+    #[doc = "Once OTG ID from USBPHYx_STATUS_OTGID_STATUS, use this to hold the value."]
     #[must_use]
     #[inline(always)]
     pub const fn otgidpiolock(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Once OTG ID from USBPHYx_STATUS_OTGID_STATUS, use this to hold the value"]
+    #[doc = "Once OTG ID from USBPHYx_STATUS_OTGID_STATUS, use this to hold the value."]
     #[inline(always)]
     pub const fn set_otgidpiolock(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -2453,26 +2453,26 @@ impl DebugClr {
     pub const fn set_debug_interface_hold(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Set bit 3 to 1 to pull down 15-KOhm on USB_DP line"]
+    #[doc = "Set bit 3 to 1 to pull down 15-KOhm on USB_DP line."]
     #[must_use]
     #[inline(always)]
     pub const fn hstpulldown(&self) -> u8 {
         let val = (self.0 >> 2usize) & 0x03;
         val as u8
     }
-    #[doc = "Set bit 3 to 1 to pull down 15-KOhm on USB_DP line"]
+    #[doc = "Set bit 3 to 1 to pull down 15-KOhm on USB_DP line."]
     #[inline(always)]
     pub const fn set_hstpulldown(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val as u32) & 0x03) << 2usize);
     }
-    #[doc = "Set bit 5 to 1 to override the control of the USB_DP 15-KOhm pulldown"]
+    #[doc = "Set bit 5 to 1 to override the control of the USB_DP 15-KOhm pulldown."]
     #[must_use]
     #[inline(always)]
     pub const fn enhstpulldown(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x03;
         val as u8
     }
-    #[doc = "Set bit 5 to 1 to override the control of the USB_DP 15-KOhm pulldown"]
+    #[doc = "Set bit 5 to 1 to override the control of the USB_DP 15-KOhm pulldown."]
     #[inline(always)]
     pub const fn set_enhstpulldown(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val as u32) & 0x03) << 4usize);
@@ -2489,14 +2489,14 @@ impl DebugClr {
     pub const fn set_rsvd0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val as u32) & 0x03) << 6usize);
     }
-    #[doc = "Delay in between the end of transmit to the beginning of receive"]
+    #[doc = "Delay in between the end of transmit to the beginning of receive."]
     #[must_use]
     #[inline(always)]
     pub const fn tx2rxcount(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x0f;
         val as u8
     }
-    #[doc = "Delay in between the end of transmit to the beginning of receive"]
+    #[doc = "Delay in between the end of transmit to the beginning of receive."]
     #[inline(always)]
     pub const fn set_tx2rxcount(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val as u32) & 0x0f) << 8usize);
@@ -2585,14 +2585,14 @@ impl DebugClr {
     pub const fn set_host_resume_debug(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "Gate Test Clocks"]
+    #[doc = "Gate Test Clocks."]
     #[must_use]
     #[inline(always)]
     pub const fn clkgate(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "Gate Test Clocks"]
+    #[doc = "Gate Test Clocks."]
     #[inline(always)]
     pub const fn set_clkgate(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
@@ -2661,19 +2661,19 @@ impl defmt::Format for DebugClr {
         )
     }
 }
-#[doc = "USB PHY Debug Register"]
+#[doc = "USB PHY Debug Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DebugSet(pub u32);
 impl DebugSet {
-    #[doc = "Once OTG ID from USBPHYx_STATUS_OTGID_STATUS, use this to hold the value"]
+    #[doc = "Once OTG ID from USBPHYx_STATUS_OTGID_STATUS, use this to hold the value."]
     #[must_use]
     #[inline(always)]
     pub const fn otgidpiolock(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Once OTG ID from USBPHYx_STATUS_OTGID_STATUS, use this to hold the value"]
+    #[doc = "Once OTG ID from USBPHYx_STATUS_OTGID_STATUS, use this to hold the value."]
     #[inline(always)]
     pub const fn set_otgidpiolock(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -2690,26 +2690,26 @@ impl DebugSet {
     pub const fn set_debug_interface_hold(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Set bit 3 to 1 to pull down 15-KOhm on USB_DP line"]
+    #[doc = "Set bit 3 to 1 to pull down 15-KOhm on USB_DP line."]
     #[must_use]
     #[inline(always)]
     pub const fn hstpulldown(&self) -> u8 {
         let val = (self.0 >> 2usize) & 0x03;
         val as u8
     }
-    #[doc = "Set bit 3 to 1 to pull down 15-KOhm on USB_DP line"]
+    #[doc = "Set bit 3 to 1 to pull down 15-KOhm on USB_DP line."]
     #[inline(always)]
     pub const fn set_hstpulldown(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val as u32) & 0x03) << 2usize);
     }
-    #[doc = "Set bit 5 to 1 to override the control of the USB_DP 15-KOhm pulldown"]
+    #[doc = "Set bit 5 to 1 to override the control of the USB_DP 15-KOhm pulldown."]
     #[must_use]
     #[inline(always)]
     pub const fn enhstpulldown(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x03;
         val as u8
     }
-    #[doc = "Set bit 5 to 1 to override the control of the USB_DP 15-KOhm pulldown"]
+    #[doc = "Set bit 5 to 1 to override the control of the USB_DP 15-KOhm pulldown."]
     #[inline(always)]
     pub const fn set_enhstpulldown(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val as u32) & 0x03) << 4usize);
@@ -2726,14 +2726,14 @@ impl DebugSet {
     pub const fn set_rsvd0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val as u32) & 0x03) << 6usize);
     }
-    #[doc = "Delay in between the end of transmit to the beginning of receive"]
+    #[doc = "Delay in between the end of transmit to the beginning of receive."]
     #[must_use]
     #[inline(always)]
     pub const fn tx2rxcount(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x0f;
         val as u8
     }
-    #[doc = "Delay in between the end of transmit to the beginning of receive"]
+    #[doc = "Delay in between the end of transmit to the beginning of receive."]
     #[inline(always)]
     pub const fn set_tx2rxcount(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val as u32) & 0x0f) << 8usize);
@@ -2822,14 +2822,14 @@ impl DebugSet {
     pub const fn set_host_resume_debug(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "Gate Test Clocks"]
+    #[doc = "Gate Test Clocks."]
     #[must_use]
     #[inline(always)]
     pub const fn clkgate(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "Gate Test Clocks"]
+    #[doc = "Gate Test Clocks."]
     #[inline(always)]
     pub const fn set_clkgate(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
@@ -2898,19 +2898,19 @@ impl defmt::Format for DebugSet {
         )
     }
 }
-#[doc = "USB PHY Debug Register"]
+#[doc = "USB PHY Debug Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DebugTog(pub u32);
 impl DebugTog {
-    #[doc = "Once OTG ID from USBPHYx_STATUS_OTGID_STATUS, use this to hold the value"]
+    #[doc = "Once OTG ID from USBPHYx_STATUS_OTGID_STATUS, use this to hold the value."]
     #[must_use]
     #[inline(always)]
     pub const fn otgidpiolock(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Once OTG ID from USBPHYx_STATUS_OTGID_STATUS, use this to hold the value"]
+    #[doc = "Once OTG ID from USBPHYx_STATUS_OTGID_STATUS, use this to hold the value."]
     #[inline(always)]
     pub const fn set_otgidpiolock(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -2927,26 +2927,26 @@ impl DebugTog {
     pub const fn set_debug_interface_hold(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Set bit 3 to 1 to pull down 15-KOhm on USB_DP line"]
+    #[doc = "Set bit 3 to 1 to pull down 15-KOhm on USB_DP line."]
     #[must_use]
     #[inline(always)]
     pub const fn hstpulldown(&self) -> u8 {
         let val = (self.0 >> 2usize) & 0x03;
         val as u8
     }
-    #[doc = "Set bit 3 to 1 to pull down 15-KOhm on USB_DP line"]
+    #[doc = "Set bit 3 to 1 to pull down 15-KOhm on USB_DP line."]
     #[inline(always)]
     pub const fn set_hstpulldown(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val as u32) & 0x03) << 2usize);
     }
-    #[doc = "Set bit 5 to 1 to override the control of the USB_DP 15-KOhm pulldown"]
+    #[doc = "Set bit 5 to 1 to override the control of the USB_DP 15-KOhm pulldown."]
     #[must_use]
     #[inline(always)]
     pub const fn enhstpulldown(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x03;
         val as u8
     }
-    #[doc = "Set bit 5 to 1 to override the control of the USB_DP 15-KOhm pulldown"]
+    #[doc = "Set bit 5 to 1 to override the control of the USB_DP 15-KOhm pulldown."]
     #[inline(always)]
     pub const fn set_enhstpulldown(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val as u32) & 0x03) << 4usize);
@@ -2963,14 +2963,14 @@ impl DebugTog {
     pub const fn set_rsvd0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val as u32) & 0x03) << 6usize);
     }
-    #[doc = "Delay in between the end of transmit to the beginning of receive"]
+    #[doc = "Delay in between the end of transmit to the beginning of receive."]
     #[must_use]
     #[inline(always)]
     pub const fn tx2rxcount(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x0f;
         val as u8
     }
-    #[doc = "Delay in between the end of transmit to the beginning of receive"]
+    #[doc = "Delay in between the end of transmit to the beginning of receive."]
     #[inline(always)]
     pub const fn set_tx2rxcount(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val as u32) & 0x0f) << 8usize);
@@ -3059,14 +3059,14 @@ impl DebugTog {
     pub const fn set_host_resume_debug(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "Gate Test Clocks"]
+    #[doc = "Gate Test Clocks."]
     #[must_use]
     #[inline(always)]
     pub const fn clkgate(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "Gate Test Clocks"]
+    #[doc = "Gate Test Clocks."]
     #[inline(always)]
     pub const fn set_clkgate(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
@@ -3135,7 +3135,7 @@ impl defmt::Format for DebugTog {
         )
     }
 }
-#[doc = "USB PHY Power-Down Register"]
+#[doc = "USB PHY Power-Down Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pwd(pub u32);
@@ -3152,38 +3152,38 @@ impl Pwd {
     pub const fn set_rsvd0(&mut self, val: u16) {
         self.0 = (self.0 & !(0x03ff << 0usize)) | (((val as u32) & 0x03ff) << 0usize);
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn txpwdfs(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[inline(always)]
     pub const fn set_txpwdfs(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn txpwdibias(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[inline(always)]
     pub const fn set_txpwdibias(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn txpwdv2i(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[inline(always)]
     pub const fn set_txpwdv2i(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
@@ -3200,50 +3200,50 @@ impl Pwd {
     pub const fn set_rsvd1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 13usize)) | (((val as u32) & 0x0f) << 13usize);
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn rxpwdenv(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[inline(always)]
     pub const fn set_rxpwdenv(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn rxpwd1pt1(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[inline(always)]
     pub const fn set_rxpwd1pt1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn rxpwddiff(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[inline(always)]
     pub const fn set_rxpwddiff(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn rxpwdrx(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[inline(always)]
     pub const fn set_rxpwdrx(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
@@ -3302,7 +3302,7 @@ impl defmt::Format for Pwd {
         )
     }
 }
-#[doc = "USB PHY Power-Down Register"]
+#[doc = "USB PHY Power-Down Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PwdClr(pub u32);
@@ -3319,38 +3319,38 @@ impl PwdClr {
     pub const fn set_rsvd0(&mut self, val: u16) {
         self.0 = (self.0 & !(0x03ff << 0usize)) | (((val as u32) & 0x03ff) << 0usize);
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn txpwdfs(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[inline(always)]
     pub const fn set_txpwdfs(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn txpwdibias(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[inline(always)]
     pub const fn set_txpwdibias(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn txpwdv2i(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[inline(always)]
     pub const fn set_txpwdv2i(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
@@ -3367,50 +3367,50 @@ impl PwdClr {
     pub const fn set_rsvd1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 13usize)) | (((val as u32) & 0x0f) << 13usize);
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn rxpwdenv(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[inline(always)]
     pub const fn set_rxpwdenv(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn rxpwd1pt1(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[inline(always)]
     pub const fn set_rxpwd1pt1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn rxpwddiff(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[inline(always)]
     pub const fn set_rxpwddiff(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn rxpwdrx(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[inline(always)]
     pub const fn set_rxpwdrx(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
@@ -3469,7 +3469,7 @@ impl defmt::Format for PwdClr {
         )
     }
 }
-#[doc = "USB PHY Power-Down Register"]
+#[doc = "USB PHY Power-Down Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PwdSet(pub u32);
@@ -3486,38 +3486,38 @@ impl PwdSet {
     pub const fn set_rsvd0(&mut self, val: u16) {
         self.0 = (self.0 & !(0x03ff << 0usize)) | (((val as u32) & 0x03ff) << 0usize);
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn txpwdfs(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[inline(always)]
     pub const fn set_txpwdfs(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn txpwdibias(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[inline(always)]
     pub const fn set_txpwdibias(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn txpwdv2i(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[inline(always)]
     pub const fn set_txpwdv2i(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
@@ -3534,50 +3534,50 @@ impl PwdSet {
     pub const fn set_rsvd1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 13usize)) | (((val as u32) & 0x0f) << 13usize);
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn rxpwdenv(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[inline(always)]
     pub const fn set_rxpwdenv(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn rxpwd1pt1(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[inline(always)]
     pub const fn set_rxpwd1pt1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn rxpwddiff(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[inline(always)]
     pub const fn set_rxpwddiff(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn rxpwdrx(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[inline(always)]
     pub const fn set_rxpwdrx(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
@@ -3636,7 +3636,7 @@ impl defmt::Format for PwdSet {
         )
     }
 }
-#[doc = "USB PHY Power-Down Register"]
+#[doc = "USB PHY Power-Down Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PwdTog(pub u32);
@@ -3653,38 +3653,38 @@ impl PwdTog {
     pub const fn set_rsvd0(&mut self, val: u16) {
         self.0 = (self.0 & !(0x03ff << 0usize)) | (((val as u32) & 0x03ff) << 0usize);
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn txpwdfs(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[inline(always)]
     pub const fn set_txpwdfs(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn txpwdibias(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[inline(always)]
     pub const fn set_txpwdibias(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn txpwdv2i(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[inline(always)]
     pub const fn set_txpwdv2i(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
@@ -3701,50 +3701,50 @@ impl PwdTog {
     pub const fn set_rsvd1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 13usize)) | (((val as u32) & 0x0f) << 13usize);
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn rxpwdenv(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[inline(always)]
     pub const fn set_rxpwdenv(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn rxpwd1pt1(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[inline(always)]
     pub const fn set_rxpwd1pt1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn rxpwddiff(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[inline(always)]
     pub const fn set_rxpwddiff(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn rxpwdrx(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[inline(always)]
     pub const fn set_rxpwdrx(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
@@ -3803,19 +3803,19 @@ impl defmt::Format for PwdTog {
         )
     }
 }
-#[doc = "USB PHY Receiver Control Register"]
+#[doc = "USB PHY Receiver Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Rx(pub u32);
 impl Rx {
-    #[doc = "The ENVADJ field adjusts the trip point for the envelope detector"]
+    #[doc = "The ENVADJ field adjusts the trip point for the envelope detector."]
     #[must_use]
     #[inline(always)]
     pub const fn envadj(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x07;
         val as u8
     }
-    #[doc = "The ENVADJ field adjusts the trip point for the envelope detector"]
+    #[doc = "The ENVADJ field adjusts the trip point for the envelope detector."]
     #[inline(always)]
     pub const fn set_envadj(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val as u32) & 0x07) << 0usize);
@@ -3832,14 +3832,14 @@ impl Rx {
     pub const fn set_rsvd0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "The DISCONADJ field adjusts the trip point for the disconnect detector: 000 = Trip-Level Voltage is 0"]
+    #[doc = "The DISCONADJ field adjusts the trip point for the disconnect detector: 000 = Trip-Level Voltage is 0."]
     #[must_use]
     #[inline(always)]
     pub const fn disconadj(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x07;
         val as u8
     }
-    #[doc = "The DISCONADJ field adjusts the trip point for the disconnect detector: 000 = Trip-Level Voltage is 0"]
+    #[doc = "The DISCONADJ field adjusts the trip point for the disconnect detector: 000 = Trip-Level Voltage is 0."]
     #[inline(always)]
     pub const fn set_disconadj(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 4usize)) | (((val as u32) & 0x07) << 4usize);
@@ -3856,14 +3856,14 @@ impl Rx {
     pub const fn set_rsvd1(&mut self, val: u16) {
         self.0 = (self.0 & !(0x7fff << 7usize)) | (((val as u32) & 0x7fff) << 7usize);
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn rxdbypass(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[inline(always)]
     pub const fn set_rxdbypass(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
@@ -3914,19 +3914,19 @@ impl defmt::Format for Rx {
         )
     }
 }
-#[doc = "USB PHY Receiver Control Register"]
+#[doc = "USB PHY Receiver Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct RxClr(pub u32);
 impl RxClr {
-    #[doc = "The ENVADJ field adjusts the trip point for the envelope detector"]
+    #[doc = "The ENVADJ field adjusts the trip point for the envelope detector."]
     #[must_use]
     #[inline(always)]
     pub const fn envadj(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x07;
         val as u8
     }
-    #[doc = "The ENVADJ field adjusts the trip point for the envelope detector"]
+    #[doc = "The ENVADJ field adjusts the trip point for the envelope detector."]
     #[inline(always)]
     pub const fn set_envadj(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val as u32) & 0x07) << 0usize);
@@ -3943,14 +3943,14 @@ impl RxClr {
     pub const fn set_rsvd0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "The DISCONADJ field adjusts the trip point for the disconnect detector: 000 = Trip-Level Voltage is 0"]
+    #[doc = "The DISCONADJ field adjusts the trip point for the disconnect detector: 000 = Trip-Level Voltage is 0."]
     #[must_use]
     #[inline(always)]
     pub const fn disconadj(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x07;
         val as u8
     }
-    #[doc = "The DISCONADJ field adjusts the trip point for the disconnect detector: 000 = Trip-Level Voltage is 0"]
+    #[doc = "The DISCONADJ field adjusts the trip point for the disconnect detector: 000 = Trip-Level Voltage is 0."]
     #[inline(always)]
     pub const fn set_disconadj(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 4usize)) | (((val as u32) & 0x07) << 4usize);
@@ -3967,14 +3967,14 @@ impl RxClr {
     pub const fn set_rsvd1(&mut self, val: u16) {
         self.0 = (self.0 & !(0x7fff << 7usize)) | (((val as u32) & 0x7fff) << 7usize);
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn rxdbypass(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[inline(always)]
     pub const fn set_rxdbypass(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
@@ -4025,19 +4025,19 @@ impl defmt::Format for RxClr {
         )
     }
 }
-#[doc = "USB PHY Receiver Control Register"]
+#[doc = "USB PHY Receiver Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct RxSet(pub u32);
 impl RxSet {
-    #[doc = "The ENVADJ field adjusts the trip point for the envelope detector"]
+    #[doc = "The ENVADJ field adjusts the trip point for the envelope detector."]
     #[must_use]
     #[inline(always)]
     pub const fn envadj(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x07;
         val as u8
     }
-    #[doc = "The ENVADJ field adjusts the trip point for the envelope detector"]
+    #[doc = "The ENVADJ field adjusts the trip point for the envelope detector."]
     #[inline(always)]
     pub const fn set_envadj(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val as u32) & 0x07) << 0usize);
@@ -4054,14 +4054,14 @@ impl RxSet {
     pub const fn set_rsvd0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "The DISCONADJ field adjusts the trip point for the disconnect detector: 000 = Trip-Level Voltage is 0"]
+    #[doc = "The DISCONADJ field adjusts the trip point for the disconnect detector: 000 = Trip-Level Voltage is 0."]
     #[must_use]
     #[inline(always)]
     pub const fn disconadj(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x07;
         val as u8
     }
-    #[doc = "The DISCONADJ field adjusts the trip point for the disconnect detector: 000 = Trip-Level Voltage is 0"]
+    #[doc = "The DISCONADJ field adjusts the trip point for the disconnect detector: 000 = Trip-Level Voltage is 0."]
     #[inline(always)]
     pub const fn set_disconadj(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 4usize)) | (((val as u32) & 0x07) << 4usize);
@@ -4078,14 +4078,14 @@ impl RxSet {
     pub const fn set_rsvd1(&mut self, val: u16) {
         self.0 = (self.0 & !(0x7fff << 7usize)) | (((val as u32) & 0x7fff) << 7usize);
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn rxdbypass(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[inline(always)]
     pub const fn set_rxdbypass(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
@@ -4136,19 +4136,19 @@ impl defmt::Format for RxSet {
         )
     }
 }
-#[doc = "USB PHY Receiver Control Register"]
+#[doc = "USB PHY Receiver Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct RxTog(pub u32);
 impl RxTog {
-    #[doc = "The ENVADJ field adjusts the trip point for the envelope detector"]
+    #[doc = "The ENVADJ field adjusts the trip point for the envelope detector."]
     #[must_use]
     #[inline(always)]
     pub const fn envadj(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x07;
         val as u8
     }
-    #[doc = "The ENVADJ field adjusts the trip point for the envelope detector"]
+    #[doc = "The ENVADJ field adjusts the trip point for the envelope detector."]
     #[inline(always)]
     pub const fn set_envadj(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val as u32) & 0x07) << 0usize);
@@ -4165,14 +4165,14 @@ impl RxTog {
     pub const fn set_rsvd0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "The DISCONADJ field adjusts the trip point for the disconnect detector: 000 = Trip-Level Voltage is 0"]
+    #[doc = "The DISCONADJ field adjusts the trip point for the disconnect detector: 000 = Trip-Level Voltage is 0."]
     #[must_use]
     #[inline(always)]
     pub const fn disconadj(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x07;
         val as u8
     }
-    #[doc = "The DISCONADJ field adjusts the trip point for the disconnect detector: 000 = Trip-Level Voltage is 0"]
+    #[doc = "The DISCONADJ field adjusts the trip point for the disconnect detector: 000 = Trip-Level Voltage is 0."]
     #[inline(always)]
     pub const fn set_disconadj(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 4usize)) | (((val as u32) & 0x07) << 4usize);
@@ -4189,14 +4189,14 @@ impl RxTog {
     pub const fn set_rsvd1(&mut self, val: u16) {
         self.0 = (self.0 & !(0x7fff << 7usize)) | (((val as u32) & 0x7fff) << 7usize);
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn rxdbypass(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "0 = Normal operation"]
+    #[doc = "0 = Normal operation."]
     #[inline(always)]
     pub const fn set_rxdbypass(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
@@ -4247,7 +4247,7 @@ impl defmt::Format for RxTog {
         )
     }
 }
-#[doc = "USB PHY Status Register"]
+#[doc = "USB PHY Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Status(pub u32);
@@ -4312,14 +4312,14 @@ impl Status {
     pub const fn set_rsvd2(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Indicates the results of ID pin on MiniAB plug"]
+    #[doc = "Indicates the results of ID pin on MiniAB plug."]
     #[must_use]
     #[inline(always)]
     pub const fn otgid_status(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates the results of ID pin on MiniAB plug"]
+    #[doc = "Indicates the results of ID pin on MiniAB plug."]
     #[inline(always)]
     pub const fn set_otgid_status(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
@@ -4400,19 +4400,19 @@ impl defmt::Format for Status {
         )
     }
 }
-#[doc = "USB PHY Transmitter Control Register"]
+#[doc = "USB PHY Transmitter Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tx(pub u32);
 impl Tx {
-    #[doc = "Resistor Trimming Code: 0000 = 0.16% 0111 = Nominal 1111 = +25%"]
+    #[doc = "Resistor Trimming Code: 0000 = 0.16% 0111 = Nominal 1111 = +25%."]
     #[must_use]
     #[inline(always)]
     pub const fn d_cal(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "Resistor Trimming Code: 0000 = 0.16% 0111 = Nominal 1111 = +25%"]
+    #[doc = "Resistor Trimming Code: 0000 = 0.16% 0111 = Nominal 1111 = +25%."]
     #[inline(always)]
     pub const fn set_d_cal(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
@@ -4429,14 +4429,14 @@ impl Tx {
     pub const fn set_rsvd0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
     }
-    #[doc = "Decode to select a 45-Ohm resistance to the USB_DN output pin"]
+    #[doc = "Decode to select a 45-Ohm resistance to the USB_DN output pin."]
     #[must_use]
     #[inline(always)]
     pub const fn txcal45dn(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x0f;
         val as u8
     }
-    #[doc = "Decode to select a 45-Ohm resistance to the USB_DN output pin"]
+    #[doc = "Decode to select a 45-Ohm resistance to the USB_DN output pin."]
     #[inline(always)]
     pub const fn set_txcal45dn(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val as u32) & 0x0f) << 8usize);
@@ -4453,14 +4453,14 @@ impl Tx {
     pub const fn set_rsvd1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 12usize)) | (((val as u32) & 0x0f) << 12usize);
     }
-    #[doc = "Decode to select a 45-Ohm resistance to the USB_DP output pin"]
+    #[doc = "Decode to select a 45-Ohm resistance to the USB_DP output pin."]
     #[must_use]
     #[inline(always)]
     pub const fn txcal45dp(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x0f;
         val as u8
     }
-    #[doc = "Decode to select a 45-Ohm resistance to the USB_DP output pin"]
+    #[doc = "Decode to select a 45-Ohm resistance to the USB_DP output pin."]
     #[inline(always)]
     pub const fn set_txcal45dp(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
@@ -4477,14 +4477,14 @@ impl Tx {
     pub const fn set_rsvd2(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 20usize)) | (((val as u32) & 0x3f) << 20usize);
     }
-    #[doc = "Controls the edge-rate of the current sensing transistors used in HS transmit"]
+    #[doc = "Controls the edge-rate of the current sensing transistors used in HS transmit."]
     #[must_use]
     #[inline(always)]
     pub const fn usbphy_tx_edgectrl(&self) -> u8 {
         let val = (self.0 >> 26usize) & 0x07;
         val as u8
     }
-    #[doc = "Controls the edge-rate of the current sensing transistors used in HS transmit"]
+    #[doc = "Controls the edge-rate of the current sensing transistors used in HS transmit."]
     #[inline(always)]
     pub const fn set_usbphy_tx_edgectrl(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 26usize)) | (((val as u32) & 0x07) << 26usize);
@@ -4539,19 +4539,19 @@ impl defmt::Format for Tx {
         )
     }
 }
-#[doc = "USB PHY Transmitter Control Register"]
+#[doc = "USB PHY Transmitter Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct TxClr(pub u32);
 impl TxClr {
-    #[doc = "Resistor Trimming Code: 0000 = 0.16% 0111 = Nominal 1111 = +25%"]
+    #[doc = "Resistor Trimming Code: 0000 = 0.16% 0111 = Nominal 1111 = +25%."]
     #[must_use]
     #[inline(always)]
     pub const fn d_cal(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "Resistor Trimming Code: 0000 = 0.16% 0111 = Nominal 1111 = +25%"]
+    #[doc = "Resistor Trimming Code: 0000 = 0.16% 0111 = Nominal 1111 = +25%."]
     #[inline(always)]
     pub const fn set_d_cal(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
@@ -4568,14 +4568,14 @@ impl TxClr {
     pub const fn set_rsvd0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
     }
-    #[doc = "Decode to select a 45-Ohm resistance to the USB_DN output pin"]
+    #[doc = "Decode to select a 45-Ohm resistance to the USB_DN output pin."]
     #[must_use]
     #[inline(always)]
     pub const fn txcal45dn(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x0f;
         val as u8
     }
-    #[doc = "Decode to select a 45-Ohm resistance to the USB_DN output pin"]
+    #[doc = "Decode to select a 45-Ohm resistance to the USB_DN output pin."]
     #[inline(always)]
     pub const fn set_txcal45dn(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val as u32) & 0x0f) << 8usize);
@@ -4592,14 +4592,14 @@ impl TxClr {
     pub const fn set_rsvd1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 12usize)) | (((val as u32) & 0x0f) << 12usize);
     }
-    #[doc = "Decode to select a 45-Ohm resistance to the USB_DP output pin"]
+    #[doc = "Decode to select a 45-Ohm resistance to the USB_DP output pin."]
     #[must_use]
     #[inline(always)]
     pub const fn txcal45dp(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x0f;
         val as u8
     }
-    #[doc = "Decode to select a 45-Ohm resistance to the USB_DP output pin"]
+    #[doc = "Decode to select a 45-Ohm resistance to the USB_DP output pin."]
     #[inline(always)]
     pub const fn set_txcal45dp(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
@@ -4616,14 +4616,14 @@ impl TxClr {
     pub const fn set_rsvd2(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 20usize)) | (((val as u32) & 0x3f) << 20usize);
     }
-    #[doc = "Controls the edge-rate of the current sensing transistors used in HS transmit"]
+    #[doc = "Controls the edge-rate of the current sensing transistors used in HS transmit."]
     #[must_use]
     #[inline(always)]
     pub const fn usbphy_tx_edgectrl(&self) -> u8 {
         let val = (self.0 >> 26usize) & 0x07;
         val as u8
     }
-    #[doc = "Controls the edge-rate of the current sensing transistors used in HS transmit"]
+    #[doc = "Controls the edge-rate of the current sensing transistors used in HS transmit."]
     #[inline(always)]
     pub const fn set_usbphy_tx_edgectrl(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 26usize)) | (((val as u32) & 0x07) << 26usize);
@@ -4678,19 +4678,19 @@ impl defmt::Format for TxClr {
         )
     }
 }
-#[doc = "USB PHY Transmitter Control Register"]
+#[doc = "USB PHY Transmitter Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct TxSet(pub u32);
 impl TxSet {
-    #[doc = "Resistor Trimming Code: 0000 = 0.16% 0111 = Nominal 1111 = +25%"]
+    #[doc = "Resistor Trimming Code: 0000 = 0.16% 0111 = Nominal 1111 = +25%."]
     #[must_use]
     #[inline(always)]
     pub const fn d_cal(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "Resistor Trimming Code: 0000 = 0.16% 0111 = Nominal 1111 = +25%"]
+    #[doc = "Resistor Trimming Code: 0000 = 0.16% 0111 = Nominal 1111 = +25%."]
     #[inline(always)]
     pub const fn set_d_cal(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
@@ -4707,14 +4707,14 @@ impl TxSet {
     pub const fn set_rsvd0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
     }
-    #[doc = "Decode to select a 45-Ohm resistance to the USB_DN output pin"]
+    #[doc = "Decode to select a 45-Ohm resistance to the USB_DN output pin."]
     #[must_use]
     #[inline(always)]
     pub const fn txcal45dn(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x0f;
         val as u8
     }
-    #[doc = "Decode to select a 45-Ohm resistance to the USB_DN output pin"]
+    #[doc = "Decode to select a 45-Ohm resistance to the USB_DN output pin."]
     #[inline(always)]
     pub const fn set_txcal45dn(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val as u32) & 0x0f) << 8usize);
@@ -4731,14 +4731,14 @@ impl TxSet {
     pub const fn set_rsvd1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 12usize)) | (((val as u32) & 0x0f) << 12usize);
     }
-    #[doc = "Decode to select a 45-Ohm resistance to the USB_DP output pin"]
+    #[doc = "Decode to select a 45-Ohm resistance to the USB_DP output pin."]
     #[must_use]
     #[inline(always)]
     pub const fn txcal45dp(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x0f;
         val as u8
     }
-    #[doc = "Decode to select a 45-Ohm resistance to the USB_DP output pin"]
+    #[doc = "Decode to select a 45-Ohm resistance to the USB_DP output pin."]
     #[inline(always)]
     pub const fn set_txcal45dp(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
@@ -4755,14 +4755,14 @@ impl TxSet {
     pub const fn set_rsvd2(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 20usize)) | (((val as u32) & 0x3f) << 20usize);
     }
-    #[doc = "Controls the edge-rate of the current sensing transistors used in HS transmit"]
+    #[doc = "Controls the edge-rate of the current sensing transistors used in HS transmit."]
     #[must_use]
     #[inline(always)]
     pub const fn usbphy_tx_edgectrl(&self) -> u8 {
         let val = (self.0 >> 26usize) & 0x07;
         val as u8
     }
-    #[doc = "Controls the edge-rate of the current sensing transistors used in HS transmit"]
+    #[doc = "Controls the edge-rate of the current sensing transistors used in HS transmit."]
     #[inline(always)]
     pub const fn set_usbphy_tx_edgectrl(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 26usize)) | (((val as u32) & 0x07) << 26usize);
@@ -4817,19 +4817,19 @@ impl defmt::Format for TxSet {
         )
     }
 }
-#[doc = "USB PHY Transmitter Control Register"]
+#[doc = "USB PHY Transmitter Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct TxTog(pub u32);
 impl TxTog {
-    #[doc = "Resistor Trimming Code: 0000 = 0.16% 0111 = Nominal 1111 = +25%"]
+    #[doc = "Resistor Trimming Code: 0000 = 0.16% 0111 = Nominal 1111 = +25%."]
     #[must_use]
     #[inline(always)]
     pub const fn d_cal(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "Resistor Trimming Code: 0000 = 0.16% 0111 = Nominal 1111 = +25%"]
+    #[doc = "Resistor Trimming Code: 0000 = 0.16% 0111 = Nominal 1111 = +25%."]
     #[inline(always)]
     pub const fn set_d_cal(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
@@ -4846,14 +4846,14 @@ impl TxTog {
     pub const fn set_rsvd0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
     }
-    #[doc = "Decode to select a 45-Ohm resistance to the USB_DN output pin"]
+    #[doc = "Decode to select a 45-Ohm resistance to the USB_DN output pin."]
     #[must_use]
     #[inline(always)]
     pub const fn txcal45dn(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x0f;
         val as u8
     }
-    #[doc = "Decode to select a 45-Ohm resistance to the USB_DN output pin"]
+    #[doc = "Decode to select a 45-Ohm resistance to the USB_DN output pin."]
     #[inline(always)]
     pub const fn set_txcal45dn(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val as u32) & 0x0f) << 8usize);
@@ -4870,14 +4870,14 @@ impl TxTog {
     pub const fn set_rsvd1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 12usize)) | (((val as u32) & 0x0f) << 12usize);
     }
-    #[doc = "Decode to select a 45-Ohm resistance to the USB_DP output pin"]
+    #[doc = "Decode to select a 45-Ohm resistance to the USB_DP output pin."]
     #[must_use]
     #[inline(always)]
     pub const fn txcal45dp(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x0f;
         val as u8
     }
-    #[doc = "Decode to select a 45-Ohm resistance to the USB_DP output pin"]
+    #[doc = "Decode to select a 45-Ohm resistance to the USB_DP output pin."]
     #[inline(always)]
     pub const fn set_txcal45dp(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
@@ -4894,14 +4894,14 @@ impl TxTog {
     pub const fn set_rsvd2(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 20usize)) | (((val as u32) & 0x3f) << 20usize);
     }
-    #[doc = "Controls the edge-rate of the current sensing transistors used in HS transmit"]
+    #[doc = "Controls the edge-rate of the current sensing transistors used in HS transmit."]
     #[must_use]
     #[inline(always)]
     pub const fn usbphy_tx_edgectrl(&self) -> u8 {
         let val = (self.0 >> 26usize) & 0x07;
         val as u8
     }
-    #[doc = "Controls the edge-rate of the current sensing transistors used in HS transmit"]
+    #[doc = "Controls the edge-rate of the current sensing transistors used in HS transmit."]
     #[inline(always)]
     pub const fn set_usbphy_tx_edgectrl(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 26usize)) | (((val as u32) & 0x07) << 26usize);
@@ -4956,7 +4956,7 @@ impl defmt::Format for TxTog {
         )
     }
 }
-#[doc = "UTMI RTL Version"]
+#[doc = "UTMI RTL Version."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Version(pub u32);

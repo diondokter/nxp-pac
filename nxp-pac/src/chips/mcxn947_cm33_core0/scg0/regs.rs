@@ -1,40 +1,40 @@
-#[doc = "APLL Override Register"]
+#[doc = "APLL Override Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ApllOvrd(pub u32);
 impl ApllOvrd {
-    #[doc = "APLL Power Enable Override if APLL_OVRD_EN=1"]
+    #[doc = "APLL Power Enable Override if APLL_OVRD_EN=1."]
     #[must_use]
     #[inline(always)]
     pub const fn apllpwren_ovrd(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "APLL Power Enable Override if APLL_OVRD_EN=1"]
+    #[doc = "APLL Power Enable Override if APLL_OVRD_EN=1."]
     #[inline(always)]
     pub const fn set_apllpwren_ovrd(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "APLL Clock Enable Override if APLL_OVRD_EN=1"]
+    #[doc = "APLL Clock Enable Override if APLL_OVRD_EN=1."]
     #[must_use]
     #[inline(always)]
     pub const fn apllclken_ovrd(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "APLL Clock Enable Override if APLL_OVRD_EN=1"]
+    #[doc = "APLL Clock Enable Override if APLL_OVRD_EN=1."]
     #[inline(always)]
     pub const fn set_apllclken_ovrd(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "APLL Override Enable"]
+    #[doc = "APLL Override Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn apll_ovrd_en(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "APLL Override Enable"]
+    #[doc = "APLL Override Enable."]
     #[inline(always)]
     pub const fn set_apll_ovrd_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -67,127 +67,127 @@ impl defmt::Format for ApllOvrd {
         )
     }
 }
-#[doc = "APLL Control Status Register"]
+#[doc = "APLL Control Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Apllcsr(pub u32);
 impl Apllcsr {
-    #[doc = "APLL Power Enable"]
+    #[doc = "APLL Power Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn apllpwren(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "APLL Power Enable"]
+    #[doc = "APLL Power Enable."]
     #[inline(always)]
     pub const fn set_apllpwren(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "APLL Clock Enable"]
+    #[doc = "APLL Clock Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn apllclken(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "APLL Clock Enable"]
+    #[doc = "APLL Clock Enable."]
     #[inline(always)]
     pub const fn set_apllclken(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "APLL Stop Enable"]
+    #[doc = "APLL Stop Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn apllsten(&self) -> super::vals::Apllsten {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Apllsten::from_bits(val as u8)
     }
-    #[doc = "APLL Stop Enable"]
+    #[doc = "APLL Stop Enable."]
     #[inline(always)]
     pub const fn set_apllsten(&mut self, val: super::vals::Apllsten) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "APLL Clock Monitor"]
+    #[doc = "APLL Clock Monitor."]
     #[must_use]
     #[inline(always)]
     pub const fn apllcm(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "APLL Clock Monitor"]
+    #[doc = "APLL Clock Monitor."]
     #[inline(always)]
     pub const fn set_apllcm(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "APLL Clock Monitor Reset Enable"]
+    #[doc = "APLL Clock Monitor Reset Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn apllcmre(&self) -> super::vals::Apllcmre {
         let val = (self.0 >> 17usize) & 0x01;
         super::vals::Apllcmre::from_bits(val as u8)
     }
-    #[doc = "APLL Clock Monitor Reset Enable"]
+    #[doc = "APLL Clock Monitor Reset Enable."]
     #[inline(always)]
     pub const fn set_apllcmre(&mut self, val: super::vals::Apllcmre) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
     }
-    #[doc = "Lock Register"]
+    #[doc = "Lock Register."]
     #[must_use]
     #[inline(always)]
     pub const fn lk(&self) -> super::vals::ApllcsrLk {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::ApllcsrLk::from_bits(val as u8)
     }
-    #[doc = "Lock Register"]
+    #[doc = "Lock Register."]
     #[inline(always)]
     pub const fn set_lk(&mut self, val: super::vals::ApllcsrLk) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
     }
-    #[doc = "APLL LOCK"]
+    #[doc = "APLL LOCK."]
     #[must_use]
     #[inline(always)]
     pub const fn apll_lock(&self) -> super::vals::ApllLock {
         let val = (self.0 >> 24usize) & 0x01;
         super::vals::ApllLock::from_bits(val as u8)
     }
-    #[doc = "APLL LOCK"]
+    #[doc = "APLL LOCK."]
     #[inline(always)]
     pub const fn set_apll_lock(&mut self, val: super::vals::ApllLock) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
     }
-    #[doc = "APLL Selected"]
+    #[doc = "APLL Selected."]
     #[must_use]
     #[inline(always)]
     pub const fn apllsel(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "APLL Selected"]
+    #[doc = "APLL Selected."]
     #[inline(always)]
     pub const fn set_apllsel(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "APLL Clock Error"]
+    #[doc = "APLL Clock Error."]
     #[must_use]
     #[inline(always)]
     pub const fn apllerr(&self) -> super::vals::Apllerr {
         let val = (self.0 >> 26usize) & 0x01;
         super::vals::Apllerr::from_bits(val as u8)
     }
-    #[doc = "APLL Clock Error"]
+    #[doc = "APLL Clock Error."]
     #[inline(always)]
     pub const fn set_apllerr(&mut self, val: super::vals::Apllerr) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
     }
-    #[doc = "APLL LOCK Interrupt Enable"]
+    #[doc = "APLL LOCK Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn apll_lock_ie(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "APLL LOCK Interrupt Enable"]
+    #[doc = "APLL LOCK Interrupt Enable."]
     #[inline(always)]
     pub const fn set_apll_lock_ie(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
@@ -234,7 +234,7 @@ impl defmt::Format for Apllcsr {
         )
     }
 }
-#[doc = "APLL Control Register"]
+#[doc = "APLL Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Apllctrl(pub u32);
@@ -275,26 +275,26 @@ impl Apllctrl {
     pub const fn set_selp(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 10usize)) | (((val as u32) & 0x1f) << 10usize);
     }
-    #[doc = "Bypass of Divide-by-2 Divider"]
+    #[doc = "Bypass of Divide-by-2 Divider."]
     #[must_use]
     #[inline(always)]
     pub const fn bypasspostdiv2(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Bypass of Divide-by-2 Divider"]
+    #[doc = "Bypass of Divide-by-2 Divider."]
     #[inline(always)]
     pub const fn set_bypasspostdiv2(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Up Limiter"]
+    #[doc = "Up Limiter."]
     #[must_use]
     #[inline(always)]
     pub const fn limupoff(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Up Limiter"]
+    #[doc = "Up Limiter."]
     #[inline(always)]
     pub const fn set_limupoff(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
@@ -311,38 +311,38 @@ impl Apllctrl {
     pub const fn set_banddirect(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Bypass of the predivider"]
+    #[doc = "Bypass of the predivider."]
     #[must_use]
     #[inline(always)]
     pub const fn bypassprediv(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Bypass of the predivider"]
+    #[doc = "Bypass of the predivider."]
     #[inline(always)]
     pub const fn set_bypassprediv(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Bypass of the postdivider"]
+    #[doc = "Bypass of the postdivider."]
     #[must_use]
     #[inline(always)]
     pub const fn bypasspostdiv(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Bypass of the postdivider"]
+    #[doc = "Bypass of the postdivider."]
     #[inline(always)]
     pub const fn set_bypasspostdiv(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Clock Source"]
+    #[doc = "Clock Source."]
     #[must_use]
     #[inline(always)]
     pub const fn source(&self) -> super::vals::ApllctrlSource {
         let val = (self.0 >> 25usize) & 0x03;
         super::vals::ApllctrlSource::from_bits(val as u8)
     }
-    #[doc = "Clock Source"]
+    #[doc = "Clock Source."]
     #[inline(always)]
     pub const fn set_source(&mut self, val: super::vals::ApllctrlSource) {
         self.0 = (self.0 & !(0x03 << 25usize)) | (((val.to_bits() as u32) & 0x03) << 25usize);
@@ -387,7 +387,7 @@ impl defmt::Format for Apllctrl {
         )
     }
 }
-#[doc = "APLL LOCK Configuration Register"]
+#[doc = "APLL LOCK Configuration Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct AplllockCnfg(pub u32);
@@ -428,7 +428,7 @@ impl defmt::Format for AplllockCnfg {
         )
     }
 }
-#[doc = "APLL M Divider Register"]
+#[doc = "APLL M Divider Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Apllmdiv(pub u32);
@@ -483,7 +483,7 @@ impl defmt::Format for Apllmdiv {
         )
     }
 }
-#[doc = "APLL N Divider Register"]
+#[doc = "APLL N Divider Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Apllndiv(pub u32);
@@ -538,31 +538,31 @@ impl defmt::Format for Apllndiv {
         )
     }
 }
-#[doc = "APLL P Divider Register"]
+#[doc = "APLL P Divider Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Apllpdiv(pub u32);
 impl Apllpdiv {
-    #[doc = "Postdivider divider ratio (P-divider)"]
+    #[doc = "Postdivider divider ratio (P-divider)."]
     #[must_use]
     #[inline(always)]
     pub const fn pdiv(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x1f;
         val as u8
     }
-    #[doc = "Postdivider divider ratio (P-divider)"]
+    #[doc = "Postdivider divider ratio (P-divider)."]
     #[inline(always)]
     pub const fn set_pdiv(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val as u32) & 0x1f) << 0usize);
     }
-    #[doc = "Postdivider ratio change request"]
+    #[doc = "Postdivider ratio change request."]
     #[must_use]
     #[inline(always)]
     pub const fn preq(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Postdivider ratio change request"]
+    #[doc = "Postdivider ratio change request."]
     #[inline(always)]
     pub const fn set_preq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -593,19 +593,19 @@ impl defmt::Format for Apllpdiv {
         )
     }
 }
-#[doc = "APLL Spread Spectrum Control 0 Register"]
+#[doc = "APLL Spread Spectrum Control 0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Apllsscg0(pub u32);
 impl Apllsscg0 {
-    #[doc = "SS_MDIV"]
+    #[doc = "SS_MDIV."]
     #[must_use]
     #[inline(always)]
     pub const fn ss_mdiv_lsb(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "SS_MDIV"]
+    #[doc = "SS_MDIV."]
     #[inline(always)]
     pub const fn set_ss_mdiv_lsb(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -634,19 +634,19 @@ impl defmt::Format for Apllsscg0 {
         )
     }
 }
-#[doc = "APLL Spread Spectrum Control 1 Register"]
+#[doc = "APLL Spread Spectrum Control 1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Apllsscg1(pub u32);
 impl Apllsscg1 {
-    #[doc = "SS_MDIV\\[32\\]"]
+    #[doc = "SS_MDIV\\[32\\]."]
     #[must_use]
     #[inline(always)]
     pub const fn ss_mdiv_msb(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "SS_MDIV\\[32\\]"]
+    #[doc = "SS_MDIV\\[32\\]."]
     #[inline(always)]
     pub const fn set_ss_mdiv_msb(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -663,50 +663,50 @@ impl Apllsscg1 {
     pub const fn set_ss_mdiv_req(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Modulation Frequency Control"]
+    #[doc = "Modulation Frequency Control."]
     #[must_use]
     #[inline(always)]
     pub const fn mf(&self) -> u8 {
         let val = (self.0 >> 2usize) & 0x07;
         val as u8
     }
-    #[doc = "Modulation Frequency Control"]
+    #[doc = "Modulation Frequency Control."]
     #[inline(always)]
     pub const fn set_mf(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 2usize)) | (((val as u32) & 0x07) << 2usize);
     }
-    #[doc = "Modulation Depth Control"]
+    #[doc = "Modulation Depth Control."]
     #[must_use]
     #[inline(always)]
     pub const fn mr(&self) -> u8 {
         let val = (self.0 >> 5usize) & 0x07;
         val as u8
     }
-    #[doc = "Modulation Depth Control"]
+    #[doc = "Modulation Depth Control."]
     #[inline(always)]
     pub const fn set_mr(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 5usize)) | (((val as u32) & 0x07) << 5usize);
     }
-    #[doc = "Modulation Waveform Control"]
+    #[doc = "Modulation Waveform Control."]
     #[must_use]
     #[inline(always)]
     pub const fn mc(&self) -> super::vals::Apllsscg1Mc {
         let val = (self.0 >> 8usize) & 0x03;
         super::vals::Apllsscg1Mc::from_bits(val as u8)
     }
-    #[doc = "Modulation Waveform Control"]
+    #[doc = "Modulation Waveform Control."]
     #[inline(always)]
     pub const fn set_mc(&mut self, val: super::vals::Apllsscg1Mc) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
-    #[doc = "Dither Enable"]
+    #[doc = "Dither Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dither(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "Dither Enable"]
+    #[doc = "Dither Enable."]
     #[inline(always)]
     pub const fn set_dither(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
@@ -723,14 +723,14 @@ impl Apllsscg1 {
     pub const fn set_sel_ss_mdiv(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "SSCG Power Down"]
+    #[doc = "SSCG Power Down."]
     #[must_use]
     #[inline(always)]
     pub const fn ss_pd(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "SSCG Power Down"]
+    #[doc = "SSCG Power Down."]
     #[inline(always)]
     pub const fn set_ss_pd(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -773,19 +773,19 @@ impl defmt::Format for Apllsscg1 {
         )
     }
 }
-#[doc = "APLL SSCG Status Register"]
+#[doc = "APLL SSCG Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Apllsscgstat(pub u32);
 impl Apllsscgstat {
-    #[doc = "SS_MDIV change acknowledge"]
+    #[doc = "SS_MDIV change acknowledge."]
     #[must_use]
     #[inline(always)]
     pub const fn ss_mdiv_ack(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "SS_MDIV change acknowledge"]
+    #[doc = "SS_MDIV change acknowledge."]
     #[inline(always)]
     pub const fn set_ss_mdiv_ack(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -814,7 +814,7 @@ impl defmt::Format for Apllsscgstat {
         )
     }
 }
-#[doc = "APLL Status Register"]
+#[doc = "APLL Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Apllstat(pub u32);
@@ -883,19 +883,19 @@ impl defmt::Format for Apllstat {
         )
     }
 }
-#[doc = "Clock Status Register"]
+#[doc = "Clock Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Csr(pub u32);
 impl Csr {
-    #[doc = "System Clock Source"]
+    #[doc = "System Clock Source."]
     #[must_use]
     #[inline(always)]
     pub const fn scs(&self) -> super::vals::CsrScs {
         let val = (self.0 >> 24usize) & 0x0f;
         super::vals::CsrScs::from_bits(val as u8)
     }
-    #[doc = "System Clock Source"]
+    #[doc = "System Clock Source."]
     #[inline(always)]
     pub const fn set_scs(&mut self, val: super::vals::CsrScs) {
         self.0 = (self.0 & !(0x0f << 24usize)) | (((val.to_bits() as u32) & 0x0f) << 24usize);
@@ -918,19 +918,19 @@ impl defmt::Format for Csr {
         defmt::write!(f, "Csr {{ scs: {:?} }}", self.scs())
     }
 }
-#[doc = "FIRC Configuration Register"]
+#[doc = "FIRC Configuration Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Firccfg(pub u32);
 impl Firccfg {
-    #[doc = "Frequency Range"]
+    #[doc = "Frequency Range."]
     #[must_use]
     #[inline(always)]
     pub const fn range(&self) -> super::vals::FirccfgRange {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::FirccfgRange::from_bits(val as u8)
     }
-    #[doc = "Frequency Range"]
+    #[doc = "Frequency Range."]
     #[inline(always)]
     pub const fn set_range(&mut self, val: super::vals::FirccfgRange) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
@@ -955,187 +955,187 @@ impl defmt::Format for Firccfg {
         defmt::write!(f, "Firccfg {{ range: {:?} }}", self.range())
     }
 }
-#[doc = "FIRC Control Status Register"]
+#[doc = "FIRC Control Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Firccsr(pub u32);
 impl Firccsr {
-    #[doc = "FIRC Enable"]
+    #[doc = "FIRC Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn fircen(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "FIRC Enable"]
+    #[doc = "FIRC Enable."]
     #[inline(always)]
     pub const fn set_fircen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "FIRC Stop Enable"]
+    #[doc = "FIRC Stop Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn fircsten(&self) -> super::vals::Fircsten {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Fircsten::from_bits(val as u8)
     }
-    #[doc = "FIRC Stop Enable"]
+    #[doc = "FIRC Stop Enable."]
     #[inline(always)]
     pub const fn set_fircsten(&mut self, val: super::vals::Fircsten) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "FIRC 48 MHz Clock to peripherals Enable"]
+    #[doc = "FIRC 48 MHz Clock to peripherals Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn firc_sclk_periph_en(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "FIRC 48 MHz Clock to peripherals Enable"]
+    #[doc = "FIRC 48 MHz Clock to peripherals Enable."]
     #[inline(always)]
     pub const fn set_firc_sclk_periph_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "FIRC 144 MHz Clock to peripherals Enable"]
+    #[doc = "FIRC 144 MHz Clock to peripherals Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn firc_fclk_periph_en(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "FIRC 144 MHz Clock to peripherals Enable"]
+    #[doc = "FIRC 144 MHz Clock to peripherals Enable."]
     #[inline(always)]
     pub const fn set_firc_fclk_periph_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "FIRC 144 MHz Trim Enable (FIRCCFG\\[RANGE\\]=1)"]
+    #[doc = "FIRC 144 MHz Trim Enable (FIRCCFG\\[RANGE\\]=1)."]
     #[must_use]
     #[inline(always)]
     pub const fn firctren(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "FIRC 144 MHz Trim Enable (FIRCCFG\\[RANGE\\]=1)"]
+    #[doc = "FIRC 144 MHz Trim Enable (FIRCCFG\\[RANGE\\]=1)."]
     #[inline(always)]
     pub const fn set_firctren(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "FIRC Trim Update"]
+    #[doc = "FIRC Trim Update."]
     #[must_use]
     #[inline(always)]
     pub const fn firctrup(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "FIRC Trim Update"]
+    #[doc = "FIRC Trim Update."]
     #[inline(always)]
     pub const fn set_firctrup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "FIRC TRIM LOCK"]
+    #[doc = "FIRC TRIM LOCK."]
     #[must_use]
     #[inline(always)]
     pub const fn trim_lock(&self) -> super::vals::FirccsrTrimLock {
         let val = (self.0 >> 10usize) & 0x01;
         super::vals::FirccsrTrimLock::from_bits(val as u8)
     }
-    #[doc = "FIRC TRIM LOCK"]
+    #[doc = "FIRC TRIM LOCK."]
     #[inline(always)]
     pub const fn set_trim_lock(&mut self, val: super::vals::FirccsrTrimLock) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
-    #[doc = "Coarse Auto Trim Bypass"]
+    #[doc = "Coarse Auto Trim Bypass."]
     #[must_use]
     #[inline(always)]
     pub const fn coarse_trim_bypass(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "Coarse Auto Trim Bypass"]
+    #[doc = "Coarse Auto Trim Bypass."]
     #[inline(always)]
     pub const fn set_coarse_trim_bypass(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "Lock Register"]
+    #[doc = "Lock Register."]
     #[must_use]
     #[inline(always)]
     pub const fn lk(&self) -> super::vals::FirccsrLk {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::FirccsrLk::from_bits(val as u8)
     }
-    #[doc = "Lock Register"]
+    #[doc = "Lock Register."]
     #[inline(always)]
     pub const fn set_lk(&mut self, val: super::vals::FirccsrLk) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
     }
-    #[doc = "FIRC Valid status"]
+    #[doc = "FIRC Valid status."]
     #[must_use]
     #[inline(always)]
     pub const fn fircvld(&self) -> super::vals::Fircvld {
         let val = (self.0 >> 24usize) & 0x01;
         super::vals::Fircvld::from_bits(val as u8)
     }
-    #[doc = "FIRC Valid status"]
+    #[doc = "FIRC Valid status."]
     #[inline(always)]
     pub const fn set_fircvld(&mut self, val: super::vals::Fircvld) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
     }
-    #[doc = "FIRC Selected"]
+    #[doc = "FIRC Selected."]
     #[must_use]
     #[inline(always)]
     pub const fn fircsel(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "FIRC Selected"]
+    #[doc = "FIRC Selected."]
     #[inline(always)]
     pub const fn set_fircsel(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "FIRC Clock Error"]
+    #[doc = "FIRC Clock Error."]
     #[must_use]
     #[inline(always)]
     pub const fn fircerr(&self) -> super::vals::Fircerr {
         let val = (self.0 >> 26usize) & 0x01;
         super::vals::Fircerr::from_bits(val as u8)
     }
-    #[doc = "FIRC Clock Error"]
+    #[doc = "FIRC Clock Error."]
     #[inline(always)]
     pub const fn set_fircerr(&mut self, val: super::vals::Fircerr) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
     }
-    #[doc = "FIRC Clock Error Interrupt Enable"]
+    #[doc = "FIRC Clock Error Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn fircerr_ie(&self) -> super::vals::FircerrIe {
         let val = (self.0 >> 27usize) & 0x01;
         super::vals::FircerrIe::from_bits(val as u8)
     }
-    #[doc = "FIRC Clock Error Interrupt Enable"]
+    #[doc = "FIRC Clock Error Interrupt Enable."]
     #[inline(always)]
     pub const fn set_fircerr_ie(&mut self, val: super::vals::FircerrIe) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val.to_bits() as u32) & 0x01) << 27usize);
     }
-    #[doc = "FIRC Accurate Interrupt Enable"]
+    #[doc = "FIRC Accurate Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn fircacc_ie(&self) -> super::vals::FircaccIe {
         let val = (self.0 >> 30usize) & 0x01;
         super::vals::FircaccIe::from_bits(val as u8)
     }
-    #[doc = "FIRC Accurate Interrupt Enable"]
+    #[doc = "FIRC Accurate Interrupt Enable."]
     #[inline(always)]
     pub const fn set_fircacc_ie(&mut self, val: super::vals::FircaccIe) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
-    #[doc = "FIRC Frequency Accurate"]
+    #[doc = "FIRC Frequency Accurate."]
     #[must_use]
     #[inline(always)]
     pub const fn fircacc(&self) -> super::vals::Fircacc {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::Fircacc::from_bits(val as u8)
     }
-    #[doc = "FIRC Frequency Accurate"]
+    #[doc = "FIRC Frequency Accurate."]
     #[inline(always)]
     pub const fn set_fircacc(&mut self, val: super::vals::Fircacc) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -1192,31 +1192,31 @@ impl defmt::Format for Firccsr {
         )
     }
 }
-#[doc = "FIRC Auto-trimming Status Register"]
+#[doc = "FIRC Auto-trimming Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Fircstat(pub u32);
 impl Fircstat {
-    #[doc = "Trim Fine"]
+    #[doc = "Trim Fine."]
     #[must_use]
     #[inline(always)]
     pub const fn trimfine(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Trim Fine"]
+    #[doc = "Trim Fine."]
     #[inline(always)]
     pub const fn set_trimfine(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "Trim Coarse"]
+    #[doc = "Trim Coarse."]
     #[must_use]
     #[inline(always)]
     pub const fn trimcoar(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x3f;
         val as u8
     }
-    #[doc = "Trim Coarse"]
+    #[doc = "Trim Coarse."]
     #[inline(always)]
     pub const fn set_trimcoar(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 8usize)) | (((val as u32) & 0x3f) << 8usize);
@@ -1247,31 +1247,31 @@ impl defmt::Format for Fircstat {
         )
     }
 }
-#[doc = "FIRC Trim Configuration Register"]
+#[doc = "FIRC Trim Configuration Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Firctcfg(pub u32);
 impl Firctcfg {
-    #[doc = "Trim Source"]
+    #[doc = "Trim Source."]
     #[must_use]
     #[inline(always)]
     pub const fn trimsrc(&self) -> super::vals::FirctcfgTrimsrc {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::FirctcfgTrimsrc::from_bits(val as u8)
     }
-    #[doc = "Trim Source"]
+    #[doc = "Trim Source."]
     #[inline(always)]
     pub const fn set_trimsrc(&mut self, val: super::vals::FirctcfgTrimsrc) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "FIRC Trim Predivider"]
+    #[doc = "FIRC Trim Predivider."]
     #[must_use]
     #[inline(always)]
     pub const fn trimdiv(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x7f;
         val as u8
     }
-    #[doc = "FIRC Trim Predivider"]
+    #[doc = "FIRC Trim Predivider."]
     #[inline(always)]
     pub const fn set_trimdiv(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 16usize)) | (((val as u32) & 0x7f) << 16usize);
@@ -1302,55 +1302,55 @@ impl defmt::Format for Firctcfg {
         )
     }
 }
-#[doc = "FIRC Trim Register"]
+#[doc = "FIRC Trim Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Firctrim(pub u32);
 impl Firctrim {
-    #[doc = "Trim Fine"]
+    #[doc = "Trim Fine."]
     #[must_use]
     #[inline(always)]
     pub const fn trimfine(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Trim Fine"]
+    #[doc = "Trim Fine."]
     #[inline(always)]
     pub const fn set_trimfine(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "Trim Coarse"]
+    #[doc = "Trim Coarse."]
     #[must_use]
     #[inline(always)]
     pub const fn trimcoar(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x3f;
         val as u8
     }
-    #[doc = "Trim Coarse"]
+    #[doc = "Trim Coarse."]
     #[inline(always)]
     pub const fn set_trimcoar(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 8usize)) | (((val as u32) & 0x3f) << 8usize);
     }
-    #[doc = "Trim Temperature"]
+    #[doc = "Trim Temperature."]
     #[must_use]
     #[inline(always)]
     pub const fn trimtemp(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x03;
         val as u8
     }
-    #[doc = "Trim Temperature"]
+    #[doc = "Trim Temperature."]
     #[inline(always)]
     pub const fn set_trimtemp(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val as u32) & 0x03) << 16usize);
     }
-    #[doc = "Trim Start"]
+    #[doc = "Trim Start."]
     #[must_use]
     #[inline(always)]
     pub const fn trimstart(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0x3f;
         val as u8
     }
-    #[doc = "Trim Start"]
+    #[doc = "Trim Start."]
     #[inline(always)]
     pub const fn set_trimstart(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 24usize)) | (((val as u32) & 0x3f) << 24usize);
@@ -1385,43 +1385,43 @@ impl defmt::Format for Firctrim {
         )
     }
 }
-#[doc = "LDO Control and Status Register"]
+#[doc = "LDO Control and Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ldocsr(pub u32);
 impl Ldocsr {
-    #[doc = "LDO Enable"]
+    #[doc = "LDO Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ldoen(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "LDO Enable"]
+    #[doc = "LDO Enable."]
     #[inline(always)]
     pub const fn set_ldoen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "LDO output voltage select"]
+    #[doc = "LDO output voltage select."]
     #[must_use]
     #[inline(always)]
     pub const fn vout_sel(&self) -> super::vals::VoutSel {
         let val = (self.0 >> 1usize) & 0x07;
         super::vals::VoutSel::from_bits(val as u8)
     }
-    #[doc = "LDO output voltage select"]
+    #[doc = "LDO output voltage select."]
     #[inline(always)]
     pub const fn set_vout_sel(&mut self, val: super::vals::VoutSel) {
         self.0 = (self.0 & !(0x07 << 1usize)) | (((val.to_bits() as u32) & 0x07) << 1usize);
     }
-    #[doc = "LDO Bypass"]
+    #[doc = "LDO Bypass."]
     #[must_use]
     #[inline(always)]
     pub const fn ldobypass(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "LDO Bypass"]
+    #[doc = "LDO Bypass."]
     #[inline(always)]
     pub const fn set_ldobypass(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
@@ -1468,91 +1468,91 @@ impl defmt::Format for Ldocsr {
         )
     }
 }
-#[doc = "Parameter Register"]
+#[doc = "Parameter Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Param(pub u32);
 impl Param {
-    #[doc = "SOSC Clock Present"]
+    #[doc = "SOSC Clock Present."]
     #[must_use]
     #[inline(always)]
     pub const fn soscclkpres(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "SOSC Clock Present"]
+    #[doc = "SOSC Clock Present."]
     #[inline(always)]
     pub const fn set_soscclkpres(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "SIRC Clock Present"]
+    #[doc = "SIRC Clock Present."]
     #[must_use]
     #[inline(always)]
     pub const fn sircclkpres(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "SIRC Clock Present"]
+    #[doc = "SIRC Clock Present."]
     #[inline(always)]
     pub const fn set_sircclkpres(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "FIRC Clock Present"]
+    #[doc = "FIRC Clock Present."]
     #[must_use]
     #[inline(always)]
     pub const fn fircclkpres(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "FIRC Clock Present"]
+    #[doc = "FIRC Clock Present."]
     #[inline(always)]
     pub const fn set_fircclkpres(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "ROSC Clock Present"]
+    #[doc = "ROSC Clock Present."]
     #[must_use]
     #[inline(always)]
     pub const fn roscclkpres(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "ROSC Clock Present"]
+    #[doc = "ROSC Clock Present."]
     #[inline(always)]
     pub const fn set_roscclkpres(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "APLL Clock Present"]
+    #[doc = "APLL Clock Present."]
     #[must_use]
     #[inline(always)]
     pub const fn apllclkpres(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "APLL Clock Present"]
+    #[doc = "APLL Clock Present."]
     #[inline(always)]
     pub const fn set_apllclkpres(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "SPLL Clock Present"]
+    #[doc = "SPLL Clock Present."]
     #[must_use]
     #[inline(always)]
     pub const fn spllclkpres(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "SPLL Clock Present"]
+    #[doc = "SPLL Clock Present."]
     #[inline(always)]
     pub const fn set_spllclkpres(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "UPLL Clock Present"]
+    #[doc = "UPLL Clock Present."]
     #[must_use]
     #[inline(always)]
     pub const fn upllclkpres(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "UPLL Clock Present"]
+    #[doc = "UPLL Clock Present."]
     #[inline(always)]
     pub const fn set_upllclkpres(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
@@ -1593,19 +1593,19 @@ impl defmt::Format for Param {
         )
     }
 }
-#[doc = "Run Clock Control Register"]
+#[doc = "Run Clock Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Rccr(pub u32);
 impl Rccr {
-    #[doc = "System Clock Source"]
+    #[doc = "System Clock Source."]
     #[must_use]
     #[inline(always)]
     pub const fn scs(&self) -> super::vals::RccrScs {
         let val = (self.0 >> 24usize) & 0x0f;
         super::vals::RccrScs::from_bits(val as u8)
     }
-    #[doc = "System Clock Source"]
+    #[doc = "System Clock Source."]
     #[inline(always)]
     pub const fn set_scs(&mut self, val: super::vals::RccrScs) {
         self.0 = (self.0 & !(0x0f << 24usize)) | (((val.to_bits() as u32) & 0x0f) << 24usize);
@@ -1628,79 +1628,79 @@ impl defmt::Format for Rccr {
         defmt::write!(f, "Rccr {{ scs: {:?} }}", self.scs())
     }
 }
-#[doc = "ROSC Control Status Register"]
+#[doc = "ROSC Control Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Rosccsr(pub u32);
 impl Rosccsr {
-    #[doc = "ROSC Clock Monitor"]
+    #[doc = "ROSC Clock Monitor."]
     #[must_use]
     #[inline(always)]
     pub const fn rosccm(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "ROSC Clock Monitor"]
+    #[doc = "ROSC Clock Monitor."]
     #[inline(always)]
     pub const fn set_rosccm(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "ROSC Clock Monitor Reset Enable"]
+    #[doc = "ROSC Clock Monitor Reset Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn rosccmre(&self) -> super::vals::Rosccmre {
         let val = (self.0 >> 17usize) & 0x01;
         super::vals::Rosccmre::from_bits(val as u8)
     }
-    #[doc = "ROSC Clock Monitor Reset Enable"]
+    #[doc = "ROSC Clock Monitor Reset Enable."]
     #[inline(always)]
     pub const fn set_rosccmre(&mut self, val: super::vals::Rosccmre) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
     }
-    #[doc = "Lock Register"]
+    #[doc = "Lock Register."]
     #[must_use]
     #[inline(always)]
     pub const fn lk(&self) -> super::vals::RosccsrLk {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::RosccsrLk::from_bits(val as u8)
     }
-    #[doc = "Lock Register"]
+    #[doc = "Lock Register."]
     #[inline(always)]
     pub const fn set_lk(&mut self, val: super::vals::RosccsrLk) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
     }
-    #[doc = "ROSC Valid"]
+    #[doc = "ROSC Valid."]
     #[must_use]
     #[inline(always)]
     pub const fn roscvld(&self) -> super::vals::Roscvld {
         let val = (self.0 >> 24usize) & 0x01;
         super::vals::Roscvld::from_bits(val as u8)
     }
-    #[doc = "ROSC Valid"]
+    #[doc = "ROSC Valid."]
     #[inline(always)]
     pub const fn set_roscvld(&mut self, val: super::vals::Roscvld) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
     }
-    #[doc = "ROSC Selected"]
+    #[doc = "ROSC Selected."]
     #[must_use]
     #[inline(always)]
     pub const fn roscsel(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "ROSC Selected"]
+    #[doc = "ROSC Selected."]
     #[inline(always)]
     pub const fn set_roscsel(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "ROSC Clock Error"]
+    #[doc = "ROSC Clock Error."]
     #[must_use]
     #[inline(always)]
     pub const fn roscerr(&self) -> super::vals::Roscerr {
         let val = (self.0 >> 26usize) & 0x01;
         super::vals::Roscerr::from_bits(val as u8)
     }
-    #[doc = "ROSC Clock Error"]
+    #[doc = "ROSC Clock Error."]
     #[inline(always)]
     pub const fn set_roscerr(&mut self, val: super::vals::Roscerr) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
@@ -1739,139 +1739,139 @@ impl defmt::Format for Rosccsr {
         )
     }
 }
-#[doc = "SIRC Control Status Register"]
+#[doc = "SIRC Control Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sirccsr(pub u32);
 impl Sirccsr {
-    #[doc = "SIRC Stop Enable"]
+    #[doc = "SIRC Stop Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn sircsten(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "SIRC Stop Enable"]
+    #[doc = "SIRC Stop Enable."]
     #[inline(always)]
     pub const fn set_sircsten(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "SIRC Clock to Peripherals Enable"]
+    #[doc = "SIRC Clock to Peripherals Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn sirc_clk_periph_en(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "SIRC Clock to Peripherals Enable"]
+    #[doc = "SIRC Clock to Peripherals Enable."]
     #[inline(always)]
     pub const fn set_sirc_clk_periph_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "SIRC 12 MHz Trim Enable (SIRCCFG\\[RANGE\\]=1)"]
+    #[doc = "SIRC 12 MHz Trim Enable (SIRCCFG\\[RANGE\\]=1)."]
     #[must_use]
     #[inline(always)]
     pub const fn sirctren(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "SIRC 12 MHz Trim Enable (SIRCCFG\\[RANGE\\]=1)"]
+    #[doc = "SIRC 12 MHz Trim Enable (SIRCCFG\\[RANGE\\]=1)."]
     #[inline(always)]
     pub const fn set_sirctren(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "SIRC Trim Update"]
+    #[doc = "SIRC Trim Update."]
     #[must_use]
     #[inline(always)]
     pub const fn sirctrup(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "SIRC Trim Update"]
+    #[doc = "SIRC Trim Update."]
     #[inline(always)]
     pub const fn set_sirctrup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "SIRC TRIM LOCK"]
+    #[doc = "SIRC TRIM LOCK."]
     #[must_use]
     #[inline(always)]
     pub const fn trim_lock(&self) -> super::vals::SirccsrTrimLock {
         let val = (self.0 >> 10usize) & 0x01;
         super::vals::SirccsrTrimLock::from_bits(val as u8)
     }
-    #[doc = "SIRC TRIM LOCK"]
+    #[doc = "SIRC TRIM LOCK."]
     #[inline(always)]
     pub const fn set_trim_lock(&mut self, val: super::vals::SirccsrTrimLock) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
-    #[doc = "Coarse Auto Trim Bypass"]
+    #[doc = "Coarse Auto Trim Bypass."]
     #[must_use]
     #[inline(always)]
     pub const fn coarse_trim_bypass(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "Coarse Auto Trim Bypass"]
+    #[doc = "Coarse Auto Trim Bypass."]
     #[inline(always)]
     pub const fn set_coarse_trim_bypass(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "Lock Register"]
+    #[doc = "Lock Register."]
     #[must_use]
     #[inline(always)]
     pub const fn lk(&self) -> super::vals::SirccsrLk {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::SirccsrLk::from_bits(val as u8)
     }
-    #[doc = "Lock Register"]
+    #[doc = "Lock Register."]
     #[inline(always)]
     pub const fn set_lk(&mut self, val: super::vals::SirccsrLk) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
     }
-    #[doc = "SIRC Valid"]
+    #[doc = "SIRC Valid."]
     #[must_use]
     #[inline(always)]
     pub const fn sircvld(&self) -> super::vals::Sircvld {
         let val = (self.0 >> 24usize) & 0x01;
         super::vals::Sircvld::from_bits(val as u8)
     }
-    #[doc = "SIRC Valid"]
+    #[doc = "SIRC Valid."]
     #[inline(always)]
     pub const fn set_sircvld(&mut self, val: super::vals::Sircvld) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
     }
-    #[doc = "SIRC Selected"]
+    #[doc = "SIRC Selected."]
     #[must_use]
     #[inline(always)]
     pub const fn sircsel(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "SIRC Selected"]
+    #[doc = "SIRC Selected."]
     #[inline(always)]
     pub const fn set_sircsel(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "SIRC Clock Error"]
+    #[doc = "SIRC Clock Error."]
     #[must_use]
     #[inline(always)]
     pub const fn sircerr(&self) -> super::vals::Sircerr {
         let val = (self.0 >> 26usize) & 0x01;
         super::vals::Sircerr::from_bits(val as u8)
     }
-    #[doc = "SIRC Clock Error"]
+    #[doc = "SIRC Clock Error."]
     #[inline(always)]
     pub const fn set_sircerr(&mut self, val: super::vals::Sircerr) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
     }
-    #[doc = "SIRC Clock Error Interrupt Enable"]
+    #[doc = "SIRC Clock Error Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn sircerr_ie(&self) -> super::vals::SircerrIe {
         let val = (self.0 >> 27usize) & 0x01;
         super::vals::SircerrIe::from_bits(val as u8)
     }
-    #[doc = "SIRC Clock Error Interrupt Enable"]
+    #[doc = "SIRC Clock Error Interrupt Enable."]
     #[inline(always)]
     pub const fn set_sircerr_ie(&mut self, val: super::vals::SircerrIe) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val.to_bits() as u32) & 0x01) << 27usize);
@@ -1920,31 +1920,31 @@ impl defmt::Format for Sirccsr {
         )
     }
 }
-#[doc = "SIRC Auto-trimming Status Register"]
+#[doc = "SIRC Auto-trimming Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sircstat(pub u32);
 impl Sircstat {
-    #[doc = "CCO Trim"]
+    #[doc = "CCO Trim."]
     #[must_use]
     #[inline(always)]
     pub const fn ccotrim(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x3f;
         val as u8
     }
-    #[doc = "CCO Trim"]
+    #[doc = "CCO Trim."]
     #[inline(always)]
     pub const fn set_ccotrim(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val as u32) & 0x3f) << 0usize);
     }
-    #[doc = "CL Trim"]
+    #[doc = "CL Trim."]
     #[must_use]
     #[inline(always)]
     pub const fn cltrim(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x3f;
         val as u8
     }
-    #[doc = "CL Trim"]
+    #[doc = "CL Trim."]
     #[inline(always)]
     pub const fn set_cltrim(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 8usize)) | (((val as u32) & 0x3f) << 8usize);
@@ -1975,31 +1975,31 @@ impl defmt::Format for Sircstat {
         )
     }
 }
-#[doc = "SIRC Trim Configuration Register"]
+#[doc = "SIRC Trim Configuration Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sirctcfg(pub u32);
 impl Sirctcfg {
-    #[doc = "Trim Source"]
+    #[doc = "Trim Source."]
     #[must_use]
     #[inline(always)]
     pub const fn trimsrc(&self) -> super::vals::SirctcfgTrimsrc {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::SirctcfgTrimsrc::from_bits(val as u8)
     }
-    #[doc = "Trim Source"]
+    #[doc = "Trim Source."]
     #[inline(always)]
     pub const fn set_trimsrc(&mut self, val: super::vals::SirctcfgTrimsrc) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "SIRC Trim Predivider"]
+    #[doc = "SIRC Trim Predivider."]
     #[must_use]
     #[inline(always)]
     pub const fn trimdiv(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x7f;
         val as u8
     }
-    #[doc = "SIRC Trim Predivider"]
+    #[doc = "SIRC Trim Predivider."]
     #[inline(always)]
     pub const fn set_trimdiv(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 16usize)) | (((val as u32) & 0x7f) << 16usize);
@@ -2030,55 +2030,55 @@ impl defmt::Format for Sirctcfg {
         )
     }
 }
-#[doc = "SIRC Trim Register"]
+#[doc = "SIRC Trim Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sirctrim(pub u32);
 impl Sirctrim {
-    #[doc = "CCO Trim"]
+    #[doc = "CCO Trim."]
     #[must_use]
     #[inline(always)]
     pub const fn ccotrim(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x3f;
         val as u8
     }
-    #[doc = "CCO Trim"]
+    #[doc = "CCO Trim."]
     #[inline(always)]
     pub const fn set_ccotrim(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val as u32) & 0x3f) << 0usize);
     }
-    #[doc = "CL Trim"]
+    #[doc = "CL Trim."]
     #[must_use]
     #[inline(always)]
     pub const fn cltrim(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x3f;
         val as u8
     }
-    #[doc = "CL Trim"]
+    #[doc = "CL Trim."]
     #[inline(always)]
     pub const fn set_cltrim(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 8usize)) | (((val as u32) & 0x3f) << 8usize);
     }
-    #[doc = "Trim Temp"]
+    #[doc = "Trim Temp."]
     #[must_use]
     #[inline(always)]
     pub const fn tctrim(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x1f;
         val as u8
     }
-    #[doc = "Trim Temp"]
+    #[doc = "Trim Temp."]
     #[inline(always)]
     pub const fn set_tctrim(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 16usize)) | (((val as u32) & 0x1f) << 16usize);
     }
-    #[doc = "Calibrates the replica voltage in FSU for CCO to get well frequency at initial period"]
+    #[doc = "Calibrates the replica voltage in FSU for CCO to get well frequency at initial period."]
     #[must_use]
     #[inline(always)]
     pub const fn fvchtrim(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0x1f;
         val as u8
     }
-    #[doc = "Calibrates the replica voltage in FSU for CCO to get well frequency at initial period"]
+    #[doc = "Calibrates the replica voltage in FSU for CCO to get well frequency at initial period."]
     #[inline(always)]
     pub const fn set_fvchtrim(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 24usize)) | (((val as u32) & 0x1f) << 24usize);
@@ -2113,31 +2113,31 @@ impl defmt::Format for Sirctrim {
         )
     }
 }
-#[doc = "SOSC Configuration Register"]
+#[doc = "SOSC Configuration Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sosccfg(pub u32);
 impl Sosccfg {
-    #[doc = "External Reference Select"]
+    #[doc = "External Reference Select."]
     #[must_use]
     #[inline(always)]
     pub const fn erefs(&self) -> super::vals::Erefs {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Erefs::from_bits(val as u8)
     }
-    #[doc = "External Reference Select"]
+    #[doc = "External Reference Select."]
     #[inline(always)]
     pub const fn set_erefs(&mut self, val: super::vals::Erefs) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "SOSC Range Select"]
+    #[doc = "SOSC Range Select."]
     #[must_use]
     #[inline(always)]
     pub const fn range(&self) -> super::vals::SosccfgRange {
         let val = (self.0 >> 4usize) & 0x03;
         super::vals::SosccfgRange::from_bits(val as u8)
     }
-    #[doc = "SOSC Range Select"]
+    #[doc = "SOSC Range Select."]
     #[inline(always)]
     pub const fn set_range(&mut self, val: super::vals::SosccfgRange) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
@@ -2168,115 +2168,115 @@ impl defmt::Format for Sosccfg {
         )
     }
 }
-#[doc = "SOSC Control Status Register"]
+#[doc = "SOSC Control Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sosccsr(pub u32);
 impl Sosccsr {
-    #[doc = "SOSC Enable"]
+    #[doc = "SOSC Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn soscen(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "SOSC Enable"]
+    #[doc = "SOSC Enable."]
     #[inline(always)]
     pub const fn set_soscen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "SOSC Stop Enable"]
+    #[doc = "SOSC Stop Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn soscsten(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "SOSC Stop Enable"]
+    #[doc = "SOSC Stop Enable."]
     #[inline(always)]
     pub const fn set_soscsten(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "SOSC Clock Monitor Enable"]
+    #[doc = "SOSC Clock Monitor Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn sosccm(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "SOSC Clock Monitor Enable"]
+    #[doc = "SOSC Clock Monitor Enable."]
     #[inline(always)]
     pub const fn set_sosccm(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "SOSC Clock Monitor Reset Enable"]
+    #[doc = "SOSC Clock Monitor Reset Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn sosccmre(&self) -> super::vals::Sosccmre {
         let val = (self.0 >> 17usize) & 0x01;
         super::vals::Sosccmre::from_bits(val as u8)
     }
-    #[doc = "SOSC Clock Monitor Reset Enable"]
+    #[doc = "SOSC Clock Monitor Reset Enable."]
     #[inline(always)]
     pub const fn set_sosccmre(&mut self, val: super::vals::Sosccmre) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
     }
-    #[doc = "Lock Register"]
+    #[doc = "Lock Register."]
     #[must_use]
     #[inline(always)]
     pub const fn lk(&self) -> super::vals::SosccsrLk {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::SosccsrLk::from_bits(val as u8)
     }
-    #[doc = "Lock Register"]
+    #[doc = "Lock Register."]
     #[inline(always)]
     pub const fn set_lk(&mut self, val: super::vals::SosccsrLk) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
     }
-    #[doc = "SOSC Valid"]
+    #[doc = "SOSC Valid."]
     #[must_use]
     #[inline(always)]
     pub const fn soscvld(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "SOSC Valid"]
+    #[doc = "SOSC Valid."]
     #[inline(always)]
     pub const fn set_soscvld(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "SOSC Selected"]
+    #[doc = "SOSC Selected."]
     #[must_use]
     #[inline(always)]
     pub const fn soscsel(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "SOSC Selected"]
+    #[doc = "SOSC Selected."]
     #[inline(always)]
     pub const fn set_soscsel(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "SOSC Clock Error"]
+    #[doc = "SOSC Clock Error."]
     #[must_use]
     #[inline(always)]
     pub const fn soscerr(&self) -> super::vals::Soscerr {
         let val = (self.0 >> 26usize) & 0x01;
         super::vals::Soscerr::from_bits(val as u8)
     }
-    #[doc = "SOSC Clock Error"]
+    #[doc = "SOSC Clock Error."]
     #[inline(always)]
     pub const fn set_soscerr(&mut self, val: super::vals::Soscerr) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
     }
-    #[doc = "SOSC Valid Interrupt Enable"]
+    #[doc = "SOSC Valid Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn soscvld_ie(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "SOSC Valid Interrupt Enable"]
+    #[doc = "SOSC Valid Interrupt Enable."]
     #[inline(always)]
     pub const fn set_soscvld_ie(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
@@ -2321,43 +2321,43 @@ impl defmt::Format for Sosccsr {
         )
     }
 }
-#[doc = "SPLL Override Register"]
+#[doc = "SPLL Override Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SpllOvrd(pub u32);
 impl SpllOvrd {
-    #[doc = "SPLL Power Enable Override if SPLL_OVRD_EN=1"]
+    #[doc = "SPLL Power Enable Override if SPLL_OVRD_EN=1."]
     #[must_use]
     #[inline(always)]
     pub const fn spllpwren_ovrd(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "SPLL Power Enable Override if SPLL_OVRD_EN=1"]
+    #[doc = "SPLL Power Enable Override if SPLL_OVRD_EN=1."]
     #[inline(always)]
     pub const fn set_spllpwren_ovrd(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "SPLL Clock Enable Override if SPLL_OVRD_EN=1"]
+    #[doc = "SPLL Clock Enable Override if SPLL_OVRD_EN=1."]
     #[must_use]
     #[inline(always)]
     pub const fn spllclken_ovrd(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "SPLL Clock Enable Override if SPLL_OVRD_EN=1"]
+    #[doc = "SPLL Clock Enable Override if SPLL_OVRD_EN=1."]
     #[inline(always)]
     pub const fn set_spllclken_ovrd(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "SPLL Override Enable"]
+    #[doc = "SPLL Override Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn spll_ovrd_en(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "SPLL Override Enable"]
+    #[doc = "SPLL Override Enable."]
     #[inline(always)]
     pub const fn set_spll_ovrd_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -2390,127 +2390,127 @@ impl defmt::Format for SpllOvrd {
         )
     }
 }
-#[doc = "SPLL Control Status Register"]
+#[doc = "SPLL Control Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Spllcsr(pub u32);
 impl Spllcsr {
-    #[doc = "SPLL Power Enable"]
+    #[doc = "SPLL Power Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn spllpwren(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "SPLL Power Enable"]
+    #[doc = "SPLL Power Enable."]
     #[inline(always)]
     pub const fn set_spllpwren(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "SPLL Clock Enable"]
+    #[doc = "SPLL Clock Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn spllclken(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "SPLL Clock Enable"]
+    #[doc = "SPLL Clock Enable."]
     #[inline(always)]
     pub const fn set_spllclken(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "SPLL Stop Enable"]
+    #[doc = "SPLL Stop Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn spllsten(&self) -> super::vals::Spllsten {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Spllsten::from_bits(val as u8)
     }
-    #[doc = "SPLL Stop Enable"]
+    #[doc = "SPLL Stop Enable."]
     #[inline(always)]
     pub const fn set_spllsten(&mut self, val: super::vals::Spllsten) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "SPLL Clock Monitor"]
+    #[doc = "SPLL Clock Monitor."]
     #[must_use]
     #[inline(always)]
     pub const fn spllcm(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "SPLL Clock Monitor"]
+    #[doc = "SPLL Clock Monitor."]
     #[inline(always)]
     pub const fn set_spllcm(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "SPLL Clock Monitor Reset Enable"]
+    #[doc = "SPLL Clock Monitor Reset Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn spllcmre(&self) -> super::vals::Spllcmre {
         let val = (self.0 >> 17usize) & 0x01;
         super::vals::Spllcmre::from_bits(val as u8)
     }
-    #[doc = "SPLL Clock Monitor Reset Enable"]
+    #[doc = "SPLL Clock Monitor Reset Enable."]
     #[inline(always)]
     pub const fn set_spllcmre(&mut self, val: super::vals::Spllcmre) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
     }
-    #[doc = "Lock Register"]
+    #[doc = "Lock Register."]
     #[must_use]
     #[inline(always)]
     pub const fn lk(&self) -> super::vals::SpllcsrLk {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::SpllcsrLk::from_bits(val as u8)
     }
-    #[doc = "Lock Register"]
+    #[doc = "Lock Register."]
     #[inline(always)]
     pub const fn set_lk(&mut self, val: super::vals::SpllcsrLk) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
     }
-    #[doc = "SPLL LOCK"]
+    #[doc = "SPLL LOCK."]
     #[must_use]
     #[inline(always)]
     pub const fn spll_lock(&self) -> super::vals::SpllLock {
         let val = (self.0 >> 24usize) & 0x01;
         super::vals::SpllLock::from_bits(val as u8)
     }
-    #[doc = "SPLL LOCK"]
+    #[doc = "SPLL LOCK."]
     #[inline(always)]
     pub const fn set_spll_lock(&mut self, val: super::vals::SpllLock) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
     }
-    #[doc = "SPLL Selected"]
+    #[doc = "SPLL Selected."]
     #[must_use]
     #[inline(always)]
     pub const fn spllsel(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "SPLL Selected"]
+    #[doc = "SPLL Selected."]
     #[inline(always)]
     pub const fn set_spllsel(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "SPLL Clock Error"]
+    #[doc = "SPLL Clock Error."]
     #[must_use]
     #[inline(always)]
     pub const fn spllerr(&self) -> super::vals::Spllerr {
         let val = (self.0 >> 26usize) & 0x01;
         super::vals::Spllerr::from_bits(val as u8)
     }
-    #[doc = "SPLL Clock Error"]
+    #[doc = "SPLL Clock Error."]
     #[inline(always)]
     pub const fn set_spllerr(&mut self, val: super::vals::Spllerr) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
     }
-    #[doc = "SPLL LOCK Interrupt Enable"]
+    #[doc = "SPLL LOCK Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn spll_lock_ie(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "SPLL LOCK Interrupt Enable"]
+    #[doc = "SPLL LOCK Interrupt Enable."]
     #[inline(always)]
     pub const fn set_spll_lock_ie(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
@@ -2557,7 +2557,7 @@ impl defmt::Format for Spllcsr {
         )
     }
 }
-#[doc = "SPLL Control Register"]
+#[doc = "SPLL Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Spllctrl(pub u32);
@@ -2598,14 +2598,14 @@ impl Spllctrl {
     pub const fn set_selp(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 10usize)) | (((val as u32) & 0x1f) << 10usize);
     }
-    #[doc = "Bypass of Divide-by-2 Divider"]
+    #[doc = "Bypass of Divide-by-2 Divider."]
     #[must_use]
     #[inline(always)]
     pub const fn bypasspostdiv2(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Bypass of Divide-by-2 Divider"]
+    #[doc = "Bypass of Divide-by-2 Divider."]
     #[inline(always)]
     pub const fn set_bypasspostdiv2(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
@@ -2658,14 +2658,14 @@ impl Spllctrl {
     pub const fn set_bypasspostdiv(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Clock Source"]
+    #[doc = "Clock Source."]
     #[must_use]
     #[inline(always)]
     pub const fn source(&self) -> super::vals::SpllctrlSource {
         let val = (self.0 >> 25usize) & 0x03;
         super::vals::SpllctrlSource::from_bits(val as u8)
     }
-    #[doc = "Clock Source"]
+    #[doc = "Clock Source."]
     #[inline(always)]
     pub const fn set_source(&mut self, val: super::vals::SpllctrlSource) {
         self.0 = (self.0 & !(0x03 << 25usize)) | (((val.to_bits() as u32) & 0x03) << 25usize);
@@ -2710,7 +2710,7 @@ impl defmt::Format for Spllctrl {
         )
     }
 }
-#[doc = "SPLL LOCK Configuration Register"]
+#[doc = "SPLL LOCK Configuration Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SplllockCnfg(pub u32);
@@ -2751,7 +2751,7 @@ impl defmt::Format for SplllockCnfg {
         )
     }
 }
-#[doc = "SPLL M Divider Register"]
+#[doc = "SPLL M Divider Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Spllmdiv(pub u32);
@@ -2806,7 +2806,7 @@ impl defmt::Format for Spllmdiv {
         )
     }
 }
-#[doc = "SPLL N Divider Register"]
+#[doc = "SPLL N Divider Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Spllndiv(pub u32);
@@ -2861,31 +2861,31 @@ impl defmt::Format for Spllndiv {
         )
     }
 }
-#[doc = "SPLL P Divider Register"]
+#[doc = "SPLL P Divider Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Spllpdiv(pub u32);
 impl Spllpdiv {
-    #[doc = "Postdivider divider ratio (P-divider)"]
+    #[doc = "Postdivider divider ratio (P-divider)."]
     #[must_use]
     #[inline(always)]
     pub const fn pdiv(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x1f;
         val as u8
     }
-    #[doc = "Postdivider divider ratio (P-divider)"]
+    #[doc = "Postdivider divider ratio (P-divider)."]
     #[inline(always)]
     pub const fn set_pdiv(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val as u32) & 0x1f) << 0usize);
     }
-    #[doc = "Postdivider ratio change request"]
+    #[doc = "Postdivider ratio change request."]
     #[must_use]
     #[inline(always)]
     pub const fn preq(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Postdivider ratio change request"]
+    #[doc = "Postdivider ratio change request."]
     #[inline(always)]
     pub const fn set_preq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -2916,19 +2916,19 @@ impl defmt::Format for Spllpdiv {
         )
     }
 }
-#[doc = "SPLL Spread Spectrum Control 0 Register"]
+#[doc = "SPLL Spread Spectrum Control 0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Spllsscg0(pub u32);
 impl Spllsscg0 {
-    #[doc = "SS_MDIV\\[31:0\\]"]
+    #[doc = "SS_MDIV\\[31:0\\]."]
     #[must_use]
     #[inline(always)]
     pub const fn ss_mdiv_lsb(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "SS_MDIV\\[31:0\\]"]
+    #[doc = "SS_MDIV\\[31:0\\]."]
     #[inline(always)]
     pub const fn set_ss_mdiv_lsb(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2957,19 +2957,19 @@ impl defmt::Format for Spllsscg0 {
         )
     }
 }
-#[doc = "SPLL Spread Spectrum Control 1 Register"]
+#[doc = "SPLL Spread Spectrum Control 1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Spllsscg1(pub u32);
 impl Spllsscg1 {
-    #[doc = "SS_MDIV\\[32\\]"]
+    #[doc = "SS_MDIV\\[32\\]."]
     #[must_use]
     #[inline(always)]
     pub const fn ss_mdiv_msb(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "SS_MDIV\\[32\\]"]
+    #[doc = "SS_MDIV\\[32\\]."]
     #[inline(always)]
     pub const fn set_ss_mdiv_msb(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -2986,50 +2986,50 @@ impl Spllsscg1 {
     pub const fn set_ss_mdiv_req(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Modulation Frequency Control"]
+    #[doc = "Modulation Frequency Control."]
     #[must_use]
     #[inline(always)]
     pub const fn mf(&self) -> u8 {
         let val = (self.0 >> 2usize) & 0x07;
         val as u8
     }
-    #[doc = "Modulation Frequency Control"]
+    #[doc = "Modulation Frequency Control."]
     #[inline(always)]
     pub const fn set_mf(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 2usize)) | (((val as u32) & 0x07) << 2usize);
     }
-    #[doc = "Modulation Depth Control"]
+    #[doc = "Modulation Depth Control."]
     #[must_use]
     #[inline(always)]
     pub const fn mr(&self) -> u8 {
         let val = (self.0 >> 5usize) & 0x07;
         val as u8
     }
-    #[doc = "Modulation Depth Control"]
+    #[doc = "Modulation Depth Control."]
     #[inline(always)]
     pub const fn set_mr(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 5usize)) | (((val as u32) & 0x07) << 5usize);
     }
-    #[doc = "Modulation Waveform Control"]
+    #[doc = "Modulation Waveform Control."]
     #[must_use]
     #[inline(always)]
     pub const fn mc(&self) -> super::vals::Spllsscg1Mc {
         let val = (self.0 >> 8usize) & 0x03;
         super::vals::Spllsscg1Mc::from_bits(val as u8)
     }
-    #[doc = "Modulation Waveform Control"]
+    #[doc = "Modulation Waveform Control."]
     #[inline(always)]
     pub const fn set_mc(&mut self, val: super::vals::Spllsscg1Mc) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
-    #[doc = "Dither Enable"]
+    #[doc = "Dither Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dither(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "Dither Enable"]
+    #[doc = "Dither Enable."]
     #[inline(always)]
     pub const fn set_dither(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
@@ -3046,14 +3046,14 @@ impl Spllsscg1 {
     pub const fn set_sel_ss_mdiv(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "SSCG Power Down"]
+    #[doc = "SSCG Power Down."]
     #[must_use]
     #[inline(always)]
     pub const fn ss_pd(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "SSCG Power Down"]
+    #[doc = "SSCG Power Down."]
     #[inline(always)]
     pub const fn set_ss_pd(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -3096,19 +3096,19 @@ impl defmt::Format for Spllsscg1 {
         )
     }
 }
-#[doc = "SPLL SSCG Status Register"]
+#[doc = "SPLL SSCG Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Spllsscgstat(pub u32);
 impl Spllsscgstat {
-    #[doc = "SS_MDIV change acknowledge"]
+    #[doc = "SS_MDIV change acknowledge."]
     #[must_use]
     #[inline(always)]
     pub const fn ss_mdiv_ack(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "SS_MDIV change acknowledge"]
+    #[doc = "SS_MDIV change acknowledge."]
     #[inline(always)]
     pub const fn set_ss_mdiv_ack(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -3137,43 +3137,43 @@ impl defmt::Format for Spllsscgstat {
         )
     }
 }
-#[doc = "SPLL Status Register"]
+#[doc = "SPLL Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Spllstat(pub u32);
 impl Spllstat {
-    #[doc = "Predivider (N) ratio change acknowledge"]
+    #[doc = "Predivider (N) ratio change acknowledge."]
     #[must_use]
     #[inline(always)]
     pub const fn ndivack(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Predivider (N) ratio change acknowledge"]
+    #[doc = "Predivider (N) ratio change acknowledge."]
     #[inline(always)]
     pub const fn set_ndivack(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Feedback (M) divider ratio change acknowledge"]
+    #[doc = "Feedback (M) divider ratio change acknowledge."]
     #[must_use]
     #[inline(always)]
     pub const fn mdivack(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Feedback (M) divider ratio change acknowledge"]
+    #[doc = "Feedback (M) divider ratio change acknowledge."]
     #[inline(always)]
     pub const fn set_mdivack(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Postdivider (P) ratio change acknowledge"]
+    #[doc = "Postdivider (P) ratio change acknowledge."]
     #[must_use]
     #[inline(always)]
     pub const fn pdivack(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Postdivider (P) ratio change acknowledge"]
+    #[doc = "Postdivider (P) ratio change acknowledge."]
     #[inline(always)]
     pub const fn set_pdivack(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
@@ -3206,43 +3206,43 @@ impl defmt::Format for Spllstat {
         )
     }
 }
-#[doc = "Trim Lock register"]
+#[doc = "Trim Lock register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct TrimLock(pub u32);
 impl TrimLock {
-    #[doc = "TRIM_UNLOCK"]
+    #[doc = "TRIM_UNLOCK."]
     #[must_use]
     #[inline(always)]
     pub const fn trim_unlock(&self) -> super::vals::TrimUnlock {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::TrimUnlock::from_bits(val as u8)
     }
-    #[doc = "TRIM_UNLOCK"]
+    #[doc = "TRIM_UNLOCK."]
     #[inline(always)]
     pub const fn set_trim_unlock(&mut self, val: super::vals::TrimUnlock) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "IFR_DISABLE"]
+    #[doc = "IFR_DISABLE."]
     #[must_use]
     #[inline(always)]
     pub const fn ifr_disable(&self) -> super::vals::IfrDisable {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::IfrDisable::from_bits(val as u8)
     }
-    #[doc = "IFR_DISABLE"]
+    #[doc = "IFR_DISABLE."]
     #[inline(always)]
     pub const fn set_ifr_disable(&mut self, val: super::vals::IfrDisable) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "TRIM_LOCK_KEY"]
+    #[doc = "TRIM_LOCK_KEY."]
     #[must_use]
     #[inline(always)]
     pub const fn trim_lock_key(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "TRIM_LOCK_KEY"]
+    #[doc = "TRIM_LOCK_KEY."]
     #[inline(always)]
     pub const fn set_trim_lock_key(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -3275,79 +3275,79 @@ impl defmt::Format for TrimLock {
         )
     }
 }
-#[doc = "UPLL Control Status Register"]
+#[doc = "UPLL Control Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Upllcsr(pub u32);
 impl Upllcsr {
-    #[doc = "UPLL Clock Monitor"]
+    #[doc = "UPLL Clock Monitor."]
     #[must_use]
     #[inline(always)]
     pub const fn upllcm(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "UPLL Clock Monitor"]
+    #[doc = "UPLL Clock Monitor."]
     #[inline(always)]
     pub const fn set_upllcm(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "UPLL Clock Monitor Reset Enable"]
+    #[doc = "UPLL Clock Monitor Reset Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn upllcmre(&self) -> super::vals::Upllcmre {
         let val = (self.0 >> 17usize) & 0x01;
         super::vals::Upllcmre::from_bits(val as u8)
     }
-    #[doc = "UPLL Clock Monitor Reset Enable"]
+    #[doc = "UPLL Clock Monitor Reset Enable."]
     #[inline(always)]
     pub const fn set_upllcmre(&mut self, val: super::vals::Upllcmre) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
     }
-    #[doc = "Lock Register"]
+    #[doc = "Lock Register."]
     #[must_use]
     #[inline(always)]
     pub const fn lk(&self) -> super::vals::UpllcsrLk {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::UpllcsrLk::from_bits(val as u8)
     }
-    #[doc = "Lock Register"]
+    #[doc = "Lock Register."]
     #[inline(always)]
     pub const fn set_lk(&mut self, val: super::vals::UpllcsrLk) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
     }
-    #[doc = "UPLL Valid"]
+    #[doc = "UPLL Valid."]
     #[must_use]
     #[inline(always)]
     pub const fn upllvld(&self) -> super::vals::Upllvld {
         let val = (self.0 >> 24usize) & 0x01;
         super::vals::Upllvld::from_bits(val as u8)
     }
-    #[doc = "UPLL Valid"]
+    #[doc = "UPLL Valid."]
     #[inline(always)]
     pub const fn set_upllvld(&mut self, val: super::vals::Upllvld) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
     }
-    #[doc = "UPLL Selected"]
+    #[doc = "UPLL Selected."]
     #[must_use]
     #[inline(always)]
     pub const fn upllsel(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "UPLL Selected"]
+    #[doc = "UPLL Selected."]
     #[inline(always)]
     pub const fn set_upllsel(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "UPLL Clock Error"]
+    #[doc = "UPLL Clock Error."]
     #[must_use]
     #[inline(always)]
     pub const fn upllerr(&self) -> super::vals::Upllerr {
         let val = (self.0 >> 26usize) & 0x01;
         super::vals::Upllerr::from_bits(val as u8)
     }
-    #[doc = "UPLL Clock Error"]
+    #[doc = "UPLL Clock Error."]
     #[inline(always)]
     pub const fn set_upllerr(&mut self, val: super::vals::Upllerr) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
@@ -3386,19 +3386,19 @@ impl defmt::Format for Upllcsr {
         )
     }
 }
-#[doc = "Version ID Register"]
+#[doc = "Version ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Verid(pub u32);
 impl Verid {
-    #[doc = "SCG Version Number"]
+    #[doc = "SCG Version Number."]
     #[must_use]
     #[inline(always)]
     pub const fn version(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "SCG Version Number"]
+    #[doc = "SCG Version Number."]
     #[inline(always)]
     pub const fn set_version(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);

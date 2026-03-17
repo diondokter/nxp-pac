@@ -2,7 +2,7 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RtcOscPd {
-    #[doc = "The RTC oscillator is enabled. This bit must be cleared in order for the RTC module to function"]
+    #[doc = "The RTC oscillator is enabled. This bit must be cleared in order for the RTC module to function."]
     ENABLE = 0x0,
     #[doc = "The RTC oscillator is shut-off to reserve power consumption. RTC operation is disabled."]
     SHUT_OFF = 0x01,

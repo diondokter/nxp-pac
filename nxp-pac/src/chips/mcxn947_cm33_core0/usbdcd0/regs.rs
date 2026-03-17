@@ -1,28 +1,28 @@
-#[doc = "Clock"]
+#[doc = "Clock."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Clock(pub u32);
 impl Clock {
-    #[doc = "Unit of Measurement Encoding for Clock Speed"]
+    #[doc = "Unit of Measurement Encoding for Clock Speed."]
     #[must_use]
     #[inline(always)]
     pub const fn clock_unit(&self) -> super::vals::ClockUnit {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::ClockUnit::from_bits(val as u8)
     }
-    #[doc = "Unit of Measurement Encoding for Clock Speed"]
+    #[doc = "Unit of Measurement Encoding for Clock Speed."]
     #[inline(always)]
     pub const fn set_clock_unit(&mut self, val: super::vals::ClockUnit) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Numerical Value of Clock Speed in Binary"]
+    #[doc = "Numerical Value of Clock Speed in Binary."]
     #[must_use]
     #[inline(always)]
     pub const fn clock_speed(&self) -> u16 {
         let val = (self.0 >> 2usize) & 0x03ff;
         val as u16
     }
-    #[doc = "Numerical Value of Clock Speed in Binary"]
+    #[doc = "Numerical Value of Clock Speed in Binary."]
     #[inline(always)]
     pub const fn set_clock_speed(&mut self, val: u16) {
         self.0 = (self.0 & !(0x03ff << 2usize)) | (((val as u32) & 0x03ff) << 2usize);
@@ -53,79 +53,79 @@ impl defmt::Format for Clock {
         )
     }
 }
-#[doc = "Control"]
+#[doc = "Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Control(pub u32);
 impl Control {
-    #[doc = "Interrupt Acknowledge"]
+    #[doc = "Interrupt Acknowledge."]
     #[must_use]
     #[inline(always)]
     pub const fn iack(&self) -> super::vals::Iack {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Iack::from_bits(val as u8)
     }
-    #[doc = "Interrupt Acknowledge"]
+    #[doc = "Interrupt Acknowledge."]
     #[inline(always)]
     pub const fn set_iack(&mut self, val: super::vals::Iack) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Interrupt Flag"]
+    #[doc = "Interrupt Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn if_(&self) -> super::vals::If {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::If::from_bits(val as u8)
     }
-    #[doc = "Interrupt Flag"]
+    #[doc = "Interrupt Flag."]
     #[inline(always)]
     pub const fn set_if_(&mut self, val: super::vals::If) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
-    #[doc = "Interrupt Enable"]
+    #[doc = "Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ie(&self) -> super::vals::Ie {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::Ie::from_bits(val as u8)
     }
-    #[doc = "Interrupt Enable"]
+    #[doc = "Interrupt Enable."]
     #[inline(always)]
     pub const fn set_ie(&mut self, val: super::vals::Ie) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
     }
-    #[doc = "Battery Charging Revision 1.2 Compatibility"]
+    #[doc = "Battery Charging Revision 1.2 Compatibility."]
     #[must_use]
     #[inline(always)]
     pub const fn bc12(&self) -> super::vals::Bc12 {
         let val = (self.0 >> 17usize) & 0x01;
         super::vals::Bc12::from_bits(val as u8)
     }
-    #[doc = "Battery Charging Revision 1.2 Compatibility"]
+    #[doc = "Battery Charging Revision 1.2 Compatibility."]
     #[inline(always)]
     pub const fn set_bc12(&mut self, val: super::vals::Bc12) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
     }
-    #[doc = "Start Change Detection Sequence"]
+    #[doc = "Start Change Detection Sequence."]
     #[must_use]
     #[inline(always)]
     pub const fn start(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "Start Change Detection Sequence"]
+    #[doc = "Start Change Detection Sequence."]
     #[inline(always)]
     pub const fn set_start(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "Software Reset"]
+    #[doc = "Software Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn sr(&self) -> super::vals::Sr {
         let val = (self.0 >> 25usize) & 0x01;
         super::vals::Sr::from_bits(val as u8)
     }
-    #[doc = "Software Reset"]
+    #[doc = "Software Reset."]
     #[inline(always)]
     pub const fn set_sr(&mut self, val: super::vals::Sr) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val.to_bits() as u32) & 0x01) << 25usize);
@@ -164,19 +164,19 @@ impl defmt::Format for Control {
         )
     }
 }
-#[doc = "Signal Override"]
+#[doc = "Signal Override."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SignalOverride(pub u32);
 impl SignalOverride {
-    #[doc = "Phase Selection"]
+    #[doc = "Phase Selection."]
     #[must_use]
     #[inline(always)]
     pub const fn ps(&self) -> super::vals::Ps {
         let val = (self.0 >> 0usize) & 0x07;
         super::vals::Ps::from_bits(val as u8)
     }
-    #[doc = "Phase Selection"]
+    #[doc = "Phase Selection."]
     #[inline(always)]
     pub const fn set_ps(&mut self, val: super::vals::Ps) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
@@ -201,67 +201,67 @@ impl defmt::Format for SignalOverride {
         defmt::write!(f, "SignalOverride {{ ps: {:?} }}", self.ps())
     }
 }
-#[doc = "Status"]
+#[doc = "Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Status(pub u32);
 impl Status {
-    #[doc = "Charger Detection Sequence Results"]
+    #[doc = "Charger Detection Sequence Results."]
     #[must_use]
     #[inline(always)]
     pub const fn seq_res(&self) -> super::vals::SeqRes {
         let val = (self.0 >> 16usize) & 0x03;
         super::vals::SeqRes::from_bits(val as u8)
     }
-    #[doc = "Charger Detection Sequence Results"]
+    #[doc = "Charger Detection Sequence Results."]
     #[inline(always)]
     pub const fn set_seq_res(&mut self, val: super::vals::SeqRes) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
-    #[doc = "Charger Detection Sequence Status"]
+    #[doc = "Charger Detection Sequence Status."]
     #[must_use]
     #[inline(always)]
     pub const fn seq_stat(&self) -> super::vals::SeqStat {
         let val = (self.0 >> 18usize) & 0x03;
         super::vals::SeqStat::from_bits(val as u8)
     }
-    #[doc = "Charger Detection Sequence Status"]
+    #[doc = "Charger Detection Sequence Status."]
     #[inline(always)]
     pub const fn set_seq_stat(&mut self, val: super::vals::SeqStat) {
         self.0 = (self.0 & !(0x03 << 18usize)) | (((val.to_bits() as u32) & 0x03) << 18usize);
     }
-    #[doc = "Error Flag"]
+    #[doc = "Error Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn err(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Error Flag"]
+    #[doc = "Error Flag."]
     #[inline(always)]
     pub const fn set_err(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Timeout Flag"]
+    #[doc = "Timeout Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn to(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Timeout Flag"]
+    #[doc = "Timeout Flag."]
     #[inline(always)]
     pub const fn set_to(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "Active Status Indicator"]
+    #[doc = "Active Status Indicator."]
     #[must_use]
     #[inline(always)]
     pub const fn active(&self) -> super::vals::Active {
         let val = (self.0 >> 22usize) & 0x01;
         super::vals::Active::from_bits(val as u8)
     }
-    #[doc = "Active Status Indicator"]
+    #[doc = "Active Status Indicator."]
     #[inline(always)]
     pub const fn set_active(&mut self, val: super::vals::Active) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
@@ -298,31 +298,31 @@ impl defmt::Format for Status {
         )
     }
 }
-#[doc = "TIMER0"]
+#[doc = "TIMER0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Timer0(pub u32);
 impl Timer0 {
-    #[doc = "Unit Connection Timer Elapse (in ms)"]
+    #[doc = "Unit Connection Timer Elapse (in ms)."]
     #[must_use]
     #[inline(always)]
     pub const fn tunitcon(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Unit Connection Timer Elapse (in ms)"]
+    #[doc = "Unit Connection Timer Elapse (in ms)."]
     #[inline(always)]
     pub const fn set_tunitcon(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
     }
-    #[doc = "Sequence Initiation Time"]
+    #[doc = "Sequence Initiation Time."]
     #[must_use]
     #[inline(always)]
     pub const fn tseq_init(&self) -> super::vals::TseqInit {
         let val = (self.0 >> 16usize) & 0x03ff;
         super::vals::TseqInit::from_bits(val as u16)
     }
-    #[doc = "Sequence Initiation Time"]
+    #[doc = "Sequence Initiation Time."]
     #[inline(always)]
     pub const fn set_tseq_init(&mut self, val: super::vals::TseqInit) {
         self.0 = (self.0 & !(0x03ff << 16usize)) | (((val.to_bits() as u32) & 0x03ff) << 16usize);
@@ -353,31 +353,31 @@ impl defmt::Format for Timer0 {
         )
     }
 }
-#[doc = "TIMER1"]
+#[doc = "TIMER1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Timer1(pub u32);
 impl Timer1 {
-    #[doc = "Time Period Comparator Enabled"]
+    #[doc = "Time Period Comparator Enabled."]
     #[must_use]
     #[inline(always)]
     pub const fn tvdpsrc_on(&self) -> super::vals::TvdpsrcOn {
         let val = (self.0 >> 0usize) & 0x03ff;
         super::vals::TvdpsrcOn::from_bits(val as u16)
     }
-    #[doc = "Time Period Comparator Enabled"]
+    #[doc = "Time Period Comparator Enabled."]
     #[inline(always)]
     pub const fn set_tvdpsrc_on(&mut self, val: super::vals::TvdpsrcOn) {
         self.0 = (self.0 & !(0x03ff << 0usize)) | (((val.to_bits() as u32) & 0x03ff) << 0usize);
     }
-    #[doc = "Time Period to Debounce D+ Signal"]
+    #[doc = "Time Period to Debounce D+ Signal."]
     #[must_use]
     #[inline(always)]
     pub const fn tdcd_dbnc(&self) -> super::vals::TdcdDbnc {
         let val = (self.0 >> 16usize) & 0x03ff;
         super::vals::TdcdDbnc::from_bits(val as u16)
     }
-    #[doc = "Time Period to Debounce D+ Signal"]
+    #[doc = "Time Period to Debounce D+ Signal."]
     #[inline(always)]
     pub const fn set_tdcd_dbnc(&mut self, val: super::vals::TdcdDbnc) {
         self.0 = (self.0 & !(0x03ff << 16usize)) | (((val.to_bits() as u32) & 0x03ff) << 16usize);
@@ -408,31 +408,31 @@ impl defmt::Format for Timer1 {
         )
     }
 }
-#[doc = "TIMER2_BC11"]
+#[doc = "TIMER2_BC11."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Timer2Bc11(pub u32);
 impl Timer2Bc11 {
-    #[doc = "Time Before Check of D- Line"]
+    #[doc = "Time Before Check of D- Line."]
     #[must_use]
     #[inline(always)]
     pub const fn check_dm(&self) -> super::vals::CheckDm {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::CheckDm::from_bits(val as u8)
     }
-    #[doc = "Time Before Check of D- Line"]
+    #[doc = "Time Before Check of D- Line."]
     #[inline(always)]
     pub const fn set_check_dm(&mut self, val: super::vals::CheckDm) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Time Period Before Enabling D+ Pullup"]
+    #[doc = "Time Period Before Enabling D+ Pullup."]
     #[must_use]
     #[inline(always)]
     pub const fn tvdpsrc_con(&self) -> super::vals::TvdpsrcCon {
         let val = (self.0 >> 16usize) & 0x03ff;
         super::vals::TvdpsrcCon::from_bits(val as u16)
     }
-    #[doc = "Time Period Before Enabling D+ Pullup"]
+    #[doc = "Time Period Before Enabling D+ Pullup."]
     #[inline(always)]
     pub const fn set_tvdpsrc_con(&mut self, val: super::vals::TvdpsrcCon) {
         self.0 = (self.0 & !(0x03ff << 16usize)) | (((val.to_bits() as u32) & 0x03ff) << 16usize);
@@ -463,31 +463,31 @@ impl defmt::Format for Timer2Bc11 {
         )
     }
 }
-#[doc = "TIMER2_BC12"]
+#[doc = "TIMER2_BC12."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Timer2Bc12(pub u32);
 impl Timer2Bc12 {
-    #[doc = "TVDMSRC_ON"]
+    #[doc = "TVDMSRC_ON."]
     #[must_use]
     #[inline(always)]
     pub const fn tvdmsrc_on(&self) -> super::vals::TvdmsrcOn {
         let val = (self.0 >> 0usize) & 0x03ff;
         super::vals::TvdmsrcOn::from_bits(val as u16)
     }
-    #[doc = "TVDMSRC_ON"]
+    #[doc = "TVDMSRC_ON."]
     #[inline(always)]
     pub const fn set_tvdmsrc_on(&mut self, val: super::vals::TvdmsrcOn) {
         self.0 = (self.0 & !(0x03ff << 0usize)) | (((val.to_bits() as u32) & 0x03ff) << 0usize);
     }
-    #[doc = "TWAIT_AFTER_PRD"]
+    #[doc = "TWAIT_AFTER_PRD."]
     #[must_use]
     #[inline(always)]
     pub const fn twait_after_prd(&self) -> super::vals::TwaitAfterPrd {
         let val = (self.0 >> 16usize) & 0x03ff;
         super::vals::TwaitAfterPrd::from_bits(val as u16)
     }
-    #[doc = "TWAIT_AFTER_PRD"]
+    #[doc = "TWAIT_AFTER_PRD."]
     #[inline(always)]
     pub const fn set_twait_after_prd(&mut self, val: super::vals::TwaitAfterPrd) {
         self.0 = (self.0 & !(0x03ff << 16usize)) | (((val.to_bits() as u32) & 0x03ff) << 16usize);

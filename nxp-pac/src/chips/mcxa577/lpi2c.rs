@@ -1,4 +1,4 @@
-#[doc = "Low-Power Inter-Integrated Circuit"]
+#[doc = "Low-Power Inter-Integrated Circuit."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lpi2c {
     ptr: *mut u8,
@@ -14,157 +14,157 @@ impl Lpi2c {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "Version ID"]
+    #[doc = "Version ID."]
     #[inline(always)]
     pub const fn verid(self) -> crate::common::Reg<regs::Verid, crate::common::R> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
     }
-    #[doc = "Parameter"]
+    #[doc = "Parameter."]
     #[inline(always)]
     pub const fn param(self) -> crate::common::Reg<regs::Param, crate::common::R> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
     }
-    #[doc = "Controller Control"]
+    #[doc = "Controller Control."]
     #[inline(always)]
     pub const fn mcr(self) -> crate::common::Reg<regs::Mcr, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x10usize) as _) }
     }
-    #[doc = "Controller Status"]
+    #[doc = "Controller Status."]
     #[inline(always)]
     pub const fn msr(self) -> crate::common::Reg<regs::Msr, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x14usize) as _) }
     }
-    #[doc = "Controller Interrupt Enable"]
+    #[doc = "Controller Interrupt Enable."]
     #[inline(always)]
     pub const fn mier(self) -> crate::common::Reg<regs::Mier, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x18usize) as _) }
     }
-    #[doc = "Controller DMA Enable"]
+    #[doc = "Controller DMA Enable."]
     #[inline(always)]
     pub const fn mder(self) -> crate::common::Reg<regs::Mder, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x1cusize) as _) }
     }
-    #[doc = "Controller Configuration 0"]
+    #[doc = "Controller Configuration 0."]
     #[inline(always)]
     pub const fn mcfgr0(self) -> crate::common::Reg<regs::Mcfgr0, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x20usize) as _) }
     }
-    #[doc = "Controller Configuration 1"]
+    #[doc = "Controller Configuration 1."]
     #[inline(always)]
     pub const fn mcfgr1(self) -> crate::common::Reg<regs::Mcfgr1, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x24usize) as _) }
     }
-    #[doc = "Controller Configuration 2"]
+    #[doc = "Controller Configuration 2."]
     #[inline(always)]
     pub const fn mcfgr2(self) -> crate::common::Reg<regs::Mcfgr2, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x28usize) as _) }
     }
-    #[doc = "Controller Configuration 3"]
+    #[doc = "Controller Configuration 3."]
     #[inline(always)]
     pub const fn mcfgr3(self) -> crate::common::Reg<regs::Mcfgr3, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x2cusize) as _) }
     }
-    #[doc = "Controller Data Match"]
+    #[doc = "Controller Data Match."]
     #[inline(always)]
     pub const fn mdmr(self) -> crate::common::Reg<regs::Mdmr, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x40usize) as _) }
     }
-    #[doc = "Controller Clock Configuration 0"]
+    #[doc = "Controller Clock Configuration 0."]
     #[inline(always)]
     pub const fn mccr0(self) -> crate::common::Reg<regs::Mccr0, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x48usize) as _) }
     }
-    #[doc = "Controller Clock Configuration 1"]
+    #[doc = "Controller Clock Configuration 1."]
     #[inline(always)]
     pub const fn mccr1(self) -> crate::common::Reg<regs::Mccr1, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x50usize) as _) }
     }
-    #[doc = "Controller FIFO Control"]
+    #[doc = "Controller FIFO Control."]
     #[inline(always)]
     pub const fn mfcr(self) -> crate::common::Reg<regs::Mfcr, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x58usize) as _) }
     }
-    #[doc = "Controller FIFO Status"]
+    #[doc = "Controller FIFO Status."]
     #[inline(always)]
     pub const fn mfsr(self) -> crate::common::Reg<regs::Mfsr, crate::common::R> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x5cusize) as _) }
     }
-    #[doc = "Controller Transmit Data"]
+    #[doc = "Controller Transmit Data."]
     #[inline(always)]
     pub const fn mtdr(self) -> crate::common::Reg<regs::Mtdr, crate::common::W> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x60usize) as _) }
     }
-    #[doc = "Controller Receive Data"]
+    #[doc = "Controller Receive Data."]
     #[inline(always)]
     pub const fn mrdr(self) -> crate::common::Reg<regs::Mrdr, crate::common::R> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x70usize) as _) }
     }
-    #[doc = "Controller Receive Data Read Only"]
+    #[doc = "Controller Receive Data Read Only."]
     #[inline(always)]
     pub const fn mrdror(self) -> crate::common::Reg<regs::Mrdror, crate::common::R> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x78usize) as _) }
     }
-    #[doc = "Target Control"]
+    #[doc = "Target Control."]
     #[inline(always)]
     pub const fn scr(self) -> crate::common::Reg<regs::Scr, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0110usize) as _) }
     }
-    #[doc = "Target Status"]
+    #[doc = "Target Status."]
     #[inline(always)]
     pub const fn ssr(self) -> crate::common::Reg<regs::Ssr, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0114usize) as _) }
     }
-    #[doc = "Target Interrupt Enable"]
+    #[doc = "Target Interrupt Enable."]
     #[inline(always)]
     pub const fn sier(self) -> crate::common::Reg<regs::Sier, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0118usize) as _) }
     }
-    #[doc = "Target DMA Enable"]
+    #[doc = "Target DMA Enable."]
     #[inline(always)]
     pub const fn sder(self) -> crate::common::Reg<regs::Sder, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x011cusize) as _) }
     }
-    #[doc = "Target Configuration 0"]
+    #[doc = "Target Configuration 0."]
     #[inline(always)]
     pub const fn scfgr0(self) -> crate::common::Reg<regs::Scfgr0, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0120usize) as _) }
     }
-    #[doc = "Target Configuration 1"]
+    #[doc = "Target Configuration 1."]
     #[inline(always)]
     pub const fn scfgr1(self) -> crate::common::Reg<regs::Scfgr1, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0124usize) as _) }
     }
-    #[doc = "Target Configuration 2"]
+    #[doc = "Target Configuration 2."]
     #[inline(always)]
     pub const fn scfgr2(self) -> crate::common::Reg<regs::Scfgr2, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0128usize) as _) }
     }
-    #[doc = "Target Address Match"]
+    #[doc = "Target Address Match."]
     #[inline(always)]
     pub const fn samr(self) -> crate::common::Reg<regs::Samr, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0140usize) as _) }
     }
-    #[doc = "Target Address Status"]
+    #[doc = "Target Address Status."]
     #[inline(always)]
     pub const fn sasr(self) -> crate::common::Reg<regs::Sasr, crate::common::R> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0150usize) as _) }
     }
-    #[doc = "Target Transmit ACK"]
+    #[doc = "Target Transmit ACK."]
     #[inline(always)]
     pub const fn star(self) -> crate::common::Reg<regs::Star, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0154usize) as _) }
     }
-    #[doc = "Target Transmit Data"]
+    #[doc = "Target Transmit Data."]
     #[inline(always)]
     pub const fn stdr(self) -> crate::common::Reg<regs::Stdr, crate::common::W> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0160usize) as _) }
     }
-    #[doc = "Target Receive Data"]
+    #[doc = "Target Receive Data."]
     #[inline(always)]
     pub const fn srdr(self) -> crate::common::Reg<regs::Srdr, crate::common::R> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0170usize) as _) }
     }
-    #[doc = "Target Receive Data Read Only"]
+    #[doc = "Target Receive Data Read Only."]
     #[inline(always)]
     pub const fn srdror(self) -> crate::common::Reg<regs::Srdror, crate::common::R> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0178usize) as _) }

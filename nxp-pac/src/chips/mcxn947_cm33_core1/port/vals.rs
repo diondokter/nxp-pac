@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edf0 {
-    #[doc = "No EFT event detected"]
+    #[doc = "No EFT event detected."]
     EDIE0 = 0x0,
-    #[doc = "High or/and low EFT event detected"]
+    #[doc = "High or/and low EFT event detected."]
     EDIE1 = 0x01,
 }
 impl Edf0 {
@@ -33,9 +33,9 @@ impl From<Edf0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edf1 {
-    #[doc = "No EFT event detected"]
+    #[doc = "No EFT event detected."]
     EDIE0 = 0x0,
-    #[doc = "High or/and low EFT event detected"]
+    #[doc = "High or/and low EFT event detected."]
     EDIE1 = 0x01,
 }
 impl Edf1 {
@@ -64,9 +64,9 @@ impl From<Edf1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edf10 {
-    #[doc = "No EFT event detected"]
+    #[doc = "No EFT event detected."]
     EDIE0 = 0x0,
-    #[doc = "High or/and low EFT event detected"]
+    #[doc = "High or/and low EFT event detected."]
     EDIE1 = 0x01,
 }
 impl Edf10 {
@@ -95,9 +95,9 @@ impl From<Edf10> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edf11 {
-    #[doc = "No EFT event detected"]
+    #[doc = "No EFT event detected."]
     EDIE0 = 0x0,
-    #[doc = "High or/and low EFT event detected"]
+    #[doc = "High or/and low EFT event detected."]
     EDIE1 = 0x01,
 }
 impl Edf11 {
@@ -126,9 +126,9 @@ impl From<Edf11> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edf12 {
-    #[doc = "No EFT event detected"]
+    #[doc = "No EFT event detected."]
     EDIE0 = 0x0,
-    #[doc = "High or/and low EFT event detected"]
+    #[doc = "High or/and low EFT event detected."]
     EDIE1 = 0x01,
 }
 impl Edf12 {
@@ -157,9 +157,9 @@ impl From<Edf12> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edf13 {
-    #[doc = "No EFT event detected"]
+    #[doc = "No EFT event detected."]
     EDIE0 = 0x0,
-    #[doc = "High or/and low EFT event detected"]
+    #[doc = "High or/and low EFT event detected."]
     EDIE1 = 0x01,
 }
 impl Edf13 {
@@ -188,9 +188,9 @@ impl From<Edf13> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edf14 {
-    #[doc = "No EFT event detected"]
+    #[doc = "No EFT event detected."]
     EDIE0 = 0x0,
-    #[doc = "High or/and low EFT event detected"]
+    #[doc = "High or/and low EFT event detected."]
     EDIE1 = 0x01,
 }
 impl Edf14 {
@@ -219,9 +219,9 @@ impl From<Edf14> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edf15 {
-    #[doc = "No EFT event detected"]
+    #[doc = "No EFT event detected."]
     EDIE0 = 0x0,
-    #[doc = "High or/and low EFT event detected"]
+    #[doc = "High or/and low EFT event detected."]
     EDIE1 = 0x01,
 }
 impl Edf15 {
@@ -250,9 +250,9 @@ impl From<Edf15> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edf16 {
-    #[doc = "No EFT event detected"]
+    #[doc = "No EFT event detected."]
     EDIE0 = 0x0,
-    #[doc = "High or/and low EFT event detected"]
+    #[doc = "High or/and low EFT event detected."]
     EDIE1 = 0x01,
 }
 impl Edf16 {
@@ -281,9 +281,9 @@ impl From<Edf16> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edf17 {
-    #[doc = "No EFT event detected"]
+    #[doc = "No EFT event detected."]
     EDIE0 = 0x0,
-    #[doc = "High or/and low EFT event detected"]
+    #[doc = "High or/and low EFT event detected."]
     EDIE1 = 0x01,
 }
 impl Edf17 {
@@ -312,9 +312,9 @@ impl From<Edf17> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edf18 {
-    #[doc = "No EFT event detected"]
+    #[doc = "No EFT event detected."]
     EDIE0 = 0x0,
-    #[doc = "High or/and low EFT event detected"]
+    #[doc = "High or/and low EFT event detected."]
     EDIE1 = 0x01,
 }
 impl Edf18 {
@@ -343,9 +343,9 @@ impl From<Edf18> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edf19 {
-    #[doc = "No EFT event detected"]
+    #[doc = "No EFT event detected."]
     EDIE0 = 0x0,
-    #[doc = "High or/and low EFT event detected"]
+    #[doc = "High or/and low EFT event detected."]
     EDIE1 = 0x01,
 }
 impl Edf19 {
@@ -374,9 +374,9 @@ impl From<Edf19> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edf2 {
-    #[doc = "No EFT event detected"]
+    #[doc = "No EFT event detected."]
     EDIE0 = 0x0,
-    #[doc = "High or/and low EFT event detected"]
+    #[doc = "High or/and low EFT event detected."]
     EDIE1 = 0x01,
 }
 impl Edf2 {
@@ -405,9 +405,9 @@ impl From<Edf2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edf20 {
-    #[doc = "No EFT event detected"]
+    #[doc = "No EFT event detected."]
     EDIE0 = 0x0,
-    #[doc = "High or/and low EFT event detected"]
+    #[doc = "High or/and low EFT event detected."]
     EDIE1 = 0x01,
 }
 impl Edf20 {
@@ -436,9 +436,9 @@ impl From<Edf20> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edf21 {
-    #[doc = "No EFT event detected"]
+    #[doc = "No EFT event detected."]
     EDIE0 = 0x0,
-    #[doc = "High or/and low EFT event detected"]
+    #[doc = "High or/and low EFT event detected."]
     EDIE1 = 0x01,
 }
 impl Edf21 {
@@ -467,9 +467,9 @@ impl From<Edf21> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edf22 {
-    #[doc = "No EFT event detected"]
+    #[doc = "No EFT event detected."]
     EDIE0 = 0x0,
-    #[doc = "High or/and low EFT event detected"]
+    #[doc = "High or/and low EFT event detected."]
     EDIE1 = 0x01,
 }
 impl Edf22 {
@@ -498,9 +498,9 @@ impl From<Edf22> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edf23 {
-    #[doc = "No EFT event detected"]
+    #[doc = "No EFT event detected."]
     EDIE0 = 0x0,
-    #[doc = "High or/and low EFT event detected"]
+    #[doc = "High or/and low EFT event detected."]
     EDIE1 = 0x01,
 }
 impl Edf23 {
@@ -529,9 +529,9 @@ impl From<Edf23> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edf24 {
-    #[doc = "No EFT event detected"]
+    #[doc = "No EFT event detected."]
     EDIE0 = 0x0,
-    #[doc = "High or/and low EFT event detected"]
+    #[doc = "High or/and low EFT event detected."]
     EDIE1 = 0x01,
 }
 impl Edf24 {
@@ -560,9 +560,9 @@ impl From<Edf24> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edf25 {
-    #[doc = "No EFT event detected"]
+    #[doc = "No EFT event detected."]
     EDIE0 = 0x0,
-    #[doc = "High or/and low EFT event detected"]
+    #[doc = "High or/and low EFT event detected."]
     EDIE1 = 0x01,
 }
 impl Edf25 {
@@ -591,9 +591,9 @@ impl From<Edf25> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edf26 {
-    #[doc = "No EFT event detected"]
+    #[doc = "No EFT event detected."]
     EDIE0 = 0x0,
-    #[doc = "High or/and low EFT event detected"]
+    #[doc = "High or/and low EFT event detected."]
     EDIE1 = 0x01,
 }
 impl Edf26 {
@@ -622,9 +622,9 @@ impl From<Edf26> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edf27 {
-    #[doc = "No EFT event detected"]
+    #[doc = "No EFT event detected."]
     EDIE0 = 0x0,
-    #[doc = "High or/and low EFT event detected"]
+    #[doc = "High or/and low EFT event detected."]
     EDIE1 = 0x01,
 }
 impl Edf27 {
@@ -653,9 +653,9 @@ impl From<Edf27> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edf28 {
-    #[doc = "No EFT event detected"]
+    #[doc = "No EFT event detected."]
     EDIE0 = 0x0,
-    #[doc = "High or/and low EFT event detected"]
+    #[doc = "High or/and low EFT event detected."]
     EDIE1 = 0x01,
 }
 impl Edf28 {
@@ -684,9 +684,9 @@ impl From<Edf28> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edf29 {
-    #[doc = "No EFT event detected"]
+    #[doc = "No EFT event detected."]
     EDIE0 = 0x0,
-    #[doc = "High or/and low EFT event detected"]
+    #[doc = "High or/and low EFT event detected."]
     EDIE1 = 0x01,
 }
 impl Edf29 {
@@ -715,9 +715,9 @@ impl From<Edf29> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edf3 {
-    #[doc = "No EFT event detected"]
+    #[doc = "No EFT event detected."]
     EDIE0 = 0x0,
-    #[doc = "High or/and low EFT event detected"]
+    #[doc = "High or/and low EFT event detected."]
     EDIE1 = 0x01,
 }
 impl Edf3 {
@@ -746,9 +746,9 @@ impl From<Edf3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edf30 {
-    #[doc = "No EFT event detected"]
+    #[doc = "No EFT event detected."]
     EDIE0 = 0x0,
-    #[doc = "High or/and low EFT event detected"]
+    #[doc = "High or/and low EFT event detected."]
     EDIE1 = 0x01,
 }
 impl Edf30 {
@@ -777,9 +777,9 @@ impl From<Edf30> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edf31 {
-    #[doc = "No EFT event detected"]
+    #[doc = "No EFT event detected."]
     EDIE0 = 0x0,
-    #[doc = "High or/and low EFT event detected"]
+    #[doc = "High or/and low EFT event detected."]
     EDIE1 = 0x01,
 }
 impl Edf31 {
@@ -808,9 +808,9 @@ impl From<Edf31> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edf4 {
-    #[doc = "No EFT event detected"]
+    #[doc = "No EFT event detected."]
     EDIE0 = 0x0,
-    #[doc = "High or/and low EFT event detected"]
+    #[doc = "High or/and low EFT event detected."]
     EDIE1 = 0x01,
 }
 impl Edf4 {
@@ -839,9 +839,9 @@ impl From<Edf4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edf5 {
-    #[doc = "No EFT event detected"]
+    #[doc = "No EFT event detected."]
     EDIE0 = 0x0,
-    #[doc = "High or/and low EFT event detected"]
+    #[doc = "High or/and low EFT event detected."]
     EDIE1 = 0x01,
 }
 impl Edf5 {
@@ -870,9 +870,9 @@ impl From<Edf5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edf6 {
-    #[doc = "No EFT event detected"]
+    #[doc = "No EFT event detected."]
     EDIE0 = 0x0,
-    #[doc = "High or/and low EFT event detected"]
+    #[doc = "High or/and low EFT event detected."]
     EDIE1 = 0x01,
 }
 impl Edf6 {
@@ -901,9 +901,9 @@ impl From<Edf6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edf7 {
-    #[doc = "No EFT event detected"]
+    #[doc = "No EFT event detected."]
     EDIE0 = 0x0,
-    #[doc = "High or/and low EFT event detected"]
+    #[doc = "High or/and low EFT event detected."]
     EDIE1 = 0x01,
 }
 impl Edf7 {
@@ -932,9 +932,9 @@ impl From<Edf7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edf8 {
-    #[doc = "No EFT event detected"]
+    #[doc = "No EFT event detected."]
     EDIE0 = 0x0,
-    #[doc = "High or/and low EFT event detected"]
+    #[doc = "High or/and low EFT event detected."]
     EDIE1 = 0x01,
 }
 impl Edf8 {
@@ -963,9 +963,9 @@ impl From<Edf8> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edf9 {
-    #[doc = "No EFT event detected"]
+    #[doc = "No EFT event detected."]
     EDIE0 = 0x0,
-    #[doc = "High or/and low EFT event detected"]
+    #[doc = "High or/and low EFT event detected."]
     EDIE1 = 0x01,
 }
 impl Edf9 {
@@ -994,9 +994,9 @@ impl From<Edf9> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edhc {
-    #[doc = "Does not clear"]
+    #[doc = "Does not clear."]
     EDHC0 = 0x0,
-    #[doc = "Clears"]
+    #[doc = "Clears."]
     EDHC1 = 0x01,
 }
 impl Edhc {
@@ -1025,9 +1025,9 @@ impl From<Edhc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edie0 {
-    #[doc = "Interrupt not generated upon detection of the EFT event"]
+    #[doc = "Interrupt not generated upon detection of the EFT event."]
     EDIE0 = 0x0,
-    #[doc = "Interrupt generated upon detection of the EFT event"]
+    #[doc = "Interrupt generated upon detection of the EFT event."]
     EDIE1 = 0x01,
 }
 impl Edie0 {
@@ -1056,9 +1056,9 @@ impl From<Edie0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edie1 {
-    #[doc = "Interrupt not generated upon detection of the EFT event"]
+    #[doc = "Interrupt not generated upon detection of the EFT event."]
     EDIE0 = 0x0,
-    #[doc = "Interrupt generated upon detection of the EFT event"]
+    #[doc = "Interrupt generated upon detection of the EFT event."]
     EDIE1 = 0x01,
 }
 impl Edie1 {
@@ -1087,9 +1087,9 @@ impl From<Edie1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edie10 {
-    #[doc = "Interrupt not generated upon detection of the EFT event"]
+    #[doc = "Interrupt not generated upon detection of the EFT event."]
     EDIE0 = 0x0,
-    #[doc = "Interrupt generated upon detection of the EFT event"]
+    #[doc = "Interrupt generated upon detection of the EFT event."]
     EDIE1 = 0x01,
 }
 impl Edie10 {
@@ -1118,9 +1118,9 @@ impl From<Edie10> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edie11 {
-    #[doc = "Interrupt not generated upon detection of the EFT event"]
+    #[doc = "Interrupt not generated upon detection of the EFT event."]
     EDIE0 = 0x0,
-    #[doc = "Interrupt generated upon detection of the EFT event"]
+    #[doc = "Interrupt generated upon detection of the EFT event."]
     EDIE1 = 0x01,
 }
 impl Edie11 {
@@ -1149,9 +1149,9 @@ impl From<Edie11> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edie12 {
-    #[doc = "Interrupt not generated upon detection of the EFT event"]
+    #[doc = "Interrupt not generated upon detection of the EFT event."]
     EDIE0 = 0x0,
-    #[doc = "Interrupt generated upon detection of the EFT event"]
+    #[doc = "Interrupt generated upon detection of the EFT event."]
     EDIE1 = 0x01,
 }
 impl Edie12 {
@@ -1180,9 +1180,9 @@ impl From<Edie12> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edie13 {
-    #[doc = "Interrupt not generated upon detection of the EFT event"]
+    #[doc = "Interrupt not generated upon detection of the EFT event."]
     EDIE0 = 0x0,
-    #[doc = "Interrupt generated upon detection of the EFT event"]
+    #[doc = "Interrupt generated upon detection of the EFT event."]
     EDIE1 = 0x01,
 }
 impl Edie13 {
@@ -1211,9 +1211,9 @@ impl From<Edie13> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edie14 {
-    #[doc = "Interrupt not generated upon detection of the EFT event"]
+    #[doc = "Interrupt not generated upon detection of the EFT event."]
     EDIE0 = 0x0,
-    #[doc = "Interrupt generated upon detection of the EFT event"]
+    #[doc = "Interrupt generated upon detection of the EFT event."]
     EDIE1 = 0x01,
 }
 impl Edie14 {
@@ -1242,9 +1242,9 @@ impl From<Edie14> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edie15 {
-    #[doc = "Interrupt not generated upon detection of the EFT event"]
+    #[doc = "Interrupt not generated upon detection of the EFT event."]
     EDIE0 = 0x0,
-    #[doc = "Interrupt generated upon detection of the EFT event"]
+    #[doc = "Interrupt generated upon detection of the EFT event."]
     EDIE1 = 0x01,
 }
 impl Edie15 {
@@ -1273,9 +1273,9 @@ impl From<Edie15> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edie16 {
-    #[doc = "Interrupt not generated upon detection of the EFT event"]
+    #[doc = "Interrupt not generated upon detection of the EFT event."]
     EDIE0 = 0x0,
-    #[doc = "Interrupt generated upon detection of the EFT event"]
+    #[doc = "Interrupt generated upon detection of the EFT event."]
     EDIE1 = 0x01,
 }
 impl Edie16 {
@@ -1304,9 +1304,9 @@ impl From<Edie16> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edie17 {
-    #[doc = "Interrupt not generated upon detection of the EFT event"]
+    #[doc = "Interrupt not generated upon detection of the EFT event."]
     EDIE0 = 0x0,
-    #[doc = "Interrupt generated upon detection of the EFT event"]
+    #[doc = "Interrupt generated upon detection of the EFT event."]
     EDIE1 = 0x01,
 }
 impl Edie17 {
@@ -1335,9 +1335,9 @@ impl From<Edie17> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edie18 {
-    #[doc = "Interrupt not generated upon detection of the EFT event"]
+    #[doc = "Interrupt not generated upon detection of the EFT event."]
     EDIE0 = 0x0,
-    #[doc = "Interrupt generated upon detection of the EFT event"]
+    #[doc = "Interrupt generated upon detection of the EFT event."]
     EDIE1 = 0x01,
 }
 impl Edie18 {
@@ -1366,9 +1366,9 @@ impl From<Edie18> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edie19 {
-    #[doc = "Interrupt not generated upon detection of the EFT event"]
+    #[doc = "Interrupt not generated upon detection of the EFT event."]
     EDIE0 = 0x0,
-    #[doc = "Interrupt generated upon detection of the EFT event"]
+    #[doc = "Interrupt generated upon detection of the EFT event."]
     EDIE1 = 0x01,
 }
 impl Edie19 {
@@ -1397,9 +1397,9 @@ impl From<Edie19> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edie2 {
-    #[doc = "Interrupt not generated upon detection of the EFT event"]
+    #[doc = "Interrupt not generated upon detection of the EFT event."]
     EDIE0 = 0x0,
-    #[doc = "Interrupt generated upon detection of the EFT event"]
+    #[doc = "Interrupt generated upon detection of the EFT event."]
     EDIE1 = 0x01,
 }
 impl Edie2 {
@@ -1428,9 +1428,9 @@ impl From<Edie2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edie20 {
-    #[doc = "Interrupt not generated upon detection of the EFT event"]
+    #[doc = "Interrupt not generated upon detection of the EFT event."]
     EDIE0 = 0x0,
-    #[doc = "Interrupt generated upon detection of the EFT event"]
+    #[doc = "Interrupt generated upon detection of the EFT event."]
     EDIE1 = 0x01,
 }
 impl Edie20 {
@@ -1459,9 +1459,9 @@ impl From<Edie20> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edie21 {
-    #[doc = "Interrupt not generated upon detection of the EFT event"]
+    #[doc = "Interrupt not generated upon detection of the EFT event."]
     EDIE0 = 0x0,
-    #[doc = "Interrupt generated upon detection of the EFT event"]
+    #[doc = "Interrupt generated upon detection of the EFT event."]
     EDIE1 = 0x01,
 }
 impl Edie21 {
@@ -1490,9 +1490,9 @@ impl From<Edie21> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edie22 {
-    #[doc = "Interrupt not generated upon detection of the EFT event"]
+    #[doc = "Interrupt not generated upon detection of the EFT event."]
     EDIE0 = 0x0,
-    #[doc = "Interrupt generated upon detection of the EFT event"]
+    #[doc = "Interrupt generated upon detection of the EFT event."]
     EDIE1 = 0x01,
 }
 impl Edie22 {
@@ -1521,9 +1521,9 @@ impl From<Edie22> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edie23 {
-    #[doc = "Interrupt not generated upon detection of the EFT event"]
+    #[doc = "Interrupt not generated upon detection of the EFT event."]
     EDIE0 = 0x0,
-    #[doc = "Interrupt generated upon detection of the EFT event"]
+    #[doc = "Interrupt generated upon detection of the EFT event."]
     EDIE1 = 0x01,
 }
 impl Edie23 {
@@ -1552,9 +1552,9 @@ impl From<Edie23> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edie24 {
-    #[doc = "Interrupt not generated upon detection of the EFT event"]
+    #[doc = "Interrupt not generated upon detection of the EFT event."]
     EDIE0 = 0x0,
-    #[doc = "Interrupt generated upon detection of the EFT event"]
+    #[doc = "Interrupt generated upon detection of the EFT event."]
     EDIE1 = 0x01,
 }
 impl Edie24 {
@@ -1583,9 +1583,9 @@ impl From<Edie24> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edie25 {
-    #[doc = "Interrupt not generated upon detection of the EFT event"]
+    #[doc = "Interrupt not generated upon detection of the EFT event."]
     EDIE0 = 0x0,
-    #[doc = "Interrupt generated upon detection of the EFT event"]
+    #[doc = "Interrupt generated upon detection of the EFT event."]
     EDIE1 = 0x01,
 }
 impl Edie25 {
@@ -1614,9 +1614,9 @@ impl From<Edie25> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edie26 {
-    #[doc = "Interrupt not generated upon detection of the EFT event"]
+    #[doc = "Interrupt not generated upon detection of the EFT event."]
     EDIE0 = 0x0,
-    #[doc = "Interrupt generated upon detection of the EFT event"]
+    #[doc = "Interrupt generated upon detection of the EFT event."]
     EDIE1 = 0x01,
 }
 impl Edie26 {
@@ -1645,9 +1645,9 @@ impl From<Edie26> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edie27 {
-    #[doc = "Interrupt not generated upon detection of the EFT event"]
+    #[doc = "Interrupt not generated upon detection of the EFT event."]
     EDIE0 = 0x0,
-    #[doc = "Interrupt generated upon detection of the EFT event"]
+    #[doc = "Interrupt generated upon detection of the EFT event."]
     EDIE1 = 0x01,
 }
 impl Edie27 {
@@ -1676,9 +1676,9 @@ impl From<Edie27> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edie28 {
-    #[doc = "Interrupt not generated upon detection of the EFT event"]
+    #[doc = "Interrupt not generated upon detection of the EFT event."]
     EDIE0 = 0x0,
-    #[doc = "Interrupt generated upon detection of the EFT event"]
+    #[doc = "Interrupt generated upon detection of the EFT event."]
     EDIE1 = 0x01,
 }
 impl Edie28 {
@@ -1707,9 +1707,9 @@ impl From<Edie28> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edie29 {
-    #[doc = "Interrupt not generated upon detection of the EFT event"]
+    #[doc = "Interrupt not generated upon detection of the EFT event."]
     EDIE0 = 0x0,
-    #[doc = "Interrupt generated upon detection of the EFT event"]
+    #[doc = "Interrupt generated upon detection of the EFT event."]
     EDIE1 = 0x01,
 }
 impl Edie29 {
@@ -1738,9 +1738,9 @@ impl From<Edie29> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edie3 {
-    #[doc = "Interrupt not generated upon detection of the EFT event"]
+    #[doc = "Interrupt not generated upon detection of the EFT event."]
     EDIE0 = 0x0,
-    #[doc = "Interrupt generated upon detection of the EFT event"]
+    #[doc = "Interrupt generated upon detection of the EFT event."]
     EDIE1 = 0x01,
 }
 impl Edie3 {
@@ -1769,9 +1769,9 @@ impl From<Edie3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edie30 {
-    #[doc = "Interrupt not generated upon detection of the EFT event"]
+    #[doc = "Interrupt not generated upon detection of the EFT event."]
     EDIE0 = 0x0,
-    #[doc = "Interrupt generated upon detection of the EFT event"]
+    #[doc = "Interrupt generated upon detection of the EFT event."]
     EDIE1 = 0x01,
 }
 impl Edie30 {
@@ -1800,9 +1800,9 @@ impl From<Edie30> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edie31 {
-    #[doc = "Interrupt not generated upon detection of the EFT event"]
+    #[doc = "Interrupt not generated upon detection of the EFT event."]
     EDIE0 = 0x0,
-    #[doc = "Interrupt generated upon detection of the EFT event"]
+    #[doc = "Interrupt generated upon detection of the EFT event."]
     EDIE1 = 0x01,
 }
 impl Edie31 {
@@ -1831,9 +1831,9 @@ impl From<Edie31> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edie4 {
-    #[doc = "Interrupt not generated upon detection of the EFT event"]
+    #[doc = "Interrupt not generated upon detection of the EFT event."]
     EDIE0 = 0x0,
-    #[doc = "Interrupt generated upon detection of the EFT event"]
+    #[doc = "Interrupt generated upon detection of the EFT event."]
     EDIE1 = 0x01,
 }
 impl Edie4 {
@@ -1862,9 +1862,9 @@ impl From<Edie4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edie5 {
-    #[doc = "Interrupt not generated upon detection of the EFT event"]
+    #[doc = "Interrupt not generated upon detection of the EFT event."]
     EDIE0 = 0x0,
-    #[doc = "Interrupt generated upon detection of the EFT event"]
+    #[doc = "Interrupt generated upon detection of the EFT event."]
     EDIE1 = 0x01,
 }
 impl Edie5 {
@@ -1893,9 +1893,9 @@ impl From<Edie5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edie6 {
-    #[doc = "Interrupt not generated upon detection of the EFT event"]
+    #[doc = "Interrupt not generated upon detection of the EFT event."]
     EDIE0 = 0x0,
-    #[doc = "Interrupt generated upon detection of the EFT event"]
+    #[doc = "Interrupt generated upon detection of the EFT event."]
     EDIE1 = 0x01,
 }
 impl Edie6 {
@@ -1924,9 +1924,9 @@ impl From<Edie6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edie7 {
-    #[doc = "Interrupt not generated upon detection of the EFT event"]
+    #[doc = "Interrupt not generated upon detection of the EFT event."]
     EDIE0 = 0x0,
-    #[doc = "Interrupt generated upon detection of the EFT event"]
+    #[doc = "Interrupt generated upon detection of the EFT event."]
     EDIE1 = 0x01,
 }
 impl Edie7 {
@@ -1955,9 +1955,9 @@ impl From<Edie7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edie8 {
-    #[doc = "Interrupt not generated upon detection of the EFT event"]
+    #[doc = "Interrupt not generated upon detection of the EFT event."]
     EDIE0 = 0x0,
-    #[doc = "Interrupt generated upon detection of the EFT event"]
+    #[doc = "Interrupt generated upon detection of the EFT event."]
     EDIE1 = 0x01,
 }
 impl Edie8 {
@@ -1986,9 +1986,9 @@ impl From<Edie8> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edie9 {
-    #[doc = "Interrupt not generated upon detection of the EFT event"]
+    #[doc = "Interrupt not generated upon detection of the EFT event."]
     EDIE0 = 0x0,
-    #[doc = "Interrupt generated upon detection of the EFT event"]
+    #[doc = "Interrupt generated upon detection of the EFT event."]
     EDIE1 = 0x01,
 }
 impl Edie9 {
@@ -2017,9 +2017,9 @@ impl From<Edie9> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edlc {
-    #[doc = "Does not clear"]
+    #[doc = "Does not clear."]
     EDLC0 = 0x0,
-    #[doc = "Clears"]
+    #[doc = "Clears."]
     EDLC1 = 0x01,
 }
 impl Edlc {
@@ -2048,7 +2048,7 @@ impl From<Edlc> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Feature(u16);
 impl Feature {
-    #[doc = "Basic implementation"]
+    #[doc = "Basic implementation."]
     pub const FEATURE0: Self = Self(0x0);
 }
 impl Feature {
@@ -2092,9 +2092,9 @@ impl From<Feature> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpwe0 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GPWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GPWE1 = 0x01,
 }
 impl Gpwe0 {
@@ -2123,9 +2123,9 @@ impl From<Gpwe0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpwe1 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GPWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GPWE1 = 0x01,
 }
 impl Gpwe1 {
@@ -2154,9 +2154,9 @@ impl From<Gpwe1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpwe10 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GPWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GPWE1 = 0x01,
 }
 impl Gpwe10 {
@@ -2185,9 +2185,9 @@ impl From<Gpwe10> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpwe11 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GPWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GPWE1 = 0x01,
 }
 impl Gpwe11 {
@@ -2216,9 +2216,9 @@ impl From<Gpwe11> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpwe12 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GPWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GPWE1 = 0x01,
 }
 impl Gpwe12 {
@@ -2247,9 +2247,9 @@ impl From<Gpwe12> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpwe13 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GPWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GPWE1 = 0x01,
 }
 impl Gpwe13 {
@@ -2278,9 +2278,9 @@ impl From<Gpwe13> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpwe14 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GPWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GPWE1 = 0x01,
 }
 impl Gpwe14 {
@@ -2309,9 +2309,9 @@ impl From<Gpwe14> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpwe15 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GPWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GPWE1 = 0x01,
 }
 impl Gpwe15 {
@@ -2340,9 +2340,9 @@ impl From<Gpwe15> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpwe16 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GPWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GPWE1 = 0x01,
 }
 impl Gpwe16 {
@@ -2371,9 +2371,9 @@ impl From<Gpwe16> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpwe17 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GPWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GPWE1 = 0x01,
 }
 impl Gpwe17 {
@@ -2402,9 +2402,9 @@ impl From<Gpwe17> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpwe18 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GPWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GPWE1 = 0x01,
 }
 impl Gpwe18 {
@@ -2433,9 +2433,9 @@ impl From<Gpwe18> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpwe19 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GPWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GPWE1 = 0x01,
 }
 impl Gpwe19 {
@@ -2464,9 +2464,9 @@ impl From<Gpwe19> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpwe2 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GPWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GPWE1 = 0x01,
 }
 impl Gpwe2 {
@@ -2495,9 +2495,9 @@ impl From<Gpwe2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpwe20 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GPWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GPWE1 = 0x01,
 }
 impl Gpwe20 {
@@ -2526,9 +2526,9 @@ impl From<Gpwe20> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpwe21 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GPWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GPWE1 = 0x01,
 }
 impl Gpwe21 {
@@ -2557,9 +2557,9 @@ impl From<Gpwe21> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpwe22 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GPWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GPWE1 = 0x01,
 }
 impl Gpwe22 {
@@ -2588,9 +2588,9 @@ impl From<Gpwe22> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpwe23 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GPWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GPWE1 = 0x01,
 }
 impl Gpwe23 {
@@ -2619,9 +2619,9 @@ impl From<Gpwe23> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpwe24 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GPWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GPWE1 = 0x01,
 }
 impl Gpwe24 {
@@ -2650,9 +2650,9 @@ impl From<Gpwe24> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpwe25 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GPWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GPWE1 = 0x01,
 }
 impl Gpwe25 {
@@ -2681,9 +2681,9 @@ impl From<Gpwe25> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpwe26 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GPWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GPWE1 = 0x01,
 }
 impl Gpwe26 {
@@ -2712,9 +2712,9 @@ impl From<Gpwe26> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpwe27 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GPWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GPWE1 = 0x01,
 }
 impl Gpwe27 {
@@ -2743,9 +2743,9 @@ impl From<Gpwe27> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpwe28 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GPWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GPWE1 = 0x01,
 }
 impl Gpwe28 {
@@ -2774,9 +2774,9 @@ impl From<Gpwe28> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpwe29 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GPWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GPWE1 = 0x01,
 }
 impl Gpwe29 {
@@ -2805,9 +2805,9 @@ impl From<Gpwe29> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpwe3 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GPWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GPWE1 = 0x01,
 }
 impl Gpwe3 {
@@ -2836,9 +2836,9 @@ impl From<Gpwe3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpwe30 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GPWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GPWE1 = 0x01,
 }
 impl Gpwe30 {
@@ -2867,9 +2867,9 @@ impl From<Gpwe30> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpwe31 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GPWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GPWE1 = 0x01,
 }
 impl Gpwe31 {
@@ -2898,9 +2898,9 @@ impl From<Gpwe31> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpwe4 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GPWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GPWE1 = 0x01,
 }
 impl Gpwe4 {
@@ -2929,9 +2929,9 @@ impl From<Gpwe4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpwe5 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GPWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GPWE1 = 0x01,
 }
 impl Gpwe5 {
@@ -2960,9 +2960,9 @@ impl From<Gpwe5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpwe6 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GPWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GPWE1 = 0x01,
 }
 impl Gpwe6 {
@@ -2991,9 +2991,9 @@ impl From<Gpwe6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpwe7 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GPWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GPWE1 = 0x01,
 }
 impl Gpwe7 {
@@ -3022,9 +3022,9 @@ impl From<Gpwe7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpwe8 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GPWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GPWE1 = 0x01,
 }
 impl Gpwe8 {
@@ -3053,9 +3053,9 @@ impl From<Gpwe8> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpwe9 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GPWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GPWE1 = 0x01,
 }
 impl Gpwe9 {
@@ -3084,9 +3084,9 @@ impl From<Gpwe9> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr0Dse {
-    #[doc = "Low"]
+    #[doc = "Low."]
     DSE0 = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     DSE1 = 0x01,
 }
 impl Pcr0Dse {
@@ -3115,9 +3115,9 @@ impl From<Pcr0Dse> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr0Ibe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     IBE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     IBE1 = 0x01,
 }
 impl Pcr0Ibe {
@@ -3146,9 +3146,9 @@ impl From<Pcr0Ibe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr0Inv {
-    #[doc = "Does not invert"]
+    #[doc = "Does not invert."]
     INV0 = 0x0,
-    #[doc = "Inverts"]
+    #[doc = "Inverts."]
     INV1 = 0x01,
 }
 impl Pcr0Inv {
@@ -3177,9 +3177,9 @@ impl From<Pcr0Inv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr0Lk {
-    #[doc = "Does not lock"]
+    #[doc = "Does not lock."]
     LK0 = 0x0,
-    #[doc = "Locks"]
+    #[doc = "Locks."]
     LK1 = 0x01,
 }
 impl Pcr0Lk {
@@ -3208,33 +3208,33 @@ impl From<Pcr0Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr0Mux {
-    #[doc = "Alternative 0 (GPIO)"]
+    #[doc = "Alternative 0 (GPIO)."]
     MUX00 = 0x0,
-    #[doc = "Alternative 1 (chip-specific)"]
+    #[doc = "Alternative 1 (chip-specific)."]
     MUX01 = 0x01,
-    #[doc = "Alternative 2 (chip-specific)"]
+    #[doc = "Alternative 2 (chip-specific)."]
     MUX10 = 0x02,
-    #[doc = "Alternative 3 (chip-specific)"]
+    #[doc = "Alternative 3 (chip-specific)."]
     MUX11 = 0x03,
-    #[doc = "Alternative 4 (chip-specific)"]
+    #[doc = "Alternative 4 (chip-specific)."]
     MUX100 = 0x04,
-    #[doc = "Alternative 5 (chip-specific)"]
+    #[doc = "Alternative 5 (chip-specific)."]
     MUX101 = 0x05,
-    #[doc = "Alternative 6 (chip-specific)"]
+    #[doc = "Alternative 6 (chip-specific)."]
     MUX110 = 0x06,
-    #[doc = "Alternative 7 (chip-specific)"]
+    #[doc = "Alternative 7 (chip-specific)."]
     MUX111 = 0x07,
-    #[doc = "Alternative 8 (chip-specific)"]
+    #[doc = "Alternative 8 (chip-specific)."]
     MUX1000 = 0x08,
-    #[doc = "Alternative 9 (chip-specific)"]
+    #[doc = "Alternative 9 (chip-specific)."]
     MUX1001 = 0x09,
-    #[doc = "Alternative 10 (chip-specific)"]
+    #[doc = "Alternative 10 (chip-specific)."]
     MUX1010 = 0x0a,
-    #[doc = "Alternative 11 (chip-specific)"]
+    #[doc = "Alternative 11 (chip-specific)."]
     MUX1011 = 0x0b,
-    #[doc = "Alternative 12 (chip-specific)"]
+    #[doc = "Alternative 12 (chip-specific)."]
     MUX1100 = 0x0c,
-    #[doc = "Alternative 13 (chip-specific)"]
+    #[doc = "Alternative 13 (chip-specific)."]
     MUX1101 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
@@ -3265,9 +3265,9 @@ impl From<Pcr0Mux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr0Ode {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     ODE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ODE1 = 0x01,
 }
 impl Pcr0Ode {
@@ -3296,9 +3296,9 @@ impl From<Pcr0Ode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr0Pe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PE1 = 0x01,
 }
 impl Pcr0Pe {
@@ -3327,9 +3327,9 @@ impl From<Pcr0Pe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr0Ps {
-    #[doc = "Enables internal pulldown resistor"]
+    #[doc = "Enables internal pulldown resistor."]
     PS0 = 0x0,
-    #[doc = "Enables internal pullup resistor"]
+    #[doc = "Enables internal pullup resistor."]
     PS1 = 0x01,
 }
 impl Pcr0Ps {
@@ -3358,9 +3358,9 @@ impl From<Pcr0Ps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr0Sre {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     SRE0 = 0x0,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     SRE1 = 0x01,
 }
 impl Pcr0Sre {
@@ -3389,9 +3389,9 @@ impl From<Pcr0Sre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr10Dse {
-    #[doc = "Low"]
+    #[doc = "Low."]
     DSE0 = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     DSE1 = 0x01,
 }
 impl Pcr10Dse {
@@ -3420,9 +3420,9 @@ impl From<Pcr10Dse> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr10Ibe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     IBE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     IBE1 = 0x01,
 }
 impl Pcr10Ibe {
@@ -3451,9 +3451,9 @@ impl From<Pcr10Ibe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr10Inv {
-    #[doc = "Does not invert"]
+    #[doc = "Does not invert."]
     INV0 = 0x0,
-    #[doc = "Inverts"]
+    #[doc = "Inverts."]
     INV1 = 0x01,
 }
 impl Pcr10Inv {
@@ -3482,9 +3482,9 @@ impl From<Pcr10Inv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr10Lk {
-    #[doc = "Does not lock"]
+    #[doc = "Does not lock."]
     LK0 = 0x0,
-    #[doc = "Locks"]
+    #[doc = "Locks."]
     LK1 = 0x01,
 }
 impl Pcr10Lk {
@@ -3513,33 +3513,33 @@ impl From<Pcr10Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr10Mux {
-    #[doc = "Alternative 0 (GPIO)"]
+    #[doc = "Alternative 0 (GPIO)."]
     MUX00 = 0x0,
-    #[doc = "Alternative 1 (chip-specific)"]
+    #[doc = "Alternative 1 (chip-specific)."]
     MUX01 = 0x01,
-    #[doc = "Alternative 2 (chip-specific)"]
+    #[doc = "Alternative 2 (chip-specific)."]
     MUX10 = 0x02,
-    #[doc = "Alternative 3 (chip-specific)"]
+    #[doc = "Alternative 3 (chip-specific)."]
     MUX11 = 0x03,
-    #[doc = "Alternative 4 (chip-specific)"]
+    #[doc = "Alternative 4 (chip-specific)."]
     MUX100 = 0x04,
-    #[doc = "Alternative 5 (chip-specific)"]
+    #[doc = "Alternative 5 (chip-specific)."]
     MUX101 = 0x05,
-    #[doc = "Alternative 6 (chip-specific)"]
+    #[doc = "Alternative 6 (chip-specific)."]
     MUX110 = 0x06,
-    #[doc = "Alternative 7 (chip-specific)"]
+    #[doc = "Alternative 7 (chip-specific)."]
     MUX111 = 0x07,
-    #[doc = "Alternative 8 (chip-specific)"]
+    #[doc = "Alternative 8 (chip-specific)."]
     MUX1000 = 0x08,
-    #[doc = "Alternative 9 (chip-specific)"]
+    #[doc = "Alternative 9 (chip-specific)."]
     MUX1001 = 0x09,
-    #[doc = "Alternative 10 (chip-specific)"]
+    #[doc = "Alternative 10 (chip-specific)."]
     MUX1010 = 0x0a,
-    #[doc = "Alternative 11 (chip-specific)"]
+    #[doc = "Alternative 11 (chip-specific)."]
     MUX1011 = 0x0b,
-    #[doc = "Alternative 12 (chip-specific)"]
+    #[doc = "Alternative 12 (chip-specific)."]
     MUX1100 = 0x0c,
-    #[doc = "Alternative 13 (chip-specific)"]
+    #[doc = "Alternative 13 (chip-specific)."]
     MUX1101 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
@@ -3570,9 +3570,9 @@ impl From<Pcr10Mux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr10Ode {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     ODE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ODE1 = 0x01,
 }
 impl Pcr10Ode {
@@ -3601,9 +3601,9 @@ impl From<Pcr10Ode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr10Pe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PE1 = 0x01,
 }
 impl Pcr10Pe {
@@ -3632,9 +3632,9 @@ impl From<Pcr10Pe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr10Ps {
-    #[doc = "Enables internal pulldown resistor"]
+    #[doc = "Enables internal pulldown resistor."]
     PS0 = 0x0,
-    #[doc = "Enables internal pullup resistor"]
+    #[doc = "Enables internal pullup resistor."]
     PS1 = 0x01,
 }
 impl Pcr10Ps {
@@ -3663,9 +3663,9 @@ impl From<Pcr10Ps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr10Sre {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     SRE0 = 0x0,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     SRE1 = 0x01,
 }
 impl Pcr10Sre {
@@ -3694,9 +3694,9 @@ impl From<Pcr10Sre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr11Dse {
-    #[doc = "Low"]
+    #[doc = "Low."]
     DSE0 = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     DSE1 = 0x01,
 }
 impl Pcr11Dse {
@@ -3725,9 +3725,9 @@ impl From<Pcr11Dse> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr11Ibe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     IBE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     IBE1 = 0x01,
 }
 impl Pcr11Ibe {
@@ -3756,9 +3756,9 @@ impl From<Pcr11Ibe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr11Inv {
-    #[doc = "Does not invert"]
+    #[doc = "Does not invert."]
     INV0 = 0x0,
-    #[doc = "Inverts"]
+    #[doc = "Inverts."]
     INV1 = 0x01,
 }
 impl Pcr11Inv {
@@ -3787,9 +3787,9 @@ impl From<Pcr11Inv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr11Lk {
-    #[doc = "Does not lock"]
+    #[doc = "Does not lock."]
     LK0 = 0x0,
-    #[doc = "Locks"]
+    #[doc = "Locks."]
     LK1 = 0x01,
 }
 impl Pcr11Lk {
@@ -3818,33 +3818,33 @@ impl From<Pcr11Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr11Mux {
-    #[doc = "Alternative 0 (GPIO)"]
+    #[doc = "Alternative 0 (GPIO)."]
     MUX00 = 0x0,
-    #[doc = "Alternative 1 (chip-specific)"]
+    #[doc = "Alternative 1 (chip-specific)."]
     MUX01 = 0x01,
-    #[doc = "Alternative 2 (chip-specific)"]
+    #[doc = "Alternative 2 (chip-specific)."]
     MUX10 = 0x02,
-    #[doc = "Alternative 3 (chip-specific)"]
+    #[doc = "Alternative 3 (chip-specific)."]
     MUX11 = 0x03,
-    #[doc = "Alternative 4 (chip-specific)"]
+    #[doc = "Alternative 4 (chip-specific)."]
     MUX100 = 0x04,
-    #[doc = "Alternative 5 (chip-specific)"]
+    #[doc = "Alternative 5 (chip-specific)."]
     MUX101 = 0x05,
-    #[doc = "Alternative 6 (chip-specific)"]
+    #[doc = "Alternative 6 (chip-specific)."]
     MUX110 = 0x06,
-    #[doc = "Alternative 7 (chip-specific)"]
+    #[doc = "Alternative 7 (chip-specific)."]
     MUX111 = 0x07,
-    #[doc = "Alternative 8 (chip-specific)"]
+    #[doc = "Alternative 8 (chip-specific)."]
     MUX1000 = 0x08,
-    #[doc = "Alternative 9 (chip-specific)"]
+    #[doc = "Alternative 9 (chip-specific)."]
     MUX1001 = 0x09,
-    #[doc = "Alternative 10 (chip-specific)"]
+    #[doc = "Alternative 10 (chip-specific)."]
     MUX1010 = 0x0a,
-    #[doc = "Alternative 11 (chip-specific)"]
+    #[doc = "Alternative 11 (chip-specific)."]
     MUX1011 = 0x0b,
-    #[doc = "Alternative 12 (chip-specific)"]
+    #[doc = "Alternative 12 (chip-specific)."]
     MUX1100 = 0x0c,
-    #[doc = "Alternative 13 (chip-specific)"]
+    #[doc = "Alternative 13 (chip-specific)."]
     MUX1101 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
@@ -3875,9 +3875,9 @@ impl From<Pcr11Mux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr11Ode {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     ODE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ODE1 = 0x01,
 }
 impl Pcr11Ode {
@@ -3906,9 +3906,9 @@ impl From<Pcr11Ode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr11Pe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PE1 = 0x01,
 }
 impl Pcr11Pe {
@@ -3937,9 +3937,9 @@ impl From<Pcr11Pe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr11Ps {
-    #[doc = "Enables internal pulldown resistor"]
+    #[doc = "Enables internal pulldown resistor."]
     PS0 = 0x0,
-    #[doc = "Enables internal pullup resistor"]
+    #[doc = "Enables internal pullup resistor."]
     PS1 = 0x01,
 }
 impl Pcr11Ps {
@@ -3968,9 +3968,9 @@ impl From<Pcr11Ps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr11Sre {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     SRE0 = 0x0,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     SRE1 = 0x01,
 }
 impl Pcr11Sre {
@@ -3999,9 +3999,9 @@ impl From<Pcr11Sre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr12Dse {
-    #[doc = "Low"]
+    #[doc = "Low."]
     DSE0 = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     DSE1 = 0x01,
 }
 impl Pcr12Dse {
@@ -4030,9 +4030,9 @@ impl From<Pcr12Dse> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr12Ibe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     IBE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     IBE1 = 0x01,
 }
 impl Pcr12Ibe {
@@ -4061,9 +4061,9 @@ impl From<Pcr12Ibe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr12Inv {
-    #[doc = "Does not invert"]
+    #[doc = "Does not invert."]
     INV0 = 0x0,
-    #[doc = "Inverts"]
+    #[doc = "Inverts."]
     INV1 = 0x01,
 }
 impl Pcr12Inv {
@@ -4092,9 +4092,9 @@ impl From<Pcr12Inv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr12Lk {
-    #[doc = "Does not lock"]
+    #[doc = "Does not lock."]
     LK0 = 0x0,
-    #[doc = "Locks"]
+    #[doc = "Locks."]
     LK1 = 0x01,
 }
 impl Pcr12Lk {
@@ -4123,33 +4123,33 @@ impl From<Pcr12Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr12Mux {
-    #[doc = "Alternative 0 (GPIO)"]
+    #[doc = "Alternative 0 (GPIO)."]
     MUX00 = 0x0,
-    #[doc = "Alternative 1 (chip-specific)"]
+    #[doc = "Alternative 1 (chip-specific)."]
     MUX01 = 0x01,
-    #[doc = "Alternative 2 (chip-specific)"]
+    #[doc = "Alternative 2 (chip-specific)."]
     MUX10 = 0x02,
-    #[doc = "Alternative 3 (chip-specific)"]
+    #[doc = "Alternative 3 (chip-specific)."]
     MUX11 = 0x03,
-    #[doc = "Alternative 4 (chip-specific)"]
+    #[doc = "Alternative 4 (chip-specific)."]
     MUX100 = 0x04,
-    #[doc = "Alternative 5 (chip-specific)"]
+    #[doc = "Alternative 5 (chip-specific)."]
     MUX101 = 0x05,
-    #[doc = "Alternative 6 (chip-specific)"]
+    #[doc = "Alternative 6 (chip-specific)."]
     MUX110 = 0x06,
-    #[doc = "Alternative 7 (chip-specific)"]
+    #[doc = "Alternative 7 (chip-specific)."]
     MUX111 = 0x07,
-    #[doc = "Alternative 8 (chip-specific)"]
+    #[doc = "Alternative 8 (chip-specific)."]
     MUX1000 = 0x08,
-    #[doc = "Alternative 9 (chip-specific)"]
+    #[doc = "Alternative 9 (chip-specific)."]
     MUX1001 = 0x09,
-    #[doc = "Alternative 10 (chip-specific)"]
+    #[doc = "Alternative 10 (chip-specific)."]
     MUX1010 = 0x0a,
-    #[doc = "Alternative 11 (chip-specific)"]
+    #[doc = "Alternative 11 (chip-specific)."]
     MUX1011 = 0x0b,
-    #[doc = "Alternative 12 (chip-specific)"]
+    #[doc = "Alternative 12 (chip-specific)."]
     MUX1100 = 0x0c,
-    #[doc = "Alternative 13 (chip-specific)"]
+    #[doc = "Alternative 13 (chip-specific)."]
     MUX1101 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
@@ -4180,9 +4180,9 @@ impl From<Pcr12Mux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr12Ode {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     ODE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ODE1 = 0x01,
 }
 impl Pcr12Ode {
@@ -4211,9 +4211,9 @@ impl From<Pcr12Ode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr12Pe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PE1 = 0x01,
 }
 impl Pcr12Pe {
@@ -4242,9 +4242,9 @@ impl From<Pcr12Pe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr12Ps {
-    #[doc = "Enables internal pulldown resistor"]
+    #[doc = "Enables internal pulldown resistor."]
     PS0 = 0x0,
-    #[doc = "Enables internal pullup resistor"]
+    #[doc = "Enables internal pullup resistor."]
     PS1 = 0x01,
 }
 impl Pcr12Ps {
@@ -4273,9 +4273,9 @@ impl From<Pcr12Ps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr12Sre {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     SRE0 = 0x0,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     SRE1 = 0x01,
 }
 impl Pcr12Sre {
@@ -4304,9 +4304,9 @@ impl From<Pcr12Sre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr13Dse {
-    #[doc = "Low"]
+    #[doc = "Low."]
     DSE0 = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     DSE1 = 0x01,
 }
 impl Pcr13Dse {
@@ -4335,9 +4335,9 @@ impl From<Pcr13Dse> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr13Ibe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     IBE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     IBE1 = 0x01,
 }
 impl Pcr13Ibe {
@@ -4366,9 +4366,9 @@ impl From<Pcr13Ibe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr13Inv {
-    #[doc = "Does not invert"]
+    #[doc = "Does not invert."]
     INV0 = 0x0,
-    #[doc = "Inverts"]
+    #[doc = "Inverts."]
     INV1 = 0x01,
 }
 impl Pcr13Inv {
@@ -4397,9 +4397,9 @@ impl From<Pcr13Inv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr13Lk {
-    #[doc = "Does not lock"]
+    #[doc = "Does not lock."]
     LK0 = 0x0,
-    #[doc = "Locks"]
+    #[doc = "Locks."]
     LK1 = 0x01,
 }
 impl Pcr13Lk {
@@ -4428,33 +4428,33 @@ impl From<Pcr13Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr13Mux {
-    #[doc = "Alternative 0 (GPIO)"]
+    #[doc = "Alternative 0 (GPIO)."]
     MUX00 = 0x0,
-    #[doc = "Alternative 1 (chip-specific)"]
+    #[doc = "Alternative 1 (chip-specific)."]
     MUX01 = 0x01,
-    #[doc = "Alternative 2 (chip-specific)"]
+    #[doc = "Alternative 2 (chip-specific)."]
     MUX10 = 0x02,
-    #[doc = "Alternative 3 (chip-specific)"]
+    #[doc = "Alternative 3 (chip-specific)."]
     MUX11 = 0x03,
-    #[doc = "Alternative 4 (chip-specific)"]
+    #[doc = "Alternative 4 (chip-specific)."]
     MUX100 = 0x04,
-    #[doc = "Alternative 5 (chip-specific)"]
+    #[doc = "Alternative 5 (chip-specific)."]
     MUX101 = 0x05,
-    #[doc = "Alternative 6 (chip-specific)"]
+    #[doc = "Alternative 6 (chip-specific)."]
     MUX110 = 0x06,
-    #[doc = "Alternative 7 (chip-specific)"]
+    #[doc = "Alternative 7 (chip-specific)."]
     MUX111 = 0x07,
-    #[doc = "Alternative 8 (chip-specific)"]
+    #[doc = "Alternative 8 (chip-specific)."]
     MUX1000 = 0x08,
-    #[doc = "Alternative 9 (chip-specific)"]
+    #[doc = "Alternative 9 (chip-specific)."]
     MUX1001 = 0x09,
-    #[doc = "Alternative 10 (chip-specific)"]
+    #[doc = "Alternative 10 (chip-specific)."]
     MUX1010 = 0x0a,
-    #[doc = "Alternative 11 (chip-specific)"]
+    #[doc = "Alternative 11 (chip-specific)."]
     MUX1011 = 0x0b,
-    #[doc = "Alternative 12 (chip-specific)"]
+    #[doc = "Alternative 12 (chip-specific)."]
     MUX1100 = 0x0c,
-    #[doc = "Alternative 13 (chip-specific)"]
+    #[doc = "Alternative 13 (chip-specific)."]
     MUX1101 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
@@ -4485,9 +4485,9 @@ impl From<Pcr13Mux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr13Ode {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     ODE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ODE1 = 0x01,
 }
 impl Pcr13Ode {
@@ -4516,9 +4516,9 @@ impl From<Pcr13Ode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr13Pe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PE1 = 0x01,
 }
 impl Pcr13Pe {
@@ -4547,9 +4547,9 @@ impl From<Pcr13Pe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr13Ps {
-    #[doc = "Enables internal pulldown resistor"]
+    #[doc = "Enables internal pulldown resistor."]
     PS0 = 0x0,
-    #[doc = "Enables internal pullup resistor"]
+    #[doc = "Enables internal pullup resistor."]
     PS1 = 0x01,
 }
 impl Pcr13Ps {
@@ -4578,9 +4578,9 @@ impl From<Pcr13Ps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr13Sre {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     SRE0 = 0x0,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     SRE1 = 0x01,
 }
 impl Pcr13Sre {
@@ -4609,9 +4609,9 @@ impl From<Pcr13Sre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr14Dse {
-    #[doc = "Low"]
+    #[doc = "Low."]
     DSE0 = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     DSE1 = 0x01,
 }
 impl Pcr14Dse {
@@ -4640,9 +4640,9 @@ impl From<Pcr14Dse> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr14Ibe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     IBE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     IBE1 = 0x01,
 }
 impl Pcr14Ibe {
@@ -4671,9 +4671,9 @@ impl From<Pcr14Ibe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr14Inv {
-    #[doc = "Does not invert"]
+    #[doc = "Does not invert."]
     INV0 = 0x0,
-    #[doc = "Inverts"]
+    #[doc = "Inverts."]
     INV1 = 0x01,
 }
 impl Pcr14Inv {
@@ -4702,9 +4702,9 @@ impl From<Pcr14Inv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr14Lk {
-    #[doc = "Does not lock"]
+    #[doc = "Does not lock."]
     LK0 = 0x0,
-    #[doc = "Locks"]
+    #[doc = "Locks."]
     LK1 = 0x01,
 }
 impl Pcr14Lk {
@@ -4733,33 +4733,33 @@ impl From<Pcr14Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr14Mux {
-    #[doc = "Alternative 0 (GPIO)"]
+    #[doc = "Alternative 0 (GPIO)."]
     MUX00 = 0x0,
-    #[doc = "Alternative 1 (chip-specific)"]
+    #[doc = "Alternative 1 (chip-specific)."]
     MUX01 = 0x01,
-    #[doc = "Alternative 2 (chip-specific)"]
+    #[doc = "Alternative 2 (chip-specific)."]
     MUX10 = 0x02,
-    #[doc = "Alternative 3 (chip-specific)"]
+    #[doc = "Alternative 3 (chip-specific)."]
     MUX11 = 0x03,
-    #[doc = "Alternative 4 (chip-specific)"]
+    #[doc = "Alternative 4 (chip-specific)."]
     MUX100 = 0x04,
-    #[doc = "Alternative 5 (chip-specific)"]
+    #[doc = "Alternative 5 (chip-specific)."]
     MUX101 = 0x05,
-    #[doc = "Alternative 6 (chip-specific)"]
+    #[doc = "Alternative 6 (chip-specific)."]
     MUX110 = 0x06,
-    #[doc = "Alternative 7 (chip-specific)"]
+    #[doc = "Alternative 7 (chip-specific)."]
     MUX111 = 0x07,
-    #[doc = "Alternative 8 (chip-specific)"]
+    #[doc = "Alternative 8 (chip-specific)."]
     MUX1000 = 0x08,
-    #[doc = "Alternative 9 (chip-specific)"]
+    #[doc = "Alternative 9 (chip-specific)."]
     MUX1001 = 0x09,
-    #[doc = "Alternative 10 (chip-specific)"]
+    #[doc = "Alternative 10 (chip-specific)."]
     MUX1010 = 0x0a,
-    #[doc = "Alternative 11 (chip-specific)"]
+    #[doc = "Alternative 11 (chip-specific)."]
     MUX1011 = 0x0b,
-    #[doc = "Alternative 12 (chip-specific)"]
+    #[doc = "Alternative 12 (chip-specific)."]
     MUX1100 = 0x0c,
-    #[doc = "Alternative 13 (chip-specific)"]
+    #[doc = "Alternative 13 (chip-specific)."]
     MUX1101 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
@@ -4790,9 +4790,9 @@ impl From<Pcr14Mux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr14Ode {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     ODE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ODE1 = 0x01,
 }
 impl Pcr14Ode {
@@ -4821,9 +4821,9 @@ impl From<Pcr14Ode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr14Pe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PE1 = 0x01,
 }
 impl Pcr14Pe {
@@ -4852,9 +4852,9 @@ impl From<Pcr14Pe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr14Ps {
-    #[doc = "Enables internal pulldown resistor"]
+    #[doc = "Enables internal pulldown resistor."]
     PS0 = 0x0,
-    #[doc = "Enables internal pullup resistor"]
+    #[doc = "Enables internal pullup resistor."]
     PS1 = 0x01,
 }
 impl Pcr14Ps {
@@ -4883,9 +4883,9 @@ impl From<Pcr14Ps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr14Sre {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     SRE0 = 0x0,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     SRE1 = 0x01,
 }
 impl Pcr14Sre {
@@ -4914,9 +4914,9 @@ impl From<Pcr14Sre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr15Dse {
-    #[doc = "Low"]
+    #[doc = "Low."]
     DSE0 = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     DSE1 = 0x01,
 }
 impl Pcr15Dse {
@@ -4945,9 +4945,9 @@ impl From<Pcr15Dse> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr15Ibe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     IBE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     IBE1 = 0x01,
 }
 impl Pcr15Ibe {
@@ -4976,9 +4976,9 @@ impl From<Pcr15Ibe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr15Inv {
-    #[doc = "Does not invert"]
+    #[doc = "Does not invert."]
     INV0 = 0x0,
-    #[doc = "Inverts"]
+    #[doc = "Inverts."]
     INV1 = 0x01,
 }
 impl Pcr15Inv {
@@ -5007,9 +5007,9 @@ impl From<Pcr15Inv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr15Lk {
-    #[doc = "Does not lock"]
+    #[doc = "Does not lock."]
     LK0 = 0x0,
-    #[doc = "Locks"]
+    #[doc = "Locks."]
     LK1 = 0x01,
 }
 impl Pcr15Lk {
@@ -5038,33 +5038,33 @@ impl From<Pcr15Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr15Mux {
-    #[doc = "Alternative 0 (GPIO)"]
+    #[doc = "Alternative 0 (GPIO)."]
     MUX00 = 0x0,
-    #[doc = "Alternative 1 (chip-specific)"]
+    #[doc = "Alternative 1 (chip-specific)."]
     MUX01 = 0x01,
-    #[doc = "Alternative 2 (chip-specific)"]
+    #[doc = "Alternative 2 (chip-specific)."]
     MUX10 = 0x02,
-    #[doc = "Alternative 3 (chip-specific)"]
+    #[doc = "Alternative 3 (chip-specific)."]
     MUX11 = 0x03,
-    #[doc = "Alternative 4 (chip-specific)"]
+    #[doc = "Alternative 4 (chip-specific)."]
     MUX100 = 0x04,
-    #[doc = "Alternative 5 (chip-specific)"]
+    #[doc = "Alternative 5 (chip-specific)."]
     MUX101 = 0x05,
-    #[doc = "Alternative 6 (chip-specific)"]
+    #[doc = "Alternative 6 (chip-specific)."]
     MUX110 = 0x06,
-    #[doc = "Alternative 7 (chip-specific)"]
+    #[doc = "Alternative 7 (chip-specific)."]
     MUX111 = 0x07,
-    #[doc = "Alternative 8 (chip-specific)"]
+    #[doc = "Alternative 8 (chip-specific)."]
     MUX1000 = 0x08,
-    #[doc = "Alternative 9 (chip-specific)"]
+    #[doc = "Alternative 9 (chip-specific)."]
     MUX1001 = 0x09,
-    #[doc = "Alternative 10 (chip-specific)"]
+    #[doc = "Alternative 10 (chip-specific)."]
     MUX1010 = 0x0a,
-    #[doc = "Alternative 11 (chip-specific)"]
+    #[doc = "Alternative 11 (chip-specific)."]
     MUX1011 = 0x0b,
-    #[doc = "Alternative 12 (chip-specific)"]
+    #[doc = "Alternative 12 (chip-specific)."]
     MUX1100 = 0x0c,
-    #[doc = "Alternative 13 (chip-specific)"]
+    #[doc = "Alternative 13 (chip-specific)."]
     MUX1101 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
@@ -5095,9 +5095,9 @@ impl From<Pcr15Mux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr15Ode {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     ODE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ODE1 = 0x01,
 }
 impl Pcr15Ode {
@@ -5126,9 +5126,9 @@ impl From<Pcr15Ode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr15Pe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PE1 = 0x01,
 }
 impl Pcr15Pe {
@@ -5157,9 +5157,9 @@ impl From<Pcr15Pe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr15Ps {
-    #[doc = "Enables internal pulldown resistor"]
+    #[doc = "Enables internal pulldown resistor."]
     PS0 = 0x0,
-    #[doc = "Enables internal pullup resistor"]
+    #[doc = "Enables internal pullup resistor."]
     PS1 = 0x01,
 }
 impl Pcr15Ps {
@@ -5188,9 +5188,9 @@ impl From<Pcr15Ps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr15Sre {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     SRE0 = 0x0,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     SRE1 = 0x01,
 }
 impl Pcr15Sre {
@@ -5219,9 +5219,9 @@ impl From<Pcr15Sre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr16Dse {
-    #[doc = "Low"]
+    #[doc = "Low."]
     DSE0 = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     DSE1 = 0x01,
 }
 impl Pcr16Dse {
@@ -5250,9 +5250,9 @@ impl From<Pcr16Dse> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr16Ibe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     IBE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     IBE1 = 0x01,
 }
 impl Pcr16Ibe {
@@ -5281,9 +5281,9 @@ impl From<Pcr16Ibe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr16Inv {
-    #[doc = "Does not invert"]
+    #[doc = "Does not invert."]
     INV0 = 0x0,
-    #[doc = "Inverts"]
+    #[doc = "Inverts."]
     INV1 = 0x01,
 }
 impl Pcr16Inv {
@@ -5312,9 +5312,9 @@ impl From<Pcr16Inv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr16Lk {
-    #[doc = "Does not lock"]
+    #[doc = "Does not lock."]
     LK0 = 0x0,
-    #[doc = "Locks"]
+    #[doc = "Locks."]
     LK1 = 0x01,
 }
 impl Pcr16Lk {
@@ -5343,33 +5343,33 @@ impl From<Pcr16Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr16Mux {
-    #[doc = "Alternative 0 (GPIO)"]
+    #[doc = "Alternative 0 (GPIO)."]
     MUX00 = 0x0,
-    #[doc = "Alternative 1 (chip-specific)"]
+    #[doc = "Alternative 1 (chip-specific)."]
     MUX01 = 0x01,
-    #[doc = "Alternative 2 (chip-specific)"]
+    #[doc = "Alternative 2 (chip-specific)."]
     MUX10 = 0x02,
-    #[doc = "Alternative 3 (chip-specific)"]
+    #[doc = "Alternative 3 (chip-specific)."]
     MUX11 = 0x03,
-    #[doc = "Alternative 4 (chip-specific)"]
+    #[doc = "Alternative 4 (chip-specific)."]
     MUX100 = 0x04,
-    #[doc = "Alternative 5 (chip-specific)"]
+    #[doc = "Alternative 5 (chip-specific)."]
     MUX101 = 0x05,
-    #[doc = "Alternative 6 (chip-specific)"]
+    #[doc = "Alternative 6 (chip-specific)."]
     MUX110 = 0x06,
-    #[doc = "Alternative 7 (chip-specific)"]
+    #[doc = "Alternative 7 (chip-specific)."]
     MUX111 = 0x07,
-    #[doc = "Alternative 8 (chip-specific)"]
+    #[doc = "Alternative 8 (chip-specific)."]
     MUX1000 = 0x08,
-    #[doc = "Alternative 9 (chip-specific)"]
+    #[doc = "Alternative 9 (chip-specific)."]
     MUX1001 = 0x09,
-    #[doc = "Alternative 10 (chip-specific)"]
+    #[doc = "Alternative 10 (chip-specific)."]
     MUX1010 = 0x0a,
-    #[doc = "Alternative 11 (chip-specific)"]
+    #[doc = "Alternative 11 (chip-specific)."]
     MUX1011 = 0x0b,
-    #[doc = "Alternative 12 (chip-specific)"]
+    #[doc = "Alternative 12 (chip-specific)."]
     MUX1100 = 0x0c,
-    #[doc = "Alternative 13 (chip-specific)"]
+    #[doc = "Alternative 13 (chip-specific)."]
     MUX1101 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
@@ -5400,9 +5400,9 @@ impl From<Pcr16Mux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr16Ode {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     ODE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ODE1 = 0x01,
 }
 impl Pcr16Ode {
@@ -5431,9 +5431,9 @@ impl From<Pcr16Ode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr16Pe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PE1 = 0x01,
 }
 impl Pcr16Pe {
@@ -5462,9 +5462,9 @@ impl From<Pcr16Pe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr16Pfe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PFE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PFE1 = 0x01,
 }
 impl Pcr16Pfe {
@@ -5493,9 +5493,9 @@ impl From<Pcr16Pfe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr16Ps {
-    #[doc = "Enables internal pulldown resistor"]
+    #[doc = "Enables internal pulldown resistor."]
     PS0 = 0x0,
-    #[doc = "Enables internal pullup resistor"]
+    #[doc = "Enables internal pullup resistor."]
     PS1 = 0x01,
 }
 impl Pcr16Ps {
@@ -5524,9 +5524,9 @@ impl From<Pcr16Ps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr16Pv {
-    #[doc = "Low"]
+    #[doc = "Low."]
     PV0 = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     PV1 = 0x01,
 }
 impl Pcr16Pv {
@@ -5555,9 +5555,9 @@ impl From<Pcr16Pv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr16Sre {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     SRE0 = 0x0,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     SRE1 = 0x01,
 }
 impl Pcr16Sre {
@@ -5586,9 +5586,9 @@ impl From<Pcr16Sre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr17Dse {
-    #[doc = "Low"]
+    #[doc = "Low."]
     DSE0 = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     DSE1 = 0x01,
 }
 impl Pcr17Dse {
@@ -5617,9 +5617,9 @@ impl From<Pcr17Dse> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr17Ibe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     IBE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     IBE1 = 0x01,
 }
 impl Pcr17Ibe {
@@ -5648,9 +5648,9 @@ impl From<Pcr17Ibe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr17Inv {
-    #[doc = "Does not invert"]
+    #[doc = "Does not invert."]
     INV0 = 0x0,
-    #[doc = "Inverts"]
+    #[doc = "Inverts."]
     INV1 = 0x01,
 }
 impl Pcr17Inv {
@@ -5679,9 +5679,9 @@ impl From<Pcr17Inv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr17Lk {
-    #[doc = "Does not lock"]
+    #[doc = "Does not lock."]
     LK0 = 0x0,
-    #[doc = "Locks"]
+    #[doc = "Locks."]
     LK1 = 0x01,
 }
 impl Pcr17Lk {
@@ -5710,33 +5710,33 @@ impl From<Pcr17Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr17Mux {
-    #[doc = "Alternative 0 (GPIO)"]
+    #[doc = "Alternative 0 (GPIO)."]
     MUX00 = 0x0,
-    #[doc = "Alternative 1 (chip-specific)"]
+    #[doc = "Alternative 1 (chip-specific)."]
     MUX01 = 0x01,
-    #[doc = "Alternative 2 (chip-specific)"]
+    #[doc = "Alternative 2 (chip-specific)."]
     MUX10 = 0x02,
-    #[doc = "Alternative 3 (chip-specific)"]
+    #[doc = "Alternative 3 (chip-specific)."]
     MUX11 = 0x03,
-    #[doc = "Alternative 4 (chip-specific)"]
+    #[doc = "Alternative 4 (chip-specific)."]
     MUX100 = 0x04,
-    #[doc = "Alternative 5 (chip-specific)"]
+    #[doc = "Alternative 5 (chip-specific)."]
     MUX101 = 0x05,
-    #[doc = "Alternative 6 (chip-specific)"]
+    #[doc = "Alternative 6 (chip-specific)."]
     MUX110 = 0x06,
-    #[doc = "Alternative 7 (chip-specific)"]
+    #[doc = "Alternative 7 (chip-specific)."]
     MUX111 = 0x07,
-    #[doc = "Alternative 8 (chip-specific)"]
+    #[doc = "Alternative 8 (chip-specific)."]
     MUX1000 = 0x08,
-    #[doc = "Alternative 9 (chip-specific)"]
+    #[doc = "Alternative 9 (chip-specific)."]
     MUX1001 = 0x09,
-    #[doc = "Alternative 10 (chip-specific)"]
+    #[doc = "Alternative 10 (chip-specific)."]
     MUX1010 = 0x0a,
-    #[doc = "Alternative 11 (chip-specific)"]
+    #[doc = "Alternative 11 (chip-specific)."]
     MUX1011 = 0x0b,
-    #[doc = "Alternative 12 (chip-specific)"]
+    #[doc = "Alternative 12 (chip-specific)."]
     MUX1100 = 0x0c,
-    #[doc = "Alternative 13 (chip-specific)"]
+    #[doc = "Alternative 13 (chip-specific)."]
     MUX1101 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
@@ -5767,9 +5767,9 @@ impl From<Pcr17Mux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr17Ode {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     ODE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ODE1 = 0x01,
 }
 impl Pcr17Ode {
@@ -5798,9 +5798,9 @@ impl From<Pcr17Ode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr17Pe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PE1 = 0x01,
 }
 impl Pcr17Pe {
@@ -5829,9 +5829,9 @@ impl From<Pcr17Pe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr17Pfe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PFE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PFE1 = 0x01,
 }
 impl Pcr17Pfe {
@@ -5860,9 +5860,9 @@ impl From<Pcr17Pfe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr17Ps {
-    #[doc = "Enables internal pulldown resistor"]
+    #[doc = "Enables internal pulldown resistor."]
     PS0 = 0x0,
-    #[doc = "Enables internal pullup resistor"]
+    #[doc = "Enables internal pullup resistor."]
     PS1 = 0x01,
 }
 impl Pcr17Ps {
@@ -5891,9 +5891,9 @@ impl From<Pcr17Ps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr17Sre {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     SRE0 = 0x0,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     SRE1 = 0x01,
 }
 impl Pcr17Sre {
@@ -5922,9 +5922,9 @@ impl From<Pcr17Sre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr18Dse {
-    #[doc = "Low"]
+    #[doc = "Low."]
     DSE0 = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     DSE1 = 0x01,
 }
 impl Pcr18Dse {
@@ -5953,9 +5953,9 @@ impl From<Pcr18Dse> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr18Ibe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     IBE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     IBE1 = 0x01,
 }
 impl Pcr18Ibe {
@@ -5984,9 +5984,9 @@ impl From<Pcr18Ibe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr18Inv {
-    #[doc = "Does not invert"]
+    #[doc = "Does not invert."]
     INV0 = 0x0,
-    #[doc = "Inverts"]
+    #[doc = "Inverts."]
     INV1 = 0x01,
 }
 impl Pcr18Inv {
@@ -6015,9 +6015,9 @@ impl From<Pcr18Inv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr18Lk {
-    #[doc = "Does not lock"]
+    #[doc = "Does not lock."]
     LK0 = 0x0,
-    #[doc = "Locks"]
+    #[doc = "Locks."]
     LK1 = 0x01,
 }
 impl Pcr18Lk {
@@ -6046,33 +6046,33 @@ impl From<Pcr18Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr18Mux {
-    #[doc = "Alternative 0 (GPIO)"]
+    #[doc = "Alternative 0 (GPIO)."]
     MUX00 = 0x0,
-    #[doc = "Alternative 1 (chip-specific)"]
+    #[doc = "Alternative 1 (chip-specific)."]
     MUX01 = 0x01,
-    #[doc = "Alternative 2 (chip-specific)"]
+    #[doc = "Alternative 2 (chip-specific)."]
     MUX10 = 0x02,
-    #[doc = "Alternative 3 (chip-specific)"]
+    #[doc = "Alternative 3 (chip-specific)."]
     MUX11 = 0x03,
-    #[doc = "Alternative 4 (chip-specific)"]
+    #[doc = "Alternative 4 (chip-specific)."]
     MUX100 = 0x04,
-    #[doc = "Alternative 5 (chip-specific)"]
+    #[doc = "Alternative 5 (chip-specific)."]
     MUX101 = 0x05,
-    #[doc = "Alternative 6 (chip-specific)"]
+    #[doc = "Alternative 6 (chip-specific)."]
     MUX110 = 0x06,
-    #[doc = "Alternative 7 (chip-specific)"]
+    #[doc = "Alternative 7 (chip-specific)."]
     MUX111 = 0x07,
-    #[doc = "Alternative 8 (chip-specific)"]
+    #[doc = "Alternative 8 (chip-specific)."]
     MUX1000 = 0x08,
-    #[doc = "Alternative 9 (chip-specific)"]
+    #[doc = "Alternative 9 (chip-specific)."]
     MUX1001 = 0x09,
-    #[doc = "Alternative 10 (chip-specific)"]
+    #[doc = "Alternative 10 (chip-specific)."]
     MUX1010 = 0x0a,
-    #[doc = "Alternative 11 (chip-specific)"]
+    #[doc = "Alternative 11 (chip-specific)."]
     MUX1011 = 0x0b,
-    #[doc = "Alternative 12 (chip-specific)"]
+    #[doc = "Alternative 12 (chip-specific)."]
     MUX1100 = 0x0c,
-    #[doc = "Alternative 13 (chip-specific)"]
+    #[doc = "Alternative 13 (chip-specific)."]
     MUX1101 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
@@ -6103,9 +6103,9 @@ impl From<Pcr18Mux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr18Ode {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     ODE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ODE1 = 0x01,
 }
 impl Pcr18Ode {
@@ -6134,9 +6134,9 @@ impl From<Pcr18Ode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr18Pe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PE1 = 0x01,
 }
 impl Pcr18Pe {
@@ -6165,9 +6165,9 @@ impl From<Pcr18Pe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr18Ps {
-    #[doc = "Enables internal pulldown resistor"]
+    #[doc = "Enables internal pulldown resistor."]
     PS0 = 0x0,
-    #[doc = "Enables internal pullup resistor"]
+    #[doc = "Enables internal pullup resistor."]
     PS1 = 0x01,
 }
 impl Pcr18Ps {
@@ -6196,9 +6196,9 @@ impl From<Pcr18Ps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr18Sre {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     SRE0 = 0x0,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     SRE1 = 0x01,
 }
 impl Pcr18Sre {
@@ -6227,9 +6227,9 @@ impl From<Pcr18Sre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr19Dse {
-    #[doc = "Low"]
+    #[doc = "Low."]
     DSE0 = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     DSE1 = 0x01,
 }
 impl Pcr19Dse {
@@ -6258,9 +6258,9 @@ impl From<Pcr19Dse> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr19Ibe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     IBE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     IBE1 = 0x01,
 }
 impl Pcr19Ibe {
@@ -6289,9 +6289,9 @@ impl From<Pcr19Ibe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr19Inv {
-    #[doc = "Does not invert"]
+    #[doc = "Does not invert."]
     INV0 = 0x0,
-    #[doc = "Inverts"]
+    #[doc = "Inverts."]
     INV1 = 0x01,
 }
 impl Pcr19Inv {
@@ -6320,9 +6320,9 @@ impl From<Pcr19Inv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr19Lk {
-    #[doc = "Does not lock"]
+    #[doc = "Does not lock."]
     LK0 = 0x0,
-    #[doc = "Locks"]
+    #[doc = "Locks."]
     LK1 = 0x01,
 }
 impl Pcr19Lk {
@@ -6351,33 +6351,33 @@ impl From<Pcr19Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr19Mux {
-    #[doc = "Alternative 0 (GPIO)"]
+    #[doc = "Alternative 0 (GPIO)."]
     MUX00 = 0x0,
-    #[doc = "Alternative 1 (chip-specific)"]
+    #[doc = "Alternative 1 (chip-specific)."]
     MUX01 = 0x01,
-    #[doc = "Alternative 2 (chip-specific)"]
+    #[doc = "Alternative 2 (chip-specific)."]
     MUX10 = 0x02,
-    #[doc = "Alternative 3 (chip-specific)"]
+    #[doc = "Alternative 3 (chip-specific)."]
     MUX11 = 0x03,
-    #[doc = "Alternative 4 (chip-specific)"]
+    #[doc = "Alternative 4 (chip-specific)."]
     MUX100 = 0x04,
-    #[doc = "Alternative 5 (chip-specific)"]
+    #[doc = "Alternative 5 (chip-specific)."]
     MUX101 = 0x05,
-    #[doc = "Alternative 6 (chip-specific)"]
+    #[doc = "Alternative 6 (chip-specific)."]
     MUX110 = 0x06,
-    #[doc = "Alternative 7 (chip-specific)"]
+    #[doc = "Alternative 7 (chip-specific)."]
     MUX111 = 0x07,
-    #[doc = "Alternative 8 (chip-specific)"]
+    #[doc = "Alternative 8 (chip-specific)."]
     MUX1000 = 0x08,
-    #[doc = "Alternative 9 (chip-specific)"]
+    #[doc = "Alternative 9 (chip-specific)."]
     MUX1001 = 0x09,
-    #[doc = "Alternative 10 (chip-specific)"]
+    #[doc = "Alternative 10 (chip-specific)."]
     MUX1010 = 0x0a,
-    #[doc = "Alternative 11 (chip-specific)"]
+    #[doc = "Alternative 11 (chip-specific)."]
     MUX1011 = 0x0b,
-    #[doc = "Alternative 12 (chip-specific)"]
+    #[doc = "Alternative 12 (chip-specific)."]
     MUX1100 = 0x0c,
-    #[doc = "Alternative 13 (chip-specific)"]
+    #[doc = "Alternative 13 (chip-specific)."]
     MUX1101 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
@@ -6408,9 +6408,9 @@ impl From<Pcr19Mux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr19Ode {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     ODE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ODE1 = 0x01,
 }
 impl Pcr19Ode {
@@ -6439,9 +6439,9 @@ impl From<Pcr19Ode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr19Pe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PE1 = 0x01,
 }
 impl Pcr19Pe {
@@ -6470,9 +6470,9 @@ impl From<Pcr19Pe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr19Ps {
-    #[doc = "Enables internal pulldown resistor"]
+    #[doc = "Enables internal pulldown resistor."]
     PS0 = 0x0,
-    #[doc = "Enables internal pullup resistor"]
+    #[doc = "Enables internal pullup resistor."]
     PS1 = 0x01,
 }
 impl Pcr19Ps {
@@ -6501,9 +6501,9 @@ impl From<Pcr19Ps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr19Sre {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     SRE0 = 0x0,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     SRE1 = 0x01,
 }
 impl Pcr19Sre {
@@ -6532,9 +6532,9 @@ impl From<Pcr19Sre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr1Dse {
-    #[doc = "Low"]
+    #[doc = "Low."]
     DSE0 = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     DSE1 = 0x01,
 }
 impl Pcr1Dse {
@@ -6563,9 +6563,9 @@ impl From<Pcr1Dse> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr1Ibe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     IBE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     IBE1 = 0x01,
 }
 impl Pcr1Ibe {
@@ -6594,9 +6594,9 @@ impl From<Pcr1Ibe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr1Inv {
-    #[doc = "Does not invert"]
+    #[doc = "Does not invert."]
     INV0 = 0x0,
-    #[doc = "Inverts"]
+    #[doc = "Inverts."]
     INV1 = 0x01,
 }
 impl Pcr1Inv {
@@ -6625,9 +6625,9 @@ impl From<Pcr1Inv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr1Lk {
-    #[doc = "Does not lock"]
+    #[doc = "Does not lock."]
     LK0 = 0x0,
-    #[doc = "Locks"]
+    #[doc = "Locks."]
     LK1 = 0x01,
 }
 impl Pcr1Lk {
@@ -6656,33 +6656,33 @@ impl From<Pcr1Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr1Mux {
-    #[doc = "Alternative 0 (GPIO)"]
+    #[doc = "Alternative 0 (GPIO)."]
     MUX00 = 0x0,
-    #[doc = "Alternative 1 (chip-specific)"]
+    #[doc = "Alternative 1 (chip-specific)."]
     MUX01 = 0x01,
-    #[doc = "Alternative 2 (chip-specific)"]
+    #[doc = "Alternative 2 (chip-specific)."]
     MUX10 = 0x02,
-    #[doc = "Alternative 3 (chip-specific)"]
+    #[doc = "Alternative 3 (chip-specific)."]
     MUX11 = 0x03,
-    #[doc = "Alternative 4 (chip-specific)"]
+    #[doc = "Alternative 4 (chip-specific)."]
     MUX100 = 0x04,
-    #[doc = "Alternative 5 (chip-specific)"]
+    #[doc = "Alternative 5 (chip-specific)."]
     MUX101 = 0x05,
-    #[doc = "Alternative 6 (chip-specific)"]
+    #[doc = "Alternative 6 (chip-specific)."]
     MUX110 = 0x06,
-    #[doc = "Alternative 7 (chip-specific)"]
+    #[doc = "Alternative 7 (chip-specific)."]
     MUX111 = 0x07,
-    #[doc = "Alternative 8 (chip-specific)"]
+    #[doc = "Alternative 8 (chip-specific)."]
     MUX1000 = 0x08,
-    #[doc = "Alternative 9 (chip-specific)"]
+    #[doc = "Alternative 9 (chip-specific)."]
     MUX1001 = 0x09,
-    #[doc = "Alternative 10 (chip-specific)"]
+    #[doc = "Alternative 10 (chip-specific)."]
     MUX1010 = 0x0a,
-    #[doc = "Alternative 11 (chip-specific)"]
+    #[doc = "Alternative 11 (chip-specific)."]
     MUX1011 = 0x0b,
-    #[doc = "Alternative 12 (chip-specific)"]
+    #[doc = "Alternative 12 (chip-specific)."]
     MUX1100 = 0x0c,
-    #[doc = "Alternative 13 (chip-specific)"]
+    #[doc = "Alternative 13 (chip-specific)."]
     MUX1101 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
@@ -6713,9 +6713,9 @@ impl From<Pcr1Mux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr1Ode {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     ODE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ODE1 = 0x01,
 }
 impl Pcr1Ode {
@@ -6744,9 +6744,9 @@ impl From<Pcr1Ode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr1Pe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PE1 = 0x01,
 }
 impl Pcr1Pe {
@@ -6775,9 +6775,9 @@ impl From<Pcr1Pe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr1Ps {
-    #[doc = "Enables internal pulldown resistor"]
+    #[doc = "Enables internal pulldown resistor."]
     PS0 = 0x0,
-    #[doc = "Enables internal pullup resistor"]
+    #[doc = "Enables internal pullup resistor."]
     PS1 = 0x01,
 }
 impl Pcr1Ps {
@@ -6806,9 +6806,9 @@ impl From<Pcr1Ps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr1Sre {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     SRE0 = 0x0,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     SRE1 = 0x01,
 }
 impl Pcr1Sre {
@@ -6837,9 +6837,9 @@ impl From<Pcr1Sre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr20Dse {
-    #[doc = "Low"]
+    #[doc = "Low."]
     DSE0 = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     DSE1 = 0x01,
 }
 impl Pcr20Dse {
@@ -6868,9 +6868,9 @@ impl From<Pcr20Dse> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr20Ibe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     IBE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     IBE1 = 0x01,
 }
 impl Pcr20Ibe {
@@ -6899,9 +6899,9 @@ impl From<Pcr20Ibe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr20Inv {
-    #[doc = "Does not invert"]
+    #[doc = "Does not invert."]
     INV0 = 0x0,
-    #[doc = "Inverts"]
+    #[doc = "Inverts."]
     INV1 = 0x01,
 }
 impl Pcr20Inv {
@@ -6930,9 +6930,9 @@ impl From<Pcr20Inv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr20Lk {
-    #[doc = "Does not lock"]
+    #[doc = "Does not lock."]
     LK0 = 0x0,
-    #[doc = "Locks"]
+    #[doc = "Locks."]
     LK1 = 0x01,
 }
 impl Pcr20Lk {
@@ -6961,33 +6961,33 @@ impl From<Pcr20Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr20Mux {
-    #[doc = "Alternative 0 (GPIO)"]
+    #[doc = "Alternative 0 (GPIO)."]
     MUX00 = 0x0,
-    #[doc = "Alternative 1 (chip-specific)"]
+    #[doc = "Alternative 1 (chip-specific)."]
     MUX01 = 0x01,
-    #[doc = "Alternative 2 (chip-specific)"]
+    #[doc = "Alternative 2 (chip-specific)."]
     MUX10 = 0x02,
-    #[doc = "Alternative 3 (chip-specific)"]
+    #[doc = "Alternative 3 (chip-specific)."]
     MUX11 = 0x03,
-    #[doc = "Alternative 4 (chip-specific)"]
+    #[doc = "Alternative 4 (chip-specific)."]
     MUX100 = 0x04,
-    #[doc = "Alternative 5 (chip-specific)"]
+    #[doc = "Alternative 5 (chip-specific)."]
     MUX101 = 0x05,
-    #[doc = "Alternative 6 (chip-specific)"]
+    #[doc = "Alternative 6 (chip-specific)."]
     MUX110 = 0x06,
-    #[doc = "Alternative 7 (chip-specific)"]
+    #[doc = "Alternative 7 (chip-specific)."]
     MUX111 = 0x07,
-    #[doc = "Alternative 8 (chip-specific)"]
+    #[doc = "Alternative 8 (chip-specific)."]
     MUX1000 = 0x08,
-    #[doc = "Alternative 9 (chip-specific)"]
+    #[doc = "Alternative 9 (chip-specific)."]
     MUX1001 = 0x09,
-    #[doc = "Alternative 10 (chip-specific)"]
+    #[doc = "Alternative 10 (chip-specific)."]
     MUX1010 = 0x0a,
-    #[doc = "Alternative 11 (chip-specific)"]
+    #[doc = "Alternative 11 (chip-specific)."]
     MUX1011 = 0x0b,
-    #[doc = "Alternative 12 (chip-specific)"]
+    #[doc = "Alternative 12 (chip-specific)."]
     MUX1100 = 0x0c,
-    #[doc = "Alternative 13 (chip-specific)"]
+    #[doc = "Alternative 13 (chip-specific)."]
     MUX1101 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
@@ -7018,9 +7018,9 @@ impl From<Pcr20Mux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr20Ode {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     ODE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ODE1 = 0x01,
 }
 impl Pcr20Ode {
@@ -7049,9 +7049,9 @@ impl From<Pcr20Ode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr20Pe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PE1 = 0x01,
 }
 impl Pcr20Pe {
@@ -7080,9 +7080,9 @@ impl From<Pcr20Pe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr20Pfe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PFE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PFE1 = 0x01,
 }
 impl Pcr20Pfe {
@@ -7111,9 +7111,9 @@ impl From<Pcr20Pfe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr20Ps {
-    #[doc = "Enables internal pulldown resistor"]
+    #[doc = "Enables internal pulldown resistor."]
     PS0 = 0x0,
-    #[doc = "Enables internal pullup resistor"]
+    #[doc = "Enables internal pullup resistor."]
     PS1 = 0x01,
 }
 impl Pcr20Ps {
@@ -7142,9 +7142,9 @@ impl From<Pcr20Ps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr20Pv {
-    #[doc = "Low"]
+    #[doc = "Low."]
     PV0 = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     PV1 = 0x01,
 }
 impl Pcr20Pv {
@@ -7173,9 +7173,9 @@ impl From<Pcr20Pv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr20Sre {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     SRE0 = 0x0,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     SRE1 = 0x01,
 }
 impl Pcr20Sre {
@@ -7204,9 +7204,9 @@ impl From<Pcr20Sre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr21Dse {
-    #[doc = "Low"]
+    #[doc = "Low."]
     DSE0 = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     DSE1 = 0x01,
 }
 impl Pcr21Dse {
@@ -7235,9 +7235,9 @@ impl From<Pcr21Dse> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr21Ibe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     IBE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     IBE1 = 0x01,
 }
 impl Pcr21Ibe {
@@ -7266,9 +7266,9 @@ impl From<Pcr21Ibe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr21Inv {
-    #[doc = "Does not invert"]
+    #[doc = "Does not invert."]
     INV0 = 0x0,
-    #[doc = "Inverts"]
+    #[doc = "Inverts."]
     INV1 = 0x01,
 }
 impl Pcr21Inv {
@@ -7297,9 +7297,9 @@ impl From<Pcr21Inv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr21Lk {
-    #[doc = "Does not lock"]
+    #[doc = "Does not lock."]
     LK0 = 0x0,
-    #[doc = "Locks"]
+    #[doc = "Locks."]
     LK1 = 0x01,
 }
 impl Pcr21Lk {
@@ -7328,33 +7328,33 @@ impl From<Pcr21Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr21Mux {
-    #[doc = "Alternative 0 (GPIO)"]
+    #[doc = "Alternative 0 (GPIO)."]
     MUX00 = 0x0,
-    #[doc = "Alternative 1 (chip-specific)"]
+    #[doc = "Alternative 1 (chip-specific)."]
     MUX01 = 0x01,
-    #[doc = "Alternative 2 (chip-specific)"]
+    #[doc = "Alternative 2 (chip-specific)."]
     MUX10 = 0x02,
-    #[doc = "Alternative 3 (chip-specific)"]
+    #[doc = "Alternative 3 (chip-specific)."]
     MUX11 = 0x03,
-    #[doc = "Alternative 4 (chip-specific)"]
+    #[doc = "Alternative 4 (chip-specific)."]
     MUX100 = 0x04,
-    #[doc = "Alternative 5 (chip-specific)"]
+    #[doc = "Alternative 5 (chip-specific)."]
     MUX101 = 0x05,
-    #[doc = "Alternative 6 (chip-specific)"]
+    #[doc = "Alternative 6 (chip-specific)."]
     MUX110 = 0x06,
-    #[doc = "Alternative 7 (chip-specific)"]
+    #[doc = "Alternative 7 (chip-specific)."]
     MUX111 = 0x07,
-    #[doc = "Alternative 8 (chip-specific)"]
+    #[doc = "Alternative 8 (chip-specific)."]
     MUX1000 = 0x08,
-    #[doc = "Alternative 9 (chip-specific)"]
+    #[doc = "Alternative 9 (chip-specific)."]
     MUX1001 = 0x09,
-    #[doc = "Alternative 10 (chip-specific)"]
+    #[doc = "Alternative 10 (chip-specific)."]
     MUX1010 = 0x0a,
-    #[doc = "Alternative 11 (chip-specific)"]
+    #[doc = "Alternative 11 (chip-specific)."]
     MUX1011 = 0x0b,
-    #[doc = "Alternative 12 (chip-specific)"]
+    #[doc = "Alternative 12 (chip-specific)."]
     MUX1100 = 0x0c,
-    #[doc = "Alternative 13 (chip-specific)"]
+    #[doc = "Alternative 13 (chip-specific)."]
     MUX1101 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
@@ -7385,9 +7385,9 @@ impl From<Pcr21Mux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr21Ode {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     ODE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ODE1 = 0x01,
 }
 impl Pcr21Ode {
@@ -7416,9 +7416,9 @@ impl From<Pcr21Ode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr21Pe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PE1 = 0x01,
 }
 impl Pcr21Pe {
@@ -7447,9 +7447,9 @@ impl From<Pcr21Pe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr21Pfe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PFE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PFE1 = 0x01,
 }
 impl Pcr21Pfe {
@@ -7478,9 +7478,9 @@ impl From<Pcr21Pfe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr21Ps {
-    #[doc = "Enables internal pulldown resistor"]
+    #[doc = "Enables internal pulldown resistor."]
     PS0 = 0x0,
-    #[doc = "Enables internal pullup resistor"]
+    #[doc = "Enables internal pullup resistor."]
     PS1 = 0x01,
 }
 impl Pcr21Ps {
@@ -7509,9 +7509,9 @@ impl From<Pcr21Ps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr21Sre {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     SRE0 = 0x0,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     SRE1 = 0x01,
 }
 impl Pcr21Sre {
@@ -7540,9 +7540,9 @@ impl From<Pcr21Sre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr22Dse {
-    #[doc = "Low"]
+    #[doc = "Low."]
     DSE0 = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     DSE1 = 0x01,
 }
 impl Pcr22Dse {
@@ -7571,9 +7571,9 @@ impl From<Pcr22Dse> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr22Ibe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     IBE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     IBE1 = 0x01,
 }
 impl Pcr22Ibe {
@@ -7602,9 +7602,9 @@ impl From<Pcr22Ibe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr22Inv {
-    #[doc = "Does not invert"]
+    #[doc = "Does not invert."]
     INV0 = 0x0,
-    #[doc = "Inverts"]
+    #[doc = "Inverts."]
     INV1 = 0x01,
 }
 impl Pcr22Inv {
@@ -7633,9 +7633,9 @@ impl From<Pcr22Inv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr22Lk {
-    #[doc = "Does not lock"]
+    #[doc = "Does not lock."]
     LK0 = 0x0,
-    #[doc = "Locks"]
+    #[doc = "Locks."]
     LK1 = 0x01,
 }
 impl Pcr22Lk {
@@ -7664,33 +7664,33 @@ impl From<Pcr22Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr22Mux {
-    #[doc = "Alternative 0 (GPIO)"]
+    #[doc = "Alternative 0 (GPIO)."]
     MUX00 = 0x0,
-    #[doc = "Alternative 1 (chip-specific)"]
+    #[doc = "Alternative 1 (chip-specific)."]
     MUX01 = 0x01,
-    #[doc = "Alternative 2 (chip-specific)"]
+    #[doc = "Alternative 2 (chip-specific)."]
     MUX10 = 0x02,
-    #[doc = "Alternative 3 (chip-specific)"]
+    #[doc = "Alternative 3 (chip-specific)."]
     MUX11 = 0x03,
-    #[doc = "Alternative 4 (chip-specific)"]
+    #[doc = "Alternative 4 (chip-specific)."]
     MUX100 = 0x04,
-    #[doc = "Alternative 5 (chip-specific)"]
+    #[doc = "Alternative 5 (chip-specific)."]
     MUX101 = 0x05,
-    #[doc = "Alternative 6 (chip-specific)"]
+    #[doc = "Alternative 6 (chip-specific)."]
     MUX110 = 0x06,
-    #[doc = "Alternative 7 (chip-specific)"]
+    #[doc = "Alternative 7 (chip-specific)."]
     MUX111 = 0x07,
-    #[doc = "Alternative 8 (chip-specific)"]
+    #[doc = "Alternative 8 (chip-specific)."]
     MUX1000 = 0x08,
-    #[doc = "Alternative 9 (chip-specific)"]
+    #[doc = "Alternative 9 (chip-specific)."]
     MUX1001 = 0x09,
-    #[doc = "Alternative 10 (chip-specific)"]
+    #[doc = "Alternative 10 (chip-specific)."]
     MUX1010 = 0x0a,
-    #[doc = "Alternative 11 (chip-specific)"]
+    #[doc = "Alternative 11 (chip-specific)."]
     MUX1011 = 0x0b,
-    #[doc = "Alternative 12 (chip-specific)"]
+    #[doc = "Alternative 12 (chip-specific)."]
     MUX1100 = 0x0c,
-    #[doc = "Alternative 13 (chip-specific)"]
+    #[doc = "Alternative 13 (chip-specific)."]
     MUX1101 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
@@ -7721,9 +7721,9 @@ impl From<Pcr22Mux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr22Ode {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     ODE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ODE1 = 0x01,
 }
 impl Pcr22Ode {
@@ -7752,9 +7752,9 @@ impl From<Pcr22Ode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr22Pe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PE1 = 0x01,
 }
 impl Pcr22Pe {
@@ -7783,9 +7783,9 @@ impl From<Pcr22Pe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr22Ps {
-    #[doc = "Enables internal pulldown resistor"]
+    #[doc = "Enables internal pulldown resistor."]
     PS0 = 0x0,
-    #[doc = "Enables internal pullup resistor"]
+    #[doc = "Enables internal pullup resistor."]
     PS1 = 0x01,
 }
 impl Pcr22Ps {
@@ -7814,9 +7814,9 @@ impl From<Pcr22Ps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr22Sre {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     SRE0 = 0x0,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     SRE1 = 0x01,
 }
 impl Pcr22Sre {
@@ -7845,9 +7845,9 @@ impl From<Pcr22Sre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr23Dse {
-    #[doc = "Low"]
+    #[doc = "Low."]
     DSE0 = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     DSE1 = 0x01,
 }
 impl Pcr23Dse {
@@ -7876,9 +7876,9 @@ impl From<Pcr23Dse> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr23Ibe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     IBE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     IBE1 = 0x01,
 }
 impl Pcr23Ibe {
@@ -7907,9 +7907,9 @@ impl From<Pcr23Ibe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr23Inv {
-    #[doc = "Does not invert"]
+    #[doc = "Does not invert."]
     INV0 = 0x0,
-    #[doc = "Inverts"]
+    #[doc = "Inverts."]
     INV1 = 0x01,
 }
 impl Pcr23Inv {
@@ -7938,9 +7938,9 @@ impl From<Pcr23Inv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr23Lk {
-    #[doc = "Does not lock"]
+    #[doc = "Does not lock."]
     LK0 = 0x0,
-    #[doc = "Locks"]
+    #[doc = "Locks."]
     LK1 = 0x01,
 }
 impl Pcr23Lk {
@@ -7969,33 +7969,33 @@ impl From<Pcr23Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr23Mux {
-    #[doc = "Alternative 0 (GPIO)"]
+    #[doc = "Alternative 0 (GPIO)."]
     MUX00 = 0x0,
-    #[doc = "Alternative 1 (chip-specific)"]
+    #[doc = "Alternative 1 (chip-specific)."]
     MUX01 = 0x01,
-    #[doc = "Alternative 2 (chip-specific)"]
+    #[doc = "Alternative 2 (chip-specific)."]
     MUX10 = 0x02,
-    #[doc = "Alternative 3 (chip-specific)"]
+    #[doc = "Alternative 3 (chip-specific)."]
     MUX11 = 0x03,
-    #[doc = "Alternative 4 (chip-specific)"]
+    #[doc = "Alternative 4 (chip-specific)."]
     MUX100 = 0x04,
-    #[doc = "Alternative 5 (chip-specific)"]
+    #[doc = "Alternative 5 (chip-specific)."]
     MUX101 = 0x05,
-    #[doc = "Alternative 6 (chip-specific)"]
+    #[doc = "Alternative 6 (chip-specific)."]
     MUX110 = 0x06,
-    #[doc = "Alternative 7 (chip-specific)"]
+    #[doc = "Alternative 7 (chip-specific)."]
     MUX111 = 0x07,
-    #[doc = "Alternative 8 (chip-specific)"]
+    #[doc = "Alternative 8 (chip-specific)."]
     MUX1000 = 0x08,
-    #[doc = "Alternative 9 (chip-specific)"]
+    #[doc = "Alternative 9 (chip-specific)."]
     MUX1001 = 0x09,
-    #[doc = "Alternative 10 (chip-specific)"]
+    #[doc = "Alternative 10 (chip-specific)."]
     MUX1010 = 0x0a,
-    #[doc = "Alternative 11 (chip-specific)"]
+    #[doc = "Alternative 11 (chip-specific)."]
     MUX1011 = 0x0b,
-    #[doc = "Alternative 12 (chip-specific)"]
+    #[doc = "Alternative 12 (chip-specific)."]
     MUX1100 = 0x0c,
-    #[doc = "Alternative 13 (chip-specific)"]
+    #[doc = "Alternative 13 (chip-specific)."]
     MUX1101 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
@@ -8026,9 +8026,9 @@ impl From<Pcr23Mux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr23Ode {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     ODE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ODE1 = 0x01,
 }
 impl Pcr23Ode {
@@ -8057,9 +8057,9 @@ impl From<Pcr23Ode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr23Pe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PE1 = 0x01,
 }
 impl Pcr23Pe {
@@ -8088,9 +8088,9 @@ impl From<Pcr23Pe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr23Ps {
-    #[doc = "Enables internal pulldown resistor"]
+    #[doc = "Enables internal pulldown resistor."]
     PS0 = 0x0,
-    #[doc = "Enables internal pullup resistor"]
+    #[doc = "Enables internal pullup resistor."]
     PS1 = 0x01,
 }
 impl Pcr23Ps {
@@ -8119,9 +8119,9 @@ impl From<Pcr23Ps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr23Sre {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     SRE0 = 0x0,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     SRE1 = 0x01,
 }
 impl Pcr23Sre {
@@ -8150,9 +8150,9 @@ impl From<Pcr23Sre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr24Dse {
-    #[doc = "Low"]
+    #[doc = "Low."]
     DSE0 = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     DSE1 = 0x01,
 }
 impl Pcr24Dse {
@@ -8181,9 +8181,9 @@ impl From<Pcr24Dse> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr24Ibe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     IBE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     IBE1 = 0x01,
 }
 impl Pcr24Ibe {
@@ -8212,9 +8212,9 @@ impl From<Pcr24Ibe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr24Inv {
-    #[doc = "Does not invert"]
+    #[doc = "Does not invert."]
     INV0 = 0x0,
-    #[doc = "Inverts"]
+    #[doc = "Inverts."]
     INV1 = 0x01,
 }
 impl Pcr24Inv {
@@ -8243,9 +8243,9 @@ impl From<Pcr24Inv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr24Lk {
-    #[doc = "Does not lock"]
+    #[doc = "Does not lock."]
     LK0 = 0x0,
-    #[doc = "Locks"]
+    #[doc = "Locks."]
     LK1 = 0x01,
 }
 impl Pcr24Lk {
@@ -8274,33 +8274,33 @@ impl From<Pcr24Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr24Mux {
-    #[doc = "Alternative 0 (GPIO)"]
+    #[doc = "Alternative 0 (GPIO)."]
     MUX00 = 0x0,
-    #[doc = "Alternative 1 (chip-specific)"]
+    #[doc = "Alternative 1 (chip-specific)."]
     MUX01 = 0x01,
-    #[doc = "Alternative 2 (chip-specific)"]
+    #[doc = "Alternative 2 (chip-specific)."]
     MUX10 = 0x02,
-    #[doc = "Alternative 3 (chip-specific)"]
+    #[doc = "Alternative 3 (chip-specific)."]
     MUX11 = 0x03,
-    #[doc = "Alternative 4 (chip-specific)"]
+    #[doc = "Alternative 4 (chip-specific)."]
     MUX100 = 0x04,
-    #[doc = "Alternative 5 (chip-specific)"]
+    #[doc = "Alternative 5 (chip-specific)."]
     MUX101 = 0x05,
-    #[doc = "Alternative 6 (chip-specific)"]
+    #[doc = "Alternative 6 (chip-specific)."]
     MUX110 = 0x06,
-    #[doc = "Alternative 7 (chip-specific)"]
+    #[doc = "Alternative 7 (chip-specific)."]
     MUX111 = 0x07,
-    #[doc = "Alternative 8 (chip-specific)"]
+    #[doc = "Alternative 8 (chip-specific)."]
     MUX1000 = 0x08,
-    #[doc = "Alternative 9 (chip-specific)"]
+    #[doc = "Alternative 9 (chip-specific)."]
     MUX1001 = 0x09,
-    #[doc = "Alternative 10 (chip-specific)"]
+    #[doc = "Alternative 10 (chip-specific)."]
     MUX1010 = 0x0a,
-    #[doc = "Alternative 11 (chip-specific)"]
+    #[doc = "Alternative 11 (chip-specific)."]
     MUX1011 = 0x0b,
-    #[doc = "Alternative 12 (chip-specific)"]
+    #[doc = "Alternative 12 (chip-specific)."]
     MUX1100 = 0x0c,
-    #[doc = "Alternative 13 (chip-specific)"]
+    #[doc = "Alternative 13 (chip-specific)."]
     MUX1101 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
@@ -8331,9 +8331,9 @@ impl From<Pcr24Mux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr24Ode {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     ODE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ODE1 = 0x01,
 }
 impl Pcr24Ode {
@@ -8362,9 +8362,9 @@ impl From<Pcr24Ode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr24Pe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PE1 = 0x01,
 }
 impl Pcr24Pe {
@@ -8393,9 +8393,9 @@ impl From<Pcr24Pe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr24Ps {
-    #[doc = "Enables internal pulldown resistor"]
+    #[doc = "Enables internal pulldown resistor."]
     PS0 = 0x0,
-    #[doc = "Enables internal pullup resistor"]
+    #[doc = "Enables internal pullup resistor."]
     PS1 = 0x01,
 }
 impl Pcr24Ps {
@@ -8424,9 +8424,9 @@ impl From<Pcr24Ps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr24Sre {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     SRE0 = 0x0,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     SRE1 = 0x01,
 }
 impl Pcr24Sre {
@@ -8455,9 +8455,9 @@ impl From<Pcr24Sre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr25Dse {
-    #[doc = "Low"]
+    #[doc = "Low."]
     DSE0 = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     DSE1 = 0x01,
 }
 impl Pcr25Dse {
@@ -8486,9 +8486,9 @@ impl From<Pcr25Dse> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr25Ibe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     IBE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     IBE1 = 0x01,
 }
 impl Pcr25Ibe {
@@ -8517,9 +8517,9 @@ impl From<Pcr25Ibe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr25Inv {
-    #[doc = "Does not invert"]
+    #[doc = "Does not invert."]
     INV0 = 0x0,
-    #[doc = "Inverts"]
+    #[doc = "Inverts."]
     INV1 = 0x01,
 }
 impl Pcr25Inv {
@@ -8548,9 +8548,9 @@ impl From<Pcr25Inv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr25Lk {
-    #[doc = "Does not lock"]
+    #[doc = "Does not lock."]
     LK0 = 0x0,
-    #[doc = "Locks"]
+    #[doc = "Locks."]
     LK1 = 0x01,
 }
 impl Pcr25Lk {
@@ -8579,33 +8579,33 @@ impl From<Pcr25Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr25Mux {
-    #[doc = "Alternative 0 (GPIO)"]
+    #[doc = "Alternative 0 (GPIO)."]
     MUX00 = 0x0,
-    #[doc = "Alternative 1 (chip-specific)"]
+    #[doc = "Alternative 1 (chip-specific)."]
     MUX01 = 0x01,
-    #[doc = "Alternative 2 (chip-specific)"]
+    #[doc = "Alternative 2 (chip-specific)."]
     MUX10 = 0x02,
-    #[doc = "Alternative 3 (chip-specific)"]
+    #[doc = "Alternative 3 (chip-specific)."]
     MUX11 = 0x03,
-    #[doc = "Alternative 4 (chip-specific)"]
+    #[doc = "Alternative 4 (chip-specific)."]
     MUX100 = 0x04,
-    #[doc = "Alternative 5 (chip-specific)"]
+    #[doc = "Alternative 5 (chip-specific)."]
     MUX101 = 0x05,
-    #[doc = "Alternative 6 (chip-specific)"]
+    #[doc = "Alternative 6 (chip-specific)."]
     MUX110 = 0x06,
-    #[doc = "Alternative 7 (chip-specific)"]
+    #[doc = "Alternative 7 (chip-specific)."]
     MUX111 = 0x07,
-    #[doc = "Alternative 8 (chip-specific)"]
+    #[doc = "Alternative 8 (chip-specific)."]
     MUX1000 = 0x08,
-    #[doc = "Alternative 9 (chip-specific)"]
+    #[doc = "Alternative 9 (chip-specific)."]
     MUX1001 = 0x09,
-    #[doc = "Alternative 10 (chip-specific)"]
+    #[doc = "Alternative 10 (chip-specific)."]
     MUX1010 = 0x0a,
-    #[doc = "Alternative 11 (chip-specific)"]
+    #[doc = "Alternative 11 (chip-specific)."]
     MUX1011 = 0x0b,
-    #[doc = "Alternative 12 (chip-specific)"]
+    #[doc = "Alternative 12 (chip-specific)."]
     MUX1100 = 0x0c,
-    #[doc = "Alternative 13 (chip-specific)"]
+    #[doc = "Alternative 13 (chip-specific)."]
     MUX1101 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
@@ -8636,9 +8636,9 @@ impl From<Pcr25Mux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr25Ode {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     ODE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ODE1 = 0x01,
 }
 impl Pcr25Ode {
@@ -8667,9 +8667,9 @@ impl From<Pcr25Ode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr25Pe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PE1 = 0x01,
 }
 impl Pcr25Pe {
@@ -8698,9 +8698,9 @@ impl From<Pcr25Pe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr25Ps {
-    #[doc = "Enables internal pulldown resistor"]
+    #[doc = "Enables internal pulldown resistor."]
     PS0 = 0x0,
-    #[doc = "Enables internal pullup resistor"]
+    #[doc = "Enables internal pullup resistor."]
     PS1 = 0x01,
 }
 impl Pcr25Ps {
@@ -8729,9 +8729,9 @@ impl From<Pcr25Ps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr25Sre {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     SRE0 = 0x0,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     SRE1 = 0x01,
 }
 impl Pcr25Sre {
@@ -8760,9 +8760,9 @@ impl From<Pcr25Sre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr26Dse {
-    #[doc = "Low"]
+    #[doc = "Low."]
     DSE0 = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     DSE1 = 0x01,
 }
 impl Pcr26Dse {
@@ -8791,9 +8791,9 @@ impl From<Pcr26Dse> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr26Ibe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     IBE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     IBE1 = 0x01,
 }
 impl Pcr26Ibe {
@@ -8822,9 +8822,9 @@ impl From<Pcr26Ibe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr26Inv {
-    #[doc = "Does not invert"]
+    #[doc = "Does not invert."]
     INV0 = 0x0,
-    #[doc = "Inverts"]
+    #[doc = "Inverts."]
     INV1 = 0x01,
 }
 impl Pcr26Inv {
@@ -8853,9 +8853,9 @@ impl From<Pcr26Inv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr26Lk {
-    #[doc = "Does not lock"]
+    #[doc = "Does not lock."]
     LK0 = 0x0,
-    #[doc = "Locks"]
+    #[doc = "Locks."]
     LK1 = 0x01,
 }
 impl Pcr26Lk {
@@ -8884,33 +8884,33 @@ impl From<Pcr26Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr26Mux {
-    #[doc = "Alternative 0 (GPIO)"]
+    #[doc = "Alternative 0 (GPIO)."]
     MUX00 = 0x0,
-    #[doc = "Alternative 1 (chip-specific)"]
+    #[doc = "Alternative 1 (chip-specific)."]
     MUX01 = 0x01,
-    #[doc = "Alternative 2 (chip-specific)"]
+    #[doc = "Alternative 2 (chip-specific)."]
     MUX10 = 0x02,
-    #[doc = "Alternative 3 (chip-specific)"]
+    #[doc = "Alternative 3 (chip-specific)."]
     MUX11 = 0x03,
-    #[doc = "Alternative 4 (chip-specific)"]
+    #[doc = "Alternative 4 (chip-specific)."]
     MUX100 = 0x04,
-    #[doc = "Alternative 5 (chip-specific)"]
+    #[doc = "Alternative 5 (chip-specific)."]
     MUX101 = 0x05,
-    #[doc = "Alternative 6 (chip-specific)"]
+    #[doc = "Alternative 6 (chip-specific)."]
     MUX110 = 0x06,
-    #[doc = "Alternative 7 (chip-specific)"]
+    #[doc = "Alternative 7 (chip-specific)."]
     MUX111 = 0x07,
-    #[doc = "Alternative 8 (chip-specific)"]
+    #[doc = "Alternative 8 (chip-specific)."]
     MUX1000 = 0x08,
-    #[doc = "Alternative 9 (chip-specific)"]
+    #[doc = "Alternative 9 (chip-specific)."]
     MUX1001 = 0x09,
-    #[doc = "Alternative 10 (chip-specific)"]
+    #[doc = "Alternative 10 (chip-specific)."]
     MUX1010 = 0x0a,
-    #[doc = "Alternative 11 (chip-specific)"]
+    #[doc = "Alternative 11 (chip-specific)."]
     MUX1011 = 0x0b,
-    #[doc = "Alternative 12 (chip-specific)"]
+    #[doc = "Alternative 12 (chip-specific)."]
     MUX1100 = 0x0c,
-    #[doc = "Alternative 13 (chip-specific)"]
+    #[doc = "Alternative 13 (chip-specific)."]
     MUX1101 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
@@ -8941,9 +8941,9 @@ impl From<Pcr26Mux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr26Ode {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     ODE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ODE1 = 0x01,
 }
 impl Pcr26Ode {
@@ -8972,9 +8972,9 @@ impl From<Pcr26Ode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr26Pe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PE1 = 0x01,
 }
 impl Pcr26Pe {
@@ -9003,9 +9003,9 @@ impl From<Pcr26Pe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr26Ps {
-    #[doc = "Enables internal pulldown resistor"]
+    #[doc = "Enables internal pulldown resistor."]
     PS0 = 0x0,
-    #[doc = "Enables internal pullup resistor"]
+    #[doc = "Enables internal pullup resistor."]
     PS1 = 0x01,
 }
 impl Pcr26Ps {
@@ -9034,9 +9034,9 @@ impl From<Pcr26Ps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr26Sre {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     SRE0 = 0x0,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     SRE1 = 0x01,
 }
 impl Pcr26Sre {
@@ -9065,9 +9065,9 @@ impl From<Pcr26Sre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr27Dse {
-    #[doc = "Low"]
+    #[doc = "Low."]
     DSE0 = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     DSE1 = 0x01,
 }
 impl Pcr27Dse {
@@ -9096,9 +9096,9 @@ impl From<Pcr27Dse> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr27Ibe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     IBE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     IBE1 = 0x01,
 }
 impl Pcr27Ibe {
@@ -9127,9 +9127,9 @@ impl From<Pcr27Ibe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr27Inv {
-    #[doc = "Does not invert"]
+    #[doc = "Does not invert."]
     INV0 = 0x0,
-    #[doc = "Inverts"]
+    #[doc = "Inverts."]
     INV1 = 0x01,
 }
 impl Pcr27Inv {
@@ -9158,9 +9158,9 @@ impl From<Pcr27Inv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr27Lk {
-    #[doc = "Does not lock"]
+    #[doc = "Does not lock."]
     LK0 = 0x0,
-    #[doc = "Locks"]
+    #[doc = "Locks."]
     LK1 = 0x01,
 }
 impl Pcr27Lk {
@@ -9189,33 +9189,33 @@ impl From<Pcr27Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr27Mux {
-    #[doc = "Alternative 0 (GPIO)"]
+    #[doc = "Alternative 0 (GPIO)."]
     MUX00 = 0x0,
-    #[doc = "Alternative 1 (chip-specific)"]
+    #[doc = "Alternative 1 (chip-specific)."]
     MUX01 = 0x01,
-    #[doc = "Alternative 2 (chip-specific)"]
+    #[doc = "Alternative 2 (chip-specific)."]
     MUX10 = 0x02,
-    #[doc = "Alternative 3 (chip-specific)"]
+    #[doc = "Alternative 3 (chip-specific)."]
     MUX11 = 0x03,
-    #[doc = "Alternative 4 (chip-specific)"]
+    #[doc = "Alternative 4 (chip-specific)."]
     MUX100 = 0x04,
-    #[doc = "Alternative 5 (chip-specific)"]
+    #[doc = "Alternative 5 (chip-specific)."]
     MUX101 = 0x05,
-    #[doc = "Alternative 6 (chip-specific)"]
+    #[doc = "Alternative 6 (chip-specific)."]
     MUX110 = 0x06,
-    #[doc = "Alternative 7 (chip-specific)"]
+    #[doc = "Alternative 7 (chip-specific)."]
     MUX111 = 0x07,
-    #[doc = "Alternative 8 (chip-specific)"]
+    #[doc = "Alternative 8 (chip-specific)."]
     MUX1000 = 0x08,
-    #[doc = "Alternative 9 (chip-specific)"]
+    #[doc = "Alternative 9 (chip-specific)."]
     MUX1001 = 0x09,
-    #[doc = "Alternative 10 (chip-specific)"]
+    #[doc = "Alternative 10 (chip-specific)."]
     MUX1010 = 0x0a,
-    #[doc = "Alternative 11 (chip-specific)"]
+    #[doc = "Alternative 11 (chip-specific)."]
     MUX1011 = 0x0b,
-    #[doc = "Alternative 12 (chip-specific)"]
+    #[doc = "Alternative 12 (chip-specific)."]
     MUX1100 = 0x0c,
-    #[doc = "Alternative 13 (chip-specific)"]
+    #[doc = "Alternative 13 (chip-specific)."]
     MUX1101 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
@@ -9246,9 +9246,9 @@ impl From<Pcr27Mux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr27Ode {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     ODE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ODE1 = 0x01,
 }
 impl Pcr27Ode {
@@ -9277,9 +9277,9 @@ impl From<Pcr27Ode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr27Pe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PE1 = 0x01,
 }
 impl Pcr27Pe {
@@ -9308,9 +9308,9 @@ impl From<Pcr27Pe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr27Ps {
-    #[doc = "Enables internal pulldown resistor"]
+    #[doc = "Enables internal pulldown resistor."]
     PS0 = 0x0,
-    #[doc = "Enables internal pullup resistor"]
+    #[doc = "Enables internal pullup resistor."]
     PS1 = 0x01,
 }
 impl Pcr27Ps {
@@ -9339,9 +9339,9 @@ impl From<Pcr27Ps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr27Sre {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     SRE0 = 0x0,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     SRE1 = 0x01,
 }
 impl Pcr27Sre {
@@ -9370,9 +9370,9 @@ impl From<Pcr27Sre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr28Dse {
-    #[doc = "Low"]
+    #[doc = "Low."]
     DSE0 = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     DSE1 = 0x01,
 }
 impl Pcr28Dse {
@@ -9401,9 +9401,9 @@ impl From<Pcr28Dse> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr28Ibe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     IBE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     IBE1 = 0x01,
 }
 impl Pcr28Ibe {
@@ -9432,9 +9432,9 @@ impl From<Pcr28Ibe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr28Inv {
-    #[doc = "Does not invert"]
+    #[doc = "Does not invert."]
     INV0 = 0x0,
-    #[doc = "Inverts"]
+    #[doc = "Inverts."]
     INV1 = 0x01,
 }
 impl Pcr28Inv {
@@ -9463,9 +9463,9 @@ impl From<Pcr28Inv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr28Lk {
-    #[doc = "Does not lock"]
+    #[doc = "Does not lock."]
     LK0 = 0x0,
-    #[doc = "Locks"]
+    #[doc = "Locks."]
     LK1 = 0x01,
 }
 impl Pcr28Lk {
@@ -9494,33 +9494,33 @@ impl From<Pcr28Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr28Mux {
-    #[doc = "Alternative 0 (GPIO)"]
+    #[doc = "Alternative 0 (GPIO)."]
     MUX00 = 0x0,
-    #[doc = "Alternative 1 (chip-specific)"]
+    #[doc = "Alternative 1 (chip-specific)."]
     MUX01 = 0x01,
-    #[doc = "Alternative 2 (chip-specific)"]
+    #[doc = "Alternative 2 (chip-specific)."]
     MUX10 = 0x02,
-    #[doc = "Alternative 3 (chip-specific)"]
+    #[doc = "Alternative 3 (chip-specific)."]
     MUX11 = 0x03,
-    #[doc = "Alternative 4 (chip-specific)"]
+    #[doc = "Alternative 4 (chip-specific)."]
     MUX100 = 0x04,
-    #[doc = "Alternative 5 (chip-specific)"]
+    #[doc = "Alternative 5 (chip-specific)."]
     MUX101 = 0x05,
-    #[doc = "Alternative 6 (chip-specific)"]
+    #[doc = "Alternative 6 (chip-specific)."]
     MUX110 = 0x06,
-    #[doc = "Alternative 7 (chip-specific)"]
+    #[doc = "Alternative 7 (chip-specific)."]
     MUX111 = 0x07,
-    #[doc = "Alternative 8 (chip-specific)"]
+    #[doc = "Alternative 8 (chip-specific)."]
     MUX1000 = 0x08,
-    #[doc = "Alternative 9 (chip-specific)"]
+    #[doc = "Alternative 9 (chip-specific)."]
     MUX1001 = 0x09,
-    #[doc = "Alternative 10 (chip-specific)"]
+    #[doc = "Alternative 10 (chip-specific)."]
     MUX1010 = 0x0a,
-    #[doc = "Alternative 11 (chip-specific)"]
+    #[doc = "Alternative 11 (chip-specific)."]
     MUX1011 = 0x0b,
-    #[doc = "Alternative 12 (chip-specific)"]
+    #[doc = "Alternative 12 (chip-specific)."]
     MUX1100 = 0x0c,
-    #[doc = "Alternative 13 (chip-specific)"]
+    #[doc = "Alternative 13 (chip-specific)."]
     MUX1101 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
@@ -9551,9 +9551,9 @@ impl From<Pcr28Mux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr28Ode {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     ODE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ODE1 = 0x01,
 }
 impl Pcr28Ode {
@@ -9582,9 +9582,9 @@ impl From<Pcr28Ode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr28Pe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PE1 = 0x01,
 }
 impl Pcr28Pe {
@@ -9613,9 +9613,9 @@ impl From<Pcr28Pe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr28Ps {
-    #[doc = "Enables internal pulldown resistor"]
+    #[doc = "Enables internal pulldown resistor."]
     PS0 = 0x0,
-    #[doc = "Enables internal pullup resistor"]
+    #[doc = "Enables internal pullup resistor."]
     PS1 = 0x01,
 }
 impl Pcr28Ps {
@@ -9644,9 +9644,9 @@ impl From<Pcr28Ps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr28Sre {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     SRE0 = 0x0,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     SRE1 = 0x01,
 }
 impl Pcr28Sre {
@@ -9675,9 +9675,9 @@ impl From<Pcr28Sre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr29Dse {
-    #[doc = "Low"]
+    #[doc = "Low."]
     DSE0 = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     DSE1 = 0x01,
 }
 impl Pcr29Dse {
@@ -9706,9 +9706,9 @@ impl From<Pcr29Dse> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr29Ibe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     IBE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     IBE1 = 0x01,
 }
 impl Pcr29Ibe {
@@ -9737,9 +9737,9 @@ impl From<Pcr29Ibe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr29Inv {
-    #[doc = "Does not invert"]
+    #[doc = "Does not invert."]
     INV0 = 0x0,
-    #[doc = "Inverts"]
+    #[doc = "Inverts."]
     INV1 = 0x01,
 }
 impl Pcr29Inv {
@@ -9768,9 +9768,9 @@ impl From<Pcr29Inv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr29Lk {
-    #[doc = "Does not lock"]
+    #[doc = "Does not lock."]
     LK0 = 0x0,
-    #[doc = "Locks"]
+    #[doc = "Locks."]
     LK1 = 0x01,
 }
 impl Pcr29Lk {
@@ -9799,33 +9799,33 @@ impl From<Pcr29Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr29Mux {
-    #[doc = "Alternative 0 (GPIO)"]
+    #[doc = "Alternative 0 (GPIO)."]
     MUX00 = 0x0,
-    #[doc = "Alternative 1 (chip-specific)"]
+    #[doc = "Alternative 1 (chip-specific)."]
     MUX01 = 0x01,
-    #[doc = "Alternative 2 (chip-specific)"]
+    #[doc = "Alternative 2 (chip-specific)."]
     MUX10 = 0x02,
-    #[doc = "Alternative 3 (chip-specific)"]
+    #[doc = "Alternative 3 (chip-specific)."]
     MUX11 = 0x03,
-    #[doc = "Alternative 4 (chip-specific)"]
+    #[doc = "Alternative 4 (chip-specific)."]
     MUX100 = 0x04,
-    #[doc = "Alternative 5 (chip-specific)"]
+    #[doc = "Alternative 5 (chip-specific)."]
     MUX101 = 0x05,
-    #[doc = "Alternative 6 (chip-specific)"]
+    #[doc = "Alternative 6 (chip-specific)."]
     MUX110 = 0x06,
-    #[doc = "Alternative 7 (chip-specific)"]
+    #[doc = "Alternative 7 (chip-specific)."]
     MUX111 = 0x07,
-    #[doc = "Alternative 8 (chip-specific)"]
+    #[doc = "Alternative 8 (chip-specific)."]
     MUX1000 = 0x08,
-    #[doc = "Alternative 9 (chip-specific)"]
+    #[doc = "Alternative 9 (chip-specific)."]
     MUX1001 = 0x09,
-    #[doc = "Alternative 10 (chip-specific)"]
+    #[doc = "Alternative 10 (chip-specific)."]
     MUX1010 = 0x0a,
-    #[doc = "Alternative 11 (chip-specific)"]
+    #[doc = "Alternative 11 (chip-specific)."]
     MUX1011 = 0x0b,
-    #[doc = "Alternative 12 (chip-specific)"]
+    #[doc = "Alternative 12 (chip-specific)."]
     MUX1100 = 0x0c,
-    #[doc = "Alternative 13 (chip-specific)"]
+    #[doc = "Alternative 13 (chip-specific)."]
     MUX1101 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
@@ -9856,9 +9856,9 @@ impl From<Pcr29Mux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr29Ode {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     ODE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ODE1 = 0x01,
 }
 impl Pcr29Ode {
@@ -9887,9 +9887,9 @@ impl From<Pcr29Ode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr29Pe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PE1 = 0x01,
 }
 impl Pcr29Pe {
@@ -9918,9 +9918,9 @@ impl From<Pcr29Pe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr29Ps {
-    #[doc = "Enables internal pulldown resistor"]
+    #[doc = "Enables internal pulldown resistor."]
     PS0 = 0x0,
-    #[doc = "Enables internal pullup resistor"]
+    #[doc = "Enables internal pullup resistor."]
     PS1 = 0x01,
 }
 impl Pcr29Ps {
@@ -9949,9 +9949,9 @@ impl From<Pcr29Ps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr29Sre {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     SRE0 = 0x0,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     SRE1 = 0x01,
 }
 impl Pcr29Sre {
@@ -9980,9 +9980,9 @@ impl From<Pcr29Sre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr2Dse {
-    #[doc = "Low"]
+    #[doc = "Low."]
     DSE0 = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     DSE1 = 0x01,
 }
 impl Pcr2Dse {
@@ -10011,9 +10011,9 @@ impl From<Pcr2Dse> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr2Ibe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     IBE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     IBE1 = 0x01,
 }
 impl Pcr2Ibe {
@@ -10042,9 +10042,9 @@ impl From<Pcr2Ibe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr2Inv {
-    #[doc = "Does not invert"]
+    #[doc = "Does not invert."]
     INV0 = 0x0,
-    #[doc = "Inverts"]
+    #[doc = "Inverts."]
     INV1 = 0x01,
 }
 impl Pcr2Inv {
@@ -10073,9 +10073,9 @@ impl From<Pcr2Inv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr2Lk {
-    #[doc = "Does not lock"]
+    #[doc = "Does not lock."]
     LK0 = 0x0,
-    #[doc = "Locks"]
+    #[doc = "Locks."]
     LK1 = 0x01,
 }
 impl Pcr2Lk {
@@ -10104,33 +10104,33 @@ impl From<Pcr2Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr2Mux {
-    #[doc = "Alternative 0 (GPIO)"]
+    #[doc = "Alternative 0 (GPIO)."]
     MUX00 = 0x0,
-    #[doc = "Alternative 1 (chip-specific)"]
+    #[doc = "Alternative 1 (chip-specific)."]
     MUX01 = 0x01,
-    #[doc = "Alternative 2 (chip-specific)"]
+    #[doc = "Alternative 2 (chip-specific)."]
     MUX10 = 0x02,
-    #[doc = "Alternative 3 (chip-specific)"]
+    #[doc = "Alternative 3 (chip-specific)."]
     MUX11 = 0x03,
-    #[doc = "Alternative 4 (chip-specific)"]
+    #[doc = "Alternative 4 (chip-specific)."]
     MUX100 = 0x04,
-    #[doc = "Alternative 5 (chip-specific)"]
+    #[doc = "Alternative 5 (chip-specific)."]
     MUX101 = 0x05,
-    #[doc = "Alternative 6 (chip-specific)"]
+    #[doc = "Alternative 6 (chip-specific)."]
     MUX110 = 0x06,
-    #[doc = "Alternative 7 (chip-specific)"]
+    #[doc = "Alternative 7 (chip-specific)."]
     MUX111 = 0x07,
-    #[doc = "Alternative 8 (chip-specific)"]
+    #[doc = "Alternative 8 (chip-specific)."]
     MUX1000 = 0x08,
-    #[doc = "Alternative 9 (chip-specific)"]
+    #[doc = "Alternative 9 (chip-specific)."]
     MUX1001 = 0x09,
-    #[doc = "Alternative 10 (chip-specific)"]
+    #[doc = "Alternative 10 (chip-specific)."]
     MUX1010 = 0x0a,
-    #[doc = "Alternative 11 (chip-specific)"]
+    #[doc = "Alternative 11 (chip-specific)."]
     MUX1011 = 0x0b,
-    #[doc = "Alternative 12 (chip-specific)"]
+    #[doc = "Alternative 12 (chip-specific)."]
     MUX1100 = 0x0c,
-    #[doc = "Alternative 13 (chip-specific)"]
+    #[doc = "Alternative 13 (chip-specific)."]
     MUX1101 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
@@ -10161,9 +10161,9 @@ impl From<Pcr2Mux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr2Ode {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     ODE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ODE1 = 0x01,
 }
 impl Pcr2Ode {
@@ -10192,9 +10192,9 @@ impl From<Pcr2Ode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr2Pe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PE1 = 0x01,
 }
 impl Pcr2Pe {
@@ -10223,9 +10223,9 @@ impl From<Pcr2Pe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr2Ps {
-    #[doc = "Enables internal pulldown resistor"]
+    #[doc = "Enables internal pulldown resistor."]
     PS0 = 0x0,
-    #[doc = "Enables internal pullup resistor"]
+    #[doc = "Enables internal pullup resistor."]
     PS1 = 0x01,
 }
 impl Pcr2Ps {
@@ -10254,9 +10254,9 @@ impl From<Pcr2Ps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr2Sre {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     SRE0 = 0x0,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     SRE1 = 0x01,
 }
 impl Pcr2Sre {
@@ -10285,9 +10285,9 @@ impl From<Pcr2Sre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr30Dse {
-    #[doc = "Low"]
+    #[doc = "Low."]
     DSE0 = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     DSE1 = 0x01,
 }
 impl Pcr30Dse {
@@ -10316,9 +10316,9 @@ impl From<Pcr30Dse> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr30Ibe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     IBE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     IBE1 = 0x01,
 }
 impl Pcr30Ibe {
@@ -10347,9 +10347,9 @@ impl From<Pcr30Ibe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr30Inv {
-    #[doc = "Does not invert"]
+    #[doc = "Does not invert."]
     INV0 = 0x0,
-    #[doc = "Inverts"]
+    #[doc = "Inverts."]
     INV1 = 0x01,
 }
 impl Pcr30Inv {
@@ -10378,9 +10378,9 @@ impl From<Pcr30Inv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr30Lk {
-    #[doc = "Does not lock"]
+    #[doc = "Does not lock."]
     LK0 = 0x0,
-    #[doc = "Locks"]
+    #[doc = "Locks."]
     LK1 = 0x01,
 }
 impl Pcr30Lk {
@@ -10409,33 +10409,33 @@ impl From<Pcr30Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr30Mux {
-    #[doc = "Alternative 0 (GPIO)"]
+    #[doc = "Alternative 0 (GPIO)."]
     MUX00 = 0x0,
-    #[doc = "Alternative 1 (chip-specific)"]
+    #[doc = "Alternative 1 (chip-specific)."]
     MUX01 = 0x01,
-    #[doc = "Alternative 2 (chip-specific)"]
+    #[doc = "Alternative 2 (chip-specific)."]
     MUX10 = 0x02,
-    #[doc = "Alternative 3 (chip-specific)"]
+    #[doc = "Alternative 3 (chip-specific)."]
     MUX11 = 0x03,
-    #[doc = "Alternative 4 (chip-specific)"]
+    #[doc = "Alternative 4 (chip-specific)."]
     MUX100 = 0x04,
-    #[doc = "Alternative 5 (chip-specific)"]
+    #[doc = "Alternative 5 (chip-specific)."]
     MUX101 = 0x05,
-    #[doc = "Alternative 6 (chip-specific)"]
+    #[doc = "Alternative 6 (chip-specific)."]
     MUX110 = 0x06,
-    #[doc = "Alternative 7 (chip-specific)"]
+    #[doc = "Alternative 7 (chip-specific)."]
     MUX111 = 0x07,
-    #[doc = "Alternative 8 (chip-specific)"]
+    #[doc = "Alternative 8 (chip-specific)."]
     MUX1000 = 0x08,
-    #[doc = "Alternative 9 (chip-specific)"]
+    #[doc = "Alternative 9 (chip-specific)."]
     MUX1001 = 0x09,
-    #[doc = "Alternative 10 (chip-specific)"]
+    #[doc = "Alternative 10 (chip-specific)."]
     MUX1010 = 0x0a,
-    #[doc = "Alternative 11 (chip-specific)"]
+    #[doc = "Alternative 11 (chip-specific)."]
     MUX1011 = 0x0b,
-    #[doc = "Alternative 12 (chip-specific)"]
+    #[doc = "Alternative 12 (chip-specific)."]
     MUX1100 = 0x0c,
-    #[doc = "Alternative 13 (chip-specific)"]
+    #[doc = "Alternative 13 (chip-specific)."]
     MUX1101 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
@@ -10466,9 +10466,9 @@ impl From<Pcr30Mux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr30Ode {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     ODE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ODE1 = 0x01,
 }
 impl Pcr30Ode {
@@ -10497,9 +10497,9 @@ impl From<Pcr30Ode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr30Pe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PE1 = 0x01,
 }
 impl Pcr30Pe {
@@ -10528,9 +10528,9 @@ impl From<Pcr30Pe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr30Ps {
-    #[doc = "Enables internal pulldown resistor"]
+    #[doc = "Enables internal pulldown resistor."]
     PS0 = 0x0,
-    #[doc = "Enables internal pullup resistor"]
+    #[doc = "Enables internal pullup resistor."]
     PS1 = 0x01,
 }
 impl Pcr30Ps {
@@ -10559,9 +10559,9 @@ impl From<Pcr30Ps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr30Sre {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     SRE0 = 0x0,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     SRE1 = 0x01,
 }
 impl Pcr30Sre {
@@ -10590,9 +10590,9 @@ impl From<Pcr30Sre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr31Dse {
-    #[doc = "Low"]
+    #[doc = "Low."]
     DSE0 = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     DSE1 = 0x01,
 }
 impl Pcr31Dse {
@@ -10621,9 +10621,9 @@ impl From<Pcr31Dse> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr31Ibe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     IBE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     IBE1 = 0x01,
 }
 impl Pcr31Ibe {
@@ -10652,9 +10652,9 @@ impl From<Pcr31Ibe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr31Inv {
-    #[doc = "Does not invert"]
+    #[doc = "Does not invert."]
     INV0 = 0x0,
-    #[doc = "Inverts"]
+    #[doc = "Inverts."]
     INV1 = 0x01,
 }
 impl Pcr31Inv {
@@ -10683,9 +10683,9 @@ impl From<Pcr31Inv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr31Lk {
-    #[doc = "Does not lock"]
+    #[doc = "Does not lock."]
     LK0 = 0x0,
-    #[doc = "Locks"]
+    #[doc = "Locks."]
     LK1 = 0x01,
 }
 impl Pcr31Lk {
@@ -10714,33 +10714,33 @@ impl From<Pcr31Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr31Mux {
-    #[doc = "Alternative 0 (GPIO)"]
+    #[doc = "Alternative 0 (GPIO)."]
     MUX00 = 0x0,
-    #[doc = "Alternative 1 (chip-specific)"]
+    #[doc = "Alternative 1 (chip-specific)."]
     MUX01 = 0x01,
-    #[doc = "Alternative 2 (chip-specific)"]
+    #[doc = "Alternative 2 (chip-specific)."]
     MUX10 = 0x02,
-    #[doc = "Alternative 3 (chip-specific)"]
+    #[doc = "Alternative 3 (chip-specific)."]
     MUX11 = 0x03,
-    #[doc = "Alternative 4 (chip-specific)"]
+    #[doc = "Alternative 4 (chip-specific)."]
     MUX100 = 0x04,
-    #[doc = "Alternative 5 (chip-specific)"]
+    #[doc = "Alternative 5 (chip-specific)."]
     MUX101 = 0x05,
-    #[doc = "Alternative 6 (chip-specific)"]
+    #[doc = "Alternative 6 (chip-specific)."]
     MUX110 = 0x06,
-    #[doc = "Alternative 7 (chip-specific)"]
+    #[doc = "Alternative 7 (chip-specific)."]
     MUX111 = 0x07,
-    #[doc = "Alternative 8 (chip-specific)"]
+    #[doc = "Alternative 8 (chip-specific)."]
     MUX1000 = 0x08,
-    #[doc = "Alternative 9 (chip-specific)"]
+    #[doc = "Alternative 9 (chip-specific)."]
     MUX1001 = 0x09,
-    #[doc = "Alternative 10 (chip-specific)"]
+    #[doc = "Alternative 10 (chip-specific)."]
     MUX1010 = 0x0a,
-    #[doc = "Alternative 11 (chip-specific)"]
+    #[doc = "Alternative 11 (chip-specific)."]
     MUX1011 = 0x0b,
-    #[doc = "Alternative 12 (chip-specific)"]
+    #[doc = "Alternative 12 (chip-specific)."]
     MUX1100 = 0x0c,
-    #[doc = "Alternative 13 (chip-specific)"]
+    #[doc = "Alternative 13 (chip-specific)."]
     MUX1101 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
@@ -10771,9 +10771,9 @@ impl From<Pcr31Mux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr31Ode {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     ODE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ODE1 = 0x01,
 }
 impl Pcr31Ode {
@@ -10802,9 +10802,9 @@ impl From<Pcr31Ode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr31Pe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PE1 = 0x01,
 }
 impl Pcr31Pe {
@@ -10833,9 +10833,9 @@ impl From<Pcr31Pe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr31Ps {
-    #[doc = "Enables internal pulldown resistor"]
+    #[doc = "Enables internal pulldown resistor."]
     PS0 = 0x0,
-    #[doc = "Enables internal pullup resistor"]
+    #[doc = "Enables internal pullup resistor."]
     PS1 = 0x01,
 }
 impl Pcr31Ps {
@@ -10864,9 +10864,9 @@ impl From<Pcr31Ps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr31Sre {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     SRE0 = 0x0,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     SRE1 = 0x01,
 }
 impl Pcr31Sre {
@@ -10895,9 +10895,9 @@ impl From<Pcr31Sre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr3Dse {
-    #[doc = "Low"]
+    #[doc = "Low."]
     DSE0 = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     DSE1 = 0x01,
 }
 impl Pcr3Dse {
@@ -10926,9 +10926,9 @@ impl From<Pcr3Dse> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr3Ibe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     IBE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     IBE1 = 0x01,
 }
 impl Pcr3Ibe {
@@ -10957,9 +10957,9 @@ impl From<Pcr3Ibe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr3Inv {
-    #[doc = "Does not invert"]
+    #[doc = "Does not invert."]
     INV0 = 0x0,
-    #[doc = "Inverts"]
+    #[doc = "Inverts."]
     INV1 = 0x01,
 }
 impl Pcr3Inv {
@@ -10988,9 +10988,9 @@ impl From<Pcr3Inv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr3Lk {
-    #[doc = "Does not lock"]
+    #[doc = "Does not lock."]
     LK0 = 0x0,
-    #[doc = "Locks"]
+    #[doc = "Locks."]
     LK1 = 0x01,
 }
 impl Pcr3Lk {
@@ -11019,33 +11019,33 @@ impl From<Pcr3Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr3Mux {
-    #[doc = "Alternative 0 (GPIO)"]
+    #[doc = "Alternative 0 (GPIO)."]
     MUX00 = 0x0,
-    #[doc = "Alternative 1 (chip-specific)"]
+    #[doc = "Alternative 1 (chip-specific)."]
     MUX01 = 0x01,
-    #[doc = "Alternative 2 (chip-specific)"]
+    #[doc = "Alternative 2 (chip-specific)."]
     MUX10 = 0x02,
-    #[doc = "Alternative 3 (chip-specific)"]
+    #[doc = "Alternative 3 (chip-specific)."]
     MUX11 = 0x03,
-    #[doc = "Alternative 4 (chip-specific)"]
+    #[doc = "Alternative 4 (chip-specific)."]
     MUX100 = 0x04,
-    #[doc = "Alternative 5 (chip-specific)"]
+    #[doc = "Alternative 5 (chip-specific)."]
     MUX101 = 0x05,
-    #[doc = "Alternative 6 (chip-specific)"]
+    #[doc = "Alternative 6 (chip-specific)."]
     MUX110 = 0x06,
-    #[doc = "Alternative 7 (chip-specific)"]
+    #[doc = "Alternative 7 (chip-specific)."]
     MUX111 = 0x07,
-    #[doc = "Alternative 8 (chip-specific)"]
+    #[doc = "Alternative 8 (chip-specific)."]
     MUX1000 = 0x08,
-    #[doc = "Alternative 9 (chip-specific)"]
+    #[doc = "Alternative 9 (chip-specific)."]
     MUX1001 = 0x09,
-    #[doc = "Alternative 10 (chip-specific)"]
+    #[doc = "Alternative 10 (chip-specific)."]
     MUX1010 = 0x0a,
-    #[doc = "Alternative 11 (chip-specific)"]
+    #[doc = "Alternative 11 (chip-specific)."]
     MUX1011 = 0x0b,
-    #[doc = "Alternative 12 (chip-specific)"]
+    #[doc = "Alternative 12 (chip-specific)."]
     MUX1100 = 0x0c,
-    #[doc = "Alternative 13 (chip-specific)"]
+    #[doc = "Alternative 13 (chip-specific)."]
     MUX1101 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
@@ -11076,9 +11076,9 @@ impl From<Pcr3Mux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr3Ode {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     ODE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ODE1 = 0x01,
 }
 impl Pcr3Ode {
@@ -11107,9 +11107,9 @@ impl From<Pcr3Ode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr3Pe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PE1 = 0x01,
 }
 impl Pcr3Pe {
@@ -11138,9 +11138,9 @@ impl From<Pcr3Pe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr3Ps {
-    #[doc = "Enables internal pulldown resistor"]
+    #[doc = "Enables internal pulldown resistor."]
     PS0 = 0x0,
-    #[doc = "Enables internal pullup resistor"]
+    #[doc = "Enables internal pullup resistor."]
     PS1 = 0x01,
 }
 impl Pcr3Ps {
@@ -11169,9 +11169,9 @@ impl From<Pcr3Ps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr3Sre {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     SRE0 = 0x0,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     SRE1 = 0x01,
 }
 impl Pcr3Sre {
@@ -11200,9 +11200,9 @@ impl From<Pcr3Sre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr4Dse {
-    #[doc = "Low"]
+    #[doc = "Low."]
     DSE0 = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     DSE1 = 0x01,
 }
 impl Pcr4Dse {
@@ -11231,9 +11231,9 @@ impl From<Pcr4Dse> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr4Ibe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     IBE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     IBE1 = 0x01,
 }
 impl Pcr4Ibe {
@@ -11262,9 +11262,9 @@ impl From<Pcr4Ibe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr4Inv {
-    #[doc = "Does not invert"]
+    #[doc = "Does not invert."]
     INV0 = 0x0,
-    #[doc = "Inverts"]
+    #[doc = "Inverts."]
     INV1 = 0x01,
 }
 impl Pcr4Inv {
@@ -11293,9 +11293,9 @@ impl From<Pcr4Inv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr4Lk {
-    #[doc = "Does not lock"]
+    #[doc = "Does not lock."]
     LK0 = 0x0,
-    #[doc = "Locks"]
+    #[doc = "Locks."]
     LK1 = 0x01,
 }
 impl Pcr4Lk {
@@ -11324,33 +11324,33 @@ impl From<Pcr4Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr4Mux {
-    #[doc = "Alternative 0 (GPIO)"]
+    #[doc = "Alternative 0 (GPIO)."]
     MUX00 = 0x0,
-    #[doc = "Alternative 1 (chip-specific)"]
+    #[doc = "Alternative 1 (chip-specific)."]
     MUX01 = 0x01,
-    #[doc = "Alternative 2 (chip-specific)"]
+    #[doc = "Alternative 2 (chip-specific)."]
     MUX10 = 0x02,
-    #[doc = "Alternative 3 (chip-specific)"]
+    #[doc = "Alternative 3 (chip-specific)."]
     MUX11 = 0x03,
-    #[doc = "Alternative 4 (chip-specific)"]
+    #[doc = "Alternative 4 (chip-specific)."]
     MUX100 = 0x04,
-    #[doc = "Alternative 5 (chip-specific)"]
+    #[doc = "Alternative 5 (chip-specific)."]
     MUX101 = 0x05,
-    #[doc = "Alternative 6 (chip-specific)"]
+    #[doc = "Alternative 6 (chip-specific)."]
     MUX110 = 0x06,
-    #[doc = "Alternative 7 (chip-specific)"]
+    #[doc = "Alternative 7 (chip-specific)."]
     MUX111 = 0x07,
-    #[doc = "Alternative 8 (chip-specific)"]
+    #[doc = "Alternative 8 (chip-specific)."]
     MUX1000 = 0x08,
-    #[doc = "Alternative 9 (chip-specific)"]
+    #[doc = "Alternative 9 (chip-specific)."]
     MUX1001 = 0x09,
-    #[doc = "Alternative 10 (chip-specific)"]
+    #[doc = "Alternative 10 (chip-specific)."]
     MUX1010 = 0x0a,
-    #[doc = "Alternative 11 (chip-specific)"]
+    #[doc = "Alternative 11 (chip-specific)."]
     MUX1011 = 0x0b,
-    #[doc = "Alternative 12 (chip-specific)"]
+    #[doc = "Alternative 12 (chip-specific)."]
     MUX1100 = 0x0c,
-    #[doc = "Alternative 13 (chip-specific)"]
+    #[doc = "Alternative 13 (chip-specific)."]
     MUX1101 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
@@ -11381,9 +11381,9 @@ impl From<Pcr4Mux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr4Ode {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     ODE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ODE1 = 0x01,
 }
 impl Pcr4Ode {
@@ -11412,9 +11412,9 @@ impl From<Pcr4Ode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr4Pe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PE1 = 0x01,
 }
 impl Pcr4Pe {
@@ -11443,9 +11443,9 @@ impl From<Pcr4Pe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr4Pfe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PFE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PFE1 = 0x01,
 }
 impl Pcr4Pfe {
@@ -11474,9 +11474,9 @@ impl From<Pcr4Pfe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr4Ps {
-    #[doc = "Enables internal pulldown resistor"]
+    #[doc = "Enables internal pulldown resistor."]
     PS0 = 0x0,
-    #[doc = "Enables internal pullup resistor"]
+    #[doc = "Enables internal pullup resistor."]
     PS1 = 0x01,
 }
 impl Pcr4Ps {
@@ -11505,9 +11505,9 @@ impl From<Pcr4Ps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr4Sre {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     SRE0 = 0x0,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     SRE1 = 0x01,
 }
 impl Pcr4Sre {
@@ -11536,9 +11536,9 @@ impl From<Pcr4Sre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr5Dse {
-    #[doc = "Low"]
+    #[doc = "Low."]
     DSE0 = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     DSE1 = 0x01,
 }
 impl Pcr5Dse {
@@ -11567,9 +11567,9 @@ impl From<Pcr5Dse> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr5Ibe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     IBE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     IBE1 = 0x01,
 }
 impl Pcr5Ibe {
@@ -11598,9 +11598,9 @@ impl From<Pcr5Ibe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr5Inv {
-    #[doc = "Does not invert"]
+    #[doc = "Does not invert."]
     INV0 = 0x0,
-    #[doc = "Inverts"]
+    #[doc = "Inverts."]
     INV1 = 0x01,
 }
 impl Pcr5Inv {
@@ -11629,9 +11629,9 @@ impl From<Pcr5Inv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr5Lk {
-    #[doc = "Does not lock"]
+    #[doc = "Does not lock."]
     LK0 = 0x0,
-    #[doc = "Locks"]
+    #[doc = "Locks."]
     LK1 = 0x01,
 }
 impl Pcr5Lk {
@@ -11660,33 +11660,33 @@ impl From<Pcr5Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr5Mux {
-    #[doc = "Alternative 0 (GPIO)"]
+    #[doc = "Alternative 0 (GPIO)."]
     MUX00 = 0x0,
-    #[doc = "Alternative 1 (chip-specific)"]
+    #[doc = "Alternative 1 (chip-specific)."]
     MUX01 = 0x01,
-    #[doc = "Alternative 2 (chip-specific)"]
+    #[doc = "Alternative 2 (chip-specific)."]
     MUX10 = 0x02,
-    #[doc = "Alternative 3 (chip-specific)"]
+    #[doc = "Alternative 3 (chip-specific)."]
     MUX11 = 0x03,
-    #[doc = "Alternative 4 (chip-specific)"]
+    #[doc = "Alternative 4 (chip-specific)."]
     MUX100 = 0x04,
-    #[doc = "Alternative 5 (chip-specific)"]
+    #[doc = "Alternative 5 (chip-specific)."]
     MUX101 = 0x05,
-    #[doc = "Alternative 6 (chip-specific)"]
+    #[doc = "Alternative 6 (chip-specific)."]
     MUX110 = 0x06,
-    #[doc = "Alternative 7 (chip-specific)"]
+    #[doc = "Alternative 7 (chip-specific)."]
     MUX111 = 0x07,
-    #[doc = "Alternative 8 (chip-specific)"]
+    #[doc = "Alternative 8 (chip-specific)."]
     MUX1000 = 0x08,
-    #[doc = "Alternative 9 (chip-specific)"]
+    #[doc = "Alternative 9 (chip-specific)."]
     MUX1001 = 0x09,
-    #[doc = "Alternative 10 (chip-specific)"]
+    #[doc = "Alternative 10 (chip-specific)."]
     MUX1010 = 0x0a,
-    #[doc = "Alternative 11 (chip-specific)"]
+    #[doc = "Alternative 11 (chip-specific)."]
     MUX1011 = 0x0b,
-    #[doc = "Alternative 12 (chip-specific)"]
+    #[doc = "Alternative 12 (chip-specific)."]
     MUX1100 = 0x0c,
-    #[doc = "Alternative 13 (chip-specific)"]
+    #[doc = "Alternative 13 (chip-specific)."]
     MUX1101 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
@@ -11717,9 +11717,9 @@ impl From<Pcr5Mux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr5Ode {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     ODE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ODE1 = 0x01,
 }
 impl Pcr5Ode {
@@ -11748,9 +11748,9 @@ impl From<Pcr5Ode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr5Pe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PE1 = 0x01,
 }
 impl Pcr5Pe {
@@ -11779,9 +11779,9 @@ impl From<Pcr5Pe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr5Pfe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PFE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PFE1 = 0x01,
 }
 impl Pcr5Pfe {
@@ -11810,9 +11810,9 @@ impl From<Pcr5Pfe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr5Ps {
-    #[doc = "Enables internal pulldown resistor"]
+    #[doc = "Enables internal pulldown resistor."]
     PS0 = 0x0,
-    #[doc = "Enables internal pullup resistor"]
+    #[doc = "Enables internal pullup resistor."]
     PS1 = 0x01,
 }
 impl Pcr5Ps {
@@ -11841,9 +11841,9 @@ impl From<Pcr5Ps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr5Sre {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     SRE0 = 0x0,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     SRE1 = 0x01,
 }
 impl Pcr5Sre {
@@ -11872,9 +11872,9 @@ impl From<Pcr5Sre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr6Dse {
-    #[doc = "Low"]
+    #[doc = "Low."]
     DSE0 = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     DSE1 = 0x01,
 }
 impl Pcr6Dse {
@@ -11903,9 +11903,9 @@ impl From<Pcr6Dse> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr6Ibe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     IBE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     IBE1 = 0x01,
 }
 impl Pcr6Ibe {
@@ -11934,9 +11934,9 @@ impl From<Pcr6Ibe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr6Inv {
-    #[doc = "Does not invert"]
+    #[doc = "Does not invert."]
     INV0 = 0x0,
-    #[doc = "Inverts"]
+    #[doc = "Inverts."]
     INV1 = 0x01,
 }
 impl Pcr6Inv {
@@ -11965,9 +11965,9 @@ impl From<Pcr6Inv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr6Lk {
-    #[doc = "Does not lock"]
+    #[doc = "Does not lock."]
     LK0 = 0x0,
-    #[doc = "Locks"]
+    #[doc = "Locks."]
     LK1 = 0x01,
 }
 impl Pcr6Lk {
@@ -11996,33 +11996,33 @@ impl From<Pcr6Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr6Mux {
-    #[doc = "Alternative 0 (GPIO)"]
+    #[doc = "Alternative 0 (GPIO)."]
     MUX00 = 0x0,
-    #[doc = "Alternative 1 (chip-specific)"]
+    #[doc = "Alternative 1 (chip-specific)."]
     MUX01 = 0x01,
-    #[doc = "Alternative 2 (chip-specific)"]
+    #[doc = "Alternative 2 (chip-specific)."]
     MUX10 = 0x02,
-    #[doc = "Alternative 3 (chip-specific)"]
+    #[doc = "Alternative 3 (chip-specific)."]
     MUX11 = 0x03,
-    #[doc = "Alternative 4 (chip-specific)"]
+    #[doc = "Alternative 4 (chip-specific)."]
     MUX100 = 0x04,
-    #[doc = "Alternative 5 (chip-specific)"]
+    #[doc = "Alternative 5 (chip-specific)."]
     MUX101 = 0x05,
-    #[doc = "Alternative 6 (chip-specific)"]
+    #[doc = "Alternative 6 (chip-specific)."]
     MUX110 = 0x06,
-    #[doc = "Alternative 7 (chip-specific)"]
+    #[doc = "Alternative 7 (chip-specific)."]
     MUX111 = 0x07,
-    #[doc = "Alternative 8 (chip-specific)"]
+    #[doc = "Alternative 8 (chip-specific)."]
     MUX1000 = 0x08,
-    #[doc = "Alternative 9 (chip-specific)"]
+    #[doc = "Alternative 9 (chip-specific)."]
     MUX1001 = 0x09,
-    #[doc = "Alternative 10 (chip-specific)"]
+    #[doc = "Alternative 10 (chip-specific)."]
     MUX1010 = 0x0a,
-    #[doc = "Alternative 11 (chip-specific)"]
+    #[doc = "Alternative 11 (chip-specific)."]
     MUX1011 = 0x0b,
-    #[doc = "Alternative 12 (chip-specific)"]
+    #[doc = "Alternative 12 (chip-specific)."]
     MUX1100 = 0x0c,
-    #[doc = "Alternative 13 (chip-specific)"]
+    #[doc = "Alternative 13 (chip-specific)."]
     MUX1101 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
@@ -12053,9 +12053,9 @@ impl From<Pcr6Mux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr6Ode {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     ODE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ODE1 = 0x01,
 }
 impl Pcr6Ode {
@@ -12084,9 +12084,9 @@ impl From<Pcr6Ode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr6Pe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PE1 = 0x01,
 }
 impl Pcr6Pe {
@@ -12115,9 +12115,9 @@ impl From<Pcr6Pe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr6Ps {
-    #[doc = "Enables internal pulldown resistor"]
+    #[doc = "Enables internal pulldown resistor."]
     PS0 = 0x0,
-    #[doc = "Enables internal pullup resistor"]
+    #[doc = "Enables internal pullup resistor."]
     PS1 = 0x01,
 }
 impl Pcr6Ps {
@@ -12146,9 +12146,9 @@ impl From<Pcr6Ps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr6Sre {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     SRE0 = 0x0,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     SRE1 = 0x01,
 }
 impl Pcr6Sre {
@@ -12177,9 +12177,9 @@ impl From<Pcr6Sre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr7Dse {
-    #[doc = "Low"]
+    #[doc = "Low."]
     DSE0 = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     DSE1 = 0x01,
 }
 impl Pcr7Dse {
@@ -12208,9 +12208,9 @@ impl From<Pcr7Dse> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr7Ibe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     IBE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     IBE1 = 0x01,
 }
 impl Pcr7Ibe {
@@ -12239,9 +12239,9 @@ impl From<Pcr7Ibe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr7Inv {
-    #[doc = "Does not invert"]
+    #[doc = "Does not invert."]
     INV0 = 0x0,
-    #[doc = "Inverts"]
+    #[doc = "Inverts."]
     INV1 = 0x01,
 }
 impl Pcr7Inv {
@@ -12270,9 +12270,9 @@ impl From<Pcr7Inv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr7Lk {
-    #[doc = "Does not lock"]
+    #[doc = "Does not lock."]
     LK0 = 0x0,
-    #[doc = "Locks"]
+    #[doc = "Locks."]
     LK1 = 0x01,
 }
 impl Pcr7Lk {
@@ -12301,33 +12301,33 @@ impl From<Pcr7Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr7Mux {
-    #[doc = "Alternative 0 (GPIO)"]
+    #[doc = "Alternative 0 (GPIO)."]
     MUX00 = 0x0,
-    #[doc = "Alternative 1 (chip-specific)"]
+    #[doc = "Alternative 1 (chip-specific)."]
     MUX01 = 0x01,
-    #[doc = "Alternative 2 (chip-specific)"]
+    #[doc = "Alternative 2 (chip-specific)."]
     MUX10 = 0x02,
-    #[doc = "Alternative 3 (chip-specific)"]
+    #[doc = "Alternative 3 (chip-specific)."]
     MUX11 = 0x03,
-    #[doc = "Alternative 4 (chip-specific)"]
+    #[doc = "Alternative 4 (chip-specific)."]
     MUX100 = 0x04,
-    #[doc = "Alternative 5 (chip-specific)"]
+    #[doc = "Alternative 5 (chip-specific)."]
     MUX101 = 0x05,
-    #[doc = "Alternative 6 (chip-specific)"]
+    #[doc = "Alternative 6 (chip-specific)."]
     MUX110 = 0x06,
-    #[doc = "Alternative 7 (chip-specific)"]
+    #[doc = "Alternative 7 (chip-specific)."]
     MUX111 = 0x07,
-    #[doc = "Alternative 8 (chip-specific)"]
+    #[doc = "Alternative 8 (chip-specific)."]
     MUX1000 = 0x08,
-    #[doc = "Alternative 9 (chip-specific)"]
+    #[doc = "Alternative 9 (chip-specific)."]
     MUX1001 = 0x09,
-    #[doc = "Alternative 10 (chip-specific)"]
+    #[doc = "Alternative 10 (chip-specific)."]
     MUX1010 = 0x0a,
-    #[doc = "Alternative 11 (chip-specific)"]
+    #[doc = "Alternative 11 (chip-specific)."]
     MUX1011 = 0x0b,
-    #[doc = "Alternative 12 (chip-specific)"]
+    #[doc = "Alternative 12 (chip-specific)."]
     MUX1100 = 0x0c,
-    #[doc = "Alternative 13 (chip-specific)"]
+    #[doc = "Alternative 13 (chip-specific)."]
     MUX1101 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
@@ -12358,9 +12358,9 @@ impl From<Pcr7Mux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr7Ode {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     ODE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ODE1 = 0x01,
 }
 impl Pcr7Ode {
@@ -12389,9 +12389,9 @@ impl From<Pcr7Ode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr7Pe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PE1 = 0x01,
 }
 impl Pcr7Pe {
@@ -12420,9 +12420,9 @@ impl From<Pcr7Pe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr7Ps {
-    #[doc = "Enables internal pulldown resistor"]
+    #[doc = "Enables internal pulldown resistor."]
     PS0 = 0x0,
-    #[doc = "Enables internal pullup resistor"]
+    #[doc = "Enables internal pullup resistor."]
     PS1 = 0x01,
 }
 impl Pcr7Ps {
@@ -12451,9 +12451,9 @@ impl From<Pcr7Ps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr7Sre {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     SRE0 = 0x0,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     SRE1 = 0x01,
 }
 impl Pcr7Sre {
@@ -12482,9 +12482,9 @@ impl From<Pcr7Sre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr8Dse {
-    #[doc = "Low"]
+    #[doc = "Low."]
     DSE0 = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     DSE1 = 0x01,
 }
 impl Pcr8Dse {
@@ -12513,9 +12513,9 @@ impl From<Pcr8Dse> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr8Ibe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     IBE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     IBE1 = 0x01,
 }
 impl Pcr8Ibe {
@@ -12544,9 +12544,9 @@ impl From<Pcr8Ibe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr8Inv {
-    #[doc = "Does not invert"]
+    #[doc = "Does not invert."]
     INV0 = 0x0,
-    #[doc = "Inverts"]
+    #[doc = "Inverts."]
     INV1 = 0x01,
 }
 impl Pcr8Inv {
@@ -12575,9 +12575,9 @@ impl From<Pcr8Inv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr8Lk {
-    #[doc = "Does not lock"]
+    #[doc = "Does not lock."]
     LK0 = 0x0,
-    #[doc = "Locks"]
+    #[doc = "Locks."]
     LK1 = 0x01,
 }
 impl Pcr8Lk {
@@ -12606,33 +12606,33 @@ impl From<Pcr8Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr8Mux {
-    #[doc = "Alternative 0 (GPIO)"]
+    #[doc = "Alternative 0 (GPIO)."]
     MUX00 = 0x0,
-    #[doc = "Alternative 1 (chip-specific)"]
+    #[doc = "Alternative 1 (chip-specific)."]
     MUX01 = 0x01,
-    #[doc = "Alternative 2 (chip-specific)"]
+    #[doc = "Alternative 2 (chip-specific)."]
     MUX10 = 0x02,
-    #[doc = "Alternative 3 (chip-specific)"]
+    #[doc = "Alternative 3 (chip-specific)."]
     MUX11 = 0x03,
-    #[doc = "Alternative 4 (chip-specific)"]
+    #[doc = "Alternative 4 (chip-specific)."]
     MUX100 = 0x04,
-    #[doc = "Alternative 5 (chip-specific)"]
+    #[doc = "Alternative 5 (chip-specific)."]
     MUX101 = 0x05,
-    #[doc = "Alternative 6 (chip-specific)"]
+    #[doc = "Alternative 6 (chip-specific)."]
     MUX110 = 0x06,
-    #[doc = "Alternative 7 (chip-specific)"]
+    #[doc = "Alternative 7 (chip-specific)."]
     MUX111 = 0x07,
-    #[doc = "Alternative 8 (chip-specific)"]
+    #[doc = "Alternative 8 (chip-specific)."]
     MUX1000 = 0x08,
-    #[doc = "Alternative 9 (chip-specific)"]
+    #[doc = "Alternative 9 (chip-specific)."]
     MUX1001 = 0x09,
-    #[doc = "Alternative 10 (chip-specific)"]
+    #[doc = "Alternative 10 (chip-specific)."]
     MUX1010 = 0x0a,
-    #[doc = "Alternative 11 (chip-specific)"]
+    #[doc = "Alternative 11 (chip-specific)."]
     MUX1011 = 0x0b,
-    #[doc = "Alternative 12 (chip-specific)"]
+    #[doc = "Alternative 12 (chip-specific)."]
     MUX1100 = 0x0c,
-    #[doc = "Alternative 13 (chip-specific)"]
+    #[doc = "Alternative 13 (chip-specific)."]
     MUX1101 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
@@ -12663,9 +12663,9 @@ impl From<Pcr8Mux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr8Ode {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     ODE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ODE1 = 0x01,
 }
 impl Pcr8Ode {
@@ -12694,9 +12694,9 @@ impl From<Pcr8Ode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr8Pe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PE1 = 0x01,
 }
 impl Pcr8Pe {
@@ -12725,9 +12725,9 @@ impl From<Pcr8Pe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr8Ps {
-    #[doc = "Enables internal pulldown resistor"]
+    #[doc = "Enables internal pulldown resistor."]
     PS0 = 0x0,
-    #[doc = "Enables internal pullup resistor"]
+    #[doc = "Enables internal pullup resistor."]
     PS1 = 0x01,
 }
 impl Pcr8Ps {
@@ -12756,9 +12756,9 @@ impl From<Pcr8Ps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr8Sre {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     SRE0 = 0x0,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     SRE1 = 0x01,
 }
 impl Pcr8Sre {
@@ -12787,9 +12787,9 @@ impl From<Pcr8Sre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr9Dse {
-    #[doc = "Low"]
+    #[doc = "Low."]
     DSE0 = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     DSE1 = 0x01,
 }
 impl Pcr9Dse {
@@ -12818,9 +12818,9 @@ impl From<Pcr9Dse> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr9Ibe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     IBE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     IBE1 = 0x01,
 }
 impl Pcr9Ibe {
@@ -12849,9 +12849,9 @@ impl From<Pcr9Ibe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr9Inv {
-    #[doc = "Does not invert"]
+    #[doc = "Does not invert."]
     INV0 = 0x0,
-    #[doc = "Inverts"]
+    #[doc = "Inverts."]
     INV1 = 0x01,
 }
 impl Pcr9Inv {
@@ -12880,9 +12880,9 @@ impl From<Pcr9Inv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr9Lk {
-    #[doc = "Does not lock"]
+    #[doc = "Does not lock."]
     LK0 = 0x0,
-    #[doc = "Locks"]
+    #[doc = "Locks."]
     LK1 = 0x01,
 }
 impl Pcr9Lk {
@@ -12911,33 +12911,33 @@ impl From<Pcr9Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr9Mux {
-    #[doc = "Alternative 0 (GPIO)"]
+    #[doc = "Alternative 0 (GPIO)."]
     MUX00 = 0x0,
-    #[doc = "Alternative 1 (chip-specific)"]
+    #[doc = "Alternative 1 (chip-specific)."]
     MUX01 = 0x01,
-    #[doc = "Alternative 2 (chip-specific)"]
+    #[doc = "Alternative 2 (chip-specific)."]
     MUX10 = 0x02,
-    #[doc = "Alternative 3 (chip-specific)"]
+    #[doc = "Alternative 3 (chip-specific)."]
     MUX11 = 0x03,
-    #[doc = "Alternative 4 (chip-specific)"]
+    #[doc = "Alternative 4 (chip-specific)."]
     MUX100 = 0x04,
-    #[doc = "Alternative 5 (chip-specific)"]
+    #[doc = "Alternative 5 (chip-specific)."]
     MUX101 = 0x05,
-    #[doc = "Alternative 6 (chip-specific)"]
+    #[doc = "Alternative 6 (chip-specific)."]
     MUX110 = 0x06,
-    #[doc = "Alternative 7 (chip-specific)"]
+    #[doc = "Alternative 7 (chip-specific)."]
     MUX111 = 0x07,
-    #[doc = "Alternative 8 (chip-specific)"]
+    #[doc = "Alternative 8 (chip-specific)."]
     MUX1000 = 0x08,
-    #[doc = "Alternative 9 (chip-specific)"]
+    #[doc = "Alternative 9 (chip-specific)."]
     MUX1001 = 0x09,
-    #[doc = "Alternative 10 (chip-specific)"]
+    #[doc = "Alternative 10 (chip-specific)."]
     MUX1010 = 0x0a,
-    #[doc = "Alternative 11 (chip-specific)"]
+    #[doc = "Alternative 11 (chip-specific)."]
     MUX1011 = 0x0b,
-    #[doc = "Alternative 12 (chip-specific)"]
+    #[doc = "Alternative 12 (chip-specific)."]
     MUX1100 = 0x0c,
-    #[doc = "Alternative 13 (chip-specific)"]
+    #[doc = "Alternative 13 (chip-specific)."]
     MUX1101 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
@@ -12968,9 +12968,9 @@ impl From<Pcr9Mux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr9Ode {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     ODE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ODE1 = 0x01,
 }
 impl Pcr9Ode {
@@ -12999,9 +12999,9 @@ impl From<Pcr9Ode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr9Pe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PE1 = 0x01,
 }
 impl Pcr9Pe {
@@ -13030,9 +13030,9 @@ impl From<Pcr9Pe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr9Ps {
-    #[doc = "Enables internal pulldown resistor"]
+    #[doc = "Enables internal pulldown resistor."]
     PS0 = 0x0,
-    #[doc = "Enables internal pullup resistor"]
+    #[doc = "Enables internal pullup resistor."]
     PS1 = 0x01,
 }
 impl Pcr9Ps {
@@ -13061,9 +13061,9 @@ impl From<Pcr9Ps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcr9Sre {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     SRE0 = 0x0,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     SRE1 = 0x01,
 }
 impl Pcr9Sre {
@@ -13092,9 +13092,9 @@ impl From<Pcr9Sre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Range {
-    #[doc = "1.71 V-3.6 V"]
+    #[doc = "1.71 V-3.6 V."]
     RANGE0 = 0x0,
-    #[doc = "2.70 V-3.6 V"]
+    #[doc = "2.70 V-3.6 V."]
     RANGE1 = 0x01,
 }
 impl Range {

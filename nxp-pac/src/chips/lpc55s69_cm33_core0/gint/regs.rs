@@ -1,4 +1,4 @@
-#[doc = "GPIO grouped interrupt control register"]
+#[doc = "GPIO grouped interrupt control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl(pub u32);
@@ -15,26 +15,26 @@ impl Ctrl {
     pub const fn set_int(&mut self, val: super::vals::Int) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Combine enabled inputs for group interrupt"]
+    #[doc = "Combine enabled inputs for group interrupt."]
     #[must_use]
     #[inline(always)]
     pub const fn comb(&self) -> super::vals::Comb {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Comb::from_bits(val as u8)
     }
-    #[doc = "Combine enabled inputs for group interrupt"]
+    #[doc = "Combine enabled inputs for group interrupt."]
     #[inline(always)]
     pub const fn set_comb(&mut self, val: super::vals::Comb) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Group interrupt trigger"]
+    #[doc = "Group interrupt trigger."]
     #[must_use]
     #[inline(always)]
     pub const fn trig(&self) -> super::vals::Trig {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Trig::from_bits(val as u8)
     }
-    #[doc = "Group interrupt trigger"]
+    #[doc = "Group interrupt trigger."]
     #[inline(always)]
     pub const fn set_trig(&mut self, val: super::vals::Trig) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
@@ -67,7 +67,7 @@ impl defmt::Format for Ctrl {
         )
     }
 }
-#[doc = "GPIO grouped interrupt port 0 enable register"]
+#[doc = "GPIO grouped interrupt port 0 enable register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PortEna(pub u32);
@@ -102,7 +102,7 @@ impl defmt::Format for PortEna {
         defmt::write!(f, "PortEna {{ ena: {=u32:?} }}", self.ena())
     }
 }
-#[doc = "GPIO grouped interrupt port 0 polarity register"]
+#[doc = "GPIO grouped interrupt port 0 polarity register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PortPol(pub u32);

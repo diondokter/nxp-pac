@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum BgtErr {
-    #[doc = "Sufficient"]
+    #[doc = "Sufficient."]
     BGT_ERR_SUFFICIENT = 0x0,
-    #[doc = "Too small"]
+    #[doc = "Too small."]
     BGT_ERR_TOOSMALL = 0x01,
 }
 impl BgtErr {
@@ -33,9 +33,9 @@ impl From<BgtErr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum BgtErrIm {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     INT_ENABLED = 0x0,
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     INT_MASKED = 0x01,
 }
 impl BgtErrIm {
@@ -64,9 +64,9 @@ impl From<BgtErrIm> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum BwtErr {
-    #[doc = "Not exceeded"]
+    #[doc = "Not exceeded."]
     BWT_ERR_NO = 0x0,
-    #[doc = "Exceeded"]
+    #[doc = "Exceeded."]
     BWT_ERR_YES = 0x01,
 }
 impl BwtErr {
@@ -95,9 +95,9 @@ impl From<BwtErr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum BwtErrIm {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     INT_ENABLED = 0x0,
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     INT_MASKED = 0x01,
 }
 impl BwtErrIm {
@@ -157,9 +157,9 @@ impl From<CrcOk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CwtErrIm {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     INT_ENABLED = 0x0,
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     INT_DISABLED = 0x01,
 }
 impl CwtErrIm {
@@ -198,15 +198,15 @@ impl DivisorValue {
     pub const INVALID_3: Self = Self(0x03);
     #[doc = "Invalid. As per ISO 7816 specification, the minimum value of F/D is 5."]
     pub const INVALID_4: Self = Self(0x04);
-    #[doc = "Divisor value F/D"]
+    #[doc = "Divisor value F/D."]
     pub const VALID_5: Self = Self(0x05);
-    #[doc = "Divisor value F/D"]
+    #[doc = "Divisor value F/D."]
     pub const VALID_6: Self = Self(0x06);
-    #[doc = "Divisor value F/D"]
+    #[doc = "Divisor value F/D."]
     pub const VALID_7: Self = Self(0x07);
-    #[doc = "Divisor value F/D"]
+    #[doc = "Divisor value F/D."]
     pub const VALID_8: Self = Self(0x08);
-    #[doc = "Divisor value F/D"]
+    #[doc = "Divisor value F/D."]
     pub const VALID_9: Self = Self(0x09);
 }
 impl DivisorValue {
@@ -268,9 +268,9 @@ impl From<DivisorValue> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DozeEn {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DOZE_GATE = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     DOZE_NOGATE = 0x01,
 }
 impl DozeEn {
@@ -299,9 +299,9 @@ impl From<DozeEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EtcIm {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     INT_ENABLED = 0x0,
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     INT_MASKED = 0x01,
 }
 impl EtcIm {
@@ -330,9 +330,9 @@ impl From<EtcIm> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Etcf {
-    #[doc = "Pending or incomplete"]
+    #[doc = "Pending or incomplete."]
     ETX_PENDING = 0x0,
-    #[doc = "Complete"]
+    #[doc = "Complete."]
     ETX_COMPLETE = 0x01,
 }
 impl Etcf {
@@ -361,9 +361,9 @@ impl From<Etcf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlshRx {
-    #[doc = "Normal"]
+    #[doc = "Normal."]
     NORMALOP = 0x0,
-    #[doc = "Reset"]
+    #[doc = "Reset."]
     RESETHOLD = 0x01,
 }
 impl FlshRx {
@@ -392,9 +392,9 @@ impl From<FlshRx> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlshTx {
-    #[doc = "Normal"]
+    #[doc = "Normal."]
     NORMALOP = 0x0,
-    #[doc = "Reset"]
+    #[doc = "Reset."]
     RESETHOLD = 0x01,
 }
 impl FlshTx {
@@ -423,13 +423,13 @@ impl From<FlshTx> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpcnt0ClkSel {
-    #[doc = "Disable/reset"]
+    #[doc = "Disable/reset."]
     DISABLED = 0x0,
-    #[doc = "Card clock"]
+    #[doc = "Card clock."]
     CARDCLK = 0x01,
-    #[doc = "Receive clock"]
+    #[doc = "Receive clock."]
     RXCLK = 0x02,
-    #[doc = "ETU clock (transmit clock)"]
+    #[doc = "ETU clock (transmit clock)."]
     TXCLK = 0x03,
 }
 impl Gpcnt0ClkSel {
@@ -458,9 +458,9 @@ impl From<Gpcnt0ClkSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpcnt0Im {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     INT_ENABLED = 0x0,
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     INT_MASKED = 0x01,
 }
 impl Gpcnt0Im {
@@ -489,9 +489,9 @@ impl From<Gpcnt0Im> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpcnt0To {
-    #[doc = "GPCNT0 not reached, or flag cleared"]
+    #[doc = "GPCNT0 not reached, or flag cleared."]
     GPCNT0_TO_NOTREACHED = 0x0,
-    #[doc = "GPCNT0 reached"]
+    #[doc = "GPCNT0 reached."]
     GPCNT0_TO_REACHED = 0x01,
 }
 impl Gpcnt0To {
@@ -520,13 +520,13 @@ impl From<Gpcnt0To> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpcnt1ClkSel {
-    #[doc = "Disable/reset"]
+    #[doc = "Disable/reset."]
     DISABLED = 0x0,
-    #[doc = "Card clock"]
+    #[doc = "Card clock."]
     CARDCLK = 0x01,
-    #[doc = "Receive clock"]
+    #[doc = "Receive clock."]
     RXCLK = 0x02,
-    #[doc = "ETU clock (transmit clock)"]
+    #[doc = "ETU clock (transmit clock)."]
     TXCLK = 0x03,
 }
 impl Gpcnt1ClkSel {
@@ -555,9 +555,9 @@ impl From<Gpcnt1ClkSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpcnt1Im {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     INT_ENABLED = 0x0,
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     INT_MASKED = 0x01,
 }
 impl Gpcnt1Im {
@@ -586,9 +586,9 @@ impl From<Gpcnt1Im> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpcnt1To {
-    #[doc = "GPCNT1 not reached, or flag cleared"]
+    #[doc = "GPCNT1 not reached, or flag cleared."]
     GPCNT1_TO_NOTREACHED = 0x0,
-    #[doc = "GPCNT1 reached"]
+    #[doc = "GPCNT1 reached."]
     GPCNT1_TO_REACHED = 0x01,
 }
 impl Gpcnt1To {
@@ -617,9 +617,9 @@ impl From<Gpcnt1To> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ic {
-    #[doc = "Direct"]
+    #[doc = "Direct."]
     DIR_CONVENTION = 0x0,
-    #[doc = "Inverse"]
+    #[doc = "Inverse."]
     INV_CONVENTION = 0x01,
 }
 impl Ic {
@@ -648,9 +648,9 @@ impl From<Ic> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum KillClocks {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     INCLK_ENABLED = 0x0,
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     INCLK_DISABLED = 0x01,
 }
 impl KillClocks {
@@ -679,9 +679,9 @@ impl From<KillClocks> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LrcOk {
-    #[doc = "No match"]
+    #[doc = "No match."]
     LRC_NOTOK = 0x0,
-    #[doc = "Match"]
+    #[doc = "Match."]
     LRC_OK = 0x01,
 }
 impl LrcOk {
@@ -710,9 +710,9 @@ impl From<LrcOk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PefIm {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     INT_ENABLED = 0x0,
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     INT_MASKED = 0x01,
 }
 impl PefIm {
@@ -741,9 +741,9 @@ impl From<PefIm> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rcvr11 {
-    #[doc = "12 ETU operation"]
+    #[doc = "12 ETU operation."]
     RCVR_12 = 0x0,
-    #[doc = "11 ETU operation"]
+    #[doc = "11 ETU operation."]
     RCVR_11 = 0x01,
 }
 impl Rcvr11 {
@@ -772,9 +772,9 @@ impl From<Rcvr11> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RdtIm {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     INT_ENABLED = 0x0,
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     INT_MASKED = 0x01,
 }
 impl RdtIm {
@@ -803,9 +803,9 @@ impl From<RdtIm> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rdtf {
-    #[doc = "Less than threshold"]
+    #[doc = "Less than threshold."]
     LESSTHAN_RXTHRESH = 0x0,
-    #[doc = "Greater than or equal to threshold"]
+    #[doc = "Greater than or equal to threshold."]
     GREATER_EQ_RXTHRESH = 0x01,
 }
 impl Rdtf {
@@ -834,9 +834,9 @@ impl From<Rdtf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rfo {
-    #[doc = "No overrun error"]
+    #[doc = "No overrun error."]
     NO_OVERRUN = 0x0,
-    #[doc = "Overrun error"]
+    #[doc = "Overrun error."]
     OVERFLOW = 0x01,
 }
 impl Rfo {
@@ -865,9 +865,9 @@ impl From<Rfo> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RfoIm {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     INT_ENABLED = 0x0,
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     INT_MASKED = 0x01,
 }
 impl RfoIm {
@@ -896,9 +896,9 @@ impl From<RfoIm> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RnackIm {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     INT_ENABLED = 0x0,
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     INT_MASKED = 0x01,
 }
 impl RnackIm {
@@ -927,9 +927,9 @@ impl From<RnackIm> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rte {
-    #[doc = "Less than"]
+    #[doc = "Less than."]
     LESSTHAN_NACKTHRESH = 0x0,
-    #[doc = "Equal to"]
+    #[doc = "Equal to."]
     GREATER_EQ_NACKTHRESH = 0x01,
 }
 impl Rte {
@@ -958,7 +958,7 @@ impl From<Rte> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RxCnt {
-    #[doc = "FIFO empty"]
+    #[doc = "FIFO empty."]
     FIFO_EMPTY = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
@@ -1002,9 +1002,9 @@ impl From<RxCnt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RxDataIm {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     INT_ENABLED = 0x0,
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     INT_MASKED = 0x01,
 }
 impl RxDataIm {
@@ -1033,9 +1033,9 @@ impl From<RxDataIm> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Scsp {
-    #[doc = "Logic 0"]
+    #[doc = "Logic 0."]
     SCSP_LOGIC0 = 0x0,
-    #[doc = "Logic 1"]
+    #[doc = "Logic 1."]
     SCSP_LOGIC1 = 0x01,
 }
 impl Scsp {
@@ -1064,9 +1064,9 @@ impl From<Scsp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Spd {
-    #[doc = "No"]
+    #[doc = "No."]
     NO_EFFECT = 0x0,
-    #[doc = "Yes"]
+    #[doc = "Yes."]
     POWERDOWN = 0x01,
 }
 impl Spd {
@@ -1095,9 +1095,9 @@ impl From<Spd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Spdes {
-    #[doc = "Falling edge"]
+    #[doc = "Falling edge."]
     FALLING_EDGE = 0x0,
-    #[doc = "Rising edge"]
+    #[doc = "Rising edge."]
     RISING_EDGE = 0x01,
 }
 impl Spdes {
@@ -1126,9 +1126,9 @@ impl From<Spdes> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Spdim {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     INT_ENABLED = 0x0,
-    #[doc = "Mask"]
+    #[doc = "Mask."]
     INT_MASKED = 0x01,
 }
 impl Spdim {
@@ -1157,9 +1157,9 @@ impl From<Spdim> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Spdp {
-    #[doc = "Logic low"]
+    #[doc = "Logic low."]
     LOGIC_LOW = 0x0,
-    #[doc = "Logic high"]
+    #[doc = "Logic high."]
     LOGIC_HIGH = 0x01,
 }
 impl Spdp {
@@ -1188,9 +1188,9 @@ impl From<Spdp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Srst {
-    #[doc = "Assert"]
+    #[doc = "Assert."]
     ASSERTED = 0x0,
-    #[doc = "Deassert"]
+    #[doc = "Deassert."]
     DE_ASSERTED = 0x01,
 }
 impl Srst {
@@ -1219,9 +1219,9 @@ impl From<Srst> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StopEn {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     STOP_ALL_CLKS = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     ONLY_SCK_ON = 0x01,
 }
 impl StopEn {
@@ -1250,9 +1250,9 @@ impl From<StopEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SwRst {
-    #[doc = "Normal"]
+    #[doc = "Normal."]
     NORMALOP = 0x0,
-    #[doc = "Reset"]
+    #[doc = "Reset."]
     RESETHOLD = 0x01,
 }
 impl SwRst {
@@ -1281,9 +1281,9 @@ impl From<SwRst> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TcIm {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     INT_ENABLED = 0x0,
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     INT_MASKED = 0x01,
 }
 impl TcIm {
@@ -1312,9 +1312,9 @@ impl From<TcIm> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcf {
-    #[doc = "Pending or incomplete"]
+    #[doc = "Pending or incomplete."]
     TX_PENDING = 0x0,
-    #[doc = "Complete"]
+    #[doc = "Complete."]
     TX_COMPLETE = 0x01,
 }
 impl Tcf {
@@ -1343,9 +1343,9 @@ impl From<Tcf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TdtIm {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     INT_ENABLED = 0x0,
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     INT_MASKED = 0x01,
 }
 impl TdtIm {
@@ -1374,9 +1374,9 @@ impl From<TdtIm> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tdtf {
-    #[doc = "Threshold exceeded or this field written to 0"]
+    #[doc = "Threshold exceeded or this field written to 0."]
     LESSTHAN_TXTHRESH = 0x0,
-    #[doc = "Threshold not exceeded"]
+    #[doc = "Threshold not exceeded."]
     GREATER_EQ_TXTHRESH = 0x01,
 }
 impl Tdtf {
@@ -1405,9 +1405,9 @@ impl From<Tdtf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tfe {
-    #[doc = "Not empty"]
+    #[doc = "Not empty."]
     FIFO_EMPTY = 0x0,
-    #[doc = "Empty"]
+    #[doc = "Empty."]
     FIFO_NOTEMPTY = 0x01,
 }
 impl Tfe {
@@ -1436,9 +1436,9 @@ impl From<Tfe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TfeIm {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     INT_ENABLED = 0x0,
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     INT_MASKED = 0x01,
 }
 impl TfeIm {
@@ -1467,9 +1467,9 @@ impl From<TfeIm> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tff {
-    #[doc = "Not full"]
+    #[doc = "Not full."]
     TX_FIFO_NOTFULL = 0x0,
-    #[doc = "Full"]
+    #[doc = "Full."]
     TX_FIFO_FULL = 0x01,
 }
 impl Tff {
@@ -1498,9 +1498,9 @@ impl From<Tff> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TffIm {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     INT_ENABLED = 0x0,
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     INT_MASKED = 0x01,
 }
 impl TffIm {
@@ -1529,9 +1529,9 @@ impl From<TffIm> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TnackIm {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     INT_ENABLED = 0x0,
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     INT_MASKED = 0x01,
 }
 impl TnackIm {
@@ -1560,9 +1560,9 @@ impl From<TnackIm> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tnte {
-    #[doc = "Threshold not reached"]
+    #[doc = "Threshold not reached."]
     LESSTHAN_NACKTHRESH = 0x0,
-    #[doc = "Threshold reached"]
+    #[doc = "Threshold reached."]
     GREATER_EQ_NACKTHRESH = 0x01,
 }
 impl Tnte {
@@ -1591,7 +1591,7 @@ impl From<Tnte> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TxCnt {
-    #[doc = "FIFO empty"]
+    #[doc = "FIFO empty."]
     FIFO_EMPTY = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
@@ -1635,9 +1635,9 @@ impl From<TxCnt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Vccenp {
-    #[doc = "Active high"]
+    #[doc = "Active high."]
     ACTIVE_HIGH = 0x0,
-    #[doc = "Active low"]
+    #[doc = "Active low."]
     ACTIVE_LOW = 0x01,
 }
 impl Vccenp {

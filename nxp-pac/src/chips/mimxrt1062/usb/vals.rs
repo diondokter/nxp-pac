@@ -2,20 +2,20 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ahbbrst {
-    #[doc = "Incremental burst of unspecified length only"]
+    #[doc = "Incremental burst of unspecified length only."]
     AHBBRST_0 = 0x0,
-    #[doc = "INCR4 burst, then single transfer"]
+    #[doc = "INCR4 burst, then single transfer."]
     AHBBRST_1 = 0x01,
-    #[doc = "INCR8 burst, INCR4 burst, then single transfer"]
+    #[doc = "INCR8 burst, INCR4 burst, then single transfer."]
     AHBBRST_2 = 0x02,
-    #[doc = "INCR16 burst, INCR8 burst, INCR4 burst, then single transfer"]
+    #[doc = "INCR16 burst, INCR8 burst, INCR4 burst, then single transfer."]
     AHBBRST_3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "INCR4 burst, then incremental burst of unspecified length"]
+    #[doc = "INCR4 burst, then incremental burst of unspecified length."]
     AHBBRST_5 = 0x05,
-    #[doc = "INCR8 burst, INCR4 burst, then incremental burst of unspecified length"]
+    #[doc = "INCR8 burst, INCR4 burst, then incremental burst of unspecified length."]
     AHBBRST_6 = 0x06,
-    #[doc = "INCR16 burst, INCR8 burst, INCR4 burst, then incremental burst of unspecified length"]
+    #[doc = "INCR16 burst, INCR8 burst, INCR4 burst, then incremental burst of unspecified length."]
     AHBBRST_7 = 0x07,
 }
 impl Ahbbrst {
@@ -106,12 +106,12 @@ impl From<Cf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cm {
-    #[doc = "Idle \\[Default for combination host/device\\]"]
+    #[doc = "Idle \\[Default for combination host/device\\]."]
     CM_0 = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "Device Controller \\[Default for device only controller\\]"]
+    #[doc = "Device Controller \\[Default for device only controller\\]."]
     CM_2 = 0x02,
-    #[doc = "Host Controller \\[Default for host only controller\\]"]
+    #[doc = "Host Controller \\[Default for host only controller\\]."]
     CM_3 = 0x03,
 }
 impl Cm {
@@ -140,9 +140,9 @@ impl From<Cm> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dc {
-    #[doc = "Not supported"]
+    #[doc = "Not supported."]
     DC_0 = 0x0,
-    #[doc = "Supported"]
+    #[doc = "Supported."]
     DC_1 = 0x01,
 }
 impl Dc {
@@ -171,9 +171,9 @@ impl From<Dc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Es {
-    #[doc = "Little Endian \\[Default\\]"]
+    #[doc = "Little Endian \\[Default\\]."]
     ES_0 = 0x0,
-    #[doc = "Big Endian"]
+    #[doc = "Big Endian."]
     ES_1 = 0x01,
 }
 impl Es {
@@ -202,21 +202,21 @@ impl From<Es> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Frindex(u16);
 impl Frindex {
-    #[doc = "(1024) 12"]
+    #[doc = "(1024) 12."]
     pub const FRINDEX_0: Self = Self(0x0);
-    #[doc = "(512) 11"]
+    #[doc = "(512) 11."]
     pub const FRINDEX_1: Self = Self(0x01);
-    #[doc = "(256) 10"]
+    #[doc = "(256) 10."]
     pub const FRINDEX_2: Self = Self(0x02);
-    #[doc = "(128) 9"]
+    #[doc = "(128) 9."]
     pub const FRINDEX_3: Self = Self(0x03);
-    #[doc = "(64) 8"]
+    #[doc = "(64) 8."]
     pub const FRINDEX_4: Self = Self(0x04);
-    #[doc = "(32) 7"]
+    #[doc = "(32) 7."]
     pub const FRINDEX_5: Self = Self(0x05);
-    #[doc = "(16) 6"]
+    #[doc = "(16) 6."]
     pub const FRINDEX_6: Self = Self(0x06);
-    #[doc = "(8) 5"]
+    #[doc = "(8) 5."]
     pub const FRINDEX_7: Self = Self(0x07);
 }
 impl Frindex {
@@ -274,9 +274,9 @@ impl From<Frindex> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fs2 {
-    #[doc = "1024 elements (4096 bytes) Default value"]
+    #[doc = "1024 elements (4096 bytes) Default value."]
     FS_2_0 = 0x0,
-    #[doc = "512 elements (2048 bytes)"]
+    #[doc = "512 elements (2048 bytes)."]
     FS_2_1 = 0x01,
 }
 impl Fs2 {
@@ -305,9 +305,9 @@ impl From<Fs2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gptimer0ctrlGptmode {
-    #[doc = "One Shot Mode"]
+    #[doc = "One Shot Mode."]
     GPTMODE_0 = 0x0,
-    #[doc = "Repeat Mode"]
+    #[doc = "Repeat Mode."]
     GPTMODE_1 = 0x01,
 }
 impl Gptimer0ctrlGptmode {
@@ -336,9 +336,9 @@ impl From<Gptimer0ctrlGptmode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gptimer0ctrlGptrst {
-    #[doc = "No action"]
+    #[doc = "No action."]
     GPTRST_0 = 0x0,
-    #[doc = "Load counter value from GPTLD bits in n_GPTIMER0LD"]
+    #[doc = "Load counter value from GPTLD bits in n_GPTIMER0LD."]
     GPTRST_1 = 0x01,
 }
 impl Gptimer0ctrlGptrst {
@@ -367,9 +367,9 @@ impl From<Gptimer0ctrlGptrst> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gptimer0ctrlGptrun {
-    #[doc = "Stop counting"]
+    #[doc = "Stop counting."]
     GPTRUN_0 = 0x0,
-    #[doc = "Run"]
+    #[doc = "Run."]
     GPTRUN_1 = 0x01,
 }
 impl Gptimer0ctrlGptrun {
@@ -398,9 +398,9 @@ impl From<Gptimer0ctrlGptrun> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gptimer1ctrlGptmode {
-    #[doc = "One Shot Mode"]
+    #[doc = "One Shot Mode."]
     GPTMODE_0 = 0x0,
-    #[doc = "Repeat Mode"]
+    #[doc = "Repeat Mode."]
     GPTMODE_1 = 0x01,
 }
 impl Gptimer1ctrlGptmode {
@@ -429,9 +429,9 @@ impl From<Gptimer1ctrlGptmode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gptimer1ctrlGptrst {
-    #[doc = "No action"]
+    #[doc = "No action."]
     GPTRST_0 = 0x0,
-    #[doc = "Load counter value from GPTLD bits in USB_n_GPTIMER0LD"]
+    #[doc = "Load counter value from GPTLD bits in USB_n_GPTIMER0LD."]
     GPTRST_1 = 0x01,
 }
 impl Gptimer1ctrlGptrst {
@@ -460,9 +460,9 @@ impl From<Gptimer1ctrlGptrst> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gptimer1ctrlGptrun {
-    #[doc = "Stop counting"]
+    #[doc = "Stop counting."]
     GPTRUN_0 = 0x0,
-    #[doc = "Run"]
+    #[doc = "Run."]
     GPTRUN_1 = 0x01,
 }
 impl Gptimer1ctrlGptrun {
@@ -491,9 +491,9 @@ impl From<Gptimer1ctrlGptrun> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Hc {
-    #[doc = "Not supported"]
+    #[doc = "Not supported."]
     HC_0 = 0x0,
-    #[doc = "Supported"]
+    #[doc = "Supported."]
     HC_1 = 0x01,
 }
 impl Hc {
@@ -522,21 +522,21 @@ impl From<Hc> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Itc(u8);
 impl Itc {
-    #[doc = "Immediate (no threshold)"]
+    #[doc = "Immediate (no threshold)."]
     pub const ITC_0: Self = Self(0x0);
-    #[doc = "1 micro-frame"]
+    #[doc = "1 micro-frame."]
     pub const ITC_1: Self = Self(0x01);
-    #[doc = "2 micro-frames"]
+    #[doc = "2 micro-frames."]
     pub const ITC_2: Self = Self(0x02);
-    #[doc = "4 micro-frames"]
+    #[doc = "4 micro-frames."]
     pub const ITC_4: Self = Self(0x04);
-    #[doc = "8 micro-frames"]
+    #[doc = "8 micro-frames."]
     pub const ITC_8: Self = Self(0x08);
-    #[doc = "16 micro-frames"]
+    #[doc = "16 micro-frames."]
     pub const ITC_16: Self = Self(0x10);
-    #[doc = "32 micro-frames"]
+    #[doc = "32 micro-frames."]
     pub const ITC_32: Self = Self(0x20);
-    #[doc = "64 micro-frames"]
+    #[doc = "64 micro-frames."]
     pub const ITC_64: Self = Self(0x40);
 }
 impl Itc {
@@ -594,13 +594,13 @@ impl From<Itc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ls {
-    #[doc = "SE0"]
+    #[doc = "SE0."]
     LS_0 = 0x0,
-    #[doc = "K-state"]
+    #[doc = "K-state."]
     LS_1 = 0x01,
-    #[doc = "J-state"]
+    #[doc = "J-state."]
     LS_2 = 0x02,
-    #[doc = "Undefined"]
+    #[doc = "Undefined."]
     LS_3 = 0x03,
 }
 impl Ls {
@@ -676,7 +676,7 @@ impl From<NCc> for u8 {
 pub enum Oca {
     #[doc = "This port does not have an over-current condition."]
     OCA_0 = 0x0,
-    #[doc = "This port currently has an over-current condition"]
+    #[doc = "This port currently has an over-current condition."]
     OCA_1 = 0x01,
 }
 impl Oca {
@@ -705,9 +705,9 @@ impl From<Oca> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pfsc {
-    #[doc = "Normal operation"]
+    #[doc = "Normal operation."]
     PFSC_0 = 0x0,
-    #[doc = "Forced to full speed"]
+    #[doc = "Forced to full speed."]
     PFSC_1 = 0x01,
 }
 impl Pfsc {
@@ -736,9 +736,9 @@ impl From<Pfsc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Phcd {
-    #[doc = "Enable PHY clock"]
+    #[doc = "Enable PHY clock."]
     PHCD_0 = 0x0,
-    #[doc = "Disable PHY clock"]
+    #[doc = "Disable PHY clock."]
     PHCD_1 = 0x01,
 }
 impl Phcd {
@@ -767,21 +767,21 @@ impl From<Phcd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Phym {
-    #[doc = "UTMI/UMTI+"]
+    #[doc = "UTMI/UMTI+."]
     PHYM_0 = 0x0,
-    #[doc = "ULPI DDR"]
+    #[doc = "ULPI DDR."]
     PHYM_1 = 0x01,
-    #[doc = "ULPI"]
+    #[doc = "ULPI."]
     PHYM_2 = 0x02,
-    #[doc = "Serial Only"]
+    #[doc = "Serial Only."]
     PHYM_3 = 0x03,
-    #[doc = "Software programmable - reset to UTMI/UTMI+"]
+    #[doc = "Software programmable - reset to UTMI/UTMI+."]
     PHYM_4 = 0x04,
-    #[doc = "Software programmable - reset to ULPI DDR"]
+    #[doc = "Software programmable - reset to ULPI DDR."]
     PHYM_5 = 0x05,
-    #[doc = "Software programmable - reset to ULPI"]
+    #[doc = "Software programmable - reset to ULPI."]
     PHYM_6 = 0x06,
-    #[doc = "Software programmable - reset to Serial"]
+    #[doc = "Software programmable - reset to Serial."]
     PHYM_7 = 0x07,
 }
 impl Phym {
@@ -810,13 +810,13 @@ impl From<Phym> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Phyw {
-    #[doc = "8 bit wide data bus Software non-programmable"]
+    #[doc = "8 bit wide data bus Software non-programmable."]
     PHYW_0 = 0x0,
-    #[doc = "16 bit wide data bus Software non-programmable"]
+    #[doc = "16 bit wide data bus Software non-programmable."]
     PHYW_1 = 0x01,
-    #[doc = "Reset to 8 bit wide data bus Software programmable"]
+    #[doc = "Reset to 8 bit wide data bus Software programmable."]
     PHYW_2 = 0x02,
-    #[doc = "Reset to 16 bit wide data bus Software programmable"]
+    #[doc = "Reset to 16 bit wide data bus Software programmable."]
     PHYW_3 = 0x03,
 }
 impl Phyw {
@@ -845,13 +845,13 @@ impl From<Phyw> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pic {
-    #[doc = "Port indicators are off"]
+    #[doc = "Port indicators are off."]
     PIC_0 = 0x0,
-    #[doc = "Amber"]
+    #[doc = "Amber."]
     PIC_1 = 0x01,
-    #[doc = "Green"]
+    #[doc = "Green."]
     PIC_2 = 0x02,
-    #[doc = "Undefined"]
+    #[doc = "Undefined."]
     PIC_3 = 0x03,
 }
 impl Pic {
@@ -880,7 +880,7 @@ impl From<Pic> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pse {
-    #[doc = "Do not process the Periodic Schedule"]
+    #[doc = "Do not process the Periodic Schedule."]
     PSE_0 = 0x0,
     #[doc = "Use the PERIODICLISTBASE register to access the Periodic Schedule."]
     PSE_1 = 0x01,
@@ -911,13 +911,13 @@ impl From<Pse> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pspd {
-    #[doc = "Full Speed"]
+    #[doc = "Full Speed."]
     PSPD_0 = 0x0,
-    #[doc = "Low Speed"]
+    #[doc = "Low Speed."]
     PSPD_1 = 0x01,
-    #[doc = "High Speed"]
+    #[doc = "High Speed."]
     PSPD_2 = 0x02,
-    #[doc = "Undefined"]
+    #[doc = "Undefined."]
     PSPD_3 = 0x03,
 }
 impl Pspd {
@@ -946,21 +946,21 @@ impl From<Pspd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptc {
-    #[doc = "TEST_MODE_DISABLE"]
+    #[doc = "TEST_MODE_DISABLE."]
     PTC_0 = 0x0,
-    #[doc = "J_STATE"]
+    #[doc = "J_STATE."]
     PTC_1 = 0x01,
-    #[doc = "K_STATE"]
+    #[doc = "K_STATE."]
     PTC_2 = 0x02,
-    #[doc = "SE0 (host) / NAK (device)"]
+    #[doc = "SE0 (host) / NAK (device)."]
     PTC_3 = 0x03,
-    #[doc = "Packet"]
+    #[doc = "Packet."]
     PTC_4 = 0x04,
-    #[doc = "FORCE_ENABLE_HS"]
+    #[doc = "FORCE_ENABLE_HS."]
     PTC_5 = 0x05,
-    #[doc = "FORCE_ENABLE_FS"]
+    #[doc = "FORCE_ENABLE_FS."]
     PTC_6 = 0x06,
-    #[doc = "FORCE_ENABLE_LS"]
+    #[doc = "FORCE_ENABLE_LS."]
     PTC_7 = 0x07,
     _RESERVED_8 = 0x08,
     _RESERVED_9 = 0x09,
@@ -997,9 +997,9 @@ impl From<Ptc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptw {
-    #[doc = "Select the 8-bit UTMI interface \\[60MHz\\]"]
+    #[doc = "Select the 8-bit UTMI interface \\[60MHz\\]."]
     PTW_0 = 0x0,
-    #[doc = "Select the 16-bit UTMI interface \\[30MHz\\]"]
+    #[doc = "Select the 16-bit UTMI interface \\[30MHz\\]."]
     PTW_1 = 0x01,
 }
 impl Ptw {
@@ -1028,9 +1028,9 @@ impl From<Ptw> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Slom {
-    #[doc = "Setup Lockouts On (default);"]
+    #[doc = "Setup Lockouts On (default);."]
     SLOM_0 = 0x0,
-    #[doc = "Setup Lockouts Off (DCD requires use of Setup Data Buffer Tripwire in USBCMDUSB Command Register ."]
+    #[doc = "Setup Lockouts Off (DCD requires use of Setup Data Buffer Tripwire in USBCMDUSB Command Register."]
     SLOM_1 = 0x01,
 }
 impl Slom {
@@ -1063,9 +1063,9 @@ pub enum Sm {
     SM_0 = 0x0,
     #[doc = "Serial Engine present, always use serial signalling for FS/LS."]
     SM_1 = 0x01,
-    #[doc = "Software programmable - Reset to use parallel signalling for FS/LS"]
+    #[doc = "Software programmable - Reset to use parallel signalling for FS/LS."]
     SM_2 = 0x02,
-    #[doc = "Software programmable - Reset to use serial signalling for FS/LS"]
+    #[doc = "Software programmable - Reset to use serial signalling for FS/LS."]
     SM_3 = 0x03,
 }
 impl Sm {

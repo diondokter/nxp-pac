@@ -1,4 +1,4 @@
-#[doc = "FLASH_ROMPATCH"]
+#[doc = "FLASH_ROMPATCH."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FlashRompatch {
     ptr: *mut u8,

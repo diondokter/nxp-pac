@@ -1,64 +1,64 @@
-#[doc = "ADC Configuration Register"]
+#[doc = "ADC Configuration Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cfg(pub u32);
 impl Cfg {
-    #[doc = "ADC trigger priority control"]
+    #[doc = "ADC trigger priority control."]
     #[must_use]
     #[inline(always)]
     pub const fn tprictrl(&self) -> super::vals::Tprictrl {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Tprictrl::from_bits(val as u8)
     }
-    #[doc = "ADC trigger priority control"]
+    #[doc = "ADC trigger priority control."]
     #[inline(always)]
     pub const fn set_tprictrl(&mut self, val: super::vals::Tprictrl) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Power Configuration Select"]
+    #[doc = "Power Configuration Select."]
     #[must_use]
     #[inline(always)]
     pub const fn pwrsel(&self) -> super::vals::Pwrsel {
         let val = (self.0 >> 4usize) & 0x03;
         super::vals::Pwrsel::from_bits(val as u8)
     }
-    #[doc = "Power Configuration Select"]
+    #[doc = "Power Configuration Select."]
     #[inline(always)]
     pub const fn set_pwrsel(&mut self, val: super::vals::Pwrsel) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
-    #[doc = "Voltage Reference Selection"]
+    #[doc = "Voltage Reference Selection."]
     #[must_use]
     #[inline(always)]
     pub const fn refsel(&self) -> super::vals::Refsel {
         let val = (self.0 >> 6usize) & 0x03;
         super::vals::Refsel::from_bits(val as u8)
     }
-    #[doc = "Voltage Reference Selection"]
+    #[doc = "Voltage Reference Selection."]
     #[inline(always)]
     pub const fn set_refsel(&mut self, val: super::vals::Refsel) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u32) & 0x03) << 6usize);
     }
-    #[doc = "Power Up Delay"]
+    #[doc = "Power Up Delay."]
     #[must_use]
     #[inline(always)]
     pub const fn pudly(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0xff;
         val as u8
     }
-    #[doc = "Power Up Delay"]
+    #[doc = "Power Up Delay."]
     #[inline(always)]
     pub const fn set_pudly(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
     }
-    #[doc = "ADC Analog Pre-Enable"]
+    #[doc = "ADC Analog Pre-Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn pwren(&self) -> super::vals::Pwren {
         let val = (self.0 >> 28usize) & 0x01;
         super::vals::Pwren::from_bits(val as u8)
     }
-    #[doc = "ADC Analog Pre-Enable"]
+    #[doc = "ADC Analog Pre-Enable."]
     #[inline(always)]
     pub const fn set_pwren(&mut self, val: super::vals::Pwren) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
@@ -95,79 +95,79 @@ impl defmt::Format for Cfg {
         )
     }
 }
-#[doc = "ADC Command High Buffer Register"]
+#[doc = "ADC Command High Buffer Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cmdh(pub u32);
 impl Cmdh {
-    #[doc = "Compare Function Enable"]
+    #[doc = "Compare Function Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn cmpen(&self) -> super::vals::CmdhCmpen {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::CmdhCmpen::from_bits(val as u8)
     }
-    #[doc = "Compare Function Enable"]
+    #[doc = "Compare Function Enable."]
     #[inline(always)]
     pub const fn set_cmpen(&mut self, val: super::vals::CmdhCmpen) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "Loop with Increment"]
+    #[doc = "Loop with Increment."]
     #[must_use]
     #[inline(always)]
     pub const fn lwi(&self) -> super::vals::CmdhLwi {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::CmdhLwi::from_bits(val as u8)
     }
-    #[doc = "Loop with Increment"]
+    #[doc = "Loop with Increment."]
     #[inline(always)]
     pub const fn set_lwi(&mut self, val: super::vals::CmdhLwi) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "Sample Time Select"]
+    #[doc = "Sample Time Select."]
     #[must_use]
     #[inline(always)]
     pub const fn sts(&self) -> super::vals::CmdhSts {
         let val = (self.0 >> 8usize) & 0x07;
         super::vals::CmdhSts::from_bits(val as u8)
     }
-    #[doc = "Sample Time Select"]
+    #[doc = "Sample Time Select."]
     #[inline(always)]
     pub const fn set_sts(&mut self, val: super::vals::CmdhSts) {
         self.0 = (self.0 & !(0x07 << 8usize)) | (((val.to_bits() as u32) & 0x07) << 8usize);
     }
-    #[doc = "Hardware Average Select"]
+    #[doc = "Hardware Average Select."]
     #[must_use]
     #[inline(always)]
     pub const fn avgs(&self) -> super::vals::CmdhAvgs {
         let val = (self.0 >> 12usize) & 0x07;
         super::vals::CmdhAvgs::from_bits(val as u8)
     }
-    #[doc = "Hardware Average Select"]
+    #[doc = "Hardware Average Select."]
     #[inline(always)]
     pub const fn set_avgs(&mut self, val: super::vals::CmdhAvgs) {
         self.0 = (self.0 & !(0x07 << 12usize)) | (((val.to_bits() as u32) & 0x07) << 12usize);
     }
-    #[doc = "Loop Count Select"]
+    #[doc = "Loop Count Select."]
     #[must_use]
     #[inline(always)]
     pub const fn loop_(&self) -> super::vals::CmdhLoop {
         let val = (self.0 >> 16usize) & 0x0f;
         super::vals::CmdhLoop::from_bits(val as u8)
     }
-    #[doc = "Loop Count Select"]
+    #[doc = "Loop Count Select."]
     #[inline(always)]
     pub const fn set_loop_(&mut self, val: super::vals::CmdhLoop) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val.to_bits() as u32) & 0x0f) << 16usize);
     }
-    #[doc = "Next Command Select"]
+    #[doc = "Next Command Select."]
     #[must_use]
     #[inline(always)]
     pub const fn next(&self) -> super::vals::CmdhNext {
         let val = (self.0 >> 24usize) & 0x0f;
         super::vals::CmdhNext::from_bits(val as u8)
     }
-    #[doc = "Next Command Select"]
+    #[doc = "Next Command Select."]
     #[inline(always)]
     pub const fn set_next(&mut self, val: super::vals::CmdhNext) {
         self.0 = (self.0 & !(0x0f << 24usize)) | (((val.to_bits() as u32) & 0x0f) << 24usize);
@@ -206,55 +206,55 @@ impl defmt::Format for Cmdh {
         )
     }
 }
-#[doc = "ADC Command Low Buffer Register"]
+#[doc = "ADC Command Low Buffer Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cmdl(pub u32);
 impl Cmdl {
-    #[doc = "Input channel select"]
+    #[doc = "Input channel select."]
     #[must_use]
     #[inline(always)]
     pub const fn adch(&self) -> super::vals::CmdlAdch {
         let val = (self.0 >> 0usize) & 0x1f;
         super::vals::CmdlAdch::from_bits(val as u8)
     }
-    #[doc = "Input channel select"]
+    #[doc = "Input channel select."]
     #[inline(always)]
     pub const fn set_adch(&mut self, val: super::vals::CmdlAdch) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val.to_bits() as u32) & 0x1f) << 0usize);
     }
-    #[doc = "A-side vs. B-side Select"]
+    #[doc = "A-side vs. B-side Select."]
     #[must_use]
     #[inline(always)]
     pub const fn absel(&self) -> super::vals::CmdlAbsel {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::CmdlAbsel::from_bits(val as u8)
     }
-    #[doc = "A-side vs. B-side Select"]
+    #[doc = "A-side vs. B-side Select."]
     #[inline(always)]
     pub const fn set_absel(&mut self, val: super::vals::CmdlAbsel) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
-    #[doc = "Differential Mode Enable"]
+    #[doc = "Differential Mode Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn diff(&self) -> super::vals::CmdlDiff {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::CmdlDiff::from_bits(val as u8)
     }
-    #[doc = "Differential Mode Enable"]
+    #[doc = "Differential Mode Enable."]
     #[inline(always)]
     pub const fn set_diff(&mut self, val: super::vals::CmdlDiff) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "Channel Scale"]
+    #[doc = "Channel Scale."]
     #[must_use]
     #[inline(always)]
     pub const fn cscale(&self) -> super::vals::CmdlCscale {
         let val = (self.0 >> 13usize) & 0x01;
         super::vals::CmdlCscale::from_bits(val as u8)
     }
-    #[doc = "Channel Scale"]
+    #[doc = "Channel Scale."]
     #[inline(always)]
     pub const fn set_cscale(&mut self, val: super::vals::CmdlCscale) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
@@ -289,55 +289,55 @@ impl defmt::Format for Cmdl {
         )
     }
 }
-#[doc = "ADC Control Register"]
+#[doc = "ADC Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl(pub u32);
 impl Ctrl {
-    #[doc = "ADC Enable"]
+    #[doc = "ADC Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn adcen(&self) -> super::vals::Adcen {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Adcen::from_bits(val as u8)
     }
-    #[doc = "ADC Enable"]
+    #[doc = "ADC Enable."]
     #[inline(always)]
     pub const fn set_adcen(&mut self, val: super::vals::Adcen) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Software Reset"]
+    #[doc = "Software Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn rst(&self) -> super::vals::Rst {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Rst::from_bits(val as u8)
     }
-    #[doc = "Software Reset"]
+    #[doc = "Software Reset."]
     #[inline(always)]
     pub const fn set_rst(&mut self, val: super::vals::Rst) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Doze Enable"]
+    #[doc = "Doze Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dozen(&self) -> super::vals::Dozen {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Dozen::from_bits(val as u8)
     }
-    #[doc = "Doze Enable"]
+    #[doc = "Doze Enable."]
     #[inline(always)]
     pub const fn set_dozen(&mut self, val: super::vals::Dozen) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "Reset FIFO"]
+    #[doc = "Reset FIFO."]
     #[must_use]
     #[inline(always)]
     pub const fn rstfifo(&self) -> super::vals::Rstfifo {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::Rstfifo::from_bits(val as u8)
     }
-    #[doc = "Reset FIFO"]
+    #[doc = "Reset FIFO."]
     #[inline(always)]
     pub const fn set_rstfifo(&mut self, val: super::vals::Rstfifo) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
@@ -372,7 +372,7 @@ impl defmt::Format for Ctrl {
         )
     }
 }
-#[doc = "Compare Value Register"]
+#[doc = "Compare Value Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cv(pub u32);
@@ -427,19 +427,19 @@ impl defmt::Format for Cv {
         )
     }
 }
-#[doc = "DMA Enable Register"]
+#[doc = "DMA Enable Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct De(pub u32);
 impl De {
-    #[doc = "FIFO Watermark DMA Enable"]
+    #[doc = "FIFO Watermark DMA Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn fwmde(&self) -> super::vals::Fwmde {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Fwmde::from_bits(val as u8)
     }
-    #[doc = "FIFO Watermark DMA Enable"]
+    #[doc = "FIFO Watermark DMA Enable."]
     #[inline(always)]
     pub const fn set_fwmde(&mut self, val: super::vals::Fwmde) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
@@ -462,31 +462,31 @@ impl defmt::Format for De {
         defmt::write!(f, "De {{ fwmde: {:?} }}", self.fwmde())
     }
 }
-#[doc = "ADC FIFO Control Register"]
+#[doc = "ADC FIFO Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Fctrl(pub u32);
 impl Fctrl {
-    #[doc = "Result FIFO counter"]
+    #[doc = "Result FIFO counter."]
     #[must_use]
     #[inline(always)]
     pub const fn fcount(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x1f;
         val as u8
     }
-    #[doc = "Result FIFO counter"]
+    #[doc = "Result FIFO counter."]
     #[inline(always)]
     pub const fn set_fcount(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val as u32) & 0x1f) << 0usize);
     }
-    #[doc = "Watermark level selection"]
+    #[doc = "Watermark level selection."]
     #[must_use]
     #[inline(always)]
     pub const fn fwmark(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x0f;
         val as u8
     }
-    #[doc = "Watermark level selection"]
+    #[doc = "Watermark level selection."]
     #[inline(always)]
     pub const fn set_fwmark(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
@@ -517,31 +517,31 @@ impl defmt::Format for Fctrl {
         )
     }
 }
-#[doc = "Interrupt Enable Register"]
+#[doc = "Interrupt Enable Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ie(pub u32);
 impl Ie {
-    #[doc = "FIFO Watermark Interrupt Enable"]
+    #[doc = "FIFO Watermark Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn fwmie(&self) -> super::vals::Fwmie {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Fwmie::from_bits(val as u8)
     }
-    #[doc = "FIFO Watermark Interrupt Enable"]
+    #[doc = "FIFO Watermark Interrupt Enable."]
     #[inline(always)]
     pub const fn set_fwmie(&mut self, val: super::vals::Fwmie) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Result FIFO Overflow Interrupt Enable"]
+    #[doc = "Result FIFO Overflow Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn fofie(&self) -> super::vals::Fofie {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Fofie::from_bits(val as u8)
     }
-    #[doc = "Result FIFO Overflow Interrupt Enable"]
+    #[doc = "Result FIFO Overflow Interrupt Enable."]
     #[inline(always)]
     pub const fn set_fofie(&mut self, val: super::vals::Fofie) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
@@ -572,55 +572,55 @@ impl defmt::Format for Ie {
         )
     }
 }
-#[doc = "Parameter Register"]
+#[doc = "Parameter Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Param(pub u32);
 impl Param {
-    #[doc = "Trigger Number"]
+    #[doc = "Trigger Number."]
     #[must_use]
     #[inline(always)]
     pub const fn trig_num(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Trigger Number"]
+    #[doc = "Trigger Number."]
     #[inline(always)]
     pub const fn set_trig_num(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "Result FIFO Depth"]
+    #[doc = "Result FIFO Depth."]
     #[must_use]
     #[inline(always)]
     pub const fn fifosize(&self) -> super::vals::Fifosize {
         let val = (self.0 >> 8usize) & 0xff;
         super::vals::Fifosize::from_bits(val as u8)
     }
-    #[doc = "Result FIFO Depth"]
+    #[doc = "Result FIFO Depth."]
     #[inline(always)]
     pub const fn set_fifosize(&mut self, val: super::vals::Fifosize) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val.to_bits() as u32) & 0xff) << 8usize);
     }
-    #[doc = "Compare Value Number"]
+    #[doc = "Compare Value Number."]
     #[must_use]
     #[inline(always)]
     pub const fn cv_num(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0xff;
         val as u8
     }
-    #[doc = "Compare Value Number"]
+    #[doc = "Compare Value Number."]
     #[inline(always)]
     pub const fn set_cv_num(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
     }
-    #[doc = "Command Buffer Number"]
+    #[doc = "Command Buffer Number."]
     #[must_use]
     #[inline(always)]
     pub const fn cmd_num(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "Command Buffer Number"]
+    #[doc = "Command Buffer Number."]
     #[inline(always)]
     pub const fn set_cmd_num(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);
@@ -655,31 +655,31 @@ impl defmt::Format for Param {
         )
     }
 }
-#[doc = "ADC Pause Register"]
+#[doc = "ADC Pause Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pause(pub u32);
 impl Pause {
-    #[doc = "Pause Delay"]
+    #[doc = "Pause Delay."]
     #[must_use]
     #[inline(always)]
     pub const fn pausedly(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x01ff;
         val as u16
     }
-    #[doc = "Pause Delay"]
+    #[doc = "Pause Delay."]
     #[inline(always)]
     pub const fn set_pausedly(&mut self, val: u16) {
         self.0 = (self.0 & !(0x01ff << 0usize)) | (((val as u32) & 0x01ff) << 0usize);
     }
-    #[doc = "PAUSE Option Enable"]
+    #[doc = "PAUSE Option Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn pauseen(&self) -> super::vals::Pauseen {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::Pauseen::from_bits(val as u8)
     }
-    #[doc = "PAUSE Option Enable"]
+    #[doc = "PAUSE Option Enable."]
     #[inline(always)]
     pub const fn set_pauseen(&mut self, val: super::vals::Pauseen) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -710,67 +710,67 @@ impl defmt::Format for Pause {
         )
     }
 }
-#[doc = "ADC Data Result FIFO Register"]
+#[doc = "ADC Data Result FIFO Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Resfifo(pub u32);
 impl Resfifo {
-    #[doc = "Data result"]
+    #[doc = "Data result."]
     #[must_use]
     #[inline(always)]
     pub const fn d(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Data result"]
+    #[doc = "Data result."]
     #[inline(always)]
     pub const fn set_d(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Trigger Source"]
+    #[doc = "Trigger Source."]
     #[must_use]
     #[inline(always)]
     pub const fn tsrc(&self) -> super::vals::Tsrc {
         let val = (self.0 >> 16usize) & 0x0f;
         super::vals::Tsrc::from_bits(val as u8)
     }
-    #[doc = "Trigger Source"]
+    #[doc = "Trigger Source."]
     #[inline(always)]
     pub const fn set_tsrc(&mut self, val: super::vals::Tsrc) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val.to_bits() as u32) & 0x0f) << 16usize);
     }
-    #[doc = "Loop count value"]
+    #[doc = "Loop count value."]
     #[must_use]
     #[inline(always)]
     pub const fn loopcnt(&self) -> super::vals::Loopcnt {
         let val = (self.0 >> 20usize) & 0x0f;
         super::vals::Loopcnt::from_bits(val as u8)
     }
-    #[doc = "Loop count value"]
+    #[doc = "Loop count value."]
     #[inline(always)]
     pub const fn set_loopcnt(&mut self, val: super::vals::Loopcnt) {
         self.0 = (self.0 & !(0x0f << 20usize)) | (((val.to_bits() as u32) & 0x0f) << 20usize);
     }
-    #[doc = "Command Buffer Source"]
+    #[doc = "Command Buffer Source."]
     #[must_use]
     #[inline(always)]
     pub const fn cmdsrc(&self) -> super::vals::Cmdsrc {
         let val = (self.0 >> 24usize) & 0x0f;
         super::vals::Cmdsrc::from_bits(val as u8)
     }
-    #[doc = "Command Buffer Source"]
+    #[doc = "Command Buffer Source."]
     #[inline(always)]
     pub const fn set_cmdsrc(&mut self, val: super::vals::Cmdsrc) {
         self.0 = (self.0 & !(0x0f << 24usize)) | (((val.to_bits() as u32) & 0x0f) << 24usize);
     }
-    #[doc = "FIFO entry is valid"]
+    #[doc = "FIFO entry is valid."]
     #[must_use]
     #[inline(always)]
     pub const fn valid(&self) -> super::vals::Valid {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::Valid::from_bits(val as u8)
     }
-    #[doc = "FIFO entry is valid"]
+    #[doc = "FIFO entry is valid."]
     #[inline(always)]
     pub const fn set_valid(&mut self, val: super::vals::Valid) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -807,55 +807,55 @@ impl defmt::Format for Resfifo {
         )
     }
 }
-#[doc = "ADC Status Register"]
+#[doc = "ADC Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Stat(pub u32);
 impl Stat {
-    #[doc = "Result FIFO Ready Flag"]
+    #[doc = "Result FIFO Ready Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn rdy(&self) -> super::vals::Rdy {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Rdy::from_bits(val as u8)
     }
-    #[doc = "Result FIFO Ready Flag"]
+    #[doc = "Result FIFO Ready Flag."]
     #[inline(always)]
     pub const fn set_rdy(&mut self, val: super::vals::Rdy) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Result FIFO Overflow Flag"]
+    #[doc = "Result FIFO Overflow Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn fof(&self) -> super::vals::Fof {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Fof::from_bits(val as u8)
     }
-    #[doc = "Result FIFO Overflow Flag"]
+    #[doc = "Result FIFO Overflow Flag."]
     #[inline(always)]
     pub const fn set_fof(&mut self, val: super::vals::Fof) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Trigger Active"]
+    #[doc = "Trigger Active."]
     #[must_use]
     #[inline(always)]
     pub const fn trgact(&self) -> super::vals::Trgact {
         let val = (self.0 >> 16usize) & 0x0f;
         super::vals::Trgact::from_bits(val as u8)
     }
-    #[doc = "Trigger Active"]
+    #[doc = "Trigger Active."]
     #[inline(always)]
     pub const fn set_trgact(&mut self, val: super::vals::Trgact) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val.to_bits() as u32) & 0x0f) << 16usize);
     }
-    #[doc = "Command Active"]
+    #[doc = "Command Active."]
     #[must_use]
     #[inline(always)]
     pub const fn cmdact(&self) -> super::vals::Cmdact {
         let val = (self.0 >> 24usize) & 0x0f;
         super::vals::Cmdact::from_bits(val as u8)
     }
-    #[doc = "Command Active"]
+    #[doc = "Command Active."]
     #[inline(always)]
     pub const fn set_cmdact(&mut self, val: super::vals::Cmdact) {
         self.0 = (self.0 & !(0x0f << 24usize)) | (((val.to_bits() as u32) & 0x0f) << 24usize);
@@ -890,199 +890,199 @@ impl defmt::Format for Stat {
         )
     }
 }
-#[doc = "Software Trigger Register"]
+#[doc = "Software Trigger Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Swtrig(pub u32);
 impl Swtrig {
-    #[doc = "Software trigger 0 event"]
+    #[doc = "Software trigger 0 event."]
     #[must_use]
     #[inline(always)]
     pub const fn swt0(&self) -> super::vals::Swt0 {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Swt0::from_bits(val as u8)
     }
-    #[doc = "Software trigger 0 event"]
+    #[doc = "Software trigger 0 event."]
     #[inline(always)]
     pub const fn set_swt0(&mut self, val: super::vals::Swt0) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Software trigger 1 event"]
+    #[doc = "Software trigger 1 event."]
     #[must_use]
     #[inline(always)]
     pub const fn swt1(&self) -> super::vals::Swt1 {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Swt1::from_bits(val as u8)
     }
-    #[doc = "Software trigger 1 event"]
+    #[doc = "Software trigger 1 event."]
     #[inline(always)]
     pub const fn set_swt1(&mut self, val: super::vals::Swt1) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Software trigger 2 event"]
+    #[doc = "Software trigger 2 event."]
     #[must_use]
     #[inline(always)]
     pub const fn swt2(&self) -> super::vals::Swt2 {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Swt2::from_bits(val as u8)
     }
-    #[doc = "Software trigger 2 event"]
+    #[doc = "Software trigger 2 event."]
     #[inline(always)]
     pub const fn set_swt2(&mut self, val: super::vals::Swt2) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "Software trigger 3 event"]
+    #[doc = "Software trigger 3 event."]
     #[must_use]
     #[inline(always)]
     pub const fn swt3(&self) -> super::vals::Swt3 {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Swt3::from_bits(val as u8)
     }
-    #[doc = "Software trigger 3 event"]
+    #[doc = "Software trigger 3 event."]
     #[inline(always)]
     pub const fn set_swt3(&mut self, val: super::vals::Swt3) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "Software trigger 4 event"]
+    #[doc = "Software trigger 4 event."]
     #[must_use]
     #[inline(always)]
     pub const fn swt4(&self) -> super::vals::Swt4 {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::Swt4::from_bits(val as u8)
     }
-    #[doc = "Software trigger 4 event"]
+    #[doc = "Software trigger 4 event."]
     #[inline(always)]
     pub const fn set_swt4(&mut self, val: super::vals::Swt4) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
-    #[doc = "Software trigger 5 event"]
+    #[doc = "Software trigger 5 event."]
     #[must_use]
     #[inline(always)]
     pub const fn swt5(&self) -> super::vals::Swt5 {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::Swt5::from_bits(val as u8)
     }
-    #[doc = "Software trigger 5 event"]
+    #[doc = "Software trigger 5 event."]
     #[inline(always)]
     pub const fn set_swt5(&mut self, val: super::vals::Swt5) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
-    #[doc = "Software trigger 6 event"]
+    #[doc = "Software trigger 6 event."]
     #[must_use]
     #[inline(always)]
     pub const fn swt6(&self) -> super::vals::Swt6 {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::Swt6::from_bits(val as u8)
     }
-    #[doc = "Software trigger 6 event"]
+    #[doc = "Software trigger 6 event."]
     #[inline(always)]
     pub const fn set_swt6(&mut self, val: super::vals::Swt6) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "Software trigger 7 event"]
+    #[doc = "Software trigger 7 event."]
     #[must_use]
     #[inline(always)]
     pub const fn swt7(&self) -> super::vals::Swt7 {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Swt7::from_bits(val as u8)
     }
-    #[doc = "Software trigger 7 event"]
+    #[doc = "Software trigger 7 event."]
     #[inline(always)]
     pub const fn set_swt7(&mut self, val: super::vals::Swt7) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "Software trigger 8 event"]
+    #[doc = "Software trigger 8 event."]
     #[must_use]
     #[inline(always)]
     pub const fn swt8(&self) -> super::vals::Swt8 {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::Swt8::from_bits(val as u8)
     }
-    #[doc = "Software trigger 8 event"]
+    #[doc = "Software trigger 8 event."]
     #[inline(always)]
     pub const fn set_swt8(&mut self, val: super::vals::Swt8) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
-    #[doc = "Software trigger 9 event"]
+    #[doc = "Software trigger 9 event."]
     #[must_use]
     #[inline(always)]
     pub const fn swt9(&self) -> super::vals::Swt9 {
         let val = (self.0 >> 9usize) & 0x01;
         super::vals::Swt9::from_bits(val as u8)
     }
-    #[doc = "Software trigger 9 event"]
+    #[doc = "Software trigger 9 event."]
     #[inline(always)]
     pub const fn set_swt9(&mut self, val: super::vals::Swt9) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
     }
-    #[doc = "Software trigger 10 event"]
+    #[doc = "Software trigger 10 event."]
     #[must_use]
     #[inline(always)]
     pub const fn swt10(&self) -> super::vals::Swt10 {
         let val = (self.0 >> 10usize) & 0x01;
         super::vals::Swt10::from_bits(val as u8)
     }
-    #[doc = "Software trigger 10 event"]
+    #[doc = "Software trigger 10 event."]
     #[inline(always)]
     pub const fn set_swt10(&mut self, val: super::vals::Swt10) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
-    #[doc = "Software trigger 11 event"]
+    #[doc = "Software trigger 11 event."]
     #[must_use]
     #[inline(always)]
     pub const fn swt11(&self) -> super::vals::Swt11 {
         let val = (self.0 >> 11usize) & 0x01;
         super::vals::Swt11::from_bits(val as u8)
     }
-    #[doc = "Software trigger 11 event"]
+    #[doc = "Software trigger 11 event."]
     #[inline(always)]
     pub const fn set_swt11(&mut self, val: super::vals::Swt11) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
     }
-    #[doc = "Software trigger 12 event"]
+    #[doc = "Software trigger 12 event."]
     #[must_use]
     #[inline(always)]
     pub const fn swt12(&self) -> super::vals::Swt12 {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Swt12::from_bits(val as u8)
     }
-    #[doc = "Software trigger 12 event"]
+    #[doc = "Software trigger 12 event."]
     #[inline(always)]
     pub const fn set_swt12(&mut self, val: super::vals::Swt12) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "Software trigger 13 event"]
+    #[doc = "Software trigger 13 event."]
     #[must_use]
     #[inline(always)]
     pub const fn swt13(&self) -> super::vals::Swt13 {
         let val = (self.0 >> 13usize) & 0x01;
         super::vals::Swt13::from_bits(val as u8)
     }
-    #[doc = "Software trigger 13 event"]
+    #[doc = "Software trigger 13 event."]
     #[inline(always)]
     pub const fn set_swt13(&mut self, val: super::vals::Swt13) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
-    #[doc = "Software trigger 14 event"]
+    #[doc = "Software trigger 14 event."]
     #[must_use]
     #[inline(always)]
     pub const fn swt14(&self) -> super::vals::Swt14 {
         let val = (self.0 >> 14usize) & 0x01;
         super::vals::Swt14::from_bits(val as u8)
     }
-    #[doc = "Software trigger 14 event"]
+    #[doc = "Software trigger 14 event."]
     #[inline(always)]
     pub const fn set_swt14(&mut self, val: super::vals::Swt14) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
     }
-    #[doc = "Software trigger 15 event"]
+    #[doc = "Software trigger 15 event."]
     #[must_use]
     #[inline(always)]
     pub const fn swt15(&self) -> super::vals::Swt15 {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::Swt15::from_bits(val as u8)
     }
-    #[doc = "Software trigger 15 event"]
+    #[doc = "Software trigger 15 event."]
     #[inline(always)]
     pub const fn set_swt15(&mut self, val: super::vals::Swt15) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
@@ -1141,55 +1141,55 @@ impl defmt::Format for Swtrig {
         )
     }
 }
-#[doc = "Trigger Control Register"]
+#[doc = "Trigger Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tctrl(pub u32);
 impl Tctrl {
-    #[doc = "Trigger enable"]
+    #[doc = "Trigger enable."]
     #[must_use]
     #[inline(always)]
     pub const fn hten(&self) -> super::vals::Hten {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Hten::from_bits(val as u8)
     }
-    #[doc = "Trigger enable"]
+    #[doc = "Trigger enable."]
     #[inline(always)]
     pub const fn set_hten(&mut self, val: super::vals::Hten) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Trigger priority setting"]
+    #[doc = "Trigger priority setting."]
     #[must_use]
     #[inline(always)]
     pub const fn tpri(&self) -> super::vals::Tpri {
         let val = (self.0 >> 8usize) & 0x0f;
         super::vals::Tpri::from_bits(val as u8)
     }
-    #[doc = "Trigger priority setting"]
+    #[doc = "Trigger priority setting."]
     #[inline(always)]
     pub const fn set_tpri(&mut self, val: super::vals::Tpri) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
-    #[doc = "Trigger delay select"]
+    #[doc = "Trigger delay select."]
     #[must_use]
     #[inline(always)]
     pub const fn tdly(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x0f;
         val as u8
     }
-    #[doc = "Trigger delay select"]
+    #[doc = "Trigger delay select."]
     #[inline(always)]
     pub const fn set_tdly(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
     }
-    #[doc = "Trigger command select"]
+    #[doc = "Trigger command select."]
     #[must_use]
     #[inline(always)]
     pub const fn tcmd(&self) -> super::vals::Tcmd {
         let val = (self.0 >> 24usize) & 0x0f;
         super::vals::Tcmd::from_bits(val as u8)
     }
-    #[doc = "Trigger command select"]
+    #[doc = "Trigger command select."]
     #[inline(always)]
     pub const fn set_tcmd(&mut self, val: super::vals::Tcmd) {
         self.0 = (self.0 & !(0x0f << 24usize)) | (((val.to_bits() as u32) & 0x0f) << 24usize);
@@ -1224,115 +1224,115 @@ impl defmt::Format for Tctrl {
         )
     }
 }
-#[doc = "Version ID Register"]
+#[doc = "Version ID Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Verid(pub u32);
 impl Verid {
-    #[doc = "Resolution"]
+    #[doc = "Resolution."]
     #[must_use]
     #[inline(always)]
     pub const fn res(&self) -> super::vals::Res {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Res::from_bits(val as u8)
     }
-    #[doc = "Resolution"]
+    #[doc = "Resolution."]
     #[inline(always)]
     pub const fn set_res(&mut self, val: super::vals::Res) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Differential Supported"]
+    #[doc = "Differential Supported."]
     #[must_use]
     #[inline(always)]
     pub const fn diffen(&self) -> super::vals::Diffen {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Diffen::from_bits(val as u8)
     }
-    #[doc = "Differential Supported"]
+    #[doc = "Differential Supported."]
     #[inline(always)]
     pub const fn set_diffen(&mut self, val: super::vals::Diffen) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Multi Vref Implemented"]
+    #[doc = "Multi Vref Implemented."]
     #[must_use]
     #[inline(always)]
     pub const fn mvi(&self) -> super::vals::Mvi {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Mvi::from_bits(val as u8)
     }
-    #[doc = "Multi Vref Implemented"]
+    #[doc = "Multi Vref Implemented."]
     #[inline(always)]
     pub const fn set_mvi(&mut self, val: super::vals::Mvi) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "Channel Scale Width"]
+    #[doc = "Channel Scale Width."]
     #[must_use]
     #[inline(always)]
     pub const fn csw(&self) -> super::vals::Csw {
         let val = (self.0 >> 4usize) & 0x07;
         super::vals::Csw::from_bits(val as u8)
     }
-    #[doc = "Channel Scale Width"]
+    #[doc = "Channel Scale Width."]
     #[inline(always)]
     pub const fn set_csw(&mut self, val: super::vals::Csw) {
         self.0 = (self.0 & !(0x07 << 4usize)) | (((val.to_bits() as u32) & 0x07) << 4usize);
     }
-    #[doc = "Voltage Reference 1 Range Control Bit Implemented"]
+    #[doc = "Voltage Reference 1 Range Control Bit Implemented."]
     #[must_use]
     #[inline(always)]
     pub const fn vr1rngi(&self) -> super::vals::Vr1rngi {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::Vr1rngi::from_bits(val as u8)
     }
-    #[doc = "Voltage Reference 1 Range Control Bit Implemented"]
+    #[doc = "Voltage Reference 1 Range Control Bit Implemented."]
     #[inline(always)]
     pub const fn set_vr1rngi(&mut self, val: super::vals::Vr1rngi) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
-    #[doc = "Internal ADC Clock implemented"]
+    #[doc = "Internal ADC Clock implemented."]
     #[must_use]
     #[inline(always)]
     pub const fn iadcki(&self) -> super::vals::Iadcki {
         let val = (self.0 >> 9usize) & 0x01;
         super::vals::Iadcki::from_bits(val as u8)
     }
-    #[doc = "Internal ADC Clock implemented"]
+    #[doc = "Internal ADC Clock implemented."]
     #[inline(always)]
     pub const fn set_iadcki(&mut self, val: super::vals::Iadcki) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
     }
-    #[doc = "Calibration Offset Function Implemented"]
+    #[doc = "Calibration Offset Function Implemented."]
     #[must_use]
     #[inline(always)]
     pub const fn calofsi(&self) -> super::vals::Calofsi {
         let val = (self.0 >> 10usize) & 0x01;
         super::vals::Calofsi::from_bits(val as u8)
     }
-    #[doc = "Calibration Offset Function Implemented"]
+    #[doc = "Calibration Offset Function Implemented."]
     #[inline(always)]
     pub const fn set_calofsi(&mut self, val: super::vals::Calofsi) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
-    #[doc = "Minor Version Number"]
+    #[doc = "Minor Version Number."]
     #[must_use]
     #[inline(always)]
     pub const fn minor(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0xff;
         val as u8
     }
-    #[doc = "Minor Version Number"]
+    #[doc = "Minor Version Number."]
     #[inline(always)]
     pub const fn set_minor(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
     }
-    #[doc = "Major Version Number"]
+    #[doc = "Major Version Number."]
     #[must_use]
     #[inline(always)]
     pub const fn major(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "Major Version Number"]
+    #[doc = "Major Version Number."]
     #[inline(always)]
     pub const fn set_major(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);

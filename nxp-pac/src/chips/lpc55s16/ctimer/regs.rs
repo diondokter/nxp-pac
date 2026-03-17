@@ -589,7 +589,7 @@ impl defmt::Format for Ir {
         )
     }
 }
-#[doc = "Match Control Register"]
+#[doc = "Match Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mcr(pub u32);
@@ -877,7 +877,7 @@ impl defmt::Format for Mr {
         defmt::write!(f, "Mr {{ match_: {=u32:?} }}", self.match_())
     }
 }
-#[doc = "Match Shadow Register"]
+#[doc = "Match Shadow Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Msr(pub u32);
@@ -914,7 +914,7 @@ impl defmt::Format for Msr {
         defmt::write!(f, "Msr {{ shadow: {=u32:?} }}", self.shadow())
     }
 }
-#[doc = "Prescale Counter"]
+#[doc = "Prescale Counter."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pc(pub u32);
@@ -949,7 +949,7 @@ impl defmt::Format for Pc {
         defmt::write!(f, "Pc {{ pcval: {=u32:?} }}", self.pcval())
     }
 }
-#[doc = "Prescale Register"]
+#[doc = "Prescale Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pr(pub u32);
@@ -1067,7 +1067,7 @@ impl defmt::Format for Pwmc {
         )
     }
 }
-#[doc = "Timer Counter"]
+#[doc = "Timer Counter."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tc(pub u32);

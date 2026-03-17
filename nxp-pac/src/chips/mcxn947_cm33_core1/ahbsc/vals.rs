@@ -2,13 +2,13 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Adc0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Adc0 {
@@ -37,13 +37,13 @@ impl From<Adc0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Adc1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Adc1 {
@@ -72,13 +72,13 @@ impl From<Adc1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSecureCtrlPeripheralRule0Rule0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl AhbSecureCtrlPeripheralRule0Rule0 {
@@ -107,13 +107,13 @@ impl From<AhbSecureCtrlPeripheralRule0Rule0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSecureCtrlPeripheralRule0Rule1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl AhbSecureCtrlPeripheralRule0Rule1 {
@@ -142,13 +142,13 @@ impl From<AhbSecureCtrlPeripheralRule0Rule1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSecureCtrlPeripheralRule0Rule2 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl AhbSecureCtrlPeripheralRule0Rule2 {
@@ -177,13 +177,13 @@ impl From<AhbSecureCtrlPeripheralRule0Rule2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbSecureCtrlPeripheralRule0Rule3 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl AhbSecureCtrlPeripheralRule0Rule3 {
@@ -212,13 +212,13 @@ impl From<AhbSecureCtrlPeripheralRule0Rule3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ApbPeripheralGroup1MemRule1Pkc {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl ApbPeripheralGroup1MemRule1Pkc {
@@ -247,13 +247,13 @@ impl From<ApbPeripheralGroup1MemRule1Pkc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ApbPeripheralGroup1MemRule2Smartdma {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl ApbPeripheralGroup1MemRule2Smartdma {
@@ -282,13 +282,13 @@ impl From<ApbPeripheralGroup1MemRule2Smartdma> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Atx0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Atx0 {
@@ -317,13 +317,13 @@ impl From<Atx0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cache64Polsel0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Cache64Polsel0 {
@@ -352,13 +352,13 @@ impl From<Cache64Polsel0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Can0Rule0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Can0Rule0 {
@@ -387,13 +387,13 @@ impl From<Can0Rule0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Can0Rule1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Can0Rule1 {
@@ -422,13 +422,13 @@ impl From<Can0Rule1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Can0Rule2 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Can0Rule2 {
@@ -457,13 +457,13 @@ impl From<Can0Rule2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Can0Rule3 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Can0Rule3 {
@@ -492,13 +492,13 @@ impl From<Can0Rule3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Can1Rule0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Can1Rule0 {
@@ -527,13 +527,13 @@ impl From<Can1Rule0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Can1Rule1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Can1Rule1 {
@@ -562,13 +562,13 @@ impl From<Can1Rule1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Can1Rule2 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Can1Rule2 {
@@ -597,13 +597,13 @@ impl From<Can1Rule2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Can1Rule3 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Can1Rule3 {
@@ -632,13 +632,13 @@ impl From<Can1Rule3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cdog0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Cdog0 {
@@ -667,13 +667,13 @@ impl From<Cdog0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cdog1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Cdog1 {
@@ -703,9 +703,9 @@ impl From<Cdog1> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cm33LockRegLock {
     _RESERVED_0 = 0x0,
-    #[doc = "CM33_LOCK_REG_LOCK is 1"]
+    #[doc = "CM33_LOCK_REG_LOCK is 1."]
     CM33_LOCK_REG_LOCK_EQ_1 = 0x01,
-    #[doc = "CM33_LOCK_REG_LOCK is 0"]
+    #[doc = "CM33_LOCK_REG_LOCK is 0."]
     CM33_LOCK_REG_LOCK_EQ_0 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -735,13 +735,13 @@ impl From<Cm33LockRegLock> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmp0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Cmp0 {
@@ -770,13 +770,13 @@ impl From<Cmp0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmp1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Cmp1 {
@@ -805,13 +805,13 @@ impl From<Cmp1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmp2 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Cmp2 {
@@ -840,13 +840,13 @@ impl From<Cmp2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Coolflux {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Coolflux {
@@ -876,9 +876,9 @@ impl From<Coolflux> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cpu0LockRegLockNsMpu {
     _RESERVED_0 = 0x0,
-    #[doc = "CM33 (CPU0) LOCK_NS_MPU is 1"]
+    #[doc = "CM33 (CPU0) LOCK_NS_MPU is 1."]
     LOCK_NS_MPU_EQ_1 = 0x01,
-    #[doc = "CM33 (CPU0) LOCK_NS_MPU is 0"]
+    #[doc = "CM33 (CPU0) LOCK_NS_MPU is 0."]
     LOCK_NS_MPU_EQ_0 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -909,9 +909,9 @@ impl From<Cpu0LockRegLockNsMpu> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cpu0LockRegLockNsVtor {
     _RESERVED_0 = 0x0,
-    #[doc = "CM33 (CPU0) LOCKNSVTOR is 1"]
+    #[doc = "CM33 (CPU0) LOCKNSVTOR is 1."]
     LOCK_NS_VTOR_EQ_1 = 0x01,
-    #[doc = "CM33 (CPU0) LOCKNSVTOR is 0"]
+    #[doc = "CM33 (CPU0) LOCKNSVTOR is 0."]
     LOCK_NS_VTOR_EQ_0 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -942,9 +942,9 @@ impl From<Cpu0LockRegLockNsVtor> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cpu1LockRegLockNsMpu {
     _RESERVED_0 = 0x0,
-    #[doc = "CM33 (CPU0) LOCK_NS_MPU is 1"]
+    #[doc = "CM33 (CPU0) LOCK_NS_MPU is 1."]
     LOCK_NS_MPU_EQ_1 = 0x01,
-    #[doc = "CM33 (CPU0) LOCK_NS_MPU is 0"]
+    #[doc = "CM33 (CPU0) LOCK_NS_MPU is 0."]
     LOCK_NS_MPU_EQ_0 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -975,9 +975,9 @@ impl From<Cpu1LockRegLockNsMpu> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cpu1LockRegLockNsVtor {
     _RESERVED_0 = 0x0,
-    #[doc = "CM33 (CPU0) LOCKNSVTOR is 1"]
+    #[doc = "CM33 (CPU0) LOCKNSVTOR is 1."]
     LOCK_NS_VTOR_EQ_1 = 0x01,
-    #[doc = "CM33 (CPU0) LOCKNSVTOR is 0"]
+    #[doc = "CM33 (CPU0) LOCKNSVTOR is 0."]
     LOCK_NS_VTOR_EQ_0 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -1007,13 +1007,13 @@ impl From<Cpu1LockRegLockNsVtor> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Crc {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Crc {
@@ -1042,13 +1042,13 @@ impl From<Crc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctimer0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Ctimer0 {
@@ -1077,13 +1077,13 @@ impl From<Ctimer0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctimer1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Ctimer1 {
@@ -1112,13 +1112,13 @@ impl From<Ctimer1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctimer2 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Ctimer2 {
@@ -1147,13 +1147,13 @@ impl From<Ctimer2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctimer3 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Ctimer3 {
@@ -1182,13 +1182,13 @@ impl From<Ctimer3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctimer4 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Ctimer4 {
@@ -1217,13 +1217,13 @@ impl From<Ctimer4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dac {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Dac {
@@ -1252,13 +1252,13 @@ impl From<Dac> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dac0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Dac0 {
@@ -1287,13 +1287,13 @@ impl From<Dac0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DebugMailbox {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl DebugMailbox {
@@ -1322,13 +1322,13 @@ impl From<DebugMailbox> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Digtmp {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Digtmp {
@@ -1357,13 +1357,13 @@ impl From<Digtmp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EDma0Ch0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl EDma0Ch0 {
@@ -1392,13 +1392,13 @@ impl From<EDma0Ch0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EDma0Ch1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl EDma0Ch1 {
@@ -1427,13 +1427,13 @@ impl From<EDma0Ch1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EDma0Ch10 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl EDma0Ch10 {
@@ -1462,13 +1462,13 @@ impl From<EDma0Ch10> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EDma0Ch11 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl EDma0Ch11 {
@@ -1497,13 +1497,13 @@ impl From<EDma0Ch11> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EDma0Ch12 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl EDma0Ch12 {
@@ -1532,13 +1532,13 @@ impl From<EDma0Ch12> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EDma0Ch13 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl EDma0Ch13 {
@@ -1567,13 +1567,13 @@ impl From<EDma0Ch13> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EDma0Ch14 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl EDma0Ch14 {
@@ -1602,13 +1602,13 @@ impl From<EDma0Ch14> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EDma0Ch15 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl EDma0Ch15 {
@@ -1637,13 +1637,13 @@ impl From<EDma0Ch15> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EDma0Ch2 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl EDma0Ch2 {
@@ -1672,13 +1672,13 @@ impl From<EDma0Ch2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EDma0Ch3 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl EDma0Ch3 {
@@ -1707,13 +1707,13 @@ impl From<EDma0Ch3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EDma0Ch4 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl EDma0Ch4 {
@@ -1742,13 +1742,13 @@ impl From<EDma0Ch4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EDma0Ch5 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl EDma0Ch5 {
@@ -1777,13 +1777,13 @@ impl From<EDma0Ch5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EDma0Ch6 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl EDma0Ch6 {
@@ -1812,13 +1812,13 @@ impl From<EDma0Ch6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EDma0Ch7 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl EDma0Ch7 {
@@ -1847,13 +1847,13 @@ impl From<EDma0Ch7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EDma0Ch8 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl EDma0Ch8 {
@@ -1882,13 +1882,13 @@ impl From<EDma0Ch8> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EDma0Ch9 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl EDma0Ch9 {
@@ -1917,13 +1917,13 @@ impl From<EDma0Ch9> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EDma0Mp {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl EDma0Mp {
@@ -1952,13 +1952,13 @@ impl From<EDma0Mp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EDma1Ch0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl EDma1Ch0 {
@@ -1987,13 +1987,13 @@ impl From<EDma1Ch0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EDma1Ch1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl EDma1Ch1 {
@@ -2022,13 +2022,13 @@ impl From<EDma1Ch1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EDma1Ch10 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl EDma1Ch10 {
@@ -2057,13 +2057,13 @@ impl From<EDma1Ch10> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EDma1Ch11 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl EDma1Ch11 {
@@ -2092,13 +2092,13 @@ impl From<EDma1Ch11> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EDma1Ch12 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl EDma1Ch12 {
@@ -2127,13 +2127,13 @@ impl From<EDma1Ch12> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EDma1Ch13 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl EDma1Ch13 {
@@ -2162,13 +2162,13 @@ impl From<EDma1Ch13> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EDma1Ch14 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl EDma1Ch14 {
@@ -2197,13 +2197,13 @@ impl From<EDma1Ch14> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EDma1Ch15 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl EDma1Ch15 {
@@ -2232,13 +2232,13 @@ impl From<EDma1Ch15> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EDma1Ch2 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl EDma1Ch2 {
@@ -2267,13 +2267,13 @@ impl From<EDma1Ch2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EDma1Ch3 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl EDma1Ch3 {
@@ -2302,13 +2302,13 @@ impl From<EDma1Ch3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EDma1Ch4 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl EDma1Ch4 {
@@ -2337,13 +2337,13 @@ impl From<EDma1Ch4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EDma1Ch5 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl EDma1Ch5 {
@@ -2372,13 +2372,13 @@ impl From<EDma1Ch5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EDma1Ch6 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl EDma1Ch6 {
@@ -2407,13 +2407,13 @@ impl From<EDma1Ch6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EDma1Ch7 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl EDma1Ch7 {
@@ -2442,13 +2442,13 @@ impl From<EDma1Ch7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EDma1Ch8 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl EDma1Ch8 {
@@ -2477,13 +2477,13 @@ impl From<EDma1Ch8> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EDma1Ch9 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl EDma1Ch9 {
@@ -2512,13 +2512,13 @@ impl From<EDma1Ch9> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EDma1Mp {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl EDma1Mp {
@@ -2547,13 +2547,13 @@ impl From<EDma1Mp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Eim0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Eim0 {
@@ -2582,13 +2582,13 @@ impl From<Eim0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Els {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Els {
@@ -2617,13 +2617,13 @@ impl From<Els> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ElsAlias1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl ElsAlias1 {
@@ -2652,13 +2652,13 @@ impl From<ElsAlias1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ElsAlias2 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl ElsAlias2 {
@@ -2687,13 +2687,13 @@ impl From<ElsAlias2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ElsAlias3 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl ElsAlias3 {
@@ -2722,13 +2722,13 @@ impl From<ElsAlias3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Emvsim0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Emvsim0 {
@@ -2757,13 +2757,13 @@ impl From<Emvsim0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Emvsim1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Emvsim1 {
@@ -2792,13 +2792,13 @@ impl From<Emvsim1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Enc {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Enc {
@@ -2827,13 +2827,13 @@ impl From<Enc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Enc1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Enc1 {
@@ -2862,13 +2862,13 @@ impl From<Enc1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Enet {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
@@ -2909,13 +2909,13 @@ impl From<Enet> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Erm0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Erm0 {
@@ -2944,13 +2944,13 @@ impl From<Erm0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Evtg {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Evtg {
@@ -2979,13 +2979,13 @@ impl From<Evtg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ewm0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Ewm0 {
@@ -3014,13 +3014,13 @@ impl From<Ewm0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flash00MemRuleRule0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flash00MemRuleRule0 {
@@ -3049,13 +3049,13 @@ impl From<Flash00MemRuleRule0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flash00MemRuleRule1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flash00MemRuleRule1 {
@@ -3084,13 +3084,13 @@ impl From<Flash00MemRuleRule1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flash00MemRuleRule2 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flash00MemRuleRule2 {
@@ -3119,13 +3119,13 @@ impl From<Flash00MemRuleRule2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flash00MemRuleRule3 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flash00MemRuleRule3 {
@@ -3154,13 +3154,13 @@ impl From<Flash00MemRuleRule3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flash00MemRuleRule4 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flash00MemRuleRule4 {
@@ -3189,13 +3189,13 @@ impl From<Flash00MemRuleRule4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flash00MemRuleRule5 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flash00MemRuleRule5 {
@@ -3224,13 +3224,13 @@ impl From<Flash00MemRuleRule5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flash00MemRuleRule6 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flash00MemRuleRule6 {
@@ -3259,13 +3259,13 @@ impl From<Flash00MemRuleRule6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flash00MemRuleRule7 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flash00MemRuleRule7 {
@@ -3294,13 +3294,13 @@ impl From<Flash00MemRuleRule7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flash01MemRuleRule0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flash01MemRuleRule0 {
@@ -3329,13 +3329,13 @@ impl From<Flash01MemRuleRule0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flash01MemRuleRule1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flash01MemRuleRule1 {
@@ -3364,13 +3364,13 @@ impl From<Flash01MemRuleRule1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flash01MemRuleRule2 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flash01MemRuleRule2 {
@@ -3399,13 +3399,13 @@ impl From<Flash01MemRuleRule2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flash01MemRuleRule3 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flash01MemRuleRule3 {
@@ -3434,13 +3434,13 @@ impl From<Flash01MemRuleRule3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flash01MemRuleRule4 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flash01MemRuleRule4 {
@@ -3469,13 +3469,13 @@ impl From<Flash01MemRuleRule4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flash01MemRuleRule5 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flash01MemRuleRule5 {
@@ -3504,13 +3504,13 @@ impl From<Flash01MemRuleRule5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flash01MemRuleRule6 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flash01MemRuleRule6 {
@@ -3539,13 +3539,13 @@ impl From<Flash01MemRuleRule6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flash01MemRuleRule7 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flash01MemRuleRule7 {
@@ -3574,13 +3574,13 @@ impl From<Flash01MemRuleRule7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flash02MemRuleRule0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flash02MemRuleRule0 {
@@ -3609,13 +3609,13 @@ impl From<Flash02MemRuleRule0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flash02MemRuleRule1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flash02MemRuleRule1 {
@@ -3644,13 +3644,13 @@ impl From<Flash02MemRuleRule1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flash02MemRuleRule2 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flash02MemRuleRule2 {
@@ -3679,13 +3679,13 @@ impl From<Flash02MemRuleRule2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flash02MemRuleRule3 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flash02MemRuleRule3 {
@@ -3714,13 +3714,13 @@ impl From<Flash02MemRuleRule3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flash03MemRuleRule0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flash03MemRuleRule0 {
@@ -3749,13 +3749,13 @@ impl From<Flash03MemRuleRule0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flash03MemRuleRule1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flash03MemRuleRule1 {
@@ -3784,13 +3784,13 @@ impl From<Flash03MemRuleRule1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flash03MemRuleRule2 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flash03MemRuleRule2 {
@@ -3819,13 +3819,13 @@ impl From<Flash03MemRuleRule2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flash03MemRuleRule3 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flash03MemRuleRule3 {
@@ -3854,13 +3854,13 @@ impl From<Flash03MemRuleRule3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flash03MemRuleRule4 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flash03MemRuleRule4 {
@@ -3889,13 +3889,13 @@ impl From<Flash03MemRuleRule4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flash03MemRuleRule5 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flash03MemRuleRule5 {
@@ -3924,13 +3924,13 @@ impl From<Flash03MemRuleRule5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flash03MemRuleRule6 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flash03MemRuleRule6 {
@@ -3959,13 +3959,13 @@ impl From<Flash03MemRuleRule6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flash03MemRuleRule7 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flash03MemRuleRule7 {
@@ -3994,13 +3994,13 @@ impl From<Flash03MemRuleRule7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexcomm4 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flexcomm4 {
@@ -4029,13 +4029,13 @@ impl From<Flexcomm4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexcomm5 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flexcomm5 {
@@ -4064,13 +4064,13 @@ impl From<Flexcomm5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexcomm6 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flexcomm6 {
@@ -4099,13 +4099,13 @@ impl From<Flexcomm6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexcomm7 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flexcomm7 {
@@ -4134,13 +4134,13 @@ impl From<Flexcomm7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexcomm8 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flexcomm8 {
@@ -4169,13 +4169,13 @@ impl From<Flexcomm8> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexcomm9 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flexcomm9 {
@@ -4204,13 +4204,13 @@ impl From<Flexcomm9> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexio {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flexio {
@@ -4239,13 +4239,13 @@ impl From<Flexio> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flexspi {
@@ -4274,13 +4274,13 @@ impl From<Flexspi> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi0Region0MemRuleRule0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flexspi0Region0MemRuleRule0 {
@@ -4309,13 +4309,13 @@ impl From<Flexspi0Region0MemRuleRule0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi0Region0MemRuleRule1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flexspi0Region0MemRuleRule1 {
@@ -4344,13 +4344,13 @@ impl From<Flexspi0Region0MemRuleRule1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi0Region0MemRuleRule2 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flexspi0Region0MemRuleRule2 {
@@ -4379,13 +4379,13 @@ impl From<Flexspi0Region0MemRuleRule2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi0Region0MemRuleRule3 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flexspi0Region0MemRuleRule3 {
@@ -4414,13 +4414,13 @@ impl From<Flexspi0Region0MemRuleRule3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi0Region0MemRuleRule4 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flexspi0Region0MemRuleRule4 {
@@ -4449,13 +4449,13 @@ impl From<Flexspi0Region0MemRuleRule4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi0Region0MemRuleRule5 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flexspi0Region0MemRuleRule5 {
@@ -4484,13 +4484,13 @@ impl From<Flexspi0Region0MemRuleRule5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi0Region0MemRuleRule6 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flexspi0Region0MemRuleRule6 {
@@ -4519,13 +4519,13 @@ impl From<Flexspi0Region0MemRuleRule6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi0Region0MemRuleRule7 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flexspi0Region0MemRuleRule7 {
@@ -4554,13 +4554,13 @@ impl From<Flexspi0Region0MemRuleRule7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi0Region16MemRuleFlexspi0RegionMemRule0Rule0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flexspi0Region16MemRuleFlexspi0RegionMemRule0Rule0 {
@@ -4589,13 +4589,13 @@ impl From<Flexspi0Region16MemRuleFlexspi0RegionMemRule0Rule0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi0Region16MemRuleFlexspi0RegionMemRule0Rule1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flexspi0Region16MemRuleFlexspi0RegionMemRule0Rule1 {
@@ -4624,13 +4624,13 @@ impl From<Flexspi0Region16MemRuleFlexspi0RegionMemRule0Rule1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi0Region16MemRuleFlexspi0RegionMemRule0Rule2 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flexspi0Region16MemRuleFlexspi0RegionMemRule0Rule2 {
@@ -4659,13 +4659,13 @@ impl From<Flexspi0Region16MemRuleFlexspi0RegionMemRule0Rule2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi0Region16MemRuleFlexspi0RegionMemRule0Rule3 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flexspi0Region16MemRuleFlexspi0RegionMemRule0Rule3 {
@@ -4694,13 +4694,13 @@ impl From<Flexspi0Region16MemRuleFlexspi0RegionMemRule0Rule3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi0Region16MemRuleFlexspi0RegionMemRule0Rule4 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flexspi0Region16MemRuleFlexspi0RegionMemRule0Rule4 {
@@ -4729,13 +4729,13 @@ impl From<Flexspi0Region16MemRuleFlexspi0RegionMemRule0Rule4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi0Region16MemRuleFlexspi0RegionMemRule0Rule5 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flexspi0Region16MemRuleFlexspi0RegionMemRule0Rule5 {
@@ -4764,13 +4764,13 @@ impl From<Flexspi0Region16MemRuleFlexspi0RegionMemRule0Rule5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi0Region7MemRuleRule0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flexspi0Region7MemRuleRule0 {
@@ -4799,13 +4799,13 @@ impl From<Flexspi0Region7MemRuleRule0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi0Region7MemRuleRule1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flexspi0Region7MemRuleRule1 {
@@ -4834,13 +4834,13 @@ impl From<Flexspi0Region7MemRuleRule1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi0Region7MemRuleRule2 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flexspi0Region7MemRuleRule2 {
@@ -4869,13 +4869,13 @@ impl From<Flexspi0Region7MemRuleRule2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi0Region7MemRuleRule3 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flexspi0Region7MemRuleRule3 {
@@ -4904,13 +4904,13 @@ impl From<Flexspi0Region7MemRuleRule3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi0Region7MemRuleRule4 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flexspi0Region7MemRuleRule4 {
@@ -4939,13 +4939,13 @@ impl From<Flexspi0Region7MemRuleRule4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi0Region7MemRuleRule5 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flexspi0Region7MemRuleRule5 {
@@ -4974,13 +4974,13 @@ impl From<Flexspi0Region7MemRuleRule5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi0Region7MemRuleRule6 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flexspi0Region7MemRuleRule6 {
@@ -5009,13 +5009,13 @@ impl From<Flexspi0Region7MemRuleRule6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi0Region7MemRuleRule7 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flexspi0Region7MemRuleRule7 {
@@ -5044,13 +5044,13 @@ impl From<Flexspi0Region7MemRuleRule7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi0Region813MemRuleFlexspi0RegionMemRule0Rule0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flexspi0Region813MemRuleFlexspi0RegionMemRule0Rule0 {
@@ -5079,13 +5079,13 @@ impl From<Flexspi0Region813MemRuleFlexspi0RegionMemRule0Rule0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi0Region813MemRuleFlexspi0RegionMemRule0Rule1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flexspi0Region813MemRuleFlexspi0RegionMemRule0Rule1 {
@@ -5114,13 +5114,13 @@ impl From<Flexspi0Region813MemRuleFlexspi0RegionMemRule0Rule1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi0Region813MemRuleFlexspi0RegionMemRule0Rule2 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flexspi0Region813MemRuleFlexspi0RegionMemRule0Rule2 {
@@ -5149,13 +5149,13 @@ impl From<Flexspi0Region813MemRuleFlexspi0RegionMemRule0Rule2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi0Region813MemRuleFlexspi0RegionMemRule0Rule3 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flexspi0Region813MemRuleFlexspi0RegionMemRule0Rule3 {
@@ -5184,13 +5184,13 @@ impl From<Flexspi0Region813MemRuleFlexspi0RegionMemRule0Rule3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi0Region813MemRuleFlexspi0RegionMemRule0Rule4 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flexspi0Region813MemRuleFlexspi0RegionMemRule0Rule4 {
@@ -5219,13 +5219,13 @@ impl From<Flexspi0Region813MemRuleFlexspi0RegionMemRule0Rule4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi0Region813MemRuleFlexspi0RegionMemRule0Rule5 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Flexspi0Region813MemRuleFlexspi0RegionMemRule0Rule5 {
@@ -5254,13 +5254,13 @@ impl From<Flexspi0Region813MemRuleFlexspi0RegionMemRule0Rule5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlexspiCmx {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl FlexspiCmx {
@@ -5289,13 +5289,13 @@ impl From<FlexspiCmx> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fmu0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Fmu0 {
@@ -5324,13 +5324,13 @@ impl From<Fmu0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FmuTest {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl FmuTest {
@@ -5359,13 +5359,13 @@ impl From<FmuTest> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Freqme0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Freqme0 {
@@ -5394,13 +5394,13 @@ impl From<Freqme0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gdet {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Gdet {
@@ -5429,13 +5429,13 @@ impl From<Gdet> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpio0Alias0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Gpio0Alias0 {
@@ -5464,13 +5464,13 @@ impl From<Gpio0Alias0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpio0Alias1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Gpio0Alias1 {
@@ -5499,13 +5499,13 @@ impl From<Gpio0Alias1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpio1Alias0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Gpio1Alias0 {
@@ -5534,13 +5534,13 @@ impl From<Gpio1Alias0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpio1Alias1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Gpio1Alias1 {
@@ -5569,13 +5569,13 @@ impl From<Gpio1Alias1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpio2Alias0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Gpio2Alias0 {
@@ -5604,13 +5604,13 @@ impl From<Gpio2Alias0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpio2Alias1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Gpio2Alias1 {
@@ -5639,13 +5639,13 @@ impl From<Gpio2Alias1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpio3Alias0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Gpio3Alias0 {
@@ -5674,13 +5674,13 @@ impl From<Gpio3Alias0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpio3Alias1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Gpio3Alias1 {
@@ -5709,13 +5709,13 @@ impl From<Gpio3Alias1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpio4Alias0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Gpio4Alias0 {
@@ -5744,13 +5744,13 @@ impl From<Gpio4Alias0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpio4Alias1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Gpio4Alias1 {
@@ -5779,13 +5779,13 @@ impl From<Gpio4Alias1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpio5Alias0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Gpio5Alias0 {
@@ -5814,13 +5814,13 @@ impl From<Gpio5Alias0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpio5Alias1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Gpio5Alias1 {
@@ -5849,13 +5849,13 @@ impl From<Gpio5Alias1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Hpdac0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Hpdac0 {
@@ -5884,13 +5884,13 @@ impl From<Hpdac0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum I3c0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl I3c0 {
@@ -5919,13 +5919,13 @@ impl From<I3c0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum I3c1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl I3c1 {
@@ -5954,13 +5954,13 @@ impl From<I3c1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Inputmux {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Inputmux {
@@ -5989,9 +5989,9 @@ impl From<Inputmux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int0Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int0Mask {
@@ -6020,9 +6020,9 @@ impl From<Int0Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int100Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int100Mask {
@@ -6051,9 +6051,9 @@ impl From<Int100Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int101Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int101Mask {
@@ -6082,9 +6082,9 @@ impl From<Int101Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int102Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int102Mask {
@@ -6113,9 +6113,9 @@ impl From<Int102Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int103Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int103Mask {
@@ -6144,9 +6144,9 @@ impl From<Int103Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int104Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int104Mask {
@@ -6175,9 +6175,9 @@ impl From<Int104Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int105Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int105Mask {
@@ -6206,9 +6206,9 @@ impl From<Int105Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int106Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int106Mask {
@@ -6237,9 +6237,9 @@ impl From<Int106Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int107Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int107Mask {
@@ -6268,9 +6268,9 @@ impl From<Int107Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int108Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int108Mask {
@@ -6299,9 +6299,9 @@ impl From<Int108Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int109Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int109Mask {
@@ -6330,9 +6330,9 @@ impl From<Int109Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int10Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int10Mask {
@@ -6361,9 +6361,9 @@ impl From<Int10Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int110Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int110Mask {
@@ -6392,9 +6392,9 @@ impl From<Int110Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int111Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int111Mask {
@@ -6423,9 +6423,9 @@ impl From<Int111Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int112Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int112Mask {
@@ -6454,9 +6454,9 @@ impl From<Int112Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int113Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int113Mask {
@@ -6485,9 +6485,9 @@ impl From<Int113Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int114Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int114Mask {
@@ -6516,9 +6516,9 @@ impl From<Int114Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int115Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int115Mask {
@@ -6547,9 +6547,9 @@ impl From<Int115Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int116Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int116Mask {
@@ -6578,9 +6578,9 @@ impl From<Int116Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int117Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int117Mask {
@@ -6609,9 +6609,9 @@ impl From<Int117Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int118Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int118Mask {
@@ -6640,9 +6640,9 @@ impl From<Int118Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int119Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int119Mask {
@@ -6671,9 +6671,9 @@ impl From<Int119Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int11Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int11Mask {
@@ -6702,9 +6702,9 @@ impl From<Int11Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int120Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int120Mask {
@@ -6733,9 +6733,9 @@ impl From<Int120Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int121Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int121Mask {
@@ -6764,9 +6764,9 @@ impl From<Int121Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int122Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int122Mask {
@@ -6795,9 +6795,9 @@ impl From<Int122Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int123Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int123Mask {
@@ -6826,9 +6826,9 @@ impl From<Int123Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int124Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int124Mask {
@@ -6857,9 +6857,9 @@ impl From<Int124Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int125Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int125Mask {
@@ -6888,9 +6888,9 @@ impl From<Int125Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int126Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int126Mask {
@@ -6919,9 +6919,9 @@ impl From<Int126Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int127Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int127Mask {
@@ -6950,9 +6950,9 @@ impl From<Int127Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int128Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int128Mask {
@@ -6981,9 +6981,9 @@ impl From<Int128Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int129Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int129Mask {
@@ -7012,9 +7012,9 @@ impl From<Int129Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int12Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int12Mask {
@@ -7043,9 +7043,9 @@ impl From<Int12Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int130Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int130Mask {
@@ -7074,9 +7074,9 @@ impl From<Int130Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int131Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int131Mask {
@@ -7105,9 +7105,9 @@ impl From<Int131Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int132Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int132Mask {
@@ -7136,9 +7136,9 @@ impl From<Int132Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int133Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int133Mask {
@@ -7167,9 +7167,9 @@ impl From<Int133Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int134Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int134Mask {
@@ -7198,9 +7198,9 @@ impl From<Int134Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int135Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int135Mask {
@@ -7229,9 +7229,9 @@ impl From<Int135Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int136Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int136Mask {
@@ -7260,9 +7260,9 @@ impl From<Int136Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int137Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int137Mask {
@@ -7291,9 +7291,9 @@ impl From<Int137Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int138Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int138Mask {
@@ -7322,9 +7322,9 @@ impl From<Int138Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int139Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int139Mask {
@@ -7353,9 +7353,9 @@ impl From<Int139Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int13Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int13Mask {
@@ -7384,9 +7384,9 @@ impl From<Int13Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int140Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int140Mask {
@@ -7415,9 +7415,9 @@ impl From<Int140Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int141Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int141Mask {
@@ -7446,9 +7446,9 @@ impl From<Int141Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int142Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int142Mask {
@@ -7477,9 +7477,9 @@ impl From<Int142Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int143Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int143Mask {
@@ -7508,9 +7508,9 @@ impl From<Int143Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int144Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int144Mask {
@@ -7539,9 +7539,9 @@ impl From<Int144Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int145Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int145Mask {
@@ -7570,9 +7570,9 @@ impl From<Int145Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int146Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int146Mask {
@@ -7601,9 +7601,9 @@ impl From<Int146Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int147Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int147Mask {
@@ -7632,9 +7632,9 @@ impl From<Int147Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int148Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int148Mask {
@@ -7663,9 +7663,9 @@ impl From<Int148Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int149Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int149Mask {
@@ -7694,9 +7694,9 @@ impl From<Int149Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int14Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int14Mask {
@@ -7725,9 +7725,9 @@ impl From<Int14Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int150Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int150Mask {
@@ -7756,9 +7756,9 @@ impl From<Int150Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int151Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int151Mask {
@@ -7787,9 +7787,9 @@ impl From<Int151Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int152Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int152Mask {
@@ -7818,9 +7818,9 @@ impl From<Int152Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int153Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int153Mask {
@@ -7849,9 +7849,9 @@ impl From<Int153Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int154Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int154Mask {
@@ -7880,9 +7880,9 @@ impl From<Int154Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int155Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int155Mask {
@@ -7911,9 +7911,9 @@ impl From<Int155Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int156Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int156Mask {
@@ -7942,9 +7942,9 @@ impl From<Int156Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int157Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int157Mask {
@@ -7973,9 +7973,9 @@ impl From<Int157Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int158Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int158Mask {
@@ -8004,9 +8004,9 @@ impl From<Int158Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int159Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int159Mask {
@@ -8035,9 +8035,9 @@ impl From<Int159Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int15Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int15Mask {
@@ -8066,9 +8066,9 @@ impl From<Int15Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int16Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int16Mask {
@@ -8097,9 +8097,9 @@ impl From<Int16Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int17Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int17Mask {
@@ -8128,9 +8128,9 @@ impl From<Int17Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int18Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int18Mask {
@@ -8159,9 +8159,9 @@ impl From<Int18Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int19Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int19Mask {
@@ -8190,9 +8190,9 @@ impl From<Int19Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int1Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int1Mask {
@@ -8221,9 +8221,9 @@ impl From<Int1Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int20Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int20Mask {
@@ -8252,9 +8252,9 @@ impl From<Int20Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int21Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int21Mask {
@@ -8283,9 +8283,9 @@ impl From<Int21Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int22Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int22Mask {
@@ -8314,9 +8314,9 @@ impl From<Int22Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int23Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int23Mask {
@@ -8345,9 +8345,9 @@ impl From<Int23Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int24Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int24Mask {
@@ -8376,9 +8376,9 @@ impl From<Int24Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int25Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int25Mask {
@@ -8407,9 +8407,9 @@ impl From<Int25Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int26Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int26Mask {
@@ -8438,9 +8438,9 @@ impl From<Int26Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int27Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int27Mask {
@@ -8469,9 +8469,9 @@ impl From<Int27Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int28Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int28Mask {
@@ -8500,9 +8500,9 @@ impl From<Int28Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int29Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int29Mask {
@@ -8531,9 +8531,9 @@ impl From<Int29Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int2Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int2Mask {
@@ -8562,9 +8562,9 @@ impl From<Int2Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int30Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int30Mask {
@@ -8593,9 +8593,9 @@ impl From<Int30Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int31Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int31Mask {
@@ -8624,9 +8624,9 @@ impl From<Int31Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int32Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int32Mask {
@@ -8655,9 +8655,9 @@ impl From<Int32Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int33Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int33Mask {
@@ -8686,9 +8686,9 @@ impl From<Int33Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int34Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int34Mask {
@@ -8717,9 +8717,9 @@ impl From<Int34Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int35Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int35Mask {
@@ -8748,9 +8748,9 @@ impl From<Int35Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int36Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int36Mask {
@@ -8779,9 +8779,9 @@ impl From<Int36Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int37Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int37Mask {
@@ -8810,9 +8810,9 @@ impl From<Int37Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int38Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int38Mask {
@@ -8841,9 +8841,9 @@ impl From<Int38Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int39Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int39Mask {
@@ -8872,9 +8872,9 @@ impl From<Int39Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int3Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int3Mask {
@@ -8903,9 +8903,9 @@ impl From<Int3Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int40Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int40Mask {
@@ -8934,9 +8934,9 @@ impl From<Int40Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int41Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int41Mask {
@@ -8965,9 +8965,9 @@ impl From<Int41Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int42Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int42Mask {
@@ -8996,9 +8996,9 @@ impl From<Int42Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int43Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int43Mask {
@@ -9027,9 +9027,9 @@ impl From<Int43Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int44Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int44Mask {
@@ -9058,9 +9058,9 @@ impl From<Int44Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int45Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int45Mask {
@@ -9089,9 +9089,9 @@ impl From<Int45Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int46Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int46Mask {
@@ -9120,9 +9120,9 @@ impl From<Int46Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int47Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int47Mask {
@@ -9151,9 +9151,9 @@ impl From<Int47Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int48Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int48Mask {
@@ -9182,9 +9182,9 @@ impl From<Int48Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int49Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int49Mask {
@@ -9213,9 +9213,9 @@ impl From<Int49Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int4Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int4Mask {
@@ -9244,9 +9244,9 @@ impl From<Int4Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int50Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int50Mask {
@@ -9275,9 +9275,9 @@ impl From<Int50Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int51Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int51Mask {
@@ -9306,9 +9306,9 @@ impl From<Int51Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int52Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int52Mask {
@@ -9337,9 +9337,9 @@ impl From<Int52Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int53Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int53Mask {
@@ -9368,9 +9368,9 @@ impl From<Int53Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int54Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int54Mask {
@@ -9399,9 +9399,9 @@ impl From<Int54Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int55Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int55Mask {
@@ -9430,9 +9430,9 @@ impl From<Int55Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int56Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int56Mask {
@@ -9461,9 +9461,9 @@ impl From<Int56Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int57Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int57Mask {
@@ -9492,9 +9492,9 @@ impl From<Int57Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int58Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int58Mask {
@@ -9523,9 +9523,9 @@ impl From<Int58Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int59Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int59Mask {
@@ -9554,9 +9554,9 @@ impl From<Int59Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int5Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int5Mask {
@@ -9585,9 +9585,9 @@ impl From<Int5Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int60Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int60Mask {
@@ -9616,9 +9616,9 @@ impl From<Int60Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int61Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int61Mask {
@@ -9647,9 +9647,9 @@ impl From<Int61Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int62Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int62Mask {
@@ -9678,9 +9678,9 @@ impl From<Int62Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int63Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int63Mask {
@@ -9709,9 +9709,9 @@ impl From<Int63Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int64Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int64Mask {
@@ -9740,9 +9740,9 @@ impl From<Int64Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int65Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int65Mask {
@@ -9771,9 +9771,9 @@ impl From<Int65Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int66Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int66Mask {
@@ -9802,9 +9802,9 @@ impl From<Int66Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int67Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int67Mask {
@@ -9833,9 +9833,9 @@ impl From<Int67Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int68Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int68Mask {
@@ -9864,9 +9864,9 @@ impl From<Int68Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int69Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int69Mask {
@@ -9895,9 +9895,9 @@ impl From<Int69Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int6Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int6Mask {
@@ -9926,9 +9926,9 @@ impl From<Int6Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int70Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int70Mask {
@@ -9957,9 +9957,9 @@ impl From<Int70Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int71Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int71Mask {
@@ -9988,9 +9988,9 @@ impl From<Int71Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int72Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int72Mask {
@@ -10019,9 +10019,9 @@ impl From<Int72Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int73Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int73Mask {
@@ -10050,9 +10050,9 @@ impl From<Int73Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int74Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int74Mask {
@@ -10081,9 +10081,9 @@ impl From<Int74Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int75Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int75Mask {
@@ -10112,9 +10112,9 @@ impl From<Int75Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int76Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int76Mask {
@@ -10143,9 +10143,9 @@ impl From<Int76Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int77Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int77Mask {
@@ -10174,9 +10174,9 @@ impl From<Int77Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int78Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int78Mask {
@@ -10205,9 +10205,9 @@ impl From<Int78Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int79Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int79Mask {
@@ -10236,9 +10236,9 @@ impl From<Int79Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int7Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int7Mask {
@@ -10267,9 +10267,9 @@ impl From<Int7Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int80Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int80Mask {
@@ -10298,9 +10298,9 @@ impl From<Int80Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int81Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int81Mask {
@@ -10329,9 +10329,9 @@ impl From<Int81Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int82Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int82Mask {
@@ -10360,9 +10360,9 @@ impl From<Int82Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int83Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int83Mask {
@@ -10391,9 +10391,9 @@ impl From<Int83Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int84Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int84Mask {
@@ -10422,9 +10422,9 @@ impl From<Int84Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int85Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int85Mask {
@@ -10453,9 +10453,9 @@ impl From<Int85Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int86Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int86Mask {
@@ -10484,9 +10484,9 @@ impl From<Int86Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int87Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int87Mask {
@@ -10515,9 +10515,9 @@ impl From<Int87Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int88Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int88Mask {
@@ -10546,9 +10546,9 @@ impl From<Int88Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int89Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int89Mask {
@@ -10577,9 +10577,9 @@ impl From<Int89Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int8Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int8Mask {
@@ -10608,9 +10608,9 @@ impl From<Int8Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int90Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int90Mask {
@@ -10639,9 +10639,9 @@ impl From<Int90Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int91Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int91Mask {
@@ -10670,9 +10670,9 @@ impl From<Int91Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int92Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int92Mask {
@@ -10701,9 +10701,9 @@ impl From<Int92Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int93Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int93Mask {
@@ -10732,9 +10732,9 @@ impl From<Int93Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int94Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int94Mask {
@@ -10763,9 +10763,9 @@ impl From<Int94Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int95Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int95Mask {
@@ -10794,9 +10794,9 @@ impl From<Int95Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int96Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int96Mask {
@@ -10825,9 +10825,9 @@ impl From<Int96Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int97Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int97Mask {
@@ -10856,9 +10856,9 @@ impl From<Int97Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int98Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int98Mask {
@@ -10887,9 +10887,9 @@ impl From<Int98Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int99Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int99Mask {
@@ -10918,9 +10918,9 @@ impl From<Int99Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int9Mask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Int9Mask {
@@ -10949,13 +10949,13 @@ impl From<Int9Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intm0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Intm0 {
@@ -10984,13 +10984,13 @@ impl From<Intm0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Itrc {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Itrc {
@@ -11020,9 +11020,9 @@ impl From<Itrc> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LockSMpu {
     _RESERVED_0 = 0x0,
-    #[doc = "CM33 (CPU0) LOCK_S_MPU is 1"]
+    #[doc = "CM33 (CPU0) LOCK_S_MPU is 1."]
     LOCK_S_MPU_EQ_1 = 0x01,
-    #[doc = "CM33 (CPU0) LOCK_S_MPU is 0"]
+    #[doc = "CM33 (CPU0) LOCK_S_MPU is 0."]
     LOCK_S_MPU_EQ_0 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -11053,9 +11053,9 @@ impl From<LockSMpu> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LockSVtaircr {
     _RESERVED_0 = 0x0,
-    #[doc = "CM33 (CPU0) LOCK_S_VTAIRCR is 1"]
+    #[doc = "CM33 (CPU0) LOCK_S_VTAIRCR is 1."]
     LOCK_S_VTAIRCR_EQ_1 = 0x01,
-    #[doc = "CM33 (CPU0) LOCK_S_VTAIRCR is 0"]
+    #[doc = "CM33 (CPU0) LOCK_S_VTAIRCR is 0."]
     LOCK_S_VTAIRCR_EQ_0 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -11086,9 +11086,9 @@ impl From<LockSVtaircr> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LockSau {
     _RESERVED_0 = 0x0,
-    #[doc = "CM33 (CPU0) LOCK_SAU is 1"]
+    #[doc = "CM33 (CPU0) LOCK_SAU is 1."]
     LOCK_SAU_EQ_1 = 0x01,
-    #[doc = "CM33 (CPU0) LOCK_SAU is 0"]
+    #[doc = "CM33 (CPU0) LOCK_SAU is 0."]
     LOCK_SAU_EQ_0 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -11118,13 +11118,13 @@ impl From<LockSau> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpFlexcomm0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl LpFlexcomm0 {
@@ -11153,13 +11153,13 @@ impl From<LpFlexcomm0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpFlexcomm1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl LpFlexcomm1 {
@@ -11188,13 +11188,13 @@ impl From<LpFlexcomm1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpFlexcomm2 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl LpFlexcomm2 {
@@ -11223,13 +11223,13 @@ impl From<LpFlexcomm2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpFlexcomm3 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl LpFlexcomm3 {
@@ -11258,13 +11258,13 @@ impl From<LpFlexcomm3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpcac {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Lpcac {
@@ -11293,13 +11293,13 @@ impl From<Lpcac> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lptmr0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Lptmr0 {
@@ -11328,13 +11328,13 @@ impl From<Lptmr0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lptmr1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Lptmr1 {
@@ -11363,13 +11363,13 @@ impl From<Lptmr1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mailbox {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Mailbox {
@@ -11398,13 +11398,13 @@ impl From<Mailbox> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecAntiPolRegCoolfluxi {
-    #[doc = "Secure and privileged Master"]
+    #[doc = "Secure and privileged Master."]
     NONSECURE_NONPRIV_MASTER = 0x0,
-    #[doc = "Secure and non-privileged Master"]
+    #[doc = "Secure and non-privileged Master."]
     NONSECURE_PRIV_MASTER = 0x01,
-    #[doc = "Non-secure and privileged Master"]
+    #[doc = "Non-secure and privileged Master."]
     SECURE_NONPRIV_MASTER = 0x02,
-    #[doc = "Non-secure and non-privileged Master"]
+    #[doc = "Non-secure and non-privileged Master."]
     SECURE_PRIV_MASTER = 0x03,
 }
 impl MasterSecAntiPolRegCoolfluxi {
@@ -11433,13 +11433,13 @@ impl From<MasterSecAntiPolRegCoolfluxi> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecAntiPolRegCpu1 {
-    #[doc = "Secure and privileged Master"]
+    #[doc = "Secure and privileged Master."]
     NONSECURE_NONPRIV_MASTER = 0x0,
-    #[doc = "Secure and non-privileged Master"]
+    #[doc = "Secure and non-privileged Master."]
     NONSECURE_PRIV_MASTER = 0x01,
-    #[doc = "Non-secure and privileged Master"]
+    #[doc = "Non-secure and privileged Master."]
     SECURE_NONPRIV_MASTER = 0x02,
-    #[doc = "Non-secure and non-privileged Master"]
+    #[doc = "Non-secure and non-privileged Master."]
     SECURE_PRIV_MASTER = 0x03,
 }
 impl MasterSecAntiPolRegCpu1 {
@@ -11468,13 +11468,13 @@ impl From<MasterSecAntiPolRegCpu1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecAntiPolRegEDma0 {
-    #[doc = "Secure and privileged Master"]
+    #[doc = "Secure and privileged Master."]
     NONSECURE_NONPRIV_MASTER = 0x0,
-    #[doc = "Secure and non-privileged Master"]
+    #[doc = "Secure and non-privileged Master."]
     NONSECURE_PRIV_MASTER = 0x01,
-    #[doc = "Non-secure and privileged Master"]
+    #[doc = "Non-secure and privileged Master."]
     SECURE_NONPRIV_MASTER = 0x02,
-    #[doc = "Non-secure and non-privileged Master"]
+    #[doc = "Non-secure and non-privileged Master."]
     SECURE_PRIV_MASTER = 0x03,
 }
 impl MasterSecAntiPolRegEDma0 {
@@ -11503,13 +11503,13 @@ impl From<MasterSecAntiPolRegEDma0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecAntiPolRegEDma1 {
-    #[doc = "Secure and privileged Master"]
+    #[doc = "Secure and privileged Master."]
     NONSECURE_NONPRIV_MASTER = 0x0,
-    #[doc = "Secure and non-privileged Master"]
+    #[doc = "Secure and non-privileged Master."]
     NONSECURE_PRIV_MASTER = 0x01,
-    #[doc = "Non-secure and privileged Master"]
+    #[doc = "Non-secure and privileged Master."]
     SECURE_NONPRIV_MASTER = 0x02,
-    #[doc = "Non-secure and non-privileged Master"]
+    #[doc = "Non-secure and non-privileged Master."]
     SECURE_PRIV_MASTER = 0x03,
 }
 impl MasterSecAntiPolRegEDma1 {
@@ -11538,13 +11538,13 @@ impl From<MasterSecAntiPolRegEDma1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecAntiPolRegEthernet {
-    #[doc = "Secure and privileged Master"]
+    #[doc = "Secure and privileged Master."]
     NONSECURE_NONPRIV_MASTER = 0x0,
-    #[doc = "Secure and non-privileged Master"]
+    #[doc = "Secure and non-privileged Master."]
     NONSECURE_PRIV_MASTER = 0x01,
-    #[doc = "Non-secure and privileged Master"]
+    #[doc = "Non-secure and privileged Master."]
     SECURE_NONPRIV_MASTER = 0x02,
-    #[doc = "Non-secure and non-privileged Master"]
+    #[doc = "Non-secure and non-privileged Master."]
     SECURE_PRIV_MASTER = 0x03,
 }
 impl MasterSecAntiPolRegEthernet {
@@ -11573,13 +11573,13 @@ impl From<MasterSecAntiPolRegEthernet> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecAntiPolRegNpuo {
-    #[doc = "Secure and privileged Master"]
+    #[doc = "Secure and privileged Master."]
     NONSECURE_NONPRIV_MASTER = 0x0,
-    #[doc = "Secure and non-privileged Master"]
+    #[doc = "Secure and non-privileged Master."]
     NONSECURE_PRIV_MASTER = 0x01,
-    #[doc = "Non-secure and privileged Master"]
+    #[doc = "Non-secure and privileged Master."]
     SECURE_NONPRIV_MASTER = 0x02,
-    #[doc = "Non-secure and non-privileged Master"]
+    #[doc = "Non-secure and non-privileged Master."]
     SECURE_PRIV_MASTER = 0x03,
 }
 impl MasterSecAntiPolRegNpuo {
@@ -11608,13 +11608,13 @@ impl From<MasterSecAntiPolRegNpuo> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecAntiPolRegPkc {
-    #[doc = "Secure and privileged Master"]
+    #[doc = "Secure and privileged Master."]
     NONSECURE_NONPRIV_MASTER = 0x0,
-    #[doc = "Secure and non-privileged Master"]
+    #[doc = "Secure and non-privileged Master."]
     NONSECURE_PRIV_MASTER = 0x01,
-    #[doc = "Non-secure and privileged Master"]
+    #[doc = "Non-secure and privileged Master."]
     SECURE_NONPRIV_MASTER = 0x02,
-    #[doc = "Non-secure and non-privileged Master"]
+    #[doc = "Non-secure and non-privileged Master."]
     SECURE_PRIV_MASTER = 0x03,
 }
 impl MasterSecAntiPolRegPkc {
@@ -11643,13 +11643,13 @@ impl From<MasterSecAntiPolRegPkc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecAntiPolRegPq {
-    #[doc = "Secure and privileged Master"]
+    #[doc = "Secure and privileged Master."]
     NONSECURE_NONPRIV_MASTER = 0x0,
-    #[doc = "Secure and non-privileged Master"]
+    #[doc = "Secure and non-privileged Master."]
     NONSECURE_PRIV_MASTER = 0x01,
-    #[doc = "Non-secure and privileged Master"]
+    #[doc = "Non-secure and privileged Master."]
     SECURE_NONPRIV_MASTER = 0x02,
-    #[doc = "Non-secure and non-privileged Master"]
+    #[doc = "Non-secure and non-privileged Master."]
     SECURE_PRIV_MASTER = 0x03,
 }
 impl MasterSecAntiPolRegPq {
@@ -11678,13 +11678,13 @@ impl From<MasterSecAntiPolRegPq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecAntiPolRegSmartdma {
-    #[doc = "Secure and privileged Master"]
+    #[doc = "Secure and privileged Master."]
     NONSECURE_NONPRIV_MASTER = 0x0,
-    #[doc = "Secure and non-privileged Master"]
+    #[doc = "Secure and non-privileged Master."]
     NONSECURE_PRIV_MASTER = 0x01,
-    #[doc = "Non-secure and privileged Master"]
+    #[doc = "Non-secure and privileged Master."]
     SECURE_NONPRIV_MASTER = 0x02,
-    #[doc = "Non-secure and non-privileged Master"]
+    #[doc = "Non-secure and non-privileged Master."]
     SECURE_PRIV_MASTER = 0x03,
 }
 impl MasterSecAntiPolRegSmartdma {
@@ -11713,13 +11713,13 @@ impl From<MasterSecAntiPolRegSmartdma> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecAntiPolRegUsbFs {
-    #[doc = "Secure and privileged Master"]
+    #[doc = "Secure and privileged Master."]
     NONSECURE_NONPRIV_MASTER = 0x0,
-    #[doc = "Secure and non-privileged Master"]
+    #[doc = "Secure and non-privileged Master."]
     NONSECURE_PRIV_MASTER = 0x01,
-    #[doc = "Non-secure and privileged Master"]
+    #[doc = "Non-secure and privileged Master."]
     SECURE_NONPRIV_MASTER = 0x02,
-    #[doc = "Non-secure and non-privileged Master"]
+    #[doc = "Non-secure and non-privileged Master."]
     SECURE_PRIV_MASTER = 0x03,
 }
 impl MasterSecAntiPolRegUsbFs {
@@ -11748,13 +11748,13 @@ impl From<MasterSecAntiPolRegUsbFs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecAntiPolRegUsbHs {
-    #[doc = "Secure and privileged Master"]
+    #[doc = "Secure and privileged Master."]
     NONSECURE_NONPRIV_MASTER = 0x0,
-    #[doc = "Secure and non-privileged Master"]
+    #[doc = "Secure and non-privileged Master."]
     NONSECURE_PRIV_MASTER = 0x01,
-    #[doc = "Non-secure and privileged Master"]
+    #[doc = "Non-secure and privileged Master."]
     SECURE_NONPRIV_MASTER = 0x02,
-    #[doc = "Non-secure and non-privileged Master"]
+    #[doc = "Non-secure and non-privileged Master."]
     SECURE_PRIV_MASTER = 0x03,
 }
 impl MasterSecAntiPolRegUsbHs {
@@ -11783,13 +11783,13 @@ impl From<MasterSecAntiPolRegUsbHs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecAntiPolRegUsdhc {
-    #[doc = "Secure and privileged Master"]
+    #[doc = "Secure and privileged Master."]
     NONSECURE_NONPRIV_MASTER = 0x0,
-    #[doc = "Secure and non-privileged Master"]
+    #[doc = "Secure and non-privileged Master."]
     NONSECURE_PRIV_MASTER = 0x01,
-    #[doc = "Non-secure and privileged Master"]
+    #[doc = "Non-secure and privileged Master."]
     SECURE_NONPRIV_MASTER = 0x02,
-    #[doc = "Non-secure and non-privileged Master"]
+    #[doc = "Non-secure and non-privileged Master."]
     SECURE_PRIV_MASTER = 0x03,
 }
 impl MasterSecAntiPolRegUsdhc {
@@ -11819,9 +11819,9 @@ impl From<MasterSecAntiPolRegUsdhc> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecLevelAntipolLock {
     _RESERVED_0 = 0x0,
-    #[doc = "MASTER_SEC_LEVEL_LOCK cannot be written"]
+    #[doc = "MASTER_SEC_LEVEL_LOCK cannot be written."]
     ENABLE = 0x01,
-    #[doc = "MASTER_SEC_LEVEL_LOCK can be written"]
+    #[doc = "MASTER_SEC_LEVEL_LOCK can be written."]
     DISABLE = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -11851,13 +11851,13 @@ impl From<MasterSecLevelAntipolLock> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecLevelCoolfluxi {
-    #[doc = "Non-secure and non-privileged Master"]
+    #[doc = "Non-secure and non-privileged Master."]
     NONSECURE_NONPRIV_MASTER = 0x0,
-    #[doc = "Non-secure and privileged Master"]
+    #[doc = "Non-secure and privileged Master."]
     NONSECURE_PRIV_MASTER = 0x01,
-    #[doc = "Secure and non-privileged Master"]
+    #[doc = "Secure and non-privileged Master."]
     SECURE_NONPRIV_MASTER = 0x02,
-    #[doc = "Secure and privileged Master"]
+    #[doc = "Secure and privileged Master."]
     SECURE_PRIV_MASTER = 0x03,
 }
 impl MasterSecLevelCoolfluxi {
@@ -11886,13 +11886,13 @@ impl From<MasterSecLevelCoolfluxi> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecLevelCpu1 {
-    #[doc = "Non-secure and non-privileged Master"]
+    #[doc = "Non-secure and non-privileged Master."]
     NONSECURE_NONPRIV_MASTER = 0x0,
-    #[doc = "Non-secure and privileged Master"]
+    #[doc = "Non-secure and privileged Master."]
     NONSECURE_PRIV_MASTER = 0x01,
-    #[doc = "Secure and non-privileged Master"]
+    #[doc = "Secure and non-privileged Master."]
     SECURE_NONPRIV_MASTER = 0x02,
-    #[doc = "Secure and privileged Master"]
+    #[doc = "Secure and privileged Master."]
     SECURE_PRIV_MASTER = 0x03,
 }
 impl MasterSecLevelCpu1 {
@@ -11921,13 +11921,13 @@ impl From<MasterSecLevelCpu1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecLevelEDma0 {
-    #[doc = "Non-secure and non-privileged Master"]
+    #[doc = "Non-secure and non-privileged Master."]
     NONSECURE_NONPRIV_MASTER = 0x0,
-    #[doc = "Non-secure and privileged Master"]
+    #[doc = "Non-secure and privileged Master."]
     NONSECURE_PRIV_MASTER = 0x01,
-    #[doc = "Secure and non-privileged Master"]
+    #[doc = "Secure and non-privileged Master."]
     SECURE_NONPRIV_MASTER = 0x02,
-    #[doc = "Secure and privileged Master"]
+    #[doc = "Secure and privileged Master."]
     SECURE_PRIV_MASTER = 0x03,
 }
 impl MasterSecLevelEDma0 {
@@ -11956,13 +11956,13 @@ impl From<MasterSecLevelEDma0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecLevelEDma1 {
-    #[doc = "Non-secure and non-privileged Master"]
+    #[doc = "Non-secure and non-privileged Master."]
     NONSECURE_NONPRIV_MASTER = 0x0,
-    #[doc = "Non-secure and privileged Master"]
+    #[doc = "Non-secure and privileged Master."]
     NONSECURE_PRIV_MASTER = 0x01,
-    #[doc = "Secure and non-privileged Master"]
+    #[doc = "Secure and non-privileged Master."]
     SECURE_NONPRIV_MASTER = 0x02,
-    #[doc = "Secure and privileged Master"]
+    #[doc = "Secure and privileged Master."]
     SECURE_PRIV_MASTER = 0x03,
 }
 impl MasterSecLevelEDma1 {
@@ -11991,13 +11991,13 @@ impl From<MasterSecLevelEDma1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecLevelEthernet {
-    #[doc = "Non-secure and non-privileged Master"]
+    #[doc = "Non-secure and non-privileged Master."]
     NONSECURE_NONPRIV_MASTER = 0x0,
-    #[doc = "Non-secure and privileged Master"]
+    #[doc = "Non-secure and privileged Master."]
     NONSECURE_PRIV_MASTER = 0x01,
-    #[doc = "Secure and non-privileged Master"]
+    #[doc = "Secure and non-privileged Master."]
     SECURE_NONPRIV_MASTER = 0x02,
-    #[doc = "Secure and privileged Master"]
+    #[doc = "Secure and privileged Master."]
     SECURE_PRIV_MASTER = 0x03,
 }
 impl MasterSecLevelEthernet {
@@ -12027,9 +12027,9 @@ impl From<MasterSecLevelEthernet> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecLevelLock {
     _RESERVED_0 = 0x0,
-    #[doc = "MASTER_SEC_LEVEL_LOCK cannot be written"]
+    #[doc = "MASTER_SEC_LEVEL_LOCK cannot be written."]
     ENABLE = 0x01,
-    #[doc = "MASTER_SEC_LEVEL_LOCK can be written"]
+    #[doc = "MASTER_SEC_LEVEL_LOCK can be written."]
     DISABLE = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -12059,13 +12059,13 @@ impl From<MasterSecLevelLock> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecLevelNpuo {
-    #[doc = "Non-secure and non-privileged Master"]
+    #[doc = "Non-secure and non-privileged Master."]
     NONSECURE_NONPRIV_MASTER = 0x0,
-    #[doc = "Non-secure and privileged Master"]
+    #[doc = "Non-secure and privileged Master."]
     NONSECURE_PRIV_MASTER = 0x01,
-    #[doc = "Secure and non-privileged Master"]
+    #[doc = "Secure and non-privileged Master."]
     SECURE_NONPRIV_MASTER = 0x02,
-    #[doc = "Secure and privileged Master"]
+    #[doc = "Secure and privileged Master."]
     SECURE_PRIV_MASTER = 0x03,
 }
 impl MasterSecLevelNpuo {
@@ -12094,13 +12094,13 @@ impl From<MasterSecLevelNpuo> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecLevelPkc {
-    #[doc = "Non-secure and non-privileged Master"]
+    #[doc = "Non-secure and non-privileged Master."]
     NONSECURE_NONPRIV_MASTER = 0x0,
-    #[doc = "Non-secure and privileged Master"]
+    #[doc = "Non-secure and privileged Master."]
     NONSECURE_PRIV_MASTER = 0x01,
-    #[doc = "Secure and non-privileged Master"]
+    #[doc = "Secure and non-privileged Master."]
     SECURE_NONPRIV_MASTER = 0x02,
-    #[doc = "Secure and privileged Master"]
+    #[doc = "Secure and privileged Master."]
     SECURE_PRIV_MASTER = 0x03,
 }
 impl MasterSecLevelPkc {
@@ -12129,13 +12129,13 @@ impl From<MasterSecLevelPkc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecLevelPq {
-    #[doc = "Non-secure and non-privileged Master"]
+    #[doc = "Non-secure and non-privileged Master."]
     NONSECURE_NONPRIV_MASTER = 0x0,
-    #[doc = "Non-secure and privileged Master"]
+    #[doc = "Non-secure and privileged Master."]
     NONSECURE_PRIV_MASTER = 0x01,
-    #[doc = "Secure and non-privileged Master"]
+    #[doc = "Secure and non-privileged Master."]
     SECURE_NONPRIV_MASTER = 0x02,
-    #[doc = "Secure and privileged Master"]
+    #[doc = "Secure and privileged Master."]
     SECURE_PRIV_MASTER = 0x03,
 }
 impl MasterSecLevelPq {
@@ -12164,13 +12164,13 @@ impl From<MasterSecLevelPq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecLevelSmartdma {
-    #[doc = "Non-secure and non-privileged Master"]
+    #[doc = "Non-secure and non-privileged Master."]
     NONSECURE_NONPRIV_MASTER = 0x0,
-    #[doc = "Non-secure and privileged Master"]
+    #[doc = "Non-secure and privileged Master."]
     NONSECURE_PRIV_MASTER = 0x01,
-    #[doc = "Secure and non-privileged Master"]
+    #[doc = "Secure and non-privileged Master."]
     SECURE_NONPRIV_MASTER = 0x02,
-    #[doc = "Secure and privileged Master"]
+    #[doc = "Secure and privileged Master."]
     SECURE_PRIV_MASTER = 0x03,
 }
 impl MasterSecLevelSmartdma {
@@ -12199,13 +12199,13 @@ impl From<MasterSecLevelSmartdma> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecLevelUsbFs {
-    #[doc = "Non-secure and non-privileged Master"]
+    #[doc = "Non-secure and non-privileged Master."]
     NONSECURE_NONPRIV_MASTER = 0x0,
-    #[doc = "Non-secure and privileged Master"]
+    #[doc = "Non-secure and privileged Master."]
     NONSECURE_PRIV_MASTER = 0x01,
-    #[doc = "Secure and non-privileged Master"]
+    #[doc = "Secure and non-privileged Master."]
     SECURE_NONPRIV_MASTER = 0x02,
-    #[doc = "Secure and privileged Master"]
+    #[doc = "Secure and privileged Master."]
     SECURE_PRIV_MASTER = 0x03,
 }
 impl MasterSecLevelUsbFs {
@@ -12234,13 +12234,13 @@ impl From<MasterSecLevelUsbFs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecLevelUsbHs {
-    #[doc = "Non-secure and non-privileged Master"]
+    #[doc = "Non-secure and non-privileged Master."]
     NONSECURE_NONPRIV_MASTER = 0x0,
-    #[doc = "Non-secure and privileged Master"]
+    #[doc = "Non-secure and privileged Master."]
     NONSECURE_PRIV_MASTER = 0x01,
-    #[doc = "Secure and non-privileged Master"]
+    #[doc = "Secure and non-privileged Master."]
     SECURE_NONPRIV_MASTER = 0x02,
-    #[doc = "Secure and privileged Master"]
+    #[doc = "Secure and privileged Master."]
     SECURE_PRIV_MASTER = 0x03,
 }
 impl MasterSecLevelUsbHs {
@@ -12269,13 +12269,13 @@ impl From<MasterSecLevelUsbHs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MasterSecLevelUsdhc {
-    #[doc = "Non-secure and non-privileged Master"]
+    #[doc = "Non-secure and non-privileged Master."]
     NONSECURE_NONPRIV_MASTER = 0x0,
-    #[doc = "Non-secure and privileged Master"]
+    #[doc = "Non-secure and privileged Master."]
     NONSECURE_PRIV_MASTER = 0x01,
-    #[doc = "Secure and non-privileged Master"]
+    #[doc = "Secure and non-privileged Master."]
     SECURE_NONPRIV_MASTER = 0x02,
-    #[doc = "Secure and privileged Master"]
+    #[doc = "Secure and privileged Master."]
     SECURE_PRIV_MASTER = 0x03,
 }
 impl MasterSecLevelUsdhc {
@@ -12304,13 +12304,13 @@ impl From<MasterSecLevelUsdhc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mbc {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Mbc {
@@ -12339,13 +12339,13 @@ impl From<Mbc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Micd {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Micd {
@@ -12377,7 +12377,7 @@ pub enum MiscCtrlDpRegDisableStrictMode {
     _RESERVED_0 = 0x0,
     #[doc = "Master can access memories and peripherals at the same level or below that level."]
     AHBTM = 0x01,
-    #[doc = "Master can access memories and peripherals at same level only"]
+    #[doc = "Master can access memories and peripherals at same level only."]
     AHBSM1 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -12542,7 +12542,7 @@ pub enum MiscCtrlDpRegIdauAllNs {
     _RESERVED_0 = 0x0,
     #[doc = "IDAU is disabled, which means that all memories are attributed as non-secure memory."]
     DISABLED = 0x01,
-    #[doc = "IDAU is enabled (restrictive mode)"]
+    #[doc = "IDAU is enabled (restrictive mode)."]
     ENABLED = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -12573,9 +12573,9 @@ impl From<MiscCtrlDpRegIdauAllNs> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MiscCtrlDpRegWriteLock {
     _RESERVED_0 = 0x0,
-    #[doc = "Writes to this register and to the Memory and Peripheral RULE registers are not allowed"]
+    #[doc = "Writes to this register and to the Memory and Peripheral RULE registers are not allowed."]
     LOCKED = 0x01,
-    #[doc = "Writes to this register and to the Memory and Peripheral RULE registers are allowed"]
+    #[doc = "Writes to this register and to the Memory and Peripheral RULE registers are allowed."]
     NOT_LOCKED = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -12606,9 +12606,9 @@ impl From<MiscCtrlDpRegWriteLock> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MiscCtrlRegDisableStrictMode {
     _RESERVED_0 = 0x0,
-    #[doc = "Master strict mode is on and can access memories and peripherals at the same level or below that level"]
+    #[doc = "Master strict mode is on and can access memories and peripherals at the same level or below that level."]
     AHBTM = 0x01,
-    #[doc = "Master strict mode is disabled and can access memories and peripherals at same level only"]
+    #[doc = "Master strict mode is disabled and can access memories and peripherals at same level only."]
     AHBSM1 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -12773,7 +12773,7 @@ pub enum MiscCtrlRegIdauAllNs {
     _RESERVED_0 = 0x0,
     #[doc = "IDAU is disabled, which means that all memories are attributed as non-secure memory."]
     DISABLED = 0x01,
-    #[doc = "IDAU is enabled (restrictive mode)"]
+    #[doc = "IDAU is enabled (restrictive mode)."]
     ENABLED = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -12804,9 +12804,9 @@ impl From<MiscCtrlRegIdauAllNs> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MiscCtrlRegWriteLock {
     _RESERVED_0 = 0x0,
-    #[doc = "Writes to this register and to the Memory and Peripheral RULE registers are not allowed"]
+    #[doc = "Writes to this register and to the Memory and Peripheral RULE registers are not allowed."]
     LOCKED = 0x01,
-    #[doc = "Writes to this register and to the Memory and Peripheral RULE registers are allowed"]
+    #[doc = "Writes to this register and to the Memory and Peripheral RULE registers are allowed."]
     NOT_LOCKED = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -12836,13 +12836,13 @@ impl From<MiscCtrlRegWriteLock> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mrt0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Mrt0 {
@@ -12871,13 +12871,13 @@ impl From<Mrt0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mtr0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Mtr0 {
@@ -12906,13 +12906,13 @@ impl From<Mtr0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npu {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Npu {
@@ -12941,13 +12941,13 @@ impl From<Npu> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npx {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Npx {
@@ -12976,13 +12976,13 @@ impl From<Npx> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Opamp0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Opamp0 {
@@ -13011,13 +13011,13 @@ impl From<Opamp0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Opamp1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Opamp1 {
@@ -13046,13 +13046,13 @@ impl From<Opamp1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Opamp2 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Opamp2 {
@@ -13081,13 +13081,13 @@ impl From<Opamp2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ostimer0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Ostimer0 {
@@ -13116,13 +13116,13 @@ impl From<Ostimer0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Otpc {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Otpc {
@@ -13151,13 +13151,13 @@ impl From<Otpc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pint0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Pint0 {
@@ -13186,9 +13186,9 @@ impl From<Pint0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin0SecMask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Pio0Pin0SecMask {
@@ -13217,9 +13217,9 @@ impl From<Pio0Pin0SecMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin10SecMask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Pio0Pin10SecMask {
@@ -13248,9 +13248,9 @@ impl From<Pio0Pin10SecMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin11SecMask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Pio0Pin11SecMask {
@@ -13279,9 +13279,9 @@ impl From<Pio0Pin11SecMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin12SecMask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Pio0Pin12SecMask {
@@ -13310,9 +13310,9 @@ impl From<Pio0Pin12SecMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin13SecMask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Pio0Pin13SecMask {
@@ -13341,9 +13341,9 @@ impl From<Pio0Pin13SecMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin14SecMask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Pio0Pin14SecMask {
@@ -13372,9 +13372,9 @@ impl From<Pio0Pin14SecMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin15SecMask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Pio0Pin15SecMask {
@@ -13403,9 +13403,9 @@ impl From<Pio0Pin15SecMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin16SecMask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Pio0Pin16SecMask {
@@ -13434,9 +13434,9 @@ impl From<Pio0Pin16SecMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin17SecMask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Pio0Pin17SecMask {
@@ -13465,9 +13465,9 @@ impl From<Pio0Pin17SecMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin18SecMask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Pio0Pin18SecMask {
@@ -13496,9 +13496,9 @@ impl From<Pio0Pin18SecMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin19SecMask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Pio0Pin19SecMask {
@@ -13527,9 +13527,9 @@ impl From<Pio0Pin19SecMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin1SecMask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Pio0Pin1SecMask {
@@ -13558,9 +13558,9 @@ impl From<Pio0Pin1SecMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin20SecMask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Pio0Pin20SecMask {
@@ -13589,9 +13589,9 @@ impl From<Pio0Pin20SecMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin21SecMask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Pio0Pin21SecMask {
@@ -13620,9 +13620,9 @@ impl From<Pio0Pin21SecMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin22SecMask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Pio0Pin22SecMask {
@@ -13651,9 +13651,9 @@ impl From<Pio0Pin22SecMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin23SecMask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Pio0Pin23SecMask {
@@ -13682,9 +13682,9 @@ impl From<Pio0Pin23SecMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin24SecMask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Pio0Pin24SecMask {
@@ -13713,9 +13713,9 @@ impl From<Pio0Pin24SecMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin25SecMask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Pio0Pin25SecMask {
@@ -13744,9 +13744,9 @@ impl From<Pio0Pin25SecMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin26SecMask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Pio0Pin26SecMask {
@@ -13775,9 +13775,9 @@ impl From<Pio0Pin26SecMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin27SecMask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Pio0Pin27SecMask {
@@ -13806,9 +13806,9 @@ impl From<Pio0Pin27SecMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin28SecMask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Pio0Pin28SecMask {
@@ -13837,9 +13837,9 @@ impl From<Pio0Pin28SecMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin29SecMask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Pio0Pin29SecMask {
@@ -13868,9 +13868,9 @@ impl From<Pio0Pin29SecMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin2SecMask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Pio0Pin2SecMask {
@@ -13899,9 +13899,9 @@ impl From<Pio0Pin2SecMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin30SecMask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Pio0Pin30SecMask {
@@ -13930,9 +13930,9 @@ impl From<Pio0Pin30SecMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin31SecMask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Pio0Pin31SecMask {
@@ -13961,9 +13961,9 @@ impl From<Pio0Pin31SecMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin3SecMask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Pio0Pin3SecMask {
@@ -13992,9 +13992,9 @@ impl From<Pio0Pin3SecMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin4SecMask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Pio0Pin4SecMask {
@@ -14023,9 +14023,9 @@ impl From<Pio0Pin4SecMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin5SecMask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Pio0Pin5SecMask {
@@ -14054,9 +14054,9 @@ impl From<Pio0Pin5SecMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin6SecMask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Pio0Pin6SecMask {
@@ -14085,9 +14085,9 @@ impl From<Pio0Pin6SecMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin7SecMask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Pio0Pin7SecMask {
@@ -14116,9 +14116,9 @@ impl From<Pio0Pin7SecMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin8SecMask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Pio0Pin8SecMask {
@@ -14147,9 +14147,9 @@ impl From<Pio0Pin8SecMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pio0Pin9SecMask {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x0,
-    #[doc = "Not masked"]
+    #[doc = "Not masked."]
     NOT_MASKED = 0x01,
 }
 impl Pio0Pin9SecMask {
@@ -14178,13 +14178,13 @@ impl From<Pio0Pin9SecMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PkcRam {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl PkcRam {
@@ -14213,13 +14213,13 @@ impl From<PkcRam> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Plu {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Plu {
@@ -14248,13 +14248,13 @@ impl From<Plu> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Port0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Port0 {
@@ -14283,13 +14283,13 @@ impl From<Port0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Port1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Port1 {
@@ -14318,13 +14318,13 @@ impl From<Port1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Port2 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Port2 {
@@ -14353,13 +14353,13 @@ impl From<Port2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Port3 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Port3 {
@@ -14388,13 +14388,13 @@ impl From<Port3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Port4 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Port4 {
@@ -14423,13 +14423,13 @@ impl From<Port4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Port5 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Port5 {
@@ -14458,13 +14458,13 @@ impl From<Port5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Powerquad {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Powerquad {
@@ -14493,13 +14493,13 @@ impl From<Powerquad> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PufAlias0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl PufAlias0 {
@@ -14528,13 +14528,13 @@ impl From<PufAlias0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PufAlias1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl PufAlias1 {
@@ -14563,13 +14563,13 @@ impl From<PufAlias1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PufAlias2 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl PufAlias2 {
@@ -14598,13 +14598,13 @@ impl From<PufAlias2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PufAlias3 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl PufAlias3 {
@@ -14633,13 +14633,13 @@ impl From<PufAlias3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pwm {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Pwm {
@@ -14668,13 +14668,13 @@ impl From<Pwm> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pwm1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Pwm1 {
@@ -14703,13 +14703,13 @@ impl From<Pwm1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamaMemRuleRule0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamaMemRuleRule0 {
@@ -14738,13 +14738,13 @@ impl From<RamaMemRuleRule0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamaMemRuleRule1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamaMemRuleRule1 {
@@ -14773,13 +14773,13 @@ impl From<RamaMemRuleRule1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamaMemRuleRule2 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamaMemRuleRule2 {
@@ -14808,13 +14808,13 @@ impl From<RamaMemRuleRule2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamaMemRuleRule3 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamaMemRuleRule3 {
@@ -14843,13 +14843,13 @@ impl From<RamaMemRuleRule3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamaMemRuleRule4 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamaMemRuleRule4 {
@@ -14878,13 +14878,13 @@ impl From<RamaMemRuleRule4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamaMemRuleRule5 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamaMemRuleRule5 {
@@ -14913,13 +14913,13 @@ impl From<RamaMemRuleRule5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamaMemRuleRule6 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamaMemRuleRule6 {
@@ -14948,13 +14948,13 @@ impl From<RamaMemRuleRule6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamaMemRuleRule7 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamaMemRuleRule7 {
@@ -14983,13 +14983,13 @@ impl From<RamaMemRuleRule7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RambMemRuleRule0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RambMemRuleRule0 {
@@ -15018,13 +15018,13 @@ impl From<RambMemRuleRule0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RambMemRuleRule1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RambMemRuleRule1 {
@@ -15053,13 +15053,13 @@ impl From<RambMemRuleRule1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RambMemRuleRule2 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RambMemRuleRule2 {
@@ -15088,13 +15088,13 @@ impl From<RambMemRuleRule2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RambMemRuleRule3 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RambMemRuleRule3 {
@@ -15123,13 +15123,13 @@ impl From<RambMemRuleRule3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RambMemRuleRule4 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RambMemRuleRule4 {
@@ -15158,13 +15158,13 @@ impl From<RambMemRuleRule4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RambMemRuleRule5 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RambMemRuleRule5 {
@@ -15193,13 +15193,13 @@ impl From<RambMemRuleRule5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RambMemRuleRule6 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RambMemRuleRule6 {
@@ -15228,13 +15228,13 @@ impl From<RambMemRuleRule6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RambMemRuleRule7 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RambMemRuleRule7 {
@@ -15263,13 +15263,13 @@ impl From<RambMemRuleRule7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamcMemRuleRule0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamcMemRuleRule0 {
@@ -15298,13 +15298,13 @@ impl From<RamcMemRuleRule0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamcMemRuleRule1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamcMemRuleRule1 {
@@ -15333,13 +15333,13 @@ impl From<RamcMemRuleRule1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamcMemRuleRule2 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamcMemRuleRule2 {
@@ -15368,13 +15368,13 @@ impl From<RamcMemRuleRule2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamcMemRuleRule3 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamcMemRuleRule3 {
@@ -15403,13 +15403,13 @@ impl From<RamcMemRuleRule3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamcMemRuleRule4 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamcMemRuleRule4 {
@@ -15438,13 +15438,13 @@ impl From<RamcMemRuleRule4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamcMemRuleRule5 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamcMemRuleRule5 {
@@ -15473,13 +15473,13 @@ impl From<RamcMemRuleRule5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamcMemRuleRule6 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamcMemRuleRule6 {
@@ -15508,13 +15508,13 @@ impl From<RamcMemRuleRule6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamcMemRuleRule7 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamcMemRuleRule7 {
@@ -15543,13 +15543,13 @@ impl From<RamcMemRuleRule7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamdMemRuleRule0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamdMemRuleRule0 {
@@ -15578,13 +15578,13 @@ impl From<RamdMemRuleRule0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamdMemRuleRule1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamdMemRuleRule1 {
@@ -15613,13 +15613,13 @@ impl From<RamdMemRuleRule1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamdMemRuleRule2 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamdMemRuleRule2 {
@@ -15648,13 +15648,13 @@ impl From<RamdMemRuleRule2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamdMemRuleRule3 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamdMemRuleRule3 {
@@ -15683,13 +15683,13 @@ impl From<RamdMemRuleRule3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamdMemRuleRule4 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamdMemRuleRule4 {
@@ -15718,13 +15718,13 @@ impl From<RamdMemRuleRule4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamdMemRuleRule5 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamdMemRuleRule5 {
@@ -15753,13 +15753,13 @@ impl From<RamdMemRuleRule5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamdMemRuleRule6 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamdMemRuleRule6 {
@@ -15788,13 +15788,13 @@ impl From<RamdMemRuleRule6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamdMemRuleRule7 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamdMemRuleRule7 {
@@ -15823,13 +15823,13 @@ impl From<RamdMemRuleRule7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RameMemRuleRule0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RameMemRuleRule0 {
@@ -15858,13 +15858,13 @@ impl From<RameMemRuleRule0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RameMemRuleRule1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RameMemRuleRule1 {
@@ -15893,13 +15893,13 @@ impl From<RameMemRuleRule1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RameMemRuleRule2 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RameMemRuleRule2 {
@@ -15928,13 +15928,13 @@ impl From<RameMemRuleRule2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RameMemRuleRule3 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RameMemRuleRule3 {
@@ -15963,13 +15963,13 @@ impl From<RameMemRuleRule3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RameMemRuleRule4 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RameMemRuleRule4 {
@@ -15998,13 +15998,13 @@ impl From<RameMemRuleRule4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RameMemRuleRule5 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RameMemRuleRule5 {
@@ -16033,13 +16033,13 @@ impl From<RameMemRuleRule5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RameMemRuleRule6 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RameMemRuleRule6 {
@@ -16068,13 +16068,13 @@ impl From<RameMemRuleRule6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RameMemRuleRule7 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RameMemRuleRule7 {
@@ -16103,13 +16103,13 @@ impl From<RameMemRuleRule7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamfMemRuleRule0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamfMemRuleRule0 {
@@ -16138,13 +16138,13 @@ impl From<RamfMemRuleRule0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamfMemRuleRule1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamfMemRuleRule1 {
@@ -16173,13 +16173,13 @@ impl From<RamfMemRuleRule1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamfMemRuleRule2 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamfMemRuleRule2 {
@@ -16208,13 +16208,13 @@ impl From<RamfMemRuleRule2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamfMemRuleRule3 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamfMemRuleRule3 {
@@ -16243,13 +16243,13 @@ impl From<RamfMemRuleRule3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamfMemRuleRule4 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamfMemRuleRule4 {
@@ -16278,13 +16278,13 @@ impl From<RamfMemRuleRule4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamfMemRuleRule5 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamfMemRuleRule5 {
@@ -16313,13 +16313,13 @@ impl From<RamfMemRuleRule5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamfMemRuleRule6 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamfMemRuleRule6 {
@@ -16348,13 +16348,13 @@ impl From<RamfMemRuleRule6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamfMemRuleRule7 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamfMemRuleRule7 {
@@ -16383,13 +16383,13 @@ impl From<RamfMemRuleRule7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamgMemRuleRule0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamgMemRuleRule0 {
@@ -16418,13 +16418,13 @@ impl From<RamgMemRuleRule0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamgMemRuleRule1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamgMemRuleRule1 {
@@ -16453,13 +16453,13 @@ impl From<RamgMemRuleRule1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamgMemRuleRule2 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamgMemRuleRule2 {
@@ -16488,13 +16488,13 @@ impl From<RamgMemRuleRule2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamgMemRuleRule3 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamgMemRuleRule3 {
@@ -16523,13 +16523,13 @@ impl From<RamgMemRuleRule3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamgMemRuleRule4 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamgMemRuleRule4 {
@@ -16558,13 +16558,13 @@ impl From<RamgMemRuleRule4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamgMemRuleRule5 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamgMemRuleRule5 {
@@ -16593,13 +16593,13 @@ impl From<RamgMemRuleRule5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamgMemRuleRule6 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamgMemRuleRule6 {
@@ -16628,13 +16628,13 @@ impl From<RamgMemRuleRule6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamgMemRuleRule7 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamgMemRuleRule7 {
@@ -16663,13 +16663,13 @@ impl From<RamgMemRuleRule7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamhMemRuleRule0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamhMemRuleRule0 {
@@ -16698,13 +16698,13 @@ impl From<RamhMemRuleRule0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamhMemRuleRule1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamhMemRuleRule1 {
@@ -16733,13 +16733,13 @@ impl From<RamhMemRuleRule1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamhMemRuleRule2 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamhMemRuleRule2 {
@@ -16768,13 +16768,13 @@ impl From<RamhMemRuleRule2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamhMemRuleRule3 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamhMemRuleRule3 {
@@ -16803,13 +16803,13 @@ impl From<RamhMemRuleRule3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamhMemRuleRule4 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamhMemRuleRule4 {
@@ -16838,13 +16838,13 @@ impl From<RamhMemRuleRule4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamhMemRuleRule5 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamhMemRuleRule5 {
@@ -16873,13 +16873,13 @@ impl From<RamhMemRuleRule5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamhMemRuleRule6 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamhMemRuleRule6 {
@@ -16908,13 +16908,13 @@ impl From<RamhMemRuleRule6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamhMemRuleRule7 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamhMemRuleRule7 {
@@ -16943,13 +16943,13 @@ impl From<RamhMemRuleRule7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamxMemRuleRule0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamxMemRuleRule0 {
@@ -16978,13 +16978,13 @@ impl From<RamxMemRuleRule0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamxMemRuleRule1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamxMemRuleRule1 {
@@ -17013,13 +17013,13 @@ impl From<RamxMemRuleRule1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamxMemRuleRule2 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamxMemRuleRule2 {
@@ -17048,13 +17048,13 @@ impl From<RamxMemRuleRule2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamxMemRuleRule3 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamxMemRuleRule3 {
@@ -17083,13 +17083,13 @@ impl From<RamxMemRuleRule3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamxMemRuleRule4 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamxMemRuleRule4 {
@@ -17118,13 +17118,13 @@ impl From<RamxMemRuleRule4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamxMemRuleRule5 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamxMemRuleRule5 {
@@ -17153,13 +17153,13 @@ impl From<RamxMemRuleRule5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamxMemRuleRule6 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamxMemRuleRule6 {
@@ -17188,13 +17188,13 @@ impl From<RamxMemRuleRule6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamxMemRuleRule7 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RamxMemRuleRule7 {
@@ -17223,13 +17223,13 @@ impl From<RamxMemRuleRule7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RomMemRuleRule0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RomMemRuleRule0 {
@@ -17258,13 +17258,13 @@ impl From<RomMemRuleRule0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RomMemRuleRule1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RomMemRuleRule1 {
@@ -17293,13 +17293,13 @@ impl From<RomMemRuleRule1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RomMemRuleRule2 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RomMemRuleRule2 {
@@ -17328,13 +17328,13 @@ impl From<RomMemRuleRule2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RomMemRuleRule3 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RomMemRuleRule3 {
@@ -17363,13 +17363,13 @@ impl From<RomMemRuleRule3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RomMemRuleRule4 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RomMemRuleRule4 {
@@ -17398,13 +17398,13 @@ impl From<RomMemRuleRule4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RomMemRuleRule5 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RomMemRuleRule5 {
@@ -17433,13 +17433,13 @@ impl From<RomMemRuleRule5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RomMemRuleRule6 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RomMemRuleRule6 {
@@ -17468,13 +17468,13 @@ impl From<RomMemRuleRule6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RomMemRuleRule7 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl RomMemRuleRule7 {
@@ -17503,13 +17503,13 @@ impl From<RomMemRuleRule7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rtc {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Rtc {
@@ -17538,13 +17538,13 @@ impl From<Rtc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Sai0 {
@@ -17573,13 +17573,13 @@ impl From<Sai0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Sai1 {
@@ -17608,13 +17608,13 @@ impl From<Sai1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Scg0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Scg0 {
@@ -17643,13 +17643,13 @@ impl From<Scg0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sct0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Sct0 {
@@ -17679,9 +17679,9 @@ impl From<Sct0> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCpu1IntMask0Lock {
     _RESERVED_0 = 0x0,
-    #[doc = "SEC_GPIO_MASK0 cannot be written"]
+    #[doc = "SEC_GPIO_MASK0 cannot be written."]
     CANNOT_BE_WRITTEN = 0x01,
-    #[doc = "SEC_GPIO_MASK0 can be written"]
+    #[doc = "SEC_GPIO_MASK0 can be written."]
     CAN_BE_WRITTEN = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -17712,9 +17712,9 @@ impl From<SecCpu1IntMask0Lock> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCpu1IntMask1Lock {
     _RESERVED_0 = 0x0,
-    #[doc = "SEC_GPIO_MASK1 cannot be written"]
+    #[doc = "SEC_GPIO_MASK1 cannot be written."]
     CANNOT_BE_WRITTEN = 0x01,
-    #[doc = "SEC_GPIO_MASK1 can be written"]
+    #[doc = "SEC_GPIO_MASK1 can be written."]
     CAN_BE_WRITTEN = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -17745,9 +17745,9 @@ impl From<SecCpu1IntMask1Lock> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCpu1IntMask2Lock {
     _RESERVED_0 = 0x0,
-    #[doc = "SEC_CPU1_INT_MASK2 cannot be written"]
+    #[doc = "SEC_CPU1_INT_MASK2 cannot be written."]
     CANNOT_BE_WRITTEN = 0x01,
-    #[doc = "SEC_CPU1_INT_MASK2 can be written"]
+    #[doc = "SEC_CPU1_INT_MASK2 can be written."]
     CAN_BE_WRITTEN = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -17778,9 +17778,9 @@ impl From<SecCpu1IntMask2Lock> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCpu1IntMask3Lock {
     _RESERVED_0 = 0x0,
-    #[doc = "SEC_CPU1_INT_MASK3 cannot be written"]
+    #[doc = "SEC_CPU1_INT_MASK3 cannot be written."]
     CANNOT_BE_WRITTEN = 0x01,
-    #[doc = "SEC_CPU1_INT_MASK3 can be written"]
+    #[doc = "SEC_CPU1_INT_MASK3 can be written."]
     CAN_BE_WRITTEN = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -17811,9 +17811,9 @@ impl From<SecCpu1IntMask3Lock> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecCpu1IntMask4Lock {
     _RESERVED_0 = 0x0,
-    #[doc = "SEC_CPU1_INT_MASK4 cannot be written"]
+    #[doc = "SEC_CPU1_INT_MASK4 cannot be written."]
     CANNOT_BE_WRITTEN = 0x01,
-    #[doc = "SEC_CPU1_INT_MASK4 can be written"]
+    #[doc = "SEC_CPU1_INT_MASK4 can be written."]
     CAN_BE_WRITTEN = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -17844,9 +17844,9 @@ impl From<SecCpu1IntMask4Lock> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecGpioMask0Lock {
     _RESERVED_0 = 0x0,
-    #[doc = "SEC_GPIO_MASK0 cannot be written"]
+    #[doc = "SEC_GPIO_MASK0 cannot be written."]
     CANNOT_BE_WRITTEN = 0x01,
-    #[doc = "SEC_GPIO_MASK0 can be written"]
+    #[doc = "SEC_GPIO_MASK0 can be written."]
     CAN_BE_WRITTEN = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -17877,9 +17877,9 @@ impl From<SecGpioMask0Lock> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecGpioMask1Lock {
     _RESERVED_0 = 0x0,
-    #[doc = "SEC_GPIO_MASK1 cannot be written"]
+    #[doc = "SEC_GPIO_MASK1 cannot be written."]
     CANNOT_BE_WRITTEN = 0x01,
-    #[doc = "SEC_GPIO_MASK1 can be written"]
+    #[doc = "SEC_GPIO_MASK1 can be written."]
     CAN_BE_WRITTEN = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -17909,9 +17909,9 @@ impl From<SecGpioMask1Lock> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecVioInfoDataAccess {
-    #[doc = "Code"]
+    #[doc = "Code."]
     CODE = 0x0,
-    #[doc = "Data"]
+    #[doc = "Data."]
     DATA = 0x01,
 }
 impl SecVioInfoDataAccess {
@@ -17940,46 +17940,46 @@ impl From<SecVioInfoDataAccess> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecVioInfoMaster {
-    #[doc = "M33 Code"]
+    #[doc = "M33 Code."]
     CPU0_CODE = 0x0,
-    #[doc = "M33 System"]
+    #[doc = "M33 System."]
     CPU0_SYS = 0x01,
-    #[doc = "CPU1 (Mirco-CM33) Code"]
+    #[doc = "CPU1 (Mirco-CM33) Code."]
     CPU1_CODE = 0x02,
-    #[doc = "SMARTDMA Instruction"]
+    #[doc = "SMARTDMA Instruction."]
     SDMA_INSTR = 0x03,
-    #[doc = "CPU1 (Mirco-CM33) system"]
+    #[doc = "CPU1 (Mirco-CM33) system."]
     CPU1_SYS = 0x04,
-    #[doc = "SMARTDMA Data"]
+    #[doc = "SMARTDMA Data."]
     SDMA_DATA = 0x05,
-    #[doc = "eDMA0"]
+    #[doc = "eDMA0."]
     E_DMA0 = 0x06,
-    #[doc = "eDMA1"]
+    #[doc = "eDMA1."]
     E_DMA1 = 0x07,
-    #[doc = "PKC"]
+    #[doc = "PKC."]
     PKC = 0x08,
-    #[doc = "ELS S50"]
+    #[doc = "ELS S50."]
     CSSV2 = 0x09,
-    #[doc = "PKC M0"]
+    #[doc = "PKC M0."]
     PQ = 0x0a,
-    #[doc = "NPU Operands"]
+    #[doc = "NPU Operands."]
     NPUO = 0x0b,
-    #[doc = "DSP Instruction"]
+    #[doc = "DSP Instruction."]
     DSPI = 0x0c,
-    #[doc = "DSPX"]
+    #[doc = "DSPX."]
     DSPX = 0x0d,
-    #[doc = "DSPY"]
+    #[doc = "DSPY."]
     DSPY = 0x0e,
     _RESERVED_f = 0x0f,
-    #[doc = "NPU Data"]
+    #[doc = "NPU Data."]
     NPUD = 0x10,
-    #[doc = "USB FS"]
+    #[doc = "USB FS."]
     USB_FS = 0x11,
-    #[doc = "Ethernet"]
+    #[doc = "Ethernet."]
     ETHERNET = 0x12,
-    #[doc = "USB HS"]
+    #[doc = "USB HS."]
     USB_HS = 0x13,
-    #[doc = "uSDHC"]
+    #[doc = "uSDHC."]
     USDHC = 0x14,
     _RESERVED_15 = 0x15,
     _RESERVED_16 = 0x16,
@@ -18019,9 +18019,9 @@ impl From<SecVioInfoMaster> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecVioInfoWrite {
-    #[doc = "Read access"]
+    #[doc = "Read access."]
     READ = 0x0,
-    #[doc = "Write access"]
+    #[doc = "Write access."]
     WRITE = 0x01,
 }
 impl SecVioInfoWrite {
@@ -18050,13 +18050,13 @@ impl From<SecVioInfoWrite> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sema42 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Sema42 {
@@ -18085,13 +18085,13 @@ impl From<Sema42> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sfa {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Sfa {
@@ -18120,13 +18120,13 @@ impl From<Sfa> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sinc0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Sinc0 {
@@ -18155,13 +18155,13 @@ impl From<Sinc0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Sm3 {
@@ -18190,13 +18190,13 @@ impl From<Sm3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Spc0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Spc0 {
@@ -18225,13 +18225,13 @@ impl From<Spc0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Syscon {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Syscon {
@@ -18260,13 +18260,13 @@ impl From<Syscon> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trng {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Trng {
@@ -18295,13 +18295,13 @@ impl From<Trng> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tro0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Tro0 {
@@ -18330,13 +18330,13 @@ impl From<Tro0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tsi {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Tsi {
@@ -18365,13 +18365,13 @@ impl From<Tsi> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum USdhc0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl USdhc0 {
@@ -18400,13 +18400,13 @@ impl From<USdhc0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum UsbFsOtgRam {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl UsbFsOtgRam {
@@ -18435,13 +18435,13 @@ impl From<UsbFsOtgRam> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usbdcd {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Usbdcd {
@@ -18470,13 +18470,13 @@ impl From<Usbdcd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usbfs {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Usbfs {
@@ -18505,13 +18505,13 @@ impl From<Usbfs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usbhs {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Usbhs {
@@ -18540,13 +18540,13 @@ impl From<Usbhs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usbhsphy {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Usbhsphy {
@@ -18575,13 +18575,13 @@ impl From<Usbhsphy> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Utcik0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Utcik0 {
@@ -18610,13 +18610,13 @@ impl From<Utcik0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Vbat {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Vbat {
@@ -18645,13 +18645,13 @@ impl From<Vbat> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Vref {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Vref {
@@ -18680,13 +18680,13 @@ impl From<Vref> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wuu0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Wuu0 {
@@ -18715,13 +18715,13 @@ impl From<Wuu0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wwdt0 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Wwdt0 {
@@ -18750,13 +18750,13 @@ impl From<Wwdt0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wwdt1 {
-    #[doc = "Non-secure and non-privilege user access allowed"]
+    #[doc = "Non-secure and non-privilege user access allowed."]
     NONSECURE_NONPRIV_USER_ALLOWED = 0x0,
-    #[doc = "Non-secure and privilege access allowed"]
+    #[doc = "Non-secure and privilege access allowed."]
     NONSECURE_PRIV_USER_ALLOWED = 0x01,
-    #[doc = "Secure and non-privilege user access allowed"]
+    #[doc = "Secure and non-privilege user access allowed."]
     SECURE_NONPRIV_USER_ALLOWED = 0x02,
-    #[doc = "Secure and privilege user access allowed"]
+    #[doc = "Secure and privilege user access allowed."]
     SECURE_PRIV_USER_ALLOWED = 0x03,
 }
 impl Wwdt1 {

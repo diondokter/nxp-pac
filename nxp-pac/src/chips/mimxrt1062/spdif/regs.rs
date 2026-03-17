@@ -1,196 +1,196 @@
-#[doc = "SPDIF Configuration Register"]
+#[doc = "SPDIF Configuration Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Scr(pub u32);
 impl Scr {
-    #[doc = "USrc_Sel"]
+    #[doc = "USrc_Sel."]
     #[must_use]
     #[inline(always)]
     pub const fn usrc_sel(&self) -> super::vals::UsrcSel {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::UsrcSel::from_bits(val as u8)
     }
-    #[doc = "USrc_Sel"]
+    #[doc = "USrc_Sel."]
     #[inline(always)]
     pub const fn set_usrc_sel(&mut self, val: super::vals::UsrcSel) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "TxSel"]
+    #[doc = "TxSel."]
     #[must_use]
     #[inline(always)]
     pub const fn tx_sel(&self) -> super::vals::TxSel {
         let val = (self.0 >> 2usize) & 0x07;
         super::vals::TxSel::from_bits(val as u8)
     }
-    #[doc = "TxSel"]
+    #[doc = "TxSel."]
     #[inline(always)]
     pub const fn set_tx_sel(&mut self, val: super::vals::TxSel) {
         self.0 = (self.0 & !(0x07 << 2usize)) | (((val.to_bits() as u32) & 0x07) << 2usize);
     }
-    #[doc = "ValCtrl"]
+    #[doc = "ValCtrl."]
     #[must_use]
     #[inline(always)]
     pub const fn val_ctrl(&self) -> super::vals::ValCtrl {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::ValCtrl::from_bits(val as u8)
     }
-    #[doc = "ValCtrl"]
+    #[doc = "ValCtrl."]
     #[inline(always)]
     pub const fn set_val_ctrl(&mut self, val: super::vals::ValCtrl) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
-    #[doc = "InputSrcSel"]
+    #[doc = "InputSrcSel."]
     #[must_use]
     #[inline(always)]
     pub const fn input_src_sel(&self) -> super::vals::InputSrcSel {
         let val = (self.0 >> 6usize) & 0x03;
         super::vals::InputSrcSel::from_bits(val as u8)
     }
-    #[doc = "InputSrcSel"]
+    #[doc = "InputSrcSel."]
     #[inline(always)]
     pub const fn set_input_src_sel(&mut self, val: super::vals::InputSrcSel) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u32) & 0x03) << 6usize);
     }
-    #[doc = "DMA_TX_En"]
+    #[doc = "DMA_TX_En."]
     #[must_use]
     #[inline(always)]
     pub const fn dma_tx_en(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "DMA_TX_En"]
+    #[doc = "DMA_TX_En."]
     #[inline(always)]
     pub const fn set_dma_tx_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "DMA_Rx_En"]
+    #[doc = "DMA_Rx_En."]
     #[must_use]
     #[inline(always)]
     pub const fn dma_rx_en(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "DMA_Rx_En"]
+    #[doc = "DMA_Rx_En."]
     #[inline(always)]
     pub const fn set_dma_rx_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "TxFIFO_Ctrl"]
+    #[doc = "TxFIFO_Ctrl."]
     #[must_use]
     #[inline(always)]
     pub const fn tx_fifo_ctrl(&self) -> super::vals::TxFifoCtrl {
         let val = (self.0 >> 10usize) & 0x03;
         super::vals::TxFifoCtrl::from_bits(val as u8)
     }
-    #[doc = "TxFIFO_Ctrl"]
+    #[doc = "TxFIFO_Ctrl."]
     #[inline(always)]
     pub const fn set_tx_fifo_ctrl(&mut self, val: super::vals::TxFifoCtrl) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u32) & 0x03) << 10usize);
     }
-    #[doc = "soft_reset"]
+    #[doc = "soft_reset."]
     #[must_use]
     #[inline(always)]
     pub const fn soft_reset(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "soft_reset"]
+    #[doc = "soft_reset."]
     #[inline(always)]
     pub const fn set_soft_reset(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "LOW_POWER"]
+    #[doc = "LOW_POWER."]
     #[must_use]
     #[inline(always)]
     pub const fn low_power(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "LOW_POWER"]
+    #[doc = "LOW_POWER."]
     #[inline(always)]
     pub const fn set_low_power(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "TxFIFOEmpty_Sel"]
+    #[doc = "TxFIFOEmpty_Sel."]
     #[must_use]
     #[inline(always)]
     pub const fn tx_fifoempty_sel(&self) -> super::vals::TxFifoemptySel {
         let val = (self.0 >> 15usize) & 0x03;
         super::vals::TxFifoemptySel::from_bits(val as u8)
     }
-    #[doc = "TxFIFOEmpty_Sel"]
+    #[doc = "TxFIFOEmpty_Sel."]
     #[inline(always)]
     pub const fn set_tx_fifoempty_sel(&mut self, val: super::vals::TxFifoemptySel) {
         self.0 = (self.0 & !(0x03 << 15usize)) | (((val.to_bits() as u32) & 0x03) << 15usize);
     }
-    #[doc = "TxAutoSync"]
+    #[doc = "TxAutoSync."]
     #[must_use]
     #[inline(always)]
     pub const fn tx_auto_sync(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "TxAutoSync"]
+    #[doc = "TxAutoSync."]
     #[inline(always)]
     pub const fn set_tx_auto_sync(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "RxAutoSync"]
+    #[doc = "RxAutoSync."]
     #[must_use]
     #[inline(always)]
     pub const fn rx_auto_sync(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "RxAutoSync"]
+    #[doc = "RxAutoSync."]
     #[inline(always)]
     pub const fn set_rx_auto_sync(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "RxFIFOFull_Sel"]
+    #[doc = "RxFIFOFull_Sel."]
     #[must_use]
     #[inline(always)]
     pub const fn rx_fifofull_sel(&self) -> super::vals::RxFifofullSel {
         let val = (self.0 >> 19usize) & 0x03;
         super::vals::RxFifofullSel::from_bits(val as u8)
     }
-    #[doc = "RxFIFOFull_Sel"]
+    #[doc = "RxFIFOFull_Sel."]
     #[inline(always)]
     pub const fn set_rx_fifofull_sel(&mut self, val: super::vals::RxFifofullSel) {
         self.0 = (self.0 & !(0x03 << 19usize)) | (((val.to_bits() as u32) & 0x03) << 19usize);
     }
-    #[doc = "RxFIFO_Rst"]
+    #[doc = "RxFIFO_Rst."]
     #[must_use]
     #[inline(always)]
     pub const fn rx_fifo_rst(&self) -> super::vals::RxFifoRst {
         let val = (self.0 >> 21usize) & 0x01;
         super::vals::RxFifoRst::from_bits(val as u8)
     }
-    #[doc = "RxFIFO_Rst"]
+    #[doc = "RxFIFO_Rst."]
     #[inline(always)]
     pub const fn set_rx_fifo_rst(&mut self, val: super::vals::RxFifoRst) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
     }
-    #[doc = "RxFIFO_Off_On"]
+    #[doc = "RxFIFO_Off_On."]
     #[must_use]
     #[inline(always)]
     pub const fn rx_fifo_off_on(&self) -> super::vals::RxFifoOffOn {
         let val = (self.0 >> 22usize) & 0x01;
         super::vals::RxFifoOffOn::from_bits(val as u8)
     }
-    #[doc = "RxFIFO_Off_On"]
+    #[doc = "RxFIFO_Off_On."]
     #[inline(always)]
     pub const fn set_rx_fifo_off_on(&mut self, val: super::vals::RxFifoOffOn) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
     }
-    #[doc = "RxFIFO_Ctrl"]
+    #[doc = "RxFIFO_Ctrl."]
     #[must_use]
     #[inline(always)]
     pub const fn rx_fifo_ctrl(&self) -> super::vals::RxFifoCtrl {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::RxFifoCtrl::from_bits(val as u8)
     }
-    #[doc = "RxFIFO_Ctrl"]
+    #[doc = "RxFIFO_Ctrl."]
     #[inline(always)]
     pub const fn set_rx_fifo_ctrl(&mut self, val: super::vals::RxFifoCtrl) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
@@ -249,175 +249,175 @@ impl defmt::Format for Scr {
         )
     }
 }
-#[doc = "InterruptClear Register"]
+#[doc = "InterruptClear Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sic(pub u32);
 impl Sic {
-    #[doc = "LockLoss"]
+    #[doc = "LockLoss."]
     #[must_use]
     #[inline(always)]
     pub const fn lock_loss(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "LockLoss"]
+    #[doc = "LockLoss."]
     #[inline(always)]
     pub const fn set_lock_loss(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "RxFIFOResyn"]
+    #[doc = "RxFIFOResyn."]
     #[must_use]
     #[inline(always)]
     pub const fn rx_fiforesyn(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "RxFIFOResyn"]
+    #[doc = "RxFIFOResyn."]
     #[inline(always)]
     pub const fn set_rx_fiforesyn(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "RxFIFOUnOv"]
+    #[doc = "RxFIFOUnOv."]
     #[must_use]
     #[inline(always)]
     pub const fn rx_fifoun_ov(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "RxFIFOUnOv"]
+    #[doc = "RxFIFOUnOv."]
     #[inline(always)]
     pub const fn set_rx_fifoun_ov(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "UQErr"]
+    #[doc = "UQErr."]
     #[must_use]
     #[inline(always)]
     pub const fn uqerr(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "UQErr"]
+    #[doc = "UQErr."]
     #[inline(always)]
     pub const fn set_uqerr(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "UQSync"]
+    #[doc = "UQSync."]
     #[must_use]
     #[inline(always)]
     pub const fn uqsync(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "UQSync"]
+    #[doc = "UQSync."]
     #[inline(always)]
     pub const fn set_uqsync(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "QRxOv"]
+    #[doc = "QRxOv."]
     #[must_use]
     #[inline(always)]
     pub const fn qrx_ov(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "QRxOv"]
+    #[doc = "QRxOv."]
     #[inline(always)]
     pub const fn set_qrx_ov(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "URxOv"]
+    #[doc = "URxOv."]
     #[must_use]
     #[inline(always)]
     pub const fn urx_ov(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "URxOv"]
+    #[doc = "URxOv."]
     #[inline(always)]
     pub const fn set_urx_ov(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "BitErr"]
+    #[doc = "BitErr."]
     #[must_use]
     #[inline(always)]
     pub const fn bit_err(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "BitErr"]
+    #[doc = "BitErr."]
     #[inline(always)]
     pub const fn set_bit_err(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "SymErr"]
+    #[doc = "SymErr."]
     #[must_use]
     #[inline(always)]
     pub const fn sym_err(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "SymErr"]
+    #[doc = "SymErr."]
     #[inline(always)]
     pub const fn set_sym_err(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "ValNoGood"]
+    #[doc = "ValNoGood."]
     #[must_use]
     #[inline(always)]
     pub const fn val_no_good(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "ValNoGood"]
+    #[doc = "ValNoGood."]
     #[inline(always)]
     pub const fn set_val_no_good(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "CNew"]
+    #[doc = "CNew."]
     #[must_use]
     #[inline(always)]
     pub const fn cnew(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "CNew"]
+    #[doc = "CNew."]
     #[inline(always)]
     pub const fn set_cnew(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "TxResyn"]
+    #[doc = "TxResyn."]
     #[must_use]
     #[inline(always)]
     pub const fn tx_resyn(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "TxResyn"]
+    #[doc = "TxResyn."]
     #[inline(always)]
     pub const fn set_tx_resyn(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "TxUnOv"]
+    #[doc = "TxUnOv."]
     #[must_use]
     #[inline(always)]
     pub const fn tx_un_ov(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "TxUnOv"]
+    #[doc = "TxUnOv."]
     #[inline(always)]
     pub const fn set_tx_un_ov(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     #[must_use]
     #[inline(always)]
     pub const fn lock(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     #[inline(always)]
     pub const fn set_lock(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
@@ -472,223 +472,223 @@ impl defmt::Format for Sic {
         )
     }
 }
-#[doc = "InterruptEn Register"]
+#[doc = "InterruptEn Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sie(pub u32);
 impl Sie {
-    #[doc = "RxFIFOFul"]
+    #[doc = "RxFIFOFul."]
     #[must_use]
     #[inline(always)]
     pub const fn rx_fifoful(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "RxFIFOFul"]
+    #[doc = "RxFIFOFul."]
     #[inline(always)]
     pub const fn set_rx_fifoful(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "TxEm"]
+    #[doc = "TxEm."]
     #[must_use]
     #[inline(always)]
     pub const fn tx_em(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "TxEm"]
+    #[doc = "TxEm."]
     #[inline(always)]
     pub const fn set_tx_em(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "LockLoss"]
+    #[doc = "LockLoss."]
     #[must_use]
     #[inline(always)]
     pub const fn lock_loss(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "LockLoss"]
+    #[doc = "LockLoss."]
     #[inline(always)]
     pub const fn set_lock_loss(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "RxFIFOResyn"]
+    #[doc = "RxFIFOResyn."]
     #[must_use]
     #[inline(always)]
     pub const fn rx_fiforesyn(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "RxFIFOResyn"]
+    #[doc = "RxFIFOResyn."]
     #[inline(always)]
     pub const fn set_rx_fiforesyn(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "RxFIFOUnOv"]
+    #[doc = "RxFIFOUnOv."]
     #[must_use]
     #[inline(always)]
     pub const fn rx_fifoun_ov(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "RxFIFOUnOv"]
+    #[doc = "RxFIFOUnOv."]
     #[inline(always)]
     pub const fn set_rx_fifoun_ov(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "UQErr"]
+    #[doc = "UQErr."]
     #[must_use]
     #[inline(always)]
     pub const fn uqerr(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "UQErr"]
+    #[doc = "UQErr."]
     #[inline(always)]
     pub const fn set_uqerr(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "UQSync"]
+    #[doc = "UQSync."]
     #[must_use]
     #[inline(always)]
     pub const fn uqsync(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "UQSync"]
+    #[doc = "UQSync."]
     #[inline(always)]
     pub const fn set_uqsync(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "QRxOv"]
+    #[doc = "QRxOv."]
     #[must_use]
     #[inline(always)]
     pub const fn qrx_ov(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "QRxOv"]
+    #[doc = "QRxOv."]
     #[inline(always)]
     pub const fn set_qrx_ov(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "QRxFul"]
+    #[doc = "QRxFul."]
     #[must_use]
     #[inline(always)]
     pub const fn qrx_ful(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "QRxFul"]
+    #[doc = "QRxFul."]
     #[inline(always)]
     pub const fn set_qrx_ful(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "URxOv"]
+    #[doc = "URxOv."]
     #[must_use]
     #[inline(always)]
     pub const fn urx_ov(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "URxOv"]
+    #[doc = "URxOv."]
     #[inline(always)]
     pub const fn set_urx_ov(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "URxFul"]
+    #[doc = "URxFul."]
     #[must_use]
     #[inline(always)]
     pub const fn urx_ful(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "URxFul"]
+    #[doc = "URxFul."]
     #[inline(always)]
     pub const fn set_urx_ful(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "BitErr"]
+    #[doc = "BitErr."]
     #[must_use]
     #[inline(always)]
     pub const fn bit_err(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "BitErr"]
+    #[doc = "BitErr."]
     #[inline(always)]
     pub const fn set_bit_err(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "SymErr"]
+    #[doc = "SymErr."]
     #[must_use]
     #[inline(always)]
     pub const fn sym_err(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "SymErr"]
+    #[doc = "SymErr."]
     #[inline(always)]
     pub const fn set_sym_err(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "ValNoGood"]
+    #[doc = "ValNoGood."]
     #[must_use]
     #[inline(always)]
     pub const fn val_no_good(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "ValNoGood"]
+    #[doc = "ValNoGood."]
     #[inline(always)]
     pub const fn set_val_no_good(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "CNew"]
+    #[doc = "CNew."]
     #[must_use]
     #[inline(always)]
     pub const fn cnew(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "CNew"]
+    #[doc = "CNew."]
     #[inline(always)]
     pub const fn set_cnew(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "TxResyn"]
+    #[doc = "TxResyn."]
     #[must_use]
     #[inline(always)]
     pub const fn tx_resyn(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "TxResyn"]
+    #[doc = "TxResyn."]
     #[inline(always)]
     pub const fn set_tx_resyn(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "TxUnOv"]
+    #[doc = "TxUnOv."]
     #[must_use]
     #[inline(always)]
     pub const fn tx_un_ov(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "TxUnOv"]
+    #[doc = "TxUnOv."]
     #[inline(always)]
     pub const fn set_tx_un_ov(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     #[must_use]
     #[inline(always)]
     pub const fn lock(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     #[inline(always)]
     pub const fn set_lock(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
@@ -751,223 +751,223 @@ impl defmt::Format for Sie {
         )
     }
 }
-#[doc = "InterruptStat Register"]
+#[doc = "InterruptStat Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sis(pub u32);
 impl Sis {
-    #[doc = "RxFIFOFul"]
+    #[doc = "RxFIFOFul."]
     #[must_use]
     #[inline(always)]
     pub const fn rx_fifoful(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "RxFIFOFul"]
+    #[doc = "RxFIFOFul."]
     #[inline(always)]
     pub const fn set_rx_fifoful(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "TxEm"]
+    #[doc = "TxEm."]
     #[must_use]
     #[inline(always)]
     pub const fn tx_em(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "TxEm"]
+    #[doc = "TxEm."]
     #[inline(always)]
     pub const fn set_tx_em(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "LockLoss"]
+    #[doc = "LockLoss."]
     #[must_use]
     #[inline(always)]
     pub const fn lock_loss(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "LockLoss"]
+    #[doc = "LockLoss."]
     #[inline(always)]
     pub const fn set_lock_loss(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "RxFIFOResyn"]
+    #[doc = "RxFIFOResyn."]
     #[must_use]
     #[inline(always)]
     pub const fn rx_fiforesyn(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "RxFIFOResyn"]
+    #[doc = "RxFIFOResyn."]
     #[inline(always)]
     pub const fn set_rx_fiforesyn(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "RxFIFOUnOv"]
+    #[doc = "RxFIFOUnOv."]
     #[must_use]
     #[inline(always)]
     pub const fn rx_fifoun_ov(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "RxFIFOUnOv"]
+    #[doc = "RxFIFOUnOv."]
     #[inline(always)]
     pub const fn set_rx_fifoun_ov(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "UQErr"]
+    #[doc = "UQErr."]
     #[must_use]
     #[inline(always)]
     pub const fn uqerr(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "UQErr"]
+    #[doc = "UQErr."]
     #[inline(always)]
     pub const fn set_uqerr(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "UQSync"]
+    #[doc = "UQSync."]
     #[must_use]
     #[inline(always)]
     pub const fn uqsync(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "UQSync"]
+    #[doc = "UQSync."]
     #[inline(always)]
     pub const fn set_uqsync(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "QRxOv"]
+    #[doc = "QRxOv."]
     #[must_use]
     #[inline(always)]
     pub const fn qrx_ov(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "QRxOv"]
+    #[doc = "QRxOv."]
     #[inline(always)]
     pub const fn set_qrx_ov(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "QRxFul"]
+    #[doc = "QRxFul."]
     #[must_use]
     #[inline(always)]
     pub const fn qrx_ful(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "QRxFul"]
+    #[doc = "QRxFul."]
     #[inline(always)]
     pub const fn set_qrx_ful(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "URxOv"]
+    #[doc = "URxOv."]
     #[must_use]
     #[inline(always)]
     pub const fn urx_ov(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "URxOv"]
+    #[doc = "URxOv."]
     #[inline(always)]
     pub const fn set_urx_ov(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "URxFul"]
+    #[doc = "URxFul."]
     #[must_use]
     #[inline(always)]
     pub const fn urx_ful(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "URxFul"]
+    #[doc = "URxFul."]
     #[inline(always)]
     pub const fn set_urx_ful(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "BitErr"]
+    #[doc = "BitErr."]
     #[must_use]
     #[inline(always)]
     pub const fn bit_err(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "BitErr"]
+    #[doc = "BitErr."]
     #[inline(always)]
     pub const fn set_bit_err(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "SymErr"]
+    #[doc = "SymErr."]
     #[must_use]
     #[inline(always)]
     pub const fn sym_err(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "SymErr"]
+    #[doc = "SymErr."]
     #[inline(always)]
     pub const fn set_sym_err(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "ValNoGood"]
+    #[doc = "ValNoGood."]
     #[must_use]
     #[inline(always)]
     pub const fn val_no_good(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "ValNoGood"]
+    #[doc = "ValNoGood."]
     #[inline(always)]
     pub const fn set_val_no_good(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "CNew"]
+    #[doc = "CNew."]
     #[must_use]
     #[inline(always)]
     pub const fn cnew(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "CNew"]
+    #[doc = "CNew."]
     #[inline(always)]
     pub const fn set_cnew(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "TxResyn"]
+    #[doc = "TxResyn."]
     #[must_use]
     #[inline(always)]
     pub const fn tx_resyn(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "TxResyn"]
+    #[doc = "TxResyn."]
     #[inline(always)]
     pub const fn set_tx_resyn(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "TxUnOv"]
+    #[doc = "TxUnOv."]
     #[must_use]
     #[inline(always)]
     pub const fn tx_un_ov(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "TxUnOv"]
+    #[doc = "TxUnOv."]
     #[inline(always)]
     pub const fn set_tx_un_ov(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     #[must_use]
     #[inline(always)]
     pub const fn lock(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     #[inline(always)]
     pub const fn set_lock(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
@@ -1030,19 +1030,19 @@ impl defmt::Format for Sis {
         )
     }
 }
-#[doc = "CDText Control Register"]
+#[doc = "CDText Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Srcd(pub u32);
 impl Srcd {
-    #[doc = "USyncMode"]
+    #[doc = "USyncMode."]
     #[must_use]
     #[inline(always)]
     pub const fn usync_mode(&self) -> super::vals::UsyncMode {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::UsyncMode::from_bits(val as u8)
     }
-    #[doc = "USyncMode"]
+    #[doc = "USyncMode."]
     #[inline(always)]
     pub const fn set_usync_mode(&mut self, val: super::vals::UsyncMode) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
@@ -1067,19 +1067,19 @@ impl defmt::Format for Srcd {
         defmt::write!(f, "Srcd {{ usync_mode: {:?} }}", self.usync_mode())
     }
 }
-#[doc = "SPDIFRxCChannel_h Register"]
+#[doc = "SPDIFRxCChannel_h Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Srcsh(pub u32);
 impl Srcsh {
-    #[doc = "RxCChannel_h"]
+    #[doc = "RxCChannel_h."]
     #[must_use]
     #[inline(always)]
     pub const fn rx_cchannel_h(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x00ff_ffff;
         val as u32
     }
-    #[doc = "RxCChannel_h"]
+    #[doc = "RxCChannel_h."]
     #[inline(always)]
     pub const fn set_rx_cchannel_h(&mut self, val: u32) {
         self.0 = (self.0 & !(0x00ff_ffff << 0usize)) | (((val as u32) & 0x00ff_ffff) << 0usize);
@@ -1108,19 +1108,19 @@ impl defmt::Format for Srcsh {
         )
     }
 }
-#[doc = "SPDIFRxCChannel_l Register"]
+#[doc = "SPDIFRxCChannel_l Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Srcsl(pub u32);
 impl Srcsl {
-    #[doc = "RxCChannel_l"]
+    #[doc = "RxCChannel_l."]
     #[must_use]
     #[inline(always)]
     pub const fn rx_cchannel_l(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x00ff_ffff;
         val as u32
     }
-    #[doc = "RxCChannel_l"]
+    #[doc = "RxCChannel_l."]
     #[inline(always)]
     pub const fn set_rx_cchannel_l(&mut self, val: u32) {
         self.0 = (self.0 & !(0x00ff_ffff << 0usize)) | (((val as u32) & 0x00ff_ffff) << 0usize);
@@ -1149,19 +1149,19 @@ impl defmt::Format for Srcsl {
         )
     }
 }
-#[doc = "FreqMeas Register"]
+#[doc = "FreqMeas Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Srfm(pub u32);
 impl Srfm {
-    #[doc = "FreqMeas"]
+    #[doc = "FreqMeas."]
     #[must_use]
     #[inline(always)]
     pub const fn freq_meas(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x00ff_ffff;
         val as u32
     }
-    #[doc = "FreqMeas"]
+    #[doc = "FreqMeas."]
     #[inline(always)]
     pub const fn set_freq_meas(&mut self, val: u32) {
         self.0 = (self.0 & !(0x00ff_ffff << 0usize)) | (((val as u32) & 0x00ff_ffff) << 0usize);
@@ -1186,19 +1186,19 @@ impl defmt::Format for Srfm {
         defmt::write!(f, "Srfm {{ freq_meas: {=u32:?} }}", self.freq_meas())
     }
 }
-#[doc = "SPDIFRxLeft Register"]
+#[doc = "SPDIFRxLeft Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Srl(pub u32);
 impl Srl {
-    #[doc = "RxDataLeft"]
+    #[doc = "RxDataLeft."]
     #[must_use]
     #[inline(always)]
     pub const fn rx_data_left(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x00ff_ffff;
         val as u32
     }
-    #[doc = "RxDataLeft"]
+    #[doc = "RxDataLeft."]
     #[inline(always)]
     pub const fn set_rx_data_left(&mut self, val: u32) {
         self.0 = (self.0 & !(0x00ff_ffff << 0usize)) | (((val as u32) & 0x00ff_ffff) << 0usize);
@@ -1223,43 +1223,43 @@ impl defmt::Format for Srl {
         defmt::write!(f, "Srl {{ rx_data_left: {=u32:?} }}", self.rx_data_left())
     }
 }
-#[doc = "PhaseConfig Register"]
+#[doc = "PhaseConfig Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Srpc(pub u32);
 impl Srpc {
-    #[doc = "GainSel"]
+    #[doc = "GainSel."]
     #[must_use]
     #[inline(always)]
     pub const fn gain_sel(&self) -> super::vals::GainSel {
         let val = (self.0 >> 3usize) & 0x07;
         super::vals::GainSel::from_bits(val as u8)
     }
-    #[doc = "GainSel"]
+    #[doc = "GainSel."]
     #[inline(always)]
     pub const fn set_gain_sel(&mut self, val: super::vals::GainSel) {
         self.0 = (self.0 & !(0x07 << 3usize)) | (((val.to_bits() as u32) & 0x07) << 3usize);
     }
-    #[doc = "LOCK"]
+    #[doc = "LOCK."]
     #[must_use]
     #[inline(always)]
     pub const fn lock(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "LOCK"]
+    #[doc = "LOCK."]
     #[inline(always)]
     pub const fn set_lock(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "ClkSrc_Sel"]
+    #[doc = "ClkSrc_Sel."]
     #[must_use]
     #[inline(always)]
     pub const fn clk_src_sel(&self) -> super::vals::ClkSrcSel {
         let val = (self.0 >> 7usize) & 0x0f;
         super::vals::ClkSrcSel::from_bits(val as u8)
     }
-    #[doc = "ClkSrc_Sel"]
+    #[doc = "ClkSrc_Sel."]
     #[inline(always)]
     pub const fn set_clk_src_sel(&mut self, val: super::vals::ClkSrcSel) {
         self.0 = (self.0 & !(0x0f << 7usize)) | (((val.to_bits() as u32) & 0x0f) << 7usize);
@@ -1292,19 +1292,19 @@ impl defmt::Format for Srpc {
         )
     }
 }
-#[doc = "QchannelRx Register"]
+#[doc = "QchannelRx Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Srq(pub u32);
 impl Srq {
-    #[doc = "RxQChannel"]
+    #[doc = "RxQChannel."]
     #[must_use]
     #[inline(always)]
     pub const fn rx_qchannel(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x00ff_ffff;
         val as u32
     }
-    #[doc = "RxQChannel"]
+    #[doc = "RxQChannel."]
     #[inline(always)]
     pub const fn set_rx_qchannel(&mut self, val: u32) {
         self.0 = (self.0 & !(0x00ff_ffff << 0usize)) | (((val as u32) & 0x00ff_ffff) << 0usize);
@@ -1329,19 +1329,19 @@ impl defmt::Format for Srq {
         defmt::write!(f, "Srq {{ rx_qchannel: {=u32:?} }}", self.rx_qchannel())
     }
 }
-#[doc = "SPDIFRxRight Register"]
+#[doc = "SPDIFRxRight Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Srr(pub u32);
 impl Srr {
-    #[doc = "RxDataRight"]
+    #[doc = "RxDataRight."]
     #[must_use]
     #[inline(always)]
     pub const fn rx_data_right(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x00ff_ffff;
         val as u32
     }
-    #[doc = "RxDataRight"]
+    #[doc = "RxDataRight."]
     #[inline(always)]
     pub const fn set_rx_data_right(&mut self, val: u32) {
         self.0 = (self.0 & !(0x00ff_ffff << 0usize)) | (((val as u32) & 0x00ff_ffff) << 0usize);
@@ -1366,19 +1366,19 @@ impl defmt::Format for Srr {
         defmt::write!(f, "Srr {{ rx_data_right: {=u32:?} }}", self.rx_data_right())
     }
 }
-#[doc = "UchannelRx Register"]
+#[doc = "UchannelRx Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sru(pub u32);
 impl Sru {
-    #[doc = "RxUChannel"]
+    #[doc = "RxUChannel."]
     #[must_use]
     #[inline(always)]
     pub const fn rx_uchannel(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x00ff_ffff;
         val as u32
     }
-    #[doc = "RxUChannel"]
+    #[doc = "RxUChannel."]
     #[inline(always)]
     pub const fn set_rx_uchannel(&mut self, val: u32) {
         self.0 = (self.0 & !(0x00ff_ffff << 0usize)) | (((val as u32) & 0x00ff_ffff) << 0usize);
@@ -1403,55 +1403,55 @@ impl defmt::Format for Sru {
         defmt::write!(f, "Sru {{ rx_uchannel: {=u32:?} }}", self.rx_uchannel())
     }
 }
-#[doc = "SPDIFTxClk Register"]
+#[doc = "SPDIFTxClk Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Stc(pub u32);
 impl Stc {
-    #[doc = "TxClk_DF"]
+    #[doc = "TxClk_DF."]
     #[must_use]
     #[inline(always)]
     pub const fn tx_clk_df(&self) -> super::vals::TxClkDf {
         let val = (self.0 >> 0usize) & 0x7f;
         super::vals::TxClkDf::from_bits(val as u8)
     }
-    #[doc = "TxClk_DF"]
+    #[doc = "TxClk_DF."]
     #[inline(always)]
     pub const fn set_tx_clk_df(&mut self, val: super::vals::TxClkDf) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val.to_bits() as u32) & 0x7f) << 0usize);
     }
-    #[doc = "tx_all_clk_en"]
+    #[doc = "tx_all_clk_en."]
     #[must_use]
     #[inline(always)]
     pub const fn tx_all_clk_en(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "tx_all_clk_en"]
+    #[doc = "tx_all_clk_en."]
     #[inline(always)]
     pub const fn set_tx_all_clk_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "TxClk_Source"]
+    #[doc = "TxClk_Source."]
     #[must_use]
     #[inline(always)]
     pub const fn tx_clk_source(&self) -> super::vals::TxClkSource {
         let val = (self.0 >> 8usize) & 0x07;
         super::vals::TxClkSource::from_bits(val as u8)
     }
-    #[doc = "TxClk_Source"]
+    #[doc = "TxClk_Source."]
     #[inline(always)]
     pub const fn set_tx_clk_source(&mut self, val: super::vals::TxClkSource) {
         self.0 = (self.0 & !(0x07 << 8usize)) | (((val.to_bits() as u32) & 0x07) << 8usize);
     }
-    #[doc = "SYSCLK_DF"]
+    #[doc = "SYSCLK_DF."]
     #[must_use]
     #[inline(always)]
     pub const fn sysclk_df(&self) -> super::vals::SysclkDf {
         let val = (self.0 >> 11usize) & 0x01ff;
         super::vals::SysclkDf::from_bits(val as u16)
     }
-    #[doc = "SYSCLK_DF"]
+    #[doc = "SYSCLK_DF."]
     #[inline(always)]
     pub const fn set_sysclk_df(&mut self, val: super::vals::SysclkDf) {
         self.0 = (self.0 & !(0x01ff << 11usize)) | (((val.to_bits() as u32) & 0x01ff) << 11usize);
@@ -1486,19 +1486,19 @@ impl defmt::Format for Stc {
         )
     }
 }
-#[doc = "SPDIFTxCChannelCons_h Register"]
+#[doc = "SPDIFTxCChannelCons_h Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Stcsch(pub u32);
 impl Stcsch {
-    #[doc = "TxCChannelCons_h"]
+    #[doc = "TxCChannelCons_h."]
     #[must_use]
     #[inline(always)]
     pub const fn tx_cchannel_cons_h(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x00ff_ffff;
         val as u32
     }
-    #[doc = "TxCChannelCons_h"]
+    #[doc = "TxCChannelCons_h."]
     #[inline(always)]
     pub const fn set_tx_cchannel_cons_h(&mut self, val: u32) {
         self.0 = (self.0 & !(0x00ff_ffff << 0usize)) | (((val as u32) & 0x00ff_ffff) << 0usize);
@@ -1527,19 +1527,19 @@ impl defmt::Format for Stcsch {
         )
     }
 }
-#[doc = "SPDIFTxCChannelCons_l Register"]
+#[doc = "SPDIFTxCChannelCons_l Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Stcscl(pub u32);
 impl Stcscl {
-    #[doc = "TxCChannelCons_l"]
+    #[doc = "TxCChannelCons_l."]
     #[must_use]
     #[inline(always)]
     pub const fn tx_cchannel_cons_l(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x00ff_ffff;
         val as u32
     }
-    #[doc = "TxCChannelCons_l"]
+    #[doc = "TxCChannelCons_l."]
     #[inline(always)]
     pub const fn set_tx_cchannel_cons_l(&mut self, val: u32) {
         self.0 = (self.0 & !(0x00ff_ffff << 0usize)) | (((val as u32) & 0x00ff_ffff) << 0usize);
@@ -1568,19 +1568,19 @@ impl defmt::Format for Stcscl {
         )
     }
 }
-#[doc = "SPDIFTxLeft Register"]
+#[doc = "SPDIFTxLeft Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Stl(pub u32);
 impl Stl {
-    #[doc = "TxDataLeft"]
+    #[doc = "TxDataLeft."]
     #[must_use]
     #[inline(always)]
     pub const fn tx_data_left(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x00ff_ffff;
         val as u32
     }
-    #[doc = "TxDataLeft"]
+    #[doc = "TxDataLeft."]
     #[inline(always)]
     pub const fn set_tx_data_left(&mut self, val: u32) {
         self.0 = (self.0 & !(0x00ff_ffff << 0usize)) | (((val as u32) & 0x00ff_ffff) << 0usize);
@@ -1605,19 +1605,19 @@ impl defmt::Format for Stl {
         defmt::write!(f, "Stl {{ tx_data_left: {=u32:?} }}", self.tx_data_left())
     }
 }
-#[doc = "SPDIFTxRight Register"]
+#[doc = "SPDIFTxRight Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Str(pub u32);
 impl Str {
-    #[doc = "TxDataRight"]
+    #[doc = "TxDataRight."]
     #[must_use]
     #[inline(always)]
     pub const fn tx_data_right(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x00ff_ffff;
         val as u32
     }
-    #[doc = "TxDataRight"]
+    #[doc = "TxDataRight."]
     #[inline(always)]
     pub const fn set_tx_data_right(&mut self, val: u32) {
         self.0 = (self.0 & !(0x00ff_ffff << 0usize)) | (((val as u32) & 0x00ff_ffff) << 0usize);

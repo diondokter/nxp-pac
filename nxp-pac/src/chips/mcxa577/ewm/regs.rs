@@ -1,16 +1,16 @@
-#[doc = "Clock Prescaler"]
+#[doc = "Clock Prescaler."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Clkprescaler(pub u8);
 impl Clkprescaler {
-    #[doc = "Clock Divider"]
+    #[doc = "Clock Divider."]
     #[must_use]
     #[inline(always)]
     pub const fn clk_div(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Clock Divider"]
+    #[doc = "Clock Divider."]
     #[inline(always)]
     pub const fn set_clk_div(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u8) & 0xff) << 0usize);
@@ -35,19 +35,19 @@ impl defmt::Format for Clkprescaler {
         defmt::write!(f, "Clkprescaler {{ clk_div: {=u8:?} }}", self.clk_div())
     }
 }
-#[doc = "Compare High"]
+#[doc = "Compare High."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cmph(pub u8);
 impl Cmph {
-    #[doc = "Compare High"]
+    #[doc = "Compare High."]
     #[must_use]
     #[inline(always)]
     pub const fn compareh(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Compare High"]
+    #[doc = "Compare High."]
     #[inline(always)]
     pub const fn set_compareh(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u8) & 0xff) << 0usize);
@@ -72,19 +72,19 @@ impl defmt::Format for Cmph {
         defmt::write!(f, "Cmph {{ compareh: {=u8:?} }}", self.compareh())
     }
 }
-#[doc = "Compare Low"]
+#[doc = "Compare Low."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cmpl(pub u8);
 impl Cmpl {
-    #[doc = "Compare Low"]
+    #[doc = "Compare Low."]
     #[must_use]
     #[inline(always)]
     pub const fn comparel(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Compare Low"]
+    #[doc = "Compare Low."]
     #[inline(always)]
     pub const fn set_comparel(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u8) & 0xff) << 0usize);
@@ -109,55 +109,55 @@ impl defmt::Format for Cmpl {
         defmt::write!(f, "Cmpl {{ comparel: {=u8:?} }}", self.comparel())
     }
 }
-#[doc = "Control"]
+#[doc = "Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl(pub u8);
 impl Ctrl {
-    #[doc = "EWM Enable"]
+    #[doc = "EWM Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ewmen(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "EWM Enable"]
+    #[doc = "EWM Enable."]
     #[inline(always)]
     pub const fn set_ewmen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u8) & 0x01) << 0usize);
     }
-    #[doc = "Assertion State Select"]
+    #[doc = "Assertion State Select."]
     #[must_use]
     #[inline(always)]
     pub const fn assin(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Assertion State Select"]
+    #[doc = "Assertion State Select."]
     #[inline(always)]
     pub const fn set_assin(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u8) & 0x01) << 1usize);
     }
-    #[doc = "Input Enable"]
+    #[doc = "Input Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn inen(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Input Enable"]
+    #[doc = "Input Enable."]
     #[inline(always)]
     pub const fn set_inen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u8) & 0x01) << 2usize);
     }
-    #[doc = "Interrupt Enable"]
+    #[doc = "Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn inten(&self) -> super::vals::Inten {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Inten::from_bits(val as u8)
     }
-    #[doc = "Interrupt Enable"]
+    #[doc = "Interrupt Enable."]
     #[inline(always)]
     pub const fn set_inten(&mut self, val: super::vals::Inten) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u8) & 0x01) << 3usize);
@@ -192,19 +192,19 @@ impl defmt::Format for Ctrl {
         )
     }
 }
-#[doc = "Service"]
+#[doc = "Service."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Serv(pub u8);
 impl Serv {
-    #[doc = "Service"]
+    #[doc = "Service."]
     #[must_use]
     #[inline(always)]
     pub const fn service(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Service"]
+    #[doc = "Service."]
     #[inline(always)]
     pub const fn set_service(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u8) & 0xff) << 0usize);

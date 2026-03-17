@@ -1,4 +1,4 @@
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Enet0_eqosMtl {
     ptr: *mut u8,
@@ -14,14 +14,14 @@ impl Enet0_eqosMtl {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "Operation Mode"]
+    #[doc = "Operation Mode."]
     #[inline(always)]
     pub const fn mtl_operation_mode(
         self,
     ) -> crate::common::Reg<regs::MtlOperationMode, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
     }
-    #[doc = "Interrupt Status"]
+    #[doc = "Interrupt Status."]
     #[inline(always)]
     pub const fn mtl_interrupt_status(
         self,

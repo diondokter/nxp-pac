@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dse {
-    #[doc = "Low"]
+    #[doc = "Low."]
     DSE0 = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     DSE1 = 0x01,
 }
 impl Dse {
@@ -33,7 +33,7 @@ impl From<Dse> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Feature(u16);
 impl Feature {
-    #[doc = "Basic implementation"]
+    #[doc = "Basic implementation."]
     pub const FEATURE0: Self = Self(0x0);
 }
 impl Feature {
@@ -77,9 +77,9 @@ impl From<Feature> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpwe {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GPWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GPWE1 = 0x01,
 }
 impl Gpwe {
@@ -108,9 +108,9 @@ impl From<Gpwe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ibe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     IBE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     IBE1 = 0x01,
 }
 impl Ibe {
@@ -139,9 +139,9 @@ impl From<Ibe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Inv {
-    #[doc = "Does not invert"]
+    #[doc = "Does not invert."]
     INV0 = 0x0,
-    #[doc = "Inverts"]
+    #[doc = "Inverts."]
     INV1 = 0x01,
 }
 impl Inv {
@@ -170,9 +170,9 @@ impl From<Inv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lk {
-    #[doc = "Does not lock"]
+    #[doc = "Does not lock."]
     LK0 = 0x0,
-    #[doc = "Locks"]
+    #[doc = "Locks."]
     LK1 = 0x01,
 }
 impl Lk {
@@ -244,9 +244,9 @@ impl From<Mux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ode {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     ODE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ODE1 = 0x01,
 }
 impl Ode {
@@ -275,9 +275,9 @@ impl From<Ode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pe {
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     PE0 = 0x0,
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     PE1 = 0x01,
 }
 impl Pe {
@@ -306,9 +306,9 @@ impl From<Pe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ps {
-    #[doc = "Enables internal pulldown resistor"]
+    #[doc = "Enables internal pulldown resistor."]
     PS0 = 0x0,
-    #[doc = "Enables internal pullup resistor"]
+    #[doc = "Enables internal pullup resistor."]
     PS1 = 0x01,
 }
 impl Ps {
@@ -337,9 +337,9 @@ impl From<Ps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pv {
-    #[doc = "Low"]
+    #[doc = "Low."]
     PV0 = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     PV1 = 0x01,
 }
 impl Pv {
@@ -368,9 +368,9 @@ impl From<Pv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Range {
-    #[doc = "1.71 V-3.6 V"]
+    #[doc = "1.71 V-3.6 V."]
     RANGE0 = 0x0,
-    #[doc = "2.70 V-3.6 V"]
+    #[doc = "2.70 V-3.6 V."]
     RANGE1 = 0x01,
 }
 impl Range {
@@ -399,9 +399,9 @@ impl From<Range> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sre {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     SRE0 = 0x0,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     SRE1 = 0x01,
 }
 impl Sre {

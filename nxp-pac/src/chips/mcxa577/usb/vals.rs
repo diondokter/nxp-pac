@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Aai {
-    #[doc = "Interrupt did not occur"]
+    #[doc = "Interrupt did not occur."]
     INT_NO = 0x0,
-    #[doc = "Interrupt occurred"]
+    #[doc = "Interrupt occurred."]
     INT_YES = 0x01,
 }
 impl Aai {
@@ -33,20 +33,20 @@ impl From<Aai> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ahbbrst {
-    #[doc = "Incremental burst of unspecified length only"]
+    #[doc = "Incremental burst of unspecified length only."]
     INCR_BURST = 0x0,
-    #[doc = "INCR4 burst, then single transfer"]
+    #[doc = "INCR4 burst, then single transfer."]
     INCR4_BURST = 0x01,
-    #[doc = "INCR8 burst, INCR4 burst, then single transfer"]
+    #[doc = "INCR8 burst, INCR4 burst, then single transfer."]
     INCR8_BURST = 0x02,
-    #[doc = "INCR16 burst, INCR8 burst, INCR4 burst, then single transfer"]
+    #[doc = "INCR16 burst, INCR8 burst, INCR4 burst, then single transfer."]
     INCR16_BURST = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "INCR4 burst, then incremental burst of unspecified length"]
+    #[doc = "INCR4 burst, then incremental burst of unspecified length."]
     INCR4_UNSPEC = 0x05,
-    #[doc = "INCR8 burst, INCR4 burst, then incremental burst of unspecified length"]
+    #[doc = "INCR8 burst, INCR4 burst, then incremental burst of unspecified length."]
     INCR8_4_UNSPEC = 0x06,
-    #[doc = "INCR16 burst, INCR8 burst, INCR4 burst, then incremental burst of unspecified length"]
+    #[doc = "INCR16 burst, INCR8 burst, INCR4 burst, then incremental burst of unspecified length."]
     INCR16_8_4_UNSPEC = 0x07,
 }
 impl Ahbbrst {
@@ -75,9 +75,9 @@ impl From<Ahbbrst> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ase {
-    #[doc = "Do not process the asynchronous schedule"]
+    #[doc = "Do not process the asynchronous schedule."]
     DONT_PROCESS_ASYNC = 0x0,
-    #[doc = "Access the asynchronous schedule"]
+    #[doc = "Access the asynchronous schedule."]
     ACCESS_ASYNC = 0x01,
 }
 impl Ase {
@@ -106,9 +106,9 @@ impl From<Ase> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ccs {
-    #[doc = "No device present or attached"]
+    #[doc = "No device present or attached."]
     DEVICE_UNAVAILABLE = 0x0,
-    #[doc = "Device present and attached"]
+    #[doc = "Device present and attached."]
     DEVICE_AVAILABLE = 0x01,
 }
 impl Ccs {
@@ -137,9 +137,9 @@ impl From<Ccs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cf {
-    #[doc = "Port routing to classic host controller"]
+    #[doc = "Port routing to classic host controller."]
     PORT_ROUTING_CLASSIC_HOST = 0x0,
-    #[doc = "Port routing to this host controller"]
+    #[doc = "Port routing to this host controller."]
     PORT_ROUTING_HOST = 0x01,
 }
 impl Cf {
@@ -168,12 +168,12 @@ impl From<Cf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cm {
-    #[doc = "Idle (default for host and device combination)"]
+    #[doc = "Idle (default for host and device combination)."]
     IDL = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "Device controller (default for device-only controller)"]
+    #[doc = "Device controller (default for device-only controller)."]
     DEVICE_CONTR = 0x02,
-    #[doc = "Host controller (default for host-only controller)"]
+    #[doc = "Host controller (default for host-only controller)."]
     HOST_CONTR = 0x03,
 }
 impl Cm {
@@ -202,9 +202,9 @@ impl From<Cm> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Den {
-    #[doc = "Not device capable"]
+    #[doc = "Not device capable."]
     NOT_DEN = 0x0,
-    #[doc = "Device capable"]
+    #[doc = "Device capable."]
     DEN = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -263,9 +263,9 @@ impl From<Den> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Endptctrl1Rxi {
-    #[doc = "Allow"]
+    #[doc = "Allow."]
     ENABLE = 0x0,
-    #[doc = "Inhibit"]
+    #[doc = "Inhibit."]
     INHIBIT = 0x01,
 }
 impl Endptctrl1Rxi {
@@ -294,13 +294,13 @@ impl From<Endptctrl1Rxi> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Endptctrl1Rxt {
-    #[doc = "Control"]
+    #[doc = "Control."]
     CTL = 0x0,
-    #[doc = "Isochronous"]
+    #[doc = "Isochronous."]
     ISO = 0x01,
-    #[doc = "Bulk"]
+    #[doc = "Bulk."]
     BLK = 0x02,
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     IRQ = 0x03,
 }
 impl Endptctrl1Rxt {
@@ -329,9 +329,9 @@ impl From<Endptctrl1Rxt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Endptctrl1Txi {
-    #[doc = "Allow"]
+    #[doc = "Allow."]
     ENABLE = 0x0,
-    #[doc = "Inhibit"]
+    #[doc = "Inhibit."]
     INHIBIT = 0x01,
 }
 impl Endptctrl1Txi {
@@ -360,13 +360,13 @@ impl From<Endptctrl1Txi> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Endptctrl1Txt {
-    #[doc = "Control"]
+    #[doc = "Control."]
     CTL = 0x0,
-    #[doc = "Isochronous"]
+    #[doc = "Isochronous."]
     ISO = 0x01,
-    #[doc = "Bulk"]
+    #[doc = "Bulk."]
     BLK = 0x02,
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     IRQ = 0x03,
 }
 impl Endptctrl1Txt {
@@ -395,9 +395,9 @@ impl From<Endptctrl1Txt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Endptctrl2Rxi {
-    #[doc = "Allow"]
+    #[doc = "Allow."]
     ENABLE = 0x0,
-    #[doc = "Inhibit"]
+    #[doc = "Inhibit."]
     INHIBIT = 0x01,
 }
 impl Endptctrl2Rxi {
@@ -426,13 +426,13 @@ impl From<Endptctrl2Rxi> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Endptctrl2Rxt {
-    #[doc = "Control"]
+    #[doc = "Control."]
     CTL = 0x0,
-    #[doc = "Isochronous"]
+    #[doc = "Isochronous."]
     ISO = 0x01,
-    #[doc = "Bulk"]
+    #[doc = "Bulk."]
     BLK = 0x02,
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     IRQ = 0x03,
 }
 impl Endptctrl2Rxt {
@@ -461,9 +461,9 @@ impl From<Endptctrl2Rxt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Endptctrl2Txi {
-    #[doc = "Allow"]
+    #[doc = "Allow."]
     ENABLE = 0x0,
-    #[doc = "Inhibit"]
+    #[doc = "Inhibit."]
     INHIBIT = 0x01,
 }
 impl Endptctrl2Txi {
@@ -492,13 +492,13 @@ impl From<Endptctrl2Txi> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Endptctrl2Txt {
-    #[doc = "Control"]
+    #[doc = "Control."]
     CTL = 0x0,
-    #[doc = "Isochronous"]
+    #[doc = "Isochronous."]
     ISO = 0x01,
-    #[doc = "Bulk"]
+    #[doc = "Bulk."]
     BLK = 0x02,
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     IRQ = 0x03,
 }
 impl Endptctrl2Txt {
@@ -527,9 +527,9 @@ impl From<Endptctrl2Txt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Endptctrl3Rxi {
-    #[doc = "Allow"]
+    #[doc = "Allow."]
     ENABLE = 0x0,
-    #[doc = "Inhibit"]
+    #[doc = "Inhibit."]
     INHIBIT = 0x01,
 }
 impl Endptctrl3Rxi {
@@ -558,13 +558,13 @@ impl From<Endptctrl3Rxi> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Endptctrl3Rxt {
-    #[doc = "Control"]
+    #[doc = "Control."]
     CTL = 0x0,
-    #[doc = "Isochronous"]
+    #[doc = "Isochronous."]
     ISO = 0x01,
-    #[doc = "Bulk"]
+    #[doc = "Bulk."]
     BLK = 0x02,
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     IRQ = 0x03,
 }
 impl Endptctrl3Rxt {
@@ -593,9 +593,9 @@ impl From<Endptctrl3Rxt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Endptctrl3Txi {
-    #[doc = "Allow"]
+    #[doc = "Allow."]
     ENABLE = 0x0,
-    #[doc = "Inhibit"]
+    #[doc = "Inhibit."]
     INHIBIT = 0x01,
 }
 impl Endptctrl3Txi {
@@ -624,13 +624,13 @@ impl From<Endptctrl3Txi> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Endptctrl3Txt {
-    #[doc = "Control"]
+    #[doc = "Control."]
     CTL = 0x0,
-    #[doc = "Isochronous"]
+    #[doc = "Isochronous."]
     ISO = 0x01,
-    #[doc = "Bulk"]
+    #[doc = "Bulk."]
     BLK = 0x02,
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     IRQ = 0x03,
 }
 impl Endptctrl3Txt {
@@ -659,13 +659,13 @@ impl From<Endptctrl3Txt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Endptctrl4Rxt {
-    #[doc = "Control"]
+    #[doc = "Control."]
     CTL = 0x0,
-    #[doc = "Isochronous"]
+    #[doc = "Isochronous."]
     ISO = 0x01,
-    #[doc = "Bulk"]
+    #[doc = "Bulk."]
     BLK = 0x02,
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     IRQ = 0x03,
 }
 impl Endptctrl4Rxt {
@@ -694,9 +694,9 @@ impl From<Endptctrl4Rxt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Endptctrl4Txi {
-    #[doc = "Allow"]
+    #[doc = "Allow."]
     ENABLE = 0x0,
-    #[doc = "Inhibit"]
+    #[doc = "Inhibit."]
     INHIBIT = 0x01,
 }
 impl Endptctrl4Txi {
@@ -725,13 +725,13 @@ impl From<Endptctrl4Txi> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Endptctrl4Txt {
-    #[doc = "Control"]
+    #[doc = "Control."]
     CTL = 0x0,
-    #[doc = "Isochronous"]
+    #[doc = "Isochronous."]
     ISO = 0x01,
-    #[doc = "Bulk"]
+    #[doc = "Bulk."]
     BLK = 0x02,
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     IRQ = 0x03,
 }
 impl Endptctrl4Txt {
@@ -760,9 +760,9 @@ impl From<Endptctrl4Txt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Endptctrl5Rxi {
-    #[doc = "Allow"]
+    #[doc = "Allow."]
     ENABLE = 0x0,
-    #[doc = "Inhibit"]
+    #[doc = "Inhibit."]
     INHIBIT = 0x01,
 }
 impl Endptctrl5Rxi {
@@ -791,13 +791,13 @@ impl From<Endptctrl5Rxi> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Endptctrl5Rxt {
-    #[doc = "Control"]
+    #[doc = "Control."]
     CTL = 0x0,
-    #[doc = "Isochronous"]
+    #[doc = "Isochronous."]
     ISO = 0x01,
-    #[doc = "Bulk"]
+    #[doc = "Bulk."]
     BLK = 0x02,
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     IRQ = 0x03,
 }
 impl Endptctrl5Rxt {
@@ -826,9 +826,9 @@ impl From<Endptctrl5Rxt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Endptctrl5Txi {
-    #[doc = "Allow"]
+    #[doc = "Allow."]
     ENABLE = 0x0,
-    #[doc = "Inhibit"]
+    #[doc = "Inhibit."]
     INHIBIT = 0x01,
 }
 impl Endptctrl5Txi {
@@ -857,13 +857,13 @@ impl From<Endptctrl5Txi> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Endptctrl5Txt {
-    #[doc = "Control"]
+    #[doc = "Control."]
     CTL = 0x0,
-    #[doc = "Isochronous"]
+    #[doc = "Isochronous."]
     ISO = 0x01,
-    #[doc = "Bulk"]
+    #[doc = "Bulk."]
     BLK = 0x02,
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     IRQ = 0x03,
 }
 impl Endptctrl5Txt {
@@ -892,9 +892,9 @@ impl From<Endptctrl5Txt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Endptctrl6Rxi {
-    #[doc = "Allow"]
+    #[doc = "Allow."]
     ENABLE = 0x0,
-    #[doc = "Inhibit"]
+    #[doc = "Inhibit."]
     INHIBIT = 0x01,
 }
 impl Endptctrl6Rxi {
@@ -923,13 +923,13 @@ impl From<Endptctrl6Rxi> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Endptctrl6Rxt {
-    #[doc = "Control"]
+    #[doc = "Control."]
     CTL = 0x0,
-    #[doc = "Isochronous"]
+    #[doc = "Isochronous."]
     ISO = 0x01,
-    #[doc = "Bulk"]
+    #[doc = "Bulk."]
     BLK = 0x02,
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     IRQ = 0x03,
 }
 impl Endptctrl6Rxt {
@@ -958,9 +958,9 @@ impl From<Endptctrl6Rxt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Endptctrl6Txi {
-    #[doc = "Allow"]
+    #[doc = "Allow."]
     ENABLE = 0x0,
-    #[doc = "Inhibit"]
+    #[doc = "Inhibit."]
     INHIBIT = 0x01,
 }
 impl Endptctrl6Txi {
@@ -989,13 +989,13 @@ impl From<Endptctrl6Txi> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Endptctrl6Txt {
-    #[doc = "Control"]
+    #[doc = "Control."]
     CTL = 0x0,
-    #[doc = "Isochronous"]
+    #[doc = "Isochronous."]
     ISO = 0x01,
-    #[doc = "Bulk"]
+    #[doc = "Bulk."]
     BLK = 0x02,
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     IRQ = 0x03,
 }
 impl Endptctrl6Txt {
@@ -1024,9 +1024,9 @@ impl From<Endptctrl6Txt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Endptctrl7Rxi {
-    #[doc = "Allow"]
+    #[doc = "Allow."]
     ENABLE = 0x0,
-    #[doc = "Inhibit"]
+    #[doc = "Inhibit."]
     INHIBIT = 0x01,
 }
 impl Endptctrl7Rxi {
@@ -1055,13 +1055,13 @@ impl From<Endptctrl7Rxi> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Endptctrl7Rxt {
-    #[doc = "Control"]
+    #[doc = "Control."]
     CTL = 0x0,
-    #[doc = "Isochronous"]
+    #[doc = "Isochronous."]
     ISO = 0x01,
-    #[doc = "Bulk"]
+    #[doc = "Bulk."]
     BLK = 0x02,
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     IRQ = 0x03,
 }
 impl Endptctrl7Rxt {
@@ -1090,9 +1090,9 @@ impl From<Endptctrl7Rxt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Endptctrl7Txi {
-    #[doc = "Allow"]
+    #[doc = "Allow."]
     ENABLE = 0x0,
-    #[doc = "Inhibit"]
+    #[doc = "Inhibit."]
     INHIBIT = 0x01,
 }
 impl Endptctrl7Txi {
@@ -1121,13 +1121,13 @@ impl From<Endptctrl7Txi> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Endptctrl7Txt {
-    #[doc = "Control"]
+    #[doc = "Control."]
     CTL = 0x0,
-    #[doc = "Isochronous"]
+    #[doc = "Isochronous."]
     ISO = 0x01,
-    #[doc = "Bulk"]
+    #[doc = "Bulk."]
     BLK = 0x02,
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     IRQ = 0x03,
 }
 impl Endptctrl7Txt {
@@ -1156,9 +1156,9 @@ impl From<Endptctrl7Txt> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Endptsetupstat(u16);
 impl Endptsetupstat {
-    #[doc = "Not received"]
+    #[doc = "Not received."]
     pub const NOTREC: Self = Self(0x0);
-    #[doc = "Received"]
+    #[doc = "Received."]
     pub const RECVD: Self = Self(0x01);
 }
 impl Endptsetupstat {
@@ -1204,9 +1204,9 @@ impl From<Endptsetupstat> for u16 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Eprn(u8);
 impl Eprn {
-    #[doc = "No NACK"]
+    #[doc = "No NACK."]
     pub const NONACK: Self = Self(0x0);
-    #[doc = "NACK"]
+    #[doc = "NACK."]
     pub const NACK: Self = Self(0x01);
 }
 impl Eprn {
@@ -1252,9 +1252,9 @@ impl From<Eprn> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Eptn(u8);
 impl Eptn {
-    #[doc = "No NACK"]
+    #[doc = "No NACK."]
     pub const NONACK: Self = Self(0x0);
-    #[doc = "NACK"]
+    #[doc = "NACK."]
     pub const NACK: Self = Self(0x01);
 }
 impl Eptn {
@@ -1300,9 +1300,9 @@ impl From<Eptn> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Erce(u8);
 impl Erce {
-    #[doc = "Transmit incomplete"]
+    #[doc = "Transmit incomplete."]
     pub const TRANSNOTCOMP: Self = Self(0x0);
-    #[doc = "Transmit complete"]
+    #[doc = "Transmit complete."]
     pub const TRANSCOMP: Self = Self(0x01);
 }
 impl Erce {
@@ -1348,9 +1348,9 @@ impl From<Erce> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Es {
-    #[doc = "Little endian (default)"]
+    #[doc = "Little endian (default)."]
     LITTLE_ENDIAN = 0x0,
-    #[doc = "Big endian"]
+    #[doc = "Big endian."]
     BIG_ENDIAN = 0x01,
 }
 impl Es {
@@ -1379,9 +1379,9 @@ impl From<Es> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Etce(u8);
 impl Etce {
-    #[doc = "Transmit incomplete"]
+    #[doc = "Transmit incomplete."]
     pub const TRANSNOTCOMP: Self = Self(0x0);
-    #[doc = "Transmit complete"]
+    #[doc = "Transmit complete."]
     pub const TRANSCOMP: Self = Self(0x01);
 }
 impl Etce {
@@ -1427,9 +1427,9 @@ impl From<Etce> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fri {
-    #[doc = "Frame list index did not roll over"]
+    #[doc = "Frame list index did not roll over."]
     ROLL_NO = 0x0,
-    #[doc = "Frame list index rolled over"]
+    #[doc = "Frame list index rolled over."]
     ROLL_YES = 0x01,
 }
 impl Fri {
@@ -1458,21 +1458,21 @@ impl From<Fri> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Frindex(u16);
 impl Frindex {
-    #[doc = "(1024) 12"]
+    #[doc = "(1024) 12."]
     pub const FRINDEX_1024: Self = Self(0x0);
-    #[doc = "(512) 11"]
+    #[doc = "(512) 11."]
     pub const FRINDEX_512: Self = Self(0x01);
-    #[doc = "(256) 10"]
+    #[doc = "(256) 10."]
     pub const FRINDEX_256: Self = Self(0x02);
-    #[doc = "(128) 9"]
+    #[doc = "(128) 9."]
     pub const FRINDEX_128: Self = Self(0x03);
-    #[doc = "(64) 8"]
+    #[doc = "(64) 8."]
     pub const FRINDEX_64: Self = Self(0x04);
-    #[doc = "(32) 7"]
+    #[doc = "(32) 7."]
     pub const FRINDEX_32: Self = Self(0x05);
-    #[doc = "(16) 6"]
+    #[doc = "(16) 6."]
     pub const FRINDEX_16: Self = Self(0x06);
-    #[doc = "(8) 5"]
+    #[doc = "(8) 5."]
     pub const FRINDEX_8: Self = Self(0x07);
 }
 impl Frindex {
@@ -1530,9 +1530,9 @@ impl From<Frindex> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gptimer0ctrlGptmode {
-    #[doc = "One Shot mode"]
+    #[doc = "One Shot mode."]
     ONE_SHOT = 0x0,
-    #[doc = "Repeat mode"]
+    #[doc = "Repeat mode."]
     REPEAT = 0x01,
 }
 impl Gptimer0ctrlGptmode {
@@ -1561,9 +1561,9 @@ impl From<Gptimer0ctrlGptmode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gptimer0ctrlGptrst {
-    #[doc = "No action"]
+    #[doc = "No action."]
     NO_ACTION = 0x0,
-    #[doc = "Load counter value"]
+    #[doc = "Load counter value."]
     LOAD_CNTR = 0x01,
 }
 impl Gptimer0ctrlGptrst {
@@ -1592,9 +1592,9 @@ impl From<Gptimer0ctrlGptrst> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gptimer0ctrlGptrun {
-    #[doc = "Stopped counting"]
+    #[doc = "Stopped counting."]
     STOP_CNTR = 0x0,
-    #[doc = "Running"]
+    #[doc = "Running."]
     RUN = 0x01,
 }
 impl Gptimer0ctrlGptrun {
@@ -1623,9 +1623,9 @@ impl From<Gptimer0ctrlGptrun> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gptimer1ctrlGptmode {
-    #[doc = "One Shot mode"]
+    #[doc = "One Shot mode."]
     ONE_SHOT = 0x0,
-    #[doc = "Repeat mode"]
+    #[doc = "Repeat mode."]
     REPEAT = 0x01,
 }
 impl Gptimer1ctrlGptmode {
@@ -1654,9 +1654,9 @@ impl From<Gptimer1ctrlGptmode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gptimer1ctrlGptrst {
-    #[doc = "No action"]
+    #[doc = "No action."]
     NO_ACTION = 0x0,
-    #[doc = "Load counter value"]
+    #[doc = "Load counter value."]
     LOAD_CNTR = 0x01,
 }
 impl Gptimer1ctrlGptrst {
@@ -1685,9 +1685,9 @@ impl From<Gptimer1ctrlGptrst> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gptimer1ctrlGptrun {
-    #[doc = "Stopped counting"]
+    #[doc = "Stopped counting."]
     STOP_CNTR = 0x0,
-    #[doc = "Running"]
+    #[doc = "Running."]
     RUN = 0x01,
 }
 impl Gptimer1ctrlGptrun {
@@ -1716,9 +1716,9 @@ impl From<Gptimer1ctrlGptrun> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Haar {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     HAAR_0 = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     HAAR_1 = 0x01,
 }
 impl Haar {
@@ -1747,9 +1747,9 @@ impl From<Haar> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Haba {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     HABA_0 = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     HABA_1 = 0x01,
 }
 impl Haba {
@@ -1778,9 +1778,9 @@ impl From<Haba> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Hadp {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     HADP_0 = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     HADP_1 = 0x01,
 }
 impl Hadp {
@@ -1809,9 +1809,9 @@ impl From<Hadp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HwdeviceDc {
-    #[doc = "Not supported"]
+    #[doc = "Not supported."]
     DEVICE_OP_DIS = 0x0,
-    #[doc = "Supported"]
+    #[doc = "Supported."]
     DEVICE_OP_EN = 0x01,
 }
 impl HwdeviceDc {
@@ -1840,9 +1840,9 @@ impl From<HwdeviceDc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HwhostHc {
-    #[doc = "Not supported"]
+    #[doc = "Not supported."]
     HOST_OP_DIS = 0x0,
-    #[doc = "Supported"]
+    #[doc = "Supported."]
     HOST_OP_EN = 0x01,
 }
 impl HwhostHc {
@@ -1871,9 +1871,9 @@ impl From<HwhostHc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Id {
-    #[doc = "A device"]
+    #[doc = "A device."]
     DEV_A = 0x0,
-    #[doc = "B device"]
+    #[doc = "B device."]
     DEV_B = 0x01,
 }
 impl Id {
@@ -1902,21 +1902,21 @@ impl From<Id> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Itc(u8);
 impl Itc {
-    #[doc = "Immediate (no threshold)"]
+    #[doc = "Immediate (no threshold)."]
     pub const IMMEDIATE: Self = Self(0x0);
-    #[doc = "1 microframe"]
+    #[doc = "1 microframe."]
     pub const MICROFRAME_1: Self = Self(0x01);
-    #[doc = "2 microframes"]
+    #[doc = "2 microframes."]
     pub const MICROFRAME_2: Self = Self(0x02);
-    #[doc = "4 microframes"]
+    #[doc = "4 microframes."]
     pub const MICROFRAME_4: Self = Self(0x04);
-    #[doc = "8 microframes"]
+    #[doc = "8 microframes."]
     pub const MICROFRAME_8: Self = Self(0x08);
-    #[doc = "16 microframes"]
+    #[doc = "16 microframes."]
     pub const MICROFRAME_16: Self = Self(0x10);
-    #[doc = "32 microframes"]
+    #[doc = "32 microframes."]
     pub const MICROFRAME_32: Self = Self(0x20);
-    #[doc = "64 microframes"]
+    #[doc = "64 microframes."]
     pub const MICROFRAME_64: Self = Self(0x40);
 }
 impl Itc {
@@ -1974,9 +1974,9 @@ impl From<Itc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpm {
-    #[doc = "Not supported"]
+    #[doc = "Not supported."]
     LPM_NO = 0x0,
-    #[doc = "Supported"]
+    #[doc = "Supported."]
     LPM_EN = 0x01,
 }
 impl Lpm {
@@ -2005,9 +2005,9 @@ impl From<Lpm> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpmDevRcvdi {
-    #[doc = "Interrupt did not occur"]
+    #[doc = "Interrupt did not occur."]
     INT_NO = 0x0,
-    #[doc = "Interrupt occurred"]
+    #[doc = "Interrupt occurred."]
     INT_YES = 0x01,
 }
 impl LpmDevRcvdi {
@@ -2036,9 +2036,9 @@ impl From<LpmDevRcvdi> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpmHstCompi {
-    #[doc = "Interrupt did not occur"]
+    #[doc = "Interrupt did not occur."]
     INT_NO = 0x0,
-    #[doc = "Interrupt occurred"]
+    #[doc = "Interrupt occurred."]
     INT_YES = 0x01,
 }
 impl LpmHstCompi {
@@ -2067,9 +2067,9 @@ impl From<LpmHstCompi> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpmL1Entryi {
-    #[doc = "Interrupt did not occur"]
+    #[doc = "Interrupt did not occur."]
     INT_NO = 0x0,
-    #[doc = "Interrupt occurred"]
+    #[doc = "Interrupt occurred."]
     INT_YES = 0x01,
 }
 impl LpmL1Entryi {
@@ -2098,9 +2098,9 @@ impl From<LpmL1Entryi> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpmL1Exiti {
-    #[doc = "Interrupt did not occur"]
+    #[doc = "Interrupt did not occur."]
     INT_NO = 0x0,
-    #[doc = "Interrupt occurred"]
+    #[doc = "Interrupt occurred."]
     INT_YES = 0x01,
 }
 impl LpmL1Exiti {
@@ -2129,13 +2129,13 @@ impl From<LpmL1Exiti> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ls {
-    #[doc = "SE0"]
+    #[doc = "SE0."]
     SE0 = 0x0,
-    #[doc = "K-state"]
+    #[doc = "K-state."]
     K_STATE = 0x01,
-    #[doc = "J-state"]
+    #[doc = "J-state."]
     J_STATE = 0x02,
-    #[doc = "Undefined"]
+    #[doc = "Undefined."]
     UNDEFINED = 0x03,
 }
 impl Ls {
@@ -2164,9 +2164,9 @@ impl From<Ls> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum NCc {
-    #[doc = "No internal companion controller exists"]
+    #[doc = "No internal companion controller exists."]
     NO_COMP_CONTROLLER = 0x0,
-    #[doc = "Internal companion controllers exist"]
+    #[doc = "Internal companion controllers exist."]
     COMP_CONTROLLER = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -2209,9 +2209,9 @@ impl From<NCc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pci {
-    #[doc = "Port change not detected"]
+    #[doc = "Port change not detected."]
     DETECT_NO = 0x0,
-    #[doc = "Port change detected"]
+    #[doc = "Port change detected."]
     DETECT_YES = 0x01,
 }
 impl Pci {
@@ -2240,9 +2240,9 @@ impl From<Pci> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pfsc {
-    #[doc = "Normal operation"]
+    #[doc = "Normal operation."]
     NORMAL = 0x0,
-    #[doc = "Forced to full speed"]
+    #[doc = "Forced to full speed."]
     FULL_SPEED = 0x01,
 }
 impl Pfsc {
@@ -2271,9 +2271,9 @@ impl From<Pfsc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Phcd {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     PHY_CLK_EN = 0x0,
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     PHY_CLK_DIS = 0x01,
 }
 impl Phcd {
@@ -2302,29 +2302,29 @@ impl From<Phcd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Phym {
-    #[doc = "UTMI/UMTI+"]
+    #[doc = "UTMI/UMTI+."]
     UTMI = 0x0,
-    #[doc = "ULPI DDR"]
+    #[doc = "ULPI DDR."]
     ULPI_DDR = 0x01,
-    #[doc = "ULPI"]
+    #[doc = "ULPI."]
     ULPI = 0x02,
-    #[doc = "Serial only"]
+    #[doc = "Serial only."]
     SERIAL = 0x03,
-    #[doc = "Software programmable: reset to UTMI/UTMI+"]
+    #[doc = "Software programmable: reset to UTMI/UTMI+."]
     SW_RST_UTMI = 0x04,
-    #[doc = "Software programmable: reset to ULPI DDR"]
+    #[doc = "Software programmable: reset to ULPI DDR."]
     SW_RST_ULPI_DDR = 0x05,
-    #[doc = "Software programmable: reset to ULPI"]
+    #[doc = "Software programmable: reset to ULPI."]
     SW_RST_ULPI = 0x06,
-    #[doc = "Software programmable: reset to Serial"]
+    #[doc = "Software programmable: reset to Serial."]
     SW_RST_SERIAL = 0x07,
-    #[doc = "IC-USB"]
+    #[doc = "IC-USB."]
     ICUSB = 0x08,
-    #[doc = "Software programmable: reset to IC-USB"]
+    #[doc = "Software programmable: reset to IC-USB."]
     SW_RST_ICUSB = 0x09,
-    #[doc = "HSIC"]
+    #[doc = "HSIC."]
     HSIC = 0x0a,
-    #[doc = "Software programmable: reset to HSIC"]
+    #[doc = "Software programmable: reset to HSIC."]
     SW_RST_HSIC = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
@@ -2357,13 +2357,13 @@ impl From<Phym> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Phyw {
-    #[doc = "8-bit wide data bus (software nonprogrammable)"]
+    #[doc = "8-bit wide data bus (software nonprogrammable)."]
     DATA_BUS_8 = 0x0,
-    #[doc = "16-bit wide data bus (software nonprogrammable)"]
+    #[doc = "16-bit wide data bus (software nonprogrammable)."]
     DATA_BUS_16 = 0x01,
-    #[doc = "Reset to 8-bit wide data bus (software programmable)"]
+    #[doc = "Reset to 8-bit wide data bus (software programmable)."]
     SW_RST_8 = 0x02,
-    #[doc = "Reset to 16-bit wide data bus (software programmable)"]
+    #[doc = "Reset to 16-bit wide data bus (software programmable)."]
     SW_RST_16 = 0x03,
 }
 impl Phyw {
@@ -2392,13 +2392,13 @@ impl From<Phyw> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pic {
-    #[doc = "Port indicators are off"]
+    #[doc = "Port indicators are off."]
     PORT_INDICATOR_OFF = 0x0,
-    #[doc = "Amber"]
+    #[doc = "Amber."]
     PORT_IND_AMBER = 0x01,
-    #[doc = "Green"]
+    #[doc = "Green."]
     PORT_IND_GREEN = 0x02,
-    #[doc = "Undefined"]
+    #[doc = "Undefined."]
     UNDEFINED = 0x03,
 }
 impl Pic {
@@ -2427,9 +2427,9 @@ impl From<Pic> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ppc {
-    #[doc = "No port power switches"]
+    #[doc = "No port power switches."]
     NO_SWITCHES = 0x0,
-    #[doc = "Port power switches exist"]
+    #[doc = "Port power switches exist."]
     PORT_SWITCHES = 0x01,
 }
 impl Ppc {
@@ -2458,9 +2458,9 @@ impl From<Ppc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pse {
-    #[doc = "Do not process the periodic schedule"]
+    #[doc = "Do not process the periodic schedule."]
     DONT_PROCESS_PT = 0x0,
-    #[doc = "Process the periodic schedule"]
+    #[doc = "Process the periodic schedule."]
     PROCESS_PT_PERIODICLISTBASE = 0x01,
 }
 impl Pse {
@@ -2489,13 +2489,13 @@ impl From<Pse> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pspd {
-    #[doc = "FS"]
+    #[doc = "FS."]
     FS = 0x0,
-    #[doc = "LS"]
+    #[doc = "LS."]
     LS = 0x01,
-    #[doc = "HS"]
+    #[doc = "HS."]
     HS = 0x02,
-    #[doc = "Undefined"]
+    #[doc = "Undefined."]
     UNDEFINED = 0x03,
 }
 impl Pspd {
@@ -2524,21 +2524,21 @@ impl From<Pspd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptc {
-    #[doc = "TEST_MODE_DISABLE"]
+    #[doc = "TEST_MODE_DISABLE."]
     TST_MODE_DIS = 0x0,
-    #[doc = "J_STATE"]
+    #[doc = "J_STATE."]
     J_STATE = 0x01,
-    #[doc = "K_STATE"]
+    #[doc = "K_STATE."]
     K_STATE = 0x02,
-    #[doc = "SE0 (host) or NAK (device)"]
+    #[doc = "SE0 (host) or NAK (device)."]
     SE0 = 0x03,
-    #[doc = "Packet"]
+    #[doc = "Packet."]
     PCKT = 0x04,
-    #[doc = "FORCE_ENABLE_HS"]
+    #[doc = "FORCE_ENABLE_HS."]
     HS = 0x05,
-    #[doc = "FORCE_ENABLE_FS"]
+    #[doc = "FORCE_ENABLE_FS."]
     FS = 0x06,
-    #[doc = "FORCE_ENABLE_LS"]
+    #[doc = "FORCE_ENABLE_LS."]
     LS = 0x07,
     _RESERVED_8 = 0x08,
     _RESERVED_9 = 0x09,
@@ -2575,9 +2575,9 @@ impl From<Ptc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptw {
-    #[doc = "8-bit UTMI interface (60 MHz)"]
+    #[doc = "8-bit UTMI interface (60 MHz)."]
     UTMI_8 = 0x0,
-    #[doc = "16-bit UTMI interface (30 MHz)"]
+    #[doc = "16-bit UTMI interface (30 MHz)."]
     UTMI_16 = 0x01,
 }
 impl Ptw {
@@ -2606,9 +2606,9 @@ impl From<Ptw> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rs {
-    #[doc = "Stopped executing"]
+    #[doc = "Stopped executing."]
     STOP = 0x0,
-    #[doc = "Running"]
+    #[doc = "Running."]
     RUN = 0x01,
 }
 impl Rs {
@@ -2637,9 +2637,9 @@ impl From<Rs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sei {
-    #[doc = "Error response did not occur"]
+    #[doc = "Error response did not occur."]
     INT_NO = 0x0,
-    #[doc = "Error response occurred"]
+    #[doc = "Error response occurred."]
     INT_YES = 0x01,
 }
 impl Sei {
@@ -2668,9 +2668,9 @@ impl From<Sei> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sli {
-    #[doc = "Did not enter Suspended state"]
+    #[doc = "Did not enter Suspended state."]
     SUS_NO = 0x0,
-    #[doc = "Entered Suspended state"]
+    #[doc = "Entered Suspended state."]
     SUS_YES = 0x01,
 }
 impl Sli {
@@ -2699,9 +2699,9 @@ impl From<Sli> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Slom {
-    #[doc = "On (default)"]
+    #[doc = "On (default)."]
     LOCKOUT_ON = 0x0,
-    #[doc = "Off"]
+    #[doc = "Off."]
     LOCKOUT_OFF = 0x01,
 }
 impl Slom {
@@ -2730,13 +2730,13 @@ impl From<Slom> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm {
-    #[doc = "No serial engine; always use parallel signaling"]
+    #[doc = "No serial engine; always use parallel signaling."]
     SERIAL_ENGINE_NO = 0x0,
-    #[doc = "Serial engine present; always use serial signaling for FS and LS"]
+    #[doc = "Serial engine present; always use serial signaling for FS and LS."]
     SERIAL_ENGINE_EN = 0x01,
-    #[doc = "Software programmable; reset to use parallel signaling for FS and LS"]
+    #[doc = "Software programmable; reset to use parallel signaling for FS and LS."]
     SW_RST_PARALLEL = 0x02,
-    #[doc = "Software programmable; reset to use serial signaling for FS and LS"]
+    #[doc = "Software programmable; reset to use serial signaling for FS and LS."]
     SW_RST_SERIAL_ENG = 0x03,
 }
 impl Sm {
@@ -2765,9 +2765,9 @@ impl From<Sm> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sri {
-    #[doc = "SOF not received"]
+    #[doc = "SOF not received."]
     SOF_NO = 0x0,
-    #[doc = "SOF received"]
+    #[doc = "SOF received."]
     SOF_YES = 0x01,
 }
 impl Sri {
@@ -2796,9 +2796,9 @@ impl From<Sri> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ti0 {
-    #[doc = "Interrupt did not occur"]
+    #[doc = "Interrupt did not occur."]
     INT_NO = 0x0,
-    #[doc = "Interrupt occurred"]
+    #[doc = "Interrupt occurred."]
     INT_YES = 0x01,
 }
 impl Ti0 {
@@ -2827,9 +2827,9 @@ impl From<Ti0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ti1 {
-    #[doc = "Interrupt did not occur"]
+    #[doc = "Interrupt did not occur."]
     INT_NO = 0x0,
-    #[doc = "Interrupt occurred"]
+    #[doc = "Interrupt occurred."]
     INT_YES = 0x01,
 }
 impl Ti1 {
@@ -2858,9 +2858,9 @@ impl From<Ti1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Uai {
-    #[doc = "Interrupt did not occur"]
+    #[doc = "Interrupt did not occur."]
     INT_NO = 0x0,
-    #[doc = "Interrupt occurred"]
+    #[doc = "Interrupt occurred."]
     INT_YES = 0x01,
 }
 impl Uai {
@@ -2889,9 +2889,9 @@ impl From<Uai> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Uei {
-    #[doc = "Interrupt did not occur"]
+    #[doc = "Interrupt did not occur."]
     INT_NO = 0x0,
-    #[doc = "Interrupt occurred"]
+    #[doc = "Interrupt occurred."]
     INT_YES = 0x01,
 }
 impl Uei {
@@ -2920,9 +2920,9 @@ impl From<Uei> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ui {
-    #[doc = "Interrupt did not occur"]
+    #[doc = "Interrupt did not occur."]
     INT_NO = 0x0,
-    #[doc = "Interrupt occurred"]
+    #[doc = "Interrupt occurred."]
     INT_YES = 0x01,
 }
 impl Ui {
@@ -2951,9 +2951,9 @@ impl From<Ui> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ulpii {
-    #[doc = "Event completion did not occur"]
+    #[doc = "Event completion did not occur."]
     EVENT_NO = 0x0,
-    #[doc = "Event completion occurred"]
+    #[doc = "Event completion occurred."]
     EVENT_YES = 0x01,
 }
 impl Ulpii {
@@ -2982,9 +2982,9 @@ impl From<Ulpii> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Upi {
-    #[doc = "Interrupt did not occur"]
+    #[doc = "Interrupt did not occur."]
     INT_NO = 0x0,
-    #[doc = "Interrupt occurred"]
+    #[doc = "Interrupt occurred."]
     INT_YES = 0x01,
 }
 impl Upi {
@@ -3013,9 +3013,9 @@ impl From<Upi> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Uri {
-    #[doc = "USB reset not received"]
+    #[doc = "USB reset not received."]
     USB_NO = 0x0,
-    #[doc = "USB reset received"]
+    #[doc = "USB reset received."]
     USB_YES = 0x01,
 }
 impl Uri {

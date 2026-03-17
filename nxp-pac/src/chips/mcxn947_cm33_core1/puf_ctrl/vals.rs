@@ -2,13 +2,13 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AntiPoleSecLevel {
-    #[doc = "Secure and privileged Master"]
+    #[doc = "Secure and privileged Master."]
     NONSECURE_NONPRIV_MASTER = 0x0,
-    #[doc = "Secure and non-privileged Master"]
+    #[doc = "Secure and non-privileged Master."]
     NONSECURE_PRIV_MASTER = 0x01,
-    #[doc = "Non-secure and privileged Master"]
+    #[doc = "Non-secure and privileged Master."]
     SECURE_NONPRIV_MASTER = 0x02,
-    #[doc = "Non-secure and non-privileged Master"]
+    #[doc = "Non-secure and non-privileged Master."]
     SECURE_PRIV_MASTER = 0x03,
 }
 impl AntiPoleSecLevel {
@@ -37,9 +37,9 @@ impl From<AntiPoleSecLevel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DisPufEnroll {
-    #[doc = "Command enabled"]
+    #[doc = "Command enabled."]
     ENABLE = 0x0,
-    #[doc = "Command disabled"]
+    #[doc = "Command disabled."]
     DISABLE = 0x01,
 }
 impl DisPufEnroll {
@@ -68,9 +68,9 @@ impl From<DisPufEnroll> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DisPufGenRandomNumber {
-    #[doc = "Command enabled"]
+    #[doc = "Command enabled."]
     ENABLE = 0x0,
-    #[doc = "Command disabled"]
+    #[doc = "Command disabled."]
     DISABLE = 0x01,
 }
 impl DisPufGenRandomNumber {
@@ -99,9 +99,9 @@ impl From<DisPufGenRandomNumber> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DisPufGenWrapKey {
-    #[doc = "Command enabled"]
+    #[doc = "Command enabled."]
     ENABLE = 0x0,
-    #[doc = "Command disabled"]
+    #[doc = "Command disabled."]
     DISABLE = 0x01,
 }
 impl DisPufGenWrapKey {
@@ -130,9 +130,9 @@ impl From<DisPufGenWrapKey> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DisPufGetKey {
-    #[doc = "Command enabled"]
+    #[doc = "Command enabled."]
     ENABLE = 0x0,
-    #[doc = "Command disabled"]
+    #[doc = "Command disabled."]
     DISABLE = 0x01,
 }
 impl DisPufGetKey {
@@ -161,9 +161,9 @@ impl From<DisPufGetKey> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DisPufStart {
-    #[doc = "Command enabled"]
+    #[doc = "Command enabled."]
     ENABLE = 0x0,
-    #[doc = "Command disabled"]
+    #[doc = "Command disabled."]
     DISABLE = 0x01,
 }
 impl DisPufStart {
@@ -192,9 +192,9 @@ impl From<DisPufStart> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DisPufStop {
-    #[doc = "Command enabled"]
+    #[doc = "Command enabled."]
     ENABLE = 0x0,
-    #[doc = "Command disabled"]
+    #[doc = "Command disabled."]
     DISABLE = 0x01,
 }
 impl DisPufStop {
@@ -223,9 +223,9 @@ impl From<DisPufStop> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DisPufTest {
-    #[doc = "Command enabled"]
+    #[doc = "Command enabled."]
     ENABLE = 0x0,
-    #[doc = "Command disabled"]
+    #[doc = "Command disabled."]
     DISABLE = 0x01,
 }
 impl DisPufTest {
@@ -254,9 +254,9 @@ impl From<DisPufTest> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DisPufUnwrapKey {
-    #[doc = "Command enabled"]
+    #[doc = "Command enabled."]
     ENABLE = 0x0,
-    #[doc = "Command disabled"]
+    #[doc = "Command disabled."]
     DISABLE = 0x01,
 }
 impl DisPufUnwrapKey {
@@ -285,9 +285,9 @@ impl From<DisPufUnwrapKey> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DisPufWrapKey {
-    #[doc = "Command enabled"]
+    #[doc = "Command enabled."]
     ENABLE = 0x0,
-    #[doc = "Command disabled"]
+    #[doc = "Command disabled."]
     DISABLE = 0x01,
 }
 impl DisPufWrapKey {
@@ -316,13 +316,13 @@ impl From<DisPufWrapKey> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecLevel {
-    #[doc = "Non-secure and non-privileged Master"]
+    #[doc = "Non-secure and non-privileged Master."]
     NONSECURE_NONPRIV_MASTER = 0x0,
-    #[doc = "Non-secure and privileged Master"]
+    #[doc = "Non-secure and privileged Master."]
     NONSECURE_PRIV_MASTER = 0x01,
-    #[doc = "Secure and non-privileged Master"]
+    #[doc = "Secure and non-privileged Master."]
     SECURE_NONPRIV_MASTER = 0x02,
-    #[doc = "Secure and privileged Master"]
+    #[doc = "Secure and privileged Master."]
     SECURE_PRIV_MASTER = 0x03,
 }
 impl SecLevel {

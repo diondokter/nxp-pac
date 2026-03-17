@@ -274,6 +274,7 @@ pub const PINS: &[Pin] = &[
 pub const PERIPHERALS: &[Peripheral] = &[
     Peripheral {
         name: "DMA0",
+        address: 0,
         signals: &[
             Signal {
                 name: "0",
@@ -396,6 +397,7 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "GPIO0",
+        address: 0,
         signals: &[
             Signal {
                 name: "0",
@@ -691,6 +693,7 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "GPIO1",
+        address: 0,
         signals: &[
             Signal {
                 name: "0",
@@ -986,54 +989,63 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "FLEXCOMM0",
+        address: 0,
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "FLEXCOMM1",
+        address: 0,
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "FLEXCOMM2",
+        address: 0,
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "FLEXCOMM3",
+        address: 0,
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "FLEXCOMM4",
+        address: 0,
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "FLEXCOMM5",
+        address: 0,
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "FLEXCOMM6",
+        address: 0,
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "FLEXCOMM7",
+        address: 0,
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "USART0",
+        address: 0,
         signals: &[
             Signal {
                 name: "TXD",
@@ -1070,6 +1082,7 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "USART1",
+        address: 0,
         signals: &[
             Signal {
                 name: "TXD",
@@ -1106,6 +1119,7 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "USART2",
+        address: 0,
         signals: &[
             Signal {
                 name: "TXD",
@@ -1142,6 +1156,7 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "USART3",
+        address: 0,
         signals: &[
             Signal {
                 name: "TXD",
@@ -1178,6 +1193,7 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "USART4",
+        address: 0,
         signals: &[
             Signal {
                 name: "TXD",
@@ -1214,6 +1230,7 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "USART5",
+        address: 0,
         signals: &[
             Signal {
                 name: "TXD",
@@ -1250,6 +1267,7 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "USART6",
+        address: 0,
         signals: &[
             Signal {
                 name: "TXD",
@@ -1286,6 +1304,7 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "USART7",
+        address: 0,
         signals: &[
             Signal {
                 name: "TXD",
@@ -1322,6 +1341,7 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "SCT0",
+        address: 0,
         signals: &[
             Signal {
                 name: "OUT0",
@@ -1524,55 +1544,55 @@ pub const PERIPHERALS: &[Peripheral] = &[
         dma_muxing: &[],
     },
 ];
-pub const INTERRUPTS: &[&str] = &[
-    "ACMP",
-    "ADC0",
-    "CASER",
-    "CTIMER0",
-    "CTIMER1",
-    "CTIMER2",
-    "CTIMER3",
-    "CTIMER4",
-    "DMA0",
-    "DMA1",
-    "FLEXCOMM0",
-    "FLEXCOMM1",
-    "FLEXCOMM2",
-    "FLEXCOMM3",
-    "FLEXCOMM4",
-    "FLEXCOMM5",
-    "FLEXCOMM6",
-    "FLEXCOMM7",
-    "FLEXCOMM8",
-    "GINT0",
-    "GINT1",
-    "HASHCRYPT",
-    "MAILBOX",
-    "MRT0",
-    "OS_EVENT",
-    "PIN_INT0",
-    "PIN_INT1",
-    "PIN_INT2",
-    "PIN_INT3",
-    "PIN_INT4",
-    "PIN_INT5",
-    "PIN_INT6",
-    "PIN_INT7",
-    "PLU",
-    "PQ",
-    "PUF",
-    "RTC",
-    "SCT0",
-    "SDIO",
-    "SEC_GPIO_INT0_IRQ0",
-    "SEC_GPIO_INT0_IRQ1",
-    "SEC_HYPERVISOR_CALL",
-    "SEC_VIO",
-    "USB0",
-    "USB0_NEEDCLK",
-    "USB1",
-    "USB1_NEEDCLK",
-    "USB1_PHY",
-    "UTICK0",
-    "WDT_BOD",
+pub const INTERRUPTS: &[(&str, u32)] = &[
+    ("WDT_BOD", 0u32),
+    ("DMA0", 1u32),
+    ("GINT0", 2u32),
+    ("GINT1", 3u32),
+    ("PIN_INT0", 4u32),
+    ("PIN_INT1", 5u32),
+    ("PIN_INT2", 6u32),
+    ("PIN_INT3", 7u32),
+    ("UTICK0", 8u32),
+    ("MRT0", 9u32),
+    ("CTIMER0", 10u32),
+    ("CTIMER1", 11u32),
+    ("SCT0", 12u32),
+    ("CTIMER3", 13u32),
+    ("FLEXCOMM0", 14u32),
+    ("FLEXCOMM1", 15u32),
+    ("FLEXCOMM2", 16u32),
+    ("FLEXCOMM3", 17u32),
+    ("FLEXCOMM4", 18u32),
+    ("FLEXCOMM5", 19u32),
+    ("FLEXCOMM6", 20u32),
+    ("FLEXCOMM7", 21u32),
+    ("ADC0", 22u32),
+    ("ACMP", 24u32),
+    ("USB0_NEEDCLK", 27u32),
+    ("USB0", 28u32),
+    ("RTC", 29u32),
+    ("MAILBOX", 31u32),
+    ("PIN_INT4", 32u32),
+    ("PIN_INT5", 33u32),
+    ("PIN_INT6", 34u32),
+    ("PIN_INT7", 35u32),
+    ("CTIMER2", 36u32),
+    ("CTIMER4", 37u32),
+    ("OS_EVENT", 38u32),
+    ("SDIO", 42u32),
+    ("USB1_PHY", 46u32),
+    ("USB1", 47u32),
+    ("USB1_NEEDCLK", 48u32),
+    ("SEC_HYPERVISOR_CALL", 49u32),
+    ("SEC_GPIO_INT0_IRQ0", 50u32),
+    ("SEC_GPIO_INT0_IRQ1", 51u32),
+    ("PLU", 52u32),
+    ("SEC_VIO", 53u32),
+    ("HASHCRYPT", 54u32),
+    ("CASER", 55u32),
+    ("PUF", 56u32),
+    ("PQ", 57u32),
+    ("DMA1", 58u32),
+    ("FLEXCOMM8", 59u32),
 ];

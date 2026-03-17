@@ -1,4 +1,4 @@
-#[doc = "LPC-Next0 I2S interface"]
+#[doc = "LPC-Next0 I2S interface."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct I2s {
     ptr: *mut u8,
@@ -34,7 +34,7 @@ impl I2s {
     pub const fn div(self) -> crate::common::Reg<regs::Div, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0c1cusize) as _) }
     }
-    #[doc = "Array of registers: PCFG1, PCFG2, PSTAT"]
+    #[doc = "Array of registers: PCFG1, PCFG2, PSTAT."]
     #[inline(always)]
     pub const fn secchannel(self, n: usize) -> Secchannel {
         assert!(n < 3usize);
@@ -102,18 +102,18 @@ impl I2s {
     ) -> crate::common::Reg<regs::Fiford48hnopop, crate::common::R> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0e44usize) as _) }
     }
-    #[doc = "FIFO size register"]
+    #[doc = "FIFO size register."]
     #[inline(always)]
     pub const fn fifosize(self) -> crate::common::Reg<regs::Fifosize, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0e48usize) as _) }
     }
-    #[doc = "I2S Module identification"]
+    #[doc = "I2S Module identification."]
     #[inline(always)]
     pub const fn id(self) -> crate::common::Reg<regs::Id, crate::common::R> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0ffcusize) as _) }
     }
 }
-#[doc = "Array of registers: PCFG1, PCFG2, PSTAT"]
+#[doc = "Array of registers: PCFG1, PCFG2, PSTAT."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Secchannel {
     ptr: *mut u8,
@@ -129,17 +129,17 @@ impl Secchannel {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "Configuration register 1 for channel pair"]
+    #[doc = "Configuration register 1 for channel pair."]
     #[inline(always)]
     pub const fn pcfg1(self) -> crate::common::Reg<regs::Pcfg1, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
     }
-    #[doc = "Configuration register 2 for channel pair"]
+    #[doc = "Configuration register 2 for channel pair."]
     #[inline(always)]
     pub const fn pcfg2(self) -> crate::common::Reg<regs::Pcfg2, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
     }
-    #[doc = "Status register for channel pair"]
+    #[doc = "Status register for channel pair."]
     #[inline(always)]
     pub const fn pstat(self) -> crate::common::Reg<regs::Pstat, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }

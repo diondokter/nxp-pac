@@ -1,4 +1,4 @@
-#[doc = "USB Data buffer start address"]
+#[doc = "USB Data buffer start address."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Databufstart(pub u32);
@@ -35,7 +35,7 @@ impl defmt::Format for Databufstart {
         defmt::write!(f, "Databufstart {{ da_buf: {=u32:?} }}", self.da_buf())
     }
 }
-#[doc = "USB Device Command/Status register"]
+#[doc = "USB Device Command/Status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Devcmdstat(pub u32);
@@ -328,7 +328,7 @@ impl defmt::Format for Devcmdstat {
         )
     }
 }
-#[doc = "USB Endpoint Buffer Configuration register"]
+#[doc = "USB Endpoint Buffer Configuration register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Epbufcfg(pub u32);
@@ -365,7 +365,7 @@ impl defmt::Format for Epbufcfg {
         defmt::write!(f, "Epbufcfg {{ buf_sb: {=u16:?} }}", self.buf_sb())
     }
 }
-#[doc = "USB Endpoint Buffer in use"]
+#[doc = "USB Endpoint Buffer in use."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Epinuse(pub u32);
@@ -400,7 +400,7 @@ impl defmt::Format for Epinuse {
         defmt::write!(f, "Epinuse {{ buf: {=u16:?} }}", self.buf())
     }
 }
-#[doc = "USB EP Command/Status List start address"]
+#[doc = "USB EP Command/Status List start address."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Epliststart(pub u32);
@@ -455,7 +455,7 @@ impl defmt::Format for Epliststart {
         )
     }
 }
-#[doc = "USB Endpoint skip"]
+#[doc = "USB Endpoint skip."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Epskip(pub u32);
@@ -492,7 +492,7 @@ impl defmt::Format for Epskip {
         defmt::write!(f, "Epskip {{ skip: {=u16:?} }}", self.skip())
     }
 }
-#[doc = "USB Endpoint toggle register"]
+#[doc = "USB Endpoint toggle register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Eptoggle(pub u32);
@@ -529,7 +529,7 @@ impl defmt::Format for Eptoggle {
         defmt::write!(f, "Eptoggle {{ toggle: {=u32:?} }}", self.toggle())
     }
 }
-#[doc = "USB Info register"]
+#[doc = "USB Info register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Info(pub u32);
@@ -612,7 +612,7 @@ impl defmt::Format for Info {
         )
     }
 }
-#[doc = "USB interrupt enable register"]
+#[doc = "USB interrupt enable register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Inten(pub u32);
@@ -681,7 +681,7 @@ impl defmt::Format for Inten {
         )
     }
 }
-#[doc = "USB set interrupt status register"]
+#[doc = "USB set interrupt status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Intsetstat(pub u32);
@@ -750,7 +750,7 @@ impl defmt::Format for Intsetstat {
         )
     }
 }
-#[doc = "USB interrupt status register"]
+#[doc = "USB interrupt status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Intstat(pub u32);
@@ -973,7 +973,7 @@ impl defmt::Format for Intstat {
         )
     }
 }
-#[doc = "USB Link Power Management register"]
+#[doc = "USB Link Power Management register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lpm(pub u32);

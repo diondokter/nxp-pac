@@ -1,4 +1,4 @@
-#[doc = "Alpha Surface Buffer Pointer"]
+#[doc = "Alpha Surface Buffer Pointer."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct AsBuf(pub u32);
@@ -33,7 +33,7 @@ impl defmt::Format for AsBuf {
         defmt::write!(f, "AsBuf {{ addr: {=u32:?} }}", self.addr())
     }
 }
-#[doc = "Overlay Color Key High"]
+#[doc = "Overlay Color Key High."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct AsClrkeyhigh(pub u32);
@@ -70,7 +70,7 @@ impl defmt::Format for AsClrkeyhigh {
         defmt::write!(f, "AsClrkeyhigh {{ pixel: {=u32:?} }}", self.pixel())
     }
 }
-#[doc = "Overlay Color Key Low"]
+#[doc = "Overlay Color Key Low."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct AsClrkeylow(pub u32);
@@ -107,31 +107,31 @@ impl defmt::Format for AsClrkeylow {
         defmt::write!(f, "AsClrkeylow {{ pixel: {=u32:?} }}", self.pixel())
     }
 }
-#[doc = "Alpha Surface Control"]
+#[doc = "Alpha Surface Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct AsCtrl(pub u32);
 impl AsCtrl {
-    #[doc = "Determines how the alpha value is constructed for this alpha surface"]
+    #[doc = "Determines how the alpha value is constructed for this alpha surface."]
     #[must_use]
     #[inline(always)]
     pub const fn alpha_ctrl(&self) -> super::vals::AlphaCtrl {
         let val = (self.0 >> 1usize) & 0x03;
         super::vals::AlphaCtrl::from_bits(val as u8)
     }
-    #[doc = "Determines how the alpha value is constructed for this alpha surface"]
+    #[doc = "Determines how the alpha value is constructed for this alpha surface."]
     #[inline(always)]
     pub const fn set_alpha_ctrl(&mut self, val: super::vals::AlphaCtrl) {
         self.0 = (self.0 & !(0x03 << 1usize)) | (((val.to_bits() as u32) & 0x03) << 1usize);
     }
-    #[doc = "Indicates that colorkey functionality is enabled for this alpha surface"]
+    #[doc = "Indicates that colorkey functionality is enabled for this alpha surface."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_colorkey(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates that colorkey functionality is enabled for this alpha surface"]
+    #[doc = "Indicates that colorkey functionality is enabled for this alpha surface."]
     #[inline(always)]
     pub const fn set_enable_colorkey(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
@@ -148,38 +148,38 @@ impl AsCtrl {
     pub const fn set_format(&mut self, val: super::vals::AsCtrlFormat) {
         self.0 = (self.0 & !(0x0f << 4usize)) | (((val.to_bits() as u32) & 0x0f) << 4usize);
     }
-    #[doc = "Alpha modifier used when the ALPHA_MULTIPLY or ALPHA_OVERRIDE values are programmed in PXP_AS_CTRL\\[ALPHA_CTRL\\]"]
+    #[doc = "Alpha modifier used when the ALPHA_MULTIPLY or ALPHA_OVERRIDE values are programmed in PXP_AS_CTRL\\[ALPHA_CTRL\\]."]
     #[must_use]
     #[inline(always)]
     pub const fn alpha(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0xff;
         val as u8
     }
-    #[doc = "Alpha modifier used when the ALPHA_MULTIPLY or ALPHA_OVERRIDE values are programmed in PXP_AS_CTRL\\[ALPHA_CTRL\\]"]
+    #[doc = "Alpha modifier used when the ALPHA_MULTIPLY or ALPHA_OVERRIDE values are programmed in PXP_AS_CTRL\\[ALPHA_CTRL\\]."]
     #[inline(always)]
     pub const fn set_alpha(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
     }
-    #[doc = "Indicates a raster operation to perform when enabled"]
+    #[doc = "Indicates a raster operation to perform when enabled."]
     #[must_use]
     #[inline(always)]
     pub const fn rop(&self) -> super::vals::Rop {
         let val = (self.0 >> 16usize) & 0x0f;
         super::vals::Rop::from_bits(val as u8)
     }
-    #[doc = "Indicates a raster operation to perform when enabled"]
+    #[doc = "Indicates a raster operation to perform when enabled."]
     #[inline(always)]
     pub const fn set_rop(&mut self, val: super::vals::Rop) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val.to_bits() as u32) & 0x0f) << 16usize);
     }
-    #[doc = "Setting this bit to logic 0 will not alter the alpha value"]
+    #[doc = "Setting this bit to logic 0 will not alter the alpha value."]
     #[must_use]
     #[inline(always)]
     pub const fn alpha_invert(&self) -> super::vals::AlphaInvert {
         let val = (self.0 >> 20usize) & 0x01;
         super::vals::AlphaInvert::from_bits(val as u8)
     }
-    #[doc = "Setting this bit to logic 0 will not alter the alpha value"]
+    #[doc = "Setting this bit to logic 0 will not alter the alpha value."]
     #[inline(always)]
     pub const fn set_alpha_invert(&mut self, val: super::vals::AlphaInvert) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
@@ -218,7 +218,7 @@ impl defmt::Format for AsCtrl {
         )
     }
 }
-#[doc = "Alpha Surface Pitch"]
+#[doc = "Alpha Surface Pitch."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct AsPitch(pub u32);
@@ -255,67 +255,67 @@ impl defmt::Format for AsPitch {
         defmt::write!(f, "AsPitch {{ pitch: {=u16:?} }}", self.pitch())
     }
 }
-#[doc = "Color Space Conversion Coefficient Register 0"]
+#[doc = "Color Space Conversion Coefficient Register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Csc1Coef0(pub u32);
 impl Csc1Coef0 {
-    #[doc = "Two's compliment amplitude offset implicit in the Y data"]
+    #[doc = "Two's compliment amplitude offset implicit in the Y data."]
     #[must_use]
     #[inline(always)]
     pub const fn y_offset(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x01ff;
         val as u16
     }
-    #[doc = "Two's compliment amplitude offset implicit in the Y data"]
+    #[doc = "Two's compliment amplitude offset implicit in the Y data."]
     #[inline(always)]
     pub const fn set_y_offset(&mut self, val: u16) {
         self.0 = (self.0 & !(0x01ff << 0usize)) | (((val as u32) & 0x01ff) << 0usize);
     }
-    #[doc = "Two's compliment phase offset implicit for CbCr data"]
+    #[doc = "Two's compliment phase offset implicit for CbCr data."]
     #[must_use]
     #[inline(always)]
     pub const fn uv_offset(&self) -> u16 {
         let val = (self.0 >> 9usize) & 0x01ff;
         val as u16
     }
-    #[doc = "Two's compliment phase offset implicit for CbCr data"]
+    #[doc = "Two's compliment phase offset implicit for CbCr data."]
     #[inline(always)]
     pub const fn set_uv_offset(&mut self, val: u16) {
         self.0 = (self.0 & !(0x01ff << 9usize)) | (((val as u32) & 0x01ff) << 9usize);
     }
-    #[doc = "Two's compliment Y multiplier coefficient. YUV=0x100 (1.000) YCbCr=0x12A (1.164)"]
+    #[doc = "Two's compliment Y multiplier coefficient. YUV=0x100 (1.000) YCbCr=0x12A (1.164)."]
     #[must_use]
     #[inline(always)]
     pub const fn c0(&self) -> u16 {
         let val = (self.0 >> 18usize) & 0x07ff;
         val as u16
     }
-    #[doc = "Two's compliment Y multiplier coefficient. YUV=0x100 (1.000) YCbCr=0x12A (1.164)"]
+    #[doc = "Two's compliment Y multiplier coefficient. YUV=0x100 (1.000) YCbCr=0x12A (1.164)."]
     #[inline(always)]
     pub const fn set_c0(&mut self, val: u16) {
         self.0 = (self.0 & !(0x07ff << 18usize)) | (((val as u32) & 0x07ff) << 18usize);
     }
-    #[doc = "Bypass the CSC unit in the scaling engine"]
+    #[doc = "Bypass the CSC unit in the scaling engine."]
     #[must_use]
     #[inline(always)]
     pub const fn bypass(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "Bypass the CSC unit in the scaling engine"]
+    #[doc = "Bypass the CSC unit in the scaling engine."]
     #[inline(always)]
     pub const fn set_bypass(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "Set to 1 when performing YCbCr conversion to RGB"]
+    #[doc = "Set to 1 when performing YCbCr conversion to RGB."]
     #[must_use]
     #[inline(always)]
     pub const fn ycbcr_mode(&self) -> super::vals::YcbcrMode {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::YcbcrMode::from_bits(val as u8)
     }
-    #[doc = "Set to 1 when performing YCbCr conversion to RGB"]
+    #[doc = "Set to 1 when performing YCbCr conversion to RGB."]
     #[inline(always)]
     pub const fn set_ycbcr_mode(&mut self, val: super::vals::YcbcrMode) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -352,31 +352,31 @@ impl defmt::Format for Csc1Coef0 {
         )
     }
 }
-#[doc = "Color Space Conversion Coefficient Register 1"]
+#[doc = "Color Space Conversion Coefficient Register 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Csc1Coef1(pub u32);
 impl Csc1Coef1 {
-    #[doc = "Two's compliment Blue U/Cb multiplier coefficient. YUV=0x208 (2.032) YCbCr=0x204 (2.017)"]
+    #[doc = "Two's compliment Blue U/Cb multiplier coefficient. YUV=0x208 (2.032) YCbCr=0x204 (2.017)."]
     #[must_use]
     #[inline(always)]
     pub const fn c4(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x07ff;
         val as u16
     }
-    #[doc = "Two's compliment Blue U/Cb multiplier coefficient. YUV=0x208 (2.032) YCbCr=0x204 (2.017)"]
+    #[doc = "Two's compliment Blue U/Cb multiplier coefficient. YUV=0x208 (2.032) YCbCr=0x204 (2.017)."]
     #[inline(always)]
     pub const fn set_c4(&mut self, val: u16) {
         self.0 = (self.0 & !(0x07ff << 0usize)) | (((val as u32) & 0x07ff) << 0usize);
     }
-    #[doc = "Two's compliment Red V/Cr multiplier coefficient. YUV=0x123 (1.140) YCbCr=0x198 (1.596)"]
+    #[doc = "Two's compliment Red V/Cr multiplier coefficient. YUV=0x123 (1.140) YCbCr=0x198 (1.596)."]
     #[must_use]
     #[inline(always)]
     pub const fn c1(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x07ff;
         val as u16
     }
-    #[doc = "Two's compliment Red V/Cr multiplier coefficient. YUV=0x123 (1.140) YCbCr=0x198 (1.596)"]
+    #[doc = "Two's compliment Red V/Cr multiplier coefficient. YUV=0x123 (1.140) YCbCr=0x198 (1.596)."]
     #[inline(always)]
     pub const fn set_c1(&mut self, val: u16) {
         self.0 = (self.0 & !(0x07ff << 16usize)) | (((val as u32) & 0x07ff) << 16usize);
@@ -407,31 +407,31 @@ impl defmt::Format for Csc1Coef1 {
         )
     }
 }
-#[doc = "Color Space Conversion Coefficient Register 2"]
+#[doc = "Color Space Conversion Coefficient Register 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Csc1Coef2(pub u32);
 impl Csc1Coef2 {
-    #[doc = "Two's complement Green U/Cb multiplier coefficient. YUV=0x79C (-0.394) YCbCr=0x79C (-0.392)"]
+    #[doc = "Two's complement Green U/Cb multiplier coefficient. YUV=0x79C (-0.394) YCbCr=0x79C (-0.392)."]
     #[must_use]
     #[inline(always)]
     pub const fn c3(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x07ff;
         val as u16
     }
-    #[doc = "Two's complement Green U/Cb multiplier coefficient. YUV=0x79C (-0.394) YCbCr=0x79C (-0.392)"]
+    #[doc = "Two's complement Green U/Cb multiplier coefficient. YUV=0x79C (-0.394) YCbCr=0x79C (-0.392)."]
     #[inline(always)]
     pub const fn set_c3(&mut self, val: u16) {
         self.0 = (self.0 & !(0x07ff << 0usize)) | (((val as u32) & 0x07ff) << 0usize);
     }
-    #[doc = "Two's complement Green V/Cr multiplier coefficient. YUV=0x76B (-0.581) YCbCr=0x730 (-0.813)"]
+    #[doc = "Two's complement Green V/Cr multiplier coefficient. YUV=0x76B (-0.581) YCbCr=0x730 (-0.813)."]
     #[must_use]
     #[inline(always)]
     pub const fn c2(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x07ff;
         val as u16
     }
-    #[doc = "Two's complement Green V/Cr multiplier coefficient. YUV=0x76B (-0.581) YCbCr=0x730 (-0.813)"]
+    #[doc = "Two's complement Green V/Cr multiplier coefficient. YUV=0x76B (-0.581) YCbCr=0x730 (-0.813)."]
     #[inline(always)]
     pub const fn set_c2(&mut self, val: u16) {
         self.0 = (self.0 & !(0x07ff << 16usize)) | (((val as u32) & 0x07ff) << 16usize);
@@ -462,67 +462,67 @@ impl defmt::Format for Csc1Coef2 {
         )
     }
 }
-#[doc = "Control Register 0"]
+#[doc = "Control Register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl(pub u32);
 impl Ctrl {
-    #[doc = "Enables PXP operation with specified parameters"]
+    #[doc = "Enables PXP operation with specified parameters."]
     #[must_use]
     #[inline(always)]
     pub const fn enable(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables PXP operation with specified parameters"]
+    #[doc = "Enables PXP operation with specified parameters."]
     #[inline(always)]
     pub const fn set_enable(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Interrupt enable When using the PXP_NEXT functionality to reprogram the PXP, the new value of this bit will be used and may therefore enable or disable an interrupt unintentionally"]
+    #[doc = "Interrupt enable When using the PXP_NEXT functionality to reprogram the PXP, the new value of this bit will be used and may therefore enable or disable an interrupt unintentionally."]
     #[must_use]
     #[inline(always)]
     pub const fn irq_enable(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Interrupt enable When using the PXP_NEXT functionality to reprogram the PXP, the new value of this bit will be used and may therefore enable or disable an interrupt unintentionally"]
+    #[doc = "Interrupt enable When using the PXP_NEXT functionality to reprogram the PXP, the new value of this bit will be used and may therefore enable or disable an interrupt unintentionally."]
     #[inline(always)]
     pub const fn set_irq_enable(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Next command interrupt enable"]
+    #[doc = "Next command interrupt enable."]
     #[must_use]
     #[inline(always)]
     pub const fn next_irq_enable(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Next command interrupt enable"]
+    #[doc = "Next command interrupt enable."]
     #[inline(always)]
     pub const fn set_next_irq_enable(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Enable handshake with LCD controller"]
+    #[doc = "Enable handshake with LCD controller."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_lcd_handshake(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable handshake with LCD controller"]
+    #[doc = "Enable handshake with LCD controller."]
     #[inline(always)]
     pub const fn set_enable_lcd_handshake(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "Indicates the clockwise rotation to be applied at the output buffer"]
+    #[doc = "Indicates the clockwise rotation to be applied at the output buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn rotate(&self) -> super::vals::CtrlRotate {
         let val = (self.0 >> 8usize) & 0x03;
         super::vals::CtrlRotate::from_bits(val as u8)
     }
-    #[doc = "Indicates the clockwise rotation to be applied at the output buffer"]
+    #[doc = "Indicates the clockwise rotation to be applied at the output buffer."]
     #[inline(always)]
     pub const fn set_rotate(&mut self, val: super::vals::CtrlRotate) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
@@ -551,14 +551,14 @@ impl Ctrl {
     pub const fn set_vflip(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "This bit controls where rotation will occur in the PXP datapath"]
+    #[doc = "This bit controls where rotation will occur in the PXP datapath."]
     #[must_use]
     #[inline(always)]
     pub const fn rot_pos(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit controls where rotation will occur in the PXP datapath"]
+    #[doc = "This bit controls where rotation will occur in the PXP datapath."]
     #[inline(always)]
     pub const fn set_rot_pos(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
@@ -575,26 +575,26 @@ impl Ctrl {
     pub const fn set_block_size(&mut self, val: super::vals::CtrlBlockSize) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
     }
-    #[doc = "Enable the PXP to run continuously"]
+    #[doc = "Enable the PXP to run continuously."]
     #[must_use]
     #[inline(always)]
     pub const fn en_repeat(&self) -> super::vals::CtrlEnRepeat {
         let val = (self.0 >> 28usize) & 0x01;
         super::vals::CtrlEnRepeat::from_bits(val as u8)
     }
-    #[doc = "Enable the PXP to run continuously"]
+    #[doc = "Enable the PXP to run continuously."]
     #[inline(always)]
     pub const fn set_en_repeat(&mut self, val: super::vals::CtrlEnRepeat) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
     }
-    #[doc = "This bit must be set to zero for normal operation"]
+    #[doc = "This bit must be set to zero for normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn clkgate(&self) -> super::vals::CtrlClkgate {
         let val = (self.0 >> 30usize) & 0x01;
         super::vals::CtrlClkgate::from_bits(val as u8)
     }
-    #[doc = "This bit must be set to zero for normal operation"]
+    #[doc = "This bit must be set to zero for normal operation."]
     #[inline(always)]
     pub const fn set_clkgate(&mut self, val: super::vals::CtrlClkgate) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
@@ -657,67 +657,67 @@ impl defmt::Format for Ctrl {
         )
     }
 }
-#[doc = "Control Register 0"]
+#[doc = "Control Register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CtrlClr(pub u32);
 impl CtrlClr {
-    #[doc = "Enables PXP operation with specified parameters"]
+    #[doc = "Enables PXP operation with specified parameters."]
     #[must_use]
     #[inline(always)]
     pub const fn enable(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables PXP operation with specified parameters"]
+    #[doc = "Enables PXP operation with specified parameters."]
     #[inline(always)]
     pub const fn set_enable(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Interrupt enable When using the PXP_NEXT functionality to reprogram the PXP, the new value of this bit will be used and may therefore enable or disable an interrupt unintentionally"]
+    #[doc = "Interrupt enable When using the PXP_NEXT functionality to reprogram the PXP, the new value of this bit will be used and may therefore enable or disable an interrupt unintentionally."]
     #[must_use]
     #[inline(always)]
     pub const fn irq_enable(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Interrupt enable When using the PXP_NEXT functionality to reprogram the PXP, the new value of this bit will be used and may therefore enable or disable an interrupt unintentionally"]
+    #[doc = "Interrupt enable When using the PXP_NEXT functionality to reprogram the PXP, the new value of this bit will be used and may therefore enable or disable an interrupt unintentionally."]
     #[inline(always)]
     pub const fn set_irq_enable(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Next command interrupt enable"]
+    #[doc = "Next command interrupt enable."]
     #[must_use]
     #[inline(always)]
     pub const fn next_irq_enable(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Next command interrupt enable"]
+    #[doc = "Next command interrupt enable."]
     #[inline(always)]
     pub const fn set_next_irq_enable(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Enable handshake with LCD controller"]
+    #[doc = "Enable handshake with LCD controller."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_lcd_handshake(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable handshake with LCD controller"]
+    #[doc = "Enable handshake with LCD controller."]
     #[inline(always)]
     pub const fn set_enable_lcd_handshake(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "Indicates the clockwise rotation to be applied at the output buffer"]
+    #[doc = "Indicates the clockwise rotation to be applied at the output buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn rotate(&self) -> super::vals::CtrlClrRotate {
         let val = (self.0 >> 8usize) & 0x03;
         super::vals::CtrlClrRotate::from_bits(val as u8)
     }
-    #[doc = "Indicates the clockwise rotation to be applied at the output buffer"]
+    #[doc = "Indicates the clockwise rotation to be applied at the output buffer."]
     #[inline(always)]
     pub const fn set_rotate(&mut self, val: super::vals::CtrlClrRotate) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
@@ -746,14 +746,14 @@ impl CtrlClr {
     pub const fn set_vflip(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "This bit controls where rotation will occur in the PXP datapath"]
+    #[doc = "This bit controls where rotation will occur in the PXP datapath."]
     #[must_use]
     #[inline(always)]
     pub const fn rot_pos(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit controls where rotation will occur in the PXP datapath"]
+    #[doc = "This bit controls where rotation will occur in the PXP datapath."]
     #[inline(always)]
     pub const fn set_rot_pos(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
@@ -770,26 +770,26 @@ impl CtrlClr {
     pub const fn set_block_size(&mut self, val: super::vals::CtrlClrBlockSize) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
     }
-    #[doc = "Enable the PXP to run continuously"]
+    #[doc = "Enable the PXP to run continuously."]
     #[must_use]
     #[inline(always)]
     pub const fn en_repeat(&self) -> super::vals::CtrlClrEnRepeat {
         let val = (self.0 >> 28usize) & 0x01;
         super::vals::CtrlClrEnRepeat::from_bits(val as u8)
     }
-    #[doc = "Enable the PXP to run continuously"]
+    #[doc = "Enable the PXP to run continuously."]
     #[inline(always)]
     pub const fn set_en_repeat(&mut self, val: super::vals::CtrlClrEnRepeat) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
     }
-    #[doc = "This bit must be set to zero for normal operation"]
+    #[doc = "This bit must be set to zero for normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn clkgate(&self) -> super::vals::CtrlClrClkgate {
         let val = (self.0 >> 30usize) & 0x01;
         super::vals::CtrlClrClkgate::from_bits(val as u8)
     }
-    #[doc = "This bit must be set to zero for normal operation"]
+    #[doc = "This bit must be set to zero for normal operation."]
     #[inline(always)]
     pub const fn set_clkgate(&mut self, val: super::vals::CtrlClrClkgate) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
@@ -852,67 +852,67 @@ impl defmt::Format for CtrlClr {
         )
     }
 }
-#[doc = "Control Register 0"]
+#[doc = "Control Register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CtrlSet(pub u32);
 impl CtrlSet {
-    #[doc = "Enables PXP operation with specified parameters"]
+    #[doc = "Enables PXP operation with specified parameters."]
     #[must_use]
     #[inline(always)]
     pub const fn enable(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables PXP operation with specified parameters"]
+    #[doc = "Enables PXP operation with specified parameters."]
     #[inline(always)]
     pub const fn set_enable(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Interrupt enable When using the PXP_NEXT functionality to reprogram the PXP, the new value of this bit will be used and may therefore enable or disable an interrupt unintentionally"]
+    #[doc = "Interrupt enable When using the PXP_NEXT functionality to reprogram the PXP, the new value of this bit will be used and may therefore enable or disable an interrupt unintentionally."]
     #[must_use]
     #[inline(always)]
     pub const fn irq_enable(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Interrupt enable When using the PXP_NEXT functionality to reprogram the PXP, the new value of this bit will be used and may therefore enable or disable an interrupt unintentionally"]
+    #[doc = "Interrupt enable When using the PXP_NEXT functionality to reprogram the PXP, the new value of this bit will be used and may therefore enable or disable an interrupt unintentionally."]
     #[inline(always)]
     pub const fn set_irq_enable(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Next command interrupt enable"]
+    #[doc = "Next command interrupt enable."]
     #[must_use]
     #[inline(always)]
     pub const fn next_irq_enable(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Next command interrupt enable"]
+    #[doc = "Next command interrupt enable."]
     #[inline(always)]
     pub const fn set_next_irq_enable(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Enable handshake with LCD controller"]
+    #[doc = "Enable handshake with LCD controller."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_lcd_handshake(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable handshake with LCD controller"]
+    #[doc = "Enable handshake with LCD controller."]
     #[inline(always)]
     pub const fn set_enable_lcd_handshake(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "Indicates the clockwise rotation to be applied at the output buffer"]
+    #[doc = "Indicates the clockwise rotation to be applied at the output buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn rotate(&self) -> super::vals::CtrlSetRotate {
         let val = (self.0 >> 8usize) & 0x03;
         super::vals::CtrlSetRotate::from_bits(val as u8)
     }
-    #[doc = "Indicates the clockwise rotation to be applied at the output buffer"]
+    #[doc = "Indicates the clockwise rotation to be applied at the output buffer."]
     #[inline(always)]
     pub const fn set_rotate(&mut self, val: super::vals::CtrlSetRotate) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
@@ -941,14 +941,14 @@ impl CtrlSet {
     pub const fn set_vflip(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "This bit controls where rotation will occur in the PXP datapath"]
+    #[doc = "This bit controls where rotation will occur in the PXP datapath."]
     #[must_use]
     #[inline(always)]
     pub const fn rot_pos(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit controls where rotation will occur in the PXP datapath"]
+    #[doc = "This bit controls where rotation will occur in the PXP datapath."]
     #[inline(always)]
     pub const fn set_rot_pos(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
@@ -965,26 +965,26 @@ impl CtrlSet {
     pub const fn set_block_size(&mut self, val: super::vals::CtrlSetBlockSize) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
     }
-    #[doc = "Enable the PXP to run continuously"]
+    #[doc = "Enable the PXP to run continuously."]
     #[must_use]
     #[inline(always)]
     pub const fn en_repeat(&self) -> super::vals::CtrlSetEnRepeat {
         let val = (self.0 >> 28usize) & 0x01;
         super::vals::CtrlSetEnRepeat::from_bits(val as u8)
     }
-    #[doc = "Enable the PXP to run continuously"]
+    #[doc = "Enable the PXP to run continuously."]
     #[inline(always)]
     pub const fn set_en_repeat(&mut self, val: super::vals::CtrlSetEnRepeat) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
     }
-    #[doc = "This bit must be set to zero for normal operation"]
+    #[doc = "This bit must be set to zero for normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn clkgate(&self) -> super::vals::CtrlSetClkgate {
         let val = (self.0 >> 30usize) & 0x01;
         super::vals::CtrlSetClkgate::from_bits(val as u8)
     }
-    #[doc = "This bit must be set to zero for normal operation"]
+    #[doc = "This bit must be set to zero for normal operation."]
     #[inline(always)]
     pub const fn set_clkgate(&mut self, val: super::vals::CtrlSetClkgate) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
@@ -1047,67 +1047,67 @@ impl defmt::Format for CtrlSet {
         )
     }
 }
-#[doc = "Control Register 0"]
+#[doc = "Control Register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CtrlTog(pub u32);
 impl CtrlTog {
-    #[doc = "Enables PXP operation with specified parameters"]
+    #[doc = "Enables PXP operation with specified parameters."]
     #[must_use]
     #[inline(always)]
     pub const fn enable(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables PXP operation with specified parameters"]
+    #[doc = "Enables PXP operation with specified parameters."]
     #[inline(always)]
     pub const fn set_enable(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Interrupt enable When using the PXP_NEXT functionality to reprogram the PXP, the new value of this bit will be used and may therefore enable or disable an interrupt unintentionally"]
+    #[doc = "Interrupt enable When using the PXP_NEXT functionality to reprogram the PXP, the new value of this bit will be used and may therefore enable or disable an interrupt unintentionally."]
     #[must_use]
     #[inline(always)]
     pub const fn irq_enable(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Interrupt enable When using the PXP_NEXT functionality to reprogram the PXP, the new value of this bit will be used and may therefore enable or disable an interrupt unintentionally"]
+    #[doc = "Interrupt enable When using the PXP_NEXT functionality to reprogram the PXP, the new value of this bit will be used and may therefore enable or disable an interrupt unintentionally."]
     #[inline(always)]
     pub const fn set_irq_enable(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Next command interrupt enable"]
+    #[doc = "Next command interrupt enable."]
     #[must_use]
     #[inline(always)]
     pub const fn next_irq_enable(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Next command interrupt enable"]
+    #[doc = "Next command interrupt enable."]
     #[inline(always)]
     pub const fn set_next_irq_enable(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Enable handshake with LCD controller"]
+    #[doc = "Enable handshake with LCD controller."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_lcd_handshake(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable handshake with LCD controller"]
+    #[doc = "Enable handshake with LCD controller."]
     #[inline(always)]
     pub const fn set_enable_lcd_handshake(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "Indicates the clockwise rotation to be applied at the output buffer"]
+    #[doc = "Indicates the clockwise rotation to be applied at the output buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn rotate(&self) -> super::vals::CtrlTogRotate {
         let val = (self.0 >> 8usize) & 0x03;
         super::vals::CtrlTogRotate::from_bits(val as u8)
     }
-    #[doc = "Indicates the clockwise rotation to be applied at the output buffer"]
+    #[doc = "Indicates the clockwise rotation to be applied at the output buffer."]
     #[inline(always)]
     pub const fn set_rotate(&mut self, val: super::vals::CtrlTogRotate) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
@@ -1136,14 +1136,14 @@ impl CtrlTog {
     pub const fn set_vflip(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "This bit controls where rotation will occur in the PXP datapath"]
+    #[doc = "This bit controls where rotation will occur in the PXP datapath."]
     #[must_use]
     #[inline(always)]
     pub const fn rot_pos(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit controls where rotation will occur in the PXP datapath"]
+    #[doc = "This bit controls where rotation will occur in the PXP datapath."]
     #[inline(always)]
     pub const fn set_rot_pos(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
@@ -1160,26 +1160,26 @@ impl CtrlTog {
     pub const fn set_block_size(&mut self, val: super::vals::CtrlTogBlockSize) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
     }
-    #[doc = "Enable the PXP to run continuously"]
+    #[doc = "Enable the PXP to run continuously."]
     #[must_use]
     #[inline(always)]
     pub const fn en_repeat(&self) -> super::vals::CtrlTogEnRepeat {
         let val = (self.0 >> 28usize) & 0x01;
         super::vals::CtrlTogEnRepeat::from_bits(val as u8)
     }
-    #[doc = "Enable the PXP to run continuously"]
+    #[doc = "Enable the PXP to run continuously."]
     #[inline(always)]
     pub const fn set_en_repeat(&mut self, val: super::vals::CtrlTogEnRepeat) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
     }
-    #[doc = "This bit must be set to zero for normal operation"]
+    #[doc = "This bit must be set to zero for normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn clkgate(&self) -> super::vals::CtrlTogClkgate {
         let val = (self.0 >> 30usize) & 0x01;
         super::vals::CtrlTogClkgate::from_bits(val as u8)
     }
-    #[doc = "This bit must be set to zero for normal operation"]
+    #[doc = "This bit must be set to zero for normal operation."]
     #[inline(always)]
     pub const fn set_clkgate(&mut self, val: super::vals::CtrlTogClkgate) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
@@ -1242,31 +1242,31 @@ impl defmt::Format for CtrlTog {
         )
     }
 }
-#[doc = "Next Frame Pointer"]
+#[doc = "Next Frame Pointer."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Next(pub u32);
 impl Next {
-    #[doc = "Indicates that the \"next frame\" functionality has been enabled"]
+    #[doc = "Indicates that the \"next frame\" functionality has been enabled."]
     #[must_use]
     #[inline(always)]
     pub const fn enabled(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates that the \"next frame\" functionality has been enabled"]
+    #[doc = "Indicates that the \"next frame\" functionality has been enabled."]
     #[inline(always)]
     pub const fn set_enabled(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "A pointer to a data structure containing register values to be used when processing the next frame"]
+    #[doc = "A pointer to a data structure containing register values to be used when processing the next frame."]
     #[must_use]
     #[inline(always)]
     pub const fn pointer(&self) -> u32 {
         let val = (self.0 >> 2usize) & 0x3fff_ffff;
         val as u32
     }
-    #[doc = "A pointer to a data structure containing register values to be used when processing the next frame"]
+    #[doc = "A pointer to a data structure containing register values to be used when processing the next frame."]
     #[inline(always)]
     pub const fn set_pointer(&mut self, val: u32) {
         self.0 = (self.0 & !(0x3fff_ffff << 2usize)) | (((val as u32) & 0x3fff_ffff) << 2usize);
@@ -1297,31 +1297,31 @@ impl defmt::Format for Next {
         )
     }
 }
-#[doc = "Alpha Surface Lower Right Coordinate"]
+#[doc = "Alpha Surface Lower Right Coordinate."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OutAsLrc(pub u32);
 impl OutAsLrc {
-    #[doc = "This field indicates the lower right Y-coordinate (in pixels) of the alpha surface in the output frame buffer"]
+    #[doc = "This field indicates the lower right Y-coordinate (in pixels) of the alpha surface in the output frame buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn y(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x3fff;
         val as u16
     }
-    #[doc = "This field indicates the lower right Y-coordinate (in pixels) of the alpha surface in the output frame buffer"]
+    #[doc = "This field indicates the lower right Y-coordinate (in pixels) of the alpha surface in the output frame buffer."]
     #[inline(always)]
     pub const fn set_y(&mut self, val: u16) {
         self.0 = (self.0 & !(0x3fff << 0usize)) | (((val as u32) & 0x3fff) << 0usize);
     }
-    #[doc = "This field indicates the lower right X-coordinate (in pixels) of the alpha surface (AS) in the output frame buffer"]
+    #[doc = "This field indicates the lower right X-coordinate (in pixels) of the alpha surface (AS) in the output frame buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn x(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x3fff;
         val as u16
     }
-    #[doc = "This field indicates the lower right X-coordinate (in pixels) of the alpha surface (AS) in the output frame buffer"]
+    #[doc = "This field indicates the lower right X-coordinate (in pixels) of the alpha surface (AS) in the output frame buffer."]
     #[inline(always)]
     pub const fn set_x(&mut self, val: u16) {
         self.0 = (self.0 & !(0x3fff << 16usize)) | (((val as u32) & 0x3fff) << 16usize);
@@ -1352,31 +1352,31 @@ impl defmt::Format for OutAsLrc {
         )
     }
 }
-#[doc = "Alpha Surface Upper Left Coordinate"]
+#[doc = "Alpha Surface Upper Left Coordinate."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OutAsUlc(pub u32);
 impl OutAsUlc {
-    #[doc = "This field indicates the upper left Y-coordinate (in pixels) of the alpha surface in the output frame buffer"]
+    #[doc = "This field indicates the upper left Y-coordinate (in pixels) of the alpha surface in the output frame buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn y(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x3fff;
         val as u16
     }
-    #[doc = "This field indicates the upper left Y-coordinate (in pixels) of the alpha surface in the output frame buffer"]
+    #[doc = "This field indicates the upper left Y-coordinate (in pixels) of the alpha surface in the output frame buffer."]
     #[inline(always)]
     pub const fn set_y(&mut self, val: u16) {
         self.0 = (self.0 & !(0x3fff << 0usize)) | (((val as u32) & 0x3fff) << 0usize);
     }
-    #[doc = "This field indicates the upper left X-coordinate (in pixels) of the alpha surface (AS) in the output frame buffer"]
+    #[doc = "This field indicates the upper left X-coordinate (in pixels) of the alpha surface (AS) in the output frame buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn x(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x3fff;
         val as u16
     }
-    #[doc = "This field indicates the upper left X-coordinate (in pixels) of the alpha surface (AS) in the output frame buffer"]
+    #[doc = "This field indicates the upper left X-coordinate (in pixels) of the alpha surface (AS) in the output frame buffer."]
     #[inline(always)]
     pub const fn set_x(&mut self, val: u16) {
         self.0 = (self.0 & !(0x3fff << 16usize)) | (((val as u32) & 0x3fff) << 16usize);
@@ -1407,19 +1407,19 @@ impl defmt::Format for OutAsUlc {
         )
     }
 }
-#[doc = "Output Frame Buffer Pointer"]
+#[doc = "Output Frame Buffer Pointer."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OutBuf(pub u32);
 impl OutBuf {
-    #[doc = "Current address pointer for the output frame buffer"]
+    #[doc = "Current address pointer for the output frame buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn addr(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Current address pointer for the output frame buffer"]
+    #[doc = "Current address pointer for the output frame buffer."]
     #[inline(always)]
     pub const fn set_addr(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1444,19 +1444,19 @@ impl defmt::Format for OutBuf {
         defmt::write!(f, "OutBuf {{ addr: {=u32:?} }}", self.addr())
     }
 }
-#[doc = "Output Frame Buffer Pointer #2"]
+#[doc = "Output Frame Buffer Pointer #2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OutBuf2(pub u32);
 impl OutBuf2 {
-    #[doc = "Current address pointer for the output frame buffer"]
+    #[doc = "Current address pointer for the output frame buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn addr(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Current address pointer for the output frame buffer"]
+    #[doc = "Current address pointer for the output frame buffer."]
     #[inline(always)]
     pub const fn set_addr(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1481,55 +1481,55 @@ impl defmt::Format for OutBuf2 {
         defmt::write!(f, "OutBuf2 {{ addr: {=u32:?} }}", self.addr())
     }
 }
-#[doc = "Output Buffer Control Register"]
+#[doc = "Output Buffer Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OutCtrl(pub u32);
 impl OutCtrl {
-    #[doc = "Output framebuffer format"]
+    #[doc = "Output framebuffer format."]
     #[must_use]
     #[inline(always)]
     pub const fn format(&self) -> super::vals::OutCtrlFormat {
         let val = (self.0 >> 0usize) & 0x1f;
         super::vals::OutCtrlFormat::from_bits(val as u8)
     }
-    #[doc = "Output framebuffer format"]
+    #[doc = "Output framebuffer format."]
     #[inline(always)]
     pub const fn set_format(&mut self, val: super::vals::OutCtrlFormat) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val.to_bits() as u32) & 0x1f) << 0usize);
     }
-    #[doc = "Determines how the PXP writes it's output data"]
+    #[doc = "Determines how the PXP writes it's output data."]
     #[must_use]
     #[inline(always)]
     pub const fn interlaced_output(&self) -> super::vals::OutCtrlInterlacedOutput {
         let val = (self.0 >> 8usize) & 0x03;
         super::vals::OutCtrlInterlacedOutput::from_bits(val as u8)
     }
-    #[doc = "Determines how the PXP writes it's output data"]
+    #[doc = "Determines how the PXP writes it's output data."]
     #[inline(always)]
     pub const fn set_interlaced_output(&mut self, val: super::vals::OutCtrlInterlacedOutput) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
-    #[doc = "Indicates that alpha component in output buffer pixels should be overwritten by PXP_OUT_CTRL\\[ALPHA\\]"]
+    #[doc = "Indicates that alpha component in output buffer pixels should be overwritten by PXP_OUT_CTRL\\[ALPHA\\]."]
     #[must_use]
     #[inline(always)]
     pub const fn alpha_output(&self) -> super::vals::OutCtrlAlphaOutput {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::OutCtrlAlphaOutput::from_bits(val as u8)
     }
-    #[doc = "Indicates that alpha component in output buffer pixels should be overwritten by PXP_OUT_CTRL\\[ALPHA\\]"]
+    #[doc = "Indicates that alpha component in output buffer pixels should be overwritten by PXP_OUT_CTRL\\[ALPHA\\]."]
     #[inline(always)]
     pub const fn set_alpha_output(&mut self, val: super::vals::OutCtrlAlphaOutput) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
     }
-    #[doc = "When generating an output buffer with an alpha component, the value in this field will be used when enabled to override the alpha passed through the pixel data pipeline"]
+    #[doc = "When generating an output buffer with an alpha component, the value in this field will be used when enabled to override the alpha passed through the pixel data pipeline."]
     #[must_use]
     #[inline(always)]
     pub const fn alpha(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "When generating an output buffer with an alpha component, the value in this field will be used when enabled to override the alpha passed through the pixel data pipeline"]
+    #[doc = "When generating an output buffer with an alpha component, the value in this field will be used when enabled to override the alpha passed through the pixel data pipeline."]
     #[inline(always)]
     pub const fn set_alpha(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);
@@ -1564,55 +1564,55 @@ impl defmt::Format for OutCtrl {
         )
     }
 }
-#[doc = "Output Buffer Control Register"]
+#[doc = "Output Buffer Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OutCtrlClr(pub u32);
 impl OutCtrlClr {
-    #[doc = "Output framebuffer format"]
+    #[doc = "Output framebuffer format."]
     #[must_use]
     #[inline(always)]
     pub const fn format(&self) -> super::vals::OutCtrlClrFormat {
         let val = (self.0 >> 0usize) & 0x1f;
         super::vals::OutCtrlClrFormat::from_bits(val as u8)
     }
-    #[doc = "Output framebuffer format"]
+    #[doc = "Output framebuffer format."]
     #[inline(always)]
     pub const fn set_format(&mut self, val: super::vals::OutCtrlClrFormat) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val.to_bits() as u32) & 0x1f) << 0usize);
     }
-    #[doc = "Determines how the PXP writes it's output data"]
+    #[doc = "Determines how the PXP writes it's output data."]
     #[must_use]
     #[inline(always)]
     pub const fn interlaced_output(&self) -> super::vals::OutCtrlClrInterlacedOutput {
         let val = (self.0 >> 8usize) & 0x03;
         super::vals::OutCtrlClrInterlacedOutput::from_bits(val as u8)
     }
-    #[doc = "Determines how the PXP writes it's output data"]
+    #[doc = "Determines how the PXP writes it's output data."]
     #[inline(always)]
     pub const fn set_interlaced_output(&mut self, val: super::vals::OutCtrlClrInterlacedOutput) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
-    #[doc = "Indicates that alpha component in output buffer pixels should be overwritten by PXP_OUT_CTRL\\[ALPHA\\]"]
+    #[doc = "Indicates that alpha component in output buffer pixels should be overwritten by PXP_OUT_CTRL\\[ALPHA\\]."]
     #[must_use]
     #[inline(always)]
     pub const fn alpha_output(&self) -> super::vals::OutCtrlClrAlphaOutput {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::OutCtrlClrAlphaOutput::from_bits(val as u8)
     }
-    #[doc = "Indicates that alpha component in output buffer pixels should be overwritten by PXP_OUT_CTRL\\[ALPHA\\]"]
+    #[doc = "Indicates that alpha component in output buffer pixels should be overwritten by PXP_OUT_CTRL\\[ALPHA\\]."]
     #[inline(always)]
     pub const fn set_alpha_output(&mut self, val: super::vals::OutCtrlClrAlphaOutput) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
     }
-    #[doc = "When generating an output buffer with an alpha component, the value in this field will be used when enabled to override the alpha passed through the pixel data pipeline"]
+    #[doc = "When generating an output buffer with an alpha component, the value in this field will be used when enabled to override the alpha passed through the pixel data pipeline."]
     #[must_use]
     #[inline(always)]
     pub const fn alpha(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "When generating an output buffer with an alpha component, the value in this field will be used when enabled to override the alpha passed through the pixel data pipeline"]
+    #[doc = "When generating an output buffer with an alpha component, the value in this field will be used when enabled to override the alpha passed through the pixel data pipeline."]
     #[inline(always)]
     pub const fn set_alpha(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);
@@ -1647,55 +1647,55 @@ impl defmt::Format for OutCtrlClr {
         )
     }
 }
-#[doc = "Output Buffer Control Register"]
+#[doc = "Output Buffer Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OutCtrlSet(pub u32);
 impl OutCtrlSet {
-    #[doc = "Output framebuffer format"]
+    #[doc = "Output framebuffer format."]
     #[must_use]
     #[inline(always)]
     pub const fn format(&self) -> super::vals::OutCtrlSetFormat {
         let val = (self.0 >> 0usize) & 0x1f;
         super::vals::OutCtrlSetFormat::from_bits(val as u8)
     }
-    #[doc = "Output framebuffer format"]
+    #[doc = "Output framebuffer format."]
     #[inline(always)]
     pub const fn set_format(&mut self, val: super::vals::OutCtrlSetFormat) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val.to_bits() as u32) & 0x1f) << 0usize);
     }
-    #[doc = "Determines how the PXP writes it's output data"]
+    #[doc = "Determines how the PXP writes it's output data."]
     #[must_use]
     #[inline(always)]
     pub const fn interlaced_output(&self) -> super::vals::OutCtrlSetInterlacedOutput {
         let val = (self.0 >> 8usize) & 0x03;
         super::vals::OutCtrlSetInterlacedOutput::from_bits(val as u8)
     }
-    #[doc = "Determines how the PXP writes it's output data"]
+    #[doc = "Determines how the PXP writes it's output data."]
     #[inline(always)]
     pub const fn set_interlaced_output(&mut self, val: super::vals::OutCtrlSetInterlacedOutput) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
-    #[doc = "Indicates that alpha component in output buffer pixels should be overwritten by PXP_OUT_CTRL\\[ALPHA\\]"]
+    #[doc = "Indicates that alpha component in output buffer pixels should be overwritten by PXP_OUT_CTRL\\[ALPHA\\]."]
     #[must_use]
     #[inline(always)]
     pub const fn alpha_output(&self) -> super::vals::OutCtrlSetAlphaOutput {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::OutCtrlSetAlphaOutput::from_bits(val as u8)
     }
-    #[doc = "Indicates that alpha component in output buffer pixels should be overwritten by PXP_OUT_CTRL\\[ALPHA\\]"]
+    #[doc = "Indicates that alpha component in output buffer pixels should be overwritten by PXP_OUT_CTRL\\[ALPHA\\]."]
     #[inline(always)]
     pub const fn set_alpha_output(&mut self, val: super::vals::OutCtrlSetAlphaOutput) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
     }
-    #[doc = "When generating an output buffer with an alpha component, the value in this field will be used when enabled to override the alpha passed through the pixel data pipeline"]
+    #[doc = "When generating an output buffer with an alpha component, the value in this field will be used when enabled to override the alpha passed through the pixel data pipeline."]
     #[must_use]
     #[inline(always)]
     pub const fn alpha(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "When generating an output buffer with an alpha component, the value in this field will be used when enabled to override the alpha passed through the pixel data pipeline"]
+    #[doc = "When generating an output buffer with an alpha component, the value in this field will be used when enabled to override the alpha passed through the pixel data pipeline."]
     #[inline(always)]
     pub const fn set_alpha(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);
@@ -1730,55 +1730,55 @@ impl defmt::Format for OutCtrlSet {
         )
     }
 }
-#[doc = "Output Buffer Control Register"]
+#[doc = "Output Buffer Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OutCtrlTog(pub u32);
 impl OutCtrlTog {
-    #[doc = "Output framebuffer format"]
+    #[doc = "Output framebuffer format."]
     #[must_use]
     #[inline(always)]
     pub const fn format(&self) -> super::vals::OutCtrlTogFormat {
         let val = (self.0 >> 0usize) & 0x1f;
         super::vals::OutCtrlTogFormat::from_bits(val as u8)
     }
-    #[doc = "Output framebuffer format"]
+    #[doc = "Output framebuffer format."]
     #[inline(always)]
     pub const fn set_format(&mut self, val: super::vals::OutCtrlTogFormat) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val.to_bits() as u32) & 0x1f) << 0usize);
     }
-    #[doc = "Determines how the PXP writes it's output data"]
+    #[doc = "Determines how the PXP writes it's output data."]
     #[must_use]
     #[inline(always)]
     pub const fn interlaced_output(&self) -> super::vals::OutCtrlTogInterlacedOutput {
         let val = (self.0 >> 8usize) & 0x03;
         super::vals::OutCtrlTogInterlacedOutput::from_bits(val as u8)
     }
-    #[doc = "Determines how the PXP writes it's output data"]
+    #[doc = "Determines how the PXP writes it's output data."]
     #[inline(always)]
     pub const fn set_interlaced_output(&mut self, val: super::vals::OutCtrlTogInterlacedOutput) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
-    #[doc = "Indicates that alpha component in output buffer pixels should be overwritten by PXP_OUT_CTRL\\[ALPHA\\]"]
+    #[doc = "Indicates that alpha component in output buffer pixels should be overwritten by PXP_OUT_CTRL\\[ALPHA\\]."]
     #[must_use]
     #[inline(always)]
     pub const fn alpha_output(&self) -> super::vals::OutCtrlTogAlphaOutput {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::OutCtrlTogAlphaOutput::from_bits(val as u8)
     }
-    #[doc = "Indicates that alpha component in output buffer pixels should be overwritten by PXP_OUT_CTRL\\[ALPHA\\]"]
+    #[doc = "Indicates that alpha component in output buffer pixels should be overwritten by PXP_OUT_CTRL\\[ALPHA\\]."]
     #[inline(always)]
     pub const fn set_alpha_output(&mut self, val: super::vals::OutCtrlTogAlphaOutput) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
     }
-    #[doc = "When generating an output buffer with an alpha component, the value in this field will be used when enabled to override the alpha passed through the pixel data pipeline"]
+    #[doc = "When generating an output buffer with an alpha component, the value in this field will be used when enabled to override the alpha passed through the pixel data pipeline."]
     #[must_use]
     #[inline(always)]
     pub const fn alpha(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "When generating an output buffer with an alpha component, the value in this field will be used when enabled to override the alpha passed through the pixel data pipeline"]
+    #[doc = "When generating an output buffer with an alpha component, the value in this field will be used when enabled to override the alpha passed through the pixel data pipeline."]
     #[inline(always)]
     pub const fn set_alpha(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);
@@ -1813,31 +1813,31 @@ impl defmt::Format for OutCtrlTog {
         )
     }
 }
-#[doc = "Output Surface Lower Right Coordinate"]
+#[doc = "Output Surface Lower Right Coordinate."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OutLrc(pub u32);
 impl OutLrc {
-    #[doc = "Indicates the number of vertical PIXELS in the output surface (non-rotated)"]
+    #[doc = "Indicates the number of vertical PIXELS in the output surface (non-rotated)."]
     #[must_use]
     #[inline(always)]
     pub const fn y(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x3fff;
         val as u16
     }
-    #[doc = "Indicates the number of vertical PIXELS in the output surface (non-rotated)"]
+    #[doc = "Indicates the number of vertical PIXELS in the output surface (non-rotated)."]
     #[inline(always)]
     pub const fn set_y(&mut self, val: u16) {
         self.0 = (self.0 & !(0x3fff << 0usize)) | (((val as u32) & 0x3fff) << 0usize);
     }
-    #[doc = "Indicates number of horizontal PIXELS in the output surface (non-rotated)"]
+    #[doc = "Indicates number of horizontal PIXELS in the output surface (non-rotated)."]
     #[must_use]
     #[inline(always)]
     pub const fn x(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x3fff;
         val as u16
     }
-    #[doc = "Indicates number of horizontal PIXELS in the output surface (non-rotated)"]
+    #[doc = "Indicates number of horizontal PIXELS in the output surface (non-rotated)."]
     #[inline(always)]
     pub const fn set_x(&mut self, val: u16) {
         self.0 = (self.0 & !(0x3fff << 16usize)) | (((val as u32) & 0x3fff) << 16usize);
@@ -1868,7 +1868,7 @@ impl defmt::Format for OutLrc {
         )
     }
 }
-#[doc = "Output Buffer Pitch"]
+#[doc = "Output Buffer Pitch."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OutPitch(pub u32);
@@ -1905,31 +1905,31 @@ impl defmt::Format for OutPitch {
         defmt::write!(f, "OutPitch {{ pitch: {=u16:?} }}", self.pitch())
     }
 }
-#[doc = "Processed Surface Lower Right Coordinate"]
+#[doc = "Processed Surface Lower Right Coordinate."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OutPsLrc(pub u32);
 impl OutPsLrc {
-    #[doc = "This field indicates the lower right Y-coordinate (in pixels) of the processed surface in the output frame buffer"]
+    #[doc = "This field indicates the lower right Y-coordinate (in pixels) of the processed surface in the output frame buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn y(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x3fff;
         val as u16
     }
-    #[doc = "This field indicates the lower right Y-coordinate (in pixels) of the processed surface in the output frame buffer"]
+    #[doc = "This field indicates the lower right Y-coordinate (in pixels) of the processed surface in the output frame buffer."]
     #[inline(always)]
     pub const fn set_y(&mut self, val: u16) {
         self.0 = (self.0 & !(0x3fff << 0usize)) | (((val as u32) & 0x3fff) << 0usize);
     }
-    #[doc = "This field indicates the lower right X-coordinate (in pixels) of the processed surface (PS) in the output frame buffer"]
+    #[doc = "This field indicates the lower right X-coordinate (in pixels) of the processed surface (PS) in the output frame buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn x(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x3fff;
         val as u16
     }
-    #[doc = "This field indicates the lower right X-coordinate (in pixels) of the processed surface (PS) in the output frame buffer"]
+    #[doc = "This field indicates the lower right X-coordinate (in pixels) of the processed surface (PS) in the output frame buffer."]
     #[inline(always)]
     pub const fn set_x(&mut self, val: u16) {
         self.0 = (self.0 & !(0x3fff << 16usize)) | (((val as u32) & 0x3fff) << 16usize);
@@ -1960,31 +1960,31 @@ impl defmt::Format for OutPsLrc {
         )
     }
 }
-#[doc = "Processed Surface Upper Left Coordinate"]
+#[doc = "Processed Surface Upper Left Coordinate."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OutPsUlc(pub u32);
 impl OutPsUlc {
-    #[doc = "This field indicates the upper left Y-coordinate (in pixels) of the processed surface in the output buffer"]
+    #[doc = "This field indicates the upper left Y-coordinate (in pixels) of the processed surface in the output buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn y(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x3fff;
         val as u16
     }
-    #[doc = "This field indicates the upper left Y-coordinate (in pixels) of the processed surface in the output buffer"]
+    #[doc = "This field indicates the upper left Y-coordinate (in pixels) of the processed surface in the output buffer."]
     #[inline(always)]
     pub const fn set_y(&mut self, val: u16) {
         self.0 = (self.0 & !(0x3fff << 0usize)) | (((val as u32) & 0x3fff) << 0usize);
     }
-    #[doc = "This field indicates the upper left X-coordinate (in pixels) of the processed surface (PS) in the output buffer"]
+    #[doc = "This field indicates the upper left X-coordinate (in pixels) of the processed surface (PS) in the output buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn x(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x3fff;
         val as u16
     }
-    #[doc = "This field indicates the upper left X-coordinate (in pixels) of the processed surface (PS) in the output buffer"]
+    #[doc = "This field indicates the upper left X-coordinate (in pixels) of the processed surface (PS) in the output buffer."]
     #[inline(always)]
     pub const fn set_x(&mut self, val: u16) {
         self.0 = (self.0 & !(0x3fff << 16usize)) | (((val as u32) & 0x3fff) << 16usize);
@@ -2020,134 +2020,134 @@ impl defmt::Format for OutPsUlc {
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PorterDuffCtrl(pub u32);
 impl PorterDuffCtrl {
-    #[doc = "Porter-Duff Enable"]
+    #[doc = "Porter-Duff Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn porter_duff_enable(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Porter-Duff Enable"]
+    #[doc = "Porter-Duff Enable."]
     #[inline(always)]
     pub const fn set_porter_duff_enable(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "s0 to s1 factor mode"]
+    #[doc = "s0 to s1 factor mode."]
     #[must_use]
     #[inline(always)]
     pub const fn s0_s1_factor_mode(&self) -> super::vals::S0S1FactorMode {
         let val = (self.0 >> 1usize) & 0x03;
         super::vals::S0S1FactorMode::from_bits(val as u8)
     }
-    #[doc = "s0 to s1 factor mode"]
+    #[doc = "s0 to s1 factor mode."]
     #[inline(always)]
     pub const fn set_s0_s1_factor_mode(&mut self, val: super::vals::S0S1FactorMode) {
         self.0 = (self.0 & !(0x03 << 1usize)) | (((val.to_bits() as u32) & 0x03) << 1usize);
     }
-    #[doc = "s0 global alpha mode"]
+    #[doc = "s0 global alpha mode."]
     #[must_use]
     #[inline(always)]
     pub const fn s0_global_alpha_mode(&self) -> super::vals::S0GlobalAlphaMode {
         let val = (self.0 >> 3usize) & 0x03;
         super::vals::S0GlobalAlphaMode::from_bits(val as u8)
     }
-    #[doc = "s0 global alpha mode"]
+    #[doc = "s0 global alpha mode."]
     #[inline(always)]
     pub const fn set_s0_global_alpha_mode(&mut self, val: super::vals::S0GlobalAlphaMode) {
         self.0 = (self.0 & !(0x03 << 3usize)) | (((val.to_bits() as u32) & 0x03) << 3usize);
     }
-    #[doc = "s0 alpha mode (Porter-Duff alpha mode)"]
+    #[doc = "s0 alpha mode (Porter-Duff alpha mode)."]
     #[must_use]
     #[inline(always)]
     pub const fn s0_alpha_mode(&self) -> super::vals::S0AlphaMode {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::S0AlphaMode::from_bits(val as u8)
     }
-    #[doc = "s0 alpha mode (Porter-Duff alpha mode)"]
+    #[doc = "s0 alpha mode (Porter-Duff alpha mode)."]
     #[inline(always)]
     pub const fn set_s0_alpha_mode(&mut self, val: super::vals::S0AlphaMode) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
-    #[doc = "s0 color mode (Porter-Duff color mode)"]
+    #[doc = "s0 color mode (Porter-Duff color mode)."]
     #[must_use]
     #[inline(always)]
     pub const fn s0_color_mode(&self) -> super::vals::S0ColorMode {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::S0ColorMode::from_bits(val as u8)
     }
-    #[doc = "s0 color mode (Porter-Duff color mode)"]
+    #[doc = "s0 color mode (Porter-Duff color mode)."]
     #[inline(always)]
     pub const fn set_s0_color_mode(&mut self, val: super::vals::S0ColorMode) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "s1 to s0 factor mode (Porter-Duff factor mode)"]
+    #[doc = "s1 to s0 factor mode (Porter-Duff factor mode)."]
     #[must_use]
     #[inline(always)]
     pub const fn s1_s0_factor_mode(&self) -> super::vals::S1S0FactorMode {
         let val = (self.0 >> 8usize) & 0x03;
         super::vals::S1S0FactorMode::from_bits(val as u8)
     }
-    #[doc = "s1 to s0 factor mode (Porter-Duff factor mode)"]
+    #[doc = "s1 to s0 factor mode (Porter-Duff factor mode)."]
     #[inline(always)]
     pub const fn set_s1_s0_factor_mode(&mut self, val: super::vals::S1S0FactorMode) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
-    #[doc = "s1 global alpha mode (Porter-Duff Global Alpha mode)"]
+    #[doc = "s1 global alpha mode (Porter-Duff Global Alpha mode)."]
     #[must_use]
     #[inline(always)]
     pub const fn s1_global_alpha_mode(&self) -> super::vals::S1GlobalAlphaMode {
         let val = (self.0 >> 10usize) & 0x03;
         super::vals::S1GlobalAlphaMode::from_bits(val as u8)
     }
-    #[doc = "s1 global alpha mode (Porter-Duff Global Alpha mode)"]
+    #[doc = "s1 global alpha mode (Porter-Duff Global Alpha mode)."]
     #[inline(always)]
     pub const fn set_s1_global_alpha_mode(&mut self, val: super::vals::S1GlobalAlphaMode) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u32) & 0x03) << 10usize);
     }
-    #[doc = "s1 alpha mode (Porter-Duff Alpha mode)"]
+    #[doc = "s1 alpha mode (Porter-Duff Alpha mode)."]
     #[must_use]
     #[inline(always)]
     pub const fn s1_alpha_mode(&self) -> super::vals::S1AlphaMode {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::S1AlphaMode::from_bits(val as u8)
     }
-    #[doc = "s1 alpha mode (Porter-Duff Alpha mode)"]
+    #[doc = "s1 alpha mode (Porter-Duff Alpha mode)."]
     #[inline(always)]
     pub const fn set_s1_alpha_mode(&mut self, val: super::vals::S1AlphaMode) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "s1 color mode"]
+    #[doc = "s1 color mode."]
     #[must_use]
     #[inline(always)]
     pub const fn s1_color_mode(&self) -> super::vals::S1ColorMode {
         let val = (self.0 >> 13usize) & 0x01;
         super::vals::S1ColorMode::from_bits(val as u8)
     }
-    #[doc = "s1 color mode"]
+    #[doc = "s1 color mode."]
     #[inline(always)]
     pub const fn set_s1_color_mode(&mut self, val: super::vals::S1ColorMode) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
-    #[doc = "s0 global alpha"]
+    #[doc = "s0 global alpha."]
     #[must_use]
     #[inline(always)]
     pub const fn s0_global_alpha(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0xff;
         val as u8
     }
-    #[doc = "s0 global alpha"]
+    #[doc = "s0 global alpha."]
     #[inline(always)]
     pub const fn set_s0_global_alpha(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
     }
-    #[doc = "s1 global alpha"]
+    #[doc = "s1 global alpha."]
     #[must_use]
     #[inline(always)]
     pub const fn s1_global_alpha(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "s1 global alpha"]
+    #[doc = "s1 global alpha."]
     #[inline(always)]
     pub const fn set_s1_global_alpha(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);
@@ -2196,7 +2196,7 @@ impl defmt::Format for PorterDuffCtrl {
         )
     }
 }
-#[doc = "PXP Power Control Register"]
+#[doc = "PXP Power Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Power(pub u32);
@@ -2251,19 +2251,19 @@ impl defmt::Format for Power {
         )
     }
 }
-#[doc = "PS Background Color"]
+#[doc = "PS Background Color."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PsBackground(pub u32);
 impl PsBackground {
-    #[doc = "Background color (in 24bpp format) for any pixels not within the buffer range specified by the PS ULC/LRC"]
+    #[doc = "Background color (in 24bpp format) for any pixels not within the buffer range specified by the PS ULC/LRC."]
     #[must_use]
     #[inline(always)]
     pub const fn color(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x00ff_ffff;
         val as u32
     }
-    #[doc = "Background color (in 24bpp format) for any pixels not within the buffer range specified by the PS ULC/LRC"]
+    #[doc = "Background color (in 24bpp format) for any pixels not within the buffer range specified by the PS ULC/LRC."]
     #[inline(always)]
     pub const fn set_color(&mut self, val: u32) {
         self.0 = (self.0 & !(0x00ff_ffff << 0usize)) | (((val as u32) & 0x00ff_ffff) << 0usize);
@@ -2288,7 +2288,7 @@ impl defmt::Format for PsBackground {
         defmt::write!(f, "PsBackground {{ color: {=u32:?} }}", self.color())
     }
 }
-#[doc = "PS Input Buffer Address"]
+#[doc = "PS Input Buffer Address."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PsBuf(pub u32);
@@ -2323,19 +2323,19 @@ impl defmt::Format for PsBuf {
         defmt::write!(f, "PsBuf {{ addr: {=u32:?} }}", self.addr())
     }
 }
-#[doc = "PS Color Key High"]
+#[doc = "PS Color Key High."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PsClrkeyhigh(pub u32);
 impl PsClrkeyhigh {
-    #[doc = "High range of color key applied to PS buffer"]
+    #[doc = "High range of color key applied to PS buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn pixel(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x00ff_ffff;
         val as u32
     }
-    #[doc = "High range of color key applied to PS buffer"]
+    #[doc = "High range of color key applied to PS buffer."]
     #[inline(always)]
     pub const fn set_pixel(&mut self, val: u32) {
         self.0 = (self.0 & !(0x00ff_ffff << 0usize)) | (((val as u32) & 0x00ff_ffff) << 0usize);
@@ -2360,19 +2360,19 @@ impl defmt::Format for PsClrkeyhigh {
         defmt::write!(f, "PsClrkeyhigh {{ pixel: {=u32:?} }}", self.pixel())
     }
 }
-#[doc = "PS Color Key Low"]
+#[doc = "PS Color Key Low."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PsClrkeylow(pub u32);
 impl PsClrkeylow {
-    #[doc = "Low range of color key applied to PS buffer"]
+    #[doc = "Low range of color key applied to PS buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn pixel(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x00ff_ffff;
         val as u32
     }
-    #[doc = "Low range of color key applied to PS buffer"]
+    #[doc = "Low range of color key applied to PS buffer."]
     #[inline(always)]
     pub const fn set_pixel(&mut self, val: u32) {
         self.0 = (self.0 & !(0x00ff_ffff << 0usize)) | (((val as u32) & 0x00ff_ffff) << 0usize);
@@ -2397,7 +2397,7 @@ impl defmt::Format for PsClrkeylow {
         defmt::write!(f, "PsClrkeylow {{ pixel: {=u32:?} }}", self.pixel())
     }
 }
-#[doc = "Processed Surface (PS) Control Register"]
+#[doc = "Processed Surface (PS) Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PsCtrl(pub u32);
@@ -2480,7 +2480,7 @@ impl defmt::Format for PsCtrl {
         )
     }
 }
-#[doc = "Processed Surface (PS) Control Register"]
+#[doc = "Processed Surface (PS) Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PsCtrlClr(pub u32);
@@ -2563,7 +2563,7 @@ impl defmt::Format for PsCtrlClr {
         )
     }
 }
-#[doc = "Processed Surface (PS) Control Register"]
+#[doc = "Processed Surface (PS) Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PsCtrlSet(pub u32);
@@ -2646,7 +2646,7 @@ impl defmt::Format for PsCtrlSet {
         )
     }
 }
-#[doc = "Processed Surface (PS) Control Register"]
+#[doc = "Processed Surface (PS) Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PsCtrlTog(pub u32);
@@ -2729,31 +2729,31 @@ impl defmt::Format for PsCtrlTog {
         )
     }
 }
-#[doc = "PS Scale Offset Register"]
+#[doc = "PS Scale Offset Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PsOffset(pub u32);
 impl PsOffset {
-    #[doc = "This is a 12 bit fractional representation (0"]
+    #[doc = "This is a 12 bit fractional representation (0."]
     #[must_use]
     #[inline(always)]
     pub const fn xoffset(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "This is a 12 bit fractional representation (0"]
+    #[doc = "This is a 12 bit fractional representation (0."]
     #[inline(always)]
     pub const fn set_xoffset(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
     }
-    #[doc = "This is a 12 bit fractional representation (0"]
+    #[doc = "This is a 12 bit fractional representation (0."]
     #[must_use]
     #[inline(always)]
     pub const fn yoffset(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x0fff;
         val as u16
     }
-    #[doc = "This is a 12 bit fractional representation (0"]
+    #[doc = "This is a 12 bit fractional representation (0."]
     #[inline(always)]
     pub const fn set_yoffset(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);
@@ -2784,7 +2784,7 @@ impl defmt::Format for PsOffset {
         )
     }
 }
-#[doc = "Processed Surface Pitch"]
+#[doc = "Processed Surface Pitch."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PsPitch(pub u32);
@@ -2821,31 +2821,31 @@ impl defmt::Format for PsPitch {
         defmt::write!(f, "PsPitch {{ pitch: {=u16:?} }}", self.pitch())
     }
 }
-#[doc = "PS Scale Factor Register"]
+#[doc = "PS Scale Factor Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PsScale(pub u32);
 impl PsScale {
-    #[doc = "This is a two bit integer and 12 bit fractional representation (##"]
+    #[doc = "This is a two bit integer and 12 bit fractional representation (##."]
     #[must_use]
     #[inline(always)]
     pub const fn xscale(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x7fff;
         val as u16
     }
-    #[doc = "This is a two bit integer and 12 bit fractional representation (##"]
+    #[doc = "This is a two bit integer and 12 bit fractional representation (##."]
     #[inline(always)]
     pub const fn set_xscale(&mut self, val: u16) {
         self.0 = (self.0 & !(0x7fff << 0usize)) | (((val as u32) & 0x7fff) << 0usize);
     }
-    #[doc = "This is a two bit integer and 12 bit fractional representation (##"]
+    #[doc = "This is a two bit integer and 12 bit fractional representation (##."]
     #[must_use]
     #[inline(always)]
     pub const fn yscale(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x7fff;
         val as u16
     }
-    #[doc = "This is a two bit integer and 12 bit fractional representation (##"]
+    #[doc = "This is a two bit integer and 12 bit fractional representation (##."]
     #[inline(always)]
     pub const fn set_yscale(&mut self, val: u16) {
         self.0 = (self.0 & !(0x7fff << 16usize)) | (((val as u32) & 0x7fff) << 16usize);
@@ -2876,7 +2876,7 @@ impl defmt::Format for PsScale {
         )
     }
 }
-#[doc = "PS U/Cb or 2 Plane UV Input Buffer Address"]
+#[doc = "PS U/Cb or 2 Plane UV Input Buffer Address."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PsUbuf(pub u32);
@@ -2913,7 +2913,7 @@ impl defmt::Format for PsUbuf {
         defmt::write!(f, "PsUbuf {{ addr: {=u32:?} }}", self.addr())
     }
 }
-#[doc = "PS V/Cr Input Buffer Address"]
+#[doc = "PS V/Cr Input Buffer Address."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PsVbuf(pub u32);
@@ -2950,19 +2950,19 @@ impl defmt::Format for PsVbuf {
         defmt::write!(f, "PsVbuf {{ addr: {=u32:?} }}", self.addr())
     }
 }
-#[doc = "Status Register"]
+#[doc = "Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Stat(pub u32);
 impl Stat {
-    #[doc = "Indicates current PXP interrupt status"]
+    #[doc = "Indicates current PXP interrupt status."]
     #[must_use]
     #[inline(always)]
     pub const fn irq(&self) -> super::vals::StatIrq {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::StatIrq::from_bits(val as u8)
     }
-    #[doc = "Indicates current PXP interrupt status"]
+    #[doc = "Indicates current PXP interrupt status."]
     #[inline(always)]
     pub const fn set_irq(&mut self, val: super::vals::StatIrq) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
@@ -2991,14 +2991,14 @@ impl Stat {
     pub const fn set_axi_read_error(&mut self, val: super::vals::StatAxiReadError) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "Indicates that a command issued with the \"Next Command\" functionality has been issued and that a new command may be initiated with a write to the PXP_NEXT register"]
+    #[doc = "Indicates that a command issued with the \"Next Command\" functionality has been issued and that a new command may be initiated with a write to the PXP_NEXT register."]
     #[must_use]
     #[inline(always)]
     pub const fn next_irq(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates that a command issued with the \"Next Command\" functionality has been issued and that a new command may be initiated with a write to the PXP_NEXT register"]
+    #[doc = "Indicates that a command issued with the \"Next Command\" functionality has been issued and that a new command may be initiated with a write to the PXP_NEXT register."]
     #[inline(always)]
     pub const fn set_next_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
@@ -3089,19 +3089,19 @@ impl defmt::Format for Stat {
         )
     }
 }
-#[doc = "Status Register"]
+#[doc = "Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct StatClr(pub u32);
 impl StatClr {
-    #[doc = "Indicates current PXP interrupt status"]
+    #[doc = "Indicates current PXP interrupt status."]
     #[must_use]
     #[inline(always)]
     pub const fn irq(&self) -> super::vals::StatClrIrq {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::StatClrIrq::from_bits(val as u8)
     }
-    #[doc = "Indicates current PXP interrupt status"]
+    #[doc = "Indicates current PXP interrupt status."]
     #[inline(always)]
     pub const fn set_irq(&mut self, val: super::vals::StatClrIrq) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
@@ -3130,14 +3130,14 @@ impl StatClr {
     pub const fn set_axi_read_error(&mut self, val: super::vals::StatClrAxiReadError) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "Indicates that a command issued with the \"Next Command\" functionality has been issued and that a new command may be initiated with a write to the PXP_NEXT register"]
+    #[doc = "Indicates that a command issued with the \"Next Command\" functionality has been issued and that a new command may be initiated with a write to the PXP_NEXT register."]
     #[must_use]
     #[inline(always)]
     pub const fn next_irq(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates that a command issued with the \"Next Command\" functionality has been issued and that a new command may be initiated with a write to the PXP_NEXT register"]
+    #[doc = "Indicates that a command issued with the \"Next Command\" functionality has been issued and that a new command may be initiated with a write to the PXP_NEXT register."]
     #[inline(always)]
     pub const fn set_next_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
@@ -3228,19 +3228,19 @@ impl defmt::Format for StatClr {
         )
     }
 }
-#[doc = "Status Register"]
+#[doc = "Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct StatSet(pub u32);
 impl StatSet {
-    #[doc = "Indicates current PXP interrupt status"]
+    #[doc = "Indicates current PXP interrupt status."]
     #[must_use]
     #[inline(always)]
     pub const fn irq(&self) -> super::vals::StatSetIrq {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::StatSetIrq::from_bits(val as u8)
     }
-    #[doc = "Indicates current PXP interrupt status"]
+    #[doc = "Indicates current PXP interrupt status."]
     #[inline(always)]
     pub const fn set_irq(&mut self, val: super::vals::StatSetIrq) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
@@ -3269,14 +3269,14 @@ impl StatSet {
     pub const fn set_axi_read_error(&mut self, val: super::vals::StatSetAxiReadError) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "Indicates that a command issued with the \"Next Command\" functionality has been issued and that a new command may be initiated with a write to the PXP_NEXT register"]
+    #[doc = "Indicates that a command issued with the \"Next Command\" functionality has been issued and that a new command may be initiated with a write to the PXP_NEXT register."]
     #[must_use]
     #[inline(always)]
     pub const fn next_irq(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates that a command issued with the \"Next Command\" functionality has been issued and that a new command may be initiated with a write to the PXP_NEXT register"]
+    #[doc = "Indicates that a command issued with the \"Next Command\" functionality has been issued and that a new command may be initiated with a write to the PXP_NEXT register."]
     #[inline(always)]
     pub const fn set_next_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
@@ -3367,19 +3367,19 @@ impl defmt::Format for StatSet {
         )
     }
 }
-#[doc = "Status Register"]
+#[doc = "Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct StatTog(pub u32);
 impl StatTog {
-    #[doc = "Indicates current PXP interrupt status"]
+    #[doc = "Indicates current PXP interrupt status."]
     #[must_use]
     #[inline(always)]
     pub const fn irq(&self) -> super::vals::StatTogIrq {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::StatTogIrq::from_bits(val as u8)
     }
-    #[doc = "Indicates current PXP interrupt status"]
+    #[doc = "Indicates current PXP interrupt status."]
     #[inline(always)]
     pub const fn set_irq(&mut self, val: super::vals::StatTogIrq) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
@@ -3408,14 +3408,14 @@ impl StatTog {
     pub const fn set_axi_read_error(&mut self, val: super::vals::StatTogAxiReadError) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "Indicates that a command issued with the \"Next Command\" functionality has been issued and that a new command may be initiated with a write to the PXP_NEXT register"]
+    #[doc = "Indicates that a command issued with the \"Next Command\" functionality has been issued and that a new command may be initiated with a write to the PXP_NEXT register."]
     #[must_use]
     #[inline(always)]
     pub const fn next_irq(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates that a command issued with the \"Next Command\" functionality has been issued and that a new command may be initiated with a write to the PXP_NEXT register"]
+    #[doc = "Indicates that a command issued with the \"Next Command\" functionality has been issued and that a new command may be initiated with a write to the PXP_NEXT register."]
     #[inline(always)]
     pub const fn set_next_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);

@@ -2,7 +2,7 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ackerr {
-    #[doc = "No error"]
+    #[doc = "No error."]
     ACK_ERROR_NO = 0x0,
     #[doc = "Error occurred since last read of this register."]
     ACK_ERROR_YES = 0x01,
@@ -33,9 +33,9 @@ impl From<Ackerr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Aen {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     ABORT_DISABLED = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     ABORT_ENABLED = 0x01,
 }
 impl Aen {
@@ -188,7 +188,7 @@ impl From<Bit1errFast> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Boffdoneint {
-    #[doc = "No such occurrence"]
+    #[doc = "No such occurrence."]
     BUS_OFF_NOT_DONE = 0x0,
     #[doc = "FlexCAN module has completed Bus Off process."]
     BUS_OFF_DONE = 0x01,
@@ -219,9 +219,9 @@ impl From<Boffdoneint> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Boffmsk {
-    #[doc = "Interrupt disabled"]
+    #[doc = "Interrupt disabled."]
     BUS_OFF_INT_DISABLED = 0x0,
-    #[doc = "Interrupt enabled"]
+    #[doc = "Interrupt enabled."]
     BUS_OFF_INT_ENABLED = 0x01,
 }
 impl Boffmsk {
@@ -250,9 +250,9 @@ impl From<Boffmsk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Boffrec {
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     AUTO_RECOVER_ENABLED = 0x0,
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     AUTO_RECOVER_DISABLED = 0x01,
 }
 impl Boffrec {
@@ -312,9 +312,9 @@ impl From<Buf0i> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Buf5i {
-    #[doc = "No occurrence of completed transmission or reception, or no frames available"]
+    #[doc = "No occurrence of completed transmission or reception, or no frames available."]
     ID1 = 0x0,
-    #[doc = "MB5 completed transmission or reception, or frames available"]
+    #[doc = "MB5 completed transmission or reception, or frames available."]
     ID2 = 0x01,
 }
 impl Buf5i {
@@ -405,7 +405,7 @@ impl From<Buf7i> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Crcerr {
-    #[doc = "No error"]
+    #[doc = "No error."]
     CRC_ERROR_NO = 0x0,
     #[doc = "Error occurred since last read of this register."]
     CRC_ERROR_YES = 0x01,
@@ -467,9 +467,9 @@ impl From<CrcerrFast> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dma {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     ID1 = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     ID2 = 0x01,
 }
 impl Dma {
@@ -498,9 +498,9 @@ impl From<Dma> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Doze {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     LOW_POWER_DOZE_DISABLED = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     LOW_POWER_DOZE_ENABLED = 0x01,
 }
 impl Doze {
@@ -529,9 +529,9 @@ impl From<Doze> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Eacen {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     RTR_COMPARE_NO = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     RTR_COMPARE_YES = 0x01,
 }
 impl Eacen {
@@ -560,9 +560,9 @@ impl From<Eacen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edfltdis {
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     ENABLE = 0x0,
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLE = 0x01,
 }
 impl Edfltdis {
@@ -591,9 +591,9 @@ impl From<Edfltdis> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Erfclr {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clear enhanced RX FIFO content"]
+    #[doc = "Clear enhanced RX FIFO content."]
     CLEAR = 0x01,
 }
 impl Erfclr {
@@ -622,9 +622,9 @@ impl From<Erfclr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Erfwmi {
-    #[doc = "No such occurrence"]
+    #[doc = "No such occurrence."]
     WATERMARK_NO = 0x0,
-    #[doc = "Number of messages in FIFO is greater than the watermark"]
+    #[doc = "Number of messages in FIFO is greater than the watermark."]
     WATERMARK_YES = 0x01,
 }
 impl Erfwmi {
@@ -684,9 +684,9 @@ impl From<ErrintFast> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Errmsk {
-    #[doc = "Interrupt disabled"]
+    #[doc = "Interrupt disabled."]
     ERROR_INT_DISABLED = 0x0,
-    #[doc = "Interrupt enabled"]
+    #[doc = "Interrupt enabled."]
     ERROR_INT_ENABLED = 0x01,
 }
 impl Errmsk {
@@ -715,9 +715,9 @@ impl From<Errmsk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Errovr {
-    #[doc = "No overrun"]
+    #[doc = "No overrun."]
     OVERRUN_NOT_OCCURRED = 0x0,
-    #[doc = "Overrun"]
+    #[doc = "Overrun."]
     OVERRUN_OCCURRED = 0x01,
 }
 impl Errovr {
@@ -746,9 +746,9 @@ impl From<Errovr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Etdcfail {
-    #[doc = "In range"]
+    #[doc = "In range."]
     IN_RANGE = 0x0,
-    #[doc = "Out of range"]
+    #[doc = "Out of range."]
     OUT_OF_RANGE = 0x01,
 }
 impl Etdcfail {
@@ -777,13 +777,13 @@ impl From<Etdcfail> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fcs {
-    #[doc = "Message ID filtering only"]
+    #[doc = "Message ID filtering only."]
     ID_FILTERING = 0x0,
-    #[doc = "Message ID filtering and payload filtering"]
+    #[doc = "Message ID filtering and payload filtering."]
     ID_PAYLOAD_FILTERING = 0x01,
-    #[doc = "Message ID filtering occurring a specified number of times"]
+    #[doc = "Message ID filtering occurring a specified number of times."]
     ID_FILTERING_NUMBER = 0x02,
-    #[doc = "Message ID filtering and payload filtering a specified number of times"]
+    #[doc = "Message ID filtering and payload filtering a specified number of times."]
     ID_PAYLOAD_FILTERING_NUMBER = 0x03,
 }
 impl Fcs {
@@ -812,9 +812,9 @@ impl From<Fcs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fden {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     CAN_FD_DISABLED = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     CAN_FD_ENABLED = 0x01,
 }
 impl Fden {
@@ -843,9 +843,9 @@ impl From<Fden> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fdrate {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     NOMINAL = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     BIT_RATE_SWITCHING = 0x01,
 }
 impl Fdrate {
@@ -874,9 +874,9 @@ impl From<Fdrate> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FltIde {
-    #[doc = "Standard"]
+    #[doc = "Standard."]
     STANDARD = 0x0,
-    #[doc = "Extended"]
+    #[doc = "Extended."]
     EXTENDED = 0x01,
 }
 impl FltIde {
@@ -905,9 +905,9 @@ impl From<FltIde> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FltRtr {
-    #[doc = "Reject remote frame (accept data frame)"]
+    #[doc = "Reject remote frame (accept data frame)."]
     REJECT = 0x0,
-    #[doc = "Accept remote frame"]
+    #[doc = "Accept remote frame."]
     ACCEPT = 0x01,
 }
 impl FltRtr {
@@ -936,11 +936,11 @@ impl From<FltRtr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fltconf {
-    #[doc = "Error Active"]
+    #[doc = "Error Active."]
     ERROR_ACTIVE = 0x0,
-    #[doc = "Error Passive"]
+    #[doc = "Error Passive."]
     ERROR_PASSIVE = 0x01,
-    #[doc = "Bus Off"]
+    #[doc = "Bus Off."]
     BUS_OFF = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -970,7 +970,7 @@ impl From<Fltconf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Frmerr {
-    #[doc = "No error"]
+    #[doc = "No error."]
     FORM_ERROR_NO = 0x0,
     #[doc = "Error occurred since last read of this register."]
     FORM_ERROR_YES = 0x01,
@@ -1032,9 +1032,9 @@ impl From<FrmerrFast> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Frz {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     FREEZE_MODE_DISABLED = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     FREEZE_MODE_ENABLED = 0x01,
 }
 impl Frz {
@@ -1094,7 +1094,7 @@ impl From<Frzack> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Halt {
-    #[doc = "No request"]
+    #[doc = "No request."]
     HALT_DISABLE = 0x0,
     #[doc = "Enter Freeze mode, if MCR\\[FRZ\\] = 1."]
     HALT_ENABLE = 0x01,
@@ -1160,9 +1160,9 @@ impl From<Idam> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ide {
-    #[doc = "Standard"]
+    #[doc = "Standard."]
     STANDARD = 0x0,
-    #[doc = "Extended"]
+    #[doc = "Extended."]
     EXTENDED = 0x01,
 }
 impl Ide {
@@ -1191,7 +1191,7 @@ impl From<Ide> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IdeMsk {
-    #[doc = "The corresponding bit in the filter is \"don't care.\""]
+    #[doc = "The corresponding bit in the filter is \"don't care.\"."]
     FRAME_FORMAT_NO = 0x0,
     #[doc = "The corresponding bit in the filter is checked."]
     FRAME_FORMAT_YES = 0x01,
@@ -1222,13 +1222,13 @@ impl From<IdeMsk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Idfs {
-    #[doc = "Match ID contents to an exact target value"]
+    #[doc = "Match ID contents to an exact target value."]
     MATCH_EXACT = 0x0,
-    #[doc = "Match an ID value greater than or equal to a specified target value"]
+    #[doc = "Match an ID value greater than or equal to a specified target value."]
     MATCH_GTE = 0x01,
-    #[doc = "Match an ID value smaller than or equal to a specified target value"]
+    #[doc = "Match an ID value smaller than or equal to a specified target value."]
     MATCH_LTE = 0x02,
-    #[doc = "Match an ID value within a range of values, inclusive"]
+    #[doc = "Match an ID value within a range of values, inclusive."]
     MATCH_RANGE = 0x03,
 }
 impl Idfs {
@@ -1257,9 +1257,9 @@ impl From<Idfs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Idle {
-    #[doc = "Not IDLE"]
+    #[doc = "Not IDLE."]
     CAN_BUS_NOT_IDLE = 0x0,
-    #[doc = "IDLE"]
+    #[doc = "IDLE."]
     CAN_BUS_IDLE = 0x01,
 }
 impl Idle {
@@ -1319,9 +1319,9 @@ impl From<Imb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Irmq {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     INDIVIDUAL_RX_MASKING_DISABLED = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     INDIVIDUAL_RX_MASKING_ENABLED = 0x01,
 }
 impl Irmq {
@@ -1350,9 +1350,9 @@ impl From<Irmq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isocanfden {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     NON_ISO = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     ISO = 0x01,
 }
 impl Isocanfden {
@@ -1443,9 +1443,9 @@ impl From<Lom> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpb {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     LOOPBACK_DISABLED = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     LOOPBACK_ENABLED = 0x01,
 }
 impl Lpb {
@@ -1474,9 +1474,9 @@ impl From<Lpb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpmack {
-    #[doc = "Not in a low-power mode"]
+    #[doc = "Not in a low-power mode."]
     LOW_POWER_NO = 0x0,
-    #[doc = "In a low-power mode"]
+    #[doc = "In a low-power mode."]
     LOW_POWER_YES = 0x01,
 }
 impl Lpmack {
@@ -1505,9 +1505,9 @@ impl From<Lpmack> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lprioen {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     LOCAL_PRIORITY_DISABLED = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     LOCAL_PRIORITY_ENABLED = 0x01,
 }
 impl Lprioen {
@@ -1536,13 +1536,13 @@ impl From<Lprioen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mbdsr0 {
-    #[doc = "8 bytes"]
+    #[doc = "8 bytes."]
     R0_8_BYTES = 0x0,
-    #[doc = "16 bytes"]
+    #[doc = "16 bytes."]
     R0_16_BYTES = 0x01,
-    #[doc = "32 bytes"]
+    #[doc = "32 bytes."]
     R0_32_BYTES = 0x02,
-    #[doc = "64 bytes"]
+    #[doc = "64 bytes."]
     R0_64_BYTES = 0x03,
 }
 impl Mbdsr0 {
@@ -1571,9 +1571,9 @@ impl From<Mbdsr0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mdis {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     FLEXCAN_ENABLED = 0x0,
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     FLEXCAN_DISABLED = 0x01,
 }
 impl Mdis {
@@ -1633,11 +1633,11 @@ impl From<Mrp> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Nmatch(u8);
 impl Nmatch {
-    #[doc = "Once"]
+    #[doc = "Once."]
     pub const MATCH_1: Self = Self(0x01);
-    #[doc = "Twice"]
+    #[doc = "Twice."]
     pub const MATCH_2: Self = Self(0x02);
-    #[doc = "255 times"]
+    #[doc = "255 times."]
     pub const MATCH_255: Self = Self(0xff);
 }
 impl Nmatch {
@@ -1716,13 +1716,13 @@ impl From<Notrdy> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Plfs {
-    #[doc = "Match payload contents to an exact target value"]
+    #[doc = "Match payload contents to an exact target value."]
     MATCH_EXACT = 0x0,
-    #[doc = "Match a payload value greater than or equal to a specified target value"]
+    #[doc = "Match a payload value greater than or equal to a specified target value."]
     MATCH_GTE = 0x01,
-    #[doc = "Match a payload value smaller than or equal to a specified target value"]
+    #[doc = "Match a payload value smaller than or equal to a specified target value."]
     MATCH_LTE = 0x02,
-    #[doc = "Match upon a payload value within a range of values, inclusive"]
+    #[doc = "Match upon a payload value within a range of values, inclusive."]
     MATCH_RANGE = 0x03,
 }
 impl Plfs {
@@ -1751,9 +1751,9 @@ impl From<Plfs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PnetEn {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     PN_DISABLED = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     PN_ENABLED = 0x01,
 }
 impl PnetEn {
@@ -1782,21 +1782,21 @@ impl From<PnetEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Retry {
-    #[doc = "No retransmission"]
+    #[doc = "No retransmission."]
     RETRANSMISSION = 0x0,
-    #[doc = "Count of re-transmission attempts"]
+    #[doc = "Count of re-transmission attempts."]
     COUNT_RETRY = 0x01,
-    #[doc = "Count of re-transmission attempts"]
+    #[doc = "Count of re-transmission attempts."]
     COUNT_RETRY1 = 0x02,
-    #[doc = "Count of re-transmission attempts"]
+    #[doc = "Count of re-transmission attempts."]
     COUNT_RETRY2 = 0x03,
-    #[doc = "Count of re-transmission attempts"]
+    #[doc = "Count of re-transmission attempts."]
     COUNT_RETRY3 = 0x04,
-    #[doc = "Count of re-transmission attempts"]
+    #[doc = "Count of re-transmission attempts."]
     COUNT_RETRY4 = 0x05,
-    #[doc = "Count of re-transmission attempts"]
+    #[doc = "Count of re-transmission attempts."]
     COUNT_RETRY5 = 0x06,
-    #[doc = "Unlimited number of retransmission"]
+    #[doc = "Unlimited number of retransmission."]
     UNLIMIT_RETRY = 0x07,
 }
 impl Retry {
@@ -1825,9 +1825,9 @@ impl From<Retry> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rfen {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     ID1 = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     ID2 = 0x01,
 }
 impl Rfen {
@@ -1856,9 +1856,9 @@ impl From<Rfen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rrs {
-    #[doc = "Generated"]
+    #[doc = "Generated."]
     REMOTE_RESPONSE_FRAME_NOT_GENERATED = 0x0,
-    #[doc = "Stored"]
+    #[doc = "Stored."]
     REMOTE_RESPONSE_FRAME_GENERATED = 0x01,
 }
 impl Rrs {
@@ -1887,7 +1887,7 @@ impl From<Rrs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RtrMsk {
-    #[doc = "The corresponding bit in the filter is \"don't care.\""]
+    #[doc = "The corresponding bit in the filter is \"don't care.\"."]
     FRAME_TYPE_NO = 0x0,
     #[doc = "The corresponding bit in the filter is checked."]
     FRAME_TYPE_YES = 0x01,
@@ -1918,7 +1918,7 @@ impl From<RtrMsk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rwrnint {
-    #[doc = "No such occurrence"]
+    #[doc = "No such occurrence."]
     RX_WARNING_INT_NO = 0x0,
     #[doc = "RX error counter changed from less than 96 to greater than or equal to 96."]
     RX_WARNING_INT_YES = 0x01,
@@ -1949,9 +1949,9 @@ impl From<Rwrnint> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rwrnmsk {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     RX_WARNING_INT_DISABLED = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     RX_WARNING_INT_ENABLED = 0x01,
 }
 impl Rwrnmsk {
@@ -1980,9 +1980,9 @@ impl From<Rwrnmsk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RxPinSt {
-    #[doc = "RX pin is in the dominant state"]
+    #[doc = "RX pin is in the dominant state."]
     DOMINANT = 0x0,
-    #[doc = "RX pin is in a recessive state"]
+    #[doc = "RX pin is in a recessive state."]
     RECESSIVE = 0x01,
 }
 impl RxPinSt {
@@ -2042,9 +2042,9 @@ impl From<Rxwrn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Slfwak {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     SELF_WAKEUP_DISABLED = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     SELF_WAKEUP_ENABLED = 0x01,
 }
 impl Slfwak {
@@ -2104,9 +2104,9 @@ impl From<Smp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Softrst {
-    #[doc = "No reset"]
+    #[doc = "No reset."]
     SOFTRST_NO_RESET_REQUEST = 0x0,
-    #[doc = "Soft reset affects reset registers"]
+    #[doc = "Soft reset affects reset registers."]
     SOFTRST_RESET_REGISTERS = 0x01,
 }
 impl Softrst {
@@ -2135,9 +2135,9 @@ impl From<Softrst> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Srr {
-    #[doc = "Dominant"]
+    #[doc = "Dominant."]
     DOMINANT = 0x0,
-    #[doc = "Recessive"]
+    #[doc = "Recessive."]
     RECESSIVE = 0x01,
 }
 impl Srr {
@@ -2166,9 +2166,9 @@ impl From<Srr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Srxdis {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     SELF_RECEPTION_ENABLED = 0x0,
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     SELF_RECEPTION_DISABLED = 0x01,
 }
 impl Srxdis {
@@ -2197,7 +2197,7 @@ impl From<Srxdis> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Stferr {
-    #[doc = "No error"]
+    #[doc = "No error."]
     STUFFING_ERROR_NO = 0x0,
     #[doc = "Error occurred since last read of this register."]
     STUFFING_ERROR_YES = 0x01,
@@ -2259,9 +2259,9 @@ impl From<StferrFast> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Supv {
-    #[doc = "User mode"]
+    #[doc = "User mode."]
     ID1 = 0x0,
-    #[doc = "Supervisor mode"]
+    #[doc = "Supervisor mode."]
     ID2 = 0x01,
 }
 impl Supv {
@@ -2290,9 +2290,9 @@ impl From<Supv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Synch {
-    #[doc = "Not synchronized"]
+    #[doc = "Not synchronized."]
     CAN_BUS_SYNC_NO = 0x0,
-    #[doc = "Synchronized"]
+    #[doc = "Synchronized."]
     CAN_BUS_SYNC_YES = 0x01,
 }
 impl Synch {
@@ -2321,9 +2321,9 @@ impl From<Synch> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tdcfail {
-    #[doc = "In range"]
+    #[doc = "In range."]
     IN_RANGE = 0x0,
-    #[doc = "Out of range"]
+    #[doc = "Out of range."]
     OUT_OF_RANGE = 0x01,
 }
 impl Tdcfail {
@@ -2352,9 +2352,9 @@ impl From<Tdcfail> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tdmdis {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     ENABLE = 0x0,
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLE = 0x01,
 }
 impl Tdmdis {
@@ -2383,9 +2383,9 @@ impl From<Tdmdis> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TimerSrc {
-    #[doc = "CAN bit clock"]
+    #[doc = "CAN bit clock."]
     CAN_BIT_CLOCK = 0x0,
-    #[doc = "External time tick"]
+    #[doc = "External time tick."]
     EXTERNAL_CLOCK = 0x01,
 }
 impl TimerSrc {
@@ -2414,9 +2414,9 @@ impl From<TimerSrc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tpov {
-    #[doc = "TX pin is forced to be dominant"]
+    #[doc = "TX pin is forced to be dominant."]
     DOMINANT = 0x0,
-    #[doc = "TX pin is forced to be recessive"]
+    #[doc = "TX pin is forced to be recessive."]
     RECESSIVE = 0x01,
 }
 impl Tpov {
@@ -2445,9 +2445,9 @@ impl From<Tpov> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tsyn {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     TIMER_SYNC_DISABLED = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     TIMER_SYNC_ENABLED = 0x01,
 }
 impl Tsyn {
@@ -2476,7 +2476,7 @@ impl From<Tsyn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Twrnint {
-    #[doc = "No such occurrence"]
+    #[doc = "No such occurrence."]
     TX_WARNING_INT_NO = 0x0,
     #[doc = "TX error counter changed from less than 96 to greater than or equal to 96."]
     TX_WARNING_INT_YES = 0x01,
@@ -2507,9 +2507,9 @@ impl From<Twrnint> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Twrnmsk {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     TX_WARNING_INT_DISABLED = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     TX_WARNING_INT_ENABLED = 0x01,
 }
 impl Twrnmsk {
@@ -2538,9 +2538,9 @@ impl From<Twrnmsk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tx {
-    #[doc = "Not transmitting"]
+    #[doc = "Not transmitting."]
     TRANSMIT_MESSAGE_NO = 0x0,
-    #[doc = "Transmitting"]
+    #[doc = "Transmitting."]
     TRANSMIT_MESSAGE_YES = 0x01,
 }
 impl Tx {
@@ -2600,9 +2600,9 @@ impl From<Txwrn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wakmsk {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     WAKEUP_INTERRUPT_DISABLED = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     WAKEUP_INTERRUPT_ENABLED = 0x01,
 }
 impl Wakmsk {
@@ -2631,9 +2631,9 @@ impl From<Wakmsk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wrnen {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     TWRNINT_RWRNINT_INACTIVE = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     TWRNINT_RWRNINT_ACTIVE = 0x01,
 }
 impl Wrnen {

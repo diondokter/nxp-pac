@@ -1,4 +1,4 @@
-#[doc = "LP_FLEXCOMM"]
+#[doc = "LP_FLEXCOMM."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct LpFlexcomm {
     ptr: *mut u8,
@@ -14,12 +14,12 @@ impl LpFlexcomm {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "Interrupt Status"]
+    #[doc = "Interrupt Status."]
     #[inline(always)]
     pub const fn istat(self) -> crate::common::Reg<regs::Istat, crate::common::R> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0ff4usize) as _) }
     }
-    #[doc = "Peripheral Select and ID"]
+    #[doc = "Peripheral Select and ID."]
     #[inline(always)]
     pub const fn pselid(self) -> crate::common::Reg<regs::Pselid, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0ff8usize) as _) }

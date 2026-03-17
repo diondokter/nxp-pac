@@ -1,100 +1,100 @@
-#[doc = "Boolean Function Term 0 and 1 Configuration for EVENT0"]
+#[doc = "Boolean Function Term 0 and 1 Configuration for EVENT0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Bfcrt010(pub u16);
 impl Bfcrt010 {
-    #[doc = "Product Term 1, Input D Configuration"]
+    #[doc = "Product Term 1, Input D Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt1_dc(&self) -> super::vals::Bfcrt010Pt1Dc {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Bfcrt010Pt1Dc::from_bits(val as u8)
     }
-    #[doc = "Product Term 1, Input D Configuration"]
+    #[doc = "Product Term 1, Input D Configuration."]
     #[inline(always)]
     pub const fn set_pt1_dc(&mut self, val: super::vals::Bfcrt010Pt1Dc) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u16) & 0x03) << 0usize);
     }
-    #[doc = "Product Term 1, Input C Configuration"]
+    #[doc = "Product Term 1, Input C Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt1_cc(&self) -> super::vals::Bfcrt010Pt1Cc {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::Bfcrt010Pt1Cc::from_bits(val as u8)
     }
-    #[doc = "Product Term 1, Input C Configuration"]
+    #[doc = "Product Term 1, Input C Configuration."]
     #[inline(always)]
     pub const fn set_pt1_cc(&mut self, val: super::vals::Bfcrt010Pt1Cc) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u16) & 0x03) << 2usize);
     }
-    #[doc = "Product Term 1, Input B Configuration"]
+    #[doc = "Product Term 1, Input B Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt1_bc(&self) -> super::vals::Bfcrt010Pt1Bc {
         let val = (self.0 >> 4usize) & 0x03;
         super::vals::Bfcrt010Pt1Bc::from_bits(val as u8)
     }
-    #[doc = "Product Term 1, Input B Configuration"]
+    #[doc = "Product Term 1, Input B Configuration."]
     #[inline(always)]
     pub const fn set_pt1_bc(&mut self, val: super::vals::Bfcrt010Pt1Bc) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u16) & 0x03) << 4usize);
     }
-    #[doc = "Product Term 1, Input A Configuration"]
+    #[doc = "Product Term 1, Input A Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt1_ac(&self) -> super::vals::Bfcrt010Pt1Ac {
         let val = (self.0 >> 6usize) & 0x03;
         super::vals::Bfcrt010Pt1Ac::from_bits(val as u8)
     }
-    #[doc = "Product Term 1, Input A Configuration"]
+    #[doc = "Product Term 1, Input A Configuration."]
     #[inline(always)]
     pub const fn set_pt1_ac(&mut self, val: super::vals::Bfcrt010Pt1Ac) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u16) & 0x03) << 6usize);
     }
-    #[doc = "Product Term 0, Input D Configuration"]
+    #[doc = "Product Term 0, Input D Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt0_dc(&self) -> super::vals::Bfcrt010Pt0Dc {
         let val = (self.0 >> 8usize) & 0x03;
         super::vals::Bfcrt010Pt0Dc::from_bits(val as u8)
     }
-    #[doc = "Product Term 0, Input D Configuration"]
+    #[doc = "Product Term 0, Input D Configuration."]
     #[inline(always)]
     pub const fn set_pt0_dc(&mut self, val: super::vals::Bfcrt010Pt0Dc) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u16) & 0x03) << 8usize);
     }
-    #[doc = "Product Term 0, Input C Configuration"]
+    #[doc = "Product Term 0, Input C Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt0_cc(&self) -> super::vals::Bfcrt010Pt0Cc {
         let val = (self.0 >> 10usize) & 0x03;
         super::vals::Bfcrt010Pt0Cc::from_bits(val as u8)
     }
-    #[doc = "Product Term 0, Input C Configuration"]
+    #[doc = "Product Term 0, Input C Configuration."]
     #[inline(always)]
     pub const fn set_pt0_cc(&mut self, val: super::vals::Bfcrt010Pt0Cc) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u16) & 0x03) << 10usize);
     }
-    #[doc = "Product Term 0, Input B Configuration"]
+    #[doc = "Product Term 0, Input B Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt0_bc(&self) -> super::vals::Bfcrt010Pt0Bc {
         let val = (self.0 >> 12usize) & 0x03;
         super::vals::Bfcrt010Pt0Bc::from_bits(val as u8)
     }
-    #[doc = "Product Term 0, Input B Configuration"]
+    #[doc = "Product Term 0, Input B Configuration."]
     #[inline(always)]
     pub const fn set_pt0_bc(&mut self, val: super::vals::Bfcrt010Pt0Bc) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u16) & 0x03) << 12usize);
     }
-    #[doc = "Product Term 0, Input A Configuration"]
+    #[doc = "Product Term 0, Input A Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt0_ac(&self) -> super::vals::Bfcrt010Pt0Ac {
         let val = (self.0 >> 14usize) & 0x03;
         super::vals::Bfcrt010Pt0Ac::from_bits(val as u8)
     }
-    #[doc = "Product Term 0, Input A Configuration"]
+    #[doc = "Product Term 0, Input A Configuration."]
     #[inline(always)]
     pub const fn set_pt0_ac(&mut self, val: super::vals::Bfcrt010Pt0Ac) {
         self.0 = (self.0 & !(0x03 << 14usize)) | (((val.to_bits() as u16) & 0x03) << 14usize);
@@ -137,103 +137,103 @@ impl defmt::Format for Bfcrt010 {
         )
     }
 }
-#[doc = "Boolean Function Term 0 and 1 Configuration for EVENT1"]
+#[doc = "Boolean Function Term 0 and 1 Configuration for EVENT1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Bfcrt011(pub u16);
 impl Bfcrt011 {
-    #[doc = "Product Term 1, Input D Configuration"]
+    #[doc = "Product Term 1, Input D Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt1_dc(&self) -> super::vals::Bfcrt011Pt1Dc {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Bfcrt011Pt1Dc::from_bits(val as u8)
     }
-    #[doc = "Product Term 1, Input D Configuration"]
+    #[doc = "Product Term 1, Input D Configuration."]
     #[inline(always)]
     pub const fn set_pt1_dc(&mut self, val: super::vals::Bfcrt011Pt1Dc) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u16) & 0x03) << 0usize);
     }
-    #[doc = "Product Term 1, Input C Configuration"]
+    #[doc = "Product Term 1, Input C Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt1_cc(&self) -> super::vals::Bfcrt011Pt1Cc {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::Bfcrt011Pt1Cc::from_bits(val as u8)
     }
-    #[doc = "Product Term 1, Input C Configuration"]
+    #[doc = "Product Term 1, Input C Configuration."]
     #[inline(always)]
     pub const fn set_pt1_cc(&mut self, val: super::vals::Bfcrt011Pt1Cc) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u16) & 0x03) << 2usize);
     }
-    #[doc = "Product Term 1, Input B Configuration"]
+    #[doc = "Product Term 1, Input B Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt1_bc(&self) -> super::vals::Bfcrt011Pt1Bc {
         let val = (self.0 >> 4usize) & 0x03;
         super::vals::Bfcrt011Pt1Bc::from_bits(val as u8)
     }
-    #[doc = "Product Term 1, Input B Configuration"]
+    #[doc = "Product Term 1, Input B Configuration."]
     #[inline(always)]
     pub const fn set_pt1_bc(&mut self, val: super::vals::Bfcrt011Pt1Bc) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u16) & 0x03) << 4usize);
     }
-    #[doc = "Product Term 1, Input A Configuration"]
+    #[doc = "Product Term 1, Input A Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt1_ac(&self) -> super::vals::Bfcrt011Pt1Ac {
         let val = (self.0 >> 6usize) & 0x03;
         super::vals::Bfcrt011Pt1Ac::from_bits(val as u8)
     }
-    #[doc = "Product Term 1, Input A Configuration"]
+    #[doc = "Product Term 1, Input A Configuration."]
     #[inline(always)]
     pub const fn set_pt1_ac(&mut self, val: super::vals::Bfcrt011Pt1Ac) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u16) & 0x03) << 6usize);
     }
-    #[doc = "Product Term 0, Input D Configuration"]
+    #[doc = "Product Term 0, Input D Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt0_dc(&self) -> super::vals::Bfcrt011Pt0Dc {
         let val = (self.0 >> 8usize) & 0x03;
         super::vals::Bfcrt011Pt0Dc::from_bits(val as u8)
     }
-    #[doc = "Product Term 0, Input D Configuration"]
+    #[doc = "Product Term 0, Input D Configuration."]
     #[inline(always)]
     pub const fn set_pt0_dc(&mut self, val: super::vals::Bfcrt011Pt0Dc) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u16) & 0x03) << 8usize);
     }
-    #[doc = "Product Term 0, Input C Configuration"]
+    #[doc = "Product Term 0, Input C Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt0_cc(&self) -> super::vals::Bfcrt011Pt0Cc {
         let val = (self.0 >> 10usize) & 0x03;
         super::vals::Bfcrt011Pt0Cc::from_bits(val as u8)
     }
-    #[doc = "Product Term 0, Input C Configuration"]
+    #[doc = "Product Term 0, Input C Configuration."]
     #[inline(always)]
     pub const fn set_pt0_cc(&mut self, val: super::vals::Bfcrt011Pt0Cc) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u16) & 0x03) << 10usize);
     }
-    #[doc = "Product Term 0, Input B Configuration"]
+    #[doc = "Product Term 0, Input B Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt0_bc(&self) -> super::vals::Bfcrt011Pt0Bc {
         let val = (self.0 >> 12usize) & 0x03;
         super::vals::Bfcrt011Pt0Bc::from_bits(val as u8)
     }
-    #[doc = "Product Term 0, Input B Configuration"]
+    #[doc = "Product Term 0, Input B Configuration."]
     #[inline(always)]
     pub const fn set_pt0_bc(&mut self, val: super::vals::Bfcrt011Pt0Bc) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u16) & 0x03) << 12usize);
     }
-    #[doc = "Product Term 0, Input A Configuration"]
+    #[doc = "Product Term 0, Input A Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt0_ac(&self) -> super::vals::Bfcrt011Pt0Ac {
         let val = (self.0 >> 14usize) & 0x03;
         super::vals::Bfcrt011Pt0Ac::from_bits(val as u8)
     }
-    #[doc = "Product Term 0, Input A Configuration"]
+    #[doc = "Product Term 0, Input A Configuration."]
     #[inline(always)]
     pub const fn set_pt0_ac(&mut self, val: super::vals::Bfcrt011Pt0Ac) {
         self.0 = (self.0 & !(0x03 << 14usize)) | (((val.to_bits() as u16) & 0x03) << 14usize);
@@ -276,103 +276,103 @@ impl defmt::Format for Bfcrt011 {
         )
     }
 }
-#[doc = "Boolean Function Term 0 and 1 Configuration for EVENT2"]
+#[doc = "Boolean Function Term 0 and 1 Configuration for EVENT2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Bfcrt012(pub u16);
 impl Bfcrt012 {
-    #[doc = "Product Term 1, Input D Configuration"]
+    #[doc = "Product Term 1, Input D Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt1_dc(&self) -> super::vals::Bfcrt012Pt1Dc {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Bfcrt012Pt1Dc::from_bits(val as u8)
     }
-    #[doc = "Product Term 1, Input D Configuration"]
+    #[doc = "Product Term 1, Input D Configuration."]
     #[inline(always)]
     pub const fn set_pt1_dc(&mut self, val: super::vals::Bfcrt012Pt1Dc) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u16) & 0x03) << 0usize);
     }
-    #[doc = "Product Term 1, Input C Configuration"]
+    #[doc = "Product Term 1, Input C Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt1_cc(&self) -> super::vals::Bfcrt012Pt1Cc {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::Bfcrt012Pt1Cc::from_bits(val as u8)
     }
-    #[doc = "Product Term 1, Input C Configuration"]
+    #[doc = "Product Term 1, Input C Configuration."]
     #[inline(always)]
     pub const fn set_pt1_cc(&mut self, val: super::vals::Bfcrt012Pt1Cc) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u16) & 0x03) << 2usize);
     }
-    #[doc = "Product Term 1, Input B Configuration"]
+    #[doc = "Product Term 1, Input B Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt1_bc(&self) -> super::vals::Bfcrt012Pt1Bc {
         let val = (self.0 >> 4usize) & 0x03;
         super::vals::Bfcrt012Pt1Bc::from_bits(val as u8)
     }
-    #[doc = "Product Term 1, Input B Configuration"]
+    #[doc = "Product Term 1, Input B Configuration."]
     #[inline(always)]
     pub const fn set_pt1_bc(&mut self, val: super::vals::Bfcrt012Pt1Bc) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u16) & 0x03) << 4usize);
     }
-    #[doc = "Product Term 1, Input A Configuration"]
+    #[doc = "Product Term 1, Input A Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt1_ac(&self) -> super::vals::Bfcrt012Pt1Ac {
         let val = (self.0 >> 6usize) & 0x03;
         super::vals::Bfcrt012Pt1Ac::from_bits(val as u8)
     }
-    #[doc = "Product Term 1, Input A Configuration"]
+    #[doc = "Product Term 1, Input A Configuration."]
     #[inline(always)]
     pub const fn set_pt1_ac(&mut self, val: super::vals::Bfcrt012Pt1Ac) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u16) & 0x03) << 6usize);
     }
-    #[doc = "Product Term 0, Input D Configuration"]
+    #[doc = "Product Term 0, Input D Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt0_dc(&self) -> super::vals::Bfcrt012Pt0Dc {
         let val = (self.0 >> 8usize) & 0x03;
         super::vals::Bfcrt012Pt0Dc::from_bits(val as u8)
     }
-    #[doc = "Product Term 0, Input D Configuration"]
+    #[doc = "Product Term 0, Input D Configuration."]
     #[inline(always)]
     pub const fn set_pt0_dc(&mut self, val: super::vals::Bfcrt012Pt0Dc) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u16) & 0x03) << 8usize);
     }
-    #[doc = "Product Term 0, Input C Configuration"]
+    #[doc = "Product Term 0, Input C Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt0_cc(&self) -> super::vals::Bfcrt012Pt0Cc {
         let val = (self.0 >> 10usize) & 0x03;
         super::vals::Bfcrt012Pt0Cc::from_bits(val as u8)
     }
-    #[doc = "Product Term 0, Input C Configuration"]
+    #[doc = "Product Term 0, Input C Configuration."]
     #[inline(always)]
     pub const fn set_pt0_cc(&mut self, val: super::vals::Bfcrt012Pt0Cc) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u16) & 0x03) << 10usize);
     }
-    #[doc = "Product Term 0, Input B Configuration"]
+    #[doc = "Product Term 0, Input B Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt0_bc(&self) -> super::vals::Bfcrt012Pt0Bc {
         let val = (self.0 >> 12usize) & 0x03;
         super::vals::Bfcrt012Pt0Bc::from_bits(val as u8)
     }
-    #[doc = "Product Term 0, Input B Configuration"]
+    #[doc = "Product Term 0, Input B Configuration."]
     #[inline(always)]
     pub const fn set_pt0_bc(&mut self, val: super::vals::Bfcrt012Pt0Bc) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u16) & 0x03) << 12usize);
     }
-    #[doc = "Product Term 0, Input A Configuration"]
+    #[doc = "Product Term 0, Input A Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt0_ac(&self) -> super::vals::Bfcrt012Pt0Ac {
         let val = (self.0 >> 14usize) & 0x03;
         super::vals::Bfcrt012Pt0Ac::from_bits(val as u8)
     }
-    #[doc = "Product Term 0, Input A Configuration"]
+    #[doc = "Product Term 0, Input A Configuration."]
     #[inline(always)]
     pub const fn set_pt0_ac(&mut self, val: super::vals::Bfcrt012Pt0Ac) {
         self.0 = (self.0 & !(0x03 << 14usize)) | (((val.to_bits() as u16) & 0x03) << 14usize);
@@ -415,103 +415,103 @@ impl defmt::Format for Bfcrt012 {
         )
     }
 }
-#[doc = "Boolean Function Term 0 and 1 Configuration for EVENT3"]
+#[doc = "Boolean Function Term 0 and 1 Configuration for EVENT3."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Bfcrt013(pub u16);
 impl Bfcrt013 {
-    #[doc = "Product Term 1, Input D Configuration"]
+    #[doc = "Product Term 1, Input D Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt1_dc(&self) -> super::vals::Bfcrt013Pt1Dc {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Bfcrt013Pt1Dc::from_bits(val as u8)
     }
-    #[doc = "Product Term 1, Input D Configuration"]
+    #[doc = "Product Term 1, Input D Configuration."]
     #[inline(always)]
     pub const fn set_pt1_dc(&mut self, val: super::vals::Bfcrt013Pt1Dc) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u16) & 0x03) << 0usize);
     }
-    #[doc = "Product Term 1, Input C Configuration"]
+    #[doc = "Product Term 1, Input C Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt1_cc(&self) -> super::vals::Bfcrt013Pt1Cc {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::Bfcrt013Pt1Cc::from_bits(val as u8)
     }
-    #[doc = "Product Term 1, Input C Configuration"]
+    #[doc = "Product Term 1, Input C Configuration."]
     #[inline(always)]
     pub const fn set_pt1_cc(&mut self, val: super::vals::Bfcrt013Pt1Cc) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u16) & 0x03) << 2usize);
     }
-    #[doc = "Product Term 1, Input B Configuration"]
+    #[doc = "Product Term 1, Input B Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt1_bc(&self) -> super::vals::Bfcrt013Pt1Bc {
         let val = (self.0 >> 4usize) & 0x03;
         super::vals::Bfcrt013Pt1Bc::from_bits(val as u8)
     }
-    #[doc = "Product Term 1, Input B Configuration"]
+    #[doc = "Product Term 1, Input B Configuration."]
     #[inline(always)]
     pub const fn set_pt1_bc(&mut self, val: super::vals::Bfcrt013Pt1Bc) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u16) & 0x03) << 4usize);
     }
-    #[doc = "Product Term 1, Input A Configuration"]
+    #[doc = "Product Term 1, Input A Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt1_ac(&self) -> super::vals::Bfcrt013Pt1Ac {
         let val = (self.0 >> 6usize) & 0x03;
         super::vals::Bfcrt013Pt1Ac::from_bits(val as u8)
     }
-    #[doc = "Product Term 1, Input A Configuration"]
+    #[doc = "Product Term 1, Input A Configuration."]
     #[inline(always)]
     pub const fn set_pt1_ac(&mut self, val: super::vals::Bfcrt013Pt1Ac) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u16) & 0x03) << 6usize);
     }
-    #[doc = "Product Term 0, Input D Configuration"]
+    #[doc = "Product Term 0, Input D Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt0_dc(&self) -> super::vals::Bfcrt013Pt0Dc {
         let val = (self.0 >> 8usize) & 0x03;
         super::vals::Bfcrt013Pt0Dc::from_bits(val as u8)
     }
-    #[doc = "Product Term 0, Input D Configuration"]
+    #[doc = "Product Term 0, Input D Configuration."]
     #[inline(always)]
     pub const fn set_pt0_dc(&mut self, val: super::vals::Bfcrt013Pt0Dc) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u16) & 0x03) << 8usize);
     }
-    #[doc = "Product Term 0, Input C Configuration"]
+    #[doc = "Product Term 0, Input C Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt0_cc(&self) -> super::vals::Bfcrt013Pt0Cc {
         let val = (self.0 >> 10usize) & 0x03;
         super::vals::Bfcrt013Pt0Cc::from_bits(val as u8)
     }
-    #[doc = "Product Term 0, Input C Configuration"]
+    #[doc = "Product Term 0, Input C Configuration."]
     #[inline(always)]
     pub const fn set_pt0_cc(&mut self, val: super::vals::Bfcrt013Pt0Cc) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u16) & 0x03) << 10usize);
     }
-    #[doc = "Product Term 0, Input B Configuration"]
+    #[doc = "Product Term 0, Input B Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt0_bc(&self) -> super::vals::Bfcrt013Pt0Bc {
         let val = (self.0 >> 12usize) & 0x03;
         super::vals::Bfcrt013Pt0Bc::from_bits(val as u8)
     }
-    #[doc = "Product Term 0, Input B Configuration"]
+    #[doc = "Product Term 0, Input B Configuration."]
     #[inline(always)]
     pub const fn set_pt0_bc(&mut self, val: super::vals::Bfcrt013Pt0Bc) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u16) & 0x03) << 12usize);
     }
-    #[doc = "Product Term 0, Input A Configuration"]
+    #[doc = "Product Term 0, Input A Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt0_ac(&self) -> super::vals::Bfcrt013Pt0Ac {
         let val = (self.0 >> 14usize) & 0x03;
         super::vals::Bfcrt013Pt0Ac::from_bits(val as u8)
     }
-    #[doc = "Product Term 0, Input A Configuration"]
+    #[doc = "Product Term 0, Input A Configuration."]
     #[inline(always)]
     pub const fn set_pt0_ac(&mut self, val: super::vals::Bfcrt013Pt0Ac) {
         self.0 = (self.0 & !(0x03 << 14usize)) | (((val.to_bits() as u16) & 0x03) << 14usize);
@@ -554,103 +554,103 @@ impl defmt::Format for Bfcrt013 {
         )
     }
 }
-#[doc = "Boolean Function Term 2 and 3 Configuration for EVENT0"]
+#[doc = "Boolean Function Term 2 and 3 Configuration for EVENT0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Bfcrt230(pub u16);
 impl Bfcrt230 {
-    #[doc = "Product Term 3, Input D Configuration"]
+    #[doc = "Product Term 3, Input D Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt3_dc(&self) -> super::vals::Bfcrt230Pt3Dc {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Bfcrt230Pt3Dc::from_bits(val as u8)
     }
-    #[doc = "Product Term 3, Input D Configuration"]
+    #[doc = "Product Term 3, Input D Configuration."]
     #[inline(always)]
     pub const fn set_pt3_dc(&mut self, val: super::vals::Bfcrt230Pt3Dc) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u16) & 0x03) << 0usize);
     }
-    #[doc = "Product Term 3, Input C Configuration"]
+    #[doc = "Product Term 3, Input C Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt3_cc(&self) -> super::vals::Bfcrt230Pt3Cc {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::Bfcrt230Pt3Cc::from_bits(val as u8)
     }
-    #[doc = "Product Term 3, Input C Configuration"]
+    #[doc = "Product Term 3, Input C Configuration."]
     #[inline(always)]
     pub const fn set_pt3_cc(&mut self, val: super::vals::Bfcrt230Pt3Cc) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u16) & 0x03) << 2usize);
     }
-    #[doc = "Product Term 3, Input B Configuration"]
+    #[doc = "Product Term 3, Input B Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt3_bc(&self) -> super::vals::Bfcrt230Pt3Bc {
         let val = (self.0 >> 4usize) & 0x03;
         super::vals::Bfcrt230Pt3Bc::from_bits(val as u8)
     }
-    #[doc = "Product Term 3, Input B Configuration"]
+    #[doc = "Product Term 3, Input B Configuration."]
     #[inline(always)]
     pub const fn set_pt3_bc(&mut self, val: super::vals::Bfcrt230Pt3Bc) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u16) & 0x03) << 4usize);
     }
-    #[doc = "Product Term 3, Input A Configuration"]
+    #[doc = "Product Term 3, Input A Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt3_ac(&self) -> super::vals::Bfcrt230Pt3Ac {
         let val = (self.0 >> 6usize) & 0x03;
         super::vals::Bfcrt230Pt3Ac::from_bits(val as u8)
     }
-    #[doc = "Product Term 3, Input A Configuration"]
+    #[doc = "Product Term 3, Input A Configuration."]
     #[inline(always)]
     pub const fn set_pt3_ac(&mut self, val: super::vals::Bfcrt230Pt3Ac) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u16) & 0x03) << 6usize);
     }
-    #[doc = "Product Term 2, Input D Configuration"]
+    #[doc = "Product Term 2, Input D Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt2_dc(&self) -> super::vals::Bfcrt230Pt2Dc {
         let val = (self.0 >> 8usize) & 0x03;
         super::vals::Bfcrt230Pt2Dc::from_bits(val as u8)
     }
-    #[doc = "Product Term 2, Input D Configuration"]
+    #[doc = "Product Term 2, Input D Configuration."]
     #[inline(always)]
     pub const fn set_pt2_dc(&mut self, val: super::vals::Bfcrt230Pt2Dc) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u16) & 0x03) << 8usize);
     }
-    #[doc = "Product Term 2, Input C Configuration"]
+    #[doc = "Product Term 2, Input C Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt2_cc(&self) -> super::vals::Bfcrt230Pt2Cc {
         let val = (self.0 >> 10usize) & 0x03;
         super::vals::Bfcrt230Pt2Cc::from_bits(val as u8)
     }
-    #[doc = "Product Term 2, Input C Configuration"]
+    #[doc = "Product Term 2, Input C Configuration."]
     #[inline(always)]
     pub const fn set_pt2_cc(&mut self, val: super::vals::Bfcrt230Pt2Cc) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u16) & 0x03) << 10usize);
     }
-    #[doc = "Product Term 2, Input B Configuration"]
+    #[doc = "Product Term 2, Input B Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt2_bc(&self) -> super::vals::Bfcrt230Pt2Bc {
         let val = (self.0 >> 12usize) & 0x03;
         super::vals::Bfcrt230Pt2Bc::from_bits(val as u8)
     }
-    #[doc = "Product Term 2, Input B Configuration"]
+    #[doc = "Product Term 2, Input B Configuration."]
     #[inline(always)]
     pub const fn set_pt2_bc(&mut self, val: super::vals::Bfcrt230Pt2Bc) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u16) & 0x03) << 12usize);
     }
-    #[doc = "Product Term 2, Input A Configuration"]
+    #[doc = "Product Term 2, Input A Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt2_ac(&self) -> super::vals::Bfcrt230Pt2Ac {
         let val = (self.0 >> 14usize) & 0x03;
         super::vals::Bfcrt230Pt2Ac::from_bits(val as u8)
     }
-    #[doc = "Product Term 2, Input A Configuration"]
+    #[doc = "Product Term 2, Input A Configuration."]
     #[inline(always)]
     pub const fn set_pt2_ac(&mut self, val: super::vals::Bfcrt230Pt2Ac) {
         self.0 = (self.0 & !(0x03 << 14usize)) | (((val.to_bits() as u16) & 0x03) << 14usize);
@@ -693,103 +693,103 @@ impl defmt::Format for Bfcrt230 {
         )
     }
 }
-#[doc = "Boolean Function Term 2 and 3 Configuration for EVENT1"]
+#[doc = "Boolean Function Term 2 and 3 Configuration for EVENT1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Bfcrt231(pub u16);
 impl Bfcrt231 {
-    #[doc = "Product Term 3, Input D Configuration"]
+    #[doc = "Product Term 3, Input D Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt3_dc(&self) -> super::vals::Bfcrt231Pt3Dc {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Bfcrt231Pt3Dc::from_bits(val as u8)
     }
-    #[doc = "Product Term 3, Input D Configuration"]
+    #[doc = "Product Term 3, Input D Configuration."]
     #[inline(always)]
     pub const fn set_pt3_dc(&mut self, val: super::vals::Bfcrt231Pt3Dc) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u16) & 0x03) << 0usize);
     }
-    #[doc = "Product Term 3, Input C Configuration"]
+    #[doc = "Product Term 3, Input C Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt3_cc(&self) -> super::vals::Bfcrt231Pt3Cc {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::Bfcrt231Pt3Cc::from_bits(val as u8)
     }
-    #[doc = "Product Term 3, Input C Configuration"]
+    #[doc = "Product Term 3, Input C Configuration."]
     #[inline(always)]
     pub const fn set_pt3_cc(&mut self, val: super::vals::Bfcrt231Pt3Cc) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u16) & 0x03) << 2usize);
     }
-    #[doc = "Product Term 3, Input B Configuration"]
+    #[doc = "Product Term 3, Input B Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt3_bc(&self) -> super::vals::Bfcrt231Pt3Bc {
         let val = (self.0 >> 4usize) & 0x03;
         super::vals::Bfcrt231Pt3Bc::from_bits(val as u8)
     }
-    #[doc = "Product Term 3, Input B Configuration"]
+    #[doc = "Product Term 3, Input B Configuration."]
     #[inline(always)]
     pub const fn set_pt3_bc(&mut self, val: super::vals::Bfcrt231Pt3Bc) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u16) & 0x03) << 4usize);
     }
-    #[doc = "Product Term 3, Input A Configuration"]
+    #[doc = "Product Term 3, Input A Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt3_ac(&self) -> super::vals::Bfcrt231Pt3Ac {
         let val = (self.0 >> 6usize) & 0x03;
         super::vals::Bfcrt231Pt3Ac::from_bits(val as u8)
     }
-    #[doc = "Product Term 3, Input A Configuration"]
+    #[doc = "Product Term 3, Input A Configuration."]
     #[inline(always)]
     pub const fn set_pt3_ac(&mut self, val: super::vals::Bfcrt231Pt3Ac) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u16) & 0x03) << 6usize);
     }
-    #[doc = "Product Term 2, Input D Configuration"]
+    #[doc = "Product Term 2, Input D Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt2_dc(&self) -> super::vals::Bfcrt231Pt2Dc {
         let val = (self.0 >> 8usize) & 0x03;
         super::vals::Bfcrt231Pt2Dc::from_bits(val as u8)
     }
-    #[doc = "Product Term 2, Input D Configuration"]
+    #[doc = "Product Term 2, Input D Configuration."]
     #[inline(always)]
     pub const fn set_pt2_dc(&mut self, val: super::vals::Bfcrt231Pt2Dc) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u16) & 0x03) << 8usize);
     }
-    #[doc = "Product Term 2, Input C Configuration"]
+    #[doc = "Product Term 2, Input C Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt2_cc(&self) -> super::vals::Bfcrt231Pt2Cc {
         let val = (self.0 >> 10usize) & 0x03;
         super::vals::Bfcrt231Pt2Cc::from_bits(val as u8)
     }
-    #[doc = "Product Term 2, Input C Configuration"]
+    #[doc = "Product Term 2, Input C Configuration."]
     #[inline(always)]
     pub const fn set_pt2_cc(&mut self, val: super::vals::Bfcrt231Pt2Cc) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u16) & 0x03) << 10usize);
     }
-    #[doc = "Product Term 2, Input B Configuration"]
+    #[doc = "Product Term 2, Input B Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt2_bc(&self) -> super::vals::Bfcrt231Pt2Bc {
         let val = (self.0 >> 12usize) & 0x03;
         super::vals::Bfcrt231Pt2Bc::from_bits(val as u8)
     }
-    #[doc = "Product Term 2, Input B Configuration"]
+    #[doc = "Product Term 2, Input B Configuration."]
     #[inline(always)]
     pub const fn set_pt2_bc(&mut self, val: super::vals::Bfcrt231Pt2Bc) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u16) & 0x03) << 12usize);
     }
-    #[doc = "Product Term 2, Input A Configuration"]
+    #[doc = "Product Term 2, Input A Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt2_ac(&self) -> super::vals::Bfcrt231Pt2Ac {
         let val = (self.0 >> 14usize) & 0x03;
         super::vals::Bfcrt231Pt2Ac::from_bits(val as u8)
     }
-    #[doc = "Product Term 2, Input A Configuration"]
+    #[doc = "Product Term 2, Input A Configuration."]
     #[inline(always)]
     pub const fn set_pt2_ac(&mut self, val: super::vals::Bfcrt231Pt2Ac) {
         self.0 = (self.0 & !(0x03 << 14usize)) | (((val.to_bits() as u16) & 0x03) << 14usize);
@@ -832,103 +832,103 @@ impl defmt::Format for Bfcrt231 {
         )
     }
 }
-#[doc = "Boolean Function Term 2 and 3 Configuration for EVENT2"]
+#[doc = "Boolean Function Term 2 and 3 Configuration for EVENT2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Bfcrt232(pub u16);
 impl Bfcrt232 {
-    #[doc = "Product Term 3, Input D Configuration"]
+    #[doc = "Product Term 3, Input D Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt3_dc(&self) -> super::vals::Bfcrt232Pt3Dc {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Bfcrt232Pt3Dc::from_bits(val as u8)
     }
-    #[doc = "Product Term 3, Input D Configuration"]
+    #[doc = "Product Term 3, Input D Configuration."]
     #[inline(always)]
     pub const fn set_pt3_dc(&mut self, val: super::vals::Bfcrt232Pt3Dc) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u16) & 0x03) << 0usize);
     }
-    #[doc = "Product Term 3, Input C Configuration"]
+    #[doc = "Product Term 3, Input C Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt3_cc(&self) -> super::vals::Bfcrt232Pt3Cc {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::Bfcrt232Pt3Cc::from_bits(val as u8)
     }
-    #[doc = "Product Term 3, Input C Configuration"]
+    #[doc = "Product Term 3, Input C Configuration."]
     #[inline(always)]
     pub const fn set_pt3_cc(&mut self, val: super::vals::Bfcrt232Pt3Cc) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u16) & 0x03) << 2usize);
     }
-    #[doc = "Product Term 3, Input B Configuration"]
+    #[doc = "Product Term 3, Input B Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt3_bc(&self) -> super::vals::Bfcrt232Pt3Bc {
         let val = (self.0 >> 4usize) & 0x03;
         super::vals::Bfcrt232Pt3Bc::from_bits(val as u8)
     }
-    #[doc = "Product Term 3, Input B Configuration"]
+    #[doc = "Product Term 3, Input B Configuration."]
     #[inline(always)]
     pub const fn set_pt3_bc(&mut self, val: super::vals::Bfcrt232Pt3Bc) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u16) & 0x03) << 4usize);
     }
-    #[doc = "Product Term 3, Input A Configuration"]
+    #[doc = "Product Term 3, Input A Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt3_ac(&self) -> super::vals::Bfcrt232Pt3Ac {
         let val = (self.0 >> 6usize) & 0x03;
         super::vals::Bfcrt232Pt3Ac::from_bits(val as u8)
     }
-    #[doc = "Product Term 3, Input A Configuration"]
+    #[doc = "Product Term 3, Input A Configuration."]
     #[inline(always)]
     pub const fn set_pt3_ac(&mut self, val: super::vals::Bfcrt232Pt3Ac) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u16) & 0x03) << 6usize);
     }
-    #[doc = "Product Term 2, Input D Configuration"]
+    #[doc = "Product Term 2, Input D Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt2_dc(&self) -> super::vals::Bfcrt232Pt2Dc {
         let val = (self.0 >> 8usize) & 0x03;
         super::vals::Bfcrt232Pt2Dc::from_bits(val as u8)
     }
-    #[doc = "Product Term 2, Input D Configuration"]
+    #[doc = "Product Term 2, Input D Configuration."]
     #[inline(always)]
     pub const fn set_pt2_dc(&mut self, val: super::vals::Bfcrt232Pt2Dc) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u16) & 0x03) << 8usize);
     }
-    #[doc = "Product Term 2, Input C Configuration"]
+    #[doc = "Product Term 2, Input C Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt2_cc(&self) -> super::vals::Bfcrt232Pt2Cc {
         let val = (self.0 >> 10usize) & 0x03;
         super::vals::Bfcrt232Pt2Cc::from_bits(val as u8)
     }
-    #[doc = "Product Term 2, Input C Configuration"]
+    #[doc = "Product Term 2, Input C Configuration."]
     #[inline(always)]
     pub const fn set_pt2_cc(&mut self, val: super::vals::Bfcrt232Pt2Cc) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u16) & 0x03) << 10usize);
     }
-    #[doc = "Product Term 2, Input B Configuration"]
+    #[doc = "Product Term 2, Input B Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt2_bc(&self) -> super::vals::Bfcrt232Pt2Bc {
         let val = (self.0 >> 12usize) & 0x03;
         super::vals::Bfcrt232Pt2Bc::from_bits(val as u8)
     }
-    #[doc = "Product Term 2, Input B Configuration"]
+    #[doc = "Product Term 2, Input B Configuration."]
     #[inline(always)]
     pub const fn set_pt2_bc(&mut self, val: super::vals::Bfcrt232Pt2Bc) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u16) & 0x03) << 12usize);
     }
-    #[doc = "Product Term 2, Input A Configuration"]
+    #[doc = "Product Term 2, Input A Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt2_ac(&self) -> super::vals::Bfcrt232Pt2Ac {
         let val = (self.0 >> 14usize) & 0x03;
         super::vals::Bfcrt232Pt2Ac::from_bits(val as u8)
     }
-    #[doc = "Product Term 2, Input A Configuration"]
+    #[doc = "Product Term 2, Input A Configuration."]
     #[inline(always)]
     pub const fn set_pt2_ac(&mut self, val: super::vals::Bfcrt232Pt2Ac) {
         self.0 = (self.0 & !(0x03 << 14usize)) | (((val.to_bits() as u16) & 0x03) << 14usize);
@@ -971,103 +971,103 @@ impl defmt::Format for Bfcrt232 {
         )
     }
 }
-#[doc = "Boolean Function Term 2 and 3 Configuration for EVENT3"]
+#[doc = "Boolean Function Term 2 and 3 Configuration for EVENT3."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Bfcrt233(pub u16);
 impl Bfcrt233 {
-    #[doc = "Product Term 3, Input D Configuration"]
+    #[doc = "Product Term 3, Input D Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt3_dc(&self) -> super::vals::Bfcrt233Pt3Dc {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Bfcrt233Pt3Dc::from_bits(val as u8)
     }
-    #[doc = "Product Term 3, Input D Configuration"]
+    #[doc = "Product Term 3, Input D Configuration."]
     #[inline(always)]
     pub const fn set_pt3_dc(&mut self, val: super::vals::Bfcrt233Pt3Dc) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u16) & 0x03) << 0usize);
     }
-    #[doc = "Product Term 3, Input C Configuration"]
+    #[doc = "Product Term 3, Input C Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt3_cc(&self) -> super::vals::Bfcrt233Pt3Cc {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::Bfcrt233Pt3Cc::from_bits(val as u8)
     }
-    #[doc = "Product Term 3, Input C Configuration"]
+    #[doc = "Product Term 3, Input C Configuration."]
     #[inline(always)]
     pub const fn set_pt3_cc(&mut self, val: super::vals::Bfcrt233Pt3Cc) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u16) & 0x03) << 2usize);
     }
-    #[doc = "Product Term 3, Input B Configuration"]
+    #[doc = "Product Term 3, Input B Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt3_bc(&self) -> super::vals::Bfcrt233Pt3Bc {
         let val = (self.0 >> 4usize) & 0x03;
         super::vals::Bfcrt233Pt3Bc::from_bits(val as u8)
     }
-    #[doc = "Product Term 3, Input B Configuration"]
+    #[doc = "Product Term 3, Input B Configuration."]
     #[inline(always)]
     pub const fn set_pt3_bc(&mut self, val: super::vals::Bfcrt233Pt3Bc) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u16) & 0x03) << 4usize);
     }
-    #[doc = "Product Term 3, Input A Configuration"]
+    #[doc = "Product Term 3, Input A Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt3_ac(&self) -> super::vals::Bfcrt233Pt3Ac {
         let val = (self.0 >> 6usize) & 0x03;
         super::vals::Bfcrt233Pt3Ac::from_bits(val as u8)
     }
-    #[doc = "Product Term 3, Input A Configuration"]
+    #[doc = "Product Term 3, Input A Configuration."]
     #[inline(always)]
     pub const fn set_pt3_ac(&mut self, val: super::vals::Bfcrt233Pt3Ac) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u16) & 0x03) << 6usize);
     }
-    #[doc = "Product Term 2, Input D Configuration"]
+    #[doc = "Product Term 2, Input D Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt2_dc(&self) -> super::vals::Bfcrt233Pt2Dc {
         let val = (self.0 >> 8usize) & 0x03;
         super::vals::Bfcrt233Pt2Dc::from_bits(val as u8)
     }
-    #[doc = "Product Term 2, Input D Configuration"]
+    #[doc = "Product Term 2, Input D Configuration."]
     #[inline(always)]
     pub const fn set_pt2_dc(&mut self, val: super::vals::Bfcrt233Pt2Dc) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u16) & 0x03) << 8usize);
     }
-    #[doc = "Product Term 2, Input C Configuration"]
+    #[doc = "Product Term 2, Input C Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt2_cc(&self) -> super::vals::Bfcrt233Pt2Cc {
         let val = (self.0 >> 10usize) & 0x03;
         super::vals::Bfcrt233Pt2Cc::from_bits(val as u8)
     }
-    #[doc = "Product Term 2, Input C Configuration"]
+    #[doc = "Product Term 2, Input C Configuration."]
     #[inline(always)]
     pub const fn set_pt2_cc(&mut self, val: super::vals::Bfcrt233Pt2Cc) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u16) & 0x03) << 10usize);
     }
-    #[doc = "Product Term 2, Input B Configuration"]
+    #[doc = "Product Term 2, Input B Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt2_bc(&self) -> super::vals::Bfcrt233Pt2Bc {
         let val = (self.0 >> 12usize) & 0x03;
         super::vals::Bfcrt233Pt2Bc::from_bits(val as u8)
     }
-    #[doc = "Product Term 2, Input B Configuration"]
+    #[doc = "Product Term 2, Input B Configuration."]
     #[inline(always)]
     pub const fn set_pt2_bc(&mut self, val: super::vals::Bfcrt233Pt2Bc) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u16) & 0x03) << 12usize);
     }
-    #[doc = "Product Term 2, Input A Configuration"]
+    #[doc = "Product Term 2, Input A Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn pt2_ac(&self) -> super::vals::Bfcrt233Pt2Ac {
         let val = (self.0 >> 14usize) & 0x03;
         super::vals::Bfcrt233Pt2Ac::from_bits(val as u8)
     }
-    #[doc = "Product Term 2, Input A Configuration"]
+    #[doc = "Product Term 2, Input A Configuration."]
     #[inline(always)]
     pub const fn set_pt2_ac(&mut self, val: super::vals::Bfcrt233Pt2Ac) {
         self.0 = (self.0 & !(0x03 << 14usize)) | (((val.to_bits() as u16) & 0x03) << 14usize);

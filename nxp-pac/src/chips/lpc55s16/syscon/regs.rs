@@ -1,4 +1,4 @@
-#[doc = "ADC clock divider"]
+#[doc = "ADC clock divider."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Adcclkdiv(pub u32);
@@ -81,7 +81,7 @@ impl defmt::Format for Adcclkdiv {
         )
     }
 }
-#[doc = "ADC clock source select"]
+#[doc = "ADC clock source select."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Adcclksel(pub u32);
@@ -118,7 +118,7 @@ impl defmt::Format for Adcclksel {
         defmt::write!(f, "Adcclksel {{ sel: {=u8:?} }}", self.sel())
     }
 }
-#[doc = "AHB Clock control 0"]
+#[doc = "AHB Clock control 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ahbclkctrl0(pub u32);
@@ -383,7 +383,7 @@ impl defmt::Format for Ahbclkctrl0 {
         )
     }
 }
-#[doc = "AHB Clock control 1"]
+#[doc = "AHB Clock control 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ahbclkctrl1(pub u32);
@@ -568,7 +568,7 @@ impl defmt::Format for Ahbclkctrl1 {
         )
     }
 }
-#[doc = "AHB Clock control 2"]
+#[doc = "AHB Clock control 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ahbclkctrl2(pub u32);
@@ -903,19 +903,19 @@ impl defmt::Format for Ahbclkctrl2 {
         )
     }
 }
-#[doc = "Peripheral reset control register"]
+#[doc = "Peripheral reset control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ahbclkctrlclr(pub u32);
 impl Ahbclkctrlclr {
-    #[doc = "Data array value"]
+    #[doc = "Data array value."]
     #[must_use]
     #[inline(always)]
     pub const fn data(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Data array value"]
+    #[doc = "Data array value."]
     #[inline(always)]
     pub const fn set_data(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -940,19 +940,19 @@ impl defmt::Format for Ahbclkctrlclr {
         defmt::write!(f, "Ahbclkctrlclr {{ data: {=u32:?} }}", self.data())
     }
 }
-#[doc = "Peripheral reset control register"]
+#[doc = "Peripheral reset control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ahbclkctrlset(pub u32);
 impl Ahbclkctrlset {
-    #[doc = "Data array value"]
+    #[doc = "Data array value."]
     #[must_use]
     #[inline(always)]
     pub const fn data(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Data array value"]
+    #[doc = "Data array value."]
     #[inline(always)]
     pub const fn set_data(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -977,7 +977,7 @@ impl defmt::Format for Ahbclkctrlset {
         defmt::write!(f, "Ahbclkctrlset {{ data: {=u32:?} }}", self.data())
     }
 }
-#[doc = "System clock divider"]
+#[doc = "System clock divider."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ahbclkdiv(pub u32);
@@ -1060,7 +1060,7 @@ impl defmt::Format for Ahbclkdiv {
         )
     }
 }
-#[doc = "AHB Matrix priority control register Priority values are 3 = highest, 0 = lowest"]
+#[doc = "AHB Matrix priority control register Priority values are 3 = highest, 0 = lowest."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ahbmatprio(pub u32);
@@ -1113,26 +1113,26 @@ impl Ahbmatprio {
     pub const fn set_pri_sdma1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val as u32) & 0x03) << 6usize);
     }
-    #[doc = "USB0-FS Device.(USB0)"]
+    #[doc = "USB0-FS Device.(USB0)."]
     #[must_use]
     #[inline(always)]
     pub const fn pri_usb_fsd(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x03;
         val as u8
     }
-    #[doc = "USB0-FS Device.(USB0)"]
+    #[doc = "USB0-FS Device.(USB0)."]
     #[inline(always)]
     pub const fn set_pri_usb_fsd(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val as u32) & 0x03) << 8usize);
     }
-    #[doc = "USB0-FS host.(USB0)"]
+    #[doc = "USB0-FS host.(USB0)."]
     #[must_use]
     #[inline(always)]
     pub const fn pri_usb_fsh(&self) -> u8 {
         let val = (self.0 >> 10usize) & 0x03;
         val as u8
     }
-    #[doc = "USB0-FS host.(USB0)"]
+    #[doc = "USB0-FS host.(USB0)."]
     #[inline(always)]
     pub const fn set_pri_usb_fsh(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val as u32) & 0x03) << 10usize);
@@ -1199,7 +1199,7 @@ impl defmt::Format for Ahbmatprio {
         )
     }
 }
-#[doc = "Control automatic clock gating"]
+#[doc = "Control automatic clock gating."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Autoclkgateoverride(pub u32);
@@ -1463,19 +1463,19 @@ impl defmt::Format for BootLock {
         )
     }
 }
-#[doc = "boot seed (256-bit random value)"]
+#[doc = "boot seed (256-bit random value)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct BootSeedReg0(pub u32);
 impl BootSeedReg0 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn boot_seed_reg0(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_boot_seed_reg0(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1504,19 +1504,19 @@ impl defmt::Format for BootSeedReg0 {
         )
     }
 }
-#[doc = "boot seed (256-bit random value)"]
+#[doc = "boot seed (256-bit random value)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct BootSeedReg1(pub u32);
 impl BootSeedReg1 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn boot_seed_reg1(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_boot_seed_reg1(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1545,19 +1545,19 @@ impl defmt::Format for BootSeedReg1 {
         )
     }
 }
-#[doc = "boot seed (256-bit random value)"]
+#[doc = "boot seed (256-bit random value)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct BootSeedReg2(pub u32);
 impl BootSeedReg2 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn boot_seed_reg2(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_boot_seed_reg2(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1586,19 +1586,19 @@ impl defmt::Format for BootSeedReg2 {
         )
     }
 }
-#[doc = "boot seed (256-bit random value)"]
+#[doc = "boot seed (256-bit random value)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct BootSeedReg3(pub u32);
 impl BootSeedReg3 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn boot_seed_reg3(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_boot_seed_reg3(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1627,19 +1627,19 @@ impl defmt::Format for BootSeedReg3 {
         )
     }
 }
-#[doc = "boot seed (256-bit random value)"]
+#[doc = "boot seed (256-bit random value)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct BootSeedReg4(pub u32);
 impl BootSeedReg4 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn boot_seed_reg4(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_boot_seed_reg4(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1668,19 +1668,19 @@ impl defmt::Format for BootSeedReg4 {
         )
     }
 }
-#[doc = "boot seed (256-bit random value)"]
+#[doc = "boot seed (256-bit random value)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct BootSeedReg5(pub u32);
 impl BootSeedReg5 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn boot_seed_reg5(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_boot_seed_reg5(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1709,19 +1709,19 @@ impl defmt::Format for BootSeedReg5 {
         )
     }
 }
-#[doc = "boot seed (256-bit random value)"]
+#[doc = "boot seed (256-bit random value)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct BootSeedReg6(pub u32);
 impl BootSeedReg6 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn boot_seed_reg6(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_boot_seed_reg6(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1750,19 +1750,19 @@ impl defmt::Format for BootSeedReg6 {
         )
     }
 }
-#[doc = "boot seed (256-bit random value)"]
+#[doc = "boot seed (256-bit random value)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct BootSeedReg7(pub u32);
 impl BootSeedReg7 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn boot_seed_reg7(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_boot_seed_reg7(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1791,7 +1791,7 @@ impl defmt::Format for BootSeedReg7 {
         )
     }
 }
-#[doc = "CAN clock divider"]
+#[doc = "CAN clock divider."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Canclkdiv(pub u32);
@@ -1874,7 +1874,7 @@ impl defmt::Format for Canclkdiv {
         )
     }
 }
-#[doc = "CAN clock source select"]
+#[doc = "CAN clock source select."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Canclksel(pub u32);
@@ -1985,7 +1985,7 @@ impl defmt::Format for Clk32kclksel {
         defmt::write!(f, "Clk32kclksel {{ sel: {:?} }}", self.sel())
     }
 }
-#[doc = "CLKOUT clock divider"]
+#[doc = "CLKOUT clock divider."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Clkoutdiv(pub u32);
@@ -2068,7 +2068,7 @@ impl defmt::Format for Clkoutdiv {
         )
     }
 }
-#[doc = "CLKOUT clock source select"]
+#[doc = "CLKOUT clock source select."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Clkoutsel(pub u32);
@@ -2105,7 +2105,7 @@ impl defmt::Format for Clkoutsel {
         defmt::write!(f, "Clkoutsel {{ sel: {:?} }}", self.sel())
     }
 }
-#[doc = "Various system clock controls : Flash clock (48 MHz) control, clocks to Frequency Measures"]
+#[doc = "Various system clock controls : Flash clock (48 MHz) control, clocks to Frequency Measures."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ClockCtrl(pub u32);
@@ -2258,7 +2258,7 @@ impl defmt::Format for ClockCtrl {
         )
     }
 }
-#[doc = "Control clock configuration registers access (like xxxDIV, xxxSEL)"]
+#[doc = "Control clock configuration registers access (like xxxDIV, xxxSEL)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Clockgenupdatelockout(pub u32);
@@ -2300,7 +2300,7 @@ impl defmt::Format for Clockgenupdatelockout {
         )
     }
 }
-#[doc = "Comparator Interrupt control"]
+#[doc = "Comparator Interrupt control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CompIntCtrl(pub u32);
@@ -2383,7 +2383,7 @@ impl defmt::Format for CompIntCtrl {
         )
     }
 }
-#[doc = "Comparator Interrupt status"]
+#[doc = "Comparator Interrupt status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CompIntStatus(pub u32);
@@ -2452,7 +2452,7 @@ impl defmt::Format for CompIntStatus {
         )
     }
 }
-#[doc = "CPU Status"]
+#[doc = "CPU Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cpstat(pub u32);
@@ -2507,7 +2507,7 @@ impl defmt::Format for Cpstat {
         )
     }
 }
-#[doc = "System tick calibration for non-secure part of CPU0"]
+#[doc = "System tick calibration for non-secure part of CPU0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cpu0nstckcal(pub u32);
@@ -2576,7 +2576,7 @@ impl defmt::Format for Cpu0nstckcal {
         )
     }
 }
-#[doc = "System tick calibration for secure part of CPU0"]
+#[doc = "System tick calibration for secure part of CPU0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cpu0stckcal(pub u32);
@@ -2645,7 +2645,7 @@ impl defmt::Format for Cpu0stckcal {
         )
     }
 }
-#[doc = "CTimer 0 clock source select"]
+#[doc = "CTimer 0 clock source select."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctimerclksel0(pub u32);
@@ -2682,7 +2682,7 @@ impl defmt::Format for Ctimerclksel0 {
         defmt::write!(f, "Ctimerclksel0 {{ sel: {:?} }}", self.sel())
     }
 }
-#[doc = "CTimer 1 clock source select"]
+#[doc = "CTimer 1 clock source select."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctimerclksel1(pub u32);
@@ -2719,7 +2719,7 @@ impl defmt::Format for Ctimerclksel1 {
         defmt::write!(f, "Ctimerclksel1 {{ sel: {:?} }}", self.sel())
     }
 }
-#[doc = "CTimer 2 clock source select"]
+#[doc = "CTimer 2 clock source select."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctimerclksel2(pub u32);
@@ -2756,7 +2756,7 @@ impl defmt::Format for Ctimerclksel2 {
         defmt::write!(f, "Ctimerclksel2 {{ sel: {:?} }}", self.sel())
     }
 }
-#[doc = "CTimer 3 clock source select"]
+#[doc = "CTimer 3 clock source select."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctimerclksel3(pub u32);
@@ -2793,7 +2793,7 @@ impl defmt::Format for Ctimerclksel3 {
         defmt::write!(f, "Ctimerclksel3 {{ sel: {:?} }}", self.sel())
     }
 }
-#[doc = "CTimer 4 clock source select"]
+#[doc = "CTimer 4 clock source select."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctimerclksel4(pub u32);
@@ -2830,19 +2830,19 @@ impl defmt::Format for Ctimerclksel4 {
         defmt::write!(f, "Ctimerclksel4 {{ sel: {:?} }}", self.sel())
     }
 }
-#[doc = "Peripheral reset control register"]
+#[doc = "Peripheral reset control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctimerclkselx0(pub u32);
 impl Ctimerclkselx0 {
-    #[doc = "Data array value"]
+    #[doc = "Data array value."]
     #[must_use]
     #[inline(always)]
     pub const fn data(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Data array value"]
+    #[doc = "Data array value."]
     #[inline(always)]
     pub const fn set_data(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2867,19 +2867,19 @@ impl defmt::Format for Ctimerclkselx0 {
         defmt::write!(f, "Ctimerclkselx0 {{ data: {=u32:?} }}", self.data())
     }
 }
-#[doc = "Peripheral reset control register"]
+#[doc = "Peripheral reset control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctimerclkselx1(pub u32);
 impl Ctimerclkselx1 {
-    #[doc = "Data array value"]
+    #[doc = "Data array value."]
     #[must_use]
     #[inline(always)]
     pub const fn data(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Data array value"]
+    #[doc = "Data array value."]
     #[inline(always)]
     pub const fn set_data(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2904,19 +2904,19 @@ impl defmt::Format for Ctimerclkselx1 {
         defmt::write!(f, "Ctimerclkselx1 {{ data: {=u32:?} }}", self.data())
     }
 }
-#[doc = "Peripheral reset control register"]
+#[doc = "Peripheral reset control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctimerclkselx2(pub u32);
 impl Ctimerclkselx2 {
-    #[doc = "Data array value"]
+    #[doc = "Data array value."]
     #[must_use]
     #[inline(always)]
     pub const fn data(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Data array value"]
+    #[doc = "Data array value."]
     #[inline(always)]
     pub const fn set_data(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2941,19 +2941,19 @@ impl defmt::Format for Ctimerclkselx2 {
         defmt::write!(f, "Ctimerclkselx2 {{ data: {=u32:?} }}", self.data())
     }
 }
-#[doc = "Peripheral reset control register"]
+#[doc = "Peripheral reset control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctimerclkselx3(pub u32);
 impl Ctimerclkselx3 {
-    #[doc = "Data array value"]
+    #[doc = "Data array value."]
     #[must_use]
     #[inline(always)]
     pub const fn data(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Data array value"]
+    #[doc = "Data array value."]
     #[inline(always)]
     pub const fn set_data(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2978,19 +2978,19 @@ impl defmt::Format for Ctimerclkselx3 {
         defmt::write!(f, "Ctimerclkselx3 {{ data: {=u32:?} }}", self.data())
     }
 }
-#[doc = "Peripheral reset control register"]
+#[doc = "Peripheral reset control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctimerclkselx4(pub u32);
 impl Ctimerclkselx4 {
-    #[doc = "Data array value"]
+    #[doc = "Data array value."]
     #[must_use]
     #[inline(always)]
     pub const fn data(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Data array value"]
+    #[doc = "Data array value."]
     #[inline(always)]
     pub const fn set_data(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3015,7 +3015,7 @@ impl defmt::Format for Ctimerclkselx4 {
         defmt::write!(f, "Ctimerclkselx4 {{ data: {=u32:?} }}", self.data())
     }
 }
-#[doc = "Debug authentication BEACON register"]
+#[doc = "Debug authentication BEACON register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DebugAuthBeacon(pub u32);
@@ -3135,7 +3135,7 @@ impl defmt::Format for DebugFeatures {
         )
     }
 }
-#[doc = "Cortex debug features control. (duplicate)"]
+#[doc = "Cortex debug features control. (duplicate)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DebugFeaturesDp(pub u32);
@@ -3255,7 +3255,7 @@ impl defmt::Format for DebugLockEn {
         defmt::write!(f, "DebugLockEn {{ lock_all: {:?} }}", self.lock_all())
     }
 }
-#[doc = "Device ID"]
+#[doc = "Device ID."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DeviceId0(pub u32);
@@ -3296,7 +3296,7 @@ impl defmt::Format for DeviceId0 {
         )
     }
 }
-#[doc = "Chip revision ID and Number"]
+#[doc = "Chip revision ID and Number."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dieid(pub u32);
@@ -3351,7 +3351,7 @@ impl defmt::Format for Dieid {
         )
     }
 }
-#[doc = "Flexcomm Interface 0 clock source select for Fractional Rate Divider"]
+#[doc = "Flexcomm Interface 0 clock source select for Fractional Rate Divider."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Fcclksel(pub u32);
@@ -3388,19 +3388,19 @@ impl defmt::Format for Fcclksel {
         defmt::write!(f, "Fcclksel {{ sel: {:?} }}", self.sel())
     }
 }
-#[doc = "Peripheral reset control register"]
+#[doc = "Peripheral reset control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Fcclkselx(pub u32);
 impl Fcclkselx {
-    #[doc = "Data array value"]
+    #[doc = "Data array value."]
     #[must_use]
     #[inline(always)]
     pub const fn data(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Data array value"]
+    #[doc = "Data array value."]
     #[inline(always)]
     pub const fn set_data(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3468,14 +3468,14 @@ impl defmt::Format for FlashremapLock {
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FlashremapOffset(pub u32);
 impl FlashremapOffset {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn flashremap_offset(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_flashremap_offset(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3509,14 +3509,14 @@ impl defmt::Format for FlashremapOffset {
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FlashremapOffsetDp(pub u32);
 impl FlashremapOffsetDp {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn flashremap_offset(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_flashremap_offset(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3550,14 +3550,14 @@ impl defmt::Format for FlashremapOffsetDp {
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FlashremapSize(pub u32);
 impl FlashremapSize {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn flashremap_size(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_flashremap_size(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3591,14 +3591,14 @@ impl defmt::Format for FlashremapSize {
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FlashremapSizeDp(pub u32);
 impl FlashremapSizeDp {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn flashremap_size(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_flashremap_size(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3627,7 +3627,7 @@ impl defmt::Format for FlashremapSizeDp {
         )
     }
 }
-#[doc = "Fractional rate divider for flexcomm 0"]
+#[doc = "Fractional rate divider for flexcomm 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flexfrgctrl(pub u32);
@@ -3682,19 +3682,19 @@ impl defmt::Format for Flexfrgctrl {
         )
     }
 }
-#[doc = "Peripheral reset control register"]
+#[doc = "Peripheral reset control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flexfrgxctrl(pub u32);
 impl Flexfrgxctrl {
-    #[doc = "Data array value"]
+    #[doc = "Data array value."]
     #[must_use]
     #[inline(always)]
     pub const fn data(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Data array value"]
+    #[doc = "Data array value."]
     #[inline(always)]
     pub const fn set_data(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3719,7 +3719,7 @@ impl defmt::Format for Flexfrgxctrl {
         defmt::write!(f, "Flexfrgxctrl {{ data: {=u32:?} }}", self.data())
     }
 }
-#[doc = "FMC configuration register"]
+#[doc = "FMC configuration register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Fmccr(pub u32);
@@ -3830,19 +3830,19 @@ impl defmt::Format for Fmccr {
         )
     }
 }
-#[doc = "FMCflush control"]
+#[doc = "FMCflush control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Fmcflush(pub u32);
 impl Fmcflush {
-    #[doc = "Flush control"]
+    #[doc = "Flush control."]
     #[must_use]
     #[inline(always)]
     pub const fn flush(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Flush control"]
+    #[doc = "Flush control."]
     #[inline(always)]
     pub const fn set_flush(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -3867,7 +3867,7 @@ impl defmt::Format for Fmcflush {
         defmt::write!(f, "Fmcflush {{ flush: {=bool:?} }}", self.flush())
     }
 }
-#[doc = "FRO1MHz Clock divider (FRO1M_divided)"]
+#[doc = "FRO1MHz Clock divider (FRO1M_divided)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Fro1mclkdiv(pub u32);
@@ -3950,7 +3950,7 @@ impl defmt::Format for Fro1mclkdiv {
         )
     }
 }
-#[doc = "FRO_HF (96MHz) clock divider"]
+#[doc = "FRO_HF (96MHz) clock divider."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Frohfdiv(pub u32);
@@ -4033,7 +4033,7 @@ impl defmt::Format for Frohfdiv {
         )
     }
 }
-#[doc = "Functional retention control register"]
+#[doc = "Functional retention control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Funcretentionctrl(pub u32);
@@ -4102,7 +4102,7 @@ impl defmt::Format for Funcretentionctrl {
         )
     }
 }
-#[doc = "Enable bypass of the first stage of synchonization inside GPIO_INT module"]
+#[doc = "Enable bypass of the first stage of synchonization inside GPIO_INT module."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpiopsync(pub u32);
@@ -4139,19 +4139,19 @@ impl defmt::Format for Gpiopsync {
         defmt::write!(f, "Gpiopsync {{ psync: {:?} }}", self.psync())
     }
 }
-#[doc = "Controls whether the HASH AES hardware secret key is restricted to use by secure code"]
+#[doc = "Controls whether the HASH AES hardware secret key is restricted to use by secure code."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hashresthwkey(pub u32);
 impl Hashresthwkey {
-    #[doc = "Code value that controls whether HASH AES hardware secret key is unlocked"]
+    #[doc = "Code value that controls whether HASH AES hardware secret key is unlocked."]
     #[must_use]
     #[inline(always)]
     pub const fn unlockcode(&self) -> super::vals::Unlockcode {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         super::vals::Unlockcode::from_bits(val as u32)
     }
-    #[doc = "Code value that controls whether HASH AES hardware secret key is unlocked"]
+    #[doc = "Code value that controls whether HASH AES hardware secret key is unlocked."]
     #[inline(always)]
     pub const fn set_unlockcode(&mut self, val: super::vals::Unlockcode) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize))
@@ -4177,19 +4177,19 @@ impl defmt::Format for Hashresthwkey {
         defmt::write!(f, "Hashresthwkey {{ unlockcode: {:?} }}", self.unlockcode())
     }
 }
-#[doc = "HMAC"]
+#[doc = "HMAC."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HmacReg0(pub u32);
 impl HmacReg0 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn hmac_reg0(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_hmac_reg0(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -4214,19 +4214,19 @@ impl defmt::Format for HmacReg0 {
         defmt::write!(f, "HmacReg0 {{ hmac_reg0: {=u32:?} }}", self.hmac_reg0())
     }
 }
-#[doc = "HMAC"]
+#[doc = "HMAC."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HmacReg1(pub u32);
 impl HmacReg1 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn hmac_reg1(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_hmac_reg1(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -4251,19 +4251,19 @@ impl defmt::Format for HmacReg1 {
         defmt::write!(f, "HmacReg1 {{ hmac_reg1: {=u32:?} }}", self.hmac_reg1())
     }
 }
-#[doc = "HMAC"]
+#[doc = "HMAC."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HmacReg2(pub u32);
 impl HmacReg2 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn hmac_reg2(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_hmac_reg2(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -4288,19 +4288,19 @@ impl defmt::Format for HmacReg2 {
         defmt::write!(f, "HmacReg2 {{ hmac_reg2: {=u32:?} }}", self.hmac_reg2())
     }
 }
-#[doc = "HMAC"]
+#[doc = "HMAC."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HmacReg3(pub u32);
 impl HmacReg3 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn hmac_reg3(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_hmac_reg3(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -4325,19 +4325,19 @@ impl defmt::Format for HmacReg3 {
         defmt::write!(f, "HmacReg3 {{ hmac_reg3: {=u32:?} }}", self.hmac_reg3())
     }
 }
-#[doc = "HMAC"]
+#[doc = "HMAC."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HmacReg4(pub u32);
 impl HmacReg4 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn hmac_reg4(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_hmac_reg4(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -4362,19 +4362,19 @@ impl defmt::Format for HmacReg4 {
         defmt::write!(f, "HmacReg4 {{ hmac_reg4: {=u32:?} }}", self.hmac_reg4())
     }
 }
-#[doc = "HMAC"]
+#[doc = "HMAC."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HmacReg5(pub u32);
 impl HmacReg5 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn hmac_reg5(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_hmac_reg5(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -4399,19 +4399,19 @@ impl defmt::Format for HmacReg5 {
         defmt::write!(f, "HmacReg5 {{ hmac_reg5: {=u32:?} }}", self.hmac_reg5())
     }
 }
-#[doc = "HMAC"]
+#[doc = "HMAC."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HmacReg6(pub u32);
 impl HmacReg6 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn hmac_reg6(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_hmac_reg6(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -4436,19 +4436,19 @@ impl defmt::Format for HmacReg6 {
         defmt::write!(f, "HmacReg6 {{ hmac_reg6: {=u32:?} }}", self.hmac_reg6())
     }
 }
-#[doc = "HMAC"]
+#[doc = "HMAC."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HmacReg7(pub u32);
 impl HmacReg7 {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn hmac_reg7(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_hmac_reg7(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -4473,7 +4473,7 @@ impl defmt::Format for HmacReg7 {
         defmt::write!(f, "HmacReg7 {{ hmac_reg7: {=u32:?} }}", self.hmac_reg7())
     }
 }
-#[doc = "HS LSPI clock source select"]
+#[doc = "HS LSPI clock source select."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hslspiclksel(pub u32);
@@ -4547,7 +4547,7 @@ impl defmt::Format for KeyBlock {
         defmt::write!(f, "KeyBlock {{ key_block: {=u32:?} }}", self.key_block())
     }
 }
-#[doc = "Main clock A source select"]
+#[doc = "Main clock A source select."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mainclksela(pub u32);
@@ -4584,7 +4584,7 @@ impl defmt::Format for Mainclksela {
         defmt::write!(f, "Mainclksela {{ sel: {:?} }}", self.sel())
     }
 }
-#[doc = "Main clock source select"]
+#[doc = "Main clock source select."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mainclkselb(pub u32);
@@ -4621,7 +4621,7 @@ impl defmt::Format for Mainclkselb {
         defmt::write!(f, "Mainclkselb {{ sel: {:?} }}", self.sel())
     }
 }
-#[doc = "MCLK clock source select"]
+#[doc = "MCLK clock source select."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mclkclksel(pub u32);
@@ -4658,7 +4658,7 @@ impl defmt::Format for Mclkclksel {
         defmt::write!(f, "Mclkclksel {{ sel: {:?} }}", self.sel())
     }
 }
-#[doc = "I2S MCLK clock divider"]
+#[doc = "I2S MCLK clock divider."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mclkdiv(pub u32);
@@ -4741,7 +4741,7 @@ impl defmt::Format for Mclkdiv {
         )
     }
 }
-#[doc = "MCLK control"]
+#[doc = "MCLK control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mclkio(pub u32);
@@ -4778,7 +4778,7 @@ impl defmt::Format for Mclkio {
         defmt::write!(f, "Mclkio {{ mclkio: {:?} }}", self.mclkio())
     }
 }
-#[doc = "Memory Remap control register"]
+#[doc = "Memory Remap control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Memoryremap(pub u32);
@@ -4815,7 +4815,7 @@ impl defmt::Format for Memoryremap {
         defmt::write!(f, "Memoryremap {{ map: {:?} }}", self.map())
     }
 }
-#[doc = "NMI Source Select"]
+#[doc = "NMI Source Select."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Nmisrc(pub u32);
@@ -4870,7 +4870,7 @@ impl defmt::Format for Nmisrc {
         )
     }
 }
-#[doc = "PLL0 clock divider"]
+#[doc = "PLL0 clock divider."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pll0clkdiv(pub u32);
@@ -4953,7 +4953,7 @@ impl defmt::Format for Pll0clkdiv {
         )
     }
 }
-#[doc = "PLL0 clock source select"]
+#[doc = "PLL0 clock source select."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pll0clksel(pub u32);
@@ -4990,7 +4990,7 @@ impl defmt::Format for Pll0clksel {
         defmt::write!(f, "Pll0clksel {{ sel: {:?} }}", self.sel())
     }
 }
-#[doc = "PLL0 550m control"]
+#[doc = "PLL0 550m control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pll0ctrl(pub u32);
@@ -5199,7 +5199,7 @@ impl defmt::Format for Pll0ctrl {
         )
     }
 }
-#[doc = "PLL0 550m N divider"]
+#[doc = "PLL0 550m N divider."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pll0ndec(pub u32);
@@ -5254,19 +5254,19 @@ impl defmt::Format for Pll0ndec {
         )
     }
 }
-#[doc = "PLL0 550m P divider"]
+#[doc = "PLL0 550m P divider."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pll0pdec(pub u32);
 impl Pll0pdec {
-    #[doc = "post-divider divider ratio (P-divider)"]
+    #[doc = "post-divider divider ratio (P-divider)."]
     #[must_use]
     #[inline(always)]
     pub const fn pdiv(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x1f;
         val as u8
     }
-    #[doc = "post-divider divider ratio (P-divider)"]
+    #[doc = "post-divider divider ratio (P-divider)."]
     #[inline(always)]
     pub const fn set_pdiv(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val as u32) & 0x1f) << 0usize);
@@ -5309,7 +5309,7 @@ impl defmt::Format for Pll0pdec {
         )
     }
 }
-#[doc = "PLL0 Spread Spectrum Wrapper control register 0"]
+#[doc = "PLL0 Spread Spectrum Wrapper control register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pll0sscg0(pub u32);
@@ -5346,7 +5346,7 @@ impl defmt::Format for Pll0sscg0 {
         defmt::write!(f, "Pll0sscg0 {{ md_lbs: {=u32:?} }}", self.md_lbs())
     }
 }
-#[doc = "PLL0 Spread Spectrum Wrapper control register 1"]
+#[doc = "PLL0 Spread Spectrum Wrapper control register 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pll0sscg1(pub u32);
@@ -5499,7 +5499,7 @@ impl defmt::Format for Pll0sscg1 {
         )
     }
 }
-#[doc = "PLL0 550m status"]
+#[doc = "PLL0 550m status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pll0stat(pub u32);
@@ -5596,7 +5596,7 @@ impl defmt::Format for Pll0stat {
         )
     }
 }
-#[doc = "PLL1 clock source select"]
+#[doc = "PLL1 clock source select."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pll1clksel(pub u32);
@@ -5633,7 +5633,7 @@ impl defmt::Format for Pll1clksel {
         defmt::write!(f, "Pll1clksel {{ sel: {:?} }}", self.sel())
     }
 }
-#[doc = "PLL1 550m control"]
+#[doc = "PLL1 550m control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pll1ctrl(pub u32);
@@ -5842,7 +5842,7 @@ impl defmt::Format for Pll1ctrl {
         )
     }
 }
-#[doc = "PLL1 550m M divider"]
+#[doc = "PLL1 550m M divider."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pll1mdec(pub u32);
@@ -5897,7 +5897,7 @@ impl defmt::Format for Pll1mdec {
         )
     }
 }
-#[doc = "PLL1 550m N divider"]
+#[doc = "PLL1 550m N divider."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pll1ndec(pub u32);
@@ -5952,19 +5952,19 @@ impl defmt::Format for Pll1ndec {
         )
     }
 }
-#[doc = "PLL1 550m P divider"]
+#[doc = "PLL1 550m P divider."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pll1pdec(pub u32);
 impl Pll1pdec {
-    #[doc = "post-divider divider ratio (P-divider)"]
+    #[doc = "post-divider divider ratio (P-divider)."]
     #[must_use]
     #[inline(always)]
     pub const fn pdiv(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x1f;
         val as u8
     }
-    #[doc = "post-divider divider ratio (P-divider)"]
+    #[doc = "post-divider divider ratio (P-divider)."]
     #[inline(always)]
     pub const fn set_pdiv(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val as u32) & 0x1f) << 0usize);
@@ -6007,7 +6007,7 @@ impl defmt::Format for Pll1pdec {
         )
     }
 }
-#[doc = "PLL1 550m status"]
+#[doc = "PLL1 550m status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pll1stat(pub u32);
@@ -6104,7 +6104,7 @@ impl defmt::Format for Pll1stat {
         )
     }
 }
-#[doc = "Peripheral reset control 0"]
+#[doc = "Peripheral reset control 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Presetctrl0(pub u32);
@@ -6369,7 +6369,7 @@ impl defmt::Format for Presetctrl0 {
         )
     }
 }
-#[doc = "Peripheral reset control 1"]
+#[doc = "Peripheral reset control 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Presetctrl1(pub u32);
@@ -6554,7 +6554,7 @@ impl defmt::Format for Presetctrl1 {
         )
     }
 }
-#[doc = "Peripheral reset control 2"]
+#[doc = "Peripheral reset control 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Presetctrl2(pub u32);
@@ -6889,19 +6889,19 @@ impl defmt::Format for Presetctrl2 {
         )
     }
 }
-#[doc = "Peripheral reset control clear register"]
+#[doc = "Peripheral reset control clear register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Presetctrlclr(pub u32);
 impl Presetctrlclr {
-    #[doc = "Data array value"]
+    #[doc = "Data array value."]
     #[must_use]
     #[inline(always)]
     pub const fn data(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Data array value"]
+    #[doc = "Data array value."]
     #[inline(always)]
     pub const fn set_data(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -6926,19 +6926,19 @@ impl defmt::Format for Presetctrlclr {
         defmt::write!(f, "Presetctrlclr {{ data: {=u32:?} }}", self.data())
     }
 }
-#[doc = "Peripheral reset control set register"]
+#[doc = "Peripheral reset control set register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Presetctrlset(pub u32);
 impl Presetctrlset {
-    #[doc = "Data array value"]
+    #[doc = "Data array value."]
     #[must_use]
     #[inline(always)]
     pub const fn data(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Data array value"]
+    #[doc = "Data array value."]
     #[inline(always)]
     pub const fn set_data(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -6963,7 +6963,7 @@ impl defmt::Format for Presetctrlset {
         defmt::write!(f, "Presetctrlset {{ data: {=u32:?} }}", self.data())
     }
 }
-#[doc = "SCT/PWM clock divider"]
+#[doc = "SCT/PWM clock divider."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sctclkdiv(pub u32);
@@ -7046,7 +7046,7 @@ impl defmt::Format for Sctclkdiv {
         )
     }
 }
-#[doc = "SCTimer/PWM clock source select"]
+#[doc = "SCTimer/PWM clock source select."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sctclksel(pub u32);
@@ -7121,7 +7121,7 @@ impl defmt::Format for SwdAccessCpu0 {
         defmt::write!(f, "SwdAccessCpu0 {{ sec_code: {:?} }}", self.sec_code())
     }
 }
-#[doc = "generate a software_reset"]
+#[doc = "generate a software_reset."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SwrReset(pub u32);
@@ -7159,7 +7159,7 @@ impl defmt::Format for SwrReset {
         defmt::write!(f, "SwrReset {{ swr_reset: {:?} }}", self.swr_reset())
     }
 }
-#[doc = "System Tick Timer divider for CPU0"]
+#[doc = "System Tick Timer divider for CPU0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Systickclkdiv0(pub u32);
@@ -7242,7 +7242,7 @@ impl defmt::Format for Systickclkdiv0 {
         )
     }
 }
-#[doc = "System Tick Timer for CPU0 source select"]
+#[doc = "System Tick Timer for CPU0 source select."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Systickclksel0(pub u32);
@@ -7279,19 +7279,19 @@ impl defmt::Format for Systickclksel0 {
         defmt::write!(f, "Systickclksel0 {{ sel: {:?} }}", self.sel())
     }
 }
-#[doc = "Peripheral reset control register"]
+#[doc = "Peripheral reset control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Systickclkselx0(pub u32);
 impl Systickclkselx0 {
-    #[doc = "Data array value"]
+    #[doc = "Data array value."]
     #[must_use]
     #[inline(always)]
     pub const fn data(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Data array value"]
+    #[doc = "Data array value."]
     #[inline(always)]
     pub const fn set_data(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -7316,7 +7316,7 @@ impl defmt::Format for Systickclkselx0 {
         defmt::write!(f, "Systickclkselx0 {{ data: {=u32:?} }}", self.data())
     }
 }
-#[doc = "TRACE clock divider"]
+#[doc = "TRACE clock divider."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Traceclkdiv(pub u32);
@@ -7399,7 +7399,7 @@ impl defmt::Format for Traceclkdiv {
         )
     }
 }
-#[doc = "Trace clock source select"]
+#[doc = "Trace clock source select."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Traceclksel(pub u32);
@@ -7436,7 +7436,7 @@ impl defmt::Format for Traceclksel {
         defmt::write!(f, "Traceclksel {{ sel: {:?} }}", self.sel())
     }
 }
-#[doc = "USB0-FS Clock divider"]
+#[doc = "USB0-FS Clock divider."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Usb0clkdiv(pub u32);
@@ -7519,7 +7519,7 @@ impl defmt::Format for Usb0clkdiv {
         )
     }
 }
-#[doc = "FS USB clock source select"]
+#[doc = "FS USB clock source select."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Usb0clksel(pub u32);
@@ -7556,7 +7556,7 @@ impl defmt::Format for Usb0clksel {
         defmt::write!(f, "Usb0clksel {{ sel: {:?} }}", self.sel())
     }
 }
-#[doc = "USB0-FS need clock control"]
+#[doc = "USB0-FS need clock control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Usb0needclkctrl(pub u32);
@@ -7639,7 +7639,7 @@ impl defmt::Format for Usb0needclkctrl {
         )
     }
 }
-#[doc = "USB0-FS need clock status"]
+#[doc = "USB0-FS need clock status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Usb0needclkstat(pub u32);
@@ -7694,43 +7694,43 @@ impl defmt::Format for Usb0needclkstat {
         )
     }
 }
-#[doc = "USB1-HS need clock control"]
+#[doc = "USB1-HS need clock control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Usb1needclkctrl(pub u32);
 impl Usb1needclkctrl {
-    #[doc = "USB1-HS Device need_clock signal control:"]
+    #[doc = "USB1-HS Device need_clock signal control:."]
     #[must_use]
     #[inline(always)]
     pub const fn ap_hs_dev_needclk(&self) -> super::vals::ApHsDevNeedclk {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::ApHsDevNeedclk::from_bits(val as u8)
     }
-    #[doc = "USB1-HS Device need_clock signal control:"]
+    #[doc = "USB1-HS Device need_clock signal control:."]
     #[inline(always)]
     pub const fn set_ap_hs_dev_needclk(&mut self, val: super::vals::ApHsDevNeedclk) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "USB1-HS device need clock polarity for triggering the USB1_NEEDCLK wake-up interrupt:"]
+    #[doc = "USB1-HS device need clock polarity for triggering the USB1_NEEDCLK wake-up interrupt:."]
     #[must_use]
     #[inline(always)]
     pub const fn pol_hs_dev_needclk(&self) -> super::vals::PolHsDevNeedclk {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::PolHsDevNeedclk::from_bits(val as u8)
     }
-    #[doc = "USB1-HS device need clock polarity for triggering the USB1_NEEDCLK wake-up interrupt:"]
+    #[doc = "USB1-HS device need clock polarity for triggering the USB1_NEEDCLK wake-up interrupt:."]
     #[inline(always)]
     pub const fn set_pol_hs_dev_needclk(&mut self, val: super::vals::PolHsDevNeedclk) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "USB1-HS Host need clock signal control:"]
+    #[doc = "USB1-HS Host need clock signal control:."]
     #[must_use]
     #[inline(always)]
     pub const fn ap_hs_host_needclk(&self) -> super::vals::ApHsHostNeedclk {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::ApHsHostNeedclk::from_bits(val as u8)
     }
-    #[doc = "USB1-HS Host need clock signal control:"]
+    #[doc = "USB1-HS Host need clock signal control:."]
     #[inline(always)]
     pub const fn set_ap_hs_host_needclk(&mut self, val: super::vals::ApHsHostNeedclk) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
@@ -7791,7 +7791,7 @@ impl defmt::Format for Usb1needclkctrl {
         )
     }
 }
-#[doc = "USB1-HS need clock status"]
+#[doc = "USB1-HS need clock status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Usb1needclkstat(pub u32);
@@ -7846,7 +7846,7 @@ impl defmt::Format for Usb1needclkstat {
         )
     }
 }
-#[doc = "WDT clock divider"]
+#[doc = "WDT clock divider."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Wdtclkdiv(pub u32);

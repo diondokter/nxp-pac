@@ -149,9 +149,9 @@ impl From<CalReq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Calofs {
-    #[doc = "Calibration function disabled"]
+    #[doc = "Calibration function disabled."]
     NO_ACTIVE_OFFSET_CALIBRATION_REQUEST = 0x0,
-    #[doc = "Request for offset calibration function"]
+    #[doc = "Request for offset calibration function."]
     OFFSET_CALIBRATION_REQUEST_PENDING = 0x01,
 }
 impl Calofs {
@@ -180,9 +180,9 @@ impl From<Calofs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Calofsi {
-    #[doc = "Not implemented"]
+    #[doc = "Not implemented."]
     CAL_FUNCTION_NOT_AVAILABLE = 0x0,
-    #[doc = "Implemented"]
+    #[doc = "Implemented."]
     CAL_FUNCTION_AVAILABLE = 0x01,
 }
 impl Calofsi {
@@ -264,27 +264,27 @@ impl From<Cmdact> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh10Avgs {
-    #[doc = "Single conversion"]
+    #[doc = "Single conversion."]
     NO_AVERAGE = 0x0,
-    #[doc = "2"]
+    #[doc = "2."]
     AVERAGE_2 = 0x01,
-    #[doc = "4"]
+    #[doc = "4."]
     AVERAGE_4 = 0x02,
-    #[doc = "8"]
+    #[doc = "8."]
     AVERAGE_8 = 0x03,
-    #[doc = "16"]
+    #[doc = "16."]
     AVERAGE_16 = 0x04,
-    #[doc = "32"]
+    #[doc = "32."]
     AVERAGE_32 = 0x05,
-    #[doc = "64"]
+    #[doc = "64."]
     AVERAGE_64 = 0x06,
-    #[doc = "128"]
+    #[doc = "128."]
     AVERAGE_128 = 0x07,
-    #[doc = "256"]
+    #[doc = "256."]
     AVERAGE_256 = 0x08,
-    #[doc = "512"]
+    #[doc = "512."]
     AVERAGE_512 = 0x09,
-    #[doc = "1024"]
+    #[doc = "1024."]
     AVERAGE_1024 = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
@@ -318,7 +318,7 @@ impl From<Cmdh10Avgs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh10Cmpen {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED_ALWAYS_STORE_RESULT = 0x0,
     _RESERVED_1 = 0x01,
     #[doc = "Enabled. Store on true."]
@@ -408,30 +408,30 @@ impl From<Cmdh10Loop> for u8 {
 pub enum Cmdh10Next {
     #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
     NO_NEXT_CMD_TERMINATE_ON_FINISH = 0x0,
-    #[doc = "CMD1"]
+    #[doc = "CMD1."]
     DO_CMD1_NEXT = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_6 = 0x06,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_7 = 0x07,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_8 = 0x08,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "CMD15"]
+    #[doc = "CMD15."]
     DO_CMD15_NEXT = 0x0f,
 }
 impl Cmdh10Next {
@@ -462,19 +462,19 @@ impl From<Cmdh10Next> for u8 {
 pub enum Cmdh10Sts {
     #[doc = "Minimum sample time of 3.5 ADCK cycles."]
     SAMPLE_3P5 = 0x0,
-    #[doc = "5.5 ADCK cycles"]
+    #[doc = "5.5 ADCK cycles."]
     SAMPLE_5P5 = 0x01,
-    #[doc = "7.5 ADCK cycles"]
+    #[doc = "7.5 ADCK cycles."]
     SAMPLE_7P5 = 0x02,
-    #[doc = "11.5 ADCK cycles"]
+    #[doc = "11.5 ADCK cycles."]
     SAMPLE_11P5 = 0x03,
-    #[doc = "19.5 ADCK cycles"]
+    #[doc = "19.5 ADCK cycles."]
     SAMPLE_19P5 = 0x04,
-    #[doc = "35.5 ADCK cycles"]
+    #[doc = "35.5 ADCK cycles."]
     SAMPLE_35P5 = 0x05,
-    #[doc = "67.5 ADCK cycles"]
+    #[doc = "67.5 ADCK cycles."]
     SAMPLE_67P5 = 0x06,
-    #[doc = "131.5 ADCK cycles"]
+    #[doc = "131.5 ADCK cycles."]
     SAMPLE_131P5 = 0x07,
 }
 impl Cmdh10Sts {
@@ -503,27 +503,27 @@ impl From<Cmdh10Sts> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh11Avgs {
-    #[doc = "Single conversion"]
+    #[doc = "Single conversion."]
     NO_AVERAGE = 0x0,
-    #[doc = "2"]
+    #[doc = "2."]
     AVERAGE_2 = 0x01,
-    #[doc = "4"]
+    #[doc = "4."]
     AVERAGE_4 = 0x02,
-    #[doc = "8"]
+    #[doc = "8."]
     AVERAGE_8 = 0x03,
-    #[doc = "16"]
+    #[doc = "16."]
     AVERAGE_16 = 0x04,
-    #[doc = "32"]
+    #[doc = "32."]
     AVERAGE_32 = 0x05,
-    #[doc = "64"]
+    #[doc = "64."]
     AVERAGE_64 = 0x06,
-    #[doc = "128"]
+    #[doc = "128."]
     AVERAGE_128 = 0x07,
-    #[doc = "256"]
+    #[doc = "256."]
     AVERAGE_256 = 0x08,
-    #[doc = "512"]
+    #[doc = "512."]
     AVERAGE_512 = 0x09,
-    #[doc = "1024"]
+    #[doc = "1024."]
     AVERAGE_1024 = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
@@ -557,7 +557,7 @@ impl From<Cmdh11Avgs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh11Cmpen {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED_ALWAYS_STORE_RESULT = 0x0,
     _RESERVED_1 = 0x01,
     #[doc = "Enabled. Store on true."]
@@ -647,30 +647,30 @@ impl From<Cmdh11Loop> for u8 {
 pub enum Cmdh11Next {
     #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
     NO_NEXT_CMD_TERMINATE_ON_FINISH = 0x0,
-    #[doc = "CMD1"]
+    #[doc = "CMD1."]
     DO_CMD1_NEXT = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_6 = 0x06,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_7 = 0x07,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_8 = 0x08,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "CMD15"]
+    #[doc = "CMD15."]
     DO_CMD15_NEXT = 0x0f,
 }
 impl Cmdh11Next {
@@ -701,19 +701,19 @@ impl From<Cmdh11Next> for u8 {
 pub enum Cmdh11Sts {
     #[doc = "Minimum sample time of 3.5 ADCK cycles."]
     SAMPLE_3P5 = 0x0,
-    #[doc = "5.5 ADCK cycles"]
+    #[doc = "5.5 ADCK cycles."]
     SAMPLE_5P5 = 0x01,
-    #[doc = "7.5 ADCK cycles"]
+    #[doc = "7.5 ADCK cycles."]
     SAMPLE_7P5 = 0x02,
-    #[doc = "11.5 ADCK cycles"]
+    #[doc = "11.5 ADCK cycles."]
     SAMPLE_11P5 = 0x03,
-    #[doc = "19.5 ADCK cycles"]
+    #[doc = "19.5 ADCK cycles."]
     SAMPLE_19P5 = 0x04,
-    #[doc = "35.5 ADCK cycles"]
+    #[doc = "35.5 ADCK cycles."]
     SAMPLE_35P5 = 0x05,
-    #[doc = "67.5 ADCK cycles"]
+    #[doc = "67.5 ADCK cycles."]
     SAMPLE_67P5 = 0x06,
-    #[doc = "131.5 ADCK cycles"]
+    #[doc = "131.5 ADCK cycles."]
     SAMPLE_131P5 = 0x07,
 }
 impl Cmdh11Sts {
@@ -742,27 +742,27 @@ impl From<Cmdh11Sts> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh12Avgs {
-    #[doc = "Single conversion"]
+    #[doc = "Single conversion."]
     NO_AVERAGE = 0x0,
-    #[doc = "2"]
+    #[doc = "2."]
     AVERAGE_2 = 0x01,
-    #[doc = "4"]
+    #[doc = "4."]
     AVERAGE_4 = 0x02,
-    #[doc = "8"]
+    #[doc = "8."]
     AVERAGE_8 = 0x03,
-    #[doc = "16"]
+    #[doc = "16."]
     AVERAGE_16 = 0x04,
-    #[doc = "32"]
+    #[doc = "32."]
     AVERAGE_32 = 0x05,
-    #[doc = "64"]
+    #[doc = "64."]
     AVERAGE_64 = 0x06,
-    #[doc = "128"]
+    #[doc = "128."]
     AVERAGE_128 = 0x07,
-    #[doc = "256"]
+    #[doc = "256."]
     AVERAGE_256 = 0x08,
-    #[doc = "512"]
+    #[doc = "512."]
     AVERAGE_512 = 0x09,
-    #[doc = "1024"]
+    #[doc = "1024."]
     AVERAGE_1024 = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
@@ -796,7 +796,7 @@ impl From<Cmdh12Avgs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh12Cmpen {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED_ALWAYS_STORE_RESULT = 0x0,
     _RESERVED_1 = 0x01,
     #[doc = "Enabled. Store on true."]
@@ -886,30 +886,30 @@ impl From<Cmdh12Loop> for u8 {
 pub enum Cmdh12Next {
     #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
     NO_NEXT_CMD_TERMINATE_ON_FINISH = 0x0,
-    #[doc = "CMD1"]
+    #[doc = "CMD1."]
     DO_CMD1_NEXT = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_6 = 0x06,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_7 = 0x07,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_8 = 0x08,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "CMD15"]
+    #[doc = "CMD15."]
     DO_CMD15_NEXT = 0x0f,
 }
 impl Cmdh12Next {
@@ -940,19 +940,19 @@ impl From<Cmdh12Next> for u8 {
 pub enum Cmdh12Sts {
     #[doc = "Minimum sample time of 3.5 ADCK cycles."]
     SAMPLE_3P5 = 0x0,
-    #[doc = "5.5 ADCK cycles"]
+    #[doc = "5.5 ADCK cycles."]
     SAMPLE_5P5 = 0x01,
-    #[doc = "7.5 ADCK cycles"]
+    #[doc = "7.5 ADCK cycles."]
     SAMPLE_7P5 = 0x02,
-    #[doc = "11.5 ADCK cycles"]
+    #[doc = "11.5 ADCK cycles."]
     SAMPLE_11P5 = 0x03,
-    #[doc = "19.5 ADCK cycles"]
+    #[doc = "19.5 ADCK cycles."]
     SAMPLE_19P5 = 0x04,
-    #[doc = "35.5 ADCK cycles"]
+    #[doc = "35.5 ADCK cycles."]
     SAMPLE_35P5 = 0x05,
-    #[doc = "67.5 ADCK cycles"]
+    #[doc = "67.5 ADCK cycles."]
     SAMPLE_67P5 = 0x06,
-    #[doc = "131.5 ADCK cycles"]
+    #[doc = "131.5 ADCK cycles."]
     SAMPLE_131P5 = 0x07,
 }
 impl Cmdh12Sts {
@@ -981,27 +981,27 @@ impl From<Cmdh12Sts> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh13Avgs {
-    #[doc = "Single conversion"]
+    #[doc = "Single conversion."]
     NO_AVERAGE = 0x0,
-    #[doc = "2"]
+    #[doc = "2."]
     AVERAGE_2 = 0x01,
-    #[doc = "4"]
+    #[doc = "4."]
     AVERAGE_4 = 0x02,
-    #[doc = "8"]
+    #[doc = "8."]
     AVERAGE_8 = 0x03,
-    #[doc = "16"]
+    #[doc = "16."]
     AVERAGE_16 = 0x04,
-    #[doc = "32"]
+    #[doc = "32."]
     AVERAGE_32 = 0x05,
-    #[doc = "64"]
+    #[doc = "64."]
     AVERAGE_64 = 0x06,
-    #[doc = "128"]
+    #[doc = "128."]
     AVERAGE_128 = 0x07,
-    #[doc = "256"]
+    #[doc = "256."]
     AVERAGE_256 = 0x08,
-    #[doc = "512"]
+    #[doc = "512."]
     AVERAGE_512 = 0x09,
-    #[doc = "1024"]
+    #[doc = "1024."]
     AVERAGE_1024 = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
@@ -1035,7 +1035,7 @@ impl From<Cmdh13Avgs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh13Cmpen {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED_ALWAYS_STORE_RESULT = 0x0,
     _RESERVED_1 = 0x01,
     #[doc = "Enabled. Store on true."]
@@ -1125,30 +1125,30 @@ impl From<Cmdh13Loop> for u8 {
 pub enum Cmdh13Next {
     #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
     NO_NEXT_CMD_TERMINATE_ON_FINISH = 0x0,
-    #[doc = "CMD1"]
+    #[doc = "CMD1."]
     DO_CMD1_NEXT = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_6 = 0x06,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_7 = 0x07,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_8 = 0x08,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "CMD15"]
+    #[doc = "CMD15."]
     DO_CMD15_NEXT = 0x0f,
 }
 impl Cmdh13Next {
@@ -1179,19 +1179,19 @@ impl From<Cmdh13Next> for u8 {
 pub enum Cmdh13Sts {
     #[doc = "Minimum sample time of 3.5 ADCK cycles."]
     SAMPLE_3P5 = 0x0,
-    #[doc = "5.5 ADCK cycles"]
+    #[doc = "5.5 ADCK cycles."]
     SAMPLE_5P5 = 0x01,
-    #[doc = "7.5 ADCK cycles"]
+    #[doc = "7.5 ADCK cycles."]
     SAMPLE_7P5 = 0x02,
-    #[doc = "11.5 ADCK cycles"]
+    #[doc = "11.5 ADCK cycles."]
     SAMPLE_11P5 = 0x03,
-    #[doc = "19.5 ADCK cycles"]
+    #[doc = "19.5 ADCK cycles."]
     SAMPLE_19P5 = 0x04,
-    #[doc = "35.5 ADCK cycles"]
+    #[doc = "35.5 ADCK cycles."]
     SAMPLE_35P5 = 0x05,
-    #[doc = "67.5 ADCK cycles"]
+    #[doc = "67.5 ADCK cycles."]
     SAMPLE_67P5 = 0x06,
-    #[doc = "131.5 ADCK cycles"]
+    #[doc = "131.5 ADCK cycles."]
     SAMPLE_131P5 = 0x07,
 }
 impl Cmdh13Sts {
@@ -1220,27 +1220,27 @@ impl From<Cmdh13Sts> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh14Avgs {
-    #[doc = "Single conversion"]
+    #[doc = "Single conversion."]
     NO_AVERAGE = 0x0,
-    #[doc = "2"]
+    #[doc = "2."]
     AVERAGE_2 = 0x01,
-    #[doc = "4"]
+    #[doc = "4."]
     AVERAGE_4 = 0x02,
-    #[doc = "8"]
+    #[doc = "8."]
     AVERAGE_8 = 0x03,
-    #[doc = "16"]
+    #[doc = "16."]
     AVERAGE_16 = 0x04,
-    #[doc = "32"]
+    #[doc = "32."]
     AVERAGE_32 = 0x05,
-    #[doc = "64"]
+    #[doc = "64."]
     AVERAGE_64 = 0x06,
-    #[doc = "128"]
+    #[doc = "128."]
     AVERAGE_128 = 0x07,
-    #[doc = "256"]
+    #[doc = "256."]
     AVERAGE_256 = 0x08,
-    #[doc = "512"]
+    #[doc = "512."]
     AVERAGE_512 = 0x09,
-    #[doc = "1024"]
+    #[doc = "1024."]
     AVERAGE_1024 = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
@@ -1274,7 +1274,7 @@ impl From<Cmdh14Avgs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh14Cmpen {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED_ALWAYS_STORE_RESULT = 0x0,
     _RESERVED_1 = 0x01,
     #[doc = "Enabled. Store on true."]
@@ -1364,30 +1364,30 @@ impl From<Cmdh14Loop> for u8 {
 pub enum Cmdh14Next {
     #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
     NO_NEXT_CMD_TERMINATE_ON_FINISH = 0x0,
-    #[doc = "CMD1"]
+    #[doc = "CMD1."]
     DO_CMD1_NEXT = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_6 = 0x06,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_7 = 0x07,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_8 = 0x08,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "CMD15"]
+    #[doc = "CMD15."]
     DO_CMD15_NEXT = 0x0f,
 }
 impl Cmdh14Next {
@@ -1418,19 +1418,19 @@ impl From<Cmdh14Next> for u8 {
 pub enum Cmdh14Sts {
     #[doc = "Minimum sample time of 3.5 ADCK cycles."]
     SAMPLE_3P5 = 0x0,
-    #[doc = "5.5 ADCK cycles"]
+    #[doc = "5.5 ADCK cycles."]
     SAMPLE_5P5 = 0x01,
-    #[doc = "7.5 ADCK cycles"]
+    #[doc = "7.5 ADCK cycles."]
     SAMPLE_7P5 = 0x02,
-    #[doc = "11.5 ADCK cycles"]
+    #[doc = "11.5 ADCK cycles."]
     SAMPLE_11P5 = 0x03,
-    #[doc = "19.5 ADCK cycles"]
+    #[doc = "19.5 ADCK cycles."]
     SAMPLE_19P5 = 0x04,
-    #[doc = "35.5 ADCK cycles"]
+    #[doc = "35.5 ADCK cycles."]
     SAMPLE_35P5 = 0x05,
-    #[doc = "67.5 ADCK cycles"]
+    #[doc = "67.5 ADCK cycles."]
     SAMPLE_67P5 = 0x06,
-    #[doc = "131.5 ADCK cycles"]
+    #[doc = "131.5 ADCK cycles."]
     SAMPLE_131P5 = 0x07,
 }
 impl Cmdh14Sts {
@@ -1459,27 +1459,27 @@ impl From<Cmdh14Sts> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh15Avgs {
-    #[doc = "Single conversion"]
+    #[doc = "Single conversion."]
     NO_AVERAGE = 0x0,
-    #[doc = "2"]
+    #[doc = "2."]
     AVERAGE_2 = 0x01,
-    #[doc = "4"]
+    #[doc = "4."]
     AVERAGE_4 = 0x02,
-    #[doc = "8"]
+    #[doc = "8."]
     AVERAGE_8 = 0x03,
-    #[doc = "16"]
+    #[doc = "16."]
     AVERAGE_16 = 0x04,
-    #[doc = "32"]
+    #[doc = "32."]
     AVERAGE_32 = 0x05,
-    #[doc = "64"]
+    #[doc = "64."]
     AVERAGE_64 = 0x06,
-    #[doc = "128"]
+    #[doc = "128."]
     AVERAGE_128 = 0x07,
-    #[doc = "256"]
+    #[doc = "256."]
     AVERAGE_256 = 0x08,
-    #[doc = "512"]
+    #[doc = "512."]
     AVERAGE_512 = 0x09,
-    #[doc = "1024"]
+    #[doc = "1024."]
     AVERAGE_1024 = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
@@ -1513,7 +1513,7 @@ impl From<Cmdh15Avgs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh15Cmpen {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED_ALWAYS_STORE_RESULT = 0x0,
     _RESERVED_1 = 0x01,
     #[doc = "Enabled. Store on true."]
@@ -1603,30 +1603,30 @@ impl From<Cmdh15Loop> for u8 {
 pub enum Cmdh15Next {
     #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
     NO_NEXT_CMD_TERMINATE_ON_FINISH = 0x0,
-    #[doc = "CMD1"]
+    #[doc = "CMD1."]
     DO_CMD1_NEXT = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_6 = 0x06,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_7 = 0x07,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_8 = 0x08,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "CMD15"]
+    #[doc = "CMD15."]
     DO_CMD15_NEXT = 0x0f,
 }
 impl Cmdh15Next {
@@ -1657,19 +1657,19 @@ impl From<Cmdh15Next> for u8 {
 pub enum Cmdh15Sts {
     #[doc = "Minimum sample time of 3.5 ADCK cycles."]
     SAMPLE_3P5 = 0x0,
-    #[doc = "5.5 ADCK cycles"]
+    #[doc = "5.5 ADCK cycles."]
     SAMPLE_5P5 = 0x01,
-    #[doc = "7.5 ADCK cycles"]
+    #[doc = "7.5 ADCK cycles."]
     SAMPLE_7P5 = 0x02,
-    #[doc = "11.5 ADCK cycles"]
+    #[doc = "11.5 ADCK cycles."]
     SAMPLE_11P5 = 0x03,
-    #[doc = "19.5 ADCK cycles"]
+    #[doc = "19.5 ADCK cycles."]
     SAMPLE_19P5 = 0x04,
-    #[doc = "35.5 ADCK cycles"]
+    #[doc = "35.5 ADCK cycles."]
     SAMPLE_35P5 = 0x05,
-    #[doc = "67.5 ADCK cycles"]
+    #[doc = "67.5 ADCK cycles."]
     SAMPLE_67P5 = 0x06,
-    #[doc = "131.5 ADCK cycles"]
+    #[doc = "131.5 ADCK cycles."]
     SAMPLE_131P5 = 0x07,
 }
 impl Cmdh15Sts {
@@ -1698,27 +1698,27 @@ impl From<Cmdh15Sts> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh1Avgs {
-    #[doc = "Single conversion"]
+    #[doc = "Single conversion."]
     NO_AVERAGE = 0x0,
-    #[doc = "2"]
+    #[doc = "2."]
     AVERAGE_2 = 0x01,
-    #[doc = "4"]
+    #[doc = "4."]
     AVERAGE_4 = 0x02,
-    #[doc = "8"]
+    #[doc = "8."]
     AVERAGE_8 = 0x03,
-    #[doc = "16"]
+    #[doc = "16."]
     AVERAGE_16 = 0x04,
-    #[doc = "32"]
+    #[doc = "32."]
     AVERAGE_32 = 0x05,
-    #[doc = "64"]
+    #[doc = "64."]
     AVERAGE_64 = 0x06,
-    #[doc = "128"]
+    #[doc = "128."]
     AVERAGE_128 = 0x07,
-    #[doc = "256"]
+    #[doc = "256."]
     AVERAGE_256 = 0x08,
-    #[doc = "512"]
+    #[doc = "512."]
     AVERAGE_512 = 0x09,
-    #[doc = "1024"]
+    #[doc = "1024."]
     AVERAGE_1024 = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
@@ -1752,7 +1752,7 @@ impl From<Cmdh1Avgs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh1Cmpen {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED_ALWAYS_STORE_RESULT = 0x0,
     _RESERVED_1 = 0x01,
     #[doc = "Enabled. Store on true."]
@@ -1842,30 +1842,30 @@ impl From<Cmdh1Loop> for u8 {
 pub enum Cmdh1Next {
     #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
     NO_NEXT_CMD_TERMINATE_ON_FINISH = 0x0,
-    #[doc = "CMD1"]
+    #[doc = "CMD1."]
     DO_CMD1_NEXT = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_6 = 0x06,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_7 = 0x07,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_8 = 0x08,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "CMD15"]
+    #[doc = "CMD15."]
     DO_CMD15_NEXT = 0x0f,
 }
 impl Cmdh1Next {
@@ -1896,19 +1896,19 @@ impl From<Cmdh1Next> for u8 {
 pub enum Cmdh1Sts {
     #[doc = "Minimum sample time of 3.5 ADCK cycles."]
     SAMPLE_3P5 = 0x0,
-    #[doc = "5.5 ADCK cycles"]
+    #[doc = "5.5 ADCK cycles."]
     SAMPLE_5P5 = 0x01,
-    #[doc = "7.5 ADCK cycles"]
+    #[doc = "7.5 ADCK cycles."]
     SAMPLE_7P5 = 0x02,
-    #[doc = "11.5 ADCK cycles"]
+    #[doc = "11.5 ADCK cycles."]
     SAMPLE_11P5 = 0x03,
-    #[doc = "19.5 ADCK cycles"]
+    #[doc = "19.5 ADCK cycles."]
     SAMPLE_19P5 = 0x04,
-    #[doc = "35.5 ADCK cycles"]
+    #[doc = "35.5 ADCK cycles."]
     SAMPLE_35P5 = 0x05,
-    #[doc = "67.5 ADCK cycles"]
+    #[doc = "67.5 ADCK cycles."]
     SAMPLE_67P5 = 0x06,
-    #[doc = "131.5 ADCK cycles"]
+    #[doc = "131.5 ADCK cycles."]
     SAMPLE_131P5 = 0x07,
 }
 impl Cmdh1Sts {
@@ -1937,27 +1937,27 @@ impl From<Cmdh1Sts> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh2Avgs {
-    #[doc = "Single conversion"]
+    #[doc = "Single conversion."]
     NO_AVERAGE = 0x0,
-    #[doc = "2"]
+    #[doc = "2."]
     AVERAGE_2 = 0x01,
-    #[doc = "4"]
+    #[doc = "4."]
     AVERAGE_4 = 0x02,
-    #[doc = "8"]
+    #[doc = "8."]
     AVERAGE_8 = 0x03,
-    #[doc = "16"]
+    #[doc = "16."]
     AVERAGE_16 = 0x04,
-    #[doc = "32"]
+    #[doc = "32."]
     AVERAGE_32 = 0x05,
-    #[doc = "64"]
+    #[doc = "64."]
     AVERAGE_64 = 0x06,
-    #[doc = "128"]
+    #[doc = "128."]
     AVERAGE_128 = 0x07,
-    #[doc = "256"]
+    #[doc = "256."]
     AVERAGE_256 = 0x08,
-    #[doc = "512"]
+    #[doc = "512."]
     AVERAGE_512 = 0x09,
-    #[doc = "1024"]
+    #[doc = "1024."]
     AVERAGE_1024 = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
@@ -1991,7 +1991,7 @@ impl From<Cmdh2Avgs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh2Cmpen {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED_ALWAYS_STORE_RESULT = 0x0,
     _RESERVED_1 = 0x01,
     #[doc = "Enabled. Store on true."]
@@ -2081,30 +2081,30 @@ impl From<Cmdh2Loop> for u8 {
 pub enum Cmdh2Next {
     #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
     NO_NEXT_CMD_TERMINATE_ON_FINISH = 0x0,
-    #[doc = "CMD1"]
+    #[doc = "CMD1."]
     DO_CMD1_NEXT = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_6 = 0x06,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_7 = 0x07,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_8 = 0x08,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "CMD15"]
+    #[doc = "CMD15."]
     DO_CMD15_NEXT = 0x0f,
 }
 impl Cmdh2Next {
@@ -2135,19 +2135,19 @@ impl From<Cmdh2Next> for u8 {
 pub enum Cmdh2Sts {
     #[doc = "Minimum sample time of 3.5 ADCK cycles."]
     SAMPLE_3P5 = 0x0,
-    #[doc = "5.5 ADCK cycles"]
+    #[doc = "5.5 ADCK cycles."]
     SAMPLE_5P5 = 0x01,
-    #[doc = "7.5 ADCK cycles"]
+    #[doc = "7.5 ADCK cycles."]
     SAMPLE_7P5 = 0x02,
-    #[doc = "11.5 ADCK cycles"]
+    #[doc = "11.5 ADCK cycles."]
     SAMPLE_11P5 = 0x03,
-    #[doc = "19.5 ADCK cycles"]
+    #[doc = "19.5 ADCK cycles."]
     SAMPLE_19P5 = 0x04,
-    #[doc = "35.5 ADCK cycles"]
+    #[doc = "35.5 ADCK cycles."]
     SAMPLE_35P5 = 0x05,
-    #[doc = "67.5 ADCK cycles"]
+    #[doc = "67.5 ADCK cycles."]
     SAMPLE_67P5 = 0x06,
-    #[doc = "131.5 ADCK cycles"]
+    #[doc = "131.5 ADCK cycles."]
     SAMPLE_131P5 = 0x07,
 }
 impl Cmdh2Sts {
@@ -2176,27 +2176,27 @@ impl From<Cmdh2Sts> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh3Avgs {
-    #[doc = "Single conversion"]
+    #[doc = "Single conversion."]
     NO_AVERAGE = 0x0,
-    #[doc = "2"]
+    #[doc = "2."]
     AVERAGE_2 = 0x01,
-    #[doc = "4"]
+    #[doc = "4."]
     AVERAGE_4 = 0x02,
-    #[doc = "8"]
+    #[doc = "8."]
     AVERAGE_8 = 0x03,
-    #[doc = "16"]
+    #[doc = "16."]
     AVERAGE_16 = 0x04,
-    #[doc = "32"]
+    #[doc = "32."]
     AVERAGE_32 = 0x05,
-    #[doc = "64"]
+    #[doc = "64."]
     AVERAGE_64 = 0x06,
-    #[doc = "128"]
+    #[doc = "128."]
     AVERAGE_128 = 0x07,
-    #[doc = "256"]
+    #[doc = "256."]
     AVERAGE_256 = 0x08,
-    #[doc = "512"]
+    #[doc = "512."]
     AVERAGE_512 = 0x09,
-    #[doc = "1024"]
+    #[doc = "1024."]
     AVERAGE_1024 = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
@@ -2230,7 +2230,7 @@ impl From<Cmdh3Avgs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh3Cmpen {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED_ALWAYS_STORE_RESULT = 0x0,
     _RESERVED_1 = 0x01,
     #[doc = "Enabled. Store on true."]
@@ -2320,30 +2320,30 @@ impl From<Cmdh3Loop> for u8 {
 pub enum Cmdh3Next {
     #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
     NO_NEXT_CMD_TERMINATE_ON_FINISH = 0x0,
-    #[doc = "CMD1"]
+    #[doc = "CMD1."]
     DO_CMD1_NEXT = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_6 = 0x06,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_7 = 0x07,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_8 = 0x08,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "CMD15"]
+    #[doc = "CMD15."]
     DO_CMD15_NEXT = 0x0f,
 }
 impl Cmdh3Next {
@@ -2374,19 +2374,19 @@ impl From<Cmdh3Next> for u8 {
 pub enum Cmdh3Sts {
     #[doc = "Minimum sample time of 3.5 ADCK cycles."]
     SAMPLE_3P5 = 0x0,
-    #[doc = "5.5 ADCK cycles"]
+    #[doc = "5.5 ADCK cycles."]
     SAMPLE_5P5 = 0x01,
-    #[doc = "7.5 ADCK cycles"]
+    #[doc = "7.5 ADCK cycles."]
     SAMPLE_7P5 = 0x02,
-    #[doc = "11.5 ADCK cycles"]
+    #[doc = "11.5 ADCK cycles."]
     SAMPLE_11P5 = 0x03,
-    #[doc = "19.5 ADCK cycles"]
+    #[doc = "19.5 ADCK cycles."]
     SAMPLE_19P5 = 0x04,
-    #[doc = "35.5 ADCK cycles"]
+    #[doc = "35.5 ADCK cycles."]
     SAMPLE_35P5 = 0x05,
-    #[doc = "67.5 ADCK cycles"]
+    #[doc = "67.5 ADCK cycles."]
     SAMPLE_67P5 = 0x06,
-    #[doc = "131.5 ADCK cycles"]
+    #[doc = "131.5 ADCK cycles."]
     SAMPLE_131P5 = 0x07,
 }
 impl Cmdh3Sts {
@@ -2415,27 +2415,27 @@ impl From<Cmdh3Sts> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh4Avgs {
-    #[doc = "Single conversion"]
+    #[doc = "Single conversion."]
     NO_AVERAGE = 0x0,
-    #[doc = "2"]
+    #[doc = "2."]
     AVERAGE_2 = 0x01,
-    #[doc = "4"]
+    #[doc = "4."]
     AVERAGE_4 = 0x02,
-    #[doc = "8"]
+    #[doc = "8."]
     AVERAGE_8 = 0x03,
-    #[doc = "16"]
+    #[doc = "16."]
     AVERAGE_16 = 0x04,
-    #[doc = "32"]
+    #[doc = "32."]
     AVERAGE_32 = 0x05,
-    #[doc = "64"]
+    #[doc = "64."]
     AVERAGE_64 = 0x06,
-    #[doc = "128"]
+    #[doc = "128."]
     AVERAGE_128 = 0x07,
-    #[doc = "256"]
+    #[doc = "256."]
     AVERAGE_256 = 0x08,
-    #[doc = "512"]
+    #[doc = "512."]
     AVERAGE_512 = 0x09,
-    #[doc = "1024"]
+    #[doc = "1024."]
     AVERAGE_1024 = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
@@ -2469,7 +2469,7 @@ impl From<Cmdh4Avgs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh4Cmpen {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED_ALWAYS_STORE_RESULT = 0x0,
     _RESERVED_1 = 0x01,
     #[doc = "Enabled. Store on true."]
@@ -2559,30 +2559,30 @@ impl From<Cmdh4Loop> for u8 {
 pub enum Cmdh4Next {
     #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
     NO_NEXT_CMD_TERMINATE_ON_FINISH = 0x0,
-    #[doc = "CMD1"]
+    #[doc = "CMD1."]
     DO_CMD1_NEXT = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_6 = 0x06,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_7 = 0x07,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_8 = 0x08,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "CMD15"]
+    #[doc = "CMD15."]
     DO_CMD15_NEXT = 0x0f,
 }
 impl Cmdh4Next {
@@ -2613,19 +2613,19 @@ impl From<Cmdh4Next> for u8 {
 pub enum Cmdh4Sts {
     #[doc = "Minimum sample time of 3.5 ADCK cycles."]
     SAMPLE_3P5 = 0x0,
-    #[doc = "5.5 ADCK cycles"]
+    #[doc = "5.5 ADCK cycles."]
     SAMPLE_5P5 = 0x01,
-    #[doc = "7.5 ADCK cycles"]
+    #[doc = "7.5 ADCK cycles."]
     SAMPLE_7P5 = 0x02,
-    #[doc = "11.5 ADCK cycles"]
+    #[doc = "11.5 ADCK cycles."]
     SAMPLE_11P5 = 0x03,
-    #[doc = "19.5 ADCK cycles"]
+    #[doc = "19.5 ADCK cycles."]
     SAMPLE_19P5 = 0x04,
-    #[doc = "35.5 ADCK cycles"]
+    #[doc = "35.5 ADCK cycles."]
     SAMPLE_35P5 = 0x05,
-    #[doc = "67.5 ADCK cycles"]
+    #[doc = "67.5 ADCK cycles."]
     SAMPLE_67P5 = 0x06,
-    #[doc = "131.5 ADCK cycles"]
+    #[doc = "131.5 ADCK cycles."]
     SAMPLE_131P5 = 0x07,
 }
 impl Cmdh4Sts {
@@ -2654,27 +2654,27 @@ impl From<Cmdh4Sts> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh5Avgs {
-    #[doc = "Single conversion"]
+    #[doc = "Single conversion."]
     NO_AVERAGE = 0x0,
-    #[doc = "2"]
+    #[doc = "2."]
     AVERAGE_2 = 0x01,
-    #[doc = "4"]
+    #[doc = "4."]
     AVERAGE_4 = 0x02,
-    #[doc = "8"]
+    #[doc = "8."]
     AVERAGE_8 = 0x03,
-    #[doc = "16"]
+    #[doc = "16."]
     AVERAGE_16 = 0x04,
-    #[doc = "32"]
+    #[doc = "32."]
     AVERAGE_32 = 0x05,
-    #[doc = "64"]
+    #[doc = "64."]
     AVERAGE_64 = 0x06,
-    #[doc = "128"]
+    #[doc = "128."]
     AVERAGE_128 = 0x07,
-    #[doc = "256"]
+    #[doc = "256."]
     AVERAGE_256 = 0x08,
-    #[doc = "512"]
+    #[doc = "512."]
     AVERAGE_512 = 0x09,
-    #[doc = "1024"]
+    #[doc = "1024."]
     AVERAGE_1024 = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
@@ -2708,7 +2708,7 @@ impl From<Cmdh5Avgs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh5Cmpen {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED_ALWAYS_STORE_RESULT = 0x0,
     _RESERVED_1 = 0x01,
     #[doc = "Enabled. Store on true."]
@@ -2798,30 +2798,30 @@ impl From<Cmdh5Loop> for u8 {
 pub enum Cmdh5Next {
     #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
     NO_NEXT_CMD_TERMINATE_ON_FINISH = 0x0,
-    #[doc = "CMD1"]
+    #[doc = "CMD1."]
     DO_CMD1_NEXT = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_6 = 0x06,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_7 = 0x07,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_8 = 0x08,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "CMD15"]
+    #[doc = "CMD15."]
     DO_CMD15_NEXT = 0x0f,
 }
 impl Cmdh5Next {
@@ -2852,19 +2852,19 @@ impl From<Cmdh5Next> for u8 {
 pub enum Cmdh5Sts {
     #[doc = "Minimum sample time of 3.5 ADCK cycles."]
     SAMPLE_3P5 = 0x0,
-    #[doc = "5.5 ADCK cycles"]
+    #[doc = "5.5 ADCK cycles."]
     SAMPLE_5P5 = 0x01,
-    #[doc = "7.5 ADCK cycles"]
+    #[doc = "7.5 ADCK cycles."]
     SAMPLE_7P5 = 0x02,
-    #[doc = "11.5 ADCK cycles"]
+    #[doc = "11.5 ADCK cycles."]
     SAMPLE_11P5 = 0x03,
-    #[doc = "19.5 ADCK cycles"]
+    #[doc = "19.5 ADCK cycles."]
     SAMPLE_19P5 = 0x04,
-    #[doc = "35.5 ADCK cycles"]
+    #[doc = "35.5 ADCK cycles."]
     SAMPLE_35P5 = 0x05,
-    #[doc = "67.5 ADCK cycles"]
+    #[doc = "67.5 ADCK cycles."]
     SAMPLE_67P5 = 0x06,
-    #[doc = "131.5 ADCK cycles"]
+    #[doc = "131.5 ADCK cycles."]
     SAMPLE_131P5 = 0x07,
 }
 impl Cmdh5Sts {
@@ -2893,27 +2893,27 @@ impl From<Cmdh5Sts> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh6Avgs {
-    #[doc = "Single conversion"]
+    #[doc = "Single conversion."]
     NO_AVERAGE = 0x0,
-    #[doc = "2"]
+    #[doc = "2."]
     AVERAGE_2 = 0x01,
-    #[doc = "4"]
+    #[doc = "4."]
     AVERAGE_4 = 0x02,
-    #[doc = "8"]
+    #[doc = "8."]
     AVERAGE_8 = 0x03,
-    #[doc = "16"]
+    #[doc = "16."]
     AVERAGE_16 = 0x04,
-    #[doc = "32"]
+    #[doc = "32."]
     AVERAGE_32 = 0x05,
-    #[doc = "64"]
+    #[doc = "64."]
     AVERAGE_64 = 0x06,
-    #[doc = "128"]
+    #[doc = "128."]
     AVERAGE_128 = 0x07,
-    #[doc = "256"]
+    #[doc = "256."]
     AVERAGE_256 = 0x08,
-    #[doc = "512"]
+    #[doc = "512."]
     AVERAGE_512 = 0x09,
-    #[doc = "1024"]
+    #[doc = "1024."]
     AVERAGE_1024 = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
@@ -2947,7 +2947,7 @@ impl From<Cmdh6Avgs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh6Cmpen {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED_ALWAYS_STORE_RESULT = 0x0,
     _RESERVED_1 = 0x01,
     #[doc = "Enabled. Store on true."]
@@ -3037,30 +3037,30 @@ impl From<Cmdh6Loop> for u8 {
 pub enum Cmdh6Next {
     #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
     NO_NEXT_CMD_TERMINATE_ON_FINISH = 0x0,
-    #[doc = "CMD1"]
+    #[doc = "CMD1."]
     DO_CMD1_NEXT = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_6 = 0x06,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_7 = 0x07,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_8 = 0x08,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "CMD15"]
+    #[doc = "CMD15."]
     DO_CMD15_NEXT = 0x0f,
 }
 impl Cmdh6Next {
@@ -3091,19 +3091,19 @@ impl From<Cmdh6Next> for u8 {
 pub enum Cmdh6Sts {
     #[doc = "Minimum sample time of 3.5 ADCK cycles."]
     SAMPLE_3P5 = 0x0,
-    #[doc = "5.5 ADCK cycles"]
+    #[doc = "5.5 ADCK cycles."]
     SAMPLE_5P5 = 0x01,
-    #[doc = "7.5 ADCK cycles"]
+    #[doc = "7.5 ADCK cycles."]
     SAMPLE_7P5 = 0x02,
-    #[doc = "11.5 ADCK cycles"]
+    #[doc = "11.5 ADCK cycles."]
     SAMPLE_11P5 = 0x03,
-    #[doc = "19.5 ADCK cycles"]
+    #[doc = "19.5 ADCK cycles."]
     SAMPLE_19P5 = 0x04,
-    #[doc = "35.5 ADCK cycles"]
+    #[doc = "35.5 ADCK cycles."]
     SAMPLE_35P5 = 0x05,
-    #[doc = "67.5 ADCK cycles"]
+    #[doc = "67.5 ADCK cycles."]
     SAMPLE_67P5 = 0x06,
-    #[doc = "131.5 ADCK cycles"]
+    #[doc = "131.5 ADCK cycles."]
     SAMPLE_131P5 = 0x07,
 }
 impl Cmdh6Sts {
@@ -3132,27 +3132,27 @@ impl From<Cmdh6Sts> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh7Avgs {
-    #[doc = "Single conversion"]
+    #[doc = "Single conversion."]
     NO_AVERAGE = 0x0,
-    #[doc = "2"]
+    #[doc = "2."]
     AVERAGE_2 = 0x01,
-    #[doc = "4"]
+    #[doc = "4."]
     AVERAGE_4 = 0x02,
-    #[doc = "8"]
+    #[doc = "8."]
     AVERAGE_8 = 0x03,
-    #[doc = "16"]
+    #[doc = "16."]
     AVERAGE_16 = 0x04,
-    #[doc = "32"]
+    #[doc = "32."]
     AVERAGE_32 = 0x05,
-    #[doc = "64"]
+    #[doc = "64."]
     AVERAGE_64 = 0x06,
-    #[doc = "128"]
+    #[doc = "128."]
     AVERAGE_128 = 0x07,
-    #[doc = "256"]
+    #[doc = "256."]
     AVERAGE_256 = 0x08,
-    #[doc = "512"]
+    #[doc = "512."]
     AVERAGE_512 = 0x09,
-    #[doc = "1024"]
+    #[doc = "1024."]
     AVERAGE_1024 = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
@@ -3186,7 +3186,7 @@ impl From<Cmdh7Avgs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh7Cmpen {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED_ALWAYS_STORE_RESULT = 0x0,
     _RESERVED_1 = 0x01,
     #[doc = "Enabled. Store on true."]
@@ -3276,30 +3276,30 @@ impl From<Cmdh7Loop> for u8 {
 pub enum Cmdh7Next {
     #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
     NO_NEXT_CMD_TERMINATE_ON_FINISH = 0x0,
-    #[doc = "CMD1"]
+    #[doc = "CMD1."]
     DO_CMD1_NEXT = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_6 = 0x06,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_7 = 0x07,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_8 = 0x08,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "CMD15"]
+    #[doc = "CMD15."]
     DO_CMD15_NEXT = 0x0f,
 }
 impl Cmdh7Next {
@@ -3330,19 +3330,19 @@ impl From<Cmdh7Next> for u8 {
 pub enum Cmdh7Sts {
     #[doc = "Minimum sample time of 3.5 ADCK cycles."]
     SAMPLE_3P5 = 0x0,
-    #[doc = "5.5 ADCK cycles"]
+    #[doc = "5.5 ADCK cycles."]
     SAMPLE_5P5 = 0x01,
-    #[doc = "7.5 ADCK cycles"]
+    #[doc = "7.5 ADCK cycles."]
     SAMPLE_7P5 = 0x02,
-    #[doc = "11.5 ADCK cycles"]
+    #[doc = "11.5 ADCK cycles."]
     SAMPLE_11P5 = 0x03,
-    #[doc = "19.5 ADCK cycles"]
+    #[doc = "19.5 ADCK cycles."]
     SAMPLE_19P5 = 0x04,
-    #[doc = "35.5 ADCK cycles"]
+    #[doc = "35.5 ADCK cycles."]
     SAMPLE_35P5 = 0x05,
-    #[doc = "67.5 ADCK cycles"]
+    #[doc = "67.5 ADCK cycles."]
     SAMPLE_67P5 = 0x06,
-    #[doc = "131.5 ADCK cycles"]
+    #[doc = "131.5 ADCK cycles."]
     SAMPLE_131P5 = 0x07,
 }
 impl Cmdh7Sts {
@@ -3371,27 +3371,27 @@ impl From<Cmdh7Sts> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh8Avgs {
-    #[doc = "Single conversion"]
+    #[doc = "Single conversion."]
     NO_AVERAGE = 0x0,
-    #[doc = "2"]
+    #[doc = "2."]
     AVERAGE_2 = 0x01,
-    #[doc = "4"]
+    #[doc = "4."]
     AVERAGE_4 = 0x02,
-    #[doc = "8"]
+    #[doc = "8."]
     AVERAGE_8 = 0x03,
-    #[doc = "16"]
+    #[doc = "16."]
     AVERAGE_16 = 0x04,
-    #[doc = "32"]
+    #[doc = "32."]
     AVERAGE_32 = 0x05,
-    #[doc = "64"]
+    #[doc = "64."]
     AVERAGE_64 = 0x06,
-    #[doc = "128"]
+    #[doc = "128."]
     AVERAGE_128 = 0x07,
-    #[doc = "256"]
+    #[doc = "256."]
     AVERAGE_256 = 0x08,
-    #[doc = "512"]
+    #[doc = "512."]
     AVERAGE_512 = 0x09,
-    #[doc = "1024"]
+    #[doc = "1024."]
     AVERAGE_1024 = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
@@ -3425,7 +3425,7 @@ impl From<Cmdh8Avgs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh8Cmpen {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED_ALWAYS_STORE_RESULT = 0x0,
     _RESERVED_1 = 0x01,
     #[doc = "Enabled. Store on true."]
@@ -3515,30 +3515,30 @@ impl From<Cmdh8Loop> for u8 {
 pub enum Cmdh8Next {
     #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
     NO_NEXT_CMD_TERMINATE_ON_FINISH = 0x0,
-    #[doc = "CMD1"]
+    #[doc = "CMD1."]
     DO_CMD1_NEXT = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_6 = 0x06,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_7 = 0x07,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_8 = 0x08,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "CMD15"]
+    #[doc = "CMD15."]
     DO_CMD15_NEXT = 0x0f,
 }
 impl Cmdh8Next {
@@ -3569,19 +3569,19 @@ impl From<Cmdh8Next> for u8 {
 pub enum Cmdh8Sts {
     #[doc = "Minimum sample time of 3.5 ADCK cycles."]
     SAMPLE_3P5 = 0x0,
-    #[doc = "5.5 ADCK cycles"]
+    #[doc = "5.5 ADCK cycles."]
     SAMPLE_5P5 = 0x01,
-    #[doc = "7.5 ADCK cycles"]
+    #[doc = "7.5 ADCK cycles."]
     SAMPLE_7P5 = 0x02,
-    #[doc = "11.5 ADCK cycles"]
+    #[doc = "11.5 ADCK cycles."]
     SAMPLE_11P5 = 0x03,
-    #[doc = "19.5 ADCK cycles"]
+    #[doc = "19.5 ADCK cycles."]
     SAMPLE_19P5 = 0x04,
-    #[doc = "35.5 ADCK cycles"]
+    #[doc = "35.5 ADCK cycles."]
     SAMPLE_35P5 = 0x05,
-    #[doc = "67.5 ADCK cycles"]
+    #[doc = "67.5 ADCK cycles."]
     SAMPLE_67P5 = 0x06,
-    #[doc = "131.5 ADCK cycles"]
+    #[doc = "131.5 ADCK cycles."]
     SAMPLE_131P5 = 0x07,
 }
 impl Cmdh8Sts {
@@ -3610,27 +3610,27 @@ impl From<Cmdh8Sts> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh9Avgs {
-    #[doc = "Single conversion"]
+    #[doc = "Single conversion."]
     NO_AVERAGE = 0x0,
-    #[doc = "2"]
+    #[doc = "2."]
     AVERAGE_2 = 0x01,
-    #[doc = "4"]
+    #[doc = "4."]
     AVERAGE_4 = 0x02,
-    #[doc = "8"]
+    #[doc = "8."]
     AVERAGE_8 = 0x03,
-    #[doc = "16"]
+    #[doc = "16."]
     AVERAGE_16 = 0x04,
-    #[doc = "32"]
+    #[doc = "32."]
     AVERAGE_32 = 0x05,
-    #[doc = "64"]
+    #[doc = "64."]
     AVERAGE_64 = 0x06,
-    #[doc = "128"]
+    #[doc = "128."]
     AVERAGE_128 = 0x07,
-    #[doc = "256"]
+    #[doc = "256."]
     AVERAGE_256 = 0x08,
-    #[doc = "512"]
+    #[doc = "512."]
     AVERAGE_512 = 0x09,
-    #[doc = "1024"]
+    #[doc = "1024."]
     AVERAGE_1024 = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
@@ -3664,7 +3664,7 @@ impl From<Cmdh9Avgs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh9Cmpen {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED_ALWAYS_STORE_RESULT = 0x0,
     _RESERVED_1 = 0x01,
     #[doc = "Enabled. Store on true."]
@@ -3754,30 +3754,30 @@ impl From<Cmdh9Loop> for u8 {
 pub enum Cmdh9Next {
     #[doc = "No next command defined. Terminate conversions at completion of current command. If lower priority trigger pending, begin command associated with lower priority trigger."]
     NO_NEXT_CMD_TERMINATE_ON_FINISH = 0x0,
-    #[doc = "CMD1"]
+    #[doc = "CMD1."]
     DO_CMD1_NEXT = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_6 = 0x06,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_7 = 0x07,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_8 = 0x08,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "CMD15"]
+    #[doc = "CMD15."]
     DO_CMD15_NEXT = 0x0f,
 }
 impl Cmdh9Next {
@@ -3808,19 +3808,19 @@ impl From<Cmdh9Next> for u8 {
 pub enum Cmdh9Sts {
     #[doc = "Minimum sample time of 3.5 ADCK cycles."]
     SAMPLE_3P5 = 0x0,
-    #[doc = "5.5 ADCK cycles"]
+    #[doc = "5.5 ADCK cycles."]
     SAMPLE_5P5 = 0x01,
-    #[doc = "7.5 ADCK cycles"]
+    #[doc = "7.5 ADCK cycles."]
     SAMPLE_7P5 = 0x02,
-    #[doc = "11.5 ADCK cycles"]
+    #[doc = "11.5 ADCK cycles."]
     SAMPLE_11P5 = 0x03,
-    #[doc = "19.5 ADCK cycles"]
+    #[doc = "19.5 ADCK cycles."]
     SAMPLE_19P5 = 0x04,
-    #[doc = "35.5 ADCK cycles"]
+    #[doc = "35.5 ADCK cycles."]
     SAMPLE_35P5 = 0x05,
-    #[doc = "67.5 ADCK cycles"]
+    #[doc = "67.5 ADCK cycles."]
     SAMPLE_67P5 = 0x06,
-    #[doc = "131.5 ADCK cycles"]
+    #[doc = "131.5 ADCK cycles."]
     SAMPLE_131P5 = 0x07,
 }
 impl Cmdh9Sts {
@@ -3920,25 +3920,25 @@ impl From<Cmdl10Adch> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl10AltbAdch {
-    #[doc = "Select CH0B"]
+    #[doc = "Select CH0B."]
     SELECT_CH0B = 0x0,
-    #[doc = "Select CH1B"]
+    #[doc = "Select CH1B."]
     SELECT_CH1B = 0x01,
-    #[doc = "Select CH2B"]
+    #[doc = "Select CH2B."]
     SELECT_CH2B = 0x02,
-    #[doc = "Select CH3B"]
+    #[doc = "Select CH3B."]
     SELECT_CH3B = 0x03,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_4 = 0x04,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_5 = 0x05,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_6 = 0x06,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_7 = 0x07,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_8 = 0x08,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -3960,9 +3960,9 @@ pub enum Cmdl10AltbAdch {
     _RESERVED_1b = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
-    #[doc = "Select CH30B"]
+    #[doc = "Select CH30B."]
     SELECT_CH30B = 0x1e,
-    #[doc = "Select CH31B"]
+    #[doc = "Select CH31B."]
     SELECT_CH31B = 0x1f,
 }
 impl Cmdl10AltbAdch {
@@ -4128,25 +4128,25 @@ impl From<Cmdl11Adch> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl11AltbAdch {
-    #[doc = "Select CH0B"]
+    #[doc = "Select CH0B."]
     SELECT_CH0B = 0x0,
-    #[doc = "Select CH1B"]
+    #[doc = "Select CH1B."]
     SELECT_CH1B = 0x01,
-    #[doc = "Select CH2B"]
+    #[doc = "Select CH2B."]
     SELECT_CH2B = 0x02,
-    #[doc = "Select CH3B"]
+    #[doc = "Select CH3B."]
     SELECT_CH3B = 0x03,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_4 = 0x04,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_5 = 0x05,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_6 = 0x06,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_7 = 0x07,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_8 = 0x08,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -4168,9 +4168,9 @@ pub enum Cmdl11AltbAdch {
     _RESERVED_1b = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
-    #[doc = "Select CH30B"]
+    #[doc = "Select CH30B."]
     SELECT_CH30B = 0x1e,
-    #[doc = "Select CH31B"]
+    #[doc = "Select CH31B."]
     SELECT_CH31B = 0x1f,
 }
 impl Cmdl11AltbAdch {
@@ -4336,25 +4336,25 @@ impl From<Cmdl12Adch> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl12AltbAdch {
-    #[doc = "Select CH0B"]
+    #[doc = "Select CH0B."]
     SELECT_CH0B = 0x0,
-    #[doc = "Select CH1B"]
+    #[doc = "Select CH1B."]
     SELECT_CH1B = 0x01,
-    #[doc = "Select CH2B"]
+    #[doc = "Select CH2B."]
     SELECT_CH2B = 0x02,
-    #[doc = "Select CH3B"]
+    #[doc = "Select CH3B."]
     SELECT_CH3B = 0x03,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_4 = 0x04,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_5 = 0x05,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_6 = 0x06,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_7 = 0x07,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_8 = 0x08,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -4376,9 +4376,9 @@ pub enum Cmdl12AltbAdch {
     _RESERVED_1b = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
-    #[doc = "Select CH30B"]
+    #[doc = "Select CH30B."]
     SELECT_CH30B = 0x1e,
-    #[doc = "Select CH31B"]
+    #[doc = "Select CH31B."]
     SELECT_CH31B = 0x1f,
 }
 impl Cmdl12AltbAdch {
@@ -4544,25 +4544,25 @@ impl From<Cmdl13Adch> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl13AltbAdch {
-    #[doc = "Select CH0B"]
+    #[doc = "Select CH0B."]
     SELECT_CH0B = 0x0,
-    #[doc = "Select CH1B"]
+    #[doc = "Select CH1B."]
     SELECT_CH1B = 0x01,
-    #[doc = "Select CH2B"]
+    #[doc = "Select CH2B."]
     SELECT_CH2B = 0x02,
-    #[doc = "Select CH3B"]
+    #[doc = "Select CH3B."]
     SELECT_CH3B = 0x03,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_4 = 0x04,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_5 = 0x05,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_6 = 0x06,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_7 = 0x07,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_8 = 0x08,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -4584,9 +4584,9 @@ pub enum Cmdl13AltbAdch {
     _RESERVED_1b = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
-    #[doc = "Select CH30B"]
+    #[doc = "Select CH30B."]
     SELECT_CH30B = 0x1e,
-    #[doc = "Select CH31B"]
+    #[doc = "Select CH31B."]
     SELECT_CH31B = 0x1f,
 }
 impl Cmdl13AltbAdch {
@@ -4752,25 +4752,25 @@ impl From<Cmdl14Adch> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl14AltbAdch {
-    #[doc = "Select CH0B"]
+    #[doc = "Select CH0B."]
     SELECT_CH0B = 0x0,
-    #[doc = "Select CH1B"]
+    #[doc = "Select CH1B."]
     SELECT_CH1B = 0x01,
-    #[doc = "Select CH2B"]
+    #[doc = "Select CH2B."]
     SELECT_CH2B = 0x02,
-    #[doc = "Select CH3B"]
+    #[doc = "Select CH3B."]
     SELECT_CH3B = 0x03,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_4 = 0x04,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_5 = 0x05,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_6 = 0x06,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_7 = 0x07,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_8 = 0x08,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -4792,9 +4792,9 @@ pub enum Cmdl14AltbAdch {
     _RESERVED_1b = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
-    #[doc = "Select CH30B"]
+    #[doc = "Select CH30B."]
     SELECT_CH30B = 0x1e,
-    #[doc = "Select CH31B"]
+    #[doc = "Select CH31B."]
     SELECT_CH31B = 0x1f,
 }
 impl Cmdl14AltbAdch {
@@ -4960,25 +4960,25 @@ impl From<Cmdl15Adch> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl15AltbAdch {
-    #[doc = "Select CH0B"]
+    #[doc = "Select CH0B."]
     SELECT_CH0B = 0x0,
-    #[doc = "Select CH1B"]
+    #[doc = "Select CH1B."]
     SELECT_CH1B = 0x01,
-    #[doc = "Select CH2B"]
+    #[doc = "Select CH2B."]
     SELECT_CH2B = 0x02,
-    #[doc = "Select CH3B"]
+    #[doc = "Select CH3B."]
     SELECT_CH3B = 0x03,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_4 = 0x04,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_5 = 0x05,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_6 = 0x06,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_7 = 0x07,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_8 = 0x08,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -5000,9 +5000,9 @@ pub enum Cmdl15AltbAdch {
     _RESERVED_1b = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
-    #[doc = "Select CH30B"]
+    #[doc = "Select CH30B."]
     SELECT_CH30B = 0x1e,
-    #[doc = "Select CH31B"]
+    #[doc = "Select CH31B."]
     SELECT_CH31B = 0x1f,
 }
 impl Cmdl15AltbAdch {
@@ -5168,25 +5168,25 @@ impl From<Cmdl1Adch> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl1AltbAdch {
-    #[doc = "Select CH0B"]
+    #[doc = "Select CH0B."]
     SELECT_CH0B = 0x0,
-    #[doc = "Select CH1B"]
+    #[doc = "Select CH1B."]
     SELECT_CH1B = 0x01,
-    #[doc = "Select CH2B"]
+    #[doc = "Select CH2B."]
     SELECT_CH2B = 0x02,
-    #[doc = "Select CH3B"]
+    #[doc = "Select CH3B."]
     SELECT_CH3B = 0x03,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_4 = 0x04,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_5 = 0x05,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_6 = 0x06,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_7 = 0x07,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_8 = 0x08,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -5208,9 +5208,9 @@ pub enum Cmdl1AltbAdch {
     _RESERVED_1b = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
-    #[doc = "Select CH30B"]
+    #[doc = "Select CH30B."]
     SELECT_CH30B = 0x1e,
-    #[doc = "Select CH31B"]
+    #[doc = "Select CH31B."]
     SELECT_CH31B = 0x1f,
 }
 impl Cmdl1AltbAdch {
@@ -5376,25 +5376,25 @@ impl From<Cmdl2Adch> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl2AltbAdch {
-    #[doc = "Select CH0B"]
+    #[doc = "Select CH0B."]
     SELECT_CH0B = 0x0,
-    #[doc = "Select CH1B"]
+    #[doc = "Select CH1B."]
     SELECT_CH1B = 0x01,
-    #[doc = "Select CH2B"]
+    #[doc = "Select CH2B."]
     SELECT_CH2B = 0x02,
-    #[doc = "Select CH3B"]
+    #[doc = "Select CH3B."]
     SELECT_CH3B = 0x03,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_4 = 0x04,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_5 = 0x05,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_6 = 0x06,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_7 = 0x07,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_8 = 0x08,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -5416,9 +5416,9 @@ pub enum Cmdl2AltbAdch {
     _RESERVED_1b = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
-    #[doc = "Select CH30B"]
+    #[doc = "Select CH30B."]
     SELECT_CH30B = 0x1e,
-    #[doc = "Select CH31B"]
+    #[doc = "Select CH31B."]
     SELECT_CH31B = 0x1f,
 }
 impl Cmdl2AltbAdch {
@@ -5584,25 +5584,25 @@ impl From<Cmdl3Adch> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl3AltbAdch {
-    #[doc = "Select CH0B"]
+    #[doc = "Select CH0B."]
     SELECT_CH0B = 0x0,
-    #[doc = "Select CH1B"]
+    #[doc = "Select CH1B."]
     SELECT_CH1B = 0x01,
-    #[doc = "Select CH2B"]
+    #[doc = "Select CH2B."]
     SELECT_CH2B = 0x02,
-    #[doc = "Select CH3B"]
+    #[doc = "Select CH3B."]
     SELECT_CH3B = 0x03,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_4 = 0x04,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_5 = 0x05,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_6 = 0x06,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_7 = 0x07,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_8 = 0x08,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -5624,9 +5624,9 @@ pub enum Cmdl3AltbAdch {
     _RESERVED_1b = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
-    #[doc = "Select CH30B"]
+    #[doc = "Select CH30B."]
     SELECT_CH30B = 0x1e,
-    #[doc = "Select CH31B"]
+    #[doc = "Select CH31B."]
     SELECT_CH31B = 0x1f,
 }
 impl Cmdl3AltbAdch {
@@ -5792,25 +5792,25 @@ impl From<Cmdl4Adch> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl4AltbAdch {
-    #[doc = "Select CH0B"]
+    #[doc = "Select CH0B."]
     SELECT_CH0B = 0x0,
-    #[doc = "Select CH1B"]
+    #[doc = "Select CH1B."]
     SELECT_CH1B = 0x01,
-    #[doc = "Select CH2B"]
+    #[doc = "Select CH2B."]
     SELECT_CH2B = 0x02,
-    #[doc = "Select CH3B"]
+    #[doc = "Select CH3B."]
     SELECT_CH3B = 0x03,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_4 = 0x04,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_5 = 0x05,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_6 = 0x06,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_7 = 0x07,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_8 = 0x08,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -5832,9 +5832,9 @@ pub enum Cmdl4AltbAdch {
     _RESERVED_1b = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
-    #[doc = "Select CH30B"]
+    #[doc = "Select CH30B."]
     SELECT_CH30B = 0x1e,
-    #[doc = "Select CH31B"]
+    #[doc = "Select CH31B."]
     SELECT_CH31B = 0x1f,
 }
 impl Cmdl4AltbAdch {
@@ -6000,25 +6000,25 @@ impl From<Cmdl5Adch> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl5AltbAdch {
-    #[doc = "Select CH0B"]
+    #[doc = "Select CH0B."]
     SELECT_CH0B = 0x0,
-    #[doc = "Select CH1B"]
+    #[doc = "Select CH1B."]
     SELECT_CH1B = 0x01,
-    #[doc = "Select CH2B"]
+    #[doc = "Select CH2B."]
     SELECT_CH2B = 0x02,
-    #[doc = "Select CH3B"]
+    #[doc = "Select CH3B."]
     SELECT_CH3B = 0x03,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_4 = 0x04,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_5 = 0x05,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_6 = 0x06,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_7 = 0x07,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_8 = 0x08,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -6040,9 +6040,9 @@ pub enum Cmdl5AltbAdch {
     _RESERVED_1b = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
-    #[doc = "Select CH30B"]
+    #[doc = "Select CH30B."]
     SELECT_CH30B = 0x1e,
-    #[doc = "Select CH31B"]
+    #[doc = "Select CH31B."]
     SELECT_CH31B = 0x1f,
 }
 impl Cmdl5AltbAdch {
@@ -6208,25 +6208,25 @@ impl From<Cmdl6Adch> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl6AltbAdch {
-    #[doc = "Select CH0B"]
+    #[doc = "Select CH0B."]
     SELECT_CH0B = 0x0,
-    #[doc = "Select CH1B"]
+    #[doc = "Select CH1B."]
     SELECT_CH1B = 0x01,
-    #[doc = "Select CH2B"]
+    #[doc = "Select CH2B."]
     SELECT_CH2B = 0x02,
-    #[doc = "Select CH3B"]
+    #[doc = "Select CH3B."]
     SELECT_CH3B = 0x03,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_4 = 0x04,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_5 = 0x05,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_6 = 0x06,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_7 = 0x07,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_8 = 0x08,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -6248,9 +6248,9 @@ pub enum Cmdl6AltbAdch {
     _RESERVED_1b = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
-    #[doc = "Select CH30B"]
+    #[doc = "Select CH30B."]
     SELECT_CH30B = 0x1e,
-    #[doc = "Select CH31B"]
+    #[doc = "Select CH31B."]
     SELECT_CH31B = 0x1f,
 }
 impl Cmdl6AltbAdch {
@@ -6416,25 +6416,25 @@ impl From<Cmdl7Adch> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl7AltbAdch {
-    #[doc = "Select CH0B"]
+    #[doc = "Select CH0B."]
     SELECT_CH0B = 0x0,
-    #[doc = "Select CH1B"]
+    #[doc = "Select CH1B."]
     SELECT_CH1B = 0x01,
-    #[doc = "Select CH2B"]
+    #[doc = "Select CH2B."]
     SELECT_CH2B = 0x02,
-    #[doc = "Select CH3B"]
+    #[doc = "Select CH3B."]
     SELECT_CH3B = 0x03,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_4 = 0x04,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_5 = 0x05,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_6 = 0x06,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_7 = 0x07,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_8 = 0x08,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -6456,9 +6456,9 @@ pub enum Cmdl7AltbAdch {
     _RESERVED_1b = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
-    #[doc = "Select CH30B"]
+    #[doc = "Select CH30B."]
     SELECT_CH30B = 0x1e,
-    #[doc = "Select CH31B"]
+    #[doc = "Select CH31B."]
     SELECT_CH31B = 0x1f,
 }
 impl Cmdl7AltbAdch {
@@ -6624,25 +6624,25 @@ impl From<Cmdl8Adch> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl8AltbAdch {
-    #[doc = "Select CH0B"]
+    #[doc = "Select CH0B."]
     SELECT_CH0B = 0x0,
-    #[doc = "Select CH1B"]
+    #[doc = "Select CH1B."]
     SELECT_CH1B = 0x01,
-    #[doc = "Select CH2B"]
+    #[doc = "Select CH2B."]
     SELECT_CH2B = 0x02,
-    #[doc = "Select CH3B"]
+    #[doc = "Select CH3B."]
     SELECT_CH3B = 0x03,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_4 = 0x04,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_5 = 0x05,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_6 = 0x06,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_7 = 0x07,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_8 = 0x08,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -6664,9 +6664,9 @@ pub enum Cmdl8AltbAdch {
     _RESERVED_1b = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
-    #[doc = "Select CH30B"]
+    #[doc = "Select CH30B."]
     SELECT_CH30B = 0x1e,
-    #[doc = "Select CH31B"]
+    #[doc = "Select CH31B."]
     SELECT_CH31B = 0x1f,
 }
 impl Cmdl8AltbAdch {
@@ -6832,25 +6832,25 @@ impl From<Cmdl9Adch> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdl9AltbAdch {
-    #[doc = "Select CH0B"]
+    #[doc = "Select CH0B."]
     SELECT_CH0B = 0x0,
-    #[doc = "Select CH1B"]
+    #[doc = "Select CH1B."]
     SELECT_CH1B = 0x01,
-    #[doc = "Select CH2B"]
+    #[doc = "Select CH2B."]
     SELECT_CH2B = 0x02,
-    #[doc = "Select CH3B"]
+    #[doc = "Select CH3B."]
     SELECT_CH3B = 0x03,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_4 = 0x04,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_5 = 0x05,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_6 = 0x06,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_7 = 0x07,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_8 = 0x08,
-    #[doc = "Select corresponding channel CHnB"]
+    #[doc = "Select corresponding channel CHnB."]
     SELECT_CORRESPONDING_CHN_B_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -6872,9 +6872,9 @@ pub enum Cmdl9AltbAdch {
     _RESERVED_1b = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
-    #[doc = "Select CH30B"]
+    #[doc = "Select CH30B."]
     SELECT_CH30B = 0x1e,
-    #[doc = "Select CH31B"]
+    #[doc = "Select CH31B."]
     SELECT_CH31B = 0x1f,
 }
 impl Cmdl9AltbAdch {
@@ -6971,7 +6971,7 @@ impl From<Cmdl9Mode> for u8 {
 pub enum Cmdsrc {
     #[doc = "Not a valid value CMDSRC value for a data word in RESFIFO. 0h is only found in the initial FIFO state, prior to the storage of an ADC conversion result into a RESFIFO buffer."]
     NOT_VALID = 0x0,
-    #[doc = "CMD1"]
+    #[doc = "CMD1."]
     CMD1 = 0x01,
     #[doc = "Corresponding command buffer used as control settings for this conversion."]
     CORRESPONDING_CMD_2 = 0x02,
@@ -6994,7 +6994,7 @@ pub enum Cmdsrc {
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "CMD15"]
+    #[doc = "CMD15."]
     CMD15 = 0x0f,
 }
 impl Cmdsrc {
@@ -7061,7 +7061,7 @@ impl From<Csw> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Diffen {
-    #[doc = "Not supported"]
+    #[doc = "Not supported."]
     DIFFERENTIAL_NOT_SUPPORTED = 0x0,
     #[doc = "Supported. CMDLn\\[CTYPE\\] controls fields implemented."]
     DIFFERENTIAL_SUPPORTED = 0x01,
@@ -7123,9 +7123,9 @@ impl From<Dozen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FifoSelA {
-    #[doc = "FIFO 0"]
+    #[doc = "FIFO 0."]
     STORE_TO_FIFO0 = 0x0,
-    #[doc = "FIFO 1"]
+    #[doc = "FIFO 1."]
     STORE_TO_FIFO1 = 0x01,
 }
 impl FifoSelA {
@@ -7154,9 +7154,9 @@ impl From<FifoSelA> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FifoSelB {
-    #[doc = "FIFO 0"]
+    #[doc = "FIFO 0."]
     STORE_TO_FIFO0 = 0x0,
-    #[doc = "FIFO 1"]
+    #[doc = "FIFO 1."]
     STORE_TO_FIFO1 = 0x01,
 }
 impl FifoSelB {
@@ -7185,17 +7185,17 @@ impl From<FifoSelB> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Fifosize(u8);
 impl Fifosize {
-    #[doc = "2"]
+    #[doc = "2."]
     pub const ENTRIES_2: Self = Self(0x01);
-    #[doc = "4"]
+    #[doc = "4."]
     pub const ENTRIES_4: Self = Self(0x04);
-    #[doc = "8"]
+    #[doc = "8."]
     pub const ENTRIES_8: Self = Self(0x08);
-    #[doc = "16"]
+    #[doc = "16."]
     pub const ENTRIES_16: Self = Self(0x10);
-    #[doc = "32"]
+    #[doc = "32."]
     pub const ENTRIES_32: Self = Self(0x20);
-    #[doc = "64"]
+    #[doc = "64."]
     pub const ENTRIES_64: Self = Self(0x40);
 }
 impl Fifosize {
@@ -7311,9 +7311,9 @@ impl From<Fof1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum GccRdy {
-    #[doc = "Invalid"]
+    #[doc = "Invalid."]
     GAIN_CAL_NOT_VALID = 0x0,
-    #[doc = "Valid"]
+    #[doc = "Valid."]
     HARDWARE_CAL_ROUTINE_COMPLETED = 0x01,
 }
 impl GccRdy {
@@ -7342,9 +7342,9 @@ impl From<GccRdy> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HptExdi {
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     ENABLED = 0x0,
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED = 0x01,
 }
 impl HptExdi {
@@ -7373,9 +7373,9 @@ impl From<HptExdi> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Iadcki {
-    #[doc = "Not implemented"]
+    #[doc = "Not implemented."]
     INTERNAL_CLK_NOT_AVAILABLE = 0x0,
-    #[doc = "Implemented"]
+    #[doc = "Implemented."]
     INTERNAL_CLK_AVAILABLE = 0x01,
 }
 impl Iadcki {
@@ -7489,15 +7489,15 @@ impl From<Mvi> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum NumFifo {
-    #[doc = "N/A"]
+    #[doc = "N/A."]
     NO_FIFO_IMPLEMENTED = 0x0,
-    #[doc = "One"]
+    #[doc = "One."]
     CNT_1 = 0x01,
-    #[doc = "Two"]
+    #[doc = "Two."]
     CNT_2 = 0x02,
-    #[doc = "Three"]
+    #[doc = "Three."]
     CNT_3 = 0x03,
-    #[doc = "Four"]
+    #[doc = "Four."]
     CNT_4 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
@@ -7529,9 +7529,9 @@ impl From<NumFifo> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum NumSec {
-    #[doc = "One"]
+    #[doc = "One."]
     SINGLE_CONVERTOR = 0x0,
-    #[doc = "Two"]
+    #[doc = "Two."]
     DUAL_CONVERTOR = 0x01,
 }
 impl NumSec {
@@ -7560,10 +7560,10 @@ impl From<NumSec> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pwrsel {
-    #[doc = "Low power"]
+    #[doc = "Low power."]
     LOWEST = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "High power"]
+    #[doc = "High power."]
     HIGHEST = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -7593,9 +7593,9 @@ impl From<Pwrsel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rdy0 {
-    #[doc = "Not above watermark"]
+    #[doc = "Not above watermark."]
     BELOW_THRESHOLD = 0x0,
-    #[doc = "Above watermark"]
+    #[doc = "Above watermark."]
     ABOVE_THRESHOLD = 0x01,
 }
 impl Rdy0 {
@@ -7624,9 +7624,9 @@ impl From<Rdy0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rdy1 {
-    #[doc = "Not above watermark"]
+    #[doc = "Not above watermark."]
     BELOW_THRESHOLD = 0x0,
-    #[doc = "Above watermark"]
+    #[doc = "Above watermark."]
     ABOVE_THRESHOLD = 0x01,
 }
 impl Rdy1 {
@@ -7655,11 +7655,11 @@ impl From<Rdy1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Refsel {
-    #[doc = "Option 1"]
+    #[doc = "Option 1."]
     OPTION_1 = 0x0,
-    #[doc = "Option 2"]
+    #[doc = "Option 2."]
     OPTION_2 = 0x01,
-    #[doc = "Option 3"]
+    #[doc = "Option 3."]
     OPTION_3 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -7939,30 +7939,30 @@ impl From<Swt3> for u8 {
 pub enum Tcmd {
     #[doc = "Not a valid selection from the command buffer. Trigger event is ignored."]
     NOT_VALID = 0x0,
-    #[doc = "CMD1"]
+    #[doc = "CMD1."]
     EXECUTE_CMD1 = 0x01,
-    #[doc = "Corresponding CMD is executed"]
+    #[doc = "Corresponding CMD is executed."]
     EXECUTE_CORRESPONDING_CMD_2 = 0x02,
-    #[doc = "Corresponding CMD is executed"]
+    #[doc = "Corresponding CMD is executed."]
     EXECUTE_CORRESPONDING_CMD_3 = 0x03,
-    #[doc = "Corresponding CMD is executed"]
+    #[doc = "Corresponding CMD is executed."]
     EXECUTE_CORRESPONDING_CMD_4 = 0x04,
-    #[doc = "Corresponding CMD is executed"]
+    #[doc = "Corresponding CMD is executed."]
     EXECUTE_CORRESPONDING_CMD_5 = 0x05,
-    #[doc = "Corresponding CMD is executed"]
+    #[doc = "Corresponding CMD is executed."]
     EXECUTE_CORRESPONDING_CMD_6 = 0x06,
-    #[doc = "Corresponding CMD is executed"]
+    #[doc = "Corresponding CMD is executed."]
     EXECUTE_CORRESPONDING_CMD_7 = 0x07,
-    #[doc = "Corresponding CMD is executed"]
+    #[doc = "Corresponding CMD is executed."]
     EXECUTE_CORRESPONDING_CMD_8 = 0x08,
-    #[doc = "Corresponding CMD is executed"]
+    #[doc = "Corresponding CMD is executed."]
     EXECUTE_CORRESPONDING_CMD_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "CMD15"]
+    #[doc = "CMD15."]
     EXECUTE_CMD15 = 0x0f,
 }
 impl Tcmd {
@@ -8045,7 +8045,7 @@ impl From<TcompFlag> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TcompIe {
-    #[doc = "All disabled"]
+    #[doc = "All disabled."]
     DISABLED = 0x0,
     #[doc = "Trigger completion interrupts are enabled for trigger source 0 only."]
     TRIGGER_0_COMPLETE_ENABLED = 0x01,
@@ -8070,7 +8070,7 @@ pub enum TcompIe {
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "All enabled"]
+    #[doc = "All enabled."]
     ALL_TRIGGER_COMPLETES_ENABLED = 0x0f,
 }
 impl TcompIe {
@@ -8215,13 +8215,13 @@ impl From<TexcNum> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tpri {
-    #[doc = "Highest priority, Level 1"]
+    #[doc = "Highest priority, Level 1."]
     HIGHEST_PRIORITY = 0x0,
     #[doc = "Set to corresponding priority level."]
     CORRESPONDING_LOWER_PRIORITY_1 = 0x01,
     #[doc = "Set to corresponding priority level."]
     CORRESPONDING_LOWER_PRIORITY_2 = 0x02,
-    #[doc = "Lowest priority, Level 4"]
+    #[doc = "Lowest priority, Level 4."]
     LOWEST_PRIORITY = 0x03,
 }
 impl Tpri {
@@ -8319,13 +8319,13 @@ impl From<Trgact> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tsrc {
-    #[doc = "Trigger source 0"]
+    #[doc = "Trigger source 0."]
     TRIGGER_0 = 0x0,
-    #[doc = "Trigger source 1"]
+    #[doc = "Trigger source 1."]
     TRIGGER_1 = 0x01,
-    #[doc = "Trigger source 2"]
+    #[doc = "Trigger source 2."]
     TRIGGER_2 = 0x02,
-    #[doc = "Trigger source 3"]
+    #[doc = "Trigger source 3."]
     TRIGGER_3 = 0x03,
 }
 impl Tsrc {

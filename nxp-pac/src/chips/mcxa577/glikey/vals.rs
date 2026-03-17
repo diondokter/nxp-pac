@@ -2,20 +2,20 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ErrorStatus {
-    #[doc = "No error"]
+    #[doc = "No error."]
     STAT0 = 0x0,
-    #[doc = "FSM error has occurred"]
+    #[doc = "FSM error has occurred."]
     STAT1 = 0x01,
-    #[doc = "Write index out of the bound (OOB) error"]
+    #[doc = "Write index out of the bound (OOB) error."]
     STAT2 = 0x02,
-    #[doc = "Write index OOB and FSM error"]
+    #[doc = "Write index OOB and FSM error."]
     STAT3 = 0x03,
-    #[doc = "Read index OOB error"]
+    #[doc = "Read index OOB error."]
     STAT4 = 0x04,
     _RESERVED_5 = 0x05,
-    #[doc = "Write index and read index OOB error"]
+    #[doc = "Write index and read index OOB error."]
     STAT5 = 0x06,
-    #[doc = "Read index OOB, write index OOB, and FSM error"]
+    #[doc = "Read index OOB, write index OOB, and FSM error."]
     STAT6 = 0x07,
 }
 impl ErrorStatus {
@@ -44,9 +44,9 @@ impl From<ErrorStatus> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LockStatus {
-    #[doc = "Current read index is not locked"]
+    #[doc = "Current read index is not locked."]
     LOCK0 = 0x0,
-    #[doc = "Current read index is locked"]
+    #[doc = "Current read index is locked."]
     LOCK1 = 0x01,
 }
 impl LockStatus {

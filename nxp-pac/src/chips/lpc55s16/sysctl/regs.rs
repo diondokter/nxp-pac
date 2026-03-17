@@ -1,16 +1,16 @@
-#[doc = "CODE_BIN LSB output Register"]
+#[doc = "CODE_BIN LSB output Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CodeBinLsb(pub u32);
 impl CodeBinLsb {
-    #[doc = "Binary converted code (42bits)"]
+    #[doc = "Binary converted code (42bits)."]
     #[must_use]
     #[inline(always)]
     pub const fn code_bin_lsb(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Binary converted code (42bits)"]
+    #[doc = "Binary converted code (42bits)."]
     #[inline(always)]
     pub const fn set_code_bin_lsb(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -39,19 +39,19 @@ impl defmt::Format for CodeBinLsb {
         )
     }
 }
-#[doc = "CODE_BIN MSB output Register"]
+#[doc = "CODE_BIN MSB output Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CodeBinMsb(pub u32);
 impl CodeBinMsb {
-    #[doc = "Binary converted code (42bits)"]
+    #[doc = "Binary converted code (42bits)."]
     #[must_use]
     #[inline(always)]
     pub const fn code_bin_msb(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x03ff;
         val as u16
     }
-    #[doc = "Binary converted code (42bits)"]
+    #[doc = "Binary converted code (42bits)."]
     #[inline(always)]
     pub const fn set_code_bin_msb(&mut self, val: u16) {
         self.0 = (self.0 & !(0x03ff << 0usize)) | (((val as u32) & 0x03ff) << 0usize);
@@ -80,19 +80,19 @@ impl defmt::Format for CodeBinMsb {
         )
     }
 }
-#[doc = "CODE_GRAY LSB input Register"]
+#[doc = "CODE_GRAY LSB input Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CodeGrayLsb(pub u32);
 impl CodeGrayLsb {
-    #[doc = "Gray code (42bits) to be converted back to binary"]
+    #[doc = "Gray code (42bits) to be converted back to binary."]
     #[must_use]
     #[inline(always)]
     pub const fn code_gray_lsb(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Gray code (42bits) to be converted back to binary"]
+    #[doc = "Gray code (42bits) to be converted back to binary."]
     #[inline(always)]
     pub const fn set_code_gray_lsb(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -121,19 +121,19 @@ impl defmt::Format for CodeGrayLsb {
         )
     }
 }
-#[doc = "CODE_GRAY MSB input Register"]
+#[doc = "CODE_GRAY MSB input Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CodeGrayMsb(pub u32);
 impl CodeGrayMsb {
-    #[doc = "Gray code (42bits) to be converted back to binary"]
+    #[doc = "Gray code (42bits) to be converted back to binary."]
     #[must_use]
     #[inline(always)]
     pub const fn code_gray_msb(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x03ff;
         val as u16
     }
-    #[doc = "Gray code (42bits) to be converted back to binary"]
+    #[doc = "Gray code (42bits) to be converted back to binary."]
     #[inline(always)]
     pub const fn set_code_gray_msb(&mut self, val: u16) {
         self.0 = (self.0 & !(0x03ff << 0usize)) | (((val as u32) & 0x03ff) << 0usize);
@@ -162,7 +162,7 @@ impl defmt::Format for CodeGrayMsb {
         )
     }
 }
-#[doc = "Selects the source for SCK going into Flexcomm index"]
+#[doc = "Selects the source for SCK going into Flexcomm index."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Fcctrlsel(pub u32);
@@ -412,19 +412,19 @@ impl defmt::Format for Sharedctrlset {
         )
     }
 }
-#[doc = "update lock out control"]
+#[doc = "update lock out control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Updatelckout(pub u32);
 impl Updatelckout {
-    #[doc = "All Registers"]
+    #[doc = "All Registers."]
     #[must_use]
     #[inline(always)]
     pub const fn updatelckout(&self) -> super::vals::Updatelckout {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Updatelckout::from_bits(val as u8)
     }
-    #[doc = "All Registers"]
+    #[doc = "All Registers."]
     #[inline(always)]
     pub const fn set_updatelckout(&mut self, val: super::vals::Updatelckout) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
@@ -453,7 +453,7 @@ impl defmt::Format for Updatelckout {
         )
     }
 }
-#[doc = "Status register for USB HS"]
+#[doc = "Status register for USB HS."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct UsbHsStatus(pub u32);

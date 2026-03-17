@@ -1,28 +1,28 @@
-#[doc = "Calibration 0"]
+#[doc = "Calibration 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Calib0(pub u32);
 impl Calib0 {
-    #[doc = "Calibration of NMOS Output Driver"]
+    #[doc = "Calibration of NMOS Output Driver."]
     #[must_use]
     #[inline(always)]
     pub const fn ncal(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x3f;
         val as u8
     }
-    #[doc = "Calibration of NMOS Output Driver"]
+    #[doc = "Calibration of NMOS Output Driver."]
     #[inline(always)]
     pub const fn set_ncal(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val as u32) & 0x3f) << 0usize);
     }
-    #[doc = "Calibration of PMOS Output Driver"]
+    #[doc = "Calibration of PMOS Output Driver."]
     #[must_use]
     #[inline(always)]
     pub const fn pcal(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x3f;
         val as u8
     }
-    #[doc = "Calibration of PMOS Output Driver"]
+    #[doc = "Calibration of PMOS Output Driver."]
     #[inline(always)]
     pub const fn set_pcal(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 16usize)) | (((val as u32) & 0x3f) << 16usize);
@@ -53,31 +53,31 @@ impl defmt::Format for Calib0 {
         )
     }
 }
-#[doc = "Calibration 1"]
+#[doc = "Calibration 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Calib1(pub u32);
 impl Calib1 {
-    #[doc = "Calibration of NMOS Output Driver"]
+    #[doc = "Calibration of NMOS Output Driver."]
     #[must_use]
     #[inline(always)]
     pub const fn ncal(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x3f;
         val as u8
     }
-    #[doc = "Calibration of NMOS Output Driver"]
+    #[doc = "Calibration of NMOS Output Driver."]
     #[inline(always)]
     pub const fn set_ncal(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val as u32) & 0x3f) << 0usize);
     }
-    #[doc = "Calibration of PMOS Output Driver"]
+    #[doc = "Calibration of PMOS Output Driver."]
     #[must_use]
     #[inline(always)]
     pub const fn pcal(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x3f;
         val as u8
     }
-    #[doc = "Calibration of PMOS Output Driver"]
+    #[doc = "Calibration of PMOS Output Driver."]
     #[inline(always)]
     pub const fn set_pcal(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 16usize)) | (((val as u32) & 0x3f) << 16usize);
@@ -108,19 +108,19 @@ impl defmt::Format for Calib1 {
         )
     }
 }
-#[doc = "Configuration"]
+#[doc = "Configuration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Config(pub u32);
 impl Config {
-    #[doc = "Port Voltage Range"]
+    #[doc = "Port Voltage Range."]
     #[must_use]
     #[inline(always)]
     pub const fn range(&self) -> super::vals::Range {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Range::from_bits(val as u8)
     }
-    #[doc = "Port Voltage Range"]
+    #[doc = "Port Voltage Range."]
     #[inline(always)]
     pub const fn set_range(&mut self, val: super::vals::Range) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
@@ -145,24 +145,24 @@ impl defmt::Format for Config {
         defmt::write!(f, "Config {{ range: {:?} }}", self.range())
     }
 }
-#[doc = "Global Pin Control High"]
+#[doc = "Global Pin Control High."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpchr(pub u32);
 impl Gpchr {
-    #[doc = "Global Pin Write Data"]
+    #[doc = "Global Pin Write Data."]
     #[must_use]
     #[inline(always)]
     pub const fn gpwd(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Global Pin Write Data"]
+    #[doc = "Global Pin Write Data."]
     #[inline(always)]
     pub const fn set_gpwd(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Global Pin Write Enable"]
+    #[doc = "Global Pin Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn gpwe(&self, n: usize) -> super::vals::Gpwe {
@@ -171,7 +171,7 @@ impl Gpchr {
         let val = (self.0 >> offs) & 0x01;
         super::vals::Gpwe::from_bits(val as u8)
     }
-    #[doc = "Global Pin Write Enable"]
+    #[doc = "Global Pin Write Enable."]
     #[inline(always)]
     pub const fn set_gpwe(&mut self, n: usize, val: super::vals::Gpwe) {
         assert!(n < 16usize);
@@ -234,24 +234,24 @@ impl defmt::Format for Gpchr {
         )
     }
 }
-#[doc = "Global Pin Control Low"]
+#[doc = "Global Pin Control Low."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpclr(pub u32);
 impl Gpclr {
-    #[doc = "Global Pin Write Data"]
+    #[doc = "Global Pin Write Data."]
     #[must_use]
     #[inline(always)]
     pub const fn gpwd(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Global Pin Write Data"]
+    #[doc = "Global Pin Write Data."]
     #[inline(always)]
     pub const fn set_gpwd(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Global Pin Write Enable"]
+    #[doc = "Global Pin Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn gpwe(&self, n: usize) -> super::vals::Gpwe {
@@ -260,7 +260,7 @@ impl Gpclr {
         let val = (self.0 >> offs) & 0x01;
         super::vals::Gpwe::from_bits(val as u8)
     }
-    #[doc = "Global Pin Write Enable"]
+    #[doc = "Global Pin Write Enable."]
     #[inline(always)]
     pub const fn set_gpwe(&mut self, n: usize, val: super::vals::Gpwe) {
         assert!(n < 16usize);
@@ -323,115 +323,115 @@ impl defmt::Format for Gpclr {
         )
     }
 }
-#[doc = "Pin Control 2"]
+#[doc = "Pin Control 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pcr(pub u32);
 impl Pcr {
-    #[doc = "Pull Select"]
+    #[doc = "Pull Select."]
     #[must_use]
     #[inline(always)]
     pub const fn ps(&self) -> super::vals::Ps {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Ps::from_bits(val as u8)
     }
-    #[doc = "Pull Select"]
+    #[doc = "Pull Select."]
     #[inline(always)]
     pub const fn set_ps(&mut self, val: super::vals::Ps) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Pull Enable"]
+    #[doc = "Pull Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn pe(&self) -> super::vals::Pe {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Pe::from_bits(val as u8)
     }
-    #[doc = "Pull Enable"]
+    #[doc = "Pull Enable."]
     #[inline(always)]
     pub const fn set_pe(&mut self, val: super::vals::Pe) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Slew Rate Enable"]
+    #[doc = "Slew Rate Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn sre(&self) -> super::vals::Sre {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Sre::from_bits(val as u8)
     }
-    #[doc = "Slew Rate Enable"]
+    #[doc = "Slew Rate Enable."]
     #[inline(always)]
     pub const fn set_sre(&mut self, val: super::vals::Sre) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "Open Drain Enable"]
+    #[doc = "Open Drain Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ode(&self) -> super::vals::Ode {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::Ode::from_bits(val as u8)
     }
-    #[doc = "Open Drain Enable"]
+    #[doc = "Open Drain Enable."]
     #[inline(always)]
     pub const fn set_ode(&mut self, val: super::vals::Ode) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
-    #[doc = "Drive Strength Enable"]
+    #[doc = "Drive Strength Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dse(&self) -> super::vals::Dse {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::Dse::from_bits(val as u8)
     }
-    #[doc = "Drive Strength Enable"]
+    #[doc = "Drive Strength Enable."]
     #[inline(always)]
     pub const fn set_dse(&mut self, val: super::vals::Dse) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "Pin Multiplex Control"]
+    #[doc = "Pin Multiplex Control."]
     #[must_use]
     #[inline(always)]
     pub const fn mux(&self) -> super::vals::Mux {
         let val = (self.0 >> 8usize) & 0x0f;
         super::vals::Mux::from_bits(val as u8)
     }
-    #[doc = "Pin Multiplex Control"]
+    #[doc = "Pin Multiplex Control."]
     #[inline(always)]
     pub const fn set_mux(&mut self, val: super::vals::Mux) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
-    #[doc = "Input Buffer Enable"]
+    #[doc = "Input Buffer Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ibe(&self) -> super::vals::Ibe {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Ibe::from_bits(val as u8)
     }
-    #[doc = "Input Buffer Enable"]
+    #[doc = "Input Buffer Enable."]
     #[inline(always)]
     pub const fn set_ibe(&mut self, val: super::vals::Ibe) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "Invert Input"]
+    #[doc = "Invert Input."]
     #[must_use]
     #[inline(always)]
     pub const fn inv(&self) -> super::vals::Inv {
         let val = (self.0 >> 13usize) & 0x01;
         super::vals::Inv::from_bits(val as u8)
     }
-    #[doc = "Invert Input"]
+    #[doc = "Invert Input."]
     #[inline(always)]
     pub const fn set_inv(&mut self, val: super::vals::Inv) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
-    #[doc = "Lock Register"]
+    #[doc = "Lock Register."]
     #[must_use]
     #[inline(always)]
     pub const fn lk(&self) -> super::vals::Lk {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::Lk::from_bits(val as u8)
     }
-    #[doc = "Lock Register"]
+    #[doc = "Lock Register."]
     #[inline(always)]
     pub const fn set_lk(&mut self, val: super::vals::Lk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
@@ -476,43 +476,43 @@ impl defmt::Format for Pcr {
         )
     }
 }
-#[doc = "Version ID"]
+#[doc = "Version ID."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Verid(pub u32);
 impl Verid {
-    #[doc = "Feature Specification Number"]
+    #[doc = "Feature Specification Number."]
     #[must_use]
     #[inline(always)]
     pub const fn feature(&self) -> super::vals::Feature {
         let val = (self.0 >> 0usize) & 0xffff;
         super::vals::Feature::from_bits(val as u16)
     }
-    #[doc = "Feature Specification Number"]
+    #[doc = "Feature Specification Number."]
     #[inline(always)]
     pub const fn set_feature(&mut self, val: super::vals::Feature) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val.to_bits() as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Minor Version Number"]
+    #[doc = "Minor Version Number."]
     #[must_use]
     #[inline(always)]
     pub const fn minor(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0xff;
         val as u8
     }
-    #[doc = "Minor Version Number"]
+    #[doc = "Minor Version Number."]
     #[inline(always)]
     pub const fn set_minor(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
     }
-    #[doc = "Major Version Number"]
+    #[doc = "Major Version Number."]
     #[must_use]
     #[inline(always)]
     pub const fn major(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "Major Version Number"]
+    #[doc = "Major Version Number."]
     #[inline(always)]
     pub const fn set_major(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);

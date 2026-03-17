@@ -302,12 +302,12 @@ impl From<Rcr4Fcomb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rcr4Fpack {
-    #[doc = "FIFO packing is disabled"]
+    #[doc = "FIFO packing is disabled."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "8-bit FIFO packing is enabled"]
+    #[doc = "8-bit FIFO packing is enabled."]
     EIGHT_BIT_PACKING = 0x02,
-    #[doc = "16-bit FIFO packing is enabled"]
+    #[doc = "16-bit FIFO packing is enabled."]
     SIXTEEN_BIT_PACKING = 0x03,
 }
 impl Rcr4Fpack {

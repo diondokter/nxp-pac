@@ -1,4 +1,4 @@
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Enet0_eqosDma {
     ptr: *mut u8,
@@ -14,26 +14,26 @@ impl Enet0_eqosDma {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "Bus Mode"]
+    #[doc = "Bus Mode."]
     #[inline(always)]
     pub const fn dma_mode(self) -> crate::common::Reg<regs::DmaMode, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
     }
-    #[doc = "System Bus Mode"]
+    #[doc = "System Bus Mode."]
     #[inline(always)]
     pub const fn dma_sys_bus_mode(
         self,
     ) -> crate::common::Reg<regs::DmaSysBusMode, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
     }
-    #[doc = "Interrupt Status"]
+    #[doc = "Interrupt Status."]
     #[inline(always)]
     pub const fn dma_interrupt_status(
         self,
     ) -> crate::common::Reg<regs::DmaInterruptStatus, crate::common::R> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
     }
-    #[doc = "Debug Status 0"]
+    #[doc = "Debug Status 0."]
     #[inline(always)]
     pub const fn dma_debug_status0(
         self,

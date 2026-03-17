@@ -622,9 +622,9 @@ impl From<HpUsdhc2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HpcCsi {
-    #[doc = "User mode for the corresponding master"]
+    #[doc = "User mode for the corresponding master."]
     HPC_CSI_0 = 0x0,
-    #[doc = "Supervisor mode for the corresponding master"]
+    #[doc = "Supervisor mode for the corresponding master."]
     HPC_CSI_1 = 0x01,
 }
 impl HpcCsi {
@@ -653,9 +653,9 @@ impl From<HpcCsi> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HpcDcp {
-    #[doc = "User mode for the corresponding master"]
+    #[doc = "User mode for the corresponding master."]
     HPC_DCP_0 = 0x0,
-    #[doc = "Supervisor mode for the corresponding master"]
+    #[doc = "Supervisor mode for the corresponding master."]
     HPC_DCP_1 = 0x01,
 }
 impl HpcDcp {
@@ -684,9 +684,9 @@ impl From<HpcDcp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HpcDma {
-    #[doc = "User mode for the corresponding master"]
+    #[doc = "User mode for the corresponding master."]
     HPC_DMA_0 = 0x0,
-    #[doc = "Supervisor mode for the corresponding master"]
+    #[doc = "Supervisor mode for the corresponding master."]
     HPC_DMA_1 = 0x01,
 }
 impl HpcDma {
@@ -715,9 +715,9 @@ impl From<HpcDma> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HpcEnet {
-    #[doc = "User mode for the corresponding master"]
+    #[doc = "User mode for the corresponding master."]
     HPC_ENET_0 = 0x0,
-    #[doc = "Supervisor mode for the corresponding master"]
+    #[doc = "Supervisor mode for the corresponding master."]
     HPC_ENET_1 = 0x01,
 }
 impl HpcEnet {
@@ -746,9 +746,9 @@ impl From<HpcEnet> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HpcLcdif {
-    #[doc = "User mode for the corresponding master"]
+    #[doc = "User mode for the corresponding master."]
     HPC_LCDIF_0 = 0x0,
-    #[doc = "Supervisor mode for the corresponding master"]
+    #[doc = "Supervisor mode for the corresponding master."]
     HPC_LCDIF_1 = 0x01,
 }
 impl HpcLcdif {
@@ -777,9 +777,9 @@ impl From<HpcLcdif> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HpcPxp {
-    #[doc = "User mode for the corresponding master"]
+    #[doc = "User mode for the corresponding master."]
     HPC_PXP_0 = 0x0,
-    #[doc = "Supervisor mode for the corresponding master"]
+    #[doc = "Supervisor mode for the corresponding master."]
     HPC_PXP_1 = 0x01,
 }
 impl HpcPxp {
@@ -808,9 +808,9 @@ impl From<HpcPxp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HpcTpsmp {
-    #[doc = "User mode for the corresponding master"]
+    #[doc = "User mode for the corresponding master."]
     HPC_TPSMP_0 = 0x0,
-    #[doc = "Supervisor mode for the corresponding master"]
+    #[doc = "Supervisor mode for the corresponding master."]
     HPC_TPSMP_1 = 0x01,
 }
 impl HpcTpsmp {
@@ -839,9 +839,9 @@ impl From<HpcTpsmp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HpcUsb {
-    #[doc = "User mode for the corresponding master"]
+    #[doc = "User mode for the corresponding master."]
     HPC_USB_0 = 0x0,
-    #[doc = "Supervisor mode for the corresponding master"]
+    #[doc = "Supervisor mode for the corresponding master."]
     HPC_USB_1 = 0x01,
 }
 impl HpcUsb {
@@ -870,9 +870,9 @@ impl From<HpcUsb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HpcUsdhc1 {
-    #[doc = "User mode for the corresponding master"]
+    #[doc = "User mode for the corresponding master."]
     HPC_USDHC1_0 = 0x0,
-    #[doc = "Supervisor mode for the corresponding master"]
+    #[doc = "Supervisor mode for the corresponding master."]
     HPC_USDHC1_1 = 0x01,
 }
 impl HpcUsdhc1 {
@@ -901,9 +901,9 @@ impl From<HpcUsdhc1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HpcUsdhc2 {
-    #[doc = "User mode for the corresponding master"]
+    #[doc = "User mode for the corresponding master."]
     HPC_USDHC2_0 = 0x0,
-    #[doc = "Supervisor mode for the corresponding master"]
+    #[doc = "Supervisor mode for the corresponding master."]
     HPC_USDHC2_1 = 0x01,
 }
 impl HpcUsdhc2 {
@@ -1275,7 +1275,7 @@ impl From<LockS1> for u8 {
 pub enum LockS2 {
     #[doc = "Not locked. Bits 7-0 can be written by the software."]
     LOCK_S2_0 = 0x0,
-    #[doc = "Bits 7-0 are locked and cannot be written by the software"]
+    #[doc = "Bits 7-0 are locked and cannot be written by the software."]
     LOCK_S2_1 = 0x01,
 }
 impl LockS2 {
@@ -1304,9 +1304,9 @@ impl From<LockS2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum NsaCsi {
-    #[doc = "Secure access for the corresponding type-1 master"]
+    #[doc = "Secure access for the corresponding type-1 master."]
     NSA_CSI_0 = 0x0,
-    #[doc = "Non-secure access for the corresponding type-1 master"]
+    #[doc = "Non-secure access for the corresponding type-1 master."]
     NSA_CSI_1 = 0x01,
 }
 impl NsaCsi {
@@ -1335,9 +1335,9 @@ impl From<NsaCsi> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum NsaDcp {
-    #[doc = "Secure access for the corresponding type-1 master"]
+    #[doc = "Secure access for the corresponding type-1 master."]
     NSA_DCP_0 = 0x0,
-    #[doc = "Non-secure access for the corresponding type-1 master"]
+    #[doc = "Non-secure access for the corresponding type-1 master."]
     NSA_DCP_1 = 0x01,
 }
 impl NsaDcp {
@@ -1366,9 +1366,9 @@ impl From<NsaDcp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum NsaDma {
-    #[doc = "Secure access for the corresponding type-1 master"]
+    #[doc = "Secure access for the corresponding type-1 master."]
     NSA_DMA_0 = 0x0,
-    #[doc = "Non-secure access for the corresponding type-1 master"]
+    #[doc = "Non-secure access for the corresponding type-1 master."]
     NSA_DMA_1 = 0x01,
 }
 impl NsaDma {
@@ -1397,9 +1397,9 @@ impl From<NsaDma> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum NsaEnet {
-    #[doc = "Secure access for the corresponding type-1 master"]
+    #[doc = "Secure access for the corresponding type-1 master."]
     NSA_ENET_0 = 0x0,
-    #[doc = "Non-secure access for the corresponding type-1 master"]
+    #[doc = "Non-secure access for the corresponding type-1 master."]
     NSA_ENET_1 = 0x01,
 }
 impl NsaEnet {
@@ -1428,9 +1428,9 @@ impl From<NsaEnet> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum NsaLcdif {
-    #[doc = "Secure access for the corresponding type-1 master"]
+    #[doc = "Secure access for the corresponding type-1 master."]
     NSA_LCDIF_0 = 0x0,
-    #[doc = "Non-secure access for the corresponding type-1 master"]
+    #[doc = "Non-secure access for the corresponding type-1 master."]
     NSA_LCDIF_1 = 0x01,
 }
 impl NsaLcdif {
@@ -1459,9 +1459,9 @@ impl From<NsaLcdif> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum NsaPxp {
-    #[doc = "Secure access for the corresponding type-1 master"]
+    #[doc = "Secure access for the corresponding type-1 master."]
     NSA_PXP_0 = 0x0,
-    #[doc = "Non-secure access for the corresponding type-1 master"]
+    #[doc = "Non-secure access for the corresponding type-1 master."]
     NSA_PXP_1 = 0x01,
 }
 impl NsaPxp {
@@ -1490,9 +1490,9 @@ impl From<NsaPxp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum NsaTpsmp {
-    #[doc = "Secure access for the corresponding type-1 master"]
+    #[doc = "Secure access for the corresponding type-1 master."]
     NSA_TPSMP_0 = 0x0,
-    #[doc = "Non-secure access for the corresponding type-1 master"]
+    #[doc = "Non-secure access for the corresponding type-1 master."]
     NSA_TPSMP_1 = 0x01,
 }
 impl NsaTpsmp {
@@ -1521,9 +1521,9 @@ impl From<NsaTpsmp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum NsaUsb {
-    #[doc = "Secure access for the corresponding type-1 master"]
+    #[doc = "Secure access for the corresponding type-1 master."]
     NSA_USB_0 = 0x0,
-    #[doc = "Non-secure access for the corresponding type-1 master"]
+    #[doc = "Non-secure access for the corresponding type-1 master."]
     NSA_USB_1 = 0x01,
 }
 impl NsaUsb {
@@ -1552,9 +1552,9 @@ impl From<NsaUsb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum NsaUsdhc1 {
-    #[doc = "Secure access for the corresponding type-1 master"]
+    #[doc = "Secure access for the corresponding type-1 master."]
     NSA_USDHC1_0 = 0x0,
-    #[doc = "Non-secure access for the corresponding type-1 master"]
+    #[doc = "Non-secure access for the corresponding type-1 master."]
     NSA_USDHC1_1 = 0x01,
 }
 impl NsaUsdhc1 {
@@ -1583,9 +1583,9 @@ impl From<NsaUsdhc1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum NsaUsdhc2 {
-    #[doc = "Secure access for the corresponding type-1 master"]
+    #[doc = "Secure access for the corresponding type-1 master."]
     NSA_USDHC2_0 = 0x0,
-    #[doc = "Non-secure access for the corresponding type-1 master"]
+    #[doc = "Non-secure access for the corresponding type-1 master."]
     NSA_USDHC2_1 = 0x01,
 }
 impl NsaUsdhc2 {
@@ -1678,7 +1678,7 @@ impl From<NsrS2> for u8 {
 pub enum NswS1 {
     #[doc = "The non-secure supervisor write access is disabled for the first slave."]
     NSW_S1_0 = 0x0,
-    #[doc = "The non-secure supervisor write access is enabled for the first slave"]
+    #[doc = "The non-secure supervisor write access is enabled for the first slave."]
     NSW_S1_1 = 0x01,
 }
 impl NswS1 {

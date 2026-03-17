@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sr {
-    #[doc = "Stop Receive"]
+    #[doc = "Stop Receive."]
     STOP = 0x0,
-    #[doc = "Start Receive"]
+    #[doc = "Start Receive."]
     START = 0x01,
 }
 impl Sr {
@@ -33,9 +33,9 @@ impl From<Sr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum St {
-    #[doc = "Stop Transmission Command"]
+    #[doc = "Stop Transmission Command."]
     STOP = 0x0,
-    #[doc = "Start Transmission Command"]
+    #[doc = "Start Transmission Command."]
     START = 0x01,
 }
 impl St {

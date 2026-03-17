@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Feature(u16);
 impl Feature {
-    #[doc = "Basic implementation"]
+    #[doc = "Basic implementation."]
     pub const FEATURE0: Self = Self(0x0);
-    #[doc = "Protection registers implemented"]
+    #[doc = "Protection registers implemented."]
     pub const FEATURE1: Self = Self(0x01);
 }
 impl Feature {
@@ -50,9 +50,9 @@ impl From<Feature> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe0 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe0 {
@@ -81,9 +81,9 @@ impl From<Giwe0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe1 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe1 {
@@ -112,9 +112,9 @@ impl From<Giwe1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe10 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe10 {
@@ -143,9 +143,9 @@ impl From<Giwe10> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe11 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe11 {
@@ -174,9 +174,9 @@ impl From<Giwe11> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe12 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe12 {
@@ -205,9 +205,9 @@ impl From<Giwe12> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe13 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe13 {
@@ -236,9 +236,9 @@ impl From<Giwe13> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe14 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe14 {
@@ -267,9 +267,9 @@ impl From<Giwe14> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe15 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe15 {
@@ -300,7 +300,7 @@ impl From<Giwe15> for u8 {
 pub enum Giwe16 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe16 {
@@ -331,7 +331,7 @@ impl From<Giwe16> for u8 {
 pub enum Giwe17 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe17 {
@@ -362,7 +362,7 @@ impl From<Giwe17> for u8 {
 pub enum Giwe18 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe18 {
@@ -393,7 +393,7 @@ impl From<Giwe18> for u8 {
 pub enum Giwe19 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe19 {
@@ -422,9 +422,9 @@ impl From<Giwe19> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe2 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe2 {
@@ -455,7 +455,7 @@ impl From<Giwe2> for u8 {
 pub enum Giwe20 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe20 {
@@ -486,7 +486,7 @@ impl From<Giwe20> for u8 {
 pub enum Giwe21 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe21 {
@@ -517,7 +517,7 @@ impl From<Giwe21> for u8 {
 pub enum Giwe22 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe22 {
@@ -548,7 +548,7 @@ impl From<Giwe22> for u8 {
 pub enum Giwe23 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe23 {
@@ -579,7 +579,7 @@ impl From<Giwe23> for u8 {
 pub enum Giwe24 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe24 {
@@ -610,7 +610,7 @@ impl From<Giwe24> for u8 {
 pub enum Giwe25 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe25 {
@@ -641,7 +641,7 @@ impl From<Giwe25> for u8 {
 pub enum Giwe26 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe26 {
@@ -672,7 +672,7 @@ impl From<Giwe26> for u8 {
 pub enum Giwe27 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe27 {
@@ -703,7 +703,7 @@ impl From<Giwe27> for u8 {
 pub enum Giwe28 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe28 {
@@ -734,7 +734,7 @@ impl From<Giwe28> for u8 {
 pub enum Giwe29 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe29 {
@@ -763,9 +763,9 @@ impl From<Giwe29> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe3 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe3 {
@@ -796,7 +796,7 @@ impl From<Giwe3> for u8 {
 pub enum Giwe30 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe30 {
@@ -827,7 +827,7 @@ impl From<Giwe30> for u8 {
 pub enum Giwe31 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe31 {
@@ -856,9 +856,9 @@ impl From<Giwe31> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe4 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe4 {
@@ -887,9 +887,9 @@ impl From<Giwe4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe5 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe5 {
@@ -918,9 +918,9 @@ impl From<Giwe5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe6 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe6 {
@@ -949,9 +949,9 @@ impl From<Giwe6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe7 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe7 {
@@ -980,9 +980,9 @@ impl From<Giwe7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe8 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe8 {
@@ -1011,9 +1011,9 @@ impl From<Giwe8> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe9 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe9 {
@@ -1042,9 +1042,9 @@ impl From<Giwe9> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icnp {
-    #[doc = "Writable in Secure-Privilege state"]
+    #[doc = "Writable in Secure-Privilege state."]
     ICNP0 = 0x0,
-    #[doc = "Not writable until the next reset"]
+    #[doc = "Not writable until the next reset."]
     ICNP1 = 0x01,
 }
 impl Icnp {
@@ -1073,9 +1073,9 @@ impl From<Icnp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IcnpNpe0 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl IcnpNpe0 {
@@ -1104,9 +1104,9 @@ impl From<IcnpNpe0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IcnpNpe1 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl IcnpNpe1 {
@@ -1135,9 +1135,9 @@ impl From<IcnpNpe1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icns {
-    #[doc = "Writable in Secure-Privilege state"]
+    #[doc = "Writable in Secure-Privilege state."]
     ICNS0 = 0x0,
-    #[doc = "Not writable until the next reset"]
+    #[doc = "Not writable until the next reset."]
     ICNS1 = 0x01,
 }
 impl Icns {
@@ -1166,9 +1166,9 @@ impl From<Icns> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IcnsNse0 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl IcnsNse0 {
@@ -1197,9 +1197,9 @@ impl From<IcnsNse0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IcnsNse1 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl IcnsNse1 {
@@ -1228,34 +1228,34 @@ impl From<IcnsNse1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Irqc {
-    #[doc = "ISF is disabled"]
+    #[doc = "ISF is disabled."]
     IRQC0 = 0x0,
-    #[doc = "ISF and DMA request on rising edge"]
+    #[doc = "ISF and DMA request on rising edge."]
     IRQC1 = 0x01,
-    #[doc = "ISF and DMA request on falling edge"]
+    #[doc = "ISF and DMA request on falling edge."]
     IRQC2 = 0x02,
-    #[doc = "ISF and DMA request on either edge"]
+    #[doc = "ISF and DMA request on either edge."]
     IRQC3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "ISF sets on rising edge"]
+    #[doc = "ISF sets on rising edge."]
     IRQC5 = 0x05,
-    #[doc = "ISF sets on falling edge"]
+    #[doc = "ISF sets on falling edge."]
     IRQC6 = 0x06,
-    #[doc = "ISF sets on either edge"]
+    #[doc = "ISF sets on either edge."]
     IRQC7 = 0x07,
-    #[doc = "ISF and interrupt when logic 0"]
+    #[doc = "ISF and interrupt when logic 0."]
     IRQC8 = 0x08,
-    #[doc = "ISF and interrupt on rising edge"]
+    #[doc = "ISF and interrupt on rising edge."]
     IRQC9 = 0x09,
-    #[doc = "ISF and interrupt on falling edge"]
+    #[doc = "ISF and interrupt on falling edge."]
     IRQC10 = 0x0a,
-    #[doc = "ISF and Interrupt on either edge"]
+    #[doc = "ISF and Interrupt on either edge."]
     IRQC11 = 0x0b,
-    #[doc = "ISF and interrupt when logic 1"]
+    #[doc = "ISF and interrupt when logic 1."]
     IRQC12 = 0x0c,
-    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC13 = 0x0d,
-    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC14 = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -1285,9 +1285,9 @@ impl From<Irqc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Irqs {
-    #[doc = "Interrupt, trigger output, or DMA request 0"]
+    #[doc = "Interrupt, trigger output, or DMA request 0."]
     IRQS0 = 0x0,
-    #[doc = "Interrupt, trigger output, or DMA request 1"]
+    #[doc = "Interrupt, trigger output, or DMA request 1."]
     IRQS1 = 0x01,
 }
 impl Irqs {
@@ -1316,9 +1316,9 @@ impl From<Irqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf {
@@ -1347,9 +1347,9 @@ impl From<Isf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf0 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf0 {
@@ -1378,9 +1378,9 @@ impl From<Isf0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf1 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf1 {
@@ -1409,9 +1409,9 @@ impl From<Isf1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf10 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf10 {
@@ -1440,9 +1440,9 @@ impl From<Isf10> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf11 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf11 {
@@ -1471,9 +1471,9 @@ impl From<Isf11> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf12 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf12 {
@@ -1502,9 +1502,9 @@ impl From<Isf12> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf13 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf13 {
@@ -1533,9 +1533,9 @@ impl From<Isf13> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf14 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf14 {
@@ -1564,9 +1564,9 @@ impl From<Isf14> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf15 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf15 {
@@ -1595,9 +1595,9 @@ impl From<Isf15> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf16 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf16 {
@@ -1626,9 +1626,9 @@ impl From<Isf16> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf17 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf17 {
@@ -1657,9 +1657,9 @@ impl From<Isf17> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf18 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf18 {
@@ -1688,9 +1688,9 @@ impl From<Isf18> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf19 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf19 {
@@ -1719,9 +1719,9 @@ impl From<Isf19> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf2 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf2 {
@@ -1750,9 +1750,9 @@ impl From<Isf2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf20 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf20 {
@@ -1781,9 +1781,9 @@ impl From<Isf20> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf21 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf21 {
@@ -1812,9 +1812,9 @@ impl From<Isf21> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf22 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf22 {
@@ -1843,9 +1843,9 @@ impl From<Isf22> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf23 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf23 {
@@ -1874,9 +1874,9 @@ impl From<Isf23> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf24 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf24 {
@@ -1905,9 +1905,9 @@ impl From<Isf24> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf25 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf25 {
@@ -1936,9 +1936,9 @@ impl From<Isf25> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf26 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf26 {
@@ -1967,9 +1967,9 @@ impl From<Isf26> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf27 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf27 {
@@ -1998,9 +1998,9 @@ impl From<Isf27> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf28 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf28 {
@@ -2029,9 +2029,9 @@ impl From<Isf28> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf29 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf29 {
@@ -2060,9 +2060,9 @@ impl From<Isf29> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf3 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf3 {
@@ -2091,9 +2091,9 @@ impl From<Isf3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf30 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf30 {
@@ -2122,9 +2122,9 @@ impl From<Isf30> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf31 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf31 {
@@ -2153,9 +2153,9 @@ impl From<Isf31> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf4 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf4 {
@@ -2184,9 +2184,9 @@ impl From<Isf4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf5 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf5 {
@@ -2215,9 +2215,9 @@ impl From<Isf5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf6 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf6 {
@@ -2246,9 +2246,9 @@ impl From<Isf6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf7 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf7 {
@@ -2277,9 +2277,9 @@ impl From<Isf7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf8 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf8 {
@@ -2308,9 +2308,9 @@ impl From<Isf8> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf9 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf9 {
@@ -2339,9 +2339,9 @@ impl From<Isf9> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lk {
-    #[doc = "Not locked"]
+    #[doc = "Not locked."]
     LK0 = 0x0,
-    #[doc = "Locked"]
+    #[doc = "Locked."]
     LK1 = 0x01,
 }
 impl Lk {
@@ -2370,9 +2370,9 @@ impl From<Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe10 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe10 {
@@ -2401,9 +2401,9 @@ impl From<Npe10> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe11 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe11 {
@@ -2432,9 +2432,9 @@ impl From<Npe11> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe12 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe12 {
@@ -2463,9 +2463,9 @@ impl From<Npe12> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe13 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe13 {
@@ -2494,9 +2494,9 @@ impl From<Npe13> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe14 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe14 {
@@ -2525,9 +2525,9 @@ impl From<Npe14> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe15 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe15 {
@@ -2556,9 +2556,9 @@ impl From<Npe15> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe16 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe16 {
@@ -2587,9 +2587,9 @@ impl From<Npe16> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe17 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe17 {
@@ -2618,9 +2618,9 @@ impl From<Npe17> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe18 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe18 {
@@ -2649,9 +2649,9 @@ impl From<Npe18> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe19 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe19 {
@@ -2680,9 +2680,9 @@ impl From<Npe19> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe2 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe2 {
@@ -2711,9 +2711,9 @@ impl From<Npe2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe20 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe20 {
@@ -2742,9 +2742,9 @@ impl From<Npe20> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe21 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe21 {
@@ -2773,9 +2773,9 @@ impl From<Npe21> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe22 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe22 {
@@ -2804,9 +2804,9 @@ impl From<Npe22> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe23 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe23 {
@@ -2835,9 +2835,9 @@ impl From<Npe23> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe24 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe24 {
@@ -2866,9 +2866,9 @@ impl From<Npe24> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe25 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe25 {
@@ -2897,9 +2897,9 @@ impl From<Npe25> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe26 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe26 {
@@ -2928,9 +2928,9 @@ impl From<Npe26> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe27 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe27 {
@@ -2959,9 +2959,9 @@ impl From<Npe27> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe28 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe28 {
@@ -2990,9 +2990,9 @@ impl From<Npe28> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe29 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe29 {
@@ -3021,9 +3021,9 @@ impl From<Npe29> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe3 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe3 {
@@ -3052,9 +3052,9 @@ impl From<Npe3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe30 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe30 {
@@ -3083,9 +3083,9 @@ impl From<Npe30> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe31 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe31 {
@@ -3114,9 +3114,9 @@ impl From<Npe31> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe4 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe4 {
@@ -3145,9 +3145,9 @@ impl From<Npe4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe5 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe5 {
@@ -3176,9 +3176,9 @@ impl From<Npe5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe6 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe6 {
@@ -3207,9 +3207,9 @@ impl From<Npe6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe7 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe7 {
@@ -3238,9 +3238,9 @@ impl From<Npe7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe8 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe8 {
@@ -3269,9 +3269,9 @@ impl From<Npe8> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe9 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe9 {
@@ -3300,9 +3300,9 @@ impl From<Npe9> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse10 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse10 {
@@ -3331,9 +3331,9 @@ impl From<Nse10> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse11 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse11 {
@@ -3362,9 +3362,9 @@ impl From<Nse11> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse12 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse12 {
@@ -3393,9 +3393,9 @@ impl From<Nse12> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse13 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse13 {
@@ -3424,9 +3424,9 @@ impl From<Nse13> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse14 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse14 {
@@ -3455,9 +3455,9 @@ impl From<Nse14> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse15 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse15 {
@@ -3486,9 +3486,9 @@ impl From<Nse15> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse16 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse16 {
@@ -3517,9 +3517,9 @@ impl From<Nse16> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse17 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse17 {
@@ -3548,9 +3548,9 @@ impl From<Nse17> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse18 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse18 {
@@ -3579,9 +3579,9 @@ impl From<Nse18> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse19 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse19 {
@@ -3610,9 +3610,9 @@ impl From<Nse19> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse2 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse2 {
@@ -3641,9 +3641,9 @@ impl From<Nse2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse20 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse20 {
@@ -3672,9 +3672,9 @@ impl From<Nse20> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse21 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse21 {
@@ -3703,9 +3703,9 @@ impl From<Nse21> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse22 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse22 {
@@ -3734,9 +3734,9 @@ impl From<Nse22> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse23 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse23 {
@@ -3765,9 +3765,9 @@ impl From<Nse23> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse24 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse24 {
@@ -3796,9 +3796,9 @@ impl From<Nse24> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse25 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse25 {
@@ -3827,9 +3827,9 @@ impl From<Nse25> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse26 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse26 {
@@ -3858,9 +3858,9 @@ impl From<Nse26> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse27 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse27 {
@@ -3889,9 +3889,9 @@ impl From<Nse27> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse28 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse28 {
@@ -3920,9 +3920,9 @@ impl From<Nse28> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse29 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse29 {
@@ -3951,9 +3951,9 @@ impl From<Nse29> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse3 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse3 {
@@ -3982,9 +3982,9 @@ impl From<Nse3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse30 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse30 {
@@ -4013,9 +4013,9 @@ impl From<Nse30> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse31 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse31 {
@@ -4044,9 +4044,9 @@ impl From<Nse31> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse4 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse4 {
@@ -4075,9 +4075,9 @@ impl From<Nse4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse5 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse5 {
@@ -4106,9 +4106,9 @@ impl From<Nse5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse6 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse6 {
@@ -4137,9 +4137,9 @@ impl From<Nse6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse7 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse7 {
@@ -4168,9 +4168,9 @@ impl From<Nse7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse8 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse8 {
@@ -4199,9 +4199,9 @@ impl From<Nse8> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse9 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse9 {
@@ -4230,9 +4230,9 @@ impl From<Nse9> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcnp {
-    #[doc = "Writable in Secure-Privilege state"]
+    #[doc = "Writable in Secure-Privilege state."]
     PCNP0 = 0x0,
-    #[doc = "Not writable until the next reset"]
+    #[doc = "Not writable until the next reset."]
     PCNP1 = 0x01,
 }
 impl Pcnp {
@@ -4261,9 +4261,9 @@ impl From<Pcnp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PcnpNpe0 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl PcnpNpe0 {
@@ -4292,9 +4292,9 @@ impl From<PcnpNpe0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PcnpNpe1 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl PcnpNpe1 {
@@ -4323,9 +4323,9 @@ impl From<PcnpNpe1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcns {
-    #[doc = "Writable in Secure-Privilege state"]
+    #[doc = "Writable in Secure-Privilege state."]
     PCNS0 = 0x0,
-    #[doc = "Not writable until the next reset"]
+    #[doc = "Not writable until the next reset."]
     PCNS1 = 0x01,
 }
 impl Pcns {
@@ -4354,9 +4354,9 @@ impl From<Pcns> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PcnsNse0 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl PcnsNse0 {
@@ -4385,9 +4385,9 @@ impl From<PcnsNse0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PcnsNse1 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl PcnsNse1 {
@@ -4416,9 +4416,9 @@ impl From<PcnsNse1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pd {
-    #[doc = "Logic zero"]
+    #[doc = "Logic zero."]
     PD0 = 0x0,
-    #[doc = "Logic one"]
+    #[doc = "Logic one."]
     PD1 = 0x01,
 }
 impl Pd {
@@ -4447,9 +4447,9 @@ impl From<Pd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdd {
-    #[doc = "Input"]
+    #[doc = "Input."]
     PDD0 = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     PDD1 = 0x01,
 }
 impl Pdd {
@@ -4478,9 +4478,9 @@ impl From<Pdd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pid {
-    #[doc = "Configured for general-purpose input"]
+    #[doc = "Configured for general-purpose input."]
     PID0 = 0x0,
-    #[doc = "Disabled for general-purpose input"]
+    #[doc = "Disabled for general-purpose input."]
     PID1 = 0x01,
 }
 impl Pid {
@@ -4509,9 +4509,9 @@ impl From<Pid> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptco {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTCO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 0"]
+    #[doc = "Corresponding field in PDOR becomes 0."]
     PTCO1 = 0x01,
 }
 impl Ptco {
@@ -4540,9 +4540,9 @@ impl From<Ptco> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptso {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTSO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 1"]
+    #[doc = "Corresponding field in PDOR becomes 1."]
     PTSO1 = 0x01,
 }
 impl Ptso {

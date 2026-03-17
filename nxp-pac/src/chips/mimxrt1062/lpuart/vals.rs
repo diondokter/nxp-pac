@@ -35,7 +35,7 @@ impl From<Brk13> for u8 {
 pub enum Dozeen {
     #[doc = "LPUART is enabled in Doze mode."]
     ENABLED = 0x0,
-    #[doc = "LPUART is disabled in Doze mode ."]
+    #[doc = "LPUART is disabled in Doze mode."]
     DISABLED = 0x01,
 }
 impl Dozeen {
@@ -112,21 +112,21 @@ impl From<Feature> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Idlecfg {
-    #[doc = "1 idle character"]
+    #[doc = "1 idle character."]
     IDLE_1 = 0x0,
-    #[doc = "2 idle characters"]
+    #[doc = "2 idle characters."]
     IDLE_2 = 0x01,
-    #[doc = "4 idle characters"]
+    #[doc = "4 idle characters."]
     IDLE_4 = 0x02,
-    #[doc = "8 idle characters"]
+    #[doc = "8 idle characters."]
     IDLE_8 = 0x03,
-    #[doc = "16 idle characters"]
+    #[doc = "16 idle characters."]
     IDLE_16 = 0x04,
-    #[doc = "32 idle characters"]
+    #[doc = "32 idle characters."]
     IDLE_32 = 0x05,
-    #[doc = "64 idle characters"]
+    #[doc = "64 idle characters."]
     IDLE_64 = 0x06,
-    #[doc = "128 idle characters"]
+    #[doc = "128 idle characters."]
     IDLE_128 = 0x07,
 }
 impl Idlecfg {
@@ -248,13 +248,13 @@ impl From<M7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Matcfg {
-    #[doc = "Address Match Wakeup"]
+    #[doc = "Address Match Wakeup."]
     ADDR_MATCH = 0x0,
-    #[doc = "Idle Match Wakeup"]
+    #[doc = "Idle Match Wakeup."]
     IDLE_MATCH = 0x01,
-    #[doc = "Match On and Match Off"]
+    #[doc = "Match On and Match Off."]
     ONOFF_MATCH = 0x02,
-    #[doc = "Enables RWU on Data Match and Match On/Off for transmitter CTS input"]
+    #[doc = "Enables RWU on Data Match and Match On/Off for transmitter CTS input."]
     RWU_MATCH = 0x03,
 }
 impl Matcfg {
@@ -285,7 +285,7 @@ impl From<Matcfg> for u8 {
 pub enum Msbf {
     #[doc = "LSB (bit0) is the first bit that is transmitted following the start bit. Further, the first bit received after the start bit is identified as bit0."]
     LSB_FIRST = 0x0,
-    #[doc = "MSB (identified as bit9, bit8, bit7 or bit6) is the first bit that is transmitted following the start bit depending on the setting of CTRL\\[M\\], CTRL\\[PE\\] and BAUD\\[M10\\]. ."]
+    #[doc = "MSB (identified as bit9, bit8, bit7 or bit6) is the first bit that is transmitted following the start bit depending on the setting of CTRL\\[M\\], CTRL\\[PE\\] and BAUD\\[M10\\].."]
     MSB_FIRST = 0x01,
 }
 impl Msbf {
@@ -314,7 +314,7 @@ impl From<Msbf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Osr {
-    #[doc = "Writing 0 to this field results in an oversampling ratio of 16"]
+    #[doc = "Writing 0 to this field results in an oversampling ratio of 16."]
     DEFAULT = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
@@ -945,7 +945,7 @@ pub enum Txfifosize {
     FIFO_64 = 0x05,
     #[doc = "Transmit FIFO/Buffer depth = 128 datawords."]
     FIFO_128 = 0x06,
-    #[doc = "Transmit FIFO/Buffer depth = 256 datawords"]
+    #[doc = "Transmit FIFO/Buffer depth = 256 datawords."]
     FIFO_256 = 0x07,
 }
 impl Txfifosize {

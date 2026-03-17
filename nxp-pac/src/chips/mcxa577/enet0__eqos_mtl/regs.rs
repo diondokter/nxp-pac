@@ -1,16 +1,16 @@
-#[doc = "Interrupt Status"]
+#[doc = "Interrupt Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct MtlInterruptStatus(pub u32);
 impl MtlInterruptStatus {
-    #[doc = "Queue 0 Interrupt status"]
+    #[doc = "Queue 0 Interrupt status."]
     #[must_use]
     #[inline(always)]
     pub const fn q0is(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Queue 0 Interrupt status"]
+    #[doc = "Queue 0 Interrupt status."]
     #[inline(always)]
     pub const fn set_q0is(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -35,43 +35,43 @@ impl defmt::Format for MtlInterruptStatus {
         defmt::write!(f, "MtlInterruptStatus {{ q0is: {=bool:?} }}", self.q0is())
     }
 }
-#[doc = "Operation Mode"]
+#[doc = "Operation Mode."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct MtlOperationMode(pub u32);
 impl MtlOperationMode {
-    #[doc = "Drop Transmit Status"]
+    #[doc = "Drop Transmit Status."]
     #[must_use]
     #[inline(always)]
     pub const fn dtxsts(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Drop Transmit Status"]
+    #[doc = "Drop Transmit Status."]
     #[inline(always)]
     pub const fn set_dtxsts(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Counters Preset"]
+    #[doc = "Counters Preset."]
     #[must_use]
     #[inline(always)]
     pub const fn cntprst(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Counters Preset"]
+    #[doc = "Counters Preset."]
     #[inline(always)]
     pub const fn set_cntprst(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Counters Reset"]
+    #[doc = "Counters Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn cntclr(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Counters Reset"]
+    #[doc = "Counters Reset."]
     #[inline(always)]
     pub const fn set_cntclr(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);

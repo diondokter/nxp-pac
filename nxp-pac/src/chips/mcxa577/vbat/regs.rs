@@ -1,16 +1,16 @@
-#[doc = "FRO16K Clock Enable"]
+#[doc = "FRO16K Clock Enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Froclke(pub u32);
 impl Froclke {
-    #[doc = "Clock Enable"]
+    #[doc = "Clock Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn clke(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x07;
         val as u8
     }
-    #[doc = "Clock Enable"]
+    #[doc = "Clock Enable."]
     #[inline(always)]
     pub const fn set_clke(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val as u32) & 0x07) << 0usize);
@@ -35,19 +35,19 @@ impl defmt::Format for Froclke {
         defmt::write!(f, "Froclke {{ clke: {=u8:?} }}", self.clke())
     }
 }
-#[doc = "FRO16K Control A"]
+#[doc = "FRO16K Control A."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Froctla(pub u32);
 impl Froctla {
-    #[doc = "FRO16K Enable"]
+    #[doc = "FRO16K Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn fro_en(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "FRO16K Enable"]
+    #[doc = "FRO16K Enable."]
     #[inline(always)]
     pub const fn set_fro_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -72,19 +72,19 @@ impl defmt::Format for Froctla {
         defmt::write!(f, "Froctla {{ fro_en: {=bool:?} }}", self.fro_en())
     }
 }
-#[doc = "FRO16K Lock A"]
+#[doc = "FRO16K Lock A."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Frolcka(pub u32);
 impl Frolcka {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     #[must_use]
     #[inline(always)]
     pub const fn lock(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     #[inline(always)]
     pub const fn set_lock(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -109,139 +109,139 @@ impl defmt::Format for Frolcka {
         defmt::write!(f, "Frolcka {{ lock: {=bool:?} }}", self.lock())
     }
 }
-#[doc = "Interrupt Enable A"]
+#[doc = "Interrupt Enable A."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Irqena(pub u32);
 impl Irqena {
-    #[doc = "POR Detect"]
+    #[doc = "POR Detect."]
     #[must_use]
     #[inline(always)]
     pub const fn por_det(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "POR Detect"]
+    #[doc = "POR Detect."]
     #[inline(always)]
     pub const fn set_por_det(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Wakeup Pin Flag"]
+    #[doc = "Wakeup Pin Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn wakeup_flag(&self) -> super::vals::IrqenaWakeupFlag {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::IrqenaWakeupFlag::from_bits(val as u8)
     }
-    #[doc = "Wakeup Pin Flag"]
+    #[doc = "Wakeup Pin Flag."]
     #[inline(always)]
     pub const fn set_wakeup_flag(&mut self, val: super::vals::IrqenaWakeupFlag) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Bandgap Timer 0"]
+    #[doc = "Bandgap Timer 0."]
     #[must_use]
     #[inline(always)]
     pub const fn timer0_flag(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Bandgap Timer 0"]
+    #[doc = "Bandgap Timer 0."]
     #[inline(always)]
     pub const fn set_timer0_flag(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Bandgap Timer 2"]
+    #[doc = "Bandgap Timer 2."]
     #[must_use]
     #[inline(always)]
     pub const fn timer1_flag(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Bandgap Timer 2"]
+    #[doc = "Bandgap Timer 2."]
     #[inline(always)]
     pub const fn set_timer1_flag(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "LDO Ready"]
+    #[doc = "LDO Ready."]
     #[must_use]
     #[inline(always)]
     pub const fn ldo_rdy(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "LDO Ready"]
+    #[doc = "LDO Ready."]
     #[inline(always)]
     pub const fn set_ldo_rdy(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "OSC32k Ready"]
+    #[doc = "OSC32k Ready."]
     #[must_use]
     #[inline(always)]
     pub const fn osc_rdy(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "OSC32k Ready"]
+    #[doc = "OSC32k Ready."]
     #[inline(always)]
     pub const fn set_osc_rdy(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "Clock Detect"]
+    #[doc = "Clock Detect."]
     #[must_use]
     #[inline(always)]
     pub const fn clock_det(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "Clock Detect"]
+    #[doc = "Clock Detect."]
     #[inline(always)]
     pub const fn set_clock_det(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Interrupt 0 Detect"]
+    #[doc = "Interrupt 0 Detect."]
     #[must_use]
     #[inline(always)]
     pub const fn irq0_det(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Interrupt 0 Detect"]
+    #[doc = "Interrupt 0 Detect."]
     #[inline(always)]
     pub const fn set_irq0_det(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Interrupt 1 Detect"]
+    #[doc = "Interrupt 1 Detect."]
     #[must_use]
     #[inline(always)]
     pub const fn irq1_det(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Interrupt 1 Detect"]
+    #[doc = "Interrupt 1 Detect."]
     #[inline(always)]
     pub const fn set_irq1_det(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Interrupt 2 Detect"]
+    #[doc = "Interrupt 2 Detect."]
     #[must_use]
     #[inline(always)]
     pub const fn irq2_det(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Interrupt 2 Detect"]
+    #[doc = "Interrupt 2 Detect."]
     #[inline(always)]
     pub const fn set_irq2_det(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Interrupt 3 Detect"]
+    #[doc = "Interrupt 3 Detect."]
     #[must_use]
     #[inline(always)]
     pub const fn irq3_det(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Interrupt 3 Detect"]
+    #[doc = "Interrupt 3 Detect."]
     #[inline(always)]
     pub const fn set_irq3_det(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
@@ -290,43 +290,43 @@ impl defmt::Format for Irqena {
         )
     }
 }
-#[doc = "LDO_RAM Control A"]
+#[doc = "LDO_RAM Control A."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ldoctla(pub u32);
 impl Ldoctla {
-    #[doc = "Bandgap Enable"]
+    #[doc = "Bandgap Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn bg_en(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Bandgap Enable"]
+    #[doc = "Bandgap Enable."]
     #[inline(always)]
     pub const fn set_bg_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "LDO Enable"]
+    #[doc = "LDO Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ldo_en(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "LDO Enable"]
+    #[doc = "LDO Enable."]
     #[inline(always)]
     pub const fn set_ldo_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Refresh Enable"]
+    #[doc = "Refresh Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn refresh_en(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Refresh Enable"]
+    #[doc = "Refresh Enable."]
     #[inline(always)]
     pub const fn set_refresh_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
@@ -359,19 +359,19 @@ impl defmt::Format for Ldoctla {
         )
     }
 }
-#[doc = "LDO_RAM Lock A"]
+#[doc = "LDO_RAM Lock A."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ldolcka(pub u32);
 impl Ldolcka {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     #[must_use]
     #[inline(always)]
     pub const fn lock(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     #[inline(always)]
     pub const fn set_lock(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -396,79 +396,79 @@ impl defmt::Format for Ldolcka {
         defmt::write!(f, "Ldolcka {{ lock: {=bool:?} }}", self.lock())
     }
 }
-#[doc = "RAM Control"]
+#[doc = "RAM Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ldoramc(pub u32);
 impl Ldoramc {
-    #[doc = "Isolate SRAM"]
+    #[doc = "Isolate SRAM."]
     #[must_use]
     #[inline(always)]
     pub const fn iso(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Isolate SRAM"]
+    #[doc = "Isolate SRAM."]
     #[inline(always)]
     pub const fn set_iso(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Switch SRAM"]
+    #[doc = "Switch SRAM."]
     #[must_use]
     #[inline(always)]
     pub const fn swi(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Switch SRAM"]
+    #[doc = "Switch SRAM."]
     #[inline(always)]
     pub const fn set_swi(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Retention"]
+    #[doc = "Retention."]
     #[must_use]
     #[inline(always)]
     pub const fn ret0(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Retention"]
+    #[doc = "Retention."]
     #[inline(always)]
     pub const fn set_ret0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Retention"]
+    #[doc = "Retention."]
     #[must_use]
     #[inline(always)]
     pub const fn ret1(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Retention"]
+    #[doc = "Retention."]
     #[inline(always)]
     pub const fn set_ret1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "Retention"]
+    #[doc = "Retention."]
     #[must_use]
     #[inline(always)]
     pub const fn ret2(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "Retention"]
+    #[doc = "Retention."]
     #[inline(always)]
     pub const fn set_ret2(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "Retention"]
+    #[doc = "Retention."]
     #[must_use]
     #[inline(always)]
     pub const fn ret3(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "Retention"]
+    #[doc = "Retention."]
     #[inline(always)]
     pub const fn set_ret3(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
@@ -507,31 +507,31 @@ impl defmt::Format for Ldoramc {
         )
     }
 }
-#[doc = "Bandgap Timer 0"]
+#[doc = "Bandgap Timer 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ldotimer0(pub u32);
 impl Ldotimer0 {
-    #[doc = "Timeout Configuration"]
+    #[doc = "Timeout Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn timcfg(&self) -> super::vals::Timcfg {
         let val = (self.0 >> 0usize) & 0x07;
         super::vals::Timcfg::from_bits(val as u8)
     }
-    #[doc = "Timeout Configuration"]
+    #[doc = "Timeout Configuration."]
     #[inline(always)]
     pub const fn set_timcfg(&mut self, val: super::vals::Timcfg) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
     }
-    #[doc = "Bandgap Timeout Period Enable"]
+    #[doc = "Bandgap Timeout Period Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn timen(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Bandgap Timeout Period Enable"]
+    #[doc = "Bandgap Timeout Period Enable."]
     #[inline(always)]
     pub const fn set_timen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -562,31 +562,31 @@ impl defmt::Format for Ldotimer0 {
         )
     }
 }
-#[doc = "Bandgap Timer 1"]
+#[doc = "Bandgap Timer 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ldotimer1(pub u32);
 impl Ldotimer1 {
-    #[doc = "Timeout Configuration"]
+    #[doc = "Timeout Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn timcfg(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x00ff_ffff;
         val as u32
     }
-    #[doc = "Timeout Configuration"]
+    #[doc = "Timeout Configuration."]
     #[inline(always)]
     pub const fn set_timcfg(&mut self, val: u32) {
         self.0 = (self.0 & !(0x00ff_ffff << 0usize)) | (((val as u32) & 0x00ff_ffff) << 0usize);
     }
-    #[doc = "Bandgap Timeout Period Enable"]
+    #[doc = "Bandgap Timeout Period Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn timen(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Bandgap Timeout Period Enable"]
+    #[doc = "Bandgap Timeout Period Enable."]
     #[inline(always)]
     pub const fn set_timen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -617,19 +617,19 @@ impl defmt::Format for Ldotimer1 {
         )
     }
 }
-#[doc = "Lock A"]
+#[doc = "Lock A."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Locka(pub u32);
 impl Locka {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     #[must_use]
     #[inline(always)]
     pub const fn lock(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     #[inline(always)]
     pub const fn set_lock(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -652,31 +652,31 @@ impl defmt::Format for Locka {
         defmt::write!(f, "Locka {{ lock: {=bool:?} }}", self.lock())
     }
 }
-#[doc = "CLKMON Configuration A"]
+#[doc = "CLKMON Configuration A."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Moncfga(pub u32);
 impl Moncfga {
-    #[doc = "Frequency Trim"]
+    #[doc = "Frequency Trim."]
     #[must_use]
     #[inline(always)]
     pub const fn freq_trim(&self) -> super::vals::FreqTrim {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::FreqTrim::from_bits(val as u8)
     }
-    #[doc = "Frequency Trim"]
+    #[doc = "Frequency Trim."]
     #[inline(always)]
     pub const fn set_freq_trim(&mut self, val: super::vals::FreqTrim) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "Divide Trim"]
+    #[doc = "Divide Trim."]
     #[must_use]
     #[inline(always)]
     pub const fn divide_trim(&self) -> super::vals::DivideTrim {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::DivideTrim::from_bits(val as u8)
     }
-    #[doc = "Divide Trim"]
+    #[doc = "Divide Trim."]
     #[inline(always)]
     pub const fn set_divide_trim(&mut self, val: super::vals::DivideTrim) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
@@ -707,19 +707,19 @@ impl defmt::Format for Moncfga {
         )
     }
 }
-#[doc = "CLKMON Control A"]
+#[doc = "CLKMON Control A."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Monctla(pub u32);
 impl Monctla {
-    #[doc = "CLKMON Enable"]
+    #[doc = "CLKMON Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn mon_en(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "CLKMON Enable"]
+    #[doc = "CLKMON Enable."]
     #[inline(always)]
     pub const fn set_mon_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -744,19 +744,19 @@ impl defmt::Format for Monctla {
         defmt::write!(f, "Monctla {{ mon_en: {=bool:?} }}", self.mon_en())
     }
 }
-#[doc = "CLKMON Lock A"]
+#[doc = "CLKMON Lock A."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Monlcka(pub u32);
 impl Monlcka {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     #[must_use]
     #[inline(always)]
     pub const fn lock(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     #[inline(always)]
     pub const fn set_lock(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -781,19 +781,19 @@ impl defmt::Format for Monlcka {
         defmt::write!(f, "Monlcka {{ lock: {=bool:?} }}", self.lock())
     }
 }
-#[doc = "CLKMON Test A"]
+#[doc = "CLKMON Test A."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Montsta(pub u32);
 impl Montsta {
-    #[doc = "Test Mode"]
+    #[doc = "Test Mode."]
     #[must_use]
     #[inline(always)]
     pub const fn tstmode(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "Test Mode"]
+    #[doc = "Test Mode."]
     #[inline(always)]
     pub const fn set_tstmode(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
@@ -818,67 +818,67 @@ impl defmt::Format for Montsta {
         defmt::write!(f, "Montsta {{ tstmode: {=u8:?} }}", self.tstmode())
     }
 }
-#[doc = "Oscillator Configuration A"]
+#[doc = "Oscillator Configuration A."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Osccfga(pub u32);
 impl Osccfga {
-    #[doc = "Comparator Trim"]
+    #[doc = "Comparator Trim."]
     #[must_use]
     #[inline(always)]
     pub const fn cmp_trim(&self) -> super::vals::CmpTrim {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::CmpTrim::from_bits(val as u8)
     }
-    #[doc = "Comparator Trim"]
+    #[doc = "Comparator Trim."]
     #[inline(always)]
     pub const fn set_cmp_trim(&mut self, val: super::vals::CmpTrim) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "CAP2_TRIM"]
+    #[doc = "CAP2_TRIM."]
     #[must_use]
     #[inline(always)]
     pub const fn cap2_trim(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "CAP2_TRIM"]
+    #[doc = "CAP2_TRIM."]
     #[inline(always)]
     pub const fn set_cap2_trim(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Delay Trim"]
+    #[doc = "Delay Trim."]
     #[must_use]
     #[inline(always)]
     pub const fn dly_trim(&self) -> super::vals::DlyTrim {
         let val = (self.0 >> 3usize) & 0x0f;
         super::vals::DlyTrim::from_bits(val as u8)
     }
-    #[doc = "Delay Trim"]
+    #[doc = "Delay Trim."]
     #[inline(always)]
     pub const fn set_dly_trim(&mut self, val: super::vals::DlyTrim) {
         self.0 = (self.0 & !(0x0f << 3usize)) | (((val.to_bits() as u32) & 0x0f) << 3usize);
     }
-    #[doc = "Capacitor Trim"]
+    #[doc = "Capacitor Trim."]
     #[must_use]
     #[inline(always)]
     pub const fn cap_trim(&self) -> super::vals::CapTrim {
         let val = (self.0 >> 7usize) & 0x03;
         super::vals::CapTrim::from_bits(val as u8)
     }
-    #[doc = "Capacitor Trim"]
+    #[doc = "Capacitor Trim."]
     #[inline(always)]
     pub const fn set_cap_trim(&mut self, val: super::vals::CapTrim) {
         self.0 = (self.0 & !(0x03 << 7usize)) | (((val.to_bits() as u32) & 0x03) << 7usize);
     }
-    #[doc = "Initialization Trim"]
+    #[doc = "Initialization Trim."]
     #[must_use]
     #[inline(always)]
     pub const fn init_trim(&self) -> super::vals::InitTrim {
         let val = (self.0 >> 9usize) & 0x07;
         super::vals::InitTrim::from_bits(val as u8)
     }
-    #[doc = "Initialization Trim"]
+    #[doc = "Initialization Trim."]
     #[inline(always)]
     pub const fn set_init_trim(&mut self, val: super::vals::InitTrim) {
         self.0 = (self.0 & !(0x07 << 9usize)) | (((val.to_bits() as u32) & 0x07) << 9usize);
@@ -915,19 +915,19 @@ impl defmt::Format for Osccfga {
         )
     }
 }
-#[doc = "Oscillator Clock Enable"]
+#[doc = "Oscillator Clock Enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Oscclke(pub u32);
 impl Oscclke {
-    #[doc = "Clock Enable"]
+    #[doc = "Clock Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn clke(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x07;
         val as u8
     }
-    #[doc = "Clock Enable"]
+    #[doc = "Clock Enable."]
     #[inline(always)]
     pub const fn set_clke(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val as u32) & 0x07) << 0usize);
@@ -952,103 +952,103 @@ impl defmt::Format for Oscclke {
         defmt::write!(f, "Oscclke {{ clke: {=u8:?} }}", self.clke())
     }
 }
-#[doc = "Oscillator Control A"]
+#[doc = "Oscillator Control A."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Oscctla(pub u32);
 impl Oscctla {
-    #[doc = "Crystal Oscillator Enable"]
+    #[doc = "Crystal Oscillator Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn osc_en(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Crystal Oscillator Enable"]
+    #[doc = "Crystal Oscillator Enable."]
     #[inline(always)]
     pub const fn set_osc_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Crystal Oscillator Bypass Enable"]
+    #[doc = "Crystal Oscillator Bypass Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn osc_byp_en(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Crystal Oscillator Bypass Enable"]
+    #[doc = "Crystal Oscillator Bypass Enable."]
     #[inline(always)]
     pub const fn set_osc_byp_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Amplifier Gain Coarse Adjustment"]
+    #[doc = "Amplifier Gain Coarse Adjustment."]
     #[must_use]
     #[inline(always)]
     pub const fn coarse_amp_gain(&self) -> super::vals::CoarseAmpGain {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::CoarseAmpGain::from_bits(val as u8)
     }
-    #[doc = "Amplifier Gain Coarse Adjustment"]
+    #[doc = "Amplifier Gain Coarse Adjustment."]
     #[inline(always)]
     pub const fn set_coarse_amp_gain(&mut self, val: super::vals::CoarseAmpGain) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
-    #[doc = "Crystal Load Capacitance Selection Enable"]
+    #[doc = "Crystal Load Capacitance Selection Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn cap_sel_en(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Crystal Load Capacitance Selection Enable"]
+    #[doc = "Crystal Load Capacitance Selection Enable."]
     #[inline(always)]
     pub const fn set_cap_sel_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Crystal Load Capacitance Selection"]
+    #[doc = "Crystal Load Capacitance Selection."]
     #[must_use]
     #[inline(always)]
     pub const fn extal_cap_sel(&self) -> super::vals::ExtalCapSel {
         let val = (self.0 >> 8usize) & 0x0f;
         super::vals::ExtalCapSel::from_bits(val as u8)
     }
-    #[doc = "Crystal Load Capacitance Selection"]
+    #[doc = "Crystal Load Capacitance Selection."]
     #[inline(always)]
     pub const fn set_extal_cap_sel(&mut self, val: super::vals::ExtalCapSel) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
-    #[doc = "Crystal Load Capacitance Selection"]
+    #[doc = "Crystal Load Capacitance Selection."]
     #[must_use]
     #[inline(always)]
     pub const fn xtal_cap_sel(&self) -> super::vals::XtalCapSel {
         let val = (self.0 >> 12usize) & 0x0f;
         super::vals::XtalCapSel::from_bits(val as u8)
     }
-    #[doc = "Crystal Load Capacitance Selection"]
+    #[doc = "Crystal Load Capacitance Selection."]
     #[inline(always)]
     pub const fn set_xtal_cap_sel(&mut self, val: super::vals::XtalCapSel) {
         self.0 = (self.0 & !(0x0f << 12usize)) | (((val.to_bits() as u32) & 0x0f) << 12usize);
     }
-    #[doc = "Mode Enable"]
+    #[doc = "Mode Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn mode_en(&self) -> super::vals::ModeEn {
         let val = (self.0 >> 16usize) & 0x03;
         super::vals::ModeEn::from_bits(val as u8)
     }
-    #[doc = "Mode Enable"]
+    #[doc = "Mode Enable."]
     #[inline(always)]
     pub const fn set_mode_en(&mut self, val: super::vals::ModeEn) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
-    #[doc = "Supply Detector Trim"]
+    #[doc = "Supply Detector Trim."]
     #[must_use]
     #[inline(always)]
     pub const fn supply_det(&self) -> super::vals::SupplyDet {
         let val = (self.0 >> 18usize) & 0x03;
         super::vals::SupplyDet::from_bits(val as u8)
     }
-    #[doc = "Supply Detector Trim"]
+    #[doc = "Supply Detector Trim."]
     #[inline(always)]
     pub const fn set_supply_det(&mut self, val: super::vals::SupplyDet) {
         self.0 = (self.0 & !(0x03 << 18usize)) | (((val.to_bits() as u32) & 0x03) << 18usize);
@@ -1091,19 +1091,19 @@ impl defmt::Format for Oscctla {
         )
     }
 }
-#[doc = "Oscillator Lock A"]
+#[doc = "Oscillator Lock A."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Osclcka(pub u32);
 impl Osclcka {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     #[must_use]
     #[inline(always)]
     pub const fn lock(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     #[inline(always)]
     pub const fn set_lock(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -1128,151 +1128,151 @@ impl defmt::Format for Osclcka {
         defmt::write!(f, "Osclcka {{ lock: {=bool:?} }}", self.lock())
     }
 }
-#[doc = "Status A"]
+#[doc = "Status A."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Statusa(pub u32);
 impl Statusa {
-    #[doc = "POR Detect Flag"]
+    #[doc = "POR Detect Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn por_det(&self) -> super::vals::StatusaPorDet {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::StatusaPorDet::from_bits(val as u8)
     }
-    #[doc = "POR Detect Flag"]
+    #[doc = "POR Detect Flag."]
     #[inline(always)]
     pub const fn set_por_det(&mut self, val: super::vals::StatusaPorDet) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Wakeup Pin Flag"]
+    #[doc = "Wakeup Pin Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn wakeup_flag(&self) -> super::vals::StatusaWakeupFlag {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::StatusaWakeupFlag::from_bits(val as u8)
     }
-    #[doc = "Wakeup Pin Flag"]
+    #[doc = "Wakeup Pin Flag."]
     #[inline(always)]
     pub const fn set_wakeup_flag(&mut self, val: super::vals::StatusaWakeupFlag) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Bandgap Timer 0 Flag"]
+    #[doc = "Bandgap Timer 0 Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn timer0_flag(&self) -> super::vals::StatusaTimer0Flag {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::StatusaTimer0Flag::from_bits(val as u8)
     }
-    #[doc = "Bandgap Timer 0 Flag"]
+    #[doc = "Bandgap Timer 0 Flag."]
     #[inline(always)]
     pub const fn set_timer0_flag(&mut self, val: super::vals::StatusaTimer0Flag) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "Bandgap Timer 1 Flag"]
+    #[doc = "Bandgap Timer 1 Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn timer1_flag(&self) -> super::vals::StatusaTimer1Flag {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::StatusaTimer1Flag::from_bits(val as u8)
     }
-    #[doc = "Bandgap Timer 1 Flag"]
+    #[doc = "Bandgap Timer 1 Flag."]
     #[inline(always)]
     pub const fn set_timer1_flag(&mut self, val: super::vals::StatusaTimer1Flag) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "LDO Ready"]
+    #[doc = "LDO Ready."]
     #[must_use]
     #[inline(always)]
     pub const fn ldo_rdy(&self) -> super::vals::StatusaLdoRdy {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::StatusaLdoRdy::from_bits(val as u8)
     }
-    #[doc = "LDO Ready"]
+    #[doc = "LDO Ready."]
     #[inline(always)]
     pub const fn set_ldo_rdy(&mut self, val: super::vals::StatusaLdoRdy) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
-    #[doc = "OSC32k Ready"]
+    #[doc = "OSC32k Ready."]
     #[must_use]
     #[inline(always)]
     pub const fn osc_rdy(&self) -> super::vals::StatusaOscRdy {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::StatusaOscRdy::from_bits(val as u8)
     }
-    #[doc = "OSC32k Ready"]
+    #[doc = "OSC32k Ready."]
     #[inline(always)]
     pub const fn set_osc_rdy(&mut self, val: super::vals::StatusaOscRdy) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
-    #[doc = "Clock Detect"]
+    #[doc = "Clock Detect."]
     #[must_use]
     #[inline(always)]
     pub const fn clock_det(&self) -> super::vals::StatusaClockDet {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::StatusaClockDet::from_bits(val as u8)
     }
-    #[doc = "Clock Detect"]
+    #[doc = "Clock Detect."]
     #[inline(always)]
     pub const fn set_clock_det(&mut self, val: super::vals::StatusaClockDet) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "Input 0 Detect"]
+    #[doc = "Input 0 Detect."]
     #[must_use]
     #[inline(always)]
     pub const fn sec0_det(&self) -> super::vals::Sec0Det {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Sec0Det::from_bits(val as u8)
     }
-    #[doc = "Input 0 Detect"]
+    #[doc = "Input 0 Detect."]
     #[inline(always)]
     pub const fn set_sec0_det(&mut self, val: super::vals::Sec0Det) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "Interrupt 0 Detect"]
+    #[doc = "Interrupt 0 Detect."]
     #[must_use]
     #[inline(always)]
     pub const fn irq0_det(&self) -> super::vals::StatusaIrq0Det {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::StatusaIrq0Det::from_bits(val as u8)
     }
-    #[doc = "Interrupt 0 Detect"]
+    #[doc = "Interrupt 0 Detect."]
     #[inline(always)]
     pub const fn set_irq0_det(&mut self, val: super::vals::StatusaIrq0Det) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
     }
-    #[doc = "Interrupt 1 Detect"]
+    #[doc = "Interrupt 1 Detect."]
     #[must_use]
     #[inline(always)]
     pub const fn irq1_det(&self) -> super::vals::StatusaIrq1Det {
         let val = (self.0 >> 17usize) & 0x01;
         super::vals::StatusaIrq1Det::from_bits(val as u8)
     }
-    #[doc = "Interrupt 1 Detect"]
+    #[doc = "Interrupt 1 Detect."]
     #[inline(always)]
     pub const fn set_irq1_det(&mut self, val: super::vals::StatusaIrq1Det) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
     }
-    #[doc = "Interrupt 2 Detect"]
+    #[doc = "Interrupt 2 Detect."]
     #[must_use]
     #[inline(always)]
     pub const fn irq2_det(&self) -> super::vals::StatusaIrq2Det {
         let val = (self.0 >> 18usize) & 0x01;
         super::vals::StatusaIrq2Det::from_bits(val as u8)
     }
-    #[doc = "Interrupt 2 Detect"]
+    #[doc = "Interrupt 2 Detect."]
     #[inline(always)]
     pub const fn set_irq2_det(&mut self, val: super::vals::StatusaIrq2Det) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val.to_bits() as u32) & 0x01) << 18usize);
     }
-    #[doc = "Interrupt 3 Detect"]
+    #[doc = "Interrupt 3 Detect."]
     #[must_use]
     #[inline(always)]
     pub const fn irq3_det(&self) -> super::vals::StatusaIrq3Det {
         let val = (self.0 >> 19usize) & 0x01;
         super::vals::StatusaIrq3Det::from_bits(val as u8)
     }
-    #[doc = "Interrupt 3 Detect"]
+    #[doc = "Interrupt 3 Detect."]
     #[inline(always)]
     pub const fn set_irq3_det(&mut self, val: super::vals::StatusaIrq3Det) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val.to_bits() as u32) & 0x01) << 19usize);
@@ -1323,31 +1323,31 @@ impl defmt::Format for Statusa {
         )
     }
 }
-#[doc = "Switch Control A"]
+#[doc = "Switch Control A."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Swictla(pub u32);
 impl Swictla {
-    #[doc = "Switch Enable"]
+    #[doc = "Switch Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn swi_en(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Switch Enable"]
+    #[doc = "Switch Enable."]
     #[inline(always)]
     pub const fn set_swi_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Low Power Enable"]
+    #[doc = "Low Power Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn lp_en(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Low Power Enable"]
+    #[doc = "Low Power Enable."]
     #[inline(always)]
     pub const fn set_lp_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
@@ -1378,19 +1378,19 @@ impl defmt::Format for Swictla {
         )
     }
 }
-#[doc = "Switch Lock A"]
+#[doc = "Switch Lock A."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Swilcka(pub u32);
 impl Swilcka {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     #[must_use]
     #[inline(always)]
     pub const fn lock(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     #[inline(always)]
     pub const fn set_lock(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -1415,43 +1415,43 @@ impl defmt::Format for Swilcka {
         defmt::write!(f, "Swilcka {{ lock: {=bool:?} }}", self.lock())
     }
 }
-#[doc = "Version ID"]
+#[doc = "Version ID."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Verid(pub u32);
 impl Verid {
-    #[doc = "Feature Specification Number"]
+    #[doc = "Feature Specification Number."]
     #[must_use]
     #[inline(always)]
     pub const fn feature(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Feature Specification Number"]
+    #[doc = "Feature Specification Number."]
     #[inline(always)]
     pub const fn set_feature(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Minor Version Number"]
+    #[doc = "Minor Version Number."]
     #[must_use]
     #[inline(always)]
     pub const fn minor(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0xff;
         val as u8
     }
-    #[doc = "Minor Version Number"]
+    #[doc = "Minor Version Number."]
     #[inline(always)]
     pub const fn set_minor(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
     }
-    #[doc = "Major Version Number"]
+    #[doc = "Major Version Number."]
     #[must_use]
     #[inline(always)]
     pub const fn major(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "Major Version Number"]
+    #[doc = "Major Version Number."]
     #[inline(always)]
     pub const fn set_major(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);
@@ -1484,19 +1484,19 @@ impl defmt::Format for Verid {
         )
     }
 }
-#[doc = "Wake-up Configuration"]
+#[doc = "Wake-up Configuration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Wakecfg(pub u32);
 impl Wakecfg {
-    #[doc = "Output"]
+    #[doc = "Output."]
     #[must_use]
     #[inline(always)]
     pub const fn out(&self) -> super::vals::Out {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Out::from_bits(val as u8)
     }
-    #[doc = "Output"]
+    #[doc = "Output."]
     #[inline(always)]
     pub const fn set_out(&mut self, val: super::vals::Out) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
@@ -1519,139 +1519,139 @@ impl defmt::Format for Wakecfg {
         defmt::write!(f, "Wakecfg {{ out: {:?} }}", self.out())
     }
 }
-#[doc = "Wake-up Enable A"]
+#[doc = "Wake-up Enable A."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Wakena(pub u32);
 impl Wakena {
-    #[doc = "POR Detect"]
+    #[doc = "POR Detect."]
     #[must_use]
     #[inline(always)]
     pub const fn por_det(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "POR Detect"]
+    #[doc = "POR Detect."]
     #[inline(always)]
     pub const fn set_por_det(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Wake-up Pin Flag"]
+    #[doc = "Wake-up Pin Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn wakeup_flag(&self) -> super::vals::WakenaWakeupFlag {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::WakenaWakeupFlag::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Flag"]
+    #[doc = "Wake-up Pin Flag."]
     #[inline(always)]
     pub const fn set_wakeup_flag(&mut self, val: super::vals::WakenaWakeupFlag) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Bandgap Timer 0"]
+    #[doc = "Bandgap Timer 0."]
     #[must_use]
     #[inline(always)]
     pub const fn timer0_flag(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Bandgap Timer 0"]
+    #[doc = "Bandgap Timer 0."]
     #[inline(always)]
     pub const fn set_timer0_flag(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Bandgap Timer 2"]
+    #[doc = "Bandgap Timer 2."]
     #[must_use]
     #[inline(always)]
     pub const fn timer1_flag(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Bandgap Timer 2"]
+    #[doc = "Bandgap Timer 2."]
     #[inline(always)]
     pub const fn set_timer1_flag(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "LDO Ready"]
+    #[doc = "LDO Ready."]
     #[must_use]
     #[inline(always)]
     pub const fn ldo_rdy(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "LDO Ready"]
+    #[doc = "LDO Ready."]
     #[inline(always)]
     pub const fn set_ldo_rdy(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "OSC32K Ready"]
+    #[doc = "OSC32K Ready."]
     #[must_use]
     #[inline(always)]
     pub const fn osc_rdy(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "OSC32K Ready"]
+    #[doc = "OSC32K Ready."]
     #[inline(always)]
     pub const fn set_osc_rdy(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "Clock Detect"]
+    #[doc = "Clock Detect."]
     #[must_use]
     #[inline(always)]
     pub const fn clock_det(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "Clock Detect"]
+    #[doc = "Clock Detect."]
     #[inline(always)]
     pub const fn set_clock_det(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Interrupt 0 Detect"]
+    #[doc = "Interrupt 0 Detect."]
     #[must_use]
     #[inline(always)]
     pub const fn irq0_det(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Interrupt 0 Detect"]
+    #[doc = "Interrupt 0 Detect."]
     #[inline(always)]
     pub const fn set_irq0_det(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Interrupt 1 Detect"]
+    #[doc = "Interrupt 1 Detect."]
     #[must_use]
     #[inline(always)]
     pub const fn irq1_det(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Interrupt 1 Detect"]
+    #[doc = "Interrupt 1 Detect."]
     #[inline(always)]
     pub const fn set_irq1_det(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Interrupt 2 Detect"]
+    #[doc = "Interrupt 2 Detect."]
     #[must_use]
     #[inline(always)]
     pub const fn irq2_det(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Interrupt 2 Detect"]
+    #[doc = "Interrupt 2 Detect."]
     #[inline(always)]
     pub const fn set_irq2_det(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Interrupt 3 Detect"]
+    #[doc = "Interrupt 3 Detect."]
     #[must_use]
     #[inline(always)]
     pub const fn irq3_det(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Interrupt 3 Detect"]
+    #[doc = "Interrupt 3 Detect."]
     #[inline(always)]
     pub const fn set_irq3_det(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
@@ -1700,19 +1700,19 @@ impl defmt::Format for Wakena {
         )
     }
 }
-#[doc = "Wakeup 0 Register A"]
+#[doc = "Wakeup 0 Register A."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Wakeupa(pub u32);
 impl Wakeupa {
-    #[doc = "Register"]
+    #[doc = "Register."]
     #[must_use]
     #[inline(always)]
     pub const fn reg(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Register"]
+    #[doc = "Register."]
     #[inline(always)]
     pub const fn set_reg(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1735,19 +1735,19 @@ impl defmt::Format for Wakeupa {
         defmt::write!(f, "Wakeupa {{ reg: {=u32:?} }}", self.reg())
     }
 }
-#[doc = "Wakeup Lock A"]
+#[doc = "Wakeup Lock A."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Waklcka(pub u32);
 impl Waklcka {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     #[must_use]
     #[inline(always)]
     pub const fn lock(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     #[inline(always)]
     pub const fn set_lock(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);

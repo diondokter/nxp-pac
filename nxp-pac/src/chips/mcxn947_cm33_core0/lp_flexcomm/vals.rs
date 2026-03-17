@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum I2cm {
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLR = 0x0,
-    #[doc = "Set"]
+    #[doc = "Set."]
     SET = 0x01,
 }
 impl I2cm {
@@ -33,9 +33,9 @@ impl From<I2cm> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum I2cs {
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLR = 0x0,
-    #[doc = "Set"]
+    #[doc = "Set."]
     SET = 0x01,
 }
 impl I2cs {
@@ -64,18 +64,18 @@ impl From<I2cs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Persel {
-    #[doc = "No peripheral selected"]
+    #[doc = "No peripheral selected."]
     NONE = 0x0,
-    #[doc = "UART"]
+    #[doc = "UART."]
     UART = 0x01,
-    #[doc = "SPI"]
+    #[doc = "SPI."]
     SPI = 0x02,
-    #[doc = "I2C"]
+    #[doc = "I2C."]
     I2C = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
-    #[doc = "UART and I2C"]
+    #[doc = "UART and I2C."]
     UARTI2C = 0x07,
 }
 impl Persel {
@@ -104,9 +104,9 @@ impl From<Persel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Spi {
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLR = 0x0,
-    #[doc = "Set"]
+    #[doc = "Set."]
     SET = 0x01,
 }
 impl Spi {
@@ -135,9 +135,9 @@ impl From<Spi> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Uartrx {
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLR = 0x0,
-    #[doc = "Set"]
+    #[doc = "Set."]
     SET = 0x01,
 }
 impl Uartrx {
@@ -166,9 +166,9 @@ impl From<Uartrx> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Uarttx {
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLR = 0x0,
-    #[doc = "Set"]
+    #[doc = "Set."]
     SET = 0x01,
 }
 impl Uarttx {

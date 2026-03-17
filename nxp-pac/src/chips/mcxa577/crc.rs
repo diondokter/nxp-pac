@@ -1,4 +1,4 @@
-#[doc = "CRC"]
+#[doc = "CRC."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Crc {
     ptr: *mut u8,
@@ -38,7 +38,7 @@ impl Crc {
     pub const fn gpoly8(self) -> crate::common::Reg<u8, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
     }
-    #[doc = "Control"]
+    #[doc = "Control."]
     #[inline(always)]
     pub const fn ctrl(self) -> crate::common::Reg<regs::Ctrl, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }

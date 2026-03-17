@@ -341,13 +341,13 @@ impl From<MinRev> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Osc2Div {
-    #[doc = "Use ring oscillator 2 with no divide"]
+    #[doc = "Use ring oscillator 2 with no divide."]
     OSC2_DIV_DIV1 = 0x0,
-    #[doc = "Use ring oscillator 2 divided-by-2"]
+    #[doc = "Use ring oscillator 2 divided-by-2."]
     OSC2_DIV_DIV2 = 0x01,
-    #[doc = "Use ring oscillator 2 divided-by-4"]
+    #[doc = "Use ring oscillator 2 divided-by-4."]
     OSC2_DIV_DIV4 = 0x02,
-    #[doc = "Use ring oscillator 2 divided-by-8"]
+    #[doc = "Use ring oscillator 2 divided-by-8."]
     OSC2_DIV_DIV8 = 0x03,
 }
 impl Osc2Div {
@@ -376,13 +376,13 @@ impl From<Osc2Div> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum OscDiv {
-    #[doc = "use ring oscillator with no divide"]
+    #[doc = "use ring oscillator with no divide."]
     OSC_DIV_DIV1 = 0x0,
-    #[doc = "use ring oscillator divided-by-2"]
+    #[doc = "use ring oscillator divided-by-2."]
     OSC_DIV_DIV2 = 0x01,
-    #[doc = "use ring oscillator divided-by-4"]
+    #[doc = "use ring oscillator divided-by-4."]
     OSC_DIV_DIV4 = 0x02,
-    #[doc = "use ring oscillator divided-by-8"]
+    #[doc = "use ring oscillator divided-by-8."]
     OSC_DIV_DIV8 = 0x03,
 }
 impl OscDiv {
@@ -413,7 +413,7 @@ impl From<OscDiv> for u8 {
 pub enum OscFailsafeLmt {
     #[doc = "The limit N is 4096 (2^12) system clocks."]
     OSC_FAILSAFE_LMT_4K = 0x0,
-    #[doc = "The limit N is 65536 (2^16) system clocks. (default)"]
+    #[doc = "The limit N is 65536 (2^16) system clocks. (default)."]
     OSC_FAILSAFE_LMT_64K = 0x01,
     #[doc = "N is 2^20 system clocks."]
     OSC_FAILSAFE_LMT_1M = 0x02,
@@ -446,13 +446,13 @@ impl From<OscFailsafeLmt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TrngEntCtl {
-    #[doc = "Single oscillator mode, using OSC1 (default)"]
+    #[doc = "Single oscillator mode, using OSC1 (default)."]
     TRNG_ENT_CTL_SINGLE_OSC1 = 0x0,
-    #[doc = "Dual oscillator mode"]
+    #[doc = "Dual oscillator mode."]
     TRNG_ENT_CTL_DUAL_OSCS = 0x01,
-    #[doc = "Single oscillator mode, using OSC2"]
+    #[doc = "Single oscillator mode, using OSC2."]
     TRNG_ENT_CTL_SINGLE_OSC2 = 0x02,
-    #[doc = "Unused, (bit field cannot be written to this value)"]
+    #[doc = "Unused, (bit field cannot be written to this value)."]
     OSC2_DIV_DIV8 = 0x03,
 }
 impl TrngEntCtl {

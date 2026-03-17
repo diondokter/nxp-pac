@@ -1,76 +1,76 @@
-#[doc = "GPR1 General Purpose Register"]
+#[doc = "GPR1 General Purpose Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpr1(pub u32);
 impl Gpr1 {
-    #[doc = "SAI1 MCLK1 source select"]
+    #[doc = "SAI1 MCLK1 source select."]
     #[must_use]
     #[inline(always)]
     pub const fn sai1_mclk1_sel(&self) -> super::vals::Sai1Mclk1Sel {
         let val = (self.0 >> 0usize) & 0x07;
         super::vals::Sai1Mclk1Sel::from_bits(val as u8)
     }
-    #[doc = "SAI1 MCLK1 source select"]
+    #[doc = "SAI1 MCLK1 source select."]
     #[inline(always)]
     pub const fn set_sai1_mclk1_sel(&mut self, val: super::vals::Sai1Mclk1Sel) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
     }
-    #[doc = "SAI1 MCLK2 source select"]
+    #[doc = "SAI1 MCLK2 source select."]
     #[must_use]
     #[inline(always)]
     pub const fn sai1_mclk2_sel(&self) -> super::vals::Sai1Mclk2Sel {
         let val = (self.0 >> 3usize) & 0x07;
         super::vals::Sai1Mclk2Sel::from_bits(val as u8)
     }
-    #[doc = "SAI1 MCLK2 source select"]
+    #[doc = "SAI1 MCLK2 source select."]
     #[inline(always)]
     pub const fn set_sai1_mclk2_sel(&mut self, val: super::vals::Sai1Mclk2Sel) {
         self.0 = (self.0 & !(0x07 << 3usize)) | (((val.to_bits() as u32) & 0x07) << 3usize);
     }
-    #[doc = "SAI1 MCLK3 source select"]
+    #[doc = "SAI1 MCLK3 source select."]
     #[must_use]
     #[inline(always)]
     pub const fn sai1_mclk3_sel(&self) -> super::vals::Sai1Mclk3Sel {
         let val = (self.0 >> 6usize) & 0x03;
         super::vals::Sai1Mclk3Sel::from_bits(val as u8)
     }
-    #[doc = "SAI1 MCLK3 source select"]
+    #[doc = "SAI1 MCLK3 source select."]
     #[inline(always)]
     pub const fn set_sai1_mclk3_sel(&mut self, val: super::vals::Sai1Mclk3Sel) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u32) & 0x03) << 6usize);
     }
-    #[doc = "SAI2 MCLK3 source select"]
+    #[doc = "SAI2 MCLK3 source select."]
     #[must_use]
     #[inline(always)]
     pub const fn sai2_mclk3_sel(&self) -> super::vals::Sai2Mclk3Sel {
         let val = (self.0 >> 8usize) & 0x03;
         super::vals::Sai2Mclk3Sel::from_bits(val as u8)
     }
-    #[doc = "SAI2 MCLK3 source select"]
+    #[doc = "SAI2 MCLK3 source select."]
     #[inline(always)]
     pub const fn set_sai2_mclk3_sel(&mut self, val: super::vals::Sai2Mclk3Sel) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
-    #[doc = "SAI3 MCLK3 source select"]
+    #[doc = "SAI3 MCLK3 source select."]
     #[must_use]
     #[inline(always)]
     pub const fn sai3_mclk3_sel(&self) -> super::vals::Sai3Mclk3Sel {
         let val = (self.0 >> 10usize) & 0x03;
         super::vals::Sai3Mclk3Sel::from_bits(val as u8)
     }
-    #[doc = "SAI3 MCLK3 source select"]
+    #[doc = "SAI3 MCLK3 source select."]
     #[inline(always)]
     pub const fn set_sai3_mclk3_sel(&mut self, val: super::vals::Sai3Mclk3Sel) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u32) & 0x03) << 10usize);
     }
-    #[doc = "Global Interrupt"]
+    #[doc = "Global Interrupt."]
     #[must_use]
     #[inline(always)]
     pub const fn gint(&self) -> super::vals::Gint {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Gint::from_bits(val as u8)
     }
-    #[doc = "Global Interrupt"]
+    #[doc = "Global Interrupt."]
     #[inline(always)]
     pub const fn set_gint(&mut self, val: super::vals::Gint) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
@@ -99,98 +99,98 @@ impl Gpr1 {
     pub const fn set_enet2_clk_sel(&mut self, val: super::vals::Enet2ClkSel) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
     }
-    #[doc = "ENET1_TX_CLK data direction control"]
+    #[doc = "ENET1_TX_CLK data direction control."]
     #[must_use]
     #[inline(always)]
     pub const fn enet1_tx_clk_dir(&self) -> super::vals::Enet1TxClkDir {
         let val = (self.0 >> 17usize) & 0x01;
         super::vals::Enet1TxClkDir::from_bits(val as u8)
     }
-    #[doc = "ENET1_TX_CLK data direction control"]
+    #[doc = "ENET1_TX_CLK data direction control."]
     #[inline(always)]
     pub const fn set_enet1_tx_clk_dir(&mut self, val: super::vals::Enet1TxClkDir) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
     }
-    #[doc = "ENET2_TX_CLK data direction control"]
+    #[doc = "ENET2_TX_CLK data direction control."]
     #[must_use]
     #[inline(always)]
     pub const fn enet2_tx_clk_dir(&self) -> super::vals::Enet2TxClkDir {
         let val = (self.0 >> 18usize) & 0x01;
         super::vals::Enet2TxClkDir::from_bits(val as u8)
     }
-    #[doc = "ENET2_TX_CLK data direction control"]
+    #[doc = "ENET2_TX_CLK data direction control."]
     #[inline(always)]
     pub const fn set_enet2_tx_clk_dir(&mut self, val: super::vals::Enet2TxClkDir) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val.to_bits() as u32) & 0x01) << 18usize);
     }
-    #[doc = "sai1.MCLK signal direction control"]
+    #[doc = "sai1.MCLK signal direction control."]
     #[must_use]
     #[inline(always)]
     pub const fn sai1_mclk_dir(&self) -> super::vals::Sai1MclkDir {
         let val = (self.0 >> 19usize) & 0x01;
         super::vals::Sai1MclkDir::from_bits(val as u8)
     }
-    #[doc = "sai1.MCLK signal direction control"]
+    #[doc = "sai1.MCLK signal direction control."]
     #[inline(always)]
     pub const fn set_sai1_mclk_dir(&mut self, val: super::vals::Sai1MclkDir) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val.to_bits() as u32) & 0x01) << 19usize);
     }
-    #[doc = "sai2.MCLK signal direction control"]
+    #[doc = "sai2.MCLK signal direction control."]
     #[must_use]
     #[inline(always)]
     pub const fn sai2_mclk_dir(&self) -> super::vals::Sai2MclkDir {
         let val = (self.0 >> 20usize) & 0x01;
         super::vals::Sai2MclkDir::from_bits(val as u8)
     }
-    #[doc = "sai2.MCLK signal direction control"]
+    #[doc = "sai2.MCLK signal direction control."]
     #[inline(always)]
     pub const fn set_sai2_mclk_dir(&mut self, val: super::vals::Sai2MclkDir) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
     }
-    #[doc = "sai3.MCLK signal direction control"]
+    #[doc = "sai3.MCLK signal direction control."]
     #[must_use]
     #[inline(always)]
     pub const fn sai3_mclk_dir(&self) -> super::vals::Sai3MclkDir {
         let val = (self.0 >> 21usize) & 0x01;
         super::vals::Sai3MclkDir::from_bits(val as u8)
     }
-    #[doc = "sai3.MCLK signal direction control"]
+    #[doc = "sai3.MCLK signal direction control."]
     #[inline(always)]
     pub const fn set_sai3_mclk_dir(&mut self, val: super::vals::Sai3MclkDir) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
     }
-    #[doc = "Exclusive monitor response select of illegal command"]
+    #[doc = "Exclusive monitor response select of illegal command."]
     #[must_use]
     #[inline(always)]
     pub const fn exc_mon(&self) -> super::vals::ExcMon {
         let val = (self.0 >> 22usize) & 0x01;
         super::vals::ExcMon::from_bits(val as u8)
     }
-    #[doc = "Exclusive monitor response select of illegal command"]
+    #[doc = "Exclusive monitor response select of illegal command."]
     #[inline(always)]
     pub const fn set_exc_mon(&mut self, val: super::vals::ExcMon) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
     }
-    #[doc = "ENET and ENET2 ipg_clk_s clock gating enable"]
+    #[doc = "ENET and ENET2 ipg_clk_s clock gating enable."]
     #[must_use]
     #[inline(always)]
     pub const fn enet_ipg_clk_s_en(&self) -> super::vals::EnetIpgClkSEn {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::EnetIpgClkSEn::from_bits(val as u8)
     }
-    #[doc = "ENET and ENET2 ipg_clk_s clock gating enable"]
+    #[doc = "ENET and ENET2 ipg_clk_s clock gating enable."]
     #[inline(always)]
     pub const fn set_enet_ipg_clk_s_en(&mut self, val: super::vals::EnetIpgClkSEn) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
     }
-    #[doc = "Arm CM7 platform AHB clock enable"]
+    #[doc = "Arm CM7 platform AHB clock enable."]
     #[must_use]
     #[inline(always)]
     pub const fn cm7_force_hclk_en(&self) -> super::vals::Cm7ForceHclkEn {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::Cm7ForceHclkEn::from_bits(val as u8)
     }
-    #[doc = "Arm CM7 platform AHB clock enable"]
+    #[doc = "Arm CM7 platform AHB clock enable."]
     #[inline(always)]
     pub const fn set_cm7_force_hclk_en(&mut self, val: super::vals::Cm7ForceHclkEn) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -249,43 +249,43 @@ impl defmt::Format for Gpr1 {
         )
     }
 }
-#[doc = "GPR10 General Purpose Register"]
+#[doc = "GPR10 General Purpose Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpr10(pub u32);
 impl Gpr10 {
-    #[doc = "Arm non-secure (non-invasive) debug enable"]
+    #[doc = "Arm non-secure (non-invasive) debug enable."]
     #[must_use]
     #[inline(always)]
     pub const fn niden(&self) -> super::vals::Niden {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Niden::from_bits(val as u8)
     }
-    #[doc = "Arm non-secure (non-invasive) debug enable"]
+    #[doc = "Arm non-secure (non-invasive) debug enable."]
     #[inline(always)]
     pub const fn set_niden(&mut self, val: super::vals::Niden) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Arm invasive debug enable"]
+    #[doc = "Arm invasive debug enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dbg_en(&self) -> super::vals::DbgEn {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::DbgEn::from_bits(val as u8)
     }
-    #[doc = "Arm invasive debug enable"]
+    #[doc = "Arm invasive debug enable."]
     #[inline(always)]
     pub const fn set_dbg_en(&mut self, val: super::vals::DbgEn) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Security error response enable for all security gaskets (on both AHB and AXI buses)"]
+    #[doc = "Security error response enable for all security gaskets (on both AHB and AXI buses)."]
     #[must_use]
     #[inline(always)]
     pub const fn sec_err_resp(&self) -> super::vals::SecErrResp {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::SecErrResp::from_bits(val as u8)
     }
-    #[doc = "Security error response enable for all security gaskets (on both AHB and AXI buses)"]
+    #[doc = "Security error response enable for all security gaskets (on both AHB and AXI buses)."]
     #[inline(always)]
     pub const fn set_sec_err_resp(&mut self, val: super::vals::SecErrResp) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
@@ -314,62 +314,62 @@ impl Gpr10 {
     pub const fn set_ocram_tz_en(&mut self, val: super::vals::OcramTzEn) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
-    #[doc = "OCRAM TrustZone (TZ) start address"]
+    #[doc = "OCRAM TrustZone (TZ) start address."]
     #[must_use]
     #[inline(always)]
     pub const fn ocram_tz_addr(&self) -> u8 {
         let val = (self.0 >> 9usize) & 0x7f;
         val as u8
     }
-    #[doc = "OCRAM TrustZone (TZ) start address"]
+    #[doc = "OCRAM TrustZone (TZ) start address."]
     #[inline(always)]
     pub const fn set_ocram_tz_addr(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 9usize)) | (((val as u32) & 0x7f) << 9usize);
     }
-    #[doc = "Lock NIDEN field for changes"]
+    #[doc = "Lock NIDEN field for changes."]
     #[must_use]
     #[inline(always)]
     pub const fn lock_niden(&self) -> super::vals::LockNiden {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::LockNiden::from_bits(val as u8)
     }
-    #[doc = "Lock NIDEN field for changes"]
+    #[doc = "Lock NIDEN field for changes."]
     #[inline(always)]
     pub const fn set_lock_niden(&mut self, val: super::vals::LockNiden) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
     }
-    #[doc = "Lock DBG_EN field for changes"]
+    #[doc = "Lock DBG_EN field for changes."]
     #[must_use]
     #[inline(always)]
     pub const fn lock_dbg_en(&self) -> super::vals::LockDbgEn {
         let val = (self.0 >> 17usize) & 0x01;
         super::vals::LockDbgEn::from_bits(val as u8)
     }
-    #[doc = "Lock DBG_EN field for changes"]
+    #[doc = "Lock DBG_EN field for changes."]
     #[inline(always)]
     pub const fn set_lock_dbg_en(&mut self, val: super::vals::LockDbgEn) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
     }
-    #[doc = "Lock SEC_ERR_RESP field for changes"]
+    #[doc = "Lock SEC_ERR_RESP field for changes."]
     #[must_use]
     #[inline(always)]
     pub const fn lock_sec_err_resp(&self) -> super::vals::LockSecErrResp {
         let val = (self.0 >> 18usize) & 0x01;
         super::vals::LockSecErrResp::from_bits(val as u8)
     }
-    #[doc = "Lock SEC_ERR_RESP field for changes"]
+    #[doc = "Lock SEC_ERR_RESP field for changes."]
     #[inline(always)]
     pub const fn set_lock_sec_err_resp(&mut self, val: super::vals::LockSecErrResp) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val.to_bits() as u32) & 0x01) << 18usize);
     }
-    #[doc = "Lock DCP Key OCOTP/Key MUX selection bit"]
+    #[doc = "Lock DCP Key OCOTP/Key MUX selection bit."]
     #[must_use]
     #[inline(always)]
     pub const fn lock_dcpkey_ocotp_or_keymux(&self) -> super::vals::LockDcpkeyOcotpOrKeymux {
         let val = (self.0 >> 20usize) & 0x01;
         super::vals::LockDcpkeyOcotpOrKeymux::from_bits(val as u8)
     }
-    #[doc = "Lock DCP Key OCOTP/Key MUX selection bit"]
+    #[doc = "Lock DCP Key OCOTP/Key MUX selection bit."]
     #[inline(always)]
     pub const fn set_lock_dcpkey_ocotp_or_keymux(
         &mut self,
@@ -377,26 +377,26 @@ impl Gpr10 {
     ) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
     }
-    #[doc = "Lock OCRAM_TZ_EN field for changes"]
+    #[doc = "Lock OCRAM_TZ_EN field for changes."]
     #[must_use]
     #[inline(always)]
     pub const fn lock_ocram_tz_en(&self) -> super::vals::LockOcramTzEn {
         let val = (self.0 >> 24usize) & 0x01;
         super::vals::LockOcramTzEn::from_bits(val as u8)
     }
-    #[doc = "Lock OCRAM_TZ_EN field for changes"]
+    #[doc = "Lock OCRAM_TZ_EN field for changes."]
     #[inline(always)]
     pub const fn set_lock_ocram_tz_en(&mut self, val: super::vals::LockOcramTzEn) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
     }
-    #[doc = "Lock OCRAM_TZ_ADDR field for changes"]
+    #[doc = "Lock OCRAM_TZ_ADDR field for changes."]
     #[must_use]
     #[inline(always)]
     pub const fn lock_ocram_tz_addr(&self) -> super::vals::LockOcramTzAddr {
         let val = (self.0 >> 25usize) & 0x7f;
         super::vals::LockOcramTzAddr::from_bits(val as u8)
     }
-    #[doc = "Lock OCRAM_TZ_ADDR field for changes"]
+    #[doc = "Lock OCRAM_TZ_ADDR field for changes."]
     #[inline(always)]
     pub const fn set_lock_ocram_tz_addr(&mut self, val: super::vals::LockOcramTzAddr) {
         self.0 = (self.0 & !(0x7f << 25usize)) | (((val.to_bits() as u32) & 0x7f) << 25usize);
@@ -450,67 +450,67 @@ impl defmt::Format for Gpr10 {
         )
     }
 }
-#[doc = "GPR11 General Purpose Register"]
+#[doc = "GPR11 General Purpose Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpr11(pub u32);
 impl Gpr11 {
-    #[doc = "Access control of memory region-0"]
+    #[doc = "Access control of memory region-0."]
     #[must_use]
     #[inline(always)]
     pub const fn m7_apc_ac_r0_ctrl(&self) -> super::vals::M7ApcAcR0Ctrl {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::M7ApcAcR0Ctrl::from_bits(val as u8)
     }
-    #[doc = "Access control of memory region-0"]
+    #[doc = "Access control of memory region-0."]
     #[inline(always)]
     pub const fn set_m7_apc_ac_r0_ctrl(&mut self, val: super::vals::M7ApcAcR0Ctrl) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "Access control of memory region-1"]
+    #[doc = "Access control of memory region-1."]
     #[must_use]
     #[inline(always)]
     pub const fn m7_apc_ac_r1_ctrl(&self) -> super::vals::M7ApcAcR1Ctrl {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::M7ApcAcR1Ctrl::from_bits(val as u8)
     }
-    #[doc = "Access control of memory region-1"]
+    #[doc = "Access control of memory region-1."]
     #[inline(always)]
     pub const fn set_m7_apc_ac_r1_ctrl(&mut self, val: super::vals::M7ApcAcR1Ctrl) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
-    #[doc = "Access control of memory region-2"]
+    #[doc = "Access control of memory region-2."]
     #[must_use]
     #[inline(always)]
     pub const fn m7_apc_ac_r2_ctrl(&self) -> super::vals::M7ApcAcR2Ctrl {
         let val = (self.0 >> 4usize) & 0x03;
         super::vals::M7ApcAcR2Ctrl::from_bits(val as u8)
     }
-    #[doc = "Access control of memory region-2"]
+    #[doc = "Access control of memory region-2."]
     #[inline(always)]
     pub const fn set_m7_apc_ac_r2_ctrl(&mut self, val: super::vals::M7ApcAcR2Ctrl) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
-    #[doc = "Access control of memory region-3"]
+    #[doc = "Access control of memory region-3."]
     #[must_use]
     #[inline(always)]
     pub const fn m7_apc_ac_r3_ctrl(&self) -> super::vals::M7ApcAcR3Ctrl {
         let val = (self.0 >> 6usize) & 0x03;
         super::vals::M7ApcAcR3Ctrl::from_bits(val as u8)
     }
-    #[doc = "Access control of memory region-3"]
+    #[doc = "Access control of memory region-3."]
     #[inline(always)]
     pub const fn set_m7_apc_ac_r3_ctrl(&mut self, val: super::vals::M7ApcAcR3Ctrl) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u32) & 0x03) << 6usize);
     }
-    #[doc = "BEE data decryption of memory region-n (n = 3 to 0)"]
+    #[doc = "BEE data decryption of memory region-n (n = 3 to 0)."]
     #[must_use]
     #[inline(always)]
     pub const fn bee_de_rx_en(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x0f;
         val as u8
     }
-    #[doc = "BEE data decryption of memory region-n (n = 3 to 0)"]
+    #[doc = "BEE data decryption of memory region-n (n = 3 to 0)."]
     #[inline(always)]
     pub const fn set_bee_de_rx_en(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val as u32) & 0x0f) << 8usize);
@@ -547,7 +547,7 @@ impl defmt::Format for Gpr11 {
         )
     }
 }
-#[doc = "GPR12 General Purpose Register"]
+#[doc = "GPR12 General Purpose Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpr12(pub u32);
@@ -564,14 +564,14 @@ impl Gpr12 {
     pub const fn set_flexio1_ipg_stop_mode(&mut self, val: super::vals::Flexio1IpgStopMode) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "FLEXIO1 ipg_doze mode"]
+    #[doc = "FLEXIO1 ipg_doze mode."]
     #[must_use]
     #[inline(always)]
     pub const fn flexio1_ipg_doze(&self) -> super::vals::Flexio1IpgDoze {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Flexio1IpgDoze::from_bits(val as u8)
     }
-    #[doc = "FLEXIO1 ipg_doze mode"]
+    #[doc = "FLEXIO1 ipg_doze mode."]
     #[inline(always)]
     pub const fn set_flexio1_ipg_doze(&mut self, val: super::vals::Flexio1IpgDoze) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
@@ -588,14 +588,14 @@ impl Gpr12 {
     pub const fn set_flexio2_ipg_stop_mode(&mut self, val: super::vals::Flexio2IpgStopMode) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "FLEXIO2 ipg_doze mode"]
+    #[doc = "FLEXIO2 ipg_doze mode."]
     #[must_use]
     #[inline(always)]
     pub const fn flexio2_ipg_doze(&self) -> super::vals::Flexio2IpgDoze {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Flexio2IpgDoze::from_bits(val as u8)
     }
-    #[doc = "FLEXIO2 ipg_doze mode"]
+    #[doc = "FLEXIO2 ipg_doze mode."]
     #[inline(always)]
     pub const fn set_flexio2_ipg_doze(&mut self, val: super::vals::Flexio2IpgDoze) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
@@ -624,14 +624,14 @@ impl Gpr12 {
     pub const fn set_flexio3_ipg_stop_mode(&mut self, val: super::vals::Flexio3IpgStopMode) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
-    #[doc = "FLEXIO3 ipg_doze mode"]
+    #[doc = "FLEXIO3 ipg_doze mode."]
     #[must_use]
     #[inline(always)]
     pub const fn flexio3_ipg_doze(&self) -> super::vals::Flexio3IpgDoze {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::Flexio3IpgDoze::from_bits(val as u8)
     }
-    #[doc = "FLEXIO3 ipg_doze mode"]
+    #[doc = "FLEXIO3 ipg_doze mode."]
     #[inline(always)]
     pub const fn set_flexio3_ipg_doze(&mut self, val: super::vals::Flexio3IpgDoze) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
@@ -672,31 +672,31 @@ impl defmt::Format for Gpr12 {
         )
     }
 }
-#[doc = "GPR13 General Purpose Register"]
+#[doc = "GPR13 General Purpose Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpr13(pub u32);
 impl Gpr13 {
-    #[doc = "uSDHC block cacheable attribute value of AXI read transactions"]
+    #[doc = "uSDHC block cacheable attribute value of AXI read transactions."]
     #[must_use]
     #[inline(always)]
     pub const fn arcache_usdhc(&self) -> super::vals::ArcacheUsdhc {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::ArcacheUsdhc::from_bits(val as u8)
     }
-    #[doc = "uSDHC block cacheable attribute value of AXI read transactions"]
+    #[doc = "uSDHC block cacheable attribute value of AXI read transactions."]
     #[inline(always)]
     pub const fn set_arcache_usdhc(&mut self, val: super::vals::ArcacheUsdhc) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "uSDHC block cacheable attribute value of AXI write transactions"]
+    #[doc = "uSDHC block cacheable attribute value of AXI write transactions."]
     #[must_use]
     #[inline(always)]
     pub const fn awcache_usdhc(&self) -> super::vals::AwcacheUsdhc {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::AwcacheUsdhc::from_bits(val as u8)
     }
-    #[doc = "uSDHC block cacheable attribute value of AXI write transactions"]
+    #[doc = "uSDHC block cacheable attribute value of AXI write transactions."]
     #[inline(always)]
     pub const fn set_awcache_usdhc(&mut self, val: super::vals::AwcacheUsdhc) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
@@ -713,26 +713,26 @@ impl Gpr13 {
     pub const fn set_canfd_stop_req(&mut self, val: super::vals::CanfdStopReq) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
-    #[doc = "ENET block cacheable attribute value of AXI transactions"]
+    #[doc = "ENET block cacheable attribute value of AXI transactions."]
     #[must_use]
     #[inline(always)]
     pub const fn cache_enet(&self) -> super::vals::CacheEnet {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::CacheEnet::from_bits(val as u8)
     }
-    #[doc = "ENET block cacheable attribute value of AXI transactions"]
+    #[doc = "ENET block cacheable attribute value of AXI transactions."]
     #[inline(always)]
     pub const fn set_cache_enet(&mut self, val: super::vals::CacheEnet) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "USB block cacheable attribute value of AXI transactions"]
+    #[doc = "USB block cacheable attribute value of AXI transactions."]
     #[must_use]
     #[inline(always)]
     pub const fn cache_usb(&self) -> super::vals::CacheUsb {
         let val = (self.0 >> 13usize) & 0x01;
         super::vals::CacheUsb::from_bits(val as u8)
     }
-    #[doc = "USB block cacheable attribute value of AXI transactions"]
+    #[doc = "USB block cacheable attribute value of AXI transactions."]
     #[inline(always)]
     pub const fn set_cache_usb(&mut self, val: super::vals::CacheUsb) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
@@ -783,151 +783,151 @@ impl defmt::Format for Gpr13 {
         )
     }
 }
-#[doc = "GPR14 General Purpose Register"]
+#[doc = "GPR14 General Purpose Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpr14(pub u32);
 impl Gpr14 {
-    #[doc = "reduces ACMP1 internal bias current by 30%"]
+    #[doc = "reduces ACMP1 internal bias current by 30%."]
     #[must_use]
     #[inline(always)]
     pub const fn acmp1_cmp_igen_trim_dn(&self) -> super::vals::Acmp1CmpIgenTrimDn {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Acmp1CmpIgenTrimDn::from_bits(val as u8)
     }
-    #[doc = "reduces ACMP1 internal bias current by 30%"]
+    #[doc = "reduces ACMP1 internal bias current by 30%."]
     #[inline(always)]
     pub const fn set_acmp1_cmp_igen_trim_dn(&mut self, val: super::vals::Acmp1CmpIgenTrimDn) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "reduces ACMP2 internal bias current by 30%"]
+    #[doc = "reduces ACMP2 internal bias current by 30%."]
     #[must_use]
     #[inline(always)]
     pub const fn acmp2_cmp_igen_trim_dn(&self) -> super::vals::Acmp2CmpIgenTrimDn {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Acmp2CmpIgenTrimDn::from_bits(val as u8)
     }
-    #[doc = "reduces ACMP2 internal bias current by 30%"]
+    #[doc = "reduces ACMP2 internal bias current by 30%."]
     #[inline(always)]
     pub const fn set_acmp2_cmp_igen_trim_dn(&mut self, val: super::vals::Acmp2CmpIgenTrimDn) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "reduces ACMP3 internal bias current by 30%"]
+    #[doc = "reduces ACMP3 internal bias current by 30%."]
     #[must_use]
     #[inline(always)]
     pub const fn acmp3_cmp_igen_trim_dn(&self) -> super::vals::Acmp3CmpIgenTrimDn {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Acmp3CmpIgenTrimDn::from_bits(val as u8)
     }
-    #[doc = "reduces ACMP3 internal bias current by 30%"]
+    #[doc = "reduces ACMP3 internal bias current by 30%."]
     #[inline(always)]
     pub const fn set_acmp3_cmp_igen_trim_dn(&mut self, val: super::vals::Acmp3CmpIgenTrimDn) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "reduces ACMP4 internal bias current by 30%"]
+    #[doc = "reduces ACMP4 internal bias current by 30%."]
     #[must_use]
     #[inline(always)]
     pub const fn acmp4_cmp_igen_trim_dn(&self) -> super::vals::Acmp4CmpIgenTrimDn {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Acmp4CmpIgenTrimDn::from_bits(val as u8)
     }
-    #[doc = "reduces ACMP4 internal bias current by 30%"]
+    #[doc = "reduces ACMP4 internal bias current by 30%."]
     #[inline(always)]
     pub const fn set_acmp4_cmp_igen_trim_dn(&mut self, val: super::vals::Acmp4CmpIgenTrimDn) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "increases ACMP1 internal bias current by 30%"]
+    #[doc = "increases ACMP1 internal bias current by 30%."]
     #[must_use]
     #[inline(always)]
     pub const fn acmp1_cmp_igen_trim_up(&self) -> super::vals::Acmp1CmpIgenTrimUp {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::Acmp1CmpIgenTrimUp::from_bits(val as u8)
     }
-    #[doc = "increases ACMP1 internal bias current by 30%"]
+    #[doc = "increases ACMP1 internal bias current by 30%."]
     #[inline(always)]
     pub const fn set_acmp1_cmp_igen_trim_up(&mut self, val: super::vals::Acmp1CmpIgenTrimUp) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
-    #[doc = "increases ACMP2 internal bias current by 30%"]
+    #[doc = "increases ACMP2 internal bias current by 30%."]
     #[must_use]
     #[inline(always)]
     pub const fn acmp2_cmp_igen_trim_up(&self) -> super::vals::Acmp2CmpIgenTrimUp {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::Acmp2CmpIgenTrimUp::from_bits(val as u8)
     }
-    #[doc = "increases ACMP2 internal bias current by 30%"]
+    #[doc = "increases ACMP2 internal bias current by 30%."]
     #[inline(always)]
     pub const fn set_acmp2_cmp_igen_trim_up(&mut self, val: super::vals::Acmp2CmpIgenTrimUp) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
-    #[doc = "increases ACMP3 internal bias current by 30%"]
+    #[doc = "increases ACMP3 internal bias current by 30%."]
     #[must_use]
     #[inline(always)]
     pub const fn acmp3_cmp_igen_trim_up(&self) -> super::vals::Acmp3CmpIgenTrimUp {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::Acmp3CmpIgenTrimUp::from_bits(val as u8)
     }
-    #[doc = "increases ACMP3 internal bias current by 30%"]
+    #[doc = "increases ACMP3 internal bias current by 30%."]
     #[inline(always)]
     pub const fn set_acmp3_cmp_igen_trim_up(&mut self, val: super::vals::Acmp3CmpIgenTrimUp) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "increases ACMP4 internal bias current by 30%"]
+    #[doc = "increases ACMP4 internal bias current by 30%."]
     #[must_use]
     #[inline(always)]
     pub const fn acmp4_cmp_igen_trim_up(&self) -> super::vals::Acmp4CmpIgenTrimUp {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Acmp4CmpIgenTrimUp::from_bits(val as u8)
     }
-    #[doc = "increases ACMP4 internal bias current by 30%"]
+    #[doc = "increases ACMP4 internal bias current by 30%."]
     #[inline(always)]
     pub const fn set_acmp4_cmp_igen_trim_up(&mut self, val: super::vals::Acmp4CmpIgenTrimUp) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "ACMP1 sample_lv source select"]
+    #[doc = "ACMP1 sample_lv source select."]
     #[must_use]
     #[inline(always)]
     pub const fn acmp1_sample_sync_en(&self) -> super::vals::Acmp1SampleSyncEn {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::Acmp1SampleSyncEn::from_bits(val as u8)
     }
-    #[doc = "ACMP1 sample_lv source select"]
+    #[doc = "ACMP1 sample_lv source select."]
     #[inline(always)]
     pub const fn set_acmp1_sample_sync_en(&mut self, val: super::vals::Acmp1SampleSyncEn) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
-    #[doc = "ACMP2 sample_lv source select"]
+    #[doc = "ACMP2 sample_lv source select."]
     #[must_use]
     #[inline(always)]
     pub const fn acmp2_sample_sync_en(&self) -> super::vals::Acmp2SampleSyncEn {
         let val = (self.0 >> 9usize) & 0x01;
         super::vals::Acmp2SampleSyncEn::from_bits(val as u8)
     }
-    #[doc = "ACMP2 sample_lv source select"]
+    #[doc = "ACMP2 sample_lv source select."]
     #[inline(always)]
     pub const fn set_acmp2_sample_sync_en(&mut self, val: super::vals::Acmp2SampleSyncEn) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
     }
-    #[doc = "ACMP3 sample_lv source select"]
+    #[doc = "ACMP3 sample_lv source select."]
     #[must_use]
     #[inline(always)]
     pub const fn acmp3_sample_sync_en(&self) -> super::vals::Acmp3SampleSyncEn {
         let val = (self.0 >> 10usize) & 0x01;
         super::vals::Acmp3SampleSyncEn::from_bits(val as u8)
     }
-    #[doc = "ACMP3 sample_lv source select"]
+    #[doc = "ACMP3 sample_lv source select."]
     #[inline(always)]
     pub const fn set_acmp3_sample_sync_en(&mut self, val: super::vals::Acmp3SampleSyncEn) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
-    #[doc = "ACMP4 sample_lv source select"]
+    #[doc = "ACMP4 sample_lv source select."]
     #[must_use]
     #[inline(always)]
     pub const fn acmp4_sample_sync_en(&self) -> super::vals::Acmp4SampleSyncEn {
         let val = (self.0 >> 11usize) & 0x01;
         super::vals::Acmp4SampleSyncEn::from_bits(val as u8)
     }
-    #[doc = "ACMP4 sample_lv source select"]
+    #[doc = "ACMP4 sample_lv source select."]
     #[inline(always)]
     pub const fn set_acmp4_sample_sync_en(&mut self, val: super::vals::Acmp4SampleSyncEn) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
@@ -978,31 +978,31 @@ impl defmt::Format for Gpr14 {
         )
     }
 }
-#[doc = "GPR16 General Purpose Register"]
+#[doc = "GPR16 General Purpose Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpr16(pub u32);
 impl Gpr16 {
-    #[doc = "FlexRAM bank config source select"]
+    #[doc = "FlexRAM bank config source select."]
     #[must_use]
     #[inline(always)]
     pub const fn flexram_bank_cfg_sel(&self) -> super::vals::FlexramBankCfgSel {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::FlexramBankCfgSel::from_bits(val as u8)
     }
-    #[doc = "FlexRAM bank config source select"]
+    #[doc = "FlexRAM bank config source select."]
     #[inline(always)]
     pub const fn set_flexram_bank_cfg_sel(&mut self, val: super::vals::FlexramBankCfgSel) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "Vector table offset register out of reset"]
+    #[doc = "Vector table offset register out of reset."]
     #[must_use]
     #[inline(always)]
     pub const fn cm7_init_vtor(&self) -> u32 {
         let val = (self.0 >> 7usize) & 0x01ff_ffff;
         val as u32
     }
-    #[doc = "Vector table offset register out of reset"]
+    #[doc = "Vector table offset register out of reset."]
     #[inline(always)]
     pub const fn set_cm7_init_vtor(&mut self, val: u32) {
         self.0 = (self.0 & !(0x01ff_ffff << 7usize)) | (((val as u32) & 0x01ff_ffff) << 7usize);
@@ -1033,19 +1033,19 @@ impl defmt::Format for Gpr16 {
         )
     }
 }
-#[doc = "GPR17 General Purpose Register"]
+#[doc = "GPR17 General Purpose Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpr17(pub u32);
 impl Gpr17 {
-    #[doc = "FlexRAM bank config value"]
+    #[doc = "FlexRAM bank config value."]
     #[must_use]
     #[inline(always)]
     pub const fn flexram_bank_cfg(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "FlexRAM bank config value"]
+    #[doc = "FlexRAM bank config value."]
     #[inline(always)]
     pub const fn set_flexram_bank_cfg(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1074,31 +1074,31 @@ impl defmt::Format for Gpr17 {
         )
     }
 }
-#[doc = "GPR18 General Purpose Register"]
+#[doc = "GPR18 General Purpose Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpr18(pub u32);
 impl Gpr18 {
-    #[doc = "lock M7_APC_AC_R0_BOT field for changes"]
+    #[doc = "lock M7_APC_AC_R0_BOT field for changes."]
     #[must_use]
     #[inline(always)]
     pub const fn lock_m7_apc_ac_r0_bot(&self) -> super::vals::LockM7ApcAcR0Bot {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::LockM7ApcAcR0Bot::from_bits(val as u8)
     }
-    #[doc = "lock M7_APC_AC_R0_BOT field for changes"]
+    #[doc = "lock M7_APC_AC_R0_BOT field for changes."]
     #[inline(always)]
     pub const fn set_lock_m7_apc_ac_r0_bot(&mut self, val: super::vals::LockM7ApcAcR0Bot) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "APC end address of memory region-0"]
+    #[doc = "APC end address of memory region-0."]
     #[must_use]
     #[inline(always)]
     pub const fn m7_apc_ac_r0_bot(&self) -> u32 {
         let val = (self.0 >> 3usize) & 0x1fff_ffff;
         val as u32
     }
-    #[doc = "APC end address of memory region-0"]
+    #[doc = "APC end address of memory region-0."]
     #[inline(always)]
     pub const fn set_m7_apc_ac_r0_bot(&mut self, val: u32) {
         self.0 = (self.0 & !(0x1fff_ffff << 3usize)) | (((val as u32) & 0x1fff_ffff) << 3usize);
@@ -1129,31 +1129,31 @@ impl defmt::Format for Gpr18 {
         )
     }
 }
-#[doc = "GPR19 General Purpose Register"]
+#[doc = "GPR19 General Purpose Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpr19(pub u32);
 impl Gpr19 {
-    #[doc = "lock M7_APC_AC_R0_TOP field for changes"]
+    #[doc = "lock M7_APC_AC_R0_TOP field for changes."]
     #[must_use]
     #[inline(always)]
     pub const fn lock_m7_apc_ac_r0_top(&self) -> super::vals::LockM7ApcAcR0Top {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::LockM7ApcAcR0Top::from_bits(val as u8)
     }
-    #[doc = "lock M7_APC_AC_R0_TOP field for changes"]
+    #[doc = "lock M7_APC_AC_R0_TOP field for changes."]
     #[inline(always)]
     pub const fn set_lock_m7_apc_ac_r0_top(&mut self, val: super::vals::LockM7ApcAcR0Top) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "APC start address of memory region-0"]
+    #[doc = "APC start address of memory region-0."]
     #[must_use]
     #[inline(always)]
     pub const fn m7_apc_ac_r0_top(&self) -> u32 {
         let val = (self.0 >> 3usize) & 0x1fff_ffff;
         val as u32
     }
-    #[doc = "APC start address of memory region-0"]
+    #[doc = "APC start address of memory region-0."]
     #[inline(always)]
     pub const fn set_m7_apc_ac_r0_top(&mut self, val: u32) {
         self.0 = (self.0 & !(0x1fff_ffff << 3usize)) | (((val as u32) & 0x1fff_ffff) << 3usize);
@@ -1184,7 +1184,7 @@ impl defmt::Format for Gpr19 {
         )
     }
 }
-#[doc = "GPR2 General Purpose Register"]
+#[doc = "GPR2 General Purpose Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpr2(pub u32);
@@ -1216,14 +1216,14 @@ impl Gpr2 {
     pub const fn set_axbs_l_dma_high_priority(&mut self, val: super::vals::AxbsLDmaHighPriority) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Force Round Robin in AXBS_L"]
+    #[doc = "Force Round Robin in AXBS_L."]
     #[must_use]
     #[inline(always)]
     pub const fn axbs_l_force_round_robin(&self) -> super::vals::AxbsLForceRoundRobin {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::AxbsLForceRoundRobin::from_bits(val as u8)
     }
-    #[doc = "Force Round Robin in AXBS_L"]
+    #[doc = "Force Round Robin in AXBS_L."]
     #[inline(always)]
     pub const fn set_axbs_l_force_round_robin(&mut self, val: super::vals::AxbsLForceRoundRobin) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
@@ -1264,26 +1264,26 @@ impl Gpr2 {
     pub const fn set_axbs_p_force_round_robin(&mut self, val: super::vals::AxbsPForceRoundRobin) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
-    #[doc = "Disable CANFD filter"]
+    #[doc = "Disable CANFD filter."]
     #[must_use]
     #[inline(always)]
     pub const fn canfd_filter_bypass(&self) -> super::vals::CanfdFilterBypass {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::CanfdFilterBypass::from_bits(val as u8)
     }
-    #[doc = "Disable CANFD filter"]
+    #[doc = "Disable CANFD filter."]
     #[inline(always)]
     pub const fn set_canfd_filter_bypass(&mut self, val: super::vals::CanfdFilterBypass) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "enable power saving features on L2 memory"]
+    #[doc = "enable power saving features on L2 memory."]
     #[must_use]
     #[inline(always)]
     pub const fn l2_mem_en_powersaving(&self) -> super::vals::L2MemEnPowersaving {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::L2MemEnPowersaving::from_bits(val as u8)
     }
-    #[doc = "enable power saving features on L2 memory"]
+    #[doc = "enable power saving features on L2 memory."]
     #[inline(always)]
     pub const fn set_l2_mem_en_powersaving(&mut self, val: super::vals::L2MemEnPowersaving) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
@@ -1300,14 +1300,14 @@ impl Gpr2 {
     pub const fn set_ram_auto_clk_gating_en(&mut self, val: super::vals::RamAutoClkGatingEn) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
-    #[doc = "control how memory enter Deep Sleep mode (shutdown periphery power, but maintain memory contents, outputs of memory are pulled low)"]
+    #[doc = "control how memory enter Deep Sleep mode (shutdown periphery power, but maintain memory contents, outputs of memory are pulled low)."]
     #[must_use]
     #[inline(always)]
     pub const fn l2_mem_deepsleep(&self) -> super::vals::L2MemDeepsleep {
         let val = (self.0 >> 14usize) & 0x01;
         super::vals::L2MemDeepsleep::from_bits(val as u8)
     }
-    #[doc = "control how memory enter Deep Sleep mode (shutdown periphery power, but maintain memory contents, outputs of memory are pulled low)"]
+    #[doc = "control how memory enter Deep Sleep mode (shutdown periphery power, but maintain memory contents, outputs of memory are pulled low)."]
     #[inline(always)]
     pub const fn set_l2_mem_deepsleep(&mut self, val: super::vals::L2MemDeepsleep) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
@@ -1324,14 +1324,14 @@ impl Gpr2 {
     pub const fn set_mqs_clk_div(&mut self, val: super::vals::MqsClkDiv) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val.to_bits() as u32) & 0xff) << 16usize);
     }
-    #[doc = "MQS software reset"]
+    #[doc = "MQS software reset."]
     #[must_use]
     #[inline(always)]
     pub const fn mqs_sw_rst(&self) -> super::vals::MqsSwRst {
         let val = (self.0 >> 24usize) & 0x01;
         super::vals::MqsSwRst::from_bits(val as u8)
     }
-    #[doc = "MQS software reset"]
+    #[doc = "MQS software reset."]
     #[inline(always)]
     pub const fn set_mqs_sw_rst(&mut self, val: super::vals::MqsSwRst) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
@@ -1360,50 +1360,50 @@ impl Gpr2 {
     pub const fn set_mqs_oversample(&mut self, val: super::vals::MqsOversample) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
     }
-    #[doc = "QTIMER1 timer counter freeze"]
+    #[doc = "QTIMER1 timer counter freeze."]
     #[must_use]
     #[inline(always)]
     pub const fn qtimer1_tmr_cnts_freeze(&self) -> super::vals::Qtimer1TmrCntsFreeze {
         let val = (self.0 >> 28usize) & 0x01;
         super::vals::Qtimer1TmrCntsFreeze::from_bits(val as u8)
     }
-    #[doc = "QTIMER1 timer counter freeze"]
+    #[doc = "QTIMER1 timer counter freeze."]
     #[inline(always)]
     pub const fn set_qtimer1_tmr_cnts_freeze(&mut self, val: super::vals::Qtimer1TmrCntsFreeze) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
     }
-    #[doc = "QTIMER2 timer counter freeze"]
+    #[doc = "QTIMER2 timer counter freeze."]
     #[must_use]
     #[inline(always)]
     pub const fn qtimer2_tmr_cnts_freeze(&self) -> super::vals::Qtimer2TmrCntsFreeze {
         let val = (self.0 >> 29usize) & 0x01;
         super::vals::Qtimer2TmrCntsFreeze::from_bits(val as u8)
     }
-    #[doc = "QTIMER2 timer counter freeze"]
+    #[doc = "QTIMER2 timer counter freeze."]
     #[inline(always)]
     pub const fn set_qtimer2_tmr_cnts_freeze(&mut self, val: super::vals::Qtimer2TmrCntsFreeze) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
-    #[doc = "QTIMER3 timer counter freeze"]
+    #[doc = "QTIMER3 timer counter freeze."]
     #[must_use]
     #[inline(always)]
     pub const fn qtimer3_tmr_cnts_freeze(&self) -> super::vals::Qtimer3TmrCntsFreeze {
         let val = (self.0 >> 30usize) & 0x01;
         super::vals::Qtimer3TmrCntsFreeze::from_bits(val as u8)
     }
-    #[doc = "QTIMER3 timer counter freeze"]
+    #[doc = "QTIMER3 timer counter freeze."]
     #[inline(always)]
     pub const fn set_qtimer3_tmr_cnts_freeze(&mut self, val: super::vals::Qtimer3TmrCntsFreeze) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
-    #[doc = "QTIMER4 timer counter freeze"]
+    #[doc = "QTIMER4 timer counter freeze."]
     #[must_use]
     #[inline(always)]
     pub const fn qtimer4_tmr_cnts_freeze(&self) -> super::vals::Qtimer4TmrCntsFreeze {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::Qtimer4TmrCntsFreeze::from_bits(val as u8)
     }
-    #[doc = "QTIMER4 timer counter freeze"]
+    #[doc = "QTIMER4 timer counter freeze."]
     #[inline(always)]
     pub const fn set_qtimer4_tmr_cnts_freeze(&mut self, val: super::vals::Qtimer4TmrCntsFreeze) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -1469,31 +1469,31 @@ impl defmt::Format for Gpr2 {
         )
     }
 }
-#[doc = "GPR20 General Purpose Register"]
+#[doc = "GPR20 General Purpose Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpr20(pub u32);
 impl Gpr20 {
-    #[doc = "lock M7_APC_AC_R1_BOT field for changes"]
+    #[doc = "lock M7_APC_AC_R1_BOT field for changes."]
     #[must_use]
     #[inline(always)]
     pub const fn lock_m7_apc_ac_r1_bot(&self) -> super::vals::LockM7ApcAcR1Bot {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::LockM7ApcAcR1Bot::from_bits(val as u8)
     }
-    #[doc = "lock M7_APC_AC_R1_BOT field for changes"]
+    #[doc = "lock M7_APC_AC_R1_BOT field for changes."]
     #[inline(always)]
     pub const fn set_lock_m7_apc_ac_r1_bot(&mut self, val: super::vals::LockM7ApcAcR1Bot) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "APC end address of memory region-1"]
+    #[doc = "APC end address of memory region-1."]
     #[must_use]
     #[inline(always)]
     pub const fn m7_apc_ac_r1_bot(&self) -> u32 {
         let val = (self.0 >> 3usize) & 0x1fff_ffff;
         val as u32
     }
-    #[doc = "APC end address of memory region-1"]
+    #[doc = "APC end address of memory region-1."]
     #[inline(always)]
     pub const fn set_m7_apc_ac_r1_bot(&mut self, val: u32) {
         self.0 = (self.0 & !(0x1fff_ffff << 3usize)) | (((val as u32) & 0x1fff_ffff) << 3usize);
@@ -1524,31 +1524,31 @@ impl defmt::Format for Gpr20 {
         )
     }
 }
-#[doc = "GPR21 General Purpose Register"]
+#[doc = "GPR21 General Purpose Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpr21(pub u32);
 impl Gpr21 {
-    #[doc = "lock M7_APC_AC_R1_TOP field for changes"]
+    #[doc = "lock M7_APC_AC_R1_TOP field for changes."]
     #[must_use]
     #[inline(always)]
     pub const fn lock_m7_apc_ac_r1_top(&self) -> super::vals::LockM7ApcAcR1Top {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::LockM7ApcAcR1Top::from_bits(val as u8)
     }
-    #[doc = "lock M7_APC_AC_R1_TOP field for changes"]
+    #[doc = "lock M7_APC_AC_R1_TOP field for changes."]
     #[inline(always)]
     pub const fn set_lock_m7_apc_ac_r1_top(&mut self, val: super::vals::LockM7ApcAcR1Top) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "APC start address of memory region-1"]
+    #[doc = "APC start address of memory region-1."]
     #[must_use]
     #[inline(always)]
     pub const fn m7_apc_ac_r1_top(&self) -> u32 {
         let val = (self.0 >> 3usize) & 0x1fff_ffff;
         val as u32
     }
-    #[doc = "APC start address of memory region-1"]
+    #[doc = "APC start address of memory region-1."]
     #[inline(always)]
     pub const fn set_m7_apc_ac_r1_top(&mut self, val: u32) {
         self.0 = (self.0 & !(0x1fff_ffff << 3usize)) | (((val as u32) & 0x1fff_ffff) << 3usize);
@@ -1579,31 +1579,31 @@ impl defmt::Format for Gpr21 {
         )
     }
 }
-#[doc = "GPR22 General Purpose Register"]
+#[doc = "GPR22 General Purpose Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpr22(pub u32);
 impl Gpr22 {
-    #[doc = "lock M7_APC_AC_R2_BOT field for changes"]
+    #[doc = "lock M7_APC_AC_R2_BOT field for changes."]
     #[must_use]
     #[inline(always)]
     pub const fn lock_m7_apc_ac_r2_bot(&self) -> super::vals::LockM7ApcAcR2Bot {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::LockM7ApcAcR2Bot::from_bits(val as u8)
     }
-    #[doc = "lock M7_APC_AC_R2_BOT field for changes"]
+    #[doc = "lock M7_APC_AC_R2_BOT field for changes."]
     #[inline(always)]
     pub const fn set_lock_m7_apc_ac_r2_bot(&mut self, val: super::vals::LockM7ApcAcR2Bot) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "APC end address of memory region-2"]
+    #[doc = "APC end address of memory region-2."]
     #[must_use]
     #[inline(always)]
     pub const fn m7_apc_ac_r2_bot(&self) -> u32 {
         let val = (self.0 >> 3usize) & 0x1fff_ffff;
         val as u32
     }
-    #[doc = "APC end address of memory region-2"]
+    #[doc = "APC end address of memory region-2."]
     #[inline(always)]
     pub const fn set_m7_apc_ac_r2_bot(&mut self, val: u32) {
         self.0 = (self.0 & !(0x1fff_ffff << 3usize)) | (((val as u32) & 0x1fff_ffff) << 3usize);
@@ -1634,31 +1634,31 @@ impl defmt::Format for Gpr22 {
         )
     }
 }
-#[doc = "GPR23 General Purpose Register"]
+#[doc = "GPR23 General Purpose Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpr23(pub u32);
 impl Gpr23 {
-    #[doc = "lock M7_APC_AC_R2_TOP field for changes"]
+    #[doc = "lock M7_APC_AC_R2_TOP field for changes."]
     #[must_use]
     #[inline(always)]
     pub const fn lock_m7_apc_ac_r2_top(&self) -> super::vals::LockM7ApcAcR2Top {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::LockM7ApcAcR2Top::from_bits(val as u8)
     }
-    #[doc = "lock M7_APC_AC_R2_TOP field for changes"]
+    #[doc = "lock M7_APC_AC_R2_TOP field for changes."]
     #[inline(always)]
     pub const fn set_lock_m7_apc_ac_r2_top(&mut self, val: super::vals::LockM7ApcAcR2Top) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "APC start address of memory region-2"]
+    #[doc = "APC start address of memory region-2."]
     #[must_use]
     #[inline(always)]
     pub const fn m7_apc_ac_r2_top(&self) -> u32 {
         let val = (self.0 >> 3usize) & 0x1fff_ffff;
         val as u32
     }
-    #[doc = "APC start address of memory region-2"]
+    #[doc = "APC start address of memory region-2."]
     #[inline(always)]
     pub const fn set_m7_apc_ac_r2_top(&mut self, val: u32) {
         self.0 = (self.0 & !(0x1fff_ffff << 3usize)) | (((val as u32) & 0x1fff_ffff) << 3usize);
@@ -1689,31 +1689,31 @@ impl defmt::Format for Gpr23 {
         )
     }
 }
-#[doc = "GPR24 General Purpose Register"]
+#[doc = "GPR24 General Purpose Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpr24(pub u32);
 impl Gpr24 {
-    #[doc = "lock M7_APC_AC_R3_BOT field for changes"]
+    #[doc = "lock M7_APC_AC_R3_BOT field for changes."]
     #[must_use]
     #[inline(always)]
     pub const fn lock_m7_apc_ac_r3_bot(&self) -> super::vals::LockM7ApcAcR3Bot {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::LockM7ApcAcR3Bot::from_bits(val as u8)
     }
-    #[doc = "lock M7_APC_AC_R3_BOT field for changes"]
+    #[doc = "lock M7_APC_AC_R3_BOT field for changes."]
     #[inline(always)]
     pub const fn set_lock_m7_apc_ac_r3_bot(&mut self, val: super::vals::LockM7ApcAcR3Bot) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "APC end address of memory region-3"]
+    #[doc = "APC end address of memory region-3."]
     #[must_use]
     #[inline(always)]
     pub const fn m7_apc_ac_r3_bot(&self) -> u32 {
         let val = (self.0 >> 3usize) & 0x1fff_ffff;
         val as u32
     }
-    #[doc = "APC end address of memory region-3"]
+    #[doc = "APC end address of memory region-3."]
     #[inline(always)]
     pub const fn set_m7_apc_ac_r3_bot(&mut self, val: u32) {
         self.0 = (self.0 & !(0x1fff_ffff << 3usize)) | (((val as u32) & 0x1fff_ffff) << 3usize);
@@ -1744,31 +1744,31 @@ impl defmt::Format for Gpr24 {
         )
     }
 }
-#[doc = "GPR25 General Purpose Register"]
+#[doc = "GPR25 General Purpose Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpr25(pub u32);
 impl Gpr25 {
-    #[doc = "lock M7_APC_AC_R3_TOP field for changes"]
+    #[doc = "lock M7_APC_AC_R3_TOP field for changes."]
     #[must_use]
     #[inline(always)]
     pub const fn lock_m7_apc_ac_r3_top(&self) -> super::vals::LockM7ApcAcR3Top {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::LockM7ApcAcR3Top::from_bits(val as u8)
     }
-    #[doc = "lock M7_APC_AC_R3_TOP field for changes"]
+    #[doc = "lock M7_APC_AC_R3_TOP field for changes."]
     #[inline(always)]
     pub const fn set_lock_m7_apc_ac_r3_top(&mut self, val: super::vals::LockM7ApcAcR3Top) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "APC start address of memory region-3"]
+    #[doc = "APC start address of memory region-3."]
     #[must_use]
     #[inline(always)]
     pub const fn m7_apc_ac_r3_top(&self) -> u32 {
         let val = (self.0 >> 3usize) & 0x1fff_ffff;
         val as u32
     }
-    #[doc = "APC start address of memory region-3"]
+    #[doc = "APC start address of memory region-3."]
     #[inline(always)]
     pub const fn set_m7_apc_ac_r3_top(&mut self, val: u32) {
         self.0 = (self.0 & !(0x1fff_ffff << 3usize)) | (((val as u32) & 0x1fff_ffff) << 3usize);
@@ -1799,7 +1799,7 @@ impl defmt::Format for Gpr25 {
         )
     }
 }
-#[doc = "GPR26 General Purpose Register"]
+#[doc = "GPR26 General Purpose Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpr26(pub u32);
@@ -1840,7 +1840,7 @@ impl defmt::Format for Gpr26 {
         )
     }
 }
-#[doc = "GPR27 General Purpose Register"]
+#[doc = "GPR27 General Purpose Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpr27(pub u32);
@@ -1881,7 +1881,7 @@ impl defmt::Format for Gpr27 {
         )
     }
 }
-#[doc = "GPR28 General Purpose Register"]
+#[doc = "GPR28 General Purpose Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpr28(pub u32);
@@ -1922,7 +1922,7 @@ impl defmt::Format for Gpr28 {
         )
     }
 }
-#[doc = "GPR29 General Purpose Register"]
+#[doc = "GPR29 General Purpose Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpr29(pub u32);
@@ -1963,91 +1963,91 @@ impl defmt::Format for Gpr29 {
         )
     }
 }
-#[doc = "GPR3 General Purpose Register"]
+#[doc = "GPR3 General Purpose Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpr3(pub u32);
 impl Gpr3 {
-    #[doc = "OCRAM_CTL\\[3\\] - write address pipeline control bit"]
+    #[doc = "OCRAM_CTL\\[3\\] - write address pipeline control bit."]
     #[must_use]
     #[inline(always)]
     pub const fn ocram_ctl(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "OCRAM_CTL\\[3\\] - write address pipeline control bit"]
+    #[doc = "OCRAM_CTL\\[3\\] - write address pipeline control bit."]
     #[inline(always)]
     pub const fn set_ocram_ctl(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Select 128-bit dcp key from 256-bit key from SNVS Master Key"]
+    #[doc = "Select 128-bit dcp key from 256-bit key from SNVS Master Key."]
     #[must_use]
     #[inline(always)]
     pub const fn dcp_key_sel(&self) -> super::vals::DcpKeySel {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::DcpKeySel::from_bits(val as u8)
     }
-    #[doc = "Select 128-bit dcp key from 256-bit key from SNVS Master Key"]
+    #[doc = "Select 128-bit dcp key from 256-bit key from SNVS Master Key."]
     #[inline(always)]
     pub const fn set_dcp_key_sel(&mut self, val: super::vals::DcpKeySel) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
-    #[doc = "OCRAM2_CTL\\[3\\] - write address pipeline control bit"]
+    #[doc = "OCRAM2_CTL\\[3\\] - write address pipeline control bit."]
     #[must_use]
     #[inline(always)]
     pub const fn ocram2_ctl(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x0f;
         val as u8
     }
-    #[doc = "OCRAM2_CTL\\[3\\] - write address pipeline control bit"]
+    #[doc = "OCRAM2_CTL\\[3\\] - write address pipeline control bit."]
     #[inline(always)]
     pub const fn set_ocram2_ctl(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val as u32) & 0x0f) << 8usize);
     }
-    #[doc = "Request to halt axbs_l"]
+    #[doc = "Request to halt axbs_l."]
     #[must_use]
     #[inline(always)]
     pub const fn axbs_l_halt_req(&self) -> super::vals::AxbsLHaltReq {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::AxbsLHaltReq::from_bits(val as u8)
     }
-    #[doc = "Request to halt axbs_l"]
+    #[doc = "Request to halt axbs_l."]
     #[inline(always)]
     pub const fn set_axbs_l_halt_req(&mut self, val: super::vals::AxbsLHaltReq) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "This field shows the OCRAM pipeline settings status, controlled by OCRAM_CTL bits respectively"]
+    #[doc = "This field shows the OCRAM pipeline settings status, controlled by OCRAM_CTL bits respectively."]
     #[must_use]
     #[inline(always)]
     pub const fn ocram_status(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x0f;
         val as u8
     }
-    #[doc = "This field shows the OCRAM pipeline settings status, controlled by OCRAM_CTL bits respectively"]
+    #[doc = "This field shows the OCRAM pipeline settings status, controlled by OCRAM_CTL bits respectively."]
     #[inline(always)]
     pub const fn set_ocram_status(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
     }
-    #[doc = "This field shows the OCRAM2 pipeline settings status, controlled by OCRAM2_CTL bits respectively"]
+    #[doc = "This field shows the OCRAM2 pipeline settings status, controlled by OCRAM2_CTL bits respectively."]
     #[must_use]
     #[inline(always)]
     pub const fn ocram2_status(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0x0f;
         val as u8
     }
-    #[doc = "This field shows the OCRAM2 pipeline settings status, controlled by OCRAM2_CTL bits respectively"]
+    #[doc = "This field shows the OCRAM2 pipeline settings status, controlled by OCRAM2_CTL bits respectively."]
     #[inline(always)]
     pub const fn set_ocram2_status(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 24usize)) | (((val as u32) & 0x0f) << 24usize);
     }
-    #[doc = "This bit shows the status of axbs_l"]
+    #[doc = "This bit shows the status of axbs_l."]
     #[must_use]
     #[inline(always)]
     pub const fn axbs_l_halted(&self) -> super::vals::AxbsLHalted {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::AxbsLHalted::from_bits(val as u8)
     }
-    #[doc = "This bit shows the status of axbs_l"]
+    #[doc = "This bit shows the status of axbs_l."]
     #[inline(always)]
     pub const fn set_axbs_l_halted(&mut self, val: super::vals::AxbsLHalted) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -2088,19 +2088,19 @@ impl defmt::Format for Gpr3 {
         )
     }
 }
-#[doc = "GPR30 General Purpose Register"]
+#[doc = "GPR30 General Purpose Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpr30(pub u32);
 impl Gpr30 {
-    #[doc = "Start address of flexspi1 and flexspi2"]
+    #[doc = "Start address of flexspi1 and flexspi2."]
     #[must_use]
     #[inline(always)]
     pub const fn flexspi_remap_addr_start(&self) -> u32 {
         let val = (self.0 >> 12usize) & 0x000f_ffff;
         val as u32
     }
-    #[doc = "Start address of flexspi1 and flexspi2"]
+    #[doc = "Start address of flexspi1 and flexspi2."]
     #[inline(always)]
     pub const fn set_flexspi_remap_addr_start(&mut self, val: u32) {
         self.0 = (self.0 & !(0x000f_ffff << 12usize)) | (((val as u32) & 0x000f_ffff) << 12usize);
@@ -2129,19 +2129,19 @@ impl defmt::Format for Gpr30 {
         )
     }
 }
-#[doc = "GPR31 General Purpose Register"]
+#[doc = "GPR31 General Purpose Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpr31(pub u32);
 impl Gpr31 {
-    #[doc = "End address of flexspi1 and flexspi2"]
+    #[doc = "End address of flexspi1 and flexspi2."]
     #[must_use]
     #[inline(always)]
     pub const fn flexspi_remap_addr_end(&self) -> u32 {
         let val = (self.0 >> 12usize) & 0x000f_ffff;
         val as u32
     }
-    #[doc = "End address of flexspi1 and flexspi2"]
+    #[doc = "End address of flexspi1 and flexspi2."]
     #[inline(always)]
     pub const fn set_flexspi_remap_addr_end(&mut self, val: u32) {
         self.0 = (self.0 & !(0x000f_ffff << 12usize)) | (((val as u32) & 0x000f_ffff) << 12usize);
@@ -2170,19 +2170,19 @@ impl defmt::Format for Gpr31 {
         )
     }
 }
-#[doc = "GPR32 General Purpose Register"]
+#[doc = "GPR32 General Purpose Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpr32(pub u32);
 impl Gpr32 {
-    #[doc = "Offset address of flexspi1 and flexspi2"]
+    #[doc = "Offset address of flexspi1 and flexspi2."]
     #[must_use]
     #[inline(always)]
     pub const fn flexspi_remap_addr_offset(&self) -> u32 {
         let val = (self.0 >> 12usize) & 0x000f_ffff;
         val as u32
     }
-    #[doc = "Offset address of flexspi1 and flexspi2"]
+    #[doc = "Offset address of flexspi1 and flexspi2."]
     #[inline(always)]
     pub const fn set_flexspi_remap_addr_offset(&mut self, val: u32) {
         self.0 = (self.0 & !(0x000f_ffff << 12usize)) | (((val as u32) & 0x000f_ffff) << 12usize);
@@ -2214,7 +2214,7 @@ impl defmt::Format for Gpr32 {
         )
     }
 }
-#[doc = "GPR33 General Purpose Register"]
+#[doc = "GPR33 General Purpose Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpr33(pub u32);
@@ -2231,38 +2231,38 @@ impl Gpr33 {
     pub const fn set_ocram2_tz_en(&mut self, val: super::vals::Ocram2TzEn) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "OCRAM2 TrustZone (TZ) start address"]
+    #[doc = "OCRAM2 TrustZone (TZ) start address."]
     #[must_use]
     #[inline(always)]
     pub const fn ocram2_tz_addr(&self) -> u8 {
         let val = (self.0 >> 1usize) & 0x7f;
         val as u8
     }
-    #[doc = "OCRAM2 TrustZone (TZ) start address"]
+    #[doc = "OCRAM2 TrustZone (TZ) start address."]
     #[inline(always)]
     pub const fn set_ocram2_tz_addr(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 1usize)) | (((val as u32) & 0x7f) << 1usize);
     }
-    #[doc = "Lock OCRAM2_TZ_EN field for changes"]
+    #[doc = "Lock OCRAM2_TZ_EN field for changes."]
     #[must_use]
     #[inline(always)]
     pub const fn lock_ocram2_tz_en(&self) -> super::vals::LockOcram2TzEn {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::LockOcram2TzEn::from_bits(val as u8)
     }
-    #[doc = "Lock OCRAM2_TZ_EN field for changes"]
+    #[doc = "Lock OCRAM2_TZ_EN field for changes."]
     #[inline(always)]
     pub const fn set_lock_ocram2_tz_en(&mut self, val: super::vals::LockOcram2TzEn) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
     }
-    #[doc = "Lock OCRAM2_TZ_ADDR field for changes"]
+    #[doc = "Lock OCRAM2_TZ_ADDR field for changes."]
     #[must_use]
     #[inline(always)]
     pub const fn lock_ocram2_tz_addr(&self) -> super::vals::LockOcram2TzAddr {
         let val = (self.0 >> 17usize) & 0x7f;
         super::vals::LockOcram2TzAddr::from_bits(val as u8)
     }
-    #[doc = "Lock OCRAM2_TZ_ADDR field for changes"]
+    #[doc = "Lock OCRAM2_TZ_ADDR field for changes."]
     #[inline(always)]
     pub const fn set_lock_ocram2_tz_addr(&mut self, val: super::vals::LockOcram2TzAddr) {
         self.0 = (self.0 & !(0x7f << 17usize)) | (((val.to_bits() as u32) & 0x7f) << 17usize);
@@ -2297,31 +2297,31 @@ impl defmt::Format for Gpr33 {
         )
     }
 }
-#[doc = "GPR34 General Purpose Register"]
+#[doc = "GPR34 General Purpose Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpr34(pub u32);
 impl Gpr34 {
-    #[doc = "Boot Pin select in SIP_TEST_MUX"]
+    #[doc = "Boot Pin select in SIP_TEST_MUX."]
     #[must_use]
     #[inline(always)]
     pub const fn sip_test_mux_boot_pin_sel(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Boot Pin select in SIP_TEST_MUX"]
+    #[doc = "Boot Pin select in SIP_TEST_MUX."]
     #[inline(always)]
     pub const fn set_sip_test_mux_boot_pin_sel(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "Enable SIP_TEST_MUX"]
+    #[doc = "Enable SIP_TEST_MUX."]
     #[must_use]
     #[inline(always)]
     pub const fn sip_test_mux_qspi_sip_en(&self) -> super::vals::SipTestMuxQspiSipEn {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::SipTestMuxQspiSipEn::from_bits(val as u8)
     }
-    #[doc = "Enable SIP_TEST_MUX"]
+    #[doc = "Enable SIP_TEST_MUX."]
     #[inline(always)]
     pub const fn set_sip_test_mux_qspi_sip_en(&mut self, val: super::vals::SipTestMuxQspiSipEn) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
@@ -2355,7 +2355,7 @@ impl defmt::Format for Gpr34 {
         )
     }
 }
-#[doc = "GPR4 General Purpose Register"]
+#[doc = "GPR4 General Purpose Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpr4(pub u32);
@@ -2552,14 +2552,14 @@ impl Gpr4 {
     pub const fn set_flexspi2_stop_req(&mut self, val: super::vals::Flexspi2StopReq) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "EDMA stop acknowledge. This is a status (read-only) bit"]
+    #[doc = "EDMA stop acknowledge. This is a status (read-only) bit."]
     #[must_use]
     #[inline(always)]
     pub const fn edma_stop_ack(&self) -> super::vals::EdmaStopAck {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::EdmaStopAck::from_bits(val as u8)
     }
-    #[doc = "EDMA stop acknowledge. This is a status (read-only) bit"]
+    #[doc = "EDMA stop acknowledge. This is a status (read-only) bit."]
     #[inline(always)]
     pub const fn set_edma_stop_ack(&mut self, val: super::vals::EdmaStopAck) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
@@ -2588,14 +2588,14 @@ impl Gpr4 {
     pub const fn set_can2_stop_ack(&mut self, val: super::vals::Can2StopAck) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val.to_bits() as u32) & 0x01) << 18usize);
     }
-    #[doc = "TRNG stop acknowledge"]
+    #[doc = "TRNG stop acknowledge."]
     #[must_use]
     #[inline(always)]
     pub const fn trng_stop_ack(&self) -> super::vals::TrngStopAck {
         let val = (self.0 >> 19usize) & 0x01;
         super::vals::TrngStopAck::from_bits(val as u8)
     }
-    #[doc = "TRNG stop acknowledge"]
+    #[doc = "TRNG stop acknowledge."]
     #[inline(always)]
     pub const fn set_trng_stop_ack(&mut self, val: super::vals::TrngStopAck) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val.to_bits() as u32) & 0x01) << 19usize);
@@ -2612,38 +2612,38 @@ impl Gpr4 {
     pub const fn set_enet_stop_ack(&mut self, val: super::vals::EnetStopAck) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
     }
-    #[doc = "SAI1 stop acknowledge"]
+    #[doc = "SAI1 stop acknowledge."]
     #[must_use]
     #[inline(always)]
     pub const fn sai1_stop_ack(&self) -> super::vals::Sai1StopAck {
         let val = (self.0 >> 21usize) & 0x01;
         super::vals::Sai1StopAck::from_bits(val as u8)
     }
-    #[doc = "SAI1 stop acknowledge"]
+    #[doc = "SAI1 stop acknowledge."]
     #[inline(always)]
     pub const fn set_sai1_stop_ack(&mut self, val: super::vals::Sai1StopAck) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
     }
-    #[doc = "SAI2 stop acknowledge"]
+    #[doc = "SAI2 stop acknowledge."]
     #[must_use]
     #[inline(always)]
     pub const fn sai2_stop_ack(&self) -> super::vals::Sai2StopAck {
         let val = (self.0 >> 22usize) & 0x01;
         super::vals::Sai2StopAck::from_bits(val as u8)
     }
-    #[doc = "SAI2 stop acknowledge"]
+    #[doc = "SAI2 stop acknowledge."]
     #[inline(always)]
     pub const fn set_sai2_stop_ack(&mut self, val: super::vals::Sai2StopAck) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
     }
-    #[doc = "SAI3 stop acknowledge"]
+    #[doc = "SAI3 stop acknowledge."]
     #[must_use]
     #[inline(always)]
     pub const fn sai3_stop_ack(&self) -> super::vals::Sai3StopAck {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::Sai3StopAck::from_bits(val as u8)
     }
-    #[doc = "SAI3 stop acknowledge"]
+    #[doc = "SAI3 stop acknowledge."]
     #[inline(always)]
     pub const fn set_sai3_stop_ack(&mut self, val: super::vals::Sai3StopAck) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
@@ -2660,86 +2660,86 @@ impl Gpr4 {
     pub const fn set_enet2_stop_ack(&mut self, val: super::vals::Enet2StopAck) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
     }
-    #[doc = "SEMC stop acknowledge"]
+    #[doc = "SEMC stop acknowledge."]
     #[must_use]
     #[inline(always)]
     pub const fn semc_stop_ack(&self) -> super::vals::SemcStopAck {
         let val = (self.0 >> 25usize) & 0x01;
         super::vals::SemcStopAck::from_bits(val as u8)
     }
-    #[doc = "SEMC stop acknowledge"]
+    #[doc = "SEMC stop acknowledge."]
     #[inline(always)]
     pub const fn set_semc_stop_ack(&mut self, val: super::vals::SemcStopAck) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val.to_bits() as u32) & 0x01) << 25usize);
     }
-    #[doc = "PIT stop acknowledge"]
+    #[doc = "PIT stop acknowledge."]
     #[must_use]
     #[inline(always)]
     pub const fn pit_stop_ack(&self) -> super::vals::PitStopAck {
         let val = (self.0 >> 26usize) & 0x01;
         super::vals::PitStopAck::from_bits(val as u8)
     }
-    #[doc = "PIT stop acknowledge"]
+    #[doc = "PIT stop acknowledge."]
     #[inline(always)]
     pub const fn set_pit_stop_ack(&mut self, val: super::vals::PitStopAck) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
     }
-    #[doc = "FLEXSPI stop acknowledge"]
+    #[doc = "FLEXSPI stop acknowledge."]
     #[must_use]
     #[inline(always)]
     pub const fn flexspi_stop_ack(&self) -> super::vals::FlexspiStopAck {
         let val = (self.0 >> 27usize) & 0x01;
         super::vals::FlexspiStopAck::from_bits(val as u8)
     }
-    #[doc = "FLEXSPI stop acknowledge"]
+    #[doc = "FLEXSPI stop acknowledge."]
     #[inline(always)]
     pub const fn set_flexspi_stop_ack(&mut self, val: super::vals::FlexspiStopAck) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val.to_bits() as u32) & 0x01) << 27usize);
     }
-    #[doc = "FLEXIO1 stop acknowledge"]
+    #[doc = "FLEXIO1 stop acknowledge."]
     #[must_use]
     #[inline(always)]
     pub const fn flexio1_stop_ack(&self) -> super::vals::Flexio1StopAck {
         let val = (self.0 >> 28usize) & 0x01;
         super::vals::Flexio1StopAck::from_bits(val as u8)
     }
-    #[doc = "FLEXIO1 stop acknowledge"]
+    #[doc = "FLEXIO1 stop acknowledge."]
     #[inline(always)]
     pub const fn set_flexio1_stop_ack(&mut self, val: super::vals::Flexio1StopAck) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
     }
-    #[doc = "FLEXIO2 stop acknowledge"]
+    #[doc = "FLEXIO2 stop acknowledge."]
     #[must_use]
     #[inline(always)]
     pub const fn flexio2_stop_ack(&self) -> super::vals::Flexio2StopAck {
         let val = (self.0 >> 29usize) & 0x01;
         super::vals::Flexio2StopAck::from_bits(val as u8)
     }
-    #[doc = "FLEXIO2 stop acknowledge"]
+    #[doc = "FLEXIO2 stop acknowledge."]
     #[inline(always)]
     pub const fn set_flexio2_stop_ack(&mut self, val: super::vals::Flexio2StopAck) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
-    #[doc = "On-platform FLEXIO3 stop acknowledge"]
+    #[doc = "On-platform FLEXIO3 stop acknowledge."]
     #[must_use]
     #[inline(always)]
     pub const fn flexio3_stop_ack(&self) -> super::vals::Flexio3StopAck {
         let val = (self.0 >> 30usize) & 0x01;
         super::vals::Flexio3StopAck::from_bits(val as u8)
     }
-    #[doc = "On-platform FLEXIO3 stop acknowledge"]
+    #[doc = "On-platform FLEXIO3 stop acknowledge."]
     #[inline(always)]
     pub const fn set_flexio3_stop_ack(&mut self, val: super::vals::Flexio3StopAck) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
-    #[doc = "FLEXSPI2 stop acknowledge"]
+    #[doc = "FLEXSPI2 stop acknowledge."]
     #[must_use]
     #[inline(always)]
     pub const fn flexspi2_stop_ack(&self) -> super::vals::Flexspi2StopAck {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::Flexspi2StopAck::from_bits(val as u8)
     }
-    #[doc = "FLEXSPI2 stop acknowledge"]
+    #[doc = "FLEXSPI2 stop acknowledge."]
     #[inline(always)]
     pub const fn set_flexspi2_stop_ack(&mut self, val: super::vals::Flexspi2StopAck) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -2830,103 +2830,103 @@ impl defmt::Format for Gpr4 {
         )
     }
 }
-#[doc = "GPR5 General Purpose Register"]
+#[doc = "GPR5 General Purpose Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpr5(pub u32);
 impl Gpr5 {
-    #[doc = "WDOG1 Timeout Mask"]
+    #[doc = "WDOG1 Timeout Mask."]
     #[must_use]
     #[inline(always)]
     pub const fn wdog1_mask(&self) -> super::vals::Wdog1Mask {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::Wdog1Mask::from_bits(val as u8)
     }
-    #[doc = "WDOG1 Timeout Mask"]
+    #[doc = "WDOG1 Timeout Mask."]
     #[inline(always)]
     pub const fn set_wdog1_mask(&mut self, val: super::vals::Wdog1Mask) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "WDOG2 Timeout Mask"]
+    #[doc = "WDOG2 Timeout Mask."]
     #[must_use]
     #[inline(always)]
     pub const fn wdog2_mask(&self) -> super::vals::Wdog2Mask {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Wdog2Mask::from_bits(val as u8)
     }
-    #[doc = "WDOG2 Timeout Mask"]
+    #[doc = "WDOG2 Timeout Mask."]
     #[inline(always)]
     pub const fn set_wdog2_mask(&mut self, val: super::vals::Wdog2Mask) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "GPT2 input capture channel 1 source select"]
+    #[doc = "GPT2 input capture channel 1 source select."]
     #[must_use]
     #[inline(always)]
     pub const fn gpt2_capin1_sel(&self) -> super::vals::Gpt2Capin1Sel {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::Gpt2Capin1Sel::from_bits(val as u8)
     }
-    #[doc = "GPT2 input capture channel 1 source select"]
+    #[doc = "GPT2 input capture channel 1 source select."]
     #[inline(always)]
     pub const fn set_gpt2_capin1_sel(&mut self, val: super::vals::Gpt2Capin1Sel) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
     }
-    #[doc = "GPT2 input capture channel 2 source select"]
+    #[doc = "GPT2 input capture channel 2 source select."]
     #[must_use]
     #[inline(always)]
     pub const fn gpt2_capin2_sel(&self) -> super::vals::Gpt2Capin2Sel {
         let val = (self.0 >> 24usize) & 0x01;
         super::vals::Gpt2Capin2Sel::from_bits(val as u8)
     }
-    #[doc = "GPT2 input capture channel 2 source select"]
+    #[doc = "GPT2 input capture channel 2 source select."]
     #[inline(always)]
     pub const fn set_gpt2_capin2_sel(&mut self, val: super::vals::Gpt2Capin2Sel) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
     }
-    #[doc = "ENET input timer event3 source select"]
+    #[doc = "ENET input timer event3 source select."]
     #[must_use]
     #[inline(always)]
     pub const fn enet_event3in_sel(&self) -> super::vals::EnetEvent3inSel {
         let val = (self.0 >> 25usize) & 0x01;
         super::vals::EnetEvent3inSel::from_bits(val as u8)
     }
-    #[doc = "ENET input timer event3 source select"]
+    #[doc = "ENET input timer event3 source select."]
     #[inline(always)]
     pub const fn set_enet_event3in_sel(&mut self, val: super::vals::EnetEvent3inSel) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val.to_bits() as u32) & 0x01) << 25usize);
     }
-    #[doc = "ENET2 input timer event3 source select"]
+    #[doc = "ENET2 input timer event3 source select."]
     #[must_use]
     #[inline(always)]
     pub const fn enet2_event3in_sel(&self) -> super::vals::Enet2Event3inSel {
         let val = (self.0 >> 26usize) & 0x01;
         super::vals::Enet2Event3inSel::from_bits(val as u8)
     }
-    #[doc = "ENET2 input timer event3 source select"]
+    #[doc = "ENET2 input timer event3 source select."]
     #[inline(always)]
     pub const fn set_enet2_event3in_sel(&mut self, val: super::vals::Enet2Event3inSel) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
     }
-    #[doc = "GPT1 1 MHz clock source select"]
+    #[doc = "GPT1 1 MHz clock source select."]
     #[must_use]
     #[inline(always)]
     pub const fn vref_1m_clk_gpt1(&self) -> super::vals::Vref1mClkGpt1 {
         let val = (self.0 >> 28usize) & 0x01;
         super::vals::Vref1mClkGpt1::from_bits(val as u8)
     }
-    #[doc = "GPT1 1 MHz clock source select"]
+    #[doc = "GPT1 1 MHz clock source select."]
     #[inline(always)]
     pub const fn set_vref_1m_clk_gpt1(&mut self, val: super::vals::Vref1mClkGpt1) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
     }
-    #[doc = "GPT2 1 MHz clock source select"]
+    #[doc = "GPT2 1 MHz clock source select."]
     #[must_use]
     #[inline(always)]
     pub const fn vref_1m_clk_gpt2(&self) -> super::vals::Vref1mClkGpt2 {
         let val = (self.0 >> 29usize) & 0x01;
         super::vals::Vref1mClkGpt2::from_bits(val as u8)
     }
-    #[doc = "GPT2 1 MHz clock source select"]
+    #[doc = "GPT2 1 MHz clock source select."]
     #[inline(always)]
     pub const fn set_vref_1m_clk_gpt2(&mut self, val: super::vals::Vref1mClkGpt2) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
@@ -2969,391 +2969,391 @@ impl defmt::Format for Gpr5 {
         )
     }
 }
-#[doc = "GPR6 General Purpose Register"]
+#[doc = "GPR6 General Purpose Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpr6(pub u32);
 impl Gpr6 {
-    #[doc = "QTIMER1 TMR0 input select"]
+    #[doc = "QTIMER1 TMR0 input select."]
     #[must_use]
     #[inline(always)]
     pub const fn qtimer1_trm0_input_sel(&self) -> super::vals::Qtimer1Trm0InputSel {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Qtimer1Trm0InputSel::from_bits(val as u8)
     }
-    #[doc = "QTIMER1 TMR0 input select"]
+    #[doc = "QTIMER1 TMR0 input select."]
     #[inline(always)]
     pub const fn set_qtimer1_trm0_input_sel(&mut self, val: super::vals::Qtimer1Trm0InputSel) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "QTIMER1 TMR1 input select"]
+    #[doc = "QTIMER1 TMR1 input select."]
     #[must_use]
     #[inline(always)]
     pub const fn qtimer1_trm1_input_sel(&self) -> super::vals::Qtimer1Trm1InputSel {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Qtimer1Trm1InputSel::from_bits(val as u8)
     }
-    #[doc = "QTIMER1 TMR1 input select"]
+    #[doc = "QTIMER1 TMR1 input select."]
     #[inline(always)]
     pub const fn set_qtimer1_trm1_input_sel(&mut self, val: super::vals::Qtimer1Trm1InputSel) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "QTIMER1 TMR2 input select"]
+    #[doc = "QTIMER1 TMR2 input select."]
     #[must_use]
     #[inline(always)]
     pub const fn qtimer1_trm2_input_sel(&self) -> super::vals::Qtimer1Trm2InputSel {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Qtimer1Trm2InputSel::from_bits(val as u8)
     }
-    #[doc = "QTIMER1 TMR2 input select"]
+    #[doc = "QTIMER1 TMR2 input select."]
     #[inline(always)]
     pub const fn set_qtimer1_trm2_input_sel(&mut self, val: super::vals::Qtimer1Trm2InputSel) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "QTIMER1 TMR3 input select"]
+    #[doc = "QTIMER1 TMR3 input select."]
     #[must_use]
     #[inline(always)]
     pub const fn qtimer1_trm3_input_sel(&self) -> super::vals::Qtimer1Trm3InputSel {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Qtimer1Trm3InputSel::from_bits(val as u8)
     }
-    #[doc = "QTIMER1 TMR3 input select"]
+    #[doc = "QTIMER1 TMR3 input select."]
     #[inline(always)]
     pub const fn set_qtimer1_trm3_input_sel(&mut self, val: super::vals::Qtimer1Trm3InputSel) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "QTIMER2 TMR0 input select"]
+    #[doc = "QTIMER2 TMR0 input select."]
     #[must_use]
     #[inline(always)]
     pub const fn qtimer2_trm0_input_sel(&self) -> super::vals::Qtimer2Trm0InputSel {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::Qtimer2Trm0InputSel::from_bits(val as u8)
     }
-    #[doc = "QTIMER2 TMR0 input select"]
+    #[doc = "QTIMER2 TMR0 input select."]
     #[inline(always)]
     pub const fn set_qtimer2_trm0_input_sel(&mut self, val: super::vals::Qtimer2Trm0InputSel) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
-    #[doc = "QTIMER2 TMR1 input select"]
+    #[doc = "QTIMER2 TMR1 input select."]
     #[must_use]
     #[inline(always)]
     pub const fn qtimer2_trm1_input_sel(&self) -> super::vals::Qtimer2Trm1InputSel {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::Qtimer2Trm1InputSel::from_bits(val as u8)
     }
-    #[doc = "QTIMER2 TMR1 input select"]
+    #[doc = "QTIMER2 TMR1 input select."]
     #[inline(always)]
     pub const fn set_qtimer2_trm1_input_sel(&mut self, val: super::vals::Qtimer2Trm1InputSel) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
-    #[doc = "QTIMER2 TMR2 input select"]
+    #[doc = "QTIMER2 TMR2 input select."]
     #[must_use]
     #[inline(always)]
     pub const fn qtimer2_trm2_input_sel(&self) -> super::vals::Qtimer2Trm2InputSel {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::Qtimer2Trm2InputSel::from_bits(val as u8)
     }
-    #[doc = "QTIMER2 TMR2 input select"]
+    #[doc = "QTIMER2 TMR2 input select."]
     #[inline(always)]
     pub const fn set_qtimer2_trm2_input_sel(&mut self, val: super::vals::Qtimer2Trm2InputSel) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "QTIMER2 TMR3 input select"]
+    #[doc = "QTIMER2 TMR3 input select."]
     #[must_use]
     #[inline(always)]
     pub const fn qtimer2_trm3_input_sel(&self) -> super::vals::Qtimer2Trm3InputSel {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Qtimer2Trm3InputSel::from_bits(val as u8)
     }
-    #[doc = "QTIMER2 TMR3 input select"]
+    #[doc = "QTIMER2 TMR3 input select."]
     #[inline(always)]
     pub const fn set_qtimer2_trm3_input_sel(&mut self, val: super::vals::Qtimer2Trm3InputSel) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "QTIMER3 TMR0 input select"]
+    #[doc = "QTIMER3 TMR0 input select."]
     #[must_use]
     #[inline(always)]
     pub const fn qtimer3_trm0_input_sel(&self) -> super::vals::Qtimer3Trm0InputSel {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::Qtimer3Trm0InputSel::from_bits(val as u8)
     }
-    #[doc = "QTIMER3 TMR0 input select"]
+    #[doc = "QTIMER3 TMR0 input select."]
     #[inline(always)]
     pub const fn set_qtimer3_trm0_input_sel(&mut self, val: super::vals::Qtimer3Trm0InputSel) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
-    #[doc = "QTIMER3 TMR1 input select"]
+    #[doc = "QTIMER3 TMR1 input select."]
     #[must_use]
     #[inline(always)]
     pub const fn qtimer3_trm1_input_sel(&self) -> super::vals::Qtimer3Trm1InputSel {
         let val = (self.0 >> 9usize) & 0x01;
         super::vals::Qtimer3Trm1InputSel::from_bits(val as u8)
     }
-    #[doc = "QTIMER3 TMR1 input select"]
+    #[doc = "QTIMER3 TMR1 input select."]
     #[inline(always)]
     pub const fn set_qtimer3_trm1_input_sel(&mut self, val: super::vals::Qtimer3Trm1InputSel) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
     }
-    #[doc = "QTIMER3 TMR2 input select"]
+    #[doc = "QTIMER3 TMR2 input select."]
     #[must_use]
     #[inline(always)]
     pub const fn qtimer3_trm2_input_sel(&self) -> super::vals::Qtimer3Trm2InputSel {
         let val = (self.0 >> 10usize) & 0x01;
         super::vals::Qtimer3Trm2InputSel::from_bits(val as u8)
     }
-    #[doc = "QTIMER3 TMR2 input select"]
+    #[doc = "QTIMER3 TMR2 input select."]
     #[inline(always)]
     pub const fn set_qtimer3_trm2_input_sel(&mut self, val: super::vals::Qtimer3Trm2InputSel) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
-    #[doc = "QTIMER3 TMR3 input select"]
+    #[doc = "QTIMER3 TMR3 input select."]
     #[must_use]
     #[inline(always)]
     pub const fn qtimer3_trm3_input_sel(&self) -> super::vals::Qtimer3Trm3InputSel {
         let val = (self.0 >> 11usize) & 0x01;
         super::vals::Qtimer3Trm3InputSel::from_bits(val as u8)
     }
-    #[doc = "QTIMER3 TMR3 input select"]
+    #[doc = "QTIMER3 TMR3 input select."]
     #[inline(always)]
     pub const fn set_qtimer3_trm3_input_sel(&mut self, val: super::vals::Qtimer3Trm3InputSel) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
     }
-    #[doc = "QTIMER4 TMR0 input select"]
+    #[doc = "QTIMER4 TMR0 input select."]
     #[must_use]
     #[inline(always)]
     pub const fn qtimer4_trm0_input_sel(&self) -> super::vals::Qtimer4Trm0InputSel {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Qtimer4Trm0InputSel::from_bits(val as u8)
     }
-    #[doc = "QTIMER4 TMR0 input select"]
+    #[doc = "QTIMER4 TMR0 input select."]
     #[inline(always)]
     pub const fn set_qtimer4_trm0_input_sel(&mut self, val: super::vals::Qtimer4Trm0InputSel) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "QTIMER4 TMR1 input select"]
+    #[doc = "QTIMER4 TMR1 input select."]
     #[must_use]
     #[inline(always)]
     pub const fn qtimer4_trm1_input_sel(&self) -> super::vals::Qtimer4Trm1InputSel {
         let val = (self.0 >> 13usize) & 0x01;
         super::vals::Qtimer4Trm1InputSel::from_bits(val as u8)
     }
-    #[doc = "QTIMER4 TMR1 input select"]
+    #[doc = "QTIMER4 TMR1 input select."]
     #[inline(always)]
     pub const fn set_qtimer4_trm1_input_sel(&mut self, val: super::vals::Qtimer4Trm1InputSel) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
-    #[doc = "QTIMER4 TMR2 input select"]
+    #[doc = "QTIMER4 TMR2 input select."]
     #[must_use]
     #[inline(always)]
     pub const fn qtimer4_trm2_input_sel(&self) -> super::vals::Qtimer4Trm2InputSel {
         let val = (self.0 >> 14usize) & 0x01;
         super::vals::Qtimer4Trm2InputSel::from_bits(val as u8)
     }
-    #[doc = "QTIMER4 TMR2 input select"]
+    #[doc = "QTIMER4 TMR2 input select."]
     #[inline(always)]
     pub const fn set_qtimer4_trm2_input_sel(&mut self, val: super::vals::Qtimer4Trm2InputSel) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
     }
-    #[doc = "QTIMER4 TMR3 input select"]
+    #[doc = "QTIMER4 TMR3 input select."]
     #[must_use]
     #[inline(always)]
     pub const fn qtimer4_trm3_input_sel(&self) -> super::vals::Qtimer4Trm3InputSel {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::Qtimer4Trm3InputSel::from_bits(val as u8)
     }
-    #[doc = "QTIMER4 TMR3 input select"]
+    #[doc = "QTIMER4 TMR3 input select."]
     #[inline(always)]
     pub const fn set_qtimer4_trm3_input_sel(&mut self, val: super::vals::Qtimer4Trm3InputSel) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "IOMUXC XBAR_INOUT4 function direction select"]
+    #[doc = "IOMUXC XBAR_INOUT4 function direction select."]
     #[must_use]
     #[inline(always)]
     pub const fn iomuxc_xbar_dir_sel_4(&self) -> super::vals::IomuxcXbarDirSel4 {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::IomuxcXbarDirSel4::from_bits(val as u8)
     }
-    #[doc = "IOMUXC XBAR_INOUT4 function direction select"]
+    #[doc = "IOMUXC XBAR_INOUT4 function direction select."]
     #[inline(always)]
     pub const fn set_iomuxc_xbar_dir_sel_4(&mut self, val: super::vals::IomuxcXbarDirSel4) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
     }
-    #[doc = "IOMUXC XBAR_INOUT5 function direction select"]
+    #[doc = "IOMUXC XBAR_INOUT5 function direction select."]
     #[must_use]
     #[inline(always)]
     pub const fn iomuxc_xbar_dir_sel_5(&self) -> super::vals::IomuxcXbarDirSel5 {
         let val = (self.0 >> 17usize) & 0x01;
         super::vals::IomuxcXbarDirSel5::from_bits(val as u8)
     }
-    #[doc = "IOMUXC XBAR_INOUT5 function direction select"]
+    #[doc = "IOMUXC XBAR_INOUT5 function direction select."]
     #[inline(always)]
     pub const fn set_iomuxc_xbar_dir_sel_5(&mut self, val: super::vals::IomuxcXbarDirSel5) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
     }
-    #[doc = "IOMUXC XBAR_INOUT6 function direction select"]
+    #[doc = "IOMUXC XBAR_INOUT6 function direction select."]
     #[must_use]
     #[inline(always)]
     pub const fn iomuxc_xbar_dir_sel_6(&self) -> super::vals::IomuxcXbarDirSel6 {
         let val = (self.0 >> 18usize) & 0x01;
         super::vals::IomuxcXbarDirSel6::from_bits(val as u8)
     }
-    #[doc = "IOMUXC XBAR_INOUT6 function direction select"]
+    #[doc = "IOMUXC XBAR_INOUT6 function direction select."]
     #[inline(always)]
     pub const fn set_iomuxc_xbar_dir_sel_6(&mut self, val: super::vals::IomuxcXbarDirSel6) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val.to_bits() as u32) & 0x01) << 18usize);
     }
-    #[doc = "IOMUXC XBAR_INOUT7 function direction select"]
+    #[doc = "IOMUXC XBAR_INOUT7 function direction select."]
     #[must_use]
     #[inline(always)]
     pub const fn iomuxc_xbar_dir_sel_7(&self) -> super::vals::IomuxcXbarDirSel7 {
         let val = (self.0 >> 19usize) & 0x01;
         super::vals::IomuxcXbarDirSel7::from_bits(val as u8)
     }
-    #[doc = "IOMUXC XBAR_INOUT7 function direction select"]
+    #[doc = "IOMUXC XBAR_INOUT7 function direction select."]
     #[inline(always)]
     pub const fn set_iomuxc_xbar_dir_sel_7(&mut self, val: super::vals::IomuxcXbarDirSel7) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val.to_bits() as u32) & 0x01) << 19usize);
     }
-    #[doc = "IOMUXC XBAR_INOUT8 function direction select"]
+    #[doc = "IOMUXC XBAR_INOUT8 function direction select."]
     #[must_use]
     #[inline(always)]
     pub const fn iomuxc_xbar_dir_sel_8(&self) -> super::vals::IomuxcXbarDirSel8 {
         let val = (self.0 >> 20usize) & 0x01;
         super::vals::IomuxcXbarDirSel8::from_bits(val as u8)
     }
-    #[doc = "IOMUXC XBAR_INOUT8 function direction select"]
+    #[doc = "IOMUXC XBAR_INOUT8 function direction select."]
     #[inline(always)]
     pub const fn set_iomuxc_xbar_dir_sel_8(&mut self, val: super::vals::IomuxcXbarDirSel8) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
     }
-    #[doc = "IOMUXC XBAR_INOUT9 function direction select"]
+    #[doc = "IOMUXC XBAR_INOUT9 function direction select."]
     #[must_use]
     #[inline(always)]
     pub const fn iomuxc_xbar_dir_sel_9(&self) -> super::vals::IomuxcXbarDirSel9 {
         let val = (self.0 >> 21usize) & 0x01;
         super::vals::IomuxcXbarDirSel9::from_bits(val as u8)
     }
-    #[doc = "IOMUXC XBAR_INOUT9 function direction select"]
+    #[doc = "IOMUXC XBAR_INOUT9 function direction select."]
     #[inline(always)]
     pub const fn set_iomuxc_xbar_dir_sel_9(&mut self, val: super::vals::IomuxcXbarDirSel9) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
     }
-    #[doc = "IOMUXC XBAR_INOUT10 function direction select"]
+    #[doc = "IOMUXC XBAR_INOUT10 function direction select."]
     #[must_use]
     #[inline(always)]
     pub const fn iomuxc_xbar_dir_sel_10(&self) -> super::vals::IomuxcXbarDirSel10 {
         let val = (self.0 >> 22usize) & 0x01;
         super::vals::IomuxcXbarDirSel10::from_bits(val as u8)
     }
-    #[doc = "IOMUXC XBAR_INOUT10 function direction select"]
+    #[doc = "IOMUXC XBAR_INOUT10 function direction select."]
     #[inline(always)]
     pub const fn set_iomuxc_xbar_dir_sel_10(&mut self, val: super::vals::IomuxcXbarDirSel10) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
     }
-    #[doc = "IOMUXC XBAR_INOUT11 function direction select"]
+    #[doc = "IOMUXC XBAR_INOUT11 function direction select."]
     #[must_use]
     #[inline(always)]
     pub const fn iomuxc_xbar_dir_sel_11(&self) -> super::vals::IomuxcXbarDirSel11 {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::IomuxcXbarDirSel11::from_bits(val as u8)
     }
-    #[doc = "IOMUXC XBAR_INOUT11 function direction select"]
+    #[doc = "IOMUXC XBAR_INOUT11 function direction select."]
     #[inline(always)]
     pub const fn set_iomuxc_xbar_dir_sel_11(&mut self, val: super::vals::IomuxcXbarDirSel11) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
     }
-    #[doc = "IOMUXC XBAR_INOUT12 function direction select"]
+    #[doc = "IOMUXC XBAR_INOUT12 function direction select."]
     #[must_use]
     #[inline(always)]
     pub const fn iomuxc_xbar_dir_sel_12(&self) -> super::vals::IomuxcXbarDirSel12 {
         let val = (self.0 >> 24usize) & 0x01;
         super::vals::IomuxcXbarDirSel12::from_bits(val as u8)
     }
-    #[doc = "IOMUXC XBAR_INOUT12 function direction select"]
+    #[doc = "IOMUXC XBAR_INOUT12 function direction select."]
     #[inline(always)]
     pub const fn set_iomuxc_xbar_dir_sel_12(&mut self, val: super::vals::IomuxcXbarDirSel12) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
     }
-    #[doc = "IOMUXC XBAR_INOUT13 function direction select"]
+    #[doc = "IOMUXC XBAR_INOUT13 function direction select."]
     #[must_use]
     #[inline(always)]
     pub const fn iomuxc_xbar_dir_sel_13(&self) -> super::vals::IomuxcXbarDirSel13 {
         let val = (self.0 >> 25usize) & 0x01;
         super::vals::IomuxcXbarDirSel13::from_bits(val as u8)
     }
-    #[doc = "IOMUXC XBAR_INOUT13 function direction select"]
+    #[doc = "IOMUXC XBAR_INOUT13 function direction select."]
     #[inline(always)]
     pub const fn set_iomuxc_xbar_dir_sel_13(&mut self, val: super::vals::IomuxcXbarDirSel13) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val.to_bits() as u32) & 0x01) << 25usize);
     }
-    #[doc = "IOMUXC XBAR_INOUT14 function direction select"]
+    #[doc = "IOMUXC XBAR_INOUT14 function direction select."]
     #[must_use]
     #[inline(always)]
     pub const fn iomuxc_xbar_dir_sel_14(&self) -> super::vals::IomuxcXbarDirSel14 {
         let val = (self.0 >> 26usize) & 0x01;
         super::vals::IomuxcXbarDirSel14::from_bits(val as u8)
     }
-    #[doc = "IOMUXC XBAR_INOUT14 function direction select"]
+    #[doc = "IOMUXC XBAR_INOUT14 function direction select."]
     #[inline(always)]
     pub const fn set_iomuxc_xbar_dir_sel_14(&mut self, val: super::vals::IomuxcXbarDirSel14) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
     }
-    #[doc = "IOMUXC XBAR_INOUT15 function direction select"]
+    #[doc = "IOMUXC XBAR_INOUT15 function direction select."]
     #[must_use]
     #[inline(always)]
     pub const fn iomuxc_xbar_dir_sel_15(&self) -> super::vals::IomuxcXbarDirSel15 {
         let val = (self.0 >> 27usize) & 0x01;
         super::vals::IomuxcXbarDirSel15::from_bits(val as u8)
     }
-    #[doc = "IOMUXC XBAR_INOUT15 function direction select"]
+    #[doc = "IOMUXC XBAR_INOUT15 function direction select."]
     #[inline(always)]
     pub const fn set_iomuxc_xbar_dir_sel_15(&mut self, val: super::vals::IomuxcXbarDirSel15) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val.to_bits() as u32) & 0x01) << 27usize);
     }
-    #[doc = "IOMUXC XBAR_INOUT16 function direction select"]
+    #[doc = "IOMUXC XBAR_INOUT16 function direction select."]
     #[must_use]
     #[inline(always)]
     pub const fn iomuxc_xbar_dir_sel_16(&self) -> super::vals::IomuxcXbarDirSel16 {
         let val = (self.0 >> 28usize) & 0x01;
         super::vals::IomuxcXbarDirSel16::from_bits(val as u8)
     }
-    #[doc = "IOMUXC XBAR_INOUT16 function direction select"]
+    #[doc = "IOMUXC XBAR_INOUT16 function direction select."]
     #[inline(always)]
     pub const fn set_iomuxc_xbar_dir_sel_16(&mut self, val: super::vals::IomuxcXbarDirSel16) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
     }
-    #[doc = "IOMUXC XBAR_INOUT17 function direction select"]
+    #[doc = "IOMUXC XBAR_INOUT17 function direction select."]
     #[must_use]
     #[inline(always)]
     pub const fn iomuxc_xbar_dir_sel_17(&self) -> super::vals::IomuxcXbarDirSel17 {
         let val = (self.0 >> 29usize) & 0x01;
         super::vals::IomuxcXbarDirSel17::from_bits(val as u8)
     }
-    #[doc = "IOMUXC XBAR_INOUT17 function direction select"]
+    #[doc = "IOMUXC XBAR_INOUT17 function direction select."]
     #[inline(always)]
     pub const fn set_iomuxc_xbar_dir_sel_17(&mut self, val: super::vals::IomuxcXbarDirSel17) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
-    #[doc = "IOMUXC XBAR_INOUT18 function direction select"]
+    #[doc = "IOMUXC XBAR_INOUT18 function direction select."]
     #[must_use]
     #[inline(always)]
     pub const fn iomuxc_xbar_dir_sel_18(&self) -> super::vals::IomuxcXbarDirSel18 {
         let val = (self.0 >> 30usize) & 0x01;
         super::vals::IomuxcXbarDirSel18::from_bits(val as u8)
     }
-    #[doc = "IOMUXC XBAR_INOUT18 function direction select"]
+    #[doc = "IOMUXC XBAR_INOUT18 function direction select."]
     #[inline(always)]
     pub const fn set_iomuxc_xbar_dir_sel_18(&mut self, val: super::vals::IomuxcXbarDirSel18) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
-    #[doc = "IOMUXC XBAR_INOUT19 function direction select"]
+    #[doc = "IOMUXC XBAR_INOUT19 function direction select."]
     #[must_use]
     #[inline(always)]
     pub const fn iomuxc_xbar_dir_sel_19(&self) -> super::vals::IomuxcXbarDirSel19 {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::IomuxcXbarDirSel19::from_bits(val as u8)
     }
-    #[doc = "IOMUXC XBAR_INOUT19 function direction select"]
+    #[doc = "IOMUXC XBAR_INOUT19 function direction select."]
     #[inline(always)]
     pub const fn set_iomuxc_xbar_dir_sel_19(&mut self, val: super::vals::IomuxcXbarDirSel19) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -3444,391 +3444,391 @@ impl defmt::Format for Gpr6 {
         )
     }
 }
-#[doc = "GPR7 General Purpose Register"]
+#[doc = "GPR7 General Purpose Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpr7(pub u32);
 impl Gpr7 {
-    #[doc = "LPI2C1 stop request"]
+    #[doc = "LPI2C1 stop request."]
     #[must_use]
     #[inline(always)]
     pub const fn lpi2c1_stop_req(&self) -> super::vals::Lpi2c1StopReq {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Lpi2c1StopReq::from_bits(val as u8)
     }
-    #[doc = "LPI2C1 stop request"]
+    #[doc = "LPI2C1 stop request."]
     #[inline(always)]
     pub const fn set_lpi2c1_stop_req(&mut self, val: super::vals::Lpi2c1StopReq) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "LPI2C2 stop request"]
+    #[doc = "LPI2C2 stop request."]
     #[must_use]
     #[inline(always)]
     pub const fn lpi2c2_stop_req(&self) -> super::vals::Lpi2c2StopReq {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Lpi2c2StopReq::from_bits(val as u8)
     }
-    #[doc = "LPI2C2 stop request"]
+    #[doc = "LPI2C2 stop request."]
     #[inline(always)]
     pub const fn set_lpi2c2_stop_req(&mut self, val: super::vals::Lpi2c2StopReq) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "LPI2C3 stop request"]
+    #[doc = "LPI2C3 stop request."]
     #[must_use]
     #[inline(always)]
     pub const fn lpi2c3_stop_req(&self) -> super::vals::Lpi2c3StopReq {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Lpi2c3StopReq::from_bits(val as u8)
     }
-    #[doc = "LPI2C3 stop request"]
+    #[doc = "LPI2C3 stop request."]
     #[inline(always)]
     pub const fn set_lpi2c3_stop_req(&mut self, val: super::vals::Lpi2c3StopReq) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "LPI2C4 stop request"]
+    #[doc = "LPI2C4 stop request."]
     #[must_use]
     #[inline(always)]
     pub const fn lpi2c4_stop_req(&self) -> super::vals::Lpi2c4StopReq {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Lpi2c4StopReq::from_bits(val as u8)
     }
-    #[doc = "LPI2C4 stop request"]
+    #[doc = "LPI2C4 stop request."]
     #[inline(always)]
     pub const fn set_lpi2c4_stop_req(&mut self, val: super::vals::Lpi2c4StopReq) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "LPSPI1 stop request"]
+    #[doc = "LPSPI1 stop request."]
     #[must_use]
     #[inline(always)]
     pub const fn lpspi1_stop_req(&self) -> super::vals::Lpspi1StopReq {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::Lpspi1StopReq::from_bits(val as u8)
     }
-    #[doc = "LPSPI1 stop request"]
+    #[doc = "LPSPI1 stop request."]
     #[inline(always)]
     pub const fn set_lpspi1_stop_req(&mut self, val: super::vals::Lpspi1StopReq) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
-    #[doc = "LPSPI2 stop request"]
+    #[doc = "LPSPI2 stop request."]
     #[must_use]
     #[inline(always)]
     pub const fn lpspi2_stop_req(&self) -> super::vals::Lpspi2StopReq {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::Lpspi2StopReq::from_bits(val as u8)
     }
-    #[doc = "LPSPI2 stop request"]
+    #[doc = "LPSPI2 stop request."]
     #[inline(always)]
     pub const fn set_lpspi2_stop_req(&mut self, val: super::vals::Lpspi2StopReq) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
-    #[doc = "LPSPI3 stop request"]
+    #[doc = "LPSPI3 stop request."]
     #[must_use]
     #[inline(always)]
     pub const fn lpspi3_stop_req(&self) -> super::vals::Lpspi3StopReq {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::Lpspi3StopReq::from_bits(val as u8)
     }
-    #[doc = "LPSPI3 stop request"]
+    #[doc = "LPSPI3 stop request."]
     #[inline(always)]
     pub const fn set_lpspi3_stop_req(&mut self, val: super::vals::Lpspi3StopReq) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "LPSPI4 stop request"]
+    #[doc = "LPSPI4 stop request."]
     #[must_use]
     #[inline(always)]
     pub const fn lpspi4_stop_req(&self) -> super::vals::Lpspi4StopReq {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Lpspi4StopReq::from_bits(val as u8)
     }
-    #[doc = "LPSPI4 stop request"]
+    #[doc = "LPSPI4 stop request."]
     #[inline(always)]
     pub const fn set_lpspi4_stop_req(&mut self, val: super::vals::Lpspi4StopReq) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "LPUART1 stop request"]
+    #[doc = "LPUART1 stop request."]
     #[must_use]
     #[inline(always)]
     pub const fn lpuart1_stop_req(&self) -> super::vals::Lpuart1StopReq {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::Lpuart1StopReq::from_bits(val as u8)
     }
-    #[doc = "LPUART1 stop request"]
+    #[doc = "LPUART1 stop request."]
     #[inline(always)]
     pub const fn set_lpuart1_stop_req(&mut self, val: super::vals::Lpuart1StopReq) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
-    #[doc = "LPUART1 stop request"]
+    #[doc = "LPUART1 stop request."]
     #[must_use]
     #[inline(always)]
     pub const fn lpuart2_stop_req(&self) -> super::vals::Lpuart2StopReq {
         let val = (self.0 >> 9usize) & 0x01;
         super::vals::Lpuart2StopReq::from_bits(val as u8)
     }
-    #[doc = "LPUART1 stop request"]
+    #[doc = "LPUART1 stop request."]
     #[inline(always)]
     pub const fn set_lpuart2_stop_req(&mut self, val: super::vals::Lpuart2StopReq) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
     }
-    #[doc = "LPUART3 stop request"]
+    #[doc = "LPUART3 stop request."]
     #[must_use]
     #[inline(always)]
     pub const fn lpuart3_stop_req(&self) -> super::vals::Lpuart3StopReq {
         let val = (self.0 >> 10usize) & 0x01;
         super::vals::Lpuart3StopReq::from_bits(val as u8)
     }
-    #[doc = "LPUART3 stop request"]
+    #[doc = "LPUART3 stop request."]
     #[inline(always)]
     pub const fn set_lpuart3_stop_req(&mut self, val: super::vals::Lpuart3StopReq) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
-    #[doc = "LPUART4 stop request"]
+    #[doc = "LPUART4 stop request."]
     #[must_use]
     #[inline(always)]
     pub const fn lpuart4_stop_req(&self) -> super::vals::Lpuart4StopReq {
         let val = (self.0 >> 11usize) & 0x01;
         super::vals::Lpuart4StopReq::from_bits(val as u8)
     }
-    #[doc = "LPUART4 stop request"]
+    #[doc = "LPUART4 stop request."]
     #[inline(always)]
     pub const fn set_lpuart4_stop_req(&mut self, val: super::vals::Lpuart4StopReq) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
     }
-    #[doc = "LPUART5 stop request"]
+    #[doc = "LPUART5 stop request."]
     #[must_use]
     #[inline(always)]
     pub const fn lpuart5_stop_req(&self) -> super::vals::Lpuart5StopReq {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Lpuart5StopReq::from_bits(val as u8)
     }
-    #[doc = "LPUART5 stop request"]
+    #[doc = "LPUART5 stop request."]
     #[inline(always)]
     pub const fn set_lpuart5_stop_req(&mut self, val: super::vals::Lpuart5StopReq) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "LPUART6 stop request"]
+    #[doc = "LPUART6 stop request."]
     #[must_use]
     #[inline(always)]
     pub const fn lpuart6_stop_req(&self) -> super::vals::Lpuart6StopReq {
         let val = (self.0 >> 13usize) & 0x01;
         super::vals::Lpuart6StopReq::from_bits(val as u8)
     }
-    #[doc = "LPUART6 stop request"]
+    #[doc = "LPUART6 stop request."]
     #[inline(always)]
     pub const fn set_lpuart6_stop_req(&mut self, val: super::vals::Lpuart6StopReq) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
-    #[doc = "LPUART7 stop request"]
+    #[doc = "LPUART7 stop request."]
     #[must_use]
     #[inline(always)]
     pub const fn lpuart7_stop_req(&self) -> super::vals::Lpuart7StopReq {
         let val = (self.0 >> 14usize) & 0x01;
         super::vals::Lpuart7StopReq::from_bits(val as u8)
     }
-    #[doc = "LPUART7 stop request"]
+    #[doc = "LPUART7 stop request."]
     #[inline(always)]
     pub const fn set_lpuart7_stop_req(&mut self, val: super::vals::Lpuart7StopReq) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
     }
-    #[doc = "LPUART8 stop request"]
+    #[doc = "LPUART8 stop request."]
     #[must_use]
     #[inline(always)]
     pub const fn lpuart8_stop_req(&self) -> super::vals::Lpuart8StopReq {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::Lpuart8StopReq::from_bits(val as u8)
     }
-    #[doc = "LPUART8 stop request"]
+    #[doc = "LPUART8 stop request."]
     #[inline(always)]
     pub const fn set_lpuart8_stop_req(&mut self, val: super::vals::Lpuart8StopReq) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "LPI2C1 stop acknowledge"]
+    #[doc = "LPI2C1 stop acknowledge."]
     #[must_use]
     #[inline(always)]
     pub const fn lpi2c1_stop_ack(&self) -> super::vals::Lpi2c1StopAck {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::Lpi2c1StopAck::from_bits(val as u8)
     }
-    #[doc = "LPI2C1 stop acknowledge"]
+    #[doc = "LPI2C1 stop acknowledge."]
     #[inline(always)]
     pub const fn set_lpi2c1_stop_ack(&mut self, val: super::vals::Lpi2c1StopAck) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
     }
-    #[doc = "LPI2C2 stop acknowledge"]
+    #[doc = "LPI2C2 stop acknowledge."]
     #[must_use]
     #[inline(always)]
     pub const fn lpi2c2_stop_ack(&self) -> super::vals::Lpi2c2StopAck {
         let val = (self.0 >> 17usize) & 0x01;
         super::vals::Lpi2c2StopAck::from_bits(val as u8)
     }
-    #[doc = "LPI2C2 stop acknowledge"]
+    #[doc = "LPI2C2 stop acknowledge."]
     #[inline(always)]
     pub const fn set_lpi2c2_stop_ack(&mut self, val: super::vals::Lpi2c2StopAck) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
     }
-    #[doc = "LPI2C3 stop acknowledge"]
+    #[doc = "LPI2C3 stop acknowledge."]
     #[must_use]
     #[inline(always)]
     pub const fn lpi2c3_stop_ack(&self) -> super::vals::Lpi2c3StopAck {
         let val = (self.0 >> 18usize) & 0x01;
         super::vals::Lpi2c3StopAck::from_bits(val as u8)
     }
-    #[doc = "LPI2C3 stop acknowledge"]
+    #[doc = "LPI2C3 stop acknowledge."]
     #[inline(always)]
     pub const fn set_lpi2c3_stop_ack(&mut self, val: super::vals::Lpi2c3StopAck) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val.to_bits() as u32) & 0x01) << 18usize);
     }
-    #[doc = "LPI2C4 stop acknowledge"]
+    #[doc = "LPI2C4 stop acknowledge."]
     #[must_use]
     #[inline(always)]
     pub const fn lpi2c4_stop_ack(&self) -> super::vals::Lpi2c4StopAck {
         let val = (self.0 >> 19usize) & 0x01;
         super::vals::Lpi2c4StopAck::from_bits(val as u8)
     }
-    #[doc = "LPI2C4 stop acknowledge"]
+    #[doc = "LPI2C4 stop acknowledge."]
     #[inline(always)]
     pub const fn set_lpi2c4_stop_ack(&mut self, val: super::vals::Lpi2c4StopAck) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val.to_bits() as u32) & 0x01) << 19usize);
     }
-    #[doc = "LPSPI1 stop acknowledge"]
+    #[doc = "LPSPI1 stop acknowledge."]
     #[must_use]
     #[inline(always)]
     pub const fn lpspi1_stop_ack(&self) -> super::vals::Lpspi1StopAck {
         let val = (self.0 >> 20usize) & 0x01;
         super::vals::Lpspi1StopAck::from_bits(val as u8)
     }
-    #[doc = "LPSPI1 stop acknowledge"]
+    #[doc = "LPSPI1 stop acknowledge."]
     #[inline(always)]
     pub const fn set_lpspi1_stop_ack(&mut self, val: super::vals::Lpspi1StopAck) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
     }
-    #[doc = "LPSPI2 stop acknowledge"]
+    #[doc = "LPSPI2 stop acknowledge."]
     #[must_use]
     #[inline(always)]
     pub const fn lpspi2_stop_ack(&self) -> super::vals::Lpspi2StopAck {
         let val = (self.0 >> 21usize) & 0x01;
         super::vals::Lpspi2StopAck::from_bits(val as u8)
     }
-    #[doc = "LPSPI2 stop acknowledge"]
+    #[doc = "LPSPI2 stop acknowledge."]
     #[inline(always)]
     pub const fn set_lpspi2_stop_ack(&mut self, val: super::vals::Lpspi2StopAck) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
     }
-    #[doc = "LPSPI3 stop acknowledge"]
+    #[doc = "LPSPI3 stop acknowledge."]
     #[must_use]
     #[inline(always)]
     pub const fn lpspi3_stop_ack(&self) -> super::vals::Lpspi3StopAck {
         let val = (self.0 >> 22usize) & 0x01;
         super::vals::Lpspi3StopAck::from_bits(val as u8)
     }
-    #[doc = "LPSPI3 stop acknowledge"]
+    #[doc = "LPSPI3 stop acknowledge."]
     #[inline(always)]
     pub const fn set_lpspi3_stop_ack(&mut self, val: super::vals::Lpspi3StopAck) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
     }
-    #[doc = "LPSPI4 stop acknowledge"]
+    #[doc = "LPSPI4 stop acknowledge."]
     #[must_use]
     #[inline(always)]
     pub const fn lpspi4_stop_ack(&self) -> super::vals::Lpspi4StopAck {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::Lpspi4StopAck::from_bits(val as u8)
     }
-    #[doc = "LPSPI4 stop acknowledge"]
+    #[doc = "LPSPI4 stop acknowledge."]
     #[inline(always)]
     pub const fn set_lpspi4_stop_ack(&mut self, val: super::vals::Lpspi4StopAck) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
     }
-    #[doc = "LPUART1 stop acknowledge"]
+    #[doc = "LPUART1 stop acknowledge."]
     #[must_use]
     #[inline(always)]
     pub const fn lpuart1_stop_ack(&self) -> super::vals::Lpuart1StopAck {
         let val = (self.0 >> 24usize) & 0x01;
         super::vals::Lpuart1StopAck::from_bits(val as u8)
     }
-    #[doc = "LPUART1 stop acknowledge"]
+    #[doc = "LPUART1 stop acknowledge."]
     #[inline(always)]
     pub const fn set_lpuart1_stop_ack(&mut self, val: super::vals::Lpuart1StopAck) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
     }
-    #[doc = "LPUART1 stop acknowledge"]
+    #[doc = "LPUART1 stop acknowledge."]
     #[must_use]
     #[inline(always)]
     pub const fn lpuart2_stop_ack(&self) -> super::vals::Lpuart2StopAck {
         let val = (self.0 >> 25usize) & 0x01;
         super::vals::Lpuart2StopAck::from_bits(val as u8)
     }
-    #[doc = "LPUART1 stop acknowledge"]
+    #[doc = "LPUART1 stop acknowledge."]
     #[inline(always)]
     pub const fn set_lpuart2_stop_ack(&mut self, val: super::vals::Lpuart2StopAck) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val.to_bits() as u32) & 0x01) << 25usize);
     }
-    #[doc = "LPUART3 stop acknowledge"]
+    #[doc = "LPUART3 stop acknowledge."]
     #[must_use]
     #[inline(always)]
     pub const fn lpuart3_stop_ack(&self) -> super::vals::Lpuart3StopAck {
         let val = (self.0 >> 26usize) & 0x01;
         super::vals::Lpuart3StopAck::from_bits(val as u8)
     }
-    #[doc = "LPUART3 stop acknowledge"]
+    #[doc = "LPUART3 stop acknowledge."]
     #[inline(always)]
     pub const fn set_lpuart3_stop_ack(&mut self, val: super::vals::Lpuart3StopAck) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
     }
-    #[doc = "LPUART4 stop acknowledge"]
+    #[doc = "LPUART4 stop acknowledge."]
     #[must_use]
     #[inline(always)]
     pub const fn lpuart4_stop_ack(&self) -> super::vals::Lpuart4StopAck {
         let val = (self.0 >> 27usize) & 0x01;
         super::vals::Lpuart4StopAck::from_bits(val as u8)
     }
-    #[doc = "LPUART4 stop acknowledge"]
+    #[doc = "LPUART4 stop acknowledge."]
     #[inline(always)]
     pub const fn set_lpuart4_stop_ack(&mut self, val: super::vals::Lpuart4StopAck) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val.to_bits() as u32) & 0x01) << 27usize);
     }
-    #[doc = "LPUART5 stop acknowledge"]
+    #[doc = "LPUART5 stop acknowledge."]
     #[must_use]
     #[inline(always)]
     pub const fn lpuart5_stop_ack(&self) -> super::vals::Lpuart5StopAck {
         let val = (self.0 >> 28usize) & 0x01;
         super::vals::Lpuart5StopAck::from_bits(val as u8)
     }
-    #[doc = "LPUART5 stop acknowledge"]
+    #[doc = "LPUART5 stop acknowledge."]
     #[inline(always)]
     pub const fn set_lpuart5_stop_ack(&mut self, val: super::vals::Lpuart5StopAck) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
     }
-    #[doc = "LPUART6 stop acknowledge"]
+    #[doc = "LPUART6 stop acknowledge."]
     #[must_use]
     #[inline(always)]
     pub const fn lpuart6_stop_ack(&self) -> super::vals::Lpuart6StopAck {
         let val = (self.0 >> 29usize) & 0x01;
         super::vals::Lpuart6StopAck::from_bits(val as u8)
     }
-    #[doc = "LPUART6 stop acknowledge"]
+    #[doc = "LPUART6 stop acknowledge."]
     #[inline(always)]
     pub const fn set_lpuart6_stop_ack(&mut self, val: super::vals::Lpuart6StopAck) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
-    #[doc = "LPUART7 stop acknowledge"]
+    #[doc = "LPUART7 stop acknowledge."]
     #[must_use]
     #[inline(always)]
     pub const fn lpuart7_stop_ack(&self) -> super::vals::Lpuart7StopAck {
         let val = (self.0 >> 30usize) & 0x01;
         super::vals::Lpuart7StopAck::from_bits(val as u8)
     }
-    #[doc = "LPUART7 stop acknowledge"]
+    #[doc = "LPUART7 stop acknowledge."]
     #[inline(always)]
     pub const fn set_lpuart7_stop_ack(&mut self, val: super::vals::Lpuart7StopAck) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
-    #[doc = "LPUART8 stop acknowledge"]
+    #[doc = "LPUART8 stop acknowledge."]
     #[must_use]
     #[inline(always)]
     pub const fn lpuart8_stop_ack(&self) -> super::vals::Lpuart8StopAck {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::Lpuart8StopAck::from_bits(val as u8)
     }
-    #[doc = "LPUART8 stop acknowledge"]
+    #[doc = "LPUART8 stop acknowledge."]
     #[inline(always)]
     pub const fn set_lpuart8_stop_ack(&mut self, val: super::vals::Lpuart8StopAck) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -3919,7 +3919,7 @@ impl defmt::Format for Gpr7 {
         )
     }
 }
-#[doc = "GPR8 General Purpose Register"]
+#[doc = "GPR8 General Purpose Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpr8(pub u32);
@@ -3936,14 +3936,14 @@ impl Gpr8 {
     pub const fn set_lpi2c1_ipg_stop_mode(&mut self, val: super::vals::Lpi2c1IpgStopMode) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "LPI2C1 ipg_doze mode"]
+    #[doc = "LPI2C1 ipg_doze mode."]
     #[must_use]
     #[inline(always)]
     pub const fn lpi2c1_ipg_doze(&self) -> super::vals::Lpi2c1IpgDoze {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Lpi2c1IpgDoze::from_bits(val as u8)
     }
-    #[doc = "LPI2C1 ipg_doze mode"]
+    #[doc = "LPI2C1 ipg_doze mode."]
     #[inline(always)]
     pub const fn set_lpi2c1_ipg_doze(&mut self, val: super::vals::Lpi2c1IpgDoze) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
@@ -3960,14 +3960,14 @@ impl Gpr8 {
     pub const fn set_lpi2c2_ipg_stop_mode(&mut self, val: super::vals::Lpi2c2IpgStopMode) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "LPI2C2 ipg_doze mode"]
+    #[doc = "LPI2C2 ipg_doze mode."]
     #[must_use]
     #[inline(always)]
     pub const fn lpi2c2_ipg_doze(&self) -> super::vals::Lpi2c2IpgDoze {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Lpi2c2IpgDoze::from_bits(val as u8)
     }
-    #[doc = "LPI2C2 ipg_doze mode"]
+    #[doc = "LPI2C2 ipg_doze mode."]
     #[inline(always)]
     pub const fn set_lpi2c2_ipg_doze(&mut self, val: super::vals::Lpi2c2IpgDoze) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
@@ -3984,14 +3984,14 @@ impl Gpr8 {
     pub const fn set_lpi2c3_ipg_stop_mode(&mut self, val: super::vals::Lpi2c3IpgStopMode) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
-    #[doc = "LPI2C3 ipg_doze mode"]
+    #[doc = "LPI2C3 ipg_doze mode."]
     #[must_use]
     #[inline(always)]
     pub const fn lpi2c3_ipg_doze(&self) -> super::vals::Lpi2c3IpgDoze {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::Lpi2c3IpgDoze::from_bits(val as u8)
     }
-    #[doc = "LPI2C3 ipg_doze mode"]
+    #[doc = "LPI2C3 ipg_doze mode."]
     #[inline(always)]
     pub const fn set_lpi2c3_ipg_doze(&mut self, val: super::vals::Lpi2c3IpgDoze) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
@@ -4008,14 +4008,14 @@ impl Gpr8 {
     pub const fn set_lpi2c4_ipg_stop_mode(&mut self, val: super::vals::Lpi2c4IpgStopMode) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "LPI2C4 ipg_doze mode"]
+    #[doc = "LPI2C4 ipg_doze mode."]
     #[must_use]
     #[inline(always)]
     pub const fn lpi2c4_ipg_doze(&self) -> super::vals::Lpi2c4IpgDoze {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Lpi2c4IpgDoze::from_bits(val as u8)
     }
-    #[doc = "LPI2C4 ipg_doze mode"]
+    #[doc = "LPI2C4 ipg_doze mode."]
     #[inline(always)]
     pub const fn set_lpi2c4_ipg_doze(&mut self, val: super::vals::Lpi2c4IpgDoze) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
@@ -4032,14 +4032,14 @@ impl Gpr8 {
     pub const fn set_lpspi1_ipg_stop_mode(&mut self, val: super::vals::Lpspi1IpgStopMode) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
-    #[doc = "LPSPI1 ipg_doze mode"]
+    #[doc = "LPSPI1 ipg_doze mode."]
     #[must_use]
     #[inline(always)]
     pub const fn lpspi1_ipg_doze(&self) -> super::vals::Lpspi1IpgDoze {
         let val = (self.0 >> 9usize) & 0x01;
         super::vals::Lpspi1IpgDoze::from_bits(val as u8)
     }
-    #[doc = "LPSPI1 ipg_doze mode"]
+    #[doc = "LPSPI1 ipg_doze mode."]
     #[inline(always)]
     pub const fn set_lpspi1_ipg_doze(&mut self, val: super::vals::Lpspi1IpgDoze) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
@@ -4056,14 +4056,14 @@ impl Gpr8 {
     pub const fn set_lpspi2_ipg_stop_mode(&mut self, val: super::vals::Lpspi2IpgStopMode) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
-    #[doc = "LPSPI2 ipg_doze mode"]
+    #[doc = "LPSPI2 ipg_doze mode."]
     #[must_use]
     #[inline(always)]
     pub const fn lpspi2_ipg_doze(&self) -> super::vals::Lpspi2IpgDoze {
         let val = (self.0 >> 11usize) & 0x01;
         super::vals::Lpspi2IpgDoze::from_bits(val as u8)
     }
-    #[doc = "LPSPI2 ipg_doze mode"]
+    #[doc = "LPSPI2 ipg_doze mode."]
     #[inline(always)]
     pub const fn set_lpspi2_ipg_doze(&mut self, val: super::vals::Lpspi2IpgDoze) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
@@ -4080,14 +4080,14 @@ impl Gpr8 {
     pub const fn set_lpspi3_ipg_stop_mode(&mut self, val: super::vals::Lpspi3IpgStopMode) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "LPSPI3 ipg_doze mode"]
+    #[doc = "LPSPI3 ipg_doze mode."]
     #[must_use]
     #[inline(always)]
     pub const fn lpspi3_ipg_doze(&self) -> super::vals::Lpspi3IpgDoze {
         let val = (self.0 >> 13usize) & 0x01;
         super::vals::Lpspi3IpgDoze::from_bits(val as u8)
     }
-    #[doc = "LPSPI3 ipg_doze mode"]
+    #[doc = "LPSPI3 ipg_doze mode."]
     #[inline(always)]
     pub const fn set_lpspi3_ipg_doze(&mut self, val: super::vals::Lpspi3IpgDoze) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
@@ -4104,14 +4104,14 @@ impl Gpr8 {
     pub const fn set_lpspi4_ipg_stop_mode(&mut self, val: super::vals::Lpspi4IpgStopMode) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
     }
-    #[doc = "LPSPI4 ipg_doze mode"]
+    #[doc = "LPSPI4 ipg_doze mode."]
     #[must_use]
     #[inline(always)]
     pub const fn lpspi4_ipg_doze(&self) -> super::vals::Lpspi4IpgDoze {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::Lpspi4IpgDoze::from_bits(val as u8)
     }
-    #[doc = "LPSPI4 ipg_doze mode"]
+    #[doc = "LPSPI4 ipg_doze mode."]
     #[inline(always)]
     pub const fn set_lpspi4_ipg_doze(&mut self, val: super::vals::Lpspi4IpgDoze) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
@@ -4128,14 +4128,14 @@ impl Gpr8 {
     pub const fn set_lpuart1_ipg_stop_mode(&mut self, val: super::vals::Lpuart1IpgStopMode) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
     }
-    #[doc = "LPUART1 ipg_doze mode"]
+    #[doc = "LPUART1 ipg_doze mode."]
     #[must_use]
     #[inline(always)]
     pub const fn lpuart1_ipg_doze(&self) -> super::vals::Lpuart1IpgDoze {
         let val = (self.0 >> 17usize) & 0x01;
         super::vals::Lpuart1IpgDoze::from_bits(val as u8)
     }
-    #[doc = "LPUART1 ipg_doze mode"]
+    #[doc = "LPUART1 ipg_doze mode."]
     #[inline(always)]
     pub const fn set_lpuart1_ipg_doze(&mut self, val: super::vals::Lpuart1IpgDoze) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
@@ -4152,14 +4152,14 @@ impl Gpr8 {
     pub const fn set_lpuart2_ipg_stop_mode(&mut self, val: super::vals::Lpuart2IpgStopMode) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val.to_bits() as u32) & 0x01) << 18usize);
     }
-    #[doc = "LPUART2 ipg_doze mode"]
+    #[doc = "LPUART2 ipg_doze mode."]
     #[must_use]
     #[inline(always)]
     pub const fn lpuart2_ipg_doze(&self) -> super::vals::Lpuart2IpgDoze {
         let val = (self.0 >> 19usize) & 0x01;
         super::vals::Lpuart2IpgDoze::from_bits(val as u8)
     }
-    #[doc = "LPUART2 ipg_doze mode"]
+    #[doc = "LPUART2 ipg_doze mode."]
     #[inline(always)]
     pub const fn set_lpuart2_ipg_doze(&mut self, val: super::vals::Lpuart2IpgDoze) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val.to_bits() as u32) & 0x01) << 19usize);
@@ -4176,14 +4176,14 @@ impl Gpr8 {
     pub const fn set_lpuart3_ipg_stop_mode(&mut self, val: super::vals::Lpuart3IpgStopMode) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
     }
-    #[doc = "LPUART3 ipg_doze mode"]
+    #[doc = "LPUART3 ipg_doze mode."]
     #[must_use]
     #[inline(always)]
     pub const fn lpuart3_ipg_doze(&self) -> super::vals::Lpuart3IpgDoze {
         let val = (self.0 >> 21usize) & 0x01;
         super::vals::Lpuart3IpgDoze::from_bits(val as u8)
     }
-    #[doc = "LPUART3 ipg_doze mode"]
+    #[doc = "LPUART3 ipg_doze mode."]
     #[inline(always)]
     pub const fn set_lpuart3_ipg_doze(&mut self, val: super::vals::Lpuart3IpgDoze) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
@@ -4200,14 +4200,14 @@ impl Gpr8 {
     pub const fn set_lpuart4_ipg_stop_mode(&mut self, val: super::vals::Lpuart4IpgStopMode) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
     }
-    #[doc = "LPUART4 ipg_doze mode"]
+    #[doc = "LPUART4 ipg_doze mode."]
     #[must_use]
     #[inline(always)]
     pub const fn lpuart4_ipg_doze(&self) -> super::vals::Lpuart4IpgDoze {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::Lpuart4IpgDoze::from_bits(val as u8)
     }
-    #[doc = "LPUART4 ipg_doze mode"]
+    #[doc = "LPUART4 ipg_doze mode."]
     #[inline(always)]
     pub const fn set_lpuart4_ipg_doze(&mut self, val: super::vals::Lpuart4IpgDoze) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
@@ -4224,14 +4224,14 @@ impl Gpr8 {
     pub const fn set_lpuart5_ipg_stop_mode(&mut self, val: super::vals::Lpuart5IpgStopMode) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
     }
-    #[doc = "LPUART5 ipg_doze mode"]
+    #[doc = "LPUART5 ipg_doze mode."]
     #[must_use]
     #[inline(always)]
     pub const fn lpuart5_ipg_doze(&self) -> super::vals::Lpuart5IpgDoze {
         let val = (self.0 >> 25usize) & 0x01;
         super::vals::Lpuart5IpgDoze::from_bits(val as u8)
     }
-    #[doc = "LPUART5 ipg_doze mode"]
+    #[doc = "LPUART5 ipg_doze mode."]
     #[inline(always)]
     pub const fn set_lpuart5_ipg_doze(&mut self, val: super::vals::Lpuart5IpgDoze) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val.to_bits() as u32) & 0x01) << 25usize);
@@ -4248,14 +4248,14 @@ impl Gpr8 {
     pub const fn set_lpuart6_ipg_stop_mode(&mut self, val: super::vals::Lpuart6IpgStopMode) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
     }
-    #[doc = "LPUART6 ipg_doze mode"]
+    #[doc = "LPUART6 ipg_doze mode."]
     #[must_use]
     #[inline(always)]
     pub const fn lpuart6_ipg_doze(&self) -> super::vals::Lpuart6IpgDoze {
         let val = (self.0 >> 27usize) & 0x01;
         super::vals::Lpuart6IpgDoze::from_bits(val as u8)
     }
-    #[doc = "LPUART6 ipg_doze mode"]
+    #[doc = "LPUART6 ipg_doze mode."]
     #[inline(always)]
     pub const fn set_lpuart6_ipg_doze(&mut self, val: super::vals::Lpuart6IpgDoze) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val.to_bits() as u32) & 0x01) << 27usize);
@@ -4272,14 +4272,14 @@ impl Gpr8 {
     pub const fn set_lpuart7_ipg_stop_mode(&mut self, val: super::vals::Lpuart7IpgStopMode) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
     }
-    #[doc = "LPUART7 ipg_doze mode"]
+    #[doc = "LPUART7 ipg_doze mode."]
     #[must_use]
     #[inline(always)]
     pub const fn lpuart7_ipg_doze(&self) -> super::vals::Lpuart7IpgDoze {
         let val = (self.0 >> 29usize) & 0x01;
         super::vals::Lpuart7IpgDoze::from_bits(val as u8)
     }
-    #[doc = "LPUART7 ipg_doze mode"]
+    #[doc = "LPUART7 ipg_doze mode."]
     #[inline(always)]
     pub const fn set_lpuart7_ipg_doze(&mut self, val: super::vals::Lpuart7IpgDoze) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
@@ -4296,14 +4296,14 @@ impl Gpr8 {
     pub const fn set_lpuart8_ipg_stop_mode(&mut self, val: super::vals::Lpuart8IpgStopMode) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
-    #[doc = "LPUART8 ipg_doze mode"]
+    #[doc = "LPUART8 ipg_doze mode."]
     #[must_use]
     #[inline(always)]
     pub const fn lpuart8_ipg_doze(&self) -> super::vals::Lpuart8IpgDoze {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::Lpuart8IpgDoze::from_bits(val as u8)
     }
-    #[doc = "LPUART8 ipg_doze mode"]
+    #[doc = "LPUART8 ipg_doze mode."]
     #[inline(always)]
     pub const fn set_lpuart8_ipg_doze(&mut self, val: super::vals::Lpuart8IpgDoze) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);

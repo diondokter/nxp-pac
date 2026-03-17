@@ -1,4 +1,4 @@
-#[doc = "ADC0 fclk divider"]
+#[doc = "ADC0 fclk divider."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Adc0fclkdiv(pub u32);
@@ -81,19 +81,19 @@ impl defmt::Format for Adc0fclkdiv {
         )
     }
 }
-#[doc = "ADC0 fclk selection 0"]
+#[doc = "ADC0 fclk selection 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Adc0fclksel0(pub u32);
 impl Adc0fclksel0 {
-    #[doc = "Clock Output Select 1st Stage. . ."]
+    #[doc = "Clock Output Select 1st Stage. .."]
     #[must_use]
     #[inline(always)]
     pub const fn sel(&self) -> super::vals::Adc0fclksel0Sel {
         let val = (self.0 >> 0usize) & 0x07;
         super::vals::Adc0fclksel0Sel::from_bits(val as u8)
     }
-    #[doc = "Clock Output Select 1st Stage. . ."]
+    #[doc = "Clock Output Select 1st Stage. .."]
     #[inline(always)]
     pub const fn set_sel(&mut self, val: super::vals::Adc0fclksel0Sel) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
@@ -118,19 +118,19 @@ impl defmt::Format for Adc0fclksel0 {
         defmt::write!(f, "Adc0fclksel0 {{ sel: {:?} }}", self.sel())
     }
 }
-#[doc = "ADC0 fclk selection 1"]
+#[doc = "ADC0 fclk selection 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Adc0fclksel1(pub u32);
 impl Adc0fclksel1 {
-    #[doc = "ADC Functional Clock Source Selection. . ."]
+    #[doc = "ADC Functional Clock Source Selection. .."]
     #[must_use]
     #[inline(always)]
     pub const fn sel(&self) -> super::vals::Adc0fclksel1Sel {
         let val = (self.0 >> 0usize) & 0x07;
         super::vals::Adc0fclksel1Sel::from_bits(val as u8)
     }
-    #[doc = "ADC Functional Clock Source Selection. . ."]
+    #[doc = "ADC Functional Clock Source Selection. .."]
     #[inline(always)]
     pub const fn set_sel(&mut self, val: super::vals::Adc0fclksel1Sel) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
@@ -155,7 +155,7 @@ impl defmt::Format for Adc0fclksel1 {
         defmt::write!(f, "Adc0fclksel1 {{ sel: {:?} }}", self.sel())
     }
 }
-#[doc = "aux0 pll clk divider"]
+#[doc = "aux0 pll clk divider."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Aux0pllclkdiv(pub u32);
@@ -238,7 +238,7 @@ impl defmt::Format for Aux0pllclkdiv {
         )
     }
 }
-#[doc = "aux1 pll clk divider"]
+#[doc = "aux1 pll clk divider."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Aux1pllclkdiv(pub u32);
@@ -321,7 +321,7 @@ impl defmt::Format for Aux1pllclkdiv {
         )
     }
 }
-#[doc = "dsp pll clk divider"]
+#[doc = "dsp pll clk divider."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dsppllclkdiv(pub u32);
@@ -404,7 +404,7 @@ impl defmt::Format for Dsppllclkdiv {
         )
     }
 }
-#[doc = "ESPI clock selection"]
+#[doc = "ESPI clock selection."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Espifclksel0(pub u32);
@@ -441,7 +441,7 @@ impl defmt::Format for Espifclksel0 {
         defmt::write!(f, "Espifclksel0 {{ sel: {:?} }}", self.sel())
     }
 }
-#[doc = "FFRO control 0"]
+#[doc = "FFRO control 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ffroctl0(pub u32);
@@ -524,7 +524,7 @@ impl defmt::Format for Ffroctl0 {
         )
     }
 }
-#[doc = "FFRO control 1"]
+#[doc = "FFRO control 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ffroctl1(pub u32);
@@ -561,7 +561,7 @@ impl defmt::Format for Ffroctl1 {
         defmt::write!(f, "Ffroctl1 {{ update: {:?} }}", self.update())
     }
 }
-#[doc = "FlexSPI FCLK divider"]
+#[doc = "FlexSPI FCLK divider."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flexspifclkdiv(pub u32);
@@ -644,19 +644,19 @@ impl defmt::Format for Flexspifclkdiv {
         )
     }
 }
-#[doc = "FlexSPI FCLK selection"]
+#[doc = "FlexSPI FCLK selection."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flexspifclksel(pub u32);
 impl Flexspifclksel {
-    #[doc = "FlexSPI Functional Clock Source Selection. . ."]
+    #[doc = "FlexSPI Functional Clock Source Selection. .."]
     #[must_use]
     #[inline(always)]
     pub const fn sel(&self) -> super::vals::FlexspifclkselSel {
         let val = (self.0 >> 0usize) & 0x07;
         super::vals::FlexspifclkselSel::from_bits(val as u8)
     }
-    #[doc = "FlexSPI Functional Clock Source Selection. . ."]
+    #[doc = "FlexSPI Functional Clock Source Selection. .."]
     #[inline(always)]
     pub const fn set_sel(&mut self, val: super::vals::FlexspifclkselSel) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
@@ -681,7 +681,7 @@ impl defmt::Format for Flexspifclksel {
         defmt::write!(f, "Flexspifclksel {{ sel: {:?} }}", self.sel())
     }
 }
-#[doc = "low power oscillator control 0"]
+#[doc = "low power oscillator control 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lposcctl0(pub u32);
@@ -718,19 +718,19 @@ impl defmt::Format for Lposcctl0 {
         defmt::write!(f, "Lposcctl0 {{ clkrdy: {=bool:?} }}", self.clkrdy())
     }
 }
-#[doc = "main clock selection A"]
+#[doc = "main clock selection A."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mainclksela(pub u32);
 impl Mainclksela {
-    #[doc = "Control Main 1st Stage Control Clock Source. . ."]
+    #[doc = "Control Main 1st Stage Control Clock Source. .."]
     #[must_use]
     #[inline(always)]
     pub const fn sel(&self) -> super::vals::MainclkselaSel {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::MainclkselaSel::from_bits(val as u8)
     }
-    #[doc = "Control Main 1st Stage Control Clock Source. . ."]
+    #[doc = "Control Main 1st Stage Control Clock Source. .."]
     #[inline(always)]
     pub const fn set_sel(&mut self, val: super::vals::MainclkselaSel) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
@@ -755,19 +755,19 @@ impl defmt::Format for Mainclksela {
         defmt::write!(f, "Mainclksela {{ sel: {:?} }}", self.sel())
     }
 }
-#[doc = "main clock selection B"]
+#[doc = "main clock selection B."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mainclkselb(pub u32);
 impl Mainclkselb {
-    #[doc = "Main Clock Source Selection. . ."]
+    #[doc = "Main Clock Source Selection. .."]
     #[must_use]
     #[inline(always)]
     pub const fn sel(&self) -> super::vals::MainclkselbSel {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::MainclkselbSel::from_bits(val as u8)
     }
-    #[doc = "Main Clock Source Selection. . ."]
+    #[doc = "Main Clock Source Selection. .."]
     #[inline(always)]
     pub const fn set_sel(&mut self, val: super::vals::MainclkselbSel) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
@@ -792,7 +792,7 @@ impl defmt::Format for Mainclkselb {
         defmt::write!(f, "Mainclkselb {{ sel: {:?} }}", self.sel())
     }
 }
-#[doc = "main pll clk divider"]
+#[doc = "main pll clk divider."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mainpllclkdiv(pub u32);
@@ -875,7 +875,7 @@ impl defmt::Format for Mainpllclkdiv {
         )
     }
 }
-#[doc = "32k oscillator control0"]
+#[doc = "32k oscillator control0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Osc32khzctl0(pub u32);
@@ -912,7 +912,7 @@ impl defmt::Format for Osc32khzctl0 {
         defmt::write!(f, "Osc32khzctl0 {{ ena32khz: {=bool:?} }}", self.ena32khz())
     }
 }
-#[doc = "PFC divider register N"]
+#[doc = "PFC divider register N."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pfcdiv(pub u32);
@@ -995,163 +995,163 @@ impl defmt::Format for Pfcdiv {
         )
     }
 }
-#[doc = "clock control register 0"]
+#[doc = "clock control register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pscctl0(pub u32);
 impl Pscctl0 {
-    #[doc = "128KB ROM control"]
+    #[doc = "128KB ROM control."]
     #[must_use]
     #[inline(always)]
     pub const fn rom_ctl_128kb(&self) -> super::vals::RomCtl128kb {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::RomCtl128kb::from_bits(val as u8)
     }
-    #[doc = "128KB ROM control"]
+    #[doc = "128KB ROM control."]
     #[inline(always)]
     pub const fn set_rom_ctl_128kb(&mut self, val: super::vals::RomCtl128kb) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "powerquad clock control"]
+    #[doc = "powerquad clock control."]
     #[must_use]
     #[inline(always)]
     pub const fn powerquad_clk(&self) -> super::vals::Pscctl0PowerquadClk {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::Pscctl0PowerquadClk::from_bits(val as u8)
     }
-    #[doc = "powerquad clock control"]
+    #[doc = "powerquad clock control."]
     #[inline(always)]
     pub const fn set_powerquad_clk(&mut self, val: super::vals::Pscctl0PowerquadClk) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
-    #[doc = "CAPSER clock control"]
+    #[doc = "CAPSER clock control."]
     #[must_use]
     #[inline(always)]
     pub const fn casper_clk(&self) -> super::vals::Pscctl0CasperClk {
         let val = (self.0 >> 9usize) & 0x01;
         super::vals::Pscctl0CasperClk::from_bits(val as u8)
     }
-    #[doc = "CAPSER clock control"]
+    #[doc = "CAPSER clock control."]
     #[inline(always)]
     pub const fn set_casper_clk(&mut self, val: super::vals::Pscctl0CasperClk) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
     }
-    #[doc = "HASHCRYPT clock control"]
+    #[doc = "HASHCRYPT clock control."]
     #[must_use]
     #[inline(always)]
     pub const fn hashcrypt_clk(&self) -> super::vals::Pscctl0HashcryptClk {
         let val = (self.0 >> 10usize) & 0x01;
         super::vals::Pscctl0HashcryptClk::from_bits(val as u8)
     }
-    #[doc = "HASHCRYPT clock control"]
+    #[doc = "HASHCRYPT clock control."]
     #[inline(always)]
     pub const fn set_hashcrypt_clk(&mut self, val: super::vals::Pscctl0HashcryptClk) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
-    #[doc = "PUF clock control"]
+    #[doc = "PUF clock control."]
     #[must_use]
     #[inline(always)]
     pub const fn puf_clk(&self) -> super::vals::Pscctl0PufClk {
         let val = (self.0 >> 11usize) & 0x01;
         super::vals::Pscctl0PufClk::from_bits(val as u8)
     }
-    #[doc = "PUF clock control"]
+    #[doc = "PUF clock control."]
     #[inline(always)]
     pub const fn set_puf_clk(&mut self, val: super::vals::Pscctl0PufClk) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
     }
-    #[doc = "RNG clock control"]
+    #[doc = "RNG clock control."]
     #[must_use]
     #[inline(always)]
     pub const fn rng_clk(&self) -> super::vals::Pscctl0RngClk {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Pscctl0RngClk::from_bits(val as u8)
     }
-    #[doc = "RNG clock control"]
+    #[doc = "RNG clock control."]
     #[inline(always)]
     pub const fn set_rng_clk(&mut self, val: super::vals::Pscctl0RngClk) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "FLEXSPI clock control"]
+    #[doc = "FLEXSPI clock control."]
     #[must_use]
     #[inline(always)]
     pub const fn flexspi_otfad_clk(&self) -> super::vals::Pscctl0FlexspiOtfadClk {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::Pscctl0FlexspiOtfadClk::from_bits(val as u8)
     }
-    #[doc = "FLEXSPI clock control"]
+    #[doc = "FLEXSPI clock control."]
     #[inline(always)]
     pub const fn set_flexspi_otfad_clk(&mut self, val: super::vals::Pscctl0FlexspiOtfadClk) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
     }
-    #[doc = "OTP clock control"]
+    #[doc = "OTP clock control."]
     #[must_use]
     #[inline(always)]
     pub const fn otp_clk(&self) -> super::vals::Pscctl0OtpClk {
         let val = (self.0 >> 17usize) & 0x01;
         super::vals::Pscctl0OtpClk::from_bits(val as u8)
     }
-    #[doc = "OTP clock control"]
+    #[doc = "OTP clock control."]
     #[inline(always)]
     pub const fn set_otp_clk(&mut self, val: super::vals::Pscctl0OtpClk) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
     }
-    #[doc = "USB PHY clock control"]
+    #[doc = "USB PHY clock control."]
     #[must_use]
     #[inline(always)]
     pub const fn usbhs_phy_clk(&self) -> super::vals::Pscctl0UsbhsPhyClk {
         let val = (self.0 >> 20usize) & 0x01;
         super::vals::Pscctl0UsbhsPhyClk::from_bits(val as u8)
     }
-    #[doc = "USB PHY clock control"]
+    #[doc = "USB PHY clock control."]
     #[inline(always)]
     pub const fn set_usbhs_phy_clk(&mut self, val: super::vals::Pscctl0UsbhsPhyClk) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
     }
-    #[doc = "USB DEVICE clock control"]
+    #[doc = "USB DEVICE clock control."]
     #[must_use]
     #[inline(always)]
     pub const fn usbhs_device_clk(&self) -> super::vals::Pscctl0UsbhsDeviceClk {
         let val = (self.0 >> 21usize) & 0x01;
         super::vals::Pscctl0UsbhsDeviceClk::from_bits(val as u8)
     }
-    #[doc = "USB DEVICE clock control"]
+    #[doc = "USB DEVICE clock control."]
     #[inline(always)]
     pub const fn set_usbhs_device_clk(&mut self, val: super::vals::Pscctl0UsbhsDeviceClk) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
     }
-    #[doc = "USB HOST clock control"]
+    #[doc = "USB HOST clock control."]
     #[must_use]
     #[inline(always)]
     pub const fn usbhs_host_clk(&self) -> super::vals::Pscctl0UsbhsHostClk {
         let val = (self.0 >> 22usize) & 0x01;
         super::vals::Pscctl0UsbhsHostClk::from_bits(val as u8)
     }
-    #[doc = "USB HOST clock control"]
+    #[doc = "USB HOST clock control."]
     #[inline(always)]
     pub const fn set_usbhs_host_clk(&mut self, val: super::vals::Pscctl0UsbhsHostClk) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
     }
-    #[doc = "USBHS RAM clock control"]
+    #[doc = "USBHS RAM clock control."]
     #[must_use]
     #[inline(always)]
     pub const fn usbhs_sram_clk(&self) -> super::vals::Pscctl0UsbhsSramClk {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::Pscctl0UsbhsSramClk::from_bits(val as u8)
     }
-    #[doc = "USBHS RAM clock control"]
+    #[doc = "USBHS RAM clock control."]
     #[inline(always)]
     pub const fn set_usbhs_sram_clk(&mut self, val: super::vals::Pscctl0UsbhsSramClk) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
     }
-    #[doc = "SCT clock control"]
+    #[doc = "SCT clock control."]
     #[must_use]
     #[inline(always)]
     pub const fn sct_clk(&self) -> super::vals::Pscctl0SctClk {
         let val = (self.0 >> 24usize) & 0x01;
         super::vals::Pscctl0SctClk::from_bits(val as u8)
     }
-    #[doc = "SCT clock control"]
+    #[doc = "SCT clock control."]
     #[inline(always)]
     pub const fn set_sct_clk(&mut self, val: super::vals::Pscctl0SctClk) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
@@ -1204,163 +1204,163 @@ impl defmt::Format for Pscctl0 {
         )
     }
 }
-#[doc = "clock clear register 0"]
+#[doc = "clock clear register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pscctl0Clr(pub u32);
 impl Pscctl0Clr {
-    #[doc = "ROM controller clock clear"]
+    #[doc = "ROM controller clock clear."]
     #[must_use]
     #[inline(always)]
     pub const fn rom_ctl_128kb_clk(&self) -> super::vals::Pscctl0ClrRomCtl128kbClk {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Pscctl0ClrRomCtl128kbClk::from_bits(val as u8)
     }
-    #[doc = "ROM controller clock clear"]
+    #[doc = "ROM controller clock clear."]
     #[inline(always)]
     pub const fn set_rom_ctl_128kb_clk(&mut self, val: super::vals::Pscctl0ClrRomCtl128kbClk) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "powerquad clock clear"]
+    #[doc = "powerquad clock clear."]
     #[must_use]
     #[inline(always)]
     pub const fn powerquad_clk(&self) -> super::vals::Pscctl0ClrPowerquadClk {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::Pscctl0ClrPowerquadClk::from_bits(val as u8)
     }
-    #[doc = "powerquad clock clear"]
+    #[doc = "powerquad clock clear."]
     #[inline(always)]
     pub const fn set_powerquad_clk(&mut self, val: super::vals::Pscctl0ClrPowerquadClk) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
-    #[doc = "CAPSER clock clear"]
+    #[doc = "CAPSER clock clear."]
     #[must_use]
     #[inline(always)]
     pub const fn casper_clk(&self) -> super::vals::Pscctl0ClrCasperClk {
         let val = (self.0 >> 9usize) & 0x01;
         super::vals::Pscctl0ClrCasperClk::from_bits(val as u8)
     }
-    #[doc = "CAPSER clock clear"]
+    #[doc = "CAPSER clock clear."]
     #[inline(always)]
     pub const fn set_casper_clk(&mut self, val: super::vals::Pscctl0ClrCasperClk) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
     }
-    #[doc = "HASHCRYPT clock clear"]
+    #[doc = "HASHCRYPT clock clear."]
     #[must_use]
     #[inline(always)]
     pub const fn hashcrypt_clk(&self) -> super::vals::Pscctl0ClrHashcryptClk {
         let val = (self.0 >> 10usize) & 0x01;
         super::vals::Pscctl0ClrHashcryptClk::from_bits(val as u8)
     }
-    #[doc = "HASHCRYPT clock clear"]
+    #[doc = "HASHCRYPT clock clear."]
     #[inline(always)]
     pub const fn set_hashcrypt_clk(&mut self, val: super::vals::Pscctl0ClrHashcryptClk) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
-    #[doc = "PUF clock clear"]
+    #[doc = "PUF clock clear."]
     #[must_use]
     #[inline(always)]
     pub const fn puf_clk(&self) -> super::vals::Pscctl0ClrPufClk {
         let val = (self.0 >> 11usize) & 0x01;
         super::vals::Pscctl0ClrPufClk::from_bits(val as u8)
     }
-    #[doc = "PUF clock clear"]
+    #[doc = "PUF clock clear."]
     #[inline(always)]
     pub const fn set_puf_clk(&mut self, val: super::vals::Pscctl0ClrPufClk) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
     }
-    #[doc = "RNG clock clear"]
+    #[doc = "RNG clock clear."]
     #[must_use]
     #[inline(always)]
     pub const fn rng_clk(&self) -> super::vals::Pscctl0ClrRngClk {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Pscctl0ClrRngClk::from_bits(val as u8)
     }
-    #[doc = "RNG clock clear"]
+    #[doc = "RNG clock clear."]
     #[inline(always)]
     pub const fn set_rng_clk(&mut self, val: super::vals::Pscctl0ClrRngClk) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "FLEXSPI clock clear"]
+    #[doc = "FLEXSPI clock clear."]
     #[must_use]
     #[inline(always)]
     pub const fn flexspi_otfad_clk(&self) -> super::vals::Pscctl0ClrFlexspiOtfadClk {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::Pscctl0ClrFlexspiOtfadClk::from_bits(val as u8)
     }
-    #[doc = "FLEXSPI clock clear"]
+    #[doc = "FLEXSPI clock clear."]
     #[inline(always)]
     pub const fn set_flexspi_otfad_clk(&mut self, val: super::vals::Pscctl0ClrFlexspiOtfadClk) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
     }
-    #[doc = "OTP clock clear"]
+    #[doc = "OTP clock clear."]
     #[must_use]
     #[inline(always)]
     pub const fn otp_clk(&self) -> super::vals::Pscctl0ClrOtpClk {
         let val = (self.0 >> 17usize) & 0x01;
         super::vals::Pscctl0ClrOtpClk::from_bits(val as u8)
     }
-    #[doc = "OTP clock clear"]
+    #[doc = "OTP clock clear."]
     #[inline(always)]
     pub const fn set_otp_clk(&mut self, val: super::vals::Pscctl0ClrOtpClk) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
     }
-    #[doc = "USB PHY clock clear"]
+    #[doc = "USB PHY clock clear."]
     #[must_use]
     #[inline(always)]
     pub const fn usbhs_phy_clk(&self) -> super::vals::Pscctl0ClrUsbhsPhyClk {
         let val = (self.0 >> 20usize) & 0x01;
         super::vals::Pscctl0ClrUsbhsPhyClk::from_bits(val as u8)
     }
-    #[doc = "USB PHY clock clear"]
+    #[doc = "USB PHY clock clear."]
     #[inline(always)]
     pub const fn set_usbhs_phy_clk(&mut self, val: super::vals::Pscctl0ClrUsbhsPhyClk) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
     }
-    #[doc = "USB DEVICE clock clear"]
+    #[doc = "USB DEVICE clock clear."]
     #[must_use]
     #[inline(always)]
     pub const fn usbhs_device_clk(&self) -> super::vals::Pscctl0ClrUsbhsDeviceClk {
         let val = (self.0 >> 21usize) & 0x01;
         super::vals::Pscctl0ClrUsbhsDeviceClk::from_bits(val as u8)
     }
-    #[doc = "USB DEVICE clock clear"]
+    #[doc = "USB DEVICE clock clear."]
     #[inline(always)]
     pub const fn set_usbhs_device_clk(&mut self, val: super::vals::Pscctl0ClrUsbhsDeviceClk) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
     }
-    #[doc = "USB HOST clock clear"]
+    #[doc = "USB HOST clock clear."]
     #[must_use]
     #[inline(always)]
     pub const fn usbhs_host_clk(&self) -> super::vals::Pscctl0ClrUsbhsHostClk {
         let val = (self.0 >> 22usize) & 0x01;
         super::vals::Pscctl0ClrUsbhsHostClk::from_bits(val as u8)
     }
-    #[doc = "USB HOST clock clear"]
+    #[doc = "USB HOST clock clear."]
     #[inline(always)]
     pub const fn set_usbhs_host_clk(&mut self, val: super::vals::Pscctl0ClrUsbhsHostClk) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
     }
-    #[doc = "USBHS RAM clock clear"]
+    #[doc = "USBHS RAM clock clear."]
     #[must_use]
     #[inline(always)]
     pub const fn usbhs_sram_clk(&self) -> super::vals::Pscctl0ClrUsbhsSramClk {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::Pscctl0ClrUsbhsSramClk::from_bits(val as u8)
     }
-    #[doc = "USBHS RAM clock clear"]
+    #[doc = "USBHS RAM clock clear."]
     #[inline(always)]
     pub const fn set_usbhs_sram_clk(&mut self, val: super::vals::Pscctl0ClrUsbhsSramClk) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
     }
-    #[doc = "SCT clock clear"]
+    #[doc = "SCT clock clear."]
     #[must_use]
     #[inline(always)]
     pub const fn sct_clk(&self) -> super::vals::Pscctl0ClrSctClk {
         let val = (self.0 >> 24usize) & 0x01;
         super::vals::Pscctl0ClrSctClk::from_bits(val as u8)
     }
-    #[doc = "SCT clock clear"]
+    #[doc = "SCT clock clear."]
     #[inline(always)]
     pub const fn set_sct_clk(&mut self, val: super::vals::Pscctl0ClrSctClk) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
@@ -1413,163 +1413,163 @@ impl defmt::Format for Pscctl0Clr {
         )
     }
 }
-#[doc = "clock set register 0"]
+#[doc = "clock set register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pscctl0Set(pub u32);
 impl Pscctl0Set {
-    #[doc = "128KB ROM controller clock set"]
+    #[doc = "128KB ROM controller clock set."]
     #[must_use]
     #[inline(always)]
     pub const fn rom_ctl_128kb_clk(&self) -> super::vals::Pscctl0SetRomCtl128kbClk {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Pscctl0SetRomCtl128kbClk::from_bits(val as u8)
     }
-    #[doc = "128KB ROM controller clock set"]
+    #[doc = "128KB ROM controller clock set."]
     #[inline(always)]
     pub const fn set_rom_ctl_128kb_clk(&mut self, val: super::vals::Pscctl0SetRomCtl128kbClk) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "powerquad clock set"]
+    #[doc = "powerquad clock set."]
     #[must_use]
     #[inline(always)]
     pub const fn powerquad_clk(&self) -> super::vals::Pscctl0SetPowerquadClk {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::Pscctl0SetPowerquadClk::from_bits(val as u8)
     }
-    #[doc = "powerquad clock set"]
+    #[doc = "powerquad clock set."]
     #[inline(always)]
     pub const fn set_powerquad_clk(&mut self, val: super::vals::Pscctl0SetPowerquadClk) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
-    #[doc = "CAPSER clock set"]
+    #[doc = "CAPSER clock set."]
     #[must_use]
     #[inline(always)]
     pub const fn casper_clk(&self) -> super::vals::Pscctl0SetCasperClk {
         let val = (self.0 >> 9usize) & 0x01;
         super::vals::Pscctl0SetCasperClk::from_bits(val as u8)
     }
-    #[doc = "CAPSER clock set"]
+    #[doc = "CAPSER clock set."]
     #[inline(always)]
     pub const fn set_casper_clk(&mut self, val: super::vals::Pscctl0SetCasperClk) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
     }
-    #[doc = "HASHCRYPT clock set"]
+    #[doc = "HASHCRYPT clock set."]
     #[must_use]
     #[inline(always)]
     pub const fn hashcrypt_clk(&self) -> super::vals::Pscctl0SetHashcryptClk {
         let val = (self.0 >> 10usize) & 0x01;
         super::vals::Pscctl0SetHashcryptClk::from_bits(val as u8)
     }
-    #[doc = "HASHCRYPT clock set"]
+    #[doc = "HASHCRYPT clock set."]
     #[inline(always)]
     pub const fn set_hashcrypt_clk(&mut self, val: super::vals::Pscctl0SetHashcryptClk) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
-    #[doc = "PUF clock set"]
+    #[doc = "PUF clock set."]
     #[must_use]
     #[inline(always)]
     pub const fn puf_clk(&self) -> super::vals::Pscctl0SetPufClk {
         let val = (self.0 >> 11usize) & 0x01;
         super::vals::Pscctl0SetPufClk::from_bits(val as u8)
     }
-    #[doc = "PUF clock set"]
+    #[doc = "PUF clock set."]
     #[inline(always)]
     pub const fn set_puf_clk(&mut self, val: super::vals::Pscctl0SetPufClk) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
     }
-    #[doc = "RNG clock set"]
+    #[doc = "RNG clock set."]
     #[must_use]
     #[inline(always)]
     pub const fn rng_clk(&self) -> super::vals::Pscctl0SetRngClk {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Pscctl0SetRngClk::from_bits(val as u8)
     }
-    #[doc = "RNG clock set"]
+    #[doc = "RNG clock set."]
     #[inline(always)]
     pub const fn set_rng_clk(&mut self, val: super::vals::Pscctl0SetRngClk) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "FLEXSPI clock set"]
+    #[doc = "FLEXSPI clock set."]
     #[must_use]
     #[inline(always)]
     pub const fn flexspi_otfad_clk(&self) -> super::vals::Pscctl0SetFlexspiOtfadClk {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::Pscctl0SetFlexspiOtfadClk::from_bits(val as u8)
     }
-    #[doc = "FLEXSPI clock set"]
+    #[doc = "FLEXSPI clock set."]
     #[inline(always)]
     pub const fn set_flexspi_otfad_clk(&mut self, val: super::vals::Pscctl0SetFlexspiOtfadClk) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
     }
-    #[doc = "OTP clock set"]
+    #[doc = "OTP clock set."]
     #[must_use]
     #[inline(always)]
     pub const fn otp_clk(&self) -> super::vals::Pscctl0SetOtpClk {
         let val = (self.0 >> 17usize) & 0x01;
         super::vals::Pscctl0SetOtpClk::from_bits(val as u8)
     }
-    #[doc = "OTP clock set"]
+    #[doc = "OTP clock set."]
     #[inline(always)]
     pub const fn set_otp_clk(&mut self, val: super::vals::Pscctl0SetOtpClk) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
     }
-    #[doc = "USB PHY clock set"]
+    #[doc = "USB PHY clock set."]
     #[must_use]
     #[inline(always)]
     pub const fn usbhs_phy_clk(&self) -> super::vals::Pscctl0SetUsbhsPhyClk {
         let val = (self.0 >> 20usize) & 0x01;
         super::vals::Pscctl0SetUsbhsPhyClk::from_bits(val as u8)
     }
-    #[doc = "USB PHY clock set"]
+    #[doc = "USB PHY clock set."]
     #[inline(always)]
     pub const fn set_usbhs_phy_clk(&mut self, val: super::vals::Pscctl0SetUsbhsPhyClk) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
     }
-    #[doc = "USB DEVICE clock set"]
+    #[doc = "USB DEVICE clock set."]
     #[must_use]
     #[inline(always)]
     pub const fn usbhs_device_clk(&self) -> super::vals::Pscctl0SetUsbhsDeviceClk {
         let val = (self.0 >> 21usize) & 0x01;
         super::vals::Pscctl0SetUsbhsDeviceClk::from_bits(val as u8)
     }
-    #[doc = "USB DEVICE clock set"]
+    #[doc = "USB DEVICE clock set."]
     #[inline(always)]
     pub const fn set_usbhs_device_clk(&mut self, val: super::vals::Pscctl0SetUsbhsDeviceClk) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
     }
-    #[doc = "USB HOST clock set"]
+    #[doc = "USB HOST clock set."]
     #[must_use]
     #[inline(always)]
     pub const fn usbhs_host_clk(&self) -> super::vals::Pscctl0SetUsbhsHostClk {
         let val = (self.0 >> 22usize) & 0x01;
         super::vals::Pscctl0SetUsbhsHostClk::from_bits(val as u8)
     }
-    #[doc = "USB HOST clock set"]
+    #[doc = "USB HOST clock set."]
     #[inline(always)]
     pub const fn set_usbhs_host_clk(&mut self, val: super::vals::Pscctl0SetUsbhsHostClk) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
     }
-    #[doc = "USBHS RAM clock set"]
+    #[doc = "USBHS RAM clock set."]
     #[must_use]
     #[inline(always)]
     pub const fn usbhs_sram_clk(&self) -> super::vals::Pscctl0SetUsbhsSramClk {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::Pscctl0SetUsbhsSramClk::from_bits(val as u8)
     }
-    #[doc = "USBHS RAM clock set"]
+    #[doc = "USBHS RAM clock set."]
     #[inline(always)]
     pub const fn set_usbhs_sram_clk(&mut self, val: super::vals::Pscctl0SetUsbhsSramClk) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
     }
-    #[doc = "SCT clock set"]
+    #[doc = "SCT clock set."]
     #[must_use]
     #[inline(always)]
     pub const fn sct_clk(&self) -> super::vals::Pscctl0SetSctClk {
         let val = (self.0 >> 24usize) & 0x01;
         super::vals::Pscctl0SetSctClk::from_bits(val as u8)
     }
-    #[doc = "SCT clock set"]
+    #[doc = "SCT clock set."]
     #[inline(always)]
     pub const fn set_sct_clk(&mut self, val: super::vals::Pscctl0SetSctClk) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
@@ -1622,67 +1622,67 @@ impl defmt::Format for Pscctl0Set {
         )
     }
 }
-#[doc = "clock control register 1"]
+#[doc = "clock control register 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pscctl1(pub u32);
 impl Pscctl1 {
-    #[doc = "SDIO0 clock control"]
+    #[doc = "SDIO0 clock control."]
     #[must_use]
     #[inline(always)]
     pub const fn sdio0_clk(&self) -> super::vals::Pscctl1Sdio0Clk {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Pscctl1Sdio0Clk::from_bits(val as u8)
     }
-    #[doc = "SDIO0 clock control"]
+    #[doc = "SDIO0 clock control."]
     #[inline(always)]
     pub const fn set_sdio0_clk(&mut self, val: super::vals::Pscctl1Sdio0Clk) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "SDIO1 clock control"]
+    #[doc = "SDIO1 clock control."]
     #[must_use]
     #[inline(always)]
     pub const fn sdio1_clk(&self) -> super::vals::Pscctl1Sdio1Clk {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Pscctl1Sdio1Clk::from_bits(val as u8)
     }
-    #[doc = "SDIO1 clock control"]
+    #[doc = "SDIO1 clock control."]
     #[inline(always)]
     pub const fn set_sdio1_clk(&mut self, val: super::vals::Pscctl1Sdio1Clk) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "Analog comparator clock control"]
+    #[doc = "Analog comparator clock control."]
     #[must_use]
     #[inline(always)]
     pub const fn acmp0_clk(&self) -> super::vals::Pscctl1Acmp0Clk {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::Pscctl1Acmp0Clk::from_bits(val as u8)
     }
-    #[doc = "Analog comparator clock control"]
+    #[doc = "Analog comparator clock control."]
     #[inline(always)]
     pub const fn set_acmp0_clk(&mut self, val: super::vals::Pscctl1Acmp0Clk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "ADC clock control"]
+    #[doc = "ADC clock control."]
     #[must_use]
     #[inline(always)]
     pub const fn adc0_clk(&self) -> super::vals::Pscctl1Adc0Clk {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::Pscctl1Adc0Clk::from_bits(val as u8)
     }
-    #[doc = "ADC clock control"]
+    #[doc = "ADC clock control."]
     #[inline(always)]
     pub const fn set_adc0_clk(&mut self, val: super::vals::Pscctl1Adc0Clk) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
     }
-    #[doc = "SHSGPIO0 clock control"]
+    #[doc = "SHSGPIO0 clock control."]
     #[must_use]
     #[inline(always)]
     pub const fn shsgpio0_clk(&self) -> super::vals::Pscctl1Shsgpio0Clk {
         let val = (self.0 >> 24usize) & 0x01;
         super::vals::Pscctl1Shsgpio0Clk::from_bits(val as u8)
     }
-    #[doc = "SHSGPIO0 clock control"]
+    #[doc = "SHSGPIO0 clock control."]
     #[inline(always)]
     pub const fn set_shsgpio0_clk(&mut self, val: super::vals::Pscctl1Shsgpio0Clk) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
@@ -1719,67 +1719,67 @@ impl defmt::Format for Pscctl1 {
         )
     }
 }
-#[doc = "clock clear register 1"]
+#[doc = "clock clear register 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pscctl1Clr(pub u32);
 impl Pscctl1Clr {
-    #[doc = "SDIO0 clock clear"]
+    #[doc = "SDIO0 clock clear."]
     #[must_use]
     #[inline(always)]
     pub const fn sdio0_clk(&self) -> super::vals::Pscctl1ClrSdio0Clk {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Pscctl1ClrSdio0Clk::from_bits(val as u8)
     }
-    #[doc = "SDIO0 clock clear"]
+    #[doc = "SDIO0 clock clear."]
     #[inline(always)]
     pub const fn set_sdio0_clk(&mut self, val: super::vals::Pscctl1ClrSdio0Clk) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "SDIO1 clock clear"]
+    #[doc = "SDIO1 clock clear."]
     #[must_use]
     #[inline(always)]
     pub const fn sdio1_clk(&self) -> super::vals::Pscctl1ClrSdio1Clk {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Pscctl1ClrSdio1Clk::from_bits(val as u8)
     }
-    #[doc = "SDIO1 clock clear"]
+    #[doc = "SDIO1 clock clear."]
     #[inline(always)]
     pub const fn set_sdio1_clk(&mut self, val: super::vals::Pscctl1ClrSdio1Clk) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "Analog comparator clock clear"]
+    #[doc = "Analog comparator clock clear."]
     #[must_use]
     #[inline(always)]
     pub const fn acmp0_clk(&self) -> super::vals::Pscctl1ClrAcmp0Clk {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::Pscctl1ClrAcmp0Clk::from_bits(val as u8)
     }
-    #[doc = "Analog comparator clock clear"]
+    #[doc = "Analog comparator clock clear."]
     #[inline(always)]
     pub const fn set_acmp0_clk(&mut self, val: super::vals::Pscctl1ClrAcmp0Clk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "ADC clock clear"]
+    #[doc = "ADC clock clear."]
     #[must_use]
     #[inline(always)]
     pub const fn adc0_clk(&self) -> super::vals::Pscctl1ClrAdc0Clk {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::Pscctl1ClrAdc0Clk::from_bits(val as u8)
     }
-    #[doc = "ADC clock clear"]
+    #[doc = "ADC clock clear."]
     #[inline(always)]
     pub const fn set_adc0_clk(&mut self, val: super::vals::Pscctl1ClrAdc0Clk) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
     }
-    #[doc = "SHSGPIO0 clock clear"]
+    #[doc = "SHSGPIO0 clock clear."]
     #[must_use]
     #[inline(always)]
     pub const fn shsgpio0_clk(&self) -> super::vals::Pscctl1ClrShsgpio0Clk {
         let val = (self.0 >> 24usize) & 0x01;
         super::vals::Pscctl1ClrShsgpio0Clk::from_bits(val as u8)
     }
-    #[doc = "SHSGPIO0 clock clear"]
+    #[doc = "SHSGPIO0 clock clear."]
     #[inline(always)]
     pub const fn set_shsgpio0_clk(&mut self, val: super::vals::Pscctl1ClrShsgpio0Clk) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
@@ -1816,67 +1816,67 @@ impl defmt::Format for Pscctl1Clr {
         )
     }
 }
-#[doc = "clock set register 1"]
+#[doc = "clock set register 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pscctl1Set(pub u32);
 impl Pscctl1Set {
-    #[doc = "SDIO0 clock set"]
+    #[doc = "SDIO0 clock set."]
     #[must_use]
     #[inline(always)]
     pub const fn sdio0_clk(&self) -> super::vals::Pscctl1SetSdio0Clk {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Pscctl1SetSdio0Clk::from_bits(val as u8)
     }
-    #[doc = "SDIO0 clock set"]
+    #[doc = "SDIO0 clock set."]
     #[inline(always)]
     pub const fn set_sdio0_clk(&mut self, val: super::vals::Pscctl1SetSdio0Clk) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "SDIO1 clock set"]
+    #[doc = "SDIO1 clock set."]
     #[must_use]
     #[inline(always)]
     pub const fn sdio1_clk(&self) -> super::vals::Pscctl1SetSdio1Clk {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Pscctl1SetSdio1Clk::from_bits(val as u8)
     }
-    #[doc = "SDIO1 clock set"]
+    #[doc = "SDIO1 clock set."]
     #[inline(always)]
     pub const fn set_sdio1_clk(&mut self, val: super::vals::Pscctl1SetSdio1Clk) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "Analog comparator clock set"]
+    #[doc = "Analog comparator clock set."]
     #[must_use]
     #[inline(always)]
     pub const fn acmp0_clk(&self) -> super::vals::Pscctl1SetAcmp0Clk {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::Pscctl1SetAcmp0Clk::from_bits(val as u8)
     }
-    #[doc = "Analog comparator clock set"]
+    #[doc = "Analog comparator clock set."]
     #[inline(always)]
     pub const fn set_acmp0_clk(&mut self, val: super::vals::Pscctl1SetAcmp0Clk) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "ADC clock set"]
+    #[doc = "ADC clock set."]
     #[must_use]
     #[inline(always)]
     pub const fn adc0_clk(&self) -> super::vals::Pscctl1SetAdc0Clk {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::Pscctl1SetAdc0Clk::from_bits(val as u8)
     }
-    #[doc = "ADC clock set"]
+    #[doc = "ADC clock set."]
     #[inline(always)]
     pub const fn set_adc0_clk(&mut self, val: super::vals::Pscctl1SetAdc0Clk) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
     }
-    #[doc = "SHSGPIO0 clock set"]
+    #[doc = "SHSGPIO0 clock set."]
     #[must_use]
     #[inline(always)]
     pub const fn shsgpio0_clk(&self) -> super::vals::Pscctl1SetShsgpio0Clk {
         let val = (self.0 >> 24usize) & 0x01;
         super::vals::Pscctl1SetShsgpio0Clk::from_bits(val as u8)
     }
-    #[doc = "SHSGPIO0 clock set"]
+    #[doc = "SHSGPIO0 clock set."]
     #[inline(always)]
     pub const fn set_shsgpio0_clk(&mut self, val: super::vals::Pscctl1SetShsgpio0Clk) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
@@ -1913,31 +1913,31 @@ impl defmt::Format for Pscctl1Set {
         )
     }
 }
-#[doc = "clock control register 2"]
+#[doc = "clock control register 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pscctl2(pub u32);
 impl Pscctl2 {
-    #[doc = "utick clock control"]
+    #[doc = "utick clock control."]
     #[must_use]
     #[inline(always)]
     pub const fn utick0_clk(&self) -> super::vals::Pscctl2Utick0Clk {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Pscctl2Utick0Clk::from_bits(val as u8)
     }
-    #[doc = "utick clock control"]
+    #[doc = "utick clock control."]
     #[inline(always)]
     pub const fn set_utick0_clk(&mut self, val: super::vals::Pscctl2Utick0Clk) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "wdt clock control"]
+    #[doc = "wdt clock control."]
     #[must_use]
     #[inline(always)]
     pub const fn wwdt0_clk(&self) -> super::vals::Pscctl2Wwdt0Clk {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Pscctl2Wwdt0Clk::from_bits(val as u8)
     }
-    #[doc = "wdt clock control"]
+    #[doc = "wdt clock control."]
     #[inline(always)]
     pub const fn set_wwdt0_clk(&mut self, val: super::vals::Pscctl2Wwdt0Clk) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
@@ -1968,31 +1968,31 @@ impl defmt::Format for Pscctl2 {
         )
     }
 }
-#[doc = "clock clear register 2"]
+#[doc = "clock clear register 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pscctl2Clr(pub u32);
 impl Pscctl2Clr {
-    #[doc = "utick clock clear"]
+    #[doc = "utick clock clear."]
     #[must_use]
     #[inline(always)]
     pub const fn utick0_clk(&self) -> super::vals::Pscctl2ClrUtick0Clk {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Pscctl2ClrUtick0Clk::from_bits(val as u8)
     }
-    #[doc = "utick clock clear"]
+    #[doc = "utick clock clear."]
     #[inline(always)]
     pub const fn set_utick0_clk(&mut self, val: super::vals::Pscctl2ClrUtick0Clk) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "wdt clock clear"]
+    #[doc = "wdt clock clear."]
     #[must_use]
     #[inline(always)]
     pub const fn wwdt0_clk(&self) -> super::vals::Pscctl2ClrWwdt0Clk {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Pscctl2ClrWwdt0Clk::from_bits(val as u8)
     }
-    #[doc = "wdt clock clear"]
+    #[doc = "wdt clock clear."]
     #[inline(always)]
     pub const fn set_wwdt0_clk(&mut self, val: super::vals::Pscctl2ClrWwdt0Clk) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
@@ -2023,31 +2023,31 @@ impl defmt::Format for Pscctl2Clr {
         )
     }
 }
-#[doc = "clock set register 2"]
+#[doc = "clock set register 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pscctl2Set(pub u32);
 impl Pscctl2Set {
-    #[doc = "utick clock set"]
+    #[doc = "utick clock set."]
     #[must_use]
     #[inline(always)]
     pub const fn utick0_clk(&self) -> super::vals::Pscctl2SetUtick0Clk {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Pscctl2SetUtick0Clk::from_bits(val as u8)
     }
-    #[doc = "utick clock set"]
+    #[doc = "utick clock set."]
     #[inline(always)]
     pub const fn set_utick0_clk(&mut self, val: super::vals::Pscctl2SetUtick0Clk) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "wdt clock set"]
+    #[doc = "wdt clock set."]
     #[must_use]
     #[inline(always)]
     pub const fn wwdt0_clk(&self) -> super::vals::Pscctl2SetWwdt0Clk {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Pscctl2SetWwdt0Clk::from_bits(val as u8)
     }
-    #[doc = "wdt clock set"]
+    #[doc = "wdt clock set."]
     #[inline(always)]
     pub const fn set_wwdt0_clk(&mut self, val: super::vals::Pscctl2SetWwdt0Clk) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
@@ -2078,7 +2078,7 @@ impl defmt::Format for Pscctl2Set {
         )
     }
 }
-#[doc = "SCT fclk divider"]
+#[doc = "SCT fclk divider."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sctfclkdiv(pub u32);
@@ -2161,19 +2161,19 @@ impl defmt::Format for Sctfclkdiv {
         )
     }
 }
-#[doc = "SCT FCLK selection"]
+#[doc = "SCT FCLK selection."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sctfclksel(pub u32);
 impl Sctfclksel {
-    #[doc = "SCT Functional Clock Source Selection. . ."]
+    #[doc = "SCT Functional Clock Source Selection. .."]
     #[must_use]
     #[inline(always)]
     pub const fn sel(&self) -> super::vals::SctfclkselSel {
         let val = (self.0 >> 0usize) & 0x07;
         super::vals::SctfclkselSel::from_bits(val as u8)
     }
-    #[doc = "SCT Functional Clock Source Selection. . ."]
+    #[doc = "SCT Functional Clock Source Selection. .."]
     #[inline(always)]
     pub const fn set_sel(&mut self, val: super::vals::SctfclkselSel) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
@@ -2198,7 +2198,7 @@ impl defmt::Format for Sctfclksel {
         defmt::write!(f, "Sctfclksel {{ sel: {:?} }}", self.sel())
     }
 }
-#[doc = "SDIO0 FCLK divider"]
+#[doc = "SDIO0 FCLK divider."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sdio0fclkdiv(pub u32);
@@ -2281,19 +2281,19 @@ impl defmt::Format for Sdio0fclkdiv {
         )
     }
 }
-#[doc = "SDIO0 FCLK selection"]
+#[doc = "SDIO0 FCLK selection."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sdio0fclksel(pub u32);
 impl Sdio0fclksel {
-    #[doc = "SDIO0 Functional Clock Source Selection. ."]
+    #[doc = "SDIO0 Functional Clock Source Selection.."]
     #[must_use]
     #[inline(always)]
     pub const fn sel(&self) -> super::vals::Sdio0fclkselSel {
         let val = (self.0 >> 0usize) & 0x07;
         super::vals::Sdio0fclkselSel::from_bits(val as u8)
     }
-    #[doc = "SDIO0 Functional Clock Source Selection. ."]
+    #[doc = "SDIO0 Functional Clock Source Selection.."]
     #[inline(always)]
     pub const fn set_sel(&mut self, val: super::vals::Sdio0fclkselSel) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
@@ -2318,7 +2318,7 @@ impl defmt::Format for Sdio0fclksel {
         defmt::write!(f, "Sdio0fclksel {{ sel: {:?} }}", self.sel())
     }
 }
-#[doc = "SDIO1 FCLK divider"]
+#[doc = "SDIO1 FCLK divider."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sdio1fclkdiv(pub u32);
@@ -2401,19 +2401,19 @@ impl defmt::Format for Sdio1fclkdiv {
         )
     }
 }
-#[doc = "SDIO1 FCLK selection"]
+#[doc = "SDIO1 FCLK selection."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sdio1fclksel(pub u32);
 impl Sdio1fclksel {
-    #[doc = "SDIO1 Functional Clock Source Selection. ."]
+    #[doc = "SDIO1 Functional Clock Source Selection.."]
     #[must_use]
     #[inline(always)]
     pub const fn sel(&self) -> super::vals::Sdio1fclkselSel {
         let val = (self.0 >> 0usize) & 0x07;
         super::vals::Sdio1fclkselSel::from_bits(val as u8)
     }
-    #[doc = "SDIO1 Functional Clock Source Selection. ."]
+    #[doc = "SDIO1 Functional Clock Source Selection.."]
     #[inline(always)]
     pub const fn set_sel(&mut self, val: super::vals::Sdio1fclkselSel) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
@@ -2438,7 +2438,7 @@ impl defmt::Format for Sdio1fclksel {
         defmt::write!(f, "Sdio1fclksel {{ sel: {:?} }}", self.sel())
     }
 }
-#[doc = "system cpu AHB clock divider"]
+#[doc = "system cpu AHB clock divider."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Syscpuahbclkdiv(pub u32);
@@ -2493,7 +2493,7 @@ impl defmt::Format for Syscpuahbclkdiv {
         )
     }
 }
-#[doc = "system oscillator bypass"]
+#[doc = "system oscillator bypass."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sysoscbypass(pub u32);
@@ -2530,31 +2530,31 @@ impl defmt::Format for Sysoscbypass {
         defmt::write!(f, "Sysoscbypass {{ sel: {:?} }}", self.sel())
     }
 }
-#[doc = "system oscillator control 0"]
+#[doc = "system oscillator control 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sysoscctl0(pub u32);
 impl Sysoscctl0 {
-    #[doc = "Enable signal for low power mode. . ."]
+    #[doc = "Enable signal for low power mode. .."]
     #[must_use]
     #[inline(always)]
     pub const fn lp_enable(&self) -> super::vals::LpEnable {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::LpEnable::from_bits(val as u8)
     }
-    #[doc = "Enable signal for low power mode. . ."]
+    #[doc = "Enable signal for low power mode. .."]
     #[inline(always)]
     pub const fn set_lp_enable(&mut self, val: super::vals::LpEnable) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Enable signal for external bypass clock. . ."]
+    #[doc = "Enable signal for external bypass clock. .."]
     #[must_use]
     #[inline(always)]
     pub const fn bypass_enable(&self) -> super::vals::BypassEnable {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::BypassEnable::from_bits(val as u8)
     }
-    #[doc = "Enable signal for external bypass clock. . ."]
+    #[doc = "Enable signal for external bypass clock. .."]
     #[inline(always)]
     pub const fn set_bypass_enable(&mut self, val: super::vals::BypassEnable) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
@@ -2585,19 +2585,19 @@ impl defmt::Format for Sysoscctl0 {
         )
     }
 }
-#[doc = "system pll0 clock selection"]
+#[doc = "system pll0 clock selection."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Syspll0clksel(pub u32);
 impl Syspll0clksel {
-    #[doc = "System PLL Clock Source Selection. . ."]
+    #[doc = "System PLL Clock Source Selection. .."]
     #[must_use]
     #[inline(always)]
     pub const fn sel(&self) -> super::vals::Syspll0clkselSel {
         let val = (self.0 >> 0usize) & 0x07;
         super::vals::Syspll0clkselSel::from_bits(val as u8)
     }
-    #[doc = "System PLL Clock Source Selection. . ."]
+    #[doc = "System PLL Clock Source Selection. .."]
     #[inline(always)]
     pub const fn set_sel(&mut self, val: super::vals::Syspll0clkselSel) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
@@ -2622,31 +2622,31 @@ impl defmt::Format for Syspll0clksel {
         defmt::write!(f, "Syspll0clksel {{ sel: {:?} }}", self.sel())
     }
 }
-#[doc = "system pll0 control0"]
+#[doc = "system pll0 control0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Syspll0ctl0(pub u32);
 impl Syspll0ctl0 {
-    #[doc = "SYSPLL0 BYPASS Mode"]
+    #[doc = "SYSPLL0 BYPASS Mode."]
     #[must_use]
     #[inline(always)]
     pub const fn bypass(&self) -> super::vals::Bypass {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Bypass::from_bits(val as u8)
     }
-    #[doc = "SYSPLL0 BYPASS Mode"]
+    #[doc = "SYSPLL0 BYPASS Mode."]
     #[inline(always)]
     pub const fn set_bypass(&mut self, val: super::vals::Bypass) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "SYSPLL0 Reset:"]
+    #[doc = "SYSPLL0 Reset:."]
     #[must_use]
     #[inline(always)]
     pub const fn reset(&self) -> super::vals::Reset {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Reset::from_bits(val as u8)
     }
-    #[doc = "SYSPLL0 Reset:"]
+    #[doc = "SYSPLL0 Reset:."]
     #[inline(always)]
     pub const fn set_reset(&mut self, val: super::vals::Reset) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
@@ -2663,14 +2663,14 @@ impl Syspll0ctl0 {
     pub const fn set_holdringoff_ena(&mut self, val: super::vals::HoldringoffEna) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
-    #[doc = "Multiplication Factor for FSYSPLL0_OUTPUT:"]
+    #[doc = "Multiplication Factor for FSYSPLL0_OUTPUT:."]
     #[must_use]
     #[inline(always)]
     pub const fn mult(&self) -> super::vals::Mult {
         let val = (self.0 >> 16usize) & 0xff;
         super::vals::Mult::from_bits(val as u8)
     }
-    #[doc = "Multiplication Factor for FSYSPLL0_OUTPUT:"]
+    #[doc = "Multiplication Factor for FSYSPLL0_OUTPUT:."]
     #[inline(always)]
     pub const fn set_mult(&mut self, val: super::vals::Mult) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val.to_bits() as u32) & 0xff) << 16usize);
@@ -2705,7 +2705,7 @@ impl defmt::Format for Syspll0ctl0 {
         )
     }
 }
-#[doc = "system pll0 denom"]
+#[doc = "system pll0 denom."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Syspll0denom(pub u32);
@@ -2742,7 +2742,7 @@ impl defmt::Format for Syspll0denom {
         defmt::write!(f, "Syspll0denom {{ denom: {=u32:?} }}", self.denom())
     }
 }
-#[doc = "system pll0 lock time"]
+#[doc = "system pll0 lock time."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Syspll0locktimediv2(pub u32);
@@ -2783,7 +2783,7 @@ impl defmt::Format for Syspll0locktimediv2 {
         )
     }
 }
-#[doc = "system pll0 number"]
+#[doc = "system pll0 number."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Syspll0num(pub u32);
@@ -2820,7 +2820,7 @@ impl defmt::Format for Syspll0num {
         defmt::write!(f, "Syspll0num {{ num: {=u32:?} }}", self.num())
     }
 }
-#[doc = "sys pll0 PFD"]
+#[doc = "sys pll0 PFD."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Syspll0pfd(pub u32);
@@ -2849,14 +2849,14 @@ impl Syspll0pfd {
     pub const fn set_pfd0_clkrdy(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "PFD0 Clock Gate: 0: PFD0 clock is not gated. 1: PFD0 clock is gated"]
+    #[doc = "PFD0 Clock Gate: 0: PFD0 clock is not gated. 1: PFD0 clock is gated."]
     #[must_use]
     #[inline(always)]
     pub const fn pfd0_clkgate(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "PFD0 Clock Gate: 0: PFD0 clock is not gated. 1: PFD0 clock is gated"]
+    #[doc = "PFD0 Clock Gate: 0: PFD0 clock is not gated. 1: PFD0 clock is gated."]
     #[inline(always)]
     pub const fn set_pfd0_clkgate(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
@@ -3015,7 +3015,7 @@ impl defmt::Format for Syspll0pfd {
         )
     }
 }
-#[doc = "system tick fclk divider"]
+#[doc = "system tick fclk divider."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Systickfclkdiv(pub u32);
@@ -3098,19 +3098,19 @@ impl defmt::Format for Systickfclkdiv {
         )
     }
 }
-#[doc = "system tick fclk selection"]
+#[doc = "system tick fclk selection."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Systickfclksel(pub u32);
 impl Systickfclksel {
-    #[doc = "SYSTICK Functional Clock Source Selection. . ."]
+    #[doc = "SYSTICK Functional Clock Source Selection. .."]
     #[must_use]
     #[inline(always)]
     pub const fn sel(&self) -> super::vals::SystickfclkselSel {
         let val = (self.0 >> 0usize) & 0x07;
         super::vals::SystickfclkselSel::from_bits(val as u8)
     }
-    #[doc = "SYSTICK Functional Clock Source Selection. . ."]
+    #[doc = "SYSTICK Functional Clock Source Selection. .."]
     #[inline(always)]
     pub const fn set_sel(&mut self, val: super::vals::SystickfclkselSel) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
@@ -3135,7 +3135,7 @@ impl defmt::Format for Systickfclksel {
         defmt::write!(f, "Systickfclksel {{ sel: {:?} }}", self.sel())
     }
 }
-#[doc = "USBHS Fclk divider"]
+#[doc = "USBHS Fclk divider."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Usbhsfclkdiv(pub u32);
@@ -3218,19 +3218,19 @@ impl defmt::Format for Usbhsfclkdiv {
         )
     }
 }
-#[doc = "USBHS Fclk selection"]
+#[doc = "USBHS Fclk selection."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Usbhsfclksel(pub u32);
 impl Usbhsfclksel {
-    #[doc = "USB HS Functional Clock Source Selection. . ."]
+    #[doc = "USB HS Functional Clock Source Selection. .."]
     #[must_use]
     #[inline(always)]
     pub const fn sel(&self) -> super::vals::UsbhsfclkselSel {
         let val = (self.0 >> 0usize) & 0x07;
         super::vals::UsbhsfclkselSel::from_bits(val as u8)
     }
-    #[doc = "USB HS Functional Clock Source Selection. . ."]
+    #[doc = "USB HS Functional Clock Source Selection. .."]
     #[inline(always)]
     pub const fn set_sel(&mut self, val: super::vals::UsbhsfclkselSel) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
@@ -3255,19 +3255,19 @@ impl defmt::Format for Usbhsfclksel {
         defmt::write!(f, "Usbhsfclksel {{ sel: {:?} }}", self.sel())
     }
 }
-#[doc = "UTICK fclk selection"]
+#[doc = "UTICK fclk selection."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Utickfclksel(pub u32);
 impl Utickfclksel {
-    #[doc = "uTICK Functional Clock Source Selection. ."]
+    #[doc = "uTICK Functional Clock Source Selection.."]
     #[must_use]
     #[inline(always)]
     pub const fn sel(&self) -> super::vals::UtickfclkselSel {
         let val = (self.0 >> 0usize) & 0x07;
         super::vals::UtickfclkselSel::from_bits(val as u8)
     }
-    #[doc = "uTICK Functional Clock Source Selection. ."]
+    #[doc = "uTICK Functional Clock Source Selection.."]
     #[inline(always)]
     pub const fn set_sel(&mut self, val: super::vals::UtickfclkselSel) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
@@ -3292,7 +3292,7 @@ impl defmt::Format for Utickfclksel {
         defmt::write!(f, "Utickfclksel {{ sel: {:?} }}", self.sel())
     }
 }
-#[doc = "32k wake clock divider"]
+#[doc = "32k wake clock divider."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Wakeclk32khzdiv(pub u32);
@@ -3329,19 +3329,19 @@ impl defmt::Format for Wakeclk32khzdiv {
         defmt::write!(f, "Wakeclk32khzdiv {{ halt: {=bool:?} }}", self.halt())
     }
 }
-#[doc = "32k wake clock selection"]
+#[doc = "32k wake clock selection."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Wakeclk32khzsel(pub u32);
 impl Wakeclk32khzsel {
-    #[doc = "32KHz Wake Clock Low Power Functional Clock Source Selection. . ."]
+    #[doc = "32KHz Wake Clock Low Power Functional Clock Source Selection. .."]
     #[must_use]
     #[inline(always)]
     pub const fn sel(&self) -> super::vals::Wakeclk32khzselSel {
         let val = (self.0 >> 0usize) & 0x07;
         super::vals::Wakeclk32khzselSel::from_bits(val as u8)
     }
-    #[doc = "32KHz Wake Clock Low Power Functional Clock Source Selection. . ."]
+    #[doc = "32KHz Wake Clock Low Power Functional Clock Source Selection. .."]
     #[inline(always)]
     pub const fn set_sel(&mut self, val: super::vals::Wakeclk32khzselSel) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
@@ -3366,19 +3366,19 @@ impl defmt::Format for Wakeclk32khzsel {
         defmt::write!(f, "Wakeclk32khzsel {{ sel: {:?} }}", self.sel())
     }
 }
-#[doc = "wdt clock selection"]
+#[doc = "wdt clock selection."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Wdt0fclksel(pub u32);
 impl Wdt0fclksel {
-    #[doc = "WDT0 Functional Clock Source Selection. ."]
+    #[doc = "WDT0 Functional Clock Source Selection.."]
     #[must_use]
     #[inline(always)]
     pub const fn sel(&self) -> super::vals::Wdt0fclkselSel {
         let val = (self.0 >> 0usize) & 0x07;
         super::vals::Wdt0fclkselSel::from_bits(val as u8)
     }
-    #[doc = "WDT0 Functional Clock Source Selection. ."]
+    #[doc = "WDT0 Functional Clock Source Selection.."]
     #[inline(always)]
     pub const fn set_sel(&mut self, val: super::vals::Wdt0fclkselSel) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);

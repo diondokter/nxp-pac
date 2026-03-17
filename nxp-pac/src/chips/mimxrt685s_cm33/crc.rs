@@ -1,4 +1,4 @@
-#[doc = "LPC_Next0 CRC engine"]
+#[doc = "LPC_Next0 CRC engine."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Crc {
     ptr: *mut u8,
@@ -14,17 +14,17 @@ impl Crc {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "CRC mode register"]
+    #[doc = "CRC mode register."]
     #[inline(always)]
     pub const fn mode(self) -> crate::common::Reg<regs::Mode, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
     }
-    #[doc = "CRC seed register"]
+    #[doc = "CRC seed register."]
     #[inline(always)]
     pub const fn seed(self) -> crate::common::Reg<regs::Seed, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
     }
-    #[doc = "CRC checksum register"]
+    #[doc = "CRC checksum register."]
     #[inline(always)]
     pub const fn sum(self) -> crate::common::Reg<regs::Sum, crate::common::R> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }

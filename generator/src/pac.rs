@@ -95,7 +95,7 @@ pub fn generate_peripherals(
         .join(core.to_lowercase())
         .with_extension("yaml");
 
-    if !fs::exists(&transform)? {
+    if !fs::exists(&transform).context("checking transform existance")? {
         bail!(
             "transform for core \"{}\" does not exist?",
             core.to_lowercase()
@@ -103,7 +103,7 @@ pub fn generate_peripherals(
     }
 
     let raw_peripherals_dir = metadata_dir.join("peripherals/raw");
-    for file in fs::read_dir(&raw_peripherals_dir)? {
+    for file in fs::read_dir(&raw_peripherals_dir).context("reading raw peripherals dir")? {
         let file = file?;
         if file.file_name().to_string_lossy() != ".gitignore" {
             fs::remove_file(file.path())?;
@@ -166,7 +166,8 @@ pub fn generate_peripherals(
     fs::write(
         raw_peripherals_dir.join("_interrupts.json"),
         interrupts_json.as_bytes(),
-    )?;
+    )
+    .context("writing _interrupts.json")?;
 
     let peripheral_addresses = svd
         .peripherals
@@ -190,7 +191,8 @@ pub fn generate_peripherals(
     fs::write(
         raw_peripherals_dir.join("_addresses.json"),
         addresses_json.as_bytes(),
-    )?;
+    )
+    .context("writing _addresses.json")?;
 
     Ok(())
 }

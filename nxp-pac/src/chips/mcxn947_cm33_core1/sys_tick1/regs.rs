@@ -1,40 +1,40 @@
-#[doc = "SysTick Calibration Value Register"]
+#[doc = "SysTick Calibration Value Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SystCalib(pub u32);
 impl SystCalib {
-    #[doc = "Reload value to use for 10ms timing"]
+    #[doc = "Reload value to use for 10ms timing."]
     #[must_use]
     #[inline(always)]
     pub const fn tenms(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x00ff_ffff;
         val as u32
     }
-    #[doc = "Reload value to use for 10ms timing"]
+    #[doc = "Reload value to use for 10ms timing."]
     #[inline(always)]
     pub const fn set_tenms(&mut self, val: u32) {
         self.0 = (self.0 & !(0x00ff_ffff << 0usize)) | (((val as u32) & 0x00ff_ffff) << 0usize);
     }
-    #[doc = "Indicates whether the TENMS value is exact"]
+    #[doc = "Indicates whether the TENMS value is exact."]
     #[must_use]
     #[inline(always)]
     pub const fn skew(&self) -> super::vals::Skew {
         let val = (self.0 >> 30usize) & 0x01;
         super::vals::Skew::from_bits(val as u8)
     }
-    #[doc = "Indicates whether the TENMS value is exact"]
+    #[doc = "Indicates whether the TENMS value is exact."]
     #[inline(always)]
     pub const fn set_skew(&mut self, val: super::vals::Skew) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
-    #[doc = "Indicates whether the device provides an alternative reference clock"]
+    #[doc = "Indicates whether the device provides an alternative reference clock."]
     #[must_use]
     #[inline(always)]
     pub const fn noref(&self) -> super::vals::Noref {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::Noref::from_bits(val as u8)
     }
-    #[doc = "Indicates whether the device provides an alternative reference clock"]
+    #[doc = "Indicates whether the device provides an alternative reference clock."]
     #[inline(always)]
     pub const fn set_noref(&mut self, val: super::vals::Noref) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -67,19 +67,19 @@ impl defmt::Format for SystCalib {
         )
     }
 }
-#[doc = "SysTick Control and Status Register"]
+#[doc = "SysTick Control and Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SystCsr(pub u32);
 impl SystCsr {
-    #[doc = "Enable/disable systick counter"]
+    #[doc = "Enable/disable systick counter."]
     #[must_use]
     #[inline(always)]
     pub const fn enable(&self) -> super::vals::Enable {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Enable::from_bits(val as u8)
     }
-    #[doc = "Enable/disable systick counter"]
+    #[doc = "Enable/disable systick counter."]
     #[inline(always)]
     pub const fn set_enable(&mut self, val: super::vals::Enable) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
@@ -150,7 +150,7 @@ impl defmt::Format for SystCsr {
         )
     }
 }
-#[doc = "SysTick Current Value Register"]
+#[doc = "SysTick Current Value Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SystCvr(pub u32);
@@ -187,19 +187,19 @@ impl defmt::Format for SystCvr {
         defmt::write!(f, "SystCvr {{ current: {=u32:?} }}", self.current())
     }
 }
-#[doc = "SysTick Reload Value Register"]
+#[doc = "SysTick Reload Value Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SystRvr(pub u32);
 impl SystRvr {
-    #[doc = "Value to load into the SysTick Current Value Register when the counter reaches 0"]
+    #[doc = "Value to load into the SysTick Current Value Register when the counter reaches 0."]
     #[must_use]
     #[inline(always)]
     pub const fn reload(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x00ff_ffff;
         val as u32
     }
-    #[doc = "Value to load into the SysTick Current Value Register when the counter reaches 0"]
+    #[doc = "Value to load into the SysTick Current Value Register when the counter reaches 0."]
     #[inline(always)]
     pub const fn set_reload(&mut self, val: u32) {
         self.0 = (self.0 & !(0x00ff_ffff << 0usize)) | (((val as u32) & 0x00ff_ffff) << 0usize);

@@ -2,13 +2,13 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Biasc {
-    #[doc = "Default"]
+    #[doc = "Default."]
     DEF = 0x0,
-    #[doc = "Increase current"]
+    #[doc = "Increase current."]
     INC = 0x01,
-    #[doc = "Decrease current"]
+    #[doc = "Decrease current."]
     DEC = 0x02,
-    #[doc = "Further decrease current"]
+    #[doc = "Further decrease current."]
     FUR_DEC = 0x03,
 }
 impl Biasc {
@@ -37,9 +37,9 @@ impl From<Biasc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Inpf {
-    #[doc = "Positive input 0 (INP0)"]
+    #[doc = "Positive input 0 (INP0)."]
     INP0 = 0x0,
-    #[doc = "Positive input 1 (INP1)"]
+    #[doc = "Positive input 1 (INP1)."]
     INP1 = 0x01,
 }
 impl Inpf {
@@ -68,9 +68,9 @@ impl From<Inpf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Inpsel {
-    #[doc = "When OPAMP is not in trigger mode, select positive input 0 (INP0)"]
+    #[doc = "When OPAMP is not in trigger mode, select positive input 0 (INP0)."]
     INP0 = 0x0,
-    #[doc = "When OPAMP is not in trigger mode, select positive input 1 (INP1)"]
+    #[doc = "When OPAMP is not in trigger mode, select positive input 1 (INP1)."]
     INP1 = 0x01,
 }
 impl Inpsel {
@@ -99,13 +99,13 @@ impl From<Inpsel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intref {
-    #[doc = "Select OPAMP input rail to rail voltage from 0 to VDD_ANA"]
+    #[doc = "Select OPAMP input rail to rail voltage from 0 to VDD_ANA."]
     VDDA2 = 0x0,
-    #[doc = "Select OPAMP input rail to rail voltage from 0 to VDD_ANA-0.8V"]
+    #[doc = "Select OPAMP input rail to rail voltage from 0 to VDD_ANA-0.8V."]
     VDDA3V = 0x01,
-    #[doc = "Select OPAMP input rail to rail voltage from 0.8V to VDD_ANA"]
+    #[doc = "Select OPAMP input rail to rail voltage from 0.8V to VDD_ANA."]
     VSSA3V = 0x02,
-    #[doc = "Not allowed"]
+    #[doc = "Not allowed."]
     NOT = 0x03,
 }
 impl Intref {
@@ -134,9 +134,9 @@ impl From<Intref> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mode {
-    #[doc = "High performance mode"]
+    #[doc = "High performance mode."]
     LOW = 0x0,
-    #[doc = "Low power mode"]
+    #[doc = "Low power mode."]
     HIGH = 0x01,
 }
 impl Mode {
@@ -165,21 +165,21 @@ impl From<Mode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ngain {
-    #[doc = "Buffer"]
+    #[doc = "Buffer."]
     BUFFER = 0x0,
-    #[doc = "Ngain=1"]
+    #[doc = "Ngain=1."]
     G1 = 0x01,
-    #[doc = "Ngain=2"]
+    #[doc = "Ngain=2."]
     G2 = 0x02,
-    #[doc = "Ngain=4"]
+    #[doc = "Ngain=4."]
     G4 = 0x03,
-    #[doc = "Ngain=8"]
+    #[doc = "Ngain=8."]
     G8 = 0x04,
-    #[doc = "Ngain=16"]
+    #[doc = "Ngain=16."]
     G16 = 0x05,
-    #[doc = "Ngain=33"]
+    #[doc = "Ngain=33."]
     G33 = 0x06,
-    #[doc = "Ngain=64"]
+    #[doc = "Ngain=64."]
     G64 = 0x07,
 }
 impl Ngain {
@@ -208,9 +208,9 @@ impl From<Ngain> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PgaFunction {
-    #[doc = "Core amplifier enabled"]
+    #[doc = "Core amplifier enabled."]
     CORE_AMP = 0x0,
-    #[doc = "PGA function enabled"]
+    #[doc = "PGA function enabled."]
     PGA = 0x01,
 }
 impl PgaFunction {
@@ -239,21 +239,21 @@ impl From<PgaFunction> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pgain {
-    #[doc = "Positive input 1 (INP1)"]
+    #[doc = "Positive input 1 (INP1)."]
     INP1 = 0x0,
-    #[doc = "Pgain=1"]
+    #[doc = "Pgain=1."]
     G2 = 0x01,
-    #[doc = "Pgain=2"]
+    #[doc = "Pgain=2."]
     G3 = 0x02,
-    #[doc = "Pgain=4"]
+    #[doc = "Pgain=4."]
     G5 = 0x03,
-    #[doc = "Pgain=8"]
+    #[doc = "Pgain=8."]
     G9 = 0x04,
-    #[doc = "Pgain=16"]
+    #[doc = "Pgain=16."]
     G17 = 0x05,
-    #[doc = "Pgain=33"]
+    #[doc = "Pgain=33."]
     G34 = 0x06,
-    #[doc = "Pgain=64"]
+    #[doc = "Pgain=64."]
     G65 = 0x07,
 }
 impl Pgain {
@@ -282,13 +282,13 @@ impl From<Pgain> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pref {
-    #[doc = "Input 0"]
+    #[doc = "Input 0."]
     VAL0 = 0x0,
-    #[doc = "Input 1"]
+    #[doc = "Input 1."]
     VAL1 = 0x01,
-    #[doc = "Input 2"]
+    #[doc = "Input 2."]
     VAL2 = 0x02,
-    #[doc = "Input 3"]
+    #[doc = "Input 3."]
     VAL3 = 0x03,
 }
 impl Pref {

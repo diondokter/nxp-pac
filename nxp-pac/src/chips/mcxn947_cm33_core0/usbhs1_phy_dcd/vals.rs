@@ -33,9 +33,9 @@ impl From<Active> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bc12 {
-    #[doc = "Compatible with BC1.1"]
+    #[doc = "Compatible with BC1.1."]
     BC11 = 0x0,
-    #[doc = "Compatible with BC1.2 (default)"]
+    #[doc = "Compatible with BC1.2 (default)."]
     BC12 = 0x01,
 }
 impl Bc12 {
@@ -65,25 +65,25 @@ impl From<Bc12> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CheckDm {
     _RESERVED_0 = 0x0,
-    #[doc = "1 ms - 15 ms"]
+    #[doc = "1 ms - 15 ms."]
     MS_1 = 0x01,
-    #[doc = "1 ms - 15 ms"]
+    #[doc = "1 ms - 15 ms."]
     MS_2 = 0x02,
-    #[doc = "1 ms - 15 ms"]
+    #[doc = "1 ms - 15 ms."]
     MS_3 = 0x03,
-    #[doc = "1 ms - 15 ms"]
+    #[doc = "1 ms - 15 ms."]
     MS_4 = 0x04,
-    #[doc = "1 ms - 15 ms"]
+    #[doc = "1 ms - 15 ms."]
     MS_5 = 0x05,
-    #[doc = "1 ms - 15 ms"]
+    #[doc = "1 ms - 15 ms."]
     MS_6 = 0x06,
-    #[doc = "1 ms - 15 ms"]
+    #[doc = "1 ms - 15 ms."]
     MS_7 = 0x07,
-    #[doc = "1 ms - 15 ms"]
+    #[doc = "1 ms - 15 ms."]
     MS_8 = 0x08,
-    #[doc = "1 ms - 15 ms"]
+    #[doc = "1 ms - 15 ms."]
     MS_9 = 0x09,
-    #[doc = "1 ms - 15 ms"]
+    #[doc = "1 ms - 15 ms."]
     MS_10 = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
@@ -117,9 +117,9 @@ impl From<CheckDm> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ClockUnit {
-    #[doc = "kHz Speed (between 4 kHz and 1023 kHz)"]
+    #[doc = "kHz Speed (between 4 kHz and 1023 kHz)."]
     KHZ_CLK = 0x0,
-    #[doc = "MHz Speed (between 1 MHz and 1023 MHz)"]
+    #[doc = "MHz Speed (between 1 MHz and 1023 MHz)."]
     MHZ_CLK = 0x01,
 }
 impl ClockUnit {
@@ -241,7 +241,7 @@ impl From<If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ps {
-    #[doc = "No overrides. Field must remain at this value during normal USB data communication to prevent unexpected conditions on USB_DP and USB_DM pins. (Default)"]
+    #[doc = "No overrides. Field must remain at this value during normal USB data communication to prevent unexpected conditions on USB_DP and USB_DM pins. (Default)."]
     NO_OVERRIDE = 0x0,
     _RESERVED_1 = 0x01,
     #[doc = "Enables VDP_SRC voltage source for the USB_DP pin and IDM_SINK current source for the USB_DM pin."]
@@ -283,7 +283,7 @@ pub enum SeqRes {
     NO_RESULT = 0x0,
     #[doc = "Attached to an SDP. Must comply with USB 2.0 by drawing only 2.5 mA (max) until connected."]
     CONN_SDP = 0x01,
-    #[doc = "Attached to a charging port. The exact meaning depends on the STATUS\\[SEQ_STAT\\] field (value 0: Attached to either a CDP or a DCP. The charger type detection has not completed. value 1: Attached to a CDP. The charger type detection has completed.)"]
+    #[doc = "Attached to a charging port. The exact meaning depends on the STATUS\\[SEQ_STAT\\] field (value 0: Attached to either a CDP or a DCP. The charger type detection has not completed. value 1: Attached to a CDP. The charger type detection has completed.)."]
     CONN_CP = 0x02,
     #[doc = "Attached to a DCP."]
     CONN_DCP = 0x03,
@@ -380,25 +380,25 @@ impl From<Sr> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct TdcdDbnc(u16);
 impl TdcdDbnc {
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_1: Self = Self(0x01);
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_2: Self = Self(0x02);
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_3: Self = Self(0x03);
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_4: Self = Self(0x04);
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_5: Self = Self(0x05);
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_6: Self = Self(0x06);
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_7: Self = Self(0x07);
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_8: Self = Self(0x08);
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_9: Self = Self(0x09);
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_10: Self = Self(0x0a);
 }
 impl TdcdDbnc {
@@ -460,25 +460,25 @@ impl From<TdcdDbnc> for u16 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct TseqInit(u16);
 impl TseqInit {
-    #[doc = "0 ms - 1023 ms"]
+    #[doc = "0 ms - 1023 ms."]
     pub const MS_0: Self = Self(0x0);
-    #[doc = "0 ms - 1023 ms"]
+    #[doc = "0 ms - 1023 ms."]
     pub const MS_1: Self = Self(0x01);
-    #[doc = "0 ms - 1023 ms"]
+    #[doc = "0 ms - 1023 ms."]
     pub const MS_2: Self = Self(0x02);
-    #[doc = "0 ms - 1023 ms"]
+    #[doc = "0 ms - 1023 ms."]
     pub const MS_3: Self = Self(0x03);
-    #[doc = "0 ms - 1023 ms"]
+    #[doc = "0 ms - 1023 ms."]
     pub const MS_4: Self = Self(0x04);
-    #[doc = "0 ms - 1023 ms"]
+    #[doc = "0 ms - 1023 ms."]
     pub const MS_5: Self = Self(0x05);
-    #[doc = "0 ms - 1023 ms"]
+    #[doc = "0 ms - 1023 ms."]
     pub const MS_6: Self = Self(0x06);
-    #[doc = "0 ms - 1023 ms"]
+    #[doc = "0 ms - 1023 ms."]
     pub const MS_7: Self = Self(0x07);
-    #[doc = "0 ms - 1023 ms"]
+    #[doc = "0 ms - 1023 ms."]
     pub const MS_8: Self = Self(0x08);
-    #[doc = "0 ms - 1023 ms"]
+    #[doc = "0 ms - 1023 ms."]
     pub const MS_9: Self = Self(0x09);
 }
 impl TseqInit {
@@ -540,25 +540,25 @@ impl From<TseqInit> for u16 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct TvdmsrcOn(u16);
 impl TvdmsrcOn {
-    #[doc = "0 ms - 40 ms"]
+    #[doc = "0 ms - 40 ms."]
     pub const MS_0: Self = Self(0x0);
-    #[doc = "0 ms - 40 ms"]
+    #[doc = "0 ms - 40 ms."]
     pub const MS_1: Self = Self(0x01);
-    #[doc = "0 ms - 40 ms"]
+    #[doc = "0 ms - 40 ms."]
     pub const MS_2: Self = Self(0x02);
-    #[doc = "0 ms - 40 ms"]
+    #[doc = "0 ms - 40 ms."]
     pub const MS_3: Self = Self(0x03);
-    #[doc = "0 ms - 40 ms"]
+    #[doc = "0 ms - 40 ms."]
     pub const MS_4: Self = Self(0x04);
-    #[doc = "0 ms - 40 ms"]
+    #[doc = "0 ms - 40 ms."]
     pub const MS_5: Self = Self(0x05);
-    #[doc = "0 ms - 40 ms"]
+    #[doc = "0 ms - 40 ms."]
     pub const MS_6: Self = Self(0x06);
-    #[doc = "0 ms - 40 ms"]
+    #[doc = "0 ms - 40 ms."]
     pub const MS_7: Self = Self(0x07);
-    #[doc = "0 ms - 40 ms"]
+    #[doc = "0 ms - 40 ms."]
     pub const MS_8: Self = Self(0x08);
-    #[doc = "0 ms - 40 ms"]
+    #[doc = "0 ms - 40 ms."]
     pub const MS_9: Self = Self(0x09);
 }
 impl TvdmsrcOn {
@@ -620,25 +620,25 @@ impl From<TvdmsrcOn> for u16 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct TvdpsrcCon(u16);
 impl TvdpsrcCon {
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_1: Self = Self(0x01);
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_2: Self = Self(0x02);
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_3: Self = Self(0x03);
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_4: Self = Self(0x04);
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_5: Self = Self(0x05);
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_6: Self = Self(0x06);
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_7: Self = Self(0x07);
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_8: Self = Self(0x08);
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_9: Self = Self(0x09);
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_10: Self = Self(0x0a);
 }
 impl TvdpsrcCon {
@@ -700,25 +700,25 @@ impl From<TvdpsrcCon> for u16 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct TvdpsrcOn(u16);
 impl TvdpsrcOn {
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_1: Self = Self(0x01);
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_2: Self = Self(0x02);
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_3: Self = Self(0x03);
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_4: Self = Self(0x04);
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_5: Self = Self(0x05);
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_6: Self = Self(0x06);
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_7: Self = Self(0x07);
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_8: Self = Self(0x08);
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_9: Self = Self(0x09);
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_10: Self = Self(0x0a);
 }
 impl TvdpsrcOn {
@@ -780,25 +780,25 @@ impl From<TvdpsrcOn> for u16 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct TwaitAfterPrd(u16);
 impl TwaitAfterPrd {
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_1: Self = Self(0x01);
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_2: Self = Self(0x02);
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_3: Self = Self(0x03);
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_4: Self = Self(0x04);
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_5: Self = Self(0x05);
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_6: Self = Self(0x06);
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_7: Self = Self(0x07);
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_8: Self = Self(0x08);
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_9: Self = Self(0x09);
-    #[doc = "1 ms - 1023 ms"]
+    #[doc = "1 ms - 1023 ms."]
     pub const MS_10: Self = Self(0x0a);
 }
 impl TwaitAfterPrd {

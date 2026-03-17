@@ -1,16 +1,16 @@
-#[doc = "Entropy Read Register"]
+#[doc = "Entropy Read Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ent(pub u32);
 impl Ent {
-    #[doc = "Entropy Value"]
+    #[doc = "Entropy Value."]
     #[must_use]
     #[inline(always)]
     pub const fn ent(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Entropy Value"]
+    #[doc = "Entropy Value."]
     #[inline(always)]
     pub const fn set_ent(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -33,19 +33,19 @@ impl defmt::Format for Ent {
         defmt::write!(f, "Ent {{ ent: {=u32:?} }}", self.ent())
     }
 }
-#[doc = "Frequency Count Register"]
+#[doc = "Frequency Count Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Frqcnt(pub u32);
 impl Frqcnt {
-    #[doc = "Frequency Count"]
+    #[doc = "Frequency Count."]
     #[must_use]
     #[inline(always)]
     pub const fn frq_ct(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x003f_ffff;
         val as u32
     }
-    #[doc = "Frequency Count"]
+    #[doc = "Frequency Count."]
     #[inline(always)]
     pub const fn set_frq_ct(&mut self, val: u32) {
         self.0 = (self.0 & !(0x003f_ffff << 0usize)) | (((val as u32) & 0x003f_ffff) << 0usize);
@@ -70,19 +70,19 @@ impl defmt::Format for Frqcnt {
         defmt::write!(f, "Frqcnt {{ frq_ct: {=u32:?} }}", self.frq_ct())
     }
 }
-#[doc = "Frequency Count Maximum Limit Register"]
+#[doc = "Frequency Count Maximum Limit Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Frqmax(pub u32);
 impl Frqmax {
-    #[doc = "Frequency Counter Maximum Limit"]
+    #[doc = "Frequency Counter Maximum Limit."]
     #[must_use]
     #[inline(always)]
     pub const fn frq_max(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x003f_ffff;
         val as u32
     }
-    #[doc = "Frequency Counter Maximum Limit"]
+    #[doc = "Frequency Counter Maximum Limit."]
     #[inline(always)]
     pub const fn set_frq_max(&mut self, val: u32) {
         self.0 = (self.0 & !(0x003f_ffff << 0usize)) | (((val as u32) & 0x003f_ffff) << 0usize);
@@ -107,19 +107,19 @@ impl defmt::Format for Frqmax {
         defmt::write!(f, "Frqmax {{ frq_max: {=u32:?} }}", self.frq_max())
     }
 }
-#[doc = "Frequency Count Minimum Limit Register"]
+#[doc = "Frequency Count Minimum Limit Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Frqmin(pub u32);
 impl Frqmin {
-    #[doc = "Frequency Count Minimum Limit"]
+    #[doc = "Frequency Count Minimum Limit."]
     #[must_use]
     #[inline(always)]
     pub const fn frq_min(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x003f_ffff;
         val as u32
     }
-    #[doc = "Frequency Count Minimum Limit"]
+    #[doc = "Frequency Count Minimum Limit."]
     #[inline(always)]
     pub const fn set_frq_min(&mut self, val: u32) {
         self.0 = (self.0 & !(0x003f_ffff << 0usize)) | (((val as u32) & 0x003f_ffff) << 0usize);
@@ -144,7 +144,7 @@ impl defmt::Format for Frqmin {
         defmt::write!(f, "Frqmin {{ frq_min: {=u32:?} }}", self.frq_min())
     }
 }
-#[doc = "Interrupt Control Register"]
+#[doc = "Interrupt Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct IntCtrl(pub u32);
@@ -213,19 +213,19 @@ impl defmt::Format for IntCtrl {
         )
     }
 }
-#[doc = "Mask Register"]
+#[doc = "Mask Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct IntMask(pub u32);
 impl IntMask {
-    #[doc = "Bit position that can be cleared or set to enable the corresponding bit of INT_STATUS to show interupt status"]
+    #[doc = "Bit position that can be cleared or set to enable the corresponding bit of INT_STATUS to show interupt status."]
     #[must_use]
     #[inline(always)]
     pub const fn hw_err(&self) -> super::vals::IntMaskHwErr {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::IntMaskHwErr::from_bits(val as u8)
     }
-    #[doc = "Bit position that can be cleared or set to enable the corresponding bit of INT_STATUS to show interupt status"]
+    #[doc = "Bit position that can be cleared or set to enable the corresponding bit of INT_STATUS to show interupt status."]
     #[inline(always)]
     pub const fn set_hw_err(&mut self, val: super::vals::IntMaskHwErr) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
@@ -282,43 +282,43 @@ impl defmt::Format for IntMask {
         )
     }
 }
-#[doc = "Interrupt Status Register"]
+#[doc = "Interrupt Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct IntStatus(pub u32);
 impl IntStatus {
-    #[doc = "Read: Error status"]
+    #[doc = "Read: Error status."]
     #[must_use]
     #[inline(always)]
     pub const fn hw_err(&self) -> super::vals::IntStatusHwErr {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::IntStatusHwErr::from_bits(val as u8)
     }
-    #[doc = "Read: Error status"]
+    #[doc = "Read: Error status."]
     #[inline(always)]
     pub const fn set_hw_err(&mut self, val: super::vals::IntStatusHwErr) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Read only: Entropy Valid"]
+    #[doc = "Read only: Entropy Valid."]
     #[must_use]
     #[inline(always)]
     pub const fn ent_val(&self) -> super::vals::IntStatusEntVal {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::IntStatusEntVal::from_bits(val as u8)
     }
-    #[doc = "Read only: Entropy Valid"]
+    #[doc = "Read only: Entropy Valid."]
     #[inline(always)]
     pub const fn set_ent_val(&mut self, val: super::vals::IntStatusEntVal) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Read only: Frequency Count Fail"]
+    #[doc = "Read only: Frequency Count Fail."]
     #[must_use]
     #[inline(always)]
     pub const fn frq_ct_fail(&self) -> super::vals::IntStatusFrqCtFail {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::IntStatusFrqCtFail::from_bits(val as u8)
     }
-    #[doc = "Read only: Frequency Count Fail"]
+    #[doc = "Read only: Frequency Count Fail."]
     #[inline(always)]
     pub const fn set_frq_ct_fail(&mut self, val: super::vals::IntStatusFrqCtFail) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
@@ -351,31 +351,31 @@ impl defmt::Format for IntStatus {
         )
     }
 }
-#[doc = "Miscellaneous Control Register"]
+#[doc = "Miscellaneous Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mctl(pub u32);
 impl Mctl {
-    #[doc = "Sample Mode"]
+    #[doc = "Sample Mode."]
     #[must_use]
     #[inline(always)]
     pub const fn samp_mode(&self) -> super::vals::SampMode {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::SampMode::from_bits(val as u8)
     }
-    #[doc = "Sample Mode"]
+    #[doc = "Sample Mode."]
     #[inline(always)]
     pub const fn set_samp_mode(&mut self, val: super::vals::SampMode) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "Oscillator Divide"]
+    #[doc = "Oscillator Divide."]
     #[must_use]
     #[inline(always)]
     pub const fn osc_div(&self) -> super::vals::OscDiv {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::OscDiv::from_bits(val as u8)
     }
-    #[doc = "Oscillator Divide"]
+    #[doc = "Oscillator Divide."]
     #[inline(always)]
     pub const fn set_osc_div(&mut self, val: super::vals::OscDiv) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
@@ -404,38 +404,38 @@ impl Mctl {
     pub const fn set_unused5(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "Reset Defaults"]
+    #[doc = "Reset Defaults."]
     #[must_use]
     #[inline(always)]
     pub const fn rst_def(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "Reset Defaults"]
+    #[doc = "Reset Defaults."]
     #[inline(always)]
     pub const fn set_rst_def(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Force System Clock"]
+    #[doc = "Force System Clock."]
     #[must_use]
     #[inline(always)]
     pub const fn for_sclk(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Force System Clock"]
+    #[doc = "Force System Clock."]
     #[inline(always)]
     pub const fn set_for_sclk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Read only: Frequency Count Fail"]
+    #[doc = "Read only: Frequency Count Fail."]
     #[must_use]
     #[inline(always)]
     pub const fn fct_fail(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Read only: Frequency Count Fail"]
+    #[doc = "Read only: Frequency Count Fail."]
     #[inline(always)]
     pub const fn set_fct_fail(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
@@ -452,14 +452,14 @@ impl Mctl {
     pub const fn set_fct_val(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "Read only: Entropy Valid"]
+    #[doc = "Read only: Entropy Valid."]
     #[must_use]
     #[inline(always)]
     pub const fn ent_val(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "Read only: Entropy Valid"]
+    #[doc = "Read only: Entropy Valid."]
     #[inline(always)]
     pub const fn set_ent_val(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
@@ -476,50 +476,50 @@ impl Mctl {
     pub const fn set_tst_out(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "Read: Error status"]
+    #[doc = "Read: Error status."]
     #[must_use]
     #[inline(always)]
     pub const fn err(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "Read: Error status"]
+    #[doc = "Read: Error status."]
     #[inline(always)]
     pub const fn set_err(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "TRNG_OK_TO_STOP"]
+    #[doc = "TRNG_OK_TO_STOP."]
     #[must_use]
     #[inline(always)]
     pub const fn tstop_ok(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "TRNG_OK_TO_STOP"]
+    #[doc = "TRNG_OK_TO_STOP."]
     #[inline(always)]
     pub const fn set_tstop_ok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "Long run count continues between entropy generations"]
+    #[doc = "Long run count continues between entropy generations."]
     #[must_use]
     #[inline(always)]
     pub const fn lrun_cont(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "Long run count continues between entropy generations"]
+    #[doc = "Long run count continues between entropy generations."]
     #[inline(always)]
     pub const fn set_lrun_cont(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Programming Mode Select"]
+    #[doc = "Programming Mode Select."]
     #[must_use]
     #[inline(always)]
     pub const fn prgm(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Programming Mode Select"]
+    #[doc = "Programming Mode Select."]
     #[inline(always)]
     pub const fn set_prgm(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
@@ -574,31 +574,31 @@ impl defmt::Format for Mctl {
         )
     }
 }
-#[doc = "Statistical Check Poker Count 1 and 0 Register"]
+#[doc = "Statistical Check Poker Count 1 and 0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pkrcnt10(pub u32);
 impl Pkrcnt10 {
-    #[doc = "Poker 0h Count"]
+    #[doc = "Poker 0h Count."]
     #[must_use]
     #[inline(always)]
     pub const fn pkr_0_ct(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Poker 0h Count"]
+    #[doc = "Poker 0h Count."]
     #[inline(always)]
     pub const fn set_pkr_0_ct(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Poker 1h Count"]
+    #[doc = "Poker 1h Count."]
     #[must_use]
     #[inline(always)]
     pub const fn pkr_1_ct(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "Poker 1h Count"]
+    #[doc = "Poker 1h Count."]
     #[inline(always)]
     pub const fn set_pkr_1_ct(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -629,31 +629,31 @@ impl defmt::Format for Pkrcnt10 {
         )
     }
 }
-#[doc = "Statistical Check Poker Count 3 and 2 Register"]
+#[doc = "Statistical Check Poker Count 3 and 2 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pkrcnt32(pub u32);
 impl Pkrcnt32 {
-    #[doc = "Poker 2h Count"]
+    #[doc = "Poker 2h Count."]
     #[must_use]
     #[inline(always)]
     pub const fn pkr_2_ct(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Poker 2h Count"]
+    #[doc = "Poker 2h Count."]
     #[inline(always)]
     pub const fn set_pkr_2_ct(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Poker 3h Count"]
+    #[doc = "Poker 3h Count."]
     #[must_use]
     #[inline(always)]
     pub const fn pkr_3_ct(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "Poker 3h Count"]
+    #[doc = "Poker 3h Count."]
     #[inline(always)]
     pub const fn set_pkr_3_ct(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -684,31 +684,31 @@ impl defmt::Format for Pkrcnt32 {
         )
     }
 }
-#[doc = "Statistical Check Poker Count 5 and 4 Register"]
+#[doc = "Statistical Check Poker Count 5 and 4 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pkrcnt54(pub u32);
 impl Pkrcnt54 {
-    #[doc = "Poker 4h Count"]
+    #[doc = "Poker 4h Count."]
     #[must_use]
     #[inline(always)]
     pub const fn pkr_4_ct(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Poker 4h Count"]
+    #[doc = "Poker 4h Count."]
     #[inline(always)]
     pub const fn set_pkr_4_ct(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Poker 5h Count"]
+    #[doc = "Poker 5h Count."]
     #[must_use]
     #[inline(always)]
     pub const fn pkr_5_ct(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "Poker 5h Count"]
+    #[doc = "Poker 5h Count."]
     #[inline(always)]
     pub const fn set_pkr_5_ct(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -739,31 +739,31 @@ impl defmt::Format for Pkrcnt54 {
         )
     }
 }
-#[doc = "Statistical Check Poker Count 7 and 6 Register"]
+#[doc = "Statistical Check Poker Count 7 and 6 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pkrcnt76(pub u32);
 impl Pkrcnt76 {
-    #[doc = "Poker 6h Count"]
+    #[doc = "Poker 6h Count."]
     #[must_use]
     #[inline(always)]
     pub const fn pkr_6_ct(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Poker 6h Count"]
+    #[doc = "Poker 6h Count."]
     #[inline(always)]
     pub const fn set_pkr_6_ct(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Poker 7h Count"]
+    #[doc = "Poker 7h Count."]
     #[must_use]
     #[inline(always)]
     pub const fn pkr_7_ct(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "Poker 7h Count"]
+    #[doc = "Poker 7h Count."]
     #[inline(always)]
     pub const fn set_pkr_7_ct(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -794,31 +794,31 @@ impl defmt::Format for Pkrcnt76 {
         )
     }
 }
-#[doc = "Statistical Check Poker Count 9 and 8 Register"]
+#[doc = "Statistical Check Poker Count 9 and 8 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pkrcnt98(pub u32);
 impl Pkrcnt98 {
-    #[doc = "Poker 8h Count"]
+    #[doc = "Poker 8h Count."]
     #[must_use]
     #[inline(always)]
     pub const fn pkr_8_ct(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Poker 8h Count"]
+    #[doc = "Poker 8h Count."]
     #[inline(always)]
     pub const fn set_pkr_8_ct(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Poker 9h Count"]
+    #[doc = "Poker 9h Count."]
     #[must_use]
     #[inline(always)]
     pub const fn pkr_9_ct(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "Poker 9h Count"]
+    #[doc = "Poker 9h Count."]
     #[inline(always)]
     pub const fn set_pkr_9_ct(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -849,31 +849,31 @@ impl defmt::Format for Pkrcnt98 {
         )
     }
 }
-#[doc = "Statistical Check Poker Count B and A Register"]
+#[doc = "Statistical Check Poker Count B and A Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pkrcntba(pub u32);
 impl Pkrcntba {
-    #[doc = "Poker Ah Count"]
+    #[doc = "Poker Ah Count."]
     #[must_use]
     #[inline(always)]
     pub const fn pkr_a_ct(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Poker Ah Count"]
+    #[doc = "Poker Ah Count."]
     #[inline(always)]
     pub const fn set_pkr_a_ct(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Poker Bh Count"]
+    #[doc = "Poker Bh Count."]
     #[must_use]
     #[inline(always)]
     pub const fn pkr_b_ct(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "Poker Bh Count"]
+    #[doc = "Poker Bh Count."]
     #[inline(always)]
     pub const fn set_pkr_b_ct(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -904,31 +904,31 @@ impl defmt::Format for Pkrcntba {
         )
     }
 }
-#[doc = "Statistical Check Poker Count D and C Register"]
+#[doc = "Statistical Check Poker Count D and C Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pkrcntdc(pub u32);
 impl Pkrcntdc {
-    #[doc = "Poker Ch Count"]
+    #[doc = "Poker Ch Count."]
     #[must_use]
     #[inline(always)]
     pub const fn pkr_c_ct(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Poker Ch Count"]
+    #[doc = "Poker Ch Count."]
     #[inline(always)]
     pub const fn set_pkr_c_ct(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Poker Dh Count"]
+    #[doc = "Poker Dh Count."]
     #[must_use]
     #[inline(always)]
     pub const fn pkr_d_ct(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "Poker Dh Count"]
+    #[doc = "Poker Dh Count."]
     #[inline(always)]
     pub const fn set_pkr_d_ct(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -959,31 +959,31 @@ impl defmt::Format for Pkrcntdc {
         )
     }
 }
-#[doc = "Statistical Check Poker Count F and E Register"]
+#[doc = "Statistical Check Poker Count F and E Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pkrcntfe(pub u32);
 impl Pkrcntfe {
-    #[doc = "Poker Eh Count"]
+    #[doc = "Poker Eh Count."]
     #[must_use]
     #[inline(always)]
     pub const fn pkr_e_ct(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Poker Eh Count"]
+    #[doc = "Poker Eh Count."]
     #[inline(always)]
     pub const fn set_pkr_e_ct(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Poker Fh Count"]
+    #[doc = "Poker Fh Count."]
     #[must_use]
     #[inline(always)]
     pub const fn pkr_f_ct(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "Poker Fh Count"]
+    #[doc = "Poker Fh Count."]
     #[inline(always)]
     pub const fn set_pkr_f_ct(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -1014,7 +1014,7 @@ impl defmt::Format for Pkrcntfe {
         )
     }
 }
-#[doc = "Poker Maximum Limit Register"]
+#[doc = "Poker Maximum Limit Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pkrmax(pub u32);
@@ -1051,19 +1051,19 @@ impl defmt::Format for Pkrmax {
         defmt::write!(f, "Pkrmax {{ pkr_max: {=u32:?} }}", self.pkr_max())
     }
 }
-#[doc = "Poker Range Register"]
+#[doc = "Poker Range Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pkrrng(pub u32);
 impl Pkrrng {
-    #[doc = "Poker Range"]
+    #[doc = "Poker Range."]
     #[must_use]
     #[inline(always)]
     pub const fn pkr_rng(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Poker Range"]
+    #[doc = "Poker Range."]
     #[inline(always)]
     pub const fn set_pkr_rng(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
@@ -1088,7 +1088,7 @@ impl defmt::Format for Pkrrng {
         defmt::write!(f, "Pkrrng {{ pkr_rng: {=u16:?} }}", self.pkr_rng())
     }
 }
-#[doc = "Poker Square Calculation Result Register"]
+#[doc = "Poker Square Calculation Result Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pkrsq(pub u32);
@@ -1125,19 +1125,19 @@ impl defmt::Format for Pkrsq {
         defmt::write!(f, "Pkrsq {{ pkr_sq: {=u32:?} }}", self.pkr_sq())
     }
 }
-#[doc = "Sparse Bit Limit Register"]
+#[doc = "Sparse Bit Limit Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sblim(pub u32);
 impl Sblim {
-    #[doc = "Sparse Bit Limit"]
+    #[doc = "Sparse Bit Limit."]
     #[must_use]
     #[inline(always)]
     pub const fn sb_lim(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x03ff;
         val as u16
     }
-    #[doc = "Sparse Bit Limit"]
+    #[doc = "Sparse Bit Limit."]
     #[inline(always)]
     pub const fn set_sb_lim(&mut self, val: u16) {
         self.0 = (self.0 & !(0x03ff << 0usize)) | (((val as u32) & 0x03ff) << 0usize);
@@ -1162,19 +1162,19 @@ impl defmt::Format for Sblim {
         defmt::write!(f, "Sblim {{ sb_lim: {=u16:?} }}", self.sb_lim())
     }
 }
-#[doc = "Statistical Check Monobit Count Register"]
+#[doc = "Statistical Check Monobit Count Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Scmc(pub u32);
 impl Scmc {
-    #[doc = "Monobit Count"]
+    #[doc = "Monobit Count."]
     #[must_use]
     #[inline(always)]
     pub const fn mono_ct(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Monobit Count"]
+    #[doc = "Monobit Count."]
     #[inline(always)]
     pub const fn set_mono_ct(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
@@ -1199,31 +1199,31 @@ impl defmt::Format for Scmc {
         defmt::write!(f, "Scmc {{ mono_ct: {=u16:?} }}", self.mono_ct())
     }
 }
-#[doc = "Statistical Check Miscellaneous Register"]
+#[doc = "Statistical Check Miscellaneous Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Scmisc(pub u32);
 impl Scmisc {
-    #[doc = "LONG RUN MAX LIMIT"]
+    #[doc = "LONG RUN MAX LIMIT."]
     #[must_use]
     #[inline(always)]
     pub const fn lrun_max(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "LONG RUN MAX LIMIT"]
+    #[doc = "LONG RUN MAX LIMIT."]
     #[inline(always)]
     pub const fn set_lrun_max(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "RETRY COUNT"]
+    #[doc = "RETRY COUNT."]
     #[must_use]
     #[inline(always)]
     pub const fn rty_ct(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x0f;
         val as u8
     }
-    #[doc = "RETRY COUNT"]
+    #[doc = "RETRY COUNT."]
     #[inline(always)]
     pub const fn set_rty_ct(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
@@ -1254,31 +1254,31 @@ impl defmt::Format for Scmisc {
         )
     }
 }
-#[doc = "Statistical Check Monobit Limit Register"]
+#[doc = "Statistical Check Monobit Limit Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Scml(pub u32);
 impl Scml {
-    #[doc = "Monobit Maximum Limit"]
+    #[doc = "Monobit Maximum Limit."]
     #[must_use]
     #[inline(always)]
     pub const fn mono_max(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Monobit Maximum Limit"]
+    #[doc = "Monobit Maximum Limit."]
     #[inline(always)]
     pub const fn set_mono_max(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Monobit Range"]
+    #[doc = "Monobit Range."]
     #[must_use]
     #[inline(always)]
     pub const fn mono_rng(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "Monobit Range"]
+    #[doc = "Monobit Range."]
     #[inline(always)]
     pub const fn set_mono_rng(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -1309,31 +1309,31 @@ impl defmt::Format for Scml {
         )
     }
 }
-#[doc = "Statistical Check Run Length 1 Count Register"]
+#[doc = "Statistical Check Run Length 1 Count Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Scr1c(pub u32);
 impl Scr1c {
-    #[doc = "Runs of Zero, Length 1 Count"]
+    #[doc = "Runs of Zero, Length 1 Count."]
     #[must_use]
     #[inline(always)]
     pub const fn r1_0_ct(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x7fff;
         val as u16
     }
-    #[doc = "Runs of Zero, Length 1 Count"]
+    #[doc = "Runs of Zero, Length 1 Count."]
     #[inline(always)]
     pub const fn set_r1_0_ct(&mut self, val: u16) {
         self.0 = (self.0 & !(0x7fff << 0usize)) | (((val as u32) & 0x7fff) << 0usize);
     }
-    #[doc = "Runs of One, Length 1 Count"]
+    #[doc = "Runs of One, Length 1 Count."]
     #[must_use]
     #[inline(always)]
     pub const fn r1_1_ct(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x7fff;
         val as u16
     }
-    #[doc = "Runs of One, Length 1 Count"]
+    #[doc = "Runs of One, Length 1 Count."]
     #[inline(always)]
     pub const fn set_r1_1_ct(&mut self, val: u16) {
         self.0 = (self.0 & !(0x7fff << 16usize)) | (((val as u32) & 0x7fff) << 16usize);
@@ -1364,31 +1364,31 @@ impl defmt::Format for Scr1c {
         )
     }
 }
-#[doc = "Statistical Check Run Length 1 Limit Register"]
+#[doc = "Statistical Check Run Length 1 Limit Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Scr1l(pub u32);
 impl Scr1l {
-    #[doc = "Run Length 1 Maximum Limit"]
+    #[doc = "Run Length 1 Maximum Limit."]
     #[must_use]
     #[inline(always)]
     pub const fn run1_max(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x7fff;
         val as u16
     }
-    #[doc = "Run Length 1 Maximum Limit"]
+    #[doc = "Run Length 1 Maximum Limit."]
     #[inline(always)]
     pub const fn set_run1_max(&mut self, val: u16) {
         self.0 = (self.0 & !(0x7fff << 0usize)) | (((val as u32) & 0x7fff) << 0usize);
     }
-    #[doc = "Run Length 1 Range"]
+    #[doc = "Run Length 1 Range."]
     #[must_use]
     #[inline(always)]
     pub const fn run1_rng(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x7fff;
         val as u16
     }
-    #[doc = "Run Length 1 Range"]
+    #[doc = "Run Length 1 Range."]
     #[inline(always)]
     pub const fn set_run1_rng(&mut self, val: u16) {
         self.0 = (self.0 & !(0x7fff << 16usize)) | (((val as u32) & 0x7fff) << 16usize);
@@ -1419,31 +1419,31 @@ impl defmt::Format for Scr1l {
         )
     }
 }
-#[doc = "Statistical Check Run Length 2 Count Register"]
+#[doc = "Statistical Check Run Length 2 Count Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Scr2c(pub u32);
 impl Scr2c {
-    #[doc = "Runs of Zero, Length 2 Count"]
+    #[doc = "Runs of Zero, Length 2 Count."]
     #[must_use]
     #[inline(always)]
     pub const fn r2_0_ct(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x3fff;
         val as u16
     }
-    #[doc = "Runs of Zero, Length 2 Count"]
+    #[doc = "Runs of Zero, Length 2 Count."]
     #[inline(always)]
     pub const fn set_r2_0_ct(&mut self, val: u16) {
         self.0 = (self.0 & !(0x3fff << 0usize)) | (((val as u32) & 0x3fff) << 0usize);
     }
-    #[doc = "Runs of One, Length 2 Count"]
+    #[doc = "Runs of One, Length 2 Count."]
     #[must_use]
     #[inline(always)]
     pub const fn r2_1_ct(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x3fff;
         val as u16
     }
-    #[doc = "Runs of One, Length 2 Count"]
+    #[doc = "Runs of One, Length 2 Count."]
     #[inline(always)]
     pub const fn set_r2_1_ct(&mut self, val: u16) {
         self.0 = (self.0 & !(0x3fff << 16usize)) | (((val as u32) & 0x3fff) << 16usize);
@@ -1474,31 +1474,31 @@ impl defmt::Format for Scr2c {
         )
     }
 }
-#[doc = "Statistical Check Run Length 2 Limit Register"]
+#[doc = "Statistical Check Run Length 2 Limit Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Scr2l(pub u32);
 impl Scr2l {
-    #[doc = "Run Length 2 Maximum Limit"]
+    #[doc = "Run Length 2 Maximum Limit."]
     #[must_use]
     #[inline(always)]
     pub const fn run2_max(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x3fff;
         val as u16
     }
-    #[doc = "Run Length 2 Maximum Limit"]
+    #[doc = "Run Length 2 Maximum Limit."]
     #[inline(always)]
     pub const fn set_run2_max(&mut self, val: u16) {
         self.0 = (self.0 & !(0x3fff << 0usize)) | (((val as u32) & 0x3fff) << 0usize);
     }
-    #[doc = "Run Length 2 Range"]
+    #[doc = "Run Length 2 Range."]
     #[must_use]
     #[inline(always)]
     pub const fn run2_rng(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x3fff;
         val as u16
     }
-    #[doc = "Run Length 2 Range"]
+    #[doc = "Run Length 2 Range."]
     #[inline(always)]
     pub const fn set_run2_rng(&mut self, val: u16) {
         self.0 = (self.0 & !(0x3fff << 16usize)) | (((val as u32) & 0x3fff) << 16usize);
@@ -1529,31 +1529,31 @@ impl defmt::Format for Scr2l {
         )
     }
 }
-#[doc = "Statistical Check Run Length 3 Count Register"]
+#[doc = "Statistical Check Run Length 3 Count Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Scr3c(pub u32);
 impl Scr3c {
-    #[doc = "Runs of Zeroes, Length 3 Count"]
+    #[doc = "Runs of Zeroes, Length 3 Count."]
     #[must_use]
     #[inline(always)]
     pub const fn r3_0_ct(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x1fff;
         val as u16
     }
-    #[doc = "Runs of Zeroes, Length 3 Count"]
+    #[doc = "Runs of Zeroes, Length 3 Count."]
     #[inline(always)]
     pub const fn set_r3_0_ct(&mut self, val: u16) {
         self.0 = (self.0 & !(0x1fff << 0usize)) | (((val as u32) & 0x1fff) << 0usize);
     }
-    #[doc = "Runs of Ones, Length 3 Count"]
+    #[doc = "Runs of Ones, Length 3 Count."]
     #[must_use]
     #[inline(always)]
     pub const fn r3_1_ct(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x1fff;
         val as u16
     }
-    #[doc = "Runs of Ones, Length 3 Count"]
+    #[doc = "Runs of Ones, Length 3 Count."]
     #[inline(always)]
     pub const fn set_r3_1_ct(&mut self, val: u16) {
         self.0 = (self.0 & !(0x1fff << 16usize)) | (((val as u32) & 0x1fff) << 16usize);
@@ -1584,31 +1584,31 @@ impl defmt::Format for Scr3c {
         )
     }
 }
-#[doc = "Statistical Check Run Length 3 Limit Register"]
+#[doc = "Statistical Check Run Length 3 Limit Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Scr3l(pub u32);
 impl Scr3l {
-    #[doc = "Run Length 3 Maximum Limit"]
+    #[doc = "Run Length 3 Maximum Limit."]
     #[must_use]
     #[inline(always)]
     pub const fn run3_max(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x1fff;
         val as u16
     }
-    #[doc = "Run Length 3 Maximum Limit"]
+    #[doc = "Run Length 3 Maximum Limit."]
     #[inline(always)]
     pub const fn set_run3_max(&mut self, val: u16) {
         self.0 = (self.0 & !(0x1fff << 0usize)) | (((val as u32) & 0x1fff) << 0usize);
     }
-    #[doc = "Run Length 3 Range"]
+    #[doc = "Run Length 3 Range."]
     #[must_use]
     #[inline(always)]
     pub const fn run3_rng(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x1fff;
         val as u16
     }
-    #[doc = "Run Length 3 Range"]
+    #[doc = "Run Length 3 Range."]
     #[inline(always)]
     pub const fn set_run3_rng(&mut self, val: u16) {
         self.0 = (self.0 & !(0x1fff << 16usize)) | (((val as u32) & 0x1fff) << 16usize);
@@ -1639,31 +1639,31 @@ impl defmt::Format for Scr3l {
         )
     }
 }
-#[doc = "Statistical Check Run Length 4 Count Register"]
+#[doc = "Statistical Check Run Length 4 Count Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Scr4c(pub u32);
 impl Scr4c {
-    #[doc = "Runs of Zero, Length 4 Count"]
+    #[doc = "Runs of Zero, Length 4 Count."]
     #[must_use]
     #[inline(always)]
     pub const fn r4_0_ct(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Runs of Zero, Length 4 Count"]
+    #[doc = "Runs of Zero, Length 4 Count."]
     #[inline(always)]
     pub const fn set_r4_0_ct(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
     }
-    #[doc = "Runs of One, Length 4 Count"]
+    #[doc = "Runs of One, Length 4 Count."]
     #[must_use]
     #[inline(always)]
     pub const fn r4_1_ct(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Runs of One, Length 4 Count"]
+    #[doc = "Runs of One, Length 4 Count."]
     #[inline(always)]
     pub const fn set_r4_1_ct(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);
@@ -1694,31 +1694,31 @@ impl defmt::Format for Scr4c {
         )
     }
 }
-#[doc = "Statistical Check Run Length 4 Limit Register"]
+#[doc = "Statistical Check Run Length 4 Limit Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Scr4l(pub u32);
 impl Scr4l {
-    #[doc = "Run Length 4 Maximum Limit"]
+    #[doc = "Run Length 4 Maximum Limit."]
     #[must_use]
     #[inline(always)]
     pub const fn run4_max(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Run Length 4 Maximum Limit"]
+    #[doc = "Run Length 4 Maximum Limit."]
     #[inline(always)]
     pub const fn set_run4_max(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
     }
-    #[doc = "Run Length 4 Range"]
+    #[doc = "Run Length 4 Range."]
     #[must_use]
     #[inline(always)]
     pub const fn run4_rng(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Run Length 4 Range"]
+    #[doc = "Run Length 4 Range."]
     #[inline(always)]
     pub const fn set_run4_rng(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);
@@ -1749,31 +1749,31 @@ impl defmt::Format for Scr4l {
         )
     }
 }
-#[doc = "Statistical Check Run Length 5 Count Register"]
+#[doc = "Statistical Check Run Length 5 Count Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Scr5c(pub u32);
 impl Scr5c {
-    #[doc = "Runs of Zero, Length 5 Count"]
+    #[doc = "Runs of Zero, Length 5 Count."]
     #[must_use]
     #[inline(always)]
     pub const fn r5_0_ct(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x07ff;
         val as u16
     }
-    #[doc = "Runs of Zero, Length 5 Count"]
+    #[doc = "Runs of Zero, Length 5 Count."]
     #[inline(always)]
     pub const fn set_r5_0_ct(&mut self, val: u16) {
         self.0 = (self.0 & !(0x07ff << 0usize)) | (((val as u32) & 0x07ff) << 0usize);
     }
-    #[doc = "Runs of One, Length 5 Count"]
+    #[doc = "Runs of One, Length 5 Count."]
     #[must_use]
     #[inline(always)]
     pub const fn r5_1_ct(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x07ff;
         val as u16
     }
-    #[doc = "Runs of One, Length 5 Count"]
+    #[doc = "Runs of One, Length 5 Count."]
     #[inline(always)]
     pub const fn set_r5_1_ct(&mut self, val: u16) {
         self.0 = (self.0 & !(0x07ff << 16usize)) | (((val as u32) & 0x07ff) << 16usize);
@@ -1804,31 +1804,31 @@ impl defmt::Format for Scr5c {
         )
     }
 }
-#[doc = "Statistical Check Run Length 5 Limit Register"]
+#[doc = "Statistical Check Run Length 5 Limit Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Scr5l(pub u32);
 impl Scr5l {
-    #[doc = "Run Length 5 Maximum Limit"]
+    #[doc = "Run Length 5 Maximum Limit."]
     #[must_use]
     #[inline(always)]
     pub const fn run5_max(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x07ff;
         val as u16
     }
-    #[doc = "Run Length 5 Maximum Limit"]
+    #[doc = "Run Length 5 Maximum Limit."]
     #[inline(always)]
     pub const fn set_run5_max(&mut self, val: u16) {
         self.0 = (self.0 & !(0x07ff << 0usize)) | (((val as u32) & 0x07ff) << 0usize);
     }
-    #[doc = "Run Length 5 Range"]
+    #[doc = "Run Length 5 Range."]
     #[must_use]
     #[inline(always)]
     pub const fn run5_rng(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x07ff;
         val as u16
     }
-    #[doc = "Run Length 5 Range"]
+    #[doc = "Run Length 5 Range."]
     #[inline(always)]
     pub const fn set_run5_rng(&mut self, val: u16) {
         self.0 = (self.0 & !(0x07ff << 16usize)) | (((val as u32) & 0x07ff) << 16usize);
@@ -1859,31 +1859,31 @@ impl defmt::Format for Scr5l {
         )
     }
 }
-#[doc = "Statistical Check Run Length 6+ Count Register"]
+#[doc = "Statistical Check Run Length 6+ Count Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Scr6pc(pub u32);
 impl Scr6pc {
-    #[doc = "Runs of Zero, Length 6+ Count"]
+    #[doc = "Runs of Zero, Length 6+ Count."]
     #[must_use]
     #[inline(always)]
     pub const fn r6p_0_ct(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x07ff;
         val as u16
     }
-    #[doc = "Runs of Zero, Length 6+ Count"]
+    #[doc = "Runs of Zero, Length 6+ Count."]
     #[inline(always)]
     pub const fn set_r6p_0_ct(&mut self, val: u16) {
         self.0 = (self.0 & !(0x07ff << 0usize)) | (((val as u32) & 0x07ff) << 0usize);
     }
-    #[doc = "Runs of One, Length 6+ Count"]
+    #[doc = "Runs of One, Length 6+ Count."]
     #[must_use]
     #[inline(always)]
     pub const fn r6p_1_ct(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x07ff;
         val as u16
     }
-    #[doc = "Runs of One, Length 6+ Count"]
+    #[doc = "Runs of One, Length 6+ Count."]
     #[inline(always)]
     pub const fn set_r6p_1_ct(&mut self, val: u16) {
         self.0 = (self.0 & !(0x07ff << 16usize)) | (((val as u32) & 0x07ff) << 16usize);
@@ -1914,31 +1914,31 @@ impl defmt::Format for Scr6pc {
         )
     }
 }
-#[doc = "Statistical Check Run Length 6+ Limit Register"]
+#[doc = "Statistical Check Run Length 6+ Limit Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Scr6pl(pub u32);
 impl Scr6pl {
-    #[doc = "Run Length 6+ Maximum Limit"]
+    #[doc = "Run Length 6+ Maximum Limit."]
     #[must_use]
     #[inline(always)]
     pub const fn run6p_max(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x07ff;
         val as u16
     }
-    #[doc = "Run Length 6+ Maximum Limit"]
+    #[doc = "Run Length 6+ Maximum Limit."]
     #[inline(always)]
     pub const fn set_run6p_max(&mut self, val: u16) {
         self.0 = (self.0 & !(0x07ff << 0usize)) | (((val as u32) & 0x07ff) << 0usize);
     }
-    #[doc = "Run Length 6+ Range"]
+    #[doc = "Run Length 6+ Range."]
     #[must_use]
     #[inline(always)]
     pub const fn run6p_rng(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x07ff;
         val as u16
     }
-    #[doc = "Run Length 6+ Range"]
+    #[doc = "Run Length 6+ Range."]
     #[inline(always)]
     pub const fn set_run6p_rng(&mut self, val: u16) {
         self.0 = (self.0 & !(0x07ff << 16usize)) | (((val as u32) & 0x07ff) << 16usize);
@@ -1969,31 +1969,31 @@ impl defmt::Format for Scr6pl {
         )
     }
 }
-#[doc = "Seed Control Register"]
+#[doc = "Seed Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sdctl(pub u32);
 impl Sdctl {
-    #[doc = "Sample Size"]
+    #[doc = "Sample Size."]
     #[must_use]
     #[inline(always)]
     pub const fn samp_size(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Sample Size"]
+    #[doc = "Sample Size."]
     #[inline(always)]
     pub const fn set_samp_size(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Entropy Delay"]
+    #[doc = "Entropy Delay."]
     #[must_use]
     #[inline(always)]
     pub const fn ent_dly(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "Entropy Delay"]
+    #[doc = "Entropy Delay."]
     #[inline(always)]
     pub const fn set_ent_dly(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -2024,7 +2024,7 @@ impl defmt::Format for Sdctl {
         )
     }
 }
-#[doc = "Security Configuration Register"]
+#[doc = "Security Configuration Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SecCfg(pub u32);
@@ -2041,14 +2041,14 @@ impl SecCfg {
     pub const fn set_unused0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "If set, the TRNG registers cannot be programmed"]
+    #[doc = "If set, the TRNG registers cannot be programmed."]
     #[must_use]
     #[inline(always)]
     pub const fn no_prgm(&self) -> super::vals::NoPrgm {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::NoPrgm::from_bits(val as u8)
     }
-    #[doc = "If set, the TRNG registers cannot be programmed"]
+    #[doc = "If set, the TRNG registers cannot be programmed."]
     #[inline(always)]
     pub const fn set_no_prgm(&mut self, val: super::vals::NoPrgm) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
@@ -2093,7 +2093,7 @@ impl defmt::Format for SecCfg {
         )
     }
 }
-#[doc = "Status Register"]
+#[doc = "Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Status(pub u32);
@@ -2218,26 +2218,26 @@ impl Status {
     pub const fn set_tf5br1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "Test Fail, 6 Plus Bit Run, Sampling 0s"]
+    #[doc = "Test Fail, 6 Plus Bit Run, Sampling 0s."]
     #[must_use]
     #[inline(always)]
     pub const fn tf6pbr0(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "Test Fail, 6 Plus Bit Run, Sampling 0s"]
+    #[doc = "Test Fail, 6 Plus Bit Run, Sampling 0s."]
     #[inline(always)]
     pub const fn set_tf6pbr0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "Test Fail, 6 Plus Bit Run, Sampling 1s"]
+    #[doc = "Test Fail, 6 Plus Bit Run, Sampling 1s."]
     #[must_use]
     #[inline(always)]
     pub const fn tf6pbr1(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "Test Fail, 6 Plus Bit Run, Sampling 1s"]
+    #[doc = "Test Fail, 6 Plus Bit Run, Sampling 1s."]
     #[inline(always)]
     pub const fn set_tf6pbr1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
@@ -2290,14 +2290,14 @@ impl Status {
     pub const fn set_tfmb(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "RETRY COUNT"]
+    #[doc = "RETRY COUNT."]
     #[must_use]
     #[inline(always)]
     pub const fn retry_ct(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x0f;
         val as u8
     }
-    #[doc = "RETRY COUNT"]
+    #[doc = "RETRY COUNT."]
     #[inline(always)]
     pub const fn set_retry_ct(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
@@ -2358,19 +2358,19 @@ impl defmt::Format for Status {
         )
     }
 }
-#[doc = "Total Samples Register"]
+#[doc = "Total Samples Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Totsam(pub u32);
 impl Totsam {
-    #[doc = "Total Samples"]
+    #[doc = "Total Samples."]
     #[must_use]
     #[inline(always)]
     pub const fn tot_sam(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x000f_ffff;
         val as u32
     }
-    #[doc = "Total Samples"]
+    #[doc = "Total Samples."]
     #[inline(always)]
     pub const fn set_tot_sam(&mut self, val: u32) {
         self.0 = (self.0 & !(0x000f_ffff << 0usize)) | (((val as u32) & 0x000f_ffff) << 0usize);
@@ -2395,7 +2395,7 @@ impl defmt::Format for Totsam {
         defmt::write!(f, "Totsam {{ tot_sam: {=u32:?} }}", self.tot_sam())
     }
 }
-#[doc = "Version ID Register (MS)"]
+#[doc = "Version ID Register (MS)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Vid1(pub u32);
@@ -2464,7 +2464,7 @@ impl defmt::Format for Vid1 {
         )
     }
 }
-#[doc = "Version ID Register (LS)"]
+#[doc = "Version ID Register (LS)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Vid2(pub u32);
@@ -2493,14 +2493,14 @@ impl Vid2 {
     pub const fn set_eco_rev(&mut self, val: super::vals::EcoRev) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val.to_bits() as u32) & 0xff) << 8usize);
     }
-    #[doc = "Shows the integration options for the TRNG"]
+    #[doc = "Shows the integration options for the TRNG."]
     #[must_use]
     #[inline(always)]
     pub const fn intg_opt(&self) -> super::vals::IntgOpt {
         let val = (self.0 >> 16usize) & 0xff;
         super::vals::IntgOpt::from_bits(val as u8)
     }
-    #[doc = "Shows the integration options for the TRNG"]
+    #[doc = "Shows the integration options for the TRNG."]
     #[inline(always)]
     pub const fn set_intg_opt(&mut self, val: super::vals::IntgOpt) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val.to_bits() as u32) & 0xff) << 16usize);

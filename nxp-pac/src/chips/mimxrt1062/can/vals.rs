@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ackerr {
-    #[doc = "No such occurrence"]
+    #[doc = "No such occurrence."]
     ACKERR_0 = 0x0,
-    #[doc = "An ACK error occurred since last read of this register"]
+    #[doc = "An ACK error occurred since last read of this register."]
     ACKERR_1 = 0x01,
 }
 impl Ackerr {
@@ -33,9 +33,9 @@ impl From<Ackerr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Aen {
-    #[doc = "Abort disabled"]
+    #[doc = "Abort disabled."]
     AEN_0 = 0x0,
-    #[doc = "Abort enabled"]
+    #[doc = "Abort enabled."]
     AEN_1 = 0x01,
 }
 impl Aen {
@@ -95,9 +95,9 @@ impl From<App> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bit0err {
-    #[doc = "No such occurrence"]
+    #[doc = "No such occurrence."]
     BIT0ERR_0 = 0x0,
-    #[doc = "At least one bit sent as dominant is received as recessive"]
+    #[doc = "At least one bit sent as dominant is received as recessive."]
     BIT0ERR_1 = 0x01,
 }
 impl Bit0err {
@@ -126,9 +126,9 @@ impl From<Bit0err> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bit1err {
-    #[doc = "No such occurrence"]
+    #[doc = "No such occurrence."]
     BIT1ERR_0 = 0x0,
-    #[doc = "At least one bit sent as recessive is received as dominant"]
+    #[doc = "At least one bit sent as recessive is received as dominant."]
     BIT1ERR_1 = 0x01,
 }
 impl Bit1err {
@@ -157,9 +157,9 @@ impl From<Bit1err> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Boffint {
-    #[doc = "No such occurrence"]
+    #[doc = "No such occurrence."]
     BOFFINT_0 = 0x0,
-    #[doc = "FLEXCAN module entered 'Bus Off' state"]
+    #[doc = "FLEXCAN module entered 'Bus Off' state."]
     BOFFINT_1 = 0x01,
 }
 impl Boffint {
@@ -188,9 +188,9 @@ impl From<Boffint> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Boffmsk {
-    #[doc = "Bus Off interrupt disabled"]
+    #[doc = "Bus Off interrupt disabled."]
     BOFFMSK_0 = 0x0,
-    #[doc = "Bus Off interrupt enabled"]
+    #[doc = "Bus Off interrupt enabled."]
     BOFFMSK_1 = 0x01,
 }
 impl Boffmsk {
@@ -219,9 +219,9 @@ impl From<Boffmsk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Boffrec {
-    #[doc = "Automatic recovering from Bus Off state enabled, according to CAN Spec 2.0 part B"]
+    #[doc = "Automatic recovering from Bus Off state enabled, according to CAN Spec 2.0 part B."]
     BOFFREC_0 = 0x0,
-    #[doc = "Automatic recovering from Bus Off state disabled"]
+    #[doc = "Automatic recovering from Bus Off state disabled."]
     BOFFREC_1 = 0x01,
 }
 impl Boffrec {
@@ -250,9 +250,9 @@ impl From<Boffrec> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Buf31to8i(u32);
 impl Buf31to8i {
-    #[doc = "No such occurrence"]
+    #[doc = "No such occurrence."]
     pub const BUF31TO8I_0: Self = Self(0x0);
-    #[doc = "The corresponding MB has successfully completed transmission or reception"]
+    #[doc = "The corresponding MB has successfully completed transmission or reception."]
     pub const BUF31TO8I_1: Self = Self(0x01);
 }
 impl Buf31to8i {
@@ -298,9 +298,9 @@ impl From<Buf31to8i> for u32 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Buf4to0i {
-    #[doc = "No such occurrence"]
+    #[doc = "No such occurrence."]
     BUF4TO0I_0 = 0x0,
-    #[doc = "Corresponding MB completed transmission/reception"]
+    #[doc = "Corresponding MB completed transmission/reception."]
     BUF4TO0I_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -359,9 +359,9 @@ impl From<Buf4to0i> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Buf5i {
-    #[doc = "No such occurrence"]
+    #[doc = "No such occurrence."]
     BUF5I_0 = 0x0,
-    #[doc = "MB5 completed transmission/reception or frames available in the FIFO"]
+    #[doc = "MB5 completed transmission/reception or frames available in the FIFO."]
     BUF5I_1 = 0x01,
 }
 impl Buf5i {
@@ -390,9 +390,9 @@ impl From<Buf5i> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Buf6i {
-    #[doc = "No such occurrence"]
+    #[doc = "No such occurrence."]
     BUF6I_0 = 0x0,
-    #[doc = "MB6 completed transmission/reception or FIFO almost full"]
+    #[doc = "MB6 completed transmission/reception or FIFO almost full."]
     BUF6I_1 = 0x01,
 }
 impl Buf6i {
@@ -421,9 +421,9 @@ impl From<Buf6i> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Buf7i {
-    #[doc = "No such occurrence"]
+    #[doc = "No such occurrence."]
     BUF7I_0 = 0x0,
-    #[doc = "MB7 completed transmission/reception or FIFO overflow"]
+    #[doc = "MB7 completed transmission/reception or FIFO overflow."]
     BUF7I_1 = 0x01,
 }
 impl Buf7i {
@@ -452,9 +452,9 @@ impl From<Buf7i> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Bufhi(u32);
 impl Bufhi {
-    #[doc = "No such occurrence"]
+    #[doc = "No such occurrence."]
     pub const BUFHI_0: Self = Self(0x0);
-    #[doc = "The corresponding buffer has successfully completed transmission or reception"]
+    #[doc = "The corresponding buffer has successfully completed transmission or reception."]
     pub const BUFHI_1: Self = Self(0x01);
 }
 impl Bufhi {
@@ -500,9 +500,9 @@ impl From<Bufhi> for u32 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Bufhm(u32);
 impl Bufhm {
-    #[doc = "The corresponding buffer Interrupt is disabled"]
+    #[doc = "The corresponding buffer Interrupt is disabled."]
     pub const BUFHM_0: Self = Self(0x0);
-    #[doc = "The corresponding buffer Interrupt is enabled"]
+    #[doc = "The corresponding buffer Interrupt is enabled."]
     pub const BUFHM_1: Self = Self(0x01);
 }
 impl Bufhm {
@@ -548,9 +548,9 @@ impl From<Bufhm> for u32 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Buflm(u32);
 impl Buflm {
-    #[doc = "The corresponding buffer Interrupt is disabled"]
+    #[doc = "The corresponding buffer Interrupt is disabled."]
     pub const BUFLM_0: Self = Self(0x0);
-    #[doc = "The corresponding buffer Interrupt is enabled"]
+    #[doc = "The corresponding buffer Interrupt is enabled."]
     pub const BUFLM_1: Self = Self(0x01);
 }
 impl Buflm {
@@ -596,7 +596,7 @@ impl From<Buflm> for u32 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Crcerr {
-    #[doc = "No such occurrence"]
+    #[doc = "No such occurrence."]
     CRCERR_0 = 0x0,
     #[doc = "A CRC error occurred since last read of this register."]
     CRCERR_1 = 0x01,
@@ -658,9 +658,9 @@ impl From<Eacen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Errint {
-    #[doc = "No such occurrence"]
+    #[doc = "No such occurrence."]
     ERRINT_0 = 0x0,
-    #[doc = "Indicates setting of any Error Bit in the Error and Status Register"]
+    #[doc = "Indicates setting of any Error Bit in the Error and Status Register."]
     ERRINT_1 = 0x01,
 }
 impl Errint {
@@ -689,9 +689,9 @@ impl From<Errint> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Errmsk {
-    #[doc = "Error interrupt disabled"]
+    #[doc = "Error interrupt disabled."]
     ERRMSK_0 = 0x0,
-    #[doc = "Error interrupt enabled"]
+    #[doc = "Error interrupt enabled."]
     ERRMSK_1 = 0x01,
 }
 impl Errmsk {
@@ -720,9 +720,9 @@ impl From<Errmsk> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Fgm(u32);
 impl Fgm {
-    #[doc = "The corresponding bit in the filter is \"don't care\""]
+    #[doc = "The corresponding bit in the filter is \"don't care\"."]
     pub const FGM_0: Self = Self(0x0);
-    #[doc = "The corresponding bit in the filter is checked"]
+    #[doc = "The corresponding bit in the filter is checked."]
     pub const FGM_1: Self = Self(0x01);
 }
 impl Fgm {
@@ -768,11 +768,11 @@ impl From<Fgm> for u32 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fltconf {
-    #[doc = "Error Active"]
+    #[doc = "Error Active."]
     FLTCONF_0 = 0x0,
-    #[doc = "Error Passive"]
+    #[doc = "Error Passive."]
     FLTCONF_1 = 0x01,
-    #[doc = "Bus off"]
+    #[doc = "Bus off."]
     FLTCONF_2 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -802,9 +802,9 @@ impl From<Fltconf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Frmerr {
-    #[doc = "No such occurrence"]
+    #[doc = "No such occurrence."]
     FRMERR_0 = 0x0,
-    #[doc = "A Form Error occurred since last read of this register"]
+    #[doc = "A Form Error occurred since last read of this register."]
     FRMERR_1 = 0x01,
 }
 impl Frmerr {
@@ -833,9 +833,9 @@ impl From<Frmerr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Frz {
-    #[doc = "Not enabled to enter Freeze Mode"]
+    #[doc = "Not enabled to enter Freeze Mode."]
     FRZ_0 = 0x0,
-    #[doc = "Enabled to enter Freeze Mode"]
+    #[doc = "Enabled to enter Freeze Mode."]
     FRZ_1 = 0x01,
 }
 impl Frz {
@@ -864,9 +864,9 @@ impl From<Frz> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Frzack {
-    #[doc = "FLEXCAN not in Freeze Mode, prescaler running"]
+    #[doc = "FLEXCAN not in Freeze Mode, prescaler running."]
     FRZACK_0 = 0x0,
-    #[doc = "FLEXCAN in Freeze Mode, prescaler stopped"]
+    #[doc = "FLEXCAN in Freeze Mode, prescaler stopped."]
     FRZACK_1 = 0x01,
 }
 impl Frzack {
@@ -961,9 +961,9 @@ impl From<Idam> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Idle {
-    #[doc = "No such occurrence"]
+    #[doc = "No such occurrence."]
     IDLE_0 = 0x0,
-    #[doc = "CAN bus is now IDLE"]
+    #[doc = "CAN bus is now IDLE."]
     IDLE_1 = 0x01,
 }
 impl Idle {
@@ -1054,9 +1054,9 @@ impl From<Irmq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lbuf {
-    #[doc = "Buffer with highest priority is transmitted first"]
+    #[doc = "Buffer with highest priority is transmitted first."]
     LBUF_0 = 0x0,
-    #[doc = "Lowest number buffer is transmitted first"]
+    #[doc = "Lowest number buffer is transmitted first."]
     LBUF_1 = 0x01,
 }
 impl Lbuf {
@@ -1085,9 +1085,9 @@ impl From<Lbuf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lom {
-    #[doc = "Listen Only Mode is deactivated"]
+    #[doc = "Listen Only Mode is deactivated."]
     LOM_0 = 0x0,
-    #[doc = "FLEXCAN module operates in Listen Only Mode"]
+    #[doc = "FLEXCAN module operates in Listen Only Mode."]
     LOM_1 = 0x01,
 }
 impl Lom {
@@ -1116,9 +1116,9 @@ impl From<Lom> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpb {
-    #[doc = "Loop Back disabled"]
+    #[doc = "Loop Back disabled."]
     LPB_0 = 0x0,
-    #[doc = "Loop Back enabled"]
+    #[doc = "Loop Back enabled."]
     LPB_1 = 0x01,
 }
 impl Lpb {
@@ -1147,9 +1147,9 @@ impl From<Lpb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpmack {
-    #[doc = "FLEXCAN not in any of the low power modes"]
+    #[doc = "FLEXCAN not in any of the low power modes."]
     LPMACK_0 = 0x0,
-    #[doc = "FLEXCAN is either in Disable Mode, or Stop mode"]
+    #[doc = "FLEXCAN is either in Disable Mode, or Stop mode."]
     LPMACK_1 = 0x01,
 }
 impl Lpmack {
@@ -1178,9 +1178,9 @@ impl From<Lpmack> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lprioen {
-    #[doc = "Local Priority disabled"]
+    #[doc = "Local Priority disabled."]
     LPRIOEN_0 = 0x0,
-    #[doc = "Local Priority enabled"]
+    #[doc = "Local Priority enabled."]
     LPRIOEN_1 = 0x01,
 }
 impl Lprioen {
@@ -1209,9 +1209,9 @@ impl From<Lprioen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mdis {
-    #[doc = "Enable the FLEXCAN module"]
+    #[doc = "Enable the FLEXCAN module."]
     MDIS_0 = 0x0,
-    #[doc = "Disable the FLEXCAN module"]
+    #[doc = "Disable the FLEXCAN module."]
     MDIS_1 = 0x01,
 }
 impl Mdis {
@@ -1240,9 +1240,9 @@ impl From<Mdis> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Mg(u32);
 impl Mg {
-    #[doc = "the corresponding bit in the filter is \"don't care\""]
+    #[doc = "the corresponding bit in the filter is \"don't care\"."]
     pub const MG_0: Self = Self(0x0);
-    #[doc = "The corresponding bit in the filter is checked against the one received"]
+    #[doc = "The corresponding bit in the filter is checked against the one received."]
     pub const MG_1: Self = Self(0x01);
 }
 impl Mg {
@@ -1288,9 +1288,9 @@ impl From<Mg> for u32 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Mi(u32);
 impl Mi {
-    #[doc = "the corresponding bit in the filter is \"don't care\""]
+    #[doc = "the corresponding bit in the filter is \"don't care\"."]
     pub const MI_0: Self = Self(0x0);
-    #[doc = "The corresponding bit in the filter is checked"]
+    #[doc = "The corresponding bit in the filter is checked."]
     pub const MI_1: Self = Self(0x01);
 }
 impl Mi {
@@ -1367,9 +1367,9 @@ impl From<Mpp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mrp {
-    #[doc = "Matching starts from Rx FIFO and continues on Mailboxes"]
+    #[doc = "Matching starts from Rx FIFO and continues on Mailboxes."]
     MRP_0 = 0x0,
-    #[doc = "Matching starts from Mailboxes and continues on Rx FIFO"]
+    #[doc = "Matching starts from Mailboxes and continues on Rx FIFO."]
     MRP_1 = 0x01,
 }
 impl Mrp {
@@ -1398,9 +1398,9 @@ impl From<Mrp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Notrdy {
-    #[doc = "FLEXCAN module is either in Normal Mode, Listen-Only Mode or Loop-Back Mode"]
+    #[doc = "FLEXCAN module is either in Normal Mode, Listen-Only Mode or Loop-Back Mode."]
     NOTRDY_0 = 0x0,
-    #[doc = "FLEXCAN module is either in Disable Mode, Stop Mode or Freeze Mode"]
+    #[doc = "FLEXCAN module is either in Disable Mode, Stop Mode or Freeze Mode."]
     NOTRDY_1 = 0x01,
 }
 impl Notrdy {
@@ -1429,9 +1429,9 @@ impl From<Notrdy> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rfen {
-    #[doc = "FIFO not enabled"]
+    #[doc = "FIFO not enabled."]
     RFEN_0 = 0x0,
-    #[doc = "FIFO enabled"]
+    #[doc = "FIFO enabled."]
     RFEN_1 = 0x01,
 }
 impl Rfen {
@@ -1460,9 +1460,9 @@ impl From<Rfen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rrs {
-    #[doc = "Remote Response Frame is generated"]
+    #[doc = "Remote Response Frame is generated."]
     RRS_0 = 0x0,
-    #[doc = "Remote Request Frame is stored"]
+    #[doc = "Remote Request Frame is stored."]
     RRS_1 = 0x01,
 }
 impl Rrs {
@@ -1491,9 +1491,9 @@ impl From<Rrs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rwrnint {
-    #[doc = "No such occurrence"]
+    #[doc = "No such occurrence."]
     RWRNINT_0 = 0x0,
-    #[doc = "The Rx error counter transition from < 96 to >= 96"]
+    #[doc = "The Rx error counter transition from < 96 to >= 96."]
     RWRNINT_1 = 0x01,
 }
 impl Rwrnint {
@@ -1522,9 +1522,9 @@ impl From<Rwrnint> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rwrnmsk {
-    #[doc = "Rx Warning Interrupt disabled"]
+    #[doc = "Rx Warning Interrupt disabled."]
     RWRNMSK_0 = 0x0,
-    #[doc = "Rx Warning Interrupt enabled"]
+    #[doc = "Rx Warning Interrupt enabled."]
     RWRNMSK_1 = 0x01,
 }
 impl Rwrnmsk {
@@ -1553,9 +1553,9 @@ impl From<Rwrnmsk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rx {
-    #[doc = "FLEXCAN is receiving a message"]
+    #[doc = "FLEXCAN is receiving a message."]
     RX_0 = 0x0,
-    #[doc = "FLEXCAN is transmitting a message"]
+    #[doc = "FLEXCAN is transmitting a message."]
     RX_1 = 0x01,
 }
 impl Rx {
@@ -1584,9 +1584,9 @@ impl From<Rx> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Rx14m(u32);
 impl Rx14m {
-    #[doc = "the corresponding bit in the filter is \"don't care\""]
+    #[doc = "the corresponding bit in the filter is \"don't care\"."]
     pub const RX14M_0: Self = Self(0x0);
-    #[doc = "The corresponding bit in the filter is checked"]
+    #[doc = "The corresponding bit in the filter is checked."]
     pub const RX14M_1: Self = Self(0x01);
 }
 impl Rx14m {
@@ -1632,9 +1632,9 @@ impl From<Rx14m> for u32 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Rx15m(u32);
 impl Rx15m {
-    #[doc = "the corresponding bit in the filter is \"don't care\""]
+    #[doc = "the corresponding bit in the filter is \"don't care\"."]
     pub const RX15M_0: Self = Self(0x0);
-    #[doc = "The corresponding bit in the filter is checked"]
+    #[doc = "The corresponding bit in the filter is checked."]
     pub const RX15M_1: Self = Self(0x01);
 }
 impl Rx15m {
@@ -1680,9 +1680,9 @@ impl From<Rx15m> for u32 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rxwrn {
-    #[doc = "No such occurrence"]
+    #[doc = "No such occurrence."]
     RXWRN_0 = 0x0,
-    #[doc = "Rx_Err_Counter >= 96"]
+    #[doc = "Rx_Err_Counter >= 96."]
     RXWRN_1 = 0x01,
 }
 impl Rxwrn {
@@ -1711,9 +1711,9 @@ impl From<Rxwrn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Slfwak {
-    #[doc = "FLEXCAN Self Wake Up feature is disabled"]
+    #[doc = "FLEXCAN Self Wake Up feature is disabled."]
     SLFWAK_0 = 0x0,
-    #[doc = "FLEXCAN Self Wake Up feature is enabled"]
+    #[doc = "FLEXCAN Self Wake Up feature is enabled."]
     SLFWAK_1 = 0x01,
 }
 impl Slfwak {
@@ -1742,9 +1742,9 @@ impl From<Slfwak> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Smp {
-    #[doc = "Just one sample is used to determine the bit value"]
+    #[doc = "Just one sample is used to determine the bit value."]
     SMP_0 = 0x0,
-    #[doc = "Three samples are used to determine the value of the received bit: the regular one (sample point) and 2 preceding samples, a majority rule is used"]
+    #[doc = "Three samples are used to determine the value of the received bit: the regular one (sample point) and 2 preceding samples, a majority rule is used."]
     SMP_1 = 0x01,
 }
 impl Smp {
@@ -1773,9 +1773,9 @@ impl From<Smp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Softrst {
-    #[doc = "No reset request"]
+    #[doc = "No reset request."]
     SOFTRST_0 = 0x0,
-    #[doc = "Reset the registers"]
+    #[doc = "Reset the registers."]
     SOFTRST_1 = 0x01,
 }
 impl Softrst {
@@ -1804,9 +1804,9 @@ impl From<Softrst> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Srxdis {
-    #[doc = "Self reception enabled"]
+    #[doc = "Self reception enabled."]
     SRXDIS_0 = 0x0,
-    #[doc = "Self reception disabled"]
+    #[doc = "Self reception disabled."]
     SRXDIS_1 = 0x01,
 }
 impl Srxdis {
@@ -1866,9 +1866,9 @@ impl From<Stferr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Supv {
-    #[doc = "FlexCAN is in User Mode. Affected registers allow both Supervisor and Unrestricted accesses"]
+    #[doc = "FlexCAN is in User Mode. Affected registers allow both Supervisor and Unrestricted accesses."]
     SUPV_0 = 0x0,
-    #[doc = "FlexCAN is in Supervisor Mode. Affected registers allow only Supervisor access. Unrestricted access behaves as though the access was done to an unimplemented register location"]
+    #[doc = "FlexCAN is in Supervisor Mode. Affected registers allow only Supervisor access. Unrestricted access behaves as though the access was done to an unimplemented register location."]
     SUPV_1 = 0x01,
 }
 impl Supv {
@@ -1897,9 +1897,9 @@ impl From<Supv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Synch {
-    #[doc = "FlexCAN is not synchronized to the CAN bus"]
+    #[doc = "FlexCAN is not synchronized to the CAN bus."]
     SYNCH_0 = 0x0,
-    #[doc = "FlexCAN is synchronized to the CAN bus"]
+    #[doc = "FlexCAN is synchronized to the CAN bus."]
     SYNCH_1 = 0x01,
 }
 impl Synch {
@@ -1928,9 +1928,9 @@ impl From<Synch> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tsyn {
-    #[doc = "Timer Sync feature disabled"]
+    #[doc = "Timer Sync feature disabled."]
     TSYN_0 = 0x0,
-    #[doc = "Timer Sync feature enabled"]
+    #[doc = "Timer Sync feature enabled."]
     TSYN_1 = 0x01,
 }
 impl Tsyn {
@@ -1959,9 +1959,9 @@ impl From<Tsyn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Twrnint {
-    #[doc = "No such occurrence"]
+    #[doc = "No such occurrence."]
     TWRNINT_0 = 0x0,
-    #[doc = "The Tx error counter transition from < 96 to >= 96"]
+    #[doc = "The Tx error counter transition from < 96 to >= 96."]
     TWRNINT_1 = 0x01,
 }
 impl Twrnint {
@@ -1990,9 +1990,9 @@ impl From<Twrnint> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Twrnmsk {
-    #[doc = "Tx Warning Interrupt disabled"]
+    #[doc = "Tx Warning Interrupt disabled."]
     TWRNMSK_0 = 0x0,
-    #[doc = "Tx Warning Interrupt enabled"]
+    #[doc = "Tx Warning Interrupt enabled."]
     TWRNMSK_1 = 0x01,
 }
 impl Twrnmsk {
@@ -2021,9 +2021,9 @@ impl From<Twrnmsk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tx {
-    #[doc = "FLEXCAN is receiving a message"]
+    #[doc = "FLEXCAN is receiving a message."]
     TX_0 = 0x0,
-    #[doc = "FLEXCAN is transmitting a message"]
+    #[doc = "FLEXCAN is transmitting a message."]
     TX_1 = 0x01,
 }
 impl Tx {
@@ -2052,9 +2052,9 @@ impl From<Tx> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Txwrn {
-    #[doc = "No such occurrence"]
+    #[doc = "No such occurrence."]
     TXWRN_0 = 0x0,
-    #[doc = "TX_Err_Counter >= 96"]
+    #[doc = "TX_Err_Counter >= 96."]
     TXWRN_1 = 0x01,
 }
 impl Txwrn {
@@ -2083,9 +2083,9 @@ impl From<Txwrn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Vps {
-    #[doc = "Contents of IMB and LPTM are invalid"]
+    #[doc = "Contents of IMB and LPTM are invalid."]
     VPS_0 = 0x0,
-    #[doc = "Contents of IMB and LPTM are valid"]
+    #[doc = "Contents of IMB and LPTM are valid."]
     VPS_1 = 0x01,
 }
 impl Vps {
@@ -2114,9 +2114,9 @@ impl From<Vps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wakint {
-    #[doc = "No such occurrence"]
+    #[doc = "No such occurrence."]
     WAKINT_0 = 0x0,
-    #[doc = "Indicates a recessive to dominant transition received on the CAN bus when the FLEXCAN module is in Stop Mode"]
+    #[doc = "Indicates a recessive to dominant transition received on the CAN bus when the FLEXCAN module is in Stop Mode."]
     WAKINT_1 = 0x01,
 }
 impl Wakint {
@@ -2145,9 +2145,9 @@ impl From<Wakint> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wakmsk {
-    #[doc = "Wake Up Interrupt is disabled"]
+    #[doc = "Wake Up Interrupt is disabled."]
     WAKMSK_0 = 0x0,
-    #[doc = "Wake Up Interrupt is enabled"]
+    #[doc = "Wake Up Interrupt is enabled."]
     WAKMSK_1 = 0x01,
 }
 impl Wakmsk {
@@ -2178,7 +2178,7 @@ impl From<Wakmsk> for u8 {
 pub enum Waksrc {
     #[doc = "FLEXCAN uses the unfiltered FLEXCAN_RX input to detect recessive to dominant edges on the CAN bus."]
     WAKSRC_0 = 0x0,
-    #[doc = "FLEXCAN uses the filtered FLEXCAN_RX input to detect recessive to dominant edges on the CAN bus"]
+    #[doc = "FLEXCAN uses the filtered FLEXCAN_RX input to detect recessive to dominant edges on the CAN bus."]
     WAKSRC_1 = 0x01,
 }
 impl Waksrc {
@@ -2207,9 +2207,9 @@ impl From<Waksrc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wrmfrz {
-    #[doc = "Keep the write access restricted in some regions of FlexCAN memory"]
+    #[doc = "Keep the write access restricted in some regions of FlexCAN memory."]
     WRMFRZ_0 = 0x0,
-    #[doc = "Enable unrestricted write access to FlexCAN memory"]
+    #[doc = "Enable unrestricted write access to FlexCAN memory."]
     WRMFRZ_1 = 0x01,
 }
 impl Wrmfrz {

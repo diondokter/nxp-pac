@@ -1,4 +1,4 @@
-#[doc = "Selects the source for SCK going into Flexcomm index"]
+#[doc = "Selects the source for SCK going into Flexcomm index."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Fcctrlsel(pub u32);
@@ -248,19 +248,19 @@ impl defmt::Format for Sharedctrlset {
         )
     }
 }
-#[doc = "update lock out control"]
+#[doc = "update lock out control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Updatelckout(pub u32);
 impl Updatelckout {
-    #[doc = "All Registers"]
+    #[doc = "All Registers."]
     #[must_use]
     #[inline(always)]
     pub const fn updatelckout(&self) -> super::vals::Updatelckout {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Updatelckout::from_bits(val as u8)
     }
-    #[doc = "All Registers"]
+    #[doc = "All Registers."]
     #[inline(always)]
     pub const fn set_updatelckout(&mut self, val: super::vals::Updatelckout) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
@@ -289,7 +289,7 @@ impl defmt::Format for Updatelckout {
         )
     }
 }
-#[doc = "Status register for USB HS"]
+#[doc = "Status register for USB HS."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct UsbHsStatus(pub u32);

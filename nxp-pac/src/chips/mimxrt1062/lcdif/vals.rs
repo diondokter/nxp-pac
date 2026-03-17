@@ -2,17 +2,17 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl2ClrEvenLinePattern {
-    #[doc = "RGB"]
+    #[doc = "RGB."]
     RGB = 0x0,
-    #[doc = "RBG"]
+    #[doc = "RBG."]
     RBG = 0x01,
-    #[doc = "GBR"]
+    #[doc = "GBR."]
     GBR = 0x02,
-    #[doc = "GRB"]
+    #[doc = "GRB."]
     GRB = 0x03,
-    #[doc = "BRG"]
+    #[doc = "BRG."]
     BRG = 0x04,
-    #[doc = "BGR"]
+    #[doc = "BGR."]
     BGR = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -43,17 +43,17 @@ impl From<Ctrl2ClrEvenLinePattern> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl2ClrOddLinePattern {
-    #[doc = "RGB"]
+    #[doc = "RGB."]
     RGB = 0x0,
-    #[doc = "RBG"]
+    #[doc = "RBG."]
     RBG = 0x01,
-    #[doc = "GBR"]
+    #[doc = "GBR."]
     GBR = 0x02,
-    #[doc = "GRB"]
+    #[doc = "GRB."]
     GRB = 0x03,
-    #[doc = "BRG"]
+    #[doc = "BRG."]
     BRG = 0x04,
-    #[doc = "BGR"]
+    #[doc = "BGR."]
     BGR = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -84,15 +84,15 @@ impl From<Ctrl2ClrOddLinePattern> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl2ClrOutstandingReqs {
-    #[doc = "REQ_1"]
+    #[doc = "REQ_1."]
     REQ_1 = 0x0,
-    #[doc = "REQ_2"]
+    #[doc = "REQ_2."]
     REQ_2 = 0x01,
-    #[doc = "REQ_4"]
+    #[doc = "REQ_4."]
     REQ_4 = 0x02,
-    #[doc = "REQ_8"]
+    #[doc = "REQ_8."]
     REQ_8 = 0x03,
-    #[doc = "REQ_16"]
+    #[doc = "REQ_16."]
     REQ_16 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
@@ -124,17 +124,17 @@ impl From<Ctrl2ClrOutstandingReqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl2EvenLinePattern {
-    #[doc = "RGB"]
+    #[doc = "RGB."]
     RGB = 0x0,
-    #[doc = "RBG"]
+    #[doc = "RBG."]
     RBG = 0x01,
-    #[doc = "GBR"]
+    #[doc = "GBR."]
     GBR = 0x02,
-    #[doc = "GRB"]
+    #[doc = "GRB."]
     GRB = 0x03,
-    #[doc = "BRG"]
+    #[doc = "BRG."]
     BRG = 0x04,
-    #[doc = "BGR"]
+    #[doc = "BGR."]
     BGR = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -165,17 +165,17 @@ impl From<Ctrl2EvenLinePattern> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl2OddLinePattern {
-    #[doc = "RGB"]
+    #[doc = "RGB."]
     RGB = 0x0,
-    #[doc = "RBG"]
+    #[doc = "RBG."]
     RBG = 0x01,
-    #[doc = "GBR"]
+    #[doc = "GBR."]
     GBR = 0x02,
-    #[doc = "GRB"]
+    #[doc = "GRB."]
     GRB = 0x03,
-    #[doc = "BRG"]
+    #[doc = "BRG."]
     BRG = 0x04,
-    #[doc = "BGR"]
+    #[doc = "BGR."]
     BGR = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -206,15 +206,15 @@ impl From<Ctrl2OddLinePattern> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl2OutstandingReqs {
-    #[doc = "REQ_1"]
+    #[doc = "REQ_1."]
     REQ_1 = 0x0,
-    #[doc = "REQ_2"]
+    #[doc = "REQ_2."]
     REQ_2 = 0x01,
-    #[doc = "REQ_4"]
+    #[doc = "REQ_4."]
     REQ_4 = 0x02,
-    #[doc = "REQ_8"]
+    #[doc = "REQ_8."]
     REQ_8 = 0x03,
-    #[doc = "REQ_16"]
+    #[doc = "REQ_16."]
     REQ_16 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
@@ -246,17 +246,17 @@ impl From<Ctrl2OutstandingReqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl2SetEvenLinePattern {
-    #[doc = "RGB"]
+    #[doc = "RGB."]
     RGB = 0x0,
-    #[doc = "RBG"]
+    #[doc = "RBG."]
     RBG = 0x01,
-    #[doc = "GBR"]
+    #[doc = "GBR."]
     GBR = 0x02,
-    #[doc = "GRB"]
+    #[doc = "GRB."]
     GRB = 0x03,
-    #[doc = "BRG"]
+    #[doc = "BRG."]
     BRG = 0x04,
-    #[doc = "BGR"]
+    #[doc = "BGR."]
     BGR = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -287,17 +287,17 @@ impl From<Ctrl2SetEvenLinePattern> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl2SetOddLinePattern {
-    #[doc = "RGB"]
+    #[doc = "RGB."]
     RGB = 0x0,
-    #[doc = "RBG"]
+    #[doc = "RBG."]
     RBG = 0x01,
-    #[doc = "GBR"]
+    #[doc = "GBR."]
     GBR = 0x02,
-    #[doc = "GRB"]
+    #[doc = "GRB."]
     GRB = 0x03,
-    #[doc = "BRG"]
+    #[doc = "BRG."]
     BRG = 0x04,
-    #[doc = "BGR"]
+    #[doc = "BGR."]
     BGR = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -328,15 +328,15 @@ impl From<Ctrl2SetOddLinePattern> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl2SetOutstandingReqs {
-    #[doc = "REQ_1"]
+    #[doc = "REQ_1."]
     REQ_1 = 0x0,
-    #[doc = "REQ_2"]
+    #[doc = "REQ_2."]
     REQ_2 = 0x01,
-    #[doc = "REQ_4"]
+    #[doc = "REQ_4."]
     REQ_4 = 0x02,
-    #[doc = "REQ_8"]
+    #[doc = "REQ_8."]
     REQ_8 = 0x03,
-    #[doc = "REQ_16"]
+    #[doc = "REQ_16."]
     REQ_16 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
@@ -368,17 +368,17 @@ impl From<Ctrl2SetOutstandingReqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl2TogEvenLinePattern {
-    #[doc = "RGB"]
+    #[doc = "RGB."]
     RGB = 0x0,
-    #[doc = "RBG"]
+    #[doc = "RBG."]
     RBG = 0x01,
-    #[doc = "GBR"]
+    #[doc = "GBR."]
     GBR = 0x02,
-    #[doc = "GRB"]
+    #[doc = "GRB."]
     GRB = 0x03,
-    #[doc = "BRG"]
+    #[doc = "BRG."]
     BRG = 0x04,
-    #[doc = "BGR"]
+    #[doc = "BGR."]
     BGR = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -409,17 +409,17 @@ impl From<Ctrl2TogEvenLinePattern> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl2TogOddLinePattern {
-    #[doc = "RGB"]
+    #[doc = "RGB."]
     RGB = 0x0,
-    #[doc = "RBG"]
+    #[doc = "RBG."]
     RBG = 0x01,
-    #[doc = "GBR"]
+    #[doc = "GBR."]
     GBR = 0x02,
-    #[doc = "GRB"]
+    #[doc = "GRB."]
     GRB = 0x03,
-    #[doc = "BRG"]
+    #[doc = "BRG."]
     BRG = 0x04,
-    #[doc = "BGR"]
+    #[doc = "BGR."]
     BGR = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -450,15 +450,15 @@ impl From<Ctrl2TogOddLinePattern> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl2TogOutstandingReqs {
-    #[doc = "REQ_1"]
+    #[doc = "REQ_1."]
     REQ_1 = 0x0,
-    #[doc = "REQ_2"]
+    #[doc = "REQ_2."]
     REQ_2 = 0x01,
-    #[doc = "REQ_4"]
+    #[doc = "REQ_4."]
     REQ_4 = 0x02,
-    #[doc = "REQ_8"]
+    #[doc = "REQ_8."]
     REQ_8 = 0x03,
-    #[doc = "REQ_16"]
+    #[doc = "REQ_16."]
     REQ_16 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
@@ -490,7 +490,7 @@ impl From<Ctrl2TogOutstandingReqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlClrCscDataSwizzle {
-    #[doc = "No byte swapping.(Little endian)"]
+    #[doc = "No byte swapping.(Little endian)."]
     NO_SWAP = 0x0,
     #[doc = "Big Endian swap (swap bytes 0,3 and 1,2)."]
     BIG_ENDIAN_SWAP = 0x01,
@@ -618,7 +618,7 @@ impl From<CtrlClrDataShiftDir> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlClrInputDataSwizzle {
-    #[doc = "No byte swapping.(Little endian)"]
+    #[doc = "No byte swapping.(Little endian)."]
     NO_SWAP = 0x0,
     #[doc = "Big Endian swap (swap bytes 0,3 and 1,2)."]
     BIG_ENDIAN_SWAP = 0x01,
@@ -723,7 +723,7 @@ impl From<CtrlClrWordLength> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlCscDataSwizzle {
-    #[doc = "No byte swapping.(Little endian)"]
+    #[doc = "No byte swapping.(Little endian)."]
     NO_SWAP = 0x0,
     #[doc = "Big Endian swap (swap bytes 0,3 and 1,2)."]
     BIG_ENDIAN_SWAP = 0x01,
@@ -851,7 +851,7 @@ impl From<CtrlDataShiftDir> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlInputDataSwizzle {
-    #[doc = "No byte swapping.(Little endian)"]
+    #[doc = "No byte swapping.(Little endian)."]
     NO_SWAP = 0x0,
     #[doc = "Big Endian swap (swap bytes 0,3 and 1,2)."]
     BIG_ENDIAN_SWAP = 0x01,
@@ -921,7 +921,7 @@ impl From<CtrlLcdDatabusWidth> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlSetCscDataSwizzle {
-    #[doc = "No byte swapping.(Little endian)"]
+    #[doc = "No byte swapping.(Little endian)."]
     NO_SWAP = 0x0,
     #[doc = "Big Endian swap (swap bytes 0,3 and 1,2)."]
     BIG_ENDIAN_SWAP = 0x01,
@@ -1049,7 +1049,7 @@ impl From<CtrlSetDataShiftDir> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlSetInputDataSwizzle {
-    #[doc = "No byte swapping.(Little endian)"]
+    #[doc = "No byte swapping.(Little endian)."]
     NO_SWAP = 0x0,
     #[doc = "Big Endian swap (swap bytes 0,3 and 1,2)."]
     BIG_ENDIAN_SWAP = 0x01,
@@ -1154,7 +1154,7 @@ impl From<CtrlSetWordLength> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlTogCscDataSwizzle {
-    #[doc = "No byte swapping.(Little endian)"]
+    #[doc = "No byte swapping.(Little endian)."]
     NO_SWAP = 0x0,
     #[doc = "Big Endian swap (swap bytes 0,3 and 1,2)."]
     BIG_ENDIAN_SWAP = 0x01,
@@ -1282,7 +1282,7 @@ impl From<CtrlTogDataShiftDir> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlTogInputDataSwizzle {
-    #[doc = "No byte swapping.(Little endian)"]
+    #[doc = "No byte swapping.(Little endian)."]
     NO_SWAP = 0x0,
     #[doc = "Big Endian swap (swap bytes 0,3 and 1,2)."]
     BIG_ENDIAN_SWAP = 0x01,
@@ -1422,13 +1422,13 @@ impl From<CtrlWordLength> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon00IncSel {
-    #[doc = "pclk"]
+    #[doc = "pclk."]
     PCLK = 0x0,
-    #[doc = "Line start pulse"]
+    #[doc = "Line start pulse."]
     LINE = 0x01,
-    #[doc = "Frame start pulse"]
+    #[doc = "Frame start pulse."]
     FRAME = 0x02,
-    #[doc = "Use another signal as tick event"]
+    #[doc = "Use another signal as tick event."]
     SIG_ANOTHER = 0x03,
 }
 impl Pigeon00IncSel {
@@ -1457,21 +1457,21 @@ impl From<Pigeon00IncSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon00MaskCntSel {
-    #[doc = "pclk counter within one hscan state"]
+    #[doc = "pclk counter within one hscan state."]
     HSTATE_CNT = 0x0,
-    #[doc = "pclk cycle within one hscan state"]
+    #[doc = "pclk cycle within one hscan state."]
     HSTATE_CYCLE = 0x01,
-    #[doc = "line counter within one vscan state"]
+    #[doc = "line counter within one vscan state."]
     VSTATE_CNT = 0x02,
-    #[doc = "line cycle within one vscan state"]
+    #[doc = "line cycle within one vscan state."]
     VSTATE_CYCLE = 0x03,
-    #[doc = "frame counter"]
+    #[doc = "frame counter."]
     FRAME_CNT = 0x04,
-    #[doc = "frame cycle"]
+    #[doc = "frame cycle."]
     FRAME_CYCLE = 0x05,
-    #[doc = "horizontal counter (pclk counter within one line )"]
+    #[doc = "horizontal counter (pclk counter within one line )."]
     HCNT = 0x06,
-    #[doc = "vertical counter (line counter within one frame)"]
+    #[doc = "vertical counter (line counter within one frame)."]
     VCNT = 0x07,
     _RESERVED_8 = 0x08,
     _RESERVED_9 = 0x09,
@@ -1508,9 +1508,9 @@ impl From<Pigeon00MaskCntSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon00Pol {
-    #[doc = "Normal Signal (Active high)"]
+    #[doc = "Normal Signal (Active high)."]
     ACTIVE_HIGH = 0x0,
-    #[doc = "Inverted signal (Active low)"]
+    #[doc = "Inverted signal (Active low)."]
     ACTIVE_LOW = 0x01,
 }
 impl Pigeon00Pol {
@@ -1539,21 +1539,21 @@ impl From<Pigeon00Pol> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pigeon00StateMask(u8);
 impl Pigeon00StateMask {
-    #[doc = "FRAME SYNC"]
+    #[doc = "FRAME SYNC."]
     pub const FS: Self = Self(0x01);
-    #[doc = "FRAME BEGIN"]
+    #[doc = "FRAME BEGIN."]
     pub const FB: Self = Self(0x02);
-    #[doc = "FRAME DATA"]
+    #[doc = "FRAME DATA."]
     pub const FD: Self = Self(0x04);
-    #[doc = "FRAME END"]
+    #[doc = "FRAME END."]
     pub const FE: Self = Self(0x08);
-    #[doc = "LINE SYNC"]
+    #[doc = "LINE SYNC."]
     pub const LS: Self = Self(0x10);
-    #[doc = "LINE BEGIN"]
+    #[doc = "LINE BEGIN."]
     pub const LB: Self = Self(0x20);
-    #[doc = "LINE DATA"]
+    #[doc = "LINE DATA."]
     pub const LD: Self = Self(0x40);
-    #[doc = "LINE END"]
+    #[doc = "LINE END."]
     pub const LE: Self = Self(0x80);
 }
 impl Pigeon00StateMask {
@@ -1611,7 +1611,7 @@ impl From<Pigeon00StateMask> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pigeon01ClrCnt(u16);
 impl Pigeon01ClrCnt {
-    #[doc = "Keep active until mask off"]
+    #[doc = "Keep active until mask off."]
     pub const CLEAR_USING_MASK: Self = Self(0x0);
 }
 impl Pigeon01ClrCnt {
@@ -1655,7 +1655,7 @@ impl From<Pigeon01ClrCnt> for u16 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pigeon01SetCnt(u16);
 impl Pigeon01SetCnt {
-    #[doc = "Start as active"]
+    #[doc = "Start as active."]
     pub const START_ACTIVE: Self = Self(0x0);
 }
 impl Pigeon01SetCnt {
@@ -1699,7 +1699,7 @@ impl From<Pigeon01SetCnt> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon02SigAnother {
-    #[doc = "Keep active until mask off"]
+    #[doc = "Keep active until mask off."]
     CLEAR_USING_MASK = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
@@ -1759,13 +1759,13 @@ impl From<Pigeon02SigAnother> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon02SigLogic {
-    #[doc = "No logic operation"]
+    #[doc = "No logic operation."]
     DIS = 0x0,
-    #[doc = "sigout = sig_another AND this_sig"]
+    #[doc = "sigout = sig_another AND this_sig."]
     AND = 0x01,
-    #[doc = "sigout = sig_another OR this_sig"]
+    #[doc = "sigout = sig_another OR this_sig."]
     OR = 0x02,
-    #[doc = "mask = sig_another AND other_masks"]
+    #[doc = "mask = sig_another AND other_masks."]
     MASK = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
@@ -1806,13 +1806,13 @@ impl From<Pigeon02SigLogic> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon100IncSel {
-    #[doc = "pclk"]
+    #[doc = "pclk."]
     PCLK = 0x0,
-    #[doc = "Line start pulse"]
+    #[doc = "Line start pulse."]
     LINE = 0x01,
-    #[doc = "Frame start pulse"]
+    #[doc = "Frame start pulse."]
     FRAME = 0x02,
-    #[doc = "Use another signal as tick event"]
+    #[doc = "Use another signal as tick event."]
     SIG_ANOTHER = 0x03,
 }
 impl Pigeon100IncSel {
@@ -1841,21 +1841,21 @@ impl From<Pigeon100IncSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon100MaskCntSel {
-    #[doc = "pclk counter within one hscan state"]
+    #[doc = "pclk counter within one hscan state."]
     HSTATE_CNT = 0x0,
-    #[doc = "pclk cycle within one hscan state"]
+    #[doc = "pclk cycle within one hscan state."]
     HSTATE_CYCLE = 0x01,
-    #[doc = "line counter within one vscan state"]
+    #[doc = "line counter within one vscan state."]
     VSTATE_CNT = 0x02,
-    #[doc = "line cycle within one vscan state"]
+    #[doc = "line cycle within one vscan state."]
     VSTATE_CYCLE = 0x03,
-    #[doc = "frame counter"]
+    #[doc = "frame counter."]
     FRAME_CNT = 0x04,
-    #[doc = "frame cycle"]
+    #[doc = "frame cycle."]
     FRAME_CYCLE = 0x05,
-    #[doc = "horizontal counter (pclk counter within one line )"]
+    #[doc = "horizontal counter (pclk counter within one line )."]
     HCNT = 0x06,
-    #[doc = "vertical counter (line counter within one frame)"]
+    #[doc = "vertical counter (line counter within one frame)."]
     VCNT = 0x07,
     _RESERVED_8 = 0x08,
     _RESERVED_9 = 0x09,
@@ -1892,9 +1892,9 @@ impl From<Pigeon100MaskCntSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon100Pol {
-    #[doc = "Normal Signal (Active high)"]
+    #[doc = "Normal Signal (Active high)."]
     ACTIVE_HIGH = 0x0,
-    #[doc = "Inverted signal (Active low)"]
+    #[doc = "Inverted signal (Active low)."]
     ACTIVE_LOW = 0x01,
 }
 impl Pigeon100Pol {
@@ -1923,21 +1923,21 @@ impl From<Pigeon100Pol> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pigeon100StateMask(u8);
 impl Pigeon100StateMask {
-    #[doc = "FRAME SYNC"]
+    #[doc = "FRAME SYNC."]
     pub const FS: Self = Self(0x01);
-    #[doc = "FRAME BEGIN"]
+    #[doc = "FRAME BEGIN."]
     pub const FB: Self = Self(0x02);
-    #[doc = "FRAME DATA"]
+    #[doc = "FRAME DATA."]
     pub const FD: Self = Self(0x04);
-    #[doc = "FRAME END"]
+    #[doc = "FRAME END."]
     pub const FE: Self = Self(0x08);
-    #[doc = "LINE SYNC"]
+    #[doc = "LINE SYNC."]
     pub const LS: Self = Self(0x10);
-    #[doc = "LINE BEGIN"]
+    #[doc = "LINE BEGIN."]
     pub const LB: Self = Self(0x20);
-    #[doc = "LINE DATA"]
+    #[doc = "LINE DATA."]
     pub const LD: Self = Self(0x40);
-    #[doc = "LINE END"]
+    #[doc = "LINE END."]
     pub const LE: Self = Self(0x80);
 }
 impl Pigeon100StateMask {
@@ -1995,7 +1995,7 @@ impl From<Pigeon100StateMask> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pigeon101ClrCnt(u16);
 impl Pigeon101ClrCnt {
-    #[doc = "Keep active until mask off"]
+    #[doc = "Keep active until mask off."]
     pub const CLEAR_USING_MASK: Self = Self(0x0);
 }
 impl Pigeon101ClrCnt {
@@ -2039,7 +2039,7 @@ impl From<Pigeon101ClrCnt> for u16 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pigeon101SetCnt(u16);
 impl Pigeon101SetCnt {
-    #[doc = "Start as active"]
+    #[doc = "Start as active."]
     pub const START_ACTIVE: Self = Self(0x0);
 }
 impl Pigeon101SetCnt {
@@ -2083,7 +2083,7 @@ impl From<Pigeon101SetCnt> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon102SigAnother {
-    #[doc = "Keep active until mask off"]
+    #[doc = "Keep active until mask off."]
     CLEAR_USING_MASK = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
@@ -2143,13 +2143,13 @@ impl From<Pigeon102SigAnother> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon102SigLogic {
-    #[doc = "No logic operation"]
+    #[doc = "No logic operation."]
     DIS = 0x0,
-    #[doc = "sigout = sig_another AND this_sig"]
+    #[doc = "sigout = sig_another AND this_sig."]
     AND = 0x01,
-    #[doc = "sigout = sig_another OR this_sig"]
+    #[doc = "sigout = sig_another OR this_sig."]
     OR = 0x02,
-    #[doc = "mask = sig_another AND other_masks"]
+    #[doc = "mask = sig_another AND other_masks."]
     MASK = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
@@ -2190,13 +2190,13 @@ impl From<Pigeon102SigLogic> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon10IncSel {
-    #[doc = "pclk"]
+    #[doc = "pclk."]
     PCLK = 0x0,
-    #[doc = "Line start pulse"]
+    #[doc = "Line start pulse."]
     LINE = 0x01,
-    #[doc = "Frame start pulse"]
+    #[doc = "Frame start pulse."]
     FRAME = 0x02,
-    #[doc = "Use another signal as tick event"]
+    #[doc = "Use another signal as tick event."]
     SIG_ANOTHER = 0x03,
 }
 impl Pigeon10IncSel {
@@ -2225,21 +2225,21 @@ impl From<Pigeon10IncSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon10MaskCntSel {
-    #[doc = "pclk counter within one hscan state"]
+    #[doc = "pclk counter within one hscan state."]
     HSTATE_CNT = 0x0,
-    #[doc = "pclk cycle within one hscan state"]
+    #[doc = "pclk cycle within one hscan state."]
     HSTATE_CYCLE = 0x01,
-    #[doc = "line counter within one vscan state"]
+    #[doc = "line counter within one vscan state."]
     VSTATE_CNT = 0x02,
-    #[doc = "line cycle within one vscan state"]
+    #[doc = "line cycle within one vscan state."]
     VSTATE_CYCLE = 0x03,
-    #[doc = "frame counter"]
+    #[doc = "frame counter."]
     FRAME_CNT = 0x04,
-    #[doc = "frame cycle"]
+    #[doc = "frame cycle."]
     FRAME_CYCLE = 0x05,
-    #[doc = "horizontal counter (pclk counter within one line )"]
+    #[doc = "horizontal counter (pclk counter within one line )."]
     HCNT = 0x06,
-    #[doc = "vertical counter (line counter within one frame)"]
+    #[doc = "vertical counter (line counter within one frame)."]
     VCNT = 0x07,
     _RESERVED_8 = 0x08,
     _RESERVED_9 = 0x09,
@@ -2276,9 +2276,9 @@ impl From<Pigeon10MaskCntSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon10Pol {
-    #[doc = "Normal Signal (Active high)"]
+    #[doc = "Normal Signal (Active high)."]
     ACTIVE_HIGH = 0x0,
-    #[doc = "Inverted signal (Active low)"]
+    #[doc = "Inverted signal (Active low)."]
     ACTIVE_LOW = 0x01,
 }
 impl Pigeon10Pol {
@@ -2307,21 +2307,21 @@ impl From<Pigeon10Pol> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pigeon10StateMask(u8);
 impl Pigeon10StateMask {
-    #[doc = "FRAME SYNC"]
+    #[doc = "FRAME SYNC."]
     pub const FS: Self = Self(0x01);
-    #[doc = "FRAME BEGIN"]
+    #[doc = "FRAME BEGIN."]
     pub const FB: Self = Self(0x02);
-    #[doc = "FRAME DATA"]
+    #[doc = "FRAME DATA."]
     pub const FD: Self = Self(0x04);
-    #[doc = "FRAME END"]
+    #[doc = "FRAME END."]
     pub const FE: Self = Self(0x08);
-    #[doc = "LINE SYNC"]
+    #[doc = "LINE SYNC."]
     pub const LS: Self = Self(0x10);
-    #[doc = "LINE BEGIN"]
+    #[doc = "LINE BEGIN."]
     pub const LB: Self = Self(0x20);
-    #[doc = "LINE DATA"]
+    #[doc = "LINE DATA."]
     pub const LD: Self = Self(0x40);
-    #[doc = "LINE END"]
+    #[doc = "LINE END."]
     pub const LE: Self = Self(0x80);
 }
 impl Pigeon10StateMask {
@@ -2379,13 +2379,13 @@ impl From<Pigeon10StateMask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon110IncSel {
-    #[doc = "pclk"]
+    #[doc = "pclk."]
     PCLK = 0x0,
-    #[doc = "Line start pulse"]
+    #[doc = "Line start pulse."]
     LINE = 0x01,
-    #[doc = "Frame start pulse"]
+    #[doc = "Frame start pulse."]
     FRAME = 0x02,
-    #[doc = "Use another signal as tick event"]
+    #[doc = "Use another signal as tick event."]
     SIG_ANOTHER = 0x03,
 }
 impl Pigeon110IncSel {
@@ -2414,21 +2414,21 @@ impl From<Pigeon110IncSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon110MaskCntSel {
-    #[doc = "pclk counter within one hscan state"]
+    #[doc = "pclk counter within one hscan state."]
     HSTATE_CNT = 0x0,
-    #[doc = "pclk cycle within one hscan state"]
+    #[doc = "pclk cycle within one hscan state."]
     HSTATE_CYCLE = 0x01,
-    #[doc = "line counter within one vscan state"]
+    #[doc = "line counter within one vscan state."]
     VSTATE_CNT = 0x02,
-    #[doc = "line cycle within one vscan state"]
+    #[doc = "line cycle within one vscan state."]
     VSTATE_CYCLE = 0x03,
-    #[doc = "frame counter"]
+    #[doc = "frame counter."]
     FRAME_CNT = 0x04,
-    #[doc = "frame cycle"]
+    #[doc = "frame cycle."]
     FRAME_CYCLE = 0x05,
-    #[doc = "horizontal counter (pclk counter within one line )"]
+    #[doc = "horizontal counter (pclk counter within one line )."]
     HCNT = 0x06,
-    #[doc = "vertical counter (line counter within one frame)"]
+    #[doc = "vertical counter (line counter within one frame)."]
     VCNT = 0x07,
     _RESERVED_8 = 0x08,
     _RESERVED_9 = 0x09,
@@ -2465,9 +2465,9 @@ impl From<Pigeon110MaskCntSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon110Pol {
-    #[doc = "Normal Signal (Active high)"]
+    #[doc = "Normal Signal (Active high)."]
     ACTIVE_HIGH = 0x0,
-    #[doc = "Inverted signal (Active low)"]
+    #[doc = "Inverted signal (Active low)."]
     ACTIVE_LOW = 0x01,
 }
 impl Pigeon110Pol {
@@ -2496,21 +2496,21 @@ impl From<Pigeon110Pol> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pigeon110StateMask(u8);
 impl Pigeon110StateMask {
-    #[doc = "FRAME SYNC"]
+    #[doc = "FRAME SYNC."]
     pub const FS: Self = Self(0x01);
-    #[doc = "FRAME BEGIN"]
+    #[doc = "FRAME BEGIN."]
     pub const FB: Self = Self(0x02);
-    #[doc = "FRAME DATA"]
+    #[doc = "FRAME DATA."]
     pub const FD: Self = Self(0x04);
-    #[doc = "FRAME END"]
+    #[doc = "FRAME END."]
     pub const FE: Self = Self(0x08);
-    #[doc = "LINE SYNC"]
+    #[doc = "LINE SYNC."]
     pub const LS: Self = Self(0x10);
-    #[doc = "LINE BEGIN"]
+    #[doc = "LINE BEGIN."]
     pub const LB: Self = Self(0x20);
-    #[doc = "LINE DATA"]
+    #[doc = "LINE DATA."]
     pub const LD: Self = Self(0x40);
-    #[doc = "LINE END"]
+    #[doc = "LINE END."]
     pub const LE: Self = Self(0x80);
 }
 impl Pigeon110StateMask {
@@ -2568,7 +2568,7 @@ impl From<Pigeon110StateMask> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pigeon111ClrCnt(u16);
 impl Pigeon111ClrCnt {
-    #[doc = "Keep active until mask off"]
+    #[doc = "Keep active until mask off."]
     pub const CLEAR_USING_MASK: Self = Self(0x0);
 }
 impl Pigeon111ClrCnt {
@@ -2612,7 +2612,7 @@ impl From<Pigeon111ClrCnt> for u16 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pigeon111SetCnt(u16);
 impl Pigeon111SetCnt {
-    #[doc = "Start as active"]
+    #[doc = "Start as active."]
     pub const START_ACTIVE: Self = Self(0x0);
 }
 impl Pigeon111SetCnt {
@@ -2656,7 +2656,7 @@ impl From<Pigeon111SetCnt> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon112SigAnother {
-    #[doc = "Keep active until mask off"]
+    #[doc = "Keep active until mask off."]
     CLEAR_USING_MASK = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
@@ -2716,13 +2716,13 @@ impl From<Pigeon112SigAnother> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon112SigLogic {
-    #[doc = "No logic operation"]
+    #[doc = "No logic operation."]
     DIS = 0x0,
-    #[doc = "sigout = sig_another AND this_sig"]
+    #[doc = "sigout = sig_another AND this_sig."]
     AND = 0x01,
-    #[doc = "sigout = sig_another OR this_sig"]
+    #[doc = "sigout = sig_another OR this_sig."]
     OR = 0x02,
-    #[doc = "mask = sig_another AND other_masks"]
+    #[doc = "mask = sig_another AND other_masks."]
     MASK = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
@@ -2763,7 +2763,7 @@ impl From<Pigeon112SigLogic> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pigeon11ClrCnt(u16);
 impl Pigeon11ClrCnt {
-    #[doc = "Keep active until mask off"]
+    #[doc = "Keep active until mask off."]
     pub const CLEAR_USING_MASK: Self = Self(0x0);
 }
 impl Pigeon11ClrCnt {
@@ -2807,7 +2807,7 @@ impl From<Pigeon11ClrCnt> for u16 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pigeon11SetCnt(u16);
 impl Pigeon11SetCnt {
-    #[doc = "Start as active"]
+    #[doc = "Start as active."]
     pub const START_ACTIVE: Self = Self(0x0);
 }
 impl Pigeon11SetCnt {
@@ -2851,7 +2851,7 @@ impl From<Pigeon11SetCnt> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon12SigAnother {
-    #[doc = "Keep active until mask off"]
+    #[doc = "Keep active until mask off."]
     CLEAR_USING_MASK = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
@@ -2911,13 +2911,13 @@ impl From<Pigeon12SigAnother> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon12SigLogic {
-    #[doc = "No logic operation"]
+    #[doc = "No logic operation."]
     DIS = 0x0,
-    #[doc = "sigout = sig_another AND this_sig"]
+    #[doc = "sigout = sig_another AND this_sig."]
     AND = 0x01,
-    #[doc = "sigout = sig_another OR this_sig"]
+    #[doc = "sigout = sig_another OR this_sig."]
     OR = 0x02,
-    #[doc = "mask = sig_another AND other_masks"]
+    #[doc = "mask = sig_another AND other_masks."]
     MASK = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
@@ -2958,13 +2958,13 @@ impl From<Pigeon12SigLogic> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon20IncSel {
-    #[doc = "pclk"]
+    #[doc = "pclk."]
     PCLK = 0x0,
-    #[doc = "Line start pulse"]
+    #[doc = "Line start pulse."]
     LINE = 0x01,
-    #[doc = "Frame start pulse"]
+    #[doc = "Frame start pulse."]
     FRAME = 0x02,
-    #[doc = "Use another signal as tick event"]
+    #[doc = "Use another signal as tick event."]
     SIG_ANOTHER = 0x03,
 }
 impl Pigeon20IncSel {
@@ -2993,21 +2993,21 @@ impl From<Pigeon20IncSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon20MaskCntSel {
-    #[doc = "pclk counter within one hscan state"]
+    #[doc = "pclk counter within one hscan state."]
     HSTATE_CNT = 0x0,
-    #[doc = "pclk cycle within one hscan state"]
+    #[doc = "pclk cycle within one hscan state."]
     HSTATE_CYCLE = 0x01,
-    #[doc = "line counter within one vscan state"]
+    #[doc = "line counter within one vscan state."]
     VSTATE_CNT = 0x02,
-    #[doc = "line cycle within one vscan state"]
+    #[doc = "line cycle within one vscan state."]
     VSTATE_CYCLE = 0x03,
-    #[doc = "frame counter"]
+    #[doc = "frame counter."]
     FRAME_CNT = 0x04,
-    #[doc = "frame cycle"]
+    #[doc = "frame cycle."]
     FRAME_CYCLE = 0x05,
-    #[doc = "horizontal counter (pclk counter within one line )"]
+    #[doc = "horizontal counter (pclk counter within one line )."]
     HCNT = 0x06,
-    #[doc = "vertical counter (line counter within one frame)"]
+    #[doc = "vertical counter (line counter within one frame)."]
     VCNT = 0x07,
     _RESERVED_8 = 0x08,
     _RESERVED_9 = 0x09,
@@ -3044,9 +3044,9 @@ impl From<Pigeon20MaskCntSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon20Pol {
-    #[doc = "Normal Signal (Active high)"]
+    #[doc = "Normal Signal (Active high)."]
     ACTIVE_HIGH = 0x0,
-    #[doc = "Inverted signal (Active low)"]
+    #[doc = "Inverted signal (Active low)."]
     ACTIVE_LOW = 0x01,
 }
 impl Pigeon20Pol {
@@ -3075,21 +3075,21 @@ impl From<Pigeon20Pol> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pigeon20StateMask(u8);
 impl Pigeon20StateMask {
-    #[doc = "FRAME SYNC"]
+    #[doc = "FRAME SYNC."]
     pub const FS: Self = Self(0x01);
-    #[doc = "FRAME BEGIN"]
+    #[doc = "FRAME BEGIN."]
     pub const FB: Self = Self(0x02);
-    #[doc = "FRAME DATA"]
+    #[doc = "FRAME DATA."]
     pub const FD: Self = Self(0x04);
-    #[doc = "FRAME END"]
+    #[doc = "FRAME END."]
     pub const FE: Self = Self(0x08);
-    #[doc = "LINE SYNC"]
+    #[doc = "LINE SYNC."]
     pub const LS: Self = Self(0x10);
-    #[doc = "LINE BEGIN"]
+    #[doc = "LINE BEGIN."]
     pub const LB: Self = Self(0x20);
-    #[doc = "LINE DATA"]
+    #[doc = "LINE DATA."]
     pub const LD: Self = Self(0x40);
-    #[doc = "LINE END"]
+    #[doc = "LINE END."]
     pub const LE: Self = Self(0x80);
 }
 impl Pigeon20StateMask {
@@ -3147,7 +3147,7 @@ impl From<Pigeon20StateMask> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pigeon21ClrCnt(u16);
 impl Pigeon21ClrCnt {
-    #[doc = "Keep active until mask off"]
+    #[doc = "Keep active until mask off."]
     pub const CLEAR_USING_MASK: Self = Self(0x0);
 }
 impl Pigeon21ClrCnt {
@@ -3191,7 +3191,7 @@ impl From<Pigeon21ClrCnt> for u16 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pigeon21SetCnt(u16);
 impl Pigeon21SetCnt {
-    #[doc = "Start as active"]
+    #[doc = "Start as active."]
     pub const START_ACTIVE: Self = Self(0x0);
 }
 impl Pigeon21SetCnt {
@@ -3235,7 +3235,7 @@ impl From<Pigeon21SetCnt> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon22SigAnother {
-    #[doc = "Keep active until mask off"]
+    #[doc = "Keep active until mask off."]
     CLEAR_USING_MASK = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
@@ -3295,13 +3295,13 @@ impl From<Pigeon22SigAnother> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon22SigLogic {
-    #[doc = "No logic operation"]
+    #[doc = "No logic operation."]
     DIS = 0x0,
-    #[doc = "sigout = sig_another AND this_sig"]
+    #[doc = "sigout = sig_another AND this_sig."]
     AND = 0x01,
-    #[doc = "sigout = sig_another OR this_sig"]
+    #[doc = "sigout = sig_another OR this_sig."]
     OR = 0x02,
-    #[doc = "mask = sig_another AND other_masks"]
+    #[doc = "mask = sig_another AND other_masks."]
     MASK = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
@@ -3342,13 +3342,13 @@ impl From<Pigeon22SigLogic> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon30IncSel {
-    #[doc = "pclk"]
+    #[doc = "pclk."]
     PCLK = 0x0,
-    #[doc = "Line start pulse"]
+    #[doc = "Line start pulse."]
     LINE = 0x01,
-    #[doc = "Frame start pulse"]
+    #[doc = "Frame start pulse."]
     FRAME = 0x02,
-    #[doc = "Use another signal as tick event"]
+    #[doc = "Use another signal as tick event."]
     SIG_ANOTHER = 0x03,
 }
 impl Pigeon30IncSel {
@@ -3377,21 +3377,21 @@ impl From<Pigeon30IncSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon30MaskCntSel {
-    #[doc = "pclk counter within one hscan state"]
+    #[doc = "pclk counter within one hscan state."]
     HSTATE_CNT = 0x0,
-    #[doc = "pclk cycle within one hscan state"]
+    #[doc = "pclk cycle within one hscan state."]
     HSTATE_CYCLE = 0x01,
-    #[doc = "line counter within one vscan state"]
+    #[doc = "line counter within one vscan state."]
     VSTATE_CNT = 0x02,
-    #[doc = "line cycle within one vscan state"]
+    #[doc = "line cycle within one vscan state."]
     VSTATE_CYCLE = 0x03,
-    #[doc = "frame counter"]
+    #[doc = "frame counter."]
     FRAME_CNT = 0x04,
-    #[doc = "frame cycle"]
+    #[doc = "frame cycle."]
     FRAME_CYCLE = 0x05,
-    #[doc = "horizontal counter (pclk counter within one line )"]
+    #[doc = "horizontal counter (pclk counter within one line )."]
     HCNT = 0x06,
-    #[doc = "vertical counter (line counter within one frame)"]
+    #[doc = "vertical counter (line counter within one frame)."]
     VCNT = 0x07,
     _RESERVED_8 = 0x08,
     _RESERVED_9 = 0x09,
@@ -3428,9 +3428,9 @@ impl From<Pigeon30MaskCntSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon30Pol {
-    #[doc = "Normal Signal (Active high)"]
+    #[doc = "Normal Signal (Active high)."]
     ACTIVE_HIGH = 0x0,
-    #[doc = "Inverted signal (Active low)"]
+    #[doc = "Inverted signal (Active low)."]
     ACTIVE_LOW = 0x01,
 }
 impl Pigeon30Pol {
@@ -3459,21 +3459,21 @@ impl From<Pigeon30Pol> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pigeon30StateMask(u8);
 impl Pigeon30StateMask {
-    #[doc = "FRAME SYNC"]
+    #[doc = "FRAME SYNC."]
     pub const FS: Self = Self(0x01);
-    #[doc = "FRAME BEGIN"]
+    #[doc = "FRAME BEGIN."]
     pub const FB: Self = Self(0x02);
-    #[doc = "FRAME DATA"]
+    #[doc = "FRAME DATA."]
     pub const FD: Self = Self(0x04);
-    #[doc = "FRAME END"]
+    #[doc = "FRAME END."]
     pub const FE: Self = Self(0x08);
-    #[doc = "LINE SYNC"]
+    #[doc = "LINE SYNC."]
     pub const LS: Self = Self(0x10);
-    #[doc = "LINE BEGIN"]
+    #[doc = "LINE BEGIN."]
     pub const LB: Self = Self(0x20);
-    #[doc = "LINE DATA"]
+    #[doc = "LINE DATA."]
     pub const LD: Self = Self(0x40);
-    #[doc = "LINE END"]
+    #[doc = "LINE END."]
     pub const LE: Self = Self(0x80);
 }
 impl Pigeon30StateMask {
@@ -3531,7 +3531,7 @@ impl From<Pigeon30StateMask> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pigeon31ClrCnt(u16);
 impl Pigeon31ClrCnt {
-    #[doc = "Keep active until mask off"]
+    #[doc = "Keep active until mask off."]
     pub const CLEAR_USING_MASK: Self = Self(0x0);
 }
 impl Pigeon31ClrCnt {
@@ -3575,7 +3575,7 @@ impl From<Pigeon31ClrCnt> for u16 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pigeon31SetCnt(u16);
 impl Pigeon31SetCnt {
-    #[doc = "Start as active"]
+    #[doc = "Start as active."]
     pub const START_ACTIVE: Self = Self(0x0);
 }
 impl Pigeon31SetCnt {
@@ -3619,7 +3619,7 @@ impl From<Pigeon31SetCnt> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon32SigAnother {
-    #[doc = "Keep active until mask off"]
+    #[doc = "Keep active until mask off."]
     CLEAR_USING_MASK = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
@@ -3679,13 +3679,13 @@ impl From<Pigeon32SigAnother> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon32SigLogic {
-    #[doc = "No logic operation"]
+    #[doc = "No logic operation."]
     DIS = 0x0,
-    #[doc = "sigout = sig_another AND this_sig"]
+    #[doc = "sigout = sig_another AND this_sig."]
     AND = 0x01,
-    #[doc = "sigout = sig_another OR this_sig"]
+    #[doc = "sigout = sig_another OR this_sig."]
     OR = 0x02,
-    #[doc = "mask = sig_another AND other_masks"]
+    #[doc = "mask = sig_another AND other_masks."]
     MASK = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
@@ -3726,13 +3726,13 @@ impl From<Pigeon32SigLogic> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon40IncSel {
-    #[doc = "pclk"]
+    #[doc = "pclk."]
     PCLK = 0x0,
-    #[doc = "Line start pulse"]
+    #[doc = "Line start pulse."]
     LINE = 0x01,
-    #[doc = "Frame start pulse"]
+    #[doc = "Frame start pulse."]
     FRAME = 0x02,
-    #[doc = "Use another signal as tick event"]
+    #[doc = "Use another signal as tick event."]
     SIG_ANOTHER = 0x03,
 }
 impl Pigeon40IncSel {
@@ -3761,21 +3761,21 @@ impl From<Pigeon40IncSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon40MaskCntSel {
-    #[doc = "pclk counter within one hscan state"]
+    #[doc = "pclk counter within one hscan state."]
     HSTATE_CNT = 0x0,
-    #[doc = "pclk cycle within one hscan state"]
+    #[doc = "pclk cycle within one hscan state."]
     HSTATE_CYCLE = 0x01,
-    #[doc = "line counter within one vscan state"]
+    #[doc = "line counter within one vscan state."]
     VSTATE_CNT = 0x02,
-    #[doc = "line cycle within one vscan state"]
+    #[doc = "line cycle within one vscan state."]
     VSTATE_CYCLE = 0x03,
-    #[doc = "frame counter"]
+    #[doc = "frame counter."]
     FRAME_CNT = 0x04,
-    #[doc = "frame cycle"]
+    #[doc = "frame cycle."]
     FRAME_CYCLE = 0x05,
-    #[doc = "horizontal counter (pclk counter within one line )"]
+    #[doc = "horizontal counter (pclk counter within one line )."]
     HCNT = 0x06,
-    #[doc = "vertical counter (line counter within one frame)"]
+    #[doc = "vertical counter (line counter within one frame)."]
     VCNT = 0x07,
     _RESERVED_8 = 0x08,
     _RESERVED_9 = 0x09,
@@ -3812,9 +3812,9 @@ impl From<Pigeon40MaskCntSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon40Pol {
-    #[doc = "Normal Signal (Active high)"]
+    #[doc = "Normal Signal (Active high)."]
     ACTIVE_HIGH = 0x0,
-    #[doc = "Inverted signal (Active low)"]
+    #[doc = "Inverted signal (Active low)."]
     ACTIVE_LOW = 0x01,
 }
 impl Pigeon40Pol {
@@ -3843,21 +3843,21 @@ impl From<Pigeon40Pol> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pigeon40StateMask(u8);
 impl Pigeon40StateMask {
-    #[doc = "FRAME SYNC"]
+    #[doc = "FRAME SYNC."]
     pub const FS: Self = Self(0x01);
-    #[doc = "FRAME BEGIN"]
+    #[doc = "FRAME BEGIN."]
     pub const FB: Self = Self(0x02);
-    #[doc = "FRAME DATA"]
+    #[doc = "FRAME DATA."]
     pub const FD: Self = Self(0x04);
-    #[doc = "FRAME END"]
+    #[doc = "FRAME END."]
     pub const FE: Self = Self(0x08);
-    #[doc = "LINE SYNC"]
+    #[doc = "LINE SYNC."]
     pub const LS: Self = Self(0x10);
-    #[doc = "LINE BEGIN"]
+    #[doc = "LINE BEGIN."]
     pub const LB: Self = Self(0x20);
-    #[doc = "LINE DATA"]
+    #[doc = "LINE DATA."]
     pub const LD: Self = Self(0x40);
-    #[doc = "LINE END"]
+    #[doc = "LINE END."]
     pub const LE: Self = Self(0x80);
 }
 impl Pigeon40StateMask {
@@ -3915,7 +3915,7 @@ impl From<Pigeon40StateMask> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pigeon41ClrCnt(u16);
 impl Pigeon41ClrCnt {
-    #[doc = "Keep active until mask off"]
+    #[doc = "Keep active until mask off."]
     pub const CLEAR_USING_MASK: Self = Self(0x0);
 }
 impl Pigeon41ClrCnt {
@@ -3959,7 +3959,7 @@ impl From<Pigeon41ClrCnt> for u16 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pigeon41SetCnt(u16);
 impl Pigeon41SetCnt {
-    #[doc = "Start as active"]
+    #[doc = "Start as active."]
     pub const START_ACTIVE: Self = Self(0x0);
 }
 impl Pigeon41SetCnt {
@@ -4003,7 +4003,7 @@ impl From<Pigeon41SetCnt> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon42SigAnother {
-    #[doc = "Keep active until mask off"]
+    #[doc = "Keep active until mask off."]
     CLEAR_USING_MASK = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
@@ -4063,13 +4063,13 @@ impl From<Pigeon42SigAnother> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon42SigLogic {
-    #[doc = "No logic operation"]
+    #[doc = "No logic operation."]
     DIS = 0x0,
-    #[doc = "sigout = sig_another AND this_sig"]
+    #[doc = "sigout = sig_another AND this_sig."]
     AND = 0x01,
-    #[doc = "sigout = sig_another OR this_sig"]
+    #[doc = "sigout = sig_another OR this_sig."]
     OR = 0x02,
-    #[doc = "mask = sig_another AND other_masks"]
+    #[doc = "mask = sig_another AND other_masks."]
     MASK = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
@@ -4110,13 +4110,13 @@ impl From<Pigeon42SigLogic> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon50IncSel {
-    #[doc = "pclk"]
+    #[doc = "pclk."]
     PCLK = 0x0,
-    #[doc = "Line start pulse"]
+    #[doc = "Line start pulse."]
     LINE = 0x01,
-    #[doc = "Frame start pulse"]
+    #[doc = "Frame start pulse."]
     FRAME = 0x02,
-    #[doc = "Use another signal as tick event"]
+    #[doc = "Use another signal as tick event."]
     SIG_ANOTHER = 0x03,
 }
 impl Pigeon50IncSel {
@@ -4145,21 +4145,21 @@ impl From<Pigeon50IncSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon50MaskCntSel {
-    #[doc = "pclk counter within one hscan state"]
+    #[doc = "pclk counter within one hscan state."]
     HSTATE_CNT = 0x0,
-    #[doc = "pclk cycle within one hscan state"]
+    #[doc = "pclk cycle within one hscan state."]
     HSTATE_CYCLE = 0x01,
-    #[doc = "line counter within one vscan state"]
+    #[doc = "line counter within one vscan state."]
     VSTATE_CNT = 0x02,
-    #[doc = "line cycle within one vscan state"]
+    #[doc = "line cycle within one vscan state."]
     VSTATE_CYCLE = 0x03,
-    #[doc = "frame counter"]
+    #[doc = "frame counter."]
     FRAME_CNT = 0x04,
-    #[doc = "frame cycle"]
+    #[doc = "frame cycle."]
     FRAME_CYCLE = 0x05,
-    #[doc = "horizontal counter (pclk counter within one line )"]
+    #[doc = "horizontal counter (pclk counter within one line )."]
     HCNT = 0x06,
-    #[doc = "vertical counter (line counter within one frame)"]
+    #[doc = "vertical counter (line counter within one frame)."]
     VCNT = 0x07,
     _RESERVED_8 = 0x08,
     _RESERVED_9 = 0x09,
@@ -4196,9 +4196,9 @@ impl From<Pigeon50MaskCntSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon50Pol {
-    #[doc = "Normal Signal (Active high)"]
+    #[doc = "Normal Signal (Active high)."]
     ACTIVE_HIGH = 0x0,
-    #[doc = "Inverted signal (Active low)"]
+    #[doc = "Inverted signal (Active low)."]
     ACTIVE_LOW = 0x01,
 }
 impl Pigeon50Pol {
@@ -4227,21 +4227,21 @@ impl From<Pigeon50Pol> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pigeon50StateMask(u8);
 impl Pigeon50StateMask {
-    #[doc = "FRAME SYNC"]
+    #[doc = "FRAME SYNC."]
     pub const FS: Self = Self(0x01);
-    #[doc = "FRAME BEGIN"]
+    #[doc = "FRAME BEGIN."]
     pub const FB: Self = Self(0x02);
-    #[doc = "FRAME DATA"]
+    #[doc = "FRAME DATA."]
     pub const FD: Self = Self(0x04);
-    #[doc = "FRAME END"]
+    #[doc = "FRAME END."]
     pub const FE: Self = Self(0x08);
-    #[doc = "LINE SYNC"]
+    #[doc = "LINE SYNC."]
     pub const LS: Self = Self(0x10);
-    #[doc = "LINE BEGIN"]
+    #[doc = "LINE BEGIN."]
     pub const LB: Self = Self(0x20);
-    #[doc = "LINE DATA"]
+    #[doc = "LINE DATA."]
     pub const LD: Self = Self(0x40);
-    #[doc = "LINE END"]
+    #[doc = "LINE END."]
     pub const LE: Self = Self(0x80);
 }
 impl Pigeon50StateMask {
@@ -4299,7 +4299,7 @@ impl From<Pigeon50StateMask> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pigeon51ClrCnt(u16);
 impl Pigeon51ClrCnt {
-    #[doc = "Keep active until mask off"]
+    #[doc = "Keep active until mask off."]
     pub const CLEAR_USING_MASK: Self = Self(0x0);
 }
 impl Pigeon51ClrCnt {
@@ -4343,7 +4343,7 @@ impl From<Pigeon51ClrCnt> for u16 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pigeon51SetCnt(u16);
 impl Pigeon51SetCnt {
-    #[doc = "Start as active"]
+    #[doc = "Start as active."]
     pub const START_ACTIVE: Self = Self(0x0);
 }
 impl Pigeon51SetCnt {
@@ -4387,7 +4387,7 @@ impl From<Pigeon51SetCnt> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon52SigAnother {
-    #[doc = "Keep active until mask off"]
+    #[doc = "Keep active until mask off."]
     CLEAR_USING_MASK = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
@@ -4447,13 +4447,13 @@ impl From<Pigeon52SigAnother> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon52SigLogic {
-    #[doc = "No logic operation"]
+    #[doc = "No logic operation."]
     DIS = 0x0,
-    #[doc = "sigout = sig_another AND this_sig"]
+    #[doc = "sigout = sig_another AND this_sig."]
     AND = 0x01,
-    #[doc = "sigout = sig_another OR this_sig"]
+    #[doc = "sigout = sig_another OR this_sig."]
     OR = 0x02,
-    #[doc = "mask = sig_another AND other_masks"]
+    #[doc = "mask = sig_another AND other_masks."]
     MASK = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
@@ -4494,13 +4494,13 @@ impl From<Pigeon52SigLogic> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon60IncSel {
-    #[doc = "pclk"]
+    #[doc = "pclk."]
     PCLK = 0x0,
-    #[doc = "Line start pulse"]
+    #[doc = "Line start pulse."]
     LINE = 0x01,
-    #[doc = "Frame start pulse"]
+    #[doc = "Frame start pulse."]
     FRAME = 0x02,
-    #[doc = "Use another signal as tick event"]
+    #[doc = "Use another signal as tick event."]
     SIG_ANOTHER = 0x03,
 }
 impl Pigeon60IncSel {
@@ -4529,21 +4529,21 @@ impl From<Pigeon60IncSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon60MaskCntSel {
-    #[doc = "pclk counter within one hscan state"]
+    #[doc = "pclk counter within one hscan state."]
     HSTATE_CNT = 0x0,
-    #[doc = "pclk cycle within one hscan state"]
+    #[doc = "pclk cycle within one hscan state."]
     HSTATE_CYCLE = 0x01,
-    #[doc = "line counter within one vscan state"]
+    #[doc = "line counter within one vscan state."]
     VSTATE_CNT = 0x02,
-    #[doc = "line cycle within one vscan state"]
+    #[doc = "line cycle within one vscan state."]
     VSTATE_CYCLE = 0x03,
-    #[doc = "frame counter"]
+    #[doc = "frame counter."]
     FRAME_CNT = 0x04,
-    #[doc = "frame cycle"]
+    #[doc = "frame cycle."]
     FRAME_CYCLE = 0x05,
-    #[doc = "horizontal counter (pclk counter within one line )"]
+    #[doc = "horizontal counter (pclk counter within one line )."]
     HCNT = 0x06,
-    #[doc = "vertical counter (line counter within one frame)"]
+    #[doc = "vertical counter (line counter within one frame)."]
     VCNT = 0x07,
     _RESERVED_8 = 0x08,
     _RESERVED_9 = 0x09,
@@ -4580,9 +4580,9 @@ impl From<Pigeon60MaskCntSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon60Pol {
-    #[doc = "Normal Signal (Active high)"]
+    #[doc = "Normal Signal (Active high)."]
     ACTIVE_HIGH = 0x0,
-    #[doc = "Inverted signal (Active low)"]
+    #[doc = "Inverted signal (Active low)."]
     ACTIVE_LOW = 0x01,
 }
 impl Pigeon60Pol {
@@ -4611,21 +4611,21 @@ impl From<Pigeon60Pol> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pigeon60StateMask(u8);
 impl Pigeon60StateMask {
-    #[doc = "FRAME SYNC"]
+    #[doc = "FRAME SYNC."]
     pub const FS: Self = Self(0x01);
-    #[doc = "FRAME BEGIN"]
+    #[doc = "FRAME BEGIN."]
     pub const FB: Self = Self(0x02);
-    #[doc = "FRAME DATA"]
+    #[doc = "FRAME DATA."]
     pub const FD: Self = Self(0x04);
-    #[doc = "FRAME END"]
+    #[doc = "FRAME END."]
     pub const FE: Self = Self(0x08);
-    #[doc = "LINE SYNC"]
+    #[doc = "LINE SYNC."]
     pub const LS: Self = Self(0x10);
-    #[doc = "LINE BEGIN"]
+    #[doc = "LINE BEGIN."]
     pub const LB: Self = Self(0x20);
-    #[doc = "LINE DATA"]
+    #[doc = "LINE DATA."]
     pub const LD: Self = Self(0x40);
-    #[doc = "LINE END"]
+    #[doc = "LINE END."]
     pub const LE: Self = Self(0x80);
 }
 impl Pigeon60StateMask {
@@ -4683,7 +4683,7 @@ impl From<Pigeon60StateMask> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pigeon61ClrCnt(u16);
 impl Pigeon61ClrCnt {
-    #[doc = "Keep active until mask off"]
+    #[doc = "Keep active until mask off."]
     pub const CLEAR_USING_MASK: Self = Self(0x0);
 }
 impl Pigeon61ClrCnt {
@@ -4727,7 +4727,7 @@ impl From<Pigeon61ClrCnt> for u16 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pigeon61SetCnt(u16);
 impl Pigeon61SetCnt {
-    #[doc = "Start as active"]
+    #[doc = "Start as active."]
     pub const START_ACTIVE: Self = Self(0x0);
 }
 impl Pigeon61SetCnt {
@@ -4771,7 +4771,7 @@ impl From<Pigeon61SetCnt> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon62SigAnother {
-    #[doc = "Keep active until mask off"]
+    #[doc = "Keep active until mask off."]
     CLEAR_USING_MASK = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
@@ -4831,13 +4831,13 @@ impl From<Pigeon62SigAnother> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon62SigLogic {
-    #[doc = "No logic operation"]
+    #[doc = "No logic operation."]
     DIS = 0x0,
-    #[doc = "sigout = sig_another AND this_sig"]
+    #[doc = "sigout = sig_another AND this_sig."]
     AND = 0x01,
-    #[doc = "sigout = sig_another OR this_sig"]
+    #[doc = "sigout = sig_another OR this_sig."]
     OR = 0x02,
-    #[doc = "mask = sig_another AND other_masks"]
+    #[doc = "mask = sig_another AND other_masks."]
     MASK = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
@@ -4878,13 +4878,13 @@ impl From<Pigeon62SigLogic> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon70IncSel {
-    #[doc = "pclk"]
+    #[doc = "pclk."]
     PCLK = 0x0,
-    #[doc = "Line start pulse"]
+    #[doc = "Line start pulse."]
     LINE = 0x01,
-    #[doc = "Frame start pulse"]
+    #[doc = "Frame start pulse."]
     FRAME = 0x02,
-    #[doc = "Use another signal as tick event"]
+    #[doc = "Use another signal as tick event."]
     SIG_ANOTHER = 0x03,
 }
 impl Pigeon70IncSel {
@@ -4913,21 +4913,21 @@ impl From<Pigeon70IncSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon70MaskCntSel {
-    #[doc = "pclk counter within one hscan state"]
+    #[doc = "pclk counter within one hscan state."]
     HSTATE_CNT = 0x0,
-    #[doc = "pclk cycle within one hscan state"]
+    #[doc = "pclk cycle within one hscan state."]
     HSTATE_CYCLE = 0x01,
-    #[doc = "line counter within one vscan state"]
+    #[doc = "line counter within one vscan state."]
     VSTATE_CNT = 0x02,
-    #[doc = "line cycle within one vscan state"]
+    #[doc = "line cycle within one vscan state."]
     VSTATE_CYCLE = 0x03,
-    #[doc = "frame counter"]
+    #[doc = "frame counter."]
     FRAME_CNT = 0x04,
-    #[doc = "frame cycle"]
+    #[doc = "frame cycle."]
     FRAME_CYCLE = 0x05,
-    #[doc = "horizontal counter (pclk counter within one line )"]
+    #[doc = "horizontal counter (pclk counter within one line )."]
     HCNT = 0x06,
-    #[doc = "vertical counter (line counter within one frame)"]
+    #[doc = "vertical counter (line counter within one frame)."]
     VCNT = 0x07,
     _RESERVED_8 = 0x08,
     _RESERVED_9 = 0x09,
@@ -4964,9 +4964,9 @@ impl From<Pigeon70MaskCntSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon70Pol {
-    #[doc = "Normal Signal (Active high)"]
+    #[doc = "Normal Signal (Active high)."]
     ACTIVE_HIGH = 0x0,
-    #[doc = "Inverted signal (Active low)"]
+    #[doc = "Inverted signal (Active low)."]
     ACTIVE_LOW = 0x01,
 }
 impl Pigeon70Pol {
@@ -4995,21 +4995,21 @@ impl From<Pigeon70Pol> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pigeon70StateMask(u8);
 impl Pigeon70StateMask {
-    #[doc = "FRAME SYNC"]
+    #[doc = "FRAME SYNC."]
     pub const FS: Self = Self(0x01);
-    #[doc = "FRAME BEGIN"]
+    #[doc = "FRAME BEGIN."]
     pub const FB: Self = Self(0x02);
-    #[doc = "FRAME DATA"]
+    #[doc = "FRAME DATA."]
     pub const FD: Self = Self(0x04);
-    #[doc = "FRAME END"]
+    #[doc = "FRAME END."]
     pub const FE: Self = Self(0x08);
-    #[doc = "LINE SYNC"]
+    #[doc = "LINE SYNC."]
     pub const LS: Self = Self(0x10);
-    #[doc = "LINE BEGIN"]
+    #[doc = "LINE BEGIN."]
     pub const LB: Self = Self(0x20);
-    #[doc = "LINE DATA"]
+    #[doc = "LINE DATA."]
     pub const LD: Self = Self(0x40);
-    #[doc = "LINE END"]
+    #[doc = "LINE END."]
     pub const LE: Self = Self(0x80);
 }
 impl Pigeon70StateMask {
@@ -5067,7 +5067,7 @@ impl From<Pigeon70StateMask> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pigeon71ClrCnt(u16);
 impl Pigeon71ClrCnt {
-    #[doc = "Keep active until mask off"]
+    #[doc = "Keep active until mask off."]
     pub const CLEAR_USING_MASK: Self = Self(0x0);
 }
 impl Pigeon71ClrCnt {
@@ -5111,7 +5111,7 @@ impl From<Pigeon71ClrCnt> for u16 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pigeon71SetCnt(u16);
 impl Pigeon71SetCnt {
-    #[doc = "Start as active"]
+    #[doc = "Start as active."]
     pub const START_ACTIVE: Self = Self(0x0);
 }
 impl Pigeon71SetCnt {
@@ -5155,7 +5155,7 @@ impl From<Pigeon71SetCnt> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon72SigAnother {
-    #[doc = "Keep active until mask off"]
+    #[doc = "Keep active until mask off."]
     CLEAR_USING_MASK = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
@@ -5215,13 +5215,13 @@ impl From<Pigeon72SigAnother> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon72SigLogic {
-    #[doc = "No logic operation"]
+    #[doc = "No logic operation."]
     DIS = 0x0,
-    #[doc = "sigout = sig_another AND this_sig"]
+    #[doc = "sigout = sig_another AND this_sig."]
     AND = 0x01,
-    #[doc = "sigout = sig_another OR this_sig"]
+    #[doc = "sigout = sig_another OR this_sig."]
     OR = 0x02,
-    #[doc = "mask = sig_another AND other_masks"]
+    #[doc = "mask = sig_another AND other_masks."]
     MASK = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
@@ -5262,13 +5262,13 @@ impl From<Pigeon72SigLogic> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon80IncSel {
-    #[doc = "pclk"]
+    #[doc = "pclk."]
     PCLK = 0x0,
-    #[doc = "Line start pulse"]
+    #[doc = "Line start pulse."]
     LINE = 0x01,
-    #[doc = "Frame start pulse"]
+    #[doc = "Frame start pulse."]
     FRAME = 0x02,
-    #[doc = "Use another signal as tick event"]
+    #[doc = "Use another signal as tick event."]
     SIG_ANOTHER = 0x03,
 }
 impl Pigeon80IncSel {
@@ -5297,21 +5297,21 @@ impl From<Pigeon80IncSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon80MaskCntSel {
-    #[doc = "pclk counter within one hscan state"]
+    #[doc = "pclk counter within one hscan state."]
     HSTATE_CNT = 0x0,
-    #[doc = "pclk cycle within one hscan state"]
+    #[doc = "pclk cycle within one hscan state."]
     HSTATE_CYCLE = 0x01,
-    #[doc = "line counter within one vscan state"]
+    #[doc = "line counter within one vscan state."]
     VSTATE_CNT = 0x02,
-    #[doc = "line cycle within one vscan state"]
+    #[doc = "line cycle within one vscan state."]
     VSTATE_CYCLE = 0x03,
-    #[doc = "frame counter"]
+    #[doc = "frame counter."]
     FRAME_CNT = 0x04,
-    #[doc = "frame cycle"]
+    #[doc = "frame cycle."]
     FRAME_CYCLE = 0x05,
-    #[doc = "horizontal counter (pclk counter within one line )"]
+    #[doc = "horizontal counter (pclk counter within one line )."]
     HCNT = 0x06,
-    #[doc = "vertical counter (line counter within one frame)"]
+    #[doc = "vertical counter (line counter within one frame)."]
     VCNT = 0x07,
     _RESERVED_8 = 0x08,
     _RESERVED_9 = 0x09,
@@ -5348,9 +5348,9 @@ impl From<Pigeon80MaskCntSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon80Pol {
-    #[doc = "Normal Signal (Active high)"]
+    #[doc = "Normal Signal (Active high)."]
     ACTIVE_HIGH = 0x0,
-    #[doc = "Inverted signal (Active low)"]
+    #[doc = "Inverted signal (Active low)."]
     ACTIVE_LOW = 0x01,
 }
 impl Pigeon80Pol {
@@ -5379,21 +5379,21 @@ impl From<Pigeon80Pol> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pigeon80StateMask(u8);
 impl Pigeon80StateMask {
-    #[doc = "FRAME SYNC"]
+    #[doc = "FRAME SYNC."]
     pub const FS: Self = Self(0x01);
-    #[doc = "FRAME BEGIN"]
+    #[doc = "FRAME BEGIN."]
     pub const FB: Self = Self(0x02);
-    #[doc = "FRAME DATA"]
+    #[doc = "FRAME DATA."]
     pub const FD: Self = Self(0x04);
-    #[doc = "FRAME END"]
+    #[doc = "FRAME END."]
     pub const FE: Self = Self(0x08);
-    #[doc = "LINE SYNC"]
+    #[doc = "LINE SYNC."]
     pub const LS: Self = Self(0x10);
-    #[doc = "LINE BEGIN"]
+    #[doc = "LINE BEGIN."]
     pub const LB: Self = Self(0x20);
-    #[doc = "LINE DATA"]
+    #[doc = "LINE DATA."]
     pub const LD: Self = Self(0x40);
-    #[doc = "LINE END"]
+    #[doc = "LINE END."]
     pub const LE: Self = Self(0x80);
 }
 impl Pigeon80StateMask {
@@ -5451,7 +5451,7 @@ impl From<Pigeon80StateMask> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pigeon81ClrCnt(u16);
 impl Pigeon81ClrCnt {
-    #[doc = "Keep active until mask off"]
+    #[doc = "Keep active until mask off."]
     pub const CLEAR_USING_MASK: Self = Self(0x0);
 }
 impl Pigeon81ClrCnt {
@@ -5495,7 +5495,7 @@ impl From<Pigeon81ClrCnt> for u16 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pigeon81SetCnt(u16);
 impl Pigeon81SetCnt {
-    #[doc = "Start as active"]
+    #[doc = "Start as active."]
     pub const START_ACTIVE: Self = Self(0x0);
 }
 impl Pigeon81SetCnt {
@@ -5539,7 +5539,7 @@ impl From<Pigeon81SetCnt> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon82SigAnother {
-    #[doc = "Keep active until mask off"]
+    #[doc = "Keep active until mask off."]
     CLEAR_USING_MASK = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
@@ -5599,13 +5599,13 @@ impl From<Pigeon82SigAnother> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon82SigLogic {
-    #[doc = "No logic operation"]
+    #[doc = "No logic operation."]
     DIS = 0x0,
-    #[doc = "sigout = sig_another AND this_sig"]
+    #[doc = "sigout = sig_another AND this_sig."]
     AND = 0x01,
-    #[doc = "sigout = sig_another OR this_sig"]
+    #[doc = "sigout = sig_another OR this_sig."]
     OR = 0x02,
-    #[doc = "mask = sig_another AND other_masks"]
+    #[doc = "mask = sig_another AND other_masks."]
     MASK = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
@@ -5646,13 +5646,13 @@ impl From<Pigeon82SigLogic> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon90IncSel {
-    #[doc = "pclk"]
+    #[doc = "pclk."]
     PCLK = 0x0,
-    #[doc = "Line start pulse"]
+    #[doc = "Line start pulse."]
     LINE = 0x01,
-    #[doc = "Frame start pulse"]
+    #[doc = "Frame start pulse."]
     FRAME = 0x02,
-    #[doc = "Use another signal as tick event"]
+    #[doc = "Use another signal as tick event."]
     SIG_ANOTHER = 0x03,
 }
 impl Pigeon90IncSel {
@@ -5681,21 +5681,21 @@ impl From<Pigeon90IncSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon90MaskCntSel {
-    #[doc = "pclk counter within one hscan state"]
+    #[doc = "pclk counter within one hscan state."]
     HSTATE_CNT = 0x0,
-    #[doc = "pclk cycle within one hscan state"]
+    #[doc = "pclk cycle within one hscan state."]
     HSTATE_CYCLE = 0x01,
-    #[doc = "line counter within one vscan state"]
+    #[doc = "line counter within one vscan state."]
     VSTATE_CNT = 0x02,
-    #[doc = "line cycle within one vscan state"]
+    #[doc = "line cycle within one vscan state."]
     VSTATE_CYCLE = 0x03,
-    #[doc = "frame counter"]
+    #[doc = "frame counter."]
     FRAME_CNT = 0x04,
-    #[doc = "frame cycle"]
+    #[doc = "frame cycle."]
     FRAME_CYCLE = 0x05,
-    #[doc = "horizontal counter (pclk counter within one line )"]
+    #[doc = "horizontal counter (pclk counter within one line )."]
     HCNT = 0x06,
-    #[doc = "vertical counter (line counter within one frame)"]
+    #[doc = "vertical counter (line counter within one frame)."]
     VCNT = 0x07,
     _RESERVED_8 = 0x08,
     _RESERVED_9 = 0x09,
@@ -5732,9 +5732,9 @@ impl From<Pigeon90MaskCntSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon90Pol {
-    #[doc = "Normal Signal (Active high)"]
+    #[doc = "Normal Signal (Active high)."]
     ACTIVE_HIGH = 0x0,
-    #[doc = "Inverted signal (Active low)"]
+    #[doc = "Inverted signal (Active low)."]
     ACTIVE_LOW = 0x01,
 }
 impl Pigeon90Pol {
@@ -5763,21 +5763,21 @@ impl From<Pigeon90Pol> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pigeon90StateMask(u8);
 impl Pigeon90StateMask {
-    #[doc = "FRAME SYNC"]
+    #[doc = "FRAME SYNC."]
     pub const FS: Self = Self(0x01);
-    #[doc = "FRAME BEGIN"]
+    #[doc = "FRAME BEGIN."]
     pub const FB: Self = Self(0x02);
-    #[doc = "FRAME DATA"]
+    #[doc = "FRAME DATA."]
     pub const FD: Self = Self(0x04);
-    #[doc = "FRAME END"]
+    #[doc = "FRAME END."]
     pub const FE: Self = Self(0x08);
-    #[doc = "LINE SYNC"]
+    #[doc = "LINE SYNC."]
     pub const LS: Self = Self(0x10);
-    #[doc = "LINE BEGIN"]
+    #[doc = "LINE BEGIN."]
     pub const LB: Self = Self(0x20);
-    #[doc = "LINE DATA"]
+    #[doc = "LINE DATA."]
     pub const LD: Self = Self(0x40);
-    #[doc = "LINE END"]
+    #[doc = "LINE END."]
     pub const LE: Self = Self(0x80);
 }
 impl Pigeon90StateMask {
@@ -5835,7 +5835,7 @@ impl From<Pigeon90StateMask> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pigeon91ClrCnt(u16);
 impl Pigeon91ClrCnt {
-    #[doc = "Keep active until mask off"]
+    #[doc = "Keep active until mask off."]
     pub const CLEAR_USING_MASK: Self = Self(0x0);
 }
 impl Pigeon91ClrCnt {
@@ -5879,7 +5879,7 @@ impl From<Pigeon91ClrCnt> for u16 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Pigeon91SetCnt(u16);
 impl Pigeon91SetCnt {
-    #[doc = "Start as active"]
+    #[doc = "Start as active."]
     pub const START_ACTIVE: Self = Self(0x0);
 }
 impl Pigeon91SetCnt {
@@ -5923,7 +5923,7 @@ impl From<Pigeon91SetCnt> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon92SigAnother {
-    #[doc = "Keep active until mask off"]
+    #[doc = "Keep active until mask off."]
     CLEAR_USING_MASK = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
@@ -5983,13 +5983,13 @@ impl From<Pigeon92SigAnother> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pigeon92SigLogic {
-    #[doc = "No logic operation"]
+    #[doc = "No logic operation."]
     DIS = 0x0,
-    #[doc = "sigout = sig_another AND this_sig"]
+    #[doc = "sigout = sig_another AND this_sig."]
     AND = 0x01,
-    #[doc = "sigout = sig_another OR this_sig"]
+    #[doc = "sigout = sig_another OR this_sig."]
     OR = 0x02,
-    #[doc = "mask = sig_another AND other_masks"]
+    #[doc = "mask = sig_another AND other_masks."]
     MASK = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,

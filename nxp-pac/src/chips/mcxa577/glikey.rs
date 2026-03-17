@@ -1,4 +1,4 @@
-#[doc = "GLIKEY"]
+#[doc = "GLIKEY."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Glikey {
     ptr: *mut u8,
@@ -14,27 +14,27 @@ impl Glikey {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "Control Register 0 SFR"]
+    #[doc = "Control Register 0 SFR."]
     #[inline(always)]
     pub const fn ctrl_0(self) -> crate::common::Reg<regs::Ctrl0, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
     }
-    #[doc = "Control Register 1 SFR"]
+    #[doc = "Control Register 1 SFR."]
     #[inline(always)]
     pub const fn ctrl_1(self) -> crate::common::Reg<regs::Ctrl1, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
     }
-    #[doc = "Interrupt Control"]
+    #[doc = "Interrupt Control."]
     #[inline(always)]
     pub const fn intr_ctrl(self) -> crate::common::Reg<regs::IntrCtrl, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
     }
-    #[doc = "Status"]
+    #[doc = "Status."]
     #[inline(always)]
     pub const fn status(self) -> crate::common::Reg<regs::Status, crate::common::R> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }
     }
-    #[doc = "IP Version"]
+    #[doc = "IP Version."]
     #[inline(always)]
     pub const fn version(self) -> crate::common::Reg<regs::Version, crate::common::R> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0ffcusize) as _) }

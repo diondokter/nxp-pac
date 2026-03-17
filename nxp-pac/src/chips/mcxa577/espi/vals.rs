@@ -2,11 +2,11 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Base {
-    #[doc = "Offset from 0 in host memory or I/O space"]
+    #[doc = "Offset from 0 in host memory or I/O space."]
     OFFSET = 0x0,
-    #[doc = "Base1 offset in host memory"]
+    #[doc = "Base1 offset in host memory."]
     BASE1 = 0x01,
-    #[doc = "Base2 offset in host memory"]
+    #[doc = "Base2 offset in host memory."]
     BASE2 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -36,9 +36,9 @@ impl From<Base> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum BootErrn {
-    #[doc = "Boot load error"]
+    #[doc = "Boot load error."]
     ERROR = 0x0,
-    #[doc = "Boot load successful"]
+    #[doc = "Boot load successful."]
     SUCCESS = 0x01,
 }
 impl BootErrn {
@@ -166,15 +166,15 @@ impl From<Dma1en> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dma1port {
-    #[doc = "Port 0"]
+    #[doc = "Port 0."]
     PORT0 = 0x0,
-    #[doc = "Port 1"]
+    #[doc = "Port 1."]
     PORT1 = 0x01,
-    #[doc = "Port 2"]
+    #[doc = "Port 2."]
     PORT2 = 0x02,
-    #[doc = "Port 3"]
+    #[doc = "Port 3."]
     PORT3 = 0x03,
-    #[doc = "Port 4"]
+    #[doc = "Port 4."]
     PORT4 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
@@ -217,9 +217,9 @@ impl From<Dma1port> for u8 {
 pub enum Enable {
     #[doc = "Disabled. Block is not operational."]
     DISABLED = 0x0,
-    #[doc = "eSPI (Enhanced Serial Peripheral Interface)"]
+    #[doc = "eSPI (Enhanced Serial Peripheral Interface)."]
     ESPI = 0x01,
-    #[doc = "LPC (Low Pin Count)"]
+    #[doc = "LPC (Low Pin Count)."]
     LPC = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -249,13 +249,13 @@ impl From<Enable> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flashmx {
-    #[doc = "64 bytes"]
+    #[doc = "64 bytes."]
     BYTE64 = 0x0,
-    #[doc = "128 bytes"]
+    #[doc = "128 bytes."]
     BYTE128 = 0x01,
-    #[doc = "256 bytes"]
+    #[doc = "256 bytes."]
     BYTE256 = 0x02,
-    #[doc = "512 bytes"]
+    #[doc = "512 bytes."]
     BYTE512 = 0x03,
 }
 impl Flashmx {
@@ -284,13 +284,13 @@ impl From<Flashmx> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flashsz {
-    #[doc = "64 bytes"]
+    #[doc = "64 bytes."]
     BYTE64 = 0x0,
-    #[doc = "128 bytes"]
+    #[doc = "128 bytes."]
     BYTE128 = 0x01,
-    #[doc = "256 bytes"]
+    #[doc = "256 bytes."]
     BYTE256 = 0x02,
-    #[doc = "512 bytes"]
+    #[doc = "512 bytes."]
     BYTE512 = 0x03,
 }
 impl Flashsz {
@@ -319,17 +319,17 @@ impl From<Flashsz> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flshera {
-    #[doc = "Flash not enabled"]
+    #[doc = "Flash not enabled."]
     DISABLED = 0x0,
-    #[doc = "Erase is 4 kB"]
+    #[doc = "Erase is 4 kB."]
     ERASE_4K = 0x01,
-    #[doc = "Erase is 64 kB"]
+    #[doc = "Erase is 64 kB."]
     ERASE_64K = 0x02,
-    #[doc = "Erase allows 4 kB and 64 kB"]
+    #[doc = "Erase allows 4 kB and 64 kB."]
     ERASE_4K_64K = 0x03,
-    #[doc = "Erase is 128 kB"]
+    #[doc = "Erase is 128 kB."]
     ERASE_128K = 0x04,
-    #[doc = "Erase is 256 kB"]
+    #[doc = "Erase is 256 kB."]
     ERASE_256K = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -360,7 +360,7 @@ impl From<Flshera> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum GpioOe {
-    #[doc = "Input (High-Z)"]
+    #[doc = "Input (High-Z)."]
     OE0 = 0x0,
     #[doc = "Alert or reset pin is set as an output GPIO."]
     OE1 = 0x01,
@@ -391,7 +391,7 @@ impl From<GpioOe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum GpioOut {
-    #[doc = "Low"]
+    #[doc = "Low."]
     OE0 = 0x0,
     #[doc = "High, high-Z if ESPIMISC\\[GPIO_OD\\] = 1."]
     OE1 = 0x01,
@@ -423,7 +423,7 @@ impl From<GpioOut> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IntenclrCportint {
     _RESERVED_0 = 0x0,
-    #[doc = "Writes 0 to corresponding coprocessor port interrupt enable"]
+    #[doc = "Writes 0 to corresponding coprocessor port interrupt enable."]
     ENABLE = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -483,7 +483,7 @@ impl From<IntenclrCportint> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IntenclrPortint {
     _RESERVED_0 = 0x0,
-    #[doc = "Writes 0 to corresponding port interrupt enable"]
+    #[doc = "Writes 0 to corresponding port interrupt enable."]
     ENABLE = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -542,9 +542,9 @@ impl From<IntenclrPortint> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IntensetCportint {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLE = 0x0,
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     ENABLE = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -604,7 +604,7 @@ impl From<IntensetCportint> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IntensetPortint {
     _RESERVED_0 = 0x0,
-    #[doc = "Corresponding port interrupts main processor, if it matches IRule"]
+    #[doc = "Corresponding port interrupts main processor, if it matches IRule."]
     ENABLE = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -663,9 +663,9 @@ impl From<IntensetPortint> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IntstatCportint {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLE = 0x0,
-    #[doc = "Interrupt is enabled and pending for the coprocessor"]
+    #[doc = "Interrupt is enabled and pending for the coprocessor."]
     ENABLE = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -724,9 +724,9 @@ impl From<IntstatCportint> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IntstatPortint {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLE = 0x0,
-    #[doc = "Corresponding port interrupts main processor if it matches IRule"]
+    #[doc = "Corresponding port interrupts main processor if it matches IRule."]
     ENABLE = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -785,15 +785,15 @@ impl From<IntstatPortint> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Maxspd {
-    #[doc = "<=20 MHz"]
+    #[doc = "<=20 MHz."]
     SMALL_THAN_20M = 0x0,
-    #[doc = "<=25 MHz (24 Mhz)"]
+    #[doc = "<=25 MHz (24 Mhz)."]
     SMALL_THAN_25M = 0x01,
-    #[doc = "<=33 MHz (30 MHz)"]
+    #[doc = "<=33 MHz (30 MHz)."]
     SMALL_THAN_33M = 0x02,
-    #[doc = "<=50 MHz (48 MHz)"]
+    #[doc = "<=50 MHz (48 MHz)."]
     SMALL_THAN_50M = 0x03,
-    #[doc = "<=66 MHz (60 MHz)"]
+    #[doc = "<=66 MHz (60 MHz)."]
     SMALL_THAN_66M = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
@@ -826,11 +826,11 @@ impl From<Maxspd> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Memmx {
     _RESERVED_0 = 0x0,
-    #[doc = "64 bytes address aligned max payload size"]
+    #[doc = "64 bytes address aligned max payload size."]
     MIN_4KB = 0x01,
-    #[doc = "128 bytes address aligned max payload size"]
+    #[doc = "128 bytes address aligned max payload size."]
     MIN_8KB = 0x02,
-    #[doc = "256 bytes address aligned max payload size"]
+    #[doc = "256 bytes address aligned max payload size."]
     MIN_16KB = 0x03,
 }
 impl Memmx {
@@ -860,11 +860,11 @@ impl From<Memmx> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Memsz {
     _RESERVED_0 = 0x0,
-    #[doc = "64-byte payload for memory"]
+    #[doc = "64-byte payload for memory."]
     MEMSZ0 = 0x01,
-    #[doc = "128-byte payload for memory and OOB access"]
+    #[doc = "128-byte payload for memory and OOB access."]
     MEMSZ1 = 0x02,
-    #[doc = "256-byte payload for memory and OOB access"]
+    #[doc = "256-byte payload for memory and OOB access."]
     MEMSZ11 = 0x03,
 }
 impl Memsz {
@@ -893,13 +893,13 @@ impl From<Memsz> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum NumOfTarget {
-    #[doc = "1 RPMC flash device is supported"]
+    #[doc = "1 RPMC flash device is supported."]
     MIXXN_2KB = 0x0,
-    #[doc = "2 RPMC flash device is supported"]
+    #[doc = "2 RPMC flash device is supported."]
     MIYYN_4KB = 0x01,
-    #[doc = "3 RPMC flash device is supported"]
+    #[doc = "3 RPMC flash device is supported."]
     MXXXIN_8KB = 0x02,
-    #[doc = "4 RPMC flash device is supported"]
+    #[doc = "4 RPMC flash device is supported."]
     MINTTT_16KB = 0x03,
 }
 impl NumOfTarget {
@@ -929,11 +929,11 @@ impl From<NumOfTarget> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Oobmx {
     _RESERVED_0 = 0x0,
-    #[doc = "64 bytes address aligned max payload size"]
+    #[doc = "64 bytes address aligned max payload size."]
     MIN_4KB = 0x01,
-    #[doc = "128 bytes address aligned max payload size"]
+    #[doc = "128 bytes address aligned max payload size."]
     MIN_8KB = 0x02,
-    #[doc = "256 bytes address aligned max payload size"]
+    #[doc = "256 bytes address aligned max payload size."]
     MIN_16KB = 0x03,
 }
 impl Oobmx {
@@ -963,11 +963,11 @@ impl From<Oobmx> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Oobsz {
     _RESERVED_0 = 0x0,
-    #[doc = "64-byte payload for memory"]
+    #[doc = "64-byte payload for memory."]
     MEMSZ0 = 0x01,
-    #[doc = "128-byte payload for memory and OOB access"]
+    #[doc = "128-byte payload for memory and OOB access."]
     MEMSZ1 = 0x02,
-    #[doc = "256-byte payload for memory and OOB access"]
+    #[doc = "256-byte payload for memory and OOB access."]
     MEMSZ11 = 0x03,
 }
 impl Oobsz {
@@ -998,9 +998,9 @@ impl From<Oobsz> for u8 {
 pub enum P0addrBaseAsz {
     #[doc = "Offset from 0 in host memory or I/O space."]
     OFFSET_FROM_0 = 0x0,
-    #[doc = "Uses BASE0 offset in host memory"]
+    #[doc = "Uses BASE0 offset in host memory."]
     USE_BASE0 = 0x01,
-    #[doc = "Uses BASE1 offset in host memory"]
+    #[doc = "Uses BASE1 offset in host memory."]
     USE_BASE1 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -1030,9 +1030,9 @@ impl From<P0addrBaseAsz> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P0addrIdx1st {
-    #[doc = "Index is higher address than data (for example, data at OFF, index at OFF+IDXOFF)"]
+    #[doc = "Index is higher address than data (for example, data at OFF, index at OFF+IDXOFF)."]
     DATAOFF = 0x0,
-    #[doc = "Index is lower address than data (for example, index at OFF, data at OFF+IDXOFF)"]
+    #[doc = "Index is lower address than data (for example, index at OFF, data at OFF+IDXOFF)."]
     IDXOFF = 0x01,
 }
 impl P0addrIdx1st {
@@ -1127,28 +1127,28 @@ impl From<P0cfgErrorign> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P0cfgType {
-    #[doc = "Unconfigured (reset condition)"]
+    #[doc = "Unconfigured (reset condition)."]
     UNCONFIGURED = 0x0,
-    #[doc = "ACPI style Endpoint"]
+    #[doc = "ACPI style Endpoint."]
     ACPI_END = 0x01,
     #[doc = "ACPI style index-and-data. Index and data byte locations. Index gives offset into implied space. Uses registers for data and index."]
     ACPI_INDEX = 0x02,
     _RESERVED_3 = 0x03,
-    #[doc = "Bus Master Memory Single"]
+    #[doc = "Bus Master Memory Single."]
     BUS_M_MEM_S = 0x04,
-    #[doc = "Bus Master Flash Single"]
+    #[doc = "Bus Master Flash Single."]
     BUS_M_FLASH_S = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
-    #[doc = "Mailbox Shared"]
+    #[doc = "Mailbox Shared."]
     MAILBOX_SHARED = 0x08,
-    #[doc = "Mailbox Single"]
+    #[doc = "Mailbox Single."]
     MAILBOX_SINGLE = 0x09,
-    #[doc = "Mailbox Split"]
+    #[doc = "Mailbox Split."]
     MAILBOX_SPLIT = 0x0a,
-    #[doc = "Mailbox OOB Split"]
+    #[doc = "Mailbox OOB Split."]
     MAILBOX_OOB_SPLIT = 0x0b,
-    #[doc = "Mailbox OEM"]
+    #[doc = "Mailbox OEM."]
     MAILBOX_OEM = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
@@ -1180,9 +1180,9 @@ impl From<P0cfgType> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P0datainDir {
-    #[doc = "Read by host"]
+    #[doc = "Read by host."]
     ENABLE = 0x0,
-    #[doc = "Write by host"]
+    #[doc = "Write by host."]
     DISABLE = 0x01,
 }
 impl P0datainDir {
@@ -1211,11 +1211,11 @@ impl From<P0datainDir> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P0irulestatFlashCompletionType {
-    #[doc = "Indicates the middle completion of a split completion sequence"]
+    #[doc = "Indicates the middle completion of a split completion sequence."]
     MIDDLE = 0x0,
-    #[doc = "Indicates the first completion of a split completion sequence"]
+    #[doc = "Indicates the first completion of a split completion sequence."]
     FIRST = 0x01,
-    #[doc = "Indicates the last completion of a split completion sequence"]
+    #[doc = "Indicates the last completion of a split completion sequence."]
     LAST = 0x02,
     #[doc = "Indicates the only completion for a split transaction."]
     ONLY = 0x03,
@@ -1246,13 +1246,13 @@ impl From<P0irulestatFlashCompletionType> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P0omflenTrans {
-    #[doc = "OOB: to host; Master: to host 32 (host reads with 32-bit address); SAF: Completion fail"]
+    #[doc = "OOB: to host; Master: to host 32 (host reads with 32-bit address); SAF: Completion fail."]
     OOB = 0x0,
-    #[doc = "Master: to host 64 (host reads w/64-bit address); MAF: read flash (location in RAM); SAF: completion with data"]
+    #[doc = "Master: to host 64 (host reads w/64-bit address); MAF: read flash (location in RAM); SAF: completion with data."]
     READ = 0x01,
-    #[doc = "Master: from host 32 (host writes w/32-bit address); MAF: write flash (location in RAM); SAF: completion with no data"]
+    #[doc = "Master: from host 32 (host writes w/32-bit address); MAF: write flash (location in RAM); SAF: completion with no data."]
     WRITE = 0x02,
-    #[doc = "Master: from host 64 (host writes w/64-bit address); MAF: erase flash (sector in RAM)"]
+    #[doc = "Master: from host 64 (host writes w/64-bit address); MAF: erase flash (sector in RAM)."]
     ERASE = 0x03,
 }
 impl P0omflenTrans {
@@ -1316,9 +1316,9 @@ impl From<P0statRdstat> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P0statRpmc1Or2 {
-    #[doc = "RPMC operation 1 has been chosen"]
+    #[doc = "RPMC operation 1 has been chosen."]
     OPERATION_0 = 0x0,
-    #[doc = "RPMC operation 2 has been chosen"]
+    #[doc = "RPMC operation 2 has been chosen."]
     OPERATION_1 = 0x01,
 }
 impl P0statRpmc1Or2 {
@@ -1347,11 +1347,11 @@ impl From<P0statRpmc1Or2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P0statRpmcFlashDevice {
-    #[doc = "First device"]
+    #[doc = "First device."]
     FIRST = 0x0,
-    #[doc = "Second device"]
+    #[doc = "Second device."]
     SECOND = 0x01,
-    #[doc = "Third device"]
+    #[doc = "Third device."]
     THIRD = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -1418,9 +1418,9 @@ impl From<P0statWrstat> for u8 {
 pub enum P1addrBaseAsz {
     #[doc = "Offset from 0 in host memory or I/O space."]
     OFFSET_FROM_0 = 0x0,
-    #[doc = "Uses BASE0 offset in host memory"]
+    #[doc = "Uses BASE0 offset in host memory."]
     USE_BASE0 = 0x01,
-    #[doc = "Uses BASE1 offset in host memory"]
+    #[doc = "Uses BASE1 offset in host memory."]
     USE_BASE1 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -1450,9 +1450,9 @@ impl From<P1addrBaseAsz> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P1addrIdx1st {
-    #[doc = "Index is higher address than data (for example, data at OFF, index at OFF+IDXOFF)"]
+    #[doc = "Index is higher address than data (for example, data at OFF, index at OFF+IDXOFF)."]
     DATAOFF = 0x0,
-    #[doc = "Index is lower address than data (for example, index at OFF, data at OFF+IDXOFF)"]
+    #[doc = "Index is lower address than data (for example, index at OFF, data at OFF+IDXOFF)."]
     IDXOFF = 0x01,
 }
 impl P1addrIdx1st {
@@ -1547,28 +1547,28 @@ impl From<P1cfgErrorign> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P1cfgType {
-    #[doc = "Unconfigured (reset condition)"]
+    #[doc = "Unconfigured (reset condition)."]
     UNCONFIGURED = 0x0,
-    #[doc = "ACPI style Endpoint"]
+    #[doc = "ACPI style Endpoint."]
     ACPI_END = 0x01,
     #[doc = "ACPI style index-and-data. Index and data byte locations. Index gives offset into implied space. Uses registers for data and index."]
     ACPI_INDEX = 0x02,
     _RESERVED_3 = 0x03,
-    #[doc = "Bus Master Memory Single"]
+    #[doc = "Bus Master Memory Single."]
     BUS_M_MEM_S = 0x04,
-    #[doc = "Bus Master Flash Single"]
+    #[doc = "Bus Master Flash Single."]
     BUS_M_FLASH_S = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
-    #[doc = "Mailbox Shared"]
+    #[doc = "Mailbox Shared."]
     MAILBOX_SHARED = 0x08,
-    #[doc = "Mailbox Single"]
+    #[doc = "Mailbox Single."]
     MAILBOX_SINGLE = 0x09,
-    #[doc = "Mailbox Split"]
+    #[doc = "Mailbox Split."]
     MAILBOX_SPLIT = 0x0a,
-    #[doc = "Mailbox OOB Split"]
+    #[doc = "Mailbox OOB Split."]
     MAILBOX_OOB_SPLIT = 0x0b,
-    #[doc = "Mailbox OEM"]
+    #[doc = "Mailbox OEM."]
     MAILBOX_OEM = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
@@ -1600,9 +1600,9 @@ impl From<P1cfgType> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P1datainDir {
-    #[doc = "Read by host"]
+    #[doc = "Read by host."]
     ENABLE = 0x0,
-    #[doc = "Write by host"]
+    #[doc = "Write by host."]
     DISABLE = 0x01,
 }
 impl P1datainDir {
@@ -1631,11 +1631,11 @@ impl From<P1datainDir> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P1irulestatFlashCompletionType {
-    #[doc = "Indicates the middle completion of a split completion sequence"]
+    #[doc = "Indicates the middle completion of a split completion sequence."]
     MIDDLE = 0x0,
-    #[doc = "Indicates the first completion of a split completion sequence"]
+    #[doc = "Indicates the first completion of a split completion sequence."]
     FIRST = 0x01,
-    #[doc = "Indicates the last completion of a split completion sequence"]
+    #[doc = "Indicates the last completion of a split completion sequence."]
     LAST = 0x02,
     #[doc = "Indicates the only completion for a split transaction."]
     ONLY = 0x03,
@@ -1666,13 +1666,13 @@ impl From<P1irulestatFlashCompletionType> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P1omflenTrans {
-    #[doc = "OOB: to host; Master: to host 32 (host reads with 32-bit address); SAF: Completion fail"]
+    #[doc = "OOB: to host; Master: to host 32 (host reads with 32-bit address); SAF: Completion fail."]
     OOB = 0x0,
-    #[doc = "Master: to host 64 (host reads w/64-bit address); MAF: read flash (location in RAM); SAF: completion with data"]
+    #[doc = "Master: to host 64 (host reads w/64-bit address); MAF: read flash (location in RAM); SAF: completion with data."]
     READ = 0x01,
-    #[doc = "Master: from host 32 (host writes w/32-bit address); MAF: write flash (location in RAM); SAF: completion with no data"]
+    #[doc = "Master: from host 32 (host writes w/32-bit address); MAF: write flash (location in RAM); SAF: completion with no data."]
     WRITE = 0x02,
-    #[doc = "Master: from host 64 (host writes w/64-bit address); MAF: erase flash (sector in RAM)"]
+    #[doc = "Master: from host 64 (host writes w/64-bit address); MAF: erase flash (sector in RAM)."]
     ERASE = 0x03,
 }
 impl P1omflenTrans {
@@ -1736,9 +1736,9 @@ impl From<P1statRdstat> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P1statRpmc1Or2 {
-    #[doc = "RPMC operation 1 has been chosen"]
+    #[doc = "RPMC operation 1 has been chosen."]
     OPERATION_0 = 0x0,
-    #[doc = "RPMC operation 2 has been chosen"]
+    #[doc = "RPMC operation 2 has been chosen."]
     OPERATION_1 = 0x01,
 }
 impl P1statRpmc1Or2 {
@@ -1767,11 +1767,11 @@ impl From<P1statRpmc1Or2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P1statRpmcFlashDevice {
-    #[doc = "First device"]
+    #[doc = "First device."]
     FIRST = 0x0,
-    #[doc = "Second device"]
+    #[doc = "Second device."]
     SECOND = 0x01,
-    #[doc = "Third device"]
+    #[doc = "Third device."]
     THIRD = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -1838,9 +1838,9 @@ impl From<P1statWrstat> for u8 {
 pub enum P2addrBaseAsz {
     #[doc = "Offset from 0 in host memory or I/O space."]
     OFFSET_FROM_0 = 0x0,
-    #[doc = "Uses BASE0 offset in host memory"]
+    #[doc = "Uses BASE0 offset in host memory."]
     USE_BASE0 = 0x01,
-    #[doc = "Uses BASE1 offset in host memory"]
+    #[doc = "Uses BASE1 offset in host memory."]
     USE_BASE1 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -1870,9 +1870,9 @@ impl From<P2addrBaseAsz> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P2addrIdx1st {
-    #[doc = "Index is higher address than data (for example, data at OFF, index at OFF+IDXOFF)"]
+    #[doc = "Index is higher address than data (for example, data at OFF, index at OFF+IDXOFF)."]
     DATAOFF = 0x0,
-    #[doc = "Index is lower address than data (for example, index at OFF, data at OFF+IDXOFF)"]
+    #[doc = "Index is lower address than data (for example, index at OFF, data at OFF+IDXOFF)."]
     IDXOFF = 0x01,
 }
 impl P2addrIdx1st {
@@ -1967,28 +1967,28 @@ impl From<P2cfgErrorign> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P2cfgType {
-    #[doc = "Unconfigured (reset condition)"]
+    #[doc = "Unconfigured (reset condition)."]
     UNCONFIGURED = 0x0,
-    #[doc = "ACPI style Endpoint"]
+    #[doc = "ACPI style Endpoint."]
     ACPI_END = 0x01,
     #[doc = "ACPI style index-and-data. Index and data byte locations. Index gives offset into implied space. Uses registers for data and index."]
     ACPI_INDEX = 0x02,
     _RESERVED_3 = 0x03,
-    #[doc = "Bus Master Memory Single"]
+    #[doc = "Bus Master Memory Single."]
     BUS_M_MEM_S = 0x04,
-    #[doc = "Bus Master Flash Single"]
+    #[doc = "Bus Master Flash Single."]
     BUS_M_FLASH_S = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
-    #[doc = "Mailbox Shared"]
+    #[doc = "Mailbox Shared."]
     MAILBOX_SHARED = 0x08,
-    #[doc = "Mailbox Single"]
+    #[doc = "Mailbox Single."]
     MAILBOX_SINGLE = 0x09,
-    #[doc = "Mailbox Split"]
+    #[doc = "Mailbox Split."]
     MAILBOX_SPLIT = 0x0a,
-    #[doc = "Mailbox OOB Split"]
+    #[doc = "Mailbox OOB Split."]
     MAILBOX_OOB_SPLIT = 0x0b,
-    #[doc = "Mailbox OEM"]
+    #[doc = "Mailbox OEM."]
     MAILBOX_OEM = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
@@ -2020,9 +2020,9 @@ impl From<P2cfgType> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P2datainDir {
-    #[doc = "Read by host"]
+    #[doc = "Read by host."]
     ENABLE = 0x0,
-    #[doc = "Write by host"]
+    #[doc = "Write by host."]
     DISABLE = 0x01,
 }
 impl P2datainDir {
@@ -2051,11 +2051,11 @@ impl From<P2datainDir> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P2irulestatFlashCompletionType {
-    #[doc = "Indicates the middle completion of a split completion sequence"]
+    #[doc = "Indicates the middle completion of a split completion sequence."]
     MIDDLE = 0x0,
-    #[doc = "Indicates the first completion of a split completion sequence"]
+    #[doc = "Indicates the first completion of a split completion sequence."]
     FIRST = 0x01,
-    #[doc = "Indicates the last completion of a split completion sequence"]
+    #[doc = "Indicates the last completion of a split completion sequence."]
     LAST = 0x02,
     #[doc = "Indicates the only completion for a split transaction."]
     ONLY = 0x03,
@@ -2086,13 +2086,13 @@ impl From<P2irulestatFlashCompletionType> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P2omflenTrans {
-    #[doc = "OOB: to host; Master: to host 32 (host reads with 32-bit address); SAF: Completion fail"]
+    #[doc = "OOB: to host; Master: to host 32 (host reads with 32-bit address); SAF: Completion fail."]
     OOB = 0x0,
-    #[doc = "Master: to host 64 (host reads w/64-bit address); MAF: read flash (location in RAM); SAF: completion with data"]
+    #[doc = "Master: to host 64 (host reads w/64-bit address); MAF: read flash (location in RAM); SAF: completion with data."]
     READ = 0x01,
-    #[doc = "Master: from host 32 (host writes w/32-bit address); MAF: write flash (location in RAM); SAF: completion with no data"]
+    #[doc = "Master: from host 32 (host writes w/32-bit address); MAF: write flash (location in RAM); SAF: completion with no data."]
     WRITE = 0x02,
-    #[doc = "Master: from host 64 (host writes w/64-bit address); MAF: erase flash (sector in RAM)"]
+    #[doc = "Master: from host 64 (host writes w/64-bit address); MAF: erase flash (sector in RAM)."]
     ERASE = 0x03,
 }
 impl P2omflenTrans {
@@ -2156,9 +2156,9 @@ impl From<P2statRdstat> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P2statRpmc1Or2 {
-    #[doc = "RPMC operation 1 has been chosen"]
+    #[doc = "RPMC operation 1 has been chosen."]
     OPERATION_0 = 0x0,
-    #[doc = "RPMC operation 2 has been chosen"]
+    #[doc = "RPMC operation 2 has been chosen."]
     OPERATION_1 = 0x01,
 }
 impl P2statRpmc1Or2 {
@@ -2187,11 +2187,11 @@ impl From<P2statRpmc1Or2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P2statRpmcFlashDevice {
-    #[doc = "First device"]
+    #[doc = "First device."]
     FIRST = 0x0,
-    #[doc = "Second device"]
+    #[doc = "Second device."]
     SECOND = 0x01,
-    #[doc = "Third device"]
+    #[doc = "Third device."]
     THIRD = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -2258,9 +2258,9 @@ impl From<P2statWrstat> for u8 {
 pub enum P3addrBaseAsz {
     #[doc = "Offset from 0 in host memory or I/O space."]
     OFFSET_FROM_0 = 0x0,
-    #[doc = "Uses BASE0 offset in host memory"]
+    #[doc = "Uses BASE0 offset in host memory."]
     USE_BASE0 = 0x01,
-    #[doc = "Uses BASE1 offset in host memory"]
+    #[doc = "Uses BASE1 offset in host memory."]
     USE_BASE1 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -2290,9 +2290,9 @@ impl From<P3addrBaseAsz> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P3addrIdx1st {
-    #[doc = "Index is higher address than data (for example, data at OFF, index at OFF+IDXOFF)"]
+    #[doc = "Index is higher address than data (for example, data at OFF, index at OFF+IDXOFF)."]
     DATAOFF = 0x0,
-    #[doc = "Index is lower address than data (for example, index at OFF, data at OFF+IDXOFF)"]
+    #[doc = "Index is lower address than data (for example, index at OFF, data at OFF+IDXOFF)."]
     IDXOFF = 0x01,
 }
 impl P3addrIdx1st {
@@ -2387,28 +2387,28 @@ impl From<P3cfgErrorign> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P3cfgType {
-    #[doc = "Unconfigured (reset condition)"]
+    #[doc = "Unconfigured (reset condition)."]
     UNCONFIGURED = 0x0,
-    #[doc = "ACPI style Endpoint"]
+    #[doc = "ACPI style Endpoint."]
     ACPI_END = 0x01,
     #[doc = "ACPI style index-and-data. Index and data byte locations. Index gives offset into implied space. Uses registers for data and index."]
     ACPI_INDEX = 0x02,
     _RESERVED_3 = 0x03,
-    #[doc = "Bus Master Memory Single"]
+    #[doc = "Bus Master Memory Single."]
     BUS_M_MEM_S = 0x04,
-    #[doc = "Bus Master Flash Single"]
+    #[doc = "Bus Master Flash Single."]
     BUS_M_FLASH_S = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
-    #[doc = "Mailbox Shared"]
+    #[doc = "Mailbox Shared."]
     MAILBOX_SHARED = 0x08,
-    #[doc = "Mailbox Single"]
+    #[doc = "Mailbox Single."]
     MAILBOX_SINGLE = 0x09,
-    #[doc = "Mailbox Split"]
+    #[doc = "Mailbox Split."]
     MAILBOX_SPLIT = 0x0a,
-    #[doc = "Mailbox OOB Split"]
+    #[doc = "Mailbox OOB Split."]
     MAILBOX_OOB_SPLIT = 0x0b,
-    #[doc = "Mailbox OEM"]
+    #[doc = "Mailbox OEM."]
     MAILBOX_OEM = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
@@ -2440,9 +2440,9 @@ impl From<P3cfgType> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P3datainDir {
-    #[doc = "Read by host"]
+    #[doc = "Read by host."]
     ENABLE = 0x0,
-    #[doc = "Write by host"]
+    #[doc = "Write by host."]
     DISABLE = 0x01,
 }
 impl P3datainDir {
@@ -2471,11 +2471,11 @@ impl From<P3datainDir> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P3irulestatFlashCompletionType {
-    #[doc = "Indicates the middle completion of a split completion sequence"]
+    #[doc = "Indicates the middle completion of a split completion sequence."]
     MIDDLE = 0x0,
-    #[doc = "Indicates the first completion of a split completion sequence"]
+    #[doc = "Indicates the first completion of a split completion sequence."]
     FIRST = 0x01,
-    #[doc = "Indicates the last completion of a split completion sequence"]
+    #[doc = "Indicates the last completion of a split completion sequence."]
     LAST = 0x02,
     #[doc = "Indicates the only completion for a split transaction."]
     ONLY = 0x03,
@@ -2506,13 +2506,13 @@ impl From<P3irulestatFlashCompletionType> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P3omflenTrans {
-    #[doc = "OOB: to host; Master: to host 32 (host reads with 32-bit address); SAF: Completion fail"]
+    #[doc = "OOB: to host; Master: to host 32 (host reads with 32-bit address); SAF: Completion fail."]
     OOB = 0x0,
-    #[doc = "Master: to host 64 (host reads w/64-bit address); MAF: read flash (location in RAM); SAF: completion with data"]
+    #[doc = "Master: to host 64 (host reads w/64-bit address); MAF: read flash (location in RAM); SAF: completion with data."]
     READ = 0x01,
-    #[doc = "Master: from host 32 (host writes w/32-bit address); MAF: write flash (location in RAM); SAF: completion with no data"]
+    #[doc = "Master: from host 32 (host writes w/32-bit address); MAF: write flash (location in RAM); SAF: completion with no data."]
     WRITE = 0x02,
-    #[doc = "Master: from host 64 (host writes w/64-bit address); MAF: erase flash (sector in RAM)"]
+    #[doc = "Master: from host 64 (host writes w/64-bit address); MAF: erase flash (sector in RAM)."]
     ERASE = 0x03,
 }
 impl P3omflenTrans {
@@ -2576,9 +2576,9 @@ impl From<P3statRdstat> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P3statRpmc1Or2 {
-    #[doc = "RPMC operation 1 has been chosen"]
+    #[doc = "RPMC operation 1 has been chosen."]
     OPERATION_0 = 0x0,
-    #[doc = "RPMC operation 2 has been chosen"]
+    #[doc = "RPMC operation 2 has been chosen."]
     OPERATION_1 = 0x01,
 }
 impl P3statRpmc1Or2 {
@@ -2607,11 +2607,11 @@ impl From<P3statRpmc1Or2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P3statRpmcFlashDevice {
-    #[doc = "First device"]
+    #[doc = "First device."]
     FIRST = 0x0,
-    #[doc = "Second device"]
+    #[doc = "Second device."]
     SECOND = 0x01,
-    #[doc = "Third device"]
+    #[doc = "Third device."]
     THIRD = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -2678,9 +2678,9 @@ impl From<P3statWrstat> for u8 {
 pub enum P4addrBaseAsz {
     #[doc = "Offset from 0 in host memory or I/O space."]
     OFFSET_FROM_0 = 0x0,
-    #[doc = "Uses BASE0 offset in host memory"]
+    #[doc = "Uses BASE0 offset in host memory."]
     USE_BASE0 = 0x01,
-    #[doc = "Uses BASE1 offset in host memory"]
+    #[doc = "Uses BASE1 offset in host memory."]
     USE_BASE1 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -2710,9 +2710,9 @@ impl From<P4addrBaseAsz> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P4addrIdx1st {
-    #[doc = "Index is higher address than data (for example, data at OFF, index at OFF+IDXOFF)"]
+    #[doc = "Index is higher address than data (for example, data at OFF, index at OFF+IDXOFF)."]
     DATAOFF = 0x0,
-    #[doc = "Index is lower address than data (for example, index at OFF, data at OFF+IDXOFF)"]
+    #[doc = "Index is lower address than data (for example, index at OFF, data at OFF+IDXOFF)."]
     IDXOFF = 0x01,
 }
 impl P4addrIdx1st {
@@ -2807,28 +2807,28 @@ impl From<P4cfgErrorign> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P4cfgType {
-    #[doc = "Unconfigured (reset condition)"]
+    #[doc = "Unconfigured (reset condition)."]
     UNCONFIGURED = 0x0,
-    #[doc = "ACPI style Endpoint"]
+    #[doc = "ACPI style Endpoint."]
     ACPI_END = 0x01,
     #[doc = "ACPI style index-and-data. Index and data byte locations. Index gives offset into implied space. Uses registers for data and index."]
     ACPI_INDEX = 0x02,
     _RESERVED_3 = 0x03,
-    #[doc = "Bus Master Memory Single"]
+    #[doc = "Bus Master Memory Single."]
     BUS_M_MEM_S = 0x04,
-    #[doc = "Bus Master Flash Single"]
+    #[doc = "Bus Master Flash Single."]
     BUS_M_FLASH_S = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
-    #[doc = "Mailbox Shared"]
+    #[doc = "Mailbox Shared."]
     MAILBOX_SHARED = 0x08,
-    #[doc = "Mailbox Single"]
+    #[doc = "Mailbox Single."]
     MAILBOX_SINGLE = 0x09,
-    #[doc = "Mailbox Split"]
+    #[doc = "Mailbox Split."]
     MAILBOX_SPLIT = 0x0a,
-    #[doc = "Mailbox OOB Split"]
+    #[doc = "Mailbox OOB Split."]
     MAILBOX_OOB_SPLIT = 0x0b,
-    #[doc = "Mailbox OEM"]
+    #[doc = "Mailbox OEM."]
     MAILBOX_OEM = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
@@ -2860,9 +2860,9 @@ impl From<P4cfgType> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P4datainDir {
-    #[doc = "Read by host"]
+    #[doc = "Read by host."]
     ENABLE = 0x0,
-    #[doc = "Write by host"]
+    #[doc = "Write by host."]
     DISABLE = 0x01,
 }
 impl P4datainDir {
@@ -2891,11 +2891,11 @@ impl From<P4datainDir> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P4irulestatFlashCompletionType {
-    #[doc = "Indicates the middle completion of a split completion sequence"]
+    #[doc = "Indicates the middle completion of a split completion sequence."]
     MIDDLE = 0x0,
-    #[doc = "Indicates the first completion of a split completion sequence"]
+    #[doc = "Indicates the first completion of a split completion sequence."]
     FIRST = 0x01,
-    #[doc = "Indicates the last completion of a split completion sequence"]
+    #[doc = "Indicates the last completion of a split completion sequence."]
     LAST = 0x02,
     #[doc = "Indicates the only completion for a split transaction."]
     ONLY = 0x03,
@@ -2926,13 +2926,13 @@ impl From<P4irulestatFlashCompletionType> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P4omflenTrans {
-    #[doc = "OOB: to host; Master: to host 32 (host reads with 32-bit address); SAF: Completion fail"]
+    #[doc = "OOB: to host; Master: to host 32 (host reads with 32-bit address); SAF: Completion fail."]
     OOB = 0x0,
-    #[doc = "Master: to host 64 (host reads w/64-bit address); MAF: read flash (location in RAM); SAF: completion with data"]
+    #[doc = "Master: to host 64 (host reads w/64-bit address); MAF: read flash (location in RAM); SAF: completion with data."]
     READ = 0x01,
-    #[doc = "Master: from host 32 (host writes w/32-bit address); MAF: write flash (location in RAM); SAF: completion with no data"]
+    #[doc = "Master: from host 32 (host writes w/32-bit address); MAF: write flash (location in RAM); SAF: completion with no data."]
     WRITE = 0x02,
-    #[doc = "Master: from host 64 (host writes w/64-bit address); MAF: erase flash (sector in RAM)"]
+    #[doc = "Master: from host 64 (host writes w/64-bit address); MAF: erase flash (sector in RAM)."]
     ERASE = 0x03,
 }
 impl P4omflenTrans {
@@ -2996,9 +2996,9 @@ impl From<P4statRdstat> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P4statRpmc1Or2 {
-    #[doc = "RPMC operation 1 has been chosen"]
+    #[doc = "RPMC operation 1 has been chosen."]
     OPERATION_0 = 0x0,
-    #[doc = "RPMC operation 2 has been chosen"]
+    #[doc = "RPMC operation 2 has been chosen."]
     OPERATION_1 = 0x01,
 }
 impl P4statRpmc1Or2 {
@@ -3027,11 +3027,11 @@ impl From<P4statRpmc1Or2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum P4statRpmcFlashDevice {
-    #[doc = "First device"]
+    #[doc = "First device."]
     FIRST = 0x0,
-    #[doc = "Second device"]
+    #[doc = "Second device."]
     SECOND = 0x01,
-    #[doc = "Third device"]
+    #[doc = "Third device."]
     THIRD = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -3127,13 +3127,13 @@ impl From<RtcIntBmc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Safera {
-    #[doc = "2 kB"]
+    #[doc = "2 kB."]
     MIN_2KB = 0x0,
-    #[doc = "4 kB"]
+    #[doc = "4 kB."]
     MIN_4KB = 0x01,
-    #[doc = "8 kB"]
+    #[doc = "8 kB."]
     MIN_8KB = 0x02,
-    #[doc = "16 kB"]
+    #[doc = "16 kB."]
     MIN_16KB = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
@@ -3174,13 +3174,13 @@ impl From<Safera> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Spicap {
-    #[doc = "SPI only"]
+    #[doc = "SPI only."]
     SPI = 0x0,
-    #[doc = "BiSPI and SPI"]
+    #[doc = "BiSPI and SPI."]
     BSPI_SPI = 0x01,
-    #[doc = "FLEXSPI and SPI"]
+    #[doc = "FLEXSPI and SPI."]
     FLEXSPI_SPI = 0x02,
-    #[doc = "Any"]
+    #[doc = "Any."]
     ANY = 0x03,
 }
 impl Spicap {
@@ -3209,11 +3209,11 @@ impl From<Spicap> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Spimod {
-    #[doc = "SPI"]
+    #[doc = "SPI."]
     SPI = 0x0,
-    #[doc = "BiSPI"]
+    #[doc = "BiSPI."]
     BSPI = 0x01,
-    #[doc = "FLEXSPI"]
+    #[doc = "FLEXSPI."]
     FLEXSPI = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -3243,15 +3243,15 @@ impl From<Spimod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Spispd {
-    #[doc = "20 MHz or less"]
+    #[doc = "20 MHz or less."]
     LESS_AND_20M = 0x0,
-    #[doc = "25 MHz or 24 MHz"]
+    #[doc = "25 MHz or 24 MHz."]
     FREQ_25M_24M = 0x01,
-    #[doc = "33 MHz or 30 MHz"]
+    #[doc = "33 MHz or 30 MHz."]
     FREQ_33M_30M = 0x02,
-    #[doc = "50 MHz or 48 MHz"]
+    #[doc = "50 MHz or 48 MHz."]
     FREQ_50M_48M = 0x03,
-    #[doc = "66 MHz or 60 MHz"]
+    #[doc = "66 MHz or 60 MHz."]
     FREQ_66M_60M = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
@@ -3283,11 +3283,11 @@ impl From<Spispd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TargetRpmcSupported {
-    #[doc = "Target does not support Replay Protected Monotonic counter"]
+    #[doc = "Target does not support Replay Protected Monotonic counter."]
     MIN_2KB = 0x0,
-    #[doc = "Target supports up to 1 Replay Protected Monotonic counter"]
+    #[doc = "Target supports up to 1 Replay Protected Monotonic counter."]
     MIN_4KB = 0x01,
-    #[doc = "Target supports up to 2 Replay Protected Monotonic counters"]
+    #[doc = "Target supports up to 2 Replay Protected Monotonic counters."]
     MIN_8KB = 0x02,
     #[doc = "Target supports up to 63 Replay Protected Monotonic counters. The value of this field is the total sum of Replay Protected Monotonic counters supported by all RPMC flash devices behind the target. If RPMC is not supported by the target, this field must indicate a value of 0h."]
     MIN_16KB = 0x03,
@@ -3379,19 +3379,19 @@ impl From<TargetRpmcSupported> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TrgtReqSizeSupp {
     _RESERVED_0 = 0x0,
-    #[doc = "64 bytes max read request size"]
+    #[doc = "64 bytes max read request size."]
     SIXTY_FOUR = 0x01,
-    #[doc = "128 bytes max read request size"]
+    #[doc = "128 bytes max read request size."]
     BYTESDDDD = 0x02,
-    #[doc = "256 bytes max read request size"]
+    #[doc = "256 bytes max read request size."]
     BYTESSSSSS = 0x03,
-    #[doc = "512 bytes max read request size"]
+    #[doc = "512 bytes max read request size."]
     BYTES = 0x04,
-    #[doc = "1024 bytes max read request size"]
+    #[doc = "1024 bytes max read request size."]
     BYTESS = 0x05,
-    #[doc = "2048 bytes max read request size"]
+    #[doc = "2048 bytes max read request size."]
     BYTESSSS = 0x06,
-    #[doc = "4096 bytes max read request size"]
+    #[doc = "4096 bytes max read request size."]
     BYTESSSSSTTTS = 0x07,
 }
 impl TrgtReqSizeSupp {
@@ -3420,9 +3420,9 @@ impl From<TrgtReqSizeSupp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum WireinGpioLevel {
-    #[doc = "Low"]
+    #[doc = "Low."]
     DISABLE = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     ENABLE = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -3465,9 +3465,9 @@ impl From<WireinGpioLevel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum WireinGpioValid {
-    #[doc = "Not valid"]
+    #[doc = "Not valid."]
     NOT = 0x0,
-    #[doc = "Valid"]
+    #[doc = "Valid."]
     VALID1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -3510,9 +3510,9 @@ impl From<WireinGpioValid> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum WireoutGpioLevel {
-    #[doc = "Low"]
+    #[doc = "Low."]
     DISABLE = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     ENABLE = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -3555,9 +3555,9 @@ impl From<WireoutGpioLevel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum WireoutGpioValid {
-    #[doc = "Not valid"]
+    #[doc = "Not valid."]
     NOT = 0x0,
-    #[doc = "Valid"]
+    #[doc = "Valid."]
     VALID1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,

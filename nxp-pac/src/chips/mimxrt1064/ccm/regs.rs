@@ -1,16 +1,16 @@
-#[doc = "CCM Arm Clock Root Register"]
+#[doc = "CCM Arm Clock Root Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cacrr(pub u32);
 impl Cacrr {
-    #[doc = "Divider for Arm clock root"]
+    #[doc = "Divider for Arm clock root."]
     #[must_use]
     #[inline(always)]
     pub const fn arm_podf(&self) -> super::vals::ArmPodf {
         let val = (self.0 >> 0usize) & 0x07;
         super::vals::ArmPodf::from_bits(val as u8)
     }
-    #[doc = "Divider for Arm clock root"]
+    #[doc = "Divider for Arm clock root."]
     #[inline(always)]
     pub const fn set_arm_podf(&mut self, val: super::vals::ArmPodf) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
@@ -35,31 +35,31 @@ impl defmt::Format for Cacrr {
         defmt::write!(f, "Cacrr {{ arm_podf: {:?} }}", self.arm_podf())
     }
 }
-#[doc = "CCM Bus Clock Divider Register"]
+#[doc = "CCM Bus Clock Divider Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cbcdr(pub u32);
 impl Cbcdr {
-    #[doc = "SEMC clock source select"]
+    #[doc = "SEMC clock source select."]
     #[must_use]
     #[inline(always)]
     pub const fn semc_clk_sel(&self) -> super::vals::SemcClkSel {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::SemcClkSel::from_bits(val as u8)
     }
-    #[doc = "SEMC clock source select"]
+    #[doc = "SEMC clock source select."]
     #[inline(always)]
     pub const fn set_semc_clk_sel(&mut self, val: super::vals::SemcClkSel) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "SEMC alternative clock select"]
+    #[doc = "SEMC alternative clock select."]
     #[must_use]
     #[inline(always)]
     pub const fn semc_alt_clk_sel(&self) -> super::vals::SemcAltClkSel {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::SemcAltClkSel::from_bits(val as u8)
     }
-    #[doc = "SEMC alternative clock select"]
+    #[doc = "SEMC alternative clock select."]
     #[inline(always)]
     pub const fn set_semc_alt_clk_sel(&mut self, val: super::vals::SemcAltClkSel) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
@@ -76,38 +76,38 @@ impl Cbcdr {
     pub const fn set_ipg_podf(&mut self, val: super::vals::IpgPodf) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
-    #[doc = "Divider for AHB PODF"]
+    #[doc = "Divider for AHB PODF."]
     #[must_use]
     #[inline(always)]
     pub const fn ahb_podf(&self) -> super::vals::AhbPodf {
         let val = (self.0 >> 10usize) & 0x07;
         super::vals::AhbPodf::from_bits(val as u8)
     }
-    #[doc = "Divider for AHB PODF"]
+    #[doc = "Divider for AHB PODF."]
     #[inline(always)]
     pub const fn set_ahb_podf(&mut self, val: super::vals::AhbPodf) {
         self.0 = (self.0 & !(0x07 << 10usize)) | (((val.to_bits() as u32) & 0x07) << 10usize);
     }
-    #[doc = "Post divider for SEMC clock"]
+    #[doc = "Post divider for SEMC clock."]
     #[must_use]
     #[inline(always)]
     pub const fn semc_podf(&self) -> super::vals::SemcPodf {
         let val = (self.0 >> 16usize) & 0x07;
         super::vals::SemcPodf::from_bits(val as u8)
     }
-    #[doc = "Post divider for SEMC clock"]
+    #[doc = "Post divider for SEMC clock."]
     #[inline(always)]
     pub const fn set_semc_podf(&mut self, val: super::vals::SemcPodf) {
         self.0 = (self.0 & !(0x07 << 16usize)) | (((val.to_bits() as u32) & 0x07) << 16usize);
     }
-    #[doc = "Selector for peripheral main clock"]
+    #[doc = "Selector for peripheral main clock."]
     #[must_use]
     #[inline(always)]
     pub const fn periph_clk_sel(&self) -> super::vals::PeriphClkSel {
         let val = (self.0 >> 25usize) & 0x01;
         super::vals::PeriphClkSel::from_bits(val as u8)
     }
-    #[doc = "Selector for peripheral main clock"]
+    #[doc = "Selector for peripheral main clock."]
     #[inline(always)]
     pub const fn set_periph_clk_sel(&mut self, val: super::vals::PeriphClkSel) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val.to_bits() as u32) & 0x01) << 25usize);
@@ -160,67 +160,67 @@ impl defmt::Format for Cbcdr {
         )
     }
 }
-#[doc = "CCM Bus Clock Multiplexer Register"]
+#[doc = "CCM Bus Clock Multiplexer Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cbcmr(pub u32);
 impl Cbcmr {
-    #[doc = "Selector for lpspi clock multiplexer"]
+    #[doc = "Selector for lpspi clock multiplexer."]
     #[must_use]
     #[inline(always)]
     pub const fn lpspi_clk_sel(&self) -> super::vals::LpspiClkSel {
         let val = (self.0 >> 4usize) & 0x03;
         super::vals::LpspiClkSel::from_bits(val as u8)
     }
-    #[doc = "Selector for lpspi clock multiplexer"]
+    #[doc = "Selector for lpspi clock multiplexer."]
     #[inline(always)]
     pub const fn set_lpspi_clk_sel(&mut self, val: super::vals::LpspiClkSel) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
-    #[doc = "Selector for flexspi2 clock multiplexer"]
+    #[doc = "Selector for flexspi2 clock multiplexer."]
     #[must_use]
     #[inline(always)]
     pub const fn flexspi2_clk_sel(&self) -> super::vals::Flexspi2ClkSel {
         let val = (self.0 >> 8usize) & 0x03;
         super::vals::Flexspi2ClkSel::from_bits(val as u8)
     }
-    #[doc = "Selector for flexspi2 clock multiplexer"]
+    #[doc = "Selector for flexspi2 clock multiplexer."]
     #[inline(always)]
     pub const fn set_flexspi2_clk_sel(&mut self, val: super::vals::Flexspi2ClkSel) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
-    #[doc = "Selector for peripheral clk2 clock multiplexer"]
+    #[doc = "Selector for peripheral clk2 clock multiplexer."]
     #[must_use]
     #[inline(always)]
     pub const fn periph_clk2_sel(&self) -> super::vals::PeriphClk2Sel {
         let val = (self.0 >> 12usize) & 0x03;
         super::vals::PeriphClk2Sel::from_bits(val as u8)
     }
-    #[doc = "Selector for peripheral clk2 clock multiplexer"]
+    #[doc = "Selector for peripheral clk2 clock multiplexer."]
     #[inline(always)]
     pub const fn set_periph_clk2_sel(&mut self, val: super::vals::PeriphClk2Sel) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
     }
-    #[doc = "Selector for Trace clock multiplexer"]
+    #[doc = "Selector for Trace clock multiplexer."]
     #[must_use]
     #[inline(always)]
     pub const fn trace_clk_sel(&self) -> super::vals::TraceClkSel {
         let val = (self.0 >> 14usize) & 0x03;
         super::vals::TraceClkSel::from_bits(val as u8)
     }
-    #[doc = "Selector for Trace clock multiplexer"]
+    #[doc = "Selector for Trace clock multiplexer."]
     #[inline(always)]
     pub const fn set_trace_clk_sel(&mut self, val: super::vals::TraceClkSel) {
         self.0 = (self.0 & !(0x03 << 14usize)) | (((val.to_bits() as u32) & 0x03) << 14usize);
     }
-    #[doc = "Selector for pre_periph clock multiplexer"]
+    #[doc = "Selector for pre_periph clock multiplexer."]
     #[must_use]
     #[inline(always)]
     pub const fn pre_periph_clk_sel(&self) -> super::vals::PrePeriphClkSel {
         let val = (self.0 >> 18usize) & 0x03;
         super::vals::PrePeriphClkSel::from_bits(val as u8)
     }
-    #[doc = "Selector for pre_periph clock multiplexer"]
+    #[doc = "Selector for pre_periph clock multiplexer."]
     #[inline(always)]
     pub const fn set_pre_periph_clk_sel(&mut self, val: super::vals::PrePeriphClkSel) {
         self.0 = (self.0 & !(0x03 << 18usize)) | (((val.to_bits() as u32) & 0x03) << 18usize);
@@ -299,199 +299,199 @@ impl defmt::Format for Cbcmr {
         )
     }
 }
-#[doc = "CCM Clock Gating Register 0"]
+#[doc = "CCM Clock Gating Register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ccgr0(pub u32);
 impl Ccgr0 {
-    #[doc = "aips_tz1 clocks (aips_tz1_clk_enable)"]
+    #[doc = "aips_tz1 clocks (aips_tz1_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg0(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x03;
         val as u8
     }
-    #[doc = "aips_tz1 clocks (aips_tz1_clk_enable)"]
+    #[doc = "aips_tz1 clocks (aips_tz1_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val as u32) & 0x03) << 0usize);
     }
-    #[doc = "aips_tz2 clocks (aips_tz2_clk_enable)"]
+    #[doc = "aips_tz2 clocks (aips_tz2_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg1(&self) -> u8 {
         let val = (self.0 >> 2usize) & 0x03;
         val as u8
     }
-    #[doc = "aips_tz2 clocks (aips_tz2_clk_enable)"]
+    #[doc = "aips_tz2 clocks (aips_tz2_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val as u32) & 0x03) << 2usize);
     }
-    #[doc = "mqs clock ( mqs_hmclk_clock_enable)"]
+    #[doc = "mqs clock ( mqs_hmclk_clock_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg2(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x03;
         val as u8
     }
-    #[doc = "mqs clock ( mqs_hmclk_clock_enable)"]
+    #[doc = "mqs clock ( mqs_hmclk_clock_enable)."]
     #[inline(always)]
     pub const fn set_cg2(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val as u32) & 0x03) << 4usize);
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[must_use]
     #[inline(always)]
     pub const fn cg3(&self) -> u8 {
         let val = (self.0 >> 6usize) & 0x03;
         val as u8
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[inline(always)]
     pub const fn set_cg3(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val as u32) & 0x03) << 6usize);
     }
-    #[doc = "sim_m or sim_main register access clock (sim_m_mainclk_r_enable)"]
+    #[doc = "sim_m or sim_main register access clock (sim_m_mainclk_r_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg4(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x03;
         val as u8
     }
-    #[doc = "sim_m or sim_main register access clock (sim_m_mainclk_r_enable)"]
+    #[doc = "sim_m or sim_main register access clock (sim_m_mainclk_r_enable)."]
     #[inline(always)]
     pub const fn set_cg4(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val as u32) & 0x03) << 8usize);
     }
-    #[doc = "dcp clock (dcp_clk_enable)"]
+    #[doc = "dcp clock (dcp_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg5(&self) -> u8 {
         let val = (self.0 >> 10usize) & 0x03;
         val as u8
     }
-    #[doc = "dcp clock (dcp_clk_enable)"]
+    #[doc = "dcp clock (dcp_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg5(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val as u32) & 0x03) << 10usize);
     }
-    #[doc = "lpuart3 clock (lpuart3_clk_enable)"]
+    #[doc = "lpuart3 clock (lpuart3_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg6(&self) -> u8 {
         let val = (self.0 >> 12usize) & 0x03;
         val as u8
     }
-    #[doc = "lpuart3 clock (lpuart3_clk_enable)"]
+    #[doc = "lpuart3 clock (lpuart3_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg6(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val as u32) & 0x03) << 12usize);
     }
-    #[doc = "can1 clock (can1_clk_enable)"]
+    #[doc = "can1 clock (can1_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg7(&self) -> u8 {
         let val = (self.0 >> 14usize) & 0x03;
         val as u8
     }
-    #[doc = "can1 clock (can1_clk_enable)"]
+    #[doc = "can1 clock (can1_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg7(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 14usize)) | (((val as u32) & 0x03) << 14usize);
     }
-    #[doc = "can1_serial clock (can1_serial_clk_enable)"]
+    #[doc = "can1_serial clock (can1_serial_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg8(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x03;
         val as u8
     }
-    #[doc = "can1_serial clock (can1_serial_clk_enable)"]
+    #[doc = "can1_serial clock (can1_serial_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg8(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val as u32) & 0x03) << 16usize);
     }
-    #[doc = "can2 clock (can2_clk_enable)"]
+    #[doc = "can2 clock (can2_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg9(&self) -> u8 {
         let val = (self.0 >> 18usize) & 0x03;
         val as u8
     }
-    #[doc = "can2 clock (can2_clk_enable)"]
+    #[doc = "can2 clock (can2_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg9(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 18usize)) | (((val as u32) & 0x03) << 18usize);
     }
-    #[doc = "can2_serial clock (can2_serial_clk_enable)"]
+    #[doc = "can2_serial clock (can2_serial_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg10(&self) -> u8 {
         let val = (self.0 >> 20usize) & 0x03;
         val as u8
     }
-    #[doc = "can2_serial clock (can2_serial_clk_enable)"]
+    #[doc = "can2_serial clock (can2_serial_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg10(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val as u32) & 0x03) << 20usize);
     }
-    #[doc = "trace clock (trace_clk_enable)"]
+    #[doc = "trace clock (trace_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg11(&self) -> u8 {
         let val = (self.0 >> 22usize) & 0x03;
         val as u8
     }
-    #[doc = "trace clock (trace_clk_enable)"]
+    #[doc = "trace clock (trace_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg11(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 22usize)) | (((val as u32) & 0x03) << 22usize);
     }
-    #[doc = "gpt2 bus clocks (gpt2_bus_clk_enable)"]
+    #[doc = "gpt2 bus clocks (gpt2_bus_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg12(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0x03;
         val as u8
     }
-    #[doc = "gpt2 bus clocks (gpt2_bus_clk_enable)"]
+    #[doc = "gpt2 bus clocks (gpt2_bus_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg12(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val as u32) & 0x03) << 24usize);
     }
-    #[doc = "gpt2 serial clocks (gpt2_serial_clk_enable)"]
+    #[doc = "gpt2 serial clocks (gpt2_serial_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg13(&self) -> u8 {
         let val = (self.0 >> 26usize) & 0x03;
         val as u8
     }
-    #[doc = "gpt2 serial clocks (gpt2_serial_clk_enable)"]
+    #[doc = "gpt2 serial clocks (gpt2_serial_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg13(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 26usize)) | (((val as u32) & 0x03) << 26usize);
     }
-    #[doc = "lpuart2 clock (lpuart2_clk_enable)"]
+    #[doc = "lpuart2 clock (lpuart2_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg14(&self) -> u8 {
         let val = (self.0 >> 28usize) & 0x03;
         val as u8
     }
-    #[doc = "lpuart2 clock (lpuart2_clk_enable)"]
+    #[doc = "lpuart2 clock (lpuart2_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg14(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val as u32) & 0x03) << 28usize);
     }
-    #[doc = "gpio2_clocks (gpio2_clk_enable)"]
+    #[doc = "gpio2_clocks (gpio2_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg15(&self) -> u8 {
         let val = (self.0 >> 30usize) & 0x03;
         val as u8
     }
-    #[doc = "gpio2_clocks (gpio2_clk_enable)"]
+    #[doc = "gpio2_clocks (gpio2_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg15(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val as u32) & 0x03) << 30usize);
@@ -550,199 +550,199 @@ impl defmt::Format for Ccgr0 {
         )
     }
 }
-#[doc = "CCM Clock Gating Register 1"]
+#[doc = "CCM Clock Gating Register 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ccgr1(pub u32);
 impl Ccgr1 {
-    #[doc = "lpspi1 clocks (lpspi1_clk_enable)"]
+    #[doc = "lpspi1 clocks (lpspi1_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg0(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x03;
         val as u8
     }
-    #[doc = "lpspi1 clocks (lpspi1_clk_enable)"]
+    #[doc = "lpspi1 clocks (lpspi1_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val as u32) & 0x03) << 0usize);
     }
-    #[doc = "lpspi2 clocks (lpspi2_clk_enable)"]
+    #[doc = "lpspi2 clocks (lpspi2_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg1(&self) -> u8 {
         let val = (self.0 >> 2usize) & 0x03;
         val as u8
     }
-    #[doc = "lpspi2 clocks (lpspi2_clk_enable)"]
+    #[doc = "lpspi2 clocks (lpspi2_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val as u32) & 0x03) << 2usize);
     }
-    #[doc = "lpspi3 clocks (lpspi3_clk_enable)"]
+    #[doc = "lpspi3 clocks (lpspi3_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg2(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x03;
         val as u8
     }
-    #[doc = "lpspi3 clocks (lpspi3_clk_enable)"]
+    #[doc = "lpspi3 clocks (lpspi3_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg2(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val as u32) & 0x03) << 4usize);
     }
-    #[doc = "lpspi4 clocks (lpspi4_clk_enable)"]
+    #[doc = "lpspi4 clocks (lpspi4_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg3(&self) -> u8 {
         let val = (self.0 >> 6usize) & 0x03;
         val as u8
     }
-    #[doc = "lpspi4 clocks (lpspi4_clk_enable)"]
+    #[doc = "lpspi4 clocks (lpspi4_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg3(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val as u32) & 0x03) << 6usize);
     }
-    #[doc = "adc2 clock (adc2_clk_enable)"]
+    #[doc = "adc2 clock (adc2_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg4(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x03;
         val as u8
     }
-    #[doc = "adc2 clock (adc2_clk_enable)"]
+    #[doc = "adc2 clock (adc2_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg4(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val as u32) & 0x03) << 8usize);
     }
-    #[doc = "enet clock (enet_clk_enable)"]
+    #[doc = "enet clock (enet_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg5(&self) -> u8 {
         let val = (self.0 >> 10usize) & 0x03;
         val as u8
     }
-    #[doc = "enet clock (enet_clk_enable)"]
+    #[doc = "enet clock (enet_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg5(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val as u32) & 0x03) << 10usize);
     }
-    #[doc = "pit clocks (pit_clk_enable)"]
+    #[doc = "pit clocks (pit_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg6(&self) -> u8 {
         let val = (self.0 >> 12usize) & 0x03;
         val as u8
     }
-    #[doc = "pit clocks (pit_clk_enable)"]
+    #[doc = "pit clocks (pit_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg6(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val as u32) & 0x03) << 12usize);
     }
-    #[doc = "aoi2 clocks (aoi2_clk_enable)"]
+    #[doc = "aoi2 clocks (aoi2_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg7(&self) -> u8 {
         let val = (self.0 >> 14usize) & 0x03;
         val as u8
     }
-    #[doc = "aoi2 clocks (aoi2_clk_enable)"]
+    #[doc = "aoi2 clocks (aoi2_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg7(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 14usize)) | (((val as u32) & 0x03) << 14usize);
     }
-    #[doc = "adc1 clock (adc1_clk_enable)"]
+    #[doc = "adc1 clock (adc1_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg8(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x03;
         val as u8
     }
-    #[doc = "adc1 clock (adc1_clk_enable)"]
+    #[doc = "adc1 clock (adc1_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg8(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val as u32) & 0x03) << 16usize);
     }
-    #[doc = "semc_exsc clock (semc_exsc_clk_enable)"]
+    #[doc = "semc_exsc clock (semc_exsc_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg9(&self) -> u8 {
         let val = (self.0 >> 18usize) & 0x03;
         val as u8
     }
-    #[doc = "semc_exsc clock (semc_exsc_clk_enable)"]
+    #[doc = "semc_exsc clock (semc_exsc_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg9(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 18usize)) | (((val as u32) & 0x03) << 18usize);
     }
-    #[doc = "gpt1 bus clock (gpt_clk_enable)"]
+    #[doc = "gpt1 bus clock (gpt_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg10(&self) -> u8 {
         let val = (self.0 >> 20usize) & 0x03;
         val as u8
     }
-    #[doc = "gpt1 bus clock (gpt_clk_enable)"]
+    #[doc = "gpt1 bus clock (gpt_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg10(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val as u32) & 0x03) << 20usize);
     }
-    #[doc = "gpt1 serial clock (gpt_serial_clk_enable)"]
+    #[doc = "gpt1 serial clock (gpt_serial_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg11(&self) -> u8 {
         let val = (self.0 >> 22usize) & 0x03;
         val as u8
     }
-    #[doc = "gpt1 serial clock (gpt_serial_clk_enable)"]
+    #[doc = "gpt1 serial clock (gpt_serial_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg11(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 22usize)) | (((val as u32) & 0x03) << 22usize);
     }
-    #[doc = "lpuart4 clock (lpuart4_clk_enable)"]
+    #[doc = "lpuart4 clock (lpuart4_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg12(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0x03;
         val as u8
     }
-    #[doc = "lpuart4 clock (lpuart4_clk_enable)"]
+    #[doc = "lpuart4 clock (lpuart4_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg12(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val as u32) & 0x03) << 24usize);
     }
-    #[doc = "gpio1 clock (gpio1_clk_enable)"]
+    #[doc = "gpio1 clock (gpio1_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg13(&self) -> u8 {
         let val = (self.0 >> 26usize) & 0x03;
         val as u8
     }
-    #[doc = "gpio1 clock (gpio1_clk_enable)"]
+    #[doc = "gpio1 clock (gpio1_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg13(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 26usize)) | (((val as u32) & 0x03) << 26usize);
     }
-    #[doc = "csu clock (csu_clk_enable)"]
+    #[doc = "csu clock (csu_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg14(&self) -> u8 {
         let val = (self.0 >> 28usize) & 0x03;
         val as u8
     }
-    #[doc = "csu clock (csu_clk_enable)"]
+    #[doc = "csu clock (csu_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg14(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val as u32) & 0x03) << 28usize);
     }
-    #[doc = "gpio5 clock (gpio5_clk_enable)"]
+    #[doc = "gpio5 clock (gpio5_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg15(&self) -> u8 {
         let val = (self.0 >> 30usize) & 0x03;
         val as u8
     }
-    #[doc = "gpio5 clock (gpio5_clk_enable)"]
+    #[doc = "gpio5 clock (gpio5_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg15(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val as u32) & 0x03) << 30usize);
@@ -801,199 +801,199 @@ impl defmt::Format for Ccgr1 {
         )
     }
 }
-#[doc = "CCM Clock Gating Register 2"]
+#[doc = "CCM Clock Gating Register 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ccgr2(pub u32);
 impl Ccgr2 {
-    #[doc = "ocram_exsc clock (ocram_exsc_clk_enable)"]
+    #[doc = "ocram_exsc clock (ocram_exsc_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg0(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x03;
         val as u8
     }
-    #[doc = "ocram_exsc clock (ocram_exsc_clk_enable)"]
+    #[doc = "ocram_exsc clock (ocram_exsc_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val as u32) & 0x03) << 0usize);
     }
-    #[doc = "csi clock (csi_clk_enable)"]
+    #[doc = "csi clock (csi_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg1(&self) -> u8 {
         let val = (self.0 >> 2usize) & 0x03;
         val as u8
     }
-    #[doc = "csi clock (csi_clk_enable)"]
+    #[doc = "csi clock (csi_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val as u32) & 0x03) << 2usize);
     }
-    #[doc = "iomuxc_snvs clock (iomuxc_snvs_clk_enable)"]
+    #[doc = "iomuxc_snvs clock (iomuxc_snvs_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg2(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x03;
         val as u8
     }
-    #[doc = "iomuxc_snvs clock (iomuxc_snvs_clk_enable)"]
+    #[doc = "iomuxc_snvs clock (iomuxc_snvs_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg2(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val as u32) & 0x03) << 4usize);
     }
-    #[doc = "lpi2c1 clock (lpi2c1_clk_enable)"]
+    #[doc = "lpi2c1 clock (lpi2c1_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg3(&self) -> u8 {
         let val = (self.0 >> 6usize) & 0x03;
         val as u8
     }
-    #[doc = "lpi2c1 clock (lpi2c1_clk_enable)"]
+    #[doc = "lpi2c1 clock (lpi2c1_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg3(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val as u32) & 0x03) << 6usize);
     }
-    #[doc = "lpi2c2 clock (lpi2c2_clk_enable)"]
+    #[doc = "lpi2c2 clock (lpi2c2_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg4(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x03;
         val as u8
     }
-    #[doc = "lpi2c2 clock (lpi2c2_clk_enable)"]
+    #[doc = "lpi2c2 clock (lpi2c2_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg4(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val as u32) & 0x03) << 8usize);
     }
-    #[doc = "lpi2c3 clock (lpi2c3_clk_enable)"]
+    #[doc = "lpi2c3 clock (lpi2c3_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg5(&self) -> u8 {
         let val = (self.0 >> 10usize) & 0x03;
         val as u8
     }
-    #[doc = "lpi2c3 clock (lpi2c3_clk_enable)"]
+    #[doc = "lpi2c3 clock (lpi2c3_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg5(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val as u32) & 0x03) << 10usize);
     }
-    #[doc = "OCOTP_CTRL clock (ocotp_clk_enable)"]
+    #[doc = "OCOTP_CTRL clock (ocotp_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg6(&self) -> u8 {
         let val = (self.0 >> 12usize) & 0x03;
         val as u8
     }
-    #[doc = "OCOTP_CTRL clock (ocotp_clk_enable)"]
+    #[doc = "OCOTP_CTRL clock (ocotp_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg6(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val as u32) & 0x03) << 12usize);
     }
-    #[doc = "xbar3 clock (xbar3_clk_enable)"]
+    #[doc = "xbar3 clock (xbar3_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg7(&self) -> u8 {
         let val = (self.0 >> 14usize) & 0x03;
         val as u8
     }
-    #[doc = "xbar3 clock (xbar3_clk_enable)"]
+    #[doc = "xbar3 clock (xbar3_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg7(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 14usize)) | (((val as u32) & 0x03) << 14usize);
     }
-    #[doc = "ipmux1 clock (ipmux1_clk_enable)"]
+    #[doc = "ipmux1 clock (ipmux1_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg8(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x03;
         val as u8
     }
-    #[doc = "ipmux1 clock (ipmux1_clk_enable)"]
+    #[doc = "ipmux1 clock (ipmux1_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg8(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val as u32) & 0x03) << 16usize);
     }
-    #[doc = "ipmux2 clock (ipmux2_clk_enable)"]
+    #[doc = "ipmux2 clock (ipmux2_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg9(&self) -> u8 {
         let val = (self.0 >> 18usize) & 0x03;
         val as u8
     }
-    #[doc = "ipmux2 clock (ipmux2_clk_enable)"]
+    #[doc = "ipmux2 clock (ipmux2_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg9(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 18usize)) | (((val as u32) & 0x03) << 18usize);
     }
-    #[doc = "ipmux3 clock (ipmux3_clk_enable)"]
+    #[doc = "ipmux3 clock (ipmux3_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg10(&self) -> u8 {
         let val = (self.0 >> 20usize) & 0x03;
         val as u8
     }
-    #[doc = "ipmux3 clock (ipmux3_clk_enable)"]
+    #[doc = "ipmux3 clock (ipmux3_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg10(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val as u32) & 0x03) << 20usize);
     }
-    #[doc = "xbar1 clock (xbar1_clk_enable)"]
+    #[doc = "xbar1 clock (xbar1_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg11(&self) -> u8 {
         let val = (self.0 >> 22usize) & 0x03;
         val as u8
     }
-    #[doc = "xbar1 clock (xbar1_clk_enable)"]
+    #[doc = "xbar1 clock (xbar1_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg11(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 22usize)) | (((val as u32) & 0x03) << 22usize);
     }
-    #[doc = "xbar2 clock (xbar2_clk_enable)"]
+    #[doc = "xbar2 clock (xbar2_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg12(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0x03;
         val as u8
     }
-    #[doc = "xbar2 clock (xbar2_clk_enable)"]
+    #[doc = "xbar2 clock (xbar2_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg12(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val as u32) & 0x03) << 24usize);
     }
-    #[doc = "gpio3 clock (gpio3_clk_enable)"]
+    #[doc = "gpio3 clock (gpio3_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg13(&self) -> u8 {
         let val = (self.0 >> 26usize) & 0x03;
         val as u8
     }
-    #[doc = "gpio3 clock (gpio3_clk_enable)"]
+    #[doc = "gpio3 clock (gpio3_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg13(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 26usize)) | (((val as u32) & 0x03) << 26usize);
     }
-    #[doc = "lcd clocks (lcd_clk_enable)"]
+    #[doc = "lcd clocks (lcd_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg14(&self) -> u8 {
         let val = (self.0 >> 28usize) & 0x03;
         val as u8
     }
-    #[doc = "lcd clocks (lcd_clk_enable)"]
+    #[doc = "lcd clocks (lcd_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg14(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val as u32) & 0x03) << 28usize);
     }
-    #[doc = "pxp clocks (pxp_clk_enable)"]
+    #[doc = "pxp clocks (pxp_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg15(&self) -> u8 {
         let val = (self.0 >> 30usize) & 0x03;
         val as u8
     }
-    #[doc = "pxp clocks (pxp_clk_enable)"]
+    #[doc = "pxp clocks (pxp_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg15(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val as u32) & 0x03) << 30usize);
@@ -1052,175 +1052,175 @@ impl defmt::Format for Ccgr2 {
         )
     }
 }
-#[doc = "CCM Clock Gating Register 3"]
+#[doc = "CCM Clock Gating Register 3."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ccgr3(pub u32);
 impl Ccgr3 {
-    #[doc = "flexio2 clocks (flexio2_clk_enable)"]
+    #[doc = "flexio2 clocks (flexio2_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg0(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x03;
         val as u8
     }
-    #[doc = "flexio2 clocks (flexio2_clk_enable)"]
+    #[doc = "flexio2 clocks (flexio2_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val as u32) & 0x03) << 0usize);
     }
-    #[doc = "lpuart5 clock (lpuart5_clk_enable)"]
+    #[doc = "lpuart5 clock (lpuart5_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg1(&self) -> u8 {
         let val = (self.0 >> 2usize) & 0x03;
         val as u8
     }
-    #[doc = "lpuart5 clock (lpuart5_clk_enable)"]
+    #[doc = "lpuart5 clock (lpuart5_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val as u32) & 0x03) << 2usize);
     }
-    #[doc = "semc clocks (semc_clk_enable)"]
+    #[doc = "semc clocks (semc_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg2(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x03;
         val as u8
     }
-    #[doc = "semc clocks (semc_clk_enable)"]
+    #[doc = "semc clocks (semc_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg2(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val as u32) & 0x03) << 4usize);
     }
-    #[doc = "lpuart6 clock (lpuart6_clk_enable)"]
+    #[doc = "lpuart6 clock (lpuart6_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg3(&self) -> u8 {
         let val = (self.0 >> 6usize) & 0x03;
         val as u8
     }
-    #[doc = "lpuart6 clock (lpuart6_clk_enable)"]
+    #[doc = "lpuart6 clock (lpuart6_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg3(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val as u32) & 0x03) << 6usize);
     }
-    #[doc = "aoi1 clock (aoi1_clk_enable)"]
+    #[doc = "aoi1 clock (aoi1_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg4(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x03;
         val as u8
     }
-    #[doc = "aoi1 clock (aoi1_clk_enable)"]
+    #[doc = "aoi1 clock (aoi1_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg4(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val as u32) & 0x03) << 8usize);
     }
-    #[doc = "lcdif pix clock (lcdif_pix_clk_enable)"]
+    #[doc = "lcdif pix clock (lcdif_pix_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg5(&self) -> u8 {
         let val = (self.0 >> 10usize) & 0x03;
         val as u8
     }
-    #[doc = "lcdif pix clock (lcdif_pix_clk_enable)"]
+    #[doc = "lcdif pix clock (lcdif_pix_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg5(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val as u32) & 0x03) << 10usize);
     }
-    #[doc = "gpio4 clock (gpio4_clk_enable)"]
+    #[doc = "gpio4 clock (gpio4_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg6(&self) -> u8 {
         let val = (self.0 >> 12usize) & 0x03;
         val as u8
     }
-    #[doc = "gpio4 clock (gpio4_clk_enable)"]
+    #[doc = "gpio4 clock (gpio4_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg6(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val as u32) & 0x03) << 12usize);
     }
-    #[doc = "ewm clocks (ewm_clk_enable)"]
+    #[doc = "ewm clocks (ewm_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg7(&self) -> u8 {
         let val = (self.0 >> 14usize) & 0x03;
         val as u8
     }
-    #[doc = "ewm clocks (ewm_clk_enable)"]
+    #[doc = "ewm clocks (ewm_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg7(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 14usize)) | (((val as u32) & 0x03) << 14usize);
     }
-    #[doc = "wdog1 clock (wdog1_clk_enable)"]
+    #[doc = "wdog1 clock (wdog1_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg8(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x03;
         val as u8
     }
-    #[doc = "wdog1 clock (wdog1_clk_enable)"]
+    #[doc = "wdog1 clock (wdog1_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg8(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val as u32) & 0x03) << 16usize);
     }
-    #[doc = "flexram clock (flexram_clk_enable)"]
+    #[doc = "flexram clock (flexram_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg9(&self) -> u8 {
         let val = (self.0 >> 18usize) & 0x03;
         val as u8
     }
-    #[doc = "flexram clock (flexram_clk_enable)"]
+    #[doc = "flexram clock (flexram_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg9(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 18usize)) | (((val as u32) & 0x03) << 18usize);
     }
-    #[doc = "acmp1 clocks (acmp1_clk_enable)"]
+    #[doc = "acmp1 clocks (acmp1_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg10(&self) -> u8 {
         let val = (self.0 >> 20usize) & 0x03;
         val as u8
     }
-    #[doc = "acmp1 clocks (acmp1_clk_enable)"]
+    #[doc = "acmp1 clocks (acmp1_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg10(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val as u32) & 0x03) << 20usize);
     }
-    #[doc = "acmp2 clocks (acmp2_clk_enable)"]
+    #[doc = "acmp2 clocks (acmp2_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg11(&self) -> u8 {
         let val = (self.0 >> 22usize) & 0x03;
         val as u8
     }
-    #[doc = "acmp2 clocks (acmp2_clk_enable)"]
+    #[doc = "acmp2 clocks (acmp2_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg11(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 22usize)) | (((val as u32) & 0x03) << 22usize);
     }
-    #[doc = "acmp3 clocks (acmp3_clk_enable)"]
+    #[doc = "acmp3 clocks (acmp3_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg12(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0x03;
         val as u8
     }
-    #[doc = "acmp3 clocks (acmp3_clk_enable)"]
+    #[doc = "acmp3 clocks (acmp3_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg12(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val as u32) & 0x03) << 24usize);
     }
-    #[doc = "acmp4 clocks (acmp4_clk_enable)"]
+    #[doc = "acmp4 clocks (acmp4_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg13(&self) -> u8 {
         let val = (self.0 >> 26usize) & 0x03;
         val as u8
     }
-    #[doc = "acmp4 clocks (acmp4_clk_enable)"]
+    #[doc = "acmp4 clocks (acmp4_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg13(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 26usize)) | (((val as u32) & 0x03) << 26usize);
@@ -1237,14 +1237,14 @@ impl Ccgr3 {
     pub const fn set_cg14(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val as u32) & 0x03) << 28usize);
     }
-    #[doc = "iomuxc_snvs_gpr clock (iomuxc_snvs_gpr_clk_enable)"]
+    #[doc = "iomuxc_snvs_gpr clock (iomuxc_snvs_gpr_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg15(&self) -> u8 {
         let val = (self.0 >> 30usize) & 0x03;
         val as u8
     }
-    #[doc = "iomuxc_snvs_gpr clock (iomuxc_snvs_gpr_clk_enable)"]
+    #[doc = "iomuxc_snvs_gpr clock (iomuxc_snvs_gpr_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg15(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val as u32) & 0x03) << 30usize);
@@ -1303,199 +1303,199 @@ impl defmt::Format for Ccgr3 {
         )
     }
 }
-#[doc = "CCM Clock Gating Register 4"]
+#[doc = "CCM Clock Gating Register 4."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ccgr4(pub u32);
 impl Ccgr4 {
-    #[doc = "sim_m7 register access clock (sim_m7_mainclk_r_enable)"]
+    #[doc = "sim_m7 register access clock (sim_m7_mainclk_r_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg0(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x03;
         val as u8
     }
-    #[doc = "sim_m7 register access clock (sim_m7_mainclk_r_enable)"]
+    #[doc = "sim_m7 register access clock (sim_m7_mainclk_r_enable)."]
     #[inline(always)]
     pub const fn set_cg0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val as u32) & 0x03) << 0usize);
     }
-    #[doc = "iomuxc clock (iomuxc_clk_enable)"]
+    #[doc = "iomuxc clock (iomuxc_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg1(&self) -> u8 {
         let val = (self.0 >> 2usize) & 0x03;
         val as u8
     }
-    #[doc = "iomuxc clock (iomuxc_clk_enable)"]
+    #[doc = "iomuxc clock (iomuxc_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val as u32) & 0x03) << 2usize);
     }
-    #[doc = "iomuxc gpr clock (iomuxc_gpr_clk_enable)"]
+    #[doc = "iomuxc gpr clock (iomuxc_gpr_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg2(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x03;
         val as u8
     }
-    #[doc = "iomuxc gpr clock (iomuxc_gpr_clk_enable)"]
+    #[doc = "iomuxc gpr clock (iomuxc_gpr_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg2(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val as u32) & 0x03) << 4usize);
     }
-    #[doc = "bee clock(bee_clk_enable)"]
+    #[doc = "bee clock(bee_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg3(&self) -> u8 {
         let val = (self.0 >> 6usize) & 0x03;
         val as u8
     }
-    #[doc = "bee clock(bee_clk_enable)"]
+    #[doc = "bee clock(bee_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg3(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val as u32) & 0x03) << 6usize);
     }
-    #[doc = "sim_m7 clock (sim_m7_clk_enable)"]
+    #[doc = "sim_m7 clock (sim_m7_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg4(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x03;
         val as u8
     }
-    #[doc = "sim_m7 clock (sim_m7_clk_enable)"]
+    #[doc = "sim_m7 clock (sim_m7_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg4(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val as u32) & 0x03) << 8usize);
     }
-    #[doc = "tsc_dig clock (tsc_clk_enable)"]
+    #[doc = "tsc_dig clock (tsc_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg5(&self) -> u8 {
         let val = (self.0 >> 10usize) & 0x03;
         val as u8
     }
-    #[doc = "tsc_dig clock (tsc_clk_enable)"]
+    #[doc = "tsc_dig clock (tsc_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg5(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val as u32) & 0x03) << 10usize);
     }
-    #[doc = "sim_m clocks (sim_m_clk_enable)"]
+    #[doc = "sim_m clocks (sim_m_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg6(&self) -> u8 {
         let val = (self.0 >> 12usize) & 0x03;
         val as u8
     }
-    #[doc = "sim_m clocks (sim_m_clk_enable)"]
+    #[doc = "sim_m clocks (sim_m_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg6(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val as u32) & 0x03) << 12usize);
     }
-    #[doc = "sim_ems clocks (sim_ems_clk_enable)"]
+    #[doc = "sim_ems clocks (sim_ems_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg7(&self) -> u8 {
         let val = (self.0 >> 14usize) & 0x03;
         val as u8
     }
-    #[doc = "sim_ems clocks (sim_ems_clk_enable)"]
+    #[doc = "sim_ems clocks (sim_ems_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg7(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 14usize)) | (((val as u32) & 0x03) << 14usize);
     }
-    #[doc = "pwm1 clocks (pwm1_clk_enable)"]
+    #[doc = "pwm1 clocks (pwm1_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg8(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x03;
         val as u8
     }
-    #[doc = "pwm1 clocks (pwm1_clk_enable)"]
+    #[doc = "pwm1 clocks (pwm1_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg8(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val as u32) & 0x03) << 16usize);
     }
-    #[doc = "pwm2 clocks (pwm2_clk_enable)"]
+    #[doc = "pwm2 clocks (pwm2_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg9(&self) -> u8 {
         let val = (self.0 >> 18usize) & 0x03;
         val as u8
     }
-    #[doc = "pwm2 clocks (pwm2_clk_enable)"]
+    #[doc = "pwm2 clocks (pwm2_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg9(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 18usize)) | (((val as u32) & 0x03) << 18usize);
     }
-    #[doc = "pwm3 clocks (pwm3_clk_enable)"]
+    #[doc = "pwm3 clocks (pwm3_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg10(&self) -> u8 {
         let val = (self.0 >> 20usize) & 0x03;
         val as u8
     }
-    #[doc = "pwm3 clocks (pwm3_clk_enable)"]
+    #[doc = "pwm3 clocks (pwm3_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg10(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val as u32) & 0x03) << 20usize);
     }
-    #[doc = "pwm4 clocks (pwm4_clk_enable)"]
+    #[doc = "pwm4 clocks (pwm4_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg11(&self) -> u8 {
         let val = (self.0 >> 22usize) & 0x03;
         val as u8
     }
-    #[doc = "pwm4 clocks (pwm4_clk_enable)"]
+    #[doc = "pwm4 clocks (pwm4_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg11(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 22usize)) | (((val as u32) & 0x03) << 22usize);
     }
-    #[doc = "qdc1 clocks (qdc1_clk_enable)"]
+    #[doc = "qdc1 clocks (qdc1_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg12(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0x03;
         val as u8
     }
-    #[doc = "qdc1 clocks (qdc1_clk_enable)"]
+    #[doc = "qdc1 clocks (qdc1_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg12(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val as u32) & 0x03) << 24usize);
     }
-    #[doc = "qdc2 clocks (qdc2_clk_enable)"]
+    #[doc = "qdc2 clocks (qdc2_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg13(&self) -> u8 {
         let val = (self.0 >> 26usize) & 0x03;
         val as u8
     }
-    #[doc = "qdc2 clocks (qdc2_clk_enable)"]
+    #[doc = "qdc2 clocks (qdc2_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg13(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 26usize)) | (((val as u32) & 0x03) << 26usize);
     }
-    #[doc = "qdc3 clocks (qdc3_clk_enable)"]
+    #[doc = "qdc3 clocks (qdc3_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg14(&self) -> u8 {
         let val = (self.0 >> 28usize) & 0x03;
         val as u8
     }
-    #[doc = "qdc3 clocks (qdc3_clk_enable)"]
+    #[doc = "qdc3 clocks (qdc3_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg14(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val as u32) & 0x03) << 28usize);
     }
-    #[doc = "qdc4 clocks (qdc4_clk_enable)"]
+    #[doc = "qdc4 clocks (qdc4_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg15(&self) -> u8 {
         let val = (self.0 >> 30usize) & 0x03;
         val as u8
     }
-    #[doc = "qdc4 clocks (qdc4_clk_enable)"]
+    #[doc = "qdc4 clocks (qdc4_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg15(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val as u32) & 0x03) << 30usize);
@@ -1554,199 +1554,199 @@ impl defmt::Format for Ccgr4 {
         )
     }
 }
-#[doc = "CCM Clock Gating Register 5"]
+#[doc = "CCM Clock Gating Register 5."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ccgr5(pub u32);
 impl Ccgr5 {
-    #[doc = "rom clock (rom_clk_enable)"]
+    #[doc = "rom clock (rom_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg0(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x03;
         val as u8
     }
-    #[doc = "rom clock (rom_clk_enable)"]
+    #[doc = "rom clock (rom_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val as u32) & 0x03) << 0usize);
     }
-    #[doc = "flexio1 clock (flexio1_clk_enable)"]
+    #[doc = "flexio1 clock (flexio1_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg1(&self) -> u8 {
         let val = (self.0 >> 2usize) & 0x03;
         val as u8
     }
-    #[doc = "flexio1 clock (flexio1_clk_enable)"]
+    #[doc = "flexio1 clock (flexio1_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val as u32) & 0x03) << 2usize);
     }
-    #[doc = "wdog3 clock (wdog3_clk_enable)"]
+    #[doc = "wdog3 clock (wdog3_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg2(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x03;
         val as u8
     }
-    #[doc = "wdog3 clock (wdog3_clk_enable)"]
+    #[doc = "wdog3 clock (wdog3_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg2(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val as u32) & 0x03) << 4usize);
     }
-    #[doc = "dma clock (dma_clk_enable)"]
+    #[doc = "dma clock (dma_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg3(&self) -> u8 {
         let val = (self.0 >> 6usize) & 0x03;
         val as u8
     }
-    #[doc = "dma clock (dma_clk_enable)"]
+    #[doc = "dma clock (dma_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg3(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val as u32) & 0x03) << 6usize);
     }
-    #[doc = "kpp clock (kpp_clk_enable)"]
+    #[doc = "kpp clock (kpp_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg4(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x03;
         val as u8
     }
-    #[doc = "kpp clock (kpp_clk_enable)"]
+    #[doc = "kpp clock (kpp_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg4(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val as u32) & 0x03) << 8usize);
     }
-    #[doc = "wdog2 clock (wdog2_clk_enable)"]
+    #[doc = "wdog2 clock (wdog2_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg5(&self) -> u8 {
         let val = (self.0 >> 10usize) & 0x03;
         val as u8
     }
-    #[doc = "wdog2 clock (wdog2_clk_enable)"]
+    #[doc = "wdog2 clock (wdog2_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg5(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val as u32) & 0x03) << 10usize);
     }
-    #[doc = "aipstz4 clocks (aips_tz4_clk_enable)"]
+    #[doc = "aipstz4 clocks (aips_tz4_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg6(&self) -> u8 {
         let val = (self.0 >> 12usize) & 0x03;
         val as u8
     }
-    #[doc = "aipstz4 clocks (aips_tz4_clk_enable)"]
+    #[doc = "aipstz4 clocks (aips_tz4_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg6(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val as u32) & 0x03) << 12usize);
     }
-    #[doc = "spdif clock (spdif_clk_enable)"]
+    #[doc = "spdif clock (spdif_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg7(&self) -> u8 {
         let val = (self.0 >> 14usize) & 0x03;
         val as u8
     }
-    #[doc = "spdif clock (spdif_clk_enable)"]
+    #[doc = "spdif clock (spdif_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg7(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 14usize)) | (((val as u32) & 0x03) << 14usize);
     }
-    #[doc = "sim_main clock (sim_main_clk_enable)"]
+    #[doc = "sim_main clock (sim_main_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg8(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x03;
         val as u8
     }
-    #[doc = "sim_main clock (sim_main_clk_enable)"]
+    #[doc = "sim_main clock (sim_main_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg8(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val as u32) & 0x03) << 16usize);
     }
-    #[doc = "sai1 clock (sai1_clk_enable)"]
+    #[doc = "sai1 clock (sai1_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg9(&self) -> u8 {
         let val = (self.0 >> 18usize) & 0x03;
         val as u8
     }
-    #[doc = "sai1 clock (sai1_clk_enable)"]
+    #[doc = "sai1 clock (sai1_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg9(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 18usize)) | (((val as u32) & 0x03) << 18usize);
     }
-    #[doc = "sai2 clock (sai2_clk_enable)"]
+    #[doc = "sai2 clock (sai2_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg10(&self) -> u8 {
         let val = (self.0 >> 20usize) & 0x03;
         val as u8
     }
-    #[doc = "sai2 clock (sai2_clk_enable)"]
+    #[doc = "sai2 clock (sai2_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg10(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val as u32) & 0x03) << 20usize);
     }
-    #[doc = "sai3 clock (sai3_clk_enable)"]
+    #[doc = "sai3 clock (sai3_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg11(&self) -> u8 {
         let val = (self.0 >> 22usize) & 0x03;
         val as u8
     }
-    #[doc = "sai3 clock (sai3_clk_enable)"]
+    #[doc = "sai3 clock (sai3_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg11(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 22usize)) | (((val as u32) & 0x03) << 22usize);
     }
-    #[doc = "lpuart1 clock (lpuart1_clk_enable)"]
+    #[doc = "lpuart1 clock (lpuart1_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg12(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0x03;
         val as u8
     }
-    #[doc = "lpuart1 clock (lpuart1_clk_enable)"]
+    #[doc = "lpuart1 clock (lpuart1_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg12(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val as u32) & 0x03) << 24usize);
     }
-    #[doc = "lpuart7 clock (lpuart7_clk_enable)"]
+    #[doc = "lpuart7 clock (lpuart7_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg13(&self) -> u8 {
         let val = (self.0 >> 26usize) & 0x03;
         val as u8
     }
-    #[doc = "lpuart7 clock (lpuart7_clk_enable)"]
+    #[doc = "lpuart7 clock (lpuart7_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg13(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 26usize)) | (((val as u32) & 0x03) << 26usize);
     }
-    #[doc = "snvs_hp clock (snvs_hp_clk_enable)"]
+    #[doc = "snvs_hp clock (snvs_hp_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg14(&self) -> u8 {
         let val = (self.0 >> 28usize) & 0x03;
         val as u8
     }
-    #[doc = "snvs_hp clock (snvs_hp_clk_enable)"]
+    #[doc = "snvs_hp clock (snvs_hp_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg14(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val as u32) & 0x03) << 28usize);
     }
-    #[doc = "snvs_lp clock (snvs_lp_clk_enable)"]
+    #[doc = "snvs_lp clock (snvs_lp_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg15(&self) -> u8 {
         let val = (self.0 >> 30usize) & 0x03;
         val as u8
     }
-    #[doc = "snvs_lp clock (snvs_lp_clk_enable)"]
+    #[doc = "snvs_lp clock (snvs_lp_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg15(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val as u32) & 0x03) << 30usize);
@@ -1805,199 +1805,199 @@ impl defmt::Format for Ccgr5 {
         )
     }
 }
-#[doc = "CCM Clock Gating Register 6"]
+#[doc = "CCM Clock Gating Register 6."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ccgr6(pub u32);
 impl Ccgr6 {
-    #[doc = "usboh3 clock (usboh3_clk_enable)"]
+    #[doc = "usboh3 clock (usboh3_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg0(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x03;
         val as u8
     }
-    #[doc = "usboh3 clock (usboh3_clk_enable)"]
+    #[doc = "usboh3 clock (usboh3_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val as u32) & 0x03) << 0usize);
     }
-    #[doc = "usdhc1 clocks (usdhc1_clk_enable)"]
+    #[doc = "usdhc1 clocks (usdhc1_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg1(&self) -> u8 {
         let val = (self.0 >> 2usize) & 0x03;
         val as u8
     }
-    #[doc = "usdhc1 clocks (usdhc1_clk_enable)"]
+    #[doc = "usdhc1 clocks (usdhc1_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val as u32) & 0x03) << 2usize);
     }
-    #[doc = "usdhc2 clocks (usdhc2_clk_enable)"]
+    #[doc = "usdhc2 clocks (usdhc2_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg2(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x03;
         val as u8
     }
-    #[doc = "usdhc2 clocks (usdhc2_clk_enable)"]
+    #[doc = "usdhc2 clocks (usdhc2_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg2(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val as u32) & 0x03) << 4usize);
     }
-    #[doc = "dcdc clocks (dcdc_clk_enable)"]
+    #[doc = "dcdc clocks (dcdc_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg3(&self) -> u8 {
         let val = (self.0 >> 6usize) & 0x03;
         val as u8
     }
-    #[doc = "dcdc clocks (dcdc_clk_enable)"]
+    #[doc = "dcdc clocks (dcdc_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg3(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val as u32) & 0x03) << 6usize);
     }
-    #[doc = "ipmux4 clock (ipmux4_clk_enable)"]
+    #[doc = "ipmux4 clock (ipmux4_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg4(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x03;
         val as u8
     }
-    #[doc = "ipmux4 clock (ipmux4_clk_enable)"]
+    #[doc = "ipmux4 clock (ipmux4_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg4(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val as u32) & 0x03) << 8usize);
     }
-    #[doc = "flexspi clocks (flexspi_clk_enable) sim_ems_clk_enable must also be cleared, when flexspi_clk_enable is cleared"]
+    #[doc = "flexspi clocks (flexspi_clk_enable) sim_ems_clk_enable must also be cleared, when flexspi_clk_enable is cleared."]
     #[must_use]
     #[inline(always)]
     pub const fn cg5(&self) -> u8 {
         let val = (self.0 >> 10usize) & 0x03;
         val as u8
     }
-    #[doc = "flexspi clocks (flexspi_clk_enable) sim_ems_clk_enable must also be cleared, when flexspi_clk_enable is cleared"]
+    #[doc = "flexspi clocks (flexspi_clk_enable) sim_ems_clk_enable must also be cleared, when flexspi_clk_enable is cleared."]
     #[inline(always)]
     pub const fn set_cg5(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val as u32) & 0x03) << 10usize);
     }
-    #[doc = "trng clock (trng_clk_enable)"]
+    #[doc = "trng clock (trng_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg6(&self) -> u8 {
         let val = (self.0 >> 12usize) & 0x03;
         val as u8
     }
-    #[doc = "trng clock (trng_clk_enable)"]
+    #[doc = "trng clock (trng_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg6(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val as u32) & 0x03) << 12usize);
     }
-    #[doc = "lpuart8 clocks (lpuart8_clk_enable)"]
+    #[doc = "lpuart8 clocks (lpuart8_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg7(&self) -> u8 {
         let val = (self.0 >> 14usize) & 0x03;
         val as u8
     }
-    #[doc = "lpuart8 clocks (lpuart8_clk_enable)"]
+    #[doc = "lpuart8 clocks (lpuart8_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg7(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 14usize)) | (((val as u32) & 0x03) << 14usize);
     }
-    #[doc = "timer4 clocks (timer4_clk_enable)"]
+    #[doc = "timer4 clocks (timer4_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg8(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x03;
         val as u8
     }
-    #[doc = "timer4 clocks (timer4_clk_enable)"]
+    #[doc = "timer4 clocks (timer4_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg8(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val as u32) & 0x03) << 16usize);
     }
-    #[doc = "aips_tz3 clock (aips_tz3_clk_enable)"]
+    #[doc = "aips_tz3 clock (aips_tz3_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg9(&self) -> u8 {
         let val = (self.0 >> 18usize) & 0x03;
         val as u8
     }
-    #[doc = "aips_tz3 clock (aips_tz3_clk_enable)"]
+    #[doc = "aips_tz3 clock (aips_tz3_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg9(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 18usize)) | (((val as u32) & 0x03) << 18usize);
     }
-    #[doc = "sim_axbs_p_clk_enable"]
+    #[doc = "sim_axbs_p_clk_enable."]
     #[must_use]
     #[inline(always)]
     pub const fn cg10(&self) -> u8 {
         let val = (self.0 >> 20usize) & 0x03;
         val as u8
     }
-    #[doc = "sim_axbs_p_clk_enable"]
+    #[doc = "sim_axbs_p_clk_enable."]
     #[inline(always)]
     pub const fn set_cg10(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val as u32) & 0x03) << 20usize);
     }
-    #[doc = "anadig clocks (anadig_clk_enable)"]
+    #[doc = "anadig clocks (anadig_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg11(&self) -> u8 {
         let val = (self.0 >> 22usize) & 0x03;
         val as u8
     }
-    #[doc = "anadig clocks (anadig_clk_enable)"]
+    #[doc = "anadig clocks (anadig_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg11(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 22usize)) | (((val as u32) & 0x03) << 22usize);
     }
-    #[doc = "lpi2c4 serial clock (lpi2c4_serial_clk_enable)"]
+    #[doc = "lpi2c4 serial clock (lpi2c4_serial_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg12(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0x03;
         val as u8
     }
-    #[doc = "lpi2c4 serial clock (lpi2c4_serial_clk_enable)"]
+    #[doc = "lpi2c4 serial clock (lpi2c4_serial_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg12(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val as u32) & 0x03) << 24usize);
     }
-    #[doc = "timer1 clocks (timer1_clk_enable)"]
+    #[doc = "timer1 clocks (timer1_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg13(&self) -> u8 {
         let val = (self.0 >> 26usize) & 0x03;
         val as u8
     }
-    #[doc = "timer1 clocks (timer1_clk_enable)"]
+    #[doc = "timer1 clocks (timer1_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg13(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 26usize)) | (((val as u32) & 0x03) << 26usize);
     }
-    #[doc = "timer2 clocks (timer2_clk_enable)"]
+    #[doc = "timer2 clocks (timer2_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg14(&self) -> u8 {
         let val = (self.0 >> 28usize) & 0x03;
         val as u8
     }
-    #[doc = "timer2 clocks (timer2_clk_enable)"]
+    #[doc = "timer2 clocks (timer2_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg14(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val as u32) & 0x03) << 28usize);
     }
-    #[doc = "timer3 clocks (timer3_clk_enable)"]
+    #[doc = "timer3 clocks (timer3_clk_enable)."]
     #[must_use]
     #[inline(always)]
     pub const fn cg15(&self) -> u8 {
         let val = (self.0 >> 30usize) & 0x03;
         val as u8
     }
-    #[doc = "timer3 clocks (timer3_clk_enable)"]
+    #[doc = "timer3 clocks (timer3_clk_enable)."]
     #[inline(always)]
     pub const fn set_cg15(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val as u32) & 0x03) << 30usize);
@@ -2056,91 +2056,91 @@ impl defmt::Format for Ccgr6 {
         )
     }
 }
-#[doc = "CCM Clock Gating Register 7"]
+#[doc = "CCM Clock Gating Register 7."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ccgr7(pub u32);
 impl Ccgr7 {
-    #[doc = "enet2_clk_enable"]
+    #[doc = "enet2_clk_enable."]
     #[must_use]
     #[inline(always)]
     pub const fn cg0(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x03;
         val as u8
     }
-    #[doc = "enet2_clk_enable"]
+    #[doc = "enet2_clk_enable."]
     #[inline(always)]
     pub const fn set_cg0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val as u32) & 0x03) << 0usize);
     }
-    #[doc = "flexspi2_clk_enable"]
+    #[doc = "flexspi2_clk_enable."]
     #[must_use]
     #[inline(always)]
     pub const fn cg1(&self) -> u8 {
         let val = (self.0 >> 2usize) & 0x03;
         val as u8
     }
-    #[doc = "flexspi2_clk_enable"]
+    #[doc = "flexspi2_clk_enable."]
     #[inline(always)]
     pub const fn set_cg1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val as u32) & 0x03) << 2usize);
     }
-    #[doc = "axbs_l_clk_enable"]
+    #[doc = "axbs_l_clk_enable."]
     #[must_use]
     #[inline(always)]
     pub const fn cg2(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x03;
         val as u8
     }
-    #[doc = "axbs_l_clk_enable"]
+    #[doc = "axbs_l_clk_enable."]
     #[inline(always)]
     pub const fn set_cg2(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val as u32) & 0x03) << 4usize);
     }
-    #[doc = "can3_clk_enable"]
+    #[doc = "can3_clk_enable."]
     #[must_use]
     #[inline(always)]
     pub const fn cg3(&self) -> u8 {
         let val = (self.0 >> 6usize) & 0x03;
         val as u8
     }
-    #[doc = "can3_clk_enable"]
+    #[doc = "can3_clk_enable."]
     #[inline(always)]
     pub const fn set_cg3(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val as u32) & 0x03) << 6usize);
     }
-    #[doc = "can3_serial_clk_enable"]
+    #[doc = "can3_serial_clk_enable."]
     #[must_use]
     #[inline(always)]
     pub const fn cg4(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x03;
         val as u8
     }
-    #[doc = "can3_serial_clk_enable"]
+    #[doc = "can3_serial_clk_enable."]
     #[inline(always)]
     pub const fn set_cg4(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val as u32) & 0x03) << 8usize);
     }
-    #[doc = "aips_lite_clk_enable"]
+    #[doc = "aips_lite_clk_enable."]
     #[must_use]
     #[inline(always)]
     pub const fn cg5(&self) -> u8 {
         let val = (self.0 >> 10usize) & 0x03;
         val as u8
     }
-    #[doc = "aips_lite_clk_enable"]
+    #[doc = "aips_lite_clk_enable."]
     #[inline(always)]
     pub const fn set_cg5(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val as u32) & 0x03) << 10usize);
     }
-    #[doc = "flexio3_clk_enable"]
+    #[doc = "flexio3_clk_enable."]
     #[must_use]
     #[inline(always)]
     pub const fn cg6(&self) -> u8 {
         let val = (self.0 >> 12usize) & 0x03;
         val as u8
     }
-    #[doc = "flexio3_clk_enable"]
+    #[doc = "flexio3_clk_enable."]
     #[inline(always)]
     pub const fn set_cg6(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val as u32) & 0x03) << 12usize);
@@ -2181,91 +2181,91 @@ impl defmt::Format for Ccgr7 {
         )
     }
 }
-#[doc = "CCM Clock Output Source Register"]
+#[doc = "CCM Clock Output Source Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ccosr(pub u32);
 impl Ccosr {
-    #[doc = "Selection of the clock to be generated on CCM_CLKO1"]
+    #[doc = "Selection of the clock to be generated on CCM_CLKO1."]
     #[must_use]
     #[inline(always)]
     pub const fn clko1_sel(&self) -> super::vals::Clko1Sel {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Clko1Sel::from_bits(val as u8)
     }
-    #[doc = "Selection of the clock to be generated on CCM_CLKO1"]
+    #[doc = "Selection of the clock to be generated on CCM_CLKO1."]
     #[inline(always)]
     pub const fn set_clko1_sel(&mut self, val: super::vals::Clko1Sel) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Setting the divider of CCM_CLKO1"]
+    #[doc = "Setting the divider of CCM_CLKO1."]
     #[must_use]
     #[inline(always)]
     pub const fn clko1_div(&self) -> super::vals::Clko1Div {
         let val = (self.0 >> 4usize) & 0x07;
         super::vals::Clko1Div::from_bits(val as u8)
     }
-    #[doc = "Setting the divider of CCM_CLKO1"]
+    #[doc = "Setting the divider of CCM_CLKO1."]
     #[inline(always)]
     pub const fn set_clko1_div(&mut self, val: super::vals::Clko1Div) {
         self.0 = (self.0 & !(0x07 << 4usize)) | (((val.to_bits() as u32) & 0x07) << 4usize);
     }
-    #[doc = "Enable of CCM_CLKO1 clock"]
+    #[doc = "Enable of CCM_CLKO1 clock."]
     #[must_use]
     #[inline(always)]
     pub const fn clko1_en(&self) -> super::vals::Clko1En {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Clko1En::from_bits(val as u8)
     }
-    #[doc = "Enable of CCM_CLKO1 clock"]
+    #[doc = "Enable of CCM_CLKO1 clock."]
     #[inline(always)]
     pub const fn set_clko1_en(&mut self, val: super::vals::Clko1En) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "CCM_CLKO1 output to reflect CCM_CLKO1 or CCM_CLKO2 clocks"]
+    #[doc = "CCM_CLKO1 output to reflect CCM_CLKO1 or CCM_CLKO2 clocks."]
     #[must_use]
     #[inline(always)]
     pub const fn clk_out_sel(&self) -> super::vals::ClkOutSel {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::ClkOutSel::from_bits(val as u8)
     }
-    #[doc = "CCM_CLKO1 output to reflect CCM_CLKO1 or CCM_CLKO2 clocks"]
+    #[doc = "CCM_CLKO1 output to reflect CCM_CLKO1 or CCM_CLKO2 clocks."]
     #[inline(always)]
     pub const fn set_clk_out_sel(&mut self, val: super::vals::ClkOutSel) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
-    #[doc = "Selection of the clock to be generated on CCM_CLKO2"]
+    #[doc = "Selection of the clock to be generated on CCM_CLKO2."]
     #[must_use]
     #[inline(always)]
     pub const fn clko2_sel(&self) -> super::vals::Clko2Sel {
         let val = (self.0 >> 16usize) & 0x1f;
         super::vals::Clko2Sel::from_bits(val as u8)
     }
-    #[doc = "Selection of the clock to be generated on CCM_CLKO2"]
+    #[doc = "Selection of the clock to be generated on CCM_CLKO2."]
     #[inline(always)]
     pub const fn set_clko2_sel(&mut self, val: super::vals::Clko2Sel) {
         self.0 = (self.0 & !(0x1f << 16usize)) | (((val.to_bits() as u32) & 0x1f) << 16usize);
     }
-    #[doc = "Setting the divider of CCM_CLKO2"]
+    #[doc = "Setting the divider of CCM_CLKO2."]
     #[must_use]
     #[inline(always)]
     pub const fn clko2_div(&self) -> super::vals::Clko2Div {
         let val = (self.0 >> 21usize) & 0x07;
         super::vals::Clko2Div::from_bits(val as u8)
     }
-    #[doc = "Setting the divider of CCM_CLKO2"]
+    #[doc = "Setting the divider of CCM_CLKO2."]
     #[inline(always)]
     pub const fn set_clko2_div(&mut self, val: super::vals::Clko2Div) {
         self.0 = (self.0 & !(0x07 << 21usize)) | (((val.to_bits() as u32) & 0x07) << 21usize);
     }
-    #[doc = "Enable of CCM_CLKO2 clock"]
+    #[doc = "Enable of CCM_CLKO2 clock."]
     #[must_use]
     #[inline(always)]
     pub const fn clko2_en(&self) -> super::vals::Clko2En {
         let val = (self.0 >> 24usize) & 0x01;
         super::vals::Clko2En::from_bits(val as u8)
     }
-    #[doc = "Enable of CCM_CLKO2 clock"]
+    #[doc = "Enable of CCM_CLKO2 clock."]
     #[inline(always)]
     pub const fn set_clko2_en(&mut self, val: super::vals::Clko2En) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
@@ -2306,7 +2306,7 @@ impl defmt::Format for Ccosr {
         )
     }
 }
-#[doc = "CCM Control Register"]
+#[doc = "CCM Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ccr(pub u32);
@@ -2323,38 +2323,38 @@ impl Ccr {
     pub const fn set_oscnt(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "On chip oscillator enable bit - this bit value is reflected on the output cosc_en"]
+    #[doc = "On chip oscillator enable bit - this bit value is reflected on the output cosc_en."]
     #[must_use]
     #[inline(always)]
     pub const fn cosc_en(&self) -> super::vals::CoscEn {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::CoscEn::from_bits(val as u8)
     }
-    #[doc = "On chip oscillator enable bit - this bit value is reflected on the output cosc_en"]
+    #[doc = "On chip oscillator enable bit - this bit value is reflected on the output cosc_en."]
     #[inline(always)]
     pub const fn set_cosc_en(&mut self, val: super::vals::CoscEn) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "Counter for analog_reg_bypass signal assertion after standby voltage request by PMIC_STBY_REQ"]
+    #[doc = "Counter for analog_reg_bypass signal assertion after standby voltage request by PMIC_STBY_REQ."]
     #[must_use]
     #[inline(always)]
     pub const fn reg_bypass_count(&self) -> super::vals::RegBypassCount {
         let val = (self.0 >> 21usize) & 0x3f;
         super::vals::RegBypassCount::from_bits(val as u8)
     }
-    #[doc = "Counter for analog_reg_bypass signal assertion after standby voltage request by PMIC_STBY_REQ"]
+    #[doc = "Counter for analog_reg_bypass signal assertion after standby voltage request by PMIC_STBY_REQ."]
     #[inline(always)]
     pub const fn set_reg_bypass_count(&mut self, val: super::vals::RegBypassCount) {
         self.0 = (self.0 & !(0x3f << 21usize)) | (((val.to_bits() as u32) & 0x3f) << 21usize);
     }
-    #[doc = "Enable for REG_BYPASS_COUNTER"]
+    #[doc = "Enable for REG_BYPASS_COUNTER."]
     #[must_use]
     #[inline(always)]
     pub const fn rbc_en(&self) -> super::vals::RbcEn {
         let val = (self.0 >> 27usize) & 0x01;
         super::vals::RbcEn::from_bits(val as u8)
     }
-    #[doc = "Enable for REG_BYPASS_COUNTER"]
+    #[doc = "Enable for REG_BYPASS_COUNTER."]
     #[inline(always)]
     pub const fn set_rbc_en(&mut self, val: super::vals::RbcEn) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val.to_bits() as u32) & 0x01) << 27usize);
@@ -2389,7 +2389,7 @@ impl defmt::Format for Ccr {
         )
     }
 }
-#[doc = "CCM Clock Switcher Register"]
+#[doc = "CCM Clock Switcher Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ccsr(pub u32);
@@ -2430,19 +2430,19 @@ impl defmt::Format for Ccsr {
         )
     }
 }
-#[doc = "CCM D1 Clock Divider Register"]
+#[doc = "CCM D1 Clock Divider Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cdcdr(pub u32);
 impl Cdcdr {
-    #[doc = "Selector for flexio1 clock multiplexer"]
+    #[doc = "Selector for flexio1 clock multiplexer."]
     #[must_use]
     #[inline(always)]
     pub const fn flexio1_clk_sel(&self) -> super::vals::Flexio1ClkSel {
         let val = (self.0 >> 7usize) & 0x03;
         super::vals::Flexio1ClkSel::from_bits(val as u8)
     }
-    #[doc = "Selector for flexio1 clock multiplexer"]
+    #[doc = "Selector for flexio1 clock multiplexer."]
     #[inline(always)]
     pub const fn set_flexio1_clk_sel(&mut self, val: super::vals::Flexio1ClkSel) {
         self.0 = (self.0 & !(0x03 << 7usize)) | (((val.to_bits() as u32) & 0x03) << 7usize);
@@ -2471,14 +2471,14 @@ impl Cdcdr {
     pub const fn set_flexio1_clk_pred(&mut self, val: super::vals::Flexio1ClkPred) {
         self.0 = (self.0 & !(0x07 << 12usize)) | (((val.to_bits() as u32) & 0x07) << 12usize);
     }
-    #[doc = "Selector for spdif0 clock multiplexer"]
+    #[doc = "Selector for spdif0 clock multiplexer."]
     #[must_use]
     #[inline(always)]
     pub const fn spdif0_clk_sel(&self) -> super::vals::Spdif0ClkSel {
         let val = (self.0 >> 20usize) & 0x03;
         super::vals::Spdif0ClkSel::from_bits(val as u8)
     }
-    #[doc = "Selector for spdif0 clock multiplexer"]
+    #[doc = "Selector for spdif0 clock multiplexer."]
     #[inline(always)]
     pub const fn set_spdif0_clk_sel(&mut self, val: super::vals::Spdif0ClkSel) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
@@ -2541,7 +2541,7 @@ impl defmt::Format for Cdcdr {
         )
     }
 }
-#[doc = "CCM Divider Handshake In-Process Register"]
+#[doc = "CCM Divider Handshake In-Process Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cdhipr(pub u32);
@@ -2638,43 +2638,43 @@ impl defmt::Format for Cdhipr {
         )
     }
 }
-#[doc = "CCM General Purpose Register"]
+#[doc = "CCM General Purpose Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cgpr(pub u32);
 impl Cgpr {
-    #[doc = "Defines clock dividion of clock for stby_count (pmic delay counter)"]
+    #[doc = "Defines clock dividion of clock for stby_count (pmic delay counter)."]
     #[must_use]
     #[inline(always)]
     pub const fn pmic_delay_scaler(&self) -> super::vals::PmicDelayScaler {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::PmicDelayScaler::from_bits(val as u8)
     }
-    #[doc = "Defines clock dividion of clock for stby_count (pmic delay counter)"]
+    #[doc = "Defines clock dividion of clock for stby_count (pmic delay counter)."]
     #[inline(always)]
     pub const fn set_pmic_delay_scaler(&mut self, val: super::vals::PmicDelayScaler) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Defines the value of the output signal cgpr_dout\\[4\\]. Gate of program supply for efuse programing"]
+    #[doc = "Defines the value of the output signal cgpr_dout\\[4\\]. Gate of program supply for efuse programing."]
     #[must_use]
     #[inline(always)]
     pub const fn efuse_prog_supply_gate(&self) -> super::vals::EfuseProgSupplyGate {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::EfuseProgSupplyGate::from_bits(val as u8)
     }
-    #[doc = "Defines the value of the output signal cgpr_dout\\[4\\]. Gate of program supply for efuse programing"]
+    #[doc = "Defines the value of the output signal cgpr_dout\\[4\\]. Gate of program supply for efuse programing."]
     #[inline(always)]
     pub const fn set_efuse_prog_supply_gate(&mut self, val: super::vals::EfuseProgSupplyGate) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
-    #[doc = "System memory DS control"]
+    #[doc = "System memory DS control."]
     #[must_use]
     #[inline(always)]
     pub const fn sys_mem_ds_ctrl(&self) -> super::vals::SysMemDsCtrl {
         let val = (self.0 >> 14usize) & 0x03;
         super::vals::SysMemDsCtrl::from_bits(val as u8)
     }
-    #[doc = "System memory DS control"]
+    #[doc = "System memory DS control."]
     #[inline(always)]
     pub const fn set_sys_mem_ds_ctrl(&mut self, val: super::vals::SysMemDsCtrl) {
         self.0 = (self.0 & !(0x03 << 14usize)) | (((val.to_bits() as u32) & 0x03) << 14usize);
@@ -2691,14 +2691,14 @@ impl Cgpr {
     pub const fn set_fpl(&mut self, val: super::vals::Fpl) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
     }
-    #[doc = "Control for the Deep Sleep signal to the Arm Platform memories with additional control logic based on the Arm WFI signal"]
+    #[doc = "Control for the Deep Sleep signal to the Arm Platform memories with additional control logic based on the Arm WFI signal."]
     #[must_use]
     #[inline(always)]
     pub const fn int_mem_clk_lpm(&self) -> super::vals::IntMemClkLpm {
         let val = (self.0 >> 17usize) & 0x01;
         super::vals::IntMemClkLpm::from_bits(val as u8)
     }
-    #[doc = "Control for the Deep Sleep signal to the Arm Platform memories with additional control logic based on the Arm WFI signal"]
+    #[doc = "Control for the Deep Sleep signal to the Arm Platform memories with additional control logic based on the Arm WFI signal."]
     #[inline(always)]
     pub const fn set_int_mem_clk_lpm(&mut self, val: super::vals::IntMemClkLpm) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
@@ -2735,43 +2735,43 @@ impl defmt::Format for Cgpr {
         )
     }
 }
-#[doc = "CCM Interrupt Mask Register"]
+#[doc = "CCM Interrupt Mask Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cimr(pub u32);
 impl Cimr {
-    #[doc = "mask interrupt generation due to lrf of PLLs"]
+    #[doc = "mask interrupt generation due to lrf of PLLs."]
     #[must_use]
     #[inline(always)]
     pub const fn mask_lrf_pll(&self) -> super::vals::MaskLrfPll {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::MaskLrfPll::from_bits(val as u8)
     }
-    #[doc = "mask interrupt generation due to lrf of PLLs"]
+    #[doc = "mask interrupt generation due to lrf of PLLs."]
     #[inline(always)]
     pub const fn set_mask_lrf_pll(&mut self, val: super::vals::MaskLrfPll) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "mask interrupt generation due to on board oscillator ready"]
+    #[doc = "mask interrupt generation due to on board oscillator ready."]
     #[must_use]
     #[inline(always)]
     pub const fn mask_cosc_ready(&self) -> super::vals::MaskCoscReady {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::MaskCoscReady::from_bits(val as u8)
     }
-    #[doc = "mask interrupt generation due to on board oscillator ready"]
+    #[doc = "mask interrupt generation due to on board oscillator ready."]
     #[inline(always)]
     pub const fn set_mask_cosc_ready(&mut self, val: super::vals::MaskCoscReady) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "mask interrupt generation due to frequency change of semc_podf"]
+    #[doc = "mask interrupt generation due to frequency change of semc_podf."]
     #[must_use]
     #[inline(always)]
     pub const fn mask_semc_podf_loaded(&self) -> super::vals::MaskSemcPodfLoaded {
         let val = (self.0 >> 17usize) & 0x01;
         super::vals::MaskSemcPodfLoaded::from_bits(val as u8)
     }
-    #[doc = "mask interrupt generation due to frequency change of semc_podf"]
+    #[doc = "mask interrupt generation due to frequency change of semc_podf."]
     #[inline(always)]
     pub const fn set_mask_semc_podf_loaded(&mut self, val: super::vals::MaskSemcPodfLoaded) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
@@ -2791,14 +2791,14 @@ impl Cimr {
     ) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val.to_bits() as u32) & 0x01) << 19usize);
     }
-    #[doc = "mask interrupt generation due to frequency change of ahb_podf"]
+    #[doc = "mask interrupt generation due to frequency change of ahb_podf."]
     #[must_use]
     #[inline(always)]
     pub const fn mask_ahb_podf_loaded(&self) -> super::vals::MaskAhbPodfLoaded {
         let val = (self.0 >> 20usize) & 0x01;
         super::vals::MaskAhbPodfLoaded::from_bits(val as u8)
     }
-    #[doc = "mask interrupt generation due to frequency change of ahb_podf"]
+    #[doc = "mask interrupt generation due to frequency change of ahb_podf."]
     #[inline(always)]
     pub const fn set_mask_ahb_podf_loaded(&mut self, val: super::vals::MaskAhbPodfLoaded) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
@@ -2818,14 +2818,14 @@ impl Cimr {
     ) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
     }
-    #[doc = "mask interrupt generation due to frequency change of arm_podf"]
+    #[doc = "mask interrupt generation due to frequency change of arm_podf."]
     #[must_use]
     #[inline(always)]
     pub const fn arm_podf_loaded(&self) -> super::vals::CimrArmPodfLoaded {
         let val = (self.0 >> 26usize) & 0x01;
         super::vals::CimrArmPodfLoaded::from_bits(val as u8)
     }
-    #[doc = "mask interrupt generation due to frequency change of arm_podf"]
+    #[doc = "mask interrupt generation due to frequency change of arm_podf."]
     #[inline(always)]
     pub const fn set_arm_podf_loaded(&mut self, val: super::vals::CimrArmPodfLoaded) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
@@ -2872,67 +2872,67 @@ impl defmt::Format for Cimr {
         )
     }
 }
-#[doc = "CCM Interrupt Status Register"]
+#[doc = "CCM Interrupt Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cisr(pub u32);
 impl Cisr {
-    #[doc = "CCM interrupt request 2 generated due to lock of all enabled and not bypaseed PLLs"]
+    #[doc = "CCM interrupt request 2 generated due to lock of all enabled and not bypaseed PLLs."]
     #[must_use]
     #[inline(always)]
     pub const fn lrf_pll(&self) -> super::vals::LrfPll {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::LrfPll::from_bits(val as u8)
     }
-    #[doc = "CCM interrupt request 2 generated due to lock of all enabled and not bypaseed PLLs"]
+    #[doc = "CCM interrupt request 2 generated due to lock of all enabled and not bypaseed PLLs."]
     #[inline(always)]
     pub const fn set_lrf_pll(&mut self, val: super::vals::LrfPll) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "CCM interrupt request 2 generated due to on board oscillator ready, i"]
+    #[doc = "CCM interrupt request 2 generated due to on board oscillator ready, i."]
     #[must_use]
     #[inline(always)]
     pub const fn cosc_ready(&self) -> super::vals::CisrCoscReady {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::CisrCoscReady::from_bits(val as u8)
     }
-    #[doc = "CCM interrupt request 2 generated due to on board oscillator ready, i"]
+    #[doc = "CCM interrupt request 2 generated due to on board oscillator ready, i."]
     #[inline(always)]
     pub const fn set_cosc_ready(&mut self, val: super::vals::CisrCoscReady) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "CCM interrupt request 1 generated due to frequency change of semc_podf"]
+    #[doc = "CCM interrupt request 1 generated due to frequency change of semc_podf."]
     #[must_use]
     #[inline(always)]
     pub const fn semc_podf_loaded(&self) -> super::vals::SemcPodfLoaded {
         let val = (self.0 >> 17usize) & 0x01;
         super::vals::SemcPodfLoaded::from_bits(val as u8)
     }
-    #[doc = "CCM interrupt request 1 generated due to frequency change of semc_podf"]
+    #[doc = "CCM interrupt request 1 generated due to frequency change of semc_podf."]
     #[inline(always)]
     pub const fn set_semc_podf_loaded(&mut self, val: super::vals::SemcPodfLoaded) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
     }
-    #[doc = "CCM interrupt request 1 generated due to frequency change of periph2_clk_sel"]
+    #[doc = "CCM interrupt request 1 generated due to frequency change of periph2_clk_sel."]
     #[must_use]
     #[inline(always)]
     pub const fn periph2_clk_sel_loaded(&self) -> super::vals::Periph2ClkSelLoaded {
         let val = (self.0 >> 19usize) & 0x01;
         super::vals::Periph2ClkSelLoaded::from_bits(val as u8)
     }
-    #[doc = "CCM interrupt request 1 generated due to frequency change of periph2_clk_sel"]
+    #[doc = "CCM interrupt request 1 generated due to frequency change of periph2_clk_sel."]
     #[inline(always)]
     pub const fn set_periph2_clk_sel_loaded(&mut self, val: super::vals::Periph2ClkSelLoaded) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val.to_bits() as u32) & 0x01) << 19usize);
     }
-    #[doc = "CCM interrupt request 1 generated due to frequency change of ahb_podf"]
+    #[doc = "CCM interrupt request 1 generated due to frequency change of ahb_podf."]
     #[must_use]
     #[inline(always)]
     pub const fn ahb_podf_loaded(&self) -> super::vals::AhbPodfLoaded {
         let val = (self.0 >> 20usize) & 0x01;
         super::vals::AhbPodfLoaded::from_bits(val as u8)
     }
-    #[doc = "CCM interrupt request 1 generated due to frequency change of ahb_podf"]
+    #[doc = "CCM interrupt request 1 generated due to frequency change of ahb_podf."]
     #[inline(always)]
     pub const fn set_ahb_podf_loaded(&mut self, val: super::vals::AhbPodfLoaded) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
@@ -2949,14 +2949,14 @@ impl Cisr {
     pub const fn set_periph_clk_sel_loaded(&mut self, val: super::vals::PeriphClkSelLoaded) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
     }
-    #[doc = "CCM interrupt request 1 generated due to frequency change of arm_podf"]
+    #[doc = "CCM interrupt request 1 generated due to frequency change of arm_podf."]
     #[must_use]
     #[inline(always)]
     pub const fn arm_podf_loaded(&self) -> super::vals::CisrArmPodfLoaded {
         let val = (self.0 >> 26usize) & 0x01;
         super::vals::CisrArmPodfLoaded::from_bits(val as u8)
     }
-    #[doc = "CCM interrupt request 1 generated due to frequency change of arm_podf"]
+    #[doc = "CCM interrupt request 1 generated due to frequency change of arm_podf."]
     #[inline(always)]
     pub const fn set_arm_podf_loaded(&mut self, val: super::vals::CisrArmPodfLoaded) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
@@ -2997,7 +2997,7 @@ impl defmt::Format for Cisr {
         )
     }
 }
-#[doc = "CCM Low Power Control Register"]
+#[doc = "CCM Low Power Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Clpcr(pub u32);
@@ -3014,74 +3014,74 @@ impl Clpcr {
     pub const fn set_lpm(&mut self, val: super::vals::Lpm) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "Define if Arm clocks (arm_clk, soc_mxclk, soc_pclk, soc_dbg_pclk, vl_wrck) will be disabled on wait mode"]
+    #[doc = "Define if Arm clocks (arm_clk, soc_mxclk, soc_pclk, soc_dbg_pclk, vl_wrck) will be disabled on wait mode."]
     #[must_use]
     #[inline(always)]
     pub const fn arm_clk_dis_on_lpm(&self) -> super::vals::ArmClkDisOnLpm {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::ArmClkDisOnLpm::from_bits(val as u8)
     }
-    #[doc = "Define if Arm clocks (arm_clk, soc_mxclk, soc_pclk, soc_dbg_pclk, vl_wrck) will be disabled on wait mode"]
+    #[doc = "Define if Arm clocks (arm_clk, soc_mxclk, soc_pclk, soc_dbg_pclk, vl_wrck) will be disabled on wait mode."]
     #[inline(always)]
     pub const fn set_arm_clk_dis_on_lpm(&mut self, val: super::vals::ArmClkDisOnLpm) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
-    #[doc = "Standby clock oscillator bit"]
+    #[doc = "Standby clock oscillator bit."]
     #[must_use]
     #[inline(always)]
     pub const fn sbyos(&self) -> super::vals::Sbyos {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::Sbyos::from_bits(val as u8)
     }
-    #[doc = "Standby clock oscillator bit"]
+    #[doc = "Standby clock oscillator bit."]
     #[inline(always)]
     pub const fn set_sbyos(&mut self, val: super::vals::Sbyos) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "dis_ref_osc - in run mode, software can manually control closing of external reference oscillator clock, i"]
+    #[doc = "dis_ref_osc - in run mode, software can manually control closing of external reference oscillator clock, i."]
     #[must_use]
     #[inline(always)]
     pub const fn dis_ref_osc(&self) -> super::vals::DisRefOsc {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::DisRefOsc::from_bits(val as u8)
     }
-    #[doc = "dis_ref_osc - in run mode, software can manually control closing of external reference oscillator clock, i"]
+    #[doc = "dis_ref_osc - in run mode, software can manually control closing of external reference oscillator clock, i."]
     #[inline(always)]
     pub const fn set_dis_ref_osc(&mut self, val: super::vals::DisRefOsc) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "Voltage standby request bit"]
+    #[doc = "Voltage standby request bit."]
     #[must_use]
     #[inline(always)]
     pub const fn vstby(&self) -> super::vals::Vstby {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::Vstby::from_bits(val as u8)
     }
-    #[doc = "Voltage standby request bit"]
+    #[doc = "Voltage standby request bit."]
     #[inline(always)]
     pub const fn set_vstby(&mut self, val: super::vals::Vstby) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
-    #[doc = "Standby counter definition"]
+    #[doc = "Standby counter definition."]
     #[must_use]
     #[inline(always)]
     pub const fn stby_count(&self) -> super::vals::StbyCount {
         let val = (self.0 >> 9usize) & 0x03;
         super::vals::StbyCount::from_bits(val as u8)
     }
-    #[doc = "Standby counter definition"]
+    #[doc = "Standby counter definition."]
     #[inline(always)]
     pub const fn set_stby_count(&mut self, val: super::vals::StbyCount) {
         self.0 = (self.0 & !(0x03 << 9usize)) | (((val.to_bits() as u32) & 0x03) << 9usize);
     }
-    #[doc = "In run mode, software can manually control powering down of on chip oscillator, i"]
+    #[doc = "In run mode, software can manually control powering down of on chip oscillator, i."]
     #[must_use]
     #[inline(always)]
     pub const fn cosc_pwrdown(&self) -> super::vals::CoscPwrdown {
         let val = (self.0 >> 11usize) & 0x01;
         super::vals::CoscPwrdown::from_bits(val as u8)
     }
-    #[doc = "In run mode, software can manually control powering down of on chip oscillator, i"]
+    #[doc = "In run mode, software can manually control powering down of on chip oscillator, i."]
     #[inline(always)]
     pub const fn set_cosc_pwrdown(&mut self, val: super::vals::CoscPwrdown) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
@@ -3110,38 +3110,38 @@ impl Clpcr {
     pub const fn set_bypass_lpm_hs0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "Mask WFI of core0 for entering low power mode Assertion of all bits\\[27:22\\] will generate low power mode request"]
+    #[doc = "Mask WFI of core0 for entering low power mode Assertion of all bits\\[27:22\\] will generate low power mode request."]
     #[must_use]
     #[inline(always)]
     pub const fn mask_core0_wfi(&self) -> super::vals::MaskCore0Wfi {
         let val = (self.0 >> 22usize) & 0x01;
         super::vals::MaskCore0Wfi::from_bits(val as u8)
     }
-    #[doc = "Mask WFI of core0 for entering low power mode Assertion of all bits\\[27:22\\] will generate low power mode request"]
+    #[doc = "Mask WFI of core0 for entering low power mode Assertion of all bits\\[27:22\\] will generate low power mode request."]
     #[inline(always)]
     pub const fn set_mask_core0_wfi(&mut self, val: super::vals::MaskCore0Wfi) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
     }
-    #[doc = "Mask SCU IDLE for entering low power mode Assertion of all bits\\[27:22\\] will generate low power mode request"]
+    #[doc = "Mask SCU IDLE for entering low power mode Assertion of all bits\\[27:22\\] will generate low power mode request."]
     #[must_use]
     #[inline(always)]
     pub const fn mask_scu_idle(&self) -> super::vals::MaskScuIdle {
         let val = (self.0 >> 26usize) & 0x01;
         super::vals::MaskScuIdle::from_bits(val as u8)
     }
-    #[doc = "Mask SCU IDLE for entering low power mode Assertion of all bits\\[27:22\\] will generate low power mode request"]
+    #[doc = "Mask SCU IDLE for entering low power mode Assertion of all bits\\[27:22\\] will generate low power mode request."]
     #[inline(always)]
     pub const fn set_mask_scu_idle(&mut self, val: super::vals::MaskScuIdle) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
     }
-    #[doc = "Mask L2CC IDLE for entering low power mode"]
+    #[doc = "Mask L2CC IDLE for entering low power mode."]
     #[must_use]
     #[inline(always)]
     pub const fn mask_l2cc_idle(&self) -> super::vals::MaskL2ccIdle {
         let val = (self.0 >> 27usize) & 0x01;
         super::vals::MaskL2ccIdle::from_bits(val as u8)
     }
-    #[doc = "Mask L2CC IDLE for entering low power mode"]
+    #[doc = "Mask L2CC IDLE for entering low power mode."]
     #[inline(always)]
     pub const fn set_mask_l2cc_idle(&mut self, val: super::vals::MaskL2ccIdle) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val.to_bits() as u32) & 0x01) << 27usize);
@@ -3192,31 +3192,31 @@ impl defmt::Format for Clpcr {
         )
     }
 }
-#[doc = "CCM Module Enable Overide Register"]
+#[doc = "CCM Module Enable Overide Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cmeor(pub u32);
 impl Cmeor {
-    #[doc = "Overide clock enable signal from GPT - clock will not be gated based on GPT's signal 'ipg_enable_clk'"]
+    #[doc = "Overide clock enable signal from GPT - clock will not be gated based on GPT's signal 'ipg_enable_clk'."]
     #[must_use]
     #[inline(always)]
     pub const fn mod_en_ov_gpt(&self) -> super::vals::ModEnOvGpt {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::ModEnOvGpt::from_bits(val as u8)
     }
-    #[doc = "Overide clock enable signal from GPT - clock will not be gated based on GPT's signal 'ipg_enable_clk'"]
+    #[doc = "Overide clock enable signal from GPT - clock will not be gated based on GPT's signal 'ipg_enable_clk'."]
     #[inline(always)]
     pub const fn set_mod_en_ov_gpt(&mut self, val: super::vals::ModEnOvGpt) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
-    #[doc = "Overide clock enable signal from PIT - clock will not be gated based on PIT's signal 'ipg_enable_clk'"]
+    #[doc = "Overide clock enable signal from PIT - clock will not be gated based on PIT's signal 'ipg_enable_clk'."]
     #[must_use]
     #[inline(always)]
     pub const fn mod_en_ov_pit(&self) -> super::vals::ModEnOvPit {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::ModEnOvPit::from_bits(val as u8)
     }
-    #[doc = "Overide clock enable signal from PIT - clock will not be gated based on PIT's signal 'ipg_enable_clk'"]
+    #[doc = "Overide clock enable signal from PIT - clock will not be gated based on PIT's signal 'ipg_enable_clk'."]
     #[inline(always)]
     pub const fn set_mod_en_ov_pit(&mut self, val: super::vals::ModEnOvPit) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
@@ -3233,50 +3233,50 @@ impl Cmeor {
     pub const fn set_mod_en_usdhc(&mut self, val: super::vals::ModEnUsdhc) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "Overide clock enable signal from TRNG"]
+    #[doc = "Overide clock enable signal from TRNG."]
     #[must_use]
     #[inline(always)]
     pub const fn mod_en_ov_trng(&self) -> super::vals::ModEnOvTrng {
         let val = (self.0 >> 9usize) & 0x01;
         super::vals::ModEnOvTrng::from_bits(val as u8)
     }
-    #[doc = "Overide clock enable signal from TRNG"]
+    #[doc = "Overide clock enable signal from TRNG."]
     #[inline(always)]
     pub const fn set_mod_en_ov_trng(&mut self, val: super::vals::ModEnOvTrng) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
     }
-    #[doc = "Overide clock enable signal from FlexCAN3(CANFD) - clock will not be gated based on CAN's signal 'enable_clk_cpi'"]
+    #[doc = "Overide clock enable signal from FlexCAN3(CANFD) - clock will not be gated based on CAN's signal 'enable_clk_cpi'."]
     #[must_use]
     #[inline(always)]
     pub const fn mod_en_ov_canfd_cpi(&self) -> super::vals::ModEnOvCanfdCpi {
         let val = (self.0 >> 10usize) & 0x01;
         super::vals::ModEnOvCanfdCpi::from_bits(val as u8)
     }
-    #[doc = "Overide clock enable signal from FlexCAN3(CANFD) - clock will not be gated based on CAN's signal 'enable_clk_cpi'"]
+    #[doc = "Overide clock enable signal from FlexCAN3(CANFD) - clock will not be gated based on CAN's signal 'enable_clk_cpi'."]
     #[inline(always)]
     pub const fn set_mod_en_ov_canfd_cpi(&mut self, val: super::vals::ModEnOvCanfdCpi) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
-    #[doc = "Overide clock enable signal from CAN2 - clock will not be gated based on CAN's signal 'enable_clk_cpi'"]
+    #[doc = "Overide clock enable signal from CAN2 - clock will not be gated based on CAN's signal 'enable_clk_cpi'."]
     #[must_use]
     #[inline(always)]
     pub const fn mod_en_ov_can2_cpi(&self) -> super::vals::ModEnOvCan2Cpi {
         let val = (self.0 >> 28usize) & 0x01;
         super::vals::ModEnOvCan2Cpi::from_bits(val as u8)
     }
-    #[doc = "Overide clock enable signal from CAN2 - clock will not be gated based on CAN's signal 'enable_clk_cpi'"]
+    #[doc = "Overide clock enable signal from CAN2 - clock will not be gated based on CAN's signal 'enable_clk_cpi'."]
     #[inline(always)]
     pub const fn set_mod_en_ov_can2_cpi(&mut self, val: super::vals::ModEnOvCan2Cpi) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
     }
-    #[doc = "Overide clock enable signal from CAN1 - clock will not be gated based on CAN's signal 'enable_clk_cpi'"]
+    #[doc = "Overide clock enable signal from CAN1 - clock will not be gated based on CAN's signal 'enable_clk_cpi'."]
     #[must_use]
     #[inline(always)]
     pub const fn mod_en_ov_can1_cpi(&self) -> super::vals::ModEnOvCan1Cpi {
         let val = (self.0 >> 30usize) & 0x01;
         super::vals::ModEnOvCan1Cpi::from_bits(val as u8)
     }
-    #[doc = "Overide clock enable signal from CAN1 - clock will not be gated based on CAN's signal 'enable_clk_cpi'"]
+    #[doc = "Overide clock enable signal from CAN1 - clock will not be gated based on CAN's signal 'enable_clk_cpi'."]
     #[inline(always)]
     pub const fn set_mod_en_ov_can1_cpi(&mut self, val: super::vals::ModEnOvCan1Cpi) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
@@ -3317,7 +3317,7 @@ impl defmt::Format for Cmeor {
         )
     }
 }
-#[doc = "CCM Clock Divider Register"]
+#[doc = "CCM Clock Divider Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cs1cdr(pub u32);
@@ -3428,7 +3428,7 @@ impl defmt::Format for Cs1cdr {
         )
     }
 }
-#[doc = "CCM Clock Divider Register"]
+#[doc = "CCM Clock Divider Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cs2cdr(pub u32);
@@ -3483,7 +3483,7 @@ impl defmt::Format for Cs2cdr {
         )
     }
 }
-#[doc = "CCM Serial Clock Divider Register 1"]
+#[doc = "CCM Serial Clock Divider Register 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cscdr1(pub u32);
@@ -3500,14 +3500,14 @@ impl Cscdr1 {
     pub const fn set_uart_clk_podf(&mut self, val: super::vals::UartClkPodf) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
     }
-    #[doc = "Selector for the UART clock multiplexor"]
+    #[doc = "Selector for the UART clock multiplexor."]
     #[must_use]
     #[inline(always)]
     pub const fn uart_clk_sel(&self) -> super::vals::UartClkSel {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::UartClkSel::from_bits(val as u8)
     }
-    #[doc = "Selector for the UART clock multiplexor"]
+    #[doc = "Selector for the UART clock multiplexor."]
     #[inline(always)]
     pub const fn set_uart_clk_sel(&mut self, val: super::vals::UartClkSel) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
@@ -3580,7 +3580,7 @@ impl defmt::Format for Cscdr1 {
         )
     }
 }
-#[doc = "CCM Serial Clock Divider Register 2"]
+#[doc = "CCM Serial Clock Divider Register 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cscdr2(pub u32);
@@ -3597,26 +3597,26 @@ impl Cscdr2 {
     pub const fn set_lcdif_pred(&mut self, val: super::vals::LcdifPred) {
         self.0 = (self.0 & !(0x07 << 12usize)) | (((val.to_bits() as u32) & 0x07) << 12usize);
     }
-    #[doc = "Selector for lcdif root clock pre-multiplexer"]
+    #[doc = "Selector for lcdif root clock pre-multiplexer."]
     #[must_use]
     #[inline(always)]
     pub const fn lcdif_pre_clk_sel(&self) -> super::vals::LcdifPreClkSel {
         let val = (self.0 >> 15usize) & 0x07;
         super::vals::LcdifPreClkSel::from_bits(val as u8)
     }
-    #[doc = "Selector for lcdif root clock pre-multiplexer"]
+    #[doc = "Selector for lcdif root clock pre-multiplexer."]
     #[inline(always)]
     pub const fn set_lcdif_pre_clk_sel(&mut self, val: super::vals::LcdifPreClkSel) {
         self.0 = (self.0 & !(0x07 << 15usize)) | (((val.to_bits() as u32) & 0x07) << 15usize);
     }
-    #[doc = "Selector for the LPI2C clock multiplexor"]
+    #[doc = "Selector for the LPI2C clock multiplexor."]
     #[must_use]
     #[inline(always)]
     pub const fn lpi2c_clk_sel(&self) -> super::vals::Lpi2cClkSel {
         let val = (self.0 >> 18usize) & 0x01;
         super::vals::Lpi2cClkSel::from_bits(val as u8)
     }
-    #[doc = "Selector for the LPI2C clock multiplexor"]
+    #[doc = "Selector for the LPI2C clock multiplexor."]
     #[inline(always)]
     pub const fn set_lpi2c_clk_sel(&mut self, val: super::vals::Lpi2cClkSel) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val.to_bits() as u32) & 0x01) << 18usize);
@@ -3663,19 +3663,19 @@ impl defmt::Format for Cscdr2 {
         )
     }
 }
-#[doc = "CCM Serial Clock Divider Register 3"]
+#[doc = "CCM Serial Clock Divider Register 3."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cscdr3(pub u32);
 impl Cscdr3 {
-    #[doc = "Selector for csi_mclk multiplexer"]
+    #[doc = "Selector for csi_mclk multiplexer."]
     #[must_use]
     #[inline(always)]
     pub const fn csi_clk_sel(&self) -> super::vals::CsiClkSel {
         let val = (self.0 >> 9usize) & 0x03;
         super::vals::CsiClkSel::from_bits(val as u8)
     }
-    #[doc = "Selector for csi_mclk multiplexer"]
+    #[doc = "Selector for csi_mclk multiplexer."]
     #[inline(always)]
     pub const fn set_csi_clk_sel(&mut self, val: super::vals::CsiClkSel) {
         self.0 = (self.0 & !(0x03 << 9usize)) | (((val.to_bits() as u32) & 0x03) << 9usize);
@@ -3718,7 +3718,7 @@ impl defmt::Format for Cscdr3 {
         )
     }
 }
-#[doc = "CCM Serial Clock Multiplexer Register 1"]
+#[doc = "CCM Serial Clock Multiplexer Register 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cscmr1(pub u32);
@@ -3735,74 +3735,74 @@ impl Cscmr1 {
     pub const fn set_perclk_podf(&mut self, val: super::vals::PerclkPodf) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
     }
-    #[doc = "Selector for the perclk clock multiplexor"]
+    #[doc = "Selector for the perclk clock multiplexor."]
     #[must_use]
     #[inline(always)]
     pub const fn perclk_clk_sel(&self) -> super::vals::PerclkClkSel {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::PerclkClkSel::from_bits(val as u8)
     }
-    #[doc = "Selector for the perclk clock multiplexor"]
+    #[doc = "Selector for the perclk clock multiplexor."]
     #[inline(always)]
     pub const fn set_perclk_clk_sel(&mut self, val: super::vals::PerclkClkSel) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "Selector for sai1 clock multiplexer"]
+    #[doc = "Selector for sai1 clock multiplexer."]
     #[must_use]
     #[inline(always)]
     pub const fn sai1_clk_sel(&self) -> super::vals::Sai1ClkSel {
         let val = (self.0 >> 10usize) & 0x03;
         super::vals::Sai1ClkSel::from_bits(val as u8)
     }
-    #[doc = "Selector for sai1 clock multiplexer"]
+    #[doc = "Selector for sai1 clock multiplexer."]
     #[inline(always)]
     pub const fn set_sai1_clk_sel(&mut self, val: super::vals::Sai1ClkSel) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u32) & 0x03) << 10usize);
     }
-    #[doc = "Selector for sai2 clock multiplexer"]
+    #[doc = "Selector for sai2 clock multiplexer."]
     #[must_use]
     #[inline(always)]
     pub const fn sai2_clk_sel(&self) -> super::vals::Sai2ClkSel {
         let val = (self.0 >> 12usize) & 0x03;
         super::vals::Sai2ClkSel::from_bits(val as u8)
     }
-    #[doc = "Selector for sai2 clock multiplexer"]
+    #[doc = "Selector for sai2 clock multiplexer."]
     #[inline(always)]
     pub const fn set_sai2_clk_sel(&mut self, val: super::vals::Sai2ClkSel) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
     }
-    #[doc = "Selector for sai3/adc1/adc2 clock multiplexer"]
+    #[doc = "Selector for sai3/adc1/adc2 clock multiplexer."]
     #[must_use]
     #[inline(always)]
     pub const fn sai3_clk_sel(&self) -> super::vals::Sai3ClkSel {
         let val = (self.0 >> 14usize) & 0x03;
         super::vals::Sai3ClkSel::from_bits(val as u8)
     }
-    #[doc = "Selector for sai3/adc1/adc2 clock multiplexer"]
+    #[doc = "Selector for sai3/adc1/adc2 clock multiplexer."]
     #[inline(always)]
     pub const fn set_sai3_clk_sel(&mut self, val: super::vals::Sai3ClkSel) {
         self.0 = (self.0 & !(0x03 << 14usize)) | (((val.to_bits() as u32) & 0x03) << 14usize);
     }
-    #[doc = "Selector for usdhc1 clock multiplexer"]
+    #[doc = "Selector for usdhc1 clock multiplexer."]
     #[must_use]
     #[inline(always)]
     pub const fn usdhc1_clk_sel(&self) -> super::vals::Usdhc1ClkSel {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::Usdhc1ClkSel::from_bits(val as u8)
     }
-    #[doc = "Selector for usdhc1 clock multiplexer"]
+    #[doc = "Selector for usdhc1 clock multiplexer."]
     #[inline(always)]
     pub const fn set_usdhc1_clk_sel(&mut self, val: super::vals::Usdhc1ClkSel) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
     }
-    #[doc = "Selector for usdhc2 clock multiplexer"]
+    #[doc = "Selector for usdhc2 clock multiplexer."]
     #[must_use]
     #[inline(always)]
     pub const fn usdhc2_clk_sel(&self) -> super::vals::Usdhc2ClkSel {
         let val = (self.0 >> 17usize) & 0x01;
         super::vals::Usdhc2ClkSel::from_bits(val as u8)
     }
-    #[doc = "Selector for usdhc2 clock multiplexer"]
+    #[doc = "Selector for usdhc2 clock multiplexer."]
     #[inline(always)]
     pub const fn set_usdhc2_clk_sel(&mut self, val: super::vals::Usdhc2ClkSel) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
@@ -3819,14 +3819,14 @@ impl Cscmr1 {
     pub const fn set_flexspi_podf(&mut self, val: super::vals::FlexspiPodf) {
         self.0 = (self.0 & !(0x07 << 23usize)) | (((val.to_bits() as u32) & 0x07) << 23usize);
     }
-    #[doc = "Selector for flexspi clock multiplexer"]
+    #[doc = "Selector for flexspi clock multiplexer."]
     #[must_use]
     #[inline(always)]
     pub const fn flexspi_clk_sel(&self) -> super::vals::FlexspiClkSel {
         let val = (self.0 >> 29usize) & 0x03;
         super::vals::FlexspiClkSel::from_bits(val as u8)
     }
-    #[doc = "Selector for flexspi clock multiplexer"]
+    #[doc = "Selector for flexspi clock multiplexer."]
     #[inline(always)]
     pub const fn set_flexspi_clk_sel(&mut self, val: super::vals::FlexspiClkSel) {
         self.0 = (self.0 & !(0x03 << 29usize)) | (((val.to_bits() as u32) & 0x03) << 29usize);
@@ -3871,7 +3871,7 @@ impl defmt::Format for Cscmr1 {
         )
     }
 }
-#[doc = "CCM Serial Clock Multiplexer Register 2"]
+#[doc = "CCM Serial Clock Multiplexer Register 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cscmr2(pub u32);
@@ -3888,26 +3888,26 @@ impl Cscmr2 {
     pub const fn set_can_clk_podf(&mut self, val: super::vals::CanClkPodf) {
         self.0 = (self.0 & !(0x3f << 2usize)) | (((val.to_bits() as u32) & 0x3f) << 2usize);
     }
-    #[doc = "Selector for CAN/CANFD clock multiplexer"]
+    #[doc = "Selector for CAN/CANFD clock multiplexer."]
     #[must_use]
     #[inline(always)]
     pub const fn can_clk_sel(&self) -> super::vals::CanClkSel {
         let val = (self.0 >> 8usize) & 0x03;
         super::vals::CanClkSel::from_bits(val as u8)
     }
-    #[doc = "Selector for CAN/CANFD clock multiplexer"]
+    #[doc = "Selector for CAN/CANFD clock multiplexer."]
     #[inline(always)]
     pub const fn set_can_clk_sel(&mut self, val: super::vals::CanClkSel) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
-    #[doc = "Selector for flexio2/flexio3 clock multiplexer"]
+    #[doc = "Selector for flexio2/flexio3 clock multiplexer."]
     #[must_use]
     #[inline(always)]
     pub const fn flexio2_clk_sel(&self) -> super::vals::Flexio2ClkSel {
         let val = (self.0 >> 19usize) & 0x03;
         super::vals::Flexio2ClkSel::from_bits(val as u8)
     }
-    #[doc = "Selector for flexio2/flexio3 clock multiplexer"]
+    #[doc = "Selector for flexio2/flexio3 clock multiplexer."]
     #[inline(always)]
     pub const fn set_flexio2_clk_sel(&mut self, val: super::vals::Flexio2ClkSel) {
         self.0 = (self.0 & !(0x03 << 19usize)) | (((val.to_bits() as u32) & 0x03) << 19usize);
@@ -3940,19 +3940,19 @@ impl defmt::Format for Cscmr2 {
         )
     }
 }
-#[doc = "CCM Status Register"]
+#[doc = "CCM Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Csr(pub u32);
 impl Csr {
-    #[doc = "Status of the value of CCM_REF_EN_B output of ccm"]
+    #[doc = "Status of the value of CCM_REF_EN_B output of ccm."]
     #[must_use]
     #[inline(always)]
     pub const fn ref_en_b(&self) -> super::vals::RefEnB {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::RefEnB::from_bits(val as u8)
     }
-    #[doc = "Status of the value of CCM_REF_EN_B output of ccm"]
+    #[doc = "Status of the value of CCM_REF_EN_B output of ccm."]
     #[inline(always)]
     pub const fn set_ref_en_b(&mut self, val: super::vals::RefEnB) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
@@ -3969,14 +3969,14 @@ impl Csr {
     pub const fn set_camp2_ready(&mut self, val: super::vals::Camp2Ready) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "Status indication of on board oscillator"]
+    #[doc = "Status indication of on board oscillator."]
     #[must_use]
     #[inline(always)]
     pub const fn cosc_ready(&self) -> super::vals::CsrCoscReady {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::CsrCoscReady::from_bits(val as u8)
     }
-    #[doc = "Status indication of on board oscillator"]
+    #[doc = "Status indication of on board oscillator."]
     #[inline(always)]
     pub const fn set_cosc_ready(&mut self, val: super::vals::CsrCoscReady) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);

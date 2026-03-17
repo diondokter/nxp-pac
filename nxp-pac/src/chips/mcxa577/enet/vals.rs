@@ -2,7 +2,7 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Actphysel {
-    #[doc = "GMII or MII"]
+    #[doc = "GMII or MII."]
     GMII_MII = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
@@ -11,7 +11,7 @@ pub enum Actphysel {
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
-    #[doc = "B10T1S"]
+    #[doc = "B10T1S."]
     B10T1S = 0x08,
     _RESERVED_9 = 0x09,
     _RESERVED_a = 0x0a,
@@ -47,11 +47,11 @@ impl From<Actphysel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Addr64 {
-    #[doc = "32"]
+    #[doc = "32."]
     M_32 = 0x0,
-    #[doc = "40"]
+    #[doc = "40."]
     M_40 = 0x01,
-    #[doc = "48"]
+    #[doc = "48."]
     M_48 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -81,9 +81,9 @@ impl From<Addr64> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Addsub {
-    #[doc = "Add time"]
+    #[doc = "Add time."]
     ADD = 0x0,
-    #[doc = "Subtract time"]
+    #[doc = "Subtract time."]
     SUB = 0x01,
 }
 impl Addsub {
@@ -112,7 +112,7 @@ impl From<Addsub> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Asp {
-    #[doc = "No Safety features selected"]
+    #[doc = "No Safety features selected."]
     NONE = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
@@ -144,10 +144,10 @@ impl From<Asp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Auxsnapnum {
-    #[doc = "No auxiliary input"]
+    #[doc = "No auxiliary input."]
     NO_AUXI = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "2 auxiliary input"]
+    #[doc = "2 auxiliary input."]
     M_2_AUXI = 0x02,
     _RESERVED_3 = 0x03,
     _RESERVED_4 = 0x04,
@@ -181,13 +181,13 @@ impl From<Auxsnapnum> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bl {
-    #[doc = "k = min(n,10)"]
+    #[doc = "k = min(n,10)."]
     MIN_N_10 = 0x0,
-    #[doc = "k = min(n,8)"]
+    #[doc = "k = min(n,8)."]
     MIN_N_8 = 0x01,
-    #[doc = "k = min(n,4)"]
+    #[doc = "k = min(n,4)."]
     MIN_N_4 = 0x02,
-    #[doc = "k = min(n,1)"]
+    #[doc = "k = min(n,1)."]
     MIN_N_1 = 0x03,
 }
 impl Bl {
@@ -216,9 +216,9 @@ impl From<Bl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dbf {
-    #[doc = "Enable Broadcast Packets"]
+    #[doc = "Enable Broadcast Packets."]
     ENABLE = 0x0,
-    #[doc = "Disable Broadcast Packets"]
+    #[doc = "Disable Broadcast Packets."]
     DISABLE = 0x01,
 }
 impl Dbf {
@@ -247,9 +247,9 @@ impl From<Dbf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dcrcc {
-    #[doc = "CRC Checking is enabled"]
+    #[doc = "CRC Checking is enabled."]
     ENABLE = 0x0,
-    #[doc = "CRC Checking is disabled"]
+    #[doc = "CRC Checking is disabled."]
     DISABLE = 0x01,
 }
 impl Dcrcc {
@@ -278,9 +278,9 @@ impl From<Dcrcc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dcrs {
-    #[doc = "Enable Carrier Sense During Transmission"]
+    #[doc = "Enable Carrier Sense During Transmission."]
     ENABLE = 0x0,
-    #[doc = "Disable Carrier Sense During Transmission"]
+    #[doc = "Disable Carrier Sense During Transmission."]
     DISABLE = 0x01,
 }
 impl Dcrs {
@@ -309,9 +309,9 @@ impl From<Dcrs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dm {
-    #[doc = "Half-duplex mode"]
+    #[doc = "Half-duplex mode."]
     HDUPLX = 0x0,
-    #[doc = "Full-duplex mode"]
+    #[doc = "Full-duplex mode."]
     FDUPLX = 0x01,
 }
 impl Dm {
@@ -340,9 +340,9 @@ impl From<Dm> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Do {
-    #[doc = "Enable Receive Own"]
+    #[doc = "Enable Receive Own."]
     ENABLE = 0x0,
-    #[doc = "Disable Receive Own"]
+    #[doc = "Disable Receive Own."]
     DISABLE = 0x01,
 }
 impl Do {
@@ -371,9 +371,9 @@ impl From<Do> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dovltc {
-    #[doc = "VLAN Type Check is enabled"]
+    #[doc = "VLAN Type Check is enabled."]
     ENABLE = 0x0,
-    #[doc = "VLAN Type Check is disabled"]
+    #[doc = "VLAN Type Check is disabled."]
     DISABLE = 0x01,
 }
 impl Dovltc {
@@ -402,9 +402,9 @@ impl From<Dovltc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dr {
-    #[doc = "Enable Retry"]
+    #[doc = "Enable Retry."]
     ENABLE = 0x0,
-    #[doc = "Disable Retry"]
+    #[doc = "Disable Retry."]
     DISABLE = 0x01,
 }
 impl Dr {
@@ -433,9 +433,9 @@ impl From<Dr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dzpq {
-    #[doc = "Zero-Quanta Pause packet generation is enabled"]
+    #[doc = "Zero-Quanta Pause packet generation is enabled."]
     ENABLE = 0x0,
-    #[doc = "Zero-Quanta Pause packet generation is disabled"]
+    #[doc = "Zero-Quanta Pause packet generation is disabled."]
     DISABLE = 0x01,
 }
 impl Dzpq {
@@ -464,13 +464,13 @@ impl From<Dzpq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Eivls {
-    #[doc = "Do not strip"]
+    #[doc = "Do not strip."]
     DONOT = 0x0,
-    #[doc = "Strip if VLAN filter passes"]
+    #[doc = "Strip if VLAN filter passes."]
     IFPASS = 0x01,
-    #[doc = "Strip if VLAN filter fails"]
+    #[doc = "Strip if VLAN filter fails."]
     IFFAIL = 0x02,
-    #[doc = "Always strip"]
+    #[doc = "Always strip."]
     ALWAYS = 0x03,
 }
 impl Eivls {
@@ -499,11 +499,11 @@ impl From<Eivls> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Estdep {
-    #[doc = "No Depth configured"]
+    #[doc = "No Depth configured."]
     NODEPTH = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
-    #[doc = "256"]
+    #[doc = "256."]
     DEPTH256 = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
@@ -536,11 +536,11 @@ impl From<Estdep> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Estwid {
-    #[doc = "Width not configured"]
+    #[doc = "Width not configured."]
     NOWIDTH = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
-    #[doc = "24"]
+    #[doc = "24."]
     WIDTH24 = 0x03,
 }
 impl Estwid {
@@ -569,13 +569,13 @@ impl From<Estwid> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Evls {
-    #[doc = "Do not strip"]
+    #[doc = "Do not strip."]
     DONOT = 0x0,
-    #[doc = "Strip if VLAN filter passes"]
+    #[doc = "Strip if VLAN filter passes."]
     IFPASS = 0x01,
-    #[doc = "Strip if VLAN filter fails"]
+    #[doc = "Strip if VLAN filter fails."]
     IFFAIL = 0x02,
-    #[doc = "Always strip"]
+    #[doc = "Always strip."]
     ALWAYS = 0x03,
 }
 impl Evls {
@@ -604,9 +604,9 @@ impl From<Evls> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fes {
-    #[doc = "10 Mbps when PS bit is 1 and 1 Gbps when PS bit is 0"]
+    #[doc = "10 Mbps when PS bit is 1 and 1 Gbps when PS bit is 0."]
     M_10_1000M = 0x0,
-    #[doc = "100 Mbps when PS bit is 1 and 2.5 Gbps when PS bit is 0"]
+    #[doc = "100 Mbps when PS bit is 1 and 2.5 Gbps when PS bit is 0."]
     M_100_2500M = 0x01,
 }
 impl Fes {
@@ -637,7 +637,7 @@ impl From<Fes> for u8 {
 pub enum Frpbs {
     _RESERVED_0 = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "256 Bytes"]
+    #[doc = "256 Bytes."]
     M_256BYTES = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -669,7 +669,7 @@ impl From<Frpbs> for u8 {
 pub enum Frpes {
     _RESERVED_0 = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "256 Entries"]
+    #[doc = "256 Entries."]
     M_256ENTR = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -699,13 +699,13 @@ impl From<Frpes> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Hashtblsz {
-    #[doc = "No hash table"]
+    #[doc = "No hash table."]
     NO_HT = 0x0,
-    #[doc = "64"]
+    #[doc = "64."]
     M_64 = 0x01,
-    #[doc = "128"]
+    #[doc = "128."]
     M_128 = 0x02,
-    #[doc = "256"]
+    #[doc = "256."]
     M_256 = 0x03,
 }
 impl Hashtblsz {
@@ -734,21 +734,21 @@ impl From<Hashtblsz> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ipg {
-    #[doc = "96 bit times IPG"]
+    #[doc = "96 bit times IPG."]
     IPG96 = 0x0,
-    #[doc = "88 bit times IPG"]
+    #[doc = "88 bit times IPG."]
     IPG88 = 0x01,
-    #[doc = "80 bit times IPG"]
+    #[doc = "80 bit times IPG."]
     IPG80 = 0x02,
-    #[doc = "72 bit times IPG"]
+    #[doc = "72 bit times IPG."]
     IPG72 = 0x03,
-    #[doc = "64 bit times IPG"]
+    #[doc = "64 bit times IPG."]
     IPG64 = 0x04,
-    #[doc = "56 bit times IPG"]
+    #[doc = "56 bit times IPG."]
     IPG56 = 0x05,
-    #[doc = "48 bit times IPG"]
+    #[doc = "48 bit times IPG."]
     IPG48 = 0x06,
-    #[doc = "40 bit times IPG"]
+    #[doc = "40 bit times IPG."]
     IPG40 = 0x07,
 }
 impl Ipg {
@@ -777,9 +777,9 @@ impl From<Ipg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Jd {
-    #[doc = "Jabber is enabled"]
+    #[doc = "Jabber is enabled."]
     ENABLE = 0x0,
-    #[doc = "Jabber is disabled"]
+    #[doc = "Jabber is disabled."]
     DISABLE = 0x01,
 }
 impl Jd {
@@ -808,35 +808,35 @@ impl From<Jd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Jto {
-    #[doc = "2 KB"]
+    #[doc = "2 KB."]
     KB2 = 0x0,
-    #[doc = "3 KB"]
+    #[doc = "3 KB."]
     KB3 = 0x01,
-    #[doc = "4 KB"]
+    #[doc = "4 KB."]
     KB4 = 0x02,
-    #[doc = "5 KB"]
+    #[doc = "5 KB."]
     KB5 = 0x03,
-    #[doc = "6 KB"]
+    #[doc = "6 KB."]
     KB6 = 0x04,
-    #[doc = "7 KB"]
+    #[doc = "7 KB."]
     KB7 = 0x05,
-    #[doc = "8 KB"]
+    #[doc = "8 KB."]
     KB8 = 0x06,
-    #[doc = "9 KB"]
+    #[doc = "9 KB."]
     KB9 = 0x07,
-    #[doc = "10 KB"]
+    #[doc = "10 KB."]
     KB10 = 0x08,
-    #[doc = "11 KB"]
+    #[doc = "11 KB."]
     KB11 = 0x09,
-    #[doc = "12 KB"]
+    #[doc = "12 KB."]
     KB12 = 0x0a,
-    #[doc = "13 KB"]
+    #[doc = "13 KB."]
     KB13 = 0x0b,
-    #[doc = "14 KB"]
+    #[doc = "14 KB."]
     KB14 = 0x0c,
-    #[doc = "15 KB"]
+    #[doc = "15 KB."]
     KB15 = 0x0d,
-    #[doc = "16383 Bytes"]
+    #[doc = "16383 Bytes."]
     B16383 = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -866,23 +866,23 @@ impl From<Jto> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum L3l4fnum {
-    #[doc = "No L3 or L4 Filter"]
+    #[doc = "No L3 or L4 Filter."]
     NOFILT = 0x0,
-    #[doc = "1 L3 or L4 Filter"]
+    #[doc = "1 L3 or L4 Filter."]
     M_1FILT = 0x01,
-    #[doc = "2 L3 or L4 Filters"]
+    #[doc = "2 L3 or L4 Filters."]
     M_2FILT = 0x02,
-    #[doc = "3 L3 or L4 Filters"]
+    #[doc = "3 L3 or L4 Filters."]
     M_3FILT = 0x03,
-    #[doc = "4 L3 or L4 Filters"]
+    #[doc = "4 L3 or L4 Filters."]
     M_4FILT = 0x04,
-    #[doc = "5 L3 or L4 Filters"]
+    #[doc = "5 L3 or L4 Filters."]
     M_5FILT = 0x05,
-    #[doc = "6 L3 or L4 Filters"]
+    #[doc = "6 L3 or L4 Filters."]
     M_6FILT = 0x06,
-    #[doc = "7 L3 or L4 Filters"]
+    #[doc = "7 L3 or L4 Filters."]
     M_7FILT = 0x07,
-    #[doc = "8 L3 or L4 Filters"]
+    #[doc = "8 L3 or L4 Filters."]
     M_8FILT = 0x08,
     _RESERVED_9 = 0x09,
     _RESERVED_a = 0x0a,
@@ -918,9 +918,9 @@ impl From<L3l4fnum> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MacInnerVlanInclCsvl {
-    #[doc = "C-VLAN type (0x8100) is inserted"]
+    #[doc = "C-VLAN type (0x8100) is inserted."]
     _CVLAN = 0x0,
-    #[doc = "S-VLAN type (0x88A8) is inserted"]
+    #[doc = "S-VLAN type (0x88A8) is inserted."]
     _SVLAN = 0x01,
 }
 impl MacInnerVlanInclCsvl {
@@ -949,13 +949,13 @@ impl From<MacInnerVlanInclCsvl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MacInnerVlanInclVlc {
-    #[doc = "No VLAN tag deletion, insertion, or replacement"]
+    #[doc = "No VLAN tag deletion, insertion, or replacement."]
     NO_TAG_DEL_INS_REP = 0x0,
-    #[doc = "VLAN tag deletion"]
+    #[doc = "VLAN tag deletion."]
     TAG_DEL = 0x01,
-    #[doc = "VLAN tag insertion"]
+    #[doc = "VLAN tag insertion."]
     TAG_INS = 0x02,
-    #[doc = "VLAN tag replacement"]
+    #[doc = "VLAN tag replacement."]
     TAG_REP = 0x03,
 }
 impl MacInnerVlanInclVlc {
@@ -984,9 +984,9 @@ impl From<MacInnerVlanInclVlc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MacVlanInclCsvl {
-    #[doc = "C-VLAN type (0x8100) is inserted or replaced"]
+    #[doc = "C-VLAN type (0x8100) is inserted or replaced."]
     _CVLAN = 0x0,
-    #[doc = "S-VLAN type (0x88A8) is inserted or replaced"]
+    #[doc = "S-VLAN type (0x88A8) is inserted or replaced."]
     _SVLAN = 0x01,
 }
 impl MacVlanInclCsvl {
@@ -1015,13 +1015,13 @@ impl From<MacVlanInclCsvl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MacVlanInclVlc {
-    #[doc = "No VLAN tag deletion, insertion, or replacement"]
+    #[doc = "No VLAN tag deletion, insertion, or replacement."]
     NO_TAG_DEL_INS_REP = 0x0,
-    #[doc = "VLAN tag deletion"]
+    #[doc = "VLAN tag deletion."]
     TAG_DEL = 0x01,
-    #[doc = "VLAN tag insertion"]
+    #[doc = "VLAN tag insertion."]
     TAG_INS = 0x02,
-    #[doc = "VLAN tag replacement"]
+    #[doc = "VLAN tag replacement."]
     TAG_REP = 0x03,
 }
 impl MacVlanInclVlc {
@@ -1050,7 +1050,7 @@ impl From<MacVlanInclVlc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nrvf {
-    #[doc = "No Extended Rx VLAN Filters"]
+    #[doc = "No Extended Rx VLAN Filters."]
     NO_ERVLAN = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
@@ -1086,13 +1086,13 @@ impl From<Nrvf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcf {
-    #[doc = "MAC filters all control packets from reaching the application"]
+    #[doc = "MAC filters all control packets from reaching the application."]
     FLTR_ALL = 0x0,
-    #[doc = "MAC forwards all control packets except Pause packets to the application even if they fail the Address filter"]
+    #[doc = "MAC forwards all control packets except Pause packets to the application even if they fail the Address filter."]
     FW_XCPT_PAU = 0x01,
-    #[doc = "MAC forwards all control packets to the application even if they fail the Address filter"]
+    #[doc = "MAC forwards all control packets to the application even if they fail the Address filter."]
     FW_ALL = 0x02,
-    #[doc = "MAC forwards the control packets that pass the Address filter"]
+    #[doc = "MAC forwards the control packets that pass the Address filter."]
     FW_PASS = 0x03,
 }
 impl Pcf {
@@ -1121,11 +1121,11 @@ impl From<Pcf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcsel {
-    #[doc = "Policing counter feature is not selected"]
+    #[doc = "Policing counter feature is not selected."]
     INACTIVE = 0x0,
-    #[doc = "16 Policing counters are selected"]
+    #[doc = "16 Policing counters are selected."]
     PCNUM_16 = 0x01,
-    #[doc = "32 Policing counters are selected"]
+    #[doc = "32 Policing counters are selected."]
     PCNUM_32 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -1155,17 +1155,17 @@ impl From<Pcsel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Plt {
-    #[doc = "Pause Time minus 4 Slot Times (PT -4 slot times)"]
+    #[doc = "Pause Time minus 4 Slot Times (PT -4 slot times)."]
     PT4 = 0x0,
-    #[doc = "Pause Time minus 28 Slot Times (PT -28 slot times)"]
+    #[doc = "Pause Time minus 28 Slot Times (PT -28 slot times)."]
     PT28 = 0x01,
-    #[doc = "Pause Time minus 36 Slot Times (PT -36 slot times)"]
+    #[doc = "Pause Time minus 36 Slot Times (PT -36 slot times)."]
     PT36 = 0x02,
-    #[doc = "Pause Time minus 144 Slot Times (PT -144 slot times)"]
+    #[doc = "Pause Time minus 144 Slot Times (PT -144 slot times)."]
     PT144 = 0x03,
-    #[doc = "Pause Time minus 256 Slot Times (PT -256 slot times)"]
+    #[doc = "Pause Time minus 256 Slot Times (PT -256 slot times)."]
     PT256 = 0x04,
-    #[doc = "Pause Time minus 512 Slot Times (PT -512 slot times)"]
+    #[doc = "Pause Time minus 512 Slot Times (PT -512 slot times)."]
     PT512 = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -1196,7 +1196,7 @@ impl From<Plt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ppsoutnum {
-    #[doc = "No PPS output"]
+    #[doc = "No PPS output."]
     NO_PPSO = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
@@ -1232,11 +1232,11 @@ impl From<Ppsoutnum> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prelen {
-    #[doc = "7 bytes of preamble"]
+    #[doc = "7 bytes of preamble."]
     M_7BYTES = 0x0,
-    #[doc = "5 bytes of preamble"]
+    #[doc = "5 bytes of preamble."]
     M_5BYTES = 0x01,
-    #[doc = "3 bytes of preamble"]
+    #[doc = "3 bytes of preamble."]
     M_3BYTES = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -1266,9 +1266,9 @@ impl From<Prelen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ps {
-    #[doc = "For 1000 or 2500 Mbps operations"]
+    #[doc = "For 1000 or 2500 Mbps operations."]
     M_1000_2500M = 0x0,
-    #[doc = "For 10 or 100 Mbps operations"]
+    #[doc = "For 10 or 100 Mbps operations."]
     M_10_100M = 0x01,
 }
 impl Ps {
@@ -1297,9 +1297,9 @@ impl From<Ps> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rdcsz {
-    #[doc = "Desc Cache not configured"]
+    #[doc = "Desc Cache not configured."]
     NO_DCACHE = 0x0,
-    #[doc = "4"]
+    #[doc = "4."]
     M_1RDCSZ = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -1330,7 +1330,7 @@ impl From<Rdcsz> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rxchcnt {
-    #[doc = "1 DMA Rx Channel"]
+    #[doc = "1 DMA Rx Channel."]
     D_1RXCH = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
@@ -1374,29 +1374,29 @@ impl From<Rxchcnt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rxfifosize {
-    #[doc = "128 bytes"]
+    #[doc = "128 bytes."]
     M_128B = 0x0,
-    #[doc = "256 bytes"]
+    #[doc = "256 bytes."]
     M_256B = 0x01,
-    #[doc = "512 bytes"]
+    #[doc = "512 bytes."]
     M_512B = 0x02,
-    #[doc = "1024 bytes"]
+    #[doc = "1024 bytes."]
     M_1024B = 0x03,
-    #[doc = "2048 bytes"]
+    #[doc = "2048 bytes."]
     M_2048B = 0x04,
-    #[doc = "4096 bytes"]
+    #[doc = "4096 bytes."]
     M_4096B = 0x05,
-    #[doc = "8192 bytes"]
+    #[doc = "8192 bytes."]
     M_8192B = 0x06,
-    #[doc = "16384 bytes"]
+    #[doc = "16384 bytes."]
     M_16384B = 0x07,
-    #[doc = "32 KB"]
+    #[doc = "32 KB."]
     M_32KB = 0x08,
-    #[doc = "64 KB"]
+    #[doc = "64 KB."]
     M_64KB = 0x09,
-    #[doc = "128 KB"]
+    #[doc = "128 KB."]
     M_128KB = 0x0a,
-    #[doc = "256 KB"]
+    #[doc = "256 KB."]
     M_256KB = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
@@ -1445,7 +1445,7 @@ impl From<Rxfifosize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rxqcnt {
-    #[doc = "1 MTL Rx Queue"]
+    #[doc = "1 MTL Rx Queue."]
     M_1RXQ = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
@@ -1489,18 +1489,18 @@ impl From<Rxqcnt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sarc {
-    #[doc = "mti_sa_ctrl_i and ati_sa_ctrl_i input signals control the SA field generation"]
+    #[doc = "mti_sa_ctrl_i and ati_sa_ctrl_i input signals control the SA field generation."]
     CTRL_SA_GEN = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "Contents of MAC Addr-0 inserted in SA field"]
+    #[doc = "Contents of MAC Addr-0 inserted in SA field."]
     ADD0_INSRT_IN_SA = 0x02,
-    #[doc = "Contents of MAC Addr-0 replaces SA field"]
+    #[doc = "Contents of MAC Addr-0 replaces SA field."]
     ADD0_REPL_SA = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
-    #[doc = "Contents of MAC Addr-1 inserted in SA field"]
+    #[doc = "Contents of MAC Addr-1 inserted in SA field."]
     ADD1_INSRT_IN_SA = 0x06,
-    #[doc = "Contents of MAC Addr-1 replaces SA field"]
+    #[doc = "Contents of MAC Addr-1 replaces SA field."]
     ADD1_REPL_SA = 0x07,
 }
 impl Sarc {
@@ -1529,9 +1529,9 @@ impl From<Sarc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tdcsz {
-    #[doc = "Desc Cache not configured"]
+    #[doc = "Desc Cache not configured."]
     NO_DCACHE = 0x0,
-    #[doc = "4"]
+    #[doc = "4."]
     M_1TDCSZ = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -1562,13 +1562,13 @@ impl From<Tdcsz> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tfcsts {
-    #[doc = "Idle state"]
+    #[doc = "Idle state."]
     IDLE = 0x0,
-    #[doc = "Waiting for one of the following: Status of the previous packet OR IPG or back off period to be over"]
+    #[doc = "Waiting for one of the following: Status of the previous packet OR IPG or back off period to be over."]
     WAITING = 0x01,
-    #[doc = "Generating and transmitting a Pause control packet (in full-duplex mode)"]
+    #[doc = "Generating and transmitting a Pause control packet (in full-duplex mode)."]
     GEN_TX_PAU = 0x02,
-    #[doc = "Transferring input packet for transmission"]
+    #[doc = "Transferring input packet for transmission."]
     TRNSFR = 0x03,
 }
 impl Tfcsts {
@@ -1597,9 +1597,9 @@ impl From<Tfcsts> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tscfupdt {
-    #[doc = "Coarse method is used to update system timestamp"]
+    #[doc = "Coarse method is used to update system timestamp."]
     COARSE = 0x0,
-    #[doc = "Fine method is used to update system timestamp"]
+    #[doc = "Fine method is used to update system timestamp."]
     FINE = 0x01,
 }
 impl Tscfupdt {
@@ -1628,9 +1628,9 @@ impl From<Tscfupdt> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Tsss(u32);
 impl Tsss {
-    #[doc = "Power down is disabled"]
+    #[doc = "Power down is disabled."]
     pub const DISABLE: Self = Self(0x0);
-    #[doc = "Power down is enabled"]
+    #[doc = "Power down is enabled."]
     pub const ENABLE: Self = Self(0x01);
 }
 impl Tsss {
@@ -1677,11 +1677,11 @@ impl From<Tsss> for u32 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tsstssel {
     _RESERVED_0 = 0x0,
-    #[doc = "Internal"]
+    #[doc = "Internal."]
     INTRNL = 0x01,
-    #[doc = "External"]
+    #[doc = "External."]
     EXTRNL = 0x02,
-    #[doc = "Both"]
+    #[doc = "Both."]
     BOTH = 0x03,
 }
 impl Tsstssel {
@@ -1710,7 +1710,7 @@ impl From<Tsstssel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Txchcnt {
-    #[doc = "1 DMA Tx Channel"]
+    #[doc = "1 DMA Tx Channel."]
     D_1TXCH = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
@@ -1754,27 +1754,27 @@ impl From<Txchcnt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Txfifosize {
-    #[doc = "128 bytes"]
+    #[doc = "128 bytes."]
     M_128B = 0x0,
-    #[doc = "256 bytes"]
+    #[doc = "256 bytes."]
     M_256B = 0x01,
-    #[doc = "512 bytes"]
+    #[doc = "512 bytes."]
     M_512B = 0x02,
-    #[doc = "1024 bytes"]
+    #[doc = "1024 bytes."]
     M_1024B = 0x03,
-    #[doc = "2048 bytes"]
+    #[doc = "2048 bytes."]
     M_2048B = 0x04,
-    #[doc = "4096 bytes"]
+    #[doc = "4096 bytes."]
     M_4096B = 0x05,
-    #[doc = "8192 bytes"]
+    #[doc = "8192 bytes."]
     M_8192B = 0x06,
-    #[doc = "16384 bytes"]
+    #[doc = "16384 bytes."]
     M_16384B = 0x07,
-    #[doc = "32 KB"]
+    #[doc = "32 KB."]
     M_32KB = 0x08,
-    #[doc = "64 KB"]
+    #[doc = "64 KB."]
     M_64KB = 0x09,
-    #[doc = "128 KB"]
+    #[doc = "128 KB."]
     M_128KB = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
@@ -1824,7 +1824,7 @@ impl From<Txfifosize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Txqcnt {
-    #[doc = "1 MTL Tx Queue"]
+    #[doc = "1 MTL Tx Queue."]
     M_1TXQ = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
@@ -1868,9 +1868,9 @@ impl From<Txqcnt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wd {
-    #[doc = "Watchdog is enabled"]
+    #[doc = "Watchdog is enabled."]
     ENABLE = 0x0,
-    #[doc = "Watchdog is disabled"]
+    #[doc = "Watchdog is disabled."]
     DISABLE = 0x01,
 }
 impl Wd {
@@ -1899,35 +1899,35 @@ impl From<Wd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wto {
-    #[doc = "2 KB"]
+    #[doc = "2 KB."]
     KB2 = 0x0,
-    #[doc = "3 KB"]
+    #[doc = "3 KB."]
     KB3 = 0x01,
-    #[doc = "4 KB"]
+    #[doc = "4 KB."]
     KB4 = 0x02,
-    #[doc = "5 KB"]
+    #[doc = "5 KB."]
     KB5 = 0x03,
-    #[doc = "6 KB"]
+    #[doc = "6 KB."]
     KB6 = 0x04,
-    #[doc = "7 KB"]
+    #[doc = "7 KB."]
     KB7 = 0x05,
-    #[doc = "8 KB"]
+    #[doc = "8 KB."]
     KB8 = 0x06,
-    #[doc = "9 KB"]
+    #[doc = "9 KB."]
     KB9 = 0x07,
-    #[doc = "10 KB"]
+    #[doc = "10 KB."]
     KB10 = 0x08,
-    #[doc = "11 KB"]
+    #[doc = "11 KB."]
     KB11 = 0x09,
-    #[doc = "12 KB"]
+    #[doc = "12 KB."]
     KB12 = 0x0a,
-    #[doc = "13 KB"]
+    #[doc = "13 KB."]
     KB13 = 0x0b,
-    #[doc = "14 KB"]
+    #[doc = "14 KB."]
     KB14 = 0x0c,
-    #[doc = "15 KB"]
+    #[doc = "15 KB."]
     KB15 = 0x0d,
-    #[doc = "16383 Bytes"]
+    #[doc = "16383 Bytes."]
     B16383 = 0x0e,
     _RESERVED_f = 0x0f,
 }

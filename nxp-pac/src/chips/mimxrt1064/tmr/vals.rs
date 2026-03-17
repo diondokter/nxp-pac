@@ -2,11 +2,11 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Csctrl0Cl1 {
-    #[doc = "Never preload"]
+    #[doc = "Never preload."]
     NEVER = 0x0,
-    #[doc = "Load upon successful compare with the value in COMP1"]
+    #[doc = "Load upon successful compare with the value in COMP1."]
     COMP1 = 0x01,
-    #[doc = "Load upon successful compare with the value in COMP2"]
+    #[doc = "Load upon successful compare with the value in COMP2."]
     COMP2 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -36,11 +36,11 @@ impl From<Csctrl0Cl1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Csctrl0Cl2 {
-    #[doc = "Never preload"]
+    #[doc = "Never preload."]
     NEVER = 0x0,
-    #[doc = "Load upon successful compare with the value in COMP1"]
+    #[doc = "Load upon successful compare with the value in COMP1."]
     COMP1 = 0x01,
-    #[doc = "Load upon successful compare with the value in COMP2"]
+    #[doc = "Load upon successful compare with the value in COMP2."]
     COMP2 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -70,7 +70,7 @@ impl From<Csctrl0Cl2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Csctrl0DbgEn {
-    #[doc = "Continue with normal operation during debug mode. (default)"]
+    #[doc = "Continue with normal operation during debug mode. (default)."]
     NORMAL = 0x0,
     #[doc = "Halt TMR counter during debug mode."]
     HALT_TMR = 0x01,
@@ -167,11 +167,11 @@ impl From<Csctrl0Up> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Csctrl1Cl1 {
-    #[doc = "Never preload"]
+    #[doc = "Never preload."]
     NEVER = 0x0,
-    #[doc = "Load upon successful compare with the value in COMP1"]
+    #[doc = "Load upon successful compare with the value in COMP1."]
     COMP1 = 0x01,
-    #[doc = "Load upon successful compare with the value in COMP2"]
+    #[doc = "Load upon successful compare with the value in COMP2."]
     COMP2 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -201,11 +201,11 @@ impl From<Csctrl1Cl1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Csctrl1Cl2 {
-    #[doc = "Never preload"]
+    #[doc = "Never preload."]
     NEVER = 0x0,
-    #[doc = "Load upon successful compare with the value in COMP1"]
+    #[doc = "Load upon successful compare with the value in COMP1."]
     COMP1 = 0x01,
-    #[doc = "Load upon successful compare with the value in COMP2"]
+    #[doc = "Load upon successful compare with the value in COMP2."]
     COMP2 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -235,7 +235,7 @@ impl From<Csctrl1Cl2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Csctrl1DbgEn {
-    #[doc = "Continue with normal operation during debug mode. (default)"]
+    #[doc = "Continue with normal operation during debug mode. (default)."]
     NORMAL = 0x0,
     #[doc = "Halt TMR counter during debug mode."]
     HALT_TMR = 0x01,
@@ -332,11 +332,11 @@ impl From<Csctrl1Up> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Csctrl2Cl1 {
-    #[doc = "Never preload"]
+    #[doc = "Never preload."]
     NEVER = 0x0,
-    #[doc = "Load upon successful compare with the value in COMP1"]
+    #[doc = "Load upon successful compare with the value in COMP1."]
     COMP1 = 0x01,
-    #[doc = "Load upon successful compare with the value in COMP2"]
+    #[doc = "Load upon successful compare with the value in COMP2."]
     COMP2 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -366,11 +366,11 @@ impl From<Csctrl2Cl1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Csctrl2Cl2 {
-    #[doc = "Never preload"]
+    #[doc = "Never preload."]
     NEVER = 0x0,
-    #[doc = "Load upon successful compare with the value in COMP1"]
+    #[doc = "Load upon successful compare with the value in COMP1."]
     COMP1 = 0x01,
-    #[doc = "Load upon successful compare with the value in COMP2"]
+    #[doc = "Load upon successful compare with the value in COMP2."]
     COMP2 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -400,7 +400,7 @@ impl From<Csctrl2Cl2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Csctrl2DbgEn {
-    #[doc = "Continue with normal operation during debug mode. (default)"]
+    #[doc = "Continue with normal operation during debug mode. (default)."]
     NORMAL = 0x0,
     #[doc = "Halt TMR counter during debug mode."]
     HALT_TMR = 0x01,
@@ -497,11 +497,11 @@ impl From<Csctrl2Up> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Csctrl3Cl1 {
-    #[doc = "Never preload"]
+    #[doc = "Never preload."]
     NEVER = 0x0,
-    #[doc = "Load upon successful compare with the value in COMP1"]
+    #[doc = "Load upon successful compare with the value in COMP1."]
     COMP1 = 0x01,
-    #[doc = "Load upon successful compare with the value in COMP2"]
+    #[doc = "Load upon successful compare with the value in COMP2."]
     COMP2 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -531,11 +531,11 @@ impl From<Csctrl3Cl1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Csctrl3Cl2 {
-    #[doc = "Never preload"]
+    #[doc = "Never preload."]
     NEVER = 0x0,
-    #[doc = "Load upon successful compare with the value in COMP1"]
+    #[doc = "Load upon successful compare with the value in COMP1."]
     COMP1 = 0x01,
-    #[doc = "Load upon successful compare with the value in COMP2"]
+    #[doc = "Load upon successful compare with the value in COMP2."]
     COMP2 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -565,7 +565,7 @@ impl From<Csctrl3Cl2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Csctrl3DbgEn {
-    #[doc = "Continue with normal operation during debug mode. (default)"]
+    #[doc = "Continue with normal operation during debug mode. (default)."]
     NORMAL = 0x0,
     #[doc = "Halt TMR counter during debug mode."]
     HALT_TMR = 0x01,
@@ -662,19 +662,19 @@ impl From<Csctrl3Up> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl0Cm {
-    #[doc = "No operation"]
+    #[doc = "No operation."]
     NOOP = 0x0,
     #[doc = "Count rising edges of primary sourceRising edges are counted only when SCTRL\\[IPS\\] = 0. Falling edges are counted when SCTRL\\[IPS\\] = 1. If the primary count source is IP bus clock divide by 1, only rising edges are counted regardless of the value of SCTRL\\[IPS\\]."]
     RISING_ONLY = 0x01,
     #[doc = "Count rising and falling edges of primary sourceIP bus clock divide by 1 cannot be used as a primary count source in edge count mode."]
     RISING_AND_FALLING = 0x02,
-    #[doc = "Count rising edges of primary source while secondary input high active"]
+    #[doc = "Count rising edges of primary source while secondary input high active."]
     RISING_WHILE_SEC_HIGH = 0x03,
-    #[doc = "Quadrature count mode, uses primary and secondary sources"]
+    #[doc = "Quadrature count mode, uses primary and secondary sources."]
     QUADRATURE = 0x04,
     #[doc = "Count rising edges of primary source; secondary source specifies directionRising edges are counted only when SCTRL\\[IPS\\] = 0. Falling edges are counted when SCTRL\\[IPS\\] = 1."]
     RISING_SEC_DIR = 0x05,
-    #[doc = "Edge of secondary source triggers primary count until compare"]
+    #[doc = "Edge of secondary source triggers primary count until compare."]
     SECONDARY = 0x06,
     #[doc = "Cascaded counter mode (up/down)The primary count source must be set to one of the counter outputs."]
     CASCADE = 0x07,
@@ -798,21 +798,21 @@ impl From<Ctrl0Once> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl0Outmode {
-    #[doc = "Asserted while counter is active"]
+    #[doc = "Asserted while counter is active."]
     COUNTER_ACTIVE = 0x0,
-    #[doc = "Clear OFLAG output on successful compare"]
+    #[doc = "Clear OFLAG output on successful compare."]
     CLEAR_OFLAG = 0x01,
-    #[doc = "Set OFLAG output on successful compare"]
+    #[doc = "Set OFLAG output on successful compare."]
     SET_OFLAG = 0x02,
-    #[doc = "Toggle OFLAG output on successful compare"]
+    #[doc = "Toggle OFLAG output on successful compare."]
     TOGGLE_OFLAG_SUCCESS = 0x03,
-    #[doc = "Toggle OFLAG output using alternating compare registers"]
+    #[doc = "Toggle OFLAG output using alternating compare registers."]
     TOGGLE_OFLAG_ALT = 0x04,
-    #[doc = "Set on compare, cleared on secondary source input edge"]
+    #[doc = "Set on compare, cleared on secondary source input edge."]
     CLEAR_ON_SECONDARY = 0x05,
-    #[doc = "Set on compare, cleared on counter rollover"]
+    #[doc = "Set on compare, cleared on counter rollover."]
     CLEAR_ON_ROLLOVER = 0x06,
-    #[doc = "Enable gated clock output while counter is active"]
+    #[doc = "Enable gated clock output while counter is active."]
     ENABLE_GATED_OUT = 0x07,
 }
 impl Ctrl0Outmode {
@@ -841,37 +841,37 @@ impl From<Ctrl0Outmode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl0Pcs {
-    #[doc = "Counter 0 input pin"]
+    #[doc = "Counter 0 input pin."]
     COUNTER0_IN = 0x0,
-    #[doc = "Counter 1 input pin"]
+    #[doc = "Counter 1 input pin."]
     COUNTER1_IN = 0x01,
-    #[doc = "Counter 2 input pin"]
+    #[doc = "Counter 2 input pin."]
     COUNTER2_IN = 0x02,
-    #[doc = "Counter 3 input pin"]
+    #[doc = "Counter 3 input pin."]
     COUNTER3_IN = 0x03,
-    #[doc = "Counter 0 output"]
+    #[doc = "Counter 0 output."]
     COUNTER0_OUT = 0x04,
-    #[doc = "Counter 1 output"]
+    #[doc = "Counter 1 output."]
     COUNTER1_OUT = 0x05,
-    #[doc = "Counter 2 output"]
+    #[doc = "Counter 2 output."]
     COUNTER2_OUT = 0x06,
-    #[doc = "Counter 3 output"]
+    #[doc = "Counter 3 output."]
     COUNTER3_OUT = 0x07,
-    #[doc = "IP bus clock divide by 1 prescaler"]
+    #[doc = "IP bus clock divide by 1 prescaler."]
     BUS_DIVBY1 = 0x08,
-    #[doc = "IP bus clock divide by 2 prescaler"]
+    #[doc = "IP bus clock divide by 2 prescaler."]
     BUS_DIVBY2 = 0x09,
-    #[doc = "IP bus clock divide by 4 prescaler"]
+    #[doc = "IP bus clock divide by 4 prescaler."]
     BUS_DIVBY4 = 0x0a,
-    #[doc = "IP bus clock divide by 8 prescaler"]
+    #[doc = "IP bus clock divide by 8 prescaler."]
     BUS_DIVBY8 = 0x0b,
-    #[doc = "IP bus clock divide by 16 prescaler"]
+    #[doc = "IP bus clock divide by 16 prescaler."]
     BUS_DIVBY16 = 0x0c,
-    #[doc = "IP bus clock divide by 32 prescaler"]
+    #[doc = "IP bus clock divide by 32 prescaler."]
     BUS_DIVBY32 = 0x0d,
-    #[doc = "IP bus clock divide by 64 prescaler"]
+    #[doc = "IP bus clock divide by 64 prescaler."]
     BUS_DIVBY64 = 0x0e,
-    #[doc = "IP bus clock divide by 128 prescaler"]
+    #[doc = "IP bus clock divide by 128 prescaler."]
     BUS_DIVBY128 = 0x0f,
 }
 impl Ctrl0Pcs {
@@ -900,13 +900,13 @@ impl From<Ctrl0Pcs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl0Scs {
-    #[doc = "Counter 0 input pin"]
+    #[doc = "Counter 0 input pin."]
     COUNTER0_IN = 0x0,
-    #[doc = "Counter 1 input pin"]
+    #[doc = "Counter 1 input pin."]
     COUNTER1_IN = 0x01,
-    #[doc = "Counter 2 input pin"]
+    #[doc = "Counter 2 input pin."]
     COUNTER2_IN = 0x02,
-    #[doc = "Counter 3 input pin"]
+    #[doc = "Counter 3 input pin."]
     COUNTER3_IN = 0x03,
 }
 impl Ctrl0Scs {
@@ -935,19 +935,19 @@ impl From<Ctrl0Scs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl1Cm {
-    #[doc = "No operation"]
+    #[doc = "No operation."]
     NOOP = 0x0,
     #[doc = "Count rising edges of primary sourceRising edges are counted only when SCTRL\\[IPS\\] = 0. Falling edges are counted when SCTRL\\[IPS\\] = 1. If the primary count source is IP bus clock divide by 1, only rising edges are counted regardless of the value of SCTRL\\[IPS\\]."]
     RISING_ONLY = 0x01,
     #[doc = "Count rising and falling edges of primary sourceIP bus clock divide by 1 cannot be used as a primary count source in edge count mode."]
     RISING_AND_FALLING = 0x02,
-    #[doc = "Count rising edges of primary source while secondary input high active"]
+    #[doc = "Count rising edges of primary source while secondary input high active."]
     RISING_WHILE_SEC_HIGH = 0x03,
-    #[doc = "Quadrature count mode, uses primary and secondary sources"]
+    #[doc = "Quadrature count mode, uses primary and secondary sources."]
     QUADRATURE = 0x04,
     #[doc = "Count rising edges of primary source; secondary source specifies directionRising edges are counted only when SCTRL\\[IPS\\] = 0. Falling edges are counted when SCTRL\\[IPS\\] = 1."]
     RISING_SEC_DIR = 0x05,
-    #[doc = "Edge of secondary source triggers primary count until compare"]
+    #[doc = "Edge of secondary source triggers primary count until compare."]
     SECONDARY = 0x06,
     #[doc = "Cascaded counter mode (up/down)The primary count source must be set to one of the counter outputs."]
     CASCADE = 0x07,
@@ -1071,21 +1071,21 @@ impl From<Ctrl1Once> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl1Outmode {
-    #[doc = "Asserted while counter is active"]
+    #[doc = "Asserted while counter is active."]
     COUNTER_ACTIVE = 0x0,
-    #[doc = "Clear OFLAG output on successful compare"]
+    #[doc = "Clear OFLAG output on successful compare."]
     CLEAR_OFLAG = 0x01,
-    #[doc = "Set OFLAG output on successful compare"]
+    #[doc = "Set OFLAG output on successful compare."]
     SET_OFLAG = 0x02,
-    #[doc = "Toggle OFLAG output on successful compare"]
+    #[doc = "Toggle OFLAG output on successful compare."]
     TOGGLE_OFLAG_SUCCESS = 0x03,
-    #[doc = "Toggle OFLAG output using alternating compare registers"]
+    #[doc = "Toggle OFLAG output using alternating compare registers."]
     TOGGLE_OFLAG_ALT = 0x04,
-    #[doc = "Set on compare, cleared on secondary source input edge"]
+    #[doc = "Set on compare, cleared on secondary source input edge."]
     CLEAR_ON_SECONDARY = 0x05,
-    #[doc = "Set on compare, cleared on counter rollover"]
+    #[doc = "Set on compare, cleared on counter rollover."]
     CLEAR_ON_ROLLOVER = 0x06,
-    #[doc = "Enable gated clock output while counter is active"]
+    #[doc = "Enable gated clock output while counter is active."]
     ENABLE_GATED_OUT = 0x07,
 }
 impl Ctrl1Outmode {
@@ -1114,37 +1114,37 @@ impl From<Ctrl1Outmode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl1Pcs {
-    #[doc = "Counter 0 input pin"]
+    #[doc = "Counter 0 input pin."]
     COUNTER0_IN = 0x0,
-    #[doc = "Counter 1 input pin"]
+    #[doc = "Counter 1 input pin."]
     COUNTER1_IN = 0x01,
-    #[doc = "Counter 2 input pin"]
+    #[doc = "Counter 2 input pin."]
     COUNTER2_IN = 0x02,
-    #[doc = "Counter 3 input pin"]
+    #[doc = "Counter 3 input pin."]
     COUNTER3_IN = 0x03,
-    #[doc = "Counter 0 output"]
+    #[doc = "Counter 0 output."]
     COUNTER0_OUT = 0x04,
-    #[doc = "Counter 1 output"]
+    #[doc = "Counter 1 output."]
     COUNTER1_OUT = 0x05,
-    #[doc = "Counter 2 output"]
+    #[doc = "Counter 2 output."]
     COUNTER2_OUT = 0x06,
-    #[doc = "Counter 3 output"]
+    #[doc = "Counter 3 output."]
     COUNTER3_OUT = 0x07,
-    #[doc = "IP bus clock divide by 1 prescaler"]
+    #[doc = "IP bus clock divide by 1 prescaler."]
     BUS_DIVBY1 = 0x08,
-    #[doc = "IP bus clock divide by 2 prescaler"]
+    #[doc = "IP bus clock divide by 2 prescaler."]
     BUS_DIVBY2 = 0x09,
-    #[doc = "IP bus clock divide by 4 prescaler"]
+    #[doc = "IP bus clock divide by 4 prescaler."]
     BUS_DIVBY4 = 0x0a,
-    #[doc = "IP bus clock divide by 8 prescaler"]
+    #[doc = "IP bus clock divide by 8 prescaler."]
     BUS_DIVBY8 = 0x0b,
-    #[doc = "IP bus clock divide by 16 prescaler"]
+    #[doc = "IP bus clock divide by 16 prescaler."]
     BUS_DIVBY16 = 0x0c,
-    #[doc = "IP bus clock divide by 32 prescaler"]
+    #[doc = "IP bus clock divide by 32 prescaler."]
     BUS_DIVBY32 = 0x0d,
-    #[doc = "IP bus clock divide by 64 prescaler"]
+    #[doc = "IP bus clock divide by 64 prescaler."]
     BUS_DIVBY64 = 0x0e,
-    #[doc = "IP bus clock divide by 128 prescaler"]
+    #[doc = "IP bus clock divide by 128 prescaler."]
     BUS_DIVBY128 = 0x0f,
 }
 impl Ctrl1Pcs {
@@ -1173,13 +1173,13 @@ impl From<Ctrl1Pcs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl1Scs {
-    #[doc = "Counter 0 input pin"]
+    #[doc = "Counter 0 input pin."]
     COUNTER0_IN = 0x0,
-    #[doc = "Counter 1 input pin"]
+    #[doc = "Counter 1 input pin."]
     COUNTER1_IN = 0x01,
-    #[doc = "Counter 2 input pin"]
+    #[doc = "Counter 2 input pin."]
     COUNTER2_IN = 0x02,
-    #[doc = "Counter 3 input pin"]
+    #[doc = "Counter 3 input pin."]
     COUNTER3_IN = 0x03,
 }
 impl Ctrl1Scs {
@@ -1208,19 +1208,19 @@ impl From<Ctrl1Scs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl2Cm {
-    #[doc = "No operation"]
+    #[doc = "No operation."]
     NOOP = 0x0,
     #[doc = "Count rising edges of primary sourceRising edges are counted only when SCTRL\\[IPS\\] = 0. Falling edges are counted when SCTRL\\[IPS\\] = 1. If the primary count source is IP bus clock divide by 1, only rising edges are counted regardless of the value of SCTRL\\[IPS\\]."]
     RISING_ONLY = 0x01,
     #[doc = "Count rising and falling edges of primary sourceIP bus clock divide by 1 cannot be used as a primary count source in edge count mode."]
     RISING_AND_FALLING = 0x02,
-    #[doc = "Count rising edges of primary source while secondary input high active"]
+    #[doc = "Count rising edges of primary source while secondary input high active."]
     RISING_WHILE_SEC_HIGH = 0x03,
-    #[doc = "Quadrature count mode, uses primary and secondary sources"]
+    #[doc = "Quadrature count mode, uses primary and secondary sources."]
     QUADRATURE = 0x04,
     #[doc = "Count rising edges of primary source; secondary source specifies directionRising edges are counted only when SCTRL\\[IPS\\] = 0. Falling edges are counted when SCTRL\\[IPS\\] = 1."]
     RISING_SEC_DIR = 0x05,
-    #[doc = "Edge of secondary source triggers primary count until compare"]
+    #[doc = "Edge of secondary source triggers primary count until compare."]
     SECONDARY = 0x06,
     #[doc = "Cascaded counter mode (up/down)The primary count source must be set to one of the counter outputs."]
     CASCADE = 0x07,
@@ -1344,21 +1344,21 @@ impl From<Ctrl2Once> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl2Outmode {
-    #[doc = "Asserted while counter is active"]
+    #[doc = "Asserted while counter is active."]
     COUNTER_ACTIVE = 0x0,
-    #[doc = "Clear OFLAG output on successful compare"]
+    #[doc = "Clear OFLAG output on successful compare."]
     CLEAR_OFLAG = 0x01,
-    #[doc = "Set OFLAG output on successful compare"]
+    #[doc = "Set OFLAG output on successful compare."]
     SET_OFLAG = 0x02,
-    #[doc = "Toggle OFLAG output on successful compare"]
+    #[doc = "Toggle OFLAG output on successful compare."]
     TOGGLE_OFLAG_SUCCESS = 0x03,
-    #[doc = "Toggle OFLAG output using alternating compare registers"]
+    #[doc = "Toggle OFLAG output using alternating compare registers."]
     TOGGLE_OFLAG_ALT = 0x04,
-    #[doc = "Set on compare, cleared on secondary source input edge"]
+    #[doc = "Set on compare, cleared on secondary source input edge."]
     CLEAR_ON_SECONDARY = 0x05,
-    #[doc = "Set on compare, cleared on counter rollover"]
+    #[doc = "Set on compare, cleared on counter rollover."]
     CLEAR_ON_ROLLOVER = 0x06,
-    #[doc = "Enable gated clock output while counter is active"]
+    #[doc = "Enable gated clock output while counter is active."]
     ENABLE_GATED_OUT = 0x07,
 }
 impl Ctrl2Outmode {
@@ -1387,37 +1387,37 @@ impl From<Ctrl2Outmode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl2Pcs {
-    #[doc = "Counter 0 input pin"]
+    #[doc = "Counter 0 input pin."]
     COUNTER0_IN = 0x0,
-    #[doc = "Counter 1 input pin"]
+    #[doc = "Counter 1 input pin."]
     COUNTER1_IN = 0x01,
-    #[doc = "Counter 2 input pin"]
+    #[doc = "Counter 2 input pin."]
     COUNTER2_IN = 0x02,
-    #[doc = "Counter 3 input pin"]
+    #[doc = "Counter 3 input pin."]
     COUNTER3_IN = 0x03,
-    #[doc = "Counter 0 output"]
+    #[doc = "Counter 0 output."]
     COUNTER0_OUT = 0x04,
-    #[doc = "Counter 1 output"]
+    #[doc = "Counter 1 output."]
     COUNTER1_OUT = 0x05,
-    #[doc = "Counter 2 output"]
+    #[doc = "Counter 2 output."]
     COUNTER2_OUT = 0x06,
-    #[doc = "Counter 3 output"]
+    #[doc = "Counter 3 output."]
     COUNTER3_OUT = 0x07,
-    #[doc = "IP bus clock divide by 1 prescaler"]
+    #[doc = "IP bus clock divide by 1 prescaler."]
     BUS_DIVBY1 = 0x08,
-    #[doc = "IP bus clock divide by 2 prescaler"]
+    #[doc = "IP bus clock divide by 2 prescaler."]
     BUS_DIVBY2 = 0x09,
-    #[doc = "IP bus clock divide by 4 prescaler"]
+    #[doc = "IP bus clock divide by 4 prescaler."]
     BUS_DIVBY4 = 0x0a,
-    #[doc = "IP bus clock divide by 8 prescaler"]
+    #[doc = "IP bus clock divide by 8 prescaler."]
     BUS_DIVBY8 = 0x0b,
-    #[doc = "IP bus clock divide by 16 prescaler"]
+    #[doc = "IP bus clock divide by 16 prescaler."]
     BUS_DIVBY16 = 0x0c,
-    #[doc = "IP bus clock divide by 32 prescaler"]
+    #[doc = "IP bus clock divide by 32 prescaler."]
     BUS_DIVBY32 = 0x0d,
-    #[doc = "IP bus clock divide by 64 prescaler"]
+    #[doc = "IP bus clock divide by 64 prescaler."]
     BUS_DIVBY64 = 0x0e,
-    #[doc = "IP bus clock divide by 128 prescaler"]
+    #[doc = "IP bus clock divide by 128 prescaler."]
     BUS_DIVBY128 = 0x0f,
 }
 impl Ctrl2Pcs {
@@ -1446,13 +1446,13 @@ impl From<Ctrl2Pcs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl2Scs {
-    #[doc = "Counter 0 input pin"]
+    #[doc = "Counter 0 input pin."]
     COUNTER0_IN = 0x0,
-    #[doc = "Counter 1 input pin"]
+    #[doc = "Counter 1 input pin."]
     COUNTER1_IN = 0x01,
-    #[doc = "Counter 2 input pin"]
+    #[doc = "Counter 2 input pin."]
     COUNTER2_IN = 0x02,
-    #[doc = "Counter 3 input pin"]
+    #[doc = "Counter 3 input pin."]
     COUNTER3_IN = 0x03,
 }
 impl Ctrl2Scs {
@@ -1481,19 +1481,19 @@ impl From<Ctrl2Scs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl3Cm {
-    #[doc = "No operation"]
+    #[doc = "No operation."]
     NOOP = 0x0,
     #[doc = "Count rising edges of primary sourceRising edges are counted only when SCTRL\\[IPS\\] = 0. Falling edges are counted when SCTRL\\[IPS\\] = 1. If the primary count source is IP bus clock divide by 1, only rising edges are counted regardless of the value of SCTRL\\[IPS\\]."]
     RISING_ONLY = 0x01,
     #[doc = "Count rising and falling edges of primary sourceIP bus clock divide by 1 cannot be used as a primary count source in edge count mode."]
     RISING_AND_FALLING = 0x02,
-    #[doc = "Count rising edges of primary source while secondary input high active"]
+    #[doc = "Count rising edges of primary source while secondary input high active."]
     RISING_WHILE_SEC_HIGH = 0x03,
-    #[doc = "Quadrature count mode, uses primary and secondary sources"]
+    #[doc = "Quadrature count mode, uses primary and secondary sources."]
     QUADRATURE = 0x04,
     #[doc = "Count rising edges of primary source; secondary source specifies directionRising edges are counted only when SCTRL\\[IPS\\] = 0. Falling edges are counted when SCTRL\\[IPS\\] = 1."]
     RISING_SEC_DIR = 0x05,
-    #[doc = "Edge of secondary source triggers primary count until compare"]
+    #[doc = "Edge of secondary source triggers primary count until compare."]
     SECONDARY = 0x06,
     #[doc = "Cascaded counter mode (up/down)The primary count source must be set to one of the counter outputs."]
     CASCADE = 0x07,
@@ -1617,21 +1617,21 @@ impl From<Ctrl3Once> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl3Outmode {
-    #[doc = "Asserted while counter is active"]
+    #[doc = "Asserted while counter is active."]
     COUNTER_ACTIVE = 0x0,
-    #[doc = "Clear OFLAG output on successful compare"]
+    #[doc = "Clear OFLAG output on successful compare."]
     CLEAR_OFLAG = 0x01,
-    #[doc = "Set OFLAG output on successful compare"]
+    #[doc = "Set OFLAG output on successful compare."]
     SET_OFLAG = 0x02,
-    #[doc = "Toggle OFLAG output on successful compare"]
+    #[doc = "Toggle OFLAG output on successful compare."]
     TOGGLE_OFLAG_SUCCESS = 0x03,
-    #[doc = "Toggle OFLAG output using alternating compare registers"]
+    #[doc = "Toggle OFLAG output using alternating compare registers."]
     TOGGLE_OFLAG_ALT = 0x04,
-    #[doc = "Set on compare, cleared on secondary source input edge"]
+    #[doc = "Set on compare, cleared on secondary source input edge."]
     CLEAR_ON_SECONDARY = 0x05,
-    #[doc = "Set on compare, cleared on counter rollover"]
+    #[doc = "Set on compare, cleared on counter rollover."]
     CLEAR_ON_ROLLOVER = 0x06,
-    #[doc = "Enable gated clock output while counter is active"]
+    #[doc = "Enable gated clock output while counter is active."]
     ENABLE_GATED_OUT = 0x07,
 }
 impl Ctrl3Outmode {
@@ -1660,37 +1660,37 @@ impl From<Ctrl3Outmode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl3Pcs {
-    #[doc = "Counter 0 input pin"]
+    #[doc = "Counter 0 input pin."]
     COUNTER0_IN = 0x0,
-    #[doc = "Counter 1 input pin"]
+    #[doc = "Counter 1 input pin."]
     COUNTER1_IN = 0x01,
-    #[doc = "Counter 2 input pin"]
+    #[doc = "Counter 2 input pin."]
     COUNTER2_IN = 0x02,
-    #[doc = "Counter 3 input pin"]
+    #[doc = "Counter 3 input pin."]
     COUNTER3_IN = 0x03,
-    #[doc = "Counter 0 output"]
+    #[doc = "Counter 0 output."]
     COUNTER0_OUT = 0x04,
-    #[doc = "Counter 1 output"]
+    #[doc = "Counter 1 output."]
     COUNTER1_OUT = 0x05,
-    #[doc = "Counter 2 output"]
+    #[doc = "Counter 2 output."]
     COUNTER2_OUT = 0x06,
-    #[doc = "Counter 3 output"]
+    #[doc = "Counter 3 output."]
     COUNTER3_OUT = 0x07,
-    #[doc = "IP bus clock divide by 1 prescaler"]
+    #[doc = "IP bus clock divide by 1 prescaler."]
     BUS_DIVBY1 = 0x08,
-    #[doc = "IP bus clock divide by 2 prescaler"]
+    #[doc = "IP bus clock divide by 2 prescaler."]
     BUS_DIVBY2 = 0x09,
-    #[doc = "IP bus clock divide by 4 prescaler"]
+    #[doc = "IP bus clock divide by 4 prescaler."]
     BUS_DIVBY4 = 0x0a,
-    #[doc = "IP bus clock divide by 8 prescaler"]
+    #[doc = "IP bus clock divide by 8 prescaler."]
     BUS_DIVBY8 = 0x0b,
-    #[doc = "IP bus clock divide by 16 prescaler"]
+    #[doc = "IP bus clock divide by 16 prescaler."]
     BUS_DIVBY16 = 0x0c,
-    #[doc = "IP bus clock divide by 32 prescaler"]
+    #[doc = "IP bus clock divide by 32 prescaler."]
     BUS_DIVBY32 = 0x0d,
-    #[doc = "IP bus clock divide by 64 prescaler"]
+    #[doc = "IP bus clock divide by 64 prescaler."]
     BUS_DIVBY64 = 0x0e,
-    #[doc = "IP bus clock divide by 128 prescaler"]
+    #[doc = "IP bus clock divide by 128 prescaler."]
     BUS_DIVBY128 = 0x0f,
 }
 impl Ctrl3Pcs {
@@ -1719,13 +1719,13 @@ impl From<Ctrl3Pcs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctrl3Scs {
-    #[doc = "Counter 0 input pin"]
+    #[doc = "Counter 0 input pin."]
     COUNTER0_IN = 0x0,
-    #[doc = "Counter 1 input pin"]
+    #[doc = "Counter 1 input pin."]
     COUNTER1_IN = 0x01,
-    #[doc = "Counter 2 input pin"]
+    #[doc = "Counter 2 input pin."]
     COUNTER2_IN = 0x02,
-    #[doc = "Counter 3 input pin"]
+    #[doc = "Counter 3 input pin."]
     COUNTER3_IN = 0x03,
 }
 impl Ctrl3Scs {
@@ -1756,7 +1756,7 @@ impl From<Ctrl3Scs> for u8 {
 pub enum Enbl {
     #[doc = "Timer channel is disabled."]
     DISABLE = 0x0,
-    #[doc = "Timer channel is enabled. (default)"]
+    #[doc = "Timer channel is enabled. (default)."]
     ENABLE = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -1799,13 +1799,13 @@ impl From<Enbl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sctrl0CaptureMode {
-    #[doc = "Capture function is disabled"]
+    #[doc = "Capture function is disabled."]
     DISABLED = 0x0,
-    #[doc = "Load capture register on rising edge (when IPS=0) or falling edge (when IPS=1) of input"]
+    #[doc = "Load capture register on rising edge (when IPS=0) or falling edge (when IPS=1) of input."]
     ENABLE_RISING = 0x01,
-    #[doc = "Load capture register on falling edge (when IPS=0) or rising edge (when IPS=1) of input"]
+    #[doc = "Load capture register on falling edge (when IPS=0) or rising edge (when IPS=1) of input."]
     ENABLE_FALLING = 0x02,
-    #[doc = "Load capture register on both edges of input"]
+    #[doc = "Load capture register on both edges of input."]
     ENABLE_BOTH = 0x03,
 }
 impl Sctrl0CaptureMode {
@@ -1896,13 +1896,13 @@ impl From<Sctrl0Ops> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sctrl1CaptureMode {
-    #[doc = "Capture function is disabled"]
+    #[doc = "Capture function is disabled."]
     DISABLED = 0x0,
-    #[doc = "Load capture register on rising edge (when IPS=0) or falling edge (when IPS=1) of input"]
+    #[doc = "Load capture register on rising edge (when IPS=0) or falling edge (when IPS=1) of input."]
     ENABLE_RISING = 0x01,
-    #[doc = "Load capture register on falling edge (when IPS=0) or rising edge (when IPS=1) of input"]
+    #[doc = "Load capture register on falling edge (when IPS=0) or rising edge (when IPS=1) of input."]
     ENABLE_FALLING = 0x02,
-    #[doc = "Load capture register on both edges of input"]
+    #[doc = "Load capture register on both edges of input."]
     ENABLE_BOTH = 0x03,
 }
 impl Sctrl1CaptureMode {
@@ -1993,13 +1993,13 @@ impl From<Sctrl1Ops> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sctrl2CaptureMode {
-    #[doc = "Capture function is disabled"]
+    #[doc = "Capture function is disabled."]
     DISABLED = 0x0,
-    #[doc = "Load capture register on rising edge (when IPS=0) or falling edge (when IPS=1) of input"]
+    #[doc = "Load capture register on rising edge (when IPS=0) or falling edge (when IPS=1) of input."]
     ENABLE_RISING = 0x01,
-    #[doc = "Load capture register on falling edge (when IPS=0) or rising edge (when IPS=1) of input"]
+    #[doc = "Load capture register on falling edge (when IPS=0) or rising edge (when IPS=1) of input."]
     ENABLE_FALLING = 0x02,
-    #[doc = "Load capture register on both edges of input"]
+    #[doc = "Load capture register on both edges of input."]
     ENABLE_BOTH = 0x03,
 }
 impl Sctrl2CaptureMode {
@@ -2090,13 +2090,13 @@ impl From<Sctrl2Ops> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sctrl3CaptureMode {
-    #[doc = "Capture function is disabled"]
+    #[doc = "Capture function is disabled."]
     DISABLED = 0x0,
-    #[doc = "Load capture register on rising edge (when IPS=0) or falling edge (when IPS=1) of input"]
+    #[doc = "Load capture register on rising edge (when IPS=0) or falling edge (when IPS=1) of input."]
     ENABLE_RISING = 0x01,
-    #[doc = "Load capture register on falling edge (when IPS=0) or rising edge (when IPS=1) of input"]
+    #[doc = "Load capture register on falling edge (when IPS=0) or rising edge (when IPS=1) of input."]
     ENABLE_FALLING = 0x02,
-    #[doc = "Load capture register on both edges of input"]
+    #[doc = "Load capture register on both edges of input."]
     ENABLE_BOTH = 0x03,
 }
 impl Sctrl3CaptureMode {

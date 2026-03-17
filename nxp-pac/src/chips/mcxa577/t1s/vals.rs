@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Abortcmd {
-    #[doc = "NO_EFFECT"]
+    #[doc = "NO_EFFECT."]
     REM_N = 0x0,
-    #[doc = "Abort WUP-sequencer"]
+    #[doc = "Abort WUP-sequencer."]
     REM_TRIG = 0x01,
 }
 impl Abortcmd {
@@ -33,9 +33,9 @@ impl From<Abortcmd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Access {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DI = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     EN = 0x01,
 }
 impl Access {
@@ -64,17 +64,17 @@ impl From<Access> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmd {
-    #[doc = "None"]
+    #[doc = "None."]
     NO = 0x0,
-    #[doc = "Linkdown"]
+    #[doc = "Linkdown."]
     PEN = 0x01,
-    #[doc = "Linkup"]
+    #[doc = "Linkup."]
     LI = 0x02,
-    #[doc = "TXCCFG"]
+    #[doc = "TXCCFG."]
     TX = 0x03,
-    #[doc = "Low-power"]
+    #[doc = "Low-power."]
     LO = 0x04,
-    #[doc = "TXCBIST"]
+    #[doc = "TXCBIST."]
     TXCBIST = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -105,9 +105,9 @@ impl From<Cmd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dispre {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISPRE_HOLD_1 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     DISPRE_HOLD_2 = 0x01,
 }
 impl Dispre {
@@ -136,21 +136,21 @@ impl From<Dispre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Hold {
-    #[doc = "HOLD_1"]
+    #[doc = "HOLD_1."]
     HOLD_1 = 0x0,
-    #[doc = "HOLD_2"]
+    #[doc = "HOLD_2."]
     HOLD_2 = 0x01,
-    #[doc = "HOLD_3"]
+    #[doc = "HOLD_3."]
     HOLD_3 = 0x02,
-    #[doc = "HOLD_4"]
+    #[doc = "HOLD_4."]
     HOLD_4 = 0x03,
-    #[doc = "HOLD_5"]
+    #[doc = "HOLD_5."]
     HOLD_5 = 0x04,
-    #[doc = "6 PCLK cycles 6"]
+    #[doc = "6 PCLK cycles 6."]
     HOLD_6 = 0x05,
-    #[doc = "HOLD_7"]
+    #[doc = "HOLD_7."]
     HOLD_7 = 0x06,
-    #[doc = "HOLD_8"]
+    #[doc = "HOLD_8."]
     HOLD_8 = 0x07,
 }
 impl Hold {
@@ -179,9 +179,9 @@ impl From<Hold> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intencapt1Apbparity {
-    #[doc = "NO Effect"]
+    #[doc = "NO Effect."]
     NE = 0x0,
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLEAR = 0x01,
 }
 impl Intencapt1Apbparity {
@@ -210,9 +210,9 @@ impl From<Intencapt1Apbparity> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intencapt1Invldapb {
-    #[doc = "NO Effect"]
+    #[doc = "NO Effect."]
     NE = 0x0,
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLEAR = 0x01,
 }
 impl Intencapt1Invldapb {
@@ -241,9 +241,9 @@ impl From<Intencapt1Invldapb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intencapt1Lclwk {
-    #[doc = "NO Effect"]
+    #[doc = "NO Effect."]
     NE = 0x0,
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLEAR = 0x01,
 }
 impl Intencapt1Lclwk {
@@ -272,9 +272,9 @@ impl From<Intencapt1Lclwk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intencapt1Locjab {
-    #[doc = "NO Effect"]
+    #[doc = "NO Effect."]
     NE = 0x0,
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLEAR = 0x01,
 }
 impl Intencapt1Locjab {
@@ -303,9 +303,9 @@ impl From<Intencapt1Locjab> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intencapt1Modestat {
-    #[doc = "NO Effect"]
+    #[doc = "NO Effect."]
     NE = 0x0,
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLEAR = 0x01,
 }
 impl Intencapt1Modestat {
@@ -334,9 +334,9 @@ impl From<Intencapt1Modestat> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intencapt1Physcol {
-    #[doc = "NO Effect"]
+    #[doc = "NO Effect."]
     NE = 0x0,
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLEAR = 0x01,
 }
 impl Intencapt1Physcol {
@@ -365,9 +365,9 @@ impl From<Intencapt1Physcol> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intencapt1Pinfault {
-    #[doc = "NO Effect"]
+    #[doc = "NO Effect."]
     NE = 0x0,
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLEAR = 0x01,
 }
 impl Intencapt1Pinfault {
@@ -396,9 +396,9 @@ impl From<Intencapt1Pinfault> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intencapt1Plcadiag {
-    #[doc = "NO Effect"]
+    #[doc = "NO Effect."]
     NE = 0x0,
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLEAR = 0x01,
 }
 impl Intencapt1Plcadiag {
@@ -427,9 +427,9 @@ impl From<Intencapt1Plcadiag> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intencapt1Plcarec {
-    #[doc = "NO Effect"]
+    #[doc = "NO Effect."]
     NE = 0x0,
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLEAR = 0x01,
 }
 impl Intencapt1Plcarec {
@@ -458,9 +458,9 @@ impl From<Intencapt1Plcarec> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intencapt1Plcastat {
-    #[doc = "NO Effect"]
+    #[doc = "NO Effect."]
     NE = 0x0,
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLEAR = 0x01,
 }
 impl Intencapt1Plcastat {
@@ -489,9 +489,9 @@ impl From<Intencapt1Plcastat> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intencapt1Remjab {
-    #[doc = "NO Effect"]
+    #[doc = "NO Effect."]
     NE = 0x0,
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLEAR = 0x01,
 }
 impl Intencapt1Remjab {
@@ -520,9 +520,9 @@ impl From<Intencapt1Remjab> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intencapt1Smiaccess {
-    #[doc = "NO Effect"]
+    #[doc = "NO Effect."]
     NE = 0x0,
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLEAR = 0x01,
 }
 impl Intencapt1Smiaccess {
@@ -551,9 +551,9 @@ impl From<Intencapt1Smiaccess> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intencapt1Sspdet {
-    #[doc = "NO Effect"]
+    #[doc = "NO Effect."]
     NE = 0x0,
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLEAR = 0x01,
 }
 impl Intencapt1Sspdet {
@@ -582,9 +582,9 @@ impl From<Intencapt1Sspdet> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intencapt1Wupdone {
-    #[doc = "NO Effect"]
+    #[doc = "NO Effect."]
     NE = 0x0,
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLEAR = 0x01,
 }
 impl Intencapt1Wupdone {
@@ -613,9 +613,9 @@ impl From<Intencapt1Wupdone> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intencapt1Wutdet {
-    #[doc = "NO Effect"]
+    #[doc = "NO Effect."]
     NE = 0x0,
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLEAR = 0x01,
 }
 impl Intencapt1Wutdet {
@@ -644,9 +644,9 @@ impl From<Intencapt1Wutdet> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intencapt2Apbparity {
-    #[doc = "NO Effect"]
+    #[doc = "NO Effect."]
     NE = 0x0,
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLEAR = 0x01,
 }
 impl Intencapt2Apbparity {
@@ -675,9 +675,9 @@ impl From<Intencapt2Apbparity> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intencapt2Invldapb {
-    #[doc = "NO Effect"]
+    #[doc = "NO Effect."]
     NE = 0x0,
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLEAR = 0x01,
 }
 impl Intencapt2Invldapb {
@@ -706,9 +706,9 @@ impl From<Intencapt2Invldapb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intencapt2Lclwk {
-    #[doc = "NO Effect"]
+    #[doc = "NO Effect."]
     NE = 0x0,
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLEAR = 0x01,
 }
 impl Intencapt2Lclwk {
@@ -737,9 +737,9 @@ impl From<Intencapt2Lclwk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intencapt2Locjab {
-    #[doc = "NO Effect"]
+    #[doc = "NO Effect."]
     NE = 0x0,
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLEAR = 0x01,
 }
 impl Intencapt2Locjab {
@@ -768,9 +768,9 @@ impl From<Intencapt2Locjab> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intencapt2Modestat {
-    #[doc = "NO Effect"]
+    #[doc = "NO Effect."]
     NE = 0x0,
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLEAR = 0x01,
 }
 impl Intencapt2Modestat {
@@ -799,9 +799,9 @@ impl From<Intencapt2Modestat> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intencapt2Physcol {
-    #[doc = "NO Effect"]
+    #[doc = "NO Effect."]
     NE = 0x0,
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLEAR = 0x01,
 }
 impl Intencapt2Physcol {
@@ -830,9 +830,9 @@ impl From<Intencapt2Physcol> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intencapt2Pinfault {
-    #[doc = "NO Effect"]
+    #[doc = "NO Effect."]
     NE = 0x0,
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLEAR = 0x01,
 }
 impl Intencapt2Pinfault {
@@ -861,9 +861,9 @@ impl From<Intencapt2Pinfault> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intencapt2Plcadiag {
-    #[doc = "NO Effect"]
+    #[doc = "NO Effect."]
     NE = 0x0,
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLEAR = 0x01,
 }
 impl Intencapt2Plcadiag {
@@ -892,9 +892,9 @@ impl From<Intencapt2Plcadiag> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intencapt2Plcarec {
-    #[doc = "NO Effect"]
+    #[doc = "NO Effect."]
     NE = 0x0,
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLEAR = 0x01,
 }
 impl Intencapt2Plcarec {
@@ -923,9 +923,9 @@ impl From<Intencapt2Plcarec> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intencapt2Plcastat {
-    #[doc = "NO Effect"]
+    #[doc = "NO Effect."]
     NE = 0x0,
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLEAR = 0x01,
 }
 impl Intencapt2Plcastat {
@@ -954,9 +954,9 @@ impl From<Intencapt2Plcastat> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intencapt2Remjab {
-    #[doc = "NO Effect"]
+    #[doc = "NO Effect."]
     NE = 0x0,
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLEAR = 0x01,
 }
 impl Intencapt2Remjab {
@@ -985,9 +985,9 @@ impl From<Intencapt2Remjab> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intencapt2Smiaccess {
-    #[doc = "NO Effect"]
+    #[doc = "NO Effect."]
     NE = 0x0,
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLEAR = 0x01,
 }
 impl Intencapt2Smiaccess {
@@ -1016,9 +1016,9 @@ impl From<Intencapt2Smiaccess> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intencapt2Sspdet {
-    #[doc = "NO Effect"]
+    #[doc = "NO Effect."]
     NE = 0x0,
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLEAR = 0x01,
 }
 impl Intencapt2Sspdet {
@@ -1047,9 +1047,9 @@ impl From<Intencapt2Sspdet> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intencapt2Wupdone {
-    #[doc = "NO Effect"]
+    #[doc = "NO Effect."]
     NE = 0x0,
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLEAR = 0x01,
 }
 impl Intencapt2Wupdone {
@@ -1078,9 +1078,9 @@ impl From<Intencapt2Wupdone> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intencapt2Wutdet {
-    #[doc = "NO Effect"]
+    #[doc = "NO Effect."]
     NE = 0x0,
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLEAR = 0x01,
 }
 impl Intencapt2Wutdet {
@@ -1109,9 +1109,9 @@ impl From<Intencapt2Wutdet> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenclr1Apbparity {
-    #[doc = "NO_EFFECT"]
+    #[doc = "NO_EFFECT."]
     ADIS = 0x0,
-    #[doc = "DISABLE"]
+    #[doc = "DISABLE."]
     AEN = 0x01,
 }
 impl Intenclr1Apbparity {
@@ -1140,9 +1140,9 @@ impl From<Intenclr1Apbparity> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenclr1Invldapb {
-    #[doc = "NO_EFFECT"]
+    #[doc = "NO_EFFECT."]
     PHYDIS = 0x0,
-    #[doc = "DISABLE"]
+    #[doc = "DISABLE."]
     PHYEN = 0x01,
 }
 impl Intenclr1Invldapb {
@@ -1171,9 +1171,9 @@ impl From<Intenclr1Invldapb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenclr1Lclwk {
-    #[doc = "NO_EFFECT"]
+    #[doc = "NO_EFFECT."]
     LCDIS = 0x0,
-    #[doc = "DISABLE"]
+    #[doc = "DISABLE."]
     LCEN = 0x01,
 }
 impl Intenclr1Lclwk {
@@ -1202,9 +1202,9 @@ impl From<Intenclr1Lclwk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenclr1Locjab {
-    #[doc = "NO_EFFECT"]
+    #[doc = "NO_EFFECT."]
     PHYDIS = 0x0,
-    #[doc = "DISABLE"]
+    #[doc = "DISABLE."]
     PHYEN = 0x01,
 }
 impl Intenclr1Locjab {
@@ -1233,9 +1233,9 @@ impl From<Intenclr1Locjab> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenclr1Modestat {
-    #[doc = "NO_EFFECT"]
+    #[doc = "NO_EFFECT."]
     PHYDIS = 0x0,
-    #[doc = "DISABLE"]
+    #[doc = "DISABLE."]
     PHYEN = 0x01,
 }
 impl Intenclr1Modestat {
@@ -1264,9 +1264,9 @@ impl From<Intenclr1Modestat> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenclr1Physcol {
-    #[doc = "NO_EFFECT"]
+    #[doc = "NO_EFFECT."]
     PHYDIS = 0x0,
-    #[doc = "DISABLE"]
+    #[doc = "DISABLE."]
     PHYEN = 0x01,
 }
 impl Intenclr1Physcol {
@@ -1295,9 +1295,9 @@ impl From<Intenclr1Physcol> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenclr1Pinfault {
-    #[doc = "NO_EFFECT"]
+    #[doc = "NO_EFFECT."]
     PNDIS = 0x0,
-    #[doc = "DISABLE"]
+    #[doc = "DISABLE."]
     PNEN = 0x01,
 }
 impl Intenclr1Pinfault {
@@ -1326,9 +1326,9 @@ impl From<Intenclr1Pinfault> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenclr1Plcadiag {
-    #[doc = "NO_EFFECT"]
+    #[doc = "NO_EFFECT."]
     PHDIS = 0x0,
-    #[doc = "DISABLE"]
+    #[doc = "DISABLE."]
     PHEN = 0x01,
 }
 impl Intenclr1Plcadiag {
@@ -1357,9 +1357,9 @@ impl From<Intenclr1Plcadiag> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenclr1Plcarec {
-    #[doc = "NO_EFFECT"]
+    #[doc = "NO_EFFECT."]
     PHYDIS = 0x0,
-    #[doc = "DISABLE"]
+    #[doc = "DISABLE."]
     PHYEN = 0x01,
 }
 impl Intenclr1Plcarec {
@@ -1388,9 +1388,9 @@ impl From<Intenclr1Plcarec> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenclr1Plcastat {
-    #[doc = "NO_EFFECT"]
+    #[doc = "NO_EFFECT."]
     PHYDIS = 0x0,
-    #[doc = "DISABLE"]
+    #[doc = "DISABLE."]
     PHYEN = 0x01,
 }
 impl Intenclr1Plcastat {
@@ -1419,9 +1419,9 @@ impl From<Intenclr1Plcastat> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenclr1Remjab {
-    #[doc = "NO_EFFECT"]
+    #[doc = "NO_EFFECT."]
     REDIS = 0x0,
-    #[doc = "DISABLE"]
+    #[doc = "DISABLE."]
     REEN = 0x01,
 }
 impl Intenclr1Remjab {
@@ -1450,9 +1450,9 @@ impl From<Intenclr1Remjab> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenclr1Smiaccess {
-    #[doc = "NO_EFFECT"]
+    #[doc = "NO_EFFECT."]
     SMDIS = 0x0,
-    #[doc = "DISABLE"]
+    #[doc = "DISABLE."]
     SMEN = 0x01,
 }
 impl Intenclr1Smiaccess {
@@ -1481,9 +1481,9 @@ impl From<Intenclr1Smiaccess> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenclr1Sspdet {
-    #[doc = "NO_EFFECT"]
+    #[doc = "NO_EFFECT."]
     SSPDIS = 0x0,
-    #[doc = "DISABLE"]
+    #[doc = "DISABLE."]
     SSPEN = 0x01,
 }
 impl Intenclr1Sspdet {
@@ -1512,9 +1512,9 @@ impl From<Intenclr1Sspdet> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenclr1Wupdone {
-    #[doc = "NO_EFFECT"]
+    #[doc = "NO_EFFECT."]
     WDIS = 0x0,
-    #[doc = "DISABLE"]
+    #[doc = "DISABLE."]
     WEN = 0x01,
 }
 impl Intenclr1Wupdone {
@@ -1543,9 +1543,9 @@ impl From<Intenclr1Wupdone> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenclr1Wutdet {
-    #[doc = "NO_EFFECT"]
+    #[doc = "NO_EFFECT."]
     WUDIS = 0x0,
-    #[doc = "DISABLE"]
+    #[doc = "DISABLE."]
     WUEN = 0x01,
 }
 impl Intenclr1Wutdet {
@@ -1574,9 +1574,9 @@ impl From<Intenclr1Wutdet> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenclr2Apbparity {
-    #[doc = "NO_EFFECT"]
+    #[doc = "NO_EFFECT."]
     ADIS = 0x0,
-    #[doc = "DISABLE"]
+    #[doc = "DISABLE."]
     AEN = 0x01,
 }
 impl Intenclr2Apbparity {
@@ -1605,9 +1605,9 @@ impl From<Intenclr2Apbparity> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenclr2Invldapb {
-    #[doc = "NO_EFFECT"]
+    #[doc = "NO_EFFECT."]
     PHYDIS = 0x0,
-    #[doc = "DISABLE"]
+    #[doc = "DISABLE."]
     PHYEN = 0x01,
 }
 impl Intenclr2Invldapb {
@@ -1636,9 +1636,9 @@ impl From<Intenclr2Invldapb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenclr2Lclwk {
-    #[doc = "NO_EFFECT"]
+    #[doc = "NO_EFFECT."]
     LCDIS = 0x0,
-    #[doc = "DISABLE"]
+    #[doc = "DISABLE."]
     LCEN = 0x01,
 }
 impl Intenclr2Lclwk {
@@ -1667,9 +1667,9 @@ impl From<Intenclr2Lclwk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenclr2Locjab {
-    #[doc = "NO_EFFECT"]
+    #[doc = "NO_EFFECT."]
     PHYDIS = 0x0,
-    #[doc = "DISABLE"]
+    #[doc = "DISABLE."]
     PHYEN = 0x01,
 }
 impl Intenclr2Locjab {
@@ -1698,9 +1698,9 @@ impl From<Intenclr2Locjab> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenclr2Modestat {
-    #[doc = "NO_EFFECT"]
+    #[doc = "NO_EFFECT."]
     PHYDIS = 0x0,
-    #[doc = "DISABLE"]
+    #[doc = "DISABLE."]
     PHYEN = 0x01,
 }
 impl Intenclr2Modestat {
@@ -1729,9 +1729,9 @@ impl From<Intenclr2Modestat> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenclr2Physcol {
-    #[doc = "NO_EFFECT"]
+    #[doc = "NO_EFFECT."]
     PHYDIS = 0x0,
-    #[doc = "DISABLE"]
+    #[doc = "DISABLE."]
     PHYEN = 0x01,
 }
 impl Intenclr2Physcol {
@@ -1760,9 +1760,9 @@ impl From<Intenclr2Physcol> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenclr2Pinfault {
-    #[doc = "NO_EFFECT"]
+    #[doc = "NO_EFFECT."]
     PNDIS = 0x0,
-    #[doc = "DISABLE"]
+    #[doc = "DISABLE."]
     PNEN = 0x01,
 }
 impl Intenclr2Pinfault {
@@ -1791,9 +1791,9 @@ impl From<Intenclr2Pinfault> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenclr2Plcadiag {
-    #[doc = "NO_EFFECT"]
+    #[doc = "NO_EFFECT."]
     PHDIS = 0x0,
-    #[doc = "DISABLE"]
+    #[doc = "DISABLE."]
     PHEN = 0x01,
 }
 impl Intenclr2Plcadiag {
@@ -1822,9 +1822,9 @@ impl From<Intenclr2Plcadiag> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenclr2Plcarec {
-    #[doc = "NO_EFFECT"]
+    #[doc = "NO_EFFECT."]
     PHYDIS = 0x0,
-    #[doc = "DISABLE"]
+    #[doc = "DISABLE."]
     PHYEN = 0x01,
 }
 impl Intenclr2Plcarec {
@@ -1853,9 +1853,9 @@ impl From<Intenclr2Plcarec> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenclr2Plcastat {
-    #[doc = "NO_EFFECT"]
+    #[doc = "NO_EFFECT."]
     PHYDIS = 0x0,
-    #[doc = "DISABLE"]
+    #[doc = "DISABLE."]
     PHYEN = 0x01,
 }
 impl Intenclr2Plcastat {
@@ -1884,9 +1884,9 @@ impl From<Intenclr2Plcastat> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenclr2Remjab {
-    #[doc = "NO_EFFECT"]
+    #[doc = "NO_EFFECT."]
     REDIS = 0x0,
-    #[doc = "DISABLE"]
+    #[doc = "DISABLE."]
     REEN = 0x01,
 }
 impl Intenclr2Remjab {
@@ -1915,9 +1915,9 @@ impl From<Intenclr2Remjab> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenclr2Smiaccess {
-    #[doc = "NO_EFFECT"]
+    #[doc = "NO_EFFECT."]
     SMDIS = 0x0,
-    #[doc = "DISABLE"]
+    #[doc = "DISABLE."]
     SMEN = 0x01,
 }
 impl Intenclr2Smiaccess {
@@ -1946,9 +1946,9 @@ impl From<Intenclr2Smiaccess> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenclr2Sspdet {
-    #[doc = "NO_EFFECT"]
+    #[doc = "NO_EFFECT."]
     SSPDIS = 0x0,
-    #[doc = "DISABLE"]
+    #[doc = "DISABLE."]
     SSPEN = 0x01,
 }
 impl Intenclr2Sspdet {
@@ -1977,9 +1977,9 @@ impl From<Intenclr2Sspdet> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenclr2Wupdone {
-    #[doc = "NO_EFFECT"]
+    #[doc = "NO_EFFECT."]
     WDIS = 0x0,
-    #[doc = "DISABLE"]
+    #[doc = "DISABLE."]
     WEN = 0x01,
 }
 impl Intenclr2Wupdone {
@@ -2008,9 +2008,9 @@ impl From<Intenclr2Wupdone> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenclr2Wutdet {
-    #[doc = "NO_EFFECT"]
+    #[doc = "NO_EFFECT."]
     WUDIS = 0x0,
-    #[doc = "DISABLE"]
+    #[doc = "DISABLE."]
     WUEN = 0x01,
 }
 impl Intenclr2Wutdet {
@@ -2039,9 +2039,9 @@ impl From<Intenclr2Wutdet> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenset1Apbparity {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     APBDIS = 0x0,
-    #[doc = "ENABLED"]
+    #[doc = "ENABLED."]
     APBEN = 0x01,
 }
 impl Intenset1Apbparity {
@@ -2070,9 +2070,9 @@ impl From<Intenset1Apbparity> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenset1Invldapb {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     INVLDIS = 0x0,
-    #[doc = "ENABLED"]
+    #[doc = "ENABLED."]
     INVLEN = 0x01,
 }
 impl Intenset1Invldapb {
@@ -2101,9 +2101,9 @@ impl From<Intenset1Invldapb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenset1Lclwk {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     LCLDIS = 0x0,
-    #[doc = "ENABLED"]
+    #[doc = "ENABLED."]
     LCLEN = 0x01,
 }
 impl Intenset1Lclwk {
@@ -2132,9 +2132,9 @@ impl From<Intenset1Lclwk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenset1Locjab {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     LOCDIS = 0x0,
-    #[doc = "ENABLED"]
+    #[doc = "ENABLED."]
     LOCEN = 0x01,
 }
 impl Intenset1Locjab {
@@ -2163,9 +2163,9 @@ impl From<Intenset1Locjab> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenset1Modestat {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     MODEDIS = 0x0,
-    #[doc = "ENABLED"]
+    #[doc = "ENABLED."]
     MODEEN = 0x01,
 }
 impl Intenset1Modestat {
@@ -2194,9 +2194,9 @@ impl From<Intenset1Modestat> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenset1Physcol {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     PHYDIS = 0x0,
-    #[doc = "ENABLED"]
+    #[doc = "ENABLED."]
     PHYEN = 0x01,
 }
 impl Intenset1Physcol {
@@ -2225,9 +2225,9 @@ impl From<Intenset1Physcol> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenset1Pinfault {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     PINDIS = 0x0,
-    #[doc = "ENABLED"]
+    #[doc = "ENABLED."]
     PINEN = 0x01,
 }
 impl Intenset1Pinfault {
@@ -2256,9 +2256,9 @@ impl From<Intenset1Pinfault> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenset1Plcadiag {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     PLCADIS = 0x0,
-    #[doc = "ENABLED"]
+    #[doc = "ENABLED."]
     PLCEN = 0x01,
 }
 impl Intenset1Plcadiag {
@@ -2287,9 +2287,9 @@ impl From<Intenset1Plcadiag> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenset1Plcarec {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     PLCDIS = 0x0,
-    #[doc = "ENABLED"]
+    #[doc = "ENABLED."]
     PLCEN = 0x01,
 }
 impl Intenset1Plcarec {
@@ -2318,9 +2318,9 @@ impl From<Intenset1Plcarec> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenset1Plcastat {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     PLCDIS = 0x0,
-    #[doc = "ENABLED"]
+    #[doc = "ENABLED."]
     PLCEN = 0x01,
 }
 impl Intenset1Plcastat {
@@ -2349,9 +2349,9 @@ impl From<Intenset1Plcastat> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenset1Remjab {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     REMDIS = 0x0,
-    #[doc = "ENABLED"]
+    #[doc = "ENABLED."]
     REMEN = 0x01,
 }
 impl Intenset1Remjab {
@@ -2380,9 +2380,9 @@ impl From<Intenset1Remjab> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenset1Smiaccess {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     SMIDIS = 0x0,
-    #[doc = "ENABLED"]
+    #[doc = "ENABLED."]
     SMIEN = 0x01,
 }
 impl Intenset1Smiaccess {
@@ -2411,9 +2411,9 @@ impl From<Intenset1Smiaccess> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenset1Sspdet {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     SSPDIS = 0x0,
-    #[doc = "ENABLED"]
+    #[doc = "ENABLED."]
     SSPEN = 0x01,
 }
 impl Intenset1Sspdet {
@@ -2442,9 +2442,9 @@ impl From<Intenset1Sspdet> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenset1Wupdone {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     WUPDIS = 0x0,
-    #[doc = "ENABLED"]
+    #[doc = "ENABLED."]
     WUPEN = 0x01,
 }
 impl Intenset1Wupdone {
@@ -2473,9 +2473,9 @@ impl From<Intenset1Wupdone> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenset1Wutdet {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     WUTDIS = 0x0,
-    #[doc = "ENABLED"]
+    #[doc = "ENABLED."]
     WUTEN = 0x01,
 }
 impl Intenset1Wutdet {
@@ -2504,9 +2504,9 @@ impl From<Intenset1Wutdet> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenset2Apbparity {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     APBDIS = 0x0,
-    #[doc = "ENABLED"]
+    #[doc = "ENABLED."]
     APBEN = 0x01,
 }
 impl Intenset2Apbparity {
@@ -2535,9 +2535,9 @@ impl From<Intenset2Apbparity> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenset2Invldapb {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     INVLDIS = 0x0,
-    #[doc = "ENABLED"]
+    #[doc = "ENABLED."]
     INVLEN = 0x01,
 }
 impl Intenset2Invldapb {
@@ -2566,9 +2566,9 @@ impl From<Intenset2Invldapb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenset2Lclwk {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     LCLDIS = 0x0,
-    #[doc = "ENABLED"]
+    #[doc = "ENABLED."]
     LCLEN = 0x01,
 }
 impl Intenset2Lclwk {
@@ -2597,9 +2597,9 @@ impl From<Intenset2Lclwk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenset2Locjab {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     LOCDIS = 0x0,
-    #[doc = "ENABLED"]
+    #[doc = "ENABLED."]
     LOCEN = 0x01,
 }
 impl Intenset2Locjab {
@@ -2628,9 +2628,9 @@ impl From<Intenset2Locjab> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenset2Modestat {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     MODEDIS = 0x0,
-    #[doc = "ENABLED"]
+    #[doc = "ENABLED."]
     MODEEN = 0x01,
 }
 impl Intenset2Modestat {
@@ -2659,9 +2659,9 @@ impl From<Intenset2Modestat> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenset2Physcol {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     PHYDIS = 0x0,
-    #[doc = "ENABLED"]
+    #[doc = "ENABLED."]
     PHYEN = 0x01,
 }
 impl Intenset2Physcol {
@@ -2690,9 +2690,9 @@ impl From<Intenset2Physcol> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenset2Pinfault {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     PINDIS = 0x0,
-    #[doc = "ENABLED"]
+    #[doc = "ENABLED."]
     PINEN = 0x01,
 }
 impl Intenset2Pinfault {
@@ -2721,9 +2721,9 @@ impl From<Intenset2Pinfault> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenset2Plcadiag {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     PLCADIS = 0x0,
-    #[doc = "ENABLED"]
+    #[doc = "ENABLED."]
     PLCEN = 0x01,
 }
 impl Intenset2Plcadiag {
@@ -2752,9 +2752,9 @@ impl From<Intenset2Plcadiag> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenset2Plcarec {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     PLCDIS = 0x0,
-    #[doc = "ENABLED"]
+    #[doc = "ENABLED."]
     PLCEN = 0x01,
 }
 impl Intenset2Plcarec {
@@ -2783,9 +2783,9 @@ impl From<Intenset2Plcarec> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenset2Plcastat {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     PLCDIS = 0x0,
-    #[doc = "ENABLED"]
+    #[doc = "ENABLED."]
     PLCEN = 0x01,
 }
 impl Intenset2Plcastat {
@@ -2814,9 +2814,9 @@ impl From<Intenset2Plcastat> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenset2Remjab {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     REMDIS = 0x0,
-    #[doc = "ENABLED"]
+    #[doc = "ENABLED."]
     REMEN = 0x01,
 }
 impl Intenset2Remjab {
@@ -2845,9 +2845,9 @@ impl From<Intenset2Remjab> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenset2Smiaccess {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     SMIDIS = 0x0,
-    #[doc = "ENABLED"]
+    #[doc = "ENABLED."]
     SMIEN = 0x01,
 }
 impl Intenset2Smiaccess {
@@ -2876,9 +2876,9 @@ impl From<Intenset2Smiaccess> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenset2Sspdet {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     SSPDIS = 0x0,
-    #[doc = "ENABLED"]
+    #[doc = "ENABLED."]
     SSPEN = 0x01,
 }
 impl Intenset2Sspdet {
@@ -2907,9 +2907,9 @@ impl From<Intenset2Sspdet> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenset2Wupdone {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     WUPDIS = 0x0,
-    #[doc = "ENABLED"]
+    #[doc = "ENABLED."]
     WUPEN = 0x01,
 }
 impl Intenset2Wupdone {
@@ -2938,9 +2938,9 @@ impl From<Intenset2Wupdone> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intenset2Wutdet {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     WUTDIS = 0x0,
-    #[doc = "ENABLED"]
+    #[doc = "ENABLED."]
     WUTEN = 0x01,
 }
 impl Intenset2Wutdet {
@@ -2969,9 +2969,9 @@ impl From<Intenset2Wutdet> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intstat1Apbparity {
-    #[doc = "Not Pending"]
+    #[doc = "Not Pending."]
     NP = 0x0,
-    #[doc = "Pending"]
+    #[doc = "Pending."]
     PEN = 0x01,
 }
 impl Intstat1Apbparity {
@@ -3000,9 +3000,9 @@ impl From<Intstat1Apbparity> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intstat1Invldapb {
-    #[doc = "Not Pending"]
+    #[doc = "Not Pending."]
     NP = 0x0,
-    #[doc = "Pending"]
+    #[doc = "Pending."]
     PEN = 0x01,
 }
 impl Intstat1Invldapb {
@@ -3031,9 +3031,9 @@ impl From<Intstat1Invldapb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intstat1Lclwk {
-    #[doc = "Not Pending"]
+    #[doc = "Not Pending."]
     NP = 0x0,
-    #[doc = "Pending"]
+    #[doc = "Pending."]
     PEN = 0x01,
 }
 impl Intstat1Lclwk {
@@ -3062,9 +3062,9 @@ impl From<Intstat1Lclwk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intstat1Locjab {
-    #[doc = "Not Pending"]
+    #[doc = "Not Pending."]
     NP = 0x0,
-    #[doc = "Pending"]
+    #[doc = "Pending."]
     PEN = 0x01,
 }
 impl Intstat1Locjab {
@@ -3093,9 +3093,9 @@ impl From<Intstat1Locjab> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intstat1Modestat {
-    #[doc = "Not Pending"]
+    #[doc = "Not Pending."]
     NP = 0x0,
-    #[doc = "Pending"]
+    #[doc = "Pending."]
     PEN = 0x01,
 }
 impl Intstat1Modestat {
@@ -3124,9 +3124,9 @@ impl From<Intstat1Modestat> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intstat1Physcol {
-    #[doc = "Not Pending"]
+    #[doc = "Not Pending."]
     NP = 0x0,
-    #[doc = "Pending"]
+    #[doc = "Pending."]
     PEN = 0x01,
 }
 impl Intstat1Physcol {
@@ -3155,9 +3155,9 @@ impl From<Intstat1Physcol> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intstat1Pinfault {
-    #[doc = "Not Pending"]
+    #[doc = "Not Pending."]
     NP = 0x0,
-    #[doc = "Pending"]
+    #[doc = "Pending."]
     PEN = 0x01,
 }
 impl Intstat1Pinfault {
@@ -3186,9 +3186,9 @@ impl From<Intstat1Pinfault> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intstat1Plcadiag {
-    #[doc = "Not Pending"]
+    #[doc = "Not Pending."]
     NP = 0x0,
-    #[doc = "Pending"]
+    #[doc = "Pending."]
     PEN = 0x01,
 }
 impl Intstat1Plcadiag {
@@ -3217,9 +3217,9 @@ impl From<Intstat1Plcadiag> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intstat1Plcarec {
-    #[doc = "Not Pending"]
+    #[doc = "Not Pending."]
     NP = 0x0,
-    #[doc = "Pending"]
+    #[doc = "Pending."]
     PEN = 0x01,
 }
 impl Intstat1Plcarec {
@@ -3248,9 +3248,9 @@ impl From<Intstat1Plcarec> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intstat1Plcastat {
-    #[doc = "Not Pending"]
+    #[doc = "Not Pending."]
     NP = 0x0,
-    #[doc = "Pending"]
+    #[doc = "Pending."]
     PEN = 0x01,
 }
 impl Intstat1Plcastat {
@@ -3279,9 +3279,9 @@ impl From<Intstat1Plcastat> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intstat1Remjab {
-    #[doc = "Not Pending"]
+    #[doc = "Not Pending."]
     NP = 0x0,
-    #[doc = "Pending"]
+    #[doc = "Pending."]
     PEN = 0x01,
 }
 impl Intstat1Remjab {
@@ -3310,9 +3310,9 @@ impl From<Intstat1Remjab> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intstat1Smiaccess {
-    #[doc = "Not Pending"]
+    #[doc = "Not Pending."]
     NP = 0x0,
-    #[doc = "Pending"]
+    #[doc = "Pending."]
     PEN = 0x01,
 }
 impl Intstat1Smiaccess {
@@ -3341,9 +3341,9 @@ impl From<Intstat1Smiaccess> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intstat1Sspdet {
-    #[doc = "Not Pending"]
+    #[doc = "Not Pending."]
     NP = 0x0,
-    #[doc = "Pending"]
+    #[doc = "Pending."]
     PEN = 0x01,
 }
 impl Intstat1Sspdet {
@@ -3372,9 +3372,9 @@ impl From<Intstat1Sspdet> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intstat1Wupdone {
-    #[doc = "Not Pending"]
+    #[doc = "Not Pending."]
     NP = 0x0,
-    #[doc = "Pending"]
+    #[doc = "Pending."]
     PEN = 0x01,
 }
 impl Intstat1Wupdone {
@@ -3403,9 +3403,9 @@ impl From<Intstat1Wupdone> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intstat1Wutdet {
-    #[doc = "Not Pending"]
+    #[doc = "Not Pending."]
     NP = 0x0,
-    #[doc = "Pending"]
+    #[doc = "Pending."]
     PEN = 0x01,
 }
 impl Intstat1Wutdet {
@@ -3434,9 +3434,9 @@ impl From<Intstat1Wutdet> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intstat2Apbparity {
-    #[doc = "Not Pending"]
+    #[doc = "Not Pending."]
     NP = 0x0,
-    #[doc = "Pending"]
+    #[doc = "Pending."]
     PEN = 0x01,
 }
 impl Intstat2Apbparity {
@@ -3465,9 +3465,9 @@ impl From<Intstat2Apbparity> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intstat2Invldapb {
-    #[doc = "Not Pending"]
+    #[doc = "Not Pending."]
     NP = 0x0,
-    #[doc = "Pending"]
+    #[doc = "Pending."]
     PEN = 0x01,
 }
 impl Intstat2Invldapb {
@@ -3496,9 +3496,9 @@ impl From<Intstat2Invldapb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intstat2Lclwk {
-    #[doc = "Not Pending"]
+    #[doc = "Not Pending."]
     NP = 0x0,
-    #[doc = "Pending"]
+    #[doc = "Pending."]
     PEN = 0x01,
 }
 impl Intstat2Lclwk {
@@ -3527,9 +3527,9 @@ impl From<Intstat2Lclwk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intstat2Locjab {
-    #[doc = "Not Pending"]
+    #[doc = "Not Pending."]
     NP = 0x0,
-    #[doc = "Pending"]
+    #[doc = "Pending."]
     PEN = 0x01,
 }
 impl Intstat2Locjab {
@@ -3558,9 +3558,9 @@ impl From<Intstat2Locjab> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intstat2Modestat {
-    #[doc = "Not Pending"]
+    #[doc = "Not Pending."]
     NP = 0x0,
-    #[doc = "Pending"]
+    #[doc = "Pending."]
     PEN = 0x01,
 }
 impl Intstat2Modestat {
@@ -3589,9 +3589,9 @@ impl From<Intstat2Modestat> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intstat2Physcol {
-    #[doc = "Not Pending"]
+    #[doc = "Not Pending."]
     NP = 0x0,
-    #[doc = "Pending"]
+    #[doc = "Pending."]
     PEN = 0x01,
 }
 impl Intstat2Physcol {
@@ -3620,9 +3620,9 @@ impl From<Intstat2Physcol> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intstat2Pinfault {
-    #[doc = "Not Pending"]
+    #[doc = "Not Pending."]
     NP = 0x0,
-    #[doc = "Pending"]
+    #[doc = "Pending."]
     PEN = 0x01,
 }
 impl Intstat2Pinfault {
@@ -3651,9 +3651,9 @@ impl From<Intstat2Pinfault> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intstat2Plcadiag {
-    #[doc = "Not Pending"]
+    #[doc = "Not Pending."]
     NP = 0x0,
-    #[doc = "Pending"]
+    #[doc = "Pending."]
     PEN = 0x01,
 }
 impl Intstat2Plcadiag {
@@ -3682,9 +3682,9 @@ impl From<Intstat2Plcadiag> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intstat2Plcarec {
-    #[doc = "Not Pending"]
+    #[doc = "Not Pending."]
     NP = 0x0,
-    #[doc = "Pending"]
+    #[doc = "Pending."]
     PEN = 0x01,
 }
 impl Intstat2Plcarec {
@@ -3713,9 +3713,9 @@ impl From<Intstat2Plcarec> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intstat2Plcastat {
-    #[doc = "Not Pending"]
+    #[doc = "Not Pending."]
     NP = 0x0,
-    #[doc = "Pending"]
+    #[doc = "Pending."]
     PEN = 0x01,
 }
 impl Intstat2Plcastat {
@@ -3744,9 +3744,9 @@ impl From<Intstat2Plcastat> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intstat2Remjab {
-    #[doc = "Not Pending"]
+    #[doc = "Not Pending."]
     NP = 0x0,
-    #[doc = "Pending"]
+    #[doc = "Pending."]
     PEN = 0x01,
 }
 impl Intstat2Remjab {
@@ -3775,9 +3775,9 @@ impl From<Intstat2Remjab> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intstat2Smiaccess {
-    #[doc = "Not Pending"]
+    #[doc = "Not Pending."]
     NP = 0x0,
-    #[doc = "Pending"]
+    #[doc = "Pending."]
     PEN = 0x01,
 }
 impl Intstat2Smiaccess {
@@ -3806,9 +3806,9 @@ impl From<Intstat2Smiaccess> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intstat2Sspdet {
-    #[doc = "Not Pending"]
+    #[doc = "Not Pending."]
     NP = 0x0,
-    #[doc = "Pending"]
+    #[doc = "Pending."]
     PEN = 0x01,
 }
 impl Intstat2Sspdet {
@@ -3837,9 +3837,9 @@ impl From<Intstat2Sspdet> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intstat2Wupdone {
-    #[doc = "Not Pending"]
+    #[doc = "Not Pending."]
     NP = 0x0,
-    #[doc = "Pending"]
+    #[doc = "Pending."]
     PEN = 0x01,
 }
 impl Intstat2Wupdone {
@@ -3868,9 +3868,9 @@ impl From<Intstat2Wupdone> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intstat2Wutdet {
-    #[doc = "Not Pending"]
+    #[doc = "Not Pending."]
     NP = 0x0,
-    #[doc = "Pending"]
+    #[doc = "Pending."]
     PEN = 0x01,
 }
 impl Intstat2Wutdet {
@@ -3899,9 +3899,9 @@ impl From<Intstat2Wutdet> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Jab {
-    #[doc = "No"]
+    #[doc = "No."]
     JABNO = 0x0,
-    #[doc = "Yes"]
+    #[doc = "Yes."]
     JABYES = 0x01,
 }
 impl Jab {
@@ -3930,9 +3930,9 @@ impl From<Jab> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lclwkena {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     SSDIS = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     SSEN = 0x01,
 }
 impl Lclwkena {
@@ -3961,9 +3961,9 @@ impl From<Lclwkena> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lclwkwup {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     WUPT_DIS = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     WUPT_EN = 0x01,
 }
 impl Lclwkwup {
@@ -3992,27 +3992,27 @@ impl From<Lclwkwup> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ModestatStat {
-    #[doc = "PORST"]
+    #[doc = "PORST."]
     PORST = 0x0,
-    #[doc = "WAITINIT"]
+    #[doc = "WAITINIT."]
     WAIT = 0x01,
-    #[doc = "Linkdown"]
+    #[doc = "Linkdown."]
     LINK = 0x02,
-    #[doc = "Linkup"]
+    #[doc = "Linkup."]
     LINKUP = 0x03,
-    #[doc = "WAITCMDLP"]
+    #[doc = "WAITCMDLP."]
     WAITCM = 0x04,
-    #[doc = "Low-power"]
+    #[doc = "Low-power."]
     LOW = 0x05,
-    #[doc = "WAITCMDCFG"]
+    #[doc = "WAITCMDCFG."]
     WAI = 0x06,
-    #[doc = "TXCCFG"]
+    #[doc = "TXCCFG."]
     TXC = 0x07,
-    #[doc = "TXCBIST"]
+    #[doc = "TXCBIST."]
     TXCB = 0x08,
-    #[doc = "WAITSSILENTLP"]
+    #[doc = "WAITSSILENTLP."]
     WAITS = 0x09,
-    #[doc = "WAITSILENTCFG"]
+    #[doc = "WAITSILENTCFG."]
     WAITSI = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
@@ -4046,9 +4046,9 @@ impl From<ModestatStat> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mskplcadiag1Bcnbfto {
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     EN2 = 0x0,
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED2 = 0x01,
 }
 impl Mskplcadiag1Bcnbfto {
@@ -4077,9 +4077,9 @@ impl From<Mskplcadiag1Bcnbfto> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mskplcadiag1Rxinto {
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     EN = 0x0,
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED = 0x01,
 }
 impl Mskplcadiag1Rxinto {
@@ -4108,9 +4108,9 @@ impl From<Mskplcadiag1Rxinto> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mskplcadiag1Unexpb {
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     EN2 = 0x0,
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED1 = 0x01,
 }
 impl Mskplcadiag1Unexpb {
@@ -4139,9 +4139,9 @@ impl From<Mskplcadiag1Unexpb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mskplcadiag2Earlybcn {
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     EN7 = 0x0,
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED7 = 0x01,
 }
 impl Mskplcadiag2Earlybcn {
@@ -4170,9 +4170,9 @@ impl From<Mskplcadiag2Earlybcn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mskplcadiag2Latebcn {
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     EN6 = 0x0,
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED6 = 0x01,
 }
 impl Mskplcadiag2Latebcn {
@@ -4201,9 +4201,9 @@ impl From<Mskplcadiag2Latebcn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mskplcadiag2Norxbcn {
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     EN5 = 0x0,
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED5 = 0x01,
 }
 impl Mskplcadiag2Norxbcn {
@@ -4232,9 +4232,9 @@ impl From<Mskplcadiag2Norxbcn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mskplcadiag2Undefstate {
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     EN2 = 0x0,
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED2 = 0x01,
 }
 impl Mskplcadiag2Undefstate {
@@ -4263,9 +4263,9 @@ impl From<Mskplcadiag2Undefstate> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MsktxcdiagEdhghfail {
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     EN10 = 0x0,
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED10 = 0x01,
 }
 impl MsktxcdiagEdhghfail {
@@ -4294,9 +4294,9 @@ impl From<MsktxcdiagEdhghfail> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MsktxcdiagEdlowfail {
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     EN11 = 0x0,
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED11 = 0x01,
 }
 impl MsktxcdiagEdlowfail {
@@ -4325,9 +4325,9 @@ impl From<MsktxcdiagEdlowfail> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MsktxcdiagLpwrfail {
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     EN9 = 0x0,
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED9 = 0x01,
 }
 impl MsktxcdiagLpwrfail {
@@ -4356,9 +4356,9 @@ impl From<MsktxcdiagLpwrfail> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MsktxcdiagRxhghfail {
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     EN12 = 0x0,
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED12 = 0x01,
 }
 impl MsktxcdiagRxhghfail {
@@ -4387,9 +4387,9 @@ impl From<MsktxcdiagRxhghfail> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MsktxcdiagRxlowfail {
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     EN13 = 0x0,
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     MASKED13 = 0x01,
 }
 impl MsktxcdiagRxlowfail {
@@ -4418,13 +4418,13 @@ impl From<MsktxcdiagRxlowfail> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Op {
-    #[doc = "WRITE_COMPERR"]
+    #[doc = "WRITE_COMPERR."]
     WRITE_COMPERR = 0x0,
-    #[doc = "WRITE"]
+    #[doc = "WRITE."]
     WRITE = 0x01,
-    #[doc = "READ"]
+    #[doc = "READ."]
     READ = 0x02,
-    #[doc = "READ_COMPERR"]
+    #[doc = "READ_COMPERR."]
     READ_COMPERR = 0x03,
 }
 impl Op {
@@ -4453,21 +4453,21 @@ impl From<Op> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pattern {
-    #[doc = "NONE"]
+    #[doc = "NONE."]
     NONE = 0x0,
-    #[doc = "TM1"]
+    #[doc = "TM1."]
     TM1 = 0x01,
-    #[doc = "TM2"]
+    #[doc = "TM2."]
     TM2 = 0x02,
-    #[doc = "TM3"]
+    #[doc = "TM3."]
     TM3 = 0x03,
-    #[doc = "TM4"]
+    #[doc = "TM4."]
     TM4 = 0x04,
-    #[doc = "RES0"]
+    #[doc = "RES0."]
     RES0 = 0x05,
-    #[doc = "RES1"]
+    #[doc = "RES1."]
     RES1 = 0x06,
-    #[doc = "WUT"]
+    #[doc = "WUT."]
     WUT = 0x07,
 }
 impl Pattern {
@@ -4496,9 +4496,9 @@ impl From<Pattern> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PcsctrlLoop {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     LD = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     LE = 0x01,
 }
 impl PcsctrlLoop {
@@ -4527,9 +4527,9 @@ impl From<PcsctrlLoop> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Plcadiag1Bcnbfto {
-    #[doc = "NO"]
+    #[doc = "NO."]
     NO3 = 0x0,
-    #[doc = "Yes"]
+    #[doc = "Yes."]
     YES3 = 0x01,
 }
 impl Plcadiag1Bcnbfto {
@@ -4558,9 +4558,9 @@ impl From<Plcadiag1Bcnbfto> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Plcadiag1Unexpb {
-    #[doc = "NO"]
+    #[doc = "NO."]
     NO4 = 0x0,
-    #[doc = "Yes"]
+    #[doc = "Yes."]
     YES4 = 0x01,
 }
 impl Plcadiag1Unexpb {
@@ -4589,9 +4589,9 @@ impl From<Plcadiag1Unexpb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Plcadiag2Earlybcn {
-    #[doc = "NO"]
+    #[doc = "NO."]
     NO8 = 0x0,
-    #[doc = "Yes"]
+    #[doc = "Yes."]
     YES8 = 0x01,
 }
 impl Plcadiag2Earlybcn {
@@ -4620,9 +4620,9 @@ impl From<Plcadiag2Earlybcn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Plcadiag2Latebcn {
-    #[doc = "NO"]
+    #[doc = "NO."]
     NO7 = 0x0,
-    #[doc = "Yes"]
+    #[doc = "Yes."]
     YES7 = 0x01,
 }
 impl Plcadiag2Latebcn {
@@ -4651,9 +4651,9 @@ impl From<Plcadiag2Latebcn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Plcadiag2Norxbcn {
-    #[doc = "NO"]
+    #[doc = "NO."]
     NO6 = 0x0,
-    #[doc = "Yes"]
+    #[doc = "Yes."]
     YES6 = 0x01,
 }
 impl Plcadiag2Norxbcn {
@@ -4682,9 +4682,9 @@ impl From<Plcadiag2Norxbcn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Plcadiag2Undefstate {
-    #[doc = "NO"]
+    #[doc = "NO."]
     NO5 = 0x0,
-    #[doc = "Yes"]
+    #[doc = "Yes."]
     YES5 = 0x01,
 }
 impl Plcadiag2Undefstate {
@@ -4713,9 +4713,9 @@ impl From<Plcadiag2Undefstate> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PmactrlLoop {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     LOOPDIS = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     LOOPEN = 0x01,
 }
 impl PmactrlLoop {
@@ -4744,9 +4744,9 @@ impl From<PmactrlLoop> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ready {
-    #[doc = "No"]
+    #[doc = "No."]
     READY = 0x0,
-    #[doc = "Yes"]
+    #[doc = "Yes."]
     READY_NONTC14 = 0x01,
 }
 impl Ready {
@@ -4775,9 +4775,9 @@ impl From<Ready> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Remkwkfdw {
-    #[doc = "DISABLED"]
+    #[doc = "DISABLED."]
     REM_NO = 0x0,
-    #[doc = "ENABLED"]
+    #[doc = "ENABLED."]
     REM_YES = 0x01,
 }
 impl Remkwkfdw {
@@ -4806,9 +4806,9 @@ impl From<Remkwkfdw> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Remwkena {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     SSDIS = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     SSEN = 0x01,
 }
 impl Remwkena {
@@ -4837,9 +4837,9 @@ impl From<Remwkena> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Remwkfdw {
-    #[doc = "NO_EFFECT"]
+    #[doc = "NO_EFFECT."]
     REM_NO = 0x0,
-    #[doc = "Trigger generation of a wake-forward pulse"]
+    #[doc = "Trigger generation of a wake-forward pulse."]
     REM_YES = 0x01,
 }
 impl Remwkfdw {
@@ -4868,9 +4868,9 @@ impl From<Remwkfdw> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rst {
-    #[doc = "STAT_NO_RESET"]
+    #[doc = "STAT_NO_RESET."]
     STAT_NO_RESET = 0x0,
-    #[doc = "STAT_RESET"]
+    #[doc = "STAT_RESET."]
     STAT_RESET = 0x01,
 }
 impl Rst {
@@ -4899,9 +4899,9 @@ impl From<Rst> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Silentto {
-    #[doc = "No"]
+    #[doc = "No."]
     SSDIS = 0x0,
-    #[doc = "Yes"]
+    #[doc = "Yes."]
     SSEN = 0x01,
 }
 impl Silentto {
@@ -4930,15 +4930,15 @@ impl From<Silentto> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SmistatErrcode {
-    #[doc = "NONE"]
+    #[doc = "NONE."]
     NONE = 0x0,
-    #[doc = "NONTC14"]
+    #[doc = "NONTC14."]
     NONTC14 = 0x01,
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     E_DISABLED = 0x02,
-    #[doc = "ABORTED"]
+    #[doc = "ABORTED."]
     EHOLD_2 = 0x03,
-    #[doc = "INPRGS"]
+    #[doc = "INPRGS."]
     HOLD_2 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
@@ -4970,9 +4970,9 @@ impl From<SmistatErrcode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sspwkena {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     SSDIS = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     SSEN = 0x01,
 }
 impl Sspwkena {
@@ -5001,9 +5001,9 @@ impl From<Sspwkena> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TxcdiagEdhghfail {
-    #[doc = "NO"]
+    #[doc = "NO."]
     NO11 = 0x0,
-    #[doc = "Yes"]
+    #[doc = "Yes."]
     YES11 = 0x01,
 }
 impl TxcdiagEdhghfail {
@@ -5032,9 +5032,9 @@ impl From<TxcdiagEdhghfail> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TxcdiagEdlowfail {
-    #[doc = "NO"]
+    #[doc = "NO."]
     NO8 = 0x0,
-    #[doc = "Yes"]
+    #[doc = "Yes."]
     YES8 = 0x01,
 }
 impl TxcdiagEdlowfail {
@@ -5063,9 +5063,9 @@ impl From<TxcdiagEdlowfail> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TxcdiagLpwrfail {
-    #[doc = "NO"]
+    #[doc = "NO."]
     NO10 = 0x0,
-    #[doc = "Yes"]
+    #[doc = "Yes."]
     YES10 = 0x01,
 }
 impl TxcdiagLpwrfail {
@@ -5094,9 +5094,9 @@ impl From<TxcdiagLpwrfail> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TxcdiagRxhghfail {
-    #[doc = "NO"]
+    #[doc = "NO."]
     NO11 = 0x0,
-    #[doc = "Yes"]
+    #[doc = "Yes."]
     YES11 = 0x01,
 }
 impl TxcdiagRxhghfail {
@@ -5125,9 +5125,9 @@ impl From<TxcdiagRxhghfail> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TxcdiagRxlowfail {
-    #[doc = "NO"]
+    #[doc = "NO."]
     NO12 = 0x0,
-    #[doc = "Yes"]
+    #[doc = "Yes."]
     YES12 = 0x01,
 }
 impl TxcdiagRxlowfail {
@@ -5156,9 +5156,9 @@ impl From<TxcdiagRxlowfail> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Txdis {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     TXDIS = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     TXEN = 0x01,
 }
 impl Txdis {
@@ -5187,13 +5187,13 @@ impl From<Txdis> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Type {
-    #[doc = "CBT1"]
+    #[doc = "CBT1."]
     CBT1 = 0x0,
-    #[doc = "MBT1"]
+    #[doc = "MBT1."]
     MBT1 = 0x01,
-    #[doc = "XBT1L"]
+    #[doc = "XBT1L."]
     XBT1L = 0x02,
-    #[doc = "XBT1S"]
+    #[doc = "XBT1S."]
     XBT1S = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
@@ -5234,9 +5234,9 @@ impl From<Type> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupcmd {
-    #[doc = "NO_EFFECT"]
+    #[doc = "NO_EFFECT."]
     WUP_N = 0x0,
-    #[doc = "Trigger WUP-sequencer"]
+    #[doc = "Trigger WUP-sequencer."]
     WUP_TRIG = 0x01,
 }
 impl Wupcmd {
@@ -5265,21 +5265,21 @@ impl From<Wupcmd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum WupstatErrcode {
-    #[doc = "NONE"]
+    #[doc = "NONE."]
     NONE = 0x0,
-    #[doc = "SWABORT"]
+    #[doc = "SWABORT."]
     SWABORT = 0x01,
-    #[doc = "MODECHG"]
+    #[doc = "MODECHG."]
     MODECHG = 0x02,
-    #[doc = "TOWM"]
+    #[doc = "TOWM."]
     TOWM = 0x03,
-    #[doc = "TOPD"]
+    #[doc = "TOPD."]
     TOPD = 0x04,
-    #[doc = "TOWP"]
+    #[doc = "TOWP."]
     TOWP = 0x05,
-    #[doc = "TOWA"]
+    #[doc = "TOWA."]
     TOWA = 0x06,
-    #[doc = "CORE"]
+    #[doc = "CORE."]
     CORE = 0x07,
 }
 impl WupstatErrcode {
@@ -5308,11 +5308,11 @@ impl From<WupstatErrcode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum WupstatStat {
-    #[doc = "IDLE"]
+    #[doc = "IDLE."]
     IDLE = 0x0,
-    #[doc = "WAITLINK"]
+    #[doc = "WAITLINK."]
     HOLD_2 = 0x01,
-    #[doc = "PENDING"]
+    #[doc = "PENDING."]
     STPEND = 0x02,
     _RESERVED_3 = 0x03,
 }

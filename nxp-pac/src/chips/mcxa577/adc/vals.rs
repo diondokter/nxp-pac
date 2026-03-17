@@ -172,9 +172,9 @@ impl From<CalRdy> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CalReq {
-    #[doc = "No request for hardware calibration has been made"]
+    #[doc = "No request for hardware calibration has been made."]
     NO_CALIBRATION_REQUEST = 0x0,
-    #[doc = "A request for hardware calibration has been made"]
+    #[doc = "A request for hardware calibration has been made."]
     CALIBRATION_REQUEST_PENDING = 0x01,
 }
 impl CalReq {
@@ -203,9 +203,9 @@ impl From<CalReq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Calhs {
-    #[doc = "No request for high speed mode trim has been made"]
+    #[doc = "No request for high speed mode trim has been made."]
     NO_ACTIVE_HS_TRIM_REQUEST = 0x0,
-    #[doc = "Request for high speed mode trim has been made"]
+    #[doc = "Request for high speed mode trim has been made."]
     HS_TRIM_REQUEST_PENDING = 0x01,
 }
 impl Calhs {
@@ -234,9 +234,9 @@ impl From<Calhs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Calofs {
-    #[doc = "No request for offset calibration has been made"]
+    #[doc = "No request for offset calibration has been made."]
     NO_ACTIVE_OFFSET_CALIBRATION_REQUEST = 0x0,
-    #[doc = "Request for offset calibration function"]
+    #[doc = "Request for offset calibration function."]
     OFFSET_CALIBRATION_REQUEST_PENDING = 0x01,
 }
 impl Calofs {
@@ -705,9 +705,9 @@ impl From<HptExdi> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Hsextra {
-    #[doc = "No extra cycle added"]
+    #[doc = "No extra cycle added."]
     HSEXTRA_0 = 0x0,
-    #[doc = "Extra cycle added"]
+    #[doc = "Extra cycle added."]
     HSEXTRA_1 = 0x01,
 }
 impl Hsextra {
@@ -951,15 +951,15 @@ pub enum Next {
     NO_NEXT_CMD_TERMINATE_ON_FINISH = 0x0,
     #[doc = "Select CMD1 command buffer register as next command."]
     DO_CMD1_NEXT = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     DO_CORRESPONDING_CMD_NEXT_6 = 0x06,
     #[doc = "Select CMD7 command buffer register as next command."]
     DO_CMD7_NEXT = 0x07,
@@ -990,7 +990,7 @@ impl From<Next> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum NumFifo {
-    #[doc = "N/A"]
+    #[doc = "N/A."]
     NO_FIFO_IMPLEMENTED = 0x0,
     #[doc = "This design supports one result FIFO."]
     CNT_1 = 0x01,
@@ -1061,9 +1061,9 @@ impl From<NumSec> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pwrsel {
-    #[doc = "Low power"]
+    #[doc = "Low power."]
     LOWEST = 0x0,
-    #[doc = "High power"]
+    #[doc = "High power."]
     HIGHEST = 0x01,
 }
 impl Pwrsel {
@@ -1295,19 +1295,19 @@ impl From<Sts> for u8 {
 pub enum Tcmd {
     #[doc = "Not a valid selection from the command buffer. Trigger event is ignored."]
     NOT_VALID = 0x0,
-    #[doc = "CMD1 is executed"]
+    #[doc = "CMD1 is executed."]
     EXECUTE_CMD1 = 0x01,
-    #[doc = "Corresponding CMD is executed"]
+    #[doc = "Corresponding CMD is executed."]
     EXECUTE_CORRESPONDING_CMD_2 = 0x02,
-    #[doc = "Corresponding CMD is executed"]
+    #[doc = "Corresponding CMD is executed."]
     EXECUTE_CORRESPONDING_CMD_3 = 0x03,
-    #[doc = "Corresponding CMD is executed"]
+    #[doc = "Corresponding CMD is executed."]
     EXECUTE_CORRESPONDING_CMD_4 = 0x04,
-    #[doc = "Corresponding CMD is executed"]
+    #[doc = "Corresponding CMD is executed."]
     EXECUTE_CORRESPONDING_CMD_5 = 0x05,
-    #[doc = "Corresponding CMD is executed"]
+    #[doc = "Corresponding CMD is executed."]
     EXECUTE_CORRESPONDING_CMD_6 = 0x06,
-    #[doc = "CMD7 is executed"]
+    #[doc = "CMD7 is executed."]
     EXECUTE_CMD7 = 0x07,
 }
 impl Tcmd {
@@ -1575,13 +1575,13 @@ impl From<TexcNum> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tpri {
-    #[doc = "Set to highest priority, Level 1"]
+    #[doc = "Set to highest priority, Level 1."]
     HIGHEST_PRIORITY = 0x0,
-    #[doc = "Set to corresponding priority level"]
+    #[doc = "Set to corresponding priority level."]
     CORRESPONDING_LOWER_PRIORITY_1 = 0x01,
-    #[doc = "Set to corresponding priority level"]
+    #[doc = "Set to corresponding priority level."]
     CORRESPONDING_LOWER_PRIORITY_2 = 0x02,
-    #[doc = "Set to lowest priority, Level 4"]
+    #[doc = "Set to lowest priority, Level 4."]
     LOWEST_PRIORITY = 0x03,
 }
 impl Tpri {

@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wden {
-    #[doc = "Timer stopped"]
+    #[doc = "Timer stopped."]
     STOP = 0x0,
-    #[doc = "Timer running"]
+    #[doc = "Timer running."]
     RUN = 0x01,
 }
 impl Wden {
@@ -33,9 +33,9 @@ impl From<Wden> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wdprotect {
-    #[doc = "Flexible"]
+    #[doc = "Flexible."]
     FLEXIBLE = 0x0,
-    #[doc = "Threshold"]
+    #[doc = "Threshold."]
     THRESHOLD = 0x01,
 }
 impl Wdprotect {
@@ -64,9 +64,9 @@ impl From<Wdprotect> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wdreset {
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     INTERRUPT = 0x0,
-    #[doc = "Reset"]
+    #[doc = "Reset."]
     RESET = 0x01,
 }
 impl Wdreset {

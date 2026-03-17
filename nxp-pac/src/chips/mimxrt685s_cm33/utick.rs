@@ -1,4 +1,4 @@
-#[doc = "LPC-Next0 Micro-tick Timer (UTICK)"]
+#[doc = "LPC-Next0 Micro-tick Timer (UTICK)."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Utick {
     ptr: *mut u8,
@@ -34,7 +34,7 @@ impl Utick {
     pub const fn capclr(self) -> crate::common::Reg<regs::Capclr, crate::common::W> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }
     }
-    #[doc = "Capture register ."]
+    #[doc = "Capture register."]
     #[inline(always)]
     pub const fn cap(self, n: usize) -> crate::common::Reg<regs::Cap, crate::common::R> {
         assert!(n < 4usize);

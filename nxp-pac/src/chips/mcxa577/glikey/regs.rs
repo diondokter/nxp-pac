@@ -1,64 +1,64 @@
-#[doc = "Control Register 0 SFR"]
+#[doc = "Control Register 0 SFR."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl0(pub u32);
 impl Ctrl0 {
-    #[doc = "Write Index"]
+    #[doc = "Write Index."]
     #[must_use]
     #[inline(always)]
     pub const fn write_index(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Write Index"]
+    #[doc = "Write Index."]
     #[inline(always)]
     pub const fn set_write_index(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "Reserved for Future Use"]
+    #[doc = "Reserved for Future Use."]
     #[must_use]
     #[inline(always)]
     pub const fn reserved15(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0xff;
         val as u8
     }
-    #[doc = "Reserved for Future Use"]
+    #[doc = "Reserved for Future Use."]
     #[inline(always)]
     pub const fn set_reserved15(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
     }
-    #[doc = "Write Enable 0"]
+    #[doc = "Write Enable 0."]
     #[must_use]
     #[inline(always)]
     pub const fn wr_en_0(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x03;
         val as u8
     }
-    #[doc = "Write Enable 0"]
+    #[doc = "Write Enable 0."]
     #[inline(always)]
     pub const fn set_wr_en_0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val as u32) & 0x03) << 16usize);
     }
-    #[doc = "Soft reset for the core reset (SFR configuration will be preseved).This register reads as 0"]
+    #[doc = "Soft reset for the core reset (SFR configuration will be preseved).This register reads as 0."]
     #[must_use]
     #[inline(always)]
     pub const fn sft_rst(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Soft reset for the core reset (SFR configuration will be preseved).This register reads as 0"]
+    #[doc = "Soft reset for the core reset (SFR configuration will be preseved).This register reads as 0."]
     #[inline(always)]
     pub const fn set_sft_rst(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Reserved for Future Use"]
+    #[doc = "Reserved for Future Use."]
     #[must_use]
     #[inline(always)]
     pub const fn reserved31(&self) -> u16 {
         let val = (self.0 >> 19usize) & 0x1fff;
         val as u16
     }
-    #[doc = "Reserved for Future Use"]
+    #[doc = "Reserved for Future Use."]
     #[inline(always)]
     pub const fn set_reserved31(&mut self, val: u16) {
         self.0 = (self.0 & !(0x1fff << 19usize)) | (((val as u32) & 0x1fff) << 19usize);
@@ -95,7 +95,7 @@ impl defmt::Format for Ctrl0 {
         )
     }
 }
-#[doc = "Control Register 1 SFR"]
+#[doc = "Control Register 1 SFR."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl1(pub u32);
@@ -112,50 +112,50 @@ impl Ctrl1 {
     pub const fn set_read_index(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "Reserved for Future Use"]
+    #[doc = "Reserved for Future Use."]
     #[must_use]
     #[inline(always)]
     pub const fn reserved15(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0xff;
         val as u8
     }
-    #[doc = "Reserved for Future Use"]
+    #[doc = "Reserved for Future Use."]
     #[inline(always)]
     pub const fn set_reserved15(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
     }
-    #[doc = "Write Enable One"]
+    #[doc = "Write Enable One."]
     #[must_use]
     #[inline(always)]
     pub const fn wr_en_1(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x03;
         val as u8
     }
-    #[doc = "Write Enable One"]
+    #[doc = "Write Enable One."]
     #[inline(always)]
     pub const fn set_wr_en_1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val as u32) & 0x03) << 16usize);
     }
-    #[doc = "LOCK register for GLIKEY"]
+    #[doc = "LOCK register for GLIKEY."]
     #[must_use]
     #[inline(always)]
     pub const fn sfr_lock(&self) -> u8 {
         let val = (self.0 >> 18usize) & 0x0f;
         val as u8
     }
-    #[doc = "LOCK register for GLIKEY"]
+    #[doc = "LOCK register for GLIKEY."]
     #[inline(always)]
     pub const fn set_sfr_lock(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 18usize)) | (((val as u32) & 0x0f) << 18usize);
     }
-    #[doc = "Reserved for Future Use"]
+    #[doc = "Reserved for Future Use."]
     #[must_use]
     #[inline(always)]
     pub const fn reserved31(&self) -> u16 {
         let val = (self.0 >> 22usize) & 0x03ff;
         val as u16
     }
-    #[doc = "Reserved for Future Use"]
+    #[doc = "Reserved for Future Use."]
     #[inline(always)]
     pub const fn set_reserved31(&mut self, val: u16) {
         self.0 = (self.0 & !(0x03ff << 22usize)) | (((val as u32) & 0x03ff) << 22usize);
@@ -192,55 +192,55 @@ impl defmt::Format for Ctrl1 {
         )
     }
 }
-#[doc = "Interrupt Control"]
+#[doc = "Interrupt Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct IntrCtrl(pub u32);
 impl IntrCtrl {
-    #[doc = "Interrupt Enable. Writing a 1, Interrupt asserts on Interrupt output port"]
+    #[doc = "Interrupt Enable. Writing a 1, Interrupt asserts on Interrupt output port."]
     #[must_use]
     #[inline(always)]
     pub const fn int_en(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Interrupt Enable. Writing a 1, Interrupt asserts on Interrupt output port"]
+    #[doc = "Interrupt Enable. Writing a 1, Interrupt asserts on Interrupt output port."]
     #[inline(always)]
     pub const fn set_int_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Interrupt Clear. Writing a 1 to this register creates a single interrupt clear pulse. This register reads as 0"]
+    #[doc = "Interrupt Clear. Writing a 1 to this register creates a single interrupt clear pulse. This register reads as 0."]
     #[must_use]
     #[inline(always)]
     pub const fn int_clr(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Interrupt Clear. Writing a 1 to this register creates a single interrupt clear pulse. This register reads as 0"]
+    #[doc = "Interrupt Clear. Writing a 1 to this register creates a single interrupt clear pulse. This register reads as 0."]
     #[inline(always)]
     pub const fn set_int_clr(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Interrupt Set. Writing a 1 to this register asserts the interrupt. This register reads as 0"]
+    #[doc = "Interrupt Set. Writing a 1 to this register asserts the interrupt. This register reads as 0."]
     #[must_use]
     #[inline(always)]
     pub const fn int_set(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Interrupt Set. Writing a 1 to this register asserts the interrupt. This register reads as 0"]
+    #[doc = "Interrupt Set. Writing a 1 to this register asserts the interrupt. This register reads as 0."]
     #[inline(always)]
     pub const fn set_int_set(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Reserved for Future Use"]
+    #[doc = "Reserved for Future Use."]
     #[must_use]
     #[inline(always)]
     pub const fn reserved31(&self) -> u32 {
         let val = (self.0 >> 3usize) & 0x1fff_ffff;
         val as u32
     }
-    #[doc = "Reserved for Future Use"]
+    #[doc = "Reserved for Future Use."]
     #[inline(always)]
     pub const fn set_reserved31(&mut self, val: u32) {
         self.0 = (self.0 & !(0x1fff_ffff << 3usize)) | (((val as u32) & 0x1fff_ffff) << 3usize);
@@ -275,7 +275,7 @@ impl defmt::Format for IntrCtrl {
         )
     }
 }
-#[doc = "Status"]
+#[doc = "Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Status(pub u32);
@@ -304,38 +304,38 @@ impl Status {
     pub const fn set_lock_status(&mut self, val: super::vals::LockStatus) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Status of the Error"]
+    #[doc = "Status of the Error."]
     #[must_use]
     #[inline(always)]
     pub const fn error_status(&self) -> super::vals::ErrorStatus {
         let val = (self.0 >> 2usize) & 0x07;
         super::vals::ErrorStatus::from_bits(val as u8)
     }
-    #[doc = "Status of the Error"]
+    #[doc = "Status of the Error."]
     #[inline(always)]
     pub const fn set_error_status(&mut self, val: super::vals::ErrorStatus) {
         self.0 = (self.0 & !(0x07 << 2usize)) | (((val.to_bits() as u32) & 0x07) << 2usize);
     }
-    #[doc = "Reserved for Future Use"]
+    #[doc = "Reserved for Future Use."]
     #[must_use]
     #[inline(always)]
     pub const fn reserved18(&self) -> u16 {
         let val = (self.0 >> 5usize) & 0x3fff;
         val as u16
     }
-    #[doc = "Reserved for Future Use"]
+    #[doc = "Reserved for Future Use."]
     #[inline(always)]
     pub const fn set_reserved18(&mut self, val: u16) {
         self.0 = (self.0 & !(0x3fff << 5usize)) | (((val as u32) & 0x3fff) << 5usize);
     }
-    #[doc = "Status of FSM"]
+    #[doc = "Status of FSM."]
     #[must_use]
     #[inline(always)]
     pub const fn fsm_state(&self) -> u16 {
         let val = (self.0 >> 19usize) & 0x1fff;
         val as u16
     }
-    #[doc = "Status of FSM"]
+    #[doc = "Status of FSM."]
     #[inline(always)]
     pub const fn set_fsm_state(&mut self, val: u16) {
         self.0 = (self.0 & !(0x1fff << 19usize)) | (((val as u32) & 0x1fff) << 19usize);
@@ -372,55 +372,55 @@ impl defmt::Format for Status {
         )
     }
 }
-#[doc = "IP Version"]
+#[doc = "IP Version."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Version(pub u32);
 impl Version {
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[must_use]
     #[inline(always)]
     pub const fn reserved3(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[inline(always)]
     pub const fn set_reserved3(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[must_use]
     #[inline(always)]
     pub const fn reserved7(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x0f;
         val as u8
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[inline(always)]
     pub const fn set_reserved7(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[must_use]
     #[inline(always)]
     pub const fn reserved11(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x0f;
         val as u8
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[inline(always)]
     pub const fn set_reserved11(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val as u32) & 0x0f) << 8usize);
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[must_use]
     #[inline(always)]
     pub const fn reserved15(&self) -> u8 {
         let val = (self.0 >> 12usize) & 0x0f;
         val as u8
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[inline(always)]
     pub const fn set_reserved15(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 12usize)) | (((val as u32) & 0x0f) << 12usize);
@@ -437,38 +437,38 @@ impl Version {
     pub const fn set_milestone(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val as u32) & 0x03) << 16usize);
     }
-    #[doc = "0:4 step, 1:8 step"]
+    #[doc = "0:4 step, 1:8 step."]
     #[must_use]
     #[inline(always)]
     pub const fn fsm_config(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "0:4 step, 1:8 step"]
+    #[doc = "0:4 step, 1:8 step."]
     #[inline(always)]
     pub const fn set_fsm_config(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Configured number of addressable indexes"]
+    #[doc = "Configured number of addressable indexes."]
     #[must_use]
     #[inline(always)]
     pub const fn index_config(&self) -> u8 {
         let val = (self.0 >> 19usize) & 0xff;
         val as u8
     }
-    #[doc = "Configured number of addressable indexes"]
+    #[doc = "Configured number of addressable indexes."]
     #[inline(always)]
     pub const fn set_index_config(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 19usize)) | (((val as u32) & 0xff) << 19usize);
     }
-    #[doc = "Reserved for Future Use"]
+    #[doc = "Reserved for Future Use."]
     #[must_use]
     #[inline(always)]
     pub const fn reserved31(&self) -> u8 {
         let val = (self.0 >> 27usize) & 0x1f;
         val as u8
     }
-    #[doc = "Reserved for Future Use"]
+    #[doc = "Reserved for Future Use."]
     #[inline(always)]
     pub const fn set_reserved31(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 27usize)) | (((val as u32) & 0x1f) << 27usize);

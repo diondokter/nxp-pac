@@ -481,7 +481,7 @@ impl defmt::Format for Busy1 {
         )
     }
 }
-#[doc = "Configuration register for DMA channel ."]
+#[doc = "Configuration register for DMA channel."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cfg(pub u32);
@@ -634,7 +634,7 @@ impl defmt::Format for Cfg {
         )
     }
 }
-#[doc = "Control and status register for DMA channel ."]
+#[doc = "Control and status register for DMA channel."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctlstat(pub u32);
@@ -978,14 +978,14 @@ impl defmt::Format for Enableset0 {
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Enableset1(pub u32);
 impl Enableset1 {
-    #[doc = "Enable for DMA channel 32"]
+    #[doc = "Enable for DMA channel 32."]
     #[must_use]
     #[inline(always)]
     pub const fn enable32(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable for DMA channel 32"]
+    #[doc = "Enable for DMA channel 32."]
     #[inline(always)]
     pub const fn set_enable32(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -2229,7 +2229,7 @@ impl defmt::Format for Srambase {
         defmt::write!(f, "Srambase {{ offset: {=u32:?} }}", self.offset())
     }
 }
-#[doc = "Transfer configuration register for DMA channel ."]
+#[doc = "Transfer configuration register for DMA channel."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Xfercfg(pub u32);

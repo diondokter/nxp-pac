@@ -1,4 +1,4 @@
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Alias(pub u32);
@@ -38,86 +38,86 @@ impl defmt::Format for Alias {
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Config(pub u32);
 impl Config {
-    #[doc = "1 if 2 x 512 bit buffers, 0 if only 1 x 512 bit"]
+    #[doc = "1 if 2 x 512 bit buffers, 0 if only 1 x 512 bit."]
     #[must_use]
     #[inline(always)]
     pub const fn dual(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "1 if 2 x 512 bit buffers, 0 if only 1 x 512 bit"]
+    #[doc = "1 if 2 x 512 bit buffers, 0 if only 1 x 512 bit."]
     #[inline(always)]
     pub const fn set_dual(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "1 if DMA is connected"]
+    #[doc = "1 if DMA is connected."]
     #[must_use]
     #[inline(always)]
     pub const fn dma(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "1 if DMA is connected"]
+    #[doc = "1 if DMA is connected."]
     #[inline(always)]
     pub const fn set_dma(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "1 if AHB Master is enabled"]
+    #[doc = "1 if AHB Master is enabled."]
     #[must_use]
     #[inline(always)]
     pub const fn ahb(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "1 if AHB Master is enabled"]
+    #[doc = "1 if AHB Master is enabled."]
     #[inline(always)]
     pub const fn set_ahb(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "1 if AES 128 included"]
+    #[doc = "1 if AES 128 included."]
     #[must_use]
     #[inline(always)]
     pub const fn aes(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "1 if AES 128 included"]
+    #[doc = "1 if AES 128 included."]
     #[inline(always)]
     pub const fn set_aes(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "1 if AES 192 and 256 also included"]
+    #[doc = "1 if AES 192 and 256 also included."]
     #[must_use]
     #[inline(always)]
     pub const fn aeskey(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "1 if AES 192 and 256 also included"]
+    #[doc = "1 if AES 192 and 256 also included."]
     #[inline(always)]
     pub const fn set_aeskey(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "1 if AES Secret key available"]
+    #[doc = "1 if AES Secret key available."]
     #[must_use]
     #[inline(always)]
     pub const fn secret(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "1 if AES Secret key available"]
+    #[doc = "1 if AES Secret key available."]
     #[inline(always)]
     pub const fn set_secret(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "1 if ICB over AES included"]
+    #[doc = "1 if ICB over AES included."]
     #[must_use]
     #[inline(always)]
     pub const fn icb(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "1 if ICB over AES included"]
+    #[doc = "1 if ICB over AES included."]
     #[inline(always)]
     pub const fn set_icb(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
@@ -158,7 +158,7 @@ impl defmt::Format for Config {
         )
     }
 }
-#[doc = "Crypto settings for AES and Salsa and ChaCha"]
+#[doc = "Crypto settings for AES and Salsa and ChaCha."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cryptcfg(pub u32);
@@ -211,26 +211,26 @@ impl Cryptcfg {
     pub const fn set_msw1st(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "AES Cipher mode to use if plain AES"]
+    #[doc = "AES Cipher mode to use if plain AES."]
     #[must_use]
     #[inline(always)]
     pub const fn aesmode(&self) -> super::vals::Aesmode {
         let val = (self.0 >> 4usize) & 0x03;
         super::vals::Aesmode::from_bits(val as u8)
     }
-    #[doc = "AES Cipher mode to use if plain AES"]
+    #[doc = "AES Cipher mode to use if plain AES."]
     #[inline(always)]
     pub const fn set_aesmode(&mut self, val: super::vals::Aesmode) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
-    #[doc = "AES ECB direction. Only encryption used if CTR mode or manual modes such as CFB"]
+    #[doc = "AES ECB direction. Only encryption used if CTR mode or manual modes such as CFB."]
     #[must_use]
     #[inline(always)]
     pub const fn aesdecrypt(&self) -> super::vals::Aesdecrypt {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::Aesdecrypt::from_bits(val as u8)
     }
-    #[doc = "AES ECB direction. Only encryption used if CTR mode or manual modes such as CFB"]
+    #[doc = "AES ECB direction. Only encryption used if CTR mode or manual modes such as CFB."]
     #[inline(always)]
     pub const fn set_aesdecrypt(&mut self, val: super::vals::Aesdecrypt) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
@@ -247,14 +247,14 @@ impl Cryptcfg {
     pub const fn set_aessecret(&mut self, val: super::vals::Aessecret) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "Sets the AES key size"]
+    #[doc = "Sets the AES key size."]
     #[must_use]
     #[inline(always)]
     pub const fn aeskeysz(&self) -> super::vals::Aeskeysz {
         let val = (self.0 >> 8usize) & 0x03;
         super::vals::Aeskeysz::from_bits(val as u8)
     }
-    #[doc = "Sets the AES key size"]
+    #[doc = "Sets the AES key size."]
     #[inline(always)]
     pub const fn set_aeskeysz(&mut self, val: super::vals::Aeskeysz) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
@@ -353,7 +353,7 @@ impl defmt::Format for Cryptcfg {
         )
     }
 }
-#[doc = "Control register to enable and operate Hash and Crypto"]
+#[doc = "Control register to enable and operate Hash and Crypto."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl(pub u32);
@@ -464,7 +464,7 @@ impl defmt::Format for Ctrl {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Digest0(pub u32);
@@ -636,14 +636,14 @@ impl Intenset {
     pub const fn set_digest(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Indicates if should interrupt on an ERROR (as defined in Status)"]
+    #[doc = "Indicates if should interrupt on an ERROR (as defined in Status)."]
     #[must_use]
     #[inline(always)]
     pub const fn error(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates if should interrupt on an ERROR (as defined in Status)"]
+    #[doc = "Indicates if should interrupt on an ERROR (as defined in Status)."]
     #[inline(always)]
     pub const fn set_error(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
@@ -693,14 +693,14 @@ impl Lock {
     pub const fn set_seclock(&mut self, val: super::vals::Seclock) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "Must write 0xA75 to change lock state. A75:Pattern needed to change bits 1:0"]
+    #[doc = "Must write 0xA75 to change lock state. A75:Pattern needed to change bits 1:0."]
     #[must_use]
     #[inline(always)]
     pub const fn pattern(&self) -> u16 {
         let val = (self.0 >> 4usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Must write 0xA75 to change lock state. A75:Pattern needed to change bits 1:0"]
+    #[doc = "Must write 0xA75 to change lock state. A75:Pattern needed to change bits 1:0."]
     #[inline(always)]
     pub const fn set_pattern(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 4usize)) | (((val as u32) & 0x0fff) << 4usize);
@@ -731,7 +731,7 @@ impl defmt::Format for Lock {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mask(pub u32);
@@ -803,7 +803,7 @@ impl defmt::Format for Memaddr {
         defmt::write!(f, "Memaddr {{ base: {=u32:?} }}", self.base())
     }
 }
-#[doc = "Setup Master to access memory (if available)"]
+#[doc = "Setup Master to access memory (if available)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Memctrl(pub u32);
@@ -858,7 +858,7 @@ impl defmt::Format for Memctrl {
         )
     }
 }
-#[doc = "PRNG software-accessable random output value"]
+#[doc = "PRNG software-accessable random output value."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PrngOut(pub u32);
@@ -895,19 +895,19 @@ impl defmt::Format for PrngOut {
         defmt::write!(f, "PrngOut {{ prng_out: {=u32:?} }}", self.prng_out())
     }
 }
-#[doc = "PRNG random seed input value used as an entropy source"]
+#[doc = "PRNG random seed input value used as an entropy source."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PrngSeed(pub u32);
 impl PrngSeed {
-    #[doc = "Random input value used as an entropy source"]
+    #[doc = "Random input value used as an entropy source."]
     #[must_use]
     #[inline(always)]
     pub const fn prng_seed(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Random input value used as an entropy source"]
+    #[doc = "Random input value used as an entropy source."]
     #[inline(always)]
     pub const fn set_prng_seed(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -932,7 +932,7 @@ impl defmt::Format for PrngSeed {
         defmt::write!(f, "PrngSeed {{ prng_seed: {=u32:?} }}", self.prng_seed())
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Reload(pub u32);
@@ -1010,26 +1010,26 @@ impl Status {
     pub const fn set_error(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Indicates the block wants the key to be written in (set along with WAITING)"]
+    #[doc = "Indicates the block wants the key to be written in (set along with WAITING)."]
     #[must_use]
     #[inline(always)]
     pub const fn needkey(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates the block wants the key to be written in (set along with WAITING)"]
+    #[doc = "Indicates the block wants the key to be written in (set along with WAITING)."]
     #[inline(always)]
     pub const fn set_needkey(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "Indicates the block wants an IV/NONE to be written in (set along with WAITING)"]
+    #[doc = "Indicates the block wants an IV/NONE to be written in (set along with WAITING)."]
     #[must_use]
     #[inline(always)]
     pub const fn neediv(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates the block wants an IV/NONE to be written in (set along with WAITING)"]
+    #[doc = "Indicates the block wants an IV/NONE to be written in (set along with WAITING)."]
     #[inline(always)]
     pub const fn set_neediv(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);

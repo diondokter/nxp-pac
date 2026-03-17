@@ -1,88 +1,88 @@
-#[doc = "Module DMA/Trigger Enable"]
+#[doc = "Module DMA/Trigger Enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct De(pub u32);
 impl De {
-    #[doc = "DMA/Trigger Wake-up Enable for Module 0"]
+    #[doc = "DMA/Trigger Wake-up Enable for Module 0."]
     #[must_use]
     #[inline(always)]
     pub const fn wude0(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "DMA/Trigger Wake-up Enable for Module 0"]
+    #[doc = "DMA/Trigger Wake-up Enable for Module 0."]
     #[inline(always)]
     pub const fn set_wude0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "DMA/Trigger Wake-up Enable for Module 1"]
+    #[doc = "DMA/Trigger Wake-up Enable for Module 1."]
     #[must_use]
     #[inline(always)]
     pub const fn wude1(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "DMA/Trigger Wake-up Enable for Module 1"]
+    #[doc = "DMA/Trigger Wake-up Enable for Module 1."]
     #[inline(always)]
     pub const fn set_wude1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "DMA/Trigger Wake-up Enable for Module 2"]
+    #[doc = "DMA/Trigger Wake-up Enable for Module 2."]
     #[must_use]
     #[inline(always)]
     pub const fn wude2(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "DMA/Trigger Wake-up Enable for Module 2"]
+    #[doc = "DMA/Trigger Wake-up Enable for Module 2."]
     #[inline(always)]
     pub const fn set_wude2(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "DMA/Trigger Wake-up Enable for Module 3"]
+    #[doc = "DMA/Trigger Wake-up Enable for Module 3."]
     #[must_use]
     #[inline(always)]
     pub const fn wude3(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "DMA/Trigger Wake-up Enable for Module 3"]
+    #[doc = "DMA/Trigger Wake-up Enable for Module 3."]
     #[inline(always)]
     pub const fn set_wude3(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "DMA/Trigger Wake-up Enable for Module 4"]
+    #[doc = "DMA/Trigger Wake-up Enable for Module 4."]
     #[must_use]
     #[inline(always)]
     pub const fn wude4(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "DMA/Trigger Wake-up Enable for Module 4"]
+    #[doc = "DMA/Trigger Wake-up Enable for Module 4."]
     #[inline(always)]
     pub const fn set_wude4(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "DMA/Trigger Wake-up Enable for Module 6"]
+    #[doc = "DMA/Trigger Wake-up Enable for Module 6."]
     #[must_use]
     #[inline(always)]
     pub const fn wude6(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "DMA/Trigger Wake-up Enable for Module 6"]
+    #[doc = "DMA/Trigger Wake-up Enable for Module 6."]
     #[inline(always)]
     pub const fn set_wude6(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "DMA/Trigger Wake-up Enable for Module 8"]
+    #[doc = "DMA/Trigger Wake-up Enable for Module 8."]
     #[must_use]
     #[inline(always)]
     pub const fn wude8(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "DMA/Trigger Wake-up Enable for Module 8"]
+    #[doc = "DMA/Trigger Wake-up Enable for Module 8."]
     #[inline(always)]
     pub const fn set_wude8(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
@@ -123,31 +123,31 @@ impl defmt::Format for De {
         )
     }
 }
-#[doc = "Pin Filter DMA/Trigger Configuration"]
+#[doc = "Pin Filter DMA/Trigger Configuration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Fdc(pub u32);
 impl Fdc {
-    #[doc = "Filter Configuration for FILTn"]
+    #[doc = "Filter Configuration for FILTn."]
     #[must_use]
     #[inline(always)]
     pub const fn filtc1(&self) -> super::vals::Filtc1 {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Filtc1::from_bits(val as u8)
     }
-    #[doc = "Filter Configuration for FILTn"]
+    #[doc = "Filter Configuration for FILTn."]
     #[inline(always)]
     pub const fn set_filtc1(&mut self, val: super::vals::Filtc1) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "Filter Configuration for FILTn"]
+    #[doc = "Filter Configuration for FILTn."]
     #[must_use]
     #[inline(always)]
     pub const fn filtc2(&self) -> super::vals::Filtc2 {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::Filtc2::from_bits(val as u8)
     }
-    #[doc = "Filter Configuration for FILTn"]
+    #[doc = "Filter Configuration for FILTn."]
     #[inline(always)]
     pub const fn set_filtc2(&mut self, val: super::vals::Filtc2) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
@@ -178,79 +178,79 @@ impl defmt::Format for Fdc {
         )
     }
 }
-#[doc = "Pin Filter"]
+#[doc = "Pin Filter."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Filt(pub u32);
 impl Filt {
-    #[doc = "Filter 1 Pin Select"]
+    #[doc = "Filter 1 Pin Select."]
     #[must_use]
     #[inline(always)]
     pub const fn filtsel1(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x1f;
         val as u8
     }
-    #[doc = "Filter 1 Pin Select"]
+    #[doc = "Filter 1 Pin Select."]
     #[inline(always)]
     pub const fn set_filtsel1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val as u32) & 0x1f) << 0usize);
     }
-    #[doc = "Filter 1 Enable"]
+    #[doc = "Filter 1 Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn filte1(&self) -> super::vals::Filte1 {
         let val = (self.0 >> 5usize) & 0x03;
         super::vals::Filte1::from_bits(val as u8)
     }
-    #[doc = "Filter 1 Enable"]
+    #[doc = "Filter 1 Enable."]
     #[inline(always)]
     pub const fn set_filte1(&mut self, val: super::vals::Filte1) {
         self.0 = (self.0 & !(0x03 << 5usize)) | (((val.to_bits() as u32) & 0x03) << 5usize);
     }
-    #[doc = "Filter 1 Flag"]
+    #[doc = "Filter 1 Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn filtf1(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Filter 1 Flag"]
+    #[doc = "Filter 1 Flag."]
     #[inline(always)]
     pub const fn set_filtf1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Filter 2 Pin Select"]
+    #[doc = "Filter 2 Pin Select."]
     #[must_use]
     #[inline(always)]
     pub const fn filtsel2(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x1f;
         val as u8
     }
-    #[doc = "Filter 2 Pin Select"]
+    #[doc = "Filter 2 Pin Select."]
     #[inline(always)]
     pub const fn set_filtsel2(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 8usize)) | (((val as u32) & 0x1f) << 8usize);
     }
-    #[doc = "Filter 2 Enable"]
+    #[doc = "Filter 2 Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn filte2(&self) -> super::vals::Filte2 {
         let val = (self.0 >> 13usize) & 0x03;
         super::vals::Filte2::from_bits(val as u8)
     }
-    #[doc = "Filter 2 Enable"]
+    #[doc = "Filter 2 Enable."]
     #[inline(always)]
     pub const fn set_filte2(&mut self, val: super::vals::Filte2) {
         self.0 = (self.0 & !(0x03 << 13usize)) | (((val.to_bits() as u32) & 0x03) << 13usize);
     }
-    #[doc = "Filter 2 Flag"]
+    #[doc = "Filter 2 Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn filtf2(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Filter 2 Flag"]
+    #[doc = "Filter 2 Flag."]
     #[inline(always)]
     pub const fn set_filtf2(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
@@ -289,31 +289,31 @@ impl defmt::Format for Filt {
         )
     }
 }
-#[doc = "Pin Filter Mode Configuration"]
+#[doc = "Pin Filter Mode Configuration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Fmc(pub u32);
 impl Fmc {
-    #[doc = "Filter Mode for FILTn"]
+    #[doc = "Filter Mode for FILTn."]
     #[must_use]
     #[inline(always)]
     pub const fn filtm1(&self) -> super::vals::Filtm1 {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Filtm1::from_bits(val as u8)
     }
-    #[doc = "Filter Mode for FILTn"]
+    #[doc = "Filter Mode for FILTn."]
     #[inline(always)]
     pub const fn set_filtm1(&mut self, val: super::vals::Filtm1) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Filter Mode for FILTn"]
+    #[doc = "Filter Mode for FILTn."]
     #[must_use]
     #[inline(always)]
     pub const fn filtm2(&self) -> super::vals::Filtm2 {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Filtm2::from_bits(val as u8)
     }
-    #[doc = "Filter Mode for FILTn"]
+    #[doc = "Filter Mode for FILTn."]
     #[inline(always)]
     pub const fn set_filtm2(&mut self, val: super::vals::Filtm2) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
@@ -344,103 +344,103 @@ impl defmt::Format for Fmc {
         )
     }
 }
-#[doc = "Module Interrupt Enable"]
+#[doc = "Module Interrupt Enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Me(pub u32);
 impl Me {
-    #[doc = "Module Interrupt Wake-up Enable for Module 0"]
+    #[doc = "Module Interrupt Wake-up Enable for Module 0."]
     #[must_use]
     #[inline(always)]
     pub const fn wume0(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Module Interrupt Wake-up Enable for Module 0"]
+    #[doc = "Module Interrupt Wake-up Enable for Module 0."]
     #[inline(always)]
     pub const fn set_wume0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Module Interrupt Wake-up Enable for Module 1"]
+    #[doc = "Module Interrupt Wake-up Enable for Module 1."]
     #[must_use]
     #[inline(always)]
     pub const fn wume1(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Module Interrupt Wake-up Enable for Module 1"]
+    #[doc = "Module Interrupt Wake-up Enable for Module 1."]
     #[inline(always)]
     pub const fn set_wume1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Module Interrupt Wake-up Enable for Module 2"]
+    #[doc = "Module Interrupt Wake-up Enable for Module 2."]
     #[must_use]
     #[inline(always)]
     pub const fn wume2(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Module Interrupt Wake-up Enable for Module 2"]
+    #[doc = "Module Interrupt Wake-up Enable for Module 2."]
     #[inline(always)]
     pub const fn set_wume2(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Module Interrupt Wake-up Enable for Module 3"]
+    #[doc = "Module Interrupt Wake-up Enable for Module 3."]
     #[must_use]
     #[inline(always)]
     pub const fn wume3(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Module Interrupt Wake-up Enable for Module 3"]
+    #[doc = "Module Interrupt Wake-up Enable for Module 3."]
     #[inline(always)]
     pub const fn set_wume3(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "Module Interrupt Wake-up Enable for Module 4"]
+    #[doc = "Module Interrupt Wake-up Enable for Module 4."]
     #[must_use]
     #[inline(always)]
     pub const fn wume4(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "Module Interrupt Wake-up Enable for Module 4"]
+    #[doc = "Module Interrupt Wake-up Enable for Module 4."]
     #[inline(always)]
     pub const fn set_wume4(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "Module Interrupt Wake-up Enable for Module 5"]
+    #[doc = "Module Interrupt Wake-up Enable for Module 5."]
     #[must_use]
     #[inline(always)]
     pub const fn wume5(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Module Interrupt Wake-up Enable for Module 5"]
+    #[doc = "Module Interrupt Wake-up Enable for Module 5."]
     #[inline(always)]
     pub const fn set_wume5(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "Module Interrupt Wake-up Enable for Module 6"]
+    #[doc = "Module Interrupt Wake-up Enable for Module 6."]
     #[must_use]
     #[inline(always)]
     pub const fn wume6(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "Module Interrupt Wake-up Enable for Module 6"]
+    #[doc = "Module Interrupt Wake-up Enable for Module 6."]
     #[inline(always)]
     pub const fn set_wume6(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Module Interrupt Wake-up Enable for Module 8"]
+    #[doc = "Module Interrupt Wake-up Enable for Module 8."]
     #[must_use]
     #[inline(always)]
     pub const fn wume8(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Module Interrupt Wake-up Enable for Module 8"]
+    #[doc = "Module Interrupt Wake-up Enable for Module 8."]
     #[inline(always)]
     pub const fn set_wume8(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
@@ -483,55 +483,55 @@ impl defmt::Format for Me {
         )
     }
 }
-#[doc = "Parameter"]
+#[doc = "Parameter."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Param(pub u32);
 impl Param {
-    #[doc = "Filter Number"]
+    #[doc = "Filter Number."]
     #[must_use]
     #[inline(always)]
     pub const fn filters(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Filter Number"]
+    #[doc = "Filter Number."]
     #[inline(always)]
     pub const fn set_filters(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "DMA Number"]
+    #[doc = "DMA Number."]
     #[must_use]
     #[inline(always)]
     pub const fn dmas(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0xff;
         val as u8
     }
-    #[doc = "DMA Number"]
+    #[doc = "DMA Number."]
     #[inline(always)]
     pub const fn set_dmas(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
     }
-    #[doc = "Module Number"]
+    #[doc = "Module Number."]
     #[must_use]
     #[inline(always)]
     pub const fn modules(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0xff;
         val as u8
     }
-    #[doc = "Module Number"]
+    #[doc = "Module Number."]
     #[inline(always)]
     pub const fn set_modules(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
     }
-    #[doc = "Pin Number"]
+    #[doc = "Pin Number."]
     #[must_use]
     #[inline(always)]
     pub const fn pins(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "Pin Number"]
+    #[doc = "Pin Number."]
     #[inline(always)]
     pub const fn set_pins(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);
@@ -566,199 +566,199 @@ impl defmt::Format for Param {
         )
     }
 }
-#[doc = "Pin DMA/Trigger Configuration 1"]
+#[doc = "Pin DMA/Trigger Configuration 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pdc1(pub u32);
 impl Pdc1 {
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupdc0(&self) -> super::vals::Wupdc0 {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Wupdc0::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupdc0(&mut self, val: super::vals::Wupdc0) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupdc1(&self) -> super::vals::Wupdc1 {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::Wupdc1::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupdc1(&mut self, val: super::vals::Wupdc1) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupdc2(&self) -> super::vals::Wupdc2 {
         let val = (self.0 >> 4usize) & 0x03;
         super::vals::Wupdc2::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupdc2(&mut self, val: super::vals::Wupdc2) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupdc3(&self) -> super::vals::Wupdc3 {
         let val = (self.0 >> 6usize) & 0x03;
         super::vals::Wupdc3::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupdc3(&mut self, val: super::vals::Wupdc3) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u32) & 0x03) << 6usize);
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupdc4(&self) -> super::vals::Wupdc4 {
         let val = (self.0 >> 8usize) & 0x03;
         super::vals::Wupdc4::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupdc4(&mut self, val: super::vals::Wupdc4) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupdc5(&self) -> super::vals::Wupdc5 {
         let val = (self.0 >> 10usize) & 0x03;
         super::vals::Wupdc5::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupdc5(&mut self, val: super::vals::Wupdc5) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u32) & 0x03) << 10usize);
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupdc6(&self) -> super::vals::Wupdc6 {
         let val = (self.0 >> 12usize) & 0x03;
         super::vals::Wupdc6::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupdc6(&mut self, val: super::vals::Wupdc6) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupdc7(&self) -> super::vals::Wupdc7 {
         let val = (self.0 >> 14usize) & 0x03;
         super::vals::Wupdc7::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupdc7(&mut self, val: super::vals::Wupdc7) {
         self.0 = (self.0 & !(0x03 << 14usize)) | (((val.to_bits() as u32) & 0x03) << 14usize);
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupdc8(&self) -> super::vals::Wupdc8 {
         let val = (self.0 >> 16usize) & 0x03;
         super::vals::Wupdc8::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupdc8(&mut self, val: super::vals::Wupdc8) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupdc9(&self) -> super::vals::Wupdc9 {
         let val = (self.0 >> 18usize) & 0x03;
         super::vals::Wupdc9::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupdc9(&mut self, val: super::vals::Wupdc9) {
         self.0 = (self.0 & !(0x03 << 18usize)) | (((val.to_bits() as u32) & 0x03) << 18usize);
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupdc10(&self) -> super::vals::Wupdc10 {
         let val = (self.0 >> 20usize) & 0x03;
         super::vals::Wupdc10::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupdc10(&mut self, val: super::vals::Wupdc10) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupdc11(&self) -> super::vals::Wupdc11 {
         let val = (self.0 >> 22usize) & 0x03;
         super::vals::Wupdc11::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupdc11(&mut self, val: super::vals::Wupdc11) {
         self.0 = (self.0 & !(0x03 << 22usize)) | (((val.to_bits() as u32) & 0x03) << 22usize);
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupdc12(&self) -> super::vals::Wupdc12 {
         let val = (self.0 >> 24usize) & 0x03;
         super::vals::Wupdc12::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupdc12(&mut self, val: super::vals::Wupdc12) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupdc13(&self) -> super::vals::Wupdc13 {
         let val = (self.0 >> 26usize) & 0x03;
         super::vals::Wupdc13::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupdc13(&mut self, val: super::vals::Wupdc13) {
         self.0 = (self.0 & !(0x03 << 26usize)) | (((val.to_bits() as u32) & 0x03) << 26usize);
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupdc14(&self) -> super::vals::Wupdc14 {
         let val = (self.0 >> 28usize) & 0x03;
         super::vals::Wupdc14::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupdc14(&mut self, val: super::vals::Wupdc14) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupdc15(&self) -> super::vals::Wupdc15 {
         let val = (self.0 >> 30usize) & 0x03;
         super::vals::Wupdc15::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupdc15(&mut self, val: super::vals::Wupdc15) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val.to_bits() as u32) & 0x03) << 30usize);
@@ -817,199 +817,199 @@ impl defmt::Format for Pdc1 {
         )
     }
 }
-#[doc = "Pin DMA/Trigger Configuration 2"]
+#[doc = "Pin DMA/Trigger Configuration 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pdc2(pub u32);
 impl Pdc2 {
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupdc16(&self) -> super::vals::Wupdc16 {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Wupdc16::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupdc16(&mut self, val: super::vals::Wupdc16) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupdc17(&self) -> super::vals::Wupdc17 {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::Wupdc17::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupdc17(&mut self, val: super::vals::Wupdc17) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupdc18(&self) -> super::vals::Wupdc18 {
         let val = (self.0 >> 4usize) & 0x03;
         super::vals::Wupdc18::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupdc18(&mut self, val: super::vals::Wupdc18) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupdc19(&self) -> super::vals::Wupdc19 {
         let val = (self.0 >> 6usize) & 0x03;
         super::vals::Wupdc19::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupdc19(&mut self, val: super::vals::Wupdc19) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u32) & 0x03) << 6usize);
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupdc20(&self) -> super::vals::Wupdc20 {
         let val = (self.0 >> 8usize) & 0x03;
         super::vals::Wupdc20::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupdc20(&mut self, val: super::vals::Wupdc20) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupdc21(&self) -> super::vals::Wupdc21 {
         let val = (self.0 >> 10usize) & 0x03;
         super::vals::Wupdc21::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupdc21(&mut self, val: super::vals::Wupdc21) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u32) & 0x03) << 10usize);
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupdc22(&self) -> super::vals::Wupdc22 {
         let val = (self.0 >> 12usize) & 0x03;
         super::vals::Wupdc22::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupdc22(&mut self, val: super::vals::Wupdc22) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupdc23(&self) -> super::vals::Wupdc23 {
         let val = (self.0 >> 14usize) & 0x03;
         super::vals::Wupdc23::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupdc23(&mut self, val: super::vals::Wupdc23) {
         self.0 = (self.0 & !(0x03 << 14usize)) | (((val.to_bits() as u32) & 0x03) << 14usize);
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupdc24(&self) -> super::vals::Wupdc24 {
         let val = (self.0 >> 16usize) & 0x03;
         super::vals::Wupdc24::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupdc24(&mut self, val: super::vals::Wupdc24) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupdc25(&self) -> super::vals::Wupdc25 {
         let val = (self.0 >> 18usize) & 0x03;
         super::vals::Wupdc25::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupdc25(&mut self, val: super::vals::Wupdc25) {
         self.0 = (self.0 & !(0x03 << 18usize)) | (((val.to_bits() as u32) & 0x03) << 18usize);
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupdc26(&self) -> super::vals::Wupdc26 {
         let val = (self.0 >> 20usize) & 0x03;
         super::vals::Wupdc26::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupdc26(&mut self, val: super::vals::Wupdc26) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupdc27(&self) -> super::vals::Wupdc27 {
         let val = (self.0 >> 22usize) & 0x03;
         super::vals::Wupdc27::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupdc27(&mut self, val: super::vals::Wupdc27) {
         self.0 = (self.0 & !(0x03 << 22usize)) | (((val.to_bits() as u32) & 0x03) << 22usize);
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[must_use]
     #[inline(always)]
     pub const fn reserved28(&self) -> super::vals::Pdc2Reserved28 {
         let val = (self.0 >> 24usize) & 0x03;
         super::vals::Pdc2Reserved28::from_bits(val as u8)
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[inline(always)]
     pub const fn set_reserved28(&mut self, val: super::vals::Pdc2Reserved28) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[must_use]
     #[inline(always)]
     pub const fn reserved29(&self) -> super::vals::Pdc2Reserved29 {
         let val = (self.0 >> 26usize) & 0x03;
         super::vals::Pdc2Reserved29::from_bits(val as u8)
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[inline(always)]
     pub const fn set_reserved29(&mut self, val: super::vals::Pdc2Reserved29) {
         self.0 = (self.0 & !(0x03 << 26usize)) | (((val.to_bits() as u32) & 0x03) << 26usize);
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupdc30(&self) -> super::vals::Wupdc30 {
         let val = (self.0 >> 28usize) & 0x03;
         super::vals::Wupdc30::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupdc30(&mut self, val: super::vals::Wupdc30) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[must_use]
     #[inline(always)]
     pub const fn reserved31(&self) -> super::vals::Pdc2Reserved31 {
         let val = (self.0 >> 30usize) & 0x03;
         super::vals::Pdc2Reserved31::from_bits(val as u8)
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[inline(always)]
     pub const fn set_reserved31(&mut self, val: super::vals::Pdc2Reserved31) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val.to_bits() as u32) & 0x03) << 30usize);
@@ -1068,199 +1068,199 @@ impl defmt::Format for Pdc2 {
         )
     }
 }
-#[doc = "Pin Enable 1"]
+#[doc = "Pin Enable 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pe1(pub u32);
 impl Pe1 {
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupe0(&self) -> super::vals::Wupe0 {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Wupe0::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupe0(&mut self, val: super::vals::Wupe0) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupe1(&self) -> super::vals::Wupe1 {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::Wupe1::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupe1(&mut self, val: super::vals::Wupe1) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupe2(&self) -> super::vals::Wupe2 {
         let val = (self.0 >> 4usize) & 0x03;
         super::vals::Wupe2::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupe2(&mut self, val: super::vals::Wupe2) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupe3(&self) -> super::vals::Wupe3 {
         let val = (self.0 >> 6usize) & 0x03;
         super::vals::Wupe3::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupe3(&mut self, val: super::vals::Wupe3) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u32) & 0x03) << 6usize);
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupe4(&self) -> super::vals::Wupe4 {
         let val = (self.0 >> 8usize) & 0x03;
         super::vals::Wupe4::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupe4(&mut self, val: super::vals::Wupe4) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupe5(&self) -> super::vals::Wupe5 {
         let val = (self.0 >> 10usize) & 0x03;
         super::vals::Wupe5::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupe5(&mut self, val: super::vals::Wupe5) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u32) & 0x03) << 10usize);
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupe6(&self) -> super::vals::Wupe6 {
         let val = (self.0 >> 12usize) & 0x03;
         super::vals::Wupe6::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupe6(&mut self, val: super::vals::Wupe6) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupe7(&self) -> super::vals::Wupe7 {
         let val = (self.0 >> 14usize) & 0x03;
         super::vals::Wupe7::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupe7(&mut self, val: super::vals::Wupe7) {
         self.0 = (self.0 & !(0x03 << 14usize)) | (((val.to_bits() as u32) & 0x03) << 14usize);
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupe8(&self) -> super::vals::Wupe8 {
         let val = (self.0 >> 16usize) & 0x03;
         super::vals::Wupe8::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupe8(&mut self, val: super::vals::Wupe8) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupe9(&self) -> super::vals::Wupe9 {
         let val = (self.0 >> 18usize) & 0x03;
         super::vals::Wupe9::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupe9(&mut self, val: super::vals::Wupe9) {
         self.0 = (self.0 & !(0x03 << 18usize)) | (((val.to_bits() as u32) & 0x03) << 18usize);
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupe10(&self) -> super::vals::Wupe10 {
         let val = (self.0 >> 20usize) & 0x03;
         super::vals::Wupe10::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupe10(&mut self, val: super::vals::Wupe10) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupe11(&self) -> super::vals::Wupe11 {
         let val = (self.0 >> 22usize) & 0x03;
         super::vals::Wupe11::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupe11(&mut self, val: super::vals::Wupe11) {
         self.0 = (self.0 & !(0x03 << 22usize)) | (((val.to_bits() as u32) & 0x03) << 22usize);
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupe12(&self) -> super::vals::Wupe12 {
         let val = (self.0 >> 24usize) & 0x03;
         super::vals::Wupe12::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupe12(&mut self, val: super::vals::Wupe12) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupe13(&self) -> super::vals::Wupe13 {
         let val = (self.0 >> 26usize) & 0x03;
         super::vals::Wupe13::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupe13(&mut self, val: super::vals::Wupe13) {
         self.0 = (self.0 & !(0x03 << 26usize)) | (((val.to_bits() as u32) & 0x03) << 26usize);
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupe14(&self) -> super::vals::Wupe14 {
         let val = (self.0 >> 28usize) & 0x03;
         super::vals::Wupe14::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupe14(&mut self, val: super::vals::Wupe14) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupe15(&self) -> super::vals::Wupe15 {
         let val = (self.0 >> 30usize) & 0x03;
         super::vals::Wupe15::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupe15(&mut self, val: super::vals::Wupe15) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val.to_bits() as u32) & 0x03) << 30usize);
@@ -1319,199 +1319,199 @@ impl defmt::Format for Pe1 {
         )
     }
 }
-#[doc = "Pin Enable 2"]
+#[doc = "Pin Enable 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pe2(pub u32);
 impl Pe2 {
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupe16(&self) -> super::vals::Wupe16 {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Wupe16::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupe16(&mut self, val: super::vals::Wupe16) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupe17(&self) -> super::vals::Wupe17 {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::Wupe17::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupe17(&mut self, val: super::vals::Wupe17) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupe18(&self) -> super::vals::Wupe18 {
         let val = (self.0 >> 4usize) & 0x03;
         super::vals::Wupe18::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupe18(&mut self, val: super::vals::Wupe18) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupe19(&self) -> super::vals::Wupe19 {
         let val = (self.0 >> 6usize) & 0x03;
         super::vals::Wupe19::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupe19(&mut self, val: super::vals::Wupe19) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u32) & 0x03) << 6usize);
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupe20(&self) -> super::vals::Wupe20 {
         let val = (self.0 >> 8usize) & 0x03;
         super::vals::Wupe20::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupe20(&mut self, val: super::vals::Wupe20) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupe21(&self) -> super::vals::Wupe21 {
         let val = (self.0 >> 10usize) & 0x03;
         super::vals::Wupe21::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupe21(&mut self, val: super::vals::Wupe21) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u32) & 0x03) << 10usize);
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupe22(&self) -> super::vals::Wupe22 {
         let val = (self.0 >> 12usize) & 0x03;
         super::vals::Wupe22::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupe22(&mut self, val: super::vals::Wupe22) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupe23(&self) -> super::vals::Wupe23 {
         let val = (self.0 >> 14usize) & 0x03;
         super::vals::Wupe23::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupe23(&mut self, val: super::vals::Wupe23) {
         self.0 = (self.0 & !(0x03 << 14usize)) | (((val.to_bits() as u32) & 0x03) << 14usize);
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupe24(&self) -> super::vals::Wupe24 {
         let val = (self.0 >> 16usize) & 0x03;
         super::vals::Wupe24::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupe24(&mut self, val: super::vals::Wupe24) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupe25(&self) -> super::vals::Wupe25 {
         let val = (self.0 >> 18usize) & 0x03;
         super::vals::Wupe25::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupe25(&mut self, val: super::vals::Wupe25) {
         self.0 = (self.0 & !(0x03 << 18usize)) | (((val.to_bits() as u32) & 0x03) << 18usize);
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupe26(&self) -> super::vals::Wupe26 {
         let val = (self.0 >> 20usize) & 0x03;
         super::vals::Wupe26::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupe26(&mut self, val: super::vals::Wupe26) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupe27(&self) -> super::vals::Wupe27 {
         let val = (self.0 >> 22usize) & 0x03;
         super::vals::Wupe27::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupe27(&mut self, val: super::vals::Wupe27) {
         self.0 = (self.0 & !(0x03 << 22usize)) | (((val.to_bits() as u32) & 0x03) << 22usize);
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[must_use]
     #[inline(always)]
     pub const fn reserved28(&self) -> super::vals::Pe2Reserved28 {
         let val = (self.0 >> 24usize) & 0x03;
         super::vals::Pe2Reserved28::from_bits(val as u8)
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[inline(always)]
     pub const fn set_reserved28(&mut self, val: super::vals::Pe2Reserved28) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[must_use]
     #[inline(always)]
     pub const fn reserved29(&self) -> super::vals::Pe2Reserved29 {
         let val = (self.0 >> 26usize) & 0x03;
         super::vals::Pe2Reserved29::from_bits(val as u8)
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[inline(always)]
     pub const fn set_reserved29(&mut self, val: super::vals::Pe2Reserved29) {
         self.0 = (self.0 & !(0x03 << 26usize)) | (((val.to_bits() as u32) & 0x03) << 26usize);
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupe30(&self) -> super::vals::Wupe30 {
         let val = (self.0 >> 28usize) & 0x03;
         super::vals::Wupe30::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Enable for LLWU_Pn"]
+    #[doc = "Wake-up Pin Enable for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupe30(&mut self, val: super::vals::Wupe30) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[must_use]
     #[inline(always)]
     pub const fn reserved31(&self) -> super::vals::Pe2Reserved31 {
         let val = (self.0 >> 30usize) & 0x03;
         super::vals::Pe2Reserved31::from_bits(val as u8)
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[inline(always)]
     pub const fn set_reserved31(&mut self, val: super::vals::Pe2Reserved31) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val.to_bits() as u32) & 0x03) << 30usize);
@@ -1570,391 +1570,391 @@ impl defmt::Format for Pe2 {
         )
     }
 }
-#[doc = "Pin Flag"]
+#[doc = "Pin Flag."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pf(pub u32);
 impl Pf {
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wuf0(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wuf0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wuf1(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wuf1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wuf2(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wuf2(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wuf3(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wuf3(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wuf4(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wuf4(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wuf5(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wuf5(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wuf6(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wuf6(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wuf7(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wuf7(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wuf8(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wuf8(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wuf9(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wuf9(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wuf10(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wuf10(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wuf11(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wuf11(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wuf12(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wuf12(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wuf13(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wuf13(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wuf14(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wuf14(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wuf15(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wuf15(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wuf16(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wuf16(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wuf17(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wuf17(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wuf18(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wuf18(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wuf19(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wuf19(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wuf20(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wuf20(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wuf21(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wuf21(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wuf22(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wuf22(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wuf23(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wuf23(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wuf24(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wuf24(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wuf25(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wuf25(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wuf26(&self) -> bool {
         let val = (self.0 >> 26usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wuf26(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wuf27(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wuf27(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[must_use]
     #[inline(always)]
     pub const fn reserved28(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[inline(always)]
     pub const fn set_reserved28(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[must_use]
     #[inline(always)]
     pub const fn reserved29(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[inline(always)]
     pub const fn set_reserved29(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wuf30(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "Wake-up Flag for LLWU_Pn"]
+    #[doc = "Wake-up Flag for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wuf30(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[must_use]
     #[inline(always)]
     pub const fn reserved31(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[inline(always)]
     pub const fn set_reserved31(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -2045,391 +2045,391 @@ impl defmt::Format for Pf {
         )
     }
 }
-#[doc = "Pin Mode Configuration"]
+#[doc = "Pin Mode Configuration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pmc(pub u32);
 impl Pmc {
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupmc0(&self) -> super::vals::Wupmc0 {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Wupmc0::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupmc0(&mut self, val: super::vals::Wupmc0) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupmc1(&self) -> super::vals::Wupmc1 {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Wupmc1::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupmc1(&mut self, val: super::vals::Wupmc1) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupmc2(&self) -> super::vals::Wupmc2 {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Wupmc2::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupmc2(&mut self, val: super::vals::Wupmc2) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupmc3(&self) -> super::vals::Wupmc3 {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Wupmc3::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupmc3(&mut self, val: super::vals::Wupmc3) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupmc4(&self) -> super::vals::Wupmc4 {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::Wupmc4::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupmc4(&mut self, val: super::vals::Wupmc4) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupmc5(&self) -> super::vals::Wupmc5 {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::Wupmc5::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupmc5(&mut self, val: super::vals::Wupmc5) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupmc6(&self) -> super::vals::Wupmc6 {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::Wupmc6::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupmc6(&mut self, val: super::vals::Wupmc6) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupmc7(&self) -> super::vals::Wupmc7 {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Wupmc7::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupmc7(&mut self, val: super::vals::Wupmc7) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupmc8(&self) -> super::vals::Wupmc8 {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::Wupmc8::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupmc8(&mut self, val: super::vals::Wupmc8) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupmc9(&self) -> super::vals::Wupmc9 {
         let val = (self.0 >> 9usize) & 0x01;
         super::vals::Wupmc9::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupmc9(&mut self, val: super::vals::Wupmc9) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupmc10(&self) -> super::vals::Wupmc10 {
         let val = (self.0 >> 10usize) & 0x01;
         super::vals::Wupmc10::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupmc10(&mut self, val: super::vals::Wupmc10) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupmc11(&self) -> super::vals::Wupmc11 {
         let val = (self.0 >> 11usize) & 0x01;
         super::vals::Wupmc11::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupmc11(&mut self, val: super::vals::Wupmc11) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupmc12(&self) -> super::vals::Wupmc12 {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Wupmc12::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupmc12(&mut self, val: super::vals::Wupmc12) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupmc13(&self) -> super::vals::Wupmc13 {
         let val = (self.0 >> 13usize) & 0x01;
         super::vals::Wupmc13::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupmc13(&mut self, val: super::vals::Wupmc13) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupmc14(&self) -> super::vals::Wupmc14 {
         let val = (self.0 >> 14usize) & 0x01;
         super::vals::Wupmc14::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupmc14(&mut self, val: super::vals::Wupmc14) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupmc15(&self) -> super::vals::Wupmc15 {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::Wupmc15::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupmc15(&mut self, val: super::vals::Wupmc15) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupmc16(&self) -> super::vals::Wupmc16 {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::Wupmc16::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupmc16(&mut self, val: super::vals::Wupmc16) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupmc17(&self) -> super::vals::Wupmc17 {
         let val = (self.0 >> 17usize) & 0x01;
         super::vals::Wupmc17::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupmc17(&mut self, val: super::vals::Wupmc17) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupmc18(&self) -> super::vals::Wupmc18 {
         let val = (self.0 >> 18usize) & 0x01;
         super::vals::Wupmc18::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupmc18(&mut self, val: super::vals::Wupmc18) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val.to_bits() as u32) & 0x01) << 18usize);
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupmc19(&self) -> super::vals::Wupmc19 {
         let val = (self.0 >> 19usize) & 0x01;
         super::vals::Wupmc19::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupmc19(&mut self, val: super::vals::Wupmc19) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val.to_bits() as u32) & 0x01) << 19usize);
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupmc20(&self) -> super::vals::Wupmc20 {
         let val = (self.0 >> 20usize) & 0x01;
         super::vals::Wupmc20::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupmc20(&mut self, val: super::vals::Wupmc20) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupmc21(&self) -> super::vals::Wupmc21 {
         let val = (self.0 >> 21usize) & 0x01;
         super::vals::Wupmc21::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupmc21(&mut self, val: super::vals::Wupmc21) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupmc22(&self) -> super::vals::Wupmc22 {
         let val = (self.0 >> 22usize) & 0x01;
         super::vals::Wupmc22::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupmc22(&mut self, val: super::vals::Wupmc22) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupmc23(&self) -> super::vals::Wupmc23 {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::Wupmc23::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupmc23(&mut self, val: super::vals::Wupmc23) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupmc24(&self) -> super::vals::Wupmc24 {
         let val = (self.0 >> 24usize) & 0x01;
         super::vals::Wupmc24::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupmc24(&mut self, val: super::vals::Wupmc24) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupmc25(&self) -> super::vals::Wupmc25 {
         let val = (self.0 >> 25usize) & 0x01;
         super::vals::Wupmc25::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupmc25(&mut self, val: super::vals::Wupmc25) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val.to_bits() as u32) & 0x01) << 25usize);
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupmc26(&self) -> super::vals::Wupmc26 {
         let val = (self.0 >> 26usize) & 0x01;
         super::vals::Wupmc26::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupmc26(&mut self, val: super::vals::Wupmc26) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupmc27(&self) -> super::vals::Wupmc27 {
         let val = (self.0 >> 27usize) & 0x01;
         super::vals::Wupmc27::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupmc27(&mut self, val: super::vals::Wupmc27) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val.to_bits() as u32) & 0x01) << 27usize);
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[must_use]
     #[inline(always)]
     pub const fn reserved28(&self) -> super::vals::PmcReserved28 {
         let val = (self.0 >> 28usize) & 0x01;
         super::vals::PmcReserved28::from_bits(val as u8)
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[inline(always)]
     pub const fn set_reserved28(&mut self, val: super::vals::PmcReserved28) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[must_use]
     #[inline(always)]
     pub const fn reserved29(&self) -> super::vals::PmcReserved29 {
         let val = (self.0 >> 29usize) & 0x01;
         super::vals::PmcReserved29::from_bits(val as u8)
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[inline(always)]
     pub const fn set_reserved29(&mut self, val: super::vals::PmcReserved29) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[must_use]
     #[inline(always)]
     pub const fn wupmc30(&self) -> super::vals::Wupmc30 {
         let val = (self.0 >> 30usize) & 0x01;
         super::vals::Wupmc30::from_bits(val as u8)
     }
-    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn"]
+    #[doc = "Wake-up Pin Mode Configuration for LLWU_Pn."]
     #[inline(always)]
     pub const fn set_wupmc30(&mut self, val: super::vals::Wupmc30) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val.to_bits() as u32) & 0x01) << 30usize);
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[must_use]
     #[inline(always)]
     pub const fn reserved31(&self) -> super::vals::PmcReserved31 {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::PmcReserved31::from_bits(val as u8)
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[inline(always)]
     pub const fn set_reserved31(&mut self, val: super::vals::PmcReserved31) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -2520,43 +2520,43 @@ impl defmt::Format for Pmc {
         )
     }
 }
-#[doc = "Version ID"]
+#[doc = "Version ID."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Verid(pub u32);
 impl Verid {
-    #[doc = "Feature Specification Number"]
+    #[doc = "Feature Specification Number."]
     #[must_use]
     #[inline(always)]
     pub const fn feature(&self) -> super::vals::Feature {
         let val = (self.0 >> 0usize) & 0xffff;
         super::vals::Feature::from_bits(val as u16)
     }
-    #[doc = "Feature Specification Number"]
+    #[doc = "Feature Specification Number."]
     #[inline(always)]
     pub const fn set_feature(&mut self, val: super::vals::Feature) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val.to_bits() as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Minor Version Number"]
+    #[doc = "Minor Version Number."]
     #[must_use]
     #[inline(always)]
     pub const fn minor(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0xff;
         val as u8
     }
-    #[doc = "Minor Version Number"]
+    #[doc = "Minor Version Number."]
     #[inline(always)]
     pub const fn set_minor(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
     }
-    #[doc = "Major Version Number"]
+    #[doc = "Major Version Number."]
     #[must_use]
     #[inline(always)]
     pub const fn major(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "Major Version Number"]
+    #[doc = "Major Version Number."]
     #[inline(always)]
     pub const fn set_major(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);

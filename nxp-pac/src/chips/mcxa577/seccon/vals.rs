@@ -34,9 +34,9 @@ impl From<CgOverride> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DebugFeaturesCpu0Dbgen {
     _RESERVED_0 = 0x0,
-    #[doc = "Disables debug"]
+    #[doc = "Disables debug."]
     DISABLE = 0x01,
-    #[doc = "Enables debug"]
+    #[doc = "Enables debug."]
     ENABLE = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -67,9 +67,9 @@ impl From<DebugFeaturesCpu0Dbgen> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DebugFeaturesCpu0Niden {
     _RESERVED_0 = 0x0,
-    #[doc = "Disables debug"]
+    #[doc = "Disables debug."]
     DISABLE = 0x01,
-    #[doc = "Enables debug"]
+    #[doc = "Enables debug."]
     ENABLE = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -100,9 +100,9 @@ impl From<DebugFeaturesCpu0Niden> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DebugFeaturesCpu0Spiden {
     _RESERVED_0 = 0x0,
-    #[doc = "Disables debug"]
+    #[doc = "Disables debug."]
     DISABLE = 0x01,
-    #[doc = "Enables debug"]
+    #[doc = "Enables debug."]
     ENABLE = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -133,9 +133,9 @@ impl From<DebugFeaturesCpu0Spiden> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DebugFeaturesCpu0Spniden {
     _RESERVED_0 = 0x0,
-    #[doc = "Disables debug"]
+    #[doc = "Disables debug."]
     DISABLE = 0x01,
-    #[doc = "Enables debug"]
+    #[doc = "Enables debug."]
     ENABLE = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -166,9 +166,9 @@ impl From<DebugFeaturesCpu0Spniden> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DebugFeaturesDpCpu0Dbgen {
     _RESERVED_0 = 0x0,
-    #[doc = "Disables debug"]
+    #[doc = "Disables debug."]
     DISABLE = 0x01,
-    #[doc = "Enables debug"]
+    #[doc = "Enables debug."]
     ENABLE = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -199,9 +199,9 @@ impl From<DebugFeaturesDpCpu0Dbgen> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DebugFeaturesDpCpu0Niden {
     _RESERVED_0 = 0x0,
-    #[doc = "Disables debug"]
+    #[doc = "Disables debug."]
     DISABLE = 0x01,
-    #[doc = "Enables debug"]
+    #[doc = "Enables debug."]
     ENABLE = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -232,9 +232,9 @@ impl From<DebugFeaturesDpCpu0Niden> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DebugFeaturesDpCpu0Spiden {
     _RESERVED_0 = 0x0,
-    #[doc = "Disables debug"]
+    #[doc = "Disables debug."]
     DISABLE = 0x01,
-    #[doc = "Enables debug"]
+    #[doc = "Enables debug."]
     ENABLE = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -265,9 +265,9 @@ impl From<DebugFeaturesDpCpu0Spiden> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DebugFeaturesDpCpu0Spniden {
     _RESERVED_0 = 0x0,
-    #[doc = "Disables debug"]
+    #[doc = "Disables debug."]
     DISABLE = 0x01,
-    #[doc = "Enables debug"]
+    #[doc = "Enables debug."]
     ENABLE = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -297,13 +297,13 @@ impl From<DebugFeaturesDpCpu0Spniden> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum GdetIsoSw {
-    #[doc = "Isolation is disabled"]
+    #[doc = "Isolation is disabled."]
     DISABLE0 = 0x0,
-    #[doc = "Isolation is disabled"]
+    #[doc = "Isolation is disabled."]
     DISABLE1 = 0x01,
     #[doc = "Isolation is enabled. When GDET0_CTRL GDET_ISO_SW are \"10\", isolation_on is asserted."]
     ENABLE = 0x02,
-    #[doc = "Isolation is disabled"]
+    #[doc = "Isolation is disabled."]
     DISABLE3 = 0x03,
 }
 impl GdetIsoSw {
@@ -580,7 +580,7 @@ impl From<IfrBlock1EraseDis3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LockAll {
-    #[doc = "Any other value than b1010: disables write access to all registers"]
+    #[doc = "Any other value than b1010: disables write access to all registers."]
     DISABLE = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
@@ -591,7 +591,7 @@ pub enum LockAll {
     _RESERVED_7 = 0x07,
     _RESERVED_8 = 0x08,
     _RESERVED_9 = 0x09,
-    #[doc = "Enables write access to all registers"]
+    #[doc = "Enables write access to all registers."]
     ENABLE = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
@@ -625,7 +625,7 @@ impl From<LockAll> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MassEraseDis {
-    #[doc = "Enables mass erase"]
+    #[doc = "Enables mass erase."]
     ENABLE = 0x0,
     #[doc = "Disables mass erase, write one lock until a system reset."]
     DISABLE = 0x01,
@@ -656,9 +656,9 @@ impl From<MassEraseDis> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Noref {
-    #[doc = "Reference clock is provided"]
+    #[doc = "Reference clock is provided."]
     YES_REF = 0x0,
-    #[doc = "No reference clock is provided"]
+    #[doc = "No reference clock is provided."]
     NO_REF = 0x01,
 }
 impl Noref {
@@ -735,9 +735,9 @@ impl From<SecCode> for u32 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Skew {
-    #[doc = "TENMS value is exact"]
+    #[doc = "TENMS value is exact."]
     EXACT = 0x0,
-    #[doc = "TENMS value is not exact or not given"]
+    #[doc = "TENMS value is not exact or not given."]
     INEXACT = 0x01,
 }
 impl Skew {

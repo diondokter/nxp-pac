@@ -2,13 +2,13 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg0Policy {
-    #[doc = "Noncacheable"]
+    #[doc = "Noncacheable."]
     REG0_00 = 0x0,
-    #[doc = "Write-through"]
+    #[doc = "Write-through."]
     REG0_01 = 0x01,
-    #[doc = "Write-back"]
+    #[doc = "Write-back."]
     REG0_10 = 0x02,
-    #[doc = "Invalid"]
+    #[doc = "Invalid."]
     REG0_11 = 0x03,
 }
 impl Reg0Policy {
@@ -37,13 +37,13 @@ impl From<Reg0Policy> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg1Policy {
-    #[doc = "Noncacheable"]
+    #[doc = "Noncacheable."]
     REG1_00 = 0x0,
-    #[doc = "Write-through"]
+    #[doc = "Write-through."]
     REG1_01 = 0x01,
-    #[doc = "Write-back"]
+    #[doc = "Write-back."]
     REG1_10 = 0x02,
-    #[doc = "Invalid"]
+    #[doc = "Invalid."]
     REG1_11 = 0x03,
 }
 impl Reg1Policy {
@@ -72,13 +72,13 @@ impl From<Reg1Policy> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg2Policy {
-    #[doc = "Noncacheable"]
+    #[doc = "Noncacheable."]
     REG2_00 = 0x0,
-    #[doc = "Write-through"]
+    #[doc = "Write-through."]
     REG2_01 = 0x01,
-    #[doc = "Write-back"]
+    #[doc = "Write-back."]
     REG2_10 = 0x02,
-    #[doc = "Invalid"]
+    #[doc = "Invalid."]
     REG2_11 = 0x03,
 }
 impl Reg2Policy {
