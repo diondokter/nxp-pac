@@ -99,15 +99,37 @@ pub fn export_meta_peripherals(current: &Path) -> anyhow::Result<()> {
     Ok(())
 }
 
-pub fn assemble_metapac(current: &Path, core: &str, metadata: &Metadata) -> anyhow::Result<()> {
+pub fn assemble_metapac(current: &Path, core: &str, mut metadata: Metadata) -> anyhow::Result<()> {
     let chip_dir = current.join("nxp-pac/src/chips").join(core.to_lowercase());
     if !chip_dir.exists() {
         fs::create_dir_all(&chip_dir).context("creating chip dir")?;
     }
 
-    export_device_x(&chip_dir, metadata).context("exporting device.x")?;
-    export_mod_rs(&chip_dir, metadata).context("exporting mod.rs")?;
-    export_vectors_rs(&chip_dir, metadata).context("exporting _vectors.rs")?;
+    // Remove all peripherals that are defined, but don't have a driver
+    let yaml_peri_dir = current.join("data/metadata/peripherals");
+    metadata.peripherals.retain(|p| {
+        let Some(peripheral_type) = p.peripheral_type.as_ref() else {
+            tracing::warn!("Peripheral {} has no type associated. Skipped.", p.name);
+
+            return false;
+        };
+
+        if fs::exists(yaml_peri_dir.join(peripheral_type).with_extension("yaml")).unwrap_or(false) {
+            true
+        } else {
+            tracing::warn!(
+                "Peripheral {} does not point to an existing driver: `{}`. Skipped.",
+                p.name,
+                peripheral_type
+            );
+
+            false
+        }
+    });
+
+    export_device_x(&chip_dir, &metadata).context("exporting device.x")?;
+    export_mod_rs(&chip_dir, &metadata).context("exporting mod.rs")?;
+    export_vectors_rs(&chip_dir, &metadata).context("exporting _vectors.rs")?;
     export_common_rs(&chip_dir).context("exporting common.rs")?;
 
     Ok(())

@@ -314,61 +314,61 @@ impl Control {
     #[doc = "TIMEOUT fault control."]
     #[must_use]
     #[inline(always)]
-    pub const fn timeout_ctrl(&self) -> TimeoutCtrl {
+    pub const fn timeout_ctrl(&self) -> Ctrl {
         let val = (self.0 >> 2usize) & 0x07;
-        TimeoutCtrl::from_bits(val as u8)
+        Ctrl::from_bits(val as u8)
     }
     #[doc = "TIMEOUT fault control."]
     #[inline(always)]
-    pub const fn set_timeout_ctrl(&mut self, val: TimeoutCtrl) {
+    pub const fn set_timeout_ctrl(&mut self, val: Ctrl) {
         self.0 = (self.0 & !(0x07 << 2usize)) | (((val.to_bits() as u32) & 0x07) << 2usize);
     }
     #[doc = "MISCOMPARE fault control."]
     #[must_use]
     #[inline(always)]
-    pub const fn miscompare_ctrl(&self) -> MiscompareCtrl {
+    pub const fn miscompare_ctrl(&self) -> Ctrl {
         let val = (self.0 >> 5usize) & 0x07;
-        MiscompareCtrl::from_bits(val as u8)
+        Ctrl::from_bits(val as u8)
     }
     #[doc = "MISCOMPARE fault control."]
     #[inline(always)]
-    pub const fn set_miscompare_ctrl(&mut self, val: MiscompareCtrl) {
+    pub const fn set_miscompare_ctrl(&mut self, val: Ctrl) {
         self.0 = (self.0 & !(0x07 << 5usize)) | (((val.to_bits() as u32) & 0x07) << 5usize);
     }
     #[doc = "SEQUENCE fault control."]
     #[must_use]
     #[inline(always)]
-    pub const fn sequence_ctrl(&self) -> SequenceCtrl {
+    pub const fn sequence_ctrl(&self) -> Ctrl {
         let val = (self.0 >> 8usize) & 0x07;
-        SequenceCtrl::from_bits(val as u8)
+        Ctrl::from_bits(val as u8)
     }
     #[doc = "SEQUENCE fault control."]
     #[inline(always)]
-    pub const fn set_sequence_ctrl(&mut self, val: SequenceCtrl) {
+    pub const fn set_sequence_ctrl(&mut self, val: Ctrl) {
         self.0 = (self.0 & !(0x07 << 8usize)) | (((val.to_bits() as u32) & 0x07) << 8usize);
     }
     #[doc = "STATE fault control."]
     #[must_use]
     #[inline(always)]
-    pub const fn state_ctrl(&self) -> StateCtrl {
+    pub const fn state_ctrl(&self) -> Ctrl {
         let val = (self.0 >> 14usize) & 0x07;
-        StateCtrl::from_bits(val as u8)
+        Ctrl::from_bits(val as u8)
     }
     #[doc = "STATE fault control."]
     #[inline(always)]
-    pub const fn set_state_ctrl(&mut self, val: StateCtrl) {
+    pub const fn set_state_ctrl(&mut self, val: Ctrl) {
         self.0 = (self.0 & !(0x07 << 14usize)) | (((val.to_bits() as u32) & 0x07) << 14usize);
     }
     #[doc = "ADDRESS fault control."]
     #[must_use]
     #[inline(always)]
-    pub const fn address_ctrl(&self) -> AddressCtrl {
+    pub const fn address_ctrl(&self) -> Ctrl {
         let val = (self.0 >> 17usize) & 0x07;
-        AddressCtrl::from_bits(val as u8)
+        Ctrl::from_bits(val as u8)
     }
     #[doc = "ADDRESS fault control."]
     #[inline(always)]
-    pub const fn set_address_ctrl(&mut self, val: AddressCtrl) {
+    pub const fn set_address_ctrl(&mut self, val: Ctrl) {
         self.0 = (self.0 & !(0x07 << 17usize)) | (((val.to_bits() as u32) & 0x07) << 17usize);
     }
     #[doc = "IRQ pause control."]
@@ -1073,7 +1073,7 @@ impl defmt::Format for Sub256 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum AddressCtrl {
+pub enum Ctrl {
     _RESERVED_0 = 0x0,
     #[doc = "Enable reset."]
     ENABLE_RESET = 0x01,
@@ -1086,9 +1086,9 @@ pub enum AddressCtrl {
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
 }
-impl AddressCtrl {
+impl Ctrl {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> AddressCtrl {
+    pub const fn from_bits(val: u8) -> Ctrl {
         unsafe { core::mem::transmute(val & 0x07) }
     }
     #[inline(always)]
@@ -1096,16 +1096,16 @@ impl AddressCtrl {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for AddressCtrl {
+impl From<u8> for Ctrl {
     #[inline(always)]
-    fn from(val: u8) -> AddressCtrl {
-        AddressCtrl::from_bits(val)
+    fn from(val: u8) -> Ctrl {
+        Ctrl::from_bits(val)
     }
 }
-impl From<AddressCtrl> for u8 {
+impl From<Ctrl> for u8 {
     #[inline(always)]
-    fn from(val: AddressCtrl) -> u8 {
-        AddressCtrl::to_bits(val)
+    fn from(val: Ctrl) -> u8 {
+        Ctrl::to_bits(val)
     }
 }
 #[repr(u8)]
@@ -1205,157 +1205,5 @@ impl From<LockCtrl> for u8 {
     #[inline(always)]
     fn from(val: LockCtrl) -> u8 {
         LockCtrl::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum MiscompareCtrl {
-    _RESERVED_0 = 0x0,
-    #[doc = "Enable reset."]
-    ENABLE_RESET = 0x01,
-    #[doc = "Enable interrupt."]
-    ENABLE_INTERRUPT = 0x02,
-    _RESERVED_3 = 0x03,
-    #[doc = "Disable both reset and interrupt."]
-    DISABLE_BOTH = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-}
-impl MiscompareCtrl {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> MiscompareCtrl {
-        unsafe { core::mem::transmute(val & 0x07) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for MiscompareCtrl {
-    #[inline(always)]
-    fn from(val: u8) -> MiscompareCtrl {
-        MiscompareCtrl::from_bits(val)
-    }
-}
-impl From<MiscompareCtrl> for u8 {
-    #[inline(always)]
-    fn from(val: MiscompareCtrl) -> u8 {
-        MiscompareCtrl::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum SequenceCtrl {
-    _RESERVED_0 = 0x0,
-    #[doc = "Enable reset."]
-    ENABLE_RESET = 0x01,
-    #[doc = "Enable interrupt."]
-    ENABLE_INTERRUPT = 0x02,
-    _RESERVED_3 = 0x03,
-    #[doc = "Disable both reset and interrupt."]
-    DISABLE_BOTH = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-}
-impl SequenceCtrl {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> SequenceCtrl {
-        unsafe { core::mem::transmute(val & 0x07) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for SequenceCtrl {
-    #[inline(always)]
-    fn from(val: u8) -> SequenceCtrl {
-        SequenceCtrl::from_bits(val)
-    }
-}
-impl From<SequenceCtrl> for u8 {
-    #[inline(always)]
-    fn from(val: SequenceCtrl) -> u8 {
-        SequenceCtrl::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum StateCtrl {
-    _RESERVED_0 = 0x0,
-    #[doc = "Enable reset."]
-    ENABLE_RESET = 0x01,
-    #[doc = "Enable interrupt."]
-    ENABLE_INTERRUPT = 0x02,
-    _RESERVED_3 = 0x03,
-    #[doc = "Disable both reset and interrupt."]
-    DISABLE_BOTH = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-}
-impl StateCtrl {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> StateCtrl {
-        unsafe { core::mem::transmute(val & 0x07) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for StateCtrl {
-    #[inline(always)]
-    fn from(val: u8) -> StateCtrl {
-        StateCtrl::from_bits(val)
-    }
-}
-impl From<StateCtrl> for u8 {
-    #[inline(always)]
-    fn from(val: StateCtrl) -> u8 {
-        StateCtrl::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum TimeoutCtrl {
-    _RESERVED_0 = 0x0,
-    #[doc = "Enable reset."]
-    ENABLE_RESET = 0x01,
-    #[doc = "Enable interrupt."]
-    ENABLE_INTERRUPT = 0x02,
-    _RESERVED_3 = 0x03,
-    #[doc = "Disable both reset and interrupt."]
-    DISABLE_BOTH = 0x04,
-    _RESERVED_5 = 0x05,
-    _RESERVED_6 = 0x06,
-    _RESERVED_7 = 0x07,
-}
-impl TimeoutCtrl {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> TimeoutCtrl {
-        unsafe { core::mem::transmute(val & 0x07) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for TimeoutCtrl {
-    #[inline(always)]
-    fn from(val: u8) -> TimeoutCtrl {
-        TimeoutCtrl::from_bits(val)
-    }
-}
-impl From<TimeoutCtrl> for u8 {
-    #[inline(always)]
-    fn from(val: TimeoutCtrl) -> u8 {
-        TimeoutCtrl::to_bits(val)
     }
 }

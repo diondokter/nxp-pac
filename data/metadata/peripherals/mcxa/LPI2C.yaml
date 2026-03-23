@@ -1,864 +1,860 @@
-block/LPI2C:
+block/Lpi2c:
   description: Low-Power Inter-Integrated Circuit.
   items:
-  - name: VERID
+  - name: verid
     description: Version ID.
     byte_offset: 0
     access: Read
-    fieldset: VERID
-  - name: PARAM
+    fieldset: Verid
+  - name: param
     description: Parameter.
     byte_offset: 4
     access: Read
-    fieldset: PARAM
-  - name: MCR
+    fieldset: Param
+  - name: mcr
     description: Controller Control.
     byte_offset: 16
-    fieldset: MCR
-  - name: MSR
+    fieldset: Mcr
+  - name: msr
     description: Controller Status.
     byte_offset: 20
-    fieldset: MSR
-  - name: MIER
+    fieldset: Msr
+  - name: mier
     description: Controller Interrupt Enable.
     byte_offset: 24
-    fieldset: MIER
-  - name: MDER
+    fieldset: Mier
+  - name: mder
     description: Controller DMA Enable.
     byte_offset: 28
-    fieldset: MDER
-  - name: MCFGR0
+    fieldset: Mder
+  - name: mcfgr0
     description: Controller Configuration 0.
     byte_offset: 32
-    fieldset: MCFGR0
-  - name: MCFGR1
+    fieldset: Mcfgr0
+  - name: mcfgr1
     description: Controller Configuration 1.
     byte_offset: 36
-    fieldset: MCFGR1
-  - name: MCFGR2
+    fieldset: Mcfgr1
+  - name: mcfgr2
     description: Controller Configuration 2.
     byte_offset: 40
-    fieldset: MCFGR2
-  - name: MCFGR3
+    fieldset: Mcfgr2
+  - name: mcfgr3
     description: Controller Configuration 3.
     byte_offset: 44
-    fieldset: MCFGR3
-  - name: MDMR
+    fieldset: Mcfgr3
+  - name: mdmr
     description: Controller Data Match.
     byte_offset: 64
-    fieldset: MDMR
-  - name: MCCR0
+    fieldset: Mdmr
+  - name: mccr0
     description: Controller Clock Configuration 0.
     byte_offset: 72
-    fieldset: MCCR0
-  - name: MCCR1
+    fieldset: Mccr0
+  - name: mccr1
     description: Controller Clock Configuration 1.
     byte_offset: 80
-    fieldset: MCCR1
-  - name: MFCR
+    fieldset: Mccr1
+  - name: mfcr
     description: Controller FIFO Control.
     byte_offset: 88
-    fieldset: MFCR
-  - name: MFSR
+    fieldset: Mfcr
+  - name: mfsr
     description: Controller FIFO Status.
     byte_offset: 92
     access: Read
-    fieldset: MFSR
-  - name: MTDR
+    fieldset: Mfsr
+  - name: mtdr
     description: Controller Transmit Data.
     byte_offset: 96
     access: Write
-    fieldset: MTDR
-  - name: MRDR
+    fieldset: Mtdr
+  - name: mrdr
     description: Controller Receive Data.
     byte_offset: 112
     access: Read
-    fieldset: MRDR
-  - name: MRDROR
+    fieldset: Mrdr
+  - name: mrdror
     description: Controller Receive Data Read Only.
     byte_offset: 120
     access: Read
-    fieldset: MRDROR
-  - name: SCR
+    fieldset: Mrdror
+  - name: scr
     description: Target Control.
     byte_offset: 272
-    fieldset: SCR
-  - name: SSR
+    fieldset: Scr
+  - name: ssr
     description: Target Status.
     byte_offset: 276
-    fieldset: SSR
-  - name: SIER
+    fieldset: Ssr
+  - name: sier
     description: Target Interrupt Enable.
     byte_offset: 280
-    fieldset: SIER
-  - name: SDER
+    fieldset: Sier
+  - name: sder
     description: Target DMA Enable.
     byte_offset: 284
-    fieldset: SDER
-  - name: SCFGR0
+    fieldset: Sder
+  - name: scfgr0
     description: Target Configuration 0.
     byte_offset: 288
-    fieldset: SCFGR0
-  - name: SCFGR1
+    fieldset: Scfgr0
+  - name: scfgr1
     description: Target Configuration 1.
     byte_offset: 292
-    fieldset: SCFGR1
-  - name: SCFGR2
+    fieldset: Scfgr1
+  - name: scfgr2
     description: Target Configuration 2.
     byte_offset: 296
-    fieldset: SCFGR2
-  - name: SAMR
+    fieldset: Scfgr2
+  - name: samr
     description: Target Address Match.
     byte_offset: 320
-    fieldset: SAMR
-  - name: SASR
+    fieldset: Samr
+  - name: sasr
     description: Target Address Status.
     byte_offset: 336
     access: Read
-    fieldset: SASR
-  - name: STAR
+    fieldset: Sasr
+  - name: star
     description: Target Transmit ACK.
     byte_offset: 340
-    fieldset: STAR
-  - name: STDR
+    fieldset: Star
+  - name: stdr
     description: Target Transmit Data.
     byte_offset: 352
     access: Write
-    fieldset: STDR
-  - name: SRDR
+    fieldset: Stdr
+  - name: srdr
     description: Target Receive Data.
     byte_offset: 368
     access: Read
-    fieldset: SRDR
-  - name: SRDROR
+    fieldset: Srdr
+  - name: srdror
     description: Target Receive Data Read Only.
     byte_offset: 376
     access: Read
-    fieldset: SRDROR
-fieldset/MCCR0:
+    fieldset: Srdror
+fieldset/Mccr0:
   description: Controller Clock Configuration 0.
   fields:
-  - name: CLKLO
+  - name: clklo
     description: Clock Low Period.
     bit_offset: 0
     bit_size: 6
-  - name: CLKHI
+  - name: clkhi
     description: Clock High Period.
     bit_offset: 8
     bit_size: 6
-  - name: SETHOLD
+  - name: sethold
     description: Setup Hold Delay.
     bit_offset: 16
     bit_size: 6
-  - name: DATAVD
+  - name: datavd
     description: Data Valid Delay.
     bit_offset: 24
     bit_size: 6
-fieldset/MCCR1:
+fieldset/Mccr1:
   description: Controller Clock Configuration 1.
   fields:
-  - name: CLKLO
+  - name: clklo
     description: Clock Low Period.
     bit_offset: 0
     bit_size: 6
-  - name: CLKHI
+  - name: clkhi
     description: Clock High Period.
     bit_offset: 8
     bit_size: 6
-  - name: SETHOLD
+  - name: sethold
     description: Setup Hold Delay.
     bit_offset: 16
     bit_size: 6
-  - name: DATAVD
+  - name: datavd
     description: Data Valid Delay.
     bit_offset: 24
     bit_size: 6
-fieldset/MCFGR0:
+fieldset/Mcfgr0:
   description: Controller Configuration 0.
   fields:
-  - name: HREN
+  - name: hren
     description: Host Request Enable.
     bit_offset: 0
     bit_size: 1
-  - name: HRPOL
+  - name: hrpol
     description: Host Request Polarity.
     bit_offset: 1
     bit_size: 1
-    enum: HRPOL
-  - name: HRSEL
+    enum: Hrpol
+  - name: hrsel
     description: Host Request Select.
     bit_offset: 2
     bit_size: 1
-  - name: HRDIR
+  - name: hrdir
     description: Host Request Direction.
     bit_offset: 3
     bit_size: 1
-    enum: HRDIR
-  - name: CIRFIFO
+    enum: Hrdir
+  - name: cirfifo
     description: Circular FIFO Enable.
     bit_offset: 8
     bit_size: 1
-  - name: RDMO
+  - name: rdmo
     description: Receive Data Match Only.
     bit_offset: 9
     bit_size: 1
-  - name: RELAX
+  - name: relax
     description: Relaxed Mode.
     bit_offset: 16
     bit_size: 1
-    enum: RELAX
-  - name: ABORT
+    enum: Relax
+  - name: abort
     description: Abort Transfer.
     bit_offset: 17
     bit_size: 1
-fieldset/MCFGR1:
+fieldset/Mcfgr1:
   description: Controller Configuration 1.
   fields:
-  - name: PRESCALE
+  - name: prescale
     description: Prescaler.
     bit_offset: 0
     bit_size: 3
-    enum: PRESCALE
-  - name: AUTOSTOP
+    enum: Prescale
+  - name: autostop
     description: Automatic Stop Generation.
     bit_offset: 8
     bit_size: 1
-  - name: IGNACK
+  - name: ignack
     description: Ignore NACK.
     bit_offset: 9
     bit_size: 1
-  - name: TIMECFG
+  - name: timecfg
     description: Timeout Configuration.
     bit_offset: 10
     bit_size: 1
-    enum: TIMECFG
-  - name: STOPCFG
+    enum: Timecfg
+  - name: stopcfg
     description: Stop Configuration.
     bit_offset: 11
     bit_size: 1
-    enum: STOPCFG
-  - name: STARTCFG
+    enum: Stopcfg
+  - name: startcfg
     description: Start Configuration.
     bit_offset: 12
     bit_size: 1
-    enum: STARTCFG
-  - name: MATCFG
+    enum: Startcfg
+  - name: matcfg
     description: Match Configuration.
     bit_offset: 16
     bit_size: 3
-    enum: MATCFG
-  - name: PINCFG
+    enum: Matcfg
+  - name: pincfg
     description: Pin Configuration.
     bit_offset: 24
     bit_size: 3
-    enum: PINCFG
-fieldset/MCFGR2:
+    enum: Pincfg
+fieldset/Mcfgr2:
   description: Controller Configuration 2.
   fields:
-  - name: BUSIDLE
+  - name: busidle
     description: Bus Idle Timeout.
     bit_offset: 0
     bit_size: 12
-  - name: FILTSCL
+  - name: filtscl
     description: Glitch Filter SCL.
     bit_offset: 16
     bit_size: 4
-  - name: FILTSDA
+  - name: filtsda
     description: Glitch Filter SDA.
     bit_offset: 24
     bit_size: 4
-fieldset/MCFGR3:
+fieldset/Mcfgr3:
   description: Controller Configuration 3.
   fields:
-  - name: PINLOW
+  - name: pinlow
     description: Pin Low Timeout.
     bit_offset: 8
     bit_size: 12
-fieldset/MCR:
+fieldset/Mcr:
   description: Controller Control.
   fields:
-  - name: MEN
+  - name: men
     description: Controller Enable.
     bit_offset: 0
     bit_size: 1
-  - name: RST
+  - name: rst
     description: Software Reset.
     bit_offset: 1
     bit_size: 1
-  - name: DOZEN
+  - name: dozen
     description: Doze Mode Enable.
     bit_offset: 2
     bit_size: 1
-    enum: DOZEN
-  - name: DBGEN
+    enum: Dozen
+  - name: dbgen
     description: Debug Enable.
     bit_offset: 3
     bit_size: 1
-  - name: RTF
+  - name: rtf
     description: Reset Transmit FIFO.
     bit_offset: 8
     bit_size: 1
-    enum: MCR_RTF
-  - name: RRF
+    enum: McrRtf
+  - name: rrf
     description: Reset Receive FIFO.
     bit_offset: 9
     bit_size: 1
-    enum: MCR_RRF
-fieldset/MDER:
+    enum: McrRrf
+fieldset/Mder:
   description: Controller DMA Enable.
   fields:
-  - name: TDDE
+  - name: tdde
     description: Transmit Data DMA Enable.
     bit_offset: 0
     bit_size: 1
-  - name: RDDE
+  - name: rdde
     description: Receive Data DMA Enable.
     bit_offset: 1
     bit_size: 1
-fieldset/MDMR:
+fieldset/Mdmr:
   description: Controller Data Match.
   fields:
-  - name: MATCH0
+  - name: match0
     description: Match 0 Value.
     bit_offset: 0
     bit_size: 8
-  - name: MATCH1
+  - name: match1
     description: Match 1 Value.
     bit_offset: 16
     bit_size: 8
-fieldset/MFCR:
+fieldset/Mfcr:
   description: Controller FIFO Control.
   fields:
-  - name: TXWATER
+  - name: txwater
     description: Transmit FIFO Watermark.
     bit_offset: 0
     bit_size: 2
-  - name: RXWATER
+  - name: rxwater
     description: Receive FIFO Watermark.
     bit_offset: 16
     bit_size: 2
-fieldset/MFSR:
+fieldset/Mfsr:
   description: Controller FIFO Status.
   fields:
-  - name: TXCOUNT
+  - name: txcount
     description: Transmit FIFO Count.
     bit_offset: 0
     bit_size: 3
-  - name: RXCOUNT
+  - name: rxcount
     description: Receive FIFO Count.
     bit_offset: 16
     bit_size: 3
-fieldset/MIER:
+fieldset/Mier:
   description: Controller Interrupt Enable.
   fields:
-  - name: TDIE
+  - name: tdie
     description: Transmit Data Interrupt Enable.
     bit_offset: 0
     bit_size: 1
-  - name: RDIE
+  - name: rdie
     description: Receive Data Interrupt Enable.
     bit_offset: 1
     bit_size: 1
-  - name: EPIE
+  - name: epie
     description: End Packet Interrupt Enable.
     bit_offset: 8
     bit_size: 1
-  - name: SDIE
+  - name: sdie
     description: Stop Detect Interrupt Enable.
     bit_offset: 9
     bit_size: 1
-  - name: NDIE
+  - name: ndie
     description: NACK Detect Interrupt Enable.
     bit_offset: 10
     bit_size: 1
-  - name: ALIE
+  - name: alie
     description: Arbitration Lost Interrupt Enable.
     bit_offset: 11
     bit_size: 1
-  - name: FEIE
+  - name: feie
     description: FIFO Error Interrupt Enable.
     bit_offset: 12
     bit_size: 1
-  - name: PLTIE
+  - name: pltie
     description: Pin Low Timeout Interrupt Enable.
     bit_offset: 13
     bit_size: 1
-  - name: DMIE
+  - name: dmie
     description: Data Match Interrupt Enable.
     bit_offset: 14
     bit_size: 1
-  - name: STIE
+  - name: stie
     description: Start Interrupt Enable.
     bit_offset: 15
     bit_size: 1
-fieldset/MRDR:
+fieldset/Mrdr:
   description: Controller Receive Data.
   fields:
-  - name: DATA
+  - name: data
     description: Receive Data.
     bit_offset: 0
     bit_size: 8
-  - name: RXEMPTY
+  - name: rxempty
     description: Receive Empty.
     bit_offset: 14
     bit_size: 1
-fieldset/MRDROR:
+fieldset/Mrdror:
   description: Controller Receive Data Read Only.
   fields:
-  - name: DATA
+  - name: data
     description: Receive Data.
     bit_offset: 0
     bit_size: 8
-  - name: RXEMPTY
+  - name: rxempty
     description: RX Empty.
     bit_offset: 14
     bit_size: 1
-fieldset/MSR:
+fieldset/Msr:
   description: Controller Status.
   fields:
-  - name: TDF
+  - name: tdf
     description: Transmit Data Flag.
     bit_offset: 0
     bit_size: 1
-  - name: RDF
+  - name: rdf
     description: Receive Data Flag.
     bit_offset: 1
     bit_size: 1
-  - name: EPF
+  - name: epf
     description: End Packet Flag.
     bit_offset: 8
     bit_size: 1
-    enum: EPF
-  - name: SDF
+    enum: Epf
+  - name: sdf
     description: Stop Detect Flag.
     bit_offset: 9
     bit_size: 1
-    enum: MSR_SDF
-  - name: NDF
+    enum: MsrSdf
+  - name: ndf
     description: NACK Detect Flag.
     bit_offset: 10
     bit_size: 1
-    enum: NDF
-  - name: ALF
+    enum: Ndf
+  - name: alf
     description: Arbitration Lost Flag.
     bit_offset: 11
     bit_size: 1
-    enum: ALF
-  - name: FEF
+    enum: Alf
+  - name: fef
     description: FIFO Error Flag.
     bit_offset: 12
     bit_size: 1
-    enum: MSR_FEF
-  - name: PLTF
+    enum: MsrFef
+  - name: pltf
     description: Pin Low Timeout Flag.
     bit_offset: 13
     bit_size: 1
-    enum: PLTF
-  - name: DMF
+    enum: Pltf
+  - name: dmf
     description: Data Match Flag.
     bit_offset: 14
     bit_size: 1
-    enum: DMF
-  - name: STF
+    enum: Dmf
+  - name: stf
     description: Start Flag.
     bit_offset: 15
     bit_size: 1
-    enum: STF
-  - name: MBF
+    enum: Stf
+  - name: mbf
     description: Controller Busy Flag.
     bit_offset: 24
     bit_size: 1
-    enum: MBF
-  - name: BBF
+    enum: Mbf
+  - name: bbf
     description: Bus Busy Flag.
     bit_offset: 25
     bit_size: 1
-    enum: MSR_BBF
-fieldset/MTDR:
+    enum: MsrBbf
+fieldset/Mtdr:
   description: Controller Transmit Data.
   fields:
-  - name: DATA
+  - name: data
     description: Transmit Data.
     bit_offset: 0
     bit_size: 8
-  - name: CMD
+  - name: cmd
     description: Command Data.
     bit_offset: 8
     bit_size: 3
-    enum: CMD
-fieldset/PARAM:
+    enum: Cmd
+fieldset/Param:
   description: Parameter.
   fields:
-  - name: MTXFIFO
+  - name: mtxfifo
     description: Controller Transmit FIFO Size.
     bit_offset: 0
     bit_size: 4
-  - name: MRXFIFO
+  - name: mrxfifo
     description: Controller Receive FIFO Size.
     bit_offset: 8
     bit_size: 4
-fieldset/SAMR:
+fieldset/Samr:
   description: Target Address Match.
   fields:
-  - name: ADDR0
+  - name: addr0
     description: Address 0 Value.
     bit_offset: 1
     bit_size: 10
-  - name: ADDR1
+  - name: addr1
     description: Address 1 Value.
     bit_offset: 17
     bit_size: 10
-fieldset/SASR:
+fieldset/Sasr:
   description: Target Address Status.
   fields:
-  - name: RADDR
+  - name: raddr
     description: Received Address.
     bit_offset: 0
     bit_size: 11
-  - name: ANV
+  - name: anv
     description: Address Not Valid.
     bit_offset: 14
     bit_size: 1
-    enum: ANV
-fieldset/SCFGR0:
+    enum: Anv
+fieldset/Scfgr0:
   description: Target Configuration 0.
   fields:
-  - name: RDREQ
+  - name: rdreq
     description: Read Request.
     bit_offset: 0
     bit_size: 1
-  - name: RDACK
+  - name: rdack
     description: Read Acknowledge Flag.
     bit_offset: 1
     bit_size: 1
-fieldset/SCFGR1:
+fieldset/Scfgr1:
   description: Target Configuration 1.
   fields:
-  - name: ADRSTALL
+  - name: adrstall
     description: Address SCL Stall.
     bit_offset: 0
     bit_size: 1
-  - name: RXSTALL
+  - name: rxstall
     description: RX SCL Stall.
     bit_offset: 1
     bit_size: 1
-  - name: TXDSTALL
+  - name: txdstall
     description: Transmit Data SCL Stall.
     bit_offset: 2
     bit_size: 1
-  - name: ACKSTALL
+  - name: ackstall
     description: ACK SCL Stall.
     bit_offset: 3
     bit_size: 1
-  - name: RXNACK
+  - name: rxnack
     description: Receive NACK.
     bit_offset: 4
     bit_size: 1
-    enum: RXNACK
-  - name: GCEN
+    enum: Rxnack
+  - name: gcen
     description: General Call Enable.
     bit_offset: 8
     bit_size: 1
-  - name: SAEN
+  - name: saen
     description: SMBus Alert Enable.
     bit_offset: 9
     bit_size: 1
-  - name: TXCFG
+  - name: txcfg
     description: Transmit Flag Configuration.
     bit_offset: 10
     bit_size: 1
-    enum: TXCFG
-  - name: RXCFG
+    enum: Txcfg
+  - name: rxcfg
     description: Receive Data Configuration.
     bit_offset: 11
     bit_size: 1
-    enum: RXCFG
-  - name: IGNACK
+    enum: Rxcfg
+  - name: ignack
     description: Ignore NACK.
     bit_offset: 12
     bit_size: 1
-    enum: SCFGR1_IGNACK
-  - name: HSMEN
+    enum: Scfgr1Ignack
+  - name: hsmen
     description: HS Mode Enable.
     bit_offset: 13
     bit_size: 1
-  - name: ADDRCFG
+  - name: addrcfg
     description: Address Configuration.
     bit_offset: 16
     bit_size: 3
-    enum: ADDRCFG
-  - name: RXALL
+    enum: Addrcfg
+  - name: rxall
     description: Receive All.
     bit_offset: 24
     bit_size: 1
-  - name: RSCFG
+  - name: rscfg
     description: Repeated Start Configuration.
     bit_offset: 25
     bit_size: 1
-    enum: RSCFG
-  - name: SDCFG
+    enum: Rscfg
+  - name: sdcfg
     description: Stop Detect Configuration.
     bit_offset: 26
     bit_size: 1
-    enum: SDCFG
-fieldset/SCFGR2:
+    enum: Sdcfg
+fieldset/Scfgr2:
   description: Target Configuration 2.
   fields:
-  - name: CLKHOLD
+  - name: clkhold
     description: Clock Hold Time.
     bit_offset: 0
     bit_size: 4
-  - name: DATAVD
+  - name: datavd
     description: Data Valid Delay.
     bit_offset: 8
     bit_size: 6
-  - name: FILTSCL
+  - name: filtscl
     description: Glitch Filter SCL.
     bit_offset: 16
     bit_size: 4
-  - name: FILTSDA
+  - name: filtsda
     description: Glitch Filter SDA.
     bit_offset: 24
     bit_size: 4
-fieldset/SCR:
+fieldset/Scr:
   description: Target Control.
   fields:
-  - name: SEN
+  - name: sen
     description: Target Enable.
     bit_offset: 0
     bit_size: 1
-  - name: RST
+  - name: rst
     description: Software Reset.
     bit_offset: 1
     bit_size: 1
-  - name: FILTEN
+  - name: filten
     description: Filter Enable.
     bit_offset: 4
     bit_size: 1
-  - name: FILTDZ
+  - name: filtdz
     description: Filter Doze Enable.
     bit_offset: 5
     bit_size: 1
-    enum: FILTDZ
-  - name: RTF
+    enum: Filtdz
+  - name: rtf
     description: Reset Transmit FIFO.
     bit_offset: 8
     bit_size: 1
-    enum: SCR_RTF
-  - name: RRF
+    enum: ScrRtf
+  - name: rrf
     description: Reset Receive FIFO.
     bit_offset: 9
     bit_size: 1
-    enum: SCR_RRF
-fieldset/SDER:
+    enum: ScrRrf
+fieldset/Sder:
   description: Target DMA Enable.
   fields:
-  - name: TDDE
+  - name: tdde
     description: Transmit Data DMA Enable.
     bit_offset: 0
     bit_size: 1
-  - name: RDDE
+  - name: rdde
     description: Receive Data DMA Enable.
     bit_offset: 1
     bit_size: 1
-  - name: AVDE
+  - name: avde
     description: Address Valid DMA Enable.
     bit_offset: 2
     bit_size: 1
-  - name: RSDE
+  - name: rsde
     description: Repeated Start DMA Enable.
     bit_offset: 8
     bit_size: 1
-  - name: SDDE
+  - name: sdde
     description: Stop Detect DMA Enable.
     bit_offset: 9
     bit_size: 1
-fieldset/SIER:
+fieldset/Sier:
   description: Target Interrupt Enable.
   fields:
-  - name: TDIE
+  - name: tdie
     description: Transmit Data Interrupt Enable.
     bit_offset: 0
     bit_size: 1
-  - name: RDIE
+  - name: rdie
     description: Receive Data Interrupt Enable.
     bit_offset: 1
     bit_size: 1
-  - name: AVIE
+  - name: avie
     description: Address Valid Interrupt Enable.
     bit_offset: 2
     bit_size: 1
-  - name: TAIE
+  - name: taie
     description: Transmit ACK Interrupt Enable.
     bit_offset: 3
     bit_size: 1
-  - name: RSIE
+  - name: rsie
     description: Repeated Start Interrupt Enable.
     bit_offset: 8
     bit_size: 1
-  - name: SDIE
+  - name: sdie
     description: Stop Detect Interrupt Enable.
     bit_offset: 9
     bit_size: 1
-  - name: BEIE
+  - name: beie
     description: Bit Error Interrupt Enable.
     bit_offset: 10
     bit_size: 1
-  - name: FEIE
+  - name: feie
     description: FIFO Error Interrupt Enable.
     bit_offset: 11
     bit_size: 1
-  - name: AM0IE
+  - name: am0ie
     description: Address Match 0 Interrupt Enable.
     bit_offset: 12
     bit_size: 1
-  - name: AM1IE
+  - name: am1ie
     description: Address Match 1 Interrupt Enable.
     bit_offset: 13
     bit_size: 1
-  - name: GCIE
+  - name: gcie
     description: General Call Interrupt Enable.
     bit_offset: 14
     bit_size: 1
-  - name: SARIE
+  - name: sarie
     description: SMBus Alert Response Interrupt Enable.
     bit_offset: 15
     bit_size: 1
-fieldset/SRDR:
+fieldset/Srdr:
   description: Target Receive Data.
   fields:
-  - name: DATA
+  - name: data
     description: Received Data.
     bit_offset: 0
     bit_size: 8
-  - name: RADDR
+  - name: raddr
     description: Received Address.
     bit_offset: 8
     bit_size: 3
-  - name: RXEMPTY
+  - name: rxempty
     description: Receive Empty.
     bit_offset: 14
     bit_size: 1
-  - name: SOF
+  - name: sof
     description: Start of Frame.
     bit_offset: 15
     bit_size: 1
-fieldset/SRDROR:
+fieldset/Srdror:
   description: Target Receive Data Read Only.
   fields:
-  - name: DATA
+  - name: data
     description: Receive Data.
     bit_offset: 0
     bit_size: 8
-  - name: RADDR
+  - name: raddr
     description: Received Address.
     bit_offset: 8
     bit_size: 3
-  - name: RXEMPTY
+  - name: rxempty
     description: Receive Empty.
     bit_offset: 14
     bit_size: 1
-  - name: SOF
+  - name: sof
     description: Start of Frame.
     bit_offset: 15
     bit_size: 1
-fieldset/SSR:
+fieldset/Ssr:
   description: Target Status.
   fields:
-  - name: TDF
+  - name: tdf
     description: Transmit Data Flag.
     bit_offset: 0
     bit_size: 1
-  - name: RDF
+  - name: rdf
     description: Receive Data Flag.
     bit_offset: 1
     bit_size: 1
-  - name: AVF
+  - name: avf
     description: Address Valid Flag.
     bit_offset: 2
     bit_size: 1
-  - name: TAF
+  - name: taf
     description: Transmit ACK Flag.
     bit_offset: 3
     bit_size: 1
-  - name: RSF
+  - name: rsf
     description: Repeated Start Flag.
     bit_offset: 8
     bit_size: 1
-    enum: RSF
-  - name: SDF
+  - name: sdf
     description: Stop Detect Flag.
     bit_offset: 9
     bit_size: 1
-    enum: SSR_SDF
-  - name: BEF
+  - name: bef
     description: Bit Error Flag.
     bit_offset: 10
     bit_size: 1
-    enum: BEF
-  - name: FEF
+  - name: fef
     description: FIFO Error Flag.
     bit_offset: 11
     bit_size: 1
-    enum: SSR_FEF
-  - name: AM0F
+  - name: am0f
     description: Address Match 0 Flag.
     bit_offset: 12
     bit_size: 1
-  - name: AM1F
+  - name: am1f
     description: Address Match 1 Flag.
     bit_offset: 13
     bit_size: 1
-  - name: GCF
+  - name: gcf
     description: General Call Flag.
     bit_offset: 14
     bit_size: 1
-  - name: SARF
+  - name: sarf
     description: SMBus Alert Response Flag.
     bit_offset: 15
     bit_size: 1
-  - name: SBF
+  - name: sbf
     description: Target Busy Flag.
     bit_offset: 24
     bit_size: 1
-    enum: SBF
-  - name: BBF
+    enum: Sbf
+  - name: bbf
     description: Bus Busy Flag.
     bit_offset: 25
     bit_size: 1
-    enum: SSR_BBF
-fieldset/STAR:
+    enum: SsrBbf
+fieldset/Star:
   description: Target Transmit ACK.
   fields:
-  - name: TXNACK
+  - name: txnack
     description: Transmit NACK.
     bit_offset: 0
     bit_size: 1
-    enum: TXNACK
-fieldset/STDR:
+    enum: Txnack
+fieldset/Stdr:
   description: Target Transmit Data.
   fields:
-  - name: DATA
+  - name: data
     description: Transmit Data.
     bit_offset: 0
     bit_size: 8
-fieldset/VERID:
+fieldset/Verid:
   description: Version ID.
   fields:
-  - name: FEATURE
+  - name: feature
     description: Feature Specification Number.
     bit_offset: 0
     bit_size: 16
-    enum: FEATURE
-  - name: MINOR
+    enum: Feature
+  - name: minor
     description: Minor Version Number.
     bit_offset: 16
     bit_size: 8
-  - name: MAJOR
+  - name: major
     description: Major Version Number.
     bit_offset: 24
     bit_size: 8
-enum/ADDRCFG:
+enum/Addrcfg:
   bit_size: 3
   variants:
   - name: ADDRESS_MATCH0_7_BIT
@@ -885,7 +881,7 @@ enum/ADDRCFG:
   - name: FROM_ADDRESS_MATCH0_10_BIT_TO_ADDRESS_MATCH1_10_BIT
     description: From address match 0 (10-bit) to address match 1 (10-bit).
     value: 7
-enum/ALF:
+enum/Alf:
   bit_size: 1
   variants:
   - name: INT_NO
@@ -894,7 +890,7 @@ enum/ALF:
   - name: INT_YES
     description: Controller lost arbitration.
     value: 1
-enum/ANV:
+enum/Anv:
   bit_size: 1
   variants:
   - name: VALID
@@ -903,43 +899,34 @@ enum/ANV:
   - name: NOT_VALID
     description: Not valid.
     value: 1
-enum/BEF:
-  bit_size: 1
-  variants:
-  - name: INT_NO
-    description: No bit error occurred.
-    value: 0
-  - name: INT_YES
-    description: Bit error occurred.
-    value: 1
-enum/CMD:
+enum/Cmd:
   bit_size: 3
   variants:
-  - name: TRANSMIT_DATA_7_THROUGH_0
-    description: Transmit the value in DATA[7:0].
+  - name: TRANSMIT
+    description: Transmit value in DATA[7:0]
     value: 0
-  - name: RECEIVE_DATA_7_THROUGH_0_PLUS_ONE
+  - name: RECEIVE
     description: Receive (DATA[7:0] + 1) bytes.
     value: 1
-  - name: GENERATE_STOP_CONDITION
+  - name: STOP
     description: Generate Stop condition on I2C bus.
     value: 2
-  - name: RECEIVE_AND_DISCARD_DATA_7_THROUGH_0_PLUS_ONE
+  - name: RECEIVE_AND_DISCARD
     description: Receive and discard (DATA[7:0] + 1) bytes.
     value: 3
-  - name: GENERATE_START_AND_TRANSMIT_ADDRESS_IN_DATA_7_THROUGH_0
-    description: Generate (repeated) Start on the I2C bus and transmit the address in DATA[7:0].
+  - name: START
+    description: Generate (repeated) Start on the I2C bus and transmit the address in DATA[7:0]
     value: 4
-  - name: GENERATE_START_AND_TRANSMIT_ADDRESS_IN_DATA_7_THROUGH_0_EXPECT_NACK
-    description: Generate (repeated) Start on the I2C bus and transmit the address in DATA[7:0] (this transfer expects a NACK to be returned).
+  - name: START_EXPECT_NACK
+    description: Generate (repeated) Start on the I2C bus and transmit the address in DATA[7:0] expecting a NACK response
     value: 5
-  - name: GENERATE_START_AND_TRANSMIT_ADDRESS_IN_DATA_7_THROUGH_0_USING_HIGH_SPEED_MODE
-    description: Generate (repeated) Start on the I2C bus and transmit the address in DATA[7:0] using HS mode.
+  - name: START_HS
+    description: Generate (repeated) Start on the I2C bus and transmit the address in DATA[7:0] using HS mode
     value: 6
-  - name: GENERATE_START_AND_TRANSMIT_ADDRESS_IN_DATA_7_THROUGH_0_USING_HIGH_SPEED_MODE_EXPECT_NACK
-    description: Generate (repeated) Start on the I2C bus and transmit the address in DATA[7:0] using HS mode (this transfer expects a NACK to be returned).
+  - name: START_HS_EXPECT_NACK
+    description: Generate (repeated) Start on the I2C bus and transmit the address in DATA[7:0] using HS mode expecting a NACK response
     value: 7
-enum/DMF:
+enum/Dmf:
   bit_size: 1
   variants:
   - name: INT_NO
@@ -948,7 +935,7 @@ enum/DMF:
   - name: INT_YES
     description: Matching data received.
     value: 1
-enum/DOZEN:
+enum/Dozen:
   bit_size: 1
   variants:
   - name: ENABLED
@@ -957,7 +944,7 @@ enum/DOZEN:
   - name: DISABLED
     description: Disable.
     value: 1
-enum/EPF:
+enum/Epf:
   bit_size: 1
   variants:
   - name: INT_NO
@@ -966,7 +953,7 @@ enum/EPF:
   - name: INT_YES
     description: Stop or repeated Start generated.
     value: 1
-enum/FEATURE:
+enum/Feature:
   bit_size: 16
   variants:
   - name: MASTER_ONLY
@@ -975,7 +962,7 @@ enum/FEATURE:
   - name: MASTER_AND_SLAVE
     description: Controller and target, with standard feature set.
     value: 3
-enum/FILTDZ:
+enum/Filtdz:
   bit_size: 1
   variants:
   - name: FILTER_ENABLED
@@ -984,7 +971,7 @@ enum/FILTDZ:
   - name: FILTER_DISABLED
     description: Disable.
     value: 1
-enum/HRDIR:
+enum/Hrdir:
   bit_size: 1
   variants:
   - name: INPUT
@@ -993,7 +980,7 @@ enum/HRDIR:
   - name: OUTPUT
     description: HREQ pin is output (for LPI2C target).
     value: 1
-enum/HRPOL:
+enum/Hrpol:
   bit_size: 1
   variants:
   - name: ACTIVE_LOW
@@ -1002,7 +989,7 @@ enum/HRPOL:
   - name: ACTIVE_HIGH
     description: Active high.
     value: 1
-enum/MATCFG:
+enum/Matcfg:
   bit_size: 3
   variants:
   - name: DISABLED
@@ -1026,7 +1013,7 @@ enum/MATCFG:
   - name: ANY_DATA_WORD_AND_MATCH1_EQUALS_MATCH0_AND_MATCH1
     description: 'Match is enabled: (any data word AND MDMR[MATCH1]) equals (MDMR[MATCH0] AND MDMR[MATCH1]).'
     value: 7
-enum/MBF:
+enum/Mbf:
   bit_size: 1
   variants:
   - name: IDLE
@@ -1035,7 +1022,7 @@ enum/MBF:
   - name: BUSY
     description: Busy.
     value: 1
-enum/MCR_RRF:
+enum/McrRrf:
   bit_size: 1
   variants:
   - name: NO_EFFECT
@@ -1044,7 +1031,7 @@ enum/MCR_RRF:
   - name: RESET
     description: Reset receive FIFO.
     value: 1
-enum/MCR_RTF:
+enum/McrRtf:
   bit_size: 1
   variants:
   - name: NO_EFFECT
@@ -1053,7 +1040,7 @@ enum/MCR_RTF:
   - name: RESET
     description: Reset transmit FIFO.
     value: 1
-enum/MSR_BBF:
+enum/MsrBbf:
   bit_size: 1
   variants:
   - name: IDLE
@@ -1062,7 +1049,7 @@ enum/MSR_BBF:
   - name: BUSY
     description: Busy.
     value: 1
-enum/MSR_FEF:
+enum/MsrFef:
   bit_size: 1
   variants:
   - name: INT_NO
@@ -1071,7 +1058,7 @@ enum/MSR_FEF:
   - name: INT_YES
     description: FIFO error.
     value: 1
-enum/MSR_SDF:
+enum/MsrSdf:
   bit_size: 1
   variants:
   - name: INT_NO
@@ -1080,7 +1067,7 @@ enum/MSR_SDF:
   - name: INT_YES
     description: Stop condition generated.
     value: 1
-enum/NDF:
+enum/Ndf:
   bit_size: 1
   variants:
   - name: INT_NO
@@ -1089,7 +1076,7 @@ enum/NDF:
   - name: INT_YES
     description: Unexpected NACK detected.
     value: 1
-enum/PINCFG:
+enum/Pincfg:
   bit_size: 3
   variants:
   - name: OPEN_DRAIN_2_PIN
@@ -1116,7 +1103,7 @@ enum/PINCFG:
   - name: PUSH_PULL_4_PIN_W_LPI2C_SLAVE
     description: Four-pin push-pull mode (inverted outputs).
     value: 7
-enum/PLTF:
+enum/Pltf:
   bit_size: 1
   variants:
   - name: INT_NO
@@ -1125,7 +1112,7 @@ enum/PLTF:
   - name: INT_YES
     description: Pin low timeout occurred.
     value: 1
-enum/PRESCALE:
+enum/Prescale:
   bit_size: 3
   variants:
   - name: DIVIDE_BY_1
@@ -1152,7 +1139,7 @@ enum/PRESCALE:
   - name: DIVIDE_BY_128
     description: Divide by 128.
     value: 7
-enum/RELAX:
+enum/Relax:
   bit_size: 1
   variants:
   - name: NORMAL_TRANSFER
@@ -1161,7 +1148,7 @@ enum/RELAX:
   - name: RELAXED_TRANSFER
     description: Relaxed transfer.
     value: 1
-enum/RSCFG:
+enum/Rscfg:
   bit_size: 1
   variants:
   - name: ANY_REPEATED_START_AFTER_ADDRESS_MATCH
@@ -1170,16 +1157,7 @@ enum/RSCFG:
   - name: ANY_REPEATED_START
     description: Any repeated Start condition.
     value: 1
-enum/RSF:
-  bit_size: 1
-  variants:
-  - name: INT_NO
-    description: No repeated Start detected.
-    value: 0
-  - name: INT_YES
-    description: Repeated Start detected.
-    value: 1
-enum/RXCFG:
+enum/Rxcfg:
   bit_size: 1
   variants:
   - name: RETURNS_RECEIVED_DATA_AND_CLEARS_RX_DATA_FLAG
@@ -1188,7 +1166,7 @@ enum/RXCFG:
   - name: WHEN_ADDRESS_VALID_FLAG_SET_RETURNS_ADDRESS_STATUS_AND_CLEARS_ADDRESS_VALID_FLAG
     description: Return SASR and clear SSR[AVF] when SSR[AVF] is set, return received data and clear MSR[RDF] when SSR[AFV] is not set.
     value: 1
-enum/RXNACK:
+enum/Rxnack:
   bit_size: 1
   variants:
   - name: SET_BY_TXNACK
@@ -1197,7 +1175,7 @@ enum/RXNACK:
   - name: ALWAYS_GENERATED_ON_ADDRESS_OR_RECEIVE_DATA_OVERRUN
     description: NACK always generated on address overrun or receive data overrun, otherwise ACK or NACK is determined by STAR[TXNACK].
     value: 1
-enum/SBF:
+enum/Sbf:
   bit_size: 1
   variants:
   - name: IDLE
@@ -1206,7 +1184,7 @@ enum/SBF:
   - name: BUSY
     description: Busy.
     value: 1
-enum/SCFGR1_IGNACK:
+enum/Scfgr1Ignack:
   bit_size: 1
   variants:
   - name: ENDS_TRANSFER_ON_NACK
@@ -1215,7 +1193,7 @@ enum/SCFGR1_IGNACK:
   - name: DOES_NOT_END_TRANSFER_ON_NACK
     description: Do not end transfer on NACK.
     value: 1
-enum/SCR_RRF:
+enum/ScrRrf:
   bit_size: 1
   variants:
   - name: NO_EFFECT
@@ -1224,7 +1202,7 @@ enum/SCR_RRF:
   - name: NOW_EMPTY
     description: SRDR is now empty.
     value: 1
-enum/SCR_RTF:
+enum/ScrRtf:
   bit_size: 1
   variants:
   - name: NO_EFFECT
@@ -1233,7 +1211,7 @@ enum/SCR_RTF:
   - name: NOW_EMPTY
     description: STDR is now empty.
     value: 1
-enum/SDCFG:
+enum/Sdcfg:
   bit_size: 1
   variants:
   - name: ANY_STOP_AFTER_ADDRESS_MATCH
@@ -1242,7 +1220,7 @@ enum/SDCFG:
   - name: ANY_STOP
     description: Any Stop condition.
     value: 1
-enum/SSR_BBF:
+enum/SsrBbf:
   bit_size: 1
   variants:
   - name: IDLE
@@ -1251,25 +1229,7 @@ enum/SSR_BBF:
   - name: BUSY
     description: Busy.
     value: 1
-enum/SSR_FEF:
-  bit_size: 1
-  variants:
-  - name: INT_NO
-    description: No FIFO error.
-    value: 0
-  - name: INT_YES
-    description: FIFO error.
-    value: 1
-enum/SSR_SDF:
-  bit_size: 1
-  variants:
-  - name: INT_NO
-    description: No Stop detected.
-    value: 0
-  - name: INT_YES
-    description: Stop detected.
-    value: 1
-enum/STARTCFG:
+enum/Startcfg:
   bit_size: 1
   variants:
   - name: BOTH_I2C_AND_LPI2C_IDLE
@@ -1278,7 +1238,7 @@ enum/STARTCFG:
   - name: I2C_IDLE
     description: Sets when I2C bus is idle.
     value: 1
-enum/STF:
+enum/Stf:
   bit_size: 1
   variants:
   - name: INT_NO
@@ -1287,7 +1247,7 @@ enum/STF:
   - name: INT_YES
     description: Start condition detected.
     value: 1
-enum/STOPCFG:
+enum/Stopcfg:
   bit_size: 1
   variants:
   - name: ANY_STOP
@@ -1296,7 +1256,7 @@ enum/STOPCFG:
   - name: LAST_STOP
     description: Last Stop condition.
     value: 1
-enum/TIMECFG:
+enum/Timecfg:
   bit_size: 1
   variants:
   - name: IF_SCL_LOW
@@ -1305,7 +1265,7 @@ enum/TIMECFG:
   - name: IF_SCL_OR_SDA_LOW
     description: SCL or SDA.
     value: 1
-enum/TXCFG:
+enum/Txcfg:
   bit_size: 1
   variants:
   - name: ASSERTS_DURING_SLAVE_TRANSMIT_TRANSFER_WHEN_TX_DATA_EMPTY
@@ -1314,7 +1274,7 @@ enum/TXCFG:
   - name: ASSERTS_WHEN_TX_DATA_EMPTY
     description: MSR[TDF] is set whenever STDR is empty.
     value: 1
-enum/TXNACK:
+enum/Txnack:
   bit_size: 1
   variants:
   - name: TRANSMIT_ACK

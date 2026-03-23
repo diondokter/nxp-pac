@@ -1917,13 +1917,13 @@ impl Scfgr1 {
     #[doc = "Ignore NACK."]
     #[must_use]
     #[inline(always)]
-    pub const fn ignack(&self) -> Scfgr1Ignack {
+    pub const fn ignack(&self) -> Scfgr1ignack {
         let val = (self.0 >> 12usize) & 0x01;
-        Scfgr1Ignack::from_bits(val as u8)
+        Scfgr1ignack::from_bits(val as u8)
     }
     #[doc = "Ignore NACK."]
     #[inline(always)]
-    pub const fn set_ignack(&mut self, val: Scfgr1Ignack) {
+    pub const fn set_ignack(&mut self, val: Scfgr1ignack) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
     #[doc = "HS Mode Enable."]
@@ -2746,50 +2746,50 @@ impl Ssr {
     #[doc = "Repeated Start Flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn rsf(&self) -> Rsf {
+    pub const fn rsf(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
-        Rsf::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Repeated Start Flag."]
     #[inline(always)]
-    pub const fn set_rsf(&mut self, val: Rsf) {
-        self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
+    pub const fn set_rsf(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
     #[doc = "Stop Detect Flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn sdf(&self) -> SsrSdf {
+    pub const fn sdf(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
-        SsrSdf::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Stop Detect Flag."]
     #[inline(always)]
-    pub const fn set_sdf(&mut self, val: SsrSdf) {
-        self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
+    pub const fn set_sdf(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
     #[doc = "Bit Error Flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn bef(&self) -> Bef {
+    pub const fn bef(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
-        Bef::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Bit Error Flag."]
     #[inline(always)]
-    pub const fn set_bef(&mut self, val: Bef) {
-        self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
+    pub const fn set_bef(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
     #[doc = "FIFO Error Flag."]
     #[must_use]
     #[inline(always)]
-    pub const fn fef(&self) -> SsrFef {
+    pub const fn fef(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
-        SsrFef::from_bits(val as u8)
+        val != 0
     }
     #[doc = "FIFO Error Flag."]
     #[inline(always)]
-    pub const fn set_fef(&mut self, val: SsrFef) {
-        self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
+    pub const fn set_fef(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
     #[doc = "Address Match 0 Flag."]
     #[must_use]
@@ -2895,7 +2895,7 @@ impl defmt::Format for Ssr {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Ssr {{ tdf: {=bool:?}, rdf: {=bool:?}, avf: {=bool:?}, taf: {=bool:?}, rsf: {:?}, sdf: {:?}, bef: {:?}, fef: {:?}, am0f: {=bool:?}, am1f: {=bool:?}, gcf: {=bool:?}, sarf: {=bool:?}, sbf: {:?}, bbf: {:?} }}",
+            "Ssr {{ tdf: {=bool:?}, rdf: {=bool:?}, avf: {=bool:?}, taf: {=bool:?}, rsf: {=bool:?}, sdf: {=bool:?}, bef: {=bool:?}, fef: {=bool:?}, am0f: {=bool:?}, am1f: {=bool:?}, gcf: {=bool:?}, sarf: {=bool:?}, sbf: {:?}, bbf: {:?} }}",
             self.tdf(),
             self.rdf(),
             self.avf(),
@@ -3162,55 +3162,23 @@ impl From<Anv> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Bef {
-    #[doc = "No bit error occurred."]
-    INT_NO = 0x0,
-    #[doc = "Bit error occurred."]
-    INT_YES = 0x01,
-}
-impl Bef {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Bef {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Bef {
-    #[inline(always)]
-    fn from(val: u8) -> Bef {
-        Bef::from_bits(val)
-    }
-}
-impl From<Bef> for u8 {
-    #[inline(always)]
-    fn from(val: Bef) -> u8 {
-        Bef::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmd {
-    #[doc = "Transmit the value in DATA\\[7:0\\]."]
-    TRANSMIT_DATA_7_THROUGH_0 = 0x0,
+    #[doc = "Transmit value in DATA\\[7:0\\]"]
+    TRANSMIT = 0x0,
     #[doc = "Receive (DATA\\[7:0\\] + 1) bytes."]
-    RECEIVE_DATA_7_THROUGH_0_PLUS_ONE = 0x01,
+    RECEIVE = 0x01,
     #[doc = "Generate Stop condition on I2C bus."]
-    GENERATE_STOP_CONDITION = 0x02,
+    STOP = 0x02,
     #[doc = "Receive and discard (DATA\\[7:0\\] + 1) bytes."]
-    RECEIVE_AND_DISCARD_DATA_7_THROUGH_0_PLUS_ONE = 0x03,
-    #[doc = "Generate (repeated) Start on the I2C bus and transmit the address in DATA\\[7:0\\]."]
-    GENERATE_START_AND_TRANSMIT_ADDRESS_IN_DATA_7_THROUGH_0 = 0x04,
-    #[doc = "Generate (repeated) Start on the I2C bus and transmit the address in DATA\\[7:0\\] (this transfer expects a NACK to be returned)."]
-    GENERATE_START_AND_TRANSMIT_ADDRESS_IN_DATA_7_THROUGH_0_EXPECT_NACK = 0x05,
-    #[doc = "Generate (repeated) Start on the I2C bus and transmit the address in DATA\\[7:0\\] using HS mode."]
-    GENERATE_START_AND_TRANSMIT_ADDRESS_IN_DATA_7_THROUGH_0_USING_HIGH_SPEED_MODE = 0x06,
-    #[doc = "Generate (repeated) Start on the I2C bus and transmit the address in DATA\\[7:0\\] using HS mode (this transfer expects a NACK to be returned)."]
-    GENERATE_START_AND_TRANSMIT_ADDRESS_IN_DATA_7_THROUGH_0_USING_HIGH_SPEED_MODE_EXPECT_NACK =
-        0x07,
+    RECEIVE_AND_DISCARD = 0x03,
+    #[doc = "Generate (repeated) Start on the I2C bus and transmit the address in DATA\\[7:0\\]"]
+    START = 0x04,
+    #[doc = "Generate (repeated) Start on the I2C bus and transmit the address in DATA\\[7:0\\] expecting a NACK response"]
+    START_EXPECT_NACK = 0x05,
+    #[doc = "Generate (repeated) Start on the I2C bus and transmit the address in DATA\\[7:0\\] using HS mode"]
+    START_HS = 0x06,
+    #[doc = "Generate (repeated) Start on the I2C bus and transmit the address in DATA\\[7:0\\] using HS mode expecting a NACK response"]
+    START_HS_EXPECT_NACK = 0x07,
 }
 impl Cmd {
     #[inline(always)]
@@ -3909,37 +3877,6 @@ impl From<Rscfg> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Rsf {
-    #[doc = "No repeated Start detected."]
-    INT_NO = 0x0,
-    #[doc = "Repeated Start detected."]
-    INT_YES = 0x01,
-}
-impl Rsf {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Rsf {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Rsf {
-    #[inline(always)]
-    fn from(val: u8) -> Rsf {
-        Rsf::from_bits(val)
-    }
-}
-impl From<Rsf> for u8 {
-    #[inline(always)]
-    fn from(val: Rsf) -> u8 {
-        Rsf::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rxcfg {
     #[doc = "Return received data, clear MSR\\[RDF\\]."]
     RETURNS_RECEIVED_DATA_AND_CLEARS_RX_DATA_FLAG = 0x0,
@@ -4033,15 +3970,15 @@ impl From<Sbf> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Scfgr1Ignack {
+pub enum Scfgr1ignack {
     #[doc = "End transfer on NACK."]
     ENDS_TRANSFER_ON_NACK = 0x0,
     #[doc = "Do not end transfer on NACK."]
     DOES_NOT_END_TRANSFER_ON_NACK = 0x01,
 }
-impl Scfgr1Ignack {
+impl Scfgr1ignack {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> Scfgr1Ignack {
+    pub const fn from_bits(val: u8) -> Scfgr1ignack {
         unsafe { core::mem::transmute(val & 0x01) }
     }
     #[inline(always)]
@@ -4049,16 +3986,16 @@ impl Scfgr1Ignack {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for Scfgr1Ignack {
+impl From<u8> for Scfgr1ignack {
     #[inline(always)]
-    fn from(val: u8) -> Scfgr1Ignack {
-        Scfgr1Ignack::from_bits(val)
+    fn from(val: u8) -> Scfgr1ignack {
+        Scfgr1ignack::from_bits(val)
     }
 }
-impl From<Scfgr1Ignack> for u8 {
+impl From<Scfgr1ignack> for u8 {
     #[inline(always)]
-    fn from(val: Scfgr1Ignack) -> u8 {
-        Scfgr1Ignack::to_bits(val)
+    fn from(val: Scfgr1ignack) -> u8 {
+        Scfgr1ignack::to_bits(val)
     }
 }
 #[repr(u8)]
@@ -4183,68 +4120,6 @@ impl From<SsrBbf> for u8 {
     #[inline(always)]
     fn from(val: SsrBbf) -> u8 {
         SsrBbf::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum SsrFef {
-    #[doc = "No FIFO error."]
-    INT_NO = 0x0,
-    #[doc = "FIFO error."]
-    INT_YES = 0x01,
-}
-impl SsrFef {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> SsrFef {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for SsrFef {
-    #[inline(always)]
-    fn from(val: u8) -> SsrFef {
-        SsrFef::from_bits(val)
-    }
-}
-impl From<SsrFef> for u8 {
-    #[inline(always)]
-    fn from(val: SsrFef) -> u8 {
-        SsrFef::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum SsrSdf {
-    #[doc = "No Stop detected."]
-    INT_NO = 0x0,
-    #[doc = "Stop detected."]
-    INT_YES = 0x01,
-}
-impl SsrSdf {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> SsrSdf {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for SsrSdf {
-    #[inline(always)]
-    fn from(val: u8) -> SsrSdf {
-        SsrSdf::from_bits(val)
-    }
-}
-impl From<SsrSdf> for u8 {
-    #[inline(always)]
-    fn from(val: SsrSdf) -> u8 {
-        SsrSdf::to_bits(val)
     }
 }
 #[repr(u8)]

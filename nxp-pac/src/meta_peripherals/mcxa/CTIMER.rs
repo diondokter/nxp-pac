@@ -100,145 +100,145 @@ impl Ccr {
     #[doc = "Rising Edge of Capture Channel 0."]
     #[must_use]
     #[inline(always)]
-    pub const fn cap0re(&self) -> Cap0re {
+    pub const fn cap0re(&self) -> Capre {
         let val = (self.0 >> 0usize) & 0x01;
-        Cap0re::from_bits(val as u8)
+        Capre::from_bits(val as u8)
     }
     #[doc = "Rising Edge of Capture Channel 0."]
     #[inline(always)]
-    pub const fn set_cap0re(&mut self, val: Cap0re) {
+    pub const fn set_cap0re(&mut self, val: Capre) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "Falling Edge of Capture Channel 0."]
     #[must_use]
     #[inline(always)]
-    pub const fn cap0fe(&self) -> Cap0fe {
+    pub const fn cap0fe(&self) -> Capfe {
         let val = (self.0 >> 1usize) & 0x01;
-        Cap0fe::from_bits(val as u8)
+        Capfe::from_bits(val as u8)
     }
     #[doc = "Falling Edge of Capture Channel 0."]
     #[inline(always)]
-    pub const fn set_cap0fe(&mut self, val: Cap0fe) {
+    pub const fn set_cap0fe(&mut self, val: Capfe) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
     #[doc = "Generate Interrupt on Channel 0 Capture Event."]
     #[must_use]
     #[inline(always)]
-    pub const fn cap0i(&self) -> Cap0i {
+    pub const fn cap0i(&self) -> Capi {
         let val = (self.0 >> 2usize) & 0x01;
-        Cap0i::from_bits(val as u8)
+        Capi::from_bits(val as u8)
     }
     #[doc = "Generate Interrupt on Channel 0 Capture Event."]
     #[inline(always)]
-    pub const fn set_cap0i(&mut self, val: Cap0i) {
+    pub const fn set_cap0i(&mut self, val: Capi) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
     #[doc = "Rising Edge of Capture Channel 1."]
     #[must_use]
     #[inline(always)]
-    pub const fn cap1re(&self) -> Cap1re {
+    pub const fn cap1re(&self) -> Capre {
         let val = (self.0 >> 3usize) & 0x01;
-        Cap1re::from_bits(val as u8)
+        Capre::from_bits(val as u8)
     }
     #[doc = "Rising Edge of Capture Channel 1."]
     #[inline(always)]
-    pub const fn set_cap1re(&mut self, val: Cap1re) {
+    pub const fn set_cap1re(&mut self, val: Capre) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
     #[doc = "Falling Edge of Capture Channel 1."]
     #[must_use]
     #[inline(always)]
-    pub const fn cap1fe(&self) -> Cap1fe {
+    pub const fn cap1fe(&self) -> Capfe {
         let val = (self.0 >> 4usize) & 0x01;
-        Cap1fe::from_bits(val as u8)
+        Capfe::from_bits(val as u8)
     }
     #[doc = "Falling Edge of Capture Channel 1."]
     #[inline(always)]
-    pub const fn set_cap1fe(&mut self, val: Cap1fe) {
+    pub const fn set_cap1fe(&mut self, val: Capfe) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
     #[doc = "Generate Interrupt on Channel 1 Capture Event."]
     #[must_use]
     #[inline(always)]
-    pub const fn cap1i(&self) -> Cap1i {
+    pub const fn cap1i(&self) -> Capi {
         let val = (self.0 >> 5usize) & 0x01;
-        Cap1i::from_bits(val as u8)
+        Capi::from_bits(val as u8)
     }
     #[doc = "Generate Interrupt on Channel 1 Capture Event."]
     #[inline(always)]
-    pub const fn set_cap1i(&mut self, val: Cap1i) {
+    pub const fn set_cap1i(&mut self, val: Capi) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
     #[doc = "Rising Edge of Capture Channel 2."]
     #[must_use]
     #[inline(always)]
-    pub const fn cap2re(&self) -> Cap2re {
+    pub const fn cap2re(&self) -> Capre {
         let val = (self.0 >> 6usize) & 0x01;
-        Cap2re::from_bits(val as u8)
+        Capre::from_bits(val as u8)
     }
     #[doc = "Rising Edge of Capture Channel 2."]
     #[inline(always)]
-    pub const fn set_cap2re(&mut self, val: Cap2re) {
+    pub const fn set_cap2re(&mut self, val: Capre) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
     #[doc = "Falling Edge of Capture Channel 2."]
     #[must_use]
     #[inline(always)]
-    pub const fn cap2fe(&self) -> Cap2fe {
+    pub const fn cap2fe(&self) -> Capfe {
         let val = (self.0 >> 7usize) & 0x01;
-        Cap2fe::from_bits(val as u8)
+        Capfe::from_bits(val as u8)
     }
     #[doc = "Falling Edge of Capture Channel 2."]
     #[inline(always)]
-    pub const fn set_cap2fe(&mut self, val: Cap2fe) {
+    pub const fn set_cap2fe(&mut self, val: Capfe) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
     #[doc = "Generate Interrupt on Channel 2 Capture Event."]
     #[must_use]
     #[inline(always)]
-    pub const fn cap2i(&self) -> Cap2i {
+    pub const fn cap2i(&self) -> Capi {
         let val = (self.0 >> 8usize) & 0x01;
-        Cap2i::from_bits(val as u8)
+        Capi::from_bits(val as u8)
     }
     #[doc = "Generate Interrupt on Channel 2 Capture Event."]
     #[inline(always)]
-    pub const fn set_cap2i(&mut self, val: Cap2i) {
+    pub const fn set_cap2i(&mut self, val: Capi) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
     #[doc = "Rising Edge of Capture Channel 3."]
     #[must_use]
     #[inline(always)]
-    pub const fn cap3re(&self) -> Cap3re {
+    pub const fn cap3re(&self) -> Capre {
         let val = (self.0 >> 9usize) & 0x01;
-        Cap3re::from_bits(val as u8)
+        Capre::from_bits(val as u8)
     }
     #[doc = "Rising Edge of Capture Channel 3."]
     #[inline(always)]
-    pub const fn set_cap3re(&mut self, val: Cap3re) {
+    pub const fn set_cap3re(&mut self, val: Capre) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
     }
     #[doc = "Falling Edge of Capture Channel 3."]
     #[must_use]
     #[inline(always)]
-    pub const fn cap3fe(&self) -> Cap3fe {
+    pub const fn cap3fe(&self) -> Capfe {
         let val = (self.0 >> 10usize) & 0x01;
-        Cap3fe::from_bits(val as u8)
+        Capfe::from_bits(val as u8)
     }
     #[doc = "Falling Edge of Capture Channel 3."]
     #[inline(always)]
-    pub const fn set_cap3fe(&mut self, val: Cap3fe) {
+    pub const fn set_cap3fe(&mut self, val: Capfe) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
     #[doc = "Generate Interrupt on Channel 3 Capture Event."]
     #[must_use]
     #[inline(always)]
-    pub const fn cap3i(&self) -> Cap3i {
+    pub const fn cap3i(&self) -> Capi {
         let val = (self.0 >> 11usize) & 0x01;
-        Cap3i::from_bits(val as u8)
+        Capi::from_bits(val as u8)
     }
     #[doc = "Generate Interrupt on Channel 3 Capture Event."]
     #[inline(always)]
-    pub const fn set_cap3i(&mut self, val: Cap3i) {
+    pub const fn set_cap3i(&mut self, val: Capi) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
     }
 }
@@ -413,97 +413,97 @@ impl Emr {
     #[doc = "External Match 0."]
     #[must_use]
     #[inline(always)]
-    pub const fn em0(&self) -> Em0 {
+    pub const fn em0(&self) -> Em {
         let val = (self.0 >> 0usize) & 0x01;
-        Em0::from_bits(val as u8)
+        Em::from_bits(val as u8)
     }
     #[doc = "External Match 0."]
     #[inline(always)]
-    pub const fn set_em0(&mut self, val: Em0) {
+    pub const fn set_em0(&mut self, val: Em) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "External Match 1."]
     #[must_use]
     #[inline(always)]
-    pub const fn em1(&self) -> Em1 {
+    pub const fn em1(&self) -> Em {
         let val = (self.0 >> 1usize) & 0x01;
-        Em1::from_bits(val as u8)
+        Em::from_bits(val as u8)
     }
     #[doc = "External Match 1."]
     #[inline(always)]
-    pub const fn set_em1(&mut self, val: Em1) {
+    pub const fn set_em1(&mut self, val: Em) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
     #[doc = "External Match 2."]
     #[must_use]
     #[inline(always)]
-    pub const fn em2(&self) -> Em2 {
+    pub const fn em2(&self) -> Em {
         let val = (self.0 >> 2usize) & 0x01;
-        Em2::from_bits(val as u8)
+        Em::from_bits(val as u8)
     }
     #[doc = "External Match 2."]
     #[inline(always)]
-    pub const fn set_em2(&mut self, val: Em2) {
+    pub const fn set_em2(&mut self, val: Em) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
     #[doc = "External Match 3."]
     #[must_use]
     #[inline(always)]
-    pub const fn em3(&self) -> Em3 {
+    pub const fn em3(&self) -> Em {
         let val = (self.0 >> 3usize) & 0x01;
-        Em3::from_bits(val as u8)
+        Em::from_bits(val as u8)
     }
     #[doc = "External Match 3."]
     #[inline(always)]
-    pub const fn set_em3(&mut self, val: Em3) {
+    pub const fn set_em3(&mut self, val: Em) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
     #[doc = "External Match Control 0."]
     #[must_use]
     #[inline(always)]
-    pub const fn emc0(&self) -> Emc0 {
+    pub const fn emc0(&self) -> Emc {
         let val = (self.0 >> 4usize) & 0x03;
-        Emc0::from_bits(val as u8)
+        Emc::from_bits(val as u8)
     }
     #[doc = "External Match Control 0."]
     #[inline(always)]
-    pub const fn set_emc0(&mut self, val: Emc0) {
+    pub const fn set_emc0(&mut self, val: Emc) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
     #[doc = "External Match Control 1."]
     #[must_use]
     #[inline(always)]
-    pub const fn emc1(&self) -> Emc1 {
+    pub const fn emc1(&self) -> Emc {
         let val = (self.0 >> 6usize) & 0x03;
-        Emc1::from_bits(val as u8)
+        Emc::from_bits(val as u8)
     }
     #[doc = "External Match Control 1."]
     #[inline(always)]
-    pub const fn set_emc1(&mut self, val: Emc1) {
+    pub const fn set_emc1(&mut self, val: Emc) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u32) & 0x03) << 6usize);
     }
     #[doc = "External Match Control 2."]
     #[must_use]
     #[inline(always)]
-    pub const fn emc2(&self) -> Emc2 {
+    pub const fn emc2(&self) -> Emc {
         let val = (self.0 >> 8usize) & 0x03;
-        Emc2::from_bits(val as u8)
+        Emc::from_bits(val as u8)
     }
     #[doc = "External Match Control 2."]
     #[inline(always)]
-    pub const fn set_emc2(&mut self, val: Emc2) {
+    pub const fn set_emc2(&mut self, val: Emc) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
     #[doc = "External Match Control 3."]
     #[must_use]
     #[inline(always)]
-    pub const fn emc3(&self) -> Emc3 {
+    pub const fn emc3(&self) -> Emc {
         let val = (self.0 >> 10usize) & 0x03;
-        Emc3::from_bits(val as u8)
+        Emc::from_bits(val as u8)
     }
     #[doc = "External Match Control 3."]
     #[inline(always)]
-    pub const fn set_emc3(&mut self, val: Emc3) {
+    pub const fn set_emc3(&mut self, val: Emc) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u32) & 0x03) << 10usize);
     }
 }
@@ -691,193 +691,193 @@ impl Mcr {
     #[doc = "Interrupt on MR0."]
     #[must_use]
     #[inline(always)]
-    pub const fn mr0i(&self) -> Mr0i {
+    pub const fn mr0i(&self) -> Mri {
         let val = (self.0 >> 0usize) & 0x01;
-        Mr0i::from_bits(val as u8)
+        Mri::from_bits(val as u8)
     }
     #[doc = "Interrupt on MR0."]
     #[inline(always)]
-    pub const fn set_mr0i(&mut self, val: Mr0i) {
+    pub const fn set_mr0i(&mut self, val: Mri) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "Reset on MR0."]
     #[must_use]
     #[inline(always)]
-    pub const fn mr0r(&self) -> Mr0r {
+    pub const fn mr0r(&self) -> Mrr {
         let val = (self.0 >> 1usize) & 0x01;
-        Mr0r::from_bits(val as u8)
+        Mrr::from_bits(val as u8)
     }
     #[doc = "Reset on MR0."]
     #[inline(always)]
-    pub const fn set_mr0r(&mut self, val: Mr0r) {
+    pub const fn set_mr0r(&mut self, val: Mrr) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
     #[doc = "Stop on MR0."]
     #[must_use]
     #[inline(always)]
-    pub const fn mr0s(&self) -> Mr0s {
+    pub const fn mr0s(&self) -> Mrs {
         let val = (self.0 >> 2usize) & 0x01;
-        Mr0s::from_bits(val as u8)
+        Mrs::from_bits(val as u8)
     }
     #[doc = "Stop on MR0."]
     #[inline(always)]
-    pub const fn set_mr0s(&mut self, val: Mr0s) {
+    pub const fn set_mr0s(&mut self, val: Mrs) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
     #[doc = "Interrupt on MR1."]
     #[must_use]
     #[inline(always)]
-    pub const fn mr1i(&self) -> Mr1i {
+    pub const fn mr1i(&self) -> Mri {
         let val = (self.0 >> 3usize) & 0x01;
-        Mr1i::from_bits(val as u8)
+        Mri::from_bits(val as u8)
     }
     #[doc = "Interrupt on MR1."]
     #[inline(always)]
-    pub const fn set_mr1i(&mut self, val: Mr1i) {
+    pub const fn set_mr1i(&mut self, val: Mri) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
     #[doc = "Reset on MR1."]
     #[must_use]
     #[inline(always)]
-    pub const fn mr1r(&self) -> Mr1r {
+    pub const fn mr1r(&self) -> Mrr {
         let val = (self.0 >> 4usize) & 0x01;
-        Mr1r::from_bits(val as u8)
+        Mrr::from_bits(val as u8)
     }
     #[doc = "Reset on MR1."]
     #[inline(always)]
-    pub const fn set_mr1r(&mut self, val: Mr1r) {
+    pub const fn set_mr1r(&mut self, val: Mrr) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
     #[doc = "Stop on MR1."]
     #[must_use]
     #[inline(always)]
-    pub const fn mr1s(&self) -> Mr1s {
+    pub const fn mr1s(&self) -> Mrs {
         let val = (self.0 >> 5usize) & 0x01;
-        Mr1s::from_bits(val as u8)
+        Mrs::from_bits(val as u8)
     }
     #[doc = "Stop on MR1."]
     #[inline(always)]
-    pub const fn set_mr1s(&mut self, val: Mr1s) {
+    pub const fn set_mr1s(&mut self, val: Mrs) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
     #[doc = "Interrupt on MR2."]
     #[must_use]
     #[inline(always)]
-    pub const fn mr2i(&self) -> Mr2i {
+    pub const fn mr2i(&self) -> Mri {
         let val = (self.0 >> 6usize) & 0x01;
-        Mr2i::from_bits(val as u8)
+        Mri::from_bits(val as u8)
     }
     #[doc = "Interrupt on MR2."]
     #[inline(always)]
-    pub const fn set_mr2i(&mut self, val: Mr2i) {
+    pub const fn set_mr2i(&mut self, val: Mri) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
     #[doc = "Reset on MR2."]
     #[must_use]
     #[inline(always)]
-    pub const fn mr2r(&self) -> Mr2r {
+    pub const fn mr2r(&self) -> Mrr {
         let val = (self.0 >> 7usize) & 0x01;
-        Mr2r::from_bits(val as u8)
+        Mrr::from_bits(val as u8)
     }
     #[doc = "Reset on MR2."]
     #[inline(always)]
-    pub const fn set_mr2r(&mut self, val: Mr2r) {
+    pub const fn set_mr2r(&mut self, val: Mrr) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
     #[doc = "Stop on MR2."]
     #[must_use]
     #[inline(always)]
-    pub const fn mr2s(&self) -> Mr2s {
+    pub const fn mr2s(&self) -> Mrs {
         let val = (self.0 >> 8usize) & 0x01;
-        Mr2s::from_bits(val as u8)
+        Mrs::from_bits(val as u8)
     }
     #[doc = "Stop on MR2."]
     #[inline(always)]
-    pub const fn set_mr2s(&mut self, val: Mr2s) {
+    pub const fn set_mr2s(&mut self, val: Mrs) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
     #[doc = "Interrupt on MR3."]
     #[must_use]
     #[inline(always)]
-    pub const fn mr3i(&self) -> Mr3i {
+    pub const fn mr3i(&self) -> Mri {
         let val = (self.0 >> 9usize) & 0x01;
-        Mr3i::from_bits(val as u8)
+        Mri::from_bits(val as u8)
     }
     #[doc = "Interrupt on MR3."]
     #[inline(always)]
-    pub const fn set_mr3i(&mut self, val: Mr3i) {
+    pub const fn set_mr3i(&mut self, val: Mri) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
     }
     #[doc = "Reset on MR3."]
     #[must_use]
     #[inline(always)]
-    pub const fn mr3r(&self) -> Mr3r {
+    pub const fn mr3r(&self) -> Mrr {
         let val = (self.0 >> 10usize) & 0x01;
-        Mr3r::from_bits(val as u8)
+        Mrr::from_bits(val as u8)
     }
     #[doc = "Reset on MR3."]
     #[inline(always)]
-    pub const fn set_mr3r(&mut self, val: Mr3r) {
+    pub const fn set_mr3r(&mut self, val: Mrr) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
     #[doc = "Stop on MR3."]
     #[must_use]
     #[inline(always)]
-    pub const fn mr3s(&self) -> Mr3s {
+    pub const fn mr3s(&self) -> Mrs {
         let val = (self.0 >> 11usize) & 0x01;
-        Mr3s::from_bits(val as u8)
+        Mrs::from_bits(val as u8)
     }
     #[doc = "Stop on MR3."]
     #[inline(always)]
-    pub const fn set_mr3s(&mut self, val: Mr3s) {
+    pub const fn set_mr3s(&mut self, val: Mrs) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
     }
     #[doc = "Reload MR."]
     #[must_use]
     #[inline(always)]
-    pub const fn mr0rl(&self) -> Mr0rl {
+    pub const fn mr0rl(&self) -> Mrrl {
         let val = (self.0 >> 24usize) & 0x01;
-        Mr0rl::from_bits(val as u8)
+        Mrrl::from_bits(val as u8)
     }
     #[doc = "Reload MR."]
     #[inline(always)]
-    pub const fn set_mr0rl(&mut self, val: Mr0rl) {
+    pub const fn set_mr0rl(&mut self, val: Mrrl) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val.to_bits() as u32) & 0x01) << 24usize);
     }
     #[doc = "Reload MR."]
     #[must_use]
     #[inline(always)]
-    pub const fn mr1rl(&self) -> Mr1rl {
+    pub const fn mr1rl(&self) -> Mrrl {
         let val = (self.0 >> 25usize) & 0x01;
-        Mr1rl::from_bits(val as u8)
+        Mrrl::from_bits(val as u8)
     }
     #[doc = "Reload MR."]
     #[inline(always)]
-    pub const fn set_mr1rl(&mut self, val: Mr1rl) {
+    pub const fn set_mr1rl(&mut self, val: Mrrl) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val.to_bits() as u32) & 0x01) << 25usize);
     }
     #[doc = "Reload MR."]
     #[must_use]
     #[inline(always)]
-    pub const fn mr2rl(&self) -> Mr2rl {
+    pub const fn mr2rl(&self) -> Mrrl {
         let val = (self.0 >> 26usize) & 0x01;
-        Mr2rl::from_bits(val as u8)
+        Mrrl::from_bits(val as u8)
     }
     #[doc = "Reload MR."]
     #[inline(always)]
-    pub const fn set_mr2rl(&mut self, val: Mr2rl) {
+    pub const fn set_mr2rl(&mut self, val: Mrrl) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val.to_bits() as u32) & 0x01) << 26usize);
     }
     #[doc = "Reload MR."]
     #[must_use]
     #[inline(always)]
-    pub const fn mr3rl(&self) -> Mr3rl {
+    pub const fn mr3rl(&self) -> Mrrl {
         let val = (self.0 >> 27usize) & 0x01;
-        Mr3rl::from_bits(val as u8)
+        Mrrl::from_bits(val as u8)
     }
     #[doc = "Reload MR."]
     #[inline(always)]
-    pub const fn set_mr3rl(&mut self, val: Mr3rl) {
+    pub const fn set_mr3rl(&mut self, val: Mrrl) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val.to_bits() as u32) & 0x01) << 27usize);
     }
 }
@@ -1086,49 +1086,49 @@ impl Pwmc {
     #[doc = "PWM Mode Enable for Channel 0."]
     #[must_use]
     #[inline(always)]
-    pub const fn pwmen0(&self) -> Pwmen0 {
+    pub const fn pwmen0(&self) -> Pwmen {
         let val = (self.0 >> 0usize) & 0x01;
-        Pwmen0::from_bits(val as u8)
+        Pwmen::from_bits(val as u8)
     }
     #[doc = "PWM Mode Enable for Channel 0."]
     #[inline(always)]
-    pub const fn set_pwmen0(&mut self, val: Pwmen0) {
+    pub const fn set_pwmen0(&mut self, val: Pwmen) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
     #[doc = "PWM Mode Enable for Channel 1."]
     #[must_use]
     #[inline(always)]
-    pub const fn pwmen1(&self) -> Pwmen1 {
+    pub const fn pwmen1(&self) -> Pwmen {
         let val = (self.0 >> 1usize) & 0x01;
-        Pwmen1::from_bits(val as u8)
+        Pwmen::from_bits(val as u8)
     }
     #[doc = "PWM Mode Enable for Channel 1."]
     #[inline(always)]
-    pub const fn set_pwmen1(&mut self, val: Pwmen1) {
+    pub const fn set_pwmen1(&mut self, val: Pwmen) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
     #[doc = "PWM Mode Enable for Channel 2."]
     #[must_use]
     #[inline(always)]
-    pub const fn pwmen2(&self) -> Pwmen2 {
+    pub const fn pwmen2(&self) -> Pwmen {
         let val = (self.0 >> 2usize) & 0x01;
-        Pwmen2::from_bits(val as u8)
+        Pwmen::from_bits(val as u8)
     }
     #[doc = "PWM Mode Enable for Channel 2."]
     #[inline(always)]
-    pub const fn set_pwmen2(&mut self, val: Pwmen2) {
+    pub const fn set_pwmen2(&mut self, val: Pwmen) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
     #[doc = "PWM Mode Enable for Channel 3."]
     #[must_use]
     #[inline(always)]
-    pub const fn pwmen3(&self) -> Pwmen3 {
+    pub const fn pwmen3(&self) -> Pwmen {
         let val = (self.0 >> 3usize) & 0x01;
-        Pwmen3::from_bits(val as u8)
+        Pwmen::from_bits(val as u8)
     }
     #[doc = "PWM Mode Enable for Channel 3."]
     #[inline(always)]
-    pub const fn set_pwmen3(&mut self, val: Pwmen3) {
+    pub const fn set_pwmen3(&mut self, val: Pwmen) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
 }
@@ -1282,15 +1282,15 @@ impl defmt::Format for Tcr {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cap0fe {
+pub enum Capfe {
     #[doc = "Does not load."]
-    CAP0FE_0 = 0x0,
+    CAPFE0 = 0x0,
     #[doc = "Loads."]
-    CAPOFE_1 = 0x01,
+    CAPFE1 = 0x01,
 }
-impl Cap0fe {
+impl Capfe {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cap0fe {
+    pub const fn from_bits(val: u8) -> Capfe {
         unsafe { core::mem::transmute(val & 0x01) }
     }
     #[inline(always)]
@@ -1298,30 +1298,30 @@ impl Cap0fe {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for Cap0fe {
+impl From<u8> for Capfe {
     #[inline(always)]
-    fn from(val: u8) -> Cap0fe {
-        Cap0fe::from_bits(val)
+    fn from(val: u8) -> Capfe {
+        Capfe::from_bits(val)
     }
 }
-impl From<Cap0fe> for u8 {
+impl From<Capfe> for u8 {
     #[inline(always)]
-    fn from(val: Cap0fe) -> u8 {
-        Cap0fe::to_bits(val)
+    fn from(val: Capfe) -> u8 {
+        Capfe::to_bits(val)
     }
 }
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cap0i {
+pub enum Capi {
     #[doc = "Does not generate."]
-    CAP0I_0 = 0x0,
+    CAPI0 = 0x0,
     #[doc = "Generates."]
-    CAPOI_1 = 0x01,
+    CAPI1 = 0x01,
 }
-impl Cap0i {
+impl Capi {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cap0i {
+    pub const fn from_bits(val: u8) -> Capi {
         unsafe { core::mem::transmute(val & 0x01) }
     }
     #[inline(always)]
@@ -1329,30 +1329,30 @@ impl Cap0i {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for Cap0i {
+impl From<u8> for Capi {
     #[inline(always)]
-    fn from(val: u8) -> Cap0i {
-        Cap0i::from_bits(val)
+    fn from(val: u8) -> Capi {
+        Capi::from_bits(val)
     }
 }
-impl From<Cap0i> for u8 {
+impl From<Capi> for u8 {
     #[inline(always)]
-    fn from(val: Cap0i) -> u8 {
-        Cap0i::to_bits(val)
+    fn from(val: Capi) -> u8 {
+        Capi::to_bits(val)
     }
 }
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cap0re {
+pub enum Capre {
     #[doc = "Does not load."]
-    CAP0RE_0 = 0x0,
+    CAPRE0 = 0x0,
     #[doc = "Loads."]
-    CAPORE_1 = 0x01,
+    CAPRE1 = 0x01,
 }
-impl Cap0re {
+impl Capre {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cap0re {
+    pub const fn from_bits(val: u8) -> Capre {
         unsafe { core::mem::transmute(val & 0x01) }
     }
     #[inline(always)]
@@ -1360,295 +1360,16 @@ impl Cap0re {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for Cap0re {
+impl From<u8> for Capre {
     #[inline(always)]
-    fn from(val: u8) -> Cap0re {
-        Cap0re::from_bits(val)
+    fn from(val: u8) -> Capre {
+        Capre::from_bits(val)
     }
 }
-impl From<Cap0re> for u8 {
+impl From<Capre> for u8 {
     #[inline(always)]
-    fn from(val: Cap0re) -> u8 {
-        Cap0re::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cap1fe {
-    #[doc = "Does not load."]
-    CAP1FE_0 = 0x0,
-    #[doc = "Loads."]
-    CAP1FE_1 = 0x01,
-}
-impl Cap1fe {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cap1fe {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cap1fe {
-    #[inline(always)]
-    fn from(val: u8) -> Cap1fe {
-        Cap1fe::from_bits(val)
-    }
-}
-impl From<Cap1fe> for u8 {
-    #[inline(always)]
-    fn from(val: Cap1fe) -> u8 {
-        Cap1fe::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cap1i {
-    #[doc = "Does not generates."]
-    CAP1I_0 = 0x0,
-    #[doc = "Generates."]
-    CAP1I_1 = 0x01,
-}
-impl Cap1i {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cap1i {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cap1i {
-    #[inline(always)]
-    fn from(val: u8) -> Cap1i {
-        Cap1i::from_bits(val)
-    }
-}
-impl From<Cap1i> for u8 {
-    #[inline(always)]
-    fn from(val: Cap1i) -> u8 {
-        Cap1i::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cap1re {
-    #[doc = "Does not load."]
-    CAP1RE_0 = 0x0,
-    #[doc = "Loads."]
-    CAP1RE_1 = 0x01,
-}
-impl Cap1re {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cap1re {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cap1re {
-    #[inline(always)]
-    fn from(val: u8) -> Cap1re {
-        Cap1re::from_bits(val)
-    }
-}
-impl From<Cap1re> for u8 {
-    #[inline(always)]
-    fn from(val: Cap1re) -> u8 {
-        Cap1re::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cap2fe {
-    #[doc = "Does not load."]
-    CAP2FE_0 = 0x0,
-    #[doc = "Loads."]
-    CAP2FE_1 = 0x01,
-}
-impl Cap2fe {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cap2fe {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cap2fe {
-    #[inline(always)]
-    fn from(val: u8) -> Cap2fe {
-        Cap2fe::from_bits(val)
-    }
-}
-impl From<Cap2fe> for u8 {
-    #[inline(always)]
-    fn from(val: Cap2fe) -> u8 {
-        Cap2fe::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cap2i {
-    #[doc = "Does not generate."]
-    CAP2I_0 = 0x0,
-    #[doc = "Generates."]
-    CAP2I_1 = 0x01,
-}
-impl Cap2i {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cap2i {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cap2i {
-    #[inline(always)]
-    fn from(val: u8) -> Cap2i {
-        Cap2i::from_bits(val)
-    }
-}
-impl From<Cap2i> for u8 {
-    #[inline(always)]
-    fn from(val: Cap2i) -> u8 {
-        Cap2i::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cap2re {
-    #[doc = "Does not load."]
-    CAP2RE_0 = 0x0,
-    #[doc = "Loads."]
-    CAP2RE_1 = 0x01,
-}
-impl Cap2re {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cap2re {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cap2re {
-    #[inline(always)]
-    fn from(val: u8) -> Cap2re {
-        Cap2re::from_bits(val)
-    }
-}
-impl From<Cap2re> for u8 {
-    #[inline(always)]
-    fn from(val: Cap2re) -> u8 {
-        Cap2re::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cap3fe {
-    #[doc = "Does not load."]
-    CAP3FE_0 = 0x0,
-    #[doc = "Loads."]
-    CAP3FE_1 = 0x01,
-}
-impl Cap3fe {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cap3fe {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cap3fe {
-    #[inline(always)]
-    fn from(val: u8) -> Cap3fe {
-        Cap3fe::from_bits(val)
-    }
-}
-impl From<Cap3fe> for u8 {
-    #[inline(always)]
-    fn from(val: Cap3fe) -> u8 {
-        Cap3fe::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cap3i {
-    #[doc = "Does not generate."]
-    CAP3I_0 = 0x0,
-    #[doc = "Generates."]
-    CAP3I_1 = 0x01,
-}
-impl Cap3i {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cap3i {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cap3i {
-    #[inline(always)]
-    fn from(val: u8) -> Cap3i {
-        Cap3i::from_bits(val)
-    }
-}
-impl From<Cap3i> for u8 {
-    #[inline(always)]
-    fn from(val: Cap3i) -> u8 {
-        Cap3i::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cap3re {
-    #[doc = "Does not load."]
-    CAP3RE_0 = 0x0,
-    #[doc = "Loads."]
-    CAP3RE_1 = 0x01,
-}
-impl Cap3re {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cap3re {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Cap3re {
-    #[inline(always)]
-    fn from(val: u8) -> Cap3re {
-        Cap3re::from_bits(val)
-    }
-}
-impl From<Cap3re> for u8 {
-    #[inline(always)]
-    fn from(val: Cap3re) -> u8 {
-        Cap3re::to_bits(val)
+    fn from(val: Capre) -> u8 {
+        Capre::to_bits(val)
     }
 }
 #[repr(u8)]
@@ -1724,15 +1445,15 @@ impl From<Ctmode> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Em0 {
+pub enum Em {
     #[doc = "Low."]
     CLEAR = 0x0,
     #[doc = "High."]
     SET = 0x01,
 }
-impl Em0 {
+impl Em {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> Em0 {
+    pub const fn from_bits(val: u8) -> Em {
         unsafe { core::mem::transmute(val & 0x01) }
     }
     #[inline(always)]
@@ -1740,115 +1461,22 @@ impl Em0 {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for Em0 {
+impl From<u8> for Em {
     #[inline(always)]
-    fn from(val: u8) -> Em0 {
-        Em0::from_bits(val)
+    fn from(val: u8) -> Em {
+        Em::from_bits(val)
     }
 }
-impl From<Em0> for u8 {
+impl From<Em> for u8 {
     #[inline(always)]
-    fn from(val: Em0) -> u8 {
-        Em0::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Em1 {
-    #[doc = "Low."]
-    CLEAR = 0x0,
-    #[doc = "High."]
-    SET = 0x01,
-}
-impl Em1 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Em1 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Em1 {
-    #[inline(always)]
-    fn from(val: u8) -> Em1 {
-        Em1::from_bits(val)
-    }
-}
-impl From<Em1> for u8 {
-    #[inline(always)]
-    fn from(val: Em1) -> u8 {
-        Em1::to_bits(val)
+    fn from(val: Em) -> u8 {
+        Em::to_bits(val)
     }
 }
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Em2 {
-    #[doc = "Low."]
-    CLEAR = 0x0,
-    #[doc = "High."]
-    SET = 0x01,
-}
-impl Em2 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Em2 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Em2 {
-    #[inline(always)]
-    fn from(val: u8) -> Em2 {
-        Em2::from_bits(val)
-    }
-}
-impl From<Em2> for u8 {
-    #[inline(always)]
-    fn from(val: Em2) -> u8 {
-        Em2::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Em3 {
-    #[doc = "Low."]
-    CLEAR = 0x0,
-    #[doc = "High."]
-    SET = 0x01,
-}
-impl Em3 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Em3 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Em3 {
-    #[inline(always)]
-    fn from(val: u8) -> Em3 {
-        Em3::from_bits(val)
-    }
-}
-impl From<Em3> for u8 {
-    #[inline(always)]
-    fn from(val: Em3) -> u8 {
-        Em3::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Emc0 {
+pub enum Emc {
     #[doc = "Does nothing."]
     DO_NOTHING = 0x0,
     #[doc = "Goes low."]
@@ -1858,9 +1486,9 @@ pub enum Emc0 {
     #[doc = "Toggles."]
     TOGGLE = 0x03,
 }
-impl Emc0 {
+impl Emc {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> Emc0 {
+    pub const fn from_bits(val: u8) -> Emc {
         unsafe { core::mem::transmute(val & 0x03) }
     }
     #[inline(always)]
@@ -1868,135 +1496,30 @@ impl Emc0 {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for Emc0 {
+impl From<u8> for Emc {
     #[inline(always)]
-    fn from(val: u8) -> Emc0 {
-        Emc0::from_bits(val)
+    fn from(val: u8) -> Emc {
+        Emc::from_bits(val)
     }
 }
-impl From<Emc0> for u8 {
+impl From<Emc> for u8 {
     #[inline(always)]
-    fn from(val: Emc0) -> u8 {
-        Emc0::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Emc1 {
-    #[doc = "Does nothing."]
-    DO_NOTHING = 0x0,
-    #[doc = "Goes low."]
-    CLEAR = 0x01,
-    #[doc = "Goes high."]
-    SET = 0x02,
-    #[doc = "Toggles."]
-    TOGGLE = 0x03,
-}
-impl Emc1 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Emc1 {
-        unsafe { core::mem::transmute(val & 0x03) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Emc1 {
-    #[inline(always)]
-    fn from(val: u8) -> Emc1 {
-        Emc1::from_bits(val)
-    }
-}
-impl From<Emc1> for u8 {
-    #[inline(always)]
-    fn from(val: Emc1) -> u8 {
-        Emc1::to_bits(val)
+    fn from(val: Emc) -> u8 {
+        Emc::to_bits(val)
     }
 }
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Emc2 {
-    #[doc = "Does nothing."]
-    DO_NOTHING = 0x0,
-    #[doc = "Goes low."]
-    CLEAR = 0x01,
-    #[doc = "Goes high."]
-    SET = 0x02,
-    #[doc = "Toggles."]
-    TOGGLE = 0x03,
-}
-impl Emc2 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Emc2 {
-        unsafe { core::mem::transmute(val & 0x03) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Emc2 {
-    #[inline(always)]
-    fn from(val: u8) -> Emc2 {
-        Emc2::from_bits(val)
-    }
-}
-impl From<Emc2> for u8 {
-    #[inline(always)]
-    fn from(val: Emc2) -> u8 {
-        Emc2::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Emc3 {
-    #[doc = "Does nothing."]
-    DO_NOTHING = 0x0,
-    #[doc = "Goes low."]
-    CLEAR = 0x01,
-    #[doc = "Goes high."]
-    SET = 0x02,
-    #[doc = "Toggles."]
-    TOGGLE = 0x03,
-}
-impl Emc3 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Emc3 {
-        unsafe { core::mem::transmute(val & 0x03) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Emc3 {
-    #[inline(always)]
-    fn from(val: u8) -> Emc3 {
-        Emc3::from_bits(val)
-    }
-}
-impl From<Emc3> for u8 {
-    #[inline(always)]
-    fn from(val: Emc3) -> u8 {
-        Emc3::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Mr0i {
+pub enum Mri {
     #[doc = "Does not generate."]
-    MR0I_0 = 0x0,
+    MRI0 = 0x0,
     #[doc = "Generates."]
-    MR0I_1 = 0x01,
+    MRI1 = 0x01,
 }
-impl Mr0i {
+impl Mri {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> Mr0i {
+    pub const fn from_bits(val: u8) -> Mri {
         unsafe { core::mem::transmute(val & 0x01) }
     }
     #[inline(always)]
@@ -2004,30 +1527,30 @@ impl Mr0i {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for Mr0i {
+impl From<u8> for Mri {
     #[inline(always)]
-    fn from(val: u8) -> Mr0i {
-        Mr0i::from_bits(val)
+    fn from(val: u8) -> Mri {
+        Mri::from_bits(val)
     }
 }
-impl From<Mr0i> for u8 {
+impl From<Mri> for u8 {
     #[inline(always)]
-    fn from(val: Mr0i) -> u8 {
-        Mr0i::to_bits(val)
+    fn from(val: Mri) -> u8 {
+        Mri::to_bits(val)
     }
 }
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Mr0r {
+pub enum Mrr {
     #[doc = "Does not reset."]
-    MR0R_0 = 0x0,
+    MRR0 = 0x0,
     #[doc = "Resets."]
-    MR0R_1 = 0x01,
+    MRR1 = 0x01,
 }
-impl Mr0r {
+impl Mrr {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> Mr0r {
+    pub const fn from_bits(val: u8) -> Mrr {
         unsafe { core::mem::transmute(val & 0x01) }
     }
     #[inline(always)]
@@ -2035,30 +1558,30 @@ impl Mr0r {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for Mr0r {
+impl From<u8> for Mrr {
     #[inline(always)]
-    fn from(val: u8) -> Mr0r {
-        Mr0r::from_bits(val)
+    fn from(val: u8) -> Mrr {
+        Mrr::from_bits(val)
     }
 }
-impl From<Mr0r> for u8 {
+impl From<Mrr> for u8 {
     #[inline(always)]
-    fn from(val: Mr0r) -> u8 {
-        Mr0r::to_bits(val)
+    fn from(val: Mrr) -> u8 {
+        Mrr::to_bits(val)
     }
 }
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Mr0rl {
+pub enum Mrrl {
     #[doc = "Does not reload."]
-    MR0RL_0 = 0x0,
+    MRRL0 = 0x0,
     #[doc = "Reloads."]
-    MR0RL_1 = 0x01,
+    MRRL1 = 0x01,
 }
-impl Mr0rl {
+impl Mrrl {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> Mr0rl {
+    pub const fn from_bits(val: u8) -> Mrrl {
         unsafe { core::mem::transmute(val & 0x01) }
     }
     #[inline(always)]
@@ -2066,30 +1589,30 @@ impl Mr0rl {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for Mr0rl {
+impl From<u8> for Mrrl {
     #[inline(always)]
-    fn from(val: u8) -> Mr0rl {
-        Mr0rl::from_bits(val)
+    fn from(val: u8) -> Mrrl {
+        Mrrl::from_bits(val)
     }
 }
-impl From<Mr0rl> for u8 {
+impl From<Mrrl> for u8 {
     #[inline(always)]
-    fn from(val: Mr0rl) -> u8 {
-        Mr0rl::to_bits(val)
+    fn from(val: Mrrl) -> u8 {
+        Mrrl::to_bits(val)
     }
 }
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Mr0s {
+pub enum Mrs {
     #[doc = "Does not stop."]
-    MR0S_0 = 0x0,
+    MRS0 = 0x0,
     #[doc = "Stops."]
-    MR0S_1 = 0x01,
+    MRS1 = 0x01,
 }
-impl Mr0s {
+impl Mrs {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> Mr0s {
+    pub const fn from_bits(val: u8) -> Mrs {
         unsafe { core::mem::transmute(val & 0x01) }
     }
     #[inline(always)]
@@ -2097,402 +1620,30 @@ impl Mr0s {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for Mr0s {
+impl From<u8> for Mrs {
     #[inline(always)]
-    fn from(val: u8) -> Mr0s {
-        Mr0s::from_bits(val)
+    fn from(val: u8) -> Mrs {
+        Mrs::from_bits(val)
     }
 }
-impl From<Mr0s> for u8 {
+impl From<Mrs> for u8 {
     #[inline(always)]
-    fn from(val: Mr0s) -> u8 {
-        Mr0s::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Mr1i {
-    #[doc = "Does not generate."]
-    MR1I_0 = 0x0,
-    #[doc = "Generates."]
-    MR1I_1 = 0x01,
-}
-impl Mr1i {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Mr1i {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Mr1i {
-    #[inline(always)]
-    fn from(val: u8) -> Mr1i {
-        Mr1i::from_bits(val)
-    }
-}
-impl From<Mr1i> for u8 {
-    #[inline(always)]
-    fn from(val: Mr1i) -> u8 {
-        Mr1i::to_bits(val)
+    fn from(val: Mrs) -> u8 {
+        Mrs::to_bits(val)
     }
 }
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Mr1r {
-    #[doc = "Does not reset."]
-    MR1R_0 = 0x0,
-    #[doc = "Resets."]
-    MR1R_1 = 0x01,
-}
-impl Mr1r {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Mr1r {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Mr1r {
-    #[inline(always)]
-    fn from(val: u8) -> Mr1r {
-        Mr1r::from_bits(val)
-    }
-}
-impl From<Mr1r> for u8 {
-    #[inline(always)]
-    fn from(val: Mr1r) -> u8 {
-        Mr1r::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Mr1rl {
-    #[doc = "Does not reload."]
-    MR1RL_0 = 0x0,
-    #[doc = "Reloads."]
-    MR1RL_1 = 0x01,
-}
-impl Mr1rl {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Mr1rl {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Mr1rl {
-    #[inline(always)]
-    fn from(val: u8) -> Mr1rl {
-        Mr1rl::from_bits(val)
-    }
-}
-impl From<Mr1rl> for u8 {
-    #[inline(always)]
-    fn from(val: Mr1rl) -> u8 {
-        Mr1rl::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Mr1s {
-    #[doc = "Does not stop."]
-    MRIS_0 = 0x0,
-    #[doc = "Stops."]
-    MRIS_1 = 0x01,
-}
-impl Mr1s {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Mr1s {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Mr1s {
-    #[inline(always)]
-    fn from(val: u8) -> Mr1s {
-        Mr1s::from_bits(val)
-    }
-}
-impl From<Mr1s> for u8 {
-    #[inline(always)]
-    fn from(val: Mr1s) -> u8 {
-        Mr1s::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Mr2i {
-    #[doc = "Does not generate."]
-    MR2I_0 = 0x0,
-    #[doc = "Generates."]
-    MR2I_1 = 0x01,
-}
-impl Mr2i {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Mr2i {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Mr2i {
-    #[inline(always)]
-    fn from(val: u8) -> Mr2i {
-        Mr2i::from_bits(val)
-    }
-}
-impl From<Mr2i> for u8 {
-    #[inline(always)]
-    fn from(val: Mr2i) -> u8 {
-        Mr2i::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Mr2r {
-    #[doc = "Does not reset."]
-    MR2R_0 = 0x0,
-    #[doc = "Resets."]
-    MR2R_1 = 0x01,
-}
-impl Mr2r {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Mr2r {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Mr2r {
-    #[inline(always)]
-    fn from(val: u8) -> Mr2r {
-        Mr2r::from_bits(val)
-    }
-}
-impl From<Mr2r> for u8 {
-    #[inline(always)]
-    fn from(val: Mr2r) -> u8 {
-        Mr2r::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Mr2rl {
-    #[doc = "Does not reload."]
-    MR2RL_0 = 0x0,
-    #[doc = "Reloads."]
-    MR2RL_1 = 0x01,
-}
-impl Mr2rl {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Mr2rl {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Mr2rl {
-    #[inline(always)]
-    fn from(val: u8) -> Mr2rl {
-        Mr2rl::from_bits(val)
-    }
-}
-impl From<Mr2rl> for u8 {
-    #[inline(always)]
-    fn from(val: Mr2rl) -> u8 {
-        Mr2rl::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Mr2s {
-    #[doc = "Does not stop."]
-    MR2S_0 = 0x0,
-    #[doc = "Stops."]
-    MR2S_1 = 0x01,
-}
-impl Mr2s {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Mr2s {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Mr2s {
-    #[inline(always)]
-    fn from(val: u8) -> Mr2s {
-        Mr2s::from_bits(val)
-    }
-}
-impl From<Mr2s> for u8 {
-    #[inline(always)]
-    fn from(val: Mr2s) -> u8 {
-        Mr2s::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Mr3i {
-    #[doc = "Does not generate."]
-    MR3I_0 = 0x0,
-    #[doc = "Generates."]
-    MR3I_1 = 0x01,
-}
-impl Mr3i {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Mr3i {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Mr3i {
-    #[inline(always)]
-    fn from(val: u8) -> Mr3i {
-        Mr3i::from_bits(val)
-    }
-}
-impl From<Mr3i> for u8 {
-    #[inline(always)]
-    fn from(val: Mr3i) -> u8 {
-        Mr3i::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Mr3r {
-    #[doc = "Does not reset."]
-    MR3R_0 = 0x0,
-    #[doc = "Resets."]
-    MR3R_1 = 0x01,
-}
-impl Mr3r {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Mr3r {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Mr3r {
-    #[inline(always)]
-    fn from(val: u8) -> Mr3r {
-        Mr3r::from_bits(val)
-    }
-}
-impl From<Mr3r> for u8 {
-    #[inline(always)]
-    fn from(val: Mr3r) -> u8 {
-        Mr3r::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Mr3rl {
-    #[doc = "Does not reload."]
-    MR3RL_0 = 0x0,
-    #[doc = "Reloads."]
-    MR3RL_1 = 0x01,
-}
-impl Mr3rl {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Mr3rl {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Mr3rl {
-    #[inline(always)]
-    fn from(val: u8) -> Mr3rl {
-        Mr3rl::from_bits(val)
-    }
-}
-impl From<Mr3rl> for u8 {
-    #[inline(always)]
-    fn from(val: Mr3rl) -> u8 {
-        Mr3rl::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Mr3s {
-    #[doc = "Does not stop."]
-    MR3S_0 = 0x0,
-    #[doc = "Stops."]
-    MR3S_1 = 0x01,
-}
-impl Mr3s {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Mr3s {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Mr3s {
-    #[inline(always)]
-    fn from(val: u8) -> Mr3s {
-        Mr3s::from_bits(val)
-    }
-}
-impl From<Mr3s> for u8 {
-    #[inline(always)]
-    fn from(val: Mr3s) -> u8 {
-        Mr3s::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Pwmen0 {
+pub enum Pwmen {
     #[doc = "Disable."]
     MATCH = 0x0,
     #[doc = "Enable."]
     PWM = 0x01,
 }
-impl Pwmen0 {
+impl Pwmen {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> Pwmen0 {
+    pub const fn from_bits(val: u8) -> Pwmen {
         unsafe { core::mem::transmute(val & 0x01) }
     }
     #[inline(always)]
@@ -2500,109 +1651,16 @@ impl Pwmen0 {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for Pwmen0 {
+impl From<u8> for Pwmen {
     #[inline(always)]
-    fn from(val: u8) -> Pwmen0 {
-        Pwmen0::from_bits(val)
+    fn from(val: u8) -> Pwmen {
+        Pwmen::from_bits(val)
     }
 }
-impl From<Pwmen0> for u8 {
+impl From<Pwmen> for u8 {
     #[inline(always)]
-    fn from(val: Pwmen0) -> u8 {
-        Pwmen0::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Pwmen1 {
-    #[doc = "Disable."]
-    MATCH = 0x0,
-    #[doc = "Enable."]
-    PWM = 0x01,
-}
-impl Pwmen1 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Pwmen1 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Pwmen1 {
-    #[inline(always)]
-    fn from(val: u8) -> Pwmen1 {
-        Pwmen1::from_bits(val)
-    }
-}
-impl From<Pwmen1> for u8 {
-    #[inline(always)]
-    fn from(val: Pwmen1) -> u8 {
-        Pwmen1::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Pwmen2 {
-    #[doc = "Disable."]
-    MATCH = 0x0,
-    #[doc = "Enable."]
-    PWM = 0x01,
-}
-impl Pwmen2 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Pwmen2 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Pwmen2 {
-    #[inline(always)]
-    fn from(val: u8) -> Pwmen2 {
-        Pwmen2::from_bits(val)
-    }
-}
-impl From<Pwmen2> for u8 {
-    #[inline(always)]
-    fn from(val: Pwmen2) -> u8 {
-        Pwmen2::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Pwmen3 {
-    #[doc = "Disable."]
-    MATCH = 0x0,
-    #[doc = "Enable."]
-    PWM = 0x01,
-}
-impl Pwmen3 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Pwmen3 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Pwmen3 {
-    #[inline(always)]
-    fn from(val: u8) -> Pwmen3 {
-        Pwmen3::from_bits(val)
-    }
-}
-impl From<Pwmen3> for u8 {
-    #[inline(always)]
-    fn from(val: Pwmen3) -> u8 {
-        Pwmen3::to_bits(val)
+    fn from(val: Pwmen) -> u8 {
+        Pwmen::to_bits(val)
     }
 }
 #[repr(u8)]

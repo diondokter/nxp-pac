@@ -168,7 +168,7 @@ fn generate_chip(current_dir: &Path, feature: &Feature) -> anyhow::Result<()> {
             .context("Generating metadata")?;
 
             if feature.metapac {
-                metapac::assemble_metapac(current_dir, core, &metadata)
+                metapac::assemble_metapac(current_dir, core, metadata)
                     .context(format!("Assembling metapac for {core}"))?
             }
         }

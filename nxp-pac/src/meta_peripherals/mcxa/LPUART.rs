@@ -211,14 +211,14 @@ impl Baud {
     #[doc = "Oversampling Ratio."]
     #[must_use]
     #[inline(always)]
-    pub const fn osr(&self) -> Osr {
+    pub const fn osr(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0x1f;
-        Osr::from_bits(val as u8)
+        val as u8
     }
     #[doc = "Oversampling Ratio."]
     #[inline(always)]
-    pub const fn set_osr(&mut self, val: Osr) {
-        self.0 = (self.0 & !(0x1f << 24usize)) | (((val.to_bits() as u32) & 0x1f) << 24usize);
+    pub const fn set_osr(&mut self, val: u8) {
+        self.0 = (self.0 & !(0x1f << 24usize)) | (((val as u32) & 0x1f) << 24usize);
     }
     #[doc = "10-Bit Mode Select."]
     #[must_use]
@@ -288,7 +288,7 @@ impl defmt::Format for Baud {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Baud {{ sbr: {=u16:?}, sbns: {:?}, rxedgie: {=bool:?}, lbkdie: {=bool:?}, resyncdis: {:?}, bothedge: {=bool:?}, matcfg: {:?}, ridmae: {=bool:?}, rdmae: {=bool:?}, tdmae: {=bool:?}, osr: {:?}, m10: {=bool:?}, maen2: {=bool:?}, maen1: {=bool:?} }}",
+            "Baud {{ sbr: {=u16:?}, sbns: {:?}, rxedgie: {=bool:?}, lbkdie: {=bool:?}, resyncdis: {:?}, bothedge: {=bool:?}, matcfg: {:?}, ridmae: {=bool:?}, rdmae: {=bool:?}, tdmae: {=bool:?}, osr: {=u8:?}, m10: {=bool:?}, maen2: {=bool:?}, maen1: {=bool:?} }}",
             self.sbr(),
             self.sbns(),
             self.rxedgie(),
@@ -2371,95 +2371,6 @@ impl From<Msbf> for u8 {
     #[inline(always)]
     fn from(val: Msbf) -> u8 {
         Msbf::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Osr {
-    #[doc = "Results in an OSR of 16."]
-    DEFAULT = 0x0,
-    _RESERVED_1 = 0x01,
-    _RESERVED_2 = 0x02,
-    #[doc = "Results in an OSR of 4 (requires BAUD\\[BOTHEDGE\\] to be 1)."]
-    OSR_4 = 0x03,
-    #[doc = "Results in an OSR of 5 (requires BAUD\\[BOTHEDGE\\] to be 1)."]
-    OSR_5 = 0x04,
-    #[doc = "Results in an OSR of 6 (requires BAUD\\[BOTHEDGE\\] to be 1)."]
-    OSR_6 = 0x05,
-    #[doc = "Results in an OSR of 7 (requires BAUD\\[BOTHEDGE\\] to be 1)."]
-    OSR_7 = 0x06,
-    #[doc = "Results in an OSR of 8."]
-    OSR_8 = 0x07,
-    #[doc = "Results in an OSR of 9."]
-    OSR_9 = 0x08,
-    #[doc = "Results in an OSR of 10."]
-    OSR_10 = 0x09,
-    #[doc = "Results in an OSR of 11."]
-    OSR_11 = 0x0a,
-    #[doc = "Results in an OSR of 12."]
-    OSR_12 = 0x0b,
-    #[doc = "Results in an OSR of 13."]
-    OSR_13 = 0x0c,
-    #[doc = "Results in an OSR of 14."]
-    OSR_14 = 0x0d,
-    #[doc = "Results in an OSR of 15."]
-    OSR_15 = 0x0e,
-    #[doc = "Results in an OSR of 16."]
-    OSR_16 = 0x0f,
-    #[doc = "Results in an OSR of 17."]
-    OSR_17 = 0x10,
-    #[doc = "Results in an OSR of 18."]
-    OSR_18 = 0x11,
-    #[doc = "Results in an OSR of 19."]
-    OSR_19 = 0x12,
-    #[doc = "Results in an OSR of 20."]
-    OSR_20 = 0x13,
-    #[doc = "Results in an OSR of 21."]
-    OSR_21 = 0x14,
-    #[doc = "Results in an OSR of 22."]
-    OSR_22 = 0x15,
-    #[doc = "Results in an OSR of 23."]
-    OSR_23 = 0x16,
-    #[doc = "Results in an OSR of 24."]
-    OSR_24 = 0x17,
-    #[doc = "Results in an OSR of 25."]
-    OSR_25 = 0x18,
-    #[doc = "Results in an OSR of 26."]
-    OSR_26 = 0x19,
-    #[doc = "Results in an OSR of 27."]
-    OSR_27 = 0x1a,
-    #[doc = "Results in an OSR of 28."]
-    OSR_28 = 0x1b,
-    #[doc = "Results in an OSR of 29."]
-    OSR_29 = 0x1c,
-    #[doc = "Results in an OSR of 30."]
-    OSR_30 = 0x1d,
-    #[doc = "Results in an OSR of 31."]
-    OSR_31 = 0x1e,
-    #[doc = "Results in an OSR of 32."]
-    OSR_32 = 0x1f,
-}
-impl Osr {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Osr {
-        unsafe { core::mem::transmute(val & 0x1f) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Osr {
-    #[inline(always)]
-    fn from(val: u8) -> Osr {
-        Osr::from_bits(val)
-    }
-}
-impl From<Osr> for u8 {
-    #[inline(always)]
-    fn from(val: Osr) -> u8 {
-        Osr::to_bits(val)
     }
 }
 #[repr(u8)]
