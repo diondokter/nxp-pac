@@ -1383,7 +1383,7 @@
     {
       "name": "CRC0",
       "address": "0x4008A000",
-      "type": "mcxa/CRC0",
+      "type": "mcxa/CRC",
       "signals": []
     },
     {
@@ -3509,7 +3509,7 @@
     {
       "name": "DMA0",
       "address": "0x40080000",
-      "type": "mcxa/DMA0",
+      "type": "mcxa/DMA",
       "signals": []
     },
     {
@@ -6034,7 +6034,7 @@
     {
       "name": "I3C0",
       "address": "0x40002000",
-      "type": "mcxa/I3C0",
+      "type": "mcxa/I3C",
       "signals": [
         {
           "name": "PUR",
@@ -6100,7 +6100,7 @@
     {
       "name": "INPUTMUX0",
       "address": "0x40001000",
-      "type": "mcxa/INPUTMUX0",
+      "type": "mcxa/INPUTMUX",
       "signals": []
     },
     {
@@ -7320,7 +7320,7 @@
     {
       "name": "OSTIMER0",
       "address": "0x400AD000",
-      "type": "mcxa/OSTIMER0",
+      "type": "mcxa/OSTIMER",
       "signals": []
     },
     {
@@ -7332,31 +7332,31 @@
     {
       "name": "PORT0",
       "address": "0x400BC000",
-      "type": "mcxa/PORT0",
+      "type": "mcxa/PORT",
       "signals": []
     },
     {
       "name": "PORT1",
       "address": "0x400BD000",
-      "type": "mcxa/PORT1",
+      "type": "mcxa/PORT",
       "signals": []
     },
     {
       "name": "PORT2",
       "address": "0x400BE000",
-      "type": "mcxa/PORT2",
+      "type": "mcxa/PORT",
       "signals": []
     },
     {
       "name": "PORT3",
       "address": "0x400BF000",
-      "type": "mcxa/PORT3",
+      "type": "mcxa/PORT",
       "signals": []
     },
     {
       "name": "PORT4",
       "address": "0x400C0000",
-      "type": "mcxa/PORT4",
+      "type": "mcxa/PORT",
       "signals": []
     },
     {
@@ -7406,13 +7406,13 @@
     {
       "name": "RTC0",
       "address": "0x400EE000",
-      "type": "mcxa/RTC0",
+      "type": "mcxa/RTC",
       "signals": []
     },
     {
       "name": "SCG0",
       "address": "0x4008F000",
-      "type": "mcxa/SCG0",
+      "type": "mcxa/SCG",
       "signals": []
     },
     {
@@ -8770,7 +8770,7 @@
     {
       "name": "TRNG0",
       "address": "0x400EC000",
-      "type": "mcxa/TRNG0",
+      "type": "mcxa/TRNG",
       "signals": []
     },
     {
@@ -9158,7 +9158,7 @@
     {
       "name": "WWDT0",
       "address": "0x4000C000",
-      "type": "mcxa/WWDT0",
+      "type": "mcxa/WWDT",
       "signals": []
     },
     {

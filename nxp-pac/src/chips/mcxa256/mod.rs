@@ -203,11 +203,13 @@ pub const ADC0: adc::Adc = unsafe { adc::Adc::from_ptr(0x400AF000 as _) };
 pub const ADC1: adc::Adc = unsafe { adc::Adc::from_ptr(0x400B0000 as _) };
 pub const CDOG0: cdog::Cdog = unsafe { cdog::Cdog::from_ptr(0x40100000 as _) };
 pub const CDOG1: cdog::Cdog = unsafe { cdog::Cdog::from_ptr(0x40107000 as _) };
+pub const CRC0: crc::Crc = unsafe { crc::Crc::from_ptr(0x4008A000 as _) };
 pub const CTIMER0: ctimer::Ctimer = unsafe { ctimer::Ctimer::from_ptr(0x40004000 as _) };
 pub const CTIMER1: ctimer::Ctimer = unsafe { ctimer::Ctimer::from_ptr(0x40005000 as _) };
 pub const CTIMER2: ctimer::Ctimer = unsafe { ctimer::Ctimer::from_ptr(0x40006000 as _) };
 pub const CTIMER3: ctimer::Ctimer = unsafe { ctimer::Ctimer::from_ptr(0x40007000 as _) };
 pub const CTIMER4: ctimer::Ctimer = unsafe { ctimer::Ctimer::from_ptr(0x40008000 as _) };
+pub const DMA0: dma::Dma = unsafe { dma::Dma::from_ptr(0x40080000 as _) };
 pub const FLEX_PWM0: flexpwm::Flexpwm = unsafe { flexpwm::Flexpwm::from_ptr(0x400A9000 as _) };
 pub const FLEX_PWM1: flexpwm::Flexpwm = unsafe { flexpwm::Flexpwm::from_ptr(0x400AA000 as _) };
 pub const GPIO0: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x40102000 as _) };
@@ -215,6 +217,8 @@ pub const GPIO1: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x40103000 as _) };
 pub const GPIO2: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x40104000 as _) };
 pub const GPIO3: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x40105000 as _) };
 pub const GPIO4: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x40106000 as _) };
+pub const I3C0: i3c::I3c = unsafe { i3c::I3c::from_ptr(0x40002000 as _) };
+pub const INPUTMUX0: inputmux::Inputmux = unsafe { inputmux::Inputmux::from_ptr(0x40001000 as _) };
 pub const LPI2C0: lpi2c::Lpi2c = unsafe { lpi2c::Lpi2c::from_ptr(0x4009A000 as _) };
 pub const LPI2C1: lpi2c::Lpi2c = unsafe { lpi2c::Lpi2c::from_ptr(0x4009B000 as _) };
 pub const LPI2C2: lpi2c::Lpi2c = unsafe { lpi2c::Lpi2c::from_ptr(0x400D4000 as _) };
@@ -224,18 +228,48 @@ pub const LPUART1: lpuart::Lpuart = unsafe { lpuart::Lpuart::from_ptr(0x400A0000
 pub const LPUART2: lpuart::Lpuart = unsafe { lpuart::Lpuart::from_ptr(0x400A1000 as _) };
 pub const LPUART3: lpuart::Lpuart = unsafe { lpuart::Lpuart::from_ptr(0x400A2000 as _) };
 pub const LPUART4: lpuart::Lpuart = unsafe { lpuart::Lpuart::from_ptr(0x400A3000 as _) };
+pub const OSTIMER0: ostimer::Ostimer = unsafe { ostimer::Ostimer::from_ptr(0x400AD000 as _) };
+pub const PORT0: port::Port = unsafe { port::Port::from_ptr(0x400BC000 as _) };
+pub const PORT1: port::Port = unsafe { port::Port::from_ptr(0x400BD000 as _) };
+pub const PORT2: port::Port = unsafe { port::Port::from_ptr(0x400BE000 as _) };
+pub const PORT3: port::Port = unsafe { port::Port::from_ptr(0x400BF000 as _) };
+pub const PORT4: port::Port = unsafe { port::Port::from_ptr(0x400C0000 as _) };
+pub const RTC0: rtc::Rtc = unsafe { rtc::Rtc::from_ptr(0x400EE000 as _) };
+pub const SCG0: scg::Scg = unsafe { scg::Scg::from_ptr(0x4008F000 as _) };
+pub const TRNG0: trng::Trng = unsafe { trng::Trng::from_ptr(0x400EC000 as _) };
+pub const WWDT0: wwdt::Wwdt = unsafe { wwdt::Wwdt::from_ptr(0x4000C000 as _) };
 #[path = "../../meta_peripherals/mcxa/ADC.rs"]
 pub mod adc;
 #[path = "../../meta_peripherals/mcxa/CDOG.rs"]
 pub mod cdog;
 pub mod common;
+#[path = "../../meta_peripherals/mcxa/CRC.rs"]
+pub mod crc;
 #[path = "../../meta_peripherals/mcxa/CTIMER.rs"]
 pub mod ctimer;
+#[path = "../../meta_peripherals/mcxa/DMA.rs"]
+pub mod dma;
 #[path = "../../meta_peripherals/mcxa/FLEXPWM.rs"]
 pub mod flexpwm;
 #[path = "../../meta_peripherals/mcxa/GPIO.rs"]
 pub mod gpio;
+#[path = "../../meta_peripherals/mcxa/I3C.rs"]
+pub mod i3c;
+#[path = "../../meta_peripherals/mcxa/INPUTMUX.rs"]
+pub mod inputmux;
 #[path = "../../meta_peripherals/mcxa/LPI2C.rs"]
 pub mod lpi2c;
 #[path = "../../meta_peripherals/mcxa/LPUART.rs"]
 pub mod lpuart;
+#[path = "../../meta_peripherals/mcxa/OSTIMER.rs"]
+pub mod ostimer;
+#[path = "../../meta_peripherals/mcxa/PORT.rs"]
+pub mod port;
+#[path = "../../meta_peripherals/mcxa/RTC.rs"]
+pub mod rtc;
+#[path = "../../meta_peripherals/mcxa/SCG.rs"]
+pub mod scg;
+#[path = "../../meta_peripherals/mcxa/TRNG.rs"]
+pub mod trng;
+#[path = "../../meta_peripherals/mcxa/WWDT.rs"]
+pub mod wwdt;
