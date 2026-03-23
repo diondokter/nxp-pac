@@ -467,7 +467,7 @@ pub const PERIPHERALS: &[Peripheral] = &[
     Peripheral {
         name: "ADC0",
         address: 0x400AF000,
-        driver_name: "mcxa/HSADC",
+        driver_name: "mcxa/ADC",
         signals: &[
             Signal {
                 name: "A0",
@@ -696,7 +696,7 @@ pub const PERIPHERALS: &[Peripheral] = &[
     Peripheral {
         name: "ADC1",
         address: 0x400B0000,
-        driver_name: "mcxa/HSADC",
+        driver_name: "mcxa/ADC",
         signals: &[
             Signal {
                 name: "A0",

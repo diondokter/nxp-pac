@@ -199,8 +199,8 @@ pub const NVIC_PRIO_BITS: u8 = 3;
 pub use Interrupt as interrupt;
 #[cfg(feature = "rt")]
 pub use cortex_m_rt::interrupt;
-pub const ADC0: hsadc::Hsadc = unsafe { hsadc::Hsadc::from_ptr(0x400AF000 as _) };
-pub const ADC1: hsadc::Hsadc = unsafe { hsadc::Hsadc::from_ptr(0x400B0000 as _) };
+pub const ADC0: adc::Adc = unsafe { adc::Adc::from_ptr(0x400AF000 as _) };
+pub const ADC1: adc::Adc = unsafe { adc::Adc::from_ptr(0x400B0000 as _) };
 pub const AOI0: aoi::Aoi = unsafe { aoi::Aoi::from_ptr(0x40089000 as _) };
 pub const AOI1: aoi::Aoi = unsafe { aoi::Aoi::from_ptr(0x40097000 as _) };
 pub const CDOG0: cdog::Cdog = unsafe { cdog::Cdog::from_ptr(0x40100000 as _) };
@@ -274,6 +274,8 @@ pub const WAKETIMER0: waketimer0::Waketimer0 =
 pub const WUU0: wuu0::Wuu0 = unsafe { wuu0::Wuu0::from_ptr(0x40092000 as _) };
 pub const WWDT0: wwdt0::Wwdt0 = unsafe { wwdt0::Wwdt0::from_ptr(0x4000C000 as _) };
 pub const EDMA_0_TCD0: tcd::Tcd = unsafe { tcd::Tcd::from_ptr(0x40081000 as _) };
+#[path = "../../meta_peripherals/mcxa/ADC.rs"]
+pub mod adc;
 #[path = "../../meta_peripherals/mcxa/AOI.rs"]
 pub mod aoi;
 #[path = "../../meta_peripherals/mcxa/CDOG.rs"]
@@ -311,8 +313,6 @@ pub mod fmu0;
 pub mod freqme0;
 #[path = "../../meta_peripherals/mcxa/GPIO.rs"]
 pub mod gpio;
-#[path = "../../meta_peripherals/mcxa/HSADC.rs"]
-pub mod hsadc;
 #[path = "../../meta_peripherals/mcxa/I3C0.rs"]
 pub mod i3c0;
 #[path = "../../meta_peripherals/mcxa/INPUTMUX0.rs"]
