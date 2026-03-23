@@ -114,7 +114,7 @@ pub fn generate_peripherals(
         }
     }
 
-    let debug_ir_path = raw_peripherals_dir.join("debug_ir").with_extension("yaml");
+    let debug_ir_path = raw_peripherals_dir.join("_debug_ir").with_extension("yaml");
 
     let temp = TempDir::new()
         .context("Creating temp dir")?
@@ -137,6 +137,25 @@ pub fn generate_peripherals(
     if !output.status.success() {
         bail!(
             "Error generating debug yaml for {core}:\nSTDERR:\n{}",
+            String::from_utf8_lossy(&output.stderr)
+        );
+    }
+
+    let output = Command::new("chiptool")
+        .arg("extract-all")
+        .arg("--svd")
+        .arg(svd.canonicalize()?)
+        .arg("--output")
+        .arg(raw_peripherals_dir.canonicalize()?)
+        .arg("--transform")
+        .arg(transform.canonicalize()?)
+        .stdout(Stdio::inherit())
+        .stderr(Stdio::inherit())
+        .output()?;
+
+    if !output.status.success() {
+        bail!(
+            "Error generating peripheral yamls for {core}:\nSTDERR:\n{}",
             String::from_utf8_lossy(&output.stderr)
         );
     }
