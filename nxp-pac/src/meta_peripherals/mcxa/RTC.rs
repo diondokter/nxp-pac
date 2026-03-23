@@ -433,13 +433,13 @@ impl Tcr {
     #[doc = "Time Compensation Register."]
     #[must_use]
     #[inline(always)]
-    pub const fn tcr(&self) -> Tcr {
+    pub const fn tcr(&self) -> TcrVal {
         let val = (self.0 >> 0usize) & 0xff;
-        Tcr::from_bits(val as u8)
+        TcrVal::from_bits(val as u8)
     }
     #[doc = "Time Compensation Register."]
     #[inline(always)]
-    pub const fn set_tcr(&mut self, val: Tcr) {
+    pub const fn set_tcr(&mut self, val: TcrVal) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val.to_bits() as u32) & 0xff) << 0usize);
     }
     #[doc = "Compensation Interval Register."]
@@ -766,8 +766,8 @@ impl From<Tcl> for u8 {
 }
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
-pub struct Tcr(u8);
-impl Tcr {
+pub struct TcrVal(u8);
+impl TcrVal {
     #[doc = "Time Prescaler Register overflows every 32768 clock cycles."]
     pub const TCR_0: Self = Self(0x0);
     #[doc = "Time Prescaler Register overflows every 32767 clock cycles."]
@@ -783,15 +783,15 @@ impl Tcr {
     #[doc = "Time Prescaler Register overflows every 32769 clock cycles."]
     pub const TCR_255: Self = Self(0xff);
 }
-impl Tcr {
-    pub const fn from_bits(val: u8) -> Tcr {
+impl TcrVal {
+    pub const fn from_bits(val: u8) -> TcrVal {
         Self(val & 0xff)
     }
     pub const fn to_bits(self) -> u8 {
         self.0
     }
 }
-impl core::fmt::Debug for Tcr {
+impl core::fmt::Debug for TcrVal {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
             0x0 => f.write_str("TCR_0"),
@@ -806,7 +806,7 @@ impl core::fmt::Debug for Tcr {
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for Tcr {
+impl defmt::Format for TcrVal {
     fn format(&self, f: defmt::Formatter) {
         match self.0 {
             0x0 => defmt::write!(f, "TCR_0"),
@@ -820,16 +820,16 @@ impl defmt::Format for Tcr {
         }
     }
 }
-impl From<u8> for Tcr {
+impl From<u8> for TcrVal {
     #[inline(always)]
-    fn from(val: u8) -> Tcr {
-        Tcr::from_bits(val)
+    fn from(val: u8) -> TcrVal {
+        TcrVal::from_bits(val)
     }
 }
-impl From<Tcr> for u8 {
+impl From<TcrVal> for u8 {
     #[inline(always)]
-    fn from(val: Tcr) -> u8 {
-        Tcr::to_bits(val)
+    fn from(val: TcrVal) -> u8 {
+        TcrVal::to_bits(val)
     }
 }
 #[repr(u8)]

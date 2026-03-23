@@ -295,7 +295,7 @@ fieldset/Sirccsr:
     description: SIRC TRIM LOCK.
     bit_offset: 10
     bit_size: 1
-    enum: TrimLock
+    enum: TrimLockVal
   - name: coarse_trim_bypass
     description: Coarse Auto Trim Bypass.
     bit_offset: 11
@@ -932,7 +932,7 @@ enum/Spllsten:
   - name: ENABLED_IN_STOP
     description: SPLL is enabled in Deep Sleep mode.
     value: 1
-enum/TrimLock:
+enum/TrimLockVal:
   bit_size: 1
   variants:
   - name: SIRC_NOT_LOCKED
