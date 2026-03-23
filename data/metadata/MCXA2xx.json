@@ -9212,6 +9212,12 @@
     {
       "name": "EDMA_0_TCD7",
       "signals": []
+    },
+    {
+      "name": "MRCC0",
+      "address": "0x40091000",
+      "type": "mcxa/MRCC",
+      "signals": []
     }
   ]
 }

@@ -238,6 +238,7 @@ pub const RTC0: rtc::Rtc = unsafe { rtc::Rtc::from_ptr(0x400EE000 as _) };
 pub const SCG0: scg::Scg = unsafe { scg::Scg::from_ptr(0x4008F000 as _) };
 pub const TRNG0: trng::Trng = unsafe { trng::Trng::from_ptr(0x400EC000 as _) };
 pub const WWDT0: wwdt::Wwdt = unsafe { wwdt::Wwdt::from_ptr(0x4000C000 as _) };
+pub const MRCC0: mrcc::Mrcc = unsafe { mrcc::Mrcc::from_ptr(0x40091000 as _) };
 #[path = "../../meta_peripherals/mcxa/ADC.rs"]
 pub mod adc;
 #[path = "../../meta_peripherals/mcxa/CDOG.rs"]
@@ -261,6 +262,8 @@ pub mod inputmux;
 pub mod lpi2c;
 #[path = "../../meta_peripherals/mcxa/LPUART.rs"]
 pub mod lpuart;
+#[path = "../../meta_peripherals/mcxa/MRCC.rs"]
+pub mod mrcc;
 #[path = "../../meta_peripherals/mcxa/OSTIMER.rs"]
 pub mod ostimer;
 #[path = "../../meta_peripherals/mcxa/PORT.rs"]

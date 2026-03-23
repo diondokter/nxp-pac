@@ -10524,6 +10524,14 @@ pub const PERIPHERALS: &[Peripheral] = &[
         flexcomm: None,
         dma_muxing: &[],
     },
+    Peripheral {
+        name: "MRCC0",
+        address: 0x40091000,
+        driver_name: "mcxa/MRCC",
+        signals: &[],
+        flexcomm: None,
+        dma_muxing: &[],
+    },
 ];
 pub const INTERRUPTS: &[(&str, u32)] = &[
     ("RESERVED16", 0u32),
