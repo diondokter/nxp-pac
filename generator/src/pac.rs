@@ -109,25 +109,34 @@ pub fn generate_peripherals(
     for file in fs::read_dir(&raw_peripherals_dir).context("reading raw peripherals dir")? {
         let file = file?;
         if file.file_name().to_string_lossy() != ".gitignore" {
-            fs::remove_file(file.path())?;
+            fs::remove_file(file.path())
+                .with_context(|| format!("removing {}", file.path().display()))?;
         }
     }
 
+    let debug_ir_path = raw_peripherals_dir.join("debug_ir").with_extension("yaml");
+
+    let temp = TempDir::new()
+        .context("Creating temp dir")?
+        .panic_on_cleanup_error();
+
     let output = Command::new("chiptool")
-        .arg("extract-all")
+        .arg("generate")
         .arg("--svd")
         .arg(svd.canonicalize()?)
-        .arg("--output")
-        .arg(raw_peripherals_dir.canonicalize()?)
         .arg("--transform")
         .arg(transform.canonicalize()?)
+        .arg("--debug-ir-output")
+        .arg(&debug_ir_path)
         .stdout(Stdio::inherit())
         .stderr(Stdio::inherit())
-        .output()?;
+        .current_dir(temp.path())
+        .output()
+        .context("running chiptool generate")?;
 
     if !output.status.success() {
         bail!(
-            "Error generating peripheral yamls for {core}:\nSTDERR:\n{}",
+            "Error generating debug yaml for {core}:\nSTDERR:\n{}",
             String::from_utf8_lossy(&output.stderr)
         );
     }
