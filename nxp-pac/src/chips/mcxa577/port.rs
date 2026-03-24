@@ -47,7 +47,7 @@ impl Port {
     #[doc = "Pin Control 0"]
     #[inline(always)]
     pub const fn pcr(self, n: usize) -> crate::common::Reg<regs::Pcr, crate::common::RW> {
-        assert!(n < 28usize);
+        assert!(n < 32usize);
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x80usize + n * 4usize) as _) }
     }
 }
