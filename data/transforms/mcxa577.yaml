@@ -4,6 +4,7 @@ includes:
 
   - mcxa/mcxa5/dma.yaml
   - mcxa/mcxa5/i3c.yaml
+  - mcxa/mcxa5/port.yaml
   - mcxa/mcxa5/rtc.yaml
 
   - mcxa/adc.yaml
