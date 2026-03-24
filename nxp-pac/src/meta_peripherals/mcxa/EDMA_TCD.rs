@@ -1,29 +1,6 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
 #![doc = "Peripheral access API (generated using chiptool v0.1.0 (6a8c2aa 2026-01-27))"]
-#[doc = "DMA TCD."]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct EdmaTcd {
-    ptr: *mut u8,
-}
-unsafe impl Send for EdmaTcd {}
-unsafe impl Sync for EdmaTcd {}
-impl EdmaTcd {
-    #[inline(always)]
-    pub const unsafe fn from_ptr(ptr: *mut ()) -> Self {
-        Self { ptr: ptr as _ }
-    }
-    #[inline(always)]
-    pub const fn as_ptr(&self) -> *mut () {
-        self.ptr as _
-    }
-    #[doc = "Array of registers: CH_CSR, CH_ES, CH_INT, CH_MUX, CH_PRI, CH_SBR, TCD_ATTR, TCD_BITER_ELINKNO, TCD_BITER_ELINKYES, TCD_CITER_ELINKNO, TCD_CITER_ELINKYES, TCD_CSR, TCD_DADDR, TCD_DLAST_SGA, TCD_DOFF, TCD_NBYTES_MLOFFNO, TCD_NBYTES_MLOFFYES, TCD_SADDR, TCD_SLAST_SDA, TCD_SOFF."]
-    #[inline(always)]
-    pub const fn tcd(self, n: usize) -> Tcd {
-        assert!(n < 8usize);
-        unsafe { Tcd::from_ptr(self.ptr.wrapping_add(0x0usize + n * 4096usize) as _) }
-    }
-}
 #[doc = "Array of registers: CH_CSR, CH_ES, CH_INT, CH_MUX, CH_PRI, CH_SBR, TCD_ATTR, TCD_BITER_ELINKNO, TCD_BITER_ELINKYES, TCD_CITER_ELINKNO, TCD_CITER_ELINKYES, TCD_CSR, TCD_DADDR, TCD_DLAST_SGA, TCD_DOFF, TCD_NBYTES_MLOFFNO, TCD_NBYTES_MLOFFYES, TCD_SADDR, TCD_SLAST_SDA, TCD_SOFF."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tcd {
@@ -155,6 +132,52 @@ impl Tcd {
         self,
     ) -> crate::pac::common::Reg<TcdBiterElinkyes, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x3eusize) as _) }
+    }
+}
+#[doc = "DMA TCD."]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Tcd4 {
+    ptr: *mut u8,
+}
+unsafe impl Send for Tcd4 {}
+unsafe impl Sync for Tcd4 {}
+impl Tcd4 {
+    #[inline(always)]
+    pub const unsafe fn from_ptr(ptr: *mut ()) -> Self {
+        Self { ptr: ptr as _ }
+    }
+    #[inline(always)]
+    pub const fn as_ptr(&self) -> *mut () {
+        self.ptr as _
+    }
+    #[doc = "Array of registers: CH_CSR, CH_ES, CH_INT, CH_MUX, CH_PRI, CH_SBR, TCD_ATTR, TCD_BITER_ELINKNO, TCD_BITER_ELINKYES, TCD_CITER_ELINKNO, TCD_CITER_ELINKYES, TCD_CSR, TCD_DADDR, TCD_DLAST_SGA, TCD_DOFF, TCD_NBYTES_MLOFFNO, TCD_NBYTES_MLOFFYES, TCD_SADDR, TCD_SLAST_SDA, TCD_SOFF."]
+    #[inline(always)]
+    pub const fn tcd(self, n: usize) -> Tcd {
+        assert!(n < 4usize);
+        unsafe { Tcd::from_ptr(self.ptr.wrapping_add(0x0usize + n * 4096usize) as _) }
+    }
+}
+#[doc = "DMA TCD."]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Tcd8 {
+    ptr: *mut u8,
+}
+unsafe impl Send for Tcd8 {}
+unsafe impl Sync for Tcd8 {}
+impl Tcd8 {
+    #[inline(always)]
+    pub const unsafe fn from_ptr(ptr: *mut ()) -> Self {
+        Self { ptr: ptr as _ }
+    }
+    #[inline(always)]
+    pub const fn as_ptr(&self) -> *mut () {
+        self.ptr as _
+    }
+    #[doc = "Array of registers: CH_CSR, CH_ES, CH_INT, CH_MUX, CH_PRI, CH_SBR, TCD_ATTR, TCD_BITER_ELINKNO, TCD_BITER_ELINKYES, TCD_CITER_ELINKNO, TCD_CITER_ELINKYES, TCD_CSR, TCD_DADDR, TCD_DLAST_SGA, TCD_DOFF, TCD_NBYTES_MLOFFNO, TCD_NBYTES_MLOFFYES, TCD_SADDR, TCD_SLAST_SDA, TCD_SOFF."]
+    #[inline(always)]
+    pub const fn tcd(self, n: usize) -> Tcd {
+        assert!(n < 8usize);
+        unsafe { Tcd::from_ptr(self.ptr.wrapping_add(0x0usize + n * 4096usize) as _) }
     }
 }
 #[doc = "Channel Control and Status."]

@@ -497,14 +497,14 @@
   "interrupts": {
     "RESERVED16": 0,
     "CMC": 1,
-    "DMA_CH0": 2,
-    "DMA_CH1": 3,
-    "DMA_CH2": 4,
-    "DMA_CH3": 5,
-    "DMA_CH4": 6,
-    "DMA_CH5": 7,
-    "DMA_CH6": 8,
-    "DMA_CH7": 9,
+    "DMA0_CH0": 2,
+    "DMA0_CH1": 3,
+    "DMA0_CH2": 4,
+    "DMA0_CH3": 5,
+    "DMA0_CH4": 6,
+    "DMA0_CH5": 7,
+    "DMA0_CH6": 8,
+    "DMA0_CH7": 9,
     "ERM0_SINGLE_BIT": 10,
     "ERM0_MULTI_BIT": 11,
     "FMU0": 12,
@@ -7406,7 +7406,7 @@
     {
       "name": "RTC0",
       "address": "0x400EE000",
-      "type": "mcxa/RTC",
+      "type": "mcxa/RTC2xx::RTC",
       "signals": []
     },
     {
@@ -9182,13 +9182,13 @@
     {
       "name": "EDMA_0_TCD",
       "address": "0x40081000",
-      "type": "mcxa/EDMA_TCD",
+      "type": "mcxa/EDMA_TCD::TCD8",
       "signals": []
     },
     {
       "name": "MRCC0",
       "address": "0x40091000",
-      "type": "mcxa/MRCC",
+      "type": "mcxa/MRCC2xx::MRCC",
       "signals": []
     }
   ]

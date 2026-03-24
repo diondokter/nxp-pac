@@ -8357,7 +8357,7 @@ pub const PERIPHERALS: &[Peripheral] = &[
     Peripheral {
         name: "RTC0",
         address: 0x400EE000,
-        driver_name: "mcxa/RTC",
+        driver_name: "mcxa/RTC2xx::RTC",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
@@ -10463,7 +10463,7 @@ pub const PERIPHERALS: &[Peripheral] = &[
     Peripheral {
         name: "EDMA_0_TCD",
         address: 0x40081000,
-        driver_name: "mcxa/EDMA_TCD",
+        driver_name: "mcxa/EDMA_TCD::TCD8",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
@@ -10471,7 +10471,7 @@ pub const PERIPHERALS: &[Peripheral] = &[
     Peripheral {
         name: "MRCC0",
         address: 0x40091000,
-        driver_name: "mcxa/MRCC",
+        driver_name: "mcxa/MRCC2xx::MRCC",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],

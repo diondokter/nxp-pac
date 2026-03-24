@@ -1,0 +1,445 @@
+block/Rtc:
+  description: Real Time Clock.
+  items:
+  - name: yearmon
+    description: Year and Month Counters.
+    byte_offset: 0
+    bit_size: 16
+    fieldset: Yearmon
+  - name: days
+    description: Days and Day-of-Week Counters.
+    byte_offset: 2
+    bit_size: 16
+    fieldset: Days
+  - name: hourmin
+    description: Hours and Minutes Counters.
+    byte_offset: 4
+    bit_size: 16
+    fieldset: Hourmin
+  - name: seconds
+    description: Seconds Counters.
+    byte_offset: 6
+    bit_size: 16
+    fieldset: Seconds
+  - name: alm_yearmon
+    description: Year and Months Alarm.
+    byte_offset: 8
+    bit_size: 16
+    fieldset: AlmYearmon
+  - name: alm_days
+    description: Days Alarm.
+    byte_offset: 10
+    bit_size: 16
+    fieldset: AlmDays
+  - name: alm_hourmin
+    description: Hours and Minutes Alarm.
+    byte_offset: 12
+    bit_size: 16
+    fieldset: AlmHourmin
+  - name: alm_seconds
+    description: Seconds Alarm.
+    byte_offset: 14
+    bit_size: 16
+    fieldset: AlmSeconds
+  - name: ctrl
+    description: Control.
+    byte_offset: 16
+    bit_size: 16
+    fieldset: Ctrl
+  - name: status
+    description: Status.
+    byte_offset: 18
+    bit_size: 16
+    fieldset: Status
+  - name: status8
+    description: Byte Access to Status
+    byte_offset: 18
+    access: Write
+    bit_size: 8
+  - name: isr
+    description: Interrupt Status.
+    byte_offset: 20
+    bit_size: 16
+    fieldset: Isr
+  - name: ier
+    description: Interrupt Enable.
+    byte_offset: 22
+    bit_size: 16
+    fieldset: Ier
+  - name: alm_subseconds
+    description: Sub Second Alarm.
+    byte_offset: 30
+    bit_size: 16
+    fieldset: AlmSubseconds
+  - name: dst_hour
+    description: Daylight Saving Hour.
+    byte_offset: 34
+    bit_size: 16
+    fieldset: DstHour
+  - name: dst_month
+    description: Daylight Saving Month.
+    byte_offset: 36
+    bit_size: 16
+    fieldset: DstMonth
+  - name: dst_day
+    description: Daylight Saving Day.
+    byte_offset: 38
+    bit_size: 16
+    fieldset: DstDay
+  - name: compen
+    description: Compensation.
+    byte_offset: 40
+    bit_size: 16
+    fieldset: Compen
+fieldset/AlmDays:
+  description: Days Alarm.
+  bit_size: 16
+  fields:
+  - name: alm_day
+    description: Days Value for Alarm.
+    bit_offset: 0
+    bit_size: 5
+fieldset/AlmHourmin:
+  description: Hours and Minutes Alarm.
+  bit_size: 16
+  fields:
+  - name: alm_min
+    description: Minutes Value for Alarm.
+    bit_offset: 0
+    bit_size: 6
+  - name: alm_hour
+    description: Hours Value for Alarm.
+    bit_offset: 8
+    bit_size: 5
+fieldset/AlmSeconds:
+  description: Seconds Alarm.
+  bit_size: 16
+  fields:
+  - name: alm_sec
+    description: Seconds Alarm Value.
+    bit_offset: 0
+    bit_size: 6
+  - name: dec_sec
+    description: Decrement Seconds Counter by 1.
+    bit_offset: 8
+    bit_size: 1
+  - name: inc_sec
+    description: Increment Seconds Counter by 1.
+    bit_offset: 9
+    bit_size: 1
+fieldset/AlmSubseconds:
+  description: Sub Second Alarm.
+  bit_size: 16
+  fields:
+  - name: alm_subsecs
+    description: Alarm Sub Second Counter Value.
+    bit_offset: 0
+    bit_size: 16
+fieldset/AlmYearmon:
+  description: Year and Months Alarm.
+  bit_size: 16
+  fields:
+  - name: alm_mon
+    description: Months Value for Alarm.
+    bit_offset: 0
+    bit_size: 4
+  - name: alm_year
+    description: Year Value for Alarm.
+    bit_offset: 8
+    bit_size: 8
+fieldset/Compen:
+  description: Compensation.
+  bit_size: 16
+  fields:
+  - name: compen_val
+    description: Compensation Value.
+    bit_offset: 0
+    bit_size: 16
+fieldset/Ctrl:
+  description: Control.
+  bit_size: 16
+  fields:
+  - name: fineen
+    description: Fine Compensation Enable.
+    bit_offset: 0
+    bit_size: 1
+  - name: comp_en
+    description: Compensation Enable.
+    bit_offset: 1
+    bit_size: 1
+  - name: alm_match
+    description: Alarm Match.
+    bit_offset: 2
+    bit_size: 2
+  - name: alm_subsecs_match_en
+    description: Alarm Subseconds Match Enable Signal.
+    bit_offset: 5
+    bit_size: 1
+  - name: dst_en
+    description: Daylight Saving Enable.
+    bit_offset: 6
+    bit_size: 1
+  - name: swr
+    description: Software Reset.
+    bit_offset: 8
+    bit_size: 1
+    enum: Swr
+  - name: clk_sel
+    description: RTC Clock Select.
+    bit_offset: 9
+    bit_size: 1
+  - name: clko_dis
+    description: Clock Output Disable.
+    bit_offset: 10
+    bit_size: 1
+  - name: clkout
+    description: RTC Clock Output Selection.
+    bit_offset: 13
+    bit_size: 2
+fieldset/Days:
+  description: Days and Day-of-Week Counters.
+  bit_size: 16
+  fields:
+  - name: day_cnt
+    description: Days Counter Value.
+    bit_offset: 0
+    bit_size: 5
+  - name: dow
+    description: Day of Week Counter Value.
+    bit_offset: 8
+    bit_size: 3
+fieldset/DstDay:
+  description: Daylight Saving Day.
+  bit_size: 16
+  fields:
+  - name: dst_end_day
+    description: Daylight Saving Time (DST) Day End Value.
+    bit_offset: 0
+    bit_size: 5
+  - name: dst_start_day
+    description: Daylight Saving Time (DST) Day Start Value.
+    bit_offset: 8
+    bit_size: 5
+fieldset/DstHour:
+  description: Daylight Saving Hour.
+  bit_size: 16
+  fields:
+  - name: dst_end_hour
+    description: Daylight Saving Time (DST) Hours End Value.
+    bit_offset: 0
+    bit_size: 5
+  - name: dst_start_hour
+    description: Daylight Saving Time (DST) Hours Start Value.
+    bit_offset: 8
+    bit_size: 5
+fieldset/DstMonth:
+  description: Daylight Saving Month.
+  bit_size: 16
+  fields:
+  - name: dst_end_month
+    description: Daylight Saving Time (DST) Month End Value.
+    bit_offset: 0
+    bit_size: 4
+  - name: dst_start_month
+    description: Daylight Saving Time (DST) Month Start Value.
+    bit_offset: 8
+    bit_size: 4
+fieldset/Hourmin:
+  description: Hours and Minutes Counters.
+  bit_size: 16
+  fields:
+  - name: min_cnt
+    description: Minutes Counter Value.
+    bit_offset: 0
+    bit_size: 6
+  - name: hour_cnt
+    description: Hours Counter Value.
+    bit_offset: 8
+    bit_size: 5
+fieldset/Ier:
+  description: Interrupt Enable.
+  bit_size: 16
+  fields:
+  - name: alm_ie
+    description: Alarm Interrupt Enable.
+    bit_offset: 2
+    bit_size: 1
+  - name: day_ie
+    description: Days Interrupt Enable.
+    bit_offset: 3
+    bit_size: 1
+  - name: hour_ie
+    description: Hours Interrupt Enable.
+    bit_offset: 4
+    bit_size: 1
+  - name: min_ie
+    description: Minutes Interrupt Enable.
+    bit_offset: 5
+    bit_size: 1
+  - name: ie_1hz
+    description: 1 Hz Interval Interrupt Enable.
+    bit_offset: 6
+    bit_size: 1
+  - name: ie_2hz
+    description: 2 Hz Interval Interrupt Enable.
+    bit_offset: 7
+    bit_size: 1
+  - name: ie_4hz
+    description: 4 Hz Interval Interrupt Enable.
+    bit_offset: 8
+    bit_size: 1
+  - name: ie_8hz
+    description: 8 Hz Interval Interrupt Enable.
+    bit_offset: 9
+    bit_size: 1
+  - name: ie_16hz
+    description: 16 Hz Interval Interrupt Enable.
+    bit_offset: 10
+    bit_size: 1
+  - name: ie_32hz
+    description: 32 Hz Interval Interrupt Enable.
+    bit_offset: 11
+    bit_size: 1
+  - name: ie_64hz
+    description: 64 Hz Interval Interrupt Enable.
+    bit_offset: 12
+    bit_size: 1
+  - name: ie_128hz
+    description: 128 Hz Interval Interrupt Enable.
+    bit_offset: 13
+    bit_size: 1
+  - name: ie_256hz
+    description: 256 Hz Interval Interrupt Enable.
+    bit_offset: 14
+    bit_size: 1
+  - name: ie_512hz
+    description: 512 Hz Interval Interrupt Enable.
+    bit_offset: 15
+    bit_size: 1
+fieldset/Isr:
+  description: Interrupt Status.
+  bit_size: 16
+  fields:
+  - name: alm_is
+    description: Alarm Interrupt Status.
+    bit_offset: 2
+    bit_size: 1
+  - name: day_is
+    description: Days Interrupt Status.
+    bit_offset: 3
+    bit_size: 1
+  - name: hour_is
+    description: Hours Interrupt Status.
+    bit_offset: 4
+    bit_size: 1
+  - name: min_is
+    description: Minutes Interrupt Status.
+    bit_offset: 5
+    bit_size: 1
+  - name: is_1hz
+    description: 1 Hz Interval Interrupt Status.
+    bit_offset: 6
+    bit_size: 1
+  - name: is_2hz
+    description: 2 Hz Interval Interrupt Status.
+    bit_offset: 7
+    bit_size: 1
+  - name: is_4hz
+    description: 4 Hz Interval Interrupt Status.
+    bit_offset: 8
+    bit_size: 1
+  - name: is_8hz
+    description: 8 Hz Interval Interrupt Status.
+    bit_offset: 9
+    bit_size: 1
+  - name: is_16hz
+    description: 16 Hz Interval Interrupt Status.
+    bit_offset: 10
+    bit_size: 1
+  - name: is_32hz
+    description: 32 Hz Interval Interrupt Status.
+    bit_offset: 11
+    bit_size: 1
+  - name: is_64hz
+    description: 64 Hz Interval Interrupt Status.
+    bit_offset: 12
+    bit_size: 1
+  - name: is_128hz
+    description: 128 Hz Interval Interrupt Status.
+    bit_offset: 13
+    bit_size: 1
+  - name: is_256hz
+    description: 256 Hz Interval Interrupt Status.
+    bit_offset: 14
+    bit_size: 1
+  - name: is_512hz
+    description: 512 Hz Interval Interrupt Status.
+    bit_offset: 15
+    bit_size: 1
+fieldset/Seconds:
+  description: Seconds Counters.
+  bit_size: 16
+  fields:
+  - name: sec_cnt
+    description: Seconds Counter Value.
+    bit_offset: 0
+    bit_size: 6
+fieldset/Status:
+  description: Status.
+  bit_size: 16
+  fields:
+  - name: inval_bit
+    description: Invalidate CPU Read/Write Access.
+    bit_offset: 0
+    bit_size: 1
+  - name: write_prot_en
+    description: Write Protect Enable Status.
+    bit_offset: 1
+    bit_size: 1
+  - name: cmp_int
+    description: Compensation Interval.
+    bit_offset: 5
+    bit_size: 1
+  - name: we
+    description: Write Enable.
+    bit_offset: 6
+    bit_size: 2
+  - name: bus_err
+    description: Bus Error.
+    bit_offset: 8
+    bit_size: 1
+    enum: BusErr
+  - name: cmp_done
+    description: Compensation Done.
+    bit_offset: 11
+    bit_size: 1
+fieldset/Yearmon:
+  description: Year and Month Counters.
+  bit_size: 16
+  fields:
+  - name: mon_cnt
+    description: Month Counter.
+    bit_offset: 0
+    bit_size: 4
+  - name: yrofst
+    description: Year Offset Count Value.
+    bit_offset: 8
+    bit_size: 8
+enum/BusErr:
+  bit_size: 1
+  variants:
+  - name: NORMAL
+    description: Read and write accesses are normal.
+    value: 0
+  - name: ASSERTED
+    description: Read or write accesses occurred when STATUS[INVAL_BIT] was asserted.
+    value: 1
+enum/Swr:
+  bit_size: 1
+  variants:
+  - name: CLEARED
+    description: Software Reset cleared.
+    value: 0
+  - name: ASSERTED
+    description: Software Reset asserted.
+    value: 1

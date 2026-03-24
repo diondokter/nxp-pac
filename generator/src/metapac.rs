@@ -1,4 +1,5 @@
 use std::{
+    collections::HashSet,
     fs,
     path::Path,
     process::{Command, Stdio},
@@ -114,7 +115,18 @@ pub fn assemble_metapac(current: &Path, core: &str, mut metadata: Metadata) -> a
             return false;
         };
 
-        if fs::exists(yaml_peri_dir.join(peripheral_type).with_extension("yaml")).unwrap_or(false) {
+        if fs::exists(
+            yaml_peri_dir
+                .join(
+                    peripheral_type
+                        .split_once("::")
+                        .map(|split| split.0)
+                        .unwrap_or(peripheral_type.as_str()),
+                )
+                .with_extension("yaml"),
+        )
+        .unwrap_or(false)
+        {
             true
         } else {
             tracing::warn!(
@@ -171,8 +183,16 @@ fn export_mod_rs(chip_dir: &Path, metadata: &Metadata) -> anyhow::Result<()> {
             .split('/')
             .last()
             .with_context(|| format!("Getting driver name from path: {}", driver_path))?;
-        let driver_name_mod = Ident::new(&driver_name.to_lowercase(), Span::call_site());
-        let driver_name_type = Ident::new(&driver_name.to_pascal_case(), Span::call_site());
+
+        let (module_name, type_name) = match driver_name.split_once("::") {
+            Some((module_name, type_name)) => {
+                (module_name.to_lowercase(), type_name.to_pascal_case())
+            }
+            None => (driver_name.to_lowercase(), driver_name.to_pascal_case()),
+        };
+
+        let driver_name_mod = Ident::new(&module_name, Span::call_site());
+        let driver_name_type = Ident::new(&type_name, Span::call_site());
 
         let peripheral_name = Ident::new(&peripheral.name, Span::call_site());
         let Some(peripheral_address) = peripheral.peripheral_address.as_ref() else {
@@ -201,14 +221,25 @@ fn export_mod_rs(chip_dir: &Path, metadata: &Metadata) -> anyhow::Result<()> {
         .iter()
         .flat_map(|p| p.peripheral_type.clone())
         .collect::<IndexSet<String>>();
+    let mut exported_modules = HashSet::new();
     for driver_path in drivers {
-        let driver_name = driver_path
+        let driver_mod_path = driver_path
+            .split_once("::")
+            .map(|split| split.0)
+            .unwrap_or(driver_path.as_str());
+
+        let driver_name_mod = driver_mod_path
             .split('/')
             .last()
-            .with_context(|| format!("Getting driver name from path: {}", driver_path))?;
-        let driver_name_mod = Ident::new(&driver_name.to_lowercase(), Span::call_site());
+            .with_context(|| format!("Getting driver name from path: {}", driver_mod_path))?;
 
-        let full_driver_path = format!("../../meta_peripherals/{driver_path}.rs");
+        if !exported_modules.insert(driver_name_mod.to_owned()) {
+            continue;
+        }
+
+        let driver_name_mod = Ident::new(&driver_name_mod.to_lowercase(), Span::call_site());
+
+        let full_driver_path = format!("../../meta_peripherals/{driver_mod_path}.rs");
 
         writeln!(
             &mut contents,

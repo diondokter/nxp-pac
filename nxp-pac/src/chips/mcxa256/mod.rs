@@ -245,7 +245,7 @@ pub const SYSCON: syscon::Syscon = unsafe { syscon::Syscon::from_ptr(0x40091000 
 pub const TRNG0: trng::Trng = unsafe { trng::Trng::from_ptr(0x400EC000 as _) };
 pub const VBAT0: vbat::Vbat = unsafe { vbat::Vbat::from_ptr(0x40093000 as _) };
 pub const WWDT0: wwdt::Wwdt = unsafe { wwdt::Wwdt::from_ptr(0x4000C000 as _) };
-pub const EDMA_0_TCD: edma_tcd::EdmaTcd = unsafe { edma_tcd::EdmaTcd::from_ptr(0x40081000 as _) };
+pub const EDMA_0_TCD: tcd8::Tcd8 = unsafe { tcd8::Tcd8::from_ptr(0x40081000 as _) };
 pub const MRCC0: mrcc::Mrcc = unsafe { mrcc::Mrcc::from_ptr(0x40091000 as _) };
 #[path = "../../meta_peripherals/mcxa/ADC.rs"]
 pub mod adc;
@@ -260,8 +260,6 @@ pub mod crc;
 pub mod ctimer;
 #[path = "../../meta_peripherals/mcxa/DMA.rs"]
 pub mod dma;
-#[path = "../../meta_peripherals/mcxa/EDMA_TCD.rs"]
-pub mod edma_tcd;
 #[path = "../../meta_peripherals/mcxa/FLEXPWM.rs"]
 pub mod flexpwm;
 #[path = "../../meta_peripherals/mcxa/FMU.rs"]
@@ -278,13 +276,13 @@ pub mod lpi2c;
 pub mod lpspi;
 #[path = "../../meta_peripherals/mcxa/LPUART.rs"]
 pub mod lpuart;
-#[path = "../../meta_peripherals/mcxa/MRCC.rs"]
+#[path = "../../meta_peripherals/mcxa/MRCC2xx.rs"]
 pub mod mrcc;
 #[path = "../../meta_peripherals/mcxa/OSTIMER.rs"]
 pub mod ostimer;
 #[path = "../../meta_peripherals/mcxa/PORT.rs"]
 pub mod port;
-#[path = "../../meta_peripherals/mcxa/RTC.rs"]
+#[path = "../../meta_peripherals/mcxa/RTC2xx.rs"]
 pub mod rtc;
 #[path = "../../meta_peripherals/mcxa/SCG.rs"]
 pub mod scg;
@@ -292,6 +290,8 @@ pub mod scg;
 pub mod spc;
 #[path = "../../meta_peripherals/mcxa/SYSCON.rs"]
 pub mod syscon;
+#[path = "../../meta_peripherals/mcxa/EDMA_TCD.rs"]
+pub mod tcd8;
 #[path = "../../meta_peripherals/mcxa/TRNG.rs"]
 pub mod trng;
 #[path = "../../meta_peripherals/mcxa/VBAT.rs"]
