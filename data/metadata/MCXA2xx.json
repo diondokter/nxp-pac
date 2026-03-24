@@ -4160,7 +4160,7 @@
     {
       "name": "FMU0",
       "address": "0x40095000",
-      "type": "mcxa/FMU0",
+      "type": "mcxa/FMU",
       "signals": []
     },
     {
@@ -8083,7 +8083,7 @@
     {
       "name": "SPC0",
       "address": "0x40090000",
-      "type": "mcxa/SPC0",
+      "type": "mcxa/SPC",
       "signals": [
         {
           "name": "LPREQ",
@@ -8857,7 +8857,7 @@
     {
       "name": "VBAT0",
       "address": "0x40093000",
-      "type": "mcxa/VBAT0",
+      "type": "mcxa/VBAT",
       "signals": []
     },
     {
@@ -9180,37 +9180,9 @@
       "signals": []
     },
     {
-      "name": "EDMA_0_TCD0",
+      "name": "EDMA_0_TCD",
       "address": "0x40081000",
-      "type": "mcxa/TCD",
-      "signals": []
-    },
-    {
-      "name": "EDMA_0_TCD1",
-      "signals": []
-    },
-    {
-      "name": "EDMA_0_TCD2",
-      "signals": []
-    },
-    {
-      "name": "EDMA_0_TCD3",
-      "signals": []
-    },
-    {
-      "name": "EDMA_0_TCD4",
-      "signals": []
-    },
-    {
-      "name": "EDMA_0_TCD5",
-      "signals": []
-    },
-    {
-      "name": "EDMA_0_TCD6",
-      "signals": []
-    },
-    {
-      "name": "EDMA_0_TCD7",
+      "type": "mcxa/EDMA_TCD",
       "signals": []
     },
     {

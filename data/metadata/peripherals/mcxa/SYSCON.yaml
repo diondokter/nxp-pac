@@ -1,0 +1,1607 @@
+block/SYSCON:
+  description: SYSCON.
+  items:
+  - name: REMAP
+    description: AHB Matrix Remap Control.
+    byte_offset: 512
+    fieldset: REMAP
+  - name: AHBMATPRIO
+    description: AHB Matrix Priority Control.
+    byte_offset: 528
+    fieldset: AHBMATPRIO
+  - name: CPU0NSTCKCAL
+    description: Non-Secure CPU0 System Tick Calibration.
+    byte_offset: 572
+    fieldset: CPU0NSTCKCAL
+  - name: NMISRC
+    description: NMI Source Select.
+    byte_offset: 584
+    fieldset: NMISRC
+  - name: PROTLVL
+    description: Protect Level Control.
+    byte_offset: 588
+    fieldset: PROTLVL
+  - name: SLOWCLKDIV
+    description: SLOW_CLK Clock Divider.
+    byte_offset: 888
+    fieldset: SLOWCLKDIV
+  - name: BUSCLKDIV
+    description: BUS_CLK Clock Divider.
+    byte_offset: 892
+    fieldset: BUSCLKDIV
+  - name: AHBCLKDIV
+    description: System Clock Divider.
+    byte_offset: 896
+    fieldset: AHBCLKDIV
+  - name: FROHFDIV
+    description: FRO_HF_DIV Clock Divider.
+    byte_offset: 904
+    fieldset: FROHFDIV
+  - name: FROLFDIV
+    description: FRO_LF_DIV Clock Divider.
+    byte_offset: 908
+    fieldset: FROLFDIV
+  - name: PLL1CLKDIV
+    description: PLL1_CLK_DIV Clock Divider.
+    byte_offset: 996
+    fieldset: PLL1CLKDIV
+  - name: CLKUNLOCK
+    description: Clock Configuration Unlock.
+    byte_offset: 1020
+    fieldset: CLKUNLOCK
+  - name: NVM_CTRL
+    description: NVM Control.
+    byte_offset: 1024
+    fieldset: NVM_CTRL
+  - name: SmartDMAINT
+    description: SmartDMA Interrupt Hijack.
+    byte_offset: 1044
+    fieldset: SmartDMAINT
+  - name: RAM_INTERLEAVE
+    description: Controls RAM Interleave Integration.
+    byte_offset: 1136
+    fieldset: RAM_INTERLEAVE
+  - name: CPUSTAT
+    description: CPU Status.
+    byte_offset: 2060
+    access: Read
+    fieldset: CPUSTAT
+  - name: LPCAC_CTRL
+    description: LPCAC Control.
+    byte_offset: 2084
+    fieldset: LPCAC_CTRL
+  - name: PWM0SUBCTL
+    description: PWM0 Submodule Control.
+    byte_offset: 2360
+    fieldset: PWM0SUBCTL
+  - name: PWM1SUBCTL
+    description: PWM1 Submodule Control.
+    byte_offset: 2364
+    fieldset: PWM1SUBCTL
+  - name: CTIMERGLOBALSTARTEN
+    description: CTIMER Global Start Enable.
+    byte_offset: 2368
+    fieldset: CTIMERGLOBALSTARTEN
+  - name: RAM_CTRL
+    description: RAM Control.
+    byte_offset: 2372
+    fieldset: RAM_CTRL
+  - name: GRAY_CODE_LSB
+    description: Gray to Binary Converter Gray Code [31:0].
+    byte_offset: 2912
+    fieldset: GRAY_CODE_LSB
+  - name: GRAY_CODE_MSB
+    description: Gray to Binary Converter Gray Code [41:32].
+    byte_offset: 2916
+    fieldset: GRAY_CODE_MSB
+  - name: BINARY_CODE_LSB
+    description: Gray to Binary Converter Binary Code [31:0].
+    byte_offset: 2920
+    access: Read
+    fieldset: BINARY_CODE_LSB
+  - name: BINARY_CODE_MSB
+    description: Gray to Binary Converter Binary Code [41:32].
+    byte_offset: 2924
+    access: Read
+    fieldset: BINARY_CODE_MSB
+  - name: MSFCFG
+    description: MSF Configuration.
+    byte_offset: 3612
+    fieldset: MSFCFG
+  - name: ROP_STATE
+    description: ROP State Register.
+    byte_offset: 3644
+    access: Read
+    fieldset: ROP_STATE
+  - name: SRAM_XEN
+    description: RAM XEN Control.
+    byte_offset: 3672
+    fieldset: SRAM_XEN
+  - name: SRAM_XEN_DP
+    description: RAM XEN Control (Duplicate).
+    byte_offset: 3676
+    fieldset: SRAM_XEN_DP
+  - name: ELS_OTP_LC_STATE
+    description: Life Cycle State Register.
+    byte_offset: 3712
+    access: Read
+    fieldset: ELS_OTP_LC_STATE
+  - name: ELS_OTP_LC_STATE_DP
+    description: Life Cycle State Register (Duplicate).
+    byte_offset: 3716
+    access: Read
+    fieldset: ELS_OTP_LC_STATE_DP
+  - name: DEBUG_LOCK_EN
+    description: Control Write Access to Security.
+    byte_offset: 4000
+    fieldset: DEBUG_LOCK_EN
+  - name: DEBUG_FEATURES
+    description: Cortex Debug Features Control.
+    byte_offset: 4004
+    fieldset: DEBUG_FEATURES
+  - name: DEBUG_FEATURES_DP
+    description: Cortex Debug Features Control (Duplicate).
+    byte_offset: 4008
+    fieldset: DEBUG_FEATURES_DP
+  - name: SWD_ACCESS_CPU0
+    description: CPU0 Software Debug Access.
+    byte_offset: 4020
+    fieldset: SWD_ACCESS_CPU0
+  - name: DEBUG_AUTH_BEACON
+    description: Debug Authentication BEACON.
+    byte_offset: 4032
+    fieldset: DEBUG_AUTH_BEACON
+  - name: JTAG_ID
+    description: JTAG Chip ID.
+    byte_offset: 4080
+    access: Read
+    fieldset: JTAG_ID
+  - name: DEVICE_TYPE
+    description: Device Type.
+    byte_offset: 4084
+    access: Read
+    fieldset: DEVICE_TYPE
+  - name: DEVICE_ID0
+    description: Device ID.
+    byte_offset: 4088
+    access: Read
+    fieldset: DEVICE_ID0
+  - name: DIEID
+    description: Chip Revision ID and Number.
+    byte_offset: 4092
+    access: Read
+    fieldset: DIEID
+fieldset/AHBCLKDIV:
+  description: System Clock Divider.
+  fields:
+  - name: DIV
+    description: Clock divider value.
+    bit_offset: 0
+    bit_size: 8
+  - name: UNSTAB
+    description: Divider status flag.
+    bit_offset: 31
+    bit_size: 1
+    enum: AHBCLKDIV_UNSTAB
+fieldset/AHBMATPRIO:
+  description: AHB Matrix Priority Control.
+  fields:
+  - name: CPU0_CBUS
+    description: CPU0 C-AHB bus master priority level.
+    bit_offset: 0
+    bit_size: 2
+    enum: CPU0_CBUS
+  - name: CPU0_SBUS
+    description: CPU0 S-AHB bus master priority level.
+    bit_offset: 2
+    bit_size: 2
+    enum: AHBMATPRIO_CPU0_SBUS
+  - name: CPU1_CBUS_SmartDMA_I
+    description: SmartDMA-I bus master priority level.
+    bit_offset: 4
+    bit_size: 2
+    enum: CPU1_CBUS_SmartDMA_I
+  - name: CPU1_SBUS_SmartDMA_D
+    description: SmartDMA-D bus master priority level.
+    bit_offset: 6
+    bit_size: 2
+    enum: CPU1_SBUS_SmartDMA_D
+  - name: DMA0
+    description: DMA0 controller bus master priority level.
+    bit_offset: 8
+    bit_size: 2
+    enum: AHBMATPRIO_DMA0
+  - name: PKC_ELS
+    description: PKC and ELS bus master priority level.
+    bit_offset: 12
+    bit_size: 2
+    enum: PKC_ELS
+  - name: USB_FS_ENET
+    description: USB-FS bus master priority level.
+    bit_offset: 24
+    bit_size: 2
+    enum: USB_FS_ENET
+fieldset/BINARY_CODE_LSB:
+  description: Gray to Binary Converter Binary Code [31:0].
+  fields:
+  - name: code_bin_31_0
+    description: Binary code [31:0].
+    bit_offset: 0
+    bit_size: 32
+fieldset/BINARY_CODE_MSB:
+  description: Gray to Binary Converter Binary Code [41:32].
+  fields:
+  - name: code_bin_41_32
+    description: Binary code [41:32].
+    bit_offset: 0
+    bit_size: 10
+fieldset/BUSCLKDIV:
+  description: BUS_CLK Clock Divider.
+  fields:
+  - name: DIV
+    description: Clock divider value.
+    bit_offset: 0
+    bit_size: 8
+  - name: RESET
+    description: Resets the divider counter.
+    bit_offset: 29
+    bit_size: 1
+    enum: BUSCLKDIV_RESET
+  - name: HALT
+    description: Halts the divider counter.
+    bit_offset: 30
+    bit_size: 1
+    enum: BUSCLKDIV_HALT
+  - name: UNSTAB
+    description: Divider status flag.
+    bit_offset: 31
+    bit_size: 1
+    enum: BUSCLKDIV_UNSTAB
+fieldset/CLKUNLOCK:
+  description: Clock Configuration Unlock.
+  fields:
+  - name: UNLOCK
+    description: Controls clock configuration registers access (for example, SLOWCLKDIV, BUSCLKDIV, AHBCLKDIV, FROHFDIV, FROLFDIV, PLLxCLKDIV, MRCC_xxx_CLKDIV, MRCC_xxx_CLKSEL, MRCC_GLB_xxx).
+    bit_offset: 0
+    bit_size: 1
+    enum: UNLOCK
+fieldset/CPU0NSTCKCAL:
+  description: Non-Secure CPU0 System Tick Calibration.
+  fields:
+  - name: TENMS
+    description: Reload value for 10 ms (100 Hz) timing, subject to system clock skew errors. If the value reads as zero, the calibration value is not known.
+    bit_offset: 0
+    bit_size: 24
+  - name: SKEW
+    description: Indicates whether the TENMS value is exact.
+    bit_offset: 24
+    bit_size: 1
+    enum: SKEW
+  - name: NOREF
+    description: Indicates whether the device provides a reference clock to the processor.
+    bit_offset: 25
+    bit_size: 1
+    enum: NOREF
+fieldset/CPUSTAT:
+  description: CPU Status.
+  fields:
+  - name: CPU0SLEEPING
+    description: CPU0 sleeping state.
+    bit_offset: 0
+    bit_size: 1
+    enum: CPU0SLEEPING
+  - name: CPU0LOCKUP
+    description: CPU0 lockup state.
+    bit_offset: 2
+    bit_size: 1
+    enum: CPU0LOCKUP
+fieldset/CTIMERGLOBALSTARTEN:
+  description: CTIMER Global Start Enable.
+  fields:
+  - name: CTIMER0_CLK_EN
+    description: Enables the CTIMER0 function clock.
+    bit_offset: 0
+    bit_size: 1
+  - name: CTIMER1_CLK_EN
+    description: Enables the CTIMER1 function clock.
+    bit_offset: 1
+    bit_size: 1
+  - name: CTIMER2_CLK_EN
+    description: Enables the CTIMER2 function clock.
+    bit_offset: 2
+    bit_size: 1
+  - name: CTIMER3_CLK_EN
+    description: Enables the CTIMER3 function clock.
+    bit_offset: 3
+    bit_size: 1
+  - name: CTIMER4_CLK_EN
+    description: Enables the CTIMER4 function clock.
+    bit_offset: 4
+    bit_size: 1
+fieldset/DEBUG_AUTH_BEACON:
+  description: Debug Authentication BEACON.
+  fields:
+  - name: BEACON
+    description: Sets by the debug authentication code in ROM to pass the debug beacons (Credential Beacon and Authentication Beacon) to the application code.
+    bit_offset: 0
+    bit_size: 32
+fieldset/DEBUG_FEATURES:
+  description: Cortex Debug Features Control.
+  fields:
+  - name: CPU0_DBGEN
+    description: CPU0 invasive debug control.
+    bit_offset: 0
+    bit_size: 2
+    enum: DEBUG_FEATURES_CPU0_DBGEN
+  - name: CPU0_NIDEN
+    description: CPU0 non-invasive debug control.
+    bit_offset: 2
+    bit_size: 2
+    enum: DEBUG_FEATURES_CPU0_NIDEN
+fieldset/DEBUG_FEATURES_DP:
+  description: Cortex Debug Features Control (Duplicate).
+  fields:
+  - name: CPU0_DBGEN
+    description: CPU0 invasive debug control.
+    bit_offset: 0
+    bit_size: 2
+    enum: DEBUG_FEATURES_DP_CPU0_DBGEN
+  - name: CPU0_NIDEN
+    description: CPU0 non-invasive debug control.
+    bit_offset: 2
+    bit_size: 2
+    enum: DEBUG_FEATURES_DP_CPU0_NIDEN
+fieldset/DEBUG_LOCK_EN:
+  description: Control Write Access to Security.
+  fields:
+  - name: LOCK_ALL
+    description: Controls write access to the security registers.
+    bit_offset: 0
+    bit_size: 4
+    enum: LOCK_ALL
+fieldset/DEVICE_ID0:
+  description: Device ID.
+  fields:
+  - name: RAM_SIZE
+    description: Indicates the device's ram size.
+    bit_offset: 0
+    bit_size: 4
+    enum: RAM_SIZE
+  - name: FLASH_SIZE
+    description: Indicates the device's flash size.
+    bit_offset: 4
+    bit_size: 4
+    enum: FLASH_SIZE
+  - name: ROM_REV_MINOR
+    description: Indicates the device's ROM revision.
+    bit_offset: 20
+    bit_size: 4
+  - name: SECURITY
+    description: no description available.
+    bit_offset: 24
+    bit_size: 4
+    enum: SECURITY
+fieldset/DEVICE_TYPE:
+  description: Device Type.
+  fields:
+  - name: DEVICE_TYPE_NUM
+    description: Indicates the device part number.
+    bit_offset: 0
+    bit_size: 16
+  - name: DEVICE_TYPE_SEC
+    description: Indicates the device type.
+    bit_offset: 16
+    bit_size: 1
+    enum: DEVICE_TYPE_SEC
+  - name: DEVICE_TYPE_PKG
+    description: Indicates the device's package type.
+    bit_offset: 20
+    bit_size: 4
+    enum: DEVICE_TYPE_PKG
+  - name: DEVICE_TYPE_PIN
+    description: Indicates the device's pin number.
+    bit_offset: 24
+    bit_size: 8
+fieldset/DIEID:
+  description: Chip Revision ID and Number.
+  fields:
+  - name: MINOR_REVISION
+    description: Chip minor revision.
+    bit_offset: 0
+    bit_size: 4
+  - name: MAJOR_REVISION
+    description: Chip major revision.
+    bit_offset: 4
+    bit_size: 4
+  - name: MCO_NUM_IN_DIE_ID
+    description: Chip number.
+    bit_offset: 8
+    bit_size: 20
+fieldset/ELS_OTP_LC_STATE:
+  description: Life Cycle State Register.
+  fields:
+  - name: OTP_LC_STATE
+    description: OTP life cycle state.
+    bit_offset: 0
+    bit_size: 8
+fieldset/ELS_OTP_LC_STATE_DP:
+  description: Life Cycle State Register (Duplicate).
+  fields:
+  - name: OTP_LC_STATE_DP
+    description: OTP life cycle state.
+    bit_offset: 0
+    bit_size: 8
+fieldset/FROHFDIV:
+  description: FRO_HF_DIV Clock Divider.
+  fields:
+  - name: DIV
+    description: Clock divider value.
+    bit_offset: 0
+    bit_size: 8
+  - name: RESET
+    description: Resets the divider counter.
+    bit_offset: 29
+    bit_size: 1
+    enum: FROHFDIV_RESET
+  - name: HALT
+    description: Halts the divider counter.
+    bit_offset: 30
+    bit_size: 1
+    enum: FROHFDIV_HALT
+  - name: UNSTAB
+    description: Divider status flag.
+    bit_offset: 31
+    bit_size: 1
+    enum: FROHFDIV_UNSTAB
+fieldset/FROLFDIV:
+  description: FRO_LF_DIV Clock Divider.
+  fields:
+  - name: DIV
+    description: Clock divider value.
+    bit_offset: 0
+    bit_size: 8
+  - name: RESET
+    description: Resets the divider counter.
+    bit_offset: 29
+    bit_size: 1
+    enum: FROLFDIV_RESET
+  - name: HALT
+    description: Halts the divider counter.
+    bit_offset: 30
+    bit_size: 1
+    enum: FROLFDIV_HALT
+  - name: UNSTAB
+    description: Divider status flag.
+    bit_offset: 31
+    bit_size: 1
+    enum: FROLFDIV_UNSTAB
+fieldset/GRAY_CODE_LSB:
+  description: Gray to Binary Converter Gray Code [31:0].
+  fields:
+  - name: code_gray_31_0
+    description: Gray code [31:0].
+    bit_offset: 0
+    bit_size: 32
+fieldset/GRAY_CODE_MSB:
+  description: Gray to Binary Converter Gray Code [41:32].
+  fields:
+  - name: code_gray_41_32
+    description: Gray code [41:32].
+    bit_offset: 0
+    bit_size: 10
+fieldset/JTAG_ID:
+  description: JTAG Chip ID.
+  fields:
+  - name: JTAG_ID
+    description: Indicates the device ID.
+    bit_offset: 0
+    bit_size: 32
+fieldset/LPCAC_CTRL:
+  description: LPCAC Control.
+  fields:
+  - name: DIS_LPCAC
+    description: Disables/enables the cache function.
+    bit_offset: 0
+    bit_size: 1
+    enum: DIS_LPCAC
+  - name: CLR_LPCAC
+    description: Clears the cache function.
+    bit_offset: 1
+    bit_size: 1
+    enum: CLR_LPCAC
+  - name: FRC_NO_ALLOC
+    description: Forces no allocation.
+    bit_offset: 2
+    bit_size: 1
+    enum: FRC_NO_ALLOC
+  - name: DIS_LPCAC_WTBF
+    description: Disable LPCAC Write Through Buffer.
+    bit_offset: 4
+    bit_size: 1
+  - name: LIM_LPCAC_WTBF
+    description: Limit LPCAC Write Through Buffer.
+    bit_offset: 5
+    bit_size: 1
+  - name: LPCAC_XOM
+    description: LPCAC XOM(eXecute-Only-Memory) attribute control.
+    bit_offset: 7
+    bit_size: 1
+  - name: LPCAC_MEM_REQ
+    description: Request LPCAC memories.
+    bit_offset: 8
+    bit_size: 1
+fieldset/MSFCFG:
+  description: MSF Configuration.
+  fields:
+  - name: IFR_ERASE_DIS0
+    description: user IFR sector 0 erase control.
+    bit_offset: 0
+    bit_size: 1
+    enum: IFR_ERASE_DIS0
+  - name: IFR_ERASE_DIS1
+    description: user IFR sector 1 erase control.
+    bit_offset: 1
+    bit_size: 1
+    enum: IFR_ERASE_DIS1
+  - name: IFR_ERASE_DIS2
+    description: user IFR sector 2 erase control.
+    bit_offset: 2
+    bit_size: 1
+    enum: IFR_ERASE_DIS2
+  - name: IFR_ERASE_DIS3
+    description: user IFR sector 3 erase control.
+    bit_offset: 3
+    bit_size: 1
+    enum: IFR_ERASE_DIS3
+  - name: MASS_ERASE_DIS
+    description: Mass erase control.
+    bit_offset: 8
+    bit_size: 1
+    enum: MASS_ERASE_DIS
+fieldset/NMISRC:
+  description: NMI Source Select.
+  fields:
+  - name: IRQCPU0
+    description: The IRQ number of the interrupt that acts as the Non-Maskable Interrupt (NMI) for CPU0, if enabled by NMIENCPU0.
+    bit_offset: 0
+    bit_size: 8
+  - name: NMIENCPU0
+    description: Enables the Non-Maskable Interrupt (NMI) source selected by IRQCPU0.
+    bit_offset: 31
+    bit_size: 1
+fieldset/NVM_CTRL:
+  description: NVM Control.
+  fields:
+  - name: DIS_FLASH_SPEC
+    description: Flash speculation control.
+    bit_offset: 0
+    bit_size: 1
+    enum: DIS_FLASH_SPEC
+  - name: DIS_DATA_SPEC
+    description: Flash data speculation control.
+    bit_offset: 1
+    bit_size: 1
+    enum: DIS_DATA_SPEC
+  - name: FLASH_STALL_EN
+    description: FLASH stall on busy control.
+    bit_offset: 10
+    bit_size: 1
+    enum: FLASH_STALL_EN
+  - name: DIS_MBECC_ERR_INST
+    description: Bus error on data multi-bit ECC error control Set this field to 0 if you want to enable flash speculative.
+    bit_offset: 16
+    bit_size: 1
+    enum: DIS_MBECC_ERR_INST
+  - name: DIS_MBECC_ERR_DATA
+    description: Bus error on data multi-bit ECC error control Set this field to 0 if you want to enable flash speculative.
+    bit_offset: 17
+    bit_size: 1
+    enum: DIS_MBECC_ERR_DATA
+fieldset/PLL1CLKDIV:
+  description: PLL1_CLK_DIV Clock Divider.
+  fields:
+  - name: DIV
+    description: Clock divider value.
+    bit_offset: 0
+    bit_size: 8
+  - name: RESET
+    description: Resets the divider counter.
+    bit_offset: 29
+    bit_size: 1
+    enum: PLL1CLKDIV_RESET
+  - name: HALT
+    description: Halts the divider counter.
+    bit_offset: 30
+    bit_size: 1
+    enum: PLL1CLKDIV_HALT
+  - name: UNSTAB
+    description: Divider status flag.
+    bit_offset: 31
+    bit_size: 1
+    enum: PLL1CLKDIV_UNSTAB
+fieldset/PROTLVL:
+  description: Protect Level Control.
+  fields:
+  - name: PRIV
+    description: Control privileged access of EIM, ERM, Flexcan, MBC, SCG.
+    bit_offset: 0
+    bit_size: 1
+  - name: LOCKNSMPU
+    description: Control write access to Nonsecure MPU memory regions.
+    bit_offset: 16
+    bit_size: 1
+    enum: LOCKNSMPU
+  - name: LOCK
+    description: This 1-bit field provides a mechanism to limit writes to this register to protect its contents. Once set, this bit remains asserted until a system reset.
+    bit_offset: 31
+    bit_size: 1
+    enum: PROTLVL_LOCK
+fieldset/PWM0SUBCTL:
+  description: PWM0 Submodule Control.
+  fields:
+  - name: CLK0_EN
+    description: Enables PWM0 SUB Clock0.
+    bit_offset: 0
+    bit_size: 1
+  - name: CLK1_EN
+    description: Enables PWM0 SUB Clock1.
+    bit_offset: 1
+    bit_size: 1
+  - name: CLK2_EN
+    description: Enables PWM0 SUB Clock2.
+    bit_offset: 2
+    bit_size: 1
+  - name: CLK3_EN
+    description: Enables PWM0 SUB Clock3.
+    bit_offset: 3
+    bit_size: 1
+fieldset/PWM1SUBCTL:
+  description: PWM1 Submodule Control.
+  fields:
+  - name: CLK0_EN
+    description: Enables PWM1 SUB Clock0.
+    bit_offset: 0
+    bit_size: 1
+  - name: CLK1_EN
+    description: Enables PWM1 SUB Clock1.
+    bit_offset: 1
+    bit_size: 1
+  - name: CLK2_EN
+    description: Enables PWM1 SUB Clock2.
+    bit_offset: 2
+    bit_size: 1
+  - name: CLK3_EN
+    description: Enables PWM1 SUB Clock3.
+    bit_offset: 3
+    bit_size: 1
+fieldset/RAM_CTRL:
+  description: RAM Control.
+  fields:
+  - name: RAMA_ECC_ENABLE
+    description: RAMA ECC enable.
+    bit_offset: 0
+    bit_size: 1
+  - name: RAMA_CG_OVERRIDE
+    description: RAMA bank clock gating control, only avaiable when RAMA_ECC_ENABLE = 0.
+    bit_offset: 16
+    bit_size: 1
+  - name: RAMX_CG_OVERRIDE
+    description: RAMX bank clock gating control.
+    bit_offset: 17
+    bit_size: 1
+  - name: RAMB_CG_OVERRIDE
+    description: RAMB bank clock gating control.
+    bit_offset: 18
+    bit_size: 1
+  - name: RAMC_CG_OVERRIDE
+    description: RAMC bank clock gating control.
+    bit_offset: 19
+    bit_size: 1
+fieldset/RAM_INTERLEAVE:
+  description: Controls RAM Interleave Integration.
+  fields:
+  - name: INTERLEAVE
+    description: Controls RAM access for RAMA1 and RAMA2.
+    bit_offset: 0
+    bit_size: 1
+    enum: INTERLEAVE
+fieldset/REMAP:
+  description: AHB Matrix Remap Control.
+  fields:
+  - name: CPU0_SBUS
+    description: RAMX0 address remap for CPU System bus.
+    bit_offset: 2
+    bit_size: 2
+    enum: REMAP_CPU0_SBUS
+  - name: SmartDMA_I
+    description: RAMX0 address remap for SmartDMA I-BUS.
+    bit_offset: 4
+    bit_size: 2
+    enum: SmartDMA_I
+  - name: SmartDMA_D
+    description: RAMX0 address remap for SmartDMA D-BUS.
+    bit_offset: 6
+    bit_size: 2
+    enum: SmartDMA_D
+  - name: DMA0
+    description: RAMX0 address remap for DMA0.
+    bit_offset: 8
+    bit_size: 2
+    enum: REMAP_DMA0
+  - name: PKC
+    description: RAMX0 address remap for PKC.
+    bit_offset: 12
+    bit_size: 2
+    enum: PKC
+  - name: USB0
+    description: RAMX0 address remap for USB0.
+    bit_offset: 24
+    bit_size: 2
+    enum: USB0
+  - name: LOCK
+    description: This 1-bit field provides a mechanism to limit writes to this register to protect its contents. Once set, this bit remains asserted until a system reset.
+    bit_offset: 31
+    bit_size: 1
+    enum: REMAP_LOCK
+fieldset/ROP_STATE:
+  description: ROP State Register.
+  fields:
+  - name: ROP_STATE
+    description: ROP state.
+    bit_offset: 0
+    bit_size: 32
+fieldset/SLOWCLKDIV:
+  description: SLOW_CLK Clock Divider.
+  fields:
+  - name: DIV
+    description: Clock divider value.
+    bit_offset: 0
+    bit_size: 8
+  - name: RESET
+    description: Resets the divider counter.
+    bit_offset: 29
+    bit_size: 1
+    enum: SLOWCLKDIV_RESET
+  - name: HALT
+    description: Halts the divider counter.
+    bit_offset: 30
+    bit_size: 1
+    enum: SLOWCLKDIV_HALT
+  - name: UNSTAB
+    description: Divider status flag.
+    bit_offset: 31
+    bit_size: 1
+    enum: SLOWCLKDIV_UNSTAB
+fieldset/SRAM_XEN:
+  description: RAM XEN Control.
+  fields:
+  - name: RAMX0_XEN
+    description: RAMX0 Execute permission control.
+    bit_offset: 0
+    bit_size: 1
+  - name: RAMX1_XEN
+    description: RAMX1 Execute permission control.
+    bit_offset: 1
+    bit_size: 1
+  - name: RAMA0_XEN
+    description: RAMA0 Execute permission control.
+    bit_offset: 2
+    bit_size: 1
+  - name: RAMA1_XEN
+    description: RAMAx (excepts RAMA0) Execute permission control.
+    bit_offset: 3
+    bit_size: 1
+  - name: RAMB_XEN
+    description: RAMBx Execute permission control.
+    bit_offset: 4
+    bit_size: 1
+  - name: RAMC_XEN
+    description: RAMCx Execute permission control.
+    bit_offset: 5
+    bit_size: 1
+  - name: LOCK
+    description: This 1-bit field provides a mechanism to limit writes to this register (and SRAM_XEN_DP) to protect its contents. Once set, this bit remains asserted until a system reset.
+    bit_offset: 31
+    bit_size: 1
+    enum: SRAM_XEN_LOCK
+fieldset/SRAM_XEN_DP:
+  description: RAM XEN Control (Duplicate).
+  fields:
+  - name: RAMX0_XEN
+    description: Refer to SRAM_XEN for more details.
+    bit_offset: 0
+    bit_size: 1
+  - name: RAMX1_XEN
+    description: Refer to SRAM_XEN for more details.
+    bit_offset: 1
+    bit_size: 1
+  - name: RAMA0_XEN
+    description: Refer to SRAM_XEN for more details.
+    bit_offset: 2
+    bit_size: 1
+  - name: RAMA1_XEN
+    description: Refer to SRAM_XEN for more details.
+    bit_offset: 3
+    bit_size: 1
+  - name: RAMB_XEN
+    description: Refer to SRAM_XEN for more details.
+    bit_offset: 4
+    bit_size: 1
+  - name: RAMC_XEN
+    description: Refer to SRAM_XEN for more details.
+    bit_offset: 5
+    bit_size: 1
+fieldset/SWD_ACCESS_CPU0:
+  description: CPU0 Software Debug Access.
+  fields:
+  - name: SEC_CODE
+    description: 'CPU0 SWD-AP: 0x12345678.'
+    bit_offset: 0
+    bit_size: 32
+    enum: SEC_CODE
+fieldset/SmartDMAINT:
+  description: SmartDMA Interrupt Hijack.
+  fields:
+  - name: INT0
+    description: SmartDMA hijack NVIC IRQ2.
+    bit_offset: 0
+    bit_size: 1
+  - name: INT1
+    description: SmartDMA hijack NVIC IRQ23.
+    bit_offset: 1
+    bit_size: 1
+  - name: INT2
+    description: SmartDMA hijack NVIC IRQ26.
+    bit_offset: 2
+    bit_size: 1
+  - name: INT3
+    description: SmartDMA hijack NVIC IRQ27.
+    bit_offset: 3
+    bit_size: 1
+  - name: INT4
+    description: SmartDMA hijack NVIC IRQ28.
+    bit_offset: 4
+    bit_size: 1
+  - name: INT5
+    description: SmartDMA hijack NVIC IRQ29.
+    bit_offset: 5
+    bit_size: 1
+  - name: INT6
+    description: SmartDMA hijack NVIC IRQ31.
+    bit_offset: 6
+    bit_size: 1
+  - name: INT7
+    description: SmartDMA hijack NVIC IRQ32.
+    bit_offset: 7
+    bit_size: 1
+  - name: INT8
+    description: SmartDMA hijack NVIC IRQ33.
+    bit_offset: 8
+    bit_size: 1
+  - name: INT9
+    description: SmartDMA hijack NVIC IRQ34.
+    bit_offset: 9
+    bit_size: 1
+  - name: INT10
+    description: SmartDMA hijack NVIC IRQ36.
+    bit_offset: 10
+    bit_size: 1
+  - name: INT11
+    description: SmartDMA hijack NVIC IRQ39.
+    bit_offset: 11
+    bit_size: 1
+  - name: INT12
+    description: SmartDMA hijack NVIC IRQ40.
+    bit_offset: 12
+    bit_size: 1
+  - name: INT13
+    description: SmartDMA hijack NVIC IRQ41.
+    bit_offset: 13
+    bit_size: 1
+  - name: INT14
+    description: SmartDMA hijack NVIC IRQ59.
+    bit_offset: 14
+    bit_size: 1
+  - name: INT15
+    description: SmartDMA hijack NVIC IRQ62.
+    bit_offset: 15
+    bit_size: 1
+  - name: INT16
+    description: SmartDMA hijack NVIC IRQ64.
+    bit_offset: 16
+    bit_size: 1
+  - name: INT17
+    description: SmartDMA hijack NVIC IRQ71.
+    bit_offset: 17
+    bit_size: 1
+  - name: INT18
+    description: SmartDMA hijack NVIC IRQ72.
+    bit_offset: 18
+    bit_size: 1
+  - name: INT19
+    description: SmartDMA hijack NVIC IRQ73.
+    bit_offset: 19
+    bit_size: 1
+  - name: INT20
+    description: SmartDMA hijack NVIC IRQ74.
+    bit_offset: 20
+    bit_size: 1
+  - name: INT21
+    description: SmartDMA hijack NVIC IRQ75.
+    bit_offset: 21
+    bit_size: 1
+enum/AHBCLKDIV_UNSTAB:
+  bit_size: 1
+  variants:
+  - name: STABLE
+    description: Divider clock is stable.
+    value: 0
+  - name: ONGOING
+    description: Clock frequency is not stable.
+    value: 1
+enum/AHBMATPRIO_CPU0_SBUS:
+  bit_size: 2
+  variants:
+  - name: LEVEL0
+    description: level 0.
+    value: 0
+  - name: LEVEL1
+    description: level 1.
+    value: 1
+  - name: LEVEL2
+    description: level 2.
+    value: 2
+  - name: LEVEL3
+    description: level 3.
+    value: 3
+enum/AHBMATPRIO_DMA0:
+  bit_size: 2
+  variants:
+  - name: LEVEL0
+    description: level 0.
+    value: 0
+  - name: LEVEL1
+    description: level 1.
+    value: 1
+  - name: LEVEL2
+    description: level 2.
+    value: 2
+  - name: LEVEL3
+    description: level 3.
+    value: 3
+enum/BUSCLKDIV_HALT:
+  bit_size: 1
+  variants:
+  - name: RUN
+    description: Divider clock is running.
+    value: 0
+  - name: HALT
+    description: Divider clock is stopped.
+    value: 1
+enum/BUSCLKDIV_RESET:
+  bit_size: 1
+  variants:
+  - name: RELEASED
+    description: Divider is not reset.
+    value: 0
+  - name: ASSERTED
+    description: Divider is reset.
+    value: 1
+enum/BUSCLKDIV_UNSTAB:
+  bit_size: 1
+  variants:
+  - name: STABLE
+    description: Divider clock is stable.
+    value: 0
+  - name: ONGOING
+    description: Clock frequency is not stable.
+    value: 1
+enum/CLR_LPCAC:
+  bit_size: 1
+  variants:
+  - name: ENABLE
+    description: Unclears the cache.
+    value: 0
+  - name: DISABLE
+    description: Clears the cache.
+    value: 1
+enum/CPU0LOCKUP:
+  bit_size: 1
+  variants:
+  - name: AWAKE
+    description: CPU is not in lockup.
+    value: 0
+  - name: SLEEPING
+    description: CPU is in lockup.
+    value: 1
+enum/CPU0SLEEPING:
+  bit_size: 1
+  variants:
+  - name: AWAKE
+    description: CPU is not sleeping.
+    value: 0
+  - name: SLEEPING
+    description: CPU is sleeping.
+    value: 1
+enum/CPU0_CBUS:
+  bit_size: 2
+  variants:
+  - name: LEVEL0
+    description: level 0.
+    value: 0
+  - name: LEVEL1
+    description: level 1.
+    value: 1
+  - name: LEVEL2
+    description: level 2.
+    value: 2
+  - name: LEVEL3
+    description: level 3.
+    value: 3
+enum/CPU1_CBUS_SmartDMA_I:
+  bit_size: 2
+  variants:
+  - name: LEVEL0
+    description: level 0.
+    value: 0
+  - name: LEVEL1
+    description: level 1.
+    value: 1
+  - name: LEVEL2
+    description: level 2.
+    value: 2
+  - name: LEVEL3
+    description: level 3.
+    value: 3
+enum/CPU1_SBUS_SmartDMA_D:
+  bit_size: 2
+  variants:
+  - name: LEVEL0
+    description: level 0.
+    value: 0
+  - name: LEVEL1
+    description: level 1.
+    value: 1
+  - name: LEVEL2
+    description: level 2.
+    value: 2
+  - name: LEVEL3
+    description: level 3.
+    value: 3
+enum/DEBUG_FEATURES_CPU0_DBGEN:
+  bit_size: 2
+  variants:
+  - name: DISABLE
+    description: Disables debug.
+    value: 1
+  - name: ENABLE
+    description: Enables debug.
+    value: 2
+enum/DEBUG_FEATURES_CPU0_NIDEN:
+  bit_size: 2
+  variants:
+  - name: DISABLE
+    description: Disables debug.
+    value: 1
+  - name: ENABLE
+    description: Enables debug.
+    value: 2
+enum/DEBUG_FEATURES_DP_CPU0_DBGEN:
+  bit_size: 2
+  variants:
+  - name: DISABLE
+    description: Disables debug.
+    value: 1
+  - name: ENABLE
+    description: Enables debug.
+    value: 2
+enum/DEBUG_FEATURES_DP_CPU0_NIDEN:
+  bit_size: 2
+  variants:
+  - name: DISABLE
+    description: Disables debug.
+    value: 1
+  - name: ENABLE
+    description: Enables debug.
+    value: 2
+enum/DEVICE_TYPE_PKG:
+  bit_size: 4
+  variants:
+  - name: HLQFP
+    description: HLQFP.
+    value: 0
+  - name: HTQFP
+    description: HTQFP.
+    value: 1
+  - name: BGA
+    description: BGA.
+    value: 2
+  - name: HDQFP
+    description: HDQFP.
+    value: 3
+  - name: QFN
+    description: QFN.
+    value: 4
+  - name: CSP
+    description: CSP.
+    value: 5
+  - name: LQFP
+    description: LQFP.
+    value: 6
+enum/DEVICE_TYPE_SEC:
+  bit_size: 1
+  variants:
+  - name: NON_SEC
+    description: Non Secure.
+    value: 0
+  - name: SEC
+    description: Secure.
+    value: 1
+enum/DIS_DATA_SPEC:
+  bit_size: 1
+  variants:
+  - name: ENABLE
+    description: Enables data speculation.
+    value: 0
+  - name: DISABLE
+    description: Disables data speculation.
+    value: 1
+enum/DIS_FLASH_SPEC:
+  bit_size: 1
+  variants:
+  - name: ENABLE
+    description: Enables flash speculation.
+    value: 0
+  - name: DISABLE
+    description: Disables flash speculation.
+    value: 1
+enum/DIS_LPCAC:
+  bit_size: 1
+  variants:
+  - name: ENABLE
+    description: Enabled.
+    value: 0
+  - name: DISABLE
+    description: Disabled.
+    value: 1
+enum/DIS_MBECC_ERR_DATA:
+  bit_size: 1
+  variants:
+  - name: ENABLE
+    description: Enables bus error on multi-bit ECC error for data.
+    value: 0
+  - name: DISABLE
+    description: Disables bus error on multi-bit ECC error for data.
+    value: 1
+enum/DIS_MBECC_ERR_INST:
+  bit_size: 1
+  variants:
+  - name: ENABLE
+    description: Enables bus error on multi-bit ECC error for instruction.
+    value: 0
+  - name: DISABLE
+    description: Disables bus error on multi-bit ECC error for instruction.
+    value: 1
+enum/FLASH_SIZE:
+  bit_size: 4
+  variants:
+  - name: SIZE_32KB
+    description: 32KB.
+    value: 0
+  - name: SIZE_64KB
+    description: 64KB.
+    value: 1
+  - name: SIZE_128KB
+    description: 128KB.
+    value: 2
+  - name: SIZE_256KB
+    description: 256KB.
+    value: 3
+  - name: SIZE_512KB
+    description: 512KB.
+    value: 4
+  - name: SIZE_768KB
+    description: 768KB.
+    value: 5
+  - name: SIZE_1MB
+    description: 1MB.
+    value: 6
+  - name: SIZE_1P5MB
+    description: 1.5MB.
+    value: 7
+  - name: SIZE_2MB
+    description: 2MB.
+    value: 8
+enum/FLASH_STALL_EN:
+  bit_size: 1
+  variants:
+  - name: ENABLE
+    description: No stall on FLASH busy.
+    value: 0
+  - name: DISABLE
+    description: Stall on FLASH busy.
+    value: 1
+enum/FRC_NO_ALLOC:
+  bit_size: 1
+  variants:
+  - name: ENABLE
+    description: Forces allocation.
+    value: 0
+  - name: DISABLE
+    description: Forces no allocation.
+    value: 1
+enum/FROHFDIV_HALT:
+  bit_size: 1
+  variants:
+  - name: RUN
+    description: Divider clock is running.
+    value: 0
+  - name: HALT
+    description: Divider clock is stopped.
+    value: 1
+enum/FROHFDIV_RESET:
+  bit_size: 1
+  variants:
+  - name: RELEASED
+    description: Divider is not reset.
+    value: 0
+  - name: ASSERTED
+    description: Divider is reset.
+    value: 1
+enum/FROHFDIV_UNSTAB:
+  bit_size: 1
+  variants:
+  - name: STABLE
+    description: Divider clock is stable.
+    value: 0
+  - name: ONGOING
+    description: Clock frequency is not stable.
+    value: 1
+enum/FROLFDIV_HALT:
+  bit_size: 1
+  variants:
+  - name: RUN
+    description: Divider clock is running.
+    value: 0
+  - name: HALT
+    description: Divider clock is stopped.
+    value: 1
+enum/FROLFDIV_RESET:
+  bit_size: 1
+  variants:
+  - name: RELEASED
+    description: Divider is not reset.
+    value: 0
+  - name: ASSERTED
+    description: Divider is reset.
+    value: 1
+enum/FROLFDIV_UNSTAB:
+  bit_size: 1
+  variants:
+  - name: STABLE
+    description: Divider clock is stable.
+    value: 0
+  - name: ONGOING
+    description: Clock frequency is not stable.
+    value: 1
+enum/IFR_ERASE_DIS0:
+  bit_size: 1
+  variants:
+  - name: ENABLE
+    description: Enable IFR sector erase.
+    value: 0
+  - name: DISABLE
+    description: Disable IFR sector erase, write one lock until a system reset.
+    value: 1
+enum/IFR_ERASE_DIS1:
+  bit_size: 1
+  variants:
+  - name: ENABLE
+    description: Enable IFR sector erase.
+    value: 0
+  - name: DISABLE
+    description: Disable IFR sector erase, write one lock until a system reset.
+    value: 1
+enum/IFR_ERASE_DIS2:
+  bit_size: 1
+  variants:
+  - name: ENABLE
+    description: Enable IFR sector erase.
+    value: 0
+  - name: DISABLE
+    description: Disable IFR sector erase, write one lock until a system reset.
+    value: 1
+enum/IFR_ERASE_DIS3:
+  bit_size: 1
+  variants:
+  - name: ENABLE
+    description: Enable IFR sector erase.
+    value: 0
+  - name: DISABLE
+    description: Disable IFR sector erase, write one lock until a system reset.
+    value: 1
+enum/INTERLEAVE:
+  bit_size: 1
+  variants:
+  - name: NORMAL
+    description: RAM access is consecutive.
+    value: 0
+  - name: INTERLEAVE
+    description: RAM access is interleaved. This setting is need for PKC L0 memory access.
+    value: 1
+enum/LOCKNSMPU:
+  bit_size: 1
+  variants:
+  - name: ENABLE
+    description: Unlock these registers. privileged access to Nonsecure MPU memory regions is allowed.
+    value: 0
+  - name: DISABLE
+    description: Disable writes to the MPU_CTRL_NS, MPU_RNR_NS, MPU_RBAR_NS, MPU_RLAR_NS, MPU_RBAR_A_NSn and MPU_RLAR_A_NSn. All writes to the registers are ignored.
+    value: 1
+enum/LOCK_ALL:
+  bit_size: 4
+  variants:
+  - name: DISABLE
+    description: 'Any other value than b1010: disables write access to all registers.'
+    value: 0
+  - name: ENABLE
+    description: Enables write access to all registers.
+    value: 10
+enum/MASS_ERASE_DIS:
+  bit_size: 1
+  variants:
+  - name: ENABLE
+    description: Enables mass erase.
+    value: 0
+  - name: DISABLE
+    description: Disables mass erase, write one lock until a system reset.
+    value: 1
+enum/NOREF:
+  bit_size: 1
+  variants:
+  - name: YES_REF
+    description: Reference clock is provided.
+    value: 0
+  - name: NO_REF
+    description: No reference clock is provided.
+    value: 1
+enum/PKC:
+  bit_size: 2
+  variants:
+  - name: PKC_0
+    description: 'RAMX0: alias space is disabled.'
+    value: 0
+  - name: PKC_1
+    description: 'RAMX0: same alias space as CPU0_SBUS.'
+    value: 1
+enum/PKC_ELS:
+  bit_size: 2
+  variants:
+  - name: LEVEL0
+    description: level 0.
+    value: 0
+  - name: LEVEL1
+    description: level 1.
+    value: 1
+  - name: LEVEL2
+    description: level 2.
+    value: 2
+  - name: LEVEL3
+    description: level 3.
+    value: 3
+enum/PLL1CLKDIV_HALT:
+  bit_size: 1
+  variants:
+  - name: RUN
+    description: Divider clock is running.
+    value: 0
+  - name: HALT
+    description: Divider clock is stopped.
+    value: 1
+enum/PLL1CLKDIV_RESET:
+  bit_size: 1
+  variants:
+  - name: RELEASED
+    description: Divider is not reset.
+    value: 0
+  - name: ASSERTED
+    description: Divider is reset.
+    value: 1
+enum/PLL1CLKDIV_UNSTAB:
+  bit_size: 1
+  variants:
+  - name: STABLE
+    description: Divider clock is stable.
+    value: 0
+  - name: ONGOING
+    description: Clock frequency is not stable.
+    value: 1
+enum/PROTLVL_LOCK:
+  bit_size: 1
+  variants:
+  - name: LOCK_0
+    description: This register is not locked and can be altered.
+    value: 0
+  - name: LOCK_1
+    description: This register is locked and cannot be altered until a system reset.
+    value: 1
+enum/RAM_SIZE:
+  bit_size: 4
+  variants:
+  - name: SIZE_8KB
+    description: 8KB.
+    value: 0
+  - name: SIZE_16KB
+    description: 16KB.
+    value: 1
+  - name: SIZE_32KB
+    description: 32KB.
+    value: 2
+  - name: SIZE_64KB
+    description: 64KB.
+    value: 3
+  - name: SIZE_96KB
+    description: 96KB.
+    value: 4
+  - name: SIZE_128KB
+    description: 128KB.
+    value: 5
+  - name: SIZE_160KB
+    description: 160KB.
+    value: 6
+  - name: SIZE_192KB
+    description: 192KB.
+    value: 7
+  - name: SIZE_256KB
+    description: 256KB.
+    value: 8
+  - name: SIZE_288KB
+    description: 288KB.
+    value: 9
+  - name: SIZE_352KB
+    description: 352KB.
+    value: 10
+  - name: SIZE_512KB
+    description: 512KB.
+    value: 11
+enum/REMAP_CPU0_SBUS:
+  bit_size: 2
+  variants:
+  - name: CPU0_SBUS_0
+    description: 'RAMX0: alias space is disabled.'
+    value: 0
+  - name: CPU0_SBUS_1
+    description: 'RAMX0: alias space is enabled. It''s linear address space from bottom of system ram. The start address is 0x20000000 + (system ram size - RAMX size)*1024.'
+    value: 1
+enum/REMAP_DMA0:
+  bit_size: 2
+  variants:
+  - name: DMA0_0
+    description: 'RAMX0: alias space is disabled.'
+    value: 0
+  - name: DMA0_1
+    description: 'RAMX0: same alias space as CPU0_SBUS.'
+    value: 1
+enum/REMAP_LOCK:
+  bit_size: 1
+  variants:
+  - name: LOCK_0
+    description: This register is not locked and can be altered.
+    value: 0
+  - name: LOCK_1
+    description: This register is locked and cannot be altered until a system reset.
+    value: 1
+enum/SECURITY:
+  bit_size: 4
+  variants:
+  - name: NON_SEC
+    description: Secure version.
+    value: 5
+  - name: SECURITY_10
+    description: Non secure version.
+    value: 10
+enum/SEC_CODE:
+  bit_size: 32
+  variants:
+  - name: DISABLE
+    description: CPU0 DAP is not allowed. Reading back register is read as 0x5.
+    value: 0
+  - name: ENABLE
+    description: Value to write to enable CPU0 SWD access. Reading back register is read as 0xA.
+    value: 305419896
+enum/SKEW:
+  bit_size: 1
+  variants:
+  - name: EXACT
+    description: TENMS value is exact.
+    value: 0
+  - name: INEXACT
+    description: TENMS value is not exact or not given.
+    value: 1
+enum/SLOWCLKDIV_HALT:
+  bit_size: 1
+  variants:
+  - name: RUN
+    description: Divider clock is running.
+    value: 0
+  - name: HALT
+    description: Divider clock is stopped.
+    value: 1
+enum/SLOWCLKDIV_RESET:
+  bit_size: 1
+  variants:
+  - name: RELEASED
+    description: Divider is not reset.
+    value: 0
+  - name: ASSERTED
+    description: Divider is reset.
+    value: 1
+enum/SLOWCLKDIV_UNSTAB:
+  bit_size: 1
+  variants:
+  - name: STABLE
+    description: Divider clock is stable.
+    value: 0
+  - name: ONGOING
+    description: Clock frequency is not stable.
+    value: 1
+enum/SRAM_XEN_LOCK:
+  bit_size: 1
+  variants:
+  - name: LOCK_0
+    description: This register is not locked and can be altered.
+    value: 0
+  - name: LOCK_1
+    description: This register is locked and cannot be altered.
+    value: 1
+enum/SmartDMA_D:
+  bit_size: 2
+  variants:
+  - name: SmartDMA_D_0
+    description: 'RAMX0: alias space is disabled.'
+    value: 0
+  - name: SmartDMA_D_1
+    description: 'RAMX0: same alias space as CPU0_SBUS.'
+    value: 1
+enum/SmartDMA_I:
+  bit_size: 2
+  variants:
+  - name: SmartDMA_I_0
+    description: 'RAMX0: alias space is disabled.'
+    value: 0
+  - name: SmartDMA_I_1
+    description: 'RAMX0: same alias space as CPU0_SBUS.'
+    value: 1
+enum/UNLOCK:
+  bit_size: 1
+  variants:
+  - name: ENABLE
+    description: Updates are allowed to all clock configuration registers.
+    value: 0
+  - name: FREEZE
+    description: Freezes all clock configuration registers update.
+    value: 1
+enum/USB0:
+  bit_size: 2
+  variants:
+  - name: USB0_0
+    description: 'RAMX0: alias space is disabled.'
+    value: 0
+  - name: USB0_1
+    description: 'RAMX0: same alias space as CPU0_SBUS.'
+    value: 1
+enum/USB_FS_ENET:
+  bit_size: 2
+  variants:
+  - name: LEVEL0
+    description: level 0.
+    value: 0
+  - name: LEVEL1
+    description: level 1.
+    value: 1
+  - name: LEVEL2
+    description: level 2.
+    value: 2
+  - name: LEVEL3
+    description: level 3.
+    value: 3
