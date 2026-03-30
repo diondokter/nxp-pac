@@ -60,7 +60,7 @@ impl Ahbsc {
     pub const fn ramx_mem_rule(
         self,
         n: usize,
-    ) -> crate::common::Reg<regs::RamxMemRule, crate::common::RW> {
+    ) -> crate::common::Reg<regs::RamMemRule, crate::common::RW> {
         assert!(n < 4usize);
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x80usize + n * 4usize) as _) }
     }
@@ -69,7 +69,7 @@ impl Ahbsc {
     pub const fn rama_mem_rule(
         self,
         n: usize,
-    ) -> crate::common::Reg<regs::RamaMemRule, crate::common::RW> {
+    ) -> crate::common::Reg<regs::RamMemRule, crate::common::RW> {
         assert!(n < 8usize);
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xa0usize + n * 4usize) as _) }
     }
@@ -78,7 +78,7 @@ impl Ahbsc {
     pub const fn ramb_mem_rule(
         self,
         n: usize,
-    ) -> crate::common::Reg<regs::RambMemRule, crate::common::RW> {
+    ) -> crate::common::Reg<regs::RamMemRule, crate::common::RW> {
         assert!(n < 8usize);
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0xd0usize + n * 4usize) as _) }
     }
@@ -321,53 +321,14 @@ impl Ahbsc {
     }
     #[doc = "Secure general purpose registers"]
     #[inline(always)]
-    pub const fn sec_gp_reg0(self) -> crate::common::Reg<regs::SecGpReg0, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0f80usize) as _) }
-    }
-    #[doc = "Secure general purpose registers"]
-    #[inline(always)]
-    pub const fn sec_gp_reg1(self) -> crate::common::Reg<regs::SecGpReg1, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0f84usize) as _) }
-    }
-    #[doc = "Secure general purpose registers"]
-    #[inline(always)]
-    pub const fn sec_gp_reg2(self) -> crate::common::Reg<regs::SecGpReg2, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0f88usize) as _) }
-    }
-    #[doc = "Secure general purpose registers"]
-    #[inline(always)]
-    pub const fn sec_gp_reg3(self) -> crate::common::Reg<regs::SecGpReg3, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0f8cusize) as _) }
-    }
-    #[doc = "Secure general purpose registers"]
-    #[inline(always)]
-    pub const fn sec_gp_reg4(self) -> crate::common::Reg<regs::SecGpReg4, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0f90usize) as _) }
-    }
-    #[doc = "Secure general purpose registers"]
-    #[inline(always)]
-    pub const fn sec_gp_reg5(self) -> crate::common::Reg<regs::SecGpReg5, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0f94usize) as _) }
-    }
-    #[doc = "Secure general purpose registers"]
-    #[inline(always)]
-    pub const fn sec_gp_reg6(self) -> crate::common::Reg<regs::SecGpReg6, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0f98usize) as _) }
-    }
-    #[doc = "Secure general purpose registers"]
-    #[inline(always)]
-    pub const fn sec_gp_reg7(self) -> crate::common::Reg<regs::SecGpReg7, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0f9cusize) as _) }
-    }
-    #[doc = "Secure general purpose registers"]
-    #[inline(always)]
-    pub const fn sec_gp_reg8(self) -> crate::common::Reg<regs::SecGpReg8, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0fa0usize) as _) }
-    }
-    #[doc = "Secure general purpose registers"]
-    #[inline(always)]
-    pub const fn sec_gp_reg9(self) -> crate::common::Reg<regs::SecGpReg9, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0fa4usize) as _) }
+    pub const fn sec_gp_reg(
+        self,
+        n: usize,
+    ) -> crate::common::Reg<regs::SecGpReg, crate::common::RW> {
+        assert!(n < 10usize);
+        unsafe {
+            crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0f80usize + n * 4usize) as _)
+        }
     }
     #[doc = "Master Secure Level"]
     #[inline(always)]

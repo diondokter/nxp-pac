@@ -1,0 +1,49 @@
+transforms:
+  # Temporarily move everything that is not a Rule someplace else
+  - !Rename
+    from: ahbsc::vals::(Lock.+|Master.+|MiscCtrl.+|SecVio.+)
+    to: ahbsc::vals_misc::$1
+
+  # Merge all identical rules
+  - !MergeEnums
+    from: ahbsc::vals::.+
+    to: ahbsc::vals::Rule
+
+  # Move everything back
+  - !Rename
+    from: ahbsc::vals_misc::(.+)
+    to: ahbsc::vals::$1
+
+  # Fix the rest
+  - !MergeEnums
+    from: ahbsc::vals::MasterSec.+
+    to: ahbsc::vals::MasterSec
+  - !MergeEnums
+    from: ahbsc::vals::MiscCtrl(Dp)?Reg(.+)
+    to: ahbsc::vals::MiscCtrlReg$2
+  - !MergeEnums
+    from: ahbsc::vals::MiscCtrlReg(Enable.+)
+    to: ahbsc::vals::MiscCtrlEnable
+
+  - !MakeFieldArray
+    fieldsets: ahbsc::regs::(.+MemRule|AhbSecureCtrlMemRule0)
+    from: rule(\d+)
+    to: rule
+
+  - !MergeFieldsets
+    from: ahbsc::regs::Ram[abx]MemRule
+    to: ahbsc::regs::RamMemRule
+
+  - !MakeFieldArray
+    fieldsets: ahbsc::regs::SecGpReg\d+
+    from: dma[01]_ipd_req_\d+
+    to: dma_ipd_req
+
+  - !MergeFieldsets
+    from: ahbsc::regs::SecGpReg\d+
+    to: ahbsc::regs::SecGpReg
+
+  - !MakeRegisterArray
+    blocks: ahbsc::Ahbsc
+    from: sec_gp_reg\d+
+    to: sec_gp_reg

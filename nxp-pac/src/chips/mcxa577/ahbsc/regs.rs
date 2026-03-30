@@ -6,25 +6,25 @@ impl AhbPeripheral0MemRule1 {
     #[doc = "GPIO0"]
     #[must_use]
     #[inline(always)]
-    pub const fn gpio0(&self) -> super::vals::Gpio0 {
+    pub const fn gpio0(&self) -> super::vals::Rule {
         let val = (self.0 >> 0usize) & 0x03;
-        super::vals::Gpio0::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "GPIO0"]
     #[inline(always)]
-    pub const fn set_gpio0(&mut self, val: super::vals::Gpio0) {
+    pub const fn set_gpio0(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
     #[doc = "GPIO0 ALIAS"]
     #[must_use]
     #[inline(always)]
-    pub const fn gpio0_alias(&self) -> super::vals::Gpio0Alias {
+    pub const fn gpio0_alias(&self) -> super::vals::Rule {
         let val = (self.0 >> 4usize) & 0x03;
-        super::vals::Gpio0Alias::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "GPIO0 ALIAS"]
     #[inline(always)]
-    pub const fn set_gpio0_alias(&mut self, val: super::vals::Gpio0Alias) {
+    pub const fn set_gpio0_alias(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
 }
@@ -61,25 +61,25 @@ impl AhbPeripheral0MemRule2 {
     #[doc = "GPIO1"]
     #[must_use]
     #[inline(always)]
-    pub const fn gpio1(&self) -> super::vals::Gpio1 {
+    pub const fn gpio1(&self) -> super::vals::Rule {
         let val = (self.0 >> 0usize) & 0x03;
-        super::vals::Gpio1::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "GPIO1"]
     #[inline(always)]
-    pub const fn set_gpio1(&mut self, val: super::vals::Gpio1) {
+    pub const fn set_gpio1(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
     #[doc = "GPIO1 ALIAS"]
     #[must_use]
     #[inline(always)]
-    pub const fn gpio1_alias(&self) -> super::vals::Gpio1Alias {
+    pub const fn gpio1_alias(&self) -> super::vals::Rule {
         let val = (self.0 >> 4usize) & 0x03;
-        super::vals::Gpio1Alias::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "GPIO1 ALIAS"]
     #[inline(always)]
-    pub const fn set_gpio1_alias(&mut self, val: super::vals::Gpio1Alias) {
+    pub const fn set_gpio1_alias(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
 }
@@ -116,25 +116,25 @@ impl AhbPeripheral0MemRule3 {
     #[doc = "GPIO2"]
     #[must_use]
     #[inline(always)]
-    pub const fn gpio2(&self) -> super::vals::Gpio2 {
+    pub const fn gpio2(&self) -> super::vals::Rule {
         let val = (self.0 >> 0usize) & 0x03;
-        super::vals::Gpio2::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "GPIO2"]
     #[inline(always)]
-    pub const fn set_gpio2(&mut self, val: super::vals::Gpio2) {
+    pub const fn set_gpio2(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
     #[doc = "GPIO2 ALIAS"]
     #[must_use]
     #[inline(always)]
-    pub const fn gpio2_alias(&self) -> super::vals::Gpio2Alias {
+    pub const fn gpio2_alias(&self) -> super::vals::Rule {
         let val = (self.0 >> 4usize) & 0x03;
-        super::vals::Gpio2Alias::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "GPIO2 ALIAS"]
     #[inline(always)]
-    pub const fn set_gpio2_alias(&mut self, val: super::vals::Gpio2Alias) {
+    pub const fn set_gpio2_alias(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
 }
@@ -171,25 +171,25 @@ impl AhbPeripheral0MemRule4 {
     #[doc = "GPIO3"]
     #[must_use]
     #[inline(always)]
-    pub const fn gpio3(&self) -> super::vals::Gpio3 {
+    pub const fn gpio3(&self) -> super::vals::Rule {
         let val = (self.0 >> 0usize) & 0x03;
-        super::vals::Gpio3::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "GPIO3"]
     #[inline(always)]
-    pub const fn set_gpio3(&mut self, val: super::vals::Gpio3) {
+    pub const fn set_gpio3(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
     #[doc = "GPIO3 ALIAS"]
     #[must_use]
     #[inline(always)]
-    pub const fn gpio3_alias(&self) -> super::vals::Gpio3Alias {
+    pub const fn gpio3_alias(&self) -> super::vals::Rule {
         let val = (self.0 >> 4usize) & 0x03;
-        super::vals::Gpio3Alias::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "GPIO3 ALIAS"]
     #[inline(always)]
-    pub const fn set_gpio3_alias(&mut self, val: super::vals::Gpio3Alias) {
+    pub const fn set_gpio3_alias(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
 }
@@ -226,25 +226,25 @@ impl AhbPeripheral0MemRule5 {
     #[doc = "GPIO4"]
     #[must_use]
     #[inline(always)]
-    pub const fn gpio4(&self) -> super::vals::Gpio4 {
+    pub const fn gpio4(&self) -> super::vals::Rule {
         let val = (self.0 >> 0usize) & 0x03;
-        super::vals::Gpio4::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "GPIO4"]
     #[inline(always)]
-    pub const fn set_gpio4(&mut self, val: super::vals::Gpio4) {
+    pub const fn set_gpio4(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
     #[doc = "GPIO4 ALIAS"]
     #[must_use]
     #[inline(always)]
-    pub const fn gpio4_alias(&self) -> super::vals::Gpio4Alias {
+    pub const fn gpio4_alias(&self) -> super::vals::Rule {
         let val = (self.0 >> 4usize) & 0x03;
-        super::vals::Gpio4Alias::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "GPIO4 ALIAS"]
     #[inline(always)]
-    pub const fn set_gpio4_alias(&mut self, val: super::vals::Gpio4Alias) {
+    pub const fn set_gpio4_alias(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
 }
@@ -281,50 +281,18 @@ impl AhbSecureCtrlMemRule0 {
     #[doc = "AHBSC"]
     #[must_use]
     #[inline(always)]
-    pub const fn rule0(&self) -> super::vals::AhbSecureCtrlMemRule0Rule0 {
-        let val = (self.0 >> 0usize) & 0x03;
-        super::vals::AhbSecureCtrlMemRule0Rule0::from_bits(val as u8)
+    pub const fn rule(&self, n: usize) -> super::vals::Rule {
+        assert!(n < 4usize);
+        let offs = 0usize + n * 4usize;
+        let val = (self.0 >> offs) & 0x03;
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "AHBSC"]
     #[inline(always)]
-    pub const fn set_rule0(&mut self, val: super::vals::AhbSecureCtrlMemRule0Rule0) {
-        self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
-    }
-    #[doc = "AHBSC ALIAS0"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule1(&self) -> super::vals::AhbSecureCtrlMemRule0Rule1 {
-        let val = (self.0 >> 4usize) & 0x03;
-        super::vals::AhbSecureCtrlMemRule0Rule1::from_bits(val as u8)
-    }
-    #[doc = "AHBSC ALIAS0"]
-    #[inline(always)]
-    pub const fn set_rule1(&mut self, val: super::vals::AhbSecureCtrlMemRule0Rule1) {
-        self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
-    }
-    #[doc = "AHBSC ALIAS1"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule2(&self) -> super::vals::AhbSecureCtrlMemRule0Rule2 {
-        let val = (self.0 >> 8usize) & 0x03;
-        super::vals::AhbSecureCtrlMemRule0Rule2::from_bits(val as u8)
-    }
-    #[doc = "AHBSC ALIAS1"]
-    #[inline(always)]
-    pub const fn set_rule2(&mut self, val: super::vals::AhbSecureCtrlMemRule0Rule2) {
-        self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
-    }
-    #[doc = "AHBSC ALIAS2"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule3(&self) -> super::vals::AhbSecureCtrlMemRule0Rule3 {
-        let val = (self.0 >> 12usize) & 0x03;
-        super::vals::AhbSecureCtrlMemRule0Rule3::from_bits(val as u8)
-    }
-    #[doc = "AHBSC ALIAS2"]
-    #[inline(always)]
-    pub const fn set_rule3(&mut self, val: super::vals::AhbSecureCtrlMemRule0Rule3) {
-        self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
+    pub const fn set_rule(&mut self, n: usize, val: super::vals::Rule) {
+        assert!(n < 4usize);
+        let offs = 0usize + n * 4usize;
+        self.0 = (self.0 & !(0x03 << offs)) | (((val.to_bits() as u32) & 0x03) << offs);
     }
 }
 impl Default for AhbSecureCtrlMemRule0 {
@@ -336,10 +304,10 @@ impl Default for AhbSecureCtrlMemRule0 {
 impl core::fmt::Debug for AhbSecureCtrlMemRule0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AhbSecureCtrlMemRule0")
-            .field("rule0", &self.rule0())
-            .field("rule1", &self.rule1())
-            .field("rule2", &self.rule2())
-            .field("rule3", &self.rule3())
+            .field("rule[0]", &self.rule(0usize))
+            .field("rule[1]", &self.rule(1usize))
+            .field("rule[2]", &self.rule(2usize))
+            .field("rule[3]", &self.rule(3usize))
             .finish()
     }
 }
@@ -348,11 +316,11 @@ impl defmt::Format for AhbSecureCtrlMemRule0 {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "AhbSecureCtrlMemRule0 {{ rule0: {:?}, rule1: {:?}, rule2: {:?}, rule3: {:?} }}",
-            self.rule0(),
-            self.rule1(),
-            self.rule2(),
-            self.rule3()
+            "AhbSecureCtrlMemRule0 {{ rule[0]: {:?}, rule[1]: {:?}, rule[2]: {:?}, rule[3]: {:?} }}",
+            self.rule(0usize),
+            self.rule(1usize),
+            self.rule(2usize),
+            self.rule(3usize)
         )
     }
 }
@@ -364,49 +332,49 @@ impl AhbSlavePortP5SlaveRule0 {
     #[doc = "CDOG0"]
     #[must_use]
     #[inline(always)]
-    pub const fn cdog0(&self) -> super::vals::Cdog0 {
+    pub const fn cdog0(&self) -> super::vals::Rule {
         let val = (self.0 >> 12usize) & 0x03;
-        super::vals::Cdog0::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "CDOG0"]
     #[inline(always)]
-    pub const fn set_cdog0(&mut self, val: super::vals::Cdog0) {
+    pub const fn set_cdog0(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
     }
     #[doc = "CDOG1"]
     #[must_use]
     #[inline(always)]
-    pub const fn cdog1(&self) -> super::vals::Cdog1 {
+    pub const fn cdog1(&self) -> super::vals::Rule {
         let val = (self.0 >> 16usize) & 0x03;
-        super::vals::Cdog1::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "CDOG1"]
     #[inline(always)]
-    pub const fn set_cdog1(&mut self, val: super::vals::Cdog1) {
+    pub const fn set_cdog1(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
     #[doc = "DEBUG_MAILBOX"]
     #[must_use]
     #[inline(always)]
-    pub const fn debug_mailbox(&self) -> super::vals::DebugMailbox {
+    pub const fn debug_mailbox(&self) -> super::vals::Rule {
         let val = (self.0 >> 20usize) & 0x03;
-        super::vals::DebugMailbox::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "DEBUG_MAILBOX"]
     #[inline(always)]
-    pub const fn set_debug_mailbox(&mut self, val: super::vals::DebugMailbox) {
+    pub const fn set_debug_mailbox(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
     }
     #[doc = "Rule 6"]
     #[must_use]
     #[inline(always)]
-    pub const fn mau0(&self) -> super::vals::Mau0 {
+    pub const fn mau0(&self) -> super::vals::Rule {
         let val = (self.0 >> 24usize) & 0x03;
-        super::vals::Mau0::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "Rule 6"]
     #[inline(always)]
-    pub const fn set_mau0(&mut self, val: super::vals::Mau0) {
+    pub const fn set_mau0(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
     }
 }
@@ -447,97 +415,97 @@ impl AipsBridgeGroup0MemRule0 {
     #[doc = "EWM0"]
     #[must_use]
     #[inline(always)]
-    pub const fn ewm0(&self) -> super::vals::Ewm0 {
+    pub const fn ewm0(&self) -> super::vals::Rule {
         let val = (self.0 >> 0usize) & 0x03;
-        super::vals::Ewm0::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "EWM0"]
     #[inline(always)]
-    pub const fn set_ewm0(&mut self, val: super::vals::Ewm0) {
+    pub const fn set_ewm0(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
     #[doc = "ROMCP"]
     #[must_use]
     #[inline(always)]
-    pub const fn romcp(&self) -> super::vals::Romcp {
+    pub const fn romcp(&self) -> super::vals::Rule {
         let val = (self.0 >> 4usize) & 0x03;
-        super::vals::Romcp::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "ROMCP"]
     #[inline(always)]
-    pub const fn set_romcp(&mut self, val: super::vals::Romcp) {
+    pub const fn set_romcp(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
     #[doc = "PKC0"]
     #[must_use]
     #[inline(always)]
-    pub const fn pkc0(&self) -> super::vals::Pkc0 {
+    pub const fn pkc0(&self) -> super::vals::Rule {
         let val = (self.0 >> 8usize) & 0x03;
-        super::vals::Pkc0::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "PKC0"]
     #[inline(always)]
-    pub const fn set_pkc0(&mut self, val: super::vals::Pkc0) {
+    pub const fn set_pkc0(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
     #[doc = "DMA_1_MP"]
     #[must_use]
     #[inline(always)]
-    pub const fn dma_1_mp(&self) -> super::vals::Dma1Mp {
+    pub const fn dma_1_mp(&self) -> super::vals::Rule {
         let val = (self.0 >> 12usize) & 0x03;
-        super::vals::Dma1Mp::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "DMA_1_MP"]
     #[inline(always)]
-    pub const fn set_dma_1_mp(&mut self, val: super::vals::Dma1Mp) {
+    pub const fn set_dma_1_mp(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
     }
     #[doc = "DMA_1_CH0"]
     #[must_use]
     #[inline(always)]
-    pub const fn dma_1_ch0(&self) -> super::vals::Dma1Ch0 {
+    pub const fn dma_1_ch0(&self) -> super::vals::Rule {
         let val = (self.0 >> 16usize) & 0x03;
-        super::vals::Dma1Ch0::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "DMA_1_CH0"]
     #[inline(always)]
-    pub const fn set_dma_1_ch0(&mut self, val: super::vals::Dma1Ch0) {
+    pub const fn set_dma_1_ch0(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
     #[doc = "DMA_1_CH1"]
     #[must_use]
     #[inline(always)]
-    pub const fn dma_1_ch1(&self) -> super::vals::Dma1Ch1 {
+    pub const fn dma_1_ch1(&self) -> super::vals::Rule {
         let val = (self.0 >> 20usize) & 0x03;
-        super::vals::Dma1Ch1::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "DMA_1_CH1"]
     #[inline(always)]
-    pub const fn set_dma_1_ch1(&mut self, val: super::vals::Dma1Ch1) {
+    pub const fn set_dma_1_ch1(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
     }
     #[doc = "DMA_1_CH2"]
     #[must_use]
     #[inline(always)]
-    pub const fn dma_1_ch2(&self) -> super::vals::Dma1Ch2 {
+    pub const fn dma_1_ch2(&self) -> super::vals::Rule {
         let val = (self.0 >> 24usize) & 0x03;
-        super::vals::Dma1Ch2::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "DMA_1_CH2"]
     #[inline(always)]
-    pub const fn set_dma_1_ch2(&mut self, val: super::vals::Dma1Ch2) {
+    pub const fn set_dma_1_ch2(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
     }
     #[doc = "DMA_1_CH3"]
     #[must_use]
     #[inline(always)]
-    pub const fn dma_1_ch3(&self) -> super::vals::Dma1Ch3 {
+    pub const fn dma_1_ch3(&self) -> super::vals::Rule {
         let val = (self.0 >> 28usize) & 0x03;
-        super::vals::Dma1Ch3::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "DMA_1_CH3"]
     #[inline(always)]
-    pub const fn set_dma_1_ch3(&mut self, val: super::vals::Dma1Ch3) {
+    pub const fn set_dma_1_ch3(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
     }
 }
@@ -586,37 +554,37 @@ impl AipsBridgeGroup0MemRule1 {
     #[doc = "ENET0_0"]
     #[must_use]
     #[inline(always)]
-    pub const fn enet0_0(&self) -> super::vals::Enet00 {
+    pub const fn enet0_0(&self) -> super::vals::Rule {
         let val = (self.0 >> 16usize) & 0x03;
-        super::vals::Enet00::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "ENET0_0"]
     #[inline(always)]
-    pub const fn set_enet0_0(&mut self, val: super::vals::Enet00) {
+    pub const fn set_enet0_0(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
     #[doc = "ENET0_1"]
     #[must_use]
     #[inline(always)]
-    pub const fn enet0_1(&self) -> super::vals::Enet01 {
+    pub const fn enet0_1(&self) -> super::vals::Rule {
         let val = (self.0 >> 20usize) & 0x03;
-        super::vals::Enet01::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "ENET0_1"]
     #[inline(always)]
-    pub const fn set_enet0_1(&mut self, val: super::vals::Enet01) {
+    pub const fn set_enet0_1(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
     }
     #[doc = "eSPI"]
     #[must_use]
     #[inline(always)]
-    pub const fn e_spi(&self) -> super::vals::ESpi {
+    pub const fn e_spi(&self) -> super::vals::Rule {
         let val = (self.0 >> 28usize) & 0x03;
-        super::vals::ESpi::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "eSPI"]
     #[inline(always)]
-    pub const fn set_e_spi(&mut self, val: super::vals::ESpi) {
+    pub const fn set_e_spi(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
     }
 }
@@ -655,61 +623,61 @@ impl AipsBridgeGroup1MemRule0 {
     #[doc = "FLEXSPI0"]
     #[must_use]
     #[inline(always)]
-    pub const fn flexspi0(&self) -> super::vals::Flexspi0 {
+    pub const fn flexspi0(&self) -> super::vals::Rule {
         let val = (self.0 >> 0usize) & 0x03;
-        super::vals::Flexspi0::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "FLEXSPI0"]
     #[inline(always)]
-    pub const fn set_flexspi0(&mut self, val: super::vals::Flexspi0) {
+    pub const fn set_flexspi0(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
     #[doc = "LPSPI2"]
     #[must_use]
     #[inline(always)]
-    pub const fn lpspi2(&self) -> super::vals::Lpspi2 {
+    pub const fn lpspi2(&self) -> super::vals::Rule {
         let val = (self.0 >> 4usize) & 0x03;
-        super::vals::Lpspi2::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "LPSPI2"]
     #[inline(always)]
-    pub const fn set_lpspi2(&mut self, val: super::vals::Lpspi2) {
+    pub const fn set_lpspi2(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
     #[doc = "LPSPI3"]
     #[must_use]
     #[inline(always)]
-    pub const fn lpspi3(&self) -> super::vals::Lpspi3 {
+    pub const fn lpspi3(&self) -> super::vals::Rule {
         let val = (self.0 >> 8usize) & 0x03;
-        super::vals::Lpspi3::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "LPSPI3"]
     #[inline(always)]
-    pub const fn set_lpspi3(&mut self, val: super::vals::Lpspi3) {
+    pub const fn set_lpspi3(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
     #[doc = "LPSPI4"]
     #[must_use]
     #[inline(always)]
-    pub const fn lpspi4(&self) -> super::vals::Lpspi4 {
+    pub const fn lpspi4(&self) -> super::vals::Rule {
         let val = (self.0 >> 12usize) & 0x03;
-        super::vals::Lpspi4::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "LPSPI4"]
     #[inline(always)]
-    pub const fn set_lpspi4(&mut self, val: super::vals::Lpspi4) {
+    pub const fn set_lpspi4(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
     }
     #[doc = "LPSPI5"]
     #[must_use]
     #[inline(always)]
-    pub const fn lpspi5(&self) -> super::vals::Lpspi5 {
+    pub const fn lpspi5(&self) -> super::vals::Rule {
         let val = (self.0 >> 16usize) & 0x03;
-        super::vals::Lpspi5::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "LPSPI5"]
     #[inline(always)]
-    pub const fn set_lpspi5(&mut self, val: super::vals::Lpspi5) {
+    pub const fn set_lpspi5(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
 }
@@ -752,49 +720,49 @@ impl AipsBridgeGroup1MemRule1 {
     #[doc = "SPI_FILETER0"]
     #[must_use]
     #[inline(always)]
-    pub const fn spi_fileter0(&self) -> super::vals::SpiFileter0 {
+    pub const fn spi_fileter0(&self) -> super::vals::Rule {
         let val = (self.0 >> 16usize) & 0x03;
-        super::vals::SpiFileter0::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "SPI_FILETER0"]
     #[inline(always)]
-    pub const fn set_spi_fileter0(&mut self, val: super::vals::SpiFileter0) {
+    pub const fn set_spi_fileter0(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
     #[doc = "10BASE_T1S0"]
     #[must_use]
     #[inline(always)]
-    pub const fn t1s0(&self) -> super::vals::T1s0 {
+    pub const fn t1s0(&self) -> super::vals::Rule {
         let val = (self.0 >> 20usize) & 0x03;
-        super::vals::T1s0::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "10BASE_T1S0"]
     #[inline(always)]
-    pub const fn set_t1s0(&mut self, val: super::vals::T1s0) {
+    pub const fn set_t1s0(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
     }
     #[doc = "USB1"]
     #[must_use]
     #[inline(always)]
-    pub const fn usb1(&self) -> super::vals::AipsBridgeGroup1MemRule1Usb1 {
+    pub const fn usb1(&self) -> super::vals::Rule {
         let val = (self.0 >> 24usize) & 0x03;
-        super::vals::AipsBridgeGroup1MemRule1Usb1::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "USB1"]
     #[inline(always)]
-    pub const fn set_usb1(&mut self, val: super::vals::AipsBridgeGroup1MemRule1Usb1) {
+    pub const fn set_usb1(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
     }
     #[doc = "USB1_PHY"]
     #[must_use]
     #[inline(always)]
-    pub const fn usb1_phy(&self) -> super::vals::Usb1Phy {
+    pub const fn usb1_phy(&self) -> super::vals::Rule {
         let val = (self.0 >> 28usize) & 0x03;
-        super::vals::Usb1Phy::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "USB1_PHY"]
     #[inline(always)]
-    pub const fn set_usb1_phy(&mut self, val: super::vals::Usb1Phy) {
+    pub const fn set_usb1_phy(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
     }
 }
@@ -835,97 +803,97 @@ impl AipsBridgeGroup2MemRule0 {
     #[doc = "DMA_0_MP"]
     #[must_use]
     #[inline(always)]
-    pub const fn dma_0_mp(&self) -> super::vals::Dma0Mp {
+    pub const fn dma_0_mp(&self) -> super::vals::Rule {
         let val = (self.0 >> 0usize) & 0x03;
-        super::vals::Dma0Mp::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "DMA_0_MP"]
     #[inline(always)]
-    pub const fn set_dma_0_mp(&mut self, val: super::vals::Dma0Mp) {
+    pub const fn set_dma_0_mp(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
     #[doc = "DMA_0_CH0"]
     #[must_use]
     #[inline(always)]
-    pub const fn dma_0_ch0(&self) -> super::vals::Dma0Ch0 {
+    pub const fn dma_0_ch0(&self) -> super::vals::Rule {
         let val = (self.0 >> 4usize) & 0x03;
-        super::vals::Dma0Ch0::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "DMA_0_CH0"]
     #[inline(always)]
-    pub const fn set_dma_0_ch0(&mut self, val: super::vals::Dma0Ch0) {
+    pub const fn set_dma_0_ch0(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
     #[doc = "DMA_0_CH1"]
     #[must_use]
     #[inline(always)]
-    pub const fn dma_0_ch1(&self) -> super::vals::Dma0Ch1 {
+    pub const fn dma_0_ch1(&self) -> super::vals::Rule {
         let val = (self.0 >> 8usize) & 0x03;
-        super::vals::Dma0Ch1::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "DMA_0_CH1"]
     #[inline(always)]
-    pub const fn set_dma_0_ch1(&mut self, val: super::vals::Dma0Ch1) {
+    pub const fn set_dma_0_ch1(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
     #[doc = "DMA_0_CH2"]
     #[must_use]
     #[inline(always)]
-    pub const fn dma_0_ch2(&self) -> super::vals::Dma0Ch2 {
+    pub const fn dma_0_ch2(&self) -> super::vals::Rule {
         let val = (self.0 >> 12usize) & 0x03;
-        super::vals::Dma0Ch2::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "DMA_0_CH2"]
     #[inline(always)]
-    pub const fn set_dma_0_ch2(&mut self, val: super::vals::Dma0Ch2) {
+    pub const fn set_dma_0_ch2(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
     }
     #[doc = "DMA_0_CH3"]
     #[must_use]
     #[inline(always)]
-    pub const fn dma_0_ch3(&self) -> super::vals::Dma0Ch3 {
+    pub const fn dma_0_ch3(&self) -> super::vals::Rule {
         let val = (self.0 >> 16usize) & 0x03;
-        super::vals::Dma0Ch3::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "DMA_0_CH3"]
     #[inline(always)]
-    pub const fn set_dma_0_ch3(&mut self, val: super::vals::Dma0Ch3) {
+    pub const fn set_dma_0_ch3(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
     #[doc = "DMA_0_CH4"]
     #[must_use]
     #[inline(always)]
-    pub const fn dma_0_ch4(&self) -> super::vals::Dma0Ch4 {
+    pub const fn dma_0_ch4(&self) -> super::vals::Rule {
         let val = (self.0 >> 20usize) & 0x03;
-        super::vals::Dma0Ch4::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "DMA_0_CH4"]
     #[inline(always)]
-    pub const fn set_dma_0_ch4(&mut self, val: super::vals::Dma0Ch4) {
+    pub const fn set_dma_0_ch4(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
     }
     #[doc = "DMA_0_CH5"]
     #[must_use]
     #[inline(always)]
-    pub const fn dma_0_ch5(&self) -> super::vals::Dma0Ch5 {
+    pub const fn dma_0_ch5(&self) -> super::vals::Rule {
         let val = (self.0 >> 24usize) & 0x03;
-        super::vals::Dma0Ch5::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "DMA_0_CH5"]
     #[inline(always)]
-    pub const fn set_dma_0_ch5(&mut self, val: super::vals::Dma0Ch5) {
+    pub const fn set_dma_0_ch5(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
     }
     #[doc = "DMA_0_CH6"]
     #[must_use]
     #[inline(always)]
-    pub const fn dma_0_ch6(&self) -> super::vals::Dma0Ch6 {
+    pub const fn dma_0_ch6(&self) -> super::vals::Rule {
         let val = (self.0 >> 28usize) & 0x03;
-        super::vals::Dma0Ch6::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "DMA_0_CH6"]
     #[inline(always)]
-    pub const fn set_dma_0_ch6(&mut self, val: super::vals::Dma0Ch6) {
+    pub const fn set_dma_0_ch6(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
     }
 }
@@ -974,61 +942,61 @@ impl AipsBridgeGroup2MemRule1 {
     #[doc = "DMA_0_CH7"]
     #[must_use]
     #[inline(always)]
-    pub const fn dma_0_ch7(&self) -> super::vals::Dma0Ch7 {
+    pub const fn dma_0_ch7(&self) -> super::vals::Rule {
         let val = (self.0 >> 0usize) & 0x03;
-        super::vals::Dma0Ch7::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "DMA_0_CH7"]
     #[inline(always)]
-    pub const fn set_dma_0_ch7(&mut self, val: super::vals::Dma0Ch7) {
+    pub const fn set_dma_0_ch7(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
     #[doc = "DMA_0_CH8"]
     #[must_use]
     #[inline(always)]
-    pub const fn dma_0_ch8(&self) -> super::vals::Dma0Ch8 {
+    pub const fn dma_0_ch8(&self) -> super::vals::Rule {
         let val = (self.0 >> 4usize) & 0x03;
-        super::vals::Dma0Ch8::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "DMA_0_CH8"]
     #[inline(always)]
-    pub const fn set_dma_0_ch8(&mut self, val: super::vals::Dma0Ch8) {
+    pub const fn set_dma_0_ch8(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
     #[doc = "DMA_0_CH9"]
     #[must_use]
     #[inline(always)]
-    pub const fn dma_0_ch9(&self) -> super::vals::Dma0Ch9 {
+    pub const fn dma_0_ch9(&self) -> super::vals::Rule {
         let val = (self.0 >> 8usize) & 0x03;
-        super::vals::Dma0Ch9::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "DMA_0_CH9"]
     #[inline(always)]
-    pub const fn set_dma_0_ch9(&mut self, val: super::vals::Dma0Ch9) {
+    pub const fn set_dma_0_ch9(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
     #[doc = "DMA_0_CH10"]
     #[must_use]
     #[inline(always)]
-    pub const fn dma_0_ch10(&self) -> super::vals::Dma0Ch10 {
+    pub const fn dma_0_ch10(&self) -> super::vals::Rule {
         let val = (self.0 >> 12usize) & 0x03;
-        super::vals::Dma0Ch10::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "DMA_0_CH10"]
     #[inline(always)]
-    pub const fn set_dma_0_ch10(&mut self, val: super::vals::Dma0Ch10) {
+    pub const fn set_dma_0_ch10(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
     }
     #[doc = "DMA_0_CH11"]
     #[must_use]
     #[inline(always)]
-    pub const fn dma_0_ch11(&self) -> super::vals::Dma0Ch11 {
+    pub const fn dma_0_ch11(&self) -> super::vals::Rule {
         let val = (self.0 >> 16usize) & 0x03;
-        super::vals::Dma0Ch11::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "DMA_0_CH11"]
     #[inline(always)]
-    pub const fn set_dma_0_ch11(&mut self, val: super::vals::Dma0Ch11) {
+    pub const fn set_dma_0_ch11(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
 }
@@ -1071,85 +1039,85 @@ impl AipsBridgeGroup2MemRule10 {
     #[doc = "CAN1 Region 0"]
     #[must_use]
     #[inline(always)]
-    pub const fn can1_region0(&self) -> super::vals::Can1Region0 {
+    pub const fn can1_region0(&self) -> super::vals::Rule {
         let val = (self.0 >> 0usize) & 0x03;
-        super::vals::Can1Region0::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "CAN1 Region 0"]
     #[inline(always)]
-    pub const fn set_can1_region0(&mut self, val: super::vals::Can1Region0) {
+    pub const fn set_can1_region0(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
     #[doc = "CAN1 Region 1"]
     #[must_use]
     #[inline(always)]
-    pub const fn can1_region1(&self) -> super::vals::Can1Region1 {
+    pub const fn can1_region1(&self) -> super::vals::Rule {
         let val = (self.0 >> 4usize) & 0x03;
-        super::vals::Can1Region1::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "CAN1 Region 1"]
     #[inline(always)]
-    pub const fn set_can1_region1(&mut self, val: super::vals::Can1Region1) {
+    pub const fn set_can1_region1(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
     #[doc = "CAN1 Region 2"]
     #[must_use]
     #[inline(always)]
-    pub const fn can1_region2(&self) -> super::vals::Can1Region2 {
+    pub const fn can1_region2(&self) -> super::vals::Rule {
         let val = (self.0 >> 8usize) & 0x03;
-        super::vals::Can1Region2::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "CAN1 Region 2"]
     #[inline(always)]
-    pub const fn set_can1_region2(&mut self, val: super::vals::Can1Region2) {
+    pub const fn set_can1_region2(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
     #[doc = "CAN1 Region 3"]
     #[must_use]
     #[inline(always)]
-    pub const fn can1_region3(&self) -> super::vals::Can1Region3 {
+    pub const fn can1_region3(&self) -> super::vals::Rule {
         let val = (self.0 >> 12usize) & 0x03;
-        super::vals::Can1Region3::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "CAN1 Region 3"]
     #[inline(always)]
-    pub const fn set_can1_region3(&mut self, val: super::vals::Can1Region3) {
+    pub const fn set_can1_region3(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
     }
     #[doc = "LPI2C2"]
     #[must_use]
     #[inline(always)]
-    pub const fn lpi2c2(&self) -> super::vals::Lpi2c2 {
+    pub const fn lpi2c2(&self) -> super::vals::Rule {
         let val = (self.0 >> 16usize) & 0x03;
-        super::vals::Lpi2c2::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "LPI2C2"]
     #[inline(always)]
-    pub const fn set_lpi2c2(&mut self, val: super::vals::Lpi2c2) {
+    pub const fn set_lpi2c2(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
     #[doc = "LPI2C3"]
     #[must_use]
     #[inline(always)]
-    pub const fn lpi2c3(&self) -> super::vals::Lpi2c3 {
+    pub const fn lpi2c3(&self) -> super::vals::Rule {
         let val = (self.0 >> 20usize) & 0x03;
-        super::vals::Lpi2c3::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "LPI2C3"]
     #[inline(always)]
-    pub const fn set_lpi2c3(&mut self, val: super::vals::Lpi2c3) {
+    pub const fn set_lpi2c3(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
     }
     #[doc = "LPI2C4"]
     #[must_use]
     #[inline(always)]
-    pub const fn lpi2c4(&self) -> super::vals::Lpi2c4 {
+    pub const fn lpi2c4(&self) -> super::vals::Rule {
         let val = (self.0 >> 24usize) & 0x03;
-        super::vals::Lpi2c4::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "LPI2C4"]
     #[inline(always)]
-    pub const fn set_lpi2c4(&mut self, val: super::vals::Lpi2c4) {
+    pub const fn set_lpi2c4(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
     }
 }
@@ -1196,37 +1164,37 @@ impl AipsBridgeGroup2MemRule11 {
     #[doc = "LPUART5"]
     #[must_use]
     #[inline(always)]
-    pub const fn lpuart5(&self) -> super::vals::Lpuart5 {
+    pub const fn lpuart5(&self) -> super::vals::Rule {
         let val = (self.0 >> 8usize) & 0x03;
-        super::vals::Lpuart5::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "LPUART5"]
     #[inline(always)]
-    pub const fn set_lpuart5(&mut self, val: super::vals::Lpuart5) {
+    pub const fn set_lpuart5(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
     #[doc = "I3C3"]
     #[must_use]
     #[inline(always)]
-    pub const fn i3c3(&self) -> super::vals::I3c3 {
+    pub const fn i3c3(&self) -> super::vals::Rule {
         let val = (self.0 >> 24usize) & 0x03;
-        super::vals::I3c3::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "I3C3"]
     #[inline(always)]
-    pub const fn set_i3c3(&mut self, val: super::vals::I3c3) {
+    pub const fn set_i3c3(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
     }
     #[doc = "GPIO5"]
     #[must_use]
     #[inline(always)]
-    pub const fn gpio5(&self) -> super::vals::Gpio5 {
+    pub const fn gpio5(&self) -> super::vals::Rule {
         let val = (self.0 >> 28usize) & 0x03;
-        super::vals::Gpio5::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "GPIO5"]
     #[inline(always)]
-    pub const fn set_gpio5(&mut self, val: super::vals::Gpio5) {
+    pub const fn set_gpio5(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
     }
 }
@@ -1265,49 +1233,49 @@ impl AipsBridgeGroup2MemRule12 {
     #[doc = "GPIO5_ALIAS"]
     #[must_use]
     #[inline(always)]
-    pub const fn gpio5_alias(&self) -> super::vals::Gpio5Alias {
+    pub const fn gpio5_alias(&self) -> super::vals::Rule {
         let val = (self.0 >> 0usize) & 0x03;
-        super::vals::Gpio5Alias::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "GPIO5_ALIAS"]
     #[inline(always)]
-    pub const fn set_gpio5_alias(&mut self, val: super::vals::Gpio5Alias) {
+    pub const fn set_gpio5_alias(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
     #[doc = "PORT5"]
     #[must_use]
     #[inline(always)]
-    pub const fn port5(&self) -> super::vals::Port5 {
+    pub const fn port5(&self) -> super::vals::Rule {
         let val = (self.0 >> 12usize) & 0x03;
-        super::vals::Port5::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "PORT5"]
     #[inline(always)]
-    pub const fn set_port5(&mut self, val: super::vals::Port5) {
+    pub const fn set_port5(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
     }
     #[doc = "DGDET0"]
     #[must_use]
     #[inline(always)]
-    pub const fn dgdet0(&self) -> super::vals::Dgdet0 {
+    pub const fn dgdet0(&self) -> super::vals::Rule {
         let val = (self.0 >> 20usize) & 0x03;
-        super::vals::Dgdet0::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "DGDET0"]
     #[inline(always)]
-    pub const fn set_dgdet0(&mut self, val: super::vals::Dgdet0) {
+    pub const fn set_dgdet0(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
     }
     #[doc = "ITRC0"]
     #[must_use]
     #[inline(always)]
-    pub const fn itrc0(&self) -> super::vals::Itrc0 {
+    pub const fn itrc0(&self) -> super::vals::Rule {
         let val = (self.0 >> 28usize) & 0x03;
-        super::vals::Itrc0::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "ITRC0"]
     #[inline(always)]
-    pub const fn set_itrc0(&mut self, val: super::vals::Itrc0) {
+    pub const fn set_itrc0(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
     }
 }
@@ -1348,85 +1316,85 @@ impl AipsBridgeGroup2MemRule13 {
     #[doc = "GLIKEY0"]
     #[must_use]
     #[inline(always)]
-    pub const fn glikey0(&self) -> super::vals::Glikey0 {
+    pub const fn glikey0(&self) -> super::vals::Rule {
         let val = (self.0 >> 0usize) & 0x03;
-        super::vals::Glikey0::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "GLIKEY0"]
     #[inline(always)]
-    pub const fn set_glikey0(&mut self, val: super::vals::Glikey0) {
+    pub const fn set_glikey0(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
     #[doc = "TDET0"]
     #[must_use]
     #[inline(always)]
-    pub const fn tdet0(&self) -> super::vals::Tdet0 {
+    pub const fn tdet0(&self) -> super::vals::Rule {
         let val = (self.0 >> 4usize) & 0x03;
-        super::vals::Tdet0::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "TDET0"]
     #[inline(always)]
-    pub const fn set_tdet0(&mut self, val: super::vals::Tdet0) {
+    pub const fn set_tdet0(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
     #[doc = "SECCON"]
     #[must_use]
     #[inline(always)]
-    pub const fn seccon(&self) -> super::vals::Seccon {
+    pub const fn seccon(&self) -> super::vals::Rule {
         let val = (self.0 >> 8usize) & 0x03;
-        super::vals::Seccon::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "SECCON"]
     #[inline(always)]
-    pub const fn set_seccon(&mut self, val: super::vals::Seccon) {
+    pub const fn set_seccon(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
     #[doc = "SGI0"]
     #[must_use]
     #[inline(always)]
-    pub const fn sgi0(&self) -> super::vals::Sgi0 {
+    pub const fn sgi0(&self) -> super::vals::Rule {
         let val = (self.0 >> 12usize) & 0x03;
-        super::vals::Sgi0::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "SGI0"]
     #[inline(always)]
-    pub const fn set_sgi0(&mut self, val: super::vals::Sgi0) {
+    pub const fn set_sgi0(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
     }
     #[doc = "TRNG0"]
     #[must_use]
     #[inline(always)]
-    pub const fn trng0(&self) -> super::vals::Trng0 {
+    pub const fn trng0(&self) -> super::vals::Rule {
         let val = (self.0 >> 16usize) & 0x03;
-        super::vals::Trng0::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "TRNG0"]
     #[inline(always)]
-    pub const fn set_trng0(&mut self, val: super::vals::Trng0) {
+    pub const fn set_trng0(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
     #[doc = "UDF0"]
     #[must_use]
     #[inline(always)]
-    pub const fn udf0(&self) -> super::vals::Udf0 {
+    pub const fn udf0(&self) -> super::vals::Rule {
         let val = (self.0 >> 20usize) & 0x03;
-        super::vals::Udf0::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "UDF0"]
     #[inline(always)]
-    pub const fn set_udf0(&mut self, val: super::vals::Udf0) {
+    pub const fn set_udf0(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
     }
     #[doc = "RTC0"]
     #[must_use]
     #[inline(always)]
-    pub const fn rtc0(&self) -> super::vals::Rtc0 {
+    pub const fn rtc0(&self) -> super::vals::Rule {
         let val = (self.0 >> 24usize) & 0x03;
-        super::vals::Rtc0::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "RTC0"]
     #[inline(always)]
-    pub const fn set_rtc0(&mut self, val: super::vals::Rtc0) {
+    pub const fn set_rtc0(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
     }
 }
@@ -1473,61 +1441,61 @@ impl AipsBridgeGroup2MemRule2 {
     #[doc = "SYSCON"]
     #[must_use]
     #[inline(always)]
-    pub const fn syscon(&self) -> super::vals::Syscon {
+    pub const fn syscon(&self) -> super::vals::Rule {
         let val = (self.0 >> 4usize) & 0x03;
-        super::vals::Syscon::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "SYSCON"]
     #[inline(always)]
-    pub const fn set_syscon(&mut self, val: super::vals::Syscon) {
+    pub const fn set_syscon(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
     #[doc = "WUU"]
     #[must_use]
     #[inline(always)]
-    pub const fn wuu(&self) -> super::vals::Wuu {
+    pub const fn wuu(&self) -> super::vals::Rule {
         let val = (self.0 >> 8usize) & 0x03;
-        super::vals::Wuu::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "WUU"]
     #[inline(always)]
-    pub const fn set_wuu(&mut self, val: super::vals::Wuu) {
+    pub const fn set_wuu(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
     #[doc = "VBAT"]
     #[must_use]
     #[inline(always)]
-    pub const fn vbat(&self) -> super::vals::Vbat {
+    pub const fn vbat(&self) -> super::vals::Rule {
         let val = (self.0 >> 12usize) & 0x03;
-        super::vals::Vbat::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "VBAT"]
     #[inline(always)]
-    pub const fn set_vbat(&mut self, val: super::vals::Vbat) {
+    pub const fn set_vbat(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
     }
     #[doc = "FMC"]
     #[must_use]
     #[inline(always)]
-    pub const fn fmc(&self) -> super::vals::Fmc {
+    pub const fn fmc(&self) -> super::vals::Rule {
         let val = (self.0 >> 16usize) & 0x03;
-        super::vals::Fmc::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "FMC"]
     #[inline(always)]
-    pub const fn set_fmc(&mut self, val: super::vals::Fmc) {
+    pub const fn set_fmc(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
     #[doc = "FMU"]
     #[must_use]
     #[inline(always)]
-    pub const fn fmu(&self) -> super::vals::Fmu {
+    pub const fn fmu(&self) -> super::vals::Rule {
         let val = (self.0 >> 20usize) & 0x03;
-        super::vals::Fmu::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "FMU"]
     #[inline(always)]
-    pub const fn set_fmu(&mut self, val: super::vals::Fmu) {
+    pub const fn set_fmu(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
     }
 }
@@ -1570,85 +1538,85 @@ impl AipsBridgeGroup2MemRule3 {
     #[doc = "FLEXIO"]
     #[must_use]
     #[inline(always)]
-    pub const fn flexio(&self) -> super::vals::Flexio {
+    pub const fn flexio(&self) -> super::vals::Rule {
         let val = (self.0 >> 4usize) & 0x03;
-        super::vals::Flexio::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "FLEXIO"]
     #[inline(always)]
-    pub const fn set_flexio(&mut self, val: super::vals::Flexio) {
+    pub const fn set_flexio(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
     #[doc = "LPI2C0"]
     #[must_use]
     #[inline(always)]
-    pub const fn lpi2c0(&self) -> super::vals::Lpi2c0 {
+    pub const fn lpi2c0(&self) -> super::vals::Rule {
         let val = (self.0 >> 8usize) & 0x03;
-        super::vals::Lpi2c0::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "LPI2C0"]
     #[inline(always)]
-    pub const fn set_lpi2c0(&mut self, val: super::vals::Lpi2c0) {
+    pub const fn set_lpi2c0(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
     #[doc = "LPI2C1"]
     #[must_use]
     #[inline(always)]
-    pub const fn lpi2c1(&self) -> super::vals::Lpi2c1 {
+    pub const fn lpi2c1(&self) -> super::vals::Rule {
         let val = (self.0 >> 12usize) & 0x03;
-        super::vals::Lpi2c1::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "LPI2C1"]
     #[inline(always)]
-    pub const fn set_lpi2c1(&mut self, val: super::vals::Lpi2c1) {
+    pub const fn set_lpi2c1(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
     }
     #[doc = "LPSPI0"]
     #[must_use]
     #[inline(always)]
-    pub const fn lpspi0(&self) -> super::vals::Lpspi0 {
+    pub const fn lpspi0(&self) -> super::vals::Rule {
         let val = (self.0 >> 16usize) & 0x03;
-        super::vals::Lpspi0::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "LPSPI0"]
     #[inline(always)]
-    pub const fn set_lpspi0(&mut self, val: super::vals::Lpspi0) {
+    pub const fn set_lpspi0(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
     #[doc = "LPSPI1"]
     #[must_use]
     #[inline(always)]
-    pub const fn lpspi1(&self) -> super::vals::Lpspi1 {
+    pub const fn lpspi1(&self) -> super::vals::Rule {
         let val = (self.0 >> 20usize) & 0x03;
-        super::vals::Lpspi1::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "LPSPI1"]
     #[inline(always)]
-    pub const fn set_lpspi1(&mut self, val: super::vals::Lpspi1) {
+    pub const fn set_lpspi1(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
     }
     #[doc = "I3C2"]
     #[must_use]
     #[inline(always)]
-    pub const fn i3c2(&self) -> super::vals::I3c2 {
+    pub const fn i3c2(&self) -> super::vals::Rule {
         let val = (self.0 >> 24usize) & 0x03;
-        super::vals::I3c2::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "I3C2"]
     #[inline(always)]
-    pub const fn set_i3c2(&mut self, val: super::vals::I3c2) {
+    pub const fn set_i3c2(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
     }
     #[doc = "LPUART0"]
     #[must_use]
     #[inline(always)]
-    pub const fn lpuart0(&self) -> super::vals::Lpuart0 {
+    pub const fn lpuart0(&self) -> super::vals::Rule {
         let val = (self.0 >> 28usize) & 0x03;
-        super::vals::Lpuart0::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "LPUART0"]
     #[inline(always)]
-    pub const fn set_lpuart0(&mut self, val: super::vals::Lpuart0) {
+    pub const fn set_lpuart0(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
     }
 }
@@ -1695,49 +1663,49 @@ impl AipsBridgeGroup2MemRule4 {
     #[doc = "LPUART1"]
     #[must_use]
     #[inline(always)]
-    pub const fn lpuart1(&self) -> super::vals::Lpuart1 {
+    pub const fn lpuart1(&self) -> super::vals::Rule {
         let val = (self.0 >> 0usize) & 0x03;
-        super::vals::Lpuart1::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "LPUART1"]
     #[inline(always)]
-    pub const fn set_lpuart1(&mut self, val: super::vals::Lpuart1) {
+    pub const fn set_lpuart1(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
     #[doc = "LPUART2"]
     #[must_use]
     #[inline(always)]
-    pub const fn lpuart2(&self) -> super::vals::Lpuart2 {
+    pub const fn lpuart2(&self) -> super::vals::Rule {
         let val = (self.0 >> 4usize) & 0x03;
-        super::vals::Lpuart2::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "LPUART2"]
     #[inline(always)]
-    pub const fn set_lpuart2(&mut self, val: super::vals::Lpuart2) {
+    pub const fn set_lpuart2(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
     #[doc = "LPUART3"]
     #[must_use]
     #[inline(always)]
-    pub const fn lpuart3(&self) -> super::vals::Lpuart3 {
+    pub const fn lpuart3(&self) -> super::vals::Rule {
         let val = (self.0 >> 8usize) & 0x03;
-        super::vals::Lpuart3::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "LPUART3"]
     #[inline(always)]
-    pub const fn set_lpuart3(&mut self, val: super::vals::Lpuart3) {
+    pub const fn set_lpuart3(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
     #[doc = "LPUART4"]
     #[must_use]
     #[inline(always)]
-    pub const fn lpuart4(&self) -> super::vals::Lpuart4 {
+    pub const fn lpuart4(&self) -> super::vals::Rule {
         let val = (self.0 >> 12usize) & 0x03;
-        super::vals::Lpuart4::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "LPUART4"]
     #[inline(always)]
-    pub const fn set_lpuart4(&mut self, val: super::vals::Lpuart4) {
+    pub const fn set_lpuart4(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
     }
 }
@@ -1778,49 +1746,49 @@ impl AipsBridgeGroup2MemRule5 {
     #[doc = "LPTMR"]
     #[must_use]
     #[inline(always)]
-    pub const fn lptmr(&self) -> super::vals::Lptmr {
+    pub const fn lptmr(&self) -> super::vals::Rule {
         let val = (self.0 >> 12usize) & 0x03;
-        super::vals::Lptmr::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "LPTMR"]
     #[inline(always)]
-    pub const fn set_lptmr(&mut self, val: super::vals::Lptmr) {
+    pub const fn set_lptmr(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
     }
     #[doc = "OSTIMER"]
     #[must_use]
     #[inline(always)]
-    pub const fn ostimer(&self) -> super::vals::Ostimer {
+    pub const fn ostimer(&self) -> super::vals::Rule {
         let val = (self.0 >> 20usize) & 0x03;
-        super::vals::Ostimer::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "OSTIMER"]
     #[inline(always)]
-    pub const fn set_ostimer(&mut self, val: super::vals::Ostimer) {
+    pub const fn set_ostimer(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
     }
     #[doc = "WAKE_TIMER"]
     #[must_use]
     #[inline(always)]
-    pub const fn wake_timer(&self) -> super::vals::WakeTimer {
+    pub const fn wake_timer(&self) -> super::vals::Rule {
         let val = (self.0 >> 24usize) & 0x03;
-        super::vals::WakeTimer::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "WAKE_TIMER"]
     #[inline(always)]
-    pub const fn set_wake_timer(&mut self, val: super::vals::WakeTimer) {
+    pub const fn set_wake_timer(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
     }
     #[doc = "ADC0"]
     #[must_use]
     #[inline(always)]
-    pub const fn adc0(&self) -> super::vals::Adc0 {
+    pub const fn adc0(&self) -> super::vals::Rule {
         let val = (self.0 >> 28usize) & 0x03;
-        super::vals::Adc0::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "ADC0"]
     #[inline(always)]
-    pub const fn set_adc0(&mut self, val: super::vals::Adc0) {
+    pub const fn set_adc0(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
     }
 }
@@ -1861,49 +1829,49 @@ impl AipsBridgeGroup2MemRule6 {
     #[doc = "ADC1"]
     #[must_use]
     #[inline(always)]
-    pub const fn adc1(&self) -> super::vals::Adc1 {
+    pub const fn adc1(&self) -> super::vals::Rule {
         let val = (self.0 >> 0usize) & 0x03;
-        super::vals::Adc1::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "ADC1"]
     #[inline(always)]
-    pub const fn set_adc1(&mut self, val: super::vals::Adc1) {
+    pub const fn set_adc1(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
     #[doc = "CMP0"]
     #[must_use]
     #[inline(always)]
-    pub const fn cmp0(&self) -> super::vals::Cmp0 {
+    pub const fn cmp0(&self) -> super::vals::Rule {
         let val = (self.0 >> 4usize) & 0x03;
-        super::vals::Cmp0::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "CMP0"]
     #[inline(always)]
-    pub const fn set_cmp0(&mut self, val: super::vals::Cmp0) {
+    pub const fn set_cmp0(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
     #[doc = "DAC0"]
     #[must_use]
     #[inline(always)]
-    pub const fn dac0(&self) -> super::vals::Dac0 {
+    pub const fn dac0(&self) -> super::vals::Rule {
         let val = (self.0 >> 16usize) & 0x03;
-        super::vals::Dac0::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "DAC0"]
     #[inline(always)]
-    pub const fn set_dac0(&mut self, val: super::vals::Dac0) {
+    pub const fn set_dac0(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
     #[doc = "DAC1"]
     #[must_use]
     #[inline(always)]
-    pub const fn dac1(&self) -> super::vals::Dac1 {
+    pub const fn dac1(&self) -> super::vals::Rule {
         let val = (self.0 >> 20usize) & 0x03;
-        super::vals::Dac1::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "DAC1"]
     #[inline(always)]
-    pub const fn set_dac1(&mut self, val: super::vals::Dac1) {
+    pub const fn set_dac1(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
     }
 }
@@ -1944,61 +1912,61 @@ impl AipsBridgeGroup2MemRule7 {
     #[doc = "VREF0"]
     #[must_use]
     #[inline(always)]
-    pub const fn vref0(&self) -> super::vals::Vref0 {
+    pub const fn vref0(&self) -> super::vals::Rule {
         let val = (self.0 >> 12usize) & 0x03;
-        super::vals::Vref0::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "VREF0"]
     #[inline(always)]
-    pub const fn set_vref0(&mut self, val: super::vals::Vref0) {
+    pub const fn set_vref0(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
     }
     #[doc = "PORT0"]
     #[must_use]
     #[inline(always)]
-    pub const fn port0(&self) -> super::vals::Port0 {
+    pub const fn port0(&self) -> super::vals::Rule {
         let val = (self.0 >> 16usize) & 0x03;
-        super::vals::Port0::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "PORT0"]
     #[inline(always)]
-    pub const fn set_port0(&mut self, val: super::vals::Port0) {
+    pub const fn set_port0(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
     #[doc = "PORT1"]
     #[must_use]
     #[inline(always)]
-    pub const fn port1(&self) -> super::vals::Port1 {
+    pub const fn port1(&self) -> super::vals::Rule {
         let val = (self.0 >> 20usize) & 0x03;
-        super::vals::Port1::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "PORT1"]
     #[inline(always)]
-    pub const fn set_port1(&mut self, val: super::vals::Port1) {
+    pub const fn set_port1(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
     }
     #[doc = "PORT2"]
     #[must_use]
     #[inline(always)]
-    pub const fn port2(&self) -> super::vals::Port2 {
+    pub const fn port2(&self) -> super::vals::Rule {
         let val = (self.0 >> 24usize) & 0x03;
-        super::vals::Port2::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "PORT2"]
     #[inline(always)]
-    pub const fn set_port2(&mut self, val: super::vals::Port2) {
+    pub const fn set_port2(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
     }
     #[doc = "PORT3"]
     #[must_use]
     #[inline(always)]
-    pub const fn port3(&self) -> super::vals::Port3 {
+    pub const fn port3(&self) -> super::vals::Rule {
         let val = (self.0 >> 28usize) & 0x03;
-        super::vals::Port3::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "PORT3"]
     #[inline(always)]
-    pub const fn set_port3(&mut self, val: super::vals::Port3) {
+    pub const fn set_port3(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
     }
 }
@@ -2041,73 +2009,73 @@ impl AipsBridgeGroup2MemRule8 {
     #[doc = "PORT4"]
     #[must_use]
     #[inline(always)]
-    pub const fn port4(&self) -> super::vals::Port4 {
+    pub const fn port4(&self) -> super::vals::Rule {
         let val = (self.0 >> 0usize) & 0x03;
-        super::vals::Port4::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "PORT4"]
     #[inline(always)]
-    pub const fn set_port4(&mut self, val: super::vals::Port4) {
+    pub const fn set_port4(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
     #[doc = "TSI0"]
     #[must_use]
     #[inline(always)]
-    pub const fn tsi0(&self) -> super::vals::Tsi0 {
+    pub const fn tsi0(&self) -> super::vals::Rule {
         let val = (self.0 >> 12usize) & 0x03;
-        super::vals::Tsi0::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "TSI0"]
     #[inline(always)]
-    pub const fn set_tsi0(&mut self, val: super::vals::Tsi0) {
+    pub const fn set_tsi0(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
     }
     #[doc = "AOI0"]
     #[must_use]
     #[inline(always)]
-    pub const fn aoi0(&self) -> super::vals::Aoi0 {
+    pub const fn aoi0(&self) -> super::vals::Rule {
         let val = (self.0 >> 16usize) & 0x03;
-        super::vals::Aoi0::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "AOI0"]
     #[inline(always)]
-    pub const fn set_aoi0(&mut self, val: super::vals::Aoi0) {
+    pub const fn set_aoi0(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
     #[doc = "CRC0"]
     #[must_use]
     #[inline(always)]
-    pub const fn crc0(&self) -> super::vals::Crc0 {
+    pub const fn crc0(&self) -> super::vals::Rule {
         let val = (self.0 >> 20usize) & 0x03;
-        super::vals::Crc0::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "CRC0"]
     #[inline(always)]
-    pub const fn set_crc0(&mut self, val: super::vals::Crc0) {
+    pub const fn set_crc0(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
     }
     #[doc = "CMC"]
     #[must_use]
     #[inline(always)]
-    pub const fn cmc(&self) -> super::vals::Cmc {
+    pub const fn cmc(&self) -> super::vals::Rule {
         let val = (self.0 >> 24usize) & 0x03;
-        super::vals::Cmc::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "CMC"]
     #[inline(always)]
-    pub const fn set_cmc(&mut self, val: super::vals::Cmc) {
+    pub const fn set_cmc(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
     }
     #[doc = "EIM"]
     #[must_use]
     #[inline(always)]
-    pub const fn eim(&self) -> super::vals::Eim {
+    pub const fn eim(&self) -> super::vals::Rule {
         let val = (self.0 >> 28usize) & 0x03;
-        super::vals::Eim::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "EIM"]
     #[inline(always)]
-    pub const fn set_eim(&mut self, val: super::vals::Eim) {
+    pub const fn set_eim(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
     }
 }
@@ -2152,97 +2120,97 @@ impl AipsBridgeGroup2MemRule9 {
     #[doc = "ERM"]
     #[must_use]
     #[inline(always)]
-    pub const fn erm(&self) -> super::vals::Erm {
+    pub const fn erm(&self) -> super::vals::Rule {
         let val = (self.0 >> 0usize) & 0x03;
-        super::vals::Erm::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "ERM"]
     #[inline(always)]
-    pub const fn set_erm(&mut self, val: super::vals::Erm) {
+    pub const fn set_erm(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
     #[doc = "MBC"]
     #[must_use]
     #[inline(always)]
-    pub const fn mbc(&self) -> super::vals::Mbc {
+    pub const fn mbc(&self) -> super::vals::Rule {
         let val = (self.0 >> 4usize) & 0x03;
-        super::vals::Mbc::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "MBC"]
     #[inline(always)]
-    pub const fn set_mbc(&mut self, val: super::vals::Mbc) {
+    pub const fn set_mbc(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
     #[doc = "SCG"]
     #[must_use]
     #[inline(always)]
-    pub const fn scg(&self) -> super::vals::Scg {
+    pub const fn scg(&self) -> super::vals::Rule {
         let val = (self.0 >> 8usize) & 0x03;
-        super::vals::Scg::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "SCG"]
     #[inline(always)]
-    pub const fn set_scg(&mut self, val: super::vals::Scg) {
+    pub const fn set_scg(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
     #[doc = "SPC"]
     #[must_use]
     #[inline(always)]
-    pub const fn spc(&self) -> super::vals::Spc {
+    pub const fn spc(&self) -> super::vals::Rule {
         let val = (self.0 >> 12usize) & 0x03;
-        super::vals::Spc::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "SPC"]
     #[inline(always)]
-    pub const fn set_spc(&mut self, val: super::vals::Spc) {
+    pub const fn set_spc(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
     }
     #[doc = "CAN0 Region 0"]
     #[must_use]
     #[inline(always)]
-    pub const fn can0_region0(&self) -> super::vals::Can0Region0 {
+    pub const fn can0_region0(&self) -> super::vals::Rule {
         let val = (self.0 >> 16usize) & 0x03;
-        super::vals::Can0Region0::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "CAN0 Region 0"]
     #[inline(always)]
-    pub const fn set_can0_region0(&mut self, val: super::vals::Can0Region0) {
+    pub const fn set_can0_region0(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
     #[doc = "CAN0 Region 1"]
     #[must_use]
     #[inline(always)]
-    pub const fn can0_region1(&self) -> super::vals::Can0Region1 {
+    pub const fn can0_region1(&self) -> super::vals::Rule {
         let val = (self.0 >> 20usize) & 0x03;
-        super::vals::Can0Region1::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "CAN0 Region 1"]
     #[inline(always)]
-    pub const fn set_can0_region1(&mut self, val: super::vals::Can0Region1) {
+    pub const fn set_can0_region1(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
     }
     #[doc = "CAN0 Region 2"]
     #[must_use]
     #[inline(always)]
-    pub const fn can0_region2(&self) -> super::vals::Can0Region2 {
+    pub const fn can0_region2(&self) -> super::vals::Rule {
         let val = (self.0 >> 24usize) & 0x03;
-        super::vals::Can0Region2::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "CAN0 Region 2"]
     #[inline(always)]
-    pub const fn set_can0_region2(&mut self, val: super::vals::Can0Region2) {
+    pub const fn set_can0_region2(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
     }
     #[doc = "CAN0 Region 3"]
     #[must_use]
     #[inline(always)]
-    pub const fn can0_region3(&self) -> super::vals::Can0Region3 {
+    pub const fn can0_region3(&self) -> super::vals::Rule {
         let val = (self.0 >> 28usize) & 0x03;
-        super::vals::Can0Region3::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "CAN0 Region 3"]
     #[inline(always)]
-    pub const fn set_can0_region3(&mut self, val: super::vals::Can0Region3) {
+    pub const fn set_can0_region3(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
     }
 }
@@ -2291,85 +2259,85 @@ impl ApbPeripheralGroup0MemRule0 {
     #[doc = "INPUTMUX"]
     #[must_use]
     #[inline(always)]
-    pub const fn inputmux(&self) -> super::vals::Inputmux {
+    pub const fn inputmux(&self) -> super::vals::Rule {
         let val = (self.0 >> 4usize) & 0x03;
-        super::vals::Inputmux::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "INPUTMUX"]
     #[inline(always)]
-    pub const fn set_inputmux(&mut self, val: super::vals::Inputmux) {
+    pub const fn set_inputmux(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
     #[doc = "I3C0"]
     #[must_use]
     #[inline(always)]
-    pub const fn i3c0(&self) -> super::vals::I3c0 {
+    pub const fn i3c0(&self) -> super::vals::Rule {
         let val = (self.0 >> 8usize) & 0x03;
-        super::vals::I3c0::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "I3C0"]
     #[inline(always)]
-    pub const fn set_i3c0(&mut self, val: super::vals::I3c0) {
+    pub const fn set_i3c0(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
     #[doc = "I3C1"]
     #[must_use]
     #[inline(always)]
-    pub const fn i3c1(&self) -> super::vals::I3c1 {
+    pub const fn i3c1(&self) -> super::vals::Rule {
         let val = (self.0 >> 12usize) & 0x03;
-        super::vals::I3c1::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "I3C1"]
     #[inline(always)]
-    pub const fn set_i3c1(&mut self, val: super::vals::I3c1) {
+    pub const fn set_i3c1(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
     }
     #[doc = "CTIMER0"]
     #[must_use]
     #[inline(always)]
-    pub const fn ctimer0(&self) -> super::vals::Ctimer0 {
+    pub const fn ctimer0(&self) -> super::vals::Rule {
         let val = (self.0 >> 16usize) & 0x03;
-        super::vals::Ctimer0::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "CTIMER0"]
     #[inline(always)]
-    pub const fn set_ctimer0(&mut self, val: super::vals::Ctimer0) {
+    pub const fn set_ctimer0(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
     #[doc = "CTIMER1"]
     #[must_use]
     #[inline(always)]
-    pub const fn ctimer1(&self) -> super::vals::Ctimer1 {
+    pub const fn ctimer1(&self) -> super::vals::Rule {
         let val = (self.0 >> 20usize) & 0x03;
-        super::vals::Ctimer1::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "CTIMER1"]
     #[inline(always)]
-    pub const fn set_ctimer1(&mut self, val: super::vals::Ctimer1) {
+    pub const fn set_ctimer1(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
     }
     #[doc = "CTIMER2"]
     #[must_use]
     #[inline(always)]
-    pub const fn ctimer2(&self) -> super::vals::Ctimer2 {
+    pub const fn ctimer2(&self) -> super::vals::Rule {
         let val = (self.0 >> 24usize) & 0x03;
-        super::vals::Ctimer2::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "CTIMER2"]
     #[inline(always)]
-    pub const fn set_ctimer2(&mut self, val: super::vals::Ctimer2) {
+    pub const fn set_ctimer2(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
     }
     #[doc = "CTIMER3"]
     #[must_use]
     #[inline(always)]
-    pub const fn ctimer3(&self) -> super::vals::Ctimer3 {
+    pub const fn ctimer3(&self) -> super::vals::Rule {
         let val = (self.0 >> 28usize) & 0x03;
-        super::vals::Ctimer3::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "CTIMER3"]
     #[inline(always)]
-    pub const fn set_ctimer3(&mut self, val: super::vals::Ctimer3) {
+    pub const fn set_ctimer3(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
     }
 }
@@ -2416,73 +2384,73 @@ impl ApbPeripheralGroup0MemRule1 {
     #[doc = "CTIMER4"]
     #[must_use]
     #[inline(always)]
-    pub const fn ctimer4(&self) -> super::vals::Ctimer4 {
+    pub const fn ctimer4(&self) -> super::vals::Rule {
         let val = (self.0 >> 0usize) & 0x03;
-        super::vals::Ctimer4::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "CTIMER4"]
     #[inline(always)]
-    pub const fn set_ctimer4(&mut self, val: super::vals::Ctimer4) {
+    pub const fn set_ctimer4(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
     #[doc = "FREQME"]
     #[must_use]
     #[inline(always)]
-    pub const fn freqme(&self) -> super::vals::Freqme {
+    pub const fn freqme(&self) -> super::vals::Rule {
         let val = (self.0 >> 4usize) & 0x03;
-        super::vals::Freqme::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "FREQME"]
     #[inline(always)]
-    pub const fn set_freqme(&mut self, val: super::vals::Freqme) {
+    pub const fn set_freqme(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
     #[doc = "UTCIK0"]
     #[must_use]
     #[inline(always)]
-    pub const fn utick(&self) -> super::vals::Utick {
+    pub const fn utick(&self) -> super::vals::Rule {
         let val = (self.0 >> 12usize) & 0x03;
-        super::vals::Utick::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "UTCIK0"]
     #[inline(always)]
-    pub const fn set_utick(&mut self, val: super::vals::Utick) {
+    pub const fn set_utick(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
     }
     #[doc = "WWDT0"]
     #[must_use]
     #[inline(always)]
-    pub const fn wwdt0(&self) -> super::vals::Wwdt0 {
+    pub const fn wwdt0(&self) -> super::vals::Rule {
         let val = (self.0 >> 16usize) & 0x03;
-        super::vals::Wwdt0::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "WWDT0"]
     #[inline(always)]
-    pub const fn set_wwdt0(&mut self, val: super::vals::Wwdt0) {
+    pub const fn set_wwdt0(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
     #[doc = "WWDT1"]
     #[must_use]
     #[inline(always)]
-    pub const fn wwdt1(&self) -> super::vals::Wwdt1 {
+    pub const fn wwdt1(&self) -> super::vals::Rule {
         let val = (self.0 >> 20usize) & 0x03;
-        super::vals::Wwdt1::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "WWDT1"]
     #[inline(always)]
-    pub const fn set_wwdt1(&mut self, val: super::vals::Wwdt1) {
+    pub const fn set_wwdt1(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
     }
     #[doc = "SmartDMA"]
     #[must_use]
     #[inline(always)]
-    pub const fn smartdma(&self) -> super::vals::ApbPeripheralGroup0MemRule1Smartdma {
+    pub const fn smartdma(&self) -> super::vals::Rule {
         let val = (self.0 >> 24usize) & 0x03;
-        super::vals::ApbPeripheralGroup0MemRule1Smartdma::from_bits(val as u8)
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "SmartDMA"]
     #[inline(always)]
-    pub const fn set_smartdma(&mut self, val: super::vals::ApbPeripheralGroup0MemRule1Smartdma) {
+    pub const fn set_smartdma(&mut self, val: super::vals::Rule) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
     }
 }
@@ -2624,98 +2592,18 @@ impl Flash00MemRule {
     #[doc = "Rule 0"]
     #[must_use]
     #[inline(always)]
-    pub const fn rule0(&self) -> super::vals::Flash00MemRuleRule0 {
-        let val = (self.0 >> 0usize) & 0x03;
-        super::vals::Flash00MemRuleRule0::from_bits(val as u8)
+    pub const fn rule(&self, n: usize) -> super::vals::Rule {
+        assert!(n < 8usize);
+        let offs = 0usize + n * 4usize;
+        let val = (self.0 >> offs) & 0x03;
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "Rule 0"]
     #[inline(always)]
-    pub const fn set_rule0(&mut self, val: super::vals::Flash00MemRuleRule0) {
-        self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
-    }
-    #[doc = "Rule 1"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule1(&self) -> super::vals::Flash00MemRuleRule1 {
-        let val = (self.0 >> 4usize) & 0x03;
-        super::vals::Flash00MemRuleRule1::from_bits(val as u8)
-    }
-    #[doc = "Rule 1"]
-    #[inline(always)]
-    pub const fn set_rule1(&mut self, val: super::vals::Flash00MemRuleRule1) {
-        self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
-    }
-    #[doc = "Rule 2"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule2(&self) -> super::vals::Flash00MemRuleRule2 {
-        let val = (self.0 >> 8usize) & 0x03;
-        super::vals::Flash00MemRuleRule2::from_bits(val as u8)
-    }
-    #[doc = "Rule 2"]
-    #[inline(always)]
-    pub const fn set_rule2(&mut self, val: super::vals::Flash00MemRuleRule2) {
-        self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
-    }
-    #[doc = "Rule 3"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule3(&self) -> super::vals::Flash00MemRuleRule3 {
-        let val = (self.0 >> 12usize) & 0x03;
-        super::vals::Flash00MemRuleRule3::from_bits(val as u8)
-    }
-    #[doc = "Rule 3"]
-    #[inline(always)]
-    pub const fn set_rule3(&mut self, val: super::vals::Flash00MemRuleRule3) {
-        self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
-    }
-    #[doc = "Rule 4"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule4(&self) -> super::vals::Flash00MemRuleRule4 {
-        let val = (self.0 >> 16usize) & 0x03;
-        super::vals::Flash00MemRuleRule4::from_bits(val as u8)
-    }
-    #[doc = "Rule 4"]
-    #[inline(always)]
-    pub const fn set_rule4(&mut self, val: super::vals::Flash00MemRuleRule4) {
-        self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
-    }
-    #[doc = "Rule 5"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule5(&self) -> super::vals::Flash00MemRuleRule5 {
-        let val = (self.0 >> 20usize) & 0x03;
-        super::vals::Flash00MemRuleRule5::from_bits(val as u8)
-    }
-    #[doc = "Rule 5"]
-    #[inline(always)]
-    pub const fn set_rule5(&mut self, val: super::vals::Flash00MemRuleRule5) {
-        self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
-    }
-    #[doc = "Rule 6"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule6(&self) -> super::vals::Flash00MemRuleRule6 {
-        let val = (self.0 >> 24usize) & 0x03;
-        super::vals::Flash00MemRuleRule6::from_bits(val as u8)
-    }
-    #[doc = "Rule 6"]
-    #[inline(always)]
-    pub const fn set_rule6(&mut self, val: super::vals::Flash00MemRuleRule6) {
-        self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
-    }
-    #[doc = "Rule 7"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule7(&self) -> super::vals::Flash00MemRuleRule7 {
-        let val = (self.0 >> 28usize) & 0x03;
-        super::vals::Flash00MemRuleRule7::from_bits(val as u8)
-    }
-    #[doc = "Rule 7"]
-    #[inline(always)]
-    pub const fn set_rule7(&mut self, val: super::vals::Flash00MemRuleRule7) {
-        self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
+    pub const fn set_rule(&mut self, n: usize, val: super::vals::Rule) {
+        assert!(n < 8usize);
+        let offs = 0usize + n * 4usize;
+        self.0 = (self.0 & !(0x03 << offs)) | (((val.to_bits() as u32) & 0x03) << offs);
     }
 }
 impl Default for Flash00MemRule {
@@ -2727,14 +2615,14 @@ impl Default for Flash00MemRule {
 impl core::fmt::Debug for Flash00MemRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flash00MemRule")
-            .field("rule0", &self.rule0())
-            .field("rule1", &self.rule1())
-            .field("rule2", &self.rule2())
-            .field("rule3", &self.rule3())
-            .field("rule4", &self.rule4())
-            .field("rule5", &self.rule5())
-            .field("rule6", &self.rule6())
-            .field("rule7", &self.rule7())
+            .field("rule[0]", &self.rule(0usize))
+            .field("rule[1]", &self.rule(1usize))
+            .field("rule[2]", &self.rule(2usize))
+            .field("rule[3]", &self.rule(3usize))
+            .field("rule[4]", &self.rule(4usize))
+            .field("rule[5]", &self.rule(5usize))
+            .field("rule[6]", &self.rule(6usize))
+            .field("rule[7]", &self.rule(7usize))
             .finish()
     }
 }
@@ -2743,15 +2631,15 @@ impl defmt::Format for Flash00MemRule {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Flash00MemRule {{ rule0: {:?}, rule1: {:?}, rule2: {:?}, rule3: {:?}, rule4: {:?}, rule5: {:?}, rule6: {:?}, rule7: {:?} }}",
-            self.rule0(),
-            self.rule1(),
-            self.rule2(),
-            self.rule3(),
-            self.rule4(),
-            self.rule5(),
-            self.rule6(),
-            self.rule7()
+            "Flash00MemRule {{ rule[0]: {:?}, rule[1]: {:?}, rule[2]: {:?}, rule[3]: {:?}, rule[4]: {:?}, rule[5]: {:?}, rule[6]: {:?}, rule[7]: {:?} }}",
+            self.rule(0usize),
+            self.rule(1usize),
+            self.rule(2usize),
+            self.rule(3usize),
+            self.rule(4usize),
+            self.rule(5usize),
+            self.rule(6usize),
+            self.rule(7usize)
         )
     }
 }
@@ -2763,98 +2651,18 @@ impl Flash01MemRule {
     #[doc = "Rule 0"]
     #[must_use]
     #[inline(always)]
-    pub const fn rule0(&self) -> super::vals::Flash01MemRuleRule0 {
-        let val = (self.0 >> 0usize) & 0x03;
-        super::vals::Flash01MemRuleRule0::from_bits(val as u8)
+    pub const fn rule(&self, n: usize) -> super::vals::Rule {
+        assert!(n < 8usize);
+        let offs = 0usize + n * 4usize;
+        let val = (self.0 >> offs) & 0x03;
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "Rule 0"]
     #[inline(always)]
-    pub const fn set_rule0(&mut self, val: super::vals::Flash01MemRuleRule0) {
-        self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
-    }
-    #[doc = "Rule 1"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule1(&self) -> super::vals::Flash01MemRuleRule1 {
-        let val = (self.0 >> 4usize) & 0x03;
-        super::vals::Flash01MemRuleRule1::from_bits(val as u8)
-    }
-    #[doc = "Rule 1"]
-    #[inline(always)]
-    pub const fn set_rule1(&mut self, val: super::vals::Flash01MemRuleRule1) {
-        self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
-    }
-    #[doc = "Rule 2"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule2(&self) -> super::vals::Flash01MemRuleRule2 {
-        let val = (self.0 >> 8usize) & 0x03;
-        super::vals::Flash01MemRuleRule2::from_bits(val as u8)
-    }
-    #[doc = "Rule 2"]
-    #[inline(always)]
-    pub const fn set_rule2(&mut self, val: super::vals::Flash01MemRuleRule2) {
-        self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
-    }
-    #[doc = "Rule 3"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule3(&self) -> super::vals::Flash01MemRuleRule3 {
-        let val = (self.0 >> 12usize) & 0x03;
-        super::vals::Flash01MemRuleRule3::from_bits(val as u8)
-    }
-    #[doc = "Rule 3"]
-    #[inline(always)]
-    pub const fn set_rule3(&mut self, val: super::vals::Flash01MemRuleRule3) {
-        self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
-    }
-    #[doc = "Rule 4"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule4(&self) -> super::vals::Flash01MemRuleRule4 {
-        let val = (self.0 >> 16usize) & 0x03;
-        super::vals::Flash01MemRuleRule4::from_bits(val as u8)
-    }
-    #[doc = "Rule 4"]
-    #[inline(always)]
-    pub const fn set_rule4(&mut self, val: super::vals::Flash01MemRuleRule4) {
-        self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
-    }
-    #[doc = "Rule 5"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule5(&self) -> super::vals::Flash01MemRuleRule5 {
-        let val = (self.0 >> 20usize) & 0x03;
-        super::vals::Flash01MemRuleRule5::from_bits(val as u8)
-    }
-    #[doc = "Rule 5"]
-    #[inline(always)]
-    pub const fn set_rule5(&mut self, val: super::vals::Flash01MemRuleRule5) {
-        self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
-    }
-    #[doc = "Rule 6"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule6(&self) -> super::vals::Flash01MemRuleRule6 {
-        let val = (self.0 >> 24usize) & 0x03;
-        super::vals::Flash01MemRuleRule6::from_bits(val as u8)
-    }
-    #[doc = "Rule 6"]
-    #[inline(always)]
-    pub const fn set_rule6(&mut self, val: super::vals::Flash01MemRuleRule6) {
-        self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
-    }
-    #[doc = "Rule 7"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule7(&self) -> super::vals::Flash01MemRuleRule7 {
-        let val = (self.0 >> 28usize) & 0x03;
-        super::vals::Flash01MemRuleRule7::from_bits(val as u8)
-    }
-    #[doc = "Rule 7"]
-    #[inline(always)]
-    pub const fn set_rule7(&mut self, val: super::vals::Flash01MemRuleRule7) {
-        self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
+    pub const fn set_rule(&mut self, n: usize, val: super::vals::Rule) {
+        assert!(n < 8usize);
+        let offs = 0usize + n * 4usize;
+        self.0 = (self.0 & !(0x03 << offs)) | (((val.to_bits() as u32) & 0x03) << offs);
     }
 }
 impl Default for Flash01MemRule {
@@ -2866,14 +2674,14 @@ impl Default for Flash01MemRule {
 impl core::fmt::Debug for Flash01MemRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flash01MemRule")
-            .field("rule0", &self.rule0())
-            .field("rule1", &self.rule1())
-            .field("rule2", &self.rule2())
-            .field("rule3", &self.rule3())
-            .field("rule4", &self.rule4())
-            .field("rule5", &self.rule5())
-            .field("rule6", &self.rule6())
-            .field("rule7", &self.rule7())
+            .field("rule[0]", &self.rule(0usize))
+            .field("rule[1]", &self.rule(1usize))
+            .field("rule[2]", &self.rule(2usize))
+            .field("rule[3]", &self.rule(3usize))
+            .field("rule[4]", &self.rule(4usize))
+            .field("rule[5]", &self.rule(5usize))
+            .field("rule[6]", &self.rule(6usize))
+            .field("rule[7]", &self.rule(7usize))
             .finish()
     }
 }
@@ -2882,15 +2690,15 @@ impl defmt::Format for Flash01MemRule {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Flash01MemRule {{ rule0: {:?}, rule1: {:?}, rule2: {:?}, rule3: {:?}, rule4: {:?}, rule5: {:?}, rule6: {:?}, rule7: {:?} }}",
-            self.rule0(),
-            self.rule1(),
-            self.rule2(),
-            self.rule3(),
-            self.rule4(),
-            self.rule5(),
-            self.rule6(),
-            self.rule7()
+            "Flash01MemRule {{ rule[0]: {:?}, rule[1]: {:?}, rule[2]: {:?}, rule[3]: {:?}, rule[4]: {:?}, rule[5]: {:?}, rule[6]: {:?}, rule[7]: {:?} }}",
+            self.rule(0usize),
+            self.rule(1usize),
+            self.rule(2usize),
+            self.rule(3usize),
+            self.rule(4usize),
+            self.rule(5usize),
+            self.rule(6usize),
+            self.rule(7usize)
         )
     }
 }
@@ -2902,50 +2710,18 @@ impl Flash02MemRule {
     #[doc = "Rule 0"]
     #[must_use]
     #[inline(always)]
-    pub const fn rule0(&self) -> super::vals::Flash02MemRuleRule0 {
-        let val = (self.0 >> 0usize) & 0x03;
-        super::vals::Flash02MemRuleRule0::from_bits(val as u8)
+    pub const fn rule(&self, n: usize) -> super::vals::Rule {
+        assert!(n < 4usize);
+        let offs = 0usize + n * 4usize;
+        let val = (self.0 >> offs) & 0x03;
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "Rule 0"]
     #[inline(always)]
-    pub const fn set_rule0(&mut self, val: super::vals::Flash02MemRuleRule0) {
-        self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
-    }
-    #[doc = "Rule 1"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule1(&self) -> super::vals::Flash02MemRuleRule1 {
-        let val = (self.0 >> 4usize) & 0x03;
-        super::vals::Flash02MemRuleRule1::from_bits(val as u8)
-    }
-    #[doc = "Rule 1"]
-    #[inline(always)]
-    pub const fn set_rule1(&mut self, val: super::vals::Flash02MemRuleRule1) {
-        self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
-    }
-    #[doc = "Rule 2"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule2(&self) -> super::vals::Flash02MemRuleRule2 {
-        let val = (self.0 >> 8usize) & 0x03;
-        super::vals::Flash02MemRuleRule2::from_bits(val as u8)
-    }
-    #[doc = "Rule 2"]
-    #[inline(always)]
-    pub const fn set_rule2(&mut self, val: super::vals::Flash02MemRuleRule2) {
-        self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
-    }
-    #[doc = "Rule 3"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule3(&self) -> super::vals::Flash02MemRuleRule3 {
-        let val = (self.0 >> 12usize) & 0x03;
-        super::vals::Flash02MemRuleRule3::from_bits(val as u8)
-    }
-    #[doc = "Rule 3"]
-    #[inline(always)]
-    pub const fn set_rule3(&mut self, val: super::vals::Flash02MemRuleRule3) {
-        self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
+    pub const fn set_rule(&mut self, n: usize, val: super::vals::Rule) {
+        assert!(n < 4usize);
+        let offs = 0usize + n * 4usize;
+        self.0 = (self.0 & !(0x03 << offs)) | (((val.to_bits() as u32) & 0x03) << offs);
     }
 }
 impl Default for Flash02MemRule {
@@ -2957,10 +2733,10 @@ impl Default for Flash02MemRule {
 impl core::fmt::Debug for Flash02MemRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flash02MemRule")
-            .field("rule0", &self.rule0())
-            .field("rule1", &self.rule1())
-            .field("rule2", &self.rule2())
-            .field("rule3", &self.rule3())
+            .field("rule[0]", &self.rule(0usize))
+            .field("rule[1]", &self.rule(1usize))
+            .field("rule[2]", &self.rule(2usize))
+            .field("rule[3]", &self.rule(3usize))
             .finish()
     }
 }
@@ -2969,11 +2745,11 @@ impl defmt::Format for Flash02MemRule {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Flash02MemRule {{ rule0: {:?}, rule1: {:?}, rule2: {:?}, rule3: {:?} }}",
-            self.rule0(),
-            self.rule1(),
-            self.rule2(),
-            self.rule3()
+            "Flash02MemRule {{ rule[0]: {:?}, rule[1]: {:?}, rule[2]: {:?}, rule[3]: {:?} }}",
+            self.rule(0usize),
+            self.rule(1usize),
+            self.rule(2usize),
+            self.rule(3usize)
         )
     }
 }
@@ -2985,50 +2761,18 @@ impl Flash03MemRule {
     #[doc = "Rule 0"]
     #[must_use]
     #[inline(always)]
-    pub const fn rule0(&self) -> super::vals::Flash03MemRuleRule0 {
-        let val = (self.0 >> 0usize) & 0x03;
-        super::vals::Flash03MemRuleRule0::from_bits(val as u8)
+    pub const fn rule(&self, n: usize) -> super::vals::Rule {
+        assert!(n < 4usize);
+        let offs = 0usize + n * 4usize;
+        let val = (self.0 >> offs) & 0x03;
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "Rule 0"]
     #[inline(always)]
-    pub const fn set_rule0(&mut self, val: super::vals::Flash03MemRuleRule0) {
-        self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
-    }
-    #[doc = "Rule 1"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule1(&self) -> super::vals::Flash03MemRuleRule1 {
-        let val = (self.0 >> 4usize) & 0x03;
-        super::vals::Flash03MemRuleRule1::from_bits(val as u8)
-    }
-    #[doc = "Rule 1"]
-    #[inline(always)]
-    pub const fn set_rule1(&mut self, val: super::vals::Flash03MemRuleRule1) {
-        self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
-    }
-    #[doc = "Rule 2"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule2(&self) -> super::vals::Flash03MemRuleRule2 {
-        let val = (self.0 >> 8usize) & 0x03;
-        super::vals::Flash03MemRuleRule2::from_bits(val as u8)
-    }
-    #[doc = "Rule 2"]
-    #[inline(always)]
-    pub const fn set_rule2(&mut self, val: super::vals::Flash03MemRuleRule2) {
-        self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
-    }
-    #[doc = "Rule 3"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule3(&self) -> super::vals::Flash03MemRuleRule3 {
-        let val = (self.0 >> 12usize) & 0x03;
-        super::vals::Flash03MemRuleRule3::from_bits(val as u8)
-    }
-    #[doc = "Rule 3"]
-    #[inline(always)]
-    pub const fn set_rule3(&mut self, val: super::vals::Flash03MemRuleRule3) {
-        self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
+    pub const fn set_rule(&mut self, n: usize, val: super::vals::Rule) {
+        assert!(n < 4usize);
+        let offs = 0usize + n * 4usize;
+        self.0 = (self.0 & !(0x03 << offs)) | (((val.to_bits() as u32) & 0x03) << offs);
     }
 }
 impl Default for Flash03MemRule {
@@ -3040,10 +2784,10 @@ impl Default for Flash03MemRule {
 impl core::fmt::Debug for Flash03MemRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flash03MemRule")
-            .field("rule0", &self.rule0())
-            .field("rule1", &self.rule1())
-            .field("rule2", &self.rule2())
-            .field("rule3", &self.rule3())
+            .field("rule[0]", &self.rule(0usize))
+            .field("rule[1]", &self.rule(1usize))
+            .field("rule[2]", &self.rule(2usize))
+            .field("rule[3]", &self.rule(3usize))
             .finish()
     }
 }
@@ -3052,11 +2796,11 @@ impl defmt::Format for Flash03MemRule {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Flash03MemRule {{ rule0: {:?}, rule1: {:?}, rule2: {:?}, rule3: {:?} }}",
-            self.rule0(),
-            self.rule1(),
-            self.rule2(),
-            self.rule3()
+            "Flash03MemRule {{ rule[0]: {:?}, rule[1]: {:?}, rule[2]: {:?}, rule[3]: {:?} }}",
+            self.rule(0usize),
+            self.rule(1usize),
+            self.rule(2usize),
+            self.rule(3usize)
         )
     }
 }
@@ -3068,98 +2812,18 @@ impl Flexspi0Region0MemRule {
     #[doc = "Rule 0"]
     #[must_use]
     #[inline(always)]
-    pub const fn rule0(&self) -> super::vals::Flexspi0Region0MemRuleRule0 {
-        let val = (self.0 >> 0usize) & 0x03;
-        super::vals::Flexspi0Region0MemRuleRule0::from_bits(val as u8)
+    pub const fn rule(&self, n: usize) -> super::vals::Rule {
+        assert!(n < 8usize);
+        let offs = 0usize + n * 4usize;
+        let val = (self.0 >> offs) & 0x03;
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "Rule 0"]
     #[inline(always)]
-    pub const fn set_rule0(&mut self, val: super::vals::Flexspi0Region0MemRuleRule0) {
-        self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
-    }
-    #[doc = "Rule 1"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule1(&self) -> super::vals::Flexspi0Region0MemRuleRule1 {
-        let val = (self.0 >> 4usize) & 0x03;
-        super::vals::Flexspi0Region0MemRuleRule1::from_bits(val as u8)
-    }
-    #[doc = "Rule 1"]
-    #[inline(always)]
-    pub const fn set_rule1(&mut self, val: super::vals::Flexspi0Region0MemRuleRule1) {
-        self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
-    }
-    #[doc = "Rule 2"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule2(&self) -> super::vals::Flexspi0Region0MemRuleRule2 {
-        let val = (self.0 >> 8usize) & 0x03;
-        super::vals::Flexspi0Region0MemRuleRule2::from_bits(val as u8)
-    }
-    #[doc = "Rule 2"]
-    #[inline(always)]
-    pub const fn set_rule2(&mut self, val: super::vals::Flexspi0Region0MemRuleRule2) {
-        self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
-    }
-    #[doc = "Rule 3"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule3(&self) -> super::vals::Flexspi0Region0MemRuleRule3 {
-        let val = (self.0 >> 12usize) & 0x03;
-        super::vals::Flexspi0Region0MemRuleRule3::from_bits(val as u8)
-    }
-    #[doc = "Rule 3"]
-    #[inline(always)]
-    pub const fn set_rule3(&mut self, val: super::vals::Flexspi0Region0MemRuleRule3) {
-        self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
-    }
-    #[doc = "Rule 4"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule4(&self) -> super::vals::Flexspi0Region0MemRuleRule4 {
-        let val = (self.0 >> 16usize) & 0x03;
-        super::vals::Flexspi0Region0MemRuleRule4::from_bits(val as u8)
-    }
-    #[doc = "Rule 4"]
-    #[inline(always)]
-    pub const fn set_rule4(&mut self, val: super::vals::Flexspi0Region0MemRuleRule4) {
-        self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
-    }
-    #[doc = "Rule 5"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule5(&self) -> super::vals::Flexspi0Region0MemRuleRule5 {
-        let val = (self.0 >> 20usize) & 0x03;
-        super::vals::Flexspi0Region0MemRuleRule5::from_bits(val as u8)
-    }
-    #[doc = "Rule 5"]
-    #[inline(always)]
-    pub const fn set_rule5(&mut self, val: super::vals::Flexspi0Region0MemRuleRule5) {
-        self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
-    }
-    #[doc = "Rule 6"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule6(&self) -> super::vals::Flexspi0Region0MemRuleRule6 {
-        let val = (self.0 >> 24usize) & 0x03;
-        super::vals::Flexspi0Region0MemRuleRule6::from_bits(val as u8)
-    }
-    #[doc = "Rule 6"]
-    #[inline(always)]
-    pub const fn set_rule6(&mut self, val: super::vals::Flexspi0Region0MemRuleRule6) {
-        self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
-    }
-    #[doc = "Rule 7"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule7(&self) -> super::vals::Flexspi0Region0MemRuleRule7 {
-        let val = (self.0 >> 28usize) & 0x03;
-        super::vals::Flexspi0Region0MemRuleRule7::from_bits(val as u8)
-    }
-    #[doc = "Rule 7"]
-    #[inline(always)]
-    pub const fn set_rule7(&mut self, val: super::vals::Flexspi0Region0MemRuleRule7) {
-        self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
+    pub const fn set_rule(&mut self, n: usize, val: super::vals::Rule) {
+        assert!(n < 8usize);
+        let offs = 0usize + n * 4usize;
+        self.0 = (self.0 & !(0x03 << offs)) | (((val.to_bits() as u32) & 0x03) << offs);
     }
 }
 impl Default for Flexspi0Region0MemRule {
@@ -3171,14 +2835,14 @@ impl Default for Flexspi0Region0MemRule {
 impl core::fmt::Debug for Flexspi0Region0MemRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexspi0Region0MemRule")
-            .field("rule0", &self.rule0())
-            .field("rule1", &self.rule1())
-            .field("rule2", &self.rule2())
-            .field("rule3", &self.rule3())
-            .field("rule4", &self.rule4())
-            .field("rule5", &self.rule5())
-            .field("rule6", &self.rule6())
-            .field("rule7", &self.rule7())
+            .field("rule[0]", &self.rule(0usize))
+            .field("rule[1]", &self.rule(1usize))
+            .field("rule[2]", &self.rule(2usize))
+            .field("rule[3]", &self.rule(3usize))
+            .field("rule[4]", &self.rule(4usize))
+            .field("rule[5]", &self.rule(5usize))
+            .field("rule[6]", &self.rule(6usize))
+            .field("rule[7]", &self.rule(7usize))
             .finish()
     }
 }
@@ -3187,15 +2851,15 @@ impl defmt::Format for Flexspi0Region0MemRule {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Flexspi0Region0MemRule {{ rule0: {:?}, rule1: {:?}, rule2: {:?}, rule3: {:?}, rule4: {:?}, rule5: {:?}, rule6: {:?}, rule7: {:?} }}",
-            self.rule0(),
-            self.rule1(),
-            self.rule2(),
-            self.rule3(),
-            self.rule4(),
-            self.rule5(),
-            self.rule6(),
-            self.rule7()
+            "Flexspi0Region0MemRule {{ rule[0]: {:?}, rule[1]: {:?}, rule[2]: {:?}, rule[3]: {:?}, rule[4]: {:?}, rule[5]: {:?}, rule[6]: {:?}, rule[7]: {:?} }}",
+            self.rule(0usize),
+            self.rule(1usize),
+            self.rule(2usize),
+            self.rule(3usize),
+            self.rule(4usize),
+            self.rule(5usize),
+            self.rule(6usize),
+            self.rule(7usize)
         )
     }
 }
@@ -3207,50 +2871,18 @@ impl Flexspi0RegionMemRule {
     #[doc = "Rule 0"]
     #[must_use]
     #[inline(always)]
-    pub const fn rule0(&self) -> super::vals::Flexspi0RegionMemRuleRule0 {
-        let val = (self.0 >> 0usize) & 0x03;
-        super::vals::Flexspi0RegionMemRuleRule0::from_bits(val as u8)
+    pub const fn rule(&self, n: usize) -> super::vals::Rule {
+        assert!(n < 4usize);
+        let offs = 0usize + n * 4usize;
+        let val = (self.0 >> offs) & 0x03;
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "Rule 0"]
     #[inline(always)]
-    pub const fn set_rule0(&mut self, val: super::vals::Flexspi0RegionMemRuleRule0) {
-        self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
-    }
-    #[doc = "Rule 1"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule1(&self) -> super::vals::Flexspi0RegionMemRuleRule1 {
-        let val = (self.0 >> 4usize) & 0x03;
-        super::vals::Flexspi0RegionMemRuleRule1::from_bits(val as u8)
-    }
-    #[doc = "Rule 1"]
-    #[inline(always)]
-    pub const fn set_rule1(&mut self, val: super::vals::Flexspi0RegionMemRuleRule1) {
-        self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
-    }
-    #[doc = "Rule 2"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule2(&self) -> super::vals::Flexspi0RegionMemRuleRule2 {
-        let val = (self.0 >> 8usize) & 0x03;
-        super::vals::Flexspi0RegionMemRuleRule2::from_bits(val as u8)
-    }
-    #[doc = "Rule 2"]
-    #[inline(always)]
-    pub const fn set_rule2(&mut self, val: super::vals::Flexspi0RegionMemRuleRule2) {
-        self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
-    }
-    #[doc = "Rule 3"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule3(&self) -> super::vals::Flexspi0RegionMemRuleRule3 {
-        let val = (self.0 >> 12usize) & 0x03;
-        super::vals::Flexspi0RegionMemRuleRule3::from_bits(val as u8)
-    }
-    #[doc = "Rule 3"]
-    #[inline(always)]
-    pub const fn set_rule3(&mut self, val: super::vals::Flexspi0RegionMemRuleRule3) {
-        self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
+    pub const fn set_rule(&mut self, n: usize, val: super::vals::Rule) {
+        assert!(n < 4usize);
+        let offs = 0usize + n * 4usize;
+        self.0 = (self.0 & !(0x03 << offs)) | (((val.to_bits() as u32) & 0x03) << offs);
     }
 }
 impl Default for Flexspi0RegionMemRule {
@@ -3262,10 +2894,10 @@ impl Default for Flexspi0RegionMemRule {
 impl core::fmt::Debug for Flexspi0RegionMemRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Flexspi0RegionMemRule")
-            .field("rule0", &self.rule0())
-            .field("rule1", &self.rule1())
-            .field("rule2", &self.rule2())
-            .field("rule3", &self.rule3())
+            .field("rule[0]", &self.rule(0usize))
+            .field("rule[1]", &self.rule(1usize))
+            .field("rule[2]", &self.rule(2usize))
+            .field("rule[3]", &self.rule(3usize))
             .finish()
     }
 }
@@ -3274,11 +2906,11 @@ impl defmt::Format for Flexspi0RegionMemRule {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Flexspi0RegionMemRule {{ rule0: {:?}, rule1: {:?}, rule2: {:?}, rule3: {:?} }}",
-            self.rule0(),
-            self.rule1(),
-            self.rule2(),
-            self.rule3()
+            "Flexspi0RegionMemRule {{ rule[0]: {:?}, rule[1]: {:?}, rule[2]: {:?}, rule[3]: {:?} }}",
+            self.rule(0usize),
+            self.rule(1usize),
+            self.rule(2usize),
+            self.rule(3usize)
         )
     }
 }
@@ -3290,73 +2922,73 @@ impl MasterSecAntiPolReg {
     #[doc = "SMARTDMA Data"]
     #[must_use]
     #[inline(always)]
-    pub const fn smartdma(&self) -> super::vals::MasterSecAntiPolRegSmartdma {
+    pub const fn smartdma(&self) -> super::vals::MasterSec {
         let val = (self.0 >> 4usize) & 0x03;
-        super::vals::MasterSecAntiPolRegSmartdma::from_bits(val as u8)
+        super::vals::MasterSec::from_bits(val as u8)
     }
     #[doc = "SMARTDMA Data"]
     #[inline(always)]
-    pub const fn set_smartdma(&mut self, val: super::vals::MasterSecAntiPolRegSmartdma) {
+    pub const fn set_smartdma(&mut self, val: super::vals::MasterSec) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
     #[doc = "eDMA0"]
     #[must_use]
     #[inline(always)]
-    pub const fn dma0(&self) -> super::vals::MasterSecAntiPolRegDma0 {
+    pub const fn dma0(&self) -> super::vals::MasterSec {
         let val = (self.0 >> 6usize) & 0x03;
-        super::vals::MasterSecAntiPolRegDma0::from_bits(val as u8)
+        super::vals::MasterSec::from_bits(val as u8)
     }
     #[doc = "eDMA0"]
     #[inline(always)]
-    pub const fn set_dma0(&mut self, val: super::vals::MasterSecAntiPolRegDma0) {
+    pub const fn set_dma0(&mut self, val: super::vals::MasterSec) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u32) & 0x03) << 6usize);
     }
     #[doc = "eDMA1"]
     #[must_use]
     #[inline(always)]
-    pub const fn dma1(&self) -> super::vals::MasterSecAntiPolRegDma1 {
+    pub const fn dma1(&self) -> super::vals::MasterSec {
         let val = (self.0 >> 8usize) & 0x03;
-        super::vals::MasterSecAntiPolRegDma1::from_bits(val as u8)
+        super::vals::MasterSec::from_bits(val as u8)
     }
     #[doc = "eDMA1"]
     #[inline(always)]
-    pub const fn set_dma1(&mut self, val: super::vals::MasterSecAntiPolRegDma1) {
+    pub const fn set_dma1(&mut self, val: super::vals::MasterSec) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
     #[doc = "PKC"]
     #[must_use]
     #[inline(always)]
-    pub const fn pkc(&self) -> super::vals::MasterSecAntiPolRegPkc {
+    pub const fn pkc(&self) -> super::vals::MasterSec {
         let val = (self.0 >> 10usize) & 0x03;
-        super::vals::MasterSecAntiPolRegPkc::from_bits(val as u8)
+        super::vals::MasterSec::from_bits(val as u8)
     }
     #[doc = "PKC"]
     #[inline(always)]
-    pub const fn set_pkc(&mut self, val: super::vals::MasterSecAntiPolRegPkc) {
+    pub const fn set_pkc(&mut self, val: super::vals::MasterSec) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u32) & 0x03) << 10usize);
     }
     #[doc = "ENET0"]
     #[must_use]
     #[inline(always)]
-    pub const fn enet0(&self) -> super::vals::MasterSecAntiPolRegEnet0 {
+    pub const fn enet0(&self) -> super::vals::MasterSec {
         let val = (self.0 >> 24usize) & 0x03;
-        super::vals::MasterSecAntiPolRegEnet0::from_bits(val as u8)
+        super::vals::MasterSec::from_bits(val as u8)
     }
     #[doc = "ENET0"]
     #[inline(always)]
-    pub const fn set_enet0(&mut self, val: super::vals::MasterSecAntiPolRegEnet0) {
+    pub const fn set_enet0(&mut self, val: super::vals::MasterSec) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
     }
     #[doc = "USB1"]
     #[must_use]
     #[inline(always)]
-    pub const fn usb1(&self) -> super::vals::MasterSecAntiPolRegUsb1 {
+    pub const fn usb1(&self) -> super::vals::MasterSec {
         let val = (self.0 >> 26usize) & 0x03;
-        super::vals::MasterSecAntiPolRegUsb1::from_bits(val as u8)
+        super::vals::MasterSec::from_bits(val as u8)
     }
     #[doc = "USB1"]
     #[inline(always)]
-    pub const fn set_usb1(&mut self, val: super::vals::MasterSecAntiPolRegUsb1) {
+    pub const fn set_usb1(&mut self, val: super::vals::MasterSec) {
         self.0 = (self.0 & !(0x03 << 26usize)) | (((val.to_bits() as u32) & 0x03) << 26usize);
     }
 }
@@ -3401,73 +3033,73 @@ impl MasterSecLevel {
     #[doc = "SMARTDMA Data"]
     #[must_use]
     #[inline(always)]
-    pub const fn smartdma(&self) -> super::vals::MasterSecLevelSmartdma {
+    pub const fn smartdma(&self) -> super::vals::MasterSec {
         let val = (self.0 >> 4usize) & 0x03;
-        super::vals::MasterSecLevelSmartdma::from_bits(val as u8)
+        super::vals::MasterSec::from_bits(val as u8)
     }
     #[doc = "SMARTDMA Data"]
     #[inline(always)]
-    pub const fn set_smartdma(&mut self, val: super::vals::MasterSecLevelSmartdma) {
+    pub const fn set_smartdma(&mut self, val: super::vals::MasterSec) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
     #[doc = "eDMA0"]
     #[must_use]
     #[inline(always)]
-    pub const fn dma0(&self) -> super::vals::MasterSecLevelDma0 {
+    pub const fn dma0(&self) -> super::vals::MasterSec {
         let val = (self.0 >> 6usize) & 0x03;
-        super::vals::MasterSecLevelDma0::from_bits(val as u8)
+        super::vals::MasterSec::from_bits(val as u8)
     }
     #[doc = "eDMA0"]
     #[inline(always)]
-    pub const fn set_dma0(&mut self, val: super::vals::MasterSecLevelDma0) {
+    pub const fn set_dma0(&mut self, val: super::vals::MasterSec) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u32) & 0x03) << 6usize);
     }
     #[doc = "eDMA1"]
     #[must_use]
     #[inline(always)]
-    pub const fn dma1(&self) -> super::vals::MasterSecLevelDma1 {
+    pub const fn dma1(&self) -> super::vals::MasterSec {
         let val = (self.0 >> 8usize) & 0x03;
-        super::vals::MasterSecLevelDma1::from_bits(val as u8)
+        super::vals::MasterSec::from_bits(val as u8)
     }
     #[doc = "eDMA1"]
     #[inline(always)]
-    pub const fn set_dma1(&mut self, val: super::vals::MasterSecLevelDma1) {
+    pub const fn set_dma1(&mut self, val: super::vals::MasterSec) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
     #[doc = "PKC"]
     #[must_use]
     #[inline(always)]
-    pub const fn pkc(&self) -> super::vals::MasterSecLevelPkc {
+    pub const fn pkc(&self) -> super::vals::MasterSec {
         let val = (self.0 >> 10usize) & 0x03;
-        super::vals::MasterSecLevelPkc::from_bits(val as u8)
+        super::vals::MasterSec::from_bits(val as u8)
     }
     #[doc = "PKC"]
     #[inline(always)]
-    pub const fn set_pkc(&mut self, val: super::vals::MasterSecLevelPkc) {
+    pub const fn set_pkc(&mut self, val: super::vals::MasterSec) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u32) & 0x03) << 10usize);
     }
     #[doc = "ENET0"]
     #[must_use]
     #[inline(always)]
-    pub const fn enet0(&self) -> super::vals::MasterSecLevelEnet0 {
+    pub const fn enet0(&self) -> super::vals::MasterSec {
         let val = (self.0 >> 24usize) & 0x03;
-        super::vals::MasterSecLevelEnet0::from_bits(val as u8)
+        super::vals::MasterSec::from_bits(val as u8)
     }
     #[doc = "ENET0"]
     #[inline(always)]
-    pub const fn set_enet0(&mut self, val: super::vals::MasterSecLevelEnet0) {
+    pub const fn set_enet0(&mut self, val: super::vals::MasterSec) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
     }
     #[doc = "USB1"]
     #[must_use]
     #[inline(always)]
-    pub const fn usb1(&self) -> super::vals::MasterSecLevelUsb1 {
+    pub const fn usb1(&self) -> super::vals::MasterSec {
         let val = (self.0 >> 26usize) & 0x03;
-        super::vals::MasterSecLevelUsb1::from_bits(val as u8)
+        super::vals::MasterSec::from_bits(val as u8)
     }
     #[doc = "USB1"]
     #[inline(always)]
-    pub const fn set_usb1(&mut self, val: super::vals::MasterSecLevelUsb1) {
+    pub const fn set_usb1(&mut self, val: super::vals::MasterSec) {
         self.0 = (self.0 & !(0x03 << 26usize)) | (((val.to_bits() as u32) & 0x03) << 26usize);
     }
 }
@@ -3512,100 +3144,91 @@ impl MiscCtrlDpReg {
     #[doc = "Write Lock"]
     #[must_use]
     #[inline(always)]
-    pub const fn write_lock(&self) -> super::vals::MiscCtrlDpRegWriteLock {
+    pub const fn write_lock(&self) -> super::vals::MiscCtrlRegWriteLock {
         let val = (self.0 >> 0usize) & 0x03;
-        super::vals::MiscCtrlDpRegWriteLock::from_bits(val as u8)
+        super::vals::MiscCtrlRegWriteLock::from_bits(val as u8)
     }
     #[doc = "Write Lock"]
     #[inline(always)]
-    pub const fn set_write_lock(&mut self, val: super::vals::MiscCtrlDpRegWriteLock) {
+    pub const fn set_write_lock(&mut self, val: super::vals::MiscCtrlRegWriteLock) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
     #[doc = "Enable Secure Checking"]
     #[must_use]
     #[inline(always)]
-    pub const fn enable_secure_checking(&self) -> super::vals::MiscCtrlDpRegEnableSecureChecking {
+    pub const fn enable_secure_checking(&self) -> super::vals::MiscCtrlEnable {
         let val = (self.0 >> 2usize) & 0x03;
-        super::vals::MiscCtrlDpRegEnableSecureChecking::from_bits(val as u8)
+        super::vals::MiscCtrlEnable::from_bits(val as u8)
     }
     #[doc = "Enable Secure Checking"]
     #[inline(always)]
-    pub const fn set_enable_secure_checking(
-        &mut self,
-        val: super::vals::MiscCtrlDpRegEnableSecureChecking,
-    ) {
+    pub const fn set_enable_secure_checking(&mut self, val: super::vals::MiscCtrlEnable) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
     #[doc = "Enable Secure Privilege Checking"]
     #[must_use]
     #[inline(always)]
-    pub const fn enable_s_priv_check(&self) -> super::vals::MiscCtrlDpRegEnableSPrivCheck {
+    pub const fn enable_s_priv_check(&self) -> super::vals::MiscCtrlEnable {
         let val = (self.0 >> 4usize) & 0x03;
-        super::vals::MiscCtrlDpRegEnableSPrivCheck::from_bits(val as u8)
+        super::vals::MiscCtrlEnable::from_bits(val as u8)
     }
     #[doc = "Enable Secure Privilege Checking"]
     #[inline(always)]
-    pub const fn set_enable_s_priv_check(
-        &mut self,
-        val: super::vals::MiscCtrlDpRegEnableSPrivCheck,
-    ) {
+    pub const fn set_enable_s_priv_check(&mut self, val: super::vals::MiscCtrlEnable) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
     #[doc = "Enable Non-Secure Privilege Checking"]
     #[must_use]
     #[inline(always)]
-    pub const fn enable_ns_priv_check(&self) -> super::vals::MiscCtrlDpRegEnableNsPrivCheck {
+    pub const fn enable_ns_priv_check(&self) -> super::vals::MiscCtrlEnable {
         let val = (self.0 >> 6usize) & 0x03;
-        super::vals::MiscCtrlDpRegEnableNsPrivCheck::from_bits(val as u8)
+        super::vals::MiscCtrlEnable::from_bits(val as u8)
     }
     #[doc = "Enable Non-Secure Privilege Checking"]
     #[inline(always)]
-    pub const fn set_enable_ns_priv_check(
-        &mut self,
-        val: super::vals::MiscCtrlDpRegEnableNsPrivCheck,
-    ) {
+    pub const fn set_enable_ns_priv_check(&mut self, val: super::vals::MiscCtrlEnable) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u32) & 0x03) << 6usize);
     }
     #[doc = "Disable Violation Abort"]
     #[must_use]
     #[inline(always)]
-    pub const fn disable_violation_abort(&self) -> super::vals::MiscCtrlDpRegDisableViolationAbort {
+    pub const fn disable_violation_abort(&self) -> super::vals::MiscCtrlRegDisableViolationAbort {
         let val = (self.0 >> 8usize) & 0x03;
-        super::vals::MiscCtrlDpRegDisableViolationAbort::from_bits(val as u8)
+        super::vals::MiscCtrlRegDisableViolationAbort::from_bits(val as u8)
     }
     #[doc = "Disable Violation Abort"]
     #[inline(always)]
     pub const fn set_disable_violation_abort(
         &mut self,
-        val: super::vals::MiscCtrlDpRegDisableViolationAbort,
+        val: super::vals::MiscCtrlRegDisableViolationAbort,
     ) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
     #[doc = "Disable Strict Mode"]
     #[must_use]
     #[inline(always)]
-    pub const fn disable_strict_mode(&self) -> super::vals::MiscCtrlDpRegDisableStrictMode {
+    pub const fn disable_strict_mode(&self) -> super::vals::MiscCtrlRegDisableStrictMode {
         let val = (self.0 >> 10usize) & 0x03;
-        super::vals::MiscCtrlDpRegDisableStrictMode::from_bits(val as u8)
+        super::vals::MiscCtrlRegDisableStrictMode::from_bits(val as u8)
     }
     #[doc = "Disable Strict Mode"]
     #[inline(always)]
     pub const fn set_disable_strict_mode(
         &mut self,
-        val: super::vals::MiscCtrlDpRegDisableStrictMode,
+        val: super::vals::MiscCtrlRegDisableStrictMode,
     ) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u32) & 0x03) << 10usize);
     }
     #[doc = "IDAU All Non-Secure"]
     #[must_use]
     #[inline(always)]
-    pub const fn idau_all_ns(&self) -> super::vals::MiscCtrlDpRegIdauAllNs {
+    pub const fn idau_all_ns(&self) -> super::vals::MiscCtrlRegIdauAllNs {
         let val = (self.0 >> 14usize) & 0x03;
-        super::vals::MiscCtrlDpRegIdauAllNs::from_bits(val as u8)
+        super::vals::MiscCtrlRegIdauAllNs::from_bits(val as u8)
     }
     #[doc = "IDAU All Non-Secure"]
     #[inline(always)]
-    pub const fn set_idau_all_ns(&mut self, val: super::vals::MiscCtrlDpRegIdauAllNs) {
+    pub const fn set_idau_all_ns(&mut self, val: super::vals::MiscCtrlRegIdauAllNs) {
         self.0 = (self.0 & !(0x03 << 14usize)) | (((val.to_bits() as u32) & 0x03) << 14usize);
     }
 }
@@ -3664,43 +3287,37 @@ impl MiscCtrlReg {
     #[doc = "Enable Secure Checking"]
     #[must_use]
     #[inline(always)]
-    pub const fn enable_secure_checking(&self) -> super::vals::MiscCtrlRegEnableSecureChecking {
+    pub const fn enable_secure_checking(&self) -> super::vals::MiscCtrlEnable {
         let val = (self.0 >> 2usize) & 0x03;
-        super::vals::MiscCtrlRegEnableSecureChecking::from_bits(val as u8)
+        super::vals::MiscCtrlEnable::from_bits(val as u8)
     }
     #[doc = "Enable Secure Checking"]
     #[inline(always)]
-    pub const fn set_enable_secure_checking(
-        &mut self,
-        val: super::vals::MiscCtrlRegEnableSecureChecking,
-    ) {
+    pub const fn set_enable_secure_checking(&mut self, val: super::vals::MiscCtrlEnable) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
     #[doc = "Enable Secure Privilege Checking"]
     #[must_use]
     #[inline(always)]
-    pub const fn enable_s_priv_check(&self) -> super::vals::MiscCtrlRegEnableSPrivCheck {
+    pub const fn enable_s_priv_check(&self) -> super::vals::MiscCtrlEnable {
         let val = (self.0 >> 4usize) & 0x03;
-        super::vals::MiscCtrlRegEnableSPrivCheck::from_bits(val as u8)
+        super::vals::MiscCtrlEnable::from_bits(val as u8)
     }
     #[doc = "Enable Secure Privilege Checking"]
     #[inline(always)]
-    pub const fn set_enable_s_priv_check(&mut self, val: super::vals::MiscCtrlRegEnableSPrivCheck) {
+    pub const fn set_enable_s_priv_check(&mut self, val: super::vals::MiscCtrlEnable) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
     #[doc = "Enable Non-Secure Privilege Checking"]
     #[must_use]
     #[inline(always)]
-    pub const fn enable_ns_priv_check(&self) -> super::vals::MiscCtrlRegEnableNsPrivCheck {
+    pub const fn enable_ns_priv_check(&self) -> super::vals::MiscCtrlEnable {
         let val = (self.0 >> 6usize) & 0x03;
-        super::vals::MiscCtrlRegEnableNsPrivCheck::from_bits(val as u8)
+        super::vals::MiscCtrlEnable::from_bits(val as u8)
     }
     #[doc = "Enable Non-Secure Privilege Checking"]
     #[inline(always)]
-    pub const fn set_enable_ns_priv_check(
-        &mut self,
-        val: super::vals::MiscCtrlRegEnableNsPrivCheck,
-    ) {
+    pub const fn set_enable_ns_priv_check(&mut self, val: super::vals::MiscCtrlEnable) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u32) & 0x03) << 6usize);
     }
     #[doc = "Disable Violation Abort"]
@@ -3784,417 +3401,59 @@ impl defmt::Format for MiscCtrlReg {
 #[doc = "RAMA Memory Rule 0"]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct RamaMemRule(pub u32);
-impl RamaMemRule {
+pub struct RamMemRule(pub u32);
+impl RamMemRule {
     #[doc = "Rule 0"]
     #[must_use]
     #[inline(always)]
-    pub const fn rule0(&self) -> super::vals::RamaMemRuleRule0 {
-        let val = (self.0 >> 0usize) & 0x03;
-        super::vals::RamaMemRuleRule0::from_bits(val as u8)
+    pub const fn rule(&self, n: usize) -> super::vals::Rule {
+        assert!(n < 8usize);
+        let offs = 0usize + n * 4usize;
+        let val = (self.0 >> offs) & 0x03;
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "Rule 0"]
     #[inline(always)]
-    pub const fn set_rule0(&mut self, val: super::vals::RamaMemRuleRule0) {
-        self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
-    }
-    #[doc = "Rule 1"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule1(&self) -> super::vals::RamaMemRuleRule1 {
-        let val = (self.0 >> 4usize) & 0x03;
-        super::vals::RamaMemRuleRule1::from_bits(val as u8)
-    }
-    #[doc = "Rule 1"]
-    #[inline(always)]
-    pub const fn set_rule1(&mut self, val: super::vals::RamaMemRuleRule1) {
-        self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
-    }
-    #[doc = "Rule 2"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule2(&self) -> super::vals::RamaMemRuleRule2 {
-        let val = (self.0 >> 8usize) & 0x03;
-        super::vals::RamaMemRuleRule2::from_bits(val as u8)
-    }
-    #[doc = "Rule 2"]
-    #[inline(always)]
-    pub const fn set_rule2(&mut self, val: super::vals::RamaMemRuleRule2) {
-        self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
-    }
-    #[doc = "Rule 3"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule3(&self) -> super::vals::RamaMemRuleRule3 {
-        let val = (self.0 >> 12usize) & 0x03;
-        super::vals::RamaMemRuleRule3::from_bits(val as u8)
-    }
-    #[doc = "Rule 3"]
-    #[inline(always)]
-    pub const fn set_rule3(&mut self, val: super::vals::RamaMemRuleRule3) {
-        self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
-    }
-    #[doc = "Rule 4"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule4(&self) -> super::vals::RamaMemRuleRule4 {
-        let val = (self.0 >> 16usize) & 0x03;
-        super::vals::RamaMemRuleRule4::from_bits(val as u8)
-    }
-    #[doc = "Rule 4"]
-    #[inline(always)]
-    pub const fn set_rule4(&mut self, val: super::vals::RamaMemRuleRule4) {
-        self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
-    }
-    #[doc = "Rule 5"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule5(&self) -> super::vals::RamaMemRuleRule5 {
-        let val = (self.0 >> 20usize) & 0x03;
-        super::vals::RamaMemRuleRule5::from_bits(val as u8)
-    }
-    #[doc = "Rule 5"]
-    #[inline(always)]
-    pub const fn set_rule5(&mut self, val: super::vals::RamaMemRuleRule5) {
-        self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
-    }
-    #[doc = "Rule 6"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule6(&self) -> super::vals::RamaMemRuleRule6 {
-        let val = (self.0 >> 24usize) & 0x03;
-        super::vals::RamaMemRuleRule6::from_bits(val as u8)
-    }
-    #[doc = "Rule 6"]
-    #[inline(always)]
-    pub const fn set_rule6(&mut self, val: super::vals::RamaMemRuleRule6) {
-        self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
-    }
-    #[doc = "Rule 7"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule7(&self) -> super::vals::RamaMemRuleRule7 {
-        let val = (self.0 >> 28usize) & 0x03;
-        super::vals::RamaMemRuleRule7::from_bits(val as u8)
-    }
-    #[doc = "Rule 7"]
-    #[inline(always)]
-    pub const fn set_rule7(&mut self, val: super::vals::RamaMemRuleRule7) {
-        self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
+    pub const fn set_rule(&mut self, n: usize, val: super::vals::Rule) {
+        assert!(n < 8usize);
+        let offs = 0usize + n * 4usize;
+        self.0 = (self.0 & !(0x03 << offs)) | (((val.to_bits() as u32) & 0x03) << offs);
     }
 }
-impl Default for RamaMemRule {
+impl Default for RamMemRule {
     #[inline(always)]
-    fn default() -> RamaMemRule {
-        RamaMemRule(0)
+    fn default() -> RamMemRule {
+        RamMemRule(0)
     }
 }
-impl core::fmt::Debug for RamaMemRule {
+impl core::fmt::Debug for RamMemRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("RamaMemRule")
-            .field("rule0", &self.rule0())
-            .field("rule1", &self.rule1())
-            .field("rule2", &self.rule2())
-            .field("rule3", &self.rule3())
-            .field("rule4", &self.rule4())
-            .field("rule5", &self.rule5())
-            .field("rule6", &self.rule6())
-            .field("rule7", &self.rule7())
+        f.debug_struct("RamMemRule")
+            .field("rule[0]", &self.rule(0usize))
+            .field("rule[1]", &self.rule(1usize))
+            .field("rule[2]", &self.rule(2usize))
+            .field("rule[3]", &self.rule(3usize))
+            .field("rule[4]", &self.rule(4usize))
+            .field("rule[5]", &self.rule(5usize))
+            .field("rule[6]", &self.rule(6usize))
+            .field("rule[7]", &self.rule(7usize))
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for RamaMemRule {
+impl defmt::Format for RamMemRule {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "RamaMemRule {{ rule0: {:?}, rule1: {:?}, rule2: {:?}, rule3: {:?}, rule4: {:?}, rule5: {:?}, rule6: {:?}, rule7: {:?} }}",
-            self.rule0(),
-            self.rule1(),
-            self.rule2(),
-            self.rule3(),
-            self.rule4(),
-            self.rule5(),
-            self.rule6(),
-            self.rule7()
-        )
-    }
-}
-#[doc = "RAMB Memory Rule 0"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct RambMemRule(pub u32);
-impl RambMemRule {
-    #[doc = "Rule 0"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule0(&self) -> super::vals::RambMemRuleRule0 {
-        let val = (self.0 >> 0usize) & 0x03;
-        super::vals::RambMemRuleRule0::from_bits(val as u8)
-    }
-    #[doc = "Rule 0"]
-    #[inline(always)]
-    pub const fn set_rule0(&mut self, val: super::vals::RambMemRuleRule0) {
-        self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
-    }
-    #[doc = "Rule 1"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule1(&self) -> super::vals::RambMemRuleRule1 {
-        let val = (self.0 >> 4usize) & 0x03;
-        super::vals::RambMemRuleRule1::from_bits(val as u8)
-    }
-    #[doc = "Rule 1"]
-    #[inline(always)]
-    pub const fn set_rule1(&mut self, val: super::vals::RambMemRuleRule1) {
-        self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
-    }
-    #[doc = "Rule 2"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule2(&self) -> super::vals::RambMemRuleRule2 {
-        let val = (self.0 >> 8usize) & 0x03;
-        super::vals::RambMemRuleRule2::from_bits(val as u8)
-    }
-    #[doc = "Rule 2"]
-    #[inline(always)]
-    pub const fn set_rule2(&mut self, val: super::vals::RambMemRuleRule2) {
-        self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
-    }
-    #[doc = "Rule 3"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule3(&self) -> super::vals::RambMemRuleRule3 {
-        let val = (self.0 >> 12usize) & 0x03;
-        super::vals::RambMemRuleRule3::from_bits(val as u8)
-    }
-    #[doc = "Rule 3"]
-    #[inline(always)]
-    pub const fn set_rule3(&mut self, val: super::vals::RambMemRuleRule3) {
-        self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
-    }
-    #[doc = "Rule 4"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule4(&self) -> super::vals::RambMemRuleRule4 {
-        let val = (self.0 >> 16usize) & 0x03;
-        super::vals::RambMemRuleRule4::from_bits(val as u8)
-    }
-    #[doc = "Rule 4"]
-    #[inline(always)]
-    pub const fn set_rule4(&mut self, val: super::vals::RambMemRuleRule4) {
-        self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
-    }
-    #[doc = "Rule 5"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule5(&self) -> super::vals::RambMemRuleRule5 {
-        let val = (self.0 >> 20usize) & 0x03;
-        super::vals::RambMemRuleRule5::from_bits(val as u8)
-    }
-    #[doc = "Rule 5"]
-    #[inline(always)]
-    pub const fn set_rule5(&mut self, val: super::vals::RambMemRuleRule5) {
-        self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
-    }
-    #[doc = "Rule 6"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule6(&self) -> super::vals::RambMemRuleRule6 {
-        let val = (self.0 >> 24usize) & 0x03;
-        super::vals::RambMemRuleRule6::from_bits(val as u8)
-    }
-    #[doc = "Rule 6"]
-    #[inline(always)]
-    pub const fn set_rule6(&mut self, val: super::vals::RambMemRuleRule6) {
-        self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
-    }
-    #[doc = "Rule 7"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule7(&self) -> super::vals::RambMemRuleRule7 {
-        let val = (self.0 >> 28usize) & 0x03;
-        super::vals::RambMemRuleRule7::from_bits(val as u8)
-    }
-    #[doc = "Rule 7"]
-    #[inline(always)]
-    pub const fn set_rule7(&mut self, val: super::vals::RambMemRuleRule7) {
-        self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
-    }
-}
-impl Default for RambMemRule {
-    #[inline(always)]
-    fn default() -> RambMemRule {
-        RambMemRule(0)
-    }
-}
-impl core::fmt::Debug for RambMemRule {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("RambMemRule")
-            .field("rule0", &self.rule0())
-            .field("rule1", &self.rule1())
-            .field("rule2", &self.rule2())
-            .field("rule3", &self.rule3())
-            .field("rule4", &self.rule4())
-            .field("rule5", &self.rule5())
-            .field("rule6", &self.rule6())
-            .field("rule7", &self.rule7())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for RambMemRule {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "RambMemRule {{ rule0: {:?}, rule1: {:?}, rule2: {:?}, rule3: {:?}, rule4: {:?}, rule5: {:?}, rule6: {:?}, rule7: {:?} }}",
-            self.rule0(),
-            self.rule1(),
-            self.rule2(),
-            self.rule3(),
-            self.rule4(),
-            self.rule5(),
-            self.rule6(),
-            self.rule7()
-        )
-    }
-}
-#[doc = "RAMX Memory Rule"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct RamxMemRule(pub u32);
-impl RamxMemRule {
-    #[doc = "Rule 0"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule0(&self) -> super::vals::RamxMemRuleRule0 {
-        let val = (self.0 >> 0usize) & 0x03;
-        super::vals::RamxMemRuleRule0::from_bits(val as u8)
-    }
-    #[doc = "Rule 0"]
-    #[inline(always)]
-    pub const fn set_rule0(&mut self, val: super::vals::RamxMemRuleRule0) {
-        self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
-    }
-    #[doc = "Rule 1"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule1(&self) -> super::vals::RamxMemRuleRule1 {
-        let val = (self.0 >> 4usize) & 0x03;
-        super::vals::RamxMemRuleRule1::from_bits(val as u8)
-    }
-    #[doc = "Rule 1"]
-    #[inline(always)]
-    pub const fn set_rule1(&mut self, val: super::vals::RamxMemRuleRule1) {
-        self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
-    }
-    #[doc = "Rule 2"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule2(&self) -> super::vals::RamxMemRuleRule2 {
-        let val = (self.0 >> 8usize) & 0x03;
-        super::vals::RamxMemRuleRule2::from_bits(val as u8)
-    }
-    #[doc = "Rule 2"]
-    #[inline(always)]
-    pub const fn set_rule2(&mut self, val: super::vals::RamxMemRuleRule2) {
-        self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
-    }
-    #[doc = "Rule 3"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule3(&self) -> super::vals::RamxMemRuleRule3 {
-        let val = (self.0 >> 12usize) & 0x03;
-        super::vals::RamxMemRuleRule3::from_bits(val as u8)
-    }
-    #[doc = "Rule 3"]
-    #[inline(always)]
-    pub const fn set_rule3(&mut self, val: super::vals::RamxMemRuleRule3) {
-        self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
-    }
-    #[doc = "Rule 4"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule4(&self) -> super::vals::RamxMemRuleRule4 {
-        let val = (self.0 >> 16usize) & 0x03;
-        super::vals::RamxMemRuleRule4::from_bits(val as u8)
-    }
-    #[doc = "Rule 4"]
-    #[inline(always)]
-    pub const fn set_rule4(&mut self, val: super::vals::RamxMemRuleRule4) {
-        self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
-    }
-    #[doc = "Rule 5"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule5(&self) -> super::vals::RamxMemRuleRule5 {
-        let val = (self.0 >> 20usize) & 0x03;
-        super::vals::RamxMemRuleRule5::from_bits(val as u8)
-    }
-    #[doc = "Rule 5"]
-    #[inline(always)]
-    pub const fn set_rule5(&mut self, val: super::vals::RamxMemRuleRule5) {
-        self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
-    }
-    #[doc = "Rule 6"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule6(&self) -> super::vals::RamxMemRuleRule6 {
-        let val = (self.0 >> 24usize) & 0x03;
-        super::vals::RamxMemRuleRule6::from_bits(val as u8)
-    }
-    #[doc = "Rule 6"]
-    #[inline(always)]
-    pub const fn set_rule6(&mut self, val: super::vals::RamxMemRuleRule6) {
-        self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
-    }
-    #[doc = "Rule 7"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule7(&self) -> super::vals::RamxMemRuleRule7 {
-        let val = (self.0 >> 28usize) & 0x03;
-        super::vals::RamxMemRuleRule7::from_bits(val as u8)
-    }
-    #[doc = "Rule 7"]
-    #[inline(always)]
-    pub const fn set_rule7(&mut self, val: super::vals::RamxMemRuleRule7) {
-        self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
-    }
-}
-impl Default for RamxMemRule {
-    #[inline(always)]
-    fn default() -> RamxMemRule {
-        RamxMemRule(0)
-    }
-}
-impl core::fmt::Debug for RamxMemRule {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("RamxMemRule")
-            .field("rule0", &self.rule0())
-            .field("rule1", &self.rule1())
-            .field("rule2", &self.rule2())
-            .field("rule3", &self.rule3())
-            .field("rule4", &self.rule4())
-            .field("rule5", &self.rule5())
-            .field("rule6", &self.rule6())
-            .field("rule7", &self.rule7())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for RamxMemRule {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "RamxMemRule {{ rule0: {:?}, rule1: {:?}, rule2: {:?}, rule3: {:?}, rule4: {:?}, rule5: {:?}, rule6: {:?}, rule7: {:?} }}",
-            self.rule0(),
-            self.rule1(),
-            self.rule2(),
-            self.rule3(),
-            self.rule4(),
-            self.rule5(),
-            self.rule6(),
-            self.rule7()
+            "RamMemRule {{ rule[0]: {:?}, rule[1]: {:?}, rule[2]: {:?}, rule[3]: {:?}, rule[4]: {:?}, rule[5]: {:?}, rule[6]: {:?}, rule[7]: {:?} }}",
+            self.rule(0usize),
+            self.rule(1usize),
+            self.rule(2usize),
+            self.rule(3usize),
+            self.rule(4usize),
+            self.rule(5usize),
+            self.rule(6usize),
+            self.rule(7usize)
         )
     }
 }
@@ -4206,98 +3465,18 @@ impl RomMemRule {
     #[doc = "Rule 0"]
     #[must_use]
     #[inline(always)]
-    pub const fn rule0(&self) -> super::vals::RomMemRuleRule0 {
-        let val = (self.0 >> 0usize) & 0x03;
-        super::vals::RomMemRuleRule0::from_bits(val as u8)
+    pub const fn rule(&self, n: usize) -> super::vals::Rule {
+        assert!(n < 8usize);
+        let offs = 0usize + n * 4usize;
+        let val = (self.0 >> offs) & 0x03;
+        super::vals::Rule::from_bits(val as u8)
     }
     #[doc = "Rule 0"]
     #[inline(always)]
-    pub const fn set_rule0(&mut self, val: super::vals::RomMemRuleRule0) {
-        self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
-    }
-    #[doc = "Rule 1"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule1(&self) -> super::vals::RomMemRuleRule1 {
-        let val = (self.0 >> 4usize) & 0x03;
-        super::vals::RomMemRuleRule1::from_bits(val as u8)
-    }
-    #[doc = "Rule 1"]
-    #[inline(always)]
-    pub const fn set_rule1(&mut self, val: super::vals::RomMemRuleRule1) {
-        self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
-    }
-    #[doc = "Rule 2"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule2(&self) -> super::vals::RomMemRuleRule2 {
-        let val = (self.0 >> 8usize) & 0x03;
-        super::vals::RomMemRuleRule2::from_bits(val as u8)
-    }
-    #[doc = "Rule 2"]
-    #[inline(always)]
-    pub const fn set_rule2(&mut self, val: super::vals::RomMemRuleRule2) {
-        self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
-    }
-    #[doc = "Rule 3"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule3(&self) -> super::vals::RomMemRuleRule3 {
-        let val = (self.0 >> 12usize) & 0x03;
-        super::vals::RomMemRuleRule3::from_bits(val as u8)
-    }
-    #[doc = "Rule 3"]
-    #[inline(always)]
-    pub const fn set_rule3(&mut self, val: super::vals::RomMemRuleRule3) {
-        self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
-    }
-    #[doc = "Rule 4"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule4(&self) -> super::vals::RomMemRuleRule4 {
-        let val = (self.0 >> 16usize) & 0x03;
-        super::vals::RomMemRuleRule4::from_bits(val as u8)
-    }
-    #[doc = "Rule 4"]
-    #[inline(always)]
-    pub const fn set_rule4(&mut self, val: super::vals::RomMemRuleRule4) {
-        self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
-    }
-    #[doc = "Rule 5"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule5(&self) -> super::vals::RomMemRuleRule5 {
-        let val = (self.0 >> 20usize) & 0x03;
-        super::vals::RomMemRuleRule5::from_bits(val as u8)
-    }
-    #[doc = "Rule 5"]
-    #[inline(always)]
-    pub const fn set_rule5(&mut self, val: super::vals::RomMemRuleRule5) {
-        self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
-    }
-    #[doc = "Rule 6"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule6(&self) -> super::vals::RomMemRuleRule6 {
-        let val = (self.0 >> 24usize) & 0x03;
-        super::vals::RomMemRuleRule6::from_bits(val as u8)
-    }
-    #[doc = "Rule 6"]
-    #[inline(always)]
-    pub const fn set_rule6(&mut self, val: super::vals::RomMemRuleRule6) {
-        self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
-    }
-    #[doc = "Rule 7"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn rule7(&self) -> super::vals::RomMemRuleRule7 {
-        let val = (self.0 >> 28usize) & 0x03;
-        super::vals::RomMemRuleRule7::from_bits(val as u8)
-    }
-    #[doc = "Rule 7"]
-    #[inline(always)]
-    pub const fn set_rule7(&mut self, val: super::vals::RomMemRuleRule7) {
-        self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
+    pub const fn set_rule(&mut self, n: usize, val: super::vals::Rule) {
+        assert!(n < 8usize);
+        let offs = 0usize + n * 4usize;
+        self.0 = (self.0 & !(0x03 << offs)) | (((val.to_bits() as u32) & 0x03) << offs);
     }
 }
 impl Default for RomMemRule {
@@ -4309,14 +3488,14 @@ impl Default for RomMemRule {
 impl core::fmt::Debug for RomMemRule {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RomMemRule")
-            .field("rule0", &self.rule0())
-            .field("rule1", &self.rule1())
-            .field("rule2", &self.rule2())
-            .field("rule3", &self.rule3())
-            .field("rule4", &self.rule4())
-            .field("rule5", &self.rule5())
-            .field("rule6", &self.rule6())
-            .field("rule7", &self.rule7())
+            .field("rule[0]", &self.rule(0usize))
+            .field("rule[1]", &self.rule(1usize))
+            .field("rule[2]", &self.rule(2usize))
+            .field("rule[3]", &self.rule(3usize))
+            .field("rule[4]", &self.rule(4usize))
+            .field("rule[5]", &self.rule(5usize))
+            .field("rule[6]", &self.rule(6usize))
+            .field("rule[7]", &self.rule(7usize))
             .finish()
     }
 }
@@ -4325,4765 +3504,122 @@ impl defmt::Format for RomMemRule {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "RomMemRule {{ rule0: {:?}, rule1: {:?}, rule2: {:?}, rule3: {:?}, rule4: {:?}, rule5: {:?}, rule6: {:?}, rule7: {:?} }}",
-            self.rule0(),
-            self.rule1(),
-            self.rule2(),
-            self.rule3(),
-            self.rule4(),
-            self.rule5(),
-            self.rule6(),
-            self.rule7()
+            "RomMemRule {{ rule[0]: {:?}, rule[1]: {:?}, rule[2]: {:?}, rule[3]: {:?}, rule[4]: {:?}, rule[5]: {:?}, rule[6]: {:?}, rule[7]: {:?} }}",
+            self.rule(0usize),
+            self.rule(1usize),
+            self.rule(2usize),
+            self.rule(3usize),
+            self.rule(4usize),
+            self.rule(5usize),
+            self.rule(6usize),
+            self.rule(7usize)
         )
     }
 }
 #[doc = "Secure general purpose registers"]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct SecGpReg0(pub u32);
-impl SecGpReg0 {
+pub struct SecGpReg(pub u32);
+impl SecGpReg {
     #[doc = "DMA0 IPD_REQ"]
     #[must_use]
     #[inline(always)]
-    pub const fn dma0_ipd_req_0(&self) -> bool {
-        let val = (self.0 >> 0usize) & 0x01;
+    pub const fn dma_ipd_req(&self, n: usize) -> bool {
+        assert!(n < 32usize);
+        let offs = 0usize + n * 1usize;
+        let val = (self.0 >> offs) & 0x01;
         val != 0
     }
     #[doc = "DMA0 IPD_REQ"]
     #[inline(always)]
-    pub const fn set_dma0_ipd_req_0(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_1(&self) -> bool {
-        let val = (self.0 >> 1usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_1(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_2(&self) -> bool {
-        let val = (self.0 >> 2usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_2(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_3(&self) -> bool {
-        let val = (self.0 >> 3usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_3(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_4(&self) -> bool {
-        let val = (self.0 >> 4usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_4(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_5(&self) -> bool {
-        let val = (self.0 >> 5usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_5(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_6(&self) -> bool {
-        let val = (self.0 >> 6usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_6(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_7(&self) -> bool {
-        let val = (self.0 >> 7usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_7(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_8(&self) -> bool {
-        let val = (self.0 >> 8usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_8(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_9(&self) -> bool {
-        let val = (self.0 >> 9usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_9(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_10(&self) -> bool {
-        let val = (self.0 >> 10usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_10(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_11(&self) -> bool {
-        let val = (self.0 >> 11usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_11(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_12(&self) -> bool {
-        let val = (self.0 >> 12usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_12(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_13(&self) -> bool {
-        let val = (self.0 >> 13usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_13(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_14(&self) -> bool {
-        let val = (self.0 >> 14usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_14(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_15(&self) -> bool {
-        let val = (self.0 >> 15usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_15(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_16(&self) -> bool {
-        let val = (self.0 >> 16usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_16(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_17(&self) -> bool {
-        let val = (self.0 >> 17usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_17(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_18(&self) -> bool {
-        let val = (self.0 >> 18usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_18(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_19(&self) -> bool {
-        let val = (self.0 >> 19usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_19(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_20(&self) -> bool {
-        let val = (self.0 >> 20usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_20(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_21(&self) -> bool {
-        let val = (self.0 >> 21usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_21(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_22(&self) -> bool {
-        let val = (self.0 >> 22usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_22(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_23(&self) -> bool {
-        let val = (self.0 >> 23usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_23(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_24(&self) -> bool {
-        let val = (self.0 >> 24usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_24(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_25(&self) -> bool {
-        let val = (self.0 >> 25usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_25(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_26(&self) -> bool {
-        let val = (self.0 >> 26usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_26(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_27(&self) -> bool {
-        let val = (self.0 >> 27usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_27(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_28(&self) -> bool {
-        let val = (self.0 >> 28usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_28(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_29(&self) -> bool {
-        let val = (self.0 >> 29usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_29(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_30(&self) -> bool {
-        let val = (self.0 >> 30usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_30(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_31(&self) -> bool {
-        let val = (self.0 >> 31usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_31(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
+    pub const fn set_dma_ipd_req(&mut self, n: usize, val: bool) {
+        assert!(n < 32usize);
+        let offs = 0usize + n * 1usize;
+        self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
     }
 }
-impl Default for SecGpReg0 {
+impl Default for SecGpReg {
     #[inline(always)]
-    fn default() -> SecGpReg0 {
-        SecGpReg0(0)
+    fn default() -> SecGpReg {
+        SecGpReg(0)
     }
 }
-impl core::fmt::Debug for SecGpReg0 {
+impl core::fmt::Debug for SecGpReg {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("SecGpReg0")
-            .field("dma0_ipd_req_0", &self.dma0_ipd_req_0())
-            .field("dma0_ipd_req_1", &self.dma0_ipd_req_1())
-            .field("dma0_ipd_req_2", &self.dma0_ipd_req_2())
-            .field("dma0_ipd_req_3", &self.dma0_ipd_req_3())
-            .field("dma0_ipd_req_4", &self.dma0_ipd_req_4())
-            .field("dma0_ipd_req_5", &self.dma0_ipd_req_5())
-            .field("dma0_ipd_req_6", &self.dma0_ipd_req_6())
-            .field("dma0_ipd_req_7", &self.dma0_ipd_req_7())
-            .field("dma0_ipd_req_8", &self.dma0_ipd_req_8())
-            .field("dma0_ipd_req_9", &self.dma0_ipd_req_9())
-            .field("dma0_ipd_req_10", &self.dma0_ipd_req_10())
-            .field("dma0_ipd_req_11", &self.dma0_ipd_req_11())
-            .field("dma0_ipd_req_12", &self.dma0_ipd_req_12())
-            .field("dma0_ipd_req_13", &self.dma0_ipd_req_13())
-            .field("dma0_ipd_req_14", &self.dma0_ipd_req_14())
-            .field("dma0_ipd_req_15", &self.dma0_ipd_req_15())
-            .field("dma0_ipd_req_16", &self.dma0_ipd_req_16())
-            .field("dma0_ipd_req_17", &self.dma0_ipd_req_17())
-            .field("dma0_ipd_req_18", &self.dma0_ipd_req_18())
-            .field("dma0_ipd_req_19", &self.dma0_ipd_req_19())
-            .field("dma0_ipd_req_20", &self.dma0_ipd_req_20())
-            .field("dma0_ipd_req_21", &self.dma0_ipd_req_21())
-            .field("dma0_ipd_req_22", &self.dma0_ipd_req_22())
-            .field("dma0_ipd_req_23", &self.dma0_ipd_req_23())
-            .field("dma0_ipd_req_24", &self.dma0_ipd_req_24())
-            .field("dma0_ipd_req_25", &self.dma0_ipd_req_25())
-            .field("dma0_ipd_req_26", &self.dma0_ipd_req_26())
-            .field("dma0_ipd_req_27", &self.dma0_ipd_req_27())
-            .field("dma0_ipd_req_28", &self.dma0_ipd_req_28())
-            .field("dma0_ipd_req_29", &self.dma0_ipd_req_29())
-            .field("dma0_ipd_req_30", &self.dma0_ipd_req_30())
-            .field("dma0_ipd_req_31", &self.dma0_ipd_req_31())
+        f.debug_struct("SecGpReg")
+            .field("dma_ipd_req[0]", &self.dma_ipd_req(0usize))
+            .field("dma_ipd_req[1]", &self.dma_ipd_req(1usize))
+            .field("dma_ipd_req[2]", &self.dma_ipd_req(2usize))
+            .field("dma_ipd_req[3]", &self.dma_ipd_req(3usize))
+            .field("dma_ipd_req[4]", &self.dma_ipd_req(4usize))
+            .field("dma_ipd_req[5]", &self.dma_ipd_req(5usize))
+            .field("dma_ipd_req[6]", &self.dma_ipd_req(6usize))
+            .field("dma_ipd_req[7]", &self.dma_ipd_req(7usize))
+            .field("dma_ipd_req[8]", &self.dma_ipd_req(8usize))
+            .field("dma_ipd_req[9]", &self.dma_ipd_req(9usize))
+            .field("dma_ipd_req[10]", &self.dma_ipd_req(10usize))
+            .field("dma_ipd_req[11]", &self.dma_ipd_req(11usize))
+            .field("dma_ipd_req[12]", &self.dma_ipd_req(12usize))
+            .field("dma_ipd_req[13]", &self.dma_ipd_req(13usize))
+            .field("dma_ipd_req[14]", &self.dma_ipd_req(14usize))
+            .field("dma_ipd_req[15]", &self.dma_ipd_req(15usize))
+            .field("dma_ipd_req[16]", &self.dma_ipd_req(16usize))
+            .field("dma_ipd_req[17]", &self.dma_ipd_req(17usize))
+            .field("dma_ipd_req[18]", &self.dma_ipd_req(18usize))
+            .field("dma_ipd_req[19]", &self.dma_ipd_req(19usize))
+            .field("dma_ipd_req[20]", &self.dma_ipd_req(20usize))
+            .field("dma_ipd_req[21]", &self.dma_ipd_req(21usize))
+            .field("dma_ipd_req[22]", &self.dma_ipd_req(22usize))
+            .field("dma_ipd_req[23]", &self.dma_ipd_req(23usize))
+            .field("dma_ipd_req[24]", &self.dma_ipd_req(24usize))
+            .field("dma_ipd_req[25]", &self.dma_ipd_req(25usize))
+            .field("dma_ipd_req[26]", &self.dma_ipd_req(26usize))
+            .field("dma_ipd_req[27]", &self.dma_ipd_req(27usize))
+            .field("dma_ipd_req[28]", &self.dma_ipd_req(28usize))
+            .field("dma_ipd_req[29]", &self.dma_ipd_req(29usize))
+            .field("dma_ipd_req[30]", &self.dma_ipd_req(30usize))
+            .field("dma_ipd_req[31]", &self.dma_ipd_req(31usize))
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for SecGpReg0 {
+impl defmt::Format for SecGpReg {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "SecGpReg0 {{ dma0_ipd_req_0: {=bool:?}, dma0_ipd_req_1: {=bool:?}, dma0_ipd_req_2: {=bool:?}, dma0_ipd_req_3: {=bool:?}, dma0_ipd_req_4: {=bool:?}, dma0_ipd_req_5: {=bool:?}, dma0_ipd_req_6: {=bool:?}, dma0_ipd_req_7: {=bool:?}, dma0_ipd_req_8: {=bool:?}, dma0_ipd_req_9: {=bool:?}, dma0_ipd_req_10: {=bool:?}, dma0_ipd_req_11: {=bool:?}, dma0_ipd_req_12: {=bool:?}, dma0_ipd_req_13: {=bool:?}, dma0_ipd_req_14: {=bool:?}, dma0_ipd_req_15: {=bool:?}, dma0_ipd_req_16: {=bool:?}, dma0_ipd_req_17: {=bool:?}, dma0_ipd_req_18: {=bool:?}, dma0_ipd_req_19: {=bool:?}, dma0_ipd_req_20: {=bool:?}, dma0_ipd_req_21: {=bool:?}, dma0_ipd_req_22: {=bool:?}, dma0_ipd_req_23: {=bool:?}, dma0_ipd_req_24: {=bool:?}, dma0_ipd_req_25: {=bool:?}, dma0_ipd_req_26: {=bool:?}, dma0_ipd_req_27: {=bool:?}, dma0_ipd_req_28: {=bool:?}, dma0_ipd_req_29: {=bool:?}, dma0_ipd_req_30: {=bool:?}, dma0_ipd_req_31: {=bool:?} }}",
-            self.dma0_ipd_req_0(),
-            self.dma0_ipd_req_1(),
-            self.dma0_ipd_req_2(),
-            self.dma0_ipd_req_3(),
-            self.dma0_ipd_req_4(),
-            self.dma0_ipd_req_5(),
-            self.dma0_ipd_req_6(),
-            self.dma0_ipd_req_7(),
-            self.dma0_ipd_req_8(),
-            self.dma0_ipd_req_9(),
-            self.dma0_ipd_req_10(),
-            self.dma0_ipd_req_11(),
-            self.dma0_ipd_req_12(),
-            self.dma0_ipd_req_13(),
-            self.dma0_ipd_req_14(),
-            self.dma0_ipd_req_15(),
-            self.dma0_ipd_req_16(),
-            self.dma0_ipd_req_17(),
-            self.dma0_ipd_req_18(),
-            self.dma0_ipd_req_19(),
-            self.dma0_ipd_req_20(),
-            self.dma0_ipd_req_21(),
-            self.dma0_ipd_req_22(),
-            self.dma0_ipd_req_23(),
-            self.dma0_ipd_req_24(),
-            self.dma0_ipd_req_25(),
-            self.dma0_ipd_req_26(),
-            self.dma0_ipd_req_27(),
-            self.dma0_ipd_req_28(),
-            self.dma0_ipd_req_29(),
-            self.dma0_ipd_req_30(),
-            self.dma0_ipd_req_31()
-        )
-    }
-}
-#[doc = "Secure general purpose registers"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct SecGpReg1(pub u32);
-impl SecGpReg1 {
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_0(&self) -> bool {
-        let val = (self.0 >> 0usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_0(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_1(&self) -> bool {
-        let val = (self.0 >> 1usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_1(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_2(&self) -> bool {
-        let val = (self.0 >> 2usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_2(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_3(&self) -> bool {
-        let val = (self.0 >> 3usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_3(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_4(&self) -> bool {
-        let val = (self.0 >> 4usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_4(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_5(&self) -> bool {
-        let val = (self.0 >> 5usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_5(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_6(&self) -> bool {
-        let val = (self.0 >> 6usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_6(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_7(&self) -> bool {
-        let val = (self.0 >> 7usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_7(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_8(&self) -> bool {
-        let val = (self.0 >> 8usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_8(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_9(&self) -> bool {
-        let val = (self.0 >> 9usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_9(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_10(&self) -> bool {
-        let val = (self.0 >> 10usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_10(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_11(&self) -> bool {
-        let val = (self.0 >> 11usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_11(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_12(&self) -> bool {
-        let val = (self.0 >> 12usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_12(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_13(&self) -> bool {
-        let val = (self.0 >> 13usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_13(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_14(&self) -> bool {
-        let val = (self.0 >> 14usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_14(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_15(&self) -> bool {
-        let val = (self.0 >> 15usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_15(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_16(&self) -> bool {
-        let val = (self.0 >> 16usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_16(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_17(&self) -> bool {
-        let val = (self.0 >> 17usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_17(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_18(&self) -> bool {
-        let val = (self.0 >> 18usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_18(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_19(&self) -> bool {
-        let val = (self.0 >> 19usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_19(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_20(&self) -> bool {
-        let val = (self.0 >> 20usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_20(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_21(&self) -> bool {
-        let val = (self.0 >> 21usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_21(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_22(&self) -> bool {
-        let val = (self.0 >> 22usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_22(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_23(&self) -> bool {
-        let val = (self.0 >> 23usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_23(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_24(&self) -> bool {
-        let val = (self.0 >> 24usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_24(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_25(&self) -> bool {
-        let val = (self.0 >> 25usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_25(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_26(&self) -> bool {
-        let val = (self.0 >> 26usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_26(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_27(&self) -> bool {
-        let val = (self.0 >> 27usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_27(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_28(&self) -> bool {
-        let val = (self.0 >> 28usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_28(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_29(&self) -> bool {
-        let val = (self.0 >> 29usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_29(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_30(&self) -> bool {
-        let val = (self.0 >> 30usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_30(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_31(&self) -> bool {
-        let val = (self.0 >> 31usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_31(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
-    }
-}
-impl Default for SecGpReg1 {
-    #[inline(always)]
-    fn default() -> SecGpReg1 {
-        SecGpReg1(0)
-    }
-}
-impl core::fmt::Debug for SecGpReg1 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("SecGpReg1")
-            .field("dma0_ipd_req_0", &self.dma0_ipd_req_0())
-            .field("dma0_ipd_req_1", &self.dma0_ipd_req_1())
-            .field("dma0_ipd_req_2", &self.dma0_ipd_req_2())
-            .field("dma0_ipd_req_3", &self.dma0_ipd_req_3())
-            .field("dma0_ipd_req_4", &self.dma0_ipd_req_4())
-            .field("dma0_ipd_req_5", &self.dma0_ipd_req_5())
-            .field("dma0_ipd_req_6", &self.dma0_ipd_req_6())
-            .field("dma0_ipd_req_7", &self.dma0_ipd_req_7())
-            .field("dma0_ipd_req_8", &self.dma0_ipd_req_8())
-            .field("dma0_ipd_req_9", &self.dma0_ipd_req_9())
-            .field("dma0_ipd_req_10", &self.dma0_ipd_req_10())
-            .field("dma0_ipd_req_11", &self.dma0_ipd_req_11())
-            .field("dma0_ipd_req_12", &self.dma0_ipd_req_12())
-            .field("dma0_ipd_req_13", &self.dma0_ipd_req_13())
-            .field("dma0_ipd_req_14", &self.dma0_ipd_req_14())
-            .field("dma0_ipd_req_15", &self.dma0_ipd_req_15())
-            .field("dma0_ipd_req_16", &self.dma0_ipd_req_16())
-            .field("dma0_ipd_req_17", &self.dma0_ipd_req_17())
-            .field("dma0_ipd_req_18", &self.dma0_ipd_req_18())
-            .field("dma0_ipd_req_19", &self.dma0_ipd_req_19())
-            .field("dma0_ipd_req_20", &self.dma0_ipd_req_20())
-            .field("dma0_ipd_req_21", &self.dma0_ipd_req_21())
-            .field("dma0_ipd_req_22", &self.dma0_ipd_req_22())
-            .field("dma0_ipd_req_23", &self.dma0_ipd_req_23())
-            .field("dma0_ipd_req_24", &self.dma0_ipd_req_24())
-            .field("dma0_ipd_req_25", &self.dma0_ipd_req_25())
-            .field("dma0_ipd_req_26", &self.dma0_ipd_req_26())
-            .field("dma0_ipd_req_27", &self.dma0_ipd_req_27())
-            .field("dma0_ipd_req_28", &self.dma0_ipd_req_28())
-            .field("dma0_ipd_req_29", &self.dma0_ipd_req_29())
-            .field("dma0_ipd_req_30", &self.dma0_ipd_req_30())
-            .field("dma0_ipd_req_31", &self.dma0_ipd_req_31())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for SecGpReg1 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "SecGpReg1 {{ dma0_ipd_req_0: {=bool:?}, dma0_ipd_req_1: {=bool:?}, dma0_ipd_req_2: {=bool:?}, dma0_ipd_req_3: {=bool:?}, dma0_ipd_req_4: {=bool:?}, dma0_ipd_req_5: {=bool:?}, dma0_ipd_req_6: {=bool:?}, dma0_ipd_req_7: {=bool:?}, dma0_ipd_req_8: {=bool:?}, dma0_ipd_req_9: {=bool:?}, dma0_ipd_req_10: {=bool:?}, dma0_ipd_req_11: {=bool:?}, dma0_ipd_req_12: {=bool:?}, dma0_ipd_req_13: {=bool:?}, dma0_ipd_req_14: {=bool:?}, dma0_ipd_req_15: {=bool:?}, dma0_ipd_req_16: {=bool:?}, dma0_ipd_req_17: {=bool:?}, dma0_ipd_req_18: {=bool:?}, dma0_ipd_req_19: {=bool:?}, dma0_ipd_req_20: {=bool:?}, dma0_ipd_req_21: {=bool:?}, dma0_ipd_req_22: {=bool:?}, dma0_ipd_req_23: {=bool:?}, dma0_ipd_req_24: {=bool:?}, dma0_ipd_req_25: {=bool:?}, dma0_ipd_req_26: {=bool:?}, dma0_ipd_req_27: {=bool:?}, dma0_ipd_req_28: {=bool:?}, dma0_ipd_req_29: {=bool:?}, dma0_ipd_req_30: {=bool:?}, dma0_ipd_req_31: {=bool:?} }}",
-            self.dma0_ipd_req_0(),
-            self.dma0_ipd_req_1(),
-            self.dma0_ipd_req_2(),
-            self.dma0_ipd_req_3(),
-            self.dma0_ipd_req_4(),
-            self.dma0_ipd_req_5(),
-            self.dma0_ipd_req_6(),
-            self.dma0_ipd_req_7(),
-            self.dma0_ipd_req_8(),
-            self.dma0_ipd_req_9(),
-            self.dma0_ipd_req_10(),
-            self.dma0_ipd_req_11(),
-            self.dma0_ipd_req_12(),
-            self.dma0_ipd_req_13(),
-            self.dma0_ipd_req_14(),
-            self.dma0_ipd_req_15(),
-            self.dma0_ipd_req_16(),
-            self.dma0_ipd_req_17(),
-            self.dma0_ipd_req_18(),
-            self.dma0_ipd_req_19(),
-            self.dma0_ipd_req_20(),
-            self.dma0_ipd_req_21(),
-            self.dma0_ipd_req_22(),
-            self.dma0_ipd_req_23(),
-            self.dma0_ipd_req_24(),
-            self.dma0_ipd_req_25(),
-            self.dma0_ipd_req_26(),
-            self.dma0_ipd_req_27(),
-            self.dma0_ipd_req_28(),
-            self.dma0_ipd_req_29(),
-            self.dma0_ipd_req_30(),
-            self.dma0_ipd_req_31()
-        )
-    }
-}
-#[doc = "Secure general purpose registers"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct SecGpReg2(pub u32);
-impl SecGpReg2 {
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_0(&self) -> bool {
-        let val = (self.0 >> 0usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_0(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_1(&self) -> bool {
-        let val = (self.0 >> 1usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_1(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_2(&self) -> bool {
-        let val = (self.0 >> 2usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_2(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_3(&self) -> bool {
-        let val = (self.0 >> 3usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_3(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_4(&self) -> bool {
-        let val = (self.0 >> 4usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_4(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_5(&self) -> bool {
-        let val = (self.0 >> 5usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_5(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_6(&self) -> bool {
-        let val = (self.0 >> 6usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_6(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_7(&self) -> bool {
-        let val = (self.0 >> 7usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_7(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_8(&self) -> bool {
-        let val = (self.0 >> 8usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_8(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_9(&self) -> bool {
-        let val = (self.0 >> 9usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_9(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_10(&self) -> bool {
-        let val = (self.0 >> 10usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_10(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_11(&self) -> bool {
-        let val = (self.0 >> 11usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_11(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_12(&self) -> bool {
-        let val = (self.0 >> 12usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_12(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_13(&self) -> bool {
-        let val = (self.0 >> 13usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_13(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_14(&self) -> bool {
-        let val = (self.0 >> 14usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_14(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_15(&self) -> bool {
-        let val = (self.0 >> 15usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_15(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_16(&self) -> bool {
-        let val = (self.0 >> 16usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_16(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_17(&self) -> bool {
-        let val = (self.0 >> 17usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_17(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_18(&self) -> bool {
-        let val = (self.0 >> 18usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_18(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_19(&self) -> bool {
-        let val = (self.0 >> 19usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_19(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_20(&self) -> bool {
-        let val = (self.0 >> 20usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_20(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_21(&self) -> bool {
-        let val = (self.0 >> 21usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_21(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_22(&self) -> bool {
-        let val = (self.0 >> 22usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_22(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_23(&self) -> bool {
-        let val = (self.0 >> 23usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_23(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_24(&self) -> bool {
-        let val = (self.0 >> 24usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_24(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_25(&self) -> bool {
-        let val = (self.0 >> 25usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_25(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_26(&self) -> bool {
-        let val = (self.0 >> 26usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_26(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_27(&self) -> bool {
-        let val = (self.0 >> 27usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_27(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_28(&self) -> bool {
-        let val = (self.0 >> 28usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_28(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_29(&self) -> bool {
-        let val = (self.0 >> 29usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_29(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_30(&self) -> bool {
-        let val = (self.0 >> 30usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_30(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_31(&self) -> bool {
-        let val = (self.0 >> 31usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_31(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
-    }
-}
-impl Default for SecGpReg2 {
-    #[inline(always)]
-    fn default() -> SecGpReg2 {
-        SecGpReg2(0)
-    }
-}
-impl core::fmt::Debug for SecGpReg2 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("SecGpReg2")
-            .field("dma0_ipd_req_0", &self.dma0_ipd_req_0())
-            .field("dma0_ipd_req_1", &self.dma0_ipd_req_1())
-            .field("dma0_ipd_req_2", &self.dma0_ipd_req_2())
-            .field("dma0_ipd_req_3", &self.dma0_ipd_req_3())
-            .field("dma0_ipd_req_4", &self.dma0_ipd_req_4())
-            .field("dma0_ipd_req_5", &self.dma0_ipd_req_5())
-            .field("dma0_ipd_req_6", &self.dma0_ipd_req_6())
-            .field("dma0_ipd_req_7", &self.dma0_ipd_req_7())
-            .field("dma0_ipd_req_8", &self.dma0_ipd_req_8())
-            .field("dma0_ipd_req_9", &self.dma0_ipd_req_9())
-            .field("dma0_ipd_req_10", &self.dma0_ipd_req_10())
-            .field("dma0_ipd_req_11", &self.dma0_ipd_req_11())
-            .field("dma0_ipd_req_12", &self.dma0_ipd_req_12())
-            .field("dma0_ipd_req_13", &self.dma0_ipd_req_13())
-            .field("dma0_ipd_req_14", &self.dma0_ipd_req_14())
-            .field("dma0_ipd_req_15", &self.dma0_ipd_req_15())
-            .field("dma0_ipd_req_16", &self.dma0_ipd_req_16())
-            .field("dma0_ipd_req_17", &self.dma0_ipd_req_17())
-            .field("dma0_ipd_req_18", &self.dma0_ipd_req_18())
-            .field("dma0_ipd_req_19", &self.dma0_ipd_req_19())
-            .field("dma0_ipd_req_20", &self.dma0_ipd_req_20())
-            .field("dma0_ipd_req_21", &self.dma0_ipd_req_21())
-            .field("dma0_ipd_req_22", &self.dma0_ipd_req_22())
-            .field("dma0_ipd_req_23", &self.dma0_ipd_req_23())
-            .field("dma0_ipd_req_24", &self.dma0_ipd_req_24())
-            .field("dma0_ipd_req_25", &self.dma0_ipd_req_25())
-            .field("dma0_ipd_req_26", &self.dma0_ipd_req_26())
-            .field("dma0_ipd_req_27", &self.dma0_ipd_req_27())
-            .field("dma0_ipd_req_28", &self.dma0_ipd_req_28())
-            .field("dma0_ipd_req_29", &self.dma0_ipd_req_29())
-            .field("dma0_ipd_req_30", &self.dma0_ipd_req_30())
-            .field("dma0_ipd_req_31", &self.dma0_ipd_req_31())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for SecGpReg2 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "SecGpReg2 {{ dma0_ipd_req_0: {=bool:?}, dma0_ipd_req_1: {=bool:?}, dma0_ipd_req_2: {=bool:?}, dma0_ipd_req_3: {=bool:?}, dma0_ipd_req_4: {=bool:?}, dma0_ipd_req_5: {=bool:?}, dma0_ipd_req_6: {=bool:?}, dma0_ipd_req_7: {=bool:?}, dma0_ipd_req_8: {=bool:?}, dma0_ipd_req_9: {=bool:?}, dma0_ipd_req_10: {=bool:?}, dma0_ipd_req_11: {=bool:?}, dma0_ipd_req_12: {=bool:?}, dma0_ipd_req_13: {=bool:?}, dma0_ipd_req_14: {=bool:?}, dma0_ipd_req_15: {=bool:?}, dma0_ipd_req_16: {=bool:?}, dma0_ipd_req_17: {=bool:?}, dma0_ipd_req_18: {=bool:?}, dma0_ipd_req_19: {=bool:?}, dma0_ipd_req_20: {=bool:?}, dma0_ipd_req_21: {=bool:?}, dma0_ipd_req_22: {=bool:?}, dma0_ipd_req_23: {=bool:?}, dma0_ipd_req_24: {=bool:?}, dma0_ipd_req_25: {=bool:?}, dma0_ipd_req_26: {=bool:?}, dma0_ipd_req_27: {=bool:?}, dma0_ipd_req_28: {=bool:?}, dma0_ipd_req_29: {=bool:?}, dma0_ipd_req_30: {=bool:?}, dma0_ipd_req_31: {=bool:?} }}",
-            self.dma0_ipd_req_0(),
-            self.dma0_ipd_req_1(),
-            self.dma0_ipd_req_2(),
-            self.dma0_ipd_req_3(),
-            self.dma0_ipd_req_4(),
-            self.dma0_ipd_req_5(),
-            self.dma0_ipd_req_6(),
-            self.dma0_ipd_req_7(),
-            self.dma0_ipd_req_8(),
-            self.dma0_ipd_req_9(),
-            self.dma0_ipd_req_10(),
-            self.dma0_ipd_req_11(),
-            self.dma0_ipd_req_12(),
-            self.dma0_ipd_req_13(),
-            self.dma0_ipd_req_14(),
-            self.dma0_ipd_req_15(),
-            self.dma0_ipd_req_16(),
-            self.dma0_ipd_req_17(),
-            self.dma0_ipd_req_18(),
-            self.dma0_ipd_req_19(),
-            self.dma0_ipd_req_20(),
-            self.dma0_ipd_req_21(),
-            self.dma0_ipd_req_22(),
-            self.dma0_ipd_req_23(),
-            self.dma0_ipd_req_24(),
-            self.dma0_ipd_req_25(),
-            self.dma0_ipd_req_26(),
-            self.dma0_ipd_req_27(),
-            self.dma0_ipd_req_28(),
-            self.dma0_ipd_req_29(),
-            self.dma0_ipd_req_30(),
-            self.dma0_ipd_req_31()
-        )
-    }
-}
-#[doc = "Secure general purpose registers"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct SecGpReg3(pub u32);
-impl SecGpReg3 {
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_0(&self) -> bool {
-        let val = (self.0 >> 0usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_0(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_1(&self) -> bool {
-        let val = (self.0 >> 1usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_1(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_2(&self) -> bool {
-        let val = (self.0 >> 2usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_2(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_3(&self) -> bool {
-        let val = (self.0 >> 3usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_3(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_4(&self) -> bool {
-        let val = (self.0 >> 4usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_4(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_5(&self) -> bool {
-        let val = (self.0 >> 5usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_5(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_6(&self) -> bool {
-        let val = (self.0 >> 6usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_6(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_7(&self) -> bool {
-        let val = (self.0 >> 7usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_7(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_8(&self) -> bool {
-        let val = (self.0 >> 8usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_8(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_9(&self) -> bool {
-        let val = (self.0 >> 9usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_9(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_10(&self) -> bool {
-        let val = (self.0 >> 10usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_10(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_11(&self) -> bool {
-        let val = (self.0 >> 11usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_11(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_12(&self) -> bool {
-        let val = (self.0 >> 12usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_12(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_13(&self) -> bool {
-        let val = (self.0 >> 13usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_13(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_14(&self) -> bool {
-        let val = (self.0 >> 14usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_14(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_15(&self) -> bool {
-        let val = (self.0 >> 15usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_15(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_16(&self) -> bool {
-        let val = (self.0 >> 16usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_16(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_17(&self) -> bool {
-        let val = (self.0 >> 17usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_17(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_18(&self) -> bool {
-        let val = (self.0 >> 18usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_18(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_19(&self) -> bool {
-        let val = (self.0 >> 19usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_19(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_20(&self) -> bool {
-        let val = (self.0 >> 20usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_20(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_21(&self) -> bool {
-        let val = (self.0 >> 21usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_21(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_22(&self) -> bool {
-        let val = (self.0 >> 22usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_22(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_23(&self) -> bool {
-        let val = (self.0 >> 23usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_23(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_24(&self) -> bool {
-        let val = (self.0 >> 24usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_24(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_25(&self) -> bool {
-        let val = (self.0 >> 25usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_25(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_26(&self) -> bool {
-        let val = (self.0 >> 26usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_26(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_27(&self) -> bool {
-        let val = (self.0 >> 27usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_27(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_28(&self) -> bool {
-        let val = (self.0 >> 28usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_28(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_29(&self) -> bool {
-        let val = (self.0 >> 29usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_29(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_30(&self) -> bool {
-        let val = (self.0 >> 30usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_30(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_31(&self) -> bool {
-        let val = (self.0 >> 31usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_31(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
-    }
-}
-impl Default for SecGpReg3 {
-    #[inline(always)]
-    fn default() -> SecGpReg3 {
-        SecGpReg3(0)
-    }
-}
-impl core::fmt::Debug for SecGpReg3 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("SecGpReg3")
-            .field("dma0_ipd_req_0", &self.dma0_ipd_req_0())
-            .field("dma0_ipd_req_1", &self.dma0_ipd_req_1())
-            .field("dma0_ipd_req_2", &self.dma0_ipd_req_2())
-            .field("dma0_ipd_req_3", &self.dma0_ipd_req_3())
-            .field("dma0_ipd_req_4", &self.dma0_ipd_req_4())
-            .field("dma0_ipd_req_5", &self.dma0_ipd_req_5())
-            .field("dma0_ipd_req_6", &self.dma0_ipd_req_6())
-            .field("dma0_ipd_req_7", &self.dma0_ipd_req_7())
-            .field("dma0_ipd_req_8", &self.dma0_ipd_req_8())
-            .field("dma0_ipd_req_9", &self.dma0_ipd_req_9())
-            .field("dma0_ipd_req_10", &self.dma0_ipd_req_10())
-            .field("dma0_ipd_req_11", &self.dma0_ipd_req_11())
-            .field("dma0_ipd_req_12", &self.dma0_ipd_req_12())
-            .field("dma0_ipd_req_13", &self.dma0_ipd_req_13())
-            .field("dma0_ipd_req_14", &self.dma0_ipd_req_14())
-            .field("dma0_ipd_req_15", &self.dma0_ipd_req_15())
-            .field("dma0_ipd_req_16", &self.dma0_ipd_req_16())
-            .field("dma0_ipd_req_17", &self.dma0_ipd_req_17())
-            .field("dma0_ipd_req_18", &self.dma0_ipd_req_18())
-            .field("dma0_ipd_req_19", &self.dma0_ipd_req_19())
-            .field("dma0_ipd_req_20", &self.dma0_ipd_req_20())
-            .field("dma0_ipd_req_21", &self.dma0_ipd_req_21())
-            .field("dma0_ipd_req_22", &self.dma0_ipd_req_22())
-            .field("dma0_ipd_req_23", &self.dma0_ipd_req_23())
-            .field("dma0_ipd_req_24", &self.dma0_ipd_req_24())
-            .field("dma0_ipd_req_25", &self.dma0_ipd_req_25())
-            .field("dma0_ipd_req_26", &self.dma0_ipd_req_26())
-            .field("dma0_ipd_req_27", &self.dma0_ipd_req_27())
-            .field("dma0_ipd_req_28", &self.dma0_ipd_req_28())
-            .field("dma0_ipd_req_29", &self.dma0_ipd_req_29())
-            .field("dma0_ipd_req_30", &self.dma0_ipd_req_30())
-            .field("dma0_ipd_req_31", &self.dma0_ipd_req_31())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for SecGpReg3 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "SecGpReg3 {{ dma0_ipd_req_0: {=bool:?}, dma0_ipd_req_1: {=bool:?}, dma0_ipd_req_2: {=bool:?}, dma0_ipd_req_3: {=bool:?}, dma0_ipd_req_4: {=bool:?}, dma0_ipd_req_5: {=bool:?}, dma0_ipd_req_6: {=bool:?}, dma0_ipd_req_7: {=bool:?}, dma0_ipd_req_8: {=bool:?}, dma0_ipd_req_9: {=bool:?}, dma0_ipd_req_10: {=bool:?}, dma0_ipd_req_11: {=bool:?}, dma0_ipd_req_12: {=bool:?}, dma0_ipd_req_13: {=bool:?}, dma0_ipd_req_14: {=bool:?}, dma0_ipd_req_15: {=bool:?}, dma0_ipd_req_16: {=bool:?}, dma0_ipd_req_17: {=bool:?}, dma0_ipd_req_18: {=bool:?}, dma0_ipd_req_19: {=bool:?}, dma0_ipd_req_20: {=bool:?}, dma0_ipd_req_21: {=bool:?}, dma0_ipd_req_22: {=bool:?}, dma0_ipd_req_23: {=bool:?}, dma0_ipd_req_24: {=bool:?}, dma0_ipd_req_25: {=bool:?}, dma0_ipd_req_26: {=bool:?}, dma0_ipd_req_27: {=bool:?}, dma0_ipd_req_28: {=bool:?}, dma0_ipd_req_29: {=bool:?}, dma0_ipd_req_30: {=bool:?}, dma0_ipd_req_31: {=bool:?} }}",
-            self.dma0_ipd_req_0(),
-            self.dma0_ipd_req_1(),
-            self.dma0_ipd_req_2(),
-            self.dma0_ipd_req_3(),
-            self.dma0_ipd_req_4(),
-            self.dma0_ipd_req_5(),
-            self.dma0_ipd_req_6(),
-            self.dma0_ipd_req_7(),
-            self.dma0_ipd_req_8(),
-            self.dma0_ipd_req_9(),
-            self.dma0_ipd_req_10(),
-            self.dma0_ipd_req_11(),
-            self.dma0_ipd_req_12(),
-            self.dma0_ipd_req_13(),
-            self.dma0_ipd_req_14(),
-            self.dma0_ipd_req_15(),
-            self.dma0_ipd_req_16(),
-            self.dma0_ipd_req_17(),
-            self.dma0_ipd_req_18(),
-            self.dma0_ipd_req_19(),
-            self.dma0_ipd_req_20(),
-            self.dma0_ipd_req_21(),
-            self.dma0_ipd_req_22(),
-            self.dma0_ipd_req_23(),
-            self.dma0_ipd_req_24(),
-            self.dma0_ipd_req_25(),
-            self.dma0_ipd_req_26(),
-            self.dma0_ipd_req_27(),
-            self.dma0_ipd_req_28(),
-            self.dma0_ipd_req_29(),
-            self.dma0_ipd_req_30(),
-            self.dma0_ipd_req_31()
-        )
-    }
-}
-#[doc = "Secure general purpose registers"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct SecGpReg4(pub u32);
-impl SecGpReg4 {
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_0(&self) -> bool {
-        let val = (self.0 >> 0usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_0(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_1(&self) -> bool {
-        let val = (self.0 >> 1usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_1(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_2(&self) -> bool {
-        let val = (self.0 >> 2usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_2(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_3(&self) -> bool {
-        let val = (self.0 >> 3usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_3(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_4(&self) -> bool {
-        let val = (self.0 >> 4usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_4(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_5(&self) -> bool {
-        let val = (self.0 >> 5usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_5(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_6(&self) -> bool {
-        let val = (self.0 >> 6usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_6(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_7(&self) -> bool {
-        let val = (self.0 >> 7usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_7(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_8(&self) -> bool {
-        let val = (self.0 >> 8usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_8(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_9(&self) -> bool {
-        let val = (self.0 >> 9usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_9(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_10(&self) -> bool {
-        let val = (self.0 >> 10usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_10(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_11(&self) -> bool {
-        let val = (self.0 >> 11usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_11(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_12(&self) -> bool {
-        let val = (self.0 >> 12usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_12(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_13(&self) -> bool {
-        let val = (self.0 >> 13usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_13(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_14(&self) -> bool {
-        let val = (self.0 >> 14usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_14(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_15(&self) -> bool {
-        let val = (self.0 >> 15usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_15(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_16(&self) -> bool {
-        let val = (self.0 >> 16usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_16(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_17(&self) -> bool {
-        let val = (self.0 >> 17usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_17(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_18(&self) -> bool {
-        let val = (self.0 >> 18usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_18(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_19(&self) -> bool {
-        let val = (self.0 >> 19usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_19(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_20(&self) -> bool {
-        let val = (self.0 >> 20usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_20(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_21(&self) -> bool {
-        let val = (self.0 >> 21usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_21(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_22(&self) -> bool {
-        let val = (self.0 >> 22usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_22(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_23(&self) -> bool {
-        let val = (self.0 >> 23usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_23(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_24(&self) -> bool {
-        let val = (self.0 >> 24usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_24(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_25(&self) -> bool {
-        let val = (self.0 >> 25usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_25(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_26(&self) -> bool {
-        let val = (self.0 >> 26usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_26(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_27(&self) -> bool {
-        let val = (self.0 >> 27usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_27(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_28(&self) -> bool {
-        let val = (self.0 >> 28usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_28(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_29(&self) -> bool {
-        let val = (self.0 >> 29usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_29(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_30(&self) -> bool {
-        let val = (self.0 >> 30usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_30(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma0_ipd_req_31(&self) -> bool {
-        let val = (self.0 >> 31usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA0 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma0_ipd_req_31(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
-    }
-}
-impl Default for SecGpReg4 {
-    #[inline(always)]
-    fn default() -> SecGpReg4 {
-        SecGpReg4(0)
-    }
-}
-impl core::fmt::Debug for SecGpReg4 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("SecGpReg4")
-            .field("dma0_ipd_req_0", &self.dma0_ipd_req_0())
-            .field("dma0_ipd_req_1", &self.dma0_ipd_req_1())
-            .field("dma0_ipd_req_2", &self.dma0_ipd_req_2())
-            .field("dma0_ipd_req_3", &self.dma0_ipd_req_3())
-            .field("dma0_ipd_req_4", &self.dma0_ipd_req_4())
-            .field("dma0_ipd_req_5", &self.dma0_ipd_req_5())
-            .field("dma0_ipd_req_6", &self.dma0_ipd_req_6())
-            .field("dma0_ipd_req_7", &self.dma0_ipd_req_7())
-            .field("dma0_ipd_req_8", &self.dma0_ipd_req_8())
-            .field("dma0_ipd_req_9", &self.dma0_ipd_req_9())
-            .field("dma0_ipd_req_10", &self.dma0_ipd_req_10())
-            .field("dma0_ipd_req_11", &self.dma0_ipd_req_11())
-            .field("dma0_ipd_req_12", &self.dma0_ipd_req_12())
-            .field("dma0_ipd_req_13", &self.dma0_ipd_req_13())
-            .field("dma0_ipd_req_14", &self.dma0_ipd_req_14())
-            .field("dma0_ipd_req_15", &self.dma0_ipd_req_15())
-            .field("dma0_ipd_req_16", &self.dma0_ipd_req_16())
-            .field("dma0_ipd_req_17", &self.dma0_ipd_req_17())
-            .field("dma0_ipd_req_18", &self.dma0_ipd_req_18())
-            .field("dma0_ipd_req_19", &self.dma0_ipd_req_19())
-            .field("dma0_ipd_req_20", &self.dma0_ipd_req_20())
-            .field("dma0_ipd_req_21", &self.dma0_ipd_req_21())
-            .field("dma0_ipd_req_22", &self.dma0_ipd_req_22())
-            .field("dma0_ipd_req_23", &self.dma0_ipd_req_23())
-            .field("dma0_ipd_req_24", &self.dma0_ipd_req_24())
-            .field("dma0_ipd_req_25", &self.dma0_ipd_req_25())
-            .field("dma0_ipd_req_26", &self.dma0_ipd_req_26())
-            .field("dma0_ipd_req_27", &self.dma0_ipd_req_27())
-            .field("dma0_ipd_req_28", &self.dma0_ipd_req_28())
-            .field("dma0_ipd_req_29", &self.dma0_ipd_req_29())
-            .field("dma0_ipd_req_30", &self.dma0_ipd_req_30())
-            .field("dma0_ipd_req_31", &self.dma0_ipd_req_31())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for SecGpReg4 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "SecGpReg4 {{ dma0_ipd_req_0: {=bool:?}, dma0_ipd_req_1: {=bool:?}, dma0_ipd_req_2: {=bool:?}, dma0_ipd_req_3: {=bool:?}, dma0_ipd_req_4: {=bool:?}, dma0_ipd_req_5: {=bool:?}, dma0_ipd_req_6: {=bool:?}, dma0_ipd_req_7: {=bool:?}, dma0_ipd_req_8: {=bool:?}, dma0_ipd_req_9: {=bool:?}, dma0_ipd_req_10: {=bool:?}, dma0_ipd_req_11: {=bool:?}, dma0_ipd_req_12: {=bool:?}, dma0_ipd_req_13: {=bool:?}, dma0_ipd_req_14: {=bool:?}, dma0_ipd_req_15: {=bool:?}, dma0_ipd_req_16: {=bool:?}, dma0_ipd_req_17: {=bool:?}, dma0_ipd_req_18: {=bool:?}, dma0_ipd_req_19: {=bool:?}, dma0_ipd_req_20: {=bool:?}, dma0_ipd_req_21: {=bool:?}, dma0_ipd_req_22: {=bool:?}, dma0_ipd_req_23: {=bool:?}, dma0_ipd_req_24: {=bool:?}, dma0_ipd_req_25: {=bool:?}, dma0_ipd_req_26: {=bool:?}, dma0_ipd_req_27: {=bool:?}, dma0_ipd_req_28: {=bool:?}, dma0_ipd_req_29: {=bool:?}, dma0_ipd_req_30: {=bool:?}, dma0_ipd_req_31: {=bool:?} }}",
-            self.dma0_ipd_req_0(),
-            self.dma0_ipd_req_1(),
-            self.dma0_ipd_req_2(),
-            self.dma0_ipd_req_3(),
-            self.dma0_ipd_req_4(),
-            self.dma0_ipd_req_5(),
-            self.dma0_ipd_req_6(),
-            self.dma0_ipd_req_7(),
-            self.dma0_ipd_req_8(),
-            self.dma0_ipd_req_9(),
-            self.dma0_ipd_req_10(),
-            self.dma0_ipd_req_11(),
-            self.dma0_ipd_req_12(),
-            self.dma0_ipd_req_13(),
-            self.dma0_ipd_req_14(),
-            self.dma0_ipd_req_15(),
-            self.dma0_ipd_req_16(),
-            self.dma0_ipd_req_17(),
-            self.dma0_ipd_req_18(),
-            self.dma0_ipd_req_19(),
-            self.dma0_ipd_req_20(),
-            self.dma0_ipd_req_21(),
-            self.dma0_ipd_req_22(),
-            self.dma0_ipd_req_23(),
-            self.dma0_ipd_req_24(),
-            self.dma0_ipd_req_25(),
-            self.dma0_ipd_req_26(),
-            self.dma0_ipd_req_27(),
-            self.dma0_ipd_req_28(),
-            self.dma0_ipd_req_29(),
-            self.dma0_ipd_req_30(),
-            self.dma0_ipd_req_31()
-        )
-    }
-}
-#[doc = "Secure general purpose registers"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct SecGpReg5(pub u32);
-impl SecGpReg5 {
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_0(&self) -> bool {
-        let val = (self.0 >> 0usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_0(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_1(&self) -> bool {
-        let val = (self.0 >> 1usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_1(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_2(&self) -> bool {
-        let val = (self.0 >> 2usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_2(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_3(&self) -> bool {
-        let val = (self.0 >> 3usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_3(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_4(&self) -> bool {
-        let val = (self.0 >> 4usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_4(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_5(&self) -> bool {
-        let val = (self.0 >> 5usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_5(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_6(&self) -> bool {
-        let val = (self.0 >> 6usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_6(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_7(&self) -> bool {
-        let val = (self.0 >> 7usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_7(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_8(&self) -> bool {
-        let val = (self.0 >> 8usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_8(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_9(&self) -> bool {
-        let val = (self.0 >> 9usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_9(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_10(&self) -> bool {
-        let val = (self.0 >> 10usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_10(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_11(&self) -> bool {
-        let val = (self.0 >> 11usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_11(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_12(&self) -> bool {
-        let val = (self.0 >> 12usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_12(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_13(&self) -> bool {
-        let val = (self.0 >> 13usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_13(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_14(&self) -> bool {
-        let val = (self.0 >> 14usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_14(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_15(&self) -> bool {
-        let val = (self.0 >> 15usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_15(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_16(&self) -> bool {
-        let val = (self.0 >> 16usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_16(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_17(&self) -> bool {
-        let val = (self.0 >> 17usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_17(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_18(&self) -> bool {
-        let val = (self.0 >> 18usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_18(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_19(&self) -> bool {
-        let val = (self.0 >> 19usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_19(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_20(&self) -> bool {
-        let val = (self.0 >> 20usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_20(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_21(&self) -> bool {
-        let val = (self.0 >> 21usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_21(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_22(&self) -> bool {
-        let val = (self.0 >> 22usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_22(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_23(&self) -> bool {
-        let val = (self.0 >> 23usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_23(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_24(&self) -> bool {
-        let val = (self.0 >> 24usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_24(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_25(&self) -> bool {
-        let val = (self.0 >> 25usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_25(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_26(&self) -> bool {
-        let val = (self.0 >> 26usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_26(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_27(&self) -> bool {
-        let val = (self.0 >> 27usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_27(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_28(&self) -> bool {
-        let val = (self.0 >> 28usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_28(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_29(&self) -> bool {
-        let val = (self.0 >> 29usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_29(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_30(&self) -> bool {
-        let val = (self.0 >> 30usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_30(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_31(&self) -> bool {
-        let val = (self.0 >> 31usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_31(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
-    }
-}
-impl Default for SecGpReg5 {
-    #[inline(always)]
-    fn default() -> SecGpReg5 {
-        SecGpReg5(0)
-    }
-}
-impl core::fmt::Debug for SecGpReg5 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("SecGpReg5")
-            .field("dma1_ipd_req_0", &self.dma1_ipd_req_0())
-            .field("dma1_ipd_req_1", &self.dma1_ipd_req_1())
-            .field("dma1_ipd_req_2", &self.dma1_ipd_req_2())
-            .field("dma1_ipd_req_3", &self.dma1_ipd_req_3())
-            .field("dma1_ipd_req_4", &self.dma1_ipd_req_4())
-            .field("dma1_ipd_req_5", &self.dma1_ipd_req_5())
-            .field("dma1_ipd_req_6", &self.dma1_ipd_req_6())
-            .field("dma1_ipd_req_7", &self.dma1_ipd_req_7())
-            .field("dma1_ipd_req_8", &self.dma1_ipd_req_8())
-            .field("dma1_ipd_req_9", &self.dma1_ipd_req_9())
-            .field("dma1_ipd_req_10", &self.dma1_ipd_req_10())
-            .field("dma1_ipd_req_11", &self.dma1_ipd_req_11())
-            .field("dma1_ipd_req_12", &self.dma1_ipd_req_12())
-            .field("dma1_ipd_req_13", &self.dma1_ipd_req_13())
-            .field("dma1_ipd_req_14", &self.dma1_ipd_req_14())
-            .field("dma1_ipd_req_15", &self.dma1_ipd_req_15())
-            .field("dma1_ipd_req_16", &self.dma1_ipd_req_16())
-            .field("dma1_ipd_req_17", &self.dma1_ipd_req_17())
-            .field("dma1_ipd_req_18", &self.dma1_ipd_req_18())
-            .field("dma1_ipd_req_19", &self.dma1_ipd_req_19())
-            .field("dma1_ipd_req_20", &self.dma1_ipd_req_20())
-            .field("dma1_ipd_req_21", &self.dma1_ipd_req_21())
-            .field("dma1_ipd_req_22", &self.dma1_ipd_req_22())
-            .field("dma1_ipd_req_23", &self.dma1_ipd_req_23())
-            .field("dma1_ipd_req_24", &self.dma1_ipd_req_24())
-            .field("dma1_ipd_req_25", &self.dma1_ipd_req_25())
-            .field("dma1_ipd_req_26", &self.dma1_ipd_req_26())
-            .field("dma1_ipd_req_27", &self.dma1_ipd_req_27())
-            .field("dma1_ipd_req_28", &self.dma1_ipd_req_28())
-            .field("dma1_ipd_req_29", &self.dma1_ipd_req_29())
-            .field("dma1_ipd_req_30", &self.dma1_ipd_req_30())
-            .field("dma1_ipd_req_31", &self.dma1_ipd_req_31())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for SecGpReg5 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "SecGpReg5 {{ dma1_ipd_req_0: {=bool:?}, dma1_ipd_req_1: {=bool:?}, dma1_ipd_req_2: {=bool:?}, dma1_ipd_req_3: {=bool:?}, dma1_ipd_req_4: {=bool:?}, dma1_ipd_req_5: {=bool:?}, dma1_ipd_req_6: {=bool:?}, dma1_ipd_req_7: {=bool:?}, dma1_ipd_req_8: {=bool:?}, dma1_ipd_req_9: {=bool:?}, dma1_ipd_req_10: {=bool:?}, dma1_ipd_req_11: {=bool:?}, dma1_ipd_req_12: {=bool:?}, dma1_ipd_req_13: {=bool:?}, dma1_ipd_req_14: {=bool:?}, dma1_ipd_req_15: {=bool:?}, dma1_ipd_req_16: {=bool:?}, dma1_ipd_req_17: {=bool:?}, dma1_ipd_req_18: {=bool:?}, dma1_ipd_req_19: {=bool:?}, dma1_ipd_req_20: {=bool:?}, dma1_ipd_req_21: {=bool:?}, dma1_ipd_req_22: {=bool:?}, dma1_ipd_req_23: {=bool:?}, dma1_ipd_req_24: {=bool:?}, dma1_ipd_req_25: {=bool:?}, dma1_ipd_req_26: {=bool:?}, dma1_ipd_req_27: {=bool:?}, dma1_ipd_req_28: {=bool:?}, dma1_ipd_req_29: {=bool:?}, dma1_ipd_req_30: {=bool:?}, dma1_ipd_req_31: {=bool:?} }}",
-            self.dma1_ipd_req_0(),
-            self.dma1_ipd_req_1(),
-            self.dma1_ipd_req_2(),
-            self.dma1_ipd_req_3(),
-            self.dma1_ipd_req_4(),
-            self.dma1_ipd_req_5(),
-            self.dma1_ipd_req_6(),
-            self.dma1_ipd_req_7(),
-            self.dma1_ipd_req_8(),
-            self.dma1_ipd_req_9(),
-            self.dma1_ipd_req_10(),
-            self.dma1_ipd_req_11(),
-            self.dma1_ipd_req_12(),
-            self.dma1_ipd_req_13(),
-            self.dma1_ipd_req_14(),
-            self.dma1_ipd_req_15(),
-            self.dma1_ipd_req_16(),
-            self.dma1_ipd_req_17(),
-            self.dma1_ipd_req_18(),
-            self.dma1_ipd_req_19(),
-            self.dma1_ipd_req_20(),
-            self.dma1_ipd_req_21(),
-            self.dma1_ipd_req_22(),
-            self.dma1_ipd_req_23(),
-            self.dma1_ipd_req_24(),
-            self.dma1_ipd_req_25(),
-            self.dma1_ipd_req_26(),
-            self.dma1_ipd_req_27(),
-            self.dma1_ipd_req_28(),
-            self.dma1_ipd_req_29(),
-            self.dma1_ipd_req_30(),
-            self.dma1_ipd_req_31()
-        )
-    }
-}
-#[doc = "Secure general purpose registers"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct SecGpReg6(pub u32);
-impl SecGpReg6 {
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_0(&self) -> bool {
-        let val = (self.0 >> 0usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_0(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_1(&self) -> bool {
-        let val = (self.0 >> 1usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_1(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_2(&self) -> bool {
-        let val = (self.0 >> 2usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_2(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_3(&self) -> bool {
-        let val = (self.0 >> 3usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_3(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_4(&self) -> bool {
-        let val = (self.0 >> 4usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_4(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_5(&self) -> bool {
-        let val = (self.0 >> 5usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_5(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_6(&self) -> bool {
-        let val = (self.0 >> 6usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_6(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_7(&self) -> bool {
-        let val = (self.0 >> 7usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_7(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_8(&self) -> bool {
-        let val = (self.0 >> 8usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_8(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_9(&self) -> bool {
-        let val = (self.0 >> 9usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_9(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_10(&self) -> bool {
-        let val = (self.0 >> 10usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_10(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_11(&self) -> bool {
-        let val = (self.0 >> 11usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_11(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_12(&self) -> bool {
-        let val = (self.0 >> 12usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_12(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_13(&self) -> bool {
-        let val = (self.0 >> 13usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_13(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_14(&self) -> bool {
-        let val = (self.0 >> 14usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_14(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_15(&self) -> bool {
-        let val = (self.0 >> 15usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_15(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_16(&self) -> bool {
-        let val = (self.0 >> 16usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_16(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_17(&self) -> bool {
-        let val = (self.0 >> 17usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_17(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_18(&self) -> bool {
-        let val = (self.0 >> 18usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_18(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_19(&self) -> bool {
-        let val = (self.0 >> 19usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_19(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_20(&self) -> bool {
-        let val = (self.0 >> 20usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_20(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_21(&self) -> bool {
-        let val = (self.0 >> 21usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_21(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_22(&self) -> bool {
-        let val = (self.0 >> 22usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_22(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_23(&self) -> bool {
-        let val = (self.0 >> 23usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_23(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_24(&self) -> bool {
-        let val = (self.0 >> 24usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_24(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_25(&self) -> bool {
-        let val = (self.0 >> 25usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_25(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_26(&self) -> bool {
-        let val = (self.0 >> 26usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_26(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_27(&self) -> bool {
-        let val = (self.0 >> 27usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_27(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_28(&self) -> bool {
-        let val = (self.0 >> 28usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_28(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_29(&self) -> bool {
-        let val = (self.0 >> 29usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_29(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_30(&self) -> bool {
-        let val = (self.0 >> 30usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_30(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_31(&self) -> bool {
-        let val = (self.0 >> 31usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_31(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
-    }
-}
-impl Default for SecGpReg6 {
-    #[inline(always)]
-    fn default() -> SecGpReg6 {
-        SecGpReg6(0)
-    }
-}
-impl core::fmt::Debug for SecGpReg6 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("SecGpReg6")
-            .field("dma1_ipd_req_0", &self.dma1_ipd_req_0())
-            .field("dma1_ipd_req_1", &self.dma1_ipd_req_1())
-            .field("dma1_ipd_req_2", &self.dma1_ipd_req_2())
-            .field("dma1_ipd_req_3", &self.dma1_ipd_req_3())
-            .field("dma1_ipd_req_4", &self.dma1_ipd_req_4())
-            .field("dma1_ipd_req_5", &self.dma1_ipd_req_5())
-            .field("dma1_ipd_req_6", &self.dma1_ipd_req_6())
-            .field("dma1_ipd_req_7", &self.dma1_ipd_req_7())
-            .field("dma1_ipd_req_8", &self.dma1_ipd_req_8())
-            .field("dma1_ipd_req_9", &self.dma1_ipd_req_9())
-            .field("dma1_ipd_req_10", &self.dma1_ipd_req_10())
-            .field("dma1_ipd_req_11", &self.dma1_ipd_req_11())
-            .field("dma1_ipd_req_12", &self.dma1_ipd_req_12())
-            .field("dma1_ipd_req_13", &self.dma1_ipd_req_13())
-            .field("dma1_ipd_req_14", &self.dma1_ipd_req_14())
-            .field("dma1_ipd_req_15", &self.dma1_ipd_req_15())
-            .field("dma1_ipd_req_16", &self.dma1_ipd_req_16())
-            .field("dma1_ipd_req_17", &self.dma1_ipd_req_17())
-            .field("dma1_ipd_req_18", &self.dma1_ipd_req_18())
-            .field("dma1_ipd_req_19", &self.dma1_ipd_req_19())
-            .field("dma1_ipd_req_20", &self.dma1_ipd_req_20())
-            .field("dma1_ipd_req_21", &self.dma1_ipd_req_21())
-            .field("dma1_ipd_req_22", &self.dma1_ipd_req_22())
-            .field("dma1_ipd_req_23", &self.dma1_ipd_req_23())
-            .field("dma1_ipd_req_24", &self.dma1_ipd_req_24())
-            .field("dma1_ipd_req_25", &self.dma1_ipd_req_25())
-            .field("dma1_ipd_req_26", &self.dma1_ipd_req_26())
-            .field("dma1_ipd_req_27", &self.dma1_ipd_req_27())
-            .field("dma1_ipd_req_28", &self.dma1_ipd_req_28())
-            .field("dma1_ipd_req_29", &self.dma1_ipd_req_29())
-            .field("dma1_ipd_req_30", &self.dma1_ipd_req_30())
-            .field("dma1_ipd_req_31", &self.dma1_ipd_req_31())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for SecGpReg6 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "SecGpReg6 {{ dma1_ipd_req_0: {=bool:?}, dma1_ipd_req_1: {=bool:?}, dma1_ipd_req_2: {=bool:?}, dma1_ipd_req_3: {=bool:?}, dma1_ipd_req_4: {=bool:?}, dma1_ipd_req_5: {=bool:?}, dma1_ipd_req_6: {=bool:?}, dma1_ipd_req_7: {=bool:?}, dma1_ipd_req_8: {=bool:?}, dma1_ipd_req_9: {=bool:?}, dma1_ipd_req_10: {=bool:?}, dma1_ipd_req_11: {=bool:?}, dma1_ipd_req_12: {=bool:?}, dma1_ipd_req_13: {=bool:?}, dma1_ipd_req_14: {=bool:?}, dma1_ipd_req_15: {=bool:?}, dma1_ipd_req_16: {=bool:?}, dma1_ipd_req_17: {=bool:?}, dma1_ipd_req_18: {=bool:?}, dma1_ipd_req_19: {=bool:?}, dma1_ipd_req_20: {=bool:?}, dma1_ipd_req_21: {=bool:?}, dma1_ipd_req_22: {=bool:?}, dma1_ipd_req_23: {=bool:?}, dma1_ipd_req_24: {=bool:?}, dma1_ipd_req_25: {=bool:?}, dma1_ipd_req_26: {=bool:?}, dma1_ipd_req_27: {=bool:?}, dma1_ipd_req_28: {=bool:?}, dma1_ipd_req_29: {=bool:?}, dma1_ipd_req_30: {=bool:?}, dma1_ipd_req_31: {=bool:?} }}",
-            self.dma1_ipd_req_0(),
-            self.dma1_ipd_req_1(),
-            self.dma1_ipd_req_2(),
-            self.dma1_ipd_req_3(),
-            self.dma1_ipd_req_4(),
-            self.dma1_ipd_req_5(),
-            self.dma1_ipd_req_6(),
-            self.dma1_ipd_req_7(),
-            self.dma1_ipd_req_8(),
-            self.dma1_ipd_req_9(),
-            self.dma1_ipd_req_10(),
-            self.dma1_ipd_req_11(),
-            self.dma1_ipd_req_12(),
-            self.dma1_ipd_req_13(),
-            self.dma1_ipd_req_14(),
-            self.dma1_ipd_req_15(),
-            self.dma1_ipd_req_16(),
-            self.dma1_ipd_req_17(),
-            self.dma1_ipd_req_18(),
-            self.dma1_ipd_req_19(),
-            self.dma1_ipd_req_20(),
-            self.dma1_ipd_req_21(),
-            self.dma1_ipd_req_22(),
-            self.dma1_ipd_req_23(),
-            self.dma1_ipd_req_24(),
-            self.dma1_ipd_req_25(),
-            self.dma1_ipd_req_26(),
-            self.dma1_ipd_req_27(),
-            self.dma1_ipd_req_28(),
-            self.dma1_ipd_req_29(),
-            self.dma1_ipd_req_30(),
-            self.dma1_ipd_req_31()
-        )
-    }
-}
-#[doc = "Secure general purpose registers"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct SecGpReg7(pub u32);
-impl SecGpReg7 {
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_0(&self) -> bool {
-        let val = (self.0 >> 0usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_0(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_1(&self) -> bool {
-        let val = (self.0 >> 1usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_1(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_2(&self) -> bool {
-        let val = (self.0 >> 2usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_2(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_3(&self) -> bool {
-        let val = (self.0 >> 3usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_3(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_4(&self) -> bool {
-        let val = (self.0 >> 4usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_4(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_5(&self) -> bool {
-        let val = (self.0 >> 5usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_5(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_6(&self) -> bool {
-        let val = (self.0 >> 6usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_6(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_7(&self) -> bool {
-        let val = (self.0 >> 7usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_7(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_8(&self) -> bool {
-        let val = (self.0 >> 8usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_8(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_9(&self) -> bool {
-        let val = (self.0 >> 9usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_9(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_10(&self) -> bool {
-        let val = (self.0 >> 10usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_10(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_11(&self) -> bool {
-        let val = (self.0 >> 11usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_11(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_12(&self) -> bool {
-        let val = (self.0 >> 12usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_12(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_13(&self) -> bool {
-        let val = (self.0 >> 13usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_13(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_14(&self) -> bool {
-        let val = (self.0 >> 14usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_14(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_15(&self) -> bool {
-        let val = (self.0 >> 15usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_15(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_16(&self) -> bool {
-        let val = (self.0 >> 16usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_16(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_17(&self) -> bool {
-        let val = (self.0 >> 17usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_17(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_18(&self) -> bool {
-        let val = (self.0 >> 18usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_18(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_19(&self) -> bool {
-        let val = (self.0 >> 19usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_19(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_20(&self) -> bool {
-        let val = (self.0 >> 20usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_20(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_21(&self) -> bool {
-        let val = (self.0 >> 21usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_21(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_22(&self) -> bool {
-        let val = (self.0 >> 22usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_22(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_23(&self) -> bool {
-        let val = (self.0 >> 23usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_23(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_24(&self) -> bool {
-        let val = (self.0 >> 24usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_24(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_25(&self) -> bool {
-        let val = (self.0 >> 25usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_25(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_26(&self) -> bool {
-        let val = (self.0 >> 26usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_26(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_27(&self) -> bool {
-        let val = (self.0 >> 27usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_27(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_28(&self) -> bool {
-        let val = (self.0 >> 28usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_28(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_29(&self) -> bool {
-        let val = (self.0 >> 29usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_29(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_30(&self) -> bool {
-        let val = (self.0 >> 30usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_30(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_31(&self) -> bool {
-        let val = (self.0 >> 31usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_31(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
-    }
-}
-impl Default for SecGpReg7 {
-    #[inline(always)]
-    fn default() -> SecGpReg7 {
-        SecGpReg7(0)
-    }
-}
-impl core::fmt::Debug for SecGpReg7 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("SecGpReg7")
-            .field("dma1_ipd_req_0", &self.dma1_ipd_req_0())
-            .field("dma1_ipd_req_1", &self.dma1_ipd_req_1())
-            .field("dma1_ipd_req_2", &self.dma1_ipd_req_2())
-            .field("dma1_ipd_req_3", &self.dma1_ipd_req_3())
-            .field("dma1_ipd_req_4", &self.dma1_ipd_req_4())
-            .field("dma1_ipd_req_5", &self.dma1_ipd_req_5())
-            .field("dma1_ipd_req_6", &self.dma1_ipd_req_6())
-            .field("dma1_ipd_req_7", &self.dma1_ipd_req_7())
-            .field("dma1_ipd_req_8", &self.dma1_ipd_req_8())
-            .field("dma1_ipd_req_9", &self.dma1_ipd_req_9())
-            .field("dma1_ipd_req_10", &self.dma1_ipd_req_10())
-            .field("dma1_ipd_req_11", &self.dma1_ipd_req_11())
-            .field("dma1_ipd_req_12", &self.dma1_ipd_req_12())
-            .field("dma1_ipd_req_13", &self.dma1_ipd_req_13())
-            .field("dma1_ipd_req_14", &self.dma1_ipd_req_14())
-            .field("dma1_ipd_req_15", &self.dma1_ipd_req_15())
-            .field("dma1_ipd_req_16", &self.dma1_ipd_req_16())
-            .field("dma1_ipd_req_17", &self.dma1_ipd_req_17())
-            .field("dma1_ipd_req_18", &self.dma1_ipd_req_18())
-            .field("dma1_ipd_req_19", &self.dma1_ipd_req_19())
-            .field("dma1_ipd_req_20", &self.dma1_ipd_req_20())
-            .field("dma1_ipd_req_21", &self.dma1_ipd_req_21())
-            .field("dma1_ipd_req_22", &self.dma1_ipd_req_22())
-            .field("dma1_ipd_req_23", &self.dma1_ipd_req_23())
-            .field("dma1_ipd_req_24", &self.dma1_ipd_req_24())
-            .field("dma1_ipd_req_25", &self.dma1_ipd_req_25())
-            .field("dma1_ipd_req_26", &self.dma1_ipd_req_26())
-            .field("dma1_ipd_req_27", &self.dma1_ipd_req_27())
-            .field("dma1_ipd_req_28", &self.dma1_ipd_req_28())
-            .field("dma1_ipd_req_29", &self.dma1_ipd_req_29())
-            .field("dma1_ipd_req_30", &self.dma1_ipd_req_30())
-            .field("dma1_ipd_req_31", &self.dma1_ipd_req_31())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for SecGpReg7 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "SecGpReg7 {{ dma1_ipd_req_0: {=bool:?}, dma1_ipd_req_1: {=bool:?}, dma1_ipd_req_2: {=bool:?}, dma1_ipd_req_3: {=bool:?}, dma1_ipd_req_4: {=bool:?}, dma1_ipd_req_5: {=bool:?}, dma1_ipd_req_6: {=bool:?}, dma1_ipd_req_7: {=bool:?}, dma1_ipd_req_8: {=bool:?}, dma1_ipd_req_9: {=bool:?}, dma1_ipd_req_10: {=bool:?}, dma1_ipd_req_11: {=bool:?}, dma1_ipd_req_12: {=bool:?}, dma1_ipd_req_13: {=bool:?}, dma1_ipd_req_14: {=bool:?}, dma1_ipd_req_15: {=bool:?}, dma1_ipd_req_16: {=bool:?}, dma1_ipd_req_17: {=bool:?}, dma1_ipd_req_18: {=bool:?}, dma1_ipd_req_19: {=bool:?}, dma1_ipd_req_20: {=bool:?}, dma1_ipd_req_21: {=bool:?}, dma1_ipd_req_22: {=bool:?}, dma1_ipd_req_23: {=bool:?}, dma1_ipd_req_24: {=bool:?}, dma1_ipd_req_25: {=bool:?}, dma1_ipd_req_26: {=bool:?}, dma1_ipd_req_27: {=bool:?}, dma1_ipd_req_28: {=bool:?}, dma1_ipd_req_29: {=bool:?}, dma1_ipd_req_30: {=bool:?}, dma1_ipd_req_31: {=bool:?} }}",
-            self.dma1_ipd_req_0(),
-            self.dma1_ipd_req_1(),
-            self.dma1_ipd_req_2(),
-            self.dma1_ipd_req_3(),
-            self.dma1_ipd_req_4(),
-            self.dma1_ipd_req_5(),
-            self.dma1_ipd_req_6(),
-            self.dma1_ipd_req_7(),
-            self.dma1_ipd_req_8(),
-            self.dma1_ipd_req_9(),
-            self.dma1_ipd_req_10(),
-            self.dma1_ipd_req_11(),
-            self.dma1_ipd_req_12(),
-            self.dma1_ipd_req_13(),
-            self.dma1_ipd_req_14(),
-            self.dma1_ipd_req_15(),
-            self.dma1_ipd_req_16(),
-            self.dma1_ipd_req_17(),
-            self.dma1_ipd_req_18(),
-            self.dma1_ipd_req_19(),
-            self.dma1_ipd_req_20(),
-            self.dma1_ipd_req_21(),
-            self.dma1_ipd_req_22(),
-            self.dma1_ipd_req_23(),
-            self.dma1_ipd_req_24(),
-            self.dma1_ipd_req_25(),
-            self.dma1_ipd_req_26(),
-            self.dma1_ipd_req_27(),
-            self.dma1_ipd_req_28(),
-            self.dma1_ipd_req_29(),
-            self.dma1_ipd_req_30(),
-            self.dma1_ipd_req_31()
-        )
-    }
-}
-#[doc = "Secure general purpose registers"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct SecGpReg8(pub u32);
-impl SecGpReg8 {
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_0(&self) -> bool {
-        let val = (self.0 >> 0usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_0(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_1(&self) -> bool {
-        let val = (self.0 >> 1usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_1(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_2(&self) -> bool {
-        let val = (self.0 >> 2usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_2(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_3(&self) -> bool {
-        let val = (self.0 >> 3usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_3(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_4(&self) -> bool {
-        let val = (self.0 >> 4usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_4(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_5(&self) -> bool {
-        let val = (self.0 >> 5usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_5(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_6(&self) -> bool {
-        let val = (self.0 >> 6usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_6(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_7(&self) -> bool {
-        let val = (self.0 >> 7usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_7(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_8(&self) -> bool {
-        let val = (self.0 >> 8usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_8(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_9(&self) -> bool {
-        let val = (self.0 >> 9usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_9(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_10(&self) -> bool {
-        let val = (self.0 >> 10usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_10(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_11(&self) -> bool {
-        let val = (self.0 >> 11usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_11(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_12(&self) -> bool {
-        let val = (self.0 >> 12usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_12(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_13(&self) -> bool {
-        let val = (self.0 >> 13usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_13(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_14(&self) -> bool {
-        let val = (self.0 >> 14usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_14(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_15(&self) -> bool {
-        let val = (self.0 >> 15usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_15(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_16(&self) -> bool {
-        let val = (self.0 >> 16usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_16(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_17(&self) -> bool {
-        let val = (self.0 >> 17usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_17(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_18(&self) -> bool {
-        let val = (self.0 >> 18usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_18(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_19(&self) -> bool {
-        let val = (self.0 >> 19usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_19(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_20(&self) -> bool {
-        let val = (self.0 >> 20usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_20(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_21(&self) -> bool {
-        let val = (self.0 >> 21usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_21(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_22(&self) -> bool {
-        let val = (self.0 >> 22usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_22(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_23(&self) -> bool {
-        let val = (self.0 >> 23usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_23(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_24(&self) -> bool {
-        let val = (self.0 >> 24usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_24(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_25(&self) -> bool {
-        let val = (self.0 >> 25usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_25(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_26(&self) -> bool {
-        let val = (self.0 >> 26usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_26(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_27(&self) -> bool {
-        let val = (self.0 >> 27usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_27(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_28(&self) -> bool {
-        let val = (self.0 >> 28usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_28(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_29(&self) -> bool {
-        let val = (self.0 >> 29usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_29(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_30(&self) -> bool {
-        let val = (self.0 >> 30usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_30(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_31(&self) -> bool {
-        let val = (self.0 >> 31usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_31(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
-    }
-}
-impl Default for SecGpReg8 {
-    #[inline(always)]
-    fn default() -> SecGpReg8 {
-        SecGpReg8(0)
-    }
-}
-impl core::fmt::Debug for SecGpReg8 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("SecGpReg8")
-            .field("dma1_ipd_req_0", &self.dma1_ipd_req_0())
-            .field("dma1_ipd_req_1", &self.dma1_ipd_req_1())
-            .field("dma1_ipd_req_2", &self.dma1_ipd_req_2())
-            .field("dma1_ipd_req_3", &self.dma1_ipd_req_3())
-            .field("dma1_ipd_req_4", &self.dma1_ipd_req_4())
-            .field("dma1_ipd_req_5", &self.dma1_ipd_req_5())
-            .field("dma1_ipd_req_6", &self.dma1_ipd_req_6())
-            .field("dma1_ipd_req_7", &self.dma1_ipd_req_7())
-            .field("dma1_ipd_req_8", &self.dma1_ipd_req_8())
-            .field("dma1_ipd_req_9", &self.dma1_ipd_req_9())
-            .field("dma1_ipd_req_10", &self.dma1_ipd_req_10())
-            .field("dma1_ipd_req_11", &self.dma1_ipd_req_11())
-            .field("dma1_ipd_req_12", &self.dma1_ipd_req_12())
-            .field("dma1_ipd_req_13", &self.dma1_ipd_req_13())
-            .field("dma1_ipd_req_14", &self.dma1_ipd_req_14())
-            .field("dma1_ipd_req_15", &self.dma1_ipd_req_15())
-            .field("dma1_ipd_req_16", &self.dma1_ipd_req_16())
-            .field("dma1_ipd_req_17", &self.dma1_ipd_req_17())
-            .field("dma1_ipd_req_18", &self.dma1_ipd_req_18())
-            .field("dma1_ipd_req_19", &self.dma1_ipd_req_19())
-            .field("dma1_ipd_req_20", &self.dma1_ipd_req_20())
-            .field("dma1_ipd_req_21", &self.dma1_ipd_req_21())
-            .field("dma1_ipd_req_22", &self.dma1_ipd_req_22())
-            .field("dma1_ipd_req_23", &self.dma1_ipd_req_23())
-            .field("dma1_ipd_req_24", &self.dma1_ipd_req_24())
-            .field("dma1_ipd_req_25", &self.dma1_ipd_req_25())
-            .field("dma1_ipd_req_26", &self.dma1_ipd_req_26())
-            .field("dma1_ipd_req_27", &self.dma1_ipd_req_27())
-            .field("dma1_ipd_req_28", &self.dma1_ipd_req_28())
-            .field("dma1_ipd_req_29", &self.dma1_ipd_req_29())
-            .field("dma1_ipd_req_30", &self.dma1_ipd_req_30())
-            .field("dma1_ipd_req_31", &self.dma1_ipd_req_31())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for SecGpReg8 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "SecGpReg8 {{ dma1_ipd_req_0: {=bool:?}, dma1_ipd_req_1: {=bool:?}, dma1_ipd_req_2: {=bool:?}, dma1_ipd_req_3: {=bool:?}, dma1_ipd_req_4: {=bool:?}, dma1_ipd_req_5: {=bool:?}, dma1_ipd_req_6: {=bool:?}, dma1_ipd_req_7: {=bool:?}, dma1_ipd_req_8: {=bool:?}, dma1_ipd_req_9: {=bool:?}, dma1_ipd_req_10: {=bool:?}, dma1_ipd_req_11: {=bool:?}, dma1_ipd_req_12: {=bool:?}, dma1_ipd_req_13: {=bool:?}, dma1_ipd_req_14: {=bool:?}, dma1_ipd_req_15: {=bool:?}, dma1_ipd_req_16: {=bool:?}, dma1_ipd_req_17: {=bool:?}, dma1_ipd_req_18: {=bool:?}, dma1_ipd_req_19: {=bool:?}, dma1_ipd_req_20: {=bool:?}, dma1_ipd_req_21: {=bool:?}, dma1_ipd_req_22: {=bool:?}, dma1_ipd_req_23: {=bool:?}, dma1_ipd_req_24: {=bool:?}, dma1_ipd_req_25: {=bool:?}, dma1_ipd_req_26: {=bool:?}, dma1_ipd_req_27: {=bool:?}, dma1_ipd_req_28: {=bool:?}, dma1_ipd_req_29: {=bool:?}, dma1_ipd_req_30: {=bool:?}, dma1_ipd_req_31: {=bool:?} }}",
-            self.dma1_ipd_req_0(),
-            self.dma1_ipd_req_1(),
-            self.dma1_ipd_req_2(),
-            self.dma1_ipd_req_3(),
-            self.dma1_ipd_req_4(),
-            self.dma1_ipd_req_5(),
-            self.dma1_ipd_req_6(),
-            self.dma1_ipd_req_7(),
-            self.dma1_ipd_req_8(),
-            self.dma1_ipd_req_9(),
-            self.dma1_ipd_req_10(),
-            self.dma1_ipd_req_11(),
-            self.dma1_ipd_req_12(),
-            self.dma1_ipd_req_13(),
-            self.dma1_ipd_req_14(),
-            self.dma1_ipd_req_15(),
-            self.dma1_ipd_req_16(),
-            self.dma1_ipd_req_17(),
-            self.dma1_ipd_req_18(),
-            self.dma1_ipd_req_19(),
-            self.dma1_ipd_req_20(),
-            self.dma1_ipd_req_21(),
-            self.dma1_ipd_req_22(),
-            self.dma1_ipd_req_23(),
-            self.dma1_ipd_req_24(),
-            self.dma1_ipd_req_25(),
-            self.dma1_ipd_req_26(),
-            self.dma1_ipd_req_27(),
-            self.dma1_ipd_req_28(),
-            self.dma1_ipd_req_29(),
-            self.dma1_ipd_req_30(),
-            self.dma1_ipd_req_31()
-        )
-    }
-}
-#[doc = "Secure general purpose registers"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct SecGpReg9(pub u32);
-impl SecGpReg9 {
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_0(&self) -> bool {
-        let val = (self.0 >> 0usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_0(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_1(&self) -> bool {
-        let val = (self.0 >> 1usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_1(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_2(&self) -> bool {
-        let val = (self.0 >> 2usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_2(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_3(&self) -> bool {
-        let val = (self.0 >> 3usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_3(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_4(&self) -> bool {
-        let val = (self.0 >> 4usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_4(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_5(&self) -> bool {
-        let val = (self.0 >> 5usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_5(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_6(&self) -> bool {
-        let val = (self.0 >> 6usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_6(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_7(&self) -> bool {
-        let val = (self.0 >> 7usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_7(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_8(&self) -> bool {
-        let val = (self.0 >> 8usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_8(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_9(&self) -> bool {
-        let val = (self.0 >> 9usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_9(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_10(&self) -> bool {
-        let val = (self.0 >> 10usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_10(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_11(&self) -> bool {
-        let val = (self.0 >> 11usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_11(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_12(&self) -> bool {
-        let val = (self.0 >> 12usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_12(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_13(&self) -> bool {
-        let val = (self.0 >> 13usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_13(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_14(&self) -> bool {
-        let val = (self.0 >> 14usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_14(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_15(&self) -> bool {
-        let val = (self.0 >> 15usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_15(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_16(&self) -> bool {
-        let val = (self.0 >> 16usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_16(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_17(&self) -> bool {
-        let val = (self.0 >> 17usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_17(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_18(&self) -> bool {
-        let val = (self.0 >> 18usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_18(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_19(&self) -> bool {
-        let val = (self.0 >> 19usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_19(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_20(&self) -> bool {
-        let val = (self.0 >> 20usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_20(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_21(&self) -> bool {
-        let val = (self.0 >> 21usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_21(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_22(&self) -> bool {
-        let val = (self.0 >> 22usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_22(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_23(&self) -> bool {
-        let val = (self.0 >> 23usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_23(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_24(&self) -> bool {
-        let val = (self.0 >> 24usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_24(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_25(&self) -> bool {
-        let val = (self.0 >> 25usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_25(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_26(&self) -> bool {
-        let val = (self.0 >> 26usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_26(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_27(&self) -> bool {
-        let val = (self.0 >> 27usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_27(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_28(&self) -> bool {
-        let val = (self.0 >> 28usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_28(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_29(&self) -> bool {
-        let val = (self.0 >> 29usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_29(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_30(&self) -> bool {
-        let val = (self.0 >> 30usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_30(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn dma1_ipd_req_31(&self) -> bool {
-        let val = (self.0 >> 31usize) & 0x01;
-        val != 0
-    }
-    #[doc = "DMA1 IPD_REQ"]
-    #[inline(always)]
-    pub const fn set_dma1_ipd_req_31(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
-    }
-}
-impl Default for SecGpReg9 {
-    #[inline(always)]
-    fn default() -> SecGpReg9 {
-        SecGpReg9(0)
-    }
-}
-impl core::fmt::Debug for SecGpReg9 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("SecGpReg9")
-            .field("dma1_ipd_req_0", &self.dma1_ipd_req_0())
-            .field("dma1_ipd_req_1", &self.dma1_ipd_req_1())
-            .field("dma1_ipd_req_2", &self.dma1_ipd_req_2())
-            .field("dma1_ipd_req_3", &self.dma1_ipd_req_3())
-            .field("dma1_ipd_req_4", &self.dma1_ipd_req_4())
-            .field("dma1_ipd_req_5", &self.dma1_ipd_req_5())
-            .field("dma1_ipd_req_6", &self.dma1_ipd_req_6())
-            .field("dma1_ipd_req_7", &self.dma1_ipd_req_7())
-            .field("dma1_ipd_req_8", &self.dma1_ipd_req_8())
-            .field("dma1_ipd_req_9", &self.dma1_ipd_req_9())
-            .field("dma1_ipd_req_10", &self.dma1_ipd_req_10())
-            .field("dma1_ipd_req_11", &self.dma1_ipd_req_11())
-            .field("dma1_ipd_req_12", &self.dma1_ipd_req_12())
-            .field("dma1_ipd_req_13", &self.dma1_ipd_req_13())
-            .field("dma1_ipd_req_14", &self.dma1_ipd_req_14())
-            .field("dma1_ipd_req_15", &self.dma1_ipd_req_15())
-            .field("dma1_ipd_req_16", &self.dma1_ipd_req_16())
-            .field("dma1_ipd_req_17", &self.dma1_ipd_req_17())
-            .field("dma1_ipd_req_18", &self.dma1_ipd_req_18())
-            .field("dma1_ipd_req_19", &self.dma1_ipd_req_19())
-            .field("dma1_ipd_req_20", &self.dma1_ipd_req_20())
-            .field("dma1_ipd_req_21", &self.dma1_ipd_req_21())
-            .field("dma1_ipd_req_22", &self.dma1_ipd_req_22())
-            .field("dma1_ipd_req_23", &self.dma1_ipd_req_23())
-            .field("dma1_ipd_req_24", &self.dma1_ipd_req_24())
-            .field("dma1_ipd_req_25", &self.dma1_ipd_req_25())
-            .field("dma1_ipd_req_26", &self.dma1_ipd_req_26())
-            .field("dma1_ipd_req_27", &self.dma1_ipd_req_27())
-            .field("dma1_ipd_req_28", &self.dma1_ipd_req_28())
-            .field("dma1_ipd_req_29", &self.dma1_ipd_req_29())
-            .field("dma1_ipd_req_30", &self.dma1_ipd_req_30())
-            .field("dma1_ipd_req_31", &self.dma1_ipd_req_31())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for SecGpReg9 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "SecGpReg9 {{ dma1_ipd_req_0: {=bool:?}, dma1_ipd_req_1: {=bool:?}, dma1_ipd_req_2: {=bool:?}, dma1_ipd_req_3: {=bool:?}, dma1_ipd_req_4: {=bool:?}, dma1_ipd_req_5: {=bool:?}, dma1_ipd_req_6: {=bool:?}, dma1_ipd_req_7: {=bool:?}, dma1_ipd_req_8: {=bool:?}, dma1_ipd_req_9: {=bool:?}, dma1_ipd_req_10: {=bool:?}, dma1_ipd_req_11: {=bool:?}, dma1_ipd_req_12: {=bool:?}, dma1_ipd_req_13: {=bool:?}, dma1_ipd_req_14: {=bool:?}, dma1_ipd_req_15: {=bool:?}, dma1_ipd_req_16: {=bool:?}, dma1_ipd_req_17: {=bool:?}, dma1_ipd_req_18: {=bool:?}, dma1_ipd_req_19: {=bool:?}, dma1_ipd_req_20: {=bool:?}, dma1_ipd_req_21: {=bool:?}, dma1_ipd_req_22: {=bool:?}, dma1_ipd_req_23: {=bool:?}, dma1_ipd_req_24: {=bool:?}, dma1_ipd_req_25: {=bool:?}, dma1_ipd_req_26: {=bool:?}, dma1_ipd_req_27: {=bool:?}, dma1_ipd_req_28: {=bool:?}, dma1_ipd_req_29: {=bool:?}, dma1_ipd_req_30: {=bool:?}, dma1_ipd_req_31: {=bool:?} }}",
-            self.dma1_ipd_req_0(),
-            self.dma1_ipd_req_1(),
-            self.dma1_ipd_req_2(),
-            self.dma1_ipd_req_3(),
-            self.dma1_ipd_req_4(),
-            self.dma1_ipd_req_5(),
-            self.dma1_ipd_req_6(),
-            self.dma1_ipd_req_7(),
-            self.dma1_ipd_req_8(),
-            self.dma1_ipd_req_9(),
-            self.dma1_ipd_req_10(),
-            self.dma1_ipd_req_11(),
-            self.dma1_ipd_req_12(),
-            self.dma1_ipd_req_13(),
-            self.dma1_ipd_req_14(),
-            self.dma1_ipd_req_15(),
-            self.dma1_ipd_req_16(),
-            self.dma1_ipd_req_17(),
-            self.dma1_ipd_req_18(),
-            self.dma1_ipd_req_19(),
-            self.dma1_ipd_req_20(),
-            self.dma1_ipd_req_21(),
-            self.dma1_ipd_req_22(),
-            self.dma1_ipd_req_23(),
-            self.dma1_ipd_req_24(),
-            self.dma1_ipd_req_25(),
-            self.dma1_ipd_req_26(),
-            self.dma1_ipd_req_27(),
-            self.dma1_ipd_req_28(),
-            self.dma1_ipd_req_29(),
-            self.dma1_ipd_req_30(),
-            self.dma1_ipd_req_31()
+            "SecGpReg {{ dma_ipd_req[0]: {=bool:?}, dma_ipd_req[1]: {=bool:?}, dma_ipd_req[2]: {=bool:?}, dma_ipd_req[3]: {=bool:?}, dma_ipd_req[4]: {=bool:?}, dma_ipd_req[5]: {=bool:?}, dma_ipd_req[6]: {=bool:?}, dma_ipd_req[7]: {=bool:?}, dma_ipd_req[8]: {=bool:?}, dma_ipd_req[9]: {=bool:?}, dma_ipd_req[10]: {=bool:?}, dma_ipd_req[11]: {=bool:?}, dma_ipd_req[12]: {=bool:?}, dma_ipd_req[13]: {=bool:?}, dma_ipd_req[14]: {=bool:?}, dma_ipd_req[15]: {=bool:?}, dma_ipd_req[16]: {=bool:?}, dma_ipd_req[17]: {=bool:?}, dma_ipd_req[18]: {=bool:?}, dma_ipd_req[19]: {=bool:?}, dma_ipd_req[20]: {=bool:?}, dma_ipd_req[21]: {=bool:?}, dma_ipd_req[22]: {=bool:?}, dma_ipd_req[23]: {=bool:?}, dma_ipd_req[24]: {=bool:?}, dma_ipd_req[25]: {=bool:?}, dma_ipd_req[26]: {=bool:?}, dma_ipd_req[27]: {=bool:?}, dma_ipd_req[28]: {=bool:?}, dma_ipd_req[29]: {=bool:?}, dma_ipd_req[30]: {=bool:?}, dma_ipd_req[31]: {=bool:?} }}",
+            self.dma_ipd_req(0usize),
+            self.dma_ipd_req(1usize),
+            self.dma_ipd_req(2usize),
+            self.dma_ipd_req(3usize),
+            self.dma_ipd_req(4usize),
+            self.dma_ipd_req(5usize),
+            self.dma_ipd_req(6usize),
+            self.dma_ipd_req(7usize),
+            self.dma_ipd_req(8usize),
+            self.dma_ipd_req(9usize),
+            self.dma_ipd_req(10usize),
+            self.dma_ipd_req(11usize),
+            self.dma_ipd_req(12usize),
+            self.dma_ipd_req(13usize),
+            self.dma_ipd_req(14usize),
+            self.dma_ipd_req(15usize),
+            self.dma_ipd_req(16usize),
+            self.dma_ipd_req(17usize),
+            self.dma_ipd_req(18usize),
+            self.dma_ipd_req(19usize),
+            self.dma_ipd_req(20usize),
+            self.dma_ipd_req(21usize),
+            self.dma_ipd_req(22usize),
+            self.dma_ipd_req(23usize),
+            self.dma_ipd_req(24usize),
+            self.dma_ipd_req(25usize),
+            self.dma_ipd_req(26usize),
+            self.dma_ipd_req(27usize),
+            self.dma_ipd_req(28usize),
+            self.dma_ipd_req(29usize),
+            self.dma_ipd_req(30usize),
+            self.dma_ipd_req(31usize)
         )
     }
 }
