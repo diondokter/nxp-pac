@@ -8419,7 +8419,7 @@
     {
       "name": "SYSCON",
       "address": "0x40091000",
-      "type": "mcxa/SYSCON",
+      "type": "mcxa/SYSCON5xx::SYSCON",
       "signals": []
     },
     {

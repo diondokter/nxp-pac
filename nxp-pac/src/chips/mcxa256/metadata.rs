@@ -9203,7 +9203,7 @@ pub const PERIPHERALS: &[Peripheral] = &[
     Peripheral {
         name: "SYSCON",
         address: 0x40091000,
-        driver_name: "mcxa/SYSCON",
+        driver_name: "mcxa/SYSCON2xx::SYSCON",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],

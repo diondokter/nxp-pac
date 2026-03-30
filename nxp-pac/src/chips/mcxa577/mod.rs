@@ -274,7 +274,7 @@ pub const PORT5: port::Port = unsafe { port::Port::from_ptr(0x400E3000 as _) };
 pub const RTC0: rtc5xx::Rtc = unsafe { rtc5xx::Rtc::from_ptr(0x400EE000 as _) };
 pub const SCG0: scg::Scg = unsafe { scg::Scg::from_ptr(0x400CA000 as _) };
 pub const SPC0: spc::Spc = unsafe { spc::Spc::from_ptr(0x400CB000 as _) };
-pub const SYSCON: syscon::Syscon = unsafe { syscon::Syscon::from_ptr(0x40091000 as _) };
+pub const SYSCON: syscon5xx::Syscon = unsafe { syscon5xx::Syscon::from_ptr(0x40091000 as _) };
 pub const TRNG0: trng::Trng = unsafe { trng::Trng::from_ptr(0x400EC000 as _) };
 pub const VBAT0: vbat::Vbat = unsafe { vbat::Vbat::from_ptr(0x40093000 as _) };
 pub const WWDT0: wwdt::Wwdt = unsafe { wwdt::Wwdt::from_ptr(0x4000C000 as _) };
@@ -325,8 +325,8 @@ pub mod rtc5xx;
 pub mod scg;
 #[path = "../../meta_peripherals/mcxa/SPC.rs"]
 pub mod spc;
-#[path = "../../meta_peripherals/mcxa/SYSCON.rs"]
-pub mod syscon;
+#[path = "../../meta_peripherals/mcxa/SYSCON5xx.rs"]
+pub mod syscon5xx;
 #[path = "../../meta_peripherals/mcxa/TRNG.rs"]
 pub mod trng;
 #[path = "../../meta_peripherals/mcxa/VBAT.rs"]
