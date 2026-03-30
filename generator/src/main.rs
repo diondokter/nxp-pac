@@ -48,14 +48,9 @@ const GENERATE: &[Feature] = &[
     Feature { chip: "MIMXRT1011", metadata: "MIMXRT1011", cores: &["MIMXRT1011"], metapac: false },
     Feature { chip: "MIMXRT1062", metadata: "MIMXRT106x", cores: &["MIMXRT1062"], metapac: false },
     Feature { chip: "MIMXRT1064", metadata: "MIMXRT106x", cores: &["MIMXRT1064"], metapac: false },
-    // TODO: metadata
     Feature { chip: "MIMXRT685S", metadata: "", cores: &["MIMXRT685S_cm33"], metapac: false },
-
     Feature { chip: "LPC55S16", metadata: "LPC55S16", cores: &["LPC55S16"], metapac: false },
-
     Feature { chip: "LPC55S69", metadata: "LPC55S6x", cores: &["LPC55S69_cm33_core0", "LPC55S69_cm33_core1"], metapac: false },
-
-    // TODO: metadata
     Feature { chip: "MCXN947", metadata: "", cores: &["MCXN947_cm33_core0", "MCXN947_cm33_core1"], metapac: false },
     Feature { chip: "MCXA256", metadata: "MCXA2xx", cores: &["MCXA256"], metapac: true },
     Feature { chip: "MCXA577", metadata: "MCXA5xx", cores: &["MCXA577"], metapac: true },
@@ -153,17 +148,16 @@ fn generate_chip(current_dir: &Path, feature: &Feature) -> anyhow::Result<()> {
 
         if !feature.metapac {
             info!("Generating {}/{}", feature.chip, core);
-            pac::generate_core(&svd, &chips_dir, &transforms_dir, &core)
+            pac::generate_core(&svd, &chips_dir, &transforms_dir, core)
                 .context("Generating PAC")?;
         }
 
-        // TODO: MCXN947 metadata to remove this hack
         if !feature.metadata.is_empty() {
             let metadata = metadata::generate_core(
                 &chips_dir,
                 &svd,
                 &metadata_dir.join(feature.metadata).with_extension("json"),
-                &core,
+                core,
             )
             .context("Generating metadata")?;
 

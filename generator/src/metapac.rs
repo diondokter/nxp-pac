@@ -14,6 +14,7 @@ use rayon::iter::{ParallelBridge, ParallelIterator};
 
 use crate::metadata::Metadata;
 
+/// Take all yamls and export them to the pac after being transformed to Rust code using chiptool
 pub fn export_meta_peripherals(current: &Path) -> anyhow::Result<()> {
     let pac_peri_dir = current.join("nxp-pac/src/meta_peripherals");
     let yaml_peri_dir = current.join("data/metadata/peripherals");
@@ -111,18 +112,23 @@ pub fn assemble_metapac(current: &Path, core: &str, mut metadata: Metadata) -> a
     metadata.peripherals.retain(|p| {
         let Some(peripheral_type) = p.peripheral_type.as_ref() else {
             tracing::warn!("Peripheral {} has no type associated. Skipped.", p.name);
-
             return false;
+        };
+
+        let peripheral_type = match PeripheralType::try_from(peripheral_type.as_str()) {
+            Ok(peripheral_type) => peripheral_type,
+            Err(e) => {
+                tracing::warn!(
+                    "Cannot parse peripheral type `{}`: {e}. Skipped.",
+                    peripheral_type
+                );
+                return false;
+            }
         };
 
         if fs::exists(
             yaml_peri_dir
-                .join(
-                    peripheral_type
-                        .split_once("::")
-                        .map(|split| split.0)
-                        .unwrap_or(peripheral_type.as_str()),
-                )
+                .join(&peripheral_type.path)
                 .with_extension("yaml"),
         )
         .unwrap_or(false)
@@ -132,7 +138,7 @@ pub fn assemble_metapac(current: &Path, core: &str, mut metadata: Metadata) -> a
             tracing::warn!(
                 "Peripheral {} does not point to an existing driver: `{}`. Skipped.",
                 p.name,
-                peripheral_type
+                peripheral_type.path
             );
 
             false
@@ -171,7 +177,7 @@ fn export_mod_rs(chip_dir: &Path, metadata: &Metadata) -> anyhow::Result<()> {
 
     // Create instances for all peripherals
     for peripheral in metadata.peripherals.iter() {
-        let Some(driver_path) = peripheral.peripheral_type.as_ref() else {
+        let Some(peripheral_type) = peripheral.peripheral_type.as_ref() else {
             tracing::warn!(
                 "Peripheral {} has no type associated. Skipped.",
                 peripheral.name
@@ -179,20 +185,10 @@ fn export_mod_rs(chip_dir: &Path, metadata: &Metadata) -> anyhow::Result<()> {
             continue;
         };
 
-        let driver_name = driver_path
-            .split('/')
-            .last()
-            .with_context(|| format!("Getting driver name from path: {}", driver_path))?;
+        let peripheral_type = PeripheralType::try_from(peripheral_type.as_str())?;
 
-        let (module_name, type_name) = match driver_name.split_once("::") {
-            Some((module_name, type_name)) => {
-                (module_name.to_lowercase(), type_name.to_pascal_case())
-            }
-            None => (driver_name.to_lowercase(), driver_name.to_pascal_case()),
-        };
-
-        let driver_name_mod = Ident::new(&module_name, Span::call_site());
-        let driver_name_type = Ident::new(&type_name, Span::call_site());
+        let driver_name_mod = Ident::new(&peripheral_type.mod_name, Span::call_site());
+        let driver_name_type = Ident::new(&peripheral_type.type_name, Span::call_site());
 
         let peripheral_name = Ident::new(&peripheral.name, Span::call_site());
         let Some(peripheral_address) = peripheral.peripheral_address.as_ref() else {
@@ -222,24 +218,17 @@ fn export_mod_rs(chip_dir: &Path, metadata: &Metadata) -> anyhow::Result<()> {
         .flat_map(|p| p.peripheral_type.clone())
         .collect::<IndexSet<String>>();
     let mut exported_modules = HashSet::new();
-    for driver_path in drivers {
-        let driver_mod_path = driver_path
-            .split_once("::")
-            .map(|split| split.0)
-            .unwrap_or(driver_path.as_str());
+    for peripheral_type in drivers {
+        let peripheral_type = PeripheralType::try_from(peripheral_type.as_str())
+            .context("parsing peripheral type")?;
 
-        let driver_name_mod = driver_mod_path
-            .split('/')
-            .last()
-            .with_context(|| format!("Getting driver name from path: {}", driver_mod_path))?;
+        let driver_name_mod = Ident::new(&peripheral_type.mod_name, Span::call_site());
 
-        if !exported_modules.insert(driver_name_mod.to_owned()) {
+        if !exported_modules.insert(peripheral_type.mod_name) {
             continue;
         }
 
-        let driver_name_mod = Ident::new(&driver_name_mod.to_lowercase(), Span::call_site());
-
-        let full_driver_path = format!("../../meta_peripherals/{driver_mod_path}.rs");
+        let full_driver_path = format!("../../meta_peripherals/{}.rs", peripheral_type.path);
 
         writeln!(
             &mut contents,
@@ -364,7 +353,7 @@ fn export_common_rs(chip_dir: &Path) -> anyhow::Result<()> {
     let output = Command::new("chiptool")
         .arg("gen-common")
         .arg("--output")
-        .arg(&chip_dir.join("common.rs"))
+        .arg(chip_dir.join("common.rs"))
         .stdout(Stdio::inherit())
         .stderr(Stdio::inherit())
         .output()?;
@@ -377,4 +366,31 @@ fn export_common_rs(chip_dir: &Path) -> anyhow::Result<()> {
     }
 
     Ok(())
+}
+
+struct PeripheralType {
+    path: String,
+    mod_name: String,
+    type_name: String,
+}
+
+impl TryFrom<&str> for PeripheralType {
+    type Error = anyhow::Error;
+
+    fn try_from(mut path: &str) -> Result<Self, Self::Error> {
+        let mut type_name = None;
+
+        if let Some((stripped_path, specified_type_name)) = path.split_once("::") {
+            path = stripped_path;
+            type_name = Some(specified_type_name);
+        }
+
+        let mod_name = path.split('/').next_back().context("bad type path name")?;
+
+        Ok(Self {
+            path: path.into(),
+            mod_name: mod_name.to_lowercase(),
+            type_name: type_name.unwrap_or(mod_name).to_pascal_case(),
+        })
+    }
 }

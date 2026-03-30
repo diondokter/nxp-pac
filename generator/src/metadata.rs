@@ -1,11 +1,6 @@
-use std::{
-    collections::{HashMap, HashSet},
-    fmt::Write,
-    fs,
-    path::Path,
-};
+use std::{fmt::Write, fs, path::Path};
 
-use anyhow::{Context, bail};
+use anyhow::Context;
 use indexmap::IndexMap;
 use proc_macro2::{Literal, TokenStream};
 use quote::quote;

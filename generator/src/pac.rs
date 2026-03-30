@@ -15,7 +15,7 @@ pub fn generate_core(
     transforms_dir: &Path,
     core: &str,
 ) -> anyhow::Result<()> {
-    if !fs::exists(&svd)? {
+    if !fs::exists(svd)? {
         bail!(
             "SVD file for {} does not exist. help: did you clone submodules?",
             core
