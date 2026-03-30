@@ -545,6 +545,14 @@ pub const PINS: &[Pin] = &[
 ];
 pub const PERIPHERALS: &[Peripheral] = &[
     Peripheral {
+        name: "AHBSC",
+        address: 0x40044000,
+        driver_name: "mcxa/AHBSC",
+        signals: &[],
+        flexcomm: None,
+        dma_muxing: &[],
+    },
+    Peripheral {
         name: "10BASE-T1S0",
         address: 0x4002D000,
         driver_name: "",
@@ -4106,9 +4114,25 @@ pub const PERIPHERALS: &[Peripheral] = &[
         dma_muxing: &[],
     },
     Peripheral {
-        name: "DebugMailbox0",
+        name: "DBGMAILBOX",
         address: 0,
         driver_name: "",
+        signals: &[],
+        flexcomm: None,
+        dma_muxing: &[],
+    },
+    Peripheral {
+        name: "DMA0",
+        address: 0x40080000,
+        driver_name: "mcxa/DMA::DMA12",
+        signals: &[],
+        flexcomm: None,
+        dma_muxing: &[],
+    },
+    Peripheral {
+        name: "DMA1",
+        address: 0x40013000,
+        driver_name: "mcxa/DMA::DMA4",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
@@ -6682,7 +6706,7 @@ pub const PERIPHERALS: &[Peripheral] = &[
     Peripheral {
         name: "I3C0",
         address: 0x40002000,
-        driver_name: "",
+        driver_name: "mcxa/I3C",
         signals: &[
             Signal {
                 name: "PUR",
@@ -6750,7 +6774,7 @@ pub const PERIPHERALS: &[Peripheral] = &[
     Peripheral {
         name: "I3C1",
         address: 0x40003000,
-        driver_name: "",
+        driver_name: "mcxa/I3C",
         signals: &[
             Signal {
                 name: "PUR",
@@ -6859,7 +6883,7 @@ pub const PERIPHERALS: &[Peripheral] = &[
     Peripheral {
         name: "I3C2",
         address: 0x4009E000,
-        driver_name: "",
+        driver_name: "mcxa/I3C",
         signals: &[
             Signal {
                 name: "PUR",
@@ -6927,7 +6951,7 @@ pub const PERIPHERALS: &[Peripheral] = &[
     Peripheral {
         name: "I3C3",
         address: 0x400DE000,
-        driver_name: "",
+        driver_name: "mcxa/I3C",
         signals: &[
             Signal {
                 name: "PUR",
@@ -12286,25 +12310,9 @@ pub const PERIPHERALS: &[Peripheral] = &[
         dma_muxing: &[],
     },
     Peripheral {
-        name: "EDMA_0_MP",
-        address: 0,
-        driver_name: "",
-        signals: &[],
-        flexcomm: None,
-        dma_muxing: &[],
-    },
-    Peripheral {
         name: "EDMA_0_TCD",
         address: 0x40081000,
         driver_name: "mcxa/EDMA_TCD::TCD8",
-        signals: &[],
-        flexcomm: None,
-        dma_muxing: &[],
-    },
-    Peripheral {
-        name: "EDMA_1_MP",
-        address: 0,
-        driver_name: "",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],

@@ -3509,7 +3509,7 @@
     {
       "name": "DMA0",
       "address": "0x40080000",
-      "type": "mcxa/DMA",
+      "type": "mcxa/DMA::DMA8",
       "signals": []
     },
     {
@@ -9174,10 +9174,6 @@
           ]
         }
       ]
-    },
-    {
-      "name": "EDMA_0_MP",
-      "signals": []
     },
     {
       "name": "EDMA_0_TCD",

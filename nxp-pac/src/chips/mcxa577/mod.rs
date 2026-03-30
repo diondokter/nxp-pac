@@ -221,6 +221,7 @@ pub const NVIC_PRIO_BITS: u8 = 3;
 pub use Interrupt as interrupt;
 #[cfg(feature = "rt")]
 pub use cortex_m_rt::interrupt;
+pub const AHBSC: ahbsc::Ahbsc = unsafe { ahbsc::Ahbsc::from_ptr(0x40044000 as _) };
 pub const ADC0: adc::Adc = unsafe { adc::Adc::from_ptr(0x400AF000 as _) };
 pub const ADC1: adc::Adc = unsafe { adc::Adc::from_ptr(0x400B0000 as _) };
 pub const CDOG0: cdog::Cdog = unsafe { cdog::Cdog::from_ptr(0x40040000 as _) };
@@ -232,6 +233,8 @@ pub const CTIMER1: ctimer::Ctimer = unsafe { ctimer::Ctimer::from_ptr(0x40005000
 pub const CTIMER2: ctimer::Ctimer = unsafe { ctimer::Ctimer::from_ptr(0x40006000 as _) };
 pub const CTIMER3: ctimer::Ctimer = unsafe { ctimer::Ctimer::from_ptr(0x40007000 as _) };
 pub const CTIMER4: ctimer::Ctimer = unsafe { ctimer::Ctimer::from_ptr(0x40008000 as _) };
+pub const DMA0: dma::Dma12 = unsafe { dma::Dma12::from_ptr(0x40080000 as _) };
+pub const DMA1: dma::Dma4 = unsafe { dma::Dma4::from_ptr(0x40013000 as _) };
 pub const FMU0: fmu::Fmu = unsafe { fmu::Fmu::from_ptr(0x40095000 as _) };
 pub const GPIO0: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x40048000 as _) };
 pub const GPIO1: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4004A000 as _) };
@@ -239,6 +242,10 @@ pub const GPIO2: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4004C000 as _) };
 pub const GPIO3: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x4004E000 as _) };
 pub const GPIO4: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x40050000 as _) };
 pub const GPIO5: gpio::Gpio = unsafe { gpio::Gpio::from_ptr(0x400DF000 as _) };
+pub const I3C0: i3c::I3c = unsafe { i3c::I3c::from_ptr(0x40002000 as _) };
+pub const I3C1: i3c::I3c = unsafe { i3c::I3c::from_ptr(0x40003000 as _) };
+pub const I3C2: i3c::I3c = unsafe { i3c::I3c::from_ptr(0x4009E000 as _) };
+pub const I3C3: i3c::I3c = unsafe { i3c::I3c::from_ptr(0x400DE000 as _) };
 pub const INPUTMUX0: inputmux::Inputmux = unsafe { inputmux::Inputmux::from_ptr(0x40001000 as _) };
 pub const LPI2C0: lpi2c::Lpi2c = unsafe { lpi2c::Lpi2c::from_ptr(0x4009A000 as _) };
 pub const LPI2C1: lpi2c::Lpi2c = unsafe { lpi2c::Lpi2c::from_ptr(0x4009B000 as _) };
@@ -277,6 +284,8 @@ pub const EDMA_1_TCD: edma_tcd::Tcd4 = unsafe { edma_tcd::Tcd4::from_ptr(0x40014
 pub const MRCC0: mrcc5xx::Mrcc = unsafe { mrcc5xx::Mrcc::from_ptr(0x40091800 as _) };
 #[path = "../../meta_peripherals/mcxa/ADC.rs"]
 pub mod adc;
+#[path = "../../meta_peripherals/mcxa/AHBSC.rs"]
+pub mod ahbsc;
 #[path = "../../meta_peripherals/mcxa/CDOG.rs"]
 pub mod cdog;
 #[path = "../../meta_peripherals/mcxa/CMC.rs"]
@@ -286,12 +295,16 @@ pub mod common;
 pub mod crc;
 #[path = "../../meta_peripherals/mcxa/CTIMER.rs"]
 pub mod ctimer;
+#[path = "../../meta_peripherals/mcxa/DMA.rs"]
+pub mod dma;
 #[path = "../../meta_peripherals/mcxa/EDMA_TCD.rs"]
 pub mod edma_tcd;
 #[path = "../../meta_peripherals/mcxa/FMU.rs"]
 pub mod fmu;
 #[path = "../../meta_peripherals/mcxa/GPIO.rs"]
 pub mod gpio;
+#[path = "../../meta_peripherals/mcxa/I3C.rs"]
+pub mod i3c;
 #[path = "../../meta_peripherals/mcxa/INPUTMUX.rs"]
 pub mod inputmux;
 #[path = "../../meta_peripherals/mcxa/LPI2C.rs"]

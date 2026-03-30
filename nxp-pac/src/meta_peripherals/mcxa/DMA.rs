@@ -3,12 +3,12 @@
 #![doc = "Peripheral access API (generated using chiptool v0.1.0 (6a8c2aa 2026-01-27))"]
 #[doc = "DMA MP."]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Dma {
+pub struct Dma12 {
     ptr: *mut u8,
 }
-unsafe impl Send for Dma {}
-unsafe impl Sync for Dma {}
-impl Dma {
+unsafe impl Send for Dma12 {}
+unsafe impl Sync for Dma12 {}
+impl Dma12 {
     #[inline(always)]
     pub const unsafe fn from_ptr(ptr: *mut ()) -> Self {
         Self { ptr: ptr as _ }
@@ -19,12 +19,108 @@ impl Dma {
     }
     #[doc = "Management Page Control."]
     #[inline(always)]
-    pub const fn mp_csr(self) -> crate::pac::common::Reg<MpCsr, crate::pac::common::RW> {
+    pub const fn mp_csr(self) -> crate::pac::common::Reg<MpCsr12, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
     }
     #[doc = "Management Page Error Status."]
     #[inline(always)]
-    pub const fn mp_es(self) -> crate::pac::common::Reg<MpEs, crate::pac::common::R> {
+    pub const fn mp_es(self) -> crate::pac::common::Reg<MpEs12, crate::pac::common::R> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
+    }
+    #[doc = "Management Page Interrupt Request Status."]
+    #[inline(always)]
+    pub const fn mp_int(self) -> crate::pac::common::Reg<MpInt, crate::pac::common::R> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
+    }
+    #[doc = "Management Page Hardware Request Status."]
+    #[inline(always)]
+    pub const fn mp_hrs(self) -> crate::pac::common::Reg<MpHrs, crate::pac::common::R> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }
+    }
+    #[doc = "Channel Arbitration Group."]
+    #[inline(always)]
+    pub const fn ch_grpri(
+        self,
+        n: usize,
+    ) -> crate::pac::common::Reg<ChGrpri, crate::pac::common::RW> {
+        assert!(n < 8usize);
+        unsafe {
+            crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0100usize + n * 4usize) as _)
+        }
+    }
+}
+#[doc = "DMA MP."]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Dma4 {
+    ptr: *mut u8,
+}
+unsafe impl Send for Dma4 {}
+unsafe impl Sync for Dma4 {}
+impl Dma4 {
+    #[inline(always)]
+    pub const unsafe fn from_ptr(ptr: *mut ()) -> Self {
+        Self { ptr: ptr as _ }
+    }
+    #[inline(always)]
+    pub const fn as_ptr(&self) -> *mut () {
+        self.ptr as _
+    }
+    #[doc = "Management Page Control."]
+    #[inline(always)]
+    pub const fn mp_csr(self) -> crate::pac::common::Reg<MpCsr4, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
+    }
+    #[doc = "Management Page Error Status."]
+    #[inline(always)]
+    pub const fn mp_es(self) -> crate::pac::common::Reg<MpEs4, crate::pac::common::R> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
+    }
+    #[doc = "Management Page Interrupt Request Status."]
+    #[inline(always)]
+    pub const fn mp_int(self) -> crate::pac::common::Reg<MpInt, crate::pac::common::R> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
+    }
+    #[doc = "Management Page Hardware Request Status."]
+    #[inline(always)]
+    pub const fn mp_hrs(self) -> crate::pac::common::Reg<MpHrs, crate::pac::common::R> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }
+    }
+    #[doc = "Channel Arbitration Group."]
+    #[inline(always)]
+    pub const fn ch_grpri(
+        self,
+        n: usize,
+    ) -> crate::pac::common::Reg<ChGrpri, crate::pac::common::RW> {
+        assert!(n < 4usize);
+        unsafe {
+            crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0100usize + n * 4usize) as _)
+        }
+    }
+}
+#[doc = "DMA MP."]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Dma8 {
+    ptr: *mut u8,
+}
+unsafe impl Send for Dma8 {}
+unsafe impl Sync for Dma8 {}
+impl Dma8 {
+    #[inline(always)]
+    pub const unsafe fn from_ptr(ptr: *mut ()) -> Self {
+        Self { ptr: ptr as _ }
+    }
+    #[inline(always)]
+    pub const fn as_ptr(&self) -> *mut () {
+        self.ptr as _
+    }
+    #[doc = "Management Page Control."]
+    #[inline(always)]
+    pub const fn mp_csr(self) -> crate::pac::common::Reg<MpCsr8, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
+    }
+    #[doc = "Management Page Error Status."]
+    #[inline(always)]
+    pub const fn mp_es(self) -> crate::pac::common::Reg<MpEs8, crate::pac::common::R> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
     }
     #[doc = "Management Page Interrupt Request Status."]
@@ -89,8 +185,342 @@ impl defmt::Format for ChGrpri {
 #[doc = "Management Page Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MpCsr(pub u32);
-impl MpCsr {
+pub struct MpCsr12(pub u32);
+impl MpCsr12 {
+    #[doc = "Enable Debug."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn edbg(&self) -> bool {
+        let val = (self.0 >> 1usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Enable Debug."]
+    #[inline(always)]
+    pub const fn set_edbg(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
+    }
+    #[doc = "Enable Round Robin Channel Arbitration."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn erca(&self) -> bool {
+        let val = (self.0 >> 2usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Enable Round Robin Channel Arbitration."]
+    #[inline(always)]
+    pub const fn set_erca(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
+    }
+    #[doc = "Halt After Error."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn hae(&self) -> Hae {
+        let val = (self.0 >> 4usize) & 0x01;
+        Hae::from_bits(val as u8)
+    }
+    #[doc = "Halt After Error."]
+    #[inline(always)]
+    pub const fn set_hae(&mut self, val: Hae) {
+        self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
+    }
+    #[doc = "Halt DMA Operations."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn halt(&self) -> Halt {
+        let val = (self.0 >> 5usize) & 0x01;
+        Halt::from_bits(val as u8)
+    }
+    #[doc = "Halt DMA Operations."]
+    #[inline(always)]
+    pub const fn set_halt(&mut self, val: Halt) {
+        self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
+    }
+    #[doc = "Global Channel Linking Control."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn gclc(&self) -> bool {
+        let val = (self.0 >> 6usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Global Channel Linking Control."]
+    #[inline(always)]
+    pub const fn set_gclc(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
+    }
+    #[doc = "Global Master ID Replication Control."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn gmrc(&self) -> bool {
+        let val = (self.0 >> 7usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Global Master ID Replication Control."]
+    #[inline(always)]
+    pub const fn set_gmrc(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
+    }
+    #[doc = "Cancel Transfer With Error."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn ecx(&self) -> MpCsrEcx {
+        let val = (self.0 >> 8usize) & 0x01;
+        MpCsrEcx::from_bits(val as u8)
+    }
+    #[doc = "Cancel Transfer With Error."]
+    #[inline(always)]
+    pub const fn set_ecx(&mut self, val: MpCsrEcx) {
+        self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
+    }
+    #[doc = "Cancel Transfer."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn cx(&self) -> Cx {
+        let val = (self.0 >> 9usize) & 0x01;
+        Cx::from_bits(val as u8)
+    }
+    #[doc = "Cancel Transfer."]
+    #[inline(always)]
+    pub const fn set_cx(&mut self, val: Cx) {
+        self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
+    }
+    #[doc = "Active Channel ID."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn active_id(&self) -> u8 {
+        let val = (self.0 >> 24usize) & 0x0f;
+        val as u8
+    }
+    #[doc = "Active Channel ID."]
+    #[inline(always)]
+    pub const fn set_active_id(&mut self, val: u8) {
+        self.0 = (self.0 & !(0x0f << 24usize)) | (((val as u32) & 0x0f) << 24usize);
+    }
+    #[doc = "DMA Active Status."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn active(&self) -> Active {
+        let val = (self.0 >> 31usize) & 0x01;
+        Active::from_bits(val as u8)
+    }
+    #[doc = "DMA Active Status."]
+    #[inline(always)]
+    pub const fn set_active(&mut self, val: Active) {
+        self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
+    }
+}
+impl Default for MpCsr12 {
+    #[inline(always)]
+    fn default() -> MpCsr12 {
+        MpCsr12(0)
+    }
+}
+impl core::fmt::Debug for MpCsr12 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MpCsr12")
+            .field("edbg", &self.edbg())
+            .field("erca", &self.erca())
+            .field("hae", &self.hae())
+            .field("halt", &self.halt())
+            .field("gclc", &self.gclc())
+            .field("gmrc", &self.gmrc())
+            .field("ecx", &self.ecx())
+            .field("cx", &self.cx())
+            .field("active_id", &self.active_id())
+            .field("active", &self.active())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for MpCsr12 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "MpCsr12 {{ edbg: {=bool:?}, erca: {=bool:?}, hae: {:?}, halt: {:?}, gclc: {=bool:?}, gmrc: {=bool:?}, ecx: {:?}, cx: {:?}, active_id: {=u8:?}, active: {:?} }}",
+            self.edbg(),
+            self.erca(),
+            self.hae(),
+            self.halt(),
+            self.gclc(),
+            self.gmrc(),
+            self.ecx(),
+            self.cx(),
+            self.active_id(),
+            self.active()
+        )
+    }
+}
+#[doc = "Management Page Control."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct MpCsr4(pub u32);
+impl MpCsr4 {
+    #[doc = "Enable Debug."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn edbg(&self) -> bool {
+        let val = (self.0 >> 1usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Enable Debug."]
+    #[inline(always)]
+    pub const fn set_edbg(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
+    }
+    #[doc = "Enable Round Robin Channel Arbitration."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn erca(&self) -> bool {
+        let val = (self.0 >> 2usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Enable Round Robin Channel Arbitration."]
+    #[inline(always)]
+    pub const fn set_erca(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
+    }
+    #[doc = "Halt After Error."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn hae(&self) -> Hae {
+        let val = (self.0 >> 4usize) & 0x01;
+        Hae::from_bits(val as u8)
+    }
+    #[doc = "Halt After Error."]
+    #[inline(always)]
+    pub const fn set_hae(&mut self, val: Hae) {
+        self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
+    }
+    #[doc = "Halt DMA Operations."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn halt(&self) -> Halt {
+        let val = (self.0 >> 5usize) & 0x01;
+        Halt::from_bits(val as u8)
+    }
+    #[doc = "Halt DMA Operations."]
+    #[inline(always)]
+    pub const fn set_halt(&mut self, val: Halt) {
+        self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
+    }
+    #[doc = "Global Channel Linking Control."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn gclc(&self) -> bool {
+        let val = (self.0 >> 6usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Global Channel Linking Control."]
+    #[inline(always)]
+    pub const fn set_gclc(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
+    }
+    #[doc = "Global Master ID Replication Control."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn gmrc(&self) -> bool {
+        let val = (self.0 >> 7usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Global Master ID Replication Control."]
+    #[inline(always)]
+    pub const fn set_gmrc(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
+    }
+    #[doc = "Cancel Transfer With Error."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn ecx(&self) -> MpCsrEcx {
+        let val = (self.0 >> 8usize) & 0x01;
+        MpCsrEcx::from_bits(val as u8)
+    }
+    #[doc = "Cancel Transfer With Error."]
+    #[inline(always)]
+    pub const fn set_ecx(&mut self, val: MpCsrEcx) {
+        self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
+    }
+    #[doc = "Cancel Transfer."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn cx(&self) -> Cx {
+        let val = (self.0 >> 9usize) & 0x01;
+        Cx::from_bits(val as u8)
+    }
+    #[doc = "Cancel Transfer."]
+    #[inline(always)]
+    pub const fn set_cx(&mut self, val: Cx) {
+        self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
+    }
+    #[doc = "Active Channel ID."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn active_id(&self) -> u8 {
+        let val = (self.0 >> 24usize) & 0x03;
+        val as u8
+    }
+    #[doc = "Active Channel ID."]
+    #[inline(always)]
+    pub const fn set_active_id(&mut self, val: u8) {
+        self.0 = (self.0 & !(0x03 << 24usize)) | (((val as u32) & 0x03) << 24usize);
+    }
+    #[doc = "DMA Active Status."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn active(&self) -> Active {
+        let val = (self.0 >> 31usize) & 0x01;
+        Active::from_bits(val as u8)
+    }
+    #[doc = "DMA Active Status."]
+    #[inline(always)]
+    pub const fn set_active(&mut self, val: Active) {
+        self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
+    }
+}
+impl Default for MpCsr4 {
+    #[inline(always)]
+    fn default() -> MpCsr4 {
+        MpCsr4(0)
+    }
+}
+impl core::fmt::Debug for MpCsr4 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MpCsr4")
+            .field("edbg", &self.edbg())
+            .field("erca", &self.erca())
+            .field("hae", &self.hae())
+            .field("halt", &self.halt())
+            .field("gclc", &self.gclc())
+            .field("gmrc", &self.gmrc())
+            .field("ecx", &self.ecx())
+            .field("cx", &self.cx())
+            .field("active_id", &self.active_id())
+            .field("active", &self.active())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for MpCsr4 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "MpCsr4 {{ edbg: {=bool:?}, erca: {=bool:?}, hae: {:?}, halt: {:?}, gclc: {=bool:?}, gmrc: {=bool:?}, ecx: {:?}, cx: {:?}, active_id: {=u8:?}, active: {:?} }}",
+            self.edbg(),
+            self.erca(),
+            self.hae(),
+            self.halt(),
+            self.gclc(),
+            self.gmrc(),
+            self.ecx(),
+            self.cx(),
+            self.active_id(),
+            self.active()
+        )
+    }
+}
+#[doc = "Management Page Control."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct MpCsr8(pub u32);
+impl MpCsr8 {
     #[doc = "Enable Debug."]
     #[must_use]
     #[inline(always)]
@@ -212,15 +642,15 @@ impl MpCsr {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
     }
 }
-impl Default for MpCsr {
+impl Default for MpCsr8 {
     #[inline(always)]
-    fn default() -> MpCsr {
-        MpCsr(0)
+    fn default() -> MpCsr8 {
+        MpCsr8(0)
     }
 }
-impl core::fmt::Debug for MpCsr {
+impl core::fmt::Debug for MpCsr8 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MpCsr")
+        f.debug_struct("MpCsr8")
             .field("edbg", &self.edbg())
             .field("erca", &self.erca())
             .field("hae", &self.hae())
@@ -235,11 +665,11 @@ impl core::fmt::Debug for MpCsr {
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for MpCsr {
+impl defmt::Format for MpCsr8 {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "MpCsr {{ edbg: {=bool:?}, erca: {=bool:?}, hae: {:?}, halt: {:?}, gclc: {=bool:?}, gmrc: {=bool:?}, ecx: {:?}, cx: {:?}, active_id: {=u8:?}, active: {:?} }}",
+            "MpCsr8 {{ edbg: {=bool:?}, erca: {=bool:?}, hae: {:?}, halt: {:?}, gclc: {=bool:?}, gmrc: {=bool:?}, ecx: {:?}, cx: {:?}, active_id: {=u8:?}, active: {:?} }}",
             self.edbg(),
             self.erca(),
             self.hae(),
@@ -256,8 +686,370 @@ impl defmt::Format for MpCsr {
 #[doc = "Management Page Error Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct MpEs(pub u32);
-impl MpEs {
+pub struct MpEs12(pub u32);
+impl MpEs12 {
+    #[doc = "Destination Bus Error."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn dbe(&self) -> Dbe {
+        let val = (self.0 >> 0usize) & 0x01;
+        Dbe::from_bits(val as u8)
+    }
+    #[doc = "Destination Bus Error."]
+    #[inline(always)]
+    pub const fn set_dbe(&mut self, val: Dbe) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    }
+    #[doc = "Source Bus Error."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn sbe(&self) -> Sbe {
+        let val = (self.0 >> 1usize) & 0x01;
+        Sbe::from_bits(val as u8)
+    }
+    #[doc = "Source Bus Error."]
+    #[inline(always)]
+    pub const fn set_sbe(&mut self, val: Sbe) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
+    }
+    #[doc = "Scatter/Gather Configuration Error."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn sge(&self) -> Sge {
+        let val = (self.0 >> 2usize) & 0x01;
+        Sge::from_bits(val as u8)
+    }
+    #[doc = "Scatter/Gather Configuration Error."]
+    #[inline(always)]
+    pub const fn set_sge(&mut self, val: Sge) {
+        self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
+    }
+    #[doc = "NBYTES/CITER Configuration Error."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn nce(&self) -> Nce {
+        let val = (self.0 >> 3usize) & 0x01;
+        Nce::from_bits(val as u8)
+    }
+    #[doc = "NBYTES/CITER Configuration Error."]
+    #[inline(always)]
+    pub const fn set_nce(&mut self, val: Nce) {
+        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
+    }
+    #[doc = "Destination Offset Error."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn doe(&self) -> Doe {
+        let val = (self.0 >> 4usize) & 0x01;
+        Doe::from_bits(val as u8)
+    }
+    #[doc = "Destination Offset Error."]
+    #[inline(always)]
+    pub const fn set_doe(&mut self, val: Doe) {
+        self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
+    }
+    #[doc = "Destination Address Error."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn dae(&self) -> Dae {
+        let val = (self.0 >> 5usize) & 0x01;
+        Dae::from_bits(val as u8)
+    }
+    #[doc = "Destination Address Error."]
+    #[inline(always)]
+    pub const fn set_dae(&mut self, val: Dae) {
+        self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
+    }
+    #[doc = "Source Offset Error."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn soe(&self) -> Soe {
+        let val = (self.0 >> 6usize) & 0x01;
+        Soe::from_bits(val as u8)
+    }
+    #[doc = "Source Offset Error."]
+    #[inline(always)]
+    pub const fn set_soe(&mut self, val: Soe) {
+        self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
+    }
+    #[doc = "Source Address Error."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn sae(&self) -> Sae {
+        let val = (self.0 >> 7usize) & 0x01;
+        Sae::from_bits(val as u8)
+    }
+    #[doc = "Source Address Error."]
+    #[inline(always)]
+    pub const fn set_sae(&mut self, val: Sae) {
+        self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
+    }
+    #[doc = "Transfer Canceled."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn ecx(&self) -> MpEsEcx {
+        let val = (self.0 >> 8usize) & 0x01;
+        MpEsEcx::from_bits(val as u8)
+    }
+    #[doc = "Transfer Canceled."]
+    #[inline(always)]
+    pub const fn set_ecx(&mut self, val: MpEsEcx) {
+        self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
+    }
+    #[doc = "Error Channel Number or Canceled Channel Number."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn errchn(&self) -> u8 {
+        let val = (self.0 >> 24usize) & 0x0f;
+        val as u8
+    }
+    #[doc = "Error Channel Number or Canceled Channel Number."]
+    #[inline(always)]
+    pub const fn set_errchn(&mut self, val: u8) {
+        self.0 = (self.0 & !(0x0f << 24usize)) | (((val as u32) & 0x0f) << 24usize);
+    }
+    #[doc = "Valid."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn vld(&self) -> Vld {
+        let val = (self.0 >> 31usize) & 0x01;
+        Vld::from_bits(val as u8)
+    }
+    #[doc = "Valid."]
+    #[inline(always)]
+    pub const fn set_vld(&mut self, val: Vld) {
+        self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
+    }
+}
+impl Default for MpEs12 {
+    #[inline(always)]
+    fn default() -> MpEs12 {
+        MpEs12(0)
+    }
+}
+impl core::fmt::Debug for MpEs12 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MpEs12")
+            .field("dbe", &self.dbe())
+            .field("sbe", &self.sbe())
+            .field("sge", &self.sge())
+            .field("nce", &self.nce())
+            .field("doe", &self.doe())
+            .field("dae", &self.dae())
+            .field("soe", &self.soe())
+            .field("sae", &self.sae())
+            .field("ecx", &self.ecx())
+            .field("errchn", &self.errchn())
+            .field("vld", &self.vld())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for MpEs12 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "MpEs12 {{ dbe: {:?}, sbe: {:?}, sge: {:?}, nce: {:?}, doe: {:?}, dae: {:?}, soe: {:?}, sae: {:?}, ecx: {:?}, errchn: {=u8:?}, vld: {:?} }}",
+            self.dbe(),
+            self.sbe(),
+            self.sge(),
+            self.nce(),
+            self.doe(),
+            self.dae(),
+            self.soe(),
+            self.sae(),
+            self.ecx(),
+            self.errchn(),
+            self.vld()
+        )
+    }
+}
+#[doc = "Management Page Error Status."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct MpEs4(pub u32);
+impl MpEs4 {
+    #[doc = "Destination Bus Error."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn dbe(&self) -> Dbe {
+        let val = (self.0 >> 0usize) & 0x01;
+        Dbe::from_bits(val as u8)
+    }
+    #[doc = "Destination Bus Error."]
+    #[inline(always)]
+    pub const fn set_dbe(&mut self, val: Dbe) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    }
+    #[doc = "Source Bus Error."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn sbe(&self) -> Sbe {
+        let val = (self.0 >> 1usize) & 0x01;
+        Sbe::from_bits(val as u8)
+    }
+    #[doc = "Source Bus Error."]
+    #[inline(always)]
+    pub const fn set_sbe(&mut self, val: Sbe) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
+    }
+    #[doc = "Scatter/Gather Configuration Error."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn sge(&self) -> Sge {
+        let val = (self.0 >> 2usize) & 0x01;
+        Sge::from_bits(val as u8)
+    }
+    #[doc = "Scatter/Gather Configuration Error."]
+    #[inline(always)]
+    pub const fn set_sge(&mut self, val: Sge) {
+        self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
+    }
+    #[doc = "NBYTES/CITER Configuration Error."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn nce(&self) -> Nce {
+        let val = (self.0 >> 3usize) & 0x01;
+        Nce::from_bits(val as u8)
+    }
+    #[doc = "NBYTES/CITER Configuration Error."]
+    #[inline(always)]
+    pub const fn set_nce(&mut self, val: Nce) {
+        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
+    }
+    #[doc = "Destination Offset Error."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn doe(&self) -> Doe {
+        let val = (self.0 >> 4usize) & 0x01;
+        Doe::from_bits(val as u8)
+    }
+    #[doc = "Destination Offset Error."]
+    #[inline(always)]
+    pub const fn set_doe(&mut self, val: Doe) {
+        self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
+    }
+    #[doc = "Destination Address Error."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn dae(&self) -> Dae {
+        let val = (self.0 >> 5usize) & 0x01;
+        Dae::from_bits(val as u8)
+    }
+    #[doc = "Destination Address Error."]
+    #[inline(always)]
+    pub const fn set_dae(&mut self, val: Dae) {
+        self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
+    }
+    #[doc = "Source Offset Error."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn soe(&self) -> Soe {
+        let val = (self.0 >> 6usize) & 0x01;
+        Soe::from_bits(val as u8)
+    }
+    #[doc = "Source Offset Error."]
+    #[inline(always)]
+    pub const fn set_soe(&mut self, val: Soe) {
+        self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
+    }
+    #[doc = "Source Address Error."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn sae(&self) -> Sae {
+        let val = (self.0 >> 7usize) & 0x01;
+        Sae::from_bits(val as u8)
+    }
+    #[doc = "Source Address Error."]
+    #[inline(always)]
+    pub const fn set_sae(&mut self, val: Sae) {
+        self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
+    }
+    #[doc = "Transfer Canceled."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn ecx(&self) -> MpEsEcx {
+        let val = (self.0 >> 8usize) & 0x01;
+        MpEsEcx::from_bits(val as u8)
+    }
+    #[doc = "Transfer Canceled."]
+    #[inline(always)]
+    pub const fn set_ecx(&mut self, val: MpEsEcx) {
+        self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
+    }
+    #[doc = "Error Channel Number or Canceled Channel Number."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn errchn(&self) -> u8 {
+        let val = (self.0 >> 24usize) & 0x03;
+        val as u8
+    }
+    #[doc = "Error Channel Number or Canceled Channel Number."]
+    #[inline(always)]
+    pub const fn set_errchn(&mut self, val: u8) {
+        self.0 = (self.0 & !(0x03 << 24usize)) | (((val as u32) & 0x03) << 24usize);
+    }
+    #[doc = "Valid."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn vld(&self) -> Vld {
+        let val = (self.0 >> 31usize) & 0x01;
+        Vld::from_bits(val as u8)
+    }
+    #[doc = "Valid."]
+    #[inline(always)]
+    pub const fn set_vld(&mut self, val: Vld) {
+        self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
+    }
+}
+impl Default for MpEs4 {
+    #[inline(always)]
+    fn default() -> MpEs4 {
+        MpEs4(0)
+    }
+}
+impl core::fmt::Debug for MpEs4 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MpEs4")
+            .field("dbe", &self.dbe())
+            .field("sbe", &self.sbe())
+            .field("sge", &self.sge())
+            .field("nce", &self.nce())
+            .field("doe", &self.doe())
+            .field("dae", &self.dae())
+            .field("soe", &self.soe())
+            .field("sae", &self.sae())
+            .field("ecx", &self.ecx())
+            .field("errchn", &self.errchn())
+            .field("vld", &self.vld())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for MpEs4 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "MpEs4 {{ dbe: {:?}, sbe: {:?}, sge: {:?}, nce: {:?}, doe: {:?}, dae: {:?}, soe: {:?}, sae: {:?}, ecx: {:?}, errchn: {=u8:?}, vld: {:?} }}",
+            self.dbe(),
+            self.sbe(),
+            self.sge(),
+            self.nce(),
+            self.doe(),
+            self.dae(),
+            self.soe(),
+            self.sae(),
+            self.ecx(),
+            self.errchn(),
+            self.vld()
+        )
+    }
+}
+#[doc = "Management Page Error Status."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct MpEs8(pub u32);
+impl MpEs8 {
     #[doc = "Destination Bus Error."]
     #[must_use]
     #[inline(always)]
@@ -391,15 +1183,15 @@ impl MpEs {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
     }
 }
-impl Default for MpEs {
+impl Default for MpEs8 {
     #[inline(always)]
-    fn default() -> MpEs {
-        MpEs(0)
+    fn default() -> MpEs8 {
+        MpEs8(0)
     }
 }
-impl core::fmt::Debug for MpEs {
+impl core::fmt::Debug for MpEs8 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MpEs")
+        f.debug_struct("MpEs8")
             .field("dbe", &self.dbe())
             .field("sbe", &self.sbe())
             .field("sge", &self.sge())
@@ -415,11 +1207,11 @@ impl core::fmt::Debug for MpEs {
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for MpEs {
+impl defmt::Format for MpEs8 {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "MpEs {{ dbe: {:?}, sbe: {:?}, sge: {:?}, nce: {:?}, doe: {:?}, dae: {:?}, soe: {:?}, sae: {:?}, ecx: {:?}, errchn: {=u8:?}, vld: {:?} }}",
+            "MpEs8 {{ dbe: {:?}, sbe: {:?}, sge: {:?}, nce: {:?}, doe: {:?}, dae: {:?}, soe: {:?}, sae: {:?}, ecx: {:?}, errchn: {=u8:?}, vld: {:?} }}",
             self.dbe(),
             self.sbe(),
             self.sge(),
@@ -477,14 +1269,14 @@ impl MpInt {
     #[doc = "Interrupt Request Status."]
     #[must_use]
     #[inline(always)]
-    pub const fn int(&self) -> u8 {
-        let val = (self.0 >> 0usize) & 0xff;
-        val as u8
+    pub const fn int(&self) -> u16 {
+        let val = (self.0 >> 0usize) & 0x0fff;
+        val as u16
     }
     #[doc = "Interrupt Request Status."]
     #[inline(always)]
-    pub const fn set_int(&mut self, val: u8) {
-        self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
+    pub const fn set_int(&mut self, val: u16) {
+        self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
     }
 }
 impl Default for MpInt {
@@ -501,7 +1293,7 @@ impl core::fmt::Debug for MpInt {
 #[cfg(feature = "defmt")]
 impl defmt::Format for MpInt {
     fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "MpInt {{ int: {=u8:?} }}", self.int())
+        defmt::write!(f, "MpInt {{ int: {=u16:?} }}", self.int())
     }
 }
 #[repr(u8)]

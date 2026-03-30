@@ -678,6 +678,12 @@
   },
   "peripherals": [
     {
+      "name": "AHBSC",
+      "address": "0x40044000",
+      "type": "mcxa/AHBSC",
+      "signals": []
+    },
+    {
       "name": "10BASE-T1S0",
       "address": "0x4002D000",
       "signals": [
@@ -3674,7 +3680,19 @@
       "signals": []
     },
     {
-      "name": "DebugMailbox0",
+      "name": "DBGMAILBOX",
+      "signals": []
+    },
+    {
+      "name": "DMA0",
+      "address": "0x40080000",
+      "type": "mcxa/DMA::DMA12",
+      "signals": []
+    },
+    {
+      "name": "DMA1",
+      "address": "0x40013000",
+      "type": "mcxa/DMA::DMA4",
       "signals": []
     },
     {
@@ -6061,6 +6079,7 @@
     {
       "name": "I3C0",
       "address": "0x40002000",
+      "type": "mcxa/I3C",
       "signals": [
         {
           "name": "PUR",
@@ -6118,6 +6137,7 @@
     {
       "name": "I3C1",
       "address": "0x40003000",
+      "type": "mcxa/I3C",
       "signals": [
         {
           "name": "PUR",
@@ -6210,6 +6230,7 @@
     {
       "name": "I3C2",
       "address": "0x4009E000",
+      "type": "mcxa/I3C",
       "signals": [
         {
           "name": "PUR",
@@ -6267,6 +6288,7 @@
     {
       "name": "I3C3",
       "address": "0x400DE000",
+      "type": "mcxa/I3C",
       "signals": [
         {
           "name": "PUR",
@@ -10730,17 +10752,9 @@
       ]
     },
     {
-      "name": "EDMA_0_MP",
-      "signals": []
-    },
-    {
       "name": "EDMA_0_TCD",
       "address": "0x40081000",
       "type": "mcxa/EDMA_TCD::TCD8",
-      "signals": []
-    },
-    {
-      "name": "EDMA_1_MP",
       "signals": []
     },
     {

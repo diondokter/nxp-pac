@@ -5,22 +5,22 @@ pub enum Interrupt {
     RESERVED16 = 0,
     #[doc = "1 - CMC"]
     CMC = 1,
-    #[doc = "2 - DMA_CH0"]
-    DMA_CH0 = 2,
-    #[doc = "3 - DMA_CH1"]
-    DMA_CH1 = 3,
-    #[doc = "4 - DMA_CH2"]
-    DMA_CH2 = 4,
-    #[doc = "5 - DMA_CH3"]
-    DMA_CH3 = 5,
-    #[doc = "6 - DMA_CH4"]
-    DMA_CH4 = 6,
-    #[doc = "7 - DMA_CH5"]
-    DMA_CH5 = 7,
-    #[doc = "8 - DMA_CH6"]
-    DMA_CH6 = 8,
-    #[doc = "9 - DMA_CH7"]
-    DMA_CH7 = 9,
+    #[doc = "2 - DMA0_CH0"]
+    DMA0_CH0 = 2,
+    #[doc = "3 - DMA0_CH1"]
+    DMA0_CH1 = 3,
+    #[doc = "4 - DMA0_CH2"]
+    DMA0_CH2 = 4,
+    #[doc = "5 - DMA0_CH3"]
+    DMA0_CH3 = 5,
+    #[doc = "6 - DMA0_CH4"]
+    DMA0_CH4 = 6,
+    #[doc = "7 - DMA0_CH5"]
+    DMA0_CH5 = 7,
+    #[doc = "8 - DMA0_CH6"]
+    DMA0_CH6 = 8,
+    #[doc = "9 - DMA0_CH7"]
+    DMA0_CH7 = 9,
     #[doc = "10 - ERM0_SINGLE_BIT"]
     ERM0_SINGLE_BIT = 10,
     #[doc = "11 - ERM0_MULTI_BIT"]
@@ -210,7 +210,7 @@ pub const CTIMER1: ctimer::Ctimer = unsafe { ctimer::Ctimer::from_ptr(0x40005000
 pub const CTIMER2: ctimer::Ctimer = unsafe { ctimer::Ctimer::from_ptr(0x40006000 as _) };
 pub const CTIMER3: ctimer::Ctimer = unsafe { ctimer::Ctimer::from_ptr(0x40007000 as _) };
 pub const CTIMER4: ctimer::Ctimer = unsafe { ctimer::Ctimer::from_ptr(0x40008000 as _) };
-pub const DMA0: dma::Dma = unsafe { dma::Dma::from_ptr(0x40080000 as _) };
+pub const DMA0: dma::Dma8 = unsafe { dma::Dma8::from_ptr(0x40080000 as _) };
 pub const FMU0: fmu::Fmu = unsafe { fmu::Fmu::from_ptr(0x40095000 as _) };
 pub const FLEX_PWM0: flexpwm::Flexpwm = unsafe { flexpwm::Flexpwm::from_ptr(0x400A9000 as _) };
 pub const FLEX_PWM1: flexpwm::Flexpwm = unsafe { flexpwm::Flexpwm::from_ptr(0x400AA000 as _) };
@@ -238,15 +238,15 @@ pub const PORT1: port::Port = unsafe { port::Port::from_ptr(0x400BD000 as _) };
 pub const PORT2: port::Port = unsafe { port::Port::from_ptr(0x400BE000 as _) };
 pub const PORT3: port::Port = unsafe { port::Port::from_ptr(0x400BF000 as _) };
 pub const PORT4: port::Port = unsafe { port::Port::from_ptr(0x400C0000 as _) };
-pub const RTC0: rtc::Rtc = unsafe { rtc::Rtc::from_ptr(0x400EE000 as _) };
+pub const RTC0: rtc2xx::Rtc = unsafe { rtc2xx::Rtc::from_ptr(0x400EE000 as _) };
 pub const SCG0: scg::Scg = unsafe { scg::Scg::from_ptr(0x4008F000 as _) };
 pub const SPC0: spc::Spc = unsafe { spc::Spc::from_ptr(0x40090000 as _) };
 pub const SYSCON: syscon::Syscon = unsafe { syscon::Syscon::from_ptr(0x40091000 as _) };
 pub const TRNG0: trng::Trng = unsafe { trng::Trng::from_ptr(0x400EC000 as _) };
 pub const VBAT0: vbat::Vbat = unsafe { vbat::Vbat::from_ptr(0x40093000 as _) };
 pub const WWDT0: wwdt::Wwdt = unsafe { wwdt::Wwdt::from_ptr(0x4000C000 as _) };
-pub const EDMA_0_TCD: tcd8::Tcd8 = unsafe { tcd8::Tcd8::from_ptr(0x40081000 as _) };
-pub const MRCC0: mrcc::Mrcc = unsafe { mrcc::Mrcc::from_ptr(0x40091000 as _) };
+pub const EDMA_0_TCD: edma_tcd::Tcd8 = unsafe { edma_tcd::Tcd8::from_ptr(0x40081000 as _) };
+pub const MRCC0: mrcc2xx::Mrcc = unsafe { mrcc2xx::Mrcc::from_ptr(0x40091000 as _) };
 #[path = "../../meta_peripherals/mcxa/ADC.rs"]
 pub mod adc;
 #[path = "../../meta_peripherals/mcxa/CDOG.rs"]
@@ -260,6 +260,8 @@ pub mod crc;
 pub mod ctimer;
 #[path = "../../meta_peripherals/mcxa/DMA.rs"]
 pub mod dma;
+#[path = "../../meta_peripherals/mcxa/EDMA_TCD.rs"]
+pub mod edma_tcd;
 #[path = "../../meta_peripherals/mcxa/FLEXPWM.rs"]
 pub mod flexpwm;
 #[path = "../../meta_peripherals/mcxa/FMU.rs"]
@@ -277,21 +279,19 @@ pub mod lpspi;
 #[path = "../../meta_peripherals/mcxa/LPUART.rs"]
 pub mod lpuart;
 #[path = "../../meta_peripherals/mcxa/MRCC2xx.rs"]
-pub mod mrcc;
+pub mod mrcc2xx;
 #[path = "../../meta_peripherals/mcxa/OSTIMER.rs"]
 pub mod ostimer;
 #[path = "../../meta_peripherals/mcxa/PORT.rs"]
 pub mod port;
 #[path = "../../meta_peripherals/mcxa/RTC2xx.rs"]
-pub mod rtc;
+pub mod rtc2xx;
 #[path = "../../meta_peripherals/mcxa/SCG.rs"]
 pub mod scg;
 #[path = "../../meta_peripherals/mcxa/SPC.rs"]
 pub mod spc;
 #[path = "../../meta_peripherals/mcxa/SYSCON.rs"]
 pub mod syscon;
-#[path = "../../meta_peripherals/mcxa/EDMA_TCD.rs"]
-pub mod tcd8;
 #[path = "../../meta_peripherals/mcxa/TRNG.rs"]
 pub mod trng;
 #[path = "../../meta_peripherals/mcxa/VBAT.rs"]
