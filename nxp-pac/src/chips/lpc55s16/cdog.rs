@@ -1,4 +1,4 @@
-#[doc = "CDOG"]
+#[doc = "CDOG."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cdog {
     ptr: *mut u8,
@@ -19,41 +19,41 @@ impl Cdog {
     pub const fn control(self) -> crate::common::Reg<regs::Control, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
     }
-    #[doc = "Instruction timer reload"]
+    #[doc = "Instruction timer reload."]
     #[inline(always)]
     pub const fn reload(self) -> crate::common::Reg<regs::Reload, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
     }
-    #[doc = "The INSTRUCTION TIMER itself"]
+    #[doc = "The INSTRUCTION TIMER itself."]
     #[inline(always)]
     pub const fn instruction_timer(
         self,
     ) -> crate::common::Reg<regs::InstructionTimer, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
     }
-    #[doc = "Also known as SEC_CNT"]
+    #[doc = "Also known as SEC_CNT."]
     #[inline(always)]
     pub const fn secure_counter(
         self,
     ) -> crate::common::Reg<regs::SecureCounter, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }
     }
-    #[doc = "Status register (1 of 2)"]
+    #[doc = "Status register (1 of 2)."]
     #[inline(always)]
     pub const fn status(self) -> crate::common::Reg<regs::Status, crate::common::R> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x10usize) as _) }
     }
-    #[doc = "STATUS register (2 of 2)"]
+    #[doc = "STATUS register (2 of 2)."]
     #[inline(always)]
     pub const fn status2(self) -> crate::common::Reg<regs::Status2, crate::common::R> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x14usize) as _) }
     }
-    #[doc = "Hardware flags"]
+    #[doc = "Hardware flags."]
     #[inline(always)]
     pub const fn flags(self) -> crate::common::Reg<regs::Flags, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x18usize) as _) }
     }
-    #[doc = "Persistent (Ad. Hoc., quasi-NV) data storage"]
+    #[doc = "Persistent (Ad. Hoc., quasi-NV) data storage."]
     #[inline(always)]
     pub const fn persistent(self) -> crate::common::Reg<regs::Persistent, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x1cusize) as _) }

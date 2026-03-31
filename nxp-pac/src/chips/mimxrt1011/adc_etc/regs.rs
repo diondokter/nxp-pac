@@ -1,4 +1,4 @@
-#[doc = "ADC_ETC Global Control Register"]
+#[doc = "ADC_ETC Global Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl(pub u32);
@@ -15,14 +15,14 @@ impl Ctrl {
     pub const fn set_trig_enable(&mut self, val: super::vals::TrigEnable) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val.to_bits() as u32) & 0xff) << 0usize);
     }
-    #[doc = "Pre-divider for trig delay and interval"]
+    #[doc = "Pre-divider for trig delay and interval."]
     #[must_use]
     #[inline(always)]
     pub const fn pre_divider(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0xff;
         val as u8
     }
-    #[doc = "Pre-divider for trig delay and interval"]
+    #[doc = "Pre-divider for trig delay and interval."]
     #[inline(always)]
     pub const fn set_pre_divider(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
@@ -81,7 +81,7 @@ impl defmt::Format for Ctrl {
         )
     }
 }
-#[doc = "ETC DMA control Register"]
+#[doc = "ETC DMA control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DmaCtrl(pub u32);
@@ -182,98 +182,98 @@ impl DmaCtrl {
     pub const fn set_trig7_enable(&mut self, val: super::vals::Trig7Enable) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "Flag bit for DMA request"]
+    #[doc = "Flag bit for DMA request."]
     #[must_use]
     #[inline(always)]
     pub const fn trig0_req(&self) -> super::vals::Trig0Req {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::Trig0Req::from_bits(val as u8)
     }
-    #[doc = "Flag bit for DMA request"]
+    #[doc = "Flag bit for DMA request."]
     #[inline(always)]
     pub const fn set_trig0_req(&mut self, val: super::vals::Trig0Req) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
     }
-    #[doc = "Flag bit for DMA request"]
+    #[doc = "Flag bit for DMA request."]
     #[must_use]
     #[inline(always)]
     pub const fn trig1_req(&self) -> super::vals::Trig1Req {
         let val = (self.0 >> 17usize) & 0x01;
         super::vals::Trig1Req::from_bits(val as u8)
     }
-    #[doc = "Flag bit for DMA request"]
+    #[doc = "Flag bit for DMA request."]
     #[inline(always)]
     pub const fn set_trig1_req(&mut self, val: super::vals::Trig1Req) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
     }
-    #[doc = "Flag bit for DMA request"]
+    #[doc = "Flag bit for DMA request."]
     #[must_use]
     #[inline(always)]
     pub const fn trig2_req(&self) -> super::vals::Trig2Req {
         let val = (self.0 >> 18usize) & 0x01;
         super::vals::Trig2Req::from_bits(val as u8)
     }
-    #[doc = "Flag bit for DMA request"]
+    #[doc = "Flag bit for DMA request."]
     #[inline(always)]
     pub const fn set_trig2_req(&mut self, val: super::vals::Trig2Req) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val.to_bits() as u32) & 0x01) << 18usize);
     }
-    #[doc = "Flag bit for DMA request"]
+    #[doc = "Flag bit for DMA request."]
     #[must_use]
     #[inline(always)]
     pub const fn trig3_req(&self) -> super::vals::Trig3Req {
         let val = (self.0 >> 19usize) & 0x01;
         super::vals::Trig3Req::from_bits(val as u8)
     }
-    #[doc = "Flag bit for DMA request"]
+    #[doc = "Flag bit for DMA request."]
     #[inline(always)]
     pub const fn set_trig3_req(&mut self, val: super::vals::Trig3Req) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val.to_bits() as u32) & 0x01) << 19usize);
     }
-    #[doc = "Flag bit for DMA request"]
+    #[doc = "Flag bit for DMA request."]
     #[must_use]
     #[inline(always)]
     pub const fn trig4_req(&self) -> super::vals::Trig4Req {
         let val = (self.0 >> 20usize) & 0x01;
         super::vals::Trig4Req::from_bits(val as u8)
     }
-    #[doc = "Flag bit for DMA request"]
+    #[doc = "Flag bit for DMA request."]
     #[inline(always)]
     pub const fn set_trig4_req(&mut self, val: super::vals::Trig4Req) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
     }
-    #[doc = "Flag bit for DMA request"]
+    #[doc = "Flag bit for DMA request."]
     #[must_use]
     #[inline(always)]
     pub const fn trig5_req(&self) -> super::vals::Trig5Req {
         let val = (self.0 >> 21usize) & 0x01;
         super::vals::Trig5Req::from_bits(val as u8)
     }
-    #[doc = "Flag bit for DMA request"]
+    #[doc = "Flag bit for DMA request."]
     #[inline(always)]
     pub const fn set_trig5_req(&mut self, val: super::vals::Trig5Req) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
     }
-    #[doc = "Flag bit for DMA request"]
+    #[doc = "Flag bit for DMA request."]
     #[must_use]
     #[inline(always)]
     pub const fn trig6_req(&self) -> super::vals::Trig6Req {
         let val = (self.0 >> 22usize) & 0x01;
         super::vals::Trig6Req::from_bits(val as u8)
     }
-    #[doc = "Flag bit for DMA request"]
+    #[doc = "Flag bit for DMA request."]
     #[inline(always)]
     pub const fn set_trig6_req(&mut self, val: super::vals::Trig6Req) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
     }
-    #[doc = "Flag bit for DMA request"]
+    #[doc = "Flag bit for DMA request."]
     #[must_use]
     #[inline(always)]
     pub const fn trig7_req(&self) -> super::vals::Trig7Req {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::Trig7Req::from_bits(val as u8)
     }
-    #[doc = "Flag bit for DMA request"]
+    #[doc = "Flag bit for DMA request."]
     #[inline(always)]
     pub const fn set_trig7_req(&mut self, val: super::vals::Trig7Req) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
@@ -332,7 +332,7 @@ impl defmt::Format for DmaCtrl {
         )
     }
 }
-#[doc = "ETC DONE0 and DONE1 IRQ State Register"]
+#[doc = "ETC DONE0 and DONE1 IRQ State Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Done01Irq(pub u32);
@@ -583,7 +583,7 @@ impl defmt::Format for Done01Irq {
         )
     }
 }
-#[doc = "ETC DONE_2, DONE_3 and DONE_ERR IRQ State Register"]
+#[doc = "ETC DONE_2, DONE_3 and DONE_ERR IRQ State Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Done23ErrIrq(pub u32);
@@ -946,55 +946,55 @@ impl defmt::Format for Done23ErrIrq {
         )
     }
 }
-#[doc = "ETC_TRIG Chain 0/1 Register"]
+#[doc = "ETC_TRIG Chain 0/1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig0Chain10(pub u32);
 impl Trig0Chain10 {
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[must_use]
     #[inline(always)]
     pub const fn csel0(&self) -> super::vals::Trig0Chain10Csel0 {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Trig0Chain10Csel0::from_bits(val as u8)
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[inline(always)]
     pub const fn set_csel0(&mut self, val: super::vals::Trig0Chain10Csel0) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Segment 0 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 0 HWTS ADC hardware trigger selection."]
     #[must_use]
     #[inline(always)]
     pub const fn hwts0(&self) -> super::vals::Trig0Chain10Hwts0 {
         let val = (self.0 >> 4usize) & 0xff;
         super::vals::Trig0Chain10Hwts0::from_bits(val as u8)
     }
-    #[doc = "Segment 0 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 0 HWTS ADC hardware trigger selection."]
     #[inline(always)]
     pub const fn set_hwts0(&mut self, val: super::vals::Trig0Chain10Hwts0) {
         self.0 = (self.0 & !(0xff << 4usize)) | (((val.to_bits() as u32) & 0xff) << 4usize);
     }
-    #[doc = "Segment 0 B2B"]
+    #[doc = "Segment 0 B2B."]
     #[must_use]
     #[inline(always)]
     pub const fn b2b0(&self) -> super::vals::Trig0Chain10B2b0 {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Trig0Chain10B2b0::from_bits(val as u8)
     }
-    #[doc = "Segment 0 B2B"]
+    #[doc = "Segment 0 B2B."]
     #[inline(always)]
     pub const fn set_b2b0(&mut self, val: super::vals::Trig0Chain10B2b0) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "Segment 0 interrupt enable. (This bit field is meaningful only when IE0_EN is set)"]
+    #[doc = "Segment 0 interrupt enable. (This bit field is meaningful only when IE0_EN is set)."]
     #[must_use]
     #[inline(always)]
     pub const fn ie0(&self) -> super::vals::Trig0Chain10Ie0 {
         let val = (self.0 >> 13usize) & 0x03;
         super::vals::Trig0Chain10Ie0::from_bits(val as u8)
     }
-    #[doc = "Segment 0 interrupt enable. (This bit field is meaningful only when IE0_EN is set)"]
+    #[doc = "Segment 0 interrupt enable. (This bit field is meaningful only when IE0_EN is set)."]
     #[inline(always)]
     pub const fn set_ie0(&mut self, val: super::vals::Trig0Chain10Ie0) {
         self.0 = (self.0 & !(0x03 << 13usize)) | (((val.to_bits() as u32) & 0x03) << 13usize);
@@ -1011,50 +1011,50 @@ impl Trig0Chain10 {
     pub const fn set_ie0_en(&mut self, val: super::vals::Trig0Chain10Ie0En) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[must_use]
     #[inline(always)]
     pub const fn csel1(&self) -> super::vals::Trig0Chain10Csel1 {
         let val = (self.0 >> 16usize) & 0x0f;
         super::vals::Trig0Chain10Csel1::from_bits(val as u8)
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[inline(always)]
     pub const fn set_csel1(&mut self, val: super::vals::Trig0Chain10Csel1) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val.to_bits() as u32) & 0x0f) << 16usize);
     }
-    #[doc = "Segment 1 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 1 HWTS ADC hardware trigger selection."]
     #[must_use]
     #[inline(always)]
     pub const fn hwts1(&self) -> super::vals::Trig0Chain10Hwts1 {
         let val = (self.0 >> 20usize) & 0xff;
         super::vals::Trig0Chain10Hwts1::from_bits(val as u8)
     }
-    #[doc = "Segment 1 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 1 HWTS ADC hardware trigger selection."]
     #[inline(always)]
     pub const fn set_hwts1(&mut self, val: super::vals::Trig0Chain10Hwts1) {
         self.0 = (self.0 & !(0xff << 20usize)) | (((val.to_bits() as u32) & 0xff) << 20usize);
     }
-    #[doc = "Segment 1 B2B"]
+    #[doc = "Segment 1 B2B."]
     #[must_use]
     #[inline(always)]
     pub const fn b2b1(&self) -> super::vals::Trig0Chain10B2b1 {
         let val = (self.0 >> 28usize) & 0x01;
         super::vals::Trig0Chain10B2b1::from_bits(val as u8)
     }
-    #[doc = "Segment 1 B2B"]
+    #[doc = "Segment 1 B2B."]
     #[inline(always)]
     pub const fn set_b2b1(&mut self, val: super::vals::Trig0Chain10B2b1) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
     }
-    #[doc = "Segment 1 interrupt enable. (This bit field is meaningful only when IE1_EN is set)"]
+    #[doc = "Segment 1 interrupt enable. (This bit field is meaningful only when IE1_EN is set)."]
     #[must_use]
     #[inline(always)]
     pub const fn ie1(&self) -> super::vals::Trig0Chain10Ie1 {
         let val = (self.0 >> 29usize) & 0x03;
         super::vals::Trig0Chain10Ie1::from_bits(val as u8)
     }
-    #[doc = "Segment 1 interrupt enable. (This bit field is meaningful only when IE1_EN is set)"]
+    #[doc = "Segment 1 interrupt enable. (This bit field is meaningful only when IE1_EN is set)."]
     #[inline(always)]
     pub const fn set_ie1(&mut self, val: super::vals::Trig0Chain10Ie1) {
         self.0 = (self.0 & !(0x03 << 29usize)) | (((val.to_bits() as u32) & 0x03) << 29usize);
@@ -1113,55 +1113,55 @@ impl defmt::Format for Trig0Chain10 {
         )
     }
 }
-#[doc = "ETC_TRIG Chain 2/3 Register"]
+#[doc = "ETC_TRIG Chain 2/3 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig0Chain32(pub u32);
 impl Trig0Chain32 {
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[must_use]
     #[inline(always)]
     pub const fn csel2(&self) -> super::vals::Trig0Chain32Csel2 {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Trig0Chain32Csel2::from_bits(val as u8)
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[inline(always)]
     pub const fn set_csel2(&mut self, val: super::vals::Trig0Chain32Csel2) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Segment 2 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 2 HWTS ADC hardware trigger selection."]
     #[must_use]
     #[inline(always)]
     pub const fn hwts2(&self) -> super::vals::Trig0Chain32Hwts2 {
         let val = (self.0 >> 4usize) & 0xff;
         super::vals::Trig0Chain32Hwts2::from_bits(val as u8)
     }
-    #[doc = "Segment 2 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 2 HWTS ADC hardware trigger selection."]
     #[inline(always)]
     pub const fn set_hwts2(&mut self, val: super::vals::Trig0Chain32Hwts2) {
         self.0 = (self.0 & !(0xff << 4usize)) | (((val.to_bits() as u32) & 0xff) << 4usize);
     }
-    #[doc = "Segment 2 B2B"]
+    #[doc = "Segment 2 B2B."]
     #[must_use]
     #[inline(always)]
     pub const fn b2b2(&self) -> super::vals::Trig0Chain32B2b2 {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Trig0Chain32B2b2::from_bits(val as u8)
     }
-    #[doc = "Segment 2 B2B"]
+    #[doc = "Segment 2 B2B."]
     #[inline(always)]
     pub const fn set_b2b2(&mut self, val: super::vals::Trig0Chain32B2b2) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "Segment 2 interrupt enable. (This bit field is meaningful only when IE2_EN is set)"]
+    #[doc = "Segment 2 interrupt enable. (This bit field is meaningful only when IE2_EN is set)."]
     #[must_use]
     #[inline(always)]
     pub const fn ie2(&self) -> super::vals::Trig0Chain32Ie2 {
         let val = (self.0 >> 13usize) & 0x03;
         super::vals::Trig0Chain32Ie2::from_bits(val as u8)
     }
-    #[doc = "Segment 2 interrupt enable. (This bit field is meaningful only when IE2_EN is set)"]
+    #[doc = "Segment 2 interrupt enable. (This bit field is meaningful only when IE2_EN is set)."]
     #[inline(always)]
     pub const fn set_ie2(&mut self, val: super::vals::Trig0Chain32Ie2) {
         self.0 = (self.0 & !(0x03 << 13usize)) | (((val.to_bits() as u32) & 0x03) << 13usize);
@@ -1178,50 +1178,50 @@ impl Trig0Chain32 {
     pub const fn set_ie2_en(&mut self, val: super::vals::Trig0Chain32Ie2En) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[must_use]
     #[inline(always)]
     pub const fn csel3(&self) -> super::vals::Trig0Chain32Csel3 {
         let val = (self.0 >> 16usize) & 0x0f;
         super::vals::Trig0Chain32Csel3::from_bits(val as u8)
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[inline(always)]
     pub const fn set_csel3(&mut self, val: super::vals::Trig0Chain32Csel3) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val.to_bits() as u32) & 0x0f) << 16usize);
     }
-    #[doc = "Segment 3 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 3 HWTS ADC hardware trigger selection."]
     #[must_use]
     #[inline(always)]
     pub const fn hwts3(&self) -> super::vals::Trig0Chain32Hwts3 {
         let val = (self.0 >> 20usize) & 0xff;
         super::vals::Trig0Chain32Hwts3::from_bits(val as u8)
     }
-    #[doc = "Segment 3 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 3 HWTS ADC hardware trigger selection."]
     #[inline(always)]
     pub const fn set_hwts3(&mut self, val: super::vals::Trig0Chain32Hwts3) {
         self.0 = (self.0 & !(0xff << 20usize)) | (((val.to_bits() as u32) & 0xff) << 20usize);
     }
-    #[doc = "Segment 3 B2B"]
+    #[doc = "Segment 3 B2B."]
     #[must_use]
     #[inline(always)]
     pub const fn b2b3(&self) -> super::vals::Trig0Chain32B2b3 {
         let val = (self.0 >> 28usize) & 0x01;
         super::vals::Trig0Chain32B2b3::from_bits(val as u8)
     }
-    #[doc = "Segment 3 B2B"]
+    #[doc = "Segment 3 B2B."]
     #[inline(always)]
     pub const fn set_b2b3(&mut self, val: super::vals::Trig0Chain32B2b3) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
     }
-    #[doc = "Segment 3 interrupt enable. (This bit field is meaningful only when IE3_EN is set)"]
+    #[doc = "Segment 3 interrupt enable. (This bit field is meaningful only when IE3_EN is set)."]
     #[must_use]
     #[inline(always)]
     pub const fn ie3(&self) -> super::vals::Trig0Chain32Ie3 {
         let val = (self.0 >> 29usize) & 0x03;
         super::vals::Trig0Chain32Ie3::from_bits(val as u8)
     }
-    #[doc = "Segment 3 interrupt enable. (This bit field is meaningful only when IE3_EN is set)"]
+    #[doc = "Segment 3 interrupt enable. (This bit field is meaningful only when IE3_EN is set)."]
     #[inline(always)]
     pub const fn set_ie3(&mut self, val: super::vals::Trig0Chain32Ie3) {
         self.0 = (self.0 & !(0x03 << 29usize)) | (((val.to_bits() as u32) & 0x03) << 29usize);
@@ -1280,55 +1280,55 @@ impl defmt::Format for Trig0Chain32 {
         )
     }
 }
-#[doc = "ETC_TRIG Chain 4/5 Register"]
+#[doc = "ETC_TRIG Chain 4/5 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig0Chain54(pub u32);
 impl Trig0Chain54 {
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[must_use]
     #[inline(always)]
     pub const fn csel4(&self) -> super::vals::Trig0Chain54Csel4 {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Trig0Chain54Csel4::from_bits(val as u8)
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[inline(always)]
     pub const fn set_csel4(&mut self, val: super::vals::Trig0Chain54Csel4) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Segment 4 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 4 HWTS ADC hardware trigger selection."]
     #[must_use]
     #[inline(always)]
     pub const fn hwts4(&self) -> super::vals::Trig0Chain54Hwts4 {
         let val = (self.0 >> 4usize) & 0xff;
         super::vals::Trig0Chain54Hwts4::from_bits(val as u8)
     }
-    #[doc = "Segment 4 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 4 HWTS ADC hardware trigger selection."]
     #[inline(always)]
     pub const fn set_hwts4(&mut self, val: super::vals::Trig0Chain54Hwts4) {
         self.0 = (self.0 & !(0xff << 4usize)) | (((val.to_bits() as u32) & 0xff) << 4usize);
     }
-    #[doc = "Segment 4 B2B"]
+    #[doc = "Segment 4 B2B."]
     #[must_use]
     #[inline(always)]
     pub const fn b2b4(&self) -> super::vals::Trig0Chain54B2b4 {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Trig0Chain54B2b4::from_bits(val as u8)
     }
-    #[doc = "Segment 4 B2B"]
+    #[doc = "Segment 4 B2B."]
     #[inline(always)]
     pub const fn set_b2b4(&mut self, val: super::vals::Trig0Chain54B2b4) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "Segment 4 interrupt enable. (This bit field is meaningful only when IE4_EN is set)"]
+    #[doc = "Segment 4 interrupt enable. (This bit field is meaningful only when IE4_EN is set)."]
     #[must_use]
     #[inline(always)]
     pub const fn ie4(&self) -> super::vals::Trig0Chain54Ie4 {
         let val = (self.0 >> 13usize) & 0x03;
         super::vals::Trig0Chain54Ie4::from_bits(val as u8)
     }
-    #[doc = "Segment 4 interrupt enable. (This bit field is meaningful only when IE4_EN is set)"]
+    #[doc = "Segment 4 interrupt enable. (This bit field is meaningful only when IE4_EN is set)."]
     #[inline(always)]
     pub const fn set_ie4(&mut self, val: super::vals::Trig0Chain54Ie4) {
         self.0 = (self.0 & !(0x03 << 13usize)) | (((val.to_bits() as u32) & 0x03) << 13usize);
@@ -1345,50 +1345,50 @@ impl Trig0Chain54 {
     pub const fn set_ie4_en(&mut self, val: super::vals::Trig0Chain54Ie4En) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[must_use]
     #[inline(always)]
     pub const fn csel5(&self) -> super::vals::Trig0Chain54Csel5 {
         let val = (self.0 >> 16usize) & 0x0f;
         super::vals::Trig0Chain54Csel5::from_bits(val as u8)
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[inline(always)]
     pub const fn set_csel5(&mut self, val: super::vals::Trig0Chain54Csel5) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val.to_bits() as u32) & 0x0f) << 16usize);
     }
-    #[doc = "Segment 5 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 5 HWTS ADC hardware trigger selection."]
     #[must_use]
     #[inline(always)]
     pub const fn hwts5(&self) -> super::vals::Trig0Chain54Hwts5 {
         let val = (self.0 >> 20usize) & 0xff;
         super::vals::Trig0Chain54Hwts5::from_bits(val as u8)
     }
-    #[doc = "Segment 5 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 5 HWTS ADC hardware trigger selection."]
     #[inline(always)]
     pub const fn set_hwts5(&mut self, val: super::vals::Trig0Chain54Hwts5) {
         self.0 = (self.0 & !(0xff << 20usize)) | (((val.to_bits() as u32) & 0xff) << 20usize);
     }
-    #[doc = "Segment 5 B2B"]
+    #[doc = "Segment 5 B2B."]
     #[must_use]
     #[inline(always)]
     pub const fn b2b5(&self) -> super::vals::Trig0Chain54B2b5 {
         let val = (self.0 >> 28usize) & 0x01;
         super::vals::Trig0Chain54B2b5::from_bits(val as u8)
     }
-    #[doc = "Segment 5 B2B"]
+    #[doc = "Segment 5 B2B."]
     #[inline(always)]
     pub const fn set_b2b5(&mut self, val: super::vals::Trig0Chain54B2b5) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
     }
-    #[doc = "Segment 5 interrupt enable. (This bit field is meaningful only when IE5_EN is set)"]
+    #[doc = "Segment 5 interrupt enable. (This bit field is meaningful only when IE5_EN is set)."]
     #[must_use]
     #[inline(always)]
     pub const fn ie5(&self) -> super::vals::Trig0Chain54Ie5 {
         let val = (self.0 >> 29usize) & 0x03;
         super::vals::Trig0Chain54Ie5::from_bits(val as u8)
     }
-    #[doc = "Segment 5 interrupt enable. (This bit field is meaningful only when IE5_EN is set)"]
+    #[doc = "Segment 5 interrupt enable. (This bit field is meaningful only when IE5_EN is set)."]
     #[inline(always)]
     pub const fn set_ie5(&mut self, val: super::vals::Trig0Chain54Ie5) {
         self.0 = (self.0 & !(0x03 << 29usize)) | (((val.to_bits() as u32) & 0x03) << 29usize);
@@ -1447,55 +1447,55 @@ impl defmt::Format for Trig0Chain54 {
         )
     }
 }
-#[doc = "ETC_TRIG Chain 6/7 Register"]
+#[doc = "ETC_TRIG Chain 6/7 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig0Chain76(pub u32);
 impl Trig0Chain76 {
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[must_use]
     #[inline(always)]
     pub const fn csel6(&self) -> super::vals::Trig0Chain76Csel6 {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Trig0Chain76Csel6::from_bits(val as u8)
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[inline(always)]
     pub const fn set_csel6(&mut self, val: super::vals::Trig0Chain76Csel6) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Segment 6 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 6 HWTS ADC hardware trigger selection."]
     #[must_use]
     #[inline(always)]
     pub const fn hwts6(&self) -> super::vals::Trig0Chain76Hwts6 {
         let val = (self.0 >> 4usize) & 0xff;
         super::vals::Trig0Chain76Hwts6::from_bits(val as u8)
     }
-    #[doc = "Segment 6 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 6 HWTS ADC hardware trigger selection."]
     #[inline(always)]
     pub const fn set_hwts6(&mut self, val: super::vals::Trig0Chain76Hwts6) {
         self.0 = (self.0 & !(0xff << 4usize)) | (((val.to_bits() as u32) & 0xff) << 4usize);
     }
-    #[doc = "Segment 6 B2B"]
+    #[doc = "Segment 6 B2B."]
     #[must_use]
     #[inline(always)]
     pub const fn b2b6(&self) -> super::vals::Trig0Chain76B2b6 {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Trig0Chain76B2b6::from_bits(val as u8)
     }
-    #[doc = "Segment 6 B2B"]
+    #[doc = "Segment 6 B2B."]
     #[inline(always)]
     pub const fn set_b2b6(&mut self, val: super::vals::Trig0Chain76B2b6) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "Segment 6 interrupt enable. (This bit field is meaningful only when IE6_EN is set)"]
+    #[doc = "Segment 6 interrupt enable. (This bit field is meaningful only when IE6_EN is set)."]
     #[must_use]
     #[inline(always)]
     pub const fn ie6(&self) -> super::vals::Trig0Chain76Ie6 {
         let val = (self.0 >> 13usize) & 0x03;
         super::vals::Trig0Chain76Ie6::from_bits(val as u8)
     }
-    #[doc = "Segment 6 interrupt enable. (This bit field is meaningful only when IE6_EN is set)"]
+    #[doc = "Segment 6 interrupt enable. (This bit field is meaningful only when IE6_EN is set)."]
     #[inline(always)]
     pub const fn set_ie6(&mut self, val: super::vals::Trig0Chain76Ie6) {
         self.0 = (self.0 & !(0x03 << 13usize)) | (((val.to_bits() as u32) & 0x03) << 13usize);
@@ -1512,50 +1512,50 @@ impl Trig0Chain76 {
     pub const fn set_ie6_en(&mut self, val: super::vals::Trig0Chain76Ie6En) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[must_use]
     #[inline(always)]
     pub const fn csel7(&self) -> super::vals::Trig0Chain76Csel7 {
         let val = (self.0 >> 16usize) & 0x0f;
         super::vals::Trig0Chain76Csel7::from_bits(val as u8)
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[inline(always)]
     pub const fn set_csel7(&mut self, val: super::vals::Trig0Chain76Csel7) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val.to_bits() as u32) & 0x0f) << 16usize);
     }
-    #[doc = "Segment 7 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 7 HWTS ADC hardware trigger selection."]
     #[must_use]
     #[inline(always)]
     pub const fn hwts7(&self) -> super::vals::Trig0Chain76Hwts7 {
         let val = (self.0 >> 20usize) & 0xff;
         super::vals::Trig0Chain76Hwts7::from_bits(val as u8)
     }
-    #[doc = "Segment 7 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 7 HWTS ADC hardware trigger selection."]
     #[inline(always)]
     pub const fn set_hwts7(&mut self, val: super::vals::Trig0Chain76Hwts7) {
         self.0 = (self.0 & !(0xff << 20usize)) | (((val.to_bits() as u32) & 0xff) << 20usize);
     }
-    #[doc = "Segment 7 B2B"]
+    #[doc = "Segment 7 B2B."]
     #[must_use]
     #[inline(always)]
     pub const fn b2b7(&self) -> super::vals::Trig0Chain76B2b7 {
         let val = (self.0 >> 28usize) & 0x01;
         super::vals::Trig0Chain76B2b7::from_bits(val as u8)
     }
-    #[doc = "Segment 7 B2B"]
+    #[doc = "Segment 7 B2B."]
     #[inline(always)]
     pub const fn set_b2b7(&mut self, val: super::vals::Trig0Chain76B2b7) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
     }
-    #[doc = "Segment 7 interrupt enable. (This bit field is meaningful only when IE7_EN is set)"]
+    #[doc = "Segment 7 interrupt enable. (This bit field is meaningful only when IE7_EN is set)."]
     #[must_use]
     #[inline(always)]
     pub const fn ie7(&self) -> super::vals::Trig0Chain76Ie7 {
         let val = (self.0 >> 29usize) & 0x03;
         super::vals::Trig0Chain76Ie7::from_bits(val as u8)
     }
-    #[doc = "Segment 7 interrupt enable. (This bit field is meaningful only when IE7_EN is set)"]
+    #[doc = "Segment 7 interrupt enable. (This bit field is meaningful only when IE7_EN is set)."]
     #[inline(always)]
     pub const fn set_ie7(&mut self, val: super::vals::Trig0Chain76Ie7) {
         self.0 = (self.0 & !(0x03 << 29usize)) | (((val.to_bits() as u32) & 0x03) << 29usize);
@@ -1614,31 +1614,31 @@ impl defmt::Format for Trig0Chain76 {
         )
     }
 }
-#[doc = "ETC_TRIG Counter Register"]
+#[doc = "ETC_TRIG Counter Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig0Counter(pub u32);
 impl Trig0Counter {
-    #[doc = "TRIGGER initial delay counter. Initial_delay = (INIT_DELAY+1)*(PRE_DIVIDER+1)*ipg_clk"]
+    #[doc = "TRIGGER initial delay counter. Initial_delay = (INIT_DELAY+1)*(PRE_DIVIDER+1)*ipg_clk."]
     #[must_use]
     #[inline(always)]
     pub const fn init_delay(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "TRIGGER initial delay counter. Initial_delay = (INIT_DELAY+1)*(PRE_DIVIDER+1)*ipg_clk"]
+    #[doc = "TRIGGER initial delay counter. Initial_delay = (INIT_DELAY+1)*(PRE_DIVIDER+1)*ipg_clk."]
     #[inline(always)]
     pub const fn set_init_delay(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "TRIGGER sampling interval counter"]
+    #[doc = "TRIGGER sampling interval counter."]
     #[must_use]
     #[inline(always)]
     pub const fn sample_interval(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "TRIGGER sampling interval counter"]
+    #[doc = "TRIGGER sampling interval counter."]
     #[inline(always)]
     pub const fn set_sample_interval(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -1669,7 +1669,7 @@ impl defmt::Format for Trig0Counter {
         )
     }
 }
-#[doc = "ETC_TRIG Control Register"]
+#[doc = "ETC_TRIG Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig0Ctrl(pub u32);
@@ -1710,26 +1710,26 @@ impl Trig0Ctrl {
     pub const fn set_trig_chain(&mut self, val: super::vals::Trig0CtrlTrigChain) {
         self.0 = (self.0 & !(0x07 << 8usize)) | (((val.to_bits() as u32) & 0x07) << 8usize);
     }
-    #[doc = "External trigger priority, 7 is highest priority, while 0 is lowest"]
+    #[doc = "External trigger priority, 7 is highest priority, while 0 is lowest."]
     #[must_use]
     #[inline(always)]
     pub const fn trig_priority(&self) -> u8 {
         let val = (self.0 >> 12usize) & 0x07;
         val as u8
     }
-    #[doc = "External trigger priority, 7 is highest priority, while 0 is lowest"]
+    #[doc = "External trigger priority, 7 is highest priority, while 0 is lowest."]
     #[inline(always)]
     pub const fn set_trig_priority(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 12usize)) | (((val as u32) & 0x07) << 12usize);
     }
-    #[doc = "Trigger synchronization mode selection"]
+    #[doc = "Trigger synchronization mode selection."]
     #[must_use]
     #[inline(always)]
     pub const fn sync_mode(&self) -> super::vals::Trig0CtrlSyncMode {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::Trig0CtrlSyncMode::from_bits(val as u8)
     }
-    #[doc = "Trigger synchronization mode selection"]
+    #[doc = "Trigger synchronization mode selection."]
     #[inline(always)]
     pub const fn set_sync_mode(&mut self, val: super::vals::Trig0CtrlSyncMode) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
@@ -1766,31 +1766,31 @@ impl defmt::Format for Trig0Ctrl {
         )
     }
 }
-#[doc = "ETC_TRIG Result Data 1/0 Register"]
+#[doc = "ETC_TRIG Result Data 1/0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig0Result10(pub u32);
 impl Trig0Result10 {
-    #[doc = "Result DATA0The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA0The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[must_use]
     #[inline(always)]
     pub const fn data0(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Result DATA0The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA0The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[inline(always)]
     pub const fn set_data0(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
     }
-    #[doc = "Result DATA1The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA1The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[must_use]
     #[inline(always)]
     pub const fn data1(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Result DATA1The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA1The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[inline(always)]
     pub const fn set_data1(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);
@@ -1821,31 +1821,31 @@ impl defmt::Format for Trig0Result10 {
         )
     }
 }
-#[doc = "ETC_TRIG Result Data 3/2 Register"]
+#[doc = "ETC_TRIG Result Data 3/2 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig0Result32(pub u32);
 impl Trig0Result32 {
-    #[doc = "Result DATA2The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA2The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[must_use]
     #[inline(always)]
     pub const fn data2(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Result DATA2The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA2The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[inline(always)]
     pub const fn set_data2(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
     }
-    #[doc = "Result DATA3The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA3The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[must_use]
     #[inline(always)]
     pub const fn data3(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Result DATA3The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA3The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[inline(always)]
     pub const fn set_data3(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);
@@ -1876,31 +1876,31 @@ impl defmt::Format for Trig0Result32 {
         )
     }
 }
-#[doc = "ETC_TRIG Result Data 5/4 Register"]
+#[doc = "ETC_TRIG Result Data 5/4 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig0Result54(pub u32);
 impl Trig0Result54 {
-    #[doc = "Result DATA4The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA4The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[must_use]
     #[inline(always)]
     pub const fn data4(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Result DATA4The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA4The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[inline(always)]
     pub const fn set_data4(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
     }
-    #[doc = "Result DATA5The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA5The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[must_use]
     #[inline(always)]
     pub const fn data5(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Result DATA5The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA5The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[inline(always)]
     pub const fn set_data5(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);
@@ -1931,31 +1931,31 @@ impl defmt::Format for Trig0Result54 {
         )
     }
 }
-#[doc = "ETC_TRIG Result Data 7/6 Register"]
+#[doc = "ETC_TRIG Result Data 7/6 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig0Result76(pub u32);
 impl Trig0Result76 {
-    #[doc = "Result DATA6The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA6The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[must_use]
     #[inline(always)]
     pub const fn data6(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Result DATA6The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA6The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[inline(always)]
     pub const fn set_data6(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
     }
-    #[doc = "Result DATA7The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA7The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[must_use]
     #[inline(always)]
     pub const fn data7(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Result DATA7The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA7The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[inline(always)]
     pub const fn set_data7(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);
@@ -1986,55 +1986,55 @@ impl defmt::Format for Trig0Result76 {
         )
     }
 }
-#[doc = "ETC_TRIG Chain 0/1 Register"]
+#[doc = "ETC_TRIG Chain 0/1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig1Chain10(pub u32);
 impl Trig1Chain10 {
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[must_use]
     #[inline(always)]
     pub const fn csel0(&self) -> super::vals::Trig1Chain10Csel0 {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Trig1Chain10Csel0::from_bits(val as u8)
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[inline(always)]
     pub const fn set_csel0(&mut self, val: super::vals::Trig1Chain10Csel0) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Segment 0 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 0 HWTS ADC hardware trigger selection."]
     #[must_use]
     #[inline(always)]
     pub const fn hwts0(&self) -> super::vals::Trig1Chain10Hwts0 {
         let val = (self.0 >> 4usize) & 0xff;
         super::vals::Trig1Chain10Hwts0::from_bits(val as u8)
     }
-    #[doc = "Segment 0 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 0 HWTS ADC hardware trigger selection."]
     #[inline(always)]
     pub const fn set_hwts0(&mut self, val: super::vals::Trig1Chain10Hwts0) {
         self.0 = (self.0 & !(0xff << 4usize)) | (((val.to_bits() as u32) & 0xff) << 4usize);
     }
-    #[doc = "Segment 0 B2B"]
+    #[doc = "Segment 0 B2B."]
     #[must_use]
     #[inline(always)]
     pub const fn b2b0(&self) -> super::vals::Trig1Chain10B2b0 {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Trig1Chain10B2b0::from_bits(val as u8)
     }
-    #[doc = "Segment 0 B2B"]
+    #[doc = "Segment 0 B2B."]
     #[inline(always)]
     pub const fn set_b2b0(&mut self, val: super::vals::Trig1Chain10B2b0) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "Segment 0 interrupt enable. (This bit field is meaningful only when IE0_EN is set)"]
+    #[doc = "Segment 0 interrupt enable. (This bit field is meaningful only when IE0_EN is set)."]
     #[must_use]
     #[inline(always)]
     pub const fn ie0(&self) -> super::vals::Trig1Chain10Ie0 {
         let val = (self.0 >> 13usize) & 0x03;
         super::vals::Trig1Chain10Ie0::from_bits(val as u8)
     }
-    #[doc = "Segment 0 interrupt enable. (This bit field is meaningful only when IE0_EN is set)"]
+    #[doc = "Segment 0 interrupt enable. (This bit field is meaningful only when IE0_EN is set)."]
     #[inline(always)]
     pub const fn set_ie0(&mut self, val: super::vals::Trig1Chain10Ie0) {
         self.0 = (self.0 & !(0x03 << 13usize)) | (((val.to_bits() as u32) & 0x03) << 13usize);
@@ -2051,50 +2051,50 @@ impl Trig1Chain10 {
     pub const fn set_ie0_en(&mut self, val: super::vals::Trig1Chain10Ie0En) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[must_use]
     #[inline(always)]
     pub const fn csel1(&self) -> super::vals::Trig1Chain10Csel1 {
         let val = (self.0 >> 16usize) & 0x0f;
         super::vals::Trig1Chain10Csel1::from_bits(val as u8)
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[inline(always)]
     pub const fn set_csel1(&mut self, val: super::vals::Trig1Chain10Csel1) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val.to_bits() as u32) & 0x0f) << 16usize);
     }
-    #[doc = "Segment 1 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 1 HWTS ADC hardware trigger selection."]
     #[must_use]
     #[inline(always)]
     pub const fn hwts1(&self) -> super::vals::Trig1Chain10Hwts1 {
         let val = (self.0 >> 20usize) & 0xff;
         super::vals::Trig1Chain10Hwts1::from_bits(val as u8)
     }
-    #[doc = "Segment 1 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 1 HWTS ADC hardware trigger selection."]
     #[inline(always)]
     pub const fn set_hwts1(&mut self, val: super::vals::Trig1Chain10Hwts1) {
         self.0 = (self.0 & !(0xff << 20usize)) | (((val.to_bits() as u32) & 0xff) << 20usize);
     }
-    #[doc = "Segment 1 B2B"]
+    #[doc = "Segment 1 B2B."]
     #[must_use]
     #[inline(always)]
     pub const fn b2b1(&self) -> super::vals::Trig1Chain10B2b1 {
         let val = (self.0 >> 28usize) & 0x01;
         super::vals::Trig1Chain10B2b1::from_bits(val as u8)
     }
-    #[doc = "Segment 1 B2B"]
+    #[doc = "Segment 1 B2B."]
     #[inline(always)]
     pub const fn set_b2b1(&mut self, val: super::vals::Trig1Chain10B2b1) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
     }
-    #[doc = "Segment 1 interrupt enable. (This bit field is meaningful only when IE1_EN is set)"]
+    #[doc = "Segment 1 interrupt enable. (This bit field is meaningful only when IE1_EN is set)."]
     #[must_use]
     #[inline(always)]
     pub const fn ie1(&self) -> super::vals::Trig1Chain10Ie1 {
         let val = (self.0 >> 29usize) & 0x03;
         super::vals::Trig1Chain10Ie1::from_bits(val as u8)
     }
-    #[doc = "Segment 1 interrupt enable. (This bit field is meaningful only when IE1_EN is set)"]
+    #[doc = "Segment 1 interrupt enable. (This bit field is meaningful only when IE1_EN is set)."]
     #[inline(always)]
     pub const fn set_ie1(&mut self, val: super::vals::Trig1Chain10Ie1) {
         self.0 = (self.0 & !(0x03 << 29usize)) | (((val.to_bits() as u32) & 0x03) << 29usize);
@@ -2153,55 +2153,55 @@ impl defmt::Format for Trig1Chain10 {
         )
     }
 }
-#[doc = "ETC_TRIG Chain 2/3 Register"]
+#[doc = "ETC_TRIG Chain 2/3 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig1Chain32(pub u32);
 impl Trig1Chain32 {
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[must_use]
     #[inline(always)]
     pub const fn csel2(&self) -> super::vals::Trig1Chain32Csel2 {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Trig1Chain32Csel2::from_bits(val as u8)
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[inline(always)]
     pub const fn set_csel2(&mut self, val: super::vals::Trig1Chain32Csel2) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Segment 2 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 2 HWTS ADC hardware trigger selection."]
     #[must_use]
     #[inline(always)]
     pub const fn hwts2(&self) -> super::vals::Trig1Chain32Hwts2 {
         let val = (self.0 >> 4usize) & 0xff;
         super::vals::Trig1Chain32Hwts2::from_bits(val as u8)
     }
-    #[doc = "Segment 2 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 2 HWTS ADC hardware trigger selection."]
     #[inline(always)]
     pub const fn set_hwts2(&mut self, val: super::vals::Trig1Chain32Hwts2) {
         self.0 = (self.0 & !(0xff << 4usize)) | (((val.to_bits() as u32) & 0xff) << 4usize);
     }
-    #[doc = "Segment 2 B2B"]
+    #[doc = "Segment 2 B2B."]
     #[must_use]
     #[inline(always)]
     pub const fn b2b2(&self) -> super::vals::Trig1Chain32B2b2 {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Trig1Chain32B2b2::from_bits(val as u8)
     }
-    #[doc = "Segment 2 B2B"]
+    #[doc = "Segment 2 B2B."]
     #[inline(always)]
     pub const fn set_b2b2(&mut self, val: super::vals::Trig1Chain32B2b2) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "Segment 2 interrupt enable. (This bit field is meaningful only when IE2_EN is set)"]
+    #[doc = "Segment 2 interrupt enable. (This bit field is meaningful only when IE2_EN is set)."]
     #[must_use]
     #[inline(always)]
     pub const fn ie2(&self) -> super::vals::Trig1Chain32Ie2 {
         let val = (self.0 >> 13usize) & 0x03;
         super::vals::Trig1Chain32Ie2::from_bits(val as u8)
     }
-    #[doc = "Segment 2 interrupt enable. (This bit field is meaningful only when IE2_EN is set)"]
+    #[doc = "Segment 2 interrupt enable. (This bit field is meaningful only when IE2_EN is set)."]
     #[inline(always)]
     pub const fn set_ie2(&mut self, val: super::vals::Trig1Chain32Ie2) {
         self.0 = (self.0 & !(0x03 << 13usize)) | (((val.to_bits() as u32) & 0x03) << 13usize);
@@ -2218,50 +2218,50 @@ impl Trig1Chain32 {
     pub const fn set_ie2_en(&mut self, val: super::vals::Trig1Chain32Ie2En) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[must_use]
     #[inline(always)]
     pub const fn csel3(&self) -> super::vals::Trig1Chain32Csel3 {
         let val = (self.0 >> 16usize) & 0x0f;
         super::vals::Trig1Chain32Csel3::from_bits(val as u8)
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[inline(always)]
     pub const fn set_csel3(&mut self, val: super::vals::Trig1Chain32Csel3) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val.to_bits() as u32) & 0x0f) << 16usize);
     }
-    #[doc = "Segment 3 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 3 HWTS ADC hardware trigger selection."]
     #[must_use]
     #[inline(always)]
     pub const fn hwts3(&self) -> super::vals::Trig1Chain32Hwts3 {
         let val = (self.0 >> 20usize) & 0xff;
         super::vals::Trig1Chain32Hwts3::from_bits(val as u8)
     }
-    #[doc = "Segment 3 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 3 HWTS ADC hardware trigger selection."]
     #[inline(always)]
     pub const fn set_hwts3(&mut self, val: super::vals::Trig1Chain32Hwts3) {
         self.0 = (self.0 & !(0xff << 20usize)) | (((val.to_bits() as u32) & 0xff) << 20usize);
     }
-    #[doc = "Segment 3 B2B"]
+    #[doc = "Segment 3 B2B."]
     #[must_use]
     #[inline(always)]
     pub const fn b2b3(&self) -> super::vals::Trig1Chain32B2b3 {
         let val = (self.0 >> 28usize) & 0x01;
         super::vals::Trig1Chain32B2b3::from_bits(val as u8)
     }
-    #[doc = "Segment 3 B2B"]
+    #[doc = "Segment 3 B2B."]
     #[inline(always)]
     pub const fn set_b2b3(&mut self, val: super::vals::Trig1Chain32B2b3) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
     }
-    #[doc = "Segment 3 interrupt enable. (This bit field is meaningful only when IE3_EN is set)"]
+    #[doc = "Segment 3 interrupt enable. (This bit field is meaningful only when IE3_EN is set)."]
     #[must_use]
     #[inline(always)]
     pub const fn ie3(&self) -> super::vals::Trig1Chain32Ie3 {
         let val = (self.0 >> 29usize) & 0x03;
         super::vals::Trig1Chain32Ie3::from_bits(val as u8)
     }
-    #[doc = "Segment 3 interrupt enable. (This bit field is meaningful only when IE3_EN is set)"]
+    #[doc = "Segment 3 interrupt enable. (This bit field is meaningful only when IE3_EN is set)."]
     #[inline(always)]
     pub const fn set_ie3(&mut self, val: super::vals::Trig1Chain32Ie3) {
         self.0 = (self.0 & !(0x03 << 29usize)) | (((val.to_bits() as u32) & 0x03) << 29usize);
@@ -2320,55 +2320,55 @@ impl defmt::Format for Trig1Chain32 {
         )
     }
 }
-#[doc = "ETC_TRIG Chain 4/5 Register"]
+#[doc = "ETC_TRIG Chain 4/5 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig1Chain54(pub u32);
 impl Trig1Chain54 {
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[must_use]
     #[inline(always)]
     pub const fn csel4(&self) -> super::vals::Trig1Chain54Csel4 {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Trig1Chain54Csel4::from_bits(val as u8)
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[inline(always)]
     pub const fn set_csel4(&mut self, val: super::vals::Trig1Chain54Csel4) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Segment 4 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 4 HWTS ADC hardware trigger selection."]
     #[must_use]
     #[inline(always)]
     pub const fn hwts4(&self) -> super::vals::Trig1Chain54Hwts4 {
         let val = (self.0 >> 4usize) & 0xff;
         super::vals::Trig1Chain54Hwts4::from_bits(val as u8)
     }
-    #[doc = "Segment 4 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 4 HWTS ADC hardware trigger selection."]
     #[inline(always)]
     pub const fn set_hwts4(&mut self, val: super::vals::Trig1Chain54Hwts4) {
         self.0 = (self.0 & !(0xff << 4usize)) | (((val.to_bits() as u32) & 0xff) << 4usize);
     }
-    #[doc = "Segment 4 B2B"]
+    #[doc = "Segment 4 B2B."]
     #[must_use]
     #[inline(always)]
     pub const fn b2b4(&self) -> super::vals::Trig1Chain54B2b4 {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Trig1Chain54B2b4::from_bits(val as u8)
     }
-    #[doc = "Segment 4 B2B"]
+    #[doc = "Segment 4 B2B."]
     #[inline(always)]
     pub const fn set_b2b4(&mut self, val: super::vals::Trig1Chain54B2b4) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "Segment 4 interrupt enable. (This bit field is meaningful only when IE4_EN is set)"]
+    #[doc = "Segment 4 interrupt enable. (This bit field is meaningful only when IE4_EN is set)."]
     #[must_use]
     #[inline(always)]
     pub const fn ie4(&self) -> super::vals::Trig1Chain54Ie4 {
         let val = (self.0 >> 13usize) & 0x03;
         super::vals::Trig1Chain54Ie4::from_bits(val as u8)
     }
-    #[doc = "Segment 4 interrupt enable. (This bit field is meaningful only when IE4_EN is set)"]
+    #[doc = "Segment 4 interrupt enable. (This bit field is meaningful only when IE4_EN is set)."]
     #[inline(always)]
     pub const fn set_ie4(&mut self, val: super::vals::Trig1Chain54Ie4) {
         self.0 = (self.0 & !(0x03 << 13usize)) | (((val.to_bits() as u32) & 0x03) << 13usize);
@@ -2385,50 +2385,50 @@ impl Trig1Chain54 {
     pub const fn set_ie4_en(&mut self, val: super::vals::Trig1Chain54Ie4En) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[must_use]
     #[inline(always)]
     pub const fn csel5(&self) -> super::vals::Trig1Chain54Csel5 {
         let val = (self.0 >> 16usize) & 0x0f;
         super::vals::Trig1Chain54Csel5::from_bits(val as u8)
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[inline(always)]
     pub const fn set_csel5(&mut self, val: super::vals::Trig1Chain54Csel5) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val.to_bits() as u32) & 0x0f) << 16usize);
     }
-    #[doc = "Segment 5 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 5 HWTS ADC hardware trigger selection."]
     #[must_use]
     #[inline(always)]
     pub const fn hwts5(&self) -> super::vals::Trig1Chain54Hwts5 {
         let val = (self.0 >> 20usize) & 0xff;
         super::vals::Trig1Chain54Hwts5::from_bits(val as u8)
     }
-    #[doc = "Segment 5 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 5 HWTS ADC hardware trigger selection."]
     #[inline(always)]
     pub const fn set_hwts5(&mut self, val: super::vals::Trig1Chain54Hwts5) {
         self.0 = (self.0 & !(0xff << 20usize)) | (((val.to_bits() as u32) & 0xff) << 20usize);
     }
-    #[doc = "Segment 5 B2B"]
+    #[doc = "Segment 5 B2B."]
     #[must_use]
     #[inline(always)]
     pub const fn b2b5(&self) -> super::vals::Trig1Chain54B2b5 {
         let val = (self.0 >> 28usize) & 0x01;
         super::vals::Trig1Chain54B2b5::from_bits(val as u8)
     }
-    #[doc = "Segment 5 B2B"]
+    #[doc = "Segment 5 B2B."]
     #[inline(always)]
     pub const fn set_b2b5(&mut self, val: super::vals::Trig1Chain54B2b5) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
     }
-    #[doc = "Segment 5 interrupt enable. (This bit field is meaningful only when IE5_EN is set)"]
+    #[doc = "Segment 5 interrupt enable. (This bit field is meaningful only when IE5_EN is set)."]
     #[must_use]
     #[inline(always)]
     pub const fn ie5(&self) -> super::vals::Trig1Chain54Ie5 {
         let val = (self.0 >> 29usize) & 0x03;
         super::vals::Trig1Chain54Ie5::from_bits(val as u8)
     }
-    #[doc = "Segment 5 interrupt enable. (This bit field is meaningful only when IE5_EN is set)"]
+    #[doc = "Segment 5 interrupt enable. (This bit field is meaningful only when IE5_EN is set)."]
     #[inline(always)]
     pub const fn set_ie5(&mut self, val: super::vals::Trig1Chain54Ie5) {
         self.0 = (self.0 & !(0x03 << 29usize)) | (((val.to_bits() as u32) & 0x03) << 29usize);
@@ -2487,55 +2487,55 @@ impl defmt::Format for Trig1Chain54 {
         )
     }
 }
-#[doc = "ETC_TRIG Chain 6/7 Register"]
+#[doc = "ETC_TRIG Chain 6/7 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig1Chain76(pub u32);
 impl Trig1Chain76 {
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[must_use]
     #[inline(always)]
     pub const fn csel6(&self) -> super::vals::Trig1Chain76Csel6 {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Trig1Chain76Csel6::from_bits(val as u8)
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[inline(always)]
     pub const fn set_csel6(&mut self, val: super::vals::Trig1Chain76Csel6) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Segment 6 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 6 HWTS ADC hardware trigger selection."]
     #[must_use]
     #[inline(always)]
     pub const fn hwts6(&self) -> super::vals::Trig1Chain76Hwts6 {
         let val = (self.0 >> 4usize) & 0xff;
         super::vals::Trig1Chain76Hwts6::from_bits(val as u8)
     }
-    #[doc = "Segment 6 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 6 HWTS ADC hardware trigger selection."]
     #[inline(always)]
     pub const fn set_hwts6(&mut self, val: super::vals::Trig1Chain76Hwts6) {
         self.0 = (self.0 & !(0xff << 4usize)) | (((val.to_bits() as u32) & 0xff) << 4usize);
     }
-    #[doc = "Segment 6 B2B"]
+    #[doc = "Segment 6 B2B."]
     #[must_use]
     #[inline(always)]
     pub const fn b2b6(&self) -> super::vals::Trig1Chain76B2b6 {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Trig1Chain76B2b6::from_bits(val as u8)
     }
-    #[doc = "Segment 6 B2B"]
+    #[doc = "Segment 6 B2B."]
     #[inline(always)]
     pub const fn set_b2b6(&mut self, val: super::vals::Trig1Chain76B2b6) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "Segment 6 interrupt enable. (This bit field is meaningful only when IE6_EN is set)"]
+    #[doc = "Segment 6 interrupt enable. (This bit field is meaningful only when IE6_EN is set)."]
     #[must_use]
     #[inline(always)]
     pub const fn ie6(&self) -> super::vals::Trig1Chain76Ie6 {
         let val = (self.0 >> 13usize) & 0x03;
         super::vals::Trig1Chain76Ie6::from_bits(val as u8)
     }
-    #[doc = "Segment 6 interrupt enable. (This bit field is meaningful only when IE6_EN is set)"]
+    #[doc = "Segment 6 interrupt enable. (This bit field is meaningful only when IE6_EN is set)."]
     #[inline(always)]
     pub const fn set_ie6(&mut self, val: super::vals::Trig1Chain76Ie6) {
         self.0 = (self.0 & !(0x03 << 13usize)) | (((val.to_bits() as u32) & 0x03) << 13usize);
@@ -2552,50 +2552,50 @@ impl Trig1Chain76 {
     pub const fn set_ie6_en(&mut self, val: super::vals::Trig1Chain76Ie6En) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[must_use]
     #[inline(always)]
     pub const fn csel7(&self) -> super::vals::Trig1Chain76Csel7 {
         let val = (self.0 >> 16usize) & 0x0f;
         super::vals::Trig1Chain76Csel7::from_bits(val as u8)
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[inline(always)]
     pub const fn set_csel7(&mut self, val: super::vals::Trig1Chain76Csel7) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val.to_bits() as u32) & 0x0f) << 16usize);
     }
-    #[doc = "Segment 7 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 7 HWTS ADC hardware trigger selection."]
     #[must_use]
     #[inline(always)]
     pub const fn hwts7(&self) -> super::vals::Trig1Chain76Hwts7 {
         let val = (self.0 >> 20usize) & 0xff;
         super::vals::Trig1Chain76Hwts7::from_bits(val as u8)
     }
-    #[doc = "Segment 7 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 7 HWTS ADC hardware trigger selection."]
     #[inline(always)]
     pub const fn set_hwts7(&mut self, val: super::vals::Trig1Chain76Hwts7) {
         self.0 = (self.0 & !(0xff << 20usize)) | (((val.to_bits() as u32) & 0xff) << 20usize);
     }
-    #[doc = "Segment 7 B2B"]
+    #[doc = "Segment 7 B2B."]
     #[must_use]
     #[inline(always)]
     pub const fn b2b7(&self) -> super::vals::Trig1Chain76B2b7 {
         let val = (self.0 >> 28usize) & 0x01;
         super::vals::Trig1Chain76B2b7::from_bits(val as u8)
     }
-    #[doc = "Segment 7 B2B"]
+    #[doc = "Segment 7 B2B."]
     #[inline(always)]
     pub const fn set_b2b7(&mut self, val: super::vals::Trig1Chain76B2b7) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
     }
-    #[doc = "Segment 7 interrupt enable. (This bit field is meaningful only when IE7_EN is set)"]
+    #[doc = "Segment 7 interrupt enable. (This bit field is meaningful only when IE7_EN is set)."]
     #[must_use]
     #[inline(always)]
     pub const fn ie7(&self) -> super::vals::Trig1Chain76Ie7 {
         let val = (self.0 >> 29usize) & 0x03;
         super::vals::Trig1Chain76Ie7::from_bits(val as u8)
     }
-    #[doc = "Segment 7 interrupt enable. (This bit field is meaningful only when IE7_EN is set)"]
+    #[doc = "Segment 7 interrupt enable. (This bit field is meaningful only when IE7_EN is set)."]
     #[inline(always)]
     pub const fn set_ie7(&mut self, val: super::vals::Trig1Chain76Ie7) {
         self.0 = (self.0 & !(0x03 << 29usize)) | (((val.to_bits() as u32) & 0x03) << 29usize);
@@ -2654,31 +2654,31 @@ impl defmt::Format for Trig1Chain76 {
         )
     }
 }
-#[doc = "ETC_TRIG Counter Register"]
+#[doc = "ETC_TRIG Counter Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig1Counter(pub u32);
 impl Trig1Counter {
-    #[doc = "TRIGGER initial delay counter. Initial_delay = (INIT_DELAY+1)*(PRE_DIVIDER+1)*ipg_clk"]
+    #[doc = "TRIGGER initial delay counter. Initial_delay = (INIT_DELAY+1)*(PRE_DIVIDER+1)*ipg_clk."]
     #[must_use]
     #[inline(always)]
     pub const fn init_delay(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "TRIGGER initial delay counter. Initial_delay = (INIT_DELAY+1)*(PRE_DIVIDER+1)*ipg_clk"]
+    #[doc = "TRIGGER initial delay counter. Initial_delay = (INIT_DELAY+1)*(PRE_DIVIDER+1)*ipg_clk."]
     #[inline(always)]
     pub const fn set_init_delay(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "TRIGGER sampling interval counter"]
+    #[doc = "TRIGGER sampling interval counter."]
     #[must_use]
     #[inline(always)]
     pub const fn sample_interval(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "TRIGGER sampling interval counter"]
+    #[doc = "TRIGGER sampling interval counter."]
     #[inline(always)]
     pub const fn set_sample_interval(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -2709,7 +2709,7 @@ impl defmt::Format for Trig1Counter {
         )
     }
 }
-#[doc = "ETC_TRIG Control Register"]
+#[doc = "ETC_TRIG Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig1Ctrl(pub u32);
@@ -2750,26 +2750,26 @@ impl Trig1Ctrl {
     pub const fn set_trig_chain(&mut self, val: super::vals::Trig1CtrlTrigChain) {
         self.0 = (self.0 & !(0x07 << 8usize)) | (((val.to_bits() as u32) & 0x07) << 8usize);
     }
-    #[doc = "External trigger priority, 7 is highest priority, while 0 is lowest"]
+    #[doc = "External trigger priority, 7 is highest priority, while 0 is lowest."]
     #[must_use]
     #[inline(always)]
     pub const fn trig_priority(&self) -> u8 {
         let val = (self.0 >> 12usize) & 0x07;
         val as u8
     }
-    #[doc = "External trigger priority, 7 is highest priority, while 0 is lowest"]
+    #[doc = "External trigger priority, 7 is highest priority, while 0 is lowest."]
     #[inline(always)]
     pub const fn set_trig_priority(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 12usize)) | (((val as u32) & 0x07) << 12usize);
     }
-    #[doc = "Trigger synchronization mode selection"]
+    #[doc = "Trigger synchronization mode selection."]
     #[must_use]
     #[inline(always)]
     pub const fn sync_mode(&self) -> super::vals::Trig1CtrlSyncMode {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::Trig1CtrlSyncMode::from_bits(val as u8)
     }
-    #[doc = "Trigger synchronization mode selection"]
+    #[doc = "Trigger synchronization mode selection."]
     #[inline(always)]
     pub const fn set_sync_mode(&mut self, val: super::vals::Trig1CtrlSyncMode) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
@@ -2806,31 +2806,31 @@ impl defmt::Format for Trig1Ctrl {
         )
     }
 }
-#[doc = "ETC_TRIG Result Data 1/0 Register"]
+#[doc = "ETC_TRIG Result Data 1/0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig1Result10(pub u32);
 impl Trig1Result10 {
-    #[doc = "Result DATA0The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA0The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[must_use]
     #[inline(always)]
     pub const fn data0(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Result DATA0The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA0The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[inline(always)]
     pub const fn set_data0(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
     }
-    #[doc = "Result DATA1The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA1The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[must_use]
     #[inline(always)]
     pub const fn data1(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Result DATA1The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA1The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[inline(always)]
     pub const fn set_data1(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);
@@ -2861,31 +2861,31 @@ impl defmt::Format for Trig1Result10 {
         )
     }
 }
-#[doc = "ETC_TRIG Result Data 3/2 Register"]
+#[doc = "ETC_TRIG Result Data 3/2 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig1Result32(pub u32);
 impl Trig1Result32 {
-    #[doc = "Result DATA2The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA2The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[must_use]
     #[inline(always)]
     pub const fn data2(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Result DATA2The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA2The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[inline(always)]
     pub const fn set_data2(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
     }
-    #[doc = "Result DATA3The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA3The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[must_use]
     #[inline(always)]
     pub const fn data3(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Result DATA3The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA3The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[inline(always)]
     pub const fn set_data3(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);
@@ -2916,31 +2916,31 @@ impl defmt::Format for Trig1Result32 {
         )
     }
 }
-#[doc = "ETC_TRIG Result Data 5/4 Register"]
+#[doc = "ETC_TRIG Result Data 5/4 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig1Result54(pub u32);
 impl Trig1Result54 {
-    #[doc = "Result DATA4The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA4The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[must_use]
     #[inline(always)]
     pub const fn data4(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Result DATA4The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA4The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[inline(always)]
     pub const fn set_data4(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
     }
-    #[doc = "Result DATA5The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA5The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[must_use]
     #[inline(always)]
     pub const fn data5(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Result DATA5The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA5The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[inline(always)]
     pub const fn set_data5(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);
@@ -2971,31 +2971,31 @@ impl defmt::Format for Trig1Result54 {
         )
     }
 }
-#[doc = "ETC_TRIG Result Data 7/6 Register"]
+#[doc = "ETC_TRIG Result Data 7/6 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig1Result76(pub u32);
 impl Trig1Result76 {
-    #[doc = "Result DATA6The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA6The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[must_use]
     #[inline(always)]
     pub const fn data6(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Result DATA6The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA6The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[inline(always)]
     pub const fn set_data6(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
     }
-    #[doc = "Result DATA7The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA7The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[must_use]
     #[inline(always)]
     pub const fn data7(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Result DATA7The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA7The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[inline(always)]
     pub const fn set_data7(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);
@@ -3026,55 +3026,55 @@ impl defmt::Format for Trig1Result76 {
         )
     }
 }
-#[doc = "ETC_TRIG Chain 0/1 Register"]
+#[doc = "ETC_TRIG Chain 0/1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig2Chain10(pub u32);
 impl Trig2Chain10 {
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[must_use]
     #[inline(always)]
     pub const fn csel0(&self) -> super::vals::Trig2Chain10Csel0 {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Trig2Chain10Csel0::from_bits(val as u8)
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[inline(always)]
     pub const fn set_csel0(&mut self, val: super::vals::Trig2Chain10Csel0) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Segment 0 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 0 HWTS ADC hardware trigger selection."]
     #[must_use]
     #[inline(always)]
     pub const fn hwts0(&self) -> super::vals::Trig2Chain10Hwts0 {
         let val = (self.0 >> 4usize) & 0xff;
         super::vals::Trig2Chain10Hwts0::from_bits(val as u8)
     }
-    #[doc = "Segment 0 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 0 HWTS ADC hardware trigger selection."]
     #[inline(always)]
     pub const fn set_hwts0(&mut self, val: super::vals::Trig2Chain10Hwts0) {
         self.0 = (self.0 & !(0xff << 4usize)) | (((val.to_bits() as u32) & 0xff) << 4usize);
     }
-    #[doc = "Segment 0 B2B"]
+    #[doc = "Segment 0 B2B."]
     #[must_use]
     #[inline(always)]
     pub const fn b2b0(&self) -> super::vals::Trig2Chain10B2b0 {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Trig2Chain10B2b0::from_bits(val as u8)
     }
-    #[doc = "Segment 0 B2B"]
+    #[doc = "Segment 0 B2B."]
     #[inline(always)]
     pub const fn set_b2b0(&mut self, val: super::vals::Trig2Chain10B2b0) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "Segment 0 interrupt enable. (This bit field is meaningful only when IE0_EN is set)"]
+    #[doc = "Segment 0 interrupt enable. (This bit field is meaningful only when IE0_EN is set)."]
     #[must_use]
     #[inline(always)]
     pub const fn ie0(&self) -> super::vals::Trig2Chain10Ie0 {
         let val = (self.0 >> 13usize) & 0x03;
         super::vals::Trig2Chain10Ie0::from_bits(val as u8)
     }
-    #[doc = "Segment 0 interrupt enable. (This bit field is meaningful only when IE0_EN is set)"]
+    #[doc = "Segment 0 interrupt enable. (This bit field is meaningful only when IE0_EN is set)."]
     #[inline(always)]
     pub const fn set_ie0(&mut self, val: super::vals::Trig2Chain10Ie0) {
         self.0 = (self.0 & !(0x03 << 13usize)) | (((val.to_bits() as u32) & 0x03) << 13usize);
@@ -3091,50 +3091,50 @@ impl Trig2Chain10 {
     pub const fn set_ie0_en(&mut self, val: super::vals::Trig2Chain10Ie0En) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[must_use]
     #[inline(always)]
     pub const fn csel1(&self) -> super::vals::Trig2Chain10Csel1 {
         let val = (self.0 >> 16usize) & 0x0f;
         super::vals::Trig2Chain10Csel1::from_bits(val as u8)
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[inline(always)]
     pub const fn set_csel1(&mut self, val: super::vals::Trig2Chain10Csel1) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val.to_bits() as u32) & 0x0f) << 16usize);
     }
-    #[doc = "Segment 1 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 1 HWTS ADC hardware trigger selection."]
     #[must_use]
     #[inline(always)]
     pub const fn hwts1(&self) -> super::vals::Trig2Chain10Hwts1 {
         let val = (self.0 >> 20usize) & 0xff;
         super::vals::Trig2Chain10Hwts1::from_bits(val as u8)
     }
-    #[doc = "Segment 1 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 1 HWTS ADC hardware trigger selection."]
     #[inline(always)]
     pub const fn set_hwts1(&mut self, val: super::vals::Trig2Chain10Hwts1) {
         self.0 = (self.0 & !(0xff << 20usize)) | (((val.to_bits() as u32) & 0xff) << 20usize);
     }
-    #[doc = "Segment 1 B2B"]
+    #[doc = "Segment 1 B2B."]
     #[must_use]
     #[inline(always)]
     pub const fn b2b1(&self) -> super::vals::Trig2Chain10B2b1 {
         let val = (self.0 >> 28usize) & 0x01;
         super::vals::Trig2Chain10B2b1::from_bits(val as u8)
     }
-    #[doc = "Segment 1 B2B"]
+    #[doc = "Segment 1 B2B."]
     #[inline(always)]
     pub const fn set_b2b1(&mut self, val: super::vals::Trig2Chain10B2b1) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
     }
-    #[doc = "Segment 1 interrupt enable. (This bit field is meaningful only when IE1_EN is set)"]
+    #[doc = "Segment 1 interrupt enable. (This bit field is meaningful only when IE1_EN is set)."]
     #[must_use]
     #[inline(always)]
     pub const fn ie1(&self) -> super::vals::Trig2Chain10Ie1 {
         let val = (self.0 >> 29usize) & 0x03;
         super::vals::Trig2Chain10Ie1::from_bits(val as u8)
     }
-    #[doc = "Segment 1 interrupt enable. (This bit field is meaningful only when IE1_EN is set)"]
+    #[doc = "Segment 1 interrupt enable. (This bit field is meaningful only when IE1_EN is set)."]
     #[inline(always)]
     pub const fn set_ie1(&mut self, val: super::vals::Trig2Chain10Ie1) {
         self.0 = (self.0 & !(0x03 << 29usize)) | (((val.to_bits() as u32) & 0x03) << 29usize);
@@ -3193,55 +3193,55 @@ impl defmt::Format for Trig2Chain10 {
         )
     }
 }
-#[doc = "ETC_TRIG Chain 2/3 Register"]
+#[doc = "ETC_TRIG Chain 2/3 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig2Chain32(pub u32);
 impl Trig2Chain32 {
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[must_use]
     #[inline(always)]
     pub const fn csel2(&self) -> super::vals::Trig2Chain32Csel2 {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Trig2Chain32Csel2::from_bits(val as u8)
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[inline(always)]
     pub const fn set_csel2(&mut self, val: super::vals::Trig2Chain32Csel2) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Segment 2 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 2 HWTS ADC hardware trigger selection."]
     #[must_use]
     #[inline(always)]
     pub const fn hwts2(&self) -> super::vals::Trig2Chain32Hwts2 {
         let val = (self.0 >> 4usize) & 0xff;
         super::vals::Trig2Chain32Hwts2::from_bits(val as u8)
     }
-    #[doc = "Segment 2 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 2 HWTS ADC hardware trigger selection."]
     #[inline(always)]
     pub const fn set_hwts2(&mut self, val: super::vals::Trig2Chain32Hwts2) {
         self.0 = (self.0 & !(0xff << 4usize)) | (((val.to_bits() as u32) & 0xff) << 4usize);
     }
-    #[doc = "Segment 2 B2B"]
+    #[doc = "Segment 2 B2B."]
     #[must_use]
     #[inline(always)]
     pub const fn b2b2(&self) -> super::vals::Trig2Chain32B2b2 {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Trig2Chain32B2b2::from_bits(val as u8)
     }
-    #[doc = "Segment 2 B2B"]
+    #[doc = "Segment 2 B2B."]
     #[inline(always)]
     pub const fn set_b2b2(&mut self, val: super::vals::Trig2Chain32B2b2) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "Segment 2 interrupt enable. (This bit field is meaningful only when IE2_EN is set)"]
+    #[doc = "Segment 2 interrupt enable. (This bit field is meaningful only when IE2_EN is set)."]
     #[must_use]
     #[inline(always)]
     pub const fn ie2(&self) -> super::vals::Trig2Chain32Ie2 {
         let val = (self.0 >> 13usize) & 0x03;
         super::vals::Trig2Chain32Ie2::from_bits(val as u8)
     }
-    #[doc = "Segment 2 interrupt enable. (This bit field is meaningful only when IE2_EN is set)"]
+    #[doc = "Segment 2 interrupt enable. (This bit field is meaningful only when IE2_EN is set)."]
     #[inline(always)]
     pub const fn set_ie2(&mut self, val: super::vals::Trig2Chain32Ie2) {
         self.0 = (self.0 & !(0x03 << 13usize)) | (((val.to_bits() as u32) & 0x03) << 13usize);
@@ -3258,50 +3258,50 @@ impl Trig2Chain32 {
     pub const fn set_ie2_en(&mut self, val: super::vals::Trig2Chain32Ie2En) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[must_use]
     #[inline(always)]
     pub const fn csel3(&self) -> super::vals::Trig2Chain32Csel3 {
         let val = (self.0 >> 16usize) & 0x0f;
         super::vals::Trig2Chain32Csel3::from_bits(val as u8)
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[inline(always)]
     pub const fn set_csel3(&mut self, val: super::vals::Trig2Chain32Csel3) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val.to_bits() as u32) & 0x0f) << 16usize);
     }
-    #[doc = "Segment 3 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 3 HWTS ADC hardware trigger selection."]
     #[must_use]
     #[inline(always)]
     pub const fn hwts3(&self) -> super::vals::Trig2Chain32Hwts3 {
         let val = (self.0 >> 20usize) & 0xff;
         super::vals::Trig2Chain32Hwts3::from_bits(val as u8)
     }
-    #[doc = "Segment 3 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 3 HWTS ADC hardware trigger selection."]
     #[inline(always)]
     pub const fn set_hwts3(&mut self, val: super::vals::Trig2Chain32Hwts3) {
         self.0 = (self.0 & !(0xff << 20usize)) | (((val.to_bits() as u32) & 0xff) << 20usize);
     }
-    #[doc = "Segment 3 B2B"]
+    #[doc = "Segment 3 B2B."]
     #[must_use]
     #[inline(always)]
     pub const fn b2b3(&self) -> super::vals::Trig2Chain32B2b3 {
         let val = (self.0 >> 28usize) & 0x01;
         super::vals::Trig2Chain32B2b3::from_bits(val as u8)
     }
-    #[doc = "Segment 3 B2B"]
+    #[doc = "Segment 3 B2B."]
     #[inline(always)]
     pub const fn set_b2b3(&mut self, val: super::vals::Trig2Chain32B2b3) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
     }
-    #[doc = "Segment 3 interrupt enable. (This bit field is meaningful only when IE3_EN is set)"]
+    #[doc = "Segment 3 interrupt enable. (This bit field is meaningful only when IE3_EN is set)."]
     #[must_use]
     #[inline(always)]
     pub const fn ie3(&self) -> super::vals::Trig2Chain32Ie3 {
         let val = (self.0 >> 29usize) & 0x03;
         super::vals::Trig2Chain32Ie3::from_bits(val as u8)
     }
-    #[doc = "Segment 3 interrupt enable. (This bit field is meaningful only when IE3_EN is set)"]
+    #[doc = "Segment 3 interrupt enable. (This bit field is meaningful only when IE3_EN is set)."]
     #[inline(always)]
     pub const fn set_ie3(&mut self, val: super::vals::Trig2Chain32Ie3) {
         self.0 = (self.0 & !(0x03 << 29usize)) | (((val.to_bits() as u32) & 0x03) << 29usize);
@@ -3360,55 +3360,55 @@ impl defmt::Format for Trig2Chain32 {
         )
     }
 }
-#[doc = "ETC_TRIG Chain 4/5 Register"]
+#[doc = "ETC_TRIG Chain 4/5 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig2Chain54(pub u32);
 impl Trig2Chain54 {
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[must_use]
     #[inline(always)]
     pub const fn csel4(&self) -> super::vals::Trig2Chain54Csel4 {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Trig2Chain54Csel4::from_bits(val as u8)
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[inline(always)]
     pub const fn set_csel4(&mut self, val: super::vals::Trig2Chain54Csel4) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Segment 4 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 4 HWTS ADC hardware trigger selection."]
     #[must_use]
     #[inline(always)]
     pub const fn hwts4(&self) -> super::vals::Trig2Chain54Hwts4 {
         let val = (self.0 >> 4usize) & 0xff;
         super::vals::Trig2Chain54Hwts4::from_bits(val as u8)
     }
-    #[doc = "Segment 4 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 4 HWTS ADC hardware trigger selection."]
     #[inline(always)]
     pub const fn set_hwts4(&mut self, val: super::vals::Trig2Chain54Hwts4) {
         self.0 = (self.0 & !(0xff << 4usize)) | (((val.to_bits() as u32) & 0xff) << 4usize);
     }
-    #[doc = "Segment 4 B2B"]
+    #[doc = "Segment 4 B2B."]
     #[must_use]
     #[inline(always)]
     pub const fn b2b4(&self) -> super::vals::Trig2Chain54B2b4 {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Trig2Chain54B2b4::from_bits(val as u8)
     }
-    #[doc = "Segment 4 B2B"]
+    #[doc = "Segment 4 B2B."]
     #[inline(always)]
     pub const fn set_b2b4(&mut self, val: super::vals::Trig2Chain54B2b4) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "Segment 4 interrupt enable. (This bit field is meaningful only when IE4_EN is set)"]
+    #[doc = "Segment 4 interrupt enable. (This bit field is meaningful only when IE4_EN is set)."]
     #[must_use]
     #[inline(always)]
     pub const fn ie4(&self) -> super::vals::Trig2Chain54Ie4 {
         let val = (self.0 >> 13usize) & 0x03;
         super::vals::Trig2Chain54Ie4::from_bits(val as u8)
     }
-    #[doc = "Segment 4 interrupt enable. (This bit field is meaningful only when IE4_EN is set)"]
+    #[doc = "Segment 4 interrupt enable. (This bit field is meaningful only when IE4_EN is set)."]
     #[inline(always)]
     pub const fn set_ie4(&mut self, val: super::vals::Trig2Chain54Ie4) {
         self.0 = (self.0 & !(0x03 << 13usize)) | (((val.to_bits() as u32) & 0x03) << 13usize);
@@ -3425,50 +3425,50 @@ impl Trig2Chain54 {
     pub const fn set_ie4_en(&mut self, val: super::vals::Trig2Chain54Ie4En) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[must_use]
     #[inline(always)]
     pub const fn csel5(&self) -> super::vals::Trig2Chain54Csel5 {
         let val = (self.0 >> 16usize) & 0x0f;
         super::vals::Trig2Chain54Csel5::from_bits(val as u8)
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[inline(always)]
     pub const fn set_csel5(&mut self, val: super::vals::Trig2Chain54Csel5) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val.to_bits() as u32) & 0x0f) << 16usize);
     }
-    #[doc = "Segment 5 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 5 HWTS ADC hardware trigger selection."]
     #[must_use]
     #[inline(always)]
     pub const fn hwts5(&self) -> super::vals::Trig2Chain54Hwts5 {
         let val = (self.0 >> 20usize) & 0xff;
         super::vals::Trig2Chain54Hwts5::from_bits(val as u8)
     }
-    #[doc = "Segment 5 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 5 HWTS ADC hardware trigger selection."]
     #[inline(always)]
     pub const fn set_hwts5(&mut self, val: super::vals::Trig2Chain54Hwts5) {
         self.0 = (self.0 & !(0xff << 20usize)) | (((val.to_bits() as u32) & 0xff) << 20usize);
     }
-    #[doc = "Segment 5 B2B"]
+    #[doc = "Segment 5 B2B."]
     #[must_use]
     #[inline(always)]
     pub const fn b2b5(&self) -> super::vals::Trig2Chain54B2b5 {
         let val = (self.0 >> 28usize) & 0x01;
         super::vals::Trig2Chain54B2b5::from_bits(val as u8)
     }
-    #[doc = "Segment 5 B2B"]
+    #[doc = "Segment 5 B2B."]
     #[inline(always)]
     pub const fn set_b2b5(&mut self, val: super::vals::Trig2Chain54B2b5) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
     }
-    #[doc = "Segment 5 interrupt enable. (This bit field is meaningful only when IE5_EN is set)"]
+    #[doc = "Segment 5 interrupt enable. (This bit field is meaningful only when IE5_EN is set)."]
     #[must_use]
     #[inline(always)]
     pub const fn ie5(&self) -> super::vals::Trig2Chain54Ie5 {
         let val = (self.0 >> 29usize) & 0x03;
         super::vals::Trig2Chain54Ie5::from_bits(val as u8)
     }
-    #[doc = "Segment 5 interrupt enable. (This bit field is meaningful only when IE5_EN is set)"]
+    #[doc = "Segment 5 interrupt enable. (This bit field is meaningful only when IE5_EN is set)."]
     #[inline(always)]
     pub const fn set_ie5(&mut self, val: super::vals::Trig2Chain54Ie5) {
         self.0 = (self.0 & !(0x03 << 29usize)) | (((val.to_bits() as u32) & 0x03) << 29usize);
@@ -3527,55 +3527,55 @@ impl defmt::Format for Trig2Chain54 {
         )
     }
 }
-#[doc = "ETC_TRIG Chain 6/7 Register"]
+#[doc = "ETC_TRIG Chain 6/7 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig2Chain76(pub u32);
 impl Trig2Chain76 {
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[must_use]
     #[inline(always)]
     pub const fn csel6(&self) -> super::vals::Trig2Chain76Csel6 {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Trig2Chain76Csel6::from_bits(val as u8)
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[inline(always)]
     pub const fn set_csel6(&mut self, val: super::vals::Trig2Chain76Csel6) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Segment 6 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 6 HWTS ADC hardware trigger selection."]
     #[must_use]
     #[inline(always)]
     pub const fn hwts6(&self) -> super::vals::Trig2Chain76Hwts6 {
         let val = (self.0 >> 4usize) & 0xff;
         super::vals::Trig2Chain76Hwts6::from_bits(val as u8)
     }
-    #[doc = "Segment 6 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 6 HWTS ADC hardware trigger selection."]
     #[inline(always)]
     pub const fn set_hwts6(&mut self, val: super::vals::Trig2Chain76Hwts6) {
         self.0 = (self.0 & !(0xff << 4usize)) | (((val.to_bits() as u32) & 0xff) << 4usize);
     }
-    #[doc = "Segment 6 B2B"]
+    #[doc = "Segment 6 B2B."]
     #[must_use]
     #[inline(always)]
     pub const fn b2b6(&self) -> super::vals::Trig2Chain76B2b6 {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Trig2Chain76B2b6::from_bits(val as u8)
     }
-    #[doc = "Segment 6 B2B"]
+    #[doc = "Segment 6 B2B."]
     #[inline(always)]
     pub const fn set_b2b6(&mut self, val: super::vals::Trig2Chain76B2b6) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "Segment 6 interrupt enable. (This bit field is meaningful only when IE6_EN is set)"]
+    #[doc = "Segment 6 interrupt enable. (This bit field is meaningful only when IE6_EN is set)."]
     #[must_use]
     #[inline(always)]
     pub const fn ie6(&self) -> super::vals::Trig2Chain76Ie6 {
         let val = (self.0 >> 13usize) & 0x03;
         super::vals::Trig2Chain76Ie6::from_bits(val as u8)
     }
-    #[doc = "Segment 6 interrupt enable. (This bit field is meaningful only when IE6_EN is set)"]
+    #[doc = "Segment 6 interrupt enable. (This bit field is meaningful only when IE6_EN is set)."]
     #[inline(always)]
     pub const fn set_ie6(&mut self, val: super::vals::Trig2Chain76Ie6) {
         self.0 = (self.0 & !(0x03 << 13usize)) | (((val.to_bits() as u32) & 0x03) << 13usize);
@@ -3592,50 +3592,50 @@ impl Trig2Chain76 {
     pub const fn set_ie6_en(&mut self, val: super::vals::Trig2Chain76Ie6En) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[must_use]
     #[inline(always)]
     pub const fn csel7(&self) -> super::vals::Trig2Chain76Csel7 {
         let val = (self.0 >> 16usize) & 0x0f;
         super::vals::Trig2Chain76Csel7::from_bits(val as u8)
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[inline(always)]
     pub const fn set_csel7(&mut self, val: super::vals::Trig2Chain76Csel7) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val.to_bits() as u32) & 0x0f) << 16usize);
     }
-    #[doc = "Segment 7 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 7 HWTS ADC hardware trigger selection."]
     #[must_use]
     #[inline(always)]
     pub const fn hwts7(&self) -> super::vals::Trig2Chain76Hwts7 {
         let val = (self.0 >> 20usize) & 0xff;
         super::vals::Trig2Chain76Hwts7::from_bits(val as u8)
     }
-    #[doc = "Segment 7 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 7 HWTS ADC hardware trigger selection."]
     #[inline(always)]
     pub const fn set_hwts7(&mut self, val: super::vals::Trig2Chain76Hwts7) {
         self.0 = (self.0 & !(0xff << 20usize)) | (((val.to_bits() as u32) & 0xff) << 20usize);
     }
-    #[doc = "Segment 7 B2B"]
+    #[doc = "Segment 7 B2B."]
     #[must_use]
     #[inline(always)]
     pub const fn b2b7(&self) -> super::vals::Trig2Chain76B2b7 {
         let val = (self.0 >> 28usize) & 0x01;
         super::vals::Trig2Chain76B2b7::from_bits(val as u8)
     }
-    #[doc = "Segment 7 B2B"]
+    #[doc = "Segment 7 B2B."]
     #[inline(always)]
     pub const fn set_b2b7(&mut self, val: super::vals::Trig2Chain76B2b7) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
     }
-    #[doc = "Segment 7 interrupt enable. (This bit field is meaningful only when IE7_EN is set)"]
+    #[doc = "Segment 7 interrupt enable. (This bit field is meaningful only when IE7_EN is set)."]
     #[must_use]
     #[inline(always)]
     pub const fn ie7(&self) -> super::vals::Trig2Chain76Ie7 {
         let val = (self.0 >> 29usize) & 0x03;
         super::vals::Trig2Chain76Ie7::from_bits(val as u8)
     }
-    #[doc = "Segment 7 interrupt enable. (This bit field is meaningful only when IE7_EN is set)"]
+    #[doc = "Segment 7 interrupt enable. (This bit field is meaningful only when IE7_EN is set)."]
     #[inline(always)]
     pub const fn set_ie7(&mut self, val: super::vals::Trig2Chain76Ie7) {
         self.0 = (self.0 & !(0x03 << 29usize)) | (((val.to_bits() as u32) & 0x03) << 29usize);
@@ -3694,31 +3694,31 @@ impl defmt::Format for Trig2Chain76 {
         )
     }
 }
-#[doc = "ETC_TRIG Counter Register"]
+#[doc = "ETC_TRIG Counter Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig2Counter(pub u32);
 impl Trig2Counter {
-    #[doc = "TRIGGER initial delay counter. Initial_delay = (INIT_DELAY+1)*(PRE_DIVIDER+1)*ipg_clk"]
+    #[doc = "TRIGGER initial delay counter. Initial_delay = (INIT_DELAY+1)*(PRE_DIVIDER+1)*ipg_clk."]
     #[must_use]
     #[inline(always)]
     pub const fn init_delay(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "TRIGGER initial delay counter. Initial_delay = (INIT_DELAY+1)*(PRE_DIVIDER+1)*ipg_clk"]
+    #[doc = "TRIGGER initial delay counter. Initial_delay = (INIT_DELAY+1)*(PRE_DIVIDER+1)*ipg_clk."]
     #[inline(always)]
     pub const fn set_init_delay(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "TRIGGER sampling interval counter"]
+    #[doc = "TRIGGER sampling interval counter."]
     #[must_use]
     #[inline(always)]
     pub const fn sample_interval(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "TRIGGER sampling interval counter"]
+    #[doc = "TRIGGER sampling interval counter."]
     #[inline(always)]
     pub const fn set_sample_interval(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -3749,7 +3749,7 @@ impl defmt::Format for Trig2Counter {
         )
     }
 }
-#[doc = "ETC_TRIG Control Register"]
+#[doc = "ETC_TRIG Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig2Ctrl(pub u32);
@@ -3790,26 +3790,26 @@ impl Trig2Ctrl {
     pub const fn set_trig_chain(&mut self, val: super::vals::Trig2CtrlTrigChain) {
         self.0 = (self.0 & !(0x07 << 8usize)) | (((val.to_bits() as u32) & 0x07) << 8usize);
     }
-    #[doc = "External trigger priority, 7 is highest priority, while 0 is lowest"]
+    #[doc = "External trigger priority, 7 is highest priority, while 0 is lowest."]
     #[must_use]
     #[inline(always)]
     pub const fn trig_priority(&self) -> u8 {
         let val = (self.0 >> 12usize) & 0x07;
         val as u8
     }
-    #[doc = "External trigger priority, 7 is highest priority, while 0 is lowest"]
+    #[doc = "External trigger priority, 7 is highest priority, while 0 is lowest."]
     #[inline(always)]
     pub const fn set_trig_priority(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 12usize)) | (((val as u32) & 0x07) << 12usize);
     }
-    #[doc = "Trigger synchronization mode selection"]
+    #[doc = "Trigger synchronization mode selection."]
     #[must_use]
     #[inline(always)]
     pub const fn sync_mode(&self) -> super::vals::Trig2CtrlSyncMode {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::Trig2CtrlSyncMode::from_bits(val as u8)
     }
-    #[doc = "Trigger synchronization mode selection"]
+    #[doc = "Trigger synchronization mode selection."]
     #[inline(always)]
     pub const fn set_sync_mode(&mut self, val: super::vals::Trig2CtrlSyncMode) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
@@ -3846,31 +3846,31 @@ impl defmt::Format for Trig2Ctrl {
         )
     }
 }
-#[doc = "ETC_TRIG Result Data 1/0 Register"]
+#[doc = "ETC_TRIG Result Data 1/0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig2Result10(pub u32);
 impl Trig2Result10 {
-    #[doc = "Result DATA0The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA0The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[must_use]
     #[inline(always)]
     pub const fn data0(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Result DATA0The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA0The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[inline(always)]
     pub const fn set_data0(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
     }
-    #[doc = "Result DATA1The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA1The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[must_use]
     #[inline(always)]
     pub const fn data1(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Result DATA1The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA1The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[inline(always)]
     pub const fn set_data1(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);
@@ -3901,31 +3901,31 @@ impl defmt::Format for Trig2Result10 {
         )
     }
 }
-#[doc = "ETC_TRIG Result Data 3/2 Register"]
+#[doc = "ETC_TRIG Result Data 3/2 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig2Result32(pub u32);
 impl Trig2Result32 {
-    #[doc = "Result DATA2The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA2The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[must_use]
     #[inline(always)]
     pub const fn data2(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Result DATA2The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA2The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[inline(always)]
     pub const fn set_data2(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
     }
-    #[doc = "Result DATA3The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA3The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[must_use]
     #[inline(always)]
     pub const fn data3(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Result DATA3The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA3The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[inline(always)]
     pub const fn set_data3(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);
@@ -3956,31 +3956,31 @@ impl defmt::Format for Trig2Result32 {
         )
     }
 }
-#[doc = "ETC_TRIG Result Data 5/4 Register"]
+#[doc = "ETC_TRIG Result Data 5/4 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig2Result54(pub u32);
 impl Trig2Result54 {
-    #[doc = "Result DATA4The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA4The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[must_use]
     #[inline(always)]
     pub const fn data4(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Result DATA4The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA4The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[inline(always)]
     pub const fn set_data4(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
     }
-    #[doc = "Result DATA5The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA5The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[must_use]
     #[inline(always)]
     pub const fn data5(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Result DATA5The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA5The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[inline(always)]
     pub const fn set_data5(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);
@@ -4011,31 +4011,31 @@ impl defmt::Format for Trig2Result54 {
         )
     }
 }
-#[doc = "ETC_TRIG Result Data 7/6 Register"]
+#[doc = "ETC_TRIG Result Data 7/6 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig2Result76(pub u32);
 impl Trig2Result76 {
-    #[doc = "Result DATA6The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA6The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[must_use]
     #[inline(always)]
     pub const fn data6(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Result DATA6The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA6The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[inline(always)]
     pub const fn set_data6(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
     }
-    #[doc = "Result DATA7The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA7The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[must_use]
     #[inline(always)]
     pub const fn data7(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Result DATA7The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA7The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[inline(always)]
     pub const fn set_data7(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);
@@ -4066,55 +4066,55 @@ impl defmt::Format for Trig2Result76 {
         )
     }
 }
-#[doc = "ETC_TRIG Chain 0/1 Register"]
+#[doc = "ETC_TRIG Chain 0/1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig3Chain10(pub u32);
 impl Trig3Chain10 {
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[must_use]
     #[inline(always)]
     pub const fn csel0(&self) -> super::vals::Trig3Chain10Csel0 {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Trig3Chain10Csel0::from_bits(val as u8)
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[inline(always)]
     pub const fn set_csel0(&mut self, val: super::vals::Trig3Chain10Csel0) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Segment 0 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 0 HWTS ADC hardware trigger selection."]
     #[must_use]
     #[inline(always)]
     pub const fn hwts0(&self) -> super::vals::Trig3Chain10Hwts0 {
         let val = (self.0 >> 4usize) & 0xff;
         super::vals::Trig3Chain10Hwts0::from_bits(val as u8)
     }
-    #[doc = "Segment 0 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 0 HWTS ADC hardware trigger selection."]
     #[inline(always)]
     pub const fn set_hwts0(&mut self, val: super::vals::Trig3Chain10Hwts0) {
         self.0 = (self.0 & !(0xff << 4usize)) | (((val.to_bits() as u32) & 0xff) << 4usize);
     }
-    #[doc = "Segment 0 B2B"]
+    #[doc = "Segment 0 B2B."]
     #[must_use]
     #[inline(always)]
     pub const fn b2b0(&self) -> super::vals::Trig3Chain10B2b0 {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Trig3Chain10B2b0::from_bits(val as u8)
     }
-    #[doc = "Segment 0 B2B"]
+    #[doc = "Segment 0 B2B."]
     #[inline(always)]
     pub const fn set_b2b0(&mut self, val: super::vals::Trig3Chain10B2b0) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "Segment 0 interrupt enable. (This bit field is meaningful only when IE0_EN is set)"]
+    #[doc = "Segment 0 interrupt enable. (This bit field is meaningful only when IE0_EN is set)."]
     #[must_use]
     #[inline(always)]
     pub const fn ie0(&self) -> super::vals::Trig3Chain10Ie0 {
         let val = (self.0 >> 13usize) & 0x03;
         super::vals::Trig3Chain10Ie0::from_bits(val as u8)
     }
-    #[doc = "Segment 0 interrupt enable. (This bit field is meaningful only when IE0_EN is set)"]
+    #[doc = "Segment 0 interrupt enable. (This bit field is meaningful only when IE0_EN is set)."]
     #[inline(always)]
     pub const fn set_ie0(&mut self, val: super::vals::Trig3Chain10Ie0) {
         self.0 = (self.0 & !(0x03 << 13usize)) | (((val.to_bits() as u32) & 0x03) << 13usize);
@@ -4131,50 +4131,50 @@ impl Trig3Chain10 {
     pub const fn set_ie0_en(&mut self, val: super::vals::Trig3Chain10Ie0En) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[must_use]
     #[inline(always)]
     pub const fn csel1(&self) -> super::vals::Trig3Chain10Csel1 {
         let val = (self.0 >> 16usize) & 0x0f;
         super::vals::Trig3Chain10Csel1::from_bits(val as u8)
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[inline(always)]
     pub const fn set_csel1(&mut self, val: super::vals::Trig3Chain10Csel1) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val.to_bits() as u32) & 0x0f) << 16usize);
     }
-    #[doc = "Segment 1 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 1 HWTS ADC hardware trigger selection."]
     #[must_use]
     #[inline(always)]
     pub const fn hwts1(&self) -> super::vals::Trig3Chain10Hwts1 {
         let val = (self.0 >> 20usize) & 0xff;
         super::vals::Trig3Chain10Hwts1::from_bits(val as u8)
     }
-    #[doc = "Segment 1 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 1 HWTS ADC hardware trigger selection."]
     #[inline(always)]
     pub const fn set_hwts1(&mut self, val: super::vals::Trig3Chain10Hwts1) {
         self.0 = (self.0 & !(0xff << 20usize)) | (((val.to_bits() as u32) & 0xff) << 20usize);
     }
-    #[doc = "Segment 1 B2B"]
+    #[doc = "Segment 1 B2B."]
     #[must_use]
     #[inline(always)]
     pub const fn b2b1(&self) -> super::vals::Trig3Chain10B2b1 {
         let val = (self.0 >> 28usize) & 0x01;
         super::vals::Trig3Chain10B2b1::from_bits(val as u8)
     }
-    #[doc = "Segment 1 B2B"]
+    #[doc = "Segment 1 B2B."]
     #[inline(always)]
     pub const fn set_b2b1(&mut self, val: super::vals::Trig3Chain10B2b1) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
     }
-    #[doc = "Segment 1 interrupt enable. (This bit field is meaningful only when IE1_EN is set)"]
+    #[doc = "Segment 1 interrupt enable. (This bit field is meaningful only when IE1_EN is set)."]
     #[must_use]
     #[inline(always)]
     pub const fn ie1(&self) -> super::vals::Trig3Chain10Ie1 {
         let val = (self.0 >> 29usize) & 0x03;
         super::vals::Trig3Chain10Ie1::from_bits(val as u8)
     }
-    #[doc = "Segment 1 interrupt enable. (This bit field is meaningful only when IE1_EN is set)"]
+    #[doc = "Segment 1 interrupt enable. (This bit field is meaningful only when IE1_EN is set)."]
     #[inline(always)]
     pub const fn set_ie1(&mut self, val: super::vals::Trig3Chain10Ie1) {
         self.0 = (self.0 & !(0x03 << 29usize)) | (((val.to_bits() as u32) & 0x03) << 29usize);
@@ -4233,55 +4233,55 @@ impl defmt::Format for Trig3Chain10 {
         )
     }
 }
-#[doc = "ETC_TRIG Chain 2/3 Register"]
+#[doc = "ETC_TRIG Chain 2/3 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig3Chain32(pub u32);
 impl Trig3Chain32 {
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[must_use]
     #[inline(always)]
     pub const fn csel2(&self) -> super::vals::Trig3Chain32Csel2 {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Trig3Chain32Csel2::from_bits(val as u8)
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[inline(always)]
     pub const fn set_csel2(&mut self, val: super::vals::Trig3Chain32Csel2) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Segment 2 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 2 HWTS ADC hardware trigger selection."]
     #[must_use]
     #[inline(always)]
     pub const fn hwts2(&self) -> super::vals::Trig3Chain32Hwts2 {
         let val = (self.0 >> 4usize) & 0xff;
         super::vals::Trig3Chain32Hwts2::from_bits(val as u8)
     }
-    #[doc = "Segment 2 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 2 HWTS ADC hardware trigger selection."]
     #[inline(always)]
     pub const fn set_hwts2(&mut self, val: super::vals::Trig3Chain32Hwts2) {
         self.0 = (self.0 & !(0xff << 4usize)) | (((val.to_bits() as u32) & 0xff) << 4usize);
     }
-    #[doc = "Segment 2 B2B"]
+    #[doc = "Segment 2 B2B."]
     #[must_use]
     #[inline(always)]
     pub const fn b2b2(&self) -> super::vals::Trig3Chain32B2b2 {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Trig3Chain32B2b2::from_bits(val as u8)
     }
-    #[doc = "Segment 2 B2B"]
+    #[doc = "Segment 2 B2B."]
     #[inline(always)]
     pub const fn set_b2b2(&mut self, val: super::vals::Trig3Chain32B2b2) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "Segment 2 interrupt enable. (This bit field is meaningful only when IE2_EN is set)"]
+    #[doc = "Segment 2 interrupt enable. (This bit field is meaningful only when IE2_EN is set)."]
     #[must_use]
     #[inline(always)]
     pub const fn ie2(&self) -> super::vals::Trig3Chain32Ie2 {
         let val = (self.0 >> 13usize) & 0x03;
         super::vals::Trig3Chain32Ie2::from_bits(val as u8)
     }
-    #[doc = "Segment 2 interrupt enable. (This bit field is meaningful only when IE2_EN is set)"]
+    #[doc = "Segment 2 interrupt enable. (This bit field is meaningful only when IE2_EN is set)."]
     #[inline(always)]
     pub const fn set_ie2(&mut self, val: super::vals::Trig3Chain32Ie2) {
         self.0 = (self.0 & !(0x03 << 13usize)) | (((val.to_bits() as u32) & 0x03) << 13usize);
@@ -4298,50 +4298,50 @@ impl Trig3Chain32 {
     pub const fn set_ie2_en(&mut self, val: super::vals::Trig3Chain32Ie2En) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[must_use]
     #[inline(always)]
     pub const fn csel3(&self) -> super::vals::Trig3Chain32Csel3 {
         let val = (self.0 >> 16usize) & 0x0f;
         super::vals::Trig3Chain32Csel3::from_bits(val as u8)
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[inline(always)]
     pub const fn set_csel3(&mut self, val: super::vals::Trig3Chain32Csel3) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val.to_bits() as u32) & 0x0f) << 16usize);
     }
-    #[doc = "Segment 3 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 3 HWTS ADC hardware trigger selection."]
     #[must_use]
     #[inline(always)]
     pub const fn hwts3(&self) -> super::vals::Trig3Chain32Hwts3 {
         let val = (self.0 >> 20usize) & 0xff;
         super::vals::Trig3Chain32Hwts3::from_bits(val as u8)
     }
-    #[doc = "Segment 3 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 3 HWTS ADC hardware trigger selection."]
     #[inline(always)]
     pub const fn set_hwts3(&mut self, val: super::vals::Trig3Chain32Hwts3) {
         self.0 = (self.0 & !(0xff << 20usize)) | (((val.to_bits() as u32) & 0xff) << 20usize);
     }
-    #[doc = "Segment 3 B2B"]
+    #[doc = "Segment 3 B2B."]
     #[must_use]
     #[inline(always)]
     pub const fn b2b3(&self) -> super::vals::Trig3Chain32B2b3 {
         let val = (self.0 >> 28usize) & 0x01;
         super::vals::Trig3Chain32B2b3::from_bits(val as u8)
     }
-    #[doc = "Segment 3 B2B"]
+    #[doc = "Segment 3 B2B."]
     #[inline(always)]
     pub const fn set_b2b3(&mut self, val: super::vals::Trig3Chain32B2b3) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
     }
-    #[doc = "Segment 3 interrupt enable. (This bit field is meaningful only when IE3_EN is set)"]
+    #[doc = "Segment 3 interrupt enable. (This bit field is meaningful only when IE3_EN is set)."]
     #[must_use]
     #[inline(always)]
     pub const fn ie3(&self) -> super::vals::Trig3Chain32Ie3 {
         let val = (self.0 >> 29usize) & 0x03;
         super::vals::Trig3Chain32Ie3::from_bits(val as u8)
     }
-    #[doc = "Segment 3 interrupt enable. (This bit field is meaningful only when IE3_EN is set)"]
+    #[doc = "Segment 3 interrupt enable. (This bit field is meaningful only when IE3_EN is set)."]
     #[inline(always)]
     pub const fn set_ie3(&mut self, val: super::vals::Trig3Chain32Ie3) {
         self.0 = (self.0 & !(0x03 << 29usize)) | (((val.to_bits() as u32) & 0x03) << 29usize);
@@ -4400,55 +4400,55 @@ impl defmt::Format for Trig3Chain32 {
         )
     }
 }
-#[doc = "ETC_TRIG Chain 4/5 Register"]
+#[doc = "ETC_TRIG Chain 4/5 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig3Chain54(pub u32);
 impl Trig3Chain54 {
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[must_use]
     #[inline(always)]
     pub const fn csel4(&self) -> super::vals::Trig3Chain54Csel4 {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Trig3Chain54Csel4::from_bits(val as u8)
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[inline(always)]
     pub const fn set_csel4(&mut self, val: super::vals::Trig3Chain54Csel4) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Segment 4 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 4 HWTS ADC hardware trigger selection."]
     #[must_use]
     #[inline(always)]
     pub const fn hwts4(&self) -> super::vals::Trig3Chain54Hwts4 {
         let val = (self.0 >> 4usize) & 0xff;
         super::vals::Trig3Chain54Hwts4::from_bits(val as u8)
     }
-    #[doc = "Segment 4 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 4 HWTS ADC hardware trigger selection."]
     #[inline(always)]
     pub const fn set_hwts4(&mut self, val: super::vals::Trig3Chain54Hwts4) {
         self.0 = (self.0 & !(0xff << 4usize)) | (((val.to_bits() as u32) & 0xff) << 4usize);
     }
-    #[doc = "Segment 4 B2B"]
+    #[doc = "Segment 4 B2B."]
     #[must_use]
     #[inline(always)]
     pub const fn b2b4(&self) -> super::vals::Trig3Chain54B2b4 {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Trig3Chain54B2b4::from_bits(val as u8)
     }
-    #[doc = "Segment 4 B2B"]
+    #[doc = "Segment 4 B2B."]
     #[inline(always)]
     pub const fn set_b2b4(&mut self, val: super::vals::Trig3Chain54B2b4) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "Segment 4 interrupt enable. (This bit field is meaningful only when IE4_EN is set)"]
+    #[doc = "Segment 4 interrupt enable. (This bit field is meaningful only when IE4_EN is set)."]
     #[must_use]
     #[inline(always)]
     pub const fn ie4(&self) -> super::vals::Trig3Chain54Ie4 {
         let val = (self.0 >> 13usize) & 0x03;
         super::vals::Trig3Chain54Ie4::from_bits(val as u8)
     }
-    #[doc = "Segment 4 interrupt enable. (This bit field is meaningful only when IE4_EN is set)"]
+    #[doc = "Segment 4 interrupt enable. (This bit field is meaningful only when IE4_EN is set)."]
     #[inline(always)]
     pub const fn set_ie4(&mut self, val: super::vals::Trig3Chain54Ie4) {
         self.0 = (self.0 & !(0x03 << 13usize)) | (((val.to_bits() as u32) & 0x03) << 13usize);
@@ -4465,50 +4465,50 @@ impl Trig3Chain54 {
     pub const fn set_ie4_en(&mut self, val: super::vals::Trig3Chain54Ie4En) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[must_use]
     #[inline(always)]
     pub const fn csel5(&self) -> super::vals::Trig3Chain54Csel5 {
         let val = (self.0 >> 16usize) & 0x0f;
         super::vals::Trig3Chain54Csel5::from_bits(val as u8)
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[inline(always)]
     pub const fn set_csel5(&mut self, val: super::vals::Trig3Chain54Csel5) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val.to_bits() as u32) & 0x0f) << 16usize);
     }
-    #[doc = "Segment 5 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 5 HWTS ADC hardware trigger selection."]
     #[must_use]
     #[inline(always)]
     pub const fn hwts5(&self) -> super::vals::Trig3Chain54Hwts5 {
         let val = (self.0 >> 20usize) & 0xff;
         super::vals::Trig3Chain54Hwts5::from_bits(val as u8)
     }
-    #[doc = "Segment 5 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 5 HWTS ADC hardware trigger selection."]
     #[inline(always)]
     pub const fn set_hwts5(&mut self, val: super::vals::Trig3Chain54Hwts5) {
         self.0 = (self.0 & !(0xff << 20usize)) | (((val.to_bits() as u32) & 0xff) << 20usize);
     }
-    #[doc = "Segment 5 B2B"]
+    #[doc = "Segment 5 B2B."]
     #[must_use]
     #[inline(always)]
     pub const fn b2b5(&self) -> super::vals::Trig3Chain54B2b5 {
         let val = (self.0 >> 28usize) & 0x01;
         super::vals::Trig3Chain54B2b5::from_bits(val as u8)
     }
-    #[doc = "Segment 5 B2B"]
+    #[doc = "Segment 5 B2B."]
     #[inline(always)]
     pub const fn set_b2b5(&mut self, val: super::vals::Trig3Chain54B2b5) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
     }
-    #[doc = "Segment 5 interrupt enable. (This bit field is meaningful only when IE5_EN is set)"]
+    #[doc = "Segment 5 interrupt enable. (This bit field is meaningful only when IE5_EN is set)."]
     #[must_use]
     #[inline(always)]
     pub const fn ie5(&self) -> super::vals::Trig3Chain54Ie5 {
         let val = (self.0 >> 29usize) & 0x03;
         super::vals::Trig3Chain54Ie5::from_bits(val as u8)
     }
-    #[doc = "Segment 5 interrupt enable. (This bit field is meaningful only when IE5_EN is set)"]
+    #[doc = "Segment 5 interrupt enable. (This bit field is meaningful only when IE5_EN is set)."]
     #[inline(always)]
     pub const fn set_ie5(&mut self, val: super::vals::Trig3Chain54Ie5) {
         self.0 = (self.0 & !(0x03 << 29usize)) | (((val.to_bits() as u32) & 0x03) << 29usize);
@@ -4567,55 +4567,55 @@ impl defmt::Format for Trig3Chain54 {
         )
     }
 }
-#[doc = "ETC_TRIG Chain 6/7 Register"]
+#[doc = "ETC_TRIG Chain 6/7 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig3Chain76(pub u32);
 impl Trig3Chain76 {
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[must_use]
     #[inline(always)]
     pub const fn csel6(&self) -> super::vals::Trig3Chain76Csel6 {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Trig3Chain76Csel6::from_bits(val as u8)
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[inline(always)]
     pub const fn set_csel6(&mut self, val: super::vals::Trig3Chain76Csel6) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Segment 6 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 6 HWTS ADC hardware trigger selection."]
     #[must_use]
     #[inline(always)]
     pub const fn hwts6(&self) -> super::vals::Trig3Chain76Hwts6 {
         let val = (self.0 >> 4usize) & 0xff;
         super::vals::Trig3Chain76Hwts6::from_bits(val as u8)
     }
-    #[doc = "Segment 6 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 6 HWTS ADC hardware trigger selection."]
     #[inline(always)]
     pub const fn set_hwts6(&mut self, val: super::vals::Trig3Chain76Hwts6) {
         self.0 = (self.0 & !(0xff << 4usize)) | (((val.to_bits() as u32) & 0xff) << 4usize);
     }
-    #[doc = "Segment 6 B2B"]
+    #[doc = "Segment 6 B2B."]
     #[must_use]
     #[inline(always)]
     pub const fn b2b6(&self) -> super::vals::Trig3Chain76B2b6 {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Trig3Chain76B2b6::from_bits(val as u8)
     }
-    #[doc = "Segment 6 B2B"]
+    #[doc = "Segment 6 B2B."]
     #[inline(always)]
     pub const fn set_b2b6(&mut self, val: super::vals::Trig3Chain76B2b6) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "Segment 6 interrupt enable. (This bit field is meaningful only when IE6_EN is set)"]
+    #[doc = "Segment 6 interrupt enable. (This bit field is meaningful only when IE6_EN is set)."]
     #[must_use]
     #[inline(always)]
     pub const fn ie6(&self) -> super::vals::Trig3Chain76Ie6 {
         let val = (self.0 >> 13usize) & 0x03;
         super::vals::Trig3Chain76Ie6::from_bits(val as u8)
     }
-    #[doc = "Segment 6 interrupt enable. (This bit field is meaningful only when IE6_EN is set)"]
+    #[doc = "Segment 6 interrupt enable. (This bit field is meaningful only when IE6_EN is set)."]
     #[inline(always)]
     pub const fn set_ie6(&mut self, val: super::vals::Trig3Chain76Ie6) {
         self.0 = (self.0 & !(0x03 << 13usize)) | (((val.to_bits() as u32) & 0x03) << 13usize);
@@ -4632,50 +4632,50 @@ impl Trig3Chain76 {
     pub const fn set_ie6_en(&mut self, val: super::vals::Trig3Chain76Ie6En) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[must_use]
     #[inline(always)]
     pub const fn csel7(&self) -> super::vals::Trig3Chain76Csel7 {
         let val = (self.0 >> 16usize) & 0x0f;
         super::vals::Trig3Chain76Csel7::from_bits(val as u8)
     }
-    #[doc = "ADC channel selection"]
+    #[doc = "ADC channel selection."]
     #[inline(always)]
     pub const fn set_csel7(&mut self, val: super::vals::Trig3Chain76Csel7) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val.to_bits() as u32) & 0x0f) << 16usize);
     }
-    #[doc = "Segment 7 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 7 HWTS ADC hardware trigger selection."]
     #[must_use]
     #[inline(always)]
     pub const fn hwts7(&self) -> super::vals::Trig3Chain76Hwts7 {
         let val = (self.0 >> 20usize) & 0xff;
         super::vals::Trig3Chain76Hwts7::from_bits(val as u8)
     }
-    #[doc = "Segment 7 HWTS ADC hardware trigger selection"]
+    #[doc = "Segment 7 HWTS ADC hardware trigger selection."]
     #[inline(always)]
     pub const fn set_hwts7(&mut self, val: super::vals::Trig3Chain76Hwts7) {
         self.0 = (self.0 & !(0xff << 20usize)) | (((val.to_bits() as u32) & 0xff) << 20usize);
     }
-    #[doc = "Segment 7 B2B"]
+    #[doc = "Segment 7 B2B."]
     #[must_use]
     #[inline(always)]
     pub const fn b2b7(&self) -> super::vals::Trig3Chain76B2b7 {
         let val = (self.0 >> 28usize) & 0x01;
         super::vals::Trig3Chain76B2b7::from_bits(val as u8)
     }
-    #[doc = "Segment 7 B2B"]
+    #[doc = "Segment 7 B2B."]
     #[inline(always)]
     pub const fn set_b2b7(&mut self, val: super::vals::Trig3Chain76B2b7) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
     }
-    #[doc = "Segment 7 interrupt enable. (This bit field is meaningful only when IE7_EN is set)"]
+    #[doc = "Segment 7 interrupt enable. (This bit field is meaningful only when IE7_EN is set)."]
     #[must_use]
     #[inline(always)]
     pub const fn ie7(&self) -> super::vals::Trig3Chain76Ie7 {
         let val = (self.0 >> 29usize) & 0x03;
         super::vals::Trig3Chain76Ie7::from_bits(val as u8)
     }
-    #[doc = "Segment 7 interrupt enable. (This bit field is meaningful only when IE7_EN is set)"]
+    #[doc = "Segment 7 interrupt enable. (This bit field is meaningful only when IE7_EN is set)."]
     #[inline(always)]
     pub const fn set_ie7(&mut self, val: super::vals::Trig3Chain76Ie7) {
         self.0 = (self.0 & !(0x03 << 29usize)) | (((val.to_bits() as u32) & 0x03) << 29usize);
@@ -4734,31 +4734,31 @@ impl defmt::Format for Trig3Chain76 {
         )
     }
 }
-#[doc = "ETC_TRIG Counter Register"]
+#[doc = "ETC_TRIG Counter Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig3Counter(pub u32);
 impl Trig3Counter {
-    #[doc = "TRIGGER initial delay counter. Initial_delay = (INIT_DELAY+1)*(PRE_DIVIDER+1)*ipg_clk"]
+    #[doc = "TRIGGER initial delay counter. Initial_delay = (INIT_DELAY+1)*(PRE_DIVIDER+1)*ipg_clk."]
     #[must_use]
     #[inline(always)]
     pub const fn init_delay(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "TRIGGER initial delay counter. Initial_delay = (INIT_DELAY+1)*(PRE_DIVIDER+1)*ipg_clk"]
+    #[doc = "TRIGGER initial delay counter. Initial_delay = (INIT_DELAY+1)*(PRE_DIVIDER+1)*ipg_clk."]
     #[inline(always)]
     pub const fn set_init_delay(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "TRIGGER sampling interval counter"]
+    #[doc = "TRIGGER sampling interval counter."]
     #[must_use]
     #[inline(always)]
     pub const fn sample_interval(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "TRIGGER sampling interval counter"]
+    #[doc = "TRIGGER sampling interval counter."]
     #[inline(always)]
     pub const fn set_sample_interval(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -4789,7 +4789,7 @@ impl defmt::Format for Trig3Counter {
         )
     }
 }
-#[doc = "ETC_TRIG Control Register"]
+#[doc = "ETC_TRIG Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig3Ctrl(pub u32);
@@ -4830,26 +4830,26 @@ impl Trig3Ctrl {
     pub const fn set_trig_chain(&mut self, val: super::vals::Trig3CtrlTrigChain) {
         self.0 = (self.0 & !(0x07 << 8usize)) | (((val.to_bits() as u32) & 0x07) << 8usize);
     }
-    #[doc = "External trigger priority, 7 is highest priority, while 0 is lowest"]
+    #[doc = "External trigger priority, 7 is highest priority, while 0 is lowest."]
     #[must_use]
     #[inline(always)]
     pub const fn trig_priority(&self) -> u8 {
         let val = (self.0 >> 12usize) & 0x07;
         val as u8
     }
-    #[doc = "External trigger priority, 7 is highest priority, while 0 is lowest"]
+    #[doc = "External trigger priority, 7 is highest priority, while 0 is lowest."]
     #[inline(always)]
     pub const fn set_trig_priority(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 12usize)) | (((val as u32) & 0x07) << 12usize);
     }
-    #[doc = "Trigger synchronization mode selection"]
+    #[doc = "Trigger synchronization mode selection."]
     #[must_use]
     #[inline(always)]
     pub const fn sync_mode(&self) -> super::vals::Trig3CtrlSyncMode {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::Trig3CtrlSyncMode::from_bits(val as u8)
     }
-    #[doc = "Trigger synchronization mode selection"]
+    #[doc = "Trigger synchronization mode selection."]
     #[inline(always)]
     pub const fn set_sync_mode(&mut self, val: super::vals::Trig3CtrlSyncMode) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
@@ -4886,31 +4886,31 @@ impl defmt::Format for Trig3Ctrl {
         )
     }
 }
-#[doc = "ETC_TRIG Result Data 1/0 Register"]
+#[doc = "ETC_TRIG Result Data 1/0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig3Result10(pub u32);
 impl Trig3Result10 {
-    #[doc = "Result DATA0The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA0The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[must_use]
     #[inline(always)]
     pub const fn data0(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Result DATA0The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA0The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[inline(always)]
     pub const fn set_data0(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
     }
-    #[doc = "Result DATA1The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA1The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[must_use]
     #[inline(always)]
     pub const fn data1(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Result DATA1The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA1The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[inline(always)]
     pub const fn set_data1(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);
@@ -4941,31 +4941,31 @@ impl defmt::Format for Trig3Result10 {
         )
     }
 }
-#[doc = "ETC_TRIG Result Data 3/2 Register"]
+#[doc = "ETC_TRIG Result Data 3/2 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig3Result32(pub u32);
 impl Trig3Result32 {
-    #[doc = "Result DATA2The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA2The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[must_use]
     #[inline(always)]
     pub const fn data2(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Result DATA2The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA2The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[inline(always)]
     pub const fn set_data2(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
     }
-    #[doc = "Result DATA3The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA3The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[must_use]
     #[inline(always)]
     pub const fn data3(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Result DATA3The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA3The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[inline(always)]
     pub const fn set_data3(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);
@@ -4996,31 +4996,31 @@ impl defmt::Format for Trig3Result32 {
         )
     }
 }
-#[doc = "ETC_TRIG Result Data 5/4 Register"]
+#[doc = "ETC_TRIG Result Data 5/4 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig3Result54(pub u32);
 impl Trig3Result54 {
-    #[doc = "Result DATA4The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA4The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[must_use]
     #[inline(always)]
     pub const fn data4(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Result DATA4The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA4The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[inline(always)]
     pub const fn set_data4(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
     }
-    #[doc = "Result DATA5The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA5The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[must_use]
     #[inline(always)]
     pub const fn data5(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Result DATA5The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA5The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[inline(always)]
     pub const fn set_data5(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);
@@ -5051,31 +5051,31 @@ impl defmt::Format for Trig3Result54 {
         )
     }
 }
-#[doc = "ETC_TRIG Result Data 7/6 Register"]
+#[doc = "ETC_TRIG Result Data 7/6 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trig3Result76(pub u32);
 impl Trig3Result76 {
-    #[doc = "Result DATA6The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA6The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[must_use]
     #[inline(always)]
     pub const fn data6(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Result DATA6The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA6The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[inline(always)]
     pub const fn set_data6(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
     }
-    #[doc = "Result DATA7The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA7The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[must_use]
     #[inline(always)]
     pub const fn data7(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Result DATA7The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module"]
+    #[doc = "Result DATA7The sign bit from ADC result FIFO is ignored by ETC_TRIG result, so only 12-bit unsigned results is supported by ADC_ETC module."]
     #[inline(always)]
     pub const fn set_data7(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);

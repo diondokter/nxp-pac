@@ -1,4 +1,4 @@
-#[doc = "Channel Enable register"]
+#[doc = "Channel Enable register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Chanen(pub u32);
@@ -137,19 +137,19 @@ impl defmt::Format for Chanen {
         )
     }
 }
-#[doc = "DC Filter Control"]
+#[doc = "DC Filter Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DcCtrl(pub u32);
 impl DcCtrl {
-    #[doc = "DC block filter"]
+    #[doc = "DC block filter."]
     #[must_use]
     #[inline(always)]
     pub const fn dcpole(&self) -> super::vals::Dcpole {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Dcpole::from_bits(val as u8)
     }
-    #[doc = "DC block filter"]
+    #[doc = "DC block filter."]
     #[inline(always)]
     pub const fn set_dcpole(&mut self, val: super::vals::Dcpole) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
@@ -220,19 +220,19 @@ impl defmt::Format for DcCtrl {
         )
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Decreset(pub u32);
 impl Decreset {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn decreset(&self) -> super::vals::Decreset {
         let val = (self.0 >> 0usize) & 0xff;
         super::vals::Decreset::from_bits(val as u8)
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_decreset(&mut self, val: super::vals::Decreset) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val.to_bits() as u32) & 0xff) << 0usize);
@@ -257,19 +257,19 @@ impl defmt::Format for Decreset {
         defmt::write!(f, "Decreset {{ decreset: {:?} }}", self.decreset())
     }
 }
-#[doc = "Divider for generating PDM clock from DMIC clock input"]
+#[doc = "Divider for generating PDM clock from DMIC clock input."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Divhfclk(pub u32);
 impl Divhfclk {
-    #[doc = "Divide by factor to create PDM Clock (enumerated type)"]
+    #[doc = "Divide by factor to create PDM Clock (enumerated type)."]
     #[must_use]
     #[inline(always)]
     pub const fn pdmdiv(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "Divide by factor to create PDM Clock (enumerated type)"]
+    #[doc = "Divide by factor to create PDM Clock (enumerated type)."]
     #[inline(always)]
     pub const fn set_pdmdiv(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
@@ -294,7 +294,7 @@ impl defmt::Format for Divhfclk {
         defmt::write!(f, "Divhfclk {{ pdmdiv: {=u8:?} }}", self.pdmdiv())
     }
 }
-#[doc = "FIFO Control"]
+#[doc = "FIFO Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FifoCtrl(pub u32);
@@ -335,26 +335,26 @@ impl FifoCtrl {
     pub const fn set_inten(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "DMA enable"]
+    #[doc = "DMA enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dmaen(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "DMA enable"]
+    #[doc = "DMA enable."]
     #[inline(always)]
     pub const fn set_dmaen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "Trigger level for interrupt"]
+    #[doc = "Trigger level for interrupt."]
     #[must_use]
     #[inline(always)]
     pub const fn triglvl(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x1f;
         val as u8
     }
-    #[doc = "Trigger level for interrupt"]
+    #[doc = "Trigger level for interrupt."]
     #[inline(always)]
     pub const fn set_triglvl(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 16usize)) | (((val as u32) & 0x1f) << 16usize);
@@ -391,19 +391,19 @@ impl defmt::Format for FifoCtrl {
         )
     }
 }
-#[doc = "FIFO Data"]
+#[doc = "FIFO Data."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FifoData(pub u32);
 impl FifoData {
-    #[doc = "PCM Data"]
+    #[doc = "PCM Data."]
     #[must_use]
     #[inline(always)]
     pub const fn data(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x00ff_ffff;
         val as u32
     }
-    #[doc = "PCM Data"]
+    #[doc = "PCM Data."]
     #[inline(always)]
     pub const fn set_data(&mut self, val: u32) {
         self.0 = (self.0 & !(0x00ff_ffff << 0usize)) | (((val as u32) & 0x00ff_ffff) << 0usize);
@@ -428,43 +428,43 @@ impl defmt::Format for FifoData {
         defmt::write!(f, "FifoData {{ data: {=u32:?} }}", self.data())
     }
 }
-#[doc = "FIFO Status"]
+#[doc = "FIFO Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FifoStatus(pub u32);
 impl FifoStatus {
-    #[doc = "Status of Interrupt (write 1 to clear)"]
+    #[doc = "Status of Interrupt (write 1 to clear)."]
     #[must_use]
     #[inline(always)]
     pub const fn int(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Status of Interrupt (write 1 to clear)"]
+    #[doc = "Status of Interrupt (write 1 to clear)."]
     #[inline(always)]
     pub const fn set_int(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Overrun Detected (write 1 to clear)"]
+    #[doc = "Overrun Detected (write 1 to clear)."]
     #[must_use]
     #[inline(always)]
     pub const fn overrun(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Overrun Detected (write 1 to clear)"]
+    #[doc = "Overrun Detected (write 1 to clear)."]
     #[inline(always)]
     pub const fn set_overrun(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Underrun Detected (write 1 to clear)"]
+    #[doc = "Underrun Detected (write 1 to clear)."]
     #[must_use]
     #[inline(always)]
     pub const fn underrun(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Underrun Detected (write 1 to clear)"]
+    #[doc = "Underrun Detected (write 1 to clear)."]
     #[inline(always)]
     pub const fn set_underrun(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
@@ -497,19 +497,19 @@ impl defmt::Format for FifoStatus {
         )
     }
 }
-#[doc = "Decimator output gain adjustment"]
+#[doc = "Decimator output gain adjustment."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gainshift(pub u32);
 impl Gainshift {
-    #[doc = "Gain shift for decimator output (can be positive or negative number)"]
+    #[doc = "Gain shift for decimator output (can be positive or negative number)."]
     #[must_use]
     #[inline(always)]
     pub const fn gain(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x3f;
         val as u8
     }
-    #[doc = "Gain shift for decimator output (can be positive or negative number)"]
+    #[doc = "Gain shift for decimator output (can be positive or negative number)."]
     #[inline(always)]
     pub const fn set_gain(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val as u32) & 0x3f) << 0usize);
@@ -534,19 +534,19 @@ impl defmt::Format for Gainshift {
         defmt::write!(f, "Gainshift {{ gain: {=u8:?} }}", self.gain())
     }
 }
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct GlobalCountVal(pub u32);
 impl GlobalCountVal {
-    #[doc = "32bit value, global sync counter will trigger a pulse whenever count reaches GCOUNTVAL"]
+    #[doc = "32bit value, global sync counter will trigger a pulse whenever count reaches GCOUNTVAL."]
     #[must_use]
     #[inline(always)]
     pub const fn ccountval(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "32bit value, global sync counter will trigger a pulse whenever count reaches GCOUNTVAL"]
+    #[doc = "32bit value, global sync counter will trigger a pulse whenever count reaches GCOUNTVAL."]
     #[inline(always)]
     pub const fn set_ccountval(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -575,19 +575,19 @@ impl defmt::Format for GlobalCountVal {
         )
     }
 }
-#[doc = "global sync enable"]
+#[doc = "global sync enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct GlobalSyncEn(pub u32);
 impl GlobalSyncEn {
-    #[doc = "Choose which channels to sync to global sync (7:0) corresponds to the 8 channels"]
+    #[doc = "Choose which channels to sync to global sync (7:0) corresponds to the 8 channels."]
     #[must_use]
     #[inline(always)]
     pub const fn ch_sync_en(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Choose which channels to sync to global sync (7:0) corresponds to the 8 channels"]
+    #[doc = "Choose which channels to sync to global sync (7:0) corresponds to the 8 channels."]
     #[inline(always)]
     pub const fn set_ch_sync_en(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
@@ -616,19 +616,19 @@ impl defmt::Format for GlobalSyncEn {
         )
     }
 }
-#[doc = "HWVAD input gain register"]
+#[doc = "HWVAD input gain register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hwvadgain(pub u32);
 impl Hwvadgain {
-    #[doc = "Gain factor for input signal into HWVAD"]
+    #[doc = "Gain factor for input signal into HWVAD."]
     #[must_use]
     #[inline(always)]
     pub const fn inputgain(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "Gain factor for input signal into HWVAD"]
+    #[doc = "Gain factor for input signal into HWVAD."]
     #[inline(always)]
     pub const fn set_inputgain(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
@@ -653,19 +653,19 @@ impl defmt::Format for Hwvadgain {
         defmt::write!(f, "Hwvadgain {{ inputgain: {=u8:?} }}", self.inputgain())
     }
 }
-#[doc = "HWVAD filter control register"]
+#[doc = "HWVAD filter control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hwvadhpfs(pub u32);
 impl Hwvadhpfs {
-    #[doc = "This field chooses the High Pass filter in first part of HWVAD"]
+    #[doc = "This field chooses the High Pass filter in first part of HWVAD."]
     #[must_use]
     #[inline(always)]
     pub const fn hpfs(&self) -> super::vals::Hpfs {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Hpfs::from_bits(val as u8)
     }
-    #[doc = "This field chooses the High Pass filter in first part of HWVAD"]
+    #[doc = "This field chooses the High Pass filter in first part of HWVAD."]
     #[inline(always)]
     pub const fn set_hpfs(&mut self, val: super::vals::Hpfs) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
@@ -690,19 +690,19 @@ impl defmt::Format for Hwvadhpfs {
         defmt::write!(f, "Hwvadhpfs {{ hpfs: {:?} }}", self.hpfs())
     }
 }
-#[doc = "HWVAD noise envelope estimator register"]
+#[doc = "HWVAD noise envelope estimator register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hwvadlowz(pub u32);
 impl Hwvadlowz {
-    #[doc = "Average noise-floor value"]
+    #[doc = "Average noise-floor value."]
     #[must_use]
     #[inline(always)]
     pub const fn lowz(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Average noise-floor value"]
+    #[doc = "Average noise-floor value."]
     #[inline(always)]
     pub const fn set_lowz(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
@@ -727,7 +727,7 @@ impl defmt::Format for Hwvadlowz {
         defmt::write!(f, "Hwvadlowz {{ lowz: {=u16:?} }}", self.lowz())
     }
 }
-#[doc = "HWVAD filter reset register"]
+#[doc = "HWVAD filter reset register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hwvadrstt(pub u32);
@@ -764,7 +764,7 @@ impl defmt::Format for Hwvadrstt {
         defmt::write!(f, "Hwvadrstt {{ rstt: {=bool:?} }}", self.rstt())
     }
 }
-#[doc = "HWVAD control register"]
+#[doc = "HWVAD control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hwvadst10(pub u32);
@@ -801,19 +801,19 @@ impl defmt::Format for Hwvadst10 {
         defmt::write!(f, "Hwvadst10 {{ st10: {:?} }}", self.st10())
     }
 }
-#[doc = "HWVAD noise estimator gain register"]
+#[doc = "HWVAD noise estimator gain register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hwvadthgn(pub u32);
 impl Hwvadthgn {
-    #[doc = "Gain Factor for Noise-floor - use a positive number to make average less sensitive to sudden changes"]
+    #[doc = "Gain Factor for Noise-floor - use a positive number to make average less sensitive to sudden changes."]
     #[must_use]
     #[inline(always)]
     pub const fn thgn(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "Gain Factor for Noise-floor - use a positive number to make average less sensitive to sudden changes"]
+    #[doc = "Gain Factor for Noise-floor - use a positive number to make average less sensitive to sudden changes."]
     #[inline(always)]
     pub const fn set_thgn(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
@@ -838,19 +838,19 @@ impl defmt::Format for Hwvadthgn {
         defmt::write!(f, "Hwvadthgn {{ thgn: {=u8:?} }}", self.thgn())
     }
 }
-#[doc = "HWVAD signal estimator gain register"]
+#[doc = "HWVAD signal estimator gain register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hwvadthgs(pub u32);
 impl Hwvadthgs {
-    #[doc = "Signal Gain factor - use a postive number to make current signal stand out more over longer term average"]
+    #[doc = "Signal Gain factor - use a postive number to make current signal stand out more over longer term average."]
     #[must_use]
     #[inline(always)]
     pub const fn thgs(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "Signal Gain factor - use a postive number to make current signal stand out more over longer term average"]
+    #[doc = "Signal Gain factor - use a postive number to make current signal stand out more over longer term average."]
     #[inline(always)]
     pub const fn set_thgs(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
@@ -875,7 +875,7 @@ impl defmt::Format for Hwvadthgs {
         defmt::write!(f, "Hwvadthgs {{ thgs: {=u8:?} }}", self.thgs())
     }
 }
-#[doc = "CIC Filter decimation rate"]
+#[doc = "CIC Filter decimation rate."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Osr(pub u32);
@@ -910,31 +910,31 @@ impl defmt::Format for Osr {
         defmt::write!(f, "Osr {{ osr: {=u8:?} }}", self.osr())
     }
 }
-#[doc = "Phy Ctrl"]
+#[doc = "Phy Ctrl."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PhyCtrl(pub u32);
 impl PhyCtrl {
-    #[doc = "Capture DMIC on Falling edge (0 means on rising)"]
+    #[doc = "Capture DMIC on Falling edge (0 means on rising)."]
     #[must_use]
     #[inline(always)]
     pub const fn phy_fall(&self) -> super::vals::PhyFall {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::PhyFall::from_bits(val as u8)
     }
-    #[doc = "Capture DMIC on Falling edge (0 means on rising)"]
+    #[doc = "Capture DMIC on Falling edge (0 means on rising)."]
     #[inline(always)]
     pub const fn set_phy_fall(&mut self, val: super::vals::PhyFall) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Use Half rate sampling (ie Clock to dmic is sent at half the speed than the decimator is providing)"]
+    #[doc = "Use Half rate sampling (ie Clock to dmic is sent at half the speed than the decimator is providing)."]
     #[must_use]
     #[inline(always)]
     pub const fn phy_half(&self) -> super::vals::PhyHalf {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::PhyHalf::from_bits(val as u8)
     }
-    #[doc = "Use Half rate sampling (ie Clock to dmic is sent at half the speed than the decimator is providing)"]
+    #[doc = "Use Half rate sampling (ie Clock to dmic is sent at half the speed than the decimator is providing)."]
     #[inline(always)]
     pub const fn set_phy_half(&mut self, val: super::vals::PhyHalf) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
@@ -965,19 +965,19 @@ impl defmt::Format for PhyCtrl {
         )
     }
 }
-#[doc = "Compensation filter for 2FS"]
+#[doc = "Compensation filter for 2FS."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Preac2fscoef(pub u32);
 impl Preac2fscoef {
-    #[doc = "Co-efficient choice for CIC droop compensation droop filter"]
+    #[doc = "Co-efficient choice for CIC droop compensation droop filter."]
     #[must_use]
     #[inline(always)]
     pub const fn comp(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x03;
         val as u8
     }
-    #[doc = "Co-efficient choice for CIC droop compensation droop filter"]
+    #[doc = "Co-efficient choice for CIC droop compensation droop filter."]
     #[inline(always)]
     pub const fn set_comp(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val as u32) & 0x03) << 0usize);
@@ -1002,19 +1002,19 @@ impl defmt::Format for Preac2fscoef {
         defmt::write!(f, "Preac2fscoef {{ comp: {=u8:?} }}", self.comp())
     }
 }
-#[doc = "Compensation filter for 4FS"]
+#[doc = "Compensation filter for 4FS."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Preac4fscoef(pub u32);
 impl Preac4fscoef {
-    #[doc = "Co-efficient choice for CIC droop compensation droop filter"]
+    #[doc = "Co-efficient choice for CIC droop compensation droop filter."]
     #[must_use]
     #[inline(always)]
     pub const fn comp(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x03;
         val as u8
     }
-    #[doc = "Co-efficient choice for CIC droop compensation droop filter"]
+    #[doc = "Co-efficient choice for CIC droop compensation droop filter."]
     #[inline(always)]
     pub const fn set_comp(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val as u32) & 0x03) << 0usize);
@@ -1039,19 +1039,19 @@ impl defmt::Format for Preac4fscoef {
         defmt::write!(f, "Preac4fscoef {{ comp: {=u8:?} }}", self.comp())
     }
 }
-#[doc = "Use 2FS register"]
+#[doc = "Use 2FS register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Use2fs(pub u32);
 impl Use2fs {
-    #[doc = "Use 2FS register"]
+    #[doc = "Use 2FS register."]
     #[must_use]
     #[inline(always)]
     pub const fn use2fs(&self) -> super::vals::Use2fs {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Use2fs::from_bits(val as u8)
     }
-    #[doc = "Use 2FS register"]
+    #[doc = "Use 2FS register."]
     #[inline(always)]
     pub const fn set_use2fs(&mut self, val: super::vals::Use2fs) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);

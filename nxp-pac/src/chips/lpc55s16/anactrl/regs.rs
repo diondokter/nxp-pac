@@ -1,4 +1,4 @@
-#[doc = "General Purpose ADC VBAT Divider branch control"]
+#[doc = "General Purpose ADC VBAT Divider branch control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct AdcCtrl(pub u32);
@@ -39,7 +39,7 @@ impl defmt::Format for AdcCtrl {
         )
     }
 }
-#[doc = "Various Analog blocks configuration (like FRO 192MHz trimmings source ...)"]
+#[doc = "Various Analog blocks configuration (like FRO 192MHz trimmings source ...)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct AnalogCtrlCfg(pub u32);
@@ -80,7 +80,7 @@ impl defmt::Format for AnalogCtrlCfg {
         )
     }
 }
-#[doc = "Analog Macroblock Identity registers, Flash Status registers"]
+#[doc = "Analog Macroblock Identity registers, Flash Status registers."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct AnalogCtrlStatus(pub u32);
@@ -135,7 +135,7 @@ impl defmt::Format for AnalogCtrlStatus {
         )
     }
 }
-#[doc = "AUX_BIAS"]
+#[doc = "AUX_BIAS."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct AuxBias(pub u32);
@@ -260,7 +260,7 @@ impl defmt::Format for AuxBias {
         )
     }
 }
-#[doc = "Brown Out Detectors (BoDs) & DCDC interrupts generation control register"]
+#[doc = "Brown Out Detectors (BoDs) & DCDC interrupts generation control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct BodDcdcIntCtrl(pub u32);
@@ -371,7 +371,7 @@ impl defmt::Format for BodDcdcIntCtrl {
         )
     }
 }
-#[doc = "BoDs & DCDC interrupts status register"]
+#[doc = "BoDs & DCDC interrupts status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct BodDcdcIntStatus(pub u32);
@@ -524,7 +524,7 @@ impl defmt::Format for BodDcdcIntStatus {
         )
     }
 }
-#[doc = "Dummy Control bus to analog modules"]
+#[doc = "Dummy Control bus to analog modules."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DummyCtrl(pub u32);
@@ -565,19 +565,19 @@ impl defmt::Format for DummyCtrl {
         )
     }
 }
-#[doc = "Frequency Measure function control register"]
+#[doc = "Frequency Measure function control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FreqMeCtrl(pub u32);
 impl FreqMeCtrl {
-    #[doc = "Frequency measure result /Frequency measur scale"]
+    #[doc = "Frequency measure result /Frequency measur scale."]
     #[must_use]
     #[inline(always)]
     pub const fn capval_scale(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x7fff_ffff;
         val as u32
     }
-    #[doc = "Frequency measure result /Frequency measur scale"]
+    #[doc = "Frequency measure result /Frequency measur scale."]
     #[inline(always)]
     pub const fn set_capval_scale(&mut self, val: u32) {
         self.0 = (self.0 & !(0x7fff_ffff << 0usize)) | (((val as u32) & 0x7fff_ffff) << 0usize);
@@ -620,7 +620,7 @@ impl defmt::Format for FreqMeCtrl {
         )
     }
 }
-#[doc = "192MHz Free Running OScillator (FRO) Control register"]
+#[doc = "192MHz Free Running OScillator (FRO) Control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Fro192mCtrl(pub u32);
@@ -731,7 +731,7 @@ impl defmt::Format for Fro192mCtrl {
         )
     }
 }
-#[doc = "192MHz Free Running OScillator (FRO) Status register"]
+#[doc = "192MHz Free Running OScillator (FRO) Status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Fro192mStatus(pub u32);
@@ -786,7 +786,7 @@ impl defmt::Format for Fro192mStatus {
         )
     }
 }
-#[doc = "High Speed Crystal Oscillator (12 MHz - 32 MHz) Voltage Source Supply Control register"]
+#[doc = "High Speed Crystal Oscillator (12 MHz - 32 MHz) Voltage Source Supply Control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct LdoXo32m(pub u32);
@@ -1032,14 +1032,14 @@ impl Ringo0Ctrl {
     pub const fn set_e_pn1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "Ringo out Clock divider value. Frequency Output = Frequency input / (DIViSOR+1). (minimum = Frequency input / 16)"]
+    #[doc = "Ringo out Clock divider value. Frequency Output = Frequency input / (DIViSOR+1). (minimum = Frequency input / 16)."]
     #[must_use]
     #[inline(always)]
     pub const fn divisor(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x0f;
         val as u8
     }
-    #[doc = "Ringo out Clock divider value. Frequency Output = Frequency input / (DIViSOR+1). (minimum = Frequency input / 16)"]
+    #[doc = "Ringo out Clock divider value. Frequency Output = Frequency input / (DIViSOR+1). (minimum = Frequency input / 16)."]
     #[inline(always)]
     pub const fn set_divisor(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
@@ -1219,14 +1219,14 @@ impl Ringo1Ctrl {
     pub const fn set_e_m5(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Ringo out Clock divider value. Frequency Output = Frequency input / (DIViSOR+1). (minimum = Frequency input / 16)"]
+    #[doc = "Ringo out Clock divider value. Frequency Output = Frequency input / (DIViSOR+1). (minimum = Frequency input / 16)."]
     #[must_use]
     #[inline(always)]
     pub const fn divisor(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x0f;
         val as u8
     }
-    #[doc = "Ringo out Clock divider value. Frequency Output = Frequency input / (DIViSOR+1). (minimum = Frequency input / 16)"]
+    #[doc = "Ringo out Clock divider value. Frequency Output = Frequency input / (DIViSOR+1). (minimum = Frequency input / 16)."]
     #[inline(always)]
     pub const fn set_divisor(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
@@ -1400,14 +1400,14 @@ impl Ringo2Ctrl {
     pub const fn set_e_m5(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Ringo out Clock divider value. Frequency Output = Frequency input / (DIViSOR+1). (minimum = Frequency input / 16)"]
+    #[doc = "Ringo out Clock divider value. Frequency Output = Frequency input / (DIViSOR+1). (minimum = Frequency input / 16)."]
     #[must_use]
     #[inline(always)]
     pub const fn divisor(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x0f;
         val as u8
     }
-    #[doc = "Ringo out Clock divider value. Frequency Output = Frequency input / (DIViSOR+1). (minimum = Frequency input / 16)"]
+    #[doc = "Ringo out Clock divider value. Frequency Output = Frequency input / (DIViSOR+1). (minimum = Frequency input / 16)."]
     #[inline(always)]
     pub const fn set_divisor(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
@@ -1468,7 +1468,7 @@ impl defmt::Format for Ringo2Ctrl {
         )
     }
 }
-#[doc = "USB High Speed Phy Control"]
+#[doc = "USB High Speed Phy Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct UsbhsPhyCtrl(pub u32);
@@ -1537,7 +1537,7 @@ impl defmt::Format for UsbhsPhyCtrl {
         )
     }
 }
-#[doc = "USB High Speed Phy Trim values"]
+#[doc = "USB High Speed Phy Trim values."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct UsbhsPhyTrim(pub u32);
@@ -1665,7 +1665,7 @@ impl defmt::Format for UsbhsPhyTrim {
         )
     }
 }
-#[doc = "High speed Crystal Oscillator Control register"]
+#[doc = "High speed Crystal Oscillator Control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Xo32mCtrl(pub u32);
@@ -1682,26 +1682,26 @@ impl Xo32mCtrl {
     pub const fn set_slave(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "Tune capa banks of High speed Crystal Oscillator input pin"]
+    #[doc = "Tune capa banks of High speed Crystal Oscillator input pin."]
     #[must_use]
     #[inline(always)]
     pub const fn osc_cap_in(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x7f;
         val as u8
     }
-    #[doc = "Tune capa banks of High speed Crystal Oscillator input pin"]
+    #[doc = "Tune capa banks of High speed Crystal Oscillator input pin."]
     #[inline(always)]
     pub const fn set_osc_cap_in(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 8usize)) | (((val as u32) & 0x7f) << 8usize);
     }
-    #[doc = "Tune capa banks of High speed Crystal Oscillator output pin"]
+    #[doc = "Tune capa banks of High speed Crystal Oscillator output pin."]
     #[must_use]
     #[inline(always)]
     pub const fn osc_cap_out(&self) -> u8 {
         let val = (self.0 >> 15usize) & 0x7f;
         val as u8
     }
-    #[doc = "Tune capa banks of High speed Crystal Oscillator output pin"]
+    #[doc = "Tune capa banks of High speed Crystal Oscillator output pin."]
     #[inline(always)]
     pub const fn set_osc_cap_out(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 15usize)) | (((val as u32) & 0x7f) << 15usize);
@@ -1776,7 +1776,7 @@ impl defmt::Format for Xo32mCtrl {
         )
     }
 }
-#[doc = "High speed Crystal Oscillator Status register"]
+#[doc = "High speed Crystal Oscillator Status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Xo32mStatus(pub u32);

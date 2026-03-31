@@ -382,7 +382,7 @@ impl From<IntStatusFrqCtFail> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IntStatusHwErr {
-    #[doc = "no error"]
+    #[doc = "no error."]
     HW_ERR_0 = 0x0,
     #[doc = "error detected."]
     HW_ERR_1 = 0x01,
@@ -620,13 +620,13 @@ impl From<NoPrgm> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum OscDiv {
-    #[doc = "use ring oscillator with no divide"]
+    #[doc = "use ring oscillator with no divide."]
     OSC_DIV_0 = 0x0,
-    #[doc = "use ring oscillator divided-by-2"]
+    #[doc = "use ring oscillator divided-by-2."]
     OSC_DIV_1 = 0x01,
-    #[doc = "use ring oscillator divided-by-4"]
+    #[doc = "use ring oscillator divided-by-4."]
     OSC_DIV_2 = 0x02,
-    #[doc = "use ring oscillator divided-by-8"]
+    #[doc = "use ring oscillator divided-by-8."]
     OSC_DIV_3 = 0x03,
 }
 impl OscDiv {
@@ -655,11 +655,11 @@ impl From<OscDiv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SampMode {
-    #[doc = "use Von Neumann data into both Entropy shifter and Statistical Checker"]
+    #[doc = "use Von Neumann data into both Entropy shifter and Statistical Checker."]
     SAMP_MODE_0 = 0x0,
-    #[doc = "use raw data into both Entropy shifter and Statistical Checker"]
+    #[doc = "use raw data into both Entropy shifter and Statistical Checker."]
     SAMP_MODE_1 = 0x01,
-    #[doc = "use Von Neumann data into Entropy shifter. Use raw data into Statistical Checker"]
+    #[doc = "use Von Neumann data into Entropy shifter. Use raw data into Statistical Checker."]
     SAMP_MODE_2 = 0x02,
     #[doc = "undefined/reserved."]
     SAMP_MODE_3 = 0x03,

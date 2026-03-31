@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Active {
-    #[doc = "eDMA is idle"]
+    #[doc = "eDMA is idle."]
     IDLE = 0x0,
-    #[doc = "eDMA is executing a channel"]
+    #[doc = "eDMA is executing a channel."]
     ACTIVE = 0x01,
 }
 impl Active {
@@ -33,9 +33,9 @@ impl From<Active> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cadn {
-    #[doc = "Writes 0 to only the TCDn_CSR\\[DONE\\] field specified in the CDNE field"]
+    #[doc = "Writes 0 to only the TCDn_CSR\\[DONE\\] field specified in the CDNE field."]
     CLEAR_DONE = 0x0,
-    #[doc = "Writes 0 to all bits in TCDn_CSR\\[DONE\\]"]
+    #[doc = "Writes 0 to all bits in TCDn_CSR\\[DONE\\]."]
     CLEAR_ALL = 0x01,
 }
 impl Cadn {
@@ -64,9 +64,9 @@ impl From<Cadn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Caee {
-    #[doc = "Write 0 only to the EEI field specified in the CEEI field"]
+    #[doc = "Write 0 only to the EEI field specified in the CEEI field."]
     CLEAR_EEI = 0x0,
-    #[doc = "Write 0 to all fields in EEI"]
+    #[doc = "Write 0 to all fields in EEI."]
     CLEAR_ALL = 0x01,
 }
 impl Caee {
@@ -95,9 +95,9 @@ impl From<Caee> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Caei {
-    #[doc = "Write 0 to only the ERR field specified in the CERR field"]
+    #[doc = "Write 0 to only the ERR field specified in the CERR field."]
     CLEAR_ERR = 0x0,
-    #[doc = "Write 0 to all fields in ERR"]
+    #[doc = "Write 0 to all fields in ERR."]
     CLEAR_ALL = 0x01,
 }
 impl Caei {
@@ -126,9 +126,9 @@ impl From<Caei> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Caer {
-    #[doc = "Write 0 to only the ERQ field specified in the CERQ field"]
+    #[doc = "Write 0 to only the ERQ field specified in the CERQ field."]
     CLEAR_ERQ = 0x0,
-    #[doc = "Write 0 to all fields in ERQ"]
+    #[doc = "Write 0 to all fields in ERQ."]
     CLEAR_ALL = 0x01,
 }
 impl Caer {
@@ -157,9 +157,9 @@ impl From<Caer> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cair {
-    #[doc = "Clear only the INT field specified in the CINT field"]
+    #[doc = "Clear only the INT field specified in the CINT field."]
     CLEAR_INT = 0x0,
-    #[doc = "Clear all bits in INT"]
+    #[doc = "Clear all bits in INT."]
     CLEAR_ALL = 0x01,
 }
 impl Cair {
@@ -188,7 +188,7 @@ impl From<Cair> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CdneNop {
-    #[doc = "Normal operation"]
+    #[doc = "Normal operation."]
     NORMAL_OPS = 0x0,
     #[doc = "No operation; all other fields in this register are ignored."]
     NO_OPS = 0x01,
@@ -219,9 +219,9 @@ impl From<CdneNop> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CeeiNop {
-    #[doc = "Normal operation"]
+    #[doc = "Normal operation."]
     NORMAL_OPS = 0x0,
-    #[doc = "No operation, ignore the other fields in this register"]
+    #[doc = "No operation, ignore the other fields in this register."]
     NO_OPS = 0x01,
 }
 impl CeeiNop {
@@ -250,9 +250,9 @@ impl From<CeeiNop> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CerqNop {
-    #[doc = "Normal operation"]
+    #[doc = "Normal operation."]
     NORMAL_OPS = 0x0,
-    #[doc = "No operation, ignore the other fields in this register"]
+    #[doc = "No operation, ignore the other fields in this register."]
     NO_OPS = 0x01,
 }
 impl CerqNop {
@@ -281,7 +281,7 @@ impl From<CerqNop> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CerrNop {
-    #[doc = "Normal operation"]
+    #[doc = "Normal operation."]
     NORMAL_OPS = 0x0,
     #[doc = "No operation; all other fields in this register are ignored."]
     NO_OPS = 0x01,
@@ -312,7 +312,7 @@ impl From<CerrNop> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CintNop {
-    #[doc = "Normal operation"]
+    #[doc = "Normal operation."]
     NORMAL_OPS = 0x0,
     #[doc = "No operation; all other fields in this register are ignored."]
     NO_OPS = 0x01,
@@ -343,9 +343,9 @@ impl From<CintNop> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Clm {
-    #[doc = "Continuous link mode is off"]
+    #[doc = "Continuous link mode is off."]
     CLM_OFF = 0x0,
-    #[doc = "Continuous link mode is on"]
+    #[doc = "Continuous link mode is on."]
     CLM_ON = 0x01,
 }
 impl Clm {
@@ -374,9 +374,9 @@ impl From<Clm> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CrEcx {
-    #[doc = "Normal operation"]
+    #[doc = "Normal operation."]
     NORMAL_OPS = 0x0,
-    #[doc = "Cancel the remaining data transfer"]
+    #[doc = "Cancel the remaining data transfer."]
     CANCEL = 0x01,
 }
 impl CrEcx {
@@ -405,9 +405,9 @@ impl From<CrEcx> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cx {
-    #[doc = "Normal operation"]
+    #[doc = "Normal operation."]
     NORMAL_OPS = 0x0,
-    #[doc = "Cancel the remaining data transfer"]
+    #[doc = "Cancel the remaining data transfer."]
     CANCEL = 0x01,
 }
 impl Cx {
@@ -436,9 +436,9 @@ impl From<Cx> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DchpriDpa {
-    #[doc = "Channel n can suspend a lower priority channel"]
+    #[doc = "Channel n can suspend a lower priority channel."]
     ENABLED = 0x0,
-    #[doc = "Channel n cannot suspend any channel, regardless of channel priority"]
+    #[doc = "Channel n cannot suspend any channel, regardless of channel priority."]
     DISABLED = 0x01,
 }
 impl DchpriDpa {
@@ -467,9 +467,9 @@ impl From<DchpriDpa> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EsEcx {
-    #[doc = "No canceled transfers"]
+    #[doc = "No canceled transfers."]
     NO_CANCELS = 0x0,
-    #[doc = "The most-recently recorded entry was a canceled transfer initiated by the error cancel transfer field"]
+    #[doc = "The most-recently recorded entry was a canceled transfer initiated by the error cancel transfer field."]
     CANCELED = 0x01,
 }
 impl EsEcx {
@@ -498,9 +498,9 @@ impl From<EsEcx> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Halt {
-    #[doc = "Normal operation"]
+    #[doc = "Normal operation."]
     NORMAL_OPS = 0x0,
-    #[doc = "eDMA operations halted"]
+    #[doc = "eDMA operations halted."]
     HALT_DMA = 0x01,
 }
 impl Halt {
@@ -529,9 +529,9 @@ impl From<Halt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Hoe {
-    #[doc = "Normal operation"]
+    #[doc = "Normal operation."]
     NORMAL_OPS = 0x0,
-    #[doc = "Error causes HALT field to be automatically set to 1"]
+    #[doc = "Error causes HALT field to be automatically set to 1."]
     HALT_ON_ERROR = 0x01,
 }
 impl Hoe {
@@ -560,9 +560,9 @@ impl From<Hoe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Saee {
-    #[doc = "Write 1 only to the EEI field specified in the SEEI field"]
+    #[doc = "Write 1 only to the EEI field specified in the SEEI field."]
     SET_EEI = 0x0,
-    #[doc = "Writes 1 to all fields in EEI"]
+    #[doc = "Writes 1 to all fields in EEI."]
     SET_ALL = 0x01,
 }
 impl Saee {
@@ -591,9 +591,9 @@ impl From<Saee> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Saer {
-    #[doc = "Write 1 to only the ERQ field specified in the SERQ field"]
+    #[doc = "Write 1 to only the ERQ field specified in the SERQ field."]
     SET_ERQ = 0x0,
-    #[doc = "Write 1 to all fields in ERQ"]
+    #[doc = "Write 1 to all fields in ERQ."]
     SET_ALL = 0x01,
 }
 impl Saer {
@@ -622,9 +622,9 @@ impl From<Saer> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sast {
-    #[doc = "Write 1 to only the TCDn_CSR\\[START\\] field specified in the SSRT field"]
+    #[doc = "Write 1 to only the TCDn_CSR\\[START\\] field specified in the SSRT field."]
     SET_START = 0x0,
-    #[doc = "Write 1 to all bits in TCDn_CSR\\[START\\]"]
+    #[doc = "Write 1 to all bits in TCDn_CSR\\[START\\]."]
     SET_ALL = 0x01,
 }
 impl Sast {
@@ -653,9 +653,9 @@ impl From<Sast> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SeeiNop {
-    #[doc = "Normal operation"]
+    #[doc = "Normal operation."]
     NORMAL_OPS = 0x0,
-    #[doc = "No operation, ignore the other fields in this register"]
+    #[doc = "No operation, ignore the other fields in this register."]
     NO_OPS = 0x01,
 }
 impl SeeiNop {
@@ -684,9 +684,9 @@ impl From<SeeiNop> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SerqNop {
-    #[doc = "Normal operation"]
+    #[doc = "Normal operation."]
     NORMAL_OPS = 0x0,
-    #[doc = "No operation, ignore the other fields in this register"]
+    #[doc = "No operation, ignore the other fields in this register."]
     NO_OPS = 0x01,
 }
 impl SerqNop {
@@ -715,7 +715,7 @@ impl From<SerqNop> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SsrtNop {
-    #[doc = "Normal operation"]
+    #[doc = "Normal operation."]
     NORMAL_OPS = 0x0,
     #[doc = "No operation; all other fields in this register are ignored."]
     NO_OPS = 0x01,
@@ -746,16 +746,16 @@ impl From<SsrtNop> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TcdAttrSsize {
-    #[doc = "8-bit"]
+    #[doc = "8-bit."]
     EIGHT = 0x0,
-    #[doc = "16-bit"]
+    #[doc = "16-bit."]
     SIXTEEN_BIT = 0x01,
-    #[doc = "32-bit"]
+    #[doc = "32-bit."]
     THIRTYTWO_BIT = 0x02,
-    #[doc = "64-bit"]
+    #[doc = "64-bit."]
     SIXTYFOUR = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "32-byte burst (4 beats of 64 bits)"]
+    #[doc = "32-byte burst (4 beats of 64 bits)."]
     THIRTYTWO_BYTE = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -786,12 +786,12 @@ impl From<TcdAttrSsize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TcdCsrBwc {
-    #[doc = "No eDMA engine stalls"]
+    #[doc = "No eDMA engine stalls."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "eDMA engine stalls for 4 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     STALL4 = 0x02,
-    #[doc = "eDMA engine stalls for 8 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     STALL8 = 0x03,
 }
 impl TcdCsrBwc {
@@ -820,9 +820,9 @@ impl From<TcdCsrBwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TcdCsrEsg {
-    #[doc = "The current channel's TCD is normal format"]
+    #[doc = "The current channel's TCD is normal format."]
     NORMAL = 0x0,
-    #[doc = "The current channel's TCD specifies a scatter gather format"]
+    #[doc = "The current channel's TCD specifies a scatter gather format."]
     SCATTER = 0x01,
 }
 impl TcdCsrEsg {

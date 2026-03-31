@@ -1,4 +1,4 @@
-#[doc = "LPC-Next0 I2C-bus interfaces"]
+#[doc = "LPC-Next0 I2C-bus interfaces."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct I2c {
     ptr: *mut u8,

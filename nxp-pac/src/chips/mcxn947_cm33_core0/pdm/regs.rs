@@ -1,172 +1,172 @@
-#[doc = "MICFIL Control 1"]
+#[doc = "MICFIL Control 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl1(pub u32);
 impl Ctrl1 {
-    #[doc = "Channel 0 Enable"]
+    #[doc = "Channel 0 Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ch0en(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Channel 0 Enable"]
+    #[doc = "Channel 0 Enable."]
     #[inline(always)]
     pub const fn set_ch0en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Channel 1 Enable"]
+    #[doc = "Channel 1 Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ch1en(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Channel 1 Enable"]
+    #[doc = "Channel 1 Enable."]
     #[inline(always)]
     pub const fn set_ch1en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Channel 2 Enable"]
+    #[doc = "Channel 2 Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ch2en(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Channel 2 Enable"]
+    #[doc = "Channel 2 Enable."]
     #[inline(always)]
     pub const fn set_ch2en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Channel 3 Enable"]
+    #[doc = "Channel 3 Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ch3en(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Channel 3 Enable"]
+    #[doc = "Channel 3 Enable."]
     #[inline(always)]
     pub const fn set_ch3en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "Frame Synchronization Enable"]
+    #[doc = "Frame Synchronization Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn fsyncen(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Frame Synchronization Enable"]
+    #[doc = "Frame Synchronization Enable."]
     #[inline(always)]
     pub const fn set_fsyncen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Decimation Filter Enable in Stop"]
+    #[doc = "Decimation Filter Enable in Stop."]
     #[must_use]
     #[inline(always)]
     pub const fn decfils(&self) -> super::vals::Decfils {
         let val = (self.0 >> 20usize) & 0x01;
         super::vals::Decfils::from_bits(val as u8)
     }
-    #[doc = "Decimation Filter Enable in Stop"]
+    #[doc = "Decimation Filter Enable in Stop."]
     #[inline(always)]
     pub const fn set_decfils(&mut self, val: super::vals::Decfils) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
     }
-    #[doc = "Error Interruption Enable"]
+    #[doc = "Error Interruption Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn erren(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "Error Interruption Enable"]
+    #[doc = "Error Interruption Enable."]
     #[inline(always)]
     pub const fn set_erren(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
-    #[doc = "DMA Interrupt Selection"]
+    #[doc = "DMA Interrupt Selection."]
     #[must_use]
     #[inline(always)]
     pub const fn disel(&self) -> super::vals::Disel {
         let val = (self.0 >> 24usize) & 0x03;
         super::vals::Disel::from_bits(val as u8)
     }
-    #[doc = "DMA Interrupt Selection"]
+    #[doc = "DMA Interrupt Selection."]
     #[inline(always)]
     pub const fn set_disel(&mut self, val: super::vals::Disel) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
     }
-    #[doc = "Module Enable in Debug"]
+    #[doc = "Module Enable in Debug."]
     #[must_use]
     #[inline(always)]
     pub const fn dbge(&self) -> bool {
         let val = (self.0 >> 26usize) & 0x01;
         val != 0
     }
-    #[doc = "Module Enable in Debug"]
+    #[doc = "Module Enable in Debug."]
     #[inline(always)]
     pub const fn set_dbge(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "Software Reset"]
+    #[doc = "Software Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn sres(&self) -> super::vals::Sres {
         let val = (self.0 >> 27usize) & 0x01;
         super::vals::Sres::from_bits(val as u8)
     }
-    #[doc = "Software Reset"]
+    #[doc = "Software Reset."]
     #[inline(always)]
     pub const fn set_sres(&mut self, val: super::vals::Sres) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val.to_bits() as u32) & 0x01) << 27usize);
     }
-    #[doc = "Debug Mode"]
+    #[doc = "Debug Mode."]
     #[must_use]
     #[inline(always)]
     pub const fn dbg(&self) -> super::vals::Dbg {
         let val = (self.0 >> 28usize) & 0x01;
         super::vals::Dbg::from_bits(val as u8)
     }
-    #[doc = "Debug Mode"]
+    #[doc = "Debug Mode."]
     #[inline(always)]
     pub const fn set_dbg(&mut self, val: super::vals::Dbg) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val.to_bits() as u32) & 0x01) << 28usize);
     }
-    #[doc = "MICFIL Enable"]
+    #[doc = "MICFIL Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn pdmien(&self) -> super::vals::Pdmien {
         let val = (self.0 >> 29usize) & 0x01;
         super::vals::Pdmien::from_bits(val as u8)
     }
-    #[doc = "MICFIL Enable"]
+    #[doc = "MICFIL Enable."]
     #[inline(always)]
     pub const fn set_pdmien(&mut self, val: super::vals::Pdmien) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
-    #[doc = "Stop Enable"]
+    #[doc = "Stop Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dozen(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "Stop Enable"]
+    #[doc = "Stop Enable."]
     #[inline(always)]
     pub const fn set_dozen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "Module Disable"]
+    #[doc = "Module Disable."]
     #[must_use]
     #[inline(always)]
     pub const fn mdis(&self) -> super::vals::Mdis {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::Mdis::from_bits(val as u8)
     }
-    #[doc = "Module Disable"]
+    #[doc = "Module Disable."]
     #[inline(always)]
     pub const fn set_mdis(&mut self, val: super::vals::Mdis) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -221,55 +221,55 @@ impl defmt::Format for Ctrl1 {
         )
     }
 }
-#[doc = "MICFIL Control 2"]
+#[doc = "MICFIL Control 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl2(pub u32);
 impl Ctrl2 {
-    #[doc = "Clock Divider"]
+    #[doc = "Clock Divider."]
     #[must_use]
     #[inline(always)]
     pub const fn clkdiv(&self) -> super::vals::Clkdiv {
         let val = (self.0 >> 0usize) & 0xff;
         super::vals::Clkdiv::from_bits(val as u8)
     }
-    #[doc = "Clock Divider"]
+    #[doc = "Clock Divider."]
     #[inline(always)]
     pub const fn set_clkdiv(&mut self, val: super::vals::Clkdiv) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val.to_bits() as u32) & 0xff) << 0usize);
     }
-    #[doc = "Clock Divider Disable"]
+    #[doc = "Clock Divider Disable."]
     #[must_use]
     #[inline(always)]
     pub const fn clkdivdis(&self) -> super::vals::Clkdivdis {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::Clkdivdis::from_bits(val as u8)
     }
-    #[doc = "Clock Divider Disable"]
+    #[doc = "Clock Divider Disable."]
     #[inline(always)]
     pub const fn set_clkdivdis(&mut self, val: super::vals::Clkdivdis) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "CIC Decimation Rate"]
+    #[doc = "CIC Decimation Rate."]
     #[must_use]
     #[inline(always)]
     pub const fn cicosr(&self) -> super::vals::Cicosr {
         let val = (self.0 >> 16usize) & 0x0f;
         super::vals::Cicosr::from_bits(val as u8)
     }
-    #[doc = "CIC Decimation Rate"]
+    #[doc = "CIC Decimation Rate."]
     #[inline(always)]
     pub const fn set_cicosr(&mut self, val: super::vals::Cicosr) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val.to_bits() as u32) & 0x0f) << 16usize);
     }
-    #[doc = "Quality Mode"]
+    #[doc = "Quality Mode."]
     #[must_use]
     #[inline(always)]
     pub const fn qsel(&self) -> super::vals::Qsel {
         let val = (self.0 >> 25usize) & 0x07;
         super::vals::Qsel::from_bits(val as u8)
     }
-    #[doc = "Quality Mode"]
+    #[doc = "Quality Mode."]
     #[inline(always)]
     pub const fn set_qsel(&mut self, val: super::vals::Qsel) {
         self.0 = (self.0 & !(0x07 << 25usize)) | (((val.to_bits() as u32) & 0x07) << 25usize);
@@ -304,19 +304,19 @@ impl defmt::Format for Ctrl2 {
         )
     }
 }
-#[doc = "MICFIL Output Result"]
+#[doc = "MICFIL Output Result."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Datach(pub u32);
 impl Datach {
-    #[doc = "Channel n Data"]
+    #[doc = "Channel n Data."]
     #[must_use]
     #[inline(always)]
     pub const fn data(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Channel n Data"]
+    #[doc = "Channel n Data."]
     #[inline(always)]
     pub const fn set_data(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -341,55 +341,55 @@ impl defmt::Format for Datach {
         defmt::write!(f, "Datach {{ data: {=u32:?} }}", self.data())
     }
 }
-#[doc = "MICFIL DC Remover Control"]
+#[doc = "MICFIL DC Remover Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DcCtrl(pub u32);
 impl DcCtrl {
-    #[doc = "Channel 0 DC Remover Configuration"]
+    #[doc = "Channel 0 DC Remover Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn dcconfig0(&self) -> super::vals::DcCtrlDcconfig0 {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::DcCtrlDcconfig0::from_bits(val as u8)
     }
-    #[doc = "Channel 0 DC Remover Configuration"]
+    #[doc = "Channel 0 DC Remover Configuration."]
     #[inline(always)]
     pub const fn set_dcconfig0(&mut self, val: super::vals::DcCtrlDcconfig0) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "Channel 1 DC Remover Configuration"]
+    #[doc = "Channel 1 DC Remover Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn dcconfig1(&self) -> super::vals::DcCtrlDcconfig1 {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::DcCtrlDcconfig1::from_bits(val as u8)
     }
-    #[doc = "Channel 1 DC Remover Configuration"]
+    #[doc = "Channel 1 DC Remover Configuration."]
     #[inline(always)]
     pub const fn set_dcconfig1(&mut self, val: super::vals::DcCtrlDcconfig1) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
-    #[doc = "Channel 2 DC Remover Configuration"]
+    #[doc = "Channel 2 DC Remover Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn dcconfig2(&self) -> super::vals::DcCtrlDcconfig2 {
         let val = (self.0 >> 4usize) & 0x03;
         super::vals::DcCtrlDcconfig2::from_bits(val as u8)
     }
-    #[doc = "Channel 2 DC Remover Configuration"]
+    #[doc = "Channel 2 DC Remover Configuration."]
     #[inline(always)]
     pub const fn set_dcconfig2(&mut self, val: super::vals::DcCtrlDcconfig2) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
-    #[doc = "Channel 3 DC Remover Configuration"]
+    #[doc = "Channel 3 DC Remover Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn dcconfig3(&self) -> super::vals::DcCtrlDcconfig3 {
         let val = (self.0 >> 6usize) & 0x03;
         super::vals::DcCtrlDcconfig3::from_bits(val as u8)
     }
-    #[doc = "Channel 3 DC Remover Configuration"]
+    #[doc = "Channel 3 DC Remover Configuration."]
     #[inline(always)]
     pub const fn set_dcconfig3(&mut self, val: super::vals::DcCtrlDcconfig3) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u32) & 0x03) << 6usize);
@@ -424,55 +424,55 @@ impl defmt::Format for DcCtrl {
         )
     }
 }
-#[doc = "MICFIL Output DC Remover Control"]
+#[doc = "MICFIL Output DC Remover Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DcOutCtrl(pub u32);
 impl DcOutCtrl {
-    #[doc = "Channel 0 DC Remover Configuration"]
+    #[doc = "Channel 0 DC Remover Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn dcconfig0(&self) -> super::vals::DcOutCtrlDcconfig0 {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::DcOutCtrlDcconfig0::from_bits(val as u8)
     }
-    #[doc = "Channel 0 DC Remover Configuration"]
+    #[doc = "Channel 0 DC Remover Configuration."]
     #[inline(always)]
     pub const fn set_dcconfig0(&mut self, val: super::vals::DcOutCtrlDcconfig0) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "Channel 1 DC Remover Configuration"]
+    #[doc = "Channel 1 DC Remover Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn dcconfig1(&self) -> super::vals::DcOutCtrlDcconfig1 {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::DcOutCtrlDcconfig1::from_bits(val as u8)
     }
-    #[doc = "Channel 1 DC Remover Configuration"]
+    #[doc = "Channel 1 DC Remover Configuration."]
     #[inline(always)]
     pub const fn set_dcconfig1(&mut self, val: super::vals::DcOutCtrlDcconfig1) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
-    #[doc = "Channel 2 DC Remover Configuration"]
+    #[doc = "Channel 2 DC Remover Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn dcconfig2(&self) -> super::vals::DcOutCtrlDcconfig2 {
         let val = (self.0 >> 4usize) & 0x03;
         super::vals::DcOutCtrlDcconfig2::from_bits(val as u8)
     }
-    #[doc = "Channel 2 DC Remover Configuration"]
+    #[doc = "Channel 2 DC Remover Configuration."]
     #[inline(always)]
     pub const fn set_dcconfig2(&mut self, val: super::vals::DcOutCtrlDcconfig2) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
-    #[doc = "Channel 3 DC Remover Configuration"]
+    #[doc = "Channel 3 DC Remover Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn dcconfig3(&self) -> super::vals::DcOutCtrlDcconfig3 {
         let val = (self.0 >> 6usize) & 0x03;
         super::vals::DcOutCtrlDcconfig3::from_bits(val as u8)
     }
-    #[doc = "Channel 3 DC Remover Configuration"]
+    #[doc = "Channel 3 DC Remover Configuration."]
     #[inline(always)]
     pub const fn set_dcconfig3(&mut self, val: super::vals::DcOutCtrlDcconfig3) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u32) & 0x03) << 6usize);
@@ -507,19 +507,19 @@ impl defmt::Format for DcOutCtrl {
         )
     }
 }
-#[doc = "MICFIL FIFO Control"]
+#[doc = "MICFIL FIFO Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FifoCtrl(pub u32);
 impl FifoCtrl {
-    #[doc = "FIFO Watermark Control"]
+    #[doc = "FIFO Watermark Control."]
     #[must_use]
     #[inline(always)]
     pub const fn fifowmk(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "FIFO Watermark Control"]
+    #[doc = "FIFO Watermark Control."]
     #[inline(always)]
     pub const fn set_fifowmk(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
@@ -544,103 +544,103 @@ impl defmt::Format for FifoCtrl {
         defmt::write!(f, "FifoCtrl {{ fifowmk: {=u8:?} }}", self.fifowmk())
     }
 }
-#[doc = "MICFIL FIFO Status"]
+#[doc = "MICFIL FIFO Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FifoStat(pub u32);
 impl FifoStat {
-    #[doc = "FIFO Overflow Exception Flag for Channel 0"]
+    #[doc = "FIFO Overflow Exception Flag for Channel 0."]
     #[must_use]
     #[inline(always)]
     pub const fn fifoovf0(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "FIFO Overflow Exception Flag for Channel 0"]
+    #[doc = "FIFO Overflow Exception Flag for Channel 0."]
     #[inline(always)]
     pub const fn set_fifoovf0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "FIFO Overflow Exception Flag for Channel 1"]
+    #[doc = "FIFO Overflow Exception Flag for Channel 1."]
     #[must_use]
     #[inline(always)]
     pub const fn fifoovf1(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "FIFO Overflow Exception Flag for Channel 1"]
+    #[doc = "FIFO Overflow Exception Flag for Channel 1."]
     #[inline(always)]
     pub const fn set_fifoovf1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "FIFO Overflow Exception Flag for Channel 2"]
+    #[doc = "FIFO Overflow Exception Flag for Channel 2."]
     #[must_use]
     #[inline(always)]
     pub const fn fifoovf2(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "FIFO Overflow Exception Flag for Channel 2"]
+    #[doc = "FIFO Overflow Exception Flag for Channel 2."]
     #[inline(always)]
     pub const fn set_fifoovf2(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "FIFO Overflow Exception Flag for Channel 3"]
+    #[doc = "FIFO Overflow Exception Flag for Channel 3."]
     #[must_use]
     #[inline(always)]
     pub const fn fifoovf3(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "FIFO Overflow Exception Flag for Channel 3"]
+    #[doc = "FIFO Overflow Exception Flag for Channel 3."]
     #[inline(always)]
     pub const fn set_fifoovf3(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "FIFO Underflow Exception Flag for Channel 0"]
+    #[doc = "FIFO Underflow Exception Flag for Channel 0."]
     #[must_use]
     #[inline(always)]
     pub const fn fifound0(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "FIFO Underflow Exception Flag for Channel 0"]
+    #[doc = "FIFO Underflow Exception Flag for Channel 0."]
     #[inline(always)]
     pub const fn set_fifound0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "FIFO Underflow Exception Flag for Channel 1"]
+    #[doc = "FIFO Underflow Exception Flag for Channel 1."]
     #[must_use]
     #[inline(always)]
     pub const fn fifound1(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "FIFO Underflow Exception Flag for Channel 1"]
+    #[doc = "FIFO Underflow Exception Flag for Channel 1."]
     #[inline(always)]
     pub const fn set_fifound1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "FIFO Underflow Exception Flag for Channel 2"]
+    #[doc = "FIFO Underflow Exception Flag for Channel 2."]
     #[must_use]
     #[inline(always)]
     pub const fn fifound2(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "FIFO Underflow Exception Flag for Channel 2"]
+    #[doc = "FIFO Underflow Exception Flag for Channel 2."]
     #[inline(always)]
     pub const fn set_fifound2(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "FIFO Underflow Exception Flag for Channel 3"]
+    #[doc = "FIFO Underflow Exception Flag for Channel 3."]
     #[must_use]
     #[inline(always)]
     pub const fn fifound3(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "FIFO Underflow Exception Flag for Channel 3"]
+    #[doc = "FIFO Underflow Exception Flag for Channel 3."]
     #[inline(always)]
     pub const fn set_fifound3(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
@@ -683,19 +683,19 @@ impl defmt::Format for FifoStat {
         )
     }
 }
-#[doc = "Frame Synchronization Control"]
+#[doc = "Frame Synchronization Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FsyncCtrl(pub u32);
 impl FsyncCtrl {
-    #[doc = "Frame Synchronization Window Length"]
+    #[doc = "Frame Synchronization Window Length."]
     #[must_use]
     #[inline(always)]
     pub const fn fsynclen(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Frame Synchronization Window Length"]
+    #[doc = "Frame Synchronization Window Length."]
     #[inline(always)]
     pub const fn set_fsynclen(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -720,79 +720,79 @@ impl defmt::Format for FsyncCtrl {
         defmt::write!(f, "FsyncCtrl {{ fsynclen: {=u32:?} }}", self.fsynclen())
     }
 }
-#[doc = "Parameter"]
+#[doc = "Parameter."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Param(pub u32);
 impl Param {
-    #[doc = "Number of Microphone Pairs"]
+    #[doc = "Number of Microphone Pairs."]
     #[must_use]
     #[inline(always)]
     pub const fn npair(&self) -> super::vals::Npair {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Npair::from_bits(val as u8)
     }
-    #[doc = "Number of Microphone Pairs"]
+    #[doc = "Number of Microphone Pairs."]
     #[inline(always)]
     pub const fn set_npair(&mut self, val: super::vals::Npair) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
-    #[doc = "FIFO Pointer Width"]
+    #[doc = "FIFO Pointer Width."]
     #[must_use]
     #[inline(always)]
     pub const fn fifo_ptrwid(&self) -> super::vals::FifoPtrwid {
         let val = (self.0 >> 4usize) & 0x0f;
         super::vals::FifoPtrwid::from_bits(val as u8)
     }
-    #[doc = "FIFO Pointer Width"]
+    #[doc = "FIFO Pointer Width."]
     #[inline(always)]
     pub const fn set_fifo_ptrwid(&mut self, val: super::vals::FifoPtrwid) {
         self.0 = (self.0 & !(0x0f << 4usize)) | (((val.to_bits() as u32) & 0x0f) << 4usize);
     }
-    #[doc = "Filter Output Width"]
+    #[doc = "Filter Output Width."]
     #[must_use]
     #[inline(always)]
     pub const fn fil_out_width_24b(&self) -> super::vals::FilOutWidth24b {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::FilOutWidth24b::from_bits(val as u8)
     }
-    #[doc = "Filter Output Width"]
+    #[doc = "Filter Output Width."]
     #[inline(always)]
     pub const fn set_fil_out_width_24b(&mut self, val: super::vals::FilOutWidth24b) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
-    #[doc = "Low-Power Decimation Filter"]
+    #[doc = "Low-Power Decimation Filter."]
     #[must_use]
     #[inline(always)]
     pub const fn low_power(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Low-Power Decimation Filter"]
+    #[doc = "Low-Power Decimation Filter."]
     #[inline(always)]
     pub const fn set_low_power(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "Input DC Remover Bypass"]
+    #[doc = "Input DC Remover Bypass."]
     #[must_use]
     #[inline(always)]
     pub const fn dc_bypass(&self) -> super::vals::DcBypass {
         let val = (self.0 >> 10usize) & 0x01;
         super::vals::DcBypass::from_bits(val as u8)
     }
-    #[doc = "Input DC Remover Bypass"]
+    #[doc = "Input DC Remover Bypass."]
     #[inline(always)]
     pub const fn set_dc_bypass(&mut self, val: super::vals::DcBypass) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
-    #[doc = "Output DC Remover Bypass"]
+    #[doc = "Output DC Remover Bypass."]
     #[must_use]
     #[inline(always)]
     pub const fn dc_out_bypass(&self) -> super::vals::DcOutBypass {
         let val = (self.0 >> 11usize) & 0x01;
         super::vals::DcOutBypass::from_bits(val as u8)
     }
-    #[doc = "Output DC Remover Bypass"]
+    #[doc = "Output DC Remover Bypass."]
     #[inline(always)]
     pub const fn set_dc_out_bypass(&mut self, val: super::vals::DcOutBypass) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
@@ -831,55 +831,55 @@ impl defmt::Format for Param {
         )
     }
 }
-#[doc = "MICFIL Range Control"]
+#[doc = "MICFIL Range Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct RangeCtrl(pub u32);
 impl RangeCtrl {
-    #[doc = "Channel 0 Range Adjustment"]
+    #[doc = "Channel 0 Range Adjustment."]
     #[must_use]
     #[inline(always)]
     pub const fn rangeadj0(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "Channel 0 Range Adjustment"]
+    #[doc = "Channel 0 Range Adjustment."]
     #[inline(always)]
     pub const fn set_rangeadj0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Channel 1 Range Adjustment"]
+    #[doc = "Channel 1 Range Adjustment."]
     #[must_use]
     #[inline(always)]
     pub const fn rangeadj1(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x0f;
         val as u8
     }
-    #[doc = "Channel 1 Range Adjustment"]
+    #[doc = "Channel 1 Range Adjustment."]
     #[inline(always)]
     pub const fn set_rangeadj1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
     }
-    #[doc = "Channel 2 Range Adjustment"]
+    #[doc = "Channel 2 Range Adjustment."]
     #[must_use]
     #[inline(always)]
     pub const fn rangeadj2(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x0f;
         val as u8
     }
-    #[doc = "Channel 2 Range Adjustment"]
+    #[doc = "Channel 2 Range Adjustment."]
     #[inline(always)]
     pub const fn set_rangeadj2(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val as u32) & 0x0f) << 8usize);
     }
-    #[doc = "Channel 3 Range Adjustment"]
+    #[doc = "Channel 3 Range Adjustment."]
     #[must_use]
     #[inline(always)]
     pub const fn rangeadj3(&self) -> u8 {
         let val = (self.0 >> 12usize) & 0x0f;
         val as u8
     }
-    #[doc = "Channel 3 Range Adjustment"]
+    #[doc = "Channel 3 Range Adjustment."]
     #[inline(always)]
     pub const fn set_rangeadj3(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 12usize)) | (((val as u32) & 0x0f) << 12usize);
@@ -914,103 +914,103 @@ impl defmt::Format for RangeCtrl {
         )
     }
 }
-#[doc = "MICFIL Range Status"]
+#[doc = "MICFIL Range Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct RangeStat(pub u32);
 impl RangeStat {
-    #[doc = "Channel 0 Range Overflow Error Flag"]
+    #[doc = "Channel 0 Range Overflow Error Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn rangeovf0(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Channel 0 Range Overflow Error Flag"]
+    #[doc = "Channel 0 Range Overflow Error Flag."]
     #[inline(always)]
     pub const fn set_rangeovf0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Channel 1 Range Overflow Error Flag"]
+    #[doc = "Channel 1 Range Overflow Error Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn rangeovf1(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Channel 1 Range Overflow Error Flag"]
+    #[doc = "Channel 1 Range Overflow Error Flag."]
     #[inline(always)]
     pub const fn set_rangeovf1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Channel 2 Range Overflow Error Flag"]
+    #[doc = "Channel 2 Range Overflow Error Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn rangeovf2(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Channel 2 Range Overflow Error Flag"]
+    #[doc = "Channel 2 Range Overflow Error Flag."]
     #[inline(always)]
     pub const fn set_rangeovf2(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Channel 3 Range Overflow Error Flag"]
+    #[doc = "Channel 3 Range Overflow Error Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn rangeovf3(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Channel 3 Range Overflow Error Flag"]
+    #[doc = "Channel 3 Range Overflow Error Flag."]
     #[inline(always)]
     pub const fn set_rangeovf3(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "Channel 0 Range Underflow Error Flag"]
+    #[doc = "Channel 0 Range Underflow Error Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn rangeunf0(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Channel 0 Range Underflow Error Flag"]
+    #[doc = "Channel 0 Range Underflow Error Flag."]
     #[inline(always)]
     pub const fn set_rangeunf0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Channel 1 Range Underflow Error Flag"]
+    #[doc = "Channel 1 Range Underflow Error Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn rangeunf1(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Channel 1 Range Underflow Error Flag"]
+    #[doc = "Channel 1 Range Underflow Error Flag."]
     #[inline(always)]
     pub const fn set_rangeunf1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Channel 2 Range Underflow Error Flag"]
+    #[doc = "Channel 2 Range Underflow Error Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn rangeunf2(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Channel 2 Range Underflow Error Flag"]
+    #[doc = "Channel 2 Range Underflow Error Flag."]
     #[inline(always)]
     pub const fn set_rangeunf2(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Channel 3 Range Underflow Error Flag"]
+    #[doc = "Channel 3 Range Underflow Error Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn rangeunf3(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Channel 3 Range Underflow Error Flag"]
+    #[doc = "Channel 3 Range Underflow Error Flag."]
     #[inline(always)]
     pub const fn set_rangeunf3(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
@@ -1053,67 +1053,67 @@ impl defmt::Format for RangeStat {
         )
     }
 }
-#[doc = "MICFIL Status"]
+#[doc = "MICFIL Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Stat(pub u32);
 impl Stat {
-    #[doc = "Channel 0 Output Data Flag"]
+    #[doc = "Channel 0 Output Data Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn ch0f(&self) -> super::vals::Ch0f {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Ch0f::from_bits(val as u8)
     }
-    #[doc = "Channel 0 Output Data Flag"]
+    #[doc = "Channel 0 Output Data Flag."]
     #[inline(always)]
     pub const fn set_ch0f(&mut self, val: super::vals::Ch0f) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Channel 1 Output Data Flag"]
+    #[doc = "Channel 1 Output Data Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn ch1f(&self) -> super::vals::Ch1f {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Ch1f::from_bits(val as u8)
     }
-    #[doc = "Channel 1 Output Data Flag"]
+    #[doc = "Channel 1 Output Data Flag."]
     #[inline(always)]
     pub const fn set_ch1f(&mut self, val: super::vals::Ch1f) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Channel 2 Output Data Flag"]
+    #[doc = "Channel 2 Output Data Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn ch2f(&self) -> super::vals::Ch2f {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Ch2f::from_bits(val as u8)
     }
-    #[doc = "Channel 2 Output Data Flag"]
+    #[doc = "Channel 2 Output Data Flag."]
     #[inline(always)]
     pub const fn set_ch2f(&mut self, val: super::vals::Ch2f) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "Channel 3 Output Data Flag"]
+    #[doc = "Channel 3 Output Data Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn ch3f(&self) -> super::vals::Ch3f {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Ch3f::from_bits(val as u8)
     }
-    #[doc = "Channel 3 Output Data Flag"]
+    #[doc = "Channel 3 Output Data Flag."]
     #[inline(always)]
     pub const fn set_ch3f(&mut self, val: super::vals::Ch3f) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "Busy Flag"]
+    #[doc = "Busy Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn bsy_fil(&self) -> super::vals::BsyFil {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::BsyFil::from_bits(val as u8)
     }
-    #[doc = "Busy Flag"]
+    #[doc = "Busy Flag."]
     #[inline(always)]
     pub const fn set_bsy_fil(&mut self, val: super::vals::BsyFil) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -1150,43 +1150,43 @@ impl defmt::Format for Stat {
         )
     }
 }
-#[doc = "Version ID"]
+#[doc = "Version ID."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Verid(pub u32);
 impl Verid {
-    #[doc = "Feature Specification Number"]
+    #[doc = "Feature Specification Number."]
     #[must_use]
     #[inline(always)]
     pub const fn feature(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Feature Specification Number"]
+    #[doc = "Feature Specification Number."]
     #[inline(always)]
     pub const fn set_feature(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Minor Version Number"]
+    #[doc = "Minor Version Number."]
     #[must_use]
     #[inline(always)]
     pub const fn minor(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0xff;
         val as u8
     }
-    #[doc = "Minor Version Number"]
+    #[doc = "Minor Version Number."]
     #[inline(always)]
     pub const fn set_minor(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
     }
-    #[doc = "Major Version Number"]
+    #[doc = "Major Version Number."]
     #[must_use]
     #[inline(always)]
     pub const fn major(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "Major Version Number"]
+    #[doc = "Major Version Number."]
     #[inline(always)]
     pub const fn set_major(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);

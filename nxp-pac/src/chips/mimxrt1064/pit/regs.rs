@@ -1,16 +1,16 @@
-#[doc = "Current Timer Value Register"]
+#[doc = "Current Timer Value Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cval(pub u32);
 impl Cval {
-    #[doc = "Current Timer Value"]
+    #[doc = "Current Timer Value."]
     #[must_use]
     #[inline(always)]
     pub const fn tvl(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Current Timer Value"]
+    #[doc = "Current Timer Value."]
     #[inline(always)]
     pub const fn set_tvl(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -33,19 +33,19 @@ impl defmt::Format for Cval {
         defmt::write!(f, "Cval {{ tvl: {=u32:?} }}", self.tvl())
     }
 }
-#[doc = "PIT Upper Lifetime Timer Register"]
+#[doc = "PIT Upper Lifetime Timer Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ltmr64h(pub u32);
 impl Ltmr64h {
-    #[doc = "Life Timer value"]
+    #[doc = "Life Timer value."]
     #[must_use]
     #[inline(always)]
     pub const fn lth(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Life Timer value"]
+    #[doc = "Life Timer value."]
     #[inline(always)]
     pub const fn set_lth(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -68,19 +68,19 @@ impl defmt::Format for Ltmr64h {
         defmt::write!(f, "Ltmr64h {{ lth: {=u32:?} }}", self.lth())
     }
 }
-#[doc = "PIT Lower Lifetime Timer Register"]
+#[doc = "PIT Lower Lifetime Timer Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ltmr64l(pub u32);
 impl Ltmr64l {
-    #[doc = "Life Timer value"]
+    #[doc = "Life Timer value."]
     #[must_use]
     #[inline(always)]
     pub const fn ltl(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Life Timer value"]
+    #[doc = "Life Timer value."]
     #[inline(always)]
     pub const fn set_ltl(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -103,31 +103,31 @@ impl defmt::Format for Ltmr64l {
         defmt::write!(f, "Ltmr64l {{ ltl: {=u32:?} }}", self.ltl())
     }
 }
-#[doc = "PIT Module Control Register"]
+#[doc = "PIT Module Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mcr(pub u32);
 impl Mcr {
-    #[doc = "Freeze"]
+    #[doc = "Freeze."]
     #[must_use]
     #[inline(always)]
     pub const fn frz(&self) -> super::vals::Frz {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Frz::from_bits(val as u8)
     }
-    #[doc = "Freeze"]
+    #[doc = "Freeze."]
     #[inline(always)]
     pub const fn set_frz(&mut self, val: super::vals::Frz) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Module Disable for PIT"]
+    #[doc = "Module Disable for PIT."]
     #[must_use]
     #[inline(always)]
     pub const fn mdis(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Module Disable for PIT"]
+    #[doc = "Module Disable for PIT."]
     #[inline(always)]
     pub const fn set_mdis(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
@@ -158,43 +158,43 @@ impl defmt::Format for Mcr {
         )
     }
 }
-#[doc = "Timer Control Register"]
+#[doc = "Timer Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tctrl(pub u32);
 impl Tctrl {
-    #[doc = "Timer Enable"]
+    #[doc = "Timer Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ten(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Timer Enable"]
+    #[doc = "Timer Enable."]
     #[inline(always)]
     pub const fn set_ten(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Timer Interrupt Enable"]
+    #[doc = "Timer Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn tie(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Timer Interrupt Enable"]
+    #[doc = "Timer Interrupt Enable."]
     #[inline(always)]
     pub const fn set_tie(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Chain Mode"]
+    #[doc = "Chain Mode."]
     #[must_use]
     #[inline(always)]
     pub const fn chn(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Chain Mode"]
+    #[doc = "Chain Mode."]
     #[inline(always)]
     pub const fn set_chn(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
@@ -227,19 +227,19 @@ impl defmt::Format for Tctrl {
         )
     }
 }
-#[doc = "Timer Flag Register"]
+#[doc = "Timer Flag Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tflg(pub u32);
 impl Tflg {
-    #[doc = "Timer Interrupt Flag"]
+    #[doc = "Timer Interrupt Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn tif(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Timer Interrupt Flag"]
+    #[doc = "Timer Interrupt Flag."]
     #[inline(always)]
     pub const fn set_tif(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);

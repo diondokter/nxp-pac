@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Core0DbgRst {
-    #[doc = "do not assert core0 debug reset"]
+    #[doc = "do not assert core0 debug reset."]
     CORE0_DBG_RST_0 = 0x0,
-    #[doc = "assert core0 debug reset"]
+    #[doc = "assert core0 debug reset."]
     CORE0_DBG_RST_1 = 0x01,
 }
 impl Core0DbgRst {
@@ -33,9 +33,9 @@ impl From<Core0DbgRst> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Core0Rst {
-    #[doc = "do not assert core0 reset"]
+    #[doc = "do not assert core0 reset."]
     CORE0_RST_0 = 0x0,
-    #[doc = "assert core0 reset"]
+    #[doc = "assert core0 reset."]
     CORE0_RST_1 = 0x01,
 }
 impl Core0Rst {
@@ -95,9 +95,9 @@ impl From<CsuResetB> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DbgRstMskPg {
-    #[doc = "do not mask core debug resets (debug resets will be asserted after power gating event)"]
+    #[doc = "do not mask core debug resets (debug resets will be asserted after power gating event)."]
     DBG_RST_MSK_PG_0 = 0x0,
-    #[doc = "mask core debug resets (debug resets won't be asserted after power gating event)"]
+    #[doc = "mask core debug resets (debug resets won't be asserted after power gating event)."]
     DBG_RST_MSK_PG_1 = 0x01,
 }
 impl DbgRstMskPg {
@@ -286,13 +286,13 @@ pub enum MaskWdog3Rst {
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "wdog3_rst_b is masked"]
+    #[doc = "wdog3_rst_b is masked."]
     MASK_WDOG3_RST_5 = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
     _RESERVED_8 = 0x08,
     _RESERVED_9 = 0x09,
-    #[doc = "wdog3_rst_b is not masked"]
+    #[doc = "wdog3_rst_b is not masked."]
     MASK_WDOG3_RST_10 = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
@@ -331,13 +331,13 @@ pub enum MaskWdogRst {
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "wdog_rst_b is masked"]
+    #[doc = "wdog_rst_b is masked."]
     MASK_WDOG_RST_5 = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
     _RESERVED_8 = 0x08,
     _RESERVED_9 = 0x09,
-    #[doc = "wdog_rst_b is not masked (default)"]
+    #[doc = "wdog_rst_b is not masked (default)."]
     MASK_WDOG_RST_10 = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,

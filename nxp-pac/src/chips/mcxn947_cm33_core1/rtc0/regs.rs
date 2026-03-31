@@ -1,16 +1,16 @@
-#[doc = "Days Alarm"]
+#[doc = "Days Alarm."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct AlmDays(pub u16);
 impl AlmDays {
-    #[doc = "Days Value for Alarm"]
+    #[doc = "Days Value for Alarm."]
     #[must_use]
     #[inline(always)]
     pub const fn alm_day(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x1f;
         val as u8
     }
-    #[doc = "Days Value for Alarm"]
+    #[doc = "Days Value for Alarm."]
     #[inline(always)]
     pub const fn set_alm_day(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val as u16) & 0x1f) << 0usize);
@@ -35,31 +35,31 @@ impl defmt::Format for AlmDays {
         defmt::write!(f, "AlmDays {{ alm_day: {=u8:?} }}", self.alm_day())
     }
 }
-#[doc = "Hours and Minutes Alarm"]
+#[doc = "Hours and Minutes Alarm."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct AlmHourmin(pub u16);
 impl AlmHourmin {
-    #[doc = "Minutes Value for Alarm"]
+    #[doc = "Minutes Value for Alarm."]
     #[must_use]
     #[inline(always)]
     pub const fn alm_min(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x3f;
         val as u8
     }
-    #[doc = "Minutes Value for Alarm"]
+    #[doc = "Minutes Value for Alarm."]
     #[inline(always)]
     pub const fn set_alm_min(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val as u16) & 0x3f) << 0usize);
     }
-    #[doc = "Hours Value for Alarm"]
+    #[doc = "Hours Value for Alarm."]
     #[must_use]
     #[inline(always)]
     pub const fn alm_hour(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x1f;
         val as u8
     }
-    #[doc = "Hours Value for Alarm"]
+    #[doc = "Hours Value for Alarm."]
     #[inline(always)]
     pub const fn set_alm_hour(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 8usize)) | (((val as u16) & 0x1f) << 8usize);
@@ -90,19 +90,19 @@ impl defmt::Format for AlmHourmin {
         )
     }
 }
-#[doc = "Seconds Alarm"]
+#[doc = "Seconds Alarm."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct AlmSeconds(pub u16);
 impl AlmSeconds {
-    #[doc = "Seconds Alarm Value"]
+    #[doc = "Seconds Alarm Value."]
     #[must_use]
     #[inline(always)]
     pub const fn alm_sec(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x3f;
         val as u8
     }
-    #[doc = "Seconds Alarm Value"]
+    #[doc = "Seconds Alarm Value."]
     #[inline(always)]
     pub const fn set_alm_sec(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val as u16) & 0x3f) << 0usize);
@@ -159,31 +159,31 @@ impl defmt::Format for AlmSeconds {
         )
     }
 }
-#[doc = "Year and Months Alarm"]
+#[doc = "Year and Months Alarm."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct AlmYearmon(pub u16);
 impl AlmYearmon {
-    #[doc = "Months Value for Alarm"]
+    #[doc = "Months Value for Alarm."]
     #[must_use]
     #[inline(always)]
     pub const fn alm_mon(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "Months Value for Alarm"]
+    #[doc = "Months Value for Alarm."]
     #[inline(always)]
     pub const fn set_alm_mon(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u16) & 0x0f) << 0usize);
     }
-    #[doc = "Year Value for Alarm"]
+    #[doc = "Year Value for Alarm."]
     #[must_use]
     #[inline(always)]
     pub const fn alm_year(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0xff;
         val as u8
     }
-    #[doc = "Year Value for Alarm"]
+    #[doc = "Year Value for Alarm."]
     #[inline(always)]
     pub const fn set_alm_year(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val as u16) & 0xff) << 8usize);
@@ -214,19 +214,19 @@ impl defmt::Format for AlmYearmon {
         )
     }
 }
-#[doc = "Compensation"]
+#[doc = "Compensation."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Compen(pub u16);
 impl Compen {
-    #[doc = "Compensation Value"]
+    #[doc = "Compensation Value."]
     #[must_use]
     #[inline(always)]
     pub const fn compen_val(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Compensation Value"]
+    #[doc = "Compensation Value."]
     #[inline(always)]
     pub const fn set_compen_val(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u16) & 0xffff) << 0usize);
@@ -251,103 +251,103 @@ impl defmt::Format for Compen {
         defmt::write!(f, "Compen {{ compen_val: {=u16:?} }}", self.compen_val())
     }
 }
-#[doc = "Control"]
+#[doc = "Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl(pub u16);
 impl Ctrl {
-    #[doc = "Fine Compensation Enable"]
+    #[doc = "Fine Compensation Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn fineen(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Fine Compensation Enable"]
+    #[doc = "Fine Compensation Enable."]
     #[inline(always)]
     pub const fn set_fineen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u16) & 0x01) << 0usize);
     }
-    #[doc = "Compensation Enable"]
+    #[doc = "Compensation Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn comp_en(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Compensation Enable"]
+    #[doc = "Compensation Enable."]
     #[inline(always)]
     pub const fn set_comp_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u16) & 0x01) << 1usize);
     }
-    #[doc = "Alarm Match"]
+    #[doc = "Alarm Match."]
     #[must_use]
     #[inline(always)]
     pub const fn alm_match(&self) -> super::vals::AlmMatch {
         let val = (self.0 >> 2usize) & 0x03;
         super::vals::AlmMatch::from_bits(val as u8)
     }
-    #[doc = "Alarm Match"]
+    #[doc = "Alarm Match."]
     #[inline(always)]
     pub const fn set_alm_match(&mut self, val: super::vals::AlmMatch) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u16) & 0x03) << 2usize);
     }
-    #[doc = "Daylight Saving Enable"]
+    #[doc = "Daylight Saving Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dst_en(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "Daylight Saving Enable"]
+    #[doc = "Daylight Saving Enable."]
     #[inline(always)]
     pub const fn set_dst_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u16) & 0x01) << 6usize);
     }
-    #[doc = "Software Reset"]
+    #[doc = "Software Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn swr(&self) -> super::vals::Swr {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::Swr::from_bits(val as u8)
     }
-    #[doc = "Software Reset"]
+    #[doc = "Software Reset."]
     #[inline(always)]
     pub const fn set_swr(&mut self, val: super::vals::Swr) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u16) & 0x01) << 8usize);
     }
-    #[doc = "RTC Clock Select"]
+    #[doc = "RTC Clock Select."]
     #[must_use]
     #[inline(always)]
     pub const fn clk_sel(&self) -> super::vals::ClkSel {
         let val = (self.0 >> 9usize) & 0x01;
         super::vals::ClkSel::from_bits(val as u8)
     }
-    #[doc = "RTC Clock Select"]
+    #[doc = "RTC Clock Select."]
     #[inline(always)]
     pub const fn set_clk_sel(&mut self, val: super::vals::ClkSel) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u16) & 0x01) << 9usize);
     }
-    #[doc = "Clock Output Disable"]
+    #[doc = "Clock Output Disable."]
     #[must_use]
     #[inline(always)]
     pub const fn clko_dis(&self) -> super::vals::ClkoDis {
         let val = (self.0 >> 10usize) & 0x01;
         super::vals::ClkoDis::from_bits(val as u8)
     }
-    #[doc = "Clock Output Disable"]
+    #[doc = "Clock Output Disable."]
     #[inline(always)]
     pub const fn set_clko_dis(&mut self, val: super::vals::ClkoDis) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u16) & 0x01) << 10usize);
     }
-    #[doc = "RTC Clock Output Selection"]
+    #[doc = "RTC Clock Output Selection."]
     #[must_use]
     #[inline(always)]
     pub const fn clkout(&self) -> super::vals::Clkout {
         let val = (self.0 >> 13usize) & 0x03;
         super::vals::Clkout::from_bits(val as u8)
     }
-    #[doc = "RTC Clock Output Selection"]
+    #[doc = "RTC Clock Output Selection."]
     #[inline(always)]
     pub const fn set_clkout(&mut self, val: super::vals::Clkout) {
         self.0 = (self.0 & !(0x03 << 13usize)) | (((val.to_bits() as u16) & 0x03) << 13usize);
@@ -390,31 +390,31 @@ impl defmt::Format for Ctrl {
         )
     }
 }
-#[doc = "Days and Day-of-Week Counters"]
+#[doc = "Days and Day-of-Week Counters."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Days(pub u16);
 impl Days {
-    #[doc = "Days Counter Value"]
+    #[doc = "Days Counter Value."]
     #[must_use]
     #[inline(always)]
     pub const fn day_cnt(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x1f;
         val as u8
     }
-    #[doc = "Days Counter Value"]
+    #[doc = "Days Counter Value."]
     #[inline(always)]
     pub const fn set_day_cnt(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val as u16) & 0x1f) << 0usize);
     }
-    #[doc = "Day of Week Counter Value"]
+    #[doc = "Day of Week Counter Value."]
     #[must_use]
     #[inline(always)]
     pub const fn dow(&self) -> super::vals::Dow {
         let val = (self.0 >> 8usize) & 0x07;
         super::vals::Dow::from_bits(val as u8)
     }
-    #[doc = "Day of Week Counter Value"]
+    #[doc = "Day of Week Counter Value."]
     #[inline(always)]
     pub const fn set_dow(&mut self, val: super::vals::Dow) {
         self.0 = (self.0 & !(0x07 << 8usize)) | (((val.to_bits() as u16) & 0x07) << 8usize);
@@ -445,31 +445,31 @@ impl defmt::Format for Days {
         )
     }
 }
-#[doc = "Daylight Saving Day"]
+#[doc = "Daylight Saving Day."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DstDay(pub u16);
 impl DstDay {
-    #[doc = "Daylight Saving Time (DST) Day End Value"]
+    #[doc = "Daylight Saving Time (DST) Day End Value."]
     #[must_use]
     #[inline(always)]
     pub const fn dst_end_day(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x1f;
         val as u8
     }
-    #[doc = "Daylight Saving Time (DST) Day End Value"]
+    #[doc = "Daylight Saving Time (DST) Day End Value."]
     #[inline(always)]
     pub const fn set_dst_end_day(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val as u16) & 0x1f) << 0usize);
     }
-    #[doc = "Daylight Saving Time (DST) Day Start Value"]
+    #[doc = "Daylight Saving Time (DST) Day Start Value."]
     #[must_use]
     #[inline(always)]
     pub const fn dst_start_day(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x1f;
         val as u8
     }
-    #[doc = "Daylight Saving Time (DST) Day Start Value"]
+    #[doc = "Daylight Saving Time (DST) Day Start Value."]
     #[inline(always)]
     pub const fn set_dst_start_day(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 8usize)) | (((val as u16) & 0x1f) << 8usize);
@@ -500,31 +500,31 @@ impl defmt::Format for DstDay {
         )
     }
 }
-#[doc = "Daylight Saving Hour"]
+#[doc = "Daylight Saving Hour."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DstHour(pub u16);
 impl DstHour {
-    #[doc = "Daylight Saving Time (DST) Hours End Value"]
+    #[doc = "Daylight Saving Time (DST) Hours End Value."]
     #[must_use]
     #[inline(always)]
     pub const fn dst_end_hour(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x1f;
         val as u8
     }
-    #[doc = "Daylight Saving Time (DST) Hours End Value"]
+    #[doc = "Daylight Saving Time (DST) Hours End Value."]
     #[inline(always)]
     pub const fn set_dst_end_hour(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val as u16) & 0x1f) << 0usize);
     }
-    #[doc = "Daylight Saving Time (DST) Hours Start Value"]
+    #[doc = "Daylight Saving Time (DST) Hours Start Value."]
     #[must_use]
     #[inline(always)]
     pub const fn dst_start_hour(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x1f;
         val as u8
     }
-    #[doc = "Daylight Saving Time (DST) Hours Start Value"]
+    #[doc = "Daylight Saving Time (DST) Hours Start Value."]
     #[inline(always)]
     pub const fn set_dst_start_hour(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 8usize)) | (((val as u16) & 0x1f) << 8usize);
@@ -555,31 +555,31 @@ impl defmt::Format for DstHour {
         )
     }
 }
-#[doc = "Daylight Saving Month"]
+#[doc = "Daylight Saving Month."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DstMonth(pub u16);
 impl DstMonth {
-    #[doc = "Daylight Saving Time (DST) Month End Value"]
+    #[doc = "Daylight Saving Time (DST) Month End Value."]
     #[must_use]
     #[inline(always)]
     pub const fn dst_end_month(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "Daylight Saving Time (DST) Month End Value"]
+    #[doc = "Daylight Saving Time (DST) Month End Value."]
     #[inline(always)]
     pub const fn set_dst_end_month(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u16) & 0x0f) << 0usize);
     }
-    #[doc = "Daylight Saving Time (DST) Month Start Value"]
+    #[doc = "Daylight Saving Time (DST) Month Start Value."]
     #[must_use]
     #[inline(always)]
     pub const fn dst_start_month(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x0f;
         val as u8
     }
-    #[doc = "Daylight Saving Time (DST) Month Start Value"]
+    #[doc = "Daylight Saving Time (DST) Month Start Value."]
     #[inline(always)]
     pub const fn set_dst_start_month(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val as u16) & 0x0f) << 8usize);
@@ -610,31 +610,31 @@ impl defmt::Format for DstMonth {
         )
     }
 }
-#[doc = "Hours and Minutes Counters"]
+#[doc = "Hours and Minutes Counters."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hourmin(pub u16);
 impl Hourmin {
-    #[doc = "Minutes Counter Value"]
+    #[doc = "Minutes Counter Value."]
     #[must_use]
     #[inline(always)]
     pub const fn min_cnt(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x3f;
         val as u8
     }
-    #[doc = "Minutes Counter Value"]
+    #[doc = "Minutes Counter Value."]
     #[inline(always)]
     pub const fn set_min_cnt(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val as u16) & 0x3f) << 0usize);
     }
-    #[doc = "Hours Counter Value"]
+    #[doc = "Hours Counter Value."]
     #[must_use]
     #[inline(always)]
     pub const fn hour_cnt(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x1f;
         val as u8
     }
-    #[doc = "Hours Counter Value"]
+    #[doc = "Hours Counter Value."]
     #[inline(always)]
     pub const fn set_hour_cnt(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 8usize)) | (((val as u16) & 0x1f) << 8usize);
@@ -665,175 +665,175 @@ impl defmt::Format for Hourmin {
         )
     }
 }
-#[doc = "Interrupt Enable"]
+#[doc = "Interrupt Enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ier(pub u16);
 impl Ier {
-    #[doc = "Alarm Interrupt Enable"]
+    #[doc = "Alarm Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn alm_ie(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Alarm Interrupt Enable"]
+    #[doc = "Alarm Interrupt Enable."]
     #[inline(always)]
     pub const fn set_alm_ie(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u16) & 0x01) << 2usize);
     }
-    #[doc = "Days Interrupt Enable"]
+    #[doc = "Days Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn day_ie(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Days Interrupt Enable"]
+    #[doc = "Days Interrupt Enable."]
     #[inline(always)]
     pub const fn set_day_ie(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u16) & 0x01) << 3usize);
     }
-    #[doc = "Hours Interrupt Enable"]
+    #[doc = "Hours Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn hour_ie(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "Hours Interrupt Enable"]
+    #[doc = "Hours Interrupt Enable."]
     #[inline(always)]
     pub const fn set_hour_ie(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u16) & 0x01) << 4usize);
     }
-    #[doc = "Minutes Interrupt Enable"]
+    #[doc = "Minutes Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn min_ie(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Minutes Interrupt Enable"]
+    #[doc = "Minutes Interrupt Enable."]
     #[inline(always)]
     pub const fn set_min_ie(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u16) & 0x01) << 5usize);
     }
-    #[doc = "1 Hz Interval Interrupt Enable"]
+    #[doc = "1 Hz Interval Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ie_1hz(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "1 Hz Interval Interrupt Enable"]
+    #[doc = "1 Hz Interval Interrupt Enable."]
     #[inline(always)]
     pub const fn set_ie_1hz(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u16) & 0x01) << 6usize);
     }
-    #[doc = "2 Hz Interval Interrupt Enable"]
+    #[doc = "2 Hz Interval Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ie_2hz(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "2 Hz Interval Interrupt Enable"]
+    #[doc = "2 Hz Interval Interrupt Enable."]
     #[inline(always)]
     pub const fn set_ie_2hz(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u16) & 0x01) << 7usize);
     }
-    #[doc = "4 Hz Interval Interrupt Enable"]
+    #[doc = "4 Hz Interval Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ie_4hz(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "4 Hz Interval Interrupt Enable"]
+    #[doc = "4 Hz Interval Interrupt Enable."]
     #[inline(always)]
     pub const fn set_ie_4hz(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u16) & 0x01) << 8usize);
     }
-    #[doc = "8 Hz Interval Interrupt Enable"]
+    #[doc = "8 Hz Interval Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ie_8hz(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "8 Hz Interval Interrupt Enable"]
+    #[doc = "8 Hz Interval Interrupt Enable."]
     #[inline(always)]
     pub const fn set_ie_8hz(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u16) & 0x01) << 9usize);
     }
-    #[doc = "16 Hz Interval Interrupt Enable"]
+    #[doc = "16 Hz Interval Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ie_16hz(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "16 Hz Interval Interrupt Enable"]
+    #[doc = "16 Hz Interval Interrupt Enable."]
     #[inline(always)]
     pub const fn set_ie_16hz(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u16) & 0x01) << 10usize);
     }
-    #[doc = "32 Hz Interval Interrupt Enable"]
+    #[doc = "32 Hz Interval Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ie_32hz(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "32 Hz Interval Interrupt Enable"]
+    #[doc = "32 Hz Interval Interrupt Enable."]
     #[inline(always)]
     pub const fn set_ie_32hz(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u16) & 0x01) << 11usize);
     }
-    #[doc = "64 Hz Interval Interrupt Enable"]
+    #[doc = "64 Hz Interval Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ie_64hz(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "64 Hz Interval Interrupt Enable"]
+    #[doc = "64 Hz Interval Interrupt Enable."]
     #[inline(always)]
     pub const fn set_ie_64hz(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u16) & 0x01) << 12usize);
     }
-    #[doc = "128 Hz Interval Interrupt Enable"]
+    #[doc = "128 Hz Interval Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ie_128hz(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "128 Hz Interval Interrupt Enable"]
+    #[doc = "128 Hz Interval Interrupt Enable."]
     #[inline(always)]
     pub const fn set_ie_128hz(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u16) & 0x01) << 13usize);
     }
-    #[doc = "256 Hz Interval Interrupt Enable"]
+    #[doc = "256 Hz Interval Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ie_256hz(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "256 Hz Interval Interrupt Enable"]
+    #[doc = "256 Hz Interval Interrupt Enable."]
     #[inline(always)]
     pub const fn set_ie_256hz(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u16) & 0x01) << 14usize);
     }
-    #[doc = "512 Hz Interval Interrupt Enable"]
+    #[doc = "512 Hz Interval Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn ie_512hz(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "512 Hz Interval Interrupt Enable"]
+    #[doc = "512 Hz Interval Interrupt Enable."]
     #[inline(always)]
     pub const fn set_ie_512hz(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u16) & 0x01) << 15usize);
@@ -888,175 +888,175 @@ impl defmt::Format for Ier {
         )
     }
 }
-#[doc = "Interrupt Status"]
+#[doc = "Interrupt Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Isr(pub u16);
 impl Isr {
-    #[doc = "Alarm Interrupt Status"]
+    #[doc = "Alarm Interrupt Status."]
     #[must_use]
     #[inline(always)]
     pub const fn alm_is(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Alarm Interrupt Status"]
+    #[doc = "Alarm Interrupt Status."]
     #[inline(always)]
     pub const fn set_alm_is(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u16) & 0x01) << 2usize);
     }
-    #[doc = "Days Interrupt Status"]
+    #[doc = "Days Interrupt Status."]
     #[must_use]
     #[inline(always)]
     pub const fn day_is(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Days Interrupt Status"]
+    #[doc = "Days Interrupt Status."]
     #[inline(always)]
     pub const fn set_day_is(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u16) & 0x01) << 3usize);
     }
-    #[doc = "Hours Interrupt Status"]
+    #[doc = "Hours Interrupt Status."]
     #[must_use]
     #[inline(always)]
     pub const fn hour_is(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "Hours Interrupt Status"]
+    #[doc = "Hours Interrupt Status."]
     #[inline(always)]
     pub const fn set_hour_is(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u16) & 0x01) << 4usize);
     }
-    #[doc = "Minutes Interrupt Status"]
+    #[doc = "Minutes Interrupt Status."]
     #[must_use]
     #[inline(always)]
     pub const fn min_is(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Minutes Interrupt Status"]
+    #[doc = "Minutes Interrupt Status."]
     #[inline(always)]
     pub const fn set_min_is(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u16) & 0x01) << 5usize);
     }
-    #[doc = "1 Hz Interval Interrupt Status"]
+    #[doc = "1 Hz Interval Interrupt Status."]
     #[must_use]
     #[inline(always)]
     pub const fn is_1hz(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "1 Hz Interval Interrupt Status"]
+    #[doc = "1 Hz Interval Interrupt Status."]
     #[inline(always)]
     pub const fn set_is_1hz(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u16) & 0x01) << 6usize);
     }
-    #[doc = "2 Hz Interval Interrupt Status"]
+    #[doc = "2 Hz Interval Interrupt Status."]
     #[must_use]
     #[inline(always)]
     pub const fn is_2hz(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "2 Hz Interval Interrupt Status"]
+    #[doc = "2 Hz Interval Interrupt Status."]
     #[inline(always)]
     pub const fn set_is_2hz(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u16) & 0x01) << 7usize);
     }
-    #[doc = "4 Hz Interval Interrupt Status"]
+    #[doc = "4 Hz Interval Interrupt Status."]
     #[must_use]
     #[inline(always)]
     pub const fn is_4hz(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "4 Hz Interval Interrupt Status"]
+    #[doc = "4 Hz Interval Interrupt Status."]
     #[inline(always)]
     pub const fn set_is_4hz(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u16) & 0x01) << 8usize);
     }
-    #[doc = "8 Hz Interval Interrupt Status"]
+    #[doc = "8 Hz Interval Interrupt Status."]
     #[must_use]
     #[inline(always)]
     pub const fn is_8hz(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "8 Hz Interval Interrupt Status"]
+    #[doc = "8 Hz Interval Interrupt Status."]
     #[inline(always)]
     pub const fn set_is_8hz(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u16) & 0x01) << 9usize);
     }
-    #[doc = "16 Hz Interval Interrupt Status"]
+    #[doc = "16 Hz Interval Interrupt Status."]
     #[must_use]
     #[inline(always)]
     pub const fn is_16hz(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "16 Hz Interval Interrupt Status"]
+    #[doc = "16 Hz Interval Interrupt Status."]
     #[inline(always)]
     pub const fn set_is_16hz(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u16) & 0x01) << 10usize);
     }
-    #[doc = "32 Hz Interval Interrupt Status"]
+    #[doc = "32 Hz Interval Interrupt Status."]
     #[must_use]
     #[inline(always)]
     pub const fn is_32hz(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "32 Hz Interval Interrupt Status"]
+    #[doc = "32 Hz Interval Interrupt Status."]
     #[inline(always)]
     pub const fn set_is_32hz(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u16) & 0x01) << 11usize);
     }
-    #[doc = "64 Hz Interval Interrupt Status"]
+    #[doc = "64 Hz Interval Interrupt Status."]
     #[must_use]
     #[inline(always)]
     pub const fn is_64hz(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "64 Hz Interval Interrupt Status"]
+    #[doc = "64 Hz Interval Interrupt Status."]
     #[inline(always)]
     pub const fn set_is_64hz(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u16) & 0x01) << 12usize);
     }
-    #[doc = "128 Hz Interval Interrupt Status"]
+    #[doc = "128 Hz Interval Interrupt Status."]
     #[must_use]
     #[inline(always)]
     pub const fn is_128hz(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "128 Hz Interval Interrupt Status"]
+    #[doc = "128 Hz Interval Interrupt Status."]
     #[inline(always)]
     pub const fn set_is_128hz(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u16) & 0x01) << 13usize);
     }
-    #[doc = "256 Hz Interval Interrupt Status"]
+    #[doc = "256 Hz Interval Interrupt Status."]
     #[must_use]
     #[inline(always)]
     pub const fn is_256hz(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "256 Hz Interval Interrupt Status"]
+    #[doc = "256 Hz Interval Interrupt Status."]
     #[inline(always)]
     pub const fn set_is_256hz(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u16) & 0x01) << 14usize);
     }
-    #[doc = "512 Hz Interval Interrupt Status"]
+    #[doc = "512 Hz Interval Interrupt Status."]
     #[must_use]
     #[inline(always)]
     pub const fn is_512hz(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "512 Hz Interval Interrupt Status"]
+    #[doc = "512 Hz Interval Interrupt Status."]
     #[inline(always)]
     pub const fn set_is_512hz(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u16) & 0x01) << 15usize);
@@ -1111,19 +1111,19 @@ impl defmt::Format for Isr {
         )
     }
 }
-#[doc = "Sub Second Counter"]
+#[doc = "Sub Second Counter."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct RtcTest2(pub u16);
 impl RtcTest2 {
-    #[doc = "Sub Second Counter Value"]
+    #[doc = "Sub Second Counter Value."]
     #[must_use]
     #[inline(always)]
     pub const fn sub_second_count(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Sub Second Counter Value"]
+    #[doc = "Sub Second Counter Value."]
     #[inline(always)]
     pub const fn set_sub_second_count(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u16) & 0xffff) << 0usize);
@@ -1152,19 +1152,19 @@ impl defmt::Format for RtcTest2 {
         )
     }
 }
-#[doc = "Seconds Counters"]
+#[doc = "Seconds Counters."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Seconds(pub u16);
 impl Seconds {
-    #[doc = "Seconds Counter Value"]
+    #[doc = "Seconds Counter Value."]
     #[must_use]
     #[inline(always)]
     pub const fn sec_cnt(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x3f;
         val as u8
     }
-    #[doc = "Seconds Counter Value"]
+    #[doc = "Seconds Counter Value."]
     #[inline(always)]
     pub const fn set_sec_cnt(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val as u16) & 0x3f) << 0usize);
@@ -1189,79 +1189,79 @@ impl defmt::Format for Seconds {
         defmt::write!(f, "Seconds {{ sec_cnt: {=u8:?} }}", self.sec_cnt())
     }
 }
-#[doc = "Status"]
+#[doc = "Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Status(pub u16);
 impl Status {
-    #[doc = "Invalidate CPU Read/Write Access"]
+    #[doc = "Invalidate CPU Read/Write Access."]
     #[must_use]
     #[inline(always)]
     pub const fn inval_bit(&self) -> super::vals::InvalBit {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::InvalBit::from_bits(val as u8)
     }
-    #[doc = "Invalidate CPU Read/Write Access"]
+    #[doc = "Invalidate CPU Read/Write Access."]
     #[inline(always)]
     pub const fn set_inval_bit(&mut self, val: super::vals::InvalBit) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u16) & 0x01) << 0usize);
     }
-    #[doc = "Write Protect Enable Status"]
+    #[doc = "Write Protect Enable Status."]
     #[must_use]
     #[inline(always)]
     pub const fn write_prot_en(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Write Protect Enable Status"]
+    #[doc = "Write Protect Enable Status."]
     #[inline(always)]
     pub const fn set_write_prot_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u16) & 0x01) << 1usize);
     }
-    #[doc = "Compensation Interval"]
+    #[doc = "Compensation Interval."]
     #[must_use]
     #[inline(always)]
     pub const fn cmp_int(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Compensation Interval"]
+    #[doc = "Compensation Interval."]
     #[inline(always)]
     pub const fn set_cmp_int(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u16) & 0x01) << 5usize);
     }
-    #[doc = "Write Enable"]
+    #[doc = "Write Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn we(&self) -> super::vals::We {
         let val = (self.0 >> 6usize) & 0x03;
         super::vals::We::from_bits(val as u8)
     }
-    #[doc = "Write Enable"]
+    #[doc = "Write Enable."]
     #[inline(always)]
     pub const fn set_we(&mut self, val: super::vals::We) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u16) & 0x03) << 6usize);
     }
-    #[doc = "Bus Error"]
+    #[doc = "Bus Error."]
     #[must_use]
     #[inline(always)]
     pub const fn bus_err(&self) -> super::vals::BusErr {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::BusErr::from_bits(val as u8)
     }
-    #[doc = "Bus Error"]
+    #[doc = "Bus Error."]
     #[inline(always)]
     pub const fn set_bus_err(&mut self, val: super::vals::BusErr) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u16) & 0x01) << 8usize);
     }
-    #[doc = "Compensation Done"]
+    #[doc = "Compensation Done."]
     #[must_use]
     #[inline(always)]
     pub const fn cmp_done(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "Compensation Done"]
+    #[doc = "Compensation Done."]
     #[inline(always)]
     pub const fn set_cmp_done(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u16) & 0x01) << 11usize);
@@ -1300,31 +1300,31 @@ impl defmt::Format for Status {
         )
     }
 }
-#[doc = "Year and Month Counters"]
+#[doc = "Year and Month Counters."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Yearmon(pub u16);
 impl Yearmon {
-    #[doc = "Month Counter"]
+    #[doc = "Month Counter."]
     #[must_use]
     #[inline(always)]
     pub const fn mon_cnt(&self) -> super::vals::MonCnt {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::MonCnt::from_bits(val as u8)
     }
-    #[doc = "Month Counter"]
+    #[doc = "Month Counter."]
     #[inline(always)]
     pub const fn set_mon_cnt(&mut self, val: super::vals::MonCnt) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u16) & 0x0f) << 0usize);
     }
-    #[doc = "Year Offset Count Value"]
+    #[doc = "Year Offset Count Value."]
     #[must_use]
     #[inline(always)]
     pub const fn yrofst(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0xff;
         val as u8
     }
-    #[doc = "Year Offset Count Value"]
+    #[doc = "Year Offset Count Value."]
     #[inline(always)]
     pub const fn set_yrofst(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val as u16) & 0xff) << 8usize);

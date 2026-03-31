@@ -1,4 +1,4 @@
-#[doc = "Capture register ."]
+#[doc = "Capture register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cap(pub u32);

@@ -1,4 +1,4 @@
-#[doc = "Coprocessor Power Control Register"]
+#[doc = "Coprocessor Power Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cppwr(pub u32);

@@ -129,9 +129,9 @@ impl From<Kdie> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Kdsc {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     KDSC_0 = 0x0,
-    #[doc = "Set bits that clear the keypad depress synchronizer chain"]
+    #[doc = "Set bits that clear the keypad depress synchronizer chain."]
     KDSC_1 = 0x01,
 }
 impl Kdsc {
@@ -160,9 +160,9 @@ impl From<Kdsc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Kpkd {
-    #[doc = "No key presses detected"]
+    #[doc = "No key presses detected."]
     KPKD_0 = 0x0,
-    #[doc = "A key has been depressed"]
+    #[doc = "A key has been depressed."]
     KPKD_1 = 0x01,
 }
 impl Kpkd {
@@ -191,9 +191,9 @@ impl From<Kpkd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Kpkr {
-    #[doc = "No key release detected"]
+    #[doc = "No key release detected."]
     KPKR_0 = 0x0,
-    #[doc = "All keys have been released"]
+    #[doc = "All keys have been released."]
     KPKR_1 = 0x01,
 }
 impl Kpkr {
@@ -349,9 +349,9 @@ impl From<Krie> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Krss {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     KRSS_0 = 0x0,
-    #[doc = "Set bits which sets keypad release synchronizer chain"]
+    #[doc = "Set bits which sets keypad release synchronizer chain."]
     KRSS_1 = 0x01,
 }
 impl Krss {

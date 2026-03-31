@@ -1,4 +1,4 @@
-#[doc = "WDOG"]
+#[doc = "WDOG."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Rtwdog {
     ptr: *mut u8,
@@ -14,22 +14,22 @@ impl Rtwdog {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "Watchdog Control and Status Register"]
+    #[doc = "Watchdog Control and Status Register."]
     #[inline(always)]
     pub const fn cs(self) -> crate::common::Reg<regs::Cs, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
     }
-    #[doc = "Watchdog Counter Register"]
+    #[doc = "Watchdog Counter Register."]
     #[inline(always)]
     pub const fn cnt(self) -> crate::common::Reg<regs::Cnt, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
     }
-    #[doc = "Watchdog Timeout Value Register"]
+    #[doc = "Watchdog Timeout Value Register."]
     #[inline(always)]
     pub const fn toval(self) -> crate::common::Reg<regs::Toval, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
     }
-    #[doc = "Watchdog Window Register"]
+    #[doc = "Watchdog Window Register."]
     #[inline(always)]
     pub const fn win(self) -> crate::common::Reg<regs::Win, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }

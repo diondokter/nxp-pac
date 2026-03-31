@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum OverCurDis {
-    #[doc = "Enables overcurrent detection"]
+    #[doc = "Enables overcurrent detection."]
     OVER_CUR_DIS_0 = 0x0,
-    #[doc = "Disables overcurrent detection"]
+    #[doc = "Disables overcurrent detection."]
     OVER_CUR_DIS_1 = 0x01,
 }
 impl OverCurDis {
@@ -33,9 +33,9 @@ impl From<OverCurDis> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum OverCurPol {
-    #[doc = "High active (high on this signal represents an overcurrent condition)"]
+    #[doc = "High active (high on this signal represents an overcurrent condition)."]
     OVER_CUR_POL_0 = 0x0,
-    #[doc = "Low active (low on this signal represents an overcurrent condition)"]
+    #[doc = "Low active (low on this signal represents an overcurrent condition)."]
     OVER_CUR_POL_1 = 0x01,
 }
 impl OverCurPol {
@@ -95,9 +95,9 @@ impl From<PwrPol> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum UtmiClkVld {
-    #[doc = "Invalid"]
+    #[doc = "Invalid."]
     UTMI_CLK_VLD_0 = 0x0,
-    #[doc = "Valid"]
+    #[doc = "Valid."]
     UTMI_CLK_VLD_1 = 0x01,
 }
 impl UtmiClkVld {
@@ -126,9 +126,9 @@ impl From<UtmiClkVld> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wie {
-    #[doc = "Interrupt Disabled"]
+    #[doc = "Interrupt Disabled."]
     WIE_0 = 0x0,
-    #[doc = "Interrupt Enabled"]
+    #[doc = "Interrupt Enabled."]
     WIE_1 = 0x01,
 }
 impl Wie {
@@ -157,9 +157,9 @@ impl From<Wie> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wir {
-    #[doc = "No wake-up interrupt request received"]
+    #[doc = "No wake-up interrupt request received."]
     WIR_0 = 0x0,
-    #[doc = "Wake-up Interrupt Request received"]
+    #[doc = "Wake-up Interrupt Request received."]
     WIR_1 = 0x01,
 }
 impl Wir {
@@ -219,9 +219,9 @@ impl From<WkupDpdmEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum WkupIdEn {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     WKUP_ID_EN_0 = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     WKUP_ID_EN_1 = 0x01,
 }
 impl WkupIdEn {
@@ -250,9 +250,9 @@ impl From<WkupIdEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum WkupSw {
-    #[doc = "Inactive"]
+    #[doc = "Inactive."]
     WKUP_SW_0 = 0x0,
-    #[doc = "Force wake-up"]
+    #[doc = "Force wake-up."]
     WKUP_SW_1 = 0x01,
 }
 impl WkupSw {
@@ -281,9 +281,9 @@ impl From<WkupSw> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum WkupSwEn {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     WKUP_SW_EN_0 = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     WKUP_SW_EN_1 = 0x01,
 }
 impl WkupSwEn {
@@ -312,9 +312,9 @@ impl From<WkupSwEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum WkupVbusEn {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     WKUP_VBUS_EN_0 = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     WKUP_VBUS_EN_1 = 0x01,
 }
 impl WkupVbusEn {

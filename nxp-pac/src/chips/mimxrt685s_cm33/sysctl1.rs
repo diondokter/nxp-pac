@@ -1,4 +1,4 @@
-#[doc = "system ccontroller 1"]
+#[doc = "system ccontroller 1."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sysctl1 {
     ptr: *mut u8,
@@ -14,17 +14,17 @@ impl Sysctl1 {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "mclk direction control"]
+    #[doc = "mclk direction control."]
     #[inline(always)]
     pub const fn mclkpindir(self) -> crate::common::Reg<regs::Mclkpindir, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x10usize) as _) }
     }
-    #[doc = "DSP NMI source selection"]
+    #[doc = "DSP NMI source selection."]
     #[inline(always)]
     pub const fn dspnmisrcsel(self) -> crate::common::Reg<regs::Dspnmisrcsel, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x30usize) as _) }
     }
-    #[doc = "flexcomm control selection N"]
+    #[doc = "flexcomm control selection N."]
     #[inline(always)]
     pub const fn fcctrlsel(
         self,
@@ -33,7 +33,7 @@ impl Sysctl1 {
         assert!(n < 8usize);
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x40usize + n * 4usize) as _) }
     }
-    #[doc = "shared control set N"]
+    #[doc = "shared control set N."]
     #[inline(always)]
     pub const fn sharedctrlset(
         self,
@@ -42,7 +42,7 @@ impl Sysctl1 {
         assert!(n < 2usize);
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x80usize + n * 4usize) as _) }
     }
-    #[doc = "RX Event Pulse Generator"]
+    #[doc = "RX Event Pulse Generator."]
     #[inline(always)]
     pub const fn rxevpulsegen(self) -> crate::common::Reg<regs::Rxevpulsegen, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0200usize) as _) }

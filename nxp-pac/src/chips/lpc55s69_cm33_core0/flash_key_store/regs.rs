@@ -35,7 +35,7 @@ impl defmt::Format for ActivationCode {
         defmt::write!(f, "ActivationCode {{ field: {=u32:?} }}", self.field())
     }
 }
-#[doc = "Valid Key Sore Header : 0x95959595"]
+#[doc = "Valid Key Sore Header : 0x95959595."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Header(pub u32);

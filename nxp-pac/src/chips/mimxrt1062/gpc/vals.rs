@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MegaPdnReq {
-    #[doc = "No Request"]
+    #[doc = "No Request."]
     MEGA_PDN_REQ_0 = 0x0,
-    #[doc = "Request power down sequence"]
+    #[doc = "Request power down sequence."]
     MEGA_PDN_REQ_1 = 0x01,
 }
 impl MegaPdnReq {
@@ -33,9 +33,9 @@ impl From<MegaPdnReq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MegaPupReq {
-    #[doc = "No Request"]
+    #[doc = "No Request."]
     MEGA_PUP_REQ_0 = 0x0,
-    #[doc = "Request power up sequence"]
+    #[doc = "Request power up sequence."]
     MEGA_PUP_REQ_1 = 0x01,
 }
 impl MegaPupReq {

@@ -2,13 +2,13 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cinsel {
-    #[doc = "Channel 0. CAPn.0 for CTIMERn"]
+    #[doc = "Channel 0. CAPn.0 for CTIMERn."]
     CHANNEL_0 = 0x0,
-    #[doc = "Channel 1. CAPn.1 for CTIMERn"]
+    #[doc = "Channel 1. CAPn.1 for CTIMERn."]
     CHANNEL_1 = 0x01,
-    #[doc = "Channel 2. CAPn.2 for CTIMERn"]
+    #[doc = "Channel 2. CAPn.2 for CTIMERn."]
     CHANNEL_2 = 0x02,
-    #[doc = "Channel 3. CAPn.3 for CTIMERn"]
+    #[doc = "Channel 3. CAPn.3 for CTIMERn."]
     CHANNEL_3 = 0x03,
 }
 impl Cinsel {

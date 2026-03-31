@@ -70,9 +70,9 @@ impl From<Ep> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Feature(u16);
 impl Feature {
-    #[doc = "Standard features implemented"]
+    #[doc = "Standard features implemented."]
     pub const FEATURE_0: Self = Self(0x0);
-    #[doc = "RAIP and RAIE register bits implemented on MUA side"]
+    #[doc = "RAIP and RAIE register bits implemented on MUA side."]
     pub const FEATURE_1: Self = Self(0x01);
     #[doc = "MUA and MUB implemented with the same function. some bits in CR register are moved to CCR register."]
     pub const FEATURE_2: Self = Self(0x02);
@@ -126,9 +126,9 @@ impl From<Feature> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fup {
-    #[doc = "No flags updated, initiated by the MUA, in progress (default)"]
+    #[doc = "No flags updated, initiated by the MUA, in progress (default)."]
     FUP_0 = 0x0,
-    #[doc = "MUA initiated flags update, processing"]
+    #[doc = "MUA initiated flags update, processing."]
     FUP_1 = 0x01,
 }
 impl Fup {
@@ -157,7 +157,7 @@ impl From<Fup> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gien {
-    #[doc = "Disables MUA General Interrupt n. (default)"]
+    #[doc = "Disables MUA General Interrupt n. (default)."]
     GIEN_0 = 0x0,
     #[doc = "Enables MUA General Interrupt n."]
     GIEN_1 = 0x01,
@@ -202,7 +202,7 @@ impl From<Gien> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gipn {
-    #[doc = "MUA general purpose interrupt n is not pending. (default)"]
+    #[doc = "MUA general purpose interrupt n is not pending. (default)."]
     GIPN_0 = 0x0,
     #[doc = "MUA general purpose interrupt n is pending."]
     GIPN_1 = 0x01,
@@ -387,9 +387,9 @@ impl From<Raie> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Raip {
-    #[doc = "Processor B-side did not enter reset"]
+    #[doc = "Processor B-side did not enter reset."]
     RAIP_0 = 0x0,
-    #[doc = "Processor B-side entered reset"]
+    #[doc = "Processor B-side entered reset."]
     RAIP_1 = 0x01,
 }
 impl Raip {
@@ -449,9 +449,9 @@ impl From<Rdie> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rdip {
-    #[doc = "Processor B-side did not exit reset"]
+    #[doc = "Processor B-side did not exit reset."]
     RDIP_0 = 0x0,
-    #[doc = "Processor B-side exited from reset"]
+    #[doc = "Processor B-side exited from reset."]
     RDIP_1 = 0x01,
 }
 impl Rdip {
@@ -525,7 +525,7 @@ impl From<Rfn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rien {
-    #[doc = "Disables MUA Receive Interrupt n. (default)"]
+    #[doc = "Disables MUA Receive Interrupt n. (default)."]
     RIEN_0 = 0x0,
     #[doc = "Enables MUA Receive Interrupt n."]
     RIEN_1 = 0x01,
@@ -683,7 +683,7 @@ impl From<Ten> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tien {
-    #[doc = "Disables MUA Transmit Interrupt n. (default)"]
+    #[doc = "Disables MUA Transmit Interrupt n. (default)."]
     TIEN_0 = 0x0,
     #[doc = "Enables MUA Transmit Interrupt n."]
     TIEN_1 = 0x01,

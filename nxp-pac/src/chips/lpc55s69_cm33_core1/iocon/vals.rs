@@ -4,7 +4,7 @@
 pub enum PioAsw {
     #[doc = "For pins PIO0_9, PIO0_11, PIO0_12, PIO0_15, PIO0_18, PIO0_31, PIO1_0 and PIO1_9, analog switch is closed (enabled). For the other pins, analog switch is open (disabled)."]
     VALUE0 = 0x0,
-    #[doc = "For all pins except PIO0_9, PIO0_11, PIO0_12, PIO0_15, PIO0_18, PIO0_31, PIO1_0 and PIO1_9 analog switch is closed (enabled)"]
+    #[doc = "For all pins except PIO0_9, PIO0_11, PIO0_12, PIO0_15, PIO0_18, PIO0_31, PIO1_0 and PIO1_9 analog switch is closed (enabled)."]
     VALUE1 = 0x01,
 }
 impl PioAsw {
@@ -243,7 +243,7 @@ impl From<PioMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PioOd {
-    #[doc = "Normal. Normal push-pull output"]
+    #[doc = "Normal. Normal push-pull output."]
     NORMAL = 0x0,
     #[doc = "Open-drain. Simulated open-drain output (high drive disabled)."]
     OPEN_DRAIN = 0x01,

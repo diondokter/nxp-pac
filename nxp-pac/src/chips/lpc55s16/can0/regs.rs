@@ -1,4 +1,4 @@
-#[doc = "CC Control Register"]
+#[doc = "CC Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cccr(pub u32);
@@ -221,7 +221,7 @@ impl defmt::Format for Cccr {
         )
     }
 }
-#[doc = "Data Bit Timing Prescaler Register"]
+#[doc = "Data Bit Timing Prescaler Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dbtp(pub u32);
@@ -318,7 +318,7 @@ impl defmt::Format for Dbtp {
         )
     }
 }
-#[doc = "Error Counter Register"]
+#[doc = "Error Counter Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ecr(pub u32);
@@ -401,7 +401,7 @@ impl defmt::Format for Ecr {
         )
     }
 }
-#[doc = "External Timestamp Counter Configuration"]
+#[doc = "External Timestamp Counter Configuration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Etscc(pub u32);
@@ -456,7 +456,7 @@ impl defmt::Format for Etscc {
         )
     }
 }
-#[doc = "External Timestamp Counter Value"]
+#[doc = "External Timestamp Counter Value."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Etscv(pub u32);
@@ -491,7 +491,7 @@ impl defmt::Format for Etscv {
         defmt::write!(f, "Etscv {{ etsc: {=u16:?} }}", self.etsc())
     }
 }
-#[doc = "Global Filter Configuration"]
+#[doc = "Global Filter Configuration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gfc(pub u32);
@@ -574,7 +574,7 @@ impl defmt::Format for Gfc {
         )
     }
 }
-#[doc = "High Priority Message Status"]
+#[doc = "High Priority Message Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hpms(pub u32);
@@ -657,7 +657,7 @@ impl defmt::Format for Hpms {
         )
     }
 }
-#[doc = "Interrupt Enable"]
+#[doc = "Interrupt Enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ie(pub u32);
@@ -1104,7 +1104,7 @@ impl defmt::Format for Ie {
         )
     }
 }
-#[doc = "Interrupt Line Enable"]
+#[doc = "Interrupt Line Enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ile(pub u32);
@@ -1159,7 +1159,7 @@ impl defmt::Format for Ile {
         )
     }
 }
-#[doc = "Interrupt Line Select"]
+#[doc = "Interrupt Line Select."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ils(pub u32);
@@ -1606,7 +1606,7 @@ impl defmt::Format for Ils {
         )
     }
 }
-#[doc = "Interrupt Register"]
+#[doc = "Interrupt Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ir(pub u32);
@@ -2053,7 +2053,7 @@ impl defmt::Format for Ir {
         )
     }
 }
-#[doc = "CAN Message RAM Base Address"]
+#[doc = "CAN Message RAM Base Address."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mrba(pub u32);
@@ -2088,7 +2088,7 @@ impl defmt::Format for Mrba {
         defmt::write!(f, "Mrba {{ ba: {=u16:?} }}", self.ba())
     }
 }
-#[doc = "Nominal Bit Timing and Prescaler Register"]
+#[doc = "Nominal Bit Timing and Prescaler Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Nbtp(pub u32);
@@ -2171,7 +2171,7 @@ impl defmt::Format for Nbtp {
         )
     }
 }
-#[doc = "New Data 1"]
+#[doc = "New Data 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ndat1(pub u32);
@@ -2206,7 +2206,7 @@ impl defmt::Format for Ndat1 {
         defmt::write!(f, "Ndat1 {{ nd: {=u32:?} }}", self.nd())
     }
 }
-#[doc = "New Data 2"]
+#[doc = "New Data 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ndat2(pub u32);
@@ -2241,7 +2241,7 @@ impl defmt::Format for Ndat2 {
         defmt::write!(f, "Ndat2 {{ nd: {=u32:?} }}", self.nd())
     }
 }
-#[doc = "Protocol Status Register"]
+#[doc = "Protocol Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Psr(pub u32);
@@ -2422,7 +2422,7 @@ impl defmt::Format for Psr {
         )
     }
 }
-#[doc = "Rx Buffer Configuration"]
+#[doc = "Rx Buffer Configuration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Rxbc(pub u32);
@@ -2457,7 +2457,7 @@ impl defmt::Format for Rxbc {
         defmt::write!(f, "Rxbc {{ rbsa: {=u16:?} }}", self.rbsa())
     }
 }
-#[doc = "Rx Buffer and FIFO Element Size Configuration"]
+#[doc = "Rx Buffer and FIFO Element Size Configuration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Rxesc(pub u32);
@@ -2526,7 +2526,7 @@ impl defmt::Format for Rxesc {
         )
     }
 }
-#[doc = "Rx FIFO 0 Acknowledge"]
+#[doc = "Rx FIFO 0 Acknowledge."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Rxf0a(pub u32);
@@ -2561,7 +2561,7 @@ impl defmt::Format for Rxf0a {
         defmt::write!(f, "Rxf0a {{ f0ai: {=u8:?} }}", self.f0ai())
     }
 }
-#[doc = "Rx FIFO 0 Configuration"]
+#[doc = "Rx FIFO 0 Configuration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Rxf0c(pub u32);
@@ -2644,7 +2644,7 @@ impl defmt::Format for Rxf0c {
         )
     }
 }
-#[doc = "Rx FIFO 0 Status"]
+#[doc = "Rx FIFO 0 Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Rxf0s(pub u32);
@@ -2741,7 +2741,7 @@ impl defmt::Format for Rxf0s {
         )
     }
 }
-#[doc = "Rx FIFO 1 Acknowledge"]
+#[doc = "Rx FIFO 1 Acknowledge."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Rxf1a(pub u32);
@@ -2776,7 +2776,7 @@ impl defmt::Format for Rxf1a {
         defmt::write!(f, "Rxf1a {{ f1ai: {=u8:?} }}", self.f1ai())
     }
 }
-#[doc = "Rx FIFO 1 Configuration"]
+#[doc = "Rx FIFO 1 Configuration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Rxf1c(pub u32);
@@ -2859,7 +2859,7 @@ impl defmt::Format for Rxf1c {
         )
     }
 }
-#[doc = "Rx FIFO 1 Status"]
+#[doc = "Rx FIFO 1 Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Rxf1s(pub u32);
@@ -2956,7 +2956,7 @@ impl defmt::Format for Rxf1s {
         )
     }
 }
-#[doc = "Standard ID Filter Configuration"]
+#[doc = "Standard ID Filter Configuration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sidfc(pub u32);
@@ -3011,7 +3011,7 @@ impl defmt::Format for Sidfc {
         )
     }
 }
-#[doc = "Transmitter Delay Compensator Register"]
+#[doc = "Transmitter Delay Compensator Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tdcr(pub u32);
@@ -3066,7 +3066,7 @@ impl defmt::Format for Tdcr {
         )
     }
 }
-#[doc = "Test Register"]
+#[doc = "Test Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Test(pub u32);
@@ -3135,7 +3135,7 @@ impl defmt::Format for Test {
         )
     }
 }
-#[doc = "Timeout Counter Configuration"]
+#[doc = "Timeout Counter Configuration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tocc(pub u32);
@@ -3204,7 +3204,7 @@ impl defmt::Format for Tocc {
         )
     }
 }
-#[doc = "Timeout Counter Value"]
+#[doc = "Timeout Counter Value."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tocv(pub u32);
@@ -3239,7 +3239,7 @@ impl defmt::Format for Tocv {
         defmt::write!(f, "Tocv {{ toc: {=u16:?} }}", self.toc())
     }
 }
-#[doc = "Timestamp Counter Configuration"]
+#[doc = "Timestamp Counter Configuration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tscc(pub u32);
@@ -3294,7 +3294,7 @@ impl defmt::Format for Tscc {
         )
     }
 }
-#[doc = "Timestamp Counter Value"]
+#[doc = "Timestamp Counter Value."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tscv(pub u32);
@@ -3329,7 +3329,7 @@ impl defmt::Format for Tscv {
         defmt::write!(f, "Tscv {{ tsc: {=u16:?} }}", self.tsc())
     }
 }
-#[doc = "Tx Buffer Add Request"]
+#[doc = "Tx Buffer Add Request."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Txbar(pub u32);
@@ -3364,7 +3364,7 @@ impl defmt::Format for Txbar {
         defmt::write!(f, "Txbar {{ ar: {=u32:?} }}", self.ar())
     }
 }
-#[doc = "Tx Buffer Configuration"]
+#[doc = "Tx Buffer Configuration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Txbc(pub u32);
@@ -3447,7 +3447,7 @@ impl defmt::Format for Txbc {
         )
     }
 }
-#[doc = "Tx Buffer Cancellation Finished"]
+#[doc = "Tx Buffer Cancellation Finished."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Txbcf(pub u32);
@@ -3482,7 +3482,7 @@ impl defmt::Format for Txbcf {
         defmt::write!(f, "Txbcf {{ to: {=u32:?} }}", self.to())
     }
 }
-#[doc = "Tx Buffer Cancellation Finished Interrupt Enable"]
+#[doc = "Tx Buffer Cancellation Finished Interrupt Enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Txbcie(pub u32);
@@ -3519,7 +3519,7 @@ impl defmt::Format for Txbcie {
         defmt::write!(f, "Txbcie {{ cfie: {=u32:?} }}", self.cfie())
     }
 }
-#[doc = "Tx Buffer Cancellation Request"]
+#[doc = "Tx Buffer Cancellation Request."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Txbcr(pub u32);
@@ -3554,7 +3554,7 @@ impl defmt::Format for Txbcr {
         defmt::write!(f, "Txbcr {{ cr: {=u32:?} }}", self.cr())
     }
 }
-#[doc = "Tx Buffer Request Pending"]
+#[doc = "Tx Buffer Request Pending."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Txbrp(pub u32);
@@ -3589,7 +3589,7 @@ impl defmt::Format for Txbrp {
         defmt::write!(f, "Txbrp {{ trp: {=u32:?} }}", self.trp())
     }
 }
-#[doc = "Tx Buffer Transmission Interrupt Enable"]
+#[doc = "Tx Buffer Transmission Interrupt Enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Txbtie(pub u32);
@@ -3624,7 +3624,7 @@ impl defmt::Format for Txbtie {
         defmt::write!(f, "Txbtie {{ tie: {=u32:?} }}", self.tie())
     }
 }
-#[doc = "Tx Buffer Transmission Occurred"]
+#[doc = "Tx Buffer Transmission Occurred."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Txbto(pub u32);
@@ -3659,7 +3659,7 @@ impl defmt::Format for Txbto {
         defmt::write!(f, "Txbto {{ to: {=u32:?} }}", self.to())
     }
 }
-#[doc = "Tx Event FIFO Acknowledge"]
+#[doc = "Tx Event FIFO Acknowledge."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Txefa(pub u32);
@@ -3694,7 +3694,7 @@ impl defmt::Format for Txefa {
         defmt::write!(f, "Txefa {{ efai: {=u8:?} }}", self.efai())
     }
 }
-#[doc = "Tx Event FIFO Configuration"]
+#[doc = "Tx Event FIFO Configuration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Txefc(pub u32);
@@ -3763,7 +3763,7 @@ impl defmt::Format for Txefc {
         )
     }
 }
-#[doc = "Tx Event FIFO Status"]
+#[doc = "Tx Event FIFO Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Txefs(pub u32);
@@ -3860,7 +3860,7 @@ impl defmt::Format for Txefs {
         )
     }
 }
-#[doc = "Tx Buffer Element Size Configuration"]
+#[doc = "Tx Buffer Element Size Configuration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Txesc(pub u32);
@@ -3895,7 +3895,7 @@ impl defmt::Format for Txesc {
         defmt::write!(f, "Txesc {{ tbds: {=u8:?} }}", self.tbds())
     }
 }
-#[doc = "Tx FIFO/Queue Status"]
+#[doc = "Tx FIFO/Queue Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Txfqs(pub u32);
@@ -3964,7 +3964,7 @@ impl defmt::Format for Txfqs {
         )
     }
 }
-#[doc = "Extended ID AND Mask"]
+#[doc = "Extended ID AND Mask."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Xidam(pub u32);
@@ -3999,7 +3999,7 @@ impl defmt::Format for Xidam {
         defmt::write!(f, "Xidam {{ eidm: {=u32:?} }}", self.eidm())
     }
 }
-#[doc = "Extended ID Filter Configuration"]
+#[doc = "Extended ID Filter Configuration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Xidfc(pub u32);

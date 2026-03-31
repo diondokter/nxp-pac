@@ -33,9 +33,9 @@ impl From<Axibuserr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Axibuserren {
-    #[doc = "Interrupt is disabled"]
+    #[doc = "Interrupt is disabled."]
     AXIBUSERREN_0 = 0x0,
-    #[doc = "Interrupt is enabled"]
+    #[doc = "Interrupt is enabled."]
     AXIBUSERREN_1 = 0x01,
 }
 impl Axibuserren {
@@ -95,9 +95,9 @@ impl From<Axicmderr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Axicmderren {
-    #[doc = "Interrupt is disabled"]
+    #[doc = "Interrupt is disabled."]
     AXICMDERREN_0 = 0x0,
-    #[doc = "Interrupt is enabled"]
+    #[doc = "Interrupt is enabled."]
     AXICMDERREN_1 = 0x01,
 }
 impl Axicmderren {
@@ -157,9 +157,9 @@ impl From<Bank2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bm0 {
-    #[doc = "Byte is unmasked"]
+    #[doc = "Byte is unmasked."]
     BM0_0 = 0x0,
-    #[doc = "Byte is masked"]
+    #[doc = "Byte is masked."]
     BM0_1 = 0x01,
 }
 impl Bm0 {
@@ -188,9 +188,9 @@ impl From<Bm0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bm1 {
-    #[doc = "Byte is unmasked"]
+    #[doc = "Byte is unmasked."]
     BM1_0 = 0x0,
-    #[doc = "Byte is masked"]
+    #[doc = "Byte is masked."]
     BM1_1 = 0x01,
 }
 impl Bm1 {
@@ -219,9 +219,9 @@ impl From<Bm1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bm2 {
-    #[doc = "Byte is unmasked"]
+    #[doc = "Byte is unmasked."]
     BM2_0 = 0x0,
-    #[doc = "Byte is masked"]
+    #[doc = "Byte is masked."]
     BM2_1 = 0x01,
 }
 impl Bm2 {
@@ -250,9 +250,9 @@ impl From<Bm2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bm3 {
-    #[doc = "Byte is unmasked"]
+    #[doc = "Byte is unmasked."]
     BM3_0 = 0x0,
-    #[doc = "Byte is masked"]
+    #[doc = "Byte is masked."]
     BM3_1 = 0x01,
 }
 impl Bm3 {
@@ -281,9 +281,9 @@ impl From<Bm3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bto {
-    #[doc = "255*1"]
+    #[doc = "255*1."]
     BTO_0 = 0x0,
-    #[doc = "255*2"]
+    #[doc = "255*2."]
     BTO_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -314,7 +314,7 @@ pub enum Bto {
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
     _RESERVED_1e = 0x1e,
-    #[doc = "255*231"]
+    #[doc = "255*231."]
     BTO_31 = 0x1f,
 }
 impl Bto {
@@ -343,13 +343,13 @@ impl From<Bto> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cl {
-    #[doc = "1"]
+    #[doc = "1."]
     CL_0 = 0x0,
-    #[doc = "1"]
+    #[doc = "1."]
     CL_1 = 0x01,
-    #[doc = "2"]
+    #[doc = "2."]
     CL_2 = 0x02,
-    #[doc = "3"]
+    #[doc = "3."]
     CL_3 = 0x03,
 }
 impl Cl {
@@ -409,21 +409,21 @@ impl From<Col8> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Datsz {
-    #[doc = "4"]
+    #[doc = "4."]
     DATSZ_0 = 0x0,
-    #[doc = "1"]
+    #[doc = "1."]
     DATSZ_1 = 0x01,
-    #[doc = "2"]
+    #[doc = "2."]
     DATSZ_2 = 0x02,
-    #[doc = "3"]
+    #[doc = "3."]
     DATSZ_3 = 0x03,
-    #[doc = "4"]
+    #[doc = "4."]
     DATSZ_4 = 0x04,
-    #[doc = "4"]
+    #[doc = "4."]
     DATSZ_5 = 0x05,
-    #[doc = "4"]
+    #[doc = "4."]
     DATSZ_6 = 0x06,
-    #[doc = "4"]
+    #[doc = "4."]
     DATSZ_7 = 0x07,
 }
 impl Datsz {
@@ -452,21 +452,21 @@ impl From<Datsz> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dbicr0Bl {
-    #[doc = "1"]
+    #[doc = "1."]
     BL_0 = 0x0,
-    #[doc = "2"]
+    #[doc = "2."]
     BL_1 = 0x01,
-    #[doc = "4"]
+    #[doc = "4."]
     BL_2 = 0x02,
-    #[doc = "8"]
+    #[doc = "8."]
     BL_3 = 0x03,
-    #[doc = "16"]
+    #[doc = "16."]
     BL_4 = 0x04,
-    #[doc = "32"]
+    #[doc = "32."]
     BL_5 = 0x05,
-    #[doc = "64"]
+    #[doc = "64."]
     BL_6 = 0x06,
-    #[doc = "64"]
+    #[doc = "64."]
     BL_7 = 0x07,
 }
 impl Dbicr0Bl {
@@ -495,37 +495,37 @@ impl From<Dbicr0Bl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dbicr0Col {
-    #[doc = "12 Bits"]
+    #[doc = "12 Bits."]
     COL_0 = 0x0,
-    #[doc = "11 Bits"]
+    #[doc = "11 Bits."]
     COL_1 = 0x01,
-    #[doc = "10 Bits"]
+    #[doc = "10 Bits."]
     COL_2 = 0x02,
-    #[doc = "9 Bits"]
+    #[doc = "9 Bits."]
     COL_3 = 0x03,
-    #[doc = "8 Bits"]
+    #[doc = "8 Bits."]
     COL_4 = 0x04,
-    #[doc = "7 Bits"]
+    #[doc = "7 Bits."]
     COL_5 = 0x05,
-    #[doc = "6 Bits"]
+    #[doc = "6 Bits."]
     COL_6 = 0x06,
-    #[doc = "5 Bits"]
+    #[doc = "5 Bits."]
     COL_7 = 0x07,
-    #[doc = "4 Bits"]
+    #[doc = "4 Bits."]
     COL_8 = 0x08,
-    #[doc = "3 Bits"]
+    #[doc = "3 Bits."]
     COL_9 = 0x09,
-    #[doc = "2 Bits"]
+    #[doc = "2 Bits."]
     COL_10 = 0x0a,
-    #[doc = "12 Bits"]
+    #[doc = "12 Bits."]
     COL_11 = 0x0b,
-    #[doc = "12 Bits"]
+    #[doc = "12 Bits."]
     COL_12 = 0x0c,
-    #[doc = "12 Bits"]
+    #[doc = "12 Bits."]
     COL_13 = 0x0d,
-    #[doc = "12 Bits"]
+    #[doc = "12 Bits."]
     COL_14 = 0x0e,
-    #[doc = "12 Bits"]
+    #[doc = "12 Bits."]
     COL_15 = 0x0f,
 }
 impl Dbicr0Col {
@@ -554,9 +554,9 @@ impl From<Dbicr0Col> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dbicr0Ps {
-    #[doc = "8bit"]
+    #[doc = "8bit."]
     PS_0 = 0x0,
-    #[doc = "16bit"]
+    #[doc = "16bit."]
     PS_1 = 0x01,
 }
 impl Dbicr0Ps {
@@ -647,9 +647,9 @@ impl From<Dllreset> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dqsmd {
-    #[doc = "Dummy read strobe loopbacked internally"]
+    #[doc = "Dummy read strobe loopbacked internally."]
     DQSMD_0 = 0x0,
-    #[doc = "Dummy read strobe loopbacked from DQS pad"]
+    #[doc = "Dummy read strobe loopbacked from DQS pad."]
     DQSMD_1 = 0x01,
 }
 impl Dqsmd {
@@ -678,9 +678,9 @@ impl From<Dqsmd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edo {
-    #[doc = "EDO mode disabled"]
+    #[doc = "EDO mode disabled."]
     EDO_0 = 0x0,
-    #[doc = "EDO mode enabled"]
+    #[doc = "EDO mode enabled."]
     EDO_1 = 0x01,
 }
 impl Edo {
@@ -740,9 +740,9 @@ impl From<Ipcmddone> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ipcmddoneen {
-    #[doc = "Interrupt is disabled"]
+    #[doc = "Interrupt is disabled."]
     IPCMDDONEEN_0 = 0x0,
-    #[doc = "Interrupt is enabled"]
+    #[doc = "Interrupt is enabled."]
     IPCMDDONEEN_1 = 0x01,
 }
 impl Ipcmddoneen {
@@ -802,9 +802,9 @@ impl From<Ipcmderr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ipcmderren {
-    #[doc = "Interrupt is disabled"]
+    #[doc = "Interrupt is disabled."]
     IPCMDERREN_0 = 0x0,
-    #[doc = "Interrupt is enabled"]
+    #[doc = "Interrupt is enabled."]
     IPCMDERREN_1 = 0x01,
 }
 impl Ipcmderren {
@@ -913,9 +913,9 @@ impl From<Ito> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mdis {
-    #[doc = "Module enabled"]
+    #[doc = "Module enabled."]
     MDIS_0 = 0x0,
-    #[doc = "Module disabled"]
+    #[doc = "Module disabled."]
     MDIS_1 = 0x01,
 }
 impl Mdis {
@@ -944,69 +944,69 @@ impl From<Mdis> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ms {
-    #[doc = "4KB"]
+    #[doc = "4KB."]
     MS_0 = 0x0,
-    #[doc = "8KB"]
+    #[doc = "8KB."]
     MS_1 = 0x01,
-    #[doc = "16KB"]
+    #[doc = "16KB."]
     MS_2 = 0x02,
-    #[doc = "32KB"]
+    #[doc = "32KB."]
     MS_3 = 0x03,
-    #[doc = "64KB"]
+    #[doc = "64KB."]
     MS_4 = 0x04,
-    #[doc = "128KB"]
+    #[doc = "128KB."]
     MS_5 = 0x05,
-    #[doc = "256KB"]
+    #[doc = "256KB."]
     MS_6 = 0x06,
-    #[doc = "512KB"]
+    #[doc = "512KB."]
     MS_7 = 0x07,
-    #[doc = "1MB"]
+    #[doc = "1MB."]
     MS_8 = 0x08,
-    #[doc = "2MB"]
+    #[doc = "2MB."]
     MS_9 = 0x09,
-    #[doc = "4MB"]
+    #[doc = "4MB."]
     MS_10 = 0x0a,
-    #[doc = "8MB"]
+    #[doc = "8MB."]
     MS_11 = 0x0b,
-    #[doc = "16MB"]
+    #[doc = "16MB."]
     MS_12 = 0x0c,
-    #[doc = "32MB"]
+    #[doc = "32MB."]
     MS_13 = 0x0d,
-    #[doc = "64MB"]
+    #[doc = "64MB."]
     MS_14 = 0x0e,
-    #[doc = "128MB"]
+    #[doc = "128MB."]
     MS_15 = 0x0f,
-    #[doc = "256MB"]
+    #[doc = "256MB."]
     MS_16 = 0x10,
-    #[doc = "512MB"]
+    #[doc = "512MB."]
     MS_17 = 0x11,
-    #[doc = "1GB"]
+    #[doc = "1GB."]
     MS_18 = 0x12,
-    #[doc = "2GB"]
+    #[doc = "2GB."]
     MS_19 = 0x13,
-    #[doc = "4GB"]
+    #[doc = "4GB."]
     MS_20 = 0x14,
-    #[doc = "4GB"]
+    #[doc = "4GB."]
     MS_21 = 0x15,
-    #[doc = "4GB"]
+    #[doc = "4GB."]
     MS_22 = 0x16,
-    #[doc = "4GB"]
+    #[doc = "4GB."]
     MS_23 = 0x17,
-    #[doc = "4GB"]
+    #[doc = "4GB."]
     MS_24 = 0x18,
-    #[doc = "4GB"]
+    #[doc = "4GB."]
     MS_25 = 0x19,
-    #[doc = "4GB"]
+    #[doc = "4GB."]
     MS_26 = 0x1a,
-    #[doc = "4GB"]
+    #[doc = "4GB."]
     MS_27 = 0x1b,
-    #[doc = "4GB"]
+    #[doc = "4GB."]
     MS_28 = 0x1c,
-    #[doc = "4GB"]
+    #[doc = "4GB."]
     MS_29 = 0x1d,
-    #[doc = "4GB"]
+    #[doc = "4GB."]
     MS_30 = 0x1e,
-    #[doc = "4GB"]
+    #[doc = "4GB."]
     MS_31 = 0x1f,
 }
 impl Ms {
@@ -1035,21 +1035,21 @@ impl From<Ms> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MuxA8 {
-    #[doc = "SDRAM Address bit 8 (A8) or NOR/SRAM Address bit 24 (A24) in ADMUX 16bit mode"]
+    #[doc = "SDRAM Address bit 8 (A8) or NOR/SRAM Address bit 24 (A24) in ADMUX 16bit mode."]
     MUX_A8_0 = 0x0,
-    #[doc = "NAND CE#"]
+    #[doc = "NAND CE#."]
     MUX_A8_1 = 0x01,
-    #[doc = "NOR CE#"]
+    #[doc = "NOR CE#."]
     MUX_A8_2 = 0x02,
-    #[doc = "SRAM CE#"]
+    #[doc = "SRAM CE#."]
     MUX_A8_3 = 0x03,
-    #[doc = "DBI CSX"]
+    #[doc = "DBI CSX."]
     MUX_A8_4 = 0x04,
-    #[doc = "SDRAM Address bit 8 (A8) or NOR/SRAM Address bit 24 (A24) in ADMUX 16bit mode"]
+    #[doc = "SDRAM Address bit 8 (A8) or NOR/SRAM Address bit 24 (A24) in ADMUX 16bit mode."]
     MUX_A8_5 = 0x05,
-    #[doc = "SDRAM Address bit 8 (A8) or NOR/SRAM Address bit 24 (A24) in ADMUX 16bit mode"]
+    #[doc = "SDRAM Address bit 8 (A8) or NOR/SRAM Address bit 24 (A24) in ADMUX 16bit mode."]
     MUX_A8_6 = 0x06,
-    #[doc = "SDRAM Address bit 8 (A8) or NOR/SRAM Address bit 24 (A24) in ADMUX 16bit mode"]
+    #[doc = "SDRAM Address bit 8 (A8) or NOR/SRAM Address bit 24 (A24) in ADMUX 16bit mode."]
     MUX_A8_7 = 0x07,
 }
 impl MuxA8 {
@@ -1078,9 +1078,9 @@ impl From<MuxA8> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MuxClkx0 {
-    #[doc = "NOR clock"]
+    #[doc = "NOR clock."]
     MUX_CLKX0_0 = 0x0,
-    #[doc = "SRAM clock"]
+    #[doc = "SRAM clock."]
     MUX_CLKX0_1 = 0x01,
 }
 impl MuxClkx0 {
@@ -1109,9 +1109,9 @@ impl From<MuxClkx0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MuxClkx1 {
-    #[doc = "NOR clock"]
+    #[doc = "NOR clock."]
     MUX_CLKX1_0 = 0x0,
-    #[doc = "SRAM clock"]
+    #[doc = "SRAM clock."]
     MUX_CLKX1_1 = 0x01,
 }
 impl MuxClkx1 {
@@ -1141,19 +1141,19 @@ impl From<MuxClkx1> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MuxCsx0 {
     _RESERVED_0 = 0x0,
-    #[doc = "SDRAM CS1"]
+    #[doc = "SDRAM CS1."]
     MUX_CSX0_1 = 0x01,
-    #[doc = "SDRAM CS2"]
+    #[doc = "SDRAM CS2."]
     MUX_CSX0_2 = 0x02,
-    #[doc = "SDRAM CS3"]
+    #[doc = "SDRAM CS3."]
     MUX_CSX0_3 = 0x03,
-    #[doc = "NAND CE#"]
+    #[doc = "NAND CE#."]
     MUX_CSX0_4 = 0x04,
-    #[doc = "NOR CE#"]
+    #[doc = "NOR CE#."]
     MUX_CSX0_5 = 0x05,
-    #[doc = "SRAM CE#"]
+    #[doc = "SRAM CE#."]
     MUX_CSX0_6 = 0x06,
-    #[doc = "DBI CSX"]
+    #[doc = "DBI CSX."]
     MUX_CSX0_7 = 0x07,
 }
 impl MuxCsx0 {
@@ -1183,19 +1183,19 @@ impl From<MuxCsx0> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MuxCsx1 {
     _RESERVED_0 = 0x0,
-    #[doc = "SDRAM CS1"]
+    #[doc = "SDRAM CS1."]
     MUX_CSX1_1 = 0x01,
-    #[doc = "SDRAM CS2"]
+    #[doc = "SDRAM CS2."]
     MUX_CSX1_2 = 0x02,
-    #[doc = "SDRAM CS3"]
+    #[doc = "SDRAM CS3."]
     MUX_CSX1_3 = 0x03,
-    #[doc = "NAND CE#"]
+    #[doc = "NAND CE#."]
     MUX_CSX1_4 = 0x04,
-    #[doc = "NOR CE#"]
+    #[doc = "NOR CE#."]
     MUX_CSX1_5 = 0x05,
-    #[doc = "SRAM CE#"]
+    #[doc = "SRAM CE#."]
     MUX_CSX1_6 = 0x06,
-    #[doc = "DBI CSX"]
+    #[doc = "DBI CSX."]
     MUX_CSX1_7 = 0x07,
 }
 impl MuxCsx1 {
@@ -1225,19 +1225,19 @@ impl From<MuxCsx1> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MuxCsx2 {
     _RESERVED_0 = 0x0,
-    #[doc = "SDRAM CS1"]
+    #[doc = "SDRAM CS1."]
     MUX_CSX2_1 = 0x01,
-    #[doc = "SDRAM CS2"]
+    #[doc = "SDRAM CS2."]
     MUX_CSX2_2 = 0x02,
-    #[doc = "SDRAM CS3"]
+    #[doc = "SDRAM CS3."]
     MUX_CSX2_3 = 0x03,
-    #[doc = "NAND CE#"]
+    #[doc = "NAND CE#."]
     MUX_CSX2_4 = 0x04,
-    #[doc = "NOR CE#"]
+    #[doc = "NOR CE#."]
     MUX_CSX2_5 = 0x05,
-    #[doc = "SRAM CE#"]
+    #[doc = "SRAM CE#."]
     MUX_CSX2_6 = 0x06,
-    #[doc = "DBI CSX"]
+    #[doc = "DBI CSX."]
     MUX_CSX2_7 = 0x07,
 }
 impl MuxCsx2 {
@@ -1267,19 +1267,19 @@ impl From<MuxCsx2> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MuxCsx3 {
     _RESERVED_0 = 0x0,
-    #[doc = "SDRAM CS1"]
+    #[doc = "SDRAM CS1."]
     MUX_CSX3_1 = 0x01,
-    #[doc = "SDRAM CS2"]
+    #[doc = "SDRAM CS2."]
     MUX_CSX3_2 = 0x02,
-    #[doc = "SDRAM CS3"]
+    #[doc = "SDRAM CS3."]
     MUX_CSX3_3 = 0x03,
-    #[doc = "NAND CE#"]
+    #[doc = "NAND CE#."]
     MUX_CSX3_4 = 0x04,
-    #[doc = "NOR CE#"]
+    #[doc = "NOR CE#."]
     MUX_CSX3_5 = 0x05,
-    #[doc = "SRAM CE#"]
+    #[doc = "SRAM CE#."]
     MUX_CSX3_6 = 0x06,
-    #[doc = "DBI CSX"]
+    #[doc = "DBI CSX."]
     MUX_CSX3_7 = 0x07,
 }
 impl MuxCsx3 {
@@ -1308,19 +1308,19 @@ impl From<MuxCsx3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MuxRdy {
-    #[doc = "NAND R/B# input"]
+    #[doc = "NAND R/B# input."]
     MUX_RDY_0 = 0x0,
-    #[doc = "SDRAM CS1"]
+    #[doc = "SDRAM CS1."]
     MUX_RDY_1 = 0x01,
-    #[doc = "SDRAM CS2"]
+    #[doc = "SDRAM CS2."]
     MUX_RDY_2 = 0x02,
-    #[doc = "SDRAM CS3"]
+    #[doc = "SDRAM CS3."]
     MUX_RDY_3 = 0x03,
-    #[doc = "NOR CE#"]
+    #[doc = "NOR CE#."]
     MUX_RDY_4 = 0x04,
-    #[doc = "SRAM CE#"]
+    #[doc = "SRAM CE#."]
     MUX_RDY_5 = 0x05,
-    #[doc = "DBI CSX"]
+    #[doc = "DBI CSX."]
     MUX_RDY_6 = 0x06,
     _RESERVED_7 = 0x07,
 }
@@ -1350,21 +1350,21 @@ impl From<MuxRdy> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nandcr0Bl {
-    #[doc = "1"]
+    #[doc = "1."]
     BL_0 = 0x0,
-    #[doc = "2"]
+    #[doc = "2."]
     BL_1 = 0x01,
-    #[doc = "4"]
+    #[doc = "4."]
     BL_2 = 0x02,
-    #[doc = "8"]
+    #[doc = "8."]
     BL_3 = 0x03,
-    #[doc = "16"]
+    #[doc = "16."]
     BL_4 = 0x04,
-    #[doc = "32"]
+    #[doc = "32."]
     BL_5 = 0x05,
-    #[doc = "64"]
+    #[doc = "64."]
     BL_6 = 0x06,
-    #[doc = "64"]
+    #[doc = "64."]
     BL_7 = 0x07,
 }
 impl Nandcr0Bl {
@@ -1393,21 +1393,21 @@ impl From<Nandcr0Bl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nandcr0Col {
-    #[doc = "16"]
+    #[doc = "16."]
     COL_0 = 0x0,
-    #[doc = "15"]
+    #[doc = "15."]
     COL_1 = 0x01,
-    #[doc = "14"]
+    #[doc = "14."]
     COL_2 = 0x02,
-    #[doc = "13"]
+    #[doc = "13."]
     COL_3 = 0x03,
-    #[doc = "12"]
+    #[doc = "12."]
     COL_4 = 0x04,
-    #[doc = "11"]
+    #[doc = "11."]
     COL_5 = 0x05,
-    #[doc = "10"]
+    #[doc = "10."]
     COL_6 = 0x06,
-    #[doc = "9"]
+    #[doc = "9."]
     COL_7 = 0x07,
 }
 impl Nandcr0Col {
@@ -1436,9 +1436,9 @@ impl From<Nandcr0Col> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nandcr0Ps {
-    #[doc = "8bit"]
+    #[doc = "8bit."]
     PS_0 = 0x0,
-    #[doc = "16bit"]
+    #[doc = "16bit."]
     PS_1 = 0x01,
 }
 impl Nandcr0Ps {
@@ -1498,9 +1498,9 @@ impl From<Nandcr0Syncen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nardy {
-    #[doc = "NAND device is not ready"]
+    #[doc = "NAND device is not ready."]
     NARDY_0 = 0x0,
-    #[doc = "NAND device is ready"]
+    #[doc = "NAND device is ready."]
     NARDY_1 = 0x01,
 }
 impl Nardy {
@@ -1560,9 +1560,9 @@ impl From<Ndnopend> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ndnopenden {
-    #[doc = "Interrupt is disabled"]
+    #[doc = "Interrupt is disabled."]
     NDNOPENDEN_0 = 0x0,
-    #[doc = "Interrupt is enabled"]
+    #[doc = "Interrupt is enabled."]
     NDNOPENDEN_1 = 0x01,
 }
 impl Ndnopenden {
@@ -1622,9 +1622,9 @@ impl From<Ndpageend> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ndpageenden {
-    #[doc = "Interrupt is disabled"]
+    #[doc = "Interrupt is disabled."]
     NDPAGEENDEN_0 = 0x0,
-    #[doc = "Interrupt is enabled"]
+    #[doc = "Interrupt is enabled."]
     NDPAGEENDEN_1 = 0x01,
 }
 impl Ndpageenden {
@@ -1653,9 +1653,9 @@ impl From<Ndpageenden> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ndwrpend {
-    #[doc = "No pending"]
+    #[doc = "No pending."]
     NDWRPEND_0 = 0x0,
-    #[doc = "Pending"]
+    #[doc = "Pending."]
     NDWRPEND_1 = 0x01,
 }
 impl Ndwrpend {
@@ -1746,9 +1746,9 @@ impl From<Norcr0Advp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Norcr0Am {
-    #[doc = "Address/Data MUX mode (ADMUX)"]
+    #[doc = "Address/Data MUX mode (ADMUX)."]
     AM_0 = 0x0,
-    #[doc = "Advanced Address/Data MUX mode (AADM)"]
+    #[doc = "Advanced Address/Data MUX mode (AADM)."]
     AM_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -1779,21 +1779,21 @@ impl From<Norcr0Am> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Norcr0Bl {
-    #[doc = "1"]
+    #[doc = "1."]
     BL_0 = 0x0,
-    #[doc = "2"]
+    #[doc = "2."]
     BL_1 = 0x01,
-    #[doc = "4"]
+    #[doc = "4."]
     BL_2 = 0x02,
-    #[doc = "8"]
+    #[doc = "8."]
     BL_3 = 0x03,
-    #[doc = "16"]
+    #[doc = "16."]
     BL_4 = 0x04,
-    #[doc = "32"]
+    #[doc = "32."]
     BL_5 = 0x05,
-    #[doc = "64"]
+    #[doc = "64."]
     BL_6 = 0x06,
-    #[doc = "64"]
+    #[doc = "64."]
     BL_7 = 0x07,
 }
 impl Norcr0Bl {
@@ -1822,37 +1822,37 @@ impl From<Norcr0Bl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Norcr0Col {
-    #[doc = "12 Bits"]
+    #[doc = "12 Bits."]
     COL_0 = 0x0,
-    #[doc = "11 Bits"]
+    #[doc = "11 Bits."]
     COL_1 = 0x01,
-    #[doc = "10 Bits"]
+    #[doc = "10 Bits."]
     COL_2 = 0x02,
-    #[doc = "9 Bits"]
+    #[doc = "9 Bits."]
     COL_3 = 0x03,
-    #[doc = "8 Bits"]
+    #[doc = "8 Bits."]
     COL_4 = 0x04,
-    #[doc = "7 Bits"]
+    #[doc = "7 Bits."]
     COL_5 = 0x05,
-    #[doc = "6 Bits"]
+    #[doc = "6 Bits."]
     COL_6 = 0x06,
-    #[doc = "5 Bits"]
+    #[doc = "5 Bits."]
     COL_7 = 0x07,
-    #[doc = "4 Bits"]
+    #[doc = "4 Bits."]
     COL_8 = 0x08,
-    #[doc = "3 Bits"]
+    #[doc = "3 Bits."]
     COL_9 = 0x09,
-    #[doc = "2 Bits"]
+    #[doc = "2 Bits."]
     COL_10 = 0x0a,
-    #[doc = "12 Bits"]
+    #[doc = "12 Bits."]
     COL_11 = 0x0b,
-    #[doc = "12 Bits"]
+    #[doc = "12 Bits."]
     COL_12 = 0x0c,
-    #[doc = "12 Bits"]
+    #[doc = "12 Bits."]
     COL_13 = 0x0d,
-    #[doc = "12 Bits"]
+    #[doc = "12 Bits."]
     COL_14 = 0x0e,
-    #[doc = "12 Bits"]
+    #[doc = "12 Bits."]
     COL_15 = 0x0f,
 }
 impl Norcr0Col {
@@ -1881,9 +1881,9 @@ impl From<Norcr0Col> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Norcr0Ps {
-    #[doc = "8bit"]
+    #[doc = "8bit."]
     PS_0 = 0x0,
-    #[doc = "16bit"]
+    #[doc = "16bit."]
     PS_1 = 0x01,
 }
 impl Norcr0Ps {
@@ -1974,25 +1974,25 @@ impl From<Ovrden> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Prescale(u8);
 impl Prescale {
-    #[doc = "(256*16+1) clock cycles"]
+    #[doc = "(256*16+1) clock cycles."]
     pub const PRESCALE_0: Self = Self(0x0);
-    #[doc = "(PRESCALE*16+1) clock cycles"]
+    #[doc = "(PRESCALE*16+1) clock cycles."]
     pub const PRESCALE_1: Self = Self(0x01);
-    #[doc = "(PRESCALE*16+1) clock cycles"]
+    #[doc = "(PRESCALE*16+1) clock cycles."]
     pub const PRESCALE_2: Self = Self(0x02);
-    #[doc = "(PRESCALE*16+1) clock cycles"]
+    #[doc = "(PRESCALE*16+1) clock cycles."]
     pub const PRESCALE_3: Self = Self(0x03);
-    #[doc = "(PRESCALE*16+1) clock cycles"]
+    #[doc = "(PRESCALE*16+1) clock cycles."]
     pub const PRESCALE_4: Self = Self(0x04);
-    #[doc = "(PRESCALE*16+1) clock cycles"]
+    #[doc = "(PRESCALE*16+1) clock cycles."]
     pub const PRESCALE_5: Self = Self(0x05);
-    #[doc = "(PRESCALE*16+1) clock cycles"]
+    #[doc = "(PRESCALE*16+1) clock cycles."]
     pub const PRESCALE_6: Self = Self(0x06);
-    #[doc = "(PRESCALE*16+1) clock cycles"]
+    #[doc = "(PRESCALE*16+1) clock cycles."]
     pub const PRESCALE_7: Self = Self(0x07);
-    #[doc = "(PRESCALE*16+1) clock cycles"]
+    #[doc = "(PRESCALE*16+1) clock cycles."]
     pub const PRESCALE_8: Self = Self(0x08);
-    #[doc = "(PRESCALE*16+1) clock cycles"]
+    #[doc = "(PRESCALE*16+1) clock cycles."]
     pub const PRESCALE_9: Self = Self(0x09);
 }
 impl Prescale {
@@ -2054,21 +2054,21 @@ impl From<Prescale> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rebl {
-    #[doc = "1"]
+    #[doc = "1."]
     REBL_0 = 0x0,
-    #[doc = "2"]
+    #[doc = "2."]
     REBL_1 = 0x01,
-    #[doc = "3"]
+    #[doc = "3."]
     REBL_2 = 0x02,
-    #[doc = "4"]
+    #[doc = "4."]
     REBL_3 = 0x03,
-    #[doc = "5"]
+    #[doc = "5."]
     REBL_4 = 0x04,
-    #[doc = "6"]
+    #[doc = "6."]
     REBL_5 = 0x05,
-    #[doc = "7"]
+    #[doc = "7."]
     REBL_6 = 0x06,
-    #[doc = "8"]
+    #[doc = "8."]
     REBL_7 = 0x07,
 }
 impl Rebl {
@@ -2128,9 +2128,9 @@ impl From<Reflock> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ren {
-    #[doc = "The SEMC does not send AUTO REFRESH command automatically"]
+    #[doc = "The SEMC does not send AUTO REFRESH command automatically."]
     REN_0 = 0x0,
-    #[doc = "The SEMC sends AUTO REFRESH command automatically"]
+    #[doc = "The SEMC sends AUTO REFRESH command automatically."]
     REN_1 = 0x01,
 }
 impl Ren {
@@ -2159,25 +2159,25 @@ impl From<Ren> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Rt(u8);
 impl Rt {
-    #[doc = "(256+1)*(Prescaler period)"]
+    #[doc = "(256+1)*(Prescaler period)."]
     pub const RT_0: Self = Self(0x0);
-    #[doc = "(RT+1)*(Prescaler period)"]
+    #[doc = "(RT+1)*(Prescaler period)."]
     pub const RT_1: Self = Self(0x01);
-    #[doc = "(RT+1)*(Prescaler period)"]
+    #[doc = "(RT+1)*(Prescaler period)."]
     pub const RT_2: Self = Self(0x02);
-    #[doc = "(RT+1)*(Prescaler period)"]
+    #[doc = "(RT+1)*(Prescaler period)."]
     pub const RT_3: Self = Self(0x03);
-    #[doc = "(RT+1)*(Prescaler period)"]
+    #[doc = "(RT+1)*(Prescaler period)."]
     pub const RT_4: Self = Self(0x04);
-    #[doc = "(RT+1)*(Prescaler period)"]
+    #[doc = "(RT+1)*(Prescaler period)."]
     pub const RT_5: Self = Self(0x05);
-    #[doc = "(RT+1)*(Prescaler period)"]
+    #[doc = "(RT+1)*(Prescaler period)."]
     pub const RT_6: Self = Self(0x06);
-    #[doc = "(RT+1)*(Prescaler period)"]
+    #[doc = "(RT+1)*(Prescaler period)."]
     pub const RT_7: Self = Self(0x07);
-    #[doc = "(RT+1)*(Prescaler period)"]
+    #[doc = "(RT+1)*(Prescaler period)."]
     pub const RT_8: Self = Self(0x08);
-    #[doc = "(RT+1)*(Prescaler period)"]
+    #[doc = "(RT+1)*(Prescaler period)."]
     pub const RT_9: Self = Self(0x09);
 }
 impl Rt {
@@ -2239,21 +2239,21 @@ impl From<Rt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sdramcr0Bl {
-    #[doc = "1"]
+    #[doc = "1."]
     BL_0 = 0x0,
-    #[doc = "2"]
+    #[doc = "2."]
     BL_1 = 0x01,
-    #[doc = "4"]
+    #[doc = "4."]
     BL_2 = 0x02,
-    #[doc = "8"]
+    #[doc = "8."]
     BL_3 = 0x03,
-    #[doc = "8"]
+    #[doc = "8."]
     BL_4 = 0x04,
-    #[doc = "8"]
+    #[doc = "8."]
     BL_5 = 0x05,
-    #[doc = "8"]
+    #[doc = "8."]
     BL_6 = 0x06,
-    #[doc = "8"]
+    #[doc = "8."]
     BL_7 = 0x07,
 }
 impl Sdramcr0Bl {
@@ -2282,13 +2282,13 @@ impl From<Sdramcr0Bl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sdramcr0Col {
-    #[doc = "12"]
+    #[doc = "12."]
     COL_0 = 0x0,
-    #[doc = "11"]
+    #[doc = "11."]
     COL_1 = 0x01,
-    #[doc = "10"]
+    #[doc = "10."]
     COL_2 = 0x02,
-    #[doc = "9"]
+    #[doc = "9."]
     COL_3 = 0x03,
 }
 impl Sdramcr0Col {
@@ -2317,9 +2317,9 @@ impl From<Sdramcr0Col> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sdramcr0Ps {
-    #[doc = "8bit"]
+    #[doc = "8bit."]
     PS_0 = 0x0,
-    #[doc = "16bit"]
+    #[doc = "16bit."]
     PS_1 = 0x01,
 }
 impl Sdramcr0Ps {
@@ -2441,9 +2441,9 @@ impl From<Sramcr0Advp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sramcr0Am {
-    #[doc = "Address/Data MUX mode (ADMUX)"]
+    #[doc = "Address/Data MUX mode (ADMUX)."]
     AM_0 = 0x0,
-    #[doc = "Advanced Address/Data MUX mode (AADM)"]
+    #[doc = "Advanced Address/Data MUX mode (AADM)."]
     AM_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -2474,21 +2474,21 @@ impl From<Sramcr0Am> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sramcr0Bl {
-    #[doc = "1"]
+    #[doc = "1."]
     BL_0 = 0x0,
-    #[doc = "2"]
+    #[doc = "2."]
     BL_1 = 0x01,
-    #[doc = "4"]
+    #[doc = "4."]
     BL_2 = 0x02,
-    #[doc = "8"]
+    #[doc = "8."]
     BL_3 = 0x03,
-    #[doc = "16"]
+    #[doc = "16."]
     BL_4 = 0x04,
-    #[doc = "32"]
+    #[doc = "32."]
     BL_5 = 0x05,
-    #[doc = "64"]
+    #[doc = "64."]
     BL_6 = 0x06,
-    #[doc = "64"]
+    #[doc = "64."]
     BL_7 = 0x07,
 }
 impl Sramcr0Bl {
@@ -2517,37 +2517,37 @@ impl From<Sramcr0Bl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sramcr0Col {
-    #[doc = "12 Bits"]
+    #[doc = "12 Bits."]
     COL_0 = 0x0,
-    #[doc = "11 Bits"]
+    #[doc = "11 Bits."]
     COL_1 = 0x01,
-    #[doc = "10 Bits"]
+    #[doc = "10 Bits."]
     COL_2 = 0x02,
-    #[doc = "9 Bits"]
+    #[doc = "9 Bits."]
     COL_3 = 0x03,
-    #[doc = "8 Bits"]
+    #[doc = "8 Bits."]
     COL_4 = 0x04,
-    #[doc = "7 Bits"]
+    #[doc = "7 Bits."]
     COL_5 = 0x05,
-    #[doc = "6 Bits"]
+    #[doc = "6 Bits."]
     COL_6 = 0x06,
-    #[doc = "5 Bits"]
+    #[doc = "5 Bits."]
     COL_7 = 0x07,
-    #[doc = "4 Bits"]
+    #[doc = "4 Bits."]
     COL_8 = 0x08,
-    #[doc = "3 Bits"]
+    #[doc = "3 Bits."]
     COL_9 = 0x09,
-    #[doc = "2 Bits"]
+    #[doc = "2 Bits."]
     COL_10 = 0x0a,
-    #[doc = "12 Bits"]
+    #[doc = "12 Bits."]
     COL_11 = 0x0b,
-    #[doc = "12 Bits"]
+    #[doc = "12 Bits."]
     COL_12 = 0x0c,
-    #[doc = "12 Bits"]
+    #[doc = "12 Bits."]
     COL_13 = 0x0d,
-    #[doc = "12 Bits"]
+    #[doc = "12 Bits."]
     COL_14 = 0x0e,
-    #[doc = "12 Bits"]
+    #[doc = "12 Bits."]
     COL_15 = 0x0f,
 }
 impl Sramcr0Col {
@@ -2576,9 +2576,9 @@ impl From<Sramcr0Col> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sramcr0Ps {
-    #[doc = "8bit"]
+    #[doc = "8bit."]
     PS_0 = 0x0,
-    #[doc = "16bit"]
+    #[doc = "16bit."]
     PS_1 = 0x01,
 }
 impl Sramcr0Ps {
@@ -2638,9 +2638,9 @@ impl From<Sramcr0Syncen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Swrst {
-    #[doc = "No reset"]
+    #[doc = "No reset."]
     SWRST_0 = 0x0,
-    #[doc = "Reset"]
+    #[doc = "Reset."]
     SWRST_1 = 0x01,
 }
 impl Swrst {
@@ -2669,25 +2669,25 @@ impl From<Swrst> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Ut(u8);
 impl Ut {
-    #[doc = "256*(Prescaler period)"]
+    #[doc = "256*(Prescaler period)."]
     pub const UT_0: Self = Self(0x0);
-    #[doc = "UT*(Prescaler period)"]
+    #[doc = "UT*(Prescaler period)."]
     pub const UT_1: Self = Self(0x01);
-    #[doc = "UT*(Prescaler period)"]
+    #[doc = "UT*(Prescaler period)."]
     pub const UT_2: Self = Self(0x02);
-    #[doc = "UT*(Prescaler period)"]
+    #[doc = "UT*(Prescaler period)."]
     pub const UT_3: Self = Self(0x03);
-    #[doc = "UT*(Prescaler period)"]
+    #[doc = "UT*(Prescaler period)."]
     pub const UT_4: Self = Self(0x04);
-    #[doc = "UT*(Prescaler period)"]
+    #[doc = "UT*(Prescaler period)."]
     pub const UT_5: Self = Self(0x05);
-    #[doc = "UT*(Prescaler period)"]
+    #[doc = "UT*(Prescaler period)."]
     pub const UT_6: Self = Self(0x06);
-    #[doc = "UT*(Prescaler period)"]
+    #[doc = "UT*(Prescaler period)."]
     pub const UT_7: Self = Self(0x07);
-    #[doc = "UT*(Prescaler period)"]
+    #[doc = "UT*(Prescaler period)."]
     pub const UT_8: Self = Self(0x08);
-    #[doc = "UT*(Prescaler period)"]
+    #[doc = "UT*(Prescaler period)."]
     pub const UT_9: Self = Self(0x09);
 }
 impl Ut {

@@ -1,16 +1,16 @@
-#[doc = "AHB Bus Control Register"]
+#[doc = "AHB Bus Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ahbcr(pub u32);
 impl Ahbcr {
-    #[doc = "Parallel mode enabled for AHB triggered Command (both read and write) ."]
+    #[doc = "Parallel mode enabled for AHB triggered Command (both read and write)."]
     #[must_use]
     #[inline(always)]
     pub const fn aparen(&self) -> super::vals::Aparen {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Aparen::from_bits(val as u8)
     }
-    #[doc = "Parallel mode enabled for AHB triggered Command (both read and write) ."]
+    #[doc = "Parallel mode enabled for AHB triggered Command (both read and write)."]
     #[inline(always)]
     pub const fn set_aparen(&mut self, val: super::vals::Aparen) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
@@ -87,14 +87,14 @@ impl Ahbcr {
     pub const fn set_readaddropt(&mut self, val: super::vals::Readaddropt) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "AHB Read Size Alignment"]
+    #[doc = "AHB Read Size Alignment."]
     #[must_use]
     #[inline(always)]
     pub const fn readszalign(&self) -> super::vals::Readszalign {
         let val = (self.0 >> 10usize) & 0x01;
         super::vals::Readszalign::from_bits(val as u8)
     }
-    #[doc = "AHB Read Size Alignment"]
+    #[doc = "AHB Read Size Alignment."]
     #[inline(always)]
     pub const fn set_readszalign(&mut self, val: super::vals::Readszalign) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
@@ -137,7 +137,7 @@ impl defmt::Format for Ahbcr {
         )
     }
 }
-#[doc = "AHB RX Buffer 0 Control Register 0"]
+#[doc = "AHB RX Buffer 0 Control Register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ahbrxbuf0cr0(pub u32);
@@ -178,14 +178,14 @@ impl Ahbrxbuf0cr0 {
     pub const fn set_priority(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val as u32) & 0x03) << 24usize);
     }
-    #[doc = "AHB RX Buffer address region funciton enable"]
+    #[doc = "AHB RX Buffer address region funciton enable."]
     #[must_use]
     #[inline(always)]
     pub const fn regionen(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "AHB RX Buffer address region funciton enable"]
+    #[doc = "AHB RX Buffer address region funciton enable."]
     #[inline(always)]
     pub const fn set_regionen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
@@ -234,7 +234,7 @@ impl defmt::Format for Ahbrxbuf0cr0 {
         )
     }
 }
-#[doc = "AHB RX Buffer 1 Control Register 0"]
+#[doc = "AHB RX Buffer 1 Control Register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ahbrxbuf1cr0(pub u32);
@@ -275,14 +275,14 @@ impl Ahbrxbuf1cr0 {
     pub const fn set_priority(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val as u32) & 0x03) << 24usize);
     }
-    #[doc = "AHB RX Buffer address region funciton enable"]
+    #[doc = "AHB RX Buffer address region funciton enable."]
     #[must_use]
     #[inline(always)]
     pub const fn regionen(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "AHB RX Buffer address region funciton enable"]
+    #[doc = "AHB RX Buffer address region funciton enable."]
     #[inline(always)]
     pub const fn set_regionen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
@@ -331,7 +331,7 @@ impl defmt::Format for Ahbrxbuf1cr0 {
         )
     }
 }
-#[doc = "AHB RX Buffer 2 Control Register 0"]
+#[doc = "AHB RX Buffer 2 Control Register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ahbrxbuf2cr0(pub u32);
@@ -372,14 +372,14 @@ impl Ahbrxbuf2cr0 {
     pub const fn set_priority(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val as u32) & 0x03) << 24usize);
     }
-    #[doc = "AHB RX Buffer address region funciton enable"]
+    #[doc = "AHB RX Buffer address region funciton enable."]
     #[must_use]
     #[inline(always)]
     pub const fn regionen(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "AHB RX Buffer address region funciton enable"]
+    #[doc = "AHB RX Buffer address region funciton enable."]
     #[inline(always)]
     pub const fn set_regionen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
@@ -428,7 +428,7 @@ impl defmt::Format for Ahbrxbuf2cr0 {
         )
     }
 }
-#[doc = "AHB RX Buffer 3 Control Register 0"]
+#[doc = "AHB RX Buffer 3 Control Register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ahbrxbuf3cr0(pub u32);
@@ -469,14 +469,14 @@ impl Ahbrxbuf3cr0 {
     pub const fn set_priority(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val as u32) & 0x03) << 24usize);
     }
-    #[doc = "AHB RX Buffer address region funciton enable"]
+    #[doc = "AHB RX Buffer address region funciton enable."]
     #[must_use]
     #[inline(always)]
     pub const fn regionen(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "AHB RX Buffer address region funciton enable"]
+    #[doc = "AHB RX Buffer address region funciton enable."]
     #[inline(always)]
     pub const fn set_regionen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
@@ -525,7 +525,7 @@ impl defmt::Format for Ahbrxbuf3cr0 {
         )
     }
 }
-#[doc = "AHB Suspend Status Register"]
+#[doc = "AHB Suspend Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ahbspndsts(pub u32);
@@ -594,7 +594,7 @@ impl defmt::Format for Ahbspndsts {
         )
     }
 }
-#[doc = "DLL Control Register 0"]
+#[doc = "DLL Control Register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dllcr(pub u32);
@@ -691,7 +691,7 @@ impl defmt::Format for Dllcr {
         )
     }
 }
-#[doc = "Flash Control Register 0"]
+#[doc = "Flash Control Register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flsha1cr0(pub u32);
@@ -728,7 +728,7 @@ impl defmt::Format for Flsha1cr0 {
         defmt::write!(f, "Flsha1cr0 {{ flshsz: {=u32:?} }}", self.flshsz())
     }
 }
-#[doc = "Flash Control Register 0"]
+#[doc = "Flash Control Register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flsha2cr0(pub u32);
@@ -765,7 +765,7 @@ impl defmt::Format for Flsha2cr0 {
         defmt::write!(f, "Flsha2cr0 {{ flshsz: {=u32:?} }}", self.flshsz())
     }
 }
-#[doc = "Flash Control Register 0"]
+#[doc = "Flash Control Register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flshb1cr0(pub u32);
@@ -802,7 +802,7 @@ impl defmt::Format for Flshb1cr0 {
         defmt::write!(f, "Flshb1cr0 {{ flshsz: {=u32:?} }}", self.flshsz())
     }
 }
-#[doc = "Flash Control Register 0"]
+#[doc = "Flash Control Register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flshb2cr0(pub u32);
@@ -839,7 +839,7 @@ impl defmt::Format for Flshb2cr0 {
         defmt::write!(f, "Flshb2cr0 {{ flshsz: {=u32:?} }}", self.flshsz())
     }
 }
-#[doc = "Flash Control Register 1"]
+#[doc = "Flash Control Register 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flshcr1(pub u32);
@@ -892,14 +892,14 @@ impl Flshcr1 {
     pub const fn set_cas(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 11usize)) | (((val as u32) & 0x0f) << 11usize);
     }
-    #[doc = "CS interval unit"]
+    #[doc = "CS interval unit."]
     #[must_use]
     #[inline(always)]
     pub const fn csintervalunit(&self) -> super::vals::Csintervalunit {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::Csintervalunit::from_bits(val as u8)
     }
-    #[doc = "CS interval unit"]
+    #[doc = "CS interval unit."]
     #[inline(always)]
     pub const fn set_csintervalunit(&mut self, val: super::vals::Csintervalunit) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
@@ -950,7 +950,7 @@ impl defmt::Format for Flshcr1 {
         )
     }
 }
-#[doc = "Flash Control Register 2"]
+#[doc = "Flash Control Register 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flshcr2(pub u32);
@@ -1003,26 +1003,26 @@ impl Flshcr2 {
     pub const fn set_awrseqnum(&mut self, val: u8) {
         self.0 = (self.0 & !(0x07 << 13usize)) | (((val as u32) & 0x07) << 13usize);
     }
-    #[doc = "For certain devices (such as FPGA), it need some time to write data into internal memory after the command sequences finished on FlexSPI interface"]
+    #[doc = "For certain devices (such as FPGA), it need some time to write data into internal memory after the command sequences finished on FlexSPI interface."]
     #[must_use]
     #[inline(always)]
     pub const fn awrwait(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x0fff;
         val as u16
     }
-    #[doc = "For certain devices (such as FPGA), it need some time to write data into internal memory after the command sequences finished on FlexSPI interface"]
+    #[doc = "For certain devices (such as FPGA), it need some time to write data into internal memory after the command sequences finished on FlexSPI interface."]
     #[inline(always)]
     pub const fn set_awrwait(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);
     }
-    #[doc = "AWRWAIT unit"]
+    #[doc = "AWRWAIT unit."]
     #[must_use]
     #[inline(always)]
     pub const fn awrwaitunit(&self) -> super::vals::Awrwaitunit {
         let val = (self.0 >> 28usize) & 0x07;
         super::vals::Awrwaitunit::from_bits(val as u8)
     }
-    #[doc = "AWRWAIT unit"]
+    #[doc = "AWRWAIT unit."]
     #[inline(always)]
     pub const fn set_awrwaitunit(&mut self, val: super::vals::Awrwaitunit) {
         self.0 = (self.0 & !(0x07 << 28usize)) | (((val.to_bits() as u32) & 0x07) << 28usize);
@@ -1075,7 +1075,7 @@ impl defmt::Format for Flshcr2 {
         )
     }
 }
-#[doc = "Flash Control Register 4"]
+#[doc = "Flash Control Register 4."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flshcr4(pub u32);
@@ -1144,7 +1144,7 @@ impl defmt::Format for Flshcr4 {
         )
     }
 }
-#[doc = "Interrupt Enable Register"]
+#[doc = "Interrupt Enable Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Inten(pub u32);
@@ -1325,7 +1325,7 @@ impl defmt::Format for Inten {
         )
     }
 }
-#[doc = "Interrupt Register"]
+#[doc = "Interrupt Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Intr(pub u32);
@@ -1506,7 +1506,7 @@ impl defmt::Format for Intr {
         )
     }
 }
-#[doc = "IP Command Register"]
+#[doc = "IP Command Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipcmd(pub u32);
@@ -1541,7 +1541,7 @@ impl defmt::Format for Ipcmd {
         defmt::write!(f, "Ipcmd {{ trg: {=bool:?} }}", self.trg())
     }
 }
-#[doc = "IP Control Register 0"]
+#[doc = "IP Control Register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipcr0(pub u32);
@@ -1576,7 +1576,7 @@ impl defmt::Format for Ipcr0 {
         defmt::write!(f, "Ipcr0 {{ sfar: {=u32:?} }}", self.sfar())
     }
 }
-#[doc = "IP Control Register 1"]
+#[doc = "IP Control Register 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ipcr1(pub u32);
@@ -1659,7 +1659,7 @@ impl defmt::Format for Ipcr1 {
         )
     }
 }
-#[doc = "IP RX FIFO Control Register"]
+#[doc = "IP RX FIFO Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Iprxfcr(pub u32);
@@ -1728,7 +1728,7 @@ impl defmt::Format for Iprxfcr {
         )
     }
 }
-#[doc = "IP RX FIFO Status Register"]
+#[doc = "IP RX FIFO Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Iprxfsts(pub u32);
@@ -1783,7 +1783,7 @@ impl defmt::Format for Iprxfsts {
         )
     }
 }
-#[doc = "IP TX FIFO Control Register"]
+#[doc = "IP TX FIFO Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Iptxfcr(pub u32);
@@ -1852,7 +1852,7 @@ impl defmt::Format for Iptxfcr {
         )
     }
 }
-#[doc = "IP TX FIFO Status Register"]
+#[doc = "IP TX FIFO Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Iptxfsts(pub u32);
@@ -1907,79 +1907,79 @@ impl defmt::Format for Iptxfsts {
         )
     }
 }
-#[doc = "LUT x"]
+#[doc = "LUT x."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lut(pub u32);
 impl Lut {
-    #[doc = "OPERAND0"]
+    #[doc = "OPERAND0."]
     #[must_use]
     #[inline(always)]
     pub const fn operand0(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "OPERAND0"]
+    #[doc = "OPERAND0."]
     #[inline(always)]
     pub const fn set_operand0(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "NUM_PADS0"]
+    #[doc = "NUM_PADS0."]
     #[must_use]
     #[inline(always)]
     pub const fn num_pads0(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x03;
         val as u8
     }
-    #[doc = "NUM_PADS0"]
+    #[doc = "NUM_PADS0."]
     #[inline(always)]
     pub const fn set_num_pads0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val as u32) & 0x03) << 8usize);
     }
-    #[doc = "OPCODE"]
+    #[doc = "OPCODE."]
     #[must_use]
     #[inline(always)]
     pub const fn opcode0(&self) -> u8 {
         let val = (self.0 >> 10usize) & 0x3f;
         val as u8
     }
-    #[doc = "OPCODE"]
+    #[doc = "OPCODE."]
     #[inline(always)]
     pub const fn set_opcode0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 10usize)) | (((val as u32) & 0x3f) << 10usize);
     }
-    #[doc = "OPERAND1"]
+    #[doc = "OPERAND1."]
     #[must_use]
     #[inline(always)]
     pub const fn operand1(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0xff;
         val as u8
     }
-    #[doc = "OPERAND1"]
+    #[doc = "OPERAND1."]
     #[inline(always)]
     pub const fn set_operand1(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
     }
-    #[doc = "NUM_PADS1"]
+    #[doc = "NUM_PADS1."]
     #[must_use]
     #[inline(always)]
     pub const fn num_pads1(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0x03;
         val as u8
     }
-    #[doc = "NUM_PADS1"]
+    #[doc = "NUM_PADS1."]
     #[inline(always)]
     pub const fn set_num_pads1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val as u32) & 0x03) << 24usize);
     }
-    #[doc = "OPCODE1"]
+    #[doc = "OPCODE1."]
     #[must_use]
     #[inline(always)]
     pub const fn opcode1(&self) -> u8 {
         let val = (self.0 >> 26usize) & 0x3f;
         val as u8
     }
-    #[doc = "OPCODE1"]
+    #[doc = "OPCODE1."]
     #[inline(always)]
     pub const fn set_opcode1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 26usize)) | (((val as u32) & 0x3f) << 26usize);
@@ -2018,31 +2018,31 @@ impl defmt::Format for Lut {
         )
     }
 }
-#[doc = "LUT Control Register"]
+#[doc = "LUT Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lutcr(pub u32);
 impl Lutcr {
-    #[doc = "Lock LUT"]
+    #[doc = "Lock LUT."]
     #[must_use]
     #[inline(always)]
     pub const fn lock(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Lock LUT"]
+    #[doc = "Lock LUT."]
     #[inline(always)]
     pub const fn set_lock(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Unlock LUT"]
+    #[doc = "Unlock LUT."]
     #[must_use]
     #[inline(always)]
     pub const fn unlock(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Unlock LUT"]
+    #[doc = "Unlock LUT."]
     #[inline(always)]
     pub const fn set_unlock(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
@@ -2073,7 +2073,7 @@ impl defmt::Format for Lutcr {
         )
     }
 }
-#[doc = "LUT Key Register"]
+#[doc = "LUT Key Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lutkey(pub u32);
@@ -2108,43 +2108,43 @@ impl defmt::Format for Lutkey {
         defmt::write!(f, "Lutkey {{ key: {=u32:?} }}", self.key())
     }
 }
-#[doc = "Module Control Register 0"]
+#[doc = "Module Control Register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mcr0(pub u32);
 impl Mcr0 {
-    #[doc = "Software Reset"]
+    #[doc = "Software Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn swreset(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Software Reset"]
+    #[doc = "Software Reset."]
     #[inline(always)]
     pub const fn set_swreset(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Module Disable"]
+    #[doc = "Module Disable."]
     #[must_use]
     #[inline(always)]
     pub const fn mdis(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Module Disable"]
+    #[doc = "Module Disable."]
     #[inline(always)]
     pub const fn set_mdis(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Sample Clock source selection for Flash Reading"]
+    #[doc = "Sample Clock source selection for Flash Reading."]
     #[must_use]
     #[inline(always)]
     pub const fn rxclksrc(&self) -> super::vals::Rxclksrc {
         let val = (self.0 >> 4usize) & 0x03;
         super::vals::Rxclksrc::from_bits(val as u8)
     }
-    #[doc = "Sample Clock source selection for Flash Reading"]
+    #[doc = "Sample Clock source selection for Flash Reading."]
     #[inline(always)]
     pub const fn set_rxclksrc(&mut self, val: super::vals::Rxclksrc) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
@@ -2197,14 +2197,14 @@ impl Mcr0 {
     pub const fn set_hsen(&mut self, val: super::vals::Hsen) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
     }
-    #[doc = "Doze mode enable bit"]
+    #[doc = "Doze mode enable bit."]
     #[must_use]
     #[inline(always)]
     pub const fn dozeen(&self) -> super::vals::Dozeen {
         let val = (self.0 >> 12usize) & 0x01;
         super::vals::Dozeen::from_bits(val as u8)
     }
-    #[doc = "Doze mode enable bit"]
+    #[doc = "Doze mode enable bit."]
     #[inline(always)]
     pub const fn set_dozeen(&mut self, val: super::vals::Dozeen) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
@@ -2303,31 +2303,31 @@ impl defmt::Format for Mcr0 {
         )
     }
 }
-#[doc = "Module Control Register 1"]
+#[doc = "Module Control Register 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mcr1(pub u32);
 impl Mcr1 {
-    #[doc = "AHB Read/Write access to Serial Flash Memory space will timeout if not data received from Flash or data not transmitted after AHBBUSWAIT * 1024 ahb clock cycles, AHB Bus will get an error response"]
+    #[doc = "AHB Read/Write access to Serial Flash Memory space will timeout if not data received from Flash or data not transmitted after AHBBUSWAIT * 1024 ahb clock cycles, AHB Bus will get an error response."]
     #[must_use]
     #[inline(always)]
     pub const fn ahbbuswait(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "AHB Read/Write access to Serial Flash Memory space will timeout if not data received from Flash or data not transmitted after AHBBUSWAIT * 1024 ahb clock cycles, AHB Bus will get an error response"]
+    #[doc = "AHB Read/Write access to Serial Flash Memory space will timeout if not data received from Flash or data not transmitted after AHBBUSWAIT * 1024 ahb clock cycles, AHB Bus will get an error response."]
     #[inline(always)]
     pub const fn set_ahbbuswait(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Command Sequence Execution will timeout and abort after SEQWAIT * 1024 Serial Root Clock cycles"]
+    #[doc = "Command Sequence Execution will timeout and abort after SEQWAIT * 1024 Serial Root Clock cycles."]
     #[must_use]
     #[inline(always)]
     pub const fn seqwait(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "Command Sequence Execution will timeout and abort after SEQWAIT * 1024 Serial Root Clock cycles"]
+    #[doc = "Command Sequence Execution will timeout and abort after SEQWAIT * 1024 Serial Root Clock cycles."]
     #[inline(always)]
     pub const fn set_seqwait(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -2358,7 +2358,7 @@ impl defmt::Format for Mcr1 {
         )
     }
 }
-#[doc = "Module Control Register 2"]
+#[doc = "Module Control Register 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mcr2(pub u32);
@@ -2441,19 +2441,19 @@ impl defmt::Format for Mcr2 {
         )
     }
 }
-#[doc = "IP RX FIFO Data Register x"]
+#[doc = "IP RX FIFO Data Register x."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Rfdr(pub u32);
 impl Rfdr {
-    #[doc = "RX Data"]
+    #[doc = "RX Data."]
     #[must_use]
     #[inline(always)]
     pub const fn rxdata(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "RX Data"]
+    #[doc = "RX Data."]
     #[inline(always)]
     pub const fn set_rxdata(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2478,7 +2478,7 @@ impl defmt::Format for Rfdr {
         defmt::write!(f, "Rfdr {{ rxdata: {=u32:?} }}", self.rxdata())
     }
 }
-#[doc = "Status Register 0"]
+#[doc = "Status Register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sts0(pub u32);
@@ -2547,7 +2547,7 @@ impl defmt::Format for Sts0 {
         )
     }
 }
-#[doc = "Status Register 1"]
+#[doc = "Status Register 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sts1(pub u32);
@@ -2630,7 +2630,7 @@ impl defmt::Format for Sts1 {
         )
     }
 }
-#[doc = "Status Register 2"]
+#[doc = "Status Register 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sts2(pub u32);
@@ -2659,14 +2659,14 @@ impl Sts2 {
     pub const fn set_areflock(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Flash A sample clock slave delay line delay cell number selection ."]
+    #[doc = "Flash A sample clock slave delay line delay cell number selection."]
     #[must_use]
     #[inline(always)]
     pub const fn aslvsel(&self) -> u8 {
         let val = (self.0 >> 2usize) & 0x3f;
         val as u8
     }
-    #[doc = "Flash A sample clock slave delay line delay cell number selection ."]
+    #[doc = "Flash A sample clock slave delay line delay cell number selection."]
     #[inline(always)]
     pub const fn set_aslvsel(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 2usize)) | (((val as u32) & 0x3f) << 2usize);
@@ -2769,19 +2769,19 @@ impl defmt::Format for Sts2 {
         )
     }
 }
-#[doc = "IP TX FIFO Data Register x"]
+#[doc = "IP TX FIFO Data Register x."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tfdr(pub u32);
 impl Tfdr {
-    #[doc = "TX Data"]
+    #[doc = "TX Data."]
     #[must_use]
     #[inline(always)]
     pub const fn txdata(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "TX Data"]
+    #[doc = "TX Data."]
     #[inline(always)]
     pub const fn set_txdata(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);

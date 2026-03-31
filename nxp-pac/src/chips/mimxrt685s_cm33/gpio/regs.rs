@@ -1,4 +1,4 @@
-#[doc = "Byte pin registers for all port 0 and 1 GPIO pins"]
+#[doc = "Byte pin registers for all port 0 and 1 GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct B(pub u8);
@@ -33,7 +33,7 @@ impl defmt::Format for B {
         defmt::write!(f, "B {{ pbyte: {=bool:?} }}", self.pbyte())
     }
 }
-#[doc = "Clear port"]
+#[doc = "Clear port."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Clr(pub u32);
@@ -68,7 +68,7 @@ impl defmt::Format for Clr {
         defmt::write!(f, "Clr {{ clrp: {=u32:?} }}", self.clrp())
     }
 }
-#[doc = "Direction registers"]
+#[doc = "Direction registers."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dir(pub u32);
@@ -103,7 +103,7 @@ impl defmt::Format for Dir {
         defmt::write!(f, "Dir {{ dirp: {=u32:?} }}", self.dirp())
     }
 }
-#[doc = "Clear pin direction bits for port"]
+#[doc = "Clear pin direction bits for port."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dirclr(pub u32);
@@ -140,7 +140,7 @@ impl defmt::Format for Dirclr {
         defmt::write!(f, "Dirclr {{ dirclrp: {=u32:?} }}", self.dirclrp())
     }
 }
-#[doc = "Toggle pin direction bits for port"]
+#[doc = "Toggle pin direction bits for port."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dirnot(pub u32);
@@ -177,7 +177,7 @@ impl defmt::Format for Dirnot {
         defmt::write!(f, "Dirnot {{ dirnotp: {=u32:?} }}", self.dirnotp())
     }
 }
-#[doc = "Set pin direction bits for port"]
+#[doc = "Set pin direction bits for port."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dirset(pub u32);
@@ -214,19 +214,19 @@ impl defmt::Format for Dirset {
         defmt::write!(f, "Dirset {{ dirsetp: {=u32:?} }}", self.dirsetp())
     }
 }
-#[doc = "choose edge or level for interrupt"]
+#[doc = "choose edge or level for interrupt."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Intedg(pub u32);
 impl Intedg {
-    #[doc = "choose level or edge based detection for each pin(bit0 for pion_0, bit1 for pion_1, etc)"]
+    #[doc = "choose level or edge based detection for each pin(bit0 for pion_0, bit1 for pion_1, etc)."]
     #[must_use]
     #[inline(always)]
     pub const fn edge(&self) -> super::vals::Edge {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         super::vals::Edge::from_bits(val as u32)
     }
-    #[doc = "choose level or edge based detection for each pin(bit0 for pion_0, bit1 for pion_1, etc)"]
+    #[doc = "choose level or edge based detection for each pin(bit0 for pion_0, bit1 for pion_1, etc)."]
     #[inline(always)]
     pub const fn set_edge(&mut self, val: super::vals::Edge) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize))
@@ -252,19 +252,19 @@ impl defmt::Format for Intedg {
         defmt::write!(f, "Intedg {{ edge: {:?} }}", self.edge())
     }
 }
-#[doc = "interrupt A enable control register"]
+#[doc = "interrupt A enable control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Intena(pub u32);
 impl Intena {
-    #[doc = "interrupt enable control for each pin(bit 0 for pion_0, bin 1 for pion_1, etc)"]
+    #[doc = "interrupt enable control for each pin(bit 0 for pion_0, bin 1 for pion_1, etc)."]
     #[must_use]
     #[inline(always)]
     pub const fn int_en(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "interrupt enable control for each pin(bit 0 for pion_0, bin 1 for pion_1, etc)"]
+    #[doc = "interrupt enable control for each pin(bit 0 for pion_0, bin 1 for pion_1, etc)."]
     #[inline(always)]
     pub const fn set_int_en(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -289,19 +289,19 @@ impl defmt::Format for Intena {
         defmt::write!(f, "Intena {{ int_en: {=u32:?} }}", self.int_en())
     }
 }
-#[doc = "interrupt B enable control register"]
+#[doc = "interrupt B enable control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Intenb(pub u32);
 impl Intenb {
-    #[doc = "interrupt enable control for each pin(bit 0 for pion_0, bin 1 for pion_1, etc)"]
+    #[doc = "interrupt enable control for each pin(bit 0 for pion_0, bin 1 for pion_1, etc)."]
     #[must_use]
     #[inline(always)]
     pub const fn int_en(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "interrupt enable control for each pin(bit 0 for pion_0, bin 1 for pion_1, etc)"]
+    #[doc = "interrupt enable control for each pin(bit 0 for pion_0, bin 1 for pion_1, etc)."]
     #[inline(always)]
     pub const fn set_int_en(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -326,19 +326,19 @@ impl defmt::Format for Intenb {
         defmt::write!(f, "Intenb {{ int_en: {=u32:?} }}", self.int_en())
     }
 }
-#[doc = "interupt polarity control register"]
+#[doc = "interupt polarity control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Intpol(pub u32);
 impl Intpol {
-    #[doc = "polarity control for each pin(bit 0 for pion_0, bit 1 for pion_1, etc.)"]
+    #[doc = "polarity control for each pin(bit 0 for pion_0, bit 1 for pion_1, etc.)."]
     #[must_use]
     #[inline(always)]
     pub const fn pol_ctl(&self) -> super::vals::PolCtl {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         super::vals::PolCtl::from_bits(val as u32)
     }
-    #[doc = "polarity control for each pin(bit 0 for pion_0, bit 1 for pion_1, etc.)"]
+    #[doc = "polarity control for each pin(bit 0 for pion_0, bit 1 for pion_1, etc.)."]
     #[inline(always)]
     pub const fn set_pol_ctl(&mut self, val: super::vals::PolCtl) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize))
@@ -364,19 +364,19 @@ impl defmt::Format for Intpol {
         defmt::write!(f, "Intpol {{ pol_ctl: {:?} }}", self.pol_ctl())
     }
 }
-#[doc = "interrupt status for interrupt A"]
+#[doc = "interrupt status for interrupt A."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Intstata(pub u32);
 impl Intstata {
-    #[doc = "interrupt status"]
+    #[doc = "interrupt status."]
     #[must_use]
     #[inline(always)]
     pub const fn status(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "interrupt status"]
+    #[doc = "interrupt status."]
     #[inline(always)]
     pub const fn set_status(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -401,19 +401,19 @@ impl defmt::Format for Intstata {
         defmt::write!(f, "Intstata {{ status: {=u32:?} }}", self.status())
     }
 }
-#[doc = "interrupt status for interrupt B"]
+#[doc = "interrupt status for interrupt B."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Intstatb(pub u32);
 impl Intstatb {
-    #[doc = "interrupt status"]
+    #[doc = "interrupt status."]
     #[must_use]
     #[inline(always)]
     pub const fn status(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "interrupt status"]
+    #[doc = "interrupt status."]
     #[inline(always)]
     pub const fn set_status(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -438,7 +438,7 @@ impl defmt::Format for Intstatb {
         defmt::write!(f, "Intstatb {{ status: {=u32:?} }}", self.status())
     }
 }
-#[doc = "Mask register"]
+#[doc = "Mask register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mask(pub u32);
@@ -475,7 +475,7 @@ impl defmt::Format for Mask {
         defmt::write!(f, "Mask {{ maskp: {=u32:?} }}", self.maskp())
     }
 }
-#[doc = "Masked port register"]
+#[doc = "Masked port register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mpin(pub u32);
@@ -512,7 +512,7 @@ impl defmt::Format for Mpin {
         defmt::write!(f, "Mpin {{ mportp: {=u32:?} }}", self.mportp())
     }
 }
-#[doc = "Toggle port"]
+#[doc = "Toggle port."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Not(pub u32);
@@ -547,7 +547,7 @@ impl defmt::Format for Not {
         defmt::write!(f, "Not {{ notp: {=u32:?} }}", self.notp())
     }
 }
-#[doc = "Port pin register"]
+#[doc = "Port pin register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pin(pub u32);
@@ -582,7 +582,7 @@ impl defmt::Format for Pin {
         defmt::write!(f, "Pin {{ port: {=u32:?} }}", self.port())
     }
 }
-#[doc = "Write: Set register for port Read: output bits for port"]
+#[doc = "Write: Set register for port Read: output bits for port."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Set(pub u32);
@@ -617,7 +617,7 @@ impl defmt::Format for Set {
         defmt::write!(f, "Set {{ setp: {=u32:?} }}", self.setp())
     }
 }
-#[doc = "Word pin registers for all port 0 and 1 GPIO pins"]
+#[doc = "Word pin registers for all port 0 and 1 GPIO pins."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct W(pub u32);

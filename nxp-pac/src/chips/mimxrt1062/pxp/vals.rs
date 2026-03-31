@@ -37,9 +37,9 @@ impl From<AlphaCtrl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AlphaInvert {
-    #[doc = "Not inverted"]
+    #[doc = "Not inverted."]
     ALPHA_INVERT_0 = 0x0,
-    #[doc = "Inverted"]
+    #[doc = "Inverted."]
     INVERTED = 0x01,
 }
 impl AlphaInvert {
@@ -68,30 +68,30 @@ impl From<AlphaInvert> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AsCtrlFormat {
-    #[doc = "32-bit pixels with alpha"]
+    #[doc = "32-bit pixels with alpha."]
     ARGB8888 = 0x0,
-    #[doc = "2-bit pixel with alpha at low 8 bits"]
+    #[doc = "2-bit pixel with alpha at low 8 bits."]
     RGBA888 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
-    #[doc = "32-bit pixels without alpha (unpacked 24-bit format)"]
+    #[doc = "32-bit pixels without alpha (unpacked 24-bit format)."]
     RGB888 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
-    #[doc = "16-bit pixels with alpha"]
+    #[doc = "16-bit pixels with alpha."]
     ARGB1555 = 0x08,
-    #[doc = "16-bit pixels with alpha"]
+    #[doc = "16-bit pixels with alpha."]
     ARGB4444 = 0x09,
-    #[doc = "16-bit pixel with alpha at low 1 bit"]
+    #[doc = "16-bit pixel with alpha at low 1 bit."]
     RGBA5551 = 0x0a,
-    #[doc = "16-bit pixel with alpha at low 4 bits"]
+    #[doc = "16-bit pixel with alpha at low 4 bits."]
     RGBA4444 = 0x0b,
-    #[doc = "16-bit pixels without alpha"]
+    #[doc = "16-bit pixels without alpha."]
     RGB555 = 0x0c,
-    #[doc = "16-bit pixels without alpha"]
+    #[doc = "16-bit pixels without alpha."]
     RGB444 = 0x0d,
-    #[doc = "16-bit pixels without alpha"]
+    #[doc = "16-bit pixels without alpha."]
     RGB565 = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -152,9 +152,9 @@ impl From<CtrlBlockSize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlClkgate {
-    #[doc = "Normal operation"]
+    #[doc = "Normal operation."]
     NORMAL = 0x0,
-    #[doc = "All clocks to PXP is gated-off"]
+    #[doc = "All clocks to PXP is gated-off."]
     GATED = 0x01,
 }
 impl CtrlClkgate {
@@ -214,9 +214,9 @@ impl From<CtrlClrBlockSize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlClrClkgate {
-    #[doc = "Normal operation"]
+    #[doc = "Normal operation."]
     NORMAL = 0x0,
-    #[doc = "All clocks to PXP is gated-off"]
+    #[doc = "All clocks to PXP is gated-off."]
     GATED = 0x01,
 }
 impl CtrlClrClkgate {
@@ -245,9 +245,9 @@ impl From<CtrlClrClkgate> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlClrEnRepeat {
-    #[doc = "PXP will complete the process and enter the idle state ready to accept the next frame to be processed"]
+    #[doc = "PXP will complete the process and enter the idle state ready to accept the next frame to be processed."]
     COMPLETE = 0x0,
-    #[doc = "PXP will repeat based on the current configuration register settings"]
+    #[doc = "PXP will repeat based on the current configuration register settings."]
     REPEAT = 0x01,
 }
 impl CtrlClrEnRepeat {
@@ -276,13 +276,13 @@ impl From<CtrlClrEnRepeat> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlClrRotate {
-    #[doc = "ROT_0"]
+    #[doc = "ROT_0."]
     ROT_0 = 0x0,
-    #[doc = "ROT_90"]
+    #[doc = "ROT_90."]
     ROT_90 = 0x01,
-    #[doc = "ROT_180"]
+    #[doc = "ROT_180."]
     ROT_180 = 0x02,
-    #[doc = "ROT_270"]
+    #[doc = "ROT_270."]
     ROT_270 = 0x03,
 }
 impl CtrlClrRotate {
@@ -311,7 +311,7 @@ impl From<CtrlClrRotate> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlClrSftrst {
-    #[doc = "Normal PXP operation is enabled"]
+    #[doc = "Normal PXP operation is enabled."]
     ENABLED = 0x0,
     #[doc = "Clocking with PXP is disabled and held in its reset (lowest power) state. This is the default value."]
     DISABLED = 0x01,
@@ -342,9 +342,9 @@ impl From<CtrlClrSftrst> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlEnRepeat {
-    #[doc = "PXP will complete the process and enter the idle state ready to accept the next frame to be processed"]
+    #[doc = "PXP will complete the process and enter the idle state ready to accept the next frame to be processed."]
     COMPLETE = 0x0,
-    #[doc = "PXP will repeat based on the current configuration register settings"]
+    #[doc = "PXP will repeat based on the current configuration register settings."]
     REPEAT = 0x01,
 }
 impl CtrlEnRepeat {
@@ -373,13 +373,13 @@ impl From<CtrlEnRepeat> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlRotate {
-    #[doc = "ROT_0"]
+    #[doc = "ROT_0."]
     ROT_0 = 0x0,
-    #[doc = "ROT_90"]
+    #[doc = "ROT_90."]
     ROT_90 = 0x01,
-    #[doc = "ROT_180"]
+    #[doc = "ROT_180."]
     ROT_180 = 0x02,
-    #[doc = "ROT_270"]
+    #[doc = "ROT_270."]
     ROT_270 = 0x03,
 }
 impl CtrlRotate {
@@ -439,9 +439,9 @@ impl From<CtrlSetBlockSize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlSetClkgate {
-    #[doc = "Normal operation"]
+    #[doc = "Normal operation."]
     NORMAL = 0x0,
-    #[doc = "All clocks to PXP is gated-off"]
+    #[doc = "All clocks to PXP is gated-off."]
     GATED = 0x01,
 }
 impl CtrlSetClkgate {
@@ -470,9 +470,9 @@ impl From<CtrlSetClkgate> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlSetEnRepeat {
-    #[doc = "PXP will complete the process and enter the idle state ready to accept the next frame to be processed"]
+    #[doc = "PXP will complete the process and enter the idle state ready to accept the next frame to be processed."]
     COMPLETE = 0x0,
-    #[doc = "PXP will repeat based on the current configuration register settings"]
+    #[doc = "PXP will repeat based on the current configuration register settings."]
     REPEAT = 0x01,
 }
 impl CtrlSetEnRepeat {
@@ -501,13 +501,13 @@ impl From<CtrlSetEnRepeat> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlSetRotate {
-    #[doc = "ROT_0"]
+    #[doc = "ROT_0."]
     ROT_0 = 0x0,
-    #[doc = "ROT_90"]
+    #[doc = "ROT_90."]
     ROT_90 = 0x01,
-    #[doc = "ROT_180"]
+    #[doc = "ROT_180."]
     ROT_180 = 0x02,
-    #[doc = "ROT_270"]
+    #[doc = "ROT_270."]
     ROT_270 = 0x03,
 }
 impl CtrlSetRotate {
@@ -536,7 +536,7 @@ impl From<CtrlSetRotate> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlSetSftrst {
-    #[doc = "Normal PXP operation is enabled"]
+    #[doc = "Normal PXP operation is enabled."]
     ENABLED = 0x0,
     #[doc = "Clocking with PXP is disabled and held in its reset (lowest power) state. This is the default value."]
     DISABLED = 0x01,
@@ -567,7 +567,7 @@ impl From<CtrlSetSftrst> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlSftrst {
-    #[doc = "Normal PXP operation is enabled"]
+    #[doc = "Normal PXP operation is enabled."]
     ENABLED = 0x0,
     #[doc = "Clocking with PXP is disabled and held in its reset (lowest power) state. This is the default value."]
     DISABLED = 0x01,
@@ -629,9 +629,9 @@ impl From<CtrlTogBlockSize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlTogClkgate {
-    #[doc = "Normal operation"]
+    #[doc = "Normal operation."]
     NORMAL = 0x0,
-    #[doc = "All clocks to PXP is gated-off"]
+    #[doc = "All clocks to PXP is gated-off."]
     GATED = 0x01,
 }
 impl CtrlTogClkgate {
@@ -660,9 +660,9 @@ impl From<CtrlTogClkgate> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlTogEnRepeat {
-    #[doc = "PXP will complete the process and enter the idle state ready to accept the next frame to be processed"]
+    #[doc = "PXP will complete the process and enter the idle state ready to accept the next frame to be processed."]
     COMPLETE = 0x0,
-    #[doc = "PXP will repeat based on the current configuration register settings"]
+    #[doc = "PXP will repeat based on the current configuration register settings."]
     REPEAT = 0x01,
 }
 impl CtrlTogEnRepeat {
@@ -691,13 +691,13 @@ impl From<CtrlTogEnRepeat> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlTogRotate {
-    #[doc = "ROT_0"]
+    #[doc = "ROT_0."]
     ROT_0 = 0x0,
-    #[doc = "ROT_90"]
+    #[doc = "ROT_90."]
     ROT_90 = 0x01,
-    #[doc = "ROT_180"]
+    #[doc = "ROT_180."]
     ROT_180 = 0x02,
-    #[doc = "ROT_270"]
+    #[doc = "ROT_270."]
     ROT_270 = 0x03,
 }
 impl CtrlTogRotate {
@@ -726,7 +726,7 @@ impl From<CtrlTogRotate> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlTogSftrst {
-    #[doc = "Normal PXP operation is enabled"]
+    #[doc = "Normal PXP operation is enabled."]
     ENABLED = 0x0,
     #[doc = "Clocking with PXP is disabled and held in its reset (lowest power) state. This is the default value."]
     DISABLED = 0x01,
@@ -757,9 +757,9 @@ impl From<CtrlTogSftrst> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum OutCtrlAlphaOutput {
-    #[doc = "Retain"]
+    #[doc = "Retain."]
     RETAIN = 0x0,
-    #[doc = "Overwritten"]
+    #[doc = "Overwritten."]
     OVERWRITTEN = 0x01,
 }
 impl OutCtrlAlphaOutput {
@@ -788,9 +788,9 @@ impl From<OutCtrlAlphaOutput> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum OutCtrlClrAlphaOutput {
-    #[doc = "Retain"]
+    #[doc = "Retain."]
     RETAIN = 0x0,
-    #[doc = "Overwritten"]
+    #[doc = "Overwritten."]
     OVERWRITTEN = 0x01,
 }
 impl OutCtrlClrAlphaOutput {
@@ -819,50 +819,50 @@ impl From<OutCtrlClrAlphaOutput> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum OutCtrlClrFormat {
-    #[doc = "32-bit pixels"]
+    #[doc = "32-bit pixels."]
     ARGB8888 = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
-    #[doc = "32-bit pixels (unpacked 24-bit pixel in 32 bit DWORD.)"]
+    #[doc = "32-bit pixels (unpacked 24-bit pixel in 32 bit DWORD.)."]
     RGB888 = 0x04,
-    #[doc = "24-bit pixels (packed 24-bit format)"]
+    #[doc = "24-bit pixels (packed 24-bit format)."]
     RGB888P = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
-    #[doc = "16-bit pixels"]
+    #[doc = "16-bit pixels."]
     ARGB1555 = 0x08,
-    #[doc = "16-bit pixels"]
+    #[doc = "16-bit pixels."]
     ARGB4444 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
-    #[doc = "16-bit pixels"]
+    #[doc = "16-bit pixels."]
     RGB555 = 0x0c,
-    #[doc = "16-bit pixels"]
+    #[doc = "16-bit pixels."]
     RGB444 = 0x0d,
-    #[doc = "16-bit pixels"]
+    #[doc = "16-bit pixels."]
     RGB565 = 0x0e,
     _RESERVED_f = 0x0f,
-    #[doc = "32-bit pixels (1-plane XYUV unpacked)"]
+    #[doc = "32-bit pixels (1-plane XYUV unpacked)."]
     YUV1P444 = 0x10,
     _RESERVED_11 = 0x11,
-    #[doc = "16-bit pixels (1-plane U0,Y0,V0,Y1 interleaved bytes)"]
+    #[doc = "16-bit pixels (1-plane U0,Y0,V0,Y1 interleaved bytes)."]
     UYVY1P422 = 0x12,
-    #[doc = "16-bit pixels (1-plane V0,Y0,U0,Y1 interleaved bytes)"]
+    #[doc = "16-bit pixels (1-plane V0,Y0,U0,Y1 interleaved bytes)."]
     VYUY1P422 = 0x13,
-    #[doc = "8-bit monochrome pixels (1-plane Y luma output)"]
+    #[doc = "8-bit monochrome pixels (1-plane Y luma output)."]
     Y8 = 0x14,
-    #[doc = "4-bit monochrome pixels (1-plane Y luma, 4 bit truncation)"]
+    #[doc = "4-bit monochrome pixels (1-plane Y luma, 4 bit truncation)."]
     Y4 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    #[doc = "16-bit pixels (2-plane UV interleaved bytes)"]
+    #[doc = "16-bit pixels (2-plane UV interleaved bytes)."]
     YUV2P422 = 0x18,
-    #[doc = "16-bit pixels (2-plane UV)"]
+    #[doc = "16-bit pixels (2-plane UV)."]
     YUV2P420 = 0x19,
-    #[doc = "16-bit pixels (2-plane VU interleaved bytes)"]
+    #[doc = "16-bit pixels (2-plane VU interleaved bytes)."]
     YVU2P422 = 0x1a,
-    #[doc = "16-bit pixels (2-plane VU)"]
+    #[doc = "16-bit pixels (2-plane VU)."]
     YVU2P420 = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
@@ -930,50 +930,50 @@ impl From<OutCtrlClrInterlacedOutput> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum OutCtrlFormat {
-    #[doc = "32-bit pixels"]
+    #[doc = "32-bit pixels."]
     ARGB8888 = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
-    #[doc = "32-bit pixels (unpacked 24-bit pixel in 32 bit DWORD.)"]
+    #[doc = "32-bit pixels (unpacked 24-bit pixel in 32 bit DWORD.)."]
     RGB888 = 0x04,
-    #[doc = "24-bit pixels (packed 24-bit format)"]
+    #[doc = "24-bit pixels (packed 24-bit format)."]
     RGB888P = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
-    #[doc = "16-bit pixels"]
+    #[doc = "16-bit pixels."]
     ARGB1555 = 0x08,
-    #[doc = "16-bit pixels"]
+    #[doc = "16-bit pixels."]
     ARGB4444 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
-    #[doc = "16-bit pixels"]
+    #[doc = "16-bit pixels."]
     RGB555 = 0x0c,
-    #[doc = "16-bit pixels"]
+    #[doc = "16-bit pixels."]
     RGB444 = 0x0d,
-    #[doc = "16-bit pixels"]
+    #[doc = "16-bit pixels."]
     RGB565 = 0x0e,
     _RESERVED_f = 0x0f,
-    #[doc = "32-bit pixels (1-plane XYUV unpacked)"]
+    #[doc = "32-bit pixels (1-plane XYUV unpacked)."]
     YUV1P444 = 0x10,
     _RESERVED_11 = 0x11,
-    #[doc = "16-bit pixels (1-plane U0,Y0,V0,Y1 interleaved bytes)"]
+    #[doc = "16-bit pixels (1-plane U0,Y0,V0,Y1 interleaved bytes)."]
     UYVY1P422 = 0x12,
-    #[doc = "16-bit pixels (1-plane V0,Y0,U0,Y1 interleaved bytes)"]
+    #[doc = "16-bit pixels (1-plane V0,Y0,U0,Y1 interleaved bytes)."]
     VYUY1P422 = 0x13,
-    #[doc = "8-bit monochrome pixels (1-plane Y luma output)"]
+    #[doc = "8-bit monochrome pixels (1-plane Y luma output)."]
     Y8 = 0x14,
-    #[doc = "4-bit monochrome pixels (1-plane Y luma, 4 bit truncation)"]
+    #[doc = "4-bit monochrome pixels (1-plane Y luma, 4 bit truncation)."]
     Y4 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    #[doc = "16-bit pixels (2-plane UV interleaved bytes)"]
+    #[doc = "16-bit pixels (2-plane UV interleaved bytes)."]
     YUV2P422 = 0x18,
-    #[doc = "16-bit pixels (2-plane UV)"]
+    #[doc = "16-bit pixels (2-plane UV)."]
     YUV2P420 = 0x19,
-    #[doc = "16-bit pixels (2-plane VU interleaved bytes)"]
+    #[doc = "16-bit pixels (2-plane VU interleaved bytes)."]
     YVU2P422 = 0x1a,
-    #[doc = "16-bit pixels (2-plane VU)"]
+    #[doc = "16-bit pixels (2-plane VU)."]
     YVU2P420 = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
@@ -1041,9 +1041,9 @@ impl From<OutCtrlInterlacedOutput> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum OutCtrlSetAlphaOutput {
-    #[doc = "Retain"]
+    #[doc = "Retain."]
     RETAIN = 0x0,
-    #[doc = "Overwritten"]
+    #[doc = "Overwritten."]
     OVERWRITTEN = 0x01,
 }
 impl OutCtrlSetAlphaOutput {
@@ -1072,50 +1072,50 @@ impl From<OutCtrlSetAlphaOutput> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum OutCtrlSetFormat {
-    #[doc = "32-bit pixels"]
+    #[doc = "32-bit pixels."]
     ARGB8888 = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
-    #[doc = "32-bit pixels (unpacked 24-bit pixel in 32 bit DWORD.)"]
+    #[doc = "32-bit pixels (unpacked 24-bit pixel in 32 bit DWORD.)."]
     RGB888 = 0x04,
-    #[doc = "24-bit pixels (packed 24-bit format)"]
+    #[doc = "24-bit pixels (packed 24-bit format)."]
     RGB888P = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
-    #[doc = "16-bit pixels"]
+    #[doc = "16-bit pixels."]
     ARGB1555 = 0x08,
-    #[doc = "16-bit pixels"]
+    #[doc = "16-bit pixels."]
     ARGB4444 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
-    #[doc = "16-bit pixels"]
+    #[doc = "16-bit pixels."]
     RGB555 = 0x0c,
-    #[doc = "16-bit pixels"]
+    #[doc = "16-bit pixels."]
     RGB444 = 0x0d,
-    #[doc = "16-bit pixels"]
+    #[doc = "16-bit pixels."]
     RGB565 = 0x0e,
     _RESERVED_f = 0x0f,
-    #[doc = "32-bit pixels (1-plane XYUV unpacked)"]
+    #[doc = "32-bit pixels (1-plane XYUV unpacked)."]
     YUV1P444 = 0x10,
     _RESERVED_11 = 0x11,
-    #[doc = "16-bit pixels (1-plane U0,Y0,V0,Y1 interleaved bytes)"]
+    #[doc = "16-bit pixels (1-plane U0,Y0,V0,Y1 interleaved bytes)."]
     UYVY1P422 = 0x12,
-    #[doc = "16-bit pixels (1-plane V0,Y0,U0,Y1 interleaved bytes)"]
+    #[doc = "16-bit pixels (1-plane V0,Y0,U0,Y1 interleaved bytes)."]
     VYUY1P422 = 0x13,
-    #[doc = "8-bit monochrome pixels (1-plane Y luma output)"]
+    #[doc = "8-bit monochrome pixels (1-plane Y luma output)."]
     Y8 = 0x14,
-    #[doc = "4-bit monochrome pixels (1-plane Y luma, 4 bit truncation)"]
+    #[doc = "4-bit monochrome pixels (1-plane Y luma, 4 bit truncation)."]
     Y4 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    #[doc = "16-bit pixels (2-plane UV interleaved bytes)"]
+    #[doc = "16-bit pixels (2-plane UV interleaved bytes)."]
     YUV2P422 = 0x18,
-    #[doc = "16-bit pixels (2-plane UV)"]
+    #[doc = "16-bit pixels (2-plane UV)."]
     YUV2P420 = 0x19,
-    #[doc = "16-bit pixels (2-plane VU interleaved bytes)"]
+    #[doc = "16-bit pixels (2-plane VU interleaved bytes)."]
     YVU2P422 = 0x1a,
-    #[doc = "16-bit pixels (2-plane VU)"]
+    #[doc = "16-bit pixels (2-plane VU)."]
     YVU2P420 = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
@@ -1183,9 +1183,9 @@ impl From<OutCtrlSetInterlacedOutput> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum OutCtrlTogAlphaOutput {
-    #[doc = "Retain"]
+    #[doc = "Retain."]
     RETAIN = 0x0,
-    #[doc = "Overwritten"]
+    #[doc = "Overwritten."]
     OVERWRITTEN = 0x01,
 }
 impl OutCtrlTogAlphaOutput {
@@ -1214,50 +1214,50 @@ impl From<OutCtrlTogAlphaOutput> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum OutCtrlTogFormat {
-    #[doc = "32-bit pixels"]
+    #[doc = "32-bit pixels."]
     ARGB8888 = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
-    #[doc = "32-bit pixels (unpacked 24-bit pixel in 32 bit DWORD.)"]
+    #[doc = "32-bit pixels (unpacked 24-bit pixel in 32 bit DWORD.)."]
     RGB888 = 0x04,
-    #[doc = "24-bit pixels (packed 24-bit format)"]
+    #[doc = "24-bit pixels (packed 24-bit format)."]
     RGB888P = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
-    #[doc = "16-bit pixels"]
+    #[doc = "16-bit pixels."]
     ARGB1555 = 0x08,
-    #[doc = "16-bit pixels"]
+    #[doc = "16-bit pixels."]
     ARGB4444 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
-    #[doc = "16-bit pixels"]
+    #[doc = "16-bit pixels."]
     RGB555 = 0x0c,
-    #[doc = "16-bit pixels"]
+    #[doc = "16-bit pixels."]
     RGB444 = 0x0d,
-    #[doc = "16-bit pixels"]
+    #[doc = "16-bit pixels."]
     RGB565 = 0x0e,
     _RESERVED_f = 0x0f,
-    #[doc = "32-bit pixels (1-plane XYUV unpacked)"]
+    #[doc = "32-bit pixels (1-plane XYUV unpacked)."]
     YUV1P444 = 0x10,
     _RESERVED_11 = 0x11,
-    #[doc = "16-bit pixels (1-plane U0,Y0,V0,Y1 interleaved bytes)"]
+    #[doc = "16-bit pixels (1-plane U0,Y0,V0,Y1 interleaved bytes)."]
     UYVY1P422 = 0x12,
-    #[doc = "16-bit pixels (1-plane V0,Y0,U0,Y1 interleaved bytes)"]
+    #[doc = "16-bit pixels (1-plane V0,Y0,U0,Y1 interleaved bytes)."]
     VYUY1P422 = 0x13,
-    #[doc = "8-bit monochrome pixels (1-plane Y luma output)"]
+    #[doc = "8-bit monochrome pixels (1-plane Y luma output)."]
     Y8 = 0x14,
-    #[doc = "4-bit monochrome pixels (1-plane Y luma, 4 bit truncation)"]
+    #[doc = "4-bit monochrome pixels (1-plane Y luma, 4 bit truncation)."]
     Y4 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    #[doc = "16-bit pixels (2-plane UV interleaved bytes)"]
+    #[doc = "16-bit pixels (2-plane UV interleaved bytes)."]
     YUV2P422 = 0x18,
-    #[doc = "16-bit pixels (2-plane UV)"]
+    #[doc = "16-bit pixels (2-plane UV)."]
     YUV2P420 = 0x19,
-    #[doc = "16-bit pixels (2-plane VU interleaved bytes)"]
+    #[doc = "16-bit pixels (2-plane VU interleaved bytes)."]
     YVU2P422 = 0x1a,
-    #[doc = "16-bit pixels (2-plane VU)"]
+    #[doc = "16-bit pixels (2-plane VU)."]
     YVU2P420 = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
@@ -1399,7 +1399,7 @@ pub enum PsCtrlClrFormat {
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
-    #[doc = "32-bit pixels (unpacked 24-bit format with/without alpha at high 8bits)"]
+    #[doc = "32-bit pixels (unpacked 24-bit format with/without alpha at high 8bits)."]
     RGB888_ARGB8888 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
@@ -1408,45 +1408,45 @@ pub enum PsCtrlClrFormat {
     _RESERVED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
-    #[doc = "16-bit pixels with/without alpha at high 1bit"]
+    #[doc = "16-bit pixels with/without alpha at high 1bit."]
     RGB555_ARGB1555 = 0x0c,
-    #[doc = "16-bit pixels with/without alpha at high 4 bits"]
+    #[doc = "16-bit pixels with/without alpha at high 4 bits."]
     RGB444_ARGB4444 = 0x0d,
-    #[doc = "16-bit pixels"]
+    #[doc = "16-bit pixels."]
     RGB565 = 0x0e,
     _RESERVED_f = 0x0f,
-    #[doc = "32-bit pixels (1-plane XYUV unpacked)"]
+    #[doc = "32-bit pixels (1-plane XYUV unpacked)."]
     YUV1P444 = 0x10,
     _RESERVED_11 = 0x11,
-    #[doc = "16-bit pixels (1-plane U0,Y0,V0,Y1 interleaved bytes)"]
+    #[doc = "16-bit pixels (1-plane U0,Y0,V0,Y1 interleaved bytes)."]
     UYVY1P422 = 0x12,
-    #[doc = "16-bit pixels (1-plane V0,Y0,U0,Y1 interleaved bytes)"]
+    #[doc = "16-bit pixels (1-plane V0,Y0,U0,Y1 interleaved bytes)."]
     VYUY1P422 = 0x13,
-    #[doc = "8-bit monochrome pixels (1-plane Y luma output)"]
+    #[doc = "8-bit monochrome pixels (1-plane Y luma output)."]
     Y8 = 0x14,
-    #[doc = "4-bit monochrome pixels (1-plane Y luma, 4 bit truncation)"]
+    #[doc = "4-bit monochrome pixels (1-plane Y luma, 4 bit truncation)."]
     Y4 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    #[doc = "16-bit pixels (2-plane UV interleaved bytes)"]
+    #[doc = "16-bit pixels (2-plane UV interleaved bytes)."]
     YUV2P422 = 0x18,
-    #[doc = "16-bit pixels (2-plane UV)"]
+    #[doc = "16-bit pixels (2-plane UV)."]
     YUV2P420 = 0x19,
-    #[doc = "16-bit pixels (2-plane VU interleaved bytes)"]
+    #[doc = "16-bit pixels (2-plane VU interleaved bytes)."]
     YVU2P422 = 0x1a,
-    #[doc = "16-bit pixels (2-plane VU)"]
+    #[doc = "16-bit pixels (2-plane VU)."]
     YVU2P420 = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
-    #[doc = "16-bit pixels (3-plane format)"]
+    #[doc = "16-bit pixels (3-plane format)."]
     YUV422 = 0x1e,
-    #[doc = "16-bit pixels (3-plane format)"]
+    #[doc = "16-bit pixels (3-plane format)."]
     YUV420 = 0x1f,
     _RESERVED_20 = 0x20,
     _RESERVED_21 = 0x21,
     _RESERVED_22 = 0x22,
     _RESERVED_23 = 0x23,
-    #[doc = "2-bit pixels with alpha at the low 8 bits"]
+    #[doc = "2-bit pixels with alpha at the low 8 bits."]
     RGBA8888 = 0x24,
     _RESERVED_25 = 0x25,
     _RESERVED_26 = 0x26,
@@ -1455,9 +1455,9 @@ pub enum PsCtrlClrFormat {
     _RESERVED_29 = 0x29,
     _RESERVED_2a = 0x2a,
     _RESERVED_2b = 0x2b,
-    #[doc = "16-bit pixels with alpha at the low 1bits"]
+    #[doc = "16-bit pixels with alpha at the low 1bits."]
     RGBA5551 = 0x2c,
-    #[doc = "16-bit pixels with alpha at the low 4 bits"]
+    #[doc = "16-bit pixels with alpha at the low 4 bits."]
     RGBA4444 = 0x2d,
     _RESERVED_2e = 0x2e,
     _RESERVED_2f = 0x2f,
@@ -1578,7 +1578,7 @@ pub enum PsCtrlFormat {
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
-    #[doc = "32-bit pixels (unpacked 24-bit format with/without alpha at high 8bits)"]
+    #[doc = "32-bit pixels (unpacked 24-bit format with/without alpha at high 8bits)."]
     RGB888_ARGB8888 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
@@ -1587,45 +1587,45 @@ pub enum PsCtrlFormat {
     _RESERVED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
-    #[doc = "16-bit pixels with/without alpha at high 1bit"]
+    #[doc = "16-bit pixels with/without alpha at high 1bit."]
     RGB555_ARGB1555 = 0x0c,
-    #[doc = "16-bit pixels with/without alpha at high 4 bits"]
+    #[doc = "16-bit pixels with/without alpha at high 4 bits."]
     RGB444_ARGB4444 = 0x0d,
-    #[doc = "16-bit pixels"]
+    #[doc = "16-bit pixels."]
     RGB565 = 0x0e,
     _RESERVED_f = 0x0f,
-    #[doc = "32-bit pixels (1-plane XYUV unpacked)"]
+    #[doc = "32-bit pixels (1-plane XYUV unpacked)."]
     YUV1P444 = 0x10,
     _RESERVED_11 = 0x11,
-    #[doc = "16-bit pixels (1-plane U0,Y0,V0,Y1 interleaved bytes)"]
+    #[doc = "16-bit pixels (1-plane U0,Y0,V0,Y1 interleaved bytes)."]
     UYVY1P422 = 0x12,
-    #[doc = "16-bit pixels (1-plane V0,Y0,U0,Y1 interleaved bytes)"]
+    #[doc = "16-bit pixels (1-plane V0,Y0,U0,Y1 interleaved bytes)."]
     VYUY1P422 = 0x13,
-    #[doc = "8-bit monochrome pixels (1-plane Y luma output)"]
+    #[doc = "8-bit monochrome pixels (1-plane Y luma output)."]
     Y8 = 0x14,
-    #[doc = "4-bit monochrome pixels (1-plane Y luma, 4 bit truncation)"]
+    #[doc = "4-bit monochrome pixels (1-plane Y luma, 4 bit truncation)."]
     Y4 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    #[doc = "16-bit pixels (2-plane UV interleaved bytes)"]
+    #[doc = "16-bit pixels (2-plane UV interleaved bytes)."]
     YUV2P422 = 0x18,
-    #[doc = "16-bit pixels (2-plane UV)"]
+    #[doc = "16-bit pixels (2-plane UV)."]
     YUV2P420 = 0x19,
-    #[doc = "16-bit pixels (2-plane VU interleaved bytes)"]
+    #[doc = "16-bit pixels (2-plane VU interleaved bytes)."]
     YVU2P422 = 0x1a,
-    #[doc = "16-bit pixels (2-plane VU)"]
+    #[doc = "16-bit pixels (2-plane VU)."]
     YVU2P420 = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
-    #[doc = "16-bit pixels (3-plane format)"]
+    #[doc = "16-bit pixels (3-plane format)."]
     YUV422 = 0x1e,
-    #[doc = "16-bit pixels (3-plane format)"]
+    #[doc = "16-bit pixels (3-plane format)."]
     YUV420 = 0x1f,
     _RESERVED_20 = 0x20,
     _RESERVED_21 = 0x21,
     _RESERVED_22 = 0x22,
     _RESERVED_23 = 0x23,
-    #[doc = "2-bit pixels with alpha at the low 8 bits"]
+    #[doc = "2-bit pixels with alpha at the low 8 bits."]
     RGBA8888 = 0x24,
     _RESERVED_25 = 0x25,
     _RESERVED_26 = 0x26,
@@ -1634,9 +1634,9 @@ pub enum PsCtrlFormat {
     _RESERVED_29 = 0x29,
     _RESERVED_2a = 0x2a,
     _RESERVED_2b = 0x2b,
-    #[doc = "16-bit pixels with alpha at the low 1bits"]
+    #[doc = "16-bit pixels with alpha at the low 1bits."]
     RGBA5551 = 0x2c,
-    #[doc = "16-bit pixels with alpha at the low 4 bits"]
+    #[doc = "16-bit pixels with alpha at the low 4 bits."]
     RGBA4444 = 0x2d,
     _RESERVED_2e = 0x2e,
     _RESERVED_2f = 0x2f,
@@ -1757,7 +1757,7 @@ pub enum PsCtrlSetFormat {
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
-    #[doc = "32-bit pixels (unpacked 24-bit format with/without alpha at high 8bits)"]
+    #[doc = "32-bit pixels (unpacked 24-bit format with/without alpha at high 8bits)."]
     RGB888_ARGB8888 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
@@ -1766,45 +1766,45 @@ pub enum PsCtrlSetFormat {
     _RESERVED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
-    #[doc = "16-bit pixels with/without alpha at high 1bit"]
+    #[doc = "16-bit pixels with/without alpha at high 1bit."]
     RGB555_ARGB1555 = 0x0c,
-    #[doc = "16-bit pixels with/without alpha at high 4 bits"]
+    #[doc = "16-bit pixels with/without alpha at high 4 bits."]
     RGB444_ARGB4444 = 0x0d,
-    #[doc = "16-bit pixels"]
+    #[doc = "16-bit pixels."]
     RGB565 = 0x0e,
     _RESERVED_f = 0x0f,
-    #[doc = "32-bit pixels (1-plane XYUV unpacked)"]
+    #[doc = "32-bit pixels (1-plane XYUV unpacked)."]
     YUV1P444 = 0x10,
     _RESERVED_11 = 0x11,
-    #[doc = "16-bit pixels (1-plane U0,Y0,V0,Y1 interleaved bytes)"]
+    #[doc = "16-bit pixels (1-plane U0,Y0,V0,Y1 interleaved bytes)."]
     UYVY1P422 = 0x12,
-    #[doc = "16-bit pixels (1-plane V0,Y0,U0,Y1 interleaved bytes)"]
+    #[doc = "16-bit pixels (1-plane V0,Y0,U0,Y1 interleaved bytes)."]
     VYUY1P422 = 0x13,
-    #[doc = "8-bit monochrome pixels (1-plane Y luma output)"]
+    #[doc = "8-bit monochrome pixels (1-plane Y luma output)."]
     Y8 = 0x14,
-    #[doc = "4-bit monochrome pixels (1-plane Y luma, 4 bit truncation)"]
+    #[doc = "4-bit monochrome pixels (1-plane Y luma, 4 bit truncation)."]
     Y4 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    #[doc = "16-bit pixels (2-plane UV interleaved bytes)"]
+    #[doc = "16-bit pixels (2-plane UV interleaved bytes)."]
     YUV2P422 = 0x18,
-    #[doc = "16-bit pixels (2-plane UV)"]
+    #[doc = "16-bit pixels (2-plane UV)."]
     YUV2P420 = 0x19,
-    #[doc = "16-bit pixels (2-plane VU interleaved bytes)"]
+    #[doc = "16-bit pixels (2-plane VU interleaved bytes)."]
     YVU2P422 = 0x1a,
-    #[doc = "16-bit pixels (2-plane VU)"]
+    #[doc = "16-bit pixels (2-plane VU)."]
     YVU2P420 = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
-    #[doc = "16-bit pixels (3-plane format)"]
+    #[doc = "16-bit pixels (3-plane format)."]
     YUV422 = 0x1e,
-    #[doc = "16-bit pixels (3-plane format)"]
+    #[doc = "16-bit pixels (3-plane format)."]
     YUV420 = 0x1f,
     _RESERVED_20 = 0x20,
     _RESERVED_21 = 0x21,
     _RESERVED_22 = 0x22,
     _RESERVED_23 = 0x23,
-    #[doc = "2-bit pixels with alpha at the low 8 bits"]
+    #[doc = "2-bit pixels with alpha at the low 8 bits."]
     RGBA8888 = 0x24,
     _RESERVED_25 = 0x25,
     _RESERVED_26 = 0x26,
@@ -1813,9 +1813,9 @@ pub enum PsCtrlSetFormat {
     _RESERVED_29 = 0x29,
     _RESERVED_2a = 0x2a,
     _RESERVED_2b = 0x2b,
-    #[doc = "16-bit pixels with alpha at the low 1bits"]
+    #[doc = "16-bit pixels with alpha at the low 1bits."]
     RGBA5551 = 0x2c,
-    #[doc = "16-bit pixels with alpha at the low 4 bits"]
+    #[doc = "16-bit pixels with alpha at the low 4 bits."]
     RGBA4444 = 0x2d,
     _RESERVED_2e = 0x2e,
     _RESERVED_2f = 0x2f,
@@ -1936,7 +1936,7 @@ pub enum PsCtrlTogFormat {
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
-    #[doc = "32-bit pixels (unpacked 24-bit format with/without alpha at high 8bits)"]
+    #[doc = "32-bit pixels (unpacked 24-bit format with/without alpha at high 8bits)."]
     RGB888_ARGB8888 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
@@ -1945,45 +1945,45 @@ pub enum PsCtrlTogFormat {
     _RESERVED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
-    #[doc = "16-bit pixels with/without alpha at high 1bit"]
+    #[doc = "16-bit pixels with/without alpha at high 1bit."]
     RGB555_ARGB1555 = 0x0c,
-    #[doc = "16-bit pixels with/without alpha at high 4 bits"]
+    #[doc = "16-bit pixels with/without alpha at high 4 bits."]
     RGB444_ARGB4444 = 0x0d,
-    #[doc = "16-bit pixels"]
+    #[doc = "16-bit pixels."]
     RGB565 = 0x0e,
     _RESERVED_f = 0x0f,
-    #[doc = "32-bit pixels (1-plane XYUV unpacked)"]
+    #[doc = "32-bit pixels (1-plane XYUV unpacked)."]
     YUV1P444 = 0x10,
     _RESERVED_11 = 0x11,
-    #[doc = "16-bit pixels (1-plane U0,Y0,V0,Y1 interleaved bytes)"]
+    #[doc = "16-bit pixels (1-plane U0,Y0,V0,Y1 interleaved bytes)."]
     UYVY1P422 = 0x12,
-    #[doc = "16-bit pixels (1-plane V0,Y0,U0,Y1 interleaved bytes)"]
+    #[doc = "16-bit pixels (1-plane V0,Y0,U0,Y1 interleaved bytes)."]
     VYUY1P422 = 0x13,
-    #[doc = "8-bit monochrome pixels (1-plane Y luma output)"]
+    #[doc = "8-bit monochrome pixels (1-plane Y luma output)."]
     Y8 = 0x14,
-    #[doc = "4-bit monochrome pixels (1-plane Y luma, 4 bit truncation)"]
+    #[doc = "4-bit monochrome pixels (1-plane Y luma, 4 bit truncation)."]
     Y4 = 0x15,
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
-    #[doc = "16-bit pixels (2-plane UV interleaved bytes)"]
+    #[doc = "16-bit pixels (2-plane UV interleaved bytes)."]
     YUV2P422 = 0x18,
-    #[doc = "16-bit pixels (2-plane UV)"]
+    #[doc = "16-bit pixels (2-plane UV)."]
     YUV2P420 = 0x19,
-    #[doc = "16-bit pixels (2-plane VU interleaved bytes)"]
+    #[doc = "16-bit pixels (2-plane VU interleaved bytes)."]
     YVU2P422 = 0x1a,
-    #[doc = "16-bit pixels (2-plane VU)"]
+    #[doc = "16-bit pixels (2-plane VU)."]
     YVU2P420 = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
-    #[doc = "16-bit pixels (3-plane format)"]
+    #[doc = "16-bit pixels (3-plane format)."]
     YUV422 = 0x1e,
-    #[doc = "16-bit pixels (3-plane format)"]
+    #[doc = "16-bit pixels (3-plane format)."]
     YUV420 = 0x1f,
     _RESERVED_20 = 0x20,
     _RESERVED_21 = 0x21,
     _RESERVED_22 = 0x22,
     _RESERVED_23 = 0x23,
-    #[doc = "2-bit pixels with alpha at the low 8 bits"]
+    #[doc = "2-bit pixels with alpha at the low 8 bits."]
     RGBA8888 = 0x24,
     _RESERVED_25 = 0x25,
     _RESERVED_26 = 0x26,
@@ -1992,9 +1992,9 @@ pub enum PsCtrlTogFormat {
     _RESERVED_29 = 0x29,
     _RESERVED_2a = 0x2a,
     _RESERVED_2b = 0x2b,
-    #[doc = "16-bit pixels with alpha at the low 1bits"]
+    #[doc = "16-bit pixels with alpha at the low 1bits."]
     RGBA5551 = 0x2c,
-    #[doc = "16-bit pixels with alpha at the low 4 bits"]
+    #[doc = "16-bit pixels with alpha at the low 4 bits."]
     RGBA4444 = 0x2d,
     _RESERVED_2e = 0x2e,
     _RESERVED_2f = 0x2f,
@@ -2041,29 +2041,29 @@ impl From<PsCtrlTogFormat> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rop {
-    #[doc = "AS AND PS"]
+    #[doc = "AS AND PS."]
     MASKAS = 0x0,
-    #[doc = "nAS AND PS"]
+    #[doc = "nAS AND PS."]
     MASKNOTAS = 0x01,
-    #[doc = "AS AND nPS"]
+    #[doc = "AS AND nPS."]
     MASKASNOT = 0x02,
-    #[doc = "AS OR PS"]
+    #[doc = "AS OR PS."]
     MERGEAS = 0x03,
-    #[doc = "nAS OR PS"]
+    #[doc = "nAS OR PS."]
     MERGENOTAS = 0x04,
-    #[doc = "AS OR nPS"]
+    #[doc = "AS OR nPS."]
     MERGEASNOT = 0x05,
-    #[doc = "nAS"]
+    #[doc = "nAS."]
     NOTCOPYAS = 0x06,
-    #[doc = "nPS"]
+    #[doc = "nPS."]
     NOT = 0x07,
-    #[doc = "AS NAND PS"]
+    #[doc = "AS NAND PS."]
     NOTMASKAS = 0x08,
-    #[doc = "AS NOR PS"]
+    #[doc = "AS NOR PS."]
     NOTMERGEAS = 0x09,
-    #[doc = "AS XOR PS"]
+    #[doc = "AS XOR PS."]
     XORAS = 0x0a,
-    #[doc = "AS XNOR PS"]
+    #[doc = "AS XNOR PS."]
     NOTXORAS = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
@@ -2135,9 +2135,9 @@ impl From<RotMemLpState> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum S0AlphaMode {
-    #[doc = "Straight mode"]
+    #[doc = "Straight mode."]
     S0_ALPHA_MODE_0 = 0x0,
-    #[doc = "Inverted mode"]
+    #[doc = "Inverted mode."]
     S0_ALPHA_MODE_1 = 0x01,
 }
 impl S0AlphaMode {
@@ -2166,9 +2166,9 @@ impl From<S0AlphaMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum S0ColorMode {
-    #[doc = "Original pixel"]
+    #[doc = "Original pixel."]
     S0_COLOR_MODE_0 = 0x0,
-    #[doc = "Scaled pixel"]
+    #[doc = "Scaled pixel."]
     S0_COLOR_MODE_1 = 0x01,
 }
 impl S0ColorMode {
@@ -2197,13 +2197,13 @@ impl From<S0ColorMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum S0GlobalAlphaMode {
-    #[doc = "Global alpha"]
+    #[doc = "Global alpha."]
     S0_GLOBAL_ALPHA_MODE_0 = 0x0,
-    #[doc = "Local alpha"]
+    #[doc = "Local alpha."]
     S0_GLOBAL_ALPHA_MODE_1 = 0x01,
-    #[doc = "Scaled alpha"]
+    #[doc = "Scaled alpha."]
     S0_GLOBAL_ALPHA_MODE_2 = 0x02,
-    #[doc = "Scaled alpha"]
+    #[doc = "Scaled alpha."]
     S0_GLOBAL_ALPHA_MODE_3 = 0x03,
 }
 impl S0GlobalAlphaMode {
@@ -2232,13 +2232,13 @@ impl From<S0GlobalAlphaMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum S0S1FactorMode {
-    #[doc = "1"]
+    #[doc = "1."]
     S0_S1_FACTOR_MODE_0 = 0x0,
-    #[doc = "0"]
+    #[doc = "0."]
     S0_S1_FACTOR_MODE_1 = 0x01,
-    #[doc = "Straight alpha"]
+    #[doc = "Straight alpha."]
     S0_S1_FACTOR_MODE_2 = 0x02,
-    #[doc = "Inverse alpha"]
+    #[doc = "Inverse alpha."]
     S0_S1_FACTOR_MODE_3 = 0x03,
 }
 impl S0S1FactorMode {
@@ -2267,9 +2267,9 @@ impl From<S0S1FactorMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum S1AlphaMode {
-    #[doc = "Straight mode"]
+    #[doc = "Straight mode."]
     S1_ALPHA_MODE_0 = 0x0,
-    #[doc = "Inverted mode"]
+    #[doc = "Inverted mode."]
     S1_ALPHA_MODE_1 = 0x01,
 }
 impl S1AlphaMode {
@@ -2298,9 +2298,9 @@ impl From<S1AlphaMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum S1ColorMode {
-    #[doc = "Original pixel"]
+    #[doc = "Original pixel."]
     S1_COLOR_MODE_0 = 0x0,
-    #[doc = "Scaled pixel"]
+    #[doc = "Scaled pixel."]
     S1_COLOR_MODE_1 = 0x01,
 }
 impl S1ColorMode {
@@ -2329,13 +2329,13 @@ impl From<S1ColorMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum S1GlobalAlphaMode {
-    #[doc = "Global alpha"]
+    #[doc = "Global alpha."]
     S1_GLOBAL_ALPHA_MODE_0 = 0x0,
-    #[doc = "Local alpha"]
+    #[doc = "Local alpha."]
     S1_GLOBAL_ALPHA_MODE_1 = 0x01,
-    #[doc = "Scaled alpha"]
+    #[doc = "Scaled alpha."]
     S1_GLOBAL_ALPHA_MODE_2 = 0x02,
-    #[doc = "Scaled alpha"]
+    #[doc = "Scaled alpha."]
     S1_GLOBAL_ALPHA_MODE_3 = 0x03,
 }
 impl S1GlobalAlphaMode {
@@ -2364,13 +2364,13 @@ impl From<S1GlobalAlphaMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum S1S0FactorMode {
-    #[doc = "1"]
+    #[doc = "1."]
     S1_S0_FACTOR_MODE_0 = 0x0,
-    #[doc = "0"]
+    #[doc = "0."]
     S1_S0_FACTOR_MODE_1 = 0x01,
-    #[doc = "Straight alpha"]
+    #[doc = "Straight alpha."]
     S1_S0_FACTOR_MODE_2 = 0x02,
-    #[doc = "Inverse alpha"]
+    #[doc = "Inverse alpha."]
     S1_S0_FACTOR_MODE_3 = 0x03,
 }
 impl S1S0FactorMode {
@@ -2399,9 +2399,9 @@ impl From<S1S0FactorMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatAxiReadError {
-    #[doc = "AXI read is normal"]
+    #[doc = "AXI read is normal."]
     NORMAL = 0x0,
-    #[doc = "AXI read error has occurred"]
+    #[doc = "AXI read error has occurred."]
     ERROR = 0x01,
 }
 impl StatAxiReadError {
@@ -2430,9 +2430,9 @@ impl From<StatAxiReadError> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatAxiWriteError {
-    #[doc = "AXI write is normal"]
+    #[doc = "AXI write is normal."]
     NORMAL = 0x0,
-    #[doc = "AXI write error has occurred"]
+    #[doc = "AXI write error has occurred."]
     ERROR = 0x01,
 }
 impl StatAxiWriteError {
@@ -2461,9 +2461,9 @@ impl From<StatAxiWriteError> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatClrAxiReadError {
-    #[doc = "AXI read is normal"]
+    #[doc = "AXI read is normal."]
     NORMAL = 0x0,
-    #[doc = "AXI read error has occurred"]
+    #[doc = "AXI read error has occurred."]
     ERROR = 0x01,
 }
 impl StatClrAxiReadError {
@@ -2492,9 +2492,9 @@ impl From<StatClrAxiReadError> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatClrAxiWriteError {
-    #[doc = "AXI write is normal"]
+    #[doc = "AXI write is normal."]
     NORMAL = 0x0,
-    #[doc = "AXI write error has occurred"]
+    #[doc = "AXI write error has occurred."]
     ERROR = 0x01,
 }
 impl StatClrAxiWriteError {
@@ -2523,9 +2523,9 @@ impl From<StatClrAxiWriteError> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatClrIrq {
-    #[doc = "No interrupt"]
+    #[doc = "No interrupt."]
     IRQ_0 = 0x0,
-    #[doc = "Interrupt generated"]
+    #[doc = "Interrupt generated."]
     IRQ_1 = 0x01,
 }
 impl StatClrIrq {
@@ -2554,9 +2554,9 @@ impl From<StatClrIrq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatClrLutDmaLoadDoneIrq {
-    #[doc = "LUT DMA LOAD transfer is active"]
+    #[doc = "LUT DMA LOAD transfer is active."]
     ACTIVE = 0x0,
-    #[doc = "LUT DMA LOAD transfer is complete"]
+    #[doc = "LUT DMA LOAD transfer is complete."]
     COMPLETE = 0x01,
 }
 impl StatClrLutDmaLoadDoneIrq {
@@ -2585,9 +2585,9 @@ impl From<StatClrLutDmaLoadDoneIrq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatIrq {
-    #[doc = "No interrupt"]
+    #[doc = "No interrupt."]
     IRQ_0 = 0x0,
-    #[doc = "Interrupt generated"]
+    #[doc = "Interrupt generated."]
     IRQ_1 = 0x01,
 }
 impl StatIrq {
@@ -2616,9 +2616,9 @@ impl From<StatIrq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatLutDmaLoadDoneIrq {
-    #[doc = "LUT DMA LOAD transfer is active"]
+    #[doc = "LUT DMA LOAD transfer is active."]
     ACTIVE = 0x0,
-    #[doc = "LUT DMA LOAD transfer is complete"]
+    #[doc = "LUT DMA LOAD transfer is complete."]
     COMPLETE = 0x01,
 }
 impl StatLutDmaLoadDoneIrq {
@@ -2647,9 +2647,9 @@ impl From<StatLutDmaLoadDoneIrq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatSetAxiReadError {
-    #[doc = "AXI read is normal"]
+    #[doc = "AXI read is normal."]
     NORMAL = 0x0,
-    #[doc = "AXI read error has occurred"]
+    #[doc = "AXI read error has occurred."]
     ERROR = 0x01,
 }
 impl StatSetAxiReadError {
@@ -2678,9 +2678,9 @@ impl From<StatSetAxiReadError> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatSetAxiWriteError {
-    #[doc = "AXI write is normal"]
+    #[doc = "AXI write is normal."]
     NORMAL = 0x0,
-    #[doc = "AXI write error has occurred"]
+    #[doc = "AXI write error has occurred."]
     ERROR = 0x01,
 }
 impl StatSetAxiWriteError {
@@ -2709,9 +2709,9 @@ impl From<StatSetAxiWriteError> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatSetIrq {
-    #[doc = "No interrupt"]
+    #[doc = "No interrupt."]
     IRQ_0 = 0x0,
-    #[doc = "Interrupt generated"]
+    #[doc = "Interrupt generated."]
     IRQ_1 = 0x01,
 }
 impl StatSetIrq {
@@ -2740,9 +2740,9 @@ impl From<StatSetIrq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatSetLutDmaLoadDoneIrq {
-    #[doc = "LUT DMA LOAD transfer is active"]
+    #[doc = "LUT DMA LOAD transfer is active."]
     ACTIVE = 0x0,
-    #[doc = "LUT DMA LOAD transfer is complete"]
+    #[doc = "LUT DMA LOAD transfer is complete."]
     COMPLETE = 0x01,
 }
 impl StatSetLutDmaLoadDoneIrq {
@@ -2771,9 +2771,9 @@ impl From<StatSetLutDmaLoadDoneIrq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatTogAxiReadError {
-    #[doc = "AXI read is normal"]
+    #[doc = "AXI read is normal."]
     NORMAL = 0x0,
-    #[doc = "AXI read error has occurred"]
+    #[doc = "AXI read error has occurred."]
     ERROR = 0x01,
 }
 impl StatTogAxiReadError {
@@ -2802,9 +2802,9 @@ impl From<StatTogAxiReadError> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatTogAxiWriteError {
-    #[doc = "AXI write is normal"]
+    #[doc = "AXI write is normal."]
     NORMAL = 0x0,
-    #[doc = "AXI write error has occurred"]
+    #[doc = "AXI write error has occurred."]
     ERROR = 0x01,
 }
 impl StatTogAxiWriteError {
@@ -2833,9 +2833,9 @@ impl From<StatTogAxiWriteError> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatTogIrq {
-    #[doc = "No interrupt"]
+    #[doc = "No interrupt."]
     IRQ_0 = 0x0,
-    #[doc = "Interrupt generated"]
+    #[doc = "Interrupt generated."]
     IRQ_1 = 0x01,
 }
 impl StatTogIrq {
@@ -2864,9 +2864,9 @@ impl From<StatTogIrq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatTogLutDmaLoadDoneIrq {
-    #[doc = "LUT DMA LOAD transfer is active"]
+    #[doc = "LUT DMA LOAD transfer is active."]
     ACTIVE = 0x0,
-    #[doc = "LUT DMA LOAD transfer is complete"]
+    #[doc = "LUT DMA LOAD transfer is complete."]
     COMPLETE = 0x01,
 }
 impl StatTogLutDmaLoadDoneIrq {
@@ -2895,9 +2895,9 @@ impl From<StatTogLutDmaLoadDoneIrq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum YcbcrMode {
-    #[doc = "YUV to RGB"]
+    #[doc = "YUV to RGB."]
     YCBCR_MODE_0 = 0x0,
-    #[doc = "YCbCr to RGB"]
+    #[doc = "YCbCr to RGB."]
     YCBCR_MODE_1 = 0x01,
 }
 impl YcbcrMode {

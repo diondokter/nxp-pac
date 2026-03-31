@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Status {
-    #[doc = "Did not exceed"]
+    #[doc = "Did not exceed."]
     ST02 = 0x0,
-    #[doc = "Exceeded"]
+    #[doc = "Exceeded."]
     ST01 = 0x01,
 }
 impl Status {

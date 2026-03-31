@@ -1,4 +1,4 @@
-#[doc = "Array of registers: B_\\[%s\\]"]
+#[doc = "Array of registers: B_\\[%s\\]."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct B {
     ptr: *mut u8,
@@ -14,14 +14,14 @@ impl B {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "Byte pin registers for all port 0 and 1 GPIO pins"]
+    #[doc = "Byte pin registers for all port 0 and 1 GPIO pins."]
     #[inline(always)]
     pub const fn b_(self, n: usize) -> crate::common::Reg<regs::B, crate::common::RW> {
         assert!(n < 32usize);
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize + n * 1usize) as _) }
     }
 }
-#[doc = "LPC-Next0 General Purpose I/O (GPIO)"]
+#[doc = "LPC-Next0 General Purpose I/O (GPIO)."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpio {
     ptr: *mut u8,
@@ -37,19 +37,19 @@ impl Gpio {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "Array of registers: B_\\[%s\\]"]
+    #[doc = "Array of registers: B_\\[%s\\]."]
     #[inline(always)]
     pub const fn b(self, n: usize) -> B {
         assert!(n < 8usize);
         unsafe { B::from_ptr(self.ptr.wrapping_add(0x0usize + n * 32usize) as _) }
     }
-    #[doc = "Array of registers: W_\\[%s\\]"]
+    #[doc = "Array of registers: W_\\[%s\\]."]
     #[inline(always)]
     pub const fn w(self, n: usize) -> W {
         assert!(n < 8usize);
         unsafe { W::from_ptr(self.ptr.wrapping_add(0x1000usize + n * 128usize) as _) }
     }
-    #[doc = "Direction registers"]
+    #[doc = "Direction registers."]
     #[inline(always)]
     pub const fn dir(self, n: usize) -> crate::common::Reg<regs::Dir, crate::common::RW> {
         assert!(n < 8usize);
@@ -57,7 +57,7 @@ impl Gpio {
             crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x2000usize + n * 4usize) as _)
         }
     }
-    #[doc = "Mask register"]
+    #[doc = "Mask register."]
     #[inline(always)]
     pub const fn mask(self, n: usize) -> crate::common::Reg<regs::Mask, crate::common::RW> {
         assert!(n < 8usize);
@@ -65,7 +65,7 @@ impl Gpio {
             crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x2080usize + n * 4usize) as _)
         }
     }
-    #[doc = "Port pin register"]
+    #[doc = "Port pin register."]
     #[inline(always)]
     pub const fn pin(self, n: usize) -> crate::common::Reg<regs::Pin, crate::common::RW> {
         assert!(n < 8usize);
@@ -73,7 +73,7 @@ impl Gpio {
             crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x2100usize + n * 4usize) as _)
         }
     }
-    #[doc = "Masked port register"]
+    #[doc = "Masked port register."]
     #[inline(always)]
     pub const fn mpin(self, n: usize) -> crate::common::Reg<regs::Mpin, crate::common::RW> {
         assert!(n < 8usize);
@@ -81,7 +81,7 @@ impl Gpio {
             crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x2180usize + n * 4usize) as _)
         }
     }
-    #[doc = "Write: Set register for port Read: output bits for port"]
+    #[doc = "Write: Set register for port Read: output bits for port."]
     #[inline(always)]
     pub const fn set(self, n: usize) -> crate::common::Reg<regs::Set, crate::common::RW> {
         assert!(n < 8usize);
@@ -89,7 +89,7 @@ impl Gpio {
             crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x2200usize + n * 4usize) as _)
         }
     }
-    #[doc = "Clear port"]
+    #[doc = "Clear port."]
     #[inline(always)]
     pub const fn clr(self, n: usize) -> crate::common::Reg<regs::Clr, crate::common::W> {
         assert!(n < 8usize);
@@ -97,7 +97,7 @@ impl Gpio {
             crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x2280usize + n * 4usize) as _)
         }
     }
-    #[doc = "Toggle port"]
+    #[doc = "Toggle port."]
     #[inline(always)]
     pub const fn not(self, n: usize) -> crate::common::Reg<regs::Not, crate::common::W> {
         assert!(n < 8usize);
@@ -105,7 +105,7 @@ impl Gpio {
             crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x2300usize + n * 4usize) as _)
         }
     }
-    #[doc = "Set pin direction bits for port"]
+    #[doc = "Set pin direction bits for port."]
     #[inline(always)]
     pub const fn dirset(self, n: usize) -> crate::common::Reg<regs::Dirset, crate::common::W> {
         assert!(n < 8usize);
@@ -113,7 +113,7 @@ impl Gpio {
             crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x2380usize + n * 4usize) as _)
         }
     }
-    #[doc = "Clear pin direction bits for port"]
+    #[doc = "Clear pin direction bits for port."]
     #[inline(always)]
     pub const fn dirclr(self, n: usize) -> crate::common::Reg<regs::Dirclr, crate::common::W> {
         assert!(n < 8usize);
@@ -121,7 +121,7 @@ impl Gpio {
             crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x2400usize + n * 4usize) as _)
         }
     }
-    #[doc = "Toggle pin direction bits for port"]
+    #[doc = "Toggle pin direction bits for port."]
     #[inline(always)]
     pub const fn dirnot(self, n: usize) -> crate::common::Reg<regs::Dirnot, crate::common::W> {
         assert!(n < 8usize);
@@ -129,7 +129,7 @@ impl Gpio {
             crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x2480usize + n * 4usize) as _)
         }
     }
-    #[doc = "interrupt A enable control register"]
+    #[doc = "interrupt A enable control register."]
     #[inline(always)]
     pub const fn intena(self, n: usize) -> crate::common::Reg<regs::Intena, crate::common::RW> {
         assert!(n < 8usize);
@@ -137,7 +137,7 @@ impl Gpio {
             crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x2500usize + n * 4usize) as _)
         }
     }
-    #[doc = "interrupt B enable control register"]
+    #[doc = "interrupt B enable control register."]
     #[inline(always)]
     pub const fn intenb(self, n: usize) -> crate::common::Reg<regs::Intenb, crate::common::RW> {
         assert!(n < 8usize);
@@ -145,7 +145,7 @@ impl Gpio {
             crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x2580usize + n * 4usize) as _)
         }
     }
-    #[doc = "interupt polarity control register"]
+    #[doc = "interupt polarity control register."]
     #[inline(always)]
     pub const fn intpol(self, n: usize) -> crate::common::Reg<regs::Intpol, crate::common::RW> {
         assert!(n < 8usize);
@@ -153,7 +153,7 @@ impl Gpio {
             crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x2600usize + n * 4usize) as _)
         }
     }
-    #[doc = "choose edge or level for interrupt"]
+    #[doc = "choose edge or level for interrupt."]
     #[inline(always)]
     pub const fn intedg(self, n: usize) -> crate::common::Reg<regs::Intedg, crate::common::RW> {
         assert!(n < 8usize);
@@ -161,7 +161,7 @@ impl Gpio {
             crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x2680usize + n * 4usize) as _)
         }
     }
-    #[doc = "interrupt status for interrupt A"]
+    #[doc = "interrupt status for interrupt A."]
     #[inline(always)]
     pub const fn intstata(self, n: usize) -> crate::common::Reg<regs::Intstata, crate::common::RW> {
         assert!(n < 8usize);
@@ -169,7 +169,7 @@ impl Gpio {
             crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x2700usize + n * 4usize) as _)
         }
     }
-    #[doc = "interrupt status for interrupt B"]
+    #[doc = "interrupt status for interrupt B."]
     #[inline(always)]
     pub const fn intstatb(self, n: usize) -> crate::common::Reg<regs::Intstatb, crate::common::RW> {
         assert!(n < 8usize);
@@ -178,7 +178,7 @@ impl Gpio {
         }
     }
 }
-#[doc = "Array of registers: W_\\[%s\\]"]
+#[doc = "Array of registers: W_\\[%s\\]."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct W {
     ptr: *mut u8,
@@ -194,7 +194,7 @@ impl W {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "Word pin registers for all port 0 and 1 GPIO pins"]
+    #[doc = "Word pin registers for all port 0 and 1 GPIO pins."]
     #[inline(always)]
     pub const fn w_(self, n: usize) -> crate::common::Reg<regs::W, crate::common::RW> {
         assert!(n < 32usize);

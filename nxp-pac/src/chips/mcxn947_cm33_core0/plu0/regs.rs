@@ -1,16 +1,16 @@
-#[doc = "Input select register for LUTn (0 to 25), Inputx (5 inputs)"]
+#[doc = "Input select register for LUTn (0 to 25), Inputx (5 inputs)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct LutInpMux(pub u32);
 impl LutInpMux {
-    #[doc = "Selects the input source to be connected to LUTn_INPx"]
+    #[doc = "Selects the input source to be connected to LUTn_INPx."]
     #[must_use]
     #[inline(always)]
     pub const fn lutn_inpx(&self) -> super::vals::LutnInpx {
         let val = (self.0 >> 0usize) & 0x3f;
         super::vals::LutnInpx::from_bits(val as u8)
     }
-    #[doc = "Selects the input source to be connected to LUTn_INPx"]
+    #[doc = "Selects the input source to be connected to LUTn_INPx."]
     #[inline(always)]
     pub const fn set_lutn_inpx(&mut self, val: super::vals::LutnInpx) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
@@ -35,19 +35,19 @@ impl defmt::Format for LutInpMux {
         defmt::write!(f, "LutInpMux {{ lutn_inpx: {:?} }}", self.lutn_inpx())
     }
 }
-#[doc = "PLU LUT truth table"]
+#[doc = "PLU LUT truth table."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct LutTruth(pub u32);
 impl LutTruth {
-    #[doc = "LUT truth table"]
+    #[doc = "LUT truth table."]
     #[must_use]
     #[inline(always)]
     pub const fn lut_truth(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "LUT truth table"]
+    #[doc = "LUT truth table."]
     #[inline(always)]
     pub const fn set_lut_truth(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -72,7 +72,7 @@ impl defmt::Format for LutTruth {
         defmt::write!(f, "LutTruth {{ lut_truth: {=u32:?} }}", self.lut_truth())
     }
 }
-#[doc = "PLU output multiplexer"]
+#[doc = "PLU output multiplexer."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OutputMux(pub u32);
@@ -109,19 +109,19 @@ impl defmt::Format for OutputMux {
         defmt::write!(f, "OutputMux {{ output: {:?} }}", self.output())
     }
 }
-#[doc = "PLU outputs"]
+#[doc = "PLU outputs."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Outputs(pub u32);
 impl Outputs {
-    #[doc = "Output state"]
+    #[doc = "Output state."]
     #[must_use]
     #[inline(always)]
     pub const fn output_state(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Output state"]
+    #[doc = "Output state."]
     #[inline(always)]
     pub const fn set_output_state(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
@@ -150,67 +150,67 @@ impl defmt::Format for Outputs {
         )
     }
 }
-#[doc = "Wakeup interrupt control"]
+#[doc = "Wakeup interrupt control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct WakeintCtrl(pub u32);
 impl WakeintCtrl {
-    #[doc = "Interrupt mask"]
+    #[doc = "Interrupt mask."]
     #[must_use]
     #[inline(always)]
     pub const fn mask(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Interrupt mask"]
+    #[doc = "Interrupt mask."]
     #[inline(always)]
     pub const fn set_mask(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "Filter Mode"]
+    #[doc = "Filter Mode."]
     #[must_use]
     #[inline(always)]
     pub const fn filter_mode(&self) -> super::vals::FilterMode {
         let val = (self.0 >> 8usize) & 0x03;
         super::vals::FilterMode::from_bits(val as u8)
     }
-    #[doc = "Filter Mode"]
+    #[doc = "Filter Mode."]
     #[inline(always)]
     pub const fn set_filter_mode(&mut self, val: super::vals::FilterMode) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
-    #[doc = "Filter clock select"]
+    #[doc = "Filter clock select."]
     #[must_use]
     #[inline(always)]
     pub const fn filter_clksel(&self) -> super::vals::FilterClksel {
         let val = (self.0 >> 10usize) & 0x03;
         super::vals::FilterClksel::from_bits(val as u8)
     }
-    #[doc = "Filter clock select"]
+    #[doc = "Filter clock select."]
     #[inline(always)]
     pub const fn set_filter_clksel(&mut self, val: super::vals::FilterClksel) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u32) & 0x03) << 10usize);
     }
-    #[doc = "Latch the interrupt"]
+    #[doc = "Latch the interrupt."]
     #[must_use]
     #[inline(always)]
     pub const fn latch_enable(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "Latch the interrupt"]
+    #[doc = "Latch the interrupt."]
     #[inline(always)]
     pub const fn set_latch_enable(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "Write to clear wakeint_latched"]
+    #[doc = "Write to clear wakeint_latched."]
     #[must_use]
     #[inline(always)]
     pub const fn intr_clear(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "Write to clear wakeint_latched"]
+    #[doc = "Write to clear wakeint_latched."]
     #[inline(always)]
     pub const fn set_intr_clear(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);

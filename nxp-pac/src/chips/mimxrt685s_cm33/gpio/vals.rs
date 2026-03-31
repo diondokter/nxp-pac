@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Edge(u32);
 impl Edge {
-    #[doc = "level"]
+    #[doc = "level."]
     pub const LEVEL: Self = Self(0x0);
-    #[doc = "edge"]
+    #[doc = "edge."]
     pub const EDGE: Self = Self(0x01);
 }
 impl Edge {
@@ -50,9 +50,9 @@ impl From<Edge> for u32 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct PolCtl(u32);
 impl PolCtl {
-    #[doc = "interrupt when gpio high"]
+    #[doc = "interrupt when gpio high."]
     pub const HIHG: Self = Self(0x0);
-    #[doc = "interrupt when gpio low"]
+    #[doc = "interrupt when gpio low."]
     pub const LOW: Self = Self(0x01);
 }
 impl PolCtl {

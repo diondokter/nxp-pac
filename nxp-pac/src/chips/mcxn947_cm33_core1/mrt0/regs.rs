@@ -1,28 +1,28 @@
-#[doc = "Control"]
+#[doc = "Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl(pub u32);
 impl Ctrl {
-    #[doc = "Interrupt request"]
+    #[doc = "Interrupt request."]
     #[must_use]
     #[inline(always)]
     pub const fn inten(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Interrupt request"]
+    #[doc = "Interrupt request."]
     #[inline(always)]
     pub const fn set_inten(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "MRT Operating mode"]
+    #[doc = "MRT Operating mode."]
     #[must_use]
     #[inline(always)]
     pub const fn mode(&self) -> super::vals::Mode {
         let val = (self.0 >> 1usize) & 0x03;
         super::vals::Mode::from_bits(val as u8)
     }
-    #[doc = "MRT Operating mode"]
+    #[doc = "MRT Operating mode."]
     #[inline(always)]
     pub const fn set_mode(&mut self, val: super::vals::Mode) {
         self.0 = (self.0 & !(0x03 << 1usize)) | (((val.to_bits() as u32) & 0x03) << 1usize);
@@ -53,19 +53,19 @@ impl defmt::Format for Ctrl {
         )
     }
 }
-#[doc = "Idle Channel"]
+#[doc = "Idle Channel."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct IdleCh(pub u32);
 impl IdleCh {
-    #[doc = "Idle Channel"]
+    #[doc = "Idle Channel."]
     #[must_use]
     #[inline(always)]
     pub const fn chan(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x0f;
         val as u8
     }
-    #[doc = "Idle Channel"]
+    #[doc = "Idle Channel."]
     #[inline(always)]
     pub const fn set_chan(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
@@ -90,7 +90,7 @@ impl defmt::Format for IdleCh {
         defmt::write!(f, "IdleCh {{ chan: {=u8:?} }}", self.chan())
     }
 }
-#[doc = "Time Interval Value"]
+#[doc = "Time Interval Value."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Intval(pub u32);
@@ -107,14 +107,14 @@ impl Intval {
     pub const fn set_ivalue(&mut self, val: u32) {
         self.0 = (self.0 & !(0x00ff_ffff << 0usize)) | (((val as u32) & 0x00ff_ffff) << 0usize);
     }
-    #[doc = "Force Load Enable"]
+    #[doc = "Force Load Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn load(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Force Load Enable"]
+    #[doc = "Force Load Enable."]
     #[inline(always)]
     pub const fn set_load(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -145,55 +145,55 @@ impl defmt::Format for Intval {
         )
     }
 }
-#[doc = "Global Interrupt Flag"]
+#[doc = "Global Interrupt Flag."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct IrqFlag(pub u32);
 impl IrqFlag {
-    #[doc = "Interrupt Flag"]
+    #[doc = "Interrupt Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn gflag0(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Interrupt Flag"]
+    #[doc = "Interrupt Flag."]
     #[inline(always)]
     pub const fn set_gflag0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Interrupt Flag"]
+    #[doc = "Interrupt Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn gflag1(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Interrupt Flag"]
+    #[doc = "Interrupt Flag."]
     #[inline(always)]
     pub const fn set_gflag1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Interrupt Flag"]
+    #[doc = "Interrupt Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn gflag2(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Interrupt Flag"]
+    #[doc = "Interrupt Flag."]
     #[inline(always)]
     pub const fn set_gflag2(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Interrupt Flag"]
+    #[doc = "Interrupt Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn gflag3(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Interrupt Flag"]
+    #[doc = "Interrupt Flag."]
     #[inline(always)]
     pub const fn set_gflag3(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
@@ -228,43 +228,43 @@ impl defmt::Format for IrqFlag {
         )
     }
 }
-#[doc = "Module Configuration"]
+#[doc = "Module Configuration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Modcfg(pub u32);
 impl Modcfg {
-    #[doc = "Number of Channels"]
+    #[doc = "Number of Channels."]
     #[must_use]
     #[inline(always)]
     pub const fn noc(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "Number of Channels"]
+    #[doc = "Number of Channels."]
     #[inline(always)]
     pub const fn set_noc(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Number of Bits"]
+    #[doc = "Number of Bits."]
     #[must_use]
     #[inline(always)]
     pub const fn nob(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x1f;
         val as u8
     }
-    #[doc = "Number of Bits"]
+    #[doc = "Number of Bits."]
     #[inline(always)]
     pub const fn set_nob(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 4usize)) | (((val as u32) & 0x1f) << 4usize);
     }
-    #[doc = "MULTITASK"]
+    #[doc = "MULTITASK."]
     #[must_use]
     #[inline(always)]
     pub const fn multitask(&self) -> super::vals::Multitask {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::Multitask::from_bits(val as u8)
     }
-    #[doc = "MULTITASK"]
+    #[doc = "MULTITASK."]
     #[inline(always)]
     pub const fn set_multitask(&mut self, val: super::vals::Multitask) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -297,43 +297,43 @@ impl defmt::Format for Modcfg {
         )
     }
 }
-#[doc = "Status"]
+#[doc = "Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Stat(pub u32);
 impl Stat {
-    #[doc = "Interrupt Flag"]
+    #[doc = "Interrupt Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn intflag(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Interrupt Flag"]
+    #[doc = "Interrupt Flag."]
     #[inline(always)]
     pub const fn set_intflag(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Timer n State"]
+    #[doc = "Timer n State."]
     #[must_use]
     #[inline(always)]
     pub const fn run(&self) -> super::vals::Run {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Run::from_bits(val as u8)
     }
-    #[doc = "Timer n State"]
+    #[doc = "Timer n State."]
     #[inline(always)]
     pub const fn set_run(&mut self, val: super::vals::Run) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Channel-In-Use flag"]
+    #[doc = "Channel-In-Use flag."]
     #[must_use]
     #[inline(always)]
     pub const fn inuse(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Channel-In-Use flag"]
+    #[doc = "Channel-In-Use flag."]
     #[inline(always)]
     pub const fn set_inuse(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
@@ -366,19 +366,19 @@ impl defmt::Format for Stat {
         )
     }
 }
-#[doc = "Timer"]
+#[doc = "Timer."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Timer(pub u32);
 impl Timer {
-    #[doc = "Current Timer Value"]
+    #[doc = "Current Timer Value."]
     #[must_use]
     #[inline(always)]
     pub const fn value(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x00ff_ffff;
         val as u32
     }
-    #[doc = "Current Timer Value"]
+    #[doc = "Current Timer Value."]
     #[inline(always)]
     pub const fn set_value(&mut self, val: u32) {
         self.0 = (self.0 & !(0x00ff_ffff << 0usize)) | (((val as u32) & 0x00ff_ffff) << 0usize);

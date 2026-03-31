@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Chmod {
-    #[doc = "TDM mode"]
+    #[doc = "TDM mode."]
     TDM_MODE = 0x0,
-    #[doc = "Output mode"]
+    #[doc = "Output mode."]
     OUTPUT_MODE = 0x01,
 }
 impl Chmod {
@@ -33,7 +33,7 @@ impl From<Chmod> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Feature(u16);
 impl Feature {
-    #[doc = "Standard feature set"]
+    #[doc = "Standard feature set."]
     pub const STD: Self = Self(0x0);
 }
 impl Feature {
@@ -77,25 +77,25 @@ impl From<Feature> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Frsz {
-    #[doc = "1"]
+    #[doc = "1."]
     ONE_WORD = 0x0,
-    #[doc = "2"]
+    #[doc = "2."]
     TWO_WORDS = 0x01,
-    #[doc = "(FRSZ value + 1)"]
+    #[doc = "(FRSZ value + 1)."]
     N_WORDS_2 = 0x02,
-    #[doc = "(FRSZ value + 1)"]
+    #[doc = "(FRSZ value + 1)."]
     N_WORDS_3 = 0x03,
-    #[doc = "(FRSZ value + 1)"]
+    #[doc = "(FRSZ value + 1)."]
     N_WORDS_4 = 0x04,
-    #[doc = "(FRSZ value + 1)"]
+    #[doc = "(FRSZ value + 1)."]
     N_WORDS_5 = 0x05,
-    #[doc = "(FRSZ value + 1)"]
+    #[doc = "(FRSZ value + 1)."]
     N_WORDS_6 = 0x06,
-    #[doc = "(FRSZ value + 1)"]
+    #[doc = "(FRSZ value + 1)."]
     N_WORDS_7 = 0x07,
-    #[doc = "(FRSZ value + 1)"]
+    #[doc = "(FRSZ value + 1)."]
     N_WORDS_8 = 0x08,
-    #[doc = "(FRSZ value + 1)"]
+    #[doc = "(FRSZ value + 1)."]
     N_WORDS_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -118,7 +118,7 @@ pub enum Frsz {
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
     _RESERVED_1e = 0x1e,
-    #[doc = "32"]
+    #[doc = "32."]
     MAX_WORDS = 0x1f,
 }
 impl Frsz {
@@ -147,12 +147,12 @@ impl From<Frsz> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum McrMsel {
-    #[doc = "Controller clock (MCLK) option 1"]
+    #[doc = "Controller clock (MCLK) option 1."]
     MCLK1 = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "Controller clock (MCLK) option 2"]
+    #[doc = "Controller clock (MCLK) option 2."]
     MCLK2 = 0x02,
-    #[doc = "Controller clock (MCLK) option 3"]
+    #[doc = "Controller clock (MCLK) option 3."]
     MCLK3 = 0x03,
 }
 impl McrMsel {
@@ -181,9 +181,9 @@ impl From<McrMsel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Moe {
-    #[doc = "Input"]
+    #[doc = "Input."]
     INPUT = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     OUTPUT = 0x01,
 }
 impl Moe {
@@ -212,9 +212,9 @@ impl From<Moe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rcr2Bcd {
-    #[doc = "Generated externally in Target mode"]
+    #[doc = "Generated externally in Target mode."]
     EXT_TARGET_MODE = 0x0,
-    #[doc = "Generated internally in Controller mode"]
+    #[doc = "Generated internally in Controller mode."]
     INT_CONTROLLER_MODE = 0x01,
 }
 impl Rcr2Bcd {
@@ -243,9 +243,9 @@ impl From<Rcr2Bcd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rcr2Bci {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     NO_EFFECT = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     CLOCKED_AS_IF_EXT_GENERATED = 0x01,
 }
 impl Rcr2Bci {
@@ -274,9 +274,9 @@ impl From<Rcr2Bci> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rcr2Bcp {
-    #[doc = "Active high"]
+    #[doc = "Active high."]
     ACTIVE_HIGH = 0x0,
-    #[doc = "Active low"]
+    #[doc = "Active low."]
     ACTIVE_LOW = 0x01,
 }
 impl Rcr2Bcp {
@@ -305,9 +305,9 @@ impl From<Rcr2Bcp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rcr2Bcs {
-    #[doc = "Use the normal bit clock source"]
+    #[doc = "Use the normal bit clock source."]
     NORMAL = 0x0,
-    #[doc = "Swap the bit clock source"]
+    #[doc = "Swap the bit clock source."]
     SWAP_BIT_CLK_SOURCE = 0x01,
 }
 impl Rcr2Bcs {
@@ -336,13 +336,13 @@ impl From<Rcr2Bcs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rcr2Msel {
-    #[doc = "Bus clock"]
+    #[doc = "Bus clock."]
     BUS_CLOCK = 0x0,
-    #[doc = "Controller clock (MCLK) option 1"]
+    #[doc = "Controller clock (MCLK) option 1."]
     MCLK1 = 0x01,
-    #[doc = "Controller clock (MCLK) option 2"]
+    #[doc = "Controller clock (MCLK) option 2."]
     MCLK2 = 0x02,
-    #[doc = "Controller clock (MCLK) option 3"]
+    #[doc = "Controller clock (MCLK) option 3."]
     MCLK3 = 0x03,
 }
 impl Rcr2Msel {
@@ -371,13 +371,13 @@ impl From<Rcr2Msel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rcr2Sync {
-    #[doc = "Asynchronous mode"]
+    #[doc = "Asynchronous mode."]
     ASYNC = 0x0,
-    #[doc = "Synchronous with transmitter"]
+    #[doc = "Synchronous with transmitter."]
     SYNC_W_TX = 0x01,
-    #[doc = "Synchronous with another SAI receiver"]
+    #[doc = "Synchronous with another SAI receiver."]
     SYNC_W_ANOTHER_SAI_RX = 0x02,
-    #[doc = "Synchronous with another SAI transmitter"]
+    #[doc = "Synchronous with another SAI transmitter."]
     SYNC_W_ANOTHER_SAI_TX = 0x03,
 }
 impl Rcr2Sync {
@@ -406,13 +406,13 @@ impl From<Rcr2Sync> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rcr4Fcomb {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLED = 0x0,
-    #[doc = "Enable on FIFO writes (from receive shift registers)"]
+    #[doc = "Enable on FIFO writes (from receive shift registers)."]
     ENA_ON_FIFO_WRITES = 0x01,
-    #[doc = "Enable on FIFO reads (by software)"]
+    #[doc = "Enable on FIFO reads (by software)."]
     ENA_ON_FIFO_READS = 0x02,
-    #[doc = "Enable on FIFO writes (from receive shift registers) and reads (by software)"]
+    #[doc = "Enable on FIFO writes (from receive shift registers) and reads (by software)."]
     ENA_ON_FIFO_WRITES_READS = 0x03,
 }
 impl Rcr4Fcomb {
@@ -441,12 +441,12 @@ impl From<Rcr4Fcomb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rcr4Fpack {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "Enable 8-bit FIFO packing"]
+    #[doc = "Enable 8-bit FIFO packing."]
     EIGHT_BIT_PACKING = 0x02,
-    #[doc = "Enable 16-bit FIFO packing"]
+    #[doc = "Enable 16-bit FIFO packing."]
     SIXTEEN_BIT_PACKING = 0x03,
 }
 impl Rcr4Fpack {
@@ -475,9 +475,9 @@ impl From<Rcr4Fpack> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rcr4Fsd {
-    #[doc = "Generated externally in Target mode"]
+    #[doc = "Generated externally in Target mode."]
     EXT_TARGET_MODE = 0x0,
-    #[doc = "Generated internally in Controller mode"]
+    #[doc = "Generated internally in Controller mode."]
     INT_CONTROLLER_MODE = 0x01,
 }
 impl Rcr4Fsd {
@@ -506,9 +506,9 @@ impl From<Rcr4Fsd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rcr4Fsp {
-    #[doc = "Active high"]
+    #[doc = "Active high."]
     ACTIVE_HIGH = 0x0,
-    #[doc = "Active low"]
+    #[doc = "Active low."]
     ACTIVE_LOW = 0x01,
 }
 impl Rcr4Fsp {
@@ -537,25 +537,25 @@ impl From<Rcr4Fsp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rcr5Fbt {
-    #[doc = "0"]
+    #[doc = "0."]
     INDEX0 = 0x0,
-    #[doc = "FBT value"]
+    #[doc = "FBT value."]
     INDEX_1 = 0x01,
-    #[doc = "FBT value"]
+    #[doc = "FBT value."]
     INDEX_2 = 0x02,
-    #[doc = "FBT value"]
+    #[doc = "FBT value."]
     INDEX_3 = 0x03,
-    #[doc = "FBT value"]
+    #[doc = "FBT value."]
     INDEX_4 = 0x04,
-    #[doc = "FBT value"]
+    #[doc = "FBT value."]
     INDEX_5 = 0x05,
-    #[doc = "FBT value"]
+    #[doc = "FBT value."]
     INDEX_6 = 0x06,
-    #[doc = "FBT value"]
+    #[doc = "FBT value."]
     INDEX_7 = 0x07,
-    #[doc = "FBT value"]
+    #[doc = "FBT value."]
     INDEX_8 = 0x08,
-    #[doc = "FBT value"]
+    #[doc = "FBT value."]
     INDEX_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -578,7 +578,7 @@ pub enum Rcr5Fbt {
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
     _RESERVED_1e = 0x1e,
-    #[doc = "31"]
+    #[doc = "31."]
     INDEX31 = 0x1f,
 }
 impl Rcr5Fbt {
@@ -607,25 +607,25 @@ impl From<Rcr5Fbt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rcr5W0w {
-    #[doc = "1"]
+    #[doc = "1."]
     MIN = 0x0,
-    #[doc = "2"]
+    #[doc = "2."]
     TWO = 0x01,
-    #[doc = "(W0W value + 1)"]
+    #[doc = "(W0W value + 1)."]
     THREE_THIRTYONE_2 = 0x02,
-    #[doc = "(W0W value + 1)"]
+    #[doc = "(W0W value + 1)."]
     THREE_THIRTYONE_3 = 0x03,
-    #[doc = "(W0W value + 1)"]
+    #[doc = "(W0W value + 1)."]
     THREE_THIRTYONE_4 = 0x04,
-    #[doc = "(W0W value + 1)"]
+    #[doc = "(W0W value + 1)."]
     THREE_THIRTYONE_5 = 0x05,
-    #[doc = "(W0W value + 1)"]
+    #[doc = "(W0W value + 1)."]
     THREE_THIRTYONE_6 = 0x06,
-    #[doc = "(W0W value + 1)"]
+    #[doc = "(W0W value + 1)."]
     THREE_THIRTYONE_7 = 0x07,
-    #[doc = "(W0W value + 1)"]
+    #[doc = "(W0W value + 1)."]
     THREE_THIRTYONE_8 = 0x08,
-    #[doc = "(W0W value + 1)"]
+    #[doc = "(W0W value + 1)."]
     THREE_THIRTYONE_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -648,7 +648,7 @@ pub enum Rcr5W0w {
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
     _RESERVED_1e = 0x1e,
-    #[doc = "32"]
+    #[doc = "32."]
     MAX = 0x1f,
 }
 impl Rcr5W0w {
@@ -684,25 +684,25 @@ pub enum Rcr5Wnw {
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
-    #[doc = "8"]
+    #[doc = "8."]
     EIGHT = 0x07,
-    #[doc = "9"]
+    #[doc = "9."]
     NINE = 0x08,
-    #[doc = "(WNW value + 1)"]
+    #[doc = "(WNW value + 1)."]
     TEN_THIRTYONE_9 = 0x09,
-    #[doc = "(WNW value + 1)"]
+    #[doc = "(WNW value + 1)."]
     TEN_THIRTYONE_10 = 0x0a,
-    #[doc = "(WNW value + 1)"]
+    #[doc = "(WNW value + 1)."]
     TEN_THIRTYONE_11 = 0x0b,
-    #[doc = "(WNW value + 1)"]
+    #[doc = "(WNW value + 1)."]
     TEN_THIRTYONE_12 = 0x0c,
-    #[doc = "(WNW value + 1)"]
+    #[doc = "(WNW value + 1)."]
     TEN_THIRTYONE_13 = 0x0d,
-    #[doc = "(WNW value + 1)"]
+    #[doc = "(WNW value + 1)."]
     TEN_THIRTYONE_14 = 0x0e,
-    #[doc = "(WNW value + 1)"]
+    #[doc = "(WNW value + 1)."]
     TEN_THIRTYONE_15 = 0x0f,
-    #[doc = "(WNW value + 1)"]
+    #[doc = "(WNW value + 1)."]
     TEN_THIRTYONE_16 = 0x10,
     _RESERVED_11 = 0x11,
     _RESERVED_12 = 0x12,
@@ -718,7 +718,7 @@ pub enum Rcr5Wnw {
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
     _RESERVED_1e = 0x1e,
-    #[doc = "32"]
+    #[doc = "32."]
     MAX = 0x1f,
 }
 impl Rcr5Wnw {
@@ -747,9 +747,9 @@ impl From<Rcr5Wnw> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RcsrFr {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Reset"]
+    #[doc = "Reset."]
     FIFO_RESET = 0x01,
 }
 impl RcsrFr {
@@ -778,9 +778,9 @@ impl From<RcsrFr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RcsrFrf {
-    #[doc = "Watermark not reached"]
+    #[doc = "Watermark not reached."]
     BELOW_WATERMARK = 0x0,
-    #[doc = "Watermark reached"]
+    #[doc = "Watermark reached."]
     WATERMARK_REACHED = 0x01,
 }
 impl RcsrFrf {
@@ -809,9 +809,9 @@ impl From<RcsrFrf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RcsrSr {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Software reset"]
+    #[doc = "Software reset."]
     SW_RESET = 0x01,
 }
 impl RcsrSr {
@@ -840,21 +840,21 @@ impl From<RcsrSr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rfw {
-    #[doc = "1"]
+    #[doc = "1."]
     MIN = 0x0,
-    #[doc = "2"]
+    #[doc = "2."]
     TWO = 0x01,
-    #[doc = "(RFW value + 1)"]
+    #[doc = "(RFW value + 1)."]
     WATERMARK_2 = 0x02,
-    #[doc = "(RFW value + 1)"]
+    #[doc = "(RFW value + 1)."]
     WATERMARK_3 = 0x03,
-    #[doc = "(RFW value + 1)"]
+    #[doc = "(RFW value + 1)."]
     WATERMARK_4 = 0x04,
-    #[doc = "(RFW value + 1)"]
+    #[doc = "(RFW value + 1)."]
     WATERMARK_5 = 0x05,
-    #[doc = "(RFW value + 1)"]
+    #[doc = "(RFW value + 1)."]
     WATERMARK_6 = 0x06,
-    #[doc = "8"]
+    #[doc = "8."]
     MAX = 0x07,
 }
 impl Rfw {
@@ -883,9 +883,9 @@ impl From<Rfw> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Rwm(u32);
 impl Rwm {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     pub const WORD_N_ENABLED: Self = Self(0x0);
-    #[doc = "Mask"]
+    #[doc = "Mask."]
     pub const WORD_N_MASKED: Self = Self(0x01);
 }
 impl Rwm {
@@ -931,25 +931,25 @@ impl From<Rwm> for u32 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sywd {
-    #[doc = "1"]
+    #[doc = "1."]
     MIN = 0x0,
-    #[doc = "2"]
+    #[doc = "2."]
     TWO_CLOCKS = 0x01,
-    #[doc = "(SYWD value + 1)"]
+    #[doc = "(SYWD value + 1)."]
     N_CLOCKS_2 = 0x02,
-    #[doc = "(SYWD value + 1)"]
+    #[doc = "(SYWD value + 1)."]
     N_CLOCKS_3 = 0x03,
-    #[doc = "(SYWD value + 1)"]
+    #[doc = "(SYWD value + 1)."]
     N_CLOCKS_4 = 0x04,
-    #[doc = "(SYWD value + 1)"]
+    #[doc = "(SYWD value + 1)."]
     N_CLOCKS_5 = 0x05,
-    #[doc = "(SYWD value + 1)"]
+    #[doc = "(SYWD value + 1)."]
     N_CLOCKS_6 = 0x06,
-    #[doc = "(SYWD value + 1)"]
+    #[doc = "(SYWD value + 1)."]
     N_CLOCKS_7 = 0x07,
-    #[doc = "(SYWD value + 1)"]
+    #[doc = "(SYWD value + 1)."]
     N_CLOCKS_8 = 0x08,
-    #[doc = "(SYWD value + 1)"]
+    #[doc = "(SYWD value + 1)."]
     N_CLOCKS_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -972,7 +972,7 @@ pub enum Sywd {
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
     _RESERVED_1e = 0x1e,
-    #[doc = "32"]
+    #[doc = "32."]
     THIRTYTWO_CLOCKS = 0x1f,
 }
 impl Sywd {
@@ -1001,9 +1001,9 @@ impl From<Sywd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcr2Bcd {
-    #[doc = "Generate externally in Target mode"]
+    #[doc = "Generate externally in Target mode."]
     EXT_IN_TARGET = 0x0,
-    #[doc = "Generate internally in Controller mode"]
+    #[doc = "Generate internally in Controller mode."]
     INT_IN_CONTROLLER = 0x01,
 }
 impl Tcr2Bcd {
@@ -1032,9 +1032,9 @@ impl From<Tcr2Bcd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcr2Bcp {
-    #[doc = "Active high"]
+    #[doc = "Active high."]
     ACTIVE_HIGH = 0x0,
-    #[doc = "Active low"]
+    #[doc = "Active low."]
     ACTIVE_LOW = 0x01,
 }
 impl Tcr2Bcp {
@@ -1063,13 +1063,13 @@ impl From<Tcr2Bcp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcr2Msel {
-    #[doc = "Bus clock"]
+    #[doc = "Bus clock."]
     BUS_CLOCK = 0x0,
-    #[doc = "Controller clock (MCLK) option 1"]
+    #[doc = "Controller clock (MCLK) option 1."]
     MCLK1 = 0x01,
-    #[doc = "Controller clock (MCLK) option 2"]
+    #[doc = "Controller clock (MCLK) option 2."]
     MCLK2 = 0x02,
-    #[doc = "Controller clock (MCLK) option 3"]
+    #[doc = "Controller clock (MCLK) option 3."]
     MCLK3 = 0x03,
 }
 impl Tcr2Msel {
@@ -1098,13 +1098,13 @@ impl From<Tcr2Msel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcr2Sync {
-    #[doc = "Asynchronous mode"]
+    #[doc = "Asynchronous mode."]
     ASYNC = 0x0,
-    #[doc = "Synchronous with receiver"]
+    #[doc = "Synchronous with receiver."]
     SYNC_W_RX = 0x01,
-    #[doc = "Synchronous with another SAI transmitter"]
+    #[doc = "Synchronous with another SAI transmitter."]
     SYNC_W_TX = 0x02,
-    #[doc = "Synchronous with another SAI receiver"]
+    #[doc = "Synchronous with another SAI receiver."]
     SYNC_W_ANOTHER_SAI_RX = 0x03,
 }
 impl Tcr2Sync {
@@ -1133,13 +1133,13 @@ impl From<Tcr2Sync> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcr4Fcomb {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLED = 0x0,
-    #[doc = "Enable on FIFO reads (from transmit shift registers)"]
+    #[doc = "Enable on FIFO reads (from transmit shift registers)."]
     ENABLED_ON_FIFO_READS = 0x01,
-    #[doc = "Enable on FIFO writes (by software)"]
+    #[doc = "Enable on FIFO writes (by software)."]
     ENABLED_ON_FIFO_WRITES = 0x02,
-    #[doc = "Enable on FIFO reads (from transmit shift registers) and writes (by software)"]
+    #[doc = "Enable on FIFO reads (from transmit shift registers) and writes (by software)."]
     ENABLED_ON_FIFO_READS_WRITES = 0x03,
 }
 impl Tcr4Fcomb {
@@ -1168,12 +1168,12 @@ impl From<Tcr4Fcomb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcr4Fpack {
-    #[doc = "Disable FIFO packing"]
+    #[doc = "Disable FIFO packing."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "Enable 8-bit FIFO packing"]
+    #[doc = "Enable 8-bit FIFO packing."]
     EIGHT_BIT_FIFO_PACKING = 0x02,
-    #[doc = "Enable 16-bit FIFO packing"]
+    #[doc = "Enable 16-bit FIFO packing."]
     SIXTEEN_BIT_FIFO_PACKING = 0x03,
 }
 impl Tcr4Fpack {
@@ -1202,9 +1202,9 @@ impl From<Tcr4Fpack> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcr4Fsd {
-    #[doc = "Generated externally in Target mode"]
+    #[doc = "Generated externally in Target mode."]
     EXT_IN_TARGET_MODE = 0x0,
-    #[doc = "Generated internally in Controller mode"]
+    #[doc = "Generated internally in Controller mode."]
     INT_IN_CONTROLLER_MODE = 0x01,
 }
 impl Tcr4Fsd {
@@ -1233,9 +1233,9 @@ impl From<Tcr4Fsd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcr4Fsp {
-    #[doc = "Active high"]
+    #[doc = "Active high."]
     ACTIVE_HIGH = 0x0,
-    #[doc = "Active low"]
+    #[doc = "Active low."]
     ACTIVE_LOW = 0x01,
 }
 impl Tcr4Fsp {
@@ -1264,9 +1264,9 @@ impl From<Tcr4Fsp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcr4Ondem {
-    #[doc = "Generated continuously"]
+    #[doc = "Generated continuously."]
     CONTINUOUS_FRAME_SYNC = 0x0,
-    #[doc = "Generated after the FIFO warning flag is cleared"]
+    #[doc = "Generated after the FIFO warning flag is cleared."]
     ON_DEMAND_FRAME_SYNC = 0x01,
 }
 impl Tcr4Ondem {
@@ -1295,25 +1295,25 @@ impl From<Tcr4Ondem> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcr5Fbt {
-    #[doc = "0"]
+    #[doc = "0."]
     INDEX0 = 0x0,
-    #[doc = "FBT"]
+    #[doc = "FBT."]
     INDEX_1 = 0x01,
-    #[doc = "FBT"]
+    #[doc = "FBT."]
     INDEX_2 = 0x02,
-    #[doc = "FBT"]
+    #[doc = "FBT."]
     INDEX_3 = 0x03,
-    #[doc = "FBT"]
+    #[doc = "FBT."]
     INDEX_4 = 0x04,
-    #[doc = "FBT"]
+    #[doc = "FBT."]
     INDEX_5 = 0x05,
-    #[doc = "FBT"]
+    #[doc = "FBT."]
     INDEX_6 = 0x06,
-    #[doc = "FBT"]
+    #[doc = "FBT."]
     INDEX_7 = 0x07,
-    #[doc = "FBT"]
+    #[doc = "FBT."]
     INDEX_8 = 0x08,
-    #[doc = "FBT"]
+    #[doc = "FBT."]
     INDEX_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -1336,7 +1336,7 @@ pub enum Tcr5Fbt {
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
     _RESERVED_1e = 0x1e,
-    #[doc = "31"]
+    #[doc = "31."]
     INDEX31 = 0x1f,
 }
 impl Tcr5Fbt {
@@ -1372,25 +1372,25 @@ pub enum Tcr5W0w {
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
-    #[doc = "8"]
+    #[doc = "8."]
     EIGHT = 0x07,
-    #[doc = "9"]
+    #[doc = "9."]
     NINE = 0x08,
-    #[doc = "(W0W value + 1)"]
+    #[doc = "(W0W value + 1)."]
     TEN_THIRTYONE_9 = 0x09,
-    #[doc = "(W0W value + 1)"]
+    #[doc = "(W0W value + 1)."]
     TEN_THIRTYONE_10 = 0x0a,
-    #[doc = "(W0W value + 1)"]
+    #[doc = "(W0W value + 1)."]
     TEN_THIRTYONE_11 = 0x0b,
-    #[doc = "(W0W value + 1)"]
+    #[doc = "(W0W value + 1)."]
     TEN_THIRTYONE_12 = 0x0c,
-    #[doc = "(W0W value + 1)"]
+    #[doc = "(W0W value + 1)."]
     TEN_THIRTYONE_13 = 0x0d,
-    #[doc = "(W0W value + 1)"]
+    #[doc = "(W0W value + 1)."]
     TEN_THIRTYONE_14 = 0x0e,
-    #[doc = "(W0W value + 1)"]
+    #[doc = "(W0W value + 1)."]
     TEN_THIRTYONE_15 = 0x0f,
-    #[doc = "(W0W value + 1)"]
+    #[doc = "(W0W value + 1)."]
     TEN_THIRTYONE_16 = 0x10,
     _RESERVED_11 = 0x11,
     _RESERVED_12 = 0x12,
@@ -1406,7 +1406,7 @@ pub enum Tcr5W0w {
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
     _RESERVED_1e = 0x1e,
-    #[doc = "32"]
+    #[doc = "32."]
     MAX = 0x1f,
 }
 impl Tcr5W0w {
@@ -1442,25 +1442,25 @@ pub enum Tcr5Wnw {
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
-    #[doc = "8"]
+    #[doc = "8."]
     EIGHT = 0x07,
-    #[doc = "9"]
+    #[doc = "9."]
     NINE = 0x08,
-    #[doc = "(WNW value + 1)"]
+    #[doc = "(WNW value + 1)."]
     TEN_THIRTYONE_9 = 0x09,
-    #[doc = "(WNW value + 1)"]
+    #[doc = "(WNW value + 1)."]
     TEN_THIRTYONE_10 = 0x0a,
-    #[doc = "(WNW value + 1)"]
+    #[doc = "(WNW value + 1)."]
     TEN_THIRTYONE_11 = 0x0b,
-    #[doc = "(WNW value + 1)"]
+    #[doc = "(WNW value + 1)."]
     TEN_THIRTYONE_12 = 0x0c,
-    #[doc = "(WNW value + 1)"]
+    #[doc = "(WNW value + 1)."]
     TEN_THIRTYONE_13 = 0x0d,
-    #[doc = "(WNW value + 1)"]
+    #[doc = "(WNW value + 1)."]
     TEN_THIRTYONE_14 = 0x0e,
-    #[doc = "(WNW value + 1)"]
+    #[doc = "(WNW value + 1)."]
     TEN_THIRTYONE_15 = 0x0f,
-    #[doc = "(WNW value + 1)"]
+    #[doc = "(WNW value + 1)."]
     TEN_THIRTYONE_16 = 0x10,
     _RESERVED_11 = 0x11,
     _RESERVED_12 = 0x12,
@@ -1476,7 +1476,7 @@ pub enum Tcr5Wnw {
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
     _RESERVED_1e = 0x1e,
-    #[doc = "32"]
+    #[doc = "32."]
     MAX = 0x1f,
 }
 impl Tcr5Wnw {
@@ -1505,9 +1505,9 @@ impl From<Tcr5Wnw> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TcsrFr {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "FIFO reset"]
+    #[doc = "FIFO reset."]
     RESET = 0x01,
 }
 impl TcsrFr {
@@ -1536,21 +1536,21 @@ impl From<TcsrFr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tfw {
-    #[doc = "1"]
+    #[doc = "1."]
     MIN = 0x0,
-    #[doc = "2"]
+    #[doc = "2."]
     TWO = 0x01,
-    #[doc = "(TFW +1)"]
+    #[doc = "(TFW +1)."]
     WATERMARK_VALUE_2 = 0x02,
-    #[doc = "(TFW +1)"]
+    #[doc = "(TFW +1)."]
     WATERMARK_VALUE_3 = 0x03,
-    #[doc = "(TFW +1)"]
+    #[doc = "(TFW +1)."]
     WATERMARK_VALUE_4 = 0x04,
-    #[doc = "(TFW +1)"]
+    #[doc = "(TFW +1)."]
     WATERMARK_VALUE_5 = 0x05,
-    #[doc = "(TFW +1)"]
+    #[doc = "(TFW +1)."]
     WATERMARK_VALUE_6 = 0x06,
-    #[doc = "8"]
+    #[doc = "8."]
     MAX = 0x07,
 }
 impl Tfw {
@@ -1579,9 +1579,9 @@ impl From<Tfw> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Twm(u32);
 impl Twm {
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     pub const WORD_N_ENABLED: Self = Self(0x0);
-    #[doc = "Mask"]
+    #[doc = "Mask."]
     pub const WORD_N_MASKED: Self = Self(0x01);
 }
 impl Twm {
@@ -1627,25 +1627,25 @@ impl From<Twm> for u32 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wdfl {
-    #[doc = "Word 1"]
+    #[doc = "Word 1."]
     WORD_1 = 0x0,
-    #[doc = "Word 2"]
+    #[doc = "Word 2."]
     WORD_2 = 0x01,
-    #[doc = "Word (WDFL value + 1)"]
+    #[doc = "Word (WDFL value + 1)."]
     WORD_N_2 = 0x02,
-    #[doc = "Word (WDFL value + 1)"]
+    #[doc = "Word (WDFL value + 1)."]
     WORD_N_3 = 0x03,
-    #[doc = "Word (WDFL value + 1)"]
+    #[doc = "Word (WDFL value + 1)."]
     WORD_N_4 = 0x04,
-    #[doc = "Word (WDFL value + 1)"]
+    #[doc = "Word (WDFL value + 1)."]
     WORD_N_5 = 0x05,
-    #[doc = "Word (WDFL value + 1)"]
+    #[doc = "Word (WDFL value + 1)."]
     WORD_N_6 = 0x06,
-    #[doc = "Word (WDFL value + 1)"]
+    #[doc = "Word (WDFL value + 1)."]
     WORD_N_7 = 0x07,
-    #[doc = "Word (WDFL value + 1)"]
+    #[doc = "Word (WDFL value + 1)."]
     WORD_N_8 = 0x08,
-    #[doc = "Word (WDFL value + 1)"]
+    #[doc = "Word (WDFL value + 1)."]
     WORD_N_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -1668,7 +1668,7 @@ pub enum Wdfl {
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
     _RESERVED_1e = 0x1e,
-    #[doc = "Word 32"]
+    #[doc = "Word 32."]
     WORD_MAX = 0x1f,
 }
 impl Wdfl {

@@ -1,4 +1,4 @@
-#[doc = "no description available"]
+#[doc = "no description available."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ScnScb {
     ptr: *mut u8,
@@ -14,7 +14,7 @@ impl ScnScb {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "Coprocessor Power Control Register"]
+    #[doc = "Coprocessor Power Control Register."]
     #[inline(always)]
     pub const fn cppwr(self) -> crate::common::Reg<regs::Cppwr, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }

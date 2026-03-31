@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AdcCocoClear {
-    #[doc = "No ADC COCO clear"]
+    #[doc = "No ADC COCO clear."]
     ADC_COCO_CLEAR_0 = 0x0,
-    #[doc = "Set ADC COCO clear"]
+    #[doc = "Set ADC COCO clear."]
     ADC_COCO_CLEAR_1 = 0x01,
 }
 impl AdcCocoClear {
@@ -33,9 +33,9 @@ impl From<AdcCocoClear> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AdcCocoClearDisable {
-    #[doc = "Allow TSC hardware generates ADC COCO clear"]
+    #[doc = "Allow TSC hardware generates ADC COCO clear."]
     ADC_COCO_CLEAR_DISABLE_0 = 0x0,
-    #[doc = "Prevent TSC from generate ADC COCO clear signal"]
+    #[doc = "Prevent TSC from generate ADC COCO clear signal."]
     ADC_COCO_CLEAR_DISABLE_1 = 0x01,
 }
 impl AdcCocoClearDisable {
@@ -64,9 +64,9 @@ impl From<AdcCocoClearDisable> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AutoMeasure {
-    #[doc = "Disable Auto Measure"]
+    #[doc = "Disable Auto Measure."]
     AUTO_MEASURE_0 = 0x0,
-    #[doc = "Auto Measure"]
+    #[doc = "Auto Measure."]
     AUTO_MEASURE_1 = 0x01,
 }
 impl AutoMeasure {
@@ -95,13 +95,13 @@ impl From<AutoMeasure> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DeGlitch {
-    #[doc = "Normal function: 0x1fff ipg clock cycles; Low power mode: 0x9 low power clock cycles"]
+    #[doc = "Normal function: 0x1fff ipg clock cycles; Low power mode: 0x9 low power clock cycles."]
     DE_GLITCH_0 = 0x0,
-    #[doc = "Normal function: 0xfff ipg clock cycles; Low power mode: :0x7 low power clock cycles"]
+    #[doc = "Normal function: 0xfff ipg clock cycles; Low power mode: :0x7 low power clock cycles."]
     DE_GLITCH_1 = 0x01,
-    #[doc = "Normal function: 0x7ff ipg clock cycles; Low power mode:0x5 low power clock cycles"]
+    #[doc = "Normal function: 0x7ff ipg clock cycles; Low power mode:0x5 low power clock cycles."]
     DE_GLITCH_2 = 0x02,
-    #[doc = "Normal function: 0x3 ipg clock cycles; Low power mode:0x3 low power clock cycles"]
+    #[doc = "Normal function: 0x3 ipg clock cycles; Low power mode:0x3 low power clock cycles."]
     DE_GLITCH_3 = 0x03,
 }
 impl DeGlitch {
@@ -130,9 +130,9 @@ impl From<DeGlitch> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DebugEn {
-    #[doc = "Enable debug mode"]
+    #[doc = "Enable debug mode."]
     DEBUG_EN_0 = 0x0,
-    #[doc = "Disable debug mode"]
+    #[doc = "Disable debug mode."]
     DEBUG_EN_1 = 0x01,
 }
 impl DebugEn {
@@ -161,9 +161,9 @@ impl From<DebugEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Detect {
-    #[doc = "Does not exist a detect signal"]
+    #[doc = "Does not exist a detect signal."]
     DETECT_0 = 0x0,
-    #[doc = "Exist detect signal"]
+    #[doc = "Exist detect signal."]
     DETECT_1 = 0x01,
 }
 impl Detect {
@@ -192,9 +192,9 @@ impl From<Detect> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DetectEnableFiveWire {
-    #[doc = "Do not read five wire detect value, read default value from analogue"]
+    #[doc = "Do not read five wire detect value, read default value from analogue."]
     DETECT_ENABLE_FIVE_WIRE_0 = 0x0,
-    #[doc = "Read five wire detect status from analogue"]
+    #[doc = "Read five wire detect status from analogue."]
     DETECT_ENABLE_FIVE_WIRE_1 = 0x01,
 }
 impl DetectEnableFiveWire {
@@ -223,9 +223,9 @@ impl From<DetectEnableFiveWire> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DetectEnableFourWire {
-    #[doc = "Do not read four wire detect value, read default value from analogue"]
+    #[doc = "Do not read four wire detect value, read default value from analogue."]
     DETECT_ENABLE_FOUR_WIRE_0 = 0x0,
-    #[doc = "Read four wire detect status from analogue"]
+    #[doc = "Read four wire detect status from analogue."]
     DETECT_ENABLE_FOUR_WIRE_1 = 0x01,
 }
 impl DetectEnableFourWire {
@@ -254,7 +254,7 @@ impl From<DetectEnableFourWire> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DetectFiveWire {
-    #[doc = "No detect signal"]
+    #[doc = "No detect signal."]
     DETECT_FIVE_WIRE_0 = 0x0,
     #[doc = "Yes, there is a detect on the touch screen."]
     DETECT_FIVE_WIRE_1 = 0x01,
@@ -285,7 +285,7 @@ impl From<DetectFiveWire> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DetectFourWire {
-    #[doc = "No detect signal"]
+    #[doc = "No detect signal."]
     DETECT_FOUR_WIRE_0 = 0x0,
     #[doc = "Yes, there is a detect on the touch screen."]
     DETECT_FOUR_WIRE_1 = 0x01,
@@ -316,9 +316,9 @@ impl From<DetectFourWire> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DetectIntEn {
-    #[doc = "Disable detect interrupt"]
+    #[doc = "Disable detect interrupt."]
     DETECT_INT_EN_0 = 0x0,
-    #[doc = "Enable detect interrupt"]
+    #[doc = "Enable detect interrupt."]
     DETECT_INT_EN_1 = 0x01,
 }
 impl DetectIntEn {
@@ -347,9 +347,9 @@ impl From<DetectIntEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DetectSigEn {
-    #[doc = "Disable detect signal"]
+    #[doc = "Disable detect signal."]
     DETECT_SIG_EN_0 = 0x0,
-    #[doc = "Enable detect signal"]
+    #[doc = "Enable detect signal."]
     DETECT_SIG_EN_1 = 0x01,
 }
 impl DetectSigEn {
@@ -378,9 +378,9 @@ impl From<DetectSigEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Disable {
-    #[doc = "Leave HW state machine control"]
+    #[doc = "Leave HW state machine control."]
     DISABLE_0 = 0x0,
-    #[doc = "SW set to idle status"]
+    #[doc = "SW set to idle status."]
     DISABLE_1 = 0x01,
 }
 impl Disable {
@@ -409,9 +409,9 @@ impl From<Disable> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DropMeasure {
-    #[doc = "Do not drop measure for now"]
+    #[doc = "Do not drop measure for now."]
     DROP_MEASURE_0 = 0x0,
-    #[doc = "Drop the measure and controller return to idle status"]
+    #[doc = "Drop the measure and controller return to idle status."]
     DROP_MEASURE_1 = 0x01,
 }
 impl DropMeasure {
@@ -440,9 +440,9 @@ impl From<DropMeasure> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IdleSw {
-    #[doc = "Haven't return to idle status"]
+    #[doc = "Haven't return to idle status."]
     IDLE_SW_0 = 0x0,
-    #[doc = "Already return to idle status"]
+    #[doc = "Already return to idle status."]
     IDLE_SW_1 = 0x01,
 }
 impl IdleSw {
@@ -471,9 +471,9 @@ impl From<IdleSw> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IdleSwIntEn {
-    #[doc = "Disable idle software interrupt"]
+    #[doc = "Disable idle software interrupt."]
     IDLE_SW_INT_EN_0 = 0x0,
-    #[doc = "Enable idle software interrupt"]
+    #[doc = "Enable idle software interrupt."]
     IDLE_SW_INT_EN_1 = 0x01,
 }
 impl IdleSwIntEn {
@@ -502,9 +502,9 @@ impl From<IdleSwIntEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IdleSwSigEn {
-    #[doc = "Disable idle software signal"]
+    #[doc = "Disable idle software signal."]
     IDLE_SW_SIG_EN_0 = 0x0,
-    #[doc = "Enable idle software signal"]
+    #[doc = "Enable idle software signal."]
     IDLE_SW_SIG_EN_1 = 0x01,
 }
 impl IdleSwSigEn {
@@ -533,9 +533,9 @@ impl From<IdleSwSigEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Intermediate {
-    #[doc = "Not in intermedia"]
+    #[doc = "Not in intermedia."]
     INTERMEDIATE_0 = 0x0,
-    #[doc = "Intermedia"]
+    #[doc = "Intermedia."]
     INTERMEDIATE_1 = 0x01,
 }
 impl Intermediate {
@@ -564,9 +564,9 @@ impl From<Intermediate> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Measure {
-    #[doc = "Does not exist a measure signal"]
+    #[doc = "Does not exist a measure signal."]
     MEASURE_0 = 0x0,
-    #[doc = "Exist a measure signal"]
+    #[doc = "Exist a measure signal."]
     MEASURE_1 = 0x01,
 }
 impl Measure {
@@ -595,9 +595,9 @@ impl From<Measure> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MeasureIntEn {
-    #[doc = "Disable measure interrupt"]
+    #[doc = "Disable measure interrupt."]
     MEASURE_INT_EN_0 = 0x0,
-    #[doc = "Enable measure interrupt"]
+    #[doc = "Enable measure interrupt."]
     MEASURE_INT_EN_1 = 0x01,
 }
 impl MeasureIntEn {
@@ -626,9 +626,9 @@ impl From<MeasureIntEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StartMeasure {
-    #[doc = "Do not start measure for now"]
+    #[doc = "Do not start measure for now."]
     START_MEASURE_0 = 0x0,
-    #[doc = "Start measure the X/Y coordinate value"]
+    #[doc = "Start measure the X/Y coordinate value."]
     START_MEASURE_1 = 0x01,
 }
 impl StartMeasure {
@@ -657,9 +657,9 @@ impl From<StartMeasure> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StartSense {
-    #[doc = "Stay at idle status"]
+    #[doc = "Stay at idle status."]
     START_SENSE_0 = 0x0,
-    #[doc = "Start sense detection and (if auto_measure set to 1) measure after detect a touch"]
+    #[doc = "Start sense detection and (if auto_measure set to 1) measure after detect a touch."]
     START_SENSE_1 = 0x01,
 }
 impl StartSense {
@@ -688,19 +688,19 @@ impl From<StartSense> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StateMachine {
-    #[doc = "Idle"]
+    #[doc = "Idle."]
     STATE_MACHINE_0 = 0x0,
-    #[doc = "Pre-charge"]
+    #[doc = "Pre-charge."]
     STATE_MACHINE_1 = 0x01,
-    #[doc = "Detect"]
+    #[doc = "Detect."]
     STATE_MACHINE_2 = 0x02,
-    #[doc = "X-measure"]
+    #[doc = "X-measure."]
     STATE_MACHINE_3 = 0x03,
-    #[doc = "Y-measure"]
+    #[doc = "Y-measure."]
     STATE_MACHINE_4 = 0x04,
-    #[doc = "Pre-charge"]
+    #[doc = "Pre-charge."]
     STATE_MACHINE_5 = 0x05,
-    #[doc = "Detect"]
+    #[doc = "Detect."]
     STATE_MACHINE_6 = 0x06,
     _RESERVED_7 = 0x07,
 }
@@ -730,9 +730,9 @@ impl From<StateMachine> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trigger {
-    #[doc = "No hardware trigger signal"]
+    #[doc = "No hardware trigger signal."]
     TRIGGER_0 = 0x0,
-    #[doc = "Hardware trigger signal, the signal must last at least 1 ips clock period"]
+    #[doc = "Hardware trigger signal, the signal must last at least 1 ips clock period."]
     TRIGGER_1 = 0x01,
 }
 impl Trigger {
@@ -761,9 +761,9 @@ impl From<Trigger> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Valid {
-    #[doc = "There is no touch detected after measurement, indicates that the measured value is not valid"]
+    #[doc = "There is no touch detected after measurement, indicates that the measured value is not valid."]
     VALID_0 = 0x0,
-    #[doc = "There is touch detection after measurement, indicates that the measure is valid"]
+    #[doc = "There is touch detection after measurement, indicates that the measure is valid."]
     VALID_1 = 0x01,
 }
 impl Valid {
@@ -792,9 +792,9 @@ impl From<Valid> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ValidSigEn {
-    #[doc = "Disable valid signal"]
+    #[doc = "Disable valid signal."]
     VALID_SIG_EN_0 = 0x0,
-    #[doc = "Enable valid signal"]
+    #[doc = "Enable valid signal."]
     VALID_SIG_EN_1 = 0x01,
 }
 impl ValidSigEn {
@@ -823,9 +823,9 @@ impl From<ValidSigEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wiper200kPullUp {
-    #[doc = "Close the switch"]
+    #[doc = "Close the switch."]
     WIPER_200K_PULL_UP_0 = 0x0,
-    #[doc = "Open up the switch"]
+    #[doc = "Open up the switch."]
     WIPER_200K_PULL_UP_1 = 0x01,
 }
 impl Wiper200kPullUp {
@@ -854,9 +854,9 @@ impl From<Wiper200kPullUp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum WiperPullDown {
-    #[doc = "Close the switch"]
+    #[doc = "Close the switch."]
     WIPER_PULL_DOWN_0 = 0x0,
-    #[doc = "Open up the switch"]
+    #[doc = "Open up the switch."]
     WIPER_PULL_DOWN_1 = 0x01,
 }
 impl WiperPullDown {
@@ -885,9 +885,9 @@ impl From<WiperPullDown> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum WiperPullUp {
-    #[doc = "Close the switch"]
+    #[doc = "Close the switch."]
     WIPER_PULL_UP_0 = 0x0,
-    #[doc = "Open up the switch"]
+    #[doc = "Open up the switch."]
     WIPER_PULL_UP_1 = 0x01,
 }
 impl WiperPullUp {
@@ -916,9 +916,9 @@ impl From<WiperPullUp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wire45 {
-    #[doc = "4-Wire Detection Mode"]
+    #[doc = "4-Wire Detection Mode."]
     WIRE_4_5_0 = 0x0,
-    #[doc = "5-Wire Detection Mode"]
+    #[doc = "5-Wire Detection Mode."]
     WIRE_4_5_1 = 0x01,
 }
 impl Wire45 {
@@ -947,9 +947,9 @@ impl From<Wire45> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Xnur200kPullUp {
-    #[doc = "Close the switch"]
+    #[doc = "Close the switch."]
     XNUR_200K_PULL_UP_0 = 0x0,
-    #[doc = "Open up the switch"]
+    #[doc = "Open up the switch."]
     XNUR_200K_PULL_UP_1 = 0x01,
 }
 impl Xnur200kPullUp {
@@ -978,9 +978,9 @@ impl From<Xnur200kPullUp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum XnurPullDown {
-    #[doc = "Close the switch"]
+    #[doc = "Close the switch."]
     XNUR_PULL_DOWN_0 = 0x0,
-    #[doc = "Open up the switch"]
+    #[doc = "Open up the switch."]
     XNUR_PULL_DOWN_1 = 0x01,
 }
 impl XnurPullDown {
@@ -1009,9 +1009,9 @@ impl From<XnurPullDown> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum XnurPullUp {
-    #[doc = "Close the switch"]
+    #[doc = "Close the switch."]
     XNUR_PULL_UP_0 = 0x0,
-    #[doc = "Open up the switch"]
+    #[doc = "Open up the switch."]
     XNUR_PULL_UP_1 = 0x01,
 }
 impl XnurPullUp {
@@ -1040,9 +1040,9 @@ impl From<XnurPullUp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Xpul200kPullUp {
-    #[doc = "Close the switch"]
+    #[doc = "Close the switch."]
     XPUL_200K_PULL_UP_0 = 0x0,
-    #[doc = "Open up the switch"]
+    #[doc = "Open up the switch."]
     XPUL_200K_PULL_UP_1 = 0x01,
 }
 impl Xpul200kPullUp {
@@ -1071,9 +1071,9 @@ impl From<Xpul200kPullUp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum XpulPullDown {
-    #[doc = "Close the switch"]
+    #[doc = "Close the switch."]
     XPUL_PULL_DOWN_0 = 0x0,
-    #[doc = "Open up the switch"]
+    #[doc = "Open up the switch."]
     XPUL_PULL_DOWN_1 = 0x01,
 }
 impl XpulPullDown {
@@ -1102,9 +1102,9 @@ impl From<XpulPullDown> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum XpulPullUp {
-    #[doc = "Close the switch"]
+    #[doc = "Close the switch."]
     XPUL_PULL_UP_0 = 0x0,
-    #[doc = "Open up the switch"]
+    #[doc = "Open up the switch."]
     XPUL_PULL_UP_1 = 0x01,
 }
 impl XpulPullUp {
@@ -1133,9 +1133,9 @@ impl From<XpulPullUp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ynlr200kPullUp {
-    #[doc = "Close the switch"]
+    #[doc = "Close the switch."]
     YNLR_200K_PULL_UP_0 = 0x0,
-    #[doc = "Open up the switch"]
+    #[doc = "Open up the switch."]
     YNLR_200K_PULL_UP_1 = 0x01,
 }
 impl Ynlr200kPullUp {
@@ -1164,9 +1164,9 @@ impl From<Ynlr200kPullUp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum YnlrPullDown {
-    #[doc = "Close the switch"]
+    #[doc = "Close the switch."]
     YNLR_PULL_DOWN_0 = 0x0,
-    #[doc = "Open up the switch"]
+    #[doc = "Open up the switch."]
     YNLR_PULL_DOWN_1 = 0x01,
 }
 impl YnlrPullDown {
@@ -1195,9 +1195,9 @@ impl From<YnlrPullDown> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum YnlrPullUp {
-    #[doc = "Close the switch"]
+    #[doc = "Close the switch."]
     YNLR_PULL_UP_0 = 0x0,
-    #[doc = "Open up the switch"]
+    #[doc = "Open up the switch."]
     YNLR_PULL_UP_1 = 0x01,
 }
 impl YnlrPullUp {
@@ -1226,9 +1226,9 @@ impl From<YnlrPullUp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ypll200kPullUp {
-    #[doc = "Close the switch"]
+    #[doc = "Close the switch."]
     YPLL_200K_PULL_UP_0 = 0x0,
-    #[doc = "Open up the switch"]
+    #[doc = "Open up the switch."]
     YPLL_200K_PULL_UP_1 = 0x01,
 }
 impl Ypll200kPullUp {
@@ -1257,9 +1257,9 @@ impl From<Ypll200kPullUp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum YpllPullDown {
-    #[doc = "Close the switch"]
+    #[doc = "Close the switch."]
     YPLL_PULL_DOWN_0 = 0x0,
-    #[doc = "Open up the switch"]
+    #[doc = "Open up the switch."]
     YPLL_PULL_DOWN_1 = 0x01,
 }
 impl YpllPullDown {
@@ -1288,9 +1288,9 @@ impl From<YpllPullDown> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum YpllPullUp {
-    #[doc = "Close the switch"]
+    #[doc = "Close the switch."]
     YPLL_PULL_UP_0 = 0x0,
-    #[doc = "Open the switch"]
+    #[doc = "Open the switch."]
     YPLL_PULL_UP_1 = 0x01,
 }
 impl YpllPullUp {

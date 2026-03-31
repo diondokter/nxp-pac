@@ -1,4 +1,4 @@
-#[doc = "Memory base address where ATL PTD0 is stored"]
+#[doc = "Memory base address where ATL PTD0 is stored."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Atlptd(pub u32);
@@ -53,7 +53,7 @@ impl defmt::Format for Atlptd {
         )
     }
 }
-#[doc = "Done map for each ATL PTD"]
+#[doc = "Done map for each ATL PTD."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Atlptdd(pub u32);
@@ -90,7 +90,7 @@ impl defmt::Format for Atlptdd {
         defmt::write!(f, "Atlptdd {{ atl_done: {=u32:?} }}", self.atl_done())
     }
 }
-#[doc = "Skip map for each ATL PTD"]
+#[doc = "Skip map for each ATL PTD."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Atlptds(pub u32);
@@ -127,7 +127,7 @@ impl defmt::Format for Atlptds {
         defmt::write!(f, "Atlptds {{ atl_skip: {=u32:?} }}", self.atl_skip())
     }
 }
-#[doc = "This register contains the offset value towards the start of the operational register space and the version number of the IP block"]
+#[doc = "This register contains the offset value towards the start of the operational register space and the version number of the IP block."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CaplengthChipid(pub u32);
@@ -182,7 +182,7 @@ impl defmt::Format for CaplengthChipid {
         )
     }
 }
-#[doc = "Memory base address that indicates the start of the data payload buffers"]
+#[doc = "Memory base address that indicates the start of the data payload buffers."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Datapayload(pub u32);
@@ -219,7 +219,7 @@ impl defmt::Format for Datapayload {
         defmt::write!(f, "Datapayload {{ dat_base: {=u16:?} }}", self.dat_base())
     }
 }
-#[doc = "Frame Length Adjustment"]
+#[doc = "Frame Length Adjustment."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FladjFrindex(pub u32);
@@ -274,7 +274,7 @@ impl defmt::Format for FladjFrindex {
         )
     }
 }
-#[doc = "Host Controller Capability Parameters"]
+#[doc = "Host Controller Capability Parameters."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hccparams(pub u32);
@@ -311,7 +311,7 @@ impl defmt::Format for Hccparams {
         defmt::write!(f, "Hccparams {{ lpmc: {=bool:?} }}", self.lpmc())
     }
 }
-#[doc = "Host Controller Structural Parameters"]
+#[doc = "Host Controller Structural Parameters."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hcsparams(pub u32);
@@ -380,7 +380,7 @@ impl defmt::Format for Hcsparams {
         )
     }
 }
-#[doc = "Memory base address where INT PTD0 is stored"]
+#[doc = "Memory base address where INT PTD0 is stored."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Intptd(pub u32);
@@ -435,7 +435,7 @@ impl defmt::Format for Intptd {
         )
     }
 }
-#[doc = "Done map for each INT PTD"]
+#[doc = "Done map for each INT PTD."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Intptdd(pub u32);
@@ -472,7 +472,7 @@ impl defmt::Format for Intptdd {
         defmt::write!(f, "Intptdd {{ int_done: {=u32:?} }}", self.int_done())
     }
 }
-#[doc = "Skip map for each INT PTD"]
+#[doc = "Skip map for each INT PTD."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Intptds(pub u32);
@@ -509,7 +509,7 @@ impl defmt::Format for Intptds {
         defmt::write!(f, "Intptds {{ int_skip: {=u32:?} }}", self.int_skip())
     }
 }
-#[doc = "Memory base address where ISO PTD0 is stored"]
+#[doc = "Memory base address where ISO PTD0 is stored."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Isoptd(pub u32);
@@ -564,7 +564,7 @@ impl defmt::Format for Isoptd {
         )
     }
 }
-#[doc = "Done map for each ISO PTD"]
+#[doc = "Done map for each ISO PTD."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Isoptdd(pub u32);
@@ -601,7 +601,7 @@ impl defmt::Format for Isoptdd {
         defmt::write!(f, "Isoptdd {{ iso_done: {=u32:?} }}", self.iso_done())
     }
 }
-#[doc = "Skip map for each ISO PTD"]
+#[doc = "Skip map for each ISO PTD."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Isoptds(pub u32);
@@ -638,7 +638,7 @@ impl defmt::Format for Isoptds {
         defmt::write!(f, "Isoptds {{ iso_skip: {=u32:?} }}", self.iso_skip())
     }
 }
-#[doc = "Marks the last PTD in the list for ISO, INT and ATL"]
+#[doc = "Marks the last PTD in the list for ISO, INT and ATL."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lastptd(pub u32);
@@ -707,7 +707,7 @@ impl defmt::Format for Lastptd {
         )
     }
 }
-#[doc = "Controls the port if it is attached to the host block or the device block"]
+#[doc = "Controls the port if it is attached to the host block or the device block."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Portmode(pub u32);
@@ -744,7 +744,7 @@ impl defmt::Format for Portmode {
         defmt::write!(f, "Portmode {{ dev_enable: {=bool:?} }}", self.dev_enable())
     }
 }
-#[doc = "Port Status and Control register"]
+#[doc = "Port Status and Control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Portsc1(pub u32);
@@ -1023,7 +1023,7 @@ impl defmt::Format for Portsc1 {
         )
     }
 }
-#[doc = "USB Command register"]
+#[doc = "USB Command register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Usbcmd(pub u32);
@@ -1162,7 +1162,7 @@ impl defmt::Format for Usbcmd {
         )
     }
 }
-#[doc = "USB Interrupt Enable register"]
+#[doc = "USB Interrupt Enable register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Usbintr(pub u32);
@@ -1273,19 +1273,19 @@ impl defmt::Format for Usbintr {
         )
     }
 }
-#[doc = "USB Interrupt Status register"]
+#[doc = "USB Interrupt Status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Usbsts(pub u32);
 impl Usbsts {
-    #[doc = "Port Change Detect: The host controller sets this bit to logic 1 when any port has a change bit transition from a 0 to a one or a Force Port Resume bit transition from a 0 to a 1 as a result of a J-K transition detected on a suspended port. or - the ID pin value changes or - an LPM token has been transmitted to enter LPM L1 suspend state.. Software must write a one to clear the bit"]
+    #[doc = "Port Change Detect: The host controller sets this bit to logic 1 when any port has a change bit transition from a 0 to a one or a Force Port Resume bit transition from a 0 to a 1 as a result of a J-K transition detected on a suspended port. or - the ID pin value changes or - an LPM token has been transmitted to enter LPM L1 suspend state.. Software must write a one to clear the bit."]
     #[must_use]
     #[inline(always)]
     pub const fn pcd(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Port Change Detect: The host controller sets this bit to logic 1 when any port has a change bit transition from a 0 to a one or a Force Port Resume bit transition from a 0 to a 1 as a result of a J-K transition detected on a suspended port. or - the ID pin value changes or - an LPM token has been transmitted to enter LPM L1 suspend state.. Software must write a one to clear the bit"]
+    #[doc = "Port Change Detect: The host controller sets this bit to logic 1 when any port has a change bit transition from a 0 to a one or a Force Port Resume bit transition from a 0 to a 1 as a result of a J-K transition detected on a suspended port. or - the ID pin value changes or - an LPM token has been transmitted to enter LPM L1 suspend state.. Software must write a one to clear the bit."]
     #[inline(always)]
     pub const fn set_pcd(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);

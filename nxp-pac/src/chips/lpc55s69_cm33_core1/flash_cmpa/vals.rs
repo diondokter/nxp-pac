@@ -2,13 +2,13 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum BlockEnroll {
-    #[doc = "Allow PUF enroll operation"]
+    #[doc = "Allow PUF enroll operation."]
     ALLOW = 0x0,
-    #[doc = "Disable PUF enroll operation"]
+    #[doc = "Disable PUF enroll operation."]
     DISABLE = 0x01,
-    #[doc = "Disable PUF enroll operation"]
+    #[doc = "Disable PUF enroll operation."]
     VALUE_2 = 0x02,
-    #[doc = "Disable PUF enroll operation"]
+    #[doc = "Disable PUF enroll operation."]
     VALUE_3 = 0x03,
 }
 impl BlockEnroll {
@@ -37,13 +37,13 @@ impl From<BlockEnroll> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum BlockSetKey {
-    #[doc = "Allow PUF Key Code generation"]
+    #[doc = "Allow PUF Key Code generation."]
     ALLOW = 0x0,
-    #[doc = "Disable PUF Key Code generation"]
+    #[doc = "Disable PUF Key Code generation."]
     DISABLE = 0x01,
-    #[doc = "Disable PUF Key Code generation"]
+    #[doc = "Disable PUF Key Code generation."]
     VALUE_2 = 0x02,
-    #[doc = "Disable PUF Key Code generation"]
+    #[doc = "Disable PUF Key Code generation."]
     VALUE_3 = 0x03,
 }
 impl BlockSetKey {
@@ -72,11 +72,11 @@ impl From<BlockSetKey> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum BootSpeed {
-    #[doc = "Defined by NMPA.SYSTEM_SPEED_CODE"]
+    #[doc = "Defined by NMPA.SYSTEM_SPEED_CODE."]
     VALUE_0 = 0x0,
-    #[doc = "96MHz FRO"]
+    #[doc = "96MHz FRO."]
     VALUE_1 = 0x01,
-    #[doc = "48MHz FRO"]
+    #[doc = "48MHz FRO."]
     VALUE_2 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -106,9 +106,9 @@ impl From<BootSpeed> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CcSocuPinCpu1Dbgen {
-    #[doc = "Use DAP to enable"]
+    #[doc = "Use DAP to enable."]
     ENABLE = 0x0,
-    #[doc = "Fixed state"]
+    #[doc = "Fixed state."]
     DISABLE = 0x01,
 }
 impl CcSocuPinCpu1Dbgen {
@@ -137,9 +137,9 @@ impl From<CcSocuPinCpu1Dbgen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CcSocuPinCpu1Niden {
-    #[doc = "Use DAP to enable"]
+    #[doc = "Use DAP to enable."]
     ENABLE = 0x0,
-    #[doc = "Fixed state"]
+    #[doc = "Fixed state."]
     DISABLE = 0x01,
 }
 impl CcSocuPinCpu1Niden {
@@ -168,9 +168,9 @@ impl From<CcSocuPinCpu1Niden> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CcSocuPinDbgen {
-    #[doc = "Use DAP to enable"]
+    #[doc = "Use DAP to enable."]
     ENABLE = 0x0,
-    #[doc = "Fixed state"]
+    #[doc = "Fixed state."]
     DISABLE = 0x01,
 }
 impl CcSocuPinDbgen {
@@ -199,9 +199,9 @@ impl From<CcSocuPinDbgen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CcSocuPinFaCmdEn {
-    #[doc = "Use DAP to enable"]
+    #[doc = "Use DAP to enable."]
     ENABLE = 0x0,
-    #[doc = "Fixed state"]
+    #[doc = "Fixed state."]
     DISABLE = 0x01,
 }
 impl CcSocuPinFaCmdEn {
@@ -230,9 +230,9 @@ impl From<CcSocuPinFaCmdEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CcSocuPinIspCmdEn {
-    #[doc = "Use DAP to enable"]
+    #[doc = "Use DAP to enable."]
     ENABLE = 0x0,
-    #[doc = "Fixed state"]
+    #[doc = "Fixed state."]
     DISABLE = 0x01,
 }
 impl CcSocuPinIspCmdEn {
@@ -261,9 +261,9 @@ impl From<CcSocuPinIspCmdEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CcSocuPinMeCmdEn {
-    #[doc = "Use DAP to enable"]
+    #[doc = "Use DAP to enable."]
     ENABLE = 0x0,
-    #[doc = "Fixed state"]
+    #[doc = "Fixed state."]
     DISABLE = 0x01,
 }
 impl CcSocuPinMeCmdEn {
@@ -292,9 +292,9 @@ impl From<CcSocuPinMeCmdEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CcSocuPinNiden {
-    #[doc = "Use DAP to enable"]
+    #[doc = "Use DAP to enable."]
     ENABLE = 0x0,
-    #[doc = "Fixed state"]
+    #[doc = "Fixed state."]
     DISABLE = 0x01,
 }
 impl CcSocuPinNiden {
@@ -323,9 +323,9 @@ impl From<CcSocuPinNiden> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CcSocuPinSpiden {
-    #[doc = "Use DAP to enable"]
+    #[doc = "Use DAP to enable."]
     ENABLE = 0x0,
-    #[doc = "Fixed state"]
+    #[doc = "Fixed state."]
     DISABLE = 0x01,
 }
 impl CcSocuPinSpiden {
@@ -354,9 +354,9 @@ impl From<CcSocuPinSpiden> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CcSocuPinSpniden {
-    #[doc = "Use DAP to enable"]
+    #[doc = "Use DAP to enable."]
     ENABLE = 0x0,
-    #[doc = "Fixed state"]
+    #[doc = "Fixed state."]
     DISABLE = 0x01,
 }
 impl CcSocuPinSpniden {
@@ -385,9 +385,9 @@ impl From<CcSocuPinSpniden> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CcSocuPinTapen {
-    #[doc = "Use DAP to enable"]
+    #[doc = "Use DAP to enable."]
     ENABLE = 0x0,
-    #[doc = "Fixed state"]
+    #[doc = "Fixed state."]
     DISABLE = 0x01,
 }
 impl CcSocuPinTapen {
@@ -416,19 +416,19 @@ impl From<CcSocuPinTapen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DefaultIspMode {
-    #[doc = "Auto ISP"]
+    #[doc = "Auto ISP."]
     AUTO_ISP = 0x0,
-    #[doc = "USB_HID_ISP"]
+    #[doc = "USB_HID_ISP."]
     USB_HID_ISP = 0x01,
-    #[doc = "UART ISP"]
+    #[doc = "UART ISP."]
     UART_ISP = 0x02,
-    #[doc = "SPI Slave ISP"]
+    #[doc = "SPI Slave ISP."]
     SPI_ISP = 0x03,
-    #[doc = "I2C Slave ISP"]
+    #[doc = "I2C Slave ISP."]
     I2C_ISP = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
-    #[doc = "Disable ISP fall through"]
+    #[doc = "Disable ISP fall through."]
     DISABLE = 0x07,
 }
 impl DefaultIspMode {
@@ -457,13 +457,13 @@ impl From<DefaultIspMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DiceCustCfg {
-    #[doc = "not included"]
+    #[doc = "not included."]
     NOT_INCLUD = 0x0,
-    #[doc = "included"]
+    #[doc = "included."]
     UNCLUD = 0x01,
-    #[doc = "included"]
+    #[doc = "included."]
     VALUE_2 = 0x02,
-    #[doc = "included"]
+    #[doc = "included."]
     VALUE_3 = 0x03,
 }
 impl DiceCustCfg {
@@ -492,13 +492,13 @@ impl From<DiceCustCfg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DiceIncNxpCfg {
-    #[doc = "not included"]
+    #[doc = "not included."]
     NOT_INCLUD = 0x0,
-    #[doc = "included"]
+    #[doc = "included."]
     INCLUD = 0x01,
-    #[doc = "included"]
+    #[doc = "included."]
     VALUE_2 = 0x02,
-    #[doc = "included"]
+    #[doc = "included."]
     VALUE_3 = 0x03,
 }
 impl DiceIncNxpCfg {
@@ -527,13 +527,13 @@ impl From<DiceIncNxpCfg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LockReg0 {
-    #[doc = "Region is not locked"]
+    #[doc = "Region is not locked."]
     UNLOCK = 0x0,
-    #[doc = "Region is locked"]
+    #[doc = "Region is locked."]
     LOCK = 0x01,
-    #[doc = "Region is locked"]
+    #[doc = "Region is locked."]
     VALUE_2 = 0x02,
-    #[doc = "Region is locked"]
+    #[doc = "Region is locked."]
     VALUE_3 = 0x03,
 }
 impl LockReg0 {
@@ -562,13 +562,13 @@ impl From<LockReg0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LockReg1 {
-    #[doc = "Region is not locked"]
+    #[doc = "Region is not locked."]
     UNLOCK = 0x0,
-    #[doc = "Region is locked"]
+    #[doc = "Region is locked."]
     LOCK = 0x01,
-    #[doc = "Region is locked"]
+    #[doc = "Region is locked."]
     VALUE_2 = 0x02,
-    #[doc = "Region is locked"]
+    #[doc = "Region is locked."]
     VALUE_3 = 0x03,
 }
 impl LockReg1 {
@@ -597,13 +597,13 @@ impl From<LockReg1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg0EraseCheckEn {
-    #[doc = "Region is disabled"]
+    #[doc = "Region is disabled."]
     DISABLE = 0x0,
-    #[doc = "Region is enabled"]
+    #[doc = "Region is enabled."]
     ENABLE = 0x01,
-    #[doc = "Region is enabled"]
+    #[doc = "Region is enabled."]
     VALUE_2 = 0x02,
-    #[doc = "Region is enabled"]
+    #[doc = "Region is enabled."]
     VALUE_3 = 0x03,
 }
 impl Reg0EraseCheckEn {
@@ -632,13 +632,13 @@ impl From<Reg0EraseCheckEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg1EraseCheckEn {
-    #[doc = "Region is disabled"]
+    #[doc = "Region is disabled."]
     DISABLE = 0x0,
-    #[doc = "Region is enabled"]
+    #[doc = "Region is enabled."]
     ENABLE = 0x01,
-    #[doc = "Region is enabled"]
+    #[doc = "Region is enabled."]
     VALUE_2 = 0x02,
-    #[doc = "Region is enabled"]
+    #[doc = "Region is enabled."]
     VALUE_3 = 0x03,
 }
 impl Reg1EraseCheckEn {
@@ -667,13 +667,13 @@ impl From<Reg1EraseCheckEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg2EraseCheckEn {
-    #[doc = "Region is disabled"]
+    #[doc = "Region is disabled."]
     DISABLE = 0x0,
-    #[doc = "Region is enabled"]
+    #[doc = "Region is enabled."]
     ENABLE = 0x01,
-    #[doc = "Region is enabled"]
+    #[doc = "Region is enabled."]
     VALUE_2 = 0x02,
-    #[doc = "Region is enabled"]
+    #[doc = "Region is enabled."]
     VALUE_3 = 0x03,
 }
 impl Reg2EraseCheckEn {
@@ -702,13 +702,13 @@ impl From<Reg2EraseCheckEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rsa4k {
-    #[doc = "Allow RSA2048 and higher"]
+    #[doc = "Allow RSA2048 and higher."]
     VALUE_0 = 0x0,
-    #[doc = "RSA4096 only"]
+    #[doc = "RSA4096 only."]
     VALUE_1 = 0x01,
-    #[doc = "RSA4096 only"]
+    #[doc = "RSA4096 only."]
     VALUE_2 = 0x02,
-    #[doc = "RSA4096 only"]
+    #[doc = "RSA4096 only."]
     VALUE_3 = 0x03,
 }
 impl Rsa4k {
@@ -737,13 +737,13 @@ impl From<Rsa4k> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecBootEn {
-    #[doc = "Plain image (internal flash with or without CRC)"]
+    #[doc = "Plain image (internal flash with or without CRC)."]
     DISABLE = 0x0,
-    #[doc = "Boot signed images. (internal flash, RSA signed)"]
+    #[doc = "Boot signed images. (internal flash, RSA signed)."]
     ENABLE = 0x01,
-    #[doc = "Boot signed images. (internal flash, RSA signed)"]
+    #[doc = "Boot signed images. (internal flash, RSA signed)."]
     VALUE_2 = 0x02,
-    #[doc = "Boot signed images. (internal flash, RSA signed)"]
+    #[doc = "Boot signed images. (internal flash, RSA signed)."]
     VALUE_3 = 0x03,
 }
 impl SecBootEn {
@@ -772,13 +772,13 @@ impl From<SecBootEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SkipDice {
-    #[doc = "Enable DICE"]
+    #[doc = "Enable DICE."]
     ENABLE = 0x0,
-    #[doc = "Disable DICE"]
+    #[doc = "Disable DICE."]
     DISABLE = 0x01,
-    #[doc = "Disable DICE"]
+    #[doc = "Disable DICE."]
     VALUE_2 = 0x02,
-    #[doc = "Disable DICE"]
+    #[doc = "Disable DICE."]
     VALUE_3 = 0x03,
 }
 impl SkipDice {
@@ -807,13 +807,13 @@ impl From<SkipDice> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TzmImageType {
-    #[doc = "TZ-M image mode is taken from application image header"]
+    #[doc = "TZ-M image mode is taken from application image header."]
     VALUE_0 = 0x0,
-    #[doc = "TZ-M disabled image, boots to non-secure mode"]
+    #[doc = "TZ-M disabled image, boots to non-secure mode."]
     VALUE_1 = 0x01,
-    #[doc = "TZ-M enabled image, boots to secure mode"]
+    #[doc = "TZ-M enabled image, boots to secure mode."]
     VALUE_2 = 0x02,
-    #[doc = "TZ-M enabled image with TZ-M preset, boot to secure mode TZ-M pre-configured by data from application image header"]
+    #[doc = "TZ-M enabled image with TZ-M preset, boot to secure mode TZ-M pre-configured by data from application image header."]
     VALUE_3 = 0x03,
 }
 impl TzmImageType {
@@ -842,9 +842,9 @@ impl From<TzmImageType> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Xtal16mhzCapabankTrimTrimValid {
-    #[doc = "Capa Bank trimmings not valid. Default trimmings value are used"]
+    #[doc = "Capa Bank trimmings not valid. Default trimmings value are used."]
     NOT_TRIM = 0x0,
-    #[doc = "Capa Bank trimmings valid"]
+    #[doc = "Capa Bank trimmings valid."]
     VALID = 0x01,
 }
 impl Xtal16mhzCapabankTrimTrimValid {
@@ -873,9 +873,9 @@ impl From<Xtal16mhzCapabankTrimTrimValid> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Xtal32khzCapabankTrimTrimValid {
-    #[doc = "Capa Bank trimmings not valid. Default trimmings value are used"]
+    #[doc = "Capa Bank trimmings not valid. Default trimmings value are used."]
     NOT_TRIM = 0x0,
-    #[doc = "Capa Bank trimmings valid"]
+    #[doc = "Capa Bank trimmings valid."]
     VALID = 0x01,
 }
 impl Xtal32khzCapabankTrimTrimValid {

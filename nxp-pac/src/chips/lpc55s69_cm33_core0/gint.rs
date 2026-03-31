@@ -1,4 +1,4 @@
-#[doc = "Group GPIO input interrupt (GINT0/1)"]
+#[doc = "Group GPIO input interrupt (GINT0/1)."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gint {
     ptr: *mut u8,
@@ -14,18 +14,18 @@ impl Gint {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "GPIO grouped interrupt control register"]
+    #[doc = "GPIO grouped interrupt control register."]
     #[inline(always)]
     pub const fn ctrl(self) -> crate::common::Reg<regs::Ctrl, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
     }
-    #[doc = "GPIO grouped interrupt port 0 polarity register"]
+    #[doc = "GPIO grouped interrupt port 0 polarity register."]
     #[inline(always)]
     pub const fn port_pol(self, n: usize) -> crate::common::Reg<regs::PortPol, crate::common::RW> {
         assert!(n < 2usize);
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x20usize + n * 4usize) as _) }
     }
-    #[doc = "GPIO grouped interrupt port 0 enable register"]
+    #[doc = "GPIO grouped interrupt port 0 enable register."]
     #[inline(always)]
     pub const fn port_ena(self, n: usize) -> crate::common::Reg<regs::PortEna, crate::common::RW> {
         assert!(n < 2usize);

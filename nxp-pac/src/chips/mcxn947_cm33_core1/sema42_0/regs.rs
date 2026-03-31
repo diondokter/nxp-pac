@@ -1,16 +1,16 @@
-#[doc = "Gate"]
+#[doc = "Gate."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gate0(pub u8);
 impl Gate0 {
-    #[doc = "Gate Finite State Machine"]
+    #[doc = "Gate Finite State Machine."]
     #[must_use]
     #[inline(always)]
     pub const fn gtfsm(&self) -> super::vals::Gate0Gtfsm {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Gate0Gtfsm::from_bits(val as u8)
     }
-    #[doc = "Gate Finite State Machine"]
+    #[doc = "Gate Finite State Machine."]
     #[inline(always)]
     pub const fn set_gtfsm(&mut self, val: super::vals::Gate0Gtfsm) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u8) & 0x0f) << 0usize);
@@ -35,19 +35,19 @@ impl defmt::Format for Gate0 {
         defmt::write!(f, "Gate0 {{ gtfsm: {:?} }}", self.gtfsm())
     }
 }
-#[doc = "Gate"]
+#[doc = "Gate."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gate1(pub u8);
 impl Gate1 {
-    #[doc = "Gate Finite State Machine"]
+    #[doc = "Gate Finite State Machine."]
     #[must_use]
     #[inline(always)]
     pub const fn gtfsm(&self) -> super::vals::Gate1Gtfsm {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Gate1Gtfsm::from_bits(val as u8)
     }
-    #[doc = "Gate Finite State Machine"]
+    #[doc = "Gate Finite State Machine."]
     #[inline(always)]
     pub const fn set_gtfsm(&mut self, val: super::vals::Gate1Gtfsm) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u8) & 0x0f) << 0usize);
@@ -72,19 +72,19 @@ impl defmt::Format for Gate1 {
         defmt::write!(f, "Gate1 {{ gtfsm: {:?} }}", self.gtfsm())
     }
 }
-#[doc = "Gate"]
+#[doc = "Gate."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gate10(pub u8);
 impl Gate10 {
-    #[doc = "Gate Finite State Machine"]
+    #[doc = "Gate Finite State Machine."]
     #[must_use]
     #[inline(always)]
     pub const fn gtfsm(&self) -> super::vals::Gate10Gtfsm {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Gate10Gtfsm::from_bits(val as u8)
     }
-    #[doc = "Gate Finite State Machine"]
+    #[doc = "Gate Finite State Machine."]
     #[inline(always)]
     pub const fn set_gtfsm(&mut self, val: super::vals::Gate10Gtfsm) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u8) & 0x0f) << 0usize);
@@ -109,19 +109,19 @@ impl defmt::Format for Gate10 {
         defmt::write!(f, "Gate10 {{ gtfsm: {:?} }}", self.gtfsm())
     }
 }
-#[doc = "Gate"]
+#[doc = "Gate."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gate11(pub u8);
 impl Gate11 {
-    #[doc = "Gate Finite State Machine"]
+    #[doc = "Gate Finite State Machine."]
     #[must_use]
     #[inline(always)]
     pub const fn gtfsm(&self) -> super::vals::Gate11Gtfsm {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Gate11Gtfsm::from_bits(val as u8)
     }
-    #[doc = "Gate Finite State Machine"]
+    #[doc = "Gate Finite State Machine."]
     #[inline(always)]
     pub const fn set_gtfsm(&mut self, val: super::vals::Gate11Gtfsm) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u8) & 0x0f) << 0usize);
@@ -146,19 +146,19 @@ impl defmt::Format for Gate11 {
         defmt::write!(f, "Gate11 {{ gtfsm: {:?} }}", self.gtfsm())
     }
 }
-#[doc = "Gate"]
+#[doc = "Gate."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gate12(pub u8);
 impl Gate12 {
-    #[doc = "Gate Finite State Machine"]
+    #[doc = "Gate Finite State Machine."]
     #[must_use]
     #[inline(always)]
     pub const fn gtfsm(&self) -> super::vals::Gate12Gtfsm {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Gate12Gtfsm::from_bits(val as u8)
     }
-    #[doc = "Gate Finite State Machine"]
+    #[doc = "Gate Finite State Machine."]
     #[inline(always)]
     pub const fn set_gtfsm(&mut self, val: super::vals::Gate12Gtfsm) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u8) & 0x0f) << 0usize);
@@ -183,19 +183,19 @@ impl defmt::Format for Gate12 {
         defmt::write!(f, "Gate12 {{ gtfsm: {:?} }}", self.gtfsm())
     }
 }
-#[doc = "Gate"]
+#[doc = "Gate."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gate13(pub u8);
 impl Gate13 {
-    #[doc = "Gate Finite State Machine"]
+    #[doc = "Gate Finite State Machine."]
     #[must_use]
     #[inline(always)]
     pub const fn gtfsm(&self) -> super::vals::Gate13Gtfsm {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Gate13Gtfsm::from_bits(val as u8)
     }
-    #[doc = "Gate Finite State Machine"]
+    #[doc = "Gate Finite State Machine."]
     #[inline(always)]
     pub const fn set_gtfsm(&mut self, val: super::vals::Gate13Gtfsm) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u8) & 0x0f) << 0usize);
@@ -220,19 +220,19 @@ impl defmt::Format for Gate13 {
         defmt::write!(f, "Gate13 {{ gtfsm: {:?} }}", self.gtfsm())
     }
 }
-#[doc = "Gate"]
+#[doc = "Gate."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gate14(pub u8);
 impl Gate14 {
-    #[doc = "Gate Finite State Machine"]
+    #[doc = "Gate Finite State Machine."]
     #[must_use]
     #[inline(always)]
     pub const fn gtfsm(&self) -> super::vals::Gate14Gtfsm {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Gate14Gtfsm::from_bits(val as u8)
     }
-    #[doc = "Gate Finite State Machine"]
+    #[doc = "Gate Finite State Machine."]
     #[inline(always)]
     pub const fn set_gtfsm(&mut self, val: super::vals::Gate14Gtfsm) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u8) & 0x0f) << 0usize);
@@ -257,19 +257,19 @@ impl defmt::Format for Gate14 {
         defmt::write!(f, "Gate14 {{ gtfsm: {:?} }}", self.gtfsm())
     }
 }
-#[doc = "Gate"]
+#[doc = "Gate."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gate15(pub u8);
 impl Gate15 {
-    #[doc = "Gate Finite State Machine"]
+    #[doc = "Gate Finite State Machine."]
     #[must_use]
     #[inline(always)]
     pub const fn gtfsm(&self) -> super::vals::Gate15Gtfsm {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Gate15Gtfsm::from_bits(val as u8)
     }
-    #[doc = "Gate Finite State Machine"]
+    #[doc = "Gate Finite State Machine."]
     #[inline(always)]
     pub const fn set_gtfsm(&mut self, val: super::vals::Gate15Gtfsm) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u8) & 0x0f) << 0usize);
@@ -294,19 +294,19 @@ impl defmt::Format for Gate15 {
         defmt::write!(f, "Gate15 {{ gtfsm: {:?} }}", self.gtfsm())
     }
 }
-#[doc = "Gate"]
+#[doc = "Gate."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gate2(pub u8);
 impl Gate2 {
-    #[doc = "Gate Finite State Machine"]
+    #[doc = "Gate Finite State Machine."]
     #[must_use]
     #[inline(always)]
     pub const fn gtfsm(&self) -> super::vals::Gate2Gtfsm {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Gate2Gtfsm::from_bits(val as u8)
     }
-    #[doc = "Gate Finite State Machine"]
+    #[doc = "Gate Finite State Machine."]
     #[inline(always)]
     pub const fn set_gtfsm(&mut self, val: super::vals::Gate2Gtfsm) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u8) & 0x0f) << 0usize);
@@ -331,19 +331,19 @@ impl defmt::Format for Gate2 {
         defmt::write!(f, "Gate2 {{ gtfsm: {:?} }}", self.gtfsm())
     }
 }
-#[doc = "Gate"]
+#[doc = "Gate."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gate3(pub u8);
 impl Gate3 {
-    #[doc = "Gate Finite State Machine"]
+    #[doc = "Gate Finite State Machine."]
     #[must_use]
     #[inline(always)]
     pub const fn gtfsm(&self) -> super::vals::Gate3Gtfsm {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Gate3Gtfsm::from_bits(val as u8)
     }
-    #[doc = "Gate Finite State Machine"]
+    #[doc = "Gate Finite State Machine."]
     #[inline(always)]
     pub const fn set_gtfsm(&mut self, val: super::vals::Gate3Gtfsm) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u8) & 0x0f) << 0usize);
@@ -368,19 +368,19 @@ impl defmt::Format for Gate3 {
         defmt::write!(f, "Gate3 {{ gtfsm: {:?} }}", self.gtfsm())
     }
 }
-#[doc = "Gate"]
+#[doc = "Gate."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gate4(pub u8);
 impl Gate4 {
-    #[doc = "Gate Finite State Machine"]
+    #[doc = "Gate Finite State Machine."]
     #[must_use]
     #[inline(always)]
     pub const fn gtfsm(&self) -> super::vals::Gate4Gtfsm {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Gate4Gtfsm::from_bits(val as u8)
     }
-    #[doc = "Gate Finite State Machine"]
+    #[doc = "Gate Finite State Machine."]
     #[inline(always)]
     pub const fn set_gtfsm(&mut self, val: super::vals::Gate4Gtfsm) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u8) & 0x0f) << 0usize);
@@ -405,19 +405,19 @@ impl defmt::Format for Gate4 {
         defmt::write!(f, "Gate4 {{ gtfsm: {:?} }}", self.gtfsm())
     }
 }
-#[doc = "Gate"]
+#[doc = "Gate."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gate5(pub u8);
 impl Gate5 {
-    #[doc = "Gate Finite State Machine"]
+    #[doc = "Gate Finite State Machine."]
     #[must_use]
     #[inline(always)]
     pub const fn gtfsm(&self) -> super::vals::Gate5Gtfsm {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Gate5Gtfsm::from_bits(val as u8)
     }
-    #[doc = "Gate Finite State Machine"]
+    #[doc = "Gate Finite State Machine."]
     #[inline(always)]
     pub const fn set_gtfsm(&mut self, val: super::vals::Gate5Gtfsm) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u8) & 0x0f) << 0usize);
@@ -442,19 +442,19 @@ impl defmt::Format for Gate5 {
         defmt::write!(f, "Gate5 {{ gtfsm: {:?} }}", self.gtfsm())
     }
 }
-#[doc = "Gate"]
+#[doc = "Gate."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gate6(pub u8);
 impl Gate6 {
-    #[doc = "Gate Finite State Machine"]
+    #[doc = "Gate Finite State Machine."]
     #[must_use]
     #[inline(always)]
     pub const fn gtfsm(&self) -> super::vals::Gate6Gtfsm {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Gate6Gtfsm::from_bits(val as u8)
     }
-    #[doc = "Gate Finite State Machine"]
+    #[doc = "Gate Finite State Machine."]
     #[inline(always)]
     pub const fn set_gtfsm(&mut self, val: super::vals::Gate6Gtfsm) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u8) & 0x0f) << 0usize);
@@ -479,19 +479,19 @@ impl defmt::Format for Gate6 {
         defmt::write!(f, "Gate6 {{ gtfsm: {:?} }}", self.gtfsm())
     }
 }
-#[doc = "Gate"]
+#[doc = "Gate."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gate7(pub u8);
 impl Gate7 {
-    #[doc = "Gate Finite State Machine"]
+    #[doc = "Gate Finite State Machine."]
     #[must_use]
     #[inline(always)]
     pub const fn gtfsm(&self) -> super::vals::Gate7Gtfsm {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Gate7Gtfsm::from_bits(val as u8)
     }
-    #[doc = "Gate Finite State Machine"]
+    #[doc = "Gate Finite State Machine."]
     #[inline(always)]
     pub const fn set_gtfsm(&mut self, val: super::vals::Gate7Gtfsm) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u8) & 0x0f) << 0usize);
@@ -516,19 +516,19 @@ impl defmt::Format for Gate7 {
         defmt::write!(f, "Gate7 {{ gtfsm: {:?} }}", self.gtfsm())
     }
 }
-#[doc = "Gate"]
+#[doc = "Gate."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gate8(pub u8);
 impl Gate8 {
-    #[doc = "Gate Finite State Machine"]
+    #[doc = "Gate Finite State Machine."]
     #[must_use]
     #[inline(always)]
     pub const fn gtfsm(&self) -> super::vals::Gate8Gtfsm {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Gate8Gtfsm::from_bits(val as u8)
     }
-    #[doc = "Gate Finite State Machine"]
+    #[doc = "Gate Finite State Machine."]
     #[inline(always)]
     pub const fn set_gtfsm(&mut self, val: super::vals::Gate8Gtfsm) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u8) & 0x0f) << 0usize);
@@ -553,19 +553,19 @@ impl defmt::Format for Gate8 {
         defmt::write!(f, "Gate8 {{ gtfsm: {:?} }}", self.gtfsm())
     }
 }
-#[doc = "Gate"]
+#[doc = "Gate."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gate9(pub u8);
 impl Gate9 {
-    #[doc = "Gate Finite State Machine"]
+    #[doc = "Gate Finite State Machine."]
     #[must_use]
     #[inline(always)]
     pub const fn gtfsm(&self) -> super::vals::Gate9Gtfsm {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Gate9Gtfsm::from_bits(val as u8)
     }
-    #[doc = "Gate Finite State Machine"]
+    #[doc = "Gate Finite State Machine."]
     #[inline(always)]
     pub const fn set_gtfsm(&mut self, val: super::vals::Gate9Gtfsm) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u8) & 0x0f) << 0usize);
@@ -590,43 +590,43 @@ impl defmt::Format for Gate9 {
         defmt::write!(f, "Gate9 {{ gtfsm: {:?} }}", self.gtfsm())
     }
 }
-#[doc = "Reset Gate Read"]
+#[doc = "Reset Gate Read."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct RstgtR(pub u16);
 impl RstgtR {
-    #[doc = "Reset Gate Number"]
+    #[doc = "Reset Gate Number."]
     #[must_use]
     #[inline(always)]
     pub const fn rstgtn(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Reset Gate Number"]
+    #[doc = "Reset Gate Number."]
     #[inline(always)]
     pub const fn set_rstgtn(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u16) & 0xff) << 0usize);
     }
-    #[doc = "Reset Gate Domain"]
+    #[doc = "Reset Gate Domain."]
     #[must_use]
     #[inline(always)]
     pub const fn rstgms(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x0f;
         val as u8
     }
-    #[doc = "Reset Gate Domain"]
+    #[doc = "Reset Gate Domain."]
     #[inline(always)]
     pub const fn set_rstgms(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val as u16) & 0x0f) << 8usize);
     }
-    #[doc = "Reset Gate Finite State Machine"]
+    #[doc = "Reset Gate Finite State Machine."]
     #[must_use]
     #[inline(always)]
     pub const fn rstgsm(&self) -> super::vals::Rstgsm {
         let val = (self.0 >> 12usize) & 0x03;
         super::vals::Rstgsm::from_bits(val as u8)
     }
-    #[doc = "Reset Gate Finite State Machine"]
+    #[doc = "Reset Gate Finite State Machine."]
     #[inline(always)]
     pub const fn set_rstgsm(&mut self, val: super::vals::Rstgsm) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u16) & 0x03) << 12usize);
@@ -659,31 +659,31 @@ impl defmt::Format for RstgtR {
         )
     }
 }
-#[doc = "Reset Gate Write"]
+#[doc = "Reset Gate Write."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct RstgtW(pub u16);
 impl RstgtW {
-    #[doc = "Reset Gate Number"]
+    #[doc = "Reset Gate Number."]
     #[must_use]
     #[inline(always)]
     pub const fn rstgtn(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Reset Gate Number"]
+    #[doc = "Reset Gate Number."]
     #[inline(always)]
     pub const fn set_rstgtn(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u16) & 0xff) << 0usize);
     }
-    #[doc = "Reset Gate Data Pattern"]
+    #[doc = "Reset Gate Data Pattern."]
     #[must_use]
     #[inline(always)]
     pub const fn rstgdp(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0xff;
         val as u8
     }
-    #[doc = "Reset Gate Data Pattern"]
+    #[doc = "Reset Gate Data Pattern."]
     #[inline(always)]
     pub const fn set_rstgdp(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val as u16) & 0xff) << 8usize);

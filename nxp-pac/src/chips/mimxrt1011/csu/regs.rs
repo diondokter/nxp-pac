@@ -1,100 +1,100 @@
-#[doc = "Config security level register"]
+#[doc = "Config security level register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Csl(pub u32);
 impl Csl {
-    #[doc = "Secure user read access control for the second slave"]
+    #[doc = "Secure user read access control for the second slave."]
     #[must_use]
     #[inline(always)]
     pub const fn sur_s2(&self) -> super::vals::SurS2 {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::SurS2::from_bits(val as u8)
     }
-    #[doc = "Secure user read access control for the second slave"]
+    #[doc = "Secure user read access control for the second slave."]
     #[inline(always)]
     pub const fn set_sur_s2(&mut self, val: super::vals::SurS2) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Secure supervisor read access control for the second slave"]
+    #[doc = "Secure supervisor read access control for the second slave."]
     #[must_use]
     #[inline(always)]
     pub const fn ssr_s2(&self) -> super::vals::SsrS2 {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::SsrS2::from_bits(val as u8)
     }
-    #[doc = "Secure supervisor read access control for the second slave"]
+    #[doc = "Secure supervisor read access control for the second slave."]
     #[inline(always)]
     pub const fn set_ssr_s2(&mut self, val: super::vals::SsrS2) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Non-secure user read access control for the second slave"]
+    #[doc = "Non-secure user read access control for the second slave."]
     #[must_use]
     #[inline(always)]
     pub const fn nur_s2(&self) -> super::vals::NurS2 {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::NurS2::from_bits(val as u8)
     }
-    #[doc = "Non-secure user read access control for the second slave"]
+    #[doc = "Non-secure user read access control for the second slave."]
     #[inline(always)]
     pub const fn set_nur_s2(&mut self, val: super::vals::NurS2) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "Non-secure supervisor read access control for the second slave"]
+    #[doc = "Non-secure supervisor read access control for the second slave."]
     #[must_use]
     #[inline(always)]
     pub const fn nsr_s2(&self) -> super::vals::NsrS2 {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::NsrS2::from_bits(val as u8)
     }
-    #[doc = "Non-secure supervisor read access control for the second slave"]
+    #[doc = "Non-secure supervisor read access control for the second slave."]
     #[inline(always)]
     pub const fn set_nsr_s2(&mut self, val: super::vals::NsrS2) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "Secure user write access control for the second slave"]
+    #[doc = "Secure user write access control for the second slave."]
     #[must_use]
     #[inline(always)]
     pub const fn suw_s2(&self) -> super::vals::SuwS2 {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::SuwS2::from_bits(val as u8)
     }
-    #[doc = "Secure user write access control for the second slave"]
+    #[doc = "Secure user write access control for the second slave."]
     #[inline(always)]
     pub const fn set_suw_s2(&mut self, val: super::vals::SuwS2) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
-    #[doc = "Secure supervisor write access control for the second slave"]
+    #[doc = "Secure supervisor write access control for the second slave."]
     #[must_use]
     #[inline(always)]
     pub const fn ssw_s2(&self) -> super::vals::SswS2 {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::SswS2::from_bits(val as u8)
     }
-    #[doc = "Secure supervisor write access control for the second slave"]
+    #[doc = "Secure supervisor write access control for the second slave."]
     #[inline(always)]
     pub const fn set_ssw_s2(&mut self, val: super::vals::SswS2) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
-    #[doc = "Non-secure user write access control for the second slave"]
+    #[doc = "Non-secure user write access control for the second slave."]
     #[must_use]
     #[inline(always)]
     pub const fn nuw_s2(&self) -> super::vals::NuwS2 {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::NuwS2::from_bits(val as u8)
     }
-    #[doc = "Non-secure user write access control for the second slave"]
+    #[doc = "Non-secure user write access control for the second slave."]
     #[inline(always)]
     pub const fn set_nuw_s2(&mut self, val: super::vals::NuwS2) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "Non-secure supervisor write access control for the second slave"]
+    #[doc = "Non-secure supervisor write access control for the second slave."]
     #[must_use]
     #[inline(always)]
     pub const fn nsw_s2(&self) -> super::vals::NswS2 {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::NswS2::from_bits(val as u8)
     }
-    #[doc = "Non-secure supervisor write access control for the second slave"]
+    #[doc = "Non-secure supervisor write access control for the second slave."]
     #[inline(always)]
     pub const fn set_nsw_s2(&mut self, val: super::vals::NswS2) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
@@ -111,98 +111,98 @@ impl Csl {
     pub const fn set_lock_s2(&mut self, val: super::vals::LockS2) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
-    #[doc = "Secure user read access control for the first slave"]
+    #[doc = "Secure user read access control for the first slave."]
     #[must_use]
     #[inline(always)]
     pub const fn sur_s1(&self) -> super::vals::SurS1 {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::SurS1::from_bits(val as u8)
     }
-    #[doc = "Secure user read access control for the first slave"]
+    #[doc = "Secure user read access control for the first slave."]
     #[inline(always)]
     pub const fn set_sur_s1(&mut self, val: super::vals::SurS1) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
     }
-    #[doc = "Secure supervisor read access control for the first slave"]
+    #[doc = "Secure supervisor read access control for the first slave."]
     #[must_use]
     #[inline(always)]
     pub const fn ssr_s1(&self) -> super::vals::SsrS1 {
         let val = (self.0 >> 17usize) & 0x01;
         super::vals::SsrS1::from_bits(val as u8)
     }
-    #[doc = "Secure supervisor read access control for the first slave"]
+    #[doc = "Secure supervisor read access control for the first slave."]
     #[inline(always)]
     pub const fn set_ssr_s1(&mut self, val: super::vals::SsrS1) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
     }
-    #[doc = "Non-secure user read access control for the first slave"]
+    #[doc = "Non-secure user read access control for the first slave."]
     #[must_use]
     #[inline(always)]
     pub const fn nur_s1(&self) -> super::vals::NurS1 {
         let val = (self.0 >> 18usize) & 0x01;
         super::vals::NurS1::from_bits(val as u8)
     }
-    #[doc = "Non-secure user read access control for the first slave"]
+    #[doc = "Non-secure user read access control for the first slave."]
     #[inline(always)]
     pub const fn set_nur_s1(&mut self, val: super::vals::NurS1) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val.to_bits() as u32) & 0x01) << 18usize);
     }
-    #[doc = "Non-secure supervisor read access control for the first slave"]
+    #[doc = "Non-secure supervisor read access control for the first slave."]
     #[must_use]
     #[inline(always)]
     pub const fn nsr_s1(&self) -> super::vals::NsrS1 {
         let val = (self.0 >> 19usize) & 0x01;
         super::vals::NsrS1::from_bits(val as u8)
     }
-    #[doc = "Non-secure supervisor read access control for the first slave"]
+    #[doc = "Non-secure supervisor read access control for the first slave."]
     #[inline(always)]
     pub const fn set_nsr_s1(&mut self, val: super::vals::NsrS1) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val.to_bits() as u32) & 0x01) << 19usize);
     }
-    #[doc = "Secure user write access control for the first slave"]
+    #[doc = "Secure user write access control for the first slave."]
     #[must_use]
     #[inline(always)]
     pub const fn suw_s1(&self) -> super::vals::SuwS1 {
         let val = (self.0 >> 20usize) & 0x01;
         super::vals::SuwS1::from_bits(val as u8)
     }
-    #[doc = "Secure user write access control for the first slave"]
+    #[doc = "Secure user write access control for the first slave."]
     #[inline(always)]
     pub const fn set_suw_s1(&mut self, val: super::vals::SuwS1) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
     }
-    #[doc = "Secure supervisor write access control for the first slave"]
+    #[doc = "Secure supervisor write access control for the first slave."]
     #[must_use]
     #[inline(always)]
     pub const fn ssw_s1(&self) -> super::vals::SswS1 {
         let val = (self.0 >> 21usize) & 0x01;
         super::vals::SswS1::from_bits(val as u8)
     }
-    #[doc = "Secure supervisor write access control for the first slave"]
+    #[doc = "Secure supervisor write access control for the first slave."]
     #[inline(always)]
     pub const fn set_ssw_s1(&mut self, val: super::vals::SswS1) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
     }
-    #[doc = "Non-secure user write access control for the first slave"]
+    #[doc = "Non-secure user write access control for the first slave."]
     #[must_use]
     #[inline(always)]
     pub const fn nuw_s1(&self) -> super::vals::NuwS1 {
         let val = (self.0 >> 22usize) & 0x01;
         super::vals::NuwS1::from_bits(val as u8)
     }
-    #[doc = "Non-secure user write access control for the first slave"]
+    #[doc = "Non-secure user write access control for the first slave."]
     #[inline(always)]
     pub const fn set_nuw_s1(&mut self, val: super::vals::NuwS1) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
     }
-    #[doc = "Non-secure supervisor write access control for the first slave"]
+    #[doc = "Non-secure supervisor write access control for the first slave."]
     #[must_use]
     #[inline(always)]
     pub const fn nsw_s1(&self) -> super::vals::NswS1 {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::NswS1::from_bits(val as u8)
     }
-    #[doc = "Non-secure supervisor write access control for the first slave"]
+    #[doc = "Non-secure supervisor write access control for the first slave."]
     #[inline(always)]
     pub const fn set_nsw_s1(&mut self, val: super::vals::NswS1) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
@@ -277,247 +277,247 @@ impl defmt::Format for Csl {
         )
     }
 }
-#[doc = "HP0 register"]
+#[doc = "HP0 register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hp0(pub u32);
 impl Hp0 {
-    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the eDMA"]
+    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the eDMA."]
     #[must_use]
     #[inline(always)]
     pub const fn hp_dma(&self) -> super::vals::HpDma {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::HpDma::from_bits(val as u8)
     }
-    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the eDMA"]
+    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the eDMA."]
     #[inline(always)]
     pub const fn set_hp_dma(&mut self, val: super::vals::HpDma) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "Lock bit set by the TZ software for the eDMA"]
+    #[doc = "Lock bit set by the TZ software for the eDMA."]
     #[must_use]
     #[inline(always)]
     pub const fn l_dma(&self) -> super::vals::Hp0LDma {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Hp0LDma::from_bits(val as u8)
     }
-    #[doc = "Lock bit set by the TZ software for the eDMA"]
+    #[doc = "Lock bit set by the TZ software for the eDMA."]
     #[inline(always)]
     pub const fn set_l_dma(&mut self, val: super::vals::Hp0LDma) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the LCDIF"]
+    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the LCDIF."]
     #[must_use]
     #[inline(always)]
     pub const fn hp_lcdif(&self) -> super::vals::HpLcdif {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::HpLcdif::from_bits(val as u8)
     }
-    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the LCDIF"]
+    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the LCDIF."]
     #[inline(always)]
     pub const fn set_hp_lcdif(&mut self, val: super::vals::HpLcdif) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
-    #[doc = "Lock bit set by the TZ software for the LCDIF"]
+    #[doc = "Lock bit set by the TZ software for the LCDIF."]
     #[must_use]
     #[inline(always)]
     pub const fn l_lcdif(&self) -> super::vals::Hp0LLcdif {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::Hp0LLcdif::from_bits(val as u8)
     }
-    #[doc = "Lock bit set by the TZ software for the LCDIF"]
+    #[doc = "Lock bit set by the TZ software for the LCDIF."]
     #[inline(always)]
     pub const fn set_l_lcdif(&mut self, val: super::vals::Hp0LLcdif) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
-    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the CSI"]
+    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the CSI."]
     #[must_use]
     #[inline(always)]
     pub const fn hp_csi(&self) -> super::vals::HpCsi {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::HpCsi::from_bits(val as u8)
     }
-    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the CSI"]
+    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the CSI."]
     #[inline(always)]
     pub const fn set_hp_csi(&mut self, val: super::vals::HpCsi) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "Lock bit set by the TZ software for the CSI"]
+    #[doc = "Lock bit set by the TZ software for the CSI."]
     #[must_use]
     #[inline(always)]
     pub const fn l_csi(&self) -> super::vals::Hp0LCsi {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Hp0LCsi::from_bits(val as u8)
     }
-    #[doc = "Lock bit set by the TZ software for the CSI"]
+    #[doc = "Lock bit set by the TZ software for the CSI."]
     #[inline(always)]
     pub const fn set_l_csi(&mut self, val: super::vals::Hp0LCsi) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the PXP"]
+    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the PXP."]
     #[must_use]
     #[inline(always)]
     pub const fn hp_pxp(&self) -> super::vals::HpPxp {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::HpPxp::from_bits(val as u8)
     }
-    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the PXP"]
+    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the PXP."]
     #[inline(always)]
     pub const fn set_hp_pxp(&mut self, val: super::vals::HpPxp) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
-    #[doc = "Lock bit set by the TZ software for the PXP"]
+    #[doc = "Lock bit set by the TZ software for the PXP."]
     #[must_use]
     #[inline(always)]
     pub const fn l_pxp(&self) -> super::vals::Hp0LPxp {
         let val = (self.0 >> 9usize) & 0x01;
         super::vals::Hp0LPxp::from_bits(val as u8)
     }
-    #[doc = "Lock bit set by the TZ software for the PXP"]
+    #[doc = "Lock bit set by the TZ software for the PXP."]
     #[inline(always)]
     pub const fn set_l_pxp(&mut self, val: super::vals::Hp0LPxp) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
     }
-    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the DCP"]
+    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the DCP."]
     #[must_use]
     #[inline(always)]
     pub const fn hp_dcp(&self) -> super::vals::HpDcp {
         let val = (self.0 >> 10usize) & 0x01;
         super::vals::HpDcp::from_bits(val as u8)
     }
-    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the DCP"]
+    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the DCP."]
     #[inline(always)]
     pub const fn set_hp_dcp(&mut self, val: super::vals::HpDcp) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
-    #[doc = "Lock bit set by the TZ software for the DCP"]
+    #[doc = "Lock bit set by the TZ software for the DCP."]
     #[must_use]
     #[inline(always)]
     pub const fn l_dcp(&self) -> super::vals::Hp0LDcp {
         let val = (self.0 >> 11usize) & 0x01;
         super::vals::Hp0LDcp::from_bits(val as u8)
     }
-    #[doc = "Lock bit set by the TZ software for the DCP"]
+    #[doc = "Lock bit set by the TZ software for the DCP."]
     #[inline(always)]
     pub const fn set_l_dcp(&mut self, val: super::vals::Hp0LDcp) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
     }
-    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the ENET"]
+    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the ENET."]
     #[must_use]
     #[inline(always)]
     pub const fn hp_enet(&self) -> super::vals::HpEnet {
         let val = (self.0 >> 14usize) & 0x01;
         super::vals::HpEnet::from_bits(val as u8)
     }
-    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the ENET"]
+    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the ENET."]
     #[inline(always)]
     pub const fn set_hp_enet(&mut self, val: super::vals::HpEnet) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
     }
-    #[doc = "Lock bit set by the TZ software for the ENET"]
+    #[doc = "Lock bit set by the TZ software for the ENET."]
     #[must_use]
     #[inline(always)]
     pub const fn l_enet(&self) -> super::vals::Hp0LEnet {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::Hp0LEnet::from_bits(val as u8)
     }
-    #[doc = "Lock bit set by the TZ software for the ENET"]
+    #[doc = "Lock bit set by the TZ software for the ENET."]
     #[inline(always)]
     pub const fn set_l_enet(&mut self, val: super::vals::Hp0LEnet) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the USDHC1"]
+    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the USDHC1."]
     #[must_use]
     #[inline(always)]
     pub const fn hp_usdhc1(&self) -> super::vals::HpUsdhc1 {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::HpUsdhc1::from_bits(val as u8)
     }
-    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the USDHC1"]
+    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the USDHC1."]
     #[inline(always)]
     pub const fn set_hp_usdhc1(&mut self, val: super::vals::HpUsdhc1) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
     }
-    #[doc = "Lock bit set by the TZ software for the USDHC1"]
+    #[doc = "Lock bit set by the TZ software for the USDHC1."]
     #[must_use]
     #[inline(always)]
     pub const fn l_usdhc1(&self) -> super::vals::Hp0LUsdhc1 {
         let val = (self.0 >> 17usize) & 0x01;
         super::vals::Hp0LUsdhc1::from_bits(val as u8)
     }
-    #[doc = "Lock bit set by the TZ software for the USDHC1"]
+    #[doc = "Lock bit set by the TZ software for the USDHC1."]
     #[inline(always)]
     pub const fn set_l_usdhc1(&mut self, val: super::vals::Hp0LUsdhc1) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
     }
-    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the USDHC2"]
+    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the USDHC2."]
     #[must_use]
     #[inline(always)]
     pub const fn hp_usdhc2(&self) -> super::vals::HpUsdhc2 {
         let val = (self.0 >> 18usize) & 0x01;
         super::vals::HpUsdhc2::from_bits(val as u8)
     }
-    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the USDHC2"]
+    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the USDHC2."]
     #[inline(always)]
     pub const fn set_hp_usdhc2(&mut self, val: super::vals::HpUsdhc2) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val.to_bits() as u32) & 0x01) << 18usize);
     }
-    #[doc = "Lock bit set by the TZ software for the USDHC2"]
+    #[doc = "Lock bit set by the TZ software for the USDHC2."]
     #[must_use]
     #[inline(always)]
     pub const fn l_usdhc2(&self) -> super::vals::Hp0LUsdhc2 {
         let val = (self.0 >> 19usize) & 0x01;
         super::vals::Hp0LUsdhc2::from_bits(val as u8)
     }
-    #[doc = "Lock bit set by the TZ software for the USDHC2"]
+    #[doc = "Lock bit set by the TZ software for the USDHC2."]
     #[inline(always)]
     pub const fn set_l_usdhc2(&mut self, val: super::vals::Hp0LUsdhc2) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val.to_bits() as u32) & 0x01) << 19usize);
     }
-    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the TPSMP"]
+    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the TPSMP."]
     #[must_use]
     #[inline(always)]
     pub const fn hp_tpsmp(&self) -> super::vals::HpTpsmp {
         let val = (self.0 >> 20usize) & 0x01;
         super::vals::HpTpsmp::from_bits(val as u8)
     }
-    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the TPSMP"]
+    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the TPSMP."]
     #[inline(always)]
     pub const fn set_hp_tpsmp(&mut self, val: super::vals::HpTpsmp) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
     }
-    #[doc = "Lock bit set by the TZ software for the TPSMP"]
+    #[doc = "Lock bit set by the TZ software for the TPSMP."]
     #[must_use]
     #[inline(always)]
     pub const fn l_tpsmp(&self) -> super::vals::Hp0LTpsmp {
         let val = (self.0 >> 21usize) & 0x01;
         super::vals::Hp0LTpsmp::from_bits(val as u8)
     }
-    #[doc = "Lock bit set by the TZ software for the TPSMP"]
+    #[doc = "Lock bit set by the TZ software for the TPSMP."]
     #[inline(always)]
     pub const fn set_l_tpsmp(&mut self, val: super::vals::Hp0LTpsmp) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
     }
-    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the USB"]
+    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the USB."]
     #[must_use]
     #[inline(always)]
     pub const fn hp_usb(&self) -> super::vals::HpUsb {
         let val = (self.0 >> 22usize) & 0x01;
         super::vals::HpUsb::from_bits(val as u8)
     }
-    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the USB"]
+    #[doc = "Determines whether the register value of the corresponding HP field is passed as the hprot\\[1\\] of the USB."]
     #[inline(always)]
     pub const fn set_hp_usb(&mut self, val: super::vals::HpUsb) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
     }
-    #[doc = "Lock bit set by the TZ software for the USB"]
+    #[doc = "Lock bit set by the TZ software for the USB."]
     #[must_use]
     #[inline(always)]
     pub const fn l_usb(&self) -> super::vals::Hp0LUsb {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::Hp0LUsb::from_bits(val as u8)
     }
-    #[doc = "Lock bit set by the TZ software for the USB"]
+    #[doc = "Lock bit set by the TZ software for the USB."]
     #[inline(always)]
     pub const fn set_l_usb(&mut self, val: super::vals::Hp0LUsb) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);
@@ -584,187 +584,187 @@ impl defmt::Format for Hp0 {
         )
     }
 }
-#[doc = "HPCONTROL0 register"]
+#[doc = "HPCONTROL0 register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Hpcontrol0(pub u32);
 impl Hpcontrol0 {
-    #[doc = "Indicates the privilege/user mode for the eDMA"]
+    #[doc = "Indicates the privilege/user mode for the eDMA."]
     #[must_use]
     #[inline(always)]
     pub const fn hpc_dma(&self) -> super::vals::HpcDma {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::HpcDma::from_bits(val as u8)
     }
-    #[doc = "Indicates the privilege/user mode for the eDMA"]
+    #[doc = "Indicates the privilege/user mode for the eDMA."]
     #[inline(always)]
     pub const fn set_hpc_dma(&mut self, val: super::vals::HpcDma) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "Lock bit set by the TZ software for the eDMA"]
+    #[doc = "Lock bit set by the TZ software for the eDMA."]
     #[must_use]
     #[inline(always)]
     pub const fn l_dma(&self) -> super::vals::Hpcontrol0LDma {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Hpcontrol0LDma::from_bits(val as u8)
     }
-    #[doc = "Lock bit set by the TZ software for the eDMA"]
+    #[doc = "Lock bit set by the TZ software for the eDMA."]
     #[inline(always)]
     pub const fn set_l_dma(&mut self, val: super::vals::Hpcontrol0LDma) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "Indicates the privilege/user mode for the LCDIF"]
+    #[doc = "Indicates the privilege/user mode for the LCDIF."]
     #[must_use]
     #[inline(always)]
     pub const fn hpc_lcdif(&self) -> super::vals::HpcLcdif {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::HpcLcdif::from_bits(val as u8)
     }
-    #[doc = "Indicates the privilege/user mode for the LCDIF"]
+    #[doc = "Indicates the privilege/user mode for the LCDIF."]
     #[inline(always)]
     pub const fn set_hpc_lcdif(&mut self, val: super::vals::HpcLcdif) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
-    #[doc = "Lock bit set by the TZ software for the LCDIF"]
+    #[doc = "Lock bit set by the TZ software for the LCDIF."]
     #[must_use]
     #[inline(always)]
     pub const fn l_lcdif(&self) -> super::vals::Hpcontrol0LLcdif {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::Hpcontrol0LLcdif::from_bits(val as u8)
     }
-    #[doc = "Lock bit set by the TZ software for the LCDIF"]
+    #[doc = "Lock bit set by the TZ software for the LCDIF."]
     #[inline(always)]
     pub const fn set_l_lcdif(&mut self, val: super::vals::Hpcontrol0LLcdif) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
-    #[doc = "Indicates the privilege/user mode for the CSI"]
+    #[doc = "Indicates the privilege/user mode for the CSI."]
     #[must_use]
     #[inline(always)]
     pub const fn hpc_csi(&self) -> super::vals::HpcCsi {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::HpcCsi::from_bits(val as u8)
     }
-    #[doc = "Indicates the privilege/user mode for the CSI"]
+    #[doc = "Indicates the privilege/user mode for the CSI."]
     #[inline(always)]
     pub const fn set_hpc_csi(&mut self, val: super::vals::HpcCsi) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "Lock bit set by the TZ software for the CSI"]
+    #[doc = "Lock bit set by the TZ software for the CSI."]
     #[must_use]
     #[inline(always)]
     pub const fn l_csi(&self) -> super::vals::Hpcontrol0LCsi {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::Hpcontrol0LCsi::from_bits(val as u8)
     }
-    #[doc = "Lock bit set by the TZ software for the CSI"]
+    #[doc = "Lock bit set by the TZ software for the CSI."]
     #[inline(always)]
     pub const fn set_l_csi(&mut self, val: super::vals::Hpcontrol0LCsi) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "Indicates the privilege/user mode for the PXP"]
+    #[doc = "Indicates the privilege/user mode for the PXP."]
     #[must_use]
     #[inline(always)]
     pub const fn hpc_pxp(&self) -> super::vals::HpcPxp {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::HpcPxp::from_bits(val as u8)
     }
-    #[doc = "Indicates the privilege/user mode for the PXP"]
+    #[doc = "Indicates the privilege/user mode for the PXP."]
     #[inline(always)]
     pub const fn set_hpc_pxp(&mut self, val: super::vals::HpcPxp) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
-    #[doc = "Lock bit set by the TZ software for the PXP"]
+    #[doc = "Lock bit set by the TZ software for the PXP."]
     #[must_use]
     #[inline(always)]
     pub const fn l_pxp(&self) -> super::vals::Hpcontrol0LPxp {
         let val = (self.0 >> 9usize) & 0x01;
         super::vals::Hpcontrol0LPxp::from_bits(val as u8)
     }
-    #[doc = "Lock bit set by the TZ software for the PXP"]
+    #[doc = "Lock bit set by the TZ software for the PXP."]
     #[inline(always)]
     pub const fn set_l_pxp(&mut self, val: super::vals::Hpcontrol0LPxp) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
     }
-    #[doc = "Indicates the privilege/user mode for the DCP"]
+    #[doc = "Indicates the privilege/user mode for the DCP."]
     #[must_use]
     #[inline(always)]
     pub const fn hpc_dcp(&self) -> super::vals::HpcDcp {
         let val = (self.0 >> 10usize) & 0x01;
         super::vals::HpcDcp::from_bits(val as u8)
     }
-    #[doc = "Indicates the privilege/user mode for the DCP"]
+    #[doc = "Indicates the privilege/user mode for the DCP."]
     #[inline(always)]
     pub const fn set_hpc_dcp(&mut self, val: super::vals::HpcDcp) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
-    #[doc = "Lock bit set by the TZ software for the DCP"]
+    #[doc = "Lock bit set by the TZ software for the DCP."]
     #[must_use]
     #[inline(always)]
     pub const fn l_dcp(&self) -> super::vals::Hpcontrol0LDcp {
         let val = (self.0 >> 11usize) & 0x01;
         super::vals::Hpcontrol0LDcp::from_bits(val as u8)
     }
-    #[doc = "Lock bit set by the TZ software for the DCP"]
+    #[doc = "Lock bit set by the TZ software for the DCP."]
     #[inline(always)]
     pub const fn set_l_dcp(&mut self, val: super::vals::Hpcontrol0LDcp) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
     }
-    #[doc = "Indicates the privilege/user mode for the ENET"]
+    #[doc = "Indicates the privilege/user mode for the ENET."]
     #[must_use]
     #[inline(always)]
     pub const fn hpc_enet(&self) -> super::vals::HpcEnet {
         let val = (self.0 >> 14usize) & 0x01;
         super::vals::HpcEnet::from_bits(val as u8)
     }
-    #[doc = "Indicates the privilege/user mode for the ENET"]
+    #[doc = "Indicates the privilege/user mode for the ENET."]
     #[inline(always)]
     pub const fn set_hpc_enet(&mut self, val: super::vals::HpcEnet) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
     }
-    #[doc = "Lock bit set by the TZ software for the ENET"]
+    #[doc = "Lock bit set by the TZ software for the ENET."]
     #[must_use]
     #[inline(always)]
     pub const fn l_enet(&self) -> super::vals::Hpcontrol0LEnet {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::Hpcontrol0LEnet::from_bits(val as u8)
     }
-    #[doc = "Lock bit set by the TZ software for the ENET"]
+    #[doc = "Lock bit set by the TZ software for the ENET."]
     #[inline(always)]
     pub const fn set_l_enet(&mut self, val: super::vals::Hpcontrol0LEnet) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "Indicates the privilege/user mode for the USDHC1"]
+    #[doc = "Indicates the privilege/user mode for the USDHC1."]
     #[must_use]
     #[inline(always)]
     pub const fn hpc_usdhc1(&self) -> super::vals::HpcUsdhc1 {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::HpcUsdhc1::from_bits(val as u8)
     }
-    #[doc = "Indicates the privilege/user mode for the USDHC1"]
+    #[doc = "Indicates the privilege/user mode for the USDHC1."]
     #[inline(always)]
     pub const fn set_hpc_usdhc1(&mut self, val: super::vals::HpcUsdhc1) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
     }
-    #[doc = "Lock bit set by the TZ software for the USDHC1"]
+    #[doc = "Lock bit set by the TZ software for the USDHC1."]
     #[must_use]
     #[inline(always)]
     pub const fn l_usdhc1(&self) -> super::vals::Hpcontrol0LUsdhc1 {
         let val = (self.0 >> 17usize) & 0x01;
         super::vals::Hpcontrol0LUsdhc1::from_bits(val as u8)
     }
-    #[doc = "Lock bit set by the TZ software for the USDHC1"]
+    #[doc = "Lock bit set by the TZ software for the USDHC1."]
     #[inline(always)]
     pub const fn set_l_usdhc1(&mut self, val: super::vals::Hpcontrol0LUsdhc1) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
     }
-    #[doc = "Indicates the privilege/user mode for the USDHC2"]
+    #[doc = "Indicates the privilege/user mode for the USDHC2."]
     #[must_use]
     #[inline(always)]
     pub const fn hpc_usdhc2(&self) -> super::vals::HpcUsdhc2 {
         let val = (self.0 >> 18usize) & 0x01;
         super::vals::HpcUsdhc2::from_bits(val as u8)
     }
-    #[doc = "Indicates the privilege/user mode for the USDHC2"]
+    #[doc = "Indicates the privilege/user mode for the USDHC2."]
     #[inline(always)]
     pub const fn set_hpc_usdhc2(&mut self, val: super::vals::HpcUsdhc2) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val.to_bits() as u32) & 0x01) << 18usize);
@@ -781,14 +781,14 @@ impl Hpcontrol0 {
     pub const fn set_l_usdhc2(&mut self, val: super::vals::Hpcontrol0LUsdhc2) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val.to_bits() as u32) & 0x01) << 19usize);
     }
-    #[doc = "Indicates the privilege/user mode for the TPSMP"]
+    #[doc = "Indicates the privilege/user mode for the TPSMP."]
     #[must_use]
     #[inline(always)]
     pub const fn hpc_tpsmp(&self) -> super::vals::HpcTpsmp {
         let val = (self.0 >> 20usize) & 0x01;
         super::vals::HpcTpsmp::from_bits(val as u8)
     }
-    #[doc = "Indicates the privilege/user mode for the TPSMP"]
+    #[doc = "Indicates the privilege/user mode for the TPSMP."]
     #[inline(always)]
     pub const fn set_hpc_tpsmp(&mut self, val: super::vals::HpcTpsmp) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
@@ -805,14 +805,14 @@ impl Hpcontrol0 {
     pub const fn set_l_tpsmp(&mut self, val: super::vals::Hpcontrol0LTpsmp) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
     }
-    #[doc = "Indicates the privilege/user mode for the USB"]
+    #[doc = "Indicates the privilege/user mode for the USB."]
     #[must_use]
     #[inline(always)]
     pub const fn hpc_usb(&self) -> super::vals::HpcUsb {
         let val = (self.0 >> 22usize) & 0x01;
         super::vals::HpcUsb::from_bits(val as u8)
     }
-    #[doc = "Indicates the privilege/user mode for the USB"]
+    #[doc = "Indicates the privilege/user mode for the USB."]
     #[inline(always)]
     pub const fn set_hpc_usb(&mut self, val: super::vals::HpcUsb) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
@@ -891,247 +891,247 @@ impl defmt::Format for Hpcontrol0 {
         )
     }
 }
-#[doc = "Secure access register"]
+#[doc = "Secure access register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sa(pub u32);
 impl Sa {
-    #[doc = "Non-secure access policy indicator bit"]
+    #[doc = "Non-secure access policy indicator bit."]
     #[must_use]
     #[inline(always)]
     pub const fn nsa_dma(&self) -> super::vals::NsaDma {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::NsaDma::from_bits(val as u8)
     }
-    #[doc = "Non-secure access policy indicator bit"]
+    #[doc = "Non-secure access policy indicator bit."]
     #[inline(always)]
     pub const fn set_nsa_dma(&mut self, val: super::vals::NsaDma) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "Lock bit set by the TZ software for the eDMA"]
+    #[doc = "Lock bit set by the TZ software for the eDMA."]
     #[must_use]
     #[inline(always)]
     pub const fn l_dma(&self) -> super::vals::SaLDma {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::SaLDma::from_bits(val as u8)
     }
-    #[doc = "Lock bit set by the TZ software for the eDMA"]
+    #[doc = "Lock bit set by the TZ software for the eDMA."]
     #[inline(always)]
     pub const fn set_l_dma(&mut self, val: super::vals::SaLDma) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "Non-secure access policy indicator bit"]
+    #[doc = "Non-secure access policy indicator bit."]
     #[must_use]
     #[inline(always)]
     pub const fn nsa_lcdif(&self) -> super::vals::NsaLcdif {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::NsaLcdif::from_bits(val as u8)
     }
-    #[doc = "Non-secure access policy indicator bit"]
+    #[doc = "Non-secure access policy indicator bit."]
     #[inline(always)]
     pub const fn set_nsa_lcdif(&mut self, val: super::vals::NsaLcdif) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
-    #[doc = "Lock bit set by the TZ software for the LCDIF"]
+    #[doc = "Lock bit set by the TZ software for the LCDIF."]
     #[must_use]
     #[inline(always)]
     pub const fn l_lcdif(&self) -> super::vals::SaLLcdif {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::SaLLcdif::from_bits(val as u8)
     }
-    #[doc = "Lock bit set by the TZ software for the LCDIF"]
+    #[doc = "Lock bit set by the TZ software for the LCDIF."]
     #[inline(always)]
     pub const fn set_l_lcdif(&mut self, val: super::vals::SaLLcdif) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
-    #[doc = "Non-secure access policy indicator bit"]
+    #[doc = "Non-secure access policy indicator bit."]
     #[must_use]
     #[inline(always)]
     pub const fn nsa_csi(&self) -> super::vals::NsaCsi {
         let val = (self.0 >> 6usize) & 0x01;
         super::vals::NsaCsi::from_bits(val as u8)
     }
-    #[doc = "Non-secure access policy indicator bit"]
+    #[doc = "Non-secure access policy indicator bit."]
     #[inline(always)]
     pub const fn set_nsa_csi(&mut self, val: super::vals::NsaCsi) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "Lock bit set by the TZ software for the CSI"]
+    #[doc = "Lock bit set by the TZ software for the CSI."]
     #[must_use]
     #[inline(always)]
     pub const fn l_csi(&self) -> super::vals::SaLCsi {
         let val = (self.0 >> 7usize) & 0x01;
         super::vals::SaLCsi::from_bits(val as u8)
     }
-    #[doc = "Lock bit set by the TZ software for the CSI"]
+    #[doc = "Lock bit set by the TZ software for the CSI."]
     #[inline(always)]
     pub const fn set_l_csi(&mut self, val: super::vals::SaLCsi) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val.to_bits() as u32) & 0x01) << 7usize);
     }
-    #[doc = "Non-Secure Access Policy indicator bit"]
+    #[doc = "Non-Secure Access Policy indicator bit."]
     #[must_use]
     #[inline(always)]
     pub const fn nsa_pxp(&self) -> super::vals::NsaPxp {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::NsaPxp::from_bits(val as u8)
     }
-    #[doc = "Non-Secure Access Policy indicator bit"]
+    #[doc = "Non-Secure Access Policy indicator bit."]
     #[inline(always)]
     pub const fn set_nsa_pxp(&mut self, val: super::vals::NsaPxp) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
-    #[doc = "Lock bit set by the TZ software for the PXP"]
+    #[doc = "Lock bit set by the TZ software for the PXP."]
     #[must_use]
     #[inline(always)]
     pub const fn l_pxp(&self) -> super::vals::SaLPxp {
         let val = (self.0 >> 9usize) & 0x01;
         super::vals::SaLPxp::from_bits(val as u8)
     }
-    #[doc = "Lock bit set by the TZ software for the PXP"]
+    #[doc = "Lock bit set by the TZ software for the PXP."]
     #[inline(always)]
     pub const fn set_l_pxp(&mut self, val: super::vals::SaLPxp) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
     }
-    #[doc = "Non-secure access policy indicator bit"]
+    #[doc = "Non-secure access policy indicator bit."]
     #[must_use]
     #[inline(always)]
     pub const fn nsa_dcp(&self) -> super::vals::NsaDcp {
         let val = (self.0 >> 10usize) & 0x01;
         super::vals::NsaDcp::from_bits(val as u8)
     }
-    #[doc = "Non-secure access policy indicator bit"]
+    #[doc = "Non-secure access policy indicator bit."]
     #[inline(always)]
     pub const fn set_nsa_dcp(&mut self, val: super::vals::NsaDcp) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
-    #[doc = "Lock bit set by the TZ software for the DCP"]
+    #[doc = "Lock bit set by the TZ software for the DCP."]
     #[must_use]
     #[inline(always)]
     pub const fn l_dcp(&self) -> super::vals::SaLDcp {
         let val = (self.0 >> 11usize) & 0x01;
         super::vals::SaLDcp::from_bits(val as u8)
     }
-    #[doc = "Lock bit set by the TZ software for the DCP"]
+    #[doc = "Lock bit set by the TZ software for the DCP."]
     #[inline(always)]
     pub const fn set_l_dcp(&mut self, val: super::vals::SaLDcp) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
     }
-    #[doc = "Non-secure access policy indicator bit"]
+    #[doc = "Non-secure access policy indicator bit."]
     #[must_use]
     #[inline(always)]
     pub const fn nsa_enet(&self) -> super::vals::NsaEnet {
         let val = (self.0 >> 14usize) & 0x01;
         super::vals::NsaEnet::from_bits(val as u8)
     }
-    #[doc = "Non-secure access policy indicator bit"]
+    #[doc = "Non-secure access policy indicator bit."]
     #[inline(always)]
     pub const fn set_nsa_enet(&mut self, val: super::vals::NsaEnet) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
     }
-    #[doc = "Lock bit set by the TZ software for the ENET"]
+    #[doc = "Lock bit set by the TZ software for the ENET."]
     #[must_use]
     #[inline(always)]
     pub const fn l_enet(&self) -> super::vals::SaLEnet {
         let val = (self.0 >> 15usize) & 0x01;
         super::vals::SaLEnet::from_bits(val as u8)
     }
-    #[doc = "Lock bit set by the TZ software for the ENET"]
+    #[doc = "Lock bit set by the TZ software for the ENET."]
     #[inline(always)]
     pub const fn set_l_enet(&mut self, val: super::vals::SaLEnet) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "Non-secure access policy indicator bit"]
+    #[doc = "Non-secure access policy indicator bit."]
     #[must_use]
     #[inline(always)]
     pub const fn nsa_usdhc1(&self) -> super::vals::NsaUsdhc1 {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::NsaUsdhc1::from_bits(val as u8)
     }
-    #[doc = "Non-secure access policy indicator bit"]
+    #[doc = "Non-secure access policy indicator bit."]
     #[inline(always)]
     pub const fn set_nsa_usdhc1(&mut self, val: super::vals::NsaUsdhc1) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
     }
-    #[doc = "Lock bit set by the TZ software for the USDHC1"]
+    #[doc = "Lock bit set by the TZ software for the USDHC1."]
     #[must_use]
     #[inline(always)]
     pub const fn l_usdhc1(&self) -> super::vals::SaLUsdhc1 {
         let val = (self.0 >> 17usize) & 0x01;
         super::vals::SaLUsdhc1::from_bits(val as u8)
     }
-    #[doc = "Lock bit set by the TZ software for the USDHC1"]
+    #[doc = "Lock bit set by the TZ software for the USDHC1."]
     #[inline(always)]
     pub const fn set_l_usdhc1(&mut self, val: super::vals::SaLUsdhc1) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val.to_bits() as u32) & 0x01) << 17usize);
     }
-    #[doc = "Non-secure access policy indicator bit"]
+    #[doc = "Non-secure access policy indicator bit."]
     #[must_use]
     #[inline(always)]
     pub const fn nsa_usdhc2(&self) -> super::vals::NsaUsdhc2 {
         let val = (self.0 >> 18usize) & 0x01;
         super::vals::NsaUsdhc2::from_bits(val as u8)
     }
-    #[doc = "Non-secure access policy indicator bit"]
+    #[doc = "Non-secure access policy indicator bit."]
     #[inline(always)]
     pub const fn set_nsa_usdhc2(&mut self, val: super::vals::NsaUsdhc2) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val.to_bits() as u32) & 0x01) << 18usize);
     }
-    #[doc = "Lock bit set by the TZ software for the USDHC2"]
+    #[doc = "Lock bit set by the TZ software for the USDHC2."]
     #[must_use]
     #[inline(always)]
     pub const fn l_usdhc2(&self) -> super::vals::SaLUsdhc2 {
         let val = (self.0 >> 19usize) & 0x01;
         super::vals::SaLUsdhc2::from_bits(val as u8)
     }
-    #[doc = "Lock bit set by the TZ software for the USDHC2"]
+    #[doc = "Lock bit set by the TZ software for the USDHC2."]
     #[inline(always)]
     pub const fn set_l_usdhc2(&mut self, val: super::vals::SaLUsdhc2) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val.to_bits() as u32) & 0x01) << 19usize);
     }
-    #[doc = "Non-secure access policy indicator bit"]
+    #[doc = "Non-secure access policy indicator bit."]
     #[must_use]
     #[inline(always)]
     pub const fn nsa_tpsmp(&self) -> super::vals::NsaTpsmp {
         let val = (self.0 >> 20usize) & 0x01;
         super::vals::NsaTpsmp::from_bits(val as u8)
     }
-    #[doc = "Non-secure access policy indicator bit"]
+    #[doc = "Non-secure access policy indicator bit."]
     #[inline(always)]
     pub const fn set_nsa_tpsmp(&mut self, val: super::vals::NsaTpsmp) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val.to_bits() as u32) & 0x01) << 20usize);
     }
-    #[doc = "Lock bit set by the TZ software for the TPSMP"]
+    #[doc = "Lock bit set by the TZ software for the TPSMP."]
     #[must_use]
     #[inline(always)]
     pub const fn l_tpsmp(&self) -> super::vals::SaLTpsmp {
         let val = (self.0 >> 21usize) & 0x01;
         super::vals::SaLTpsmp::from_bits(val as u8)
     }
-    #[doc = "Lock bit set by the TZ software for the TPSMP"]
+    #[doc = "Lock bit set by the TZ software for the TPSMP."]
     #[inline(always)]
     pub const fn set_l_tpsmp(&mut self, val: super::vals::SaLTpsmp) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val.to_bits() as u32) & 0x01) << 21usize);
     }
-    #[doc = "Non-secure access policy indicator bit"]
+    #[doc = "Non-secure access policy indicator bit."]
     #[must_use]
     #[inline(always)]
     pub const fn nsa_usb(&self) -> super::vals::NsaUsb {
         let val = (self.0 >> 22usize) & 0x01;
         super::vals::NsaUsb::from_bits(val as u8)
     }
-    #[doc = "Non-secure access policy indicator bit"]
+    #[doc = "Non-secure access policy indicator bit."]
     #[inline(always)]
     pub const fn set_nsa_usb(&mut self, val: super::vals::NsaUsb) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
     }
-    #[doc = "Lock bit set by the TZ software for the USB"]
+    #[doc = "Lock bit set by the TZ software for the USB."]
     #[must_use]
     #[inline(always)]
     pub const fn l_usb(&self) -> super::vals::SaLUsb {
         let val = (self.0 >> 23usize) & 0x01;
         super::vals::SaLUsb::from_bits(val as u8)
     }
-    #[doc = "Lock bit set by the TZ software for the USB"]
+    #[doc = "Lock bit set by the TZ software for the USB."]
     #[inline(always)]
     pub const fn set_l_usb(&mut self, val: super::vals::SaLUsb) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val.to_bits() as u32) & 0x01) << 23usize);

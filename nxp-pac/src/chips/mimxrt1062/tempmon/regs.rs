@@ -1,4 +1,4 @@
-#[doc = "Tempsensor Control Register 0"]
+#[doc = "Tempsensor Control Register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tempsense0(pub u32);
@@ -15,26 +15,26 @@ impl Tempsense0 {
     pub const fn set_power_down(&mut self, val: super::vals::Tempsense0PowerDown) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Starts the measurement process"]
+    #[doc = "Starts the measurement process."]
     #[must_use]
     #[inline(always)]
     pub const fn measure_temp(&self) -> super::vals::Tempsense0MeasureTemp {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Tempsense0MeasureTemp::from_bits(val as u8)
     }
-    #[doc = "Starts the measurement process"]
+    #[doc = "Starts the measurement process."]
     #[inline(always)]
     pub const fn set_measure_temp(&mut self, val: super::vals::Tempsense0MeasureTemp) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Indicates that the latest temp is valid"]
+    #[doc = "Indicates that the latest temp is valid."]
     #[must_use]
     #[inline(always)]
     pub const fn finished(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates that the latest temp is valid"]
+    #[doc = "Indicates that the latest temp is valid."]
     #[inline(always)]
     pub const fn set_finished(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
@@ -51,14 +51,14 @@ impl Tempsense0 {
     pub const fn set_temp_cnt(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 8usize)) | (((val as u32) & 0x0fff) << 8usize);
     }
-    #[doc = "This bit field contains the temperature count (raw sensor output) that will generate a high alarm when TEMP_CNT is smaller than this field"]
+    #[doc = "This bit field contains the temperature count (raw sensor output) that will generate a high alarm when TEMP_CNT is smaller than this field."]
     #[must_use]
     #[inline(always)]
     pub const fn alarm_value(&self) -> u16 {
         let val = (self.0 >> 20usize) & 0x0fff;
         val as u16
     }
-    #[doc = "This bit field contains the temperature count (raw sensor output) that will generate a high alarm when TEMP_CNT is smaller than this field"]
+    #[doc = "This bit field contains the temperature count (raw sensor output) that will generate a high alarm when TEMP_CNT is smaller than this field."]
     #[inline(always)]
     pub const fn set_alarm_value(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 20usize)) | (((val as u32) & 0x0fff) << 20usize);
@@ -95,7 +95,7 @@ impl defmt::Format for Tempsense0 {
         )
     }
 }
-#[doc = "Tempsensor Control Register 0"]
+#[doc = "Tempsensor Control Register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tempsense0Clr(pub u32);
@@ -112,26 +112,26 @@ impl Tempsense0Clr {
     pub const fn set_power_down(&mut self, val: super::vals::Tempsense0ClrPowerDown) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Starts the measurement process"]
+    #[doc = "Starts the measurement process."]
     #[must_use]
     #[inline(always)]
     pub const fn measure_temp(&self) -> super::vals::Tempsense0ClrMeasureTemp {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Tempsense0ClrMeasureTemp::from_bits(val as u8)
     }
-    #[doc = "Starts the measurement process"]
+    #[doc = "Starts the measurement process."]
     #[inline(always)]
     pub const fn set_measure_temp(&mut self, val: super::vals::Tempsense0ClrMeasureTemp) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Indicates that the latest temp is valid"]
+    #[doc = "Indicates that the latest temp is valid."]
     #[must_use]
     #[inline(always)]
     pub const fn finished(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates that the latest temp is valid"]
+    #[doc = "Indicates that the latest temp is valid."]
     #[inline(always)]
     pub const fn set_finished(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
@@ -148,14 +148,14 @@ impl Tempsense0Clr {
     pub const fn set_temp_cnt(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 8usize)) | (((val as u32) & 0x0fff) << 8usize);
     }
-    #[doc = "This bit field contains the temperature count (raw sensor output) that will generate a high alarm when TEMP_CNT is smaller than this field"]
+    #[doc = "This bit field contains the temperature count (raw sensor output) that will generate a high alarm when TEMP_CNT is smaller than this field."]
     #[must_use]
     #[inline(always)]
     pub const fn alarm_value(&self) -> u16 {
         let val = (self.0 >> 20usize) & 0x0fff;
         val as u16
     }
-    #[doc = "This bit field contains the temperature count (raw sensor output) that will generate a high alarm when TEMP_CNT is smaller than this field"]
+    #[doc = "This bit field contains the temperature count (raw sensor output) that will generate a high alarm when TEMP_CNT is smaller than this field."]
     #[inline(always)]
     pub const fn set_alarm_value(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 20usize)) | (((val as u32) & 0x0fff) << 20usize);
@@ -192,7 +192,7 @@ impl defmt::Format for Tempsense0Clr {
         )
     }
 }
-#[doc = "Tempsensor Control Register 0"]
+#[doc = "Tempsensor Control Register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tempsense0Set(pub u32);
@@ -209,26 +209,26 @@ impl Tempsense0Set {
     pub const fn set_power_down(&mut self, val: super::vals::Tempsense0SetPowerDown) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Starts the measurement process"]
+    #[doc = "Starts the measurement process."]
     #[must_use]
     #[inline(always)]
     pub const fn measure_temp(&self) -> super::vals::Tempsense0SetMeasureTemp {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Tempsense0SetMeasureTemp::from_bits(val as u8)
     }
-    #[doc = "Starts the measurement process"]
+    #[doc = "Starts the measurement process."]
     #[inline(always)]
     pub const fn set_measure_temp(&mut self, val: super::vals::Tempsense0SetMeasureTemp) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Indicates that the latest temp is valid"]
+    #[doc = "Indicates that the latest temp is valid."]
     #[must_use]
     #[inline(always)]
     pub const fn finished(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates that the latest temp is valid"]
+    #[doc = "Indicates that the latest temp is valid."]
     #[inline(always)]
     pub const fn set_finished(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
@@ -245,14 +245,14 @@ impl Tempsense0Set {
     pub const fn set_temp_cnt(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 8usize)) | (((val as u32) & 0x0fff) << 8usize);
     }
-    #[doc = "This bit field contains the temperature count (raw sensor output) that will generate a high alarm when TEMP_CNT is smaller than this field"]
+    #[doc = "This bit field contains the temperature count (raw sensor output) that will generate a high alarm when TEMP_CNT is smaller than this field."]
     #[must_use]
     #[inline(always)]
     pub const fn alarm_value(&self) -> u16 {
         let val = (self.0 >> 20usize) & 0x0fff;
         val as u16
     }
-    #[doc = "This bit field contains the temperature count (raw sensor output) that will generate a high alarm when TEMP_CNT is smaller than this field"]
+    #[doc = "This bit field contains the temperature count (raw sensor output) that will generate a high alarm when TEMP_CNT is smaller than this field."]
     #[inline(always)]
     pub const fn set_alarm_value(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 20usize)) | (((val as u32) & 0x0fff) << 20usize);
@@ -289,7 +289,7 @@ impl defmt::Format for Tempsense0Set {
         )
     }
 }
-#[doc = "Tempsensor Control Register 0"]
+#[doc = "Tempsensor Control Register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tempsense0Tog(pub u32);
@@ -306,26 +306,26 @@ impl Tempsense0Tog {
     pub const fn set_power_down(&mut self, val: super::vals::Tempsense0TogPowerDown) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Starts the measurement process"]
+    #[doc = "Starts the measurement process."]
     #[must_use]
     #[inline(always)]
     pub const fn measure_temp(&self) -> super::vals::Tempsense0TogMeasureTemp {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Tempsense0TogMeasureTemp::from_bits(val as u8)
     }
-    #[doc = "Starts the measurement process"]
+    #[doc = "Starts the measurement process."]
     #[inline(always)]
     pub const fn set_measure_temp(&mut self, val: super::vals::Tempsense0TogMeasureTemp) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "Indicates that the latest temp is valid"]
+    #[doc = "Indicates that the latest temp is valid."]
     #[must_use]
     #[inline(always)]
     pub const fn finished(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates that the latest temp is valid"]
+    #[doc = "Indicates that the latest temp is valid."]
     #[inline(always)]
     pub const fn set_finished(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
@@ -342,14 +342,14 @@ impl Tempsense0Tog {
     pub const fn set_temp_cnt(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 8usize)) | (((val as u32) & 0x0fff) << 8usize);
     }
-    #[doc = "This bit field contains the temperature count (raw sensor output) that will generate a high alarm when TEMP_CNT is smaller than this field"]
+    #[doc = "This bit field contains the temperature count (raw sensor output) that will generate a high alarm when TEMP_CNT is smaller than this field."]
     #[must_use]
     #[inline(always)]
     pub const fn alarm_value(&self) -> u16 {
         let val = (self.0 >> 20usize) & 0x0fff;
         val as u16
     }
-    #[doc = "This bit field contains the temperature count (raw sensor output) that will generate a high alarm when TEMP_CNT is smaller than this field"]
+    #[doc = "This bit field contains the temperature count (raw sensor output) that will generate a high alarm when TEMP_CNT is smaller than this field."]
     #[inline(always)]
     pub const fn set_alarm_value(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 20usize)) | (((val as u32) & 0x0fff) << 20usize);
@@ -386,19 +386,19 @@ impl defmt::Format for Tempsense0Tog {
         )
     }
 }
-#[doc = "Tempsensor Control Register 1"]
+#[doc = "Tempsensor Control Register 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tempsense1(pub u32);
 impl Tempsense1 {
-    #[doc = "This bits determines how many RTC clocks to wait before automatically repeating a temperature measurement"]
+    #[doc = "This bits determines how many RTC clocks to wait before automatically repeating a temperature measurement."]
     #[must_use]
     #[inline(always)]
     pub const fn measure_freq(&self) -> super::vals::Tempsense1MeasureFreq {
         let val = (self.0 >> 0usize) & 0xffff;
         super::vals::Tempsense1MeasureFreq::from_bits(val as u16)
     }
-    #[doc = "This bits determines how many RTC clocks to wait before automatically repeating a temperature measurement"]
+    #[doc = "This bits determines how many RTC clocks to wait before automatically repeating a temperature measurement."]
     #[inline(always)]
     pub const fn set_measure_freq(&mut self, val: super::vals::Tempsense1MeasureFreq) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val.to_bits() as u32) & 0xffff) << 0usize);
@@ -427,19 +427,19 @@ impl defmt::Format for Tempsense1 {
         )
     }
 }
-#[doc = "Tempsensor Control Register 1"]
+#[doc = "Tempsensor Control Register 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tempsense1Clr(pub u32);
 impl Tempsense1Clr {
-    #[doc = "This bits determines how many RTC clocks to wait before automatically repeating a temperature measurement"]
+    #[doc = "This bits determines how many RTC clocks to wait before automatically repeating a temperature measurement."]
     #[must_use]
     #[inline(always)]
     pub const fn measure_freq(&self) -> super::vals::Tempsense1ClrMeasureFreq {
         let val = (self.0 >> 0usize) & 0xffff;
         super::vals::Tempsense1ClrMeasureFreq::from_bits(val as u16)
     }
-    #[doc = "This bits determines how many RTC clocks to wait before automatically repeating a temperature measurement"]
+    #[doc = "This bits determines how many RTC clocks to wait before automatically repeating a temperature measurement."]
     #[inline(always)]
     pub const fn set_measure_freq(&mut self, val: super::vals::Tempsense1ClrMeasureFreq) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val.to_bits() as u32) & 0xffff) << 0usize);
@@ -468,19 +468,19 @@ impl defmt::Format for Tempsense1Clr {
         )
     }
 }
-#[doc = "Tempsensor Control Register 1"]
+#[doc = "Tempsensor Control Register 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tempsense1Set(pub u32);
 impl Tempsense1Set {
-    #[doc = "This bits determines how many RTC clocks to wait before automatically repeating a temperature measurement"]
+    #[doc = "This bits determines how many RTC clocks to wait before automatically repeating a temperature measurement."]
     #[must_use]
     #[inline(always)]
     pub const fn measure_freq(&self) -> super::vals::Tempsense1SetMeasureFreq {
         let val = (self.0 >> 0usize) & 0xffff;
         super::vals::Tempsense1SetMeasureFreq::from_bits(val as u16)
     }
-    #[doc = "This bits determines how many RTC clocks to wait before automatically repeating a temperature measurement"]
+    #[doc = "This bits determines how many RTC clocks to wait before automatically repeating a temperature measurement."]
     #[inline(always)]
     pub const fn set_measure_freq(&mut self, val: super::vals::Tempsense1SetMeasureFreq) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val.to_bits() as u32) & 0xffff) << 0usize);
@@ -509,19 +509,19 @@ impl defmt::Format for Tempsense1Set {
         )
     }
 }
-#[doc = "Tempsensor Control Register 1"]
+#[doc = "Tempsensor Control Register 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tempsense1Tog(pub u32);
 impl Tempsense1Tog {
-    #[doc = "This bits determines how many RTC clocks to wait before automatically repeating a temperature measurement"]
+    #[doc = "This bits determines how many RTC clocks to wait before automatically repeating a temperature measurement."]
     #[must_use]
     #[inline(always)]
     pub const fn measure_freq(&self) -> super::vals::Tempsense1TogMeasureFreq {
         let val = (self.0 >> 0usize) & 0xffff;
         super::vals::Tempsense1TogMeasureFreq::from_bits(val as u16)
     }
-    #[doc = "This bits determines how many RTC clocks to wait before automatically repeating a temperature measurement"]
+    #[doc = "This bits determines how many RTC clocks to wait before automatically repeating a temperature measurement."]
     #[inline(always)]
     pub const fn set_measure_freq(&mut self, val: super::vals::Tempsense1TogMeasureFreq) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val.to_bits() as u32) & 0xffff) << 0usize);
@@ -550,31 +550,31 @@ impl defmt::Format for Tempsense1Tog {
         )
     }
 }
-#[doc = "Tempsensor Control Register 2"]
+#[doc = "Tempsensor Control Register 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tempsense2(pub u32);
 impl Tempsense2 {
-    #[doc = "This bit field contains the temperature count that will generate a low alarm interrupt when the field is exceeded by TEMP_CNT"]
+    #[doc = "This bit field contains the temperature count that will generate a low alarm interrupt when the field is exceeded by TEMP_CNT."]
     #[must_use]
     #[inline(always)]
     pub const fn low_alarm_value(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "This bit field contains the temperature count that will generate a low alarm interrupt when the field is exceeded by TEMP_CNT"]
+    #[doc = "This bit field contains the temperature count that will generate a low alarm interrupt when the field is exceeded by TEMP_CNT."]
     #[inline(always)]
     pub const fn set_low_alarm_value(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
     }
-    #[doc = "This bit field contains the temperature count that will generate a panic interrupt when TEMP_CNT is smaller than this field"]
+    #[doc = "This bit field contains the temperature count that will generate a panic interrupt when TEMP_CNT is smaller than this field."]
     #[must_use]
     #[inline(always)]
     pub const fn panic_alarm_value(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x0fff;
         val as u16
     }
-    #[doc = "This bit field contains the temperature count that will generate a panic interrupt when TEMP_CNT is smaller than this field"]
+    #[doc = "This bit field contains the temperature count that will generate a panic interrupt when TEMP_CNT is smaller than this field."]
     #[inline(always)]
     pub const fn set_panic_alarm_value(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);
@@ -605,31 +605,31 @@ impl defmt::Format for Tempsense2 {
         )
     }
 }
-#[doc = "Tempsensor Control Register 2"]
+#[doc = "Tempsensor Control Register 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tempsense2Clr(pub u32);
 impl Tempsense2Clr {
-    #[doc = "This bit field contains the temperature count that will generate a low alarm interrupt when the field is exceeded by TEMP_CNT"]
+    #[doc = "This bit field contains the temperature count that will generate a low alarm interrupt when the field is exceeded by TEMP_CNT."]
     #[must_use]
     #[inline(always)]
     pub const fn low_alarm_value(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "This bit field contains the temperature count that will generate a low alarm interrupt when the field is exceeded by TEMP_CNT"]
+    #[doc = "This bit field contains the temperature count that will generate a low alarm interrupt when the field is exceeded by TEMP_CNT."]
     #[inline(always)]
     pub const fn set_low_alarm_value(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
     }
-    #[doc = "This bit field contains the temperature count that will generate a panic interrupt when TEMP_CNT is smaller than this field"]
+    #[doc = "This bit field contains the temperature count that will generate a panic interrupt when TEMP_CNT is smaller than this field."]
     #[must_use]
     #[inline(always)]
     pub const fn panic_alarm_value(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x0fff;
         val as u16
     }
-    #[doc = "This bit field contains the temperature count that will generate a panic interrupt when TEMP_CNT is smaller than this field"]
+    #[doc = "This bit field contains the temperature count that will generate a panic interrupt when TEMP_CNT is smaller than this field."]
     #[inline(always)]
     pub const fn set_panic_alarm_value(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);
@@ -660,31 +660,31 @@ impl defmt::Format for Tempsense2Clr {
         )
     }
 }
-#[doc = "Tempsensor Control Register 2"]
+#[doc = "Tempsensor Control Register 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tempsense2Set(pub u32);
 impl Tempsense2Set {
-    #[doc = "This bit field contains the temperature count that will generate a low alarm interrupt when the field is exceeded by TEMP_CNT"]
+    #[doc = "This bit field contains the temperature count that will generate a low alarm interrupt when the field is exceeded by TEMP_CNT."]
     #[must_use]
     #[inline(always)]
     pub const fn low_alarm_value(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "This bit field contains the temperature count that will generate a low alarm interrupt when the field is exceeded by TEMP_CNT"]
+    #[doc = "This bit field contains the temperature count that will generate a low alarm interrupt when the field is exceeded by TEMP_CNT."]
     #[inline(always)]
     pub const fn set_low_alarm_value(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
     }
-    #[doc = "This bit field contains the temperature count that will generate a panic interrupt when TEMP_CNT is smaller than this field"]
+    #[doc = "This bit field contains the temperature count that will generate a panic interrupt when TEMP_CNT is smaller than this field."]
     #[must_use]
     #[inline(always)]
     pub const fn panic_alarm_value(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x0fff;
         val as u16
     }
-    #[doc = "This bit field contains the temperature count that will generate a panic interrupt when TEMP_CNT is smaller than this field"]
+    #[doc = "This bit field contains the temperature count that will generate a panic interrupt when TEMP_CNT is smaller than this field."]
     #[inline(always)]
     pub const fn set_panic_alarm_value(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);
@@ -715,31 +715,31 @@ impl defmt::Format for Tempsense2Set {
         )
     }
 }
-#[doc = "Tempsensor Control Register 2"]
+#[doc = "Tempsensor Control Register 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tempsense2Tog(pub u32);
 impl Tempsense2Tog {
-    #[doc = "This bit field contains the temperature count that will generate a low alarm interrupt when the field is exceeded by TEMP_CNT"]
+    #[doc = "This bit field contains the temperature count that will generate a low alarm interrupt when the field is exceeded by TEMP_CNT."]
     #[must_use]
     #[inline(always)]
     pub const fn low_alarm_value(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "This bit field contains the temperature count that will generate a low alarm interrupt when the field is exceeded by TEMP_CNT"]
+    #[doc = "This bit field contains the temperature count that will generate a low alarm interrupt when the field is exceeded by TEMP_CNT."]
     #[inline(always)]
     pub const fn set_low_alarm_value(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
     }
-    #[doc = "This bit field contains the temperature count that will generate a panic interrupt when TEMP_CNT is smaller than this field"]
+    #[doc = "This bit field contains the temperature count that will generate a panic interrupt when TEMP_CNT is smaller than this field."]
     #[must_use]
     #[inline(always)]
     pub const fn panic_alarm_value(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x0fff;
         val as u16
     }
-    #[doc = "This bit field contains the temperature count that will generate a panic interrupt when TEMP_CNT is smaller than this field"]
+    #[doc = "This bit field contains the temperature count that will generate a panic interrupt when TEMP_CNT is smaller than this field."]
     #[inline(always)]
     pub const fn set_panic_alarm_value(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);

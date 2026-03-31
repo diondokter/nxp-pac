@@ -1,4 +1,4 @@
-#[doc = "USB"]
+#[doc = "USB."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Usbnc {
     ptr: *mut u8,
@@ -14,12 +14,12 @@ impl Usbnc {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "USB OTG1 Control Register"]
+    #[doc = "USB OTG1 Control Register."]
     #[inline(always)]
     pub const fn usb_otg1_ctrl(self) -> crate::common::Reg<regs::UsbOtg1Ctrl, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0800usize) as _) }
     }
-    #[doc = "OTG1 UTMI PHY Control 0 Register"]
+    #[doc = "OTG1 UTMI PHY Control 0 Register."]
     #[inline(always)]
     pub const fn usb_otg1_phy_ctrl_0(
         self,

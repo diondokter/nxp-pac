@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DtcmErrSigEn {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     DTCM_ERR_SIG_EN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     DTCM_ERR_SIG_EN_1 = 0x01,
 }
 impl DtcmErrSigEn {
@@ -33,9 +33,9 @@ impl From<DtcmErrSigEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DtcmErrStatEn {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     DTCM_ERR_STAT_EN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     DTCM_ERR_STAT_EN_1 = 0x01,
 }
 impl DtcmErrStatEn {
@@ -64,7 +64,7 @@ impl From<DtcmErrStatEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DtcmErrStatus {
-    #[doc = "DTCM access error does not happen"]
+    #[doc = "DTCM access error does not happen."]
     DTCM_ERR_STATUS_0 = 0x0,
     #[doc = "DTCM access error happens."]
     DTCM_ERR_STATUS_1 = 0x01,
@@ -95,9 +95,9 @@ impl From<DtcmErrStatus> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DtcmMamSigEn {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     DTCM_MAM_SIG_EN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     DTCM_MAM_SIG_EN_1 = 0x01,
 }
 impl DtcmMamSigEn {
@@ -126,9 +126,9 @@ impl From<DtcmMamSigEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DtcmMamStatEn {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     DTCM_MAM_STAT_EN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     DTCM_MAM_STAT_EN_1 = 0x01,
 }
 impl DtcmMamStatEn {
@@ -219,9 +219,9 @@ impl From<DtcmWrRdSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ItcmErrSigEn {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     ITCM_ERR_SIG_EN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     ITCM_ERR_SIG_EN_1 = 0x01,
 }
 impl ItcmErrSigEn {
@@ -250,9 +250,9 @@ impl From<ItcmErrSigEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ItcmErrStatEn {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     ITCM_ERR_STAT_EN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     ITCM_ERR_STAT_EN_1 = 0x01,
 }
 impl ItcmErrStatEn {
@@ -281,7 +281,7 @@ impl From<ItcmErrStatEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ItcmErrStatus {
-    #[doc = "ITCM access error does not happen"]
+    #[doc = "ITCM access error does not happen."]
     ITCM_ERR_STATUS_0 = 0x0,
     #[doc = "ITCM access error happens."]
     ITCM_ERR_STATUS_1 = 0x01,
@@ -312,9 +312,9 @@ impl From<ItcmErrStatus> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ItcmMamSigEn {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     ITCM_MAM_SIG_EN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     ITCM_MAM_SIG_EN_1 = 0x01,
 }
 impl ItcmMamSigEn {
@@ -343,9 +343,9 @@ impl From<ItcmMamSigEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ItcmMamStatEn {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     ITCM_MAM_STAT_EN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     ITCM_MAM_STAT_EN_1 = 0x01,
 }
 impl ItcmMamStatEn {
@@ -436,9 +436,9 @@ impl From<ItcmWrRdSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum OcramErrSigEn {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     OCRAM_ERR_SIG_EN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     OCRAM_ERR_SIG_EN_1 = 0x01,
 }
 impl OcramErrSigEn {
@@ -467,9 +467,9 @@ impl From<OcramErrSigEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum OcramErrStatEn {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     OCRAM_ERR_STAT_EN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     OCRAM_ERR_STAT_EN_1 = 0x01,
 }
 impl OcramErrStatEn {
@@ -498,7 +498,7 @@ impl From<OcramErrStatEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum OcramErrStatus {
-    #[doc = "OCRAM access error does not happen"]
+    #[doc = "OCRAM access error does not happen."]
     OCRAM_ERR_STATUS_0 = 0x0,
     #[doc = "OCRAM access error happens."]
     OCRAM_ERR_STATUS_1 = 0x01,
@@ -529,9 +529,9 @@ impl From<OcramErrStatus> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum OcramMamSigEn {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     OCRAM_MAM_SIG_EN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     OCRAM_MAM_SIG_EN_1 = 0x01,
 }
 impl OcramMamSigEn {
@@ -560,9 +560,9 @@ impl From<OcramMamSigEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum OcramMamStatEn {
-    #[doc = "Masked"]
+    #[doc = "Masked."]
     OCRAM_MAM_STAT_EN_0 = 0x0,
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     OCRAM_MAM_STAT_EN_1 = 0x01,
 }
 impl OcramMamStatEn {

@@ -35,7 +35,7 @@ impl From<ArmApdReset> for u8 {
 pub enum PadReset {
     #[doc = "No EVENT Detected."]
     NO_EVENT_DETECTED = 0x0,
-    #[doc = "RESET Detected. (Write 1 to CLR),"]
+    #[doc = "RESET Detected. (Write 1 to CLR),."]
     RESET_DETECTED = 0x01,
 }
 impl PadReset {
@@ -64,9 +64,9 @@ impl From<PadReset> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl0Casper {
-    #[doc = "clear reset"]
+    #[doc = "clear reset."]
     CLEAR_RESET = 0x0,
-    #[doc = "set reset"]
+    #[doc = "set reset."]
     SET_RESET = 0x01,
 }
 impl Prstctl0Casper {
@@ -95,9 +95,9 @@ impl From<Prstctl0Casper> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl0ClrCasper {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PRSTCTL0 Bit"]
+    #[doc = "Clears the PRSTCTL0 Bit."]
     CLR_RESET = 0x01,
 }
 impl Prstctl0ClrCasper {
@@ -126,9 +126,9 @@ impl From<Prstctl0ClrCasper> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl0ClrFlexspiOtfad {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PRSTCTL0 Bit"]
+    #[doc = "Clears the PRSTCTL0 Bit."]
     CLR_RESET = 0x01,
 }
 impl Prstctl0ClrFlexspiOtfad {
@@ -157,9 +157,9 @@ impl From<Prstctl0ClrFlexspiOtfad> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl0ClrHashcrypt {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PRSTCTL0 Bit"]
+    #[doc = "Clears the PRSTCTL0 Bit."]
     CLR_RESET = 0x01,
 }
 impl Prstctl0ClrHashcrypt {
@@ -188,9 +188,9 @@ impl From<Prstctl0ClrHashcrypt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl0ClrHifiDsp {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PRSTCTL0 Bit"]
+    #[doc = "Clears the PRSTCTL0 Bit."]
     CLR_RESET = 0x01,
 }
 impl Prstctl0ClrHifiDsp {
@@ -219,9 +219,9 @@ impl From<Prstctl0ClrHifiDsp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl0ClrPowerquad {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PRSTCTL0 Bit"]
+    #[doc = "Clears the PRSTCTL0 Bit."]
     CLR_RESET = 0x01,
 }
 impl Prstctl0ClrPowerquad {
@@ -250,9 +250,9 @@ impl From<Prstctl0ClrPowerquad> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl0ClrPuf {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PRSTCTL0 Bit"]
+    #[doc = "Clears the PRSTCTL0 Bit."]
     CLR_RESET = 0x01,
 }
 impl Prstctl0ClrPuf {
@@ -281,9 +281,9 @@ impl From<Prstctl0ClrPuf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl0ClrRng {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PRSTCTL0 Bit"]
+    #[doc = "Clears the PRSTCTL0 Bit."]
     CLR_RESET = 0x01,
 }
 impl Prstctl0ClrRng {
@@ -312,9 +312,9 @@ impl From<Prstctl0ClrRng> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl0ClrSct {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PRSTCTL0 Bit"]
+    #[doc = "Clears the PRSTCTL0 Bit."]
     CLR_RESET = 0x01,
 }
 impl Prstctl0ClrSct {
@@ -343,9 +343,9 @@ impl From<Prstctl0ClrSct> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl0ClrUsbhsDevice {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PRSTCTL0 Bit"]
+    #[doc = "Clears the PRSTCTL0 Bit."]
     CLR_RESET = 0x01,
 }
 impl Prstctl0ClrUsbhsDevice {
@@ -374,9 +374,9 @@ impl From<Prstctl0ClrUsbhsDevice> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl0ClrUsbhsHost {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PRSTCTL0 Bit"]
+    #[doc = "Clears the PRSTCTL0 Bit."]
     CLR_RESET = 0x01,
 }
 impl Prstctl0ClrUsbhsHost {
@@ -405,9 +405,9 @@ impl From<Prstctl0ClrUsbhsHost> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl0ClrUsbhsPhy {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PRSTCTL0 Bit"]
+    #[doc = "Clears the PRSTCTL0 Bit."]
     CLR_RESET = 0x01,
 }
 impl Prstctl0ClrUsbhsPhy {
@@ -436,9 +436,9 @@ impl From<Prstctl0ClrUsbhsPhy> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl0ClrUsbhsSram {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PRSTCTL0 Bit"]
+    #[doc = "Clears the PRSTCTL0 Bit."]
     CLR_RESET = 0x01,
 }
 impl Prstctl0ClrUsbhsSram {
@@ -467,9 +467,9 @@ impl From<Prstctl0ClrUsbhsSram> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl0FlexspiOtfad {
-    #[doc = "clear reset"]
+    #[doc = "clear reset."]
     CLEAR_RESET = 0x0,
-    #[doc = "set reset"]
+    #[doc = "set reset."]
     SET_RESET = 0x01,
 }
 impl Prstctl0FlexspiOtfad {
@@ -498,9 +498,9 @@ impl From<Prstctl0FlexspiOtfad> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl0Hashcrypt {
-    #[doc = "clear reset"]
+    #[doc = "clear reset."]
     CLEAR_RESET = 0x0,
-    #[doc = "set reset"]
+    #[doc = "set reset."]
     SET_RESET = 0x01,
 }
 impl Prstctl0Hashcrypt {
@@ -529,9 +529,9 @@ impl From<Prstctl0Hashcrypt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl0HifiDsp {
-    #[doc = "clear reset"]
+    #[doc = "clear reset."]
     CLEAR_RESET = 0x0,
-    #[doc = "set reset"]
+    #[doc = "set reset."]
     SET_RESET = 0x01,
 }
 impl Prstctl0HifiDsp {
@@ -560,9 +560,9 @@ impl From<Prstctl0HifiDsp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl0Powerquad {
-    #[doc = "clear reset"]
+    #[doc = "clear reset."]
     CLEAR_RESET = 0x0,
-    #[doc = "set reset"]
+    #[doc = "set reset."]
     SET_RESET = 0x01,
 }
 impl Prstctl0Powerquad {
@@ -591,9 +591,9 @@ impl From<Prstctl0Powerquad> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl0Puf {
-    #[doc = "clear reset"]
+    #[doc = "clear reset."]
     CLEAR_RESET = 0x0,
-    #[doc = "set reset"]
+    #[doc = "set reset."]
     SET_RESET = 0x01,
 }
 impl Prstctl0Puf {
@@ -622,9 +622,9 @@ impl From<Prstctl0Puf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl0Rng {
-    #[doc = "clear reset"]
+    #[doc = "clear reset."]
     CLEAR_RESET = 0x0,
-    #[doc = "set reset"]
+    #[doc = "set reset."]
     SET_RESET = 0x01,
 }
 impl Prstctl0Rng {
@@ -653,9 +653,9 @@ impl From<Prstctl0Rng> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl0Sct {
-    #[doc = "clear reset"]
+    #[doc = "clear reset."]
     CLEAR_RESET = 0x0,
-    #[doc = "set reset"]
+    #[doc = "set reset."]
     SET_RESET = 0x01,
 }
 impl Prstctl0Sct {
@@ -684,9 +684,9 @@ impl From<Prstctl0Sct> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl0SetCasper {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PRSTCTL0 Bit"]
+    #[doc = "Sets the PRSTCTL0 Bit."]
     SET_RESET = 0x01,
 }
 impl Prstctl0SetCasper {
@@ -715,9 +715,9 @@ impl From<Prstctl0SetCasper> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl0SetFlexspiOtfad {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PRSTCTL0 Bit"]
+    #[doc = "Sets the PRSTCTL0 Bit."]
     SET_RESET = 0x01,
 }
 impl Prstctl0SetFlexspiOtfad {
@@ -746,9 +746,9 @@ impl From<Prstctl0SetFlexspiOtfad> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl0SetHashcrypt {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PRSTCTL0 Bit"]
+    #[doc = "Sets the PRSTCTL0 Bit."]
     SET_RESET = 0x01,
 }
 impl Prstctl0SetHashcrypt {
@@ -777,9 +777,9 @@ impl From<Prstctl0SetHashcrypt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl0SetHifiDsp {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PRSTCTL0 Bit"]
+    #[doc = "Sets the PRSTCTL0 Bit."]
     SET_RESET = 0x01,
 }
 impl Prstctl0SetHifiDsp {
@@ -808,9 +808,9 @@ impl From<Prstctl0SetHifiDsp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl0SetPowerquad {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PRSTCTL0 Bit"]
+    #[doc = "Sets the PRSTCTL0 Bit."]
     SET_RESET = 0x01,
 }
 impl Prstctl0SetPowerquad {
@@ -839,9 +839,9 @@ impl From<Prstctl0SetPowerquad> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl0SetPuf {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PRSTCTL0 Bit"]
+    #[doc = "Sets the PRSTCTL0 Bit."]
     SET_RESET = 0x01,
 }
 impl Prstctl0SetPuf {
@@ -870,9 +870,9 @@ impl From<Prstctl0SetPuf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl0SetRng {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PRSTCTL0 Bit"]
+    #[doc = "Sets the PRSTCTL0 Bit."]
     SET_RESET = 0x01,
 }
 impl Prstctl0SetRng {
@@ -901,9 +901,9 @@ impl From<Prstctl0SetRng> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl0SetSct {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PRSTCTL0 Bit"]
+    #[doc = "Sets the PRSTCTL0 Bit."]
     SET_RESET = 0x01,
 }
 impl Prstctl0SetSct {
@@ -932,9 +932,9 @@ impl From<Prstctl0SetSct> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl0SetUsbhsDevice {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PRSTCTL0 Bit"]
+    #[doc = "Sets the PRSTCTL0 Bit."]
     SET_RESET = 0x01,
 }
 impl Prstctl0SetUsbhsDevice {
@@ -963,9 +963,9 @@ impl From<Prstctl0SetUsbhsDevice> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl0SetUsbhsHost {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PRSTCTL0 Bit"]
+    #[doc = "Sets the PRSTCTL0 Bit."]
     SET_RESET = 0x01,
 }
 impl Prstctl0SetUsbhsHost {
@@ -994,9 +994,9 @@ impl From<Prstctl0SetUsbhsHost> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl0SetUsbhsPhy {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PRSTCTL0 Bit"]
+    #[doc = "Sets the PRSTCTL0 Bit."]
     SET_RESET = 0x01,
 }
 impl Prstctl0SetUsbhsPhy {
@@ -1025,9 +1025,9 @@ impl From<Prstctl0SetUsbhsPhy> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl0SetUsbhsSram {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PRSTCTL0 Bit"]
+    #[doc = "Sets the PRSTCTL0 Bit."]
     SET_RESET = 0x01,
 }
 impl Prstctl0SetUsbhsSram {
@@ -1056,9 +1056,9 @@ impl From<Prstctl0SetUsbhsSram> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl0UsbhsDevice {
-    #[doc = "clear reset"]
+    #[doc = "clear reset."]
     CLEAR_RESET = 0x0,
-    #[doc = "set reset"]
+    #[doc = "set reset."]
     SET_RESET = 0x01,
 }
 impl Prstctl0UsbhsDevice {
@@ -1087,9 +1087,9 @@ impl From<Prstctl0UsbhsDevice> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl0UsbhsHost {
-    #[doc = "clear reset"]
+    #[doc = "clear reset."]
     CLEAR_RESET = 0x0,
-    #[doc = "set reset"]
+    #[doc = "set reset."]
     SET_RESET = 0x01,
 }
 impl Prstctl0UsbhsHost {
@@ -1118,9 +1118,9 @@ impl From<Prstctl0UsbhsHost> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl0UsbhsPhy {
-    #[doc = "clear reset"]
+    #[doc = "clear reset."]
     CLEAR_RESET = 0x0,
-    #[doc = "set reset"]
+    #[doc = "set reset."]
     SET_RESET = 0x01,
 }
 impl Prstctl0UsbhsPhy {
@@ -1149,9 +1149,9 @@ impl From<Prstctl0UsbhsPhy> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl0UsbhsSram {
-    #[doc = "clear reset"]
+    #[doc = "clear reset."]
     CLEAR_RESET = 0x0,
-    #[doc = "set reset"]
+    #[doc = "set reset."]
     SET_RESET = 0x01,
 }
 impl Prstctl0UsbhsSram {
@@ -1180,9 +1180,9 @@ impl From<Prstctl0UsbhsSram> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl1Acmp0 {
-    #[doc = "clear reset"]
+    #[doc = "clear reset."]
     CLEAR_RESET = 0x0,
-    #[doc = "set reset"]
+    #[doc = "set reset."]
     SET_RESET = 0x01,
 }
 impl Prstctl1Acmp0 {
@@ -1211,9 +1211,9 @@ impl From<Prstctl1Acmp0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl1Adc0 {
-    #[doc = "clear reset"]
+    #[doc = "clear reset."]
     CLEAR_RESET = 0x0,
-    #[doc = "set reset"]
+    #[doc = "set reset."]
     SET_RESET = 0x01,
 }
 impl Prstctl1Adc0 {
@@ -1242,9 +1242,9 @@ impl From<Prstctl1Adc0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl1ClrAcmp0 {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PRSTCTL1 Bit"]
+    #[doc = "Clears the PRSTCTL1 Bit."]
     CLR_RESET = 0x01,
 }
 impl Prstctl1ClrAcmp0 {
@@ -1273,9 +1273,9 @@ impl From<Prstctl1ClrAcmp0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl1ClrAdc0 {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PRSTCTL1 Bit"]
+    #[doc = "Clears the PRSTCTL1 Bit."]
     CLR_RESET = 0x01,
 }
 impl Prstctl1ClrAdc0 {
@@ -1304,9 +1304,9 @@ impl From<Prstctl1ClrAdc0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl1ClrSdio0 {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PRSTCTL1 Bit"]
+    #[doc = "Clears the PRSTCTL1 Bit."]
     CLR_RESET = 0x01,
 }
 impl Prstctl1ClrSdio0 {
@@ -1335,9 +1335,9 @@ impl From<Prstctl1ClrSdio0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl1ClrSdio1 {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PRSTCTL1 Bit"]
+    #[doc = "Clears the PRSTCTL1 Bit."]
     CLR_RESET = 0x01,
 }
 impl Prstctl1ClrSdio1 {
@@ -1366,9 +1366,9 @@ impl From<Prstctl1ClrSdio1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl1ClrShsgpio0 {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PRSTCTL1 Bit"]
+    #[doc = "Clears the PRSTCTL1 Bit."]
     CLR_RESET = 0x01,
 }
 impl Prstctl1ClrShsgpio0 {
@@ -1397,9 +1397,9 @@ impl From<Prstctl1ClrShsgpio0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl1Sdio0 {
-    #[doc = "clear reset"]
+    #[doc = "clear reset."]
     CLEAR_RESET = 0x0,
-    #[doc = "set reset"]
+    #[doc = "set reset."]
     SET_RESET = 0x01,
 }
 impl Prstctl1Sdio0 {
@@ -1428,9 +1428,9 @@ impl From<Prstctl1Sdio0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl1Sdio1 {
-    #[doc = "clear reset"]
+    #[doc = "clear reset."]
     CLEAR_RESET = 0x0,
-    #[doc = "set reset"]
+    #[doc = "set reset."]
     SET_RESET = 0x01,
 }
 impl Prstctl1Sdio1 {
@@ -1459,9 +1459,9 @@ impl From<Prstctl1Sdio1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl1SetAcmp0 {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PRSTCTL1 Bit"]
+    #[doc = "Sets the PRSTCTL1 Bit."]
     SET_RESET = 0x01,
 }
 impl Prstctl1SetAcmp0 {
@@ -1490,9 +1490,9 @@ impl From<Prstctl1SetAcmp0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl1SetAdc0 {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PRSTCTL1 Bit"]
+    #[doc = "Sets the PRSTCTL1 Bit."]
     SET_RESET = 0x01,
 }
 impl Prstctl1SetAdc0 {
@@ -1521,9 +1521,9 @@ impl From<Prstctl1SetAdc0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl1SetSdio0 {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PRSTCTL1 Bit"]
+    #[doc = "Sets the PRSTCTL1 Bit."]
     SET_RESET = 0x01,
 }
 impl Prstctl1SetSdio0 {
@@ -1552,9 +1552,9 @@ impl From<Prstctl1SetSdio0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl1SetSdio1 {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PRSTCTL1 Bit"]
+    #[doc = "Sets the PRSTCTL1 Bit."]
     SET_RESET = 0x01,
 }
 impl Prstctl1SetSdio1 {
@@ -1583,9 +1583,9 @@ impl From<Prstctl1SetSdio1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl1SetShsgpio0 {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PRSTCTL1 Bit"]
+    #[doc = "Sets the PRSTCTL1 Bit."]
     SET_RESET = 0x01,
 }
 impl Prstctl1SetShsgpio0 {
@@ -1614,9 +1614,9 @@ impl From<Prstctl1SetShsgpio0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl1Shsgpio0 {
-    #[doc = "clear reset"]
+    #[doc = "clear reset."]
     CLEAR_RESET = 0x0,
-    #[doc = "set reset"]
+    #[doc = "set reset."]
     SET_RESET = 0x01,
 }
 impl Prstctl1Shsgpio0 {
@@ -1645,9 +1645,9 @@ impl From<Prstctl1Shsgpio0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl2ClrUtick0 {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PRSTCTL2 Bit"]
+    #[doc = "Clears the PRSTCTL2 Bit."]
     CLR_RESET = 0x01,
 }
 impl Prstctl2ClrUtick0 {
@@ -1676,9 +1676,9 @@ impl From<Prstctl2ClrUtick0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl2ClrWwdt0 {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Clears the PRSTCTL2 Bit"]
+    #[doc = "Clears the PRSTCTL2 Bit."]
     CLR_RESET = 0x01,
 }
 impl Prstctl2ClrWwdt0 {
@@ -1707,9 +1707,9 @@ impl From<Prstctl2ClrWwdt0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl2SetUtick0 {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PRSTCTL2 Bit"]
+    #[doc = "Sets the PRSTCTL2 Bit."]
     SET_RESET = 0x01,
 }
 impl Prstctl2SetUtick0 {
@@ -1738,9 +1738,9 @@ impl From<Prstctl2SetUtick0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl2SetWwdt0 {
-    #[doc = "No Effect"]
+    #[doc = "No Effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Sets the PRSTCTL2 Bit"]
+    #[doc = "Sets the PRSTCTL2 Bit."]
     SET_RESET = 0x01,
 }
 impl Prstctl2SetWwdt0 {
@@ -1769,9 +1769,9 @@ impl From<Prstctl2SetWwdt0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl2Utick0 {
-    #[doc = "clear reset"]
+    #[doc = "clear reset."]
     CLEAR_RESET = 0x0,
-    #[doc = "set reset"]
+    #[doc = "set reset."]
     SET_RESET = 0x01,
 }
 impl Prstctl2Utick0 {
@@ -1800,9 +1800,9 @@ impl From<Prstctl2Utick0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prstctl2Wwdt0 {
-    #[doc = "clear reset"]
+    #[doc = "clear reset."]
     CLEAR_RESET = 0x0,
-    #[doc = "set reset"]
+    #[doc = "set reset."]
     SET_RESET = 0x01,
 }
 impl Prstctl2Wwdt0 {

@@ -1,88 +1,88 @@
-#[doc = "Access Error"]
+#[doc = "Access Error."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PkcAccessErr(pub u32);
 impl PkcAccessErr {
-    #[doc = "APB Error"]
+    #[doc = "APB Error."]
     #[must_use]
     #[inline(always)]
     pub const fn apb_notav(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "APB Error"]
+    #[doc = "APB Error."]
     #[inline(always)]
     pub const fn set_apb_notav(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "APB Error"]
+    #[doc = "APB Error."]
     #[must_use]
     #[inline(always)]
     pub const fn apb_wrgmd(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "APB Error"]
+    #[doc = "APB Error."]
     #[inline(always)]
     pub const fn set_apb_wrgmd(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "APB Master that triggered first APB error (APB_WRGMD or APB_NOTAV)"]
+    #[doc = "APB Master that triggered first APB error (APB_WRGMD or APB_NOTAV)."]
     #[must_use]
     #[inline(always)]
     pub const fn apb_master(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x0f;
         val as u8
     }
-    #[doc = "APB Master that triggered first APB error (APB_WRGMD or APB_NOTAV)"]
+    #[doc = "APB Master that triggered first APB error (APB_WRGMD or APB_NOTAV)."]
     #[inline(always)]
     pub const fn set_apb_master(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
     }
-    #[doc = "AHB Error"]
+    #[doc = "AHB Error."]
     #[must_use]
     #[inline(always)]
     pub const fn ahb(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "AHB Error"]
+    #[doc = "AHB Error."]
     #[inline(always)]
     pub const fn set_ahb(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "Error in PKC coprocessor kernel"]
+    #[doc = "Error in PKC coprocessor kernel."]
     #[must_use]
     #[inline(always)]
     pub const fn pkcc(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Error in PKC coprocessor kernel"]
+    #[doc = "Error in PKC coprocessor kernel."]
     #[inline(always)]
     pub const fn set_pkcc(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Error due to error detection circuitry"]
+    #[doc = "Error due to error detection circuitry."]
     #[must_use]
     #[inline(always)]
     pub const fn fdet(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Error due to error detection circuitry"]
+    #[doc = "Error due to error detection circuitry."]
     #[inline(always)]
     pub const fn set_fdet(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Error in PKC software control"]
+    #[doc = "Error in PKC software control."]
     #[must_use]
     #[inline(always)]
     pub const fn ctrl(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Error in PKC software control"]
+    #[doc = "Error in PKC software control."]
     #[inline(always)]
     pub const fn set_ctrl(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
@@ -137,7 +137,7 @@ impl defmt::Format for PkcAccessErr {
         )
     }
 }
-#[doc = "Clear Access Error"]
+#[doc = "Clear Access Error."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PkcAccessErrClr(pub u32);
@@ -178,7 +178,7 @@ impl defmt::Format for PkcAccessErrClr {
         )
     }
 }
-#[doc = "Configuration register"]
+#[doc = "Configuration register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PkcCfg(pub u32);
@@ -195,26 +195,26 @@ impl PkcCfg {
     pub const fn set_idleop(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "RFU"]
+    #[doc = "RFU."]
     #[must_use]
     #[inline(always)]
     pub const fn rfu1(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "RFU"]
+    #[doc = "RFU."]
     #[inline(always)]
     pub const fn set_rfu1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "RFU"]
+    #[doc = "RFU."]
     #[must_use]
     #[inline(always)]
     pub const fn rfu2(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "RFU"]
+    #[doc = "RFU."]
     #[inline(always)]
     pub const fn set_rfu2(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
@@ -331,139 +331,139 @@ impl defmt::Format for PkcCfg {
         )
     }
 }
-#[doc = "Control Register"]
+#[doc = "Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PkcCtrl(pub u32);
 impl PkcCtrl {
-    #[doc = "PKC reset control bit"]
+    #[doc = "PKC reset control bit."]
     #[must_use]
     #[inline(always)]
     pub const fn reset(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "PKC reset control bit"]
+    #[doc = "PKC reset control bit."]
     #[inline(always)]
     pub const fn set_reset(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Freeze PKC calculation"]
+    #[doc = "Freeze PKC calculation."]
     #[must_use]
     #[inline(always)]
     pub const fn stop(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Freeze PKC calculation"]
+    #[doc = "Freeze PKC calculation."]
     #[inline(always)]
     pub const fn set_stop(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Control bit to start direct operation using parameter set 1"]
+    #[doc = "Control bit to start direct operation using parameter set 1."]
     #[must_use]
     #[inline(always)]
     pub const fn god1(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Control bit to start direct operation using parameter set 1"]
+    #[doc = "Control bit to start direct operation using parameter set 1."]
     #[inline(always)]
     pub const fn set_god1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Control bit to start direct operation using parameter set 2"]
+    #[doc = "Control bit to start direct operation using parameter set 2."]
     #[must_use]
     #[inline(always)]
     pub const fn god2(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Control bit to start direct operation using parameter set 2"]
+    #[doc = "Control bit to start direct operation using parameter set 2."]
     #[inline(always)]
     pub const fn set_god2(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "Control bit to start MC pattern using parameter set 1"]
+    #[doc = "Control bit to start MC pattern using parameter set 1."]
     #[must_use]
     #[inline(always)]
     pub const fn gom1(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "Control bit to start MC pattern using parameter set 1"]
+    #[doc = "Control bit to start MC pattern using parameter set 1."]
     #[inline(always)]
     pub const fn set_gom1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "Control bit to start MC pattern using parameter set 2"]
+    #[doc = "Control bit to start MC pattern using parameter set 2."]
     #[must_use]
     #[inline(always)]
     pub const fn gom2(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Control bit to start MC pattern using parameter set 2"]
+    #[doc = "Control bit to start MC pattern using parameter set 2."]
     #[inline(always)]
     pub const fn set_gom2(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "Control bit to start pipe operation"]
+    #[doc = "Control bit to start pipe operation."]
     #[must_use]
     #[inline(always)]
     pub const fn gou(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "Control bit to start pipe operation"]
+    #[doc = "Control bit to start pipe operation."]
     #[inline(always)]
     pub const fn set_gou(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Convert to GF2 calculation modes"]
+    #[doc = "Convert to GF2 calculation modes."]
     #[must_use]
     #[inline(always)]
     pub const fn gf2conv(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Convert to GF2 calculation modes"]
+    #[doc = "Convert to GF2 calculation modes."]
     #[inline(always)]
     pub const fn set_gf2conv(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Clear universal pointer cache"]
+    #[doc = "Clear universal pointer cache."]
     #[must_use]
     #[inline(always)]
     pub const fn clrcache(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Clear universal pointer cache"]
+    #[doc = "Clear universal pointer cache."]
     #[inline(always)]
     pub const fn set_clrcache(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Enable universal pointer cache"]
+    #[doc = "Enable universal pointer cache."]
     #[must_use]
     #[inline(always)]
     pub const fn cache_en(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable universal pointer cache"]
+    #[doc = "Enable universal pointer cache."]
     #[inline(always)]
     pub const fn set_cache_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "Reduced multiplier mode"]
+    #[doc = "Reduced multiplier mode."]
     #[must_use]
     #[inline(always)]
     pub const fn redmul(&self) -> super::vals::Redmul {
         let val = (self.0 >> 10usize) & 0x03;
         super::vals::Redmul::from_bits(val as u8)
     }
-    #[doc = "Reduced multiplier mode"]
+    #[doc = "Reduced multiplier mode."]
     #[inline(always)]
     pub const fn set_redmul(&mut self, val: super::vals::Redmul) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u32) & 0x03) << 10usize);
@@ -512,7 +512,7 @@ impl defmt::Format for PkcCtrl {
         )
     }
 }
-#[doc = "Interrupt enable clear"]
+#[doc = "Interrupt enable clear."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PkcIntClrEnable(pub u32);
@@ -553,7 +553,7 @@ impl defmt::Format for PkcIntClrEnable {
         )
     }
 }
-#[doc = "Interrupt status clear"]
+#[doc = "Interrupt status clear."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PkcIntClrStatus(pub u32);
@@ -594,19 +594,19 @@ impl defmt::Format for PkcIntClrStatus {
         )
     }
 }
-#[doc = "Interrupt enable"]
+#[doc = "Interrupt enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PkcIntEnable(pub u32);
 impl PkcIntEnable {
-    #[doc = "PDONE interrupt enable flag"]
+    #[doc = "PDONE interrupt enable flag."]
     #[must_use]
     #[inline(always)]
     pub const fn en_pdone(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "PDONE interrupt enable flag"]
+    #[doc = "PDONE interrupt enable flag."]
     #[inline(always)]
     pub const fn set_en_pdone(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -631,7 +631,7 @@ impl defmt::Format for PkcIntEnable {
         defmt::write!(f, "PkcIntEnable {{ en_pdone: {=bool:?} }}", self.en_pdone())
     }
 }
-#[doc = "Interrupt enable set"]
+#[doc = "Interrupt enable set."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PkcIntSetEnable(pub u32);
@@ -672,19 +672,19 @@ impl defmt::Format for PkcIntSetEnable {
         )
     }
 }
-#[doc = "Interrupt status set"]
+#[doc = "Interrupt status set."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PkcIntSetStatus(pub u32);
 impl PkcIntSetStatus {
-    #[doc = "Write to set End-of-computation status flag (PKC_INT_STATUS\\[INT_PDONE\\]=1) to trigger a PKC interrupt via software, e"]
+    #[doc = "Write to set End-of-computation status flag (PKC_INT_STATUS\\[INT_PDONE\\]=1) to trigger a PKC interrupt via software, e."]
     #[must_use]
     #[inline(always)]
     pub const fn int_pdone(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Write to set End-of-computation status flag (PKC_INT_STATUS\\[INT_PDONE\\]=1) to trigger a PKC interrupt via software, e"]
+    #[doc = "Write to set End-of-computation status flag (PKC_INT_STATUS\\[INT_PDONE\\]=1) to trigger a PKC interrupt via software, e."]
     #[inline(always)]
     pub const fn set_int_pdone(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -713,19 +713,19 @@ impl defmt::Format for PkcIntSetStatus {
         )
     }
 }
-#[doc = "Interrupt status"]
+#[doc = "Interrupt status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PkcIntStatus(pub u32);
 impl PkcIntStatus {
-    #[doc = "End-of-computation status flag"]
+    #[doc = "End-of-computation status flag."]
     #[must_use]
     #[inline(always)]
     pub const fn int_pdone(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "End-of-computation status flag"]
+    #[doc = "End-of-computation status flag."]
     #[inline(always)]
     pub const fn set_int_pdone(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -754,31 +754,31 @@ impl defmt::Format for PkcIntStatus {
         )
     }
 }
-#[doc = "Length register, parameter set 1"]
+#[doc = "Length register, parameter set 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PkcLen1(pub u32);
 impl PkcLen1 {
-    #[doc = "Operand length"]
+    #[doc = "Operand length."]
     #[must_use]
     #[inline(always)]
     pub const fn len(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Operand length"]
+    #[doc = "Operand length."]
     #[inline(always)]
     pub const fn set_len(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Loop counter for microcode pattern"]
+    #[doc = "Loop counter for microcode pattern."]
     #[must_use]
     #[inline(always)]
     pub const fn mclen(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "Loop counter for microcode pattern"]
+    #[doc = "Loop counter for microcode pattern."]
     #[inline(always)]
     pub const fn set_mclen(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -809,31 +809,31 @@ impl defmt::Format for PkcLen1 {
         )
     }
 }
-#[doc = "Length register, parameter set 2"]
+#[doc = "Length register, parameter set 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PkcLen2(pub u32);
 impl PkcLen2 {
-    #[doc = "Operand length"]
+    #[doc = "Operand length."]
     #[must_use]
     #[inline(always)]
     pub const fn len(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Operand length"]
+    #[doc = "Operand length."]
     #[inline(always)]
     pub const fn set_len(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Loop counter for microcode pattern"]
+    #[doc = "Loop counter for microcode pattern."]
     #[must_use]
     #[inline(always)]
     pub const fn mclen(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "Loop counter for microcode pattern"]
+    #[doc = "Loop counter for microcode pattern."]
     #[inline(always)]
     pub const fn set_mclen(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -864,19 +864,19 @@ impl defmt::Format for PkcLen2 {
         )
     }
 }
-#[doc = "MC pattern data interface"]
+#[doc = "MC pattern data interface."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PkcMcdata(pub u32);
 impl PkcMcdata {
-    #[doc = "Microcode read/write data"]
+    #[doc = "Microcode read/write data."]
     #[must_use]
     #[inline(always)]
     pub const fn mcdata(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Microcode read/write data"]
+    #[doc = "Microcode read/write data."]
     #[inline(always)]
     pub const fn set_mcdata(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -901,19 +901,19 @@ impl defmt::Format for PkcMcdata {
         defmt::write!(f, "PkcMcdata {{ mcdata: {=u32:?} }}", self.mcdata())
     }
 }
-#[doc = "Mode register, parameter set 1"]
+#[doc = "Mode register, parameter set 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PkcMode1(pub u32);
 impl PkcMode1 {
-    #[doc = "Calculation Mode / MC Start address"]
+    #[doc = "Calculation Mode / MC Start address."]
     #[must_use]
     #[inline(always)]
     pub const fn mode(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Calculation Mode / MC Start address"]
+    #[doc = "Calculation Mode / MC Start address."]
     #[inline(always)]
     pub const fn set_mode(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
@@ -938,19 +938,19 @@ impl defmt::Format for PkcMode1 {
         defmt::write!(f, "PkcMode1 {{ mode: {=u8:?} }}", self.mode())
     }
 }
-#[doc = "Mode register, parameter set 2"]
+#[doc = "Mode register, parameter set 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PkcMode2(pub u32);
 impl PkcMode2 {
-    #[doc = "Calculation Mode / MC Start address"]
+    #[doc = "Calculation Mode / MC Start address."]
     #[must_use]
     #[inline(always)]
     pub const fn mode(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Calculation Mode / MC Start address"]
+    #[doc = "Calculation Mode / MC Start address."]
     #[inline(always)]
     pub const fn set_mode(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
@@ -975,55 +975,55 @@ impl defmt::Format for PkcMode2 {
         defmt::write!(f, "PkcMode2 {{ mode: {=u8:?} }}", self.mode())
     }
 }
-#[doc = "Module ID"]
+#[doc = "Module ID."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PkcModuleId(pub u32);
 impl PkcModuleId {
-    #[doc = "Address space of the IP"]
+    #[doc = "Address space of the IP."]
     #[must_use]
     #[inline(always)]
     pub const fn size(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Address space of the IP"]
+    #[doc = "Address space of the IP."]
     #[inline(always)]
     pub const fn set_size(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "Minor revision"]
+    #[doc = "Minor revision."]
     #[must_use]
     #[inline(always)]
     pub const fn minor_rev(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x0f;
         val as u8
     }
-    #[doc = "Minor revision"]
+    #[doc = "Minor revision."]
     #[inline(always)]
     pub const fn set_minor_rev(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val as u32) & 0x0f) << 8usize);
     }
-    #[doc = "Major revision"]
+    #[doc = "Major revision."]
     #[must_use]
     #[inline(always)]
     pub const fn major_rev(&self) -> u8 {
         let val = (self.0 >> 12usize) & 0x0f;
         val as u8
     }
-    #[doc = "Major revision"]
+    #[doc = "Major revision."]
     #[inline(always)]
     pub const fn set_major_rev(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 12usize)) | (((val as u32) & 0x0f) << 12usize);
     }
-    #[doc = "Module ID"]
+    #[doc = "Module ID."]
     #[must_use]
     #[inline(always)]
     pub const fn id(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "Module ID"]
+    #[doc = "Module ID."]
     #[inline(always)]
     pub const fn set_id(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -1058,19 +1058,19 @@ impl defmt::Format for PkcModuleId {
         )
     }
 }
-#[doc = "Software reset"]
+#[doc = "Software reset."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PkcSoftRst(pub u32);
 impl PkcSoftRst {
-    #[doc = "Write 1 to reset module (0 has no effect)"]
+    #[doc = "Write 1 to reset module (0 has no effect)."]
     #[must_use]
     #[inline(always)]
     pub const fn soft_rst(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Write 1 to reset module (0 has no effect)"]
+    #[doc = "Write 1 to reset module (0 has no effect)."]
     #[inline(always)]
     pub const fn set_soft_rst(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -1095,67 +1095,67 @@ impl defmt::Format for PkcSoftRst {
         defmt::write!(f, "PkcSoftRst {{ soft_rst: {=bool:?} }}", self.soft_rst())
     }
 }
-#[doc = "Status Register"]
+#[doc = "Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PkcStatus(pub u32);
 impl PkcStatus {
-    #[doc = "PKC ACTIV"]
+    #[doc = "PKC ACTIV."]
     #[must_use]
     #[inline(always)]
     pub const fn activ(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "PKC ACTIV"]
+    #[doc = "PKC ACTIV."]
     #[inline(always)]
     pub const fn set_activ(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Carry overflow flag"]
+    #[doc = "Carry overflow flag."]
     #[must_use]
     #[inline(always)]
     pub const fn carry(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Carry overflow flag"]
+    #[doc = "Carry overflow flag."]
     #[inline(always)]
     pub const fn set_carry(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Zero result flag"]
+    #[doc = "Zero result flag."]
     #[must_use]
     #[inline(always)]
     pub const fn zero(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Zero result flag"]
+    #[doc = "Zero result flag."]
     #[inline(always)]
     pub const fn set_zero(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Combined GO status flag"]
+    #[doc = "Combined GO status flag."]
     #[must_use]
     #[inline(always)]
     pub const fn goany(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Combined GO status flag"]
+    #[doc = "Combined GO status flag."]
     #[inline(always)]
     pub const fn set_goany(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "Parameter set locked"]
+    #[doc = "Parameter set locked."]
     #[must_use]
     #[inline(always)]
     pub const fn locked(&self) -> u8 {
         let val = (self.0 >> 5usize) & 0x03;
         val as u8
     }
-    #[doc = "Parameter set locked"]
+    #[doc = "Parameter set locked."]
     #[inline(always)]
     pub const fn set_locked(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 5usize)) | (((val as u32) & 0x03) << 5usize);
@@ -1192,19 +1192,19 @@ impl defmt::Format for PkcStatus {
         )
     }
 }
-#[doc = "Universal pointer length"]
+#[doc = "Universal pointer length."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PkcUlen(pub u32);
 impl PkcUlen {
-    #[doc = "Length of universal pointer calculation"]
+    #[doc = "Length of universal pointer calculation."]
     #[must_use]
     #[inline(always)]
     pub const fn len(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Length of universal pointer calculation"]
+    #[doc = "Length of universal pointer calculation."]
     #[inline(always)]
     pub const fn set_len(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
@@ -1227,19 +1227,19 @@ impl defmt::Format for PkcUlen {
         defmt::write!(f, "PkcUlen {{ len: {=u8:?} }}", self.len())
     }
 }
-#[doc = "Universal pointer FUP program"]
+#[doc = "Universal pointer FUP program."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PkcUptr(pub u32);
 impl PkcUptr {
-    #[doc = "Pointer to start address of PKC FUP program"]
+    #[doc = "Pointer to start address of PKC FUP program."]
     #[must_use]
     #[inline(always)]
     pub const fn ptr(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Pointer to start address of PKC FUP program"]
+    #[doc = "Pointer to start address of PKC FUP program."]
     #[inline(always)]
     pub const fn set_ptr(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1262,19 +1262,19 @@ impl defmt::Format for PkcUptr {
         defmt::write!(f, "PkcUptr {{ ptr: {=u32:?} }}", self.ptr())
     }
 }
-#[doc = "Universal pointer FUP table"]
+#[doc = "Universal pointer FUP table."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PkcUptrt(pub u32);
 impl PkcUptrt {
-    #[doc = "Pointer to start address of PKC FUP table"]
+    #[doc = "Pointer to start address of PKC FUP table."]
     #[must_use]
     #[inline(always)]
     pub const fn ptr(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Pointer to start address of PKC FUP table"]
+    #[doc = "Pointer to start address of PKC FUP table."]
     #[inline(always)]
     pub const fn set_ptr(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1299,127 +1299,127 @@ impl defmt::Format for PkcUptrt {
         defmt::write!(f, "PkcUptrt {{ ptr: {=u32:?} }}", self.ptr())
     }
 }
-#[doc = "PKC version register"]
+#[doc = "PKC version register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PkcVersion(pub u32);
 impl PkcVersion {
-    #[doc = "Native multiplier size and operand granularity"]
+    #[doc = "Native multiplier size and operand granularity."]
     #[must_use]
     #[inline(always)]
     pub const fn mulsize(&self) -> super::vals::Mulsize {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Mulsize::from_bits(val as u8)
     }
-    #[doc = "Native multiplier size and operand granularity"]
+    #[doc = "Native multiplier size and operand granularity."]
     #[inline(always)]
     pub const fn set_mulsize(&mut self, val: super::vals::Mulsize) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "MC feature (layer1 calculation) is available"]
+    #[doc = "MC feature (layer1 calculation) is available."]
     #[must_use]
     #[inline(always)]
     pub const fn mcavail(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "MC feature (layer1 calculation) is available"]
+    #[doc = "MC feature (layer1 calculation) is available."]
     #[inline(always)]
     pub const fn set_mcavail(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "UP feature (layer2 calculation) is available"]
+    #[doc = "UP feature (layer2 calculation) is available."]
     #[must_use]
     #[inline(always)]
     pub const fn upavail(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "UP feature (layer2 calculation) is available"]
+    #[doc = "UP feature (layer2 calculation) is available."]
     #[inline(always)]
     pub const fn set_upavail(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "UP cache is available"]
+    #[doc = "UP cache is available."]
     #[must_use]
     #[inline(always)]
     pub const fn upcacheavail(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "UP cache is available"]
+    #[doc = "UP cache is available."]
     #[inline(always)]
     pub const fn set_upcacheavail(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "GF2 calculation modes are available"]
+    #[doc = "GF2 calculation modes are available."]
     #[must_use]
     #[inline(always)]
     pub const fn gf2avail(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "GF2 calculation modes are available"]
+    #[doc = "GF2 calculation modes are available."]
     #[inline(always)]
     pub const fn set_gf2avail(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "Number of parameter sets for real calculation"]
+    #[doc = "Number of parameter sets for real calculation."]
     #[must_use]
     #[inline(always)]
     pub const fn paramnum(&self) -> u8 {
         let val = (self.0 >> 6usize) & 0x03;
         val as u8
     }
-    #[doc = "Number of parameter sets for real calculation"]
+    #[doc = "Number of parameter sets for real calculation."]
     #[inline(always)]
     pub const fn set_paramnum(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val as u32) & 0x03) << 6usize);
     }
-    #[doc = "SBX0 operation is available"]
+    #[doc = "SBX0 operation is available."]
     #[must_use]
     #[inline(always)]
     pub const fn sbx0avail(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "SBX0 operation is available"]
+    #[doc = "SBX0 operation is available."]
     #[inline(always)]
     pub const fn set_sbx0avail(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "SBX1 operation is available"]
+    #[doc = "SBX1 operation is available."]
     #[must_use]
     #[inline(always)]
     pub const fn sbx1avail(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "SBX1 operation is available"]
+    #[doc = "SBX1 operation is available."]
     #[inline(always)]
     pub const fn set_sbx1avail(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "SBX2 operation is available"]
+    #[doc = "SBX2 operation is available."]
     #[must_use]
     #[inline(always)]
     pub const fn sbx2avail(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "SBX2 operation is available"]
+    #[doc = "SBX2 operation is available."]
     #[inline(always)]
     pub const fn set_sbx2avail(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "SBX3 operation is available"]
+    #[doc = "SBX3 operation is available."]
     #[must_use]
     #[inline(always)]
     pub const fn sbx3avail(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "SBX3 operation is available"]
+    #[doc = "SBX3 operation is available."]
     #[inline(always)]
     pub const fn set_sbx3avail(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
@@ -1480,31 +1480,31 @@ impl defmt::Format for PkcVersion {
         )
     }
 }
-#[doc = "X+Y pointer register, parameter set 1"]
+#[doc = "X+Y pointer register, parameter set 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PkcXyptr1(pub u32);
 impl PkcXyptr1 {
-    #[doc = "Start address of X operand in PKCRAM with byte granularity"]
+    #[doc = "Start address of X operand in PKCRAM with byte granularity."]
     #[must_use]
     #[inline(always)]
     pub const fn xptr(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Start address of X operand in PKCRAM with byte granularity"]
+    #[doc = "Start address of X operand in PKCRAM with byte granularity."]
     #[inline(always)]
     pub const fn set_xptr(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Start address of Y operand in PKCRAM with byte granularity"]
+    #[doc = "Start address of Y operand in PKCRAM with byte granularity."]
     #[must_use]
     #[inline(always)]
     pub const fn yptr(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "Start address of Y operand in PKCRAM with byte granularity"]
+    #[doc = "Start address of Y operand in PKCRAM with byte granularity."]
     #[inline(always)]
     pub const fn set_yptr(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -1535,31 +1535,31 @@ impl defmt::Format for PkcXyptr1 {
         )
     }
 }
-#[doc = "X+Y pointer register, parameter set 2"]
+#[doc = "X+Y pointer register, parameter set 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PkcXyptr2(pub u32);
 impl PkcXyptr2 {
-    #[doc = "Start address of X operand in PKCRAM with byte granularity"]
+    #[doc = "Start address of X operand in PKCRAM with byte granularity."]
     #[must_use]
     #[inline(always)]
     pub const fn xptr(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Start address of X operand in PKCRAM with byte granularity"]
+    #[doc = "Start address of X operand in PKCRAM with byte granularity."]
     #[inline(always)]
     pub const fn set_xptr(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Start address of Y operand in PKCRAM with byte granularity"]
+    #[doc = "Start address of Y operand in PKCRAM with byte granularity."]
     #[must_use]
     #[inline(always)]
     pub const fn yptr(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "Start address of Y operand in PKCRAM with byte granularity"]
+    #[doc = "Start address of Y operand in PKCRAM with byte granularity."]
     #[inline(always)]
     pub const fn set_yptr(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -1590,31 +1590,31 @@ impl defmt::Format for PkcXyptr2 {
         )
     }
 }
-#[doc = "Z+R pointer register, parameter set 1"]
+#[doc = "Z+R pointer register, parameter set 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PkcZrptr1(pub u32);
 impl PkcZrptr1 {
-    #[doc = "Start address of Z operand in PKCRAM with byte granularity or constant for calculation modes using CONST"]
+    #[doc = "Start address of Z operand in PKCRAM with byte granularity or constant for calculation modes using CONST."]
     #[must_use]
     #[inline(always)]
     pub const fn zptr(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Start address of Z operand in PKCRAM with byte granularity or constant for calculation modes using CONST"]
+    #[doc = "Start address of Z operand in PKCRAM with byte granularity or constant for calculation modes using CONST."]
     #[inline(always)]
     pub const fn set_zptr(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Start address of R result in PKCRAM with byte granularity"]
+    #[doc = "Start address of R result in PKCRAM with byte granularity."]
     #[must_use]
     #[inline(always)]
     pub const fn rptr(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "Start address of R result in PKCRAM with byte granularity"]
+    #[doc = "Start address of R result in PKCRAM with byte granularity."]
     #[inline(always)]
     pub const fn set_rptr(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -1645,31 +1645,31 @@ impl defmt::Format for PkcZrptr1 {
         )
     }
 }
-#[doc = "Z+R pointer register, parameter set 2"]
+#[doc = "Z+R pointer register, parameter set 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PkcZrptr2(pub u32);
 impl PkcZrptr2 {
-    #[doc = "Start address of Z operand in PKCRAM with byte granularity or constant for calculation modes using CONST"]
+    #[doc = "Start address of Z operand in PKCRAM with byte granularity or constant for calculation modes using CONST."]
     #[must_use]
     #[inline(always)]
     pub const fn zpt(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "Start address of Z operand in PKCRAM with byte granularity or constant for calculation modes using CONST"]
+    #[doc = "Start address of Z operand in PKCRAM with byte granularity or constant for calculation modes using CONST."]
     #[inline(always)]
     pub const fn set_zpt(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Start address of R result in PKCRAM with byte granularity"]
+    #[doc = "Start address of R result in PKCRAM with byte granularity."]
     #[must_use]
     #[inline(always)]
     pub const fn rptr(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "Start address of R result in PKCRAM with byte granularity"]
+    #[doc = "Start address of R result in PKCRAM with byte granularity."]
     #[inline(always)]
     pub const fn set_rptr(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);

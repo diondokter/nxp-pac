@@ -1030,7 +1030,7 @@ impl defmt::Format for Fifordnopop {
         )
     }
 }
-#[doc = "FIFO size register"]
+#[doc = "FIFO size register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Fifosize(pub u32);

@@ -140,7 +140,7 @@ impl From<CalRdy> for u8 {
 pub enum CalReq {
     #[doc = "No request for auto-calibration has been made."]
     CAL_REQ_0 = 0x0,
-    #[doc = "A request for auto-calibration has been made"]
+    #[doc = "A request for auto-calibration has been made."]
     CAL_REQ_1 = 0x01,
 }
 impl CalReq {
@@ -169,9 +169,9 @@ impl From<CalReq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Calofs {
-    #[doc = "Calibration function disabled"]
+    #[doc = "Calibration function disabled."]
     CALOFS_0 = 0x0,
-    #[doc = "Request for offset calibration function"]
+    #[doc = "Request for offset calibration function."]
     CALOFS_1 = 0x01,
 }
 impl Calofs {
@@ -381,9 +381,9 @@ impl From<Cmdh10Loop> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh10Lwi {
-    #[doc = "Auto channel increment disabled"]
+    #[doc = "Auto channel increment disabled."]
     LWI_0 = 0x0,
-    #[doc = "Auto channel increment enabled"]
+    #[doc = "Auto channel increment enabled."]
     LWI_1 = 0x01,
 }
 impl Cmdh10Lwi {
@@ -416,21 +416,21 @@ pub enum Cmdh10Next {
     NEXT_0 = 0x0,
     #[doc = "Select CMD1 command buffer register as next command."]
     NEXT_1 = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_6 = 0x06,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_7 = 0x07,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_8 = 0x08,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -637,9 +637,9 @@ impl From<Cmdh11Loop> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh11Lwi {
-    #[doc = "Auto channel increment disabled"]
+    #[doc = "Auto channel increment disabled."]
     LWI_0 = 0x0,
-    #[doc = "Auto channel increment enabled"]
+    #[doc = "Auto channel increment enabled."]
     LWI_1 = 0x01,
 }
 impl Cmdh11Lwi {
@@ -672,21 +672,21 @@ pub enum Cmdh11Next {
     NEXT_0 = 0x0,
     #[doc = "Select CMD1 command buffer register as next command."]
     NEXT_1 = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_6 = 0x06,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_7 = 0x07,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_8 = 0x08,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -893,9 +893,9 @@ impl From<Cmdh12Loop> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh12Lwi {
-    #[doc = "Auto channel increment disabled"]
+    #[doc = "Auto channel increment disabled."]
     LWI_0 = 0x0,
-    #[doc = "Auto channel increment enabled"]
+    #[doc = "Auto channel increment enabled."]
     LWI_1 = 0x01,
 }
 impl Cmdh12Lwi {
@@ -928,21 +928,21 @@ pub enum Cmdh12Next {
     NEXT_0 = 0x0,
     #[doc = "Select CMD1 command buffer register as next command."]
     NEXT_1 = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_6 = 0x06,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_7 = 0x07,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_8 = 0x08,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -1149,9 +1149,9 @@ impl From<Cmdh13Loop> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh13Lwi {
-    #[doc = "Auto channel increment disabled"]
+    #[doc = "Auto channel increment disabled."]
     LWI_0 = 0x0,
-    #[doc = "Auto channel increment enabled"]
+    #[doc = "Auto channel increment enabled."]
     LWI_1 = 0x01,
 }
 impl Cmdh13Lwi {
@@ -1184,21 +1184,21 @@ pub enum Cmdh13Next {
     NEXT_0 = 0x0,
     #[doc = "Select CMD1 command buffer register as next command."]
     NEXT_1 = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_6 = 0x06,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_7 = 0x07,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_8 = 0x08,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -1405,9 +1405,9 @@ impl From<Cmdh14Loop> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh14Lwi {
-    #[doc = "Auto channel increment disabled"]
+    #[doc = "Auto channel increment disabled."]
     LWI_0 = 0x0,
-    #[doc = "Auto channel increment enabled"]
+    #[doc = "Auto channel increment enabled."]
     LWI_1 = 0x01,
 }
 impl Cmdh14Lwi {
@@ -1440,21 +1440,21 @@ pub enum Cmdh14Next {
     NEXT_0 = 0x0,
     #[doc = "Select CMD1 command buffer register as next command."]
     NEXT_1 = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_6 = 0x06,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_7 = 0x07,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_8 = 0x08,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -1661,9 +1661,9 @@ impl From<Cmdh15Loop> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh15Lwi {
-    #[doc = "Auto channel increment disabled"]
+    #[doc = "Auto channel increment disabled."]
     LWI_0 = 0x0,
-    #[doc = "Auto channel increment enabled"]
+    #[doc = "Auto channel increment enabled."]
     LWI_1 = 0x01,
 }
 impl Cmdh15Lwi {
@@ -1696,21 +1696,21 @@ pub enum Cmdh15Next {
     NEXT_0 = 0x0,
     #[doc = "Select CMD1 command buffer register as next command."]
     NEXT_1 = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_6 = 0x06,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_7 = 0x07,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_8 = 0x08,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -1951,9 +1951,9 @@ impl From<Cmdh1Loop> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh1Lwi {
-    #[doc = "Auto channel increment disabled"]
+    #[doc = "Auto channel increment disabled."]
     LWI_0 = 0x0,
-    #[doc = "Auto channel increment enabled"]
+    #[doc = "Auto channel increment enabled."]
     LWI_1 = 0x01,
 }
 impl Cmdh1Lwi {
@@ -1986,21 +1986,21 @@ pub enum Cmdh1Next {
     NEXT_0 = 0x0,
     #[doc = "Select CMD1 command buffer register as next command."]
     NEXT_1 = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_6 = 0x06,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_7 = 0x07,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_8 = 0x08,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -2241,9 +2241,9 @@ impl From<Cmdh2Loop> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh2Lwi {
-    #[doc = "Auto channel increment disabled"]
+    #[doc = "Auto channel increment disabled."]
     LWI_0 = 0x0,
-    #[doc = "Auto channel increment enabled"]
+    #[doc = "Auto channel increment enabled."]
     LWI_1 = 0x01,
 }
 impl Cmdh2Lwi {
@@ -2276,21 +2276,21 @@ pub enum Cmdh2Next {
     NEXT_0 = 0x0,
     #[doc = "Select CMD1 command buffer register as next command."]
     NEXT_1 = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_6 = 0x06,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_7 = 0x07,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_8 = 0x08,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -2531,9 +2531,9 @@ impl From<Cmdh3Loop> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh3Lwi {
-    #[doc = "Auto channel increment disabled"]
+    #[doc = "Auto channel increment disabled."]
     LWI_0 = 0x0,
-    #[doc = "Auto channel increment enabled"]
+    #[doc = "Auto channel increment enabled."]
     LWI_1 = 0x01,
 }
 impl Cmdh3Lwi {
@@ -2566,21 +2566,21 @@ pub enum Cmdh3Next {
     NEXT_0 = 0x0,
     #[doc = "Select CMD1 command buffer register as next command."]
     NEXT_1 = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_6 = 0x06,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_7 = 0x07,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_8 = 0x08,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -2821,9 +2821,9 @@ impl From<Cmdh4Loop> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh4Lwi {
-    #[doc = "Auto channel increment disabled"]
+    #[doc = "Auto channel increment disabled."]
     LWI_0 = 0x0,
-    #[doc = "Auto channel increment enabled"]
+    #[doc = "Auto channel increment enabled."]
     LWI_1 = 0x01,
 }
 impl Cmdh4Lwi {
@@ -2856,21 +2856,21 @@ pub enum Cmdh4Next {
     NEXT_0 = 0x0,
     #[doc = "Select CMD1 command buffer register as next command."]
     NEXT_1 = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_6 = 0x06,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_7 = 0x07,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_8 = 0x08,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -3077,9 +3077,9 @@ impl From<Cmdh5Loop> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh5Lwi {
-    #[doc = "Auto channel increment disabled"]
+    #[doc = "Auto channel increment disabled."]
     LWI_0 = 0x0,
-    #[doc = "Auto channel increment enabled"]
+    #[doc = "Auto channel increment enabled."]
     LWI_1 = 0x01,
 }
 impl Cmdh5Lwi {
@@ -3112,21 +3112,21 @@ pub enum Cmdh5Next {
     NEXT_0 = 0x0,
     #[doc = "Select CMD1 command buffer register as next command."]
     NEXT_1 = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_6 = 0x06,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_7 = 0x07,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_8 = 0x08,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -3333,9 +3333,9 @@ impl From<Cmdh6Loop> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh6Lwi {
-    #[doc = "Auto channel increment disabled"]
+    #[doc = "Auto channel increment disabled."]
     LWI_0 = 0x0,
-    #[doc = "Auto channel increment enabled"]
+    #[doc = "Auto channel increment enabled."]
     LWI_1 = 0x01,
 }
 impl Cmdh6Lwi {
@@ -3368,21 +3368,21 @@ pub enum Cmdh6Next {
     NEXT_0 = 0x0,
     #[doc = "Select CMD1 command buffer register as next command."]
     NEXT_1 = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_6 = 0x06,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_7 = 0x07,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_8 = 0x08,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -3589,9 +3589,9 @@ impl From<Cmdh7Loop> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh7Lwi {
-    #[doc = "Auto channel increment disabled"]
+    #[doc = "Auto channel increment disabled."]
     LWI_0 = 0x0,
-    #[doc = "Auto channel increment enabled"]
+    #[doc = "Auto channel increment enabled."]
     LWI_1 = 0x01,
 }
 impl Cmdh7Lwi {
@@ -3624,21 +3624,21 @@ pub enum Cmdh7Next {
     NEXT_0 = 0x0,
     #[doc = "Select CMD1 command buffer register as next command."]
     NEXT_1 = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_6 = 0x06,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_7 = 0x07,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_8 = 0x08,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -3845,9 +3845,9 @@ impl From<Cmdh8Loop> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh8Lwi {
-    #[doc = "Auto channel increment disabled"]
+    #[doc = "Auto channel increment disabled."]
     LWI_0 = 0x0,
-    #[doc = "Auto channel increment enabled"]
+    #[doc = "Auto channel increment enabled."]
     LWI_1 = 0x01,
 }
 impl Cmdh8Lwi {
@@ -3880,21 +3880,21 @@ pub enum Cmdh8Next {
     NEXT_0 = 0x0,
     #[doc = "Select CMD1 command buffer register as next command."]
     NEXT_1 = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_6 = 0x06,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_7 = 0x07,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_8 = 0x08,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -4101,9 +4101,9 @@ impl From<Cmdh9Loop> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmdh9Lwi {
-    #[doc = "Auto channel increment disabled"]
+    #[doc = "Auto channel increment disabled."]
     LWI_0 = 0x0,
-    #[doc = "Auto channel increment enabled"]
+    #[doc = "Auto channel increment enabled."]
     LWI_1 = 0x01,
 }
 impl Cmdh9Lwi {
@@ -4136,21 +4136,21 @@ pub enum Cmdh9Next {
     NEXT_0 = 0x0,
     #[doc = "Select CMD1 command buffer register as next command."]
     NEXT_1 = 0x01,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_2 = 0x02,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_3 = 0x03,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_4 = 0x04,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_5 = 0x05,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_6 = 0x06,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_7 = 0x07,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_8 = 0x08,
-    #[doc = "Select corresponding CMD command buffer register as next command"]
+    #[doc = "Select corresponding CMD command buffer register as next command."]
     NEXT_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -6469,9 +6469,9 @@ impl From<Dozen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FifoSelA {
-    #[doc = "Result written to FIFO 0"]
+    #[doc = "Result written to FIFO 0."]
     FIFO_SEL_A_0 = 0x0,
-    #[doc = "Result written to FIFO 1"]
+    #[doc = "Result written to FIFO 1."]
     FIFO_SEL_A_1 = 0x01,
 }
 impl FifoSelA {
@@ -6500,9 +6500,9 @@ impl From<FifoSelA> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FifoSelB {
-    #[doc = "Result written to FIFO 0"]
+    #[doc = "Result written to FIFO 0."]
     FIFO_SEL_B_0 = 0x0,
-    #[doc = "Result written to FIFO 1"]
+    #[doc = "Result written to FIFO 1."]
     FIFO_SEL_B_1 = 0x01,
 }
 impl FifoSelB {
@@ -6936,9 +6936,9 @@ impl From<HptExdi> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Hten {
-    #[doc = "Hardware trigger source disabled"]
+    #[doc = "Hardware trigger source disabled."]
     HTEN_0 = 0x0,
-    #[doc = "Hardware trigger source enabled"]
+    #[doc = "Hardware trigger source enabled."]
     HTEN_1 = 0x01,
 }
 impl Hten {
@@ -7083,7 +7083,7 @@ impl From<Mvi> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum NumFifo {
-    #[doc = "N/A"]
+    #[doc = "N/A."]
     NUM_FIFO_0 = 0x0,
     #[doc = "This design supports one result FIFO."]
     NUM_FIFO_1 = 0x01,
@@ -7154,9 +7154,9 @@ impl From<NumSec> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pauseen {
-    #[doc = "Pause operation disabled"]
+    #[doc = "Pause operation disabled."]
     PAUSEEN_0 = 0x0,
-    #[doc = "Pause operation enabled"]
+    #[doc = "Pause operation enabled."]
     PAUSEEN_1 = 0x01,
 }
 impl Pauseen {
@@ -7969,30 +7969,30 @@ impl From<Swt9> for u8 {
 pub enum Tcmd {
     #[doc = "Not a valid selection from the command buffer. Trigger event is ignored."]
     TCMD_0 = 0x0,
-    #[doc = "CMD1 is executed"]
+    #[doc = "CMD1 is executed."]
     TCMD_1 = 0x01,
-    #[doc = "Corresponding CMD is executed"]
+    #[doc = "Corresponding CMD is executed."]
     TCMD_2 = 0x02,
-    #[doc = "Corresponding CMD is executed"]
+    #[doc = "Corresponding CMD is executed."]
     TCMD_3 = 0x03,
-    #[doc = "Corresponding CMD is executed"]
+    #[doc = "Corresponding CMD is executed."]
     TCMD_4 = 0x04,
-    #[doc = "Corresponding CMD is executed"]
+    #[doc = "Corresponding CMD is executed."]
     TCMD_5 = 0x05,
-    #[doc = "Corresponding CMD is executed"]
+    #[doc = "Corresponding CMD is executed."]
     TCMD_6 = 0x06,
-    #[doc = "Corresponding CMD is executed"]
+    #[doc = "Corresponding CMD is executed."]
     TCMD_7 = 0x07,
-    #[doc = "Corresponding CMD is executed"]
+    #[doc = "Corresponding CMD is executed."]
     TCMD_8 = 0x08,
-    #[doc = "Corresponding CMD is executed"]
+    #[doc = "Corresponding CMD is executed."]
     TCMD_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "CMD15 is executed"]
+    #[doc = "CMD15 is executed."]
     TCMD_15 = 0x0f,
 }
 impl Tcmd {
@@ -8397,32 +8397,32 @@ impl From<TexcNum> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tpri {
-    #[doc = "Set to highest priority, Level 1"]
+    #[doc = "Set to highest priority, Level 1."]
     TPRI_0 = 0x0,
-    #[doc = "Set to corresponding priority level"]
+    #[doc = "Set to corresponding priority level."]
     TPRI_1 = 0x01,
-    #[doc = "Set to corresponding priority level"]
+    #[doc = "Set to corresponding priority level."]
     TPRI_2 = 0x02,
-    #[doc = "Set to corresponding priority level"]
+    #[doc = "Set to corresponding priority level."]
     TPRI_3 = 0x03,
-    #[doc = "Set to corresponding priority level"]
+    #[doc = "Set to corresponding priority level."]
     TPRI_4 = 0x04,
-    #[doc = "Set to corresponding priority level"]
+    #[doc = "Set to corresponding priority level."]
     TPRI_5 = 0x05,
-    #[doc = "Set to corresponding priority level"]
+    #[doc = "Set to corresponding priority level."]
     TPRI_6 = 0x06,
-    #[doc = "Set to corresponding priority level"]
+    #[doc = "Set to corresponding priority level."]
     TPRI_7 = 0x07,
-    #[doc = "Set to corresponding priority level"]
+    #[doc = "Set to corresponding priority level."]
     TPRI_8 = 0x08,
-    #[doc = "Set to corresponding priority level"]
+    #[doc = "Set to corresponding priority level."]
     TPRI_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "Set to lowest priority, Level 16"]
+    #[doc = "Set to lowest priority, Level 16."]
     TPRI_15 = 0x0f,
 }
 impl Tpri {

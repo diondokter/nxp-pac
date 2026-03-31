@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ApllLock {
-    #[doc = "APLL is not powered on or not locked"]
+    #[doc = "APLL is not powered on or not locked."]
     DISABLED_OR_NOT_VALID = 0x0,
-    #[doc = "APLL is locked"]
+    #[doc = "APLL is locked."]
     ENABLED_AND_VALID = 0x01,
 }
 impl ApllLock {
@@ -33,9 +33,9 @@ impl From<ApllLock> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Apllcmre {
-    #[doc = "Clock monitor generates an interrupt when an error is detected"]
+    #[doc = "Clock monitor generates an interrupt when an error is detected."]
     GENERATE_INTERRUPT = 0x0,
-    #[doc = "Clock monitor generates a reset when an error is detected"]
+    #[doc = "Clock monitor generates a reset when an error is detected."]
     GENERATE_RESET = 0x01,
 }
 impl Apllcmre {
@@ -64,9 +64,9 @@ impl From<Apllcmre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ApllcsrLk {
-    #[doc = "Control Status Register can be written"]
+    #[doc = "Control Status Register can be written."]
     WRITE_ENABLED = 0x0,
-    #[doc = "Control Status Register cannot be written"]
+    #[doc = "Control Status Register cannot be written."]
     WRITE_DISABLED = 0x01,
 }
 impl ApllcsrLk {
@@ -95,12 +95,12 @@ impl From<ApllcsrLk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ApllctrlSource {
-    #[doc = "SOSC"]
+    #[doc = "SOSC."]
     SOSC = 0x0,
     #[doc = "FIRC 48 MHz clock. FIRC_SCLK_PERIPH_EN must be set to use FIRC 48 MHz clock."]
     FIRC = 0x01,
     _RESERVED_2 = 0x02,
-    #[doc = "No clock"]
+    #[doc = "No clock."]
     RSVD = 0x03,
 }
 impl ApllctrlSource {
@@ -129,9 +129,9 @@ impl From<ApllctrlSource> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Apllerr {
-    #[doc = "APLL Clock Monitor is disabled or has not detected an error"]
+    #[doc = "APLL Clock Monitor is disabled or has not detected an error."]
     DISABLED_OR_NO_ERROR = 0x0,
-    #[doc = "APLL Clock Monitor is enabled and detected an error"]
+    #[doc = "APLL Clock Monitor is enabled and detected an error."]
     ENABLED_AND_ERROR = 0x01,
 }
 impl Apllerr {
@@ -160,11 +160,11 @@ impl From<Apllerr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Apllsscg1Mc {
-    #[doc = "MC\\[1:0\\] no compensation"]
+    #[doc = "MC\\[1:0\\] no compensation."]
     NO_COMP = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
-    #[doc = "MC\\[1:0\\] maximum compensation"]
+    #[doc = "MC\\[1:0\\] maximum compensation."]
     MAX_COMP = 0x03,
 }
 impl Apllsscg1Mc {
@@ -193,9 +193,9 @@ impl From<Apllsscg1Mc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Apllsten {
-    #[doc = "APLL is disabled in Deep Sleep mode"]
+    #[doc = "APLL is disabled in Deep Sleep mode."]
     DISABLED_IN_STOP = 0x0,
-    #[doc = "APLL is enabled in Deep Sleep mode"]
+    #[doc = "APLL is enabled in Deep Sleep mode."]
     ENABLED_IN_STOP = 0x01,
 }
 impl Apllsten {
@@ -225,19 +225,19 @@ impl From<Apllsten> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CsrScs {
     _RESERVED_0 = 0x0,
-    #[doc = "SOSC"]
+    #[doc = "SOSC."]
     SOSC = 0x01,
-    #[doc = "SIRC"]
+    #[doc = "SIRC."]
     SIRC = 0x02,
-    #[doc = "FIRC"]
+    #[doc = "FIRC."]
     FIRC = 0x03,
-    #[doc = "ROSC"]
+    #[doc = "ROSC."]
     ROSC = 0x04,
-    #[doc = "APLL"]
+    #[doc = "APLL."]
     APLL = 0x05,
-    #[doc = "SPLL"]
+    #[doc = "SPLL."]
     SPLL = 0x06,
-    #[doc = "UPLL"]
+    #[doc = "UPLL."]
     UPLL = 0x07,
     _RESERVED_8 = 0x08,
     _RESERVED_9 = 0x09,
@@ -336,9 +336,9 @@ impl From<Fircacc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FircaccIe {
-    #[doc = "FIRCACC interrupt is not enabled"]
+    #[doc = "FIRCACC interrupt is not enabled."]
     FIRCACCNOT = 0x0,
-    #[doc = "FIRCACC interrupt is enabled"]
+    #[doc = "FIRCACC interrupt is enabled."]
     FIRCACCYES = 0x01,
 }
 impl FircaccIe {
@@ -367,9 +367,9 @@ impl From<FircaccIe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FirccfgRange {
-    #[doc = "48 MHz FIRC clock selected"]
+    #[doc = "48 MHz FIRC clock selected."]
     FIRC_48MHZ = 0x0,
-    #[doc = "144 MHz FIRC clock selected"]
+    #[doc = "144 MHz FIRC clock selected."]
     FIRC_144MHZ = 0x01,
 }
 impl FirccfgRange {
@@ -398,9 +398,9 @@ impl From<FirccfgRange> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FirccsrLk {
-    #[doc = "Control Status Register can be written"]
+    #[doc = "Control Status Register can be written."]
     WRITE_ENABLED = 0x0,
-    #[doc = "Control Status Register cannot be written"]
+    #[doc = "Control Status Register cannot be written."]
     WRITE_DISABLED = 0x01,
 }
 impl FirccsrLk {
@@ -429,9 +429,9 @@ impl From<FirccsrLk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FirccsrTrimLock {
-    #[doc = "FIRC auto trim not locked to target frequency range"]
+    #[doc = "FIRC auto trim not locked to target frequency range."]
     FIRC_NOT_LOCKED = 0x0,
-    #[doc = "FIRC auto trim locked to target frequency range"]
+    #[doc = "FIRC auto trim locked to target frequency range."]
     FIRC_LOCKED = 0x01,
 }
 impl FirccsrTrimLock {
@@ -460,9 +460,9 @@ impl From<FirccsrTrimLock> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fircerr {
-    #[doc = "Error not detected with the FIRC trimming"]
+    #[doc = "Error not detected with the FIRC trimming."]
     ERROR_NOT_DETECTED = 0x0,
-    #[doc = "Error detected with the FIRC trimming"]
+    #[doc = "Error detected with the FIRC trimming."]
     ERROR_DETECTED = 0x01,
 }
 impl Fircerr {
@@ -491,9 +491,9 @@ impl From<Fircerr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FircerrIe {
-    #[doc = "FIRCERR interrupt is not enabled"]
+    #[doc = "FIRCERR interrupt is not enabled."]
     ERROR_NOT_DETECTED = 0x0,
-    #[doc = "FIRCERR interrupt is enabled"]
+    #[doc = "FIRCERR interrupt is enabled."]
     ERROR_DETECTED = 0x01,
 }
 impl FircerrIe {
@@ -522,9 +522,9 @@ impl From<FircerrIe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fircsten {
-    #[doc = "FIRC is disabled in Deep Sleep mode"]
+    #[doc = "FIRC is disabled in Deep Sleep mode."]
     DISABLED_IN_STOP_MODES = 0x0,
-    #[doc = "FIRC is enabled in Deep Sleep mode"]
+    #[doc = "FIRC is enabled in Deep Sleep mode."]
     ENABLED_IN_STOP_MODES = 0x01,
 }
 impl Fircsten {
@@ -553,12 +553,12 @@ impl From<Fircsten> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FirctcfgTrimsrc {
-    #[doc = "USB0 Start of Frame (1 kHz). This option does not use TRIMDIV"]
+    #[doc = "USB0 Start of Frame (1 kHz). This option does not use TRIMDIV."]
     USB0 = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "SOSC"]
+    #[doc = "SOSC."]
     SOSC = 0x02,
-    #[doc = "ROSC"]
+    #[doc = "ROSC."]
     ROSC = 0x03,
 }
 impl FirctcfgTrimsrc {
@@ -650,19 +650,19 @@ impl From<IfrDisable> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RccrScs {
     _RESERVED_0 = 0x0,
-    #[doc = "SOSC"]
+    #[doc = "SOSC."]
     SOSC = 0x01,
-    #[doc = "SIRC"]
+    #[doc = "SIRC."]
     SIRC = 0x02,
-    #[doc = "FIRC"]
+    #[doc = "FIRC."]
     FIRC = 0x03,
-    #[doc = "ROSC"]
+    #[doc = "ROSC."]
     ROSC = 0x04,
-    #[doc = "APLL"]
+    #[doc = "APLL."]
     APLL = 0x05,
-    #[doc = "SPLL"]
+    #[doc = "SPLL."]
     SPLL = 0x06,
-    #[doc = "UPLL"]
+    #[doc = "UPLL."]
     UPLL = 0x07,
     _RESERVED_8 = 0x08,
     _RESERVED_9 = 0x09,
@@ -699,9 +699,9 @@ impl From<RccrScs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rosccmre {
-    #[doc = "Clock monitor generates an interrupt when an error is detected"]
+    #[doc = "Clock monitor generates an interrupt when an error is detected."]
     GENERATE_INTERRUPT = 0x0,
-    #[doc = "Clock monitor generates a reset when an error is detected"]
+    #[doc = "Clock monitor generates a reset when an error is detected."]
     GENERATE_RESET = 0x01,
 }
 impl Rosccmre {
@@ -730,9 +730,9 @@ impl From<Rosccmre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RosccsrLk {
-    #[doc = "Control Status Register can be written"]
+    #[doc = "Control Status Register can be written."]
     WRITE_ENABLED = 0x0,
-    #[doc = "Control Status Register cannot be written"]
+    #[doc = "Control Status Register cannot be written."]
     WRITE_DISABLED = 0x01,
 }
 impl RosccsrLk {
@@ -761,9 +761,9 @@ impl From<RosccsrLk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Roscerr {
-    #[doc = "ROSC Clock Monitor is disabled or has not detected an error"]
+    #[doc = "ROSC Clock Monitor is disabled or has not detected an error."]
     DISABLED_OR_NO_ERROR = 0x0,
-    #[doc = "ROSC Clock Monitor is enabled and detected an RTC loss of clock error"]
+    #[doc = "ROSC Clock Monitor is enabled and detected an RTC loss of clock error."]
     ENABLED_AND_ERROR = 0x01,
 }
 impl Roscerr {
@@ -792,9 +792,9 @@ impl From<Roscerr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Roscvld {
-    #[doc = "ROSC is not enabled or clock is not valid"]
+    #[doc = "ROSC is not enabled or clock is not valid."]
     DISABLED_OR_NOT_VALID = 0x0,
-    #[doc = "ROSC is enabled and output clock is valid"]
+    #[doc = "ROSC is enabled and output clock is valid."]
     ENABLED_AND_VALID = 0x01,
 }
 impl Roscvld {
@@ -823,9 +823,9 @@ impl From<Roscvld> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SirccsrLk {
-    #[doc = "Control Status Register can be written"]
+    #[doc = "Control Status Register can be written."]
     WRITE_ENABLED = 0x0,
-    #[doc = "Control Status Register cannot be written"]
+    #[doc = "Control Status Register cannot be written."]
     WRITE_DISABLED = 0x01,
 }
 impl SirccsrLk {
@@ -854,9 +854,9 @@ impl From<SirccsrLk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SirccsrTrimLock {
-    #[doc = "SIRC auto trim not locked to target frequency range"]
+    #[doc = "SIRC auto trim not locked to target frequency range."]
     SIRC_NOT_LOCKED = 0x0,
-    #[doc = "SIRC auto trim locked to target frequency range"]
+    #[doc = "SIRC auto trim locked to target frequency range."]
     SIRC_LOCKED = 0x01,
 }
 impl SirccsrTrimLock {
@@ -885,9 +885,9 @@ impl From<SirccsrTrimLock> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sircerr {
-    #[doc = "Error not detected with the SIRC trimming"]
+    #[doc = "Error not detected with the SIRC trimming."]
     ERROR_NOT_DETECTED = 0x0,
-    #[doc = "Error detected with the SIRC trimming"]
+    #[doc = "Error detected with the SIRC trimming."]
     ERROR_DETECTED = 0x01,
 }
 impl Sircerr {
@@ -916,9 +916,9 @@ impl From<Sircerr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SircerrIe {
-    #[doc = "SIRCERR interrupt is not enabled"]
+    #[doc = "SIRCERR interrupt is not enabled."]
     ERROR_NOT_DETECTED = 0x0,
-    #[doc = "SIRCERR interrupt is enabled"]
+    #[doc = "SIRCERR interrupt is enabled."]
     ERROR_DETECTED = 0x01,
 }
 impl SircerrIe {
@@ -949,9 +949,9 @@ impl From<SircerrIe> for u8 {
 pub enum SirctcfgTrimsrc {
     _RESERVED_0 = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "SOSC"]
+    #[doc = "SOSC."]
     SOSC = 0x02,
-    #[doc = "ROSC (32.768 kHz)"]
+    #[doc = "ROSC (32.768 kHz)."]
     ROSC = 0x03,
 }
 impl SirctcfgTrimsrc {
@@ -980,9 +980,9 @@ impl From<SirctcfgTrimsrc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sircvld {
-    #[doc = "SIRC is not enabled or clock is not valid"]
+    #[doc = "SIRC is not enabled or clock is not valid."]
     DISABLED_OR_NOT_VALID = 0x0,
-    #[doc = "SIRC is enabled and output clock is valid"]
+    #[doc = "SIRC is enabled and output clock is valid."]
     ENABLED_AND_VALID = 0x01,
 }
 impl Sircvld {
@@ -1046,9 +1046,9 @@ impl From<SosccfgRange> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sosccmre {
-    #[doc = "Clock monitor generates an interrupt when an error is detected"]
+    #[doc = "Clock monitor generates an interrupt when an error is detected."]
     GENERATE_INTERRUPT = 0x0,
-    #[doc = "Clock monitor generates a reset when an error is detected"]
+    #[doc = "Clock monitor generates a reset when an error is detected."]
     GENERATE_RESET = 0x01,
 }
 impl Sosccmre {
@@ -1077,9 +1077,9 @@ impl From<Sosccmre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SosccsrLk {
-    #[doc = "This Control Status Register can be written"]
+    #[doc = "This Control Status Register can be written."]
     WRITE_ENABLED = 0x0,
-    #[doc = "This Control Status Register cannot be written"]
+    #[doc = "This Control Status Register cannot be written."]
     WRITE_DISABLED = 0x01,
 }
 impl SosccsrLk {
@@ -1108,9 +1108,9 @@ impl From<SosccsrLk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Soscerr {
-    #[doc = "SOSC Clock Monitor is disabled or has not detected an error"]
+    #[doc = "SOSC Clock Monitor is disabled or has not detected an error."]
     DISABLED_OR_NO_ERROR = 0x0,
-    #[doc = "SOSC Clock Monitor is enabled and detected an error"]
+    #[doc = "SOSC Clock Monitor is enabled and detected an error."]
     ENABLED_AND_ERROR = 0x01,
 }
 impl Soscerr {
@@ -1139,9 +1139,9 @@ impl From<Soscerr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SpllLock {
-    #[doc = "SPLL is not powered on or not locked"]
+    #[doc = "SPLL is not powered on or not locked."]
     DISABLED_OR_NOT_VALID = 0x0,
-    #[doc = "SPLL is locked"]
+    #[doc = "SPLL is locked."]
     ENABLED_AND_VALID = 0x01,
 }
 impl SpllLock {
@@ -1170,9 +1170,9 @@ impl From<SpllLock> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Spllcmre {
-    #[doc = "Clock monitor generates an interrupt when an error is detected"]
+    #[doc = "Clock monitor generates an interrupt when an error is detected."]
     GENERATE_INTERRUPT = 0x0,
-    #[doc = "Clock monitor generates a reset when an error is detected"]
+    #[doc = "Clock monitor generates a reset when an error is detected."]
     GENERATE_RESET = 0x01,
 }
 impl Spllcmre {
@@ -1201,9 +1201,9 @@ impl From<Spllcmre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SpllcsrLk {
-    #[doc = "Control Status Register can be written"]
+    #[doc = "Control Status Register can be written."]
     WRITE_ENABLED = 0x0,
-    #[doc = "Control Status Register cannot be written"]
+    #[doc = "Control Status Register cannot be written."]
     WRITE_DISABLED = 0x01,
 }
 impl SpllcsrLk {
@@ -1232,12 +1232,12 @@ impl From<SpllcsrLk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SpllctrlSource {
-    #[doc = "SOSC"]
+    #[doc = "SOSC."]
     SOSC = 0x0,
     #[doc = "FIRC 48 MHz clock. FIRC_SCLK_PERIPH_EN must be set to use FIRC 48 MHz clock."]
     FIRC = 0x01,
     _RESERVED_2 = 0x02,
-    #[doc = "No clock"]
+    #[doc = "No clock."]
     RSVD = 0x03,
 }
 impl SpllctrlSource {
@@ -1266,9 +1266,9 @@ impl From<SpllctrlSource> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Spllerr {
-    #[doc = "SPLL Clock Monitor is disabled or has not detected an error"]
+    #[doc = "SPLL Clock Monitor is disabled or has not detected an error."]
     DISABLED_OR_NO_ERROR = 0x0,
-    #[doc = "SPLL Clock Monitor is enabled and detected an error"]
+    #[doc = "SPLL Clock Monitor is enabled and detected an error."]
     ENABLED_AND_ERROR = 0x01,
 }
 impl Spllerr {
@@ -1297,11 +1297,11 @@ impl From<Spllerr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Spllsscg1Mc {
-    #[doc = "MC\\[1:0\\] no compensation"]
+    #[doc = "MC\\[1:0\\] no compensation."]
     NO_COMP = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
-    #[doc = "MC\\[1:0\\] maximum compensation"]
+    #[doc = "MC\\[1:0\\] maximum compensation."]
     MAX_COMP = 0x03,
 }
 impl Spllsscg1Mc {
@@ -1330,9 +1330,9 @@ impl From<Spllsscg1Mc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Spllsten {
-    #[doc = "SPLL is disabled in Deep Sleep mode"]
+    #[doc = "SPLL is disabled in Deep Sleep mode."]
     DISABLED_IN_STOP = 0x0,
-    #[doc = "SPLL is enabled in Deep Sleep mode"]
+    #[doc = "SPLL is enabled in Deep Sleep mode."]
     ENABLED_IN_STOP = 0x01,
 }
 impl Spllsten {
@@ -1392,9 +1392,9 @@ impl From<TrimUnlock> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Upllcmre {
-    #[doc = "Clock monitor generates an interrupt when an error is detected"]
+    #[doc = "Clock monitor generates an interrupt when an error is detected."]
     GENERATE_INTERRUPT = 0x0,
-    #[doc = "Clock monitor generates a reset when an error is detected"]
+    #[doc = "Clock monitor generates a reset when an error is detected."]
     GENERATE_RESET = 0x01,
 }
 impl Upllcmre {
@@ -1423,9 +1423,9 @@ impl From<Upllcmre> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum UpllcsrLk {
-    #[doc = "Control Status Register can be written"]
+    #[doc = "Control Status Register can be written."]
     WRITE_ENABLED = 0x0,
-    #[doc = "Control Status Register cannot be written"]
+    #[doc = "Control Status Register cannot be written."]
     WRITE_DISABLED = 0x01,
 }
 impl UpllcsrLk {
@@ -1454,9 +1454,9 @@ impl From<UpllcsrLk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Upllerr {
-    #[doc = "UPLL Clock Monitor is disabled or has not detected an error"]
+    #[doc = "UPLL Clock Monitor is disabled or has not detected an error."]
     DISABLED_OR_NO_ERROR = 0x0,
-    #[doc = "UPLL Clock Monitor is enabled and detected an error"]
+    #[doc = "UPLL Clock Monitor is enabled and detected an error."]
     ENABLED_AND_ERROR = 0x01,
 }
 impl Upllerr {
@@ -1485,9 +1485,9 @@ impl From<Upllerr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Upllvld {
-    #[doc = "UPLL is not enabled or clock is not valid"]
+    #[doc = "UPLL is not enabled or clock is not valid."]
     DISABLED_OR_NOT_VALID = 0x0,
-    #[doc = "UPLL is enabled and output clock is valid"]
+    #[doc = "UPLL is enabled and output clock is valid."]
     ENABLED_AND_VALID = 0x01,
 }
 impl Upllvld {
@@ -1516,21 +1516,21 @@ impl From<Upllvld> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum VoutSel {
-    #[doc = "VOUT = 1V"]
+    #[doc = "VOUT = 1V."]
     VOUT_1V_1 = 0x0,
-    #[doc = "VOUT = 1V"]
+    #[doc = "VOUT = 1V."]
     VOUT_1V_2 = 0x01,
-    #[doc = "VOUT = 1V"]
+    #[doc = "VOUT = 1V."]
     VOUT_1V_3 = 0x02,
-    #[doc = "VOUT = 1.05V"]
+    #[doc = "VOUT = 1.05V."]
     VOUT_105V = 0x03,
-    #[doc = "VOUT = 1.1V"]
+    #[doc = "VOUT = 1.1V."]
     VOUT_11V = 0x04,
-    #[doc = "VOUT = 1.15V"]
+    #[doc = "VOUT = 1.15V."]
     VOUT_115V = 0x05,
-    #[doc = "VOUT = 1.2V"]
+    #[doc = "VOUT = 1.2V."]
     VOUT_12V = 0x06,
-    #[doc = "VOUT = 1.25V"]
+    #[doc = "VOUT = 1.25V."]
     VOUT_125V = 0x07,
 }
 impl VoutSel {

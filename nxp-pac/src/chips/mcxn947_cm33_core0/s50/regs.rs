@@ -1,16 +1,16 @@
-#[doc = "Configuration Register"]
+#[doc = "Configuration Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cfg(pub u32);
 impl Cfg {
-    #[doc = "Controls the maximum value of a variable delay that will be applied before any ELS AES operation is started"]
+    #[doc = "Controls the maximum value of a variable delay that will be applied before any ELS AES operation is started."]
     #[must_use]
     #[inline(always)]
     pub const fn adctrl(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0x03ff;
         val as u16
     }
-    #[doc = "Controls the maximum value of a variable delay that will be applied before any ELS AES operation is started"]
+    #[doc = "Controls the maximum value of a variable delay that will be applied before any ELS AES operation is started."]
     #[inline(always)]
     pub const fn set_adctrl(&mut self, val: u16) {
         self.0 = (self.0 & !(0x03ff << 16usize)) | (((val as u32) & 0x03ff) << 16usize);
@@ -35,19 +35,19 @@ impl defmt::Format for Cfg {
         defmt::write!(f, "Cfg {{ adctrl: {=u16:?} }}", self.adctrl())
     }
 }
-#[doc = "Command Configuration"]
+#[doc = "Command Configuration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cmdcfg0(pub u32);
 impl Cmdcfg0 {
-    #[doc = "See"]
+    #[doc = "See."]
     #[must_use]
     #[inline(always)]
     pub const fn cmdcfg0(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "See"]
+    #[doc = "See."]
     #[inline(always)]
     pub const fn set_cmdcfg0(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -72,7 +72,7 @@ impl defmt::Format for Cmdcfg0 {
         defmt::write!(f, "Cmdcfg0 {{ cmdcfg0: {=u32:?} }}", self.cmdcfg0())
     }
 }
-#[doc = "Command CRC Value"]
+#[doc = "Command CRC Value."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cmdcrc(pub u32);
@@ -109,31 +109,31 @@ impl defmt::Format for Cmdcrc {
         defmt::write!(f, "Cmdcrc {{ cmdcrc: {=u32:?} }}", self.cmdcrc())
     }
 }
-#[doc = "CRC Configuration"]
+#[doc = "CRC Configuration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CmdcrcCtrl(pub u32);
 impl CmdcrcCtrl {
-    #[doc = "CRC reset to initial valueCMDCRC_EN and CMDCRC_RST fields act independently"]
+    #[doc = "CRC reset to initial valueCMDCRC_EN and CMDCRC_RST fields act independently."]
     #[must_use]
     #[inline(always)]
     pub const fn cmdcrc_rst(&self) -> super::vals::CmdcrcRst {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::CmdcrcRst::from_bits(val as u8)
     }
-    #[doc = "CRC reset to initial valueCMDCRC_EN and CMDCRC_RST fields act independently"]
+    #[doc = "CRC reset to initial valueCMDCRC_EN and CMDCRC_RST fields act independently."]
     #[inline(always)]
     pub const fn set_cmdcrc_rst(&mut self, val: super::vals::CmdcrcRst) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "CRC enable bit"]
+    #[doc = "CRC enable bit."]
     #[must_use]
     #[inline(always)]
     pub const fn cmdcrc_en(&self) -> super::vals::CmdcrcEn {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::CmdcrcEn::from_bits(val as u8)
     }
-    #[doc = "CRC enable bit"]
+    #[doc = "CRC enable bit."]
     #[inline(always)]
     pub const fn set_cmdcrc_en(&mut self, val: super::vals::CmdcrcEn) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
@@ -164,19 +164,19 @@ impl defmt::Format for CmdcrcCtrl {
         )
     }
 }
-#[doc = "Control Register"]
+#[doc = "Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl(pub u32);
 impl Ctrl {
-    #[doc = "ELS enable"]
+    #[doc = "ELS enable."]
     #[must_use]
     #[inline(always)]
     pub const fn els_en(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "ELS enable"]
+    #[doc = "ELS enable."]
     #[inline(always)]
     pub const fn set_els_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -205,26 +205,26 @@ impl Ctrl {
     pub const fn set_els_reset(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "ELS Command ID"]
+    #[doc = "ELS Command ID."]
     #[must_use]
     #[inline(always)]
     pub const fn els_cmd(&self) -> u8 {
         let val = (self.0 >> 3usize) & 0x1f;
         val as u8
     }
-    #[doc = "ELS Command ID"]
+    #[doc = "ELS Command ID."]
     #[inline(always)]
     pub const fn set_els_cmd(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 3usize)) | (((val as u32) & 0x1f) << 3usize);
     }
-    #[doc = "Defines endianness"]
+    #[doc = "Defines endianness."]
     #[must_use]
     #[inline(always)]
     pub const fn byte_order(&self) -> super::vals::ByteOrder {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::ByteOrder::from_bits(val as u8)
     }
-    #[doc = "Defines endianness"]
+    #[doc = "Defines endianness."]
     #[inline(always)]
     pub const fn set_byte_order(&mut self, val: super::vals::ByteOrder) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
@@ -261,7 +261,7 @@ impl defmt::Format for Ctrl {
         )
     }
 }
-#[doc = "Final DMA Address"]
+#[doc = "Final DMA Address."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DmaFinAddr(pub u32);
@@ -302,7 +302,7 @@ impl defmt::Format for DmaFinAddr {
         )
     }
 }
-#[doc = "DMA Result 0"]
+#[doc = "DMA Result 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DmaRes0(pub u32);
@@ -339,19 +339,19 @@ impl defmt::Format for DmaRes0 {
         defmt::write!(f, "DmaRes0 {{ addr_res0: {=u32:?} }}", self.addr_res0())
     }
 }
-#[doc = "DMA Result 0 Length"]
+#[doc = "DMA Result 0 Length."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DmaRes0Len(pub u32);
 impl DmaRes0Len {
-    #[doc = "Size in bytes of the data to be transferred"]
+    #[doc = "Size in bytes of the data to be transferred."]
     #[must_use]
     #[inline(always)]
     pub const fn size_res0_len(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Size in bytes of the data to be transferred"]
+    #[doc = "Size in bytes of the data to be transferred."]
     #[inline(always)]
     pub const fn set_size_res0_len(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -380,7 +380,7 @@ impl defmt::Format for DmaRes0Len {
         )
     }
 }
-#[doc = "DMA Source 0"]
+#[doc = "DMA Source 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DmaSrc0(pub u32);
@@ -417,7 +417,7 @@ impl defmt::Format for DmaSrc0 {
         defmt::write!(f, "DmaSrc0 {{ addr_src0: {=u32:?} }}", self.addr_src0())
     }
 }
-#[doc = "DMA Source 0 Length"]
+#[doc = "DMA Source 0 Length."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DmaSrc0Len(pub u32);
@@ -458,7 +458,7 @@ impl defmt::Format for DmaSrc0Len {
         )
     }
 }
-#[doc = "DMA Source 1"]
+#[doc = "DMA Source 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DmaSrc1(pub u32);
@@ -495,7 +495,7 @@ impl defmt::Format for DmaSrc1 {
         defmt::write!(f, "DmaSrc1 {{ addr_src1: {=u32:?} }}", self.addr_src1())
     }
 }
-#[doc = "DMA Source 2"]
+#[doc = "DMA Source 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DmaSrc2(pub u32);
@@ -532,7 +532,7 @@ impl defmt::Format for DmaSrc2 {
         defmt::write!(f, "DmaSrc2 {{ addr_src2: {=u32:?} }}", self.addr_src2())
     }
 }
-#[doc = "DMA Source 2 Length"]
+#[doc = "DMA Source 2 Length."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct DmaSrc2Len(pub u32);
@@ -573,319 +573,319 @@ impl defmt::Format for DmaSrc2Len {
         )
     }
 }
-#[doc = "Status Register"]
+#[doc = "Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ElsKs0(pub u32);
 impl ElsKs0 {
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[must_use]
     #[inline(always)]
     pub const fn ks0_ksize(&self) -> super::vals::Ks0Ksize {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Ks0Ksize::from_bits(val as u8)
     }
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[inline(always)]
     pub const fn set_ks0_ksize(&mut self, val: super::vals::Ks0Ksize) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[must_use]
     #[inline(always)]
     pub const fn ks0_kact(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[inline(always)]
     pub const fn set_ks0_kact(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks0_kbase(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[inline(always)]
     pub const fn set_ks0_kbase(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[must_use]
     #[inline(always)]
     pub const fn ks0_fgp(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[inline(always)]
     pub const fn set_ks0_fgp(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[must_use]
     #[inline(always)]
     pub const fn ks0_frtn(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[inline(always)]
     pub const fn set_ks0_frtn(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[must_use]
     #[inline(always)]
     pub const fn ks0_fhwo(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[inline(always)]
     pub const fn set_ks0_fhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks0_ukpuk(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks0_ukpuk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks0_utecdh(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks0_utecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks0_ucmac(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks0_ucmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks0_uksk(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[inline(always)]
     pub const fn set_ks0_uksk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks0_urtf(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[inline(always)]
     pub const fn set_ks0_urtf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks0_uckdf(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[inline(always)]
     pub const fn set_ks0_uckdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks0_uhkdf(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[inline(always)]
     pub const fn set_ks0_uhkdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks0_uecsg(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[inline(always)]
     pub const fn set_ks0_uecsg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks0_uecdh(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[inline(always)]
     pub const fn set_ks0_uecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks0_uaes(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[inline(always)]
     pub const fn set_ks0_uaes(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks0_uhmac(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[inline(always)]
     pub const fn set_ks0_uhmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks0_ukwk(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[inline(always)]
     pub const fn set_ks0_ukwk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks0_ukuok(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[inline(always)]
     pub const fn set_ks0_ukuok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks0_utlspms(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[inline(always)]
     pub const fn set_ks0_utlspms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks0_utlsms(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[inline(always)]
     pub const fn set_ks0_utlsms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[must_use]
     #[inline(always)]
     pub const fn ks0_ukgsrc(&self) -> bool {
         let val = (self.0 >> 26usize) & 0x01;
         val != 0
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[inline(always)]
     pub const fn set_ks0_ukgsrc(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks0_uhwo(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[inline(always)]
     pub const fn set_ks0_uhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "Wrap key"]
+    #[doc = "Wrap key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks0_uwrpok(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "Wrap key"]
+    #[doc = "Wrap key."]
     #[inline(always)]
     pub const fn set_ks0_uwrpok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks0_uduk(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[inline(always)]
     pub const fn set_ks0_uduk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[must_use]
     #[inline(always)]
     pub const fn ks0_upprot(&self) -> u8 {
         let val = (self.0 >> 30usize) & 0x03;
         val as u8
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[inline(always)]
     pub const fn set_ks0_upprot(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val as u32) & 0x03) << 30usize);
@@ -964,319 +964,319 @@ impl defmt::Format for ElsKs0 {
         )
     }
 }
-#[doc = "Status Register"]
+#[doc = "Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ElsKs1(pub u32);
 impl ElsKs1 {
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[must_use]
     #[inline(always)]
     pub const fn ks1_ksize(&self) -> super::vals::Ks1Ksize {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Ks1Ksize::from_bits(val as u8)
     }
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[inline(always)]
     pub const fn set_ks1_ksize(&mut self, val: super::vals::Ks1Ksize) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[must_use]
     #[inline(always)]
     pub const fn ks1_kact(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[inline(always)]
     pub const fn set_ks1_kact(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks1_kbase(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[inline(always)]
     pub const fn set_ks1_kbase(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[must_use]
     #[inline(always)]
     pub const fn ks1_fgp(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[inline(always)]
     pub const fn set_ks1_fgp(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[must_use]
     #[inline(always)]
     pub const fn ks1_frtn(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[inline(always)]
     pub const fn set_ks1_frtn(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[must_use]
     #[inline(always)]
     pub const fn ks1_fhwo(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[inline(always)]
     pub const fn set_ks1_fhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks1_ukpuk(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks1_ukpuk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks1_utecdh(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks1_utecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks1_ucmac(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks1_ucmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks1_uksk(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[inline(always)]
     pub const fn set_ks1_uksk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks1_urtf(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[inline(always)]
     pub const fn set_ks1_urtf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks1_uckdf(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[inline(always)]
     pub const fn set_ks1_uckdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks1_uhkdf(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[inline(always)]
     pub const fn set_ks1_uhkdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks1_uecsg(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[inline(always)]
     pub const fn set_ks1_uecsg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks1_uecdh(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[inline(always)]
     pub const fn set_ks1_uecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks1_uaes(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[inline(always)]
     pub const fn set_ks1_uaes(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks1_uhmac(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[inline(always)]
     pub const fn set_ks1_uhmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks1_ukwk(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[inline(always)]
     pub const fn set_ks1_ukwk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks1_ukuok(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[inline(always)]
     pub const fn set_ks1_ukuok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks1_utlspms(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[inline(always)]
     pub const fn set_ks1_utlspms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks1_utlsms(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[inline(always)]
     pub const fn set_ks1_utlsms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[must_use]
     #[inline(always)]
     pub const fn ks1_ukgsrc(&self) -> bool {
         let val = (self.0 >> 26usize) & 0x01;
         val != 0
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[inline(always)]
     pub const fn set_ks1_ukgsrc(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks1_uhwo(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[inline(always)]
     pub const fn set_ks1_uhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks1_uwrpok(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[inline(always)]
     pub const fn set_ks1_uwrpok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks1_uduk(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[inline(always)]
     pub const fn set_ks1_uduk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[must_use]
     #[inline(always)]
     pub const fn ks1_upprot(&self) -> u8 {
         let val = (self.0 >> 30usize) & 0x03;
         val as u8
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[inline(always)]
     pub const fn set_ks1_upprot(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val as u32) & 0x03) << 30usize);
@@ -1355,319 +1355,319 @@ impl defmt::Format for ElsKs1 {
         )
     }
 }
-#[doc = "Status Register"]
+#[doc = "Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ElsKs10(pub u32);
 impl ElsKs10 {
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[must_use]
     #[inline(always)]
     pub const fn ks10_ksize(&self) -> super::vals::Ks10Ksize {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Ks10Ksize::from_bits(val as u8)
     }
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[inline(always)]
     pub const fn set_ks10_ksize(&mut self, val: super::vals::Ks10Ksize) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[must_use]
     #[inline(always)]
     pub const fn ks10_kact(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[inline(always)]
     pub const fn set_ks10_kact(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks10_kbase(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[inline(always)]
     pub const fn set_ks10_kbase(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[must_use]
     #[inline(always)]
     pub const fn ks10_fgp(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[inline(always)]
     pub const fn set_ks10_fgp(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[must_use]
     #[inline(always)]
     pub const fn ks10_frtn(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[inline(always)]
     pub const fn set_ks10_frtn(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[must_use]
     #[inline(always)]
     pub const fn ks10_fhwo(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[inline(always)]
     pub const fn set_ks10_fhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks10_ukpuk(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks10_ukpuk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks10_utecdh(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks10_utecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks10_ucmac(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks10_ucmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks10_uksk(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[inline(always)]
     pub const fn set_ks10_uksk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks10_urtf(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[inline(always)]
     pub const fn set_ks10_urtf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks10_uckdf(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[inline(always)]
     pub const fn set_ks10_uckdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks10_uhkdf(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[inline(always)]
     pub const fn set_ks10_uhkdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks10_uecsg(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[inline(always)]
     pub const fn set_ks10_uecsg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks10_uecdh(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[inline(always)]
     pub const fn set_ks10_uecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks10_uaes(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[inline(always)]
     pub const fn set_ks10_uaes(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks10_uhmac(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[inline(always)]
     pub const fn set_ks10_uhmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks10_ukwk(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[inline(always)]
     pub const fn set_ks10_ukwk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks10_ukuok(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[inline(always)]
     pub const fn set_ks10_ukuok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks10_utlspms(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[inline(always)]
     pub const fn set_ks10_utlspms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks10_utlsms(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[inline(always)]
     pub const fn set_ks10_utlsms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[must_use]
     #[inline(always)]
     pub const fn ks10_ukgsrc(&self) -> bool {
         let val = (self.0 >> 26usize) & 0x01;
         val != 0
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[inline(always)]
     pub const fn set_ks10_ukgsrc(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks10_uhwo(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[inline(always)]
     pub const fn set_ks10_uhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks10_uwrpok(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[inline(always)]
     pub const fn set_ks10_uwrpok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks10_uduk(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[inline(always)]
     pub const fn set_ks10_uduk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[must_use]
     #[inline(always)]
     pub const fn ks10_upprot(&self) -> u8 {
         let val = (self.0 >> 30usize) & 0x03;
         val as u8
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[inline(always)]
     pub const fn set_ks10_upprot(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val as u32) & 0x03) << 30usize);
@@ -1746,319 +1746,319 @@ impl defmt::Format for ElsKs10 {
         )
     }
 }
-#[doc = "Status Register"]
+#[doc = "Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ElsKs11(pub u32);
 impl ElsKs11 {
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[must_use]
     #[inline(always)]
     pub const fn ks11_ksize(&self) -> super::vals::Ks11Ksize {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Ks11Ksize::from_bits(val as u8)
     }
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[inline(always)]
     pub const fn set_ks11_ksize(&mut self, val: super::vals::Ks11Ksize) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[must_use]
     #[inline(always)]
     pub const fn ks11_kact(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[inline(always)]
     pub const fn set_ks11_kact(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks11_kbase(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[inline(always)]
     pub const fn set_ks11_kbase(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[must_use]
     #[inline(always)]
     pub const fn ks11_fgp(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[inline(always)]
     pub const fn set_ks11_fgp(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[must_use]
     #[inline(always)]
     pub const fn ks11_frtn(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[inline(always)]
     pub const fn set_ks11_frtn(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[must_use]
     #[inline(always)]
     pub const fn ks11_fhwo(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[inline(always)]
     pub const fn set_ks11_fhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks11_ukpuk(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks11_ukpuk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks11_utecdh(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks11_utecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks11_ucmac(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks11_ucmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks11_uksk(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[inline(always)]
     pub const fn set_ks11_uksk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks11_urtf(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[inline(always)]
     pub const fn set_ks11_urtf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks11_uckdf(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[inline(always)]
     pub const fn set_ks11_uckdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks11_uhkdf(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[inline(always)]
     pub const fn set_ks11_uhkdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks11_uecsg(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[inline(always)]
     pub const fn set_ks11_uecsg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks11_uecdh(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[inline(always)]
     pub const fn set_ks11_uecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks11_uaes(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[inline(always)]
     pub const fn set_ks11_uaes(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks11_uhmac(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[inline(always)]
     pub const fn set_ks11_uhmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks11_ukwk(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[inline(always)]
     pub const fn set_ks11_ukwk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks11_ukuok(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[inline(always)]
     pub const fn set_ks11_ukuok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks11_utlspms(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[inline(always)]
     pub const fn set_ks11_utlspms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks11_utlsms(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[inline(always)]
     pub const fn set_ks11_utlsms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[must_use]
     #[inline(always)]
     pub const fn ks11_ukgsrc(&self) -> bool {
         let val = (self.0 >> 26usize) & 0x01;
         val != 0
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[inline(always)]
     pub const fn set_ks11_ukgsrc(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks11_uhwo(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[inline(always)]
     pub const fn set_ks11_uhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks11_uwrpok(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[inline(always)]
     pub const fn set_ks11_uwrpok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks11_uduk(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[inline(always)]
     pub const fn set_ks11_uduk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[must_use]
     #[inline(always)]
     pub const fn ks11_upprot(&self) -> u8 {
         let val = (self.0 >> 30usize) & 0x03;
         val as u8
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[inline(always)]
     pub const fn set_ks11_upprot(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val as u32) & 0x03) << 30usize);
@@ -2137,319 +2137,319 @@ impl defmt::Format for ElsKs11 {
         )
     }
 }
-#[doc = "Status Register"]
+#[doc = "Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ElsKs12(pub u32);
 impl ElsKs12 {
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[must_use]
     #[inline(always)]
     pub const fn ks12_ksize(&self) -> super::vals::Ks12Ksize {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Ks12Ksize::from_bits(val as u8)
     }
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[inline(always)]
     pub const fn set_ks12_ksize(&mut self, val: super::vals::Ks12Ksize) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[must_use]
     #[inline(always)]
     pub const fn ks12_kact(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[inline(always)]
     pub const fn set_ks12_kact(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks12_kbase(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[inline(always)]
     pub const fn set_ks12_kbase(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[must_use]
     #[inline(always)]
     pub const fn ks12_fgp(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[inline(always)]
     pub const fn set_ks12_fgp(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[must_use]
     #[inline(always)]
     pub const fn ks12_frtn(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[inline(always)]
     pub const fn set_ks12_frtn(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[must_use]
     #[inline(always)]
     pub const fn ks12_fhwo(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[inline(always)]
     pub const fn set_ks12_fhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks12_ukpuk(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks12_ukpuk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks12_utecdh(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks12_utecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks12_ucmac(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks12_ucmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks12_uksk(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[inline(always)]
     pub const fn set_ks12_uksk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks12_urtf(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[inline(always)]
     pub const fn set_ks12_urtf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks12_uckdf(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[inline(always)]
     pub const fn set_ks12_uckdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks12_uhkdf(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[inline(always)]
     pub const fn set_ks12_uhkdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks12_uecsg(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[inline(always)]
     pub const fn set_ks12_uecsg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks12_uecdh(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[inline(always)]
     pub const fn set_ks12_uecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks12_uaes(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[inline(always)]
     pub const fn set_ks12_uaes(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks12_uhmac(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[inline(always)]
     pub const fn set_ks12_uhmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks12_ukwk(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[inline(always)]
     pub const fn set_ks12_ukwk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks12_ukuok(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[inline(always)]
     pub const fn set_ks12_ukuok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks12_utlspms(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[inline(always)]
     pub const fn set_ks12_utlspms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks12_utlsms(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[inline(always)]
     pub const fn set_ks12_utlsms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[must_use]
     #[inline(always)]
     pub const fn ks12_ukgsrc(&self) -> bool {
         let val = (self.0 >> 26usize) & 0x01;
         val != 0
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[inline(always)]
     pub const fn set_ks12_ukgsrc(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks12_uhwo(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[inline(always)]
     pub const fn set_ks12_uhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks12_uwrpok(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[inline(always)]
     pub const fn set_ks12_uwrpok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks12_uduk(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[inline(always)]
     pub const fn set_ks12_uduk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[must_use]
     #[inline(always)]
     pub const fn ks12_upprot(&self) -> u8 {
         let val = (self.0 >> 30usize) & 0x03;
         val as u8
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[inline(always)]
     pub const fn set_ks12_upprot(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val as u32) & 0x03) << 30usize);
@@ -2528,319 +2528,319 @@ impl defmt::Format for ElsKs12 {
         )
     }
 }
-#[doc = "Status Register"]
+#[doc = "Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ElsKs13(pub u32);
 impl ElsKs13 {
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[must_use]
     #[inline(always)]
     pub const fn ks13_ksize(&self) -> super::vals::Ks13Ksize {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Ks13Ksize::from_bits(val as u8)
     }
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[inline(always)]
     pub const fn set_ks13_ksize(&mut self, val: super::vals::Ks13Ksize) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[must_use]
     #[inline(always)]
     pub const fn ks13_kact(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[inline(always)]
     pub const fn set_ks13_kact(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks13_kbase(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[inline(always)]
     pub const fn set_ks13_kbase(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[must_use]
     #[inline(always)]
     pub const fn ks13_fgp(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[inline(always)]
     pub const fn set_ks13_fgp(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[must_use]
     #[inline(always)]
     pub const fn ks13_frtn(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[inline(always)]
     pub const fn set_ks13_frtn(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[must_use]
     #[inline(always)]
     pub const fn ks13_fhwo(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[inline(always)]
     pub const fn set_ks13_fhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks13_ukpuk(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks13_ukpuk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks13_utecdh(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks13_utecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks13_ucmac(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks13_ucmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks13_uksk(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[inline(always)]
     pub const fn set_ks13_uksk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks13_urtf(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[inline(always)]
     pub const fn set_ks13_urtf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks13_uckdf(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[inline(always)]
     pub const fn set_ks13_uckdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks13_uhkdf(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[inline(always)]
     pub const fn set_ks13_uhkdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks13_uecsg(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[inline(always)]
     pub const fn set_ks13_uecsg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks13_uecdh(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[inline(always)]
     pub const fn set_ks13_uecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks13_uaes(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[inline(always)]
     pub const fn set_ks13_uaes(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks13_uhmac(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[inline(always)]
     pub const fn set_ks13_uhmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks13_ukwk(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[inline(always)]
     pub const fn set_ks13_ukwk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks13_ukuok(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[inline(always)]
     pub const fn set_ks13_ukuok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks13_utlspms(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[inline(always)]
     pub const fn set_ks13_utlspms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks13_utlsms(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[inline(always)]
     pub const fn set_ks13_utlsms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[must_use]
     #[inline(always)]
     pub const fn ks13_ukgsrc(&self) -> bool {
         let val = (self.0 >> 26usize) & 0x01;
         val != 0
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[inline(always)]
     pub const fn set_ks13_ukgsrc(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks13_uhwo(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[inline(always)]
     pub const fn set_ks13_uhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks13_uwrpok(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[inline(always)]
     pub const fn set_ks13_uwrpok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks13_uduk(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[inline(always)]
     pub const fn set_ks13_uduk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[must_use]
     #[inline(always)]
     pub const fn ks13_upprot(&self) -> u8 {
         let val = (self.0 >> 30usize) & 0x03;
         val as u8
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[inline(always)]
     pub const fn set_ks13_upprot(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val as u32) & 0x03) << 30usize);
@@ -2919,319 +2919,319 @@ impl defmt::Format for ElsKs13 {
         )
     }
 }
-#[doc = "Status Register"]
+#[doc = "Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ElsKs14(pub u32);
 impl ElsKs14 {
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[must_use]
     #[inline(always)]
     pub const fn ks14_ksize(&self) -> super::vals::Ks14Ksize {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Ks14Ksize::from_bits(val as u8)
     }
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[inline(always)]
     pub const fn set_ks14_ksize(&mut self, val: super::vals::Ks14Ksize) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[must_use]
     #[inline(always)]
     pub const fn ks14_kact(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[inline(always)]
     pub const fn set_ks14_kact(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks14_kbase(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[inline(always)]
     pub const fn set_ks14_kbase(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[must_use]
     #[inline(always)]
     pub const fn ks14_fgp(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[inline(always)]
     pub const fn set_ks14_fgp(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[must_use]
     #[inline(always)]
     pub const fn ks14_frtn(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[inline(always)]
     pub const fn set_ks14_frtn(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[must_use]
     #[inline(always)]
     pub const fn ks14_fhwo(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[inline(always)]
     pub const fn set_ks14_fhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks14_ukpuk(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks14_ukpuk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks14_utecdh(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks14_utecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks14_ucmac(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks14_ucmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks14_uksk(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[inline(always)]
     pub const fn set_ks14_uksk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks14_urtf(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[inline(always)]
     pub const fn set_ks14_urtf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks14_uckdf(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[inline(always)]
     pub const fn set_ks14_uckdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks14_uhkdf(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[inline(always)]
     pub const fn set_ks14_uhkdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks14_uecsg(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[inline(always)]
     pub const fn set_ks14_uecsg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks14_uecdh(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[inline(always)]
     pub const fn set_ks14_uecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks14_uaes(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[inline(always)]
     pub const fn set_ks14_uaes(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks14_uhmac(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[inline(always)]
     pub const fn set_ks14_uhmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks14_ukwk(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[inline(always)]
     pub const fn set_ks14_ukwk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks14_ukuok(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[inline(always)]
     pub const fn set_ks14_ukuok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks14_utlspms(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[inline(always)]
     pub const fn set_ks14_utlspms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks14_utlsms(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[inline(always)]
     pub const fn set_ks14_utlsms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[must_use]
     #[inline(always)]
     pub const fn ks14_ukgsrc(&self) -> bool {
         let val = (self.0 >> 26usize) & 0x01;
         val != 0
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[inline(always)]
     pub const fn set_ks14_ukgsrc(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks14_uhwo(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[inline(always)]
     pub const fn set_ks14_uhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks14_uwrpok(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[inline(always)]
     pub const fn set_ks14_uwrpok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks14_uduk(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[inline(always)]
     pub const fn set_ks14_uduk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[must_use]
     #[inline(always)]
     pub const fn ks14_upprot(&self) -> u8 {
         let val = (self.0 >> 30usize) & 0x03;
         val as u8
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[inline(always)]
     pub const fn set_ks14_upprot(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val as u32) & 0x03) << 30usize);
@@ -3310,319 +3310,319 @@ impl defmt::Format for ElsKs14 {
         )
     }
 }
-#[doc = "Status Register"]
+#[doc = "Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ElsKs15(pub u32);
 impl ElsKs15 {
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[must_use]
     #[inline(always)]
     pub const fn ks15_ksize(&self) -> super::vals::Ks15Ksize {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Ks15Ksize::from_bits(val as u8)
     }
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[inline(always)]
     pub const fn set_ks15_ksize(&mut self, val: super::vals::Ks15Ksize) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[must_use]
     #[inline(always)]
     pub const fn ks15_kact(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[inline(always)]
     pub const fn set_ks15_kact(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks15_kbase(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[inline(always)]
     pub const fn set_ks15_kbase(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[must_use]
     #[inline(always)]
     pub const fn ks15_fgp(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[inline(always)]
     pub const fn set_ks15_fgp(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[must_use]
     #[inline(always)]
     pub const fn ks15_frtn(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[inline(always)]
     pub const fn set_ks15_frtn(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[must_use]
     #[inline(always)]
     pub const fn ks15_fhwo(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[inline(always)]
     pub const fn set_ks15_fhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks15_ukpuk(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks15_ukpuk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks15_utecdh(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks15_utecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks15_ucmac(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks15_ucmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks15_uksk(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[inline(always)]
     pub const fn set_ks15_uksk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks15_urtf(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[inline(always)]
     pub const fn set_ks15_urtf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks15_uckdf(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[inline(always)]
     pub const fn set_ks15_uckdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks15_uhkdf(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[inline(always)]
     pub const fn set_ks15_uhkdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks15_uecsg(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[inline(always)]
     pub const fn set_ks15_uecsg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks15_uecdh(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[inline(always)]
     pub const fn set_ks15_uecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks15_uaes(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[inline(always)]
     pub const fn set_ks15_uaes(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks15_uhmac(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[inline(always)]
     pub const fn set_ks15_uhmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks15_ukwk(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[inline(always)]
     pub const fn set_ks15_ukwk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks15_ukuok(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[inline(always)]
     pub const fn set_ks15_ukuok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks15_utlspms(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[inline(always)]
     pub const fn set_ks15_utlspms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks15_utlsms(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[inline(always)]
     pub const fn set_ks15_utlsms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[must_use]
     #[inline(always)]
     pub const fn ks15_ukgsrc(&self) -> bool {
         let val = (self.0 >> 26usize) & 0x01;
         val != 0
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[inline(always)]
     pub const fn set_ks15_ukgsrc(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks15_uhwo(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[inline(always)]
     pub const fn set_ks15_uhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks15_uwrpok(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[inline(always)]
     pub const fn set_ks15_uwrpok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks15_uduk(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[inline(always)]
     pub const fn set_ks15_uduk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[must_use]
     #[inline(always)]
     pub const fn ks15_upprot(&self) -> u8 {
         let val = (self.0 >> 30usize) & 0x03;
         val as u8
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[inline(always)]
     pub const fn set_ks15_upprot(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val as u32) & 0x03) << 30usize);
@@ -3701,319 +3701,319 @@ impl defmt::Format for ElsKs15 {
         )
     }
 }
-#[doc = "Status Register"]
+#[doc = "Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ElsKs16(pub u32);
 impl ElsKs16 {
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[must_use]
     #[inline(always)]
     pub const fn ks16_ksize(&self) -> super::vals::Ks16Ksize {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Ks16Ksize::from_bits(val as u8)
     }
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[inline(always)]
     pub const fn set_ks16_ksize(&mut self, val: super::vals::Ks16Ksize) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[must_use]
     #[inline(always)]
     pub const fn ks16_kact(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[inline(always)]
     pub const fn set_ks16_kact(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks16_kbase(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[inline(always)]
     pub const fn set_ks16_kbase(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[must_use]
     #[inline(always)]
     pub const fn ks16_fgp(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[inline(always)]
     pub const fn set_ks16_fgp(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[must_use]
     #[inline(always)]
     pub const fn ks16_frtn(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[inline(always)]
     pub const fn set_ks16_frtn(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[must_use]
     #[inline(always)]
     pub const fn ks16_fhwo(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[inline(always)]
     pub const fn set_ks16_fhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks16_ukpuk(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks16_ukpuk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks16_utecdh(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks16_utecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks16_ucmac(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks16_ucmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks16_uksk(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[inline(always)]
     pub const fn set_ks16_uksk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks16_urtf(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[inline(always)]
     pub const fn set_ks16_urtf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks16_uckdf(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[inline(always)]
     pub const fn set_ks16_uckdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks16_uhkdf(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[inline(always)]
     pub const fn set_ks16_uhkdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks16_uecsg(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[inline(always)]
     pub const fn set_ks16_uecsg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks16_uecdh(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[inline(always)]
     pub const fn set_ks16_uecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks16_uaes(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[inline(always)]
     pub const fn set_ks16_uaes(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks16_uhmac(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[inline(always)]
     pub const fn set_ks16_uhmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks16_ukwk(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[inline(always)]
     pub const fn set_ks16_ukwk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks16_ukuok(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[inline(always)]
     pub const fn set_ks16_ukuok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks16_utlspms(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[inline(always)]
     pub const fn set_ks16_utlspms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks16_utlsms(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[inline(always)]
     pub const fn set_ks16_utlsms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[must_use]
     #[inline(always)]
     pub const fn ks16_ukgsrc(&self) -> bool {
         let val = (self.0 >> 26usize) & 0x01;
         val != 0
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[inline(always)]
     pub const fn set_ks16_ukgsrc(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks16_uhwo(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[inline(always)]
     pub const fn set_ks16_uhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks16_uwrpok(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[inline(always)]
     pub const fn set_ks16_uwrpok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks16_uduk(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[inline(always)]
     pub const fn set_ks16_uduk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[must_use]
     #[inline(always)]
     pub const fn ks16_upprot(&self) -> u8 {
         let val = (self.0 >> 30usize) & 0x03;
         val as u8
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[inline(always)]
     pub const fn set_ks16_upprot(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val as u32) & 0x03) << 30usize);
@@ -4092,319 +4092,319 @@ impl defmt::Format for ElsKs16 {
         )
     }
 }
-#[doc = "Status Register"]
+#[doc = "Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ElsKs17(pub u32);
 impl ElsKs17 {
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[must_use]
     #[inline(always)]
     pub const fn ks17_ksize(&self) -> super::vals::Ks17Ksize {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Ks17Ksize::from_bits(val as u8)
     }
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[inline(always)]
     pub const fn set_ks17_ksize(&mut self, val: super::vals::Ks17Ksize) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[must_use]
     #[inline(always)]
     pub const fn ks17_kact(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[inline(always)]
     pub const fn set_ks17_kact(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks17_kbase(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[inline(always)]
     pub const fn set_ks17_kbase(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[must_use]
     #[inline(always)]
     pub const fn ks17_fgp(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[inline(always)]
     pub const fn set_ks17_fgp(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[must_use]
     #[inline(always)]
     pub const fn ks17_frtn(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[inline(always)]
     pub const fn set_ks17_frtn(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[must_use]
     #[inline(always)]
     pub const fn ks17_fhwo(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[inline(always)]
     pub const fn set_ks17_fhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks17_ukpuk(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks17_ukpuk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks17_utecdh(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks17_utecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks17_ucmac(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks17_ucmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks17_uksk(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[inline(always)]
     pub const fn set_ks17_uksk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks17_urtf(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[inline(always)]
     pub const fn set_ks17_urtf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks17_uckdf(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[inline(always)]
     pub const fn set_ks17_uckdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks17_uhkdf(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[inline(always)]
     pub const fn set_ks17_uhkdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks17_uecsg(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[inline(always)]
     pub const fn set_ks17_uecsg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks17_uecdh(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[inline(always)]
     pub const fn set_ks17_uecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks17_uaes(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[inline(always)]
     pub const fn set_ks17_uaes(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks17_uhmac(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[inline(always)]
     pub const fn set_ks17_uhmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks17_ukwk(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[inline(always)]
     pub const fn set_ks17_ukwk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks17_ukuok(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[inline(always)]
     pub const fn set_ks17_ukuok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks17_utlspms(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[inline(always)]
     pub const fn set_ks17_utlspms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks17_utlsms(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[inline(always)]
     pub const fn set_ks17_utlsms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[must_use]
     #[inline(always)]
     pub const fn ks17_ukgsrc(&self) -> bool {
         let val = (self.0 >> 26usize) & 0x01;
         val != 0
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[inline(always)]
     pub const fn set_ks17_ukgsrc(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks17_uhwo(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[inline(always)]
     pub const fn set_ks17_uhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks17_uwrpok(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[inline(always)]
     pub const fn set_ks17_uwrpok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks17_uduk(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[inline(always)]
     pub const fn set_ks17_uduk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[must_use]
     #[inline(always)]
     pub const fn ks17_upprot(&self) -> u8 {
         let val = (self.0 >> 30usize) & 0x03;
         val as u8
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[inline(always)]
     pub const fn set_ks17_upprot(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val as u32) & 0x03) << 30usize);
@@ -4483,319 +4483,319 @@ impl defmt::Format for ElsKs17 {
         )
     }
 }
-#[doc = "Status Register"]
+#[doc = "Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ElsKs18(pub u32);
 impl ElsKs18 {
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[must_use]
     #[inline(always)]
     pub const fn ks18_ksize(&self) -> super::vals::Ks18Ksize {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Ks18Ksize::from_bits(val as u8)
     }
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[inline(always)]
     pub const fn set_ks18_ksize(&mut self, val: super::vals::Ks18Ksize) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[must_use]
     #[inline(always)]
     pub const fn ks18_kact(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[inline(always)]
     pub const fn set_ks18_kact(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks18_kbase(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[inline(always)]
     pub const fn set_ks18_kbase(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[must_use]
     #[inline(always)]
     pub const fn ks18_fgp(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[inline(always)]
     pub const fn set_ks18_fgp(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[must_use]
     #[inline(always)]
     pub const fn ks18_frtn(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[inline(always)]
     pub const fn set_ks18_frtn(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[must_use]
     #[inline(always)]
     pub const fn ks18_fhwo(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[inline(always)]
     pub const fn set_ks18_fhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks18_ukpuk(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks18_ukpuk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks18_utecdh(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks18_utecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks18_ucmac(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks18_ucmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks18_uksk(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[inline(always)]
     pub const fn set_ks18_uksk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks18_urtf(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[inline(always)]
     pub const fn set_ks18_urtf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks18_uckdf(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[inline(always)]
     pub const fn set_ks18_uckdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks18_uhkdf(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[inline(always)]
     pub const fn set_ks18_uhkdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks18_uecsg(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[inline(always)]
     pub const fn set_ks18_uecsg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks18_uecdh(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[inline(always)]
     pub const fn set_ks18_uecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks18_uaes(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[inline(always)]
     pub const fn set_ks18_uaes(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks18_uhmac(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[inline(always)]
     pub const fn set_ks18_uhmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks18_ukwk(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[inline(always)]
     pub const fn set_ks18_ukwk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks18_ukuok(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[inline(always)]
     pub const fn set_ks18_ukuok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks18_utlspms(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[inline(always)]
     pub const fn set_ks18_utlspms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks18_utlsms(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[inline(always)]
     pub const fn set_ks18_utlsms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[must_use]
     #[inline(always)]
     pub const fn ks18_ukgsrc(&self) -> bool {
         let val = (self.0 >> 26usize) & 0x01;
         val != 0
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[inline(always)]
     pub const fn set_ks18_ukgsrc(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks18_uhwo(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[inline(always)]
     pub const fn set_ks18_uhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks18_uwrpok(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[inline(always)]
     pub const fn set_ks18_uwrpok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks18_uduk(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[inline(always)]
     pub const fn set_ks18_uduk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[must_use]
     #[inline(always)]
     pub const fn ks18_upprot(&self) -> u8 {
         let val = (self.0 >> 30usize) & 0x03;
         val as u8
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[inline(always)]
     pub const fn set_ks18_upprot(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val as u32) & 0x03) << 30usize);
@@ -4874,319 +4874,319 @@ impl defmt::Format for ElsKs18 {
         )
     }
 }
-#[doc = "Status Register"]
+#[doc = "Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ElsKs19(pub u32);
 impl ElsKs19 {
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[must_use]
     #[inline(always)]
     pub const fn ks19_ksize(&self) -> super::vals::Ks19Ksize {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Ks19Ksize::from_bits(val as u8)
     }
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[inline(always)]
     pub const fn set_ks19_ksize(&mut self, val: super::vals::Ks19Ksize) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[must_use]
     #[inline(always)]
     pub const fn ks19_kact(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[inline(always)]
     pub const fn set_ks19_kact(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks19_kbase(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[inline(always)]
     pub const fn set_ks19_kbase(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[must_use]
     #[inline(always)]
     pub const fn ks19_fgp(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[inline(always)]
     pub const fn set_ks19_fgp(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[must_use]
     #[inline(always)]
     pub const fn ks19_frtn(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[inline(always)]
     pub const fn set_ks19_frtn(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[must_use]
     #[inline(always)]
     pub const fn ks19_fhwo(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[inline(always)]
     pub const fn set_ks19_fhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks19_ukpuk(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks19_ukpuk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks19_utecdh(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks19_utecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks19_ucmac(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks19_ucmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks19_uksk(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[inline(always)]
     pub const fn set_ks19_uksk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks19_urtf(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[inline(always)]
     pub const fn set_ks19_urtf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks19_uckdf(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[inline(always)]
     pub const fn set_ks19_uckdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks19_uhkdf(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[inline(always)]
     pub const fn set_ks19_uhkdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks19_uecsg(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[inline(always)]
     pub const fn set_ks19_uecsg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks19_uecdh(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[inline(always)]
     pub const fn set_ks19_uecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks19_uaes(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[inline(always)]
     pub const fn set_ks19_uaes(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks19_uhmac(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[inline(always)]
     pub const fn set_ks19_uhmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks19_ukwk(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[inline(always)]
     pub const fn set_ks19_ukwk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks19_ukuok(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[inline(always)]
     pub const fn set_ks19_ukuok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks19_utlspms(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[inline(always)]
     pub const fn set_ks19_utlspms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks19_utlsms(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[inline(always)]
     pub const fn set_ks19_utlsms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[must_use]
     #[inline(always)]
     pub const fn ks19_ukgsrc(&self) -> bool {
         let val = (self.0 >> 26usize) & 0x01;
         val != 0
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[inline(always)]
     pub const fn set_ks19_ukgsrc(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks19_uhwo(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[inline(always)]
     pub const fn set_ks19_uhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks19_uwrpok(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[inline(always)]
     pub const fn set_ks19_uwrpok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks19_uduk(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[inline(always)]
     pub const fn set_ks19_uduk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[must_use]
     #[inline(always)]
     pub const fn ks19_upprot(&self) -> u8 {
         let val = (self.0 >> 30usize) & 0x03;
         val as u8
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[inline(always)]
     pub const fn set_ks19_upprot(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val as u32) & 0x03) << 30usize);
@@ -5265,319 +5265,319 @@ impl defmt::Format for ElsKs19 {
         )
     }
 }
-#[doc = "Status Register"]
+#[doc = "Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ElsKs2(pub u32);
 impl ElsKs2 {
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[must_use]
     #[inline(always)]
     pub const fn ks2_ksize(&self) -> super::vals::Ks2Ksize {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Ks2Ksize::from_bits(val as u8)
     }
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[inline(always)]
     pub const fn set_ks2_ksize(&mut self, val: super::vals::Ks2Ksize) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[must_use]
     #[inline(always)]
     pub const fn ks2_kact(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[inline(always)]
     pub const fn set_ks2_kact(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks2_kbase(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[inline(always)]
     pub const fn set_ks2_kbase(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[must_use]
     #[inline(always)]
     pub const fn ks2_fgp(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[inline(always)]
     pub const fn set_ks2_fgp(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[must_use]
     #[inline(always)]
     pub const fn ks2_frtn(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[inline(always)]
     pub const fn set_ks2_frtn(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[must_use]
     #[inline(always)]
     pub const fn ks2_fhwo(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[inline(always)]
     pub const fn set_ks2_fhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks2_ukpuk(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks2_ukpuk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks2_utecdh(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks2_utecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks2_ucmac(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks2_ucmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks2_uksk(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[inline(always)]
     pub const fn set_ks2_uksk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks2_urtf(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[inline(always)]
     pub const fn set_ks2_urtf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks2_uckdf(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[inline(always)]
     pub const fn set_ks2_uckdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks2_uhkdf(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[inline(always)]
     pub const fn set_ks2_uhkdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks2_uecsg(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[inline(always)]
     pub const fn set_ks2_uecsg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks2_uecdh(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[inline(always)]
     pub const fn set_ks2_uecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks2_uaes(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[inline(always)]
     pub const fn set_ks2_uaes(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks2_uhmac(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[inline(always)]
     pub const fn set_ks2_uhmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks2_ukwk(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[inline(always)]
     pub const fn set_ks2_ukwk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks2_ukuok(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[inline(always)]
     pub const fn set_ks2_ukuok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks2_utlspms(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[inline(always)]
     pub const fn set_ks2_utlspms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks2_utlsms(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[inline(always)]
     pub const fn set_ks2_utlsms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[must_use]
     #[inline(always)]
     pub const fn ks2_ukgsrc(&self) -> bool {
         let val = (self.0 >> 26usize) & 0x01;
         val != 0
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[inline(always)]
     pub const fn set_ks2_ukgsrc(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks2_uhwo(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[inline(always)]
     pub const fn set_ks2_uhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks2_uwrpok(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[inline(always)]
     pub const fn set_ks2_uwrpok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks2_uduk(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[inline(always)]
     pub const fn set_ks2_uduk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[must_use]
     #[inline(always)]
     pub const fn ks2_upprot(&self) -> u8 {
         let val = (self.0 >> 30usize) & 0x03;
         val as u8
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[inline(always)]
     pub const fn set_ks2_upprot(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val as u32) & 0x03) << 30usize);
@@ -5656,319 +5656,319 @@ impl defmt::Format for ElsKs2 {
         )
     }
 }
-#[doc = "Status Register"]
+#[doc = "Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ElsKs3(pub u32);
 impl ElsKs3 {
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[must_use]
     #[inline(always)]
     pub const fn ks3_ksize(&self) -> super::vals::Ks3Ksize {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Ks3Ksize::from_bits(val as u8)
     }
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[inline(always)]
     pub const fn set_ks3_ksize(&mut self, val: super::vals::Ks3Ksize) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[must_use]
     #[inline(always)]
     pub const fn ks3_kact(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[inline(always)]
     pub const fn set_ks3_kact(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks3_kbase(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[inline(always)]
     pub const fn set_ks3_kbase(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[must_use]
     #[inline(always)]
     pub const fn ks3_fgp(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[inline(always)]
     pub const fn set_ks3_fgp(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[must_use]
     #[inline(always)]
     pub const fn ks3_frtn(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[inline(always)]
     pub const fn set_ks3_frtn(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[must_use]
     #[inline(always)]
     pub const fn ks3_fhwo(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[inline(always)]
     pub const fn set_ks3_fhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks3_ukpuk(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks3_ukpuk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks3_utecdh(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks3_utecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks3_ucmac(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks3_ucmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks3_uksk(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[inline(always)]
     pub const fn set_ks3_uksk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks3_urtf(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[inline(always)]
     pub const fn set_ks3_urtf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks3_uckdf(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[inline(always)]
     pub const fn set_ks3_uckdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks3_uhkdf(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[inline(always)]
     pub const fn set_ks3_uhkdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks3_uecsg(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[inline(always)]
     pub const fn set_ks3_uecsg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks3_uecdh(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[inline(always)]
     pub const fn set_ks3_uecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks3_uaes(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[inline(always)]
     pub const fn set_ks3_uaes(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks3_uhmac(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[inline(always)]
     pub const fn set_ks3_uhmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks3_ukwk(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[inline(always)]
     pub const fn set_ks3_ukwk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks3_ukuok(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[inline(always)]
     pub const fn set_ks3_ukuok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks3_utlspms(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[inline(always)]
     pub const fn set_ks3_utlspms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks3_utlsms(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[inline(always)]
     pub const fn set_ks3_utlsms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[must_use]
     #[inline(always)]
     pub const fn ks3_ukgsrc(&self) -> bool {
         let val = (self.0 >> 26usize) & 0x01;
         val != 0
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[inline(always)]
     pub const fn set_ks3_ukgsrc(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks3_uhwo(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[inline(always)]
     pub const fn set_ks3_uhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks3_uwrpok(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[inline(always)]
     pub const fn set_ks3_uwrpok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks3_uduk(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[inline(always)]
     pub const fn set_ks3_uduk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[must_use]
     #[inline(always)]
     pub const fn ks3_upprot(&self) -> u8 {
         let val = (self.0 >> 30usize) & 0x03;
         val as u8
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[inline(always)]
     pub const fn set_ks3_upprot(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val as u32) & 0x03) << 30usize);
@@ -6047,319 +6047,319 @@ impl defmt::Format for ElsKs3 {
         )
     }
 }
-#[doc = "Status Register"]
+#[doc = "Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ElsKs4(pub u32);
 impl ElsKs4 {
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[must_use]
     #[inline(always)]
     pub const fn ks4_ksize(&self) -> super::vals::Ks4Ksize {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Ks4Ksize::from_bits(val as u8)
     }
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[inline(always)]
     pub const fn set_ks4_ksize(&mut self, val: super::vals::Ks4Ksize) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[must_use]
     #[inline(always)]
     pub const fn ks4_kact(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[inline(always)]
     pub const fn set_ks4_kact(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks4_kbase(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[inline(always)]
     pub const fn set_ks4_kbase(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[must_use]
     #[inline(always)]
     pub const fn ks4_fgp(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[inline(always)]
     pub const fn set_ks4_fgp(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[must_use]
     #[inline(always)]
     pub const fn ks4_frtn(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[inline(always)]
     pub const fn set_ks4_frtn(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[must_use]
     #[inline(always)]
     pub const fn ks4_fhwo(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[inline(always)]
     pub const fn set_ks4_fhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks4_ukpuk(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks4_ukpuk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks4_utecdh(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks4_utecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks4_ucmac(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks4_ucmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks4_uksk(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[inline(always)]
     pub const fn set_ks4_uksk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks4_urtf(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[inline(always)]
     pub const fn set_ks4_urtf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks4_uckdf(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[inline(always)]
     pub const fn set_ks4_uckdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks4_uhkdf(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[inline(always)]
     pub const fn set_ks4_uhkdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks4_uecsg(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[inline(always)]
     pub const fn set_ks4_uecsg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks4_uecdh(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[inline(always)]
     pub const fn set_ks4_uecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks4_uaes(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[inline(always)]
     pub const fn set_ks4_uaes(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks4_uhmac(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[inline(always)]
     pub const fn set_ks4_uhmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks4_ukwk(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[inline(always)]
     pub const fn set_ks4_ukwk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks4_ukuok(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[inline(always)]
     pub const fn set_ks4_ukuok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks4_utlspms(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[inline(always)]
     pub const fn set_ks4_utlspms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks4_utlsms(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[inline(always)]
     pub const fn set_ks4_utlsms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[must_use]
     #[inline(always)]
     pub const fn ks4_ukgsrc(&self) -> bool {
         let val = (self.0 >> 26usize) & 0x01;
         val != 0
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[inline(always)]
     pub const fn set_ks4_ukgsrc(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks4_uhwo(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[inline(always)]
     pub const fn set_ks4_uhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks4_uwrpok(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[inline(always)]
     pub const fn set_ks4_uwrpok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks4_uduk(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[inline(always)]
     pub const fn set_ks4_uduk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[must_use]
     #[inline(always)]
     pub const fn ks4_upprot(&self) -> u8 {
         let val = (self.0 >> 30usize) & 0x03;
         val as u8
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[inline(always)]
     pub const fn set_ks4_upprot(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val as u32) & 0x03) << 30usize);
@@ -6438,319 +6438,319 @@ impl defmt::Format for ElsKs4 {
         )
     }
 }
-#[doc = "Status Register"]
+#[doc = "Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ElsKs5(pub u32);
 impl ElsKs5 {
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[must_use]
     #[inline(always)]
     pub const fn ks5_ksize(&self) -> super::vals::Ks5Ksize {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Ks5Ksize::from_bits(val as u8)
     }
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[inline(always)]
     pub const fn set_ks5_ksize(&mut self, val: super::vals::Ks5Ksize) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[must_use]
     #[inline(always)]
     pub const fn ks5_kact(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[inline(always)]
     pub const fn set_ks5_kact(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks5_kbase(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[inline(always)]
     pub const fn set_ks5_kbase(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[must_use]
     #[inline(always)]
     pub const fn ks5_fgp(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[inline(always)]
     pub const fn set_ks5_fgp(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[must_use]
     #[inline(always)]
     pub const fn ks5_frtn(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[inline(always)]
     pub const fn set_ks5_frtn(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[must_use]
     #[inline(always)]
     pub const fn ks5_fhwo(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[inline(always)]
     pub const fn set_ks5_fhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks5_ukpuk(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks5_ukpuk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks5_utecdh(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks5_utecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks5_ucmac(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks5_ucmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks5_uksk(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[inline(always)]
     pub const fn set_ks5_uksk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks5_urtf(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[inline(always)]
     pub const fn set_ks5_urtf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks5_uckdf(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[inline(always)]
     pub const fn set_ks5_uckdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks5_uhkdf(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[inline(always)]
     pub const fn set_ks5_uhkdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks5_uecsg(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[inline(always)]
     pub const fn set_ks5_uecsg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks5_uecdh(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[inline(always)]
     pub const fn set_ks5_uecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks5_uaes(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[inline(always)]
     pub const fn set_ks5_uaes(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks5_uhmac(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[inline(always)]
     pub const fn set_ks5_uhmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks5_ukwk(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[inline(always)]
     pub const fn set_ks5_ukwk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks5_ukuok(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[inline(always)]
     pub const fn set_ks5_ukuok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks5_utlspms(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[inline(always)]
     pub const fn set_ks5_utlspms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks5_utlsms(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[inline(always)]
     pub const fn set_ks5_utlsms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[must_use]
     #[inline(always)]
     pub const fn ks5_ukgsrc(&self) -> bool {
         let val = (self.0 >> 26usize) & 0x01;
         val != 0
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[inline(always)]
     pub const fn set_ks5_ukgsrc(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks5_uhwo(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[inline(always)]
     pub const fn set_ks5_uhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks5_uwrpok(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[inline(always)]
     pub const fn set_ks5_uwrpok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks5_uduk(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[inline(always)]
     pub const fn set_ks5_uduk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[must_use]
     #[inline(always)]
     pub const fn ks5_upprot(&self) -> u8 {
         let val = (self.0 >> 30usize) & 0x03;
         val as u8
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[inline(always)]
     pub const fn set_ks5_upprot(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val as u32) & 0x03) << 30usize);
@@ -6829,319 +6829,319 @@ impl defmt::Format for ElsKs5 {
         )
     }
 }
-#[doc = "Status Register"]
+#[doc = "Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ElsKs6(pub u32);
 impl ElsKs6 {
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[must_use]
     #[inline(always)]
     pub const fn ks6_ksize(&self) -> super::vals::Ks6Ksize {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Ks6Ksize::from_bits(val as u8)
     }
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[inline(always)]
     pub const fn set_ks6_ksize(&mut self, val: super::vals::Ks6Ksize) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[must_use]
     #[inline(always)]
     pub const fn ks6_kact(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[inline(always)]
     pub const fn set_ks6_kact(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks6_kbase(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[inline(always)]
     pub const fn set_ks6_kbase(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[must_use]
     #[inline(always)]
     pub const fn ks6_fgp(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[inline(always)]
     pub const fn set_ks6_fgp(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[must_use]
     #[inline(always)]
     pub const fn ks6_frtn(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[inline(always)]
     pub const fn set_ks6_frtn(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[must_use]
     #[inline(always)]
     pub const fn ks6_fhwo(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[inline(always)]
     pub const fn set_ks6_fhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks6_ukpuk(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks6_ukpuk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks6_utecdh(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks6_utecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks6_ucmac(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks6_ucmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks6_uksk(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[inline(always)]
     pub const fn set_ks6_uksk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks6_urtf(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[inline(always)]
     pub const fn set_ks6_urtf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks6_uckdf(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[inline(always)]
     pub const fn set_ks6_uckdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks6_uhkdf(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[inline(always)]
     pub const fn set_ks6_uhkdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks6_uecsg(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[inline(always)]
     pub const fn set_ks6_uecsg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks6_uecdh(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[inline(always)]
     pub const fn set_ks6_uecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks6_uaes(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[inline(always)]
     pub const fn set_ks6_uaes(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks6_uhmac(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[inline(always)]
     pub const fn set_ks6_uhmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks6_ukwk(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[inline(always)]
     pub const fn set_ks6_ukwk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks6_ukuok(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[inline(always)]
     pub const fn set_ks6_ukuok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks6_utlspms(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[inline(always)]
     pub const fn set_ks6_utlspms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks6_utlsms(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[inline(always)]
     pub const fn set_ks6_utlsms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[must_use]
     #[inline(always)]
     pub const fn ks6_ukgsrc(&self) -> bool {
         let val = (self.0 >> 26usize) & 0x01;
         val != 0
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[inline(always)]
     pub const fn set_ks6_ukgsrc(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks6_uhwo(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[inline(always)]
     pub const fn set_ks6_uhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks6_uwrpok(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[inline(always)]
     pub const fn set_ks6_uwrpok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks6_uduk(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[inline(always)]
     pub const fn set_ks6_uduk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[must_use]
     #[inline(always)]
     pub const fn ks6_upprot(&self) -> u8 {
         let val = (self.0 >> 30usize) & 0x03;
         val as u8
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[inline(always)]
     pub const fn set_ks6_upprot(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val as u32) & 0x03) << 30usize);
@@ -7220,319 +7220,319 @@ impl defmt::Format for ElsKs6 {
         )
     }
 }
-#[doc = "Status Register"]
+#[doc = "Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ElsKs7(pub u32);
 impl ElsKs7 {
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[must_use]
     #[inline(always)]
     pub const fn ks7_ksize(&self) -> super::vals::Ks7Ksize {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Ks7Ksize::from_bits(val as u8)
     }
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[inline(always)]
     pub const fn set_ks7_ksize(&mut self, val: super::vals::Ks7Ksize) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[must_use]
     #[inline(always)]
     pub const fn ks7_kact(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[inline(always)]
     pub const fn set_ks7_kact(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks7_kbase(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[inline(always)]
     pub const fn set_ks7_kbase(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[must_use]
     #[inline(always)]
     pub const fn ks7_fgp(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[inline(always)]
     pub const fn set_ks7_fgp(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[must_use]
     #[inline(always)]
     pub const fn ks7_frtn(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[inline(always)]
     pub const fn set_ks7_frtn(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[must_use]
     #[inline(always)]
     pub const fn ks7_fhwo(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[inline(always)]
     pub const fn set_ks7_fhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks7_ukpuk(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks7_ukpuk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks7_utecdh(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks7_utecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks7_ucmac(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks7_ucmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks7_uksk(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[inline(always)]
     pub const fn set_ks7_uksk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks7_urtf(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[inline(always)]
     pub const fn set_ks7_urtf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks7_uckdf(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[inline(always)]
     pub const fn set_ks7_uckdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks7_uhkdf(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[inline(always)]
     pub const fn set_ks7_uhkdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks7_uecsg(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[inline(always)]
     pub const fn set_ks7_uecsg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks7_uecdh(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[inline(always)]
     pub const fn set_ks7_uecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks7_uaes(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[inline(always)]
     pub const fn set_ks7_uaes(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks7_uhmac(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[inline(always)]
     pub const fn set_ks7_uhmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks7_ukwk(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[inline(always)]
     pub const fn set_ks7_ukwk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks7_ukuok(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[inline(always)]
     pub const fn set_ks7_ukuok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks7_utlspms(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[inline(always)]
     pub const fn set_ks7_utlspms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks7_utlsms(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[inline(always)]
     pub const fn set_ks7_utlsms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[must_use]
     #[inline(always)]
     pub const fn ks7_ukgsrc(&self) -> bool {
         let val = (self.0 >> 26usize) & 0x01;
         val != 0
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[inline(always)]
     pub const fn set_ks7_ukgsrc(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks7_uhwo(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[inline(always)]
     pub const fn set_ks7_uhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks7_uwrpok(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[inline(always)]
     pub const fn set_ks7_uwrpok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks7_uduk(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[inline(always)]
     pub const fn set_ks7_uduk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[must_use]
     #[inline(always)]
     pub const fn ks7_upprot(&self) -> u8 {
         let val = (self.0 >> 30usize) & 0x03;
         val as u8
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[inline(always)]
     pub const fn set_ks7_upprot(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val as u32) & 0x03) << 30usize);
@@ -7611,319 +7611,319 @@ impl defmt::Format for ElsKs7 {
         )
     }
 }
-#[doc = "Status Register"]
+#[doc = "Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ElsKs8(pub u32);
 impl ElsKs8 {
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[must_use]
     #[inline(always)]
     pub const fn ks8_ksize(&self) -> super::vals::Ks8Ksize {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Ks8Ksize::from_bits(val as u8)
     }
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[inline(always)]
     pub const fn set_ks8_ksize(&mut self, val: super::vals::Ks8Ksize) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[must_use]
     #[inline(always)]
     pub const fn ks8_kact(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[inline(always)]
     pub const fn set_ks8_kact(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks8_kbase(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[inline(always)]
     pub const fn set_ks8_kbase(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[must_use]
     #[inline(always)]
     pub const fn ks8_fgp(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[inline(always)]
     pub const fn set_ks8_fgp(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[must_use]
     #[inline(always)]
     pub const fn ks8_frtn(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[inline(always)]
     pub const fn set_ks8_frtn(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[must_use]
     #[inline(always)]
     pub const fn ks8_fhwo(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[inline(always)]
     pub const fn set_ks8_fhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks8_ukpuk(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks8_ukpuk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks8_utecdh(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks8_utecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks8_ucmac(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks8_ucmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks8_uksk(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[inline(always)]
     pub const fn set_ks8_uksk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks8_urtf(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[inline(always)]
     pub const fn set_ks8_urtf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks8_uckdf(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[inline(always)]
     pub const fn set_ks8_uckdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks8_uhkdf(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[inline(always)]
     pub const fn set_ks8_uhkdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks8_uecsg(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[inline(always)]
     pub const fn set_ks8_uecsg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks8_uecdh(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[inline(always)]
     pub const fn set_ks8_uecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks8_uaes(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[inline(always)]
     pub const fn set_ks8_uaes(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks8_uhmac(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[inline(always)]
     pub const fn set_ks8_uhmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks8_ukwk(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[inline(always)]
     pub const fn set_ks8_ukwk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks8_ukuok(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[inline(always)]
     pub const fn set_ks8_ukuok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks8_utlspms(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[inline(always)]
     pub const fn set_ks8_utlspms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks8_utlsms(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[inline(always)]
     pub const fn set_ks8_utlsms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[must_use]
     #[inline(always)]
     pub const fn ks8_ukgsrc(&self) -> bool {
         let val = (self.0 >> 26usize) & 0x01;
         val != 0
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[inline(always)]
     pub const fn set_ks8_ukgsrc(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks8_uhwo(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[inline(always)]
     pub const fn set_ks8_uhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks8_uwrpok(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[inline(always)]
     pub const fn set_ks8_uwrpok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks8_uduk(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[inline(always)]
     pub const fn set_ks8_uduk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[must_use]
     #[inline(always)]
     pub const fn ks8_upprot(&self) -> u8 {
         let val = (self.0 >> 30usize) & 0x03;
         val as u8
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[inline(always)]
     pub const fn set_ks8_upprot(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val as u32) & 0x03) << 30usize);
@@ -8002,319 +8002,319 @@ impl defmt::Format for ElsKs8 {
         )
     }
 }
-#[doc = "Status Register"]
+#[doc = "Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ElsKs9(pub u32);
 impl ElsKs9 {
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[must_use]
     #[inline(always)]
     pub const fn ks9_ksize(&self) -> super::vals::Ks9Ksize {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::Ks9Ksize::from_bits(val as u8)
     }
-    #[doc = "Key size"]
+    #[doc = "Key size."]
     #[inline(always)]
     pub const fn set_ks9_ksize(&mut self, val: super::vals::Ks9Ksize) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[must_use]
     #[inline(always)]
     pub const fn ks9_kact(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Key is active"]
+    #[doc = "Key is active."]
     #[inline(always)]
     pub const fn set_ks9_kact(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks9_kbase(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "First slot in a multislot key"]
+    #[doc = "First slot in a multislot key."]
     #[inline(always)]
     pub const fn set_ks9_kbase(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[must_use]
     #[inline(always)]
     pub const fn ks9_fgp(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature General Purpose"]
+    #[doc = "Hardware Feature General Purpose."]
     #[inline(always)]
     pub const fn set_ks9_fgp(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[must_use]
     #[inline(always)]
     pub const fn ks9_frtn(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Retention"]
+    #[doc = "Hardware Feature Retention."]
     #[inline(always)]
     pub const fn set_ks9_frtn(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[must_use]
     #[inline(always)]
     pub const fn ks9_fhwo(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware Feature Output"]
+    #[doc = "Hardware Feature Output."]
     #[inline(always)]
     pub const fn set_ks9_fhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks9_ukpuk(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks9_ukpuk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks9_utecdh(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks9_utecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks9_ucmac(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "CMAC key"]
+    #[doc = "CMAC key."]
     #[inline(always)]
     pub const fn set_ks9_ucmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks9_uksk(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "KSK key"]
+    #[doc = "KSK key."]
     #[inline(always)]
     pub const fn set_ks9_uksk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks9_urtf(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Real Time Fingerprint key"]
+    #[doc = "Real Time Fingerprint key."]
     #[inline(always)]
     pub const fn set_ks9_urtf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks9_uckdf(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for CKDF command"]
+    #[doc = "Derivation key for CKDF command."]
     #[inline(always)]
     pub const fn set_ks9_uckdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[must_use]
     #[inline(always)]
     pub const fn ks9_uhkdf(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Derivation key for HKDF command"]
+    #[doc = "Derivation key for HKDF command."]
     #[inline(always)]
     pub const fn set_ks9_uhkdf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks9_uecsg(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc signing key"]
+    #[doc = "Ecc signing key."]
     #[inline(always)]
     pub const fn set_ks9_uecsg(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks9_uecdh(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Ecc diffie hellman key"]
+    #[doc = "Ecc diffie hellman key."]
     #[inline(always)]
     pub const fn set_ks9_uecdh(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks9_uaes(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Aes key"]
+    #[doc = "Aes key."]
     #[inline(always)]
     pub const fn set_ks9_uaes(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks9_uhmac(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Hmac key"]
+    #[doc = "Hmac key."]
     #[inline(always)]
     pub const fn set_ks9_uhmac(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks9_ukwk(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "Key wrapping key"]
+    #[doc = "Key wrapping key."]
     #[inline(always)]
     pub const fn set_ks9_ukwk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks9_ukuok(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "Key unwrapping key"]
+    #[doc = "Key unwrapping key."]
     #[inline(always)]
     pub const fn set_ks9_ukuok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks9_utlspms(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Pre Master Secret"]
+    #[doc = "TLS Pre Master Secret."]
     #[inline(always)]
     pub const fn set_ks9_utlspms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[must_use]
     #[inline(always)]
     pub const fn ks9_utlsms(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "TLS Master Secret"]
+    #[doc = "TLS Master Secret."]
     #[inline(always)]
     pub const fn set_ks9_utlsms(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[must_use]
     #[inline(always)]
     pub const fn ks9_ukgsrc(&self) -> bool {
         let val = (self.0 >> 26usize) & 0x01;
         val != 0
     }
-    #[doc = "Supply KEYGEN source"]
+    #[doc = "Supply KEYGEN source."]
     #[inline(always)]
     pub const fn set_ks9_ukgsrc(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks9_uhwo(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "Hardware out key"]
+    #[doc = "Hardware out key."]
     #[inline(always)]
     pub const fn set_ks9_uhwo(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks9_uwrpok(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "Ok to wrap key"]
+    #[doc = "Ok to wrap key."]
     #[inline(always)]
     pub const fn set_ks9_uwrpok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[must_use]
     #[inline(always)]
     pub const fn ks9_uduk(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "Device Unique Key"]
+    #[doc = "Device Unique Key."]
     #[inline(always)]
     pub const fn set_ks9_uduk(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[must_use]
     #[inline(always)]
     pub const fn ks9_upprot(&self) -> u8 {
         let val = (self.0 >> 30usize) & 0x03;
         val as u8
     }
-    #[doc = "Priviledge level"]
+    #[doc = "Priviledge level."]
     #[inline(always)]
     pub const fn set_ks9_upprot(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val as u32) & 0x03) << 30usize);
@@ -8393,7 +8393,7 @@ impl defmt::Format for ElsKs9 {
         )
     }
 }
-#[doc = "Error Status"]
+#[doc = "Error Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ErrStatus(pub u32);
@@ -8482,14 +8482,14 @@ impl ErrStatus {
     pub const fn set_err_lvl(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val as u32) & 0x03) << 6usize);
     }
-    #[doc = "TRNG unable to gather entropy with the current configuration"]
+    #[doc = "TRNG unable to gather entropy with the current configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn dtrng_err(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "TRNG unable to gather entropy with the current configuration"]
+    #[doc = "TRNG unable to gather entropy with the current configuration."]
     #[inline(always)]
     pub const fn set_dtrng_err(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
@@ -8532,19 +8532,19 @@ impl defmt::Format for ErrStatus {
         )
     }
 }
-#[doc = "Error Status Clear"]
+#[doc = "Error Status Clear."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ErrStatusClr(pub u32);
 impl ErrStatusClr {
-    #[doc = "ELS error status bit"]
+    #[doc = "ELS error status bit."]
     #[must_use]
     #[inline(always)]
     pub const fn err_clr(&self) -> super::vals::ErrClr {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::ErrClr::from_bits(val as u8)
     }
-    #[doc = "ELS error status bit"]
+    #[doc = "ELS error status bit."]
     #[inline(always)]
     pub const fn set_err_clr(&mut self, val: super::vals::ErrClr) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
@@ -8569,7 +8569,7 @@ impl defmt::Format for ErrStatusClr {
         defmt::write!(f, "ErrStatusClr {{ err_clr: {:?} }}", self.err_clr())
     }
 }
-#[doc = "Interrupt Enable"]
+#[doc = "Interrupt Enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct IntEnable(pub u32);
@@ -8606,19 +8606,19 @@ impl defmt::Format for IntEnable {
         defmt::write!(f, "IntEnable {{ int_en: {=bool:?} }}", self.int_en())
     }
 }
-#[doc = "Interrupt Status Clear"]
+#[doc = "Interrupt Status Clear."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct IntStatusClr(pub u32);
 impl IntStatusClr {
-    #[doc = "Interrupt status clear bit"]
+    #[doc = "Interrupt status clear bit."]
     #[must_use]
     #[inline(always)]
     pub const fn int_clr(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Interrupt status clear bit"]
+    #[doc = "Interrupt status clear bit."]
     #[inline(always)]
     pub const fn set_int_clr(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -8643,19 +8643,19 @@ impl defmt::Format for IntStatusClr {
         defmt::write!(f, "IntStatusClr {{ int_clr: {=bool:?} }}", self.int_clr())
     }
 }
-#[doc = "Interrupt Status Set"]
+#[doc = "Interrupt Status Set."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct IntStatusSet(pub u32);
 impl IntStatusSet {
-    #[doc = "Software triggered interrupt bit"]
+    #[doc = "Software triggered interrupt bit."]
     #[must_use]
     #[inline(always)]
     pub const fn int_set(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Software triggered interrupt bit"]
+    #[doc = "Software triggered interrupt bit."]
     #[inline(always)]
     pub const fn set_int_set(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -8680,19 +8680,19 @@ impl defmt::Format for IntStatusSet {
         defmt::write!(f, "IntStatusSet {{ int_set: {=bool:?} }}", self.int_set())
     }
 }
-#[doc = "Keystore Index 0"]
+#[doc = "Keystore Index 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Kidx0(pub u32);
 impl Kidx0 {
-    #[doc = "Selects the base 128-bit section of a key in ELS keystore"]
+    #[doc = "Selects the base 128-bit section of a key in ELS keystore."]
     #[must_use]
     #[inline(always)]
     pub const fn kidx0(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x1f;
         val as u8
     }
-    #[doc = "Selects the base 128-bit section of a key in ELS keystore"]
+    #[doc = "Selects the base 128-bit section of a key in ELS keystore."]
     #[inline(always)]
     pub const fn set_kidx0(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val as u32) & 0x1f) << 0usize);
@@ -8717,19 +8717,19 @@ impl defmt::Format for Kidx0 {
         defmt::write!(f, "Kidx0 {{ kidx0: {=u8:?} }}", self.kidx0())
     }
 }
-#[doc = "Keystore Index 1"]
+#[doc = "Keystore Index 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Kidx1(pub u32);
 impl Kidx1 {
-    #[doc = "Selects the base 128-bit section of a key in ELS keystore"]
+    #[doc = "Selects the base 128-bit section of a key in ELS keystore."]
     #[must_use]
     #[inline(always)]
     pub const fn kidx1(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x1f;
         val as u8
     }
-    #[doc = "Selects the base 128-bit section of a key in ELS keystore"]
+    #[doc = "Selects the base 128-bit section of a key in ELS keystore."]
     #[inline(always)]
     pub const fn set_kidx1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val as u32) & 0x1f) << 0usize);
@@ -8754,19 +8754,19 @@ impl defmt::Format for Kidx1 {
         defmt::write!(f, "Kidx1 {{ kidx1: {=u8:?} }}", self.kidx1())
     }
 }
-#[doc = "Keystore Index 2"]
+#[doc = "Keystore Index 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Kidx2(pub u32);
 impl Kidx2 {
-    #[doc = "Selects the base 128-bit section of a key in ELS keystore"]
+    #[doc = "Selects the base 128-bit section of a key in ELS keystore."]
     #[must_use]
     #[inline(always)]
     pub const fn kidx2(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x1f;
         val as u8
     }
-    #[doc = "Selects the base 128-bit section of a key in ELS keystore"]
+    #[doc = "Selects the base 128-bit section of a key in ELS keystore."]
     #[inline(always)]
     pub const fn set_kidx2(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val as u32) & 0x1f) << 0usize);
@@ -8791,7 +8791,7 @@ impl defmt::Format for Kidx2 {
         defmt::write!(f, "Kidx2 {{ kidx2: {=u8:?} }}", self.kidx2())
     }
 }
-#[doc = "Key Properties Request"]
+#[doc = "Key Properties Request."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Kpropin(pub u32);
@@ -8828,7 +8828,7 @@ impl defmt::Format for Kpropin {
         defmt::write!(f, "Kpropin {{ kpropin: {=u32:?} }}", self.kpropin())
     }
 }
-#[doc = "Master ID"]
+#[doc = "Master ID."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct MasterId(pub u32);
@@ -8865,19 +8865,19 @@ impl defmt::Format for MasterId {
         defmt::write!(f, "MasterId {{ master_id: {=u8:?} }}", self.master_id())
     }
 }
-#[doc = "PRNG SW Read Out"]
+#[doc = "PRNG SW Read Out."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct PrngDatout(pub u32);
 impl PrngDatout {
-    #[doc = "32-bit wide pseudo-random number"]
+    #[doc = "32-bit wide pseudo-random number."]
     #[must_use]
     #[inline(always)]
     pub const fn prng_datout(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "32-bit wide pseudo-random number"]
+    #[doc = "32-bit wide pseudo-random number."]
     #[inline(always)]
     pub const fn set_prng_datout(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -8906,7 +8906,7 @@ impl defmt::Format for PrngDatout {
         )
     }
 }
-#[doc = "Session ID"]
+#[doc = "Session ID."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SessionId(pub u32);
@@ -8943,115 +8943,115 @@ impl defmt::Format for SessionId {
         defmt::write!(f, "SessionId {{ session_id: {=u32:?} }}", self.session_id())
     }
 }
-#[doc = "Status Register"]
+#[doc = "Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Status(pub u32);
 impl Status {
-    #[doc = "When set, indicates the ELS is executing a crypto sequence"]
+    #[doc = "When set, indicates the ELS is executing a crypto sequence."]
     #[must_use]
     #[inline(always)]
     pub const fn els_busy(&self) -> super::vals::ElsBusy {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::ElsBusy::from_bits(val as u8)
     }
-    #[doc = "When set, indicates the ELS is executing a crypto sequence"]
+    #[doc = "When set, indicates the ELS is executing a crypto sequence."]
     #[inline(always)]
     pub const fn set_els_busy(&mut self, val: super::vals::ElsBusy) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "When set, indicates the ELS has an active interrupt"]
+    #[doc = "When set, indicates the ELS has an active interrupt."]
     #[must_use]
     #[inline(always)]
     pub const fn els_irq(&self) -> super::vals::ElsIrq {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::ElsIrq::from_bits(val as u8)
     }
-    #[doc = "When set, indicates the ELS has an active interrupt"]
+    #[doc = "When set, indicates the ELS has an active interrupt."]
     #[inline(always)]
     pub const fn set_els_irq(&mut self, val: super::vals::ElsIrq) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "When set, indicates the ELS has detected an internal error"]
+    #[doc = "When set, indicates the ELS has detected an internal error."]
     #[must_use]
     #[inline(always)]
     pub const fn els_err(&self) -> super::vals::ElsErr {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::ElsErr::from_bits(val as u8)
     }
-    #[doc = "When set, indicates the ELS has detected an internal error"]
+    #[doc = "When set, indicates the ELS has detected an internal error."]
     #[inline(always)]
     pub const fn set_els_err(&mut self, val: super::vals::ElsErr) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "When set, indicates the internal PRNG is ready"]
+    #[doc = "When set, indicates the internal PRNG is ready."]
     #[must_use]
     #[inline(always)]
     pub const fn prng_rdy(&self) -> super::vals::PrngRdy {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::PrngRdy::from_bits(val as u8)
     }
-    #[doc = "When set, indicates the internal PRNG is ready"]
+    #[doc = "When set, indicates the internal PRNG is ready."]
     #[inline(always)]
     pub const fn set_prng_rdy(&mut self, val: super::vals::PrngRdy) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "Signature verify result status"]
+    #[doc = "Signature verify result status."]
     #[must_use]
     #[inline(always)]
     pub const fn ecdsa_vfy_status(&self) -> super::vals::EcdsaVfyStatus {
         let val = (self.0 >> 4usize) & 0x03;
         super::vals::EcdsaVfyStatus::from_bits(val as u8)
     }
-    #[doc = "Signature verify result status"]
+    #[doc = "Signature verify result status."]
     #[inline(always)]
     pub const fn set_ecdsa_vfy_status(&mut self, val: super::vals::EcdsaVfyStatus) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
-    #[doc = "Current command privilege level"]
+    #[doc = "Current command privilege level."]
     #[must_use]
     #[inline(always)]
     pub const fn pprot(&self) -> super::vals::Pprot {
         let val = (self.0 >> 6usize) & 0x03;
         super::vals::Pprot::from_bits(val as u8)
     }
-    #[doc = "Current command privilege level"]
+    #[doc = "Current command privilege level."]
     #[inline(always)]
     pub const fn set_pprot(&mut self, val: super::vals::Pprot) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u32) & 0x03) << 6usize);
     }
-    #[doc = "Entropy quality of the current DRBG instance"]
+    #[doc = "Entropy quality of the current DRBG instance."]
     #[must_use]
     #[inline(always)]
     pub const fn drbg_ent_lvl(&self) -> super::vals::DrbgEntLvl {
         let val = (self.0 >> 8usize) & 0x03;
         super::vals::DrbgEntLvl::from_bits(val as u8)
     }
-    #[doc = "Entropy quality of the current DRBG instance"]
+    #[doc = "Entropy quality of the current DRBG instance."]
     #[inline(always)]
     pub const fn set_drbg_ent_lvl(&mut self, val: super::vals::DrbgEntLvl) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
-    #[doc = "When set, it indicates TRNG is gathering entropy"]
+    #[doc = "When set, it indicates TRNG is gathering entropy."]
     #[must_use]
     #[inline(always)]
     pub const fn dtrng_busy(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "When set, it indicates TRNG is gathering entropy"]
+    #[doc = "When set, it indicates TRNG is gathering entropy."]
     #[inline(always)]
     pub const fn set_dtrng_busy(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "When set, indicates that ELS is locked by a master"]
+    #[doc = "When set, indicates that ELS is locked by a master."]
     #[must_use]
     #[inline(always)]
     pub const fn els_locked(&self) -> super::vals::ElsLocked {
         let val = (self.0 >> 16usize) & 0x01;
         super::vals::ElsLocked::from_bits(val as u8)
     }
-    #[doc = "When set, indicates that ELS is locked by a master"]
+    #[doc = "When set, indicates that ELS is locked by a master."]
     #[inline(always)]
     pub const fn set_els_locked(&mut self, val: super::vals::ElsLocked) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
@@ -9096,7 +9096,7 @@ impl defmt::Format for Status {
         )
     }
 }
-#[doc = "Version Register"]
+#[doc = "Version Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Version(pub u32);

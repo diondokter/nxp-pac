@@ -1,52 +1,52 @@
-#[doc = "DCP capability 0 register"]
+#[doc = "DCP capability 0 register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Capability0(pub u32);
 impl Capability0 {
-    #[doc = "Encoded value indicating the number of key-storage locations implemented in the design"]
+    #[doc = "Encoded value indicating the number of key-storage locations implemented in the design."]
     #[must_use]
     #[inline(always)]
     pub const fn num_keys(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Encoded value indicating the number of key-storage locations implemented in the design"]
+    #[doc = "Encoded value indicating the number of key-storage locations implemented in the design."]
     #[inline(always)]
     pub const fn set_num_keys(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "Encoded value indicating the number of channels implemented in the design"]
+    #[doc = "Encoded value indicating the number of channels implemented in the design."]
     #[must_use]
     #[inline(always)]
     pub const fn num_channels(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x0f;
         val as u8
     }
-    #[doc = "Encoded value indicating the number of channels implemented in the design"]
+    #[doc = "Encoded value indicating the number of channels implemented in the design."]
     #[inline(always)]
     pub const fn set_num_channels(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val as u32) & 0x0f) << 8usize);
     }
-    #[doc = "Write to a 1 to disable the per-device unique key"]
+    #[doc = "Write to a 1 to disable the per-device unique key."]
     #[must_use]
     #[inline(always)]
     pub const fn disable_unique_key(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "Write to a 1 to disable the per-device unique key"]
+    #[doc = "Write to a 1 to disable the per-device unique key."]
     #[inline(always)]
     pub const fn set_disable_unique_key(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "Write to 1 to disable the decryption"]
+    #[doc = "Write to 1 to disable the decryption."]
     #[must_use]
     #[inline(always)]
     pub const fn disable_decrypt(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Write to 1 to disable the decryption"]
+    #[doc = "Write to 1 to disable the decryption."]
     #[inline(always)]
     pub const fn set_disable_decrypt(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -81,31 +81,31 @@ impl defmt::Format for Capability0 {
         )
     }
 }
-#[doc = "DCP capability 1 register"]
+#[doc = "DCP capability 1 register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Capability1(pub u32);
 impl Capability1 {
-    #[doc = "One-hot field indicating which cipher algorithms are available"]
+    #[doc = "One-hot field indicating which cipher algorithms are available."]
     #[must_use]
     #[inline(always)]
     pub const fn cipher_algorithms(&self) -> super::vals::CipherAlgorithms {
         let val = (self.0 >> 0usize) & 0xffff;
         super::vals::CipherAlgorithms::from_bits(val as u16)
     }
-    #[doc = "One-hot field indicating which cipher algorithms are available"]
+    #[doc = "One-hot field indicating which cipher algorithms are available."]
     #[inline(always)]
     pub const fn set_cipher_algorithms(&mut self, val: super::vals::CipherAlgorithms) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val.to_bits() as u32) & 0xffff) << 0usize);
     }
-    #[doc = "One-hot field indicating which hashing features are implemented in the hardware"]
+    #[doc = "One-hot field indicating which hashing features are implemented in the hardware."]
     #[must_use]
     #[inline(always)]
     pub const fn hash_algorithms(&self) -> super::vals::HashAlgorithms {
         let val = (self.0 >> 16usize) & 0xffff;
         super::vals::HashAlgorithms::from_bits(val as u16)
     }
-    #[doc = "One-hot field indicating which hashing features are implemented in the hardware"]
+    #[doc = "One-hot field indicating which hashing features are implemented in the hardware."]
     #[inline(always)]
     pub const fn set_hash_algorithms(&mut self, val: super::vals::HashAlgorithms) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val.to_bits() as u32) & 0xffff) << 16usize);
@@ -136,7 +136,7 @@ impl defmt::Format for Capability1 {
         )
     }
 }
-#[doc = "DCP channel 0 command pointer address register"]
+#[doc = "DCP channel 0 command pointer address register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch0cmdptr(pub u32);
@@ -173,19 +173,19 @@ impl defmt::Format for Ch0cmdptr {
         defmt::write!(f, "Ch0cmdptr {{ addr: {=u32:?} }}", self.addr())
     }
 }
-#[doc = "DCP channel 0 options register"]
+#[doc = "DCP channel 0 options register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch0opts(pub u32);
 impl Ch0opts {
-    #[doc = "This field indicates the recovery time for the channel"]
+    #[doc = "This field indicates the recovery time for the channel."]
     #[must_use]
     #[inline(always)]
     pub const fn recovery_timer(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "This field indicates the recovery time for the channel"]
+    #[doc = "This field indicates the recovery time for the channel."]
     #[inline(always)]
     pub const fn set_recovery_timer(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
@@ -214,19 +214,19 @@ impl defmt::Format for Ch0opts {
         )
     }
 }
-#[doc = "DCP channel 0 options register"]
+#[doc = "DCP channel 0 options register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch0optsClr(pub u32);
 impl Ch0optsClr {
-    #[doc = "This field indicates the recovery time for the channel"]
+    #[doc = "This field indicates the recovery time for the channel."]
     #[must_use]
     #[inline(always)]
     pub const fn recovery_timer(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "This field indicates the recovery time for the channel"]
+    #[doc = "This field indicates the recovery time for the channel."]
     #[inline(always)]
     pub const fn set_recovery_timer(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
@@ -255,19 +255,19 @@ impl defmt::Format for Ch0optsClr {
         )
     }
 }
-#[doc = "DCP channel 0 options register"]
+#[doc = "DCP channel 0 options register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch0optsSet(pub u32);
 impl Ch0optsSet {
-    #[doc = "This field indicates the recovery time for the channel"]
+    #[doc = "This field indicates the recovery time for the channel."]
     #[must_use]
     #[inline(always)]
     pub const fn recovery_timer(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "This field indicates the recovery time for the channel"]
+    #[doc = "This field indicates the recovery time for the channel."]
     #[inline(always)]
     pub const fn set_recovery_timer(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
@@ -296,19 +296,19 @@ impl defmt::Format for Ch0optsSet {
         )
     }
 }
-#[doc = "DCP channel 0 options register"]
+#[doc = "DCP channel 0 options register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch0optsTog(pub u32);
 impl Ch0optsTog {
-    #[doc = "This field indicates the recovery time for the channel"]
+    #[doc = "This field indicates the recovery time for the channel."]
     #[must_use]
     #[inline(always)]
     pub const fn recovery_timer(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "This field indicates the recovery time for the channel"]
+    #[doc = "This field indicates the recovery time for the channel."]
     #[inline(always)]
     pub const fn set_recovery_timer(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
@@ -337,19 +337,19 @@ impl defmt::Format for Ch0optsTog {
         )
     }
 }
-#[doc = "DCP channel 0 semaphore register"]
+#[doc = "DCP channel 0 semaphore register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch0sema(pub u32);
 impl Ch0sema {
-    #[doc = "The value written to this field is added to the semaphore count in an atomic way such that the simultaneous software adds and DCP hardware substracts happening on the same clock are protected"]
+    #[doc = "The value written to this field is added to the semaphore count in an atomic way such that the simultaneous software adds and DCP hardware substracts happening on the same clock are protected."]
     #[must_use]
     #[inline(always)]
     pub const fn increment(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "The value written to this field is added to the semaphore count in an atomic way such that the simultaneous software adds and DCP hardware substracts happening on the same clock are protected"]
+    #[doc = "The value written to this field is added to the semaphore count in an atomic way such that the simultaneous software adds and DCP hardware substracts happening on the same clock are protected."]
     #[inline(always)]
     pub const fn set_increment(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
@@ -392,103 +392,103 @@ impl defmt::Format for Ch0sema {
         )
     }
 }
-#[doc = "DCP channel 0 status register"]
+#[doc = "DCP channel 0 status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch0stat(pub u32);
 impl Ch0stat {
-    #[doc = "This bit indicates that a hashing check operation mismatched for the control packets that enable the HASH_CHECK bit"]
+    #[doc = "This bit indicates that a hashing check operation mismatched for the control packets that enable the HASH_CHECK bit."]
     #[must_use]
     #[inline(always)]
     pub const fn hash_mismatch(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a hashing check operation mismatched for the control packets that enable the HASH_CHECK bit"]
+    #[doc = "This bit indicates that a hashing check operation mismatched for the control packets that enable the HASH_CHECK bit."]
     #[inline(always)]
     pub const fn set_hash_mismatch(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)"]
+    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)."]
     #[must_use]
     #[inline(always)]
     pub const fn error_setup(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)"]
+    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)."]
     #[inline(always)]
     pub const fn set_error_setup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet payload"]
+    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet payload."]
     #[must_use]
     #[inline(always)]
     pub const fn error_packet(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet payload"]
+    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet payload."]
     #[inline(always)]
     pub const fn set_error_packet(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer"]
+    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn error_src(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer"]
+    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer."]
     #[inline(always)]
     pub const fn set_error_src(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer"]
+    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn error_dst(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer"]
+    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer."]
     #[inline(always)]
     pub const fn set_error_dst(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address"]
+    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address."]
     #[must_use]
     #[inline(always)]
     pub const fn error_pagefault(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address"]
+    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address."]
     #[inline(always)]
     pub const fn set_error_pagefault(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Indicates the additional error codes for some of the error conditions"]
+    #[doc = "Indicates the additional error codes for some of the error conditions."]
     #[must_use]
     #[inline(always)]
     pub const fn error_code(&self) -> super::vals::Ch0statErrorCode {
         let val = (self.0 >> 16usize) & 0xff;
         super::vals::Ch0statErrorCode::from_bits(val as u8)
     }
-    #[doc = "Indicates the additional error codes for some of the error conditions"]
+    #[doc = "Indicates the additional error codes for some of the error conditions."]
     #[inline(always)]
     pub const fn set_error_code(&mut self, val: super::vals::Ch0statErrorCode) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val.to_bits() as u32) & 0xff) << 16usize);
     }
-    #[doc = "Indicates the tag from the last completed packet in the command structure"]
+    #[doc = "Indicates the tag from the last completed packet in the command structure."]
     #[must_use]
     #[inline(always)]
     pub const fn tag(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "Indicates the tag from the last completed packet in the command structure"]
+    #[doc = "Indicates the tag from the last completed packet in the command structure."]
     #[inline(always)]
     pub const fn set_tag(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);
@@ -531,103 +531,103 @@ impl defmt::Format for Ch0stat {
         )
     }
 }
-#[doc = "DCP channel 0 status register"]
+#[doc = "DCP channel 0 status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch0statClr(pub u32);
 impl Ch0statClr {
-    #[doc = "This bit indicates that a hashing check operation mismatched for the control packets that enable the HASH_CHECK bit"]
+    #[doc = "This bit indicates that a hashing check operation mismatched for the control packets that enable the HASH_CHECK bit."]
     #[must_use]
     #[inline(always)]
     pub const fn hash_mismatch(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a hashing check operation mismatched for the control packets that enable the HASH_CHECK bit"]
+    #[doc = "This bit indicates that a hashing check operation mismatched for the control packets that enable the HASH_CHECK bit."]
     #[inline(always)]
     pub const fn set_hash_mismatch(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)"]
+    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)."]
     #[must_use]
     #[inline(always)]
     pub const fn error_setup(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)"]
+    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)."]
     #[inline(always)]
     pub const fn set_error_setup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet payload"]
+    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet payload."]
     #[must_use]
     #[inline(always)]
     pub const fn error_packet(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet payload"]
+    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet payload."]
     #[inline(always)]
     pub const fn set_error_packet(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer"]
+    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn error_src(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer"]
+    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer."]
     #[inline(always)]
     pub const fn set_error_src(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer"]
+    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn error_dst(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer"]
+    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer."]
     #[inline(always)]
     pub const fn set_error_dst(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address"]
+    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address."]
     #[must_use]
     #[inline(always)]
     pub const fn error_pagefault(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address"]
+    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address."]
     #[inline(always)]
     pub const fn set_error_pagefault(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Indicates the additional error codes for some of the error conditions"]
+    #[doc = "Indicates the additional error codes for some of the error conditions."]
     #[must_use]
     #[inline(always)]
     pub const fn error_code(&self) -> super::vals::Ch0statClrErrorCode {
         let val = (self.0 >> 16usize) & 0xff;
         super::vals::Ch0statClrErrorCode::from_bits(val as u8)
     }
-    #[doc = "Indicates the additional error codes for some of the error conditions"]
+    #[doc = "Indicates the additional error codes for some of the error conditions."]
     #[inline(always)]
     pub const fn set_error_code(&mut self, val: super::vals::Ch0statClrErrorCode) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val.to_bits() as u32) & 0xff) << 16usize);
     }
-    #[doc = "Indicates the tag from the last completed packet in the command structure"]
+    #[doc = "Indicates the tag from the last completed packet in the command structure."]
     #[must_use]
     #[inline(always)]
     pub const fn tag(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "Indicates the tag from the last completed packet in the command structure"]
+    #[doc = "Indicates the tag from the last completed packet in the command structure."]
     #[inline(always)]
     pub const fn set_tag(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);
@@ -670,103 +670,103 @@ impl defmt::Format for Ch0statClr {
         )
     }
 }
-#[doc = "DCP channel 0 status register"]
+#[doc = "DCP channel 0 status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch0statSet(pub u32);
 impl Ch0statSet {
-    #[doc = "This bit indicates that a hashing check operation mismatched for the control packets that enable the HASH_CHECK bit"]
+    #[doc = "This bit indicates that a hashing check operation mismatched for the control packets that enable the HASH_CHECK bit."]
     #[must_use]
     #[inline(always)]
     pub const fn hash_mismatch(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a hashing check operation mismatched for the control packets that enable the HASH_CHECK bit"]
+    #[doc = "This bit indicates that a hashing check operation mismatched for the control packets that enable the HASH_CHECK bit."]
     #[inline(always)]
     pub const fn set_hash_mismatch(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)"]
+    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)."]
     #[must_use]
     #[inline(always)]
     pub const fn error_setup(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)"]
+    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)."]
     #[inline(always)]
     pub const fn set_error_setup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet payload"]
+    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet payload."]
     #[must_use]
     #[inline(always)]
     pub const fn error_packet(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet payload"]
+    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet payload."]
     #[inline(always)]
     pub const fn set_error_packet(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer"]
+    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn error_src(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer"]
+    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer."]
     #[inline(always)]
     pub const fn set_error_src(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer"]
+    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn error_dst(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer"]
+    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer."]
     #[inline(always)]
     pub const fn set_error_dst(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address"]
+    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address."]
     #[must_use]
     #[inline(always)]
     pub const fn error_pagefault(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address"]
+    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address."]
     #[inline(always)]
     pub const fn set_error_pagefault(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Indicates the additional error codes for some of the error conditions"]
+    #[doc = "Indicates the additional error codes for some of the error conditions."]
     #[must_use]
     #[inline(always)]
     pub const fn error_code(&self) -> super::vals::Ch0statSetErrorCode {
         let val = (self.0 >> 16usize) & 0xff;
         super::vals::Ch0statSetErrorCode::from_bits(val as u8)
     }
-    #[doc = "Indicates the additional error codes for some of the error conditions"]
+    #[doc = "Indicates the additional error codes for some of the error conditions."]
     #[inline(always)]
     pub const fn set_error_code(&mut self, val: super::vals::Ch0statSetErrorCode) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val.to_bits() as u32) & 0xff) << 16usize);
     }
-    #[doc = "Indicates the tag from the last completed packet in the command structure"]
+    #[doc = "Indicates the tag from the last completed packet in the command structure."]
     #[must_use]
     #[inline(always)]
     pub const fn tag(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "Indicates the tag from the last completed packet in the command structure"]
+    #[doc = "Indicates the tag from the last completed packet in the command structure."]
     #[inline(always)]
     pub const fn set_tag(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);
@@ -809,103 +809,103 @@ impl defmt::Format for Ch0statSet {
         )
     }
 }
-#[doc = "DCP channel 0 status register"]
+#[doc = "DCP channel 0 status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch0statTog(pub u32);
 impl Ch0statTog {
-    #[doc = "This bit indicates that a hashing check operation mismatched for the control packets that enable the HASH_CHECK bit"]
+    #[doc = "This bit indicates that a hashing check operation mismatched for the control packets that enable the HASH_CHECK bit."]
     #[must_use]
     #[inline(always)]
     pub const fn hash_mismatch(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a hashing check operation mismatched for the control packets that enable the HASH_CHECK bit"]
+    #[doc = "This bit indicates that a hashing check operation mismatched for the control packets that enable the HASH_CHECK bit."]
     #[inline(always)]
     pub const fn set_hash_mismatch(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)"]
+    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)."]
     #[must_use]
     #[inline(always)]
     pub const fn error_setup(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)"]
+    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)."]
     #[inline(always)]
     pub const fn set_error_setup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet payload"]
+    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet payload."]
     #[must_use]
     #[inline(always)]
     pub const fn error_packet(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet payload"]
+    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet payload."]
     #[inline(always)]
     pub const fn set_error_packet(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer"]
+    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn error_src(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer"]
+    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer."]
     #[inline(always)]
     pub const fn set_error_src(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer"]
+    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn error_dst(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer"]
+    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer."]
     #[inline(always)]
     pub const fn set_error_dst(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address"]
+    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address."]
     #[must_use]
     #[inline(always)]
     pub const fn error_pagefault(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address"]
+    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address."]
     #[inline(always)]
     pub const fn set_error_pagefault(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Indicates the additional error codes for some of the error conditions"]
+    #[doc = "Indicates the additional error codes for some of the error conditions."]
     #[must_use]
     #[inline(always)]
     pub const fn error_code(&self) -> super::vals::Ch0statTogErrorCode {
         let val = (self.0 >> 16usize) & 0xff;
         super::vals::Ch0statTogErrorCode::from_bits(val as u8)
     }
-    #[doc = "Indicates the additional error codes for some of the error conditions"]
+    #[doc = "Indicates the additional error codes for some of the error conditions."]
     #[inline(always)]
     pub const fn set_error_code(&mut self, val: super::vals::Ch0statTogErrorCode) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val.to_bits() as u32) & 0xff) << 16usize);
     }
-    #[doc = "Indicates the tag from the last completed packet in the command structure"]
+    #[doc = "Indicates the tag from the last completed packet in the command structure."]
     #[must_use]
     #[inline(always)]
     pub const fn tag(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "Indicates the tag from the last completed packet in the command structure"]
+    #[doc = "Indicates the tag from the last completed packet in the command structure."]
     #[inline(always)]
     pub const fn set_tag(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);
@@ -948,7 +948,7 @@ impl defmt::Format for Ch0statTog {
         )
     }
 }
-#[doc = "DCP channel 1 command pointer address register"]
+#[doc = "DCP channel 1 command pointer address register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch1cmdptr(pub u32);
@@ -985,19 +985,19 @@ impl defmt::Format for Ch1cmdptr {
         defmt::write!(f, "Ch1cmdptr {{ addr: {=u32:?} }}", self.addr())
     }
 }
-#[doc = "DCP channel 1 options register"]
+#[doc = "DCP channel 1 options register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch1opts(pub u32);
 impl Ch1opts {
-    #[doc = "This field indicates the recovery time for the channel"]
+    #[doc = "This field indicates the recovery time for the channel."]
     #[must_use]
     #[inline(always)]
     pub const fn recovery_timer(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "This field indicates the recovery time for the channel"]
+    #[doc = "This field indicates the recovery time for the channel."]
     #[inline(always)]
     pub const fn set_recovery_timer(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
@@ -1026,19 +1026,19 @@ impl defmt::Format for Ch1opts {
         )
     }
 }
-#[doc = "DCP channel 1 options register"]
+#[doc = "DCP channel 1 options register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch1optsClr(pub u32);
 impl Ch1optsClr {
-    #[doc = "This field indicates the recovery time for the channel"]
+    #[doc = "This field indicates the recovery time for the channel."]
     #[must_use]
     #[inline(always)]
     pub const fn recovery_timer(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "This field indicates the recovery time for the channel"]
+    #[doc = "This field indicates the recovery time for the channel."]
     #[inline(always)]
     pub const fn set_recovery_timer(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
@@ -1067,19 +1067,19 @@ impl defmt::Format for Ch1optsClr {
         )
     }
 }
-#[doc = "DCP channel 1 options register"]
+#[doc = "DCP channel 1 options register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch1optsSet(pub u32);
 impl Ch1optsSet {
-    #[doc = "This field indicates the recovery time for the channel"]
+    #[doc = "This field indicates the recovery time for the channel."]
     #[must_use]
     #[inline(always)]
     pub const fn recovery_timer(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "This field indicates the recovery time for the channel"]
+    #[doc = "This field indicates the recovery time for the channel."]
     #[inline(always)]
     pub const fn set_recovery_timer(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
@@ -1108,19 +1108,19 @@ impl defmt::Format for Ch1optsSet {
         )
     }
 }
-#[doc = "DCP channel 1 options register"]
+#[doc = "DCP channel 1 options register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch1optsTog(pub u32);
 impl Ch1optsTog {
-    #[doc = "This field indicates the recovery time for the channel"]
+    #[doc = "This field indicates the recovery time for the channel."]
     #[must_use]
     #[inline(always)]
     pub const fn recovery_timer(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "This field indicates the recovery time for the channel"]
+    #[doc = "This field indicates the recovery time for the channel."]
     #[inline(always)]
     pub const fn set_recovery_timer(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
@@ -1149,19 +1149,19 @@ impl defmt::Format for Ch1optsTog {
         )
     }
 }
-#[doc = "DCP channel 1 semaphore register"]
+#[doc = "DCP channel 1 semaphore register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch1sema(pub u32);
 impl Ch1sema {
-    #[doc = "The value written to this field is added to the semaphore count in an atomic way, such that the simultaneous software adds and the DCP hardware substracts happening on the same clock are protected"]
+    #[doc = "The value written to this field is added to the semaphore count in an atomic way, such that the simultaneous software adds and the DCP hardware substracts happening on the same clock are protected."]
     #[must_use]
     #[inline(always)]
     pub const fn increment(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "The value written to this field is added to the semaphore count in an atomic way, such that the simultaneous software adds and the DCP hardware substracts happening on the same clock are protected"]
+    #[doc = "The value written to this field is added to the semaphore count in an atomic way, such that the simultaneous software adds and the DCP hardware substracts happening on the same clock are protected."]
     #[inline(always)]
     pub const fn set_increment(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
@@ -1204,79 +1204,79 @@ impl defmt::Format for Ch1sema {
         )
     }
 }
-#[doc = "DCP channel 1 status register"]
+#[doc = "DCP channel 1 status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch1stat(pub u32);
 impl Ch1stat {
-    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit"]
+    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit."]
     #[must_use]
     #[inline(always)]
     pub const fn hash_mismatch(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit"]
+    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit."]
     #[inline(always)]
     pub const fn set_hash_mismatch(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)"]
+    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)."]
     #[must_use]
     #[inline(always)]
     pub const fn error_setup(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)"]
+    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)."]
     #[inline(always)]
     pub const fn set_error_setup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet paylaod"]
+    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet paylaod."]
     #[must_use]
     #[inline(always)]
     pub const fn error_packet(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet paylaod"]
+    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet paylaod."]
     #[inline(always)]
     pub const fn set_error_packet(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer"]
+    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn error_src(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer"]
+    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer."]
     #[inline(always)]
     pub const fn set_error_src(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer"]
+    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn error_dst(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer"]
+    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer."]
     #[inline(always)]
     pub const fn set_error_dst(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address"]
+    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address."]
     #[must_use]
     #[inline(always)]
     pub const fn error_pagefault(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address"]
+    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address."]
     #[inline(always)]
     pub const fn set_error_pagefault(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
@@ -1343,79 +1343,79 @@ impl defmt::Format for Ch1stat {
         )
     }
 }
-#[doc = "DCP channel 1 status register"]
+#[doc = "DCP channel 1 status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch1statClr(pub u32);
 impl Ch1statClr {
-    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit"]
+    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit."]
     #[must_use]
     #[inline(always)]
     pub const fn hash_mismatch(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit"]
+    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit."]
     #[inline(always)]
     pub const fn set_hash_mismatch(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)"]
+    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)."]
     #[must_use]
     #[inline(always)]
     pub const fn error_setup(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)"]
+    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)."]
     #[inline(always)]
     pub const fn set_error_setup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet paylaod"]
+    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet paylaod."]
     #[must_use]
     #[inline(always)]
     pub const fn error_packet(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet paylaod"]
+    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet paylaod."]
     #[inline(always)]
     pub const fn set_error_packet(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer"]
+    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn error_src(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer"]
+    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer."]
     #[inline(always)]
     pub const fn set_error_src(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer"]
+    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn error_dst(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer"]
+    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer."]
     #[inline(always)]
     pub const fn set_error_dst(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address"]
+    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address."]
     #[must_use]
     #[inline(always)]
     pub const fn error_pagefault(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address"]
+    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address."]
     #[inline(always)]
     pub const fn set_error_pagefault(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
@@ -1482,79 +1482,79 @@ impl defmt::Format for Ch1statClr {
         )
     }
 }
-#[doc = "DCP channel 1 status register"]
+#[doc = "DCP channel 1 status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch1statSet(pub u32);
 impl Ch1statSet {
-    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit"]
+    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit."]
     #[must_use]
     #[inline(always)]
     pub const fn hash_mismatch(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit"]
+    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit."]
     #[inline(always)]
     pub const fn set_hash_mismatch(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)"]
+    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)."]
     #[must_use]
     #[inline(always)]
     pub const fn error_setup(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)"]
+    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)."]
     #[inline(always)]
     pub const fn set_error_setup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet paylaod"]
+    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet paylaod."]
     #[must_use]
     #[inline(always)]
     pub const fn error_packet(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet paylaod"]
+    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet paylaod."]
     #[inline(always)]
     pub const fn set_error_packet(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer"]
+    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn error_src(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer"]
+    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer."]
     #[inline(always)]
     pub const fn set_error_src(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer"]
+    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn error_dst(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer"]
+    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer."]
     #[inline(always)]
     pub const fn set_error_dst(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address"]
+    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address."]
     #[must_use]
     #[inline(always)]
     pub const fn error_pagefault(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address"]
+    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address."]
     #[inline(always)]
     pub const fn set_error_pagefault(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
@@ -1621,79 +1621,79 @@ impl defmt::Format for Ch1statSet {
         )
     }
 }
-#[doc = "DCP channel 1 status register"]
+#[doc = "DCP channel 1 status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch1statTog(pub u32);
 impl Ch1statTog {
-    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit"]
+    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit."]
     #[must_use]
     #[inline(always)]
     pub const fn hash_mismatch(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit"]
+    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit."]
     #[inline(always)]
     pub const fn set_hash_mismatch(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)"]
+    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)."]
     #[must_use]
     #[inline(always)]
     pub const fn error_setup(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)"]
+    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)."]
     #[inline(always)]
     pub const fn set_error_setup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet paylaod"]
+    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet paylaod."]
     #[must_use]
     #[inline(always)]
     pub const fn error_packet(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet paylaod"]
+    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet paylaod."]
     #[inline(always)]
     pub const fn set_error_packet(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer"]
+    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn error_src(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer"]
+    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer."]
     #[inline(always)]
     pub const fn set_error_src(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer"]
+    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn error_dst(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer"]
+    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer."]
     #[inline(always)]
     pub const fn set_error_dst(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address"]
+    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address."]
     #[must_use]
     #[inline(always)]
     pub const fn error_pagefault(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address"]
+    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address."]
     #[inline(always)]
     pub const fn set_error_pagefault(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
@@ -1760,7 +1760,7 @@ impl defmt::Format for Ch1statTog {
         )
     }
 }
-#[doc = "DCP channel 2 command pointer address register"]
+#[doc = "DCP channel 2 command pointer address register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch2cmdptr(pub u32);
@@ -1797,19 +1797,19 @@ impl defmt::Format for Ch2cmdptr {
         defmt::write!(f, "Ch2cmdptr {{ addr: {=u32:?} }}", self.addr())
     }
 }
-#[doc = "DCP channel 2 options register"]
+#[doc = "DCP channel 2 options register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch2opts(pub u32);
 impl Ch2opts {
-    #[doc = "This field indicates the recovery time for the channel"]
+    #[doc = "This field indicates the recovery time for the channel."]
     #[must_use]
     #[inline(always)]
     pub const fn recovery_timer(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "This field indicates the recovery time for the channel"]
+    #[doc = "This field indicates the recovery time for the channel."]
     #[inline(always)]
     pub const fn set_recovery_timer(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
@@ -1838,19 +1838,19 @@ impl defmt::Format for Ch2opts {
         )
     }
 }
-#[doc = "DCP channel 2 options register"]
+#[doc = "DCP channel 2 options register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch2optsClr(pub u32);
 impl Ch2optsClr {
-    #[doc = "This field indicates the recovery time for the channel"]
+    #[doc = "This field indicates the recovery time for the channel."]
     #[must_use]
     #[inline(always)]
     pub const fn recovery_timer(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "This field indicates the recovery time for the channel"]
+    #[doc = "This field indicates the recovery time for the channel."]
     #[inline(always)]
     pub const fn set_recovery_timer(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
@@ -1879,19 +1879,19 @@ impl defmt::Format for Ch2optsClr {
         )
     }
 }
-#[doc = "DCP channel 2 options register"]
+#[doc = "DCP channel 2 options register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch2optsSet(pub u32);
 impl Ch2optsSet {
-    #[doc = "This field indicates the recovery time for the channel"]
+    #[doc = "This field indicates the recovery time for the channel."]
     #[must_use]
     #[inline(always)]
     pub const fn recovery_timer(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "This field indicates the recovery time for the channel"]
+    #[doc = "This field indicates the recovery time for the channel."]
     #[inline(always)]
     pub const fn set_recovery_timer(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
@@ -1920,19 +1920,19 @@ impl defmt::Format for Ch2optsSet {
         )
     }
 }
-#[doc = "DCP channel 2 options register"]
+#[doc = "DCP channel 2 options register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch2optsTog(pub u32);
 impl Ch2optsTog {
-    #[doc = "This field indicates the recovery time for the channel"]
+    #[doc = "This field indicates the recovery time for the channel."]
     #[must_use]
     #[inline(always)]
     pub const fn recovery_timer(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "This field indicates the recovery time for the channel"]
+    #[doc = "This field indicates the recovery time for the channel."]
     #[inline(always)]
     pub const fn set_recovery_timer(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
@@ -1961,19 +1961,19 @@ impl defmt::Format for Ch2optsTog {
         )
     }
 }
-#[doc = "DCP channel 2 semaphore register"]
+#[doc = "DCP channel 2 semaphore register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch2sema(pub u32);
 impl Ch2sema {
-    #[doc = "The value written to this field is added to the semaphore count in an atomic way, such that the simultaneous software adds and DCP hardware substracts happening on the same clock are protected"]
+    #[doc = "The value written to this field is added to the semaphore count in an atomic way, such that the simultaneous software adds and DCP hardware substracts happening on the same clock are protected."]
     #[must_use]
     #[inline(always)]
     pub const fn increment(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "The value written to this field is added to the semaphore count in an atomic way, such that the simultaneous software adds and DCP hardware substracts happening on the same clock are protected"]
+    #[doc = "The value written to this field is added to the semaphore count in an atomic way, such that the simultaneous software adds and DCP hardware substracts happening on the same clock are protected."]
     #[inline(always)]
     pub const fn set_increment(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
@@ -2016,79 +2016,79 @@ impl defmt::Format for Ch2sema {
         )
     }
 }
-#[doc = "DCP channel 2 status register"]
+#[doc = "DCP channel 2 status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch2stat(pub u32);
 impl Ch2stat {
-    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit"]
+    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit."]
     #[must_use]
     #[inline(always)]
     pub const fn hash_mismatch(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit"]
+    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit."]
     #[inline(always)]
     pub const fn set_hash_mismatch(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)"]
+    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)."]
     #[must_use]
     #[inline(always)]
     pub const fn error_setup(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)"]
+    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)."]
     #[inline(always)]
     pub const fn set_error_setup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet paylaod"]
+    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet paylaod."]
     #[must_use]
     #[inline(always)]
     pub const fn error_packet(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet paylaod"]
+    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet paylaod."]
     #[inline(always)]
     pub const fn set_error_packet(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer"]
+    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn error_src(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer"]
+    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer."]
     #[inline(always)]
     pub const fn set_error_src(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer"]
+    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn error_dst(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer"]
+    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer."]
     #[inline(always)]
     pub const fn set_error_dst(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address"]
+    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address."]
     #[must_use]
     #[inline(always)]
     pub const fn error_pagefault(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address"]
+    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address."]
     #[inline(always)]
     pub const fn set_error_pagefault(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
@@ -2155,79 +2155,79 @@ impl defmt::Format for Ch2stat {
         )
     }
 }
-#[doc = "DCP channel 2 status register"]
+#[doc = "DCP channel 2 status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch2statClr(pub u32);
 impl Ch2statClr {
-    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit"]
+    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit."]
     #[must_use]
     #[inline(always)]
     pub const fn hash_mismatch(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit"]
+    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit."]
     #[inline(always)]
     pub const fn set_hash_mismatch(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)"]
+    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)."]
     #[must_use]
     #[inline(always)]
     pub const fn error_setup(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)"]
+    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)."]
     #[inline(always)]
     pub const fn set_error_setup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet paylaod"]
+    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet paylaod."]
     #[must_use]
     #[inline(always)]
     pub const fn error_packet(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet paylaod"]
+    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet paylaod."]
     #[inline(always)]
     pub const fn set_error_packet(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer"]
+    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn error_src(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer"]
+    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer."]
     #[inline(always)]
     pub const fn set_error_src(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer"]
+    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn error_dst(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer"]
+    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer."]
     #[inline(always)]
     pub const fn set_error_dst(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address"]
+    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address."]
     #[must_use]
     #[inline(always)]
     pub const fn error_pagefault(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address"]
+    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address."]
     #[inline(always)]
     pub const fn set_error_pagefault(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
@@ -2294,79 +2294,79 @@ impl defmt::Format for Ch2statClr {
         )
     }
 }
-#[doc = "DCP channel 2 status register"]
+#[doc = "DCP channel 2 status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch2statSet(pub u32);
 impl Ch2statSet {
-    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit"]
+    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit."]
     #[must_use]
     #[inline(always)]
     pub const fn hash_mismatch(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit"]
+    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit."]
     #[inline(always)]
     pub const fn set_hash_mismatch(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)"]
+    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)."]
     #[must_use]
     #[inline(always)]
     pub const fn error_setup(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)"]
+    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)."]
     #[inline(always)]
     pub const fn set_error_setup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet paylaod"]
+    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet paylaod."]
     #[must_use]
     #[inline(always)]
     pub const fn error_packet(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet paylaod"]
+    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet paylaod."]
     #[inline(always)]
     pub const fn set_error_packet(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer"]
+    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn error_src(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer"]
+    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer."]
     #[inline(always)]
     pub const fn set_error_src(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer"]
+    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn error_dst(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer"]
+    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer."]
     #[inline(always)]
     pub const fn set_error_dst(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address"]
+    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address."]
     #[must_use]
     #[inline(always)]
     pub const fn error_pagefault(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address"]
+    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address."]
     #[inline(always)]
     pub const fn set_error_pagefault(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
@@ -2433,79 +2433,79 @@ impl defmt::Format for Ch2statSet {
         )
     }
 }
-#[doc = "DCP channel 2 status register"]
+#[doc = "DCP channel 2 status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch2statTog(pub u32);
 impl Ch2statTog {
-    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit"]
+    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit."]
     #[must_use]
     #[inline(always)]
     pub const fn hash_mismatch(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit"]
+    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit."]
     #[inline(always)]
     pub const fn set_hash_mismatch(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)"]
+    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)."]
     #[must_use]
     #[inline(always)]
     pub const fn error_setup(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)"]
+    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)."]
     #[inline(always)]
     pub const fn set_error_setup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet paylaod"]
+    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet paylaod."]
     #[must_use]
     #[inline(always)]
     pub const fn error_packet(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet paylaod"]
+    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload, or when writing the status back to the packet paylaod."]
     #[inline(always)]
     pub const fn set_error_packet(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer"]
+    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn error_src(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer"]
+    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer."]
     #[inline(always)]
     pub const fn set_error_src(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer"]
+    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn error_dst(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer"]
+    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer."]
     #[inline(always)]
     pub const fn set_error_dst(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address"]
+    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address."]
     #[must_use]
     #[inline(always)]
     pub const fn error_pagefault(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address"]
+    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address."]
     #[inline(always)]
     pub const fn set_error_pagefault(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
@@ -2572,7 +2572,7 @@ impl defmt::Format for Ch2statTog {
         )
     }
 }
-#[doc = "DCP channel 3 command pointer address register"]
+#[doc = "DCP channel 3 command pointer address register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch3cmdptr(pub u32);
@@ -2609,19 +2609,19 @@ impl defmt::Format for Ch3cmdptr {
         defmt::write!(f, "Ch3cmdptr {{ addr: {=u32:?} }}", self.addr())
     }
 }
-#[doc = "DCP channel 3 options register"]
+#[doc = "DCP channel 3 options register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch3opts(pub u32);
 impl Ch3opts {
-    #[doc = "This field indicates the recovery time for the channel"]
+    #[doc = "This field indicates the recovery time for the channel."]
     #[must_use]
     #[inline(always)]
     pub const fn recovery_timer(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "This field indicates the recovery time for the channel"]
+    #[doc = "This field indicates the recovery time for the channel."]
     #[inline(always)]
     pub const fn set_recovery_timer(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
@@ -2650,19 +2650,19 @@ impl defmt::Format for Ch3opts {
         )
     }
 }
-#[doc = "DCP channel 3 options register"]
+#[doc = "DCP channel 3 options register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch3optsClr(pub u32);
 impl Ch3optsClr {
-    #[doc = "This field indicates the recovery time for the channel"]
+    #[doc = "This field indicates the recovery time for the channel."]
     #[must_use]
     #[inline(always)]
     pub const fn recovery_timer(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "This field indicates the recovery time for the channel"]
+    #[doc = "This field indicates the recovery time for the channel."]
     #[inline(always)]
     pub const fn set_recovery_timer(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
@@ -2691,19 +2691,19 @@ impl defmt::Format for Ch3optsClr {
         )
     }
 }
-#[doc = "DCP channel 3 options register"]
+#[doc = "DCP channel 3 options register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch3optsSet(pub u32);
 impl Ch3optsSet {
-    #[doc = "This field indicates the recovery time for the channel"]
+    #[doc = "This field indicates the recovery time for the channel."]
     #[must_use]
     #[inline(always)]
     pub const fn recovery_timer(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "This field indicates the recovery time for the channel"]
+    #[doc = "This field indicates the recovery time for the channel."]
     #[inline(always)]
     pub const fn set_recovery_timer(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
@@ -2732,19 +2732,19 @@ impl defmt::Format for Ch3optsSet {
         )
     }
 }
-#[doc = "DCP channel 3 options register"]
+#[doc = "DCP channel 3 options register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch3optsTog(pub u32);
 impl Ch3optsTog {
-    #[doc = "This field indicates the recovery time for the channel"]
+    #[doc = "This field indicates the recovery time for the channel."]
     #[must_use]
     #[inline(always)]
     pub const fn recovery_timer(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "This field indicates the recovery time for the channel"]
+    #[doc = "This field indicates the recovery time for the channel."]
     #[inline(always)]
     pub const fn set_recovery_timer(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
@@ -2773,19 +2773,19 @@ impl defmt::Format for Ch3optsTog {
         )
     }
 }
-#[doc = "DCP channel 3 semaphore register"]
+#[doc = "DCP channel 3 semaphore register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch3sema(pub u32);
 impl Ch3sema {
-    #[doc = "The value written to this field is added to the semaphore count in an atomic way, such that the simultaneous software adds and DCP hardware substracts happening on the same clock are protected"]
+    #[doc = "The value written to this field is added to the semaphore count in an atomic way, such that the simultaneous software adds and DCP hardware substracts happening on the same clock are protected."]
     #[must_use]
     #[inline(always)]
     pub const fn increment(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "The value written to this field is added to the semaphore count in an atomic way, such that the simultaneous software adds and DCP hardware substracts happening on the same clock are protected"]
+    #[doc = "The value written to this field is added to the semaphore count in an atomic way, such that the simultaneous software adds and DCP hardware substracts happening on the same clock are protected."]
     #[inline(always)]
     pub const fn set_increment(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
@@ -2828,79 +2828,79 @@ impl defmt::Format for Ch3sema {
         )
     }
 }
-#[doc = "DCP channel 3 status register"]
+#[doc = "DCP channel 3 status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch3stat(pub u32);
 impl Ch3stat {
-    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit"]
+    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit."]
     #[must_use]
     #[inline(always)]
     pub const fn hash_mismatch(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit"]
+    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit."]
     #[inline(always)]
     pub const fn set_hash_mismatch(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)"]
+    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)."]
     #[must_use]
     #[inline(always)]
     pub const fn error_setup(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)"]
+    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)."]
     #[inline(always)]
     pub const fn set_error_setup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload or when writing the status back to the packet paylaod"]
+    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload or when writing the status back to the packet paylaod."]
     #[must_use]
     #[inline(always)]
     pub const fn error_packet(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload or when writing the status back to the packet paylaod"]
+    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload or when writing the status back to the packet paylaod."]
     #[inline(always)]
     pub const fn set_error_packet(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer"]
+    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn error_src(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer"]
+    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer."]
     #[inline(always)]
     pub const fn set_error_src(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer"]
+    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn error_dst(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer"]
+    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer."]
     #[inline(always)]
     pub const fn set_error_dst(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address"]
+    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address."]
     #[must_use]
     #[inline(always)]
     pub const fn error_pagefault(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address"]
+    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address."]
     #[inline(always)]
     pub const fn set_error_pagefault(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
@@ -2967,79 +2967,79 @@ impl defmt::Format for Ch3stat {
         )
     }
 }
-#[doc = "DCP channel 3 status register"]
+#[doc = "DCP channel 3 status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch3statClr(pub u32);
 impl Ch3statClr {
-    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit"]
+    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit."]
     #[must_use]
     #[inline(always)]
     pub const fn hash_mismatch(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit"]
+    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit."]
     #[inline(always)]
     pub const fn set_hash_mismatch(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)"]
+    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)."]
     #[must_use]
     #[inline(always)]
     pub const fn error_setup(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)"]
+    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)."]
     #[inline(always)]
     pub const fn set_error_setup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload or when writing the status back to the packet paylaod"]
+    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload or when writing the status back to the packet paylaod."]
     #[must_use]
     #[inline(always)]
     pub const fn error_packet(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload or when writing the status back to the packet paylaod"]
+    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload or when writing the status back to the packet paylaod."]
     #[inline(always)]
     pub const fn set_error_packet(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer"]
+    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn error_src(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer"]
+    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer."]
     #[inline(always)]
     pub const fn set_error_src(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer"]
+    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn error_dst(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer"]
+    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer."]
     #[inline(always)]
     pub const fn set_error_dst(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address"]
+    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address."]
     #[must_use]
     #[inline(always)]
     pub const fn error_pagefault(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address"]
+    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address."]
     #[inline(always)]
     pub const fn set_error_pagefault(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
@@ -3106,79 +3106,79 @@ impl defmt::Format for Ch3statClr {
         )
     }
 }
-#[doc = "DCP channel 3 status register"]
+#[doc = "DCP channel 3 status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch3statSet(pub u32);
 impl Ch3statSet {
-    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit"]
+    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit."]
     #[must_use]
     #[inline(always)]
     pub const fn hash_mismatch(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit"]
+    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit."]
     #[inline(always)]
     pub const fn set_hash_mismatch(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)"]
+    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)."]
     #[must_use]
     #[inline(always)]
     pub const fn error_setup(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)"]
+    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)."]
     #[inline(always)]
     pub const fn set_error_setup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload or when writing the status back to the packet paylaod"]
+    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload or when writing the status back to the packet paylaod."]
     #[must_use]
     #[inline(always)]
     pub const fn error_packet(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload or when writing the status back to the packet paylaod"]
+    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload or when writing the status back to the packet paylaod."]
     #[inline(always)]
     pub const fn set_error_packet(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer"]
+    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn error_src(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer"]
+    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer."]
     #[inline(always)]
     pub const fn set_error_src(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer"]
+    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn error_dst(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer"]
+    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer."]
     #[inline(always)]
     pub const fn set_error_dst(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address"]
+    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address."]
     #[must_use]
     #[inline(always)]
     pub const fn error_pagefault(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address"]
+    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address."]
     #[inline(always)]
     pub const fn set_error_pagefault(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
@@ -3245,79 +3245,79 @@ impl defmt::Format for Ch3statSet {
         )
     }
 }
-#[doc = "DCP channel 3 status register"]
+#[doc = "DCP channel 3 status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ch3statTog(pub u32);
 impl Ch3statTog {
-    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit"]
+    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit."]
     #[must_use]
     #[inline(always)]
     pub const fn hash_mismatch(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit"]
+    #[doc = "This bit indicates that a hashing check operation is mismatched for the control packets that enable the HASH_CHECK bit."]
     #[inline(always)]
     pub const fn set_hash_mismatch(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)"]
+    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)."]
     #[must_use]
     #[inline(always)]
     pub const fn error_setup(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)"]
+    #[doc = "This bit indicates that the hardware detected an invalid programming configuration (such as a buffer length that is not a multiple of the natural data size for the operation)."]
     #[inline(always)]
     pub const fn set_error_setup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload or when writing the status back to the packet paylaod"]
+    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload or when writing the status back to the packet paylaod."]
     #[must_use]
     #[inline(always)]
     pub const fn error_packet(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload or when writing the status back to the packet paylaod"]
+    #[doc = "This bit indicates that a bus error occurred when reading the packet or payload or when writing the status back to the packet paylaod."]
     #[inline(always)]
     pub const fn set_error_packet(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer"]
+    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn error_src(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer"]
+    #[doc = "This bit indicates that a bus error occurred when reading from the source buffer."]
     #[inline(always)]
     pub const fn set_error_src(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer"]
+    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer."]
     #[must_use]
     #[inline(always)]
     pub const fn error_dst(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer"]
+    #[doc = "This bit indicates that a bus error occurred when storing to the destination buffer."]
     #[inline(always)]
     pub const fn set_error_dst(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address"]
+    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address."]
     #[must_use]
     #[inline(always)]
     pub const fn error_pagefault(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address"]
+    #[doc = "This bit indicates that a page fault occurred while converting a virtual address to a physical address."]
     #[inline(always)]
     pub const fn set_error_pagefault(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
@@ -3384,31 +3384,31 @@ impl defmt::Format for Ch3statTog {
         )
     }
 }
-#[doc = "DCP channel control register"]
+#[doc = "DCP channel control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Channelctrl(pub u32);
 impl Channelctrl {
-    #[doc = "Setting a bit in this field enables the DMA channel associated with it"]
+    #[doc = "Setting a bit in this field enables the DMA channel associated with it."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_channel(&self) -> super::vals::ChannelctrlEnableChannel {
         let val = (self.0 >> 0usize) & 0xff;
         super::vals::ChannelctrlEnableChannel::from_bits(val as u8)
     }
-    #[doc = "Setting a bit in this field enables the DMA channel associated with it"]
+    #[doc = "Setting a bit in this field enables the DMA channel associated with it."]
     #[inline(always)]
     pub const fn set_enable_channel(&mut self, val: super::vals::ChannelctrlEnableChannel) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val.to_bits() as u32) & 0xff) << 0usize);
     }
-    #[doc = "Setting a bit in this field causes the corresponding channel to have high-priority arbitration"]
+    #[doc = "Setting a bit in this field causes the corresponding channel to have high-priority arbitration."]
     #[must_use]
     #[inline(always)]
     pub const fn high_priority_channel(&self) -> super::vals::ChannelctrlHighPriorityChannel {
         let val = (self.0 >> 8usize) & 0xff;
         super::vals::ChannelctrlHighPriorityChannel::from_bits(val as u8)
     }
-    #[doc = "Setting a bit in this field causes the corresponding channel to have high-priority arbitration"]
+    #[doc = "Setting a bit in this field causes the corresponding channel to have high-priority arbitration."]
     #[inline(always)]
     pub const fn set_high_priority_channel(
         &mut self,
@@ -3416,14 +3416,14 @@ impl Channelctrl {
     ) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val.to_bits() as u32) & 0xff) << 8usize);
     }
-    #[doc = "Indicates that the interrupt for channel 0 must be merged with the other interrupts on the shared dcp_irq interrupt"]
+    #[doc = "Indicates that the interrupt for channel 0 must be merged with the other interrupts on the shared dcp_irq interrupt."]
     #[must_use]
     #[inline(always)]
     pub const fn ch0_irq_merged(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates that the interrupt for channel 0 must be merged with the other interrupts on the shared dcp_irq interrupt"]
+    #[doc = "Indicates that the interrupt for channel 0 must be merged with the other interrupts on the shared dcp_irq interrupt."]
     #[inline(always)]
     pub const fn set_ch0_irq_merged(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
@@ -3456,31 +3456,31 @@ impl defmt::Format for Channelctrl {
         )
     }
 }
-#[doc = "DCP channel control register"]
+#[doc = "DCP channel control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ChannelctrlClr(pub u32);
 impl ChannelctrlClr {
-    #[doc = "Setting a bit in this field enables the DMA channel associated with it"]
+    #[doc = "Setting a bit in this field enables the DMA channel associated with it."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_channel(&self) -> super::vals::ChannelctrlClrEnableChannel {
         let val = (self.0 >> 0usize) & 0xff;
         super::vals::ChannelctrlClrEnableChannel::from_bits(val as u8)
     }
-    #[doc = "Setting a bit in this field enables the DMA channel associated with it"]
+    #[doc = "Setting a bit in this field enables the DMA channel associated with it."]
     #[inline(always)]
     pub const fn set_enable_channel(&mut self, val: super::vals::ChannelctrlClrEnableChannel) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val.to_bits() as u32) & 0xff) << 0usize);
     }
-    #[doc = "Setting a bit in this field causes the corresponding channel to have high-priority arbitration"]
+    #[doc = "Setting a bit in this field causes the corresponding channel to have high-priority arbitration."]
     #[must_use]
     #[inline(always)]
     pub const fn high_priority_channel(&self) -> super::vals::ChannelctrlClrHighPriorityChannel {
         let val = (self.0 >> 8usize) & 0xff;
         super::vals::ChannelctrlClrHighPriorityChannel::from_bits(val as u8)
     }
-    #[doc = "Setting a bit in this field causes the corresponding channel to have high-priority arbitration"]
+    #[doc = "Setting a bit in this field causes the corresponding channel to have high-priority arbitration."]
     #[inline(always)]
     pub const fn set_high_priority_channel(
         &mut self,
@@ -3488,14 +3488,14 @@ impl ChannelctrlClr {
     ) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val.to_bits() as u32) & 0xff) << 8usize);
     }
-    #[doc = "Indicates that the interrupt for channel 0 must be merged with the other interrupts on the shared dcp_irq interrupt"]
+    #[doc = "Indicates that the interrupt for channel 0 must be merged with the other interrupts on the shared dcp_irq interrupt."]
     #[must_use]
     #[inline(always)]
     pub const fn ch0_irq_merged(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates that the interrupt for channel 0 must be merged with the other interrupts on the shared dcp_irq interrupt"]
+    #[doc = "Indicates that the interrupt for channel 0 must be merged with the other interrupts on the shared dcp_irq interrupt."]
     #[inline(always)]
     pub const fn set_ch0_irq_merged(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
@@ -3528,31 +3528,31 @@ impl defmt::Format for ChannelctrlClr {
         )
     }
 }
-#[doc = "DCP channel control register"]
+#[doc = "DCP channel control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ChannelctrlSet(pub u32);
 impl ChannelctrlSet {
-    #[doc = "Setting a bit in this field enables the DMA channel associated with it"]
+    #[doc = "Setting a bit in this field enables the DMA channel associated with it."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_channel(&self) -> super::vals::ChannelctrlSetEnableChannel {
         let val = (self.0 >> 0usize) & 0xff;
         super::vals::ChannelctrlSetEnableChannel::from_bits(val as u8)
     }
-    #[doc = "Setting a bit in this field enables the DMA channel associated with it"]
+    #[doc = "Setting a bit in this field enables the DMA channel associated with it."]
     #[inline(always)]
     pub const fn set_enable_channel(&mut self, val: super::vals::ChannelctrlSetEnableChannel) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val.to_bits() as u32) & 0xff) << 0usize);
     }
-    #[doc = "Setting a bit in this field causes the corresponding channel to have high-priority arbitration"]
+    #[doc = "Setting a bit in this field causes the corresponding channel to have high-priority arbitration."]
     #[must_use]
     #[inline(always)]
     pub const fn high_priority_channel(&self) -> super::vals::ChannelctrlSetHighPriorityChannel {
         let val = (self.0 >> 8usize) & 0xff;
         super::vals::ChannelctrlSetHighPriorityChannel::from_bits(val as u8)
     }
-    #[doc = "Setting a bit in this field causes the corresponding channel to have high-priority arbitration"]
+    #[doc = "Setting a bit in this field causes the corresponding channel to have high-priority arbitration."]
     #[inline(always)]
     pub const fn set_high_priority_channel(
         &mut self,
@@ -3560,14 +3560,14 @@ impl ChannelctrlSet {
     ) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val.to_bits() as u32) & 0xff) << 8usize);
     }
-    #[doc = "Indicates that the interrupt for channel 0 must be merged with the other interrupts on the shared dcp_irq interrupt"]
+    #[doc = "Indicates that the interrupt for channel 0 must be merged with the other interrupts on the shared dcp_irq interrupt."]
     #[must_use]
     #[inline(always)]
     pub const fn ch0_irq_merged(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates that the interrupt for channel 0 must be merged with the other interrupts on the shared dcp_irq interrupt"]
+    #[doc = "Indicates that the interrupt for channel 0 must be merged with the other interrupts on the shared dcp_irq interrupt."]
     #[inline(always)]
     pub const fn set_ch0_irq_merged(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
@@ -3600,31 +3600,31 @@ impl defmt::Format for ChannelctrlSet {
         )
     }
 }
-#[doc = "DCP channel control register"]
+#[doc = "DCP channel control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ChannelctrlTog(pub u32);
 impl ChannelctrlTog {
-    #[doc = "Setting a bit in this field enables the DMA channel associated with it"]
+    #[doc = "Setting a bit in this field enables the DMA channel associated with it."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_channel(&self) -> super::vals::ChannelctrlTogEnableChannel {
         let val = (self.0 >> 0usize) & 0xff;
         super::vals::ChannelctrlTogEnableChannel::from_bits(val as u8)
     }
-    #[doc = "Setting a bit in this field enables the DMA channel associated with it"]
+    #[doc = "Setting a bit in this field enables the DMA channel associated with it."]
     #[inline(always)]
     pub const fn set_enable_channel(&mut self, val: super::vals::ChannelctrlTogEnableChannel) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val.to_bits() as u32) & 0xff) << 0usize);
     }
-    #[doc = "Setting a bit in this field causes the corresponding channel to have high-priority arbitration"]
+    #[doc = "Setting a bit in this field causes the corresponding channel to have high-priority arbitration."]
     #[must_use]
     #[inline(always)]
     pub const fn high_priority_channel(&self) -> super::vals::ChannelctrlTogHighPriorityChannel {
         let val = (self.0 >> 8usize) & 0xff;
         super::vals::ChannelctrlTogHighPriorityChannel::from_bits(val as u8)
     }
-    #[doc = "Setting a bit in this field causes the corresponding channel to have high-priority arbitration"]
+    #[doc = "Setting a bit in this field causes the corresponding channel to have high-priority arbitration."]
     #[inline(always)]
     pub const fn set_high_priority_channel(
         &mut self,
@@ -3632,14 +3632,14 @@ impl ChannelctrlTog {
     ) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val.to_bits() as u32) & 0xff) << 8usize);
     }
-    #[doc = "Indicates that the interrupt for channel 0 must be merged with the other interrupts on the shared dcp_irq interrupt"]
+    #[doc = "Indicates that the interrupt for channel 0 must be merged with the other interrupts on the shared dcp_irq interrupt."]
     #[must_use]
     #[inline(always)]
     pub const fn ch0_irq_merged(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Indicates that the interrupt for channel 0 must be merged with the other interrupts on the shared dcp_irq interrupt"]
+    #[doc = "Indicates that the interrupt for channel 0 must be merged with the other interrupts on the shared dcp_irq interrupt."]
     #[inline(always)]
     pub const fn set_ch0_irq_merged(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
@@ -3672,19 +3672,19 @@ impl defmt::Format for ChannelctrlTog {
         )
     }
 }
-#[doc = "DCP context buffer pointer"]
+#[doc = "DCP context buffer pointer."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Context(pub u32);
 impl Context {
-    #[doc = "Context pointer address"]
+    #[doc = "Context pointer address."]
     #[must_use]
     #[inline(always)]
     pub const fn addr(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Context pointer address"]
+    #[doc = "Context pointer address."]
     #[inline(always)]
     pub const fn set_addr(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -3709,19 +3709,19 @@ impl defmt::Format for Context {
         defmt::write!(f, "Context {{ addr: {=u32:?} }}", self.addr())
     }
 }
-#[doc = "DCP control register 0"]
+#[doc = "DCP control register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl(pub u32);
 impl Ctrl {
-    #[doc = "Per-channel interrupt enable bit"]
+    #[doc = "Per-channel interrupt enable bit."]
     #[must_use]
     #[inline(always)]
     pub const fn channel_interrupt_enable(&self) -> super::vals::CtrlChannelInterruptEnable {
         let val = (self.0 >> 0usize) & 0xff;
         super::vals::CtrlChannelInterruptEnable::from_bits(val as u8)
     }
-    #[doc = "Per-channel interrupt enable bit"]
+    #[doc = "Per-channel interrupt enable bit."]
     #[inline(always)]
     pub const fn set_channel_interrupt_enable(
         &mut self,
@@ -3729,38 +3729,38 @@ impl Ctrl {
     ) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val.to_bits() as u32) & 0xff) << 0usize);
     }
-    #[doc = "Enable automatic context switching for the channels"]
+    #[doc = "Enable automatic context switching for the channels."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_context_switching(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable automatic context switching for the channels"]
+    #[doc = "Enable automatic context switching for the channels."]
     #[inline(always)]
     pub const fn set_enable_context_switching(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "The software must set this bit to enable the caching of contexts between the operations"]
+    #[doc = "The software must set this bit to enable the caching of contexts between the operations."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_context_caching(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "The software must set this bit to enable the caching of contexts between the operations"]
+    #[doc = "The software must set this bit to enable the caching of contexts between the operations."]
     #[inline(always)]
     pub const fn set_enable_context_caching(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "The software must set this bit to enable the ragged writes to the unaligned buffers to be gathered between multiple write operations"]
+    #[doc = "The software must set this bit to enable the ragged writes to the unaligned buffers to be gathered between multiple write operations."]
     #[must_use]
     #[inline(always)]
     pub const fn gather_residual_writes(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "The software must set this bit to enable the ragged writes to the unaligned buffers to be gathered between multiple write operations"]
+    #[doc = "The software must set this bit to enable the ragged writes to the unaligned buffers to be gathered between multiple write operations."]
     #[inline(always)]
     pub const fn set_gather_residual_writes(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
@@ -3789,26 +3789,26 @@ impl Ctrl {
     pub const fn set_present_crypto(&mut self, val: super::vals::CtrlPresentCrypto) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
-    #[doc = "This bit must be set to zero for a normal operation"]
+    #[doc = "This bit must be set to zero for a normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn clkgate(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit must be set to zero for a normal operation"]
+    #[doc = "This bit must be set to zero for a normal operation."]
     #[inline(always)]
     pub const fn set_clkgate(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "Set this bit to zero to enable a normal DCP operation"]
+    #[doc = "Set this bit to zero to enable a normal DCP operation."]
     #[must_use]
     #[inline(always)]
     pub const fn sftrst(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Set this bit to zero to enable a normal DCP operation"]
+    #[doc = "Set this bit to zero to enable a normal DCP operation."]
     #[inline(always)]
     pub const fn set_sftrst(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -3851,19 +3851,19 @@ impl defmt::Format for Ctrl {
         )
     }
 }
-#[doc = "DCP control register 0"]
+#[doc = "DCP control register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CtrlClr(pub u32);
 impl CtrlClr {
-    #[doc = "Per-channel interrupt enable bit"]
+    #[doc = "Per-channel interrupt enable bit."]
     #[must_use]
     #[inline(always)]
     pub const fn channel_interrupt_enable(&self) -> super::vals::CtrlClrChannelInterruptEnable {
         let val = (self.0 >> 0usize) & 0xff;
         super::vals::CtrlClrChannelInterruptEnable::from_bits(val as u8)
     }
-    #[doc = "Per-channel interrupt enable bit"]
+    #[doc = "Per-channel interrupt enable bit."]
     #[inline(always)]
     pub const fn set_channel_interrupt_enable(
         &mut self,
@@ -3871,38 +3871,38 @@ impl CtrlClr {
     ) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val.to_bits() as u32) & 0xff) << 0usize);
     }
-    #[doc = "Enable automatic context switching for the channels"]
+    #[doc = "Enable automatic context switching for the channels."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_context_switching(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable automatic context switching for the channels"]
+    #[doc = "Enable automatic context switching for the channels."]
     #[inline(always)]
     pub const fn set_enable_context_switching(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "The software must set this bit to enable the caching of contexts between the operations"]
+    #[doc = "The software must set this bit to enable the caching of contexts between the operations."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_context_caching(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "The software must set this bit to enable the caching of contexts between the operations"]
+    #[doc = "The software must set this bit to enable the caching of contexts between the operations."]
     #[inline(always)]
     pub const fn set_enable_context_caching(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "The software must set this bit to enable the ragged writes to the unaligned buffers to be gathered between multiple write operations"]
+    #[doc = "The software must set this bit to enable the ragged writes to the unaligned buffers to be gathered between multiple write operations."]
     #[must_use]
     #[inline(always)]
     pub const fn gather_residual_writes(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "The software must set this bit to enable the ragged writes to the unaligned buffers to be gathered between multiple write operations"]
+    #[doc = "The software must set this bit to enable the ragged writes to the unaligned buffers to be gathered between multiple write operations."]
     #[inline(always)]
     pub const fn set_gather_residual_writes(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
@@ -3931,26 +3931,26 @@ impl CtrlClr {
     pub const fn set_present_crypto(&mut self, val: super::vals::CtrlClrPresentCrypto) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
-    #[doc = "This bit must be set to zero for a normal operation"]
+    #[doc = "This bit must be set to zero for a normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn clkgate(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit must be set to zero for a normal operation"]
+    #[doc = "This bit must be set to zero for a normal operation."]
     #[inline(always)]
     pub const fn set_clkgate(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "Set this bit to zero to enable a normal DCP operation"]
+    #[doc = "Set this bit to zero to enable a normal DCP operation."]
     #[must_use]
     #[inline(always)]
     pub const fn sftrst(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Set this bit to zero to enable a normal DCP operation"]
+    #[doc = "Set this bit to zero to enable a normal DCP operation."]
     #[inline(always)]
     pub const fn set_sftrst(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -3993,19 +3993,19 @@ impl defmt::Format for CtrlClr {
         )
     }
 }
-#[doc = "DCP control register 0"]
+#[doc = "DCP control register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CtrlSet(pub u32);
 impl CtrlSet {
-    #[doc = "Per-channel interrupt enable bit"]
+    #[doc = "Per-channel interrupt enable bit."]
     #[must_use]
     #[inline(always)]
     pub const fn channel_interrupt_enable(&self) -> super::vals::CtrlSetChannelInterruptEnable {
         let val = (self.0 >> 0usize) & 0xff;
         super::vals::CtrlSetChannelInterruptEnable::from_bits(val as u8)
     }
-    #[doc = "Per-channel interrupt enable bit"]
+    #[doc = "Per-channel interrupt enable bit."]
     #[inline(always)]
     pub const fn set_channel_interrupt_enable(
         &mut self,
@@ -4013,38 +4013,38 @@ impl CtrlSet {
     ) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val.to_bits() as u32) & 0xff) << 0usize);
     }
-    #[doc = "Enable automatic context switching for the channels"]
+    #[doc = "Enable automatic context switching for the channels."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_context_switching(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable automatic context switching for the channels"]
+    #[doc = "Enable automatic context switching for the channels."]
     #[inline(always)]
     pub const fn set_enable_context_switching(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "The software must set this bit to enable the caching of contexts between the operations"]
+    #[doc = "The software must set this bit to enable the caching of contexts between the operations."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_context_caching(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "The software must set this bit to enable the caching of contexts between the operations"]
+    #[doc = "The software must set this bit to enable the caching of contexts between the operations."]
     #[inline(always)]
     pub const fn set_enable_context_caching(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "The software must set this bit to enable the ragged writes to the unaligned buffers to be gathered between multiple write operations"]
+    #[doc = "The software must set this bit to enable the ragged writes to the unaligned buffers to be gathered between multiple write operations."]
     #[must_use]
     #[inline(always)]
     pub const fn gather_residual_writes(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "The software must set this bit to enable the ragged writes to the unaligned buffers to be gathered between multiple write operations"]
+    #[doc = "The software must set this bit to enable the ragged writes to the unaligned buffers to be gathered between multiple write operations."]
     #[inline(always)]
     pub const fn set_gather_residual_writes(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
@@ -4073,26 +4073,26 @@ impl CtrlSet {
     pub const fn set_present_crypto(&mut self, val: super::vals::CtrlSetPresentCrypto) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
-    #[doc = "This bit must be set to zero for a normal operation"]
+    #[doc = "This bit must be set to zero for a normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn clkgate(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit must be set to zero for a normal operation"]
+    #[doc = "This bit must be set to zero for a normal operation."]
     #[inline(always)]
     pub const fn set_clkgate(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "Set this bit to zero to enable a normal DCP operation"]
+    #[doc = "Set this bit to zero to enable a normal DCP operation."]
     #[must_use]
     #[inline(always)]
     pub const fn sftrst(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Set this bit to zero to enable a normal DCP operation"]
+    #[doc = "Set this bit to zero to enable a normal DCP operation."]
     #[inline(always)]
     pub const fn set_sftrst(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -4135,19 +4135,19 @@ impl defmt::Format for CtrlSet {
         )
     }
 }
-#[doc = "DCP control register 0"]
+#[doc = "DCP control register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CtrlTog(pub u32);
 impl CtrlTog {
-    #[doc = "Per-channel interrupt enable bit"]
+    #[doc = "Per-channel interrupt enable bit."]
     #[must_use]
     #[inline(always)]
     pub const fn channel_interrupt_enable(&self) -> super::vals::CtrlTogChannelInterruptEnable {
         let val = (self.0 >> 0usize) & 0xff;
         super::vals::CtrlTogChannelInterruptEnable::from_bits(val as u8)
     }
-    #[doc = "Per-channel interrupt enable bit"]
+    #[doc = "Per-channel interrupt enable bit."]
     #[inline(always)]
     pub const fn set_channel_interrupt_enable(
         &mut self,
@@ -4155,38 +4155,38 @@ impl CtrlTog {
     ) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val.to_bits() as u32) & 0xff) << 0usize);
     }
-    #[doc = "Enable automatic context switching for the channels"]
+    #[doc = "Enable automatic context switching for the channels."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_context_switching(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable automatic context switching for the channels"]
+    #[doc = "Enable automatic context switching for the channels."]
     #[inline(always)]
     pub const fn set_enable_context_switching(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "The software must set this bit to enable the caching of contexts between the operations"]
+    #[doc = "The software must set this bit to enable the caching of contexts between the operations."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_context_caching(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "The software must set this bit to enable the caching of contexts between the operations"]
+    #[doc = "The software must set this bit to enable the caching of contexts between the operations."]
     #[inline(always)]
     pub const fn set_enable_context_caching(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "The software must set this bit to enable the ragged writes to the unaligned buffers to be gathered between multiple write operations"]
+    #[doc = "The software must set this bit to enable the ragged writes to the unaligned buffers to be gathered between multiple write operations."]
     #[must_use]
     #[inline(always)]
     pub const fn gather_residual_writes(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "The software must set this bit to enable the ragged writes to the unaligned buffers to be gathered between multiple write operations"]
+    #[doc = "The software must set this bit to enable the ragged writes to the unaligned buffers to be gathered between multiple write operations."]
     #[inline(always)]
     pub const fn set_gather_residual_writes(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
@@ -4215,26 +4215,26 @@ impl CtrlTog {
     pub const fn set_present_crypto(&mut self, val: super::vals::CtrlTogPresentCrypto) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val.to_bits() as u32) & 0x01) << 29usize);
     }
-    #[doc = "This bit must be set to zero for a normal operation"]
+    #[doc = "This bit must be set to zero for a normal operation."]
     #[must_use]
     #[inline(always)]
     pub const fn clkgate(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit must be set to zero for a normal operation"]
+    #[doc = "This bit must be set to zero for a normal operation."]
     #[inline(always)]
     pub const fn set_clkgate(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "Set this bit to zero to enable a normal DCP operation"]
+    #[doc = "Set this bit to zero to enable a normal DCP operation."]
     #[must_use]
     #[inline(always)]
     pub const fn sftrst(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Set this bit to zero to enable a normal DCP operation"]
+    #[doc = "Set this bit to zero to enable a normal DCP operation."]
     #[inline(always)]
     pub const fn set_sftrst(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -4277,19 +4277,19 @@ impl defmt::Format for CtrlTog {
         )
     }
 }
-#[doc = "DCP debug data register"]
+#[doc = "DCP debug data register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dbgdata(pub u32);
 impl Dbgdata {
-    #[doc = "Debug data"]
+    #[doc = "Debug data."]
     #[must_use]
     #[inline(always)]
     pub const fn data(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Debug data"]
+    #[doc = "Debug data."]
     #[inline(always)]
     pub const fn set_data(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -4314,7 +4314,7 @@ impl defmt::Format for Dbgdata {
         defmt::write!(f, "Dbgdata {{ data: {=u32:?} }}", self.data())
     }
 }
-#[doc = "DCP debug select register"]
+#[doc = "DCP debug select register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dbgselect(pub u32);
@@ -4351,19 +4351,19 @@ impl defmt::Format for Dbgselect {
         defmt::write!(f, "Dbgselect {{ index: {:?} }}", self.index())
     }
 }
-#[doc = "DCP key index"]
+#[doc = "DCP key index."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Key(pub u32);
 impl Key {
-    #[doc = "Key subword pointer"]
+    #[doc = "Key subword pointer."]
     #[must_use]
     #[inline(always)]
     pub const fn subword(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x03;
         val as u8
     }
-    #[doc = "Key subword pointer"]
+    #[doc = "Key subword pointer."]
     #[inline(always)]
     pub const fn set_subword(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val as u32) & 0x03) << 0usize);
@@ -4406,7 +4406,7 @@ impl defmt::Format for Key {
         )
     }
 }
-#[doc = "DCP key data"]
+#[doc = "DCP key data."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Keydata(pub u32);
@@ -4443,19 +4443,19 @@ impl defmt::Format for Keydata {
         defmt::write!(f, "Keydata {{ data: {=u32:?} }}", self.data())
     }
 }
-#[doc = "DCP work packet 0 status register"]
+#[doc = "DCP work packet 0 status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Packet0(pub u32);
 impl Packet0 {
-    #[doc = "Next pointer register"]
+    #[doc = "Next pointer register."]
     #[must_use]
     #[inline(always)]
     pub const fn addr(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Next pointer register"]
+    #[doc = "Next pointer register."]
     #[inline(always)]
     pub const fn set_addr(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -4480,7 +4480,7 @@ impl defmt::Format for Packet0 {
         defmt::write!(f, "Packet0 {{ addr: {=u32:?} }}", self.addr())
     }
 }
-#[doc = "DCP work packet 1 status register"]
+#[doc = "DCP work packet 1 status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Packet1(pub u32);
@@ -4497,26 +4497,26 @@ impl Packet1 {
     pub const fn set_interrupt(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Reflects whether the channel's semaphore must be decremented at the end of the current operation"]
+    #[doc = "Reflects whether the channel's semaphore must be decremented at the end of the current operation."]
     #[must_use]
     #[inline(always)]
     pub const fn decr_semaphore(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Reflects whether the channel's semaphore must be decremented at the end of the current operation"]
+    #[doc = "Reflects whether the channel's semaphore must be decremented at the end of the current operation."]
     #[inline(always)]
     pub const fn set_decr_semaphore(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Reflects whether the next command pointer register must be loaded into the channel's current descriptor pointer"]
+    #[doc = "Reflects whether the next command pointer register must be loaded into the channel's current descriptor pointer."]
     #[must_use]
     #[inline(always)]
     pub const fn chain(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Reflects whether the next command pointer register must be loaded into the channel's current descriptor pointer"]
+    #[doc = "Reflects whether the next command pointer register must be loaded into the channel's current descriptor pointer."]
     #[inline(always)]
     pub const fn set_chain(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
@@ -4569,86 +4569,86 @@ impl Packet1 {
     pub const fn set_enable_hash(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Reflects whether the DCP must perform a blit operation"]
+    #[doc = "Reflects whether the DCP must perform a blit operation."]
     #[must_use]
     #[inline(always)]
     pub const fn enable_blit(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Reflects whether the DCP must perform a blit operation"]
+    #[doc = "Reflects whether the DCP must perform a blit operation."]
     #[inline(always)]
     pub const fn set_enable_blit(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "When the cipher block is enabled, this bit indicates whether the operation is encryption or decryption"]
+    #[doc = "When the cipher block is enabled, this bit indicates whether the operation is encryption or decryption."]
     #[must_use]
     #[inline(always)]
     pub const fn cipher_encrypt(&self) -> super::vals::CipherEncrypt {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::CipherEncrypt::from_bits(val as u8)
     }
-    #[doc = "When the cipher block is enabled, this bit indicates whether the operation is encryption or decryption"]
+    #[doc = "When the cipher block is enabled, this bit indicates whether the operation is encryption or decryption."]
     #[inline(always)]
     pub const fn set_cipher_encrypt(&mut self, val: super::vals::CipherEncrypt) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
-    #[doc = "Reflects whether the cipher block must load the initialization vector from the payload for this operation"]
+    #[doc = "Reflects whether the cipher block must load the initialization vector from the payload for this operation."]
     #[must_use]
     #[inline(always)]
     pub const fn cipher_init(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Reflects whether the cipher block must load the initialization vector from the payload for this operation"]
+    #[doc = "Reflects whether the cipher block must load the initialization vector from the payload for this operation."]
     #[inline(always)]
     pub const fn set_cipher_init(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "Reflects whether a hardware-based key must be used"]
+    #[doc = "Reflects whether a hardware-based key must be used."]
     #[must_use]
     #[inline(always)]
     pub const fn otp_key(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "Reflects whether a hardware-based key must be used"]
+    #[doc = "Reflects whether a hardware-based key must be used."]
     #[inline(always)]
     pub const fn set_otp_key(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "When set, it indicates the payload contains the key"]
+    #[doc = "When set, it indicates the payload contains the key."]
     #[must_use]
     #[inline(always)]
     pub const fn payload_key(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "When set, it indicates the payload contains the key"]
+    #[doc = "When set, it indicates the payload contains the key."]
     #[inline(always)]
     pub const fn set_payload_key(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "Reflects whether the current hashing block is the initial block in the hashing operation, so the hash registers must be initialized before the operation"]
+    #[doc = "Reflects whether the current hashing block is the initial block in the hashing operation, so the hash registers must be initialized before the operation."]
     #[must_use]
     #[inline(always)]
     pub const fn hash_init(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "Reflects whether the current hashing block is the initial block in the hashing operation, so the hash registers must be initialized before the operation"]
+    #[doc = "Reflects whether the current hashing block is the initial block in the hashing operation, so the hash registers must be initialized before the operation."]
     #[inline(always)]
     pub const fn set_hash_init(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "Reflects whether the current hashing block is the final block in the hashing operation, so the hash padding must be applied by the hardware"]
+    #[doc = "Reflects whether the current hashing block is the final block in the hashing operation, so the hash padding must be applied by the hardware."]
     #[must_use]
     #[inline(always)]
     pub const fn hash_term(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "Reflects whether the current hashing block is the final block in the hashing operation, so the hash padding must be applied by the hardware"]
+    #[doc = "Reflects whether the current hashing block is the final block in the hashing operation, so the hash padding must be applied by the hardware."]
     #[inline(always)]
     pub const fn set_hash_term(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
@@ -4677,26 +4677,26 @@ impl Packet1 {
     pub const fn set_hash_output(&mut self, val: super::vals::HashOutput) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
     }
-    #[doc = "When this bit is set (MEMCOPY and BLIT modes only), the DCP simply fills the destination buffer with the value found in the source address field"]
+    #[doc = "When this bit is set (MEMCOPY and BLIT modes only), the DCP simply fills the destination buffer with the value found in the source address field."]
     #[must_use]
     #[inline(always)]
     pub const fn constant_fill(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "When this bit is set (MEMCOPY and BLIT modes only), the DCP simply fills the destination buffer with the value found in the source address field"]
+    #[doc = "When this bit is set (MEMCOPY and BLIT modes only), the DCP simply fills the destination buffer with the value found in the source address field."]
     #[inline(always)]
     pub const fn set_constant_fill(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "This bit is used to test the channel semaphore transition to 0. FOR TEST USE ONLY!"]
+    #[doc = "This bit is used to test the channel semaphore transition to 0. FOR TEST USE ONLY!."]
     #[must_use]
     #[inline(always)]
     pub const fn test_sema_irq(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit is used to test the channel semaphore transition to 0. FOR TEST USE ONLY!"]
+    #[doc = "This bit is used to test the channel semaphore transition to 0. FOR TEST USE ONLY!."]
     #[inline(always)]
     pub const fn set_test_sema_irq(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
@@ -4773,14 +4773,14 @@ impl Packet1 {
     pub const fn set_output_wordswap(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
-    #[doc = "Packet Tag"]
+    #[doc = "Packet Tag."]
     #[must_use]
     #[inline(always)]
     pub const fn tag(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "Packet Tag"]
+    #[doc = "Packet Tag."]
     #[inline(always)]
     pub const fn set_tag(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);
@@ -4857,19 +4857,19 @@ impl defmt::Format for Packet1 {
         )
     }
 }
-#[doc = "DCP work packet 2 status register"]
+#[doc = "DCP work packet 2 status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Packet2(pub u32);
 impl Packet2 {
-    #[doc = "Cipher selection field"]
+    #[doc = "Cipher selection field."]
     #[must_use]
     #[inline(always)]
     pub const fn cipher_select(&self) -> super::vals::CipherSelect {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::CipherSelect::from_bits(val as u8)
     }
-    #[doc = "Cipher selection field"]
+    #[doc = "Cipher selection field."]
     #[inline(always)]
     pub const fn set_cipher_select(&mut self, val: super::vals::CipherSelect) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
@@ -4886,26 +4886,26 @@ impl Packet2 {
     pub const fn set_cipher_mode(&mut self, val: super::vals::CipherMode) {
         self.0 = (self.0 & !(0x0f << 4usize)) | (((val.to_bits() as u32) & 0x0f) << 4usize);
     }
-    #[doc = "Key selection field"]
+    #[doc = "Key selection field."]
     #[must_use]
     #[inline(always)]
     pub const fn key_select(&self) -> super::vals::KeySelect {
         let val = (self.0 >> 8usize) & 0xff;
         super::vals::KeySelect::from_bits(val as u8)
     }
-    #[doc = "Key selection field"]
+    #[doc = "Key selection field."]
     #[inline(always)]
     pub const fn set_key_select(&mut self, val: super::vals::KeySelect) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val.to_bits() as u32) & 0xff) << 8usize);
     }
-    #[doc = "Hash Selection Field"]
+    #[doc = "Hash Selection Field."]
     #[must_use]
     #[inline(always)]
     pub const fn hash_select(&self) -> super::vals::HashSelect {
         let val = (self.0 >> 16usize) & 0x0f;
         super::vals::HashSelect::from_bits(val as u8)
     }
-    #[doc = "Hash Selection Field"]
+    #[doc = "Hash Selection Field."]
     #[inline(always)]
     pub const fn set_hash_select(&mut self, val: super::vals::HashSelect) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val.to_bits() as u32) & 0x0f) << 16usize);
@@ -4954,19 +4954,19 @@ impl defmt::Format for Packet2 {
         )
     }
 }
-#[doc = "DCP work packet 3 status register"]
+#[doc = "DCP work packet 3 status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Packet3(pub u32);
 impl Packet3 {
-    #[doc = "Source buffer address pointer"]
+    #[doc = "Source buffer address pointer."]
     #[must_use]
     #[inline(always)]
     pub const fn addr(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Source buffer address pointer"]
+    #[doc = "Source buffer address pointer."]
     #[inline(always)]
     pub const fn set_addr(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -4991,19 +4991,19 @@ impl defmt::Format for Packet3 {
         defmt::write!(f, "Packet3 {{ addr: {=u32:?} }}", self.addr())
     }
 }
-#[doc = "DCP work packet 4 status register"]
+#[doc = "DCP work packet 4 status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Packet4(pub u32);
 impl Packet4 {
-    #[doc = "Destination buffer address pointer"]
+    #[doc = "Destination buffer address pointer."]
     #[must_use]
     #[inline(always)]
     pub const fn addr(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Destination buffer address pointer"]
+    #[doc = "Destination buffer address pointer."]
     #[inline(always)]
     pub const fn set_addr(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -5028,7 +5028,7 @@ impl defmt::Format for Packet4 {
         defmt::write!(f, "Packet4 {{ addr: {=u32:?} }}", self.addr())
     }
 }
-#[doc = "DCP work packet 5 status register"]
+#[doc = "DCP work packet 5 status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Packet5(pub u32);
@@ -5065,7 +5065,7 @@ impl defmt::Format for Packet5 {
         defmt::write!(f, "Packet5 {{ count: {=u32:?} }}", self.count())
     }
 }
-#[doc = "DCP work packet 6 status register"]
+#[doc = "DCP work packet 6 status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Packet6(pub u32);
@@ -5102,19 +5102,19 @@ impl defmt::Format for Packet6 {
         defmt::write!(f, "Packet6 {{ addr: {=u32:?} }}", self.addr())
     }
 }
-#[doc = "DCP page table register"]
+#[doc = "DCP page table register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pagetable(pub u32);
 impl Pagetable {
-    #[doc = "Page table enable control"]
+    #[doc = "Page table enable control."]
     #[must_use]
     #[inline(always)]
     pub const fn enable(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Page table enable control"]
+    #[doc = "Page table enable control."]
     #[inline(always)]
     pub const fn set_enable(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -5131,14 +5131,14 @@ impl Pagetable {
     pub const fn set_flush(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Page table base address"]
+    #[doc = "Page table base address."]
     #[must_use]
     #[inline(always)]
     pub const fn base(&self) -> u32 {
         let val = (self.0 >> 2usize) & 0x3fff_ffff;
         val as u32
     }
-    #[doc = "Page table base address"]
+    #[doc = "Page table base address."]
     #[inline(always)]
     pub const fn set_base(&mut self, val: u32) {
         self.0 = (self.0 & !(0x3fff_ffff << 2usize)) | (((val as u32) & 0x3fff_ffff) << 2usize);
@@ -5171,43 +5171,43 @@ impl defmt::Format for Pagetable {
         )
     }
 }
-#[doc = "DCP status register"]
+#[doc = "DCP status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Stat(pub u32);
 impl Stat {
-    #[doc = "Indicates which channels have pending interrupt requests"]
+    #[doc = "Indicates which channels have pending interrupt requests."]
     #[must_use]
     #[inline(always)]
     pub const fn irq(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "Indicates which channels have pending interrupt requests"]
+    #[doc = "Indicates which channels have pending interrupt requests."]
     #[inline(always)]
     pub const fn set_irq(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Indicates which channels are ready to proceed with a transfer (the active channel is also included)"]
+    #[doc = "Indicates which channels are ready to proceed with a transfer (the active channel is also included)."]
     #[must_use]
     #[inline(always)]
     pub const fn ready_channels(&self) -> super::vals::StatReadyChannels {
         let val = (self.0 >> 16usize) & 0xff;
         super::vals::StatReadyChannels::from_bits(val as u8)
     }
-    #[doc = "Indicates which channels are ready to proceed with a transfer (the active channel is also included)"]
+    #[doc = "Indicates which channels are ready to proceed with a transfer (the active channel is also included)."]
     #[inline(always)]
     pub const fn set_ready_channels(&mut self, val: super::vals::StatReadyChannels) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val.to_bits() as u32) & 0xff) << 16usize);
     }
-    #[doc = "Current (active) channel (encoded)"]
+    #[doc = "Current (active) channel (encoded)."]
     #[must_use]
     #[inline(always)]
     pub const fn cur_channel(&self) -> super::vals::StatCurChannel {
         let val = (self.0 >> 24usize) & 0x0f;
         super::vals::StatCurChannel::from_bits(val as u8)
     }
-    #[doc = "Current (active) channel (encoded)"]
+    #[doc = "Current (active) channel (encoded)."]
     #[inline(always)]
     pub const fn set_cur_channel(&mut self, val: super::vals::StatCurChannel) {
         self.0 = (self.0 & !(0x0f << 24usize)) | (((val.to_bits() as u32) & 0x0f) << 24usize);
@@ -5254,43 +5254,43 @@ impl defmt::Format for Stat {
         )
     }
 }
-#[doc = "DCP status register"]
+#[doc = "DCP status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct StatClr(pub u32);
 impl StatClr {
-    #[doc = "Indicates which channels have pending interrupt requests"]
+    #[doc = "Indicates which channels have pending interrupt requests."]
     #[must_use]
     #[inline(always)]
     pub const fn irq(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "Indicates which channels have pending interrupt requests"]
+    #[doc = "Indicates which channels have pending interrupt requests."]
     #[inline(always)]
     pub const fn set_irq(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Indicates which channels are ready to proceed with a transfer (the active channel is also included)"]
+    #[doc = "Indicates which channels are ready to proceed with a transfer (the active channel is also included)."]
     #[must_use]
     #[inline(always)]
     pub const fn ready_channels(&self) -> super::vals::StatClrReadyChannels {
         let val = (self.0 >> 16usize) & 0xff;
         super::vals::StatClrReadyChannels::from_bits(val as u8)
     }
-    #[doc = "Indicates which channels are ready to proceed with a transfer (the active channel is also included)"]
+    #[doc = "Indicates which channels are ready to proceed with a transfer (the active channel is also included)."]
     #[inline(always)]
     pub const fn set_ready_channels(&mut self, val: super::vals::StatClrReadyChannels) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val.to_bits() as u32) & 0xff) << 16usize);
     }
-    #[doc = "Current (active) channel (encoded)"]
+    #[doc = "Current (active) channel (encoded)."]
     #[must_use]
     #[inline(always)]
     pub const fn cur_channel(&self) -> super::vals::StatClrCurChannel {
         let val = (self.0 >> 24usize) & 0x0f;
         super::vals::StatClrCurChannel::from_bits(val as u8)
     }
-    #[doc = "Current (active) channel (encoded)"]
+    #[doc = "Current (active) channel (encoded)."]
     #[inline(always)]
     pub const fn set_cur_channel(&mut self, val: super::vals::StatClrCurChannel) {
         self.0 = (self.0 & !(0x0f << 24usize)) | (((val.to_bits() as u32) & 0x0f) << 24usize);
@@ -5337,43 +5337,43 @@ impl defmt::Format for StatClr {
         )
     }
 }
-#[doc = "DCP status register"]
+#[doc = "DCP status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct StatSet(pub u32);
 impl StatSet {
-    #[doc = "Indicates which channels have pending interrupt requests"]
+    #[doc = "Indicates which channels have pending interrupt requests."]
     #[must_use]
     #[inline(always)]
     pub const fn irq(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "Indicates which channels have pending interrupt requests"]
+    #[doc = "Indicates which channels have pending interrupt requests."]
     #[inline(always)]
     pub const fn set_irq(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Indicates which channels are ready to proceed with a transfer (the active channel is also included)"]
+    #[doc = "Indicates which channels are ready to proceed with a transfer (the active channel is also included)."]
     #[must_use]
     #[inline(always)]
     pub const fn ready_channels(&self) -> super::vals::StatSetReadyChannels {
         let val = (self.0 >> 16usize) & 0xff;
         super::vals::StatSetReadyChannels::from_bits(val as u8)
     }
-    #[doc = "Indicates which channels are ready to proceed with a transfer (the active channel is also included)"]
+    #[doc = "Indicates which channels are ready to proceed with a transfer (the active channel is also included)."]
     #[inline(always)]
     pub const fn set_ready_channels(&mut self, val: super::vals::StatSetReadyChannels) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val.to_bits() as u32) & 0xff) << 16usize);
     }
-    #[doc = "Current (active) channel (encoded)"]
+    #[doc = "Current (active) channel (encoded)."]
     #[must_use]
     #[inline(always)]
     pub const fn cur_channel(&self) -> super::vals::StatSetCurChannel {
         let val = (self.0 >> 24usize) & 0x0f;
         super::vals::StatSetCurChannel::from_bits(val as u8)
     }
-    #[doc = "Current (active) channel (encoded)"]
+    #[doc = "Current (active) channel (encoded)."]
     #[inline(always)]
     pub const fn set_cur_channel(&mut self, val: super::vals::StatSetCurChannel) {
         self.0 = (self.0 & !(0x0f << 24usize)) | (((val.to_bits() as u32) & 0x0f) << 24usize);
@@ -5420,43 +5420,43 @@ impl defmt::Format for StatSet {
         )
     }
 }
-#[doc = "DCP status register"]
+#[doc = "DCP status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct StatTog(pub u32);
 impl StatTog {
-    #[doc = "Indicates which channels have pending interrupt requests"]
+    #[doc = "Indicates which channels have pending interrupt requests."]
     #[must_use]
     #[inline(always)]
     pub const fn irq(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "Indicates which channels have pending interrupt requests"]
+    #[doc = "Indicates which channels have pending interrupt requests."]
     #[inline(always)]
     pub const fn set_irq(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Indicates which channels are ready to proceed with a transfer (the active channel is also included)"]
+    #[doc = "Indicates which channels are ready to proceed with a transfer (the active channel is also included)."]
     #[must_use]
     #[inline(always)]
     pub const fn ready_channels(&self) -> super::vals::StatTogReadyChannels {
         let val = (self.0 >> 16usize) & 0xff;
         super::vals::StatTogReadyChannels::from_bits(val as u8)
     }
-    #[doc = "Indicates which channels are ready to proceed with a transfer (the active channel is also included)"]
+    #[doc = "Indicates which channels are ready to proceed with a transfer (the active channel is also included)."]
     #[inline(always)]
     pub const fn set_ready_channels(&mut self, val: super::vals::StatTogReadyChannels) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val.to_bits() as u32) & 0xff) << 16usize);
     }
-    #[doc = "Current (active) channel (encoded)"]
+    #[doc = "Current (active) channel (encoded)."]
     #[must_use]
     #[inline(always)]
     pub const fn cur_channel(&self) -> super::vals::StatTogCurChannel {
         let val = (self.0 >> 24usize) & 0x0f;
         super::vals::StatTogCurChannel::from_bits(val as u8)
     }
-    #[doc = "Current (active) channel (encoded)"]
+    #[doc = "Current (active) channel (encoded)."]
     #[inline(always)]
     pub const fn set_cur_channel(&mut self, val: super::vals::StatTogCurChannel) {
         self.0 = (self.0 & !(0x0f << 24usize)) | (((val.to_bits() as u32) & 0x0f) << 24usize);
@@ -5503,7 +5503,7 @@ impl defmt::Format for StatTog {
         )
     }
 }
-#[doc = "DCP version register"]
+#[doc = "DCP version register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Version(pub u32);

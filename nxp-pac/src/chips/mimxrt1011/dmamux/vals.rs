@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AOn {
-    #[doc = "DMA Channel Always ON function is disabled"]
+    #[doc = "DMA Channel Always ON function is disabled."]
     A_ON_0 = 0x0,
-    #[doc = "DMA Channel Always ON function is enabled"]
+    #[doc = "DMA Channel Always ON function is enabled."]
     A_ON_1 = 0x01,
 }
 impl AOn {
@@ -33,9 +33,9 @@ impl From<AOn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Enbl {
-    #[doc = "DMA Mux channel is disabled"]
+    #[doc = "DMA Mux channel is disabled."]
     ENBL_0 = 0x0,
-    #[doc = "DMA Mux channel is enabled"]
+    #[doc = "DMA Mux channel is enabled."]
     ENBL_1 = 0x01,
 }
 impl Enbl {
@@ -64,7 +64,7 @@ impl From<Enbl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig {
-    #[doc = "Triggering is disabled. If triggering is disabled and ENBL is set, the DMA Channel will simply route the specified source to the DMA channel. (Normal mode)"]
+    #[doc = "Triggering is disabled. If triggering is disabled and ENBL is set, the DMA Channel will simply route the specified source to the DMA channel. (Normal mode)."]
     TRIG_0 = 0x0,
     #[doc = "Triggering is enabled. If triggering is enabled and ENBL is set, the DMA_CH_MUX is in Periodic Trigger mode."]
     TRIG_1 = 0x01,

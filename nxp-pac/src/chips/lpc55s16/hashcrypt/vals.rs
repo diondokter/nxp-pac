@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Aesdecrypt {
-    #[doc = "Encrypt"]
+    #[doc = "Encrypt."]
     ENCRYPT = 0x0,
-    #[doc = "Decrypt"]
+    #[doc = "Decrypt."]
     DECRYPT = 0x01,
 }
 impl Aesdecrypt {
@@ -33,11 +33,11 @@ impl From<Aesdecrypt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Aeskeysz {
-    #[doc = "128 bit key"]
+    #[doc = "128 bit key."]
     BITS_128 = 0x0,
-    #[doc = "192 bit key"]
+    #[doc = "192 bit key."]
     BITS_192 = 0x01,
-    #[doc = "256 bit key"]
+    #[doc = "256 bit key."]
     BITS_256 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -67,9 +67,9 @@ impl From<Aeskeysz> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Aesmode {
-    #[doc = "ECB - used as is"]
+    #[doc = "ECB - used as is."]
     ECB = 0x0,
-    #[doc = "CBC mode (see details on IV/nonce)"]
+    #[doc = "CBC mode (see details on IV/nonce)."]
     CBC = 0x01,
     #[doc = "CTR mode (see details on IV/nonce). See also AESCTRPOS."]
     CTR = 0x02,
@@ -101,9 +101,9 @@ impl From<Aesmode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Aessecret {
-    #[doc = "User key provided in normal way"]
+    #[doc = "User key provided in normal way."]
     NORMAL_WAY = 0x0,
-    #[doc = "Secret key provided in hidden way by HW"]
+    #[doc = "Secret key provided in hidden way by HW."]
     HIDDEN_WAY = 0x01,
 }
 impl Aessecret {
@@ -194,14 +194,14 @@ impl From<Master> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mode {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED = 0x0,
-    #[doc = "SHA1 is enabled"]
+    #[doc = "SHA1 is enabled."]
     SHA1 = 0x01,
-    #[doc = "SHA2-256 is enabled"]
+    #[doc = "SHA2-256 is enabled."]
     SHA2_256 = 0x02,
     _RESERVED_3 = 0x03,
-    #[doc = "AES if available (see also CRYPTCFG register for more controls)"]
+    #[doc = "AES if available (see also CRYPTCFG register for more controls)."]
     AES = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,

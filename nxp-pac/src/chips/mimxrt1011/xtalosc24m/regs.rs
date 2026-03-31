@@ -1,4 +1,4 @@
-#[doc = "XTAL OSC (LP) Control Register"]
+#[doc = "XTAL OSC (LP) Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct LowpwrCtrl(pub u32);
@@ -111,26 +111,26 @@ impl LowpwrCtrl {
     pub const fn set_display_pwrgate(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "For debug purposes only"]
+    #[doc = "For debug purposes only."]
     #[must_use]
     #[inline(always)]
     pub const fn rcosc_cg_override(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "For debug purposes only"]
+    #[doc = "For debug purposes only."]
     #[inline(always)]
     pub const fn set_rcosc_cg_override(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "Specifies the time delay between when the 24MHz xtal is powered up until it is stable and ready to use"]
+    #[doc = "Specifies the time delay between when the 24MHz xtal is powered up until it is stable and ready to use."]
     #[must_use]
     #[inline(always)]
     pub const fn xtalosc_pwrup_delay(&self) -> super::vals::LowpwrCtrlXtaloscPwrupDelay {
         let val = (self.0 >> 14usize) & 0x03;
         super::vals::LowpwrCtrlXtaloscPwrupDelay::from_bits(val as u8)
     }
-    #[doc = "Specifies the time delay between when the 24MHz xtal is powered up until it is stable and ready to use"]
+    #[doc = "Specifies the time delay between when the 24MHz xtal is powered up until it is stable and ready to use."]
     #[inline(always)]
     pub const fn set_xtalosc_pwrup_delay(&mut self, val: super::vals::LowpwrCtrlXtaloscPwrupDelay) {
         self.0 = (self.0 & !(0x03 << 14usize)) | (((val.to_bits() as u32) & 0x03) << 14usize);
@@ -221,7 +221,7 @@ impl defmt::Format for LowpwrCtrl {
         )
     }
 }
-#[doc = "XTAL OSC (LP) Control Register"]
+#[doc = "XTAL OSC (LP) Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct LowpwrCtrlClr(pub u32);
@@ -334,26 +334,26 @@ impl LowpwrCtrlClr {
     pub const fn set_display_pwrgate(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "For debug purposes only"]
+    #[doc = "For debug purposes only."]
     #[must_use]
     #[inline(always)]
     pub const fn rcosc_cg_override(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "For debug purposes only"]
+    #[doc = "For debug purposes only."]
     #[inline(always)]
     pub const fn set_rcosc_cg_override(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "Specifies the time delay between when the 24MHz xtal is powered up until it is stable and ready to use"]
+    #[doc = "Specifies the time delay between when the 24MHz xtal is powered up until it is stable and ready to use."]
     #[must_use]
     #[inline(always)]
     pub const fn xtalosc_pwrup_delay(&self) -> super::vals::LowpwrCtrlClrXtaloscPwrupDelay {
         let val = (self.0 >> 14usize) & 0x03;
         super::vals::LowpwrCtrlClrXtaloscPwrupDelay::from_bits(val as u8)
     }
-    #[doc = "Specifies the time delay between when the 24MHz xtal is powered up until it is stable and ready to use"]
+    #[doc = "Specifies the time delay between when the 24MHz xtal is powered up until it is stable and ready to use."]
     #[inline(always)]
     pub const fn set_xtalosc_pwrup_delay(
         &mut self,
@@ -450,7 +450,7 @@ impl defmt::Format for LowpwrCtrlClr {
         )
     }
 }
-#[doc = "XTAL OSC (LP) Control Register"]
+#[doc = "XTAL OSC (LP) Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct LowpwrCtrlSet(pub u32);
@@ -563,26 +563,26 @@ impl LowpwrCtrlSet {
     pub const fn set_display_pwrgate(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "For debug purposes only"]
+    #[doc = "For debug purposes only."]
     #[must_use]
     #[inline(always)]
     pub const fn rcosc_cg_override(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "For debug purposes only"]
+    #[doc = "For debug purposes only."]
     #[inline(always)]
     pub const fn set_rcosc_cg_override(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "Specifies the time delay between when the 24MHz xtal is powered up until it is stable and ready to use"]
+    #[doc = "Specifies the time delay between when the 24MHz xtal is powered up until it is stable and ready to use."]
     #[must_use]
     #[inline(always)]
     pub const fn xtalosc_pwrup_delay(&self) -> super::vals::LowpwrCtrlSetXtaloscPwrupDelay {
         let val = (self.0 >> 14usize) & 0x03;
         super::vals::LowpwrCtrlSetXtaloscPwrupDelay::from_bits(val as u8)
     }
-    #[doc = "Specifies the time delay between when the 24MHz xtal is powered up until it is stable and ready to use"]
+    #[doc = "Specifies the time delay between when the 24MHz xtal is powered up until it is stable and ready to use."]
     #[inline(always)]
     pub const fn set_xtalosc_pwrup_delay(
         &mut self,
@@ -679,7 +679,7 @@ impl defmt::Format for LowpwrCtrlSet {
         )
     }
 }
-#[doc = "XTAL OSC (LP) Control Register"]
+#[doc = "XTAL OSC (LP) Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct LowpwrCtrlTog(pub u32);
@@ -792,26 +792,26 @@ impl LowpwrCtrlTog {
     pub const fn set_display_pwrgate(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "For debug purposes only"]
+    #[doc = "For debug purposes only."]
     #[must_use]
     #[inline(always)]
     pub const fn rcosc_cg_override(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "For debug purposes only"]
+    #[doc = "For debug purposes only."]
     #[inline(always)]
     pub const fn set_rcosc_cg_override(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "Specifies the time delay between when the 24MHz xtal is powered up until it is stable and ready to use"]
+    #[doc = "Specifies the time delay between when the 24MHz xtal is powered up until it is stable and ready to use."]
     #[must_use]
     #[inline(always)]
     pub const fn xtalosc_pwrup_delay(&self) -> super::vals::LowpwrCtrlTogXtaloscPwrupDelay {
         let val = (self.0 >> 14usize) & 0x03;
         super::vals::LowpwrCtrlTogXtaloscPwrupDelay::from_bits(val as u8)
     }
-    #[doc = "Specifies the time delay between when the 24MHz xtal is powered up until it is stable and ready to use"]
+    #[doc = "Specifies the time delay between when the 24MHz xtal is powered up until it is stable and ready to use."]
     #[inline(always)]
     pub const fn set_xtalosc_pwrup_delay(
         &mut self,
@@ -908,31 +908,31 @@ impl defmt::Format for LowpwrCtrlTog {
         )
     }
 }
-#[doc = "Miscellaneous Register 0"]
+#[doc = "Miscellaneous Register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Misc0(pub u32);
 impl Misc0 {
-    #[doc = "Control bit to power-down the analog bandgap reference circuitry"]
+    #[doc = "Control bit to power-down the analog bandgap reference circuitry."]
     #[must_use]
     #[inline(always)]
     pub const fn reftop_pwd(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Control bit to power-down the analog bandgap reference circuitry"]
+    #[doc = "Control bit to power-down the analog bandgap reference circuitry."]
     #[inline(always)]
     pub const fn set_reftop_pwd(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Control bit to disable the self-bias circuit in the analog bandgap"]
+    #[doc = "Control bit to disable the self-bias circuit in the analog bandgap."]
     #[must_use]
     #[inline(always)]
     pub const fn reftop_selfbiasoff(&self) -> super::vals::Misc0ReftopSelfbiasoff {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Misc0ReftopSelfbiasoff::from_bits(val as u8)
     }
-    #[doc = "Control bit to disable the self-bias circuit in the analog bandgap"]
+    #[doc = "Control bit to disable the self-bias circuit in the analog bandgap."]
     #[inline(always)]
     pub const fn set_reftop_selfbiasoff(&mut self, val: super::vals::Misc0ReftopSelfbiasoff) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
@@ -949,14 +949,14 @@ impl Misc0 {
     pub const fn set_reftop_vbgadj(&mut self, val: super::vals::Misc0ReftopVbgadj) {
         self.0 = (self.0 & !(0x07 << 4usize)) | (((val.to_bits() as u32) & 0x07) << 4usize);
     }
-    #[doc = "Status bit that signals the analog bandgap voltage is up and stable"]
+    #[doc = "Status bit that signals the analog bandgap voltage is up and stable."]
     #[must_use]
     #[inline(always)]
     pub const fn reftop_vbgup(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Status bit that signals the analog bandgap voltage is up and stable"]
+    #[doc = "Status bit that signals the analog bandgap voltage is up and stable."]
     #[inline(always)]
     pub const fn set_reftop_vbgup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
@@ -985,26 +985,26 @@ impl Misc0 {
     pub const fn set_discon_high_snvs(&mut self, val: super::vals::Misc0DisconHighSnvs) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "This field determines the bias current in the 24MHz oscillator"]
+    #[doc = "This field determines the bias current in the 24MHz oscillator."]
     #[must_use]
     #[inline(always)]
     pub const fn osc_i(&self) -> super::vals::Misc0OscI {
         let val = (self.0 >> 13usize) & 0x03;
         super::vals::Misc0OscI::from_bits(val as u8)
     }
-    #[doc = "This field determines the bias current in the 24MHz oscillator"]
+    #[doc = "This field determines the bias current in the 24MHz oscillator."]
     #[inline(always)]
     pub const fn set_osc_i(&mut self, val: super::vals::Misc0OscI) {
         self.0 = (self.0 & !(0x03 << 13usize)) | (((val.to_bits() as u32) & 0x03) << 13usize);
     }
-    #[doc = "Status bit that signals that the output of the 24-MHz crystal oscillator is stable"]
+    #[doc = "Status bit that signals that the output of the 24-MHz crystal oscillator is stable."]
     #[must_use]
     #[inline(always)]
     pub const fn osc_xtalok(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Status bit that signals that the output of the 24-MHz crystal oscillator is stable"]
+    #[doc = "Status bit that signals that the output of the 24-MHz crystal oscillator is stable."]
     #[inline(always)]
     pub const fn set_osc_xtalok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
@@ -1021,26 +1021,26 @@ impl Misc0 {
     pub const fn set_osc_xtalok_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "This bit allows disabling the clock gate (always ungated) for the xtal 24MHz clock that clocks the digital logic in the analog block"]
+    #[doc = "This bit allows disabling the clock gate (always ungated) for the xtal 24MHz clock that clocks the digital logic in the analog block."]
     #[must_use]
     #[inline(always)]
     pub const fn clkgate_ctrl(&self) -> super::vals::Misc0ClkgateCtrl {
         let val = (self.0 >> 25usize) & 0x01;
         super::vals::Misc0ClkgateCtrl::from_bits(val as u8)
     }
-    #[doc = "This bit allows disabling the clock gate (always ungated) for the xtal 24MHz clock that clocks the digital logic in the analog block"]
+    #[doc = "This bit allows disabling the clock gate (always ungated) for the xtal 24MHz clock that clocks the digital logic in the analog block."]
     #[inline(always)]
     pub const fn set_clkgate_ctrl(&mut self, val: super::vals::Misc0ClkgateCtrl) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val.to_bits() as u32) & 0x01) << 25usize);
     }
-    #[doc = "This field specifies the delay between powering up the XTAL 24MHz clock and releasing the clock to the digital logic inside the analog block"]
+    #[doc = "This field specifies the delay between powering up the XTAL 24MHz clock and releasing the clock to the digital logic inside the analog block."]
     #[must_use]
     #[inline(always)]
     pub const fn clkgate_delay(&self) -> super::vals::Misc0ClkgateDelay {
         let val = (self.0 >> 26usize) & 0x07;
         super::vals::Misc0ClkgateDelay::from_bits(val as u8)
     }
-    #[doc = "This field specifies the delay between powering up the XTAL 24MHz clock and releasing the clock to the digital logic inside the analog block"]
+    #[doc = "This field specifies the delay between powering up the XTAL 24MHz clock and releasing the clock to the digital logic inside the analog block."]
     #[inline(always)]
     pub const fn set_clkgate_delay(&mut self, val: super::vals::Misc0ClkgateDelay) {
         self.0 = (self.0 & !(0x07 << 26usize)) | (((val.to_bits() as u32) & 0x07) << 26usize);
@@ -1131,31 +1131,31 @@ impl defmt::Format for Misc0 {
         )
     }
 }
-#[doc = "Miscellaneous Register 0"]
+#[doc = "Miscellaneous Register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Misc0Clr(pub u32);
 impl Misc0Clr {
-    #[doc = "Control bit to power-down the analog bandgap reference circuitry"]
+    #[doc = "Control bit to power-down the analog bandgap reference circuitry."]
     #[must_use]
     #[inline(always)]
     pub const fn reftop_pwd(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Control bit to power-down the analog bandgap reference circuitry"]
+    #[doc = "Control bit to power-down the analog bandgap reference circuitry."]
     #[inline(always)]
     pub const fn set_reftop_pwd(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Control bit to disable the self-bias circuit in the analog bandgap"]
+    #[doc = "Control bit to disable the self-bias circuit in the analog bandgap."]
     #[must_use]
     #[inline(always)]
     pub const fn reftop_selfbiasoff(&self) -> super::vals::Misc0ClrReftopSelfbiasoff {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Misc0ClrReftopSelfbiasoff::from_bits(val as u8)
     }
-    #[doc = "Control bit to disable the self-bias circuit in the analog bandgap"]
+    #[doc = "Control bit to disable the self-bias circuit in the analog bandgap."]
     #[inline(always)]
     pub const fn set_reftop_selfbiasoff(&mut self, val: super::vals::Misc0ClrReftopSelfbiasoff) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
@@ -1172,14 +1172,14 @@ impl Misc0Clr {
     pub const fn set_reftop_vbgadj(&mut self, val: super::vals::Misc0ClrReftopVbgadj) {
         self.0 = (self.0 & !(0x07 << 4usize)) | (((val.to_bits() as u32) & 0x07) << 4usize);
     }
-    #[doc = "Status bit that signals the analog bandgap voltage is up and stable"]
+    #[doc = "Status bit that signals the analog bandgap voltage is up and stable."]
     #[must_use]
     #[inline(always)]
     pub const fn reftop_vbgup(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Status bit that signals the analog bandgap voltage is up and stable"]
+    #[doc = "Status bit that signals the analog bandgap voltage is up and stable."]
     #[inline(always)]
     pub const fn set_reftop_vbgup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
@@ -1208,26 +1208,26 @@ impl Misc0Clr {
     pub const fn set_discon_high_snvs(&mut self, val: super::vals::Misc0ClrDisconHighSnvs) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "This field determines the bias current in the 24MHz oscillator"]
+    #[doc = "This field determines the bias current in the 24MHz oscillator."]
     #[must_use]
     #[inline(always)]
     pub const fn osc_i(&self) -> super::vals::Misc0ClrOscI {
         let val = (self.0 >> 13usize) & 0x03;
         super::vals::Misc0ClrOscI::from_bits(val as u8)
     }
-    #[doc = "This field determines the bias current in the 24MHz oscillator"]
+    #[doc = "This field determines the bias current in the 24MHz oscillator."]
     #[inline(always)]
     pub const fn set_osc_i(&mut self, val: super::vals::Misc0ClrOscI) {
         self.0 = (self.0 & !(0x03 << 13usize)) | (((val.to_bits() as u32) & 0x03) << 13usize);
     }
-    #[doc = "Status bit that signals that the output of the 24-MHz crystal oscillator is stable"]
+    #[doc = "Status bit that signals that the output of the 24-MHz crystal oscillator is stable."]
     #[must_use]
     #[inline(always)]
     pub const fn osc_xtalok(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Status bit that signals that the output of the 24-MHz crystal oscillator is stable"]
+    #[doc = "Status bit that signals that the output of the 24-MHz crystal oscillator is stable."]
     #[inline(always)]
     pub const fn set_osc_xtalok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
@@ -1244,26 +1244,26 @@ impl Misc0Clr {
     pub const fn set_osc_xtalok_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "This bit allows disabling the clock gate (always ungated) for the xtal 24MHz clock that clocks the digital logic in the analog block"]
+    #[doc = "This bit allows disabling the clock gate (always ungated) for the xtal 24MHz clock that clocks the digital logic in the analog block."]
     #[must_use]
     #[inline(always)]
     pub const fn clkgate_ctrl(&self) -> super::vals::Misc0ClrClkgateCtrl {
         let val = (self.0 >> 25usize) & 0x01;
         super::vals::Misc0ClrClkgateCtrl::from_bits(val as u8)
     }
-    #[doc = "This bit allows disabling the clock gate (always ungated) for the xtal 24MHz clock that clocks the digital logic in the analog block"]
+    #[doc = "This bit allows disabling the clock gate (always ungated) for the xtal 24MHz clock that clocks the digital logic in the analog block."]
     #[inline(always)]
     pub const fn set_clkgate_ctrl(&mut self, val: super::vals::Misc0ClrClkgateCtrl) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val.to_bits() as u32) & 0x01) << 25usize);
     }
-    #[doc = "This field specifies the delay between powering up the XTAL 24MHz clock and releasing the clock to the digital logic inside the analog block"]
+    #[doc = "This field specifies the delay between powering up the XTAL 24MHz clock and releasing the clock to the digital logic inside the analog block."]
     #[must_use]
     #[inline(always)]
     pub const fn clkgate_delay(&self) -> super::vals::Misc0ClrClkgateDelay {
         let val = (self.0 >> 26usize) & 0x07;
         super::vals::Misc0ClrClkgateDelay::from_bits(val as u8)
     }
-    #[doc = "This field specifies the delay between powering up the XTAL 24MHz clock and releasing the clock to the digital logic inside the analog block"]
+    #[doc = "This field specifies the delay between powering up the XTAL 24MHz clock and releasing the clock to the digital logic inside the analog block."]
     #[inline(always)]
     pub const fn set_clkgate_delay(&mut self, val: super::vals::Misc0ClrClkgateDelay) {
         self.0 = (self.0 & !(0x07 << 26usize)) | (((val.to_bits() as u32) & 0x07) << 26usize);
@@ -1354,31 +1354,31 @@ impl defmt::Format for Misc0Clr {
         )
     }
 }
-#[doc = "Miscellaneous Register 0"]
+#[doc = "Miscellaneous Register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Misc0Set(pub u32);
 impl Misc0Set {
-    #[doc = "Control bit to power-down the analog bandgap reference circuitry"]
+    #[doc = "Control bit to power-down the analog bandgap reference circuitry."]
     #[must_use]
     #[inline(always)]
     pub const fn reftop_pwd(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Control bit to power-down the analog bandgap reference circuitry"]
+    #[doc = "Control bit to power-down the analog bandgap reference circuitry."]
     #[inline(always)]
     pub const fn set_reftop_pwd(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Control bit to disable the self-bias circuit in the analog bandgap"]
+    #[doc = "Control bit to disable the self-bias circuit in the analog bandgap."]
     #[must_use]
     #[inline(always)]
     pub const fn reftop_selfbiasoff(&self) -> super::vals::Misc0SetReftopSelfbiasoff {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Misc0SetReftopSelfbiasoff::from_bits(val as u8)
     }
-    #[doc = "Control bit to disable the self-bias circuit in the analog bandgap"]
+    #[doc = "Control bit to disable the self-bias circuit in the analog bandgap."]
     #[inline(always)]
     pub const fn set_reftop_selfbiasoff(&mut self, val: super::vals::Misc0SetReftopSelfbiasoff) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
@@ -1395,14 +1395,14 @@ impl Misc0Set {
     pub const fn set_reftop_vbgadj(&mut self, val: super::vals::Misc0SetReftopVbgadj) {
         self.0 = (self.0 & !(0x07 << 4usize)) | (((val.to_bits() as u32) & 0x07) << 4usize);
     }
-    #[doc = "Status bit that signals the analog bandgap voltage is up and stable"]
+    #[doc = "Status bit that signals the analog bandgap voltage is up and stable."]
     #[must_use]
     #[inline(always)]
     pub const fn reftop_vbgup(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Status bit that signals the analog bandgap voltage is up and stable"]
+    #[doc = "Status bit that signals the analog bandgap voltage is up and stable."]
     #[inline(always)]
     pub const fn set_reftop_vbgup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
@@ -1431,26 +1431,26 @@ impl Misc0Set {
     pub const fn set_discon_high_snvs(&mut self, val: super::vals::Misc0SetDisconHighSnvs) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "This field determines the bias current in the 24MHz oscillator"]
+    #[doc = "This field determines the bias current in the 24MHz oscillator."]
     #[must_use]
     #[inline(always)]
     pub const fn osc_i(&self) -> super::vals::Misc0SetOscI {
         let val = (self.0 >> 13usize) & 0x03;
         super::vals::Misc0SetOscI::from_bits(val as u8)
     }
-    #[doc = "This field determines the bias current in the 24MHz oscillator"]
+    #[doc = "This field determines the bias current in the 24MHz oscillator."]
     #[inline(always)]
     pub const fn set_osc_i(&mut self, val: super::vals::Misc0SetOscI) {
         self.0 = (self.0 & !(0x03 << 13usize)) | (((val.to_bits() as u32) & 0x03) << 13usize);
     }
-    #[doc = "Status bit that signals that the output of the 24-MHz crystal oscillator is stable"]
+    #[doc = "Status bit that signals that the output of the 24-MHz crystal oscillator is stable."]
     #[must_use]
     #[inline(always)]
     pub const fn osc_xtalok(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Status bit that signals that the output of the 24-MHz crystal oscillator is stable"]
+    #[doc = "Status bit that signals that the output of the 24-MHz crystal oscillator is stable."]
     #[inline(always)]
     pub const fn set_osc_xtalok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
@@ -1467,26 +1467,26 @@ impl Misc0Set {
     pub const fn set_osc_xtalok_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "This bit allows disabling the clock gate (always ungated) for the xtal 24MHz clock that clocks the digital logic in the analog block"]
+    #[doc = "This bit allows disabling the clock gate (always ungated) for the xtal 24MHz clock that clocks the digital logic in the analog block."]
     #[must_use]
     #[inline(always)]
     pub const fn clkgate_ctrl(&self) -> super::vals::Misc0SetClkgateCtrl {
         let val = (self.0 >> 25usize) & 0x01;
         super::vals::Misc0SetClkgateCtrl::from_bits(val as u8)
     }
-    #[doc = "This bit allows disabling the clock gate (always ungated) for the xtal 24MHz clock that clocks the digital logic in the analog block"]
+    #[doc = "This bit allows disabling the clock gate (always ungated) for the xtal 24MHz clock that clocks the digital logic in the analog block."]
     #[inline(always)]
     pub const fn set_clkgate_ctrl(&mut self, val: super::vals::Misc0SetClkgateCtrl) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val.to_bits() as u32) & 0x01) << 25usize);
     }
-    #[doc = "This field specifies the delay between powering up the XTAL 24MHz clock and releasing the clock to the digital logic inside the analog block"]
+    #[doc = "This field specifies the delay between powering up the XTAL 24MHz clock and releasing the clock to the digital logic inside the analog block."]
     #[must_use]
     #[inline(always)]
     pub const fn clkgate_delay(&self) -> super::vals::Misc0SetClkgateDelay {
         let val = (self.0 >> 26usize) & 0x07;
         super::vals::Misc0SetClkgateDelay::from_bits(val as u8)
     }
-    #[doc = "This field specifies the delay between powering up the XTAL 24MHz clock and releasing the clock to the digital logic inside the analog block"]
+    #[doc = "This field specifies the delay between powering up the XTAL 24MHz clock and releasing the clock to the digital logic inside the analog block."]
     #[inline(always)]
     pub const fn set_clkgate_delay(&mut self, val: super::vals::Misc0SetClkgateDelay) {
         self.0 = (self.0 & !(0x07 << 26usize)) | (((val.to_bits() as u32) & 0x07) << 26usize);
@@ -1577,31 +1577,31 @@ impl defmt::Format for Misc0Set {
         )
     }
 }
-#[doc = "Miscellaneous Register 0"]
+#[doc = "Miscellaneous Register 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Misc0Tog(pub u32);
 impl Misc0Tog {
-    #[doc = "Control bit to power-down the analog bandgap reference circuitry"]
+    #[doc = "Control bit to power-down the analog bandgap reference circuitry."]
     #[must_use]
     #[inline(always)]
     pub const fn reftop_pwd(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Control bit to power-down the analog bandgap reference circuitry"]
+    #[doc = "Control bit to power-down the analog bandgap reference circuitry."]
     #[inline(always)]
     pub const fn set_reftop_pwd(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Control bit to disable the self-bias circuit in the analog bandgap"]
+    #[doc = "Control bit to disable the self-bias circuit in the analog bandgap."]
     #[must_use]
     #[inline(always)]
     pub const fn reftop_selfbiasoff(&self) -> super::vals::Misc0TogReftopSelfbiasoff {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Misc0TogReftopSelfbiasoff::from_bits(val as u8)
     }
-    #[doc = "Control bit to disable the self-bias circuit in the analog bandgap"]
+    #[doc = "Control bit to disable the self-bias circuit in the analog bandgap."]
     #[inline(always)]
     pub const fn set_reftop_selfbiasoff(&mut self, val: super::vals::Misc0TogReftopSelfbiasoff) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
@@ -1618,14 +1618,14 @@ impl Misc0Tog {
     pub const fn set_reftop_vbgadj(&mut self, val: super::vals::Misc0TogReftopVbgadj) {
         self.0 = (self.0 & !(0x07 << 4usize)) | (((val.to_bits() as u32) & 0x07) << 4usize);
     }
-    #[doc = "Status bit that signals the analog bandgap voltage is up and stable"]
+    #[doc = "Status bit that signals the analog bandgap voltage is up and stable."]
     #[must_use]
     #[inline(always)]
     pub const fn reftop_vbgup(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Status bit that signals the analog bandgap voltage is up and stable"]
+    #[doc = "Status bit that signals the analog bandgap voltage is up and stable."]
     #[inline(always)]
     pub const fn set_reftop_vbgup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
@@ -1654,26 +1654,26 @@ impl Misc0Tog {
     pub const fn set_discon_high_snvs(&mut self, val: super::vals::Misc0TogDisconHighSnvs) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
     }
-    #[doc = "This field determines the bias current in the 24MHz oscillator"]
+    #[doc = "This field determines the bias current in the 24MHz oscillator."]
     #[must_use]
     #[inline(always)]
     pub const fn osc_i(&self) -> super::vals::Misc0TogOscI {
         let val = (self.0 >> 13usize) & 0x03;
         super::vals::Misc0TogOscI::from_bits(val as u8)
     }
-    #[doc = "This field determines the bias current in the 24MHz oscillator"]
+    #[doc = "This field determines the bias current in the 24MHz oscillator."]
     #[inline(always)]
     pub const fn set_osc_i(&mut self, val: super::vals::Misc0TogOscI) {
         self.0 = (self.0 & !(0x03 << 13usize)) | (((val.to_bits() as u32) & 0x03) << 13usize);
     }
-    #[doc = "Status bit that signals that the output of the 24-MHz crystal oscillator is stable"]
+    #[doc = "Status bit that signals that the output of the 24-MHz crystal oscillator is stable."]
     #[must_use]
     #[inline(always)]
     pub const fn osc_xtalok(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Status bit that signals that the output of the 24-MHz crystal oscillator is stable"]
+    #[doc = "Status bit that signals that the output of the 24-MHz crystal oscillator is stable."]
     #[inline(always)]
     pub const fn set_osc_xtalok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
@@ -1690,26 +1690,26 @@ impl Misc0Tog {
     pub const fn set_osc_xtalok_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "This bit allows disabling the clock gate (always ungated) for the xtal 24MHz clock that clocks the digital logic in the analog block"]
+    #[doc = "This bit allows disabling the clock gate (always ungated) for the xtal 24MHz clock that clocks the digital logic in the analog block."]
     #[must_use]
     #[inline(always)]
     pub const fn clkgate_ctrl(&self) -> super::vals::Misc0TogClkgateCtrl {
         let val = (self.0 >> 25usize) & 0x01;
         super::vals::Misc0TogClkgateCtrl::from_bits(val as u8)
     }
-    #[doc = "This bit allows disabling the clock gate (always ungated) for the xtal 24MHz clock that clocks the digital logic in the analog block"]
+    #[doc = "This bit allows disabling the clock gate (always ungated) for the xtal 24MHz clock that clocks the digital logic in the analog block."]
     #[inline(always)]
     pub const fn set_clkgate_ctrl(&mut self, val: super::vals::Misc0TogClkgateCtrl) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val.to_bits() as u32) & 0x01) << 25usize);
     }
-    #[doc = "This field specifies the delay between powering up the XTAL 24MHz clock and releasing the clock to the digital logic inside the analog block"]
+    #[doc = "This field specifies the delay between powering up the XTAL 24MHz clock and releasing the clock to the digital logic inside the analog block."]
     #[must_use]
     #[inline(always)]
     pub const fn clkgate_delay(&self) -> super::vals::Misc0TogClkgateDelay {
         let val = (self.0 >> 26usize) & 0x07;
         super::vals::Misc0TogClkgateDelay::from_bits(val as u8)
     }
-    #[doc = "This field specifies the delay between powering up the XTAL 24MHz clock and releasing the clock to the digital logic inside the analog block"]
+    #[doc = "This field specifies the delay between powering up the XTAL 24MHz clock and releasing the clock to the digital logic inside the analog block."]
     #[inline(always)]
     pub const fn set_clkgate_delay(&mut self, val: super::vals::Misc0TogClkgateDelay) {
         self.0 = (self.0 & !(0x07 << 26usize)) | (((val.to_bits() as u32) & 0x07) << 26usize);
@@ -1800,7 +1800,7 @@ impl defmt::Format for Misc0Tog {
         )
     }
 }
-#[doc = "XTAL OSC Configuration 0 Register"]
+#[doc = "XTAL OSC Configuration 0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OscConfig0(pub u32);
@@ -1817,14 +1817,14 @@ impl OscConfig0 {
     pub const fn set_start(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Enables the tuning logic to calculate new RC tuning values"]
+    #[doc = "Enables the tuning logic to calculate new RC tuning values."]
     #[must_use]
     #[inline(always)]
     pub const fn enable(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables the tuning logic to calculate new RC tuning values"]
+    #[doc = "Enables the tuning logic to calculate new RC tuning values."]
     #[inline(always)]
     pub const fn set_enable(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
@@ -1865,26 +1865,26 @@ impl OscConfig0 {
     pub const fn set_rc_osc_prog(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 4usize)) | (((val as u32) & 0xff) << 4usize);
     }
-    #[doc = "Positive hysteresis value"]
+    #[doc = "Positive hysteresis value."]
     #[must_use]
     #[inline(always)]
     pub const fn hyst_plus(&self) -> u8 {
         let val = (self.0 >> 12usize) & 0x0f;
         val as u8
     }
-    #[doc = "Positive hysteresis value"]
+    #[doc = "Positive hysteresis value."]
     #[inline(always)]
     pub const fn set_hyst_plus(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 12usize)) | (((val as u32) & 0x0f) << 12usize);
     }
-    #[doc = "Negative hysteresis value"]
+    #[doc = "Negative hysteresis value."]
     #[must_use]
     #[inline(always)]
     pub const fn hyst_minus(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x0f;
         val as u8
     }
-    #[doc = "Negative hysteresis value"]
+    #[doc = "Negative hysteresis value."]
     #[inline(always)]
     pub const fn set_hyst_minus(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
@@ -1939,7 +1939,7 @@ impl defmt::Format for OscConfig0 {
         )
     }
 }
-#[doc = "XTAL OSC Configuration 0 Register"]
+#[doc = "XTAL OSC Configuration 0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OscConfig0Clr(pub u32);
@@ -1956,14 +1956,14 @@ impl OscConfig0Clr {
     pub const fn set_start(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Enables the tuning logic to calculate new RC tuning values"]
+    #[doc = "Enables the tuning logic to calculate new RC tuning values."]
     #[must_use]
     #[inline(always)]
     pub const fn enable(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables the tuning logic to calculate new RC tuning values"]
+    #[doc = "Enables the tuning logic to calculate new RC tuning values."]
     #[inline(always)]
     pub const fn set_enable(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
@@ -2004,26 +2004,26 @@ impl OscConfig0Clr {
     pub const fn set_rc_osc_prog(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 4usize)) | (((val as u32) & 0xff) << 4usize);
     }
-    #[doc = "Positive hysteresis value"]
+    #[doc = "Positive hysteresis value."]
     #[must_use]
     #[inline(always)]
     pub const fn hyst_plus(&self) -> u8 {
         let val = (self.0 >> 12usize) & 0x0f;
         val as u8
     }
-    #[doc = "Positive hysteresis value"]
+    #[doc = "Positive hysteresis value."]
     #[inline(always)]
     pub const fn set_hyst_plus(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 12usize)) | (((val as u32) & 0x0f) << 12usize);
     }
-    #[doc = "Negative hysteresis value"]
+    #[doc = "Negative hysteresis value."]
     #[must_use]
     #[inline(always)]
     pub const fn hyst_minus(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x0f;
         val as u8
     }
-    #[doc = "Negative hysteresis value"]
+    #[doc = "Negative hysteresis value."]
     #[inline(always)]
     pub const fn set_hyst_minus(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
@@ -2078,7 +2078,7 @@ impl defmt::Format for OscConfig0Clr {
         )
     }
 }
-#[doc = "XTAL OSC Configuration 0 Register"]
+#[doc = "XTAL OSC Configuration 0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OscConfig0Set(pub u32);
@@ -2095,14 +2095,14 @@ impl OscConfig0Set {
     pub const fn set_start(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Enables the tuning logic to calculate new RC tuning values"]
+    #[doc = "Enables the tuning logic to calculate new RC tuning values."]
     #[must_use]
     #[inline(always)]
     pub const fn enable(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables the tuning logic to calculate new RC tuning values"]
+    #[doc = "Enables the tuning logic to calculate new RC tuning values."]
     #[inline(always)]
     pub const fn set_enable(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
@@ -2143,26 +2143,26 @@ impl OscConfig0Set {
     pub const fn set_rc_osc_prog(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 4usize)) | (((val as u32) & 0xff) << 4usize);
     }
-    #[doc = "Positive hysteresis value"]
+    #[doc = "Positive hysteresis value."]
     #[must_use]
     #[inline(always)]
     pub const fn hyst_plus(&self) -> u8 {
         let val = (self.0 >> 12usize) & 0x0f;
         val as u8
     }
-    #[doc = "Positive hysteresis value"]
+    #[doc = "Positive hysteresis value."]
     #[inline(always)]
     pub const fn set_hyst_plus(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 12usize)) | (((val as u32) & 0x0f) << 12usize);
     }
-    #[doc = "Negative hysteresis value"]
+    #[doc = "Negative hysteresis value."]
     #[must_use]
     #[inline(always)]
     pub const fn hyst_minus(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x0f;
         val as u8
     }
-    #[doc = "Negative hysteresis value"]
+    #[doc = "Negative hysteresis value."]
     #[inline(always)]
     pub const fn set_hyst_minus(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
@@ -2217,7 +2217,7 @@ impl defmt::Format for OscConfig0Set {
         )
     }
 }
-#[doc = "XTAL OSC Configuration 0 Register"]
+#[doc = "XTAL OSC Configuration 0 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OscConfig0Tog(pub u32);
@@ -2234,14 +2234,14 @@ impl OscConfig0Tog {
     pub const fn set_start(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Enables the tuning logic to calculate new RC tuning values"]
+    #[doc = "Enables the tuning logic to calculate new RC tuning values."]
     #[must_use]
     #[inline(always)]
     pub const fn enable(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Enables the tuning logic to calculate new RC tuning values"]
+    #[doc = "Enables the tuning logic to calculate new RC tuning values."]
     #[inline(always)]
     pub const fn set_enable(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
@@ -2282,26 +2282,26 @@ impl OscConfig0Tog {
     pub const fn set_rc_osc_prog(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 4usize)) | (((val as u32) & 0xff) << 4usize);
     }
-    #[doc = "Positive hysteresis value"]
+    #[doc = "Positive hysteresis value."]
     #[must_use]
     #[inline(always)]
     pub const fn hyst_plus(&self) -> u8 {
         let val = (self.0 >> 12usize) & 0x0f;
         val as u8
     }
-    #[doc = "Positive hysteresis value"]
+    #[doc = "Positive hysteresis value."]
     #[inline(always)]
     pub const fn set_hyst_plus(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 12usize)) | (((val as u32) & 0x0f) << 12usize);
     }
-    #[doc = "Negative hysteresis value"]
+    #[doc = "Negative hysteresis value."]
     #[must_use]
     #[inline(always)]
     pub const fn hyst_minus(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x0f;
         val as u8
     }
-    #[doc = "Negative hysteresis value"]
+    #[doc = "Negative hysteresis value."]
     #[inline(always)]
     pub const fn set_hyst_minus(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val as u32) & 0x0f) << 16usize);
@@ -2356,19 +2356,19 @@ impl defmt::Format for OscConfig0Tog {
         )
     }
 }
-#[doc = "XTAL OSC Configuration 1 Register"]
+#[doc = "XTAL OSC Configuration 1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OscConfig1(pub u32);
 impl OscConfig1 {
-    #[doc = "The target count used to tune the RC OSC frequency"]
+    #[doc = "The target count used to tune the RC OSC frequency."]
     #[must_use]
     #[inline(always)]
     pub const fn count_rc_trg(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "The target count used to tune the RC OSC frequency"]
+    #[doc = "The target count used to tune the RC OSC frequency."]
     #[inline(always)]
     pub const fn set_count_rc_trg(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
@@ -2411,19 +2411,19 @@ impl defmt::Format for OscConfig1 {
         )
     }
 }
-#[doc = "XTAL OSC Configuration 1 Register"]
+#[doc = "XTAL OSC Configuration 1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OscConfig1Clr(pub u32);
 impl OscConfig1Clr {
-    #[doc = "The target count used to tune the RC OSC frequency"]
+    #[doc = "The target count used to tune the RC OSC frequency."]
     #[must_use]
     #[inline(always)]
     pub const fn count_rc_trg(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "The target count used to tune the RC OSC frequency"]
+    #[doc = "The target count used to tune the RC OSC frequency."]
     #[inline(always)]
     pub const fn set_count_rc_trg(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
@@ -2466,19 +2466,19 @@ impl defmt::Format for OscConfig1Clr {
         )
     }
 }
-#[doc = "XTAL OSC Configuration 1 Register"]
+#[doc = "XTAL OSC Configuration 1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OscConfig1Set(pub u32);
 impl OscConfig1Set {
-    #[doc = "The target count used to tune the RC OSC frequency"]
+    #[doc = "The target count used to tune the RC OSC frequency."]
     #[must_use]
     #[inline(always)]
     pub const fn count_rc_trg(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "The target count used to tune the RC OSC frequency"]
+    #[doc = "The target count used to tune the RC OSC frequency."]
     #[inline(always)]
     pub const fn set_count_rc_trg(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
@@ -2521,19 +2521,19 @@ impl defmt::Format for OscConfig1Set {
         )
     }
 }
-#[doc = "XTAL OSC Configuration 1 Register"]
+#[doc = "XTAL OSC Configuration 1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OscConfig1Tog(pub u32);
 impl OscConfig1Tog {
-    #[doc = "The target count used to tune the RC OSC frequency"]
+    #[doc = "The target count used to tune the RC OSC frequency."]
     #[must_use]
     #[inline(always)]
     pub const fn count_rc_trg(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "The target count used to tune the RC OSC frequency"]
+    #[doc = "The target count used to tune the RC OSC frequency."]
     #[inline(always)]
     pub const fn set_count_rc_trg(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
@@ -2576,19 +2576,19 @@ impl defmt::Format for OscConfig1Tog {
         )
     }
 }
-#[doc = "XTAL OSC Configuration 2 Register"]
+#[doc = "XTAL OSC Configuration 2 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OscConfig2(pub u32);
 impl OscConfig2 {
-    #[doc = "The target count used to tune the 1MHz clock frequency"]
+    #[doc = "The target count used to tune the 1MHz clock frequency."]
     #[must_use]
     #[inline(always)]
     pub const fn count_1m_trg(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "The target count used to tune the 1MHz clock frequency"]
+    #[doc = "The target count used to tune the 1MHz clock frequency."]
     #[inline(always)]
     pub const fn set_count_1m_trg(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
@@ -2605,26 +2605,26 @@ impl OscConfig2 {
     pub const fn set_enable_1m(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Mux the corrected or uncorrected 1MHz clock to the output"]
+    #[doc = "Mux the corrected or uncorrected 1MHz clock to the output."]
     #[must_use]
     #[inline(always)]
     pub const fn mux_1m(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Mux the corrected or uncorrected 1MHz clock to the output"]
+    #[doc = "Mux the corrected or uncorrected 1MHz clock to the output."]
     #[inline(always)]
     pub const fn set_mux_1m(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Flag indicates that the count_1m count wasn't reached within 1 32kHz period"]
+    #[doc = "Flag indicates that the count_1m count wasn't reached within 1 32kHz period."]
     #[must_use]
     #[inline(always)]
     pub const fn clk_1m_err_fl(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Flag indicates that the count_1m count wasn't reached within 1 32kHz period"]
+    #[doc = "Flag indicates that the count_1m count wasn't reached within 1 32kHz period."]
     #[inline(always)]
     pub const fn set_clk_1m_err_fl(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -2659,19 +2659,19 @@ impl defmt::Format for OscConfig2 {
         )
     }
 }
-#[doc = "XTAL OSC Configuration 2 Register"]
+#[doc = "XTAL OSC Configuration 2 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OscConfig2Clr(pub u32);
 impl OscConfig2Clr {
-    #[doc = "The target count used to tune the 1MHz clock frequency"]
+    #[doc = "The target count used to tune the 1MHz clock frequency."]
     #[must_use]
     #[inline(always)]
     pub const fn count_1m_trg(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "The target count used to tune the 1MHz clock frequency"]
+    #[doc = "The target count used to tune the 1MHz clock frequency."]
     #[inline(always)]
     pub const fn set_count_1m_trg(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
@@ -2688,26 +2688,26 @@ impl OscConfig2Clr {
     pub const fn set_enable_1m(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Mux the corrected or uncorrected 1MHz clock to the output"]
+    #[doc = "Mux the corrected or uncorrected 1MHz clock to the output."]
     #[must_use]
     #[inline(always)]
     pub const fn mux_1m(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Mux the corrected or uncorrected 1MHz clock to the output"]
+    #[doc = "Mux the corrected or uncorrected 1MHz clock to the output."]
     #[inline(always)]
     pub const fn set_mux_1m(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Flag indicates that the count_1m count wasn't reached within 1 32kHz period"]
+    #[doc = "Flag indicates that the count_1m count wasn't reached within 1 32kHz period."]
     #[must_use]
     #[inline(always)]
     pub const fn clk_1m_err_fl(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Flag indicates that the count_1m count wasn't reached within 1 32kHz period"]
+    #[doc = "Flag indicates that the count_1m count wasn't reached within 1 32kHz period."]
     #[inline(always)]
     pub const fn set_clk_1m_err_fl(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -2742,19 +2742,19 @@ impl defmt::Format for OscConfig2Clr {
         )
     }
 }
-#[doc = "XTAL OSC Configuration 2 Register"]
+#[doc = "XTAL OSC Configuration 2 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OscConfig2Set(pub u32);
 impl OscConfig2Set {
-    #[doc = "The target count used to tune the 1MHz clock frequency"]
+    #[doc = "The target count used to tune the 1MHz clock frequency."]
     #[must_use]
     #[inline(always)]
     pub const fn count_1m_trg(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "The target count used to tune the 1MHz clock frequency"]
+    #[doc = "The target count used to tune the 1MHz clock frequency."]
     #[inline(always)]
     pub const fn set_count_1m_trg(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
@@ -2771,26 +2771,26 @@ impl OscConfig2Set {
     pub const fn set_enable_1m(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Mux the corrected or uncorrected 1MHz clock to the output"]
+    #[doc = "Mux the corrected or uncorrected 1MHz clock to the output."]
     #[must_use]
     #[inline(always)]
     pub const fn mux_1m(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Mux the corrected or uncorrected 1MHz clock to the output"]
+    #[doc = "Mux the corrected or uncorrected 1MHz clock to the output."]
     #[inline(always)]
     pub const fn set_mux_1m(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Flag indicates that the count_1m count wasn't reached within 1 32kHz period"]
+    #[doc = "Flag indicates that the count_1m count wasn't reached within 1 32kHz period."]
     #[must_use]
     #[inline(always)]
     pub const fn clk_1m_err_fl(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Flag indicates that the count_1m count wasn't reached within 1 32kHz period"]
+    #[doc = "Flag indicates that the count_1m count wasn't reached within 1 32kHz period."]
     #[inline(always)]
     pub const fn set_clk_1m_err_fl(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -2825,19 +2825,19 @@ impl defmt::Format for OscConfig2Set {
         )
     }
 }
-#[doc = "XTAL OSC Configuration 2 Register"]
+#[doc = "XTAL OSC Configuration 2 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OscConfig2Tog(pub u32);
 impl OscConfig2Tog {
-    #[doc = "The target count used to tune the 1MHz clock frequency"]
+    #[doc = "The target count used to tune the 1MHz clock frequency."]
     #[must_use]
     #[inline(always)]
     pub const fn count_1m_trg(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "The target count used to tune the 1MHz clock frequency"]
+    #[doc = "The target count used to tune the 1MHz clock frequency."]
     #[inline(always)]
     pub const fn set_count_1m_trg(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
@@ -2854,26 +2854,26 @@ impl OscConfig2Tog {
     pub const fn set_enable_1m(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Mux the corrected or uncorrected 1MHz clock to the output"]
+    #[doc = "Mux the corrected or uncorrected 1MHz clock to the output."]
     #[must_use]
     #[inline(always)]
     pub const fn mux_1m(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Mux the corrected or uncorrected 1MHz clock to the output"]
+    #[doc = "Mux the corrected or uncorrected 1MHz clock to the output."]
     #[inline(always)]
     pub const fn set_mux_1m(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Flag indicates that the count_1m count wasn't reached within 1 32kHz period"]
+    #[doc = "Flag indicates that the count_1m count wasn't reached within 1 32kHz period."]
     #[must_use]
     #[inline(always)]
     pub const fn clk_1m_err_fl(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Flag indicates that the count_1m count wasn't reached within 1 32kHz period"]
+    #[doc = "Flag indicates that the count_1m count wasn't reached within 1 32kHz period."]
     #[inline(always)]
     pub const fn set_clk_1m_err_fl(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);

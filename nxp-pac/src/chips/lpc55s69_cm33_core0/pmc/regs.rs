@@ -1,4 +1,4 @@
-#[doc = "General purpose always on domain data storage \\[Reset by: PoR, Brown Out Detectors Reset\\]"]
+#[doc = "General purpose always on domain data storage \\[Reset by: PoR, Brown Out Detectors Reset\\]."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Aoreg1(pub u32);
@@ -165,7 +165,7 @@ impl defmt::Format for Aoreg1 {
         )
     }
 }
-#[doc = "VBAT Brown Out Dectector (BoD) control register \\[Reset by: PoR, Pin Reset, Software Reset\\]"]
+#[doc = "VBAT Brown Out Dectector (BoD) control register \\[Reset by: PoR, Pin Reset, Software Reset\\]."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Bodvbat(pub u32);
@@ -220,7 +220,7 @@ impl defmt::Format for Bodvbat {
         )
     }
 }
-#[doc = "Analog Comparator control register \\[Reset by: PoR, Pin Reset, Brown Out Detectors Reset, Deep Power Down Reset, Software Reset\\]"]
+#[doc = "Analog Comparator control register \\[Reset by: PoR, Pin Reset, Brown Out Detectors Reset, Deep Power Down Reset, Software Reset\\]."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Comp(pub u32);
@@ -359,7 +359,7 @@ impl defmt::Format for Comp {
         )
     }
 }
-#[doc = "DCDC (first) control register \\[Reset by: PoR, Pin Reset, Brown Out Detectors Reset, Deep Power Down Reset, Software Reset\\]"]
+#[doc = "DCDC (first) control register \\[Reset by: PoR, Pin Reset, Brown Out Detectors Reset, Deep Power Down Reset, Software Reset\\]."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dcdc0(pub u32);
@@ -526,7 +526,7 @@ impl defmt::Format for Dcdc0 {
         )
     }
 }
-#[doc = "DCDC (second) control register \\[Reset by: PoR, Pin Reset, Brown Out Detectors Reset, Deep Power Down Reset, Software Reset\\]"]
+#[doc = "DCDC (second) control register \\[Reset by: PoR, Pin Reset, Brown Out Detectors Reset, Deep Power Down Reset, Software Reset\\]."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dcdc1(pub u32);
@@ -735,7 +735,7 @@ impl defmt::Format for Dcdc1 {
         )
     }
 }
-#[doc = "Power Management Unit (PMU) and Always-On domains LDO control \\[Reset by: PoR, Pin Reset, Brown Out Detectors Reset, Deep Power Down Reset, Software Reset\\]"]
+#[doc = "Power Management Unit (PMU) and Always-On domains LDO control \\[Reset by: PoR, Pin Reset, Brown Out Detectors Reset, Deep Power Down Reset, Software Reset\\]."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ldopmu(pub u32);
@@ -846,7 +846,7 @@ impl defmt::Format for Ldopmu {
         )
     }
 }
-#[doc = "Dummy Control bus to PMU \\[Reset by: PoR, Pin Reset, Brown Out Detectors Reset, Deep Power Down Reset, Software Reset\\]"]
+#[doc = "Dummy Control bus to PMU \\[Reset by: PoR, Pin Reset, Brown Out Detectors Reset, Deep Power Down Reset, Software Reset\\]."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Miscctrl(pub u32);
@@ -875,14 +875,14 @@ impl Miscctrl {
     pub const fn set_ldomemhighzmode(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn lowpwr_flash_buf(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_lowpwr_flash_buf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
@@ -899,50 +899,50 @@ impl Miscctrl {
     pub const fn set_miscctrl_3_8(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 3usize)) | (((val as u32) & 0x1f) << 3usize);
     }
-    #[doc = "Configure wake up I/O 0 in Deep Power Down mode"]
+    #[doc = "Configure wake up I/O 0 in Deep Power Down mode."]
     #[must_use]
     #[inline(always)]
     pub const fn modewakeup0(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Configure wake up I/O 0 in Deep Power Down mode"]
+    #[doc = "Configure wake up I/O 0 in Deep Power Down mode."]
     #[inline(always)]
     pub const fn set_modewakeup0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Configure wake up I/O 1 in Deep Power Down mode"]
+    #[doc = "Configure wake up I/O 1 in Deep Power Down mode."]
     #[must_use]
     #[inline(always)]
     pub const fn modewakeup1(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Configure wake up I/O 1 in Deep Power Down mode"]
+    #[doc = "Configure wake up I/O 1 in Deep Power Down mode."]
     #[inline(always)]
     pub const fn set_modewakeup1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "Configure wake up I/O 2 in Deep Power Down mode"]
+    #[doc = "Configure wake up I/O 2 in Deep Power Down mode."]
     #[must_use]
     #[inline(always)]
     pub const fn modewakeup2(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "Configure wake up I/O 2 in Deep Power Down mode"]
+    #[doc = "Configure wake up I/O 2 in Deep Power Down mode."]
     #[inline(always)]
     pub const fn set_modewakeup2(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "Configure wake up I/O 3 in Deep Power Down mode"]
+    #[doc = "Configure wake up I/O 3 in Deep Power Down mode."]
     #[must_use]
     #[inline(always)]
     pub const fn modewakeup3(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "Configure wake up I/O 3 in Deep Power Down mode"]
+    #[doc = "Configure wake up I/O 3 in Deep Power Down mode."]
     #[inline(always)]
     pub const fn set_modewakeup3(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
@@ -1027,7 +1027,7 @@ impl defmt::Format for Miscctrl {
         )
     }
 }
-#[doc = "OS Timer control register \\[Reset by: PoR, Brown Out Detectors Reset\\]"]
+#[doc = "OS Timer control register \\[Reset by: PoR, Brown Out Detectors Reset\\]."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ostimer(pub u32);
@@ -1110,7 +1110,7 @@ impl defmt::Format for Ostimer {
         )
     }
 }
-#[doc = "Controls the power to various analog blocks \\[Reset by: PoR, Pin Reset, Brown Out Detectors Reset, Deep Power Down Reset, Software Reset\\]"]
+#[doc = "Controls the power to various analog blocks \\[Reset by: PoR, Pin Reset, Brown Out Detectors Reset, Deep Power Down Reset, Software Reset\\]."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pdruncfg0(pub u32);
@@ -1235,14 +1235,14 @@ impl Pdruncfg0 {
     pub const fn set_pden_ldousbhs(&mut self, val: super::vals::PdenLdousbhs) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val.to_bits() as u32) & 0x01) << 18usize);
     }
-    #[doc = "Controls power to auxiliary biasing (AUXBIAS)"]
+    #[doc = "Controls power to auxiliary biasing (AUXBIAS)."]
     #[must_use]
     #[inline(always)]
     pub const fn pden_auxbias(&self) -> super::vals::PdenAuxbias {
         let val = (self.0 >> 19usize) & 0x01;
         super::vals::PdenAuxbias::from_bits(val as u8)
     }
-    #[doc = "Controls power to auxiliary biasing (AUXBIAS)"]
+    #[doc = "Controls power to auxiliary biasing (AUXBIAS)."]
     #[inline(always)]
     pub const fn set_pden_auxbias(&mut self, val: super::vals::PdenAuxbias) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val.to_bits() as u32) & 0x01) << 19usize);
@@ -1333,7 +1333,7 @@ impl defmt::Format for Pdruncfg0 {
         )
     }
 }
-#[doc = "Controls the power to various analog blocks \\[Reset by: PoR, Pin Reset, Brown Out Detectors Reset, Deep Power Down Reset, Software Reset\\]"]
+#[doc = "Controls the power to various analog blocks \\[Reset by: PoR, Pin Reset, Brown Out Detectors Reset, Deep Power Down Reset, Software Reset\\]."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pdruncfgclr0(pub u32);
@@ -1374,7 +1374,7 @@ impl defmt::Format for Pdruncfgclr0 {
         )
     }
 }
-#[doc = "Controls the power to various analog blocks \\[Reset by: PoR, Pin Reset, Brown Out Detectors Reset, Deep Power Down Reset, Software Reset\\]"]
+#[doc = "Controls the power to various analog blocks \\[Reset by: PoR, Pin Reset, Brown Out Detectors Reset, Deep Power Down Reset, Software Reset\\]."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pdruncfgset0(pub u32);
@@ -1415,31 +1415,31 @@ impl defmt::Format for Pdruncfgset0 {
         )
     }
 }
-#[doc = "Analog References fast wake-up Control register \\[Reset by: PoR\\]"]
+#[doc = "Analog References fast wake-up Control register \\[Reset by: PoR\\]."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Reffastwkup(pub u32);
 impl Reffastwkup {
-    #[doc = "Analog References fast wake-up in case of wake-up from a low power mode (DEEP SLEEP, POWER DOWN and DEEP POWER DOWN): ."]
+    #[doc = "Analog References fast wake-up in case of wake-up from a low power mode (DEEP SLEEP, POWER DOWN and DEEP POWER DOWN):."]
     #[must_use]
     #[inline(always)]
     pub const fn lpwkup(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Analog References fast wake-up in case of wake-up from a low power mode (DEEP SLEEP, POWER DOWN and DEEP POWER DOWN): ."]
+    #[doc = "Analog References fast wake-up in case of wake-up from a low power mode (DEEP SLEEP, POWER DOWN and DEEP POWER DOWN):."]
     #[inline(always)]
     pub const fn set_lpwkup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Analog References fast wake-up in case of Hardware Pin reset: ."]
+    #[doc = "Analog References fast wake-up in case of Hardware Pin reset:."]
     #[must_use]
     #[inline(always)]
     pub const fn hwwkup(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Analog References fast wake-up in case of Hardware Pin reset: ."]
+    #[doc = "Analog References fast wake-up in case of Hardware Pin reset:."]
     #[inline(always)]
     pub const fn set_hwwkup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
@@ -1470,7 +1470,7 @@ impl defmt::Format for Reffastwkup {
         )
     }
 }
-#[doc = "Reset Control \\[Reset by: PoR, Pin Reset, Brown Out Detectors Reset, Deep Power Down Reset, Software Reset\\]"]
+#[doc = "Reset Control \\[Reset by: PoR, Pin Reset, Brown Out Detectors Reset, Deep Power Down Reset, Software Reset\\]."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Resetctrl(pub u32);
@@ -1553,19 +1553,19 @@ impl defmt::Format for Resetctrl {
         )
     }
 }
-#[doc = "RTC 1 KHZ and 1 Hz clocks source control register \\[Reset by: PoR, Brown Out Detectors Reset\\]"]
+#[doc = "RTC 1 KHZ and 1 Hz clocks source control register \\[Reset by: PoR, Brown Out Detectors Reset\\]."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Rtcosc32k(pub u32);
 impl Rtcosc32k {
-    #[doc = "Select the 32K oscillator to be used in Deep Power Down Mode for the RTC (either XTAL32KHz or FRO32KHz) ."]
+    #[doc = "Select the 32K oscillator to be used in Deep Power Down Mode for the RTC (either XTAL32KHz or FRO32KHz)."]
     #[must_use]
     #[inline(always)]
     pub const fn sel(&self) -> super::vals::Sel {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::Sel::from_bits(val as u8)
     }
-    #[doc = "Select the 32K oscillator to be used in Deep Power Down Mode for the RTC (either XTAL32KHz or FRO32KHz) ."]
+    #[doc = "Select the 32K oscillator to be used in Deep Power Down Mode for the RTC (either XTAL32KHz or FRO32KHz)."]
     #[inline(always)]
     pub const fn set_sel(&mut self, val: super::vals::Sel) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
@@ -1664,7 +1664,7 @@ impl defmt::Format for Rtcosc32k {
         )
     }
 }
-#[doc = "All SRAMs common control signals \\[Reset by: PoR, Pin Reset, Brown Out Detectors Reset, Software Reset\\]"]
+#[doc = "All SRAMs common control signals \\[Reset by: PoR, Pin Reset, Brown Out Detectors Reset, Software Reset\\]."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sramctrl(pub u32);
@@ -1747,7 +1747,7 @@ impl defmt::Format for Sramctrl {
         )
     }
 }
-#[doc = "Power Management Controller FSM (Finite State Machines) status"]
+#[doc = "Power Management Controller FSM (Finite State Machines) status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Status(pub u32);
@@ -1784,7 +1784,7 @@ impl defmt::Format for Status {
         defmt::write!(f, "Status {{ bootmode: {:?} }}", self.bootmode())
     }
 }
-#[doc = "FRO and XTAL status register \\[Reset by: PoR, Brown Out Detectors Reset\\]"]
+#[doc = "FRO and XTAL status register \\[Reset by: PoR, Brown Out Detectors Reset\\]."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Statusclk(pub u32);
@@ -1839,7 +1839,7 @@ impl defmt::Format for Statusclk {
         )
     }
 }
-#[doc = "Allows to identify the Wake-up I/O source from Deep Power Down mode"]
+#[doc = "Allows to identify the Wake-up I/O source from Deep Power Down mode."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Wakeiocause(pub u32);
@@ -1922,7 +1922,7 @@ impl defmt::Format for Wakeiocause {
         )
     }
 }
-#[doc = "Deep Power Down wake-up source \\[Reset by: PoR, Pin Reset, Software Reset\\]"]
+#[doc = "Deep Power Down wake-up source \\[Reset by: PoR, Pin Reset, Software Reset\\]."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Wakeupioctrl(pub u32);
@@ -2023,50 +2023,50 @@ impl Wakeupioctrl {
     pub const fn set_fallingedgewakeup3(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Configure wake up I/O 0 in Deep Power Down mode"]
+    #[doc = "Configure wake up I/O 0 in Deep Power Down mode."]
     #[must_use]
     #[inline(always)]
     pub const fn modewakeup0(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Configure wake up I/O 0 in Deep Power Down mode"]
+    #[doc = "Configure wake up I/O 0 in Deep Power Down mode."]
     #[inline(always)]
     pub const fn set_modewakeup0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Configure wake up I/O 1 in Deep Power Down mode"]
+    #[doc = "Configure wake up I/O 1 in Deep Power Down mode."]
     #[must_use]
     #[inline(always)]
     pub const fn modewakeup1(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Configure wake up I/O 1 in Deep Power Down mode"]
+    #[doc = "Configure wake up I/O 1 in Deep Power Down mode."]
     #[inline(always)]
     pub const fn set_modewakeup1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "Configure wake up I/O 2 in Deep Power Down mode"]
+    #[doc = "Configure wake up I/O 2 in Deep Power Down mode."]
     #[must_use]
     #[inline(always)]
     pub const fn modewakeup2(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "Configure wake up I/O 2 in Deep Power Down mode"]
+    #[doc = "Configure wake up I/O 2 in Deep Power Down mode."]
     #[inline(always)]
     pub const fn set_modewakeup2(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "Configure wake up I/O 3 in Deep Power Down mode"]
+    #[doc = "Configure wake up I/O 3 in Deep Power Down mode."]
     #[must_use]
     #[inline(always)]
     pub const fn modewakeup3(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "Configure wake up I/O 3 in Deep Power Down mode"]
+    #[doc = "Configure wake up I/O 3 in Deep Power Down mode."]
     #[inline(always)]
     pub const fn set_modewakeup3(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
@@ -2117,7 +2117,7 @@ impl defmt::Format for Wakeupioctrl {
         )
     }
 }
-#[doc = "32 KHz Crystal oscillator (XTAL) control register \\[Reset by: PoR, Brown Out Detectors Reset\\]"]
+#[doc = "32 KHz Crystal oscillator (XTAL) control register \\[Reset by: PoR, Brown Out Detectors Reset\\]."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Xtal32k(pub u32);

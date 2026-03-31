@@ -1,4 +1,4 @@
-#[doc = "Digital I/O control for port 0 pins PIO0_13"]
+#[doc = "Digital I/O control for port 0 pins PIO0_13."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pio(pub u32);

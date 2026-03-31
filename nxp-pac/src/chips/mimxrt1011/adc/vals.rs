@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Acfe {
-    #[doc = "Compare function disabled"]
+    #[doc = "Compare function disabled."]
     ACFE_0 = 0x0,
-    #[doc = "Compare function enabled"]
+    #[doc = "Compare function enabled."]
     ACFE_1 = 0x01,
 }
 impl Acfe {
@@ -97,7 +97,7 @@ impl From<Acren> for u8 {
 pub enum Adacken {
     #[doc = "Asynchronous clock output disabled; Asynchronous clock only enabled if selected by ADICLK and a conversion is active."]
     ADACKEN_0 = 0x0,
-    #[doc = "Asynchronous clock and clock output enabled regardless of the state of the ADC"]
+    #[doc = "Asynchronous clock and clock output enabled regardless of the state of the ADC."]
     ADACKEN_1 = 0x01,
 }
 impl Adacken {
@@ -219,13 +219,13 @@ impl From<Adhsc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Adiclk {
-    #[doc = "IPG clock"]
+    #[doc = "IPG clock."]
     ADICLK_0 = 0x0,
-    #[doc = "IPG clock divided by 2"]
+    #[doc = "IPG clock divided by 2."]
     ADICLK_1 = 0x01,
-    #[doc = "Alternate clock (ALTCLK)"]
+    #[doc = "Alternate clock (ALTCLK)."]
     ADICLK_2 = 0x02,
-    #[doc = "Asynchronous clock (ADACK)"]
+    #[doc = "Asynchronous clock (ADACK)."]
     ADICLK_3 = 0x03,
 }
 impl Adiclk {
@@ -254,13 +254,13 @@ impl From<Adiclk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Adiv {
-    #[doc = "Input clock"]
+    #[doc = "Input clock."]
     ADIV_0 = 0x0,
-    #[doc = "Input clock / 2"]
+    #[doc = "Input clock / 2."]
     ADIV_1 = 0x01,
-    #[doc = "Input clock / 4"]
+    #[doc = "Input clock / 4."]
     ADIV_2 = 0x02,
-    #[doc = "Input clock / 8"]
+    #[doc = "Input clock / 8."]
     ADIV_3 = 0x03,
 }
 impl Adiv {
@@ -351,13 +351,13 @@ impl From<Adlsmp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Adsts {
-    #[doc = "Sample period (ADC clocks) = 3 if ADLSMP=0b Sample period (ADC clocks) = 13 if ADLSMP=1b"]
+    #[doc = "Sample period (ADC clocks) = 3 if ADLSMP=0b Sample period (ADC clocks) = 13 if ADLSMP=1b."]
     ADSTS_0 = 0x0,
-    #[doc = "Sample period (ADC clocks) = 5 if ADLSMP=0b Sample period (ADC clocks) = 17 if ADLSMP=1b"]
+    #[doc = "Sample period (ADC clocks) = 5 if ADLSMP=0b Sample period (ADC clocks) = 17 if ADLSMP=1b."]
     ADSTS_1 = 0x01,
-    #[doc = "Sample period (ADC clocks) = 7 if ADLSMP=0b Sample period (ADC clocks) = 21 if ADLSMP=1b"]
+    #[doc = "Sample period (ADC clocks) = 7 if ADLSMP=0b Sample period (ADC clocks) = 21 if ADLSMP=1b."]
     ADSTS_2 = 0x02,
-    #[doc = "Sample period (ADC clocks) = 9 if ADLSMP=0b Sample period (ADC clocks) = 25 if ADLSMP=1b"]
+    #[doc = "Sample period (ADC clocks) = 9 if ADLSMP=0b Sample period (ADC clocks) = 25 if ADLSMP=1b."]
     ADSTS_3 = 0x03,
 }
 impl Adsts {
@@ -386,9 +386,9 @@ impl From<Adsts> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Adtrg {
-    #[doc = "Software trigger selected"]
+    #[doc = "Software trigger selected."]
     ADTRG_0 = 0x0,
-    #[doc = "Hardware trigger selected"]
+    #[doc = "Hardware trigger selected."]
     ADTRG_1 = 0x01,
 }
 impl Adtrg {
@@ -417,9 +417,9 @@ impl From<Adtrg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Avge {
-    #[doc = "Hardware average function disabled"]
+    #[doc = "Hardware average function disabled."]
     AVGE_0 = 0x0,
-    #[doc = "Hardware average function enabled"]
+    #[doc = "Hardware average function enabled."]
     AVGE_1 = 0x01,
 }
 impl Avge {
@@ -448,13 +448,13 @@ impl From<Avge> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Avgs {
-    #[doc = "4 samples averaged"]
+    #[doc = "4 samples averaged."]
     AVGS_0 = 0x0,
-    #[doc = "8 samples averaged"]
+    #[doc = "8 samples averaged."]
     AVGS_1 = 0x01,
-    #[doc = "16 samples averaged"]
+    #[doc = "16 samples averaged."]
     AVGS_2 = 0x02,
-    #[doc = "32 samples averaged"]
+    #[doc = "32 samples averaged."]
     AVGS_3 = 0x03,
 }
 impl Avgs {
@@ -545,9 +545,9 @@ impl From<Calf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dmaen {
-    #[doc = "DMA disabled (default)"]
+    #[doc = "DMA disabled (default)."]
     DMAEN_0 = 0x0,
-    #[doc = "DMA enabled"]
+    #[doc = "DMA enabled."]
     DMAEN_1 = 0x01,
 }
 impl Dmaen {
@@ -592,7 +592,7 @@ pub enum Hc0Adch {
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
-    #[doc = "External channel selection from ADC_ETC"]
+    #[doc = "External channel selection from ADC_ETC."]
     ADCH_16 = 0x10,
     _RESERVED_11 = 0x11,
     _RESERVED_12 = 0x12,
@@ -602,7 +602,7 @@ pub enum Hc0Adch {
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
     _RESERVED_18 = 0x18,
-    #[doc = "VREFSH = internal channel, for ADC self-test, hard connected to VRH internally"]
+    #[doc = "VREFSH = internal channel, for ADC self-test, hard connected to VRH internally."]
     ADCH_25 = 0x19,
     _RESERVED_1a = 0x1a,
     _RESERVED_1b = 0x1b,
@@ -638,9 +638,9 @@ impl From<Hc0Adch> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Hc0Aien {
-    #[doc = "Conversion complete interrupt disabled"]
+    #[doc = "Conversion complete interrupt disabled."]
     AIEN_0 = 0x0,
-    #[doc = "Conversion complete interrupt enabled"]
+    #[doc = "Conversion complete interrupt enabled."]
     AIEN_1 = 0x01,
 }
 impl Hc0Aien {
@@ -685,7 +685,7 @@ pub enum HcAdch {
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
-    #[doc = "External channel selection from ADC_ETC"]
+    #[doc = "External channel selection from ADC_ETC."]
     ADCH_16 = 0x10,
     _RESERVED_11 = 0x11,
     _RESERVED_12 = 0x12,
@@ -695,7 +695,7 @@ pub enum HcAdch {
     _RESERVED_16 = 0x16,
     _RESERVED_17 = 0x17,
     _RESERVED_18 = 0x18,
-    #[doc = "VREFSH = internal channel, for ADC self-test, hard connected to VRH internally"]
+    #[doc = "VREFSH = internal channel, for ADC self-test, hard connected to VRH internally."]
     ADCH_25 = 0x19,
     _RESERVED_1a = 0x1a,
     _RESERVED_1b = 0x1b,
@@ -731,9 +731,9 @@ impl From<HcAdch> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HcAien {
-    #[doc = "Conversion complete interrupt disabled"]
+    #[doc = "Conversion complete interrupt disabled."]
     AIEN_0 = 0x0,
-    #[doc = "Conversion complete interrupt enabled"]
+    #[doc = "Conversion complete interrupt enabled."]
     AIEN_1 = 0x01,
 }
 impl HcAien {
@@ -762,11 +762,11 @@ impl From<HcAien> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mode {
-    #[doc = "8-bit conversion"]
+    #[doc = "8-bit conversion."]
     MODE_0 = 0x0,
-    #[doc = "10-bit conversion"]
+    #[doc = "10-bit conversion."]
     MODE_1 = 0x01,
-    #[doc = "12-bit conversion"]
+    #[doc = "12-bit conversion."]
     MODE_2 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -859,9 +859,9 @@ impl From<Refsel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sign {
-    #[doc = "The offset value is added with the raw result"]
+    #[doc = "The offset value is added with the raw result."]
     SIGN_0 = 0x0,
-    #[doc = "The offset value is subtracted from the raw converted value"]
+    #[doc = "The offset value is subtracted from the raw converted value."]
     SIGN_1 = 0x01,
 }
 impl Sign {

@@ -1,4 +1,4 @@
-#[doc = "LPTMR"]
+#[doc = "LPTMR."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lptmr {
     ptr: *mut u8,
@@ -14,22 +14,22 @@ impl Lptmr {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "Control Status"]
+    #[doc = "Control Status."]
     #[inline(always)]
     pub const fn csr(self) -> crate::common::Reg<regs::Csr, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
     }
-    #[doc = "Prescaler and Glitch Filter"]
+    #[doc = "Prescaler and Glitch Filter."]
     #[inline(always)]
     pub const fn psr(self) -> crate::common::Reg<regs::Psr, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
     }
-    #[doc = "Compare"]
+    #[doc = "Compare."]
     #[inline(always)]
     pub const fn cmr(self) -> crate::common::Reg<regs::Cmr, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
     }
-    #[doc = "Counter"]
+    #[doc = "Counter."]
     #[inline(always)]
     pub const fn cnr(self) -> crate::common::Reg<regs::Cnr, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }

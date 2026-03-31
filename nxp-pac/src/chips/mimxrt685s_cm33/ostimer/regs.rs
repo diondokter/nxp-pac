@@ -1,4 +1,4 @@
-#[doc = "Local Capture High Register"]
+#[doc = "Local Capture High Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CaptureH(pub u32);
@@ -39,7 +39,7 @@ impl defmt::Format for CaptureH {
         )
     }
 }
-#[doc = "Local Capture Low Register"]
+#[doc = "Local Capture Low Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CaptureL(pub u32);
@@ -80,7 +80,7 @@ impl defmt::Format for CaptureL {
         )
     }
 }
-#[doc = "EVTIMER High Register"]
+#[doc = "EVTIMER High Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Evtimerh(pub u32);
@@ -121,7 +121,7 @@ impl defmt::Format for Evtimerh {
         )
     }
 }
-#[doc = "EVTIMER Low Register"]
+#[doc = "EVTIMER Low Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Evtimerl(pub u32);
@@ -162,7 +162,7 @@ impl defmt::Format for Evtimerl {
         )
     }
 }
-#[doc = "Match High Register"]
+#[doc = "Match High Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct MatchH(pub u32);
@@ -199,7 +199,7 @@ impl defmt::Format for MatchH {
         defmt::write!(f, "MatchH {{ match_value: {=u32:?} }}", self.match_value())
     }
 }
-#[doc = "Local Match Low Register"]
+#[doc = "Local Match Low Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct MatchL(pub u32);
@@ -236,19 +236,19 @@ impl defmt::Format for MatchL {
         defmt::write!(f, "MatchL {{ match_value: {=u32:?} }}", self.match_value())
     }
 }
-#[doc = "OS_EVENT TIMER Control Register"]
+#[doc = "OS_EVENT TIMER Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OseventCtrl(pub u32);
 impl OseventCtrl {
-    #[doc = "This bit is set when a match occurs between the central 64-bit EVTIMER and the value programmed in the Match-register pair for the associated CPU This bit is cleared by writing a '1'. Writes to clear this bit are asynchronous. This should be done before a new match value is written into the MATCH_L/H registers"]
+    #[doc = "This bit is set when a match occurs between the central 64-bit EVTIMER and the value programmed in the Match-register pair for the associated CPU This bit is cleared by writing a '1'. Writes to clear this bit are asynchronous. This should be done before a new match value is written into the MATCH_L/H registers."]
     #[must_use]
     #[inline(always)]
     pub const fn ostimer_intrflag(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "This bit is set when a match occurs between the central 64-bit EVTIMER and the value programmed in the Match-register pair for the associated CPU This bit is cleared by writing a '1'. Writes to clear this bit are asynchronous. This should be done before a new match value is written into the MATCH_L/H registers"]
+    #[doc = "This bit is set when a match occurs between the central 64-bit EVTIMER and the value programmed in the Match-register pair for the associated CPU This bit is cleared by writing a '1'. Writes to clear this bit are asynchronous. This should be done before a new match value is written into the MATCH_L/H registers."]
     #[inline(always)]
     pub const fn set_ostimer_intrflag(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);

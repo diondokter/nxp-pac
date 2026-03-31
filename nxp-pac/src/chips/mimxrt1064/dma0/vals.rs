@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Active {
-    #[doc = "eDMA is idle"]
+    #[doc = "eDMA is idle."]
     IDLE = 0x0,
-    #[doc = "eDMA is executing a channel"]
+    #[doc = "eDMA is executing a channel."]
     ACTIVE = 0x01,
 }
 impl Active {
@@ -33,9 +33,9 @@ impl From<Active> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cadn {
-    #[doc = "Writes 0 to only the TCDn_CSR\\[DONE\\] field specified in the CDNE field"]
+    #[doc = "Writes 0 to only the TCDn_CSR\\[DONE\\] field specified in the CDNE field."]
     CLEAR_DONE = 0x0,
-    #[doc = "Writes 0 to all bits in TCDn_CSR\\[DONE\\]"]
+    #[doc = "Writes 0 to all bits in TCDn_CSR\\[DONE\\]."]
     CLEAR_ALL = 0x01,
 }
 impl Cadn {
@@ -64,9 +64,9 @@ impl From<Cadn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Caee {
-    #[doc = "Write 0 only to the EEI field specified in the CEEI field"]
+    #[doc = "Write 0 only to the EEI field specified in the CEEI field."]
     CLEAR_EEI = 0x0,
-    #[doc = "Write 0 to all fields in EEI"]
+    #[doc = "Write 0 to all fields in EEI."]
     CLEAR_ALL = 0x01,
 }
 impl Caee {
@@ -95,9 +95,9 @@ impl From<Caee> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Caei {
-    #[doc = "Write 0 to only the ERR field specified in the CERR field"]
+    #[doc = "Write 0 to only the ERR field specified in the CERR field."]
     CLEAR_ERR = 0x0,
-    #[doc = "Write 0 to all fields in ERR"]
+    #[doc = "Write 0 to all fields in ERR."]
     CLEAR_ALL = 0x01,
 }
 impl Caei {
@@ -126,9 +126,9 @@ impl From<Caei> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Caer {
-    #[doc = "Write 0 to only the ERQ field specified in the CERQ field"]
+    #[doc = "Write 0 to only the ERQ field specified in the CERQ field."]
     CLEAR_ERQ = 0x0,
-    #[doc = "Write 0 to all fields in ERQ"]
+    #[doc = "Write 0 to all fields in ERQ."]
     CLEAR_ALL = 0x01,
 }
 impl Caer {
@@ -157,9 +157,9 @@ impl From<Caer> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cair {
-    #[doc = "Clear only the INT field specified in the CINT field"]
+    #[doc = "Clear only the INT field specified in the CINT field."]
     CLEAR_INT = 0x0,
-    #[doc = "Clear all bits in INT"]
+    #[doc = "Clear all bits in INT."]
     CLEAR_ALL = 0x01,
 }
 impl Cair {
@@ -188,7 +188,7 @@ impl From<Cair> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CdneNop {
-    #[doc = "Normal operation"]
+    #[doc = "Normal operation."]
     NORMAL_OPS = 0x0,
     #[doc = "No operation; all other fields in this register are ignored."]
     NO_OPS = 0x01,
@@ -219,9 +219,9 @@ impl From<CdneNop> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CeeiNop {
-    #[doc = "Normal operation"]
+    #[doc = "Normal operation."]
     NORMAL_OPS = 0x0,
-    #[doc = "No operation, ignore the other fields in this register"]
+    #[doc = "No operation, ignore the other fields in this register."]
     NO_OPS = 0x01,
 }
 impl CeeiNop {
@@ -250,9 +250,9 @@ impl From<CeeiNop> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CerqNop {
-    #[doc = "Normal operation"]
+    #[doc = "Normal operation."]
     NORMAL_OPS = 0x0,
-    #[doc = "No operation, ignore the other fields in this register"]
+    #[doc = "No operation, ignore the other fields in this register."]
     NO_OPS = 0x01,
 }
 impl CerqNop {
@@ -281,7 +281,7 @@ impl From<CerqNop> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CerrNop {
-    #[doc = "Normal operation"]
+    #[doc = "Normal operation."]
     NORMAL_OPS = 0x0,
     #[doc = "No operation; all other fields in this register are ignored."]
     NO_OPS = 0x01,
@@ -312,7 +312,7 @@ impl From<CerrNop> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CintNop {
-    #[doc = "Normal operation"]
+    #[doc = "Normal operation."]
     NORMAL_OPS = 0x0,
     #[doc = "No operation; all other fields in this register are ignored."]
     NO_OPS = 0x01,
@@ -343,9 +343,9 @@ impl From<CintNop> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Clm {
-    #[doc = "Continuous link mode is off"]
+    #[doc = "Continuous link mode is off."]
     CLM_OFF = 0x0,
-    #[doc = "Continuous link mode is on"]
+    #[doc = "Continuous link mode is on."]
     CLM_ON = 0x01,
 }
 impl Clm {
@@ -374,9 +374,9 @@ impl From<Clm> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CrEcx {
-    #[doc = "Normal operation"]
+    #[doc = "Normal operation."]
     NORMAL_OPS = 0x0,
-    #[doc = "Cancel the remaining data transfer"]
+    #[doc = "Cancel the remaining data transfer."]
     CANCEL = 0x01,
 }
 impl CrEcx {
@@ -405,9 +405,9 @@ impl From<CrEcx> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cx {
-    #[doc = "Normal operation"]
+    #[doc = "Normal operation."]
     NORMAL_OPS = 0x0,
-    #[doc = "Cancel the remaining data transfer"]
+    #[doc = "Cancel the remaining data transfer."]
     CANCEL = 0x01,
 }
 impl Cx {
@@ -436,9 +436,9 @@ impl From<Cx> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dchpri0Dpa {
-    #[doc = "Channel n can suspend a lower priority channel"]
+    #[doc = "Channel n can suspend a lower priority channel."]
     ENABLED = 0x0,
-    #[doc = "Channel n cannot suspend any channel, regardless of channel priority"]
+    #[doc = "Channel n cannot suspend any channel, regardless of channel priority."]
     DISABLED = 0x01,
 }
 impl Dchpri0Dpa {
@@ -467,9 +467,9 @@ impl From<Dchpri0Dpa> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dchpri10Dpa {
-    #[doc = "Channel n can suspend a lower priority channel"]
+    #[doc = "Channel n can suspend a lower priority channel."]
     ENABLED = 0x0,
-    #[doc = "Channel n cannot suspend any channel, regardless of channel priority"]
+    #[doc = "Channel n cannot suspend any channel, regardless of channel priority."]
     DISABLED = 0x01,
 }
 impl Dchpri10Dpa {
@@ -498,9 +498,9 @@ impl From<Dchpri10Dpa> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dchpri11Dpa {
-    #[doc = "Channel n can suspend a lower priority channel"]
+    #[doc = "Channel n can suspend a lower priority channel."]
     ENABLED = 0x0,
-    #[doc = "Channel n cannot suspend any channel, regardless of channel priority"]
+    #[doc = "Channel n cannot suspend any channel, regardless of channel priority."]
     DISABLED = 0x01,
 }
 impl Dchpri11Dpa {
@@ -529,9 +529,9 @@ impl From<Dchpri11Dpa> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dchpri12Dpa {
-    #[doc = "Channel n can suspend a lower priority channel"]
+    #[doc = "Channel n can suspend a lower priority channel."]
     ENABLED = 0x0,
-    #[doc = "Channel n cannot suspend any channel, regardless of channel priority"]
+    #[doc = "Channel n cannot suspend any channel, regardless of channel priority."]
     DISABLED = 0x01,
 }
 impl Dchpri12Dpa {
@@ -560,9 +560,9 @@ impl From<Dchpri12Dpa> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dchpri13Dpa {
-    #[doc = "Channel n can suspend a lower priority channel"]
+    #[doc = "Channel n can suspend a lower priority channel."]
     ENABLED = 0x0,
-    #[doc = "Channel n cannot suspend any channel, regardless of channel priority"]
+    #[doc = "Channel n cannot suspend any channel, regardless of channel priority."]
     DISABLED = 0x01,
 }
 impl Dchpri13Dpa {
@@ -591,9 +591,9 @@ impl From<Dchpri13Dpa> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dchpri14Dpa {
-    #[doc = "Channel n can suspend a lower priority channel"]
+    #[doc = "Channel n can suspend a lower priority channel."]
     ENABLED = 0x0,
-    #[doc = "Channel n cannot suspend any channel, regardless of channel priority"]
+    #[doc = "Channel n cannot suspend any channel, regardless of channel priority."]
     DISABLED = 0x01,
 }
 impl Dchpri14Dpa {
@@ -622,9 +622,9 @@ impl From<Dchpri14Dpa> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dchpri15Dpa {
-    #[doc = "Channel n can suspend a lower priority channel"]
+    #[doc = "Channel n can suspend a lower priority channel."]
     ENABLED = 0x0,
-    #[doc = "Channel n cannot suspend any channel, regardless of channel priority"]
+    #[doc = "Channel n cannot suspend any channel, regardless of channel priority."]
     DISABLED = 0x01,
 }
 impl Dchpri15Dpa {
@@ -653,9 +653,9 @@ impl From<Dchpri15Dpa> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dchpri16Dpa {
-    #[doc = "Channel n can suspend a lower priority channel"]
+    #[doc = "Channel n can suspend a lower priority channel."]
     ENABLED = 0x0,
-    #[doc = "Channel n cannot suspend any channel, regardless of channel priority"]
+    #[doc = "Channel n cannot suspend any channel, regardless of channel priority."]
     DISABLED = 0x01,
 }
 impl Dchpri16Dpa {
@@ -684,9 +684,9 @@ impl From<Dchpri16Dpa> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dchpri17Dpa {
-    #[doc = "Channel n can suspend a lower priority channel"]
+    #[doc = "Channel n can suspend a lower priority channel."]
     ENABLED = 0x0,
-    #[doc = "Channel n cannot suspend any channel, regardless of channel priority"]
+    #[doc = "Channel n cannot suspend any channel, regardless of channel priority."]
     DISABLED = 0x01,
 }
 impl Dchpri17Dpa {
@@ -715,9 +715,9 @@ impl From<Dchpri17Dpa> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dchpri18Dpa {
-    #[doc = "Channel n can suspend a lower priority channel"]
+    #[doc = "Channel n can suspend a lower priority channel."]
     ENABLED = 0x0,
-    #[doc = "Channel n cannot suspend any channel, regardless of channel priority"]
+    #[doc = "Channel n cannot suspend any channel, regardless of channel priority."]
     DISABLED = 0x01,
 }
 impl Dchpri18Dpa {
@@ -746,9 +746,9 @@ impl From<Dchpri18Dpa> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dchpri19Dpa {
-    #[doc = "Channel n can suspend a lower priority channel"]
+    #[doc = "Channel n can suspend a lower priority channel."]
     ENABLED = 0x0,
-    #[doc = "Channel n cannot suspend any channel, regardless of channel priority"]
+    #[doc = "Channel n cannot suspend any channel, regardless of channel priority."]
     DISABLED = 0x01,
 }
 impl Dchpri19Dpa {
@@ -777,9 +777,9 @@ impl From<Dchpri19Dpa> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dchpri1Dpa {
-    #[doc = "Channel n can suspend a lower priority channel"]
+    #[doc = "Channel n can suspend a lower priority channel."]
     ENABLED = 0x0,
-    #[doc = "Channel n cannot suspend any channel, regardless of channel priority"]
+    #[doc = "Channel n cannot suspend any channel, regardless of channel priority."]
     DISABLED = 0x01,
 }
 impl Dchpri1Dpa {
@@ -808,9 +808,9 @@ impl From<Dchpri1Dpa> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dchpri20Dpa {
-    #[doc = "Channel n can suspend a lower priority channel"]
+    #[doc = "Channel n can suspend a lower priority channel."]
     ENABLED = 0x0,
-    #[doc = "Channel n cannot suspend any channel, regardless of channel priority"]
+    #[doc = "Channel n cannot suspend any channel, regardless of channel priority."]
     DISABLED = 0x01,
 }
 impl Dchpri20Dpa {
@@ -839,9 +839,9 @@ impl From<Dchpri20Dpa> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dchpri21Dpa {
-    #[doc = "Channel n can suspend a lower priority channel"]
+    #[doc = "Channel n can suspend a lower priority channel."]
     ENABLED = 0x0,
-    #[doc = "Channel n cannot suspend any channel, regardless of channel priority"]
+    #[doc = "Channel n cannot suspend any channel, regardless of channel priority."]
     DISABLED = 0x01,
 }
 impl Dchpri21Dpa {
@@ -870,9 +870,9 @@ impl From<Dchpri21Dpa> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dchpri22Dpa {
-    #[doc = "Channel n can suspend a lower priority channel"]
+    #[doc = "Channel n can suspend a lower priority channel."]
     ENABLED = 0x0,
-    #[doc = "Channel n cannot suspend any channel, regardless of channel priority"]
+    #[doc = "Channel n cannot suspend any channel, regardless of channel priority."]
     DISABLED = 0x01,
 }
 impl Dchpri22Dpa {
@@ -901,9 +901,9 @@ impl From<Dchpri22Dpa> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dchpri23Dpa {
-    #[doc = "Channel n can suspend a lower priority channel"]
+    #[doc = "Channel n can suspend a lower priority channel."]
     ENABLED = 0x0,
-    #[doc = "Channel n cannot suspend any channel, regardless of channel priority"]
+    #[doc = "Channel n cannot suspend any channel, regardless of channel priority."]
     DISABLED = 0x01,
 }
 impl Dchpri23Dpa {
@@ -932,9 +932,9 @@ impl From<Dchpri23Dpa> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dchpri24Dpa {
-    #[doc = "Channel n can suspend a lower priority channel"]
+    #[doc = "Channel n can suspend a lower priority channel."]
     ENABLED = 0x0,
-    #[doc = "Channel n cannot suspend any channel, regardless of channel priority"]
+    #[doc = "Channel n cannot suspend any channel, regardless of channel priority."]
     DISABLED = 0x01,
 }
 impl Dchpri24Dpa {
@@ -963,9 +963,9 @@ impl From<Dchpri24Dpa> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dchpri25Dpa {
-    #[doc = "Channel n can suspend a lower priority channel"]
+    #[doc = "Channel n can suspend a lower priority channel."]
     ENABLED = 0x0,
-    #[doc = "Channel n cannot suspend any channel, regardless of channel priority"]
+    #[doc = "Channel n cannot suspend any channel, regardless of channel priority."]
     DISABLED = 0x01,
 }
 impl Dchpri25Dpa {
@@ -994,9 +994,9 @@ impl From<Dchpri25Dpa> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dchpri26Dpa {
-    #[doc = "Channel n can suspend a lower priority channel"]
+    #[doc = "Channel n can suspend a lower priority channel."]
     ENABLED = 0x0,
-    #[doc = "Channel n cannot suspend any channel, regardless of channel priority"]
+    #[doc = "Channel n cannot suspend any channel, regardless of channel priority."]
     DISABLED = 0x01,
 }
 impl Dchpri26Dpa {
@@ -1025,9 +1025,9 @@ impl From<Dchpri26Dpa> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dchpri27Dpa {
-    #[doc = "Channel n can suspend a lower priority channel"]
+    #[doc = "Channel n can suspend a lower priority channel."]
     ENABLED = 0x0,
-    #[doc = "Channel n cannot suspend any channel, regardless of channel priority"]
+    #[doc = "Channel n cannot suspend any channel, regardless of channel priority."]
     DISABLED = 0x01,
 }
 impl Dchpri27Dpa {
@@ -1056,9 +1056,9 @@ impl From<Dchpri27Dpa> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dchpri28Dpa {
-    #[doc = "Channel n can suspend a lower priority channel"]
+    #[doc = "Channel n can suspend a lower priority channel."]
     ENABLED = 0x0,
-    #[doc = "Channel n cannot suspend any channel, regardless of channel priority"]
+    #[doc = "Channel n cannot suspend any channel, regardless of channel priority."]
     DISABLED = 0x01,
 }
 impl Dchpri28Dpa {
@@ -1087,9 +1087,9 @@ impl From<Dchpri28Dpa> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dchpri29Dpa {
-    #[doc = "Channel n can suspend a lower priority channel"]
+    #[doc = "Channel n can suspend a lower priority channel."]
     ENABLED = 0x0,
-    #[doc = "Channel n cannot suspend any channel, regardless of channel priority"]
+    #[doc = "Channel n cannot suspend any channel, regardless of channel priority."]
     DISABLED = 0x01,
 }
 impl Dchpri29Dpa {
@@ -1118,9 +1118,9 @@ impl From<Dchpri29Dpa> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dchpri2Dpa {
-    #[doc = "Channel n can suspend a lower priority channel"]
+    #[doc = "Channel n can suspend a lower priority channel."]
     ENABLED = 0x0,
-    #[doc = "Channel n cannot suspend any channel, regardless of channel priority"]
+    #[doc = "Channel n cannot suspend any channel, regardless of channel priority."]
     DISABLED = 0x01,
 }
 impl Dchpri2Dpa {
@@ -1149,9 +1149,9 @@ impl From<Dchpri2Dpa> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dchpri30Dpa {
-    #[doc = "Channel n can suspend a lower priority channel"]
+    #[doc = "Channel n can suspend a lower priority channel."]
     ENABLED = 0x0,
-    #[doc = "Channel n cannot suspend any channel, regardless of channel priority"]
+    #[doc = "Channel n cannot suspend any channel, regardless of channel priority."]
     DISABLED = 0x01,
 }
 impl Dchpri30Dpa {
@@ -1180,9 +1180,9 @@ impl From<Dchpri30Dpa> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dchpri31Dpa {
-    #[doc = "Channel n can suspend a lower priority channel"]
+    #[doc = "Channel n can suspend a lower priority channel."]
     ENABLED = 0x0,
-    #[doc = "Channel n cannot suspend any channel, regardless of channel priority"]
+    #[doc = "Channel n cannot suspend any channel, regardless of channel priority."]
     DISABLED = 0x01,
 }
 impl Dchpri31Dpa {
@@ -1211,9 +1211,9 @@ impl From<Dchpri31Dpa> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dchpri3Dpa {
-    #[doc = "Channel n can suspend a lower priority channel"]
+    #[doc = "Channel n can suspend a lower priority channel."]
     ENABLED = 0x0,
-    #[doc = "Channel n cannot suspend any channel, regardless of channel priority"]
+    #[doc = "Channel n cannot suspend any channel, regardless of channel priority."]
     DISABLED = 0x01,
 }
 impl Dchpri3Dpa {
@@ -1242,9 +1242,9 @@ impl From<Dchpri3Dpa> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dchpri4Dpa {
-    #[doc = "Channel n can suspend a lower priority channel"]
+    #[doc = "Channel n can suspend a lower priority channel."]
     ENABLED = 0x0,
-    #[doc = "Channel n cannot suspend any channel, regardless of channel priority"]
+    #[doc = "Channel n cannot suspend any channel, regardless of channel priority."]
     DISABLED = 0x01,
 }
 impl Dchpri4Dpa {
@@ -1273,9 +1273,9 @@ impl From<Dchpri4Dpa> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dchpri5Dpa {
-    #[doc = "Channel n can suspend a lower priority channel"]
+    #[doc = "Channel n can suspend a lower priority channel."]
     ENABLED = 0x0,
-    #[doc = "Channel n cannot suspend any channel, regardless of channel priority"]
+    #[doc = "Channel n cannot suspend any channel, regardless of channel priority."]
     DISABLED = 0x01,
 }
 impl Dchpri5Dpa {
@@ -1304,9 +1304,9 @@ impl From<Dchpri5Dpa> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dchpri6Dpa {
-    #[doc = "Channel n can suspend a lower priority channel"]
+    #[doc = "Channel n can suspend a lower priority channel."]
     ENABLED = 0x0,
-    #[doc = "Channel n cannot suspend any channel, regardless of channel priority"]
+    #[doc = "Channel n cannot suspend any channel, regardless of channel priority."]
     DISABLED = 0x01,
 }
 impl Dchpri6Dpa {
@@ -1335,9 +1335,9 @@ impl From<Dchpri6Dpa> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dchpri7Dpa {
-    #[doc = "Channel n can suspend a lower priority channel"]
+    #[doc = "Channel n can suspend a lower priority channel."]
     ENABLED = 0x0,
-    #[doc = "Channel n cannot suspend any channel, regardless of channel priority"]
+    #[doc = "Channel n cannot suspend any channel, regardless of channel priority."]
     DISABLED = 0x01,
 }
 impl Dchpri7Dpa {
@@ -1366,9 +1366,9 @@ impl From<Dchpri7Dpa> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dchpri8Dpa {
-    #[doc = "Channel n can suspend a lower priority channel"]
+    #[doc = "Channel n can suspend a lower priority channel."]
     ENABLED = 0x0,
-    #[doc = "Channel n cannot suspend any channel, regardless of channel priority"]
+    #[doc = "Channel n cannot suspend any channel, regardless of channel priority."]
     DISABLED = 0x01,
 }
 impl Dchpri8Dpa {
@@ -1397,9 +1397,9 @@ impl From<Dchpri8Dpa> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dchpri9Dpa {
-    #[doc = "Channel n can suspend a lower priority channel"]
+    #[doc = "Channel n can suspend a lower priority channel."]
     ENABLED = 0x0,
-    #[doc = "Channel n cannot suspend any channel, regardless of channel priority"]
+    #[doc = "Channel n cannot suspend any channel, regardless of channel priority."]
     DISABLED = 0x01,
 }
 impl Dchpri9Dpa {
@@ -1428,9 +1428,9 @@ impl From<Dchpri9Dpa> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EsEcx {
-    #[doc = "No canceled transfers"]
+    #[doc = "No canceled transfers."]
     NO_CANCELS = 0x0,
-    #[doc = "The most-recently recorded entry was a canceled transfer initiated by the error cancel transfer field"]
+    #[doc = "The most-recently recorded entry was a canceled transfer initiated by the error cancel transfer field."]
     CANCELED = 0x01,
 }
 impl EsEcx {
@@ -1459,9 +1459,9 @@ impl From<EsEcx> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Halt {
-    #[doc = "Normal operation"]
+    #[doc = "Normal operation."]
     NORMAL_OPS = 0x0,
-    #[doc = "eDMA operations halted"]
+    #[doc = "eDMA operations halted."]
     HALT_DMA = 0x01,
 }
 impl Halt {
@@ -1490,9 +1490,9 @@ impl From<Halt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Hoe {
-    #[doc = "Normal operation"]
+    #[doc = "Normal operation."]
     NORMAL_OPS = 0x0,
-    #[doc = "Error causes HALT field to be automatically set to 1"]
+    #[doc = "Error causes HALT field to be automatically set to 1."]
     HALT_ON_ERROR = 0x01,
 }
 impl Hoe {
@@ -1521,9 +1521,9 @@ impl From<Hoe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int6 {
-    #[doc = "The interrupt request for channel 6 is cleared"]
+    #[doc = "The interrupt request for channel 6 is cleared."]
     NOT_ACTIVE = 0x0,
-    #[doc = "The interrupt request for channel 6 is active"]
+    #[doc = "The interrupt request for channel 6 is active."]
     CTIVE = 0x01,
 }
 impl Int6 {
@@ -1552,9 +1552,9 @@ impl From<Int6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Saee {
-    #[doc = "Write 1 only to the EEI field specified in the SEEI field"]
+    #[doc = "Write 1 only to the EEI field specified in the SEEI field."]
     SET_EEI = 0x0,
-    #[doc = "Writes 1 to all fields in EEI"]
+    #[doc = "Writes 1 to all fields in EEI."]
     SET_ALL = 0x01,
 }
 impl Saee {
@@ -1583,9 +1583,9 @@ impl From<Saee> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Saer {
-    #[doc = "Write 1 to only the ERQ field specified in the SERQ field"]
+    #[doc = "Write 1 to only the ERQ field specified in the SERQ field."]
     SET_ERQ = 0x0,
-    #[doc = "Write 1 to all fields in ERQ"]
+    #[doc = "Write 1 to all fields in ERQ."]
     SET_ALL = 0x01,
 }
 impl Saer {
@@ -1614,9 +1614,9 @@ impl From<Saer> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sast {
-    #[doc = "Write 1 to only the TCDn_CSR\\[START\\] field specified in the SSRT field"]
+    #[doc = "Write 1 to only the TCDn_CSR\\[START\\] field specified in the SSRT field."]
     SET_START = 0x0,
-    #[doc = "Write 1 to all bits in TCDn_CSR\\[START\\]"]
+    #[doc = "Write 1 to all bits in TCDn_CSR\\[START\\]."]
     SET_ALL = 0x01,
 }
 impl Sast {
@@ -1645,9 +1645,9 @@ impl From<Sast> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SeeiNop {
-    #[doc = "Normal operation"]
+    #[doc = "Normal operation."]
     NORMAL_OPS = 0x0,
-    #[doc = "No operation, ignore the other fields in this register"]
+    #[doc = "No operation, ignore the other fields in this register."]
     NO_OPS = 0x01,
 }
 impl SeeiNop {
@@ -1676,9 +1676,9 @@ impl From<SeeiNop> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SerqNop {
-    #[doc = "Normal operation"]
+    #[doc = "Normal operation."]
     NORMAL_OPS = 0x0,
-    #[doc = "No operation, ignore the other fields in this register"]
+    #[doc = "No operation, ignore the other fields in this register."]
     NO_OPS = 0x01,
 }
 impl SerqNop {
@@ -1707,7 +1707,7 @@ impl From<SerqNop> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SsrtNop {
-    #[doc = "Normal operation"]
+    #[doc = "Normal operation."]
     NORMAL_OPS = 0x0,
     #[doc = "No operation; all other fields in this register are ignored."]
     NO_OPS = 0x01,
@@ -1738,25 +1738,25 @@ impl From<SsrtNop> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd0AttrSmod {
-    #[doc = "Source address modulo feature is disabled"]
+    #[doc = "Source address modulo feature is disabled."]
     DISABLED = 0x0,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_1 = 0x01,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_2 = 0x02,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_3 = 0x03,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_4 = 0x04,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_5 = 0x05,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_6 = 0x06,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_7 = 0x07,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_8 = 0x08,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -1807,16 +1807,16 @@ impl From<Tcd0AttrSmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd0AttrSsize {
-    #[doc = "8-bit"]
+    #[doc = "8-bit."]
     EIGHT = 0x0,
-    #[doc = "16-bit"]
+    #[doc = "16-bit."]
     SIXTEEN_BIT = 0x01,
-    #[doc = "32-bit"]
+    #[doc = "32-bit."]
     THIRTYTWO_BIT = 0x02,
-    #[doc = "64-bit"]
+    #[doc = "64-bit."]
     SIXTYFOUR = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "32-byte burst (4 beats of 64 bits)"]
+    #[doc = "32-byte burst (4 beats of 64 bits)."]
     THIRTYTWO_BYTE = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -1847,12 +1847,12 @@ impl From<Tcd0AttrSsize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd0CsrBwc {
-    #[doc = "No eDMA engine stalls"]
+    #[doc = "No eDMA engine stalls."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "eDMA engine stalls for 4 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     STALL4 = 0x02,
-    #[doc = "eDMA engine stalls for 8 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     STALL8 = 0x03,
 }
 impl Tcd0CsrBwc {
@@ -1881,9 +1881,9 @@ impl From<Tcd0CsrBwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd0CsrEsg {
-    #[doc = "The current channel's TCD is normal format"]
+    #[doc = "The current channel's TCD is normal format."]
     NORMAL = 0x0,
-    #[doc = "The current channel's TCD specifies a scatter gather format"]
+    #[doc = "The current channel's TCD specifies a scatter gather format."]
     SCATTER = 0x01,
 }
 impl Tcd0CsrEsg {
@@ -1912,25 +1912,25 @@ impl From<Tcd0CsrEsg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd10AttrSmod {
-    #[doc = "Source address modulo feature is disabled"]
+    #[doc = "Source address modulo feature is disabled."]
     DISABLED = 0x0,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_1 = 0x01,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_2 = 0x02,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_3 = 0x03,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_4 = 0x04,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_5 = 0x05,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_6 = 0x06,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_7 = 0x07,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_8 = 0x08,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -1981,16 +1981,16 @@ impl From<Tcd10AttrSmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd10AttrSsize {
-    #[doc = "8-bit"]
+    #[doc = "8-bit."]
     EIGHT = 0x0,
-    #[doc = "16-bit"]
+    #[doc = "16-bit."]
     SIXTEEN_BIT = 0x01,
-    #[doc = "32-bit"]
+    #[doc = "32-bit."]
     THIRTYTWO_BIT = 0x02,
-    #[doc = "64-bit"]
+    #[doc = "64-bit."]
     SIXTYFOUR = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "32-byte burst (4 beats of 64 bits)"]
+    #[doc = "32-byte burst (4 beats of 64 bits)."]
     THIRTYTWO_BYTE = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -2021,12 +2021,12 @@ impl From<Tcd10AttrSsize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd10CsrBwc {
-    #[doc = "No eDMA engine stalls"]
+    #[doc = "No eDMA engine stalls."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "eDMA engine stalls for 4 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     STALL4 = 0x02,
-    #[doc = "eDMA engine stalls for 8 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     STALL8 = 0x03,
 }
 impl Tcd10CsrBwc {
@@ -2055,9 +2055,9 @@ impl From<Tcd10CsrBwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd10CsrEsg {
-    #[doc = "The current channel's TCD is normal format"]
+    #[doc = "The current channel's TCD is normal format."]
     NORMAL = 0x0,
-    #[doc = "The current channel's TCD specifies a scatter gather format"]
+    #[doc = "The current channel's TCD specifies a scatter gather format."]
     SCATTER = 0x01,
 }
 impl Tcd10CsrEsg {
@@ -2086,25 +2086,25 @@ impl From<Tcd10CsrEsg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd11AttrSmod {
-    #[doc = "Source address modulo feature is disabled"]
+    #[doc = "Source address modulo feature is disabled."]
     DISABLED = 0x0,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_1 = 0x01,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_2 = 0x02,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_3 = 0x03,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_4 = 0x04,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_5 = 0x05,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_6 = 0x06,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_7 = 0x07,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_8 = 0x08,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -2155,16 +2155,16 @@ impl From<Tcd11AttrSmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd11AttrSsize {
-    #[doc = "8-bit"]
+    #[doc = "8-bit."]
     EIGHT = 0x0,
-    #[doc = "16-bit"]
+    #[doc = "16-bit."]
     SIXTEEN_BIT = 0x01,
-    #[doc = "32-bit"]
+    #[doc = "32-bit."]
     THIRTYTWO_BIT = 0x02,
-    #[doc = "64-bit"]
+    #[doc = "64-bit."]
     SIXTYFOUR = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "32-byte burst (4 beats of 64 bits)"]
+    #[doc = "32-byte burst (4 beats of 64 bits)."]
     THIRTYTWO_BYTE = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -2195,12 +2195,12 @@ impl From<Tcd11AttrSsize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd11CsrBwc {
-    #[doc = "No eDMA engine stalls"]
+    #[doc = "No eDMA engine stalls."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "eDMA engine stalls for 4 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     STALL4 = 0x02,
-    #[doc = "eDMA engine stalls for 8 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     STALL8 = 0x03,
 }
 impl Tcd11CsrBwc {
@@ -2229,9 +2229,9 @@ impl From<Tcd11CsrBwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd11CsrEsg {
-    #[doc = "The current channel's TCD is normal format"]
+    #[doc = "The current channel's TCD is normal format."]
     NORMAL = 0x0,
-    #[doc = "The current channel's TCD specifies a scatter gather format"]
+    #[doc = "The current channel's TCD specifies a scatter gather format."]
     SCATTER = 0x01,
 }
 impl Tcd11CsrEsg {
@@ -2260,25 +2260,25 @@ impl From<Tcd11CsrEsg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd12AttrSmod {
-    #[doc = "Source address modulo feature is disabled"]
+    #[doc = "Source address modulo feature is disabled."]
     DISABLED = 0x0,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_1 = 0x01,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_2 = 0x02,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_3 = 0x03,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_4 = 0x04,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_5 = 0x05,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_6 = 0x06,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_7 = 0x07,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_8 = 0x08,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -2329,16 +2329,16 @@ impl From<Tcd12AttrSmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd12AttrSsize {
-    #[doc = "8-bit"]
+    #[doc = "8-bit."]
     EIGHT = 0x0,
-    #[doc = "16-bit"]
+    #[doc = "16-bit."]
     SIXTEEN_BIT = 0x01,
-    #[doc = "32-bit"]
+    #[doc = "32-bit."]
     THIRTYTWO_BIT = 0x02,
-    #[doc = "64-bit"]
+    #[doc = "64-bit."]
     SIXTYFOUR = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "32-byte burst (4 beats of 64 bits)"]
+    #[doc = "32-byte burst (4 beats of 64 bits)."]
     THIRTYTWO_BYTE = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -2369,12 +2369,12 @@ impl From<Tcd12AttrSsize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd12CsrBwc {
-    #[doc = "No eDMA engine stalls"]
+    #[doc = "No eDMA engine stalls."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "eDMA engine stalls for 4 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     STALL4 = 0x02,
-    #[doc = "eDMA engine stalls for 8 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     STALL8 = 0x03,
 }
 impl Tcd12CsrBwc {
@@ -2403,9 +2403,9 @@ impl From<Tcd12CsrBwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd12CsrEsg {
-    #[doc = "The current channel's TCD is normal format"]
+    #[doc = "The current channel's TCD is normal format."]
     NORMAL = 0x0,
-    #[doc = "The current channel's TCD specifies a scatter gather format"]
+    #[doc = "The current channel's TCD specifies a scatter gather format."]
     SCATTER = 0x01,
 }
 impl Tcd12CsrEsg {
@@ -2434,25 +2434,25 @@ impl From<Tcd12CsrEsg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd13AttrSmod {
-    #[doc = "Source address modulo feature is disabled"]
+    #[doc = "Source address modulo feature is disabled."]
     DISABLED = 0x0,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_1 = 0x01,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_2 = 0x02,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_3 = 0x03,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_4 = 0x04,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_5 = 0x05,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_6 = 0x06,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_7 = 0x07,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_8 = 0x08,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -2503,16 +2503,16 @@ impl From<Tcd13AttrSmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd13AttrSsize {
-    #[doc = "8-bit"]
+    #[doc = "8-bit."]
     EIGHT = 0x0,
-    #[doc = "16-bit"]
+    #[doc = "16-bit."]
     SIXTEEN_BIT = 0x01,
-    #[doc = "32-bit"]
+    #[doc = "32-bit."]
     THIRTYTWO_BIT = 0x02,
-    #[doc = "64-bit"]
+    #[doc = "64-bit."]
     SIXTYFOUR = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "32-byte burst (4 beats of 64 bits)"]
+    #[doc = "32-byte burst (4 beats of 64 bits)."]
     THIRTYTWO_BYTE = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -2543,12 +2543,12 @@ impl From<Tcd13AttrSsize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd13CsrBwc {
-    #[doc = "No eDMA engine stalls"]
+    #[doc = "No eDMA engine stalls."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "eDMA engine stalls for 4 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     STALL4 = 0x02,
-    #[doc = "eDMA engine stalls for 8 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     STALL8 = 0x03,
 }
 impl Tcd13CsrBwc {
@@ -2577,9 +2577,9 @@ impl From<Tcd13CsrBwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd13CsrEsg {
-    #[doc = "The current channel's TCD is normal format"]
+    #[doc = "The current channel's TCD is normal format."]
     NORMAL = 0x0,
-    #[doc = "The current channel's TCD specifies a scatter gather format"]
+    #[doc = "The current channel's TCD specifies a scatter gather format."]
     SCATTER = 0x01,
 }
 impl Tcd13CsrEsg {
@@ -2608,25 +2608,25 @@ impl From<Tcd13CsrEsg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd14AttrSmod {
-    #[doc = "Source address modulo feature is disabled"]
+    #[doc = "Source address modulo feature is disabled."]
     DISABLED = 0x0,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_1 = 0x01,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_2 = 0x02,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_3 = 0x03,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_4 = 0x04,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_5 = 0x05,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_6 = 0x06,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_7 = 0x07,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_8 = 0x08,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -2677,16 +2677,16 @@ impl From<Tcd14AttrSmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd14AttrSsize {
-    #[doc = "8-bit"]
+    #[doc = "8-bit."]
     EIGHT = 0x0,
-    #[doc = "16-bit"]
+    #[doc = "16-bit."]
     SIXTEEN_BIT = 0x01,
-    #[doc = "32-bit"]
+    #[doc = "32-bit."]
     THIRTYTWO_BIT = 0x02,
-    #[doc = "64-bit"]
+    #[doc = "64-bit."]
     SIXTYFOUR = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "32-byte burst (4 beats of 64 bits)"]
+    #[doc = "32-byte burst (4 beats of 64 bits)."]
     THIRTYTWO_BYTE = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -2717,12 +2717,12 @@ impl From<Tcd14AttrSsize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd14CsrBwc {
-    #[doc = "No eDMA engine stalls"]
+    #[doc = "No eDMA engine stalls."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "eDMA engine stalls for 4 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     STALL4 = 0x02,
-    #[doc = "eDMA engine stalls for 8 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     STALL8 = 0x03,
 }
 impl Tcd14CsrBwc {
@@ -2751,9 +2751,9 @@ impl From<Tcd14CsrBwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd14CsrEsg {
-    #[doc = "The current channel's TCD is normal format"]
+    #[doc = "The current channel's TCD is normal format."]
     NORMAL = 0x0,
-    #[doc = "The current channel's TCD specifies a scatter gather format"]
+    #[doc = "The current channel's TCD specifies a scatter gather format."]
     SCATTER = 0x01,
 }
 impl Tcd14CsrEsg {
@@ -2782,25 +2782,25 @@ impl From<Tcd14CsrEsg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd15AttrSmod {
-    #[doc = "Source address modulo feature is disabled"]
+    #[doc = "Source address modulo feature is disabled."]
     DISABLED = 0x0,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_1 = 0x01,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_2 = 0x02,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_3 = 0x03,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_4 = 0x04,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_5 = 0x05,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_6 = 0x06,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_7 = 0x07,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_8 = 0x08,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -2851,16 +2851,16 @@ impl From<Tcd15AttrSmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd15AttrSsize {
-    #[doc = "8-bit"]
+    #[doc = "8-bit."]
     EIGHT = 0x0,
-    #[doc = "16-bit"]
+    #[doc = "16-bit."]
     SIXTEEN_BIT = 0x01,
-    #[doc = "32-bit"]
+    #[doc = "32-bit."]
     THIRTYTWO_BIT = 0x02,
-    #[doc = "64-bit"]
+    #[doc = "64-bit."]
     SIXTYFOUR = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "32-byte burst (4 beats of 64 bits)"]
+    #[doc = "32-byte burst (4 beats of 64 bits)."]
     THIRTYTWO_BYTE = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -2891,12 +2891,12 @@ impl From<Tcd15AttrSsize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd15CsrBwc {
-    #[doc = "No eDMA engine stalls"]
+    #[doc = "No eDMA engine stalls."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "eDMA engine stalls for 4 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     STALL4 = 0x02,
-    #[doc = "eDMA engine stalls for 8 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     STALL8 = 0x03,
 }
 impl Tcd15CsrBwc {
@@ -2925,9 +2925,9 @@ impl From<Tcd15CsrBwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd15CsrEsg {
-    #[doc = "The current channel's TCD is normal format"]
+    #[doc = "The current channel's TCD is normal format."]
     NORMAL = 0x0,
-    #[doc = "The current channel's TCD specifies a scatter gather format"]
+    #[doc = "The current channel's TCD specifies a scatter gather format."]
     SCATTER = 0x01,
 }
 impl Tcd15CsrEsg {
@@ -2956,25 +2956,25 @@ impl From<Tcd15CsrEsg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd16AttrSmod {
-    #[doc = "Source address modulo feature is disabled"]
+    #[doc = "Source address modulo feature is disabled."]
     DISABLED = 0x0,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_1 = 0x01,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_2 = 0x02,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_3 = 0x03,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_4 = 0x04,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_5 = 0x05,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_6 = 0x06,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_7 = 0x07,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_8 = 0x08,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -3025,16 +3025,16 @@ impl From<Tcd16AttrSmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd16AttrSsize {
-    #[doc = "8-bit"]
+    #[doc = "8-bit."]
     EIGHT = 0x0,
-    #[doc = "16-bit"]
+    #[doc = "16-bit."]
     SIXTEEN_BIT = 0x01,
-    #[doc = "32-bit"]
+    #[doc = "32-bit."]
     THIRTYTWO_BIT = 0x02,
-    #[doc = "64-bit"]
+    #[doc = "64-bit."]
     SIXTYFOUR = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "32-byte burst (4 beats of 64 bits)"]
+    #[doc = "32-byte burst (4 beats of 64 bits)."]
     THIRTYTWO_BYTE = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -3065,12 +3065,12 @@ impl From<Tcd16AttrSsize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd16CsrBwc {
-    #[doc = "No eDMA engine stalls"]
+    #[doc = "No eDMA engine stalls."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "eDMA engine stalls for 4 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     STALL4 = 0x02,
-    #[doc = "eDMA engine stalls for 8 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     STALL8 = 0x03,
 }
 impl Tcd16CsrBwc {
@@ -3099,9 +3099,9 @@ impl From<Tcd16CsrBwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd16CsrEsg {
-    #[doc = "The current channel's TCD is normal format"]
+    #[doc = "The current channel's TCD is normal format."]
     NORMAL = 0x0,
-    #[doc = "The current channel's TCD specifies a scatter gather format"]
+    #[doc = "The current channel's TCD specifies a scatter gather format."]
     SCATTER = 0x01,
 }
 impl Tcd16CsrEsg {
@@ -3130,25 +3130,25 @@ impl From<Tcd16CsrEsg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd17AttrSmod {
-    #[doc = "Source address modulo feature is disabled"]
+    #[doc = "Source address modulo feature is disabled."]
     DISABLED = 0x0,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_1 = 0x01,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_2 = 0x02,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_3 = 0x03,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_4 = 0x04,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_5 = 0x05,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_6 = 0x06,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_7 = 0x07,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_8 = 0x08,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -3199,16 +3199,16 @@ impl From<Tcd17AttrSmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd17AttrSsize {
-    #[doc = "8-bit"]
+    #[doc = "8-bit."]
     EIGHT = 0x0,
-    #[doc = "16-bit"]
+    #[doc = "16-bit."]
     SIXTEEN_BIT = 0x01,
-    #[doc = "32-bit"]
+    #[doc = "32-bit."]
     THIRTYTWO_BIT = 0x02,
-    #[doc = "64-bit"]
+    #[doc = "64-bit."]
     SIXTYFOUR = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "32-byte burst (4 beats of 64 bits)"]
+    #[doc = "32-byte burst (4 beats of 64 bits)."]
     THIRTYTWO_BYTE = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -3239,12 +3239,12 @@ impl From<Tcd17AttrSsize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd17CsrBwc {
-    #[doc = "No eDMA engine stalls"]
+    #[doc = "No eDMA engine stalls."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "eDMA engine stalls for 4 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     STALL4 = 0x02,
-    #[doc = "eDMA engine stalls for 8 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     STALL8 = 0x03,
 }
 impl Tcd17CsrBwc {
@@ -3273,9 +3273,9 @@ impl From<Tcd17CsrBwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd17CsrEsg {
-    #[doc = "The current channel's TCD is normal format"]
+    #[doc = "The current channel's TCD is normal format."]
     NORMAL = 0x0,
-    #[doc = "The current channel's TCD specifies a scatter gather format"]
+    #[doc = "The current channel's TCD specifies a scatter gather format."]
     SCATTER = 0x01,
 }
 impl Tcd17CsrEsg {
@@ -3304,25 +3304,25 @@ impl From<Tcd17CsrEsg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd18AttrSmod {
-    #[doc = "Source address modulo feature is disabled"]
+    #[doc = "Source address modulo feature is disabled."]
     DISABLED = 0x0,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_1 = 0x01,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_2 = 0x02,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_3 = 0x03,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_4 = 0x04,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_5 = 0x05,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_6 = 0x06,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_7 = 0x07,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_8 = 0x08,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -3373,16 +3373,16 @@ impl From<Tcd18AttrSmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd18AttrSsize {
-    #[doc = "8-bit"]
+    #[doc = "8-bit."]
     EIGHT = 0x0,
-    #[doc = "16-bit"]
+    #[doc = "16-bit."]
     SIXTEEN_BIT = 0x01,
-    #[doc = "32-bit"]
+    #[doc = "32-bit."]
     THIRTYTWO_BIT = 0x02,
-    #[doc = "64-bit"]
+    #[doc = "64-bit."]
     SIXTYFOUR = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "32-byte burst (4 beats of 64 bits)"]
+    #[doc = "32-byte burst (4 beats of 64 bits)."]
     THIRTYTWO_BYTE = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -3413,12 +3413,12 @@ impl From<Tcd18AttrSsize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd18CsrBwc {
-    #[doc = "No eDMA engine stalls"]
+    #[doc = "No eDMA engine stalls."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "eDMA engine stalls for 4 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     STALL4 = 0x02,
-    #[doc = "eDMA engine stalls for 8 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     STALL8 = 0x03,
 }
 impl Tcd18CsrBwc {
@@ -3447,9 +3447,9 @@ impl From<Tcd18CsrBwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd18CsrEsg {
-    #[doc = "The current channel's TCD is normal format"]
+    #[doc = "The current channel's TCD is normal format."]
     NORMAL = 0x0,
-    #[doc = "The current channel's TCD specifies a scatter gather format"]
+    #[doc = "The current channel's TCD specifies a scatter gather format."]
     SCATTER = 0x01,
 }
 impl Tcd18CsrEsg {
@@ -3478,25 +3478,25 @@ impl From<Tcd18CsrEsg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd19AttrSmod {
-    #[doc = "Source address modulo feature is disabled"]
+    #[doc = "Source address modulo feature is disabled."]
     DISABLED = 0x0,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_1 = 0x01,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_2 = 0x02,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_3 = 0x03,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_4 = 0x04,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_5 = 0x05,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_6 = 0x06,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_7 = 0x07,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_8 = 0x08,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -3547,16 +3547,16 @@ impl From<Tcd19AttrSmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd19AttrSsize {
-    #[doc = "8-bit"]
+    #[doc = "8-bit."]
     EIGHT = 0x0,
-    #[doc = "16-bit"]
+    #[doc = "16-bit."]
     SIXTEEN_BIT = 0x01,
-    #[doc = "32-bit"]
+    #[doc = "32-bit."]
     THIRTYTWO_BIT = 0x02,
-    #[doc = "64-bit"]
+    #[doc = "64-bit."]
     SIXTYFOUR = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "32-byte burst (4 beats of 64 bits)"]
+    #[doc = "32-byte burst (4 beats of 64 bits)."]
     THIRTYTWO_BYTE = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -3587,12 +3587,12 @@ impl From<Tcd19AttrSsize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd19CsrBwc {
-    #[doc = "No eDMA engine stalls"]
+    #[doc = "No eDMA engine stalls."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "eDMA engine stalls for 4 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     STALL4 = 0x02,
-    #[doc = "eDMA engine stalls for 8 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     STALL8 = 0x03,
 }
 impl Tcd19CsrBwc {
@@ -3621,9 +3621,9 @@ impl From<Tcd19CsrBwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd19CsrEsg {
-    #[doc = "The current channel's TCD is normal format"]
+    #[doc = "The current channel's TCD is normal format."]
     NORMAL = 0x0,
-    #[doc = "The current channel's TCD specifies a scatter gather format"]
+    #[doc = "The current channel's TCD specifies a scatter gather format."]
     SCATTER = 0x01,
 }
 impl Tcd19CsrEsg {
@@ -3652,25 +3652,25 @@ impl From<Tcd19CsrEsg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd1AttrSmod {
-    #[doc = "Source address modulo feature is disabled"]
+    #[doc = "Source address modulo feature is disabled."]
     DISABLED = 0x0,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_1 = 0x01,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_2 = 0x02,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_3 = 0x03,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_4 = 0x04,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_5 = 0x05,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_6 = 0x06,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_7 = 0x07,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_8 = 0x08,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -3721,16 +3721,16 @@ impl From<Tcd1AttrSmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd1AttrSsize {
-    #[doc = "8-bit"]
+    #[doc = "8-bit."]
     EIGHT = 0x0,
-    #[doc = "16-bit"]
+    #[doc = "16-bit."]
     SIXTEEN_BIT = 0x01,
-    #[doc = "32-bit"]
+    #[doc = "32-bit."]
     THIRTYTWO_BIT = 0x02,
-    #[doc = "64-bit"]
+    #[doc = "64-bit."]
     SIXTYFOUR = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "32-byte burst (4 beats of 64 bits)"]
+    #[doc = "32-byte burst (4 beats of 64 bits)."]
     THIRTYTWO_BYTE = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -3761,12 +3761,12 @@ impl From<Tcd1AttrSsize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd1CsrBwc {
-    #[doc = "No eDMA engine stalls"]
+    #[doc = "No eDMA engine stalls."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "eDMA engine stalls for 4 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     STALL4 = 0x02,
-    #[doc = "eDMA engine stalls for 8 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     STALL8 = 0x03,
 }
 impl Tcd1CsrBwc {
@@ -3795,9 +3795,9 @@ impl From<Tcd1CsrBwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd1CsrEsg {
-    #[doc = "The current channel's TCD is normal format"]
+    #[doc = "The current channel's TCD is normal format."]
     NORMAL = 0x0,
-    #[doc = "The current channel's TCD specifies a scatter gather format"]
+    #[doc = "The current channel's TCD specifies a scatter gather format."]
     SCATTER = 0x01,
 }
 impl Tcd1CsrEsg {
@@ -3826,25 +3826,25 @@ impl From<Tcd1CsrEsg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd20AttrSmod {
-    #[doc = "Source address modulo feature is disabled"]
+    #[doc = "Source address modulo feature is disabled."]
     DISABLED = 0x0,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_1 = 0x01,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_2 = 0x02,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_3 = 0x03,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_4 = 0x04,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_5 = 0x05,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_6 = 0x06,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_7 = 0x07,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_8 = 0x08,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -3895,16 +3895,16 @@ impl From<Tcd20AttrSmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd20AttrSsize {
-    #[doc = "8-bit"]
+    #[doc = "8-bit."]
     EIGHT = 0x0,
-    #[doc = "16-bit"]
+    #[doc = "16-bit."]
     SIXTEEN_BIT = 0x01,
-    #[doc = "32-bit"]
+    #[doc = "32-bit."]
     THIRTYTWO_BIT = 0x02,
-    #[doc = "64-bit"]
+    #[doc = "64-bit."]
     SIXTYFOUR = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "32-byte burst (4 beats of 64 bits)"]
+    #[doc = "32-byte burst (4 beats of 64 bits)."]
     THIRTYTWO_BYTE = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -3935,12 +3935,12 @@ impl From<Tcd20AttrSsize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd20CsrBwc {
-    #[doc = "No eDMA engine stalls"]
+    #[doc = "No eDMA engine stalls."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "eDMA engine stalls for 4 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     STALL4 = 0x02,
-    #[doc = "eDMA engine stalls for 8 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     STALL8 = 0x03,
 }
 impl Tcd20CsrBwc {
@@ -3969,9 +3969,9 @@ impl From<Tcd20CsrBwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd20CsrEsg {
-    #[doc = "The current channel's TCD is normal format"]
+    #[doc = "The current channel's TCD is normal format."]
     NORMAL = 0x0,
-    #[doc = "The current channel's TCD specifies a scatter gather format"]
+    #[doc = "The current channel's TCD specifies a scatter gather format."]
     SCATTER = 0x01,
 }
 impl Tcd20CsrEsg {
@@ -4000,25 +4000,25 @@ impl From<Tcd20CsrEsg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd21AttrSmod {
-    #[doc = "Source address modulo feature is disabled"]
+    #[doc = "Source address modulo feature is disabled."]
     DISABLED = 0x0,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_1 = 0x01,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_2 = 0x02,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_3 = 0x03,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_4 = 0x04,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_5 = 0x05,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_6 = 0x06,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_7 = 0x07,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_8 = 0x08,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -4069,16 +4069,16 @@ impl From<Tcd21AttrSmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd21AttrSsize {
-    #[doc = "8-bit"]
+    #[doc = "8-bit."]
     EIGHT = 0x0,
-    #[doc = "16-bit"]
+    #[doc = "16-bit."]
     SIXTEEN_BIT = 0x01,
-    #[doc = "32-bit"]
+    #[doc = "32-bit."]
     THIRTYTWO_BIT = 0x02,
-    #[doc = "64-bit"]
+    #[doc = "64-bit."]
     SIXTYFOUR = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "32-byte burst (4 beats of 64 bits)"]
+    #[doc = "32-byte burst (4 beats of 64 bits)."]
     THIRTYTWO_BYTE = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -4109,12 +4109,12 @@ impl From<Tcd21AttrSsize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd21CsrBwc {
-    #[doc = "No eDMA engine stalls"]
+    #[doc = "No eDMA engine stalls."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "eDMA engine stalls for 4 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     STALL4 = 0x02,
-    #[doc = "eDMA engine stalls for 8 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     STALL8 = 0x03,
 }
 impl Tcd21CsrBwc {
@@ -4143,9 +4143,9 @@ impl From<Tcd21CsrBwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd21CsrEsg {
-    #[doc = "The current channel's TCD is normal format"]
+    #[doc = "The current channel's TCD is normal format."]
     NORMAL = 0x0,
-    #[doc = "The current channel's TCD specifies a scatter gather format"]
+    #[doc = "The current channel's TCD specifies a scatter gather format."]
     SCATTER = 0x01,
 }
 impl Tcd21CsrEsg {
@@ -4174,25 +4174,25 @@ impl From<Tcd21CsrEsg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd22AttrSmod {
-    #[doc = "Source address modulo feature is disabled"]
+    #[doc = "Source address modulo feature is disabled."]
     DISABLED = 0x0,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_1 = 0x01,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_2 = 0x02,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_3 = 0x03,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_4 = 0x04,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_5 = 0x05,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_6 = 0x06,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_7 = 0x07,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_8 = 0x08,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -4243,16 +4243,16 @@ impl From<Tcd22AttrSmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd22AttrSsize {
-    #[doc = "8-bit"]
+    #[doc = "8-bit."]
     EIGHT = 0x0,
-    #[doc = "16-bit"]
+    #[doc = "16-bit."]
     SIXTEEN_BIT = 0x01,
-    #[doc = "32-bit"]
+    #[doc = "32-bit."]
     THIRTYTWO_BIT = 0x02,
-    #[doc = "64-bit"]
+    #[doc = "64-bit."]
     SIXTYFOUR = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "32-byte burst (4 beats of 64 bits)"]
+    #[doc = "32-byte burst (4 beats of 64 bits)."]
     THIRTYTWO_BYTE = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -4283,12 +4283,12 @@ impl From<Tcd22AttrSsize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd22CsrBwc {
-    #[doc = "No eDMA engine stalls"]
+    #[doc = "No eDMA engine stalls."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "eDMA engine stalls for 4 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     STALL4 = 0x02,
-    #[doc = "eDMA engine stalls for 8 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     STALL8 = 0x03,
 }
 impl Tcd22CsrBwc {
@@ -4317,9 +4317,9 @@ impl From<Tcd22CsrBwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd22CsrEsg {
-    #[doc = "The current channel's TCD is normal format"]
+    #[doc = "The current channel's TCD is normal format."]
     NORMAL = 0x0,
-    #[doc = "The current channel's TCD specifies a scatter gather format"]
+    #[doc = "The current channel's TCD specifies a scatter gather format."]
     SCATTER = 0x01,
 }
 impl Tcd22CsrEsg {
@@ -4348,25 +4348,25 @@ impl From<Tcd22CsrEsg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd23AttrSmod {
-    #[doc = "Source address modulo feature is disabled"]
+    #[doc = "Source address modulo feature is disabled."]
     DISABLED = 0x0,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_1 = 0x01,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_2 = 0x02,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_3 = 0x03,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_4 = 0x04,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_5 = 0x05,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_6 = 0x06,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_7 = 0x07,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_8 = 0x08,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -4417,16 +4417,16 @@ impl From<Tcd23AttrSmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd23AttrSsize {
-    #[doc = "8-bit"]
+    #[doc = "8-bit."]
     EIGHT = 0x0,
-    #[doc = "16-bit"]
+    #[doc = "16-bit."]
     SIXTEEN_BIT = 0x01,
-    #[doc = "32-bit"]
+    #[doc = "32-bit."]
     THIRTYTWO_BIT = 0x02,
-    #[doc = "64-bit"]
+    #[doc = "64-bit."]
     SIXTYFOUR = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "32-byte burst (4 beats of 64 bits)"]
+    #[doc = "32-byte burst (4 beats of 64 bits)."]
     THIRTYTWO_BYTE = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -4457,12 +4457,12 @@ impl From<Tcd23AttrSsize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd23CsrBwc {
-    #[doc = "No eDMA engine stalls"]
+    #[doc = "No eDMA engine stalls."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "eDMA engine stalls for 4 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     STALL4 = 0x02,
-    #[doc = "eDMA engine stalls for 8 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     STALL8 = 0x03,
 }
 impl Tcd23CsrBwc {
@@ -4491,9 +4491,9 @@ impl From<Tcd23CsrBwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd23CsrEsg {
-    #[doc = "The current channel's TCD is normal format"]
+    #[doc = "The current channel's TCD is normal format."]
     NORMAL = 0x0,
-    #[doc = "The current channel's TCD specifies a scatter gather format"]
+    #[doc = "The current channel's TCD specifies a scatter gather format."]
     SCATTER = 0x01,
 }
 impl Tcd23CsrEsg {
@@ -4522,25 +4522,25 @@ impl From<Tcd23CsrEsg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd24AttrSmod {
-    #[doc = "Source address modulo feature is disabled"]
+    #[doc = "Source address modulo feature is disabled."]
     DISABLED = 0x0,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_1 = 0x01,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_2 = 0x02,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_3 = 0x03,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_4 = 0x04,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_5 = 0x05,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_6 = 0x06,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_7 = 0x07,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_8 = 0x08,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -4591,16 +4591,16 @@ impl From<Tcd24AttrSmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd24AttrSsize {
-    #[doc = "8-bit"]
+    #[doc = "8-bit."]
     EIGHT = 0x0,
-    #[doc = "16-bit"]
+    #[doc = "16-bit."]
     SIXTEEN_BIT = 0x01,
-    #[doc = "32-bit"]
+    #[doc = "32-bit."]
     THIRTYTWO_BIT = 0x02,
-    #[doc = "64-bit"]
+    #[doc = "64-bit."]
     SIXTYFOUR = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "32-byte burst (4 beats of 64 bits)"]
+    #[doc = "32-byte burst (4 beats of 64 bits)."]
     THIRTYTWO_BYTE = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -4631,12 +4631,12 @@ impl From<Tcd24AttrSsize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd24CsrBwc {
-    #[doc = "No eDMA engine stalls"]
+    #[doc = "No eDMA engine stalls."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "eDMA engine stalls for 4 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     STALL4 = 0x02,
-    #[doc = "eDMA engine stalls for 8 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     STALL8 = 0x03,
 }
 impl Tcd24CsrBwc {
@@ -4665,9 +4665,9 @@ impl From<Tcd24CsrBwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd24CsrEsg {
-    #[doc = "The current channel's TCD is normal format"]
+    #[doc = "The current channel's TCD is normal format."]
     NORMAL = 0x0,
-    #[doc = "The current channel's TCD specifies a scatter gather format"]
+    #[doc = "The current channel's TCD specifies a scatter gather format."]
     SCATTER = 0x01,
 }
 impl Tcd24CsrEsg {
@@ -4696,25 +4696,25 @@ impl From<Tcd24CsrEsg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd25AttrSmod {
-    #[doc = "Source address modulo feature is disabled"]
+    #[doc = "Source address modulo feature is disabled."]
     DISABLED = 0x0,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_1 = 0x01,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_2 = 0x02,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_3 = 0x03,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_4 = 0x04,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_5 = 0x05,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_6 = 0x06,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_7 = 0x07,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_8 = 0x08,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -4765,16 +4765,16 @@ impl From<Tcd25AttrSmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd25AttrSsize {
-    #[doc = "8-bit"]
+    #[doc = "8-bit."]
     EIGHT = 0x0,
-    #[doc = "16-bit"]
+    #[doc = "16-bit."]
     SIXTEEN_BIT = 0x01,
-    #[doc = "32-bit"]
+    #[doc = "32-bit."]
     THIRTYTWO_BIT = 0x02,
-    #[doc = "64-bit"]
+    #[doc = "64-bit."]
     SIXTYFOUR = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "32-byte burst (4 beats of 64 bits)"]
+    #[doc = "32-byte burst (4 beats of 64 bits)."]
     THIRTYTWO_BYTE = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -4805,12 +4805,12 @@ impl From<Tcd25AttrSsize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd25CsrBwc {
-    #[doc = "No eDMA engine stalls"]
+    #[doc = "No eDMA engine stalls."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "eDMA engine stalls for 4 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     STALL4 = 0x02,
-    #[doc = "eDMA engine stalls for 8 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     STALL8 = 0x03,
 }
 impl Tcd25CsrBwc {
@@ -4839,9 +4839,9 @@ impl From<Tcd25CsrBwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd25CsrEsg {
-    #[doc = "The current channel's TCD is normal format"]
+    #[doc = "The current channel's TCD is normal format."]
     NORMAL = 0x0,
-    #[doc = "The current channel's TCD specifies a scatter gather format"]
+    #[doc = "The current channel's TCD specifies a scatter gather format."]
     SCATTER = 0x01,
 }
 impl Tcd25CsrEsg {
@@ -4870,25 +4870,25 @@ impl From<Tcd25CsrEsg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd26AttrSmod {
-    #[doc = "Source address modulo feature is disabled"]
+    #[doc = "Source address modulo feature is disabled."]
     DISABLED = 0x0,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_1 = 0x01,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_2 = 0x02,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_3 = 0x03,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_4 = 0x04,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_5 = 0x05,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_6 = 0x06,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_7 = 0x07,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_8 = 0x08,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -4939,16 +4939,16 @@ impl From<Tcd26AttrSmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd26AttrSsize {
-    #[doc = "8-bit"]
+    #[doc = "8-bit."]
     EIGHT = 0x0,
-    #[doc = "16-bit"]
+    #[doc = "16-bit."]
     SIXTEEN_BIT = 0x01,
-    #[doc = "32-bit"]
+    #[doc = "32-bit."]
     THIRTYTWO_BIT = 0x02,
-    #[doc = "64-bit"]
+    #[doc = "64-bit."]
     SIXTYFOUR = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "32-byte burst (4 beats of 64 bits)"]
+    #[doc = "32-byte burst (4 beats of 64 bits)."]
     THIRTYTWO_BYTE = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -4979,12 +4979,12 @@ impl From<Tcd26AttrSsize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd26CsrBwc {
-    #[doc = "No eDMA engine stalls"]
+    #[doc = "No eDMA engine stalls."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "eDMA engine stalls for 4 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     STALL4 = 0x02,
-    #[doc = "eDMA engine stalls for 8 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     STALL8 = 0x03,
 }
 impl Tcd26CsrBwc {
@@ -5013,9 +5013,9 @@ impl From<Tcd26CsrBwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd26CsrEsg {
-    #[doc = "The current channel's TCD is normal format"]
+    #[doc = "The current channel's TCD is normal format."]
     NORMAL = 0x0,
-    #[doc = "The current channel's TCD specifies a scatter gather format"]
+    #[doc = "The current channel's TCD specifies a scatter gather format."]
     SCATTER = 0x01,
 }
 impl Tcd26CsrEsg {
@@ -5044,25 +5044,25 @@ impl From<Tcd26CsrEsg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd27AttrSmod {
-    #[doc = "Source address modulo feature is disabled"]
+    #[doc = "Source address modulo feature is disabled."]
     DISABLED = 0x0,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_1 = 0x01,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_2 = 0x02,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_3 = 0x03,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_4 = 0x04,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_5 = 0x05,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_6 = 0x06,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_7 = 0x07,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_8 = 0x08,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -5113,16 +5113,16 @@ impl From<Tcd27AttrSmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd27AttrSsize {
-    #[doc = "8-bit"]
+    #[doc = "8-bit."]
     EIGHT = 0x0,
-    #[doc = "16-bit"]
+    #[doc = "16-bit."]
     SIXTEEN_BIT = 0x01,
-    #[doc = "32-bit"]
+    #[doc = "32-bit."]
     THIRTYTWO_BIT = 0x02,
-    #[doc = "64-bit"]
+    #[doc = "64-bit."]
     SIXTYFOUR = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "32-byte burst (4 beats of 64 bits)"]
+    #[doc = "32-byte burst (4 beats of 64 bits)."]
     THIRTYTWO_BYTE = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -5153,12 +5153,12 @@ impl From<Tcd27AttrSsize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd27CsrBwc {
-    #[doc = "No eDMA engine stalls"]
+    #[doc = "No eDMA engine stalls."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "eDMA engine stalls for 4 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     STALL4 = 0x02,
-    #[doc = "eDMA engine stalls for 8 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     STALL8 = 0x03,
 }
 impl Tcd27CsrBwc {
@@ -5187,9 +5187,9 @@ impl From<Tcd27CsrBwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd27CsrEsg {
-    #[doc = "The current channel's TCD is normal format"]
+    #[doc = "The current channel's TCD is normal format."]
     NORMAL = 0x0,
-    #[doc = "The current channel's TCD specifies a scatter gather format"]
+    #[doc = "The current channel's TCD specifies a scatter gather format."]
     SCATTER = 0x01,
 }
 impl Tcd27CsrEsg {
@@ -5218,25 +5218,25 @@ impl From<Tcd27CsrEsg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd28AttrSmod {
-    #[doc = "Source address modulo feature is disabled"]
+    #[doc = "Source address modulo feature is disabled."]
     DISABLED = 0x0,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_1 = 0x01,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_2 = 0x02,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_3 = 0x03,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_4 = 0x04,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_5 = 0x05,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_6 = 0x06,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_7 = 0x07,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_8 = 0x08,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -5287,16 +5287,16 @@ impl From<Tcd28AttrSmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd28AttrSsize {
-    #[doc = "8-bit"]
+    #[doc = "8-bit."]
     EIGHT = 0x0,
-    #[doc = "16-bit"]
+    #[doc = "16-bit."]
     SIXTEEN_BIT = 0x01,
-    #[doc = "32-bit"]
+    #[doc = "32-bit."]
     THIRTYTWO_BIT = 0x02,
-    #[doc = "64-bit"]
+    #[doc = "64-bit."]
     SIXTYFOUR = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "32-byte burst (4 beats of 64 bits)"]
+    #[doc = "32-byte burst (4 beats of 64 bits)."]
     THIRTYTWO_BYTE = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -5327,12 +5327,12 @@ impl From<Tcd28AttrSsize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd28CsrBwc {
-    #[doc = "No eDMA engine stalls"]
+    #[doc = "No eDMA engine stalls."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "eDMA engine stalls for 4 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     STALL4 = 0x02,
-    #[doc = "eDMA engine stalls for 8 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     STALL8 = 0x03,
 }
 impl Tcd28CsrBwc {
@@ -5361,9 +5361,9 @@ impl From<Tcd28CsrBwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd28CsrEsg {
-    #[doc = "The current channel's TCD is normal format"]
+    #[doc = "The current channel's TCD is normal format."]
     NORMAL = 0x0,
-    #[doc = "The current channel's TCD specifies a scatter gather format"]
+    #[doc = "The current channel's TCD specifies a scatter gather format."]
     SCATTER = 0x01,
 }
 impl Tcd28CsrEsg {
@@ -5392,25 +5392,25 @@ impl From<Tcd28CsrEsg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd29AttrSmod {
-    #[doc = "Source address modulo feature is disabled"]
+    #[doc = "Source address modulo feature is disabled."]
     DISABLED = 0x0,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_1 = 0x01,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_2 = 0x02,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_3 = 0x03,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_4 = 0x04,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_5 = 0x05,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_6 = 0x06,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_7 = 0x07,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_8 = 0x08,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -5461,16 +5461,16 @@ impl From<Tcd29AttrSmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd29AttrSsize {
-    #[doc = "8-bit"]
+    #[doc = "8-bit."]
     EIGHT = 0x0,
-    #[doc = "16-bit"]
+    #[doc = "16-bit."]
     SIXTEEN_BIT = 0x01,
-    #[doc = "32-bit"]
+    #[doc = "32-bit."]
     THIRTYTWO_BIT = 0x02,
-    #[doc = "64-bit"]
+    #[doc = "64-bit."]
     SIXTYFOUR = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "32-byte burst (4 beats of 64 bits)"]
+    #[doc = "32-byte burst (4 beats of 64 bits)."]
     THIRTYTWO_BYTE = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -5501,12 +5501,12 @@ impl From<Tcd29AttrSsize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd29CsrBwc {
-    #[doc = "No eDMA engine stalls"]
+    #[doc = "No eDMA engine stalls."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "eDMA engine stalls for 4 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     STALL4 = 0x02,
-    #[doc = "eDMA engine stalls for 8 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     STALL8 = 0x03,
 }
 impl Tcd29CsrBwc {
@@ -5535,9 +5535,9 @@ impl From<Tcd29CsrBwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd29CsrEsg {
-    #[doc = "The current channel's TCD is normal format"]
+    #[doc = "The current channel's TCD is normal format."]
     NORMAL = 0x0,
-    #[doc = "The current channel's TCD specifies a scatter gather format"]
+    #[doc = "The current channel's TCD specifies a scatter gather format."]
     SCATTER = 0x01,
 }
 impl Tcd29CsrEsg {
@@ -5566,25 +5566,25 @@ impl From<Tcd29CsrEsg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd2AttrSmod {
-    #[doc = "Source address modulo feature is disabled"]
+    #[doc = "Source address modulo feature is disabled."]
     DISABLED = 0x0,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_1 = 0x01,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_2 = 0x02,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_3 = 0x03,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_4 = 0x04,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_5 = 0x05,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_6 = 0x06,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_7 = 0x07,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_8 = 0x08,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -5635,16 +5635,16 @@ impl From<Tcd2AttrSmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd2AttrSsize {
-    #[doc = "8-bit"]
+    #[doc = "8-bit."]
     EIGHT = 0x0,
-    #[doc = "16-bit"]
+    #[doc = "16-bit."]
     SIXTEEN_BIT = 0x01,
-    #[doc = "32-bit"]
+    #[doc = "32-bit."]
     THIRTYTWO_BIT = 0x02,
-    #[doc = "64-bit"]
+    #[doc = "64-bit."]
     SIXTYFOUR = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "32-byte burst (4 beats of 64 bits)"]
+    #[doc = "32-byte burst (4 beats of 64 bits)."]
     THIRTYTWO_BYTE = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -5675,12 +5675,12 @@ impl From<Tcd2AttrSsize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd2CsrBwc {
-    #[doc = "No eDMA engine stalls"]
+    #[doc = "No eDMA engine stalls."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "eDMA engine stalls for 4 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     STALL4 = 0x02,
-    #[doc = "eDMA engine stalls for 8 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     STALL8 = 0x03,
 }
 impl Tcd2CsrBwc {
@@ -5709,9 +5709,9 @@ impl From<Tcd2CsrBwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd2CsrEsg {
-    #[doc = "The current channel's TCD is normal format"]
+    #[doc = "The current channel's TCD is normal format."]
     NORMAL = 0x0,
-    #[doc = "The current channel's TCD specifies a scatter gather format"]
+    #[doc = "The current channel's TCD specifies a scatter gather format."]
     SCATTER = 0x01,
 }
 impl Tcd2CsrEsg {
@@ -5740,25 +5740,25 @@ impl From<Tcd2CsrEsg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd30AttrSmod {
-    #[doc = "Source address modulo feature is disabled"]
+    #[doc = "Source address modulo feature is disabled."]
     DISABLED = 0x0,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_1 = 0x01,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_2 = 0x02,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_3 = 0x03,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_4 = 0x04,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_5 = 0x05,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_6 = 0x06,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_7 = 0x07,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_8 = 0x08,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -5809,16 +5809,16 @@ impl From<Tcd30AttrSmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd30AttrSsize {
-    #[doc = "8-bit"]
+    #[doc = "8-bit."]
     EIGHT = 0x0,
-    #[doc = "16-bit"]
+    #[doc = "16-bit."]
     SIXTEEN_BIT = 0x01,
-    #[doc = "32-bit"]
+    #[doc = "32-bit."]
     THIRTYTWO_BIT = 0x02,
-    #[doc = "64-bit"]
+    #[doc = "64-bit."]
     SIXTYFOUR = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "32-byte burst (4 beats of 64 bits)"]
+    #[doc = "32-byte burst (4 beats of 64 bits)."]
     THIRTYTWO_BYTE = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -5849,12 +5849,12 @@ impl From<Tcd30AttrSsize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd30CsrBwc {
-    #[doc = "No eDMA engine stalls"]
+    #[doc = "No eDMA engine stalls."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "eDMA engine stalls for 4 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     STALL4 = 0x02,
-    #[doc = "eDMA engine stalls for 8 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     STALL8 = 0x03,
 }
 impl Tcd30CsrBwc {
@@ -5883,9 +5883,9 @@ impl From<Tcd30CsrBwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd30CsrEsg {
-    #[doc = "The current channel's TCD is normal format"]
+    #[doc = "The current channel's TCD is normal format."]
     NORMAL = 0x0,
-    #[doc = "The current channel's TCD specifies a scatter gather format"]
+    #[doc = "The current channel's TCD specifies a scatter gather format."]
     SCATTER = 0x01,
 }
 impl Tcd30CsrEsg {
@@ -5914,25 +5914,25 @@ impl From<Tcd30CsrEsg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd31AttrSmod {
-    #[doc = "Source address modulo feature is disabled"]
+    #[doc = "Source address modulo feature is disabled."]
     DISABLED = 0x0,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_1 = 0x01,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_2 = 0x02,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_3 = 0x03,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_4 = 0x04,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_5 = 0x05,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_6 = 0x06,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_7 = 0x07,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_8 = 0x08,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -5983,16 +5983,16 @@ impl From<Tcd31AttrSmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd31AttrSsize {
-    #[doc = "8-bit"]
+    #[doc = "8-bit."]
     EIGHT = 0x0,
-    #[doc = "16-bit"]
+    #[doc = "16-bit."]
     SIXTEEN_BIT = 0x01,
-    #[doc = "32-bit"]
+    #[doc = "32-bit."]
     THIRTYTWO_BIT = 0x02,
-    #[doc = "64-bit"]
+    #[doc = "64-bit."]
     SIXTYFOUR = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "32-byte burst (4 beats of 64 bits)"]
+    #[doc = "32-byte burst (4 beats of 64 bits)."]
     THIRTYTWO_BYTE = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -6023,12 +6023,12 @@ impl From<Tcd31AttrSsize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd31CsrBwc {
-    #[doc = "No eDMA engine stalls"]
+    #[doc = "No eDMA engine stalls."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "eDMA engine stalls for 4 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     STALL4 = 0x02,
-    #[doc = "eDMA engine stalls for 8 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     STALL8 = 0x03,
 }
 impl Tcd31CsrBwc {
@@ -6057,9 +6057,9 @@ impl From<Tcd31CsrBwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd31CsrEsg {
-    #[doc = "The current channel's TCD is normal format"]
+    #[doc = "The current channel's TCD is normal format."]
     NORMAL = 0x0,
-    #[doc = "The current channel's TCD specifies a scatter gather format"]
+    #[doc = "The current channel's TCD specifies a scatter gather format."]
     SCATTER = 0x01,
 }
 impl Tcd31CsrEsg {
@@ -6088,25 +6088,25 @@ impl From<Tcd31CsrEsg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd3AttrSmod {
-    #[doc = "Source address modulo feature is disabled"]
+    #[doc = "Source address modulo feature is disabled."]
     DISABLED = 0x0,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_1 = 0x01,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_2 = 0x02,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_3 = 0x03,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_4 = 0x04,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_5 = 0x05,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_6 = 0x06,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_7 = 0x07,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_8 = 0x08,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -6157,16 +6157,16 @@ impl From<Tcd3AttrSmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd3AttrSsize {
-    #[doc = "8-bit"]
+    #[doc = "8-bit."]
     EIGHT = 0x0,
-    #[doc = "16-bit"]
+    #[doc = "16-bit."]
     SIXTEEN_BIT = 0x01,
-    #[doc = "32-bit"]
+    #[doc = "32-bit."]
     THIRTYTWO_BIT = 0x02,
-    #[doc = "64-bit"]
+    #[doc = "64-bit."]
     SIXTYFOUR = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "32-byte burst (4 beats of 64 bits)"]
+    #[doc = "32-byte burst (4 beats of 64 bits)."]
     THIRTYTWO_BYTE = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -6197,12 +6197,12 @@ impl From<Tcd3AttrSsize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd3CsrBwc {
-    #[doc = "No eDMA engine stalls"]
+    #[doc = "No eDMA engine stalls."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "eDMA engine stalls for 4 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     STALL4 = 0x02,
-    #[doc = "eDMA engine stalls for 8 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     STALL8 = 0x03,
 }
 impl Tcd3CsrBwc {
@@ -6231,9 +6231,9 @@ impl From<Tcd3CsrBwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd3CsrEsg {
-    #[doc = "The current channel's TCD is normal format"]
+    #[doc = "The current channel's TCD is normal format."]
     NORMAL = 0x0,
-    #[doc = "The current channel's TCD specifies a scatter gather format"]
+    #[doc = "The current channel's TCD specifies a scatter gather format."]
     SCATTER = 0x01,
 }
 impl Tcd3CsrEsg {
@@ -6262,25 +6262,25 @@ impl From<Tcd3CsrEsg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd4AttrSmod {
-    #[doc = "Source address modulo feature is disabled"]
+    #[doc = "Source address modulo feature is disabled."]
     DISABLED = 0x0,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_1 = 0x01,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_2 = 0x02,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_3 = 0x03,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_4 = 0x04,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_5 = 0x05,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_6 = 0x06,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_7 = 0x07,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_8 = 0x08,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -6331,16 +6331,16 @@ impl From<Tcd4AttrSmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd4AttrSsize {
-    #[doc = "8-bit"]
+    #[doc = "8-bit."]
     EIGHT = 0x0,
-    #[doc = "16-bit"]
+    #[doc = "16-bit."]
     SIXTEEN_BIT = 0x01,
-    #[doc = "32-bit"]
+    #[doc = "32-bit."]
     THIRTYTWO_BIT = 0x02,
-    #[doc = "64-bit"]
+    #[doc = "64-bit."]
     SIXTYFOUR = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "32-byte burst (4 beats of 64 bits)"]
+    #[doc = "32-byte burst (4 beats of 64 bits)."]
     THIRTYTWO_BYTE = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -6371,12 +6371,12 @@ impl From<Tcd4AttrSsize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd4CsrBwc {
-    #[doc = "No eDMA engine stalls"]
+    #[doc = "No eDMA engine stalls."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "eDMA engine stalls for 4 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     STALL4 = 0x02,
-    #[doc = "eDMA engine stalls for 8 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     STALL8 = 0x03,
 }
 impl Tcd4CsrBwc {
@@ -6405,9 +6405,9 @@ impl From<Tcd4CsrBwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd4CsrEsg {
-    #[doc = "The current channel's TCD is normal format"]
+    #[doc = "The current channel's TCD is normal format."]
     NORMAL = 0x0,
-    #[doc = "The current channel's TCD specifies a scatter gather format"]
+    #[doc = "The current channel's TCD specifies a scatter gather format."]
     SCATTER = 0x01,
 }
 impl Tcd4CsrEsg {
@@ -6436,25 +6436,25 @@ impl From<Tcd4CsrEsg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd5AttrSmod {
-    #[doc = "Source address modulo feature is disabled"]
+    #[doc = "Source address modulo feature is disabled."]
     DISABLED = 0x0,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_1 = 0x01,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_2 = 0x02,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_3 = 0x03,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_4 = 0x04,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_5 = 0x05,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_6 = 0x06,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_7 = 0x07,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_8 = 0x08,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -6505,16 +6505,16 @@ impl From<Tcd5AttrSmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd5AttrSsize {
-    #[doc = "8-bit"]
+    #[doc = "8-bit."]
     EIGHT = 0x0,
-    #[doc = "16-bit"]
+    #[doc = "16-bit."]
     SIXTEEN_BIT = 0x01,
-    #[doc = "32-bit"]
+    #[doc = "32-bit."]
     THIRTYTWO_BIT = 0x02,
-    #[doc = "64-bit"]
+    #[doc = "64-bit."]
     SIXTYFOUR = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "32-byte burst (4 beats of 64 bits)"]
+    #[doc = "32-byte burst (4 beats of 64 bits)."]
     THIRTYTWO_BYTE = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -6545,12 +6545,12 @@ impl From<Tcd5AttrSsize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd5CsrBwc {
-    #[doc = "No eDMA engine stalls"]
+    #[doc = "No eDMA engine stalls."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "eDMA engine stalls for 4 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     STALL4 = 0x02,
-    #[doc = "eDMA engine stalls for 8 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     STALL8 = 0x03,
 }
 impl Tcd5CsrBwc {
@@ -6579,9 +6579,9 @@ impl From<Tcd5CsrBwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd5CsrEsg {
-    #[doc = "The current channel's TCD is normal format"]
+    #[doc = "The current channel's TCD is normal format."]
     NORMAL = 0x0,
-    #[doc = "The current channel's TCD specifies a scatter gather format"]
+    #[doc = "The current channel's TCD specifies a scatter gather format."]
     SCATTER = 0x01,
 }
 impl Tcd5CsrEsg {
@@ -6610,25 +6610,25 @@ impl From<Tcd5CsrEsg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd6AttrSmod {
-    #[doc = "Source address modulo feature is disabled"]
+    #[doc = "Source address modulo feature is disabled."]
     DISABLED = 0x0,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_1 = 0x01,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_2 = 0x02,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_3 = 0x03,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_4 = 0x04,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_5 = 0x05,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_6 = 0x06,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_7 = 0x07,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_8 = 0x08,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -6679,16 +6679,16 @@ impl From<Tcd6AttrSmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd6AttrSsize {
-    #[doc = "8-bit"]
+    #[doc = "8-bit."]
     EIGHT = 0x0,
-    #[doc = "16-bit"]
+    #[doc = "16-bit."]
     SIXTEEN_BIT = 0x01,
-    #[doc = "32-bit"]
+    #[doc = "32-bit."]
     THIRTYTWO_BIT = 0x02,
-    #[doc = "64-bit"]
+    #[doc = "64-bit."]
     SIXTYFOUR = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "32-byte burst (4 beats of 64 bits)"]
+    #[doc = "32-byte burst (4 beats of 64 bits)."]
     THIRTYTWO_BYTE = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -6719,12 +6719,12 @@ impl From<Tcd6AttrSsize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd6CsrBwc {
-    #[doc = "No eDMA engine stalls"]
+    #[doc = "No eDMA engine stalls."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "eDMA engine stalls for 4 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     STALL4 = 0x02,
-    #[doc = "eDMA engine stalls for 8 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     STALL8 = 0x03,
 }
 impl Tcd6CsrBwc {
@@ -6753,9 +6753,9 @@ impl From<Tcd6CsrBwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd6CsrEsg {
-    #[doc = "The current channel's TCD is normal format"]
+    #[doc = "The current channel's TCD is normal format."]
     NORMAL = 0x0,
-    #[doc = "The current channel's TCD specifies a scatter gather format"]
+    #[doc = "The current channel's TCD specifies a scatter gather format."]
     SCATTER = 0x01,
 }
 impl Tcd6CsrEsg {
@@ -6784,25 +6784,25 @@ impl From<Tcd6CsrEsg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd7AttrSmod {
-    #[doc = "Source address modulo feature is disabled"]
+    #[doc = "Source address modulo feature is disabled."]
     DISABLED = 0x0,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_1 = 0x01,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_2 = 0x02,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_3 = 0x03,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_4 = 0x04,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_5 = 0x05,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_6 = 0x06,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_7 = 0x07,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_8 = 0x08,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -6853,16 +6853,16 @@ impl From<Tcd7AttrSmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd7AttrSsize {
-    #[doc = "8-bit"]
+    #[doc = "8-bit."]
     EIGHT = 0x0,
-    #[doc = "16-bit"]
+    #[doc = "16-bit."]
     SIXTEEN_BIT = 0x01,
-    #[doc = "32-bit"]
+    #[doc = "32-bit."]
     THIRTYTWO_BIT = 0x02,
-    #[doc = "64-bit"]
+    #[doc = "64-bit."]
     SIXTYFOUR = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "32-byte burst (4 beats of 64 bits)"]
+    #[doc = "32-byte burst (4 beats of 64 bits)."]
     THIRTYTWO_BYTE = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -6893,12 +6893,12 @@ impl From<Tcd7AttrSsize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd7CsrBwc {
-    #[doc = "No eDMA engine stalls"]
+    #[doc = "No eDMA engine stalls."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "eDMA engine stalls for 4 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     STALL4 = 0x02,
-    #[doc = "eDMA engine stalls for 8 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     STALL8 = 0x03,
 }
 impl Tcd7CsrBwc {
@@ -6927,9 +6927,9 @@ impl From<Tcd7CsrBwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd7CsrEsg {
-    #[doc = "The current channel's TCD is normal format"]
+    #[doc = "The current channel's TCD is normal format."]
     NORMAL = 0x0,
-    #[doc = "The current channel's TCD specifies a scatter gather format"]
+    #[doc = "The current channel's TCD specifies a scatter gather format."]
     SCATTER = 0x01,
 }
 impl Tcd7CsrEsg {
@@ -6958,25 +6958,25 @@ impl From<Tcd7CsrEsg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd8AttrSmod {
-    #[doc = "Source address modulo feature is disabled"]
+    #[doc = "Source address modulo feature is disabled."]
     DISABLED = 0x0,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_1 = 0x01,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_2 = 0x02,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_3 = 0x03,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_4 = 0x04,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_5 = 0x05,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_6 = 0x06,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_7 = 0x07,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_8 = 0x08,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -7027,16 +7027,16 @@ impl From<Tcd8AttrSmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd8AttrSsize {
-    #[doc = "8-bit"]
+    #[doc = "8-bit."]
     EIGHT = 0x0,
-    #[doc = "16-bit"]
+    #[doc = "16-bit."]
     SIXTEEN_BIT = 0x01,
-    #[doc = "32-bit"]
+    #[doc = "32-bit."]
     THIRTYTWO_BIT = 0x02,
-    #[doc = "64-bit"]
+    #[doc = "64-bit."]
     SIXTYFOUR = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "32-byte burst (4 beats of 64 bits)"]
+    #[doc = "32-byte burst (4 beats of 64 bits)."]
     THIRTYTWO_BYTE = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -7067,12 +7067,12 @@ impl From<Tcd8AttrSsize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd8CsrBwc {
-    #[doc = "No eDMA engine stalls"]
+    #[doc = "No eDMA engine stalls."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "eDMA engine stalls for 4 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     STALL4 = 0x02,
-    #[doc = "eDMA engine stalls for 8 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     STALL8 = 0x03,
 }
 impl Tcd8CsrBwc {
@@ -7101,9 +7101,9 @@ impl From<Tcd8CsrBwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd8CsrEsg {
-    #[doc = "The current channel's TCD is normal format"]
+    #[doc = "The current channel's TCD is normal format."]
     NORMAL = 0x0,
-    #[doc = "The current channel's TCD specifies a scatter gather format"]
+    #[doc = "The current channel's TCD specifies a scatter gather format."]
     SCATTER = 0x01,
 }
 impl Tcd8CsrEsg {
@@ -7132,25 +7132,25 @@ impl From<Tcd8CsrEsg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd9AttrSmod {
-    #[doc = "Source address modulo feature is disabled"]
+    #[doc = "Source address modulo feature is disabled."]
     DISABLED = 0x0,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_1 = 0x01,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_2 = 0x02,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_3 = 0x03,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_4 = 0x04,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_5 = 0x05,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_6 = 0x06,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_7 = 0x07,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_8 = 0x08,
-    #[doc = "Value defines address range used to set up circular data queue"]
+    #[doc = "Value defines address range used to set up circular data queue."]
     ENABLED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -7201,16 +7201,16 @@ impl From<Tcd9AttrSmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd9AttrSsize {
-    #[doc = "8-bit"]
+    #[doc = "8-bit."]
     EIGHT = 0x0,
-    #[doc = "16-bit"]
+    #[doc = "16-bit."]
     SIXTEEN_BIT = 0x01,
-    #[doc = "32-bit"]
+    #[doc = "32-bit."]
     THIRTYTWO_BIT = 0x02,
-    #[doc = "64-bit"]
+    #[doc = "64-bit."]
     SIXTYFOUR = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "32-byte burst (4 beats of 64 bits)"]
+    #[doc = "32-byte burst (4 beats of 64 bits)."]
     THIRTYTWO_BYTE = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -7241,12 +7241,12 @@ impl From<Tcd9AttrSsize> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd9CsrBwc {
-    #[doc = "No eDMA engine stalls"]
+    #[doc = "No eDMA engine stalls."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "eDMA engine stalls for 4 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 4 cycles after each R/W."]
     STALL4 = 0x02,
-    #[doc = "eDMA engine stalls for 8 cycles after each R/W"]
+    #[doc = "eDMA engine stalls for 8 cycles after each R/W."]
     STALL8 = 0x03,
 }
 impl Tcd9CsrBwc {
@@ -7275,9 +7275,9 @@ impl From<Tcd9CsrBwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcd9CsrEsg {
-    #[doc = "The current channel's TCD is normal format"]
+    #[doc = "The current channel's TCD is normal format."]
     NORMAL = 0x0,
-    #[doc = "The current channel's TCD specifies a scatter gather format"]
+    #[doc = "The current channel's TCD specifies a scatter gather format."]
     SCATTER = 0x01,
 }
 impl Tcd9CsrEsg {

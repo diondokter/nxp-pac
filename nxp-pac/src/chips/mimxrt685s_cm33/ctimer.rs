@@ -1,4 +1,4 @@
-#[doc = "LPC-Next0 Standard async counter/timer"]
+#[doc = "LPC-Next0 Standard async counter/timer."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctimer {
     ptr: *mut u8,

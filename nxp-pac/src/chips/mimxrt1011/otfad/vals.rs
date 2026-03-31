@@ -126,13 +126,13 @@ impl From<Fsvm> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mode {
-    #[doc = "Operating in Normal mode (NRM)"]
+    #[doc = "Operating in Normal mode (NRM)."]
     NORMAL = 0x0,
-    #[doc = "Unused (reserved)"]
+    #[doc = "Unused (reserved)."]
     RES_01 = 0x01,
-    #[doc = "Operating in Security Violation Mode (SVM)"]
+    #[doc = "Operating in Security Violation Mode (SVM)."]
     RES_10_SVM = 0x02,
-    #[doc = "Operating in Logically Disabled Mode (LDM)"]
+    #[doc = "Operating in Logically Disabled Mode (LDM)."]
     LDM = 0x03,
 }
 impl Mode {

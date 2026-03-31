@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Acmp1CmpIgenTrimDn {
-    #[doc = "no reduce"]
+    #[doc = "no reduce."]
     ACMP1_CMP_IGEN_TRIM_DN_0 = 0x0,
-    #[doc = "reduces"]
+    #[doc = "reduces."]
     ACMP1_CMP_IGEN_TRIM_DN_1 = 0x01,
 }
 impl Acmp1CmpIgenTrimDn {
@@ -33,9 +33,9 @@ impl From<Acmp1CmpIgenTrimDn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Acmp1CmpIgenTrimUp {
-    #[doc = "no increase"]
+    #[doc = "no increase."]
     ACMP1_CMP_IGEN_TRIM_UP_0 = 0x0,
-    #[doc = "increases"]
+    #[doc = "increases."]
     ACMP1_CMP_IGEN_TRIM_UP_1 = 0x01,
 }
 impl Acmp1CmpIgenTrimUp {
@@ -64,9 +64,9 @@ impl From<Acmp1CmpIgenTrimUp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Acmp1SampleSyncEn {
-    #[doc = "select XBAR output"]
+    #[doc = "select XBAR output."]
     ACMP1_SAMPLE_SYNC_EN_0 = 0x0,
-    #[doc = "select synced sample_lv"]
+    #[doc = "select synced sample_lv."]
     ACMP1_SAMPLE_SYNC_EN_1 = 0x01,
 }
 impl Acmp1SampleSyncEn {
@@ -95,9 +95,9 @@ impl From<Acmp1SampleSyncEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Acmp2CmpIgenTrimDn {
-    #[doc = "no reduce"]
+    #[doc = "no reduce."]
     ACMP2_CMP_IGEN_TRIM_DN_0 = 0x0,
-    #[doc = "reduces"]
+    #[doc = "reduces."]
     ACMP2_CMP_IGEN_TRIM_DN_1 = 0x01,
 }
 impl Acmp2CmpIgenTrimDn {
@@ -126,9 +126,9 @@ impl From<Acmp2CmpIgenTrimDn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Acmp2CmpIgenTrimUp {
-    #[doc = "no increase"]
+    #[doc = "no increase."]
     ACMP2_CMP_IGEN_TRIM_UP_0 = 0x0,
-    #[doc = "increases"]
+    #[doc = "increases."]
     ACMP2_CMP_IGEN_TRIM_UP_1 = 0x01,
 }
 impl Acmp2CmpIgenTrimUp {
@@ -157,9 +157,9 @@ impl From<Acmp2CmpIgenTrimUp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Acmp2SampleSyncEn {
-    #[doc = "select XBAR output"]
+    #[doc = "select XBAR output."]
     ACMP2_SAMPLE_SYNC_EN_0 = 0x0,
-    #[doc = "select synced sample_lv"]
+    #[doc = "select synced sample_lv."]
     ACMP2_SAMPLE_SYNC_EN_1 = 0x01,
 }
 impl Acmp2SampleSyncEn {
@@ -188,9 +188,9 @@ impl From<Acmp2SampleSyncEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Acmp3CmpIgenTrimDn {
-    #[doc = "no reduce"]
+    #[doc = "no reduce."]
     ACMP3_CMP_IGEN_TRIM_DN_0 = 0x0,
-    #[doc = "reduces"]
+    #[doc = "reduces."]
     ACMP3_CMP_IGEN_TRIM_DN_1 = 0x01,
 }
 impl Acmp3CmpIgenTrimDn {
@@ -219,9 +219,9 @@ impl From<Acmp3CmpIgenTrimDn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Acmp3CmpIgenTrimUp {
-    #[doc = "no increase"]
+    #[doc = "no increase."]
     ACMP3_CMP_IGEN_TRIM_UP_0 = 0x0,
-    #[doc = "increases"]
+    #[doc = "increases."]
     ACMP3_CMP_IGEN_TRIM_UP_1 = 0x01,
 }
 impl Acmp3CmpIgenTrimUp {
@@ -250,9 +250,9 @@ impl From<Acmp3CmpIgenTrimUp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Acmp3SampleSyncEn {
-    #[doc = "select XBAR output"]
+    #[doc = "select XBAR output."]
     ACMP3_SAMPLE_SYNC_EN_0 = 0x0,
-    #[doc = "select synced sample_lv"]
+    #[doc = "select synced sample_lv."]
     ACMP3_SAMPLE_SYNC_EN_1 = 0x01,
 }
 impl Acmp3SampleSyncEn {
@@ -281,9 +281,9 @@ impl From<Acmp3SampleSyncEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Acmp4CmpIgenTrimDn {
-    #[doc = "no reduce"]
+    #[doc = "no reduce."]
     ACMP4_CMP_IGEN_TRIM_DN_0 = 0x0,
-    #[doc = "reduces"]
+    #[doc = "reduces."]
     ACMP4_CMP_IGEN_TRIM_DN_1 = 0x01,
 }
 impl Acmp4CmpIgenTrimDn {
@@ -312,9 +312,9 @@ impl From<Acmp4CmpIgenTrimDn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Acmp4CmpIgenTrimUp {
-    #[doc = "no increase"]
+    #[doc = "no increase."]
     ACMP4_CMP_IGEN_TRIM_UP_0 = 0x0,
-    #[doc = "increases"]
+    #[doc = "increases."]
     ACMP4_CMP_IGEN_TRIM_UP_1 = 0x01,
 }
 impl Acmp4CmpIgenTrimUp {
@@ -343,9 +343,9 @@ impl From<Acmp4CmpIgenTrimUp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Acmp4SampleSyncEn {
-    #[doc = "select XBAR output"]
+    #[doc = "select XBAR output."]
     ACMP4_SAMPLE_SYNC_EN_0 = 0x0,
-    #[doc = "select synced sample_lv"]
+    #[doc = "select synced sample_lv."]
     ACMP4_SAMPLE_SYNC_EN_1 = 0x01,
 }
 impl Acmp4SampleSyncEn {
@@ -467,9 +467,9 @@ impl From<AwcacheUsdhc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AxbsLAhbxlHighPriority {
-    #[doc = "AXBS_L AHBXL master does not have high priority"]
+    #[doc = "AXBS_L AHBXL master does not have high priority."]
     AXBS_L_AHBXL_HIGH_PRIORITY_0 = 0x0,
-    #[doc = "AXBS_P AHBXL master has high priority"]
+    #[doc = "AXBS_P AHBXL master has high priority."]
     AXBS_L_AHBXL_HIGH_PRIORITY_1 = 0x01,
 }
 impl AxbsLAhbxlHighPriority {
@@ -498,9 +498,9 @@ impl From<AxbsLAhbxlHighPriority> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AxbsLDmaHighPriority {
-    #[doc = "AXBS_L DMA master does not have high priority"]
+    #[doc = "AXBS_L DMA master does not have high priority."]
     AXBS_L_DMA_HIGH_PRIORITY_0 = 0x0,
-    #[doc = "AXBS_L DMA master has high priority"]
+    #[doc = "AXBS_L DMA master has high priority."]
     AXBS_L_DMA_HIGH_PRIORITY_1 = 0x01,
 }
 impl AxbsLDmaHighPriority {
@@ -531,7 +531,7 @@ impl From<AxbsLDmaHighPriority> for u8 {
 pub enum AxbsLForceRoundRobin {
     #[doc = "AXBS_L masters are not arbitored in round robin, depending on DMA and AHBXL master priority settings."]
     AXBS_L_FORCE_ROUND_ROBIN_0 = 0x0,
-    #[doc = "AXBS_L masters are arbitored in round robin"]
+    #[doc = "AXBS_L masters are arbitored in round robin."]
     AXBS_L_FORCE_ROUND_ROBIN_1 = 0x01,
 }
 impl AxbsLForceRoundRobin {
@@ -560,9 +560,9 @@ impl From<AxbsLForceRoundRobin> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AxbsLHaltReq {
-    #[doc = "axbs_l normal run"]
+    #[doc = "axbs_l normal run."]
     AXBS_L_HALT_REQ_0 = 0x0,
-    #[doc = "request to halt axbs_l"]
+    #[doc = "request to halt axbs_l."]
     AXBS_L_HALT_REQ_1 = 0x01,
 }
 impl AxbsLHaltReq {
@@ -591,9 +591,9 @@ impl From<AxbsLHaltReq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AxbsLHalted {
-    #[doc = "axbs_l is not halted"]
+    #[doc = "axbs_l is not halted."]
     AXBS_L_HALTED_0 = 0x0,
-    #[doc = "axbs_l is in halted status"]
+    #[doc = "axbs_l is in halted status."]
     AXBS_L_HALTED_1 = 0x01,
 }
 impl AxbsLHalted {
@@ -624,7 +624,7 @@ impl From<AxbsLHalted> for u8 {
 pub enum AxbsPForceRoundRobin {
     #[doc = "AXBS_P masters are not arbitored in round robin, depending on M0/M1 master priority settings."]
     AXBS_P_FORCE_ROUND_ROBIN_0 = 0x0,
-    #[doc = "AXBS_P masters are arbitored in round robin"]
+    #[doc = "AXBS_P masters are arbitored in round robin."]
     AXBS_P_FORCE_ROUND_ROBIN_1 = 0x01,
 }
 impl AxbsPForceRoundRobin {
@@ -653,9 +653,9 @@ impl From<AxbsPForceRoundRobin> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AxbsPM0HighPriority {
-    #[doc = "AXBS_P M0 master doesn't have high priority"]
+    #[doc = "AXBS_P M0 master doesn't have high priority."]
     AXBS_P_M0_HIGH_PRIORITY_0 = 0x0,
-    #[doc = "AXBS_P M0 master has high priority"]
+    #[doc = "AXBS_P M0 master has high priority."]
     AXBS_P_M0_HIGH_PRIORITY_1 = 0x01,
 }
 impl AxbsPM0HighPriority {
@@ -684,9 +684,9 @@ impl From<AxbsPM0HighPriority> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AxbsPM1HighPriority {
-    #[doc = "AXBS_P M1 master does not have high priority"]
+    #[doc = "AXBS_P M1 master does not have high priority."]
     AXBS_P_M1_HIGH_PRIORITY_0 = 0x0,
-    #[doc = "AXBS_P M1 master has high priority"]
+    #[doc = "AXBS_P M1 master has high priority."]
     AXBS_P_M1_HIGH_PRIORITY_1 = 0x01,
 }
 impl AxbsPM1HighPriority {
@@ -777,9 +777,9 @@ impl From<CacheUsb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Can1StopAck {
-    #[doc = "CAN1 stop acknowledge is not asserted"]
+    #[doc = "CAN1 stop acknowledge is not asserted."]
     CAN1_STOP_ACK_0 = 0x0,
-    #[doc = "CAN1 stop acknowledge is asserted"]
+    #[doc = "CAN1 stop acknowledge is asserted."]
     CAN1_STOP_ACK_1 = 0x01,
 }
 impl Can1StopAck {
@@ -808,9 +808,9 @@ impl From<Can1StopAck> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Can1StopReq {
-    #[doc = "stop request off"]
+    #[doc = "stop request off."]
     CAN1_STOP_REQ_0 = 0x0,
-    #[doc = "stop request on"]
+    #[doc = "stop request on."]
     CAN1_STOP_REQ_1 = 0x01,
 }
 impl Can1StopReq {
@@ -839,9 +839,9 @@ impl From<Can1StopReq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Can2StopAck {
-    #[doc = "CAN2 stop acknowledge is not asserted"]
+    #[doc = "CAN2 stop acknowledge is not asserted."]
     CAN2_STOP_ACK_0 = 0x0,
-    #[doc = "CAN2 stop acknowledge is asserted"]
+    #[doc = "CAN2 stop acknowledge is asserted."]
     CAN2_STOP_ACK_1 = 0x01,
 }
 impl Can2StopAck {
@@ -870,9 +870,9 @@ impl From<Can2StopAck> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Can2StopReq {
-    #[doc = "stop request off"]
+    #[doc = "stop request off."]
     CAN2_STOP_REQ_0 = 0x0,
-    #[doc = "stop request on"]
+    #[doc = "stop request on."]
     CAN2_STOP_REQ_1 = 0x01,
 }
 impl Can2StopReq {
@@ -901,9 +901,9 @@ impl From<Can2StopReq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CanfdFilterBypass {
-    #[doc = "enable CANFD filter"]
+    #[doc = "enable CANFD filter."]
     CANFD_FILTER_BYPASS_0 = 0x0,
-    #[doc = "disable CANFD filter"]
+    #[doc = "disable CANFD filter."]
     CANFD_FILTER_BYPASS_1 = 0x01,
 }
 impl CanfdFilterBypass {
@@ -932,9 +932,9 @@ impl From<CanfdFilterBypass> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CanfdStopAck {
-    #[doc = "CANFD stop acknowledge is not asserted"]
+    #[doc = "CANFD stop acknowledge is not asserted."]
     CANFD_STOP_ACK_0 = 0x0,
-    #[doc = "CANFD stop acknowledge is asserted"]
+    #[doc = "CANFD stop acknowledge is asserted."]
     CANFD_STOP_ACK_1 = 0x01,
 }
 impl CanfdStopAck {
@@ -963,9 +963,9 @@ impl From<CanfdStopAck> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CanfdStopReq {
-    #[doc = "stop request off"]
+    #[doc = "stop request off."]
     CANFD_STOP_REQ_0 = 0x0,
-    #[doc = "stop request on"]
+    #[doc = "stop request on."]
     CANFD_STOP_REQ_1 = 0x01,
 }
 impl CanfdStopReq {
@@ -1056,9 +1056,9 @@ impl From<DbgEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DcpKeySel {
-    #[doc = "Select \\[127:0\\] from SNVS Master Key as dcp key"]
+    #[doc = "Select \\[127:0\\] from SNVS Master Key as dcp key."]
     DCP_KEY_SEL_0 = 0x0,
-    #[doc = "Select \\[255:128\\] from SNVS Master Key as dcp key"]
+    #[doc = "Select \\[255:128\\] from SNVS Master Key as dcp key."]
     DCP_KEY_SEL_1 = 0x01,
 }
 impl DcpKeySel {
@@ -1118,7 +1118,7 @@ impl From<DcpkeyOcotpOrKeymux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EdmaStopAck {
-    #[doc = "EDMA stop acknowledge is not asserted"]
+    #[doc = "EDMA stop acknowledge is not asserted."]
     EDMA_STOP_ACK_0 = 0x0,
     #[doc = "EDMA stop acknowledge is asserted (EDMA is in STOP mode)."]
     EDMA_STOP_ACK_1 = 0x01,
@@ -1149,9 +1149,9 @@ impl From<EdmaStopAck> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EdmaStopReq {
-    #[doc = "stop request off"]
+    #[doc = "stop request off."]
     EDMA_STOP_REQ_0 = 0x0,
-    #[doc = "stop request on"]
+    #[doc = "stop request on."]
     EDMA_STOP_REQ_1 = 0x01,
 }
 impl EdmaStopReq {
@@ -1211,9 +1211,9 @@ impl From<Enet1ClkSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Enet1TxClkDir {
-    #[doc = "ENET1_TX_CLK output driver is disabled"]
+    #[doc = "ENET1_TX_CLK output driver is disabled."]
     ENET1_TX_CLK_DIR_0 = 0x0,
-    #[doc = "ENET1_TX_CLK output driver is enabled"]
+    #[doc = "ENET1_TX_CLK output driver is enabled."]
     ENET1_TX_CLK_DIR_1 = 0x01,
 }
 impl Enet1TxClkDir {
@@ -1273,9 +1273,9 @@ impl From<Enet2ClkSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Enet2Event3inSel {
-    #[doc = "event3 source input from ENET2_1588_EVENT3_IN"]
+    #[doc = "event3 source input from ENET2_1588_EVENT3_IN."]
     ENET2_EVENT3IN_SEL_0 = 0x0,
-    #[doc = "event3 source input from GPT2.GPT_COMPARE2"]
+    #[doc = "event3 source input from GPT2.GPT_COMPARE2."]
     ENET2_EVENT3IN_SEL_1 = 0x01,
 }
 impl Enet2Event3inSel {
@@ -1304,9 +1304,9 @@ impl From<Enet2Event3inSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Enet2StopAck {
-    #[doc = "ENET2 stop acknowledge is not asserted"]
+    #[doc = "ENET2 stop acknowledge is not asserted."]
     ENET2_STOP_ACK_0 = 0x0,
-    #[doc = "ENET2 stop acknowledge is asserted"]
+    #[doc = "ENET2 stop acknowledge is asserted."]
     ENET2_STOP_ACK_1 = 0x01,
 }
 impl Enet2StopAck {
@@ -1335,9 +1335,9 @@ impl From<Enet2StopAck> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Enet2StopReq {
-    #[doc = "stop request off"]
+    #[doc = "stop request off."]
     ENET2_STOP_REQ_0 = 0x0,
-    #[doc = "stop request on"]
+    #[doc = "stop request on."]
     ENET2_STOP_REQ_1 = 0x01,
 }
 impl Enet2StopReq {
@@ -1366,9 +1366,9 @@ impl From<Enet2StopReq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Enet2TxClkDir {
-    #[doc = "ENET2_TX_CLK output driver is disabled"]
+    #[doc = "ENET2_TX_CLK output driver is disabled."]
     ENET2_TX_CLK_DIR_0 = 0x0,
-    #[doc = "ENET2_TX_CLK output driver is enabled"]
+    #[doc = "ENET2_TX_CLK output driver is enabled."]
     ENET2_TX_CLK_DIR_1 = 0x01,
 }
 impl Enet2TxClkDir {
@@ -1397,9 +1397,9 @@ impl From<Enet2TxClkDir> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EnetEvent3inSel {
-    #[doc = "event3 source input from ENET_1588_EVENT3_IN"]
+    #[doc = "event3 source input from ENET_1588_EVENT3_IN."]
     ENET_EVENT3IN_SEL_0 = 0x0,
-    #[doc = "event3 source input from GPT2.GPT_COMPARE1"]
+    #[doc = "event3 source input from GPT2.GPT_COMPARE1."]
     ENET_EVENT3IN_SEL_1 = 0x01,
 }
 impl EnetEvent3inSel {
@@ -1428,9 +1428,9 @@ impl From<EnetEvent3inSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EnetIpgClkSEn {
-    #[doc = "ipg_clk_s is gated when there is no IPS access"]
+    #[doc = "ipg_clk_s is gated when there is no IPS access."]
     ENET_IPG_CLK_S_EN_0 = 0x0,
-    #[doc = "ipg_clk_s is always on"]
+    #[doc = "ipg_clk_s is always on."]
     ENET_IPG_CLK_S_EN_1 = 0x01,
 }
 impl EnetIpgClkSEn {
@@ -1459,9 +1459,9 @@ impl From<EnetIpgClkSEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EnetStopAck {
-    #[doc = "ENET1 stop acknowledge is not asserted"]
+    #[doc = "ENET1 stop acknowledge is not asserted."]
     ENET_STOP_ACK_0 = 0x0,
-    #[doc = "ENET1 stop acknowledge is asserted"]
+    #[doc = "ENET1 stop acknowledge is asserted."]
     ENET_STOP_ACK_1 = 0x01,
 }
 impl EnetStopAck {
@@ -1490,9 +1490,9 @@ impl From<EnetStopAck> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EnetStopReq {
-    #[doc = "stop request off"]
+    #[doc = "stop request off."]
     ENET_STOP_REQ_0 = 0x0,
-    #[doc = "stop request on"]
+    #[doc = "stop request on."]
     ENET_STOP_REQ_1 = 0x01,
 }
 impl EnetStopReq {
@@ -1521,9 +1521,9 @@ impl From<EnetStopReq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ExcMon {
-    #[doc = "OKAY response"]
+    #[doc = "OKAY response."]
     EXC_MON_0 = 0x0,
-    #[doc = "SLVError response (default)"]
+    #[doc = "SLVError response (default)."]
     EXC_MON_1 = 0x01,
 }
 impl ExcMon {
@@ -1552,9 +1552,9 @@ impl From<ExcMon> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexio1IpgDoze {
-    #[doc = "FLEXIO1 is not in doze mode"]
+    #[doc = "FLEXIO1 is not in doze mode."]
     FLEXIO1_IPG_DOZE_0 = 0x0,
-    #[doc = "FLEXIO1 is in doze mode"]
+    #[doc = "FLEXIO1 is in doze mode."]
     FLEXIO1_IPG_DOZE_1 = 0x01,
 }
 impl Flexio1IpgDoze {
@@ -1614,9 +1614,9 @@ impl From<Flexio1IpgStopMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexio1StopAck {
-    #[doc = "FLEXIO1 stop acknowledge is not asserted"]
+    #[doc = "FLEXIO1 stop acknowledge is not asserted."]
     FLEXIO1_STOP_ACK_0 = 0x0,
-    #[doc = "FLEXIO1 stop acknowledge is asserted"]
+    #[doc = "FLEXIO1 stop acknowledge is asserted."]
     FLEXIO1_STOP_ACK_1 = 0x01,
 }
 impl Flexio1StopAck {
@@ -1645,9 +1645,9 @@ impl From<Flexio1StopAck> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexio1StopReq {
-    #[doc = "stop request off"]
+    #[doc = "stop request off."]
     FLEXIO1_STOP_REQ_0 = 0x0,
-    #[doc = "stop request on"]
+    #[doc = "stop request on."]
     FLEXIO1_STOP_REQ_1 = 0x01,
 }
 impl Flexio1StopReq {
@@ -1676,9 +1676,9 @@ impl From<Flexio1StopReq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexio2IpgDoze {
-    #[doc = "FLEXIO2 is not in doze mode"]
+    #[doc = "FLEXIO2 is not in doze mode."]
     FLEXIO2_IPG_DOZE_0 = 0x0,
-    #[doc = "FLEXIO2 is in doze mode"]
+    #[doc = "FLEXIO2 is in doze mode."]
     FLEXIO2_IPG_DOZE_1 = 0x01,
 }
 impl Flexio2IpgDoze {
@@ -1738,9 +1738,9 @@ impl From<Flexio2IpgStopMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexio2StopAck {
-    #[doc = "FLEXIO2 stop acknowledge is not asserted"]
+    #[doc = "FLEXIO2 stop acknowledge is not asserted."]
     FLEXIO2_STOP_ACK_0 = 0x0,
-    #[doc = "FLEXIO2 stop acknowledge is asserted (FLEXIO2 is in STOP mode)"]
+    #[doc = "FLEXIO2 stop acknowledge is asserted (FLEXIO2 is in STOP mode)."]
     FLEXIO2_STOP_ACK_1 = 0x01,
 }
 impl Flexio2StopAck {
@@ -1769,9 +1769,9 @@ impl From<Flexio2StopAck> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexio2StopReq {
-    #[doc = "stop request off"]
+    #[doc = "stop request off."]
     FLEXIO2_STOP_REQ_0 = 0x0,
-    #[doc = "stop request on"]
+    #[doc = "stop request on."]
     FLEXIO2_STOP_REQ_1 = 0x01,
 }
 impl Flexio2StopReq {
@@ -1800,9 +1800,9 @@ impl From<Flexio2StopReq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexio3IpgDoze {
-    #[doc = "FLEXIO3 is not in doze mode"]
+    #[doc = "FLEXIO3 is not in doze mode."]
     FLEXIO3_IPG_DOZE_0 = 0x0,
-    #[doc = "FLEXIO3 is in doze mode"]
+    #[doc = "FLEXIO3 is in doze mode."]
     FLEXIO3_IPG_DOZE_1 = 0x01,
 }
 impl Flexio3IpgDoze {
@@ -1862,9 +1862,9 @@ impl From<Flexio3IpgStopMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexio3StopAck {
-    #[doc = "FLEXIO3 stop acknowledge is not asserted"]
+    #[doc = "FLEXIO3 stop acknowledge is not asserted."]
     FLEXIO3_STOP_ACK_0 = 0x0,
-    #[doc = "FLEXIO3 stop acknowledge is asserted"]
+    #[doc = "FLEXIO3 stop acknowledge is asserted."]
     FLEXIO3_STOP_ACK_1 = 0x01,
 }
 impl Flexio3StopAck {
@@ -1893,9 +1893,9 @@ impl From<Flexio3StopAck> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexio3StopReq {
-    #[doc = "stop request off"]
+    #[doc = "stop request off."]
     FLEXIO3_STOP_REQ_0 = 0x0,
-    #[doc = "stop request on"]
+    #[doc = "stop request on."]
     FLEXIO3_STOP_REQ_1 = 0x01,
 }
 impl Flexio3StopReq {
@@ -1924,9 +1924,9 @@ impl From<Flexio3StopReq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlexramBankCfgSel {
-    #[doc = "use fuse value to config"]
+    #[doc = "use fuse value to config."]
     FLEXRAM_BANK_CFG_SEL_0 = 0x0,
-    #[doc = "use FLEXRAM_BANK_CFG to config"]
+    #[doc = "use FLEXRAM_BANK_CFG to config."]
     FLEXRAM_BANK_CFG_SEL_1 = 0x01,
 }
 impl FlexramBankCfgSel {
@@ -1955,9 +1955,9 @@ impl From<FlexramBankCfgSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi2StopAck {
-    #[doc = "FLEXSPI2 stop acknowledge is not asserted"]
+    #[doc = "FLEXSPI2 stop acknowledge is not asserted."]
     FLEXSPI2_STOP_ACK_0 = 0x0,
-    #[doc = "FLEXSPI2 stop acknowledge is asserted"]
+    #[doc = "FLEXSPI2 stop acknowledge is asserted."]
     FLEXSPI2_STOP_ACK_1 = 0x01,
 }
 impl Flexspi2StopAck {
@@ -1986,9 +1986,9 @@ impl From<Flexspi2StopAck> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Flexspi2StopReq {
-    #[doc = "stop request off"]
+    #[doc = "stop request off."]
     FLEXSPI2_STOP_REQ_0 = 0x0,
-    #[doc = "stop request on"]
+    #[doc = "stop request on."]
     FLEXSPI2_STOP_REQ_1 = 0x01,
 }
 impl Flexspi2StopReq {
@@ -2017,9 +2017,9 @@ impl From<Flexspi2StopReq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlexspiStopAck {
-    #[doc = "FLEXSPI stop acknowledge is not asserted"]
+    #[doc = "FLEXSPI stop acknowledge is not asserted."]
     FLEXSPI_STOP_ACK_0 = 0x0,
-    #[doc = "FLEXSPI stop acknowledge is asserted"]
+    #[doc = "FLEXSPI stop acknowledge is asserted."]
     FLEXSPI_STOP_ACK_1 = 0x01,
 }
 impl FlexspiStopAck {
@@ -2048,9 +2048,9 @@ impl From<FlexspiStopAck> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlexspiStopReq {
-    #[doc = "stop request off"]
+    #[doc = "stop request off."]
     FLEXSPI_STOP_REQ_0 = 0x0,
-    #[doc = "stop request on"]
+    #[doc = "stop request on."]
     FLEXSPI_STOP_REQ_1 = 0x01,
 }
 impl FlexspiStopReq {
@@ -2110,9 +2110,9 @@ impl From<Gint> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpt2Capin1Sel {
-    #[doc = "source from GPT2_CAPTURE1"]
+    #[doc = "source from GPT2_CAPTURE1."]
     GPT2_CAPIN1_SEL_0 = 0x0,
-    #[doc = "source from ENET_1588_EVENT3_OUT (chnnal 3 of IEEE 1588 timer)"]
+    #[doc = "source from ENET_1588_EVENT3_OUT (chnnal 3 of IEEE 1588 timer)."]
     GPT2_CAPIN1_SEL_1 = 0x01,
 }
 impl Gpt2Capin1Sel {
@@ -2141,9 +2141,9 @@ impl From<Gpt2Capin1Sel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpt2Capin2Sel {
-    #[doc = "source from GPT2_CAPTURE2"]
+    #[doc = "source from GPT2_CAPTURE2."]
     GPT2_CAPIN2_SEL_0 = 0x0,
-    #[doc = "source from ENET2_1588_EVENT3_OUT (chnnal 3 of IEEE 1588 timer)"]
+    #[doc = "source from ENET2_1588_EVENT3_OUT (chnnal 3 of IEEE 1588 timer)."]
     GPT2_CAPIN2_SEL_1 = 0x01,
 }
 impl Gpt2Capin2Sel {
@@ -2172,9 +2172,9 @@ impl From<Gpt2Capin2Sel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IomuxcXbarDirSel10 {
-    #[doc = "XBAR_INOUT as input"]
+    #[doc = "XBAR_INOUT as input."]
     IOMUXC_XBAR_DIR_SEL_10_0 = 0x0,
-    #[doc = "XBAR_INOUT as output"]
+    #[doc = "XBAR_INOUT as output."]
     IOMUXC_XBAR_DIR_SEL_10_1 = 0x01,
 }
 impl IomuxcXbarDirSel10 {
@@ -2203,9 +2203,9 @@ impl From<IomuxcXbarDirSel10> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IomuxcXbarDirSel11 {
-    #[doc = "XBAR_INOUT as input"]
+    #[doc = "XBAR_INOUT as input."]
     IOMUXC_XBAR_DIR_SEL_11_0 = 0x0,
-    #[doc = "XBAR_INOUT as output"]
+    #[doc = "XBAR_INOUT as output."]
     IOMUXC_XBAR_DIR_SEL_11_1 = 0x01,
 }
 impl IomuxcXbarDirSel11 {
@@ -2234,9 +2234,9 @@ impl From<IomuxcXbarDirSel11> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IomuxcXbarDirSel12 {
-    #[doc = "XBAR_INOUT as input"]
+    #[doc = "XBAR_INOUT as input."]
     IOMUXC_XBAR_DIR_SEL_12_0 = 0x0,
-    #[doc = "XBAR_INOUT as output"]
+    #[doc = "XBAR_INOUT as output."]
     IOMUXC_XBAR_DIR_SEL_12_1 = 0x01,
 }
 impl IomuxcXbarDirSel12 {
@@ -2265,9 +2265,9 @@ impl From<IomuxcXbarDirSel12> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IomuxcXbarDirSel13 {
-    #[doc = "XBAR_INOUT as input"]
+    #[doc = "XBAR_INOUT as input."]
     IOMUXC_XBAR_DIR_SEL_13_0 = 0x0,
-    #[doc = "XBAR_INOUT as output"]
+    #[doc = "XBAR_INOUT as output."]
     IOMUXC_XBAR_DIR_SEL_13_1 = 0x01,
 }
 impl IomuxcXbarDirSel13 {
@@ -2296,9 +2296,9 @@ impl From<IomuxcXbarDirSel13> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IomuxcXbarDirSel14 {
-    #[doc = "XBAR_INOUT as input"]
+    #[doc = "XBAR_INOUT as input."]
     IOMUXC_XBAR_DIR_SEL_14_0 = 0x0,
-    #[doc = "XBAR_INOUT as output"]
+    #[doc = "XBAR_INOUT as output."]
     IOMUXC_XBAR_DIR_SEL_14_1 = 0x01,
 }
 impl IomuxcXbarDirSel14 {
@@ -2327,9 +2327,9 @@ impl From<IomuxcXbarDirSel14> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IomuxcXbarDirSel15 {
-    #[doc = "XBAR_INOUT as input"]
+    #[doc = "XBAR_INOUT as input."]
     IOMUXC_XBAR_DIR_SEL_15_0 = 0x0,
-    #[doc = "XBAR_INOUT as output"]
+    #[doc = "XBAR_INOUT as output."]
     IOMUXC_XBAR_DIR_SEL_15_1 = 0x01,
 }
 impl IomuxcXbarDirSel15 {
@@ -2358,9 +2358,9 @@ impl From<IomuxcXbarDirSel15> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IomuxcXbarDirSel16 {
-    #[doc = "XBAR_INOUT as input"]
+    #[doc = "XBAR_INOUT as input."]
     IOMUXC_XBAR_DIR_SEL_16_0 = 0x0,
-    #[doc = "XBAR_INOUT as output"]
+    #[doc = "XBAR_INOUT as output."]
     IOMUXC_XBAR_DIR_SEL_16_1 = 0x01,
 }
 impl IomuxcXbarDirSel16 {
@@ -2389,9 +2389,9 @@ impl From<IomuxcXbarDirSel16> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IomuxcXbarDirSel17 {
-    #[doc = "XBAR_INOUT as input"]
+    #[doc = "XBAR_INOUT as input."]
     IOMUXC_XBAR_DIR_SEL_17_0 = 0x0,
-    #[doc = "XBAR_INOUT as output"]
+    #[doc = "XBAR_INOUT as output."]
     IOMUXC_XBAR_DIR_SEL_17_1 = 0x01,
 }
 impl IomuxcXbarDirSel17 {
@@ -2420,9 +2420,9 @@ impl From<IomuxcXbarDirSel17> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IomuxcXbarDirSel18 {
-    #[doc = "XBAR_INOUT as input"]
+    #[doc = "XBAR_INOUT as input."]
     IOMUXC_XBAR_DIR_SEL_18_0 = 0x0,
-    #[doc = "XBAR_INOUT as output"]
+    #[doc = "XBAR_INOUT as output."]
     IOMUXC_XBAR_DIR_SEL_18_1 = 0x01,
 }
 impl IomuxcXbarDirSel18 {
@@ -2451,9 +2451,9 @@ impl From<IomuxcXbarDirSel18> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IomuxcXbarDirSel19 {
-    #[doc = "XBAR_INOUT as input"]
+    #[doc = "XBAR_INOUT as input."]
     IOMUXC_XBAR_DIR_SEL_19_0 = 0x0,
-    #[doc = "XBAR_INOUT as output"]
+    #[doc = "XBAR_INOUT as output."]
     IOMUXC_XBAR_DIR_SEL_19_1 = 0x01,
 }
 impl IomuxcXbarDirSel19 {
@@ -2482,9 +2482,9 @@ impl From<IomuxcXbarDirSel19> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IomuxcXbarDirSel4 {
-    #[doc = "XBAR_INOUT as input"]
+    #[doc = "XBAR_INOUT as input."]
     IOMUXC_XBAR_DIR_SEL_4_0 = 0x0,
-    #[doc = "XBAR_INOUT as output"]
+    #[doc = "XBAR_INOUT as output."]
     IOMUXC_XBAR_DIR_SEL_4_1 = 0x01,
 }
 impl IomuxcXbarDirSel4 {
@@ -2513,9 +2513,9 @@ impl From<IomuxcXbarDirSel4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IomuxcXbarDirSel5 {
-    #[doc = "XBAR_INOUT as input"]
+    #[doc = "XBAR_INOUT as input."]
     IOMUXC_XBAR_DIR_SEL_5_0 = 0x0,
-    #[doc = "XBAR_INOUT as output"]
+    #[doc = "XBAR_INOUT as output."]
     IOMUXC_XBAR_DIR_SEL_5_1 = 0x01,
 }
 impl IomuxcXbarDirSel5 {
@@ -2544,9 +2544,9 @@ impl From<IomuxcXbarDirSel5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IomuxcXbarDirSel6 {
-    #[doc = "XBAR_INOUT as input"]
+    #[doc = "XBAR_INOUT as input."]
     IOMUXC_XBAR_DIR_SEL_6_0 = 0x0,
-    #[doc = "XBAR_INOUT as output"]
+    #[doc = "XBAR_INOUT as output."]
     IOMUXC_XBAR_DIR_SEL_6_1 = 0x01,
 }
 impl IomuxcXbarDirSel6 {
@@ -2575,9 +2575,9 @@ impl From<IomuxcXbarDirSel6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IomuxcXbarDirSel7 {
-    #[doc = "XBAR_INOUT as input"]
+    #[doc = "XBAR_INOUT as input."]
     IOMUXC_XBAR_DIR_SEL_7_0 = 0x0,
-    #[doc = "XBAR_INOUT as output"]
+    #[doc = "XBAR_INOUT as output."]
     IOMUXC_XBAR_DIR_SEL_7_1 = 0x01,
 }
 impl IomuxcXbarDirSel7 {
@@ -2606,9 +2606,9 @@ impl From<IomuxcXbarDirSel7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IomuxcXbarDirSel8 {
-    #[doc = "XBAR_INOUT as input"]
+    #[doc = "XBAR_INOUT as input."]
     IOMUXC_XBAR_DIR_SEL_8_0 = 0x0,
-    #[doc = "XBAR_INOUT as output"]
+    #[doc = "XBAR_INOUT as output."]
     IOMUXC_XBAR_DIR_SEL_8_1 = 0x01,
 }
 impl IomuxcXbarDirSel8 {
@@ -2637,9 +2637,9 @@ impl From<IomuxcXbarDirSel8> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IomuxcXbarDirSel9 {
-    #[doc = "XBAR_INOUT as input"]
+    #[doc = "XBAR_INOUT as input."]
     IOMUXC_XBAR_DIR_SEL_9_0 = 0x0,
-    #[doc = "XBAR_INOUT as output"]
+    #[doc = "XBAR_INOUT as output."]
     IOMUXC_XBAR_DIR_SEL_9_1 = 0x01,
 }
 impl IomuxcXbarDirSel9 {
@@ -2668,9 +2668,9 @@ impl From<IomuxcXbarDirSel9> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum L2MemDeepsleep {
-    #[doc = "no force sleep control supported, memory deep sleep mode only entered when whole system in stop mode"]
+    #[doc = "no force sleep control supported, memory deep sleep mode only entered when whole system in stop mode."]
     L2_MEM_DEEPSLEEP_0 = 0x0,
-    #[doc = "force memory into deep sleep mode"]
+    #[doc = "force memory into deep sleep mode."]
     L2_MEM_DEEPSLEEP_1 = 0x01,
 }
 impl L2MemDeepsleep {
@@ -2699,9 +2699,9 @@ impl From<L2MemDeepsleep> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum L2MemEnPowersaving {
-    #[doc = "none memory power saving features enabled, SHUTDOWN/DEEPSLEEP/LIGHTSLEEP will have no effect"]
+    #[doc = "none memory power saving features enabled, SHUTDOWN/DEEPSLEEP/LIGHTSLEEP will have no effect."]
     L2_MEM_EN_POWERSAVING_0 = 0x0,
-    #[doc = "memory power saving features enabled, set SHUTDOWN/DEEPSLEEP/LIGHTSLEEP (priority high to low) to enable power saving levels"]
+    #[doc = "memory power saving features enabled, set SHUTDOWN/DEEPSLEEP/LIGHTSLEEP (priority high to low) to enable power saving levels."]
     L2_MEM_EN_POWERSAVING_1 = 0x01,
 }
 impl L2MemEnPowersaving {
@@ -2730,9 +2730,9 @@ impl From<L2MemEnPowersaving> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LockDbgEn {
-    #[doc = "Field is not locked"]
+    #[doc = "Field is not locked."]
     LOCK_DBG_EN_0 = 0x0,
-    #[doc = "Field is locked (read access only)"]
+    #[doc = "Field is locked (read access only)."]
     LOCK_DBG_EN_1 = 0x01,
 }
 impl LockDbgEn {
@@ -2761,9 +2761,9 @@ impl From<LockDbgEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LockDcpkeyOcotpOrKeymux {
-    #[doc = "Field is not locked"]
+    #[doc = "Field is not locked."]
     LOCK_DCPKEY_OCOTP_OR_KEYMUX_0 = 0x0,
-    #[doc = "Field is locked (read access only)"]
+    #[doc = "Field is locked (read access only)."]
     LOCK_DCPKEY_OCOTP_OR_KEYMUX_1 = 0x01,
 }
 impl LockDcpkeyOcotpOrKeymux {
@@ -2792,9 +2792,9 @@ impl From<LockDcpkeyOcotpOrKeymux> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LockM7ApcAcR0Bot {
-    #[doc = "Register field \\[31:1\\] is not locked"]
+    #[doc = "Register field \\[31:1\\] is not locked."]
     LOCK_M7_APC_AC_R0_BOT_0 = 0x0,
-    #[doc = "Register field \\[31:1\\] is locked (read access only)"]
+    #[doc = "Register field \\[31:1\\] is locked (read access only)."]
     LOCK_M7_APC_AC_R0_BOT_1 = 0x01,
 }
 impl LockM7ApcAcR0Bot {
@@ -2823,9 +2823,9 @@ impl From<LockM7ApcAcR0Bot> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LockM7ApcAcR0Top {
-    #[doc = "Register field \\[31:1\\] is not locked"]
+    #[doc = "Register field \\[31:1\\] is not locked."]
     LOCK_M7_APC_AC_R0_TOP_0 = 0x0,
-    #[doc = "Register field \\[31:1\\] is locked (read access only)"]
+    #[doc = "Register field \\[31:1\\] is locked (read access only)."]
     LOCK_M7_APC_AC_R0_TOP_1 = 0x01,
 }
 impl LockM7ApcAcR0Top {
@@ -2854,9 +2854,9 @@ impl From<LockM7ApcAcR0Top> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LockM7ApcAcR1Bot {
-    #[doc = "Register field \\[31:1\\] is not locked"]
+    #[doc = "Register field \\[31:1\\] is not locked."]
     LOCK_M7_APC_AC_R1_BOT_0 = 0x0,
-    #[doc = "Register field \\[31:1\\] is locked (read access only)"]
+    #[doc = "Register field \\[31:1\\] is locked (read access only)."]
     LOCK_M7_APC_AC_R1_BOT_1 = 0x01,
 }
 impl LockM7ApcAcR1Bot {
@@ -2885,9 +2885,9 @@ impl From<LockM7ApcAcR1Bot> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LockM7ApcAcR1Top {
-    #[doc = "Register field \\[31:1\\] is not locked"]
+    #[doc = "Register field \\[31:1\\] is not locked."]
     LOCK_M7_APC_AC_R1_TOP_0 = 0x0,
-    #[doc = "Register field \\[31:1\\] is locked (read access only)"]
+    #[doc = "Register field \\[31:1\\] is locked (read access only)."]
     LOCK_M7_APC_AC_R1_TOP_1 = 0x01,
 }
 impl LockM7ApcAcR1Top {
@@ -2916,9 +2916,9 @@ impl From<LockM7ApcAcR1Top> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LockM7ApcAcR2Bot {
-    #[doc = "Register field \\[31:1\\] is not locked"]
+    #[doc = "Register field \\[31:1\\] is not locked."]
     LOCK_M7_APC_AC_R2_BOT_0 = 0x0,
-    #[doc = "Register field \\[31:1\\] is locked (read access only)"]
+    #[doc = "Register field \\[31:1\\] is locked (read access only)."]
     LOCK_M7_APC_AC_R2_BOT_1 = 0x01,
 }
 impl LockM7ApcAcR2Bot {
@@ -2947,9 +2947,9 @@ impl From<LockM7ApcAcR2Bot> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LockM7ApcAcR2Top {
-    #[doc = "Register field \\[31:1\\] is not locked"]
+    #[doc = "Register field \\[31:1\\] is not locked."]
     LOCK_M7_APC_AC_R2_TOP_0 = 0x0,
-    #[doc = "Register field \\[31:1\\] is locked (read access only)"]
+    #[doc = "Register field \\[31:1\\] is locked (read access only)."]
     LOCK_M7_APC_AC_R2_TOP_1 = 0x01,
 }
 impl LockM7ApcAcR2Top {
@@ -2978,9 +2978,9 @@ impl From<LockM7ApcAcR2Top> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LockM7ApcAcR3Bot {
-    #[doc = "Register field \\[31:1\\] is not locked"]
+    #[doc = "Register field \\[31:1\\] is not locked."]
     LOCK_M7_APC_AC_R3_BOT_0 = 0x0,
-    #[doc = "Register field \\[31:1\\] is locked (read access only)"]
+    #[doc = "Register field \\[31:1\\] is locked (read access only)."]
     LOCK_M7_APC_AC_R3_BOT_1 = 0x01,
 }
 impl LockM7ApcAcR3Bot {
@@ -3009,9 +3009,9 @@ impl From<LockM7ApcAcR3Bot> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LockM7ApcAcR3Top {
-    #[doc = "Register field \\[31:1\\] is not locked"]
+    #[doc = "Register field \\[31:1\\] is not locked."]
     LOCK_M7_APC_AC_R3_TOP_0 = 0x0,
-    #[doc = "Register field \\[31:1\\] is locked (read access only)"]
+    #[doc = "Register field \\[31:1\\] is locked (read access only)."]
     LOCK_M7_APC_AC_R3_TOP_1 = 0x01,
 }
 impl LockM7ApcAcR3Top {
@@ -3040,9 +3040,9 @@ impl From<LockM7ApcAcR3Top> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LockNiden {
-    #[doc = "Field is not locked"]
+    #[doc = "Field is not locked."]
     LOCK_NIDEN_0 = 0x0,
-    #[doc = "Field is locked (read access only)"]
+    #[doc = "Field is locked (read access only)."]
     LOCK_NIDEN_1 = 0x01,
 }
 impl LockNiden {
@@ -3071,9 +3071,9 @@ impl From<LockNiden> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct LockOcram2TzAddr(u8);
 impl LockOcram2TzAddr {
-    #[doc = "Field is not locked"]
+    #[doc = "Field is not locked."]
     pub const LOCK_OCRAM2_TZ_ADDR_0: Self = Self(0x0);
-    #[doc = "Field is locked (read access only)"]
+    #[doc = "Field is locked (read access only)."]
     pub const LOCK_OCRAM2_TZ_ADDR_1: Self = Self(0x01);
 }
 impl LockOcram2TzAddr {
@@ -3119,9 +3119,9 @@ impl From<LockOcram2TzAddr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LockOcram2TzEn {
-    #[doc = "Field is not locked"]
+    #[doc = "Field is not locked."]
     LOCK_OCRAM2_TZ_EN_0 = 0x0,
-    #[doc = "Field is locked (read access only)"]
+    #[doc = "Field is locked (read access only)."]
     LOCK_OCRAM2_TZ_EN_1 = 0x01,
 }
 impl LockOcram2TzEn {
@@ -3150,9 +3150,9 @@ impl From<LockOcram2TzEn> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct LockOcramTzAddr(u8);
 impl LockOcramTzAddr {
-    #[doc = "Field is not locked"]
+    #[doc = "Field is not locked."]
     pub const LOCK_OCRAM_TZ_ADDR_0: Self = Self(0x0);
-    #[doc = "Field is locked (read access only)"]
+    #[doc = "Field is locked (read access only)."]
     pub const LOCK_OCRAM_TZ_ADDR_1: Self = Self(0x01);
 }
 impl LockOcramTzAddr {
@@ -3198,9 +3198,9 @@ impl From<LockOcramTzAddr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LockOcramTzEn {
-    #[doc = "Field is not locked"]
+    #[doc = "Field is not locked."]
     LOCK_OCRAM_TZ_EN_0 = 0x0,
-    #[doc = "Field is locked (read access only)"]
+    #[doc = "Field is locked (read access only)."]
     LOCK_OCRAM_TZ_EN_1 = 0x01,
 }
 impl LockOcramTzEn {
@@ -3229,9 +3229,9 @@ impl From<LockOcramTzEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LockSecErrResp {
-    #[doc = "Field is not locked"]
+    #[doc = "Field is not locked."]
     LOCK_SEC_ERR_RESP_0 = 0x0,
-    #[doc = "Field is locked (read access only)"]
+    #[doc = "Field is locked (read access only)."]
     LOCK_SEC_ERR_RESP_1 = 0x01,
 }
 impl LockSecErrResp {
@@ -3260,9 +3260,9 @@ impl From<LockSecErrResp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpi2c1IpgDoze {
-    #[doc = "not in doze mode"]
+    #[doc = "not in doze mode."]
     LPI2C1_IPG_DOZE_0 = 0x0,
-    #[doc = "in doze mode"]
+    #[doc = "in doze mode."]
     LPI2C1_IPG_DOZE_1 = 0x01,
 }
 impl Lpi2c1IpgDoze {
@@ -3291,9 +3291,9 @@ impl From<Lpi2c1IpgDoze> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpi2c1IpgStopMode {
-    #[doc = "the module is functional in Stop mode"]
+    #[doc = "the module is functional in Stop mode."]
     LPI2C1_IPG_STOP_MODE_0 = 0x0,
-    #[doc = "the module is NOT functional in Stop mode, when this bit is equal to 1 and ipg_stop is asserted"]
+    #[doc = "the module is NOT functional in Stop mode, when this bit is equal to 1 and ipg_stop is asserted."]
     LPI2C1_IPG_STOP_MODE_1 = 0x01,
 }
 impl Lpi2c1IpgStopMode {
@@ -3322,9 +3322,9 @@ impl From<Lpi2c1IpgStopMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpi2c1StopAck {
-    #[doc = "stop acknowledge is not asserted"]
+    #[doc = "stop acknowledge is not asserted."]
     LPI2C1_STOP_ACK_0 = 0x0,
-    #[doc = "stop acknowledge is asserted (the module is in Stop mode)"]
+    #[doc = "stop acknowledge is asserted (the module is in Stop mode)."]
     LPI2C1_STOP_ACK_1 = 0x01,
 }
 impl Lpi2c1StopAck {
@@ -3353,9 +3353,9 @@ impl From<Lpi2c1StopAck> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpi2c1StopReq {
-    #[doc = "stop request off"]
+    #[doc = "stop request off."]
     LPI2C1_STOP_REQ_0 = 0x0,
-    #[doc = "stop request on"]
+    #[doc = "stop request on."]
     LPI2C1_STOP_REQ_1 = 0x01,
 }
 impl Lpi2c1StopReq {
@@ -3384,9 +3384,9 @@ impl From<Lpi2c1StopReq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpi2c2IpgDoze {
-    #[doc = "not in doze mode"]
+    #[doc = "not in doze mode."]
     LPI2C2_IPG_DOZE_0 = 0x0,
-    #[doc = "in doze mode"]
+    #[doc = "in doze mode."]
     LPI2C2_IPG_DOZE_1 = 0x01,
 }
 impl Lpi2c2IpgDoze {
@@ -3415,9 +3415,9 @@ impl From<Lpi2c2IpgDoze> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpi2c2IpgStopMode {
-    #[doc = "the module is functional in Stop mode"]
+    #[doc = "the module is functional in Stop mode."]
     LPI2C2_IPG_STOP_MODE_0 = 0x0,
-    #[doc = "the module is NOT functional in Stop mode, when this bit is equal to 1 and ipg_stop is asserted"]
+    #[doc = "the module is NOT functional in Stop mode, when this bit is equal to 1 and ipg_stop is asserted."]
     LPI2C2_IPG_STOP_MODE_1 = 0x01,
 }
 impl Lpi2c2IpgStopMode {
@@ -3446,9 +3446,9 @@ impl From<Lpi2c2IpgStopMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpi2c2StopAck {
-    #[doc = "stop acknowledge is not asserted"]
+    #[doc = "stop acknowledge is not asserted."]
     LPI2C2_STOP_ACK_0 = 0x0,
-    #[doc = "stop acknowledge is asserted"]
+    #[doc = "stop acknowledge is asserted."]
     LPI2C2_STOP_ACK_1 = 0x01,
 }
 impl Lpi2c2StopAck {
@@ -3477,9 +3477,9 @@ impl From<Lpi2c2StopAck> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpi2c2StopReq {
-    #[doc = "stop request off"]
+    #[doc = "stop request off."]
     LPI2C2_STOP_REQ_0 = 0x0,
-    #[doc = "stop request on"]
+    #[doc = "stop request on."]
     LPI2C2_STOP_REQ_1 = 0x01,
 }
 impl Lpi2c2StopReq {
@@ -3508,9 +3508,9 @@ impl From<Lpi2c2StopReq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpi2c3IpgDoze {
-    #[doc = "not in doze mode"]
+    #[doc = "not in doze mode."]
     LPI2C3_IPG_DOZE_0 = 0x0,
-    #[doc = "in doze mode"]
+    #[doc = "in doze mode."]
     LPI2C3_IPG_DOZE_1 = 0x01,
 }
 impl Lpi2c3IpgDoze {
@@ -3539,9 +3539,9 @@ impl From<Lpi2c3IpgDoze> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpi2c3IpgStopMode {
-    #[doc = "the module is functional in Stop mode"]
+    #[doc = "the module is functional in Stop mode."]
     LPI2C3_IPG_STOP_MODE_0 = 0x0,
-    #[doc = "the module is NOT functional in Stop mode, when this bit is equal to 1 and ipg_stop is asserted"]
+    #[doc = "the module is NOT functional in Stop mode, when this bit is equal to 1 and ipg_stop is asserted."]
     LPI2C3_IPG_STOP_MODE_1 = 0x01,
 }
 impl Lpi2c3IpgStopMode {
@@ -3570,9 +3570,9 @@ impl From<Lpi2c3IpgStopMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpi2c3StopAck {
-    #[doc = "stop acknowledge is not asserted"]
+    #[doc = "stop acknowledge is not asserted."]
     LPI2C3_STOP_ACK_0 = 0x0,
-    #[doc = "stop acknowledge is asserted"]
+    #[doc = "stop acknowledge is asserted."]
     LPI2C3_STOP_ACK_1 = 0x01,
 }
 impl Lpi2c3StopAck {
@@ -3601,9 +3601,9 @@ impl From<Lpi2c3StopAck> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpi2c3StopReq {
-    #[doc = "stop request off"]
+    #[doc = "stop request off."]
     LPI2C3_STOP_REQ_0 = 0x0,
-    #[doc = "stop request on"]
+    #[doc = "stop request on."]
     LPI2C3_STOP_REQ_1 = 0x01,
 }
 impl Lpi2c3StopReq {
@@ -3632,9 +3632,9 @@ impl From<Lpi2c3StopReq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpi2c4IpgDoze {
-    #[doc = "not in doze mode"]
+    #[doc = "not in doze mode."]
     LPI2C4_IPG_DOZE_0 = 0x0,
-    #[doc = "in doze mode"]
+    #[doc = "in doze mode."]
     LPI2C4_IPG_DOZE_1 = 0x01,
 }
 impl Lpi2c4IpgDoze {
@@ -3663,9 +3663,9 @@ impl From<Lpi2c4IpgDoze> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpi2c4IpgStopMode {
-    #[doc = "the module is functional in Stop mode"]
+    #[doc = "the module is functional in Stop mode."]
     LPI2C4_IPG_STOP_MODE_0 = 0x0,
-    #[doc = "the module is NOT functional in Stop mode, when this bit is equal to 1 and ipg_stop is asserted"]
+    #[doc = "the module is NOT functional in Stop mode, when this bit is equal to 1 and ipg_stop is asserted."]
     LPI2C4_IPG_STOP_MODE_1 = 0x01,
 }
 impl Lpi2c4IpgStopMode {
@@ -3694,9 +3694,9 @@ impl From<Lpi2c4IpgStopMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpi2c4StopAck {
-    #[doc = "stop acknowledge is not asserted"]
+    #[doc = "stop acknowledge is not asserted."]
     LPI2C4_STOP_ACK_0 = 0x0,
-    #[doc = "stop acknowledge is asserted"]
+    #[doc = "stop acknowledge is asserted."]
     LPI2C4_STOP_ACK_1 = 0x01,
 }
 impl Lpi2c4StopAck {
@@ -3725,9 +3725,9 @@ impl From<Lpi2c4StopAck> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpi2c4StopReq {
-    #[doc = "stop request off"]
+    #[doc = "stop request off."]
     LPI2C4_STOP_REQ_0 = 0x0,
-    #[doc = "stop request on"]
+    #[doc = "stop request on."]
     LPI2C4_STOP_REQ_1 = 0x01,
 }
 impl Lpi2c4StopReq {
@@ -3756,9 +3756,9 @@ impl From<Lpi2c4StopReq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpspi1IpgDoze {
-    #[doc = "not in doze mode"]
+    #[doc = "not in doze mode."]
     LPSPI1_IPG_DOZE_0 = 0x0,
-    #[doc = "in doze mode"]
+    #[doc = "in doze mode."]
     LPSPI1_IPG_DOZE_1 = 0x01,
 }
 impl Lpspi1IpgDoze {
@@ -3787,9 +3787,9 @@ impl From<Lpspi1IpgDoze> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpspi1IpgStopMode {
-    #[doc = "the module is functional in Stop mode"]
+    #[doc = "the module is functional in Stop mode."]
     LPSPI1_IPG_STOP_MODE_0 = 0x0,
-    #[doc = "the module is NOT functional in Stop mode, when this bit is equal to 1 and ipg_stop is asserted"]
+    #[doc = "the module is NOT functional in Stop mode, when this bit is equal to 1 and ipg_stop is asserted."]
     LPSPI1_IPG_STOP_MODE_1 = 0x01,
 }
 impl Lpspi1IpgStopMode {
@@ -3818,9 +3818,9 @@ impl From<Lpspi1IpgStopMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpspi1StopAck {
-    #[doc = "stop acknowledge is not asserted"]
+    #[doc = "stop acknowledge is not asserted."]
     LPSPI1_STOP_ACK_0 = 0x0,
-    #[doc = "stop acknowledge is asserted"]
+    #[doc = "stop acknowledge is asserted."]
     LPSPI1_STOP_ACK_1 = 0x01,
 }
 impl Lpspi1StopAck {
@@ -3849,9 +3849,9 @@ impl From<Lpspi1StopAck> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpspi1StopReq {
-    #[doc = "stop request off"]
+    #[doc = "stop request off."]
     LPSPI1_STOP_REQ_0 = 0x0,
-    #[doc = "stop request on"]
+    #[doc = "stop request on."]
     LPSPI1_STOP_REQ_1 = 0x01,
 }
 impl Lpspi1StopReq {
@@ -3880,9 +3880,9 @@ impl From<Lpspi1StopReq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpspi2IpgDoze {
-    #[doc = "not in doze mode"]
+    #[doc = "not in doze mode."]
     LPSPI2_IPG_DOZE_0 = 0x0,
-    #[doc = "in doze mode"]
+    #[doc = "in doze mode."]
     LPSPI2_IPG_DOZE_1 = 0x01,
 }
 impl Lpspi2IpgDoze {
@@ -3911,9 +3911,9 @@ impl From<Lpspi2IpgDoze> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpspi2IpgStopMode {
-    #[doc = "the module is functional in Stop mode"]
+    #[doc = "the module is functional in Stop mode."]
     LPSPI2_IPG_STOP_MODE_0 = 0x0,
-    #[doc = "the module is NOT functional in Stop mode, when this bit is equal to 1 and ipg_stop is asserted"]
+    #[doc = "the module is NOT functional in Stop mode, when this bit is equal to 1 and ipg_stop is asserted."]
     LPSPI2_IPG_STOP_MODE_1 = 0x01,
 }
 impl Lpspi2IpgStopMode {
@@ -3942,9 +3942,9 @@ impl From<Lpspi2IpgStopMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpspi2StopAck {
-    #[doc = "stop acknowledge is not asserted"]
+    #[doc = "stop acknowledge is not asserted."]
     LPSPI2_STOP_ACK_0 = 0x0,
-    #[doc = "stop acknowledge is asserted"]
+    #[doc = "stop acknowledge is asserted."]
     LPSPI2_STOP_ACK_1 = 0x01,
 }
 impl Lpspi2StopAck {
@@ -3973,9 +3973,9 @@ impl From<Lpspi2StopAck> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpspi2StopReq {
-    #[doc = "stop request off"]
+    #[doc = "stop request off."]
     LPSPI2_STOP_REQ_0 = 0x0,
-    #[doc = "stop request on"]
+    #[doc = "stop request on."]
     LPSPI2_STOP_REQ_1 = 0x01,
 }
 impl Lpspi2StopReq {
@@ -4004,9 +4004,9 @@ impl From<Lpspi2StopReq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpspi3IpgDoze {
-    #[doc = "not in doze mode"]
+    #[doc = "not in doze mode."]
     LPSPI3_IPG_DOZE_0 = 0x0,
-    #[doc = "in doze mode"]
+    #[doc = "in doze mode."]
     LPSPI3_IPG_DOZE_1 = 0x01,
 }
 impl Lpspi3IpgDoze {
@@ -4035,9 +4035,9 @@ impl From<Lpspi3IpgDoze> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpspi3IpgStopMode {
-    #[doc = "the module is functional in Stop mode"]
+    #[doc = "the module is functional in Stop mode."]
     LPSPI3_IPG_STOP_MODE_0 = 0x0,
-    #[doc = "the module is NOT functional in Stop mode, when this bit is equal to 1 and ipg_stop is asserted"]
+    #[doc = "the module is NOT functional in Stop mode, when this bit is equal to 1 and ipg_stop is asserted."]
     LPSPI3_IPG_STOP_MODE_1 = 0x01,
 }
 impl Lpspi3IpgStopMode {
@@ -4066,9 +4066,9 @@ impl From<Lpspi3IpgStopMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpspi3StopAck {
-    #[doc = "stop acknowledge is not asserted"]
+    #[doc = "stop acknowledge is not asserted."]
     LPSPI3_STOP_ACK_0 = 0x0,
-    #[doc = "stop acknowledge is asserted"]
+    #[doc = "stop acknowledge is asserted."]
     LPSPI3_STOP_ACK_1 = 0x01,
 }
 impl Lpspi3StopAck {
@@ -4097,9 +4097,9 @@ impl From<Lpspi3StopAck> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpspi3StopReq {
-    #[doc = "stop request off"]
+    #[doc = "stop request off."]
     LPSPI3_STOP_REQ_0 = 0x0,
-    #[doc = "stop request on"]
+    #[doc = "stop request on."]
     LPSPI3_STOP_REQ_1 = 0x01,
 }
 impl Lpspi3StopReq {
@@ -4128,9 +4128,9 @@ impl From<Lpspi3StopReq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpspi4IpgDoze {
-    #[doc = "not in doze mode"]
+    #[doc = "not in doze mode."]
     LPSPI4_IPG_DOZE_0 = 0x0,
-    #[doc = "in doze mode"]
+    #[doc = "in doze mode."]
     LPSPI4_IPG_DOZE_1 = 0x01,
 }
 impl Lpspi4IpgDoze {
@@ -4159,9 +4159,9 @@ impl From<Lpspi4IpgDoze> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpspi4IpgStopMode {
-    #[doc = "the module is functional in Stop mode"]
+    #[doc = "the module is functional in Stop mode."]
     LPSPI4_IPG_STOP_MODE_0 = 0x0,
-    #[doc = "the module is NOT functional in Stop mode, when this bit is equal to 1 and ipg_stop is asserted"]
+    #[doc = "the module is NOT functional in Stop mode, when this bit is equal to 1 and ipg_stop is asserted."]
     LPSPI4_IPG_STOP_MODE_1 = 0x01,
 }
 impl Lpspi4IpgStopMode {
@@ -4190,9 +4190,9 @@ impl From<Lpspi4IpgStopMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpspi4StopAck {
-    #[doc = "stop acknowledge is not asserted"]
+    #[doc = "stop acknowledge is not asserted."]
     LPSPI4_STOP_ACK_0 = 0x0,
-    #[doc = "stop acknowledge is asserted"]
+    #[doc = "stop acknowledge is asserted."]
     LPSPI4_STOP_ACK_1 = 0x01,
 }
 impl Lpspi4StopAck {
@@ -4221,9 +4221,9 @@ impl From<Lpspi4StopAck> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpspi4StopReq {
-    #[doc = "stop request off"]
+    #[doc = "stop request off."]
     LPSPI4_STOP_REQ_0 = 0x0,
-    #[doc = "stop request on"]
+    #[doc = "stop request on."]
     LPSPI4_STOP_REQ_1 = 0x01,
 }
 impl Lpspi4StopReq {
@@ -4252,9 +4252,9 @@ impl From<Lpspi4StopReq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart1IpgDoze {
-    #[doc = "not in doze mode"]
+    #[doc = "not in doze mode."]
     LPUART1_IPG_DOZE_0 = 0x0,
-    #[doc = "in doze mode"]
+    #[doc = "in doze mode."]
     LPUART1_IPG_DOZE_1 = 0x01,
 }
 impl Lpuart1IpgDoze {
@@ -4283,9 +4283,9 @@ impl From<Lpuart1IpgDoze> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart1IpgStopMode {
-    #[doc = "the module is functional in Stop mode"]
+    #[doc = "the module is functional in Stop mode."]
     LPUART1_IPG_STOP_MODE_0 = 0x0,
-    #[doc = "the module is NOT functional in Stop mode, when this bit is equal to 1 and ipg_stop is asserted"]
+    #[doc = "the module is NOT functional in Stop mode, when this bit is equal to 1 and ipg_stop is asserted."]
     LPUART1_IPG_STOP_MODE_1 = 0x01,
 }
 impl Lpuart1IpgStopMode {
@@ -4314,9 +4314,9 @@ impl From<Lpuart1IpgStopMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart1StopAck {
-    #[doc = "stop acknowledge is not asserted"]
+    #[doc = "stop acknowledge is not asserted."]
     LPUART1_STOP_ACK_0 = 0x0,
-    #[doc = "stop acknowledge is asserted"]
+    #[doc = "stop acknowledge is asserted."]
     LPUART1_STOP_ACK_1 = 0x01,
 }
 impl Lpuart1StopAck {
@@ -4345,9 +4345,9 @@ impl From<Lpuart1StopAck> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart1StopReq {
-    #[doc = "stop request off"]
+    #[doc = "stop request off."]
     LPUART1_STOP_REQ_0 = 0x0,
-    #[doc = "stop request on"]
+    #[doc = "stop request on."]
     LPUART1_STOP_REQ_1 = 0x01,
 }
 impl Lpuart1StopReq {
@@ -4376,9 +4376,9 @@ impl From<Lpuart1StopReq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart2IpgDoze {
-    #[doc = "not in doze mode"]
+    #[doc = "not in doze mode."]
     LPUART2_IPG_DOZE_0 = 0x0,
-    #[doc = "in doze mode"]
+    #[doc = "in doze mode."]
     LPUART2_IPG_DOZE_1 = 0x01,
 }
 impl Lpuart2IpgDoze {
@@ -4407,9 +4407,9 @@ impl From<Lpuart2IpgDoze> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart2IpgStopMode {
-    #[doc = "the module is functional in Stop mode"]
+    #[doc = "the module is functional in Stop mode."]
     LPUART2_IPG_STOP_MODE_0 = 0x0,
-    #[doc = "the module is NOT functional in Stop mode, when this bit is equal to 1 and ipg_stop is asserted"]
+    #[doc = "the module is NOT functional in Stop mode, when this bit is equal to 1 and ipg_stop is asserted."]
     LPUART2_IPG_STOP_MODE_1 = 0x01,
 }
 impl Lpuart2IpgStopMode {
@@ -4438,9 +4438,9 @@ impl From<Lpuart2IpgStopMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart2StopAck {
-    #[doc = "stop acknowledge is not asserted"]
+    #[doc = "stop acknowledge is not asserted."]
     LPUART2_STOP_ACK_0 = 0x0,
-    #[doc = "stop acknowledge is asserted"]
+    #[doc = "stop acknowledge is asserted."]
     LPUART2_STOP_ACK_1 = 0x01,
 }
 impl Lpuart2StopAck {
@@ -4469,9 +4469,9 @@ impl From<Lpuart2StopAck> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart2StopReq {
-    #[doc = "stop request off"]
+    #[doc = "stop request off."]
     LPUART2_STOP_REQ_0 = 0x0,
-    #[doc = "stop request on"]
+    #[doc = "stop request on."]
     LPUART2_STOP_REQ_1 = 0x01,
 }
 impl Lpuart2StopReq {
@@ -4500,9 +4500,9 @@ impl From<Lpuart2StopReq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart3IpgDoze {
-    #[doc = "not in doze mode"]
+    #[doc = "not in doze mode."]
     LPUART3_IPG_DOZE_0 = 0x0,
-    #[doc = "in doze mode"]
+    #[doc = "in doze mode."]
     LPUART3_IPG_DOZE_1 = 0x01,
 }
 impl Lpuart3IpgDoze {
@@ -4531,9 +4531,9 @@ impl From<Lpuart3IpgDoze> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart3IpgStopMode {
-    #[doc = "the module is functional in Stop mode"]
+    #[doc = "the module is functional in Stop mode."]
     LPUART3_IPG_STOP_MODE_0 = 0x0,
-    #[doc = "the module is NOT functional in Stop mode, when this bit is equal to 1 and ipg_stop is asserted"]
+    #[doc = "the module is NOT functional in Stop mode, when this bit is equal to 1 and ipg_stop is asserted."]
     LPUART3_IPG_STOP_MODE_1 = 0x01,
 }
 impl Lpuart3IpgStopMode {
@@ -4562,9 +4562,9 @@ impl From<Lpuart3IpgStopMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart3StopAck {
-    #[doc = "stop acknowledge is not asserted"]
+    #[doc = "stop acknowledge is not asserted."]
     LPUART3_STOP_ACK_0 = 0x0,
-    #[doc = "stop acknowledge is asserted"]
+    #[doc = "stop acknowledge is asserted."]
     LPUART3_STOP_ACK_1 = 0x01,
 }
 impl Lpuart3StopAck {
@@ -4593,9 +4593,9 @@ impl From<Lpuart3StopAck> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart3StopReq {
-    #[doc = "stop request off"]
+    #[doc = "stop request off."]
     LPUART3_STOP_REQ_0 = 0x0,
-    #[doc = "stop request on"]
+    #[doc = "stop request on."]
     LPUART3_STOP_REQ_1 = 0x01,
 }
 impl Lpuart3StopReq {
@@ -4624,9 +4624,9 @@ impl From<Lpuart3StopReq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart4IpgDoze {
-    #[doc = "not in doze mode"]
+    #[doc = "not in doze mode."]
     LPUART4_IPG_DOZE_0 = 0x0,
-    #[doc = "in doze mode"]
+    #[doc = "in doze mode."]
     LPUART4_IPG_DOZE_1 = 0x01,
 }
 impl Lpuart4IpgDoze {
@@ -4655,9 +4655,9 @@ impl From<Lpuart4IpgDoze> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart4IpgStopMode {
-    #[doc = "the module is functional in Stop mode"]
+    #[doc = "the module is functional in Stop mode."]
     LPUART4_IPG_STOP_MODE_0 = 0x0,
-    #[doc = "the module is NOT functional in Stop mode, when this bit is equal to 1 and ipg_stop is asserted"]
+    #[doc = "the module is NOT functional in Stop mode, when this bit is equal to 1 and ipg_stop is asserted."]
     LPUART4_IPG_STOP_MODE_1 = 0x01,
 }
 impl Lpuart4IpgStopMode {
@@ -4686,9 +4686,9 @@ impl From<Lpuart4IpgStopMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart4StopAck {
-    #[doc = "stop acknowledge is not asserted"]
+    #[doc = "stop acknowledge is not asserted."]
     LPUART4_STOP_ACK_0 = 0x0,
-    #[doc = "stop acknowledge is asserted"]
+    #[doc = "stop acknowledge is asserted."]
     LPUART4_STOP_ACK_1 = 0x01,
 }
 impl Lpuart4StopAck {
@@ -4717,9 +4717,9 @@ impl From<Lpuart4StopAck> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart4StopReq {
-    #[doc = "stop request off"]
+    #[doc = "stop request off."]
     LPUART4_STOP_REQ_0 = 0x0,
-    #[doc = "stop request on"]
+    #[doc = "stop request on."]
     LPUART4_STOP_REQ_1 = 0x01,
 }
 impl Lpuart4StopReq {
@@ -4748,9 +4748,9 @@ impl From<Lpuart4StopReq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart5IpgDoze {
-    #[doc = "not in doze mode"]
+    #[doc = "not in doze mode."]
     LPUART5_IPG_DOZE_0 = 0x0,
-    #[doc = "in doze mode"]
+    #[doc = "in doze mode."]
     LPUART5_IPG_DOZE_1 = 0x01,
 }
 impl Lpuart5IpgDoze {
@@ -4779,9 +4779,9 @@ impl From<Lpuart5IpgDoze> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart5IpgStopMode {
-    #[doc = "the module is functional in Stop mode"]
+    #[doc = "the module is functional in Stop mode."]
     LPUART5_IPG_STOP_MODE_0 = 0x0,
-    #[doc = "the module is NOT functional in Stop mode, when this bit is equal to 1 and ipg_stop is asserted"]
+    #[doc = "the module is NOT functional in Stop mode, when this bit is equal to 1 and ipg_stop is asserted."]
     LPUART5_IPG_STOP_MODE_1 = 0x01,
 }
 impl Lpuart5IpgStopMode {
@@ -4810,9 +4810,9 @@ impl From<Lpuart5IpgStopMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart5StopAck {
-    #[doc = "stop acknowledge is not asserted"]
+    #[doc = "stop acknowledge is not asserted."]
     LPUART5_STOP_ACK_0 = 0x0,
-    #[doc = "stop acknowledge is asserted"]
+    #[doc = "stop acknowledge is asserted."]
     LPUART5_STOP_ACK_1 = 0x01,
 }
 impl Lpuart5StopAck {
@@ -4841,9 +4841,9 @@ impl From<Lpuart5StopAck> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart5StopReq {
-    #[doc = "stop request off"]
+    #[doc = "stop request off."]
     LPUART5_STOP_REQ_0 = 0x0,
-    #[doc = "stop request on"]
+    #[doc = "stop request on."]
     LPUART5_STOP_REQ_1 = 0x01,
 }
 impl Lpuart5StopReq {
@@ -4872,9 +4872,9 @@ impl From<Lpuart5StopReq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart6IpgDoze {
-    #[doc = "not in doze mode"]
+    #[doc = "not in doze mode."]
     LPUART6_IPG_DOZE_0 = 0x0,
-    #[doc = "in doze mode"]
+    #[doc = "in doze mode."]
     LPUART6_IPG_DOZE_1 = 0x01,
 }
 impl Lpuart6IpgDoze {
@@ -4903,9 +4903,9 @@ impl From<Lpuart6IpgDoze> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart6IpgStopMode {
-    #[doc = "the module is functional in Stop mode"]
+    #[doc = "the module is functional in Stop mode."]
     LPUART6_IPG_STOP_MODE_0 = 0x0,
-    #[doc = "the module is NOT functional in Stop mode, when this bit is equal to 1 and ipg_stop is asserted"]
+    #[doc = "the module is NOT functional in Stop mode, when this bit is equal to 1 and ipg_stop is asserted."]
     LPUART6_IPG_STOP_MODE_1 = 0x01,
 }
 impl Lpuart6IpgStopMode {
@@ -4934,9 +4934,9 @@ impl From<Lpuart6IpgStopMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart6StopAck {
-    #[doc = "stop acknowledge is not asserted"]
+    #[doc = "stop acknowledge is not asserted."]
     LPUART6_STOP_ACK_0 = 0x0,
-    #[doc = "stop acknowledge is asserted"]
+    #[doc = "stop acknowledge is asserted."]
     LPUART6_STOP_ACK_1 = 0x01,
 }
 impl Lpuart6StopAck {
@@ -4965,9 +4965,9 @@ impl From<Lpuart6StopAck> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart6StopReq {
-    #[doc = "stop request off"]
+    #[doc = "stop request off."]
     LPUART6_STOP_REQ_0 = 0x0,
-    #[doc = "stop request on"]
+    #[doc = "stop request on."]
     LPUART6_STOP_REQ_1 = 0x01,
 }
 impl Lpuart6StopReq {
@@ -4996,9 +4996,9 @@ impl From<Lpuart6StopReq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart7IpgDoze {
-    #[doc = "not in doze mode"]
+    #[doc = "not in doze mode."]
     LPUART7_IPG_DOZE_0 = 0x0,
-    #[doc = "in doze mode"]
+    #[doc = "in doze mode."]
     LPUART7_IPG_DOZE_1 = 0x01,
 }
 impl Lpuart7IpgDoze {
@@ -5027,9 +5027,9 @@ impl From<Lpuart7IpgDoze> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart7IpgStopMode {
-    #[doc = "the module is functional in Stop mode"]
+    #[doc = "the module is functional in Stop mode."]
     LPUART7_IPG_STOP_MODE_0 = 0x0,
-    #[doc = "the module is NOT functional in Stop mode, when this bit is equal to 1 and ipg_stop is asserted"]
+    #[doc = "the module is NOT functional in Stop mode, when this bit is equal to 1 and ipg_stop is asserted."]
     LPUART7_IPG_STOP_MODE_1 = 0x01,
 }
 impl Lpuart7IpgStopMode {
@@ -5058,9 +5058,9 @@ impl From<Lpuart7IpgStopMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart7StopAck {
-    #[doc = "stop acknowledge is not asserted"]
+    #[doc = "stop acknowledge is not asserted."]
     LPUART7_STOP_ACK_0 = 0x0,
-    #[doc = "stop acknowledge is asserted"]
+    #[doc = "stop acknowledge is asserted."]
     LPUART7_STOP_ACK_1 = 0x01,
 }
 impl Lpuart7StopAck {
@@ -5089,9 +5089,9 @@ impl From<Lpuart7StopAck> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart7StopReq {
-    #[doc = "stop request off"]
+    #[doc = "stop request off."]
     LPUART7_STOP_REQ_0 = 0x0,
-    #[doc = "stop request on"]
+    #[doc = "stop request on."]
     LPUART7_STOP_REQ_1 = 0x01,
 }
 impl Lpuart7StopReq {
@@ -5120,9 +5120,9 @@ impl From<Lpuart7StopReq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart8IpgDoze {
-    #[doc = "not in doze mode"]
+    #[doc = "not in doze mode."]
     LPUART8_IPG_DOZE_0 = 0x0,
-    #[doc = "in doze mode"]
+    #[doc = "in doze mode."]
     LPUART8_IPG_DOZE_1 = 0x01,
 }
 impl Lpuart8IpgDoze {
@@ -5151,9 +5151,9 @@ impl From<Lpuart8IpgDoze> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart8IpgStopMode {
-    #[doc = "the module is functional in Stop mode"]
+    #[doc = "the module is functional in Stop mode."]
     LPUART8_IPG_STOP_MODE_0 = 0x0,
-    #[doc = "the module is NOT functional in Stop mode, when this bit is equal to 1 and ipg_stop is asserted"]
+    #[doc = "the module is NOT functional in Stop mode, when this bit is equal to 1 and ipg_stop is asserted."]
     LPUART8_IPG_STOP_MODE_1 = 0x01,
 }
 impl Lpuart8IpgStopMode {
@@ -5182,9 +5182,9 @@ impl From<Lpuart8IpgStopMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart8StopAck {
-    #[doc = "stop acknowledge is not asserted"]
+    #[doc = "stop acknowledge is not asserted."]
     LPUART8_STOP_ACK_0 = 0x0,
-    #[doc = "stop acknowledge is asserted (the module is in Stop mode)"]
+    #[doc = "stop acknowledge is asserted (the module is in Stop mode)."]
     LPUART8_STOP_ACK_1 = 0x01,
 }
 impl Lpuart8StopAck {
@@ -5213,9 +5213,9 @@ impl From<Lpuart8StopAck> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpuart8StopReq {
-    #[doc = "stop request off"]
+    #[doc = "stop request off."]
     LPUART8_STOP_REQ_0 = 0x0,
-    #[doc = "stop request on"]
+    #[doc = "stop request on."]
     LPUART8_STOP_REQ_1 = 0x01,
 }
 impl Lpuart8StopReq {
@@ -5244,9 +5244,9 @@ impl From<Lpuart8StopReq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum M7ApcAcR0Ctrl {
-    #[doc = "No access protection"]
+    #[doc = "No access protection."]
     M7_APC_AC_R0_CTRL_0 = 0x0,
-    #[doc = "M7 debug protection enabled"]
+    #[doc = "M7 debug protection enabled."]
     M7_APC_AC_R0_CTRL_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -5277,9 +5277,9 @@ impl From<M7ApcAcR0Ctrl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum M7ApcAcR1Ctrl {
-    #[doc = "No access protection"]
+    #[doc = "No access protection."]
     M7_APC_AC_R1_CTRL_0 = 0x0,
-    #[doc = "M7 debug protection enabled"]
+    #[doc = "M7 debug protection enabled."]
     M7_APC_AC_R1_CTRL_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -5310,9 +5310,9 @@ impl From<M7ApcAcR1Ctrl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum M7ApcAcR2Ctrl {
-    #[doc = "No access protection"]
+    #[doc = "No access protection."]
     M7_APC_AC_R2_CTRL_0 = 0x0,
-    #[doc = "M7 debug protection enabled"]
+    #[doc = "M7 debug protection enabled."]
     M7_APC_AC_R2_CTRL_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -5343,9 +5343,9 @@ impl From<M7ApcAcR2Ctrl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum M7ApcAcR3Ctrl {
-    #[doc = "No access protection"]
+    #[doc = "No access protection."]
     M7_APC_AC_R3_CTRL_0 = 0x0,
-    #[doc = "M7 debug protection enabled"]
+    #[doc = "M7 debug protection enabled."]
     M7_APC_AC_R3_CTRL_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -5376,517 +5376,517 @@ impl From<M7ApcAcR3Ctrl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MqsClkDiv {
-    #[doc = "mclk frequency = 1/1 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/1 * hmclk frequency."]
     DIVIDE_1 = 0x0,
-    #[doc = "mclk frequency = 1/2 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/2 * hmclk frequency."]
     DIVIDE_2 = 0x01,
-    #[doc = "mclk frequency = 1/3 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/3 * hmclk frequency."]
     DIVIDE_3 = 0x02,
-    #[doc = "mclk frequency = 1/4 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/4 * hmclk frequency."]
     DIVIDE_4 = 0x03,
-    #[doc = "mclk frequency = 1/5 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/5 * hmclk frequency."]
     DIVIDE_5 = 0x04,
-    #[doc = "mclk frequency = 1/6 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/6 * hmclk frequency."]
     DIVIDE_6 = 0x05,
-    #[doc = "mclk frequency = 1/7 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/7 * hmclk frequency."]
     DIVIDE_7 = 0x06,
-    #[doc = "mclk frequency = 1/8 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/8 * hmclk frequency."]
     DIVIDE_8 = 0x07,
-    #[doc = "mclk frequency = 1/9 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/9 * hmclk frequency."]
     DIVIDE_9 = 0x08,
-    #[doc = "mclk frequency = 1/10 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/10 * hmclk frequency."]
     DIVIDE_10 = 0x09,
-    #[doc = "mclk frequency = 1/11 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/11 * hmclk frequency."]
     DIVIDE_11 = 0x0a,
-    #[doc = "mclk frequency = 1/12 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/12 * hmclk frequency."]
     DIVIDE_12 = 0x0b,
-    #[doc = "mclk frequency = 1/13 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/13 * hmclk frequency."]
     DIVIDE_13 = 0x0c,
-    #[doc = "mclk frequency = 1/14 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/14 * hmclk frequency."]
     DIVIDE_14 = 0x0d,
-    #[doc = "mclk frequency = 1/15 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/15 * hmclk frequency."]
     DIVIDE_15 = 0x0e,
-    #[doc = "mclk frequency = 1/16 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/16 * hmclk frequency."]
     DIVIDE_16 = 0x0f,
-    #[doc = "mclk frequency = 1/17 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/17 * hmclk frequency."]
     DIVIDE_17 = 0x10,
-    #[doc = "mclk frequency = 1/18 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/18 * hmclk frequency."]
     DIVIDE_18 = 0x11,
-    #[doc = "mclk frequency = 1/19 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/19 * hmclk frequency."]
     DIVIDE_19 = 0x12,
-    #[doc = "mclk frequency = 1/20 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/20 * hmclk frequency."]
     DIVIDE_20 = 0x13,
-    #[doc = "mclk frequency = 1/21 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/21 * hmclk frequency."]
     DIVIDE_21 = 0x14,
-    #[doc = "mclk frequency = 1/22 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/22 * hmclk frequency."]
     DIVIDE_22 = 0x15,
-    #[doc = "mclk frequency = 1/23 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/23 * hmclk frequency."]
     DIVIDE_23 = 0x16,
-    #[doc = "mclk frequency = 1/24 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/24 * hmclk frequency."]
     DIVIDE_24 = 0x17,
-    #[doc = "mclk frequency = 1/25 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/25 * hmclk frequency."]
     DIVIDE_25 = 0x18,
-    #[doc = "mclk frequency = 1/26 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/26 * hmclk frequency."]
     DIVIDE_26 = 0x19,
-    #[doc = "mclk frequency = 1/27 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/27 * hmclk frequency."]
     DIVIDE_27 = 0x1a,
-    #[doc = "mclk frequency = 1/28 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/28 * hmclk frequency."]
     DIVIDE_28 = 0x1b,
-    #[doc = "mclk frequency = 1/29 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/29 * hmclk frequency."]
     DIVIDE_29 = 0x1c,
-    #[doc = "mclk frequency = 1/30 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/30 * hmclk frequency."]
     DIVIDE_30 = 0x1d,
-    #[doc = "mclk frequency = 1/31 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/31 * hmclk frequency."]
     DIVIDE_31 = 0x1e,
-    #[doc = "mclk frequency = 1/32 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/32 * hmclk frequency."]
     DIVIDE_32 = 0x1f,
-    #[doc = "mclk frequency = 1/33 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/33 * hmclk frequency."]
     DIVIDE_33 = 0x20,
-    #[doc = "mclk frequency = 1/34 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/34 * hmclk frequency."]
     DIVIDE_34 = 0x21,
-    #[doc = "mclk frequency = 1/35 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/35 * hmclk frequency."]
     DIVIDE_35 = 0x22,
-    #[doc = "mclk frequency = 1/36 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/36 * hmclk frequency."]
     DIVIDE_36 = 0x23,
-    #[doc = "mclk frequency = 1/37 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/37 * hmclk frequency."]
     DIVIDE_37 = 0x24,
-    #[doc = "mclk frequency = 1/38 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/38 * hmclk frequency."]
     DIVIDE_38 = 0x25,
-    #[doc = "mclk frequency = 1/39 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/39 * hmclk frequency."]
     DIVIDE_39 = 0x26,
-    #[doc = "mclk frequency = 1/40 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/40 * hmclk frequency."]
     DIVIDE_40 = 0x27,
-    #[doc = "mclk frequency = 1/41 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/41 * hmclk frequency."]
     DIVIDE_41 = 0x28,
-    #[doc = "mclk frequency = 1/42 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/42 * hmclk frequency."]
     DIVIDE_42 = 0x29,
-    #[doc = "mclk frequency = 1/43 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/43 * hmclk frequency."]
     DIVIDE_43 = 0x2a,
-    #[doc = "mclk frequency = 1/44 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/44 * hmclk frequency."]
     DIVIDE_44 = 0x2b,
-    #[doc = "mclk frequency = 1/45 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/45 * hmclk frequency."]
     DIVIDE_45 = 0x2c,
-    #[doc = "mclk frequency = 1/46 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/46 * hmclk frequency."]
     DIVIDE_46 = 0x2d,
-    #[doc = "mclk frequency = 1/47 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/47 * hmclk frequency."]
     DIVIDE_47 = 0x2e,
-    #[doc = "mclk frequency = 1/48 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/48 * hmclk frequency."]
     DIVIDE_48 = 0x2f,
-    #[doc = "mclk frequency = 1/49 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/49 * hmclk frequency."]
     DIVIDE_49 = 0x30,
-    #[doc = "mclk frequency = 1/50 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/50 * hmclk frequency."]
     DIVIDE_50 = 0x31,
-    #[doc = "mclk frequency = 1/51 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/51 * hmclk frequency."]
     DIVIDE_51 = 0x32,
-    #[doc = "mclk frequency = 1/52 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/52 * hmclk frequency."]
     DIVIDE_52 = 0x33,
-    #[doc = "mclk frequency = 1/53 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/53 * hmclk frequency."]
     DIVIDE_53 = 0x34,
-    #[doc = "mclk frequency = 1/54 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/54 * hmclk frequency."]
     DIVIDE_54 = 0x35,
-    #[doc = "mclk frequency = 1/55 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/55 * hmclk frequency."]
     DIVIDE_55 = 0x36,
-    #[doc = "mclk frequency = 1/56 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/56 * hmclk frequency."]
     DIVIDE_56 = 0x37,
-    #[doc = "mclk frequency = 1/57 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/57 * hmclk frequency."]
     DIVIDE_57 = 0x38,
-    #[doc = "mclk frequency = 1/58 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/58 * hmclk frequency."]
     DIVIDE_58 = 0x39,
-    #[doc = "mclk frequency = 1/59 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/59 * hmclk frequency."]
     DIVIDE_59 = 0x3a,
-    #[doc = "mclk frequency = 1/60 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/60 * hmclk frequency."]
     DIVIDE_60 = 0x3b,
-    #[doc = "mclk frequency = 1/61 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/61 * hmclk frequency."]
     DIVIDE_61 = 0x3c,
-    #[doc = "mclk frequency = 1/62 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/62 * hmclk frequency."]
     DIVIDE_62 = 0x3d,
-    #[doc = "mclk frequency = 1/63 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/63 * hmclk frequency."]
     DIVIDE_63 = 0x3e,
-    #[doc = "mclk frequency = 1/64 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/64 * hmclk frequency."]
     DIVIDE_64 = 0x3f,
-    #[doc = "mclk frequency = 1/65 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/65 * hmclk frequency."]
     DIVIDE_65 = 0x40,
-    #[doc = "mclk frequency = 1/66 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/66 * hmclk frequency."]
     DIVIDE_66 = 0x41,
-    #[doc = "mclk frequency = 1/67 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/67 * hmclk frequency."]
     DIVIDE_67 = 0x42,
-    #[doc = "mclk frequency = 1/68 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/68 * hmclk frequency."]
     DIVIDE_68 = 0x43,
-    #[doc = "mclk frequency = 1/69 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/69 * hmclk frequency."]
     DIVIDE_69 = 0x44,
-    #[doc = "mclk frequency = 1/70 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/70 * hmclk frequency."]
     DIVIDE_70 = 0x45,
-    #[doc = "mclk frequency = 1/71 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/71 * hmclk frequency."]
     DIVIDE_71 = 0x46,
-    #[doc = "mclk frequency = 1/72 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/72 * hmclk frequency."]
     DIVIDE_72 = 0x47,
-    #[doc = "mclk frequency = 1/73 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/73 * hmclk frequency."]
     DIVIDE_73 = 0x48,
-    #[doc = "mclk frequency = 1/74 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/74 * hmclk frequency."]
     DIVIDE_74 = 0x49,
-    #[doc = "mclk frequency = 1/75 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/75 * hmclk frequency."]
     DIVIDE_75 = 0x4a,
-    #[doc = "mclk frequency = 1/76 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/76 * hmclk frequency."]
     DIVIDE_76 = 0x4b,
-    #[doc = "mclk frequency = 1/77 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/77 * hmclk frequency."]
     DIVIDE_77 = 0x4c,
-    #[doc = "mclk frequency = 1/78 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/78 * hmclk frequency."]
     DIVIDE_78 = 0x4d,
-    #[doc = "mclk frequency = 1/79 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/79 * hmclk frequency."]
     DIVIDE_79 = 0x4e,
-    #[doc = "mclk frequency = 1/80 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/80 * hmclk frequency."]
     DIVIDE_80 = 0x4f,
-    #[doc = "mclk frequency = 1/81 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/81 * hmclk frequency."]
     DIVIDE_81 = 0x50,
-    #[doc = "mclk frequency = 1/82 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/82 * hmclk frequency."]
     DIVIDE_82 = 0x51,
-    #[doc = "mclk frequency = 1/83 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/83 * hmclk frequency."]
     DIVIDE_83 = 0x52,
-    #[doc = "mclk frequency = 1/84 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/84 * hmclk frequency."]
     DIVIDE_84 = 0x53,
-    #[doc = "mclk frequency = 1/85 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/85 * hmclk frequency."]
     DIVIDE_85 = 0x54,
-    #[doc = "mclk frequency = 1/86 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/86 * hmclk frequency."]
     DIVIDE_86 = 0x55,
-    #[doc = "mclk frequency = 1/87 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/87 * hmclk frequency."]
     DIVIDE_87 = 0x56,
-    #[doc = "mclk frequency = 1/88 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/88 * hmclk frequency."]
     DIVIDE_88 = 0x57,
-    #[doc = "mclk frequency = 1/89 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/89 * hmclk frequency."]
     DIVIDE_89 = 0x58,
-    #[doc = "mclk frequency = 1/90 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/90 * hmclk frequency."]
     DIVIDE_90 = 0x59,
-    #[doc = "mclk frequency = 1/91 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/91 * hmclk frequency."]
     DIVIDE_91 = 0x5a,
-    #[doc = "mclk frequency = 1/92 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/92 * hmclk frequency."]
     DIVIDE_92 = 0x5b,
-    #[doc = "mclk frequency = 1/93 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/93 * hmclk frequency."]
     DIVIDE_93 = 0x5c,
-    #[doc = "mclk frequency = 1/94 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/94 * hmclk frequency."]
     DIVIDE_94 = 0x5d,
-    #[doc = "mclk frequency = 1/95 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/95 * hmclk frequency."]
     DIVIDE_95 = 0x5e,
-    #[doc = "mclk frequency = 1/96 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/96 * hmclk frequency."]
     DIVIDE_96 = 0x5f,
-    #[doc = "mclk frequency = 1/97 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/97 * hmclk frequency."]
     DIVIDE_97 = 0x60,
-    #[doc = "mclk frequency = 1/98 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/98 * hmclk frequency."]
     DIVIDE_98 = 0x61,
-    #[doc = "mclk frequency = 1/99 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/99 * hmclk frequency."]
     DIVIDE_99 = 0x62,
-    #[doc = "mclk frequency = 1/100 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/100 * hmclk frequency."]
     DIVIDE_100 = 0x63,
-    #[doc = "mclk frequency = 1/101 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/101 * hmclk frequency."]
     DIVIDE_101 = 0x64,
-    #[doc = "mclk frequency = 1/102 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/102 * hmclk frequency."]
     DIVIDE_102 = 0x65,
-    #[doc = "mclk frequency = 1/103 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/103 * hmclk frequency."]
     DIVIDE_103 = 0x66,
-    #[doc = "mclk frequency = 1/104 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/104 * hmclk frequency."]
     DIVIDE_104 = 0x67,
-    #[doc = "mclk frequency = 1/105 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/105 * hmclk frequency."]
     DIVIDE_105 = 0x68,
-    #[doc = "mclk frequency = 1/106 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/106 * hmclk frequency."]
     DIVIDE_106 = 0x69,
-    #[doc = "mclk frequency = 1/107 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/107 * hmclk frequency."]
     DIVIDE_107 = 0x6a,
-    #[doc = "mclk frequency = 1/108 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/108 * hmclk frequency."]
     DIVIDE_108 = 0x6b,
-    #[doc = "mclk frequency = 1/109 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/109 * hmclk frequency."]
     DIVIDE_109 = 0x6c,
-    #[doc = "mclk frequency = 1/110 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/110 * hmclk frequency."]
     DIVIDE_110 = 0x6d,
-    #[doc = "mclk frequency = 1/111 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/111 * hmclk frequency."]
     DIVIDE_111 = 0x6e,
-    #[doc = "mclk frequency = 1/112 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/112 * hmclk frequency."]
     DIVIDE_112 = 0x6f,
-    #[doc = "mclk frequency = 1/113 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/113 * hmclk frequency."]
     DIVIDE_113 = 0x70,
-    #[doc = "mclk frequency = 1/114 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/114 * hmclk frequency."]
     DIVIDE_114 = 0x71,
-    #[doc = "mclk frequency = 1/115 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/115 * hmclk frequency."]
     DIVIDE_115 = 0x72,
-    #[doc = "mclk frequency = 1/116 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/116 * hmclk frequency."]
     DIVIDE_116 = 0x73,
-    #[doc = "mclk frequency = 1/117 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/117 * hmclk frequency."]
     DIVIDE_117 = 0x74,
-    #[doc = "mclk frequency = 1/118 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/118 * hmclk frequency."]
     DIVIDE_118 = 0x75,
-    #[doc = "mclk frequency = 1/119 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/119 * hmclk frequency."]
     DIVIDE_119 = 0x76,
-    #[doc = "mclk frequency = 1/120 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/120 * hmclk frequency."]
     DIVIDE_120 = 0x77,
-    #[doc = "mclk frequency = 1/121 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/121 * hmclk frequency."]
     DIVIDE_121 = 0x78,
-    #[doc = "mclk frequency = 1/122 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/122 * hmclk frequency."]
     DIVIDE_122 = 0x79,
-    #[doc = "mclk frequency = 1/123 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/123 * hmclk frequency."]
     DIVIDE_123 = 0x7a,
-    #[doc = "mclk frequency = 1/124 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/124 * hmclk frequency."]
     DIVIDE_124 = 0x7b,
-    #[doc = "mclk frequency = 1/125 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/125 * hmclk frequency."]
     DIVIDE_125 = 0x7c,
-    #[doc = "mclk frequency = 1/126 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/126 * hmclk frequency."]
     DIVIDE_126 = 0x7d,
-    #[doc = "mclk frequency = 1/127 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/127 * hmclk frequency."]
     DIVIDE_127 = 0x7e,
-    #[doc = "mclk frequency = 1/128 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/128 * hmclk frequency."]
     DIVIDE_128 = 0x7f,
-    #[doc = "mclk frequency = 1/129 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/129 * hmclk frequency."]
     DIVIDE_129 = 0x80,
-    #[doc = "mclk frequency = 1/130 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/130 * hmclk frequency."]
     DIVIDE_130 = 0x81,
-    #[doc = "mclk frequency = 1/131 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/131 * hmclk frequency."]
     DIVIDE_131 = 0x82,
-    #[doc = "mclk frequency = 1/132 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/132 * hmclk frequency."]
     DIVIDE_132 = 0x83,
-    #[doc = "mclk frequency = 1/133 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/133 * hmclk frequency."]
     DIVIDE_133 = 0x84,
-    #[doc = "mclk frequency = 1/134 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/134 * hmclk frequency."]
     DIVIDE_134 = 0x85,
-    #[doc = "mclk frequency = 1/135 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/135 * hmclk frequency."]
     DIVIDE_135 = 0x86,
-    #[doc = "mclk frequency = 1/136 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/136 * hmclk frequency."]
     DIVIDE_136 = 0x87,
-    #[doc = "mclk frequency = 1/137 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/137 * hmclk frequency."]
     DIVIDE_137 = 0x88,
-    #[doc = "mclk frequency = 1/138 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/138 * hmclk frequency."]
     DIVIDE_138 = 0x89,
-    #[doc = "mclk frequency = 1/139 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/139 * hmclk frequency."]
     DIVIDE_139 = 0x8a,
-    #[doc = "mclk frequency = 1/140 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/140 * hmclk frequency."]
     DIVIDE_140 = 0x8b,
-    #[doc = "mclk frequency = 1/141 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/141 * hmclk frequency."]
     DIVIDE_141 = 0x8c,
-    #[doc = "mclk frequency = 1/142 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/142 * hmclk frequency."]
     DIVIDE_142 = 0x8d,
-    #[doc = "mclk frequency = 1/143 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/143 * hmclk frequency."]
     DIVIDE_143 = 0x8e,
-    #[doc = "mclk frequency = 1/144 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/144 * hmclk frequency."]
     DIVIDE_144 = 0x8f,
-    #[doc = "mclk frequency = 1/145 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/145 * hmclk frequency."]
     DIVIDE_145 = 0x90,
-    #[doc = "mclk frequency = 1/146 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/146 * hmclk frequency."]
     DIVIDE_146 = 0x91,
-    #[doc = "mclk frequency = 1/147 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/147 * hmclk frequency."]
     DIVIDE_147 = 0x92,
-    #[doc = "mclk frequency = 1/148 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/148 * hmclk frequency."]
     DIVIDE_148 = 0x93,
-    #[doc = "mclk frequency = 1/149 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/149 * hmclk frequency."]
     DIVIDE_149 = 0x94,
-    #[doc = "mclk frequency = 1/150 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/150 * hmclk frequency."]
     DIVIDE_150 = 0x95,
-    #[doc = "mclk frequency = 1/151 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/151 * hmclk frequency."]
     DIVIDE_151 = 0x96,
-    #[doc = "mclk frequency = 1/152 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/152 * hmclk frequency."]
     DIVIDE_152 = 0x97,
-    #[doc = "mclk frequency = 1/153 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/153 * hmclk frequency."]
     DIVIDE_153 = 0x98,
-    #[doc = "mclk frequency = 1/154 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/154 * hmclk frequency."]
     DIVIDE_154 = 0x99,
-    #[doc = "mclk frequency = 1/155 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/155 * hmclk frequency."]
     DIVIDE_155 = 0x9a,
-    #[doc = "mclk frequency = 1/156 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/156 * hmclk frequency."]
     DIVIDE_156 = 0x9b,
-    #[doc = "mclk frequency = 1/157 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/157 * hmclk frequency."]
     DIVIDE_157 = 0x9c,
-    #[doc = "mclk frequency = 1/158 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/158 * hmclk frequency."]
     DIVIDE_158 = 0x9d,
-    #[doc = "mclk frequency = 1/159 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/159 * hmclk frequency."]
     DIVIDE_159 = 0x9e,
-    #[doc = "mclk frequency = 1/160 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/160 * hmclk frequency."]
     DIVIDE_160 = 0x9f,
-    #[doc = "mclk frequency = 1/161 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/161 * hmclk frequency."]
     DIVIDE_161 = 0xa0,
-    #[doc = "mclk frequency = 1/162 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/162 * hmclk frequency."]
     DIVIDE_162 = 0xa1,
-    #[doc = "mclk frequency = 1/163 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/163 * hmclk frequency."]
     DIVIDE_163 = 0xa2,
-    #[doc = "mclk frequency = 1/164 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/164 * hmclk frequency."]
     DIVIDE_164 = 0xa3,
-    #[doc = "mclk frequency = 1/165 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/165 * hmclk frequency."]
     DIVIDE_165 = 0xa4,
-    #[doc = "mclk frequency = 1/166 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/166 * hmclk frequency."]
     DIVIDE_166 = 0xa5,
-    #[doc = "mclk frequency = 1/167 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/167 * hmclk frequency."]
     DIVIDE_167 = 0xa6,
-    #[doc = "mclk frequency = 1/168 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/168 * hmclk frequency."]
     DIVIDE_168 = 0xa7,
-    #[doc = "mclk frequency = 1/169 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/169 * hmclk frequency."]
     DIVIDE_169 = 0xa8,
-    #[doc = "mclk frequency = 1/170 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/170 * hmclk frequency."]
     DIVIDE_170 = 0xa9,
-    #[doc = "mclk frequency = 1/171 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/171 * hmclk frequency."]
     DIVIDE_171 = 0xaa,
-    #[doc = "mclk frequency = 1/172 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/172 * hmclk frequency."]
     DIVIDE_172 = 0xab,
-    #[doc = "mclk frequency = 1/173 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/173 * hmclk frequency."]
     DIVIDE_173 = 0xac,
-    #[doc = "mclk frequency = 1/174 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/174 * hmclk frequency."]
     DIVIDE_174 = 0xad,
-    #[doc = "mclk frequency = 1/175 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/175 * hmclk frequency."]
     DIVIDE_175 = 0xae,
-    #[doc = "mclk frequency = 1/176 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/176 * hmclk frequency."]
     DIVIDE_176 = 0xaf,
-    #[doc = "mclk frequency = 1/177 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/177 * hmclk frequency."]
     DIVIDE_177 = 0xb0,
-    #[doc = "mclk frequency = 1/178 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/178 * hmclk frequency."]
     DIVIDE_178 = 0xb1,
-    #[doc = "mclk frequency = 1/179 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/179 * hmclk frequency."]
     DIVIDE_179 = 0xb2,
-    #[doc = "mclk frequency = 1/180 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/180 * hmclk frequency."]
     DIVIDE_180 = 0xb3,
-    #[doc = "mclk frequency = 1/181 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/181 * hmclk frequency."]
     DIVIDE_181 = 0xb4,
-    #[doc = "mclk frequency = 1/182 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/182 * hmclk frequency."]
     DIVIDE_182 = 0xb5,
-    #[doc = "mclk frequency = 1/183 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/183 * hmclk frequency."]
     DIVIDE_183 = 0xb6,
-    #[doc = "mclk frequency = 1/184 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/184 * hmclk frequency."]
     DIVIDE_184 = 0xb7,
-    #[doc = "mclk frequency = 1/185 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/185 * hmclk frequency."]
     DIVIDE_185 = 0xb8,
-    #[doc = "mclk frequency = 1/186 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/186 * hmclk frequency."]
     DIVIDE_186 = 0xb9,
-    #[doc = "mclk frequency = 1/187 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/187 * hmclk frequency."]
     DIVIDE_187 = 0xba,
-    #[doc = "mclk frequency = 1/188 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/188 * hmclk frequency."]
     DIVIDE_188 = 0xbb,
-    #[doc = "mclk frequency = 1/189 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/189 * hmclk frequency."]
     DIVIDE_189 = 0xbc,
-    #[doc = "mclk frequency = 1/190 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/190 * hmclk frequency."]
     DIVIDE_190 = 0xbd,
-    #[doc = "mclk frequency = 1/191 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/191 * hmclk frequency."]
     DIVIDE_191 = 0xbe,
-    #[doc = "mclk frequency = 1/192 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/192 * hmclk frequency."]
     DIVIDE_192 = 0xbf,
-    #[doc = "mclk frequency = 1/193 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/193 * hmclk frequency."]
     DIVIDE_193 = 0xc0,
-    #[doc = "mclk frequency = 1/194 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/194 * hmclk frequency."]
     DIVIDE_194 = 0xc1,
-    #[doc = "mclk frequency = 1/195 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/195 * hmclk frequency."]
     DIVIDE_195 = 0xc2,
-    #[doc = "mclk frequency = 1/196 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/196 * hmclk frequency."]
     DIVIDE_196 = 0xc3,
-    #[doc = "mclk frequency = 1/197 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/197 * hmclk frequency."]
     DIVIDE_197 = 0xc4,
-    #[doc = "mclk frequency = 1/198 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/198 * hmclk frequency."]
     DIVIDE_198 = 0xc5,
-    #[doc = "mclk frequency = 1/199 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/199 * hmclk frequency."]
     DIVIDE_199 = 0xc6,
-    #[doc = "mclk frequency = 1/200 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/200 * hmclk frequency."]
     DIVIDE_200 = 0xc7,
-    #[doc = "mclk frequency = 1/201 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/201 * hmclk frequency."]
     DIVIDE_201 = 0xc8,
-    #[doc = "mclk frequency = 1/202 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/202 * hmclk frequency."]
     DIVIDE_202 = 0xc9,
-    #[doc = "mclk frequency = 1/203 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/203 * hmclk frequency."]
     DIVIDE_203 = 0xca,
-    #[doc = "mclk frequency = 1/204 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/204 * hmclk frequency."]
     DIVIDE_204 = 0xcb,
-    #[doc = "mclk frequency = 1/205 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/205 * hmclk frequency."]
     DIVIDE_205 = 0xcc,
-    #[doc = "mclk frequency = 1/206 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/206 * hmclk frequency."]
     DIVIDE_206 = 0xcd,
-    #[doc = "mclk frequency = 1/207 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/207 * hmclk frequency."]
     DIVIDE_207 = 0xce,
-    #[doc = "mclk frequency = 1/208 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/208 * hmclk frequency."]
     DIVIDE_208 = 0xcf,
-    #[doc = "mclk frequency = 1/209 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/209 * hmclk frequency."]
     DIVIDE_209 = 0xd0,
-    #[doc = "mclk frequency = 1/210 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/210 * hmclk frequency."]
     DIVIDE_210 = 0xd1,
-    #[doc = "mclk frequency = 1/211 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/211 * hmclk frequency."]
     DIVIDE_211 = 0xd2,
-    #[doc = "mclk frequency = 1/212 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/212 * hmclk frequency."]
     DIVIDE_212 = 0xd3,
-    #[doc = "mclk frequency = 1/213 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/213 * hmclk frequency."]
     DIVIDE_213 = 0xd4,
-    #[doc = "mclk frequency = 1/214 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/214 * hmclk frequency."]
     DIVIDE_214 = 0xd5,
-    #[doc = "mclk frequency = 1/215 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/215 * hmclk frequency."]
     DIVIDE_215 = 0xd6,
-    #[doc = "mclk frequency = 1/216 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/216 * hmclk frequency."]
     DIVIDE_216 = 0xd7,
-    #[doc = "mclk frequency = 1/217 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/217 * hmclk frequency."]
     DIVIDE_217 = 0xd8,
-    #[doc = "mclk frequency = 1/218 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/218 * hmclk frequency."]
     DIVIDE_218 = 0xd9,
-    #[doc = "mclk frequency = 1/219 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/219 * hmclk frequency."]
     DIVIDE_219 = 0xda,
-    #[doc = "mclk frequency = 1/220 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/220 * hmclk frequency."]
     DIVIDE_220 = 0xdb,
-    #[doc = "mclk frequency = 1/221 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/221 * hmclk frequency."]
     DIVIDE_221 = 0xdc,
-    #[doc = "mclk frequency = 1/222 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/222 * hmclk frequency."]
     DIVIDE_222 = 0xdd,
-    #[doc = "mclk frequency = 1/223 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/223 * hmclk frequency."]
     DIVIDE_223 = 0xde,
-    #[doc = "mclk frequency = 1/224 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/224 * hmclk frequency."]
     DIVIDE_224 = 0xdf,
-    #[doc = "mclk frequency = 1/225 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/225 * hmclk frequency."]
     DIVIDE_225 = 0xe0,
-    #[doc = "mclk frequency = 1/226 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/226 * hmclk frequency."]
     DIVIDE_226 = 0xe1,
-    #[doc = "mclk frequency = 1/227 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/227 * hmclk frequency."]
     DIVIDE_227 = 0xe2,
-    #[doc = "mclk frequency = 1/228 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/228 * hmclk frequency."]
     DIVIDE_228 = 0xe3,
-    #[doc = "mclk frequency = 1/229 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/229 * hmclk frequency."]
     DIVIDE_229 = 0xe4,
-    #[doc = "mclk frequency = 1/230 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/230 * hmclk frequency."]
     DIVIDE_230 = 0xe5,
-    #[doc = "mclk frequency = 1/231 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/231 * hmclk frequency."]
     DIVIDE_231 = 0xe6,
-    #[doc = "mclk frequency = 1/232 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/232 * hmclk frequency."]
     DIVIDE_232 = 0xe7,
-    #[doc = "mclk frequency = 1/233 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/233 * hmclk frequency."]
     DIVIDE_233 = 0xe8,
-    #[doc = "mclk frequency = 1/234 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/234 * hmclk frequency."]
     DIVIDE_234 = 0xe9,
-    #[doc = "mclk frequency = 1/235 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/235 * hmclk frequency."]
     DIVIDE_235 = 0xea,
-    #[doc = "mclk frequency = 1/236 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/236 * hmclk frequency."]
     DIVIDE_236 = 0xeb,
-    #[doc = "mclk frequency = 1/237 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/237 * hmclk frequency."]
     DIVIDE_237 = 0xec,
-    #[doc = "mclk frequency = 1/238 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/238 * hmclk frequency."]
     DIVIDE_238 = 0xed,
-    #[doc = "mclk frequency = 1/239 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/239 * hmclk frequency."]
     DIVIDE_239 = 0xee,
-    #[doc = "mclk frequency = 1/240 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/240 * hmclk frequency."]
     DIVIDE_240 = 0xef,
-    #[doc = "mclk frequency = 1/241 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/241 * hmclk frequency."]
     DIVIDE_241 = 0xf0,
-    #[doc = "mclk frequency = 1/242 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/242 * hmclk frequency."]
     DIVIDE_242 = 0xf1,
-    #[doc = "mclk frequency = 1/243 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/243 * hmclk frequency."]
     DIVIDE_243 = 0xf2,
-    #[doc = "mclk frequency = 1/244 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/244 * hmclk frequency."]
     DIVIDE_244 = 0xf3,
-    #[doc = "mclk frequency = 1/245 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/245 * hmclk frequency."]
     DIVIDE_245 = 0xf4,
-    #[doc = "mclk frequency = 1/246 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/246 * hmclk frequency."]
     DIVIDE_246 = 0xf5,
-    #[doc = "mclk frequency = 1/247 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/247 * hmclk frequency."]
     DIVIDE_247 = 0xf6,
-    #[doc = "mclk frequency = 1/248 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/248 * hmclk frequency."]
     DIVIDE_248 = 0xf7,
-    #[doc = "mclk frequency = 1/249 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/249 * hmclk frequency."]
     DIVIDE_249 = 0xf8,
-    #[doc = "mclk frequency = 1/250 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/250 * hmclk frequency."]
     DIVIDE_250 = 0xf9,
-    #[doc = "mclk frequency = 1/251 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/251 * hmclk frequency."]
     DIVIDE_251 = 0xfa,
-    #[doc = "mclk frequency = 1/252 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/252 * hmclk frequency."]
     DIVIDE_252 = 0xfb,
-    #[doc = "mclk frequency = 1/253 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/253 * hmclk frequency."]
     DIVIDE_253 = 0xfc,
-    #[doc = "mclk frequency = 1/254 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/254 * hmclk frequency."]
     DIVIDE_254 = 0xfd,
-    #[doc = "mclk frequency = 1/255 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/255 * hmclk frequency."]
     DIVIDE_255 = 0xfe,
-    #[doc = "mclk frequency = 1/256 * hmclk frequency"]
+    #[doc = "mclk frequency = 1/256 * hmclk frequency."]
     DIVIDE_256 = 0xff,
 }
 impl MqsClkDiv {
@@ -5915,9 +5915,9 @@ impl From<MqsClkDiv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MqsEn {
-    #[doc = "Disable MQS"]
+    #[doc = "Disable MQS."]
     MQS_EN_0 = 0x0,
-    #[doc = "Enable MQS"]
+    #[doc = "Enable MQS."]
     MQS_EN_1 = 0x01,
 }
 impl MqsEn {
@@ -5946,9 +5946,9 @@ impl From<MqsEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MqsOversample {
-    #[doc = "32"]
+    #[doc = "32."]
     MQS_OVERSAMPLE_0 = 0x0,
-    #[doc = "64"]
+    #[doc = "64."]
     MQS_OVERSAMPLE_1 = 0x01,
 }
 impl MqsOversample {
@@ -5977,9 +5977,9 @@ impl From<MqsOversample> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MqsSwRst {
-    #[doc = "Exit software reset for MQS"]
+    #[doc = "Exit software reset for MQS."]
     MQS_SW_RST_0 = 0x0,
-    #[doc = "Enable software reset for MQS"]
+    #[doc = "Enable software reset for MQS."]
     MQS_SW_RST_1 = 0x01,
 }
 impl MqsSwRst {
@@ -6101,9 +6101,9 @@ impl From<OcramTzEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PitStopAck {
-    #[doc = "PIT stop acknowledge is not asserted"]
+    #[doc = "PIT stop acknowledge is not asserted."]
     PIT_STOP_ACK_0 = 0x0,
-    #[doc = "PIT stop acknowledge is asserted"]
+    #[doc = "PIT stop acknowledge is asserted."]
     PIT_STOP_ACK_1 = 0x01,
 }
 impl PitStopAck {
@@ -6132,9 +6132,9 @@ impl From<PitStopAck> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PitStopReq {
-    #[doc = "stop request off"]
+    #[doc = "stop request off."]
     PIT_STOP_REQ_0 = 0x0,
-    #[doc = "stop request on"]
+    #[doc = "stop request on."]
     PIT_STOP_REQ_1 = 0x01,
 }
 impl PitStopReq {
@@ -6163,9 +6163,9 @@ impl From<PitStopReq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Qtimer1TmrCntsFreeze {
-    #[doc = "timer counter work normally"]
+    #[doc = "timer counter work normally."]
     QTIMER1_TMR_CNTS_FREEZE_0 = 0x0,
-    #[doc = "reset counter and ouput flags"]
+    #[doc = "reset counter and ouput flags."]
     QTIMER1_TMR_CNTS_FREEZE_1 = 0x01,
 }
 impl Qtimer1TmrCntsFreeze {
@@ -6194,9 +6194,9 @@ impl From<Qtimer1TmrCntsFreeze> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Qtimer1Trm0InputSel {
-    #[doc = "input from IOMUX"]
+    #[doc = "input from IOMUX."]
     QTIMER1_TRM0_INPUT_SEL_0 = 0x0,
-    #[doc = "input from XBAR"]
+    #[doc = "input from XBAR."]
     QTIMER1_TRM0_INPUT_SEL_1 = 0x01,
 }
 impl Qtimer1Trm0InputSel {
@@ -6225,9 +6225,9 @@ impl From<Qtimer1Trm0InputSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Qtimer1Trm1InputSel {
-    #[doc = "input from IOMUX"]
+    #[doc = "input from IOMUX."]
     QTIMER1_TRM1_INPUT_SEL_0 = 0x0,
-    #[doc = "input from XBAR"]
+    #[doc = "input from XBAR."]
     QTIMER1_TRM1_INPUT_SEL_1 = 0x01,
 }
 impl Qtimer1Trm1InputSel {
@@ -6256,9 +6256,9 @@ impl From<Qtimer1Trm1InputSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Qtimer1Trm2InputSel {
-    #[doc = "input from IOMUX"]
+    #[doc = "input from IOMUX."]
     QTIMER1_TRM2_INPUT_SEL_0 = 0x0,
-    #[doc = "input from XBAR"]
+    #[doc = "input from XBAR."]
     QTIMER1_TRM2_INPUT_SEL_1 = 0x01,
 }
 impl Qtimer1Trm2InputSel {
@@ -6287,9 +6287,9 @@ impl From<Qtimer1Trm2InputSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Qtimer1Trm3InputSel {
-    #[doc = "input from IOMUX"]
+    #[doc = "input from IOMUX."]
     QTIMER1_TRM3_INPUT_SEL_0 = 0x0,
-    #[doc = "input from XBAR"]
+    #[doc = "input from XBAR."]
     QTIMER1_TRM3_INPUT_SEL_1 = 0x01,
 }
 impl Qtimer1Trm3InputSel {
@@ -6318,9 +6318,9 @@ impl From<Qtimer1Trm3InputSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Qtimer2TmrCntsFreeze {
-    #[doc = "timer counter work normally"]
+    #[doc = "timer counter work normally."]
     QTIMER2_TMR_CNTS_FREEZE_0 = 0x0,
-    #[doc = "reset counter and ouput flags"]
+    #[doc = "reset counter and ouput flags."]
     QTIMER2_TMR_CNTS_FREEZE_1 = 0x01,
 }
 impl Qtimer2TmrCntsFreeze {
@@ -6349,9 +6349,9 @@ impl From<Qtimer2TmrCntsFreeze> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Qtimer2Trm0InputSel {
-    #[doc = "input from IOMUX"]
+    #[doc = "input from IOMUX."]
     QTIMER2_TRM0_INPUT_SEL_0 = 0x0,
-    #[doc = "input from XBAR"]
+    #[doc = "input from XBAR."]
     QTIMER2_TRM0_INPUT_SEL_1 = 0x01,
 }
 impl Qtimer2Trm0InputSel {
@@ -6380,9 +6380,9 @@ impl From<Qtimer2Trm0InputSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Qtimer2Trm1InputSel {
-    #[doc = "input from IOMUX"]
+    #[doc = "input from IOMUX."]
     QTIMER2_TRM1_INPUT_SEL_0 = 0x0,
-    #[doc = "input from XBAR"]
+    #[doc = "input from XBAR."]
     QTIMER2_TRM1_INPUT_SEL_1 = 0x01,
 }
 impl Qtimer2Trm1InputSel {
@@ -6411,9 +6411,9 @@ impl From<Qtimer2Trm1InputSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Qtimer2Trm2InputSel {
-    #[doc = "input from IOMUX"]
+    #[doc = "input from IOMUX."]
     QTIMER2_TRM2_INPUT_SEL_0 = 0x0,
-    #[doc = "input from XBAR"]
+    #[doc = "input from XBAR."]
     QTIMER2_TRM2_INPUT_SEL_1 = 0x01,
 }
 impl Qtimer2Trm2InputSel {
@@ -6442,9 +6442,9 @@ impl From<Qtimer2Trm2InputSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Qtimer2Trm3InputSel {
-    #[doc = "input from IOMUX"]
+    #[doc = "input from IOMUX."]
     QTIMER2_TRM3_INPUT_SEL_0 = 0x0,
-    #[doc = "input from XBAR"]
+    #[doc = "input from XBAR."]
     QTIMER2_TRM3_INPUT_SEL_1 = 0x01,
 }
 impl Qtimer2Trm3InputSel {
@@ -6473,9 +6473,9 @@ impl From<Qtimer2Trm3InputSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Qtimer3TmrCntsFreeze {
-    #[doc = "timer counter work normally"]
+    #[doc = "timer counter work normally."]
     QTIMER3_TMR_CNTS_FREEZE_0 = 0x0,
-    #[doc = "reset counter and ouput flags"]
+    #[doc = "reset counter and ouput flags."]
     QTIMER3_TMR_CNTS_FREEZE_1 = 0x01,
 }
 impl Qtimer3TmrCntsFreeze {
@@ -6504,9 +6504,9 @@ impl From<Qtimer3TmrCntsFreeze> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Qtimer3Trm0InputSel {
-    #[doc = "input from IOMUX"]
+    #[doc = "input from IOMUX."]
     QTIMER3_TRM0_INPUT_SEL_0 = 0x0,
-    #[doc = "input from XBAR"]
+    #[doc = "input from XBAR."]
     QTIMER3_TRM0_INPUT_SEL_1 = 0x01,
 }
 impl Qtimer3Trm0InputSel {
@@ -6535,9 +6535,9 @@ impl From<Qtimer3Trm0InputSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Qtimer3Trm1InputSel {
-    #[doc = "input from IOMUX"]
+    #[doc = "input from IOMUX."]
     QTIMER3_TRM1_INPUT_SEL_0 = 0x0,
-    #[doc = "input from XBAR"]
+    #[doc = "input from XBAR."]
     QTIMER3_TRM1_INPUT_SEL_1 = 0x01,
 }
 impl Qtimer3Trm1InputSel {
@@ -6566,9 +6566,9 @@ impl From<Qtimer3Trm1InputSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Qtimer3Trm2InputSel {
-    #[doc = "input from IOMUX"]
+    #[doc = "input from IOMUX."]
     QTIMER3_TRM2_INPUT_SEL_0 = 0x0,
-    #[doc = "input from XBAR"]
+    #[doc = "input from XBAR."]
     QTIMER3_TRM2_INPUT_SEL_1 = 0x01,
 }
 impl Qtimer3Trm2InputSel {
@@ -6597,9 +6597,9 @@ impl From<Qtimer3Trm2InputSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Qtimer3Trm3InputSel {
-    #[doc = "input from IOMUX"]
+    #[doc = "input from IOMUX."]
     QTIMER3_TRM3_INPUT_SEL_0 = 0x0,
-    #[doc = "input from XBAR"]
+    #[doc = "input from XBAR."]
     QTIMER3_TRM3_INPUT_SEL_1 = 0x01,
 }
 impl Qtimer3Trm3InputSel {
@@ -6628,9 +6628,9 @@ impl From<Qtimer3Trm3InputSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Qtimer4TmrCntsFreeze {
-    #[doc = "timer counter work normally"]
+    #[doc = "timer counter work normally."]
     QTIMER4_TMR_CNTS_FREEZE_0 = 0x0,
-    #[doc = "reset counter and ouput flags"]
+    #[doc = "reset counter and ouput flags."]
     QTIMER4_TMR_CNTS_FREEZE_1 = 0x01,
 }
 impl Qtimer4TmrCntsFreeze {
@@ -6659,9 +6659,9 @@ impl From<Qtimer4TmrCntsFreeze> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Qtimer4Trm0InputSel {
-    #[doc = "input from IOMUX"]
+    #[doc = "input from IOMUX."]
     QTIMER4_TRM0_INPUT_SEL_0 = 0x0,
-    #[doc = "input from XBAR"]
+    #[doc = "input from XBAR."]
     QTIMER4_TRM0_INPUT_SEL_1 = 0x01,
 }
 impl Qtimer4Trm0InputSel {
@@ -6690,9 +6690,9 @@ impl From<Qtimer4Trm0InputSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Qtimer4Trm1InputSel {
-    #[doc = "input from IOMUX"]
+    #[doc = "input from IOMUX."]
     QTIMER4_TRM1_INPUT_SEL_0 = 0x0,
-    #[doc = "input from XBAR"]
+    #[doc = "input from XBAR."]
     QTIMER4_TRM1_INPUT_SEL_1 = 0x01,
 }
 impl Qtimer4Trm1InputSel {
@@ -6721,9 +6721,9 @@ impl From<Qtimer4Trm1InputSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Qtimer4Trm2InputSel {
-    #[doc = "input from IOMUX"]
+    #[doc = "input from IOMUX."]
     QTIMER4_TRM2_INPUT_SEL_0 = 0x0,
-    #[doc = "input from XBAR"]
+    #[doc = "input from XBAR."]
     QTIMER4_TRM2_INPUT_SEL_1 = 0x01,
 }
 impl Qtimer4Trm2InputSel {
@@ -6752,9 +6752,9 @@ impl From<Qtimer4Trm2InputSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Qtimer4Trm3InputSel {
-    #[doc = "input from IOMUX"]
+    #[doc = "input from IOMUX."]
     QTIMER4_TRM3_INPUT_SEL_0 = 0x0,
-    #[doc = "input from XBAR"]
+    #[doc = "input from XBAR."]
     QTIMER4_TRM3_INPUT_SEL_1 = 0x01,
 }
 impl Qtimer4Trm3InputSel {
@@ -6783,9 +6783,9 @@ impl From<Qtimer4Trm3InputSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamAutoClkGatingEn {
-    #[doc = "disable automatically gate off RAM clock"]
+    #[doc = "disable automatically gate off RAM clock."]
     RAM_AUTO_CLK_GATING_EN_0 = 0x0,
-    #[doc = "enable automatically gate off RAM clock"]
+    #[doc = "enable automatically gate off RAM clock."]
     RAM_AUTO_CLK_GATING_EN_1 = 0x01,
 }
 impl RamAutoClkGatingEn {
@@ -6814,17 +6814,17 @@ impl From<RamAutoClkGatingEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai1Mclk1Sel {
-    #[doc = "ccm.ssi1_clk_root"]
+    #[doc = "ccm.ssi1_clk_root."]
     SAI1_MCLK1_SEL_0 = 0x0,
-    #[doc = "ccm.ssi2_clk_root"]
+    #[doc = "ccm.ssi2_clk_root."]
     SAI1_MCLK1_SEL_1 = 0x01,
-    #[doc = "ccm.ssi3_clk_root"]
+    #[doc = "ccm.ssi3_clk_root."]
     SAI1_MCLK1_SEL_2 = 0x02,
-    #[doc = "iomux.sai1_ipg_clk_sai_mclk"]
+    #[doc = "iomux.sai1_ipg_clk_sai_mclk."]
     SAI1_MCLK1_SEL_3 = 0x03,
-    #[doc = "iomux.sai2_ipg_clk_sai_mclk"]
+    #[doc = "iomux.sai2_ipg_clk_sai_mclk."]
     SAI1_MCLK1_SEL_4 = 0x04,
-    #[doc = "iomux.sai3_ipg_clk_sai_mclk"]
+    #[doc = "iomux.sai3_ipg_clk_sai_mclk."]
     SAI1_MCLK1_SEL_5 = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -6855,17 +6855,17 @@ impl From<Sai1Mclk1Sel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai1Mclk2Sel {
-    #[doc = "ccm.ssi1_clk_root"]
+    #[doc = "ccm.ssi1_clk_root."]
     SAI1_MCLK2_SEL_0 = 0x0,
-    #[doc = "ccm.ssi2_clk_root"]
+    #[doc = "ccm.ssi2_clk_root."]
     SAI1_MCLK2_SEL_1 = 0x01,
-    #[doc = "ccm.ssi3_clk_root"]
+    #[doc = "ccm.ssi3_clk_root."]
     SAI1_MCLK2_SEL_2 = 0x02,
-    #[doc = "iomux.sai1_ipg_clk_sai_mclk"]
+    #[doc = "iomux.sai1_ipg_clk_sai_mclk."]
     SAI1_MCLK2_SEL_3 = 0x03,
-    #[doc = "iomux.sai2_ipg_clk_sai_mclk"]
+    #[doc = "iomux.sai2_ipg_clk_sai_mclk."]
     SAI1_MCLK2_SEL_4 = 0x04,
-    #[doc = "iomux.sai3_ipg_clk_sai_mclk"]
+    #[doc = "iomux.sai3_ipg_clk_sai_mclk."]
     SAI1_MCLK2_SEL_5 = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -6896,13 +6896,13 @@ impl From<Sai1Mclk2Sel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai1Mclk3Sel {
-    #[doc = "ccm.spdif0_clk_root"]
+    #[doc = "ccm.spdif0_clk_root."]
     SAI1_MCLK3_SEL_0 = 0x0,
-    #[doc = "iomux.spdif_tx_clk2"]
+    #[doc = "iomux.spdif_tx_clk2."]
     SAI1_MCLK3_SEL_1 = 0x01,
-    #[doc = "spdif.spdif_srclk"]
+    #[doc = "spdif.spdif_srclk."]
     SAI1_MCLK3_SEL_2 = 0x02,
-    #[doc = "spdif.spdif_outclock"]
+    #[doc = "spdif.spdif_outclock."]
     SAI1_MCLK3_SEL_3 = 0x03,
 }
 impl Sai1Mclk3Sel {
@@ -6931,9 +6931,9 @@ impl From<Sai1Mclk3Sel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai1MclkDir {
-    #[doc = "sai1.MCLK is input signal"]
+    #[doc = "sai1.MCLK is input signal."]
     SAI1_MCLK_DIR_0 = 0x0,
-    #[doc = "sai1.MCLK is output signal"]
+    #[doc = "sai1.MCLK is output signal."]
     SAI1_MCLK_DIR_1 = 0x01,
 }
 impl Sai1MclkDir {
@@ -6962,9 +6962,9 @@ impl From<Sai1MclkDir> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai1StopAck {
-    #[doc = "SAI1 stop acknowledge is not asserted"]
+    #[doc = "SAI1 stop acknowledge is not asserted."]
     SAI1_STOP_ACK_0 = 0x0,
-    #[doc = "SAI1 stop acknowledge is asserted"]
+    #[doc = "SAI1 stop acknowledge is asserted."]
     SAI1_STOP_ACK_1 = 0x01,
 }
 impl Sai1StopAck {
@@ -6993,9 +6993,9 @@ impl From<Sai1StopAck> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai1StopReq {
-    #[doc = "stop request off"]
+    #[doc = "stop request off."]
     SAI1_STOP_REQ_0 = 0x0,
-    #[doc = "stop request on"]
+    #[doc = "stop request on."]
     SAI1_STOP_REQ_1 = 0x01,
 }
 impl Sai1StopReq {
@@ -7024,13 +7024,13 @@ impl From<Sai1StopReq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai2Mclk3Sel {
-    #[doc = "ccm.spdif0_clk_root"]
+    #[doc = "ccm.spdif0_clk_root."]
     SAI2_MCLK3_SEL_0 = 0x0,
-    #[doc = "iomux.spdif_tx_clk2"]
+    #[doc = "iomux.spdif_tx_clk2."]
     SAI2_MCLK3_SEL_1 = 0x01,
-    #[doc = "spdif.spdif_srclk"]
+    #[doc = "spdif.spdif_srclk."]
     SAI2_MCLK3_SEL_2 = 0x02,
-    #[doc = "spdif.spdif_outclock"]
+    #[doc = "spdif.spdif_outclock."]
     SAI2_MCLK3_SEL_3 = 0x03,
 }
 impl Sai2Mclk3Sel {
@@ -7059,9 +7059,9 @@ impl From<Sai2Mclk3Sel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai2MclkDir {
-    #[doc = "sai2.MCLK is input signal"]
+    #[doc = "sai2.MCLK is input signal."]
     SAI2_MCLK_DIR_0 = 0x0,
-    #[doc = "sai2.MCLK is output signal"]
+    #[doc = "sai2.MCLK is output signal."]
     SAI2_MCLK_DIR_1 = 0x01,
 }
 impl Sai2MclkDir {
@@ -7090,9 +7090,9 @@ impl From<Sai2MclkDir> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai2StopAck {
-    #[doc = "SAI2 stop acknowledge is not asserted"]
+    #[doc = "SAI2 stop acknowledge is not asserted."]
     SAI2_STOP_ACK_0 = 0x0,
-    #[doc = "SAI2 stop acknowledge is asserted"]
+    #[doc = "SAI2 stop acknowledge is asserted."]
     SAI2_STOP_ACK_1 = 0x01,
 }
 impl Sai2StopAck {
@@ -7121,9 +7121,9 @@ impl From<Sai2StopAck> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai2StopReq {
-    #[doc = "stop request off"]
+    #[doc = "stop request off."]
     SAI2_STOP_REQ_0 = 0x0,
-    #[doc = "stop request on"]
+    #[doc = "stop request on."]
     SAI2_STOP_REQ_1 = 0x01,
 }
 impl Sai2StopReq {
@@ -7152,13 +7152,13 @@ impl From<Sai2StopReq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai3Mclk3Sel {
-    #[doc = "ccm.spdif0_clk_root"]
+    #[doc = "ccm.spdif0_clk_root."]
     SAI3_MCLK3_SEL_0 = 0x0,
-    #[doc = "iomux.spdif_tx_clk2"]
+    #[doc = "iomux.spdif_tx_clk2."]
     SAI3_MCLK3_SEL_1 = 0x01,
-    #[doc = "spdif.spdif_srclk"]
+    #[doc = "spdif.spdif_srclk."]
     SAI3_MCLK3_SEL_2 = 0x02,
-    #[doc = "spdif.spdif_outclock"]
+    #[doc = "spdif.spdif_outclock."]
     SAI3_MCLK3_SEL_3 = 0x03,
 }
 impl Sai3Mclk3Sel {
@@ -7187,9 +7187,9 @@ impl From<Sai3Mclk3Sel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai3MclkDir {
-    #[doc = "sai3.MCLK is input signal"]
+    #[doc = "sai3.MCLK is input signal."]
     SAI3_MCLK_DIR_0 = 0x0,
-    #[doc = "sai3.MCLK is output signal"]
+    #[doc = "sai3.MCLK is output signal."]
     SAI3_MCLK_DIR_1 = 0x01,
 }
 impl Sai3MclkDir {
@@ -7218,9 +7218,9 @@ impl From<Sai3MclkDir> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai3StopAck {
-    #[doc = "SAI3 stop acknowledge is not asserted"]
+    #[doc = "SAI3 stop acknowledge is not asserted."]
     SAI3_STOP_ACK_0 = 0x0,
-    #[doc = "SAI3 stop acknowledge is asserted"]
+    #[doc = "SAI3 stop acknowledge is asserted."]
     SAI3_STOP_ACK_1 = 0x01,
 }
 impl Sai3StopAck {
@@ -7249,9 +7249,9 @@ impl From<Sai3StopAck> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sai3StopReq {
-    #[doc = "stop request off"]
+    #[doc = "stop request off."]
     SAI3_STOP_REQ_0 = 0x0,
-    #[doc = "stop request on"]
+    #[doc = "stop request on."]
     SAI3_STOP_REQ_1 = 0x01,
 }
 impl Sai3StopReq {
@@ -7280,9 +7280,9 @@ impl From<Sai3StopReq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SecErrResp {
-    #[doc = "OKEY response"]
+    #[doc = "OKEY response."]
     SEC_ERR_RESP_0 = 0x0,
-    #[doc = "SLVError (default)"]
+    #[doc = "SLVError (default)."]
     SEC_ERR_RESP_1 = 0x01,
 }
 impl SecErrResp {
@@ -7311,9 +7311,9 @@ impl From<SecErrResp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SemcStopAck {
-    #[doc = "SEMC stop acknowledge is not asserted"]
+    #[doc = "SEMC stop acknowledge is not asserted."]
     SEMC_STOP_ACK_0 = 0x0,
-    #[doc = "SEMC stop acknowledge is asserted"]
+    #[doc = "SEMC stop acknowledge is asserted."]
     SEMC_STOP_ACK_1 = 0x01,
 }
 impl SemcStopAck {
@@ -7342,9 +7342,9 @@ impl From<SemcStopAck> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SemcStopReq {
-    #[doc = "stop request off"]
+    #[doc = "stop request off."]
     SEMC_STOP_REQ_0 = 0x0,
-    #[doc = "stop request on"]
+    #[doc = "stop request on."]
     SEMC_STOP_REQ_1 = 0x01,
 }
 impl SemcStopReq {
@@ -7373,9 +7373,9 @@ impl From<SemcStopReq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SipTestMuxQspiSipEn {
-    #[doc = "SIP_TEST_MUX is disabled"]
+    #[doc = "SIP_TEST_MUX is disabled."]
     SIP_TEST_MUX_QSPI_SIP_EN_0 = 0x0,
-    #[doc = "SIP_TEST_MUX is enabled"]
+    #[doc = "SIP_TEST_MUX is enabled."]
     SIP_TEST_MUX_QSPI_SIP_EN_1 = 0x01,
 }
 impl SipTestMuxQspiSipEn {
@@ -7404,9 +7404,9 @@ impl From<SipTestMuxQspiSipEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TrngStopAck {
-    #[doc = "TRNG stop acknowledge is not asserted"]
+    #[doc = "TRNG stop acknowledge is not asserted."]
     TRNG_STOP_ACK_0 = 0x0,
-    #[doc = "TRNG stop acknowledge is asserted"]
+    #[doc = "TRNG stop acknowledge is asserted."]
     TRNG_STOP_ACK_1 = 0x01,
 }
 impl TrngStopAck {
@@ -7435,9 +7435,9 @@ impl From<TrngStopAck> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TrngStopReq {
-    #[doc = "stop request off"]
+    #[doc = "stop request off."]
     TRNG_STOP_REQ_0 = 0x0,
-    #[doc = "stop request on"]
+    #[doc = "stop request on."]
     TRNG_STOP_REQ_1 = 0x01,
 }
 impl TrngStopReq {
@@ -7466,9 +7466,9 @@ impl From<TrngStopReq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Vref1mClkGpt1 {
-    #[doc = "GPT1 ipg_clk_highfreq driven by IPG_PERCLK"]
+    #[doc = "GPT1 ipg_clk_highfreq driven by IPG_PERCLK."]
     VREF_1M_CLK_GPT1_0 = 0x0,
-    #[doc = "GPT1 ipg_clk_highfreq driven by anatop 1 MHz clock"]
+    #[doc = "GPT1 ipg_clk_highfreq driven by anatop 1 MHz clock."]
     VREF_1M_CLK_GPT1_1 = 0x01,
 }
 impl Vref1mClkGpt1 {
@@ -7497,9 +7497,9 @@ impl From<Vref1mClkGpt1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Vref1mClkGpt2 {
-    #[doc = "GPT2 ipg_clk_highfreq driven by IPG_PERCLK"]
+    #[doc = "GPT2 ipg_clk_highfreq driven by IPG_PERCLK."]
     VREF_1M_CLK_GPT2_0 = 0x0,
-    #[doc = "GPT2 ipg_clk_highfreq driven by anatop 1 MHz clock"]
+    #[doc = "GPT2 ipg_clk_highfreq driven by anatop 1 MHz clock."]
     VREF_1M_CLK_GPT2_1 = 0x01,
 }
 impl Vref1mClkGpt2 {
@@ -7528,9 +7528,9 @@ impl From<Vref1mClkGpt2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wdog1Mask {
-    #[doc = "WDOG1 Timeout behaves normally"]
+    #[doc = "WDOG1 Timeout behaves normally."]
     WDOG1_MASK_0 = 0x0,
-    #[doc = "WDOG1 Timeout is masked"]
+    #[doc = "WDOG1 Timeout is masked."]
     WDOG1_MASK_1 = 0x01,
 }
 impl Wdog1Mask {
@@ -7559,9 +7559,9 @@ impl From<Wdog1Mask> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wdog2Mask {
-    #[doc = "WDOG2 Timeout behaves normally"]
+    #[doc = "WDOG2 Timeout behaves normally."]
     WDOG2_MASK_0 = 0x0,
-    #[doc = "WDOG2 Timeout is masked"]
+    #[doc = "WDOG2 Timeout is masked."]
     WDOG2_MASK_1 = 0x01,
 }
 impl Wdog2Mask {

@@ -2,11 +2,11 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mode {
-    #[doc = "Repeat Interrupt mode"]
+    #[doc = "Repeat Interrupt mode."]
     REPEAT_INTERRUPT_MODE = 0x0,
-    #[doc = "One-Shot Interrupt mode"]
+    #[doc = "One-Shot Interrupt mode."]
     ONE_SHOT_INTERRUPT_MODE = 0x01,
-    #[doc = "One-Shot Stall mode"]
+    #[doc = "One-Shot Stall mode."]
     ONE_SHOT_STALL_MODE = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -38,7 +38,7 @@ impl From<Mode> for u8 {
 pub enum Multitask {
     #[doc = "Hardware status mode."]
     HARDWARE_STATUS_MODE = 0x0,
-    #[doc = "Multitask mode"]
+    #[doc = "Multitask mode."]
     MULTI_TASK_MODE = 0x01,
 }
 impl Multitask {

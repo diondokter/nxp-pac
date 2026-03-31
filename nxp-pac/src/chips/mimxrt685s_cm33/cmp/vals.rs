@@ -2,21 +2,21 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Acph1tc {
-    #[doc = "Phase1 active time in one sampling period equals to T"]
+    #[doc = "Phase1 active time in one sampling period equals to T."]
     ACPH1TC_0 = 0x0,
-    #[doc = "Phase1 active time in one sampling period equals to 2*T"]
+    #[doc = "Phase1 active time in one sampling period equals to 2*T."]
     ACPH1TC_1 = 0x01,
-    #[doc = "Phase1 active time in one sampling period equals to 4*T"]
+    #[doc = "Phase1 active time in one sampling period equals to 4*T."]
     ACPH1TC_2 = 0x02,
-    #[doc = "Phase1 active time in one sampling period equals to 8*T"]
+    #[doc = "Phase1 active time in one sampling period equals to 8*T."]
     ACPH1TC_3 = 0x03,
-    #[doc = "Phase1 active time in one sampling period equals to T"]
+    #[doc = "Phase1 active time in one sampling period equals to T."]
     ACPH1TC_4 = 0x04,
-    #[doc = "Phase1 active time in one sampling period equals to T"]
+    #[doc = "Phase1 active time in one sampling period equals to T."]
     ACPH1TC_5 = 0x05,
-    #[doc = "Phase1 active time in one sampling period equals to T"]
+    #[doc = "Phase1 active time in one sampling period equals to T."]
     ACPH1TC_6 = 0x06,
-    #[doc = "Phase1 active time in one sampling period equals to 0"]
+    #[doc = "Phase1 active time in one sampling period equals to 0."]
     ACPH1TC_7 = 0x07,
 }
 impl Acph1tc {
@@ -45,21 +45,21 @@ impl From<Acph1tc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Acph2tc {
-    #[doc = "Phase2 active time in one sampling period equals to T"]
+    #[doc = "Phase2 active time in one sampling period equals to T."]
     ACPH2TC_0 = 0x0,
-    #[doc = "Phase2 active time in one sampling period equals to 2*T"]
+    #[doc = "Phase2 active time in one sampling period equals to 2*T."]
     ACPH2TC_1 = 0x01,
-    #[doc = "Phase2 active time in one sampling period equals to 4*T"]
+    #[doc = "Phase2 active time in one sampling period equals to 4*T."]
     ACPH2TC_2 = 0x02,
-    #[doc = "Phase2 active time in one sampling period equals to 8*T"]
+    #[doc = "Phase2 active time in one sampling period equals to 8*T."]
     ACPH2TC_3 = 0x03,
-    #[doc = "Phase2 active time in one sampling period equals to 16*T"]
+    #[doc = "Phase2 active time in one sampling period equals to 16*T."]
     ACPH2TC_4 = 0x04,
-    #[doc = "Phase2 active time in one sampling period equals to 32*T"]
+    #[doc = "Phase2 active time in one sampling period equals to 32*T."]
     ACPH2TC_5 = 0x05,
-    #[doc = "Phase2 active time in one sampling period equals to 64*T"]
+    #[doc = "Phase2 active time in one sampling period equals to 64*T."]
     ACPH2TC_6 = 0x06,
-    #[doc = "Phase2 active time in one sampling period equals to 16*T"]
+    #[doc = "Phase2 active time in one sampling period equals to 16*T."]
     ACPH2TC_7 = 0x07,
 }
 impl Acph2tc {
@@ -88,21 +88,21 @@ impl From<Acph2tc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Acsat {
-    #[doc = "The sampling time equals to T"]
+    #[doc = "The sampling time equals to T."]
     ACSAT_0 = 0x0,
-    #[doc = "The sampling time equasl to 2*T"]
+    #[doc = "The sampling time equasl to 2*T."]
     ACSAT_1 = 0x01,
-    #[doc = "The sampling time equasl to 4*T"]
+    #[doc = "The sampling time equasl to 4*T."]
     ACSAT_2 = 0x02,
-    #[doc = "The sampling time equasl to 8*T"]
+    #[doc = "The sampling time equasl to 8*T."]
     ACSAT_3 = 0x03,
-    #[doc = "The sampling time equasl to 16*T"]
+    #[doc = "The sampling time equasl to 16*T."]
     ACSAT_4 = 0x04,
-    #[doc = "The sampling time equasl to 32*T"]
+    #[doc = "The sampling time equasl to 32*T."]
     ACSAT_5 = 0x05,
-    #[doc = "The sampling time equasl to 64*T"]
+    #[doc = "The sampling time equasl to 64*T."]
     ACSAT_6 = 0x06,
-    #[doc = "The sampling time equasl to 256*T"]
+    #[doc = "The sampling time equasl to 256*T."]
     ACSAT_7 = 0x07,
 }
 impl Acsat {
@@ -623,7 +623,7 @@ impl From<Invt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Linken {
-    #[doc = "CMP to DAC link is disabled"]
+    #[doc = "CMP to DAC link is disabled."]
     LINKEN_0 = 0x0,
     #[doc = "CMP to DAC link is enabled."]
     LINKEN_1 = 0x01,
@@ -654,21 +654,21 @@ impl From<Linken> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Msel {
-    #[doc = "Internal Negative Input 0 for Minus Channel -- Internal Minus Input"]
+    #[doc = "Internal Negative Input 0 for Minus Channel -- Internal Minus Input."]
     MSEL_0 = 0x0,
-    #[doc = "External Input 1 for Minus Channel -- Reference Input 0"]
+    #[doc = "External Input 1 for Minus Channel -- Reference Input 0."]
     MSEL_1 = 0x01,
-    #[doc = "External Input 2 for Minus Channel -- Reference Input 1"]
+    #[doc = "External Input 2 for Minus Channel -- Reference Input 1."]
     MSEL_2 = 0x02,
-    #[doc = "External Input 3 for Minus Channel -- Reference Input 2"]
+    #[doc = "External Input 3 for Minus Channel -- Reference Input 2."]
     MSEL_3 = 0x03,
-    #[doc = "External Input 4 for Minus Channel -- Reference Input 3"]
+    #[doc = "External Input 4 for Minus Channel -- Reference Input 3."]
     MSEL_4 = 0x04,
-    #[doc = "External Input 5 for Minus Channel -- Reference Input 4"]
+    #[doc = "External Input 5 for Minus Channel -- Reference Input 4."]
     MSEL_5 = 0x05,
-    #[doc = "External Input 6 for Minus Channel -- Reference Input 5"]
+    #[doc = "External Input 6 for Minus Channel -- Reference Input 5."]
     MSEL_6 = 0x06,
-    #[doc = "Internal 8b DAC output"]
+    #[doc = "Internal 8b DAC output."]
     MSEL_7 = 0x07,
 }
 impl Msel {
@@ -856,21 +856,21 @@ impl From<Pmode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Psel {
-    #[doc = "Internal Posivite Input 0 for Plus Channel -- Internal Minus Input"]
+    #[doc = "Internal Posivite Input 0 for Plus Channel -- Internal Minus Input."]
     PSEL_0 = 0x0,
-    #[doc = "External Input 1 for Plus Channel -- Reference Input 0"]
+    #[doc = "External Input 1 for Plus Channel -- Reference Input 0."]
     PSEL_1 = 0x01,
-    #[doc = "External Input 2 for Plus Channel -- Reference Input 1"]
+    #[doc = "External Input 2 for Plus Channel -- Reference Input 1."]
     PSEL_2 = 0x02,
-    #[doc = "External Input 3 for Plus Channel -- Reference Input 2"]
+    #[doc = "External Input 3 for Plus Channel -- Reference Input 2."]
     PSEL_3 = 0x03,
-    #[doc = "External Input 4 for Plus Channel -- Reference Input 3"]
+    #[doc = "External Input 4 for Plus Channel -- Reference Input 3."]
     PSEL_4 = 0x04,
-    #[doc = "External Input 4 for Plus Channel -- Reference Input 4"]
+    #[doc = "External Input 4 for Plus Channel -- Reference Input 4."]
     PSEL_5 = 0x05,
-    #[doc = "External Input 4 for Plus Channel -- Reference Input 5"]
+    #[doc = "External Input 4 for Plus Channel -- Reference Input 5."]
     PSEL_6 = 0x06,
-    #[doc = "Internal 8b DAC output"]
+    #[doc = "Internal 8b DAC output."]
     PSEL_7 = 0x07,
 }
 impl Psel {

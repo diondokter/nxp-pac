@@ -2,7 +2,7 @@
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Feature(u16);
 impl Feature {
-    #[doc = "Standard features implemented"]
+    #[doc = "Standard features implemented."]
     pub const STANDARD: Self = Self(0x0);
     #[doc = "Support for DMA/Trigger generation from wake-up pins and filters enabled. Support for external pin/filter detection during all power modes enabled."]
     pub const FILT_ALL_PWR: Self = Self(0x01);
@@ -50,11 +50,11 @@ impl From<Feature> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Filtc1 {
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     INTERRUPT = 0x0,
-    #[doc = "DMA request"]
+    #[doc = "DMA request."]
     DMA_REQ = 0x01,
-    #[doc = "Trigger event"]
+    #[doc = "Trigger event."]
     TRIGGER = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -84,11 +84,11 @@ impl From<Filtc1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Filtc2 {
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     INTERRUPT = 0x0,
-    #[doc = "DMA request"]
+    #[doc = "DMA request."]
     DMA_REQ = 0x01,
-    #[doc = "Trigger event"]
+    #[doc = "Trigger event."]
     TRIGGER = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -118,13 +118,13 @@ impl From<Filtc2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Filte1 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLE = 0x0,
-    #[doc = "Enable (Detect on rising edge or high level)"]
+    #[doc = "Enable (Detect on rising edge or high level)."]
     EN_RISE_HI = 0x01,
-    #[doc = "Enable (Detect on falling edge or low level)"]
+    #[doc = "Enable (Detect on falling edge or low level)."]
     EN_FALL_LO = 0x02,
-    #[doc = "Enable (Detect on any edge)"]
+    #[doc = "Enable (Detect on any edge)."]
     EN_ANY = 0x03,
 }
 impl Filte1 {
@@ -153,13 +153,13 @@ impl From<Filte1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Filte2 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLE = 0x0,
-    #[doc = "Enable (Detect on rising edge or high level)"]
+    #[doc = "Enable (Detect on rising edge or high level)."]
     EN_RISE_HI = 0x01,
-    #[doc = "Enable (Detect on falling edge or low level)"]
+    #[doc = "Enable (Detect on falling edge or low level)."]
     EN_FALL_LO = 0x02,
-    #[doc = "Enable (Detect on any edge)"]
+    #[doc = "Enable (Detect on any edge)."]
     EN_ANY = 0x03,
 }
 impl Filte2 {
@@ -188,9 +188,9 @@ impl From<Filte2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Filtm1 {
-    #[doc = "Active only during Power Down/Deep Power Down mode"]
+    #[doc = "Active only during Power Down/Deep Power Down mode."]
     LOW_PWR_ONLY = 0x0,
-    #[doc = "Active during all power modes"]
+    #[doc = "Active during all power modes."]
     ANY_PWR = 0x01,
 }
 impl Filtm1 {
@@ -219,9 +219,9 @@ impl From<Filtm1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Filtm2 {
-    #[doc = "Active only during Power Down/Deep Power Down mode"]
+    #[doc = "Active only during Power Down/Deep Power Down mode."]
     LOW_PWR_ONLY = 0x0,
-    #[doc = "Active during all power modes"]
+    #[doc = "Active during all power modes."]
     ANY_PWR = 0x01,
 }
 impl Filtm2 {
@@ -250,13 +250,13 @@ impl From<Filtm2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupdc0 {
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     INTERRUPT = 0x0,
-    #[doc = "DMA request"]
+    #[doc = "DMA request."]
     DMA_REQ = 0x01,
-    #[doc = "Trigger event"]
+    #[doc = "Trigger event."]
     TRIGGER = 0x02,
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     RES = 0x03,
 }
 impl Wupdc0 {
@@ -285,13 +285,13 @@ impl From<Wupdc0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupdc1 {
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     INTERRUPT = 0x0,
-    #[doc = "DMA request"]
+    #[doc = "DMA request."]
     DMA_REQ = 0x01,
-    #[doc = "Trigger event"]
+    #[doc = "Trigger event."]
     TRIGGER = 0x02,
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     RES = 0x03,
 }
 impl Wupdc1 {
@@ -320,13 +320,13 @@ impl From<Wupdc1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupdc10 {
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     INTERRUPT = 0x0,
-    #[doc = "DMA request"]
+    #[doc = "DMA request."]
     DMA_REQ = 0x01,
-    #[doc = "Trigger event"]
+    #[doc = "Trigger event."]
     TRIGGER = 0x02,
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     RES = 0x03,
 }
 impl Wupdc10 {
@@ -355,13 +355,13 @@ impl From<Wupdc10> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupdc11 {
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     INTERRUPT = 0x0,
-    #[doc = "DMA request"]
+    #[doc = "DMA request."]
     DMA_REQ = 0x01,
-    #[doc = "Trigger event"]
+    #[doc = "Trigger event."]
     TRIGGER = 0x02,
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     RES = 0x03,
 }
 impl Wupdc11 {
@@ -390,13 +390,13 @@ impl From<Wupdc11> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupdc12 {
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     INTERRUPT = 0x0,
-    #[doc = "DMA request"]
+    #[doc = "DMA request."]
     DMA_REQ = 0x01,
-    #[doc = "Trigger event"]
+    #[doc = "Trigger event."]
     TRIGGER = 0x02,
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     RES = 0x03,
 }
 impl Wupdc12 {
@@ -425,13 +425,13 @@ impl From<Wupdc12> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupdc13 {
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     INTERRUPT = 0x0,
-    #[doc = "DMA request"]
+    #[doc = "DMA request."]
     DMA_REQ = 0x01,
-    #[doc = "Trigger event"]
+    #[doc = "Trigger event."]
     TRIGGER = 0x02,
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     RES = 0x03,
 }
 impl Wupdc13 {
@@ -460,13 +460,13 @@ impl From<Wupdc13> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupdc14 {
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     INTERRUPT = 0x0,
-    #[doc = "DMA request"]
+    #[doc = "DMA request."]
     DMA_REQ = 0x01,
-    #[doc = "Trigger event"]
+    #[doc = "Trigger event."]
     TRIGGER = 0x02,
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     RES = 0x03,
 }
 impl Wupdc14 {
@@ -495,13 +495,13 @@ impl From<Wupdc14> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupdc15 {
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     INTERRUPT = 0x0,
-    #[doc = "DMA request"]
+    #[doc = "DMA request."]
     DMA_REQ = 0x01,
-    #[doc = "Trigger event"]
+    #[doc = "Trigger event."]
     TRIGGER = 0x02,
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     RES = 0x03,
 }
 impl Wupdc15 {
@@ -530,13 +530,13 @@ impl From<Wupdc15> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupdc16 {
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     INTERRUPT = 0x0,
-    #[doc = "DMA request"]
+    #[doc = "DMA request."]
     DMA_REQ = 0x01,
-    #[doc = "Trigger event"]
+    #[doc = "Trigger event."]
     TRIGGER = 0x02,
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     RES = 0x03,
 }
 impl Wupdc16 {
@@ -565,13 +565,13 @@ impl From<Wupdc16> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupdc17 {
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     INTERRUPT = 0x0,
-    #[doc = "DMA request"]
+    #[doc = "DMA request."]
     DMA_REQ = 0x01,
-    #[doc = "Trigger event"]
+    #[doc = "Trigger event."]
     TRIGGER = 0x02,
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     RES = 0x03,
 }
 impl Wupdc17 {
@@ -600,13 +600,13 @@ impl From<Wupdc17> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupdc18 {
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     INTERRUPT = 0x0,
-    #[doc = "DMA request"]
+    #[doc = "DMA request."]
     DMA_REQ = 0x01,
-    #[doc = "Trigger event"]
+    #[doc = "Trigger event."]
     TRIGGER = 0x02,
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     RES = 0x03,
 }
 impl Wupdc18 {
@@ -635,13 +635,13 @@ impl From<Wupdc18> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupdc19 {
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     INTERRUPT = 0x0,
-    #[doc = "DMA request"]
+    #[doc = "DMA request."]
     DMA_REQ = 0x01,
-    #[doc = "Trigger event"]
+    #[doc = "Trigger event."]
     TRIGGER = 0x02,
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     RES = 0x03,
 }
 impl Wupdc19 {
@@ -670,13 +670,13 @@ impl From<Wupdc19> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupdc2 {
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     INTERRUPT = 0x0,
-    #[doc = "DMA request"]
+    #[doc = "DMA request."]
     DMA_REQ = 0x01,
-    #[doc = "Trigger event"]
+    #[doc = "Trigger event."]
     TRIGGER = 0x02,
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     RES = 0x03,
 }
 impl Wupdc2 {
@@ -705,13 +705,13 @@ impl From<Wupdc2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupdc20 {
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     INTERRUPT = 0x0,
-    #[doc = "DMA request"]
+    #[doc = "DMA request."]
     DMA_REQ = 0x01,
-    #[doc = "Trigger event"]
+    #[doc = "Trigger event."]
     TRIGGER = 0x02,
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     RES = 0x03,
 }
 impl Wupdc20 {
@@ -740,13 +740,13 @@ impl From<Wupdc20> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupdc21 {
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     INTERRUPT = 0x0,
-    #[doc = "DMA request"]
+    #[doc = "DMA request."]
     DMA_REQ = 0x01,
-    #[doc = "Trigger event"]
+    #[doc = "Trigger event."]
     TRIGGER = 0x02,
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     RES = 0x03,
 }
 impl Wupdc21 {
@@ -775,13 +775,13 @@ impl From<Wupdc21> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupdc22 {
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     INTERRUPT = 0x0,
-    #[doc = "DMA request"]
+    #[doc = "DMA request."]
     DMA_REQ = 0x01,
-    #[doc = "Trigger event"]
+    #[doc = "Trigger event."]
     TRIGGER = 0x02,
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     RES = 0x03,
 }
 impl Wupdc22 {
@@ -810,13 +810,13 @@ impl From<Wupdc22> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupdc23 {
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     INTERRUPT = 0x0,
-    #[doc = "DMA request"]
+    #[doc = "DMA request."]
     DMA_REQ = 0x01,
-    #[doc = "Trigger event"]
+    #[doc = "Trigger event."]
     TRIGGER = 0x02,
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     RES = 0x03,
 }
 impl Wupdc23 {
@@ -845,13 +845,13 @@ impl From<Wupdc23> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupdc24 {
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     INTERRUPT = 0x0,
-    #[doc = "DMA request"]
+    #[doc = "DMA request."]
     DMA_REQ = 0x01,
-    #[doc = "Trigger event"]
+    #[doc = "Trigger event."]
     TRIGGER = 0x02,
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     RES = 0x03,
 }
 impl Wupdc24 {
@@ -880,13 +880,13 @@ impl From<Wupdc24> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupdc25 {
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     INTERRUPT = 0x0,
-    #[doc = "DMA request"]
+    #[doc = "DMA request."]
     DMA_REQ = 0x01,
-    #[doc = "Trigger event"]
+    #[doc = "Trigger event."]
     TRIGGER = 0x02,
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     RES = 0x03,
 }
 impl Wupdc25 {
@@ -915,13 +915,13 @@ impl From<Wupdc25> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupdc26 {
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     INTERRUPT = 0x0,
-    #[doc = "DMA request"]
+    #[doc = "DMA request."]
     DMA_REQ = 0x01,
-    #[doc = "Trigger event"]
+    #[doc = "Trigger event."]
     TRIGGER = 0x02,
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     RES = 0x03,
 }
 impl Wupdc26 {
@@ -950,13 +950,13 @@ impl From<Wupdc26> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupdc27 {
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     INTERRUPT = 0x0,
-    #[doc = "DMA request"]
+    #[doc = "DMA request."]
     DMA_REQ = 0x01,
-    #[doc = "Trigger event"]
+    #[doc = "Trigger event."]
     TRIGGER = 0x02,
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     RES = 0x03,
 }
 impl Wupdc27 {
@@ -985,13 +985,13 @@ impl From<Wupdc27> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupdc28 {
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     INTERRUPT = 0x0,
-    #[doc = "DMA request"]
+    #[doc = "DMA request."]
     DMA_REQ = 0x01,
-    #[doc = "Trigger event"]
+    #[doc = "Trigger event."]
     TRIGGER = 0x02,
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     RES = 0x03,
 }
 impl Wupdc28 {
@@ -1020,13 +1020,13 @@ impl From<Wupdc28> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupdc29 {
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     INTERRUPT = 0x0,
-    #[doc = "DMA request"]
+    #[doc = "DMA request."]
     DMA_REQ = 0x01,
-    #[doc = "Trigger event"]
+    #[doc = "Trigger event."]
     TRIGGER = 0x02,
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     RES = 0x03,
 }
 impl Wupdc29 {
@@ -1055,13 +1055,13 @@ impl From<Wupdc29> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupdc3 {
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     INTERRUPT = 0x0,
-    #[doc = "DMA request"]
+    #[doc = "DMA request."]
     DMA_REQ = 0x01,
-    #[doc = "Trigger event"]
+    #[doc = "Trigger event."]
     TRIGGER = 0x02,
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     RES = 0x03,
 }
 impl Wupdc3 {
@@ -1090,13 +1090,13 @@ impl From<Wupdc3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupdc30 {
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     INTERRUPT = 0x0,
-    #[doc = "DMA request"]
+    #[doc = "DMA request."]
     DMA_REQ = 0x01,
-    #[doc = "Trigger event"]
+    #[doc = "Trigger event."]
     TRIGGER = 0x02,
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     RES = 0x03,
 }
 impl Wupdc30 {
@@ -1125,13 +1125,13 @@ impl From<Wupdc30> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupdc31 {
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     INTERRUPT = 0x0,
-    #[doc = "DMA request"]
+    #[doc = "DMA request."]
     DMA_REQ = 0x01,
-    #[doc = "Trigger event"]
+    #[doc = "Trigger event."]
     TRIGGER = 0x02,
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     RES = 0x03,
 }
 impl Wupdc31 {
@@ -1160,13 +1160,13 @@ impl From<Wupdc31> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupdc4 {
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     INTERRUPT = 0x0,
-    #[doc = "DMA request"]
+    #[doc = "DMA request."]
     DMA_REQ = 0x01,
-    #[doc = "Trigger event"]
+    #[doc = "Trigger event."]
     TRIGGER = 0x02,
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     RES = 0x03,
 }
 impl Wupdc4 {
@@ -1195,13 +1195,13 @@ impl From<Wupdc4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupdc5 {
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     INTERRUPT = 0x0,
-    #[doc = "DMA request"]
+    #[doc = "DMA request."]
     DMA_REQ = 0x01,
-    #[doc = "Trigger event"]
+    #[doc = "Trigger event."]
     TRIGGER = 0x02,
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     RES = 0x03,
 }
 impl Wupdc5 {
@@ -1230,13 +1230,13 @@ impl From<Wupdc5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupdc6 {
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     INTERRUPT = 0x0,
-    #[doc = "DMA request"]
+    #[doc = "DMA request."]
     DMA_REQ = 0x01,
-    #[doc = "Trigger event"]
+    #[doc = "Trigger event."]
     TRIGGER = 0x02,
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     RES = 0x03,
 }
 impl Wupdc6 {
@@ -1265,13 +1265,13 @@ impl From<Wupdc6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupdc7 {
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     INTERRUPT = 0x0,
-    #[doc = "DMA request"]
+    #[doc = "DMA request."]
     DMA_REQ = 0x01,
-    #[doc = "Trigger event"]
+    #[doc = "Trigger event."]
     TRIGGER = 0x02,
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     RES = 0x03,
 }
 impl Wupdc7 {
@@ -1300,13 +1300,13 @@ impl From<Wupdc7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupdc8 {
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     INTERRUPT = 0x0,
-    #[doc = "DMA request"]
+    #[doc = "DMA request."]
     DMA_REQ = 0x01,
-    #[doc = "Trigger event"]
+    #[doc = "Trigger event."]
     TRIGGER = 0x02,
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     RES = 0x03,
 }
 impl Wupdc8 {
@@ -1335,13 +1335,13 @@ impl From<Wupdc8> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupdc9 {
-    #[doc = "Interrupt"]
+    #[doc = "Interrupt."]
     INTERRUPT = 0x0,
-    #[doc = "DMA request"]
+    #[doc = "DMA request."]
     DMA_REQ = 0x01,
-    #[doc = "Trigger event"]
+    #[doc = "Trigger event."]
     TRIGGER = 0x02,
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     RES = 0x03,
 }
 impl Wupdc9 {
@@ -1370,13 +1370,13 @@ impl From<Wupdc9> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupe0 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLE = 0x0,
-    #[doc = "Enable (detect on rising edge or high level)"]
+    #[doc = "Enable (detect on rising edge or high level)."]
     EN_RISE_HI = 0x01,
-    #[doc = "Enable (detect on falling edge or low level)"]
+    #[doc = "Enable (detect on falling edge or low level)."]
     EN_FALL_LO = 0x02,
-    #[doc = "Enable (detect on any edge)"]
+    #[doc = "Enable (detect on any edge)."]
     EN_ANY = 0x03,
 }
 impl Wupe0 {
@@ -1405,13 +1405,13 @@ impl From<Wupe0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupe1 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLE = 0x0,
-    #[doc = "Enable (detect on rising edge or high level)"]
+    #[doc = "Enable (detect on rising edge or high level)."]
     EN_RISE_HI = 0x01,
-    #[doc = "Enable (detect on falling edge or low level)"]
+    #[doc = "Enable (detect on falling edge or low level)."]
     EN_FALL_LO = 0x02,
-    #[doc = "Enable (detect on any edge)"]
+    #[doc = "Enable (detect on any edge)."]
     EN_ANY = 0x03,
 }
 impl Wupe1 {
@@ -1440,13 +1440,13 @@ impl From<Wupe1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupe10 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLE = 0x0,
-    #[doc = "Enable (detect on rising edge or high level)"]
+    #[doc = "Enable (detect on rising edge or high level)."]
     EN_RISE_HI = 0x01,
-    #[doc = "Enable (detect on falling edge or low level)"]
+    #[doc = "Enable (detect on falling edge or low level)."]
     EN_FALL_LO = 0x02,
-    #[doc = "Enable (detect on any edge)"]
+    #[doc = "Enable (detect on any edge)."]
     EN_ANY = 0x03,
 }
 impl Wupe10 {
@@ -1475,13 +1475,13 @@ impl From<Wupe10> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupe11 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLE = 0x0,
-    #[doc = "Enable (detect on rising edge or high level)"]
+    #[doc = "Enable (detect on rising edge or high level)."]
     EN_RISE_HI = 0x01,
-    #[doc = "Enable (detect on falling edge or low level)"]
+    #[doc = "Enable (detect on falling edge or low level)."]
     EN_FALL_LO = 0x02,
-    #[doc = "Enable (detect on any edge)"]
+    #[doc = "Enable (detect on any edge)."]
     EN_ANY = 0x03,
 }
 impl Wupe11 {
@@ -1510,13 +1510,13 @@ impl From<Wupe11> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupe12 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLE = 0x0,
-    #[doc = "Enable (detect on rising edge or high level)"]
+    #[doc = "Enable (detect on rising edge or high level)."]
     EN_RISE_HI = 0x01,
-    #[doc = "Enable (detect on falling edge or low level)"]
+    #[doc = "Enable (detect on falling edge or low level)."]
     EN_FALL_LO = 0x02,
-    #[doc = "Enable (detect on any edge)"]
+    #[doc = "Enable (detect on any edge)."]
     EN_ANY = 0x03,
 }
 impl Wupe12 {
@@ -1545,13 +1545,13 @@ impl From<Wupe12> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupe13 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLE = 0x0,
-    #[doc = "Enable (detect on rising edge or high level)"]
+    #[doc = "Enable (detect on rising edge or high level)."]
     EN_RISE_HI = 0x01,
-    #[doc = "Enable (detect on falling edge or low level)"]
+    #[doc = "Enable (detect on falling edge or low level)."]
     EN_FALL_LO = 0x02,
-    #[doc = "Enable (detect on any edge)"]
+    #[doc = "Enable (detect on any edge)."]
     EN_ANY = 0x03,
 }
 impl Wupe13 {
@@ -1580,13 +1580,13 @@ impl From<Wupe13> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupe14 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLE = 0x0,
-    #[doc = "Enable (detect on rising edge or high level)"]
+    #[doc = "Enable (detect on rising edge or high level)."]
     EN_RISE_HI = 0x01,
-    #[doc = "Enable (detect on falling edge or low level)"]
+    #[doc = "Enable (detect on falling edge or low level)."]
     EN_FALL_LO = 0x02,
-    #[doc = "Enable (detect on any edge)"]
+    #[doc = "Enable (detect on any edge)."]
     EN_ANY = 0x03,
 }
 impl Wupe14 {
@@ -1615,13 +1615,13 @@ impl From<Wupe14> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupe15 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLE = 0x0,
-    #[doc = "Enable (detect on rising edge or high level)"]
+    #[doc = "Enable (detect on rising edge or high level)."]
     EN_RISE_HI = 0x01,
-    #[doc = "Enable (detect on falling edge or low level)"]
+    #[doc = "Enable (detect on falling edge or low level)."]
     EN_FALL_LO = 0x02,
-    #[doc = "Enable (detect on any edge)"]
+    #[doc = "Enable (detect on any edge)."]
     EN_ANY = 0x03,
 }
 impl Wupe15 {
@@ -1650,13 +1650,13 @@ impl From<Wupe15> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupe16 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLE = 0x0,
-    #[doc = "Enable (detect on rising edge or high level)"]
+    #[doc = "Enable (detect on rising edge or high level)."]
     EN_RISE_HI = 0x01,
-    #[doc = "Enable (detect on falling edge or low level)"]
+    #[doc = "Enable (detect on falling edge or low level)."]
     EN_FALL_LO = 0x02,
-    #[doc = "Enable (detect on any edge)"]
+    #[doc = "Enable (detect on any edge)."]
     EN_ANY = 0x03,
 }
 impl Wupe16 {
@@ -1685,13 +1685,13 @@ impl From<Wupe16> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupe17 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLE = 0x0,
-    #[doc = "Enable (detect on rising edge or high level)"]
+    #[doc = "Enable (detect on rising edge or high level)."]
     EN_RISE_HI = 0x01,
-    #[doc = "Enable (detect on falling edge or low level)"]
+    #[doc = "Enable (detect on falling edge or low level)."]
     EN_FALL_LO = 0x02,
-    #[doc = "Enable (detect on any edge)"]
+    #[doc = "Enable (detect on any edge)."]
     EN_ANY = 0x03,
 }
 impl Wupe17 {
@@ -1720,13 +1720,13 @@ impl From<Wupe17> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupe18 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLE = 0x0,
-    #[doc = "Enable (detect on rising edge or high level)"]
+    #[doc = "Enable (detect on rising edge or high level)."]
     EN_RISE_HI = 0x01,
-    #[doc = "Enable (detect on falling edge or low level)"]
+    #[doc = "Enable (detect on falling edge or low level)."]
     EN_FALL_LO = 0x02,
-    #[doc = "Enable (detect on any edge)"]
+    #[doc = "Enable (detect on any edge)."]
     EN_ANY = 0x03,
 }
 impl Wupe18 {
@@ -1755,13 +1755,13 @@ impl From<Wupe18> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupe19 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLE = 0x0,
-    #[doc = "Enable (detect on rising edge or high level)"]
+    #[doc = "Enable (detect on rising edge or high level)."]
     EN_RISE_HI = 0x01,
-    #[doc = "Enable (detect on falling edge or low level)"]
+    #[doc = "Enable (detect on falling edge or low level)."]
     EN_FALL_LO = 0x02,
-    #[doc = "Enable (detect on any edge)"]
+    #[doc = "Enable (detect on any edge)."]
     EN_ANY = 0x03,
 }
 impl Wupe19 {
@@ -1790,13 +1790,13 @@ impl From<Wupe19> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupe2 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLE = 0x0,
-    #[doc = "Enable (detect on rising edge or high level)"]
+    #[doc = "Enable (detect on rising edge or high level)."]
     EN_RISE_HI = 0x01,
-    #[doc = "Enable (detect on falling edge or low level)"]
+    #[doc = "Enable (detect on falling edge or low level)."]
     EN_FALL_LO = 0x02,
-    #[doc = "Enable (detect on any edge)"]
+    #[doc = "Enable (detect on any edge)."]
     EN_ANY = 0x03,
 }
 impl Wupe2 {
@@ -1825,13 +1825,13 @@ impl From<Wupe2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupe20 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLE = 0x0,
-    #[doc = "Enable (detect on rising edge or high level)"]
+    #[doc = "Enable (detect on rising edge or high level)."]
     EN_RISE_HI = 0x01,
-    #[doc = "Enable (detect on falling edge or low level)"]
+    #[doc = "Enable (detect on falling edge or low level)."]
     EN_FALL_LO = 0x02,
-    #[doc = "Enable (detect on any edge)"]
+    #[doc = "Enable (detect on any edge)."]
     EN_ANY = 0x03,
 }
 impl Wupe20 {
@@ -1860,13 +1860,13 @@ impl From<Wupe20> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupe21 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLE = 0x0,
-    #[doc = "Enable (detect on rising edge or high level)"]
+    #[doc = "Enable (detect on rising edge or high level)."]
     EN_RISE_HI = 0x01,
-    #[doc = "Enable (detect on falling edge or low level)"]
+    #[doc = "Enable (detect on falling edge or low level)."]
     EN_FALL_LO = 0x02,
-    #[doc = "Enable (detect on any edge)"]
+    #[doc = "Enable (detect on any edge)."]
     EN_ANY = 0x03,
 }
 impl Wupe21 {
@@ -1895,13 +1895,13 @@ impl From<Wupe21> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupe22 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLE = 0x0,
-    #[doc = "Enable (detect on rising edge or high level)"]
+    #[doc = "Enable (detect on rising edge or high level)."]
     EN_RISE_HI = 0x01,
-    #[doc = "Enable (detect on falling edge or low level)"]
+    #[doc = "Enable (detect on falling edge or low level)."]
     EN_FALL_LO = 0x02,
-    #[doc = "Enable (detect on any edge)"]
+    #[doc = "Enable (detect on any edge)."]
     EN_ANY = 0x03,
 }
 impl Wupe22 {
@@ -1930,13 +1930,13 @@ impl From<Wupe22> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupe23 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLE = 0x0,
-    #[doc = "Enable (detect on rising edge or high level)"]
+    #[doc = "Enable (detect on rising edge or high level)."]
     EN_RISE_HI = 0x01,
-    #[doc = "Enable (detect on falling edge or low level)"]
+    #[doc = "Enable (detect on falling edge or low level)."]
     EN_FALL_LO = 0x02,
-    #[doc = "Enable (detect on any edge)"]
+    #[doc = "Enable (detect on any edge)."]
     EN_ANY = 0x03,
 }
 impl Wupe23 {
@@ -1965,13 +1965,13 @@ impl From<Wupe23> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupe24 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLE = 0x0,
-    #[doc = "Enable (detect on rising edge or high level)"]
+    #[doc = "Enable (detect on rising edge or high level)."]
     EN_RISE_HI = 0x01,
-    #[doc = "Enable (detect on falling edge or low level)"]
+    #[doc = "Enable (detect on falling edge or low level)."]
     EN_FALL_LO = 0x02,
-    #[doc = "Enable (detect on any edge)"]
+    #[doc = "Enable (detect on any edge)."]
     EN_ANY = 0x03,
 }
 impl Wupe24 {
@@ -2000,13 +2000,13 @@ impl From<Wupe24> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupe25 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLE = 0x0,
-    #[doc = "Enable (detect on rising edge or high level)"]
+    #[doc = "Enable (detect on rising edge or high level)."]
     EN_RISE_HI = 0x01,
-    #[doc = "Enable (detect on falling edge or low level)"]
+    #[doc = "Enable (detect on falling edge or low level)."]
     EN_FALL_LO = 0x02,
-    #[doc = "Enable (detect on any edge)"]
+    #[doc = "Enable (detect on any edge)."]
     EN_ANY = 0x03,
 }
 impl Wupe25 {
@@ -2035,13 +2035,13 @@ impl From<Wupe25> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupe26 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLE = 0x0,
-    #[doc = "Enable (detect on rising edge or high level)"]
+    #[doc = "Enable (detect on rising edge or high level)."]
     EN_RISE_HI = 0x01,
-    #[doc = "Enable (detect on falling edge or low level)"]
+    #[doc = "Enable (detect on falling edge or low level)."]
     EN_FALL_LO = 0x02,
-    #[doc = "Enable (detect on any edge)"]
+    #[doc = "Enable (detect on any edge)."]
     EN_ANY = 0x03,
 }
 impl Wupe26 {
@@ -2070,13 +2070,13 @@ impl From<Wupe26> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupe27 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLE = 0x0,
-    #[doc = "Enable (detect on rising edge or high level)"]
+    #[doc = "Enable (detect on rising edge or high level)."]
     EN_RISE_HI = 0x01,
-    #[doc = "Enable (detect on falling edge or low level)"]
+    #[doc = "Enable (detect on falling edge or low level)."]
     EN_FALL_LO = 0x02,
-    #[doc = "Enable (detect on any edge)"]
+    #[doc = "Enable (detect on any edge)."]
     EN_ANY = 0x03,
 }
 impl Wupe27 {
@@ -2105,13 +2105,13 @@ impl From<Wupe27> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupe28 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLE = 0x0,
-    #[doc = "Enable (detect on rising edge or high level)"]
+    #[doc = "Enable (detect on rising edge or high level)."]
     EN_RISE_HI = 0x01,
-    #[doc = "Enable (detect on falling edge or low level)"]
+    #[doc = "Enable (detect on falling edge or low level)."]
     EN_FALL_LO = 0x02,
-    #[doc = "Enable (detect on any edge)"]
+    #[doc = "Enable (detect on any edge)."]
     EN_ANY = 0x03,
 }
 impl Wupe28 {
@@ -2140,13 +2140,13 @@ impl From<Wupe28> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupe29 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLE = 0x0,
-    #[doc = "Enable (detect on rising edge or high level)"]
+    #[doc = "Enable (detect on rising edge or high level)."]
     EN_RISE_HI = 0x01,
-    #[doc = "Enable (detect on falling edge or low level)"]
+    #[doc = "Enable (detect on falling edge or low level)."]
     EN_FALL_LO = 0x02,
-    #[doc = "Enable (detect on any edge)"]
+    #[doc = "Enable (detect on any edge)."]
     EN_ANY = 0x03,
 }
 impl Wupe29 {
@@ -2175,13 +2175,13 @@ impl From<Wupe29> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupe3 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLE = 0x0,
-    #[doc = "Enable (detect on rising edge or high level)"]
+    #[doc = "Enable (detect on rising edge or high level)."]
     EN_RISE_HI = 0x01,
-    #[doc = "Enable (detect on falling edge or low level)"]
+    #[doc = "Enable (detect on falling edge or low level)."]
     EN_FALL_LO = 0x02,
-    #[doc = "Enable (detect on any edge)"]
+    #[doc = "Enable (detect on any edge)."]
     EN_ANY = 0x03,
 }
 impl Wupe3 {
@@ -2210,13 +2210,13 @@ impl From<Wupe3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupe30 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLE = 0x0,
-    #[doc = "Enable (detect on rising edge or high level)"]
+    #[doc = "Enable (detect on rising edge or high level)."]
     EN_RISE_HI = 0x01,
-    #[doc = "Enable (detect on falling edge or low level)"]
+    #[doc = "Enable (detect on falling edge or low level)."]
     EN_FALL_LO = 0x02,
-    #[doc = "Enable (detect on any edge)"]
+    #[doc = "Enable (detect on any edge)."]
     EN_ANY = 0x03,
 }
 impl Wupe30 {
@@ -2245,13 +2245,13 @@ impl From<Wupe30> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupe31 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLE = 0x0,
-    #[doc = "Enable (detect on rising edge or high level)"]
+    #[doc = "Enable (detect on rising edge or high level)."]
     EN_RISE_HI = 0x01,
-    #[doc = "Enable (detect on falling edge or low level)"]
+    #[doc = "Enable (detect on falling edge or low level)."]
     EN_FALL_LO = 0x02,
-    #[doc = "Enable (detect on any edge)"]
+    #[doc = "Enable (detect on any edge)."]
     EN_ANY = 0x03,
 }
 impl Wupe31 {
@@ -2280,13 +2280,13 @@ impl From<Wupe31> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupe4 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLE = 0x0,
-    #[doc = "Enable (detect on rising edge or high level)"]
+    #[doc = "Enable (detect on rising edge or high level)."]
     EN_RISE_HI = 0x01,
-    #[doc = "Enable (detect on falling edge or low level)"]
+    #[doc = "Enable (detect on falling edge or low level)."]
     EN_FALL_LO = 0x02,
-    #[doc = "Enable (detect on any edge)"]
+    #[doc = "Enable (detect on any edge)."]
     EN_ANY = 0x03,
 }
 impl Wupe4 {
@@ -2315,13 +2315,13 @@ impl From<Wupe4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupe5 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLE = 0x0,
-    #[doc = "Enable (detect on rising edge or high level)"]
+    #[doc = "Enable (detect on rising edge or high level)."]
     EN_RISE_HI = 0x01,
-    #[doc = "Enable (detect on falling edge or low level)"]
+    #[doc = "Enable (detect on falling edge or low level)."]
     EN_FALL_LO = 0x02,
-    #[doc = "Enable (detect on any edge)"]
+    #[doc = "Enable (detect on any edge)."]
     EN_ANY = 0x03,
 }
 impl Wupe5 {
@@ -2350,13 +2350,13 @@ impl From<Wupe5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupe6 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLE = 0x0,
-    #[doc = "Enable (detect on rising edge or high level)"]
+    #[doc = "Enable (detect on rising edge or high level)."]
     EN_RISE_HI = 0x01,
-    #[doc = "Enable (detect on falling edge or low level)"]
+    #[doc = "Enable (detect on falling edge or low level)."]
     EN_FALL_LO = 0x02,
-    #[doc = "Enable (detect on any edge)"]
+    #[doc = "Enable (detect on any edge)."]
     EN_ANY = 0x03,
 }
 impl Wupe6 {
@@ -2385,13 +2385,13 @@ impl From<Wupe6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupe7 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLE = 0x0,
-    #[doc = "Enable (detect on rising edge or high level)"]
+    #[doc = "Enable (detect on rising edge or high level)."]
     EN_RISE_HI = 0x01,
-    #[doc = "Enable (detect on falling edge or low level)"]
+    #[doc = "Enable (detect on falling edge or low level)."]
     EN_FALL_LO = 0x02,
-    #[doc = "Enable (detect on any edge)"]
+    #[doc = "Enable (detect on any edge)."]
     EN_ANY = 0x03,
 }
 impl Wupe7 {
@@ -2420,13 +2420,13 @@ impl From<Wupe7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupe8 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLE = 0x0,
-    #[doc = "Enable (detect on rising edge or high level)"]
+    #[doc = "Enable (detect on rising edge or high level)."]
     EN_RISE_HI = 0x01,
-    #[doc = "Enable (detect on falling edge or low level)"]
+    #[doc = "Enable (detect on falling edge or low level)."]
     EN_FALL_LO = 0x02,
-    #[doc = "Enable (detect on any edge)"]
+    #[doc = "Enable (detect on any edge)."]
     EN_ANY = 0x03,
 }
 impl Wupe8 {
@@ -2455,13 +2455,13 @@ impl From<Wupe8> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wupe9 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     DISABLE = 0x0,
-    #[doc = "Enable (detect on rising edge or high level)"]
+    #[doc = "Enable (detect on rising edge or high level)."]
     EN_RISE_HI = 0x01,
-    #[doc = "Enable (detect on falling edge or low level)"]
+    #[doc = "Enable (detect on falling edge or low level)."]
     EN_FALL_LO = 0x02,
-    #[doc = "Enable (detect on any edge)"]
+    #[doc = "Enable (detect on any edge)."]
     EN_ANY = 0x03,
 }
 impl Wupe9 {

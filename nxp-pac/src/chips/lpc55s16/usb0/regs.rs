@@ -1,4 +1,4 @@
-#[doc = "USB Data buffer start address"]
+#[doc = "USB Data buffer start address."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Databufstart(pub u32);
@@ -35,7 +35,7 @@ impl defmt::Format for Databufstart {
         defmt::write!(f, "Databufstart {{ da_buf: {=u16:?} }}", self.da_buf())
     }
 }
-#[doc = "USB Device Command/Status register"]
+#[doc = "USB Device Command/Status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Devcmdstat(pub u32);
@@ -76,74 +76,74 @@ impl Devcmdstat {
     pub const fn set_setup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Forces the NEEDCLK output to always be on:"]
+    #[doc = "Forces the NEEDCLK output to always be on:."]
     #[must_use]
     #[inline(always)]
     pub const fn force_needclk(&self) -> super::vals::ForceNeedclk {
         let val = (self.0 >> 9usize) & 0x01;
         super::vals::ForceNeedclk::from_bits(val as u8)
     }
-    #[doc = "Forces the NEEDCLK output to always be on:"]
+    #[doc = "Forces the NEEDCLK output to always be on:."]
     #[inline(always)]
     pub const fn set_force_needclk(&mut self, val: super::vals::ForceNeedclk) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
     }
-    #[doc = "LPM Supported:"]
+    #[doc = "LPM Supported:."]
     #[must_use]
     #[inline(always)]
     pub const fn lpm_sup(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "LPM Supported:"]
+    #[doc = "LPM Supported:."]
     #[inline(always)]
     pub const fn set_lpm_sup(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "Interrupt on NAK for interrupt and bulk OUT EP"]
+    #[doc = "Interrupt on NAK for interrupt and bulk OUT EP."]
     #[must_use]
     #[inline(always)]
     pub const fn intonnak_ao(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "Interrupt on NAK for interrupt and bulk OUT EP"]
+    #[doc = "Interrupt on NAK for interrupt and bulk OUT EP."]
     #[inline(always)]
     pub const fn set_intonnak_ao(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "Interrupt on NAK for interrupt and bulk IN EP"]
+    #[doc = "Interrupt on NAK for interrupt and bulk IN EP."]
     #[must_use]
     #[inline(always)]
     pub const fn intonnak_ai(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "Interrupt on NAK for interrupt and bulk IN EP"]
+    #[doc = "Interrupt on NAK for interrupt and bulk IN EP."]
     #[inline(always)]
     pub const fn set_intonnak_ai(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "Interrupt on NAK for control OUT EP"]
+    #[doc = "Interrupt on NAK for control OUT EP."]
     #[must_use]
     #[inline(always)]
     pub const fn intonnak_co(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "Interrupt on NAK for control OUT EP"]
+    #[doc = "Interrupt on NAK for control OUT EP."]
     #[inline(always)]
     pub const fn set_intonnak_co(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Interrupt on NAK for control IN EP"]
+    #[doc = "Interrupt on NAK for control IN EP."]
     #[must_use]
     #[inline(always)]
     pub const fn intonnak_ci(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Interrupt on NAK for control IN EP"]
+    #[doc = "Interrupt on NAK for control IN EP."]
     #[inline(always)]
     pub const fn set_intonnak_ci(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
@@ -300,7 +300,7 @@ impl defmt::Format for Devcmdstat {
         )
     }
 }
-#[doc = "USB Endpoint Buffer Configuration register"]
+#[doc = "USB Endpoint Buffer Configuration register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Epbufcfg(pub u32);
@@ -337,7 +337,7 @@ impl defmt::Format for Epbufcfg {
         defmt::write!(f, "Epbufcfg {{ buf_sb: {=u8:?} }}", self.buf_sb())
     }
 }
-#[doc = "USB Endpoint Buffer in use"]
+#[doc = "USB Endpoint Buffer in use."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Epinuse(pub u32);
@@ -372,7 +372,7 @@ impl defmt::Format for Epinuse {
         defmt::write!(f, "Epinuse {{ buf: {=u8:?} }}", self.buf())
     }
 }
-#[doc = "USB EP Command/Status List start address"]
+#[doc = "USB EP Command/Status List start address."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Epliststart(pub u32);
@@ -409,7 +409,7 @@ impl defmt::Format for Epliststart {
         defmt::write!(f, "Epliststart {{ ep_list: {=u32:?} }}", self.ep_list())
     }
 }
-#[doc = "USB Endpoint skip"]
+#[doc = "USB Endpoint skip."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Epskip(pub u32);
@@ -446,7 +446,7 @@ impl defmt::Format for Epskip {
         defmt::write!(f, "Epskip {{ skip: {=u16:?} }}", self.skip())
     }
 }
-#[doc = "USB Endpoint toggle register"]
+#[doc = "USB Endpoint toggle register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Eptoggle(pub u32);
@@ -483,7 +483,7 @@ impl defmt::Format for Eptoggle {
         defmt::write!(f, "Eptoggle {{ toggle: {=u16:?} }}", self.toggle())
     }
 }
-#[doc = "USB Info register"]
+#[doc = "USB Info register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Info(pub u32);
@@ -500,14 +500,14 @@ impl Info {
     pub const fn set_frame_nr(&mut self, val: u16) {
         self.0 = (self.0 & !(0x07ff << 0usize)) | (((val as u32) & 0x07ff) << 0usize);
     }
-    #[doc = "The error code which last occurred:"]
+    #[doc = "The error code which last occurred:."]
     #[must_use]
     #[inline(always)]
     pub const fn err_code(&self) -> super::vals::ErrCode {
         let val = (self.0 >> 11usize) & 0x0f;
         super::vals::ErrCode::from_bits(val as u8)
     }
-    #[doc = "The error code which last occurred:"]
+    #[doc = "The error code which last occurred:."]
     #[inline(always)]
     pub const fn set_err_code(&mut self, val: super::vals::ErrCode) {
         self.0 = (self.0 & !(0x0f << 11usize)) | (((val.to_bits() as u32) & 0x0f) << 11usize);
@@ -566,7 +566,7 @@ impl defmt::Format for Info {
         )
     }
 }
-#[doc = "USB interrupt enable register"]
+#[doc = "USB interrupt enable register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Inten(pub u32);
@@ -635,7 +635,7 @@ impl defmt::Format for Inten {
         )
     }
 }
-#[doc = "USB set interrupt status register"]
+#[doc = "USB set interrupt status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Intsetstat(pub u32);
@@ -704,7 +704,7 @@ impl defmt::Format for Intsetstat {
         )
     }
 }
-#[doc = "USB interrupt status register"]
+#[doc = "USB interrupt status register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Intstat(pub u32);
@@ -899,19 +899,19 @@ impl defmt::Format for Intstat {
         )
     }
 }
-#[doc = "USB Link Power Management register"]
+#[doc = "USB Link Power Management register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lpm(pub u32);
 impl Lpm {
-    #[doc = "Host Initiated Resume Duration - HW. This is the HIRD value from the last received LPM token"]
+    #[doc = "Host Initiated Resume Duration - HW. This is the HIRD value from the last received LPM token."]
     #[must_use]
     #[inline(always)]
     pub const fn hird_hw(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "Host Initiated Resume Duration - HW. This is the HIRD value from the last received LPM token"]
+    #[doc = "Host Initiated Resume Duration - HW. This is the HIRD value from the last received LPM token."]
     #[inline(always)]
     pub const fn set_hird_hw(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);

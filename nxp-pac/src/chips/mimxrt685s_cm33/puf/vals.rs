@@ -441,9 +441,9 @@ impl From<KeyresetKey3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamOn {
-    #[doc = "Power Off"]
+    #[doc = "Power Off."]
     POWER_OFF = 0x0,
-    #[doc = "Power On"]
+    #[doc = "Power On."]
     POWER_ON = 0x01,
 }
 impl RamOn {

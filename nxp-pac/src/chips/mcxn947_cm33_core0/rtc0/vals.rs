@@ -68,9 +68,9 @@ impl From<BusErr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ClkSel {
-    #[doc = "16.384 kHz clock is selected"]
+    #[doc = "16.384 kHz clock is selected."]
     CLK_16_384KHZ = 0x0,
-    #[doc = "32.768 kHz clock is selected"]
+    #[doc = "32.768 kHz clock is selected."]
     CLK_32_768KHZ = 0x01,
 }
 impl ClkSel {
@@ -130,13 +130,13 @@ impl From<ClkoDis> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Clkout {
-    #[doc = "No output clock"]
+    #[doc = "No output clock."]
     NO_OUTPUT_CLK = 0x0,
-    #[doc = "Fine 1 Hz clock with both precise edges"]
+    #[doc = "Fine 1 Hz clock with both precise edges."]
     CLK_1HZ_FINE = 0x01,
-    #[doc = "32.768 or 16.384 kHz clock"]
+    #[doc = "32.768 or 16.384 kHz clock."]
     CLK_32_168KHZ = 0x02,
-    #[doc = "Coarse 1 Hz clock with both precise edges"]
+    #[doc = "Coarse 1 Hz clock with both precise edges."]
     CLK_1HZ_COARSE = 0x03,
 }
 impl Clkout {
@@ -165,19 +165,19 @@ impl From<Clkout> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dow {
-    #[doc = "Sunday"]
+    #[doc = "Sunday."]
     SUNDAY = 0x0,
-    #[doc = "Monday"]
+    #[doc = "Monday."]
     MONDAY = 0x01,
-    #[doc = "Tuesday"]
+    #[doc = "Tuesday."]
     TUESDAY = 0x02,
-    #[doc = "Wednesday"]
+    #[doc = "Wednesday."]
     WEDNESDAY = 0x03,
-    #[doc = "Thursday"]
+    #[doc = "Thursday."]
     THURSDAY = 0x04,
-    #[doc = "Friday"]
+    #[doc = "Friday."]
     FRIDAY = 0x05,
-    #[doc = "Saturday"]
+    #[doc = "Saturday."]
     SATURDAY = 0x06,
     _RESERVED_7 = 0x07,
 }
@@ -238,37 +238,37 @@ impl From<InvalBit> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MonCnt {
-    #[doc = "Illegal Value"]
+    #[doc = "Illegal Value."]
     ILLEGAL_VALUE_0 = 0x0,
-    #[doc = "January"]
+    #[doc = "January."]
     JANUARY = 0x01,
-    #[doc = "February"]
+    #[doc = "February."]
     FEBRUARY = 0x02,
-    #[doc = "March"]
+    #[doc = "March."]
     MARCH = 0x03,
-    #[doc = "April"]
+    #[doc = "April."]
     APRIL = 0x04,
-    #[doc = "May"]
+    #[doc = "May."]
     MAY = 0x05,
-    #[doc = "June"]
+    #[doc = "June."]
     JUNE = 0x06,
-    #[doc = "July"]
+    #[doc = "July."]
     JULY = 0x07,
-    #[doc = "August"]
+    #[doc = "August."]
     AUGUST = 0x08,
-    #[doc = "September"]
+    #[doc = "September."]
     SEPTEMBER = 0x09,
-    #[doc = "October"]
+    #[doc = "October."]
     OCTOBER = 0x0a,
-    #[doc = "November"]
+    #[doc = "November."]
     NOVEMBER = 0x0b,
-    #[doc = "December"]
+    #[doc = "December."]
     DECEMBER = 0x0c,
-    #[doc = "Illegal Value"]
+    #[doc = "Illegal Value."]
     ILLEGAL_VALUE_13 = 0x0d,
-    #[doc = "Illegal Value"]
+    #[doc = "Illegal Value."]
     ILLEGAL_VALUE_14 = 0x0e,
-    #[doc = "Illegal Value"]
+    #[doc = "Illegal Value."]
     ILLEGAL_VALUE_15 = 0x0f,
 }
 impl MonCnt {
@@ -297,9 +297,9 @@ impl From<MonCnt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Swr {
-    #[doc = "Software Reset cleared"]
+    #[doc = "Software Reset cleared."]
     CLEARED = 0x0,
-    #[doc = "Software Reset asserted"]
+    #[doc = "Software Reset asserted."]
     ASSERTED = 0x01,
 }
 impl Swr {

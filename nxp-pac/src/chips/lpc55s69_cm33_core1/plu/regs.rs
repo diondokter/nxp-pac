@@ -1,4 +1,4 @@
-#[doc = "LUTn input x MUX"]
+#[doc = "LUTn input x MUX."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct LutInpMux(pub u32);
@@ -35,7 +35,7 @@ impl defmt::Format for LutInpMux {
         defmt::write!(f, "LutInpMux {{ lutn_inpx: {:?} }}", self.lutn_inpx())
     }
 }
-#[doc = "Specifies the Truth Table contents for LUTLUTn"]
+#[doc = "Specifies the Truth Table contents for LUTLUTn."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct LutTruth(pub u32);
@@ -72,7 +72,7 @@ impl defmt::Format for LutTruth {
         defmt::write!(f, "LutTruth {{ lutn_truth: {=u32:?} }}", self.lutn_truth())
     }
 }
-#[doc = "Selects the source to be connected to PLU Output OUTPUT_n"]
+#[doc = "Selects the source to be connected to PLU Output OUTPUT_n."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OutputMux(pub u32);
@@ -150,19 +150,19 @@ impl defmt::Format for Outputs {
         )
     }
 }
-#[doc = "Wakeup interrupt control for PLU"]
+#[doc = "Wakeup interrupt control for PLU."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct WakeintCtrl(pub u32);
 impl WakeintCtrl {
-    #[doc = "Interrupt mask (which of the 8 PLU Outputs contribute to interrupt)"]
+    #[doc = "Interrupt mask (which of the 8 PLU Outputs contribute to interrupt)."]
     #[must_use]
     #[inline(always)]
     pub const fn mask(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Interrupt mask (which of the 8 PLU Outputs contribute to interrupt)"]
+    #[doc = "Interrupt mask (which of the 8 PLU Outputs contribute to interrupt)."]
     #[inline(always)]
     pub const fn set_mask(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
@@ -191,26 +191,26 @@ impl WakeintCtrl {
     pub const fn set_filter_clksel(&mut self, val: super::vals::FilterClksel) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val.to_bits() as u32) & 0x03) << 10usize);
     }
-    #[doc = "latch the interrupt , then can be cleared with next bit INTR_CLEAR"]
+    #[doc = "latch the interrupt , then can be cleared with next bit INTR_CLEAR."]
     #[must_use]
     #[inline(always)]
     pub const fn latch_enable(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "latch the interrupt , then can be cleared with next bit INTR_CLEAR"]
+    #[doc = "latch the interrupt , then can be cleared with next bit INTR_CLEAR."]
     #[inline(always)]
     pub const fn set_latch_enable(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "Write to clear wakeint_latched"]
+    #[doc = "Write to clear wakeint_latched."]
     #[must_use]
     #[inline(always)]
     pub const fn intr_clear(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "Write to clear wakeint_latched"]
+    #[doc = "Write to clear wakeint_latched."]
     #[inline(always)]
     pub const fn set_intr_clear(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);

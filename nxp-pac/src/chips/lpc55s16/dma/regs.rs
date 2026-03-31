@@ -105,7 +105,7 @@ impl defmt::Format for Busy0 {
         defmt::write!(f, "Busy0 {{ bsy: {=u32:?} }}", self.bsy())
     }
 }
-#[doc = "Configuration register for DMA channel ."]
+#[doc = "Configuration register for DMA channel."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cfg(pub u32);
@@ -258,7 +258,7 @@ impl defmt::Format for Cfg {
         )
     }
 }
-#[doc = "Control and status register for DMA channel ."]
+#[doc = "Control and status register for DMA channel."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctlstat(pub u32);
@@ -700,14 +700,14 @@ impl defmt::Format for Settrig0 {
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Setvalid0(pub u32);
 impl Setvalid0 {
-    #[doc = "SETVALID control for DMA channel n. Bit n corresponds to DMA channel n. The number of bits = number of DMA channels in this device. Other bits are reserved. 0 = no effect. 1 = sets the VALIDPENDING control bit for DMA channel n"]
+    #[doc = "SETVALID control for DMA channel n. Bit n corresponds to DMA channel n. The number of bits = number of DMA channels in this device. Other bits are reserved. 0 = no effect. 1 = sets the VALIDPENDING control bit for DMA channel n."]
     #[must_use]
     #[inline(always)]
     pub const fn sv(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "SETVALID control for DMA channel n. Bit n corresponds to DMA channel n. The number of bits = number of DMA channels in this device. Other bits are reserved. 0 = no effect. 1 = sets the VALIDPENDING control bit for DMA channel n"]
+    #[doc = "SETVALID control for DMA channel n. Bit n corresponds to DMA channel n. The number of bits = number of DMA channels in this device. Other bits are reserved. 0 = no effect. 1 = sets the VALIDPENDING control bit for DMA channel n."]
     #[inline(always)]
     pub const fn set_sv(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -767,7 +767,7 @@ impl defmt::Format for Srambase {
         defmt::write!(f, "Srambase {{ offset: {=u32:?} }}", self.offset())
     }
 }
-#[doc = "Transfer configuration register for DMA channel ."]
+#[doc = "Transfer configuration register for DMA channel."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Xfercfg(pub u32);

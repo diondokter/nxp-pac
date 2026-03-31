@@ -1,16 +1,16 @@
-#[doc = "ADD Command Register"]
+#[doc = "ADD Command Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Add(pub u32);
 impl Add {
-    #[doc = "ADD Write Value"]
+    #[doc = "ADD Write Value."]
     #[must_use]
     #[inline(always)]
     pub const fn ad(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "ADD Write Value"]
+    #[doc = "ADD Write Value."]
     #[inline(always)]
     pub const fn set_ad(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -33,19 +33,19 @@ impl defmt::Format for Add {
         defmt::write!(f, "Add {{ ad: {=u32:?} }}", self.ad())
     }
 }
-#[doc = "ADD1 Command Register"]
+#[doc = "ADD1 Command Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Add1(pub u32);
 impl Add1 {
-    #[doc = "ADD 1"]
+    #[doc = "ADD 1."]
     #[must_use]
     #[inline(always)]
     pub const fn ad1(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "ADD 1"]
+    #[doc = "ADD 1."]
     #[inline(always)]
     pub const fn set_ad1(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -68,19 +68,19 @@ impl defmt::Format for Add1 {
         defmt::write!(f, "Add1 {{ ad1: {=u32:?} }}", self.ad1())
     }
 }
-#[doc = "ADD16 Command Register"]
+#[doc = "ADD16 Command Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Add16(pub u32);
 impl Add16 {
-    #[doc = "ADD 16"]
+    #[doc = "ADD 16."]
     #[must_use]
     #[inline(always)]
     pub const fn ad16(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "ADD 16"]
+    #[doc = "ADD 16."]
     #[inline(always)]
     pub const fn set_ad16(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -103,19 +103,19 @@ impl defmt::Format for Add16 {
         defmt::write!(f, "Add16 {{ ad16: {=u32:?} }}", self.ad16())
     }
 }
-#[doc = "ADD256 Command Register"]
+#[doc = "ADD256 Command Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Add256(pub u32);
 impl Add256 {
-    #[doc = "ADD 256"]
+    #[doc = "ADD 256."]
     #[must_use]
     #[inline(always)]
     pub const fn ad256(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "ADD 256"]
+    #[doc = "ADD 256."]
     #[inline(always)]
     pub const fn set_ad256(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -140,19 +140,19 @@ impl defmt::Format for Add256 {
         defmt::write!(f, "Add256 {{ ad256: {=u32:?} }}", self.ad256())
     }
 }
-#[doc = "ASSERT16 Command Register"]
+#[doc = "ASSERT16 Command Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Assert16(pub u32);
 impl Assert16 {
-    #[doc = "ASSERT16 Command"]
+    #[doc = "ASSERT16 Command."]
     #[must_use]
     #[inline(always)]
     pub const fn ast16(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "ASSERT16 Command"]
+    #[doc = "ASSERT16 Command."]
     #[inline(always)]
     pub const fn set_ast16(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -177,103 +177,103 @@ impl defmt::Format for Assert16 {
         defmt::write!(f, "Assert16 {{ ast16: {=u32:?} }}", self.ast16())
     }
 }
-#[doc = "Control Register"]
+#[doc = "Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Control(pub u32);
 impl Control {
-    #[doc = "Lock control"]
+    #[doc = "Lock control."]
     #[must_use]
     #[inline(always)]
     pub const fn lock_ctrl(&self) -> super::vals::LockCtrl {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::LockCtrl::from_bits(val as u8)
     }
-    #[doc = "Lock control"]
+    #[doc = "Lock control."]
     #[inline(always)]
     pub const fn set_lock_ctrl(&mut self, val: super::vals::LockCtrl) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
-    #[doc = "TIMEOUT fault control"]
+    #[doc = "TIMEOUT fault control."]
     #[must_use]
     #[inline(always)]
     pub const fn timeout_ctrl(&self) -> super::vals::TimeoutCtrl {
         let val = (self.0 >> 2usize) & 0x07;
         super::vals::TimeoutCtrl::from_bits(val as u8)
     }
-    #[doc = "TIMEOUT fault control"]
+    #[doc = "TIMEOUT fault control."]
     #[inline(always)]
     pub const fn set_timeout_ctrl(&mut self, val: super::vals::TimeoutCtrl) {
         self.0 = (self.0 & !(0x07 << 2usize)) | (((val.to_bits() as u32) & 0x07) << 2usize);
     }
-    #[doc = "MISCOMPARE fault control"]
+    #[doc = "MISCOMPARE fault control."]
     #[must_use]
     #[inline(always)]
     pub const fn miscompare_ctrl(&self) -> super::vals::MiscompareCtrl {
         let val = (self.0 >> 5usize) & 0x07;
         super::vals::MiscompareCtrl::from_bits(val as u8)
     }
-    #[doc = "MISCOMPARE fault control"]
+    #[doc = "MISCOMPARE fault control."]
     #[inline(always)]
     pub const fn set_miscompare_ctrl(&mut self, val: super::vals::MiscompareCtrl) {
         self.0 = (self.0 & !(0x07 << 5usize)) | (((val.to_bits() as u32) & 0x07) << 5usize);
     }
-    #[doc = "SEQUENCE fault control"]
+    #[doc = "SEQUENCE fault control."]
     #[must_use]
     #[inline(always)]
     pub const fn sequence_ctrl(&self) -> super::vals::SequenceCtrl {
         let val = (self.0 >> 8usize) & 0x07;
         super::vals::SequenceCtrl::from_bits(val as u8)
     }
-    #[doc = "SEQUENCE fault control"]
+    #[doc = "SEQUENCE fault control."]
     #[inline(always)]
     pub const fn set_sequence_ctrl(&mut self, val: super::vals::SequenceCtrl) {
         self.0 = (self.0 & !(0x07 << 8usize)) | (((val.to_bits() as u32) & 0x07) << 8usize);
     }
-    #[doc = "STATE fault control"]
+    #[doc = "STATE fault control."]
     #[must_use]
     #[inline(always)]
     pub const fn state_ctrl(&self) -> super::vals::StateCtrl {
         let val = (self.0 >> 14usize) & 0x07;
         super::vals::StateCtrl::from_bits(val as u8)
     }
-    #[doc = "STATE fault control"]
+    #[doc = "STATE fault control."]
     #[inline(always)]
     pub const fn set_state_ctrl(&mut self, val: super::vals::StateCtrl) {
         self.0 = (self.0 & !(0x07 << 14usize)) | (((val.to_bits() as u32) & 0x07) << 14usize);
     }
-    #[doc = "ADDRESS fault control"]
+    #[doc = "ADDRESS fault control."]
     #[must_use]
     #[inline(always)]
     pub const fn address_ctrl(&self) -> super::vals::AddressCtrl {
         let val = (self.0 >> 17usize) & 0x07;
         super::vals::AddressCtrl::from_bits(val as u8)
     }
-    #[doc = "ADDRESS fault control"]
+    #[doc = "ADDRESS fault control."]
     #[inline(always)]
     pub const fn set_address_ctrl(&mut self, val: super::vals::AddressCtrl) {
         self.0 = (self.0 & !(0x07 << 17usize)) | (((val.to_bits() as u32) & 0x07) << 17usize);
     }
-    #[doc = "IRQ pause control"]
+    #[doc = "IRQ pause control."]
     #[must_use]
     #[inline(always)]
     pub const fn irq_pause(&self) -> super::vals::IrqPause {
         let val = (self.0 >> 28usize) & 0x03;
         super::vals::IrqPause::from_bits(val as u8)
     }
-    #[doc = "IRQ pause control"]
+    #[doc = "IRQ pause control."]
     #[inline(always)]
     pub const fn set_irq_pause(&mut self, val: super::vals::IrqPause) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
     }
-    #[doc = "DEBUG_HALT control"]
+    #[doc = "DEBUG_HALT control."]
     #[must_use]
     #[inline(always)]
     pub const fn debug_halt_ctrl(&self) -> super::vals::DebugHaltCtrl {
         let val = (self.0 >> 30usize) & 0x03;
         super::vals::DebugHaltCtrl::from_bits(val as u8)
     }
-    #[doc = "DEBUG_HALT control"]
+    #[doc = "DEBUG_HALT control."]
     #[inline(always)]
     pub const fn set_debug_halt_ctrl(&mut self, val: super::vals::DebugHaltCtrl) {
         self.0 = (self.0 & !(0x03 << 30usize)) | (((val.to_bits() as u32) & 0x03) << 30usize);
@@ -316,91 +316,91 @@ impl defmt::Format for Control {
         )
     }
 }
-#[doc = "Flags Register"]
+#[doc = "Flags Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flags(pub u32);
 impl Flags {
-    #[doc = "TIMEOUT fault flag"]
+    #[doc = "TIMEOUT fault flag."]
     #[must_use]
     #[inline(always)]
     pub const fn to_flag(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "TIMEOUT fault flag"]
+    #[doc = "TIMEOUT fault flag."]
     #[inline(always)]
     pub const fn set_to_flag(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "MISCOMPARE fault flag"]
+    #[doc = "MISCOMPARE fault flag."]
     #[must_use]
     #[inline(always)]
     pub const fn miscom_flag(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "MISCOMPARE fault flag"]
+    #[doc = "MISCOMPARE fault flag."]
     #[inline(always)]
     pub const fn set_miscom_flag(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "SEQUENCE fault flag"]
+    #[doc = "SEQUENCE fault flag."]
     #[must_use]
     #[inline(always)]
     pub const fn seq_flag(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "SEQUENCE fault flag"]
+    #[doc = "SEQUENCE fault flag."]
     #[inline(always)]
     pub const fn set_seq_flag(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "CONTROL fault flag"]
+    #[doc = "CONTROL fault flag."]
     #[must_use]
     #[inline(always)]
     pub const fn cnt_flag(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "CONTROL fault flag"]
+    #[doc = "CONTROL fault flag."]
     #[inline(always)]
     pub const fn set_cnt_flag(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "STATE fault flag"]
+    #[doc = "STATE fault flag."]
     #[must_use]
     #[inline(always)]
     pub const fn state_flag(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "STATE fault flag"]
+    #[doc = "STATE fault flag."]
     #[inline(always)]
     pub const fn set_state_flag(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "ADDRESS fault flag"]
+    #[doc = "ADDRESS fault flag."]
     #[must_use]
     #[inline(always)]
     pub const fn addr_flag(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "ADDRESS fault flag"]
+    #[doc = "ADDRESS fault flag."]
     #[inline(always)]
     pub const fn set_addr_flag(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "Power-on reset flag"]
+    #[doc = "Power-on reset flag."]
     #[must_use]
     #[inline(always)]
     pub const fn por_flag(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Power-on reset flag"]
+    #[doc = "Power-on reset flag."]
     #[inline(always)]
     pub const fn set_por_flag(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
@@ -441,19 +441,19 @@ impl defmt::Format for Flags {
         )
     }
 }
-#[doc = "Instruction Timer Register"]
+#[doc = "Instruction Timer Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct InstructionTimer(pub u32);
 impl InstructionTimer {
-    #[doc = "Current value of the Instruction Timer"]
+    #[doc = "Current value of the Instruction Timer."]
     #[must_use]
     #[inline(always)]
     pub const fn instim(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Current value of the Instruction Timer"]
+    #[doc = "Current value of the Instruction Timer."]
     #[inline(always)]
     pub const fn set_instim(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -478,19 +478,19 @@ impl defmt::Format for InstructionTimer {
         defmt::write!(f, "InstructionTimer {{ instim: {=u32:?} }}", self.instim())
     }
 }
-#[doc = "Persistent Data Storage Register"]
+#[doc = "Persistent Data Storage Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Persistent(pub u32);
 impl Persistent {
-    #[doc = "Persistent Storage"]
+    #[doc = "Persistent Storage."]
     #[must_use]
     #[inline(always)]
     pub const fn persis(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Persistent Storage"]
+    #[doc = "Persistent Storage."]
     #[inline(always)]
     pub const fn set_persis(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -515,19 +515,19 @@ impl defmt::Format for Persistent {
         defmt::write!(f, "Persistent {{ persis: {=u32:?} }}", self.persis())
     }
 }
-#[doc = "Instruction Timer Reload Register"]
+#[doc = "Instruction Timer Reload Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Reload(pub u32);
 impl Reload {
-    #[doc = "Instruction Timer reload value"]
+    #[doc = "Instruction Timer reload value."]
     #[must_use]
     #[inline(always)]
     pub const fn rload(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Instruction Timer reload value"]
+    #[doc = "Instruction Timer reload value."]
     #[inline(always)]
     pub const fn set_rload(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -552,19 +552,19 @@ impl defmt::Format for Reload {
         defmt::write!(f, "Reload {{ rload: {=u32:?} }}", self.rload())
     }
 }
-#[doc = "RESTART Command Register"]
+#[doc = "RESTART Command Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Restart(pub u32);
 impl Restart {
-    #[doc = "Restart command"]
+    #[doc = "Restart command."]
     #[must_use]
     #[inline(always)]
     pub const fn rstrt(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Restart command"]
+    #[doc = "Restart command."]
     #[inline(always)]
     pub const fn set_rstrt(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -589,19 +589,19 @@ impl defmt::Format for Restart {
         defmt::write!(f, "Restart {{ rstrt: {=u32:?} }}", self.rstrt())
     }
 }
-#[doc = "START Command Register"]
+#[doc = "START Command Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Start(pub u32);
 impl Start {
-    #[doc = "Start command"]
+    #[doc = "Start command."]
     #[must_use]
     #[inline(always)]
     pub const fn strt(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Start command"]
+    #[doc = "Start command."]
     #[inline(always)]
     pub const fn set_strt(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -624,55 +624,55 @@ impl defmt::Format for Start {
         defmt::write!(f, "Start {{ strt: {=u32:?} }}", self.strt())
     }
 }
-#[doc = "Status 1 Register"]
+#[doc = "Status 1 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Status(pub u32);
 impl Status {
-    #[doc = "Number of TIMEOUT faults since the last POR"]
+    #[doc = "Number of TIMEOUT faults since the last POR."]
     #[must_use]
     #[inline(always)]
     pub const fn numtof(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Number of TIMEOUT faults since the last POR"]
+    #[doc = "Number of TIMEOUT faults since the last POR."]
     #[inline(always)]
     pub const fn set_numtof(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "Number of MISCOMPARE faults since the last POR"]
+    #[doc = "Number of MISCOMPARE faults since the last POR."]
     #[must_use]
     #[inline(always)]
     pub const fn nummiscompf(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0xff;
         val as u8
     }
-    #[doc = "Number of MISCOMPARE faults since the last POR"]
+    #[doc = "Number of MISCOMPARE faults since the last POR."]
     #[inline(always)]
     pub const fn set_nummiscompf(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
     }
-    #[doc = "Number of SEQUENCE faults since the last POR"]
+    #[doc = "Number of SEQUENCE faults since the last POR."]
     #[must_use]
     #[inline(always)]
     pub const fn numilseqf(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0xff;
         val as u8
     }
-    #[doc = "Number of SEQUENCE faults since the last POR"]
+    #[doc = "Number of SEQUENCE faults since the last POR."]
     #[inline(always)]
     pub const fn set_numilseqf(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
     }
-    #[doc = "Current State"]
+    #[doc = "Current State."]
     #[must_use]
     #[inline(always)]
     pub const fn curst(&self) -> u8 {
         let val = (self.0 >> 28usize) & 0x0f;
         val as u8
     }
-    #[doc = "Current State"]
+    #[doc = "Current State."]
     #[inline(always)]
     pub const fn set_curst(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 28usize)) | (((val as u32) & 0x0f) << 28usize);
@@ -707,43 +707,43 @@ impl defmt::Format for Status {
         )
     }
 }
-#[doc = "Status 2 Register"]
+#[doc = "Status 2 Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Status2(pub u32);
 impl Status2 {
-    #[doc = "Number of CONTROL faults since the last POR"]
+    #[doc = "Number of CONTROL faults since the last POR."]
     #[must_use]
     #[inline(always)]
     pub const fn numcntf(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "Number of CONTROL faults since the last POR"]
+    #[doc = "Number of CONTROL faults since the last POR."]
     #[inline(always)]
     pub const fn set_numcntf(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "Number of STATE faults since the last POR"]
+    #[doc = "Number of STATE faults since the last POR."]
     #[must_use]
     #[inline(always)]
     pub const fn numillstf(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0xff;
         val as u8
     }
-    #[doc = "Number of STATE faults since the last POR"]
+    #[doc = "Number of STATE faults since the last POR."]
     #[inline(always)]
     pub const fn set_numillstf(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
     }
-    #[doc = "Number of ADDRESS faults since the last POR"]
+    #[doc = "Number of ADDRESS faults since the last POR."]
     #[must_use]
     #[inline(always)]
     pub const fn numilla(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0xff;
         val as u8
     }
-    #[doc = "Number of ADDRESS faults since the last POR"]
+    #[doc = "Number of ADDRESS faults since the last POR."]
     #[inline(always)]
     pub const fn set_numilla(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
@@ -776,19 +776,19 @@ impl defmt::Format for Status2 {
         )
     }
 }
-#[doc = "STOP Command Register"]
+#[doc = "STOP Command Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Stop(pub u32);
 impl Stop {
-    #[doc = "Stop command"]
+    #[doc = "Stop command."]
     #[must_use]
     #[inline(always)]
     pub const fn stp(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Stop command"]
+    #[doc = "Stop command."]
     #[inline(always)]
     pub const fn set_stp(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -811,19 +811,19 @@ impl defmt::Format for Stop {
         defmt::write!(f, "Stop {{ stp: {=u32:?} }}", self.stp())
     }
 }
-#[doc = "SUB Command Register"]
+#[doc = "SUB Command Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sub(pub u32);
 impl Sub {
-    #[doc = "Subtract Write Value"]
+    #[doc = "Subtract Write Value."]
     #[must_use]
     #[inline(always)]
     pub const fn sb(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Subtract Write Value"]
+    #[doc = "Subtract Write Value."]
     #[inline(always)]
     pub const fn set_sb(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -846,19 +846,19 @@ impl defmt::Format for Sub {
         defmt::write!(f, "Sub {{ sb: {=u32:?} }}", self.sb())
     }
 }
-#[doc = "SUB1 Command Register"]
+#[doc = "SUB1 Command Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sub1(pub u32);
 impl Sub1 {
-    #[doc = "Subtract 1"]
+    #[doc = "Subtract 1."]
     #[must_use]
     #[inline(always)]
     pub const fn sb1(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Subtract 1"]
+    #[doc = "Subtract 1."]
     #[inline(always)]
     pub const fn set_sb1(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -881,19 +881,19 @@ impl defmt::Format for Sub1 {
         defmt::write!(f, "Sub1 {{ sb1: {=u32:?} }}", self.sb1())
     }
 }
-#[doc = "SUB16 Command Register"]
+#[doc = "SUB16 Command Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sub16(pub u32);
 impl Sub16 {
-    #[doc = "Subtract 16"]
+    #[doc = "Subtract 16."]
     #[must_use]
     #[inline(always)]
     pub const fn sb16(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Subtract 16"]
+    #[doc = "Subtract 16."]
     #[inline(always)]
     pub const fn set_sb16(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -916,19 +916,19 @@ impl defmt::Format for Sub16 {
         defmt::write!(f, "Sub16 {{ sb16: {=u32:?} }}", self.sb16())
     }
 }
-#[doc = "SUB256 Command Register"]
+#[doc = "SUB256 Command Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sub256(pub u32);
 impl Sub256 {
-    #[doc = "Subtract 256"]
+    #[doc = "Subtract 256."]
     #[must_use]
     #[inline(always)]
     pub const fn sb256(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Subtract 256"]
+    #[doc = "Subtract 256."]
     #[inline(always)]
     pub const fn set_sb256(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);

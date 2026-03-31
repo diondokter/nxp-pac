@@ -1,4 +1,4 @@
-#[doc = "Enable DMA0 triggers"]
+#[doc = "Enable DMA0 triggers."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma0ItrigEna(pub u32);
@@ -39,19 +39,19 @@ impl defmt::Format for Dma0ItrigEna {
         )
     }
 }
-#[doc = "Clear one or several bits in DMA0_ITRIG_ENA register"]
+#[doc = "Clear one or several bits in DMA0_ITRIG_ENA register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma0ItrigEnaClr(pub u32);
 impl Dma0ItrigEnaClr {
-    #[doc = "Write : If bit #i = 1, bit #i in DMA0_ITRIG_ENA register is reset to 0; if bit #i = 0 , no change in DMA0_ITRIG_ENA register"]
+    #[doc = "Write : If bit #i = 1, bit #i in DMA0_ITRIG_ENA register is reset to 0; if bit #i = 0 , no change in DMA0_ITRIG_ENA register."]
     #[must_use]
     #[inline(always)]
     pub const fn clr(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x003f_ffff;
         val as u32
     }
-    #[doc = "Write : If bit #i = 1, bit #i in DMA0_ITRIG_ENA register is reset to 0; if bit #i = 0 , no change in DMA0_ITRIG_ENA register"]
+    #[doc = "Write : If bit #i = 1, bit #i in DMA0_ITRIG_ENA register is reset to 0; if bit #i = 0 , no change in DMA0_ITRIG_ENA register."]
     #[inline(always)]
     pub const fn set_clr(&mut self, val: u32) {
         self.0 = (self.0 & !(0x003f_ffff << 0usize)) | (((val as u32) & 0x003f_ffff) << 0usize);
@@ -76,19 +76,19 @@ impl defmt::Format for Dma0ItrigEnaClr {
         defmt::write!(f, "Dma0ItrigEnaClr {{ clr: {=u32:?} }}", self.clr())
     }
 }
-#[doc = "Set one or several bits in DMA0_ITRIG_ENA register"]
+#[doc = "Set one or several bits in DMA0_ITRIG_ENA register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma0ItrigEnaSet(pub u32);
 impl Dma0ItrigEnaSet {
-    #[doc = "Write : If bit #i = 1, bit #i in DMA0_ITRIG_ENA register is set to 1; if bit #i = 0 , no change in DMA0_ITRIG_ENA register"]
+    #[doc = "Write : If bit #i = 1, bit #i in DMA0_ITRIG_ENA register is set to 1; if bit #i = 0 , no change in DMA0_ITRIG_ENA register."]
     #[must_use]
     #[inline(always)]
     pub const fn set(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x003f_ffff;
         val as u32
     }
-    #[doc = "Write : If bit #i = 1, bit #i in DMA0_ITRIG_ENA register is set to 1; if bit #i = 0 , no change in DMA0_ITRIG_ENA register"]
+    #[doc = "Write : If bit #i = 1, bit #i in DMA0_ITRIG_ENA register is set to 1; if bit #i = 0 , no change in DMA0_ITRIG_ENA register."]
     #[inline(always)]
     pub const fn set_set(&mut self, val: u32) {
         self.0 = (self.0 & !(0x003f_ffff << 0usize)) | (((val as u32) & 0x003f_ffff) << 0usize);
@@ -113,7 +113,7 @@ impl defmt::Format for Dma0ItrigEnaSet {
         defmt::write!(f, "Dma0ItrigEnaSet {{ set: {=u32:?} }}", self.set())
     }
 }
-#[doc = "Trigger select register for DMA0 channel"]
+#[doc = "Trigger select register for DMA0 channel."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma0ItrigInmux(pub u32);
@@ -150,7 +150,7 @@ impl defmt::Format for Dma0ItrigInmux {
         defmt::write!(f, "Dma0ItrigInmux {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "DMA0 output trigger selection to become DMA0 trigger"]
+#[doc = "DMA0 output trigger selection to become DMA0 trigger."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma0OtrigInmux(pub u32);
@@ -187,7 +187,7 @@ impl defmt::Format for Dma0OtrigInmux {
         defmt::write!(f, "Dma0OtrigInmux {{ inp: {=u8:?} }}", self.inp())
     }
 }
-#[doc = "Enable DMA0 requests"]
+#[doc = "Enable DMA0 requests."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma0ReqEna(pub u32);
@@ -224,19 +224,19 @@ impl defmt::Format for Dma0ReqEna {
         defmt::write!(f, "Dma0ReqEna {{ req_ena: {=u32:?} }}", self.req_ena())
     }
 }
-#[doc = "Clear one or several bits in DMA0_REQ_ENA register"]
+#[doc = "Clear one or several bits in DMA0_REQ_ENA register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma0ReqEnaClr(pub u32);
 impl Dma0ReqEnaClr {
-    #[doc = "Write : If bit #i = 1, bit #i in DMA0_REQ_ENA register is reset to 0; if bit #i = 0 , no change in DMA0_REQ_ENA register"]
+    #[doc = "Write : If bit #i = 1, bit #i in DMA0_REQ_ENA register is reset to 0; if bit #i = 0 , no change in DMA0_REQ_ENA register."]
     #[must_use]
     #[inline(always)]
     pub const fn clr(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x007f_ffff;
         val as u32
     }
-    #[doc = "Write : If bit #i = 1, bit #i in DMA0_REQ_ENA register is reset to 0; if bit #i = 0 , no change in DMA0_REQ_ENA register"]
+    #[doc = "Write : If bit #i = 1, bit #i in DMA0_REQ_ENA register is reset to 0; if bit #i = 0 , no change in DMA0_REQ_ENA register."]
     #[inline(always)]
     pub const fn set_clr(&mut self, val: u32) {
         self.0 = (self.0 & !(0x007f_ffff << 0usize)) | (((val as u32) & 0x007f_ffff) << 0usize);
@@ -261,19 +261,19 @@ impl defmt::Format for Dma0ReqEnaClr {
         defmt::write!(f, "Dma0ReqEnaClr {{ clr: {=u32:?} }}", self.clr())
     }
 }
-#[doc = "Set one or several bits in DMA0_REQ_ENA register"]
+#[doc = "Set one or several bits in DMA0_REQ_ENA register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma0ReqEnaSet(pub u32);
 impl Dma0ReqEnaSet {
-    #[doc = "Write : If bit #i = 1, bit #i in DMA0_REQ_ENA register is set to 1; if bit #i = 0 , no change in DMA0_REQ_ENA register"]
+    #[doc = "Write : If bit #i = 1, bit #i in DMA0_REQ_ENA register is set to 1; if bit #i = 0 , no change in DMA0_REQ_ENA register."]
     #[must_use]
     #[inline(always)]
     pub const fn set(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x007f_ffff;
         val as u32
     }
-    #[doc = "Write : If bit #i = 1, bit #i in DMA0_REQ_ENA register is set to 1; if bit #i = 0 , no change in DMA0_REQ_ENA register"]
+    #[doc = "Write : If bit #i = 1, bit #i in DMA0_REQ_ENA register is set to 1; if bit #i = 0 , no change in DMA0_REQ_ENA register."]
     #[inline(always)]
     pub const fn set_set(&mut self, val: u32) {
         self.0 = (self.0 & !(0x007f_ffff << 0usize)) | (((val as u32) & 0x007f_ffff) << 0usize);
@@ -298,7 +298,7 @@ impl defmt::Format for Dma0ReqEnaSet {
         defmt::write!(f, "Dma0ReqEnaSet {{ set: {=u32:?} }}", self.set())
     }
 }
-#[doc = "Enable DMA1 triggers"]
+#[doc = "Enable DMA1 triggers."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma1ItrigEna(pub u32);
@@ -339,19 +339,19 @@ impl defmt::Format for Dma1ItrigEna {
         )
     }
 }
-#[doc = "Clear one or several bits in DMA1_ITRIG_ENA register"]
+#[doc = "Clear one or several bits in DMA1_ITRIG_ENA register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma1ItrigEnaClr(pub u32);
 impl Dma1ItrigEnaClr {
-    #[doc = "Write : If bit #i = 1, bit #i in DMA1_ITRIG_ENA register is reset to 0; if bit #i = 0 , no change in DMA1_ITRIG_ENA register"]
+    #[doc = "Write : If bit #i = 1, bit #i in DMA1_ITRIG_ENA register is reset to 0; if bit #i = 0 , no change in DMA1_ITRIG_ENA register."]
     #[must_use]
     #[inline(always)]
     pub const fn clr(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x7fff;
         val as u16
     }
-    #[doc = "Write : If bit #i = 1, bit #i in DMA1_ITRIG_ENA register is reset to 0; if bit #i = 0 , no change in DMA1_ITRIG_ENA register"]
+    #[doc = "Write : If bit #i = 1, bit #i in DMA1_ITRIG_ENA register is reset to 0; if bit #i = 0 , no change in DMA1_ITRIG_ENA register."]
     #[inline(always)]
     pub const fn set_clr(&mut self, val: u16) {
         self.0 = (self.0 & !(0x7fff << 0usize)) | (((val as u32) & 0x7fff) << 0usize);
@@ -376,19 +376,19 @@ impl defmt::Format for Dma1ItrigEnaClr {
         defmt::write!(f, "Dma1ItrigEnaClr {{ clr: {=u16:?} }}", self.clr())
     }
 }
-#[doc = "Set one or several bits in DMA1_ITRIG_ENA register"]
+#[doc = "Set one or several bits in DMA1_ITRIG_ENA register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma1ItrigEnaSet(pub u32);
 impl Dma1ItrigEnaSet {
-    #[doc = "Write : If bit #i = 1, bit #i in DMA1_ITRIG_ENA register is set to 1; if bit #i = 0 , no change in DMA1_ITRIG_ENA register"]
+    #[doc = "Write : If bit #i = 1, bit #i in DMA1_ITRIG_ENA register is set to 1; if bit #i = 0 , no change in DMA1_ITRIG_ENA register."]
     #[must_use]
     #[inline(always)]
     pub const fn set(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x7fff;
         val as u16
     }
-    #[doc = "Write : If bit #i = 1, bit #i in DMA1_ITRIG_ENA register is set to 1; if bit #i = 0 , no change in DMA1_ITRIG_ENA register"]
+    #[doc = "Write : If bit #i = 1, bit #i in DMA1_ITRIG_ENA register is set to 1; if bit #i = 0 , no change in DMA1_ITRIG_ENA register."]
     #[inline(always)]
     pub const fn set_set(&mut self, val: u16) {
         self.0 = (self.0 & !(0x7fff << 0usize)) | (((val as u32) & 0x7fff) << 0usize);
@@ -413,7 +413,7 @@ impl defmt::Format for Dma1ItrigEnaSet {
         defmt::write!(f, "Dma1ItrigEnaSet {{ set: {=u16:?} }}", self.set())
     }
 }
-#[doc = "Trigger select register for DMA1 channel"]
+#[doc = "Trigger select register for DMA1 channel."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma1ItrigInmux(pub u32);
@@ -450,7 +450,7 @@ impl defmt::Format for Dma1ItrigInmux {
         defmt::write!(f, "Dma1ItrigInmux {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "DMA1 output trigger selection to become DMA1 trigger"]
+#[doc = "DMA1 output trigger selection to become DMA1 trigger."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma1OtrigInmux(pub u32);
@@ -487,7 +487,7 @@ impl defmt::Format for Dma1OtrigInmux {
         defmt::write!(f, "Dma1OtrigInmux {{ inp: {=u8:?} }}", self.inp())
     }
 }
-#[doc = "Enable DMA1 requests"]
+#[doc = "Enable DMA1 requests."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma1ReqEna(pub u32);
@@ -524,19 +524,19 @@ impl defmt::Format for Dma1ReqEna {
         defmt::write!(f, "Dma1ReqEna {{ req_ena: {=u16:?} }}", self.req_ena())
     }
 }
-#[doc = "Clear one or several bits in DMA1_REQ_ENA register"]
+#[doc = "Clear one or several bits in DMA1_REQ_ENA register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma1ReqEnaClr(pub u32);
 impl Dma1ReqEnaClr {
-    #[doc = "Write : If bit #i = 1, bit #i in DMA1_REQ_ENA register is reset to 0; if bit #i = 0 , no change in DMA1_REQ_ENA register"]
+    #[doc = "Write : If bit #i = 1, bit #i in DMA1_REQ_ENA register is reset to 0; if bit #i = 0 , no change in DMA1_REQ_ENA register."]
     #[must_use]
     #[inline(always)]
     pub const fn clr(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x03ff;
         val as u16
     }
-    #[doc = "Write : If bit #i = 1, bit #i in DMA1_REQ_ENA register is reset to 0; if bit #i = 0 , no change in DMA1_REQ_ENA register"]
+    #[doc = "Write : If bit #i = 1, bit #i in DMA1_REQ_ENA register is reset to 0; if bit #i = 0 , no change in DMA1_REQ_ENA register."]
     #[inline(always)]
     pub const fn set_clr(&mut self, val: u16) {
         self.0 = (self.0 & !(0x03ff << 0usize)) | (((val as u32) & 0x03ff) << 0usize);
@@ -561,19 +561,19 @@ impl defmt::Format for Dma1ReqEnaClr {
         defmt::write!(f, "Dma1ReqEnaClr {{ clr: {=u16:?} }}", self.clr())
     }
 }
-#[doc = "Set one or several bits in DMA1_REQ_ENA register"]
+#[doc = "Set one or several bits in DMA1_REQ_ENA register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma1ReqEnaSet(pub u32);
 impl Dma1ReqEnaSet {
-    #[doc = "Write : If bit #i = 1, bit #i in DMA1_REQ_ENA register is set to 1; if bit #i = 0 , no change in DMA1_REQ_ENA register"]
+    #[doc = "Write : If bit #i = 1, bit #i in DMA1_REQ_ENA register is set to 1; if bit #i = 0 , no change in DMA1_REQ_ENA register."]
     #[must_use]
     #[inline(always)]
     pub const fn set(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x03ff;
         val as u16
     }
-    #[doc = "Write : If bit #i = 1, bit #i in DMA1_REQ_ENA register is set to 1; if bit #i = 0 , no change in DMA1_REQ_ENA register"]
+    #[doc = "Write : If bit #i = 1, bit #i in DMA1_REQ_ENA register is set to 1; if bit #i = 0 , no change in DMA1_REQ_ENA register."]
     #[inline(always)]
     pub const fn set_set(&mut self, val: u16) {
         self.0 = (self.0 & !(0x03ff << 0usize)) | (((val as u32) & 0x03ff) << 0usize);
@@ -598,19 +598,19 @@ impl defmt::Format for Dma1ReqEnaSet {
         defmt::write!(f, "Dma1ReqEnaSet {{ set: {=u16:?} }}", self.set())
     }
 }
-#[doc = "Selection for frequency measurement reference clock"]
+#[doc = "Selection for frequency measurement reference clock."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FreqmeasRef(pub u32);
 impl FreqmeasRef {
-    #[doc = "Clock source number (decimal value) for frequency measure function reference clock:"]
+    #[doc = "Clock source number (decimal value) for frequency measure function reference clock:."]
     #[must_use]
     #[inline(always)]
     pub const fn clkin(&self) -> super::vals::FreqmeasRefClkin {
         let val = (self.0 >> 0usize) & 0x1f;
         super::vals::FreqmeasRefClkin::from_bits(val as u8)
     }
-    #[doc = "Clock source number (decimal value) for frequency measure function reference clock:"]
+    #[doc = "Clock source number (decimal value) for frequency measure function reference clock:."]
     #[inline(always)]
     pub const fn set_clkin(&mut self, val: super::vals::FreqmeasRefClkin) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val.to_bits() as u32) & 0x1f) << 0usize);
@@ -635,19 +635,19 @@ impl defmt::Format for FreqmeasRef {
         defmt::write!(f, "FreqmeasRef {{ clkin: {:?} }}", self.clkin())
     }
 }
-#[doc = "Selection for frequency measurement target clock"]
+#[doc = "Selection for frequency measurement target clock."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FreqmeasTarget(pub u32);
 impl FreqmeasTarget {
-    #[doc = "Clock source number (decimal value) for frequency measure function target clock:"]
+    #[doc = "Clock source number (decimal value) for frequency measure function target clock:."]
     #[must_use]
     #[inline(always)]
     pub const fn clkin(&self) -> super::vals::FreqmeasTargetClkin {
         let val = (self.0 >> 0usize) & 0x1f;
         super::vals::FreqmeasTargetClkin::from_bits(val as u8)
     }
-    #[doc = "Clock source number (decimal value) for frequency measure function target clock:"]
+    #[doc = "Clock source number (decimal value) for frequency measure function target clock:."]
     #[inline(always)]
     pub const fn set_clkin(&mut self, val: super::vals::FreqmeasTargetClkin) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val.to_bits() as u32) & 0x1f) << 0usize);
@@ -672,7 +672,7 @@ impl defmt::Format for FreqmeasTarget {
         defmt::write!(f, "FreqmeasTarget {{ clkin: {:?} }}", self.clkin())
     }
 }
-#[doc = "Pin interrupt secure select register"]
+#[doc = "Pin interrupt secure select register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pintsecsel(pub u32);
@@ -709,7 +709,7 @@ impl defmt::Format for Pintsecsel {
         defmt::write!(f, "Pintsecsel {{ intpin: {=u8:?} }}", self.intpin())
     }
 }
-#[doc = "Pin interrupt select register"]
+#[doc = "Pin interrupt select register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pintsel(pub u32);
@@ -746,7 +746,7 @@ impl defmt::Format for Pintsel {
         defmt::write!(f, "Pintsel {{ intpin: {=u8:?} }}", self.intpin())
     }
 }
-#[doc = "Input mux register for SCT0 input"]
+#[doc = "Input mux register for SCT0 input."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sct0Inmux(pub u32);
@@ -783,19 +783,19 @@ impl defmt::Format for Sct0Inmux {
         defmt::write!(f, "Sct0Inmux {{ inp_n: {:?} }}", self.inp_n())
     }
 }
-#[doc = "Capture select registers for TIMER0 inputs"]
+#[doc = "Capture select registers for TIMER0 inputs."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Timer0captsel(pub u32);
 impl Timer0captsel {
-    #[doc = "Input number to TIMER0 capture inputs 0 to 4"]
+    #[doc = "Input number to TIMER0 capture inputs 0 to 4."]
     #[must_use]
     #[inline(always)]
     pub const fn captsel(&self) -> super::vals::Timer0captselCaptsel {
         let val = (self.0 >> 0usize) & 0x1f;
         super::vals::Timer0captselCaptsel::from_bits(val as u8)
     }
-    #[doc = "Input number to TIMER0 capture inputs 0 to 4"]
+    #[doc = "Input number to TIMER0 capture inputs 0 to 4."]
     #[inline(always)]
     pub const fn set_captsel(&mut self, val: super::vals::Timer0captselCaptsel) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val.to_bits() as u32) & 0x1f) << 0usize);
@@ -820,19 +820,19 @@ impl defmt::Format for Timer0captsel {
         defmt::write!(f, "Timer0captsel {{ captsel: {:?} }}", self.captsel())
     }
 }
-#[doc = "Capture select registers for TIMER1 inputs"]
+#[doc = "Capture select registers for TIMER1 inputs."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Timer1captsel(pub u32);
 impl Timer1captsel {
-    #[doc = "Input number to TIMER1 capture inputs 0 to 4"]
+    #[doc = "Input number to TIMER1 capture inputs 0 to 4."]
     #[must_use]
     #[inline(always)]
     pub const fn captsel(&self) -> super::vals::Timer1captselCaptsel {
         let val = (self.0 >> 0usize) & 0x1f;
         super::vals::Timer1captselCaptsel::from_bits(val as u8)
     }
-    #[doc = "Input number to TIMER1 capture inputs 0 to 4"]
+    #[doc = "Input number to TIMER1 capture inputs 0 to 4."]
     #[inline(always)]
     pub const fn set_captsel(&mut self, val: super::vals::Timer1captselCaptsel) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val.to_bits() as u32) & 0x1f) << 0usize);
@@ -857,19 +857,19 @@ impl defmt::Format for Timer1captsel {
         defmt::write!(f, "Timer1captsel {{ captsel: {:?} }}", self.captsel())
     }
 }
-#[doc = "Capture select registers for TIMER2 inputs"]
+#[doc = "Capture select registers for TIMER2 inputs."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Timer2captsel(pub u32);
 impl Timer2captsel {
-    #[doc = "Input number to TIMER2 capture inputs 0 to 4"]
+    #[doc = "Input number to TIMER2 capture inputs 0 to 4."]
     #[must_use]
     #[inline(always)]
     pub const fn captsel(&self) -> super::vals::Timer2captselCaptsel {
         let val = (self.0 >> 0usize) & 0x1f;
         super::vals::Timer2captselCaptsel::from_bits(val as u8)
     }
-    #[doc = "Input number to TIMER2 capture inputs 0 to 4"]
+    #[doc = "Input number to TIMER2 capture inputs 0 to 4."]
     #[inline(always)]
     pub const fn set_captsel(&mut self, val: super::vals::Timer2captselCaptsel) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val.to_bits() as u32) & 0x1f) << 0usize);
@@ -894,19 +894,19 @@ impl defmt::Format for Timer2captsel {
         defmt::write!(f, "Timer2captsel {{ captsel: {:?} }}", self.captsel())
     }
 }
-#[doc = "Capture select registers for TIMER3 inputs"]
+#[doc = "Capture select registers for TIMER3 inputs."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Timer3captsel(pub u32);
 impl Timer3captsel {
-    #[doc = "Input number to TIMER3 capture inputs 0 to 4"]
+    #[doc = "Input number to TIMER3 capture inputs 0 to 4."]
     #[must_use]
     #[inline(always)]
     pub const fn captsel(&self) -> super::vals::Timer3captselCaptsel {
         let val = (self.0 >> 0usize) & 0x1f;
         super::vals::Timer3captselCaptsel::from_bits(val as u8)
     }
-    #[doc = "Input number to TIMER3 capture inputs 0 to 4"]
+    #[doc = "Input number to TIMER3 capture inputs 0 to 4."]
     #[inline(always)]
     pub const fn set_captsel(&mut self, val: super::vals::Timer3captselCaptsel) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val.to_bits() as u32) & 0x1f) << 0usize);
@@ -931,19 +931,19 @@ impl defmt::Format for Timer3captsel {
         defmt::write!(f, "Timer3captsel {{ captsel: {:?} }}", self.captsel())
     }
 }
-#[doc = "Capture select registers for TIMER4 inputs"]
+#[doc = "Capture select registers for TIMER4 inputs."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Timer4captsel(pub u32);
 impl Timer4captsel {
-    #[doc = "Input number to TIMER4 capture inputs 0 to 4"]
+    #[doc = "Input number to TIMER4 capture inputs 0 to 4."]
     #[must_use]
     #[inline(always)]
     pub const fn captsel(&self) -> super::vals::Timer4captselCaptsel {
         let val = (self.0 >> 0usize) & 0x1f;
         super::vals::Timer4captselCaptsel::from_bits(val as u8)
     }
-    #[doc = "Input number to TIMER4 capture inputs 0 to 4"]
+    #[doc = "Input number to TIMER4 capture inputs 0 to 4."]
     #[inline(always)]
     pub const fn set_captsel(&mut self, val: super::vals::Timer4captselCaptsel) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val.to_bits() as u32) & 0x1f) << 0usize);

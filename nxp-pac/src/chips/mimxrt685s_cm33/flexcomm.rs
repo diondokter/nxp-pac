@@ -1,4 +1,4 @@
-#[doc = "LPC-Next0 Flexcomm serial communication"]
+#[doc = "LPC-Next0 Flexcomm serial communication."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flexcomm {
     ptr: *mut u8,

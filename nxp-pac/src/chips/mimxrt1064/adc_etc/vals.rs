@@ -126,7 +126,7 @@ impl From<Softrst> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain10B2b0 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG0_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG0_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B0_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B0_1 = 0x01,
@@ -157,7 +157,7 @@ impl From<Trig0Chain10B2b0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain10B2b1 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG1_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG1_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B1_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B1_1 = 0x01,
@@ -188,7 +188,7 @@ impl From<Trig0Chain10B2b1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain10Csel0 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL0_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL0_1 = 0x01,
@@ -247,7 +247,7 @@ impl From<Trig0Chain10Csel0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain10Csel1 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL1_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL1_1 = 0x01,
@@ -306,23 +306,23 @@ impl From<Trig0Chain10Csel1> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig0Chain10Hwts0(u8);
 impl Trig0Chain10Hwts0 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS0_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS0_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS0_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS0_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS0_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS0_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS0_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS0_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS0_128: Self = Self(0x80);
 }
 impl Trig0Chain10Hwts0 {
@@ -382,23 +382,23 @@ impl From<Trig0Chain10Hwts0> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig0Chain10Hwts1(u8);
 impl Trig0Chain10Hwts1 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS1_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS1_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS1_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS1_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS1_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS1_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS1_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS1_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS1_128: Self = Self(0x80);
 }
 impl Trig0Chain10Hwts1 {
@@ -458,7 +458,7 @@ impl From<Trig0Chain10Hwts1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain10Ie0 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE0_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 0 finish."]
     IE0_1 = 0x01,
@@ -493,7 +493,7 @@ impl From<Trig0Chain10Ie0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain10Ie1 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE1_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when Segment 1 finish."]
     IE1_1 = 0x01,
@@ -528,7 +528,7 @@ impl From<Trig0Chain10Ie1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain32B2b2 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG2_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG2_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B2_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B2_1 = 0x01,
@@ -559,7 +559,7 @@ impl From<Trig0Chain32B2b2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain32B2b3 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG3_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG3_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B3_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B3_1 = 0x01,
@@ -590,7 +590,7 @@ impl From<Trig0Chain32B2b3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain32Csel2 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL2_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL2_1 = 0x01,
@@ -649,7 +649,7 @@ impl From<Trig0Chain32Csel2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain32Csel3 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL3_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL3_1 = 0x01,
@@ -708,23 +708,23 @@ impl From<Trig0Chain32Csel3> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig0Chain32Hwts2(u8);
 impl Trig0Chain32Hwts2 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS2_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS2_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS2_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS2_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS2_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS2_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS2_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS2_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS2_128: Self = Self(0x80);
 }
 impl Trig0Chain32Hwts2 {
@@ -784,23 +784,23 @@ impl From<Trig0Chain32Hwts2> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig0Chain32Hwts3(u8);
 impl Trig0Chain32Hwts3 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS3_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS3_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS3_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS3_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS3_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS3_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS3_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS3_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS3_128: Self = Self(0x80);
 }
 impl Trig0Chain32Hwts3 {
@@ -860,7 +860,7 @@ impl From<Trig0Chain32Hwts3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain32Ie2 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE2_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 2 finish."]
     IE2_1 = 0x01,
@@ -895,7 +895,7 @@ impl From<Trig0Chain32Ie2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain32Ie3 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE3_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 3 finish."]
     IE3_1 = 0x01,
@@ -930,7 +930,7 @@ impl From<Trig0Chain32Ie3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain54B2b4 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG4_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG4_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B4_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B4_1 = 0x01,
@@ -961,7 +961,7 @@ impl From<Trig0Chain54B2b4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain54B2b5 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG5_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG5_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B5_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B5_1 = 0x01,
@@ -992,7 +992,7 @@ impl From<Trig0Chain54B2b5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain54Csel4 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL4_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL4_1 = 0x01,
@@ -1051,7 +1051,7 @@ impl From<Trig0Chain54Csel4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain54Csel5 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL5_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL5_1 = 0x01,
@@ -1110,23 +1110,23 @@ impl From<Trig0Chain54Csel5> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig0Chain54Hwts4(u8);
 impl Trig0Chain54Hwts4 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS4_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS4_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS4_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS4_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS4_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS4_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS4_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS4_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS4_128: Self = Self(0x80);
 }
 impl Trig0Chain54Hwts4 {
@@ -1186,23 +1186,23 @@ impl From<Trig0Chain54Hwts4> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig0Chain54Hwts5(u8);
 impl Trig0Chain54Hwts5 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS5_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS5_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS5_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS5_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS5_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS5_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS5_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS5_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS5_128: Self = Self(0x80);
 }
 impl Trig0Chain54Hwts5 {
@@ -1262,7 +1262,7 @@ impl From<Trig0Chain54Hwts5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain54Ie4 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE4_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 4 finish."]
     IE4_1 = 0x01,
@@ -1297,7 +1297,7 @@ impl From<Trig0Chain54Ie4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain54Ie5 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE5_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 5 finish."]
     IE5_1 = 0x01,
@@ -1332,7 +1332,7 @@ impl From<Trig0Chain54Ie5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain76B2b6 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG6_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG6_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B6_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B6_1 = 0x01,
@@ -1363,7 +1363,7 @@ impl From<Trig0Chain76B2b6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain76B2b7 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG7_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG7_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B7_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B7_1 = 0x01,
@@ -1394,7 +1394,7 @@ impl From<Trig0Chain76B2b7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain76Csel6 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL6_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL6_1 = 0x01,
@@ -1512,23 +1512,23 @@ impl From<Trig0Chain76Csel7> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig0Chain76Hwts6(u8);
 impl Trig0Chain76Hwts6 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS6_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS6_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS6_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS6_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS6_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS6_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS6_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS6_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS6_128: Self = Self(0x80);
 }
 impl Trig0Chain76Hwts6 {
@@ -1588,23 +1588,23 @@ impl From<Trig0Chain76Hwts6> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig0Chain76Hwts7(u8);
 impl Trig0Chain76Hwts7 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS7_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS7_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS7_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS7_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS7_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS7_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS7_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS7_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS7_128: Self = Self(0x80);
 }
 impl Trig0Chain76Hwts7 {
@@ -1664,7 +1664,7 @@ impl From<Trig0Chain76Hwts7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain76Ie6 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE6_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 6 finish."]
     IE6_1 = 0x01,
@@ -1699,7 +1699,7 @@ impl From<Trig0Chain76Ie6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Chain76Ie7 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE7_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 7 finish."]
     IE7_1 = 0x01,
@@ -1796,21 +1796,21 @@ impl From<Trig0CtrlSyncMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0CtrlTrigChain {
-    #[doc = "Trigger chain length is 1"]
+    #[doc = "Trigger chain length is 1."]
     TRIG_CHAIN_0 = 0x0,
-    #[doc = "Trigger chain length is 2"]
+    #[doc = "Trigger chain length is 2."]
     TRIG_CHAIN_1 = 0x01,
-    #[doc = "Trigger chain length is 3"]
+    #[doc = "Trigger chain length is 3."]
     TRIG_CHAIN_2 = 0x02,
-    #[doc = "Trigger chain length is 4"]
+    #[doc = "Trigger chain length is 4."]
     TRIG_CHAIN_3 = 0x03,
-    #[doc = "Trigger chain length is 5"]
+    #[doc = "Trigger chain length is 5."]
     TRIG_CHAIN_4 = 0x04,
-    #[doc = "Trigger chain length is 6"]
+    #[doc = "Trigger chain length is 6."]
     TRIG_CHAIN_5 = 0x05,
-    #[doc = "Trigger chain length is 7"]
+    #[doc = "Trigger chain length is 7."]
     TRIG_CHAIN_6 = 0x06,
-    #[doc = "Trigger chain length is 8"]
+    #[doc = "Trigger chain length is 8."]
     TRIG_CHAIN_7 = 0x07,
 }
 impl Trig0CtrlTrigChain {
@@ -1870,9 +1870,9 @@ impl From<Trig0CtrlTrigMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Done0 {
-    #[doc = "No TRIG0_DONE0 interrupt detected"]
+    #[doc = "No TRIG0_DONE0 interrupt detected."]
     TRIG0_DONE0_0 = 0x0,
-    #[doc = "TRIG0_DONE0 interrupt detected"]
+    #[doc = "TRIG0_DONE0 interrupt detected."]
     TRIG0_DONE0_1 = 0x01,
 }
 impl Trig0Done0 {
@@ -1901,9 +1901,9 @@ impl From<Trig0Done0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Done1 {
-    #[doc = "No TRIG0_DONE1 interrupt detected"]
+    #[doc = "No TRIG0_DONE1 interrupt detected."]
     TRIG0_DONE1_0 = 0x0,
-    #[doc = "TRIG0_DONE1 interrupt detected"]
+    #[doc = "TRIG0_DONE1 interrupt detected."]
     TRIG0_DONE1_1 = 0x01,
 }
 impl Trig0Done1 {
@@ -1932,9 +1932,9 @@ impl From<Trig0Done1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Done2 {
-    #[doc = "No TRIG0_DONE2 interrupt detected"]
+    #[doc = "No TRIG0_DONE2 interrupt detected."]
     TRIG0_DONE2_0 = 0x0,
-    #[doc = "TRIG0_DONE2 interrupt detected"]
+    #[doc = "TRIG0_DONE2 interrupt detected."]
     TRIG0_DONE2_1 = 0x01,
 }
 impl Trig0Done2 {
@@ -1994,9 +1994,9 @@ impl From<Trig0Enable> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig0Err {
-    #[doc = "No TRIG0_ERR interrupt detected"]
+    #[doc = "No TRIG0_ERR interrupt detected."]
     TRIG0_ERR_0 = 0x0,
-    #[doc = "TRIG0_ERR interrupt detected"]
+    #[doc = "TRIG0_ERR interrupt detected."]
     TRIG0_ERR_1 = 0x01,
 }
 impl Trig0Err {
@@ -2056,7 +2056,7 @@ impl From<Trig0Req> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain10B2b0 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG0_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG0_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B0_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B0_1 = 0x01,
@@ -2087,7 +2087,7 @@ impl From<Trig1Chain10B2b0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain10B2b1 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG1_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG1_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B1_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B1_1 = 0x01,
@@ -2118,7 +2118,7 @@ impl From<Trig1Chain10B2b1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain10Csel0 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL0_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL0_1 = 0x01,
@@ -2177,7 +2177,7 @@ impl From<Trig1Chain10Csel0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain10Csel1 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL1_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL1_1 = 0x01,
@@ -2236,23 +2236,23 @@ impl From<Trig1Chain10Csel1> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig1Chain10Hwts0(u8);
 impl Trig1Chain10Hwts0 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS0_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS0_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS0_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS0_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS0_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS0_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS0_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS0_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS0_128: Self = Self(0x80);
 }
 impl Trig1Chain10Hwts0 {
@@ -2312,23 +2312,23 @@ impl From<Trig1Chain10Hwts0> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig1Chain10Hwts1(u8);
 impl Trig1Chain10Hwts1 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS1_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS1_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS1_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS1_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS1_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS1_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS1_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS1_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS1_128: Self = Self(0x80);
 }
 impl Trig1Chain10Hwts1 {
@@ -2388,7 +2388,7 @@ impl From<Trig1Chain10Hwts1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain10Ie0 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE0_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 0 finish."]
     IE0_1 = 0x01,
@@ -2423,7 +2423,7 @@ impl From<Trig1Chain10Ie0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain10Ie1 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE1_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when Segment 1 finish."]
     IE1_1 = 0x01,
@@ -2458,7 +2458,7 @@ impl From<Trig1Chain10Ie1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain32B2b2 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG2_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG2_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B2_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B2_1 = 0x01,
@@ -2489,7 +2489,7 @@ impl From<Trig1Chain32B2b2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain32B2b3 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG3_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG3_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B3_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B3_1 = 0x01,
@@ -2520,7 +2520,7 @@ impl From<Trig1Chain32B2b3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain32Csel2 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL2_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL2_1 = 0x01,
@@ -2579,7 +2579,7 @@ impl From<Trig1Chain32Csel2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain32Csel3 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL3_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL3_1 = 0x01,
@@ -2638,23 +2638,23 @@ impl From<Trig1Chain32Csel3> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig1Chain32Hwts2(u8);
 impl Trig1Chain32Hwts2 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS2_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS2_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS2_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS2_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS2_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS2_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS2_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS2_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS2_128: Self = Self(0x80);
 }
 impl Trig1Chain32Hwts2 {
@@ -2714,23 +2714,23 @@ impl From<Trig1Chain32Hwts2> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig1Chain32Hwts3(u8);
 impl Trig1Chain32Hwts3 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS3_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS3_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS3_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS3_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS3_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS3_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS3_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS3_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS3_128: Self = Self(0x80);
 }
 impl Trig1Chain32Hwts3 {
@@ -2790,7 +2790,7 @@ impl From<Trig1Chain32Hwts3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain32Ie2 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE2_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 2 finish."]
     IE2_1 = 0x01,
@@ -2825,7 +2825,7 @@ impl From<Trig1Chain32Ie2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain32Ie3 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE3_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 3 finish."]
     IE3_1 = 0x01,
@@ -2860,7 +2860,7 @@ impl From<Trig1Chain32Ie3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain54B2b4 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG4_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG4_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B4_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B4_1 = 0x01,
@@ -2891,7 +2891,7 @@ impl From<Trig1Chain54B2b4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain54B2b5 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG5_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG5_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B5_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B5_1 = 0x01,
@@ -2922,7 +2922,7 @@ impl From<Trig1Chain54B2b5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain54Csel4 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL4_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL4_1 = 0x01,
@@ -2981,7 +2981,7 @@ impl From<Trig1Chain54Csel4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain54Csel5 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL5_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL5_1 = 0x01,
@@ -3040,23 +3040,23 @@ impl From<Trig1Chain54Csel5> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig1Chain54Hwts4(u8);
 impl Trig1Chain54Hwts4 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS4_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS4_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS4_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS4_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS4_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS4_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS4_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS4_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS4_128: Self = Self(0x80);
 }
 impl Trig1Chain54Hwts4 {
@@ -3116,23 +3116,23 @@ impl From<Trig1Chain54Hwts4> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig1Chain54Hwts5(u8);
 impl Trig1Chain54Hwts5 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS5_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS5_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS5_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS5_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS5_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS5_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS5_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS5_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS5_128: Self = Self(0x80);
 }
 impl Trig1Chain54Hwts5 {
@@ -3192,7 +3192,7 @@ impl From<Trig1Chain54Hwts5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain54Ie4 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE4_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 4 finish."]
     IE4_1 = 0x01,
@@ -3227,7 +3227,7 @@ impl From<Trig1Chain54Ie4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain54Ie5 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE5_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 5 finish."]
     IE5_1 = 0x01,
@@ -3262,7 +3262,7 @@ impl From<Trig1Chain54Ie5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain76B2b6 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG6_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG6_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B6_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B6_1 = 0x01,
@@ -3293,7 +3293,7 @@ impl From<Trig1Chain76B2b6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain76B2b7 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG7_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG7_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B7_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B7_1 = 0x01,
@@ -3324,7 +3324,7 @@ impl From<Trig1Chain76B2b7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain76Csel6 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL6_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL6_1 = 0x01,
@@ -3442,23 +3442,23 @@ impl From<Trig1Chain76Csel7> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig1Chain76Hwts6(u8);
 impl Trig1Chain76Hwts6 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS6_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS6_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS6_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS6_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS6_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS6_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS6_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS6_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS6_128: Self = Self(0x80);
 }
 impl Trig1Chain76Hwts6 {
@@ -3518,23 +3518,23 @@ impl From<Trig1Chain76Hwts6> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig1Chain76Hwts7(u8);
 impl Trig1Chain76Hwts7 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS7_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS7_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS7_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS7_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS7_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS7_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS7_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS7_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS7_128: Self = Self(0x80);
 }
 impl Trig1Chain76Hwts7 {
@@ -3594,7 +3594,7 @@ impl From<Trig1Chain76Hwts7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain76Ie6 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE6_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 6 finish."]
     IE6_1 = 0x01,
@@ -3629,7 +3629,7 @@ impl From<Trig1Chain76Ie6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Chain76Ie7 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE7_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 7 finish."]
     IE7_1 = 0x01,
@@ -3726,21 +3726,21 @@ impl From<Trig1CtrlSyncMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1CtrlTrigChain {
-    #[doc = "Trigger chain length is 1"]
+    #[doc = "Trigger chain length is 1."]
     TRIG_CHAIN_0 = 0x0,
-    #[doc = "Trigger chain length is 2"]
+    #[doc = "Trigger chain length is 2."]
     TRIG_CHAIN_1 = 0x01,
-    #[doc = "Trigger chain length is 3"]
+    #[doc = "Trigger chain length is 3."]
     TRIG_CHAIN_2 = 0x02,
-    #[doc = "Trigger chain length is 4"]
+    #[doc = "Trigger chain length is 4."]
     TRIG_CHAIN_3 = 0x03,
-    #[doc = "Trigger chain length is 5"]
+    #[doc = "Trigger chain length is 5."]
     TRIG_CHAIN_4 = 0x04,
-    #[doc = "Trigger chain length is 6"]
+    #[doc = "Trigger chain length is 6."]
     TRIG_CHAIN_5 = 0x05,
-    #[doc = "Trigger chain length is 7"]
+    #[doc = "Trigger chain length is 7."]
     TRIG_CHAIN_6 = 0x06,
-    #[doc = "Trigger chain length is 8"]
+    #[doc = "Trigger chain length is 8."]
     TRIG_CHAIN_7 = 0x07,
 }
 impl Trig1CtrlTrigChain {
@@ -3800,9 +3800,9 @@ impl From<Trig1CtrlTrigMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Done0 {
-    #[doc = "No TRIG1_DONE0 interrupt detected"]
+    #[doc = "No TRIG1_DONE0 interrupt detected."]
     TRIG1_DONE0_0 = 0x0,
-    #[doc = "TRIG1_DONE0 interrupt detected"]
+    #[doc = "TRIG1_DONE0 interrupt detected."]
     TRIG1_DONE0_1 = 0x01,
 }
 impl Trig1Done0 {
@@ -3831,9 +3831,9 @@ impl From<Trig1Done0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Done1 {
-    #[doc = "No TRIG1_DONE1 interrupt detected"]
+    #[doc = "No TRIG1_DONE1 interrupt detected."]
     TRIG1_DONE1_0 = 0x0,
-    #[doc = "TRIG1_DONE1 interrupt detected"]
+    #[doc = "TRIG1_DONE1 interrupt detected."]
     TRIG1_DONE1_1 = 0x01,
 }
 impl Trig1Done1 {
@@ -3862,9 +3862,9 @@ impl From<Trig1Done1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Done2 {
-    #[doc = "No TRIG1_DONE2 interrupt detected"]
+    #[doc = "No TRIG1_DONE2 interrupt detected."]
     TRIG1_DONE2_0 = 0x0,
-    #[doc = "TRIG1_DONE2 interrupt detected"]
+    #[doc = "TRIG1_DONE2 interrupt detected."]
     TRIG1_DONE2_1 = 0x01,
 }
 impl Trig1Done2 {
@@ -3924,9 +3924,9 @@ impl From<Trig1Enable> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig1Err {
-    #[doc = "No TRIG1_ERR interrupt detected"]
+    #[doc = "No TRIG1_ERR interrupt detected."]
     TRIG1_ERR_0 = 0x0,
-    #[doc = "TRIG1_ERR interrupt detected"]
+    #[doc = "TRIG1_ERR interrupt detected."]
     TRIG1_ERR_1 = 0x01,
 }
 impl Trig1Err {
@@ -3986,7 +3986,7 @@ impl From<Trig1Req> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain10B2b0 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG0_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG0_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B0_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B0_1 = 0x01,
@@ -4017,7 +4017,7 @@ impl From<Trig2Chain10B2b0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain10B2b1 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG1_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG1_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B1_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B1_1 = 0x01,
@@ -4048,7 +4048,7 @@ impl From<Trig2Chain10B2b1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain10Csel0 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL0_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL0_1 = 0x01,
@@ -4107,7 +4107,7 @@ impl From<Trig2Chain10Csel0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain10Csel1 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL1_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL1_1 = 0x01,
@@ -4166,23 +4166,23 @@ impl From<Trig2Chain10Csel1> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig2Chain10Hwts0(u8);
 impl Trig2Chain10Hwts0 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS0_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS0_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS0_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS0_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS0_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS0_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS0_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS0_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS0_128: Self = Self(0x80);
 }
 impl Trig2Chain10Hwts0 {
@@ -4242,23 +4242,23 @@ impl From<Trig2Chain10Hwts0> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig2Chain10Hwts1(u8);
 impl Trig2Chain10Hwts1 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS1_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS1_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS1_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS1_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS1_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS1_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS1_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS1_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS1_128: Self = Self(0x80);
 }
 impl Trig2Chain10Hwts1 {
@@ -4318,7 +4318,7 @@ impl From<Trig2Chain10Hwts1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain10Ie0 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE0_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 0 finish."]
     IE0_1 = 0x01,
@@ -4353,7 +4353,7 @@ impl From<Trig2Chain10Ie0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain10Ie1 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE1_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when Segment 1 finish."]
     IE1_1 = 0x01,
@@ -4388,7 +4388,7 @@ impl From<Trig2Chain10Ie1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain32B2b2 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG2_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG2_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B2_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B2_1 = 0x01,
@@ -4419,7 +4419,7 @@ impl From<Trig2Chain32B2b2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain32B2b3 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG3_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG3_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B3_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B3_1 = 0x01,
@@ -4450,7 +4450,7 @@ impl From<Trig2Chain32B2b3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain32Csel2 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL2_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL2_1 = 0x01,
@@ -4509,7 +4509,7 @@ impl From<Trig2Chain32Csel2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain32Csel3 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL3_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL3_1 = 0x01,
@@ -4568,23 +4568,23 @@ impl From<Trig2Chain32Csel3> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig2Chain32Hwts2(u8);
 impl Trig2Chain32Hwts2 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS2_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS2_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS2_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS2_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS2_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS2_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS2_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS2_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS2_128: Self = Self(0x80);
 }
 impl Trig2Chain32Hwts2 {
@@ -4644,23 +4644,23 @@ impl From<Trig2Chain32Hwts2> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig2Chain32Hwts3(u8);
 impl Trig2Chain32Hwts3 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS3_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS3_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS3_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS3_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS3_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS3_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS3_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS3_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS3_128: Self = Self(0x80);
 }
 impl Trig2Chain32Hwts3 {
@@ -4720,7 +4720,7 @@ impl From<Trig2Chain32Hwts3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain32Ie2 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE2_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 2 finish."]
     IE2_1 = 0x01,
@@ -4755,7 +4755,7 @@ impl From<Trig2Chain32Ie2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain32Ie3 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE3_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 3 finish."]
     IE3_1 = 0x01,
@@ -4790,7 +4790,7 @@ impl From<Trig2Chain32Ie3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain54B2b4 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG4_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG4_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B4_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B4_1 = 0x01,
@@ -4821,7 +4821,7 @@ impl From<Trig2Chain54B2b4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain54B2b5 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG5_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG5_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B5_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B5_1 = 0x01,
@@ -4852,7 +4852,7 @@ impl From<Trig2Chain54B2b5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain54Csel4 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL4_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL4_1 = 0x01,
@@ -4911,7 +4911,7 @@ impl From<Trig2Chain54Csel4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain54Csel5 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL5_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL5_1 = 0x01,
@@ -4970,23 +4970,23 @@ impl From<Trig2Chain54Csel5> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig2Chain54Hwts4(u8);
 impl Trig2Chain54Hwts4 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS4_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS4_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS4_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS4_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS4_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS4_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS4_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS4_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS4_128: Self = Self(0x80);
 }
 impl Trig2Chain54Hwts4 {
@@ -5046,23 +5046,23 @@ impl From<Trig2Chain54Hwts4> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig2Chain54Hwts5(u8);
 impl Trig2Chain54Hwts5 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS5_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS5_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS5_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS5_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS5_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS5_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS5_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS5_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS5_128: Self = Self(0x80);
 }
 impl Trig2Chain54Hwts5 {
@@ -5122,7 +5122,7 @@ impl From<Trig2Chain54Hwts5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain54Ie4 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE4_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 4 finish."]
     IE4_1 = 0x01,
@@ -5157,7 +5157,7 @@ impl From<Trig2Chain54Ie4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain54Ie5 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE5_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 5 finish."]
     IE5_1 = 0x01,
@@ -5192,7 +5192,7 @@ impl From<Trig2Chain54Ie5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain76B2b6 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG6_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG6_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B6_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B6_1 = 0x01,
@@ -5223,7 +5223,7 @@ impl From<Trig2Chain76B2b6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain76B2b7 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG7_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG7_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B7_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B7_1 = 0x01,
@@ -5254,7 +5254,7 @@ impl From<Trig2Chain76B2b7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain76Csel6 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL6_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL6_1 = 0x01,
@@ -5372,23 +5372,23 @@ impl From<Trig2Chain76Csel7> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig2Chain76Hwts6(u8);
 impl Trig2Chain76Hwts6 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS6_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS6_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS6_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS6_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS6_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS6_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS6_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS6_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS6_128: Self = Self(0x80);
 }
 impl Trig2Chain76Hwts6 {
@@ -5448,23 +5448,23 @@ impl From<Trig2Chain76Hwts6> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig2Chain76Hwts7(u8);
 impl Trig2Chain76Hwts7 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS7_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS7_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS7_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS7_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS7_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS7_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS7_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS7_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS7_128: Self = Self(0x80);
 }
 impl Trig2Chain76Hwts7 {
@@ -5524,7 +5524,7 @@ impl From<Trig2Chain76Hwts7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain76Ie6 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE6_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 6 finish."]
     IE6_1 = 0x01,
@@ -5559,7 +5559,7 @@ impl From<Trig2Chain76Ie6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Chain76Ie7 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE7_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 7 finish."]
     IE7_1 = 0x01,
@@ -5656,21 +5656,21 @@ impl From<Trig2CtrlSyncMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2CtrlTrigChain {
-    #[doc = "Trigger chain length is 1"]
+    #[doc = "Trigger chain length is 1."]
     TRIG_CHAIN_0 = 0x0,
-    #[doc = "Trigger chain length is 2"]
+    #[doc = "Trigger chain length is 2."]
     TRIG_CHAIN_1 = 0x01,
-    #[doc = "Trigger chain length is 3"]
+    #[doc = "Trigger chain length is 3."]
     TRIG_CHAIN_2 = 0x02,
-    #[doc = "Trigger chain length is 4"]
+    #[doc = "Trigger chain length is 4."]
     TRIG_CHAIN_3 = 0x03,
-    #[doc = "Trigger chain length is 5"]
+    #[doc = "Trigger chain length is 5."]
     TRIG_CHAIN_4 = 0x04,
-    #[doc = "Trigger chain length is 6"]
+    #[doc = "Trigger chain length is 6."]
     TRIG_CHAIN_5 = 0x05,
-    #[doc = "Trigger chain length is 7"]
+    #[doc = "Trigger chain length is 7."]
     TRIG_CHAIN_6 = 0x06,
-    #[doc = "Trigger chain length is 8"]
+    #[doc = "Trigger chain length is 8."]
     TRIG_CHAIN_7 = 0x07,
 }
 impl Trig2CtrlTrigChain {
@@ -5730,9 +5730,9 @@ impl From<Trig2CtrlTrigMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Done0 {
-    #[doc = "No TRIG2_DONE0 interrupt detected"]
+    #[doc = "No TRIG2_DONE0 interrupt detected."]
     TRIG2_DONE0_0 = 0x0,
-    #[doc = "TRIG2_DONE0 interrupt detected"]
+    #[doc = "TRIG2_DONE0 interrupt detected."]
     TRIG2_DONE0_1 = 0x01,
 }
 impl Trig2Done0 {
@@ -5761,9 +5761,9 @@ impl From<Trig2Done0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Done1 {
-    #[doc = "No TRIG2_DONE1 interrupt detected"]
+    #[doc = "No TRIG2_DONE1 interrupt detected."]
     TRIG2_DONE1_0 = 0x0,
-    #[doc = "TRIG2_DONE1 interrupt detected"]
+    #[doc = "TRIG2_DONE1 interrupt detected."]
     TRIG2_DONE1_1 = 0x01,
 }
 impl Trig2Done1 {
@@ -5792,9 +5792,9 @@ impl From<Trig2Done1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Done2 {
-    #[doc = "No TRIG2_DONE2 interrupt detected"]
+    #[doc = "No TRIG2_DONE2 interrupt detected."]
     TRIG2_DONE2_0 = 0x0,
-    #[doc = "TRIG2_DONE2 interrupt detected"]
+    #[doc = "TRIG2_DONE2 interrupt detected."]
     TRIG2_DONE2_1 = 0x01,
 }
 impl Trig2Done2 {
@@ -5854,9 +5854,9 @@ impl From<Trig2Enable> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig2Err {
-    #[doc = "No TRIG2_ERR interrupt detected"]
+    #[doc = "No TRIG2_ERR interrupt detected."]
     TRIG2_ERR_0 = 0x0,
-    #[doc = "TRIG2_ERR interrupt detected"]
+    #[doc = "TRIG2_ERR interrupt detected."]
     TRIG2_ERR_1 = 0x01,
 }
 impl Trig2Err {
@@ -5916,7 +5916,7 @@ impl From<Trig2Req> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain10B2b0 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG0_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG0_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B0_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B0_1 = 0x01,
@@ -5947,7 +5947,7 @@ impl From<Trig3Chain10B2b0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain10B2b1 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG1_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG1_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B1_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B1_1 = 0x01,
@@ -5978,7 +5978,7 @@ impl From<Trig3Chain10B2b1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain10Csel0 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL0_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL0_1 = 0x01,
@@ -6037,7 +6037,7 @@ impl From<Trig3Chain10Csel0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain10Csel1 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL1_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL1_1 = 0x01,
@@ -6096,23 +6096,23 @@ impl From<Trig3Chain10Csel1> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig3Chain10Hwts0(u8);
 impl Trig3Chain10Hwts0 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS0_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS0_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS0_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS0_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS0_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS0_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS0_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS0_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS0_128: Self = Self(0x80);
 }
 impl Trig3Chain10Hwts0 {
@@ -6172,23 +6172,23 @@ impl From<Trig3Chain10Hwts0> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig3Chain10Hwts1(u8);
 impl Trig3Chain10Hwts1 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS1_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS1_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS1_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS1_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS1_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS1_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS1_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS1_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS1_128: Self = Self(0x80);
 }
 impl Trig3Chain10Hwts1 {
@@ -6248,7 +6248,7 @@ impl From<Trig3Chain10Hwts1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain10Ie0 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE0_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 0 finish."]
     IE0_1 = 0x01,
@@ -6283,7 +6283,7 @@ impl From<Trig3Chain10Ie0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain10Ie1 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE1_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when Segment 1 finish."]
     IE1_1 = 0x01,
@@ -6318,7 +6318,7 @@ impl From<Trig3Chain10Ie1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain32B2b2 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG2_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG2_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B2_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B2_1 = 0x01,
@@ -6349,7 +6349,7 @@ impl From<Trig3Chain32B2b2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain32B2b3 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG3_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG3_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B3_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B3_1 = 0x01,
@@ -6380,7 +6380,7 @@ impl From<Trig3Chain32B2b3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain32Csel2 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL2_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL2_1 = 0x01,
@@ -6439,7 +6439,7 @@ impl From<Trig3Chain32Csel2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain32Csel3 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL3_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL3_1 = 0x01,
@@ -6498,23 +6498,23 @@ impl From<Trig3Chain32Csel3> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig3Chain32Hwts2(u8);
 impl Trig3Chain32Hwts2 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS2_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS2_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS2_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS2_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS2_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS2_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS2_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS2_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS2_128: Self = Self(0x80);
 }
 impl Trig3Chain32Hwts2 {
@@ -6574,23 +6574,23 @@ impl From<Trig3Chain32Hwts2> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig3Chain32Hwts3(u8);
 impl Trig3Chain32Hwts3 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS3_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS3_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS3_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS3_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS3_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS3_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS3_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS3_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS3_128: Self = Self(0x80);
 }
 impl Trig3Chain32Hwts3 {
@@ -6650,7 +6650,7 @@ impl From<Trig3Chain32Hwts3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain32Ie2 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE2_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 2 finish."]
     IE2_1 = 0x01,
@@ -6685,7 +6685,7 @@ impl From<Trig3Chain32Ie2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain32Ie3 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE3_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 3 finish."]
     IE3_1 = 0x01,
@@ -6720,7 +6720,7 @@ impl From<Trig3Chain32Ie3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain54B2b4 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG4_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG4_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B4_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B4_1 = 0x01,
@@ -6751,7 +6751,7 @@ impl From<Trig3Chain54B2b4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain54B2b5 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG5_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG5_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B5_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B5_1 = 0x01,
@@ -6782,7 +6782,7 @@ impl From<Trig3Chain54B2b5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain54Csel4 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL4_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL4_1 = 0x01,
@@ -6841,7 +6841,7 @@ impl From<Trig3Chain54Csel4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain54Csel5 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL5_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL5_1 = 0x01,
@@ -6900,23 +6900,23 @@ impl From<Trig3Chain54Csel5> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig3Chain54Hwts4(u8);
 impl Trig3Chain54Hwts4 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS4_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS4_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS4_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS4_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS4_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS4_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS4_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS4_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS4_128: Self = Self(0x80);
 }
 impl Trig3Chain54Hwts4 {
@@ -6976,23 +6976,23 @@ impl From<Trig3Chain54Hwts4> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig3Chain54Hwts5(u8);
 impl Trig3Chain54Hwts5 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS5_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS5_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS5_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS5_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS5_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS5_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS5_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS5_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS5_128: Self = Self(0x80);
 }
 impl Trig3Chain54Hwts5 {
@@ -7052,7 +7052,7 @@ impl From<Trig3Chain54Hwts5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain54Ie4 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE4_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 4 finish."]
     IE4_1 = 0x01,
@@ -7087,7 +7087,7 @@ impl From<Trig3Chain54Ie4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain54Ie5 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE5_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 5 finish."]
     IE5_1 = 0x01,
@@ -7122,7 +7122,7 @@ impl From<Trig3Chain54Ie5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain76B2b6 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG6_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG6_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B6_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B6_1 = 0x01,
@@ -7153,7 +7153,7 @@ impl From<Trig3Chain76B2b6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain76B2b7 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG7_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG7_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B7_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B7_1 = 0x01,
@@ -7184,7 +7184,7 @@ impl From<Trig3Chain76B2b7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain76Csel6 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL6_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL6_1 = 0x01,
@@ -7302,23 +7302,23 @@ impl From<Trig3Chain76Csel7> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig3Chain76Hwts6(u8);
 impl Trig3Chain76Hwts6 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS6_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS6_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS6_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS6_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS6_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS6_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS6_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS6_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS6_128: Self = Self(0x80);
 }
 impl Trig3Chain76Hwts6 {
@@ -7378,23 +7378,23 @@ impl From<Trig3Chain76Hwts6> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig3Chain76Hwts7(u8);
 impl Trig3Chain76Hwts7 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS7_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS7_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS7_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS7_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS7_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS7_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS7_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS7_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS7_128: Self = Self(0x80);
 }
 impl Trig3Chain76Hwts7 {
@@ -7454,7 +7454,7 @@ impl From<Trig3Chain76Hwts7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain76Ie6 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE6_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 6 finish."]
     IE6_1 = 0x01,
@@ -7489,7 +7489,7 @@ impl From<Trig3Chain76Ie6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Chain76Ie7 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE7_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 7 finish."]
     IE7_1 = 0x01,
@@ -7586,21 +7586,21 @@ impl From<Trig3CtrlSyncMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3CtrlTrigChain {
-    #[doc = "Trigger chain length is 1"]
+    #[doc = "Trigger chain length is 1."]
     TRIG_CHAIN_0 = 0x0,
-    #[doc = "Trigger chain length is 2"]
+    #[doc = "Trigger chain length is 2."]
     TRIG_CHAIN_1 = 0x01,
-    #[doc = "Trigger chain length is 3"]
+    #[doc = "Trigger chain length is 3."]
     TRIG_CHAIN_2 = 0x02,
-    #[doc = "Trigger chain length is 4"]
+    #[doc = "Trigger chain length is 4."]
     TRIG_CHAIN_3 = 0x03,
-    #[doc = "Trigger chain length is 5"]
+    #[doc = "Trigger chain length is 5."]
     TRIG_CHAIN_4 = 0x04,
-    #[doc = "Trigger chain length is 6"]
+    #[doc = "Trigger chain length is 6."]
     TRIG_CHAIN_5 = 0x05,
-    #[doc = "Trigger chain length is 7"]
+    #[doc = "Trigger chain length is 7."]
     TRIG_CHAIN_6 = 0x06,
-    #[doc = "Trigger chain length is 8"]
+    #[doc = "Trigger chain length is 8."]
     TRIG_CHAIN_7 = 0x07,
 }
 impl Trig3CtrlTrigChain {
@@ -7660,9 +7660,9 @@ impl From<Trig3CtrlTrigMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Done0 {
-    #[doc = "No TRIG3_DONE0 interrupt detected"]
+    #[doc = "No TRIG3_DONE0 interrupt detected."]
     TRIG3_DONE0_0 = 0x0,
-    #[doc = "TRIG3_DONE0 interrupt detected"]
+    #[doc = "TRIG3_DONE0 interrupt detected."]
     TRIG3_DONE0_1 = 0x01,
 }
 impl Trig3Done0 {
@@ -7691,9 +7691,9 @@ impl From<Trig3Done0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Done1 {
-    #[doc = "No TRIG3_DONE1 interrupt detected"]
+    #[doc = "No TRIG3_DONE1 interrupt detected."]
     TRIG3_DONE1_0 = 0x0,
-    #[doc = "TRIG3_DONE1 interrupt detected"]
+    #[doc = "TRIG3_DONE1 interrupt detected."]
     TRIG3_DONE1_1 = 0x01,
 }
 impl Trig3Done1 {
@@ -7722,9 +7722,9 @@ impl From<Trig3Done1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Done2 {
-    #[doc = "No TRIG3_DONE2 interrupt detected"]
+    #[doc = "No TRIG3_DONE2 interrupt detected."]
     TRIG3_DONE2_0 = 0x0,
-    #[doc = "TRIG3_DONE2 interrupt detected"]
+    #[doc = "TRIG3_DONE2 interrupt detected."]
     TRIG3_DONE2_1 = 0x01,
 }
 impl Trig3Done2 {
@@ -7784,9 +7784,9 @@ impl From<Trig3Enable> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig3Err {
-    #[doc = "No TRIG3_ERR interrupt detected"]
+    #[doc = "No TRIG3_ERR interrupt detected."]
     TRIG3_ERR_0 = 0x0,
-    #[doc = "TRIG3_ERR interrupt detected"]
+    #[doc = "TRIG3_ERR interrupt detected."]
     TRIG3_ERR_1 = 0x01,
 }
 impl Trig3Err {
@@ -7846,7 +7846,7 @@ impl From<Trig3Req> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain10B2b0 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG0_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG0_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B0_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B0_1 = 0x01,
@@ -7877,7 +7877,7 @@ impl From<Trig4Chain10B2b0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain10B2b1 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG1_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG1_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B1_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B1_1 = 0x01,
@@ -7908,7 +7908,7 @@ impl From<Trig4Chain10B2b1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain10Csel0 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL0_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL0_1 = 0x01,
@@ -7967,7 +7967,7 @@ impl From<Trig4Chain10Csel0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain10Csel1 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL1_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL1_1 = 0x01,
@@ -8026,23 +8026,23 @@ impl From<Trig4Chain10Csel1> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig4Chain10Hwts0(u8);
 impl Trig4Chain10Hwts0 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS0_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS0_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS0_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS0_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS0_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS0_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS0_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS0_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS0_128: Self = Self(0x80);
 }
 impl Trig4Chain10Hwts0 {
@@ -8102,23 +8102,23 @@ impl From<Trig4Chain10Hwts0> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig4Chain10Hwts1(u8);
 impl Trig4Chain10Hwts1 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS1_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS1_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS1_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS1_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS1_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS1_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS1_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS1_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS1_128: Self = Self(0x80);
 }
 impl Trig4Chain10Hwts1 {
@@ -8178,7 +8178,7 @@ impl From<Trig4Chain10Hwts1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain10Ie0 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE0_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 0 finish."]
     IE0_1 = 0x01,
@@ -8213,7 +8213,7 @@ impl From<Trig4Chain10Ie0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain10Ie1 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE1_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when Segment 1 finish."]
     IE1_1 = 0x01,
@@ -8248,7 +8248,7 @@ impl From<Trig4Chain10Ie1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain32B2b2 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG2_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG2_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B2_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B2_1 = 0x01,
@@ -8279,7 +8279,7 @@ impl From<Trig4Chain32B2b2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain32B2b3 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG3_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG3_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B3_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B3_1 = 0x01,
@@ -8310,7 +8310,7 @@ impl From<Trig4Chain32B2b3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain32Csel2 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL2_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL2_1 = 0x01,
@@ -8369,7 +8369,7 @@ impl From<Trig4Chain32Csel2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain32Csel3 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL3_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL3_1 = 0x01,
@@ -8428,23 +8428,23 @@ impl From<Trig4Chain32Csel3> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig4Chain32Hwts2(u8);
 impl Trig4Chain32Hwts2 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS2_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS2_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS2_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS2_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS2_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS2_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS2_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS2_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS2_128: Self = Self(0x80);
 }
 impl Trig4Chain32Hwts2 {
@@ -8504,23 +8504,23 @@ impl From<Trig4Chain32Hwts2> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig4Chain32Hwts3(u8);
 impl Trig4Chain32Hwts3 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS3_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS3_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS3_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS3_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS3_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS3_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS3_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS3_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS3_128: Self = Self(0x80);
 }
 impl Trig4Chain32Hwts3 {
@@ -8580,7 +8580,7 @@ impl From<Trig4Chain32Hwts3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain32Ie2 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE2_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 2 finish."]
     IE2_1 = 0x01,
@@ -8615,7 +8615,7 @@ impl From<Trig4Chain32Ie2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain32Ie3 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE3_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 3 finish."]
     IE3_1 = 0x01,
@@ -8650,7 +8650,7 @@ impl From<Trig4Chain32Ie3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain54B2b4 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG4_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG4_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B4_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B4_1 = 0x01,
@@ -8681,7 +8681,7 @@ impl From<Trig4Chain54B2b4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain54B2b5 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG5_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG5_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B5_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B5_1 = 0x01,
@@ -8712,7 +8712,7 @@ impl From<Trig4Chain54B2b5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain54Csel4 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL4_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL4_1 = 0x01,
@@ -8771,7 +8771,7 @@ impl From<Trig4Chain54Csel4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain54Csel5 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL5_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL5_1 = 0x01,
@@ -8830,23 +8830,23 @@ impl From<Trig4Chain54Csel5> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig4Chain54Hwts4(u8);
 impl Trig4Chain54Hwts4 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS4_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS4_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS4_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS4_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS4_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS4_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS4_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS4_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS4_128: Self = Self(0x80);
 }
 impl Trig4Chain54Hwts4 {
@@ -8906,23 +8906,23 @@ impl From<Trig4Chain54Hwts4> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig4Chain54Hwts5(u8);
 impl Trig4Chain54Hwts5 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS5_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS5_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS5_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS5_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS5_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS5_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS5_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS5_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS5_128: Self = Self(0x80);
 }
 impl Trig4Chain54Hwts5 {
@@ -8982,7 +8982,7 @@ impl From<Trig4Chain54Hwts5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain54Ie4 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE4_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 4 finish."]
     IE4_1 = 0x01,
@@ -9017,7 +9017,7 @@ impl From<Trig4Chain54Ie4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain54Ie5 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE5_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 5 finish."]
     IE5_1 = 0x01,
@@ -9052,7 +9052,7 @@ impl From<Trig4Chain54Ie5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain76B2b6 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG6_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG6_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B6_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B6_1 = 0x01,
@@ -9083,7 +9083,7 @@ impl From<Trig4Chain76B2b6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain76B2b7 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG7_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG7_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B7_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B7_1 = 0x01,
@@ -9114,7 +9114,7 @@ impl From<Trig4Chain76B2b7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain76Csel6 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL6_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL6_1 = 0x01,
@@ -9232,23 +9232,23 @@ impl From<Trig4Chain76Csel7> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig4Chain76Hwts6(u8);
 impl Trig4Chain76Hwts6 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS6_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS6_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS6_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS6_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS6_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS6_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS6_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS6_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS6_128: Self = Self(0x80);
 }
 impl Trig4Chain76Hwts6 {
@@ -9308,23 +9308,23 @@ impl From<Trig4Chain76Hwts6> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig4Chain76Hwts7(u8);
 impl Trig4Chain76Hwts7 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS7_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS7_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS7_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS7_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS7_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS7_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS7_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS7_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS7_128: Self = Self(0x80);
 }
 impl Trig4Chain76Hwts7 {
@@ -9384,7 +9384,7 @@ impl From<Trig4Chain76Hwts7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain76Ie6 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE6_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 6 finish."]
     IE6_1 = 0x01,
@@ -9419,7 +9419,7 @@ impl From<Trig4Chain76Ie6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Chain76Ie7 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE7_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 7 finish."]
     IE7_1 = 0x01,
@@ -9516,21 +9516,21 @@ impl From<Trig4CtrlSyncMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4CtrlTrigChain {
-    #[doc = "Trigger chain length is 1"]
+    #[doc = "Trigger chain length is 1."]
     TRIG_CHAIN_0 = 0x0,
-    #[doc = "Trigger chain length is 2"]
+    #[doc = "Trigger chain length is 2."]
     TRIG_CHAIN_1 = 0x01,
-    #[doc = "Trigger chain length is 3"]
+    #[doc = "Trigger chain length is 3."]
     TRIG_CHAIN_2 = 0x02,
-    #[doc = "Trigger chain length is 4"]
+    #[doc = "Trigger chain length is 4."]
     TRIG_CHAIN_3 = 0x03,
-    #[doc = "Trigger chain length is 5"]
+    #[doc = "Trigger chain length is 5."]
     TRIG_CHAIN_4 = 0x04,
-    #[doc = "Trigger chain length is 6"]
+    #[doc = "Trigger chain length is 6."]
     TRIG_CHAIN_5 = 0x05,
-    #[doc = "Trigger chain length is 7"]
+    #[doc = "Trigger chain length is 7."]
     TRIG_CHAIN_6 = 0x06,
-    #[doc = "Trigger chain length is 8"]
+    #[doc = "Trigger chain length is 8."]
     TRIG_CHAIN_7 = 0x07,
 }
 impl Trig4CtrlTrigChain {
@@ -9590,9 +9590,9 @@ impl From<Trig4CtrlTrigMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Done0 {
-    #[doc = "No TRIG4_DONE0 interrupt detected"]
+    #[doc = "No TRIG4_DONE0 interrupt detected."]
     TRIG4_DONE0_0 = 0x0,
-    #[doc = "TRIG4_DONE0 interrupt detected"]
+    #[doc = "TRIG4_DONE0 interrupt detected."]
     TRIG4_DONE0_1 = 0x01,
 }
 impl Trig4Done0 {
@@ -9621,9 +9621,9 @@ impl From<Trig4Done0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Done1 {
-    #[doc = "No TRIG4_DONE1 interrupt detected"]
+    #[doc = "No TRIG4_DONE1 interrupt detected."]
     TRIG4_DONE1_0 = 0x0,
-    #[doc = "TRIG4_DONE1 interrupt detected"]
+    #[doc = "TRIG4_DONE1 interrupt detected."]
     TRIG4_DONE1_1 = 0x01,
 }
 impl Trig4Done1 {
@@ -9652,9 +9652,9 @@ impl From<Trig4Done1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Done2 {
-    #[doc = "No TRIG4_DONE2 interrupt detected"]
+    #[doc = "No TRIG4_DONE2 interrupt detected."]
     TRIG4_DONE2_0 = 0x0,
-    #[doc = "TRIG4_DONE2 interrupt detected"]
+    #[doc = "TRIG4_DONE2 interrupt detected."]
     TRIG4_DONE2_1 = 0x01,
 }
 impl Trig4Done2 {
@@ -9714,9 +9714,9 @@ impl From<Trig4Enable> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig4Err {
-    #[doc = "No TRIG4_ERR interrupt detected"]
+    #[doc = "No TRIG4_ERR interrupt detected."]
     TRIG4_ERR_0 = 0x0,
-    #[doc = "TRIG4_ERR interrupt detected"]
+    #[doc = "TRIG4_ERR interrupt detected."]
     TRIG4_ERR_1 = 0x01,
 }
 impl Trig4Err {
@@ -9776,7 +9776,7 @@ impl From<Trig4Req> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain10B2b0 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG0_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG0_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B0_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B0_1 = 0x01,
@@ -9807,7 +9807,7 @@ impl From<Trig5Chain10B2b0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain10B2b1 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG1_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG1_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B1_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B1_1 = 0x01,
@@ -9838,7 +9838,7 @@ impl From<Trig5Chain10B2b1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain10Csel0 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL0_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL0_1 = 0x01,
@@ -9897,7 +9897,7 @@ impl From<Trig5Chain10Csel0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain10Csel1 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL1_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL1_1 = 0x01,
@@ -9956,23 +9956,23 @@ impl From<Trig5Chain10Csel1> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig5Chain10Hwts0(u8);
 impl Trig5Chain10Hwts0 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS0_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS0_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS0_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS0_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS0_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS0_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS0_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS0_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS0_128: Self = Self(0x80);
 }
 impl Trig5Chain10Hwts0 {
@@ -10032,23 +10032,23 @@ impl From<Trig5Chain10Hwts0> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig5Chain10Hwts1(u8);
 impl Trig5Chain10Hwts1 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS1_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS1_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS1_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS1_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS1_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS1_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS1_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS1_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS1_128: Self = Self(0x80);
 }
 impl Trig5Chain10Hwts1 {
@@ -10108,7 +10108,7 @@ impl From<Trig5Chain10Hwts1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain10Ie0 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE0_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 0 finish."]
     IE0_1 = 0x01,
@@ -10143,7 +10143,7 @@ impl From<Trig5Chain10Ie0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain10Ie1 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE1_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when Segment 1 finish."]
     IE1_1 = 0x01,
@@ -10178,7 +10178,7 @@ impl From<Trig5Chain10Ie1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain32B2b2 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG2_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG2_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B2_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B2_1 = 0x01,
@@ -10209,7 +10209,7 @@ impl From<Trig5Chain32B2b2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain32B2b3 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG3_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG3_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B3_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B3_1 = 0x01,
@@ -10240,7 +10240,7 @@ impl From<Trig5Chain32B2b3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain32Csel2 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL2_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL2_1 = 0x01,
@@ -10299,7 +10299,7 @@ impl From<Trig5Chain32Csel2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain32Csel3 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL3_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL3_1 = 0x01,
@@ -10358,23 +10358,23 @@ impl From<Trig5Chain32Csel3> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig5Chain32Hwts2(u8);
 impl Trig5Chain32Hwts2 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS2_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS2_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS2_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS2_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS2_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS2_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS2_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS2_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS2_128: Self = Self(0x80);
 }
 impl Trig5Chain32Hwts2 {
@@ -10434,23 +10434,23 @@ impl From<Trig5Chain32Hwts2> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig5Chain32Hwts3(u8);
 impl Trig5Chain32Hwts3 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS3_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS3_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS3_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS3_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS3_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS3_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS3_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS3_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS3_128: Self = Self(0x80);
 }
 impl Trig5Chain32Hwts3 {
@@ -10510,7 +10510,7 @@ impl From<Trig5Chain32Hwts3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain32Ie2 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE2_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 2 finish."]
     IE2_1 = 0x01,
@@ -10545,7 +10545,7 @@ impl From<Trig5Chain32Ie2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain32Ie3 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE3_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 3 finish."]
     IE3_1 = 0x01,
@@ -10580,7 +10580,7 @@ impl From<Trig5Chain32Ie3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain54B2b4 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG4_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG4_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B4_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B4_1 = 0x01,
@@ -10611,7 +10611,7 @@ impl From<Trig5Chain54B2b4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain54B2b5 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG5_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG5_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B5_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B5_1 = 0x01,
@@ -10642,7 +10642,7 @@ impl From<Trig5Chain54B2b5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain54Csel4 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL4_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL4_1 = 0x01,
@@ -10701,7 +10701,7 @@ impl From<Trig5Chain54Csel4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain54Csel5 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL5_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL5_1 = 0x01,
@@ -10760,23 +10760,23 @@ impl From<Trig5Chain54Csel5> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig5Chain54Hwts4(u8);
 impl Trig5Chain54Hwts4 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS4_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS4_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS4_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS4_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS4_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS4_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS4_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS4_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS4_128: Self = Self(0x80);
 }
 impl Trig5Chain54Hwts4 {
@@ -10836,23 +10836,23 @@ impl From<Trig5Chain54Hwts4> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig5Chain54Hwts5(u8);
 impl Trig5Chain54Hwts5 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS5_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS5_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS5_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS5_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS5_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS5_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS5_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS5_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS5_128: Self = Self(0x80);
 }
 impl Trig5Chain54Hwts5 {
@@ -10912,7 +10912,7 @@ impl From<Trig5Chain54Hwts5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain54Ie4 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE4_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 4 finish."]
     IE4_1 = 0x01,
@@ -10947,7 +10947,7 @@ impl From<Trig5Chain54Ie4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain54Ie5 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE5_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 5 finish."]
     IE5_1 = 0x01,
@@ -10982,7 +10982,7 @@ impl From<Trig5Chain54Ie5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain76B2b6 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG6_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG6_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B6_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B6_1 = 0x01,
@@ -11013,7 +11013,7 @@ impl From<Trig5Chain76B2b6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain76B2b7 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG7_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG7_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B7_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B7_1 = 0x01,
@@ -11044,7 +11044,7 @@ impl From<Trig5Chain76B2b7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain76Csel6 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL6_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL6_1 = 0x01,
@@ -11162,23 +11162,23 @@ impl From<Trig5Chain76Csel7> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig5Chain76Hwts6(u8);
 impl Trig5Chain76Hwts6 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS6_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS6_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS6_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS6_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS6_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS6_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS6_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS6_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS6_128: Self = Self(0x80);
 }
 impl Trig5Chain76Hwts6 {
@@ -11238,23 +11238,23 @@ impl From<Trig5Chain76Hwts6> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig5Chain76Hwts7(u8);
 impl Trig5Chain76Hwts7 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS7_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS7_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS7_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS7_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS7_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS7_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS7_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS7_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS7_128: Self = Self(0x80);
 }
 impl Trig5Chain76Hwts7 {
@@ -11314,7 +11314,7 @@ impl From<Trig5Chain76Hwts7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain76Ie6 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE6_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 6 finish."]
     IE6_1 = 0x01,
@@ -11349,7 +11349,7 @@ impl From<Trig5Chain76Ie6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Chain76Ie7 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE7_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 7 finish."]
     IE7_1 = 0x01,
@@ -11446,21 +11446,21 @@ impl From<Trig5CtrlSyncMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5CtrlTrigChain {
-    #[doc = "Trigger chain length is 1"]
+    #[doc = "Trigger chain length is 1."]
     TRIG_CHAIN_0 = 0x0,
-    #[doc = "Trigger chain length is 2"]
+    #[doc = "Trigger chain length is 2."]
     TRIG_CHAIN_1 = 0x01,
-    #[doc = "Trigger chain length is 3"]
+    #[doc = "Trigger chain length is 3."]
     TRIG_CHAIN_2 = 0x02,
-    #[doc = "Trigger chain length is 4"]
+    #[doc = "Trigger chain length is 4."]
     TRIG_CHAIN_3 = 0x03,
-    #[doc = "Trigger chain length is 5"]
+    #[doc = "Trigger chain length is 5."]
     TRIG_CHAIN_4 = 0x04,
-    #[doc = "Trigger chain length is 6"]
+    #[doc = "Trigger chain length is 6."]
     TRIG_CHAIN_5 = 0x05,
-    #[doc = "Trigger chain length is 7"]
+    #[doc = "Trigger chain length is 7."]
     TRIG_CHAIN_6 = 0x06,
-    #[doc = "Trigger chain length is 8"]
+    #[doc = "Trigger chain length is 8."]
     TRIG_CHAIN_7 = 0x07,
 }
 impl Trig5CtrlTrigChain {
@@ -11520,9 +11520,9 @@ impl From<Trig5CtrlTrigMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Done0 {
-    #[doc = "No TRIG5_DONE0 interrupt detected"]
+    #[doc = "No TRIG5_DONE0 interrupt detected."]
     TRIG5_DONE0_0 = 0x0,
-    #[doc = "TRIG5_DONE0 interrupt detected"]
+    #[doc = "TRIG5_DONE0 interrupt detected."]
     TRIG5_DONE0_1 = 0x01,
 }
 impl Trig5Done0 {
@@ -11551,9 +11551,9 @@ impl From<Trig5Done0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Done1 {
-    #[doc = "No TRIG5_DONE1 interrupt detected"]
+    #[doc = "No TRIG5_DONE1 interrupt detected."]
     TRIG5_DONE1_0 = 0x0,
-    #[doc = "TRIG5_DONE1 interrupt detected"]
+    #[doc = "TRIG5_DONE1 interrupt detected."]
     TRIG5_DONE1_1 = 0x01,
 }
 impl Trig5Done1 {
@@ -11582,9 +11582,9 @@ impl From<Trig5Done1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Done2 {
-    #[doc = "No TRIG5_DONE2 interrupt detected"]
+    #[doc = "No TRIG5_DONE2 interrupt detected."]
     TRIG5_DONE2_0 = 0x0,
-    #[doc = "TRIG5_DONE2 interrupt detected"]
+    #[doc = "TRIG5_DONE2 interrupt detected."]
     TRIG5_DONE2_1 = 0x01,
 }
 impl Trig5Done2 {
@@ -11644,9 +11644,9 @@ impl From<Trig5Enable> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig5Err {
-    #[doc = "No TRIG5_ERR interrupt detected"]
+    #[doc = "No TRIG5_ERR interrupt detected."]
     TRIG5_ERR_0 = 0x0,
-    #[doc = "TRIG5_ERR interrupt detected"]
+    #[doc = "TRIG5_ERR interrupt detected."]
     TRIG5_ERR_1 = 0x01,
 }
 impl Trig5Err {
@@ -11706,7 +11706,7 @@ impl From<Trig5Req> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain10B2b0 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG0_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG0_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B0_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B0_1 = 0x01,
@@ -11737,7 +11737,7 @@ impl From<Trig6Chain10B2b0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain10B2b1 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG1_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG1_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B1_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B1_1 = 0x01,
@@ -11768,7 +11768,7 @@ impl From<Trig6Chain10B2b1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain10Csel0 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL0_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL0_1 = 0x01,
@@ -11827,7 +11827,7 @@ impl From<Trig6Chain10Csel0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain10Csel1 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL1_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL1_1 = 0x01,
@@ -11886,23 +11886,23 @@ impl From<Trig6Chain10Csel1> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig6Chain10Hwts0(u8);
 impl Trig6Chain10Hwts0 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS0_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS0_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS0_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS0_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS0_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS0_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS0_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS0_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS0_128: Self = Self(0x80);
 }
 impl Trig6Chain10Hwts0 {
@@ -11962,23 +11962,23 @@ impl From<Trig6Chain10Hwts0> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig6Chain10Hwts1(u8);
 impl Trig6Chain10Hwts1 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS1_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS1_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS1_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS1_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS1_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS1_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS1_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS1_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS1_128: Self = Self(0x80);
 }
 impl Trig6Chain10Hwts1 {
@@ -12038,7 +12038,7 @@ impl From<Trig6Chain10Hwts1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain10Ie0 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE0_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 0 finish."]
     IE0_1 = 0x01,
@@ -12073,7 +12073,7 @@ impl From<Trig6Chain10Ie0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain10Ie1 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE1_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when Segment 1 finish."]
     IE1_1 = 0x01,
@@ -12108,7 +12108,7 @@ impl From<Trig6Chain10Ie1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain32B2b2 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG2_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG2_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B2_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B2_1 = 0x01,
@@ -12139,7 +12139,7 @@ impl From<Trig6Chain32B2b2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain32B2b3 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG3_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG3_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B3_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B3_1 = 0x01,
@@ -12170,7 +12170,7 @@ impl From<Trig6Chain32B2b3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain32Csel2 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL2_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL2_1 = 0x01,
@@ -12229,7 +12229,7 @@ impl From<Trig6Chain32Csel2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain32Csel3 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL3_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL3_1 = 0x01,
@@ -12288,23 +12288,23 @@ impl From<Trig6Chain32Csel3> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig6Chain32Hwts2(u8);
 impl Trig6Chain32Hwts2 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS2_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS2_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS2_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS2_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS2_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS2_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS2_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS2_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS2_128: Self = Self(0x80);
 }
 impl Trig6Chain32Hwts2 {
@@ -12364,23 +12364,23 @@ impl From<Trig6Chain32Hwts2> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig6Chain32Hwts3(u8);
 impl Trig6Chain32Hwts3 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS3_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS3_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS3_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS3_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS3_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS3_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS3_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS3_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS3_128: Self = Self(0x80);
 }
 impl Trig6Chain32Hwts3 {
@@ -12440,7 +12440,7 @@ impl From<Trig6Chain32Hwts3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain32Ie2 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE2_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 2 finish."]
     IE2_1 = 0x01,
@@ -12475,7 +12475,7 @@ impl From<Trig6Chain32Ie2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain32Ie3 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE3_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 3 finish."]
     IE3_1 = 0x01,
@@ -12510,7 +12510,7 @@ impl From<Trig6Chain32Ie3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain54B2b4 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG4_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG4_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B4_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B4_1 = 0x01,
@@ -12541,7 +12541,7 @@ impl From<Trig6Chain54B2b4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain54B2b5 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG5_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG5_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B5_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B5_1 = 0x01,
@@ -12572,7 +12572,7 @@ impl From<Trig6Chain54B2b5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain54Csel4 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL4_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL4_1 = 0x01,
@@ -12631,7 +12631,7 @@ impl From<Trig6Chain54Csel4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain54Csel5 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL5_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL5_1 = 0x01,
@@ -12690,23 +12690,23 @@ impl From<Trig6Chain54Csel5> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig6Chain54Hwts4(u8);
 impl Trig6Chain54Hwts4 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS4_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS4_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS4_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS4_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS4_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS4_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS4_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS4_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS4_128: Self = Self(0x80);
 }
 impl Trig6Chain54Hwts4 {
@@ -12766,23 +12766,23 @@ impl From<Trig6Chain54Hwts4> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig6Chain54Hwts5(u8);
 impl Trig6Chain54Hwts5 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS5_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS5_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS5_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS5_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS5_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS5_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS5_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS5_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS5_128: Self = Self(0x80);
 }
 impl Trig6Chain54Hwts5 {
@@ -12842,7 +12842,7 @@ impl From<Trig6Chain54Hwts5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain54Ie4 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE4_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 4 finish."]
     IE4_1 = 0x01,
@@ -12877,7 +12877,7 @@ impl From<Trig6Chain54Ie4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain54Ie5 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE5_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 5 finish."]
     IE5_1 = 0x01,
@@ -12912,7 +12912,7 @@ impl From<Trig6Chain54Ie5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain76B2b6 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG6_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG6_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B6_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B6_1 = 0x01,
@@ -12943,7 +12943,7 @@ impl From<Trig6Chain76B2b6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain76B2b7 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG7_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG7_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B7_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B7_1 = 0x01,
@@ -12974,7 +12974,7 @@ impl From<Trig6Chain76B2b7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain76Csel6 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL6_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL6_1 = 0x01,
@@ -13092,23 +13092,23 @@ impl From<Trig6Chain76Csel7> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig6Chain76Hwts6(u8);
 impl Trig6Chain76Hwts6 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS6_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS6_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS6_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS6_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS6_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS6_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS6_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS6_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS6_128: Self = Self(0x80);
 }
 impl Trig6Chain76Hwts6 {
@@ -13168,23 +13168,23 @@ impl From<Trig6Chain76Hwts6> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig6Chain76Hwts7(u8);
 impl Trig6Chain76Hwts7 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS7_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS7_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS7_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS7_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS7_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS7_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS7_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS7_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS7_128: Self = Self(0x80);
 }
 impl Trig6Chain76Hwts7 {
@@ -13244,7 +13244,7 @@ impl From<Trig6Chain76Hwts7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain76Ie6 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE6_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 6 finish."]
     IE6_1 = 0x01,
@@ -13279,7 +13279,7 @@ impl From<Trig6Chain76Ie6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Chain76Ie7 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE7_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 7 finish."]
     IE7_1 = 0x01,
@@ -13376,21 +13376,21 @@ impl From<Trig6CtrlSyncMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6CtrlTrigChain {
-    #[doc = "Trigger chain length is 1"]
+    #[doc = "Trigger chain length is 1."]
     TRIG_CHAIN_0 = 0x0,
-    #[doc = "Trigger chain length is 2"]
+    #[doc = "Trigger chain length is 2."]
     TRIG_CHAIN_1 = 0x01,
-    #[doc = "Trigger chain length is 3"]
+    #[doc = "Trigger chain length is 3."]
     TRIG_CHAIN_2 = 0x02,
-    #[doc = "Trigger chain length is 4"]
+    #[doc = "Trigger chain length is 4."]
     TRIG_CHAIN_3 = 0x03,
-    #[doc = "Trigger chain length is 5"]
+    #[doc = "Trigger chain length is 5."]
     TRIG_CHAIN_4 = 0x04,
-    #[doc = "Trigger chain length is 6"]
+    #[doc = "Trigger chain length is 6."]
     TRIG_CHAIN_5 = 0x05,
-    #[doc = "Trigger chain length is 7"]
+    #[doc = "Trigger chain length is 7."]
     TRIG_CHAIN_6 = 0x06,
-    #[doc = "Trigger chain length is 8"]
+    #[doc = "Trigger chain length is 8."]
     TRIG_CHAIN_7 = 0x07,
 }
 impl Trig6CtrlTrigChain {
@@ -13450,9 +13450,9 @@ impl From<Trig6CtrlTrigMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Done0 {
-    #[doc = "No TRIG6_DONE0 interrupt detected"]
+    #[doc = "No TRIG6_DONE0 interrupt detected."]
     TRIG6_DONE0_0 = 0x0,
-    #[doc = "TRIG6_DONE0 interrupt detected"]
+    #[doc = "TRIG6_DONE0 interrupt detected."]
     TRIG6_DONE0_1 = 0x01,
 }
 impl Trig6Done0 {
@@ -13481,9 +13481,9 @@ impl From<Trig6Done0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Done1 {
-    #[doc = "No TRIG6_DONE1 interrupt detected"]
+    #[doc = "No TRIG6_DONE1 interrupt detected."]
     TRIG6_DONE1_0 = 0x0,
-    #[doc = "TRIG6_DONE1 interrupt detected"]
+    #[doc = "TRIG6_DONE1 interrupt detected."]
     TRIG6_DONE1_1 = 0x01,
 }
 impl Trig6Done1 {
@@ -13512,9 +13512,9 @@ impl From<Trig6Done1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Done2 {
-    #[doc = "No TRIG6_DONE2 interrupt detected"]
+    #[doc = "No TRIG6_DONE2 interrupt detected."]
     TRIG6_DONE2_0 = 0x0,
-    #[doc = "TRIG6_DONE2 interrupt detected"]
+    #[doc = "TRIG6_DONE2 interrupt detected."]
     TRIG6_DONE2_1 = 0x01,
 }
 impl Trig6Done2 {
@@ -13574,9 +13574,9 @@ impl From<Trig6Enable> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig6Err {
-    #[doc = "No TRIG6_ERR interrupt detected"]
+    #[doc = "No TRIG6_ERR interrupt detected."]
     TRIG6_ERR_0 = 0x0,
-    #[doc = "TRIG6_ERR interrupt detected"]
+    #[doc = "TRIG6_ERR interrupt detected."]
     TRIG6_ERR_1 = 0x01,
 }
 impl Trig6Err {
@@ -13636,7 +13636,7 @@ impl From<Trig6Req> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain10B2b0 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG0_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG0_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B0_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B0_1 = 0x01,
@@ -13667,7 +13667,7 @@ impl From<Trig7Chain10B2b0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain10B2b1 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG1_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG1_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B1_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B1_1 = 0x01,
@@ -13698,7 +13698,7 @@ impl From<Trig7Chain10B2b1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain10Csel0 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL0_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL0_1 = 0x01,
@@ -13757,7 +13757,7 @@ impl From<Trig7Chain10Csel0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain10Csel1 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL1_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL1_1 = 0x01,
@@ -13816,23 +13816,23 @@ impl From<Trig7Chain10Csel1> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig7Chain10Hwts0(u8);
 impl Trig7Chain10Hwts0 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS0_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS0_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS0_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS0_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS0_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS0_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS0_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS0_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS0_128: Self = Self(0x80);
 }
 impl Trig7Chain10Hwts0 {
@@ -13892,23 +13892,23 @@ impl From<Trig7Chain10Hwts0> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig7Chain10Hwts1(u8);
 impl Trig7Chain10Hwts1 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS1_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS1_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS1_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS1_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS1_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS1_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS1_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS1_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS1_128: Self = Self(0x80);
 }
 impl Trig7Chain10Hwts1 {
@@ -13968,7 +13968,7 @@ impl From<Trig7Chain10Hwts1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain10Ie0 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE0_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 0 finish."]
     IE0_1 = 0x01,
@@ -14003,7 +14003,7 @@ impl From<Trig7Chain10Ie0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain10Ie1 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE1_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when Segment 1 finish."]
     IE1_1 = 0x01,
@@ -14038,7 +14038,7 @@ impl From<Trig7Chain10Ie1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain32B2b2 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG2_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG2_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B2_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B2_1 = 0x01,
@@ -14069,7 +14069,7 @@ impl From<Trig7Chain32B2b2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain32B2b3 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG3_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG3_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B3_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B3_1 = 0x01,
@@ -14100,7 +14100,7 @@ impl From<Trig7Chain32B2b3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain32Csel2 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL2_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL2_1 = 0x01,
@@ -14159,7 +14159,7 @@ impl From<Trig7Chain32Csel2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain32Csel3 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL3_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL3_1 = 0x01,
@@ -14218,23 +14218,23 @@ impl From<Trig7Chain32Csel3> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig7Chain32Hwts2(u8);
 impl Trig7Chain32Hwts2 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS2_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS2_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS2_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS2_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS2_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS2_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS2_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS2_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS2_128: Self = Self(0x80);
 }
 impl Trig7Chain32Hwts2 {
@@ -14294,23 +14294,23 @@ impl From<Trig7Chain32Hwts2> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig7Chain32Hwts3(u8);
 impl Trig7Chain32Hwts3 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS3_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS3_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS3_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS3_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS3_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS3_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS3_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS3_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS3_128: Self = Self(0x80);
 }
 impl Trig7Chain32Hwts3 {
@@ -14370,7 +14370,7 @@ impl From<Trig7Chain32Hwts3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain32Ie2 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE2_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 2 finish."]
     IE2_1 = 0x01,
@@ -14405,7 +14405,7 @@ impl From<Trig7Chain32Ie2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain32Ie3 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE3_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 3 finish."]
     IE3_1 = 0x01,
@@ -14440,7 +14440,7 @@ impl From<Trig7Chain32Ie3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain54B2b4 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG4_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG4_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B4_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B4_1 = 0x01,
@@ -14471,7 +14471,7 @@ impl From<Trig7Chain54B2b4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain54B2b5 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG5_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG5_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B5_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B5_1 = 0x01,
@@ -14502,7 +14502,7 @@ impl From<Trig7Chain54B2b5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain54Csel4 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL4_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL4_1 = 0x01,
@@ -14561,7 +14561,7 @@ impl From<Trig7Chain54Csel4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain54Csel5 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL5_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL5_1 = 0x01,
@@ -14620,23 +14620,23 @@ impl From<Trig7Chain54Csel5> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig7Chain54Hwts4(u8);
 impl Trig7Chain54Hwts4 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS4_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS4_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS4_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS4_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS4_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS4_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS4_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS4_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS4_128: Self = Self(0x80);
 }
 impl Trig7Chain54Hwts4 {
@@ -14696,23 +14696,23 @@ impl From<Trig7Chain54Hwts4> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig7Chain54Hwts5(u8);
 impl Trig7Chain54Hwts5 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS5_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS5_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS5_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS5_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS5_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS5_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS5_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS5_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS5_128: Self = Self(0x80);
 }
 impl Trig7Chain54Hwts5 {
@@ -14772,7 +14772,7 @@ impl From<Trig7Chain54Hwts5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain54Ie4 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE4_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 4 finish."]
     IE4_1 = 0x01,
@@ -14807,7 +14807,7 @@ impl From<Trig7Chain54Ie4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain54Ie5 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE5_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 5 finish."]
     IE5_1 = 0x01,
@@ -14842,7 +14842,7 @@ impl From<Trig7Chain54Ie5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain76B2b6 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG6_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG6_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B6_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B6_1 = 0x01,
@@ -14873,7 +14873,7 @@ impl From<Trig7Chain76B2b6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain76B2b7 {
-    #[doc = "Disable B2B. Wait until delay value defined by TRIG7_COUNTER\\[SAMPLE_INTERVAL\\] is reached"]
+    #[doc = "Disable B2B. Wait until delay value defined by TRIG7_COUNTER\\[SAMPLE_INTERVAL\\] is reached."]
     B2B7_0 = 0x0,
     #[doc = "Enable B2B. When Segment 0 finished (ADC COCO) then automatically trigger next ADC conversion, no need to wait until interval delay reached."]
     B2B7_1 = 0x01,
@@ -14904,7 +14904,7 @@ impl From<Trig7Chain76B2b7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain76Csel6 {
-    #[doc = "ADC Channel 0 selected"]
+    #[doc = "ADC Channel 0 selected."]
     CSEL6_0 = 0x0,
     #[doc = "ADC Channel 1 selected."]
     CSEL6_1 = 0x01,
@@ -15022,23 +15022,23 @@ impl From<Trig7Chain76Csel7> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig7Chain76Hwts6(u8);
 impl Trig7Chain76Hwts6 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS6_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS6_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS6_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS6_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS6_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS6_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS6_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS6_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS6_128: Self = Self(0x80);
 }
 impl Trig7Chain76Hwts6 {
@@ -15098,23 +15098,23 @@ impl From<Trig7Chain76Hwts6> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Trig7Chain76Hwts7(u8);
 impl Trig7Chain76Hwts7 {
-    #[doc = "no trigger selected"]
+    #[doc = "no trigger selected."]
     pub const HWTS7_0: Self = Self(0x0);
-    #[doc = "ADC TRIG0 selected"]
+    #[doc = "ADC TRIG0 selected."]
     pub const HWTS7_1: Self = Self(0x01);
-    #[doc = "ADC TRIG1 selected"]
+    #[doc = "ADC TRIG1 selected."]
     pub const HWTS7_2: Self = Self(0x02);
-    #[doc = "ADC TRIG2 selected"]
+    #[doc = "ADC TRIG2 selected."]
     pub const HWTS7_4: Self = Self(0x04);
-    #[doc = "ADC TRIG3 selected"]
+    #[doc = "ADC TRIG3 selected."]
     pub const HWTS7_8: Self = Self(0x08);
-    #[doc = "ADC TRIG4 selected"]
+    #[doc = "ADC TRIG4 selected."]
     pub const HWTS7_16: Self = Self(0x10);
-    #[doc = "ADC TRIG5 selected"]
+    #[doc = "ADC TRIG5 selected."]
     pub const HWTS7_32: Self = Self(0x20);
-    #[doc = "ADC TRIG6 selected"]
+    #[doc = "ADC TRIG6 selected."]
     pub const HWTS7_64: Self = Self(0x40);
-    #[doc = "ADC TRIG7 selected"]
+    #[doc = "ADC TRIG7 selected."]
     pub const HWTS7_128: Self = Self(0x80);
 }
 impl Trig7Chain76Hwts7 {
@@ -15174,7 +15174,7 @@ impl From<Trig7Chain76Hwts7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain76Ie6 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE6_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 6 finish."]
     IE6_1 = 0x01,
@@ -15209,7 +15209,7 @@ impl From<Trig7Chain76Ie6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Chain76Ie7 {
-    #[doc = "No interrupt when finished"]
+    #[doc = "No interrupt when finished."]
     IE7_0 = 0x0,
     #[doc = "Generate interrupt on Done0 when segment 7 finish."]
     IE7_1 = 0x01,
@@ -15306,21 +15306,21 @@ impl From<Trig7CtrlSyncMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7CtrlTrigChain {
-    #[doc = "Trigger chain length is 1"]
+    #[doc = "Trigger chain length is 1."]
     TRIG_CHAIN_0 = 0x0,
-    #[doc = "Trigger chain length is 2"]
+    #[doc = "Trigger chain length is 2."]
     TRIG_CHAIN_1 = 0x01,
-    #[doc = "Trigger chain length is 3"]
+    #[doc = "Trigger chain length is 3."]
     TRIG_CHAIN_2 = 0x02,
-    #[doc = "Trigger chain length is 4"]
+    #[doc = "Trigger chain length is 4."]
     TRIG_CHAIN_3 = 0x03,
-    #[doc = "Trigger chain length is 5"]
+    #[doc = "Trigger chain length is 5."]
     TRIG_CHAIN_4 = 0x04,
-    #[doc = "Trigger chain length is 6"]
+    #[doc = "Trigger chain length is 6."]
     TRIG_CHAIN_5 = 0x05,
-    #[doc = "Trigger chain length is 7"]
+    #[doc = "Trigger chain length is 7."]
     TRIG_CHAIN_6 = 0x06,
-    #[doc = "Trigger chain length is 8"]
+    #[doc = "Trigger chain length is 8."]
     TRIG_CHAIN_7 = 0x07,
 }
 impl Trig7CtrlTrigChain {
@@ -15380,9 +15380,9 @@ impl From<Trig7CtrlTrigMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Done0 {
-    #[doc = "No TRIG7_DONE0 interrupt detected"]
+    #[doc = "No TRIG7_DONE0 interrupt detected."]
     TRIG7_DONE0_0 = 0x0,
-    #[doc = "TRIG7_DONE0 interrupt detected"]
+    #[doc = "TRIG7_DONE0 interrupt detected."]
     TRIG7_DONE0_1 = 0x01,
 }
 impl Trig7Done0 {
@@ -15411,9 +15411,9 @@ impl From<Trig7Done0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Done1 {
-    #[doc = "No TRIG7_DONE1 interrupt detected"]
+    #[doc = "No TRIG7_DONE1 interrupt detected."]
     TRIG7_DONE1_0 = 0x0,
-    #[doc = "TRIG7_DONE1 interrupt detected"]
+    #[doc = "TRIG7_DONE1 interrupt detected."]
     TRIG7_DONE1_1 = 0x01,
 }
 impl Trig7Done1 {
@@ -15442,9 +15442,9 @@ impl From<Trig7Done1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Done2 {
-    #[doc = "No TRIG7_DONE2 interrupt detected"]
+    #[doc = "No TRIG7_DONE2 interrupt detected."]
     TRIG7_DONE2_0 = 0x0,
-    #[doc = "TRIG7_DONE2 interrupt detected"]
+    #[doc = "TRIG7_DONE2 interrupt detected."]
     TRIG7_DONE2_1 = 0x01,
 }
 impl Trig7Done2 {
@@ -15504,9 +15504,9 @@ impl From<Trig7Enable> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trig7Err {
-    #[doc = "No TRIG7_ERR interrupt detected"]
+    #[doc = "No TRIG7_ERR interrupt detected."]
     TRIG7_ERR_0 = 0x0,
-    #[doc = "TRIG7_ERR interrupt detected"]
+    #[doc = "TRIG7_ERR interrupt detected."]
     TRIG7_ERR_1 = 0x01,
 }
 impl Trig7Err {

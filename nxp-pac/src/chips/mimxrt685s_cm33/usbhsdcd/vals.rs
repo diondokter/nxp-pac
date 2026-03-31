@@ -33,9 +33,9 @@ impl From<Active> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Bc12 {
-    #[doc = "Compatible with BC1.1 (default)"]
+    #[doc = "Compatible with BC1.1 (default)."]
     BC11 = 0x0,
-    #[doc = "Compatible with BC1.2"]
+    #[doc = "Compatible with BC1.2."]
     BC12 = 0x01,
 }
 impl Bc12 {
@@ -64,9 +64,9 @@ impl From<Bc12> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ClockUnit {
-    #[doc = "kHz Speed (between 1 kHz and 1023 kHz)"]
+    #[doc = "kHz Speed (between 1 kHz and 1023 kHz)."]
     KHZ_CLK = 0x0,
-    #[doc = "MHz Speed (between 1 MHz and 1023 MHz)"]
+    #[doc = "MHz Speed (between 1 MHz and 1023 MHz)."]
     MHZ_CLK = 0x01,
 }
 impl ClockUnit {
@@ -188,7 +188,7 @@ impl From<If> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ps {
-    #[doc = "No overrides. Bit field must remain at this value during normal USB data communication to prevent unexpected conditions on USB_DP and USB_DM pins. (Default)"]
+    #[doc = "No overrides. Bit field must remain at this value during normal USB data communication to prevent unexpected conditions on USB_DP and USB_DM pins. (Default)."]
     NO_OVERRIDE = 0x0,
     _RESERVED_1 = 0x01,
     #[doc = "Enables VDP_SRC voltage source for the USB_DP pin and IDM_SINK current source for the USB_DM pin."]
@@ -225,7 +225,7 @@ pub enum SeqRes {
     NO_RESULT = 0x0,
     #[doc = "Attached to an SDP. Must comply with USB 2.0 by drawing only 2.5 mA (max) until connected."]
     CONN_SDP = 0x01,
-    #[doc = "Attached to a charging port. The exact meaning depends on bit 18 (value 0: Attached to either a CDP or a DCP. The charger type detection has not completed. value 1: Attached to a CDP. The charger type detection has completed.)"]
+    #[doc = "Attached to a charging port. The exact meaning depends on bit 18 (value 0: Attached to either a CDP or a DCP. The charger type detection has not completed. value 1: Attached to a CDP. The charger type detection has completed.)."]
     CONN_CP = 0x02,
     #[doc = "Attached to a DCP."]
     CONN_DCP = 0x03,

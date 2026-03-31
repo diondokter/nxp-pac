@@ -1,4 +1,4 @@
-#[doc = "Trigger Source IN0 to IN15 selector"]
+#[doc = "Trigger Source IN0 to IN15 selector."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OutSel(pub u32);
@@ -249,7 +249,7 @@ impl defmt::Format for OutSel {
         )
     }
 }
-#[doc = "Trigger Source IN16 to IN31 selector"]
+#[doc = "Trigger Source IN16 to IN31 selector."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OutSel1(pub u32);
@@ -500,7 +500,7 @@ impl defmt::Format for OutSel1 {
         )
     }
 }
-#[doc = "Trigger source IN32 to IN47 selector"]
+#[doc = "Trigger source IN32 to IN47 selector."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct OutSel2(pub u32);
@@ -639,7 +639,7 @@ impl defmt::Format for OutSel2 {
         )
     }
 }
-#[doc = "ITRC outputs and IN0 to IN15 Status"]
+#[doc = "ITRC outputs and IN0 to IN15 Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Status(pub u32);
@@ -988,7 +988,7 @@ impl defmt::Format for Status {
         )
     }
 }
-#[doc = "ITRC IN16 to IN47 Status"]
+#[doc = "ITRC IN16 to IN47 Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Status1(pub u32);
@@ -1017,26 +1017,26 @@ impl Status1 {
     pub const fn set_in17_status(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[must_use]
     #[inline(always)]
     pub const fn in18_status(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[inline(always)]
     pub const fn set_in18_status(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[must_use]
     #[inline(always)]
     pub const fn in19_status(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Reserved"]
+    #[doc = "Reserved."]
     #[inline(always)]
     pub const fn set_in19_status(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
@@ -1211,7 +1211,7 @@ impl defmt::Format for Status1 {
         )
     }
 }
-#[doc = "Software event 0"]
+#[doc = "Software event 0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SwEvent0(pub u32);
@@ -1252,7 +1252,7 @@ impl defmt::Format for SwEvent0 {
         )
     }
 }
-#[doc = "Software event 1"]
+#[doc = "Software event 1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SwEvent1(pub u32);

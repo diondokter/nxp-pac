@@ -1,4 +1,4 @@
-#[doc = "I2S interface"]
+#[doc = "I2S interface."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct I2s {
     ptr: *mut u8,
@@ -96,12 +96,12 @@ impl I2s {
     ) -> crate::common::Reg<regs::Fiford48hnopop, crate::common::R> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0e44usize) as _) }
     }
-    #[doc = "FIFO size register"]
+    #[doc = "FIFO size register."]
     #[inline(always)]
     pub const fn fifosize(self) -> crate::common::Reg<regs::Fifosize, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0e48usize) as _) }
     }
-    #[doc = "I2S Module identification"]
+    #[doc = "I2S Module identification."]
     #[inline(always)]
     pub const fn id(self) -> crate::common::Reg<regs::Id, crate::common::R> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0ffcusize) as _) }

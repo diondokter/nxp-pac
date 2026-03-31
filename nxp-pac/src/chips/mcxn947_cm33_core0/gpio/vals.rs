@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Feature(u16);
 impl Feature {
-    #[doc = "Basic implementation"]
+    #[doc = "Basic implementation."]
     pub const FEATURE0: Self = Self(0x0);
-    #[doc = "Protection registers implemented"]
+    #[doc = "Protection registers implemented."]
     pub const FEATURE1: Self = Self(0x01);
 }
 impl Feature {
@@ -50,9 +50,9 @@ impl From<Feature> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe0 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe0 {
@@ -81,9 +81,9 @@ impl From<Giwe0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe1 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe1 {
@@ -112,9 +112,9 @@ impl From<Giwe1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe10 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe10 {
@@ -143,9 +143,9 @@ impl From<Giwe10> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe11 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe11 {
@@ -174,9 +174,9 @@ impl From<Giwe11> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe12 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe12 {
@@ -205,9 +205,9 @@ impl From<Giwe12> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe13 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe13 {
@@ -236,9 +236,9 @@ impl From<Giwe13> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe14 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe14 {
@@ -267,9 +267,9 @@ impl From<Giwe14> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe15 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe15 {
@@ -300,7 +300,7 @@ impl From<Giwe15> for u8 {
 pub enum Giwe16 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe16 {
@@ -331,7 +331,7 @@ impl From<Giwe16> for u8 {
 pub enum Giwe17 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe17 {
@@ -362,7 +362,7 @@ impl From<Giwe17> for u8 {
 pub enum Giwe18 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe18 {
@@ -393,7 +393,7 @@ impl From<Giwe18> for u8 {
 pub enum Giwe19 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe19 {
@@ -422,9 +422,9 @@ impl From<Giwe19> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe2 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe2 {
@@ -455,7 +455,7 @@ impl From<Giwe2> for u8 {
 pub enum Giwe20 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe20 {
@@ -486,7 +486,7 @@ impl From<Giwe20> for u8 {
 pub enum Giwe21 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe21 {
@@ -517,7 +517,7 @@ impl From<Giwe21> for u8 {
 pub enum Giwe22 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe22 {
@@ -548,7 +548,7 @@ impl From<Giwe22> for u8 {
 pub enum Giwe23 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe23 {
@@ -579,7 +579,7 @@ impl From<Giwe23> for u8 {
 pub enum Giwe24 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe24 {
@@ -610,7 +610,7 @@ impl From<Giwe24> for u8 {
 pub enum Giwe25 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe25 {
@@ -641,7 +641,7 @@ impl From<Giwe25> for u8 {
 pub enum Giwe26 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe26 {
@@ -672,7 +672,7 @@ impl From<Giwe26> for u8 {
 pub enum Giwe27 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe27 {
@@ -703,7 +703,7 @@ impl From<Giwe27> for u8 {
 pub enum Giwe28 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe28 {
@@ -734,7 +734,7 @@ impl From<Giwe28> for u8 {
 pub enum Giwe29 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe29 {
@@ -763,9 +763,9 @@ impl From<Giwe29> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe3 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe3 {
@@ -796,7 +796,7 @@ impl From<Giwe3> for u8 {
 pub enum Giwe30 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe30 {
@@ -827,7 +827,7 @@ impl From<Giwe30> for u8 {
 pub enum Giwe31 {
     #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe31 {
@@ -856,9 +856,9 @@ impl From<Giwe31> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe4 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe4 {
@@ -887,9 +887,9 @@ impl From<Giwe4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe5 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe5 {
@@ -918,9 +918,9 @@ impl From<Giwe5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe6 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe6 {
@@ -949,9 +949,9 @@ impl From<Giwe6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe7 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe7 {
@@ -980,9 +980,9 @@ impl From<Giwe7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe8 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe8 {
@@ -1011,9 +1011,9 @@ impl From<Giwe8> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Giwe9 {
-    #[doc = "Not updated"]
+    #[doc = "Not updated."]
     GIWE0 = 0x0,
-    #[doc = "Updated"]
+    #[doc = "Updated."]
     GIWE1 = 0x01,
 }
 impl Giwe9 {
@@ -1042,9 +1042,9 @@ impl From<Giwe9> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icnp {
-    #[doc = "Writable in Secure-Privilege state"]
+    #[doc = "Writable in Secure-Privilege state."]
     ICNP0 = 0x0,
-    #[doc = "Not writable until the next reset"]
+    #[doc = "Not writable until the next reset."]
     ICNP1 = 0x01,
 }
 impl Icnp {
@@ -1073,9 +1073,9 @@ impl From<Icnp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IcnpNpe0 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl IcnpNpe0 {
@@ -1104,9 +1104,9 @@ impl From<IcnpNpe0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IcnpNpe1 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl IcnpNpe1 {
@@ -1135,9 +1135,9 @@ impl From<IcnpNpe1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icns {
-    #[doc = "Writable in Secure-Privilege state"]
+    #[doc = "Writable in Secure-Privilege state."]
     ICNS0 = 0x0,
-    #[doc = "Not writable until the next reset"]
+    #[doc = "Not writable until the next reset."]
     ICNS1 = 0x01,
 }
 impl Icns {
@@ -1166,9 +1166,9 @@ impl From<Icns> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IcnsNse0 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl IcnsNse0 {
@@ -1197,9 +1197,9 @@ impl From<IcnsNse0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IcnsNse1 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl IcnsNse1 {
@@ -1228,34 +1228,34 @@ impl From<IcnsNse1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr0Irqc {
-    #[doc = "ISF is disabled"]
+    #[doc = "ISF is disabled."]
     IRQC0 = 0x0,
-    #[doc = "ISF and DMA request on rising edge"]
+    #[doc = "ISF and DMA request on rising edge."]
     IRQC1 = 0x01,
-    #[doc = "ISF and DMA request on falling edge"]
+    #[doc = "ISF and DMA request on falling edge."]
     IRQC2 = 0x02,
-    #[doc = "ISF and DMA request on either edge"]
+    #[doc = "ISF and DMA request on either edge."]
     IRQC3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "ISF sets on rising edge"]
+    #[doc = "ISF sets on rising edge."]
     IRQC5 = 0x05,
-    #[doc = "ISF sets on falling edge"]
+    #[doc = "ISF sets on falling edge."]
     IRQC6 = 0x06,
-    #[doc = "ISF sets on either edge"]
+    #[doc = "ISF sets on either edge."]
     IRQC7 = 0x07,
-    #[doc = "ISF and interrupt when logic 0"]
+    #[doc = "ISF and interrupt when logic 0."]
     IRQC8 = 0x08,
-    #[doc = "ISF and interrupt on rising edge"]
+    #[doc = "ISF and interrupt on rising edge."]
     IRQC9 = 0x09,
-    #[doc = "ISF and interrupt on falling edge"]
+    #[doc = "ISF and interrupt on falling edge."]
     IRQC10 = 0x0a,
-    #[doc = "ISF and Interrupt on either edge"]
+    #[doc = "ISF and Interrupt on either edge."]
     IRQC11 = 0x0b,
-    #[doc = "ISF and interrupt when logic 1"]
+    #[doc = "ISF and interrupt when logic 1."]
     IRQC12 = 0x0c,
-    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC13 = 0x0d,
-    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC14 = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -1285,9 +1285,9 @@ impl From<Icr0Irqc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr0Irqs {
-    #[doc = "Interrupt, trigger output, or DMA request 0"]
+    #[doc = "Interrupt, trigger output, or DMA request 0."]
     IRQS0 = 0x0,
-    #[doc = "Interrupt, trigger output, or DMA request 1"]
+    #[doc = "Interrupt, trigger output, or DMA request 1."]
     IRQS1 = 0x01,
 }
 impl Icr0Irqs {
@@ -1316,9 +1316,9 @@ impl From<Icr0Irqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr0Isf {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Icr0Isf {
@@ -1347,9 +1347,9 @@ impl From<Icr0Isf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr0Lk {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     LK0 = 0x0,
-    #[doc = "Do not lock"]
+    #[doc = "Do not lock."]
     LK1 = 0x01,
 }
 impl Icr0Lk {
@@ -1378,34 +1378,34 @@ impl From<Icr0Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr10Irqc {
-    #[doc = "ISF is disabled"]
+    #[doc = "ISF is disabled."]
     IRQC0 = 0x0,
-    #[doc = "ISF and DMA request on rising edge"]
+    #[doc = "ISF and DMA request on rising edge."]
     IRQC1 = 0x01,
-    #[doc = "ISF and DMA request on falling edge"]
+    #[doc = "ISF and DMA request on falling edge."]
     IRQC2 = 0x02,
-    #[doc = "ISF and DMA request on either edge"]
+    #[doc = "ISF and DMA request on either edge."]
     IRQC3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "ISF sets on rising edge"]
+    #[doc = "ISF sets on rising edge."]
     IRQC5 = 0x05,
-    #[doc = "ISF sets on falling edge"]
+    #[doc = "ISF sets on falling edge."]
     IRQC6 = 0x06,
-    #[doc = "ISF sets on either edge"]
+    #[doc = "ISF sets on either edge."]
     IRQC7 = 0x07,
-    #[doc = "ISF and interrupt when logic 0"]
+    #[doc = "ISF and interrupt when logic 0."]
     IRQC8 = 0x08,
-    #[doc = "ISF and interrupt on rising edge"]
+    #[doc = "ISF and interrupt on rising edge."]
     IRQC9 = 0x09,
-    #[doc = "ISF and interrupt on falling edge"]
+    #[doc = "ISF and interrupt on falling edge."]
     IRQC10 = 0x0a,
-    #[doc = "ISF and Interrupt on either edge"]
+    #[doc = "ISF and Interrupt on either edge."]
     IRQC11 = 0x0b,
-    #[doc = "ISF and interrupt when logic 1"]
+    #[doc = "ISF and interrupt when logic 1."]
     IRQC12 = 0x0c,
-    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC13 = 0x0d,
-    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC14 = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -1435,9 +1435,9 @@ impl From<Icr10Irqc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr10Irqs {
-    #[doc = "Interrupt, trigger output, or DMA request 0"]
+    #[doc = "Interrupt, trigger output, or DMA request 0."]
     IRQS0 = 0x0,
-    #[doc = "Interrupt, trigger output, or DMA request 1"]
+    #[doc = "Interrupt, trigger output, or DMA request 1."]
     IRQS1 = 0x01,
 }
 impl Icr10Irqs {
@@ -1466,9 +1466,9 @@ impl From<Icr10Irqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr10Isf {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Icr10Isf {
@@ -1497,9 +1497,9 @@ impl From<Icr10Isf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr10Lk {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     LK0 = 0x0,
-    #[doc = "Do not lock"]
+    #[doc = "Do not lock."]
     LK1 = 0x01,
 }
 impl Icr10Lk {
@@ -1528,34 +1528,34 @@ impl From<Icr10Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr11Irqc {
-    #[doc = "ISF is disabled"]
+    #[doc = "ISF is disabled."]
     IRQC0 = 0x0,
-    #[doc = "ISF and DMA request on rising edge"]
+    #[doc = "ISF and DMA request on rising edge."]
     IRQC1 = 0x01,
-    #[doc = "ISF and DMA request on falling edge"]
+    #[doc = "ISF and DMA request on falling edge."]
     IRQC2 = 0x02,
-    #[doc = "ISF and DMA request on either edge"]
+    #[doc = "ISF and DMA request on either edge."]
     IRQC3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "ISF sets on rising edge"]
+    #[doc = "ISF sets on rising edge."]
     IRQC5 = 0x05,
-    #[doc = "ISF sets on falling edge"]
+    #[doc = "ISF sets on falling edge."]
     IRQC6 = 0x06,
-    #[doc = "ISF sets on either edge"]
+    #[doc = "ISF sets on either edge."]
     IRQC7 = 0x07,
-    #[doc = "ISF and interrupt when logic 0"]
+    #[doc = "ISF and interrupt when logic 0."]
     IRQC8 = 0x08,
-    #[doc = "ISF and interrupt on rising edge"]
+    #[doc = "ISF and interrupt on rising edge."]
     IRQC9 = 0x09,
-    #[doc = "ISF and interrupt on falling edge"]
+    #[doc = "ISF and interrupt on falling edge."]
     IRQC10 = 0x0a,
-    #[doc = "ISF and Interrupt on either edge"]
+    #[doc = "ISF and Interrupt on either edge."]
     IRQC11 = 0x0b,
-    #[doc = "ISF and interrupt when logic 1"]
+    #[doc = "ISF and interrupt when logic 1."]
     IRQC12 = 0x0c,
-    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC13 = 0x0d,
-    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC14 = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -1585,9 +1585,9 @@ impl From<Icr11Irqc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr11Irqs {
-    #[doc = "Interrupt, trigger output, or DMA request 0"]
+    #[doc = "Interrupt, trigger output, or DMA request 0."]
     IRQS0 = 0x0,
-    #[doc = "Interrupt, trigger output, or DMA request 1"]
+    #[doc = "Interrupt, trigger output, or DMA request 1."]
     IRQS1 = 0x01,
 }
 impl Icr11Irqs {
@@ -1616,9 +1616,9 @@ impl From<Icr11Irqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr11Isf {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Icr11Isf {
@@ -1647,9 +1647,9 @@ impl From<Icr11Isf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr11Lk {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     LK0 = 0x0,
-    #[doc = "Do not lock"]
+    #[doc = "Do not lock."]
     LK1 = 0x01,
 }
 impl Icr11Lk {
@@ -1678,34 +1678,34 @@ impl From<Icr11Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr12Irqc {
-    #[doc = "ISF is disabled"]
+    #[doc = "ISF is disabled."]
     IRQC0 = 0x0,
-    #[doc = "ISF and DMA request on rising edge"]
+    #[doc = "ISF and DMA request on rising edge."]
     IRQC1 = 0x01,
-    #[doc = "ISF and DMA request on falling edge"]
+    #[doc = "ISF and DMA request on falling edge."]
     IRQC2 = 0x02,
-    #[doc = "ISF and DMA request on either edge"]
+    #[doc = "ISF and DMA request on either edge."]
     IRQC3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "ISF sets on rising edge"]
+    #[doc = "ISF sets on rising edge."]
     IRQC5 = 0x05,
-    #[doc = "ISF sets on falling edge"]
+    #[doc = "ISF sets on falling edge."]
     IRQC6 = 0x06,
-    #[doc = "ISF sets on either edge"]
+    #[doc = "ISF sets on either edge."]
     IRQC7 = 0x07,
-    #[doc = "ISF and interrupt when logic 0"]
+    #[doc = "ISF and interrupt when logic 0."]
     IRQC8 = 0x08,
-    #[doc = "ISF and interrupt on rising edge"]
+    #[doc = "ISF and interrupt on rising edge."]
     IRQC9 = 0x09,
-    #[doc = "ISF and interrupt on falling edge"]
+    #[doc = "ISF and interrupt on falling edge."]
     IRQC10 = 0x0a,
-    #[doc = "ISF and Interrupt on either edge"]
+    #[doc = "ISF and Interrupt on either edge."]
     IRQC11 = 0x0b,
-    #[doc = "ISF and interrupt when logic 1"]
+    #[doc = "ISF and interrupt when logic 1."]
     IRQC12 = 0x0c,
-    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC13 = 0x0d,
-    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC14 = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -1735,9 +1735,9 @@ impl From<Icr12Irqc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr12Irqs {
-    #[doc = "Interrupt, trigger output, or DMA request 0"]
+    #[doc = "Interrupt, trigger output, or DMA request 0."]
     IRQS0 = 0x0,
-    #[doc = "Interrupt, trigger output, or DMA request 1"]
+    #[doc = "Interrupt, trigger output, or DMA request 1."]
     IRQS1 = 0x01,
 }
 impl Icr12Irqs {
@@ -1766,9 +1766,9 @@ impl From<Icr12Irqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr12Isf {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Icr12Isf {
@@ -1797,9 +1797,9 @@ impl From<Icr12Isf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr12Lk {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     LK0 = 0x0,
-    #[doc = "Do not lock"]
+    #[doc = "Do not lock."]
     LK1 = 0x01,
 }
 impl Icr12Lk {
@@ -1828,34 +1828,34 @@ impl From<Icr12Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr13Irqc {
-    #[doc = "ISF is disabled"]
+    #[doc = "ISF is disabled."]
     IRQC0 = 0x0,
-    #[doc = "ISF and DMA request on rising edge"]
+    #[doc = "ISF and DMA request on rising edge."]
     IRQC1 = 0x01,
-    #[doc = "ISF and DMA request on falling edge"]
+    #[doc = "ISF and DMA request on falling edge."]
     IRQC2 = 0x02,
-    #[doc = "ISF and DMA request on either edge"]
+    #[doc = "ISF and DMA request on either edge."]
     IRQC3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "ISF sets on rising edge"]
+    #[doc = "ISF sets on rising edge."]
     IRQC5 = 0x05,
-    #[doc = "ISF sets on falling edge"]
+    #[doc = "ISF sets on falling edge."]
     IRQC6 = 0x06,
-    #[doc = "ISF sets on either edge"]
+    #[doc = "ISF sets on either edge."]
     IRQC7 = 0x07,
-    #[doc = "ISF and interrupt when logic 0"]
+    #[doc = "ISF and interrupt when logic 0."]
     IRQC8 = 0x08,
-    #[doc = "ISF and interrupt on rising edge"]
+    #[doc = "ISF and interrupt on rising edge."]
     IRQC9 = 0x09,
-    #[doc = "ISF and interrupt on falling edge"]
+    #[doc = "ISF and interrupt on falling edge."]
     IRQC10 = 0x0a,
-    #[doc = "ISF and Interrupt on either edge"]
+    #[doc = "ISF and Interrupt on either edge."]
     IRQC11 = 0x0b,
-    #[doc = "ISF and interrupt when logic 1"]
+    #[doc = "ISF and interrupt when logic 1."]
     IRQC12 = 0x0c,
-    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC13 = 0x0d,
-    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC14 = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -1885,9 +1885,9 @@ impl From<Icr13Irqc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr13Irqs {
-    #[doc = "Interrupt, trigger output, or DMA request 0"]
+    #[doc = "Interrupt, trigger output, or DMA request 0."]
     IRQS0 = 0x0,
-    #[doc = "Interrupt, trigger output, or DMA request 1"]
+    #[doc = "Interrupt, trigger output, or DMA request 1."]
     IRQS1 = 0x01,
 }
 impl Icr13Irqs {
@@ -1916,9 +1916,9 @@ impl From<Icr13Irqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr13Isf {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Icr13Isf {
@@ -1947,9 +1947,9 @@ impl From<Icr13Isf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr13Lk {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     LK0 = 0x0,
-    #[doc = "Do not lock"]
+    #[doc = "Do not lock."]
     LK1 = 0x01,
 }
 impl Icr13Lk {
@@ -1978,34 +1978,34 @@ impl From<Icr13Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr14Irqc {
-    #[doc = "ISF is disabled"]
+    #[doc = "ISF is disabled."]
     IRQC0 = 0x0,
-    #[doc = "ISF and DMA request on rising edge"]
+    #[doc = "ISF and DMA request on rising edge."]
     IRQC1 = 0x01,
-    #[doc = "ISF and DMA request on falling edge"]
+    #[doc = "ISF and DMA request on falling edge."]
     IRQC2 = 0x02,
-    #[doc = "ISF and DMA request on either edge"]
+    #[doc = "ISF and DMA request on either edge."]
     IRQC3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "ISF sets on rising edge"]
+    #[doc = "ISF sets on rising edge."]
     IRQC5 = 0x05,
-    #[doc = "ISF sets on falling edge"]
+    #[doc = "ISF sets on falling edge."]
     IRQC6 = 0x06,
-    #[doc = "ISF sets on either edge"]
+    #[doc = "ISF sets on either edge."]
     IRQC7 = 0x07,
-    #[doc = "ISF and interrupt when logic 0"]
+    #[doc = "ISF and interrupt when logic 0."]
     IRQC8 = 0x08,
-    #[doc = "ISF and interrupt on rising edge"]
+    #[doc = "ISF and interrupt on rising edge."]
     IRQC9 = 0x09,
-    #[doc = "ISF and interrupt on falling edge"]
+    #[doc = "ISF and interrupt on falling edge."]
     IRQC10 = 0x0a,
-    #[doc = "ISF and Interrupt on either edge"]
+    #[doc = "ISF and Interrupt on either edge."]
     IRQC11 = 0x0b,
-    #[doc = "ISF and interrupt when logic 1"]
+    #[doc = "ISF and interrupt when logic 1."]
     IRQC12 = 0x0c,
-    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC13 = 0x0d,
-    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC14 = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -2035,9 +2035,9 @@ impl From<Icr14Irqc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr14Irqs {
-    #[doc = "Interrupt, trigger output, or DMA request 0"]
+    #[doc = "Interrupt, trigger output, or DMA request 0."]
     IRQS0 = 0x0,
-    #[doc = "Interrupt, trigger output, or DMA request 1"]
+    #[doc = "Interrupt, trigger output, or DMA request 1."]
     IRQS1 = 0x01,
 }
 impl Icr14Irqs {
@@ -2066,9 +2066,9 @@ impl From<Icr14Irqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr14Isf {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Icr14Isf {
@@ -2097,9 +2097,9 @@ impl From<Icr14Isf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr14Lk {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     LK0 = 0x0,
-    #[doc = "Do not lock"]
+    #[doc = "Do not lock."]
     LK1 = 0x01,
 }
 impl Icr14Lk {
@@ -2128,34 +2128,34 @@ impl From<Icr14Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr15Irqc {
-    #[doc = "ISF is disabled"]
+    #[doc = "ISF is disabled."]
     IRQC0 = 0x0,
-    #[doc = "ISF and DMA request on rising edge"]
+    #[doc = "ISF and DMA request on rising edge."]
     IRQC1 = 0x01,
-    #[doc = "ISF and DMA request on falling edge"]
+    #[doc = "ISF and DMA request on falling edge."]
     IRQC2 = 0x02,
-    #[doc = "ISF and DMA request on either edge"]
+    #[doc = "ISF and DMA request on either edge."]
     IRQC3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "ISF sets on rising edge"]
+    #[doc = "ISF sets on rising edge."]
     IRQC5 = 0x05,
-    #[doc = "ISF sets on falling edge"]
+    #[doc = "ISF sets on falling edge."]
     IRQC6 = 0x06,
-    #[doc = "ISF sets on either edge"]
+    #[doc = "ISF sets on either edge."]
     IRQC7 = 0x07,
-    #[doc = "ISF and interrupt when logic 0"]
+    #[doc = "ISF and interrupt when logic 0."]
     IRQC8 = 0x08,
-    #[doc = "ISF and interrupt on rising edge"]
+    #[doc = "ISF and interrupt on rising edge."]
     IRQC9 = 0x09,
-    #[doc = "ISF and interrupt on falling edge"]
+    #[doc = "ISF and interrupt on falling edge."]
     IRQC10 = 0x0a,
-    #[doc = "ISF and Interrupt on either edge"]
+    #[doc = "ISF and Interrupt on either edge."]
     IRQC11 = 0x0b,
-    #[doc = "ISF and interrupt when logic 1"]
+    #[doc = "ISF and interrupt when logic 1."]
     IRQC12 = 0x0c,
-    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC13 = 0x0d,
-    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC14 = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -2185,9 +2185,9 @@ impl From<Icr15Irqc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr15Irqs {
-    #[doc = "Interrupt, trigger output, or DMA request 0"]
+    #[doc = "Interrupt, trigger output, or DMA request 0."]
     IRQS0 = 0x0,
-    #[doc = "Interrupt, trigger output, or DMA request 1"]
+    #[doc = "Interrupt, trigger output, or DMA request 1."]
     IRQS1 = 0x01,
 }
 impl Icr15Irqs {
@@ -2216,9 +2216,9 @@ impl From<Icr15Irqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr15Isf {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Icr15Isf {
@@ -2247,9 +2247,9 @@ impl From<Icr15Isf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr15Lk {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     LK0 = 0x0,
-    #[doc = "Do not lock"]
+    #[doc = "Do not lock."]
     LK1 = 0x01,
 }
 impl Icr15Lk {
@@ -2278,34 +2278,34 @@ impl From<Icr15Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr16Irqc {
-    #[doc = "ISF is disabled"]
+    #[doc = "ISF is disabled."]
     IRQC0 = 0x0,
-    #[doc = "ISF and DMA request on rising edge"]
+    #[doc = "ISF and DMA request on rising edge."]
     IRQC1 = 0x01,
-    #[doc = "ISF and DMA request on falling edge"]
+    #[doc = "ISF and DMA request on falling edge."]
     IRQC2 = 0x02,
-    #[doc = "ISF and DMA request on either edge"]
+    #[doc = "ISF and DMA request on either edge."]
     IRQC3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "ISF sets on rising edge"]
+    #[doc = "ISF sets on rising edge."]
     IRQC5 = 0x05,
-    #[doc = "ISF sets on falling edge"]
+    #[doc = "ISF sets on falling edge."]
     IRQC6 = 0x06,
-    #[doc = "ISF sets on either edge"]
+    #[doc = "ISF sets on either edge."]
     IRQC7 = 0x07,
-    #[doc = "ISF and interrupt when logic 0"]
+    #[doc = "ISF and interrupt when logic 0."]
     IRQC8 = 0x08,
-    #[doc = "ISF and interrupt on rising edge"]
+    #[doc = "ISF and interrupt on rising edge."]
     IRQC9 = 0x09,
-    #[doc = "ISF and interrupt on falling edge"]
+    #[doc = "ISF and interrupt on falling edge."]
     IRQC10 = 0x0a,
-    #[doc = "ISF and Interrupt on either edge"]
+    #[doc = "ISF and Interrupt on either edge."]
     IRQC11 = 0x0b,
-    #[doc = "ISF and interrupt when logic 1"]
+    #[doc = "ISF and interrupt when logic 1."]
     IRQC12 = 0x0c,
-    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC13 = 0x0d,
-    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC14 = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -2335,9 +2335,9 @@ impl From<Icr16Irqc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr16Irqs {
-    #[doc = "Interrupt, trigger output, or DMA request 0"]
+    #[doc = "Interrupt, trigger output, or DMA request 0."]
     IRQS0 = 0x0,
-    #[doc = "Interrupt, trigger output, or DMA request 1"]
+    #[doc = "Interrupt, trigger output, or DMA request 1."]
     IRQS1 = 0x01,
 }
 impl Icr16Irqs {
@@ -2366,9 +2366,9 @@ impl From<Icr16Irqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr16Isf {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Icr16Isf {
@@ -2397,9 +2397,9 @@ impl From<Icr16Isf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr16Lk {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     LK0 = 0x0,
-    #[doc = "Do not lock"]
+    #[doc = "Do not lock."]
     LK1 = 0x01,
 }
 impl Icr16Lk {
@@ -2428,34 +2428,34 @@ impl From<Icr16Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr17Irqc {
-    #[doc = "ISF is disabled"]
+    #[doc = "ISF is disabled."]
     IRQC0 = 0x0,
-    #[doc = "ISF and DMA request on rising edge"]
+    #[doc = "ISF and DMA request on rising edge."]
     IRQC1 = 0x01,
-    #[doc = "ISF and DMA request on falling edge"]
+    #[doc = "ISF and DMA request on falling edge."]
     IRQC2 = 0x02,
-    #[doc = "ISF and DMA request on either edge"]
+    #[doc = "ISF and DMA request on either edge."]
     IRQC3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "ISF sets on rising edge"]
+    #[doc = "ISF sets on rising edge."]
     IRQC5 = 0x05,
-    #[doc = "ISF sets on falling edge"]
+    #[doc = "ISF sets on falling edge."]
     IRQC6 = 0x06,
-    #[doc = "ISF sets on either edge"]
+    #[doc = "ISF sets on either edge."]
     IRQC7 = 0x07,
-    #[doc = "ISF and interrupt when logic 0"]
+    #[doc = "ISF and interrupt when logic 0."]
     IRQC8 = 0x08,
-    #[doc = "ISF and interrupt on rising edge"]
+    #[doc = "ISF and interrupt on rising edge."]
     IRQC9 = 0x09,
-    #[doc = "ISF and interrupt on falling edge"]
+    #[doc = "ISF and interrupt on falling edge."]
     IRQC10 = 0x0a,
-    #[doc = "ISF and Interrupt on either edge"]
+    #[doc = "ISF and Interrupt on either edge."]
     IRQC11 = 0x0b,
-    #[doc = "ISF and interrupt when logic 1"]
+    #[doc = "ISF and interrupt when logic 1."]
     IRQC12 = 0x0c,
-    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC13 = 0x0d,
-    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC14 = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -2485,9 +2485,9 @@ impl From<Icr17Irqc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr17Irqs {
-    #[doc = "Interrupt, trigger output, or DMA request 0"]
+    #[doc = "Interrupt, trigger output, or DMA request 0."]
     IRQS0 = 0x0,
-    #[doc = "Interrupt, trigger output, or DMA request 1"]
+    #[doc = "Interrupt, trigger output, or DMA request 1."]
     IRQS1 = 0x01,
 }
 impl Icr17Irqs {
@@ -2516,9 +2516,9 @@ impl From<Icr17Irqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr17Isf {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Icr17Isf {
@@ -2547,9 +2547,9 @@ impl From<Icr17Isf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr17Lk {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     LK0 = 0x0,
-    #[doc = "Do not lock"]
+    #[doc = "Do not lock."]
     LK1 = 0x01,
 }
 impl Icr17Lk {
@@ -2578,34 +2578,34 @@ impl From<Icr17Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr18Irqc {
-    #[doc = "ISF is disabled"]
+    #[doc = "ISF is disabled."]
     IRQC0 = 0x0,
-    #[doc = "ISF and DMA request on rising edge"]
+    #[doc = "ISF and DMA request on rising edge."]
     IRQC1 = 0x01,
-    #[doc = "ISF and DMA request on falling edge"]
+    #[doc = "ISF and DMA request on falling edge."]
     IRQC2 = 0x02,
-    #[doc = "ISF and DMA request on either edge"]
+    #[doc = "ISF and DMA request on either edge."]
     IRQC3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "ISF sets on rising edge"]
+    #[doc = "ISF sets on rising edge."]
     IRQC5 = 0x05,
-    #[doc = "ISF sets on falling edge"]
+    #[doc = "ISF sets on falling edge."]
     IRQC6 = 0x06,
-    #[doc = "ISF sets on either edge"]
+    #[doc = "ISF sets on either edge."]
     IRQC7 = 0x07,
-    #[doc = "ISF and interrupt when logic 0"]
+    #[doc = "ISF and interrupt when logic 0."]
     IRQC8 = 0x08,
-    #[doc = "ISF and interrupt on rising edge"]
+    #[doc = "ISF and interrupt on rising edge."]
     IRQC9 = 0x09,
-    #[doc = "ISF and interrupt on falling edge"]
+    #[doc = "ISF and interrupt on falling edge."]
     IRQC10 = 0x0a,
-    #[doc = "ISF and Interrupt on either edge"]
+    #[doc = "ISF and Interrupt on either edge."]
     IRQC11 = 0x0b,
-    #[doc = "ISF and interrupt when logic 1"]
+    #[doc = "ISF and interrupt when logic 1."]
     IRQC12 = 0x0c,
-    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC13 = 0x0d,
-    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC14 = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -2635,9 +2635,9 @@ impl From<Icr18Irqc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr18Irqs {
-    #[doc = "Interrupt, trigger output, or DMA request 0"]
+    #[doc = "Interrupt, trigger output, or DMA request 0."]
     IRQS0 = 0x0,
-    #[doc = "Interrupt, trigger output, or DMA request 1"]
+    #[doc = "Interrupt, trigger output, or DMA request 1."]
     IRQS1 = 0x01,
 }
 impl Icr18Irqs {
@@ -2666,9 +2666,9 @@ impl From<Icr18Irqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr18Isf {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Icr18Isf {
@@ -2697,9 +2697,9 @@ impl From<Icr18Isf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr18Lk {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     LK0 = 0x0,
-    #[doc = "Do not lock"]
+    #[doc = "Do not lock."]
     LK1 = 0x01,
 }
 impl Icr18Lk {
@@ -2728,34 +2728,34 @@ impl From<Icr18Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr19Irqc {
-    #[doc = "ISF is disabled"]
+    #[doc = "ISF is disabled."]
     IRQC0 = 0x0,
-    #[doc = "ISF and DMA request on rising edge"]
+    #[doc = "ISF and DMA request on rising edge."]
     IRQC1 = 0x01,
-    #[doc = "ISF and DMA request on falling edge"]
+    #[doc = "ISF and DMA request on falling edge."]
     IRQC2 = 0x02,
-    #[doc = "ISF and DMA request on either edge"]
+    #[doc = "ISF and DMA request on either edge."]
     IRQC3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "ISF sets on rising edge"]
+    #[doc = "ISF sets on rising edge."]
     IRQC5 = 0x05,
-    #[doc = "ISF sets on falling edge"]
+    #[doc = "ISF sets on falling edge."]
     IRQC6 = 0x06,
-    #[doc = "ISF sets on either edge"]
+    #[doc = "ISF sets on either edge."]
     IRQC7 = 0x07,
-    #[doc = "ISF and interrupt when logic 0"]
+    #[doc = "ISF and interrupt when logic 0."]
     IRQC8 = 0x08,
-    #[doc = "ISF and interrupt on rising edge"]
+    #[doc = "ISF and interrupt on rising edge."]
     IRQC9 = 0x09,
-    #[doc = "ISF and interrupt on falling edge"]
+    #[doc = "ISF and interrupt on falling edge."]
     IRQC10 = 0x0a,
-    #[doc = "ISF and Interrupt on either edge"]
+    #[doc = "ISF and Interrupt on either edge."]
     IRQC11 = 0x0b,
-    #[doc = "ISF and interrupt when logic 1"]
+    #[doc = "ISF and interrupt when logic 1."]
     IRQC12 = 0x0c,
-    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC13 = 0x0d,
-    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC14 = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -2785,9 +2785,9 @@ impl From<Icr19Irqc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr19Irqs {
-    #[doc = "Interrupt, trigger output, or DMA request 0"]
+    #[doc = "Interrupt, trigger output, or DMA request 0."]
     IRQS0 = 0x0,
-    #[doc = "Interrupt, trigger output, or DMA request 1"]
+    #[doc = "Interrupt, trigger output, or DMA request 1."]
     IRQS1 = 0x01,
 }
 impl Icr19Irqs {
@@ -2816,9 +2816,9 @@ impl From<Icr19Irqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr19Isf {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Icr19Isf {
@@ -2847,9 +2847,9 @@ impl From<Icr19Isf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr19Lk {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     LK0 = 0x0,
-    #[doc = "Do not lock"]
+    #[doc = "Do not lock."]
     LK1 = 0x01,
 }
 impl Icr19Lk {
@@ -2878,34 +2878,34 @@ impl From<Icr19Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr1Irqc {
-    #[doc = "ISF is disabled"]
+    #[doc = "ISF is disabled."]
     IRQC0 = 0x0,
-    #[doc = "ISF and DMA request on rising edge"]
+    #[doc = "ISF and DMA request on rising edge."]
     IRQC1 = 0x01,
-    #[doc = "ISF and DMA request on falling edge"]
+    #[doc = "ISF and DMA request on falling edge."]
     IRQC2 = 0x02,
-    #[doc = "ISF and DMA request on either edge"]
+    #[doc = "ISF and DMA request on either edge."]
     IRQC3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "ISF sets on rising edge"]
+    #[doc = "ISF sets on rising edge."]
     IRQC5 = 0x05,
-    #[doc = "ISF sets on falling edge"]
+    #[doc = "ISF sets on falling edge."]
     IRQC6 = 0x06,
-    #[doc = "ISF sets on either edge"]
+    #[doc = "ISF sets on either edge."]
     IRQC7 = 0x07,
-    #[doc = "ISF and interrupt when logic 0"]
+    #[doc = "ISF and interrupt when logic 0."]
     IRQC8 = 0x08,
-    #[doc = "ISF and interrupt on rising edge"]
+    #[doc = "ISF and interrupt on rising edge."]
     IRQC9 = 0x09,
-    #[doc = "ISF and interrupt on falling edge"]
+    #[doc = "ISF and interrupt on falling edge."]
     IRQC10 = 0x0a,
-    #[doc = "ISF and Interrupt on either edge"]
+    #[doc = "ISF and Interrupt on either edge."]
     IRQC11 = 0x0b,
-    #[doc = "ISF and interrupt when logic 1"]
+    #[doc = "ISF and interrupt when logic 1."]
     IRQC12 = 0x0c,
-    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC13 = 0x0d,
-    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC14 = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -2935,9 +2935,9 @@ impl From<Icr1Irqc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr1Irqs {
-    #[doc = "Interrupt, trigger output, or DMA request 0"]
+    #[doc = "Interrupt, trigger output, or DMA request 0."]
     IRQS0 = 0x0,
-    #[doc = "Interrupt, trigger output, or DMA request 1"]
+    #[doc = "Interrupt, trigger output, or DMA request 1."]
     IRQS1 = 0x01,
 }
 impl Icr1Irqs {
@@ -2966,9 +2966,9 @@ impl From<Icr1Irqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr1Isf {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Icr1Isf {
@@ -2997,9 +2997,9 @@ impl From<Icr1Isf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr1Lk {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     LK0 = 0x0,
-    #[doc = "Do not lock"]
+    #[doc = "Do not lock."]
     LK1 = 0x01,
 }
 impl Icr1Lk {
@@ -3028,34 +3028,34 @@ impl From<Icr1Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr20Irqc {
-    #[doc = "ISF is disabled"]
+    #[doc = "ISF is disabled."]
     IRQC0 = 0x0,
-    #[doc = "ISF and DMA request on rising edge"]
+    #[doc = "ISF and DMA request on rising edge."]
     IRQC1 = 0x01,
-    #[doc = "ISF and DMA request on falling edge"]
+    #[doc = "ISF and DMA request on falling edge."]
     IRQC2 = 0x02,
-    #[doc = "ISF and DMA request on either edge"]
+    #[doc = "ISF and DMA request on either edge."]
     IRQC3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "ISF sets on rising edge"]
+    #[doc = "ISF sets on rising edge."]
     IRQC5 = 0x05,
-    #[doc = "ISF sets on falling edge"]
+    #[doc = "ISF sets on falling edge."]
     IRQC6 = 0x06,
-    #[doc = "ISF sets on either edge"]
+    #[doc = "ISF sets on either edge."]
     IRQC7 = 0x07,
-    #[doc = "ISF and interrupt when logic 0"]
+    #[doc = "ISF and interrupt when logic 0."]
     IRQC8 = 0x08,
-    #[doc = "ISF and interrupt on rising edge"]
+    #[doc = "ISF and interrupt on rising edge."]
     IRQC9 = 0x09,
-    #[doc = "ISF and interrupt on falling edge"]
+    #[doc = "ISF and interrupt on falling edge."]
     IRQC10 = 0x0a,
-    #[doc = "ISF and Interrupt on either edge"]
+    #[doc = "ISF and Interrupt on either edge."]
     IRQC11 = 0x0b,
-    #[doc = "ISF and interrupt when logic 1"]
+    #[doc = "ISF and interrupt when logic 1."]
     IRQC12 = 0x0c,
-    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC13 = 0x0d,
-    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC14 = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -3085,9 +3085,9 @@ impl From<Icr20Irqc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr20Irqs {
-    #[doc = "Interrupt, trigger output, or DMA request 0"]
+    #[doc = "Interrupt, trigger output, or DMA request 0."]
     IRQS0 = 0x0,
-    #[doc = "Interrupt, trigger output, or DMA request 1"]
+    #[doc = "Interrupt, trigger output, or DMA request 1."]
     IRQS1 = 0x01,
 }
 impl Icr20Irqs {
@@ -3116,9 +3116,9 @@ impl From<Icr20Irqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr20Isf {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Icr20Isf {
@@ -3147,9 +3147,9 @@ impl From<Icr20Isf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr20Lk {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     LK0 = 0x0,
-    #[doc = "Do not lock"]
+    #[doc = "Do not lock."]
     LK1 = 0x01,
 }
 impl Icr20Lk {
@@ -3178,34 +3178,34 @@ impl From<Icr20Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr21Irqc {
-    #[doc = "ISF is disabled"]
+    #[doc = "ISF is disabled."]
     IRQC0 = 0x0,
-    #[doc = "ISF and DMA request on rising edge"]
+    #[doc = "ISF and DMA request on rising edge."]
     IRQC1 = 0x01,
-    #[doc = "ISF and DMA request on falling edge"]
+    #[doc = "ISF and DMA request on falling edge."]
     IRQC2 = 0x02,
-    #[doc = "ISF and DMA request on either edge"]
+    #[doc = "ISF and DMA request on either edge."]
     IRQC3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "ISF sets on rising edge"]
+    #[doc = "ISF sets on rising edge."]
     IRQC5 = 0x05,
-    #[doc = "ISF sets on falling edge"]
+    #[doc = "ISF sets on falling edge."]
     IRQC6 = 0x06,
-    #[doc = "ISF sets on either edge"]
+    #[doc = "ISF sets on either edge."]
     IRQC7 = 0x07,
-    #[doc = "ISF and interrupt when logic 0"]
+    #[doc = "ISF and interrupt when logic 0."]
     IRQC8 = 0x08,
-    #[doc = "ISF and interrupt on rising edge"]
+    #[doc = "ISF and interrupt on rising edge."]
     IRQC9 = 0x09,
-    #[doc = "ISF and interrupt on falling edge"]
+    #[doc = "ISF and interrupt on falling edge."]
     IRQC10 = 0x0a,
-    #[doc = "ISF and Interrupt on either edge"]
+    #[doc = "ISF and Interrupt on either edge."]
     IRQC11 = 0x0b,
-    #[doc = "ISF and interrupt when logic 1"]
+    #[doc = "ISF and interrupt when logic 1."]
     IRQC12 = 0x0c,
-    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC13 = 0x0d,
-    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC14 = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -3235,9 +3235,9 @@ impl From<Icr21Irqc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr21Irqs {
-    #[doc = "Interrupt, trigger output, or DMA request 0"]
+    #[doc = "Interrupt, trigger output, or DMA request 0."]
     IRQS0 = 0x0,
-    #[doc = "Interrupt, trigger output, or DMA request 1"]
+    #[doc = "Interrupt, trigger output, or DMA request 1."]
     IRQS1 = 0x01,
 }
 impl Icr21Irqs {
@@ -3266,9 +3266,9 @@ impl From<Icr21Irqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr21Isf {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Icr21Isf {
@@ -3297,9 +3297,9 @@ impl From<Icr21Isf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr21Lk {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     LK0 = 0x0,
-    #[doc = "Do not lock"]
+    #[doc = "Do not lock."]
     LK1 = 0x01,
 }
 impl Icr21Lk {
@@ -3328,34 +3328,34 @@ impl From<Icr21Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr22Irqc {
-    #[doc = "ISF is disabled"]
+    #[doc = "ISF is disabled."]
     IRQC0 = 0x0,
-    #[doc = "ISF and DMA request on rising edge"]
+    #[doc = "ISF and DMA request on rising edge."]
     IRQC1 = 0x01,
-    #[doc = "ISF and DMA request on falling edge"]
+    #[doc = "ISF and DMA request on falling edge."]
     IRQC2 = 0x02,
-    #[doc = "ISF and DMA request on either edge"]
+    #[doc = "ISF and DMA request on either edge."]
     IRQC3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "ISF sets on rising edge"]
+    #[doc = "ISF sets on rising edge."]
     IRQC5 = 0x05,
-    #[doc = "ISF sets on falling edge"]
+    #[doc = "ISF sets on falling edge."]
     IRQC6 = 0x06,
-    #[doc = "ISF sets on either edge"]
+    #[doc = "ISF sets on either edge."]
     IRQC7 = 0x07,
-    #[doc = "ISF and interrupt when logic 0"]
+    #[doc = "ISF and interrupt when logic 0."]
     IRQC8 = 0x08,
-    #[doc = "ISF and interrupt on rising edge"]
+    #[doc = "ISF and interrupt on rising edge."]
     IRQC9 = 0x09,
-    #[doc = "ISF and interrupt on falling edge"]
+    #[doc = "ISF and interrupt on falling edge."]
     IRQC10 = 0x0a,
-    #[doc = "ISF and Interrupt on either edge"]
+    #[doc = "ISF and Interrupt on either edge."]
     IRQC11 = 0x0b,
-    #[doc = "ISF and interrupt when logic 1"]
+    #[doc = "ISF and interrupt when logic 1."]
     IRQC12 = 0x0c,
-    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC13 = 0x0d,
-    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC14 = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -3385,9 +3385,9 @@ impl From<Icr22Irqc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr22Irqs {
-    #[doc = "Interrupt, trigger output, or DMA request 0"]
+    #[doc = "Interrupt, trigger output, or DMA request 0."]
     IRQS0 = 0x0,
-    #[doc = "Interrupt, trigger output, or DMA request 1"]
+    #[doc = "Interrupt, trigger output, or DMA request 1."]
     IRQS1 = 0x01,
 }
 impl Icr22Irqs {
@@ -3416,9 +3416,9 @@ impl From<Icr22Irqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr22Isf {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Icr22Isf {
@@ -3447,9 +3447,9 @@ impl From<Icr22Isf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr22Lk {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     LK0 = 0x0,
-    #[doc = "Do not lock"]
+    #[doc = "Do not lock."]
     LK1 = 0x01,
 }
 impl Icr22Lk {
@@ -3478,34 +3478,34 @@ impl From<Icr22Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr23Irqc {
-    #[doc = "ISF is disabled"]
+    #[doc = "ISF is disabled."]
     IRQC0 = 0x0,
-    #[doc = "ISF and DMA request on rising edge"]
+    #[doc = "ISF and DMA request on rising edge."]
     IRQC1 = 0x01,
-    #[doc = "ISF and DMA request on falling edge"]
+    #[doc = "ISF and DMA request on falling edge."]
     IRQC2 = 0x02,
-    #[doc = "ISF and DMA request on either edge"]
+    #[doc = "ISF and DMA request on either edge."]
     IRQC3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "ISF sets on rising edge"]
+    #[doc = "ISF sets on rising edge."]
     IRQC5 = 0x05,
-    #[doc = "ISF sets on falling edge"]
+    #[doc = "ISF sets on falling edge."]
     IRQC6 = 0x06,
-    #[doc = "ISF sets on either edge"]
+    #[doc = "ISF sets on either edge."]
     IRQC7 = 0x07,
-    #[doc = "ISF and interrupt when logic 0"]
+    #[doc = "ISF and interrupt when logic 0."]
     IRQC8 = 0x08,
-    #[doc = "ISF and interrupt on rising edge"]
+    #[doc = "ISF and interrupt on rising edge."]
     IRQC9 = 0x09,
-    #[doc = "ISF and interrupt on falling edge"]
+    #[doc = "ISF and interrupt on falling edge."]
     IRQC10 = 0x0a,
-    #[doc = "ISF and Interrupt on either edge"]
+    #[doc = "ISF and Interrupt on either edge."]
     IRQC11 = 0x0b,
-    #[doc = "ISF and interrupt when logic 1"]
+    #[doc = "ISF and interrupt when logic 1."]
     IRQC12 = 0x0c,
-    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC13 = 0x0d,
-    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC14 = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -3535,9 +3535,9 @@ impl From<Icr23Irqc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr23Irqs {
-    #[doc = "Interrupt, trigger output, or DMA request 0"]
+    #[doc = "Interrupt, trigger output, or DMA request 0."]
     IRQS0 = 0x0,
-    #[doc = "Interrupt, trigger output, or DMA request 1"]
+    #[doc = "Interrupt, trigger output, or DMA request 1."]
     IRQS1 = 0x01,
 }
 impl Icr23Irqs {
@@ -3566,9 +3566,9 @@ impl From<Icr23Irqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr23Isf {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Icr23Isf {
@@ -3597,9 +3597,9 @@ impl From<Icr23Isf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr23Lk {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     LK0 = 0x0,
-    #[doc = "Do not lock"]
+    #[doc = "Do not lock."]
     LK1 = 0x01,
 }
 impl Icr23Lk {
@@ -3628,34 +3628,34 @@ impl From<Icr23Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr24Irqc {
-    #[doc = "ISF is disabled"]
+    #[doc = "ISF is disabled."]
     IRQC0 = 0x0,
-    #[doc = "ISF and DMA request on rising edge"]
+    #[doc = "ISF and DMA request on rising edge."]
     IRQC1 = 0x01,
-    #[doc = "ISF and DMA request on falling edge"]
+    #[doc = "ISF and DMA request on falling edge."]
     IRQC2 = 0x02,
-    #[doc = "ISF and DMA request on either edge"]
+    #[doc = "ISF and DMA request on either edge."]
     IRQC3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "ISF sets on rising edge"]
+    #[doc = "ISF sets on rising edge."]
     IRQC5 = 0x05,
-    #[doc = "ISF sets on falling edge"]
+    #[doc = "ISF sets on falling edge."]
     IRQC6 = 0x06,
-    #[doc = "ISF sets on either edge"]
+    #[doc = "ISF sets on either edge."]
     IRQC7 = 0x07,
-    #[doc = "ISF and interrupt when logic 0"]
+    #[doc = "ISF and interrupt when logic 0."]
     IRQC8 = 0x08,
-    #[doc = "ISF and interrupt on rising edge"]
+    #[doc = "ISF and interrupt on rising edge."]
     IRQC9 = 0x09,
-    #[doc = "ISF and interrupt on falling edge"]
+    #[doc = "ISF and interrupt on falling edge."]
     IRQC10 = 0x0a,
-    #[doc = "ISF and Interrupt on either edge"]
+    #[doc = "ISF and Interrupt on either edge."]
     IRQC11 = 0x0b,
-    #[doc = "ISF and interrupt when logic 1"]
+    #[doc = "ISF and interrupt when logic 1."]
     IRQC12 = 0x0c,
-    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC13 = 0x0d,
-    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC14 = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -3685,9 +3685,9 @@ impl From<Icr24Irqc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr24Irqs {
-    #[doc = "Interrupt, trigger output, or DMA request 0"]
+    #[doc = "Interrupt, trigger output, or DMA request 0."]
     IRQS0 = 0x0,
-    #[doc = "Interrupt, trigger output, or DMA request 1"]
+    #[doc = "Interrupt, trigger output, or DMA request 1."]
     IRQS1 = 0x01,
 }
 impl Icr24Irqs {
@@ -3716,9 +3716,9 @@ impl From<Icr24Irqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr24Isf {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Icr24Isf {
@@ -3747,9 +3747,9 @@ impl From<Icr24Isf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr24Lk {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     LK0 = 0x0,
-    #[doc = "Do not lock"]
+    #[doc = "Do not lock."]
     LK1 = 0x01,
 }
 impl Icr24Lk {
@@ -3778,34 +3778,34 @@ impl From<Icr24Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr25Irqc {
-    #[doc = "ISF is disabled"]
+    #[doc = "ISF is disabled."]
     IRQC0 = 0x0,
-    #[doc = "ISF and DMA request on rising edge"]
+    #[doc = "ISF and DMA request on rising edge."]
     IRQC1 = 0x01,
-    #[doc = "ISF and DMA request on falling edge"]
+    #[doc = "ISF and DMA request on falling edge."]
     IRQC2 = 0x02,
-    #[doc = "ISF and DMA request on either edge"]
+    #[doc = "ISF and DMA request on either edge."]
     IRQC3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "ISF sets on rising edge"]
+    #[doc = "ISF sets on rising edge."]
     IRQC5 = 0x05,
-    #[doc = "ISF sets on falling edge"]
+    #[doc = "ISF sets on falling edge."]
     IRQC6 = 0x06,
-    #[doc = "ISF sets on either edge"]
+    #[doc = "ISF sets on either edge."]
     IRQC7 = 0x07,
-    #[doc = "ISF and interrupt when logic 0"]
+    #[doc = "ISF and interrupt when logic 0."]
     IRQC8 = 0x08,
-    #[doc = "ISF and interrupt on rising edge"]
+    #[doc = "ISF and interrupt on rising edge."]
     IRQC9 = 0x09,
-    #[doc = "ISF and interrupt on falling edge"]
+    #[doc = "ISF and interrupt on falling edge."]
     IRQC10 = 0x0a,
-    #[doc = "ISF and Interrupt on either edge"]
+    #[doc = "ISF and Interrupt on either edge."]
     IRQC11 = 0x0b,
-    #[doc = "ISF and interrupt when logic 1"]
+    #[doc = "ISF and interrupt when logic 1."]
     IRQC12 = 0x0c,
-    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC13 = 0x0d,
-    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC14 = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -3835,9 +3835,9 @@ impl From<Icr25Irqc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr25Irqs {
-    #[doc = "Interrupt, trigger output, or DMA request 0"]
+    #[doc = "Interrupt, trigger output, or DMA request 0."]
     IRQS0 = 0x0,
-    #[doc = "Interrupt, trigger output, or DMA request 1"]
+    #[doc = "Interrupt, trigger output, or DMA request 1."]
     IRQS1 = 0x01,
 }
 impl Icr25Irqs {
@@ -3866,9 +3866,9 @@ impl From<Icr25Irqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr25Isf {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Icr25Isf {
@@ -3897,9 +3897,9 @@ impl From<Icr25Isf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr25Lk {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     LK0 = 0x0,
-    #[doc = "Do not lock"]
+    #[doc = "Do not lock."]
     LK1 = 0x01,
 }
 impl Icr25Lk {
@@ -3928,34 +3928,34 @@ impl From<Icr25Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr26Irqc {
-    #[doc = "ISF is disabled"]
+    #[doc = "ISF is disabled."]
     IRQC0 = 0x0,
-    #[doc = "ISF and DMA request on rising edge"]
+    #[doc = "ISF and DMA request on rising edge."]
     IRQC1 = 0x01,
-    #[doc = "ISF and DMA request on falling edge"]
+    #[doc = "ISF and DMA request on falling edge."]
     IRQC2 = 0x02,
-    #[doc = "ISF and DMA request on either edge"]
+    #[doc = "ISF and DMA request on either edge."]
     IRQC3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "ISF sets on rising edge"]
+    #[doc = "ISF sets on rising edge."]
     IRQC5 = 0x05,
-    #[doc = "ISF sets on falling edge"]
+    #[doc = "ISF sets on falling edge."]
     IRQC6 = 0x06,
-    #[doc = "ISF sets on either edge"]
+    #[doc = "ISF sets on either edge."]
     IRQC7 = 0x07,
-    #[doc = "ISF and interrupt when logic 0"]
+    #[doc = "ISF and interrupt when logic 0."]
     IRQC8 = 0x08,
-    #[doc = "ISF and interrupt on rising edge"]
+    #[doc = "ISF and interrupt on rising edge."]
     IRQC9 = 0x09,
-    #[doc = "ISF and interrupt on falling edge"]
+    #[doc = "ISF and interrupt on falling edge."]
     IRQC10 = 0x0a,
-    #[doc = "ISF and Interrupt on either edge"]
+    #[doc = "ISF and Interrupt on either edge."]
     IRQC11 = 0x0b,
-    #[doc = "ISF and interrupt when logic 1"]
+    #[doc = "ISF and interrupt when logic 1."]
     IRQC12 = 0x0c,
-    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC13 = 0x0d,
-    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC14 = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -3985,9 +3985,9 @@ impl From<Icr26Irqc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr26Irqs {
-    #[doc = "Interrupt, trigger output, or DMA request 0"]
+    #[doc = "Interrupt, trigger output, or DMA request 0."]
     IRQS0 = 0x0,
-    #[doc = "Interrupt, trigger output, or DMA request 1"]
+    #[doc = "Interrupt, trigger output, or DMA request 1."]
     IRQS1 = 0x01,
 }
 impl Icr26Irqs {
@@ -4016,9 +4016,9 @@ impl From<Icr26Irqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr26Isf {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Icr26Isf {
@@ -4047,9 +4047,9 @@ impl From<Icr26Isf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr26Lk {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     LK0 = 0x0,
-    #[doc = "Do not lock"]
+    #[doc = "Do not lock."]
     LK1 = 0x01,
 }
 impl Icr26Lk {
@@ -4078,34 +4078,34 @@ impl From<Icr26Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr27Irqc {
-    #[doc = "ISF is disabled"]
+    #[doc = "ISF is disabled."]
     IRQC0 = 0x0,
-    #[doc = "ISF and DMA request on rising edge"]
+    #[doc = "ISF and DMA request on rising edge."]
     IRQC1 = 0x01,
-    #[doc = "ISF and DMA request on falling edge"]
+    #[doc = "ISF and DMA request on falling edge."]
     IRQC2 = 0x02,
-    #[doc = "ISF and DMA request on either edge"]
+    #[doc = "ISF and DMA request on either edge."]
     IRQC3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "ISF sets on rising edge"]
+    #[doc = "ISF sets on rising edge."]
     IRQC5 = 0x05,
-    #[doc = "ISF sets on falling edge"]
+    #[doc = "ISF sets on falling edge."]
     IRQC6 = 0x06,
-    #[doc = "ISF sets on either edge"]
+    #[doc = "ISF sets on either edge."]
     IRQC7 = 0x07,
-    #[doc = "ISF and interrupt when logic 0"]
+    #[doc = "ISF and interrupt when logic 0."]
     IRQC8 = 0x08,
-    #[doc = "ISF and interrupt on rising edge"]
+    #[doc = "ISF and interrupt on rising edge."]
     IRQC9 = 0x09,
-    #[doc = "ISF and interrupt on falling edge"]
+    #[doc = "ISF and interrupt on falling edge."]
     IRQC10 = 0x0a,
-    #[doc = "ISF and Interrupt on either edge"]
+    #[doc = "ISF and Interrupt on either edge."]
     IRQC11 = 0x0b,
-    #[doc = "ISF and interrupt when logic 1"]
+    #[doc = "ISF and interrupt when logic 1."]
     IRQC12 = 0x0c,
-    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC13 = 0x0d,
-    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC14 = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -4135,9 +4135,9 @@ impl From<Icr27Irqc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr27Irqs {
-    #[doc = "Interrupt, trigger output, or DMA request 0"]
+    #[doc = "Interrupt, trigger output, or DMA request 0."]
     IRQS0 = 0x0,
-    #[doc = "Interrupt, trigger output, or DMA request 1"]
+    #[doc = "Interrupt, trigger output, or DMA request 1."]
     IRQS1 = 0x01,
 }
 impl Icr27Irqs {
@@ -4166,9 +4166,9 @@ impl From<Icr27Irqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr27Isf {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Icr27Isf {
@@ -4197,9 +4197,9 @@ impl From<Icr27Isf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr27Lk {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     LK0 = 0x0,
-    #[doc = "Do not lock"]
+    #[doc = "Do not lock."]
     LK1 = 0x01,
 }
 impl Icr27Lk {
@@ -4228,34 +4228,34 @@ impl From<Icr27Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr28Irqc {
-    #[doc = "ISF is disabled"]
+    #[doc = "ISF is disabled."]
     IRQC0 = 0x0,
-    #[doc = "ISF and DMA request on rising edge"]
+    #[doc = "ISF and DMA request on rising edge."]
     IRQC1 = 0x01,
-    #[doc = "ISF and DMA request on falling edge"]
+    #[doc = "ISF and DMA request on falling edge."]
     IRQC2 = 0x02,
-    #[doc = "ISF and DMA request on either edge"]
+    #[doc = "ISF and DMA request on either edge."]
     IRQC3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "ISF sets on rising edge"]
+    #[doc = "ISF sets on rising edge."]
     IRQC5 = 0x05,
-    #[doc = "ISF sets on falling edge"]
+    #[doc = "ISF sets on falling edge."]
     IRQC6 = 0x06,
-    #[doc = "ISF sets on either edge"]
+    #[doc = "ISF sets on either edge."]
     IRQC7 = 0x07,
-    #[doc = "ISF and interrupt when logic 0"]
+    #[doc = "ISF and interrupt when logic 0."]
     IRQC8 = 0x08,
-    #[doc = "ISF and interrupt on rising edge"]
+    #[doc = "ISF and interrupt on rising edge."]
     IRQC9 = 0x09,
-    #[doc = "ISF and interrupt on falling edge"]
+    #[doc = "ISF and interrupt on falling edge."]
     IRQC10 = 0x0a,
-    #[doc = "ISF and Interrupt on either edge"]
+    #[doc = "ISF and Interrupt on either edge."]
     IRQC11 = 0x0b,
-    #[doc = "ISF and interrupt when logic 1"]
+    #[doc = "ISF and interrupt when logic 1."]
     IRQC12 = 0x0c,
-    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC13 = 0x0d,
-    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC14 = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -4285,9 +4285,9 @@ impl From<Icr28Irqc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr28Irqs {
-    #[doc = "Interrupt, trigger output, or DMA request 0"]
+    #[doc = "Interrupt, trigger output, or DMA request 0."]
     IRQS0 = 0x0,
-    #[doc = "Interrupt, trigger output, or DMA request 1"]
+    #[doc = "Interrupt, trigger output, or DMA request 1."]
     IRQS1 = 0x01,
 }
 impl Icr28Irqs {
@@ -4316,9 +4316,9 @@ impl From<Icr28Irqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr28Isf {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Icr28Isf {
@@ -4347,9 +4347,9 @@ impl From<Icr28Isf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr28Lk {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     LK0 = 0x0,
-    #[doc = "Do not lock"]
+    #[doc = "Do not lock."]
     LK1 = 0x01,
 }
 impl Icr28Lk {
@@ -4378,34 +4378,34 @@ impl From<Icr28Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr29Irqc {
-    #[doc = "ISF is disabled"]
+    #[doc = "ISF is disabled."]
     IRQC0 = 0x0,
-    #[doc = "ISF and DMA request on rising edge"]
+    #[doc = "ISF and DMA request on rising edge."]
     IRQC1 = 0x01,
-    #[doc = "ISF and DMA request on falling edge"]
+    #[doc = "ISF and DMA request on falling edge."]
     IRQC2 = 0x02,
-    #[doc = "ISF and DMA request on either edge"]
+    #[doc = "ISF and DMA request on either edge."]
     IRQC3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "ISF sets on rising edge"]
+    #[doc = "ISF sets on rising edge."]
     IRQC5 = 0x05,
-    #[doc = "ISF sets on falling edge"]
+    #[doc = "ISF sets on falling edge."]
     IRQC6 = 0x06,
-    #[doc = "ISF sets on either edge"]
+    #[doc = "ISF sets on either edge."]
     IRQC7 = 0x07,
-    #[doc = "ISF and interrupt when logic 0"]
+    #[doc = "ISF and interrupt when logic 0."]
     IRQC8 = 0x08,
-    #[doc = "ISF and interrupt on rising edge"]
+    #[doc = "ISF and interrupt on rising edge."]
     IRQC9 = 0x09,
-    #[doc = "ISF and interrupt on falling edge"]
+    #[doc = "ISF and interrupt on falling edge."]
     IRQC10 = 0x0a,
-    #[doc = "ISF and Interrupt on either edge"]
+    #[doc = "ISF and Interrupt on either edge."]
     IRQC11 = 0x0b,
-    #[doc = "ISF and interrupt when logic 1"]
+    #[doc = "ISF and interrupt when logic 1."]
     IRQC12 = 0x0c,
-    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC13 = 0x0d,
-    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC14 = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -4435,9 +4435,9 @@ impl From<Icr29Irqc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr29Irqs {
-    #[doc = "Interrupt, trigger output, or DMA request 0"]
+    #[doc = "Interrupt, trigger output, or DMA request 0."]
     IRQS0 = 0x0,
-    #[doc = "Interrupt, trigger output, or DMA request 1"]
+    #[doc = "Interrupt, trigger output, or DMA request 1."]
     IRQS1 = 0x01,
 }
 impl Icr29Irqs {
@@ -4466,9 +4466,9 @@ impl From<Icr29Irqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr29Isf {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Icr29Isf {
@@ -4497,9 +4497,9 @@ impl From<Icr29Isf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr29Lk {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     LK0 = 0x0,
-    #[doc = "Do not lock"]
+    #[doc = "Do not lock."]
     LK1 = 0x01,
 }
 impl Icr29Lk {
@@ -4528,34 +4528,34 @@ impl From<Icr29Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr2Irqc {
-    #[doc = "ISF is disabled"]
+    #[doc = "ISF is disabled."]
     IRQC0 = 0x0,
-    #[doc = "ISF and DMA request on rising edge"]
+    #[doc = "ISF and DMA request on rising edge."]
     IRQC1 = 0x01,
-    #[doc = "ISF and DMA request on falling edge"]
+    #[doc = "ISF and DMA request on falling edge."]
     IRQC2 = 0x02,
-    #[doc = "ISF and DMA request on either edge"]
+    #[doc = "ISF and DMA request on either edge."]
     IRQC3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "ISF sets on rising edge"]
+    #[doc = "ISF sets on rising edge."]
     IRQC5 = 0x05,
-    #[doc = "ISF sets on falling edge"]
+    #[doc = "ISF sets on falling edge."]
     IRQC6 = 0x06,
-    #[doc = "ISF sets on either edge"]
+    #[doc = "ISF sets on either edge."]
     IRQC7 = 0x07,
-    #[doc = "ISF and interrupt when logic 0"]
+    #[doc = "ISF and interrupt when logic 0."]
     IRQC8 = 0x08,
-    #[doc = "ISF and interrupt on rising edge"]
+    #[doc = "ISF and interrupt on rising edge."]
     IRQC9 = 0x09,
-    #[doc = "ISF and interrupt on falling edge"]
+    #[doc = "ISF and interrupt on falling edge."]
     IRQC10 = 0x0a,
-    #[doc = "ISF and Interrupt on either edge"]
+    #[doc = "ISF and Interrupt on either edge."]
     IRQC11 = 0x0b,
-    #[doc = "ISF and interrupt when logic 1"]
+    #[doc = "ISF and interrupt when logic 1."]
     IRQC12 = 0x0c,
-    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC13 = 0x0d,
-    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC14 = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -4585,9 +4585,9 @@ impl From<Icr2Irqc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr2Irqs {
-    #[doc = "Interrupt, trigger output, or DMA request 0"]
+    #[doc = "Interrupt, trigger output, or DMA request 0."]
     IRQS0 = 0x0,
-    #[doc = "Interrupt, trigger output, or DMA request 1"]
+    #[doc = "Interrupt, trigger output, or DMA request 1."]
     IRQS1 = 0x01,
 }
 impl Icr2Irqs {
@@ -4616,9 +4616,9 @@ impl From<Icr2Irqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr2Isf {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Icr2Isf {
@@ -4647,9 +4647,9 @@ impl From<Icr2Isf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr2Lk {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     LK0 = 0x0,
-    #[doc = "Do not lock"]
+    #[doc = "Do not lock."]
     LK1 = 0x01,
 }
 impl Icr2Lk {
@@ -4678,34 +4678,34 @@ impl From<Icr2Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr30Irqc {
-    #[doc = "ISF is disabled"]
+    #[doc = "ISF is disabled."]
     IRQC0 = 0x0,
-    #[doc = "ISF and DMA request on rising edge"]
+    #[doc = "ISF and DMA request on rising edge."]
     IRQC1 = 0x01,
-    #[doc = "ISF and DMA request on falling edge"]
+    #[doc = "ISF and DMA request on falling edge."]
     IRQC2 = 0x02,
-    #[doc = "ISF and DMA request on either edge"]
+    #[doc = "ISF and DMA request on either edge."]
     IRQC3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "ISF sets on rising edge"]
+    #[doc = "ISF sets on rising edge."]
     IRQC5 = 0x05,
-    #[doc = "ISF sets on falling edge"]
+    #[doc = "ISF sets on falling edge."]
     IRQC6 = 0x06,
-    #[doc = "ISF sets on either edge"]
+    #[doc = "ISF sets on either edge."]
     IRQC7 = 0x07,
-    #[doc = "ISF and interrupt when logic 0"]
+    #[doc = "ISF and interrupt when logic 0."]
     IRQC8 = 0x08,
-    #[doc = "ISF and interrupt on rising edge"]
+    #[doc = "ISF and interrupt on rising edge."]
     IRQC9 = 0x09,
-    #[doc = "ISF and interrupt on falling edge"]
+    #[doc = "ISF and interrupt on falling edge."]
     IRQC10 = 0x0a,
-    #[doc = "ISF and Interrupt on either edge"]
+    #[doc = "ISF and Interrupt on either edge."]
     IRQC11 = 0x0b,
-    #[doc = "ISF and interrupt when logic 1"]
+    #[doc = "ISF and interrupt when logic 1."]
     IRQC12 = 0x0c,
-    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC13 = 0x0d,
-    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC14 = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -4735,9 +4735,9 @@ impl From<Icr30Irqc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr30Irqs {
-    #[doc = "Interrupt, trigger output, or DMA request 0"]
+    #[doc = "Interrupt, trigger output, or DMA request 0."]
     IRQS0 = 0x0,
-    #[doc = "Interrupt, trigger output, or DMA request 1"]
+    #[doc = "Interrupt, trigger output, or DMA request 1."]
     IRQS1 = 0x01,
 }
 impl Icr30Irqs {
@@ -4766,9 +4766,9 @@ impl From<Icr30Irqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr30Isf {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Icr30Isf {
@@ -4797,9 +4797,9 @@ impl From<Icr30Isf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr30Lk {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     LK0 = 0x0,
-    #[doc = "Do not lock"]
+    #[doc = "Do not lock."]
     LK1 = 0x01,
 }
 impl Icr30Lk {
@@ -4828,34 +4828,34 @@ impl From<Icr30Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr31Irqc {
-    #[doc = "ISF is disabled"]
+    #[doc = "ISF is disabled."]
     IRQC0 = 0x0,
-    #[doc = "ISF and DMA request on rising edge"]
+    #[doc = "ISF and DMA request on rising edge."]
     IRQC1 = 0x01,
-    #[doc = "ISF and DMA request on falling edge"]
+    #[doc = "ISF and DMA request on falling edge."]
     IRQC2 = 0x02,
-    #[doc = "ISF and DMA request on either edge"]
+    #[doc = "ISF and DMA request on either edge."]
     IRQC3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "ISF sets on rising edge"]
+    #[doc = "ISF sets on rising edge."]
     IRQC5 = 0x05,
-    #[doc = "ISF sets on falling edge"]
+    #[doc = "ISF sets on falling edge."]
     IRQC6 = 0x06,
-    #[doc = "ISF sets on either edge"]
+    #[doc = "ISF sets on either edge."]
     IRQC7 = 0x07,
-    #[doc = "ISF and interrupt when logic 0"]
+    #[doc = "ISF and interrupt when logic 0."]
     IRQC8 = 0x08,
-    #[doc = "ISF and interrupt on rising edge"]
+    #[doc = "ISF and interrupt on rising edge."]
     IRQC9 = 0x09,
-    #[doc = "ISF and interrupt on falling edge"]
+    #[doc = "ISF and interrupt on falling edge."]
     IRQC10 = 0x0a,
-    #[doc = "ISF and Interrupt on either edge"]
+    #[doc = "ISF and Interrupt on either edge."]
     IRQC11 = 0x0b,
-    #[doc = "ISF and interrupt when logic 1"]
+    #[doc = "ISF and interrupt when logic 1."]
     IRQC12 = 0x0c,
-    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC13 = 0x0d,
-    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC14 = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -4885,9 +4885,9 @@ impl From<Icr31Irqc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr31Irqs {
-    #[doc = "Interrupt, trigger output, or DMA request 0"]
+    #[doc = "Interrupt, trigger output, or DMA request 0."]
     IRQS0 = 0x0,
-    #[doc = "Interrupt, trigger output, or DMA request 1"]
+    #[doc = "Interrupt, trigger output, or DMA request 1."]
     IRQS1 = 0x01,
 }
 impl Icr31Irqs {
@@ -4916,9 +4916,9 @@ impl From<Icr31Irqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr31Isf {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Icr31Isf {
@@ -4947,9 +4947,9 @@ impl From<Icr31Isf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr31Lk {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     LK0 = 0x0,
-    #[doc = "Do not lock"]
+    #[doc = "Do not lock."]
     LK1 = 0x01,
 }
 impl Icr31Lk {
@@ -4978,34 +4978,34 @@ impl From<Icr31Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr3Irqc {
-    #[doc = "ISF is disabled"]
+    #[doc = "ISF is disabled."]
     IRQC0 = 0x0,
-    #[doc = "ISF and DMA request on rising edge"]
+    #[doc = "ISF and DMA request on rising edge."]
     IRQC1 = 0x01,
-    #[doc = "ISF and DMA request on falling edge"]
+    #[doc = "ISF and DMA request on falling edge."]
     IRQC2 = 0x02,
-    #[doc = "ISF and DMA request on either edge"]
+    #[doc = "ISF and DMA request on either edge."]
     IRQC3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "ISF sets on rising edge"]
+    #[doc = "ISF sets on rising edge."]
     IRQC5 = 0x05,
-    #[doc = "ISF sets on falling edge"]
+    #[doc = "ISF sets on falling edge."]
     IRQC6 = 0x06,
-    #[doc = "ISF sets on either edge"]
+    #[doc = "ISF sets on either edge."]
     IRQC7 = 0x07,
-    #[doc = "ISF and interrupt when logic 0"]
+    #[doc = "ISF and interrupt when logic 0."]
     IRQC8 = 0x08,
-    #[doc = "ISF and interrupt on rising edge"]
+    #[doc = "ISF and interrupt on rising edge."]
     IRQC9 = 0x09,
-    #[doc = "ISF and interrupt on falling edge"]
+    #[doc = "ISF and interrupt on falling edge."]
     IRQC10 = 0x0a,
-    #[doc = "ISF and Interrupt on either edge"]
+    #[doc = "ISF and Interrupt on either edge."]
     IRQC11 = 0x0b,
-    #[doc = "ISF and interrupt when logic 1"]
+    #[doc = "ISF and interrupt when logic 1."]
     IRQC12 = 0x0c,
-    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC13 = 0x0d,
-    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC14 = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -5035,9 +5035,9 @@ impl From<Icr3Irqc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr3Irqs {
-    #[doc = "Interrupt, trigger output, or DMA request 0"]
+    #[doc = "Interrupt, trigger output, or DMA request 0."]
     IRQS0 = 0x0,
-    #[doc = "Interrupt, trigger output, or DMA request 1"]
+    #[doc = "Interrupt, trigger output, or DMA request 1."]
     IRQS1 = 0x01,
 }
 impl Icr3Irqs {
@@ -5066,9 +5066,9 @@ impl From<Icr3Irqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr3Isf {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Icr3Isf {
@@ -5097,9 +5097,9 @@ impl From<Icr3Isf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr3Lk {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     LK0 = 0x0,
-    #[doc = "Do not lock"]
+    #[doc = "Do not lock."]
     LK1 = 0x01,
 }
 impl Icr3Lk {
@@ -5128,34 +5128,34 @@ impl From<Icr3Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr4Irqc {
-    #[doc = "ISF is disabled"]
+    #[doc = "ISF is disabled."]
     IRQC0 = 0x0,
-    #[doc = "ISF and DMA request on rising edge"]
+    #[doc = "ISF and DMA request on rising edge."]
     IRQC1 = 0x01,
-    #[doc = "ISF and DMA request on falling edge"]
+    #[doc = "ISF and DMA request on falling edge."]
     IRQC2 = 0x02,
-    #[doc = "ISF and DMA request on either edge"]
+    #[doc = "ISF and DMA request on either edge."]
     IRQC3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "ISF sets on rising edge"]
+    #[doc = "ISF sets on rising edge."]
     IRQC5 = 0x05,
-    #[doc = "ISF sets on falling edge"]
+    #[doc = "ISF sets on falling edge."]
     IRQC6 = 0x06,
-    #[doc = "ISF sets on either edge"]
+    #[doc = "ISF sets on either edge."]
     IRQC7 = 0x07,
-    #[doc = "ISF and interrupt when logic 0"]
+    #[doc = "ISF and interrupt when logic 0."]
     IRQC8 = 0x08,
-    #[doc = "ISF and interrupt on rising edge"]
+    #[doc = "ISF and interrupt on rising edge."]
     IRQC9 = 0x09,
-    #[doc = "ISF and interrupt on falling edge"]
+    #[doc = "ISF and interrupt on falling edge."]
     IRQC10 = 0x0a,
-    #[doc = "ISF and Interrupt on either edge"]
+    #[doc = "ISF and Interrupt on either edge."]
     IRQC11 = 0x0b,
-    #[doc = "ISF and interrupt when logic 1"]
+    #[doc = "ISF and interrupt when logic 1."]
     IRQC12 = 0x0c,
-    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC13 = 0x0d,
-    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC14 = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -5185,9 +5185,9 @@ impl From<Icr4Irqc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr4Irqs {
-    #[doc = "Interrupt, trigger output, or DMA request 0"]
+    #[doc = "Interrupt, trigger output, or DMA request 0."]
     IRQS0 = 0x0,
-    #[doc = "Interrupt, trigger output, or DMA request 1"]
+    #[doc = "Interrupt, trigger output, or DMA request 1."]
     IRQS1 = 0x01,
 }
 impl Icr4Irqs {
@@ -5216,9 +5216,9 @@ impl From<Icr4Irqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr4Isf {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Icr4Isf {
@@ -5247,9 +5247,9 @@ impl From<Icr4Isf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr4Lk {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     LK0 = 0x0,
-    #[doc = "Do not lock"]
+    #[doc = "Do not lock."]
     LK1 = 0x01,
 }
 impl Icr4Lk {
@@ -5278,34 +5278,34 @@ impl From<Icr4Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr5Irqc {
-    #[doc = "ISF is disabled"]
+    #[doc = "ISF is disabled."]
     IRQC0 = 0x0,
-    #[doc = "ISF and DMA request on rising edge"]
+    #[doc = "ISF and DMA request on rising edge."]
     IRQC1 = 0x01,
-    #[doc = "ISF and DMA request on falling edge"]
+    #[doc = "ISF and DMA request on falling edge."]
     IRQC2 = 0x02,
-    #[doc = "ISF and DMA request on either edge"]
+    #[doc = "ISF and DMA request on either edge."]
     IRQC3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "ISF sets on rising edge"]
+    #[doc = "ISF sets on rising edge."]
     IRQC5 = 0x05,
-    #[doc = "ISF sets on falling edge"]
+    #[doc = "ISF sets on falling edge."]
     IRQC6 = 0x06,
-    #[doc = "ISF sets on either edge"]
+    #[doc = "ISF sets on either edge."]
     IRQC7 = 0x07,
-    #[doc = "ISF and interrupt when logic 0"]
+    #[doc = "ISF and interrupt when logic 0."]
     IRQC8 = 0x08,
-    #[doc = "ISF and interrupt on rising edge"]
+    #[doc = "ISF and interrupt on rising edge."]
     IRQC9 = 0x09,
-    #[doc = "ISF and interrupt on falling edge"]
+    #[doc = "ISF and interrupt on falling edge."]
     IRQC10 = 0x0a,
-    #[doc = "ISF and Interrupt on either edge"]
+    #[doc = "ISF and Interrupt on either edge."]
     IRQC11 = 0x0b,
-    #[doc = "ISF and interrupt when logic 1"]
+    #[doc = "ISF and interrupt when logic 1."]
     IRQC12 = 0x0c,
-    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC13 = 0x0d,
-    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC14 = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -5335,9 +5335,9 @@ impl From<Icr5Irqc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr5Irqs {
-    #[doc = "Interrupt, trigger output, or DMA request 0"]
+    #[doc = "Interrupt, trigger output, or DMA request 0."]
     IRQS0 = 0x0,
-    #[doc = "Interrupt, trigger output, or DMA request 1"]
+    #[doc = "Interrupt, trigger output, or DMA request 1."]
     IRQS1 = 0x01,
 }
 impl Icr5Irqs {
@@ -5366,9 +5366,9 @@ impl From<Icr5Irqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr5Isf {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Icr5Isf {
@@ -5397,9 +5397,9 @@ impl From<Icr5Isf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr5Lk {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     LK0 = 0x0,
-    #[doc = "Do not lock"]
+    #[doc = "Do not lock."]
     LK1 = 0x01,
 }
 impl Icr5Lk {
@@ -5428,34 +5428,34 @@ impl From<Icr5Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr6Irqc {
-    #[doc = "ISF is disabled"]
+    #[doc = "ISF is disabled."]
     IRQC0 = 0x0,
-    #[doc = "ISF and DMA request on rising edge"]
+    #[doc = "ISF and DMA request on rising edge."]
     IRQC1 = 0x01,
-    #[doc = "ISF and DMA request on falling edge"]
+    #[doc = "ISF and DMA request on falling edge."]
     IRQC2 = 0x02,
-    #[doc = "ISF and DMA request on either edge"]
+    #[doc = "ISF and DMA request on either edge."]
     IRQC3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "ISF sets on rising edge"]
+    #[doc = "ISF sets on rising edge."]
     IRQC5 = 0x05,
-    #[doc = "ISF sets on falling edge"]
+    #[doc = "ISF sets on falling edge."]
     IRQC6 = 0x06,
-    #[doc = "ISF sets on either edge"]
+    #[doc = "ISF sets on either edge."]
     IRQC7 = 0x07,
-    #[doc = "ISF and interrupt when logic 0"]
+    #[doc = "ISF and interrupt when logic 0."]
     IRQC8 = 0x08,
-    #[doc = "ISF and interrupt on rising edge"]
+    #[doc = "ISF and interrupt on rising edge."]
     IRQC9 = 0x09,
-    #[doc = "ISF and interrupt on falling edge"]
+    #[doc = "ISF and interrupt on falling edge."]
     IRQC10 = 0x0a,
-    #[doc = "ISF and Interrupt on either edge"]
+    #[doc = "ISF and Interrupt on either edge."]
     IRQC11 = 0x0b,
-    #[doc = "ISF and interrupt when logic 1"]
+    #[doc = "ISF and interrupt when logic 1."]
     IRQC12 = 0x0c,
-    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC13 = 0x0d,
-    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC14 = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -5485,9 +5485,9 @@ impl From<Icr6Irqc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr6Irqs {
-    #[doc = "Interrupt, trigger output, or DMA request 0"]
+    #[doc = "Interrupt, trigger output, or DMA request 0."]
     IRQS0 = 0x0,
-    #[doc = "Interrupt, trigger output, or DMA request 1"]
+    #[doc = "Interrupt, trigger output, or DMA request 1."]
     IRQS1 = 0x01,
 }
 impl Icr6Irqs {
@@ -5516,9 +5516,9 @@ impl From<Icr6Irqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr6Isf {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Icr6Isf {
@@ -5547,9 +5547,9 @@ impl From<Icr6Isf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr6Lk {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     LK0 = 0x0,
-    #[doc = "Do not lock"]
+    #[doc = "Do not lock."]
     LK1 = 0x01,
 }
 impl Icr6Lk {
@@ -5578,34 +5578,34 @@ impl From<Icr6Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr7Irqc {
-    #[doc = "ISF is disabled"]
+    #[doc = "ISF is disabled."]
     IRQC0 = 0x0,
-    #[doc = "ISF and DMA request on rising edge"]
+    #[doc = "ISF and DMA request on rising edge."]
     IRQC1 = 0x01,
-    #[doc = "ISF and DMA request on falling edge"]
+    #[doc = "ISF and DMA request on falling edge."]
     IRQC2 = 0x02,
-    #[doc = "ISF and DMA request on either edge"]
+    #[doc = "ISF and DMA request on either edge."]
     IRQC3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "ISF sets on rising edge"]
+    #[doc = "ISF sets on rising edge."]
     IRQC5 = 0x05,
-    #[doc = "ISF sets on falling edge"]
+    #[doc = "ISF sets on falling edge."]
     IRQC6 = 0x06,
-    #[doc = "ISF sets on either edge"]
+    #[doc = "ISF sets on either edge."]
     IRQC7 = 0x07,
-    #[doc = "ISF and interrupt when logic 0"]
+    #[doc = "ISF and interrupt when logic 0."]
     IRQC8 = 0x08,
-    #[doc = "ISF and interrupt on rising edge"]
+    #[doc = "ISF and interrupt on rising edge."]
     IRQC9 = 0x09,
-    #[doc = "ISF and interrupt on falling edge"]
+    #[doc = "ISF and interrupt on falling edge."]
     IRQC10 = 0x0a,
-    #[doc = "ISF and Interrupt on either edge"]
+    #[doc = "ISF and Interrupt on either edge."]
     IRQC11 = 0x0b,
-    #[doc = "ISF and interrupt when logic 1"]
+    #[doc = "ISF and interrupt when logic 1."]
     IRQC12 = 0x0c,
-    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC13 = 0x0d,
-    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC14 = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -5635,9 +5635,9 @@ impl From<Icr7Irqc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr7Irqs {
-    #[doc = "Interrupt, trigger output, or DMA request 0"]
+    #[doc = "Interrupt, trigger output, or DMA request 0."]
     IRQS0 = 0x0,
-    #[doc = "Interrupt, trigger output, or DMA request 1"]
+    #[doc = "Interrupt, trigger output, or DMA request 1."]
     IRQS1 = 0x01,
 }
 impl Icr7Irqs {
@@ -5666,9 +5666,9 @@ impl From<Icr7Irqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr7Isf {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Icr7Isf {
@@ -5697,9 +5697,9 @@ impl From<Icr7Isf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr7Lk {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     LK0 = 0x0,
-    #[doc = "Do not lock"]
+    #[doc = "Do not lock."]
     LK1 = 0x01,
 }
 impl Icr7Lk {
@@ -5728,34 +5728,34 @@ impl From<Icr7Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr8Irqc {
-    #[doc = "ISF is disabled"]
+    #[doc = "ISF is disabled."]
     IRQC0 = 0x0,
-    #[doc = "ISF and DMA request on rising edge"]
+    #[doc = "ISF and DMA request on rising edge."]
     IRQC1 = 0x01,
-    #[doc = "ISF and DMA request on falling edge"]
+    #[doc = "ISF and DMA request on falling edge."]
     IRQC2 = 0x02,
-    #[doc = "ISF and DMA request on either edge"]
+    #[doc = "ISF and DMA request on either edge."]
     IRQC3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "ISF sets on rising edge"]
+    #[doc = "ISF sets on rising edge."]
     IRQC5 = 0x05,
-    #[doc = "ISF sets on falling edge"]
+    #[doc = "ISF sets on falling edge."]
     IRQC6 = 0x06,
-    #[doc = "ISF sets on either edge"]
+    #[doc = "ISF sets on either edge."]
     IRQC7 = 0x07,
-    #[doc = "ISF and interrupt when logic 0"]
+    #[doc = "ISF and interrupt when logic 0."]
     IRQC8 = 0x08,
-    #[doc = "ISF and interrupt on rising edge"]
+    #[doc = "ISF and interrupt on rising edge."]
     IRQC9 = 0x09,
-    #[doc = "ISF and interrupt on falling edge"]
+    #[doc = "ISF and interrupt on falling edge."]
     IRQC10 = 0x0a,
-    #[doc = "ISF and Interrupt on either edge"]
+    #[doc = "ISF and Interrupt on either edge."]
     IRQC11 = 0x0b,
-    #[doc = "ISF and interrupt when logic 1"]
+    #[doc = "ISF and interrupt when logic 1."]
     IRQC12 = 0x0c,
-    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC13 = 0x0d,
-    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC14 = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -5785,9 +5785,9 @@ impl From<Icr8Irqc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr8Irqs {
-    #[doc = "Interrupt, trigger output, or DMA request 0"]
+    #[doc = "Interrupt, trigger output, or DMA request 0."]
     IRQS0 = 0x0,
-    #[doc = "Interrupt, trigger output, or DMA request 1"]
+    #[doc = "Interrupt, trigger output, or DMA request 1."]
     IRQS1 = 0x01,
 }
 impl Icr8Irqs {
@@ -5816,9 +5816,9 @@ impl From<Icr8Irqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr8Isf {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Icr8Isf {
@@ -5847,9 +5847,9 @@ impl From<Icr8Isf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr8Lk {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     LK0 = 0x0,
-    #[doc = "Do not lock"]
+    #[doc = "Do not lock."]
     LK1 = 0x01,
 }
 impl Icr8Lk {
@@ -5878,34 +5878,34 @@ impl From<Icr8Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr9Irqc {
-    #[doc = "ISF is disabled"]
+    #[doc = "ISF is disabled."]
     IRQC0 = 0x0,
-    #[doc = "ISF and DMA request on rising edge"]
+    #[doc = "ISF and DMA request on rising edge."]
     IRQC1 = 0x01,
-    #[doc = "ISF and DMA request on falling edge"]
+    #[doc = "ISF and DMA request on falling edge."]
     IRQC2 = 0x02,
-    #[doc = "ISF and DMA request on either edge"]
+    #[doc = "ISF and DMA request on either edge."]
     IRQC3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "ISF sets on rising edge"]
+    #[doc = "ISF sets on rising edge."]
     IRQC5 = 0x05,
-    #[doc = "ISF sets on falling edge"]
+    #[doc = "ISF sets on falling edge."]
     IRQC6 = 0x06,
-    #[doc = "ISF sets on either edge"]
+    #[doc = "ISF sets on either edge."]
     IRQC7 = 0x07,
-    #[doc = "ISF and interrupt when logic 0"]
+    #[doc = "ISF and interrupt when logic 0."]
     IRQC8 = 0x08,
-    #[doc = "ISF and interrupt on rising edge"]
+    #[doc = "ISF and interrupt on rising edge."]
     IRQC9 = 0x09,
-    #[doc = "ISF and interrupt on falling edge"]
+    #[doc = "ISF and interrupt on falling edge."]
     IRQC10 = 0x0a,
-    #[doc = "ISF and Interrupt on either edge"]
+    #[doc = "ISF and Interrupt on either edge."]
     IRQC11 = 0x0b,
-    #[doc = "ISF and interrupt when logic 1"]
+    #[doc = "ISF and interrupt when logic 1."]
     IRQC12 = 0x0c,
-    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-high trigger output; ISF on rising edge (pin state is ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC13 = 0x0d,
-    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)"]
+    #[doc = "Enable active-low trigger output; ISF on falling edge (pin state is inverted and ORed with other enabled triggers to generate the output trigger for use by other peripherals)."]
     IRQC14 = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -5935,9 +5935,9 @@ impl From<Icr9Irqc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr9Irqs {
-    #[doc = "Interrupt, trigger output, or DMA request 0"]
+    #[doc = "Interrupt, trigger output, or DMA request 0."]
     IRQS0 = 0x0,
-    #[doc = "Interrupt, trigger output, or DMA request 1"]
+    #[doc = "Interrupt, trigger output, or DMA request 1."]
     IRQS1 = 0x01,
 }
 impl Icr9Irqs {
@@ -5966,9 +5966,9 @@ impl From<Icr9Irqs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr9Isf {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Icr9Isf {
@@ -5997,9 +5997,9 @@ impl From<Icr9Isf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Icr9Lk {
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     LK0 = 0x0,
-    #[doc = "Do not lock"]
+    #[doc = "Do not lock."]
     LK1 = 0x01,
 }
 impl Icr9Lk {
@@ -6028,9 +6028,9 @@ impl From<Icr9Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf0 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf0 {
@@ -6059,9 +6059,9 @@ impl From<Isf0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf1 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf1 {
@@ -6090,9 +6090,9 @@ impl From<Isf1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf10 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf10 {
@@ -6121,9 +6121,9 @@ impl From<Isf10> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf11 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf11 {
@@ -6152,9 +6152,9 @@ impl From<Isf11> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf12 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf12 {
@@ -6183,9 +6183,9 @@ impl From<Isf12> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf13 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf13 {
@@ -6214,9 +6214,9 @@ impl From<Isf13> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf14 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf14 {
@@ -6245,9 +6245,9 @@ impl From<Isf14> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf15 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf15 {
@@ -6276,9 +6276,9 @@ impl From<Isf15> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf16 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf16 {
@@ -6307,9 +6307,9 @@ impl From<Isf16> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf17 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf17 {
@@ -6338,9 +6338,9 @@ impl From<Isf17> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf18 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf18 {
@@ -6369,9 +6369,9 @@ impl From<Isf18> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf19 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf19 {
@@ -6400,9 +6400,9 @@ impl From<Isf19> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf2 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf2 {
@@ -6431,9 +6431,9 @@ impl From<Isf2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf20 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf20 {
@@ -6462,9 +6462,9 @@ impl From<Isf20> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf21 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf21 {
@@ -6493,9 +6493,9 @@ impl From<Isf21> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf22 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf22 {
@@ -6524,9 +6524,9 @@ impl From<Isf22> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf23 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf23 {
@@ -6555,9 +6555,9 @@ impl From<Isf23> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf24 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf24 {
@@ -6586,9 +6586,9 @@ impl From<Isf24> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf25 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf25 {
@@ -6617,9 +6617,9 @@ impl From<Isf25> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf26 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf26 {
@@ -6648,9 +6648,9 @@ impl From<Isf26> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf27 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf27 {
@@ -6679,9 +6679,9 @@ impl From<Isf27> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf28 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf28 {
@@ -6710,9 +6710,9 @@ impl From<Isf28> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf29 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf29 {
@@ -6741,9 +6741,9 @@ impl From<Isf29> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf3 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf3 {
@@ -6772,9 +6772,9 @@ impl From<Isf3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf30 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf30 {
@@ -6803,9 +6803,9 @@ impl From<Isf30> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf31 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf31 {
@@ -6834,9 +6834,9 @@ impl From<Isf31> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf4 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf4 {
@@ -6865,9 +6865,9 @@ impl From<Isf4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf5 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf5 {
@@ -6896,9 +6896,9 @@ impl From<Isf5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf6 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf6 {
@@ -6927,9 +6927,9 @@ impl From<Isf6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf7 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf7 {
@@ -6958,9 +6958,9 @@ impl From<Isf7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf8 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf8 {
@@ -6989,9 +6989,9 @@ impl From<Isf8> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Isf9 {
-    #[doc = "Not detected"]
+    #[doc = "Not detected."]
     ISF0 = 0x0,
-    #[doc = "Detected"]
+    #[doc = "Detected."]
     ISF1 = 0x01,
 }
 impl Isf9 {
@@ -7020,9 +7020,9 @@ impl From<Isf9> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe10 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe10 {
@@ -7051,9 +7051,9 @@ impl From<Npe10> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe11 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe11 {
@@ -7082,9 +7082,9 @@ impl From<Npe11> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe12 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe12 {
@@ -7113,9 +7113,9 @@ impl From<Npe12> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe13 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe13 {
@@ -7144,9 +7144,9 @@ impl From<Npe13> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe14 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe14 {
@@ -7175,9 +7175,9 @@ impl From<Npe14> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe15 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe15 {
@@ -7206,9 +7206,9 @@ impl From<Npe15> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe16 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe16 {
@@ -7237,9 +7237,9 @@ impl From<Npe16> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe17 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe17 {
@@ -7268,9 +7268,9 @@ impl From<Npe17> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe18 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe18 {
@@ -7299,9 +7299,9 @@ impl From<Npe18> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe19 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe19 {
@@ -7330,9 +7330,9 @@ impl From<Npe19> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe2 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe2 {
@@ -7361,9 +7361,9 @@ impl From<Npe2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe20 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe20 {
@@ -7392,9 +7392,9 @@ impl From<Npe20> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe21 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe21 {
@@ -7423,9 +7423,9 @@ impl From<Npe21> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe22 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe22 {
@@ -7454,9 +7454,9 @@ impl From<Npe22> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe23 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe23 {
@@ -7485,9 +7485,9 @@ impl From<Npe23> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe24 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe24 {
@@ -7516,9 +7516,9 @@ impl From<Npe24> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe25 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe25 {
@@ -7547,9 +7547,9 @@ impl From<Npe25> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe26 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe26 {
@@ -7578,9 +7578,9 @@ impl From<Npe26> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe27 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe27 {
@@ -7609,9 +7609,9 @@ impl From<Npe27> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe28 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe28 {
@@ -7640,9 +7640,9 @@ impl From<Npe28> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe29 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe29 {
@@ -7671,9 +7671,9 @@ impl From<Npe29> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe3 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe3 {
@@ -7702,9 +7702,9 @@ impl From<Npe3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe30 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe30 {
@@ -7733,9 +7733,9 @@ impl From<Npe30> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe31 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe31 {
@@ -7764,9 +7764,9 @@ impl From<Npe31> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe4 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe4 {
@@ -7795,9 +7795,9 @@ impl From<Npe4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe5 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe5 {
@@ -7826,9 +7826,9 @@ impl From<Npe5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe6 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe6 {
@@ -7857,9 +7857,9 @@ impl From<Npe6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe7 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe7 {
@@ -7888,9 +7888,9 @@ impl From<Npe7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe8 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe8 {
@@ -7919,9 +7919,9 @@ impl From<Npe8> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npe9 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl Npe9 {
@@ -7950,9 +7950,9 @@ impl From<Npe9> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse10 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse10 {
@@ -7981,9 +7981,9 @@ impl From<Nse10> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse11 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse11 {
@@ -8012,9 +8012,9 @@ impl From<Nse11> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse12 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse12 {
@@ -8043,9 +8043,9 @@ impl From<Nse12> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse13 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse13 {
@@ -8074,9 +8074,9 @@ impl From<Nse13> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse14 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse14 {
@@ -8105,9 +8105,9 @@ impl From<Nse14> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse15 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse15 {
@@ -8136,9 +8136,9 @@ impl From<Nse15> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse16 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse16 {
@@ -8167,9 +8167,9 @@ impl From<Nse16> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse17 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse17 {
@@ -8198,9 +8198,9 @@ impl From<Nse17> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse18 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse18 {
@@ -8229,9 +8229,9 @@ impl From<Nse18> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse19 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse19 {
@@ -8260,9 +8260,9 @@ impl From<Nse19> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse2 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse2 {
@@ -8291,9 +8291,9 @@ impl From<Nse2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse20 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse20 {
@@ -8322,9 +8322,9 @@ impl From<Nse20> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse21 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse21 {
@@ -8353,9 +8353,9 @@ impl From<Nse21> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse22 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse22 {
@@ -8384,9 +8384,9 @@ impl From<Nse22> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse23 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse23 {
@@ -8415,9 +8415,9 @@ impl From<Nse23> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse24 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse24 {
@@ -8446,9 +8446,9 @@ impl From<Nse24> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse25 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse25 {
@@ -8477,9 +8477,9 @@ impl From<Nse25> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse26 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse26 {
@@ -8508,9 +8508,9 @@ impl From<Nse26> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse27 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse27 {
@@ -8539,9 +8539,9 @@ impl From<Nse27> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse28 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse28 {
@@ -8570,9 +8570,9 @@ impl From<Nse28> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse29 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse29 {
@@ -8601,9 +8601,9 @@ impl From<Nse29> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse3 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse3 {
@@ -8632,9 +8632,9 @@ impl From<Nse3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse30 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse30 {
@@ -8663,9 +8663,9 @@ impl From<Nse30> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse31 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse31 {
@@ -8694,9 +8694,9 @@ impl From<Nse31> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse4 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse4 {
@@ -8725,9 +8725,9 @@ impl From<Nse4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse5 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse5 {
@@ -8756,9 +8756,9 @@ impl From<Nse5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse6 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse6 {
@@ -8787,9 +8787,9 @@ impl From<Nse6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse7 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse7 {
@@ -8818,9 +8818,9 @@ impl From<Nse7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse8 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse8 {
@@ -8849,9 +8849,9 @@ impl From<Nse8> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nse9 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl Nse9 {
@@ -8880,9 +8880,9 @@ impl From<Nse9> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcnp {
-    #[doc = "Writable in Secure-Privilege state"]
+    #[doc = "Writable in Secure-Privilege state."]
     PCNP0 = 0x0,
-    #[doc = "Not writable until the next reset"]
+    #[doc = "Not writable until the next reset."]
     PCNP1 = 0x01,
 }
 impl Pcnp {
@@ -8911,9 +8911,9 @@ impl From<Pcnp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PcnpNpe0 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl PcnpNpe0 {
@@ -8942,9 +8942,9 @@ impl From<PcnpNpe0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PcnpNpe1 {
-    #[doc = "Privilege access"]
+    #[doc = "Privilege access."]
     NPE0 = 0x0,
-    #[doc = "Nonprivilege access"]
+    #[doc = "Nonprivilege access."]
     NPE1 = 0x01,
 }
 impl PcnpNpe1 {
@@ -8973,9 +8973,9 @@ impl From<PcnpNpe1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcns {
-    #[doc = "Writable in Secure-Privilege state"]
+    #[doc = "Writable in Secure-Privilege state."]
     PCNS0 = 0x0,
-    #[doc = "Not writable until the next reset"]
+    #[doc = "Not writable until the next reset."]
     PCNS1 = 0x01,
 }
 impl Pcns {
@@ -9004,9 +9004,9 @@ impl From<Pcns> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PcnsNse0 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl PcnsNse0 {
@@ -9035,9 +9035,9 @@ impl From<PcnsNse0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PcnsNse1 {
-    #[doc = "Secure access"]
+    #[doc = "Secure access."]
     NSE0 = 0x0,
-    #[doc = "Nonsecure access"]
+    #[doc = "Nonsecure access."]
     NSE1 = 0x01,
 }
 impl PcnsNse1 {
@@ -9066,9 +9066,9 @@ impl From<PcnsNse1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pd {
-    #[doc = "Logic zero"]
+    #[doc = "Logic zero."]
     PD0 = 0x0,
-    #[doc = "Logic one"]
+    #[doc = "Logic one."]
     PD1 = 0x01,
 }
 impl Pd {
@@ -9097,9 +9097,9 @@ impl From<Pd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdd0 {
-    #[doc = "Input"]
+    #[doc = "Input."]
     PDD0 = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     PDD1 = 0x01,
 }
 impl Pdd0 {
@@ -9128,9 +9128,9 @@ impl From<Pdd0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdd1 {
-    #[doc = "Input"]
+    #[doc = "Input."]
     PDD0 = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     PDD1 = 0x01,
 }
 impl Pdd1 {
@@ -9159,9 +9159,9 @@ impl From<Pdd1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdd10 {
-    #[doc = "Input"]
+    #[doc = "Input."]
     PDD0 = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     PDD1 = 0x01,
 }
 impl Pdd10 {
@@ -9190,9 +9190,9 @@ impl From<Pdd10> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdd11 {
-    #[doc = "Input"]
+    #[doc = "Input."]
     PDD0 = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     PDD1 = 0x01,
 }
 impl Pdd11 {
@@ -9221,9 +9221,9 @@ impl From<Pdd11> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdd12 {
-    #[doc = "Input"]
+    #[doc = "Input."]
     PDD0 = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     PDD1 = 0x01,
 }
 impl Pdd12 {
@@ -9252,9 +9252,9 @@ impl From<Pdd12> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdd13 {
-    #[doc = "Input"]
+    #[doc = "Input."]
     PDD0 = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     PDD1 = 0x01,
 }
 impl Pdd13 {
@@ -9283,9 +9283,9 @@ impl From<Pdd13> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdd14 {
-    #[doc = "Input"]
+    #[doc = "Input."]
     PDD0 = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     PDD1 = 0x01,
 }
 impl Pdd14 {
@@ -9314,9 +9314,9 @@ impl From<Pdd14> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdd15 {
-    #[doc = "Input"]
+    #[doc = "Input."]
     PDD0 = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     PDD1 = 0x01,
 }
 impl Pdd15 {
@@ -9345,9 +9345,9 @@ impl From<Pdd15> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdd16 {
-    #[doc = "Input"]
+    #[doc = "Input."]
     PDD0 = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     PDD1 = 0x01,
 }
 impl Pdd16 {
@@ -9376,9 +9376,9 @@ impl From<Pdd16> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdd17 {
-    #[doc = "Input"]
+    #[doc = "Input."]
     PDD0 = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     PDD1 = 0x01,
 }
 impl Pdd17 {
@@ -9407,9 +9407,9 @@ impl From<Pdd17> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdd18 {
-    #[doc = "Input"]
+    #[doc = "Input."]
     PDD0 = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     PDD1 = 0x01,
 }
 impl Pdd18 {
@@ -9438,9 +9438,9 @@ impl From<Pdd18> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdd19 {
-    #[doc = "Input"]
+    #[doc = "Input."]
     PDD0 = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     PDD1 = 0x01,
 }
 impl Pdd19 {
@@ -9469,9 +9469,9 @@ impl From<Pdd19> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdd2 {
-    #[doc = "Input"]
+    #[doc = "Input."]
     PDD0 = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     PDD1 = 0x01,
 }
 impl Pdd2 {
@@ -9500,9 +9500,9 @@ impl From<Pdd2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdd20 {
-    #[doc = "Input"]
+    #[doc = "Input."]
     PDD0 = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     PDD1 = 0x01,
 }
 impl Pdd20 {
@@ -9531,9 +9531,9 @@ impl From<Pdd20> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdd21 {
-    #[doc = "Input"]
+    #[doc = "Input."]
     PDD0 = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     PDD1 = 0x01,
 }
 impl Pdd21 {
@@ -9562,9 +9562,9 @@ impl From<Pdd21> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdd22 {
-    #[doc = "Input"]
+    #[doc = "Input."]
     PDD0 = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     PDD1 = 0x01,
 }
 impl Pdd22 {
@@ -9593,9 +9593,9 @@ impl From<Pdd22> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdd23 {
-    #[doc = "Input"]
+    #[doc = "Input."]
     PDD0 = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     PDD1 = 0x01,
 }
 impl Pdd23 {
@@ -9624,9 +9624,9 @@ impl From<Pdd23> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdd24 {
-    #[doc = "Input"]
+    #[doc = "Input."]
     PDD0 = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     PDD1 = 0x01,
 }
 impl Pdd24 {
@@ -9655,9 +9655,9 @@ impl From<Pdd24> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdd25 {
-    #[doc = "Input"]
+    #[doc = "Input."]
     PDD0 = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     PDD1 = 0x01,
 }
 impl Pdd25 {
@@ -9686,9 +9686,9 @@ impl From<Pdd25> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdd26 {
-    #[doc = "Input"]
+    #[doc = "Input."]
     PDD0 = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     PDD1 = 0x01,
 }
 impl Pdd26 {
@@ -9717,9 +9717,9 @@ impl From<Pdd26> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdd27 {
-    #[doc = "Input"]
+    #[doc = "Input."]
     PDD0 = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     PDD1 = 0x01,
 }
 impl Pdd27 {
@@ -9748,9 +9748,9 @@ impl From<Pdd27> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdd28 {
-    #[doc = "Input"]
+    #[doc = "Input."]
     PDD0 = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     PDD1 = 0x01,
 }
 impl Pdd28 {
@@ -9779,9 +9779,9 @@ impl From<Pdd28> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdd29 {
-    #[doc = "Input"]
+    #[doc = "Input."]
     PDD0 = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     PDD1 = 0x01,
 }
 impl Pdd29 {
@@ -9810,9 +9810,9 @@ impl From<Pdd29> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdd3 {
-    #[doc = "Input"]
+    #[doc = "Input."]
     PDD0 = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     PDD1 = 0x01,
 }
 impl Pdd3 {
@@ -9841,9 +9841,9 @@ impl From<Pdd3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdd30 {
-    #[doc = "Input"]
+    #[doc = "Input."]
     PDD0 = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     PDD1 = 0x01,
 }
 impl Pdd30 {
@@ -9872,9 +9872,9 @@ impl From<Pdd30> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdd31 {
-    #[doc = "Input"]
+    #[doc = "Input."]
     PDD0 = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     PDD1 = 0x01,
 }
 impl Pdd31 {
@@ -9903,9 +9903,9 @@ impl From<Pdd31> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdd4 {
-    #[doc = "Input"]
+    #[doc = "Input."]
     PDD0 = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     PDD1 = 0x01,
 }
 impl Pdd4 {
@@ -9934,9 +9934,9 @@ impl From<Pdd4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdd5 {
-    #[doc = "Input"]
+    #[doc = "Input."]
     PDD0 = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     PDD1 = 0x01,
 }
 impl Pdd5 {
@@ -9965,9 +9965,9 @@ impl From<Pdd5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdd6 {
-    #[doc = "Input"]
+    #[doc = "Input."]
     PDD0 = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     PDD1 = 0x01,
 }
 impl Pdd6 {
@@ -9996,9 +9996,9 @@ impl From<Pdd6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdd7 {
-    #[doc = "Input"]
+    #[doc = "Input."]
     PDD0 = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     PDD1 = 0x01,
 }
 impl Pdd7 {
@@ -10027,9 +10027,9 @@ impl From<Pdd7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdd8 {
-    #[doc = "Input"]
+    #[doc = "Input."]
     PDD0 = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     PDD1 = 0x01,
 }
 impl Pdd8 {
@@ -10058,9 +10058,9 @@ impl From<Pdd8> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdd9 {
-    #[doc = "Input"]
+    #[doc = "Input."]
     PDD0 = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     PDD1 = 0x01,
 }
 impl Pdd9 {
@@ -10089,9 +10089,9 @@ impl From<Pdd9> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdi0 {
-    #[doc = "Logic 0"]
+    #[doc = "Logic 0."]
     PDI0 = 0x0,
-    #[doc = "Logic 1"]
+    #[doc = "Logic 1."]
     PDI1 = 0x01,
 }
 impl Pdi0 {
@@ -10120,9 +10120,9 @@ impl From<Pdi0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdi1 {
-    #[doc = "Logic 0"]
+    #[doc = "Logic 0."]
     PDI0 = 0x0,
-    #[doc = "Logic 1"]
+    #[doc = "Logic 1."]
     PDI1 = 0x01,
 }
 impl Pdi1 {
@@ -10151,9 +10151,9 @@ impl From<Pdi1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdi10 {
-    #[doc = "Logic 0"]
+    #[doc = "Logic 0."]
     PDI0 = 0x0,
-    #[doc = "Logic 1"]
+    #[doc = "Logic 1."]
     PDI1 = 0x01,
 }
 impl Pdi10 {
@@ -10182,9 +10182,9 @@ impl From<Pdi10> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdi11 {
-    #[doc = "Logic 0"]
+    #[doc = "Logic 0."]
     PDI0 = 0x0,
-    #[doc = "Logic 1"]
+    #[doc = "Logic 1."]
     PDI1 = 0x01,
 }
 impl Pdi11 {
@@ -10213,9 +10213,9 @@ impl From<Pdi11> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdi12 {
-    #[doc = "Logic 0"]
+    #[doc = "Logic 0."]
     PDI0 = 0x0,
-    #[doc = "Logic 1"]
+    #[doc = "Logic 1."]
     PDI1 = 0x01,
 }
 impl Pdi12 {
@@ -10244,9 +10244,9 @@ impl From<Pdi12> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdi13 {
-    #[doc = "Logic 0"]
+    #[doc = "Logic 0."]
     PDI0 = 0x0,
-    #[doc = "Logic 1"]
+    #[doc = "Logic 1."]
     PDI1 = 0x01,
 }
 impl Pdi13 {
@@ -10275,9 +10275,9 @@ impl From<Pdi13> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdi14 {
-    #[doc = "Logic 0"]
+    #[doc = "Logic 0."]
     PDI0 = 0x0,
-    #[doc = "Logic 1"]
+    #[doc = "Logic 1."]
     PDI1 = 0x01,
 }
 impl Pdi14 {
@@ -10306,9 +10306,9 @@ impl From<Pdi14> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdi15 {
-    #[doc = "Logic 0"]
+    #[doc = "Logic 0."]
     PDI0 = 0x0,
-    #[doc = "Logic 1"]
+    #[doc = "Logic 1."]
     PDI1 = 0x01,
 }
 impl Pdi15 {
@@ -10337,9 +10337,9 @@ impl From<Pdi15> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdi16 {
-    #[doc = "Logic 0"]
+    #[doc = "Logic 0."]
     PDI0 = 0x0,
-    #[doc = "Logic 1"]
+    #[doc = "Logic 1."]
     PDI1 = 0x01,
 }
 impl Pdi16 {
@@ -10368,9 +10368,9 @@ impl From<Pdi16> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdi17 {
-    #[doc = "Logic 0"]
+    #[doc = "Logic 0."]
     PDI0 = 0x0,
-    #[doc = "Logic 1"]
+    #[doc = "Logic 1."]
     PDI1 = 0x01,
 }
 impl Pdi17 {
@@ -10399,9 +10399,9 @@ impl From<Pdi17> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdi18 {
-    #[doc = "Logic 0"]
+    #[doc = "Logic 0."]
     PDI0 = 0x0,
-    #[doc = "Logic 1"]
+    #[doc = "Logic 1."]
     PDI1 = 0x01,
 }
 impl Pdi18 {
@@ -10430,9 +10430,9 @@ impl From<Pdi18> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdi19 {
-    #[doc = "Logic 0"]
+    #[doc = "Logic 0."]
     PDI0 = 0x0,
-    #[doc = "Logic 1"]
+    #[doc = "Logic 1."]
     PDI1 = 0x01,
 }
 impl Pdi19 {
@@ -10461,9 +10461,9 @@ impl From<Pdi19> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdi2 {
-    #[doc = "Logic 0"]
+    #[doc = "Logic 0."]
     PDI0 = 0x0,
-    #[doc = "Logic 1"]
+    #[doc = "Logic 1."]
     PDI1 = 0x01,
 }
 impl Pdi2 {
@@ -10492,9 +10492,9 @@ impl From<Pdi2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdi20 {
-    #[doc = "Logic 0"]
+    #[doc = "Logic 0."]
     PDI0 = 0x0,
-    #[doc = "Logic 1"]
+    #[doc = "Logic 1."]
     PDI1 = 0x01,
 }
 impl Pdi20 {
@@ -10523,9 +10523,9 @@ impl From<Pdi20> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdi21 {
-    #[doc = "Logic 0"]
+    #[doc = "Logic 0."]
     PDI0 = 0x0,
-    #[doc = "Logic 1"]
+    #[doc = "Logic 1."]
     PDI1 = 0x01,
 }
 impl Pdi21 {
@@ -10554,9 +10554,9 @@ impl From<Pdi21> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdi22 {
-    #[doc = "Logic 0"]
+    #[doc = "Logic 0."]
     PDI0 = 0x0,
-    #[doc = "Logic 1"]
+    #[doc = "Logic 1."]
     PDI1 = 0x01,
 }
 impl Pdi22 {
@@ -10585,9 +10585,9 @@ impl From<Pdi22> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdi23 {
-    #[doc = "Logic 0"]
+    #[doc = "Logic 0."]
     PDI0 = 0x0,
-    #[doc = "Logic 1"]
+    #[doc = "Logic 1."]
     PDI1 = 0x01,
 }
 impl Pdi23 {
@@ -10616,9 +10616,9 @@ impl From<Pdi23> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdi24 {
-    #[doc = "Logic 0"]
+    #[doc = "Logic 0."]
     PDI0 = 0x0,
-    #[doc = "Logic 1"]
+    #[doc = "Logic 1."]
     PDI1 = 0x01,
 }
 impl Pdi24 {
@@ -10647,9 +10647,9 @@ impl From<Pdi24> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdi25 {
-    #[doc = "Logic 0"]
+    #[doc = "Logic 0."]
     PDI0 = 0x0,
-    #[doc = "Logic 1"]
+    #[doc = "Logic 1."]
     PDI1 = 0x01,
 }
 impl Pdi25 {
@@ -10678,9 +10678,9 @@ impl From<Pdi25> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdi26 {
-    #[doc = "Logic 0"]
+    #[doc = "Logic 0."]
     PDI0 = 0x0,
-    #[doc = "Logic 1"]
+    #[doc = "Logic 1."]
     PDI1 = 0x01,
 }
 impl Pdi26 {
@@ -10709,9 +10709,9 @@ impl From<Pdi26> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdi27 {
-    #[doc = "Logic 0"]
+    #[doc = "Logic 0."]
     PDI0 = 0x0,
-    #[doc = "Logic 1"]
+    #[doc = "Logic 1."]
     PDI1 = 0x01,
 }
 impl Pdi27 {
@@ -10740,9 +10740,9 @@ impl From<Pdi27> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdi28 {
-    #[doc = "Logic 0"]
+    #[doc = "Logic 0."]
     PDI0 = 0x0,
-    #[doc = "Logic 1"]
+    #[doc = "Logic 1."]
     PDI1 = 0x01,
 }
 impl Pdi28 {
@@ -10771,9 +10771,9 @@ impl From<Pdi28> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdi29 {
-    #[doc = "Logic 0"]
+    #[doc = "Logic 0."]
     PDI0 = 0x0,
-    #[doc = "Logic 1"]
+    #[doc = "Logic 1."]
     PDI1 = 0x01,
 }
 impl Pdi29 {
@@ -10802,9 +10802,9 @@ impl From<Pdi29> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdi3 {
-    #[doc = "Logic 0"]
+    #[doc = "Logic 0."]
     PDI0 = 0x0,
-    #[doc = "Logic 1"]
+    #[doc = "Logic 1."]
     PDI1 = 0x01,
 }
 impl Pdi3 {
@@ -10833,9 +10833,9 @@ impl From<Pdi3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdi30 {
-    #[doc = "Logic 0"]
+    #[doc = "Logic 0."]
     PDI0 = 0x0,
-    #[doc = "Logic 1"]
+    #[doc = "Logic 1."]
     PDI1 = 0x01,
 }
 impl Pdi30 {
@@ -10864,9 +10864,9 @@ impl From<Pdi30> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdi31 {
-    #[doc = "Logic 0"]
+    #[doc = "Logic 0."]
     PDI0 = 0x0,
-    #[doc = "Logic 1"]
+    #[doc = "Logic 1."]
     PDI1 = 0x01,
 }
 impl Pdi31 {
@@ -10895,9 +10895,9 @@ impl From<Pdi31> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdi4 {
-    #[doc = "Logic 0"]
+    #[doc = "Logic 0."]
     PDI0 = 0x0,
-    #[doc = "Logic 1"]
+    #[doc = "Logic 1."]
     PDI1 = 0x01,
 }
 impl Pdi4 {
@@ -10926,9 +10926,9 @@ impl From<Pdi4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdi5 {
-    #[doc = "Logic 0"]
+    #[doc = "Logic 0."]
     PDI0 = 0x0,
-    #[doc = "Logic 1"]
+    #[doc = "Logic 1."]
     PDI1 = 0x01,
 }
 impl Pdi5 {
@@ -10957,9 +10957,9 @@ impl From<Pdi5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdi6 {
-    #[doc = "Logic 0"]
+    #[doc = "Logic 0."]
     PDI0 = 0x0,
-    #[doc = "Logic 1"]
+    #[doc = "Logic 1."]
     PDI1 = 0x01,
 }
 impl Pdi6 {
@@ -10988,9 +10988,9 @@ impl From<Pdi6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdi7 {
-    #[doc = "Logic 0"]
+    #[doc = "Logic 0."]
     PDI0 = 0x0,
-    #[doc = "Logic 1"]
+    #[doc = "Logic 1."]
     PDI1 = 0x01,
 }
 impl Pdi7 {
@@ -11019,9 +11019,9 @@ impl From<Pdi7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdi8 {
-    #[doc = "Logic 0"]
+    #[doc = "Logic 0."]
     PDI0 = 0x0,
-    #[doc = "Logic 1"]
+    #[doc = "Logic 1."]
     PDI1 = 0x01,
 }
 impl Pdi8 {
@@ -11050,9 +11050,9 @@ impl From<Pdi8> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdi9 {
-    #[doc = "Logic 0"]
+    #[doc = "Logic 0."]
     PDI0 = 0x0,
-    #[doc = "Logic 1"]
+    #[doc = "Logic 1."]
     PDI1 = 0x01,
 }
 impl Pdi9 {
@@ -11081,9 +11081,9 @@ impl From<Pdi9> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdo0 {
-    #[doc = "Logic level 0"]
+    #[doc = "Logic level 0."]
     PDO0 = 0x0,
-    #[doc = "Logic level 1"]
+    #[doc = "Logic level 1."]
     PDO1 = 0x01,
 }
 impl Pdo0 {
@@ -11112,9 +11112,9 @@ impl From<Pdo0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdo1 {
-    #[doc = "Logic level 0"]
+    #[doc = "Logic level 0."]
     PDO0 = 0x0,
-    #[doc = "Logic level 1"]
+    #[doc = "Logic level 1."]
     PDO1 = 0x01,
 }
 impl Pdo1 {
@@ -11143,9 +11143,9 @@ impl From<Pdo1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdo10 {
-    #[doc = "Logic level 0"]
+    #[doc = "Logic level 0."]
     PDO0 = 0x0,
-    #[doc = "Logic level 1"]
+    #[doc = "Logic level 1."]
     PDO1 = 0x01,
 }
 impl Pdo10 {
@@ -11174,9 +11174,9 @@ impl From<Pdo10> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdo11 {
-    #[doc = "Logic level 0"]
+    #[doc = "Logic level 0."]
     PDO0 = 0x0,
-    #[doc = "Logic level 1"]
+    #[doc = "Logic level 1."]
     PDO1 = 0x01,
 }
 impl Pdo11 {
@@ -11205,9 +11205,9 @@ impl From<Pdo11> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdo12 {
-    #[doc = "Logic level 0"]
+    #[doc = "Logic level 0."]
     PDO0 = 0x0,
-    #[doc = "Logic level 1"]
+    #[doc = "Logic level 1."]
     PDO1 = 0x01,
 }
 impl Pdo12 {
@@ -11236,9 +11236,9 @@ impl From<Pdo12> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdo13 {
-    #[doc = "Logic level 0"]
+    #[doc = "Logic level 0."]
     PDO0 = 0x0,
-    #[doc = "Logic level 1"]
+    #[doc = "Logic level 1."]
     PDO1 = 0x01,
 }
 impl Pdo13 {
@@ -11267,9 +11267,9 @@ impl From<Pdo13> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdo14 {
-    #[doc = "Logic level 0"]
+    #[doc = "Logic level 0."]
     PDO0 = 0x0,
-    #[doc = "Logic level 1"]
+    #[doc = "Logic level 1."]
     PDO1 = 0x01,
 }
 impl Pdo14 {
@@ -11298,9 +11298,9 @@ impl From<Pdo14> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdo15 {
-    #[doc = "Logic level 0"]
+    #[doc = "Logic level 0."]
     PDO0 = 0x0,
-    #[doc = "Logic level 1"]
+    #[doc = "Logic level 1."]
     PDO1 = 0x01,
 }
 impl Pdo15 {
@@ -11329,9 +11329,9 @@ impl From<Pdo15> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdo16 {
-    #[doc = "Logic level 0"]
+    #[doc = "Logic level 0."]
     PDO0 = 0x0,
-    #[doc = "Logic level 1"]
+    #[doc = "Logic level 1."]
     PDO1 = 0x01,
 }
 impl Pdo16 {
@@ -11360,9 +11360,9 @@ impl From<Pdo16> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdo17 {
-    #[doc = "Logic level 0"]
+    #[doc = "Logic level 0."]
     PDO0 = 0x0,
-    #[doc = "Logic level 1"]
+    #[doc = "Logic level 1."]
     PDO1 = 0x01,
 }
 impl Pdo17 {
@@ -11391,9 +11391,9 @@ impl From<Pdo17> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdo18 {
-    #[doc = "Logic level 0"]
+    #[doc = "Logic level 0."]
     PDO0 = 0x0,
-    #[doc = "Logic level 1"]
+    #[doc = "Logic level 1."]
     PDO1 = 0x01,
 }
 impl Pdo18 {
@@ -11422,9 +11422,9 @@ impl From<Pdo18> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdo19 {
-    #[doc = "Logic level 0"]
+    #[doc = "Logic level 0."]
     PDO0 = 0x0,
-    #[doc = "Logic level 1"]
+    #[doc = "Logic level 1."]
     PDO1 = 0x01,
 }
 impl Pdo19 {
@@ -11453,9 +11453,9 @@ impl From<Pdo19> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdo2 {
-    #[doc = "Logic level 0"]
+    #[doc = "Logic level 0."]
     PDO0 = 0x0,
-    #[doc = "Logic level 1"]
+    #[doc = "Logic level 1."]
     PDO1 = 0x01,
 }
 impl Pdo2 {
@@ -11484,9 +11484,9 @@ impl From<Pdo2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdo20 {
-    #[doc = "Logic level 0"]
+    #[doc = "Logic level 0."]
     PDO0 = 0x0,
-    #[doc = "Logic level 1"]
+    #[doc = "Logic level 1."]
     PDO1 = 0x01,
 }
 impl Pdo20 {
@@ -11515,9 +11515,9 @@ impl From<Pdo20> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdo21 {
-    #[doc = "Logic level 0"]
+    #[doc = "Logic level 0."]
     PDO0 = 0x0,
-    #[doc = "Logic level 1"]
+    #[doc = "Logic level 1."]
     PDO1 = 0x01,
 }
 impl Pdo21 {
@@ -11546,9 +11546,9 @@ impl From<Pdo21> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdo22 {
-    #[doc = "Logic level 0"]
+    #[doc = "Logic level 0."]
     PDO0 = 0x0,
-    #[doc = "Logic level 1"]
+    #[doc = "Logic level 1."]
     PDO1 = 0x01,
 }
 impl Pdo22 {
@@ -11577,9 +11577,9 @@ impl From<Pdo22> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdo23 {
-    #[doc = "Logic level 0"]
+    #[doc = "Logic level 0."]
     PDO0 = 0x0,
-    #[doc = "Logic level 1"]
+    #[doc = "Logic level 1."]
     PDO1 = 0x01,
 }
 impl Pdo23 {
@@ -11608,9 +11608,9 @@ impl From<Pdo23> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdo24 {
-    #[doc = "Logic level 0"]
+    #[doc = "Logic level 0."]
     PDO0 = 0x0,
-    #[doc = "Logic level 1"]
+    #[doc = "Logic level 1."]
     PDO1 = 0x01,
 }
 impl Pdo24 {
@@ -11639,9 +11639,9 @@ impl From<Pdo24> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdo25 {
-    #[doc = "Logic level 0"]
+    #[doc = "Logic level 0."]
     PDO0 = 0x0,
-    #[doc = "Logic level 1"]
+    #[doc = "Logic level 1."]
     PDO1 = 0x01,
 }
 impl Pdo25 {
@@ -11670,9 +11670,9 @@ impl From<Pdo25> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdo26 {
-    #[doc = "Logic level 0"]
+    #[doc = "Logic level 0."]
     PDO0 = 0x0,
-    #[doc = "Logic level 1"]
+    #[doc = "Logic level 1."]
     PDO1 = 0x01,
 }
 impl Pdo26 {
@@ -11701,9 +11701,9 @@ impl From<Pdo26> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdo27 {
-    #[doc = "Logic level 0"]
+    #[doc = "Logic level 0."]
     PDO0 = 0x0,
-    #[doc = "Logic level 1"]
+    #[doc = "Logic level 1."]
     PDO1 = 0x01,
 }
 impl Pdo27 {
@@ -11732,9 +11732,9 @@ impl From<Pdo27> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdo28 {
-    #[doc = "Logic level 0"]
+    #[doc = "Logic level 0."]
     PDO0 = 0x0,
-    #[doc = "Logic level 1"]
+    #[doc = "Logic level 1."]
     PDO1 = 0x01,
 }
 impl Pdo28 {
@@ -11763,9 +11763,9 @@ impl From<Pdo28> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdo29 {
-    #[doc = "Logic level 0"]
+    #[doc = "Logic level 0."]
     PDO0 = 0x0,
-    #[doc = "Logic level 1"]
+    #[doc = "Logic level 1."]
     PDO1 = 0x01,
 }
 impl Pdo29 {
@@ -11794,9 +11794,9 @@ impl From<Pdo29> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdo3 {
-    #[doc = "Logic level 0"]
+    #[doc = "Logic level 0."]
     PDO0 = 0x0,
-    #[doc = "Logic level 1"]
+    #[doc = "Logic level 1."]
     PDO1 = 0x01,
 }
 impl Pdo3 {
@@ -11825,9 +11825,9 @@ impl From<Pdo3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdo30 {
-    #[doc = "Logic level 0"]
+    #[doc = "Logic level 0."]
     PDO0 = 0x0,
-    #[doc = "Logic level 1"]
+    #[doc = "Logic level 1."]
     PDO1 = 0x01,
 }
 impl Pdo30 {
@@ -11856,9 +11856,9 @@ impl From<Pdo30> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdo31 {
-    #[doc = "Logic level 0"]
+    #[doc = "Logic level 0."]
     PDO0 = 0x0,
-    #[doc = "Logic level 1"]
+    #[doc = "Logic level 1."]
     PDO1 = 0x01,
 }
 impl Pdo31 {
@@ -11887,9 +11887,9 @@ impl From<Pdo31> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdo4 {
-    #[doc = "Logic level 0"]
+    #[doc = "Logic level 0."]
     PDO0 = 0x0,
-    #[doc = "Logic level 1"]
+    #[doc = "Logic level 1."]
     PDO1 = 0x01,
 }
 impl Pdo4 {
@@ -11918,9 +11918,9 @@ impl From<Pdo4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdo5 {
-    #[doc = "Logic level 0"]
+    #[doc = "Logic level 0."]
     PDO0 = 0x0,
-    #[doc = "Logic level 1"]
+    #[doc = "Logic level 1."]
     PDO1 = 0x01,
 }
 impl Pdo5 {
@@ -11949,9 +11949,9 @@ impl From<Pdo5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdo6 {
-    #[doc = "Logic level 0"]
+    #[doc = "Logic level 0."]
     PDO0 = 0x0,
-    #[doc = "Logic level 1"]
+    #[doc = "Logic level 1."]
     PDO1 = 0x01,
 }
 impl Pdo6 {
@@ -11980,9 +11980,9 @@ impl From<Pdo6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdo7 {
-    #[doc = "Logic level 0"]
+    #[doc = "Logic level 0."]
     PDO0 = 0x0,
-    #[doc = "Logic level 1"]
+    #[doc = "Logic level 1."]
     PDO1 = 0x01,
 }
 impl Pdo7 {
@@ -12011,9 +12011,9 @@ impl From<Pdo7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdo8 {
-    #[doc = "Logic level 0"]
+    #[doc = "Logic level 0."]
     PDO0 = 0x0,
-    #[doc = "Logic level 1"]
+    #[doc = "Logic level 1."]
     PDO1 = 0x01,
 }
 impl Pdo8 {
@@ -12042,9 +12042,9 @@ impl From<Pdo8> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdo9 {
-    #[doc = "Logic level 0"]
+    #[doc = "Logic level 0."]
     PDO0 = 0x0,
-    #[doc = "Logic level 1"]
+    #[doc = "Logic level 1."]
     PDO1 = 0x01,
 }
 impl Pdo9 {
@@ -12073,9 +12073,9 @@ impl From<Pdo9> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pid0 {
-    #[doc = "Configured for general-purpose input"]
+    #[doc = "Configured for general-purpose input."]
     PID0 = 0x0,
-    #[doc = "Disabled for general-purpose input"]
+    #[doc = "Disabled for general-purpose input."]
     PID1 = 0x01,
 }
 impl Pid0 {
@@ -12104,9 +12104,9 @@ impl From<Pid0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pid1 {
-    #[doc = "Configured for general-purpose input"]
+    #[doc = "Configured for general-purpose input."]
     PID0 = 0x0,
-    #[doc = "Disabled for general-purpose input"]
+    #[doc = "Disabled for general-purpose input."]
     PID1 = 0x01,
 }
 impl Pid1 {
@@ -12135,9 +12135,9 @@ impl From<Pid1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pid10 {
-    #[doc = "Configured for general-purpose input"]
+    #[doc = "Configured for general-purpose input."]
     PID0 = 0x0,
-    #[doc = "Disabled for general-purpose input"]
+    #[doc = "Disabled for general-purpose input."]
     PID1 = 0x01,
 }
 impl Pid10 {
@@ -12166,9 +12166,9 @@ impl From<Pid10> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pid11 {
-    #[doc = "Configured for general-purpose input"]
+    #[doc = "Configured for general-purpose input."]
     PID0 = 0x0,
-    #[doc = "Disabled for general-purpose input"]
+    #[doc = "Disabled for general-purpose input."]
     PID1 = 0x01,
 }
 impl Pid11 {
@@ -12197,9 +12197,9 @@ impl From<Pid11> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pid12 {
-    #[doc = "Configured for general-purpose input"]
+    #[doc = "Configured for general-purpose input."]
     PID0 = 0x0,
-    #[doc = "Disabled for general-purpose input"]
+    #[doc = "Disabled for general-purpose input."]
     PID1 = 0x01,
 }
 impl Pid12 {
@@ -12228,9 +12228,9 @@ impl From<Pid12> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pid13 {
-    #[doc = "Configured for general-purpose input"]
+    #[doc = "Configured for general-purpose input."]
     PID0 = 0x0,
-    #[doc = "Disabled for general-purpose input"]
+    #[doc = "Disabled for general-purpose input."]
     PID1 = 0x01,
 }
 impl Pid13 {
@@ -12259,9 +12259,9 @@ impl From<Pid13> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pid14 {
-    #[doc = "Configured for general-purpose input"]
+    #[doc = "Configured for general-purpose input."]
     PID0 = 0x0,
-    #[doc = "Disabled for general-purpose input"]
+    #[doc = "Disabled for general-purpose input."]
     PID1 = 0x01,
 }
 impl Pid14 {
@@ -12290,9 +12290,9 @@ impl From<Pid14> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pid15 {
-    #[doc = "Configured for general-purpose input"]
+    #[doc = "Configured for general-purpose input."]
     PID0 = 0x0,
-    #[doc = "Disabled for general-purpose input"]
+    #[doc = "Disabled for general-purpose input."]
     PID1 = 0x01,
 }
 impl Pid15 {
@@ -12321,9 +12321,9 @@ impl From<Pid15> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pid16 {
-    #[doc = "Configured for general-purpose input"]
+    #[doc = "Configured for general-purpose input."]
     PID0 = 0x0,
-    #[doc = "Disabled for general-purpose input"]
+    #[doc = "Disabled for general-purpose input."]
     PID1 = 0x01,
 }
 impl Pid16 {
@@ -12352,9 +12352,9 @@ impl From<Pid16> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pid17 {
-    #[doc = "Configured for general-purpose input"]
+    #[doc = "Configured for general-purpose input."]
     PID0 = 0x0,
-    #[doc = "Disabled for general-purpose input"]
+    #[doc = "Disabled for general-purpose input."]
     PID1 = 0x01,
 }
 impl Pid17 {
@@ -12383,9 +12383,9 @@ impl From<Pid17> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pid18 {
-    #[doc = "Configured for general-purpose input"]
+    #[doc = "Configured for general-purpose input."]
     PID0 = 0x0,
-    #[doc = "Disabled for general-purpose input"]
+    #[doc = "Disabled for general-purpose input."]
     PID1 = 0x01,
 }
 impl Pid18 {
@@ -12414,9 +12414,9 @@ impl From<Pid18> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pid19 {
-    #[doc = "Configured for general-purpose input"]
+    #[doc = "Configured for general-purpose input."]
     PID0 = 0x0,
-    #[doc = "Disabled for general-purpose input"]
+    #[doc = "Disabled for general-purpose input."]
     PID1 = 0x01,
 }
 impl Pid19 {
@@ -12445,9 +12445,9 @@ impl From<Pid19> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pid2 {
-    #[doc = "Configured for general-purpose input"]
+    #[doc = "Configured for general-purpose input."]
     PID0 = 0x0,
-    #[doc = "Disabled for general-purpose input"]
+    #[doc = "Disabled for general-purpose input."]
     PID1 = 0x01,
 }
 impl Pid2 {
@@ -12476,9 +12476,9 @@ impl From<Pid2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pid20 {
-    #[doc = "Configured for general-purpose input"]
+    #[doc = "Configured for general-purpose input."]
     PID0 = 0x0,
-    #[doc = "Disabled for general-purpose input"]
+    #[doc = "Disabled for general-purpose input."]
     PID1 = 0x01,
 }
 impl Pid20 {
@@ -12507,9 +12507,9 @@ impl From<Pid20> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pid21 {
-    #[doc = "Configured for general-purpose input"]
+    #[doc = "Configured for general-purpose input."]
     PID0 = 0x0,
-    #[doc = "Disabled for general-purpose input"]
+    #[doc = "Disabled for general-purpose input."]
     PID1 = 0x01,
 }
 impl Pid21 {
@@ -12538,9 +12538,9 @@ impl From<Pid21> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pid22 {
-    #[doc = "Configured for general-purpose input"]
+    #[doc = "Configured for general-purpose input."]
     PID0 = 0x0,
-    #[doc = "Disabled for general-purpose input"]
+    #[doc = "Disabled for general-purpose input."]
     PID1 = 0x01,
 }
 impl Pid22 {
@@ -12569,9 +12569,9 @@ impl From<Pid22> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pid23 {
-    #[doc = "Configured for general-purpose input"]
+    #[doc = "Configured for general-purpose input."]
     PID0 = 0x0,
-    #[doc = "Disabled for general-purpose input"]
+    #[doc = "Disabled for general-purpose input."]
     PID1 = 0x01,
 }
 impl Pid23 {
@@ -12600,9 +12600,9 @@ impl From<Pid23> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pid24 {
-    #[doc = "Configured for general-purpose input"]
+    #[doc = "Configured for general-purpose input."]
     PID0 = 0x0,
-    #[doc = "Disabled for general-purpose input"]
+    #[doc = "Disabled for general-purpose input."]
     PID1 = 0x01,
 }
 impl Pid24 {
@@ -12631,9 +12631,9 @@ impl From<Pid24> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pid25 {
-    #[doc = "Configured for general-purpose input"]
+    #[doc = "Configured for general-purpose input."]
     PID0 = 0x0,
-    #[doc = "Disabled for general-purpose input"]
+    #[doc = "Disabled for general-purpose input."]
     PID1 = 0x01,
 }
 impl Pid25 {
@@ -12662,9 +12662,9 @@ impl From<Pid25> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pid26 {
-    #[doc = "Configured for general-purpose input"]
+    #[doc = "Configured for general-purpose input."]
     PID0 = 0x0,
-    #[doc = "Disabled for general-purpose input"]
+    #[doc = "Disabled for general-purpose input."]
     PID1 = 0x01,
 }
 impl Pid26 {
@@ -12693,9 +12693,9 @@ impl From<Pid26> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pid27 {
-    #[doc = "Configured for general-purpose input"]
+    #[doc = "Configured for general-purpose input."]
     PID0 = 0x0,
-    #[doc = "Disabled for general-purpose input"]
+    #[doc = "Disabled for general-purpose input."]
     PID1 = 0x01,
 }
 impl Pid27 {
@@ -12724,9 +12724,9 @@ impl From<Pid27> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pid28 {
-    #[doc = "Configured for general-purpose input"]
+    #[doc = "Configured for general-purpose input."]
     PID0 = 0x0,
-    #[doc = "Disabled for general-purpose input"]
+    #[doc = "Disabled for general-purpose input."]
     PID1 = 0x01,
 }
 impl Pid28 {
@@ -12755,9 +12755,9 @@ impl From<Pid28> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pid29 {
-    #[doc = "Configured for general-purpose input"]
+    #[doc = "Configured for general-purpose input."]
     PID0 = 0x0,
-    #[doc = "Disabled for general-purpose input"]
+    #[doc = "Disabled for general-purpose input."]
     PID1 = 0x01,
 }
 impl Pid29 {
@@ -12786,9 +12786,9 @@ impl From<Pid29> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pid3 {
-    #[doc = "Configured for general-purpose input"]
+    #[doc = "Configured for general-purpose input."]
     PID0 = 0x0,
-    #[doc = "Disabled for general-purpose input"]
+    #[doc = "Disabled for general-purpose input."]
     PID1 = 0x01,
 }
 impl Pid3 {
@@ -12817,9 +12817,9 @@ impl From<Pid3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pid30 {
-    #[doc = "Configured for general-purpose input"]
+    #[doc = "Configured for general-purpose input."]
     PID0 = 0x0,
-    #[doc = "Disabled for general-purpose input"]
+    #[doc = "Disabled for general-purpose input."]
     PID1 = 0x01,
 }
 impl Pid30 {
@@ -12848,9 +12848,9 @@ impl From<Pid30> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pid31 {
-    #[doc = "Configured for general-purpose input"]
+    #[doc = "Configured for general-purpose input."]
     PID0 = 0x0,
-    #[doc = "Disabled for general-purpose input"]
+    #[doc = "Disabled for general-purpose input."]
     PID1 = 0x01,
 }
 impl Pid31 {
@@ -12879,9 +12879,9 @@ impl From<Pid31> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pid4 {
-    #[doc = "Configured for general-purpose input"]
+    #[doc = "Configured for general-purpose input."]
     PID0 = 0x0,
-    #[doc = "Disabled for general-purpose input"]
+    #[doc = "Disabled for general-purpose input."]
     PID1 = 0x01,
 }
 impl Pid4 {
@@ -12910,9 +12910,9 @@ impl From<Pid4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pid5 {
-    #[doc = "Configured for general-purpose input"]
+    #[doc = "Configured for general-purpose input."]
     PID0 = 0x0,
-    #[doc = "Disabled for general-purpose input"]
+    #[doc = "Disabled for general-purpose input."]
     PID1 = 0x01,
 }
 impl Pid5 {
@@ -12941,9 +12941,9 @@ impl From<Pid5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pid6 {
-    #[doc = "Configured for general-purpose input"]
+    #[doc = "Configured for general-purpose input."]
     PID0 = 0x0,
-    #[doc = "Disabled for general-purpose input"]
+    #[doc = "Disabled for general-purpose input."]
     PID1 = 0x01,
 }
 impl Pid6 {
@@ -12972,9 +12972,9 @@ impl From<Pid6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pid7 {
-    #[doc = "Configured for general-purpose input"]
+    #[doc = "Configured for general-purpose input."]
     PID0 = 0x0,
-    #[doc = "Disabled for general-purpose input"]
+    #[doc = "Disabled for general-purpose input."]
     PID1 = 0x01,
 }
 impl Pid7 {
@@ -13003,9 +13003,9 @@ impl From<Pid7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pid8 {
-    #[doc = "Configured for general-purpose input"]
+    #[doc = "Configured for general-purpose input."]
     PID0 = 0x0,
-    #[doc = "Disabled for general-purpose input"]
+    #[doc = "Disabled for general-purpose input."]
     PID1 = 0x01,
 }
 impl Pid8 {
@@ -13034,9 +13034,9 @@ impl From<Pid8> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pid9 {
-    #[doc = "Configured for general-purpose input"]
+    #[doc = "Configured for general-purpose input."]
     PID0 = 0x0,
-    #[doc = "Disabled for general-purpose input"]
+    #[doc = "Disabled for general-purpose input."]
     PID1 = 0x01,
 }
 impl Pid9 {
@@ -13065,9 +13065,9 @@ impl From<Pid9> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptco0 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTCO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 0"]
+    #[doc = "Corresponding field in PDOR becomes 0."]
     PTCO1 = 0x01,
 }
 impl Ptco0 {
@@ -13096,9 +13096,9 @@ impl From<Ptco0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptco1 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTCO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 0"]
+    #[doc = "Corresponding field in PDOR becomes 0."]
     PTCO1 = 0x01,
 }
 impl Ptco1 {
@@ -13127,9 +13127,9 @@ impl From<Ptco1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptco10 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTCO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 0"]
+    #[doc = "Corresponding field in PDOR becomes 0."]
     PTCO1 = 0x01,
 }
 impl Ptco10 {
@@ -13158,9 +13158,9 @@ impl From<Ptco10> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptco11 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTCO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 0"]
+    #[doc = "Corresponding field in PDOR becomes 0."]
     PTCO1 = 0x01,
 }
 impl Ptco11 {
@@ -13189,9 +13189,9 @@ impl From<Ptco11> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptco12 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTCO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 0"]
+    #[doc = "Corresponding field in PDOR becomes 0."]
     PTCO1 = 0x01,
 }
 impl Ptco12 {
@@ -13220,9 +13220,9 @@ impl From<Ptco12> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptco13 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTCO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 0"]
+    #[doc = "Corresponding field in PDOR becomes 0."]
     PTCO1 = 0x01,
 }
 impl Ptco13 {
@@ -13251,9 +13251,9 @@ impl From<Ptco13> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptco14 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTCO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 0"]
+    #[doc = "Corresponding field in PDOR becomes 0."]
     PTCO1 = 0x01,
 }
 impl Ptco14 {
@@ -13282,9 +13282,9 @@ impl From<Ptco14> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptco15 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTCO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 0"]
+    #[doc = "Corresponding field in PDOR becomes 0."]
     PTCO1 = 0x01,
 }
 impl Ptco15 {
@@ -13313,9 +13313,9 @@ impl From<Ptco15> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptco16 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTCO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 0"]
+    #[doc = "Corresponding field in PDOR becomes 0."]
     PTCO1 = 0x01,
 }
 impl Ptco16 {
@@ -13344,9 +13344,9 @@ impl From<Ptco16> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptco17 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTCO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 0"]
+    #[doc = "Corresponding field in PDOR becomes 0."]
     PTCO1 = 0x01,
 }
 impl Ptco17 {
@@ -13375,9 +13375,9 @@ impl From<Ptco17> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptco18 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTCO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 0"]
+    #[doc = "Corresponding field in PDOR becomes 0."]
     PTCO1 = 0x01,
 }
 impl Ptco18 {
@@ -13406,9 +13406,9 @@ impl From<Ptco18> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptco19 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTCO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 0"]
+    #[doc = "Corresponding field in PDOR becomes 0."]
     PTCO1 = 0x01,
 }
 impl Ptco19 {
@@ -13437,9 +13437,9 @@ impl From<Ptco19> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptco2 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTCO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 0"]
+    #[doc = "Corresponding field in PDOR becomes 0."]
     PTCO1 = 0x01,
 }
 impl Ptco2 {
@@ -13468,9 +13468,9 @@ impl From<Ptco2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptco20 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTCO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 0"]
+    #[doc = "Corresponding field in PDOR becomes 0."]
     PTCO1 = 0x01,
 }
 impl Ptco20 {
@@ -13499,9 +13499,9 @@ impl From<Ptco20> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptco21 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTCO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 0"]
+    #[doc = "Corresponding field in PDOR becomes 0."]
     PTCO1 = 0x01,
 }
 impl Ptco21 {
@@ -13530,9 +13530,9 @@ impl From<Ptco21> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptco22 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTCO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 0"]
+    #[doc = "Corresponding field in PDOR becomes 0."]
     PTCO1 = 0x01,
 }
 impl Ptco22 {
@@ -13561,9 +13561,9 @@ impl From<Ptco22> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptco23 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTCO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 0"]
+    #[doc = "Corresponding field in PDOR becomes 0."]
     PTCO1 = 0x01,
 }
 impl Ptco23 {
@@ -13592,9 +13592,9 @@ impl From<Ptco23> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptco24 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTCO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 0"]
+    #[doc = "Corresponding field in PDOR becomes 0."]
     PTCO1 = 0x01,
 }
 impl Ptco24 {
@@ -13623,9 +13623,9 @@ impl From<Ptco24> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptco25 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTCO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 0"]
+    #[doc = "Corresponding field in PDOR becomes 0."]
     PTCO1 = 0x01,
 }
 impl Ptco25 {
@@ -13654,9 +13654,9 @@ impl From<Ptco25> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptco26 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTCO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 0"]
+    #[doc = "Corresponding field in PDOR becomes 0."]
     PTCO1 = 0x01,
 }
 impl Ptco26 {
@@ -13685,9 +13685,9 @@ impl From<Ptco26> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptco27 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTCO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 0"]
+    #[doc = "Corresponding field in PDOR becomes 0."]
     PTCO1 = 0x01,
 }
 impl Ptco27 {
@@ -13716,9 +13716,9 @@ impl From<Ptco27> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptco28 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTCO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 0"]
+    #[doc = "Corresponding field in PDOR becomes 0."]
     PTCO1 = 0x01,
 }
 impl Ptco28 {
@@ -13747,9 +13747,9 @@ impl From<Ptco28> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptco29 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTCO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 0"]
+    #[doc = "Corresponding field in PDOR becomes 0."]
     PTCO1 = 0x01,
 }
 impl Ptco29 {
@@ -13778,9 +13778,9 @@ impl From<Ptco29> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptco3 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTCO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 0"]
+    #[doc = "Corresponding field in PDOR becomes 0."]
     PTCO1 = 0x01,
 }
 impl Ptco3 {
@@ -13809,9 +13809,9 @@ impl From<Ptco3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptco30 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTCO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 0"]
+    #[doc = "Corresponding field in PDOR becomes 0."]
     PTCO1 = 0x01,
 }
 impl Ptco30 {
@@ -13840,9 +13840,9 @@ impl From<Ptco30> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptco31 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTCO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 0"]
+    #[doc = "Corresponding field in PDOR becomes 0."]
     PTCO1 = 0x01,
 }
 impl Ptco31 {
@@ -13871,9 +13871,9 @@ impl From<Ptco31> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptco4 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTCO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 0"]
+    #[doc = "Corresponding field in PDOR becomes 0."]
     PTCO1 = 0x01,
 }
 impl Ptco4 {
@@ -13902,9 +13902,9 @@ impl From<Ptco4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptco5 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTCO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 0"]
+    #[doc = "Corresponding field in PDOR becomes 0."]
     PTCO1 = 0x01,
 }
 impl Ptco5 {
@@ -13933,9 +13933,9 @@ impl From<Ptco5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptco6 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTCO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 0"]
+    #[doc = "Corresponding field in PDOR becomes 0."]
     PTCO1 = 0x01,
 }
 impl Ptco6 {
@@ -13964,9 +13964,9 @@ impl From<Ptco6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptco7 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTCO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 0"]
+    #[doc = "Corresponding field in PDOR becomes 0."]
     PTCO1 = 0x01,
 }
 impl Ptco7 {
@@ -13995,9 +13995,9 @@ impl From<Ptco7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptco8 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTCO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 0"]
+    #[doc = "Corresponding field in PDOR becomes 0."]
     PTCO1 = 0x01,
 }
 impl Ptco8 {
@@ -14026,9 +14026,9 @@ impl From<Ptco8> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptco9 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTCO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 0"]
+    #[doc = "Corresponding field in PDOR becomes 0."]
     PTCO1 = 0x01,
 }
 impl Ptco9 {
@@ -14057,9 +14057,9 @@ impl From<Ptco9> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptso0 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTSO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 1"]
+    #[doc = "Corresponding field in PDOR becomes 1."]
     PTSO1 = 0x01,
 }
 impl Ptso0 {
@@ -14088,9 +14088,9 @@ impl From<Ptso0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptso1 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTSO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 1"]
+    #[doc = "Corresponding field in PDOR becomes 1."]
     PTSO1 = 0x01,
 }
 impl Ptso1 {
@@ -14119,9 +14119,9 @@ impl From<Ptso1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptso10 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTSO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 1"]
+    #[doc = "Corresponding field in PDOR becomes 1."]
     PTSO1 = 0x01,
 }
 impl Ptso10 {
@@ -14150,9 +14150,9 @@ impl From<Ptso10> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptso11 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTSO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 1"]
+    #[doc = "Corresponding field in PDOR becomes 1."]
     PTSO1 = 0x01,
 }
 impl Ptso11 {
@@ -14181,9 +14181,9 @@ impl From<Ptso11> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptso12 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTSO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 1"]
+    #[doc = "Corresponding field in PDOR becomes 1."]
     PTSO1 = 0x01,
 }
 impl Ptso12 {
@@ -14212,9 +14212,9 @@ impl From<Ptso12> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptso13 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTSO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 1"]
+    #[doc = "Corresponding field in PDOR becomes 1."]
     PTSO1 = 0x01,
 }
 impl Ptso13 {
@@ -14243,9 +14243,9 @@ impl From<Ptso13> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptso14 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTSO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 1"]
+    #[doc = "Corresponding field in PDOR becomes 1."]
     PTSO1 = 0x01,
 }
 impl Ptso14 {
@@ -14274,9 +14274,9 @@ impl From<Ptso14> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptso15 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTSO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 1"]
+    #[doc = "Corresponding field in PDOR becomes 1."]
     PTSO1 = 0x01,
 }
 impl Ptso15 {
@@ -14305,9 +14305,9 @@ impl From<Ptso15> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptso16 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTSO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 1"]
+    #[doc = "Corresponding field in PDOR becomes 1."]
     PTSO1 = 0x01,
 }
 impl Ptso16 {
@@ -14336,9 +14336,9 @@ impl From<Ptso16> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptso17 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTSO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 1"]
+    #[doc = "Corresponding field in PDOR becomes 1."]
     PTSO1 = 0x01,
 }
 impl Ptso17 {
@@ -14367,9 +14367,9 @@ impl From<Ptso17> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptso18 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTSO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 1"]
+    #[doc = "Corresponding field in PDOR becomes 1."]
     PTSO1 = 0x01,
 }
 impl Ptso18 {
@@ -14398,9 +14398,9 @@ impl From<Ptso18> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptso19 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTSO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 1"]
+    #[doc = "Corresponding field in PDOR becomes 1."]
     PTSO1 = 0x01,
 }
 impl Ptso19 {
@@ -14429,9 +14429,9 @@ impl From<Ptso19> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptso2 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTSO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 1"]
+    #[doc = "Corresponding field in PDOR becomes 1."]
     PTSO1 = 0x01,
 }
 impl Ptso2 {
@@ -14460,9 +14460,9 @@ impl From<Ptso2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptso20 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTSO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 1"]
+    #[doc = "Corresponding field in PDOR becomes 1."]
     PTSO1 = 0x01,
 }
 impl Ptso20 {
@@ -14491,9 +14491,9 @@ impl From<Ptso20> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptso21 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTSO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 1"]
+    #[doc = "Corresponding field in PDOR becomes 1."]
     PTSO1 = 0x01,
 }
 impl Ptso21 {
@@ -14522,9 +14522,9 @@ impl From<Ptso21> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptso22 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTSO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 1"]
+    #[doc = "Corresponding field in PDOR becomes 1."]
     PTSO1 = 0x01,
 }
 impl Ptso22 {
@@ -14553,9 +14553,9 @@ impl From<Ptso22> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptso23 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTSO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 1"]
+    #[doc = "Corresponding field in PDOR becomes 1."]
     PTSO1 = 0x01,
 }
 impl Ptso23 {
@@ -14584,9 +14584,9 @@ impl From<Ptso23> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptso24 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTSO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 1"]
+    #[doc = "Corresponding field in PDOR becomes 1."]
     PTSO1 = 0x01,
 }
 impl Ptso24 {
@@ -14615,9 +14615,9 @@ impl From<Ptso24> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptso25 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTSO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 1"]
+    #[doc = "Corresponding field in PDOR becomes 1."]
     PTSO1 = 0x01,
 }
 impl Ptso25 {
@@ -14646,9 +14646,9 @@ impl From<Ptso25> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptso26 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTSO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 1"]
+    #[doc = "Corresponding field in PDOR becomes 1."]
     PTSO1 = 0x01,
 }
 impl Ptso26 {
@@ -14677,9 +14677,9 @@ impl From<Ptso26> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptso27 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTSO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 1"]
+    #[doc = "Corresponding field in PDOR becomes 1."]
     PTSO1 = 0x01,
 }
 impl Ptso27 {
@@ -14708,9 +14708,9 @@ impl From<Ptso27> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptso28 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTSO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 1"]
+    #[doc = "Corresponding field in PDOR becomes 1."]
     PTSO1 = 0x01,
 }
 impl Ptso28 {
@@ -14739,9 +14739,9 @@ impl From<Ptso28> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptso29 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTSO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 1"]
+    #[doc = "Corresponding field in PDOR becomes 1."]
     PTSO1 = 0x01,
 }
 impl Ptso29 {
@@ -14770,9 +14770,9 @@ impl From<Ptso29> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptso3 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTSO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 1"]
+    #[doc = "Corresponding field in PDOR becomes 1."]
     PTSO1 = 0x01,
 }
 impl Ptso3 {
@@ -14801,9 +14801,9 @@ impl From<Ptso3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptso30 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTSO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 1"]
+    #[doc = "Corresponding field in PDOR becomes 1."]
     PTSO1 = 0x01,
 }
 impl Ptso30 {
@@ -14832,9 +14832,9 @@ impl From<Ptso30> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptso31 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTSO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 1"]
+    #[doc = "Corresponding field in PDOR becomes 1."]
     PTSO1 = 0x01,
 }
 impl Ptso31 {
@@ -14863,9 +14863,9 @@ impl From<Ptso31> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptso4 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTSO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 1"]
+    #[doc = "Corresponding field in PDOR becomes 1."]
     PTSO1 = 0x01,
 }
 impl Ptso4 {
@@ -14894,9 +14894,9 @@ impl From<Ptso4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptso5 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTSO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 1"]
+    #[doc = "Corresponding field in PDOR becomes 1."]
     PTSO1 = 0x01,
 }
 impl Ptso5 {
@@ -14925,9 +14925,9 @@ impl From<Ptso5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptso6 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTSO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 1"]
+    #[doc = "Corresponding field in PDOR becomes 1."]
     PTSO1 = 0x01,
 }
 impl Ptso6 {
@@ -14956,9 +14956,9 @@ impl From<Ptso6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptso7 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTSO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 1"]
+    #[doc = "Corresponding field in PDOR becomes 1."]
     PTSO1 = 0x01,
 }
 impl Ptso7 {
@@ -14987,9 +14987,9 @@ impl From<Ptso7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptso8 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTSO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 1"]
+    #[doc = "Corresponding field in PDOR becomes 1."]
     PTSO1 = 0x01,
 }
 impl Ptso8 {
@@ -15018,9 +15018,9 @@ impl From<Ptso8> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptso9 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTSO0 = 0x0,
-    #[doc = "Corresponding field in PDOR becomes 1"]
+    #[doc = "Corresponding field in PDOR becomes 1."]
     PTSO1 = 0x01,
 }
 impl Ptso9 {
@@ -15049,9 +15049,9 @@ impl From<Ptso9> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptto0 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTTO0 = 0x0,
-    #[doc = "Set to the inverse of its current logic state"]
+    #[doc = "Set to the inverse of its current logic state."]
     PTTO1 = 0x01,
 }
 impl Ptto0 {
@@ -15080,9 +15080,9 @@ impl From<Ptto0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptto1 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTTO0 = 0x0,
-    #[doc = "Set to the inverse of its current logic state"]
+    #[doc = "Set to the inverse of its current logic state."]
     PTTO1 = 0x01,
 }
 impl Ptto1 {
@@ -15111,9 +15111,9 @@ impl From<Ptto1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptto10 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTTO0 = 0x0,
-    #[doc = "Set to the inverse of its current logic state"]
+    #[doc = "Set to the inverse of its current logic state."]
     PTTO1 = 0x01,
 }
 impl Ptto10 {
@@ -15142,9 +15142,9 @@ impl From<Ptto10> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptto11 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTTO0 = 0x0,
-    #[doc = "Set to the inverse of its current logic state"]
+    #[doc = "Set to the inverse of its current logic state."]
     PTTO1 = 0x01,
 }
 impl Ptto11 {
@@ -15173,9 +15173,9 @@ impl From<Ptto11> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptto12 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTTO0 = 0x0,
-    #[doc = "Set to the inverse of its current logic state"]
+    #[doc = "Set to the inverse of its current logic state."]
     PTTO1 = 0x01,
 }
 impl Ptto12 {
@@ -15204,9 +15204,9 @@ impl From<Ptto12> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptto13 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTTO0 = 0x0,
-    #[doc = "Set to the inverse of its current logic state"]
+    #[doc = "Set to the inverse of its current logic state."]
     PTTO1 = 0x01,
 }
 impl Ptto13 {
@@ -15235,9 +15235,9 @@ impl From<Ptto13> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptto14 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTTO0 = 0x0,
-    #[doc = "Set to the inverse of its current logic state"]
+    #[doc = "Set to the inverse of its current logic state."]
     PTTO1 = 0x01,
 }
 impl Ptto14 {
@@ -15266,9 +15266,9 @@ impl From<Ptto14> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptto15 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTTO0 = 0x0,
-    #[doc = "Set to the inverse of its current logic state"]
+    #[doc = "Set to the inverse of its current logic state."]
     PTTO1 = 0x01,
 }
 impl Ptto15 {
@@ -15297,9 +15297,9 @@ impl From<Ptto15> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptto16 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTTO0 = 0x0,
-    #[doc = "Set to the inverse of its current logic state"]
+    #[doc = "Set to the inverse of its current logic state."]
     PTTO1 = 0x01,
 }
 impl Ptto16 {
@@ -15328,9 +15328,9 @@ impl From<Ptto16> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptto17 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTTO0 = 0x0,
-    #[doc = "Set to the inverse of its current logic state"]
+    #[doc = "Set to the inverse of its current logic state."]
     PTTO1 = 0x01,
 }
 impl Ptto17 {
@@ -15359,9 +15359,9 @@ impl From<Ptto17> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptto18 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTTO0 = 0x0,
-    #[doc = "Set to the inverse of its current logic state"]
+    #[doc = "Set to the inverse of its current logic state."]
     PTTO1 = 0x01,
 }
 impl Ptto18 {
@@ -15390,9 +15390,9 @@ impl From<Ptto18> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptto19 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTTO0 = 0x0,
-    #[doc = "Set to the inverse of its current logic state"]
+    #[doc = "Set to the inverse of its current logic state."]
     PTTO1 = 0x01,
 }
 impl Ptto19 {
@@ -15421,9 +15421,9 @@ impl From<Ptto19> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptto2 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTTO0 = 0x0,
-    #[doc = "Set to the inverse of its current logic state"]
+    #[doc = "Set to the inverse of its current logic state."]
     PTTO1 = 0x01,
 }
 impl Ptto2 {
@@ -15452,9 +15452,9 @@ impl From<Ptto2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptto20 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTTO0 = 0x0,
-    #[doc = "Set to the inverse of its current logic state"]
+    #[doc = "Set to the inverse of its current logic state."]
     PTTO1 = 0x01,
 }
 impl Ptto20 {
@@ -15483,9 +15483,9 @@ impl From<Ptto20> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptto21 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTTO0 = 0x0,
-    #[doc = "Set to the inverse of its current logic state"]
+    #[doc = "Set to the inverse of its current logic state."]
     PTTO1 = 0x01,
 }
 impl Ptto21 {
@@ -15514,9 +15514,9 @@ impl From<Ptto21> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptto22 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTTO0 = 0x0,
-    #[doc = "Set to the inverse of its current logic state"]
+    #[doc = "Set to the inverse of its current logic state."]
     PTTO1 = 0x01,
 }
 impl Ptto22 {
@@ -15545,9 +15545,9 @@ impl From<Ptto22> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptto23 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTTO0 = 0x0,
-    #[doc = "Set to the inverse of its current logic state"]
+    #[doc = "Set to the inverse of its current logic state."]
     PTTO1 = 0x01,
 }
 impl Ptto23 {
@@ -15576,9 +15576,9 @@ impl From<Ptto23> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptto24 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTTO0 = 0x0,
-    #[doc = "Set to the inverse of its current logic state"]
+    #[doc = "Set to the inverse of its current logic state."]
     PTTO1 = 0x01,
 }
 impl Ptto24 {
@@ -15607,9 +15607,9 @@ impl From<Ptto24> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptto25 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTTO0 = 0x0,
-    #[doc = "Set to the inverse of its current logic state"]
+    #[doc = "Set to the inverse of its current logic state."]
     PTTO1 = 0x01,
 }
 impl Ptto25 {
@@ -15638,9 +15638,9 @@ impl From<Ptto25> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptto26 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTTO0 = 0x0,
-    #[doc = "Set to the inverse of its current logic state"]
+    #[doc = "Set to the inverse of its current logic state."]
     PTTO1 = 0x01,
 }
 impl Ptto26 {
@@ -15669,9 +15669,9 @@ impl From<Ptto26> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptto27 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTTO0 = 0x0,
-    #[doc = "Set to the inverse of its current logic state"]
+    #[doc = "Set to the inverse of its current logic state."]
     PTTO1 = 0x01,
 }
 impl Ptto27 {
@@ -15700,9 +15700,9 @@ impl From<Ptto27> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptto28 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTTO0 = 0x0,
-    #[doc = "Set to the inverse of its current logic state"]
+    #[doc = "Set to the inverse of its current logic state."]
     PTTO1 = 0x01,
 }
 impl Ptto28 {
@@ -15731,9 +15731,9 @@ impl From<Ptto28> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptto29 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTTO0 = 0x0,
-    #[doc = "Set to the inverse of its current logic state"]
+    #[doc = "Set to the inverse of its current logic state."]
     PTTO1 = 0x01,
 }
 impl Ptto29 {
@@ -15762,9 +15762,9 @@ impl From<Ptto29> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptto3 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTTO0 = 0x0,
-    #[doc = "Set to the inverse of its current logic state"]
+    #[doc = "Set to the inverse of its current logic state."]
     PTTO1 = 0x01,
 }
 impl Ptto3 {
@@ -15793,9 +15793,9 @@ impl From<Ptto3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptto30 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTTO0 = 0x0,
-    #[doc = "Set to the inverse of its current logic state"]
+    #[doc = "Set to the inverse of its current logic state."]
     PTTO1 = 0x01,
 }
 impl Ptto30 {
@@ -15824,9 +15824,9 @@ impl From<Ptto30> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptto31 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTTO0 = 0x0,
-    #[doc = "Set to the inverse of its current logic state"]
+    #[doc = "Set to the inverse of its current logic state."]
     PTTO1 = 0x01,
 }
 impl Ptto31 {
@@ -15855,9 +15855,9 @@ impl From<Ptto31> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptto4 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTTO0 = 0x0,
-    #[doc = "Set to the inverse of its current logic state"]
+    #[doc = "Set to the inverse of its current logic state."]
     PTTO1 = 0x01,
 }
 impl Ptto4 {
@@ -15886,9 +15886,9 @@ impl From<Ptto4> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptto5 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTTO0 = 0x0,
-    #[doc = "Set to the inverse of its current logic state"]
+    #[doc = "Set to the inverse of its current logic state."]
     PTTO1 = 0x01,
 }
 impl Ptto5 {
@@ -15917,9 +15917,9 @@ impl From<Ptto5> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptto6 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTTO0 = 0x0,
-    #[doc = "Set to the inverse of its current logic state"]
+    #[doc = "Set to the inverse of its current logic state."]
     PTTO1 = 0x01,
 }
 impl Ptto6 {
@@ -15948,9 +15948,9 @@ impl From<Ptto6> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptto7 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTTO0 = 0x0,
-    #[doc = "Set to the inverse of its current logic state"]
+    #[doc = "Set to the inverse of its current logic state."]
     PTTO1 = 0x01,
 }
 impl Ptto7 {
@@ -15979,9 +15979,9 @@ impl From<Ptto7> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptto8 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTTO0 = 0x0,
-    #[doc = "Set to the inverse of its current logic state"]
+    #[doc = "Set to the inverse of its current logic state."]
     PTTO1 = 0x01,
 }
 impl Ptto8 {
@@ -16010,9 +16010,9 @@ impl From<Ptto8> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ptto9 {
-    #[doc = "No change"]
+    #[doc = "No change."]
     PTTO0 = 0x0,
-    #[doc = "Set to the inverse of its current logic state"]
+    #[doc = "Set to the inverse of its current logic state."]
     PTTO1 = 0x01,
 }
 impl Ptto9 {

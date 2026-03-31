@@ -1,4 +1,4 @@
-#[doc = "command register"]
+#[doc = "command register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cmd(pub u32);
@@ -38,14 +38,14 @@ impl defmt::Format for Cmd {
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dataw(pub u32);
 impl Dataw {
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[must_use]
     #[inline(always)]
     pub const fn dataw(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "no description available"]
+    #[doc = "no description available."]
     #[inline(always)]
     pub const fn set_dataw(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -70,7 +70,7 @@ impl defmt::Format for Dataw {
         defmt::write!(f, "Dataw {{ dataw: {=u32:?} }}", self.dataw())
     }
 }
-#[doc = "event register"]
+#[doc = "event register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Event(pub u32);
@@ -139,7 +139,7 @@ impl defmt::Format for Event {
         )
     }
 }
-#[doc = "Clear interrupt enable bits"]
+#[doc = "Clear interrupt enable bits."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct IntClrEnable(pub u32);
@@ -222,7 +222,7 @@ impl defmt::Format for IntClrEnable {
         )
     }
 }
-#[doc = "Clear interrupt status bits"]
+#[doc = "Clear interrupt status bits."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct IntClrStatus(pub u32);
@@ -305,7 +305,7 @@ impl defmt::Format for IntClrStatus {
         )
     }
 }
-#[doc = "Interrupt enable bits"]
+#[doc = "Interrupt enable bits."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct IntEnable(pub u32);
@@ -388,7 +388,7 @@ impl defmt::Format for IntEnable {
         )
     }
 }
-#[doc = "Set interrupt enable bits"]
+#[doc = "Set interrupt enable bits."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct IntSetEnable(pub u32);
@@ -471,7 +471,7 @@ impl defmt::Format for IntSetEnable {
         )
     }
 }
-#[doc = "Set interrupt status bits"]
+#[doc = "Set interrupt status bits."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct IntSetStatus(pub u32);
@@ -554,7 +554,7 @@ impl defmt::Format for IntSetStatus {
         )
     }
 }
-#[doc = "Interrupt status bits"]
+#[doc = "Interrupt status bits."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct IntStatus(pub u32);
@@ -637,7 +637,7 @@ impl defmt::Format for IntStatus {
         )
     }
 }
-#[doc = "Controller+Memory module identification"]
+#[doc = "Controller+Memory module identification."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct ModuleId(pub u32);
@@ -720,7 +720,7 @@ impl defmt::Format for ModuleId {
         )
     }
 }
-#[doc = "start (or only) address for next flash command"]
+#[doc = "start (or only) address for next flash command."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Starta(pub u32);
@@ -757,7 +757,7 @@ impl defmt::Format for Starta {
         defmt::write!(f, "Starta {{ starta: {=u32:?} }}", self.starta())
     }
 }
-#[doc = "end address for next flash command, if command operates on address ranges"]
+#[doc = "end address for next flash command, if command operates on address ranges."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Stopa(pub u32);

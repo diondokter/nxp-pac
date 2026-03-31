@@ -466,6 +466,8 @@ pub const PINS: &[Pin] = &[
 pub const PERIPHERALS: &[Peripheral] = &[
     Peripheral {
         name: "ADC0",
+        address: 0x400AF000,
+        driver_name: "mcxa/ADC",
         signals: &[
             Signal {
                 name: "A0",
@@ -693,6 +695,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "ADC1",
+        address: 0x400B0000,
+        driver_name: "mcxa/ADC",
         signals: &[
             Signal {
                 name: "A0",
@@ -893,6 +897,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "ADC2",
+        address: 0,
+        driver_name: "",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[DmaMux {
@@ -903,6 +909,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "ADC3",
+        address: 0,
+        driver_name: "",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[DmaMux {
@@ -913,18 +921,24 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "AOI0",
+        address: 0x40089000,
+        driver_name: "mcxa/AOI",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "AOI1",
+        address: 0x40097000,
+        driver_name: "mcxa/AOI",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "CAN0",
+        address: 0x400CC000,
+        driver_name: "",
         signals: &[
             Signal {
                 name: "RXD",
@@ -988,6 +1002,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "CAN1",
+        address: 0,
+        driver_name: "",
         signals: &[
             Signal {
                 name: "RXD",
@@ -1071,18 +1087,24 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "CDOG0",
+        address: 0x40100000,
+        driver_name: "mcxa/CDOG",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "CDOG1",
+        address: 0x40107000,
+        driver_name: "mcxa/CDOG",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "CLKOUT",
+        address: 0,
+        driver_name: "",
         signals: &[Signal {
             name: "IN",
             pins: &[
@@ -1114,12 +1136,16 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "CMC",
+        address: 0x4008B000,
+        driver_name: "mcxa/CMC",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "CMP0",
+        address: 0x400B1000,
+        driver_name: "mcxa/CMP",
         signals: &[
             Signal {
                 name: "IN0",
@@ -1197,6 +1223,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "CMP1",
+        address: 0x400B2000,
+        driver_name: "mcxa/CMP",
         signals: &[
             Signal {
                 name: "IN0",
@@ -1279,18 +1307,24 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "CMP2",
+        address: 0,
+        driver_name: "",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "CRC0",
+        address: 0x4008A000,
+        driver_name: "mcxa/CRC",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "CTIMER0",
+        address: 0x40004000,
+        driver_name: "mcxa/CTIMER",
         signals: &[
             Signal {
                 name: "INP0",
@@ -1851,6 +1885,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "CTIMER1",
+        address: 0x40005000,
+        driver_name: "mcxa/CTIMER",
         signals: &[
             Signal {
                 name: "INP0",
@@ -2336,6 +2372,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "CTIMER2",
+        address: 0x40006000,
+        driver_name: "mcxa/CTIMER",
         signals: &[
             Signal {
                 name: "INP0",
@@ -2841,6 +2879,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "CTIMER3",
+        address: 0x40007000,
+        driver_name: "mcxa/CTIMER",
         signals: &[
             Signal {
                 name: "INP0",
@@ -3341,6 +3381,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "CTIMER4",
+        address: 0x40008000,
+        driver_name: "mcxa/CTIMER",
         signals: &[
             Signal {
                 name: "INP0",
@@ -3836,6 +3878,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "DAC0",
+        address: 0x400B4000,
+        driver_name: "mcxa/DAC0",
         signals: &[Signal {
             name: "OUT",
             pins: &[SignalPin {
@@ -3853,25 +3897,41 @@ pub const PERIPHERALS: &[Peripheral] = &[
         }],
     },
     Peripheral {
-        name: "DebugMailbox0",
+        name: "DBGMAILBOX",
+        address: 0x40101000,
+        driver_name: "mcxa/DBGMAILBOX",
+        signals: &[],
+        flexcomm: None,
+        dma_muxing: &[],
+    },
+    Peripheral {
+        name: "DMA0",
+        address: 0x40080000,
+        driver_name: "mcxa/DMA::DMA8",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "EIM0",
+        address: 0x4008C000,
+        driver_name: "mcxa/EIM0",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "ERM0",
+        address: 0x4008D000,
+        driver_name: "mcxa/ERM0",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "EXTAL48M",
+        address: 0,
+        driver_name: "",
         signals: &[Signal {
             name: "IN",
             pins: &[SignalPin {
@@ -3886,6 +3946,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "FLEXIO0",
+        address: 0x40099000,
+        driver_name: "mcxa/FLEXIO0",
         signals: &[
             Signal {
                 name: "D0",
@@ -4636,18 +4698,24 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "FMC0",
+        address: 0x40094000,
+        driver_name: "mcxa/FMC0",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "FMU0",
+        address: 0x40095000,
+        driver_name: "mcxa/FMU",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "FREQME0",
+        address: 0x40009000,
+        driver_name: "mcxa/FREQME0",
         signals: &[
             Signal {
                 name: "CLK_IN0",
@@ -4714,7 +4782,9 @@ pub const PERIPHERALS: &[Peripheral] = &[
         dma_muxing: &[],
     },
     Peripheral {
-        name: "FlexPWM0",
+        name: "FLEX_PWM0",
+        address: 0x400A9000,
+        driver_name: "mcxa/FLEXPWM",
         signals: &[
             Signal {
                 name: "A0",
@@ -5344,7 +5414,9 @@ pub const PERIPHERALS: &[Peripheral] = &[
         ],
     },
     Peripheral {
-        name: "FlexPWM1",
+        name: "FLEX_PWM1",
+        address: 0x400AA000,
+        driver_name: "mcxa/FLEXPWM",
         signals: &[
             Signal {
                 name: "A0",
@@ -5567,6 +5639,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "GPIO0",
+        address: 0x40102000,
+        driver_name: "mcxa/GPIO",
         signals: &[
             Signal {
                 name: "0",
@@ -5794,6 +5868,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "GPIO1",
+        address: 0x40103000,
+        driver_name: "mcxa/GPIO",
         signals: &[
             Signal {
                 name: "0",
@@ -6012,6 +6088,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "GPIO2",
+        address: 0x40104000,
+        driver_name: "mcxa/GPIO",
         signals: &[
             Signal {
                 name: "0",
@@ -6264,6 +6342,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "GPIO3",
+        address: 0x40105000,
+        driver_name: "mcxa/GPIO",
         signals: &[
             Signal {
                 name: "0",
@@ -6563,6 +6643,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "GPIO4",
+        address: 0x40106000,
+        driver_name: "mcxa/GPIO",
         signals: &[
             Signal {
                 name: "0",
@@ -6646,6 +6728,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "I3C0",
+        address: 0x40002000,
+        driver_name: "mcxa/I3C",
         signals: &[
             Signal {
                 name: "PUR",
@@ -6722,12 +6806,16 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "INPUTMUX0",
+        address: 0x40001000,
+        driver_name: "mcxa/INPUTMUX",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "ISPMODE",
+        address: 0,
+        driver_name: "",
         signals: &[Signal {
             name: "N",
             pins: &[
@@ -6749,6 +6837,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "LPI2C0",
+        address: 0x4009A000,
+        driver_name: "mcxa/LPI2C",
         signals: &[
             Signal {
                 name: "HREQ",
@@ -6826,6 +6916,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "LPI2C1",
+        address: 0x4009B000,
+        driver_name: "mcxa/LPI2C",
         signals: &[
             Signal {
                 name: "SCL",
@@ -6908,6 +7000,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "LPI2C2",
+        address: 0x400D4000,
+        driver_name: "mcxa/LPI2C",
         signals: &[
             Signal {
                 name: "HREQ",
@@ -6999,6 +7093,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "LPI2C3",
+        address: 0x400D5000,
+        driver_name: "mcxa/LPI2C",
         signals: &[
             Signal {
                 name: "HREQ",
@@ -7076,6 +7172,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "LPSPI0",
+        address: 0x4009C000,
+        driver_name: "mcxa/LPSPI",
         signals: &[
             Signal {
                 name: "PCS0",
@@ -7206,6 +7304,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "LPSPI1",
+        address: 0x4009D000,
+        driver_name: "mcxa/LPSPI",
         signals: &[
             Signal {
                 name: "PCS0",
@@ -7341,6 +7441,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "LPTMR0",
+        address: 0x400AB000,
+        driver_name: "mcxa/LPTMR0",
         signals: &[
             Signal {
                 name: "ALT2",
@@ -7370,6 +7472,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "LPUART0",
+        address: 0x4009F000,
+        driver_name: "mcxa/LPUART",
         signals: &[
             Signal {
                 name: "CTS_B",
@@ -7472,6 +7576,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "LPUART1",
+        address: 0x400A0000,
+        driver_name: "mcxa/LPUART",
         signals: &[
             Signal {
                 name: "CTS_B",
@@ -7599,6 +7705,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "LPUART2",
+        address: 0x400A1000,
+        driver_name: "mcxa/LPUART",
         signals: &[
             Signal {
                 name: "CTS_B",
@@ -7731,6 +7839,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "LPUART3",
+        address: 0x400A2000,
+        driver_name: "mcxa/LPUART",
         signals: &[
             Signal {
                 name: "CTS_B",
@@ -7833,6 +7943,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "LPUART4",
+        address: 0x400A3000,
+        driver_name: "mcxa/LPUART",
         signals: &[
             Signal {
                 name: "CTS_B",
@@ -7945,6 +8057,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "LPUART5",
+        address: 0,
+        driver_name: "",
         signals: &[
             Signal {
                 name: "CTS_B",
@@ -8067,6 +8181,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "MAU0",
+        address: 0,
+        driver_name: "",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[DmaMux {
@@ -8077,6 +8193,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "OPAMP0",
+        address: 0x400B7000,
+        driver_name: "mcxa/OPAMP0",
         signals: &[
             Signal {
                 name: "INN",
@@ -8111,66 +8229,88 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "OPAMP1",
+        address: 0,
+        driver_name: "",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "OPAMP2",
+        address: 0,
+        driver_name: "",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "OPAMP3",
+        address: 0,
+        driver_name: "",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "OSTIMER0",
+        address: 0x400AD000,
+        driver_name: "mcxa/OSTIMER",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "PKC0",
+        address: 0x400EA000,
+        driver_name: "mcxa/PKC0",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "PORT0",
+        address: 0x400BC000,
+        driver_name: "mcxa/PORT",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "PORT1",
+        address: 0x400BD000,
+        driver_name: "mcxa/PORT",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "PORT2",
+        address: 0x400BE000,
+        driver_name: "mcxa/PORT",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "PORT3",
+        address: 0x400BF000,
+        driver_name: "mcxa/PORT",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "PORT4",
+        address: 0x400C0000,
+        driver_name: "mcxa/PORT",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
-        name: "QDC0",
+        name: "EQDC0",
+        address: 0x400A7000,
+        driver_name: "mcxa/EQDC",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[DmaMux {
@@ -8180,7 +8320,9 @@ pub const PERIPHERALS: &[Peripheral] = &[
         }],
     },
     Peripheral {
-        name: "QDC1",
+        name: "EQDC1",
+        address: 0x400A8000,
+        driver_name: "mcxa/EQDC",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[DmaMux {
@@ -8191,6 +8333,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "RESET",
+        address: 0,
+        driver_name: "",
         signals: &[Signal {
             name: "B",
             pins: &[
@@ -8212,18 +8356,24 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "RTC0",
+        address: 0x400EE000,
+        driver_name: "mcxa/RTC2xx::RTC",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "SCG0",
+        address: 0x4008F000,
+        driver_name: "mcxa/SCG",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "SGI0",
+        address: 0x400EB000,
+        driver_name: "mcxa/SGI0",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[
@@ -8241,6 +8391,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "SLCD0",
+        address: 0,
+        driver_name: "",
         signals: &[
             Signal {
                 name: "P0",
@@ -9034,6 +9186,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "SPC0",
+        address: 0x40090000,
+        driver_name: "mcxa/SPC",
         signals: &[Signal {
             name: "LPREQ",
             pins: &[SignalPin {
@@ -9048,12 +9202,16 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "SYSCON",
+        address: 0x40091000,
+        driver_name: "mcxa/SYSCON2xx::SYSCON",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
-        name: "SmartDMA0",
+        name: "SMART_DMA0",
+        address: 0x4000E000,
+        driver_name: "mcxa/SMARTDMA0",
         signals: &[
             Signal {
                 name: "PIO0",
@@ -9693,6 +9851,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "TAMPER0",
+        address: 0,
+        driver_name: "",
         signals: &[Signal {
             name: "IN",
             pins: &[SignalPin {
@@ -9707,6 +9867,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "TAMPER1",
+        address: 0,
+        driver_name: "",
         signals: &[Signal {
             name: "IN",
             pins: &[SignalPin {
@@ -9721,6 +9883,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "TAMPER2",
+        address: 0,
+        driver_name: "",
         signals: &[Signal {
             name: "IN",
             pins: &[SignalPin {
@@ -9735,6 +9899,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "TAMPER3",
+        address: 0,
+        driver_name: "",
         signals: &[Signal {
             name: "IN",
             pins: &[SignalPin {
@@ -9749,6 +9915,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "TAMPER4",
+        address: 0,
+        driver_name: "",
         signals: &[Signal {
             name: "IN",
             pins: &[SignalPin {
@@ -9763,6 +9931,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "TAMPER5",
+        address: 0,
+        driver_name: "",
         signals: &[Signal {
             name: "IN",
             pins: &[SignalPin {
@@ -9777,6 +9947,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "TCLK/SWCLK",
+        address: 0,
+        driver_name: "",
         signals: &[Signal {
             name: "IN",
             pins: &[SignalPin {
@@ -9791,12 +9963,16 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "TDET0",
+        address: 0x400E9000,
+        driver_name: "mcxa/TDET0",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "TDI",
+        address: 0,
+        driver_name: "",
         signals: &[Signal {
             name: "IN",
             pins: &[SignalPin {
@@ -9811,6 +9987,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "TDO/SWO",
+        address: 0,
+        driver_name: "",
         signals: &[Signal {
             name: "IN",
             pins: &[SignalPin {
@@ -9825,6 +10003,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "TMS/SWDIO",
+        address: 0,
+        driver_name: "",
         signals: &[Signal {
             name: "IN",
             pins: &[SignalPin {
@@ -9839,18 +10019,24 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "TRNG0",
+        address: 0x400EC000,
+        driver_name: "mcxa/TRNG",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "UDF0",
+        address: 0x400ED000,
+        driver_name: "mcxa/UDF0",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "USB0",
+        address: 0x400A4000,
+        driver_name: "mcxa/USB0",
         signals: &[Signal {
             name: "VBUS_DET",
             pins: &[SignalPin {
@@ -9865,6 +10051,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "UTICK0",
+        address: 0x4000B000,
+        driver_name: "mcxa/UTICK0",
         signals: &[
             Signal {
                 name: "CAP0",
@@ -9936,12 +10124,16 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "VBAT0",
+        address: 0x40093000,
+        driver_name: "mcxa/VBAT",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "VREFI",
+        address: 0,
+        driver_name: "",
         signals: &[Signal {
             name: "IN",
             pins: &[SignalPin {
@@ -9956,12 +10148,16 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "WAKETIMER0",
+        address: 0x400AE000,
+        driver_name: "mcxa/WAKETIMER0",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "WUU0",
+        address: 0x40092000,
+        driver_name: "mcxa/WUU0",
         signals: &[
             Signal {
                 name: "IN0",
@@ -10234,12 +10430,16 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "WWDT0",
+        address: 0x4000C000,
+        driver_name: "mcxa/WWDT",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
         name: "XTAL48M",
+        address: 0,
+        driver_name: "",
         signals: &[Signal {
             name: "IN",
             pins: &[SignalPin {
@@ -10253,150 +10453,112 @@ pub const PERIPHERALS: &[Peripheral] = &[
         dma_muxing: &[],
     },
     Peripheral {
-        name: "eDMA_0_MP",
+        name: "EDMA_0_TCD",
+        address: 0x40081000,
+        driver_name: "mcxa/EDMA_TCD::TCD8",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
     Peripheral {
-        name: "eDMA_0_TCD0",
-        signals: &[],
-        flexcomm: None,
-        dma_muxing: &[],
-    },
-    Peripheral {
-        name: "eDMA_0_TCD1",
-        signals: &[],
-        flexcomm: None,
-        dma_muxing: &[],
-    },
-    Peripheral {
-        name: "eDMA_0_TCD2",
-        signals: &[],
-        flexcomm: None,
-        dma_muxing: &[],
-    },
-    Peripheral {
-        name: "eDMA_0_TCD3",
-        signals: &[],
-        flexcomm: None,
-        dma_muxing: &[],
-    },
-    Peripheral {
-        name: "eDMA_0_TCD4",
-        signals: &[],
-        flexcomm: None,
-        dma_muxing: &[],
-    },
-    Peripheral {
-        name: "eDMA_0_TCD5",
-        signals: &[],
-        flexcomm: None,
-        dma_muxing: &[],
-    },
-    Peripheral {
-        name: "eDMA_0_TCD6",
-        signals: &[],
-        flexcomm: None,
-        dma_muxing: &[],
-    },
-    Peripheral {
-        name: "eDMA_0_TCD7",
+        name: "MRCC0",
+        address: 0x40091000,
+        driver_name: "mcxa/MRCC2xx::MRCC",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[],
     },
 ];
-pub const INTERRUPTS: &[&str] = &[
-    "ADC0",
-    "ADC1",
-    "CAN0",
-    "CDOG0",
-    "CDOG1",
-    "CMC",
-    "CMP0",
-    "CMP1",
-    "CTIMER0",
-    "CTIMER1",
-    "CTIMER2",
-    "CTIMER3",
-    "CTIMER4",
-    "DAC0",
-    "DMA_CH0",
-    "DMA_CH1",
-    "DMA_CH2",
-    "DMA_CH3",
-    "DMA_CH4",
-    "DMA_CH5",
-    "DMA_CH6",
-    "DMA_CH7",
-    "EQDC0_COMPARE",
-    "EQDC0_HOME",
-    "EQDC0_INDEX",
-    "EQDC0_WATCHDOG",
-    "EQDC1_COMPARE",
-    "EQDC1_HOME",
-    "EQDC1_INDEX",
-    "EQDC1_WATCHDOG",
-    "ERM0_MULTI_BIT",
-    "ERM0_SINGLE_BIT",
-    "FLEXIO",
-    "FLEXPWM0_FAULT",
-    "FLEXPWM0_RELOAD_ERROR",
-    "FLEXPWM0_SUBMODULE0",
-    "FLEXPWM0_SUBMODULE1",
-    "FLEXPWM0_SUBMODULE2",
-    "FLEXPWM0_SUBMODULE3",
-    "FLEXPWM1_FAULT",
-    "FLEXPWM1_RELOAD_ERROR",
-    "FLEXPWM1_SUBMODULE0",
-    "FLEXPWM1_SUBMODULE1",
-    "FLEXPWM1_SUBMODULE2",
-    "FLEXPWM1_SUBMODULE3",
-    "FMU0",
-    "FREQME0",
-    "GLIKEY0",
-    "GPIO0",
-    "GPIO1",
-    "GPIO2",
-    "GPIO3",
-    "GPIO4",
-    "I3C0",
-    "LPI2C0",
-    "LPI2C1",
-    "LPI2C2",
-    "LPI2C3",
-    "LPSPI0",
-    "LPSPI1",
-    "LPTMR0",
-    "LPUART0",
-    "LPUART1",
-    "LPUART2",
-    "LPUART3",
-    "LPUART4",
-    "MAU",
-    "MBC0",
-    "OS_EVENT",
-    "PKC",
-    "RESERVED111",
-    "RESERVED132",
-    "RESERVED133",
-    "RESERVED137",
-    "RESERVED16",
-    "RESERVED36",
-    "RESERVED82",
-    "RTC",
-    "RTC_1HZ",
-    "SCG0",
-    "SECURE_ERR",
-    "SGI",
-    "SMARTDMA",
-    "SPC0",
-    "TDET",
-    "TRNG0",
-    "USB0",
-    "UTICK0",
-    "WAKETIMER0",
-    "WUU0",
-    "WWDT0",
+pub const INTERRUPTS: &[(&str, u32)] = &[
+    ("RESERVED16", 0u32),
+    ("CMC", 1u32),
+    ("DMA0_CH0", 2u32),
+    ("DMA0_CH1", 3u32),
+    ("DMA0_CH2", 4u32),
+    ("DMA0_CH3", 5u32),
+    ("DMA0_CH4", 6u32),
+    ("DMA0_CH5", 7u32),
+    ("DMA0_CH6", 8u32),
+    ("DMA0_CH7", 9u32),
+    ("ERM0_SINGLE_BIT", 10u32),
+    ("ERM0_MULTI_BIT", 11u32),
+    ("FMU0", 12u32),
+    ("GLIKEY0", 13u32),
+    ("MBC0", 14u32),
+    ("SCG0", 15u32),
+    ("SPC0", 16u32),
+    ("TDET", 17u32),
+    ("WUU0", 18u32),
+    ("CAN0", 19u32),
+    ("RESERVED36", 20u32),
+    ("FLEXIO", 23u32),
+    ("I3C0", 24u32),
+    ("LPI2C0", 26u32),
+    ("LPI2C1", 27u32),
+    ("LPSPI0", 28u32),
+    ("LPSPI1", 29u32),
+    ("LPUART0", 31u32),
+    ("LPUART1", 32u32),
+    ("LPUART2", 33u32),
+    ("LPUART3", 34u32),
+    ("LPUART4", 35u32),
+    ("USB0", 36u32),
+    ("CDOG0", 38u32),
+    ("CTIMER0", 39u32),
+    ("CTIMER1", 40u32),
+    ("CTIMER2", 41u32),
+    ("CTIMER3", 42u32),
+    ("CTIMER4", 43u32),
+    ("FLEXPWM0_RELOAD_ERROR", 44u32),
+    ("FLEXPWM0_FAULT", 45u32),
+    ("FLEXPWM0_SUBMODULE0", 46u32),
+    ("FLEXPWM0_SUBMODULE1", 47u32),
+    ("FLEXPWM0_SUBMODULE2", 48u32),
+    ("FLEXPWM0_SUBMODULE3", 49u32),
+    ("EQDC0_COMPARE", 50u32),
+    ("EQDC0_HOME", 51u32),
+    ("EQDC0_WATCHDOG", 52u32),
+    ("EQDC0_INDEX", 53u32),
+    ("FREQME0", 54u32),
+    ("LPTMR0", 55u32),
+    ("OS_EVENT", 57u32),
+    ("WAKETIMER0", 58u32),
+    ("UTICK0", 59u32),
+    ("WWDT0", 60u32),
+    ("ADC0", 62u32),
+    ("ADC1", 63u32),
+    ("CMP0", 64u32),
+    ("CMP1", 65u32),
+    ("RESERVED82", 66u32),
+    ("DAC0", 67u32),
+    ("GPIO0", 71u32),
+    ("GPIO1", 72u32),
+    ("GPIO2", 73u32),
+    ("GPIO3", 74u32),
+    ("GPIO4", 75u32),
+    ("LPI2C2", 77u32),
+    ("LPI2C3", 78u32),
+    ("FLEXPWM1_RELOAD_ERROR", 79u32),
+    ("FLEXPWM1_FAULT", 80u32),
+    ("FLEXPWM1_SUBMODULE0", 81u32),
+    ("FLEXPWM1_SUBMODULE1", 82u32),
+    ("FLEXPWM1_SUBMODULE2", 83u32),
+    ("FLEXPWM1_SUBMODULE3", 84u32),
+    ("EQDC1_COMPARE", 85u32),
+    ("EQDC1_HOME", 86u32),
+    ("EQDC1_WATCHDOG", 87u32),
+    ("EQDC1_INDEX", 88u32),
+    ("RESERVED111", 95u32),
+    ("MAU", 107u32),
+    ("SMARTDMA", 108u32),
+    ("CDOG1", 109u32),
+    ("PKC", 110u32),
+    ("SGI", 111u32),
+    ("TRNG0", 113u32),
+    ("SECURE_ERR", 114u32),
+    ("RESERVED132", 116u32),
+    ("RESERVED133", 117u32),
+    ("RTC", 119u32),
+    ("RTC_1HZ", 120u32),
+    ("RESERVED137", 121u32),
 ];

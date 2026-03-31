@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum BsyFil {
-    #[doc = "MICFIL is stopped"]
+    #[doc = "MICFIL is stopped."]
     STOPPED = 0x0,
-    #[doc = "MICFIL is running"]
+    #[doc = "MICFIL is running."]
     RUNNING = 0x01,
 }
 impl BsyFil {
@@ -33,9 +33,9 @@ impl From<BsyFil> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ch0f {
-    #[doc = "Not surpassed"]
+    #[doc = "Not surpassed."]
     WM_NOTREACHED = 0x0,
-    #[doc = "Surpassed"]
+    #[doc = "Surpassed."]
     WM_REACHED = 0x01,
 }
 impl Ch0f {
@@ -64,9 +64,9 @@ impl From<Ch0f> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ch1f {
-    #[doc = "Not surpassed"]
+    #[doc = "Not surpassed."]
     WM_NOTREACHED = 0x0,
-    #[doc = "Surpassed"]
+    #[doc = "Surpassed."]
     WM_REACHED = 0x01,
 }
 impl Ch1f {
@@ -95,9 +95,9 @@ impl From<Ch1f> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ch2f {
-    #[doc = "Not surpassed"]
+    #[doc = "Not surpassed."]
     WM_NOTREACHED = 0x0,
-    #[doc = "Surpassed"]
+    #[doc = "Surpassed."]
     WM_REACHED = 0x01,
 }
 impl Ch2f {
@@ -126,9 +126,9 @@ impl From<Ch2f> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ch3f {
-    #[doc = "Not surpassed"]
+    #[doc = "Not surpassed."]
     WM_NOTREACHED = 0x0,
-    #[doc = "Surpassed"]
+    #[doc = "Surpassed."]
     WM_REACHED = 0x01,
 }
 impl Ch3f {
@@ -157,9 +157,9 @@ impl From<Ch3f> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cicosr {
-    #[doc = "CIC oversampling rate = 0"]
+    #[doc = "CIC oversampling rate = 0."]
     CICOSR_0 = 0x0,
-    #[doc = "CIC oversampling rate = 1"]
+    #[doc = "CIC oversampling rate = 1."]
     CICOSR_1 = 0x01,
     #[doc = "..."]
     CICOSR_2_2 = 0x02,
@@ -182,7 +182,7 @@ pub enum Cicosr {
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "CIC oversampling rate = 15"]
+    #[doc = "CIC oversampling rate = 15."]
     CICOSR_15 = 0x0f,
 }
 impl Cicosr {
@@ -211,9 +211,9 @@ impl From<Cicosr> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Clkdiv(u8);
 impl Clkdiv {
-    #[doc = "Internal clock divider value = 0"]
+    #[doc = "Internal clock divider value = 0."]
     pub const CLKDIV_0: Self = Self(0x0);
-    #[doc = "Internal clock divider value = 1"]
+    #[doc = "Internal clock divider value = 1."]
     pub const CLKDIV_1: Self = Self(0x01);
     #[doc = "..."]
     pub const CLKDIV_2_2: Self = Self(0x02);
@@ -231,7 +231,7 @@ impl Clkdiv {
     pub const CLKDIV_2_8: Self = Self(0x08);
     #[doc = "..."]
     pub const CLKDIV_2_9: Self = Self(0x09);
-    #[doc = "Internal clock divider value = 255"]
+    #[doc = "Internal clock divider value = 255."]
     pub const CLKDIV_255: Self = Self(0xff);
 }
 impl Clkdiv {
@@ -295,9 +295,9 @@ impl From<Clkdiv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Clkdivdis {
-    #[doc = "Enables"]
+    #[doc = "Enables."]
     ENABLE = 0x0,
-    #[doc = "Disables"]
+    #[doc = "Disables."]
     DISABLE = 0x01,
 }
 impl Clkdivdis {
@@ -326,9 +326,9 @@ impl From<Clkdivdis> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dbg {
-    #[doc = "Normal"]
+    #[doc = "Normal."]
     NORMAL = 0x0,
-    #[doc = "Debug"]
+    #[doc = "Debug."]
     DEBUG = 0x01,
 }
 impl Dbg {
@@ -357,9 +357,9 @@ impl From<Dbg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DcBypass {
-    #[doc = "Active"]
+    #[doc = "Active."]
     DCACTIVE = 0x0,
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DCBYPASSED = 0x01,
 }
 impl DcBypass {
@@ -388,13 +388,13 @@ impl From<DcBypass> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DcCtrlDcconfig0 {
-    #[doc = "20 Hz (PDM_CLK = 3.072 MHz)"]
+    #[doc = "20 Hz (PDM_CLK = 3.072 MHz)."]
     DC_REM_20HZ = 0x0,
-    #[doc = "13.3 Hz (PDM_CLK = 3.072 MHz)"]
+    #[doc = "13.3 Hz (PDM_CLK = 3.072 MHz)."]
     DC_REM_13P3HZ = 0x01,
-    #[doc = "40 Hz (PDM_CLK = 3.072 MHz)"]
+    #[doc = "40 Hz (PDM_CLK = 3.072 MHz)."]
     DC_REM_40HZ = 0x02,
-    #[doc = "DC remover is bypassed"]
+    #[doc = "DC remover is bypassed."]
     DC_REM_BYPASS = 0x03,
 }
 impl DcCtrlDcconfig0 {
@@ -423,13 +423,13 @@ impl From<DcCtrlDcconfig0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DcCtrlDcconfig1 {
-    #[doc = "20 Hz (PDM_CLK = 3.072 MHz)"]
+    #[doc = "20 Hz (PDM_CLK = 3.072 MHz)."]
     DC_REM_20HZ = 0x0,
-    #[doc = "13.3 Hz (PDM_CLK = 3.072 MHz)"]
+    #[doc = "13.3 Hz (PDM_CLK = 3.072 MHz)."]
     DC_REM_13P3HZ = 0x01,
-    #[doc = "40 Hz (PDM_CLK = 3.072 MHz)"]
+    #[doc = "40 Hz (PDM_CLK = 3.072 MHz)."]
     DC_REM_40HZ = 0x02,
-    #[doc = "DC remover is bypassed"]
+    #[doc = "DC remover is bypassed."]
     DC_REM_BYPASS = 0x03,
 }
 impl DcCtrlDcconfig1 {
@@ -458,13 +458,13 @@ impl From<DcCtrlDcconfig1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DcCtrlDcconfig2 {
-    #[doc = "20 Hz (PDM_CLK = 3.072 MHz)"]
+    #[doc = "20 Hz (PDM_CLK = 3.072 MHz)."]
     DC_REM_20HZ = 0x0,
-    #[doc = "13.3 Hz (PDM_CLK = 3.072 MHz)"]
+    #[doc = "13.3 Hz (PDM_CLK = 3.072 MHz)."]
     DC_REM_13P3HZ = 0x01,
-    #[doc = "40 Hz (PDM_CLK = 3.072 MHz)"]
+    #[doc = "40 Hz (PDM_CLK = 3.072 MHz)."]
     DC_REM_40HZ = 0x02,
-    #[doc = "DC remover is bypassed"]
+    #[doc = "DC remover is bypassed."]
     DC_REM_BYPASS = 0x03,
 }
 impl DcCtrlDcconfig2 {
@@ -493,13 +493,13 @@ impl From<DcCtrlDcconfig2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DcCtrlDcconfig3 {
-    #[doc = "20 Hz (PDM_CLK = 3.072 MHz)"]
+    #[doc = "20 Hz (PDM_CLK = 3.072 MHz)."]
     DC_REM_20HZ = 0x0,
-    #[doc = "13.3 Hz (PDM_CLK = 3.072 MHz)"]
+    #[doc = "13.3 Hz (PDM_CLK = 3.072 MHz)."]
     DC_REM_13P3HZ = 0x01,
-    #[doc = "40 Hz (PDM_CLK = 3.072 MHz)"]
+    #[doc = "40 Hz (PDM_CLK = 3.072 MHz)."]
     DC_REM_40HZ = 0x02,
-    #[doc = "DC remover is bypassed"]
+    #[doc = "DC remover is bypassed."]
     DC_REM_BYPASS = 0x03,
 }
 impl DcCtrlDcconfig3 {
@@ -528,9 +528,9 @@ impl From<DcCtrlDcconfig3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DcOutBypass {
-    #[doc = "Active"]
+    #[doc = "Active."]
     DCACTIVE = 0x0,
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DCBYPASSED = 0x01,
 }
 impl DcOutBypass {
@@ -559,13 +559,13 @@ impl From<DcOutBypass> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DcOutCtrlDcconfig0 {
-    #[doc = "20 Hz (FS = 48 kHz)"]
+    #[doc = "20 Hz (FS = 48 kHz)."]
     DC_REM_20HZ = 0x0,
-    #[doc = "13.3 Hz (FS = 48 kHz)"]
+    #[doc = "13.3 Hz (FS = 48 kHz)."]
     DC_REM_13P3HZ = 0x01,
-    #[doc = "40 Hz (FS = 48 kHz)"]
+    #[doc = "40 Hz (FS = 48 kHz)."]
     DC_REM_40HZ = 0x02,
-    #[doc = "DC remover is bypassed"]
+    #[doc = "DC remover is bypassed."]
     DC_REM_BYPASSED = 0x03,
 }
 impl DcOutCtrlDcconfig0 {
@@ -594,13 +594,13 @@ impl From<DcOutCtrlDcconfig0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DcOutCtrlDcconfig1 {
-    #[doc = "20 Hz (FS = 48 kHz)"]
+    #[doc = "20 Hz (FS = 48 kHz)."]
     DC_REM_20HZ = 0x0,
-    #[doc = "13.3 Hz (FS = 48 kHz)"]
+    #[doc = "13.3 Hz (FS = 48 kHz)."]
     DC_REM_13P3HZ = 0x01,
-    #[doc = "40 Hz (FS = 48 kHz)"]
+    #[doc = "40 Hz (FS = 48 kHz)."]
     DC_REM_40HZ = 0x02,
-    #[doc = "DC remover is bypassed"]
+    #[doc = "DC remover is bypassed."]
     DC_REM_BYPASSED = 0x03,
 }
 impl DcOutCtrlDcconfig1 {
@@ -629,13 +629,13 @@ impl From<DcOutCtrlDcconfig1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DcOutCtrlDcconfig2 {
-    #[doc = "20 Hz (FS = 48 kHz)"]
+    #[doc = "20 Hz (FS = 48 kHz)."]
     DC_REM_20HZ = 0x0,
-    #[doc = "13.3 Hz (FS = 48 kHz)"]
+    #[doc = "13.3 Hz (FS = 48 kHz)."]
     DC_REM_13P3HZ = 0x01,
-    #[doc = "40 Hz (FS = 48 kHz)"]
+    #[doc = "40 Hz (FS = 48 kHz)."]
     DC_REM_40HZ = 0x02,
-    #[doc = "DC remover is bypassed"]
+    #[doc = "DC remover is bypassed."]
     DC_REM_BYPASSED = 0x03,
 }
 impl DcOutCtrlDcconfig2 {
@@ -664,13 +664,13 @@ impl From<DcOutCtrlDcconfig2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DcOutCtrlDcconfig3 {
-    #[doc = "20 Hz (FS = 48 kHz)"]
+    #[doc = "20 Hz (FS = 48 kHz)."]
     DC_REM_20HZ = 0x0,
-    #[doc = "13.3 Hz (FS = 48 kHz)"]
+    #[doc = "13.3 Hz (FS = 48 kHz)."]
     DC_REM_13P3HZ = 0x01,
-    #[doc = "40 Hz (FS = 48 kHz)"]
+    #[doc = "40 Hz (FS = 48 kHz)."]
     DC_REM_40HZ = 0x02,
-    #[doc = "DC remover is bypassed"]
+    #[doc = "DC remover is bypassed."]
     DC_REM_BYPASSED = 0x03,
 }
 impl DcOutCtrlDcconfig3 {
@@ -699,9 +699,9 @@ impl From<DcOutCtrlDcconfig3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Decfils {
-    #[doc = "Stops decimation filter"]
+    #[doc = "Stops decimation filter."]
     STOP = 0x0,
-    #[doc = "Keeps decimation filter running"]
+    #[doc = "Keeps decimation filter running."]
     RUN = 0x01,
 }
 impl Decfils {
@@ -730,11 +730,11 @@ impl From<Decfils> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Disel {
-    #[doc = "Disables DMA and interrupt requests"]
+    #[doc = "Disables DMA and interrupt requests."]
     ALL_DISABLED = 0x0,
-    #[doc = "Enables DMA requests"]
+    #[doc = "Enables DMA requests."]
     DMAREQ_ENABLED = 0x01,
-    #[doc = "Enables interrupt requests"]
+    #[doc = "Enables interrupt requests."]
     INTREQ_ENABLED = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -764,11 +764,11 @@ impl From<Disel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FifoPtrwid {
-    #[doc = "0 bits"]
+    #[doc = "0 bits."]
     PTRWID_0 = 0x0,
-    #[doc = "1 bit"]
+    #[doc = "1 bit."]
     PTRWID_1 = 0x01,
-    #[doc = "2 bits"]
+    #[doc = "2 bits."]
     PTRWID_2 = 0x02,
     #[doc = "..."]
     PTRWID_3_3 = 0x03,
@@ -789,7 +789,7 @@ pub enum FifoPtrwid {
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "15 bits"]
+    #[doc = "15 bits."]
     PTRWID_15 = 0x0f,
 }
 impl FifoPtrwid {
@@ -818,9 +818,9 @@ impl From<FifoPtrwid> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FilOutWidth24b {
-    #[doc = "16 bits"]
+    #[doc = "16 bits."]
     WID16B = 0x0,
-    #[doc = "24 bits"]
+    #[doc = "24 bits."]
     WID24B = 0x01,
 }
 impl FilOutWidth24b {
@@ -849,9 +849,9 @@ impl From<FilOutWidth24b> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mdis {
-    #[doc = "Normal mode"]
+    #[doc = "Normal mode."]
     NORMAL = 0x0,
-    #[doc = "DLL mode"]
+    #[doc = "DLL mode."]
     LOW_LEAKAGE = 0x01,
 }
 impl Mdis {
@@ -880,11 +880,11 @@ impl From<Mdis> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Npair {
-    #[doc = "None"]
+    #[doc = "None."]
     NPAIR_0 = 0x0,
-    #[doc = "1 pair"]
+    #[doc = "1 pair."]
     NPAIR_1 = 0x01,
-    #[doc = "2 pairs"]
+    #[doc = "2 pairs."]
     NPAIR_2 = 0x02,
     #[doc = "..."]
     NPAIR_3_3 = 0x03,
@@ -905,7 +905,7 @@ pub enum Npair {
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "15 pairs"]
+    #[doc = "15 pairs."]
     NPAIR_15 = 0x0f,
 }
 impl Npair {
@@ -934,9 +934,9 @@ impl From<Npair> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pdmien {
-    #[doc = "Stops MICFIL operation"]
+    #[doc = "Stops MICFIL operation."]
     STOPPED = 0x0,
-    #[doc = "Starts MICFIL operation"]
+    #[doc = "Starts MICFIL operation."]
     STARTED = 0x01,
 }
 impl Pdmien {
@@ -965,19 +965,19 @@ impl From<Pdmien> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Qsel {
-    #[doc = "Medium-Quality mode"]
+    #[doc = "Medium-Quality mode."]
     MQ_MODE = 0x0,
-    #[doc = "High-Quality mode"]
+    #[doc = "High-Quality mode."]
     HQ_MODE = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
-    #[doc = "Very-Low-Quality 2 mode"]
+    #[doc = "Very-Low-Quality 2 mode."]
     VLQ2_MODE = 0x04,
-    #[doc = "Very-Low-Quality 1 mode"]
+    #[doc = "Very-Low-Quality 1 mode."]
     VLQ1_MODE = 0x05,
-    #[doc = "Very-Low-Quality 0 mode"]
+    #[doc = "Very-Low-Quality 0 mode."]
     VLQ0_MODE = 0x06,
-    #[doc = "Low-Quality mode"]
+    #[doc = "Low-Quality mode."]
     LQ_MODE = 0x07,
 }
 impl Qsel {
@@ -1006,9 +1006,9 @@ impl From<Qsel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sres {
-    #[doc = "No action"]
+    #[doc = "No action."]
     NO_ACTION = 0x0,
-    #[doc = "Software reset"]
+    #[doc = "Software reset."]
     SW_RESET = 0x01,
 }
 impl Sres {

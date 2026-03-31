@@ -13,10 +13,11 @@
 //! ```
 
 mod metadata;
+mod metapac;
 mod pac;
 
 use std::{
-    env, fs,
+    env,
     path::Path,
     process::{Command, Stdio},
 };
@@ -36,41 +37,38 @@ struct Feature {
     /// Cores to generate. If the chip has a single core, then this is the same as the
     /// [`name`](Feature::name) of the chip.
     cores: &'static [&'static str],
+
+    /// When true, the source of the chip won't be the SVD anymore, but the manually curated peripherals
+    metapac: bool,
 }
 
 /// Parts (and cores) to generate.
 #[rustfmt::skip]
 const GENERATE: &[Feature] = &[
-    Feature { chip: "MIMXRT1011", metadata: "MIMXRT1011", cores: &["MIMXRT1011"] },
-    Feature { chip: "MIMXRT1062", metadata: "MIMXRT106x", cores: &["MIMXRT1062"] },
-    Feature { chip: "MIMXRT1064", metadata: "MIMXRT106x", cores: &["MIMXRT1064"] },
-    // TODO: metadata
-    Feature { chip: "MIMXRT685S", metadata: "", cores: &["MIMXRT685S_cm33"] },
-
-    Feature { chip: "LPC55S16", metadata: "LPC55S16", cores: &["LPC55S16"] },
-
-    Feature { chip: "LPC55S69", metadata: "LPC55S6x", cores: &["LPC55S69_cm33_core0", "LPC55S69_cm33_core1"] },
-
-    // TODO: metadata
-    Feature { chip: "MCXN947", metadata: "", cores: &["MCXN947_cm33_core0", "MCXN947_cm33_core1"]},
-    // TODO: metadata
-    Feature { chip: "MCXA256", metadata: "MCXA2xx", cores: &["MCXA256"]},
-    // TODO: metadata
-    Feature { chip: "MCXA577", metadata: "MCXA5xx", cores: &["MCXA577"]},
+    Feature { chip: "MIMXRT1011", metadata: "MIMXRT1011", cores: &["MIMXRT1011"], metapac: false },
+    Feature { chip: "MIMXRT1062", metadata: "MIMXRT106x", cores: &["MIMXRT1062"], metapac: false },
+    Feature { chip: "MIMXRT1064", metadata: "MIMXRT106x", cores: &["MIMXRT1064"], metapac: false },
+    Feature { chip: "MIMXRT685S", metadata: "", cores: &["MIMXRT685S_cm33"], metapac: false },
+    Feature { chip: "LPC55S16", metadata: "LPC55S16", cores: &["LPC55S16"], metapac: false },
+    Feature { chip: "LPC55S69", metadata: "LPC55S6x", cores: &["LPC55S69_cm33_core0", "LPC55S69_cm33_core1"], metapac: false },
+    Feature { chip: "MCXN947", metadata: "", cores: &["MCXN947_cm33_core0", "MCXN947_cm33_core1"], metapac: false },
+    Feature { chip: "MCXA256", metadata: "MCXA2xx", cores: &["MCXA256"], metapac: true },
+    Feature { chip: "MCXA577", metadata: "MCXA5xx", cores: &["MCXA577"], metapac: true },
 ];
 
 fn main() -> anyhow::Result<()> {
     tracing_subscriber::fmt()
         .with_writer(std::io::stderr)
-        .with_max_level(LevelFilter::INFO)
-        .with_env_filter(EnvFilter::from_default_env())
+        .with_env_filter(
+            EnvFilter::builder()
+                .with_default_directive(LevelFilter::INFO.into())
+                .from_env_lossy(),
+        )
         .init();
 
     verify_chiptool().context("chiptool is not installed")?;
 
     let current = env::current_dir()?;
-
-    let chips = current.join("src").join("chips");
 
     let mut args = env::args();
 
@@ -84,11 +82,11 @@ fn main() -> anyhow::Result<()> {
 
         vec![feature]
     } else {
-        // Might not exist.
-        let _ = fs::remove_dir_all(chips);
-
         GENERATE.iter().collect()
     };
+
+    // Export the metapac peripherals
+    metapac::export_meta_peripherals(&current)?;
 
     // Generating code for SVDs can take a moment (RT11xx can generate a million lines of code)
     // so it is best to run multiple cores in parallel.
@@ -116,7 +114,8 @@ fn main() -> anyhow::Result<()> {
         .current_dir(current)
         .stdout(Stdio::inherit())
         .stderr(Stdio::inherit())
-        .status()?;
+        .status()
+        .context("Formatting pac code with `cargo fmt`")?;
 
     Ok(())
 }
@@ -144,18 +143,28 @@ fn generate_chip(current_dir: &Path, feature: &Feature) -> anyhow::Result<()> {
         debug!("transforms path: {:?}", transforms_dir);
         let chips_dir = pac_dir.join("src").join("chips");
 
-        info!("Generating {}/{}", feature.chip, core);
-        pac::generate_core(&svd, &chips_dir, &transforms_dir, &core).context("Generating PAC")?;
+        pac::generate_peripherals(&svd, &metadata_dir, core, &transforms_dir)
+            .context("Generating peripherals")?;
 
-        // TODO: MCXN947 metadata to remove this hack
+        if !feature.metapac {
+            info!("Generating {}/{}", feature.chip, core);
+            pac::generate_core(&svd, &chips_dir, &transforms_dir, core)
+                .context("Generating PAC")?;
+        }
+
         if !feature.metadata.is_empty() {
-            metadata::generate_core(
+            let metadata = metadata::generate_core(
                 &chips_dir,
                 &svd,
                 &metadata_dir.join(feature.metadata).with_extension("json"),
-                &core,
+                core,
             )
             .context("Generating metadata")?;
+
+            if feature.metapac {
+                metapac::assemble_metapac(current_dir, core, metadata)
+                    .context(format!("Assembling metapac for {core}"))?
+            }
         }
     }
 

@@ -227,13 +227,13 @@ impl From<Hevent> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Iocond {
-    #[doc = "LOW"]
+    #[doc = "LOW."]
     LOW = 0x0,
-    #[doc = "Rise"]
+    #[doc = "Rise."]
     RISE = 0x01,
-    #[doc = "Fall"]
+    #[doc = "Fall."]
     FALL = 0x02,
-    #[doc = "HIGH"]
+    #[doc = "HIGH."]
     HIGH = 0x03,
 }
 impl Iocond {

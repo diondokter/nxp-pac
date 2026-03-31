@@ -145,7 +145,7 @@ impl defmt::Format for Intval {
         )
     }
 }
-#[doc = "Global interrupt flag register"]
+#[doc = "Global interrupt flag register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct IrqFlag(pub u32);
@@ -233,26 +233,26 @@ impl defmt::Format for IrqFlag {
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Modcfg(pub u32);
 impl Modcfg {
-    #[doc = "Identifies the number of channels in this MRT.(4 channels on this device.)"]
+    #[doc = "Identifies the number of channels in this MRT.(4 channels on this device.)."]
     #[must_use]
     #[inline(always)]
     pub const fn noc(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "Identifies the number of channels in this MRT.(4 channels on this device.)"]
+    #[doc = "Identifies the number of channels in this MRT.(4 channels on this device.)."]
     #[inline(always)]
     pub const fn set_noc(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
     }
-    #[doc = "Identifies the number of timer bits in this MRT. (24 bits wide on this device.)"]
+    #[doc = "Identifies the number of timer bits in this MRT. (24 bits wide on this device.)."]
     #[must_use]
     #[inline(always)]
     pub const fn nob(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x1f;
         val as u8
     }
-    #[doc = "Identifies the number of timer bits in this MRT. (24 bits wide on this device.)"]
+    #[doc = "Identifies the number of timer bits in this MRT. (24 bits wide on this device.)."]
     #[inline(always)]
     pub const fn set_nob(&mut self, val: u8) {
         self.0 = (self.0 & !(0x1f << 4usize)) | (((val as u32) & 0x1f) << 4usize);

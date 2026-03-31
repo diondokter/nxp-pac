@@ -1,16 +1,16 @@
-#[doc = "name (CPUn) Interrupt"]
+#[doc = "name (CPUn) Interrupt."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Irq(pub u32);
 impl Irq {
-    #[doc = "Interrupt Request"]
+    #[doc = "Interrupt Request."]
     #[must_use]
     #[inline(always)]
     pub const fn intreq(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Interrupt Request"]
+    #[doc = "Interrupt Request."]
     #[inline(always)]
     pub const fn set_intreq(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -35,19 +35,19 @@ impl defmt::Format for Irq {
         defmt::write!(f, "Irq {{ intreq: {=u32:?} }}", self.intreq())
     }
 }
-#[doc = "name (CPUn) Interrupt Clear"]
+#[doc = "name (CPUn) Interrupt Clear."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Irqclr(pub u32);
 impl Irqclr {
-    #[doc = "Interrupt Request Clear 0"]
+    #[doc = "Interrupt Request Clear 0."]
     #[must_use]
     #[inline(always)]
     pub const fn intreqclr(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Interrupt Request Clear 0"]
+    #[doc = "Interrupt Request Clear 0."]
     #[inline(always)]
     pub const fn set_intreqclr(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -72,19 +72,19 @@ impl defmt::Format for Irqclr {
         defmt::write!(f, "Irqclr {{ intreqclr: {=u32:?} }}", self.intreqclr())
     }
 }
-#[doc = "name (CPUn) Interrupt Set"]
+#[doc = "name (CPUn) Interrupt Set."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Irqset(pub u32);
 impl Irqset {
-    #[doc = "Interrupt Request Set 0"]
+    #[doc = "Interrupt Request Set 0."]
     #[must_use]
     #[inline(always)]
     pub const fn intreqset(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Interrupt Request Set 0"]
+    #[doc = "Interrupt Request Set 0."]
     #[inline(always)]
     pub const fn set_intreqset(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -109,19 +109,19 @@ impl defmt::Format for Irqset {
         defmt::write!(f, "Irqset {{ intreqset: {=u32:?} }}", self.intreqset())
     }
 }
-#[doc = "Mutual Exclusion"]
+#[doc = "Mutual Exclusion."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Mutex(pub u32);
 impl Mutex {
-    #[doc = "Mutual Exclusion Request"]
+    #[doc = "Mutual Exclusion Request."]
     #[must_use]
     #[inline(always)]
     pub const fn ex(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Mutual Exclusion Request"]
+    #[doc = "Mutual Exclusion Request."]
     #[inline(always)]
     pub const fn set_ex(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);

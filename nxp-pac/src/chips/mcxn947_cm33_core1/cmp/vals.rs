@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CmpHpmd {
-    #[doc = "Low power (speed) comparison mode"]
+    #[doc = "Low power (speed) comparison mode."]
     LOW = 0x0,
-    #[doc = "High power (speed) comparison mode"]
+    #[doc = "High power (speed) comparison mode."]
     HIGH = 0x01,
 }
 impl CmpHpmd {
@@ -33,9 +33,9 @@ impl From<CmpHpmd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CoutSel {
-    #[doc = "Use COUT (filtered)"]
+    #[doc = "Use COUT (filtered)."]
     COUT = 0x0,
-    #[doc = "Use COUTA (unfiltered)"]
+    #[doc = "Use COUTA (unfiltered)."]
     COUTA = 0x01,
 }
 impl CoutSel {
@@ -64,9 +64,9 @@ impl From<CoutSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CoutaOw {
-    #[doc = "COUTA is 0"]
+    #[doc = "COUTA is 0."]
     COUTA_0 = 0x0,
-    #[doc = "COUTA is 1"]
+    #[doc = "COUTA is 1."]
     COUTA_1 = 0x01,
 }
 impl CoutaOw {
@@ -126,19 +126,19 @@ impl From<CoutaOwen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DacRes {
-    #[doc = "4-bit DAC"]
+    #[doc = "4-bit DAC."]
     RESO_4 = 0x0,
-    #[doc = "6-bit DAC"]
+    #[doc = "6-bit DAC."]
     RESO_6 = 0x01,
-    #[doc = "8-bit DAC"]
+    #[doc = "8-bit DAC."]
     RESO_8 = 0x02,
-    #[doc = "10-bit DAC"]
+    #[doc = "10-bit DAC."]
     RESO_10 = 0x03,
-    #[doc = "12-bit DAC"]
+    #[doc = "12-bit DAC."]
     RESO_12 = 0x04,
-    #[doc = "14-bit DAC"]
+    #[doc = "14-bit DAC."]
     RESO_14 = 0x05,
-    #[doc = "16-bit DAC"]
+    #[doc = "16-bit DAC."]
     RESO_16 = 0x06,
     _RESERVED_7 = 0x07,
     _RESERVED_8 = 0x08,
@@ -176,11 +176,11 @@ impl From<DacRes> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum EvtSel {
-    #[doc = "Rising edge"]
+    #[doc = "Rising edge."]
     RISING = 0x0,
-    #[doc = "Falling edge"]
+    #[doc = "Falling edge."]
     FALLING = 0x01,
-    #[doc = "Both edges"]
+    #[doc = "Both edges."]
     BOTH = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -210,7 +210,7 @@ impl From<EvtSel> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Feature(u16);
 impl Feature {
-    #[doc = "Round robin feature"]
+    #[doc = "Round robin feature."]
     pub const ROUND_ROBIN: Self = Self(0x01);
 }
 impl Feature {
@@ -254,21 +254,21 @@ impl From<Feature> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FiltCnt {
-    #[doc = "Filter is bypassed: COUT = COUTA"]
+    #[doc = "Filter is bypassed: COUT = COUTA."]
     BYPASSED = 0x0,
-    #[doc = "1 consecutive sample (Comparator output is simply sampled.)"]
+    #[doc = "1 consecutive sample (Comparator output is simply sampled.)."]
     SAMPLE_1 = 0x01,
-    #[doc = "2 consecutive samples"]
+    #[doc = "2 consecutive samples."]
     SAMPLE_2 = 0x02,
-    #[doc = "3 consecutive samples"]
+    #[doc = "3 consecutive samples."]
     SAMPLE_3 = 0x03,
-    #[doc = "4 consecutive samples"]
+    #[doc = "4 consecutive samples."]
     SAMPLE_4 = 0x04,
-    #[doc = "5 consecutive samples"]
+    #[doc = "5 consecutive samples."]
     SAMPLE_5 = 0x05,
-    #[doc = "6 consecutive samples"]
+    #[doc = "6 consecutive samples."]
     SAMPLE_6 = 0x06,
-    #[doc = "7 consecutive samples"]
+    #[doc = "7 consecutive samples."]
     SAMPLE_7 = 0x07,
 }
 impl FiltCnt {
@@ -297,21 +297,21 @@ impl From<FiltCnt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fixch {
-    #[doc = "Channel 0"]
+    #[doc = "Channel 0."]
     FIX_CH0 = 0x0,
-    #[doc = "Channel 1"]
+    #[doc = "Channel 1."]
     FIX_CH1 = 0x01,
-    #[doc = "Channel 2"]
+    #[doc = "Channel 2."]
     FIX_CH2 = 0x02,
-    #[doc = "Channel 3"]
+    #[doc = "Channel 3."]
     FIX_CH3 = 0x03,
-    #[doc = "Channel 4"]
+    #[doc = "Channel 4."]
     FIX_CH4 = 0x04,
-    #[doc = "Channel 5"]
+    #[doc = "Channel 5."]
     FIX_CH5 = 0x05,
-    #[doc = "Channel 6"]
+    #[doc = "Channel 6."]
     FIX_CH6 = 0x06,
-    #[doc = "Channel 7"]
+    #[doc = "Channel 7."]
     FIX_CH7 = 0x07,
 }
 impl Fixch {
@@ -371,13 +371,13 @@ impl From<Fixp> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FuncClkSel {
-    #[doc = "Select functional clock source 0"]
+    #[doc = "Select functional clock source 0."]
     FUNC0 = 0x0,
-    #[doc = "Select functional clock source 1"]
+    #[doc = "Select functional clock source 1."]
     FUNC1 = 0x01,
-    #[doc = "Select functional clock source 2"]
+    #[doc = "Select functional clock source 2."]
     FUNC2 = 0x02,
-    #[doc = "Select functional clock source 3"]
+    #[doc = "Select functional clock source 3."]
     FUNC3 = 0x03,
 }
 impl FuncClkSel {
@@ -441,20 +441,20 @@ impl From<Hystctr> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Msel {
-    #[doc = "Input 0m"]
+    #[doc = "Input 0m."]
     INPUT_0 = 0x0,
-    #[doc = "Input 1m"]
+    #[doc = "Input 1m."]
     INPUT_1 = 0x01,
-    #[doc = "Input 2m"]
+    #[doc = "Input 2m."]
     INPUT_2 = 0x02,
-    #[doc = "Input 3m"]
+    #[doc = "Input 3m."]
     INPUT_3 = 0x03,
-    #[doc = "Input 4m"]
+    #[doc = "Input 4m."]
     INPUT_4 = 0x04,
-    #[doc = "Input 5m"]
+    #[doc = "Input 5m."]
     INPUT_5 = 0x05,
     _RESERVED_6 = 0x06,
-    #[doc = "Internal DAC output"]
+    #[doc = "Internal DAC output."]
     INPUT_7 = 0x07,
 }
 impl Msel {
@@ -483,20 +483,20 @@ impl From<Msel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Psel {
-    #[doc = "Input 0p"]
+    #[doc = "Input 0p."]
     INPUT_0 = 0x0,
-    #[doc = "Input 1p"]
+    #[doc = "Input 1p."]
     INPUT_1 = 0x01,
-    #[doc = "Input 2p"]
+    #[doc = "Input 2p."]
     INPUT_2 = 0x02,
-    #[doc = "Input 3p"]
+    #[doc = "Input 3p."]
     INPUT_3 = 0x03,
-    #[doc = "Input 4p"]
+    #[doc = "Input 4p."]
     INPUT_4 = 0x04,
-    #[doc = "Input 5p"]
+    #[doc = "Input 5p."]
     INPUT_5 = 0x05,
     _RESERVED_6 = 0x06,
-    #[doc = "Internal DAC output"]
+    #[doc = "Internal DAC output."]
     INPUT_7 = 0x07,
 }
 impl Psel {
@@ -525,13 +525,13 @@ impl From<Psel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RrClkSel {
-    #[doc = "Select Round Robin clock Source 0"]
+    #[doc = "Select Round Robin clock Source 0."]
     RR0 = 0x0,
-    #[doc = "Select Round Robin clock Source 1"]
+    #[doc = "Select Round Robin clock Source 1."]
     RR1 = 0x01,
-    #[doc = "Select Round Robin clock Source 2"]
+    #[doc = "Select Round Robin clock Source 2."]
     RR2 = 0x02,
-    #[doc = "Select Round Robin clock Source 3"]
+    #[doc = "Select Round Robin clock Source 3."]
     RR3 = 0x03,
 }
 impl RrClkSel {
@@ -560,25 +560,25 @@ impl From<RrClkSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RrInitmod {
-    #[doc = "63 cycles (same as 111111b)"]
+    #[doc = "63 cycles (same as 111111b)."]
     MOD_63 = 0x0,
-    #[doc = "1 to 63 cycles"]
+    #[doc = "1 to 63 cycles."]
     MOD_1_63_1 = 0x01,
-    #[doc = "1 to 63 cycles"]
+    #[doc = "1 to 63 cycles."]
     MOD_1_63_2 = 0x02,
-    #[doc = "1 to 63 cycles"]
+    #[doc = "1 to 63 cycles."]
     MOD_1_63_3 = 0x03,
-    #[doc = "1 to 63 cycles"]
+    #[doc = "1 to 63 cycles."]
     MOD_1_63_4 = 0x04,
-    #[doc = "1 to 63 cycles"]
+    #[doc = "1 to 63 cycles."]
     MOD_1_63_5 = 0x05,
-    #[doc = "1 to 63 cycles"]
+    #[doc = "1 to 63 cycles."]
     MOD_1_63_6 = 0x06,
-    #[doc = "1 to 63 cycles"]
+    #[doc = "1 to 63 cycles."]
     MOD_1_63_7 = 0x07,
-    #[doc = "1 to 63 cycles"]
+    #[doc = "1 to 63 cycles."]
     MOD_1_63_8 = 0x08,
-    #[doc = "1 to 63 cycles"]
+    #[doc = "1 to 63 cycles."]
     MOD_1_63_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -661,13 +661,13 @@ impl From<RrInitmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RrNsam {
-    #[doc = "0 clock"]
+    #[doc = "0 clock."]
     WAIT_0 = 0x0,
-    #[doc = "1 clock"]
+    #[doc = "1 clock."]
     WAIT_1 = 0x01,
-    #[doc = "2 clocks"]
+    #[doc = "2 clocks."]
     WAIT_2 = 0x02,
-    #[doc = "3 clocks"]
+    #[doc = "3 clocks."]
     WAIT_3 = 0x03,
 }
 impl RrNsam {
@@ -696,37 +696,37 @@ impl From<RrNsam> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RrSampleCnt {
-    #[doc = "1 samples"]
+    #[doc = "1 samples."]
     SAMPLE_0 = 0x0,
-    #[doc = "2 samples"]
+    #[doc = "2 samples."]
     SAMPLE_1 = 0x01,
-    #[doc = "3 samples"]
+    #[doc = "3 samples."]
     SAMPLE_2 = 0x02,
-    #[doc = "4 samples"]
+    #[doc = "4 samples."]
     SAMPLE_3 = 0x03,
-    #[doc = "5 samples"]
+    #[doc = "5 samples."]
     SAMPLE_4 = 0x04,
-    #[doc = "6 samples"]
+    #[doc = "6 samples."]
     SAMPLE_5 = 0x05,
-    #[doc = "7 samples"]
+    #[doc = "7 samples."]
     SAMPLE_6 = 0x06,
-    #[doc = "8 samples"]
+    #[doc = "8 samples."]
     SAMPLE_7 = 0x07,
-    #[doc = "9 samples"]
+    #[doc = "9 samples."]
     SAMPLE_8 = 0x08,
-    #[doc = "10 samples"]
+    #[doc = "10 samples."]
     SAMPLE_9 = 0x09,
-    #[doc = "11 samples"]
+    #[doc = "11 samples."]
     SAMPLE_10 = 0x0a,
-    #[doc = "12 samples"]
+    #[doc = "12 samples."]
     SAMPLE_11 = 0x0b,
-    #[doc = "13 samples"]
+    #[doc = "13 samples."]
     SAMPLE_12 = 0x0c,
-    #[doc = "14 samples"]
+    #[doc = "14 samples."]
     SAMPLE_13 = 0x0d,
-    #[doc = "15 samples"]
+    #[doc = "15 samples."]
     SAMPLE_14 = 0x0e,
-    #[doc = "16 samples"]
+    #[doc = "16 samples."]
     SAMPLE_15 = 0x0f,
 }
 impl RrSampleCnt {
@@ -755,37 +755,37 @@ impl From<RrSampleCnt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RrSampleThreshold {
-    #[doc = "At least 1 sampled \"1\", the final result is \"1\""]
+    #[doc = "At least 1 sampled \"1\", the final result is \"1\"."]
     SAMPLE_0 = 0x0,
-    #[doc = "At least 2 sampled \"1\", the final result is \"1\""]
+    #[doc = "At least 2 sampled \"1\", the final result is \"1\"."]
     SAMPLE_1 = 0x01,
-    #[doc = "At least 3 sampled \"1\", the final result is \"1\""]
+    #[doc = "At least 3 sampled \"1\", the final result is \"1\"."]
     SAMPLE_2 = 0x02,
-    #[doc = "At least 4 sampled \"1\", the final result is \"1\""]
+    #[doc = "At least 4 sampled \"1\", the final result is \"1\"."]
     SAMPLE_3 = 0x03,
-    #[doc = "At least 5 sampled \"1\", the final result is \"1\""]
+    #[doc = "At least 5 sampled \"1\", the final result is \"1\"."]
     SAMPLE_4 = 0x04,
-    #[doc = "At least 6 sampled \"1\", the final result is \"1\""]
+    #[doc = "At least 6 sampled \"1\", the final result is \"1\"."]
     SAMPLE_5 = 0x05,
-    #[doc = "At least 7 sampled \"1\", the final result is \"1\""]
+    #[doc = "At least 7 sampled \"1\", the final result is \"1\"."]
     SAMPLE_6 = 0x06,
-    #[doc = "At least 8 sampled \"1\", the final result is \"1\""]
+    #[doc = "At least 8 sampled \"1\", the final result is \"1\"."]
     SAMPLE_7 = 0x07,
-    #[doc = "At least 9 sampled \"1\", the final result is \"1\""]
+    #[doc = "At least 9 sampled \"1\", the final result is \"1\"."]
     SAMPLE_8 = 0x08,
-    #[doc = "At least 10 sampled \"1\", the final result is \"1\""]
+    #[doc = "At least 10 sampled \"1\", the final result is \"1\"."]
     SAMPLE_9 = 0x09,
-    #[doc = "At least 11 sampled \"1\", the final result is \"1\""]
+    #[doc = "At least 11 sampled \"1\", the final result is \"1\"."]
     SAMPLE_10 = 0x0a,
-    #[doc = "At least 12 sampled \"1\", the final result is \"1\""]
+    #[doc = "At least 12 sampled \"1\", the final result is \"1\"."]
     SAMPLE_11 = 0x0b,
-    #[doc = "At least 13 sampled \"1\", the final result is \"1\""]
+    #[doc = "At least 13 sampled \"1\", the final result is \"1\"."]
     SAMPLE_12 = 0x0c,
-    #[doc = "At least 14 sampled \"1\", the final result is \"1\""]
+    #[doc = "At least 14 sampled \"1\", the final result is \"1\"."]
     SAMPLE_13 = 0x0d,
-    #[doc = "At least 15 sampled \"1\", the final result is \"1\""]
+    #[doc = "At least 15 sampled \"1\", the final result is \"1\"."]
     SAMPLE_14 = 0x0e,
-    #[doc = "At least 16 sampled \"1\", the final result is \"1\""]
+    #[doc = "At least 16 sampled \"1\", the final result is \"1\"."]
     SAMPLE_15 = 0x0f,
 }
 impl RrSampleThreshold {
@@ -814,9 +814,9 @@ impl From<RrSampleThreshold> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RrTrgSel {
-    #[doc = "External trigger"]
+    #[doc = "External trigger."]
     ENABLE = 0x0,
-    #[doc = "Internal trigger"]
+    #[doc = "Internal trigger."]
     DISABLE = 0x01,
 }
 impl RrTrgSel {
@@ -845,9 +845,9 @@ impl From<RrTrgSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Vrsel {
-    #[doc = "VREFH0"]
+    #[doc = "VREFH0."]
     VREF0 = 0x0,
-    #[doc = "VREFH1"]
+    #[doc = "VREFH1."]
     VREF1 = 0x01,
 }
 impl Vrsel {

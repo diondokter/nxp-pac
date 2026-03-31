@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum OstimerIntena {
-    #[doc = "Interrupts blocked"]
+    #[doc = "Interrupts blocked."]
     INTERRUPTS_BLOCKED = 0x0,
-    #[doc = "Interrupts enabled"]
+    #[doc = "Interrupts enabled."]
     INTERRUPTS_ENABLED = 0x01,
 }
 impl OstimerIntena {

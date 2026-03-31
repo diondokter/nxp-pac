@@ -1,16 +1,16 @@
-#[doc = "Value of OTP Bank 1 Word 5 (Analog Info.)"]
+#[doc = "Value of OTP Bank 1 Word 5 (Analog Info.)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpAna0(pub u32);
 impl HwOcotpAna0 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -35,19 +35,19 @@ impl defmt::Format for HwOcotpAna0 {
         defmt::write!(f, "HwOcotpAna0 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "Value of OTP Bank 1 Word 6 (Analog Info.)"]
+#[doc = "Value of OTP Bank 1 Word 6 (Analog Info.)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpAna1(pub u32);
 impl HwOcotpAna1 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -72,19 +72,19 @@ impl defmt::Format for HwOcotpAna1 {
         defmt::write!(f, "HwOcotpAna1 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "Value of OTP Bank 1 Word 7 (Analog Info.)"]
+#[doc = "Value of OTP Bank 1 Word 7 (Analog Info.)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpAna2(pub u32);
 impl HwOcotpAna2 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -109,19 +109,19 @@ impl defmt::Format for HwOcotpAna2 {
         defmt::write!(f, "HwOcotpAna2 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "Value of OTP Bank0 Word1 (Configuration and Manufacturing Info.)"]
+#[doc = "Value of OTP Bank0 Word1 (Configuration and Manufacturing Info.)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpCfg0(pub u32);
 impl HwOcotpCfg0 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -146,19 +146,19 @@ impl defmt::Format for HwOcotpCfg0 {
         defmt::write!(f, "HwOcotpCfg0 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "Value of OTP Bank0 Word2 (Configuration and Manufacturing Info.)"]
+#[doc = "Value of OTP Bank0 Word2 (Configuration and Manufacturing Info.)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpCfg1(pub u32);
 impl HwOcotpCfg1 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -183,19 +183,19 @@ impl defmt::Format for HwOcotpCfg1 {
         defmt::write!(f, "HwOcotpCfg1 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "Value of OTP Bank0 Word3 (Configuration and Manufacturing Info.)"]
+#[doc = "Value of OTP Bank0 Word3 (Configuration and Manufacturing Info.)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpCfg2(pub u32);
 impl HwOcotpCfg2 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -220,19 +220,19 @@ impl defmt::Format for HwOcotpCfg2 {
         defmt::write!(f, "HwOcotpCfg2 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "Value of OTP Bank0 Word4 (Configuration and Manufacturing Info.)"]
+#[doc = "Value of OTP Bank0 Word4 (Configuration and Manufacturing Info.)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpCfg3(pub u32);
 impl HwOcotpCfg3 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -257,19 +257,19 @@ impl defmt::Format for HwOcotpCfg3 {
         defmt::write!(f, "HwOcotpCfg3 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "Value of OTP Bank0 Word5 (Configuration and Manufacturing Info.)"]
+#[doc = "Value of OTP Bank0 Word5 (Configuration and Manufacturing Info.)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpCfg4(pub u32);
 impl HwOcotpCfg4 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -294,19 +294,19 @@ impl defmt::Format for HwOcotpCfg4 {
         defmt::write!(f, "HwOcotpCfg4 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "Value of OTP Bank0 Word6 (Configuration and Manufacturing Info.)"]
+#[doc = "Value of OTP Bank0 Word6 (Configuration and Manufacturing Info.)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpCfg5(pub u32);
 impl HwOcotpCfg5 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -331,19 +331,19 @@ impl defmt::Format for HwOcotpCfg5 {
         defmt::write!(f, "HwOcotpCfg5 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "Value of OTP Bank0 Word7 (Configuration and Manufacturing Info.)"]
+#[doc = "Value of OTP Bank0 Word7 (Configuration and Manufacturing Info.)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpCfg6(pub u32);
 impl HwOcotpCfg6 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -368,67 +368,67 @@ impl defmt::Format for HwOcotpCfg6 {
         defmt::write!(f, "HwOcotpCfg6 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "OTP Controller Control and Status Register"]
+#[doc = "OTP Controller Control and Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpCtrl(pub u32);
 impl HwOcotpCtrl {
-    #[doc = "OTP write and read access address register"]
+    #[doc = "OTP write and read access address register."]
     #[must_use]
     #[inline(always)]
     pub const fn addr(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x3f;
         val as u8
     }
-    #[doc = "OTP write and read access address register"]
+    #[doc = "OTP write and read access address register."]
     #[inline(always)]
     pub const fn set_addr(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val as u32) & 0x3f) << 0usize);
     }
-    #[doc = "OTP controller status bit"]
+    #[doc = "OTP controller status bit."]
     #[must_use]
     #[inline(always)]
     pub const fn busy(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "OTP controller status bit"]
+    #[doc = "OTP controller status bit."]
     #[inline(always)]
     pub const fn set_busy(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Locked Region Access Error"]
+    #[doc = "Locked Region Access Error."]
     #[must_use]
     #[inline(always)]
     pub const fn error(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Locked Region Access Error"]
+    #[doc = "Locked Region Access Error."]
     #[inline(always)]
     pub const fn set_error(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "Reload Shadow Registers"]
+    #[doc = "Reload Shadow Registers."]
     #[must_use]
     #[inline(always)]
     pub const fn reload_shadows(&self) -> super::vals::ReloadShadows {
         let val = (self.0 >> 10usize) & 0x01;
         super::vals::ReloadShadows::from_bits(val as u8)
     }
-    #[doc = "Reload Shadow Registers"]
+    #[doc = "Reload Shadow Registers."]
     #[inline(always)]
     pub const fn set_reload_shadows(&mut self, val: super::vals::ReloadShadows) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
     }
-    #[doc = "Write Unlock"]
+    #[doc = "Write Unlock."]
     #[must_use]
     #[inline(always)]
     pub const fn wr_unlock(&self) -> super::vals::WrUnlock {
         let val = (self.0 >> 16usize) & 0xffff;
         super::vals::WrUnlock::from_bits(val as u16)
     }
-    #[doc = "Write Unlock"]
+    #[doc = "Write Unlock."]
     #[inline(always)]
     pub const fn set_wr_unlock(&mut self, val: super::vals::WrUnlock) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val.to_bits() as u32) & 0xffff) << 16usize);
@@ -465,67 +465,67 @@ impl defmt::Format for HwOcotpCtrl {
         )
     }
 }
-#[doc = "OTP Controller Control and Status Register"]
+#[doc = "OTP Controller Control and Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpCtrlClr(pub u32);
 impl HwOcotpCtrlClr {
-    #[doc = "OTP write and read access address register"]
+    #[doc = "OTP write and read access address register."]
     #[must_use]
     #[inline(always)]
     pub const fn addr(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x3f;
         val as u8
     }
-    #[doc = "OTP write and read access address register"]
+    #[doc = "OTP write and read access address register."]
     #[inline(always)]
     pub const fn set_addr(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val as u32) & 0x3f) << 0usize);
     }
-    #[doc = "OTP controller status bit"]
+    #[doc = "OTP controller status bit."]
     #[must_use]
     #[inline(always)]
     pub const fn busy(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "OTP controller status bit"]
+    #[doc = "OTP controller status bit."]
     #[inline(always)]
     pub const fn set_busy(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Locked Region Access Error"]
+    #[doc = "Locked Region Access Error."]
     #[must_use]
     #[inline(always)]
     pub const fn error(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Locked Region Access Error"]
+    #[doc = "Locked Region Access Error."]
     #[inline(always)]
     pub const fn set_error(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "Reload Shadow Registers"]
+    #[doc = "Reload Shadow Registers."]
     #[must_use]
     #[inline(always)]
     pub const fn reload_shadows(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "Reload Shadow Registers"]
+    #[doc = "Reload Shadow Registers."]
     #[inline(always)]
     pub const fn set_reload_shadows(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "Write Unlock"]
+    #[doc = "Write Unlock."]
     #[must_use]
     #[inline(always)]
     pub const fn wr_unlock(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "Write Unlock"]
+    #[doc = "Write Unlock."]
     #[inline(always)]
     pub const fn set_wr_unlock(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -562,67 +562,67 @@ impl defmt::Format for HwOcotpCtrlClr {
         )
     }
 }
-#[doc = "OTP Controller Control and Status Register"]
+#[doc = "OTP Controller Control and Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpCtrlSet(pub u32);
 impl HwOcotpCtrlSet {
-    #[doc = "OTP write and read access address register"]
+    #[doc = "OTP write and read access address register."]
     #[must_use]
     #[inline(always)]
     pub const fn addr(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x3f;
         val as u8
     }
-    #[doc = "OTP write and read access address register"]
+    #[doc = "OTP write and read access address register."]
     #[inline(always)]
     pub const fn set_addr(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val as u32) & 0x3f) << 0usize);
     }
-    #[doc = "OTP controller status bit"]
+    #[doc = "OTP controller status bit."]
     #[must_use]
     #[inline(always)]
     pub const fn busy(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "OTP controller status bit"]
+    #[doc = "OTP controller status bit."]
     #[inline(always)]
     pub const fn set_busy(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Locked Region Access Error"]
+    #[doc = "Locked Region Access Error."]
     #[must_use]
     #[inline(always)]
     pub const fn error(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Locked Region Access Error"]
+    #[doc = "Locked Region Access Error."]
     #[inline(always)]
     pub const fn set_error(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "Reload Shadow Registers"]
+    #[doc = "Reload Shadow Registers."]
     #[must_use]
     #[inline(always)]
     pub const fn reload_shadows(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "Reload Shadow Registers"]
+    #[doc = "Reload Shadow Registers."]
     #[inline(always)]
     pub const fn set_reload_shadows(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "Write Unlock"]
+    #[doc = "Write Unlock."]
     #[must_use]
     #[inline(always)]
     pub const fn wr_unlock(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "Write Unlock"]
+    #[doc = "Write Unlock."]
     #[inline(always)]
     pub const fn set_wr_unlock(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -659,67 +659,67 @@ impl defmt::Format for HwOcotpCtrlSet {
         )
     }
 }
-#[doc = "OTP Controller Control and Status Register"]
+#[doc = "OTP Controller Control and Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpCtrlTog(pub u32);
 impl HwOcotpCtrlTog {
-    #[doc = "OTP write and read access address register"]
+    #[doc = "OTP write and read access address register."]
     #[must_use]
     #[inline(always)]
     pub const fn addr(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x3f;
         val as u8
     }
-    #[doc = "OTP write and read access address register"]
+    #[doc = "OTP write and read access address register."]
     #[inline(always)]
     pub const fn set_addr(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val as u32) & 0x3f) << 0usize);
     }
-    #[doc = "OTP controller status bit"]
+    #[doc = "OTP controller status bit."]
     #[must_use]
     #[inline(always)]
     pub const fn busy(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "OTP controller status bit"]
+    #[doc = "OTP controller status bit."]
     #[inline(always)]
     pub const fn set_busy(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Locked Region Access Error"]
+    #[doc = "Locked Region Access Error."]
     #[must_use]
     #[inline(always)]
     pub const fn error(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Locked Region Access Error"]
+    #[doc = "Locked Region Access Error."]
     #[inline(always)]
     pub const fn set_error(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "Reload Shadow Registers"]
+    #[doc = "Reload Shadow Registers."]
     #[must_use]
     #[inline(always)]
     pub const fn reload_shadows(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "Reload Shadow Registers"]
+    #[doc = "Reload Shadow Registers."]
     #[inline(always)]
     pub const fn set_reload_shadows(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "Write Unlock"]
+    #[doc = "Write Unlock."]
     #[must_use]
     #[inline(always)]
     pub const fn wr_unlock(&self) -> u16 {
         let val = (self.0 >> 16usize) & 0xffff;
         val as u16
     }
-    #[doc = "Write Unlock"]
+    #[doc = "Write Unlock."]
     #[inline(always)]
     pub const fn set_wr_unlock(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
@@ -756,19 +756,19 @@ impl defmt::Format for HwOcotpCtrlTog {
         )
     }
 }
-#[doc = "OTP Controller Write Data Register"]
+#[doc = "OTP Controller Write Data Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpData(pub u32);
 impl HwOcotpData {
-    #[doc = "Data"]
+    #[doc = "Data."]
     #[must_use]
     #[inline(always)]
     pub const fn data(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Data"]
+    #[doc = "Data."]
     #[inline(always)]
     pub const fn set_data(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -793,19 +793,19 @@ impl defmt::Format for HwOcotpData {
         defmt::write!(f, "HwOcotpData {{ data: {=u32:?} }}", self.data())
     }
 }
-#[doc = "Value of OTP Bank4 Word6 (General Purpose Customer Defined Info)"]
+#[doc = "Value of OTP Bank4 Word6 (General Purpose Customer Defined Info)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpGp1(pub u32);
 impl HwOcotpGp1 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -830,19 +830,19 @@ impl defmt::Format for HwOcotpGp1 {
         defmt::write!(f, "HwOcotpGp1 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "Value of OTP Bank4 Word7 (General Purpose Customer Defined Info)"]
+#[doc = "Value of OTP Bank4 Word7 (General Purpose Customer Defined Info)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpGp2(pub u32);
 impl HwOcotpGp2 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -867,19 +867,19 @@ impl defmt::Format for HwOcotpGp2 {
         defmt::write!(f, "HwOcotpGp2 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "Value of OTP Bank4 Word4 (OTFAD)"]
+#[doc = "Value of OTP Bank4 Word4 (OTFAD)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpGp3(pub u32);
 impl HwOcotpGp3 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -904,151 +904,151 @@ impl defmt::Format for HwOcotpGp3 {
         defmt::write!(f, "HwOcotpGp3 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "Value of OTP Bank0 Word0 (Lock controls)"]
+#[doc = "Value of OTP Bank0 Word0 (Lock controls)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpLock(pub u32);
 impl HwOcotpLock {
-    #[doc = "BOOT_CFG Write Lock Status"]
+    #[doc = "BOOT_CFG Write Lock Status."]
     #[must_use]
     #[inline(always)]
     pub const fn boot_cfg(&self) -> u8 {
         let val = (self.0 >> 2usize) & 0x03;
         val as u8
     }
-    #[doc = "BOOT_CFG Write Lock Status"]
+    #[doc = "BOOT_CFG Write Lock Status."]
     #[inline(always)]
     pub const fn set_boot_cfg(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val as u32) & 0x03) << 2usize);
     }
-    #[doc = "SJC_RESP Lock Status"]
+    #[doc = "SJC_RESP Lock Status."]
     #[must_use]
     #[inline(always)]
     pub const fn sjc_resp(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "SJC_RESP Lock Status"]
+    #[doc = "SJC_RESP Lock Status."]
     #[inline(always)]
     pub const fn set_sjc_resp(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "OTFAD Write Lock Status"]
+    #[doc = "OTFAD Write Lock Status."]
     #[must_use]
     #[inline(always)]
     pub const fn otfad(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0x03;
         val as u8
     }
-    #[doc = "OTFAD Write Lock Status"]
+    #[doc = "OTFAD Write Lock Status."]
     #[inline(always)]
     pub const fn set_otfad(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val as u32) & 0x03) << 8usize);
     }
-    #[doc = "GP1 Write Lock Status"]
+    #[doc = "GP1 Write Lock Status."]
     #[must_use]
     #[inline(always)]
     pub const fn gp1(&self) -> u8 {
         let val = (self.0 >> 10usize) & 0x03;
         val as u8
     }
-    #[doc = "GP1 Write Lock Status"]
+    #[doc = "GP1 Write Lock Status."]
     #[inline(always)]
     pub const fn set_gp1(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 10usize)) | (((val as u32) & 0x03) << 10usize);
     }
-    #[doc = "GP2 Write Lock Status"]
+    #[doc = "GP2 Write Lock Status."]
     #[must_use]
     #[inline(always)]
     pub const fn gp2(&self) -> u8 {
         let val = (self.0 >> 12usize) & 0x03;
         val as u8
     }
-    #[doc = "GP2 Write Lock Status"]
+    #[doc = "GP2 Write Lock Status."]
     #[inline(always)]
     pub const fn set_gp2(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val as u32) & 0x03) << 12usize);
     }
-    #[doc = "SW_GP1 Write Lock Status"]
+    #[doc = "SW_GP1 Write Lock Status."]
     #[must_use]
     #[inline(always)]
     pub const fn sw_gp1(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "SW_GP1 Write Lock Status"]
+    #[doc = "SW_GP1 Write Lock Status."]
     #[inline(always)]
     pub const fn set_sw_gp1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "ANALOG Write Lock Status"]
+    #[doc = "ANALOG Write Lock Status."]
     #[must_use]
     #[inline(always)]
     pub const fn analog(&self) -> u8 {
         let val = (self.0 >> 18usize) & 0x03;
         val as u8
     }
-    #[doc = "ANALOG Write Lock Status"]
+    #[doc = "ANALOG Write Lock Status."]
     #[inline(always)]
     pub const fn set_analog(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 18usize)) | (((val as u32) & 0x03) << 18usize);
     }
-    #[doc = "SW_GP2 Write Lock Status"]
+    #[doc = "SW_GP2 Write Lock Status."]
     #[must_use]
     #[inline(always)]
     pub const fn sw_gp2_lock(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "SW_GP2 Write Lock Status"]
+    #[doc = "SW_GP2 Write Lock Status."]
     #[inline(always)]
     pub const fn set_sw_gp2_lock(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "MISC_CONF Write Lock Status"]
+    #[doc = "MISC_CONF Write Lock Status."]
     #[must_use]
     #[inline(always)]
     pub const fn misc_conf(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "MISC_CONF Write Lock Status"]
+    #[doc = "MISC_CONF Write Lock Status."]
     #[inline(always)]
     pub const fn set_misc_conf(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "SW_GP2 Read Lock Status"]
+    #[doc = "SW_GP2 Read Lock Status."]
     #[must_use]
     #[inline(always)]
     pub const fn sw_gp2_rlock(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "SW_GP2 Read Lock Status"]
+    #[doc = "SW_GP2 Read Lock Status."]
     #[inline(always)]
     pub const fn set_sw_gp2_rlock(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
-    #[doc = "GP3 Write Lock Status"]
+    #[doc = "GP3 Write Lock Status."]
     #[must_use]
     #[inline(always)]
     pub const fn gp3(&self) -> u8 {
         let val = (self.0 >> 26usize) & 0x03;
         val as u8
     }
-    #[doc = "GP3 Write Lock Status"]
+    #[doc = "GP3 Write Lock Status."]
     #[inline(always)]
     pub const fn set_gp3(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 26usize)) | (((val as u32) & 0x03) << 26usize);
     }
-    #[doc = "FIELD RETURN Status"]
+    #[doc = "FIELD RETURN Status."]
     #[must_use]
     #[inline(always)]
     pub const fn field_return(&self) -> super::vals::FieldReturn {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::FieldReturn::from_bits(val as u8)
     }
-    #[doc = "FIELD RETURN Status"]
+    #[doc = "FIELD RETURN Status."]
     #[inline(always)]
     pub const fn set_field_return(&mut self, val: super::vals::FieldReturn) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -1099,19 +1099,19 @@ impl defmt::Format for HwOcotpLock {
         )
     }
 }
-#[doc = "Value of OTP Bank1 Word0 (Memory Related Info.)"]
+#[doc = "Value of OTP Bank1 Word0 (Memory Related Info.)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpMem0(pub u32);
 impl HwOcotpMem0 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1136,19 +1136,19 @@ impl defmt::Format for HwOcotpMem0 {
         defmt::write!(f, "HwOcotpMem0 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "Value of OTP Bank1 Word1 (Memory Related Info.)"]
+#[doc = "Value of OTP Bank1 Word1 (Memory Related Info.)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpMem1(pub u32);
 impl HwOcotpMem1 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1173,19 +1173,19 @@ impl defmt::Format for HwOcotpMem1 {
         defmt::write!(f, "HwOcotpMem1 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "Value of OTP Bank1 Word2 (Memory Related Info.)"]
+#[doc = "Value of OTP Bank1 Word2 (Memory Related Info.)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpMem2(pub u32);
 impl HwOcotpMem2 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1210,19 +1210,19 @@ impl defmt::Format for HwOcotpMem2 {
         defmt::write!(f, "HwOcotpMem2 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "Value of OTP Bank1 Word3 (Memory Related Info.)"]
+#[doc = "Value of OTP Bank1 Word3 (Memory Related Info.)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpMem3(pub u32);
 impl HwOcotpMem3 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1247,19 +1247,19 @@ impl defmt::Format for HwOcotpMem3 {
         defmt::write!(f, "HwOcotpMem3 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "Value of OTP Bank 1 Word 4 (Memory Related Info.)"]
+#[doc = "Value of OTP Bank 1 Word 4 (Memory Related Info.)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpMem4(pub u32);
 impl HwOcotpMem4 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1284,19 +1284,19 @@ impl defmt::Format for HwOcotpMem4 {
         defmt::write!(f, "HwOcotpMem4 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "Value of OTP Bank5 Word5 (Misc Conf)"]
+#[doc = "Value of OTP Bank5 Word5 (Misc Conf)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpMiscConf0(pub u32);
 impl HwOcotpMiscConf0 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1321,19 +1321,19 @@ impl defmt::Format for HwOcotpMiscConf0 {
         defmt::write!(f, "HwOcotpMiscConf0 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "Value of OTP Bank5 Word6 (Misc Conf)"]
+#[doc = "Value of OTP Bank5 Word6 (Misc Conf)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpMiscConf1(pub u32);
 impl HwOcotpMiscConf1 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1358,19 +1358,19 @@ impl defmt::Format for HwOcotpMiscConf1 {
         defmt::write!(f, "HwOcotpMiscConf1 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "Value of OTP Bank4 Word2 (OTFAD)"]
+#[doc = "Value of OTP Bank4 Word2 (OTFAD)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpOtfadCfg0(pub u32);
 impl HwOcotpOtfadCfg0 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1395,19 +1395,19 @@ impl defmt::Format for HwOcotpOtfadCfg0 {
         defmt::write!(f, "HwOcotpOtfadCfg0 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "Value of OTP Bank4 Word3 (OTFAD)"]
+#[doc = "Value of OTP Bank4 Word3 (OTFAD)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpOtfadCfg1(pub u32);
 impl HwOcotpOtfadCfg1 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1432,19 +1432,19 @@ impl defmt::Format for HwOcotpOtfadCfg1 {
         defmt::write!(f, "HwOcotpOtfadCfg1 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "OTP Controller Write Data Register"]
+#[doc = "OTP Controller Write Data Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpReadCtrl(pub u32);
 impl HwOcotpReadCtrl {
-    #[doc = "Read Fuse"]
+    #[doc = "Read Fuse."]
     #[must_use]
     #[inline(always)]
     pub const fn read_fuse(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Read Fuse"]
+    #[doc = "Read Fuse."]
     #[inline(always)]
     pub const fn set_read_fuse(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -1473,19 +1473,19 @@ impl defmt::Format for HwOcotpReadCtrl {
         )
     }
 }
-#[doc = "OTP Controller Read Data Register"]
+#[doc = "OTP Controller Read Data Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpReadFuseData(pub u32);
 impl HwOcotpReadFuseData {
-    #[doc = "Data"]
+    #[doc = "Data."]
     #[must_use]
     #[inline(always)]
     pub const fn data(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Data"]
+    #[doc = "Data."]
     #[inline(always)]
     pub const fn set_data(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1510,43 +1510,43 @@ impl defmt::Format for HwOcotpReadFuseData {
         defmt::write!(f, "HwOcotpReadFuseData {{ data: {=u32:?} }}", self.data())
     }
 }
-#[doc = "Software Controllable Signals Register"]
+#[doc = "Software Controllable Signals Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpScs(pub u32);
 impl HwOcotpScs {
-    #[doc = "HAB JTAG Debug Enable"]
+    #[doc = "HAB JTAG Debug Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn hab_jde(&self) -> super::vals::HabJde {
         let val = (self.0 >> 0usize) & 0x01;
         super::vals::HabJde::from_bits(val as u8)
     }
-    #[doc = "HAB JTAG Debug Enable"]
+    #[doc = "HAB JTAG Debug Enable."]
     #[inline(always)]
     pub const fn set_hab_jde(&mut self, val: super::vals::HabJde) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
     }
-    #[doc = "Spare"]
+    #[doc = "Spare."]
     #[must_use]
     #[inline(always)]
     pub const fn spare(&self) -> u32 {
         let val = (self.0 >> 1usize) & 0x3fff_ffff;
         val as u32
     }
-    #[doc = "Spare"]
+    #[doc = "Spare."]
     #[inline(always)]
     pub const fn set_spare(&mut self, val: u32) {
         self.0 = (self.0 & !(0x3fff_ffff << 1usize)) | (((val as u32) & 0x3fff_ffff) << 1usize);
     }
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     #[must_use]
     #[inline(always)]
     pub const fn lock(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     #[inline(always)]
     pub const fn set_lock(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -1579,43 +1579,43 @@ impl defmt::Format for HwOcotpScs {
         )
     }
 }
-#[doc = "Software Controllable Signals Register"]
+#[doc = "Software Controllable Signals Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpScsClr(pub u32);
 impl HwOcotpScsClr {
-    #[doc = "HAB JTAG Debug Enable"]
+    #[doc = "HAB JTAG Debug Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn hab_jde(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "HAB JTAG Debug Enable"]
+    #[doc = "HAB JTAG Debug Enable."]
     #[inline(always)]
     pub const fn set_hab_jde(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Spare"]
+    #[doc = "Spare."]
     #[must_use]
     #[inline(always)]
     pub const fn spare(&self) -> u32 {
         let val = (self.0 >> 1usize) & 0x3fff_ffff;
         val as u32
     }
-    #[doc = "Spare"]
+    #[doc = "Spare."]
     #[inline(always)]
     pub const fn set_spare(&mut self, val: u32) {
         self.0 = (self.0 & !(0x3fff_ffff << 1usize)) | (((val as u32) & 0x3fff_ffff) << 1usize);
     }
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     #[must_use]
     #[inline(always)]
     pub const fn lock(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     #[inline(always)]
     pub const fn set_lock(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -1648,43 +1648,43 @@ impl defmt::Format for HwOcotpScsClr {
         )
     }
 }
-#[doc = "Software Controllable Signals Register"]
+#[doc = "Software Controllable Signals Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpScsSet(pub u32);
 impl HwOcotpScsSet {
-    #[doc = "HAB JTAG Debug Enable"]
+    #[doc = "HAB JTAG Debug Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn hab_jde(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "HAB JTAG Debug Enable"]
+    #[doc = "HAB JTAG Debug Enable."]
     #[inline(always)]
     pub const fn set_hab_jde(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Spare"]
+    #[doc = "Spare."]
     #[must_use]
     #[inline(always)]
     pub const fn spare(&self) -> u32 {
         let val = (self.0 >> 1usize) & 0x3fff_ffff;
         val as u32
     }
-    #[doc = "Spare"]
+    #[doc = "Spare."]
     #[inline(always)]
     pub const fn set_spare(&mut self, val: u32) {
         self.0 = (self.0 & !(0x3fff_ffff << 1usize)) | (((val as u32) & 0x3fff_ffff) << 1usize);
     }
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     #[must_use]
     #[inline(always)]
     pub const fn lock(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     #[inline(always)]
     pub const fn set_lock(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -1717,43 +1717,43 @@ impl defmt::Format for HwOcotpScsSet {
         )
     }
 }
-#[doc = "Software Controllable Signals Register"]
+#[doc = "Software Controllable Signals Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpScsTog(pub u32);
 impl HwOcotpScsTog {
-    #[doc = "HAB JTAG Debug Enable"]
+    #[doc = "HAB JTAG Debug Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn hab_jde(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "HAB JTAG Debug Enable"]
+    #[doc = "HAB JTAG Debug Enable."]
     #[inline(always)]
     pub const fn set_hab_jde(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Spare"]
+    #[doc = "Spare."]
     #[must_use]
     #[inline(always)]
     pub const fn spare(&self) -> u32 {
         let val = (self.0 >> 1usize) & 0x3fff_ffff;
         val as u32
     }
-    #[doc = "Spare"]
+    #[doc = "Spare."]
     #[inline(always)]
     pub const fn set_spare(&mut self, val: u32) {
         self.0 = (self.0 & !(0x3fff_ffff << 1usize)) | (((val as u32) & 0x3fff_ffff) << 1usize);
     }
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     #[must_use]
     #[inline(always)]
     pub const fn lock(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Lock"]
+    #[doc = "Lock."]
     #[inline(always)]
     pub const fn set_lock(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -1786,19 +1786,19 @@ impl defmt::Format for HwOcotpScsTog {
         )
     }
 }
-#[doc = "Value of OTP Bank4 Word0 (Secure JTAG Response Field)"]
+#[doc = "Value of OTP Bank4 Word0 (Secure JTAG Response Field)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpSjcResp0(pub u32);
 impl HwOcotpSjcResp0 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1823,19 +1823,19 @@ impl defmt::Format for HwOcotpSjcResp0 {
         defmt::write!(f, "HwOcotpSjcResp0 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "Value of OTP Bank4 Word1 (Secure JTAG Response Field)"]
+#[doc = "Value of OTP Bank4 Word1 (Secure JTAG Response Field)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpSjcResp1(pub u32);
 impl HwOcotpSjcResp1 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1860,19 +1860,19 @@ impl defmt::Format for HwOcotpSjcResp1 {
         defmt::write!(f, "HwOcotpSjcResp1 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "Shadow Register for OTP Bank3 Word0 (SRK Hash)"]
+#[doc = "Shadow Register for OTP Bank3 Word0 (SRK Hash)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpSrk0(pub u32);
 impl HwOcotpSrk0 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1897,19 +1897,19 @@ impl defmt::Format for HwOcotpSrk0 {
         defmt::write!(f, "HwOcotpSrk0 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "Shadow Register for OTP Bank3 Word1 (SRK Hash)"]
+#[doc = "Shadow Register for OTP Bank3 Word1 (SRK Hash)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpSrk1(pub u32);
 impl HwOcotpSrk1 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1934,19 +1934,19 @@ impl defmt::Format for HwOcotpSrk1 {
         defmt::write!(f, "HwOcotpSrk1 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "Shadow Register for OTP Bank3 Word2 (SRK Hash)"]
+#[doc = "Shadow Register for OTP Bank3 Word2 (SRK Hash)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpSrk2(pub u32);
 impl HwOcotpSrk2 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1971,19 +1971,19 @@ impl defmt::Format for HwOcotpSrk2 {
         defmt::write!(f, "HwOcotpSrk2 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "Shadow Register for OTP Bank3 Word3 (SRK Hash)"]
+#[doc = "Shadow Register for OTP Bank3 Word3 (SRK Hash)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpSrk3(pub u32);
 impl HwOcotpSrk3 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2008,19 +2008,19 @@ impl defmt::Format for HwOcotpSrk3 {
         defmt::write!(f, "HwOcotpSrk3 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "Shadow Register for OTP Bank3 Word4 (SRK Hash)"]
+#[doc = "Shadow Register for OTP Bank3 Word4 (SRK Hash)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpSrk4(pub u32);
 impl HwOcotpSrk4 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2045,19 +2045,19 @@ impl defmt::Format for HwOcotpSrk4 {
         defmt::write!(f, "HwOcotpSrk4 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "Shadow Register for OTP Bank3 Word5 (SRK Hash)"]
+#[doc = "Shadow Register for OTP Bank3 Word5 (SRK Hash)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpSrk5(pub u32);
 impl HwOcotpSrk5 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2082,19 +2082,19 @@ impl defmt::Format for HwOcotpSrk5 {
         defmt::write!(f, "HwOcotpSrk5 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "Shadow Register for OTP Bank3 Word6 (SRK Hash)"]
+#[doc = "Shadow Register for OTP Bank3 Word6 (SRK Hash)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpSrk6(pub u32);
 impl HwOcotpSrk6 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2119,19 +2119,19 @@ impl defmt::Format for HwOcotpSrk6 {
         defmt::write!(f, "HwOcotpSrk6 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "Shadow Register for OTP Bank3 Word7 (SRK Hash)"]
+#[doc = "Shadow Register for OTP Bank3 Word7 (SRK Hash)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpSrk7(pub u32);
 impl HwOcotpSrk7 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2156,19 +2156,19 @@ impl defmt::Format for HwOcotpSrk7 {
         defmt::write!(f, "HwOcotpSrk7 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "Value of OTP Bank5 Word7 (SRK Revoke)"]
+#[doc = "Value of OTP Bank5 Word7 (SRK Revoke)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpSrkRevoke(pub u32);
 impl HwOcotpSrkRevoke {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2193,19 +2193,19 @@ impl defmt::Format for HwOcotpSrkRevoke {
         defmt::write!(f, "HwOcotpSrkRevoke {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "Value of OTP Bank5 Word0 (SW GP1)"]
+#[doc = "Value of OTP Bank5 Word0 (SW GP1)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpSwGp1(pub u32);
 impl HwOcotpSwGp1 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2230,19 +2230,19 @@ impl defmt::Format for HwOcotpSwGp1 {
         defmt::write!(f, "HwOcotpSwGp1 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "Value of OTP Bank5 Word1 (SW GP2)"]
+#[doc = "Value of OTP Bank5 Word1 (SW GP2)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpSwGp20(pub u32);
 impl HwOcotpSwGp20 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2267,19 +2267,19 @@ impl defmt::Format for HwOcotpSwGp20 {
         defmt::write!(f, "HwOcotpSwGp20 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "Value of OTP Bank5 Word2 (SW GP2)"]
+#[doc = "Value of OTP Bank5 Word2 (SW GP2)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpSwGp21(pub u32);
 impl HwOcotpSwGp21 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2304,19 +2304,19 @@ impl defmt::Format for HwOcotpSwGp21 {
         defmt::write!(f, "HwOcotpSwGp21 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "Value of OTP Bank5 Word3 (SW GP2)"]
+#[doc = "Value of OTP Bank5 Word3 (SW GP2)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpSwGp22(pub u32);
 impl HwOcotpSwGp22 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2341,19 +2341,19 @@ impl defmt::Format for HwOcotpSwGp22 {
         defmt::write!(f, "HwOcotpSwGp22 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "Value of OTP Bank5 Word4 (SW GP2)"]
+#[doc = "Value of OTP Bank5 Word4 (SW GP2)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpSwGp23(pub u32);
 impl HwOcotpSwGp23 {
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[must_use]
     #[inline(always)]
     pub const fn bits(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "BITS"]
+    #[doc = "BITS."]
     #[inline(always)]
     pub const fn set_bits(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -2378,31 +2378,31 @@ impl defmt::Format for HwOcotpSwGp23 {
         defmt::write!(f, "HwOcotpSwGp23 {{ bits: {=u32:?} }}", self.bits())
     }
 }
-#[doc = "Sticky bit Register"]
+#[doc = "Sticky bit Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpSwSticky(pub u32);
 impl HwOcotpSwSticky {
-    #[doc = "SRK Revoke Lock"]
+    #[doc = "SRK Revoke Lock."]
     #[must_use]
     #[inline(always)]
     pub const fn srk_revoke_lock(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "SRK Revoke Lock"]
+    #[doc = "SRK Revoke Lock."]
     #[inline(always)]
     pub const fn set_srk_revoke_lock(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Field Return Lock"]
+    #[doc = "Field Return Lock."]
     #[must_use]
     #[inline(always)]
     pub const fn field_return_lock(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Field Return Lock"]
+    #[doc = "Field Return Lock."]
     #[inline(always)]
     pub const fn set_field_return_lock(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
@@ -2433,55 +2433,55 @@ impl defmt::Format for HwOcotpSwSticky {
         )
     }
 }
-#[doc = "OTP Controller Timing Register"]
+#[doc = "OTP Controller Timing Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpTiming(pub u32);
 impl HwOcotpTiming {
-    #[doc = "Write Strobe Period"]
+    #[doc = "Write Strobe Period."]
     #[must_use]
     #[inline(always)]
     pub const fn strobe_prog(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Write Strobe Period"]
+    #[doc = "Write Strobe Period."]
     #[inline(always)]
     pub const fn set_strobe_prog(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
     }
-    #[doc = "Relax Count Value"]
+    #[doc = "Relax Count Value."]
     #[must_use]
     #[inline(always)]
     pub const fn relax(&self) -> u8 {
         let val = (self.0 >> 12usize) & 0x0f;
         val as u8
     }
-    #[doc = "Relax Count Value"]
+    #[doc = "Relax Count Value."]
     #[inline(always)]
     pub const fn set_relax(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 12usize)) | (((val as u32) & 0x0f) << 12usize);
     }
-    #[doc = "Read Strobe Period"]
+    #[doc = "Read Strobe Period."]
     #[must_use]
     #[inline(always)]
     pub const fn strobe_read(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x3f;
         val as u8
     }
-    #[doc = "Read Strobe Period"]
+    #[doc = "Read Strobe Period."]
     #[inline(always)]
     pub const fn set_strobe_read(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 16usize)) | (((val as u32) & 0x3f) << 16usize);
     }
-    #[doc = "Wait Interval"]
+    #[doc = "Wait Interval."]
     #[must_use]
     #[inline(always)]
     pub const fn wait(&self) -> u8 {
         let val = (self.0 >> 22usize) & 0x3f;
         val as u8
     }
-    #[doc = "Wait Interval"]
+    #[doc = "Wait Interval."]
     #[inline(always)]
     pub const fn set_wait(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 22usize)) | (((val as u32) & 0x3f) << 22usize);
@@ -2516,43 +2516,43 @@ impl defmt::Format for HwOcotpTiming {
         )
     }
 }
-#[doc = "OTP Controller Timing Register 2"]
+#[doc = "OTP Controller Timing Register 2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpTiming2(pub u32);
 impl HwOcotpTiming2 {
-    #[doc = "Relax Prog. count value"]
+    #[doc = "Relax Prog. count value."]
     #[must_use]
     #[inline(always)]
     pub const fn relax_prog(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0x0fff;
         val as u16
     }
-    #[doc = "Relax Prog. count value"]
+    #[doc = "Relax Prog. count value."]
     #[inline(always)]
     pub const fn set_relax_prog(&mut self, val: u16) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
     }
-    #[doc = "Relax Read count value"]
+    #[doc = "Relax Read count value."]
     #[must_use]
     #[inline(always)]
     pub const fn relax_read(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0x3f;
         val as u8
     }
-    #[doc = "Relax Read count value"]
+    #[doc = "Relax Read count value."]
     #[inline(always)]
     pub const fn set_relax_read(&mut self, val: u8) {
         self.0 = (self.0 & !(0x3f << 16usize)) | (((val as u32) & 0x3f) << 16usize);
     }
-    #[doc = "Auto read and write time interval"]
+    #[doc = "Auto read and write time interval."]
     #[must_use]
     #[inline(always)]
     pub const fn relax1(&self) -> u8 {
         let val = (self.0 >> 22usize) & 0xff;
         val as u8
     }
-    #[doc = "Auto read and write time interval"]
+    #[doc = "Auto read and write time interval."]
     #[inline(always)]
     pub const fn set_relax1(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 22usize)) | (((val as u32) & 0xff) << 22usize);
@@ -2585,43 +2585,43 @@ impl defmt::Format for HwOcotpTiming2 {
         )
     }
 }
-#[doc = "OTP Controller Version Register"]
+#[doc = "OTP Controller Version Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct HwOcotpVersion(pub u32);
 impl HwOcotpVersion {
-    #[doc = "RTL Version Steping"]
+    #[doc = "RTL Version Steping."]
     #[must_use]
     #[inline(always)]
     pub const fn step(&self) -> u16 {
         let val = (self.0 >> 0usize) & 0xffff;
         val as u16
     }
-    #[doc = "RTL Version Steping"]
+    #[doc = "RTL Version Steping."]
     #[inline(always)]
     pub const fn set_step(&mut self, val: u16) {
         self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
     }
-    #[doc = "Minor RTL Version"]
+    #[doc = "Minor RTL Version."]
     #[must_use]
     #[inline(always)]
     pub const fn minor(&self) -> u8 {
         let val = (self.0 >> 16usize) & 0xff;
         val as u8
     }
-    #[doc = "Minor RTL Version"]
+    #[doc = "Minor RTL Version."]
     #[inline(always)]
     pub const fn set_minor(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 16usize)) | (((val as u32) & 0xff) << 16usize);
     }
-    #[doc = "Major RTL Version"]
+    #[doc = "Major RTL Version."]
     #[must_use]
     #[inline(always)]
     pub const fn major(&self) -> u8 {
         let val = (self.0 >> 24usize) & 0xff;
         val as u8
     }
-    #[doc = "Major RTL Version"]
+    #[doc = "Major RTL Version."]
     #[inline(always)]
     pub const fn set_major(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val as u32) & 0xff) << 24usize);

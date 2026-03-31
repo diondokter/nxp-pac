@@ -1,11 +1,7 @@
-use std::{
-    collections::{HashMap, HashSet},
-    fmt::Write,
-    fs,
-    path::Path,
-};
+use std::{fmt::Write, fs, path::Path};
 
-use anyhow::{Context, bail};
+use anyhow::Context;
+use indexmap::IndexMap;
 use proc_macro2::{Literal, TokenStream};
 use quote::quote;
 use serde::Deserialize;
@@ -13,9 +9,11 @@ use serde::Deserialize;
 use crate::rustfmt;
 
 #[derive(Debug, Clone, Deserialize)]
-pub struct PinMetadata {
+pub struct Metadata {
     pub chips: Vec<String>,
     pub pins: Vec<Pin>,
+    pub nvic_prio_bits: u32,
+    pub interrupts: IndexMap<String, u32>,
     pub peripherals: Vec<Peripheral>,
 }
 
@@ -44,11 +42,50 @@ pub struct PinIomuxc {
 #[derive(Debug, Clone, Deserialize)]
 pub struct Peripheral {
     pub name: String,
+    #[serde(rename = "block")]
+    pub peripheral_block: Option<String>,
+    #[serde(rename = "module")]
+    pub rust_module_name: Option<String>,
+    #[serde(rename = "address")]
+    pub peripheral_address: Option<String>,
     pub signals: Vec<Signal>,
     pub flexcomm: Option<String>,
     #[serde(default)]
     pub dma_muxing: Vec<DmaMux>,
     pub only_in: Option<String>,
+}
+
+impl Peripheral {
+    pub fn parse_block_path(&self) -> anyhow::Result<Option<BlockPath>> {
+        let Some(mut peripheral_block) = self.peripheral_block.as_deref() else {
+            return Ok(None);
+        };
+
+        let mut type_name = None;
+
+        if let Some((stripped_path, specified_block_name)) = peripheral_block.split_once("::") {
+            peripheral_block = stripped_path;
+            type_name.get_or_insert(specified_block_name);
+        }
+
+        let original_mod_name = peripheral_block
+            .split('/')
+            .next_back()
+            .context("bad type path name")?;
+
+        let type_name = *type_name.get_or_insert(original_mod_name);
+
+        let mod_name = match self.rust_module_name.as_deref() {
+            Some(name) => name,
+            None => original_mod_name,
+        };
+
+        Ok(Some(BlockPath {
+            path: peripheral_block.into(),
+            rust_mod_name: mod_name.to_lowercase(),
+            rust_type_name: inflections::Inflect::to_pascal_case(type_name),
+        }))
+    }
 }
 
 #[derive(Debug, Clone, Deserialize)]
@@ -83,7 +120,7 @@ pub struct DmaMux {
     pub request: u8,
 }
 
-fn generate_metadata(name: &str, interrupts: &[String], metadata: &PinMetadata) -> TokenStream {
+fn generate_metadata(name: &str, metadata: &Metadata) -> TokenStream {
     let pins = metadata.pins.iter().map(|pin| {
         let name = &pin.name;
         let iomuxc = pin
@@ -182,15 +219,34 @@ fn generate_metadata(name: &str, interrupts: &[String], metadata: &PinMetadata) 
             }
         });
 
+        let address = match peripheral.peripheral_address.as_ref() {
+            Some(val) => {
+                let val: TokenStream = val
+                    .parse()
+                    .expect("Peripheral address is parsed to tokenstream");
+                quote! { #val }
+            }
+            None => quote! { 0 },
+        };
+
+        let driver_name = peripheral.peripheral_block.as_deref().unwrap_or_default();
+
         quote! {
             Peripheral {
                 name: #name,
+                address: #address,
+                driver_name: #driver_name,
                 signals: &[#(#signals),*],
                 flexcomm: #flexcomm,
                 dma_muxing: &[#(#dma_muxing),*],
             }
         }
     });
+
+    let interrupts = metadata
+        .interrupts
+        .iter()
+        .map(|(name, val)| quote! { (#name, #val) });
 
     quote! {
         use crate::metadata::*;
@@ -204,7 +260,7 @@ fn generate_metadata(name: &str, interrupts: &[String], metadata: &PinMetadata) 
 
         pub const PINS: &[Pin] = &[#(#pins),*];
         pub const PERIPHERALS: &[Peripheral] = &[#(#peripherals),*];
-        pub const INTERRUPTS: &[&str] = &[#(#interrupts),*];
+        pub const INTERRUPTS: &[(&str, u32)] = &[#(#interrupts),*];
     }
 }
 
@@ -213,37 +269,49 @@ pub fn generate_core(
     svd: &Path,
     metadata: &Path,
     core: &str,
-) -> anyhow::Result<()> {
+) -> anyhow::Result<Metadata> {
     let metadata = fs::read_to_string(metadata).context("Read metadata")?;
-    let metadata =
-        serde_json::from_str::<PinMetadata>(&metadata).context("Deserialize metadata")?;
+    let mut metadata =
+        serde_json::from_str::<Metadata>(&metadata).context("Deserialize metadata")?;
 
-    let svd_contents = fs::read_to_string(svd).context("Read SVD")?;
-    let svd = svd_parser::parse(&svd_contents).context("Parse SVD")?;
+    if metadata.interrupts.is_empty() {
+        // If the metadata doesn't define the interrupts, we'll get it from the SVD
 
-    let mut interrupts = Vec::new();
+        let svd_contents = fs::read_to_string(svd).context("Read SVD")?;
+        let svd = svd_parser::parse(&svd_contents).context("Parse SVD")?;
 
-    for peripheral in svd.peripherals.iter() {
-        for interrupt in peripheral.interrupt.iter() {
-            // Rust uses fully capitalized interrupt names for singletons.
-            interrupts.push(interrupt.name.clone().to_uppercase());
+        for peripheral in svd.peripherals.iter() {
+            for interrupt in peripheral.interrupt.iter() {
+                // Rust uses fully capitalized interrupt names for singletons.
+                metadata
+                    .interrupts
+                    .insert(interrupt.name.clone().to_uppercase(), interrupt.value);
+            }
         }
+
+        metadata.interrupts.sort_unstable_by_key(|_, val| *val);
     }
 
-    // LPC55S6x has duplicate FLEXCOMM entries. dedup requires sorting to work.
-    interrupts.sort();
-    interrupts.dedup();
-
     let mut metadata_out = String::new();
-    write!(
-        metadata_out,
-        "{}",
-        generate_metadata(core, &interrupts, &metadata)
-    )?;
+    write!(metadata_out, "{}", generate_metadata(core, &metadata))?;
 
     let metadata_rs = chips_dir.join(core.to_lowercase()).join("metadata.rs");
+    if !metadata_rs
+        .parent()
+        .context("getting metadata.rs parent")?
+        .exists()
+    {
+        fs::create_dir_all(metadata_rs.parent().context("getting metadata.rs parent")?)?;
+    }
     fs::write(&metadata_rs, metadata_out)?;
-    rustfmt(&metadata_rs)?;
+    rustfmt(&metadata_rs).context("Formatting metadata")?;
 
-    Ok(())
+    Ok(metadata)
+}
+
+#[derive(Debug, Clone, Hash, PartialEq, Eq)]
+pub struct BlockPath {
+    pub path: String,
+    pub rust_mod_name: String,
+    pub rust_type_name: String,
 }

@@ -1,4 +1,4 @@
-#[doc = "CM7_MCM"]
+#[doc = "CM7_MCM."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cm7Mcm {
     ptr: *mut u8,
@@ -14,7 +14,7 @@ impl Cm7Mcm {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "Interrupt Status and Control Register"]
+    #[doc = "Interrupt Status and Control Register."]
     #[inline(always)]
     pub const fn iscr(self) -> crate::common::Reg<regs::Iscr, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x10usize) as _) }

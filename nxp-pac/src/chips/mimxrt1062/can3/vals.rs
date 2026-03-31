@@ -312,7 +312,7 @@ impl From<Buf0i> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Buf5i {
-    #[doc = "No occurrence of MB5 completing transmission/reception when MCR\\[RFEN\\]=0, or of frame(s) available in the FIFO, when MCR\\[RFEN\\]=1"]
+    #[doc = "No occurrence of MB5 completing transmission/reception when MCR\\[RFEN\\]=0, or of frame(s) available in the FIFO, when MCR\\[RFEN\\]=1."]
     ID2 = 0x0,
     #[doc = "MB5 completed transmission/reception when MCR\\[RFEN\\]=0, or frame(s) available in the Rx FIFO when MCR\\[RFEN\\]=1. It generates a DMA request in case of MCR\\[RFEN\\] and MCR\\[DMA\\] are enabled."]
     ID4 = 0x01,
@@ -343,9 +343,9 @@ impl From<Buf5i> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Buf6i {
-    #[doc = "No occurrence of MB6 completing transmission/reception when MCR\\[RFEN\\]=0, or of Rx FIFO almost full when MCR\\[RFEN\\]=1"]
+    #[doc = "No occurrence of MB6 completing transmission/reception when MCR\\[RFEN\\]=0, or of Rx FIFO almost full when MCR\\[RFEN\\]=1."]
     ID2 = 0x0,
-    #[doc = "MB6 completed transmission/reception when MCR\\[RFEN\\]=0, or Rx FIFO almost full when MCR\\[RFEN\\]=1"]
+    #[doc = "MB6 completed transmission/reception when MCR\\[RFEN\\]=0, or Rx FIFO almost full when MCR\\[RFEN\\]=1."]
     ID4 = 0x01,
 }
 impl Buf6i {
@@ -374,9 +374,9 @@ impl From<Buf6i> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Buf7i {
-    #[doc = "No occurrence of MB7 completing transmission/reception when MCR\\[RFEN\\]=0, or of Rx FIFO overflow when MCR\\[RFEN\\]=1"]
+    #[doc = "No occurrence of MB7 completing transmission/reception when MCR\\[RFEN\\]=0, or of Rx FIFO overflow when MCR\\[RFEN\\]=1."]
     ID2 = 0x0,
-    #[doc = "MB7 completed transmission/reception when MCR\\[RFEN\\]=0, or Rx FIFO overflow when MCR\\[RFEN\\]=1"]
+    #[doc = "MB7 completed transmission/reception when MCR\\[RFEN\\]=0, or Rx FIFO overflow when MCR\\[RFEN\\]=1."]
     ID4 = 0x01,
 }
 impl Buf7i {
@@ -560,9 +560,9 @@ impl From<Eacen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Edfltdis {
-    #[doc = "Edge filter is enabled"]
+    #[doc = "Edge filter is enabled."]
     ENABLE = 0x0,
-    #[doc = "Edge filter is disabled"]
+    #[doc = "Edge filter is disabled."]
     DISABLE = 0x01,
 }
 impl Edfltdis {
@@ -746,11 +746,11 @@ impl From<Fdrate> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fltconf {
-    #[doc = "Error Active"]
+    #[doc = "Error Active."]
     ERROR_ACTIVE = 0x0,
-    #[doc = "Error Passive"]
+    #[doc = "Error Passive."]
     ERROR_PASSIVE = 0x01,
-    #[doc = "Bus Off"]
+    #[doc = "Bus Off."]
     BUS_OFF = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -1877,9 +1877,9 @@ impl From<TimerSrc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tsyn {
-    #[doc = "Timer sync feature disabled"]
+    #[doc = "Timer sync feature disabled."]
     TIMER_SYNC_DISABLED = 0x0,
-    #[doc = "Timer sync feature enabled"]
+    #[doc = "Timer sync feature enabled."]
     TIMER_SYNC_ENABLED = 0x01,
 }
 impl Tsyn {

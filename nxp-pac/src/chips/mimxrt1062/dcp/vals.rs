@@ -2,15 +2,15 @@
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Ch0statClrErrorCode(u8);
 impl Ch0statClrErrorCode {
-    #[doc = "Error signalled because the next pointer is 0x00000000"]
+    #[doc = "Error signalled because the next pointer is 0x00000000."]
     pub const NEXT_CHAIN_IS_0: Self = Self(0x01);
-    #[doc = "Error signalled because the semaphore is non-zero and neither chain bit is set"]
+    #[doc = "Error signalled because the semaphore is non-zero and neither chain bit is set."]
     pub const NO_CHAIN: Self = Self(0x02);
-    #[doc = "Error signalled because an error is reported reading/writing the context buffer"]
+    #[doc = "Error signalled because an error is reported reading/writing the context buffer."]
     pub const CONTEXT_ERROR: Self = Self(0x03);
-    #[doc = "Error signalled because an error is reported reading/writing the payload"]
+    #[doc = "Error signalled because an error is reported reading/writing the payload."]
     pub const PAYLOAD_ERROR: Self = Self(0x04);
-    #[doc = "Error signalled because the control packet specifies an invalid mode select (for instance, blit + hash)"]
+    #[doc = "Error signalled because the control packet specifies an invalid mode select (for instance, blit + hash)."]
     pub const INVALID_MODE: Self = Self(0x05);
 }
 impl Ch0statClrErrorCode {
@@ -62,15 +62,15 @@ impl From<Ch0statClrErrorCode> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Ch0statErrorCode(u8);
 impl Ch0statErrorCode {
-    #[doc = "Error signalled because the next pointer is 0x00000000"]
+    #[doc = "Error signalled because the next pointer is 0x00000000."]
     pub const NEXT_CHAIN_IS_0: Self = Self(0x01);
-    #[doc = "Error signalled because the semaphore is non-zero and neither chain bit is set"]
+    #[doc = "Error signalled because the semaphore is non-zero and neither chain bit is set."]
     pub const NO_CHAIN: Self = Self(0x02);
-    #[doc = "Error signalled because an error is reported reading/writing the context buffer"]
+    #[doc = "Error signalled because an error is reported reading/writing the context buffer."]
     pub const CONTEXT_ERROR: Self = Self(0x03);
-    #[doc = "Error signalled because an error is reported reading/writing the payload"]
+    #[doc = "Error signalled because an error is reported reading/writing the payload."]
     pub const PAYLOAD_ERROR: Self = Self(0x04);
-    #[doc = "Error signalled because the control packet specifies an invalid mode select (for instance, blit + hash)"]
+    #[doc = "Error signalled because the control packet specifies an invalid mode select (for instance, blit + hash)."]
     pub const INVALID_MODE: Self = Self(0x05);
 }
 impl Ch0statErrorCode {
@@ -122,15 +122,15 @@ impl From<Ch0statErrorCode> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Ch0statSetErrorCode(u8);
 impl Ch0statSetErrorCode {
-    #[doc = "Error signalled because the next pointer is 0x00000000"]
+    #[doc = "Error signalled because the next pointer is 0x00000000."]
     pub const NEXT_CHAIN_IS_0: Self = Self(0x01);
-    #[doc = "Error signalled because the semaphore is non-zero and neither chain bit is set"]
+    #[doc = "Error signalled because the semaphore is non-zero and neither chain bit is set."]
     pub const NO_CHAIN: Self = Self(0x02);
-    #[doc = "Error signalled because an error is reported reading/writing the context buffer"]
+    #[doc = "Error signalled because an error is reported reading/writing the context buffer."]
     pub const CONTEXT_ERROR: Self = Self(0x03);
-    #[doc = "Error signalled because an error is reported reading/writing the payload"]
+    #[doc = "Error signalled because an error is reported reading/writing the payload."]
     pub const PAYLOAD_ERROR: Self = Self(0x04);
-    #[doc = "Error signalled because the control packet specifies an invalid mode select (for instance, blit + hash)"]
+    #[doc = "Error signalled because the control packet specifies an invalid mode select (for instance, blit + hash)."]
     pub const INVALID_MODE: Self = Self(0x05);
 }
 impl Ch0statSetErrorCode {
@@ -182,15 +182,15 @@ impl From<Ch0statSetErrorCode> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Ch0statTogErrorCode(u8);
 impl Ch0statTogErrorCode {
-    #[doc = "Error signalled because the next pointer is 0x00000000"]
+    #[doc = "Error signalled because the next pointer is 0x00000000."]
     pub const NEXT_CHAIN_IS_0: Self = Self(0x01);
-    #[doc = "Error signalled because the semaphore is non-zero and neither chain bit is set"]
+    #[doc = "Error signalled because the semaphore is non-zero and neither chain bit is set."]
     pub const NO_CHAIN: Self = Self(0x02);
-    #[doc = "Error signalled because an error is reported reading/writing the context buffer"]
+    #[doc = "Error signalled because an error is reported reading/writing the context buffer."]
     pub const CONTEXT_ERROR: Self = Self(0x03);
-    #[doc = "Error signalled because an error is reported reading/writing the payload"]
+    #[doc = "Error signalled because an error is reported reading/writing the payload."]
     pub const PAYLOAD_ERROR: Self = Self(0x04);
-    #[doc = "Error signalled because the control packet specifies an invalid mode select (for instance, blit + hash)"]
+    #[doc = "Error signalled because the control packet specifies an invalid mode select (for instance, blit + hash)."]
     pub const INVALID_MODE: Self = Self(0x05);
 }
 impl Ch0statTogErrorCode {
@@ -962,13 +962,13 @@ impl From<Ch3statTogErrorCode> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct ChannelctrlClrEnableChannel(u8);
 impl ChannelctrlClrEnableChannel {
-    #[doc = "CH0"]
+    #[doc = "CH0."]
     pub const CH0: Self = Self(0x01);
-    #[doc = "CH1"]
+    #[doc = "CH1."]
     pub const CH1: Self = Self(0x02);
-    #[doc = "CH2"]
+    #[doc = "CH2."]
     pub const CH2: Self = Self(0x04);
-    #[doc = "CH3"]
+    #[doc = "CH3."]
     pub const CH3: Self = Self(0x08);
 }
 impl ChannelctrlClrEnableChannel {
@@ -1018,13 +1018,13 @@ impl From<ChannelctrlClrEnableChannel> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct ChannelctrlClrHighPriorityChannel(u8);
 impl ChannelctrlClrHighPriorityChannel {
-    #[doc = "CH0"]
+    #[doc = "CH0."]
     pub const CH0: Self = Self(0x01);
-    #[doc = "CH1"]
+    #[doc = "CH1."]
     pub const CH1: Self = Self(0x02);
-    #[doc = "CH2"]
+    #[doc = "CH2."]
     pub const CH2: Self = Self(0x04);
-    #[doc = "CH3"]
+    #[doc = "CH3."]
     pub const CH3: Self = Self(0x08);
 }
 impl ChannelctrlClrHighPriorityChannel {
@@ -1074,13 +1074,13 @@ impl From<ChannelctrlClrHighPriorityChannel> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct ChannelctrlEnableChannel(u8);
 impl ChannelctrlEnableChannel {
-    #[doc = "CH0"]
+    #[doc = "CH0."]
     pub const CH0: Self = Self(0x01);
-    #[doc = "CH1"]
+    #[doc = "CH1."]
     pub const CH1: Self = Self(0x02);
-    #[doc = "CH2"]
+    #[doc = "CH2."]
     pub const CH2: Self = Self(0x04);
-    #[doc = "CH3"]
+    #[doc = "CH3."]
     pub const CH3: Self = Self(0x08);
 }
 impl ChannelctrlEnableChannel {
@@ -1130,13 +1130,13 @@ impl From<ChannelctrlEnableChannel> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct ChannelctrlHighPriorityChannel(u8);
 impl ChannelctrlHighPriorityChannel {
-    #[doc = "CH0"]
+    #[doc = "CH0."]
     pub const CH0: Self = Self(0x01);
-    #[doc = "CH1"]
+    #[doc = "CH1."]
     pub const CH1: Self = Self(0x02);
-    #[doc = "CH2"]
+    #[doc = "CH2."]
     pub const CH2: Self = Self(0x04);
-    #[doc = "CH3"]
+    #[doc = "CH3."]
     pub const CH3: Self = Self(0x08);
 }
 impl ChannelctrlHighPriorityChannel {
@@ -1186,13 +1186,13 @@ impl From<ChannelctrlHighPriorityChannel> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct ChannelctrlSetEnableChannel(u8);
 impl ChannelctrlSetEnableChannel {
-    #[doc = "CH0"]
+    #[doc = "CH0."]
     pub const CH0: Self = Self(0x01);
-    #[doc = "CH1"]
+    #[doc = "CH1."]
     pub const CH1: Self = Self(0x02);
-    #[doc = "CH2"]
+    #[doc = "CH2."]
     pub const CH2: Self = Self(0x04);
-    #[doc = "CH3"]
+    #[doc = "CH3."]
     pub const CH3: Self = Self(0x08);
 }
 impl ChannelctrlSetEnableChannel {
@@ -1242,13 +1242,13 @@ impl From<ChannelctrlSetEnableChannel> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct ChannelctrlSetHighPriorityChannel(u8);
 impl ChannelctrlSetHighPriorityChannel {
-    #[doc = "CH0"]
+    #[doc = "CH0."]
     pub const CH0: Self = Self(0x01);
-    #[doc = "CH1"]
+    #[doc = "CH1."]
     pub const CH1: Self = Self(0x02);
-    #[doc = "CH2"]
+    #[doc = "CH2."]
     pub const CH2: Self = Self(0x04);
-    #[doc = "CH3"]
+    #[doc = "CH3."]
     pub const CH3: Self = Self(0x08);
 }
 impl ChannelctrlSetHighPriorityChannel {
@@ -1298,13 +1298,13 @@ impl From<ChannelctrlSetHighPriorityChannel> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct ChannelctrlTogEnableChannel(u8);
 impl ChannelctrlTogEnableChannel {
-    #[doc = "CH0"]
+    #[doc = "CH0."]
     pub const CH0: Self = Self(0x01);
-    #[doc = "CH1"]
+    #[doc = "CH1."]
     pub const CH1: Self = Self(0x02);
-    #[doc = "CH2"]
+    #[doc = "CH2."]
     pub const CH2: Self = Self(0x04);
-    #[doc = "CH3"]
+    #[doc = "CH3."]
     pub const CH3: Self = Self(0x08);
 }
 impl ChannelctrlTogEnableChannel {
@@ -1354,13 +1354,13 @@ impl From<ChannelctrlTogEnableChannel> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct ChannelctrlTogHighPriorityChannel(u8);
 impl ChannelctrlTogHighPriorityChannel {
-    #[doc = "CH0"]
+    #[doc = "CH0."]
     pub const CH0: Self = Self(0x01);
-    #[doc = "CH1"]
+    #[doc = "CH1."]
     pub const CH1: Self = Self(0x02);
-    #[doc = "CH2"]
+    #[doc = "CH2."]
     pub const CH2: Self = Self(0x04);
-    #[doc = "CH3"]
+    #[doc = "CH3."]
     pub const CH3: Self = Self(0x08);
 }
 impl ChannelctrlTogHighPriorityChannel {
@@ -1410,7 +1410,7 @@ impl From<ChannelctrlTogHighPriorityChannel> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct CipherAlgorithms(u16);
 impl CipherAlgorithms {
-    #[doc = "AES128"]
+    #[doc = "AES128."]
     pub const AES128: Self = Self(0x01);
 }
 impl CipherAlgorithms {
@@ -1454,9 +1454,9 @@ impl From<CipherAlgorithms> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CipherEncrypt {
-    #[doc = "DECRYPT"]
+    #[doc = "DECRYPT."]
     DECRYPT = 0x0,
-    #[doc = "ENCRYPT"]
+    #[doc = "ENCRYPT."]
     ENCRYPT = 0x01,
 }
 impl CipherEncrypt {
@@ -1485,9 +1485,9 @@ impl From<CipherEncrypt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CipherMode {
-    #[doc = "ECB"]
+    #[doc = "ECB."]
     ECB = 0x0,
-    #[doc = "CBC"]
+    #[doc = "CBC."]
     CBC = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -1530,7 +1530,7 @@ impl From<CipherMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CipherSelect {
-    #[doc = "AES128"]
+    #[doc = "AES128."]
     AES128 = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
@@ -1574,13 +1574,13 @@ impl From<CipherSelect> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct CtrlChannelInterruptEnable(u8);
 impl CtrlChannelInterruptEnable {
-    #[doc = "CH0"]
+    #[doc = "CH0."]
     pub const CH0: Self = Self(0x01);
-    #[doc = "CH1"]
+    #[doc = "CH1."]
     pub const CH1: Self = Self(0x02);
-    #[doc = "CH2"]
+    #[doc = "CH2."]
     pub const CH2: Self = Self(0x04);
-    #[doc = "CH3"]
+    #[doc = "CH3."]
     pub const CH3: Self = Self(0x08);
 }
 impl CtrlChannelInterruptEnable {
@@ -1630,13 +1630,13 @@ impl From<CtrlChannelInterruptEnable> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct CtrlClrChannelInterruptEnable(u8);
 impl CtrlClrChannelInterruptEnable {
-    #[doc = "CH0"]
+    #[doc = "CH0."]
     pub const CH0: Self = Self(0x01);
-    #[doc = "CH1"]
+    #[doc = "CH1."]
     pub const CH1: Self = Self(0x02);
-    #[doc = "CH2"]
+    #[doc = "CH2."]
     pub const CH2: Self = Self(0x04);
-    #[doc = "CH3"]
+    #[doc = "CH3."]
     pub const CH3: Self = Self(0x08);
 }
 impl CtrlClrChannelInterruptEnable {
@@ -1686,9 +1686,9 @@ impl From<CtrlClrChannelInterruptEnable> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlClrPresentCrypto {
-    #[doc = "Absent"]
+    #[doc = "Absent."]
     ABSENT = 0x0,
-    #[doc = "Present"]
+    #[doc = "Present."]
     PRESENT = 0x01,
 }
 impl CtrlClrPresentCrypto {
@@ -1717,9 +1717,9 @@ impl From<CtrlClrPresentCrypto> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlClrPresentSha {
-    #[doc = "Absent"]
+    #[doc = "Absent."]
     ABSENT = 0x0,
-    #[doc = "Present"]
+    #[doc = "Present."]
     PRESENT = 0x01,
 }
 impl CtrlClrPresentSha {
@@ -1748,9 +1748,9 @@ impl From<CtrlClrPresentSha> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlPresentCrypto {
-    #[doc = "Absent"]
+    #[doc = "Absent."]
     ABSENT = 0x0,
-    #[doc = "Present"]
+    #[doc = "Present."]
     PRESENT = 0x01,
 }
 impl CtrlPresentCrypto {
@@ -1779,9 +1779,9 @@ impl From<CtrlPresentCrypto> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlPresentSha {
-    #[doc = "Absent"]
+    #[doc = "Absent."]
     ABSENT = 0x0,
-    #[doc = "Present"]
+    #[doc = "Present."]
     PRESENT = 0x01,
 }
 impl CtrlPresentSha {
@@ -1810,13 +1810,13 @@ impl From<CtrlPresentSha> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct CtrlSetChannelInterruptEnable(u8);
 impl CtrlSetChannelInterruptEnable {
-    #[doc = "CH0"]
+    #[doc = "CH0."]
     pub const CH0: Self = Self(0x01);
-    #[doc = "CH1"]
+    #[doc = "CH1."]
     pub const CH1: Self = Self(0x02);
-    #[doc = "CH2"]
+    #[doc = "CH2."]
     pub const CH2: Self = Self(0x04);
-    #[doc = "CH3"]
+    #[doc = "CH3."]
     pub const CH3: Self = Self(0x08);
 }
 impl CtrlSetChannelInterruptEnable {
@@ -1866,9 +1866,9 @@ impl From<CtrlSetChannelInterruptEnable> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlSetPresentCrypto {
-    #[doc = "Absent"]
+    #[doc = "Absent."]
     ABSENT = 0x0,
-    #[doc = "Present"]
+    #[doc = "Present."]
     PRESENT = 0x01,
 }
 impl CtrlSetPresentCrypto {
@@ -1897,9 +1897,9 @@ impl From<CtrlSetPresentCrypto> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlSetPresentSha {
-    #[doc = "Absent"]
+    #[doc = "Absent."]
     ABSENT = 0x0,
-    #[doc = "Present"]
+    #[doc = "Present."]
     PRESENT = 0x01,
 }
 impl CtrlSetPresentSha {
@@ -1928,13 +1928,13 @@ impl From<CtrlSetPresentSha> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct CtrlTogChannelInterruptEnable(u8);
 impl CtrlTogChannelInterruptEnable {
-    #[doc = "CH0"]
+    #[doc = "CH0."]
     pub const CH0: Self = Self(0x01);
-    #[doc = "CH1"]
+    #[doc = "CH1."]
     pub const CH1: Self = Self(0x02);
-    #[doc = "CH2"]
+    #[doc = "CH2."]
     pub const CH2: Self = Self(0x04);
-    #[doc = "CH3"]
+    #[doc = "CH3."]
     pub const CH3: Self = Self(0x08);
 }
 impl CtrlTogChannelInterruptEnable {
@@ -1984,9 +1984,9 @@ impl From<CtrlTogChannelInterruptEnable> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlTogPresentCrypto {
-    #[doc = "Absent"]
+    #[doc = "Absent."]
     ABSENT = 0x0,
-    #[doc = "Present"]
+    #[doc = "Present."]
     PRESENT = 0x01,
 }
 impl CtrlTogPresentCrypto {
@@ -2015,9 +2015,9 @@ impl From<CtrlTogPresentCrypto> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CtrlTogPresentSha {
-    #[doc = "Absent"]
+    #[doc = "Absent."]
     ABSENT = 0x0,
-    #[doc = "Present"]
+    #[doc = "Present."]
     PRESENT = 0x01,
 }
 impl CtrlTogPresentSha {
@@ -2046,11 +2046,11 @@ impl From<CtrlTogPresentSha> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct HashAlgorithms(u16);
 impl HashAlgorithms {
-    #[doc = "SHA1"]
+    #[doc = "SHA1."]
     pub const SHA1: Self = Self(0x01);
-    #[doc = "CRC32"]
+    #[doc = "CRC32."]
     pub const CRC32: Self = Self(0x02);
-    #[doc = "SHA256"]
+    #[doc = "SHA256."]
     pub const SHA256: Self = Self(0x04);
 }
 impl HashAlgorithms {
@@ -2098,9 +2098,9 @@ impl From<HashAlgorithms> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HashOutput {
-    #[doc = "INPUT"]
+    #[doc = "INPUT."]
     INPUT = 0x0,
-    #[doc = "OUTPUT"]
+    #[doc = "OUTPUT."]
     OUTPUT = 0x01,
 }
 impl HashOutput {
@@ -2129,11 +2129,11 @@ impl From<HashOutput> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum HashSelect {
-    #[doc = "SHA1"]
+    #[doc = "SHA1."]
     SHA1 = 0x0,
-    #[doc = "CRC32"]
+    #[doc = "CRC32."]
     CRC32 = 0x01,
-    #[doc = "SHA256"]
+    #[doc = "SHA256."]
     SHA256 = 0x02,
     _RESERVED_3 = 0x03,
     _RESERVED_4 = 0x04,
@@ -2175,15 +2175,15 @@ impl From<HashSelect> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Index(u8);
 impl Index {
-    #[doc = "CONTROL"]
+    #[doc = "CONTROL."]
     pub const CONTROL: Self = Self(0x01);
-    #[doc = "OTPKEY0"]
+    #[doc = "OTPKEY0."]
     pub const OTPKEY0: Self = Self(0x10);
-    #[doc = "OTPKEY1"]
+    #[doc = "OTPKEY1."]
     pub const OTPKEY1: Self = Self(0x11);
-    #[doc = "OTPKEY2"]
+    #[doc = "OTPKEY2."]
     pub const OTPKEY2: Self = Self(0x12);
-    #[doc = "OTPKEY3"]
+    #[doc = "OTPKEY3."]
     pub const OTPKEY3: Self = Self(0x13);
 }
 impl Index {
@@ -2235,17 +2235,17 @@ impl From<Index> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct KeySelect(u8);
 impl KeySelect {
-    #[doc = "KEY0"]
+    #[doc = "KEY0."]
     pub const KEY0: Self = Self(0x0);
-    #[doc = "KEY1"]
+    #[doc = "KEY1."]
     pub const KEY1: Self = Self(0x01);
-    #[doc = "KEY2"]
+    #[doc = "KEY2."]
     pub const KEY2: Self = Self(0x02);
-    #[doc = "KEY3"]
+    #[doc = "KEY3."]
     pub const KEY3: Self = Self(0x03);
-    #[doc = "UNIQUE_KEY"]
+    #[doc = "UNIQUE_KEY."]
     pub const UNIQUE_KEY: Self = Self(0xfe);
-    #[doc = "OTP_KEY"]
+    #[doc = "OTP_KEY."]
     pub const OTP_KEY: Self = Self(0xff);
 }
 impl KeySelect {
@@ -2299,15 +2299,15 @@ impl From<KeySelect> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatClrCurChannel {
-    #[doc = "None"]
+    #[doc = "None."]
     NONE = 0x0,
-    #[doc = "CH0"]
+    #[doc = "CH0."]
     CH0 = 0x01,
-    #[doc = "CH1"]
+    #[doc = "CH1."]
     CH1 = 0x02,
-    #[doc = "CH2"]
+    #[doc = "CH2."]
     CH2 = 0x03,
-    #[doc = "CH3"]
+    #[doc = "CH3."]
     CH3 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
@@ -2347,13 +2347,13 @@ impl From<StatClrCurChannel> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct StatClrReadyChannels(u8);
 impl StatClrReadyChannels {
-    #[doc = "CH0"]
+    #[doc = "CH0."]
     pub const CH0: Self = Self(0x01);
-    #[doc = "CH1"]
+    #[doc = "CH1."]
     pub const CH1: Self = Self(0x02);
-    #[doc = "CH2"]
+    #[doc = "CH2."]
     pub const CH2: Self = Self(0x04);
-    #[doc = "CH3"]
+    #[doc = "CH3."]
     pub const CH3: Self = Self(0x08);
 }
 impl StatClrReadyChannels {
@@ -2403,15 +2403,15 @@ impl From<StatClrReadyChannels> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatCurChannel {
-    #[doc = "None"]
+    #[doc = "None."]
     NONE = 0x0,
-    #[doc = "CH0"]
+    #[doc = "CH0."]
     CH0 = 0x01,
-    #[doc = "CH1"]
+    #[doc = "CH1."]
     CH1 = 0x02,
-    #[doc = "CH2"]
+    #[doc = "CH2."]
     CH2 = 0x03,
-    #[doc = "CH3"]
+    #[doc = "CH3."]
     CH3 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
@@ -2451,13 +2451,13 @@ impl From<StatCurChannel> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct StatReadyChannels(u8);
 impl StatReadyChannels {
-    #[doc = "CH0"]
+    #[doc = "CH0."]
     pub const CH0: Self = Self(0x01);
-    #[doc = "CH1"]
+    #[doc = "CH1."]
     pub const CH1: Self = Self(0x02);
-    #[doc = "CH2"]
+    #[doc = "CH2."]
     pub const CH2: Self = Self(0x04);
-    #[doc = "CH3"]
+    #[doc = "CH3."]
     pub const CH3: Self = Self(0x08);
 }
 impl StatReadyChannels {
@@ -2507,15 +2507,15 @@ impl From<StatReadyChannels> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatSetCurChannel {
-    #[doc = "None"]
+    #[doc = "None."]
     NONE = 0x0,
-    #[doc = "CH0"]
+    #[doc = "CH0."]
     CH0 = 0x01,
-    #[doc = "CH1"]
+    #[doc = "CH1."]
     CH1 = 0x02,
-    #[doc = "CH2"]
+    #[doc = "CH2."]
     CH2 = 0x03,
-    #[doc = "CH3"]
+    #[doc = "CH3."]
     CH3 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
@@ -2555,13 +2555,13 @@ impl From<StatSetCurChannel> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct StatSetReadyChannels(u8);
 impl StatSetReadyChannels {
-    #[doc = "CH0"]
+    #[doc = "CH0."]
     pub const CH0: Self = Self(0x01);
-    #[doc = "CH1"]
+    #[doc = "CH1."]
     pub const CH1: Self = Self(0x02);
-    #[doc = "CH2"]
+    #[doc = "CH2."]
     pub const CH2: Self = Self(0x04);
-    #[doc = "CH3"]
+    #[doc = "CH3."]
     pub const CH3: Self = Self(0x08);
 }
 impl StatSetReadyChannels {
@@ -2611,15 +2611,15 @@ impl From<StatSetReadyChannels> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatTogCurChannel {
-    #[doc = "None"]
+    #[doc = "None."]
     NONE = 0x0,
-    #[doc = "CH0"]
+    #[doc = "CH0."]
     CH0 = 0x01,
-    #[doc = "CH1"]
+    #[doc = "CH1."]
     CH1 = 0x02,
-    #[doc = "CH2"]
+    #[doc = "CH2."]
     CH2 = 0x03,
-    #[doc = "CH3"]
+    #[doc = "CH3."]
     CH3 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
@@ -2659,13 +2659,13 @@ impl From<StatTogCurChannel> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct StatTogReadyChannels(u8);
 impl StatTogReadyChannels {
-    #[doc = "CH0"]
+    #[doc = "CH0."]
     pub const CH0: Self = Self(0x01);
-    #[doc = "CH1"]
+    #[doc = "CH1."]
     pub const CH1: Self = Self(0x02);
-    #[doc = "CH2"]
+    #[doc = "CH2."]
     pub const CH2: Self = Self(0x04);
-    #[doc = "CH3"]
+    #[doc = "CH3."]
     pub const CH3: Self = Self(0x08);
 }
 impl StatTogReadyChannels {

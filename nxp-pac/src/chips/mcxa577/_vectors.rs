@@ -1,14 +1,14 @@
 unsafe extern "C" {
     fn RESERVED16();
     fn CMC();
-    fn DMA_CH0();
-    fn DMA_CH1();
-    fn DMA_CH2();
-    fn DMA_CH3();
-    fn DMA_CH4();
-    fn DMA_CH5();
-    fn DMA_CH6();
-    fn DMA_CH7();
+    fn DMA0_CH0();
+    fn DMA0_CH1();
+    fn DMA0_CH2();
+    fn DMA0_CH3();
+    fn DMA0_CH4();
+    fn DMA0_CH5();
+    fn DMA0_CH6();
+    fn DMA0_CH7();
     fn ERM0_SINGLE_BIT();
     fn ERM0_MULTI_BIT();
     fn FMU0();
@@ -81,7 +81,7 @@ unsafe extern "C" {
     fn TRNG0();
     fn SECURE_ERR();
     fn SEC_HYPERVISOR_CALL();
-    fn RTC();
+    fn RTC0();
     fn GDET();
     fn EWM0();
     fn TSI_END_OF_SCAN();
@@ -93,10 +93,10 @@ unsafe extern "C" {
     fn GPIO4_1();
     fn GPIO5_1();
     fn ITRC0();
-    fn DMA_CH8();
-    fn DMA_CH9();
-    fn DMA_CH10();
-    fn DMA_CH11();
+    fn DMA0_CH8();
+    fn DMA0_CH9();
+    fn DMA0_CH10();
+    fn DMA0_CH11();
     fn DMA1_CH0();
     fn DMA1_CH1();
     fn DMA1_CH2();
@@ -113,14 +113,14 @@ pub static __INTERRUPTS: [Vector; 146] = [
         _handler: RESERVED16,
     },
     Vector { _handler: CMC },
-    Vector { _handler: DMA_CH0 },
-    Vector { _handler: DMA_CH1 },
-    Vector { _handler: DMA_CH2 },
-    Vector { _handler: DMA_CH3 },
-    Vector { _handler: DMA_CH4 },
-    Vector { _handler: DMA_CH5 },
-    Vector { _handler: DMA_CH6 },
-    Vector { _handler: DMA_CH7 },
+    Vector { _handler: DMA0_CH0 },
+    Vector { _handler: DMA0_CH1 },
+    Vector { _handler: DMA0_CH2 },
+    Vector { _handler: DMA0_CH3 },
+    Vector { _handler: DMA0_CH4 },
+    Vector { _handler: DMA0_CH5 },
+    Vector { _handler: DMA0_CH6 },
+    Vector { _handler: DMA0_CH7 },
     Vector {
         _handler: ERM0_SINGLE_BIT,
     },
@@ -248,7 +248,7 @@ pub static __INTERRUPTS: [Vector; 146] = [
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
-    Vector { _handler: RTC },
+    Vector { _handler: RTC0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _handler: GDET },
@@ -267,10 +267,14 @@ pub static __INTERRUPTS: [Vector; 146] = [
     Vector { _handler: GPIO5_1 },
     Vector { _reserved: 0 },
     Vector { _handler: ITRC0 },
-    Vector { _handler: DMA_CH8 },
-    Vector { _handler: DMA_CH9 },
-    Vector { _handler: DMA_CH10 },
-    Vector { _handler: DMA_CH11 },
+    Vector { _handler: DMA0_CH8 },
+    Vector { _handler: DMA0_CH9 },
+    Vector {
+        _handler: DMA0_CH10,
+    },
+    Vector {
+        _handler: DMA0_CH11,
+    },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },

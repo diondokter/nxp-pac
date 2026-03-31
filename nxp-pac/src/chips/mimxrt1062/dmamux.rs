@@ -1,4 +1,4 @@
-#[doc = "DMAMUX"]
+#[doc = "DMAMUX."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dmamux {
     ptr: *mut u8,
@@ -14,7 +14,7 @@ impl Dmamux {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "Channel index Configuration Register"]
+    #[doc = "Channel index Configuration Register."]
     #[inline(always)]
     pub const fn chcfg(self, n: usize) -> crate::common::Reg<regs::Chcfg, crate::common::RW> {
         assert!(n < 32usize);

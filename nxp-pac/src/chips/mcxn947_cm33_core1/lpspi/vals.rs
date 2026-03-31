@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Contc {
-    #[doc = "Command word for start of new transfer"]
+    #[doc = "Command word for start of new transfer."]
     START = 0x0,
-    #[doc = "Command word for continuing transfer"]
+    #[doc = "Command word for continuing transfer."]
     CONTINUE = 0x01,
 }
 impl Contc {
@@ -33,9 +33,9 @@ impl From<Contc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cpha {
-    #[doc = "Captured"]
+    #[doc = "Captured."]
     CAPTURED = 0x0,
-    #[doc = "Changed"]
+    #[doc = "Changed."]
     CHANGED = 0x01,
 }
 impl Cpha {
@@ -64,9 +64,9 @@ impl From<Cpha> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cpol {
-    #[doc = "Inactive low"]
+    #[doc = "Inactive low."]
     INACTIVE_LOW = 0x0,
-    #[doc = "Inactive high"]
+    #[doc = "Inactive high."]
     INACTIVE_HIGH = 0x01,
 }
 impl Cpol {
@@ -139,9 +139,9 @@ impl From<Feature> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Hrdir {
-    #[doc = "Input"]
+    #[doc = "Input."]
     INPUT = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     OUTPUT = 0x01,
 }
 impl Hrdir {
@@ -170,9 +170,9 @@ impl From<Hrdir> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Hrsel {
-    #[doc = "HREQ pin"]
+    #[doc = "HREQ pin."]
     HREQPIN = 0x0,
-    #[doc = "Input trigger"]
+    #[doc = "Input trigger."]
     INPUT_TRIGGER = 0x01,
 }
 impl Hrsel {
@@ -201,9 +201,9 @@ impl From<Hrsel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lsbf {
-    #[doc = "MSB first"]
+    #[doc = "MSB first."]
     MSB_FIRST = 0x0,
-    #[doc = "LSB first"]
+    #[doc = "LSB first."]
     LSB_FIRST = 0x01,
 }
 impl Lsbf {
@@ -232,9 +232,9 @@ impl From<Lsbf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Master {
-    #[doc = "Slave mode"]
+    #[doc = "Slave mode."]
     SLAVE_MODE = 0x0,
-    #[doc = "Master mode"]
+    #[doc = "Master mode."]
     MASTER_MODE = 0x01,
 }
 impl Master {
@@ -263,20 +263,20 @@ impl From<Master> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Matcfg {
-    #[doc = "Match is disabled"]
+    #[doc = "Match is disabled."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "Match first data word with compare word"]
+    #[doc = "Match first data word with compare word."]
     ENABLED_FIRSTDATAMATCH = 0x02,
-    #[doc = "Match any data word with compare word"]
+    #[doc = "Match any data word with compare word."]
     ENABLED_ANYDATAMATCH = 0x03,
-    #[doc = "Sequential match, first data word"]
+    #[doc = "Sequential match, first data word."]
     ENABLED_DATAMATCH_100 = 0x04,
-    #[doc = "Sequential match, any data word"]
+    #[doc = "Sequential match, any data word."]
     ENABLED_DATAMATCH_101 = 0x05,
-    #[doc = "Match first data word (masked) with compare word (masked)"]
+    #[doc = "Match first data word (masked) with compare word (masked)."]
     ENABLED_DATAMATCH_110 = 0x06,
-    #[doc = "Match any data word (masked) with compare word (masked)"]
+    #[doc = "Match any data word (masked) with compare word (masked)."]
     ENABLED_DATAMATCH_111 = 0x07,
 }
 impl Matcfg {
@@ -305,9 +305,9 @@ impl From<Matcfg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mbf {
-    #[doc = "LPSPI is idle"]
+    #[doc = "LPSPI is idle."]
     IDLE = 0x0,
-    #[doc = "LPSPI is busy"]
+    #[doc = "LPSPI is busy."]
     BUSY = 0x01,
 }
 impl Mbf {
@@ -336,9 +336,9 @@ impl From<Mbf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Outcfg {
-    #[doc = "Retain last value"]
+    #[doc = "Retain last value."]
     RETAIN_LASTVALUE = 0x0,
-    #[doc = "3-stated"]
+    #[doc = "3-stated."]
     TRISTATED = 0x01,
 }
 impl Outcfg {
@@ -367,9 +367,9 @@ impl From<Outcfg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Partial {
-    #[doc = "Discard"]
+    #[doc = "Discard."]
     DISCARDED = 0x0,
-    #[doc = "Store"]
+    #[doc = "Store."]
     STORED = 0x01,
 }
 impl Partial {
@@ -398,13 +398,13 @@ impl From<Partial> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcs {
-    #[doc = "Transfer using PCS\\[0\\]"]
+    #[doc = "Transfer using PCS\\[0\\]."]
     TX_PCS0 = 0x0,
-    #[doc = "Transfer using PCS\\[1\\]"]
+    #[doc = "Transfer using PCS\\[1\\]."]
     TX_PCS1 = 0x01,
-    #[doc = "Transfer using PCS\\[2\\]"]
+    #[doc = "Transfer using PCS\\[2\\]."]
     TX_PCS2 = 0x02,
-    #[doc = "Transfer using PCS\\[3\\]"]
+    #[doc = "Transfer using PCS\\[3\\]."]
     TX_PCS3 = 0x03,
 }
 impl Pcs {
@@ -433,9 +433,9 @@ impl From<Pcs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcscfg {
-    #[doc = "PCS\\[3:2\\] configured for chip select function"]
+    #[doc = "PCS\\[3:2\\] configured for chip select function."]
     CHIP_SELECT = 0x0,
-    #[doc = "PCS\\[3:2\\] configured for half-duplex 4-bit transfers (PCS\\[3:2\\] = DATA\\[3:2\\])"]
+    #[doc = "PCS\\[3:2\\] configured for half-duplex 4-bit transfers (PCS\\[3:2\\] = DATA\\[3:2\\])."]
     HALFDUPLEX4BIT = 0x01,
 }
 impl Pcscfg {
@@ -464,9 +464,9 @@ impl From<Pcscfg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pcspol {
-    #[doc = "Active low"]
+    #[doc = "Active low."]
     DISCARDED = 0x0,
-    #[doc = "Active high"]
+    #[doc = "Active high."]
     STORED = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -509,13 +509,13 @@ impl From<Pcspol> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pincfg {
-    #[doc = "SIN is used for input data; SOUT is used for output data"]
+    #[doc = "SIN is used for input data; SOUT is used for output data."]
     SIN_IN_SOUT_OUT = 0x0,
-    #[doc = "SIN is used for both input and output data; only half-duplex serial transfers are supported"]
+    #[doc = "SIN is used for both input and output data; only half-duplex serial transfers are supported."]
     SIN_BOTH_IN_OUT = 0x01,
-    #[doc = "SOUT is used for both input and output data; only half-duplex serial transfers are supported"]
+    #[doc = "SOUT is used for both input and output data; only half-duplex serial transfers are supported."]
     SOUT_BOTH_IN_OUT = 0x02,
-    #[doc = "SOUT is used for input data; SIN is used for output data"]
+    #[doc = "SOUT is used for input data; SIN is used for output data."]
     SOUT_IN_SIN_OUT = 0x03,
 }
 impl Pincfg {
@@ -544,21 +544,21 @@ impl From<Pincfg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prescale {
-    #[doc = "Divide by 1"]
+    #[doc = "Divide by 1."]
     DIVIDEBY1 = 0x0,
-    #[doc = "Divide by 2"]
+    #[doc = "Divide by 2."]
     DIVIDEBY2 = 0x01,
-    #[doc = "Divide by 4"]
+    #[doc = "Divide by 4."]
     DIVIDEBY4 = 0x02,
-    #[doc = "Divide by 8"]
+    #[doc = "Divide by 8."]
     DIVIDEBY8 = 0x03,
-    #[doc = "Divide by 16"]
+    #[doc = "Divide by 16."]
     DIVIDEBY16 = 0x04,
-    #[doc = "Divide by 32"]
+    #[doc = "Divide by 32."]
     DIVIDEBY32 = 0x05,
-    #[doc = "Divide by 64"]
+    #[doc = "Divide by 64."]
     DIVIDEBY64 = 0x06,
-    #[doc = "Divide by 128"]
+    #[doc = "Divide by 128."]
     DIVIDEBY128 = 0x07,
 }
 impl Prescale {
@@ -587,9 +587,9 @@ impl From<Prescale> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rdmo {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     STORED = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     DISCARDED = 0x01,
 }
 impl Rdmo {
@@ -618,9 +618,9 @@ impl From<Rdmo> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rrf {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Reset"]
+    #[doc = "Reset."]
     RXFIFO_RST = 0x01,
 }
 impl Rrf {
@@ -649,9 +649,9 @@ impl From<Rrf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rtf {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Reset"]
+    #[doc = "Reset."]
     TXFIFO_RST = 0x01,
 }
 impl Rtf {
@@ -680,9 +680,9 @@ impl From<Rtf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rxmsk {
-    #[doc = "Normal transfer"]
+    #[doc = "Normal transfer."]
     NORMAL = 0x0,
-    #[doc = "Mask receive data"]
+    #[doc = "Mask receive data."]
     MASK = 0x01,
 }
 impl Rxmsk {
@@ -711,9 +711,9 @@ impl From<Rxmsk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sample {
-    #[doc = "SCK edge"]
+    #[doc = "SCK edge."]
     ON_SCK_EDGE = 0x0,
-    #[doc = "Delayed SCK edge"]
+    #[doc = "Delayed SCK edge."]
     ON_DELAYED_SCK_EDGE = 0x01,
 }
 impl Sample {
@@ -742,9 +742,9 @@ impl From<Sample> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sof {
-    #[doc = "Subsequent data word"]
+    #[doc = "Subsequent data word."]
     NEXT_DATAWORD = 0x0,
-    #[doc = "First data word"]
+    #[doc = "First data word."]
     FIRST_DATAWORD = 0x01,
 }
 impl Sof {
@@ -773,9 +773,9 @@ impl From<Sof> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tdf {
-    #[doc = "Transmit data not requested"]
+    #[doc = "Transmit data not requested."]
     TXDATA_NOT_REQST = 0x0,
-    #[doc = "Transmit data requested"]
+    #[doc = "Transmit data requested."]
     TXDATA_REQST = 0x01,
 }
 impl Tdf {
@@ -804,9 +804,9 @@ impl From<Tdf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Txmsk {
-    #[doc = "Normal transfer"]
+    #[doc = "Normal transfer."]
     NORMAL = 0x0,
-    #[doc = "Mask transmit data"]
+    #[doc = "Mask transmit data."]
     MASK = 0x01,
 }
 impl Txmsk {
@@ -835,11 +835,11 @@ impl From<Txmsk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Width {
-    #[doc = "1-bit transfer"]
+    #[doc = "1-bit transfer."]
     ONEBIT = 0x0,
-    #[doc = "2-bit transfer"]
+    #[doc = "2-bit transfer."]
     TWOBIT = 0x01,
-    #[doc = "4-bit transfer"]
+    #[doc = "4-bit transfer."]
     FOURBIT = 0x02,
     _RESERVED_3 = 0x03,
 }

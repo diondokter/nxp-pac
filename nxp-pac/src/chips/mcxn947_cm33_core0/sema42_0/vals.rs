@@ -948,7 +948,7 @@ impl From<Gate9Gtfsm> for u8 {
 pub enum Rstgsm {
     #[doc = "Idle, waiting for the first data pattern write."]
     IDLE = 0x0,
-    #[doc = "Waiting for the second data pattern write"]
+    #[doc = "Waiting for the second data pattern write."]
     WAITING = 0x01,
     #[doc = "The 2-write sequence has completed. Generate the specified gate reset(s). After the reset is performed, this machine returns to the idle (waiting for first data pattern write) state."]
     TWO_WRITE_DONE = 0x02,

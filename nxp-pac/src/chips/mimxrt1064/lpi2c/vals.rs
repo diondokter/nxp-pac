@@ -2,21 +2,21 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Addrcfg {
-    #[doc = "Address match 0 (7-bit)"]
+    #[doc = "Address match 0 (7-bit)."]
     ADDRESS_MATCH0_7_BIT = 0x0,
-    #[doc = "Address match 0 (10-bit)"]
+    #[doc = "Address match 0 (10-bit)."]
     ADDRESS_MATCH0_10_BIT = 0x01,
-    #[doc = "Address match 0 (7-bit) or Address match 1 (7-bit)"]
+    #[doc = "Address match 0 (7-bit) or Address match 1 (7-bit)."]
     ADDRESS_MATCH0_7_BIT_OR_ADDRESS_MATCH1_7_BIT = 0x02,
-    #[doc = "Address match 0 (10-bit) or Address match 1 (10-bit)"]
+    #[doc = "Address match 0 (10-bit) or Address match 1 (10-bit)."]
     ADDRESS_MATCH0_10_BIT_OR_ADDRESS_MATCH1_10_BIT = 0x03,
-    #[doc = "Address match 0 (7-bit) or Address match 1 (10-bit)"]
+    #[doc = "Address match 0 (7-bit) or Address match 1 (10-bit)."]
     ADDRESS_MATCH0_7_BIT_OR_ADDRESS_MATCH1_10_BIT = 0x04,
-    #[doc = "Address match 0 (10-bit) or Address match 1 (7-bit)"]
+    #[doc = "Address match 0 (10-bit) or Address match 1 (7-bit)."]
     ADDRESS_MATCH0_10_BIT_OR_ADDRESS_MATCH1_7_BIT = 0x05,
-    #[doc = "From Address match 0 (7-bit) to Address match 1 (7-bit)"]
+    #[doc = "From Address match 0 (7-bit) to Address match 1 (7-bit)."]
     FROM_ADDRESS_MATCH0_7_BIT_TO_ADDRESS_MATCH1_7_BIT = 0x06,
-    #[doc = "From Address match 0 (10-bit) to Address match 1 (10-bit)"]
+    #[doc = "From Address match 0 (10-bit) to Address match 1 (10-bit)."]
     FROM_ADDRESS_MATCH0_10_BIT_TO_ADDRESS_MATCH1_10_BIT = 0x07,
 }
 impl Addrcfg {
@@ -45,9 +45,9 @@ impl From<Addrcfg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Anv {
-    #[doc = "Received Address (RADDR) is valid"]
+    #[doc = "Received Address (RADDR) is valid."]
     VALID = 0x0,
-    #[doc = "Received Address (RADDR) is not valid"]
+    #[doc = "Received Address (RADDR) is not valid."]
     NOT_VALID = 0x01,
 }
 impl Anv {
@@ -76,19 +76,19 @@ impl From<Anv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cmd {
-    #[doc = "Transmit DATA\\[7:0\\]"]
+    #[doc = "Transmit DATA\\[7:0\\]."]
     TRANSMIT_DATA_7_THROUGH_0 = 0x0,
-    #[doc = "Receive (DATA\\[7:0\\] + 1) bytes"]
+    #[doc = "Receive (DATA\\[7:0\\] + 1) bytes."]
     RECEIVE_DATA_7_THROUGH_0_PLUS_ONE = 0x01,
-    #[doc = "Generate STOP condition"]
+    #[doc = "Generate STOP condition."]
     GENERATE_STOP_CONDITION = 0x02,
-    #[doc = "Receive and discard (DATA\\[7:0\\] + 1) bytes"]
+    #[doc = "Receive and discard (DATA\\[7:0\\] + 1) bytes."]
     RECEIVE_AND_DISCARD_DATA_7_THROUGH_0_PLUS_ONE = 0x03,
-    #[doc = "Generate (repeated) START and transmit address in DATA\\[7:0\\]"]
+    #[doc = "Generate (repeated) START and transmit address in DATA\\[7:0\\]."]
     GENERATE_START_AND_TRANSMIT_ADDRESS_IN_DATA_7_THROUGH_0 = 0x04,
     #[doc = "Generate (repeated) START and transmit address in DATA\\[7:0\\]. This transfer expects a NACK to be returned."]
     GENERATE_START_AND_TRANSMIT_ADDRESS_IN_DATA_7_THROUGH_0_EXPECT_NACK = 0x05,
-    #[doc = "Generate (repeated) START and transmit address in DATA\\[7:0\\] using high speed mode"]
+    #[doc = "Generate (repeated) START and transmit address in DATA\\[7:0\\] using high speed mode."]
     GENERATE_START_AND_TRANSMIT_ADDRESS_IN_DATA_7_THROUGH_0_USING_HIGH_SPEED_MODE = 0x06,
     #[doc = "Generate (repeated) START and transmit address in DATA\\[7:0\\] using high speed mode. This transfer expects a NACK to be returned."]
     GENERATE_START_AND_TRANSMIT_ADDRESS_IN_DATA_7_THROUGH_0_USING_HIGH_SPEED_MODE_EXPECT_NACK =
@@ -120,9 +120,9 @@ impl From<Cmd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dozen {
-    #[doc = "Master is enabled in Doze mode"]
+    #[doc = "Master is enabled in Doze mode."]
     ENABLED = 0x0,
-    #[doc = "Master is disabled in Doze mode"]
+    #[doc = "Master is disabled in Doze mode."]
     DISABLED = 0x01,
 }
 impl Dozen {
@@ -151,9 +151,9 @@ impl From<Dozen> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Feature(u16);
 impl Feature {
-    #[doc = "Master only, with standard feature set"]
+    #[doc = "Master only, with standard feature set."]
     pub const MASTER_ONLY: Self = Self(0x02);
-    #[doc = "Master and slave, with standard feature set"]
+    #[doc = "Master and slave, with standard feature set."]
     pub const MASTER_AND_SLAVE: Self = Self(0x03);
 }
 impl Feature {
@@ -199,9 +199,9 @@ impl From<Feature> for u16 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Filtdz {
-    #[doc = "Filter remains enabled in Doze mode"]
+    #[doc = "Filter remains enabled in Doze mode."]
     FILTER_ENABLED = 0x0,
-    #[doc = "Filter is disabled in Doze mode"]
+    #[doc = "Filter is disabled in Doze mode."]
     FILTER_DISABLED = 0x01,
 }
 impl Filtdz {
@@ -230,9 +230,9 @@ impl From<Filtdz> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Hrpol {
-    #[doc = "Active low"]
+    #[doc = "Active low."]
     ACTIVE_LOW = 0x0,
-    #[doc = "Active high"]
+    #[doc = "Active high."]
     ACTIVE_HIGH = 0x01,
 }
 impl Hrpol {
@@ -261,20 +261,20 @@ impl From<Hrpol> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Matcfg {
-    #[doc = "Match is disabled"]
+    #[doc = "Match is disabled."]
     DISABLED = 0x0,
     _RESERVED_1 = 0x01,
-    #[doc = "Match is enabled (1st data word equals MDMR\\[MATCH0\\] OR MDMR\\[MATCH1\\])"]
+    #[doc = "Match is enabled (1st data word equals MDMR\\[MATCH0\\] OR MDMR\\[MATCH1\\])."]
     FIRST_DATA_WORD_EQUALS_MATCH0_OR_MATCH1 = 0x02,
-    #[doc = "Match is enabled (any data word equals MDMR\\[MATCH0\\] OR MDMR\\[MATCH1\\])"]
+    #[doc = "Match is enabled (any data word equals MDMR\\[MATCH0\\] OR MDMR\\[MATCH1\\])."]
     ANY_DATA_WORD_EQUALS_MATCH0_OR_MATCH1 = 0x03,
-    #[doc = "Match is enabled (1st data word equals MDMR\\[MATCH0\\] AND 2nd data word equals MDMR\\[MATCH1)"]
+    #[doc = "Match is enabled (1st data word equals MDMR\\[MATCH0\\] AND 2nd data word equals MDMR\\[MATCH1)."]
     FIRST_DATA_WORD_MATCH0_AND_SECOND_DATA_WORD_MATCH1 = 0x04,
-    #[doc = "Match is enabled (any data word equals MDMR\\[MATCH0\\] AND next data word equals MDMR\\[MATCH1)"]
+    #[doc = "Match is enabled (any data word equals MDMR\\[MATCH0\\] AND next data word equals MDMR\\[MATCH1)."]
     ANY_DATA_WORD_MATCH0_NEXT_DATA_WORD_MATCH1 = 0x05,
-    #[doc = "Match is enabled (1st data word AND MDMR\\[MATCH1\\] equals MDMR\\[MATCH0\\] AND MDMR\\[MATCH1\\])"]
+    #[doc = "Match is enabled (1st data word AND MDMR\\[MATCH1\\] equals MDMR\\[MATCH0\\] AND MDMR\\[MATCH1\\])."]
     FIRST_DATA_WORD_AND_MATCH1_EQUALS_MATCH0_AND_MATCH1 = 0x06,
-    #[doc = "Match is enabled (any data word AND MDMR\\[MATCH1\\] equals MDMR\\[MATCH0\\] AND MDMR\\[MATCH1\\])"]
+    #[doc = "Match is enabled (any data word AND MDMR\\[MATCH1\\] equals MDMR\\[MATCH0\\] AND MDMR\\[MATCH1\\])."]
     ANY_DATA_WORD_AND_MATCH1_EQUALS_MATCH0_AND_MATCH1 = 0x07,
 }
 impl Matcfg {
@@ -303,9 +303,9 @@ impl From<Matcfg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mbf {
-    #[doc = "I2C Master is idle"]
+    #[doc = "I2C Master is idle."]
     IDLE = 0x0,
-    #[doc = "I2C Master is busy"]
+    #[doc = "I2C Master is busy."]
     BUSY = 0x01,
 }
 impl Mbf {
@@ -334,9 +334,9 @@ impl From<Mbf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum McrRrf {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Receive FIFO is reset"]
+    #[doc = "Receive FIFO is reset."]
     RESET = 0x01,
 }
 impl McrRrf {
@@ -365,9 +365,9 @@ impl From<McrRrf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum McrRtf {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Transmit FIFO is reset"]
+    #[doc = "Transmit FIFO is reset."]
     RESET = 0x01,
 }
 impl McrRtf {
@@ -396,9 +396,9 @@ impl From<McrRtf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MierFeie {
-    #[doc = "Enabled"]
+    #[doc = "Enabled."]
     ENABLED = 0x0,
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED = 0x01,
 }
 impl MierFeie {
@@ -427,9 +427,9 @@ impl From<MierFeie> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MsrBbf {
-    #[doc = "I2C Bus is idle"]
+    #[doc = "I2C Bus is idle."]
     IDLE = 0x0,
-    #[doc = "I2C Bus is busy"]
+    #[doc = "I2C Bus is busy."]
     BUSY = 0x01,
 }
 impl MsrBbf {
@@ -458,21 +458,21 @@ impl From<MsrBbf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pincfg {
-    #[doc = "2-pin open drain mode"]
+    #[doc = "2-pin open drain mode."]
     OPEN_DRAIN_2_PIN = 0x0,
-    #[doc = "2-pin output only mode (ultra-fast mode)"]
+    #[doc = "2-pin output only mode (ultra-fast mode)."]
     OUTPUT_2_PIN_ONLY = 0x01,
-    #[doc = "2-pin push-pull mode"]
+    #[doc = "2-pin push-pull mode."]
     PUSH_PULL_2_PIN = 0x02,
-    #[doc = "4-pin push-pull mode"]
+    #[doc = "4-pin push-pull mode."]
     PUSH_PULL_4_PIN = 0x03,
-    #[doc = "2-pin open drain mode with separate LPI2C slave"]
+    #[doc = "2-pin open drain mode with separate LPI2C slave."]
     OPEN_DRAIN_2_PIN_W_LPI2C_SLAVE = 0x04,
-    #[doc = "2-pin output only mode (ultra-fast mode) with separate LPI2C slave"]
+    #[doc = "2-pin output only mode (ultra-fast mode) with separate LPI2C slave."]
     OUTPUT_2_PIN_ONLY_W_LPI2C_SLAVE = 0x05,
-    #[doc = "2-pin push-pull mode with separate LPI2C slave"]
+    #[doc = "2-pin push-pull mode with separate LPI2C slave."]
     PUSH_PULL_2_PIN_W_LPI2C_SLAVE = 0x06,
-    #[doc = "4-pin push-pull mode (inverted outputs)"]
+    #[doc = "4-pin push-pull mode (inverted outputs)."]
     PUSH_PULL_4_PIN_W_LPI2C_SLAVE = 0x07,
 }
 impl Pincfg {
@@ -501,21 +501,21 @@ impl From<Pincfg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Prescale {
-    #[doc = "Divide by 1"]
+    #[doc = "Divide by 1."]
     DIVIDE_BY_1 = 0x0,
-    #[doc = "Divide by 2"]
+    #[doc = "Divide by 2."]
     DIVIDE_BY_2 = 0x01,
-    #[doc = "Divide by 4"]
+    #[doc = "Divide by 4."]
     DIVIDE_BY_4 = 0x02,
-    #[doc = "Divide by 8"]
+    #[doc = "Divide by 8."]
     DIVIDE_BY_8 = 0x03,
-    #[doc = "Divide by 16"]
+    #[doc = "Divide by 16."]
     DIVIDE_BY_16 = 0x04,
-    #[doc = "Divide by 32"]
+    #[doc = "Divide by 32."]
     DIVIDE_BY_32 = 0x05,
-    #[doc = "Divide by 64"]
+    #[doc = "Divide by 64."]
     DIVIDE_BY_64 = 0x06,
-    #[doc = "Divide by 128"]
+    #[doc = "Divide by 128."]
     DIVIDE_BY_128 = 0x07,
 }
 impl Prescale {
@@ -575,9 +575,9 @@ impl From<Rxcfg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sbf {
-    #[doc = "I2C Slave is idle"]
+    #[doc = "I2C Slave is idle."]
     IDLE = 0x0,
-    #[doc = "I2C Slave is busy"]
+    #[doc = "I2C Slave is busy."]
     BUSY = 0x01,
 }
 impl Sbf {
@@ -606,9 +606,9 @@ impl From<Sbf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Scfgr1Ignack {
-    #[doc = "Slave ends transfer when NACK is detected"]
+    #[doc = "Slave ends transfer when NACK is detected."]
     ENDS_TRANSFER_ON_NACK = 0x0,
-    #[doc = "Slave does not end transfer when NACK detected"]
+    #[doc = "Slave does not end transfer when NACK detected."]
     DOES_NOT_END_TRANSFER_ON_NACK = 0x01,
 }
 impl Scfgr1Ignack {
@@ -637,9 +637,9 @@ impl From<Scfgr1Ignack> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ScrRrf {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Receive Data Register is now empty"]
+    #[doc = "Receive Data Register is now empty."]
     NOW_EMPTY = 0x01,
 }
 impl ScrRrf {
@@ -668,9 +668,9 @@ impl From<ScrRrf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ScrRtf {
-    #[doc = "No effect"]
+    #[doc = "No effect."]
     NO_EFFECT = 0x0,
-    #[doc = "Transmit Data Register is now empty"]
+    #[doc = "Transmit Data Register is now empty."]
     NOW_EMPTY = 0x01,
 }
 impl ScrRtf {
@@ -699,9 +699,9 @@ impl From<ScrRtf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SsrBbf {
-    #[doc = "I2C Bus is idle"]
+    #[doc = "I2C Bus is idle."]
     IDLE = 0x0,
-    #[doc = "I2C Bus is busy"]
+    #[doc = "I2C Bus is busy."]
     BUSY = 0x01,
 }
 impl SsrBbf {
@@ -730,9 +730,9 @@ impl From<SsrBbf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Timecfg {
-    #[doc = "MSR\\[PLTF\\] sets if SCL is low for longer than the configured timeout"]
+    #[doc = "MSR\\[PLTF\\] sets if SCL is low for longer than the configured timeout."]
     IF_SCL_LOW = 0x0,
-    #[doc = "MSR\\[PLTF\\] sets if either SCL or SDA is low for longer than the configured timeout"]
+    #[doc = "MSR\\[PLTF\\] sets if either SCL or SDA is low for longer than the configured timeout."]
     IF_SCL_OR_SDA_LOW = 0x01,
 }
 impl Timecfg {
@@ -761,9 +761,9 @@ impl From<Timecfg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Txcfg {
-    #[doc = "Transmit Data Flag only asserts during a slave-transmit transfer when the Transmit Data register is empty"]
+    #[doc = "Transmit Data Flag only asserts during a slave-transmit transfer when the Transmit Data register is empty."]
     ASSERTS_DURING_SLAVE_TRANSMIT_TRANSFER_WHEN_TX_DATA_EMPTY = 0x0,
-    #[doc = "Transmit Data Flag asserts whenever the Transmit Data register is empty"]
+    #[doc = "Transmit Data Flag asserts whenever the Transmit Data register is empty."]
     ASSERTS_WHEN_TX_DATA_EMPTY = 0x01,
 }
 impl Txcfg {
@@ -792,9 +792,9 @@ impl From<Txcfg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Txnack {
-    #[doc = "Write a Transmit ACK for each received word"]
+    #[doc = "Write a Transmit ACK for each received word."]
     TRANSMIT_ACK = 0x0,
-    #[doc = "Write a Transmit NACK for each received word"]
+    #[doc = "Write a Transmit NACK for each received word."]
     TRANSMIT_NACK = 0x01,
 }
 impl Txnack {

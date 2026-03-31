@@ -1,4 +1,4 @@
-#[doc = "Serial Peripheral Interfaces (SPI)"]
+#[doc = "Serial Peripheral Interfaces (SPI)."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Spi {
     ptr: *mut u8,
@@ -14,12 +14,12 @@ impl Spi {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "SPI Configuration register"]
+    #[doc = "SPI Configuration register."]
     #[inline(always)]
     pub const fn cfg(self) -> crate::common::Reg<regs::Cfg, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0400usize) as _) }
     }
-    #[doc = "SPI Delay register"]
+    #[doc = "SPI Delay register."]
     #[inline(always)]
     pub const fn dly(self) -> crate::common::Reg<regs::Dly, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0404usize) as _) }
@@ -39,12 +39,12 @@ impl Spi {
     pub const fn intenclr(self) -> crate::common::Reg<regs::Intenclr, crate::common::W> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0410usize) as _) }
     }
-    #[doc = "SPI clock Divider"]
+    #[doc = "SPI clock Divider."]
     #[inline(always)]
     pub const fn div(self) -> crate::common::Reg<regs::Div, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0424usize) as _) }
     }
-    #[doc = "SPI Interrupt Status"]
+    #[doc = "SPI Interrupt Status."]
     #[inline(always)]
     pub const fn intstat(self) -> crate::common::Reg<regs::Intstat, crate::common::R> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0428usize) as _) }
@@ -94,7 +94,7 @@ impl Spi {
     pub const fn fifordnopop(self) -> crate::common::Reg<regs::Fifordnopop, crate::common::R> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0e40usize) as _) }
     }
-    #[doc = "FIFO size register"]
+    #[doc = "FIFO size register."]
     #[inline(always)]
     pub const fn fifosize(self) -> crate::common::Reg<regs::Fifosize, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0e48usize) as _) }

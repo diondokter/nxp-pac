@@ -33,21 +33,21 @@ impl From<Misc0ClkgateCtrl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0ClkgateDelay {
-    #[doc = "0.5ms"]
+    #[doc = "0.5ms."]
     CLKGATE_DELAY_0 = 0x0,
-    #[doc = "1.0ms"]
+    #[doc = "1.0ms."]
     CLKGATE_DELAY_1 = 0x01,
-    #[doc = "2.0ms"]
+    #[doc = "2.0ms."]
     CLKGATE_DELAY_2 = 0x02,
-    #[doc = "3.0ms"]
+    #[doc = "3.0ms."]
     CLKGATE_DELAY_3 = 0x03,
-    #[doc = "4.0ms"]
+    #[doc = "4.0ms."]
     CLKGATE_DELAY_4 = 0x04,
-    #[doc = "5.0ms"]
+    #[doc = "5.0ms."]
     CLKGATE_DELAY_5 = 0x05,
-    #[doc = "6.0ms"]
+    #[doc = "6.0ms."]
     CLKGATE_DELAY_6 = 0x06,
-    #[doc = "7.0ms"]
+    #[doc = "7.0ms."]
     CLKGATE_DELAY_7 = 0x07,
 }
 impl Misc0ClkgateDelay {
@@ -107,21 +107,21 @@ impl From<Misc0ClrClkgateCtrl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0ClrClkgateDelay {
-    #[doc = "0.5ms"]
+    #[doc = "0.5ms."]
     CLKGATE_DELAY_0 = 0x0,
-    #[doc = "1.0ms"]
+    #[doc = "1.0ms."]
     CLKGATE_DELAY_1 = 0x01,
-    #[doc = "2.0ms"]
+    #[doc = "2.0ms."]
     CLKGATE_DELAY_2 = 0x02,
-    #[doc = "3.0ms"]
+    #[doc = "3.0ms."]
     CLKGATE_DELAY_3 = 0x03,
-    #[doc = "4.0ms"]
+    #[doc = "4.0ms."]
     CLKGATE_DELAY_4 = 0x04,
-    #[doc = "5.0ms"]
+    #[doc = "5.0ms."]
     CLKGATE_DELAY_5 = 0x05,
-    #[doc = "6.0ms"]
+    #[doc = "6.0ms."]
     CLKGATE_DELAY_6 = 0x06,
-    #[doc = "7.0ms"]
+    #[doc = "7.0ms."]
     CLKGATE_DELAY_7 = 0x07,
 }
 impl Misc0ClrClkgateDelay {
@@ -150,9 +150,9 @@ impl From<Misc0ClrClkgateDelay> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0ClrDisconHighSnvs {
-    #[doc = "Turn on the switch"]
+    #[doc = "Turn on the switch."]
     DISCON_HIGH_SNVS_0 = 0x0,
-    #[doc = "Turn off the switch"]
+    #[doc = "Turn off the switch."]
     DISCON_HIGH_SNVS_1 = 0x01,
 }
 impl Misc0ClrDisconHighSnvs {
@@ -181,13 +181,13 @@ impl From<Misc0ClrDisconHighSnvs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0ClrOscI {
-    #[doc = "Nominal"]
+    #[doc = "Nominal."]
     NOMINAL = 0x0,
-    #[doc = "Decrease current by 12.5%"]
+    #[doc = "Decrease current by 12.5%."]
     MINUS_12_5_PERCENT = 0x01,
-    #[doc = "Decrease current by 25.0%"]
+    #[doc = "Decrease current by 25.0%."]
     MINUS_25_PERCENT = 0x02,
-    #[doc = "Decrease current by 37.5%"]
+    #[doc = "Decrease current by 37.5%."]
     MINUS_37_5_PERCENT = 0x03,
 }
 impl Misc0ClrOscI {
@@ -216,7 +216,7 @@ impl From<Misc0ClrOscI> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0ClrReftopSelfbiasoff {
-    #[doc = "Uses coarse bias currents for startup"]
+    #[doc = "Uses coarse bias currents for startup."]
     REFTOP_SELFBIASOFF_0 = 0x0,
     #[doc = "Uses bandgap-based bias currents for best performance."]
     REFTOP_SELFBIASOFF_1 = 0x01,
@@ -247,21 +247,21 @@ impl From<Misc0ClrReftopSelfbiasoff> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0ClrReftopVbgadj {
-    #[doc = "Nominal VBG"]
+    #[doc = "Nominal VBG."]
     REFTOP_VBGADJ_0 = 0x0,
-    #[doc = "VBG+0.78%"]
+    #[doc = "VBG+0.78%."]
     REFTOP_VBGADJ_1 = 0x01,
-    #[doc = "VBG+1.56%"]
+    #[doc = "VBG+1.56%."]
     REFTOP_VBGADJ_2 = 0x02,
-    #[doc = "VBG+2.34%"]
+    #[doc = "VBG+2.34%."]
     REFTOP_VBGADJ_3 = 0x03,
-    #[doc = "VBG-0.78%"]
+    #[doc = "VBG-0.78%."]
     REFTOP_VBGADJ_4 = 0x04,
-    #[doc = "VBG-1.56%"]
+    #[doc = "VBG-1.56%."]
     REFTOP_VBGADJ_5 = 0x05,
-    #[doc = "VBG-2.34%"]
+    #[doc = "VBG-2.34%."]
     REFTOP_VBGADJ_6 = 0x06,
-    #[doc = "VBG-3.12%"]
+    #[doc = "VBG-3.12%."]
     REFTOP_VBGADJ_7 = 0x07,
 }
 impl Misc0ClrReftopVbgadj {
@@ -290,9 +290,9 @@ impl From<Misc0ClrReftopVbgadj> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0ClrRtcXtalSource {
-    #[doc = "Internal ring oscillator"]
+    #[doc = "Internal ring oscillator."]
     RTC_XTAL_SOURCE_0 = 0x0,
-    #[doc = "RTC_XTAL"]
+    #[doc = "RTC_XTAL."]
     RTC_XTAL_SOURCE_1 = 0x01,
 }
 impl Misc0ClrRtcXtalSource {
@@ -321,13 +321,13 @@ impl From<Misc0ClrRtcXtalSource> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0ClrStopModeConfig {
-    #[doc = "SUSPEND (DSM)"]
+    #[doc = "SUSPEND (DSM)."]
     STOP_MODE_CONFIG_0 = 0x0,
     #[doc = "Analog regulators are ON."]
     STANDBY = 0x01,
-    #[doc = "STOP (lower power)"]
+    #[doc = "STOP (lower power)."]
     STOP_MODE_CONFIG_2 = 0x02,
-    #[doc = "STOP (very lower power)"]
+    #[doc = "STOP (very lower power)."]
     STOP_MODE_CONFIG_3 = 0x03,
 }
 impl Misc0ClrStopModeConfig {
@@ -356,9 +356,9 @@ impl From<Misc0ClrStopModeConfig> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0DisconHighSnvs {
-    #[doc = "Turn on the switch"]
+    #[doc = "Turn on the switch."]
     DISCON_HIGH_SNVS_0 = 0x0,
-    #[doc = "Turn off the switch"]
+    #[doc = "Turn off the switch."]
     DISCON_HIGH_SNVS_1 = 0x01,
 }
 impl Misc0DisconHighSnvs {
@@ -387,13 +387,13 @@ impl From<Misc0DisconHighSnvs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0OscI {
-    #[doc = "Nominal"]
+    #[doc = "Nominal."]
     NOMINAL = 0x0,
-    #[doc = "Decrease current by 12.5%"]
+    #[doc = "Decrease current by 12.5%."]
     MINUS_12_5_PERCENT = 0x01,
-    #[doc = "Decrease current by 25.0%"]
+    #[doc = "Decrease current by 25.0%."]
     MINUS_25_PERCENT = 0x02,
-    #[doc = "Decrease current by 37.5%"]
+    #[doc = "Decrease current by 37.5%."]
     MINUS_37_5_PERCENT = 0x03,
 }
 impl Misc0OscI {
@@ -422,7 +422,7 @@ impl From<Misc0OscI> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0ReftopSelfbiasoff {
-    #[doc = "Uses coarse bias currents for startup"]
+    #[doc = "Uses coarse bias currents for startup."]
     REFTOP_SELFBIASOFF_0 = 0x0,
     #[doc = "Uses bandgap-based bias currents for best performance."]
     REFTOP_SELFBIASOFF_1 = 0x01,
@@ -453,21 +453,21 @@ impl From<Misc0ReftopSelfbiasoff> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0ReftopVbgadj {
-    #[doc = "Nominal VBG"]
+    #[doc = "Nominal VBG."]
     REFTOP_VBGADJ_0 = 0x0,
-    #[doc = "VBG+0.78%"]
+    #[doc = "VBG+0.78%."]
     REFTOP_VBGADJ_1 = 0x01,
-    #[doc = "VBG+1.56%"]
+    #[doc = "VBG+1.56%."]
     REFTOP_VBGADJ_2 = 0x02,
-    #[doc = "VBG+2.34%"]
+    #[doc = "VBG+2.34%."]
     REFTOP_VBGADJ_3 = 0x03,
-    #[doc = "VBG-0.78%"]
+    #[doc = "VBG-0.78%."]
     REFTOP_VBGADJ_4 = 0x04,
-    #[doc = "VBG-1.56%"]
+    #[doc = "VBG-1.56%."]
     REFTOP_VBGADJ_5 = 0x05,
-    #[doc = "VBG-2.34%"]
+    #[doc = "VBG-2.34%."]
     REFTOP_VBGADJ_6 = 0x06,
-    #[doc = "VBG-3.12%"]
+    #[doc = "VBG-3.12%."]
     REFTOP_VBGADJ_7 = 0x07,
 }
 impl Misc0ReftopVbgadj {
@@ -496,9 +496,9 @@ impl From<Misc0ReftopVbgadj> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0RtcXtalSource {
-    #[doc = "Internal ring oscillator"]
+    #[doc = "Internal ring oscillator."]
     RTC_XTAL_SOURCE_0 = 0x0,
-    #[doc = "RTC_XTAL"]
+    #[doc = "RTC_XTAL."]
     RTC_XTAL_SOURCE_1 = 0x01,
 }
 impl Misc0RtcXtalSource {
@@ -558,21 +558,21 @@ impl From<Misc0SetClkgateCtrl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0SetClkgateDelay {
-    #[doc = "0.5ms"]
+    #[doc = "0.5ms."]
     CLKGATE_DELAY_0 = 0x0,
-    #[doc = "1.0ms"]
+    #[doc = "1.0ms."]
     CLKGATE_DELAY_1 = 0x01,
-    #[doc = "2.0ms"]
+    #[doc = "2.0ms."]
     CLKGATE_DELAY_2 = 0x02,
-    #[doc = "3.0ms"]
+    #[doc = "3.0ms."]
     CLKGATE_DELAY_3 = 0x03,
-    #[doc = "4.0ms"]
+    #[doc = "4.0ms."]
     CLKGATE_DELAY_4 = 0x04,
-    #[doc = "5.0ms"]
+    #[doc = "5.0ms."]
     CLKGATE_DELAY_5 = 0x05,
-    #[doc = "6.0ms"]
+    #[doc = "6.0ms."]
     CLKGATE_DELAY_6 = 0x06,
-    #[doc = "7.0ms"]
+    #[doc = "7.0ms."]
     CLKGATE_DELAY_7 = 0x07,
 }
 impl Misc0SetClkgateDelay {
@@ -601,9 +601,9 @@ impl From<Misc0SetClkgateDelay> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0SetDisconHighSnvs {
-    #[doc = "Turn on the switch"]
+    #[doc = "Turn on the switch."]
     DISCON_HIGH_SNVS_0 = 0x0,
-    #[doc = "Turn off the switch"]
+    #[doc = "Turn off the switch."]
     DISCON_HIGH_SNVS_1 = 0x01,
 }
 impl Misc0SetDisconHighSnvs {
@@ -632,13 +632,13 @@ impl From<Misc0SetDisconHighSnvs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0SetOscI {
-    #[doc = "Nominal"]
+    #[doc = "Nominal."]
     NOMINAL = 0x0,
-    #[doc = "Decrease current by 12.5%"]
+    #[doc = "Decrease current by 12.5%."]
     MINUS_12_5_PERCENT = 0x01,
-    #[doc = "Decrease current by 25.0%"]
+    #[doc = "Decrease current by 25.0%."]
     MINUS_25_PERCENT = 0x02,
-    #[doc = "Decrease current by 37.5%"]
+    #[doc = "Decrease current by 37.5%."]
     MINUS_37_5_PERCENT = 0x03,
 }
 impl Misc0SetOscI {
@@ -667,7 +667,7 @@ impl From<Misc0SetOscI> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0SetReftopSelfbiasoff {
-    #[doc = "Uses coarse bias currents for startup"]
+    #[doc = "Uses coarse bias currents for startup."]
     REFTOP_SELFBIASOFF_0 = 0x0,
     #[doc = "Uses bandgap-based bias currents for best performance."]
     REFTOP_SELFBIASOFF_1 = 0x01,
@@ -698,21 +698,21 @@ impl From<Misc0SetReftopSelfbiasoff> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0SetReftopVbgadj {
-    #[doc = "Nominal VBG"]
+    #[doc = "Nominal VBG."]
     REFTOP_VBGADJ_0 = 0x0,
-    #[doc = "VBG+0.78%"]
+    #[doc = "VBG+0.78%."]
     REFTOP_VBGADJ_1 = 0x01,
-    #[doc = "VBG+1.56%"]
+    #[doc = "VBG+1.56%."]
     REFTOP_VBGADJ_2 = 0x02,
-    #[doc = "VBG+2.34%"]
+    #[doc = "VBG+2.34%."]
     REFTOP_VBGADJ_3 = 0x03,
-    #[doc = "VBG-0.78%"]
+    #[doc = "VBG-0.78%."]
     REFTOP_VBGADJ_4 = 0x04,
-    #[doc = "VBG-1.56%"]
+    #[doc = "VBG-1.56%."]
     REFTOP_VBGADJ_5 = 0x05,
-    #[doc = "VBG-2.34%"]
+    #[doc = "VBG-2.34%."]
     REFTOP_VBGADJ_6 = 0x06,
-    #[doc = "VBG-3.12%"]
+    #[doc = "VBG-3.12%."]
     REFTOP_VBGADJ_7 = 0x07,
 }
 impl Misc0SetReftopVbgadj {
@@ -741,9 +741,9 @@ impl From<Misc0SetReftopVbgadj> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0SetRtcXtalSource {
-    #[doc = "Internal ring oscillator"]
+    #[doc = "Internal ring oscillator."]
     RTC_XTAL_SOURCE_0 = 0x0,
-    #[doc = "RTC_XTAL"]
+    #[doc = "RTC_XTAL."]
     RTC_XTAL_SOURCE_1 = 0x01,
 }
 impl Misc0SetRtcXtalSource {
@@ -772,13 +772,13 @@ impl From<Misc0SetRtcXtalSource> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0SetStopModeConfig {
-    #[doc = "SUSPEND (DSM)"]
+    #[doc = "SUSPEND (DSM)."]
     STOP_MODE_CONFIG_0 = 0x0,
     #[doc = "Analog regulators are ON."]
     STANDBY = 0x01,
-    #[doc = "STOP (lower power)"]
+    #[doc = "STOP (lower power)."]
     STOP_MODE_CONFIG_2 = 0x02,
-    #[doc = "STOP (very lower power)"]
+    #[doc = "STOP (very lower power)."]
     STOP_MODE_CONFIG_3 = 0x03,
 }
 impl Misc0SetStopModeConfig {
@@ -807,13 +807,13 @@ impl From<Misc0SetStopModeConfig> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0StopModeConfig {
-    #[doc = "SUSPEND (DSM)"]
+    #[doc = "SUSPEND (DSM)."]
     STOP_MODE_CONFIG_0 = 0x0,
     #[doc = "Analog regulators are ON."]
     STANDBY = 0x01,
-    #[doc = "STOP (lower power)"]
+    #[doc = "STOP (lower power)."]
     STOP_MODE_CONFIG_2 = 0x02,
-    #[doc = "STOP (very lower power)"]
+    #[doc = "STOP (very lower power)."]
     STOP_MODE_CONFIG_3 = 0x03,
 }
 impl Misc0StopModeConfig {
@@ -873,21 +873,21 @@ impl From<Misc0TogClkgateCtrl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0TogClkgateDelay {
-    #[doc = "0.5ms"]
+    #[doc = "0.5ms."]
     CLKGATE_DELAY_0 = 0x0,
-    #[doc = "1.0ms"]
+    #[doc = "1.0ms."]
     CLKGATE_DELAY_1 = 0x01,
-    #[doc = "2.0ms"]
+    #[doc = "2.0ms."]
     CLKGATE_DELAY_2 = 0x02,
-    #[doc = "3.0ms"]
+    #[doc = "3.0ms."]
     CLKGATE_DELAY_3 = 0x03,
-    #[doc = "4.0ms"]
+    #[doc = "4.0ms."]
     CLKGATE_DELAY_4 = 0x04,
-    #[doc = "5.0ms"]
+    #[doc = "5.0ms."]
     CLKGATE_DELAY_5 = 0x05,
-    #[doc = "6.0ms"]
+    #[doc = "6.0ms."]
     CLKGATE_DELAY_6 = 0x06,
-    #[doc = "7.0ms"]
+    #[doc = "7.0ms."]
     CLKGATE_DELAY_7 = 0x07,
 }
 impl Misc0TogClkgateDelay {
@@ -916,9 +916,9 @@ impl From<Misc0TogClkgateDelay> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0TogDisconHighSnvs {
-    #[doc = "Turn on the switch"]
+    #[doc = "Turn on the switch."]
     DISCON_HIGH_SNVS_0 = 0x0,
-    #[doc = "Turn off the switch"]
+    #[doc = "Turn off the switch."]
     DISCON_HIGH_SNVS_1 = 0x01,
 }
 impl Misc0TogDisconHighSnvs {
@@ -947,13 +947,13 @@ impl From<Misc0TogDisconHighSnvs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0TogOscI {
-    #[doc = "Nominal"]
+    #[doc = "Nominal."]
     NOMINAL = 0x0,
-    #[doc = "Decrease current by 12.5%"]
+    #[doc = "Decrease current by 12.5%."]
     MINUS_12_5_PERCENT = 0x01,
-    #[doc = "Decrease current by 25.0%"]
+    #[doc = "Decrease current by 25.0%."]
     MINUS_25_PERCENT = 0x02,
-    #[doc = "Decrease current by 37.5%"]
+    #[doc = "Decrease current by 37.5%."]
     MINUS_37_5_PERCENT = 0x03,
 }
 impl Misc0TogOscI {
@@ -982,7 +982,7 @@ impl From<Misc0TogOscI> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0TogReftopSelfbiasoff {
-    #[doc = "Uses coarse bias currents for startup"]
+    #[doc = "Uses coarse bias currents for startup."]
     REFTOP_SELFBIASOFF_0 = 0x0,
     #[doc = "Uses bandgap-based bias currents for best performance."]
     REFTOP_SELFBIASOFF_1 = 0x01,
@@ -1013,21 +1013,21 @@ impl From<Misc0TogReftopSelfbiasoff> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0TogReftopVbgadj {
-    #[doc = "Nominal VBG"]
+    #[doc = "Nominal VBG."]
     REFTOP_VBGADJ_0 = 0x0,
-    #[doc = "VBG+0.78%"]
+    #[doc = "VBG+0.78%."]
     REFTOP_VBGADJ_1 = 0x01,
-    #[doc = "VBG+1.56%"]
+    #[doc = "VBG+1.56%."]
     REFTOP_VBGADJ_2 = 0x02,
-    #[doc = "VBG+2.34%"]
+    #[doc = "VBG+2.34%."]
     REFTOP_VBGADJ_3 = 0x03,
-    #[doc = "VBG-0.78%"]
+    #[doc = "VBG-0.78%."]
     REFTOP_VBGADJ_4 = 0x04,
-    #[doc = "VBG-1.56%"]
+    #[doc = "VBG-1.56%."]
     REFTOP_VBGADJ_5 = 0x05,
-    #[doc = "VBG-2.34%"]
+    #[doc = "VBG-2.34%."]
     REFTOP_VBGADJ_6 = 0x06,
-    #[doc = "VBG-3.12%"]
+    #[doc = "VBG-3.12%."]
     REFTOP_VBGADJ_7 = 0x07,
 }
 impl Misc0TogReftopVbgadj {
@@ -1056,9 +1056,9 @@ impl From<Misc0TogReftopVbgadj> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0TogRtcXtalSource {
-    #[doc = "Internal ring oscillator"]
+    #[doc = "Internal ring oscillator."]
     RTC_XTAL_SOURCE_0 = 0x0,
-    #[doc = "RTC_XTAL"]
+    #[doc = "RTC_XTAL."]
     RTC_XTAL_SOURCE_1 = 0x01,
 }
 impl Misc0TogRtcXtalSource {
@@ -1087,13 +1087,13 @@ impl From<Misc0TogRtcXtalSource> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0TogStopModeConfig {
-    #[doc = "SUSPEND (DSM)"]
+    #[doc = "SUSPEND (DSM)."]
     STOP_MODE_CONFIG_0 = 0x0,
     #[doc = "Analog regulators are ON."]
     STANDBY = 0x01,
-    #[doc = "STOP (lower power)"]
+    #[doc = "STOP (lower power)."]
     STOP_MODE_CONFIG_2 = 0x02,
-    #[doc = "STOP (very lower power)"]
+    #[doc = "STOP (very lower power)."]
     STOP_MODE_CONFIG_3 = 0x03,
 }
 impl Misc0TogStopModeConfig {
@@ -1122,9 +1122,9 @@ impl From<Misc0TogStopModeConfig> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2AudioDivLsb {
-    #[doc = "divide by 1 (Default)"]
+    #[doc = "divide by 1 (Default)."]
     AUDIO_DIV_LSB_0 = 0x0,
-    #[doc = "divide by 2"]
+    #[doc = "divide by 2."]
     AUDIO_DIV_LSB_1 = 0x01,
 }
 impl Misc2AudioDivLsb {
@@ -1153,9 +1153,9 @@ impl From<Misc2AudioDivLsb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2AudioDivMsb {
-    #[doc = "divide by 1 (Default)"]
+    #[doc = "divide by 1 (Default)."]
     AUDIO_DIV_MSB_0 = 0x0,
-    #[doc = "divide by 2"]
+    #[doc = "divide by 2."]
     AUDIO_DIV_MSB_1 = 0x01,
 }
 impl Misc2AudioDivMsb {
@@ -1184,9 +1184,9 @@ impl From<Misc2AudioDivMsb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2ClrAudioDivLsb {
-    #[doc = "divide by 1 (Default)"]
+    #[doc = "divide by 1 (Default)."]
     AUDIO_DIV_LSB_0 = 0x0,
-    #[doc = "divide by 2"]
+    #[doc = "divide by 2."]
     AUDIO_DIV_LSB_1 = 0x01,
 }
 impl Misc2ClrAudioDivLsb {
@@ -1215,9 +1215,9 @@ impl From<Misc2ClrAudioDivLsb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2ClrAudioDivMsb {
-    #[doc = "divide by 1 (Default)"]
+    #[doc = "divide by 1 (Default)."]
     AUDIO_DIV_MSB_0 = 0x0,
-    #[doc = "divide by 2"]
+    #[doc = "divide by 2."]
     AUDIO_DIV_MSB_1 = 0x01,
 }
 impl Misc2ClrAudioDivMsb {
@@ -1250,11 +1250,11 @@ pub enum Misc2ClrReg0BoOffset {
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
-    #[doc = "Brownout offset = 0.100V"]
+    #[doc = "Brownout offset = 0.100V."]
     REG0_BO_OFFSET_4 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
-    #[doc = "Brownout offset = 0.175V"]
+    #[doc = "Brownout offset = 0.175V."]
     REG0_BO_OFFSET_7 = 0x07,
 }
 impl Misc2ClrReg0BoOffset {
@@ -1283,13 +1283,13 @@ impl From<Misc2ClrReg0BoOffset> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2ClrReg0StepTime {
-    #[doc = "64"]
+    #[doc = "64."]
     _64_CLOCKS = 0x0,
-    #[doc = "128"]
+    #[doc = "128."]
     _128_CLOCKS = 0x01,
-    #[doc = "256"]
+    #[doc = "256."]
     _256_CLOCKS = 0x02,
-    #[doc = "512"]
+    #[doc = "512."]
     _512_CLOCKS = 0x03,
 }
 impl Misc2ClrReg0StepTime {
@@ -1322,11 +1322,11 @@ pub enum Misc2ClrReg1BoOffset {
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
-    #[doc = "Brownout offset = 0.100V"]
+    #[doc = "Brownout offset = 0.100V."]
     REG1_BO_OFFSET_4 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
-    #[doc = "Brownout offset = 0.175V"]
+    #[doc = "Brownout offset = 0.175V."]
     REG1_BO_OFFSET_7 = 0x07,
 }
 impl Misc2ClrReg1BoOffset {
@@ -1355,13 +1355,13 @@ impl From<Misc2ClrReg1BoOffset> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2ClrReg1StepTime {
-    #[doc = "64"]
+    #[doc = "64."]
     _64_CLOCKS = 0x0,
-    #[doc = "128"]
+    #[doc = "128."]
     _128_CLOCKS = 0x01,
-    #[doc = "256"]
+    #[doc = "256."]
     _256_CLOCKS = 0x02,
-    #[doc = "512"]
+    #[doc = "512."]
     _512_CLOCKS = 0x03,
 }
 impl Misc2ClrReg1StepTime {
@@ -1394,11 +1394,11 @@ pub enum Misc2ClrReg2BoOffset {
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
-    #[doc = "Brownout offset = 0.100V"]
+    #[doc = "Brownout offset = 0.100V."]
     REG2_BO_OFFSET_4 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
-    #[doc = "Brownout offset = 0.175V"]
+    #[doc = "Brownout offset = 0.175V."]
     REG2_BO_OFFSET_7 = 0x07,
 }
 impl Misc2ClrReg2BoOffset {
@@ -1427,13 +1427,13 @@ impl From<Misc2ClrReg2BoOffset> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2ClrReg2StepTime {
-    #[doc = "64"]
+    #[doc = "64."]
     _64_CLOCKS = 0x0,
-    #[doc = "128"]
+    #[doc = "128."]
     _128_CLOCKS = 0x01,
-    #[doc = "256"]
+    #[doc = "256."]
     _256_CLOCKS = 0x02,
-    #[doc = "512"]
+    #[doc = "512."]
     _512_CLOCKS = 0x03,
 }
 impl Misc2ClrReg2StepTime {
@@ -1466,11 +1466,11 @@ pub enum Misc2Reg0BoOffset {
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
-    #[doc = "Brownout offset = 0.100V"]
+    #[doc = "Brownout offset = 0.100V."]
     REG0_BO_OFFSET_4 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
-    #[doc = "Brownout offset = 0.175V"]
+    #[doc = "Brownout offset = 0.175V."]
     REG0_BO_OFFSET_7 = 0x07,
 }
 impl Misc2Reg0BoOffset {
@@ -1499,13 +1499,13 @@ impl From<Misc2Reg0BoOffset> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2Reg0StepTime {
-    #[doc = "64"]
+    #[doc = "64."]
     _64_CLOCKS = 0x0,
-    #[doc = "128"]
+    #[doc = "128."]
     _128_CLOCKS = 0x01,
-    #[doc = "256"]
+    #[doc = "256."]
     _256_CLOCKS = 0x02,
-    #[doc = "512"]
+    #[doc = "512."]
     _512_CLOCKS = 0x03,
 }
 impl Misc2Reg0StepTime {
@@ -1538,11 +1538,11 @@ pub enum Misc2Reg1BoOffset {
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
-    #[doc = "Brownout offset = 0.100V"]
+    #[doc = "Brownout offset = 0.100V."]
     REG1_BO_OFFSET_4 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
-    #[doc = "Brownout offset = 0.175V"]
+    #[doc = "Brownout offset = 0.175V."]
     REG1_BO_OFFSET_7 = 0x07,
 }
 impl Misc2Reg1BoOffset {
@@ -1571,13 +1571,13 @@ impl From<Misc2Reg1BoOffset> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2Reg1StepTime {
-    #[doc = "64"]
+    #[doc = "64."]
     _64_CLOCKS = 0x0,
-    #[doc = "128"]
+    #[doc = "128."]
     _128_CLOCKS = 0x01,
-    #[doc = "256"]
+    #[doc = "256."]
     _256_CLOCKS = 0x02,
-    #[doc = "512"]
+    #[doc = "512."]
     _512_CLOCKS = 0x03,
 }
 impl Misc2Reg1StepTime {
@@ -1610,11 +1610,11 @@ pub enum Misc2Reg2BoOffset {
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
-    #[doc = "Brownout offset = 0.100V"]
+    #[doc = "Brownout offset = 0.100V."]
     REG2_BO_OFFSET_4 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
-    #[doc = "Brownout offset = 0.175V"]
+    #[doc = "Brownout offset = 0.175V."]
     REG2_BO_OFFSET_7 = 0x07,
 }
 impl Misc2Reg2BoOffset {
@@ -1643,13 +1643,13 @@ impl From<Misc2Reg2BoOffset> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2Reg2StepTime {
-    #[doc = "64"]
+    #[doc = "64."]
     _64_CLOCKS = 0x0,
-    #[doc = "128"]
+    #[doc = "128."]
     _128_CLOCKS = 0x01,
-    #[doc = "256"]
+    #[doc = "256."]
     _256_CLOCKS = 0x02,
-    #[doc = "512"]
+    #[doc = "512."]
     _512_CLOCKS = 0x03,
 }
 impl Misc2Reg2StepTime {
@@ -1678,9 +1678,9 @@ impl From<Misc2Reg2StepTime> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2SetAudioDivLsb {
-    #[doc = "divide by 1 (Default)"]
+    #[doc = "divide by 1 (Default)."]
     AUDIO_DIV_LSB_0 = 0x0,
-    #[doc = "divide by 2"]
+    #[doc = "divide by 2."]
     AUDIO_DIV_LSB_1 = 0x01,
 }
 impl Misc2SetAudioDivLsb {
@@ -1709,9 +1709,9 @@ impl From<Misc2SetAudioDivLsb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2SetAudioDivMsb {
-    #[doc = "divide by 1 (Default)"]
+    #[doc = "divide by 1 (Default)."]
     AUDIO_DIV_MSB_0 = 0x0,
-    #[doc = "divide by 2"]
+    #[doc = "divide by 2."]
     AUDIO_DIV_MSB_1 = 0x01,
 }
 impl Misc2SetAudioDivMsb {
@@ -1744,11 +1744,11 @@ pub enum Misc2SetReg0BoOffset {
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
-    #[doc = "Brownout offset = 0.100V"]
+    #[doc = "Brownout offset = 0.100V."]
     REG0_BO_OFFSET_4 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
-    #[doc = "Brownout offset = 0.175V"]
+    #[doc = "Brownout offset = 0.175V."]
     REG0_BO_OFFSET_7 = 0x07,
 }
 impl Misc2SetReg0BoOffset {
@@ -1777,13 +1777,13 @@ impl From<Misc2SetReg0BoOffset> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2SetReg0StepTime {
-    #[doc = "64"]
+    #[doc = "64."]
     _64_CLOCKS = 0x0,
-    #[doc = "128"]
+    #[doc = "128."]
     _128_CLOCKS = 0x01,
-    #[doc = "256"]
+    #[doc = "256."]
     _256_CLOCKS = 0x02,
-    #[doc = "512"]
+    #[doc = "512."]
     _512_CLOCKS = 0x03,
 }
 impl Misc2SetReg0StepTime {
@@ -1816,11 +1816,11 @@ pub enum Misc2SetReg1BoOffset {
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
-    #[doc = "Brownout offset = 0.100V"]
+    #[doc = "Brownout offset = 0.100V."]
     REG1_BO_OFFSET_4 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
-    #[doc = "Brownout offset = 0.175V"]
+    #[doc = "Brownout offset = 0.175V."]
     REG1_BO_OFFSET_7 = 0x07,
 }
 impl Misc2SetReg1BoOffset {
@@ -1849,13 +1849,13 @@ impl From<Misc2SetReg1BoOffset> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2SetReg1StepTime {
-    #[doc = "64"]
+    #[doc = "64."]
     _64_CLOCKS = 0x0,
-    #[doc = "128"]
+    #[doc = "128."]
     _128_CLOCKS = 0x01,
-    #[doc = "256"]
+    #[doc = "256."]
     _256_CLOCKS = 0x02,
-    #[doc = "512"]
+    #[doc = "512."]
     _512_CLOCKS = 0x03,
 }
 impl Misc2SetReg1StepTime {
@@ -1888,11 +1888,11 @@ pub enum Misc2SetReg2BoOffset {
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
-    #[doc = "Brownout offset = 0.100V"]
+    #[doc = "Brownout offset = 0.100V."]
     REG2_BO_OFFSET_4 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
-    #[doc = "Brownout offset = 0.175V"]
+    #[doc = "Brownout offset = 0.175V."]
     REG2_BO_OFFSET_7 = 0x07,
 }
 impl Misc2SetReg2BoOffset {
@@ -1921,13 +1921,13 @@ impl From<Misc2SetReg2BoOffset> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2SetReg2StepTime {
-    #[doc = "64"]
+    #[doc = "64."]
     _64_CLOCKS = 0x0,
-    #[doc = "128"]
+    #[doc = "128."]
     _128_CLOCKS = 0x01,
-    #[doc = "256"]
+    #[doc = "256."]
     _256_CLOCKS = 0x02,
-    #[doc = "512"]
+    #[doc = "512."]
     _512_CLOCKS = 0x03,
 }
 impl Misc2SetReg2StepTime {
@@ -1956,9 +1956,9 @@ impl From<Misc2SetReg2StepTime> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2TogAudioDivLsb {
-    #[doc = "divide by 1 (Default)"]
+    #[doc = "divide by 1 (Default)."]
     AUDIO_DIV_LSB_0 = 0x0,
-    #[doc = "divide by 2"]
+    #[doc = "divide by 2."]
     AUDIO_DIV_LSB_1 = 0x01,
 }
 impl Misc2TogAudioDivLsb {
@@ -1987,9 +1987,9 @@ impl From<Misc2TogAudioDivLsb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2TogAudioDivMsb {
-    #[doc = "divide by 1 (Default)"]
+    #[doc = "divide by 1 (Default)."]
     AUDIO_DIV_MSB_0 = 0x0,
-    #[doc = "divide by 2"]
+    #[doc = "divide by 2."]
     AUDIO_DIV_MSB_1 = 0x01,
 }
 impl Misc2TogAudioDivMsb {
@@ -2022,11 +2022,11 @@ pub enum Misc2TogReg0BoOffset {
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
-    #[doc = "Brownout offset = 0.100V"]
+    #[doc = "Brownout offset = 0.100V."]
     REG0_BO_OFFSET_4 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
-    #[doc = "Brownout offset = 0.175V"]
+    #[doc = "Brownout offset = 0.175V."]
     REG0_BO_OFFSET_7 = 0x07,
 }
 impl Misc2TogReg0BoOffset {
@@ -2055,13 +2055,13 @@ impl From<Misc2TogReg0BoOffset> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2TogReg0StepTime {
-    #[doc = "64"]
+    #[doc = "64."]
     _64_CLOCKS = 0x0,
-    #[doc = "128"]
+    #[doc = "128."]
     _128_CLOCKS = 0x01,
-    #[doc = "256"]
+    #[doc = "256."]
     _256_CLOCKS = 0x02,
-    #[doc = "512"]
+    #[doc = "512."]
     _512_CLOCKS = 0x03,
 }
 impl Misc2TogReg0StepTime {
@@ -2094,11 +2094,11 @@ pub enum Misc2TogReg1BoOffset {
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
-    #[doc = "Brownout offset = 0.100V"]
+    #[doc = "Brownout offset = 0.100V."]
     REG1_BO_OFFSET_4 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
-    #[doc = "Brownout offset = 0.175V"]
+    #[doc = "Brownout offset = 0.175V."]
     REG1_BO_OFFSET_7 = 0x07,
 }
 impl Misc2TogReg1BoOffset {
@@ -2127,13 +2127,13 @@ impl From<Misc2TogReg1BoOffset> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2TogReg1StepTime {
-    #[doc = "64"]
+    #[doc = "64."]
     _64_CLOCKS = 0x0,
-    #[doc = "128"]
+    #[doc = "128."]
     _128_CLOCKS = 0x01,
-    #[doc = "256"]
+    #[doc = "256."]
     _256_CLOCKS = 0x02,
-    #[doc = "512"]
+    #[doc = "512."]
     _512_CLOCKS = 0x03,
 }
 impl Misc2TogReg1StepTime {
@@ -2166,11 +2166,11 @@ pub enum Misc2TogReg2BoOffset {
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
-    #[doc = "Brownout offset = 0.100V"]
+    #[doc = "Brownout offset = 0.100V."]
     REG2_BO_OFFSET_4 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
-    #[doc = "Brownout offset = 0.175V"]
+    #[doc = "Brownout offset = 0.175V."]
     REG2_BO_OFFSET_7 = 0x07,
 }
 impl Misc2TogReg2BoOffset {
@@ -2199,13 +2199,13 @@ impl From<Misc2TogReg2BoOffset> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc2TogReg2StepTime {
-    #[doc = "64"]
+    #[doc = "64."]
     _64_CLOCKS = 0x0,
-    #[doc = "128"]
+    #[doc = "128."]
     _128_CLOCKS = 0x01,
-    #[doc = "256"]
+    #[doc = "256."]
     _256_CLOCKS = 0x02,
-    #[doc = "512"]
+    #[doc = "512."]
     _512_CLOCKS = 0x03,
 }
 impl Misc2TogReg2StepTime {
@@ -2238,7 +2238,7 @@ pub enum Reg1p1ClrOutputTrg {
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
-    #[doc = "0.8V"]
+    #[doc = "0.8V."]
     OUTPUT_TRG_4 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
@@ -2251,7 +2251,7 @@ pub enum Reg1p1ClrOutputTrg {
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
-    #[doc = "1.1V"]
+    #[doc = "1.1V."]
     OUTPUT_TRG_16 = 0x10,
     _RESERVED_11 = 0x11,
     _RESERVED_12 = 0x12,
@@ -2295,9 +2295,9 @@ impl From<Reg1p1ClrOutputTrg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg1p1ClrSelrefWeakLinreg {
-    #[doc = "Weak-linreg output tracks low-power-bandgap voltage"]
+    #[doc = "Weak-linreg output tracks low-power-bandgap voltage."]
     SELREF_WEAK_LINREG_0 = 0x0,
-    #[doc = "Weak-linreg output tracks VDD_SOC_IN voltage"]
+    #[doc = "Weak-linreg output tracks VDD_SOC_IN voltage."]
     SELREF_WEAK_LINREG_1 = 0x01,
 }
 impl Reg1p1ClrSelrefWeakLinreg {
@@ -2330,7 +2330,7 @@ pub enum Reg1p1OutputTrg {
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
-    #[doc = "0.8V"]
+    #[doc = "0.8V."]
     OUTPUT_TRG_4 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
@@ -2343,7 +2343,7 @@ pub enum Reg1p1OutputTrg {
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
-    #[doc = "1.1V"]
+    #[doc = "1.1V."]
     OUTPUT_TRG_16 = 0x10,
     _RESERVED_11 = 0x11,
     _RESERVED_12 = 0x12,
@@ -2387,9 +2387,9 @@ impl From<Reg1p1OutputTrg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg1p1SelrefWeakLinreg {
-    #[doc = "Weak-linreg output tracks low-power-bandgap voltage"]
+    #[doc = "Weak-linreg output tracks low-power-bandgap voltage."]
     SELREF_WEAK_LINREG_0 = 0x0,
-    #[doc = "Weak-linreg output tracks VDD_SOC_IN voltage"]
+    #[doc = "Weak-linreg output tracks VDD_SOC_IN voltage."]
     SELREF_WEAK_LINREG_1 = 0x01,
 }
 impl Reg1p1SelrefWeakLinreg {
@@ -2422,7 +2422,7 @@ pub enum Reg1p1SetOutputTrg {
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
-    #[doc = "0.8V"]
+    #[doc = "0.8V."]
     OUTPUT_TRG_4 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
@@ -2435,7 +2435,7 @@ pub enum Reg1p1SetOutputTrg {
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
-    #[doc = "1.1V"]
+    #[doc = "1.1V."]
     OUTPUT_TRG_16 = 0x10,
     _RESERVED_11 = 0x11,
     _RESERVED_12 = 0x12,
@@ -2479,9 +2479,9 @@ impl From<Reg1p1SetOutputTrg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg1p1SetSelrefWeakLinreg {
-    #[doc = "Weak-linreg output tracks low-power-bandgap voltage"]
+    #[doc = "Weak-linreg output tracks low-power-bandgap voltage."]
     SELREF_WEAK_LINREG_0 = 0x0,
-    #[doc = "Weak-linreg output tracks VDD_SOC_IN voltage"]
+    #[doc = "Weak-linreg output tracks VDD_SOC_IN voltage."]
     SELREF_WEAK_LINREG_1 = 0x01,
 }
 impl Reg1p1SetSelrefWeakLinreg {
@@ -2514,7 +2514,7 @@ pub enum Reg1p1TogOutputTrg {
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
-    #[doc = "0.8V"]
+    #[doc = "0.8V."]
     OUTPUT_TRG_4 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
@@ -2527,7 +2527,7 @@ pub enum Reg1p1TogOutputTrg {
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
-    #[doc = "1.1V"]
+    #[doc = "1.1V."]
     OUTPUT_TRG_16 = 0x10,
     _RESERVED_11 = 0x11,
     _RESERVED_12 = 0x12,
@@ -2571,9 +2571,9 @@ impl From<Reg1p1TogOutputTrg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg1p1TogSelrefWeakLinreg {
-    #[doc = "Weak-linreg output tracks low-power-bandgap voltage"]
+    #[doc = "Weak-linreg output tracks low-power-bandgap voltage."]
     SELREF_WEAK_LINREG_0 = 0x0,
-    #[doc = "Weak-linreg output tracks VDD_SOC_IN voltage"]
+    #[doc = "Weak-linreg output tracks VDD_SOC_IN voltage."]
     SELREF_WEAK_LINREG_1 = 0x01,
 }
 impl Reg1p1TogSelrefWeakLinreg {
@@ -2602,7 +2602,7 @@ impl From<Reg1p1TogSelrefWeakLinreg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg2p5ClrOutputTrg {
-    #[doc = "2.10V"]
+    #[doc = "2.10V."]
     OUTPUT_TRG_0 = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
@@ -2619,7 +2619,7 @@ pub enum Reg2p5ClrOutputTrg {
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
-    #[doc = "2.50V"]
+    #[doc = "2.50V."]
     OUTPUT_TRG_16 = 0x10,
     _RESERVED_11 = 0x11,
     _RESERVED_12 = 0x12,
@@ -2635,7 +2635,7 @@ pub enum Reg2p5ClrOutputTrg {
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
     _RESERVED_1e = 0x1e,
-    #[doc = "2.875V"]
+    #[doc = "2.875V."]
     OUTPUT_TRG_31 = 0x1f,
 }
 impl Reg2p5ClrOutputTrg {
@@ -2664,7 +2664,7 @@ impl From<Reg2p5ClrOutputTrg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg2p5OutputTrg {
-    #[doc = "2.10V"]
+    #[doc = "2.10V."]
     OUTPUT_TRG_0 = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
@@ -2681,7 +2681,7 @@ pub enum Reg2p5OutputTrg {
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
-    #[doc = "2.50V"]
+    #[doc = "2.50V."]
     OUTPUT_TRG_16 = 0x10,
     _RESERVED_11 = 0x11,
     _RESERVED_12 = 0x12,
@@ -2697,7 +2697,7 @@ pub enum Reg2p5OutputTrg {
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
     _RESERVED_1e = 0x1e,
-    #[doc = "2.875V"]
+    #[doc = "2.875V."]
     OUTPUT_TRG_31 = 0x1f,
 }
 impl Reg2p5OutputTrg {
@@ -2726,7 +2726,7 @@ impl From<Reg2p5OutputTrg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg2p5SetOutputTrg {
-    #[doc = "2.10V"]
+    #[doc = "2.10V."]
     OUTPUT_TRG_0 = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
@@ -2743,7 +2743,7 @@ pub enum Reg2p5SetOutputTrg {
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
-    #[doc = "2.50V"]
+    #[doc = "2.50V."]
     OUTPUT_TRG_16 = 0x10,
     _RESERVED_11 = 0x11,
     _RESERVED_12 = 0x12,
@@ -2759,7 +2759,7 @@ pub enum Reg2p5SetOutputTrg {
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
     _RESERVED_1e = 0x1e,
-    #[doc = "2.875V"]
+    #[doc = "2.875V."]
     OUTPUT_TRG_31 = 0x1f,
 }
 impl Reg2p5SetOutputTrg {
@@ -2788,7 +2788,7 @@ impl From<Reg2p5SetOutputTrg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg2p5TogOutputTrg {
-    #[doc = "2.10V"]
+    #[doc = "2.10V."]
     OUTPUT_TRG_0 = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
@@ -2805,7 +2805,7 @@ pub enum Reg2p5TogOutputTrg {
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
-    #[doc = "2.50V"]
+    #[doc = "2.50V."]
     OUTPUT_TRG_16 = 0x10,
     _RESERVED_11 = 0x11,
     _RESERVED_12 = 0x12,
@@ -2821,7 +2821,7 @@ pub enum Reg2p5TogOutputTrg {
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
     _RESERVED_1e = 0x1e,
-    #[doc = "2.875V"]
+    #[doc = "2.875V."]
     OUTPUT_TRG_31 = 0x1f,
 }
 impl Reg2p5TogOutputTrg {
@@ -2850,7 +2850,7 @@ impl From<Reg2p5TogOutputTrg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg3p0ClrOutputTrg {
-    #[doc = "2.625V"]
+    #[doc = "2.625V."]
     OUTPUT_TRG_0 = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
@@ -2866,7 +2866,7 @@ pub enum Reg3p0ClrOutputTrg {
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "3.000V"]
+    #[doc = "3.000V."]
     OUTPUT_TRG_15 = 0x0f,
     _RESERVED_10 = 0x10,
     _RESERVED_11 = 0x11,
@@ -2883,7 +2883,7 @@ pub enum Reg3p0ClrOutputTrg {
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
     _RESERVED_1e = 0x1e,
-    #[doc = "3.400V"]
+    #[doc = "3.400V."]
     OUTPUT_TRG_31 = 0x1f,
 }
 impl Reg3p0ClrOutputTrg {
@@ -2912,9 +2912,9 @@ impl From<Reg3p0ClrOutputTrg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg3p0ClrVbusSel {
-    #[doc = "Utilize VBUS OTG2 power"]
+    #[doc = "Utilize VBUS OTG2 power."]
     USB_OTG2_VBUS = 0x0,
-    #[doc = "Utilize VBUS OTG1 power"]
+    #[doc = "Utilize VBUS OTG1 power."]
     USB_OTG1_VBUS = 0x01,
 }
 impl Reg3p0ClrVbusSel {
@@ -2943,7 +2943,7 @@ impl From<Reg3p0ClrVbusSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg3p0OutputTrg {
-    #[doc = "2.625V"]
+    #[doc = "2.625V."]
     OUTPUT_TRG_0 = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
@@ -2959,7 +2959,7 @@ pub enum Reg3p0OutputTrg {
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "3.000V"]
+    #[doc = "3.000V."]
     OUTPUT_TRG_15 = 0x0f,
     _RESERVED_10 = 0x10,
     _RESERVED_11 = 0x11,
@@ -2976,7 +2976,7 @@ pub enum Reg3p0OutputTrg {
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
     _RESERVED_1e = 0x1e,
-    #[doc = "3.400V"]
+    #[doc = "3.400V."]
     OUTPUT_TRG_31 = 0x1f,
 }
 impl Reg3p0OutputTrg {
@@ -3005,7 +3005,7 @@ impl From<Reg3p0OutputTrg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg3p0SetOutputTrg {
-    #[doc = "2.625V"]
+    #[doc = "2.625V."]
     OUTPUT_TRG_0 = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
@@ -3021,7 +3021,7 @@ pub enum Reg3p0SetOutputTrg {
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "3.000V"]
+    #[doc = "3.000V."]
     OUTPUT_TRG_15 = 0x0f,
     _RESERVED_10 = 0x10,
     _RESERVED_11 = 0x11,
@@ -3038,7 +3038,7 @@ pub enum Reg3p0SetOutputTrg {
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
     _RESERVED_1e = 0x1e,
-    #[doc = "3.400V"]
+    #[doc = "3.400V."]
     OUTPUT_TRG_31 = 0x1f,
 }
 impl Reg3p0SetOutputTrg {
@@ -3067,9 +3067,9 @@ impl From<Reg3p0SetOutputTrg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg3p0SetVbusSel {
-    #[doc = "Utilize VBUS OTG2 power"]
+    #[doc = "Utilize VBUS OTG2 power."]
     USB_OTG2_VBUS = 0x0,
-    #[doc = "Utilize VBUS OTG1 power"]
+    #[doc = "Utilize VBUS OTG1 power."]
     USB_OTG1_VBUS = 0x01,
 }
 impl Reg3p0SetVbusSel {
@@ -3098,7 +3098,7 @@ impl From<Reg3p0SetVbusSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg3p0TogOutputTrg {
-    #[doc = "2.625V"]
+    #[doc = "2.625V."]
     OUTPUT_TRG_0 = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
@@ -3114,7 +3114,7 @@ pub enum Reg3p0TogOutputTrg {
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
-    #[doc = "3.000V"]
+    #[doc = "3.000V."]
     OUTPUT_TRG_15 = 0x0f,
     _RESERVED_10 = 0x10,
     _RESERVED_11 = 0x11,
@@ -3131,7 +3131,7 @@ pub enum Reg3p0TogOutputTrg {
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
     _RESERVED_1e = 0x1e,
-    #[doc = "3.400V"]
+    #[doc = "3.400V."]
     OUTPUT_TRG_31 = 0x1f,
 }
 impl Reg3p0TogOutputTrg {
@@ -3160,9 +3160,9 @@ impl From<Reg3p0TogOutputTrg> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg3p0TogVbusSel {
-    #[doc = "Utilize VBUS OTG2 power"]
+    #[doc = "Utilize VBUS OTG2 power."]
     USB_OTG2_VBUS = 0x0,
-    #[doc = "Utilize VBUS OTG1 power"]
+    #[doc = "Utilize VBUS OTG1 power."]
     USB_OTG1_VBUS = 0x01,
 }
 impl Reg3p0TogVbusSel {
@@ -3191,9 +3191,9 @@ impl From<Reg3p0TogVbusSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Reg3p0VbusSel {
-    #[doc = "Utilize VBUS OTG2 power"]
+    #[doc = "Utilize VBUS OTG2 power."]
     USB_OTG2_VBUS = 0x0,
-    #[doc = "Utilize VBUS OTG1 power"]
+    #[doc = "Utilize VBUS OTG1 power."]
     USB_OTG1_VBUS = 0x01,
 }
 impl Reg3p0VbusSel {
@@ -3222,13 +3222,13 @@ impl From<Reg3p0VbusSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreClrRampRate {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     RAMP_RATE_0 = 0x0,
-    #[doc = "Medium Fast"]
+    #[doc = "Medium Fast."]
     RAMP_RATE_1 = 0x01,
-    #[doc = "Medium Slow"]
+    #[doc = "Medium Slow."]
     RAMP_RATE_2 = 0x02,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     RAMP_RATE_3 = 0x03,
 }
 impl RegCoreClrRampRate {
@@ -3257,37 +3257,37 @@ impl From<RegCoreClrRampRate> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreClrReg0Adj {
-    #[doc = "No adjustment"]
+    #[doc = "No adjustment."]
     REG0_ADJ_0 = 0x0,
-    #[doc = "+ 0.25%"]
+    #[doc = "+ 0.25%."]
     REG0_ADJ_1 = 0x01,
-    #[doc = "+ 0.50%"]
+    #[doc = "+ 0.50%."]
     REG0_ADJ_2 = 0x02,
-    #[doc = "+ 0.75%"]
+    #[doc = "+ 0.75%."]
     REG0_ADJ_3 = 0x03,
-    #[doc = "+ 1.00%"]
+    #[doc = "+ 1.00%."]
     REG0_ADJ_4 = 0x04,
-    #[doc = "+ 1.25%"]
+    #[doc = "+ 1.25%."]
     REG0_ADJ_5 = 0x05,
-    #[doc = "+ 1.50%"]
+    #[doc = "+ 1.50%."]
     REG0_ADJ_6 = 0x06,
-    #[doc = "+ 1.75%"]
+    #[doc = "+ 1.75%."]
     REG0_ADJ_7 = 0x07,
-    #[doc = "- 0.25%"]
+    #[doc = "- 0.25%."]
     REG0_ADJ_8 = 0x08,
-    #[doc = "- 0.50%"]
+    #[doc = "- 0.50%."]
     REG0_ADJ_9 = 0x09,
-    #[doc = "- 0.75%"]
+    #[doc = "- 0.75%."]
     REG0_ADJ_10 = 0x0a,
-    #[doc = "- 1.00%"]
+    #[doc = "- 1.00%."]
     REG0_ADJ_11 = 0x0b,
-    #[doc = "- 1.25%"]
+    #[doc = "- 1.25%."]
     REG0_ADJ_12 = 0x0c,
-    #[doc = "- 1.50%"]
+    #[doc = "- 1.50%."]
     REG0_ADJ_13 = 0x0d,
-    #[doc = "- 1.75%"]
+    #[doc = "- 1.75%."]
     REG0_ADJ_14 = 0x0e,
-    #[doc = "- 2.00%"]
+    #[doc = "- 2.00%."]
     REG0_ADJ_15 = 0x0f,
 }
 impl RegCoreClrReg0Adj {
@@ -3316,13 +3316,13 @@ impl From<RegCoreClrReg0Adj> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreClrReg0Targ {
-    #[doc = "Power gated off"]
+    #[doc = "Power gated off."]
     REG0_TARG_0 = 0x0,
-    #[doc = "Target core voltage = 0.725V"]
+    #[doc = "Target core voltage = 0.725V."]
     REG0_TARG_1 = 0x01,
-    #[doc = "Target core voltage = 0.750V"]
+    #[doc = "Target core voltage = 0.750V."]
     REG0_TARG_2 = 0x02,
-    #[doc = "Target core voltage = 0.775V"]
+    #[doc = "Target core voltage = 0.775V."]
     REG0_TARG_3 = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
@@ -3336,7 +3336,7 @@ pub enum RegCoreClrReg0Targ {
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
-    #[doc = "Target core voltage = 1.100V"]
+    #[doc = "Target core voltage = 1.100V."]
     REG0_TARG_16 = 0x10,
     _RESERVED_11 = 0x11,
     _RESERVED_12 = 0x12,
@@ -3351,7 +3351,7 @@ pub enum RegCoreClrReg0Targ {
     _RESERVED_1b = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
-    #[doc = "Target core voltage = 1.450V"]
+    #[doc = "Target core voltage = 1.450V."]
     REG0_TARG_30 = 0x1e,
     #[doc = "Power FET switched full on. No regulation."]
     REG0_TARG_31 = 0x1f,
@@ -3382,37 +3382,37 @@ impl From<RegCoreClrReg0Targ> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreClrReg1Adj {
-    #[doc = "No adjustment"]
+    #[doc = "No adjustment."]
     REG1_ADJ_0 = 0x0,
-    #[doc = "+ 0.25%"]
+    #[doc = "+ 0.25%."]
     REG1_ADJ_1 = 0x01,
-    #[doc = "+ 0.50%"]
+    #[doc = "+ 0.50%."]
     REG1_ADJ_2 = 0x02,
-    #[doc = "+ 0.75%"]
+    #[doc = "+ 0.75%."]
     REG1_ADJ_3 = 0x03,
-    #[doc = "+ 1.00%"]
+    #[doc = "+ 1.00%."]
     REG1_ADJ_4 = 0x04,
-    #[doc = "+ 1.25%"]
+    #[doc = "+ 1.25%."]
     REG1_ADJ_5 = 0x05,
-    #[doc = "+ 1.50%"]
+    #[doc = "+ 1.50%."]
     REG1_ADJ_6 = 0x06,
-    #[doc = "+ 1.75%"]
+    #[doc = "+ 1.75%."]
     REG1_ADJ_7 = 0x07,
-    #[doc = "- 0.25%"]
+    #[doc = "- 0.25%."]
     REG1_ADJ_8 = 0x08,
-    #[doc = "- 0.50%"]
+    #[doc = "- 0.50%."]
     REG1_ADJ_9 = 0x09,
-    #[doc = "- 0.75%"]
+    #[doc = "- 0.75%."]
     REG1_ADJ_10 = 0x0a,
-    #[doc = "- 1.00%"]
+    #[doc = "- 1.00%."]
     REG1_ADJ_11 = 0x0b,
-    #[doc = "- 1.25%"]
+    #[doc = "- 1.25%."]
     REG1_ADJ_12 = 0x0c,
-    #[doc = "- 1.50%"]
+    #[doc = "- 1.50%."]
     REG1_ADJ_13 = 0x0d,
-    #[doc = "- 1.75%"]
+    #[doc = "- 1.75%."]
     REG1_ADJ_14 = 0x0e,
-    #[doc = "- 2.00%"]
+    #[doc = "- 2.00%."]
     REG1_ADJ_15 = 0x0f,
 }
 impl RegCoreClrReg1Adj {
@@ -3441,13 +3441,13 @@ impl From<RegCoreClrReg1Adj> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreClrReg1Targ {
-    #[doc = "Power gated off"]
+    #[doc = "Power gated off."]
     REG1_TARG_0 = 0x0,
-    #[doc = "Target core voltage = 0.725V"]
+    #[doc = "Target core voltage = 0.725V."]
     REG1_TARG_1 = 0x01,
-    #[doc = "Target core voltage = 0.750V"]
+    #[doc = "Target core voltage = 0.750V."]
     REG1_TARG_2 = 0x02,
-    #[doc = "Target core voltage = 0.775V"]
+    #[doc = "Target core voltage = 0.775V."]
     REG1_TARG_3 = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
@@ -3461,7 +3461,7 @@ pub enum RegCoreClrReg1Targ {
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
-    #[doc = "Target core voltage = 1.100V"]
+    #[doc = "Target core voltage = 1.100V."]
     REG1_TARG_16 = 0x10,
     _RESERVED_11 = 0x11,
     _RESERVED_12 = 0x12,
@@ -3476,7 +3476,7 @@ pub enum RegCoreClrReg1Targ {
     _RESERVED_1b = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
-    #[doc = "Target core voltage = 1.450V"]
+    #[doc = "Target core voltage = 1.450V."]
     REG1_TARG_30 = 0x1e,
     #[doc = "Power FET switched full on. No regulation."]
     REG1_TARG_31 = 0x1f,
@@ -3507,37 +3507,37 @@ impl From<RegCoreClrReg1Targ> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreClrReg2Adj {
-    #[doc = "No adjustment"]
+    #[doc = "No adjustment."]
     REG2_ADJ_0 = 0x0,
-    #[doc = "+ 0.25%"]
+    #[doc = "+ 0.25%."]
     REG2_ADJ_1 = 0x01,
-    #[doc = "+ 0.50%"]
+    #[doc = "+ 0.50%."]
     REG2_ADJ_2 = 0x02,
-    #[doc = "+ 0.75%"]
+    #[doc = "+ 0.75%."]
     REG2_ADJ_3 = 0x03,
-    #[doc = "+ 1.00%"]
+    #[doc = "+ 1.00%."]
     REG2_ADJ_4 = 0x04,
-    #[doc = "+ 1.25%"]
+    #[doc = "+ 1.25%."]
     REG2_ADJ_5 = 0x05,
-    #[doc = "+ 1.50%"]
+    #[doc = "+ 1.50%."]
     REG2_ADJ_6 = 0x06,
-    #[doc = "+ 1.75%"]
+    #[doc = "+ 1.75%."]
     REG2_ADJ_7 = 0x07,
-    #[doc = "- 0.25%"]
+    #[doc = "- 0.25%."]
     REG2_ADJ_8 = 0x08,
-    #[doc = "- 0.50%"]
+    #[doc = "- 0.50%."]
     REG2_ADJ_9 = 0x09,
-    #[doc = "- 0.75%"]
+    #[doc = "- 0.75%."]
     REG2_ADJ_10 = 0x0a,
-    #[doc = "- 1.00%"]
+    #[doc = "- 1.00%."]
     REG2_ADJ_11 = 0x0b,
-    #[doc = "- 1.25%"]
+    #[doc = "- 1.25%."]
     REG2_ADJ_12 = 0x0c,
-    #[doc = "- 1.50%"]
+    #[doc = "- 1.50%."]
     REG2_ADJ_13 = 0x0d,
-    #[doc = "- 1.75%"]
+    #[doc = "- 1.75%."]
     REG2_ADJ_14 = 0x0e,
-    #[doc = "- 2.00%"]
+    #[doc = "- 2.00%."]
     REG2_ADJ_15 = 0x0f,
 }
 impl RegCoreClrReg2Adj {
@@ -3566,13 +3566,13 @@ impl From<RegCoreClrReg2Adj> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreClrReg2Targ {
-    #[doc = "Power gated off"]
+    #[doc = "Power gated off."]
     REG2_TARG_0 = 0x0,
-    #[doc = "Target core voltage = 0.725V"]
+    #[doc = "Target core voltage = 0.725V."]
     REG2_TARG_1 = 0x01,
-    #[doc = "Target core voltage = 0.750V"]
+    #[doc = "Target core voltage = 0.750V."]
     REG2_TARG_2 = 0x02,
-    #[doc = "Target core voltage = 0.775V"]
+    #[doc = "Target core voltage = 0.775V."]
     REG2_TARG_3 = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
@@ -3586,7 +3586,7 @@ pub enum RegCoreClrReg2Targ {
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
-    #[doc = "Target core voltage = 1.100V"]
+    #[doc = "Target core voltage = 1.100V."]
     REG2_TARG_16 = 0x10,
     _RESERVED_11 = 0x11,
     _RESERVED_12 = 0x12,
@@ -3601,7 +3601,7 @@ pub enum RegCoreClrReg2Targ {
     _RESERVED_1b = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
-    #[doc = "Target core voltage = 1.450V"]
+    #[doc = "Target core voltage = 1.450V."]
     REG2_TARG_30 = 0x1e,
     #[doc = "Power FET switched full on. No regulation."]
     REG2_TARG_31 = 0x1f,
@@ -3632,13 +3632,13 @@ impl From<RegCoreClrReg2Targ> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreRampRate {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     RAMP_RATE_0 = 0x0,
-    #[doc = "Medium Fast"]
+    #[doc = "Medium Fast."]
     RAMP_RATE_1 = 0x01,
-    #[doc = "Medium Slow"]
+    #[doc = "Medium Slow."]
     RAMP_RATE_2 = 0x02,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     RAMP_RATE_3 = 0x03,
 }
 impl RegCoreRampRate {
@@ -3667,37 +3667,37 @@ impl From<RegCoreRampRate> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreReg0Adj {
-    #[doc = "No adjustment"]
+    #[doc = "No adjustment."]
     REG0_ADJ_0 = 0x0,
-    #[doc = "+ 0.25%"]
+    #[doc = "+ 0.25%."]
     REG0_ADJ_1 = 0x01,
-    #[doc = "+ 0.50%"]
+    #[doc = "+ 0.50%."]
     REG0_ADJ_2 = 0x02,
-    #[doc = "+ 0.75%"]
+    #[doc = "+ 0.75%."]
     REG0_ADJ_3 = 0x03,
-    #[doc = "+ 1.00%"]
+    #[doc = "+ 1.00%."]
     REG0_ADJ_4 = 0x04,
-    #[doc = "+ 1.25%"]
+    #[doc = "+ 1.25%."]
     REG0_ADJ_5 = 0x05,
-    #[doc = "+ 1.50%"]
+    #[doc = "+ 1.50%."]
     REG0_ADJ_6 = 0x06,
-    #[doc = "+ 1.75%"]
+    #[doc = "+ 1.75%."]
     REG0_ADJ_7 = 0x07,
-    #[doc = "- 0.25%"]
+    #[doc = "- 0.25%."]
     REG0_ADJ_8 = 0x08,
-    #[doc = "- 0.50%"]
+    #[doc = "- 0.50%."]
     REG0_ADJ_9 = 0x09,
-    #[doc = "- 0.75%"]
+    #[doc = "- 0.75%."]
     REG0_ADJ_10 = 0x0a,
-    #[doc = "- 1.00%"]
+    #[doc = "- 1.00%."]
     REG0_ADJ_11 = 0x0b,
-    #[doc = "- 1.25%"]
+    #[doc = "- 1.25%."]
     REG0_ADJ_12 = 0x0c,
-    #[doc = "- 1.50%"]
+    #[doc = "- 1.50%."]
     REG0_ADJ_13 = 0x0d,
-    #[doc = "- 1.75%"]
+    #[doc = "- 1.75%."]
     REG0_ADJ_14 = 0x0e,
-    #[doc = "- 2.00%"]
+    #[doc = "- 2.00%."]
     REG0_ADJ_15 = 0x0f,
 }
 impl RegCoreReg0Adj {
@@ -3726,13 +3726,13 @@ impl From<RegCoreReg0Adj> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreReg0Targ {
-    #[doc = "Power gated off"]
+    #[doc = "Power gated off."]
     REG0_TARG_0 = 0x0,
-    #[doc = "Target core voltage = 0.725V"]
+    #[doc = "Target core voltage = 0.725V."]
     REG0_TARG_1 = 0x01,
-    #[doc = "Target core voltage = 0.750V"]
+    #[doc = "Target core voltage = 0.750V."]
     REG0_TARG_2 = 0x02,
-    #[doc = "Target core voltage = 0.775V"]
+    #[doc = "Target core voltage = 0.775V."]
     REG0_TARG_3 = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
@@ -3746,7 +3746,7 @@ pub enum RegCoreReg0Targ {
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
-    #[doc = "Target core voltage = 1.100V"]
+    #[doc = "Target core voltage = 1.100V."]
     REG0_TARG_16 = 0x10,
     _RESERVED_11 = 0x11,
     _RESERVED_12 = 0x12,
@@ -3761,7 +3761,7 @@ pub enum RegCoreReg0Targ {
     _RESERVED_1b = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
-    #[doc = "Target core voltage = 1.450V"]
+    #[doc = "Target core voltage = 1.450V."]
     REG0_TARG_30 = 0x1e,
     #[doc = "Power FET switched full on. No regulation."]
     REG0_TARG_31 = 0x1f,
@@ -3792,37 +3792,37 @@ impl From<RegCoreReg0Targ> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreReg1Adj {
-    #[doc = "No adjustment"]
+    #[doc = "No adjustment."]
     REG1_ADJ_0 = 0x0,
-    #[doc = "+ 0.25%"]
+    #[doc = "+ 0.25%."]
     REG1_ADJ_1 = 0x01,
-    #[doc = "+ 0.50%"]
+    #[doc = "+ 0.50%."]
     REG1_ADJ_2 = 0x02,
-    #[doc = "+ 0.75%"]
+    #[doc = "+ 0.75%."]
     REG1_ADJ_3 = 0x03,
-    #[doc = "+ 1.00%"]
+    #[doc = "+ 1.00%."]
     REG1_ADJ_4 = 0x04,
-    #[doc = "+ 1.25%"]
+    #[doc = "+ 1.25%."]
     REG1_ADJ_5 = 0x05,
-    #[doc = "+ 1.50%"]
+    #[doc = "+ 1.50%."]
     REG1_ADJ_6 = 0x06,
-    #[doc = "+ 1.75%"]
+    #[doc = "+ 1.75%."]
     REG1_ADJ_7 = 0x07,
-    #[doc = "- 0.25%"]
+    #[doc = "- 0.25%."]
     REG1_ADJ_8 = 0x08,
-    #[doc = "- 0.50%"]
+    #[doc = "- 0.50%."]
     REG1_ADJ_9 = 0x09,
-    #[doc = "- 0.75%"]
+    #[doc = "- 0.75%."]
     REG1_ADJ_10 = 0x0a,
-    #[doc = "- 1.00%"]
+    #[doc = "- 1.00%."]
     REG1_ADJ_11 = 0x0b,
-    #[doc = "- 1.25%"]
+    #[doc = "- 1.25%."]
     REG1_ADJ_12 = 0x0c,
-    #[doc = "- 1.50%"]
+    #[doc = "- 1.50%."]
     REG1_ADJ_13 = 0x0d,
-    #[doc = "- 1.75%"]
+    #[doc = "- 1.75%."]
     REG1_ADJ_14 = 0x0e,
-    #[doc = "- 2.00%"]
+    #[doc = "- 2.00%."]
     REG1_ADJ_15 = 0x0f,
 }
 impl RegCoreReg1Adj {
@@ -3851,13 +3851,13 @@ impl From<RegCoreReg1Adj> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreReg1Targ {
-    #[doc = "Power gated off"]
+    #[doc = "Power gated off."]
     REG1_TARG_0 = 0x0,
-    #[doc = "Target core voltage = 0.725V"]
+    #[doc = "Target core voltage = 0.725V."]
     REG1_TARG_1 = 0x01,
-    #[doc = "Target core voltage = 0.750V"]
+    #[doc = "Target core voltage = 0.750V."]
     REG1_TARG_2 = 0x02,
-    #[doc = "Target core voltage = 0.775V"]
+    #[doc = "Target core voltage = 0.775V."]
     REG1_TARG_3 = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
@@ -3871,7 +3871,7 @@ pub enum RegCoreReg1Targ {
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
-    #[doc = "Target core voltage = 1.100V"]
+    #[doc = "Target core voltage = 1.100V."]
     REG1_TARG_16 = 0x10,
     _RESERVED_11 = 0x11,
     _RESERVED_12 = 0x12,
@@ -3886,7 +3886,7 @@ pub enum RegCoreReg1Targ {
     _RESERVED_1b = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
-    #[doc = "Target core voltage = 1.450V"]
+    #[doc = "Target core voltage = 1.450V."]
     REG1_TARG_30 = 0x1e,
     #[doc = "Power FET switched full on. No regulation."]
     REG1_TARG_31 = 0x1f,
@@ -3917,37 +3917,37 @@ impl From<RegCoreReg1Targ> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreReg2Adj {
-    #[doc = "No adjustment"]
+    #[doc = "No adjustment."]
     REG2_ADJ_0 = 0x0,
-    #[doc = "+ 0.25%"]
+    #[doc = "+ 0.25%."]
     REG2_ADJ_1 = 0x01,
-    #[doc = "+ 0.50%"]
+    #[doc = "+ 0.50%."]
     REG2_ADJ_2 = 0x02,
-    #[doc = "+ 0.75%"]
+    #[doc = "+ 0.75%."]
     REG2_ADJ_3 = 0x03,
-    #[doc = "+ 1.00%"]
+    #[doc = "+ 1.00%."]
     REG2_ADJ_4 = 0x04,
-    #[doc = "+ 1.25%"]
+    #[doc = "+ 1.25%."]
     REG2_ADJ_5 = 0x05,
-    #[doc = "+ 1.50%"]
+    #[doc = "+ 1.50%."]
     REG2_ADJ_6 = 0x06,
-    #[doc = "+ 1.75%"]
+    #[doc = "+ 1.75%."]
     REG2_ADJ_7 = 0x07,
-    #[doc = "- 0.25%"]
+    #[doc = "- 0.25%."]
     REG2_ADJ_8 = 0x08,
-    #[doc = "- 0.50%"]
+    #[doc = "- 0.50%."]
     REG2_ADJ_9 = 0x09,
-    #[doc = "- 0.75%"]
+    #[doc = "- 0.75%."]
     REG2_ADJ_10 = 0x0a,
-    #[doc = "- 1.00%"]
+    #[doc = "- 1.00%."]
     REG2_ADJ_11 = 0x0b,
-    #[doc = "- 1.25%"]
+    #[doc = "- 1.25%."]
     REG2_ADJ_12 = 0x0c,
-    #[doc = "- 1.50%"]
+    #[doc = "- 1.50%."]
     REG2_ADJ_13 = 0x0d,
-    #[doc = "- 1.75%"]
+    #[doc = "- 1.75%."]
     REG2_ADJ_14 = 0x0e,
-    #[doc = "- 2.00%"]
+    #[doc = "- 2.00%."]
     REG2_ADJ_15 = 0x0f,
 }
 impl RegCoreReg2Adj {
@@ -3976,13 +3976,13 @@ impl From<RegCoreReg2Adj> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreReg2Targ {
-    #[doc = "Power gated off"]
+    #[doc = "Power gated off."]
     REG2_TARG_0 = 0x0,
-    #[doc = "Target core voltage = 0.725V"]
+    #[doc = "Target core voltage = 0.725V."]
     REG2_TARG_1 = 0x01,
-    #[doc = "Target core voltage = 0.750V"]
+    #[doc = "Target core voltage = 0.750V."]
     REG2_TARG_2 = 0x02,
-    #[doc = "Target core voltage = 0.775V"]
+    #[doc = "Target core voltage = 0.775V."]
     REG2_TARG_3 = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
@@ -3996,7 +3996,7 @@ pub enum RegCoreReg2Targ {
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
-    #[doc = "Target core voltage = 1.100V"]
+    #[doc = "Target core voltage = 1.100V."]
     REG2_TARG_16 = 0x10,
     _RESERVED_11 = 0x11,
     _RESERVED_12 = 0x12,
@@ -4011,7 +4011,7 @@ pub enum RegCoreReg2Targ {
     _RESERVED_1b = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
-    #[doc = "Target core voltage = 1.450V"]
+    #[doc = "Target core voltage = 1.450V."]
     REG2_TARG_30 = 0x1e,
     #[doc = "Power FET switched full on. No regulation."]
     REG2_TARG_31 = 0x1f,
@@ -4042,13 +4042,13 @@ impl From<RegCoreReg2Targ> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreSetRampRate {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     RAMP_RATE_0 = 0x0,
-    #[doc = "Medium Fast"]
+    #[doc = "Medium Fast."]
     RAMP_RATE_1 = 0x01,
-    #[doc = "Medium Slow"]
+    #[doc = "Medium Slow."]
     RAMP_RATE_2 = 0x02,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     RAMP_RATE_3 = 0x03,
 }
 impl RegCoreSetRampRate {
@@ -4077,37 +4077,37 @@ impl From<RegCoreSetRampRate> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreSetReg0Adj {
-    #[doc = "No adjustment"]
+    #[doc = "No adjustment."]
     REG0_ADJ_0 = 0x0,
-    #[doc = "+ 0.25%"]
+    #[doc = "+ 0.25%."]
     REG0_ADJ_1 = 0x01,
-    #[doc = "+ 0.50%"]
+    #[doc = "+ 0.50%."]
     REG0_ADJ_2 = 0x02,
-    #[doc = "+ 0.75%"]
+    #[doc = "+ 0.75%."]
     REG0_ADJ_3 = 0x03,
-    #[doc = "+ 1.00%"]
+    #[doc = "+ 1.00%."]
     REG0_ADJ_4 = 0x04,
-    #[doc = "+ 1.25%"]
+    #[doc = "+ 1.25%."]
     REG0_ADJ_5 = 0x05,
-    #[doc = "+ 1.50%"]
+    #[doc = "+ 1.50%."]
     REG0_ADJ_6 = 0x06,
-    #[doc = "+ 1.75%"]
+    #[doc = "+ 1.75%."]
     REG0_ADJ_7 = 0x07,
-    #[doc = "- 0.25%"]
+    #[doc = "- 0.25%."]
     REG0_ADJ_8 = 0x08,
-    #[doc = "- 0.50%"]
+    #[doc = "- 0.50%."]
     REG0_ADJ_9 = 0x09,
-    #[doc = "- 0.75%"]
+    #[doc = "- 0.75%."]
     REG0_ADJ_10 = 0x0a,
-    #[doc = "- 1.00%"]
+    #[doc = "- 1.00%."]
     REG0_ADJ_11 = 0x0b,
-    #[doc = "- 1.25%"]
+    #[doc = "- 1.25%."]
     REG0_ADJ_12 = 0x0c,
-    #[doc = "- 1.50%"]
+    #[doc = "- 1.50%."]
     REG0_ADJ_13 = 0x0d,
-    #[doc = "- 1.75%"]
+    #[doc = "- 1.75%."]
     REG0_ADJ_14 = 0x0e,
-    #[doc = "- 2.00%"]
+    #[doc = "- 2.00%."]
     REG0_ADJ_15 = 0x0f,
 }
 impl RegCoreSetReg0Adj {
@@ -4136,13 +4136,13 @@ impl From<RegCoreSetReg0Adj> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreSetReg0Targ {
-    #[doc = "Power gated off"]
+    #[doc = "Power gated off."]
     REG0_TARG_0 = 0x0,
-    #[doc = "Target core voltage = 0.725V"]
+    #[doc = "Target core voltage = 0.725V."]
     REG0_TARG_1 = 0x01,
-    #[doc = "Target core voltage = 0.750V"]
+    #[doc = "Target core voltage = 0.750V."]
     REG0_TARG_2 = 0x02,
-    #[doc = "Target core voltage = 0.775V"]
+    #[doc = "Target core voltage = 0.775V."]
     REG0_TARG_3 = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
@@ -4156,7 +4156,7 @@ pub enum RegCoreSetReg0Targ {
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
-    #[doc = "Target core voltage = 1.100V"]
+    #[doc = "Target core voltage = 1.100V."]
     REG0_TARG_16 = 0x10,
     _RESERVED_11 = 0x11,
     _RESERVED_12 = 0x12,
@@ -4171,7 +4171,7 @@ pub enum RegCoreSetReg0Targ {
     _RESERVED_1b = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
-    #[doc = "Target core voltage = 1.450V"]
+    #[doc = "Target core voltage = 1.450V."]
     REG0_TARG_30 = 0x1e,
     #[doc = "Power FET switched full on. No regulation."]
     REG0_TARG_31 = 0x1f,
@@ -4202,37 +4202,37 @@ impl From<RegCoreSetReg0Targ> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreSetReg1Adj {
-    #[doc = "No adjustment"]
+    #[doc = "No adjustment."]
     REG1_ADJ_0 = 0x0,
-    #[doc = "+ 0.25%"]
+    #[doc = "+ 0.25%."]
     REG1_ADJ_1 = 0x01,
-    #[doc = "+ 0.50%"]
+    #[doc = "+ 0.50%."]
     REG1_ADJ_2 = 0x02,
-    #[doc = "+ 0.75%"]
+    #[doc = "+ 0.75%."]
     REG1_ADJ_3 = 0x03,
-    #[doc = "+ 1.00%"]
+    #[doc = "+ 1.00%."]
     REG1_ADJ_4 = 0x04,
-    #[doc = "+ 1.25%"]
+    #[doc = "+ 1.25%."]
     REG1_ADJ_5 = 0x05,
-    #[doc = "+ 1.50%"]
+    #[doc = "+ 1.50%."]
     REG1_ADJ_6 = 0x06,
-    #[doc = "+ 1.75%"]
+    #[doc = "+ 1.75%."]
     REG1_ADJ_7 = 0x07,
-    #[doc = "- 0.25%"]
+    #[doc = "- 0.25%."]
     REG1_ADJ_8 = 0x08,
-    #[doc = "- 0.50%"]
+    #[doc = "- 0.50%."]
     REG1_ADJ_9 = 0x09,
-    #[doc = "- 0.75%"]
+    #[doc = "- 0.75%."]
     REG1_ADJ_10 = 0x0a,
-    #[doc = "- 1.00%"]
+    #[doc = "- 1.00%."]
     REG1_ADJ_11 = 0x0b,
-    #[doc = "- 1.25%"]
+    #[doc = "- 1.25%."]
     REG1_ADJ_12 = 0x0c,
-    #[doc = "- 1.50%"]
+    #[doc = "- 1.50%."]
     REG1_ADJ_13 = 0x0d,
-    #[doc = "- 1.75%"]
+    #[doc = "- 1.75%."]
     REG1_ADJ_14 = 0x0e,
-    #[doc = "- 2.00%"]
+    #[doc = "- 2.00%."]
     REG1_ADJ_15 = 0x0f,
 }
 impl RegCoreSetReg1Adj {
@@ -4261,13 +4261,13 @@ impl From<RegCoreSetReg1Adj> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreSetReg1Targ {
-    #[doc = "Power gated off"]
+    #[doc = "Power gated off."]
     REG1_TARG_0 = 0x0,
-    #[doc = "Target core voltage = 0.725V"]
+    #[doc = "Target core voltage = 0.725V."]
     REG1_TARG_1 = 0x01,
-    #[doc = "Target core voltage = 0.750V"]
+    #[doc = "Target core voltage = 0.750V."]
     REG1_TARG_2 = 0x02,
-    #[doc = "Target core voltage = 0.775V"]
+    #[doc = "Target core voltage = 0.775V."]
     REG1_TARG_3 = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
@@ -4281,7 +4281,7 @@ pub enum RegCoreSetReg1Targ {
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
-    #[doc = "Target core voltage = 1.100V"]
+    #[doc = "Target core voltage = 1.100V."]
     REG1_TARG_16 = 0x10,
     _RESERVED_11 = 0x11,
     _RESERVED_12 = 0x12,
@@ -4296,7 +4296,7 @@ pub enum RegCoreSetReg1Targ {
     _RESERVED_1b = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
-    #[doc = "Target core voltage = 1.450V"]
+    #[doc = "Target core voltage = 1.450V."]
     REG1_TARG_30 = 0x1e,
     #[doc = "Power FET switched full on. No regulation."]
     REG1_TARG_31 = 0x1f,
@@ -4327,37 +4327,37 @@ impl From<RegCoreSetReg1Targ> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreSetReg2Adj {
-    #[doc = "No adjustment"]
+    #[doc = "No adjustment."]
     REG2_ADJ_0 = 0x0,
-    #[doc = "+ 0.25%"]
+    #[doc = "+ 0.25%."]
     REG2_ADJ_1 = 0x01,
-    #[doc = "+ 0.50%"]
+    #[doc = "+ 0.50%."]
     REG2_ADJ_2 = 0x02,
-    #[doc = "+ 0.75%"]
+    #[doc = "+ 0.75%."]
     REG2_ADJ_3 = 0x03,
-    #[doc = "+ 1.00%"]
+    #[doc = "+ 1.00%."]
     REG2_ADJ_4 = 0x04,
-    #[doc = "+ 1.25%"]
+    #[doc = "+ 1.25%."]
     REG2_ADJ_5 = 0x05,
-    #[doc = "+ 1.50%"]
+    #[doc = "+ 1.50%."]
     REG2_ADJ_6 = 0x06,
-    #[doc = "+ 1.75%"]
+    #[doc = "+ 1.75%."]
     REG2_ADJ_7 = 0x07,
-    #[doc = "- 0.25%"]
+    #[doc = "- 0.25%."]
     REG2_ADJ_8 = 0x08,
-    #[doc = "- 0.50%"]
+    #[doc = "- 0.50%."]
     REG2_ADJ_9 = 0x09,
-    #[doc = "- 0.75%"]
+    #[doc = "- 0.75%."]
     REG2_ADJ_10 = 0x0a,
-    #[doc = "- 1.00%"]
+    #[doc = "- 1.00%."]
     REG2_ADJ_11 = 0x0b,
-    #[doc = "- 1.25%"]
+    #[doc = "- 1.25%."]
     REG2_ADJ_12 = 0x0c,
-    #[doc = "- 1.50%"]
+    #[doc = "- 1.50%."]
     REG2_ADJ_13 = 0x0d,
-    #[doc = "- 1.75%"]
+    #[doc = "- 1.75%."]
     REG2_ADJ_14 = 0x0e,
-    #[doc = "- 2.00%"]
+    #[doc = "- 2.00%."]
     REG2_ADJ_15 = 0x0f,
 }
 impl RegCoreSetReg2Adj {
@@ -4386,13 +4386,13 @@ impl From<RegCoreSetReg2Adj> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreSetReg2Targ {
-    #[doc = "Power gated off"]
+    #[doc = "Power gated off."]
     REG2_TARG_0 = 0x0,
-    #[doc = "Target core voltage = 0.725V"]
+    #[doc = "Target core voltage = 0.725V."]
     REG2_TARG_1 = 0x01,
-    #[doc = "Target core voltage = 0.750V"]
+    #[doc = "Target core voltage = 0.750V."]
     REG2_TARG_2 = 0x02,
-    #[doc = "Target core voltage = 0.775V"]
+    #[doc = "Target core voltage = 0.775V."]
     REG2_TARG_3 = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
@@ -4406,7 +4406,7 @@ pub enum RegCoreSetReg2Targ {
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
-    #[doc = "Target core voltage = 1.100V"]
+    #[doc = "Target core voltage = 1.100V."]
     REG2_TARG_16 = 0x10,
     _RESERVED_11 = 0x11,
     _RESERVED_12 = 0x12,
@@ -4421,7 +4421,7 @@ pub enum RegCoreSetReg2Targ {
     _RESERVED_1b = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
-    #[doc = "Target core voltage = 1.450V"]
+    #[doc = "Target core voltage = 1.450V."]
     REG2_TARG_30 = 0x1e,
     #[doc = "Power FET switched full on. No regulation."]
     REG2_TARG_31 = 0x1f,
@@ -4452,13 +4452,13 @@ impl From<RegCoreSetReg2Targ> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreTogRampRate {
-    #[doc = "Fast"]
+    #[doc = "Fast."]
     RAMP_RATE_0 = 0x0,
-    #[doc = "Medium Fast"]
+    #[doc = "Medium Fast."]
     RAMP_RATE_1 = 0x01,
-    #[doc = "Medium Slow"]
+    #[doc = "Medium Slow."]
     RAMP_RATE_2 = 0x02,
-    #[doc = "Slow"]
+    #[doc = "Slow."]
     RAMP_RATE_3 = 0x03,
 }
 impl RegCoreTogRampRate {
@@ -4487,37 +4487,37 @@ impl From<RegCoreTogRampRate> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreTogReg0Adj {
-    #[doc = "No adjustment"]
+    #[doc = "No adjustment."]
     REG0_ADJ_0 = 0x0,
-    #[doc = "+ 0.25%"]
+    #[doc = "+ 0.25%."]
     REG0_ADJ_1 = 0x01,
-    #[doc = "+ 0.50%"]
+    #[doc = "+ 0.50%."]
     REG0_ADJ_2 = 0x02,
-    #[doc = "+ 0.75%"]
+    #[doc = "+ 0.75%."]
     REG0_ADJ_3 = 0x03,
-    #[doc = "+ 1.00%"]
+    #[doc = "+ 1.00%."]
     REG0_ADJ_4 = 0x04,
-    #[doc = "+ 1.25%"]
+    #[doc = "+ 1.25%."]
     REG0_ADJ_5 = 0x05,
-    #[doc = "+ 1.50%"]
+    #[doc = "+ 1.50%."]
     REG0_ADJ_6 = 0x06,
-    #[doc = "+ 1.75%"]
+    #[doc = "+ 1.75%."]
     REG0_ADJ_7 = 0x07,
-    #[doc = "- 0.25%"]
+    #[doc = "- 0.25%."]
     REG0_ADJ_8 = 0x08,
-    #[doc = "- 0.50%"]
+    #[doc = "- 0.50%."]
     REG0_ADJ_9 = 0x09,
-    #[doc = "- 0.75%"]
+    #[doc = "- 0.75%."]
     REG0_ADJ_10 = 0x0a,
-    #[doc = "- 1.00%"]
+    #[doc = "- 1.00%."]
     REG0_ADJ_11 = 0x0b,
-    #[doc = "- 1.25%"]
+    #[doc = "- 1.25%."]
     REG0_ADJ_12 = 0x0c,
-    #[doc = "- 1.50%"]
+    #[doc = "- 1.50%."]
     REG0_ADJ_13 = 0x0d,
-    #[doc = "- 1.75%"]
+    #[doc = "- 1.75%."]
     REG0_ADJ_14 = 0x0e,
-    #[doc = "- 2.00%"]
+    #[doc = "- 2.00%."]
     REG0_ADJ_15 = 0x0f,
 }
 impl RegCoreTogReg0Adj {
@@ -4546,13 +4546,13 @@ impl From<RegCoreTogReg0Adj> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreTogReg0Targ {
-    #[doc = "Power gated off"]
+    #[doc = "Power gated off."]
     REG0_TARG_0 = 0x0,
-    #[doc = "Target core voltage = 0.725V"]
+    #[doc = "Target core voltage = 0.725V."]
     REG0_TARG_1 = 0x01,
-    #[doc = "Target core voltage = 0.750V"]
+    #[doc = "Target core voltage = 0.750V."]
     REG0_TARG_2 = 0x02,
-    #[doc = "Target core voltage = 0.775V"]
+    #[doc = "Target core voltage = 0.775V."]
     REG0_TARG_3 = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
@@ -4566,7 +4566,7 @@ pub enum RegCoreTogReg0Targ {
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
-    #[doc = "Target core voltage = 1.100V"]
+    #[doc = "Target core voltage = 1.100V."]
     REG0_TARG_16 = 0x10,
     _RESERVED_11 = 0x11,
     _RESERVED_12 = 0x12,
@@ -4581,7 +4581,7 @@ pub enum RegCoreTogReg0Targ {
     _RESERVED_1b = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
-    #[doc = "Target core voltage = 1.450V"]
+    #[doc = "Target core voltage = 1.450V."]
     REG0_TARG_30 = 0x1e,
     #[doc = "Power FET switched full on. No regulation."]
     REG0_TARG_31 = 0x1f,
@@ -4612,37 +4612,37 @@ impl From<RegCoreTogReg0Targ> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreTogReg1Adj {
-    #[doc = "No adjustment"]
+    #[doc = "No adjustment."]
     REG1_ADJ_0 = 0x0,
-    #[doc = "+ 0.25%"]
+    #[doc = "+ 0.25%."]
     REG1_ADJ_1 = 0x01,
-    #[doc = "+ 0.50%"]
+    #[doc = "+ 0.50%."]
     REG1_ADJ_2 = 0x02,
-    #[doc = "+ 0.75%"]
+    #[doc = "+ 0.75%."]
     REG1_ADJ_3 = 0x03,
-    #[doc = "+ 1.00%"]
+    #[doc = "+ 1.00%."]
     REG1_ADJ_4 = 0x04,
-    #[doc = "+ 1.25%"]
+    #[doc = "+ 1.25%."]
     REG1_ADJ_5 = 0x05,
-    #[doc = "+ 1.50%"]
+    #[doc = "+ 1.50%."]
     REG1_ADJ_6 = 0x06,
-    #[doc = "+ 1.75%"]
+    #[doc = "+ 1.75%."]
     REG1_ADJ_7 = 0x07,
-    #[doc = "- 0.25%"]
+    #[doc = "- 0.25%."]
     REG1_ADJ_8 = 0x08,
-    #[doc = "- 0.50%"]
+    #[doc = "- 0.50%."]
     REG1_ADJ_9 = 0x09,
-    #[doc = "- 0.75%"]
+    #[doc = "- 0.75%."]
     REG1_ADJ_10 = 0x0a,
-    #[doc = "- 1.00%"]
+    #[doc = "- 1.00%."]
     REG1_ADJ_11 = 0x0b,
-    #[doc = "- 1.25%"]
+    #[doc = "- 1.25%."]
     REG1_ADJ_12 = 0x0c,
-    #[doc = "- 1.50%"]
+    #[doc = "- 1.50%."]
     REG1_ADJ_13 = 0x0d,
-    #[doc = "- 1.75%"]
+    #[doc = "- 1.75%."]
     REG1_ADJ_14 = 0x0e,
-    #[doc = "- 2.00%"]
+    #[doc = "- 2.00%."]
     REG1_ADJ_15 = 0x0f,
 }
 impl RegCoreTogReg1Adj {
@@ -4671,13 +4671,13 @@ impl From<RegCoreTogReg1Adj> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreTogReg1Targ {
-    #[doc = "Power gated off"]
+    #[doc = "Power gated off."]
     REG1_TARG_0 = 0x0,
-    #[doc = "Target core voltage = 0.725V"]
+    #[doc = "Target core voltage = 0.725V."]
     REG1_TARG_1 = 0x01,
-    #[doc = "Target core voltage = 0.750V"]
+    #[doc = "Target core voltage = 0.750V."]
     REG1_TARG_2 = 0x02,
-    #[doc = "Target core voltage = 0.775V"]
+    #[doc = "Target core voltage = 0.775V."]
     REG1_TARG_3 = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
@@ -4691,7 +4691,7 @@ pub enum RegCoreTogReg1Targ {
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
-    #[doc = "Target core voltage = 1.100V"]
+    #[doc = "Target core voltage = 1.100V."]
     REG1_TARG_16 = 0x10,
     _RESERVED_11 = 0x11,
     _RESERVED_12 = 0x12,
@@ -4706,7 +4706,7 @@ pub enum RegCoreTogReg1Targ {
     _RESERVED_1b = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
-    #[doc = "Target core voltage = 1.450V"]
+    #[doc = "Target core voltage = 1.450V."]
     REG1_TARG_30 = 0x1e,
     #[doc = "Power FET switched full on. No regulation."]
     REG1_TARG_31 = 0x1f,
@@ -4737,37 +4737,37 @@ impl From<RegCoreTogReg1Targ> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreTogReg2Adj {
-    #[doc = "No adjustment"]
+    #[doc = "No adjustment."]
     REG2_ADJ_0 = 0x0,
-    #[doc = "+ 0.25%"]
+    #[doc = "+ 0.25%."]
     REG2_ADJ_1 = 0x01,
-    #[doc = "+ 0.50%"]
+    #[doc = "+ 0.50%."]
     REG2_ADJ_2 = 0x02,
-    #[doc = "+ 0.75%"]
+    #[doc = "+ 0.75%."]
     REG2_ADJ_3 = 0x03,
-    #[doc = "+ 1.00%"]
+    #[doc = "+ 1.00%."]
     REG2_ADJ_4 = 0x04,
-    #[doc = "+ 1.25%"]
+    #[doc = "+ 1.25%."]
     REG2_ADJ_5 = 0x05,
-    #[doc = "+ 1.50%"]
+    #[doc = "+ 1.50%."]
     REG2_ADJ_6 = 0x06,
-    #[doc = "+ 1.75%"]
+    #[doc = "+ 1.75%."]
     REG2_ADJ_7 = 0x07,
-    #[doc = "- 0.25%"]
+    #[doc = "- 0.25%."]
     REG2_ADJ_8 = 0x08,
-    #[doc = "- 0.50%"]
+    #[doc = "- 0.50%."]
     REG2_ADJ_9 = 0x09,
-    #[doc = "- 0.75%"]
+    #[doc = "- 0.75%."]
     REG2_ADJ_10 = 0x0a,
-    #[doc = "- 1.00%"]
+    #[doc = "- 1.00%."]
     REG2_ADJ_11 = 0x0b,
-    #[doc = "- 1.25%"]
+    #[doc = "- 1.25%."]
     REG2_ADJ_12 = 0x0c,
-    #[doc = "- 1.50%"]
+    #[doc = "- 1.50%."]
     REG2_ADJ_13 = 0x0d,
-    #[doc = "- 1.75%"]
+    #[doc = "- 1.75%."]
     REG2_ADJ_14 = 0x0e,
-    #[doc = "- 2.00%"]
+    #[doc = "- 2.00%."]
     REG2_ADJ_15 = 0x0f,
 }
 impl RegCoreTogReg2Adj {
@@ -4796,13 +4796,13 @@ impl From<RegCoreTogReg2Adj> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RegCoreTogReg2Targ {
-    #[doc = "Power gated off"]
+    #[doc = "Power gated off."]
     REG2_TARG_0 = 0x0,
-    #[doc = "Target core voltage = 0.725V"]
+    #[doc = "Target core voltage = 0.725V."]
     REG2_TARG_1 = 0x01,
-    #[doc = "Target core voltage = 0.750V"]
+    #[doc = "Target core voltage = 0.750V."]
     REG2_TARG_2 = 0x02,
-    #[doc = "Target core voltage = 0.775V"]
+    #[doc = "Target core voltage = 0.775V."]
     REG2_TARG_3 = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
@@ -4816,7 +4816,7 @@ pub enum RegCoreTogReg2Targ {
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
-    #[doc = "Target core voltage = 1.100V"]
+    #[doc = "Target core voltage = 1.100V."]
     REG2_TARG_16 = 0x10,
     _RESERVED_11 = 0x11,
     _RESERVED_12 = 0x12,
@@ -4831,7 +4831,7 @@ pub enum RegCoreTogReg2Targ {
     _RESERVED_1b = 0x1b,
     _RESERVED_1c = 0x1c,
     _RESERVED_1d = 0x1d,
-    #[doc = "Target core voltage = 1.450V"]
+    #[doc = "Target core voltage = 1.450V."]
     REG2_TARG_30 = 0x1e,
     #[doc = "Power FET switched full on. No regulation."]
     REG2_TARG_31 = 0x1f,

@@ -1,16 +1,16 @@
-#[doc = "Compute register bank"]
+#[doc = "Compute register bank."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Compreg(pub u32);
 impl Compreg {
-    #[doc = "Compute register bank"]
+    #[doc = "Compute register bank."]
     #[must_use]
     #[inline(always)]
     pub const fn compreg(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Compute register bank"]
+    #[doc = "Compute register bank."]
     #[inline(always)]
     pub const fn set_compreg(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -35,43 +35,43 @@ impl defmt::Format for Compreg {
         defmt::write!(f, "Compreg {{ compreg: {=u32:?} }}", self.compreg())
     }
 }
-#[doc = "PowerQuad Control register"]
+#[doc = "PowerQuad Control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Control(pub u32);
 impl Control {
-    #[doc = "opcode specific to decode_machine"]
+    #[doc = "opcode specific to decode_machine."]
     #[must_use]
     #[inline(always)]
     pub const fn decode_opcode(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x0f;
         val as u8
     }
-    #[doc = "opcode specific to decode_machine"]
+    #[doc = "opcode specific to decode_machine."]
     #[inline(always)]
     pub const fn set_decode_opcode(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val as u32) & 0x0f) << 0usize);
     }
-    #[doc = "0 : Coprocessor , 1 : matrix , 2 : fft , 3 : fir , 4 : stat , 5 : cordic , 6 -15 : NA"]
+    #[doc = "0 : Coprocessor , 1 : matrix , 2 : fft , 3 : fir , 4 : stat , 5 : cordic , 6 -15 : NA."]
     #[must_use]
     #[inline(always)]
     pub const fn decode_machine(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x0f;
         val as u8
     }
-    #[doc = "0 : Coprocessor , 1 : matrix , 2 : fft , 3 : fir , 4 : stat , 5 : cordic , 6 -15 : NA"]
+    #[doc = "0 : Coprocessor , 1 : matrix , 2 : fft , 3 : fir , 4 : stat , 5 : cordic , 6 -15 : NA."]
     #[inline(always)]
     pub const fn set_decode_machine(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
     }
-    #[doc = "Instruction busy signal when high indicates processing is on"]
+    #[doc = "Instruction busy signal when high indicates processing is on."]
     #[must_use]
     #[inline(always)]
     pub const fn inst_busy(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Instruction busy signal when high indicates processing is on"]
+    #[doc = "Instruction busy signal when high indicates processing is on."]
     #[inline(always)]
     pub const fn set_inst_busy(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -104,19 +104,19 @@ impl defmt::Format for Control {
         )
     }
 }
-#[doc = "Cordic input X register"]
+#[doc = "Cordic input X register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CordicX(pub u32);
 impl CordicX {
-    #[doc = "Cordic input x"]
+    #[doc = "Cordic input x."]
     #[must_use]
     #[inline(always)]
     pub const fn cordic_x(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Cordic input x"]
+    #[doc = "Cordic input x."]
     #[inline(always)]
     pub const fn set_cordic_x(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -141,19 +141,19 @@ impl defmt::Format for CordicX {
         defmt::write!(f, "CordicX {{ cordic_x: {=u32:?} }}", self.cordic_x())
     }
 }
-#[doc = "Cordic input Y register"]
+#[doc = "Cordic input Y register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CordicY(pub u32);
 impl CordicY {
-    #[doc = "Cordic input y"]
+    #[doc = "Cordic input y."]
     #[must_use]
     #[inline(always)]
     pub const fn cordic_y(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Cordic input y"]
+    #[doc = "Cordic input y."]
     #[inline(always)]
     pub const fn set_cordic_y(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -178,19 +178,19 @@ impl defmt::Format for CordicY {
         defmt::write!(f, "CordicY {{ cordic_y: {=u32:?} }}", self.cordic_y())
     }
 }
-#[doc = "Cordic input Z register"]
+#[doc = "Cordic input Z register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct CordicZ(pub u32);
 impl CordicZ {
-    #[doc = "Cordic input z"]
+    #[doc = "Cordic input z."]
     #[must_use]
     #[inline(always)]
     pub const fn cordic_z(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Cordic input z"]
+    #[doc = "Cordic input z."]
     #[inline(always)]
     pub const fn set_cordic_z(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -215,55 +215,55 @@ impl defmt::Format for CordicZ {
         defmt::write!(f, "CordicZ {{ cordic_z: {=u32:?} }}", self.cordic_z())
     }
 }
-#[doc = "Pre-scale register"]
+#[doc = "Pre-scale register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cppre(pub u32);
 impl Cppre {
-    #[doc = "co-processor scaling of input"]
+    #[doc = "co-processor scaling of input."]
     #[must_use]
     #[inline(always)]
     pub const fn cppre_in(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
         val as u8
     }
-    #[doc = "co-processor scaling of input"]
+    #[doc = "co-processor scaling of input."]
     #[inline(always)]
     pub const fn set_cppre_in(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
-    #[doc = "co-processor fixed point output"]
+    #[doc = "co-processor fixed point output."]
     #[must_use]
     #[inline(always)]
     pub const fn cppre_out(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0xff;
         val as u8
     }
-    #[doc = "co-processor fixed point output"]
+    #[doc = "co-processor fixed point output."]
     #[inline(always)]
     pub const fn set_cppre_out(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
     }
-    #[doc = "1 : forces sub-32 bit saturation"]
+    #[doc = "1 : forces sub-32 bit saturation."]
     #[must_use]
     #[inline(always)]
     pub const fn cppre_sat(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "1 : forces sub-32 bit saturation"]
+    #[doc = "1 : forces sub-32 bit saturation."]
     #[inline(always)]
     pub const fn set_cppre_sat(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "0 = 8bits, 1 = 16bits"]
+    #[doc = "0 = 8bits, 1 = 16bits."]
     #[must_use]
     #[inline(always)]
     pub const fn cppre_sat8(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "0 = 8bits, 1 = 16bits"]
+    #[doc = "0 = 8bits, 1 = 16bits."]
     #[inline(always)]
     pub const fn set_cppre_sat8(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
@@ -298,19 +298,19 @@ impl defmt::Format for Cppre {
         )
     }
 }
-#[doc = "Cursory register"]
+#[doc = "Cursory register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cursory(pub u32);
 impl Cursory {
-    #[doc = "1 : Enable cursory mode"]
+    #[doc = "1 : Enable cursory mode."]
     #[must_use]
     #[inline(always)]
     pub const fn cursory(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "1 : Enable cursory mode"]
+    #[doc = "1 : Enable cursory mode."]
     #[inline(always)]
     pub const fn set_cursory(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -335,67 +335,67 @@ impl defmt::Format for Cursory {
         defmt::write!(f, "Cursory {{ cursory: {=bool:?} }}", self.cursory())
     }
 }
-#[doc = "Read/Write register where error statuses are captured (sticky)"]
+#[doc = "Read/Write register where error statuses are captured (sticky)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Errstat(pub u32);
 impl Errstat {
-    #[doc = "overflow"]
+    #[doc = "overflow."]
     #[must_use]
     #[inline(always)]
     pub const fn overflow(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "overflow"]
+    #[doc = "overflow."]
     #[inline(always)]
     pub const fn set_overflow(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "nan"]
+    #[doc = "nan."]
     #[must_use]
     #[inline(always)]
     pub const fn nan(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "nan"]
+    #[doc = "nan."]
     #[inline(always)]
     pub const fn set_nan(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "fixed_pt_overflow"]
+    #[doc = "fixed_pt_overflow."]
     #[must_use]
     #[inline(always)]
     pub const fn fixedoverflow(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "fixed_pt_overflow"]
+    #[doc = "fixed_pt_overflow."]
     #[inline(always)]
     pub const fn set_fixedoverflow(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "underflow"]
+    #[doc = "underflow."]
     #[must_use]
     #[inline(always)]
     pub const fn underflow(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "underflow"]
+    #[doc = "underflow."]
     #[inline(always)]
     pub const fn set_underflow(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "bus_error"]
+    #[doc = "bus_error."]
     #[must_use]
     #[inline(always)]
     pub const fn buserror(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "bus_error"]
+    #[doc = "bus_error."]
     #[inline(always)]
     pub const fn set_buserror(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
@@ -432,79 +432,79 @@ impl defmt::Format for Errstat {
         )
     }
 }
-#[doc = "Event Enable register"]
+#[doc = "Event Enable register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Eventen(pub u32);
 impl Eventen {
-    #[doc = "1 : Enable event trigger on Floating point overflow"]
+    #[doc = "1 : Enable event trigger on Floating point overflow."]
     #[must_use]
     #[inline(always)]
     pub const fn event_oflow(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "1 : Enable event trigger on Floating point overflow"]
+    #[doc = "1 : Enable event trigger on Floating point overflow."]
     #[inline(always)]
     pub const fn set_event_oflow(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "1 : Enable event trigger on Floating point NaN"]
+    #[doc = "1 : Enable event trigger on Floating point NaN."]
     #[must_use]
     #[inline(always)]
     pub const fn event_nan(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "1 : Enable event trigger on Floating point NaN"]
+    #[doc = "1 : Enable event trigger on Floating point NaN."]
     #[inline(always)]
     pub const fn set_event_nan(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "1: Enable event trigger on Fixed point Overflow"]
+    #[doc = "1: Enable event trigger on Fixed point Overflow."]
     #[must_use]
     #[inline(always)]
     pub const fn event_fixed(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "1: Enable event trigger on Fixed point Overflow"]
+    #[doc = "1: Enable event trigger on Fixed point Overflow."]
     #[inline(always)]
     pub const fn set_event_fixed(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "1 : Enable event trigger on Subnormal truncation"]
+    #[doc = "1 : Enable event trigger on Subnormal truncation."]
     #[must_use]
     #[inline(always)]
     pub const fn event_uflow(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "1 : Enable event trigger on Subnormal truncation"]
+    #[doc = "1 : Enable event trigger on Subnormal truncation."]
     #[inline(always)]
     pub const fn set_event_uflow(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "1: Enable event trigger on AHBM Buss Error"]
+    #[doc = "1: Enable event trigger on AHBM Buss Error."]
     #[must_use]
     #[inline(always)]
     pub const fn event_berr(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "1: Enable event trigger on AHBM Buss Error"]
+    #[doc = "1: Enable event trigger on AHBM Buss Error."]
     #[inline(always)]
     pub const fn set_event_berr(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "1: Enable event trigger on instruction completion"]
+    #[doc = "1: Enable event trigger on instruction completion."]
     #[must_use]
     #[inline(always)]
     pub const fn event_comp(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "1: Enable event trigger on instruction completion"]
+    #[doc = "1: Enable event trigger on instruction completion."]
     #[inline(always)]
     pub const fn set_event_comp(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
@@ -548,14 +548,14 @@ impl defmt::Format for Eventen {
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpreg(pub u32);
 impl Gpreg {
-    #[doc = "General purpose register bank"]
+    #[doc = "General purpose register bank."]
     #[must_use]
     #[inline(always)]
     pub const fn gpreg(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "General purpose register bank"]
+    #[doc = "General purpose register bank."]
     #[inline(always)]
     pub const fn set_gpreg(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -580,19 +580,19 @@ impl defmt::Format for Gpreg {
         defmt::write!(f, "Gpreg {{ gpreg: {=u32:?} }}", self.gpreg())
     }
 }
-#[doc = "Base address register for input A region"]
+#[doc = "Base address register for input A region."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Inabase(pub u32);
 impl Inabase {
-    #[doc = "Base address register for the input A region"]
+    #[doc = "Base address register for the input A region."]
     #[must_use]
     #[inline(always)]
     pub const fn inabase(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Base address register for the input A region"]
+    #[doc = "Base address register for the input A region."]
     #[inline(always)]
     pub const fn set_inabase(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -617,43 +617,43 @@ impl defmt::Format for Inabase {
         defmt::write!(f, "Inabase {{ inabase: {=u32:?} }}", self.inabase())
     }
 }
-#[doc = "Input A format"]
+#[doc = "Input A format."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Inaformat(pub u32);
 impl Inaformat {
-    #[doc = "Input A Internal format (00: q15; 01:q31; 10:float)"]
+    #[doc = "Input A Internal format (00: q15; 01:q31; 10:float)."]
     #[must_use]
     #[inline(always)]
     pub const fn ina_formatint(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x03;
         val as u8
     }
-    #[doc = "Input A Internal format (00: q15; 01:q31; 10:float)"]
+    #[doc = "Input A Internal format (00: q15; 01:q31; 10:float)."]
     #[inline(always)]
     pub const fn set_ina_formatint(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val as u32) & 0x03) << 0usize);
     }
-    #[doc = "Input A External format (00: q15; 01:q31; 10:float)"]
+    #[doc = "Input A External format (00: q15; 01:q31; 10:float)."]
     #[must_use]
     #[inline(always)]
     pub const fn ina_formatext(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x03;
         val as u8
     }
-    #[doc = "Input A External format (00: q15; 01:q31; 10:float)"]
+    #[doc = "Input A External format (00: q15; 01:q31; 10:float)."]
     #[inline(always)]
     pub const fn set_ina_formatext(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val as u32) & 0x03) << 4usize);
     }
-    #[doc = "Input A Scaler value (for scaled 'q31' formats)"]
+    #[doc = "Input A Scaler value (for scaled 'q31' formats)."]
     #[must_use]
     #[inline(always)]
     pub const fn ina_scaler(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0xff;
         val as u8
     }
-    #[doc = "Input A Scaler value (for scaled 'q31' formats)"]
+    #[doc = "Input A Scaler value (for scaled 'q31' formats)."]
     #[inline(always)]
     pub const fn set_ina_scaler(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
@@ -686,19 +686,19 @@ impl defmt::Format for Inaformat {
         )
     }
 }
-#[doc = "Base address register for input B region"]
+#[doc = "Base address register for input B region."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Inbbase(pub u32);
 impl Inbbase {
-    #[doc = "Base address register for the input B region"]
+    #[doc = "Base address register for the input B region."]
     #[must_use]
     #[inline(always)]
     pub const fn inbbase(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Base address register for the input B region"]
+    #[doc = "Base address register for the input B region."]
     #[inline(always)]
     pub const fn set_inbbase(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -723,43 +723,43 @@ impl defmt::Format for Inbbase {
         defmt::write!(f, "Inbbase {{ inbbase: {=u32:?} }}", self.inbbase())
     }
 }
-#[doc = "Input B format"]
+#[doc = "Input B format."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Inbformat(pub u32);
 impl Inbformat {
-    #[doc = "Input B Internal format (00: q15; 01:q31; 10:float)"]
+    #[doc = "Input B Internal format (00: q15; 01:q31; 10:float)."]
     #[must_use]
     #[inline(always)]
     pub const fn inb_formatint(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x03;
         val as u8
     }
-    #[doc = "Input B Internal format (00: q15; 01:q31; 10:float)"]
+    #[doc = "Input B Internal format (00: q15; 01:q31; 10:float)."]
     #[inline(always)]
     pub const fn set_inb_formatint(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val as u32) & 0x03) << 0usize);
     }
-    #[doc = "Input B External format (00: q15; 01:q31; 10:float)"]
+    #[doc = "Input B External format (00: q15; 01:q31; 10:float)."]
     #[must_use]
     #[inline(always)]
     pub const fn inb_formatext(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x03;
         val as u8
     }
-    #[doc = "Input B External format (00: q15; 01:q31; 10:float)"]
+    #[doc = "Input B External format (00: q15; 01:q31; 10:float)."]
     #[inline(always)]
     pub const fn set_inb_formatext(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val as u32) & 0x03) << 4usize);
     }
-    #[doc = "Input B Scaler value (for scaled 'q31' formats)"]
+    #[doc = "Input B Scaler value (for scaled 'q31' formats)."]
     #[must_use]
     #[inline(always)]
     pub const fn inb_scaler(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0xff;
         val as u8
     }
-    #[doc = "Input B Scaler value (for scaled 'q31' formats)"]
+    #[doc = "Input B Scaler value (for scaled 'q31' formats)."]
     #[inline(always)]
     pub const fn set_inb_scaler(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
@@ -792,79 +792,79 @@ impl defmt::Format for Inbformat {
         )
     }
 }
-#[doc = "INTERRUPT enable register"]
+#[doc = "INTERRUPT enable register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Intren(pub u32);
 impl Intren {
-    #[doc = "1 : Enable interrupt on Floating point overflow"]
+    #[doc = "1 : Enable interrupt on Floating point overflow."]
     #[must_use]
     #[inline(always)]
     pub const fn intr_oflow(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "1 : Enable interrupt on Floating point overflow"]
+    #[doc = "1 : Enable interrupt on Floating point overflow."]
     #[inline(always)]
     pub const fn set_intr_oflow(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "1 : Enable interrupt on Floating point NaN"]
+    #[doc = "1 : Enable interrupt on Floating point NaN."]
     #[must_use]
     #[inline(always)]
     pub const fn intr_nan(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "1 : Enable interrupt on Floating point NaN"]
+    #[doc = "1 : Enable interrupt on Floating point NaN."]
     #[inline(always)]
     pub const fn set_intr_nan(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "1: Enable interrupt on Fixed point Overflow"]
+    #[doc = "1: Enable interrupt on Fixed point Overflow."]
     #[must_use]
     #[inline(always)]
     pub const fn intr_fixed(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "1: Enable interrupt on Fixed point Overflow"]
+    #[doc = "1: Enable interrupt on Fixed point Overflow."]
     #[inline(always)]
     pub const fn set_intr_fixed(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "1 : Enable interrupt on Subnormal truncation"]
+    #[doc = "1 : Enable interrupt on Subnormal truncation."]
     #[must_use]
     #[inline(always)]
     pub const fn intr_uflow(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "1 : Enable interrupt on Subnormal truncation"]
+    #[doc = "1 : Enable interrupt on Subnormal truncation."]
     #[inline(always)]
     pub const fn set_intr_uflow(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "1: Enable interrupt on AHBM Buss Error"]
+    #[doc = "1: Enable interrupt on AHBM Buss Error."]
     #[must_use]
     #[inline(always)]
     pub const fn intr_berr(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "1: Enable interrupt on AHBM Buss Error"]
+    #[doc = "1: Enable interrupt on AHBM Buss Error."]
     #[inline(always)]
     pub const fn set_intr_berr(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "1: Enable interrupt on instruction completion"]
+    #[doc = "1: Enable interrupt on instruction completion."]
     #[must_use]
     #[inline(always)]
     pub const fn intr_comp(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "1: Enable interrupt on instruction completion"]
+    #[doc = "1: Enable interrupt on instruction completion."]
     #[inline(always)]
     pub const fn set_intr_comp(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
@@ -903,19 +903,19 @@ impl defmt::Format for Intren {
         )
     }
 }
-#[doc = "INTERRUPT STATUS register"]
+#[doc = "INTERRUPT STATUS register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Intrstat(pub u32);
 impl Intrstat {
-    #[doc = "Intr status ( 1 bit to indicate interrupt captured, 0 means no new interrupt), write any value will clear this bit"]
+    #[doc = "Intr status ( 1 bit to indicate interrupt captured, 0 means no new interrupt), write any value will clear this bit."]
     #[must_use]
     #[inline(always)]
     pub const fn intr_stat(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Intr status ( 1 bit to indicate interrupt captured, 0 means no new interrupt), write any value will clear this bit"]
+    #[doc = "Intr status ( 1 bit to indicate interrupt captured, 0 means no new interrupt), write any value will clear this bit."]
     #[inline(always)]
     pub const fn set_intr_stat(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -940,19 +940,19 @@ impl defmt::Format for Intrstat {
         defmt::write!(f, "Intrstat {{ intr_stat: {=bool:?} }}", self.intr_stat())
     }
 }
-#[doc = "Length register"]
+#[doc = "Length register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Length(pub u32);
 impl Length {
-    #[doc = "Length register. When FIR : fir_xlength = inst_length\\[15:0\\] , fir_tlength = inst_len\\[31:16\\]. When MTX : rows_a = inst_length\\[4:0\\] , cols_a = inst_length\\[12:8\\] , cols_b = inst_length\\[20:16\\]"]
+    #[doc = "Length register. When FIR : fir_xlength = inst_length\\[15:0\\] , fir_tlength = inst_len\\[31:16\\]. When MTX : rows_a = inst_length\\[4:0\\] , cols_a = inst_length\\[12:8\\] , cols_b = inst_length\\[20:16\\]."]
     #[must_use]
     #[inline(always)]
     pub const fn inst_length(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Length register. When FIR : fir_xlength = inst_length\\[15:0\\] , fir_tlength = inst_len\\[31:16\\]. When MTX : rows_a = inst_length\\[4:0\\] , cols_a = inst_length\\[12:8\\] , cols_b = inst_length\\[20:16\\]"]
+    #[doc = "Length register. When FIR : fir_xlength = inst_length\\[15:0\\] , fir_tlength = inst_len\\[31:16\\]. When MTX : rows_a = inst_length\\[4:0\\] , cols_a = inst_length\\[12:8\\] , cols_b = inst_length\\[20:16\\]."]
     #[inline(always)]
     pub const fn set_inst_length(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -977,19 +977,19 @@ impl defmt::Format for Length {
         defmt::write!(f, "Length {{ inst_length: {=u32:?} }}", self.inst_length())
     }
 }
-#[doc = "Misc register"]
+#[doc = "Misc register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Misc(pub u32);
 impl Misc {
-    #[doc = "Misc register. For Matrix : Used for scale factor"]
+    #[doc = "Misc register. For Matrix : Used for scale factor."]
     #[must_use]
     #[inline(always)]
     pub const fn inst_misc(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Misc register. For Matrix : Used for scale factor"]
+    #[doc = "Misc register. For Matrix : Used for scale factor."]
     #[inline(always)]
     pub const fn set_inst_misc(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1014,19 +1014,19 @@ impl defmt::Format for Misc {
         defmt::write!(f, "Misc {{ inst_misc: {=u32:?} }}", self.inst_misc())
     }
 }
-#[doc = "Base address register for output region"]
+#[doc = "Base address register for output region."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Outbase(pub u32);
 impl Outbase {
-    #[doc = "Base address register for the output region"]
+    #[doc = "Base address register for the output region."]
     #[must_use]
     #[inline(always)]
     pub const fn outbase(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Base address register for the output region"]
+    #[doc = "Base address register for the output region."]
     #[inline(always)]
     pub const fn set_outbase(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1051,43 +1051,43 @@ impl defmt::Format for Outbase {
         defmt::write!(f, "Outbase {{ outbase: {=u32:?} }}", self.outbase())
     }
 }
-#[doc = "Output format"]
+#[doc = "Output format."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Outformat(pub u32);
 impl Outformat {
-    #[doc = "Output Internal format (00: q15; 01:q31; 10:float)"]
+    #[doc = "Output Internal format (00: q15; 01:q31; 10:float)."]
     #[must_use]
     #[inline(always)]
     pub const fn out_formatint(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x03;
         val as u8
     }
-    #[doc = "Output Internal format (00: q15; 01:q31; 10:float)"]
+    #[doc = "Output Internal format (00: q15; 01:q31; 10:float)."]
     #[inline(always)]
     pub const fn set_out_formatint(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val as u32) & 0x03) << 0usize);
     }
-    #[doc = "Output External format (00: q15; 01:q31; 10:float)"]
+    #[doc = "Output External format (00: q15; 01:q31; 10:float)."]
     #[must_use]
     #[inline(always)]
     pub const fn out_formatext(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x03;
         val as u8
     }
-    #[doc = "Output External format (00: q15; 01:q31; 10:float)"]
+    #[doc = "Output External format (00: q15; 01:q31; 10:float)."]
     #[inline(always)]
     pub const fn set_out_formatext(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val as u32) & 0x03) << 4usize);
     }
-    #[doc = "Output Scaler value (for scaled 'q31' formats)"]
+    #[doc = "Output Scaler value (for scaled 'q31' formats)."]
     #[must_use]
     #[inline(always)]
     pub const fn out_scaler(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0xff;
         val as u8
     }
-    #[doc = "Output Scaler value (for scaled 'q31' formats)"]
+    #[doc = "Output Scaler value (for scaled 'q31' formats)."]
     #[inline(always)]
     pub const fn set_out_scaler(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);
@@ -1120,19 +1120,19 @@ impl defmt::Format for Outformat {
         )
     }
 }
-#[doc = "Base address register for temp region"]
+#[doc = "Base address register for temp region."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tmpbase(pub u32);
 impl Tmpbase {
-    #[doc = "Base address register for the temporary region"]
+    #[doc = "Base address register for the temporary region."]
     #[must_use]
     #[inline(always)]
     pub const fn tmpbase(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Base address register for the temporary region"]
+    #[doc = "Base address register for the temporary region."]
     #[inline(always)]
     pub const fn set_tmpbase(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -1157,43 +1157,43 @@ impl defmt::Format for Tmpbase {
         defmt::write!(f, "Tmpbase {{ tmpbase: {=u32:?} }}", self.tmpbase())
     }
 }
-#[doc = "Temp format"]
+#[doc = "Temp format."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Tmpformat(pub u32);
 impl Tmpformat {
-    #[doc = "Temp Internal format (00: q15; 01:q31; 10:float)"]
+    #[doc = "Temp Internal format (00: q15; 01:q31; 10:float)."]
     #[must_use]
     #[inline(always)]
     pub const fn tmp_formatint(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0x03;
         val as u8
     }
-    #[doc = "Temp Internal format (00: q15; 01:q31; 10:float)"]
+    #[doc = "Temp Internal format (00: q15; 01:q31; 10:float)."]
     #[inline(always)]
     pub const fn set_tmp_formatint(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val as u32) & 0x03) << 0usize);
     }
-    #[doc = "Temp External format (00: q15; 01:q31; 10:float)"]
+    #[doc = "Temp External format (00: q15; 01:q31; 10:float)."]
     #[must_use]
     #[inline(always)]
     pub const fn tmp_formatext(&self) -> u8 {
         let val = (self.0 >> 4usize) & 0x03;
         val as u8
     }
-    #[doc = "Temp External format (00: q15; 01:q31; 10:float)"]
+    #[doc = "Temp External format (00: q15; 01:q31; 10:float)."]
     #[inline(always)]
     pub const fn set_tmp_formatext(&mut self, val: u8) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val as u32) & 0x03) << 4usize);
     }
-    #[doc = "Temp Scaler value (for scaled 'q31' formats)"]
+    #[doc = "Temp Scaler value (for scaled 'q31' formats)."]
     #[must_use]
     #[inline(always)]
     pub const fn tmp_scaler(&self) -> u8 {
         let val = (self.0 >> 8usize) & 0xff;
         val as u8
     }
-    #[doc = "Temp Scaler value (for scaled 'q31' formats)"]
+    #[doc = "Temp Scaler value (for scaled 'q31' formats)."]
     #[inline(always)]
     pub const fn set_tmp_scaler(&mut self, val: u8) {
         self.0 = (self.0 & !(0xff << 8usize)) | (((val as u32) & 0xff) << 8usize);

@@ -1,4 +1,4 @@
-#[doc = "Standard counter/timers (CTIMER0 to 4)"]
+#[doc = "Standard counter/timers (CTIMER0 to 4)."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctimer {
     ptr: *mut u8,
@@ -24,22 +24,22 @@ impl Ctimer {
     pub const fn tcr(self) -> crate::common::Reg<regs::Tcr, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
     }
-    #[doc = "Timer Counter"]
+    #[doc = "Timer Counter."]
     #[inline(always)]
     pub const fn tc(self) -> crate::common::Reg<regs::Tc, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
     }
-    #[doc = "Prescale Register"]
+    #[doc = "Prescale Register."]
     #[inline(always)]
     pub const fn pr(self) -> crate::common::Reg<regs::Pr, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }
     }
-    #[doc = "Prescale Counter"]
+    #[doc = "Prescale Counter."]
     #[inline(always)]
     pub const fn pc(self) -> crate::common::Reg<regs::Pc, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x10usize) as _) }
     }
-    #[doc = "Match Control Register"]
+    #[doc = "Match Control Register."]
     #[inline(always)]
     pub const fn mcr(self) -> crate::common::Reg<regs::Mcr, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x14usize) as _) }
@@ -76,7 +76,7 @@ impl Ctimer {
     pub const fn pwmc(self) -> crate::common::Reg<regs::Pwmc, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x74usize) as _) }
     }
-    #[doc = "Match Shadow Register"]
+    #[doc = "Match Shadow Register."]
     #[inline(always)]
     pub const fn msr(self, n: usize) -> crate::common::Reg<regs::Msr, crate::common::RW> {
         assert!(n < 4usize);

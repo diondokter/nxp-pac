@@ -1,16 +1,16 @@
-#[doc = "ADC Trigger Input Connections"]
+#[doc = "ADC Trigger Input Connections."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Adc0Trig(pub u32);
 impl Adc0Trig {
-    #[doc = "ADC0 trigger inputs"]
+    #[doc = "ADC0 trigger inputs."]
     #[must_use]
     #[inline(always)]
     pub const fn trigin(&self) -> super::vals::Adc0TrigTrigin {
         let val = (self.0 >> 0usize) & 0xff;
         super::vals::Adc0TrigTrigin::from_bits(val as u8)
     }
-    #[doc = "ADC0 trigger inputs"]
+    #[doc = "ADC0 trigger inputs."]
     #[inline(always)]
     pub const fn set_trigin(&mut self, val: super::vals::Adc0TrigTrigin) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val.to_bits() as u32) & 0xff) << 0usize);
@@ -35,19 +35,19 @@ impl defmt::Format for Adc0Trig {
         defmt::write!(f, "Adc0Trig {{ trigin: {:?} }}", self.trigin())
     }
 }
-#[doc = "ADC Trigger Input Connections"]
+#[doc = "ADC Trigger Input Connections."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Adc1Trig(pub u32);
 impl Adc1Trig {
-    #[doc = "ADC1 trigger inputs"]
+    #[doc = "ADC1 trigger inputs."]
     #[must_use]
     #[inline(always)]
     pub const fn trigin(&self) -> super::vals::Adc1TrigTrigin {
         let val = (self.0 >> 0usize) & 0xff;
         super::vals::Adc1TrigTrigin::from_bits(val as u8)
     }
-    #[doc = "ADC1 trigger inputs"]
+    #[doc = "ADC1 trigger inputs."]
     #[inline(always)]
     pub const fn set_trigin(&mut self, val: super::vals::Adc1TrigTrigin) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val.to_bits() as u32) & 0xff) << 0usize);
@@ -72,19 +72,19 @@ impl defmt::Format for Adc1Trig {
         defmt::write!(f, "Adc1Trig {{ trigin: {:?} }}", self.trigin())
     }
 }
-#[doc = "CMP0 Input Connections"]
+#[doc = "CMP0 Input Connections."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cmp0Trig(pub u32);
 impl Cmp0Trig {
-    #[doc = "CMP0 input trigger"]
+    #[doc = "CMP0 input trigger."]
     #[must_use]
     #[inline(always)]
     pub const fn trigin(&self) -> super::vals::Cmp0TrigTrigin {
         let val = (self.0 >> 0usize) & 0x3f;
         super::vals::Cmp0TrigTrigin::from_bits(val as u8)
     }
-    #[doc = "CMP0 input trigger"]
+    #[doc = "CMP0 input trigger."]
     #[inline(always)]
     pub const fn set_trigin(&mut self, val: super::vals::Cmp0TrigTrigin) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
@@ -109,19 +109,19 @@ impl defmt::Format for Cmp0Trig {
         defmt::write!(f, "Cmp0Trig {{ trigin: {:?} }}", self.trigin())
     }
 }
-#[doc = "CMP1 Input Connections"]
+#[doc = "CMP1 Input Connections."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cmp1Trig(pub u32);
 impl Cmp1Trig {
-    #[doc = "CMP1 input trigger"]
+    #[doc = "CMP1 input trigger."]
     #[must_use]
     #[inline(always)]
     pub const fn trigin(&self) -> super::vals::Cmp1TrigTrigin {
         let val = (self.0 >> 0usize) & 0x3f;
         super::vals::Cmp1TrigTrigin::from_bits(val as u8)
     }
-    #[doc = "CMP1 input trigger"]
+    #[doc = "CMP1 input trigger."]
     #[inline(always)]
     pub const fn set_trigin(&mut self, val: super::vals::Cmp1TrigTrigin) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
@@ -146,19 +146,19 @@ impl defmt::Format for Cmp1Trig {
         defmt::write!(f, "Cmp1Trig {{ trigin: {:?} }}", self.trigin())
     }
 }
-#[doc = "CMP2 Input Connections"]
+#[doc = "CMP2 Input Connections."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cmp2Trig(pub u32);
 impl Cmp2Trig {
-    #[doc = "CMP2 input trigger"]
+    #[doc = "CMP2 input trigger."]
     #[must_use]
     #[inline(always)]
     pub const fn trigin(&self) -> super::vals::Cmp2TrigTrigin {
         let val = (self.0 >> 0usize) & 0x3f;
         super::vals::Cmp2TrigTrigin::from_bits(val as u8)
     }
-    #[doc = "CMP2 input trigger"]
+    #[doc = "CMP2 input trigger."]
     #[inline(always)]
     pub const fn set_trigin(&mut self, val: super::vals::Cmp2TrigTrigin) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
@@ -183,19 +183,19 @@ impl defmt::Format for Cmp2Trig {
         defmt::write!(f, "Cmp2Trig {{ trigin: {:?} }}", self.trigin())
     }
 }
-#[doc = "Capture Select Register for CTIMER Inputs"]
+#[doc = "Capture Select Register for CTIMER Inputs."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctimer0cap0(pub u32);
 impl Ctimer0cap0 {
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::Ctimer0cap0Inp {
         let val = (self.0 >> 0usize) & 0x7f;
         super::vals::Ctimer0cap0Inp::from_bits(val as u8)
     }
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::Ctimer0cap0Inp) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val.to_bits() as u32) & 0x7f) << 0usize);
@@ -220,19 +220,19 @@ impl defmt::Format for Ctimer0cap0 {
         defmt::write!(f, "Ctimer0cap0 {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "Capture Select Register for CTIMER Inputs"]
+#[doc = "Capture Select Register for CTIMER Inputs."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctimer0cap1(pub u32);
 impl Ctimer0cap1 {
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::Ctimer0cap1Inp {
         let val = (self.0 >> 0usize) & 0x7f;
         super::vals::Ctimer0cap1Inp::from_bits(val as u8)
     }
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::Ctimer0cap1Inp) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val.to_bits() as u32) & 0x7f) << 0usize);
@@ -257,19 +257,19 @@ impl defmt::Format for Ctimer0cap1 {
         defmt::write!(f, "Ctimer0cap1 {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "Capture Select Register for CTIMER Inputs"]
+#[doc = "Capture Select Register for CTIMER Inputs."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctimer0cap2(pub u32);
 impl Ctimer0cap2 {
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::Ctimer0cap2Inp {
         let val = (self.0 >> 0usize) & 0x7f;
         super::vals::Ctimer0cap2Inp::from_bits(val as u8)
     }
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::Ctimer0cap2Inp) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val.to_bits() as u32) & 0x7f) << 0usize);
@@ -294,19 +294,19 @@ impl defmt::Format for Ctimer0cap2 {
         defmt::write!(f, "Ctimer0cap2 {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "Capture Select Register for CTIMER Inputs"]
+#[doc = "Capture Select Register for CTIMER Inputs."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctimer0cap3(pub u32);
 impl Ctimer0cap3 {
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::Ctimer0cap3Inp {
         let val = (self.0 >> 0usize) & 0x7f;
         super::vals::Ctimer0cap3Inp::from_bits(val as u8)
     }
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::Ctimer0cap3Inp) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val.to_bits() as u32) & 0x7f) << 0usize);
@@ -331,19 +331,19 @@ impl defmt::Format for Ctimer0cap3 {
         defmt::write!(f, "Ctimer0cap3 {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "Capture Select Register for CTIMER Inputs"]
+#[doc = "Capture Select Register for CTIMER Inputs."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctimer1cap0(pub u32);
 impl Ctimer1cap0 {
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::Ctimer1cap0Inp {
         let val = (self.0 >> 0usize) & 0x7f;
         super::vals::Ctimer1cap0Inp::from_bits(val as u8)
     }
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::Ctimer1cap0Inp) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val.to_bits() as u32) & 0x7f) << 0usize);
@@ -368,19 +368,19 @@ impl defmt::Format for Ctimer1cap0 {
         defmt::write!(f, "Ctimer1cap0 {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "Capture Select Register for CTIMER Inputs"]
+#[doc = "Capture Select Register for CTIMER Inputs."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctimer1cap1(pub u32);
 impl Ctimer1cap1 {
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::Ctimer1cap1Inp {
         let val = (self.0 >> 0usize) & 0x7f;
         super::vals::Ctimer1cap1Inp::from_bits(val as u8)
     }
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::Ctimer1cap1Inp) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val.to_bits() as u32) & 0x7f) << 0usize);
@@ -405,19 +405,19 @@ impl defmt::Format for Ctimer1cap1 {
         defmt::write!(f, "Ctimer1cap1 {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "Capture Select Register for CTIMER Inputs"]
+#[doc = "Capture Select Register for CTIMER Inputs."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctimer1cap2(pub u32);
 impl Ctimer1cap2 {
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::Ctimer1cap2Inp {
         let val = (self.0 >> 0usize) & 0x7f;
         super::vals::Ctimer1cap2Inp::from_bits(val as u8)
     }
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::Ctimer1cap2Inp) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val.to_bits() as u32) & 0x7f) << 0usize);
@@ -442,19 +442,19 @@ impl defmt::Format for Ctimer1cap2 {
         defmt::write!(f, "Ctimer1cap2 {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "Capture Select Register for CTIMER Inputs"]
+#[doc = "Capture Select Register for CTIMER Inputs."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctimer1cap3(pub u32);
 impl Ctimer1cap3 {
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::Ctimer1cap3Inp {
         let val = (self.0 >> 0usize) & 0x7f;
         super::vals::Ctimer1cap3Inp::from_bits(val as u8)
     }
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::Ctimer1cap3Inp) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val.to_bits() as u32) & 0x7f) << 0usize);
@@ -479,19 +479,19 @@ impl defmt::Format for Ctimer1cap3 {
         defmt::write!(f, "Ctimer1cap3 {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "Capture Select Register for CTIMER Inputs"]
+#[doc = "Capture Select Register for CTIMER Inputs."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctimer2cap0(pub u32);
 impl Ctimer2cap0 {
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::Ctimer2cap0Inp {
         let val = (self.0 >> 0usize) & 0x7f;
         super::vals::Ctimer2cap0Inp::from_bits(val as u8)
     }
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::Ctimer2cap0Inp) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val.to_bits() as u32) & 0x7f) << 0usize);
@@ -516,19 +516,19 @@ impl defmt::Format for Ctimer2cap0 {
         defmt::write!(f, "Ctimer2cap0 {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "Capture Select Register for CTIMER Inputs"]
+#[doc = "Capture Select Register for CTIMER Inputs."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctimer2cap1(pub u32);
 impl Ctimer2cap1 {
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::Ctimer2cap1Inp {
         let val = (self.0 >> 0usize) & 0x7f;
         super::vals::Ctimer2cap1Inp::from_bits(val as u8)
     }
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::Ctimer2cap1Inp) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val.to_bits() as u32) & 0x7f) << 0usize);
@@ -553,19 +553,19 @@ impl defmt::Format for Ctimer2cap1 {
         defmt::write!(f, "Ctimer2cap1 {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "Capture Select Register for CTIMER Inputs"]
+#[doc = "Capture Select Register for CTIMER Inputs."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctimer2cap2(pub u32);
 impl Ctimer2cap2 {
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::Ctimer2cap2Inp {
         let val = (self.0 >> 0usize) & 0x7f;
         super::vals::Ctimer2cap2Inp::from_bits(val as u8)
     }
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::Ctimer2cap2Inp) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val.to_bits() as u32) & 0x7f) << 0usize);
@@ -590,19 +590,19 @@ impl defmt::Format for Ctimer2cap2 {
         defmt::write!(f, "Ctimer2cap2 {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "Capture Select Register for CTIMER Inputs"]
+#[doc = "Capture Select Register for CTIMER Inputs."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctimer2cap3(pub u32);
 impl Ctimer2cap3 {
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::Ctimer2cap3Inp {
         let val = (self.0 >> 0usize) & 0x7f;
         super::vals::Ctimer2cap3Inp::from_bits(val as u8)
     }
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::Ctimer2cap3Inp) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val.to_bits() as u32) & 0x7f) << 0usize);
@@ -627,19 +627,19 @@ impl defmt::Format for Ctimer2cap3 {
         defmt::write!(f, "Ctimer2cap3 {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "Capture Select Register for CTIMER Inputs"]
+#[doc = "Capture Select Register for CTIMER Inputs."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctimer3cap0(pub u32);
 impl Ctimer3cap0 {
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::Ctimer3cap0Inp {
         let val = (self.0 >> 0usize) & 0x7f;
         super::vals::Ctimer3cap0Inp::from_bits(val as u8)
     }
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::Ctimer3cap0Inp) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val.to_bits() as u32) & 0x7f) << 0usize);
@@ -664,19 +664,19 @@ impl defmt::Format for Ctimer3cap0 {
         defmt::write!(f, "Ctimer3cap0 {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "Capture Select Register for CTIMER Inputs"]
+#[doc = "Capture Select Register for CTIMER Inputs."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctimer3cap1(pub u32);
 impl Ctimer3cap1 {
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::Ctimer3cap1Inp {
         let val = (self.0 >> 0usize) & 0x7f;
         super::vals::Ctimer3cap1Inp::from_bits(val as u8)
     }
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::Ctimer3cap1Inp) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val.to_bits() as u32) & 0x7f) << 0usize);
@@ -701,19 +701,19 @@ impl defmt::Format for Ctimer3cap1 {
         defmt::write!(f, "Ctimer3cap1 {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "Capture Select Register for CTIMER Inputs"]
+#[doc = "Capture Select Register for CTIMER Inputs."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctimer3cap2(pub u32);
 impl Ctimer3cap2 {
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::Ctimer3cap2Inp {
         let val = (self.0 >> 0usize) & 0x7f;
         super::vals::Ctimer3cap2Inp::from_bits(val as u8)
     }
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::Ctimer3cap2Inp) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val.to_bits() as u32) & 0x7f) << 0usize);
@@ -738,19 +738,19 @@ impl defmt::Format for Ctimer3cap2 {
         defmt::write!(f, "Ctimer3cap2 {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "Capture Select Register for CTIMER Inputs"]
+#[doc = "Capture Select Register for CTIMER Inputs."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctimer3cap3(pub u32);
 impl Ctimer3cap3 {
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::Ctimer3cap3Inp {
         let val = (self.0 >> 0usize) & 0x7f;
         super::vals::Ctimer3cap3Inp::from_bits(val as u8)
     }
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::Ctimer3cap3Inp) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val.to_bits() as u32) & 0x7f) << 0usize);
@@ -775,19 +775,19 @@ impl defmt::Format for Ctimer3cap3 {
         defmt::write!(f, "Ctimer3cap3 {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "Capture Select Register for CTIMER Inputs"]
+#[doc = "Capture Select Register for CTIMER Inputs."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctimer4cap0(pub u32);
 impl Ctimer4cap0 {
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::Ctimer4cap0Inp {
         let val = (self.0 >> 0usize) & 0x7f;
         super::vals::Ctimer4cap0Inp::from_bits(val as u8)
     }
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::Ctimer4cap0Inp) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val.to_bits() as u32) & 0x7f) << 0usize);
@@ -812,19 +812,19 @@ impl defmt::Format for Ctimer4cap0 {
         defmt::write!(f, "Ctimer4cap0 {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "Capture Select Register for CTIMER Inputs"]
+#[doc = "Capture Select Register for CTIMER Inputs."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctimer4cap1(pub u32);
 impl Ctimer4cap1 {
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::Ctimer4cap1Inp {
         let val = (self.0 >> 0usize) & 0x7f;
         super::vals::Ctimer4cap1Inp::from_bits(val as u8)
     }
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::Ctimer4cap1Inp) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val.to_bits() as u32) & 0x7f) << 0usize);
@@ -849,19 +849,19 @@ impl defmt::Format for Ctimer4cap1 {
         defmt::write!(f, "Ctimer4cap1 {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "Capture Select Register for CTIMER Inputs"]
+#[doc = "Capture Select Register for CTIMER Inputs."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctimer4cap2(pub u32);
 impl Ctimer4cap2 {
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::Ctimer4cap2Inp {
         let val = (self.0 >> 0usize) & 0x7f;
         super::vals::Ctimer4cap2Inp::from_bits(val as u8)
     }
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::Ctimer4cap2Inp) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val.to_bits() as u32) & 0x7f) << 0usize);
@@ -886,19 +886,19 @@ impl defmt::Format for Ctimer4cap2 {
         defmt::write!(f, "Ctimer4cap2 {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "Capture Select Register for CTIMER Inputs"]
+#[doc = "Capture Select Register for CTIMER Inputs."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctimer4cap3(pub u32);
 impl Ctimer4cap3 {
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::Ctimer4cap3Inp {
         let val = (self.0 >> 0usize) & 0x7f;
         super::vals::Ctimer4cap3Inp::from_bits(val as u8)
     }
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::Ctimer4cap3Inp) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val.to_bits() as u32) & 0x7f) << 0usize);
@@ -923,19 +923,19 @@ impl defmt::Format for Ctimer4cap3 {
         defmt::write!(f, "Ctimer4cap3 {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "DAC0 Trigger Inputs"]
+#[doc = "DAC0 Trigger Inputs."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dac0Trig(pub u32);
 impl Dac0Trig {
-    #[doc = "DAC0 trigger input"]
+    #[doc = "DAC0 trigger input."]
     #[must_use]
     #[inline(always)]
     pub const fn trigin(&self) -> super::vals::Dac0TrigTrigin {
         let val = (self.0 >> 0usize) & 0x3f;
         super::vals::Dac0TrigTrigin::from_bits(val as u8)
     }
-    #[doc = "DAC0 trigger input"]
+    #[doc = "DAC0 trigger input."]
     #[inline(always)]
     pub const fn set_trigin(&mut self, val: super::vals::Dac0TrigTrigin) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
@@ -960,19 +960,19 @@ impl defmt::Format for Dac0Trig {
         defmt::write!(f, "Dac0Trig {{ trigin: {:?} }}", self.trigin())
     }
 }
-#[doc = "DAC1 Trigger Inputs"]
+#[doc = "DAC1 Trigger Inputs."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dac1Trig(pub u32);
 impl Dac1Trig {
-    #[doc = "DAC1 trigger input"]
+    #[doc = "DAC1 trigger input."]
     #[must_use]
     #[inline(always)]
     pub const fn trigin(&self) -> super::vals::Dac1TrigTrigin {
         let val = (self.0 >> 0usize) & 0x3f;
         super::vals::Dac1TrigTrigin::from_bits(val as u8)
     }
-    #[doc = "DAC1 trigger input"]
+    #[doc = "DAC1 trigger input."]
     #[inline(always)]
     pub const fn set_trigin(&mut self, val: super::vals::Dac1TrigTrigin) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
@@ -997,19 +997,19 @@ impl defmt::Format for Dac1Trig {
         defmt::write!(f, "Dac1Trig {{ trigin: {:?} }}", self.trigin())
     }
 }
-#[doc = "DAC2 Trigger Inputs"]
+#[doc = "DAC2 Trigger Inputs."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dac2Trig(pub u32);
 impl Dac2Trig {
-    #[doc = "DAC2 trigger input"]
+    #[doc = "DAC2 trigger input."]
     #[must_use]
     #[inline(always)]
     pub const fn trigin(&self) -> super::vals::Dac2TrigTrigin {
         let val = (self.0 >> 0usize) & 0x3f;
         super::vals::Dac2TrigTrigin::from_bits(val as u8)
     }
-    #[doc = "DAC2 trigger input"]
+    #[doc = "DAC2 trigger input."]
     #[inline(always)]
     pub const fn set_trigin(&mut self, val: super::vals::Dac2TrigTrigin) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
@@ -1034,7 +1034,7 @@ impl defmt::Format for Dac2Trig {
         defmt::write!(f, "Dac2Trig {{ trigin: {:?} }}", self.trigin())
     }
 }
-#[doc = "DMA0 Request Enable0"]
+#[doc = "DMA0 Request Enable0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma0ReqEnable0(pub u32);
@@ -1495,7 +1495,7 @@ impl defmt::Format for Dma0ReqEnable0 {
         )
     }
 }
-#[doc = "DMA0 Request Enable0"]
+#[doc = "DMA0 Request Enable0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma0ReqEnable0Clr(pub u32);
@@ -1956,7 +1956,7 @@ impl defmt::Format for Dma0ReqEnable0Clr {
         )
     }
 }
-#[doc = "DMA0 Request Enable0"]
+#[doc = "DMA0 Request Enable0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma0ReqEnable0Set(pub u32);
@@ -2417,7 +2417,7 @@ impl defmt::Format for Dma0ReqEnable0Set {
         )
     }
 }
-#[doc = "DMA0 Request Enable0"]
+#[doc = "DMA0 Request Enable0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma0ReqEnable0Tog(pub u32);
@@ -2878,7 +2878,7 @@ impl defmt::Format for Dma0ReqEnable0Tog {
         )
     }
 }
-#[doc = "DMA0 Request Enable1"]
+#[doc = "DMA0 Request Enable1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma0ReqEnable1(pub u32);
@@ -3325,7 +3325,7 @@ impl defmt::Format for Dma0ReqEnable1 {
         )
     }
 }
-#[doc = "DMA0 Request Enable1"]
+#[doc = "DMA0 Request Enable1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma0ReqEnable1Clr(pub u32);
@@ -3772,7 +3772,7 @@ impl defmt::Format for Dma0ReqEnable1Clr {
         )
     }
 }
-#[doc = "DMA0 Request Enable1"]
+#[doc = "DMA0 Request Enable1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma0ReqEnable1Set(pub u32);
@@ -4219,7 +4219,7 @@ impl defmt::Format for Dma0ReqEnable1Set {
         )
     }
 }
-#[doc = "DMA0 Request Enable1"]
+#[doc = "DMA0 Request Enable1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma0ReqEnable1Tog(pub u32);
@@ -4666,7 +4666,7 @@ impl defmt::Format for Dma0ReqEnable1Tog {
         )
     }
 }
-#[doc = "DMA0 Request Enable2"]
+#[doc = "DMA0 Request Enable2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma0ReqEnable2(pub u32);
@@ -5113,7 +5113,7 @@ impl defmt::Format for Dma0ReqEnable2 {
         )
     }
 }
-#[doc = "DMA0 Request Enable2"]
+#[doc = "DMA0 Request Enable2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma0ReqEnable2Clr(pub u32);
@@ -5560,7 +5560,7 @@ impl defmt::Format for Dma0ReqEnable2Clr {
         )
     }
 }
-#[doc = "DMA0 Request Enable2"]
+#[doc = "DMA0 Request Enable2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma0ReqEnable2Set(pub u32);
@@ -6007,7 +6007,7 @@ impl defmt::Format for Dma0ReqEnable2Set {
         )
     }
 }
-#[doc = "DMA0 Request Enable2"]
+#[doc = "DMA0 Request Enable2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma0ReqEnable2Tog(pub u32);
@@ -6454,7 +6454,7 @@ impl defmt::Format for Dma0ReqEnable2Tog {
         )
     }
 }
-#[doc = "DMA0 Request Enable3"]
+#[doc = "DMA0 Request Enable3."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma0ReqEnable3(pub u32);
@@ -6845,319 +6845,319 @@ impl defmt::Format for Dma0ReqEnable3 {
         )
     }
 }
-#[doc = "DMA0 Request Enable3"]
+#[doc = "DMA0 Request Enable3."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma0ReqEnable3Clr(pub u32);
 impl Dma0ReqEnable3Clr {
-    #[doc = "Writing a 1 to REQ96_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ96_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req96_en0(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ96_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ96_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req96_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Writing a 1 to REQ97_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ97_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req97_en0(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ97_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ97_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req97_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Writing a 1 to REQ98_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ98_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req98_en0(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ98_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ98_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req98_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Writing a 1 to REQ99_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ99_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req99_en0(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ99_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ99_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req99_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "Writing a 1 to REQ100_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ100_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req100_en0(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ100_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ100_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req100_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "Writing a 1 to REQ101_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ101_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req101_en0(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ101_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ101_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req101_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "Writing a 1 to REQ102_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ102_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req102_en0(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ102_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ102_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req102_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Writing a 1 to REQ103_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ103_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req103_en0(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ103_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ103_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req103_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Writing a 1 to REQ104_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ104_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req104_en0(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ104_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ104_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req104_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Writing a 1 to REQ105_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ105_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req105_en0(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ105_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ105_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req105_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "Writing a 1 to REQ106_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ106_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req106_en0(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ106_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ106_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req106_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "Writing a 1 to REQ107_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ107_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req107_en0(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ107_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ107_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req107_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "Writing a 1 to REQ108_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ108_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req108_en0(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ108_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ108_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req108_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "Writing a 1 to REQ109_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ109_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req109_en0(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ109_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ109_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req109_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "Writing a 1 to REQ110_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ110_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req110_en0(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ110_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ110_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req110_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Writing a 1 to REQ111_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ111_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req111_en0(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ111_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ111_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req111_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "Writing a 1 to REQ112_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ112_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req112_en0(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ112_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ112_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req112_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Writing a 1 to REQ113_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ113_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req113_en0(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ113_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ113_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req113_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Writing a 1 to REQ114_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ114_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req114_en0(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ114_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ114_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req114_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Writing a 1 to REQ115_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ115_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req115_en0(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ115_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ115_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req115_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Writing a 1 to REQ116_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ116_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req116_en0(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ116_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ116_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req116_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Writing a 1 to REQ117_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ117_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req117_en0(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ117_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ117_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req117_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "Writing a 1 to REQ118_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ118_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req118_en0(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ118_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ118_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req118_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "Writing a 1 to REQ119_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ119_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req119_en0(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ119_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ119_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req119_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
-    #[doc = "Writing a 1 to REQ120_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ120_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req120_en0(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ120_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ120_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req120_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "Writing a 1 to REQ121_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ121_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req121_en0(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ121_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ121_EN0 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req121_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
@@ -7236,319 +7236,319 @@ impl defmt::Format for Dma0ReqEnable3Clr {
         )
     }
 }
-#[doc = "DMA0 Request Enable3"]
+#[doc = "DMA0 Request Enable3."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma0ReqEnable3Set(pub u32);
 impl Dma0ReqEnable3Set {
-    #[doc = "Writing a 1 to REQ96_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ96_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req96_en0(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ96_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ96_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req96_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Writing a 1 to REQ97_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ97_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req97_en0(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ97_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ97_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req97_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Writing a 1 to REQ98_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ98_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req98_en0(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ98_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ98_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req98_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Writing a 1 to REQ99_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ99_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req99_en0(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ99_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ99_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req99_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "Writing a 1 to REQ100_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ100_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req100_en0(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ100_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ100_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req100_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "Writing a 1 to REQ101_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ101_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req101_en0(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ101_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ101_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req101_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "Writing a 1 to REQ102_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ102_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req102_en0(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ102_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ102_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req102_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Writing a 1 to REQ103_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ103_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req103_en0(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ103_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ103_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req103_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Writing a 1 to REQ104_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ104_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req104_en0(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ104_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ104_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req104_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Writing a 1 to REQ105_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ105_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req105_en0(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ105_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ105_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req105_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "Writing a 1 to REQ106_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ106_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req106_en0(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ106_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ106_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req106_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "Writing a 1 to REQ107_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ107_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req107_en0(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ107_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ107_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req107_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "Writing a 1 to REQ108_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ108_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req108_en0(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ108_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ108_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req108_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "Writing a 1 to REQ109_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ109_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req109_en0(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ109_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ109_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req109_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "Writing a 1 to REQ110_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ110_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req110_en0(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ110_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ110_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req110_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Writing a 1 to REQ111_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ111_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req111_en0(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ111_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ111_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req111_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "Writing a 1 to REQ112_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ112_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req112_en0(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ112_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ112_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req112_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Writing a 1 to REQ113_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ113_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req113_en0(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ113_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ113_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req113_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Writing a 1 to REQ114_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ114_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req114_en0(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ114_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ114_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req114_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Writing a 1 to REQ115_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ115_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req115_en0(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ115_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ115_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req115_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Writing a 1 to REQ116_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ116_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req116_en0(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ116_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ116_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req116_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Writing a 1 to REQ117_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ117_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req117_en0(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ117_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ117_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req117_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "Writing a 1 to REQ118_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ118_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req118_en0(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ118_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ118_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req118_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "Writing a 1 to REQ119_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ119_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req119_en0(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ119_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ119_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req119_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
-    #[doc = "Writing a 1 to REQ120_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ120_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req120_en0(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ120_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ120_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req120_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "Writing a 1 to REQ121_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ121_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req121_en0(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ121_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ121_EN0 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req121_en0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
@@ -7627,7 +7627,7 @@ impl defmt::Format for Dma0ReqEnable3Set {
         )
     }
 }
-#[doc = "DMA1 Request Enable0"]
+#[doc = "DMA1 Request Enable0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma1ReqEnable0(pub u32);
@@ -8088,7 +8088,7 @@ impl defmt::Format for Dma1ReqEnable0 {
         )
     }
 }
-#[doc = "DMA1 Request Enable0"]
+#[doc = "DMA1 Request Enable0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma1ReqEnable0Clr(pub u32);
@@ -8549,7 +8549,7 @@ impl defmt::Format for Dma1ReqEnable0Clr {
         )
     }
 }
-#[doc = "DMA1 Request Enable0"]
+#[doc = "DMA1 Request Enable0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma1ReqEnable0Set(pub u32);
@@ -9010,7 +9010,7 @@ impl defmt::Format for Dma1ReqEnable0Set {
         )
     }
 }
-#[doc = "DMA1 Request Enable0"]
+#[doc = "DMA1 Request Enable0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma1ReqEnable0Tog(pub u32);
@@ -9471,7 +9471,7 @@ impl defmt::Format for Dma1ReqEnable0Tog {
         )
     }
 }
-#[doc = "DMA1 Request Enable1"]
+#[doc = "DMA1 Request Enable1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma1ReqEnable1(pub u32);
@@ -9918,7 +9918,7 @@ impl defmt::Format for Dma1ReqEnable1 {
         )
     }
 }
-#[doc = "DMA1 Request Enable1"]
+#[doc = "DMA1 Request Enable1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma1ReqEnable1Clr(pub u32);
@@ -10365,7 +10365,7 @@ impl defmt::Format for Dma1ReqEnable1Clr {
         )
     }
 }
-#[doc = "DMA1 Request Enable1"]
+#[doc = "DMA1 Request Enable1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma1ReqEnable1Set(pub u32);
@@ -10812,7 +10812,7 @@ impl defmt::Format for Dma1ReqEnable1Set {
         )
     }
 }
-#[doc = "DMA1 Request Enable1"]
+#[doc = "DMA1 Request Enable1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma1ReqEnable1Tog(pub u32);
@@ -11259,7 +11259,7 @@ impl defmt::Format for Dma1ReqEnable1Tog {
         )
     }
 }
-#[doc = "DMA1 Request Enable2"]
+#[doc = "DMA1 Request Enable2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma1ReqEnable2(pub u32);
@@ -11706,7 +11706,7 @@ impl defmt::Format for Dma1ReqEnable2 {
         )
     }
 }
-#[doc = "DMA1 Request Enable2"]
+#[doc = "DMA1 Request Enable2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma1ReqEnable2Clr(pub u32);
@@ -12181,7 +12181,7 @@ impl defmt::Format for Dma1ReqEnable2Clr {
         )
     }
 }
-#[doc = "DMA1 Request Enable2"]
+#[doc = "DMA1 Request Enable2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma1ReqEnable2Set(pub u32);
@@ -12656,7 +12656,7 @@ impl defmt::Format for Dma1ReqEnable2Set {
         )
     }
 }
-#[doc = "DMA1 Request Enable2"]
+#[doc = "DMA1 Request Enable2."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma1ReqEnable2Tog(pub u32);
@@ -13131,7 +13131,7 @@ impl defmt::Format for Dma1ReqEnable2Tog {
         )
     }
 }
-#[doc = "DMA1 Request Enable3"]
+#[doc = "DMA1 Request Enable3."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma1ReqEnable3(pub u32);
@@ -13522,307 +13522,307 @@ impl defmt::Format for Dma1ReqEnable3 {
         )
     }
 }
-#[doc = "DMA1 Request Enable3"]
+#[doc = "DMA1 Request Enable3."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma1ReqEnable3Clr(pub u32);
 impl Dma1ReqEnable3Clr {
-    #[doc = "Writing a 1 to REQ96_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ96_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req96_en1(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ96_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ96_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req96_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Writing a 1 to REQ97_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ97_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req97_en1(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ97_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ97_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req97_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Writing a 1 to REQ98_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ98_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req98_en1(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ98_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ98_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req98_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Writing a 1 to REQ99_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ99_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req99_en1(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ99_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ99_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req99_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "Writing a 1 to REQ100_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ100_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req100_en1(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ100_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ100_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req100_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "Writing a 1 to REQ101_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ101_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req101_en1(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ101_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ101_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req101_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "Writing a 1 to REQ102_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ102_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req102_en1(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ102_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ102_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req102_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Writing a 1 to REQ103_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ103_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req103_en1(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ103_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ103_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req103_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Writing a 1 to REQ104_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ104_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req104_en1(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ104_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ104_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req104_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Writing a 1 to REQ105_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ105_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req105_en1(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ105_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ105_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req105_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "Writing a 1 to REQ106_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ106_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req106_en1(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ106_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ106_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req106_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "Writing a 1 to REQ107_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ107_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req107_en1(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ107_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ107_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req107_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "Writing a 1 to REQ108_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ108_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req108_en1(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ108_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ108_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req108_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "Writing a 1 to REQ109_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ109_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req109_en1(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ109_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ109_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req109_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "Writing a 1 to REQ110_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ110_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req110_en1(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ110_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ110_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req110_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Writing a 1 to REQ111_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ111_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req111_en1(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ111_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ111_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req111_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "Writing a 1 to REQ112_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ112_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req112_en1(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ112_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ112_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req112_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Writing a 1 to REQ113_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ113_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req113_en1(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ113_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ113_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req113_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Writing a 1 to REQ114_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ114_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req114_en1(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ114_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ114_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req114_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Writing a 1 to REQ115_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ115_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req115_en1(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ115_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ115_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req115_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Writing a 1 to REQ116_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ116_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req116_en1(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ116_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ116_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req116_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Writing a 1 to REQ117_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ117_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req117_en1(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ117_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ117_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req117_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "Writing a 1 to REQ118_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ118_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req118_en1(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ118_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ118_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req118_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "Writing a 1 to REQ119_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ119_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req119_en1(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ119_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ119_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req119_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
-    #[doc = "Writing a 1 to REQ120_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ120_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req120_en1(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ120_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ120_EN1 in this register clears the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req120_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
@@ -13913,319 +13913,319 @@ impl defmt::Format for Dma1ReqEnable3Clr {
         )
     }
 }
-#[doc = "DMA1 Request Enable3"]
+#[doc = "DMA1 Request Enable3."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Dma1ReqEnable3Set(pub u32);
 impl Dma1ReqEnable3Set {
-    #[doc = "Writing a 1 to REQ96_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ96_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req96_en1(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ96_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ96_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req96_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Writing a 1 to REQ97_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ97_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req97_en1(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ97_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ97_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req97_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Writing a 1 to REQ98_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ98_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req98_en1(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ98_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ98_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req98_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Writing a 1 to REQ99_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ99_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req99_en1(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ99_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ99_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req99_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "Writing a 1 to REQ100_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ100_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req100_en1(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ100_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ100_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req100_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "Writing a 1 to REQ101_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ101_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req101_en1(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ101_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ101_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req101_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "Writing a 1 to REQ102_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ102_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req102_en1(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ102_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ102_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req102_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "Writing a 1 to REQ103_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ103_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req103_en1(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ103_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ103_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req103_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "Writing a 1 to REQ104_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ104_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req104_en1(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ104_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ104_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req104_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "Writing a 1 to REQ105_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ105_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req105_en1(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ105_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ105_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req105_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
-    #[doc = "Writing a 1 to REQ106_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ106_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req106_en1(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ106_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ106_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req106_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "Writing a 1 to REQ107_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ107_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req107_en1(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ107_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ107_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req107_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "Writing a 1 to REQ108_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ108_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req108_en1(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ108_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ108_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req108_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "Writing a 1 to REQ109_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ109_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req109_en1(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ109_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ109_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req109_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "Writing a 1 to REQ110_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ110_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req110_en1(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ110_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ110_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req110_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "Writing a 1 to REQ111_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ111_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req111_en1(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ111_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ111_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req111_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "Writing a 1 to REQ112_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ112_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req112_en1(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ112_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ112_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req112_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "Writing a 1 to REQ113_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ113_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req113_en1(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ113_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ113_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req113_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "Writing a 1 to REQ114_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ114_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req114_en1(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ114_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ114_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req114_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "Writing a 1 to REQ115_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ115_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req115_en1(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ115_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ115_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req115_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "Writing a 1 to REQ116_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ116_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req116_en1(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ116_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ116_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req116_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "Writing a 1 to REQ117_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ117_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req117_en1(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ117_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ117_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req117_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
-    #[doc = "Writing a 1 to REQ118_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ118_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req118_en1(&self) -> bool {
         let val = (self.0 >> 22usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ118_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ118_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req118_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
     }
-    #[doc = "Writing a 1 to REQ119_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ119_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req119_en1(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ119_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ119_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req119_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
-    #[doc = "Writing a 1 to REQ120_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ120_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req120_en1(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ120_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ120_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req120_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "Writing a 1 to REQ121_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ121_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[must_use]
     #[inline(always)]
     pub const fn req121_en1(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "Writing a 1 to REQ121_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3"]
+    #[doc = "Writing a 1 to REQ121_EN1 in this register sets the corresponding bit in DMA0_REQ_ENABLE3."]
     #[inline(always)]
     pub const fn set_req121_en1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
@@ -14304,91 +14304,907 @@ impl defmt::Format for Dma1ReqEnable3Set {
         )
     }
 }
-#[doc = "EVTG Trigger Input Connections"]
+#[doc = "EVTG Trigger Input Connections."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct EvtgTrig(pub u32);
-impl EvtgTrig {
-    #[doc = "EVTG trigger input connections"]
+pub struct EvtgTrig0(pub u32);
+impl EvtgTrig0 {
+    #[doc = "EVTG trigger input connections."]
     #[must_use]
     #[inline(always)]
-    pub const fn inp(&self) -> super::vals::EvtgTrigInp {
+    pub const fn inp(&self) -> super::vals::EvtgTrig0Inp {
         let val = (self.0 >> 0usize) & 0x3f;
-        super::vals::EvtgTrigInp::from_bits(val as u8)
+        super::vals::EvtgTrig0Inp::from_bits(val as u8)
     }
-    #[doc = "EVTG trigger input connections"]
+    #[doc = "EVTG trigger input connections."]
     #[inline(always)]
-    pub const fn set_inp(&mut self, val: super::vals::EvtgTrigInp) {
+    pub const fn set_inp(&mut self, val: super::vals::EvtgTrig0Inp) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
     }
 }
-impl Default for EvtgTrig {
+impl Default for EvtgTrig0 {
     #[inline(always)]
-    fn default() -> EvtgTrig {
-        EvtgTrig(0)
+    fn default() -> EvtgTrig0 {
+        EvtgTrig0(0)
     }
 }
-impl core::fmt::Debug for EvtgTrig {
+impl core::fmt::Debug for EvtgTrig0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("EvtgTrig")
+        f.debug_struct("EvtgTrig0")
             .field("inp", &self.inp())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for EvtgTrig {
+impl defmt::Format for EvtgTrig0 {
     fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "EvtgTrig {{ inp: {:?} }}", self.inp())
+        defmt::write!(f, "EvtgTrig0 {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "EXT Trigger Connections"]
+#[doc = "EVTG Trigger Input Connections."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct ExtTrig(pub u32);
-impl ExtTrig {
-    #[doc = "TRIG_OUTa pin input connections"]
+pub struct EvtgTrig1(pub u32);
+impl EvtgTrig1 {
+    #[doc = "EVTG trigger input connections."]
     #[must_use]
     #[inline(always)]
-    pub const fn inp(&self) -> super::vals::ExtTrigInp {
+    pub const fn inp(&self) -> super::vals::EvtgTrig1Inp {
         let val = (self.0 >> 0usize) & 0x3f;
-        super::vals::ExtTrigInp::from_bits(val as u8)
+        super::vals::EvtgTrig1Inp::from_bits(val as u8)
     }
-    #[doc = "TRIG_OUTa pin input connections"]
+    #[doc = "EVTG trigger input connections."]
     #[inline(always)]
-    pub const fn set_inp(&mut self, val: super::vals::ExtTrigInp) {
+    pub const fn set_inp(&mut self, val: super::vals::EvtgTrig1Inp) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
     }
 }
-impl Default for ExtTrig {
+impl Default for EvtgTrig1 {
     #[inline(always)]
-    fn default() -> ExtTrig {
-        ExtTrig(0)
+    fn default() -> EvtgTrig1 {
+        EvtgTrig1(0)
     }
 }
-impl core::fmt::Debug for ExtTrig {
+impl core::fmt::Debug for EvtgTrig1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("ExtTrig").field("inp", &self.inp()).finish()
+        f.debug_struct("EvtgTrig1")
+            .field("inp", &self.inp())
+            .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for ExtTrig {
+impl defmt::Format for EvtgTrig1 {
     fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "ExtTrig {{ inp: {:?} }}", self.inp())
+        defmt::write!(f, "EvtgTrig1 {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "PWM0 External Force Trigger Connections"]
+#[doc = "EVTG Trigger Input Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct EvtgTrig10(pub u32);
+impl EvtgTrig10 {
+    #[doc = "EVTG trigger input connections."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::EvtgTrig10Inp {
+        let val = (self.0 >> 0usize) & 0x3f;
+        super::vals::EvtgTrig10Inp::from_bits(val as u8)
+    }
+    #[doc = "EVTG trigger input connections."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::EvtgTrig10Inp) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for EvtgTrig10 {
+    #[inline(always)]
+    fn default() -> EvtgTrig10 {
+        EvtgTrig10(0)
+    }
+}
+impl core::fmt::Debug for EvtgTrig10 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EvtgTrig10")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for EvtgTrig10 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "EvtgTrig10 {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "EVTG Trigger Input Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct EvtgTrig11(pub u32);
+impl EvtgTrig11 {
+    #[doc = "EVTG trigger input connections."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::EvtgTrig11Inp {
+        let val = (self.0 >> 0usize) & 0x3f;
+        super::vals::EvtgTrig11Inp::from_bits(val as u8)
+    }
+    #[doc = "EVTG trigger input connections."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::EvtgTrig11Inp) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for EvtgTrig11 {
+    #[inline(always)]
+    fn default() -> EvtgTrig11 {
+        EvtgTrig11(0)
+    }
+}
+impl core::fmt::Debug for EvtgTrig11 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EvtgTrig11")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for EvtgTrig11 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "EvtgTrig11 {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "EVTG Trigger Input Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct EvtgTrig12(pub u32);
+impl EvtgTrig12 {
+    #[doc = "EVTG trigger input connections."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::EvtgTrig12Inp {
+        let val = (self.0 >> 0usize) & 0x3f;
+        super::vals::EvtgTrig12Inp::from_bits(val as u8)
+    }
+    #[doc = "EVTG trigger input connections."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::EvtgTrig12Inp) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for EvtgTrig12 {
+    #[inline(always)]
+    fn default() -> EvtgTrig12 {
+        EvtgTrig12(0)
+    }
+}
+impl core::fmt::Debug for EvtgTrig12 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EvtgTrig12")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for EvtgTrig12 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "EvtgTrig12 {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "EVTG Trigger Input Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct EvtgTrig13(pub u32);
+impl EvtgTrig13 {
+    #[doc = "EVTG trigger input connections."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::EvtgTrig13Inp {
+        let val = (self.0 >> 0usize) & 0x3f;
+        super::vals::EvtgTrig13Inp::from_bits(val as u8)
+    }
+    #[doc = "EVTG trigger input connections."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::EvtgTrig13Inp) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for EvtgTrig13 {
+    #[inline(always)]
+    fn default() -> EvtgTrig13 {
+        EvtgTrig13(0)
+    }
+}
+impl core::fmt::Debug for EvtgTrig13 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EvtgTrig13")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for EvtgTrig13 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "EvtgTrig13 {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "EVTG Trigger Input Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct EvtgTrig14(pub u32);
+impl EvtgTrig14 {
+    #[doc = "EVTG trigger input connections."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::EvtgTrig14Inp {
+        let val = (self.0 >> 0usize) & 0x3f;
+        super::vals::EvtgTrig14Inp::from_bits(val as u8)
+    }
+    #[doc = "EVTG trigger input connections."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::EvtgTrig14Inp) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for EvtgTrig14 {
+    #[inline(always)]
+    fn default() -> EvtgTrig14 {
+        EvtgTrig14(0)
+    }
+}
+impl core::fmt::Debug for EvtgTrig14 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EvtgTrig14")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for EvtgTrig14 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "EvtgTrig14 {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "EVTG Trigger Input Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct EvtgTrig15(pub u32);
+impl EvtgTrig15 {
+    #[doc = "EVTG trigger input connections."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::EvtgTrig15Inp {
+        let val = (self.0 >> 0usize) & 0x3f;
+        super::vals::EvtgTrig15Inp::from_bits(val as u8)
+    }
+    #[doc = "EVTG trigger input connections."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::EvtgTrig15Inp) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for EvtgTrig15 {
+    #[inline(always)]
+    fn default() -> EvtgTrig15 {
+        EvtgTrig15(0)
+    }
+}
+impl core::fmt::Debug for EvtgTrig15 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EvtgTrig15")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for EvtgTrig15 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "EvtgTrig15 {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "EVTG Trigger Input Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct EvtgTrig2(pub u32);
+impl EvtgTrig2 {
+    #[doc = "EVTG trigger input connections."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::EvtgTrig2Inp {
+        let val = (self.0 >> 0usize) & 0x3f;
+        super::vals::EvtgTrig2Inp::from_bits(val as u8)
+    }
+    #[doc = "EVTG trigger input connections."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::EvtgTrig2Inp) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for EvtgTrig2 {
+    #[inline(always)]
+    fn default() -> EvtgTrig2 {
+        EvtgTrig2(0)
+    }
+}
+impl core::fmt::Debug for EvtgTrig2 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EvtgTrig2")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for EvtgTrig2 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "EvtgTrig2 {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "EVTG Trigger Input Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct EvtgTrig3(pub u32);
+impl EvtgTrig3 {
+    #[doc = "EVTG trigger input connections."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::EvtgTrig3Inp {
+        let val = (self.0 >> 0usize) & 0x3f;
+        super::vals::EvtgTrig3Inp::from_bits(val as u8)
+    }
+    #[doc = "EVTG trigger input connections."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::EvtgTrig3Inp) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for EvtgTrig3 {
+    #[inline(always)]
+    fn default() -> EvtgTrig3 {
+        EvtgTrig3(0)
+    }
+}
+impl core::fmt::Debug for EvtgTrig3 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EvtgTrig3")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for EvtgTrig3 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "EvtgTrig3 {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "EVTG Trigger Input Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct EvtgTrig4(pub u32);
+impl EvtgTrig4 {
+    #[doc = "EVTG trigger input connections."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::EvtgTrig4Inp {
+        let val = (self.0 >> 0usize) & 0x3f;
+        super::vals::EvtgTrig4Inp::from_bits(val as u8)
+    }
+    #[doc = "EVTG trigger input connections."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::EvtgTrig4Inp) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for EvtgTrig4 {
+    #[inline(always)]
+    fn default() -> EvtgTrig4 {
+        EvtgTrig4(0)
+    }
+}
+impl core::fmt::Debug for EvtgTrig4 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EvtgTrig4")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for EvtgTrig4 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "EvtgTrig4 {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "EVTG Trigger Input Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct EvtgTrig5(pub u32);
+impl EvtgTrig5 {
+    #[doc = "EVTG trigger input connections."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::EvtgTrig5Inp {
+        let val = (self.0 >> 0usize) & 0x3f;
+        super::vals::EvtgTrig5Inp::from_bits(val as u8)
+    }
+    #[doc = "EVTG trigger input connections."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::EvtgTrig5Inp) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for EvtgTrig5 {
+    #[inline(always)]
+    fn default() -> EvtgTrig5 {
+        EvtgTrig5(0)
+    }
+}
+impl core::fmt::Debug for EvtgTrig5 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EvtgTrig5")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for EvtgTrig5 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "EvtgTrig5 {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "EVTG Trigger Input Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct EvtgTrig6(pub u32);
+impl EvtgTrig6 {
+    #[doc = "EVTG trigger input connections."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::EvtgTrig6Inp {
+        let val = (self.0 >> 0usize) & 0x3f;
+        super::vals::EvtgTrig6Inp::from_bits(val as u8)
+    }
+    #[doc = "EVTG trigger input connections."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::EvtgTrig6Inp) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for EvtgTrig6 {
+    #[inline(always)]
+    fn default() -> EvtgTrig6 {
+        EvtgTrig6(0)
+    }
+}
+impl core::fmt::Debug for EvtgTrig6 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EvtgTrig6")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for EvtgTrig6 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "EvtgTrig6 {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "EVTG Trigger Input Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct EvtgTrig7(pub u32);
+impl EvtgTrig7 {
+    #[doc = "EVTG trigger input connections."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::EvtgTrig7Inp {
+        let val = (self.0 >> 0usize) & 0x3f;
+        super::vals::EvtgTrig7Inp::from_bits(val as u8)
+    }
+    #[doc = "EVTG trigger input connections."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::EvtgTrig7Inp) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for EvtgTrig7 {
+    #[inline(always)]
+    fn default() -> EvtgTrig7 {
+        EvtgTrig7(0)
+    }
+}
+impl core::fmt::Debug for EvtgTrig7 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EvtgTrig7")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for EvtgTrig7 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "EvtgTrig7 {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "EVTG Trigger Input Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct EvtgTrig8(pub u32);
+impl EvtgTrig8 {
+    #[doc = "EVTG trigger input connections."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::EvtgTrig8Inp {
+        let val = (self.0 >> 0usize) & 0x3f;
+        super::vals::EvtgTrig8Inp::from_bits(val as u8)
+    }
+    #[doc = "EVTG trigger input connections."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::EvtgTrig8Inp) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for EvtgTrig8 {
+    #[inline(always)]
+    fn default() -> EvtgTrig8 {
+        EvtgTrig8(0)
+    }
+}
+impl core::fmt::Debug for EvtgTrig8 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EvtgTrig8")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for EvtgTrig8 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "EvtgTrig8 {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "EVTG Trigger Input Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct EvtgTrig9(pub u32);
+impl EvtgTrig9 {
+    #[doc = "EVTG trigger input connections."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::EvtgTrig9Inp {
+        let val = (self.0 >> 0usize) & 0x3f;
+        super::vals::EvtgTrig9Inp::from_bits(val as u8)
+    }
+    #[doc = "EVTG trigger input connections."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::EvtgTrig9Inp) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for EvtgTrig9 {
+    #[inline(always)]
+    fn default() -> EvtgTrig9 {
+        EvtgTrig9(0)
+    }
+}
+impl core::fmt::Debug for EvtgTrig9 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EvtgTrig9")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for EvtgTrig9 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "EvtgTrig9 {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "EXT Trigger Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct ExtTrig0(pub u32);
+impl ExtTrig0 {
+    #[doc = "TRIG_OUTa pin input connections."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::ExtTrig0Inp {
+        let val = (self.0 >> 0usize) & 0x3f;
+        super::vals::ExtTrig0Inp::from_bits(val as u8)
+    }
+    #[doc = "TRIG_OUTa pin input connections."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::ExtTrig0Inp) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for ExtTrig0 {
+    #[inline(always)]
+    fn default() -> ExtTrig0 {
+        ExtTrig0(0)
+    }
+}
+impl core::fmt::Debug for ExtTrig0 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ExtTrig0")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for ExtTrig0 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "ExtTrig0 {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "EXT Trigger Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct ExtTrig1(pub u32);
+impl ExtTrig1 {
+    #[doc = "TRIG_OUTa pin input connections."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::ExtTrig1Inp {
+        let val = (self.0 >> 0usize) & 0x3f;
+        super::vals::ExtTrig1Inp::from_bits(val as u8)
+    }
+    #[doc = "TRIG_OUTa pin input connections."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::ExtTrig1Inp) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for ExtTrig1 {
+    #[inline(always)]
+    fn default() -> ExtTrig1 {
+        ExtTrig1(0)
+    }
+}
+impl core::fmt::Debug for ExtTrig1 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ExtTrig1")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for ExtTrig1 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "ExtTrig1 {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "EXT Trigger Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct ExtTrig2(pub u32);
+impl ExtTrig2 {
+    #[doc = "TRIG_OUTa pin input connections."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::ExtTrig2Inp {
+        let val = (self.0 >> 0usize) & 0x3f;
+        super::vals::ExtTrig2Inp::from_bits(val as u8)
+    }
+    #[doc = "TRIG_OUTa pin input connections."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::ExtTrig2Inp) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for ExtTrig2 {
+    #[inline(always)]
+    fn default() -> ExtTrig2 {
+        ExtTrig2(0)
+    }
+}
+impl core::fmt::Debug for ExtTrig2 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ExtTrig2")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for ExtTrig2 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "ExtTrig2 {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "EXT Trigger Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct ExtTrig3(pub u32);
+impl ExtTrig3 {
+    #[doc = "TRIG_OUTa pin input connections."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::ExtTrig3Inp {
+        let val = (self.0 >> 0usize) & 0x3f;
+        super::vals::ExtTrig3Inp::from_bits(val as u8)
+    }
+    #[doc = "TRIG_OUTa pin input connections."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::ExtTrig3Inp) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for ExtTrig3 {
+    #[inline(always)]
+    fn default() -> ExtTrig3 {
+        ExtTrig3(0)
+    }
+}
+impl core::fmt::Debug for ExtTrig3 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ExtTrig3")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for ExtTrig3 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "ExtTrig3 {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "EXT Trigger Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct ExtTrig4(pub u32);
+impl ExtTrig4 {
+    #[doc = "TRIG_OUTa pin input connections."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::ExtTrig4Inp {
+        let val = (self.0 >> 0usize) & 0x3f;
+        super::vals::ExtTrig4Inp::from_bits(val as u8)
+    }
+    #[doc = "TRIG_OUTa pin input connections."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::ExtTrig4Inp) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for ExtTrig4 {
+    #[inline(always)]
+    fn default() -> ExtTrig4 {
+        ExtTrig4(0)
+    }
+}
+impl core::fmt::Debug for ExtTrig4 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ExtTrig4")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for ExtTrig4 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "ExtTrig4 {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "EXT Trigger Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct ExtTrig5(pub u32);
+impl ExtTrig5 {
+    #[doc = "TRIG_OUTa pin input connections."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::ExtTrig5Inp {
+        let val = (self.0 >> 0usize) & 0x3f;
+        super::vals::ExtTrig5Inp::from_bits(val as u8)
+    }
+    #[doc = "TRIG_OUTa pin input connections."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::ExtTrig5Inp) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for ExtTrig5 {
+    #[inline(always)]
+    fn default() -> ExtTrig5 {
+        ExtTrig5(0)
+    }
+}
+impl core::fmt::Debug for ExtTrig5 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ExtTrig5")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for ExtTrig5 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "ExtTrig5 {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "EXT Trigger Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct ExtTrig6(pub u32);
+impl ExtTrig6 {
+    #[doc = "TRIG_OUTa pin input connections."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::ExtTrig6Inp {
+        let val = (self.0 >> 0usize) & 0x3f;
+        super::vals::ExtTrig6Inp::from_bits(val as u8)
+    }
+    #[doc = "TRIG_OUTa pin input connections."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::ExtTrig6Inp) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for ExtTrig6 {
+    #[inline(always)]
+    fn default() -> ExtTrig6 {
+        ExtTrig6(0)
+    }
+}
+impl core::fmt::Debug for ExtTrig6 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ExtTrig6")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for ExtTrig6 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "ExtTrig6 {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "EXT Trigger Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct ExtTrig7(pub u32);
+impl ExtTrig7 {
+    #[doc = "TRIG_OUTa pin input connections."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::ExtTrig7Inp {
+        let val = (self.0 >> 0usize) & 0x3f;
+        super::vals::ExtTrig7Inp::from_bits(val as u8)
+    }
+    #[doc = "TRIG_OUTa pin input connections."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::ExtTrig7Inp) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for ExtTrig7 {
+    #[inline(always)]
+    fn default() -> ExtTrig7 {
+        ExtTrig7(0)
+    }
+}
+impl core::fmt::Debug for ExtTrig7 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ExtTrig7")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for ExtTrig7 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "ExtTrig7 {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "PWM0 External Force Trigger Connections."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FlexPwm0Extforce(pub u32);
 impl FlexPwm0Extforce {
-    #[doc = "EXTFORCE input connections for PWM0"]
+    #[doc = "EXTFORCE input connections for PWM0."]
     #[must_use]
     #[inline(always)]
     pub const fn trigin(&self) -> super::vals::FlexPwm0ExtforceTrigin {
         let val = (self.0 >> 0usize) & 0x3f;
         super::vals::FlexPwm0ExtforceTrigin::from_bits(val as u8)
     }
-    #[doc = "EXTFORCE input connections for PWM0"]
+    #[doc = "EXTFORCE input connections for PWM0."]
     #[inline(always)]
     pub const fn set_trigin(&mut self, val: super::vals::FlexPwm0ExtforceTrigin) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
@@ -14413,19 +15229,19 @@ impl defmt::Format for FlexPwm0Extforce {
         defmt::write!(f, "FlexPwm0Extforce {{ trigin: {:?} }}", self.trigin())
     }
 }
-#[doc = "PWM0 Fault Input Trigger Connections"]
+#[doc = "PWM0 Fault Input Trigger Connections."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FlexPwm0Fault(pub u32);
 impl FlexPwm0Fault {
-    #[doc = "FAULT input connections for PWM0"]
+    #[doc = "FAULT input connections for PWM0."]
     #[must_use]
     #[inline(always)]
     pub const fn trigin(&self) -> super::vals::FlexPwm0FaultTrigin {
         let val = (self.0 >> 0usize) & 0x3f;
         super::vals::FlexPwm0FaultTrigin::from_bits(val as u8)
     }
-    #[doc = "FAULT input connections for PWM0"]
+    #[doc = "FAULT input connections for PWM0."]
     #[inline(always)]
     pub const fn set_trigin(&mut self, val: super::vals::FlexPwm0FaultTrigin) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
@@ -14450,19 +15266,19 @@ impl defmt::Format for FlexPwm0Fault {
         defmt::write!(f, "FlexPwm0Fault {{ trigin: {:?} }}", self.trigin())
     }
 }
-#[doc = "PWM0 Input Trigger Connections"]
+#[doc = "PWM0 Input Trigger Connections."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FlexPwm0SmExta(pub u32);
 impl FlexPwm0SmExta {
-    #[doc = "EXTA input connections for PWM0"]
+    #[doc = "EXTA input connections for PWM0."]
     #[must_use]
     #[inline(always)]
     pub const fn trigin(&self) -> super::vals::FlexPwm0SmExtaTrigin {
         let val = (self.0 >> 0usize) & 0x3f;
         super::vals::FlexPwm0SmExtaTrigin::from_bits(val as u8)
     }
-    #[doc = "EXTA input connections for PWM0"]
+    #[doc = "EXTA input connections for PWM0."]
     #[inline(always)]
     pub const fn set_trigin(&mut self, val: super::vals::FlexPwm0SmExtaTrigin) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
@@ -14487,19 +15303,19 @@ impl defmt::Format for FlexPwm0SmExta {
         defmt::write!(f, "FlexPwm0SmExta {{ trigin: {:?} }}", self.trigin())
     }
 }
-#[doc = "PWM0 External Synchronization"]
+#[doc = "PWM0 External Synchronization."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FlexPwm0SmExtsync(pub u32);
 impl FlexPwm0SmExtsync {
-    #[doc = "EXTSYNC input connections for PWM0"]
+    #[doc = "EXTSYNC input connections for PWM0."]
     #[must_use]
     #[inline(always)]
     pub const fn trigin(&self) -> super::vals::FlexPwm0SmExtsyncTrigin {
         let val = (self.0 >> 0usize) & 0x3f;
         super::vals::FlexPwm0SmExtsyncTrigin::from_bits(val as u8)
     }
-    #[doc = "EXTSYNC input connections for PWM0"]
+    #[doc = "EXTSYNC input connections for PWM0."]
     #[inline(always)]
     pub const fn set_trigin(&mut self, val: super::vals::FlexPwm0SmExtsyncTrigin) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
@@ -14524,19 +15340,19 @@ impl defmt::Format for FlexPwm0SmExtsync {
         defmt::write!(f, "FlexPwm0SmExtsync {{ trigin: {:?} }}", self.trigin())
     }
 }
-#[doc = "PWM1 External Force Trigger Connections"]
+#[doc = "PWM1 External Force Trigger Connections."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FlexPwm1Extforce(pub u32);
 impl FlexPwm1Extforce {
-    #[doc = "EXTFORCE input connections for PWM1"]
+    #[doc = "EXTFORCE input connections for PWM1."]
     #[must_use]
     #[inline(always)]
     pub const fn trigin(&self) -> super::vals::FlexPwm1ExtforceTrigin {
         let val = (self.0 >> 0usize) & 0x3f;
         super::vals::FlexPwm1ExtforceTrigin::from_bits(val as u8)
     }
-    #[doc = "EXTFORCE input connections for PWM1"]
+    #[doc = "EXTFORCE input connections for PWM1."]
     #[inline(always)]
     pub const fn set_trigin(&mut self, val: super::vals::FlexPwm1ExtforceTrigin) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
@@ -14561,19 +15377,19 @@ impl defmt::Format for FlexPwm1Extforce {
         defmt::write!(f, "FlexPwm1Extforce {{ trigin: {:?} }}", self.trigin())
     }
 }
-#[doc = "PWM1 Fault Input Trigger Connections"]
+#[doc = "PWM1 Fault Input Trigger Connections."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FlexPwm1Fault(pub u32);
 impl FlexPwm1Fault {
-    #[doc = "FAULT input connections for PWM1"]
+    #[doc = "FAULT input connections for PWM1."]
     #[must_use]
     #[inline(always)]
     pub const fn trigin(&self) -> super::vals::FlexPwm1FaultTrigin {
         let val = (self.0 >> 0usize) & 0x3f;
         super::vals::FlexPwm1FaultTrigin::from_bits(val as u8)
     }
-    #[doc = "FAULT input connections for PWM1"]
+    #[doc = "FAULT input connections for PWM1."]
     #[inline(always)]
     pub const fn set_trigin(&mut self, val: super::vals::FlexPwm1FaultTrigin) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
@@ -14598,19 +15414,19 @@ impl defmt::Format for FlexPwm1Fault {
         defmt::write!(f, "FlexPwm1Fault {{ trigin: {:?} }}", self.trigin())
     }
 }
-#[doc = "PWM1 Input EXTA Connections"]
+#[doc = "PWM1 Input EXTA Connections."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FlexPwm1SmExta(pub u32);
 impl FlexPwm1SmExta {
-    #[doc = "EXTA input connections for PWM1"]
+    #[doc = "EXTA input connections for PWM1."]
     #[must_use]
     #[inline(always)]
     pub const fn trigin(&self) -> super::vals::FlexPwm1SmExtaTrigin {
         let val = (self.0 >> 0usize) & 0x3f;
         super::vals::FlexPwm1SmExtaTrigin::from_bits(val as u8)
     }
-    #[doc = "EXTA input connections for PWM1"]
+    #[doc = "EXTA input connections for PWM1."]
     #[inline(always)]
     pub const fn set_trigin(&mut self, val: super::vals::FlexPwm1SmExtaTrigin) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
@@ -14635,19 +15451,19 @@ impl defmt::Format for FlexPwm1SmExta {
         defmt::write!(f, "FlexPwm1SmExta {{ trigin: {:?} }}", self.trigin())
     }
 }
-#[doc = "PWM1 External Synchronization"]
+#[doc = "PWM1 External Synchronization."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FlexPwm1SmExtsync(pub u32);
 impl FlexPwm1SmExtsync {
-    #[doc = "EXTSYNC input connections for PWM1"]
+    #[doc = "EXTSYNC input connections for PWM1."]
     #[must_use]
     #[inline(always)]
     pub const fn trigin(&self) -> super::vals::FlexPwm1SmExtsyncTrigin {
         let val = (self.0 >> 0usize) & 0x3f;
         super::vals::FlexPwm1SmExtsyncTrigin::from_bits(val as u8)
     }
-    #[doc = "EXTSYNC input connections for PWM1"]
+    #[doc = "EXTSYNC input connections for PWM1."]
     #[inline(always)]
     pub const fn set_trigin(&mut self, val: super::vals::FlexPwm1SmExtsyncTrigin) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
@@ -14672,19 +15488,19 @@ impl defmt::Format for FlexPwm1SmExtsync {
         defmt::write!(f, "FlexPwm1SmExtsync {{ trigin: {:?} }}", self.trigin())
     }
 }
-#[doc = "LP_FLEXCOMM0 Trigger Input Connections"]
+#[doc = "LP_FLEXCOMM0 Trigger Input Connections."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flexcomm0Trig(pub u32);
 impl Flexcomm0Trig {
-    #[doc = "LP_FLEXCOMM0 trigger input connections"]
+    #[doc = "LP_FLEXCOMM0 trigger input connections."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::Flexcomm0TrigInp {
         let val = (self.0 >> 0usize) & 0x3f;
         super::vals::Flexcomm0TrigInp::from_bits(val as u8)
     }
-    #[doc = "LP_FLEXCOMM0 trigger input connections"]
+    #[doc = "LP_FLEXCOMM0 trigger input connections."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::Flexcomm0TrigInp) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
@@ -14709,19 +15525,19 @@ impl defmt::Format for Flexcomm0Trig {
         defmt::write!(f, "Flexcomm0Trig {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "LP_FLEXCOMM1 Trigger Input Connections"]
+#[doc = "LP_FLEXCOMM1 Trigger Input Connections."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flexcomm1Trig(pub u32);
 impl Flexcomm1Trig {
-    #[doc = "LP_FLEXCOMM1 trigger input connections"]
+    #[doc = "LP_FLEXCOMM1 trigger input connections."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::Flexcomm1TrigInp {
         let val = (self.0 >> 0usize) & 0x3f;
         super::vals::Flexcomm1TrigInp::from_bits(val as u8)
     }
-    #[doc = "LP_FLEXCOMM1 trigger input connections"]
+    #[doc = "LP_FLEXCOMM1 trigger input connections."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::Flexcomm1TrigInp) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
@@ -14746,19 +15562,19 @@ impl defmt::Format for Flexcomm1Trig {
         defmt::write!(f, "Flexcomm1Trig {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "LP_FLEXCOMM2 Trigger Input Connections"]
+#[doc = "LP_FLEXCOMM2 Trigger Input Connections."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flexcomm2Trig(pub u32);
 impl Flexcomm2Trig {
-    #[doc = "LP_FLEXCOMM2 trigger input connections"]
+    #[doc = "LP_FLEXCOMM2 trigger input connections."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::Flexcomm2TrigInp {
         let val = (self.0 >> 0usize) & 0x3f;
         super::vals::Flexcomm2TrigInp::from_bits(val as u8)
     }
-    #[doc = "LP_FLEXCOMM2 trigger input connections"]
+    #[doc = "LP_FLEXCOMM2 trigger input connections."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::Flexcomm2TrigInp) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
@@ -14783,19 +15599,19 @@ impl defmt::Format for Flexcomm2Trig {
         defmt::write!(f, "Flexcomm2Trig {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "LP_FLEXCOMM3 Trigger Input Connections"]
+#[doc = "LP_FLEXCOMM3 Trigger Input Connections."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flexcomm3Trig(pub u32);
 impl Flexcomm3Trig {
-    #[doc = "LP_FLEXCOMM3 trigger input connections"]
+    #[doc = "LP_FLEXCOMM3 trigger input connections."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::Flexcomm3TrigInp {
         let val = (self.0 >> 0usize) & 0x3f;
         super::vals::Flexcomm3TrigInp::from_bits(val as u8)
     }
-    #[doc = "LP_FLEXCOMM3 trigger input connections"]
+    #[doc = "LP_FLEXCOMM3 trigger input connections."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::Flexcomm3TrigInp) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
@@ -14820,19 +15636,19 @@ impl defmt::Format for Flexcomm3Trig {
         defmt::write!(f, "Flexcomm3Trig {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "LP_FLEXCOMM4 Trigger Input Connections"]
+#[doc = "LP_FLEXCOMM4 Trigger Input Connections."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flexcomm4Trig(pub u32);
 impl Flexcomm4Trig {
-    #[doc = "LP_FLEXCOMM4 trigger input connections"]
+    #[doc = "LP_FLEXCOMM4 trigger input connections."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::Flexcomm4TrigInp {
         let val = (self.0 >> 0usize) & 0x3f;
         super::vals::Flexcomm4TrigInp::from_bits(val as u8)
     }
-    #[doc = "LP_FLEXCOMM4 trigger input connections"]
+    #[doc = "LP_FLEXCOMM4 trigger input connections."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::Flexcomm4TrigInp) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
@@ -14857,19 +15673,19 @@ impl defmt::Format for Flexcomm4Trig {
         defmt::write!(f, "Flexcomm4Trig {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "LP_FLEXCOMM5 Trigger Input Connections"]
+#[doc = "LP_FLEXCOMM5 Trigger Input Connections."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flexcomm5Trig(pub u32);
 impl Flexcomm5Trig {
-    #[doc = "LP_FLEXCOMM5 trigger input connections"]
+    #[doc = "LP_FLEXCOMM5 trigger input connections."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::Flexcomm5TrigInp {
         let val = (self.0 >> 0usize) & 0x3f;
         super::vals::Flexcomm5TrigInp::from_bits(val as u8)
     }
-    #[doc = "LP_FLEXCOMM5 trigger input connections"]
+    #[doc = "LP_FLEXCOMM5 trigger input connections."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::Flexcomm5TrigInp) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
@@ -14894,19 +15710,19 @@ impl defmt::Format for Flexcomm5Trig {
         defmt::write!(f, "Flexcomm5Trig {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "LP_FLEXCOMM6 Trigger Input Connections"]
+#[doc = "LP_FLEXCOMM6 Trigger Input Connections."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flexcomm6Trig(pub u32);
 impl Flexcomm6Trig {
-    #[doc = "LP_FLEXCOMM6 trigger input connections"]
+    #[doc = "LP_FLEXCOMM6 trigger input connections."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::Flexcomm6TrigInp {
         let val = (self.0 >> 0usize) & 0x3f;
         super::vals::Flexcomm6TrigInp::from_bits(val as u8)
     }
-    #[doc = "LP_FLEXCOMM6 trigger input connections"]
+    #[doc = "LP_FLEXCOMM6 trigger input connections."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::Flexcomm6TrigInp) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
@@ -14931,19 +15747,19 @@ impl defmt::Format for Flexcomm6Trig {
         defmt::write!(f, "Flexcomm6Trig {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "LP_FLEXCOMM7 Trigger Input Connections"]
+#[doc = "LP_FLEXCOMM7 Trigger Input Connections."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flexcomm7Trig(pub u32);
 impl Flexcomm7Trig {
-    #[doc = "LP_FLEXCOMM7 trigger input connections"]
+    #[doc = "LP_FLEXCOMM7 trigger input connections."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::Flexcomm7TrigInp {
         let val = (self.0 >> 0usize) & 0x3f;
         super::vals::Flexcomm7TrigInp::from_bits(val as u8)
     }
-    #[doc = "LP_FLEXCOMM7 trigger input connections"]
+    #[doc = "LP_FLEXCOMM7 trigger input connections."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::Flexcomm7TrigInp) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
@@ -14968,19 +15784,19 @@ impl defmt::Format for Flexcomm7Trig {
         defmt::write!(f, "Flexcomm7Trig {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "LP_FLEXCOMM8 Trigger Input Connections"]
+#[doc = "LP_FLEXCOMM8 Trigger Input Connections."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flexcomm8Trig(pub u32);
 impl Flexcomm8Trig {
-    #[doc = "LP_FLEXCOMM8 trigger input connections"]
+    #[doc = "LP_FLEXCOMM8 trigger input connections."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::Flexcomm8TrigInp {
         let val = (self.0 >> 0usize) & 0x3f;
         super::vals::Flexcomm8TrigInp::from_bits(val as u8)
     }
-    #[doc = "LP_FLEXCOMM8 trigger input connections"]
+    #[doc = "LP_FLEXCOMM8 trigger input connections."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::Flexcomm8TrigInp) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
@@ -15005,19 +15821,19 @@ impl defmt::Format for Flexcomm8Trig {
         defmt::write!(f, "Flexcomm8Trig {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "LP_FLEXCOMM9 Trigger Input Connections"]
+#[doc = "LP_FLEXCOMM9 Trigger Input Connections."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flexcomm9Trig(pub u32);
 impl Flexcomm9Trig {
-    #[doc = "LP_FLEXCOMM9 trigger input connections"]
+    #[doc = "LP_FLEXCOMM9 trigger input connections."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::Flexcomm9TrigInp {
         let val = (self.0 >> 0usize) & 0x3f;
         super::vals::Flexcomm9TrigInp::from_bits(val as u8)
     }
-    #[doc = "LP_FLEXCOMM9 trigger input connections"]
+    #[doc = "LP_FLEXCOMM9 trigger input connections."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::Flexcomm9TrigInp) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
@@ -15042,44 +15858,303 @@ impl defmt::Format for Flexcomm9Trig {
         defmt::write!(f, "Flexcomm9Trig {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "FlexIO Trigger Input Connections"]
+#[doc = "FlexIO Trigger Input Connections."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct FlexioTrig(pub u32);
-impl FlexioTrig {
+pub struct FlexioTrig0(pub u32);
+impl FlexioTrig0 {
     #[doc = "Input number for FlexIO0."]
     #[must_use]
     #[inline(always)]
-    pub const fn inp(&self) -> super::vals::FlexioTrigInp {
+    pub const fn inp(&self) -> super::vals::FlexioTrig0Inp {
         let val = (self.0 >> 0usize) & 0x7f;
-        super::vals::FlexioTrigInp::from_bits(val as u8)
+        super::vals::FlexioTrig0Inp::from_bits(val as u8)
     }
     #[doc = "Input number for FlexIO0."]
     #[inline(always)]
-    pub const fn set_inp(&mut self, val: super::vals::FlexioTrigInp) {
+    pub const fn set_inp(&mut self, val: super::vals::FlexioTrig0Inp) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val.to_bits() as u32) & 0x7f) << 0usize);
     }
 }
-impl Default for FlexioTrig {
+impl Default for FlexioTrig0 {
     #[inline(always)]
-    fn default() -> FlexioTrig {
-        FlexioTrig(0)
+    fn default() -> FlexioTrig0 {
+        FlexioTrig0(0)
     }
 }
-impl core::fmt::Debug for FlexioTrig {
+impl core::fmt::Debug for FlexioTrig0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("FlexioTrig")
+        f.debug_struct("FlexioTrig0")
             .field("inp", &self.inp())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for FlexioTrig {
+impl defmt::Format for FlexioTrig0 {
     fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "FlexioTrig {{ inp: {:?} }}", self.inp())
+        defmt::write!(f, "FlexioTrig0 {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "Selection for Frequency Measurement Reference Clock"]
+#[doc = "FlexIO Trigger Input Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct FlexioTrig1(pub u32);
+impl FlexioTrig1 {
+    #[doc = "Input number for FlexIO0."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::FlexioTrig1Inp {
+        let val = (self.0 >> 0usize) & 0x7f;
+        super::vals::FlexioTrig1Inp::from_bits(val as u8)
+    }
+    #[doc = "Input number for FlexIO0."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::FlexioTrig1Inp) {
+        self.0 = (self.0 & !(0x7f << 0usize)) | (((val.to_bits() as u32) & 0x7f) << 0usize);
+    }
+}
+impl Default for FlexioTrig1 {
+    #[inline(always)]
+    fn default() -> FlexioTrig1 {
+        FlexioTrig1(0)
+    }
+}
+impl core::fmt::Debug for FlexioTrig1 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FlexioTrig1")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for FlexioTrig1 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "FlexioTrig1 {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "FlexIO Trigger Input Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct FlexioTrig2(pub u32);
+impl FlexioTrig2 {
+    #[doc = "Input number for FlexIO0."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::FlexioTrig2Inp {
+        let val = (self.0 >> 0usize) & 0x7f;
+        super::vals::FlexioTrig2Inp::from_bits(val as u8)
+    }
+    #[doc = "Input number for FlexIO0."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::FlexioTrig2Inp) {
+        self.0 = (self.0 & !(0x7f << 0usize)) | (((val.to_bits() as u32) & 0x7f) << 0usize);
+    }
+}
+impl Default for FlexioTrig2 {
+    #[inline(always)]
+    fn default() -> FlexioTrig2 {
+        FlexioTrig2(0)
+    }
+}
+impl core::fmt::Debug for FlexioTrig2 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FlexioTrig2")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for FlexioTrig2 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "FlexioTrig2 {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "FlexIO Trigger Input Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct FlexioTrig3(pub u32);
+impl FlexioTrig3 {
+    #[doc = "Input number for FlexIO0."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::FlexioTrig3Inp {
+        let val = (self.0 >> 0usize) & 0x7f;
+        super::vals::FlexioTrig3Inp::from_bits(val as u8)
+    }
+    #[doc = "Input number for FlexIO0."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::FlexioTrig3Inp) {
+        self.0 = (self.0 & !(0x7f << 0usize)) | (((val.to_bits() as u32) & 0x7f) << 0usize);
+    }
+}
+impl Default for FlexioTrig3 {
+    #[inline(always)]
+    fn default() -> FlexioTrig3 {
+        FlexioTrig3(0)
+    }
+}
+impl core::fmt::Debug for FlexioTrig3 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FlexioTrig3")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for FlexioTrig3 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "FlexioTrig3 {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "FlexIO Trigger Input Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct FlexioTrig4(pub u32);
+impl FlexioTrig4 {
+    #[doc = "Input number for FlexIO0."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::FlexioTrig4Inp {
+        let val = (self.0 >> 0usize) & 0x7f;
+        super::vals::FlexioTrig4Inp::from_bits(val as u8)
+    }
+    #[doc = "Input number for FlexIO0."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::FlexioTrig4Inp) {
+        self.0 = (self.0 & !(0x7f << 0usize)) | (((val.to_bits() as u32) & 0x7f) << 0usize);
+    }
+}
+impl Default for FlexioTrig4 {
+    #[inline(always)]
+    fn default() -> FlexioTrig4 {
+        FlexioTrig4(0)
+    }
+}
+impl core::fmt::Debug for FlexioTrig4 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FlexioTrig4")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for FlexioTrig4 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "FlexioTrig4 {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "FlexIO Trigger Input Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct FlexioTrig5(pub u32);
+impl FlexioTrig5 {
+    #[doc = "Input number for FlexIO0."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::FlexioTrig5Inp {
+        let val = (self.0 >> 0usize) & 0x7f;
+        super::vals::FlexioTrig5Inp::from_bits(val as u8)
+    }
+    #[doc = "Input number for FlexIO0."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::FlexioTrig5Inp) {
+        self.0 = (self.0 & !(0x7f << 0usize)) | (((val.to_bits() as u32) & 0x7f) << 0usize);
+    }
+}
+impl Default for FlexioTrig5 {
+    #[inline(always)]
+    fn default() -> FlexioTrig5 {
+        FlexioTrig5(0)
+    }
+}
+impl core::fmt::Debug for FlexioTrig5 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FlexioTrig5")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for FlexioTrig5 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "FlexioTrig5 {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "FlexIO Trigger Input Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct FlexioTrig6(pub u32);
+impl FlexioTrig6 {
+    #[doc = "Input number for FlexIO0."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::FlexioTrig6Inp {
+        let val = (self.0 >> 0usize) & 0x7f;
+        super::vals::FlexioTrig6Inp::from_bits(val as u8)
+    }
+    #[doc = "Input number for FlexIO0."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::FlexioTrig6Inp) {
+        self.0 = (self.0 & !(0x7f << 0usize)) | (((val.to_bits() as u32) & 0x7f) << 0usize);
+    }
+}
+impl Default for FlexioTrig6 {
+    #[inline(always)]
+    fn default() -> FlexioTrig6 {
+        FlexioTrig6(0)
+    }
+}
+impl core::fmt::Debug for FlexioTrig6 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FlexioTrig6")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for FlexioTrig6 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "FlexioTrig6 {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "FlexIO Trigger Input Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct FlexioTrig7(pub u32);
+impl FlexioTrig7 {
+    #[doc = "Input number for FlexIO0."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::FlexioTrig7Inp {
+        let val = (self.0 >> 0usize) & 0x7f;
+        super::vals::FlexioTrig7Inp::from_bits(val as u8)
+    }
+    #[doc = "Input number for FlexIO0."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::FlexioTrig7Inp) {
+        self.0 = (self.0 & !(0x7f << 0usize)) | (((val.to_bits() as u32) & 0x7f) << 0usize);
+    }
+}
+impl Default for FlexioTrig7 {
+    #[inline(always)]
+    fn default() -> FlexioTrig7 {
+        FlexioTrig7(0)
+    }
+}
+impl core::fmt::Debug for FlexioTrig7 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FlexioTrig7")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for FlexioTrig7 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "FlexioTrig7 {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "Selection for Frequency Measurement Reference Clock."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FreqmeasRef(pub u32);
@@ -15116,7 +16191,7 @@ impl defmt::Format for FreqmeasRef {
         defmt::write!(f, "FreqmeasRef {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "Selection for Frequency Measurement Target Clock"]
+#[doc = "Selection for Frequency Measurement Target Clock."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FreqmeasTar(pub u32);
@@ -15153,44 +16228,118 @@ impl defmt::Format for FreqmeasTar {
         defmt::write!(f, "FreqmeasTar {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "OPAMP Trigger Input Connections"]
+#[doc = "OPAMP Trigger Input Connections."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct OpampTrig(pub u32);
-impl OpampTrig {
-    #[doc = "OPAMP trigger input connections"]
+pub struct Opamp0Trig(pub u32);
+impl Opamp0Trig {
+    #[doc = "OPAMP trigger input connections."]
     #[must_use]
     #[inline(always)]
-    pub const fn inp(&self) -> super::vals::OpampTrigInp {
+    pub const fn inp(&self) -> super::vals::Opamp0TrigInp {
         let val = (self.0 >> 0usize) & 0x3f;
-        super::vals::OpampTrigInp::from_bits(val as u8)
+        super::vals::Opamp0TrigInp::from_bits(val as u8)
     }
-    #[doc = "OPAMP trigger input connections"]
+    #[doc = "OPAMP trigger input connections."]
     #[inline(always)]
-    pub const fn set_inp(&mut self, val: super::vals::OpampTrigInp) {
+    pub const fn set_inp(&mut self, val: super::vals::Opamp0TrigInp) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
     }
 }
-impl Default for OpampTrig {
+impl Default for Opamp0Trig {
     #[inline(always)]
-    fn default() -> OpampTrig {
-        OpampTrig(0)
+    fn default() -> Opamp0Trig {
+        Opamp0Trig(0)
     }
 }
-impl core::fmt::Debug for OpampTrig {
+impl core::fmt::Debug for Opamp0Trig {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("OpampTrig")
+        f.debug_struct("Opamp0Trig")
             .field("inp", &self.inp())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for OpampTrig {
+impl defmt::Format for Opamp0Trig {
     fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "OpampTrig {{ inp: {:?} }}", self.inp())
+        defmt::write!(f, "Opamp0Trig {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "Pin Interrupt Select"]
+#[doc = "OPAMP Trigger Input Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Opamp1Trig(pub u32);
+impl Opamp1Trig {
+    #[doc = "OPAMP trigger input connections."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::Opamp1TrigInp {
+        let val = (self.0 >> 0usize) & 0x3f;
+        super::vals::Opamp1TrigInp::from_bits(val as u8)
+    }
+    #[doc = "OPAMP trigger input connections."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::Opamp1TrigInp) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for Opamp1Trig {
+    #[inline(always)]
+    fn default() -> Opamp1Trig {
+        Opamp1Trig(0)
+    }
+}
+impl core::fmt::Debug for Opamp1Trig {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Opamp1Trig")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Opamp1Trig {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "Opamp1Trig {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "OPAMP Trigger Input Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Opamp2Trig(pub u32);
+impl Opamp2Trig {
+    #[doc = "OPAMP trigger input connections."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::Opamp2TrigInp {
+        let val = (self.0 >> 0usize) & 0x3f;
+        super::vals::Opamp2TrigInp::from_bits(val as u8)
+    }
+    #[doc = "OPAMP trigger input connections."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::Opamp2TrigInp) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for Opamp2Trig {
+    #[inline(always)]
+    fn default() -> Opamp2Trig {
+        Opamp2Trig(0)
+    }
+}
+impl core::fmt::Debug for Opamp2Trig {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Opamp2Trig")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Opamp2Trig {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "Opamp2Trig {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "Pin Interrupt Select."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pintsel(pub u32);
@@ -15225,19 +16374,19 @@ impl defmt::Format for Pintsel {
         defmt::write!(f, "Pintsel {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "PWM0 External Clock Trigger"]
+#[doc = "PWM0 External Clock Trigger."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pwm0ExtClk(pub u32);
 impl Pwm0ExtClk {
-    #[doc = "EXT_CLK input connections for PWM0"]
+    #[doc = "EXT_CLK input connections for PWM0."]
     #[must_use]
     #[inline(always)]
     pub const fn trigin(&self) -> super::vals::Pwm0ExtClkTrigin {
         let val = (self.0 >> 0usize) & 0x07;
         super::vals::Pwm0ExtClkTrigin::from_bits(val as u8)
     }
-    #[doc = "EXT_CLK input connections for PWM0"]
+    #[doc = "EXT_CLK input connections for PWM0."]
     #[inline(always)]
     pub const fn set_trigin(&mut self, val: super::vals::Pwm0ExtClkTrigin) {
         self.0 = (self.0 & !(0x07 << 0usize)) | (((val.to_bits() as u32) & 0x07) << 0usize);
@@ -15262,19 +16411,19 @@ impl defmt::Format for Pwm0ExtClk {
         defmt::write!(f, "Pwm0ExtClk {{ trigin: {:?} }}", self.trigin())
     }
 }
-#[doc = "PWM1 External Clock Trigger"]
+#[doc = "PWM1 External Clock Trigger."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pwm1ExtClk(pub u32);
 impl Pwm1ExtClk {
-    #[doc = "EXT_CLK input connections for PWM1"]
+    #[doc = "EXT_CLK input connections for PWM1."]
     #[must_use]
     #[inline(always)]
     pub const fn trigin(&self) -> super::vals::Pwm1ExtClkTrigin {
         let val = (self.0 >> 0usize) & 0x0f;
         super::vals::Pwm1ExtClkTrigin::from_bits(val as u8)
     }
-    #[doc = "EXT_CLK input connections for PWM1"]
+    #[doc = "EXT_CLK input connections for PWM1."]
     #[inline(always)]
     pub const fn set_trigin(&mut self, val: super::vals::Pwm1ExtClkTrigin) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
@@ -15299,188 +16448,377 @@ impl defmt::Format for Pwm1ExtClk {
         defmt::write!(f, "Pwm1ExtClk {{ trigin: {:?} }}", self.trigin())
     }
 }
-#[doc = "QDCouter_loop Input Connections"]
+#[doc = "QDC0 Input Connections."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct QdcHome(pub u32);
-impl QdcHome {
-    #[doc = "QDC0 HOME input connections"]
+pub struct Qdc0Home(pub u32);
+impl Qdc0Home {
+    #[doc = "QDC0 HOME input connections."]
     #[must_use]
     #[inline(always)]
-    pub const fn inp(&self) -> super::vals::QdcHomeInp {
+    pub const fn inp(&self) -> super::vals::Qdc0HomeInp {
         let val = (self.0 >> 0usize) & 0x3f;
-        super::vals::QdcHomeInp::from_bits(val as u8)
+        super::vals::Qdc0HomeInp::from_bits(val as u8)
     }
-    #[doc = "QDC0 HOME input connections"]
+    #[doc = "QDC0 HOME input connections."]
     #[inline(always)]
-    pub const fn set_inp(&mut self, val: super::vals::QdcHomeInp) {
+    pub const fn set_inp(&mut self, val: super::vals::Qdc0HomeInp) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
     }
 }
-impl Default for QdcHome {
+impl Default for Qdc0Home {
     #[inline(always)]
-    fn default() -> QdcHome {
-        QdcHome(0)
+    fn default() -> Qdc0Home {
+        Qdc0Home(0)
     }
 }
-impl core::fmt::Debug for QdcHome {
+impl core::fmt::Debug for Qdc0Home {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("QdcHome").field("inp", &self.inp()).finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for QdcHome {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "QdcHome {{ inp: {:?} }}", self.inp())
-    }
-}
-#[doc = "QDCouter_loop Input Connections"]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct QdcIndex(pub u32);
-impl QdcIndex {
-    #[doc = "QDC0 INDEX input connections"]
-    #[must_use]
-    #[inline(always)]
-    pub const fn inp(&self) -> super::vals::QdcIndexInp {
-        let val = (self.0 >> 0usize) & 0x3f;
-        super::vals::QdcIndexInp::from_bits(val as u8)
-    }
-    #[doc = "QDC0 INDEX input connections"]
-    #[inline(always)]
-    pub const fn set_inp(&mut self, val: super::vals::QdcIndexInp) {
-        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
-    }
-}
-impl Default for QdcIndex {
-    #[inline(always)]
-    fn default() -> QdcIndex {
-        QdcIndex(0)
-    }
-}
-impl core::fmt::Debug for QdcIndex {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("QdcIndex")
+        f.debug_struct("Qdc0Home")
             .field("inp", &self.inp())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for QdcIndex {
+impl defmt::Format for Qdc0Home {
     fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "QdcIndex {{ inp: {:?} }}", self.inp())
+        defmt::write!(f, "Qdc0Home {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "QDCouter_loop Input Connections"]
+#[doc = "QDC0 Input Connections."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct QdcPhasea(pub u32);
-impl QdcPhasea {
-    #[doc = "QDC0 PHASEA input connections"]
+pub struct Qdc0Index(pub u32);
+impl Qdc0Index {
+    #[doc = "QDC0 INDEX input connections."]
     #[must_use]
     #[inline(always)]
-    pub const fn inp(&self) -> super::vals::QdcPhaseaInp {
+    pub const fn inp(&self) -> super::vals::Qdc0IndexInp {
         let val = (self.0 >> 0usize) & 0x3f;
-        super::vals::QdcPhaseaInp::from_bits(val as u8)
+        super::vals::Qdc0IndexInp::from_bits(val as u8)
     }
-    #[doc = "QDC0 PHASEA input connections"]
+    #[doc = "QDC0 INDEX input connections."]
     #[inline(always)]
-    pub const fn set_inp(&mut self, val: super::vals::QdcPhaseaInp) {
+    pub const fn set_inp(&mut self, val: super::vals::Qdc0IndexInp) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
     }
 }
-impl Default for QdcPhasea {
+impl Default for Qdc0Index {
     #[inline(always)]
-    fn default() -> QdcPhasea {
-        QdcPhasea(0)
+    fn default() -> Qdc0Index {
+        Qdc0Index(0)
     }
 }
-impl core::fmt::Debug for QdcPhasea {
+impl core::fmt::Debug for Qdc0Index {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("QdcPhasea")
+        f.debug_struct("Qdc0Index")
             .field("inp", &self.inp())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for QdcPhasea {
+impl defmt::Format for Qdc0Index {
     fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "QdcPhasea {{ inp: {:?} }}", self.inp())
+        defmt::write!(f, "Qdc0Index {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "QDCouter_loop Input Connections"]
+#[doc = "QDC0 Input Connections."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct QdcPhaseb(pub u32);
-impl QdcPhaseb {
-    #[doc = "QDC0 PHASEB input connections"]
+pub struct Qdc0Phasea(pub u32);
+impl Qdc0Phasea {
+    #[doc = "QDC0 PHASEA input connections."]
     #[must_use]
     #[inline(always)]
-    pub const fn inp(&self) -> super::vals::QdcPhasebInp {
+    pub const fn inp(&self) -> super::vals::Qdc0PhaseaInp {
         let val = (self.0 >> 0usize) & 0x3f;
-        super::vals::QdcPhasebInp::from_bits(val as u8)
+        super::vals::Qdc0PhaseaInp::from_bits(val as u8)
     }
-    #[doc = "QDC0 PHASEB input connections"]
+    #[doc = "QDC0 PHASEA input connections."]
     #[inline(always)]
-    pub const fn set_inp(&mut self, val: super::vals::QdcPhasebInp) {
+    pub const fn set_inp(&mut self, val: super::vals::Qdc0PhaseaInp) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
     }
 }
-impl Default for QdcPhaseb {
+impl Default for Qdc0Phasea {
     #[inline(always)]
-    fn default() -> QdcPhaseb {
-        QdcPhaseb(0)
+    fn default() -> Qdc0Phasea {
+        Qdc0Phasea(0)
     }
 }
-impl core::fmt::Debug for QdcPhaseb {
+impl core::fmt::Debug for Qdc0Phasea {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("QdcPhaseb")
+        f.debug_struct("Qdc0Phasea")
             .field("inp", &self.inp())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for QdcPhaseb {
+impl defmt::Format for Qdc0Phasea {
     fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "QdcPhaseb {{ inp: {:?} }}", self.inp())
+        defmt::write!(f, "Qdc0Phasea {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "QDCouter_loop Trigger Input Connections"]
+#[doc = "QDC0 Input Connections."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct QdcTrig(pub u32);
-impl QdcTrig {
-    #[doc = "QDC0 trigger input connections"]
+pub struct Qdc0Phaseb(pub u32);
+impl Qdc0Phaseb {
+    #[doc = "QDC0 PHASEB input connections."]
     #[must_use]
     #[inline(always)]
-    pub const fn inp(&self) -> super::vals::QdcTrigInp {
+    pub const fn inp(&self) -> super::vals::Qdc0PhasebInp {
         let val = (self.0 >> 0usize) & 0x3f;
-        super::vals::QdcTrigInp::from_bits(val as u8)
+        super::vals::Qdc0PhasebInp::from_bits(val as u8)
     }
-    #[doc = "QDC0 trigger input connections"]
+    #[doc = "QDC0 PHASEB input connections."]
     #[inline(always)]
-    pub const fn set_inp(&mut self, val: super::vals::QdcTrigInp) {
+    pub const fn set_inp(&mut self, val: super::vals::Qdc0PhasebInp) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
     }
 }
-impl Default for QdcTrig {
+impl Default for Qdc0Phaseb {
     #[inline(always)]
-    fn default() -> QdcTrig {
-        QdcTrig(0)
+    fn default() -> Qdc0Phaseb {
+        Qdc0Phaseb(0)
     }
 }
-impl core::fmt::Debug for QdcTrig {
+impl core::fmt::Debug for Qdc0Phaseb {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("QdcTrig").field("inp", &self.inp()).finish()
+        f.debug_struct("Qdc0Phaseb")
+            .field("inp", &self.inp())
+            .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for QdcTrig {
+impl defmt::Format for Qdc0Phaseb {
     fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "QdcTrig {{ inp: {:?} }}", self.inp())
+        defmt::write!(f, "Qdc0Phaseb {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "Inputmux Register for SCT0 Input"]
+#[doc = "QDC0 Trigger Input Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Qdc0Trig(pub u32);
+impl Qdc0Trig {
+    #[doc = "QDC0 trigger input connections."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::Qdc0TrigInp {
+        let val = (self.0 >> 0usize) & 0x3f;
+        super::vals::Qdc0TrigInp::from_bits(val as u8)
+    }
+    #[doc = "QDC0 trigger input connections."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::Qdc0TrigInp) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for Qdc0Trig {
+    #[inline(always)]
+    fn default() -> Qdc0Trig {
+        Qdc0Trig(0)
+    }
+}
+impl core::fmt::Debug for Qdc0Trig {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Qdc0Trig")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Qdc0Trig {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "Qdc0Trig {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "QDC1 Input Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Qdc1Home(pub u32);
+impl Qdc1Home {
+    #[doc = "QDC1 HOME input connections."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::Qdc1HomeInp {
+        let val = (self.0 >> 0usize) & 0x3f;
+        super::vals::Qdc1HomeInp::from_bits(val as u8)
+    }
+    #[doc = "QDC1 HOME input connections."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::Qdc1HomeInp) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for Qdc1Home {
+    #[inline(always)]
+    fn default() -> Qdc1Home {
+        Qdc1Home(0)
+    }
+}
+impl core::fmt::Debug for Qdc1Home {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Qdc1Home")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Qdc1Home {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "Qdc1Home {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "QDC1 Input Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Qdc1Index(pub u32);
+impl Qdc1Index {
+    #[doc = "QDC1 INDEX input connections."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::Qdc1IndexInp {
+        let val = (self.0 >> 0usize) & 0x3f;
+        super::vals::Qdc1IndexInp::from_bits(val as u8)
+    }
+    #[doc = "QDC1 INDEX input connections."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::Qdc1IndexInp) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for Qdc1Index {
+    #[inline(always)]
+    fn default() -> Qdc1Index {
+        Qdc1Index(0)
+    }
+}
+impl core::fmt::Debug for Qdc1Index {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Qdc1Index")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Qdc1Index {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "Qdc1Index {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "QDC1 Input Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Qdc1Phasea(pub u32);
+impl Qdc1Phasea {
+    #[doc = "QDC1 PHASEA input connections."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::Qdc1PhaseaInp {
+        let val = (self.0 >> 0usize) & 0x3f;
+        super::vals::Qdc1PhaseaInp::from_bits(val as u8)
+    }
+    #[doc = "QDC1 PHASEA input connections."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::Qdc1PhaseaInp) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for Qdc1Phasea {
+    #[inline(always)]
+    fn default() -> Qdc1Phasea {
+        Qdc1Phasea(0)
+    }
+}
+impl core::fmt::Debug for Qdc1Phasea {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Qdc1Phasea")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Qdc1Phasea {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "Qdc1Phasea {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "QDC1 Input Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Qdc1Phaseb(pub u32);
+impl Qdc1Phaseb {
+    #[doc = "QDC1 PHASEB input connections."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::Qdc1PhasebInp {
+        let val = (self.0 >> 0usize) & 0x3f;
+        super::vals::Qdc1PhasebInp::from_bits(val as u8)
+    }
+    #[doc = "QDC1 PHASEB input connections."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::Qdc1PhasebInp) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for Qdc1Phaseb {
+    #[inline(always)]
+    fn default() -> Qdc1Phaseb {
+        Qdc1Phaseb(0)
+    }
+}
+impl core::fmt::Debug for Qdc1Phaseb {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Qdc1Phaseb")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Qdc1Phaseb {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "Qdc1Phaseb {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "QDC1 Trigger Input Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Qdc1Trig(pub u32);
+impl Qdc1Trig {
+    #[doc = "QDC1 trigger input connections."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::Qdc1TrigInp {
+        let val = (self.0 >> 0usize) & 0x3f;
+        super::vals::Qdc1TrigInp::from_bits(val as u8)
+    }
+    #[doc = "QDC1 trigger input connections."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::Qdc1TrigInp) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for Qdc1Trig {
+    #[inline(always)]
+    fn default() -> Qdc1Trig {
+        Qdc1Trig(0)
+    }
+}
+impl core::fmt::Debug for Qdc1Trig {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Qdc1Trig")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Qdc1Trig {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "Qdc1Trig {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "Inputmux Register for SCT0 Input."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sct0Inmux(pub u32);
@@ -15517,56 +16855,204 @@ impl defmt::Format for Sct0Inmux {
         defmt::write!(f, "Sct0Inmux {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "SINC Filter Channel Trigger Input Connections"]
+#[doc = "SINC Filter Channel Trigger Input Connections."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct SincFilterCh(pub u32);
-impl SincFilterCh {
-    #[doc = "SINC FILTER trigger input connections"]
+pub struct SincFilterCh0(pub u32);
+impl SincFilterCh0 {
+    #[doc = "SINC FILTER trigger input connections."]
     #[must_use]
     #[inline(always)]
-    pub const fn inp(&self) -> super::vals::SincFilterChInp {
+    pub const fn inp(&self) -> super::vals::SincFilterCh0Inp {
         let val = (self.0 >> 0usize) & 0x3f;
-        super::vals::SincFilterChInp::from_bits(val as u8)
+        super::vals::SincFilterCh0Inp::from_bits(val as u8)
     }
-    #[doc = "SINC FILTER trigger input connections"]
+    #[doc = "SINC FILTER trigger input connections."]
     #[inline(always)]
-    pub const fn set_inp(&mut self, val: super::vals::SincFilterChInp) {
+    pub const fn set_inp(&mut self, val: super::vals::SincFilterCh0Inp) {
         self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
     }
 }
-impl Default for SincFilterCh {
+impl Default for SincFilterCh0 {
     #[inline(always)]
-    fn default() -> SincFilterCh {
-        SincFilterCh(0)
+    fn default() -> SincFilterCh0 {
+        SincFilterCh0(0)
     }
 }
-impl core::fmt::Debug for SincFilterCh {
+impl core::fmt::Debug for SincFilterCh0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("SincFilterCh")
+        f.debug_struct("SincFilterCh0")
             .field("inp", &self.inp())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for SincFilterCh {
+impl defmt::Format for SincFilterCh0 {
     fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "SincFilterCh {{ inp: {:?} }}", self.inp())
+        defmt::write!(f, "SincFilterCh0 {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "Inputmux Register for SMARTDMA Arch B Inputs"]
+#[doc = "SINC Filter Channel Trigger Input Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct SincFilterCh1(pub u32);
+impl SincFilterCh1 {
+    #[doc = "SINC FILTER trigger input connections."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::SincFilterCh1Inp {
+        let val = (self.0 >> 0usize) & 0x3f;
+        super::vals::SincFilterCh1Inp::from_bits(val as u8)
+    }
+    #[doc = "SINC FILTER trigger input connections."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::SincFilterCh1Inp) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for SincFilterCh1 {
+    #[inline(always)]
+    fn default() -> SincFilterCh1 {
+        SincFilterCh1(0)
+    }
+}
+impl core::fmt::Debug for SincFilterCh1 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SincFilterCh1")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for SincFilterCh1 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "SincFilterCh1 {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "SINC Filter Channel Trigger Input Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct SincFilterCh2(pub u32);
+impl SincFilterCh2 {
+    #[doc = "SINC FILTER trigger input connections."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::SincFilterCh2Inp {
+        let val = (self.0 >> 0usize) & 0x3f;
+        super::vals::SincFilterCh2Inp::from_bits(val as u8)
+    }
+    #[doc = "SINC FILTER trigger input connections."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::SincFilterCh2Inp) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for SincFilterCh2 {
+    #[inline(always)]
+    fn default() -> SincFilterCh2 {
+        SincFilterCh2(0)
+    }
+}
+impl core::fmt::Debug for SincFilterCh2 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SincFilterCh2")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for SincFilterCh2 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "SincFilterCh2 {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "SINC Filter Channel Trigger Input Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct SincFilterCh3(pub u32);
+impl SincFilterCh3 {
+    #[doc = "SINC FILTER trigger input connections."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::SincFilterCh3Inp {
+        let val = (self.0 >> 0usize) & 0x3f;
+        super::vals::SincFilterCh3Inp::from_bits(val as u8)
+    }
+    #[doc = "SINC FILTER trigger input connections."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::SincFilterCh3Inp) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for SincFilterCh3 {
+    #[inline(always)]
+    fn default() -> SincFilterCh3 {
+        SincFilterCh3(0)
+    }
+}
+impl core::fmt::Debug for SincFilterCh3 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SincFilterCh3")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for SincFilterCh3 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "SincFilterCh3 {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "SINC Filter Channel Trigger Input Connections."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct SincFilterCh4(pub u32);
+impl SincFilterCh4 {
+    #[doc = "SINC FILTER trigger input connections."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn inp(&self) -> super::vals::SincFilterCh4Inp {
+        let val = (self.0 >> 0usize) & 0x3f;
+        super::vals::SincFilterCh4Inp::from_bits(val as u8)
+    }
+    #[doc = "SINC FILTER trigger input connections."]
+    #[inline(always)]
+    pub const fn set_inp(&mut self, val: super::vals::SincFilterCh4Inp) {
+        self.0 = (self.0 & !(0x3f << 0usize)) | (((val.to_bits() as u32) & 0x3f) << 0usize);
+    }
+}
+impl Default for SincFilterCh4 {
+    #[inline(always)]
+    fn default() -> SincFilterCh4 {
+        SincFilterCh4(0)
+    }
+}
+impl core::fmt::Debug for SincFilterCh4 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SincFilterCh4")
+            .field("inp", &self.inp())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for SincFilterCh4 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "SincFilterCh4 {{ inp: {:?} }}", self.inp())
+    }
+}
+#[doc = "Inputmux Register for SMARTDMA Arch B Inputs."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SmartdmaarchbInmux(pub u32);
 impl SmartdmaarchbInmux {
-    #[doc = "Input number select to SmartDMA ARCHB input"]
+    #[doc = "Input number select to SmartDMA ARCHB input."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::SmartdmaarchbInmuxInp {
         let val = (self.0 >> 0usize) & 0x7f;
         super::vals::SmartdmaarchbInmuxInp::from_bits(val as u8)
     }
-    #[doc = "Input number select to SmartDMA ARCHB input"]
+    #[doc = "Input number select to SmartDMA ARCHB input."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::SmartdmaarchbInmuxInp) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val.to_bits() as u32) & 0x7f) << 0usize);
@@ -15591,19 +17077,19 @@ impl defmt::Format for SmartdmaarchbInmux {
         defmt::write!(f, "SmartdmaarchbInmux {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "Trigger Register for CTIMER"]
+#[doc = "Trigger Register for CTIMER."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Timer0trig(pub u32);
 impl Timer0trig {
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::Timer0trigInp {
         let val = (self.0 >> 0usize) & 0x7f;
         super::vals::Timer0trigInp::from_bits(val as u8)
     }
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::Timer0trigInp) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val.to_bits() as u32) & 0x7f) << 0usize);
@@ -15628,19 +17114,19 @@ impl defmt::Format for Timer0trig {
         defmt::write!(f, "Timer0trig {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "Trigger Register for CTIMER"]
+#[doc = "Trigger Register for CTIMER."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Timer1trig(pub u32);
 impl Timer1trig {
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::Timer1trigInp {
         let val = (self.0 >> 0usize) & 0x7f;
         super::vals::Timer1trigInp::from_bits(val as u8)
     }
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::Timer1trigInp) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val.to_bits() as u32) & 0x7f) << 0usize);
@@ -15665,19 +17151,19 @@ impl defmt::Format for Timer1trig {
         defmt::write!(f, "Timer1trig {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "Trigger Register for CTIMER"]
+#[doc = "Trigger Register for CTIMER."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Timer2trig(pub u32);
 impl Timer2trig {
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::Timer2trigInp {
         let val = (self.0 >> 0usize) & 0x7f;
         super::vals::Timer2trigInp::from_bits(val as u8)
     }
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::Timer2trigInp) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val.to_bits() as u32) & 0x7f) << 0usize);
@@ -15702,19 +17188,19 @@ impl defmt::Format for Timer2trig {
         defmt::write!(f, "Timer2trig {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "Trigger Register for CTIMER"]
+#[doc = "Trigger Register for CTIMER."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Timer3trig(pub u32);
 impl Timer3trig {
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::Timer3trigInp {
         let val = (self.0 >> 0usize) & 0x7f;
         super::vals::Timer3trigInp::from_bits(val as u8)
     }
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::Timer3trigInp) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val.to_bits() as u32) & 0x7f) << 0usize);
@@ -15739,19 +17225,19 @@ impl defmt::Format for Timer3trig {
         defmt::write!(f, "Timer3trig {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "Trigger Register for CTIMER"]
+#[doc = "Trigger Register for CTIMER."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Timer4trig(pub u32);
 impl Timer4trig {
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::Timer4trigInp {
         let val = (self.0 >> 0usize) & 0x7f;
         super::vals::Timer4trigInp::from_bits(val as u8)
     }
-    #[doc = "Input number for CTIMER"]
+    #[doc = "Input number for CTIMER."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::Timer4trigInp) {
         self.0 = (self.0 & !(0x7f << 0usize)) | (((val.to_bits() as u32) & 0x7f) << 0usize);
@@ -15776,19 +17262,19 @@ impl defmt::Format for Timer4trig {
         defmt::write!(f, "Timer4trig {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "TSI Trigger Input Connections"]
+#[doc = "TSI Trigger Input Connections."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct TsiTrig(pub u32);
 impl TsiTrig {
-    #[doc = "TSI trigger input connections"]
+    #[doc = "TSI trigger input connections."]
     #[must_use]
     #[inline(always)]
     pub const fn inp(&self) -> super::vals::TsiTrigInp {
         let val = (self.0 >> 0usize) & 0x03;
         super::vals::TsiTrigInp::from_bits(val as u8)
     }
-    #[doc = "TSI trigger input connections"]
+    #[doc = "TSI trigger input connections."]
     #[inline(always)]
     pub const fn set_inp(&mut self, val: super::vals::TsiTrigInp) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
@@ -15811,7 +17297,7 @@ impl defmt::Format for TsiTrig {
         defmt::write!(f, "TsiTrig {{ inp: {:?} }}", self.inp())
     }
 }
-#[doc = "USB-FS Trigger Input Connections"]
+#[doc = "USB-FS Trigger Input Connections."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct UsbfsTrig(pub u32);

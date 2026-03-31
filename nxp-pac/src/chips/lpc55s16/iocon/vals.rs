@@ -212,7 +212,7 @@ impl From<PioMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PioOd {
-    #[doc = "Normal. Normal push-pull output"]
+    #[doc = "Normal. Normal push-pull output."]
     NORMAL = 0x0,
     #[doc = "Open-drain. Simulated open-drain output (high drive disabled)."]
     OPEN_DRAIN = 0x01,

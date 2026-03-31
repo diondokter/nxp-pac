@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cap0fe {
-    #[doc = "Does not load"]
+    #[doc = "Does not load."]
     CAP0FE_0 = 0x0,
-    #[doc = "Loads"]
+    #[doc = "Loads."]
     CAPOFE_1 = 0x01,
 }
 impl Cap0fe {
@@ -33,9 +33,9 @@ impl From<Cap0fe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cap0i {
-    #[doc = "Does not generate"]
+    #[doc = "Does not generate."]
     CAP0I_0 = 0x0,
-    #[doc = "Generates"]
+    #[doc = "Generates."]
     CAPOI_1 = 0x01,
 }
 impl Cap0i {
@@ -64,9 +64,9 @@ impl From<Cap0i> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cap0re {
-    #[doc = "Does not load"]
+    #[doc = "Does not load."]
     CAP0RE_0 = 0x0,
-    #[doc = "Loads"]
+    #[doc = "Loads."]
     CAPORE_1 = 0x01,
 }
 impl Cap0re {
@@ -95,9 +95,9 @@ impl From<Cap0re> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cap1fe {
-    #[doc = "Does not load"]
+    #[doc = "Does not load."]
     CAP1FE_0 = 0x0,
-    #[doc = "Loads"]
+    #[doc = "Loads."]
     CAP1FE_1 = 0x01,
 }
 impl Cap1fe {
@@ -126,9 +126,9 @@ impl From<Cap1fe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cap1i {
-    #[doc = "Does not generates"]
+    #[doc = "Does not generates."]
     CAP1I_0 = 0x0,
-    #[doc = "Generates"]
+    #[doc = "Generates."]
     CAP1I_1 = 0x01,
 }
 impl Cap1i {
@@ -157,9 +157,9 @@ impl From<Cap1i> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cap1re {
-    #[doc = "Does not load"]
+    #[doc = "Does not load."]
     CAP1RE_0 = 0x0,
-    #[doc = "Loads"]
+    #[doc = "Loads."]
     CAP1RE_1 = 0x01,
 }
 impl Cap1re {
@@ -188,9 +188,9 @@ impl From<Cap1re> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cap2fe {
-    #[doc = "Does not load"]
+    #[doc = "Does not load."]
     CAP2FE_0 = 0x0,
-    #[doc = "Loads"]
+    #[doc = "Loads."]
     CAP2FE_1 = 0x01,
 }
 impl Cap2fe {
@@ -219,9 +219,9 @@ impl From<Cap2fe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cap2i {
-    #[doc = "Does not generate"]
+    #[doc = "Does not generate."]
     CAP2I_0 = 0x0,
-    #[doc = "Generates"]
+    #[doc = "Generates."]
     CAP2I_1 = 0x01,
 }
 impl Cap2i {
@@ -250,9 +250,9 @@ impl From<Cap2i> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cap2re {
-    #[doc = "Does not load"]
+    #[doc = "Does not load."]
     CAP2RE_0 = 0x0,
-    #[doc = "Loads"]
+    #[doc = "Loads."]
     CAP2RE_1 = 0x01,
 }
 impl Cap2re {
@@ -281,9 +281,9 @@ impl From<Cap2re> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cap3fe {
-    #[doc = "Does not load"]
+    #[doc = "Does not load."]
     CAP3FE_0 = 0x0,
-    #[doc = "Loads"]
+    #[doc = "Loads."]
     CAP3FE_1 = 0x01,
 }
 impl Cap3fe {
@@ -312,9 +312,9 @@ impl From<Cap3fe> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cap3i {
-    #[doc = "Does not generate"]
+    #[doc = "Does not generate."]
     CAP3I_0 = 0x0,
-    #[doc = "Generates"]
+    #[doc = "Generates."]
     CAP3I_1 = 0x01,
 }
 impl Cap3i {
@@ -343,9 +343,9 @@ impl From<Cap3i> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cap3re {
-    #[doc = "Does not load"]
+    #[doc = "Does not load."]
     CAP3RE_0 = 0x0,
-    #[doc = "Loads"]
+    #[doc = "Loads."]
     CAP3RE_1 = 0x01,
 }
 impl Cap3re {
@@ -374,13 +374,13 @@ impl From<Cap3re> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cinsel {
-    #[doc = "Channel 0, CAPn\\[0\\] for CTIMERn"]
+    #[doc = "Channel 0, CAPn\\[0\\] for CTIMERn."]
     CHANNEL_0 = 0x0,
-    #[doc = "Channel 1, CAPn\\[1\\] for CTIMERn"]
+    #[doc = "Channel 1, CAPn\\[1\\] for CTIMERn."]
     CHANNEL_1 = 0x01,
-    #[doc = "Channel 2, CAPn\\[2\\] for CTIMERn"]
+    #[doc = "Channel 2, CAPn\\[2\\] for CTIMERn."]
     CHANNEL_2 = 0x02,
-    #[doc = "Channel 3, CAPn\\[3\\] for CTIMERn"]
+    #[doc = "Channel 3, CAPn\\[3\\] for CTIMERn."]
     CHANNEL_3 = 0x03,
 }
 impl Cinsel {
@@ -409,13 +409,13 @@ impl From<Cinsel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ctmode {
-    #[doc = "Timer mode"]
+    #[doc = "Timer mode."]
     TIMER = 0x0,
-    #[doc = "Counter mode rising edge"]
+    #[doc = "Counter mode rising edge."]
     COUNTER_RISING_EDGE = 0x01,
-    #[doc = "Counter mode falling edge"]
+    #[doc = "Counter mode falling edge."]
     COUNTER_FALLING_EDGE = 0x02,
-    #[doc = "Counter mode dual edge"]
+    #[doc = "Counter mode dual edge."]
     COUNTER_DUAL_EDGE = 0x03,
 }
 impl Ctmode {
@@ -444,9 +444,9 @@ impl From<Ctmode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Em0 {
-    #[doc = "Low"]
+    #[doc = "Low."]
     CLEAR = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     SET = 0x01,
 }
 impl Em0 {
@@ -475,9 +475,9 @@ impl From<Em0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Em1 {
-    #[doc = "Low"]
+    #[doc = "Low."]
     CLEAR = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     SET = 0x01,
 }
 impl Em1 {
@@ -506,9 +506,9 @@ impl From<Em1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Em2 {
-    #[doc = "Low"]
+    #[doc = "Low."]
     CLEAR = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     SET = 0x01,
 }
 impl Em2 {
@@ -537,9 +537,9 @@ impl From<Em2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Em3 {
-    #[doc = "Low"]
+    #[doc = "Low."]
     CLEAR = 0x0,
-    #[doc = "High"]
+    #[doc = "High."]
     SET = 0x01,
 }
 impl Em3 {
@@ -568,13 +568,13 @@ impl From<Em3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Emc0 {
-    #[doc = "Does nothing"]
+    #[doc = "Does nothing."]
     DO_NOTHING = 0x0,
-    #[doc = "Goes low"]
+    #[doc = "Goes low."]
     CLEAR = 0x01,
-    #[doc = "Goes high"]
+    #[doc = "Goes high."]
     SET = 0x02,
-    #[doc = "Toggles"]
+    #[doc = "Toggles."]
     TOGGLE = 0x03,
 }
 impl Emc0 {
@@ -603,13 +603,13 @@ impl From<Emc0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Emc1 {
-    #[doc = "Does nothing"]
+    #[doc = "Does nothing."]
     DO_NOTHING = 0x0,
-    #[doc = "Goes low"]
+    #[doc = "Goes low."]
     CLEAR = 0x01,
-    #[doc = "Goes high"]
+    #[doc = "Goes high."]
     SET = 0x02,
-    #[doc = "Toggles"]
+    #[doc = "Toggles."]
     TOGGLE = 0x03,
 }
 impl Emc1 {
@@ -638,13 +638,13 @@ impl From<Emc1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Emc2 {
-    #[doc = "Does nothing"]
+    #[doc = "Does nothing."]
     DO_NOTHING = 0x0,
-    #[doc = "Goes low"]
+    #[doc = "Goes low."]
     CLEAR = 0x01,
-    #[doc = "Goes high"]
+    #[doc = "Goes high."]
     SET = 0x02,
-    #[doc = "Toggles"]
+    #[doc = "Toggles."]
     TOGGLE = 0x03,
 }
 impl Emc2 {
@@ -673,13 +673,13 @@ impl From<Emc2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Emc3 {
-    #[doc = "Does nothing"]
+    #[doc = "Does nothing."]
     DO_NOTHING = 0x0,
-    #[doc = "Goes low"]
+    #[doc = "Goes low."]
     CLEAR = 0x01,
-    #[doc = "Goes high"]
+    #[doc = "Goes high."]
     SET = 0x02,
-    #[doc = "Toggles"]
+    #[doc = "Toggles."]
     TOGGLE = 0x03,
 }
 impl Emc3 {
@@ -708,9 +708,9 @@ impl From<Emc3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mr0i {
-    #[doc = "Does not generate"]
+    #[doc = "Does not generate."]
     MR0I_0 = 0x0,
-    #[doc = "Generates"]
+    #[doc = "Generates."]
     MR0I_1 = 0x01,
 }
 impl Mr0i {
@@ -739,9 +739,9 @@ impl From<Mr0i> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mr0r {
-    #[doc = "Does not reset"]
+    #[doc = "Does not reset."]
     MR0R_0 = 0x0,
-    #[doc = "Resets"]
+    #[doc = "Resets."]
     MR0R_1 = 0x01,
 }
 impl Mr0r {
@@ -770,9 +770,9 @@ impl From<Mr0r> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mr0rl {
-    #[doc = "Does not reload"]
+    #[doc = "Does not reload."]
     MR0RL_0 = 0x0,
-    #[doc = "Reloads"]
+    #[doc = "Reloads."]
     MR0RL_1 = 0x01,
 }
 impl Mr0rl {
@@ -801,9 +801,9 @@ impl From<Mr0rl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mr0s {
-    #[doc = "Does not stop"]
+    #[doc = "Does not stop."]
     MR0S_0 = 0x0,
-    #[doc = "Stops"]
+    #[doc = "Stops."]
     MR0S_1 = 0x01,
 }
 impl Mr0s {
@@ -832,9 +832,9 @@ impl From<Mr0s> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mr1i {
-    #[doc = "Does not generate"]
+    #[doc = "Does not generate."]
     MR1I_0 = 0x0,
-    #[doc = "Generates"]
+    #[doc = "Generates."]
     MR1I_1 = 0x01,
 }
 impl Mr1i {
@@ -863,9 +863,9 @@ impl From<Mr1i> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mr1r {
-    #[doc = "Does not reset"]
+    #[doc = "Does not reset."]
     MR1R_0 = 0x0,
-    #[doc = "Resets"]
+    #[doc = "Resets."]
     MR1R_1 = 0x01,
 }
 impl Mr1r {
@@ -894,9 +894,9 @@ impl From<Mr1r> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mr1rl {
-    #[doc = "Does not reload"]
+    #[doc = "Does not reload."]
     MR1RL_0 = 0x0,
-    #[doc = "Reloads"]
+    #[doc = "Reloads."]
     MR1RL_1 = 0x01,
 }
 impl Mr1rl {
@@ -925,9 +925,9 @@ impl From<Mr1rl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mr1s {
-    #[doc = "Does not stop"]
+    #[doc = "Does not stop."]
     MRIS_0 = 0x0,
-    #[doc = "Stops"]
+    #[doc = "Stops."]
     MRIS_1 = 0x01,
 }
 impl Mr1s {
@@ -956,9 +956,9 @@ impl From<Mr1s> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mr2i {
-    #[doc = "Does not generate"]
+    #[doc = "Does not generate."]
     MR2I_0 = 0x0,
-    #[doc = "Generates"]
+    #[doc = "Generates."]
     MR2I_1 = 0x01,
 }
 impl Mr2i {
@@ -987,9 +987,9 @@ impl From<Mr2i> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mr2r {
-    #[doc = "Does not reset"]
+    #[doc = "Does not reset."]
     MR2R_0 = 0x0,
-    #[doc = "Resets"]
+    #[doc = "Resets."]
     MR2R_1 = 0x01,
 }
 impl Mr2r {
@@ -1018,9 +1018,9 @@ impl From<Mr2r> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mr2rl {
-    #[doc = "Does not reload"]
+    #[doc = "Does not reload."]
     MR2RL_0 = 0x0,
-    #[doc = "Reloads"]
+    #[doc = "Reloads."]
     MR2RL_1 = 0x01,
 }
 impl Mr2rl {
@@ -1049,9 +1049,9 @@ impl From<Mr2rl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mr2s {
-    #[doc = "Does not stop"]
+    #[doc = "Does not stop."]
     MR2S_0 = 0x0,
-    #[doc = "Stops"]
+    #[doc = "Stops."]
     MR2S_1 = 0x01,
 }
 impl Mr2s {
@@ -1080,9 +1080,9 @@ impl From<Mr2s> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mr3i {
-    #[doc = "Does not generate"]
+    #[doc = "Does not generate."]
     MR3I_0 = 0x0,
-    #[doc = "Generates"]
+    #[doc = "Generates."]
     MR3I_1 = 0x01,
 }
 impl Mr3i {
@@ -1111,9 +1111,9 @@ impl From<Mr3i> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mr3r {
-    #[doc = "Does not reset"]
+    #[doc = "Does not reset."]
     MR3R_0 = 0x0,
-    #[doc = "Resets"]
+    #[doc = "Resets."]
     MR3R_1 = 0x01,
 }
 impl Mr3r {
@@ -1142,9 +1142,9 @@ impl From<Mr3r> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mr3rl {
-    #[doc = "Does not reload"]
+    #[doc = "Does not reload."]
     MR3RL_0 = 0x0,
-    #[doc = "Reloads"]
+    #[doc = "Reloads."]
     MR3RL_1 = 0x01,
 }
 impl Mr3rl {
@@ -1173,9 +1173,9 @@ impl From<Mr3rl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mr3s {
-    #[doc = "Does not stop"]
+    #[doc = "Does not stop."]
     MR3S_0 = 0x0,
-    #[doc = "Stops"]
+    #[doc = "Stops."]
     MR3S_1 = 0x01,
 }
 impl Mr3s {
@@ -1204,9 +1204,9 @@ impl From<Mr3s> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pwmen0 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     MATCH = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     PWM = 0x01,
 }
 impl Pwmen0 {
@@ -1235,9 +1235,9 @@ impl From<Pwmen0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pwmen1 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     MATCH = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     PWM = 0x01,
 }
 impl Pwmen1 {
@@ -1266,9 +1266,9 @@ impl From<Pwmen1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pwmen2 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     MATCH = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     PWM = 0x01,
 }
 impl Pwmen2 {
@@ -1297,9 +1297,9 @@ impl From<Pwmen2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pwmen3 {
-    #[doc = "Disable"]
+    #[doc = "Disable."]
     MATCH = 0x0,
-    #[doc = "Enable"]
+    #[doc = "Enable."]
     PWM = 0x01,
 }
 impl Pwmen3 {
@@ -1328,17 +1328,17 @@ impl From<Pwmen3> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Selcc {
-    #[doc = "Capture channel 0 rising edge"]
+    #[doc = "Capture channel 0 rising edge."]
     CHANNEL_0_RISING = 0x0,
-    #[doc = "Capture channel 0 falling edge"]
+    #[doc = "Capture channel 0 falling edge."]
     CHANNEL_0_FALLING = 0x01,
-    #[doc = "Capture channel 1 rising edge"]
+    #[doc = "Capture channel 1 rising edge."]
     CHANNEL_1_RISING = 0x02,
-    #[doc = "Capture channel 1 falling edge"]
+    #[doc = "Capture channel 1 falling edge."]
     CHANNEL_1_FALLING = 0x03,
-    #[doc = "Capture channel 2 rising edge"]
+    #[doc = "Capture channel 2 rising edge."]
     CHANNEL_2_RISING = 0x04,
-    #[doc = "Capture channel 2 falling edge"]
+    #[doc = "Capture channel 2 falling edge."]
     CHANNEL_2_FALLING = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,

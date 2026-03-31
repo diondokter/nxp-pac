@@ -1,4 +1,4 @@
-#[doc = "CASPER"]
+#[doc = "CASPER."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Casper {
     ptr: *mut u8,
@@ -34,72 +34,72 @@ impl Casper {
     pub const fn status(self) -> crate::common::Reg<regs::Status, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }
     }
-    #[doc = "Sets interrupts"]
+    #[doc = "Sets interrupts."]
     #[inline(always)]
     pub const fn intenset(self) -> crate::common::Reg<regs::Intenset, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x10usize) as _) }
     }
-    #[doc = "Clears interrupts"]
+    #[doc = "Clears interrupts."]
     #[inline(always)]
     pub const fn intenclr(self) -> crate::common::Reg<regs::Intenclr, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x14usize) as _) }
     }
-    #[doc = "Interrupt status bits (mask of INTENSET and STATUS)"]
+    #[doc = "Interrupt status bits (mask of INTENSET and STATUS)."]
     #[inline(always)]
     pub const fn intstat(self) -> crate::common::Reg<regs::Intstat, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x18usize) as _) }
     }
-    #[doc = "A register"]
+    #[doc = "A register."]
     #[inline(always)]
     pub const fn areg(self) -> crate::common::Reg<regs::Areg, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x20usize) as _) }
     }
-    #[doc = "B register"]
+    #[doc = "B register."]
     #[inline(always)]
     pub const fn breg(self) -> crate::common::Reg<regs::Breg, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x24usize) as _) }
     }
-    #[doc = "C register"]
+    #[doc = "C register."]
     #[inline(always)]
     pub const fn creg(self) -> crate::common::Reg<regs::Creg, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x28usize) as _) }
     }
-    #[doc = "D register"]
+    #[doc = "D register."]
     #[inline(always)]
     pub const fn dreg(self) -> crate::common::Reg<regs::Dreg, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x2cusize) as _) }
     }
-    #[doc = "Result register 0"]
+    #[doc = "Result register 0."]
     #[inline(always)]
     pub const fn res0(self) -> crate::common::Reg<regs::Res0, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x30usize) as _) }
     }
-    #[doc = "Result register 1"]
+    #[doc = "Result register 1."]
     #[inline(always)]
     pub const fn res1(self) -> crate::common::Reg<regs::Res1, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x34usize) as _) }
     }
-    #[doc = "Result register 2"]
+    #[doc = "Result register 2."]
     #[inline(always)]
     pub const fn res2(self) -> crate::common::Reg<regs::Res2, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x38usize) as _) }
     }
-    #[doc = "Result register 3"]
+    #[doc = "Result register 3."]
     #[inline(always)]
     pub const fn res3(self) -> crate::common::Reg<regs::Res3, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x3cusize) as _) }
     }
-    #[doc = "Optional mask register"]
+    #[doc = "Optional mask register."]
     #[inline(always)]
     pub const fn mask(self) -> crate::common::Reg<regs::Mask, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x60usize) as _) }
     }
-    #[doc = "Optional re-mask register"]
+    #[doc = "Optional re-mask register."]
     #[inline(always)]
     pub const fn remask(self) -> crate::common::Reg<regs::Remask, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x64usize) as _) }
     }
-    #[doc = "Security lock register"]
+    #[doc = "Security lock register."]
     #[inline(always)]
     pub const fn lock(self) -> crate::common::Reg<regs::Lock, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x80usize) as _) }

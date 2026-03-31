@@ -1,28 +1,28 @@
-#[doc = "Frequency Measurement (in Read mode)"]
+#[doc = "Frequency Measurement (in Read mode)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FreqmectrlR(pub u32);
 impl FreqmectrlR {
-    #[doc = "Result"]
+    #[doc = "Result."]
     #[must_use]
     #[inline(always)]
     pub const fn result(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0x7fff_ffff;
         val as u32
     }
-    #[doc = "Result"]
+    #[doc = "Result."]
     #[inline(always)]
     pub const fn set_result(&mut self, val: u32) {
         self.0 = (self.0 & !(0x7fff_ffff << 0usize)) | (((val as u32) & 0x7fff_ffff) << 0usize);
     }
-    #[doc = "Measure in Progress"]
+    #[doc = "Measure in Progress."]
     #[must_use]
     #[inline(always)]
     pub const fn measure_in_progress(&self) -> super::vals::FreqmectrlRMeasureInProgress {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::FreqmectrlRMeasureInProgress::from_bits(val as u8)
     }
-    #[doc = "Measure in Progress"]
+    #[doc = "Measure in Progress."]
     #[inline(always)]
     pub const fn set_measure_in_progress(
         &mut self,
@@ -56,55 +56,55 @@ impl defmt::Format for FreqmectrlR {
         )
     }
 }
-#[doc = "Freqeuncy Measurement (in Write mode)"]
+#[doc = "Freqeuncy Measurement (in Write mode)."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FreqmectrlW(pub u32);
 impl FreqmectrlW {
-    #[doc = "Reference Clock Scaling Factor"]
+    #[doc = "Reference Clock Scaling Factor."]
     #[must_use]
     #[inline(always)]
     pub const fn ref_scale(&self) -> super::vals::RefScale {
         let val = (self.0 >> 0usize) & 0x1f;
         super::vals::RefScale::from_bits(val as u8)
     }
-    #[doc = "Reference Clock Scaling Factor"]
+    #[doc = "Reference Clock Scaling Factor."]
     #[inline(always)]
     pub const fn set_ref_scale(&mut self, val: super::vals::RefScale) {
         self.0 = (self.0 & !(0x1f << 0usize)) | (((val.to_bits() as u32) & 0x1f) << 0usize);
     }
-    #[doc = "Pulse Width Measurement mode select"]
+    #[doc = "Pulse Width Measurement mode select."]
     #[must_use]
     #[inline(always)]
     pub const fn pulse_mode(&self) -> super::vals::PulseMode {
         let val = (self.0 >> 8usize) & 0x01;
         super::vals::PulseMode::from_bits(val as u8)
     }
-    #[doc = "Pulse Width Measurement mode select"]
+    #[doc = "Pulse Width Measurement mode select."]
     #[inline(always)]
     pub const fn set_pulse_mode(&mut self, val: super::vals::PulseMode) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
     }
-    #[doc = "Pulse Polarity"]
+    #[doc = "Pulse Polarity."]
     #[must_use]
     #[inline(always)]
     pub const fn pulse_pol(&self) -> super::vals::PulsePol {
         let val = (self.0 >> 9usize) & 0x01;
         super::vals::PulsePol::from_bits(val as u8)
     }
-    #[doc = "Pulse Polarity"]
+    #[doc = "Pulse Polarity."]
     #[inline(always)]
     pub const fn set_pulse_pol(&mut self, val: super::vals::PulsePol) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
     }
-    #[doc = "Measure in Progress"]
+    #[doc = "Measure in Progress."]
     #[must_use]
     #[inline(always)]
     pub const fn measure_in_progress(&self) -> super::vals::FreqmectrlWMeasureInProgress {
         let val = (self.0 >> 31usize) & 0x01;
         super::vals::FreqmectrlWMeasureInProgress::from_bits(val as u8)
     }
-    #[doc = "Measure in Progress"]
+    #[doc = "Measure in Progress."]
     #[inline(always)]
     pub const fn set_measure_in_progress(
         &mut self,

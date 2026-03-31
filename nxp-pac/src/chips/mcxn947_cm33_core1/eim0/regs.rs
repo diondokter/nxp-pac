@@ -1,16 +1,16 @@
-#[doc = "Error Injection Channel Descriptor 0, Word0"]
+#[doc = "Error Injection Channel Descriptor 0, Word0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Eichd0Word0(pub u32);
 impl Eichd0Word0 {
-    #[doc = "Checkbit Mask"]
+    #[doc = "Checkbit Mask."]
     #[must_use]
     #[inline(always)]
     pub const fn chkbit_mask(&self) -> u8 {
         let val = (self.0 >> 25usize) & 0x7f;
         val as u8
     }
-    #[doc = "Checkbit Mask"]
+    #[doc = "Checkbit Mask."]
     #[inline(always)]
     pub const fn set_chkbit_mask(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 25usize)) | (((val as u32) & 0x7f) << 25usize);
@@ -39,19 +39,19 @@ impl defmt::Format for Eichd0Word0 {
         )
     }
 }
-#[doc = "Error Injection Channel Descriptor 0, Word1"]
+#[doc = "Error Injection Channel Descriptor 0, Word1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Eichd0Word1(pub u32);
 impl Eichd0Word1 {
-    #[doc = "Data Mask Bytes 0-3"]
+    #[doc = "Data Mask Bytes 0-3."]
     #[must_use]
     #[inline(always)]
     pub const fn b0_3data_mask(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Data Mask Bytes 0-3"]
+    #[doc = "Data Mask Bytes 0-3."]
     #[inline(always)]
     pub const fn set_b0_3data_mask(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -80,19 +80,19 @@ impl defmt::Format for Eichd0Word1 {
         )
     }
 }
-#[doc = "Error Injection Channel Descriptor 1, Word0"]
+#[doc = "Error Injection Channel Descriptor 1, Word0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Eichd1Word0(pub u32);
 impl Eichd1Word0 {
-    #[doc = "Checkbit Mask"]
+    #[doc = "Checkbit Mask."]
     #[must_use]
     #[inline(always)]
     pub const fn chkbit_mask(&self) -> u8 {
         let val = (self.0 >> 25usize) & 0x7f;
         val as u8
     }
-    #[doc = "Checkbit Mask"]
+    #[doc = "Checkbit Mask."]
     #[inline(always)]
     pub const fn set_chkbit_mask(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 25usize)) | (((val as u32) & 0x7f) << 25usize);
@@ -121,19 +121,19 @@ impl defmt::Format for Eichd1Word0 {
         )
     }
 }
-#[doc = "Error Injection Channel Descriptor 1, Word1"]
+#[doc = "Error Injection Channel Descriptor 1, Word1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Eichd1Word1(pub u32);
 impl Eichd1Word1 {
-    #[doc = "Data Mask Bytes 0-3"]
+    #[doc = "Data Mask Bytes 0-3."]
     #[must_use]
     #[inline(always)]
     pub const fn b0_3data_mask(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Data Mask Bytes 0-3"]
+    #[doc = "Data Mask Bytes 0-3."]
     #[inline(always)]
     pub const fn set_b0_3data_mask(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -162,19 +162,19 @@ impl defmt::Format for Eichd1Word1 {
         )
     }
 }
-#[doc = "Error Injection Channel Descriptor 2, Word0"]
+#[doc = "Error Injection Channel Descriptor 2, Word0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Eichd2Word0(pub u32);
 impl Eichd2Word0 {
-    #[doc = "Checkbit Mask"]
+    #[doc = "Checkbit Mask."]
     #[must_use]
     #[inline(always)]
     pub const fn chkbit_mask(&self) -> u8 {
         let val = (self.0 >> 25usize) & 0x7f;
         val as u8
     }
-    #[doc = "Checkbit Mask"]
+    #[doc = "Checkbit Mask."]
     #[inline(always)]
     pub const fn set_chkbit_mask(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 25usize)) | (((val as u32) & 0x7f) << 25usize);
@@ -203,19 +203,19 @@ impl defmt::Format for Eichd2Word0 {
         )
     }
 }
-#[doc = "Error Injection Channel Descriptor 2, Word1"]
+#[doc = "Error Injection Channel Descriptor 2, Word1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Eichd2Word1(pub u32);
 impl Eichd2Word1 {
-    #[doc = "Data Mask Bytes 0-3"]
+    #[doc = "Data Mask Bytes 0-3."]
     #[must_use]
     #[inline(always)]
     pub const fn b0_3data_mask(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Data Mask Bytes 0-3"]
+    #[doc = "Data Mask Bytes 0-3."]
     #[inline(always)]
     pub const fn set_b0_3data_mask(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -244,19 +244,19 @@ impl defmt::Format for Eichd2Word1 {
         )
     }
 }
-#[doc = "Error Injection Channel Descriptor 3, Word0"]
+#[doc = "Error Injection Channel Descriptor 3, Word0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Eichd3Word0(pub u32);
 impl Eichd3Word0 {
-    #[doc = "Checkbit Mask"]
+    #[doc = "Checkbit Mask."]
     #[must_use]
     #[inline(always)]
     pub const fn chkbit_mask(&self) -> u8 {
         let val = (self.0 >> 25usize) & 0x7f;
         val as u8
     }
-    #[doc = "Checkbit Mask"]
+    #[doc = "Checkbit Mask."]
     #[inline(always)]
     pub const fn set_chkbit_mask(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 25usize)) | (((val as u32) & 0x7f) << 25usize);
@@ -285,19 +285,19 @@ impl defmt::Format for Eichd3Word0 {
         )
     }
 }
-#[doc = "Error Injection Channel Descriptor 3, Word1"]
+#[doc = "Error Injection Channel Descriptor 3, Word1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Eichd3Word1(pub u32);
 impl Eichd3Word1 {
-    #[doc = "Data Mask Bytes 0-3"]
+    #[doc = "Data Mask Bytes 0-3."]
     #[must_use]
     #[inline(always)]
     pub const fn b0_3data_mask(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Data Mask Bytes 0-3"]
+    #[doc = "Data Mask Bytes 0-3."]
     #[inline(always)]
     pub const fn set_b0_3data_mask(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -326,19 +326,19 @@ impl defmt::Format for Eichd3Word1 {
         )
     }
 }
-#[doc = "Error Injection Channel Descriptor 4, Word0"]
+#[doc = "Error Injection Channel Descriptor 4, Word0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Eichd4Word0(pub u32);
 impl Eichd4Word0 {
-    #[doc = "Checkbit Mask"]
+    #[doc = "Checkbit Mask."]
     #[must_use]
     #[inline(always)]
     pub const fn chkbit_mask(&self) -> u8 {
         let val = (self.0 >> 25usize) & 0x7f;
         val as u8
     }
-    #[doc = "Checkbit Mask"]
+    #[doc = "Checkbit Mask."]
     #[inline(always)]
     pub const fn set_chkbit_mask(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 25usize)) | (((val as u32) & 0x7f) << 25usize);
@@ -367,19 +367,19 @@ impl defmt::Format for Eichd4Word0 {
         )
     }
 }
-#[doc = "Error Injection Channel Descriptor 4, Word1"]
+#[doc = "Error Injection Channel Descriptor 4, Word1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Eichd4Word1(pub u32);
 impl Eichd4Word1 {
-    #[doc = "Data Mask Bytes 0-3"]
+    #[doc = "Data Mask Bytes 0-3."]
     #[must_use]
     #[inline(always)]
     pub const fn b0_3data_mask(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Data Mask Bytes 0-3"]
+    #[doc = "Data Mask Bytes 0-3."]
     #[inline(always)]
     pub const fn set_b0_3data_mask(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -408,19 +408,19 @@ impl defmt::Format for Eichd4Word1 {
         )
     }
 }
-#[doc = "Error Injection Channel Descriptor 5, Word0"]
+#[doc = "Error Injection Channel Descriptor 5, Word0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Eichd5Word0(pub u32);
 impl Eichd5Word0 {
-    #[doc = "Checkbit Mask"]
+    #[doc = "Checkbit Mask."]
     #[must_use]
     #[inline(always)]
     pub const fn chkbit_mask(&self) -> u8 {
         let val = (self.0 >> 25usize) & 0x7f;
         val as u8
     }
-    #[doc = "Checkbit Mask"]
+    #[doc = "Checkbit Mask."]
     #[inline(always)]
     pub const fn set_chkbit_mask(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 25usize)) | (((val as u32) & 0x7f) << 25usize);
@@ -449,19 +449,19 @@ impl defmt::Format for Eichd5Word0 {
         )
     }
 }
-#[doc = "Error Injection Channel Descriptor 5, Word1"]
+#[doc = "Error Injection Channel Descriptor 5, Word1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Eichd5Word1(pub u32);
 impl Eichd5Word1 {
-    #[doc = "Data Mask Bytes 0-3"]
+    #[doc = "Data Mask Bytes 0-3."]
     #[must_use]
     #[inline(always)]
     pub const fn b0_3data_mask(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Data Mask Bytes 0-3"]
+    #[doc = "Data Mask Bytes 0-3."]
     #[inline(always)]
     pub const fn set_b0_3data_mask(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -490,19 +490,19 @@ impl defmt::Format for Eichd5Word1 {
         )
     }
 }
-#[doc = "Error Injection Channel Descriptor 6, Word0"]
+#[doc = "Error Injection Channel Descriptor 6, Word0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Eichd6Word0(pub u32);
 impl Eichd6Word0 {
-    #[doc = "Checkbit Mask"]
+    #[doc = "Checkbit Mask."]
     #[must_use]
     #[inline(always)]
     pub const fn chkbit_mask(&self) -> u8 {
         let val = (self.0 >> 25usize) & 0x7f;
         val as u8
     }
-    #[doc = "Checkbit Mask"]
+    #[doc = "Checkbit Mask."]
     #[inline(always)]
     pub const fn set_chkbit_mask(&mut self, val: u8) {
         self.0 = (self.0 & !(0x7f << 25usize)) | (((val as u32) & 0x7f) << 25usize);
@@ -531,19 +531,19 @@ impl defmt::Format for Eichd6Word0 {
         )
     }
 }
-#[doc = "Error Injection Channel Descriptor 6, Word1"]
+#[doc = "Error Injection Channel Descriptor 6, Word1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Eichd6Word1(pub u32);
 impl Eichd6Word1 {
-    #[doc = "Data Mask Bytes 0-3"]
+    #[doc = "Data Mask Bytes 0-3."]
     #[must_use]
     #[inline(always)]
     pub const fn b0_3data_mask(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Data Mask Bytes 0-3"]
+    #[doc = "Data Mask Bytes 0-3."]
     #[inline(always)]
     pub const fn set_b0_3data_mask(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -572,19 +572,19 @@ impl defmt::Format for Eichd6Word1 {
         )
     }
 }
-#[doc = "Error Injection Channel Descriptor 7, Word0"]
+#[doc = "Error Injection Channel Descriptor 7, Word0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Eichd7Word0(pub u32);
 impl Eichd7Word0 {
-    #[doc = "Checkbit Mask"]
+    #[doc = "Checkbit Mask."]
     #[must_use]
     #[inline(always)]
     pub const fn chkbit_mask(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Checkbit Mask"]
+    #[doc = "Checkbit Mask."]
     #[inline(always)]
     pub const fn set_chkbit_mask(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -613,19 +613,19 @@ impl defmt::Format for Eichd7Word0 {
         )
     }
 }
-#[doc = "Error Injection Channel Descriptor 7, Word1"]
+#[doc = "Error Injection Channel Descriptor 7, Word1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Eichd7Word1(pub u32);
 impl Eichd7Word1 {
-    #[doc = "Data Mask Bytes 0-3"]
+    #[doc = "Data Mask Bytes 0-3."]
     #[must_use]
     #[inline(always)]
     pub const fn b0_3data_mask(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Data Mask Bytes 0-3"]
+    #[doc = "Data Mask Bytes 0-3."]
     #[inline(always)]
     pub const fn set_b0_3data_mask(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -654,19 +654,19 @@ impl defmt::Format for Eichd7Word1 {
         )
     }
 }
-#[doc = "Error Injection Channel Descriptor 8, Word0"]
+#[doc = "Error Injection Channel Descriptor 8, Word0."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Eichd8Word0(pub u32);
 impl Eichd8Word0 {
-    #[doc = "Checkbit Mask"]
+    #[doc = "Checkbit Mask."]
     #[must_use]
     #[inline(always)]
     pub const fn chkbit_mask(&self) -> u8 {
         let val = (self.0 >> 28usize) & 0x0f;
         val as u8
     }
-    #[doc = "Checkbit Mask"]
+    #[doc = "Checkbit Mask."]
     #[inline(always)]
     pub const fn set_chkbit_mask(&mut self, val: u8) {
         self.0 = (self.0 & !(0x0f << 28usize)) | (((val as u32) & 0x0f) << 28usize);
@@ -695,19 +695,19 @@ impl defmt::Format for Eichd8Word0 {
         )
     }
 }
-#[doc = "Error Injection Channel Descriptor 8, Word1"]
+#[doc = "Error Injection Channel Descriptor 8, Word1."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Eichd8Word1(pub u32);
 impl Eichd8Word1 {
-    #[doc = "Data Mask Bytes 0-3"]
+    #[doc = "Data Mask Bytes 0-3."]
     #[must_use]
     #[inline(always)]
     pub const fn b0_3data_mask(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Data Mask Bytes 0-3"]
+    #[doc = "Data Mask Bytes 0-3."]
     #[inline(always)]
     pub const fn set_b0_3data_mask(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -736,115 +736,115 @@ impl defmt::Format for Eichd8Word1 {
         )
     }
 }
-#[doc = "Error Injection Channel Enable register"]
+#[doc = "Error Injection Channel Enable register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Eichen(pub u32);
 impl Eichen {
-    #[doc = "Error Injection Channel 8 Enable"]
+    #[doc = "Error Injection Channel 8 Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn eich8en(&self) -> bool {
         let val = (self.0 >> 23usize) & 0x01;
         val != 0
     }
-    #[doc = "Error Injection Channel 8 Enable"]
+    #[doc = "Error Injection Channel 8 Enable."]
     #[inline(always)]
     pub const fn set_eich8en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
-    #[doc = "Error Injection Channel 7 Enable"]
+    #[doc = "Error Injection Channel 7 Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn eich7en(&self) -> bool {
         let val = (self.0 >> 24usize) & 0x01;
         val != 0
     }
-    #[doc = "Error Injection Channel 7 Enable"]
+    #[doc = "Error Injection Channel 7 Enable."]
     #[inline(always)]
     pub const fn set_eich7en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 24usize)) | (((val as u32) & 0x01) << 24usize);
     }
-    #[doc = "Error Injection Channel 6 Enable"]
+    #[doc = "Error Injection Channel 6 Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn eich6en(&self) -> bool {
         let val = (self.0 >> 25usize) & 0x01;
         val != 0
     }
-    #[doc = "Error Injection Channel 6 Enable"]
+    #[doc = "Error Injection Channel 6 Enable."]
     #[inline(always)]
     pub const fn set_eich6en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 25usize)) | (((val as u32) & 0x01) << 25usize);
     }
-    #[doc = "Error Injection Channel 5 Enable"]
+    #[doc = "Error Injection Channel 5 Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn eich5en(&self) -> bool {
         let val = (self.0 >> 26usize) & 0x01;
         val != 0
     }
-    #[doc = "Error Injection Channel 5 Enable"]
+    #[doc = "Error Injection Channel 5 Enable."]
     #[inline(always)]
     pub const fn set_eich5en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 26usize)) | (((val as u32) & 0x01) << 26usize);
     }
-    #[doc = "Error Injection Channel 4 Enable"]
+    #[doc = "Error Injection Channel 4 Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn eich4en(&self) -> bool {
         let val = (self.0 >> 27usize) & 0x01;
         val != 0
     }
-    #[doc = "Error Injection Channel 4 Enable"]
+    #[doc = "Error Injection Channel 4 Enable."]
     #[inline(always)]
     pub const fn set_eich4en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 27usize)) | (((val as u32) & 0x01) << 27usize);
     }
-    #[doc = "Error Injection Channel 3 Enable"]
+    #[doc = "Error Injection Channel 3 Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn eich3en(&self) -> bool {
         let val = (self.0 >> 28usize) & 0x01;
         val != 0
     }
-    #[doc = "Error Injection Channel 3 Enable"]
+    #[doc = "Error Injection Channel 3 Enable."]
     #[inline(always)]
     pub const fn set_eich3en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 28usize)) | (((val as u32) & 0x01) << 28usize);
     }
-    #[doc = "Error Injection Channel 2 Enable"]
+    #[doc = "Error Injection Channel 2 Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn eich2en(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "Error Injection Channel 2 Enable"]
+    #[doc = "Error Injection Channel 2 Enable."]
     #[inline(always)]
     pub const fn set_eich2en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "Error Injection Channel 1 Enable"]
+    #[doc = "Error Injection Channel 1 Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn eich1en(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "Error Injection Channel 1 Enable"]
+    #[doc = "Error Injection Channel 1 Enable."]
     #[inline(always)]
     pub const fn set_eich1en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "Error Injection Channel 0 Enable"]
+    #[doc = "Error Injection Channel 0 Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn eich0en(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Error Injection Channel 0 Enable"]
+    #[doc = "Error Injection Channel 0 Enable."]
     #[inline(always)]
     pub const fn set_eich0en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -889,19 +889,19 @@ impl defmt::Format for Eichen {
         )
     }
 }
-#[doc = "Error Injection Module Configuration Register"]
+#[doc = "Error Injection Module Configuration Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Eimcr(pub u32);
 impl Eimcr {
-    #[doc = "Global Error Injection Enable"]
+    #[doc = "Global Error Injection Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn geien(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Global Error Injection Enable"]
+    #[doc = "Global Error Injection Enable."]
     #[inline(always)]
     pub const fn set_geien(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);

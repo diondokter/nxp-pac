@@ -2,20 +2,20 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ClkSrcSel {
-    #[doc = "if (DPLL Locked) SPDIF_RxClk else REF_CLK_32K (XTALOSC)"]
+    #[doc = "if (DPLL Locked) SPDIF_RxClk else REF_CLK_32K (XTALOSC)."]
     CLK_SRC_SEL_0 = 0x0,
-    #[doc = "if (DPLL Locked) SPDIF_RxClk else tx_clk (SPDIF0_CLK_ROOT)"]
+    #[doc = "if (DPLL Locked) SPDIF_RxClk else tx_clk (SPDIF0_CLK_ROOT)."]
     CLK_SRC_SEL_1 = 0x01,
     _RESERVED_2 = 0x02,
-    #[doc = "if (DPLL Locked) SPDIF_RxClk else SPDIF_EXT_CLK"]
+    #[doc = "if (DPLL Locked) SPDIF_RxClk else SPDIF_EXT_CLK."]
     CLK_SRC_SEL_3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "REF_CLK_32K (XTALOSC)"]
+    #[doc = "REF_CLK_32K (XTALOSC)."]
     CLK_SRC_SEL_5 = 0x05,
-    #[doc = "tx_clk (SPDIF0_CLK_ROOT)"]
+    #[doc = "tx_clk (SPDIF0_CLK_ROOT)."]
     CLK_SRC_SEL_6 = 0x06,
     _RESERVED_7 = 0x07,
-    #[doc = "SPDIF_EXT_CLK"]
+    #[doc = "SPDIF_EXT_CLK."]
     CLK_SRC_SEL_8 = 0x08,
     _RESERVED_9 = 0x09,
     _RESERVED_a = 0x0a,
@@ -51,19 +51,19 @@ impl From<ClkSrcSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum GainSel {
-    #[doc = "24*(2**10)"]
+    #[doc = "24*(2**10)."]
     GAIN_SEL_0 = 0x0,
-    #[doc = "16*(2**10)"]
+    #[doc = "16*(2**10)."]
     GAIN_SEL_1 = 0x01,
-    #[doc = "12*(2**10)"]
+    #[doc = "12*(2**10)."]
     GAIN_SEL_2 = 0x02,
-    #[doc = "8*(2**10)"]
+    #[doc = "8*(2**10)."]
     GAIN_SEL_3 = 0x03,
-    #[doc = "6*(2**10)"]
+    #[doc = "6*(2**10)."]
     GAIN_SEL_4 = 0x04,
-    #[doc = "4*(2**10)"]
+    #[doc = "4*(2**10)."]
     GAIN_SEL_5 = 0x05,
-    #[doc = "3*(2**10)"]
+    #[doc = "3*(2**10)."]
     GAIN_SEL_6 = 0x06,
     _RESERVED_7 = 0x07,
 }
@@ -93,9 +93,9 @@ impl From<GainSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RxAutoSync {
-    #[doc = "Rx FIFO auto sync off"]
+    #[doc = "Rx FIFO auto sync off."]
     RX_AUTO_SYNC_0 = 0x0,
-    #[doc = "RxFIFO auto sync on"]
+    #[doc = "RxFIFO auto sync on."]
     RX_AUTO_SYNC_1 = 0x01,
 }
 impl RxAutoSync {
@@ -124,9 +124,9 @@ impl From<RxAutoSync> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RxFifoCtrl {
-    #[doc = "Normal operation"]
+    #[doc = "Normal operation."]
     RX_FIFO_CTRL_0 = 0x0,
-    #[doc = "Always read zero from Rx data register"]
+    #[doc = "Always read zero from Rx data register."]
     RX_FIFO_CTRL_1 = 0x01,
 }
 impl RxFifoCtrl {
@@ -155,9 +155,9 @@ impl From<RxFifoCtrl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RxFifoOffOn {
-    #[doc = "SPDIF Rx FIFO is on"]
+    #[doc = "SPDIF Rx FIFO is on."]
     RX_FIFO_OFF_ON_0 = 0x0,
-    #[doc = "SPDIF Rx FIFO is off. Does not accept data from interface"]
+    #[doc = "SPDIF Rx FIFO is off. Does not accept data from interface."]
     RX_FIFO_OFF_ON_1 = 0x01,
 }
 impl RxFifoOffOn {
@@ -186,9 +186,9 @@ impl From<RxFifoOffOn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RxFifoRst {
-    #[doc = "Normal operation"]
+    #[doc = "Normal operation."]
     RX_FIFO_RST_0 = 0x0,
-    #[doc = "Reset register to 1 sample remaining"]
+    #[doc = "Reset register to 1 sample remaining."]
     RX_FIFO_RST_1 = 0x01,
 }
 impl RxFifoRst {
@@ -217,13 +217,13 @@ impl From<RxFifoRst> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RxFifofullSel {
-    #[doc = "Full interrupt if at least 1 sample in Rx left and right FIFOs"]
+    #[doc = "Full interrupt if at least 1 sample in Rx left and right FIFOs."]
     RX_FIFOFULL_SEL_0 = 0x0,
-    #[doc = "Full interrupt if at least 4 sample in Rx left and right FIFOs"]
+    #[doc = "Full interrupt if at least 4 sample in Rx left and right FIFOs."]
     RX_FIFOFULL_SEL_1 = 0x01,
-    #[doc = "Full interrupt if at least 8 sample in Rx left and right FIFOs"]
+    #[doc = "Full interrupt if at least 8 sample in Rx left and right FIFOs."]
     RX_FIFOFULL_SEL_2 = 0x02,
-    #[doc = "Full interrupt if at least 16 sample in Rx left and right FIFO"]
+    #[doc = "Full interrupt if at least 16 sample in Rx left and right FIFO."]
     RX_FIFOFULL_SEL_3 = 0x03,
 }
 impl RxFifofullSel {
@@ -252,11 +252,11 @@ impl From<RxFifofullSel> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct SysclkDf(u16);
 impl SysclkDf {
-    #[doc = "no clock signal"]
+    #[doc = "no clock signal."]
     pub const SYSCLK_DF_0: Self = Self(0x0);
-    #[doc = "divider factor is 2"]
+    #[doc = "divider factor is 2."]
     pub const SYSCLK_DF_1: Self = Self(0x01);
-    #[doc = "divider factor is 512"]
+    #[doc = "divider factor is 512."]
     pub const SYSCLK_DF_511: Self = Self(0x01ff);
 }
 impl SysclkDf {
@@ -335,9 +335,9 @@ impl From<TxAllClkEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TxAutoSync {
-    #[doc = "Tx FIFO auto sync off"]
+    #[doc = "Tx FIFO auto sync off."]
     TX_AUTO_SYNC_0 = 0x0,
-    #[doc = "Tx FIFO auto sync on"]
+    #[doc = "Tx FIFO auto sync on."]
     TX_AUTO_SYNC_1 = 0x01,
 }
 impl TxAutoSync {
@@ -366,11 +366,11 @@ impl From<TxAutoSync> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct TxClkDf(u8);
 impl TxClkDf {
-    #[doc = "divider factor is 1"]
+    #[doc = "divider factor is 1."]
     pub const TX_CLK_DF_0: Self = Self(0x0);
-    #[doc = "divider factor is 2"]
+    #[doc = "divider factor is 2."]
     pub const TX_CLK_DF_1: Self = Self(0x01);
-    #[doc = "divider factor is 128"]
+    #[doc = "divider factor is 128."]
     pub const TX_CLK_DF_127: Self = Self(0x7f);
 }
 impl TxClkDf {
@@ -418,19 +418,19 @@ impl From<TxClkDf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TxClkSource {
-    #[doc = "XTALOSC input (XTALOSC clock)"]
+    #[doc = "XTALOSC input (XTALOSC clock)."]
     TX_CLK_SOURCE_0 = 0x0,
-    #[doc = "tx_clk input (from SPDIF0_CLK_ROOT. See CCM.)"]
+    #[doc = "tx_clk input (from SPDIF0_CLK_ROOT. See CCM.)."]
     TX_CLK_SOURCE_1 = 0x01,
-    #[doc = "tx_clk1 (from SAI1)"]
+    #[doc = "tx_clk1 (from SAI1)."]
     TX_CLK_SOURCE_2 = 0x02,
-    #[doc = "tx_clk2 SPDIF_EXT_CLK, from pads"]
+    #[doc = "tx_clk2 SPDIF_EXT_CLK, from pads."]
     TX_CLK_SOURCE_3 = 0x03,
-    #[doc = "tx_clk3 (from SAI2)"]
+    #[doc = "tx_clk3 (from SAI2)."]
     TX_CLK_SOURCE_4 = 0x04,
-    #[doc = "ipg_clk input (frequency divided)"]
+    #[doc = "ipg_clk input (frequency divided)."]
     TX_CLK_SOURCE_5 = 0x05,
-    #[doc = "tx_clk4 (from SAI3)"]
+    #[doc = "tx_clk4 (from SAI3)."]
     TX_CLK_SOURCE_6 = 0x06,
     _RESERVED_7 = 0x07,
 }
@@ -460,11 +460,11 @@ impl From<TxClkSource> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TxFifoCtrl {
-    #[doc = "Send out digital zero on SPDIF Tx"]
+    #[doc = "Send out digital zero on SPDIF Tx."]
     TX_FIFO_CTRL_0 = 0x0,
-    #[doc = "Tx Normal operation"]
+    #[doc = "Tx Normal operation."]
     TX_FIFO_CTRL_1 = 0x01,
-    #[doc = "Reset to 1 sample remaining"]
+    #[doc = "Reset to 1 sample remaining."]
     TX_FIFO_CTRL_2 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -494,13 +494,13 @@ impl From<TxFifoCtrl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TxFifoemptySel {
-    #[doc = "Empty interrupt if 0 sample in Tx left and right FIFOs"]
+    #[doc = "Empty interrupt if 0 sample in Tx left and right FIFOs."]
     TX_FIFOEMPTY_SEL_0 = 0x0,
-    #[doc = "Empty interrupt if at most 4 sample in Tx left and right FIFOs"]
+    #[doc = "Empty interrupt if at most 4 sample in Tx left and right FIFOs."]
     TX_FIFOEMPTY_SEL_1 = 0x01,
-    #[doc = "Empty interrupt if at most 8 sample in Tx left and right FIFOs"]
+    #[doc = "Empty interrupt if at most 8 sample in Tx left and right FIFOs."]
     TX_FIFOEMPTY_SEL_2 = 0x02,
-    #[doc = "Empty interrupt if at most 12 sample in Tx left and right FIFOs"]
+    #[doc = "Empty interrupt if at most 12 sample in Tx left and right FIFOs."]
     TX_FIFOEMPTY_SEL_3 = 0x03,
 }
 impl TxFifoemptySel {
@@ -529,14 +529,14 @@ impl From<TxFifoemptySel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TxSel {
-    #[doc = "Off and output 0"]
+    #[doc = "Off and output 0."]
     TX_SEL_0 = 0x0,
-    #[doc = "Feed-through SPDIFIN"]
+    #[doc = "Feed-through SPDIFIN."]
     TX_SEL_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
     _RESERVED_4 = 0x04,
-    #[doc = "Tx Normal operation"]
+    #[doc = "Tx Normal operation."]
     TX_SEL_5 = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -567,12 +567,12 @@ impl From<TxSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum UsrcSel {
-    #[doc = "No embedded U channel"]
+    #[doc = "No embedded U channel."]
     USRC_SEL_0 = 0x0,
-    #[doc = "U channel from SPDIF receive block (CD mode)"]
+    #[doc = "U channel from SPDIF receive block (CD mode)."]
     USRC_SEL_1 = 0x01,
     _RESERVED_2 = 0x02,
-    #[doc = "U channel from on chip transmitter"]
+    #[doc = "U channel from on chip transmitter."]
     USRC_SEL_3 = 0x03,
 }
 impl UsrcSel {
@@ -601,9 +601,9 @@ impl From<UsrcSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum UsyncMode {
-    #[doc = "Non-CD data"]
+    #[doc = "Non-CD data."]
     USYNC_MODE_0 = 0x0,
-    #[doc = "CD user channel subcode"]
+    #[doc = "CD user channel subcode."]
     USYNC_MODE_1 = 0x01,
 }
 impl UsyncMode {
@@ -632,9 +632,9 @@ impl From<UsyncMode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ValCtrl {
-    #[doc = "Outgoing Validity always set"]
+    #[doc = "Outgoing Validity always set."]
     VAL_CTRL_0 = 0x0,
-    #[doc = "Outgoing Validity always clear"]
+    #[doc = "Outgoing Validity always clear."]
     VAL_CTRL_1 = 0x01,
 }
 impl ValCtrl {

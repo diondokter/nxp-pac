@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LowpwrCtrlClrLpbgSel {
-    #[doc = "Normal power bandgap"]
+    #[doc = "Normal power bandgap."]
     LPBG_SEL_0 = 0x0,
-    #[doc = "Low power bandgap"]
+    #[doc = "Low power bandgap."]
     LPBG_SEL_1 = 0x01,
 }
 impl LowpwrCtrlClrLpbgSel {
@@ -33,9 +33,9 @@ impl From<LowpwrCtrlClrLpbgSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LowpwrCtrlClrOscSel {
-    #[doc = "XTAL OSC"]
+    #[doc = "XTAL OSC."]
     OSC_SEL_0 = 0x0,
-    #[doc = "RC OSC"]
+    #[doc = "RC OSC."]
     OSC_SEL_1 = 0x01,
 }
 impl LowpwrCtrlClrOscSel {
@@ -64,9 +64,9 @@ impl From<LowpwrCtrlClrOscSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LowpwrCtrlClrRcOscEn {
-    #[doc = "Use XTAL OSC to source the 24MHz clock"]
+    #[doc = "Use XTAL OSC to source the 24MHz clock."]
     RC_OSC_EN_0 = 0x0,
-    #[doc = "Use RC OSC"]
+    #[doc = "Use RC OSC."]
     RC_OSC_EN_1 = 0x01,
 }
 impl LowpwrCtrlClrRcOscEn {
@@ -95,13 +95,13 @@ impl From<LowpwrCtrlClrRcOscEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LowpwrCtrlClrXtaloscPwrupDelay {
-    #[doc = "0.25ms"]
+    #[doc = "0.25ms."]
     XTALOSC_PWRUP_DELAY_0 = 0x0,
-    #[doc = "0.5ms"]
+    #[doc = "0.5ms."]
     XTALOSC_PWRUP_DELAY_1 = 0x01,
-    #[doc = "1ms"]
+    #[doc = "1ms."]
     XTALOSC_PWRUP_DELAY_2 = 0x02,
-    #[doc = "2ms"]
+    #[doc = "2ms."]
     XTALOSC_PWRUP_DELAY_3 = 0x03,
 }
 impl LowpwrCtrlClrXtaloscPwrupDelay {
@@ -130,9 +130,9 @@ impl From<LowpwrCtrlClrXtaloscPwrupDelay> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LowpwrCtrlClrXtaloscPwrupStat {
-    #[doc = "Not stable"]
+    #[doc = "Not stable."]
     XTALOSC_PWRUP_STAT_0 = 0x0,
-    #[doc = "Stable and ready to use"]
+    #[doc = "Stable and ready to use."]
     XTALOSC_PWRUP_STAT_1 = 0x01,
 }
 impl LowpwrCtrlClrXtaloscPwrupStat {
@@ -161,9 +161,9 @@ impl From<LowpwrCtrlClrXtaloscPwrupStat> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LowpwrCtrlLpbgSel {
-    #[doc = "Normal power bandgap"]
+    #[doc = "Normal power bandgap."]
     LPBG_SEL_0 = 0x0,
-    #[doc = "Low power bandgap"]
+    #[doc = "Low power bandgap."]
     LPBG_SEL_1 = 0x01,
 }
 impl LowpwrCtrlLpbgSel {
@@ -192,9 +192,9 @@ impl From<LowpwrCtrlLpbgSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LowpwrCtrlOscSel {
-    #[doc = "XTAL OSC"]
+    #[doc = "XTAL OSC."]
     OSC_SEL_0 = 0x0,
-    #[doc = "RC OSC"]
+    #[doc = "RC OSC."]
     OSC_SEL_1 = 0x01,
 }
 impl LowpwrCtrlOscSel {
@@ -223,9 +223,9 @@ impl From<LowpwrCtrlOscSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LowpwrCtrlRcOscEn {
-    #[doc = "Use XTAL OSC to source the 24MHz clock"]
+    #[doc = "Use XTAL OSC to source the 24MHz clock."]
     RC_OSC_EN_0 = 0x0,
-    #[doc = "Use RC OSC"]
+    #[doc = "Use RC OSC."]
     RC_OSC_EN_1 = 0x01,
 }
 impl LowpwrCtrlRcOscEn {
@@ -254,9 +254,9 @@ impl From<LowpwrCtrlRcOscEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LowpwrCtrlSetLpbgSel {
-    #[doc = "Normal power bandgap"]
+    #[doc = "Normal power bandgap."]
     LPBG_SEL_0 = 0x0,
-    #[doc = "Low power bandgap"]
+    #[doc = "Low power bandgap."]
     LPBG_SEL_1 = 0x01,
 }
 impl LowpwrCtrlSetLpbgSel {
@@ -285,9 +285,9 @@ impl From<LowpwrCtrlSetLpbgSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LowpwrCtrlSetOscSel {
-    #[doc = "XTAL OSC"]
+    #[doc = "XTAL OSC."]
     OSC_SEL_0 = 0x0,
-    #[doc = "RC OSC"]
+    #[doc = "RC OSC."]
     OSC_SEL_1 = 0x01,
 }
 impl LowpwrCtrlSetOscSel {
@@ -316,9 +316,9 @@ impl From<LowpwrCtrlSetOscSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LowpwrCtrlSetRcOscEn {
-    #[doc = "Use XTAL OSC to source the 24MHz clock"]
+    #[doc = "Use XTAL OSC to source the 24MHz clock."]
     RC_OSC_EN_0 = 0x0,
-    #[doc = "Use RC OSC"]
+    #[doc = "Use RC OSC."]
     RC_OSC_EN_1 = 0x01,
 }
 impl LowpwrCtrlSetRcOscEn {
@@ -347,13 +347,13 @@ impl From<LowpwrCtrlSetRcOscEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LowpwrCtrlSetXtaloscPwrupDelay {
-    #[doc = "0.25ms"]
+    #[doc = "0.25ms."]
     XTALOSC_PWRUP_DELAY_0 = 0x0,
-    #[doc = "0.5ms"]
+    #[doc = "0.5ms."]
     XTALOSC_PWRUP_DELAY_1 = 0x01,
-    #[doc = "1ms"]
+    #[doc = "1ms."]
     XTALOSC_PWRUP_DELAY_2 = 0x02,
-    #[doc = "2ms"]
+    #[doc = "2ms."]
     XTALOSC_PWRUP_DELAY_3 = 0x03,
 }
 impl LowpwrCtrlSetXtaloscPwrupDelay {
@@ -382,9 +382,9 @@ impl From<LowpwrCtrlSetXtaloscPwrupDelay> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LowpwrCtrlSetXtaloscPwrupStat {
-    #[doc = "Not stable"]
+    #[doc = "Not stable."]
     XTALOSC_PWRUP_STAT_0 = 0x0,
-    #[doc = "Stable and ready to use"]
+    #[doc = "Stable and ready to use."]
     XTALOSC_PWRUP_STAT_1 = 0x01,
 }
 impl LowpwrCtrlSetXtaloscPwrupStat {
@@ -413,9 +413,9 @@ impl From<LowpwrCtrlSetXtaloscPwrupStat> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LowpwrCtrlTogLpbgSel {
-    #[doc = "Normal power bandgap"]
+    #[doc = "Normal power bandgap."]
     LPBG_SEL_0 = 0x0,
-    #[doc = "Low power bandgap"]
+    #[doc = "Low power bandgap."]
     LPBG_SEL_1 = 0x01,
 }
 impl LowpwrCtrlTogLpbgSel {
@@ -444,9 +444,9 @@ impl From<LowpwrCtrlTogLpbgSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LowpwrCtrlTogOscSel {
-    #[doc = "XTAL OSC"]
+    #[doc = "XTAL OSC."]
     OSC_SEL_0 = 0x0,
-    #[doc = "RC OSC"]
+    #[doc = "RC OSC."]
     OSC_SEL_1 = 0x01,
 }
 impl LowpwrCtrlTogOscSel {
@@ -475,9 +475,9 @@ impl From<LowpwrCtrlTogOscSel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LowpwrCtrlTogRcOscEn {
-    #[doc = "Use XTAL OSC to source the 24MHz clock"]
+    #[doc = "Use XTAL OSC to source the 24MHz clock."]
     RC_OSC_EN_0 = 0x0,
-    #[doc = "Use RC OSC"]
+    #[doc = "Use RC OSC."]
     RC_OSC_EN_1 = 0x01,
 }
 impl LowpwrCtrlTogRcOscEn {
@@ -506,13 +506,13 @@ impl From<LowpwrCtrlTogRcOscEn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LowpwrCtrlTogXtaloscPwrupDelay {
-    #[doc = "0.25ms"]
+    #[doc = "0.25ms."]
     XTALOSC_PWRUP_DELAY_0 = 0x0,
-    #[doc = "0.5ms"]
+    #[doc = "0.5ms."]
     XTALOSC_PWRUP_DELAY_1 = 0x01,
-    #[doc = "1ms"]
+    #[doc = "1ms."]
     XTALOSC_PWRUP_DELAY_2 = 0x02,
-    #[doc = "2ms"]
+    #[doc = "2ms."]
     XTALOSC_PWRUP_DELAY_3 = 0x03,
 }
 impl LowpwrCtrlTogXtaloscPwrupDelay {
@@ -541,9 +541,9 @@ impl From<LowpwrCtrlTogXtaloscPwrupDelay> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LowpwrCtrlTogXtaloscPwrupStat {
-    #[doc = "Not stable"]
+    #[doc = "Not stable."]
     XTALOSC_PWRUP_STAT_0 = 0x0,
-    #[doc = "Stable and ready to use"]
+    #[doc = "Stable and ready to use."]
     XTALOSC_PWRUP_STAT_1 = 0x01,
 }
 impl LowpwrCtrlTogXtaloscPwrupStat {
@@ -572,13 +572,13 @@ impl From<LowpwrCtrlTogXtaloscPwrupStat> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LowpwrCtrlXtaloscPwrupDelay {
-    #[doc = "0.25ms"]
+    #[doc = "0.25ms."]
     XTALOSC_PWRUP_DELAY_0 = 0x0,
-    #[doc = "0.5ms"]
+    #[doc = "0.5ms."]
     XTALOSC_PWRUP_DELAY_1 = 0x01,
-    #[doc = "1ms"]
+    #[doc = "1ms."]
     XTALOSC_PWRUP_DELAY_2 = 0x02,
-    #[doc = "2ms"]
+    #[doc = "2ms."]
     XTALOSC_PWRUP_DELAY_3 = 0x03,
 }
 impl LowpwrCtrlXtaloscPwrupDelay {
@@ -607,9 +607,9 @@ impl From<LowpwrCtrlXtaloscPwrupDelay> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LowpwrCtrlXtaloscPwrupStat {
-    #[doc = "Not stable"]
+    #[doc = "Not stable."]
     XTALOSC_PWRUP_STAT_0 = 0x0,
-    #[doc = "Stable and ready to use"]
+    #[doc = "Stable and ready to use."]
     XTALOSC_PWRUP_STAT_1 = 0x01,
 }
 impl LowpwrCtrlXtaloscPwrupStat {
@@ -669,21 +669,21 @@ impl From<Misc0ClkgateCtrl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0ClkgateDelay {
-    #[doc = "0.5ms"]
+    #[doc = "0.5ms."]
     CLKGATE_DELAY_0 = 0x0,
-    #[doc = "1.0ms"]
+    #[doc = "1.0ms."]
     CLKGATE_DELAY_1 = 0x01,
-    #[doc = "2.0ms"]
+    #[doc = "2.0ms."]
     CLKGATE_DELAY_2 = 0x02,
-    #[doc = "3.0ms"]
+    #[doc = "3.0ms."]
     CLKGATE_DELAY_3 = 0x03,
-    #[doc = "4.0ms"]
+    #[doc = "4.0ms."]
     CLKGATE_DELAY_4 = 0x04,
-    #[doc = "5.0ms"]
+    #[doc = "5.0ms."]
     CLKGATE_DELAY_5 = 0x05,
-    #[doc = "6.0ms"]
+    #[doc = "6.0ms."]
     CLKGATE_DELAY_6 = 0x06,
-    #[doc = "7.0ms"]
+    #[doc = "7.0ms."]
     CLKGATE_DELAY_7 = 0x07,
 }
 impl Misc0ClkgateDelay {
@@ -743,21 +743,21 @@ impl From<Misc0ClrClkgateCtrl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0ClrClkgateDelay {
-    #[doc = "0.5ms"]
+    #[doc = "0.5ms."]
     CLKGATE_DELAY_0 = 0x0,
-    #[doc = "1.0ms"]
+    #[doc = "1.0ms."]
     CLKGATE_DELAY_1 = 0x01,
-    #[doc = "2.0ms"]
+    #[doc = "2.0ms."]
     CLKGATE_DELAY_2 = 0x02,
-    #[doc = "3.0ms"]
+    #[doc = "3.0ms."]
     CLKGATE_DELAY_3 = 0x03,
-    #[doc = "4.0ms"]
+    #[doc = "4.0ms."]
     CLKGATE_DELAY_4 = 0x04,
-    #[doc = "5.0ms"]
+    #[doc = "5.0ms."]
     CLKGATE_DELAY_5 = 0x05,
-    #[doc = "6.0ms"]
+    #[doc = "6.0ms."]
     CLKGATE_DELAY_6 = 0x06,
-    #[doc = "7.0ms"]
+    #[doc = "7.0ms."]
     CLKGATE_DELAY_7 = 0x07,
 }
 impl Misc0ClrClkgateDelay {
@@ -786,9 +786,9 @@ impl From<Misc0ClrClkgateDelay> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0ClrDisconHighSnvs {
-    #[doc = "Turn on the switch"]
+    #[doc = "Turn on the switch."]
     DISCON_HIGH_SNVS_0 = 0x0,
-    #[doc = "Turn off the switch"]
+    #[doc = "Turn off the switch."]
     DISCON_HIGH_SNVS_1 = 0x01,
 }
 impl Misc0ClrDisconHighSnvs {
@@ -817,13 +817,13 @@ impl From<Misc0ClrDisconHighSnvs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0ClrOscI {
-    #[doc = "Nominal"]
+    #[doc = "Nominal."]
     NOMINAL = 0x0,
-    #[doc = "Decrease current by 12.5%"]
+    #[doc = "Decrease current by 12.5%."]
     MINUS_12_5_PERCENT = 0x01,
-    #[doc = "Decrease current by 25.0%"]
+    #[doc = "Decrease current by 25.0%."]
     MINUS_25_PERCENT = 0x02,
-    #[doc = "Decrease current by 37.5%"]
+    #[doc = "Decrease current by 37.5%."]
     MINUS_37_5_PERCENT = 0x03,
 }
 impl Misc0ClrOscI {
@@ -852,7 +852,7 @@ impl From<Misc0ClrOscI> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0ClrReftopSelfbiasoff {
-    #[doc = "Uses coarse bias currents for startup"]
+    #[doc = "Uses coarse bias currents for startup."]
     REFTOP_SELFBIASOFF_0 = 0x0,
     #[doc = "Uses bandgap-based bias currents for best performance."]
     REFTOP_SELFBIASOFF_1 = 0x01,
@@ -883,21 +883,21 @@ impl From<Misc0ClrReftopSelfbiasoff> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0ClrReftopVbgadj {
-    #[doc = "Nominal VBG"]
+    #[doc = "Nominal VBG."]
     REFTOP_VBGADJ_0 = 0x0,
-    #[doc = "VBG+0.78%"]
+    #[doc = "VBG+0.78%."]
     REFTOP_VBGADJ_1 = 0x01,
-    #[doc = "VBG+1.56%"]
+    #[doc = "VBG+1.56%."]
     REFTOP_VBGADJ_2 = 0x02,
-    #[doc = "VBG+2.34%"]
+    #[doc = "VBG+2.34%."]
     REFTOP_VBGADJ_3 = 0x03,
-    #[doc = "VBG-0.78%"]
+    #[doc = "VBG-0.78%."]
     REFTOP_VBGADJ_4 = 0x04,
-    #[doc = "VBG-1.56%"]
+    #[doc = "VBG-1.56%."]
     REFTOP_VBGADJ_5 = 0x05,
-    #[doc = "VBG-2.34%"]
+    #[doc = "VBG-2.34%."]
     REFTOP_VBGADJ_6 = 0x06,
-    #[doc = "VBG-3.12%"]
+    #[doc = "VBG-3.12%."]
     REFTOP_VBGADJ_7 = 0x07,
 }
 impl Misc0ClrReftopVbgadj {
@@ -926,9 +926,9 @@ impl From<Misc0ClrReftopVbgadj> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0ClrRtcXtalSource {
-    #[doc = "Internal ring oscillator"]
+    #[doc = "Internal ring oscillator."]
     RTC_XTAL_SOURCE_0 = 0x0,
-    #[doc = "RTC_XTAL"]
+    #[doc = "RTC_XTAL."]
     RTC_XTAL_SOURCE_1 = 0x01,
 }
 impl Misc0ClrRtcXtalSource {
@@ -957,9 +957,9 @@ impl From<Misc0ClrRtcXtalSource> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0ClrStopModeConfig {
-    #[doc = "All analog except rtc powered down on stop mode assertion. XtalOsc=on, RCOsc=off;"]
+    #[doc = "All analog except rtc powered down on stop mode assertion. XtalOsc=on, RCOsc=off;."]
     STOP_MODE_CONFIG_0 = 0x0,
-    #[doc = "Certain analog functions such as certain regulators left up. XtalOsc=on, RCOsc=off;"]
+    #[doc = "Certain analog functions such as certain regulators left up. XtalOsc=on, RCOsc=off;."]
     STOP_MODE_CONFIG_1 = 0x01,
     #[doc = "XtalOsc=off, RCOsc=on, Old BG=on, New BG=off."]
     STOP_MODE_CONFIG_2 = 0x02,
@@ -992,9 +992,9 @@ impl From<Misc0ClrStopModeConfig> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0ClrVidPllPrediv {
-    #[doc = "Divide by 1"]
+    #[doc = "Divide by 1."]
     VID_PLL_PREDIV_0 = 0x0,
-    #[doc = "Divide by 2"]
+    #[doc = "Divide by 2."]
     VID_PLL_PREDIV_1 = 0x01,
 }
 impl Misc0ClrVidPllPrediv {
@@ -1023,9 +1023,9 @@ impl From<Misc0ClrVidPllPrediv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0DisconHighSnvs {
-    #[doc = "Turn on the switch"]
+    #[doc = "Turn on the switch."]
     DISCON_HIGH_SNVS_0 = 0x0,
-    #[doc = "Turn off the switch"]
+    #[doc = "Turn off the switch."]
     DISCON_HIGH_SNVS_1 = 0x01,
 }
 impl Misc0DisconHighSnvs {
@@ -1054,13 +1054,13 @@ impl From<Misc0DisconHighSnvs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0OscI {
-    #[doc = "Nominal"]
+    #[doc = "Nominal."]
     NOMINAL = 0x0,
-    #[doc = "Decrease current by 12.5%"]
+    #[doc = "Decrease current by 12.5%."]
     MINUS_12_5_PERCENT = 0x01,
-    #[doc = "Decrease current by 25.0%"]
+    #[doc = "Decrease current by 25.0%."]
     MINUS_25_PERCENT = 0x02,
-    #[doc = "Decrease current by 37.5%"]
+    #[doc = "Decrease current by 37.5%."]
     MINUS_37_5_PERCENT = 0x03,
 }
 impl Misc0OscI {
@@ -1089,7 +1089,7 @@ impl From<Misc0OscI> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0ReftopSelfbiasoff {
-    #[doc = "Uses coarse bias currents for startup"]
+    #[doc = "Uses coarse bias currents for startup."]
     REFTOP_SELFBIASOFF_0 = 0x0,
     #[doc = "Uses bandgap-based bias currents for best performance."]
     REFTOP_SELFBIASOFF_1 = 0x01,
@@ -1120,21 +1120,21 @@ impl From<Misc0ReftopSelfbiasoff> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0ReftopVbgadj {
-    #[doc = "Nominal VBG"]
+    #[doc = "Nominal VBG."]
     REFTOP_VBGADJ_0 = 0x0,
-    #[doc = "VBG+0.78%"]
+    #[doc = "VBG+0.78%."]
     REFTOP_VBGADJ_1 = 0x01,
-    #[doc = "VBG+1.56%"]
+    #[doc = "VBG+1.56%."]
     REFTOP_VBGADJ_2 = 0x02,
-    #[doc = "VBG+2.34%"]
+    #[doc = "VBG+2.34%."]
     REFTOP_VBGADJ_3 = 0x03,
-    #[doc = "VBG-0.78%"]
+    #[doc = "VBG-0.78%."]
     REFTOP_VBGADJ_4 = 0x04,
-    #[doc = "VBG-1.56%"]
+    #[doc = "VBG-1.56%."]
     REFTOP_VBGADJ_5 = 0x05,
-    #[doc = "VBG-2.34%"]
+    #[doc = "VBG-2.34%."]
     REFTOP_VBGADJ_6 = 0x06,
-    #[doc = "VBG-3.12%"]
+    #[doc = "VBG-3.12%."]
     REFTOP_VBGADJ_7 = 0x07,
 }
 impl Misc0ReftopVbgadj {
@@ -1163,9 +1163,9 @@ impl From<Misc0ReftopVbgadj> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0RtcXtalSource {
-    #[doc = "Internal ring oscillator"]
+    #[doc = "Internal ring oscillator."]
     RTC_XTAL_SOURCE_0 = 0x0,
-    #[doc = "RTC_XTAL"]
+    #[doc = "RTC_XTAL."]
     RTC_XTAL_SOURCE_1 = 0x01,
 }
 impl Misc0RtcXtalSource {
@@ -1225,21 +1225,21 @@ impl From<Misc0SetClkgateCtrl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0SetClkgateDelay {
-    #[doc = "0.5ms"]
+    #[doc = "0.5ms."]
     CLKGATE_DELAY_0 = 0x0,
-    #[doc = "1.0ms"]
+    #[doc = "1.0ms."]
     CLKGATE_DELAY_1 = 0x01,
-    #[doc = "2.0ms"]
+    #[doc = "2.0ms."]
     CLKGATE_DELAY_2 = 0x02,
-    #[doc = "3.0ms"]
+    #[doc = "3.0ms."]
     CLKGATE_DELAY_3 = 0x03,
-    #[doc = "4.0ms"]
+    #[doc = "4.0ms."]
     CLKGATE_DELAY_4 = 0x04,
-    #[doc = "5.0ms"]
+    #[doc = "5.0ms."]
     CLKGATE_DELAY_5 = 0x05,
-    #[doc = "6.0ms"]
+    #[doc = "6.0ms."]
     CLKGATE_DELAY_6 = 0x06,
-    #[doc = "7.0ms"]
+    #[doc = "7.0ms."]
     CLKGATE_DELAY_7 = 0x07,
 }
 impl Misc0SetClkgateDelay {
@@ -1268,9 +1268,9 @@ impl From<Misc0SetClkgateDelay> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0SetDisconHighSnvs {
-    #[doc = "Turn on the switch"]
+    #[doc = "Turn on the switch."]
     DISCON_HIGH_SNVS_0 = 0x0,
-    #[doc = "Turn off the switch"]
+    #[doc = "Turn off the switch."]
     DISCON_HIGH_SNVS_1 = 0x01,
 }
 impl Misc0SetDisconHighSnvs {
@@ -1299,13 +1299,13 @@ impl From<Misc0SetDisconHighSnvs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0SetOscI {
-    #[doc = "Nominal"]
+    #[doc = "Nominal."]
     NOMINAL = 0x0,
-    #[doc = "Decrease current by 12.5%"]
+    #[doc = "Decrease current by 12.5%."]
     MINUS_12_5_PERCENT = 0x01,
-    #[doc = "Decrease current by 25.0%"]
+    #[doc = "Decrease current by 25.0%."]
     MINUS_25_PERCENT = 0x02,
-    #[doc = "Decrease current by 37.5%"]
+    #[doc = "Decrease current by 37.5%."]
     MINUS_37_5_PERCENT = 0x03,
 }
 impl Misc0SetOscI {
@@ -1334,7 +1334,7 @@ impl From<Misc0SetOscI> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0SetReftopSelfbiasoff {
-    #[doc = "Uses coarse bias currents for startup"]
+    #[doc = "Uses coarse bias currents for startup."]
     REFTOP_SELFBIASOFF_0 = 0x0,
     #[doc = "Uses bandgap-based bias currents for best performance."]
     REFTOP_SELFBIASOFF_1 = 0x01,
@@ -1365,21 +1365,21 @@ impl From<Misc0SetReftopSelfbiasoff> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0SetReftopVbgadj {
-    #[doc = "Nominal VBG"]
+    #[doc = "Nominal VBG."]
     REFTOP_VBGADJ_0 = 0x0,
-    #[doc = "VBG+0.78%"]
+    #[doc = "VBG+0.78%."]
     REFTOP_VBGADJ_1 = 0x01,
-    #[doc = "VBG+1.56%"]
+    #[doc = "VBG+1.56%."]
     REFTOP_VBGADJ_2 = 0x02,
-    #[doc = "VBG+2.34%"]
+    #[doc = "VBG+2.34%."]
     REFTOP_VBGADJ_3 = 0x03,
-    #[doc = "VBG-0.78%"]
+    #[doc = "VBG-0.78%."]
     REFTOP_VBGADJ_4 = 0x04,
-    #[doc = "VBG-1.56%"]
+    #[doc = "VBG-1.56%."]
     REFTOP_VBGADJ_5 = 0x05,
-    #[doc = "VBG-2.34%"]
+    #[doc = "VBG-2.34%."]
     REFTOP_VBGADJ_6 = 0x06,
-    #[doc = "VBG-3.12%"]
+    #[doc = "VBG-3.12%."]
     REFTOP_VBGADJ_7 = 0x07,
 }
 impl Misc0SetReftopVbgadj {
@@ -1408,9 +1408,9 @@ impl From<Misc0SetReftopVbgadj> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0SetRtcXtalSource {
-    #[doc = "Internal ring oscillator"]
+    #[doc = "Internal ring oscillator."]
     RTC_XTAL_SOURCE_0 = 0x0,
-    #[doc = "RTC_XTAL"]
+    #[doc = "RTC_XTAL."]
     RTC_XTAL_SOURCE_1 = 0x01,
 }
 impl Misc0SetRtcXtalSource {
@@ -1439,9 +1439,9 @@ impl From<Misc0SetRtcXtalSource> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0SetStopModeConfig {
-    #[doc = "All analog except rtc powered down on stop mode assertion. XtalOsc=on, RCOsc=off;"]
+    #[doc = "All analog except rtc powered down on stop mode assertion. XtalOsc=on, RCOsc=off;."]
     STOP_MODE_CONFIG_0 = 0x0,
-    #[doc = "Certain analog functions such as certain regulators left up. XtalOsc=on, RCOsc=off;"]
+    #[doc = "Certain analog functions such as certain regulators left up. XtalOsc=on, RCOsc=off;."]
     STOP_MODE_CONFIG_1 = 0x01,
     #[doc = "XtalOsc=off, RCOsc=on, Old BG=on, New BG=off."]
     STOP_MODE_CONFIG_2 = 0x02,
@@ -1474,9 +1474,9 @@ impl From<Misc0SetStopModeConfig> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0SetVidPllPrediv {
-    #[doc = "Divide by 1"]
+    #[doc = "Divide by 1."]
     VID_PLL_PREDIV_0 = 0x0,
-    #[doc = "Divide by 2"]
+    #[doc = "Divide by 2."]
     VID_PLL_PREDIV_1 = 0x01,
 }
 impl Misc0SetVidPllPrediv {
@@ -1505,9 +1505,9 @@ impl From<Misc0SetVidPllPrediv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0StopModeConfig {
-    #[doc = "All analog except rtc powered down on stop mode assertion. XtalOsc=on, RCOsc=off;"]
+    #[doc = "All analog except rtc powered down on stop mode assertion. XtalOsc=on, RCOsc=off;."]
     STOP_MODE_CONFIG_0 = 0x0,
-    #[doc = "Certain analog functions such as certain regulators left up. XtalOsc=on, RCOsc=off;"]
+    #[doc = "Certain analog functions such as certain regulators left up. XtalOsc=on, RCOsc=off;."]
     STOP_MODE_CONFIG_1 = 0x01,
     #[doc = "XtalOsc=off, RCOsc=on, Old BG=on, New BG=off."]
     STOP_MODE_CONFIG_2 = 0x02,
@@ -1571,21 +1571,21 @@ impl From<Misc0TogClkgateCtrl> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0TogClkgateDelay {
-    #[doc = "0.5ms"]
+    #[doc = "0.5ms."]
     CLKGATE_DELAY_0 = 0x0,
-    #[doc = "1.0ms"]
+    #[doc = "1.0ms."]
     CLKGATE_DELAY_1 = 0x01,
-    #[doc = "2.0ms"]
+    #[doc = "2.0ms."]
     CLKGATE_DELAY_2 = 0x02,
-    #[doc = "3.0ms"]
+    #[doc = "3.0ms."]
     CLKGATE_DELAY_3 = 0x03,
-    #[doc = "4.0ms"]
+    #[doc = "4.0ms."]
     CLKGATE_DELAY_4 = 0x04,
-    #[doc = "5.0ms"]
+    #[doc = "5.0ms."]
     CLKGATE_DELAY_5 = 0x05,
-    #[doc = "6.0ms"]
+    #[doc = "6.0ms."]
     CLKGATE_DELAY_6 = 0x06,
-    #[doc = "7.0ms"]
+    #[doc = "7.0ms."]
     CLKGATE_DELAY_7 = 0x07,
 }
 impl Misc0TogClkgateDelay {
@@ -1614,9 +1614,9 @@ impl From<Misc0TogClkgateDelay> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0TogDisconHighSnvs {
-    #[doc = "Turn on the switch"]
+    #[doc = "Turn on the switch."]
     DISCON_HIGH_SNVS_0 = 0x0,
-    #[doc = "Turn off the switch"]
+    #[doc = "Turn off the switch."]
     DISCON_HIGH_SNVS_1 = 0x01,
 }
 impl Misc0TogDisconHighSnvs {
@@ -1645,13 +1645,13 @@ impl From<Misc0TogDisconHighSnvs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0TogOscI {
-    #[doc = "Nominal"]
+    #[doc = "Nominal."]
     NOMINAL = 0x0,
-    #[doc = "Decrease current by 12.5%"]
+    #[doc = "Decrease current by 12.5%."]
     MINUS_12_5_PERCENT = 0x01,
-    #[doc = "Decrease current by 25.0%"]
+    #[doc = "Decrease current by 25.0%."]
     MINUS_25_PERCENT = 0x02,
-    #[doc = "Decrease current by 37.5%"]
+    #[doc = "Decrease current by 37.5%."]
     MINUS_37_5_PERCENT = 0x03,
 }
 impl Misc0TogOscI {
@@ -1680,7 +1680,7 @@ impl From<Misc0TogOscI> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0TogReftopSelfbiasoff {
-    #[doc = "Uses coarse bias currents for startup"]
+    #[doc = "Uses coarse bias currents for startup."]
     REFTOP_SELFBIASOFF_0 = 0x0,
     #[doc = "Uses bandgap-based bias currents for best performance."]
     REFTOP_SELFBIASOFF_1 = 0x01,
@@ -1711,21 +1711,21 @@ impl From<Misc0TogReftopSelfbiasoff> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0TogReftopVbgadj {
-    #[doc = "Nominal VBG"]
+    #[doc = "Nominal VBG."]
     REFTOP_VBGADJ_0 = 0x0,
-    #[doc = "VBG+0.78%"]
+    #[doc = "VBG+0.78%."]
     REFTOP_VBGADJ_1 = 0x01,
-    #[doc = "VBG+1.56%"]
+    #[doc = "VBG+1.56%."]
     REFTOP_VBGADJ_2 = 0x02,
-    #[doc = "VBG+2.34%"]
+    #[doc = "VBG+2.34%."]
     REFTOP_VBGADJ_3 = 0x03,
-    #[doc = "VBG-0.78%"]
+    #[doc = "VBG-0.78%."]
     REFTOP_VBGADJ_4 = 0x04,
-    #[doc = "VBG-1.56%"]
+    #[doc = "VBG-1.56%."]
     REFTOP_VBGADJ_5 = 0x05,
-    #[doc = "VBG-2.34%"]
+    #[doc = "VBG-2.34%."]
     REFTOP_VBGADJ_6 = 0x06,
-    #[doc = "VBG-3.12%"]
+    #[doc = "VBG-3.12%."]
     REFTOP_VBGADJ_7 = 0x07,
 }
 impl Misc0TogReftopVbgadj {
@@ -1754,9 +1754,9 @@ impl From<Misc0TogReftopVbgadj> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0TogRtcXtalSource {
-    #[doc = "Internal ring oscillator"]
+    #[doc = "Internal ring oscillator."]
     RTC_XTAL_SOURCE_0 = 0x0,
-    #[doc = "RTC_XTAL"]
+    #[doc = "RTC_XTAL."]
     RTC_XTAL_SOURCE_1 = 0x01,
 }
 impl Misc0TogRtcXtalSource {
@@ -1785,9 +1785,9 @@ impl From<Misc0TogRtcXtalSource> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0TogStopModeConfig {
-    #[doc = "All analog except rtc powered down on stop mode assertion. XtalOsc=on, RCOsc=off;"]
+    #[doc = "All analog except rtc powered down on stop mode assertion. XtalOsc=on, RCOsc=off;."]
     STOP_MODE_CONFIG_0 = 0x0,
-    #[doc = "Certain analog functions such as certain regulators left up. XtalOsc=on, RCOsc=off;"]
+    #[doc = "Certain analog functions such as certain regulators left up. XtalOsc=on, RCOsc=off;."]
     STOP_MODE_CONFIG_1 = 0x01,
     #[doc = "XtalOsc=off, RCOsc=on, Old BG=on, New BG=off."]
     STOP_MODE_CONFIG_2 = 0x02,
@@ -1820,9 +1820,9 @@ impl From<Misc0TogStopModeConfig> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0TogVidPllPrediv {
-    #[doc = "Divide by 1"]
+    #[doc = "Divide by 1."]
     VID_PLL_PREDIV_0 = 0x0,
-    #[doc = "Divide by 2"]
+    #[doc = "Divide by 2."]
     VID_PLL_PREDIV_1 = 0x01,
 }
 impl Misc0TogVidPllPrediv {
@@ -1851,9 +1851,9 @@ impl From<Misc0TogVidPllPrediv> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Misc0VidPllPrediv {
-    #[doc = "Divide by 1"]
+    #[doc = "Divide by 1."]
     VID_PLL_PREDIV_0 = 0x0,
-    #[doc = "Divide by 2"]
+    #[doc = "Divide by 2."]
     VID_PLL_PREDIV_1 = 0x01,
 }
 impl Misc0VidPllPrediv {

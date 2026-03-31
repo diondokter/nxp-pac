@@ -126,13 +126,13 @@ impl From<Gem> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mode {
-    #[doc = "Operating in Normal mode (NRM)"]
+    #[doc = "Operating in Normal mode (NRM)."]
     MODE_0 = 0x0,
-    #[doc = "Unused (reserved)"]
+    #[doc = "Unused (reserved)."]
     MODE_1 = 0x01,
-    #[doc = "Unused (reserved)"]
+    #[doc = "Unused (reserved)."]
     MODE_2 = 0x02,
-    #[doc = "Operating in Logically Disabled Mode (LDM)"]
+    #[doc = "Operating in Logically Disabled Mode (LDM)."]
     MODE_3 = 0x03,
 }
 impl Mode {

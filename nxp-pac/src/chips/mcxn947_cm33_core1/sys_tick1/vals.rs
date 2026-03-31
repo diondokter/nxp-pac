@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Clksource {
-    #[doc = "external clock"]
+    #[doc = "external clock."]
     EXTERNAL_CLOCK = 0x0,
-    #[doc = "processor clock"]
+    #[doc = "processor clock."]
     PROCESSOR_CLOCK = 0x01,
 }
 impl Clksource {
@@ -33,9 +33,9 @@ impl From<Clksource> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Enable {
-    #[doc = "counter disabled"]
+    #[doc = "counter disabled."]
     COUNTER_DISABLED = 0x0,
-    #[doc = "counter enabled"]
+    #[doc = "counter enabled."]
     COUNTER_ENABLED = 0x01,
 }
 impl Enable {
@@ -64,9 +64,9 @@ impl From<Enable> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Noref {
-    #[doc = "The alternative reference clock is provided"]
+    #[doc = "The alternative reference clock is provided."]
     CLOCK_PROVIDED = 0x0,
-    #[doc = "The alternative reference clock is not provided"]
+    #[doc = "The alternative reference clock is not provided."]
     CLOCK_DISABLED = 0x01,
 }
 impl Noref {
@@ -95,9 +95,9 @@ impl From<Noref> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Skew {
-    #[doc = "10ms calibration value is exact"]
+    #[doc = "10ms calibration value is exact."]
     EXACT_VALUE = 0x0,
-    #[doc = "10ms calibration value is inexact, because of the clock frequency"]
+    #[doc = "10ms calibration value is inexact, because of the clock frequency."]
     INEXACT_VALUE = 0x01,
 }
 impl Skew {
@@ -126,9 +126,9 @@ impl From<Skew> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tickint {
-    #[doc = "counting down to 0 does not assert the SysTick exception request"]
+    #[doc = "counting down to 0 does not assert the SysTick exception request."]
     INTERRUPT_DISABLED = 0x0,
-    #[doc = "counting down to 0 asserts the SysTick exception request"]
+    #[doc = "counting down to 0 asserts the SysTick exception request."]
     INTERRUPT_ENABLED = 0x01,
 }
 impl Tickint {

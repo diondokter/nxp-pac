@@ -2,9 +2,9 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dir {
-    #[doc = "Down direction"]
+    #[doc = "Down direction."]
     DOWN = 0x0,
-    #[doc = "Up direction"]
+    #[doc = "Up direction."]
     UP = 0x01,
 }
 impl Dir {
@@ -33,9 +33,9 @@ impl From<Dir> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Hip {
-    #[doc = "No action"]
+    #[doc = "No action."]
     NOACTION = 0x0,
-    #[doc = "HOME signal initializes the position counter"]
+    #[doc = "HOME signal initializes the position counter."]
     HOME = 0x01,
 }
 impl Hip {
@@ -64,9 +64,9 @@ impl From<Hip> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Hirq {
-    #[doc = "Not occurred"]
+    #[doc = "Not occurred."]
     NOTRANS = 0x0,
-    #[doc = "Occurred"]
+    #[doc = "Occurred."]
     TRANSI = 0x01,
 }
 impl Hirq {
@@ -95,9 +95,9 @@ impl From<Hirq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Hne {
-    #[doc = "Use positive-going edge-to-trigger initialization of position counters UPOS and LPOS"]
+    #[doc = "Use positive-going edge-to-trigger initialization of position counters UPOS and LPOS."]
     POS = 0x0,
-    #[doc = "Use negative-going edge-to-trigger initialization of position counters UPOS and LPOS"]
+    #[doc = "Use negative-going edge-to-trigger initialization of position counters UPOS and LPOS."]
     NEG = 0x01,
 }
 impl Hne {
@@ -126,9 +126,9 @@ impl From<Hne> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Outctl {
-    #[doc = "POSMATCH pulses when a match occurs between the position counters (POS) and the corresponding compare value (COMP )"]
+    #[doc = "POSMATCH pulses when a match occurs between the position counters (POS) and the corresponding compare value (COMP )."]
     COMPARE = 0x0,
-    #[doc = "POSMATCH pulses when the UPOS, LPOS, REV, or POSD registers are read"]
+    #[doc = "POSMATCH pulses when the UPOS, LPOS, REV, or POSD registers are read."]
     READ = 0x01,
 }
 impl Outctl {
@@ -188,9 +188,9 @@ impl From<Ph1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Qdn {
-    #[doc = "Positive quadrature decoder signal"]
+    #[doc = "Positive quadrature decoder signal."]
     POSITIVE = 0x0,
-    #[doc = "Negative quadrature decoder signal"]
+    #[doc = "Negative quadrature decoder signal."]
     NEGATIVE = 0x01,
 }
 impl Qdn {
@@ -219,9 +219,9 @@ impl From<Qdn> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rev {
-    #[doc = "Counts normally"]
+    #[doc = "Counts normally."]
     NORMAL = 0x0,
-    #[doc = "Counts in the reverse direction"]
+    #[doc = "Counts in the reverse direction."]
     REVERSE = 0x01,
 }
 impl Rev {
@@ -250,9 +250,9 @@ impl From<Rev> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Revmod {
-    #[doc = "Use INDEX pulse"]
+    #[doc = "Use INDEX pulse."]
     INDEX = 0x0,
-    #[doc = "Use modulus counting roll-over or roll-under"]
+    #[doc = "Use modulus counting roll-over or roll-under."]
     COUNT = 0x01,
 }
 impl Revmod {
@@ -281,9 +281,9 @@ impl From<Revmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Swip {
-    #[doc = "No action"]
+    #[doc = "No action."]
     NOACTION = 0x0,
-    #[doc = "Initialize position counter"]
+    #[doc = "Initialize position counter."]
     INIT = 0x01,
 }
 impl Swip {
@@ -312,9 +312,9 @@ impl From<Swip> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Updpos {
-    #[doc = "No action"]
+    #[doc = "No action."]
     NOACTION = 0x0,
-    #[doc = "Clear"]
+    #[doc = "Clear."]
     CLEAR = 0x01,
 }
 impl Updpos {
@@ -343,9 +343,9 @@ impl From<Updpos> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Xirq {
-    #[doc = "Not occurred"]
+    #[doc = "Not occurred."]
     NOIND = 0x0,
-    #[doc = "Occurred"]
+    #[doc = "Occurred."]
     INDEX = 0x01,
 }
 impl Xirq {
@@ -374,9 +374,9 @@ impl From<Xirq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Xne {
-    #[doc = "Use positive edge"]
+    #[doc = "Use positive edge."]
     XNE_0 = 0x0,
-    #[doc = "Use negative edge"]
+    #[doc = "Use negative edge."]
     XNE_1 = 0x01,
 }
 impl Xne {

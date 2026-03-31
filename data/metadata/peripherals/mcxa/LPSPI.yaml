@@ -1,0 +1,802 @@
+block/LPSPI:
+  description: Low-Power Serial Peripheral Interface.
+  items:
+  - name: VERID
+    description: Version ID.
+    byte_offset: 0
+    access: Read
+    fieldset: VERID
+  - name: PARAM
+    description: Parameter.
+    byte_offset: 4
+    access: Read
+    fieldset: PARAM
+  - name: CR
+    description: Control.
+    byte_offset: 16
+    fieldset: CR
+  - name: SR
+    description: Status.
+    byte_offset: 20
+    fieldset: SR
+  - name: IER
+    description: Interrupt Enable.
+    byte_offset: 24
+    fieldset: IER
+  - name: DER
+    description: DMA Enable.
+    byte_offset: 28
+    fieldset: DER
+  - name: CFGR0
+    description: Configuration 0.
+    byte_offset: 32
+    fieldset: CFGR0
+  - name: CFGR1
+    description: Configuration 1.
+    byte_offset: 36
+    fieldset: CFGR1
+  - name: DMR0
+    description: Data Match 0.
+    byte_offset: 48
+    fieldset: DMR0
+  - name: DMR1
+    description: Data Match 1.
+    byte_offset: 52
+    fieldset: DMR1
+  - name: CCR
+    description: Clock Configuration.
+    byte_offset: 64
+    fieldset: CCR
+  - name: CCR1
+    description: Clock Configuration 1.
+    byte_offset: 68
+    fieldset: CCR1
+  - name: FCR
+    description: FIFO Control.
+    byte_offset: 88
+    fieldset: FCR
+  - name: FSR
+    description: FIFO Status.
+    byte_offset: 92
+    access: Read
+    fieldset: FSR
+  - name: TCR
+    description: Transmit Command.
+    byte_offset: 96
+    fieldset: TCR
+  - name: TDR
+    description: Transmit Data.
+    byte_offset: 100
+    access: Write
+    fieldset: TDR
+  - name: RSR
+    description: Receive Status.
+    byte_offset: 112
+    access: Read
+    fieldset: RSR
+  - name: RDR
+    description: Receive Data.
+    byte_offset: 116
+    access: Read
+    fieldset: RDR
+  - name: RDROR
+    description: Receive Data Read Only.
+    byte_offset: 120
+    access: Read
+    fieldset: RDROR
+  - name: TCBR
+    description: Transmit Command Burst.
+    byte_offset: 1020
+    access: Write
+    fieldset: TCBR
+  - name: TDBR
+    description: Transmit Data Burst.
+    array:
+      len: 128
+      stride: 4
+    byte_offset: 1024
+    access: Write
+    fieldset: TDBR
+  - name: RDBR
+    description: Receive Data Burst.
+    array:
+      len: 128
+      stride: 4
+    byte_offset: 1536
+    access: Read
+    fieldset: RDBR
+fieldset/CCR:
+  description: Clock Configuration.
+  fields:
+  - name: SCKDIV
+    description: SCK Divider.
+    bit_offset: 0
+    bit_size: 8
+  - name: DBT
+    description: Delay Between Transfers.
+    bit_offset: 8
+    bit_size: 8
+  - name: PCSSCK
+    description: PCS-to-SCK Delay.
+    bit_offset: 16
+    bit_size: 8
+  - name: SCKPCS
+    description: SCK-to-PCS Delay.
+    bit_offset: 24
+    bit_size: 8
+fieldset/CCR1:
+  description: Clock Configuration 1.
+  fields:
+  - name: SCKSET
+    description: SCK Setup.
+    bit_offset: 0
+    bit_size: 8
+  - name: SCKHLD
+    description: SCK Hold.
+    bit_offset: 8
+    bit_size: 8
+  - name: PCSPCS
+    description: PCS to PCS Delay.
+    bit_offset: 16
+    bit_size: 8
+  - name: SCKSCK
+    description: SCK Inter-Frame Delay.
+    bit_offset: 24
+    bit_size: 8
+fieldset/CFGR0:
+  description: Configuration 0.
+  fields:
+  - name: HREN
+    description: Host Request Enable.
+    bit_offset: 0
+    bit_size: 1
+  - name: HRPOL
+    description: Host Request Polarity.
+    bit_offset: 1
+    bit_size: 1
+  - name: HRSEL
+    description: Host Request Select.
+    bit_offset: 2
+    bit_size: 1
+    enum: HRSEL
+  - name: HRDIR
+    description: Host Request Direction.
+    bit_offset: 3
+    bit_size: 1
+    enum: HRDIR
+  - name: CIRFIFO
+    description: Circular FIFO Enable.
+    bit_offset: 8
+    bit_size: 1
+  - name: RDMO
+    description: Receive Data Match Only.
+    bit_offset: 9
+    bit_size: 1
+    enum: RDMO
+fieldset/CFGR1:
+  description: Configuration 1.
+  fields:
+  - name: MASTER
+    description: Controller Mode.
+    bit_offset: 0
+    bit_size: 1
+    enum: MASTER
+  - name: SAMPLE
+    description: Sample Point.
+    bit_offset: 1
+    bit_size: 1
+    enum: SAMPLE
+  - name: AUTOPCS
+    description: Automatic PCS.
+    bit_offset: 2
+    bit_size: 1
+  - name: NOSTALL
+    description: No Stall.
+    bit_offset: 3
+    bit_size: 1
+  - name: PARTIAL
+    description: Partial Enable.
+    bit_offset: 4
+    bit_size: 1
+    enum: PARTIAL
+  - name: PCSPOL
+    description: Peripheral Chip Select Polarity.
+    bit_offset: 8
+    bit_size: 4
+    enum: PCSPOL
+  - name: MATCFG
+    description: Match Configuration.
+    bit_offset: 16
+    bit_size: 3
+    enum: MATCFG
+  - name: PINCFG
+    description: Pin Configuration.
+    bit_offset: 24
+    bit_size: 2
+    enum: PINCFG
+  - name: OUTCFG
+    description: Output Configuration.
+    bit_offset: 26
+    bit_size: 1
+    enum: OUTCFG
+  - name: PCSCFG
+    description: Peripheral Chip Select Configuration.
+    bit_offset: 27
+    bit_size: 1
+    enum: PCSCFG
+fieldset/CR:
+  description: Control.
+  fields:
+  - name: MEN
+    description: Module Enable.
+    bit_offset: 0
+    bit_size: 1
+  - name: RST
+    description: Software Reset.
+    bit_offset: 1
+    bit_size: 1
+  - name: DBGEN
+    description: Debug Enable.
+    bit_offset: 3
+    bit_size: 1
+  - name: RTF
+    description: Reset Transmit FIFO.
+    bit_offset: 8
+    bit_size: 1
+    enum: RTF
+  - name: RRF
+    description: Reset Receive FIFO.
+    bit_offset: 9
+    bit_size: 1
+    enum: RRF
+fieldset/DER:
+  description: DMA Enable.
+  fields:
+  - name: TDDE
+    description: Transmit Data DMA Enable.
+    bit_offset: 0
+    bit_size: 1
+  - name: RDDE
+    description: Receive Data DMA Enable.
+    bit_offset: 1
+    bit_size: 1
+  - name: FCDE
+    description: Frame Complete DMA Enable.
+    bit_offset: 9
+    bit_size: 1
+fieldset/DMR0:
+  description: Data Match 0.
+  fields:
+  - name: MATCH0
+    description: Match 0 Value.
+    bit_offset: 0
+    bit_size: 32
+fieldset/DMR1:
+  description: Data Match 1.
+  fields:
+  - name: MATCH1
+    description: Match 1 Value.
+    bit_offset: 0
+    bit_size: 32
+fieldset/FCR:
+  description: FIFO Control.
+  fields:
+  - name: TXWATER
+    description: Transmit FIFO Watermark.
+    bit_offset: 0
+    bit_size: 2
+  - name: RXWATER
+    description: Receive FIFO Watermark.
+    bit_offset: 16
+    bit_size: 2
+fieldset/FSR:
+  description: FIFO Status.
+  fields:
+  - name: TXCOUNT
+    description: Transmit FIFO Count.
+    bit_offset: 0
+    bit_size: 3
+  - name: RXCOUNT
+    description: Receive FIFO Count.
+    bit_offset: 16
+    bit_size: 3
+fieldset/IER:
+  description: Interrupt Enable.
+  fields:
+  - name: TDIE
+    description: Transmit Data Interrupt Enable.
+    bit_offset: 0
+    bit_size: 1
+  - name: RDIE
+    description: Receive Data Interrupt Enable.
+    bit_offset: 1
+    bit_size: 1
+  - name: WCIE
+    description: Word Complete Interrupt Enable.
+    bit_offset: 8
+    bit_size: 1
+  - name: FCIE
+    description: Frame Complete Interrupt Enable.
+    bit_offset: 9
+    bit_size: 1
+  - name: TCIE
+    description: Transfer Complete Interrupt Enable.
+    bit_offset: 10
+    bit_size: 1
+  - name: TEIE
+    description: Transmit Error Interrupt Enable.
+    bit_offset: 11
+    bit_size: 1
+  - name: REIE
+    description: Receive Error Interrupt Enable.
+    bit_offset: 12
+    bit_size: 1
+  - name: DMIE
+    description: Data Match Interrupt Enable.
+    bit_offset: 13
+    bit_size: 1
+fieldset/PARAM:
+  description: Parameter.
+  fields:
+  - name: TXFIFO
+    description: Transmit FIFO Size.
+    bit_offset: 0
+    bit_size: 8
+  - name: RXFIFO
+    description: Receive FIFO Size.
+    bit_offset: 8
+    bit_size: 8
+  - name: PCSNUM
+    description: PCS Number.
+    bit_offset: 16
+    bit_size: 8
+fieldset/RDBR:
+  description: Receive Data Burst.
+  fields:
+  - name: DATA
+    description: Data.
+    bit_offset: 0
+    bit_size: 32
+fieldset/RDR:
+  description: Receive Data.
+  fields:
+  - name: DATA
+    description: Receive Data.
+    bit_offset: 0
+    bit_size: 32
+fieldset/RDROR:
+  description: Receive Data Read Only.
+  fields:
+  - name: DATA
+    description: Receive Data.
+    bit_offset: 0
+    bit_size: 32
+fieldset/RSR:
+  description: Receive Status.
+  fields:
+  - name: SOF
+    description: Start of Frame.
+    bit_offset: 0
+    bit_size: 1
+    enum: SOF
+  - name: RXEMPTY
+    description: RX FIFO Empty.
+    bit_offset: 1
+    bit_size: 1
+fieldset/SR:
+  description: Status.
+  fields:
+  - name: TDF
+    description: Transmit Data Flag.
+    bit_offset: 0
+    bit_size: 1
+    enum: TDF
+  - name: RDF
+    description: Receive Data Flag.
+    bit_offset: 1
+    bit_size: 1
+  - name: WCF
+    description: Word Complete Flag.
+    bit_offset: 8
+    bit_size: 1
+  - name: FCF
+    description: Frame Complete Flag.
+    bit_offset: 9
+    bit_size: 1
+  - name: TCF
+    description: Transfer Complete Flag.
+    bit_offset: 10
+    bit_size: 1
+  - name: TEF
+    description: Transmit Error Flag.
+    bit_offset: 11
+    bit_size: 1
+  - name: REF
+    description: Receive Error Flag.
+    bit_offset: 12
+    bit_size: 1
+  - name: DMF
+    description: Data Match Flag.
+    bit_offset: 13
+    bit_size: 1
+  - name: MBF
+    description: Module Busy Flag.
+    bit_offset: 24
+    bit_size: 1
+    enum: MBF
+fieldset/TCBR:
+  description: Transmit Command Burst.
+  fields:
+  - name: DATA
+    description: Command Data.
+    bit_offset: 0
+    bit_size: 32
+fieldset/TCR:
+  description: Transmit Command.
+  fields:
+  - name: FRAMESZ
+    description: Frame Size.
+    bit_offset: 0
+    bit_size: 12
+  - name: WIDTH
+    description: Transfer Width.
+    bit_offset: 16
+    bit_size: 2
+    enum: WIDTH
+  - name: TXMSK
+    description: Transmit Data Mask.
+    bit_offset: 18
+    bit_size: 1
+    enum: TXMSK
+  - name: RXMSK
+    description: Receive Data Mask.
+    bit_offset: 19
+    bit_size: 1
+    enum: RXMSK
+  - name: CONTC
+    description: Continuing Command.
+    bit_offset: 20
+    bit_size: 1
+    enum: CONTC
+  - name: CONT
+    description: Continuous Transfer.
+    bit_offset: 21
+    bit_size: 1
+  - name: BYSW
+    description: Byte Swap.
+    bit_offset: 22
+    bit_size: 1
+  - name: LSBF
+    description: LSB First.
+    bit_offset: 23
+    bit_size: 1
+    enum: LSBF
+  - name: PCS
+    description: Peripheral Chip Select.
+    bit_offset: 24
+    bit_size: 2
+    enum: PCS
+  - name: PRESCALE
+    description: Prescaler Value.
+    bit_offset: 27
+    bit_size: 3
+    enum: PRESCALE
+  - name: CPHA
+    description: Clock Phase.
+    bit_offset: 30
+    bit_size: 1
+    enum: CPHA
+  - name: CPOL
+    description: Clock Polarity.
+    bit_offset: 31
+    bit_size: 1
+    enum: CPOL
+fieldset/TDBR:
+  description: Transmit Data Burst.
+  fields:
+  - name: DATA
+    description: Data.
+    bit_offset: 0
+    bit_size: 32
+fieldset/TDR:
+  description: Transmit Data.
+  fields:
+  - name: DATA
+    description: Transmit Data.
+    bit_offset: 0
+    bit_size: 32
+fieldset/VERID:
+  description: Version ID.
+  fields:
+  - name: FEATURE
+    description: Module Identification Number.
+    bit_offset: 0
+    bit_size: 16
+    enum: FEATURE
+  - name: MINOR
+    description: Minor Version Number.
+    bit_offset: 16
+    bit_size: 8
+  - name: MAJOR
+    description: Major Version Number.
+    bit_offset: 24
+    bit_size: 8
+enum/CONTC:
+  bit_size: 1
+  variants:
+  - name: START
+    description: Command word for start of new transfer.
+    value: 0
+  - name: CONTINUE
+    description: Command word for continuing transfer.
+    value: 1
+enum/CPHA:
+  bit_size: 1
+  variants:
+  - name: CAPTURED
+    description: Captured.
+    value: 0
+  - name: CHANGED
+    description: Changed.
+    value: 1
+enum/CPOL:
+  bit_size: 1
+  variants:
+  - name: INACTIVE_LOW
+    description: Inactive low.
+    value: 0
+  - name: INACTIVE_HIGH
+    description: Inactive high.
+    value: 1
+enum/FEATURE:
+  bit_size: 16
+  variants:
+  - name: STANDARD
+    description: Standard feature set supporting a 32-bit shift register.
+    value: 4
+enum/HRDIR:
+  bit_size: 1
+  variants:
+  - name: INPUT
+    description: Input.
+    value: 0
+  - name: OUTPUT
+    description: Output.
+    value: 1
+enum/HRSEL:
+  bit_size: 1
+  variants:
+  - name: HREQPIN
+    description: HREQ pin.
+    value: 0
+  - name: INPUT_TRIGGER
+    description: Input trigger.
+    value: 1
+enum/LSBF:
+  bit_size: 1
+  variants:
+  - name: MSB_FIRST
+    description: MSB first.
+    value: 0
+  - name: LSB_FIRST
+    description: LSB first.
+    value: 1
+enum/MASTER:
+  bit_size: 1
+  variants:
+  - name: SLAVE_MODE
+    description: Peripheral mode.
+    value: 0
+  - name: MASTER_MODE
+    description: Controller mode.
+    value: 1
+enum/MATCFG:
+  bit_size: 3
+  variants:
+  - name: DISABLED
+    description: Match is disabled.
+    value: 0
+  - name: ENABLED_FIRSTDATAMATCH
+    description: Match first data word with compare word.
+    value: 2
+  - name: ENABLED_ANYDATAMATCH
+    description: Match any data word with compare word.
+    value: 3
+  - name: ENABLED_DATAMATCH_100
+    description: Sequential match, first data word.
+    value: 4
+  - name: ENABLED_DATAMATCH_101
+    description: Sequential match, any data word.
+    value: 5
+  - name: ENABLED_DATAMATCH_110
+    description: Match first data word (masked) with compare word (masked).
+    value: 6
+  - name: ENABLED_DATAMATCH_111
+    description: Match any data word (masked) with compare word (masked).
+    value: 7
+enum/MBF:
+  bit_size: 1
+  variants:
+  - name: IDLE
+    description: LPSPI is idle.
+    value: 0
+  - name: BUSY
+    description: LPSPI is busy.
+    value: 1
+enum/OUTCFG:
+  bit_size: 1
+  variants:
+  - name: RETAIN_LASTVALUE
+    description: Retain last value.
+    value: 0
+  - name: TRISTATED
+    description: 3-stated.
+    value: 1
+enum/PARTIAL:
+  bit_size: 1
+  variants:
+  - name: DISCARDED
+    description: Discard.
+    value: 0
+  - name: STORED
+    description: Store.
+    value: 1
+enum/PCS:
+  bit_size: 2
+  variants:
+  - name: TX_PCS0
+    description: Transfer using PCS[0].
+    value: 0
+  - name: TX_PCS1
+    description: Transfer using PCS[1].
+    value: 1
+  - name: TX_PCS2
+    description: Transfer using PCS[2].
+    value: 2
+  - name: TX_PCS3
+    description: Transfer using PCS[3].
+    value: 3
+enum/PCSCFG:
+  bit_size: 1
+  variants:
+  - name: CHIP_SELECT
+    description: PCS[3:2] configured for chip select function.
+    value: 0
+  - name: HALFDUPLEX4BIT
+    description: PCS[3:2] configured for half-duplex 4-bit transfers (PCS[3:2] = DATA[3:2]).
+    value: 1
+enum/PCSPOL:
+  bit_size: 4
+  variants:
+  - name: DISCARDED
+    description: Active low.
+    value: 0
+  - name: STORED
+    description: Active high.
+    value: 1
+enum/PINCFG:
+  bit_size: 2
+  variants:
+  - name: SIN_IN_SOUT_OUT
+    description: SIN is used for input data; SOUT is used for output data.
+    value: 0
+  - name: SIN_BOTH_IN_OUT
+    description: SIN is used for both input and output data; only half-duplex serial transfers are supported.
+    value: 1
+  - name: SOUT_BOTH_IN_OUT
+    description: SOUT is used for both input and output data; only half-duplex serial transfers are supported.
+    value: 2
+  - name: SOUT_IN_SIN_OUT
+    description: SOUT is used for input data; SIN is used for output data.
+    value: 3
+enum/PRESCALE:
+  bit_size: 3
+  variants:
+  - name: DIVIDEBY1
+    description: Divide by 1.
+    value: 0
+  - name: DIVIDEBY2
+    description: Divide by 2.
+    value: 1
+  - name: DIVIDEBY4
+    description: Divide by 4.
+    value: 2
+  - name: DIVIDEBY8
+    description: Divide by 8.
+    value: 3
+  - name: DIVIDEBY16
+    description: Divide by 16.
+    value: 4
+  - name: DIVIDEBY32
+    description: Divide by 32.
+    value: 5
+  - name: DIVIDEBY64
+    description: Divide by 64.
+    value: 6
+  - name: DIVIDEBY128
+    description: Divide by 128.
+    value: 7
+enum/RDMO:
+  bit_size: 1
+  variants:
+  - name: STORED
+    description: Disable.
+    value: 0
+  - name: DISCARDED
+    description: Enable.
+    value: 1
+enum/RRF:
+  bit_size: 1
+  variants:
+  - name: NO_EFFECT
+    description: No effect.
+    value: 0
+  - name: RXFIFO_RST
+    description: Reset.
+    value: 1
+enum/RTF:
+  bit_size: 1
+  variants:
+  - name: NO_EFFECT
+    description: No effect.
+    value: 0
+  - name: TXFIFO_RST
+    description: Reset.
+    value: 1
+enum/RXMSK:
+  bit_size: 1
+  variants:
+  - name: NORMAL
+    description: Normal transfer.
+    value: 0
+  - name: MASK
+    description: Mask receive data.
+    value: 1
+enum/SAMPLE:
+  bit_size: 1
+  variants:
+  - name: ON_SCK_EDGE
+    description: SCK edge.
+    value: 0
+  - name: ON_DELAYED_SCK_EDGE
+    description: Delayed SCK edge.
+    value: 1
+enum/SOF:
+  bit_size: 1
+  variants:
+  - name: NEXT_DATAWORD
+    description: Subsequent data word or RX FIFO is empty (RXEMPTY=1).
+    value: 0
+  - name: FIRST_DATAWORD
+    description: First data word.
+    value: 1
+enum/TDF:
+  bit_size: 1
+  variants:
+  - name: TXDATA_NOT_REQST
+    description: Transmit data not requested.
+    value: 0
+  - name: TXDATA_REQST
+    description: Transmit data requested.
+    value: 1
+enum/TXMSK:
+  bit_size: 1
+  variants:
+  - name: NORMAL
+    description: Normal transfer.
+    value: 0
+  - name: MASK
+    description: Mask transmit data.
+    value: 1
+enum/WIDTH:
+  bit_size: 2
+  variants:
+  - name: ONEBIT
+    description: 1-bit transfer.
+    value: 0
+  - name: TWOBIT
+    description: 2-bit transfer.
+    value: 1
+  - name: FOURBIT
+    description: 4-bit transfer.
+    value: 2

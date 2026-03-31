@@ -1,4 +1,4 @@
-#[doc = "Array of registers: LUT_INP_MUX%s"]
+#[doc = "Array of registers: LUT_INP_MUX%s."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lut {
     ptr: *mut u8,
@@ -14,7 +14,7 @@ impl Lut {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "Input select register for LUTn (0 to 25), Inputx (5 inputs)"]
+    #[doc = "Input select register for LUTn (0 to 25), Inputx (5 inputs)."]
     #[inline(always)]
     pub const fn lut_inp_mux(
         self,
@@ -24,7 +24,7 @@ impl Lut {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize + n * 4usize) as _) }
     }
 }
-#[doc = "Programmable Logic Unit (PLU)"]
+#[doc = "Programmable Logic Unit (PLU)."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Plu0 {
     ptr: *mut u8,
@@ -40,13 +40,13 @@ impl Plu0 {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "Array of registers: LUT_INP_MUX%s"]
+    #[doc = "Array of registers: LUT_INP_MUX%s."]
     #[inline(always)]
     pub const fn lut(self, n: usize) -> Lut {
         assert!(n < 26usize);
         unsafe { Lut::from_ptr(self.ptr.wrapping_add(0x0usize + n * 32usize) as _) }
     }
-    #[doc = "PLU LUT truth table"]
+    #[doc = "PLU LUT truth table."]
     #[inline(always)]
     pub const fn lut_truth(
         self,
@@ -57,17 +57,17 @@ impl Plu0 {
             crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0800usize + n * 4usize) as _)
         }
     }
-    #[doc = "PLU outputs"]
+    #[doc = "PLU outputs."]
     #[inline(always)]
     pub const fn outputs(self) -> crate::common::Reg<regs::Outputs, crate::common::R> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0900usize) as _) }
     }
-    #[doc = "Wakeup interrupt control"]
+    #[doc = "Wakeup interrupt control."]
     #[inline(always)]
     pub const fn wakeint_ctrl(self) -> crate::common::Reg<regs::WakeintCtrl, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0904usize) as _) }
     }
-    #[doc = "PLU output multiplexer"]
+    #[doc = "PLU output multiplexer."]
     #[inline(always)]
     pub const fn output_mux(
         self,

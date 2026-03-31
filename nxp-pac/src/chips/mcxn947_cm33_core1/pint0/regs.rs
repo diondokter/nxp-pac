@@ -1,16 +1,16 @@
-#[doc = "Pin Interrupt Active Level or Falling-Edge Interrupt Clear"]
+#[doc = "Pin Interrupt Active Level or Falling-Edge Interrupt Clear."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cienf(pub u32);
 impl Cienf {
-    #[doc = "Writes 0 to IENF"]
+    #[doc = "Writes 0 to IENF."]
     #[must_use]
     #[inline(always)]
     pub const fn cenaf(&self) -> super::vals::Cenaf {
         let val = (self.0 >> 0usize) & 0xff;
         super::vals::Cenaf::from_bits(val as u8)
     }
-    #[doc = "Writes 0 to IENF"]
+    #[doc = "Writes 0 to IENF."]
     #[inline(always)]
     pub const fn set_cenaf(&mut self, val: super::vals::Cenaf) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val.to_bits() as u32) & 0xff) << 0usize);
@@ -35,19 +35,19 @@ impl defmt::Format for Cienf {
         defmt::write!(f, "Cienf {{ cenaf: {:?} }}", self.cenaf())
     }
 }
-#[doc = "Pin Interrupt Level (Rising-Edge Interrupt) Clear"]
+#[doc = "Pin Interrupt Level (Rising-Edge Interrupt) Clear."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cienr(pub u32);
 impl Cienr {
-    #[doc = "Clear bits in IENR"]
+    #[doc = "Clear bits in IENR."]
     #[must_use]
     #[inline(always)]
     pub const fn cenrl(&self) -> super::vals::Cenrl {
         let val = (self.0 >> 0usize) & 0xff;
         super::vals::Cenrl::from_bits(val as u8)
     }
-    #[doc = "Clear bits in IENR"]
+    #[doc = "Clear bits in IENR."]
     #[inline(always)]
     pub const fn set_cenrl(&mut self, val: super::vals::Cenrl) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val.to_bits() as u32) & 0xff) << 0usize);
@@ -72,19 +72,19 @@ impl defmt::Format for Cienr {
         defmt::write!(f, "Cienr {{ cenrl: {:?} }}", self.cenrl())
     }
 }
-#[doc = "Pin Interrupt Falling Edge"]
+#[doc = "Pin Interrupt Falling Edge."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Fall(pub u32);
 impl Fall {
-    #[doc = "Falling-Edge Detect"]
+    #[doc = "Falling-Edge Detect."]
     #[must_use]
     #[inline(always)]
     pub const fn fdet(&self) -> super::vals::Fdet {
         let val = (self.0 >> 0usize) & 0xff;
         super::vals::Fdet::from_bits(val as u8)
     }
-    #[doc = "Falling-Edge Detect"]
+    #[doc = "Falling-Edge Detect."]
     #[inline(always)]
     pub const fn set_fdet(&mut self, val: super::vals::Fdet) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val.to_bits() as u32) & 0xff) << 0usize);
@@ -107,19 +107,19 @@ impl defmt::Format for Fall {
         defmt::write!(f, "Fall {{ fdet: {:?} }}", self.fdet())
     }
 }
-#[doc = "Pin Interrupt Active Level or Falling-Edge Interrupt Enable"]
+#[doc = "Pin Interrupt Active Level or Falling-Edge Interrupt Enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ienf(pub u32);
 impl Ienf {
-    #[doc = "Enables Interrupt"]
+    #[doc = "Enables Interrupt."]
     #[must_use]
     #[inline(always)]
     pub const fn enaf(&self) -> super::vals::Enaf {
         let val = (self.0 >> 0usize) & 0xff;
         super::vals::Enaf::from_bits(val as u8)
     }
-    #[doc = "Enables Interrupt"]
+    #[doc = "Enables Interrupt."]
     #[inline(always)]
     pub const fn set_enaf(&mut self, val: super::vals::Enaf) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val.to_bits() as u32) & 0xff) << 0usize);
@@ -142,19 +142,19 @@ impl defmt::Format for Ienf {
         defmt::write!(f, "Ienf {{ enaf: {:?} }}", self.enaf())
     }
 }
-#[doc = "Pin Interrupt Level or Rising-Edge Interrupt Enable"]
+#[doc = "Pin Interrupt Level or Rising-Edge Interrupt Enable."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ienr(pub u32);
 impl Ienr {
-    #[doc = "Enables Interrupt"]
+    #[doc = "Enables Interrupt."]
     #[must_use]
     #[inline(always)]
     pub const fn enrl(&self) -> super::vals::Enrl {
         let val = (self.0 >> 0usize) & 0xff;
         super::vals::Enrl::from_bits(val as u8)
     }
-    #[doc = "Enables Interrupt"]
+    #[doc = "Enables Interrupt."]
     #[inline(always)]
     pub const fn set_enrl(&mut self, val: super::vals::Enrl) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val.to_bits() as u32) & 0xff) << 0usize);
@@ -177,19 +177,19 @@ impl defmt::Format for Ienr {
         defmt::write!(f, "Ienr {{ enrl: {:?} }}", self.enrl())
     }
 }
-#[doc = "Pin Interrupt Mode"]
+#[doc = "Pin Interrupt Mode."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Isel(pub u32);
 impl Isel {
-    #[doc = "Interrupt mode"]
+    #[doc = "Interrupt mode."]
     #[must_use]
     #[inline(always)]
     pub const fn pmode(&self) -> super::vals::Pmode {
         let val = (self.0 >> 0usize) & 0xff;
         super::vals::Pmode::from_bits(val as u8)
     }
-    #[doc = "Interrupt mode"]
+    #[doc = "Interrupt mode."]
     #[inline(always)]
     pub const fn set_pmode(&mut self, val: super::vals::Pmode) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val.to_bits() as u32) & 0xff) << 0usize);
@@ -214,19 +214,19 @@ impl defmt::Format for Isel {
         defmt::write!(f, "Isel {{ pmode: {:?} }}", self.pmode())
     }
 }
-#[doc = "Pin Interrupt Status"]
+#[doc = "Pin Interrupt Status."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ist(pub u32);
 impl Ist {
-    #[doc = "Pin Interrupt Status"]
+    #[doc = "Pin Interrupt Status."]
     #[must_use]
     #[inline(always)]
     pub const fn pstat(&self) -> super::vals::Pstat {
         let val = (self.0 >> 0usize) & 0xff;
         super::vals::Pstat::from_bits(val as u8)
     }
-    #[doc = "Pin Interrupt Status"]
+    #[doc = "Pin Interrupt Status."]
     #[inline(always)]
     pub const fn set_pstat(&mut self, val: super::vals::Pstat) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val.to_bits() as u32) & 0xff) << 0usize);
@@ -249,7 +249,7 @@ impl defmt::Format for Ist {
         defmt::write!(f, "Ist {{ pstat: {:?} }}", self.pstat())
     }
 }
-#[doc = "Pattern-Match Interrupt Bit Slice Configuration"]
+#[doc = "Pattern-Match Interrupt Bit Slice Configuration."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pmcfg(pub u32);
@@ -338,98 +338,98 @@ impl Pmcfg {
     pub const fn set_prod_endpts6(&mut self, val: super::vals::ProdEndpts6) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
     }
-    #[doc = "Match Configuration"]
+    #[doc = "Match Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn cfg0(&self) -> super::vals::Cfg0 {
         let val = (self.0 >> 8usize) & 0x07;
         super::vals::Cfg0::from_bits(val as u8)
     }
-    #[doc = "Match Configuration"]
+    #[doc = "Match Configuration."]
     #[inline(always)]
     pub const fn set_cfg0(&mut self, val: super::vals::Cfg0) {
         self.0 = (self.0 & !(0x07 << 8usize)) | (((val.to_bits() as u32) & 0x07) << 8usize);
     }
-    #[doc = "Match Configuration"]
+    #[doc = "Match Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn cfg1(&self) -> super::vals::Cfg1 {
         let val = (self.0 >> 11usize) & 0x07;
         super::vals::Cfg1::from_bits(val as u8)
     }
-    #[doc = "Match Configuration"]
+    #[doc = "Match Configuration."]
     #[inline(always)]
     pub const fn set_cfg1(&mut self, val: super::vals::Cfg1) {
         self.0 = (self.0 & !(0x07 << 11usize)) | (((val.to_bits() as u32) & 0x07) << 11usize);
     }
-    #[doc = "Match Configuration"]
+    #[doc = "Match Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn cfg2(&self) -> super::vals::Cfg2 {
         let val = (self.0 >> 14usize) & 0x07;
         super::vals::Cfg2::from_bits(val as u8)
     }
-    #[doc = "Match Configuration"]
+    #[doc = "Match Configuration."]
     #[inline(always)]
     pub const fn set_cfg2(&mut self, val: super::vals::Cfg2) {
         self.0 = (self.0 & !(0x07 << 14usize)) | (((val.to_bits() as u32) & 0x07) << 14usize);
     }
-    #[doc = "Match Configuration"]
+    #[doc = "Match Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn cfg3(&self) -> super::vals::Cfg3 {
         let val = (self.0 >> 17usize) & 0x07;
         super::vals::Cfg3::from_bits(val as u8)
     }
-    #[doc = "Match Configuration"]
+    #[doc = "Match Configuration."]
     #[inline(always)]
     pub const fn set_cfg3(&mut self, val: super::vals::Cfg3) {
         self.0 = (self.0 & !(0x07 << 17usize)) | (((val.to_bits() as u32) & 0x07) << 17usize);
     }
-    #[doc = "Match Configuration"]
+    #[doc = "Match Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn cfg4(&self) -> super::vals::Cfg4 {
         let val = (self.0 >> 20usize) & 0x07;
         super::vals::Cfg4::from_bits(val as u8)
     }
-    #[doc = "Match Configuration"]
+    #[doc = "Match Configuration."]
     #[inline(always)]
     pub const fn set_cfg4(&mut self, val: super::vals::Cfg4) {
         self.0 = (self.0 & !(0x07 << 20usize)) | (((val.to_bits() as u32) & 0x07) << 20usize);
     }
-    #[doc = "Match Configuration"]
+    #[doc = "Match Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn cfg5(&self) -> super::vals::Cfg5 {
         let val = (self.0 >> 23usize) & 0x07;
         super::vals::Cfg5::from_bits(val as u8)
     }
-    #[doc = "Match Configuration"]
+    #[doc = "Match Configuration."]
     #[inline(always)]
     pub const fn set_cfg5(&mut self, val: super::vals::Cfg5) {
         self.0 = (self.0 & !(0x07 << 23usize)) | (((val.to_bits() as u32) & 0x07) << 23usize);
     }
-    #[doc = "Match Configuration"]
+    #[doc = "Match Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn cfg6(&self) -> super::vals::Cfg6 {
         let val = (self.0 >> 26usize) & 0x07;
         super::vals::Cfg6::from_bits(val as u8)
     }
-    #[doc = "Match Configuration"]
+    #[doc = "Match Configuration."]
     #[inline(always)]
     pub const fn set_cfg6(&mut self, val: super::vals::Cfg6) {
         self.0 = (self.0 & !(0x07 << 26usize)) | (((val.to_bits() as u32) & 0x07) << 26usize);
     }
-    #[doc = "Match Configuration"]
+    #[doc = "Match Configuration."]
     #[must_use]
     #[inline(always)]
     pub const fn cfg7(&self) -> super::vals::Cfg7 {
         let val = (self.0 >> 29usize) & 0x07;
         super::vals::Cfg7::from_bits(val as u8)
     }
-    #[doc = "Match Configuration"]
+    #[doc = "Match Configuration."]
     #[inline(always)]
     pub const fn set_cfg7(&mut self, val: super::vals::Cfg7) {
         self.0 = (self.0 & !(0x07 << 29usize)) | (((val.to_bits() as u32) & 0x07) << 29usize);
@@ -486,7 +486,7 @@ impl defmt::Format for Pmcfg {
         )
     }
 }
-#[doc = "Pattern-Match Interrupt Control"]
+#[doc = "Pattern-Match Interrupt Control."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pmctrl(pub u32);
@@ -515,14 +515,14 @@ impl Pmctrl {
     pub const fn set_ena_rxev(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Pattern Matches"]
+    #[doc = "Pattern Matches."]
     #[must_use]
     #[inline(always)]
     pub const fn pmat(&self) -> super::vals::Pmat {
         let val = (self.0 >> 24usize) & 0xff;
         super::vals::Pmat::from_bits(val as u8)
     }
-    #[doc = "Pattern Matches"]
+    #[doc = "Pattern Matches."]
     #[inline(always)]
     pub const fn set_pmat(&mut self, val: super::vals::Pmat) {
         self.0 = (self.0 & !(0xff << 24usize)) | (((val.to_bits() as u32) & 0xff) << 24usize);
@@ -555,103 +555,103 @@ impl defmt::Format for Pmctrl {
         )
     }
 }
-#[doc = "Pattern-Match Interrupt Bit-Slice Source"]
+#[doc = "Pattern-Match Interrupt Bit-Slice Source."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pmsrc(pub u32);
 impl Pmsrc {
-    #[doc = "Selects the input source for bit slice 0"]
+    #[doc = "Selects the input source for bit slice 0."]
     #[must_use]
     #[inline(always)]
     pub const fn src0(&self) -> super::vals::Src0 {
         let val = (self.0 >> 8usize) & 0x07;
         super::vals::Src0::from_bits(val as u8)
     }
-    #[doc = "Selects the input source for bit slice 0"]
+    #[doc = "Selects the input source for bit slice 0."]
     #[inline(always)]
     pub const fn set_src0(&mut self, val: super::vals::Src0) {
         self.0 = (self.0 & !(0x07 << 8usize)) | (((val.to_bits() as u32) & 0x07) << 8usize);
     }
-    #[doc = "Selects the input source for bit slice 1"]
+    #[doc = "Selects the input source for bit slice 1."]
     #[must_use]
     #[inline(always)]
     pub const fn src1(&self) -> super::vals::Src1 {
         let val = (self.0 >> 11usize) & 0x07;
         super::vals::Src1::from_bits(val as u8)
     }
-    #[doc = "Selects the input source for bit slice 1"]
+    #[doc = "Selects the input source for bit slice 1."]
     #[inline(always)]
     pub const fn set_src1(&mut self, val: super::vals::Src1) {
         self.0 = (self.0 & !(0x07 << 11usize)) | (((val.to_bits() as u32) & 0x07) << 11usize);
     }
-    #[doc = "Selects the input source for bit slice 2"]
+    #[doc = "Selects the input source for bit slice 2."]
     #[must_use]
     #[inline(always)]
     pub const fn src2(&self) -> super::vals::Src2 {
         let val = (self.0 >> 14usize) & 0x07;
         super::vals::Src2::from_bits(val as u8)
     }
-    #[doc = "Selects the input source for bit slice 2"]
+    #[doc = "Selects the input source for bit slice 2."]
     #[inline(always)]
     pub const fn set_src2(&mut self, val: super::vals::Src2) {
         self.0 = (self.0 & !(0x07 << 14usize)) | (((val.to_bits() as u32) & 0x07) << 14usize);
     }
-    #[doc = "Selects the input source for bit slice 3"]
+    #[doc = "Selects the input source for bit slice 3."]
     #[must_use]
     #[inline(always)]
     pub const fn src3(&self) -> super::vals::Src3 {
         let val = (self.0 >> 17usize) & 0x07;
         super::vals::Src3::from_bits(val as u8)
     }
-    #[doc = "Selects the input source for bit slice 3"]
+    #[doc = "Selects the input source for bit slice 3."]
     #[inline(always)]
     pub const fn set_src3(&mut self, val: super::vals::Src3) {
         self.0 = (self.0 & !(0x07 << 17usize)) | (((val.to_bits() as u32) & 0x07) << 17usize);
     }
-    #[doc = "Selects the input source for bit slice 4"]
+    #[doc = "Selects the input source for bit slice 4."]
     #[must_use]
     #[inline(always)]
     pub const fn src4(&self) -> super::vals::Src4 {
         let val = (self.0 >> 20usize) & 0x07;
         super::vals::Src4::from_bits(val as u8)
     }
-    #[doc = "Selects the input source for bit slice 4"]
+    #[doc = "Selects the input source for bit slice 4."]
     #[inline(always)]
     pub const fn set_src4(&mut self, val: super::vals::Src4) {
         self.0 = (self.0 & !(0x07 << 20usize)) | (((val.to_bits() as u32) & 0x07) << 20usize);
     }
-    #[doc = "Selects the input source for bit slice 5"]
+    #[doc = "Selects the input source for bit slice 5."]
     #[must_use]
     #[inline(always)]
     pub const fn src5(&self) -> super::vals::Src5 {
         let val = (self.0 >> 23usize) & 0x07;
         super::vals::Src5::from_bits(val as u8)
     }
-    #[doc = "Selects the input source for bit slice 5"]
+    #[doc = "Selects the input source for bit slice 5."]
     #[inline(always)]
     pub const fn set_src5(&mut self, val: super::vals::Src5) {
         self.0 = (self.0 & !(0x07 << 23usize)) | (((val.to_bits() as u32) & 0x07) << 23usize);
     }
-    #[doc = "Selects the input source for bit slice 6"]
+    #[doc = "Selects the input source for bit slice 6."]
     #[must_use]
     #[inline(always)]
     pub const fn src6(&self) -> super::vals::Src6 {
         let val = (self.0 >> 26usize) & 0x07;
         super::vals::Src6::from_bits(val as u8)
     }
-    #[doc = "Selects the input source for bit slice 6"]
+    #[doc = "Selects the input source for bit slice 6."]
     #[inline(always)]
     pub const fn set_src6(&mut self, val: super::vals::Src6) {
         self.0 = (self.0 & !(0x07 << 26usize)) | (((val.to_bits() as u32) & 0x07) << 26usize);
     }
-    #[doc = "Selects the input source for bit slice 7"]
+    #[doc = "Selects the input source for bit slice 7."]
     #[must_use]
     #[inline(always)]
     pub const fn src7(&self) -> super::vals::Src7 {
         let val = (self.0 >> 29usize) & 0x07;
         super::vals::Src7::from_bits(val as u8)
     }
-    #[doc = "Selects the input source for bit slice 7"]
+    #[doc = "Selects the input source for bit slice 7."]
     #[inline(always)]
     pub const fn set_src7(&mut self, val: super::vals::Src7) {
         self.0 = (self.0 & !(0x07 << 29usize)) | (((val.to_bits() as u32) & 0x07) << 29usize);
@@ -694,19 +694,19 @@ impl defmt::Format for Pmsrc {
         )
     }
 }
-#[doc = "Pin Interrupt Rising Edge"]
+#[doc = "Pin Interrupt Rising Edge."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Rise(pub u32);
 impl Rise {
-    #[doc = "Rising-Edge Detect"]
+    #[doc = "Rising-Edge Detect."]
     #[must_use]
     #[inline(always)]
     pub const fn rdet(&self) -> super::vals::Rdet {
         let val = (self.0 >> 0usize) & 0xff;
         super::vals::Rdet::from_bits(val as u8)
     }
-    #[doc = "Rising-Edge Detect"]
+    #[doc = "Rising-Edge Detect."]
     #[inline(always)]
     pub const fn set_rdet(&mut self, val: super::vals::Rdet) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val.to_bits() as u32) & 0xff) << 0usize);
@@ -729,7 +729,7 @@ impl defmt::Format for Rise {
         defmt::write!(f, "Rise {{ rdet: {:?} }}", self.rdet())
     }
 }
-#[doc = "Pin Interrupt Active Level or Falling-Edge Interrupt Set"]
+#[doc = "Pin Interrupt Active Level or Falling-Edge Interrupt Set."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sienf(pub u32);
@@ -766,19 +766,19 @@ impl defmt::Format for Sienf {
         defmt::write!(f, "Sienf {{ setenaf: {:?} }}", self.setenaf())
     }
 }
-#[doc = "Pin Interrupt Level or Rising-Edge Interrupt Set"]
+#[doc = "Pin Interrupt Level or Rising-Edge Interrupt Set."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sienr(pub u32);
 impl Sienr {
-    #[doc = "Configures IENR"]
+    #[doc = "Configures IENR."]
     #[must_use]
     #[inline(always)]
     pub const fn setenrl(&self) -> super::vals::Setenrl {
         let val = (self.0 >> 0usize) & 0xff;
         super::vals::Setenrl::from_bits(val as u8)
     }
-    #[doc = "Configures IENR"]
+    #[doc = "Configures IENR."]
     #[inline(always)]
     pub const fn set_setenrl(&mut self, val: super::vals::Setenrl) {
         self.0 = (self.0 & !(0xff << 0usize)) | (((val.to_bits() as u32) & 0xff) << 0usize);

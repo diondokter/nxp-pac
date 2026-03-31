@@ -95,7 +95,7 @@ impl From<Sftw> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sre {
-    #[doc = "using original way to generate software reset (default)"]
+    #[doc = "using original way to generate software reset (default)."]
     SRE_0 = 0x0,
     #[doc = "using new way to generate software reset."]
     SRE_1 = 0x01,
@@ -571,7 +571,7 @@ impl From<Wt> for u8 {
 pub enum Wtis {
     #[doc = "No interrupt has occurred (Default)."]
     WTIS_0 = 0x0,
-    #[doc = "Interrupt has occurred"]
+    #[doc = "Interrupt has occurred."]
     WTIS_1 = 0x01,
 }
 impl Wtis {

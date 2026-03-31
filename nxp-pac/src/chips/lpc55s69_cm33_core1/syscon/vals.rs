@@ -1623,9 +1623,9 @@ impl From<Dma1Rst> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Enableupdate(u16);
 impl Enableupdate {
-    #[doc = "Bit Fields 0 - 15 of this register are not updated"]
+    #[doc = "Bit Fields 0 - 15 of this register are not updated."]
     pub const DISABLE: Self = Self(0x0);
-    #[doc = "Bit Fields 0 - 15 of this register are updated"]
+    #[doc = "Bit Fields 0 - 15 of this register are updated."]
     pub const ENABLE: Self = Self(0xc0de);
 }
 impl Enableupdate {

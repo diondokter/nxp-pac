@@ -64,7 +64,7 @@ impl From<PlugContact> for u8 {
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct SiliconRevision(u32);
 impl SiliconRevision {
-    #[doc = "Silicon revision 1.0"]
+    #[doc = "Silicon revision 1.0."]
     pub const SILICON_REVISION_7143424: Self = Self(0x006d_0000);
 }
 impl SiliconRevision {
@@ -356,21 +356,21 @@ impl From<Usb1ChrgDetectTogEnB> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usb1VbusDetectClrVbusvalidThresh {
-    #[doc = "4.0V"]
+    #[doc = "4.0V."]
     _4V0 = 0x0,
-    #[doc = "4.1V"]
+    #[doc = "4.1V."]
     _4V1 = 0x01,
-    #[doc = "4.2V"]
+    #[doc = "4.2V."]
     _4V2 = 0x02,
-    #[doc = "4.3V"]
+    #[doc = "4.3V."]
     _4V3 = 0x03,
-    #[doc = "4.4V (default)"]
+    #[doc = "4.4V (default)."]
     _4V4 = 0x04,
-    #[doc = "4.5V"]
+    #[doc = "4.5V."]
     _4V5 = 0x05,
-    #[doc = "4.6V"]
+    #[doc = "4.6V."]
     _4V6 = 0x06,
-    #[doc = "4.7V"]
+    #[doc = "4.7V."]
     _4V7 = 0x07,
 }
 impl Usb1VbusDetectClrVbusvalidThresh {
@@ -399,21 +399,21 @@ impl From<Usb1VbusDetectClrVbusvalidThresh> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usb1VbusDetectSetVbusvalidThresh {
-    #[doc = "4.0V"]
+    #[doc = "4.0V."]
     _4V0 = 0x0,
-    #[doc = "4.1V"]
+    #[doc = "4.1V."]
     _4V1 = 0x01,
-    #[doc = "4.2V"]
+    #[doc = "4.2V."]
     _4V2 = 0x02,
-    #[doc = "4.3V"]
+    #[doc = "4.3V."]
     _4V3 = 0x03,
-    #[doc = "4.4V (default)"]
+    #[doc = "4.4V (default)."]
     _4V4 = 0x04,
-    #[doc = "4.5V"]
+    #[doc = "4.5V."]
     _4V5 = 0x05,
-    #[doc = "4.6V"]
+    #[doc = "4.6V."]
     _4V6 = 0x06,
-    #[doc = "4.7V"]
+    #[doc = "4.7V."]
     _4V7 = 0x07,
 }
 impl Usb1VbusDetectSetVbusvalidThresh {
@@ -442,21 +442,21 @@ impl From<Usb1VbusDetectSetVbusvalidThresh> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usb1VbusDetectTogVbusvalidThresh {
-    #[doc = "4.0V"]
+    #[doc = "4.0V."]
     _4V0 = 0x0,
-    #[doc = "4.1V"]
+    #[doc = "4.1V."]
     _4V1 = 0x01,
-    #[doc = "4.2V"]
+    #[doc = "4.2V."]
     _4V2 = 0x02,
-    #[doc = "4.3V"]
+    #[doc = "4.3V."]
     _4V3 = 0x03,
-    #[doc = "4.4V (default)"]
+    #[doc = "4.4V (default)."]
     _4V4 = 0x04,
-    #[doc = "4.5V"]
+    #[doc = "4.5V."]
     _4V5 = 0x05,
-    #[doc = "4.6V"]
+    #[doc = "4.6V."]
     _4V6 = 0x06,
-    #[doc = "4.7V"]
+    #[doc = "4.7V."]
     _4V7 = 0x07,
 }
 impl Usb1VbusDetectTogVbusvalidThresh {
@@ -485,21 +485,21 @@ impl From<Usb1VbusDetectTogVbusvalidThresh> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usb1VbusDetectVbusvalidThresh {
-    #[doc = "4.0V"]
+    #[doc = "4.0V."]
     _4V0 = 0x0,
-    #[doc = "4.1V"]
+    #[doc = "4.1V."]
     _4V1 = 0x01,
-    #[doc = "4.2V"]
+    #[doc = "4.2V."]
     _4V2 = 0x02,
-    #[doc = "4.3V"]
+    #[doc = "4.3V."]
     _4V3 = 0x03,
-    #[doc = "4.4V (default)"]
+    #[doc = "4.4V (default)."]
     _4V4 = 0x04,
-    #[doc = "4.5V"]
+    #[doc = "4.5V."]
     _4V5 = 0x05,
-    #[doc = "4.6V"]
+    #[doc = "4.6V."]
     _4V6 = 0x06,
-    #[doc = "4.7V"]
+    #[doc = "4.7V."]
     _4V7 = 0x07,
 }
 impl Usb1VbusDetectVbusvalidThresh {

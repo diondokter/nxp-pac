@@ -1,4 +1,4 @@
-#[doc = "RTC counter register"]
+#[doc = "RTC counter register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Count(pub u32);
@@ -33,19 +33,19 @@ impl defmt::Format for Count {
         defmt::write!(f, "Count {{ val: {=u32:?} }}", self.val())
     }
 }
-#[doc = "RTC control register"]
+#[doc = "RTC control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctrl(pub u32);
 impl Ctrl {
-    #[doc = "Software reset control"]
+    #[doc = "Software reset control."]
     #[must_use]
     #[inline(always)]
     pub const fn swreset(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Software reset control"]
+    #[doc = "Software reset control."]
     #[inline(always)]
     pub const fn set_swreset(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
@@ -200,7 +200,7 @@ impl defmt::Format for Ctrl {
         )
     }
 }
-#[doc = "General Purpose register"]
+#[doc = "General Purpose register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Gpreg(pub u32);
@@ -237,7 +237,7 @@ impl defmt::Format for Gpreg {
         defmt::write!(f, "Gpreg {{ gpdata: {=u32:?} }}", self.gpdata())
     }
 }
-#[doc = "RTC match register"]
+#[doc = "RTC match register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Match(pub u32);
@@ -274,7 +274,7 @@ impl defmt::Format for Match {
         defmt::write!(f, "Match {{ matval: {=u32:?} }}", self.matval())
     }
 }
-#[doc = "Sub-second counter register"]
+#[doc = "Sub-second counter register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Subsec(pub u32);
@@ -311,7 +311,7 @@ impl defmt::Format for Subsec {
         defmt::write!(f, "Subsec {{ subsec: {=u16:?} }}", self.subsec())
     }
 }
-#[doc = "High-resolution/wake-up timer control register"]
+#[doc = "High-resolution/wake-up timer control register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Wake(pub u32);

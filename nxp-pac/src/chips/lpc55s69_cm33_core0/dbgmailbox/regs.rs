@@ -1,52 +1,52 @@
-#[doc = "CRC mode register"]
+#[doc = "CRC mode register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Csw(pub u32);
 impl Csw {
-    #[doc = "Debugger will set this bit to 1 to request a resynchronrisation"]
+    #[doc = "Debugger will set this bit to 1 to request a resynchronrisation."]
     #[must_use]
     #[inline(always)]
     pub const fn resynch_req(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Debugger will set this bit to 1 to request a resynchronrisation"]
+    #[doc = "Debugger will set this bit to 1 to request a resynchronrisation."]
     #[inline(always)]
     pub const fn set_resynch_req(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Request is pending from debugger (i.e unread value in REQUEST)"]
+    #[doc = "Request is pending from debugger (i.e unread value in REQUEST)."]
     #[must_use]
     #[inline(always)]
     pub const fn req_pending(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Request is pending from debugger (i.e unread value in REQUEST)"]
+    #[doc = "Request is pending from debugger (i.e unread value in REQUEST)."]
     #[inline(always)]
     pub const fn set_req_pending(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Debugger overrun error (previous REQUEST overwritten before being picked up by ROM)"]
+    #[doc = "Debugger overrun error (previous REQUEST overwritten before being picked up by ROM)."]
     #[must_use]
     #[inline(always)]
     pub const fn dbg_or_err(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Debugger overrun error (previous REQUEST overwritten before being picked up by ROM)"]
+    #[doc = "Debugger overrun error (previous REQUEST overwritten before being picked up by ROM)."]
     #[inline(always)]
     pub const fn set_dbg_or_err(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "AHB overrun Error (Return value overwritten by ROM)"]
+    #[doc = "AHB overrun Error (Return value overwritten by ROM)."]
     #[must_use]
     #[inline(always)]
     pub const fn ahb_or_err(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "AHB overrun Error (Return value overwritten by ROM)"]
+    #[doc = "AHB overrun Error (Return value overwritten by ROM)."]
     #[inline(always)]
     pub const fn set_ahb_or_err(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
@@ -63,14 +63,14 @@ impl Csw {
     pub const fn set_soft_reset(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "Write only bit. Once written will cause the chip to reset (note that the DM is not reset by this reset as it is only resettable by a SOFT reset or a POR/BOD event)"]
+    #[doc = "Write only bit. Once written will cause the chip to reset (note that the DM is not reset by this reset as it is only resettable by a SOFT reset or a POR/BOD event)."]
     #[must_use]
     #[inline(always)]
     pub const fn chip_reset_req(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Write only bit. Once written will cause the chip to reset (note that the DM is not reset by this reset as it is only resettable by a SOFT reset or a POR/BOD event)"]
+    #[doc = "Write only bit. Once written will cause the chip to reset (note that the DM is not reset by this reset as it is only resettable by a SOFT reset or a POR/BOD event)."]
     #[inline(always)]
     pub const fn set_chip_reset_req(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
@@ -109,7 +109,7 @@ impl defmt::Format for Csw {
         )
     }
 }
-#[doc = "Identification register"]
+#[doc = "Identification register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Id(pub u32);
@@ -144,19 +144,19 @@ impl defmt::Format for Id {
         defmt::write!(f, "Id {{ id: {=u32:?} }}", self.id())
     }
 }
-#[doc = "CRC seed register"]
+#[doc = "CRC seed register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Request(pub u32);
 impl Request {
-    #[doc = "Request Value"]
+    #[doc = "Request Value."]
     #[must_use]
     #[inline(always)]
     pub const fn req(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Request Value"]
+    #[doc = "Request Value."]
     #[inline(always)]
     pub const fn set_req(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);

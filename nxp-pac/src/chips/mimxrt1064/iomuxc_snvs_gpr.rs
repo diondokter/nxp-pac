@@ -1,4 +1,4 @@
-#[doc = "IOMUXC"]
+#[doc = "IOMUXC."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct IomuxcSnvsGpr {
     ptr: *mut u8,
@@ -14,22 +14,22 @@ impl IomuxcSnvsGpr {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "GPR0 General Purpose Register"]
+    #[doc = "GPR0 General Purpose Register."]
     #[inline(always)]
     pub const fn gpr0(self) -> crate::common::Reg<u32, crate::common::R> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
     }
-    #[doc = "GPR1 General Purpose Register"]
+    #[doc = "GPR1 General Purpose Register."]
     #[inline(always)]
     pub const fn gpr1(self) -> crate::common::Reg<u32, crate::common::R> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
     }
-    #[doc = "GPR2 General Purpose Register"]
+    #[doc = "GPR2 General Purpose Register."]
     #[inline(always)]
     pub const fn gpr2(self) -> crate::common::Reg<u32, crate::common::R> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
     }
-    #[doc = "GPR3 General Purpose Register"]
+    #[doc = "GPR3 General Purpose Register."]
     #[inline(always)]
     pub const fn gpr3(self) -> crate::common::Reg<regs::Gpr3, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }

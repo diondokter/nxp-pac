@@ -131,9 +131,9 @@ impl From<Babt> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum BcRej {
-    #[doc = "Will not reject frames as described above"]
+    #[doc = "Will not reject frames as described above."]
     ZERO = 0x0,
-    #[doc = "Will reject frames as described above"]
+    #[doc = "Will reject frames as described above."]
     ONE = 0x01,
 }
 impl BcRej {
@@ -319,7 +319,7 @@ impl From<DisPre> for u8 {
 pub enum Drt {
     #[doc = "Receive path operates independently of transmit (i.e., full-duplex mode). Can also be used to monitor transmit activity in half-duplex mode."]
     ZERO = 0x0,
-    #[doc = "Disable reception of frames while transmitting. (Normally used for half-duplex mode.)"]
+    #[doc = "Disable reception of frames while transmitting. (Normally used for half-duplex mode.)."]
     ONE = 0x01,
 }
 impl Drt {
@@ -472,9 +472,9 @@ impl From<Etheren> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fce {
-    #[doc = "Disable flow control"]
+    #[doc = "Disable flow control."]
     ZERO = 0x0,
-    #[doc = "Enable flow control"]
+    #[doc = "Enable flow control."]
     ONE = 0x01,
 }
 impl Fce {
@@ -503,9 +503,9 @@ impl From<Fce> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fden {
-    #[doc = "Disable full-duplex"]
+    #[doc = "Disable full-duplex."]
     ZERO = 0x0,
-    #[doc = "Enable full-duplex"]
+    #[doc = "Enable full-duplex."]
     ONE = 0x01,
 }
 impl Fden {
@@ -565,9 +565,9 @@ impl From<Gra> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Grs {
-    #[doc = "Receive not stopped"]
+    #[doc = "Receive not stopped."]
     ZERO = 0x0,
-    #[doc = "Receive stopped"]
+    #[doc = "Receive stopped."]
     ONE = 0x01,
 }
 impl Grs {
@@ -596,9 +596,9 @@ impl From<Grs> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gts {
-    #[doc = "Disable graceful transmit stop"]
+    #[doc = "Disable graceful transmit stop."]
     ZERO = 0x0,
-    #[doc = "Enable graceful transmit stop"]
+    #[doc = "Enable graceful transmit stop."]
     ONE = 0x01,
 }
 impl Gts {
@@ -627,17 +627,17 @@ impl From<Gts> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Holdtime {
-    #[doc = "1 internal module clock cycle"]
+    #[doc = "1 internal module clock cycle."]
     VAL_1 = 0x0,
-    #[doc = "2 internal module clock cycles"]
+    #[doc = "2 internal module clock cycles."]
     VAL2 = 0x01,
-    #[doc = "3 internal module clock cycles"]
+    #[doc = "3 internal module clock cycles."]
     VAL3 = 0x02,
     _RESERVED_3 = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
-    #[doc = "8 internal module clock cycles"]
+    #[doc = "8 internal module clock cycles."]
     VAL8 = 0x07,
 }
 impl Holdtime {
@@ -1782,9 +1782,9 @@ impl From<TcrCrcfwd> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcsr0Tdre {
-    #[doc = "DMA request is disabled"]
+    #[doc = "DMA request is disabled."]
     ZERO = 0x0,
-    #[doc = "DMA request is enabled"]
+    #[doc = "DMA request is enabled."]
     ONE = 0x01,
 }
 impl Tcsr0Tdre {
@@ -1844,9 +1844,9 @@ impl From<Tcsr0Tf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcsr0Tie {
-    #[doc = "Interrupt is disabled"]
+    #[doc = "Interrupt is disabled."]
     ZERO = 0x0,
-    #[doc = "Interrupt is enabled"]
+    #[doc = "Interrupt is enabled."]
     ONE = 0x01,
 }
 impl Tcsr0Tie {
@@ -1994,9 +1994,9 @@ impl From<Tcsr0Tpwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcsr1Tdre {
-    #[doc = "DMA request is disabled"]
+    #[doc = "DMA request is disabled."]
     ZERO = 0x0,
-    #[doc = "DMA request is enabled"]
+    #[doc = "DMA request is enabled."]
     ONE = 0x01,
 }
 impl Tcsr1Tdre {
@@ -2056,9 +2056,9 @@ impl From<Tcsr1Tf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcsr1Tie {
-    #[doc = "Interrupt is disabled"]
+    #[doc = "Interrupt is disabled."]
     ZERO = 0x0,
-    #[doc = "Interrupt is enabled"]
+    #[doc = "Interrupt is enabled."]
     ONE = 0x01,
 }
 impl Tcsr1Tie {
@@ -2206,9 +2206,9 @@ impl From<Tcsr1Tpwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcsr2Tdre {
-    #[doc = "DMA request is disabled"]
+    #[doc = "DMA request is disabled."]
     ZERO = 0x0,
-    #[doc = "DMA request is enabled"]
+    #[doc = "DMA request is enabled."]
     ONE = 0x01,
 }
 impl Tcsr2Tdre {
@@ -2268,9 +2268,9 @@ impl From<Tcsr2Tf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcsr2Tie {
-    #[doc = "Interrupt is disabled"]
+    #[doc = "Interrupt is disabled."]
     ZERO = 0x0,
-    #[doc = "Interrupt is enabled"]
+    #[doc = "Interrupt is enabled."]
     ONE = 0x01,
 }
 impl Tcsr2Tie {
@@ -2418,9 +2418,9 @@ impl From<Tcsr2Tpwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcsr3Tdre {
-    #[doc = "DMA request is disabled"]
+    #[doc = "DMA request is disabled."]
     ZERO = 0x0,
-    #[doc = "DMA request is enabled"]
+    #[doc = "DMA request is enabled."]
     ONE = 0x01,
 }
 impl Tcsr3Tdre {
@@ -2480,9 +2480,9 @@ impl From<Tcsr3Tf> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tcsr3Tie {
-    #[doc = "Interrupt is disabled"]
+    #[doc = "Interrupt is disabled."]
     ZERO = 0x0,
-    #[doc = "Interrupt is enabled"]
+    #[doc = "Interrupt is enabled."]
     ONE = 0x01,
 }
 impl Tcsr3Tie {
@@ -2630,9 +2630,9 @@ impl From<Tcsr3Tpwc> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tf0 {
-    #[doc = "Timer Flag for Channel 0 is clear"]
+    #[doc = "Timer Flag for Channel 0 is clear."]
     ZERO = 0x0,
-    #[doc = "Timer Flag for Channel 0 is set"]
+    #[doc = "Timer Flag for Channel 0 is set."]
     ONE = 0x01,
 }
 impl Tf0 {
@@ -2661,9 +2661,9 @@ impl From<Tf0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tf1 {
-    #[doc = "Timer Flag for Channel 1 is clear"]
+    #[doc = "Timer Flag for Channel 1 is clear."]
     ZERO = 0x0,
-    #[doc = "Timer Flag for Channel 1 is set"]
+    #[doc = "Timer Flag for Channel 1 is set."]
     ONE = 0x01,
 }
 impl Tf1 {
@@ -2692,9 +2692,9 @@ impl From<Tf1> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tf2 {
-    #[doc = "Timer Flag for Channel 2 is clear"]
+    #[doc = "Timer Flag for Channel 2 is clear."]
     ZERO = 0x0,
-    #[doc = "Timer Flag for Channel 2 is set"]
+    #[doc = "Timer Flag for Channel 2 is set."]
     ONE = 0x01,
 }
 impl Tf2 {
@@ -2723,9 +2723,9 @@ impl From<Tf2> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tf3 {
-    #[doc = "Timer Flag for Channel 3 is clear"]
+    #[doc = "Timer Flag for Channel 3 is clear."]
     ZERO = 0x0,
-    #[doc = "Timer Flag for Channel 3 is set"]
+    #[doc = "Timer Flag for Channel 3 is set."]
     ONE = 0x01,
 }
 impl Tf3 {

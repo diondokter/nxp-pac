@@ -1,0 +1,286 @@
+block/Port:
+  description: PORT.
+  items:
+  - name: verid
+    description: Version ID.
+    byte_offset: 0
+    access: Read
+    fieldset: Verid
+  - name: gpclr
+    description: Global Pin Control Low.
+    byte_offset: 16
+    fieldset: Gpclr
+  - name: gpchr
+    description: Global Pin Control High.
+    byte_offset: 20
+    fieldset: Gpchr
+  - name: config
+    description: Configuration.
+    byte_offset: 32
+    fieldset: Config
+  - name: calib0
+    description: Calibration 0.
+    byte_offset: 96
+    fieldset: Calib0
+  - name: calib1
+    description: Calibration 1.
+    byte_offset: 100
+    fieldset: Calib1
+  - name: pcr
+    description: Pin Control 0.
+    array:
+      len: 32
+      stride: 4
+    byte_offset: 128
+    fieldset: Pcr
+fieldset/Calib0:
+  description: Calibration 0.
+  fields:
+  - name: ncal
+    description: Calibration of NMOS Output Driver.
+    bit_offset: 0
+    bit_size: 6
+  - name: pcal
+    description: Calibration of PMOS Output Driver.
+    bit_offset: 16
+    bit_size: 6
+fieldset/Calib1:
+  description: Calibration 1.
+  fields:
+  - name: ncal
+    description: Calibration of NMOS Output Driver.
+    bit_offset: 0
+    bit_size: 6
+  - name: pcal
+    description: Calibration of PMOS Output Driver.
+    bit_offset: 16
+    bit_size: 6
+fieldset/Config:
+  description: Configuration.
+  fields:
+  - name: range
+    description: Port Voltage Range.
+    bit_offset: 0
+    bit_size: 1
+    enum: Range
+fieldset/Gpchr:
+  description: Global Pin Control High.
+  fields:
+  - name: gpwd
+    description: Global Pin Write Data.
+    bit_offset: 0
+    bit_size: 16
+  - name: gpwe
+    description: Global Pin Write Enable.
+    bit_offset: 16
+    bit_size: 1
+    array:
+      len: 16
+      stride: 1
+    enum: Gpwe
+fieldset/Gpclr:
+  description: Global Pin Control Low.
+  fields:
+  - name: gpwd
+    description: Global Pin Write Data.
+    bit_offset: 0
+    bit_size: 16
+  - name: gpwe
+    description: Global Pin Write Enable.
+    bit_offset: 16
+    bit_size: 1
+    array:
+      len: 16
+      stride: 1
+    enum: Gpwe
+fieldset/Pcr:
+  description: Pin Control 2.
+  fields:
+  - name: ps
+    description: Pull Select.
+    bit_offset: 0
+    bit_size: 1
+    enum: Ps
+  - name: pe
+    description: Pull Enable.
+    bit_offset: 1
+    bit_size: 1
+    enum: Pe
+  - name: sre
+    description: Slew Rate Enable.
+    bit_offset: 3
+    bit_size: 1
+    enum: Sre
+  - name: ode
+    description: Open Drain Enable.
+    bit_offset: 5
+    bit_size: 1
+    enum: Ode
+  - name: dse
+    description: Drive Strength Enable.
+    bit_offset: 6
+    bit_size: 1
+    enum: Dse
+  - name: mux
+    description: Pin Multiplex Control.
+    bit_offset: 8
+    bit_size: 4
+    enum: Mux
+  - name: ibe
+    description: Input Buffer Enable.
+    bit_offset: 12
+    bit_size: 1
+    enum: Ibe
+  - name: inv
+    description: Invert Input.
+    bit_offset: 13
+    bit_size: 1
+    enum: Inv
+  - name: lk
+    description: Lock Register.
+    bit_offset: 15
+    bit_size: 1
+    enum: Lk
+fieldset/Verid:
+  description: Version ID.
+  fields:
+  - name: feature
+    description: Feature Specification Number.
+    bit_offset: 0
+    bit_size: 16
+    enum: Feature
+  - name: minor
+    description: Minor Version Number.
+    bit_offset: 16
+    bit_size: 8
+  - name: major
+    description: Major Version Number.
+    bit_offset: 24
+    bit_size: 8
+enum/Dse:
+  bit_size: 1
+  variants:
+  - name: DSE0
+    description: Low.
+    value: 0
+  - name: DSE1
+    description: High.
+    value: 1
+enum/Feature:
+  bit_size: 16
+  variants:
+  - name: FEATURE0
+    description: Basic implementation.
+    value: 0
+enum/Gpwe:
+  bit_size: 1
+  variants:
+  - name: GPWE0
+    description: Not updated.
+    value: 0
+  - name: GPWE1
+    description: Updated.
+    value: 1
+enum/Ibe:
+  bit_size: 1
+  variants:
+  - name: IBE0
+    description: Disables.
+    value: 0
+  - name: IBE1
+    description: Enables.
+    value: 1
+enum/Inv:
+  bit_size: 1
+  variants:
+  - name: INV0
+    description: Does not invert.
+    value: 0
+  - name: INV1
+    description: Inverts.
+    value: 1
+enum/Lk:
+  bit_size: 1
+  variants:
+  - name: LK0
+    description: Does not lock.
+    value: 0
+  - name: LK1
+    description: Locks.
+    value: 1
+enum/Mux:
+  bit_size: 4
+  variants:
+  - name: MUX0
+    value: 0
+  - name: MUX1
+    value: 1
+  - name: MUX2
+    value: 2
+  - name: MUX3
+    value: 3
+  - name: MUX4
+    value: 4
+  - name: MUX5
+    value: 5
+  - name: MUX6
+    value: 6
+  - name: MUX7
+    value: 7
+  - name: MUX8
+    value: 8
+  - name: MUX9
+    value: 9
+  - name: MUX10
+    value: 10
+  - name: MUX11
+    value: 11
+  - name: MUX12
+    value: 12
+  - name: MUX13
+    value: 13
+enum/Ode:
+  bit_size: 1
+  variants:
+  - name: ODE0
+    description: Disables.
+    value: 0
+  - name: ODE1
+    description: Enables.
+    value: 1
+enum/Pe:
+  bit_size: 1
+  variants:
+  - name: PE0
+    description: Disables.
+    value: 0
+  - name: PE1
+    description: Enables.
+    value: 1
+enum/Ps:
+  bit_size: 1
+  variants:
+  - name: PS0
+    description: Enables internal pulldown resistor.
+    value: 0
+  - name: PS1
+    description: Enables internal pullup resistor.
+    value: 1
+enum/Range:
+  bit_size: 1
+  variants:
+  - name: RANGE0
+    description: 1.71 V-3.6 V.
+    value: 0
+  - name: RANGE1
+    description: 2.70 V-3.6 V.
+    value: 1
+enum/Sre:
+  bit_size: 1
+  variants:
+  - name: SRE0
+    description: Fast.
+    value: 0
+  - name: SRE1
+    description: Slow.
+    value: 1

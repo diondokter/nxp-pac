@@ -1,4 +1,4 @@
-#[doc = "system controller"]
+#[doc = "system controller."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sysctl {
     ptr: *mut u8,
@@ -14,12 +14,12 @@ impl Sysctl {
     pub const fn as_ptr(&self) -> *mut () {
         self.ptr as _
     }
-    #[doc = "update lock out control"]
+    #[doc = "update lock out control."]
     #[inline(always)]
     pub const fn updatelckout(self) -> crate::common::Reg<regs::Updatelckout, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
     }
-    #[doc = "Selects the source for SCK going into Flexcomm index"]
+    #[doc = "Selects the source for SCK going into Flexcomm index."]
     #[inline(always)]
     pub const fn fcctrlsel(
         self,
@@ -37,7 +37,7 @@ impl Sysctl {
         assert!(n < 2usize);
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x80usize + n * 4usize) as _) }
     }
-    #[doc = "Status register for USB HS"]
+    #[doc = "Status register for USB HS."]
     #[inline(always)]
     pub const fn usb_hs_status(self) -> crate::common::Reg<regs::UsbHsStatus, crate::common::R> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0100usize) as _) }

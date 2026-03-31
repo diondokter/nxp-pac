@@ -2,7 +2,7 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Datainsel {
-    #[doc = "Original FLEXCOMM I2S signals"]
+    #[doc = "Original FLEXCOMM I2S signals."]
     ORIG_FLEX_I2S_SIGNALS = 0x0,
     #[doc = "Shared Set0 I2S signals."]
     SHARED_SET0_I2S_SIGNALS = 0x01,
@@ -36,7 +36,7 @@ impl From<Datainsel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dataoutsel {
-    #[doc = "Original FLEXCOMM I2S signals"]
+    #[doc = "Original FLEXCOMM I2S signals."]
     ORIG_FLEX_I2S_SIGNALS = 0x0,
     #[doc = "Shared Set0 I2S signals."]
     SHARED_SET0_I2S_SIGNALS = 0x01,
@@ -70,9 +70,9 @@ impl From<Dataoutsel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum F20dataouten {
-    #[doc = "Input"]
+    #[doc = "Input."]
     INPUT = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     OUTPUT = 0x01,
 }
 impl F20dataouten {
@@ -101,9 +101,9 @@ impl From<F20dataouten> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fc0dataouten {
-    #[doc = "Input"]
+    #[doc = "Input."]
     INPUT = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     OUTPUT = 0x01,
 }
 impl Fc0dataouten {
@@ -132,9 +132,9 @@ impl From<Fc0dataouten> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fc1dataouten {
-    #[doc = "Input"]
+    #[doc = "Input."]
     INPUT = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     OUTPUT = 0x01,
 }
 impl Fc1dataouten {
@@ -163,9 +163,9 @@ impl From<Fc1dataouten> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fc3dataouten {
-    #[doc = "Input"]
+    #[doc = "Input."]
     INPUT = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     OUTPUT = 0x01,
 }
 impl Fc3dataouten {
@@ -194,9 +194,9 @@ impl From<Fc3dataouten> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fc4dataouten {
-    #[doc = "Input"]
+    #[doc = "Input."]
     INPUT = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     OUTPUT = 0x01,
 }
 impl Fc4dataouten {
@@ -225,9 +225,9 @@ impl From<Fc4dataouten> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fc5dataouten {
-    #[doc = "Input"]
+    #[doc = "Input."]
     INPUT = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     OUTPUT = 0x01,
 }
 impl Fc5dataouten {
@@ -256,9 +256,9 @@ impl From<Fc5dataouten> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fc6dataouten {
-    #[doc = "Input"]
+    #[doc = "Input."]
     INPUT = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     OUTPUT = 0x01,
 }
 impl Fc6dataouten {
@@ -287,9 +287,9 @@ impl From<Fc6dataouten> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fc7dataouten {
-    #[doc = "Input"]
+    #[doc = "Input."]
     INPUT = 0x0,
-    #[doc = "Output"]
+    #[doc = "Output."]
     OUTPUT = 0x01,
 }
 impl Fc7dataouten {
@@ -380,7 +380,7 @@ impl From<Rxevpulsegen> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sckinsel {
-    #[doc = "Original FLEXCOMM I2S signals"]
+    #[doc = "Original FLEXCOMM I2S signals."]
     ORIG_FLEX_I2S_SIGNALS = 0x0,
     #[doc = "Shared Set0 I2S signals."]
     SHARED_SET0_I2S_SIGNALS = 0x01,
@@ -414,21 +414,21 @@ impl From<Sckinsel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Shareddatasel {
-    #[doc = "FLEXCOMM0"]
+    #[doc = "FLEXCOMM0."]
     FLEXCOMM0 = 0x0,
-    #[doc = "FLEXCOMM1"]
+    #[doc = "FLEXCOMM1."]
     FLEXCOMM1 = 0x01,
-    #[doc = "FLEXCOMM2"]
+    #[doc = "FLEXCOMM2."]
     FLEXCOMM2 = 0x02,
-    #[doc = "FLEXCOMM3"]
+    #[doc = "FLEXCOMM3."]
     FLEXCOMM3 = 0x03,
-    #[doc = "FLEXCOMM4"]
+    #[doc = "FLEXCOMM4."]
     FLEXCOMM4 = 0x04,
-    #[doc = "FLEXCOMM5"]
+    #[doc = "FLEXCOMM5."]
     FLEXCOMM5 = 0x05,
-    #[doc = "FLEXCOMM6"]
+    #[doc = "FLEXCOMM6."]
     FLEXCOMM6 = 0x06,
-    #[doc = "FLEXCOMM7"]
+    #[doc = "FLEXCOMM7."]
     FLEXCOMM7 = 0x07,
 }
 impl Shareddatasel {
@@ -457,21 +457,21 @@ impl From<Shareddatasel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sharedscksel {
-    #[doc = "FLEXCOMM0"]
+    #[doc = "FLEXCOMM0."]
     FLEXCOMM0 = 0x0,
-    #[doc = "FLEXCOMM1"]
+    #[doc = "FLEXCOMM1."]
     FLEXCOMM1 = 0x01,
-    #[doc = "FLEXCOMM2"]
+    #[doc = "FLEXCOMM2."]
     FLEXCOMM2 = 0x02,
-    #[doc = "FLEXCOMM3"]
+    #[doc = "FLEXCOMM3."]
     FLEXCOMM3 = 0x03,
-    #[doc = "FLEXCOMM4"]
+    #[doc = "FLEXCOMM4."]
     FLEXCOMM4 = 0x04,
-    #[doc = "FLEXCOMM5"]
+    #[doc = "FLEXCOMM5."]
     FLEXCOMM5 = 0x05,
-    #[doc = "FLEXCOMM6"]
+    #[doc = "FLEXCOMM6."]
     FLEXCOMM6 = 0x06,
-    #[doc = "FLEXCOMM7"]
+    #[doc = "FLEXCOMM7."]
     FLEXCOMM7 = 0x07,
 }
 impl Sharedscksel {
@@ -500,21 +500,21 @@ impl From<Sharedscksel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sharedwssel {
-    #[doc = "FLEXCOMM0"]
+    #[doc = "FLEXCOMM0."]
     FLEXCOMM0 = 0x0,
-    #[doc = "FLEXCOMM1"]
+    #[doc = "FLEXCOMM1."]
     FLEXCOMM1 = 0x01,
-    #[doc = "FLEXCOMM2"]
+    #[doc = "FLEXCOMM2."]
     FLEXCOMM2 = 0x02,
-    #[doc = "FLEXCOMM3"]
+    #[doc = "FLEXCOMM3."]
     FLEXCOMM3 = 0x03,
-    #[doc = "FLEXCOMM4"]
+    #[doc = "FLEXCOMM4."]
     FLEXCOMM4 = 0x04,
-    #[doc = "FLEXCOMM5"]
+    #[doc = "FLEXCOMM5."]
     FLEXCOMM5 = 0x05,
-    #[doc = "FLEXCOMM6"]
+    #[doc = "FLEXCOMM6."]
     FLEXCOMM6 = 0x06,
-    #[doc = "FLEXCOMM7"]
+    #[doc = "FLEXCOMM7."]
     FLEXCOMM7 = 0x07,
 }
 impl Sharedwssel {
@@ -543,7 +543,7 @@ impl From<Sharedwssel> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wsinsel {
-    #[doc = "Original FLEXCOMM I2S signals"]
+    #[doc = "Original FLEXCOMM I2S signals."]
     ORIG_FLEX_I2S_SIGNALS = 0x0,
     #[doc = "Shared Set0 I2S signals."]
     SHARED_SET0_I2S_SIGNALS = 0x01,

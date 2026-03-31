@@ -92,9 +92,9 @@ impl From<Fflag> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ffull {
-    #[doc = "PWM outputs are not re-enabled at the start of a full cycle"]
+    #[doc = "PWM outputs are not re-enabled at the start of a full cycle."]
     PWM_OUTPUTS_NOT_REENABLED = 0x0,
-    #[doc = "PWM outputs are re-enabled at the start of a full cycle"]
+    #[doc = "PWM outputs are re-enabled at the start of a full cycle."]
     PWM_OUTPUTS_REENABLED = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -497,13 +497,13 @@ impl From<Run> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0captctrlaEdga0 {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED = 0x0,
-    #[doc = "Capture falling edges"]
+    #[doc = "Capture falling edges."]
     FALLING_EDGE = 0x01,
-    #[doc = "Capture rising edges"]
+    #[doc = "Capture rising edges."]
     RISING_EDGE = 0x02,
-    #[doc = "Capture any edge"]
+    #[doc = "Capture any edge."]
     ANY_EDGE = 0x03,
 }
 impl Sm0captctrlaEdga0 {
@@ -532,13 +532,13 @@ impl From<Sm0captctrlaEdga0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0captctrlaEdga1 {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED = 0x0,
-    #[doc = "Capture falling edges"]
+    #[doc = "Capture falling edges."]
     FALLING_EDGE = 0x01,
-    #[doc = "Capture rising edges"]
+    #[doc = "Capture rising edges."]
     RISING_EDGE = 0x02,
-    #[doc = "Capture any edge"]
+    #[doc = "Capture any edge."]
     ANY_EDGE = 0x03,
 }
 impl Sm0captctrlaEdga1 {
@@ -569,7 +569,7 @@ impl From<Sm0captctrlaEdga1> for u8 {
 pub enum Sm0captctrlaInpSela {
     #[doc = "Raw PWM_A input signal selected as source."]
     PWM_A = 0x0,
-    #[doc = "Edge Counter"]
+    #[doc = "Edge Counter."]
     EDGE_COUNTER = 0x01,
 }
 impl Sm0captctrlaInpSela {
@@ -598,9 +598,9 @@ impl From<Sm0captctrlaInpSela> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0captctrlaOneshota {
-    #[doc = "Free Running"]
+    #[doc = "Free Running."]
     FREE_RUNNING = 0x0,
-    #[doc = "One Shot"]
+    #[doc = "One Shot."]
     ONE_SHOT = 0x01,
 }
 impl Sm0captctrlaOneshota {
@@ -629,13 +629,13 @@ impl From<Sm0captctrlaOneshota> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0captctrlbEdgb0 {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED = 0x0,
-    #[doc = "Capture falling edges"]
+    #[doc = "Capture falling edges."]
     FALLING_EDGE = 0x01,
-    #[doc = "Capture rising edges"]
+    #[doc = "Capture rising edges."]
     RISING_EDGE = 0x02,
-    #[doc = "Capture any edge"]
+    #[doc = "Capture any edge."]
     ANY_EDGE = 0x03,
 }
 impl Sm0captctrlbEdgb0 {
@@ -664,13 +664,13 @@ impl From<Sm0captctrlbEdgb0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0captctrlbEdgb1 {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED = 0x0,
-    #[doc = "Capture falling edges"]
+    #[doc = "Capture falling edges."]
     FALLING_EDGE = 0x01,
-    #[doc = "Capture rising edges"]
+    #[doc = "Capture rising edges."]
     RISING_EDGE = 0x02,
-    #[doc = "Capture any edge"]
+    #[doc = "Capture any edge."]
     ANY_EDGE = 0x03,
 }
 impl Sm0captctrlbEdgb1 {
@@ -701,7 +701,7 @@ impl From<Sm0captctrlbEdgb1> for u8 {
 pub enum Sm0captctrlbInpSelb {
     #[doc = "Raw PWM_B input signal selected as source."]
     PWM_B = 0x0,
-    #[doc = "Edge Counter"]
+    #[doc = "Edge Counter."]
     EDGE_COUNTER = 0x01,
 }
 impl Sm0captctrlbInpSelb {
@@ -730,9 +730,9 @@ impl From<Sm0captctrlbInpSelb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0captctrlbOneshotb {
-    #[doc = "Free Running"]
+    #[doc = "Free Running."]
     FREE_RUNNING = 0x0,
-    #[doc = "One Shot"]
+    #[doc = "One Shot."]
     ONE_SHOT = 0x01,
 }
 impl Sm0captctrlbOneshotb {
@@ -761,13 +761,13 @@ impl From<Sm0captctrlbOneshotb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0captctrlxEdgx0 {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED = 0x0,
-    #[doc = "Capture falling edges"]
+    #[doc = "Capture falling edges."]
     FALLING_EDGE = 0x01,
-    #[doc = "Capture rising edges"]
+    #[doc = "Capture rising edges."]
     RISING_EDGE = 0x02,
-    #[doc = "Capture any edge"]
+    #[doc = "Capture any edge."]
     ANY_EDGE = 0x03,
 }
 impl Sm0captctrlxEdgx0 {
@@ -796,13 +796,13 @@ impl From<Sm0captctrlxEdgx0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0captctrlxEdgx1 {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED = 0x0,
-    #[doc = "Capture falling edges"]
+    #[doc = "Capture falling edges."]
     FALLING_EDGE = 0x01,
-    #[doc = "Capture rising edges"]
+    #[doc = "Capture rising edges."]
     RISING_EDGE = 0x02,
-    #[doc = "Capture any edge"]
+    #[doc = "Capture any edge."]
     ANY_EDGE = 0x03,
 }
 impl Sm0captctrlxEdgx1 {
@@ -833,7 +833,7 @@ impl From<Sm0captctrlxEdgx1> for u8 {
 pub enum Sm0captctrlxInpSelx {
     #[doc = "Raw PWM_X input signal selected as source."]
     PWM_X = 0x0,
-    #[doc = "Edge Counter"]
+    #[doc = "Edge Counter."]
     EDGE_COUNTER = 0x01,
 }
 impl Sm0captctrlxInpSelx {
@@ -862,9 +862,9 @@ impl From<Sm0captctrlxInpSelx> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0captctrlxOneshotx {
-    #[doc = "Free Running"]
+    #[doc = "Free Running."]
     FREE_RUNNING = 0x0,
-    #[doc = "One Shot"]
+    #[doc = "One Shot."]
     ONE_SHOT = 0x01,
 }
 impl Sm0captctrlxOneshotx {
@@ -1098,37 +1098,37 @@ impl From<Sm0ctrlCompmode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0ctrlLdfq {
-    #[doc = "Every PWM opportunity"]
+    #[doc = "Every PWM opportunity."]
     EVERYPWM = 0x0,
-    #[doc = "Every 2 PWM opportunities"]
+    #[doc = "Every 2 PWM opportunities."]
     EVERY2PWM = 0x01,
-    #[doc = "Every 3 PWM opportunities"]
+    #[doc = "Every 3 PWM opportunities."]
     EVERY3PWM = 0x02,
-    #[doc = "Every 4 PWM opportunities"]
+    #[doc = "Every 4 PWM opportunities."]
     EVERY4PWM = 0x03,
-    #[doc = "Every 5 PWM opportunities"]
+    #[doc = "Every 5 PWM opportunities."]
     EVERY5PWM = 0x04,
-    #[doc = "Every 6 PWM opportunities"]
+    #[doc = "Every 6 PWM opportunities."]
     EVERY6PWM = 0x05,
-    #[doc = "Every 7 PWM opportunities"]
+    #[doc = "Every 7 PWM opportunities."]
     EVERY7PWM = 0x06,
-    #[doc = "Every 8 PWM opportunities"]
+    #[doc = "Every 8 PWM opportunities."]
     EVERY8PWM = 0x07,
-    #[doc = "Every 9 PWM opportunities"]
+    #[doc = "Every 9 PWM opportunities."]
     EVERY9PWM = 0x08,
-    #[doc = "Every 10 PWM opportunities"]
+    #[doc = "Every 10 PWM opportunities."]
     EVERY10PWM = 0x09,
-    #[doc = "Every 11 PWM opportunities"]
+    #[doc = "Every 11 PWM opportunities."]
     EVERY11PWM = 0x0a,
-    #[doc = "Every 12 PWM opportunities"]
+    #[doc = "Every 12 PWM opportunities."]
     EVERY12PWM = 0x0b,
-    #[doc = "Every 13 PWM opportunities"]
+    #[doc = "Every 13 PWM opportunities."]
     EVERY13PWM = 0x0c,
-    #[doc = "Every 14 PWM opportunities"]
+    #[doc = "Every 14 PWM opportunities."]
     EVERY14PWM = 0x0d,
-    #[doc = "Every 15 PWM opportunities"]
+    #[doc = "Every 15 PWM opportunities."]
     EVERY15PWM = 0x0e,
-    #[doc = "Every 16 PWM opportunities"]
+    #[doc = "Every 16 PWM opportunities."]
     EVERY16PWM = 0x0f,
 }
 impl Sm0ctrlLdfq {
@@ -1188,21 +1188,21 @@ impl From<Sm0ctrlLdmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm0ctrlPrsc {
-    #[doc = "Prescaler 1"]
+    #[doc = "Prescaler 1."]
     ONE = 0x0,
-    #[doc = "Prescaler 2"]
+    #[doc = "Prescaler 2."]
     TWO = 0x01,
-    #[doc = "Prescaler 4"]
+    #[doc = "Prescaler 4."]
     FOUR = 0x02,
-    #[doc = "Prescaler 8"]
+    #[doc = "Prescaler 8."]
     EIGHT = 0x03,
-    #[doc = "Prescaler 16"]
+    #[doc = "Prescaler 16."]
     SIXTEEN = 0x04,
-    #[doc = "Prescaler 32"]
+    #[doc = "Prescaler 32."]
     THIRTYTWO = 0x05,
-    #[doc = "Prescaler 64"]
+    #[doc = "Prescaler 64."]
     SIXTYFOUR = 0x06,
-    #[doc = "Prescaler 128"]
+    #[doc = "Prescaler 128."]
     HUNDREDTWENTYEIGHT = 0x07,
 }
 impl Sm0ctrlPrsc {
@@ -1904,13 +1904,13 @@ impl From<Sm0tctrlTrgfrq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1captctrlaEdga0 {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED = 0x0,
-    #[doc = "Capture falling edges"]
+    #[doc = "Capture falling edges."]
     FALLING_EDGE = 0x01,
-    #[doc = "Capture rising edges"]
+    #[doc = "Capture rising edges."]
     RISING_EDGE = 0x02,
-    #[doc = "Capture any edge"]
+    #[doc = "Capture any edge."]
     ANY_EDGE = 0x03,
 }
 impl Sm1captctrlaEdga0 {
@@ -1939,13 +1939,13 @@ impl From<Sm1captctrlaEdga0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1captctrlaEdga1 {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED = 0x0,
-    #[doc = "Capture falling edges"]
+    #[doc = "Capture falling edges."]
     FALLING_EDGE = 0x01,
-    #[doc = "Capture rising edges"]
+    #[doc = "Capture rising edges."]
     RISING_EDGE = 0x02,
-    #[doc = "Capture any edge"]
+    #[doc = "Capture any edge."]
     ANY_EDGE = 0x03,
 }
 impl Sm1captctrlaEdga1 {
@@ -1976,7 +1976,7 @@ impl From<Sm1captctrlaEdga1> for u8 {
 pub enum Sm1captctrlaInpSela {
     #[doc = "Raw PWM_A input signal selected as source."]
     PWM_A = 0x0,
-    #[doc = "Edge Counter"]
+    #[doc = "Edge Counter."]
     EDGE_COUNTER = 0x01,
 }
 impl Sm1captctrlaInpSela {
@@ -2005,9 +2005,9 @@ impl From<Sm1captctrlaInpSela> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1captctrlaOneshota {
-    #[doc = "Free Running"]
+    #[doc = "Free Running."]
     FREE_RUNNING = 0x0,
-    #[doc = "One Shot"]
+    #[doc = "One Shot."]
     ONE_SHOT = 0x01,
 }
 impl Sm1captctrlaOneshota {
@@ -2036,13 +2036,13 @@ impl From<Sm1captctrlaOneshota> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1captctrlbEdgb0 {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED = 0x0,
-    #[doc = "Capture falling edges"]
+    #[doc = "Capture falling edges."]
     FALLING_EDGE = 0x01,
-    #[doc = "Capture rising edges"]
+    #[doc = "Capture rising edges."]
     RISING_EDGE = 0x02,
-    #[doc = "Capture any edge"]
+    #[doc = "Capture any edge."]
     ANY_EDGE = 0x03,
 }
 impl Sm1captctrlbEdgb0 {
@@ -2071,13 +2071,13 @@ impl From<Sm1captctrlbEdgb0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1captctrlbEdgb1 {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED = 0x0,
-    #[doc = "Capture falling edges"]
+    #[doc = "Capture falling edges."]
     FALLING_EDGE = 0x01,
-    #[doc = "Capture rising edges"]
+    #[doc = "Capture rising edges."]
     RISING_EDGE = 0x02,
-    #[doc = "Capture any edge"]
+    #[doc = "Capture any edge."]
     ANY_EDGE = 0x03,
 }
 impl Sm1captctrlbEdgb1 {
@@ -2108,7 +2108,7 @@ impl From<Sm1captctrlbEdgb1> for u8 {
 pub enum Sm1captctrlbInpSelb {
     #[doc = "Raw PWM_B input signal selected as source."]
     PWM_B = 0x0,
-    #[doc = "Edge Counter"]
+    #[doc = "Edge Counter."]
     EDGE_COUNTER = 0x01,
 }
 impl Sm1captctrlbInpSelb {
@@ -2137,9 +2137,9 @@ impl From<Sm1captctrlbInpSelb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1captctrlbOneshotb {
-    #[doc = "Free Running"]
+    #[doc = "Free Running."]
     FREE_RUNNING = 0x0,
-    #[doc = "One Shot"]
+    #[doc = "One Shot."]
     ONE_SHOT = 0x01,
 }
 impl Sm1captctrlbOneshotb {
@@ -2168,13 +2168,13 @@ impl From<Sm1captctrlbOneshotb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1captctrlxEdgx0 {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED = 0x0,
-    #[doc = "Capture falling edges"]
+    #[doc = "Capture falling edges."]
     FALLING_EDGE = 0x01,
-    #[doc = "Capture rising edges"]
+    #[doc = "Capture rising edges."]
     RISING_EDGE = 0x02,
-    #[doc = "Capture any edge"]
+    #[doc = "Capture any edge."]
     ANY_EDGE = 0x03,
 }
 impl Sm1captctrlxEdgx0 {
@@ -2203,13 +2203,13 @@ impl From<Sm1captctrlxEdgx0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1captctrlxEdgx1 {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED = 0x0,
-    #[doc = "Capture falling edges"]
+    #[doc = "Capture falling edges."]
     FALLING_EDGE = 0x01,
-    #[doc = "Capture rising edges"]
+    #[doc = "Capture rising edges."]
     RISING_EDGE = 0x02,
-    #[doc = "Capture any edge"]
+    #[doc = "Capture any edge."]
     ANY_EDGE = 0x03,
 }
 impl Sm1captctrlxEdgx1 {
@@ -2240,7 +2240,7 @@ impl From<Sm1captctrlxEdgx1> for u8 {
 pub enum Sm1captctrlxInpSelx {
     #[doc = "Raw PWM_X input signal selected as source."]
     PWM_X = 0x0,
-    #[doc = "Edge Counter"]
+    #[doc = "Edge Counter."]
     EDGE_COUNTER = 0x01,
 }
 impl Sm1captctrlxInpSelx {
@@ -2269,9 +2269,9 @@ impl From<Sm1captctrlxInpSelx> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1captctrlxOneshotx {
-    #[doc = "Free Running"]
+    #[doc = "Free Running."]
     FREE_RUNNING = 0x0,
-    #[doc = "One Shot"]
+    #[doc = "One Shot."]
     ONE_SHOT = 0x01,
 }
 impl Sm1captctrlxOneshotx {
@@ -2505,37 +2505,37 @@ impl From<Sm1ctrlCompmode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1ctrlLdfq {
-    #[doc = "Every PWM opportunity"]
+    #[doc = "Every PWM opportunity."]
     EVERYPWM = 0x0,
-    #[doc = "Every 2 PWM opportunities"]
+    #[doc = "Every 2 PWM opportunities."]
     EVERY2PWM = 0x01,
-    #[doc = "Every 3 PWM opportunities"]
+    #[doc = "Every 3 PWM opportunities."]
     EVERY3PWM = 0x02,
-    #[doc = "Every 4 PWM opportunities"]
+    #[doc = "Every 4 PWM opportunities."]
     EVERY4PWM = 0x03,
-    #[doc = "Every 5 PWM opportunities"]
+    #[doc = "Every 5 PWM opportunities."]
     EVERY5PWM = 0x04,
-    #[doc = "Every 6 PWM opportunities"]
+    #[doc = "Every 6 PWM opportunities."]
     EVERY6PWM = 0x05,
-    #[doc = "Every 7 PWM opportunities"]
+    #[doc = "Every 7 PWM opportunities."]
     EVERY7PWM = 0x06,
-    #[doc = "Every 8 PWM opportunities"]
+    #[doc = "Every 8 PWM opportunities."]
     EVERY8PWM = 0x07,
-    #[doc = "Every 9 PWM opportunities"]
+    #[doc = "Every 9 PWM opportunities."]
     EVERY9PWM = 0x08,
-    #[doc = "Every 10 PWM opportunities"]
+    #[doc = "Every 10 PWM opportunities."]
     EVERY10PWM = 0x09,
-    #[doc = "Every 11 PWM opportunities"]
+    #[doc = "Every 11 PWM opportunities."]
     EVERY11PWM = 0x0a,
-    #[doc = "Every 12 PWM opportunities"]
+    #[doc = "Every 12 PWM opportunities."]
     EVERY12PWM = 0x0b,
-    #[doc = "Every 13 PWM opportunities"]
+    #[doc = "Every 13 PWM opportunities."]
     EVERY13PWM = 0x0c,
-    #[doc = "Every 14 PWM opportunities"]
+    #[doc = "Every 14 PWM opportunities."]
     EVERY14PWM = 0x0d,
-    #[doc = "Every 15 PWM opportunities"]
+    #[doc = "Every 15 PWM opportunities."]
     EVERY15PWM = 0x0e,
-    #[doc = "Every 16 PWM opportunities"]
+    #[doc = "Every 16 PWM opportunities."]
     EVERY16PWM = 0x0f,
 }
 impl Sm1ctrlLdfq {
@@ -2595,21 +2595,21 @@ impl From<Sm1ctrlLdmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm1ctrlPrsc {
-    #[doc = "Prescaler 1"]
+    #[doc = "Prescaler 1."]
     ONE = 0x0,
-    #[doc = "Prescaler 2"]
+    #[doc = "Prescaler 2."]
     TWO = 0x01,
-    #[doc = "Prescaler 4"]
+    #[doc = "Prescaler 4."]
     FOUR = 0x02,
-    #[doc = "Prescaler 8"]
+    #[doc = "Prescaler 8."]
     EIGHT = 0x03,
-    #[doc = "Prescaler 16"]
+    #[doc = "Prescaler 16."]
     SIXTEEN = 0x04,
-    #[doc = "Prescaler 32"]
+    #[doc = "Prescaler 32."]
     THIRTYTWO = 0x05,
-    #[doc = "Prescaler 64"]
+    #[doc = "Prescaler 64."]
     SIXTYFOUR = 0x06,
-    #[doc = "Prescaler 128"]
+    #[doc = "Prescaler 128."]
     HUNDREDTWENTYEIGHT = 0x07,
 }
 impl Sm1ctrlPrsc {
@@ -3311,13 +3311,13 @@ impl From<Sm1tctrlTrgfrq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2captctrlaEdga0 {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED = 0x0,
-    #[doc = "Capture falling edges"]
+    #[doc = "Capture falling edges."]
     FALLING_EDGE = 0x01,
-    #[doc = "Capture rising edges"]
+    #[doc = "Capture rising edges."]
     RISING_EDGE = 0x02,
-    #[doc = "Capture any edge"]
+    #[doc = "Capture any edge."]
     ANY_EDGE = 0x03,
 }
 impl Sm2captctrlaEdga0 {
@@ -3346,13 +3346,13 @@ impl From<Sm2captctrlaEdga0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2captctrlaEdga1 {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED = 0x0,
-    #[doc = "Capture falling edges"]
+    #[doc = "Capture falling edges."]
     FALLING_EDGE = 0x01,
-    #[doc = "Capture rising edges"]
+    #[doc = "Capture rising edges."]
     RISING_EDGE = 0x02,
-    #[doc = "Capture any edge"]
+    #[doc = "Capture any edge."]
     ANY_EDGE = 0x03,
 }
 impl Sm2captctrlaEdga1 {
@@ -3383,7 +3383,7 @@ impl From<Sm2captctrlaEdga1> for u8 {
 pub enum Sm2captctrlaInpSela {
     #[doc = "Raw PWM_A input signal selected as source."]
     PWM_A = 0x0,
-    #[doc = "Edge Counter"]
+    #[doc = "Edge Counter."]
     EDGE_COUNTER = 0x01,
 }
 impl Sm2captctrlaInpSela {
@@ -3412,9 +3412,9 @@ impl From<Sm2captctrlaInpSela> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2captctrlaOneshota {
-    #[doc = "Free Running"]
+    #[doc = "Free Running."]
     FREE_RUNNING = 0x0,
-    #[doc = "One Shot"]
+    #[doc = "One Shot."]
     ONE_SHOT = 0x01,
 }
 impl Sm2captctrlaOneshota {
@@ -3443,13 +3443,13 @@ impl From<Sm2captctrlaOneshota> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2captctrlbEdgb0 {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED = 0x0,
-    #[doc = "Capture falling edges"]
+    #[doc = "Capture falling edges."]
     FALLING_EDGE = 0x01,
-    #[doc = "Capture rising edges"]
+    #[doc = "Capture rising edges."]
     RISING_EDGE = 0x02,
-    #[doc = "Capture any edge"]
+    #[doc = "Capture any edge."]
     ANY_EDGE = 0x03,
 }
 impl Sm2captctrlbEdgb0 {
@@ -3478,13 +3478,13 @@ impl From<Sm2captctrlbEdgb0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2captctrlbEdgb1 {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED = 0x0,
-    #[doc = "Capture falling edges"]
+    #[doc = "Capture falling edges."]
     FALLING_EDGE = 0x01,
-    #[doc = "Capture rising edges"]
+    #[doc = "Capture rising edges."]
     RISING_EDGE = 0x02,
-    #[doc = "Capture any edge"]
+    #[doc = "Capture any edge."]
     ANY_EDGE = 0x03,
 }
 impl Sm2captctrlbEdgb1 {
@@ -3515,7 +3515,7 @@ impl From<Sm2captctrlbEdgb1> for u8 {
 pub enum Sm2captctrlbInpSelb {
     #[doc = "Raw PWM_B input signal selected as source."]
     PWM_B = 0x0,
-    #[doc = "Edge Counter"]
+    #[doc = "Edge Counter."]
     EDGE_COUNTER = 0x01,
 }
 impl Sm2captctrlbInpSelb {
@@ -3544,9 +3544,9 @@ impl From<Sm2captctrlbInpSelb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2captctrlbOneshotb {
-    #[doc = "Free Running"]
+    #[doc = "Free Running."]
     FREE_RUNNING = 0x0,
-    #[doc = "One Shot"]
+    #[doc = "One Shot."]
     ONE_SHOT = 0x01,
 }
 impl Sm2captctrlbOneshotb {
@@ -3575,13 +3575,13 @@ impl From<Sm2captctrlbOneshotb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2captctrlxEdgx0 {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED = 0x0,
-    #[doc = "Capture falling edges"]
+    #[doc = "Capture falling edges."]
     FALLING_EDGE = 0x01,
-    #[doc = "Capture rising edges"]
+    #[doc = "Capture rising edges."]
     RISING_EDGE = 0x02,
-    #[doc = "Capture any edge"]
+    #[doc = "Capture any edge."]
     ANY_EDGE = 0x03,
 }
 impl Sm2captctrlxEdgx0 {
@@ -3610,13 +3610,13 @@ impl From<Sm2captctrlxEdgx0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2captctrlxEdgx1 {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED = 0x0,
-    #[doc = "Capture falling edges"]
+    #[doc = "Capture falling edges."]
     FALLING_EDGE = 0x01,
-    #[doc = "Capture rising edges"]
+    #[doc = "Capture rising edges."]
     RISING_EDGE = 0x02,
-    #[doc = "Capture any edge"]
+    #[doc = "Capture any edge."]
     ANY_EDGE = 0x03,
 }
 impl Sm2captctrlxEdgx1 {
@@ -3647,7 +3647,7 @@ impl From<Sm2captctrlxEdgx1> for u8 {
 pub enum Sm2captctrlxInpSelx {
     #[doc = "Raw PWM_X input signal selected as source."]
     PWM_X = 0x0,
-    #[doc = "Edge Counter"]
+    #[doc = "Edge Counter."]
     EDGE_COUNTER = 0x01,
 }
 impl Sm2captctrlxInpSelx {
@@ -3676,9 +3676,9 @@ impl From<Sm2captctrlxInpSelx> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2captctrlxOneshotx {
-    #[doc = "Free Running"]
+    #[doc = "Free Running."]
     FREE_RUNNING = 0x0,
-    #[doc = "One Shot"]
+    #[doc = "One Shot."]
     ONE_SHOT = 0x01,
 }
 impl Sm2captctrlxOneshotx {
@@ -3912,37 +3912,37 @@ impl From<Sm2ctrlCompmode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2ctrlLdfq {
-    #[doc = "Every PWM opportunity"]
+    #[doc = "Every PWM opportunity."]
     EVERYPWM = 0x0,
-    #[doc = "Every 2 PWM opportunities"]
+    #[doc = "Every 2 PWM opportunities."]
     EVERY2PWM = 0x01,
-    #[doc = "Every 3 PWM opportunities"]
+    #[doc = "Every 3 PWM opportunities."]
     EVERY3PWM = 0x02,
-    #[doc = "Every 4 PWM opportunities"]
+    #[doc = "Every 4 PWM opportunities."]
     EVERY4PWM = 0x03,
-    #[doc = "Every 5 PWM opportunities"]
+    #[doc = "Every 5 PWM opportunities."]
     EVERY5PWM = 0x04,
-    #[doc = "Every 6 PWM opportunities"]
+    #[doc = "Every 6 PWM opportunities."]
     EVERY6PWM = 0x05,
-    #[doc = "Every 7 PWM opportunities"]
+    #[doc = "Every 7 PWM opportunities."]
     EVERY7PWM = 0x06,
-    #[doc = "Every 8 PWM opportunities"]
+    #[doc = "Every 8 PWM opportunities."]
     EVERY8PWM = 0x07,
-    #[doc = "Every 9 PWM opportunities"]
+    #[doc = "Every 9 PWM opportunities."]
     EVERY9PWM = 0x08,
-    #[doc = "Every 10 PWM opportunities"]
+    #[doc = "Every 10 PWM opportunities."]
     EVERY10PWM = 0x09,
-    #[doc = "Every 11 PWM opportunities"]
+    #[doc = "Every 11 PWM opportunities."]
     EVERY11PWM = 0x0a,
-    #[doc = "Every 12 PWM opportunities"]
+    #[doc = "Every 12 PWM opportunities."]
     EVERY12PWM = 0x0b,
-    #[doc = "Every 13 PWM opportunities"]
+    #[doc = "Every 13 PWM opportunities."]
     EVERY13PWM = 0x0c,
-    #[doc = "Every 14 PWM opportunities"]
+    #[doc = "Every 14 PWM opportunities."]
     EVERY14PWM = 0x0d,
-    #[doc = "Every 15 PWM opportunities"]
+    #[doc = "Every 15 PWM opportunities."]
     EVERY15PWM = 0x0e,
-    #[doc = "Every 16 PWM opportunities"]
+    #[doc = "Every 16 PWM opportunities."]
     EVERY16PWM = 0x0f,
 }
 impl Sm2ctrlLdfq {
@@ -4002,21 +4002,21 @@ impl From<Sm2ctrlLdmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm2ctrlPrsc {
-    #[doc = "Prescaler 1"]
+    #[doc = "Prescaler 1."]
     ONE = 0x0,
-    #[doc = "Prescaler 2"]
+    #[doc = "Prescaler 2."]
     TWO = 0x01,
-    #[doc = "Prescaler 4"]
+    #[doc = "Prescaler 4."]
     FOUR = 0x02,
-    #[doc = "Prescaler 8"]
+    #[doc = "Prescaler 8."]
     EIGHT = 0x03,
-    #[doc = "Prescaler 16"]
+    #[doc = "Prescaler 16."]
     SIXTEEN = 0x04,
-    #[doc = "Prescaler 32"]
+    #[doc = "Prescaler 32."]
     THIRTYTWO = 0x05,
-    #[doc = "Prescaler 64"]
+    #[doc = "Prescaler 64."]
     SIXTYFOUR = 0x06,
-    #[doc = "Prescaler 128"]
+    #[doc = "Prescaler 128."]
     HUNDREDTWENTYEIGHT = 0x07,
 }
 impl Sm2ctrlPrsc {
@@ -4718,13 +4718,13 @@ impl From<Sm2tctrlTrgfrq> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3captctrlaEdga0 {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED = 0x0,
-    #[doc = "Capture falling edges"]
+    #[doc = "Capture falling edges."]
     FALLING_EDGE = 0x01,
-    #[doc = "Capture rising edges"]
+    #[doc = "Capture rising edges."]
     RISING_EDGE = 0x02,
-    #[doc = "Capture any edge"]
+    #[doc = "Capture any edge."]
     ANY_EDGE = 0x03,
 }
 impl Sm3captctrlaEdga0 {
@@ -4753,13 +4753,13 @@ impl From<Sm3captctrlaEdga0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3captctrlaEdga1 {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED = 0x0,
-    #[doc = "Capture falling edges"]
+    #[doc = "Capture falling edges."]
     FALLING_EDGE = 0x01,
-    #[doc = "Capture rising edges"]
+    #[doc = "Capture rising edges."]
     RISING_EDGE = 0x02,
-    #[doc = "Capture any edge"]
+    #[doc = "Capture any edge."]
     ANY_EDGE = 0x03,
 }
 impl Sm3captctrlaEdga1 {
@@ -4790,7 +4790,7 @@ impl From<Sm3captctrlaEdga1> for u8 {
 pub enum Sm3captctrlaInpSela {
     #[doc = "Raw PWM_A input signal selected as source."]
     PWM_A = 0x0,
-    #[doc = "Edge Counter"]
+    #[doc = "Edge Counter."]
     EDGE_COUNTER = 0x01,
 }
 impl Sm3captctrlaInpSela {
@@ -4819,9 +4819,9 @@ impl From<Sm3captctrlaInpSela> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3captctrlaOneshota {
-    #[doc = "Free Running"]
+    #[doc = "Free Running."]
     FREE_RUNNING = 0x0,
-    #[doc = "One Shot"]
+    #[doc = "One Shot."]
     ONE_SHOT = 0x01,
 }
 impl Sm3captctrlaOneshota {
@@ -4850,13 +4850,13 @@ impl From<Sm3captctrlaOneshota> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3captctrlbEdgb0 {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED = 0x0,
-    #[doc = "Capture falling edges"]
+    #[doc = "Capture falling edges."]
     FALLING_EDGE = 0x01,
-    #[doc = "Capture rising edges"]
+    #[doc = "Capture rising edges."]
     RISING_EDGE = 0x02,
-    #[doc = "Capture any edge"]
+    #[doc = "Capture any edge."]
     ANY_EDGE = 0x03,
 }
 impl Sm3captctrlbEdgb0 {
@@ -4885,13 +4885,13 @@ impl From<Sm3captctrlbEdgb0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3captctrlbEdgb1 {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED = 0x0,
-    #[doc = "Capture falling edges"]
+    #[doc = "Capture falling edges."]
     FALLING_EDGE = 0x01,
-    #[doc = "Capture rising edges"]
+    #[doc = "Capture rising edges."]
     RISING_EDGE = 0x02,
-    #[doc = "Capture any edge"]
+    #[doc = "Capture any edge."]
     ANY_EDGE = 0x03,
 }
 impl Sm3captctrlbEdgb1 {
@@ -4922,7 +4922,7 @@ impl From<Sm3captctrlbEdgb1> for u8 {
 pub enum Sm3captctrlbInpSelb {
     #[doc = "Raw PWM_B input signal selected as source."]
     PWM_B = 0x0,
-    #[doc = "Edge Counter"]
+    #[doc = "Edge Counter."]
     EDGE_COUNTER = 0x01,
 }
 impl Sm3captctrlbInpSelb {
@@ -4951,9 +4951,9 @@ impl From<Sm3captctrlbInpSelb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3captctrlbOneshotb {
-    #[doc = "Free Running"]
+    #[doc = "Free Running."]
     FREE_RUNNING = 0x0,
-    #[doc = "One Shot"]
+    #[doc = "One Shot."]
     ONE_SHOT = 0x01,
 }
 impl Sm3captctrlbOneshotb {
@@ -4982,13 +4982,13 @@ impl From<Sm3captctrlbOneshotb> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3captctrlxEdgx0 {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED = 0x0,
-    #[doc = "Capture falling edges"]
+    #[doc = "Capture falling edges."]
     FALLING_EDGE = 0x01,
-    #[doc = "Capture rising edges"]
+    #[doc = "Capture rising edges."]
     RISING_EDGE = 0x02,
-    #[doc = "Capture any edge"]
+    #[doc = "Capture any edge."]
     ANY_EDGE = 0x03,
 }
 impl Sm3captctrlxEdgx0 {
@@ -5017,13 +5017,13 @@ impl From<Sm3captctrlxEdgx0> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3captctrlxEdgx1 {
-    #[doc = "Disabled"]
+    #[doc = "Disabled."]
     DISABLED = 0x0,
-    #[doc = "Capture falling edges"]
+    #[doc = "Capture falling edges."]
     FALLING_EDGE = 0x01,
-    #[doc = "Capture rising edges"]
+    #[doc = "Capture rising edges."]
     RISING_EDGE = 0x02,
-    #[doc = "Capture any edge"]
+    #[doc = "Capture any edge."]
     ANY_EDGE = 0x03,
 }
 impl Sm3captctrlxEdgx1 {
@@ -5054,7 +5054,7 @@ impl From<Sm3captctrlxEdgx1> for u8 {
 pub enum Sm3captctrlxInpSelx {
     #[doc = "Raw PWM_X input signal selected as source."]
     PWM_X = 0x0,
-    #[doc = "Edge Counter"]
+    #[doc = "Edge Counter."]
     EDGE_COUNTER = 0x01,
 }
 impl Sm3captctrlxInpSelx {
@@ -5083,9 +5083,9 @@ impl From<Sm3captctrlxInpSelx> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3captctrlxOneshotx {
-    #[doc = "Free Running"]
+    #[doc = "Free Running."]
     FREE_RUNNING = 0x0,
-    #[doc = "One Shot"]
+    #[doc = "One Shot."]
     ONE_SHOT = 0x01,
 }
 impl Sm3captctrlxOneshotx {
@@ -5319,37 +5319,37 @@ impl From<Sm3ctrlCompmode> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3ctrlLdfq {
-    #[doc = "Every PWM opportunity"]
+    #[doc = "Every PWM opportunity."]
     EVERYPWM = 0x0,
-    #[doc = "Every 2 PWM opportunities"]
+    #[doc = "Every 2 PWM opportunities."]
     EVERY2PWM = 0x01,
-    #[doc = "Every 3 PWM opportunities"]
+    #[doc = "Every 3 PWM opportunities."]
     EVERY3PWM = 0x02,
-    #[doc = "Every 4 PWM opportunities"]
+    #[doc = "Every 4 PWM opportunities."]
     EVERY4PWM = 0x03,
-    #[doc = "Every 5 PWM opportunities"]
+    #[doc = "Every 5 PWM opportunities."]
     EVERY5PWM = 0x04,
-    #[doc = "Every 6 PWM opportunities"]
+    #[doc = "Every 6 PWM opportunities."]
     EVERY6PWM = 0x05,
-    #[doc = "Every 7 PWM opportunities"]
+    #[doc = "Every 7 PWM opportunities."]
     EVERY7PWM = 0x06,
-    #[doc = "Every 8 PWM opportunities"]
+    #[doc = "Every 8 PWM opportunities."]
     EVERY8PWM = 0x07,
-    #[doc = "Every 9 PWM opportunities"]
+    #[doc = "Every 9 PWM opportunities."]
     EVERY9PWM = 0x08,
-    #[doc = "Every 10 PWM opportunities"]
+    #[doc = "Every 10 PWM opportunities."]
     EVERY10PWM = 0x09,
-    #[doc = "Every 11 PWM opportunities"]
+    #[doc = "Every 11 PWM opportunities."]
     EVERY11PWM = 0x0a,
-    #[doc = "Every 12 PWM opportunities"]
+    #[doc = "Every 12 PWM opportunities."]
     EVERY12PWM = 0x0b,
-    #[doc = "Every 13 PWM opportunities"]
+    #[doc = "Every 13 PWM opportunities."]
     EVERY13PWM = 0x0c,
-    #[doc = "Every 14 PWM opportunities"]
+    #[doc = "Every 14 PWM opportunities."]
     EVERY14PWM = 0x0d,
-    #[doc = "Every 15 PWM opportunities"]
+    #[doc = "Every 15 PWM opportunities."]
     EVERY15PWM = 0x0e,
-    #[doc = "Every 16 PWM opportunities"]
+    #[doc = "Every 16 PWM opportunities."]
     EVERY16PWM = 0x0f,
 }
 impl Sm3ctrlLdfq {
@@ -5409,21 +5409,21 @@ impl From<Sm3ctrlLdmod> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sm3ctrlPrsc {
-    #[doc = "Prescaler 1"]
+    #[doc = "Prescaler 1."]
     ONE = 0x0,
-    #[doc = "Prescaler 2"]
+    #[doc = "Prescaler 2."]
     TWO = 0x01,
-    #[doc = "Prescaler 4"]
+    #[doc = "Prescaler 4."]
     FOUR = 0x02,
-    #[doc = "Prescaler 8"]
+    #[doc = "Prescaler 8."]
     EIGHT = 0x03,
-    #[doc = "Prescaler 16"]
+    #[doc = "Prescaler 16."]
     SIXTEEN = 0x04,
-    #[doc = "Prescaler 32"]
+    #[doc = "Prescaler 32."]
     THIRTYTWO = 0x05,
-    #[doc = "Prescaler 64"]
+    #[doc = "Prescaler 64."]
     SIXTYFOUR = 0x06,
-    #[doc = "Prescaler 128"]
+    #[doc = "Prescaler 128."]
     HUNDREDTWENTYEIGHT = 0x07,
 }
 impl Sm3ctrlPrsc {

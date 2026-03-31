@@ -1,100 +1,100 @@
-#[doc = "SW_PAD_CTL_PAD_GPIO_00 SW PAD Control Register"]
+#[doc = "SW_PAD_CTL_PAD_GPIO_00 SW PAD Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ctl(pub u32);
 impl Ctl {
-    #[doc = "Slew Rate Field"]
+    #[doc = "Slew Rate Field."]
     #[must_use]
     #[inline(always)]
     pub const fn sre(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Slew Rate Field"]
+    #[doc = "Slew Rate Field."]
     #[inline(always)]
     pub const fn set_sre(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Drive Strength Field"]
+    #[doc = "Drive Strength Field."]
     #[must_use]
     #[inline(always)]
     pub const fn dse(&self) -> super::vals::Dse {
         let val = (self.0 >> 3usize) & 0x07;
         super::vals::Dse::from_bits(val as u8)
     }
-    #[doc = "Drive Strength Field"]
+    #[doc = "Drive Strength Field."]
     #[inline(always)]
     pub const fn set_dse(&mut self, val: super::vals::Dse) {
         self.0 = (self.0 & !(0x07 << 3usize)) | (((val.to_bits() as u32) & 0x07) << 3usize);
     }
-    #[doc = "Speed Field"]
+    #[doc = "Speed Field."]
     #[must_use]
     #[inline(always)]
     pub const fn speed(&self) -> super::vals::Speed {
         let val = (self.0 >> 6usize) & 0x03;
         super::vals::Speed::from_bits(val as u8)
     }
-    #[doc = "Speed Field"]
+    #[doc = "Speed Field."]
     #[inline(always)]
     pub const fn set_speed(&mut self, val: super::vals::Speed) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u32) & 0x03) << 6usize);
     }
-    #[doc = "Open Drain Enable Field"]
+    #[doc = "Open Drain Enable Field."]
     #[must_use]
     #[inline(always)]
     pub const fn ode(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "Open Drain Enable Field"]
+    #[doc = "Open Drain Enable Field."]
     #[inline(always)]
     pub const fn set_ode(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "Pull / Keep Enable Field"]
+    #[doc = "Pull / Keep Enable Field."]
     #[must_use]
     #[inline(always)]
     pub const fn pke(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "Pull / Keep Enable Field"]
+    #[doc = "Pull / Keep Enable Field."]
     #[inline(always)]
     pub const fn set_pke(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "Pull / Keep Select Field"]
+    #[doc = "Pull / Keep Select Field."]
     #[must_use]
     #[inline(always)]
     pub const fn pue(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "Pull / Keep Select Field"]
+    #[doc = "Pull / Keep Select Field."]
     #[inline(always)]
     pub const fn set_pue(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "Pull Up / Down Config. Field"]
+    #[doc = "Pull Up / Down Config. Field."]
     #[must_use]
     #[inline(always)]
     pub const fn pus(&self) -> super::vals::Pus {
         let val = (self.0 >> 14usize) & 0x03;
         super::vals::Pus::from_bits(val as u8)
     }
-    #[doc = "Pull Up / Down Config. Field"]
+    #[doc = "Pull Up / Down Config. Field."]
     #[inline(always)]
     pub const fn set_pus(&mut self, val: super::vals::Pus) {
         self.0 = (self.0 & !(0x03 << 14usize)) | (((val.to_bits() as u32) & 0x03) << 14usize);
     }
-    #[doc = "Hyst. Enable Field"]
+    #[doc = "Hyst. Enable Field."]
     #[must_use]
     #[inline(always)]
     pub const fn hys(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "Hyst. Enable Field"]
+    #[doc = "Hyst. Enable Field."]
     #[inline(always)]
     pub const fn set_hys(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
@@ -137,7 +137,7 @@ impl defmt::Format for Ctl {
         )
     }
 }
-#[doc = "FLEXPWM1_PWMA_SELECT_INPUT_0 DAISY Register"]
+#[doc = "FLEXPWM1_PWMA_SELECT_INPUT_0 DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flexpwm1PwmaSelectInput0(pub u32);
@@ -178,7 +178,7 @@ impl defmt::Format for Flexpwm1PwmaSelectInput0 {
         )
     }
 }
-#[doc = "FLEXPWM1_PWMA_SELECT_INPUT_1 DAISY Register"]
+#[doc = "FLEXPWM1_PWMA_SELECT_INPUT_1 DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flexpwm1PwmaSelectInput1(pub u32);
@@ -219,7 +219,7 @@ impl defmt::Format for Flexpwm1PwmaSelectInput1 {
         )
     }
 }
-#[doc = "FLEXPWM1_PWMA_SELECT_INPUT_2 DAISY Register"]
+#[doc = "FLEXPWM1_PWMA_SELECT_INPUT_2 DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flexpwm1PwmaSelectInput2(pub u32);
@@ -260,7 +260,7 @@ impl defmt::Format for Flexpwm1PwmaSelectInput2 {
         )
     }
 }
-#[doc = "FLEXPWM1_PWMA_SELECT_INPUT_3 DAISY Register"]
+#[doc = "FLEXPWM1_PWMA_SELECT_INPUT_3 DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flexpwm1PwmaSelectInput3(pub u32);
@@ -301,7 +301,7 @@ impl defmt::Format for Flexpwm1PwmaSelectInput3 {
         )
     }
 }
-#[doc = "FLEXPWM1_PWMB_SELECT_INPUT_0 DAISY Register"]
+#[doc = "FLEXPWM1_PWMB_SELECT_INPUT_0 DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flexpwm1PwmbSelectInput0(pub u32);
@@ -342,7 +342,7 @@ impl defmt::Format for Flexpwm1PwmbSelectInput0 {
         )
     }
 }
-#[doc = "FLEXPWM1_PWMB_SELECT_INPUT_1 DAISY Register"]
+#[doc = "FLEXPWM1_PWMB_SELECT_INPUT_1 DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flexpwm1PwmbSelectInput1(pub u32);
@@ -383,7 +383,7 @@ impl defmt::Format for Flexpwm1PwmbSelectInput1 {
         )
     }
 }
-#[doc = "FLEXPWM1_PWMB_SELECT_INPUT_2 DAISY Register"]
+#[doc = "FLEXPWM1_PWMB_SELECT_INPUT_2 DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flexpwm1PwmbSelectInput2(pub u32);
@@ -424,7 +424,7 @@ impl defmt::Format for Flexpwm1PwmbSelectInput2 {
         )
     }
 }
-#[doc = "FLEXPWM1_PWMB_SELECT_INPUT_3 DAISY Register"]
+#[doc = "FLEXPWM1_PWMB_SELECT_INPUT_3 DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Flexpwm1PwmbSelectInput3(pub u32);
@@ -465,7 +465,7 @@ impl defmt::Format for Flexpwm1PwmbSelectInput3 {
         )
     }
 }
-#[doc = "FLEXSPI_DQS_FA_SELECT_INPUT DAISY Register"]
+#[doc = "FLEXSPI_DQS_FA_SELECT_INPUT DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FlexspiDqsFaSelectInput(pub u32);
@@ -502,7 +502,7 @@ impl defmt::Format for FlexspiDqsFaSelectInput {
         defmt::write!(f, "FlexspiDqsFaSelectInput {{ daisy: {:?} }}", self.daisy())
     }
 }
-#[doc = "FLEXSPI_DQS_FB_SELECT_INPUT DAISY Register"]
+#[doc = "FLEXSPI_DQS_FB_SELECT_INPUT DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct FlexspiDqsFbSelectInput(pub u32);
@@ -539,7 +539,7 @@ impl defmt::Format for FlexspiDqsFbSelectInput {
         defmt::write!(f, "FlexspiDqsFbSelectInput {{ daisy: {:?} }}", self.daisy())
     }
 }
-#[doc = "KPP_COL_SELECT_INPUT_0 DAISY Register"]
+#[doc = "KPP_COL_SELECT_INPUT_0 DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct KppColSelectInput0(pub u32);
@@ -576,7 +576,7 @@ impl defmt::Format for KppColSelectInput0 {
         defmt::write!(f, "KppColSelectInput0 {{ daisy: {:?} }}", self.daisy())
     }
 }
-#[doc = "KPP_COL_SELECT_INPUT_1 DAISY Register"]
+#[doc = "KPP_COL_SELECT_INPUT_1 DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct KppColSelectInput1(pub u32);
@@ -613,7 +613,7 @@ impl defmt::Format for KppColSelectInput1 {
         defmt::write!(f, "KppColSelectInput1 {{ daisy: {:?} }}", self.daisy())
     }
 }
-#[doc = "KPP_COL_SELECT_INPUT_2 DAISY Register"]
+#[doc = "KPP_COL_SELECT_INPUT_2 DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct KppColSelectInput2(pub u32);
@@ -650,7 +650,7 @@ impl defmt::Format for KppColSelectInput2 {
         defmt::write!(f, "KppColSelectInput2 {{ daisy: {:?} }}", self.daisy())
     }
 }
-#[doc = "KPP_COL_SELECT_INPUT_3 DAISY Register"]
+#[doc = "KPP_COL_SELECT_INPUT_3 DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct KppColSelectInput3(pub u32);
@@ -687,7 +687,7 @@ impl defmt::Format for KppColSelectInput3 {
         defmt::write!(f, "KppColSelectInput3 {{ daisy: {:?} }}", self.daisy())
     }
 }
-#[doc = "KPP_ROW_SELECT_INPUT_0 DAISY Register"]
+#[doc = "KPP_ROW_SELECT_INPUT_0 DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct KppRowSelectInput0(pub u32);
@@ -724,7 +724,7 @@ impl defmt::Format for KppRowSelectInput0 {
         defmt::write!(f, "KppRowSelectInput0 {{ daisy: {:?} }}", self.daisy())
     }
 }
-#[doc = "KPP_ROW_SELECT_INPUT_1 DAISY Register"]
+#[doc = "KPP_ROW_SELECT_INPUT_1 DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct KppRowSelectInput1(pub u32);
@@ -761,7 +761,7 @@ impl defmt::Format for KppRowSelectInput1 {
         defmt::write!(f, "KppRowSelectInput1 {{ daisy: {:?} }}", self.daisy())
     }
 }
-#[doc = "KPP_ROW_SELECT_INPUT_2 DAISY Register"]
+#[doc = "KPP_ROW_SELECT_INPUT_2 DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct KppRowSelectInput2(pub u32);
@@ -798,7 +798,7 @@ impl defmt::Format for KppRowSelectInput2 {
         defmt::write!(f, "KppRowSelectInput2 {{ daisy: {:?} }}", self.daisy())
     }
 }
-#[doc = "KPP_ROW_SELECT_INPUT_3 DAISY Register"]
+#[doc = "KPP_ROW_SELECT_INPUT_3 DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct KppRowSelectInput3(pub u32);
@@ -835,7 +835,7 @@ impl defmt::Format for KppRowSelectInput3 {
         defmt::write!(f, "KppRowSelectInput3 {{ daisy: {:?} }}", self.daisy())
     }
 }
-#[doc = "LPI2C1_HREQ_SELECT_INPUT DAISY Register"]
+#[doc = "LPI2C1_HREQ_SELECT_INPUT DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lpi2c1HreqSelectInput(pub u32);
@@ -872,7 +872,7 @@ impl defmt::Format for Lpi2c1HreqSelectInput {
         defmt::write!(f, "Lpi2c1HreqSelectInput {{ daisy: {:?} }}", self.daisy())
     }
 }
-#[doc = "LPI2C1_SCL_SELECT_INPUT DAISY Register"]
+#[doc = "LPI2C1_SCL_SELECT_INPUT DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lpi2c1SclSelectInput(pub u32);
@@ -909,7 +909,7 @@ impl defmt::Format for Lpi2c1SclSelectInput {
         defmt::write!(f, "Lpi2c1SclSelectInput {{ daisy: {:?} }}", self.daisy())
     }
 }
-#[doc = "LPI2C1_SDA_SELECT_INPUT DAISY Register"]
+#[doc = "LPI2C1_SDA_SELECT_INPUT DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lpi2c1SdaSelectInput(pub u32);
@@ -946,7 +946,7 @@ impl defmt::Format for Lpi2c1SdaSelectInput {
         defmt::write!(f, "Lpi2c1SdaSelectInput {{ daisy: {:?} }}", self.daisy())
     }
 }
-#[doc = "LPI2C2_SCL_SELECT_INPUT DAISY Register"]
+#[doc = "LPI2C2_SCL_SELECT_INPUT DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lpi2c2SclSelectInput(pub u32);
@@ -983,7 +983,7 @@ impl defmt::Format for Lpi2c2SclSelectInput {
         defmt::write!(f, "Lpi2c2SclSelectInput {{ daisy: {:?} }}", self.daisy())
     }
 }
-#[doc = "LPI2C2_SDA_SELECT_INPUT DAISY Register"]
+#[doc = "LPI2C2_SDA_SELECT_INPUT DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lpi2c2SdaSelectInput(pub u32);
@@ -1020,7 +1020,7 @@ impl defmt::Format for Lpi2c2SdaSelectInput {
         defmt::write!(f, "Lpi2c2SdaSelectInput {{ daisy: {:?} }}", self.daisy())
     }
 }
-#[doc = "LPSPI1_PCS_SELECT_INPUT_0 DAISY Register"]
+#[doc = "LPSPI1_PCS_SELECT_INPUT_0 DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lpspi1PcsSelectInput0(pub u32);
@@ -1057,7 +1057,7 @@ impl defmt::Format for Lpspi1PcsSelectInput0 {
         defmt::write!(f, "Lpspi1PcsSelectInput0 {{ daisy: {:?} }}", self.daisy())
     }
 }
-#[doc = "LPSPI1_SCK_SELECT_INPUT DAISY Register"]
+#[doc = "LPSPI1_SCK_SELECT_INPUT DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lpspi1SckSelectInput(pub u32);
@@ -1094,7 +1094,7 @@ impl defmt::Format for Lpspi1SckSelectInput {
         defmt::write!(f, "Lpspi1SckSelectInput {{ daisy: {:?} }}", self.daisy())
     }
 }
-#[doc = "LPSPI1_SDI_SELECT_INPUT DAISY Register"]
+#[doc = "LPSPI1_SDI_SELECT_INPUT DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lpspi1SdiSelectInput(pub u32);
@@ -1131,7 +1131,7 @@ impl defmt::Format for Lpspi1SdiSelectInput {
         defmt::write!(f, "Lpspi1SdiSelectInput {{ daisy: {:?} }}", self.daisy())
     }
 }
-#[doc = "LPSPI1_SDO_SELECT_INPUT DAISY Register"]
+#[doc = "LPSPI1_SDO_SELECT_INPUT DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lpspi1SdoSelectInput(pub u32);
@@ -1168,7 +1168,7 @@ impl defmt::Format for Lpspi1SdoSelectInput {
         defmt::write!(f, "Lpspi1SdoSelectInput {{ daisy: {:?} }}", self.daisy())
     }
 }
-#[doc = "LPSPI2_PCS_SELECT_INPUT_0 DAISY Register"]
+#[doc = "LPSPI2_PCS_SELECT_INPUT_0 DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lpspi2PcsSelectInput0(pub u32);
@@ -1205,7 +1205,7 @@ impl defmt::Format for Lpspi2PcsSelectInput0 {
         defmt::write!(f, "Lpspi2PcsSelectInput0 {{ daisy: {:?} }}", self.daisy())
     }
 }
-#[doc = "LPSPI2_SCK_SELECT_INPUT DAISY Register"]
+#[doc = "LPSPI2_SCK_SELECT_INPUT DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lpspi2SckSelectInput(pub u32);
@@ -1242,7 +1242,7 @@ impl defmt::Format for Lpspi2SckSelectInput {
         defmt::write!(f, "Lpspi2SckSelectInput {{ daisy: {:?} }}", self.daisy())
     }
 }
-#[doc = "LPSPI2_SDI_SELECT_INPUT DAISY Register"]
+#[doc = "LPSPI2_SDI_SELECT_INPUT DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lpspi2SdiSelectInput(pub u32);
@@ -1279,7 +1279,7 @@ impl defmt::Format for Lpspi2SdiSelectInput {
         defmt::write!(f, "Lpspi2SdiSelectInput {{ daisy: {:?} }}", self.daisy())
     }
 }
-#[doc = "LPSPI2_SDO_SELECT_INPUT DAISY Register"]
+#[doc = "LPSPI2_SDO_SELECT_INPUT DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lpspi2SdoSelectInput(pub u32);
@@ -1316,7 +1316,7 @@ impl defmt::Format for Lpspi2SdoSelectInput {
         defmt::write!(f, "Lpspi2SdoSelectInput {{ daisy: {:?} }}", self.daisy())
     }
 }
-#[doc = "LPUART1_RXD_SELECT_INPUT DAISY Register"]
+#[doc = "LPUART1_RXD_SELECT_INPUT DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lpuart1RxdSelectInput(pub u32);
@@ -1353,7 +1353,7 @@ impl defmt::Format for Lpuart1RxdSelectInput {
         defmt::write!(f, "Lpuart1RxdSelectInput {{ daisy: {:?} }}", self.daisy())
     }
 }
-#[doc = "LPUART1_TXD_SELECT_INPUT DAISY Register"]
+#[doc = "LPUART1_TXD_SELECT_INPUT DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lpuart1TxdSelectInput(pub u32);
@@ -1390,7 +1390,7 @@ impl defmt::Format for Lpuart1TxdSelectInput {
         defmt::write!(f, "Lpuart1TxdSelectInput {{ daisy: {:?} }}", self.daisy())
     }
 }
-#[doc = "LPUART2_RXD_SELECT_INPUT DAISY Register"]
+#[doc = "LPUART2_RXD_SELECT_INPUT DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lpuart2RxdSelectInput(pub u32);
@@ -1427,7 +1427,7 @@ impl defmt::Format for Lpuart2RxdSelectInput {
         defmt::write!(f, "Lpuart2RxdSelectInput {{ daisy: {:?} }}", self.daisy())
     }
 }
-#[doc = "LPUART2_TXD_SELECT_INPUT DAISY Register"]
+#[doc = "LPUART2_TXD_SELECT_INPUT DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lpuart2TxdSelectInput(pub u32);
@@ -1464,7 +1464,7 @@ impl defmt::Format for Lpuart2TxdSelectInput {
         defmt::write!(f, "Lpuart2TxdSelectInput {{ daisy: {:?} }}", self.daisy())
     }
 }
-#[doc = "LPUART3_RXD_SELECT_INPUT DAISY Register"]
+#[doc = "LPUART3_RXD_SELECT_INPUT DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lpuart3RxdSelectInput(pub u32);
@@ -1501,7 +1501,7 @@ impl defmt::Format for Lpuart3RxdSelectInput {
         defmt::write!(f, "Lpuart3RxdSelectInput {{ daisy: {:?} }}", self.daisy())
     }
 }
-#[doc = "LPUART3_TXD_SELECT_INPUT DAISY Register"]
+#[doc = "LPUART3_TXD_SELECT_INPUT DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lpuart3TxdSelectInput(pub u32);
@@ -1538,7 +1538,7 @@ impl defmt::Format for Lpuart3TxdSelectInput {
         defmt::write!(f, "Lpuart3TxdSelectInput {{ daisy: {:?} }}", self.daisy())
     }
 }
-#[doc = "LPUART4_RXD_SELECT_INPUT DAISY Register"]
+#[doc = "LPUART4_RXD_SELECT_INPUT DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lpuart4RxdSelectInput(pub u32);
@@ -1575,7 +1575,7 @@ impl defmt::Format for Lpuart4RxdSelectInput {
         defmt::write!(f, "Lpuart4RxdSelectInput {{ daisy: {:?} }}", self.daisy())
     }
 }
-#[doc = "LPUART4_TXD_SELECT_INPUT DAISY Register"]
+#[doc = "LPUART4_TXD_SELECT_INPUT DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lpuart4TxdSelectInput(pub u32);
@@ -1612,7 +1612,7 @@ impl defmt::Format for Lpuart4TxdSelectInput {
         defmt::write!(f, "Lpuart4TxdSelectInput {{ daisy: {:?} }}", self.daisy())
     }
 }
-#[doc = "SW_MUX_CTL_PAD_GPIO_00 SW MUX Control Register"]
+#[doc = "SW_MUX_CTL_PAD_GPIO_00 SW MUX Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct MuxCtl(pub u32);
@@ -1667,7 +1667,7 @@ impl defmt::Format for MuxCtl {
         )
     }
 }
-#[doc = "NMI_GLUE_NMI_SELECT_INPUT DAISY Register"]
+#[doc = "NMI_GLUE_NMI_SELECT_INPUT DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct NmiGlueNmiSelectInput(pub u32);
@@ -1704,7 +1704,7 @@ impl defmt::Format for NmiGlueNmiSelectInput {
         defmt::write!(f, "NmiGlueNmiSelectInput {{ daisy: {:?} }}", self.daisy())
     }
 }
-#[doc = "SPDIF_IN1_SELECT_INPUT DAISY Register"]
+#[doc = "SPDIF_IN1_SELECT_INPUT DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SpdifIn1SelectInput(pub u32);
@@ -1741,7 +1741,7 @@ impl defmt::Format for SpdifIn1SelectInput {
         defmt::write!(f, "SpdifIn1SelectInput {{ daisy: {:?} }}", self.daisy())
     }
 }
-#[doc = "SPDIF_TX_CLK2_SELECT_INPUT DAISY Register"]
+#[doc = "SPDIF_TX_CLK2_SELECT_INPUT DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SpdifTxClk2SelectInput(pub u32);
@@ -1778,7 +1778,7 @@ impl defmt::Format for SpdifTxClk2SelectInput {
         defmt::write!(f, "SpdifTxClk2SelectInput {{ daisy: {:?} }}", self.daisy())
     }
 }
-#[doc = "USB_OTG_ID_SELECT_INPUT DAISY Register"]
+#[doc = "USB_OTG_ID_SELECT_INPUT DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct UsbOtgIdSelectInput(pub u32);
@@ -1815,7 +1815,7 @@ impl defmt::Format for UsbOtgIdSelectInput {
         defmt::write!(f, "UsbOtgIdSelectInput {{ daisy: {:?} }}", self.daisy())
     }
 }
-#[doc = "USB_OTG_OC_SELECT_INPUT DAISY Register"]
+#[doc = "USB_OTG_OC_SELECT_INPUT DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct UsbOtgOcSelectInput(pub u32);
@@ -1852,7 +1852,7 @@ impl defmt::Format for UsbOtgOcSelectInput {
         defmt::write!(f, "UsbOtgOcSelectInput {{ daisy: {:?} }}", self.daisy())
     }
 }
-#[doc = "XEV_GLUE_RXEV_SELECT_INPUT DAISY Register"]
+#[doc = "XEV_GLUE_RXEV_SELECT_INPUT DAISY Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct XevGlueRxevSelectInput(pub u32);

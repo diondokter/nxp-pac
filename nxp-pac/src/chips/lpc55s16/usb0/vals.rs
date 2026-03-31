@@ -2,37 +2,37 @@
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ErrCode {
-    #[doc = "No error"]
+    #[doc = "No error."]
     NO_ERROR = 0x0,
-    #[doc = "PID encoding error"]
+    #[doc = "PID encoding error."]
     PID_ENCODING_ERROR = 0x01,
-    #[doc = "PID unknown"]
+    #[doc = "PID unknown."]
     PID_UNKNOWN = 0x02,
-    #[doc = "Packet unexpected"]
+    #[doc = "Packet unexpected."]
     PACKET_UNEXPECTED = 0x03,
-    #[doc = "Token CRC error"]
+    #[doc = "Token CRC error."]
     TOKEN_CRC_ERROR = 0x04,
-    #[doc = "Data CRC error"]
+    #[doc = "Data CRC error."]
     DATA_CRC_ERROR = 0x05,
-    #[doc = "Time out"]
+    #[doc = "Time out."]
     TIMEOUT = 0x06,
-    #[doc = "Babble"]
+    #[doc = "Babble."]
     BABBLE = 0x07,
-    #[doc = "Truncated EOP"]
+    #[doc = "Truncated EOP."]
     TRUNCATED_EOP = 0x08,
-    #[doc = "Sent/Received NAK"]
+    #[doc = "Sent/Received NAK."]
     SENT_RECEIVED_NAK = 0x09,
-    #[doc = "Sent Stall"]
+    #[doc = "Sent Stall."]
     SENT_STALL = 0x0a,
-    #[doc = "Overrun"]
+    #[doc = "Overrun."]
     OVERRUN = 0x0b,
-    #[doc = "Sent empty packet"]
+    #[doc = "Sent empty packet."]
     SENT_EMPTY_PACKET = 0x0c,
-    #[doc = "Bitstuff error"]
+    #[doc = "Bitstuff error."]
     BITSTUFF_ERROR = 0x0d,
-    #[doc = "Sync error"]
+    #[doc = "Sync error."]
     SYNC_ERROR = 0x0e,
-    #[doc = "Wrong data toggle"]
+    #[doc = "Wrong data toggle."]
     WRONG_DATA_TOGGLE = 0x0f,
 }
 impl ErrCode {

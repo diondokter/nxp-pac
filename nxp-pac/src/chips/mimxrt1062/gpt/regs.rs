@@ -1,16 +1,16 @@
-#[doc = "GPT Counter Register"]
+#[doc = "GPT Counter Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cnt(pub u32);
 impl Cnt {
-    #[doc = "Counter Value"]
+    #[doc = "Counter Value."]
     #[must_use]
     #[inline(always)]
     pub const fn count(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Counter Value"]
+    #[doc = "Counter Value."]
     #[inline(always)]
     pub const fn set_count(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -33,223 +33,223 @@ impl defmt::Format for Cnt {
         defmt::write!(f, "Cnt {{ count: {=u32:?} }}", self.count())
     }
 }
-#[doc = "GPT Control Register"]
+#[doc = "GPT Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cr(pub u32);
 impl Cr {
-    #[doc = "GPT Enable"]
+    #[doc = "GPT Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn en(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "GPT Enable"]
+    #[doc = "GPT Enable."]
     #[inline(always)]
     pub const fn set_en(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "GPT Enable Mode"]
+    #[doc = "GPT Enable Mode."]
     #[must_use]
     #[inline(always)]
     pub const fn enmod(&self) -> super::vals::Enmod {
         let val = (self.0 >> 1usize) & 0x01;
         super::vals::Enmod::from_bits(val as u8)
     }
-    #[doc = "GPT Enable Mode"]
+    #[doc = "GPT Enable Mode."]
     #[inline(always)]
     pub const fn set_enmod(&mut self, val: super::vals::Enmod) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
     }
-    #[doc = "GPT Debug Mode Enable"]
+    #[doc = "GPT Debug Mode Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dbgen(&self) -> super::vals::Dbgen {
         let val = (self.0 >> 2usize) & 0x01;
         super::vals::Dbgen::from_bits(val as u8)
     }
-    #[doc = "GPT Debug Mode Enable"]
+    #[doc = "GPT Debug Mode Enable."]
     #[inline(always)]
     pub const fn set_dbgen(&mut self, val: super::vals::Dbgen) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
     }
-    #[doc = "GPT Wait Mode Enable"]
+    #[doc = "GPT Wait Mode Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn waiten(&self) -> super::vals::Waiten {
         let val = (self.0 >> 3usize) & 0x01;
         super::vals::Waiten::from_bits(val as u8)
     }
-    #[doc = "GPT Wait Mode Enable"]
+    #[doc = "GPT Wait Mode Enable."]
     #[inline(always)]
     pub const fn set_waiten(&mut self, val: super::vals::Waiten) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
     }
-    #[doc = "GPT Doze Mode Enable"]
+    #[doc = "GPT Doze Mode Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn dozeen(&self) -> super::vals::Dozeen {
         let val = (self.0 >> 4usize) & 0x01;
         super::vals::Dozeen::from_bits(val as u8)
     }
-    #[doc = "GPT Doze Mode Enable"]
+    #[doc = "GPT Doze Mode Enable."]
     #[inline(always)]
     pub const fn set_dozeen(&mut self, val: super::vals::Dozeen) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
     }
-    #[doc = "GPT Stop Mode Enable"]
+    #[doc = "GPT Stop Mode Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn stopen(&self) -> super::vals::Stopen {
         let val = (self.0 >> 5usize) & 0x01;
         super::vals::Stopen::from_bits(val as u8)
     }
-    #[doc = "GPT Stop Mode Enable"]
+    #[doc = "GPT Stop Mode Enable."]
     #[inline(always)]
     pub const fn set_stopen(&mut self, val: super::vals::Stopen) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
     }
-    #[doc = "Clock Source Select"]
+    #[doc = "Clock Source Select."]
     #[must_use]
     #[inline(always)]
     pub const fn clksrc(&self) -> super::vals::Clksrc {
         let val = (self.0 >> 6usize) & 0x07;
         super::vals::Clksrc::from_bits(val as u8)
     }
-    #[doc = "Clock Source Select"]
+    #[doc = "Clock Source Select."]
     #[inline(always)]
     pub const fn set_clksrc(&mut self, val: super::vals::Clksrc) {
         self.0 = (self.0 & !(0x07 << 6usize)) | (((val.to_bits() as u32) & 0x07) << 6usize);
     }
-    #[doc = "Free-Run or Restart Mode"]
+    #[doc = "Free-Run or Restart Mode."]
     #[must_use]
     #[inline(always)]
     pub const fn frr(&self) -> super::vals::Frr {
         let val = (self.0 >> 9usize) & 0x01;
         super::vals::Frr::from_bits(val as u8)
     }
-    #[doc = "Free-Run or Restart Mode"]
+    #[doc = "Free-Run or Restart Mode."]
     #[inline(always)]
     pub const fn set_frr(&mut self, val: super::vals::Frr) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
     }
-    #[doc = "Enable Oscillator Clock Input"]
+    #[doc = "Enable Oscillator Clock Input."]
     #[must_use]
     #[inline(always)]
     pub const fn en_24m(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
         val != 0
     }
-    #[doc = "Enable Oscillator Clock Input"]
+    #[doc = "Enable Oscillator Clock Input."]
     #[inline(always)]
     pub const fn set_en_24m(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "Software Reset"]
+    #[doc = "Software Reset."]
     #[must_use]
     #[inline(always)]
     pub const fn swr(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "Software Reset"]
+    #[doc = "Software Reset."]
     #[inline(always)]
     pub const fn set_swr(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "Input Capture Operating Mode for Channel 1"]
+    #[doc = "Input Capture Operating Mode for Channel 1."]
     #[must_use]
     #[inline(always)]
     pub const fn im1(&self) -> super::vals::Im1 {
         let val = (self.0 >> 16usize) & 0x03;
         super::vals::Im1::from_bits(val as u8)
     }
-    #[doc = "Input Capture Operating Mode for Channel 1"]
+    #[doc = "Input Capture Operating Mode for Channel 1."]
     #[inline(always)]
     pub const fn set_im1(&mut self, val: super::vals::Im1) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
-    #[doc = "Input Capture Operating Mode for Channel 2"]
+    #[doc = "Input Capture Operating Mode for Channel 2."]
     #[must_use]
     #[inline(always)]
     pub const fn im2(&self) -> super::vals::Im2 {
         let val = (self.0 >> 18usize) & 0x03;
         super::vals::Im2::from_bits(val as u8)
     }
-    #[doc = "Input Capture Operating Mode for Channel 2"]
+    #[doc = "Input Capture Operating Mode for Channel 2."]
     #[inline(always)]
     pub const fn set_im2(&mut self, val: super::vals::Im2) {
         self.0 = (self.0 & !(0x03 << 18usize)) | (((val.to_bits() as u32) & 0x03) << 18usize);
     }
-    #[doc = "Output Compare Operating Mode for Channel 1"]
+    #[doc = "Output Compare Operating Mode for Channel 1."]
     #[must_use]
     #[inline(always)]
     pub const fn om1(&self) -> super::vals::Om1 {
         let val = (self.0 >> 20usize) & 0x07;
         super::vals::Om1::from_bits(val as u8)
     }
-    #[doc = "Output Compare Operating Mode for Channel 1"]
+    #[doc = "Output Compare Operating Mode for Channel 1."]
     #[inline(always)]
     pub const fn set_om1(&mut self, val: super::vals::Om1) {
         self.0 = (self.0 & !(0x07 << 20usize)) | (((val.to_bits() as u32) & 0x07) << 20usize);
     }
-    #[doc = "Output Compare Operating Mode for Channel 2"]
+    #[doc = "Output Compare Operating Mode for Channel 2."]
     #[must_use]
     #[inline(always)]
     pub const fn om2(&self) -> super::vals::Om2 {
         let val = (self.0 >> 23usize) & 0x07;
         super::vals::Om2::from_bits(val as u8)
     }
-    #[doc = "Output Compare Operating Mode for Channel 2"]
+    #[doc = "Output Compare Operating Mode for Channel 2."]
     #[inline(always)]
     pub const fn set_om2(&mut self, val: super::vals::Om2) {
         self.0 = (self.0 & !(0x07 << 23usize)) | (((val.to_bits() as u32) & 0x07) << 23usize);
     }
-    #[doc = "Output Compare Operating Mode for Channel 3"]
+    #[doc = "Output Compare Operating Mode for Channel 3."]
     #[must_use]
     #[inline(always)]
     pub const fn om3(&self) -> super::vals::Om3 {
         let val = (self.0 >> 26usize) & 0x07;
         super::vals::Om3::from_bits(val as u8)
     }
-    #[doc = "Output Compare Operating Mode for Channel 3"]
+    #[doc = "Output Compare Operating Mode for Channel 3."]
     #[inline(always)]
     pub const fn set_om3(&mut self, val: super::vals::Om3) {
         self.0 = (self.0 & !(0x07 << 26usize)) | (((val.to_bits() as u32) & 0x07) << 26usize);
     }
-    #[doc = "Force Output Compare for Channel 1"]
+    #[doc = "Force Output Compare for Channel 1."]
     #[must_use]
     #[inline(always)]
     pub const fn fo1(&self) -> bool {
         let val = (self.0 >> 29usize) & 0x01;
         val != 0
     }
-    #[doc = "Force Output Compare for Channel 1"]
+    #[doc = "Force Output Compare for Channel 1."]
     #[inline(always)]
     pub const fn set_fo1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
     }
-    #[doc = "Force Output Compare for Channel 2"]
+    #[doc = "Force Output Compare for Channel 2."]
     #[must_use]
     #[inline(always)]
     pub const fn fo2(&self) -> bool {
         let val = (self.0 >> 30usize) & 0x01;
         val != 0
     }
-    #[doc = "Force Output Compare for Channel 2"]
+    #[doc = "Force Output Compare for Channel 2."]
     #[inline(always)]
     pub const fn set_fo2(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
     }
-    #[doc = "Force Output Compare for Channel 3"]
+    #[doc = "Force Output Compare for Channel 3."]
     #[must_use]
     #[inline(always)]
     pub const fn fo3(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
         val != 0
     }
-    #[doc = "Force Output Compare for Channel 3"]
+    #[doc = "Force Output Compare for Channel 3."]
     #[inline(always)]
     pub const fn set_fo3(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
@@ -312,19 +312,19 @@ impl defmt::Format for Cr {
         )
     }
 }
-#[doc = "GPT Input Capture Register"]
+#[doc = "GPT Input Capture Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Icr(pub u32);
 impl Icr {
-    #[doc = "Capture Value"]
+    #[doc = "Capture Value."]
     #[must_use]
     #[inline(always)]
     pub const fn capt(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Capture Value"]
+    #[doc = "Capture Value."]
     #[inline(always)]
     pub const fn set_capt(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -347,79 +347,79 @@ impl defmt::Format for Icr {
         defmt::write!(f, "Icr {{ capt: {=u32:?} }}", self.capt())
     }
 }
-#[doc = "GPT Interrupt Register"]
+#[doc = "GPT Interrupt Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ir(pub u32);
 impl Ir {
-    #[doc = "Output Compare Flag for Channel 1 Interrupt Enable"]
+    #[doc = "Output Compare Flag for Channel 1 Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn of1ie(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Output Compare Flag for Channel 1 Interrupt Enable"]
+    #[doc = "Output Compare Flag for Channel 1 Interrupt Enable."]
     #[inline(always)]
     pub const fn set_of1ie(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Output Compare Flag for Channel 2 Interrupt Enable"]
+    #[doc = "Output Compare Flag for Channel 2 Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn of2ie(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Output Compare Flag for Channel 2 Interrupt Enable"]
+    #[doc = "Output Compare Flag for Channel 2 Interrupt Enable."]
     #[inline(always)]
     pub const fn set_of2ie(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Output Compare Flag for Channel 3 Interrupt Enable"]
+    #[doc = "Output Compare Flag for Channel 3 Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn of3ie(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Output Compare Flag for Channel 3 Interrupt Enable"]
+    #[doc = "Output Compare Flag for Channel 3 Interrupt Enable."]
     #[inline(always)]
     pub const fn set_of3ie(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Input Capture Flag for Channel 1 Interrupt Enable"]
+    #[doc = "Input Capture Flag for Channel 1 Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn if1ie(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Input Capture Flag for Channel 1 Interrupt Enable"]
+    #[doc = "Input Capture Flag for Channel 1 Interrupt Enable."]
     #[inline(always)]
     pub const fn set_if1ie(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "Input Capture Flag for Channel 2 Interrupt Enable"]
+    #[doc = "Input Capture Flag for Channel 2 Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn if2ie(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "Input Capture Flag for Channel 2 Interrupt Enable"]
+    #[doc = "Input Capture Flag for Channel 2 Interrupt Enable."]
     #[inline(always)]
     pub const fn set_if2ie(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "Rollover Interrupt Enable"]
+    #[doc = "Rollover Interrupt Enable."]
     #[must_use]
     #[inline(always)]
     pub const fn rovie(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Rollover Interrupt Enable"]
+    #[doc = "Rollover Interrupt Enable."]
     #[inline(always)]
     pub const fn set_rovie(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
@@ -458,19 +458,19 @@ impl defmt::Format for Ir {
         )
     }
 }
-#[doc = "GPT Output Compare Register"]
+#[doc = "GPT Output Compare Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ocr(pub u32);
 impl Ocr {
-    #[doc = "Compare Value"]
+    #[doc = "Compare Value."]
     #[must_use]
     #[inline(always)]
     pub const fn comp(&self) -> u32 {
         let val = (self.0 >> 0usize) & 0xffff_ffff;
         val as u32
     }
-    #[doc = "Compare Value"]
+    #[doc = "Compare Value."]
     #[inline(always)]
     pub const fn set_comp(&mut self, val: u32) {
         self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
@@ -493,31 +493,31 @@ impl defmt::Format for Ocr {
         defmt::write!(f, "Ocr {{ comp: {=u32:?} }}", self.comp())
     }
 }
-#[doc = "GPT Prescaler Register"]
+#[doc = "GPT Prescaler Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Pr(pub u32);
 impl Pr {
-    #[doc = "Prescaler divide value"]
+    #[doc = "Prescaler divide value."]
     #[must_use]
     #[inline(always)]
     pub const fn prescaler(&self) -> super::vals::Prescaler {
         let val = (self.0 >> 0usize) & 0x0fff;
         super::vals::Prescaler::from_bits(val as u16)
     }
-    #[doc = "Prescaler divide value"]
+    #[doc = "Prescaler divide value."]
     #[inline(always)]
     pub const fn set_prescaler(&mut self, val: super::vals::Prescaler) {
         self.0 = (self.0 & !(0x0fff << 0usize)) | (((val.to_bits() as u32) & 0x0fff) << 0usize);
     }
-    #[doc = "Prescaler divide value for the oscillator clock"]
+    #[doc = "Prescaler divide value for the oscillator clock."]
     #[must_use]
     #[inline(always)]
     pub const fn prescaler24m(&self) -> super::vals::Prescaler24m {
         let val = (self.0 >> 12usize) & 0x0f;
         super::vals::Prescaler24m::from_bits(val as u8)
     }
-    #[doc = "Prescaler divide value for the oscillator clock"]
+    #[doc = "Prescaler divide value for the oscillator clock."]
     #[inline(always)]
     pub const fn set_prescaler24m(&mut self, val: super::vals::Prescaler24m) {
         self.0 = (self.0 & !(0x0f << 12usize)) | (((val.to_bits() as u32) & 0x0f) << 12usize);
@@ -548,79 +548,79 @@ impl defmt::Format for Pr {
         )
     }
 }
-#[doc = "GPT Status Register"]
+#[doc = "GPT Status Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Sr(pub u32);
 impl Sr {
-    #[doc = "Output Compare Flag for Channel 1"]
+    #[doc = "Output Compare Flag for Channel 1."]
     #[must_use]
     #[inline(always)]
     pub const fn of1(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "Output Compare Flag for Channel 1"]
+    #[doc = "Output Compare Flag for Channel 1."]
     #[inline(always)]
     pub const fn set_of1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "Output Compare Flag for Channel 2"]
+    #[doc = "Output Compare Flag for Channel 2."]
     #[must_use]
     #[inline(always)]
     pub const fn of2(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "Output Compare Flag for Channel 2"]
+    #[doc = "Output Compare Flag for Channel 2."]
     #[inline(always)]
     pub const fn set_of2(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "Output Compare Flag for Channel 3"]
+    #[doc = "Output Compare Flag for Channel 3."]
     #[must_use]
     #[inline(always)]
     pub const fn of3(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "Output Compare Flag for Channel 3"]
+    #[doc = "Output Compare Flag for Channel 3."]
     #[inline(always)]
     pub const fn set_of3(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "Input Capture Flag for Channel 1"]
+    #[doc = "Input Capture Flag for Channel 1."]
     #[must_use]
     #[inline(always)]
     pub const fn if1(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "Input Capture Flag for Channel 1"]
+    #[doc = "Input Capture Flag for Channel 1."]
     #[inline(always)]
     pub const fn set_if1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "Input Capture Flag for Channel 2"]
+    #[doc = "Input Capture Flag for Channel 2."]
     #[must_use]
     #[inline(always)]
     pub const fn if2(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "Input Capture Flag for Channel 2"]
+    #[doc = "Input Capture Flag for Channel 2."]
     #[inline(always)]
     pub const fn set_if2(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "Rollover Flag"]
+    #[doc = "Rollover Flag."]
     #[must_use]
     #[inline(always)]
     pub const fn rov(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "Rollover Flag"]
+    #[doc = "Rollover Flag."]
     #[inline(always)]
     pub const fn set_rov(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);

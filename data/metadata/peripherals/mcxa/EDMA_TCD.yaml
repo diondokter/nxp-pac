@@ -1,0 +1,562 @@
+block/TCD8:
+  description: DMA TCD.
+  items:
+  - name: TCD
+    description: 'Array of registers: CH_CSR, CH_ES, CH_INT, CH_MUX, CH_PRI, CH_SBR, TCD_ATTR, TCD_BITER_ELINKNO, TCD_BITER_ELINKYES, TCD_CITER_ELINKNO, TCD_CITER_ELINKYES, TCD_CSR, TCD_DADDR, TCD_DLAST_SGA, TCD_DOFF, TCD_NBYTES_MLOFFNO, TCD_NBYTES_MLOFFYES, TCD_SADDR, TCD_SLAST_SDA, TCD_SOFF.'
+    array:
+      len: 8
+      stride: 4096
+    byte_offset: 0
+    block: TCD
+block/TCD4:
+  description: DMA TCD.
+  items:
+  - name: TCD
+    description: 'Array of registers: CH_CSR, CH_ES, CH_INT, CH_MUX, CH_PRI, CH_SBR, TCD_ATTR, TCD_BITER_ELINKNO, TCD_BITER_ELINKYES, TCD_CITER_ELINKNO, TCD_CITER_ELINKYES, TCD_CSR, TCD_DADDR, TCD_DLAST_SGA, TCD_DOFF, TCD_NBYTES_MLOFFNO, TCD_NBYTES_MLOFFYES, TCD_SADDR, TCD_SLAST_SDA, TCD_SOFF.'
+    array:
+      len: 4
+      stride: 4096
+    byte_offset: 0
+    block: TCD
+block/TCD:
+  description: 'Array of registers: CH_CSR, CH_ES, CH_INT, CH_MUX, CH_PRI, CH_SBR, TCD_ATTR, TCD_BITER_ELINKNO, TCD_BITER_ELINKYES, TCD_CITER_ELINKNO, TCD_CITER_ELINKYES, TCD_CSR, TCD_DADDR, TCD_DLAST_SGA, TCD_DOFF, TCD_NBYTES_MLOFFNO, TCD_NBYTES_MLOFFYES, TCD_SADDR, TCD_SLAST_SDA, TCD_SOFF.'
+  items:
+  - name: CH_CSR
+    description: Channel Control and Status.
+    byte_offset: 0
+    fieldset: CH_CSR
+  - name: CH_ES
+    description: Channel Error Status.
+    byte_offset: 4
+    fieldset: CH_ES
+  - name: CH_INT
+    description: Channel Interrupt Status.
+    byte_offset: 8
+    fieldset: CH_INT
+  - name: CH_SBR
+    description: Channel System Bus.
+    byte_offset: 12
+    fieldset: CH_SBR
+  - name: CH_PRI
+    description: Channel Priority.
+    byte_offset: 16
+    fieldset: CH_PRI
+  - name: CH_MUX
+    description: Channel Multiplexor Configuration.
+    byte_offset: 20
+    fieldset: CH_MUX
+  - name: TCD_SADDR
+    description: TCD Source Address.
+    byte_offset: 32
+    fieldset: TCD_SADDR
+  - name: TCD_SOFF
+    description: TCD Signed Source Address Offset.
+    byte_offset: 36
+    bit_size: 16
+    fieldset: TCD_SOFF
+  - name: TCD_ATTR
+    description: TCD Transfer Attributes.
+    byte_offset: 38
+    bit_size: 16
+    fieldset: TCD_ATTR
+  - name: TCD_NBYTES_MLOFFNO
+    description: TCD Transfer Size Without Minor Loop Offsets.
+    byte_offset: 40
+    fieldset: TCD_NBYTES_MLOFFNO
+  - name: TCD_NBYTES_MLOFFYES
+    description: TCD Transfer Size with Minor Loop Offsets.
+    byte_offset: 40
+    fieldset: TCD_NBYTES_MLOFFYES
+  - name: TCD_SLAST_SDA
+    description: TCD Last Source Address Adjustment / Store DADDR Address.
+    byte_offset: 44
+    fieldset: TCD_SLAST_SDA
+  - name: TCD_DADDR
+    description: TCD Destination Address.
+    byte_offset: 48
+    fieldset: TCD_DADDR
+  - name: TCD_DOFF
+    description: TCD Signed Destination Address Offset.
+    byte_offset: 52
+    bit_size: 16
+    fieldset: TCD_DOFF
+  - name: TCD_CITER_ELINKNO
+    description: TCD Current Major Loop Count (Minor Loop Channel Linking Disabled).
+    byte_offset: 54
+    bit_size: 16
+    fieldset: TCD_CITER_ELINKNO
+  - name: TCD_CITER_ELINKYES
+    description: TCD Current Major Loop Count (Minor Loop Channel Linking Enabled).
+    byte_offset: 54
+    bit_size: 16
+    fieldset: TCD_CITER_ELINKYES
+  - name: TCD_DLAST_SGA
+    description: TCD Last Destination Address Adjustment / Scatter Gather Address.
+    byte_offset: 56
+    fieldset: TCD_DLAST_SGA
+  - name: TCD_CSR
+    description: TCD Control and Status.
+    byte_offset: 60
+    bit_size: 16
+    fieldset: TCD_CSR
+  - name: TCD_BITER_ELINKNO
+    description: TCD Beginning Major Loop Count (Minor Loop Channel Linking Disabled).
+    byte_offset: 62
+    bit_size: 16
+    fieldset: TCD_BITER_ELINKNO
+  - name: TCD_BITER_ELINKYES
+    description: TCD Beginning Major Loop Count (Minor Loop Channel Linking Enabled).
+    byte_offset: 62
+    bit_size: 16
+    fieldset: TCD_BITER_ELINKYES
+fieldset/CH_CSR:
+  description: Channel Control and Status.
+  fields:
+  - name: ERQ
+    description: Enable DMA Request.
+    bit_offset: 0
+    bit_size: 1
+  - name: EARQ
+    description: Enable Asynchronous DMA Request.
+    bit_offset: 1
+    bit_size: 1
+  - name: EEI
+    description: Enable Error Interrupt.
+    bit_offset: 2
+    bit_size: 1
+  - name: EBW
+    description: Enable Buffered Writes.
+    bit_offset: 3
+    bit_size: 1
+  - name: DONE
+    description: Channel Done.
+    bit_offset: 30
+    bit_size: 1
+  - name: ACTIVE
+    description: Channel Active.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CH_ES:
+  description: Channel Error Status.
+  fields:
+  - name: DBE
+    description: Destination Bus Error.
+    bit_offset: 0
+    bit_size: 1
+  - name: SBE
+    description: Source Bus Error.
+    bit_offset: 1
+    bit_size: 1
+  - name: SGE
+    description: Scatter/Gather Configuration Error.
+    bit_offset: 2
+    bit_size: 1
+  - name: NCE
+    description: NBYTES/CITER Configuration Error.
+    bit_offset: 3
+    bit_size: 1
+  - name: DOE
+    description: Destination Offset Error.
+    bit_offset: 4
+    bit_size: 1
+  - name: DAE
+    description: Destination Address Error.
+    bit_offset: 5
+    bit_size: 1
+  - name: SOE
+    description: Source Offset Error.
+    bit_offset: 6
+    bit_size: 1
+  - name: SAE
+    description: Source Address Error.
+    bit_offset: 7
+    bit_size: 1
+  - name: ERR
+    description: Error In Channel.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CH_INT:
+  description: Channel Interrupt Status.
+  fields:
+  - name: INT
+    description: Interrupt Request.
+    bit_offset: 0
+    bit_size: 1
+fieldset/CH_MUX:
+  description: Channel Multiplexor Configuration.
+  fields:
+  - name: SRC
+    description: Service Request Source.
+    bit_offset: 0
+    bit_size: 7
+fieldset/CH_PRI:
+  description: Channel Priority.
+  fields:
+  - name: APL
+    description: Arbitration Priority Level.
+    bit_offset: 0
+    bit_size: 3
+  - name: DPA
+    description: Disable Preempt Ability.
+    bit_offset: 30
+    bit_size: 1
+    enum: DPA
+  - name: ECP
+    description: Enable Channel Preemption.
+    bit_offset: 31
+    bit_size: 1
+    enum: ECP
+fieldset/CH_SBR:
+  description: Channel System Bus.
+  fields:
+  - name: MID
+    description: Master ID.
+    bit_offset: 0
+    bit_size: 4
+  - name: PAL
+    description: Privileged Access Level.
+    bit_offset: 15
+    bit_size: 1
+    enum: PAL
+  - name: EMI
+    description: Enable Master ID Replication.
+    bit_offset: 16
+    bit_size: 1
+fieldset/TCD_ATTR:
+  description: TCD Transfer Attributes.
+  bit_size: 16
+  fields:
+  - name: DSIZE
+    description: Destination Data Transfer Size.
+    bit_offset: 0
+    bit_size: 3
+    enum: SIZE
+  - name: DMOD
+    description: Destination Address Modulo.
+    bit_offset: 3
+    bit_size: 5
+  - name: SSIZE
+    description: Source Data Transfer Size.
+    bit_offset: 8
+    bit_size: 3
+    enum: SIZE
+  - name: SMOD
+    description: Source Address Modulo.
+    bit_offset: 11
+    bit_size: 5
+    enum: SMOD
+fieldset/TCD_BITER_ELINKNO:
+  description: TCD Beginning Major Loop Count (Minor Loop Channel Linking Disabled).
+  bit_size: 16
+  fields:
+  - name: BITER
+    description: Starting Major Iteration Count.
+    bit_offset: 0
+    bit_size: 15
+  - name: ELINK
+    description: Enables Link.
+    bit_offset: 15
+    bit_size: 1
+fieldset/TCD_BITER_ELINKYES:
+  description: TCD Beginning Major Loop Count (Minor Loop Channel Linking Enabled).
+  bit_size: 16
+  fields:
+  - name: BITER
+    description: Starting Major Iteration Count.
+    bit_offset: 0
+    bit_size: 9
+  - name: LINKCH
+    description: Link Channel Number.
+    bit_offset: 9
+    bit_size: 3
+  - name: ELINK
+    description: Enable Link.
+    bit_offset: 15
+    bit_size: 1
+fieldset/TCD_CITER_ELINKNO:
+  description: TCD Current Major Loop Count (Minor Loop Channel Linking Disabled).
+  bit_size: 16
+  fields:
+  - name: CITER
+    description: Current Major Iteration Count.
+    bit_offset: 0
+    bit_size: 15
+  - name: ELINK
+    description: Enable Link.
+    bit_offset: 15
+    bit_size: 1
+fieldset/TCD_CITER_ELINKYES:
+  description: TCD Current Major Loop Count (Minor Loop Channel Linking Enabled).
+  bit_size: 16
+  fields:
+  - name: CITER
+    description: Current Major Iteration Count.
+    bit_offset: 0
+    bit_size: 9
+  - name: LINKCH
+    description: Minor Loop Link Channel Number.
+    bit_offset: 9
+    bit_size: 3
+  - name: ELINK
+    description: Enable Link.
+    bit_offset: 15
+    bit_size: 1
+fieldset/TCD_CSR:
+  description: TCD Control and Status.
+  bit_size: 16
+  fields:
+  - name: START
+    description: Channel Start.
+    bit_offset: 0
+    bit_size: 1
+    enum: START
+  - name: INTMAJOR
+    description: Enable Interrupt If Major count complete.
+    bit_offset: 1
+    bit_size: 1
+  - name: INTHALF
+    description: Enable Interrupt If Major Counter Half-complete.
+    bit_offset: 2
+    bit_size: 1
+  - name: DREQ
+    description: Disable Request.
+    bit_offset: 3
+    bit_size: 1
+    enum: DREQ
+  - name: ESG
+    description: Enable Scatter/Gather Processing.
+    bit_offset: 4
+    bit_size: 1
+    enum: ESG
+  - name: MAJORELINK
+    description: Enable Link When Major Loop Complete.
+    bit_offset: 5
+    bit_size: 1
+  - name: EEOP
+    description: Enable End-Of-Packet Processing.
+    bit_offset: 6
+    bit_size: 1
+  - name: ESDA
+    description: Enable Store Destination Address.
+    bit_offset: 7
+    bit_size: 1
+  - name: MAJORLINKCH
+    description: Major Loop Link Channel Number.
+    bit_offset: 8
+    bit_size: 3
+  - name: BWC
+    description: Bandwidth Control.
+    bit_offset: 14
+    bit_size: 2
+    enum: BWC
+fieldset/TCD_DADDR:
+  description: TCD Destination Address.
+  fields:
+  - name: DADDR
+    description: Destination Address.
+    bit_offset: 0
+    bit_size: 32
+fieldset/TCD_DLAST_SGA:
+  description: TCD Last Destination Address Adjustment / Scatter Gather Address.
+  fields:
+  - name: DLAST_SGA
+    description: Last Destination Address Adjustment / Scatter Gather Address.
+    bit_offset: 0
+    bit_size: 32
+fieldset/TCD_DOFF:
+  description: TCD Signed Destination Address Offset.
+  bit_size: 16
+  fields:
+  - name: DOFF
+    description: Destination Address Signed Offset.
+    bit_offset: 0
+    bit_size: 16
+fieldset/TCD_NBYTES_MLOFFNO:
+  description: TCD Transfer Size Without Minor Loop Offsets.
+  fields:
+  - name: NBYTES
+    description: Number of Bytes To Transfer Per Service Request.
+    bit_offset: 0
+    bit_size: 30
+  - name: DMLOE
+    description: Destination Minor Loop Offset Enable.
+    bit_offset: 30
+    bit_size: 1
+    enum: TCD_NBYTES_MLOFFNO_DMLOE
+  - name: SMLOE
+    description: Source Minor Loop Offset Enable.
+    bit_offset: 31
+    bit_size: 1
+    enum: TCD_NBYTES_MLOFFNO_SMLOE
+fieldset/TCD_NBYTES_MLOFFYES:
+  description: TCD Transfer Size with Minor Loop Offsets.
+  fields:
+  - name: NBYTES
+    description: Number of Bytes To Transfer Per Service Request.
+    bit_offset: 0
+    bit_size: 10
+  - name: MLOFF
+    description: Minor Loop Offset.
+    bit_offset: 10
+    bit_size: 20
+  - name: DMLOE
+    description: Destination Minor Loop Offset Enable.
+    bit_offset: 30
+    bit_size: 1
+    enum: TCD_NBYTES_MLOFFYES_DMLOE
+  - name: SMLOE
+    description: Source Minor Loop Offset Enable.
+    bit_offset: 31
+    bit_size: 1
+    enum: TCD_NBYTES_MLOFFYES_SMLOE
+fieldset/TCD_SADDR:
+  description: TCD Source Address.
+  fields:
+  - name: SADDR
+    description: Source Address.
+    bit_offset: 0
+    bit_size: 32
+fieldset/TCD_SLAST_SDA:
+  description: TCD Last Source Address Adjustment / Store DADDR Address.
+  fields:
+  - name: SLAST_SDA
+    description: Last Source Address Adjustment / Store DADDR Address.
+    bit_offset: 0
+    bit_size: 32
+fieldset/TCD_SOFF:
+  description: TCD Signed Source Address Offset.
+  bit_size: 16
+  fields:
+  - name: SOFF
+    description: Source Address Signed Offset.
+    bit_offset: 0
+    bit_size: 16
+enum/BWC:
+  bit_size: 2
+  variants:
+  - name: NO_STALL
+    description: No eDMA engine stalls.
+    value: 0
+  - name: ENGINE_STALLS_FOUR
+    description: eDMA engine stalls for 4 cycles after each R/W.
+    value: 2
+  - name: ENGINE_STALLS_EIGHT
+    description: eDMA engine stalls for 8 cycles after each R/W.
+    value: 3
+enum/DPA:
+  bit_size: 1
+  variants:
+  - name: SUSPEND
+    description: Channel can suspend a lower-priority channel.
+    value: 0
+  - name: CANNOT_SUSPEND
+    description: Channel cannot suspend any other channel, regardless of channel priority.
+    value: 1
+enum/DREQ:
+  bit_size: 1
+  variants:
+  - name: CHANNEL_NOT_AFFECTED
+    description: No operation.
+    value: 0
+  - name: ERQ_FIELD_CLEAR
+    description: Clear the ERQ field to 0 upon major loop completion, thus disabling hardware service requests.
+    value: 1
+enum/ECP:
+  bit_size: 1
+  variants:
+  - name: CANNOT_SUSPEND
+    description: Channel cannot be suspended by a higher-priority channel's service request.
+    value: 0
+  - name: SUSPEND
+    description: Channel can be temporarily suspended by a higher-priority channel's service request.
+    value: 1
+enum/ESG:
+  bit_size: 1
+  variants:
+  - name: NORMAL_FORMAT
+    description: Current channel's TCD is normal format.
+    value: 0
+  - name: SCATTER_GATHER_FORMAT
+    description: Current channel's TCD specifies scatter/gather format.
+    value: 1
+enum/PAL:
+  bit_size: 1
+  variants:
+  - name: USER_PROTECTION
+    description: User protection level for DMA transfers.
+    value: 0
+  - name: PRIVILEGED_PROTECTION
+    description: Privileged protection level for DMA transfers.
+    value: 1
+enum/SMOD:
+  bit_size: 5
+  variants:
+  - name: DISABLE
+    description: Source address modulo feature disabled.
+    value: 0
+enum/SIZE:
+  bit_size: 3
+  variants:
+  - name: EIGHT_BIT
+    description: 8-bit.
+    value: 0
+  - name: SIXTEEN_BIT
+    description: 16-bit.
+    value: 1
+  - name: THIRTYTWO_BIT
+    description: 32-bit.
+    value: 2
+  - name: SIXTYFOUR_BIT
+    description: 64-bit.
+    value: 3
+  - name: SIXTEEN_BYTE
+    description: 16-byte.
+    value: 4
+  - name: THIRTYTWO_BYTE
+    description: 32-byte.
+    value: 5
+enum/START:
+  bit_size: 1
+  variants:
+  - name: CHANNEL_NOT_STARTED
+    description: Channel not explicitly started.
+    value: 0
+  - name: CHANNEL_STARTED
+    description: Channel explicitly started via a software-initiated service request.
+    value: 1
+enum/TCD_NBYTES_MLOFFNO_DMLOE:
+  bit_size: 1
+  variants:
+  - name: OFFSET_NOT_APPLIED
+    description: Minor loop offset not applied to DADDR.
+    value: 0
+  - name: OFFSET_APPLIED
+    description: Minor loop offset applied to DADDR.
+    value: 1
+enum/TCD_NBYTES_MLOFFNO_SMLOE:
+  bit_size: 1
+  variants:
+  - name: OFFSET_NOT_APPLIED
+    description: Minor loop offset not applied to SADDR.
+    value: 0
+  - name: OFFSET_APPLIED
+    description: Minor loop offset applied to SADDR.
+    value: 1
+enum/TCD_NBYTES_MLOFFYES_DMLOE:
+  bit_size: 1
+  variants:
+  - name: OFFSET_NOT_APPLIED
+    description: Minor loop offset not applied to DADDR.
+    value: 0
+  - name: OFFSET_APPLIED
+    description: Minor loop offset applied to DADDR.
+    value: 1
+enum/TCD_NBYTES_MLOFFYES_SMLOE:
+  bit_size: 1
+  variants:
+  - name: OFFSET_NOT_APPLIED
+    description: Minor loop offset not applied to SADDR.
+    value: 0
+  - name: OFFSET_APPLIED
+    description: Minor loop offset applied to SADDR.
+    value: 1
