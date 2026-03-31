@@ -91,8 +91,12 @@
           "description": "Peripheral name",
           "type": "string"
         },
-        "type": {
-          "description": "The type of the peripheral. Should point to a file in 'data/metadata/peripherals' without extension",
+        "block": {
+          "description": "The yaml block used for the peripheral. Should point to a file in 'data/metadata/peripherals' without extension. E.g.: mcxa/WWDT. If the block name is different from the YAML file name, then you can specify that as: mcxa/WWDT::OTHERBLOCK",
+          "type": "string"
+        },
+        "module": {
+          "description": "Optional name that will be used for the Rust",
           "type": "string"
         },
         "address": {

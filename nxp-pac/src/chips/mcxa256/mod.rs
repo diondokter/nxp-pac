@@ -241,12 +241,12 @@ pub const PORT4: port::Port = unsafe { port::Port::from_ptr(0x400C0000 as _) };
 pub const RTC0: rtc2xx::Rtc = unsafe { rtc2xx::Rtc::from_ptr(0x400EE000 as _) };
 pub const SCG0: scg::Scg = unsafe { scg::Scg::from_ptr(0x4008F000 as _) };
 pub const SPC0: spc::Spc = unsafe { spc::Spc::from_ptr(0x40090000 as _) };
-pub const SYSCON: syscon2xx::Syscon = unsafe { syscon2xx::Syscon::from_ptr(0x40091000 as _) };
+pub const SYSCON: syscon::Syscon = unsafe { syscon::Syscon::from_ptr(0x40091000 as _) };
 pub const TRNG0: trng::Trng = unsafe { trng::Trng::from_ptr(0x400EC000 as _) };
 pub const VBAT0: vbat::Vbat = unsafe { vbat::Vbat::from_ptr(0x40093000 as _) };
 pub const WWDT0: wwdt::Wwdt = unsafe { wwdt::Wwdt::from_ptr(0x4000C000 as _) };
 pub const EDMA_0_TCD: edma_tcd::Tcd8 = unsafe { edma_tcd::Tcd8::from_ptr(0x40081000 as _) };
-pub const MRCC0: mrcc2xx::Mrcc = unsafe { mrcc2xx::Mrcc::from_ptr(0x40091000 as _) };
+pub const MRCC0: mrcc::Mrcc = unsafe { mrcc::Mrcc::from_ptr(0x40091000 as _) };
 #[path = "../../meta_peripherals/mcxa/ADC.rs"]
 pub mod adc;
 #[path = "../../meta_peripherals/mcxa/CDOG.rs"]
@@ -279,7 +279,7 @@ pub mod lpspi;
 #[path = "../../meta_peripherals/mcxa/LPUART.rs"]
 pub mod lpuart;
 #[path = "../../meta_peripherals/mcxa/MRCC2xx.rs"]
-pub mod mrcc2xx;
+pub mod mrcc;
 #[path = "../../meta_peripherals/mcxa/OSTIMER.rs"]
 pub mod ostimer;
 #[path = "../../meta_peripherals/mcxa/PORT.rs"]
@@ -291,7 +291,7 @@ pub mod scg;
 #[path = "../../meta_peripherals/mcxa/SPC.rs"]
 pub mod spc;
 #[path = "../../meta_peripherals/mcxa/SYSCON2xx.rs"]
-pub mod syscon2xx;
+pub mod syscon;
 #[path = "../../meta_peripherals/mcxa/TRNG.rs"]
 pub mod trng;
 #[path = "../../meta_peripherals/mcxa/VBAT.rs"]

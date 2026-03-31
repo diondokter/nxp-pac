@@ -7,12 +7,11 @@ use std::{
 
 use anyhow::{Context, bail};
 use indexmap::IndexSet;
-use inflections::Inflect;
 use proc_macro2::{Ident, Literal, Span, TokenStream};
 use quote::quote;
 use rayon::iter::{ParallelBridge, ParallelIterator};
 
-use crate::metadata::Metadata;
+use crate::metadata::{BlockPath, Metadata};
 
 /// Take all yamls and export them to the pac after being transformed to Rust code using chiptool
 pub fn export_meta_peripherals(current: &Path) -> anyhow::Result<()> {
@@ -110,17 +109,16 @@ pub fn assemble_metapac(current: &Path, core: &str, mut metadata: Metadata) -> a
     // Remove all peripherals that are defined, but don't have a driver
     let yaml_peri_dir = current.join("data/metadata/peripherals");
     metadata.peripherals.retain(|p| {
-        let Some(peripheral_type) = p.peripheral_type.as_ref() else {
-            tracing::warn!("Peripheral {} has no type associated. Skipped.", p.name);
-            return false;
-        };
-
-        let peripheral_type = match PeripheralType::try_from(peripheral_type.as_str()) {
-            Ok(peripheral_type) => peripheral_type,
+        let peripheral_block = match p.parse_block_path() {
+            Ok(Some(peripheral_block)) => peripheral_block,
+            Ok(None) => {
+                tracing::warn!("Peripheral {} has no block associated. Skipped.", p.name);
+                return false;
+            }
             Err(e) => {
                 tracing::warn!(
-                    "Cannot parse peripheral type `{}`: {e}. Skipped.",
-                    peripheral_type
+                    "Cannot parse peripheral block `{:?}`: {e}. Skipped.",
+                    p.peripheral_block
                 );
                 return false;
             }
@@ -128,7 +126,7 @@ pub fn assemble_metapac(current: &Path, core: &str, mut metadata: Metadata) -> a
 
         if fs::exists(
             yaml_peri_dir
-                .join(&peripheral_type.path)
+                .join(&peripheral_block.path)
                 .with_extension("yaml"),
         )
         .unwrap_or(false)
@@ -138,7 +136,7 @@ pub fn assemble_metapac(current: &Path, core: &str, mut metadata: Metadata) -> a
             tracing::warn!(
                 "Peripheral {} does not point to an existing driver: `{}`. Skipped.",
                 p.name,
-                peripheral_type.path
+                peripheral_block.path
             );
 
             false
@@ -177,18 +175,19 @@ fn export_mod_rs(chip_dir: &Path, metadata: &Metadata) -> anyhow::Result<()> {
 
     // Create instances for all peripherals
     for peripheral in metadata.peripherals.iter() {
-        let Some(peripheral_type) = peripheral.peripheral_type.as_ref() else {
+        let Some(peripheral_block) = peripheral
+            .parse_block_path()
+            .context("parsing peripheral block")?
+        else {
             tracing::warn!(
-                "Peripheral {} has no type associated. Skipped.",
+                "Peripheral {} has no block associated. Skipped.",
                 peripheral.name
             );
             continue;
         };
 
-        let peripheral_type = PeripheralType::try_from(peripheral_type.as_str())?;
-
-        let driver_name_mod = Ident::new(&peripheral_type.mod_name, Span::call_site());
-        let driver_name_type = Ident::new(&peripheral_type.type_name, Span::call_site());
+        let rust_mod_name = Ident::new(&peripheral_block.rust_mod_name, Span::call_site());
+        let rust_type_name = Ident::new(&peripheral_block.rust_type_name, Span::call_site());
 
         let peripheral_name = Ident::new(&peripheral.name, Span::call_site());
         let Some(peripheral_address) = peripheral.peripheral_address.as_ref() else {
@@ -206,29 +205,26 @@ fn export_mod_rs(chip_dir: &Path, metadata: &Metadata) -> anyhow::Result<()> {
             &mut contents,
             "{}",
             quote! {
-                pub const #peripheral_name: #driver_name_mod::#driver_name_type = unsafe { #driver_name_mod::#driver_name_type::from_ptr(#periperal_address as _) };
+                pub const #peripheral_name: #rust_mod_name::#rust_type_name = unsafe { #rust_mod_name::#rust_type_name::from_ptr(#periperal_address as _) };
             }
         )?;
     }
 
     // Create mods with a path pointing into meta_peripherals
-    let drivers = metadata
+    let blocks = metadata
         .peripherals
         .iter()
-        .flat_map(|p| p.peripheral_type.clone())
-        .collect::<IndexSet<String>>();
+        .map(|p| p.parse_block_path())
+        .collect::<anyhow::Result<IndexSet<Option<BlockPath>>>>()?;
     let mut exported_modules = HashSet::new();
-    for peripheral_type in drivers {
-        let peripheral_type = PeripheralType::try_from(peripheral_type.as_str())
-            .context("parsing peripheral type")?;
+    for peripheral_block in blocks.into_iter().flatten() {
+        let driver_name_mod = Ident::new(&peripheral_block.rust_mod_name, Span::call_site());
 
-        let driver_name_mod = Ident::new(&peripheral_type.mod_name, Span::call_site());
-
-        if !exported_modules.insert(peripheral_type.mod_name) {
+        if !exported_modules.insert(peripheral_block.rust_mod_name) {
             continue;
         }
 
-        let full_driver_path = format!("../../meta_peripherals/{}.rs", peripheral_type.path);
+        let full_driver_path = format!("../../meta_peripherals/{}.rs", peripheral_block.path);
 
         writeln!(
             &mut contents,
@@ -366,31 +362,4 @@ fn export_common_rs(chip_dir: &Path) -> anyhow::Result<()> {
     }
 
     Ok(())
-}
-
-struct PeripheralType {
-    path: String,
-    mod_name: String,
-    type_name: String,
-}
-
-impl TryFrom<&str> for PeripheralType {
-    type Error = anyhow::Error;
-
-    fn try_from(mut path: &str) -> Result<Self, Self::Error> {
-        let mut type_name = None;
-
-        if let Some((stripped_path, specified_type_name)) = path.split_once("::") {
-            path = stripped_path;
-            type_name = Some(specified_type_name);
-        }
-
-        let mod_name = path.split('/').next_back().context("bad type path name")?;
-
-        Ok(Self {
-            path: path.into(),
-            mod_name: mod_name.to_lowercase(),
-            type_name: type_name.unwrap_or(mod_name).to_pascal_case(),
-        })
-    }
 }

@@ -42,8 +42,10 @@ pub struct PinIomuxc {
 #[derive(Debug, Clone, Deserialize)]
 pub struct Peripheral {
     pub name: String,
-    #[serde(rename = "type")]
-    pub peripheral_type: Option<String>,
+    #[serde(rename = "block")]
+    pub peripheral_block: Option<String>,
+    #[serde(rename = "module")]
+    pub rust_module_name: Option<String>,
     #[serde(rename = "address")]
     pub peripheral_address: Option<String>,
     pub signals: Vec<Signal>,
@@ -51,6 +53,39 @@ pub struct Peripheral {
     #[serde(default)]
     pub dma_muxing: Vec<DmaMux>,
     pub only_in: Option<String>,
+}
+
+impl Peripheral {
+    pub fn parse_block_path(&self) -> anyhow::Result<Option<BlockPath>> {
+        let Some(mut peripheral_block) = self.peripheral_block.as_deref() else {
+            return Ok(None);
+        };
+
+        let mut type_name = None;
+
+        if let Some((stripped_path, specified_block_name)) = peripheral_block.split_once("::") {
+            peripheral_block = stripped_path;
+            type_name.get_or_insert(specified_block_name);
+        }
+
+        let original_mod_name = peripheral_block
+            .split('/')
+            .next_back()
+            .context("bad type path name")?;
+
+        let type_name = *type_name.get_or_insert(original_mod_name);
+
+        let mod_name = match self.rust_module_name.as_deref() {
+            Some(name) => name,
+            None => original_mod_name,
+        };
+
+        Ok(Some(BlockPath {
+            path: peripheral_block.into(),
+            rust_mod_name: mod_name.to_lowercase(),
+            rust_type_name: inflections::Inflect::to_pascal_case(type_name),
+        }))
+    }
 }
 
 #[derive(Debug, Clone, Deserialize)]
@@ -194,7 +229,7 @@ fn generate_metadata(name: &str, metadata: &Metadata) -> TokenStream {
             None => quote! { 0 },
         };
 
-        let driver_name = peripheral.peripheral_type.as_deref().unwrap_or_default();
+        let driver_name = peripheral.peripheral_block.as_deref().unwrap_or_default();
 
         quote! {
             Peripheral {
@@ -272,4 +307,11 @@ pub fn generate_core(
     rustfmt(&metadata_rs).context("Formatting metadata")?;
 
     Ok(metadata)
+}
+
+#[derive(Debug, Clone, Hash, PartialEq, Eq)]
+pub struct BlockPath {
+    pub path: String,
+    pub rust_mod_name: String,
+    pub rust_type_name: String,
 }
