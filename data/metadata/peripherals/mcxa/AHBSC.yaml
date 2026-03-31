@@ -1,4611 +1,1274 @@
-block/AHBSC:
+block/Ahbsc:
   description: AHBSC.
   items:
-  - name: FLASH00_MEM_RULE
+  - name: flash00_mem_rule
     description: Flash Memory Rule.
     array:
       len: 4
       stride: 4
     byte_offset: 16
-    fieldset: FLASH00_MEM_RULE
-  - name: FLASH01_MEM_RULE
+    fieldset: Flash00MemRule
+  - name: flash01_mem_rule
     description: Flash Memory Rule.
     array:
       len: 4
       stride: 4
     byte_offset: 32
-    fieldset: FLASH01_MEM_RULE
-  - name: FLASH02_MEM_RULE
+    fieldset: Flash01MemRule
+  - name: flash02_mem_rule
     description: Flash IFR0 Rule register.
     byte_offset: 48
-    fieldset: FLASH02_MEM_RULE
-  - name: FLASH03_MEM_RULE
+    fieldset: Flash02MemRule
+  - name: flash03_mem_rule
     description: Flash Memory Rule.
     byte_offset: 64
-    fieldset: FLASH03_MEM_RULE
-  - name: ROM_MEM_RULE
+    fieldset: Flash03MemRule
+  - name: rom_mem_rule
     description: ROM Memory Rule.
     array:
       len: 4
       stride: 4
     byte_offset: 96
-    fieldset: ROM_MEM_RULE
-  - name: RAMX_MEM_RULE
+    fieldset: RomMemRule
+  - name: ramx_mem_rule
     description: RAMX Memory Rule.
     array:
       len: 4
       stride: 4
     byte_offset: 128
-    fieldset: RAMX_MEM_RULE
-  - name: RAMA_MEM_RULE
+    fieldset: RamMemRule
+  - name: rama_mem_rule
     description: RAMA Memory Rule 0.
     array:
       len: 8
       stride: 4
     byte_offset: 160
-    fieldset: RAMA_MEM_RULE
-  - name: RAMB_MEM_RULE
+    fieldset: RamMemRule
+  - name: ramb_mem_rule
     description: RAMB Memory Rule 0.
     array:
       len: 8
       stride: 4
     byte_offset: 208
-    fieldset: RAMB_MEM_RULE
-  - name: AHB_SLAVE_PORT_P5_SLAVE_RULE0
+    fieldset: RamMemRule
+  - name: ahb_slave_port_p5_slave_rule0
     description: AHB Slave Port 5 Rule Register.
     byte_offset: 240
-    fieldset: AHB_SLAVE_PORT_P5_SLAVE_RULE0
-  - name: APB_PERIPHERAL_GROUP0_MEM_RULE0
+    fieldset: AhbSlavePortP5SlaveRule0
+  - name: apb_peripheral_group0_mem_rule0
     description: APB Bridge Group 0 Memory Rule Register 0.
     byte_offset: 256
-    fieldset: APB_PERIPHERAL_GROUP0_MEM_RULE0
-  - name: APB_PERIPHERAL_GROUP0_MEM_RULE1
+    fieldset: ApbPeripheralGroup0MemRule0
+  - name: apb_peripheral_group0_mem_rule1
     description: APB Bridge Group 0 Memory Rule Register 1.
     byte_offset: 260
-    fieldset: APB_PERIPHERAL_GROUP0_MEM_RULE1
-  - name: AIPS_BRIDGE_GROUP0_MEM_RULE0
+    fieldset: ApbPeripheralGroup0MemRule1
+  - name: aips_bridge_group0_mem_rule0
     description: AIPS Bridge Group 0 Memory Rule 0.
     byte_offset: 272
-    fieldset: AIPS_BRIDGE_GROUP0_MEM_RULE0
-  - name: AIPS_BRIDGE_GROUP0_MEM_RULE1
+    fieldset: AipsBridgeGroup0MemRule0
+  - name: aips_bridge_group0_mem_rule1
     description: AIPS Bridge Group 0 Memory Rule 1.
     byte_offset: 276
-    fieldset: AIPS_BRIDGE_GROUP0_MEM_RULE1
-  - name: AIPS_BRIDGE_GROUP1_MEM_RULE0
+    fieldset: AipsBridgeGroup0MemRule1
+  - name: aips_bridge_group1_mem_rule0
     description: AIPS Bridge Group 1 Memory Rule 0.
     byte_offset: 288
-    fieldset: AIPS_BRIDGE_GROUP1_MEM_RULE0
-  - name: AIPS_BRIDGE_GROUP1_MEM_RULE1
+    fieldset: AipsBridgeGroup1MemRule0
+  - name: aips_bridge_group1_mem_rule1
     description: AIPS Bridge Group 1 Memory Rule 1.
     byte_offset: 292
-    fieldset: AIPS_BRIDGE_GROUP1_MEM_RULE1
-  - name: AHB_SECURE_CTRL_MEM_RULE0
+    fieldset: AipsBridgeGroup1MemRule1
+  - name: ahb_secure_ctrl_mem_rule0
     description: AHB Secure Control Peripheral Rule.
     byte_offset: 304
-    fieldset: AHB_SECURE_CTRL_MEM_RULE0
-  - name: AHB_PERIPHERAL0_MEM_RULE1
+    fieldset: AhbSecureCtrlMemRule0
+  - name: ahb_peripheral0_mem_rule1
     description: AHB Peripheral 0 Memory Rule 1.
     byte_offset: 320
-    fieldset: AHB_PERIPHERAL0_MEM_RULE1
-  - name: AHB_PERIPHERAL0_MEM_RULE2
+    fieldset: AhbPeripheral0MemRule1
+  - name: ahb_peripheral0_mem_rule2
     description: AHB Peripheral 0 Memory Rule 2.
     byte_offset: 336
-    fieldset: AHB_PERIPHERAL0_MEM_RULE2
-  - name: AHB_PERIPHERAL0_MEM_RULE3
+    fieldset: AhbPeripheral0MemRule2
+  - name: ahb_peripheral0_mem_rule3
     description: AHB Peripheral 0 Memory Rule 3.
     byte_offset: 352
-    fieldset: AHB_PERIPHERAL0_MEM_RULE3
-  - name: AHB_PERIPHERAL0_MEM_RULE4
+    fieldset: AhbPeripheral0MemRule3
+  - name: ahb_peripheral0_mem_rule4
     description: AHB Peripheral 0 Memory Rule 4.
     byte_offset: 368
-    fieldset: AHB_PERIPHERAL0_MEM_RULE4
-  - name: AHB_PERIPHERAL0_MEM_RULE5
+    fieldset: AhbPeripheral0MemRule4
+  - name: ahb_peripheral0_mem_rule5
     description: AHB Peripheral 0 Memory Rule 5.
     byte_offset: 384
-    fieldset: AHB_PERIPHERAL0_MEM_RULE5
-  - name: AIPS_BRIDGE_GROUP2_MEM_RULE0
+    fieldset: AhbPeripheral0MemRule5
+  - name: aips_bridge_group2_mem_rule0
     description: AIPS Bridge Group 2 Rule 0.
     byte_offset: 416
-    fieldset: AIPS_BRIDGE_GROUP2_MEM_RULE0
-  - name: AIPS_BRIDGE_GROUP2_MEM_RULE1
+    fieldset: AipsBridgeGroup2MemRule0
+  - name: aips_bridge_group2_mem_rule1
     description: AIPS Bridge Group 2 Rule 1.
     byte_offset: 420
-    fieldset: AIPS_BRIDGE_GROUP2_MEM_RULE1
-  - name: AIPS_BRIDGE_GROUP2_MEM_RULE2
+    fieldset: AipsBridgeGroup2MemRule1
+  - name: aips_bridge_group2_mem_rule2
     description: AIPS Bridge Group 2 Rule 2.
     byte_offset: 424
-    fieldset: AIPS_BRIDGE_GROUP2_MEM_RULE2
-  - name: AIPS_BRIDGE_GROUP2_MEM_RULE3
+    fieldset: AipsBridgeGroup2MemRule2
+  - name: aips_bridge_group2_mem_rule3
     description: AIPS Bridge Group 2 Rule 3.
     byte_offset: 428
-    fieldset: AIPS_BRIDGE_GROUP2_MEM_RULE3
-  - name: AIPS_BRIDGE_GROUP2_MEM_RULE4
+    fieldset: AipsBridgeGroup2MemRule3
+  - name: aips_bridge_group2_mem_rule4
     description: AIPS Bridge Group 2 Rule 4.
     byte_offset: 432
-    fieldset: AIPS_BRIDGE_GROUP2_MEM_RULE4
-  - name: AIPS_BRIDGE_GROUP2_MEM_RULE5
+    fieldset: AipsBridgeGroup2MemRule4
+  - name: aips_bridge_group2_mem_rule5
     description: AIPS Bridge Group 2 Rule 5.
     byte_offset: 436
-    fieldset: AIPS_BRIDGE_GROUP2_MEM_RULE5
-  - name: AIPS_BRIDGE_GROUP2_MEM_RULE6
+    fieldset: AipsBridgeGroup2MemRule5
+  - name: aips_bridge_group2_mem_rule6
     description: AIPS Bridge Group 2 Rule 6.
     byte_offset: 440
-    fieldset: AIPS_BRIDGE_GROUP2_MEM_RULE6
-  - name: AIPS_BRIDGE_GROUP2_MEM_RULE7
+    fieldset: AipsBridgeGroup2MemRule6
+  - name: aips_bridge_group2_mem_rule7
     description: AIPS Bridge Group 2 Rule 7.
     byte_offset: 444
-    fieldset: AIPS_BRIDGE_GROUP2_MEM_RULE7
-  - name: AIPS_BRIDGE_GROUP2_MEM_RULE8
+    fieldset: AipsBridgeGroup2MemRule7
+  - name: aips_bridge_group2_mem_rule8
     description: AIPS Bridge Group 2 Rule 8.
     byte_offset: 448
-    fieldset: AIPS_BRIDGE_GROUP2_MEM_RULE8
-  - name: AIPS_BRIDGE_GROUP2_MEM_RULE9
+    fieldset: AipsBridgeGroup2MemRule8
+  - name: aips_bridge_group2_mem_rule9
     description: AIPS Bridge Group 2 Rule 9.
     byte_offset: 452
-    fieldset: AIPS_BRIDGE_GROUP2_MEM_RULE9
-  - name: AIPS_BRIDGE_GROUP2_MEM_RULE10
+    fieldset: AipsBridgeGroup2MemRule9
+  - name: aips_bridge_group2_mem_rule10
     description: AIPS Bridge Group 2 Rule 10.
     byte_offset: 456
-    fieldset: AIPS_BRIDGE_GROUP2_MEM_RULE10
-  - name: AIPS_BRIDGE_GROUP2_MEM_RULE11
+    fieldset: AipsBridgeGroup2MemRule10
+  - name: aips_bridge_group2_mem_rule11
     description: AIPS Bridge Group 2 Rule 11.
     byte_offset: 460
-    fieldset: AIPS_BRIDGE_GROUP2_MEM_RULE11
-  - name: AIPS_BRIDGE_GROUP2_MEM_RULE12
+    fieldset: AipsBridgeGroup2MemRule11
+  - name: aips_bridge_group2_mem_rule12
     description: AIPS Bridge Group 2 Rule 12.
     byte_offset: 464
-    fieldset: AIPS_BRIDGE_GROUP2_MEM_RULE12
-  - name: AIPS_BRIDGE_GROUP2_MEM_RULE13
+    fieldset: AipsBridgeGroup2MemRule12
+  - name: aips_bridge_group2_mem_rule13
     description: AIPS Bridge Group 2 Rule 13.
     byte_offset: 468
-    fieldset: AIPS_BRIDGE_GROUP2_MEM_RULE13
-  - name: FLEXSPI0_REGION0_MEM_RULE
+    fieldset: AipsBridgeGroup2MemRule13
+  - name: flexspi0_region0_mem_rule
     description: FLEXSPI0 Region 0 Memory Rule.
     array:
       len: 4
       stride: 4
     byte_offset: 496
-    fieldset: FLEXSPI0_REGION0_MEM_RULE
-  - name: FLEXSPI0_REGION1_6_MEM_RULE
+    fieldset: Flexspi0Region0MemRule
+  - name: flexspi0_region1_6_mem_rule
     description: 'Array of registers: FLEXSPI0_REGION_MEM_RULE.'
     array:
       len: 6
       stride: 16
     byte_offset: 512
-    block: FLEXSPI0_REGION1_6_MEM_RULE
-  - name: SEC_VIO_ADDR
+    block: Flexspi0Region16MemRule
+  - name: sec_vio_addr
     description: Security Violation Address.
     array:
       len: 8
       stride: 4
     byte_offset: 3584
     access: Read
-    fieldset: SEC_VIO_ADDR
-  - name: SEC_VIO_MISC_INFO
+    fieldset: SecVioAddr
+  - name: sec_vio_misc_info
     description: Security Violation Miscellaneous Information at Address.
     array:
       len: 8
       stride: 4
     byte_offset: 3712
     access: Read
-    fieldset: SEC_VIO_MISC_INFO
-  - name: SEC_VIO_INFO_VALID
+    fieldset: SecVioMiscInfo
+  - name: sec_vio_info_valid
     description: Security Violation Info Validity for Address.
     byte_offset: 3840
-    fieldset: SEC_VIO_INFO_VALID
-  - name: SEC_GP_REG0
+    fieldset: SecVioInfoValid
+  - name: sec_gp_reg
     description: Secure general purpose registers.
+    array:
+      len: 10
+      stride: 4
     byte_offset: 3968
-    fieldset: SEC_GP_REG0
-  - name: SEC_GP_REG1
-    description: Secure general purpose registers.
-    byte_offset: 3972
-    fieldset: SEC_GP_REG1
-  - name: SEC_GP_REG2
-    description: Secure general purpose registers.
-    byte_offset: 3976
-    fieldset: SEC_GP_REG2
-  - name: SEC_GP_REG3
-    description: Secure general purpose registers.
-    byte_offset: 3980
-    fieldset: SEC_GP_REG3
-  - name: SEC_GP_REG4
-    description: Secure general purpose registers.
-    byte_offset: 3984
-    fieldset: SEC_GP_REG4
-  - name: SEC_GP_REG5
-    description: Secure general purpose registers.
-    byte_offset: 3988
-    fieldset: SEC_GP_REG5
-  - name: SEC_GP_REG6
-    description: Secure general purpose registers.
-    byte_offset: 3992
-    fieldset: SEC_GP_REG6
-  - name: SEC_GP_REG7
-    description: Secure general purpose registers.
-    byte_offset: 3996
-    fieldset: SEC_GP_REG7
-  - name: SEC_GP_REG8
-    description: Secure general purpose registers.
-    byte_offset: 4000
-    fieldset: SEC_GP_REG8
-  - name: SEC_GP_REG9
-    description: Secure general purpose registers.
-    byte_offset: 4004
-    fieldset: SEC_GP_REG9
-  - name: MASTER_SEC_LEVEL
+    fieldset: SecGpReg
+  - name: master_sec_level
     description: Master Secure Level.
     byte_offset: 4048
-    fieldset: MASTER_SEC_LEVEL
-  - name: MASTER_SEC_ANTI_POL_REG
+    fieldset: MasterSecLevel
+  - name: master_sec_anti_pol_reg
     description: Master Secure Level.
     byte_offset: 4052
-    fieldset: MASTER_SEC_ANTI_POL_REG
-  - name: CPU0_LOCK_REG
+    fieldset: MasterSecAntiPolReg
+  - name: cpu0_lock_reg
     description: Miscellaneous CPU0 Control Signals.
     byte_offset: 4076
-    fieldset: CPU0_LOCK_REG
-  - name: MISC_CTRL_DP_REG
+    fieldset: Cpu0LockReg
+  - name: misc_ctrl_dp_reg
     description: Secure Control Duplicate.
     byte_offset: 4088
-    fieldset: MISC_CTRL_DP_REG
-  - name: MISC_CTRL_REG
+    fieldset: MiscCtrlDpReg
+  - name: misc_ctrl_reg
     description: Secure Control.
     byte_offset: 4092
-    fieldset: MISC_CTRL_REG
-block/FLEXSPI0_REGION1_6_MEM_RULE:
+    fieldset: MiscCtrlReg
+block/Flexspi0Region16MemRule:
   description: 'Array of registers: FLEXSPI0_REGION_MEM_RULE.'
   items:
-  - name: FLEXSPI0_REGION_MEM_RULE
+  - name: flexspi0_region_mem_rule
     description: FLEXSPI0 Region index Memory Rule.
     byte_offset: 0
-    fieldset: FLEXSPI0_REGION_MEM_RULE
-fieldset/AHB_PERIPHERAL0_MEM_RULE1:
+    fieldset: Flexspi0RegionMemRule
+fieldset/AhbPeripheral0MemRule1:
   description: AHB Peripheral 0 Memory Rule 1.
   fields:
-  - name: GPIO0
+  - name: gpio0
     description: GPIO0.
     bit_offset: 0
     bit_size: 2
-    enum: GPIO0
-  - name: GPIO0_ALIAS
+    enum: Rule
+  - name: gpio0_alias
     description: GPIO0 ALIAS.
     bit_offset: 4
     bit_size: 2
-    enum: GPIO0_ALIAS
-fieldset/AHB_PERIPHERAL0_MEM_RULE2:
+    enum: Rule
+fieldset/AhbPeripheral0MemRule2:
   description: AHB Peripheral 0 Memory Rule 2.
   fields:
-  - name: GPIO1
+  - name: gpio1
     description: GPIO1.
     bit_offset: 0
     bit_size: 2
-    enum: GPIO1
-  - name: GPIO1_ALIAS
+    enum: Rule
+  - name: gpio1_alias
     description: GPIO1 ALIAS.
     bit_offset: 4
     bit_size: 2
-    enum: GPIO1_ALIAS
-fieldset/AHB_PERIPHERAL0_MEM_RULE3:
+    enum: Rule
+fieldset/AhbPeripheral0MemRule3:
   description: AHB Peripheral 0 Memory Rule 3.
   fields:
-  - name: GPIO2
+  - name: gpio2
     description: GPIO2.
     bit_offset: 0
     bit_size: 2
-    enum: GPIO2
-  - name: GPIO2_ALIAS
+    enum: Rule
+  - name: gpio2_alias
     description: GPIO2 ALIAS.
     bit_offset: 4
     bit_size: 2
-    enum: GPIO2_ALIAS
-fieldset/AHB_PERIPHERAL0_MEM_RULE4:
+    enum: Rule
+fieldset/AhbPeripheral0MemRule4:
   description: AHB Peripheral 0 Memory Rule 4.
   fields:
-  - name: GPIO3
+  - name: gpio3
     description: GPIO3.
     bit_offset: 0
     bit_size: 2
-    enum: GPIO3
-  - name: GPIO3_ALIAS
+    enum: Rule
+  - name: gpio3_alias
     description: GPIO3 ALIAS.
     bit_offset: 4
     bit_size: 2
-    enum: GPIO3_ALIAS
-fieldset/AHB_PERIPHERAL0_MEM_RULE5:
+    enum: Rule
+fieldset/AhbPeripheral0MemRule5:
   description: AHB Peripheral 0 Memory Rule 5.
   fields:
-  - name: GPIO4
+  - name: gpio4
     description: GPIO4.
     bit_offset: 0
     bit_size: 2
-    enum: GPIO4
-  - name: GPIO4_ALIAS
+    enum: Rule
+  - name: gpio4_alias
     description: GPIO4 ALIAS.
     bit_offset: 4
     bit_size: 2
-    enum: GPIO4_ALIAS
-fieldset/AHB_SECURE_CTRL_MEM_RULE0:
+    enum: Rule
+fieldset/AhbSecureCtrlMemRule0:
   description: AHB Secure Control Peripheral Rule.
   fields:
-  - name: RULE0
+  - name: rule
     description: AHBSC.
     bit_offset: 0
     bit_size: 2
-    enum: AHB_SECURE_CTRL_MEM_RULE0_RULE0
-  - name: RULE1
-    description: AHBSC ALIAS0.
-    bit_offset: 4
-    bit_size: 2
-    enum: AHB_SECURE_CTRL_MEM_RULE0_RULE1
-  - name: RULE2
-    description: AHBSC ALIAS1.
-    bit_offset: 8
-    bit_size: 2
-    enum: AHB_SECURE_CTRL_MEM_RULE0_RULE2
-  - name: RULE3
-    description: AHBSC ALIAS2.
-    bit_offset: 12
-    bit_size: 2
-    enum: AHB_SECURE_CTRL_MEM_RULE0_RULE3
-fieldset/AHB_SLAVE_PORT_P5_SLAVE_RULE0:
+    array:
+      len: 4
+      stride: 4
+    enum: Rule
+fieldset/AhbSlavePortP5SlaveRule0:
   description: AHB Slave Port 5 Rule Register.
   fields:
-  - name: CDOG0
+  - name: cdog0
     description: CDOG0.
     bit_offset: 12
     bit_size: 2
-    enum: CDOG0
-  - name: CDOG1
+    enum: Rule
+  - name: cdog1
     description: CDOG1.
     bit_offset: 16
     bit_size: 2
-    enum: CDOG1
-  - name: DEBUG_MAILBOX
+    enum: Rule
+  - name: debug_mailbox
     description: DEBUG_MAILBOX.
     bit_offset: 20
     bit_size: 2
-    enum: DEBUG_MAILBOX
-  - name: MAU0
+    enum: Rule
+  - name: mau0
     description: Rule 6.
     bit_offset: 24
     bit_size: 2
-    enum: MAU0
-fieldset/AIPS_BRIDGE_GROUP0_MEM_RULE0:
+    enum: Rule
+fieldset/AipsBridgeGroup0MemRule0:
   description: AIPS Bridge Group 0 Memory Rule 0.
   fields:
-  - name: EWM0
+  - name: ewm0
     description: EWM0.
     bit_offset: 0
     bit_size: 2
-    enum: EWM0
-  - name: ROMCP
+    enum: Rule
+  - name: romcp
     description: ROMCP.
     bit_offset: 4
     bit_size: 2
-    enum: ROMCP
-  - name: PKC0
+    enum: Rule
+  - name: pkc0
     description: PKC0.
     bit_offset: 8
     bit_size: 2
-    enum: PKC0
-  - name: DMA_1_MP
+    enum: Rule
+  - name: dma_1_mp
     description: DMA_1_MP.
     bit_offset: 12
     bit_size: 2
-    enum: DMA_1_MP
-  - name: DMA_1_CH0
+    enum: Rule
+  - name: dma_1_ch0
     description: DMA_1_CH0.
     bit_offset: 16
     bit_size: 2
-    enum: DMA_1_CH0
-  - name: DMA_1_CH1
+    enum: Rule
+  - name: dma_1_ch1
     description: DMA_1_CH1.
     bit_offset: 20
     bit_size: 2
-    enum: DMA_1_CH1
-  - name: DMA_1_CH2
+    enum: Rule
+  - name: dma_1_ch2
     description: DMA_1_CH2.
     bit_offset: 24
     bit_size: 2
-    enum: DMA_1_CH2
-  - name: DMA_1_CH3
+    enum: Rule
+  - name: dma_1_ch3
     description: DMA_1_CH3.
     bit_offset: 28
     bit_size: 2
-    enum: DMA_1_CH3
-fieldset/AIPS_BRIDGE_GROUP0_MEM_RULE1:
+    enum: Rule
+fieldset/AipsBridgeGroup0MemRule1:
   description: AIPS Bridge Group 0 Memory Rule 1.
   fields:
-  - name: ENET0_0
+  - name: enet0_0
     description: ENET0_0.
     bit_offset: 16
     bit_size: 2
-    enum: ENET0_0
-  - name: ENET0_1
+    enum: Rule
+  - name: enet0_1
     description: ENET0_1.
     bit_offset: 20
     bit_size: 2
-    enum: ENET0_1
-  - name: eSPI
+    enum: Rule
+  - name: e_spi
     description: eSPI.
     bit_offset: 28
     bit_size: 2
-    enum: eSPI
-fieldset/AIPS_BRIDGE_GROUP1_MEM_RULE0:
+    enum: Rule
+fieldset/AipsBridgeGroup1MemRule0:
   description: AIPS Bridge Group 1 Memory Rule 0.
   fields:
-  - name: FLEXSPI0
+  - name: flexspi0
     description: FLEXSPI0.
     bit_offset: 0
     bit_size: 2
-    enum: FLEXSPI0
-  - name: LPSPI2
+    enum: Rule
+  - name: lpspi2
     description: LPSPI2.
     bit_offset: 4
     bit_size: 2
-    enum: LPSPI2
-  - name: LPSPI3
+    enum: Rule
+  - name: lpspi3
     description: LPSPI3.
     bit_offset: 8
     bit_size: 2
-    enum: LPSPI3
-  - name: LPSPI4
+    enum: Rule
+  - name: lpspi4
     description: LPSPI4.
     bit_offset: 12
     bit_size: 2
-    enum: LPSPI4
-  - name: LPSPI5
+    enum: Rule
+  - name: lpspi5
     description: LPSPI5.
     bit_offset: 16
     bit_size: 2
-    enum: LPSPI5
-fieldset/AIPS_BRIDGE_GROUP1_MEM_RULE1:
+    enum: Rule
+fieldset/AipsBridgeGroup1MemRule1:
   description: AIPS Bridge Group 1 Memory Rule 1.
   fields:
-  - name: SPI_FILETER0
+  - name: spi_fileter0
     description: SPI_FILETER0.
     bit_offset: 16
     bit_size: 2
-    enum: SPI_FILETER0
-  - name: T1S0
+    enum: Rule
+  - name: t1s0
     description: 10BASE_T1S0.
     bit_offset: 20
     bit_size: 2
-    enum: T1S0
-  - name: USB1
+    enum: Rule
+  - name: usb1
     description: USB1.
     bit_offset: 24
     bit_size: 2
-    enum: AIPS_BRIDGE_GROUP1_MEM_RULE1_USB1
-  - name: USB1_PHY
+    enum: Rule
+  - name: usb1_phy
     description: USB1_PHY.
     bit_offset: 28
     bit_size: 2
-    enum: USB1_PHY
-fieldset/AIPS_BRIDGE_GROUP2_MEM_RULE0:
+    enum: Rule
+fieldset/AipsBridgeGroup2MemRule0:
   description: AIPS Bridge Group 2 Rule 0.
   fields:
-  - name: DMA_0_MP
+  - name: dma_0_mp
     description: DMA_0_MP.
     bit_offset: 0
     bit_size: 2
-    enum: DMA_0_MP
-  - name: DMA_0_CH0
+    enum: Rule
+  - name: dma_0_ch0
     description: DMA_0_CH0.
     bit_offset: 4
     bit_size: 2
-    enum: DMA_0_CH0
-  - name: DMA_0_CH1
+    enum: Rule
+  - name: dma_0_ch1
     description: DMA_0_CH1.
     bit_offset: 8
     bit_size: 2
-    enum: DMA_0_CH1
-  - name: DMA_0_CH2
+    enum: Rule
+  - name: dma_0_ch2
     description: DMA_0_CH2.
     bit_offset: 12
     bit_size: 2
-    enum: DMA_0_CH2
-  - name: DMA_0_CH3
+    enum: Rule
+  - name: dma_0_ch3
     description: DMA_0_CH3.
     bit_offset: 16
     bit_size: 2
-    enum: DMA_0_CH3
-  - name: DMA_0_CH4
+    enum: Rule
+  - name: dma_0_ch4
     description: DMA_0_CH4.
     bit_offset: 20
     bit_size: 2
-    enum: DMA_0_CH4
-  - name: DMA_0_CH5
+    enum: Rule
+  - name: dma_0_ch5
     description: DMA_0_CH5.
     bit_offset: 24
     bit_size: 2
-    enum: DMA_0_CH5
-  - name: DMA_0_CH6
+    enum: Rule
+  - name: dma_0_ch6
     description: DMA_0_CH6.
     bit_offset: 28
     bit_size: 2
-    enum: DMA_0_CH6
-fieldset/AIPS_BRIDGE_GROUP2_MEM_RULE1:
+    enum: Rule
+fieldset/AipsBridgeGroup2MemRule1:
   description: AIPS Bridge Group 2 Rule 1.
   fields:
-  - name: DMA_0_CH7
+  - name: dma_0_ch7
     description: DMA_0_CH7.
     bit_offset: 0
     bit_size: 2
-    enum: DMA_0_CH7
-  - name: DMA_0_CH8
+    enum: Rule
+  - name: dma_0_ch8
     description: DMA_0_CH8.
     bit_offset: 4
     bit_size: 2
-    enum: DMA_0_CH8
-  - name: DMA_0_CH9
+    enum: Rule
+  - name: dma_0_ch9
     description: DMA_0_CH9.
     bit_offset: 8
     bit_size: 2
-    enum: DMA_0_CH9
-  - name: DMA_0_CH10
+    enum: Rule
+  - name: dma_0_ch10
     description: DMA_0_CH10.
     bit_offset: 12
     bit_size: 2
-    enum: DMA_0_CH10
-  - name: DMA_0_CH11
+    enum: Rule
+  - name: dma_0_ch11
     description: DMA_0_CH11.
     bit_offset: 16
     bit_size: 2
-    enum: DMA_0_CH11
-fieldset/AIPS_BRIDGE_GROUP2_MEM_RULE10:
+    enum: Rule
+fieldset/AipsBridgeGroup2MemRule10:
   description: AIPS Bridge Group 2 Rule 10.
   fields:
-  - name: CAN1_REGION0
+  - name: can1_region0
     description: CAN1 Region 0.
     bit_offset: 0
     bit_size: 2
-    enum: CAN1_REGION0
-  - name: CAN1_REGION1
+    enum: Rule
+  - name: can1_region1
     description: CAN1 Region 1.
     bit_offset: 4
     bit_size: 2
-    enum: CAN1_REGION1
-  - name: CAN1_REGION2
+    enum: Rule
+  - name: can1_region2
     description: CAN1 Region 2.
     bit_offset: 8
     bit_size: 2
-    enum: CAN1_REGION2
-  - name: CAN1_REGION3
+    enum: Rule
+  - name: can1_region3
     description: CAN1 Region 3.
     bit_offset: 12
     bit_size: 2
-    enum: CAN1_REGION3
-  - name: LPI2C2
+    enum: Rule
+  - name: lpi2c2
     description: LPI2C2.
     bit_offset: 16
     bit_size: 2
-    enum: LPI2C2
-  - name: LPI2C3
+    enum: Rule
+  - name: lpi2c3
     description: LPI2C3.
     bit_offset: 20
     bit_size: 2
-    enum: LPI2C3
-  - name: LPI2C4
+    enum: Rule
+  - name: lpi2c4
     description: LPI2C4.
     bit_offset: 24
     bit_size: 2
-    enum: LPI2C4
-fieldset/AIPS_BRIDGE_GROUP2_MEM_RULE11:
+    enum: Rule
+fieldset/AipsBridgeGroup2MemRule11:
   description: AIPS Bridge Group 2 Rule 11.
   fields:
-  - name: LPUART5
+  - name: lpuart5
     description: LPUART5.
     bit_offset: 8
     bit_size: 2
-    enum: LPUART5
-  - name: I3C3
+    enum: Rule
+  - name: i3c3
     description: I3C3.
     bit_offset: 24
     bit_size: 2
-    enum: I3C3
-  - name: GPIO5
+    enum: Rule
+  - name: gpio5
     description: GPIO5.
     bit_offset: 28
     bit_size: 2
-    enum: GPIO5
-fieldset/AIPS_BRIDGE_GROUP2_MEM_RULE12:
+    enum: Rule
+fieldset/AipsBridgeGroup2MemRule12:
   description: AIPS Bridge Group 2 Rule 12.
   fields:
-  - name: GPIO5_ALIAS
+  - name: gpio5_alias
     description: GPIO5_ALIAS.
     bit_offset: 0
     bit_size: 2
-    enum: GPIO5_ALIAS
-  - name: PORT5
+    enum: Rule
+  - name: port5
     description: PORT5.
     bit_offset: 12
     bit_size: 2
-    enum: PORT5
-  - name: DGDET0
+    enum: Rule
+  - name: dgdet0
     description: DGDET0.
     bit_offset: 20
     bit_size: 2
-    enum: DGDET0
-  - name: ITRC0
+    enum: Rule
+  - name: itrc0
     description: ITRC0.
     bit_offset: 28
     bit_size: 2
-    enum: ITRC0
-fieldset/AIPS_BRIDGE_GROUP2_MEM_RULE13:
+    enum: Rule
+fieldset/AipsBridgeGroup2MemRule13:
   description: AIPS Bridge Group 2 Rule 13.
   fields:
-  - name: GLIKEY0
+  - name: glikey0
     description: GLIKEY0.
     bit_offset: 0
     bit_size: 2
-    enum: GLIKEY0
-  - name: TDET0
+    enum: Rule
+  - name: tdet0
     description: TDET0.
     bit_offset: 4
     bit_size: 2
-    enum: TDET0
-  - name: SECCON
+    enum: Rule
+  - name: seccon
     description: SECCON.
     bit_offset: 8
     bit_size: 2
-    enum: SECCON
-  - name: SGI0
+    enum: Rule
+  - name: sgi0
     description: SGI0.
     bit_offset: 12
     bit_size: 2
-    enum: SGI0
-  - name: TRNG0
+    enum: Rule
+  - name: trng0
     description: TRNG0.
     bit_offset: 16
     bit_size: 2
-    enum: TRNG0
-  - name: UDF0
+    enum: Rule
+  - name: udf0
     description: UDF0.
     bit_offset: 20
     bit_size: 2
-    enum: UDF0
-  - name: RTC0
+    enum: Rule
+  - name: rtc0
     description: RTC0.
     bit_offset: 24
     bit_size: 2
-    enum: RTC0
-fieldset/AIPS_BRIDGE_GROUP2_MEM_RULE2:
+    enum: Rule
+fieldset/AipsBridgeGroup2MemRule2:
   description: AIPS Bridge Group 2 Rule 2.
   fields:
-  - name: SYSCON
+  - name: syscon
     description: SYSCON.
     bit_offset: 4
     bit_size: 2
-    enum: SYSCON
-  - name: WUU
+    enum: Rule
+  - name: wuu
     description: WUU.
     bit_offset: 8
     bit_size: 2
-    enum: WUU
-  - name: VBAT
+    enum: Rule
+  - name: vbat
     description: VBAT.
     bit_offset: 12
     bit_size: 2
-    enum: VBAT
-  - name: FMC
+    enum: Rule
+  - name: fmc
     description: FMC.
     bit_offset: 16
     bit_size: 2
-    enum: FMC
-  - name: FMU
+    enum: Rule
+  - name: fmu
     description: FMU.
     bit_offset: 20
     bit_size: 2
-    enum: FMU
-fieldset/AIPS_BRIDGE_GROUP2_MEM_RULE3:
+    enum: Rule
+fieldset/AipsBridgeGroup2MemRule3:
   description: AIPS Bridge Group 2 Rule 3.
   fields:
-  - name: FLEXIO
+  - name: flexio
     description: FLEXIO.
     bit_offset: 4
     bit_size: 2
-    enum: FLEXIO
-  - name: LPI2C0
+    enum: Rule
+  - name: lpi2c0
     description: LPI2C0.
     bit_offset: 8
     bit_size: 2
-    enum: LPI2C0
-  - name: LPI2C1
+    enum: Rule
+  - name: lpi2c1
     description: LPI2C1.
     bit_offset: 12
     bit_size: 2
-    enum: LPI2C1
-  - name: LPSPI0
+    enum: Rule
+  - name: lpspi0
     description: LPSPI0.
     bit_offset: 16
     bit_size: 2
-    enum: LPSPI0
-  - name: LPSPI1
+    enum: Rule
+  - name: lpspi1
     description: LPSPI1.
     bit_offset: 20
     bit_size: 2
-    enum: LPSPI1
-  - name: I3C2
+    enum: Rule
+  - name: i3c2
     description: I3C2.
     bit_offset: 24
     bit_size: 2
-    enum: I3C2
-  - name: LPUART0
+    enum: Rule
+  - name: lpuart0
     description: LPUART0.
     bit_offset: 28
     bit_size: 2
-    enum: LPUART0
-fieldset/AIPS_BRIDGE_GROUP2_MEM_RULE4:
+    enum: Rule
+fieldset/AipsBridgeGroup2MemRule4:
   description: AIPS Bridge Group 2 Rule 4.
   fields:
-  - name: LPUART1
+  - name: lpuart1
     description: LPUART1.
     bit_offset: 0
     bit_size: 2
-    enum: LPUART1
-  - name: LPUART2
+    enum: Rule
+  - name: lpuart2
     description: LPUART2.
     bit_offset: 4
     bit_size: 2
-    enum: LPUART2
-  - name: LPUART3
+    enum: Rule
+  - name: lpuart3
     description: LPUART3.
     bit_offset: 8
     bit_size: 2
-    enum: LPUART3
-  - name: LPUART4
+    enum: Rule
+  - name: lpuart4
     description: LPUART4.
     bit_offset: 12
     bit_size: 2
-    enum: LPUART4
-fieldset/AIPS_BRIDGE_GROUP2_MEM_RULE5:
+    enum: Rule
+fieldset/AipsBridgeGroup2MemRule5:
   description: AIPS Bridge Group 2 Rule 5.
   fields:
-  - name: LPTMR
+  - name: lptmr
     description: LPTMR.
     bit_offset: 12
     bit_size: 2
-    enum: LPTMR
-  - name: OSTIMER
+    enum: Rule
+  - name: ostimer
     description: OSTIMER.
     bit_offset: 20
     bit_size: 2
-    enum: OSTIMER
-  - name: WAKE_TIMER
+    enum: Rule
+  - name: wake_timer
     description: WAKE_TIMER.
     bit_offset: 24
     bit_size: 2
-    enum: WAKE_TIMER
-  - name: ADC0
+    enum: Rule
+  - name: adc0
     description: ADC0.
     bit_offset: 28
     bit_size: 2
-    enum: ADC0
-fieldset/AIPS_BRIDGE_GROUP2_MEM_RULE6:
+    enum: Rule
+fieldset/AipsBridgeGroup2MemRule6:
   description: AIPS Bridge Group 2 Rule 6.
   fields:
-  - name: ADC1
+  - name: adc1
     description: ADC1.
     bit_offset: 0
     bit_size: 2
-    enum: ADC1
-  - name: CMP0
+    enum: Rule
+  - name: cmp0
     description: CMP0.
     bit_offset: 4
     bit_size: 2
-    enum: CMP0
-  - name: DAC0
+    enum: Rule
+  - name: dac0
     description: DAC0.
     bit_offset: 16
     bit_size: 2
-    enum: DAC0
-  - name: DAC1
+    enum: Rule
+  - name: dac1
     description: DAC1.
     bit_offset: 20
     bit_size: 2
-    enum: DAC1
-fieldset/AIPS_BRIDGE_GROUP2_MEM_RULE7:
+    enum: Rule
+fieldset/AipsBridgeGroup2MemRule7:
   description: AIPS Bridge Group 2 Rule 7.
   fields:
-  - name: VREF0
+  - name: vref0
     description: VREF0.
     bit_offset: 12
     bit_size: 2
-    enum: VREF0
-  - name: PORT0
+    enum: Rule
+  - name: port0
     description: PORT0.
     bit_offset: 16
     bit_size: 2
-    enum: PORT0
-  - name: PORT1
+    enum: Rule
+  - name: port1
     description: PORT1.
     bit_offset: 20
     bit_size: 2
-    enum: PORT1
-  - name: PORT2
+    enum: Rule
+  - name: port2
     description: PORT2.
     bit_offset: 24
     bit_size: 2
-    enum: PORT2
-  - name: PORT3
+    enum: Rule
+  - name: port3
     description: PORT3.
     bit_offset: 28
     bit_size: 2
-    enum: PORT3
-fieldset/AIPS_BRIDGE_GROUP2_MEM_RULE8:
+    enum: Rule
+fieldset/AipsBridgeGroup2MemRule8:
   description: AIPS Bridge Group 2 Rule 8.
   fields:
-  - name: PORT4
+  - name: port4
     description: PORT4.
     bit_offset: 0
     bit_size: 2
-    enum: PORT4
-  - name: TSI0
+    enum: Rule
+  - name: tsi0
     description: TSI0.
     bit_offset: 12
     bit_size: 2
-    enum: TSI0
-  - name: AOI0
+    enum: Rule
+  - name: aoi0
     description: AOI0.
     bit_offset: 16
     bit_size: 2
-    enum: AOI0
-  - name: CRC0
+    enum: Rule
+  - name: crc0
     description: CRC0.
     bit_offset: 20
     bit_size: 2
-    enum: CRC0
-  - name: CMC
+    enum: Rule
+  - name: cmc
     description: CMC.
     bit_offset: 24
     bit_size: 2
-    enum: CMC
-  - name: EIM
+    enum: Rule
+  - name: eim
     description: EIM.
     bit_offset: 28
     bit_size: 2
-    enum: EIM
-fieldset/AIPS_BRIDGE_GROUP2_MEM_RULE9:
+    enum: Rule
+fieldset/AipsBridgeGroup2MemRule9:
   description: AIPS Bridge Group 2 Rule 9.
   fields:
-  - name: ERM
+  - name: erm
     description: ERM.
     bit_offset: 0
     bit_size: 2
-    enum: ERM
-  - name: MBC
+    enum: Rule
+  - name: mbc
     description: MBC.
     bit_offset: 4
     bit_size: 2
-    enum: MBC
-  - name: SCG
+    enum: Rule
+  - name: scg
     description: SCG.
     bit_offset: 8
     bit_size: 2
-    enum: SCG
-  - name: SPC
+    enum: Rule
+  - name: spc
     description: SPC.
     bit_offset: 12
     bit_size: 2
-    enum: SPC
-  - name: CAN0_REGION0
+    enum: Rule
+  - name: can0_region0
     description: CAN0 Region 0.
     bit_offset: 16
     bit_size: 2
-    enum: CAN0_REGION0
-  - name: CAN0_REGION1
+    enum: Rule
+  - name: can0_region1
     description: CAN0 Region 1.
     bit_offset: 20
     bit_size: 2
-    enum: CAN0_REGION1
-  - name: CAN0_REGION2
+    enum: Rule
+  - name: can0_region2
     description: CAN0 Region 2.
     bit_offset: 24
     bit_size: 2
-    enum: CAN0_REGION2
-  - name: CAN0_REGION3
+    enum: Rule
+  - name: can0_region3
     description: CAN0 Region 3.
     bit_offset: 28
     bit_size: 2
-    enum: CAN0_REGION3
-fieldset/APB_PERIPHERAL_GROUP0_MEM_RULE0:
+    enum: Rule
+fieldset/ApbPeripheralGroup0MemRule0:
   description: APB Bridge Group 0 Memory Rule Register 0.
   fields:
-  - name: INPUTMUX
+  - name: inputmux
     description: INPUTMUX.
     bit_offset: 4
     bit_size: 2
-    enum: INPUTMUX
-  - name: I3C0
+    enum: Rule
+  - name: i3c0
     description: I3C0.
     bit_offset: 8
     bit_size: 2
-    enum: I3C0
-  - name: I3C1
+    enum: Rule
+  - name: i3c1
     description: I3C1.
     bit_offset: 12
     bit_size: 2
-    enum: I3C1
-  - name: CTIMER0
+    enum: Rule
+  - name: ctimer0
     description: CTIMER0.
     bit_offset: 16
     bit_size: 2
-    enum: CTIMER0
-  - name: CTIMER1
+    enum: Rule
+  - name: ctimer1
     description: CTIMER1.
     bit_offset: 20
     bit_size: 2
-    enum: CTIMER1
-  - name: CTIMER2
+    enum: Rule
+  - name: ctimer2
     description: CTIMER2.
     bit_offset: 24
     bit_size: 2
-    enum: CTIMER2
-  - name: CTIMER3
+    enum: Rule
+  - name: ctimer3
     description: CTIMER3.
     bit_offset: 28
     bit_size: 2
-    enum: CTIMER3
-fieldset/APB_PERIPHERAL_GROUP0_MEM_RULE1:
+    enum: Rule
+fieldset/ApbPeripheralGroup0MemRule1:
   description: APB Bridge Group 0 Memory Rule Register 1.
   fields:
-  - name: CTIMER4
+  - name: ctimer4
     description: CTIMER4.
     bit_offset: 0
     bit_size: 2
-    enum: CTIMER4
-  - name: FREQME
+    enum: Rule
+  - name: freqme
     description: FREQME.
     bit_offset: 4
     bit_size: 2
-    enum: FREQME
-  - name: UTICK
+    enum: Rule
+  - name: utick
     description: UTCIK0.
     bit_offset: 12
     bit_size: 2
-    enum: UTICK
-  - name: WWDT0
+    enum: Rule
+  - name: wwdt0
     description: WWDT0.
     bit_offset: 16
     bit_size: 2
-    enum: WWDT0
-  - name: WWDT1
+    enum: Rule
+  - name: wwdt1
     description: WWDT1.
     bit_offset: 20
     bit_size: 2
-    enum: WWDT1
-  - name: SMARTDMA
+    enum: Rule
+  - name: smartdma
     description: SmartDMA.
     bit_offset: 24
     bit_size: 2
-    enum: APB_PERIPHERAL_GROUP0_MEM_RULE1_SMARTDMA
-fieldset/CPU0_LOCK_REG:
+    enum: Rule
+fieldset/Cpu0LockReg:
   description: Miscellaneous CPU0 Control Signals.
   fields:
-  - name: LOCK_NS_VTOR
+  - name: lock_ns_vtor
     description: LOCK_NS_VTOR.
     bit_offset: 0
     bit_size: 2
-    enum: LOCK_NS_VTOR
-  - name: LOCK_NS_MPU
+    enum: LockNsVtor
+  - name: lock_ns_mpu
     description: LOCK_NS_MPU.
     bit_offset: 2
     bit_size: 2
-    enum: LOCK_NS_MPU
-  - name: LOCK_S_VTAIRCR
+    enum: LockNsMpu
+  - name: lock_s_vtaircr
     description: LOCK_S_VTAIRCR.
     bit_offset: 4
     bit_size: 2
-    enum: LOCK_S_VTAIRCR
-  - name: LOCK_S_MPU
+    enum: LockSVtaircr
+  - name: lock_s_mpu
     description: LOCK_S_MPU.
     bit_offset: 6
     bit_size: 2
-    enum: LOCK_S_MPU
-  - name: LOCK_SAU
+    enum: LockSMpu
+  - name: lock_sau
     description: LOCK_SAU.
     bit_offset: 8
     bit_size: 2
-    enum: LOCK_SAU
-fieldset/FLASH00_MEM_RULE:
+    enum: LockSau
+fieldset/Flash00MemRule:
   description: Flash Memory Rule.
   fields:
-  - name: RULE0
+  - name: rule
     description: Rule 0.
     bit_offset: 0
     bit_size: 2
-    enum: FLASH00_MEM_RULE_RULE0
-  - name: RULE1
-    description: Rule 1.
-    bit_offset: 4
-    bit_size: 2
-    enum: FLASH00_MEM_RULE_RULE1
-  - name: RULE2
-    description: Rule 2.
-    bit_offset: 8
-    bit_size: 2
-    enum: FLASH00_MEM_RULE_RULE2
-  - name: RULE3
-    description: Rule 3.
-    bit_offset: 12
-    bit_size: 2
-    enum: FLASH00_MEM_RULE_RULE3
-  - name: RULE4
-    description: Rule 4.
-    bit_offset: 16
-    bit_size: 2
-    enum: FLASH00_MEM_RULE_RULE4
-  - name: RULE5
-    description: Rule 5.
-    bit_offset: 20
-    bit_size: 2
-    enum: FLASH00_MEM_RULE_RULE5
-  - name: RULE6
-    description: Rule 6.
-    bit_offset: 24
-    bit_size: 2
-    enum: FLASH00_MEM_RULE_RULE6
-  - name: RULE7
-    description: Rule 7.
-    bit_offset: 28
-    bit_size: 2
-    enum: FLASH00_MEM_RULE_RULE7
-fieldset/FLASH01_MEM_RULE:
+    array:
+      len: 8
+      stride: 4
+    enum: Rule
+fieldset/Flash01MemRule:
   description: Flash Memory Rule.
   fields:
-  - name: RULE0
+  - name: rule
     description: Rule 0.
     bit_offset: 0
     bit_size: 2
-    enum: FLASH01_MEM_RULE_RULE0
-  - name: RULE1
-    description: Rule 1.
-    bit_offset: 4
-    bit_size: 2
-    enum: FLASH01_MEM_RULE_RULE1
-  - name: RULE2
-    description: Rule 2.
-    bit_offset: 8
-    bit_size: 2
-    enum: FLASH01_MEM_RULE_RULE2
-  - name: RULE3
-    description: Rule 3.
-    bit_offset: 12
-    bit_size: 2
-    enum: FLASH01_MEM_RULE_RULE3
-  - name: RULE4
-    description: Rule 4.
-    bit_offset: 16
-    bit_size: 2
-    enum: FLASH01_MEM_RULE_RULE4
-  - name: RULE5
-    description: Rule 5.
-    bit_offset: 20
-    bit_size: 2
-    enum: FLASH01_MEM_RULE_RULE5
-  - name: RULE6
-    description: Rule 6.
-    bit_offset: 24
-    bit_size: 2
-    enum: FLASH01_MEM_RULE_RULE6
-  - name: RULE7
-    description: Rule 7.
-    bit_offset: 28
-    bit_size: 2
-    enum: FLASH01_MEM_RULE_RULE7
-fieldset/FLASH02_MEM_RULE:
+    array:
+      len: 8
+      stride: 4
+    enum: Rule
+fieldset/Flash02MemRule:
   description: Flash IFR0 Rule register.
   fields:
-  - name: RULE0
+  - name: rule
     description: Rule 0.
     bit_offset: 0
     bit_size: 2
-    enum: FLASH02_MEM_RULE_RULE0
-  - name: RULE1
-    description: Rule 1.
-    bit_offset: 4
-    bit_size: 2
-    enum: FLASH02_MEM_RULE_RULE1
-  - name: RULE2
-    description: Rule 2.
-    bit_offset: 8
-    bit_size: 2
-    enum: FLASH02_MEM_RULE_RULE2
-  - name: RULE3
-    description: Rule 3.
-    bit_offset: 12
-    bit_size: 2
-    enum: FLASH02_MEM_RULE_RULE3
-fieldset/FLASH03_MEM_RULE:
+    array:
+      len: 4
+      stride: 4
+    enum: Rule
+fieldset/Flash03MemRule:
   description: Flash Memory Rule.
   fields:
-  - name: RULE0
+  - name: rule
     description: Rule 0.
     bit_offset: 0
     bit_size: 2
-    enum: FLASH03_MEM_RULE_RULE0
-  - name: RULE1
-    description: Rule 1.
-    bit_offset: 4
-    bit_size: 2
-    enum: FLASH03_MEM_RULE_RULE1
-  - name: RULE2
-    description: Rule 2.
-    bit_offset: 8
-    bit_size: 2
-    enum: FLASH03_MEM_RULE_RULE2
-  - name: RULE3
-    description: Rule 3.
-    bit_offset: 12
-    bit_size: 2
-    enum: FLASH03_MEM_RULE_RULE3
-fieldset/FLEXSPI0_REGION0_MEM_RULE:
+    array:
+      len: 4
+      stride: 4
+    enum: Rule
+fieldset/Flexspi0Region0MemRule:
   description: FLEXSPI0 Region 0 Memory Rule.
   fields:
-  - name: RULE0
+  - name: rule
     description: Rule 0.
     bit_offset: 0
     bit_size: 2
-    enum: FLEXSPI0_REGION0_MEM_RULE_RULE0
-  - name: RULE1
-    description: Rule 1.
-    bit_offset: 4
-    bit_size: 2
-    enum: FLEXSPI0_REGION0_MEM_RULE_RULE1
-  - name: RULE2
-    description: Rule 2.
-    bit_offset: 8
-    bit_size: 2
-    enum: FLEXSPI0_REGION0_MEM_RULE_RULE2
-  - name: RULE3
-    description: Rule 3.
-    bit_offset: 12
-    bit_size: 2
-    enum: FLEXSPI0_REGION0_MEM_RULE_RULE3
-  - name: RULE4
-    description: Rule 4.
-    bit_offset: 16
-    bit_size: 2
-    enum: FLEXSPI0_REGION0_MEM_RULE_RULE4
-  - name: RULE5
-    description: Rule 5.
-    bit_offset: 20
-    bit_size: 2
-    enum: FLEXSPI0_REGION0_MEM_RULE_RULE5
-  - name: RULE6
-    description: Rule 6.
-    bit_offset: 24
-    bit_size: 2
-    enum: FLEXSPI0_REGION0_MEM_RULE_RULE6
-  - name: RULE7
-    description: Rule 7.
-    bit_offset: 28
-    bit_size: 2
-    enum: FLEXSPI0_REGION0_MEM_RULE_RULE7
-fieldset/FLEXSPI0_REGION_MEM_RULE:
+    array:
+      len: 8
+      stride: 4
+    enum: Rule
+fieldset/Flexspi0RegionMemRule:
   description: FLEXSPI0 Region index Memory Rule.
   fields:
-  - name: RULE0
+  - name: rule
     description: Rule 0.
     bit_offset: 0
     bit_size: 2
-    enum: FLEXSPI0_REGION_MEM_RULE_RULE0
-  - name: RULE1
-    description: Rule 1.
-    bit_offset: 4
-    bit_size: 2
-    enum: FLEXSPI0_REGION_MEM_RULE_RULE1
-  - name: RULE2
-    description: Rule 2.
-    bit_offset: 8
-    bit_size: 2
-    enum: FLEXSPI0_REGION_MEM_RULE_RULE2
-  - name: RULE3
-    description: Rule 3.
-    bit_offset: 12
-    bit_size: 2
-    enum: FLEXSPI0_REGION_MEM_RULE_RULE3
-fieldset/MASTER_SEC_ANTI_POL_REG:
+    array:
+      len: 4
+      stride: 4
+    enum: Rule
+fieldset/MasterSecAntiPolReg:
   description: Master Secure Level.
   fields:
-  - name: SMARTDMA
+  - name: smartdma
     description: SMARTDMA Data.
     bit_offset: 4
     bit_size: 2
-    enum: MASTER_SEC_ANTI_POL_REG_SMARTDMA
-  - name: DMA0
+    enum: MasterSec
+  - name: dma0
     description: eDMA0.
     bit_offset: 6
     bit_size: 2
-    enum: MASTER_SEC_ANTI_POL_REG_DMA0
-  - name: DMA1
+    enum: MasterSec
+  - name: dma1
     description: eDMA1.
     bit_offset: 8
     bit_size: 2
-    enum: MASTER_SEC_ANTI_POL_REG_DMA1
-  - name: PKC
+    enum: MasterSec
+  - name: pkc
     description: PKC.
     bit_offset: 10
     bit_size: 2
-    enum: MASTER_SEC_ANTI_POL_REG_PKC
-  - name: ENET0
+    enum: MasterSec
+  - name: enet0
     description: ENET0.
     bit_offset: 24
     bit_size: 2
-    enum: MASTER_SEC_ANTI_POL_REG_ENET0
-  - name: USB1
+    enum: MasterSec
+  - name: usb1
     description: USB1.
     bit_offset: 26
     bit_size: 2
-    enum: MASTER_SEC_ANTI_POL_REG_USB1
-fieldset/MASTER_SEC_LEVEL:
+    enum: MasterSec
+fieldset/MasterSecLevel:
   description: Master Secure Level.
   fields:
-  - name: SMARTDMA
+  - name: smartdma
     description: SMARTDMA Data.
     bit_offset: 4
     bit_size: 2
-    enum: MASTER_SEC_LEVEL_SMARTDMA
-  - name: DMA0
+    enum: MasterSec
+  - name: dma0
     description: eDMA0.
     bit_offset: 6
     bit_size: 2
-    enum: MASTER_SEC_LEVEL_DMA0
-  - name: DMA1
+    enum: MasterSec
+  - name: dma1
     description: eDMA1.
     bit_offset: 8
     bit_size: 2
-    enum: MASTER_SEC_LEVEL_DMA1
-  - name: PKC
+    enum: MasterSec
+  - name: pkc
     description: PKC.
     bit_offset: 10
     bit_size: 2
-    enum: MASTER_SEC_LEVEL_PKC
-  - name: ENET0
+    enum: MasterSec
+  - name: enet0
     description: ENET0.
     bit_offset: 24
     bit_size: 2
-    enum: MASTER_SEC_LEVEL_ENET0
-  - name: USB1
+    enum: MasterSec
+  - name: usb1
     description: USB1.
     bit_offset: 26
     bit_size: 2
-    enum: MASTER_SEC_LEVEL_USB1
-fieldset/MISC_CTRL_DP_REG:
+    enum: MasterSec
+fieldset/MiscCtrlDpReg:
   description: Secure Control Duplicate.
   fields:
-  - name: WRITE_LOCK
+  - name: write_lock
     description: Write Lock.
     bit_offset: 0
     bit_size: 2
-    enum: MISC_CTRL_DP_REG_WRITE_LOCK
-  - name: ENABLE_SECURE_CHECKING
+    enum: MiscCtrlRegWriteLock
+  - name: enable_secure_checking
     description: Enable Secure Checking.
     bit_offset: 2
     bit_size: 2
-    enum: MISC_CTRL_DP_REG_ENABLE_SECURE_CHECKING
-  - name: ENABLE_S_PRIV_CHECK
+    enum: MiscCtrlEnable
+  - name: enable_s_priv_check
     description: Enable Secure Privilege Checking.
     bit_offset: 4
     bit_size: 2
-    enum: MISC_CTRL_DP_REG_ENABLE_S_PRIV_CHECK
-  - name: ENABLE_NS_PRIV_CHECK
+    enum: MiscCtrlEnable
+  - name: enable_ns_priv_check
     description: Enable Non-Secure Privilege Checking.
     bit_offset: 6
     bit_size: 2
-    enum: MISC_CTRL_DP_REG_ENABLE_NS_PRIV_CHECK
-  - name: DISABLE_VIOLATION_ABORT
+    enum: MiscCtrlEnable
+  - name: disable_violation_abort
     description: Disable Violation Abort.
     bit_offset: 8
     bit_size: 2
-    enum: MISC_CTRL_DP_REG_DISABLE_VIOLATION_ABORT
-  - name: DISABLE_STRICT_MODE
+    enum: MiscCtrlRegDisableViolationAbort
+  - name: disable_strict_mode
     description: Disable Strict Mode.
     bit_offset: 10
     bit_size: 2
-    enum: MISC_CTRL_DP_REG_DISABLE_STRICT_MODE
-  - name: IDAU_ALL_NS
+    enum: MiscCtrlRegDisableStrictMode
+  - name: idau_all_ns
     description: IDAU All Non-Secure.
     bit_offset: 14
     bit_size: 2
-    enum: MISC_CTRL_DP_REG_IDAU_ALL_NS
-fieldset/MISC_CTRL_REG:
+    enum: MiscCtrlRegIdauAllNs
+fieldset/MiscCtrlReg:
   description: Secure Control.
   fields:
-  - name: WRITE_LOCK
+  - name: write_lock
     description: Write Lock.
     bit_offset: 0
     bit_size: 2
-    enum: MISC_CTRL_REG_WRITE_LOCK
-  - name: ENABLE_SECURE_CHECKING
+    enum: MiscCtrlRegWriteLock
+  - name: enable_secure_checking
     description: Enable Secure Checking.
     bit_offset: 2
     bit_size: 2
-    enum: MISC_CTRL_REG_ENABLE_SECURE_CHECKING
-  - name: ENABLE_S_PRIV_CHECK
+    enum: MiscCtrlEnable
+  - name: enable_s_priv_check
     description: Enable Secure Privilege Checking.
     bit_offset: 4
     bit_size: 2
-    enum: MISC_CTRL_REG_ENABLE_S_PRIV_CHECK
-  - name: ENABLE_NS_PRIV_CHECK
+    enum: MiscCtrlEnable
+  - name: enable_ns_priv_check
     description: Enable Non-Secure Privilege Checking.
     bit_offset: 6
     bit_size: 2
-    enum: MISC_CTRL_REG_ENABLE_NS_PRIV_CHECK
-  - name: DISABLE_VIOLATION_ABORT
+    enum: MiscCtrlEnable
+  - name: disable_violation_abort
     description: Disable Violation Abort.
     bit_offset: 8
     bit_size: 2
-    enum: MISC_CTRL_REG_DISABLE_VIOLATION_ABORT
-  - name: DISABLE_STRICT_MODE
+    enum: MiscCtrlRegDisableViolationAbort
+  - name: disable_strict_mode
     description: Disable Strict Mode.
     bit_offset: 10
     bit_size: 2
-    enum: MISC_CTRL_REG_DISABLE_STRICT_MODE
-  - name: IDAU_ALL_NS
+    enum: MiscCtrlRegDisableStrictMode
+  - name: idau_all_ns
     description: IDAU All Non-Secure.
     bit_offset: 14
     bit_size: 2
-    enum: MISC_CTRL_REG_IDAU_ALL_NS
-fieldset/RAMA_MEM_RULE:
+    enum: MiscCtrlRegIdauAllNs
+fieldset/RamMemRule:
   description: RAMA Memory Rule 0.
   fields:
-  - name: RULE0
+  - name: rule
     description: Rule 0.
     bit_offset: 0
     bit_size: 2
-    enum: RAMA_MEM_RULE_RULE0
-  - name: RULE1
-    description: Rule 1.
-    bit_offset: 4
-    bit_size: 2
-    enum: RAMA_MEM_RULE_RULE1
-  - name: RULE2
-    description: Rule 2.
-    bit_offset: 8
-    bit_size: 2
-    enum: RAMA_MEM_RULE_RULE2
-  - name: RULE3
-    description: Rule 3.
-    bit_offset: 12
-    bit_size: 2
-    enum: RAMA_MEM_RULE_RULE3
-  - name: RULE4
-    description: Rule 4.
-    bit_offset: 16
-    bit_size: 2
-    enum: RAMA_MEM_RULE_RULE4
-  - name: RULE5
-    description: Rule 5.
-    bit_offset: 20
-    bit_size: 2
-    enum: RAMA_MEM_RULE_RULE5
-  - name: RULE6
-    description: Rule 6.
-    bit_offset: 24
-    bit_size: 2
-    enum: RAMA_MEM_RULE_RULE6
-  - name: RULE7
-    description: Rule 7.
-    bit_offset: 28
-    bit_size: 2
-    enum: RAMA_MEM_RULE_RULE7
-fieldset/RAMB_MEM_RULE:
-  description: RAMB Memory Rule 0.
-  fields:
-  - name: RULE0
-    description: Rule 0.
-    bit_offset: 0
-    bit_size: 2
-    enum: RAMB_MEM_RULE_RULE0
-  - name: RULE1
-    description: Rule 1.
-    bit_offset: 4
-    bit_size: 2
-    enum: RAMB_MEM_RULE_RULE1
-  - name: RULE2
-    description: Rule 2.
-    bit_offset: 8
-    bit_size: 2
-    enum: RAMB_MEM_RULE_RULE2
-  - name: RULE3
-    description: Rule 3.
-    bit_offset: 12
-    bit_size: 2
-    enum: RAMB_MEM_RULE_RULE3
-  - name: RULE4
-    description: Rule 4.
-    bit_offset: 16
-    bit_size: 2
-    enum: RAMB_MEM_RULE_RULE4
-  - name: RULE5
-    description: Rule 5.
-    bit_offset: 20
-    bit_size: 2
-    enum: RAMB_MEM_RULE_RULE5
-  - name: RULE6
-    description: Rule 6.
-    bit_offset: 24
-    bit_size: 2
-    enum: RAMB_MEM_RULE_RULE6
-  - name: RULE7
-    description: Rule 7.
-    bit_offset: 28
-    bit_size: 2
-    enum: RAMB_MEM_RULE_RULE7
-fieldset/RAMX_MEM_RULE:
-  description: RAMX Memory Rule.
-  fields:
-  - name: RULE0
-    description: Rule 0.
-    bit_offset: 0
-    bit_size: 2
-    enum: RAMX_MEM_RULE_RULE0
-  - name: RULE1
-    description: Rule 1.
-    bit_offset: 4
-    bit_size: 2
-    enum: RAMX_MEM_RULE_RULE1
-  - name: RULE2
-    description: Rule 2.
-    bit_offset: 8
-    bit_size: 2
-    enum: RAMX_MEM_RULE_RULE2
-  - name: RULE3
-    description: Rule 3.
-    bit_offset: 12
-    bit_size: 2
-    enum: RAMX_MEM_RULE_RULE3
-  - name: RULE4
-    description: Rule 4.
-    bit_offset: 16
-    bit_size: 2
-    enum: RAMX_MEM_RULE_RULE4
-  - name: RULE5
-    description: Rule 5.
-    bit_offset: 20
-    bit_size: 2
-    enum: RAMX_MEM_RULE_RULE5
-  - name: RULE6
-    description: Rule 6.
-    bit_offset: 24
-    bit_size: 2
-    enum: RAMX_MEM_RULE_RULE6
-  - name: RULE7
-    description: Rule 7.
-    bit_offset: 28
-    bit_size: 2
-    enum: RAMX_MEM_RULE_RULE7
-fieldset/ROM_MEM_RULE:
+    array:
+      len: 8
+      stride: 4
+    enum: Rule
+fieldset/RomMemRule:
   description: ROM Memory Rule.
   fields:
-  - name: RULE0
+  - name: rule
     description: Rule 0.
     bit_offset: 0
     bit_size: 2
-    enum: ROM_MEM_RULE_RULE0
-  - name: RULE1
-    description: Rule 1.
-    bit_offset: 4
-    bit_size: 2
-    enum: ROM_MEM_RULE_RULE1
-  - name: RULE2
-    description: Rule 2.
-    bit_offset: 8
-    bit_size: 2
-    enum: ROM_MEM_RULE_RULE2
-  - name: RULE3
-    description: Rule 3.
-    bit_offset: 12
-    bit_size: 2
-    enum: ROM_MEM_RULE_RULE3
-  - name: RULE4
-    description: Rule 4.
-    bit_offset: 16
-    bit_size: 2
-    enum: ROM_MEM_RULE_RULE4
-  - name: RULE5
-    description: Rule 5.
-    bit_offset: 20
-    bit_size: 2
-    enum: ROM_MEM_RULE_RULE5
-  - name: RULE6
-    description: Rule 6.
-    bit_offset: 24
-    bit_size: 2
-    enum: ROM_MEM_RULE_RULE6
-  - name: RULE7
-    description: Rule 7.
-    bit_offset: 28
-    bit_size: 2
-    enum: ROM_MEM_RULE_RULE7
-fieldset/SEC_GP_REG0:
+    array:
+      len: 8
+      stride: 4
+    enum: Rule
+fieldset/SecGpReg:
   description: Secure general purpose registers.
   fields:
-  - name: DMA0_IPD_REQ_0
+  - name: dma_ipd_req
     description: DMA0 IPD_REQ.
     bit_offset: 0
     bit_size: 1
-  - name: DMA0_IPD_REQ_1
-    description: DMA0 IPD_REQ.
-    bit_offset: 1
-    bit_size: 1
-  - name: DMA0_IPD_REQ_2
-    description: DMA0 IPD_REQ.
-    bit_offset: 2
-    bit_size: 1
-  - name: DMA0_IPD_REQ_3
-    description: DMA0 IPD_REQ.
-    bit_offset: 3
-    bit_size: 1
-  - name: DMA0_IPD_REQ_4
-    description: DMA0 IPD_REQ.
-    bit_offset: 4
-    bit_size: 1
-  - name: DMA0_IPD_REQ_5
-    description: DMA0 IPD_REQ.
-    bit_offset: 5
-    bit_size: 1
-  - name: DMA0_IPD_REQ_6
-    description: DMA0 IPD_REQ.
-    bit_offset: 6
-    bit_size: 1
-  - name: DMA0_IPD_REQ_7
-    description: DMA0 IPD_REQ.
-    bit_offset: 7
-    bit_size: 1
-  - name: DMA0_IPD_REQ_8
-    description: DMA0 IPD_REQ.
-    bit_offset: 8
-    bit_size: 1
-  - name: DMA0_IPD_REQ_9
-    description: DMA0 IPD_REQ.
-    bit_offset: 9
-    bit_size: 1
-  - name: DMA0_IPD_REQ_10
-    description: DMA0 IPD_REQ.
-    bit_offset: 10
-    bit_size: 1
-  - name: DMA0_IPD_REQ_11
-    description: DMA0 IPD_REQ.
-    bit_offset: 11
-    bit_size: 1
-  - name: DMA0_IPD_REQ_12
-    description: DMA0 IPD_REQ.
-    bit_offset: 12
-    bit_size: 1
-  - name: DMA0_IPD_REQ_13
-    description: DMA0 IPD_REQ.
-    bit_offset: 13
-    bit_size: 1
-  - name: DMA0_IPD_REQ_14
-    description: DMA0 IPD_REQ.
-    bit_offset: 14
-    bit_size: 1
-  - name: DMA0_IPD_REQ_15
-    description: DMA0 IPD_REQ.
-    bit_offset: 15
-    bit_size: 1
-  - name: DMA0_IPD_REQ_16
-    description: DMA0 IPD_REQ.
-    bit_offset: 16
-    bit_size: 1
-  - name: DMA0_IPD_REQ_17
-    description: DMA0 IPD_REQ.
-    bit_offset: 17
-    bit_size: 1
-  - name: DMA0_IPD_REQ_18
-    description: DMA0 IPD_REQ.
-    bit_offset: 18
-    bit_size: 1
-  - name: DMA0_IPD_REQ_19
-    description: DMA0 IPD_REQ.
-    bit_offset: 19
-    bit_size: 1
-  - name: DMA0_IPD_REQ_20
-    description: DMA0 IPD_REQ.
-    bit_offset: 20
-    bit_size: 1
-  - name: DMA0_IPD_REQ_21
-    description: DMA0 IPD_REQ.
-    bit_offset: 21
-    bit_size: 1
-  - name: DMA0_IPD_REQ_22
-    description: DMA0 IPD_REQ.
-    bit_offset: 22
-    bit_size: 1
-  - name: DMA0_IPD_REQ_23
-    description: DMA0 IPD_REQ.
-    bit_offset: 23
-    bit_size: 1
-  - name: DMA0_IPD_REQ_24
-    description: DMA0 IPD_REQ.
-    bit_offset: 24
-    bit_size: 1
-  - name: DMA0_IPD_REQ_25
-    description: DMA0 IPD_REQ.
-    bit_offset: 25
-    bit_size: 1
-  - name: DMA0_IPD_REQ_26
-    description: DMA0 IPD_REQ.
-    bit_offset: 26
-    bit_size: 1
-  - name: DMA0_IPD_REQ_27
-    description: DMA0 IPD_REQ.
-    bit_offset: 27
-    bit_size: 1
-  - name: DMA0_IPD_REQ_28
-    description: DMA0 IPD_REQ.
-    bit_offset: 28
-    bit_size: 1
-  - name: DMA0_IPD_REQ_29
-    description: DMA0 IPD_REQ.
-    bit_offset: 29
-    bit_size: 1
-  - name: DMA0_IPD_REQ_30
-    description: DMA0 IPD_REQ.
-    bit_offset: 30
-    bit_size: 1
-  - name: DMA0_IPD_REQ_31
-    description: DMA0 IPD_REQ.
-    bit_offset: 31
-    bit_size: 1
-fieldset/SEC_GP_REG1:
-  description: Secure general purpose registers.
-  fields:
-  - name: DMA0_IPD_REQ_0
-    description: DMA0 IPD_REQ.
-    bit_offset: 0
-    bit_size: 1
-  - name: DMA0_IPD_REQ_1
-    description: DMA0 IPD_REQ.
-    bit_offset: 1
-    bit_size: 1
-  - name: DMA0_IPD_REQ_2
-    description: DMA0 IPD_REQ.
-    bit_offset: 2
-    bit_size: 1
-  - name: DMA0_IPD_REQ_3
-    description: DMA0 IPD_REQ.
-    bit_offset: 3
-    bit_size: 1
-  - name: DMA0_IPD_REQ_4
-    description: DMA0 IPD_REQ.
-    bit_offset: 4
-    bit_size: 1
-  - name: DMA0_IPD_REQ_5
-    description: DMA0 IPD_REQ.
-    bit_offset: 5
-    bit_size: 1
-  - name: DMA0_IPD_REQ_6
-    description: DMA0 IPD_REQ.
-    bit_offset: 6
-    bit_size: 1
-  - name: DMA0_IPD_REQ_7
-    description: DMA0 IPD_REQ.
-    bit_offset: 7
-    bit_size: 1
-  - name: DMA0_IPD_REQ_8
-    description: DMA0 IPD_REQ.
-    bit_offset: 8
-    bit_size: 1
-  - name: DMA0_IPD_REQ_9
-    description: DMA0 IPD_REQ.
-    bit_offset: 9
-    bit_size: 1
-  - name: DMA0_IPD_REQ_10
-    description: DMA0 IPD_REQ.
-    bit_offset: 10
-    bit_size: 1
-  - name: DMA0_IPD_REQ_11
-    description: DMA0 IPD_REQ.
-    bit_offset: 11
-    bit_size: 1
-  - name: DMA0_IPD_REQ_12
-    description: DMA0 IPD_REQ.
-    bit_offset: 12
-    bit_size: 1
-  - name: DMA0_IPD_REQ_13
-    description: DMA0 IPD_REQ.
-    bit_offset: 13
-    bit_size: 1
-  - name: DMA0_IPD_REQ_14
-    description: DMA0 IPD_REQ.
-    bit_offset: 14
-    bit_size: 1
-  - name: DMA0_IPD_REQ_15
-    description: DMA0 IPD_REQ.
-    bit_offset: 15
-    bit_size: 1
-  - name: DMA0_IPD_REQ_16
-    description: DMA0 IPD_REQ.
-    bit_offset: 16
-    bit_size: 1
-  - name: DMA0_IPD_REQ_17
-    description: DMA0 IPD_REQ.
-    bit_offset: 17
-    bit_size: 1
-  - name: DMA0_IPD_REQ_18
-    description: DMA0 IPD_REQ.
-    bit_offset: 18
-    bit_size: 1
-  - name: DMA0_IPD_REQ_19
-    description: DMA0 IPD_REQ.
-    bit_offset: 19
-    bit_size: 1
-  - name: DMA0_IPD_REQ_20
-    description: DMA0 IPD_REQ.
-    bit_offset: 20
-    bit_size: 1
-  - name: DMA0_IPD_REQ_21
-    description: DMA0 IPD_REQ.
-    bit_offset: 21
-    bit_size: 1
-  - name: DMA0_IPD_REQ_22
-    description: DMA0 IPD_REQ.
-    bit_offset: 22
-    bit_size: 1
-  - name: DMA0_IPD_REQ_23
-    description: DMA0 IPD_REQ.
-    bit_offset: 23
-    bit_size: 1
-  - name: DMA0_IPD_REQ_24
-    description: DMA0 IPD_REQ.
-    bit_offset: 24
-    bit_size: 1
-  - name: DMA0_IPD_REQ_25
-    description: DMA0 IPD_REQ.
-    bit_offset: 25
-    bit_size: 1
-  - name: DMA0_IPD_REQ_26
-    description: DMA0 IPD_REQ.
-    bit_offset: 26
-    bit_size: 1
-  - name: DMA0_IPD_REQ_27
-    description: DMA0 IPD_REQ.
-    bit_offset: 27
-    bit_size: 1
-  - name: DMA0_IPD_REQ_28
-    description: DMA0 IPD_REQ.
-    bit_offset: 28
-    bit_size: 1
-  - name: DMA0_IPD_REQ_29
-    description: DMA0 IPD_REQ.
-    bit_offset: 29
-    bit_size: 1
-  - name: DMA0_IPD_REQ_30
-    description: DMA0 IPD_REQ.
-    bit_offset: 30
-    bit_size: 1
-  - name: DMA0_IPD_REQ_31
-    description: DMA0 IPD_REQ.
-    bit_offset: 31
-    bit_size: 1
-fieldset/SEC_GP_REG2:
-  description: Secure general purpose registers.
-  fields:
-  - name: DMA0_IPD_REQ_0
-    description: DMA0 IPD_REQ.
-    bit_offset: 0
-    bit_size: 1
-  - name: DMA0_IPD_REQ_1
-    description: DMA0 IPD_REQ.
-    bit_offset: 1
-    bit_size: 1
-  - name: DMA0_IPD_REQ_2
-    description: DMA0 IPD_REQ.
-    bit_offset: 2
-    bit_size: 1
-  - name: DMA0_IPD_REQ_3
-    description: DMA0 IPD_REQ.
-    bit_offset: 3
-    bit_size: 1
-  - name: DMA0_IPD_REQ_4
-    description: DMA0 IPD_REQ.
-    bit_offset: 4
-    bit_size: 1
-  - name: DMA0_IPD_REQ_5
-    description: DMA0 IPD_REQ.
-    bit_offset: 5
-    bit_size: 1
-  - name: DMA0_IPD_REQ_6
-    description: DMA0 IPD_REQ.
-    bit_offset: 6
-    bit_size: 1
-  - name: DMA0_IPD_REQ_7
-    description: DMA0 IPD_REQ.
-    bit_offset: 7
-    bit_size: 1
-  - name: DMA0_IPD_REQ_8
-    description: DMA0 IPD_REQ.
-    bit_offset: 8
-    bit_size: 1
-  - name: DMA0_IPD_REQ_9
-    description: DMA0 IPD_REQ.
-    bit_offset: 9
-    bit_size: 1
-  - name: DMA0_IPD_REQ_10
-    description: DMA0 IPD_REQ.
-    bit_offset: 10
-    bit_size: 1
-  - name: DMA0_IPD_REQ_11
-    description: DMA0 IPD_REQ.
-    bit_offset: 11
-    bit_size: 1
-  - name: DMA0_IPD_REQ_12
-    description: DMA0 IPD_REQ.
-    bit_offset: 12
-    bit_size: 1
-  - name: DMA0_IPD_REQ_13
-    description: DMA0 IPD_REQ.
-    bit_offset: 13
-    bit_size: 1
-  - name: DMA0_IPD_REQ_14
-    description: DMA0 IPD_REQ.
-    bit_offset: 14
-    bit_size: 1
-  - name: DMA0_IPD_REQ_15
-    description: DMA0 IPD_REQ.
-    bit_offset: 15
-    bit_size: 1
-  - name: DMA0_IPD_REQ_16
-    description: DMA0 IPD_REQ.
-    bit_offset: 16
-    bit_size: 1
-  - name: DMA0_IPD_REQ_17
-    description: DMA0 IPD_REQ.
-    bit_offset: 17
-    bit_size: 1
-  - name: DMA0_IPD_REQ_18
-    description: DMA0 IPD_REQ.
-    bit_offset: 18
-    bit_size: 1
-  - name: DMA0_IPD_REQ_19
-    description: DMA0 IPD_REQ.
-    bit_offset: 19
-    bit_size: 1
-  - name: DMA0_IPD_REQ_20
-    description: DMA0 IPD_REQ.
-    bit_offset: 20
-    bit_size: 1
-  - name: DMA0_IPD_REQ_21
-    description: DMA0 IPD_REQ.
-    bit_offset: 21
-    bit_size: 1
-  - name: DMA0_IPD_REQ_22
-    description: DMA0 IPD_REQ.
-    bit_offset: 22
-    bit_size: 1
-  - name: DMA0_IPD_REQ_23
-    description: DMA0 IPD_REQ.
-    bit_offset: 23
-    bit_size: 1
-  - name: DMA0_IPD_REQ_24
-    description: DMA0 IPD_REQ.
-    bit_offset: 24
-    bit_size: 1
-  - name: DMA0_IPD_REQ_25
-    description: DMA0 IPD_REQ.
-    bit_offset: 25
-    bit_size: 1
-  - name: DMA0_IPD_REQ_26
-    description: DMA0 IPD_REQ.
-    bit_offset: 26
-    bit_size: 1
-  - name: DMA0_IPD_REQ_27
-    description: DMA0 IPD_REQ.
-    bit_offset: 27
-    bit_size: 1
-  - name: DMA0_IPD_REQ_28
-    description: DMA0 IPD_REQ.
-    bit_offset: 28
-    bit_size: 1
-  - name: DMA0_IPD_REQ_29
-    description: DMA0 IPD_REQ.
-    bit_offset: 29
-    bit_size: 1
-  - name: DMA0_IPD_REQ_30
-    description: DMA0 IPD_REQ.
-    bit_offset: 30
-    bit_size: 1
-  - name: DMA0_IPD_REQ_31
-    description: DMA0 IPD_REQ.
-    bit_offset: 31
-    bit_size: 1
-fieldset/SEC_GP_REG3:
-  description: Secure general purpose registers.
-  fields:
-  - name: DMA0_IPD_REQ_0
-    description: DMA0 IPD_REQ.
-    bit_offset: 0
-    bit_size: 1
-  - name: DMA0_IPD_REQ_1
-    description: DMA0 IPD_REQ.
-    bit_offset: 1
-    bit_size: 1
-  - name: DMA0_IPD_REQ_2
-    description: DMA0 IPD_REQ.
-    bit_offset: 2
-    bit_size: 1
-  - name: DMA0_IPD_REQ_3
-    description: DMA0 IPD_REQ.
-    bit_offset: 3
-    bit_size: 1
-  - name: DMA0_IPD_REQ_4
-    description: DMA0 IPD_REQ.
-    bit_offset: 4
-    bit_size: 1
-  - name: DMA0_IPD_REQ_5
-    description: DMA0 IPD_REQ.
-    bit_offset: 5
-    bit_size: 1
-  - name: DMA0_IPD_REQ_6
-    description: DMA0 IPD_REQ.
-    bit_offset: 6
-    bit_size: 1
-  - name: DMA0_IPD_REQ_7
-    description: DMA0 IPD_REQ.
-    bit_offset: 7
-    bit_size: 1
-  - name: DMA0_IPD_REQ_8
-    description: DMA0 IPD_REQ.
-    bit_offset: 8
-    bit_size: 1
-  - name: DMA0_IPD_REQ_9
-    description: DMA0 IPD_REQ.
-    bit_offset: 9
-    bit_size: 1
-  - name: DMA0_IPD_REQ_10
-    description: DMA0 IPD_REQ.
-    bit_offset: 10
-    bit_size: 1
-  - name: DMA0_IPD_REQ_11
-    description: DMA0 IPD_REQ.
-    bit_offset: 11
-    bit_size: 1
-  - name: DMA0_IPD_REQ_12
-    description: DMA0 IPD_REQ.
-    bit_offset: 12
-    bit_size: 1
-  - name: DMA0_IPD_REQ_13
-    description: DMA0 IPD_REQ.
-    bit_offset: 13
-    bit_size: 1
-  - name: DMA0_IPD_REQ_14
-    description: DMA0 IPD_REQ.
-    bit_offset: 14
-    bit_size: 1
-  - name: DMA0_IPD_REQ_15
-    description: DMA0 IPD_REQ.
-    bit_offset: 15
-    bit_size: 1
-  - name: DMA0_IPD_REQ_16
-    description: DMA0 IPD_REQ.
-    bit_offset: 16
-    bit_size: 1
-  - name: DMA0_IPD_REQ_17
-    description: DMA0 IPD_REQ.
-    bit_offset: 17
-    bit_size: 1
-  - name: DMA0_IPD_REQ_18
-    description: DMA0 IPD_REQ.
-    bit_offset: 18
-    bit_size: 1
-  - name: DMA0_IPD_REQ_19
-    description: DMA0 IPD_REQ.
-    bit_offset: 19
-    bit_size: 1
-  - name: DMA0_IPD_REQ_20
-    description: DMA0 IPD_REQ.
-    bit_offset: 20
-    bit_size: 1
-  - name: DMA0_IPD_REQ_21
-    description: DMA0 IPD_REQ.
-    bit_offset: 21
-    bit_size: 1
-  - name: DMA0_IPD_REQ_22
-    description: DMA0 IPD_REQ.
-    bit_offset: 22
-    bit_size: 1
-  - name: DMA0_IPD_REQ_23
-    description: DMA0 IPD_REQ.
-    bit_offset: 23
-    bit_size: 1
-  - name: DMA0_IPD_REQ_24
-    description: DMA0 IPD_REQ.
-    bit_offset: 24
-    bit_size: 1
-  - name: DMA0_IPD_REQ_25
-    description: DMA0 IPD_REQ.
-    bit_offset: 25
-    bit_size: 1
-  - name: DMA0_IPD_REQ_26
-    description: DMA0 IPD_REQ.
-    bit_offset: 26
-    bit_size: 1
-  - name: DMA0_IPD_REQ_27
-    description: DMA0 IPD_REQ.
-    bit_offset: 27
-    bit_size: 1
-  - name: DMA0_IPD_REQ_28
-    description: DMA0 IPD_REQ.
-    bit_offset: 28
-    bit_size: 1
-  - name: DMA0_IPD_REQ_29
-    description: DMA0 IPD_REQ.
-    bit_offset: 29
-    bit_size: 1
-  - name: DMA0_IPD_REQ_30
-    description: DMA0 IPD_REQ.
-    bit_offset: 30
-    bit_size: 1
-  - name: DMA0_IPD_REQ_31
-    description: DMA0 IPD_REQ.
-    bit_offset: 31
-    bit_size: 1
-fieldset/SEC_GP_REG4:
-  description: Secure general purpose registers.
-  fields:
-  - name: DMA0_IPD_REQ_0
-    description: DMA0 IPD_REQ.
-    bit_offset: 0
-    bit_size: 1
-  - name: DMA0_IPD_REQ_1
-    description: DMA0 IPD_REQ.
-    bit_offset: 1
-    bit_size: 1
-  - name: DMA0_IPD_REQ_2
-    description: DMA0 IPD_REQ.
-    bit_offset: 2
-    bit_size: 1
-  - name: DMA0_IPD_REQ_3
-    description: DMA0 IPD_REQ.
-    bit_offset: 3
-    bit_size: 1
-  - name: DMA0_IPD_REQ_4
-    description: DMA0 IPD_REQ.
-    bit_offset: 4
-    bit_size: 1
-  - name: DMA0_IPD_REQ_5
-    description: DMA0 IPD_REQ.
-    bit_offset: 5
-    bit_size: 1
-  - name: DMA0_IPD_REQ_6
-    description: DMA0 IPD_REQ.
-    bit_offset: 6
-    bit_size: 1
-  - name: DMA0_IPD_REQ_7
-    description: DMA0 IPD_REQ.
-    bit_offset: 7
-    bit_size: 1
-  - name: DMA0_IPD_REQ_8
-    description: DMA0 IPD_REQ.
-    bit_offset: 8
-    bit_size: 1
-  - name: DMA0_IPD_REQ_9
-    description: DMA0 IPD_REQ.
-    bit_offset: 9
-    bit_size: 1
-  - name: DMA0_IPD_REQ_10
-    description: DMA0 IPD_REQ.
-    bit_offset: 10
-    bit_size: 1
-  - name: DMA0_IPD_REQ_11
-    description: DMA0 IPD_REQ.
-    bit_offset: 11
-    bit_size: 1
-  - name: DMA0_IPD_REQ_12
-    description: DMA0 IPD_REQ.
-    bit_offset: 12
-    bit_size: 1
-  - name: DMA0_IPD_REQ_13
-    description: DMA0 IPD_REQ.
-    bit_offset: 13
-    bit_size: 1
-  - name: DMA0_IPD_REQ_14
-    description: DMA0 IPD_REQ.
-    bit_offset: 14
-    bit_size: 1
-  - name: DMA0_IPD_REQ_15
-    description: DMA0 IPD_REQ.
-    bit_offset: 15
-    bit_size: 1
-  - name: DMA0_IPD_REQ_16
-    description: DMA0 IPD_REQ.
-    bit_offset: 16
-    bit_size: 1
-  - name: DMA0_IPD_REQ_17
-    description: DMA0 IPD_REQ.
-    bit_offset: 17
-    bit_size: 1
-  - name: DMA0_IPD_REQ_18
-    description: DMA0 IPD_REQ.
-    bit_offset: 18
-    bit_size: 1
-  - name: DMA0_IPD_REQ_19
-    description: DMA0 IPD_REQ.
-    bit_offset: 19
-    bit_size: 1
-  - name: DMA0_IPD_REQ_20
-    description: DMA0 IPD_REQ.
-    bit_offset: 20
-    bit_size: 1
-  - name: DMA0_IPD_REQ_21
-    description: DMA0 IPD_REQ.
-    bit_offset: 21
-    bit_size: 1
-  - name: DMA0_IPD_REQ_22
-    description: DMA0 IPD_REQ.
-    bit_offset: 22
-    bit_size: 1
-  - name: DMA0_IPD_REQ_23
-    description: DMA0 IPD_REQ.
-    bit_offset: 23
-    bit_size: 1
-  - name: DMA0_IPD_REQ_24
-    description: DMA0 IPD_REQ.
-    bit_offset: 24
-    bit_size: 1
-  - name: DMA0_IPD_REQ_25
-    description: DMA0 IPD_REQ.
-    bit_offset: 25
-    bit_size: 1
-  - name: DMA0_IPD_REQ_26
-    description: DMA0 IPD_REQ.
-    bit_offset: 26
-    bit_size: 1
-  - name: DMA0_IPD_REQ_27
-    description: DMA0 IPD_REQ.
-    bit_offset: 27
-    bit_size: 1
-  - name: DMA0_IPD_REQ_28
-    description: DMA0 IPD_REQ.
-    bit_offset: 28
-    bit_size: 1
-  - name: DMA0_IPD_REQ_29
-    description: DMA0 IPD_REQ.
-    bit_offset: 29
-    bit_size: 1
-  - name: DMA0_IPD_REQ_30
-    description: DMA0 IPD_REQ.
-    bit_offset: 30
-    bit_size: 1
-  - name: DMA0_IPD_REQ_31
-    description: DMA0 IPD_REQ.
-    bit_offset: 31
-    bit_size: 1
-fieldset/SEC_GP_REG5:
-  description: Secure general purpose registers.
-  fields:
-  - name: DMA1_IPD_REQ_0
-    description: DMA1 IPD_REQ.
-    bit_offset: 0
-    bit_size: 1
-  - name: DMA1_IPD_REQ_1
-    description: DMA1 IPD_REQ.
-    bit_offset: 1
-    bit_size: 1
-  - name: DMA1_IPD_REQ_2
-    description: DMA1 IPD_REQ.
-    bit_offset: 2
-    bit_size: 1
-  - name: DMA1_IPD_REQ_3
-    description: DMA1 IPD_REQ.
-    bit_offset: 3
-    bit_size: 1
-  - name: DMA1_IPD_REQ_4
-    description: DMA1 IPD_REQ.
-    bit_offset: 4
-    bit_size: 1
-  - name: DMA1_IPD_REQ_5
-    description: DMA1 IPD_REQ.
-    bit_offset: 5
-    bit_size: 1
-  - name: DMA1_IPD_REQ_6
-    description: DMA1 IPD_REQ.
-    bit_offset: 6
-    bit_size: 1
-  - name: DMA1_IPD_REQ_7
-    description: DMA1 IPD_REQ.
-    bit_offset: 7
-    bit_size: 1
-  - name: DMA1_IPD_REQ_8
-    description: DMA1 IPD_REQ.
-    bit_offset: 8
-    bit_size: 1
-  - name: DMA1_IPD_REQ_9
-    description: DMA1 IPD_REQ.
-    bit_offset: 9
-    bit_size: 1
-  - name: DMA1_IPD_REQ_10
-    description: DMA1 IPD_REQ.
-    bit_offset: 10
-    bit_size: 1
-  - name: DMA1_IPD_REQ_11
-    description: DMA1 IPD_REQ.
-    bit_offset: 11
-    bit_size: 1
-  - name: DMA1_IPD_REQ_12
-    description: DMA1 IPD_REQ.
-    bit_offset: 12
-    bit_size: 1
-  - name: DMA1_IPD_REQ_13
-    description: DMA1 IPD_REQ.
-    bit_offset: 13
-    bit_size: 1
-  - name: DMA1_IPD_REQ_14
-    description: DMA1 IPD_REQ.
-    bit_offset: 14
-    bit_size: 1
-  - name: DMA1_IPD_REQ_15
-    description: DMA1 IPD_REQ.
-    bit_offset: 15
-    bit_size: 1
-  - name: DMA1_IPD_REQ_16
-    description: DMA1 IPD_REQ.
-    bit_offset: 16
-    bit_size: 1
-  - name: DMA1_IPD_REQ_17
-    description: DMA1 IPD_REQ.
-    bit_offset: 17
-    bit_size: 1
-  - name: DMA1_IPD_REQ_18
-    description: DMA1 IPD_REQ.
-    bit_offset: 18
-    bit_size: 1
-  - name: DMA1_IPD_REQ_19
-    description: DMA1 IPD_REQ.
-    bit_offset: 19
-    bit_size: 1
-  - name: DMA1_IPD_REQ_20
-    description: DMA1 IPD_REQ.
-    bit_offset: 20
-    bit_size: 1
-  - name: DMA1_IPD_REQ_21
-    description: DMA1 IPD_REQ.
-    bit_offset: 21
-    bit_size: 1
-  - name: DMA1_IPD_REQ_22
-    description: DMA1 IPD_REQ.
-    bit_offset: 22
-    bit_size: 1
-  - name: DMA1_IPD_REQ_23
-    description: DMA1 IPD_REQ.
-    bit_offset: 23
-    bit_size: 1
-  - name: DMA1_IPD_REQ_24
-    description: DMA1 IPD_REQ.
-    bit_offset: 24
-    bit_size: 1
-  - name: DMA1_IPD_REQ_25
-    description: DMA1 IPD_REQ.
-    bit_offset: 25
-    bit_size: 1
-  - name: DMA1_IPD_REQ_26
-    description: DMA1 IPD_REQ.
-    bit_offset: 26
-    bit_size: 1
-  - name: DMA1_IPD_REQ_27
-    description: DMA1 IPD_REQ.
-    bit_offset: 27
-    bit_size: 1
-  - name: DMA1_IPD_REQ_28
-    description: DMA1 IPD_REQ.
-    bit_offset: 28
-    bit_size: 1
-  - name: DMA1_IPD_REQ_29
-    description: DMA1 IPD_REQ.
-    bit_offset: 29
-    bit_size: 1
-  - name: DMA1_IPD_REQ_30
-    description: DMA1 IPD_REQ.
-    bit_offset: 30
-    bit_size: 1
-  - name: DMA1_IPD_REQ_31
-    description: DMA1 IPD_REQ.
-    bit_offset: 31
-    bit_size: 1
-fieldset/SEC_GP_REG6:
-  description: Secure general purpose registers.
-  fields:
-  - name: DMA1_IPD_REQ_0
-    description: DMA1 IPD_REQ.
-    bit_offset: 0
-    bit_size: 1
-  - name: DMA1_IPD_REQ_1
-    description: DMA1 IPD_REQ.
-    bit_offset: 1
-    bit_size: 1
-  - name: DMA1_IPD_REQ_2
-    description: DMA1 IPD_REQ.
-    bit_offset: 2
-    bit_size: 1
-  - name: DMA1_IPD_REQ_3
-    description: DMA1 IPD_REQ.
-    bit_offset: 3
-    bit_size: 1
-  - name: DMA1_IPD_REQ_4
-    description: DMA1 IPD_REQ.
-    bit_offset: 4
-    bit_size: 1
-  - name: DMA1_IPD_REQ_5
-    description: DMA1 IPD_REQ.
-    bit_offset: 5
-    bit_size: 1
-  - name: DMA1_IPD_REQ_6
-    description: DMA1 IPD_REQ.
-    bit_offset: 6
-    bit_size: 1
-  - name: DMA1_IPD_REQ_7
-    description: DMA1 IPD_REQ.
-    bit_offset: 7
-    bit_size: 1
-  - name: DMA1_IPD_REQ_8
-    description: DMA1 IPD_REQ.
-    bit_offset: 8
-    bit_size: 1
-  - name: DMA1_IPD_REQ_9
-    description: DMA1 IPD_REQ.
-    bit_offset: 9
-    bit_size: 1
-  - name: DMA1_IPD_REQ_10
-    description: DMA1 IPD_REQ.
-    bit_offset: 10
-    bit_size: 1
-  - name: DMA1_IPD_REQ_11
-    description: DMA1 IPD_REQ.
-    bit_offset: 11
-    bit_size: 1
-  - name: DMA1_IPD_REQ_12
-    description: DMA1 IPD_REQ.
-    bit_offset: 12
-    bit_size: 1
-  - name: DMA1_IPD_REQ_13
-    description: DMA1 IPD_REQ.
-    bit_offset: 13
-    bit_size: 1
-  - name: DMA1_IPD_REQ_14
-    description: DMA1 IPD_REQ.
-    bit_offset: 14
-    bit_size: 1
-  - name: DMA1_IPD_REQ_15
-    description: DMA1 IPD_REQ.
-    bit_offset: 15
-    bit_size: 1
-  - name: DMA1_IPD_REQ_16
-    description: DMA1 IPD_REQ.
-    bit_offset: 16
-    bit_size: 1
-  - name: DMA1_IPD_REQ_17
-    description: DMA1 IPD_REQ.
-    bit_offset: 17
-    bit_size: 1
-  - name: DMA1_IPD_REQ_18
-    description: DMA1 IPD_REQ.
-    bit_offset: 18
-    bit_size: 1
-  - name: DMA1_IPD_REQ_19
-    description: DMA1 IPD_REQ.
-    bit_offset: 19
-    bit_size: 1
-  - name: DMA1_IPD_REQ_20
-    description: DMA1 IPD_REQ.
-    bit_offset: 20
-    bit_size: 1
-  - name: DMA1_IPD_REQ_21
-    description: DMA1 IPD_REQ.
-    bit_offset: 21
-    bit_size: 1
-  - name: DMA1_IPD_REQ_22
-    description: DMA1 IPD_REQ.
-    bit_offset: 22
-    bit_size: 1
-  - name: DMA1_IPD_REQ_23
-    description: DMA1 IPD_REQ.
-    bit_offset: 23
-    bit_size: 1
-  - name: DMA1_IPD_REQ_24
-    description: DMA1 IPD_REQ.
-    bit_offset: 24
-    bit_size: 1
-  - name: DMA1_IPD_REQ_25
-    description: DMA1 IPD_REQ.
-    bit_offset: 25
-    bit_size: 1
-  - name: DMA1_IPD_REQ_26
-    description: DMA1 IPD_REQ.
-    bit_offset: 26
-    bit_size: 1
-  - name: DMA1_IPD_REQ_27
-    description: DMA1 IPD_REQ.
-    bit_offset: 27
-    bit_size: 1
-  - name: DMA1_IPD_REQ_28
-    description: DMA1 IPD_REQ.
-    bit_offset: 28
-    bit_size: 1
-  - name: DMA1_IPD_REQ_29
-    description: DMA1 IPD_REQ.
-    bit_offset: 29
-    bit_size: 1
-  - name: DMA1_IPD_REQ_30
-    description: DMA1 IPD_REQ.
-    bit_offset: 30
-    bit_size: 1
-  - name: DMA1_IPD_REQ_31
-    description: DMA1 IPD_REQ.
-    bit_offset: 31
-    bit_size: 1
-fieldset/SEC_GP_REG7:
-  description: Secure general purpose registers.
-  fields:
-  - name: DMA1_IPD_REQ_0
-    description: DMA1 IPD_REQ.
-    bit_offset: 0
-    bit_size: 1
-  - name: DMA1_IPD_REQ_1
-    description: DMA1 IPD_REQ.
-    bit_offset: 1
-    bit_size: 1
-  - name: DMA1_IPD_REQ_2
-    description: DMA1 IPD_REQ.
-    bit_offset: 2
-    bit_size: 1
-  - name: DMA1_IPD_REQ_3
-    description: DMA1 IPD_REQ.
-    bit_offset: 3
-    bit_size: 1
-  - name: DMA1_IPD_REQ_4
-    description: DMA1 IPD_REQ.
-    bit_offset: 4
-    bit_size: 1
-  - name: DMA1_IPD_REQ_5
-    description: DMA1 IPD_REQ.
-    bit_offset: 5
-    bit_size: 1
-  - name: DMA1_IPD_REQ_6
-    description: DMA1 IPD_REQ.
-    bit_offset: 6
-    bit_size: 1
-  - name: DMA1_IPD_REQ_7
-    description: DMA1 IPD_REQ.
-    bit_offset: 7
-    bit_size: 1
-  - name: DMA1_IPD_REQ_8
-    description: DMA1 IPD_REQ.
-    bit_offset: 8
-    bit_size: 1
-  - name: DMA1_IPD_REQ_9
-    description: DMA1 IPD_REQ.
-    bit_offset: 9
-    bit_size: 1
-  - name: DMA1_IPD_REQ_10
-    description: DMA1 IPD_REQ.
-    bit_offset: 10
-    bit_size: 1
-  - name: DMA1_IPD_REQ_11
-    description: DMA1 IPD_REQ.
-    bit_offset: 11
-    bit_size: 1
-  - name: DMA1_IPD_REQ_12
-    description: DMA1 IPD_REQ.
-    bit_offset: 12
-    bit_size: 1
-  - name: DMA1_IPD_REQ_13
-    description: DMA1 IPD_REQ.
-    bit_offset: 13
-    bit_size: 1
-  - name: DMA1_IPD_REQ_14
-    description: DMA1 IPD_REQ.
-    bit_offset: 14
-    bit_size: 1
-  - name: DMA1_IPD_REQ_15
-    description: DMA1 IPD_REQ.
-    bit_offset: 15
-    bit_size: 1
-  - name: DMA1_IPD_REQ_16
-    description: DMA1 IPD_REQ.
-    bit_offset: 16
-    bit_size: 1
-  - name: DMA1_IPD_REQ_17
-    description: DMA1 IPD_REQ.
-    bit_offset: 17
-    bit_size: 1
-  - name: DMA1_IPD_REQ_18
-    description: DMA1 IPD_REQ.
-    bit_offset: 18
-    bit_size: 1
-  - name: DMA1_IPD_REQ_19
-    description: DMA1 IPD_REQ.
-    bit_offset: 19
-    bit_size: 1
-  - name: DMA1_IPD_REQ_20
-    description: DMA1 IPD_REQ.
-    bit_offset: 20
-    bit_size: 1
-  - name: DMA1_IPD_REQ_21
-    description: DMA1 IPD_REQ.
-    bit_offset: 21
-    bit_size: 1
-  - name: DMA1_IPD_REQ_22
-    description: DMA1 IPD_REQ.
-    bit_offset: 22
-    bit_size: 1
-  - name: DMA1_IPD_REQ_23
-    description: DMA1 IPD_REQ.
-    bit_offset: 23
-    bit_size: 1
-  - name: DMA1_IPD_REQ_24
-    description: DMA1 IPD_REQ.
-    bit_offset: 24
-    bit_size: 1
-  - name: DMA1_IPD_REQ_25
-    description: DMA1 IPD_REQ.
-    bit_offset: 25
-    bit_size: 1
-  - name: DMA1_IPD_REQ_26
-    description: DMA1 IPD_REQ.
-    bit_offset: 26
-    bit_size: 1
-  - name: DMA1_IPD_REQ_27
-    description: DMA1 IPD_REQ.
-    bit_offset: 27
-    bit_size: 1
-  - name: DMA1_IPD_REQ_28
-    description: DMA1 IPD_REQ.
-    bit_offset: 28
-    bit_size: 1
-  - name: DMA1_IPD_REQ_29
-    description: DMA1 IPD_REQ.
-    bit_offset: 29
-    bit_size: 1
-  - name: DMA1_IPD_REQ_30
-    description: DMA1 IPD_REQ.
-    bit_offset: 30
-    bit_size: 1
-  - name: DMA1_IPD_REQ_31
-    description: DMA1 IPD_REQ.
-    bit_offset: 31
-    bit_size: 1
-fieldset/SEC_GP_REG8:
-  description: Secure general purpose registers.
-  fields:
-  - name: DMA1_IPD_REQ_0
-    description: DMA1 IPD_REQ.
-    bit_offset: 0
-    bit_size: 1
-  - name: DMA1_IPD_REQ_1
-    description: DMA1 IPD_REQ.
-    bit_offset: 1
-    bit_size: 1
-  - name: DMA1_IPD_REQ_2
-    description: DMA1 IPD_REQ.
-    bit_offset: 2
-    bit_size: 1
-  - name: DMA1_IPD_REQ_3
-    description: DMA1 IPD_REQ.
-    bit_offset: 3
-    bit_size: 1
-  - name: DMA1_IPD_REQ_4
-    description: DMA1 IPD_REQ.
-    bit_offset: 4
-    bit_size: 1
-  - name: DMA1_IPD_REQ_5
-    description: DMA1 IPD_REQ.
-    bit_offset: 5
-    bit_size: 1
-  - name: DMA1_IPD_REQ_6
-    description: DMA1 IPD_REQ.
-    bit_offset: 6
-    bit_size: 1
-  - name: DMA1_IPD_REQ_7
-    description: DMA1 IPD_REQ.
-    bit_offset: 7
-    bit_size: 1
-  - name: DMA1_IPD_REQ_8
-    description: DMA1 IPD_REQ.
-    bit_offset: 8
-    bit_size: 1
-  - name: DMA1_IPD_REQ_9
-    description: DMA1 IPD_REQ.
-    bit_offset: 9
-    bit_size: 1
-  - name: DMA1_IPD_REQ_10
-    description: DMA1 IPD_REQ.
-    bit_offset: 10
-    bit_size: 1
-  - name: DMA1_IPD_REQ_11
-    description: DMA1 IPD_REQ.
-    bit_offset: 11
-    bit_size: 1
-  - name: DMA1_IPD_REQ_12
-    description: DMA1 IPD_REQ.
-    bit_offset: 12
-    bit_size: 1
-  - name: DMA1_IPD_REQ_13
-    description: DMA1 IPD_REQ.
-    bit_offset: 13
-    bit_size: 1
-  - name: DMA1_IPD_REQ_14
-    description: DMA1 IPD_REQ.
-    bit_offset: 14
-    bit_size: 1
-  - name: DMA1_IPD_REQ_15
-    description: DMA1 IPD_REQ.
-    bit_offset: 15
-    bit_size: 1
-  - name: DMA1_IPD_REQ_16
-    description: DMA1 IPD_REQ.
-    bit_offset: 16
-    bit_size: 1
-  - name: DMA1_IPD_REQ_17
-    description: DMA1 IPD_REQ.
-    bit_offset: 17
-    bit_size: 1
-  - name: DMA1_IPD_REQ_18
-    description: DMA1 IPD_REQ.
-    bit_offset: 18
-    bit_size: 1
-  - name: DMA1_IPD_REQ_19
-    description: DMA1 IPD_REQ.
-    bit_offset: 19
-    bit_size: 1
-  - name: DMA1_IPD_REQ_20
-    description: DMA1 IPD_REQ.
-    bit_offset: 20
-    bit_size: 1
-  - name: DMA1_IPD_REQ_21
-    description: DMA1 IPD_REQ.
-    bit_offset: 21
-    bit_size: 1
-  - name: DMA1_IPD_REQ_22
-    description: DMA1 IPD_REQ.
-    bit_offset: 22
-    bit_size: 1
-  - name: DMA1_IPD_REQ_23
-    description: DMA1 IPD_REQ.
-    bit_offset: 23
-    bit_size: 1
-  - name: DMA1_IPD_REQ_24
-    description: DMA1 IPD_REQ.
-    bit_offset: 24
-    bit_size: 1
-  - name: DMA1_IPD_REQ_25
-    description: DMA1 IPD_REQ.
-    bit_offset: 25
-    bit_size: 1
-  - name: DMA1_IPD_REQ_26
-    description: DMA1 IPD_REQ.
-    bit_offset: 26
-    bit_size: 1
-  - name: DMA1_IPD_REQ_27
-    description: DMA1 IPD_REQ.
-    bit_offset: 27
-    bit_size: 1
-  - name: DMA1_IPD_REQ_28
-    description: DMA1 IPD_REQ.
-    bit_offset: 28
-    bit_size: 1
-  - name: DMA1_IPD_REQ_29
-    description: DMA1 IPD_REQ.
-    bit_offset: 29
-    bit_size: 1
-  - name: DMA1_IPD_REQ_30
-    description: DMA1 IPD_REQ.
-    bit_offset: 30
-    bit_size: 1
-  - name: DMA1_IPD_REQ_31
-    description: DMA1 IPD_REQ.
-    bit_offset: 31
-    bit_size: 1
-fieldset/SEC_GP_REG9:
-  description: Secure general purpose registers.
-  fields:
-  - name: DMA1_IPD_REQ_0
-    description: DMA1 IPD_REQ.
-    bit_offset: 0
-    bit_size: 1
-  - name: DMA1_IPD_REQ_1
-    description: DMA1 IPD_REQ.
-    bit_offset: 1
-    bit_size: 1
-  - name: DMA1_IPD_REQ_2
-    description: DMA1 IPD_REQ.
-    bit_offset: 2
-    bit_size: 1
-  - name: DMA1_IPD_REQ_3
-    description: DMA1 IPD_REQ.
-    bit_offset: 3
-    bit_size: 1
-  - name: DMA1_IPD_REQ_4
-    description: DMA1 IPD_REQ.
-    bit_offset: 4
-    bit_size: 1
-  - name: DMA1_IPD_REQ_5
-    description: DMA1 IPD_REQ.
-    bit_offset: 5
-    bit_size: 1
-  - name: DMA1_IPD_REQ_6
-    description: DMA1 IPD_REQ.
-    bit_offset: 6
-    bit_size: 1
-  - name: DMA1_IPD_REQ_7
-    description: DMA1 IPD_REQ.
-    bit_offset: 7
-    bit_size: 1
-  - name: DMA1_IPD_REQ_8
-    description: DMA1 IPD_REQ.
-    bit_offset: 8
-    bit_size: 1
-  - name: DMA1_IPD_REQ_9
-    description: DMA1 IPD_REQ.
-    bit_offset: 9
-    bit_size: 1
-  - name: DMA1_IPD_REQ_10
-    description: DMA1 IPD_REQ.
-    bit_offset: 10
-    bit_size: 1
-  - name: DMA1_IPD_REQ_11
-    description: DMA1 IPD_REQ.
-    bit_offset: 11
-    bit_size: 1
-  - name: DMA1_IPD_REQ_12
-    description: DMA1 IPD_REQ.
-    bit_offset: 12
-    bit_size: 1
-  - name: DMA1_IPD_REQ_13
-    description: DMA1 IPD_REQ.
-    bit_offset: 13
-    bit_size: 1
-  - name: DMA1_IPD_REQ_14
-    description: DMA1 IPD_REQ.
-    bit_offset: 14
-    bit_size: 1
-  - name: DMA1_IPD_REQ_15
-    description: DMA1 IPD_REQ.
-    bit_offset: 15
-    bit_size: 1
-  - name: DMA1_IPD_REQ_16
-    description: DMA1 IPD_REQ.
-    bit_offset: 16
-    bit_size: 1
-  - name: DMA1_IPD_REQ_17
-    description: DMA1 IPD_REQ.
-    bit_offset: 17
-    bit_size: 1
-  - name: DMA1_IPD_REQ_18
-    description: DMA1 IPD_REQ.
-    bit_offset: 18
-    bit_size: 1
-  - name: DMA1_IPD_REQ_19
-    description: DMA1 IPD_REQ.
-    bit_offset: 19
-    bit_size: 1
-  - name: DMA1_IPD_REQ_20
-    description: DMA1 IPD_REQ.
-    bit_offset: 20
-    bit_size: 1
-  - name: DMA1_IPD_REQ_21
-    description: DMA1 IPD_REQ.
-    bit_offset: 21
-    bit_size: 1
-  - name: DMA1_IPD_REQ_22
-    description: DMA1 IPD_REQ.
-    bit_offset: 22
-    bit_size: 1
-  - name: DMA1_IPD_REQ_23
-    description: DMA1 IPD_REQ.
-    bit_offset: 23
-    bit_size: 1
-  - name: DMA1_IPD_REQ_24
-    description: DMA1 IPD_REQ.
-    bit_offset: 24
-    bit_size: 1
-  - name: DMA1_IPD_REQ_25
-    description: DMA1 IPD_REQ.
-    bit_offset: 25
-    bit_size: 1
-  - name: DMA1_IPD_REQ_26
-    description: DMA1 IPD_REQ.
-    bit_offset: 26
-    bit_size: 1
-  - name: DMA1_IPD_REQ_27
-    description: DMA1 IPD_REQ.
-    bit_offset: 27
-    bit_size: 1
-  - name: DMA1_IPD_REQ_28
-    description: DMA1 IPD_REQ.
-    bit_offset: 28
-    bit_size: 1
-  - name: DMA1_IPD_REQ_29
-    description: DMA1 IPD_REQ.
-    bit_offset: 29
-    bit_size: 1
-  - name: DMA1_IPD_REQ_30
-    description: DMA1 IPD_REQ.
-    bit_offset: 30
-    bit_size: 1
-  - name: DMA1_IPD_REQ_31
-    description: DMA1 IPD_REQ.
-    bit_offset: 31
-    bit_size: 1
-fieldset/SEC_VIO_ADDR:
+    array:
+      len: 32
+      stride: 1
+fieldset/SecVioAddr:
   description: Security Violation Address.
   fields:
-  - name: SEC_VIO_ADDR
+  - name: sec_vio_addr
     description: Security violation address for AHB layer a reset value 0.
     bit_offset: 0
     bit_size: 32
-fieldset/SEC_VIO_INFO_VALID:
+fieldset/SecVioInfoValid:
   description: Security Violation Info Validity for Address.
   fields:
-  - name: VIO_INFO_VALID0
+  - name: vio_info_valid0
     description: Violation information valid flag for AHB port 0.
     bit_offset: 0
     bit_size: 1
-  - name: VIO_INFO_VALID1
+  - name: vio_info_valid1
     description: Violation information valid flag for AHB port 1.
     bit_offset: 1
     bit_size: 1
-  - name: VIO_INFO_VALID2
+  - name: vio_info_valid2
     description: Violation information valid flag for AHB port 2.
     bit_offset: 2
     bit_size: 1
-  - name: VIO_INFO_VALID3
+  - name: vio_info_valid3
     description: Violation information valid flag for AHB port 3.
     bit_offset: 3
     bit_size: 1
-  - name: VIO_INFO_VALID4
+  - name: vio_info_valid4
     description: Violation information valid flag for AHB port 4.
     bit_offset: 4
     bit_size: 1
-  - name: VIO_INFO_VALID5
+  - name: vio_info_valid5
     description: Violation information valid flag for AHB port 5.
     bit_offset: 5
     bit_size: 1
-  - name: VIO_INFO_VALID6
+  - name: vio_info_valid6
     description: Violation information valid flag for AHB port 6.
     bit_offset: 6
     bit_size: 1
-  - name: VIO_INFO_VALID7
+  - name: vio_info_valid7
     description: Violation information valid flag for AHB port 7.
     bit_offset: 7
     bit_size: 1
-fieldset/SEC_VIO_MISC_INFO:
+fieldset/SecVioMiscInfo:
   description: Security Violation Miscellaneous Information at Address.
   fields:
-  - name: SEC_VIO_INFO_WRITE
+  - name: sec_vio_info_write
     description: Security violation access read/write indicator.
     bit_offset: 0
     bit_size: 1
-    enum: SEC_VIO_INFO_WRITE
-  - name: SEC_VIO_INFO_DATA_ACCESS
+    enum: SecVioInfoWrite
+  - name: sec_vio_info_data_access
     description: Security Violation Info Data Access.
     bit_offset: 1
     bit_size: 1
-    enum: SEC_VIO_INFO_DATA_ACCESS
-  - name: SEC_VIO_INFO_MASTER_SEC_LEVEL
+    enum: SecVioInfoDataAccess
+  - name: sec_vio_info_master_sec_level
     description: Security Violation Info Master Security Level.
     bit_offset: 4
     bit_size: 4
-  - name: SEC_VIO_INFO_MASTER
+  - name: sec_vio_info_master
     description: Security violation master number.
     bit_offset: 8
     bit_size: 5
-    enum: SEC_VIO_INFO_MASTER
-enum/ADC0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/ADC1:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/AHB_SECURE_CTRL_MEM_RULE0_RULE0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/AHB_SECURE_CTRL_MEM_RULE0_RULE1:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/AHB_SECURE_CTRL_MEM_RULE0_RULE2:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/AHB_SECURE_CTRL_MEM_RULE0_RULE3:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/AIPS_BRIDGE_GROUP1_MEM_RULE1_USB1:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/AOI0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/APB_PERIPHERAL_GROUP0_MEM_RULE1_SMARTDMA:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/CAN0_REGION0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/CAN0_REGION1:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/CAN0_REGION2:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/CAN0_REGION3:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/CAN1_REGION0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/CAN1_REGION1:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/CAN1_REGION2:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/CAN1_REGION3:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/CDOG0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/CDOG1:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/CMC:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/CMP0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/CRC0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/CTIMER0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/CTIMER1:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/CTIMER2:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/CTIMER3:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/CTIMER4:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/DAC0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/DAC1:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/DEBUG_MAILBOX:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/DGDET0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/DMA_0_CH0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/DMA_0_CH1:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/DMA_0_CH10:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/DMA_0_CH11:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/DMA_0_CH2:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/DMA_0_CH3:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/DMA_0_CH4:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/DMA_0_CH5:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/DMA_0_CH6:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/DMA_0_CH7:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/DMA_0_CH8:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/DMA_0_CH9:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/DMA_0_MP:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/DMA_1_CH0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/DMA_1_CH1:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/DMA_1_CH2:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/DMA_1_CH3:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/DMA_1_MP:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/EIM:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/ENET0_0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/ENET0_1:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/ERM:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/EWM0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLASH00_MEM_RULE_RULE0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLASH00_MEM_RULE_RULE1:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLASH00_MEM_RULE_RULE2:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLASH00_MEM_RULE_RULE3:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLASH00_MEM_RULE_RULE4:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLASH00_MEM_RULE_RULE5:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLASH00_MEM_RULE_RULE6:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLASH00_MEM_RULE_RULE7:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLASH01_MEM_RULE_RULE0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLASH01_MEM_RULE_RULE1:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLASH01_MEM_RULE_RULE2:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLASH01_MEM_RULE_RULE3:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLASH01_MEM_RULE_RULE4:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLASH01_MEM_RULE_RULE5:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLASH01_MEM_RULE_RULE6:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLASH01_MEM_RULE_RULE7:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLASH02_MEM_RULE_RULE0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLASH02_MEM_RULE_RULE1:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLASH02_MEM_RULE_RULE2:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLASH02_MEM_RULE_RULE3:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLASH03_MEM_RULE_RULE0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLASH03_MEM_RULE_RULE1:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLASH03_MEM_RULE_RULE2:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLASH03_MEM_RULE_RULE3:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLEXIO:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLEXSPI0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLEXSPI0_REGION0_MEM_RULE_RULE0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLEXSPI0_REGION0_MEM_RULE_RULE1:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLEXSPI0_REGION0_MEM_RULE_RULE2:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLEXSPI0_REGION0_MEM_RULE_RULE3:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLEXSPI0_REGION0_MEM_RULE_RULE4:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLEXSPI0_REGION0_MEM_RULE_RULE5:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLEXSPI0_REGION0_MEM_RULE_RULE6:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLEXSPI0_REGION0_MEM_RULE_RULE7:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLEXSPI0_REGION_MEM_RULE_RULE0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLEXSPI0_REGION_MEM_RULE_RULE1:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLEXSPI0_REGION_MEM_RULE_RULE2:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FLEXSPI0_REGION_MEM_RULE_RULE3:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FMC:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FMU:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/FREQME:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/GLIKEY0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/GPIO0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/GPIO0_ALIAS:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/GPIO1:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/GPIO1_ALIAS:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/GPIO2:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/GPIO2_ALIAS:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/GPIO3:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/GPIO3_ALIAS:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/GPIO4:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/GPIO4_ALIAS:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/GPIO5:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/GPIO5_ALIAS:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/I3C0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/I3C1:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/I3C2:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/I3C3:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/INPUTMUX:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/ITRC0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/LOCK_NS_MPU:
+    enum: SecVioInfoMaster
+enum/LockNsMpu:
   bit_size: 2
   variants:
   - name: LOCK_NS_MPU_EQ_1
@@ -4614,7 +1277,7 @@ enum/LOCK_NS_MPU:
   - name: LOCK_NS_MPU_EQ_0
     description: CM33 (CPU0) LOCK_NS_MPU is 0.
     value: 2
-enum/LOCK_NS_VTOR:
+enum/LockNsVtor:
   bit_size: 2
   variants:
   - name: LOCK_NS_VTOR_EQ_1
@@ -4623,16 +1286,7 @@ enum/LOCK_NS_VTOR:
   - name: LOCK_NS_VTOR_EQ_0
     description: CM33 (CPU0) LOCKNSVTOR is 0.
     value: 2
-enum/LOCK_SAU:
-  bit_size: 2
-  variants:
-  - name: LOCK_SAU_EQ_1
-    description: CM33 (CPU0) LOCK_SAU is 1.
-    value: 1
-  - name: LOCK_SAU_EQ_0
-    description: CM33 (CPU0) LOCK_SAU is 0.
-    value: 2
-enum/LOCK_S_MPU:
+enum/LockSMpu:
   bit_size: 2
   variants:
   - name: LOCK_S_MPU_EQ_1
@@ -4641,7 +1295,7 @@ enum/LOCK_S_MPU:
   - name: LOCK_S_MPU_EQ_0
     description: CM33 (CPU0) LOCK_S_MPU is 0.
     value: 2
-enum/LOCK_S_VTAIRCR:
+enum/LockSVtaircr:
   bit_size: 2
   variants:
   - name: LOCK_S_VTAIRCR_EQ_1
@@ -4650,277 +1304,16 @@ enum/LOCK_S_VTAIRCR:
   - name: LOCK_S_VTAIRCR_EQ_0
     description: CM33 (CPU0) LOCK_S_VTAIRCR is 0.
     value: 2
-enum/LPI2C0:
+enum/LockSau:
   bit_size: 2
   variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
+  - name: LOCK_SAU_EQ_1
+    description: CM33 (CPU0) LOCK_SAU is 1.
     value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
+  - name: LOCK_SAU_EQ_0
+    description: CM33 (CPU0) LOCK_SAU is 0.
     value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/LPI2C1:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/LPI2C2:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/LPI2C3:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/LPI2C4:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/LPSPI0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/LPSPI1:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/LPSPI2:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/LPSPI3:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/LPSPI4:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/LPSPI5:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/LPTMR:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/LPUART0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/LPUART1:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/LPUART2:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/LPUART3:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/LPUART4:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/LPUART5:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/MASTER_SEC_ANTI_POL_REG_DMA0:
+enum/MasterSec:
   bit_size: 2
   variants:
   - name: NONSECURE_NONPRIV_MASTER
@@ -4935,220 +1328,7 @@ enum/MASTER_SEC_ANTI_POL_REG_DMA0:
   - name: SECURE_PRIV_MASTER
     description: Secure and privileged Master.
     value: 3
-enum/MASTER_SEC_ANTI_POL_REG_DMA1:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_MASTER
-    description: Non-secure and non-privileged Master.
-    value: 0
-  - name: NONSECURE_PRIV_MASTER
-    description: Non-secure and privileged Master.
-    value: 1
-  - name: SECURE_NONPRIV_MASTER
-    description: Secure and non-privileged Master.
-    value: 2
-  - name: SECURE_PRIV_MASTER
-    description: Secure and privileged Master.
-    value: 3
-enum/MASTER_SEC_ANTI_POL_REG_ENET0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_MASTER
-    description: Non-secure and non-privileged Master.
-    value: 0
-  - name: NONSECURE_PRIV_MASTER
-    description: Non-secure and privileged Master.
-    value: 1
-  - name: SECURE_NONPRIV_MASTER
-    description: Secure and non-privileged Master.
-    value: 2
-  - name: SECURE_PRIV_MASTER
-    description: Secure and privileged Master.
-    value: 3
-enum/MASTER_SEC_ANTI_POL_REG_PKC:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_MASTER
-    description: Non-secure and non-privileged Master.
-    value: 0
-  - name: NONSECURE_PRIV_MASTER
-    description: Non-secure and privileged Master.
-    value: 1
-  - name: SECURE_NONPRIV_MASTER
-    description: Secure and non-privileged Master.
-    value: 2
-  - name: SECURE_PRIV_MASTER
-    description: Secure and privileged Master.
-    value: 3
-enum/MASTER_SEC_ANTI_POL_REG_SMARTDMA:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_MASTER
-    description: Non-secure and non-privileged Master.
-    value: 0
-  - name: NONSECURE_PRIV_MASTER
-    description: Non-secure and privileged Master.
-    value: 1
-  - name: SECURE_NONPRIV_MASTER
-    description: Secure and non-privileged Master.
-    value: 2
-  - name: SECURE_PRIV_MASTER
-    description: Secure and privileged Master.
-    value: 3
-enum/MASTER_SEC_ANTI_POL_REG_USB1:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_MASTER
-    description: Non-secure and non-privileged Master.
-    value: 0
-  - name: NONSECURE_PRIV_MASTER
-    description: Non-secure and privileged Master.
-    value: 1
-  - name: SECURE_NONPRIV_MASTER
-    description: Secure and non-privileged Master.
-    value: 2
-  - name: SECURE_PRIV_MASTER
-    description: Secure and privileged Master.
-    value: 3
-enum/MASTER_SEC_LEVEL_DMA0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_MASTER
-    description: Non-secure and non-privileged Master.
-    value: 0
-  - name: NONSECURE_PRIV_MASTER
-    description: Non-secure and privileged Master.
-    value: 1
-  - name: SECURE_NONPRIV_MASTER
-    description: Secure and non-privileged Master.
-    value: 2
-  - name: SECURE_PRIV_MASTER
-    description: Secure and privileged Master.
-    value: 3
-enum/MASTER_SEC_LEVEL_DMA1:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_MASTER
-    description: Non-secure and non-privileged Master.
-    value: 0
-  - name: NONSECURE_PRIV_MASTER
-    description: Non-secure and privileged Master.
-    value: 1
-  - name: SECURE_NONPRIV_MASTER
-    description: Secure and non-privileged Master.
-    value: 2
-  - name: SECURE_PRIV_MASTER
-    description: Secure and privileged Master.
-    value: 3
-enum/MASTER_SEC_LEVEL_ENET0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_MASTER
-    description: Non-secure and non-privileged Master.
-    value: 0
-  - name: NONSECURE_PRIV_MASTER
-    description: Non-secure and privileged Master.
-    value: 1
-  - name: SECURE_NONPRIV_MASTER
-    description: Secure and non-privileged Master.
-    value: 2
-  - name: SECURE_PRIV_MASTER
-    description: Secure and privileged Master.
-    value: 3
-enum/MASTER_SEC_LEVEL_PKC:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_MASTER
-    description: Non-secure and non-privileged Master.
-    value: 0
-  - name: NONSECURE_PRIV_MASTER
-    description: Non-secure and privileged Master.
-    value: 1
-  - name: SECURE_NONPRIV_MASTER
-    description: Secure and non-privileged Master.
-    value: 2
-  - name: SECURE_PRIV_MASTER
-    description: Secure and privileged Master.
-    value: 3
-enum/MASTER_SEC_LEVEL_SMARTDMA:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_MASTER
-    description: Non-secure and non-privileged Master.
-    value: 0
-  - name: NONSECURE_PRIV_MASTER
-    description: Non-secure and privileged Master.
-    value: 1
-  - name: SECURE_NONPRIV_MASTER
-    description: Secure and non-privileged Master.
-    value: 2
-  - name: SECURE_PRIV_MASTER
-    description: Secure and privileged Master.
-    value: 3
-enum/MASTER_SEC_LEVEL_USB1:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_MASTER
-    description: Non-secure and non-privileged Master.
-    value: 0
-  - name: NONSECURE_PRIV_MASTER
-    description: Non-secure and privileged Master.
-    value: 1
-  - name: SECURE_NONPRIV_MASTER
-    description: Secure and non-privileged Master.
-    value: 2
-  - name: SECURE_PRIV_MASTER
-    description: Secure and privileged Master.
-    value: 3
-enum/MAU0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/MBC:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/MISC_CTRL_DP_REG_DISABLE_STRICT_MODE:
-  bit_size: 2
-  variants:
-  - name: AHBTM
-    description: Master can access memories and peripherals at the same level or below that level.
-    value: 1
-  - name: AHBSM1
-    description: Master can access memories and peripherals at same level only.
-    value: 2
-enum/MISC_CTRL_DP_REG_DISABLE_VIOLATION_ABORT:
-  bit_size: 2
-  variants:
-  - name: NO_ABORT
-    description: The violation detected by the secure checker will not cause an abort, but a secure_violation_irq (interrupt request) will still be asserted and serviced by ISR.
-    value: 1
-  - name: ABORT
-    description: The violation detected by the secure checker will cause an abort.
-    value: 2
-enum/MISC_CTRL_DP_REG_ENABLE_NS_PRIV_CHECK:
+enum/MiscCtrlEnable:
   bit_size: 2
   variants:
   - name: ENABLED
@@ -5157,52 +1337,16 @@ enum/MISC_CTRL_DP_REG_ENABLE_NS_PRIV_CHECK:
   - name: DISABLED
     description: Disables the privilege checking of non-secure mode access.
     value: 2
-enum/MISC_CTRL_DP_REG_ENABLE_SECURE_CHECKING:
-  bit_size: 2
-  variants:
-  - name: ENABLED
-    description: Enables secure checking. Violation can be detected when the security level of a transaction does not meet the security rule of the slave or memory to be accessed.
-    value: 1
-  - name: DISABLED
-    description: Disables secure checking. Even if the security level of a transaction does not conform to the security rule of the slave or memory, it will not be detected as a violation.
-    value: 2
-enum/MISC_CTRL_DP_REG_ENABLE_S_PRIV_CHECK:
-  bit_size: 2
-  variants:
-  - name: ENABLED
-    description: Enables the privilege checking of secure mode access.
-    value: 1
-  - name: DISABLED
-    description: Disables the privilege checking of secure mode access.
-    value: 2
-enum/MISC_CTRL_DP_REG_IDAU_ALL_NS:
-  bit_size: 2
-  variants:
-  - name: DISABLED
-    description: IDAU is disabled, which means that all memories are attributed as non-secure memory.
-    value: 1
-  - name: ENABLED
-    description: IDAU is enabled (restrictive mode).
-    value: 2
-enum/MISC_CTRL_DP_REG_WRITE_LOCK:
-  bit_size: 2
-  variants:
-  - name: LOCKED
-    description: Writes to this register and to the Memory and Peripheral RULE registers are not allowed.
-    value: 1
-  - name: NOT_LOCKED
-    description: Writes to this register and to the Memory and Peripheral RULE registers are allowed.
-    value: 2
-enum/MISC_CTRL_REG_DISABLE_STRICT_MODE:
+enum/MiscCtrlRegDisableStrictMode:
   bit_size: 2
   variants:
   - name: AHBTM
-    description: Master strict mode is disabled/off and can access memories and peripherals at the same level or below that level.
+    description: Master can access memories and peripherals at the same level or below that level.
     value: 1
   - name: AHBSM1
-    description: Master strict mode is enabled/on and can access memories and peripherals at same level only.
+    description: Master can access memories and peripherals at same level only.
     value: 2
-enum/MISC_CTRL_REG_DISABLE_VIOLATION_ABORT:
+enum/MiscCtrlRegDisableViolationAbort:
   bit_size: 2
   variants:
   - name: NO_ABORT
@@ -5211,34 +1355,7 @@ enum/MISC_CTRL_REG_DISABLE_VIOLATION_ABORT:
   - name: ABORT
     description: The violation detected by the secure checker will cause an abort.
     value: 2
-enum/MISC_CTRL_REG_ENABLE_NS_PRIV_CHECK:
-  bit_size: 2
-  variants:
-  - name: ENABLED
-    description: Enables privilege checking of non-secure mode access.
-    value: 1
-  - name: DISABLED
-    description: Disables privilege checking of non-secure mode access is disabled.
-    value: 2
-enum/MISC_CTRL_REG_ENABLE_SECURE_CHECKING:
-  bit_size: 2
-  variants:
-  - name: ENABLED
-    description: Enables secure checking. Violation can be detected when the security level of a transaction does not meet the security rule of the slave or memory to be accessed.
-    value: 1
-  - name: DISABLED
-    description: Disables secure checking. Even if the security level of a transaction does not conform to the security rule of the slave or memory, it will not be detected as a violation.
-    value: 2
-enum/MISC_CTRL_REG_ENABLE_S_PRIV_CHECK:
-  bit_size: 2
-  variants:
-  - name: ENABLED
-    description: Enables privilege checking of secure mode access.
-    value: 1
-  - name: DISABLED
-    description: Disables privilege checking of secure mode access.
-    value: 2
-enum/MISC_CTRL_REG_IDAU_ALL_NS:
+enum/MiscCtrlRegIdauAllNs:
   bit_size: 2
   variants:
   - name: DISABLED
@@ -5247,7 +1364,7 @@ enum/MISC_CTRL_REG_IDAU_ALL_NS:
   - name: ENABLED
     description: IDAU is enabled (restrictive mode).
     value: 2
-enum/MISC_CTRL_REG_WRITE_LOCK:
+enum/MiscCtrlRegWriteLock:
   bit_size: 2
   variants:
   - name: LOCKED
@@ -5256,7 +1373,7 @@ enum/MISC_CTRL_REG_WRITE_LOCK:
   - name: NOT_LOCKED
     description: Writes to this register and to the Memory and Peripheral RULE registers are allowed.
     value: 2
-enum/OSTIMER:
+enum/Rule:
   bit_size: 2
   variants:
   - name: NONSECURE_NONPRIV_USER_ALLOWED
@@ -5271,652 +1388,7 @@ enum/OSTIMER:
   - name: SECURE_PRIV_USER_ALLOWED
     description: Secure and privilege user access allowed.
     value: 3
-enum/PKC0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/PORT0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/PORT1:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/PORT2:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/PORT3:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/PORT4:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/PORT5:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/RAMA_MEM_RULE_RULE0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/RAMA_MEM_RULE_RULE1:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/RAMA_MEM_RULE_RULE2:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/RAMA_MEM_RULE_RULE3:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/RAMA_MEM_RULE_RULE4:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/RAMA_MEM_RULE_RULE5:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/RAMA_MEM_RULE_RULE6:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/RAMA_MEM_RULE_RULE7:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/RAMB_MEM_RULE_RULE0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/RAMB_MEM_RULE_RULE1:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/RAMB_MEM_RULE_RULE2:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/RAMB_MEM_RULE_RULE3:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/RAMB_MEM_RULE_RULE4:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/RAMB_MEM_RULE_RULE5:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/RAMB_MEM_RULE_RULE6:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/RAMB_MEM_RULE_RULE7:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/RAMX_MEM_RULE_RULE0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/RAMX_MEM_RULE_RULE1:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/RAMX_MEM_RULE_RULE2:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/RAMX_MEM_RULE_RULE3:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/RAMX_MEM_RULE_RULE4:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/RAMX_MEM_RULE_RULE5:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/RAMX_MEM_RULE_RULE6:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/RAMX_MEM_RULE_RULE7:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/ROMCP:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/ROM_MEM_RULE_RULE0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/ROM_MEM_RULE_RULE1:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/ROM_MEM_RULE_RULE2:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/ROM_MEM_RULE_RULE3:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/ROM_MEM_RULE_RULE4:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/ROM_MEM_RULE_RULE5:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/ROM_MEM_RULE_RULE6:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/ROM_MEM_RULE_RULE7:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/RTC0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/SCG:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/SECCON:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/SEC_VIO_INFO_DATA_ACCESS:
+enum/SecVioInfoDataAccess:
   bit_size: 1
   variants:
   - name: CODE
@@ -5925,7 +1397,7 @@ enum/SEC_VIO_INFO_DATA_ACCESS:
   - name: DATA
     description: Data.
     value: 1
-enum/SEC_VIO_INFO_MASTER:
+enum/SecVioInfoMaster:
   bit_size: 5
   variants:
   - name: CPU0_CODE
@@ -5940,10 +1412,10 @@ enum/SEC_VIO_INFO_MASTER:
   - name: SDMA_DATA
     description: SMARTDMA Data.
     value: 3
-  - name: eDMA1
+  - name: E_DMA1
     description: eDMA1.
     value: 4
-  - name: eDMA0
+  - name: E_DMA0
     description: eDMA0.
     value: 5
   - name: USB_HS
@@ -5958,7 +1430,7 @@ enum/SEC_VIO_INFO_MASTER:
   - name: ENET
     description: Ethernet.
     value: 13
-enum/SEC_VIO_INFO_WRITE:
+enum/SecVioInfoWrite:
   bit_size: 1
   variants:
   - name: READ
@@ -5967,273 +1439,3 @@ enum/SEC_VIO_INFO_WRITE:
   - name: WRITE
     description: Write access.
     value: 1
-enum/SGI0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/SPC:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/SPI_FILETER0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/SYSCON:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/T1S0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/TDET0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/TRNG0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/TSI0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/UDF0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/USB1_PHY:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/UTICK:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/VBAT:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/VREF0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/WAKE_TIMER:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/WUU:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/WWDT0:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/WWDT1:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
-enum/eSPI:
-  bit_size: 2
-  variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
-    description: Non-secure and non-privilege user access allowed.
-    value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
-    description: Non-secure and privilege access allowed.
-    value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
-    description: Secure and non-privilege user access allowed.
-    value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
-    description: Secure and privilege user access allowed.
-    value: 3
