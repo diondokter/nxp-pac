@@ -8,6 +8,7 @@ use anyhow::bail;
 /// Perform rustfmt on a single file.
 pub fn rustfmt(path: &Path) -> anyhow::Result<()> {
     let output = Command::new("rustfmt")
+        .args(["--edition", "2024"])
         .arg(path.canonicalize()?)
         .stdout(Stdio::inherit())
         .stderr(Stdio::inherit())

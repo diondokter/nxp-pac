@@ -55,8 +55,6 @@ pub fn generate(args: Generate) -> anyhow::Result<()> {
         bail!("Failed to generate chips {:?}", error);
     }
 
-    // TODO: we used to call cargo fmt here, but that seems redundant with rustfmt on every file.
-
     Ok(())
 }
 
