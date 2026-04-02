@@ -8,6 +8,7 @@ use anyhow::{Context, bail};
 use chiptool::commands::{GenShared, extract_all::ExtractAll, generate::Generate};
 use temp_dir::TempDir;
 
+/// Generates nxp-pac Rust code for non-metapac PACs.
 pub fn generate_core(
     svd: &Path,
     chip_dir: &Path,
@@ -75,7 +76,8 @@ pub fn generate_core(
     Ok(())
 }
 
-pub fn generate_peripherals(
+/// Generates metapac data
+pub fn extract_peripherals(
     svd: &Path,
     metadata_dir: &Path,
     core: &str,

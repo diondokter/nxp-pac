@@ -1,12 +1,6 @@
-use std::{
-    collections::HashSet,
-    fs,
-    path::Path,
-    process::{Command, Stdio},
-    str::FromStr,
-};
+use std::{collections::HashSet, fs, path::Path, str::FromStr};
 
-use anyhow::{Context, bail};
+use anyhow::Context;
 use chiptool::commands::{GenShared, ModulePath, gen_block::GenBlock, gen_common::GenCommon};
 use indexmap::IndexSet;
 use proc_macro2::{Ident, Literal, Span, TokenStream};
@@ -16,7 +10,7 @@ use rayon::iter::{ParallelBridge, ParallelIterator};
 use crate::metadata::{BlockPath, Metadata};
 
 /// Take all yamls and export them to the pac after being transformed to Rust code using chiptool
-pub fn export_meta_peripherals(current: &Path) -> anyhow::Result<()> {
+pub fn generate_meta_peripherals(current: &Path) -> anyhow::Result<()> {
     let pac_peri_dir = current.join("nxp-pac/src/meta_peripherals");
     let yaml_peri_dir = current.join("data/metadata/peripherals");
 
@@ -70,35 +64,22 @@ pub fn export_meta_peripherals(current: &Path) -> anyhow::Result<()> {
             })
             .with_context(|| format!("Error generating block {}", relative_entry_path.display()))?;
 
-            let output = Command::new("rustfmt")
-                .arg("--edition")
-                .arg("2024")
-                .arg(output_path)
-                .stdout(Stdio::inherit())
-                .stderr(Stdio::inherit())
-                .output()?;
-
-            if !output.status.success() {
-                bail!(
-                    "Error formatting block {}:\nSTDERR:\n{}",
-                    relative_entry_path.display(),
-                    String::from_utf8_lossy(&output.stderr)
-                );
-            }
-
-            Ok(())
+            crate::util::rustfmt(&output_path).with_context(|| {
+                format!("Error formatting block {}", relative_entry_path.display())
+            })
         })?;
 
     Ok(())
 }
 
-pub fn assemble_metapac(current: &Path, core: &str, mut metadata: Metadata) -> anyhow::Result<()> {
-    let chip_dir = current.join("nxp-pac/src/chips").join(core.to_lowercase());
-    if !chip_dir.exists() {
-        fs::create_dir_all(&chip_dir).context("creating chip dir")?;
+/// Generates all core-specific code for a metapac PAC, including any peripherals that have been mapped.
+pub fn generate_core(current: &Path, core: &str, mut metadata: Metadata) -> anyhow::Result<()> {
+    let core_dir = current.join("nxp-pac/src/chips").join(core.to_lowercase());
+    if !core_dir.exists() {
+        fs::create_dir_all(&core_dir).context("creating chip dir")?;
     }
 
-    // Remove all peripherals that are defined, but don't have a driver
+    // Remove all peripherals that are defined, but don't have a metaperipheral mapped.
     let yaml_peri_dir = current.join("data/metadata/peripherals");
     metadata.peripherals.retain(|p| {
         let peripheral_block = match p.parse_block_path() {
@@ -135,10 +116,10 @@ pub fn assemble_metapac(current: &Path, core: &str, mut metadata: Metadata) -> a
         }
     });
 
-    export_device_x(&chip_dir, &metadata).context("exporting device.x")?;
-    export_mod_rs(&chip_dir, &metadata).context("exporting mod.rs")?;
-    export_vectors_rs(&chip_dir, &metadata).context("exporting _vectors.rs")?;
-    export_common_rs(&chip_dir).context("exporting common.rs")?;
+    export_device_x(&core_dir, &metadata).context("exporting device.x")?;
+    export_mod_rs(&core_dir, &metadata).context("exporting mod.rs")?;
+    export_vectors_rs(&core_dir, &metadata).context("exporting _vectors.rs")?;
+    export_common_rs(&core_dir).context("exporting common.rs")?;
 
     Ok(())
 }

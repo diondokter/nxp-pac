@@ -33,7 +33,7 @@ pub fn generate(args: Generate) -> anyhow::Result<()> {
     let current = env::current_dir()?;
 
     // Export the metapac peripherals
-    crate::metapac::export_meta_peripherals(&current)?;
+    crate::metapac::generate_meta_peripherals(&current)?;
 
     // Generating code for SVDs can take a moment (RT11xx can generate a million lines of code)
     // so it is best to run multiple cores in parallel.
@@ -86,7 +86,7 @@ fn generate_chip(current_dir: &Path, feature: &ChipDescription) -> anyhow::Resul
             .context("Generating metadata")?;
 
             if feature.metapac {
-                crate::metapac::assemble_metapac(current_dir, core, metadata)
+                crate::metapac::generate_core(current_dir, core, metadata)
                     .context(format!("Assembling metapac for {core}"))?
             }
         } else {
@@ -94,9 +94,6 @@ fn generate_chip(current_dir: &Path, feature: &ChipDescription) -> anyhow::Resul
             debug!("transforms path: {:?}", transforms_dir);
 
             info!("Generating {}/{}", feature.chip, core);
-            crate::pac::generate_peripherals(&svd, &metadata_dir, core, &transforms_dir)
-                .context("Generating peripherals")?;
-
             crate::pac::generate_core(&svd, &chips_dir, &transforms_dir, core)
                 .context("Generating PAC")?;
         }
