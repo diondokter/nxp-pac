@@ -129,20 +129,13 @@ fn generate_chip(current_dir: &Path, feature: &Feature) -> anyhow::Result<()> {
     for core in feature.cores {
         let svd = chip_src_dir.join(core).with_extension("xml");
         debug!("svd path: {:?}", svd);
-        let transforms_dir = current_dir.join("data").join("transforms");
-        debug!("transforms path: {:?}", transforms_dir);
         let chips_dir = pac_dir.join("src").join("chips");
 
-        pac::generate_peripherals(&svd, &metadata_dir, core, &transforms_dir)
-            .context("Generating peripherals")?;
+        if feature.metapac {
+            if feature.metadata.is_empty() {
+                bail!("Metadata should not be empty when using metapac");
+            }
 
-        if !feature.metapac {
-            info!("Generating {}/{}", feature.chip, core);
-            pac::generate_core(&svd, &chips_dir, &transforms_dir, core)
-                .context("Generating PAC")?;
-        }
-
-        if !feature.metadata.is_empty() {
             let metadata = metadata::generate_core(
                 &chips_dir,
                 &svd,
@@ -155,6 +148,16 @@ fn generate_chip(current_dir: &Path, feature: &Feature) -> anyhow::Result<()> {
                 metapac::assemble_metapac(current_dir, core, metadata)
                     .context(format!("Assembling metapac for {core}"))?
             }
+        } else {
+            let transforms_dir = current_dir.join("data").join("transforms");
+            debug!("transforms path: {:?}", transforms_dir);
+
+            info!("Generating {}/{}", feature.chip, core);
+            pac::generate_peripherals(&svd, &metadata_dir, core, &transforms_dir)
+                .context("Generating peripherals")?;
+
+            pac::generate_core(&svd, &chips_dir, &transforms_dir, core)
+                .context("Generating PAC")?;
         }
     }
 

@@ -107,27 +107,6 @@ pub fn generate_peripherals(
         }
     }
 
-    let debug_ir_path = raw_peripherals_dir.join("_debug_ir").with_extension("yaml");
-
-    let temp = TempDir::new()
-        .context("Creating temp dir")?
-        .panic_on_cleanup_error();
-
-    chiptool::commands::generate::generate(Generate {
-        svd: svd.canonicalize()?,
-        transform: vec![transform.canonicalize()?],
-        gen_shared: GenShared {
-            common_module: None,
-            defmt_feature: "defmt".to_string(),
-            no_defmt: false,
-            yes_defmt: false,
-            skip_no_std: false,
-        },
-        debug_ir_output: Some(debug_ir_path),
-        output: Some(temp.path().to_path_buf()),
-    })
-    .with_context(|| format!("Error generating debug yaml for {core}"))?;
-
     chiptool::commands::extract_all::extract_all(ExtractAll {
         svd: svd.canonicalize()?,
         output: raw_peripherals_dir.canonicalize()?,
