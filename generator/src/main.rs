@@ -66,8 +66,6 @@ fn main() -> anyhow::Result<()> {
         )
         .init();
 
-    verify_chiptool().context("chiptool is not installed")?;
-
     let current = env::current_dir()?;
 
     let mut args = env::args();
@@ -117,14 +115,6 @@ fn main() -> anyhow::Result<()> {
         .status()
         .context("Formatting pac code with `cargo fmt`")?;
 
-    Ok(())
-}
-
-fn verify_chiptool() -> anyhow::Result<()> {
-    Command::new("chiptool")
-        .stdout(Stdio::null())
-        .stderr(Stdio::null())
-        .output()?;
     Ok(())
 }
 
