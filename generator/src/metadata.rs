@@ -6,7 +6,7 @@ use proc_macro2::{Literal, TokenStream};
 use quote::quote;
 use serde::Deserialize;
 
-use crate::rustfmt;
+use crate::util::rustfmt;
 
 #[allow(unused)]
 #[derive(Debug, Clone, Deserialize)]

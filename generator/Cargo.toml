@@ -7,6 +7,8 @@ license = "BSD-3-Clause"
 description = "Generator for nxp-pac"
 
 [dependencies]
+clap = { version = "4.6.0", features = ["derive"] }
+
 anyhow = "1.0.98"
 rayon = "1.10.0"
 temp-dir = "0.1.16"

@@ -8,7 +8,7 @@ use anyhow::{Context, bail};
 use chiptool::commands::{GenShared, extract_all::ExtractAll, generate::Generate};
 use temp_dir::TempDir;
 
-use crate::rustfmt;
+use crate::util::rustfmt;
 
 pub fn generate_core(
     svd: &Path,
