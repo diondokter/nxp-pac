@@ -68,8 +68,6 @@ fn generate_chip(current_dir: &Path, feature: &ChipDescription) -> anyhow::Resul
     let pac_dir = current_dir.join("nxp-pac");
 
     for core in feature.cores {
-        let svd = chip_src_dir.join(core).with_extension("xml");
-        debug!("svd path: {:?}", svd);
         let chips_dir = pac_dir.join("src").join("chips");
 
         if feature.metapac {
@@ -77,9 +75,8 @@ fn generate_chip(current_dir: &Path, feature: &ChipDescription) -> anyhow::Resul
                 bail!("Metadata should not be empty when using metapac");
             }
 
-            let metadata = crate::metadata::generate_core(
+            let metadata = crate::metadata::generate(
                 &chips_dir,
-                &svd,
                 &metadata_dir.join(feature.metadata).with_extension("json"),
                 core,
             )
@@ -90,6 +87,8 @@ fn generate_chip(current_dir: &Path, feature: &ChipDescription) -> anyhow::Resul
                     .context(format!("Assembling metapac for {core}"))?
             }
         } else {
+            let svd = chip_src_dir.join(core).with_extension("xml");
+            debug!("svd path: {:?}", svd);
             let transforms_dir = current_dir.join("data").join("transforms");
             debug!("transforms path: {:?}", transforms_dir);
 
