@@ -8,8 +8,6 @@ use anyhow::{Context, bail};
 use chiptool::commands::{GenShared, extract_all::ExtractAll, generate::Generate};
 use temp_dir::TempDir;
 
-use crate::util::rustfmt;
-
 pub fn generate_core(
     svd: &Path,
     chip_dir: &Path,
@@ -54,7 +52,6 @@ pub fn generate_core(
     .context(format!("Error generating {core}"))?;
 
     let lib_temp = temp.path().join("lib.rs");
-    rustfmt(&lib_temp).context("Formatting lib.rs")?;
 
     let device_x = temp.path().join("device.x");
     let output_dir = chip_dir.join(core.to_lowercase());
@@ -71,7 +68,9 @@ pub fn generate_core(
         .status()
         .context("Running the `form` command. Make sure to have it installed: https://crates.io/crates/form")?;
 
-    fs::rename(output_dir.join("lib.rs"), output_dir.join("mod.rs"))?;
+    let mod_path = output_dir.join("mod.rs");
+    fs::rename(output_dir.join("lib.rs"), &mod_path)?;
+    crate::util::rustfmt(&mod_path)?;
 
     Ok(())
 }
