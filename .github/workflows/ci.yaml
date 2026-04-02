@@ -19,7 +19,7 @@ jobs:
           cargo check -p generator
       - name: Clippy
         run: |
-          cargo clippy -p generator
+          cargo clippy -p generator -- -D warnings
 
   check:
     runs-on: ubuntu-latest
