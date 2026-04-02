@@ -3,9 +3,11 @@ use std::{
     fs,
     path::Path,
     process::{Command, Stdio},
+    str::FromStr,
 };
 
 use anyhow::{Context, bail};
+use chiptool::commands::{GenShared, ModulePath, gen_block::GenBlock, gen_common::GenCommon};
 use indexmap::IndexSet;
 use proc_macro2::{Ident, Literal, Span, TokenStream};
 use quote::quote;
@@ -52,31 +54,21 @@ pub fn export_meta_peripherals(current: &Path) -> anyhow::Result<()> {
                     .context("Getting parent of output path")?,
             )?;
 
-            let output = Command::new("chiptool")
-                .arg("gen-block")
-                .arg("--input")
-                .arg(
-                    entry
-                        .path()
-                        .canonicalize()
-                        .context("Canonicalizing entry path")?,
-                )
-                .arg("--output")
-                .arg(&output_path)
-                .arg("--common-module")
-                .arg("crate::pac::common")
-                .arg("--skip-no-std")
-                .stdout(Stdio::inherit())
-                .stderr(Stdio::inherit())
-                .output()?;
-
-            if !output.status.success() {
-                bail!(
-                    "Error generating block {}:\nSTDERR:\n{}",
-                    relative_entry_path.display(),
-                    String::from_utf8_lossy(&output.stderr)
-                );
-            }
+            chiptool::commands::gen_block::gen_block(GenBlock {
+                input: entry
+                    .path()
+                    .canonicalize()
+                    .context("Canonicalizing entry path")?,
+                output: output_path.clone(),
+                gen_shared: GenShared {
+                    common_module: Some(ModulePath::from_str("crate::pac::common")?),
+                    defmt_feature: "defmt".to_string(),
+                    no_defmt: false,
+                    yes_defmt: false,
+                    skip_no_std: true,
+                },
+            })
+            .with_context(|| format!("Error generating block {}", relative_entry_path.display()))?;
 
             let output = Command::new("rustfmt")
                 .arg("--edition")
@@ -346,20 +338,8 @@ fn export_vectors_rs(chip_dir: &Path, metadata: &Metadata) -> anyhow::Result<()>
 }
 
 fn export_common_rs(chip_dir: &Path) -> anyhow::Result<()> {
-    let output = Command::new("chiptool")
-        .arg("gen-common")
-        .arg("--output")
-        .arg(chip_dir.join("common.rs"))
-        .stdout(Stdio::inherit())
-        .stderr(Stdio::inherit())
-        .output()?;
-
-    if !output.status.success() {
-        bail!(
-            "Error generating common:\nSTDERR:\n{}",
-            String::from_utf8_lossy(&output.stderr)
-        );
-    }
-
-    Ok(())
+    chiptool::commands::gen_common::gen_common(GenCommon {
+        output: chip_dir.join("common.rs"),
+    })
+    .context("Error generating common")
 }

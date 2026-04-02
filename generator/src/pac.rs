@@ -5,6 +5,7 @@ use std::{
 };
 
 use anyhow::{Context, bail};
+use chiptool::commands::{GenShared, extract_all::ExtractAll, generate::Generate};
 use temp_dir::TempDir;
 
 use crate::rustfmt;
@@ -37,23 +38,20 @@ pub fn generate_core(
         .context("Creating temp dir")?
         .dont_delete_on_drop();
 
-    let output = Command::new("chiptool")
-        .arg("generate")
-        .arg("--svd")
-        .arg(svd.canonicalize()?)
-        .arg("--transform")
-        .arg(transform.canonicalize()?)
-        .stdout(Stdio::inherit())
-        .stderr(Stdio::inherit())
-        .current_dir(temp.path())
-        .output()?;
-
-    if !output.status.success() {
-        bail!(
-            "Error generating {core}:\nSTDERR:\n{}",
-            String::from_utf8_lossy(&output.stderr)
-        );
-    }
+    chiptool::commands::generate::generate(Generate {
+        svd: svd.canonicalize()?,
+        transform: vec![transform.canonicalize()?],
+        gen_shared: GenShared {
+            common_module: None,
+            defmt_feature: "defmt".to_string(),
+            no_defmt: false,
+            yes_defmt: false,
+            skip_no_std: true,
+        },
+        debug_ir_output: None,
+        output: Some(temp.path().to_path_buf()),
+    })
+    .context(format!("Error generating {core}"))?;
 
     let lib_temp = temp.path().join("lib.rs");
     rustfmt(&lib_temp).context("Formatting lib.rs")?;
@@ -62,11 +60,6 @@ pub fn generate_core(
     let output_dir = chip_dir.join(core.to_lowercase());
     fs::create_dir_all(&output_dir)?;
     fs::copy(&device_x, output_dir.join("device.x"))?;
-
-    // Remove #![no_std] attribute, as this is not lib.rs
-    let mut pac = fs::read_to_string(&lib_temp)?;
-    pac = pac.replace("#![no_std]\n", "");
-    fs::write(&lib_temp, pac)?;
 
     Command::new("form")
         .arg("-i")
@@ -120,45 +113,27 @@ pub fn generate_peripherals(
         .context("Creating temp dir")?
         .panic_on_cleanup_error();
 
-    let output = Command::new("chiptool")
-        .arg("generate")
-        .arg("--svd")
-        .arg(svd.canonicalize()?)
-        .arg("--transform")
-        .arg(transform.canonicalize()?)
-        .arg("--debug-ir-output")
-        .arg(&debug_ir_path)
-        .stdout(Stdio::inherit())
-        .stderr(Stdio::inherit())
-        .current_dir(temp.path())
-        .output()
-        .context("running chiptool generate")?;
+    chiptool::commands::generate::generate(Generate {
+        svd: svd.canonicalize()?,
+        transform: vec![transform.canonicalize()?],
+        gen_shared: GenShared {
+            common_module: None,
+            defmt_feature: "defmt".to_string(),
+            no_defmt: false,
+            yes_defmt: false,
+            skip_no_std: false,
+        },
+        debug_ir_output: Some(debug_ir_path),
+        output: Some(temp.path().to_path_buf()),
+    })
+    .with_context(|| format!("Error generating debug yaml for {core}"))?;
 
-    if !output.status.success() {
-        bail!(
-            "Error generating debug yaml for {core}:\nSTDERR:\n{}",
-            String::from_utf8_lossy(&output.stderr)
-        );
-    }
-
-    let output = Command::new("chiptool")
-        .arg("extract-all")
-        .arg("--svd")
-        .arg(svd.canonicalize()?)
-        .arg("--output")
-        .arg(raw_peripherals_dir.canonicalize()?)
-        .arg("--transform")
-        .arg(transform.canonicalize()?)
-        .stdout(Stdio::inherit())
-        .stderr(Stdio::inherit())
-        .output()?;
-
-    if !output.status.success() {
-        bail!(
-            "Error generating peripheral yamls for {core}:\nSTDERR:\n{}",
-            String::from_utf8_lossy(&output.stderr)
-        );
-    }
+    chiptool::commands::extract_all::extract_all(ExtractAll {
+        svd: svd.canonicalize()?,
+        output: raw_peripherals_dir.canonicalize()?,
+        transform: Some(vec![transform.canonicalize()?]),
+    })
+    .with_context(|| format!("Error generating peripheral yamls for {core}"))?;
 
     let svd_contents = fs::read_to_string(svd).context("Read SVD")?;
     let svd = svd_parser::parse(&svd_contents).context("Parse SVD")?;
