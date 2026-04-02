@@ -8,6 +8,7 @@ use serde::Deserialize;
 
 use crate::rustfmt;
 
+#[allow(unused)]
 #[derive(Debug, Clone, Deserialize)]
 pub struct Metadata {
     pub chips: Vec<String>,
@@ -17,6 +18,7 @@ pub struct Metadata {
     pub peripherals: Vec<Peripheral>,
 }
 
+#[allow(unused)]
 #[derive(Debug, Clone, Deserialize)]
 pub struct Pin {
     pub name: String,
@@ -39,6 +41,7 @@ pub struct PinIomuxc {
     pub pad: String,
 }
 
+#[allow(unused)]
 #[derive(Debug, Clone, Deserialize)]
 pub struct Peripheral {
     pub name: String,

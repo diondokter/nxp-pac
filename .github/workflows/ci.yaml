@@ -1,0 +1,47 @@
+name: ci
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  check-generator:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Cache Dependencies
+        uses: Swatinem/rust-cache@v2.9.1
+      - name: Check
+        run: |
+          cargo check -p generator
+      - name: Clippy
+        run: |
+          cargo clippy -p generator
+
+  check:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        chip:
+          - mimxrt1011
+          - mimxrt1062
+          - mimxrt1064
+          - mimxrt685s_cm33
+          - mcxn947_cm33_core0
+          - mcxn947_cm33_core1
+          - mcxa256
+          - mcxa577
+          - lpc55s16
+          - lpc55s69_cm33_core0
+          - lpc55s69_cm33_core1
+    steps:
+      - uses: actions/checkout@v6
+      - name: Cache Dependencies
+        uses: Swatinem/rust-cache@v2.9.1
+      - name: Check
+        run: |
+          cargo check -p nxp-pac --features ${{ matrix.chip }}
