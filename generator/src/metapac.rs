@@ -230,7 +230,9 @@ fn export_mod_rs(chip_dir: &Path, metadata: &Metadata) -> anyhow::Result<()> {
 
     writeln!(&mut contents, "pub mod common;")?;
 
-    fs::write(chip_dir.join("mod.rs"), contents.as_bytes()).context("writing contents to file")?;
+    let path = chip_dir.join("mod.rs");
+    fs::write(&path, contents.as_bytes()).context("writing contents to file")?;
+    crate::util::rustfmt(&path)?;
 
     Ok(())
 }
@@ -331,8 +333,9 @@ fn export_vectors_rs(chip_dir: &Path, metadata: &Metadata) -> anyhow::Result<()>
     writeln!(&mut contents, "{}", extern_functions_tokens)?;
     writeln!(&mut contents, "{}", interrupt_vector_table)?;
 
-    fs::write(chip_dir.join("_vectors.rs"), contents.as_bytes())
-        .context("writing contents to file")?;
+    let path = chip_dir.join("_vectors.rs");
+    fs::write(&path, contents.as_bytes()).context("writing contents to file")?;
+    crate::util::rustfmt(&path)?;
 
     Ok(())
 }
