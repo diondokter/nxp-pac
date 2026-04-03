@@ -1,6 +1,6 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
-#![doc = "Peripheral access API (generated using chiptool v0.1.0 (6a8c2aa 2026-01-27))"]
+#![doc = "Peripheral access API (generated using chiptool v0.1.0 (2fd28c5 2026-04-02))"]
 #[doc = "TRNG."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Trng {
@@ -27,10 +27,35 @@ impl Trng {
     pub const fn scmisc(self) -> crate::pac::common::Reg<Scmisc, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
     }
+    #[doc = "Poker Range Register."]
+    #[inline(always)]
+    pub const fn pkrrng(self) -> crate::pac::common::Reg<Pkrrng, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
+    }
+    #[doc = "Poker Maximum Limit Register."]
+    #[inline(always)]
+    pub const fn pkrmax(self) -> crate::pac::common::Reg<Pkrmax, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }
+    }
+    #[doc = "Poker Square Calculation Result Register."]
+    #[inline(always)]
+    pub const fn pkrsq(self) -> crate::pac::common::Reg<Pkrsq, crate::pac::common::R> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }
+    }
     #[doc = "Seed Control Register."]
     #[inline(always)]
     pub const fn sdctl(self) -> crate::pac::common::Reg<Sdctl, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x10usize) as _) }
+    }
+    #[doc = "Sparse Bit Limit Register."]
+    #[inline(always)]
+    pub const fn sblim(self) -> crate::pac::common::Reg<Sblim, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x14usize) as _) }
+    }
+    #[doc = "Total Samples Register."]
+    #[inline(always)]
+    pub const fn totsam(self) -> crate::pac::common::Reg<Totsam, crate::pac::common::R> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x14usize) as _) }
     }
     #[doc = "Frequency Count Minimum Limit Register."]
     #[inline(always)]
@@ -92,6 +117,36 @@ impl Trng {
     pub const fn scr3l(self) -> crate::pac::common::Reg<Scr3l, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x2cusize) as _) }
     }
+    #[doc = "Statistical Check Run Length 4 Count Register."]
+    #[inline(always)]
+    pub const fn scr4c(self) -> crate::pac::common::Reg<Scr4c, crate::pac::common::R> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x30usize) as _) }
+    }
+    #[doc = "Statistical Check Run Length 4 Limit Register."]
+    #[inline(always)]
+    pub const fn scr4l(self) -> crate::pac::common::Reg<Scr4l, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x30usize) as _) }
+    }
+    #[doc = "Statistical Check Run Length 5 Count Register."]
+    #[inline(always)]
+    pub const fn scr5c(self) -> crate::pac::common::Reg<Scr5c, crate::pac::common::R> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x34usize) as _) }
+    }
+    #[doc = "Statistical Check Run Length 5 Limit Register."]
+    #[inline(always)]
+    pub const fn scr5l(self) -> crate::pac::common::Reg<Scr5l, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x34usize) as _) }
+    }
+    #[doc = "Statistical Check Run Length 6+ Count Register."]
+    #[inline(always)]
+    pub const fn scr6pc(self) -> crate::pac::common::Reg<Scr6pc, crate::pac::common::R> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x38usize) as _) }
+    }
+    #[doc = "Statistical Check Run Length 6+ Limit Register."]
+    #[inline(always)]
+    pub const fn scr6pl(self) -> crate::pac::common::Reg<Scr6pl, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x38usize) as _) }
+    }
     #[doc = "Status Register."]
     #[inline(always)]
     pub const fn status(self) -> crate::pac::common::Reg<Status, crate::pac::common::R> {
@@ -104,6 +159,46 @@ impl Trng {
         unsafe {
             crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x40usize + n * 4usize) as _)
         }
+    }
+    #[doc = "Statistical Check Poker Count 1 and 0 Register."]
+    #[inline(always)]
+    pub const fn pkrcnt10(self) -> crate::pac::common::Reg<Pkrcnt10, crate::pac::common::R> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x80usize) as _) }
+    }
+    #[doc = "Statistical Check Poker Count 3 and 2 Register."]
+    #[inline(always)]
+    pub const fn pkrcnt32(self) -> crate::pac::common::Reg<Pkrcnt32, crate::pac::common::R> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x84usize) as _) }
+    }
+    #[doc = "Statistical Check Poker Count 5 and 4 Register."]
+    #[inline(always)]
+    pub const fn pkrcnt54(self) -> crate::pac::common::Reg<Pkrcnt54, crate::pac::common::R> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x88usize) as _) }
+    }
+    #[doc = "Statistical Check Poker Count 7 and 6 Register."]
+    #[inline(always)]
+    pub const fn pkrcnt76(self) -> crate::pac::common::Reg<Pkrcnt76, crate::pac::common::R> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x8cusize) as _) }
+    }
+    #[doc = "Statistical Check Poker Count 9 and 8 Register."]
+    #[inline(always)]
+    pub const fn pkrcnt98(self) -> crate::pac::common::Reg<Pkrcnt98, crate::pac::common::R> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x90usize) as _) }
+    }
+    #[doc = "Statistical Check Poker Count B and A Register."]
+    #[inline(always)]
+    pub const fn pkrcntba(self) -> crate::pac::common::Reg<Pkrcntba, crate::pac::common::R> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x94usize) as _) }
+    }
+    #[doc = "Statistical Check Poker Count D and C Register."]
+    #[inline(always)]
+    pub const fn pkrcntdc(self) -> crate::pac::common::Reg<Pkrcntdc, crate::pac::common::R> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x98usize) as _) }
+    }
+    #[doc = "Statistical Check Poker Count F and E Register."]
+    #[inline(always)]
+    pub const fn pkrcntfe(self) -> crate::pac::common::Reg<Pkrcntfe, crate::pac::common::R> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x9cusize) as _) }
     }
     #[doc = "Security Configuration Register."]
     #[inline(always)]
@@ -125,6 +220,16 @@ impl Trng {
     pub const fn int_status(self) -> crate::pac::common::Reg<IntStatus, crate::pac::common::R> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xacusize) as _) }
     }
+    #[doc = "Common Security Error Register."]
+    #[inline(always)]
+    pub const fn cser(self) -> crate::pac::common::Reg<Cser, crate::pac::common::R> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xb0usize) as _) }
+    }
+    #[doc = "Common Security Clear Register."]
+    #[inline(always)]
+    pub const fn csclr(self) -> crate::pac::common::Reg<Csclr, crate::pac::common::W> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xb4usize) as _) }
+    }
     #[doc = "TRNG Oscillator 2 Control Register."]
     #[inline(always)]
     pub const fn osc2_ctl(self) -> crate::pac::common::Reg<Osc2ctl, crate::pac::common::RW> {
@@ -139,6 +244,172 @@ impl Trng {
     #[inline(always)]
     pub const fn vid2(self) -> crate::pac::common::Reg<Vid2, crate::pac::common::R> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xf4usize) as _) }
+    }
+}
+#[doc = "Common Security Clear Register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Csclr(pub u32);
+impl Csclr {
+    #[doc = "Redundant Signals error/fault Detected."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn red_sigs_clr(&self) -> RedSigsClr {
+        let val = (self.0 >> 0usize) & 0x01;
+        RedSigsClr::from_bits(val as u8)
+    }
+    #[doc = "Redundant Signals error/fault Detected."]
+    #[inline(always)]
+    pub const fn set_red_sigs_clr(&mut self, val: RedSigsClr) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    }
+    #[doc = "Read only: Redundant FSM error/fault detected."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn red_fsm_clr(&self) -> RedFsmClr {
+        let val = (self.0 >> 1usize) & 0x01;
+        RedFsmClr::from_bits(val as u8)
+    }
+    #[doc = "Read only: Redundant FSM error/fault detected."]
+    #[inline(always)]
+    pub const fn set_red_fsm_clr(&mut self, val: RedFsmClr) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
+    }
+    #[doc = "Read only: Local-EDC error/fault detected."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn local_edc_clr(&self) -> LocalEdcClr {
+        let val = (self.0 >> 2usize) & 0x01;
+        LocalEdcClr::from_bits(val as u8)
+    }
+    #[doc = "Read only: Local-EDC error/fault detected."]
+    #[inline(always)]
+    pub const fn set_local_edc_clr(&mut self, val: LocalEdcClr) {
+        self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
+    }
+    #[doc = "Read only: Bus-EDC error/fault detected."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn bus_edc_clr(&self) -> BusEdcClr {
+        let val = (self.0 >> 3usize) & 0x01;
+        BusEdcClr::from_bits(val as u8)
+    }
+    #[doc = "Read only: Bus-EDC error/fault detected."]
+    #[inline(always)]
+    pub const fn set_bus_edc_clr(&mut self, val: BusEdcClr) {
+        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
+    }
+}
+impl Default for Csclr {
+    #[inline(always)]
+    fn default() -> Csclr {
+        Csclr(0)
+    }
+}
+impl core::fmt::Debug for Csclr {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Csclr")
+            .field("red_sigs_clr", &self.red_sigs_clr())
+            .field("red_fsm_clr", &self.red_fsm_clr())
+            .field("local_edc_clr", &self.local_edc_clr())
+            .field("bus_edc_clr", &self.bus_edc_clr())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Csclr {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Csclr {{ red_sigs_clr: {:?}, red_fsm_clr: {:?}, local_edc_clr: {:?}, bus_edc_clr: {:?} }}",
+            self.red_sigs_clr(),
+            self.red_fsm_clr(),
+            self.local_edc_clr(),
+            self.bus_edc_clr()
+        )
+    }
+}
+#[doc = "Common Security Error Register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Cser(pub u32);
+impl Cser {
+    #[doc = "Redundant Signals error/fault Detected."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn red_sigs(&self) -> RedSigs {
+        let val = (self.0 >> 0usize) & 0x01;
+        RedSigs::from_bits(val as u8)
+    }
+    #[doc = "Redundant Signals error/fault Detected."]
+    #[inline(always)]
+    pub const fn set_red_sigs(&mut self, val: RedSigs) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    }
+    #[doc = "Redundant FSM error/fault detected."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn red_fsm(&self) -> RedFsm {
+        let val = (self.0 >> 1usize) & 0x01;
+        RedFsm::from_bits(val as u8)
+    }
+    #[doc = "Redundant FSM error/fault detected."]
+    #[inline(always)]
+    pub const fn set_red_fsm(&mut self, val: RedFsm) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
+    }
+    #[doc = "Local-EDC error/fault detected."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn local_edc(&self) -> LocalEdc {
+        let val = (self.0 >> 2usize) & 0x01;
+        LocalEdc::from_bits(val as u8)
+    }
+    #[doc = "Local-EDC error/fault detected."]
+    #[inline(always)]
+    pub const fn set_local_edc(&mut self, val: LocalEdc) {
+        self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
+    }
+    #[doc = "Bus-EDC error/fault detected."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn bus_edc(&self) -> BusEdc {
+        let val = (self.0 >> 3usize) & 0x01;
+        BusEdc::from_bits(val as u8)
+    }
+    #[doc = "Bus-EDC error/fault detected."]
+    #[inline(always)]
+    pub const fn set_bus_edc(&mut self, val: BusEdc) {
+        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
+    }
+}
+impl Default for Cser {
+    #[inline(always)]
+    fn default() -> Cser {
+        Cser(0)
+    }
+}
+impl core::fmt::Debug for Cser {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Cser")
+            .field("red_sigs", &self.red_sigs())
+            .field("red_fsm", &self.red_fsm())
+            .field("local_edc", &self.local_edc())
+            .field("bus_edc", &self.bus_edc())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Cser {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Cser {{ red_sigs: {:?}, red_fsm: {:?}, local_edc: {:?}, bus_edc: {:?} }}",
+            self.red_sigs(),
+            self.red_fsm(),
+            self.local_edc(),
+            self.bus_edc()
+        )
     }
 }
 #[doc = "Entropy Read Register."]
@@ -553,16 +824,16 @@ impl Mctl {
     pub const fn set_osc_div(&mut self, val: OscDiv) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
-    #[doc = "Clock Output Enable."]
+    #[doc = "Disable Self-Tests."]
     #[must_use]
     #[inline(always)]
-    pub const fn clk_out_en(&self) -> bool {
+    pub const fn dis_slf_tst(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "Clock Output Enable."]
+    #[doc = "Disable Self-Tests."]
     #[inline(always)]
-    pub const fn set_clk_out_en(&mut self, val: bool) {
+    pub const fn set_dis_slf_tst(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
     #[doc = "TRNG Access Mode."]
@@ -673,6 +944,18 @@ impl Mctl {
     pub const fn set_prgm(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
+    #[doc = "Integrity Error."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn intg_err(&self) -> bool {
+        let val = (self.0 >> 31usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Integrity Error."]
+    #[inline(always)]
+    pub const fn set_intg_err(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
+    }
 }
 impl Default for Mctl {
     #[inline(always)]
@@ -684,7 +967,7 @@ impl core::fmt::Debug for Mctl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Mctl")
             .field("osc_div", &self.osc_div())
-            .field("clk_out_en", &self.clk_out_en())
+            .field("dis_slf_tst", &self.dis_slf_tst())
             .field("trng_acc", &self.trng_acc())
             .field("rst_def", &self.rst_def())
             .field("fct_fail", &self.fct_fail())
@@ -694,6 +977,7 @@ impl core::fmt::Debug for Mctl {
             .field("tstop_ok", &self.tstop_ok())
             .field("osc2_fail", &self.osc2_fail())
             .field("prgm", &self.prgm())
+            .field("intg_err", &self.intg_err())
             .finish()
     }
 }
@@ -702,9 +986,9 @@ impl defmt::Format for Mctl {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Mctl {{ osc_div: {:?}, clk_out_en: {=bool:?}, trng_acc: {=bool:?}, rst_def: {=bool:?}, fct_fail: {=bool:?}, fct_val: {=bool:?}, ent_val: {=bool:?}, err: {=bool:?}, tstop_ok: {=bool:?}, osc2_fail: {=bool:?}, prgm: {=bool:?} }}",
+            "Mctl {{ osc_div: {:?}, dis_slf_tst: {=bool:?}, trng_acc: {=bool:?}, rst_def: {=bool:?}, fct_fail: {=bool:?}, fct_val: {=bool:?}, ent_val: {=bool:?}, err: {=bool:?}, tstop_ok: {=bool:?}, osc2_fail: {=bool:?}, prgm: {=bool:?}, intg_err: {=bool:?} }}",
             self.osc_div(),
-            self.clk_out_en(),
+            self.dis_slf_tst(),
             self.trng_acc(),
             self.rst_def(),
             self.fct_fail(),
@@ -713,7 +997,8 @@ impl defmt::Format for Mctl {
             self.err(),
             self.tstop_ok(),
             self.osc2_fail(),
-            self.prgm()
+            self.prgm(),
+            self.intg_err()
         )
     }
 }
@@ -867,6 +1152,594 @@ impl defmt::Format for Osc2frqcnt {
             "Osc2frqcnt {{ osc2_frq_ct: {=u32:?} }}",
             self.osc2_frq_ct()
         )
+    }
+}
+#[doc = "Statistical Check Poker Count 1 and 0 Register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Pkrcnt10(pub u32);
+impl Pkrcnt10 {
+    #[doc = "Poker 0h Count."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pkr_0_ct(&self) -> u16 {
+        let val = (self.0 >> 0usize) & 0xffff;
+        val as u16
+    }
+    #[doc = "Poker 0h Count."]
+    #[inline(always)]
+    pub const fn set_pkr_0_ct(&mut self, val: u16) {
+        self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
+    }
+    #[doc = "Poker 1h Count."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pkr_1_ct(&self) -> u16 {
+        let val = (self.0 >> 16usize) & 0xffff;
+        val as u16
+    }
+    #[doc = "Poker 1h Count."]
+    #[inline(always)]
+    pub const fn set_pkr_1_ct(&mut self, val: u16) {
+        self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
+    }
+}
+impl Default for Pkrcnt10 {
+    #[inline(always)]
+    fn default() -> Pkrcnt10 {
+        Pkrcnt10(0)
+    }
+}
+impl core::fmt::Debug for Pkrcnt10 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Pkrcnt10")
+            .field("pkr_0_ct", &self.pkr_0_ct())
+            .field("pkr_1_ct", &self.pkr_1_ct())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Pkrcnt10 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Pkrcnt10 {{ pkr_0_ct: {=u16:?}, pkr_1_ct: {=u16:?} }}",
+            self.pkr_0_ct(),
+            self.pkr_1_ct()
+        )
+    }
+}
+#[doc = "Statistical Check Poker Count 3 and 2 Register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Pkrcnt32(pub u32);
+impl Pkrcnt32 {
+    #[doc = "Poker 2h Count."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pkr_2_ct(&self) -> u16 {
+        let val = (self.0 >> 0usize) & 0xffff;
+        val as u16
+    }
+    #[doc = "Poker 2h Count."]
+    #[inline(always)]
+    pub const fn set_pkr_2_ct(&mut self, val: u16) {
+        self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
+    }
+    #[doc = "Poker 3h Count."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pkr_3_ct(&self) -> u16 {
+        let val = (self.0 >> 16usize) & 0xffff;
+        val as u16
+    }
+    #[doc = "Poker 3h Count."]
+    #[inline(always)]
+    pub const fn set_pkr_3_ct(&mut self, val: u16) {
+        self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
+    }
+}
+impl Default for Pkrcnt32 {
+    #[inline(always)]
+    fn default() -> Pkrcnt32 {
+        Pkrcnt32(0)
+    }
+}
+impl core::fmt::Debug for Pkrcnt32 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Pkrcnt32")
+            .field("pkr_2_ct", &self.pkr_2_ct())
+            .field("pkr_3_ct", &self.pkr_3_ct())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Pkrcnt32 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Pkrcnt32 {{ pkr_2_ct: {=u16:?}, pkr_3_ct: {=u16:?} }}",
+            self.pkr_2_ct(),
+            self.pkr_3_ct()
+        )
+    }
+}
+#[doc = "Statistical Check Poker Count 5 and 4 Register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Pkrcnt54(pub u32);
+impl Pkrcnt54 {
+    #[doc = "Poker 4h Count."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pkr_4_ct(&self) -> u16 {
+        let val = (self.0 >> 0usize) & 0xffff;
+        val as u16
+    }
+    #[doc = "Poker 4h Count."]
+    #[inline(always)]
+    pub const fn set_pkr_4_ct(&mut self, val: u16) {
+        self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
+    }
+    #[doc = "Poker 5h Count."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pkr_5_ct(&self) -> u16 {
+        let val = (self.0 >> 16usize) & 0xffff;
+        val as u16
+    }
+    #[doc = "Poker 5h Count."]
+    #[inline(always)]
+    pub const fn set_pkr_5_ct(&mut self, val: u16) {
+        self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
+    }
+}
+impl Default for Pkrcnt54 {
+    #[inline(always)]
+    fn default() -> Pkrcnt54 {
+        Pkrcnt54(0)
+    }
+}
+impl core::fmt::Debug for Pkrcnt54 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Pkrcnt54")
+            .field("pkr_4_ct", &self.pkr_4_ct())
+            .field("pkr_5_ct", &self.pkr_5_ct())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Pkrcnt54 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Pkrcnt54 {{ pkr_4_ct: {=u16:?}, pkr_5_ct: {=u16:?} }}",
+            self.pkr_4_ct(),
+            self.pkr_5_ct()
+        )
+    }
+}
+#[doc = "Statistical Check Poker Count 7 and 6 Register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Pkrcnt76(pub u32);
+impl Pkrcnt76 {
+    #[doc = "Poker 6h Count."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pkr_6_ct(&self) -> u16 {
+        let val = (self.0 >> 0usize) & 0xffff;
+        val as u16
+    }
+    #[doc = "Poker 6h Count."]
+    #[inline(always)]
+    pub const fn set_pkr_6_ct(&mut self, val: u16) {
+        self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
+    }
+    #[doc = "Poker 7h Count."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pkr_7_ct(&self) -> u16 {
+        let val = (self.0 >> 16usize) & 0xffff;
+        val as u16
+    }
+    #[doc = "Poker 7h Count."]
+    #[inline(always)]
+    pub const fn set_pkr_7_ct(&mut self, val: u16) {
+        self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
+    }
+}
+impl Default for Pkrcnt76 {
+    #[inline(always)]
+    fn default() -> Pkrcnt76 {
+        Pkrcnt76(0)
+    }
+}
+impl core::fmt::Debug for Pkrcnt76 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Pkrcnt76")
+            .field("pkr_6_ct", &self.pkr_6_ct())
+            .field("pkr_7_ct", &self.pkr_7_ct())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Pkrcnt76 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Pkrcnt76 {{ pkr_6_ct: {=u16:?}, pkr_7_ct: {=u16:?} }}",
+            self.pkr_6_ct(),
+            self.pkr_7_ct()
+        )
+    }
+}
+#[doc = "Statistical Check Poker Count 9 and 8 Register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Pkrcnt98(pub u32);
+impl Pkrcnt98 {
+    #[doc = "Poker 8h Count."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pkr_8_ct(&self) -> u16 {
+        let val = (self.0 >> 0usize) & 0xffff;
+        val as u16
+    }
+    #[doc = "Poker 8h Count."]
+    #[inline(always)]
+    pub const fn set_pkr_8_ct(&mut self, val: u16) {
+        self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
+    }
+    #[doc = "Poker 9h Count."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pkr_9_ct(&self) -> u16 {
+        let val = (self.0 >> 16usize) & 0xffff;
+        val as u16
+    }
+    #[doc = "Poker 9h Count."]
+    #[inline(always)]
+    pub const fn set_pkr_9_ct(&mut self, val: u16) {
+        self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
+    }
+}
+impl Default for Pkrcnt98 {
+    #[inline(always)]
+    fn default() -> Pkrcnt98 {
+        Pkrcnt98(0)
+    }
+}
+impl core::fmt::Debug for Pkrcnt98 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Pkrcnt98")
+            .field("pkr_8_ct", &self.pkr_8_ct())
+            .field("pkr_9_ct", &self.pkr_9_ct())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Pkrcnt98 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Pkrcnt98 {{ pkr_8_ct: {=u16:?}, pkr_9_ct: {=u16:?} }}",
+            self.pkr_8_ct(),
+            self.pkr_9_ct()
+        )
+    }
+}
+#[doc = "Statistical Check Poker Count B and A Register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Pkrcntba(pub u32);
+impl Pkrcntba {
+    #[doc = "Poker Ah Count."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pkr_a_ct(&self) -> u16 {
+        let val = (self.0 >> 0usize) & 0xffff;
+        val as u16
+    }
+    #[doc = "Poker Ah Count."]
+    #[inline(always)]
+    pub const fn set_pkr_a_ct(&mut self, val: u16) {
+        self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
+    }
+    #[doc = "Poker Bh Count."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pkr_b_ct(&self) -> u16 {
+        let val = (self.0 >> 16usize) & 0xffff;
+        val as u16
+    }
+    #[doc = "Poker Bh Count."]
+    #[inline(always)]
+    pub const fn set_pkr_b_ct(&mut self, val: u16) {
+        self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
+    }
+}
+impl Default for Pkrcntba {
+    #[inline(always)]
+    fn default() -> Pkrcntba {
+        Pkrcntba(0)
+    }
+}
+impl core::fmt::Debug for Pkrcntba {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Pkrcntba")
+            .field("pkr_a_ct", &self.pkr_a_ct())
+            .field("pkr_b_ct", &self.pkr_b_ct())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Pkrcntba {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Pkrcntba {{ pkr_a_ct: {=u16:?}, pkr_b_ct: {=u16:?} }}",
+            self.pkr_a_ct(),
+            self.pkr_b_ct()
+        )
+    }
+}
+#[doc = "Statistical Check Poker Count D and C Register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Pkrcntdc(pub u32);
+impl Pkrcntdc {
+    #[doc = "Poker Ch Count."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pkr_c_ct(&self) -> u16 {
+        let val = (self.0 >> 0usize) & 0xffff;
+        val as u16
+    }
+    #[doc = "Poker Ch Count."]
+    #[inline(always)]
+    pub const fn set_pkr_c_ct(&mut self, val: u16) {
+        self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
+    }
+    #[doc = "Poker Dh Count."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pkr_d_ct(&self) -> u16 {
+        let val = (self.0 >> 16usize) & 0xffff;
+        val as u16
+    }
+    #[doc = "Poker Dh Count."]
+    #[inline(always)]
+    pub const fn set_pkr_d_ct(&mut self, val: u16) {
+        self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
+    }
+}
+impl Default for Pkrcntdc {
+    #[inline(always)]
+    fn default() -> Pkrcntdc {
+        Pkrcntdc(0)
+    }
+}
+impl core::fmt::Debug for Pkrcntdc {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Pkrcntdc")
+            .field("pkr_c_ct", &self.pkr_c_ct())
+            .field("pkr_d_ct", &self.pkr_d_ct())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Pkrcntdc {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Pkrcntdc {{ pkr_c_ct: {=u16:?}, pkr_d_ct: {=u16:?} }}",
+            self.pkr_c_ct(),
+            self.pkr_d_ct()
+        )
+    }
+}
+#[doc = "Statistical Check Poker Count F and E Register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Pkrcntfe(pub u32);
+impl Pkrcntfe {
+    #[doc = "Poker Eh Count."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pkr_e_ct(&self) -> u16 {
+        let val = (self.0 >> 0usize) & 0xffff;
+        val as u16
+    }
+    #[doc = "Poker Eh Count."]
+    #[inline(always)]
+    pub const fn set_pkr_e_ct(&mut self, val: u16) {
+        self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
+    }
+    #[doc = "Poker Fh Count."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pkr_f_ct(&self) -> u16 {
+        let val = (self.0 >> 16usize) & 0xffff;
+        val as u16
+    }
+    #[doc = "Poker Fh Count."]
+    #[inline(always)]
+    pub const fn set_pkr_f_ct(&mut self, val: u16) {
+        self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
+    }
+}
+impl Default for Pkrcntfe {
+    #[inline(always)]
+    fn default() -> Pkrcntfe {
+        Pkrcntfe(0)
+    }
+}
+impl core::fmt::Debug for Pkrcntfe {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Pkrcntfe")
+            .field("pkr_e_ct", &self.pkr_e_ct())
+            .field("pkr_f_ct", &self.pkr_f_ct())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Pkrcntfe {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Pkrcntfe {{ pkr_e_ct: {=u16:?}, pkr_f_ct: {=u16:?} }}",
+            self.pkr_e_ct(),
+            self.pkr_f_ct()
+        )
+    }
+}
+#[doc = "Poker Maximum Limit Register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Pkrmax(pub u32);
+impl Pkrmax {
+    #[doc = "Poker Maximum Limit."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pkr_max(&self) -> u32 {
+        let val = (self.0 >> 0usize) & 0x00ff_ffff;
+        val as u32
+    }
+    #[doc = "Poker Maximum Limit."]
+    #[inline(always)]
+    pub const fn set_pkr_max(&mut self, val: u32) {
+        self.0 = (self.0 & !(0x00ff_ffff << 0usize)) | (((val as u32) & 0x00ff_ffff) << 0usize);
+    }
+}
+impl Default for Pkrmax {
+    #[inline(always)]
+    fn default() -> Pkrmax {
+        Pkrmax(0)
+    }
+}
+impl core::fmt::Debug for Pkrmax {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Pkrmax")
+            .field("pkr_max", &self.pkr_max())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Pkrmax {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "Pkrmax {{ pkr_max: {=u32:?} }}", self.pkr_max())
+    }
+}
+#[doc = "Poker Range Register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Pkrrng(pub u32);
+impl Pkrrng {
+    #[doc = "Poker Range."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pkr_rng(&self) -> u16 {
+        let val = (self.0 >> 0usize) & 0xffff;
+        val as u16
+    }
+    #[doc = "Poker Range."]
+    #[inline(always)]
+    pub const fn set_pkr_rng(&mut self, val: u16) {
+        self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
+    }
+}
+impl Default for Pkrrng {
+    #[inline(always)]
+    fn default() -> Pkrrng {
+        Pkrrng(0)
+    }
+}
+impl core::fmt::Debug for Pkrrng {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Pkrrng")
+            .field("pkr_rng", &self.pkr_rng())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Pkrrng {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "Pkrrng {{ pkr_rng: {=u16:?} }}", self.pkr_rng())
+    }
+}
+#[doc = "Poker Square Calculation Result Register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Pkrsq(pub u32);
+impl Pkrsq {
+    #[doc = "Poker Square Calculation Result."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn pkr_sq(&self) -> u32 {
+        let val = (self.0 >> 0usize) & 0x00ff_ffff;
+        val as u32
+    }
+    #[doc = "Poker Square Calculation Result."]
+    #[inline(always)]
+    pub const fn set_pkr_sq(&mut self, val: u32) {
+        self.0 = (self.0 & !(0x00ff_ffff << 0usize)) | (((val as u32) & 0x00ff_ffff) << 0usize);
+    }
+}
+impl Default for Pkrsq {
+    #[inline(always)]
+    fn default() -> Pkrsq {
+        Pkrsq(0)
+    }
+}
+impl core::fmt::Debug for Pkrsq {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Pkrsq")
+            .field("pkr_sq", &self.pkr_sq())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Pkrsq {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "Pkrsq {{ pkr_sq: {=u32:?} }}", self.pkr_sq())
+    }
+}
+#[doc = "Sparse Bit Limit Register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Sblim(pub u32);
+impl Sblim {
+    #[doc = "Sparse Bit Limit."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn sb_lim(&self) -> u16 {
+        let val = (self.0 >> 0usize) & 0x03ff;
+        val as u16
+    }
+    #[doc = "Sparse Bit Limit."]
+    #[inline(always)]
+    pub const fn set_sb_lim(&mut self, val: u16) {
+        self.0 = (self.0 & !(0x03ff << 0usize)) | (((val as u32) & 0x03ff) << 0usize);
+    }
+}
+impl Default for Sblim {
+    #[inline(always)]
+    fn default() -> Sblim {
+        Sblim(0)
+    }
+}
+impl core::fmt::Debug for Sblim {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Sblim")
+            .field("sb_lim", &self.sb_lim())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Sblim {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "Sblim {{ sb_lim: {=u16:?} }}", self.sb_lim())
     }
 }
 #[doc = "Statistical Check Monobit Count Register."]
@@ -1346,6 +2219,336 @@ impl defmt::Format for Scr3l {
         )
     }
 }
+#[doc = "Statistical Check Run Length 4 Count Register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Scr4c(pub u32);
+impl Scr4c {
+    #[doc = "Runs of Zero, Length 4 Count."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn r4_0_ct(&self) -> u16 {
+        let val = (self.0 >> 0usize) & 0x0fff;
+        val as u16
+    }
+    #[doc = "Runs of Zero, Length 4 Count."]
+    #[inline(always)]
+    pub const fn set_r4_0_ct(&mut self, val: u16) {
+        self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
+    }
+    #[doc = "Runs of One, Length 4 Count."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn r4_1_ct(&self) -> u16 {
+        let val = (self.0 >> 16usize) & 0x0fff;
+        val as u16
+    }
+    #[doc = "Runs of One, Length 4 Count."]
+    #[inline(always)]
+    pub const fn set_r4_1_ct(&mut self, val: u16) {
+        self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);
+    }
+}
+impl Default for Scr4c {
+    #[inline(always)]
+    fn default() -> Scr4c {
+        Scr4c(0)
+    }
+}
+impl core::fmt::Debug for Scr4c {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Scr4c")
+            .field("r4_0_ct", &self.r4_0_ct())
+            .field("r4_1_ct", &self.r4_1_ct())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Scr4c {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Scr4c {{ r4_0_ct: {=u16:?}, r4_1_ct: {=u16:?} }}",
+            self.r4_0_ct(),
+            self.r4_1_ct()
+        )
+    }
+}
+#[doc = "Statistical Check Run Length 4 Limit Register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Scr4l(pub u32);
+impl Scr4l {
+    #[doc = "Run Length 4 Maximum Limit."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn run4_max(&self) -> u16 {
+        let val = (self.0 >> 0usize) & 0x0fff;
+        val as u16
+    }
+    #[doc = "Run Length 4 Maximum Limit."]
+    #[inline(always)]
+    pub const fn set_run4_max(&mut self, val: u16) {
+        self.0 = (self.0 & !(0x0fff << 0usize)) | (((val as u32) & 0x0fff) << 0usize);
+    }
+    #[doc = "Run Length 4 Range."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn run4_rng(&self) -> u16 {
+        let val = (self.0 >> 16usize) & 0x0fff;
+        val as u16
+    }
+    #[doc = "Run Length 4 Range."]
+    #[inline(always)]
+    pub const fn set_run4_rng(&mut self, val: u16) {
+        self.0 = (self.0 & !(0x0fff << 16usize)) | (((val as u32) & 0x0fff) << 16usize);
+    }
+}
+impl Default for Scr4l {
+    #[inline(always)]
+    fn default() -> Scr4l {
+        Scr4l(0)
+    }
+}
+impl core::fmt::Debug for Scr4l {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Scr4l")
+            .field("run4_max", &self.run4_max())
+            .field("run4_rng", &self.run4_rng())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Scr4l {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Scr4l {{ run4_max: {=u16:?}, run4_rng: {=u16:?} }}",
+            self.run4_max(),
+            self.run4_rng()
+        )
+    }
+}
+#[doc = "Statistical Check Run Length 5 Count Register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Scr5c(pub u32);
+impl Scr5c {
+    #[doc = "Runs of Zero, Length 5 Count."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn r5_0_ct(&self) -> u16 {
+        let val = (self.0 >> 0usize) & 0x07ff;
+        val as u16
+    }
+    #[doc = "Runs of Zero, Length 5 Count."]
+    #[inline(always)]
+    pub const fn set_r5_0_ct(&mut self, val: u16) {
+        self.0 = (self.0 & !(0x07ff << 0usize)) | (((val as u32) & 0x07ff) << 0usize);
+    }
+    #[doc = "Runs of One, Length 5 Count."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn r5_1_ct(&self) -> u16 {
+        let val = (self.0 >> 16usize) & 0x07ff;
+        val as u16
+    }
+    #[doc = "Runs of One, Length 5 Count."]
+    #[inline(always)]
+    pub const fn set_r5_1_ct(&mut self, val: u16) {
+        self.0 = (self.0 & !(0x07ff << 16usize)) | (((val as u32) & 0x07ff) << 16usize);
+    }
+}
+impl Default for Scr5c {
+    #[inline(always)]
+    fn default() -> Scr5c {
+        Scr5c(0)
+    }
+}
+impl core::fmt::Debug for Scr5c {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Scr5c")
+            .field("r5_0_ct", &self.r5_0_ct())
+            .field("r5_1_ct", &self.r5_1_ct())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Scr5c {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Scr5c {{ r5_0_ct: {=u16:?}, r5_1_ct: {=u16:?} }}",
+            self.r5_0_ct(),
+            self.r5_1_ct()
+        )
+    }
+}
+#[doc = "Statistical Check Run Length 5 Limit Register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Scr5l(pub u32);
+impl Scr5l {
+    #[doc = "Run Length 5 Maximum Limit."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn run5_max(&self) -> u16 {
+        let val = (self.0 >> 0usize) & 0x07ff;
+        val as u16
+    }
+    #[doc = "Run Length 5 Maximum Limit."]
+    #[inline(always)]
+    pub const fn set_run5_max(&mut self, val: u16) {
+        self.0 = (self.0 & !(0x07ff << 0usize)) | (((val as u32) & 0x07ff) << 0usize);
+    }
+    #[doc = "Run Length 5 Range."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn run5_rng(&self) -> u16 {
+        let val = (self.0 >> 16usize) & 0x07ff;
+        val as u16
+    }
+    #[doc = "Run Length 5 Range."]
+    #[inline(always)]
+    pub const fn set_run5_rng(&mut self, val: u16) {
+        self.0 = (self.0 & !(0x07ff << 16usize)) | (((val as u32) & 0x07ff) << 16usize);
+    }
+}
+impl Default for Scr5l {
+    #[inline(always)]
+    fn default() -> Scr5l {
+        Scr5l(0)
+    }
+}
+impl core::fmt::Debug for Scr5l {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Scr5l")
+            .field("run5_max", &self.run5_max())
+            .field("run5_rng", &self.run5_rng())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Scr5l {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Scr5l {{ run5_max: {=u16:?}, run5_rng: {=u16:?} }}",
+            self.run5_max(),
+            self.run5_rng()
+        )
+    }
+}
+#[doc = "Statistical Check Run Length 6+ Count Register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Scr6pc(pub u32);
+impl Scr6pc {
+    #[doc = "Runs of Zero, Length 6+ Count."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn r6p_0_ct(&self) -> u16 {
+        let val = (self.0 >> 0usize) & 0x07ff;
+        val as u16
+    }
+    #[doc = "Runs of Zero, Length 6+ Count."]
+    #[inline(always)]
+    pub const fn set_r6p_0_ct(&mut self, val: u16) {
+        self.0 = (self.0 & !(0x07ff << 0usize)) | (((val as u32) & 0x07ff) << 0usize);
+    }
+    #[doc = "Runs of One, Length 6+ Count."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn r6p_1_ct(&self) -> u16 {
+        let val = (self.0 >> 16usize) & 0x07ff;
+        val as u16
+    }
+    #[doc = "Runs of One, Length 6+ Count."]
+    #[inline(always)]
+    pub const fn set_r6p_1_ct(&mut self, val: u16) {
+        self.0 = (self.0 & !(0x07ff << 16usize)) | (((val as u32) & 0x07ff) << 16usize);
+    }
+}
+impl Default for Scr6pc {
+    #[inline(always)]
+    fn default() -> Scr6pc {
+        Scr6pc(0)
+    }
+}
+impl core::fmt::Debug for Scr6pc {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Scr6pc")
+            .field("r6p_0_ct", &self.r6p_0_ct())
+            .field("r6p_1_ct", &self.r6p_1_ct())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Scr6pc {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Scr6pc {{ r6p_0_ct: {=u16:?}, r6p_1_ct: {=u16:?} }}",
+            self.r6p_0_ct(),
+            self.r6p_1_ct()
+        )
+    }
+}
+#[doc = "Statistical Check Run Length 6+ Limit Register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Scr6pl(pub u32);
+impl Scr6pl {
+    #[doc = "Run Length 6+ Maximum Limit."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn run6p_max(&self) -> u16 {
+        let val = (self.0 >> 0usize) & 0x07ff;
+        val as u16
+    }
+    #[doc = "Run Length 6+ Maximum Limit."]
+    #[inline(always)]
+    pub const fn set_run6p_max(&mut self, val: u16) {
+        self.0 = (self.0 & !(0x07ff << 0usize)) | (((val as u32) & 0x07ff) << 0usize);
+    }
+    #[doc = "Run Length 6+ Range."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn run6p_rng(&self) -> u16 {
+        let val = (self.0 >> 16usize) & 0x07ff;
+        val as u16
+    }
+    #[doc = "Run Length 6+ Range."]
+    #[inline(always)]
+    pub const fn set_run6p_rng(&mut self, val: u16) {
+        self.0 = (self.0 & !(0x07ff << 16usize)) | (((val as u32) & 0x07ff) << 16usize);
+    }
+}
+impl Default for Scr6pl {
+    #[inline(always)]
+    fn default() -> Scr6pl {
+        Scr6pl(0)
+    }
+}
+impl core::fmt::Debug for Scr6pl {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Scr6pl")
+            .field("run6p_max", &self.run6p_max())
+            .field("run6p_rng", &self.run6p_rng())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Scr6pl {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Scr6pl {{ run6p_max: {=u16:?}, run6p_rng: {=u16:?} }}",
+            self.run6p_max(),
+            self.run6p_rng()
+        )
+    }
+}
 #[doc = "Seed Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
@@ -1515,6 +2718,90 @@ impl Status {
     pub const fn set_tf3br1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
+    #[doc = "Test Fail, 4-Bit Run, Sampling 0s."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn tf4br0(&self) -> bool {
+        let val = (self.0 >> 6usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Test Fail, 4-Bit Run, Sampling 0s."]
+    #[inline(always)]
+    pub const fn set_tf4br0(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
+    }
+    #[doc = "Test Fail, 4-Bit Run, Sampling 1s."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn tf4br1(&self) -> bool {
+        let val = (self.0 >> 7usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Test Fail, 4-Bit Run, Sampling 1s."]
+    #[inline(always)]
+    pub const fn set_tf4br1(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
+    }
+    #[doc = "Test Fail, 5-Bit Run, Sampling 0s."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn tf5br0(&self) -> bool {
+        let val = (self.0 >> 8usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Test Fail, 5-Bit Run, Sampling 0s."]
+    #[inline(always)]
+    pub const fn set_tf5br0(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
+    }
+    #[doc = "Test Fail, 5-Bit Run, Sampling 1s. If TF5BR1=1, the 5-Bit Run, Sampling 1s Test has failed."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn tf5br1(&self) -> bool {
+        let val = (self.0 >> 9usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Test Fail, 5-Bit Run, Sampling 1s. If TF5BR1=1, the 5-Bit Run, Sampling 1s Test has failed."]
+    #[inline(always)]
+    pub const fn set_tf5br1(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
+    }
+    #[doc = "Test Fail, 6 Plus Bit Run, Sampling 0s."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn tf6pbr0(&self) -> bool {
+        let val = (self.0 >> 10usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Test Fail, 6 Plus Bit Run, Sampling 0s."]
+    #[inline(always)]
+    pub const fn set_tf6pbr0(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
+    }
+    #[doc = "Test Fail, 6 Plus Bit Run, Sampling 1s."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn tf6pbr1(&self) -> bool {
+        let val = (self.0 >> 11usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Test Fail, 6 Plus Bit Run, Sampling 1s."]
+    #[inline(always)]
+    pub const fn set_tf6pbr1(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
+    }
+    #[doc = "Test Fail, Sparse Bit."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn tfsb(&self) -> bool {
+        let val = (self.0 >> 12usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Test Fail, Sparse Bit."]
+    #[inline(always)]
+    pub const fn set_tfsb(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
+    }
     #[doc = "Test Fail, Long Run."]
     #[must_use]
     #[inline(always)]
@@ -1526,6 +2813,18 @@ impl Status {
     #[inline(always)]
     pub const fn set_tflr(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
+    }
+    #[doc = "Test Fail, Poker."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn tfp(&self) -> bool {
+        let val = (self.0 >> 14usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Test Fail, Poker."]
+    #[inline(always)]
+    pub const fn set_tfp(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
     #[doc = "Test Fail, Mono Bit."]
     #[must_use]
@@ -1567,7 +2866,15 @@ impl core::fmt::Debug for Status {
             .field("tf2br1", &self.tf2br1())
             .field("tf3br0", &self.tf3br0())
             .field("tf3br1", &self.tf3br1())
+            .field("tf4br0", &self.tf4br0())
+            .field("tf4br1", &self.tf4br1())
+            .field("tf5br0", &self.tf5br0())
+            .field("tf5br1", &self.tf5br1())
+            .field("tf6pbr0", &self.tf6pbr0())
+            .field("tf6pbr1", &self.tf6pbr1())
+            .field("tfsb", &self.tfsb())
             .field("tflr", &self.tflr())
+            .field("tfp", &self.tfp())
             .field("tfmb", &self.tfmb())
             .field("retry_ct", &self.retry_ct())
             .finish()
@@ -1578,17 +2885,62 @@ impl defmt::Format for Status {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Status {{ tf1br0: {=bool:?}, tf1br1: {=bool:?}, tf2br0: {=bool:?}, tf2br1: {=bool:?}, tf3br0: {=bool:?}, tf3br1: {=bool:?}, tflr: {=bool:?}, tfmb: {=bool:?}, retry_ct: {=u8:?} }}",
+            "Status {{ tf1br0: {=bool:?}, tf1br1: {=bool:?}, tf2br0: {=bool:?}, tf2br1: {=bool:?}, tf3br0: {=bool:?}, tf3br1: {=bool:?}, tf4br0: {=bool:?}, tf4br1: {=bool:?}, tf5br0: {=bool:?}, tf5br1: {=bool:?}, tf6pbr0: {=bool:?}, tf6pbr1: {=bool:?}, tfsb: {=bool:?}, tflr: {=bool:?}, tfp: {=bool:?}, tfmb: {=bool:?}, retry_ct: {=u8:?} }}",
             self.tf1br0(),
             self.tf1br1(),
             self.tf2br0(),
             self.tf2br1(),
             self.tf3br0(),
             self.tf3br1(),
+            self.tf4br0(),
+            self.tf4br1(),
+            self.tf5br0(),
+            self.tf5br1(),
+            self.tf6pbr0(),
+            self.tf6pbr1(),
+            self.tfsb(),
             self.tflr(),
+            self.tfp(),
             self.tfmb(),
             self.retry_ct()
         )
+    }
+}
+#[doc = "Total Samples Register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Totsam(pub u32);
+impl Totsam {
+    #[doc = "Total Samples."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn tot_sam(&self) -> u32 {
+        let val = (self.0 >> 0usize) & 0x000f_ffff;
+        val as u32
+    }
+    #[doc = "Total Samples."]
+    #[inline(always)]
+    pub const fn set_tot_sam(&mut self, val: u32) {
+        self.0 = (self.0 & !(0x000f_ffff << 0usize)) | (((val as u32) & 0x000f_ffff) << 0usize);
+    }
+}
+impl Default for Totsam {
+    #[inline(always)]
+    fn default() -> Totsam {
+        Totsam(0)
+    }
+}
+impl core::fmt::Debug for Totsam {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Totsam")
+            .field("tot_sam", &self.tot_sam())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Totsam {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "Totsam {{ tot_sam: {=u32:?} }}", self.tot_sam())
     }
 }
 #[doc = "Version ID Register (MS)."]
@@ -1741,6 +3093,68 @@ impl defmt::Format for Vid2 {
             self.intg_opt(),
             self.era()
         )
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum BusEdc {
+    #[doc = "No Bus-EDC error/fault detected."]
+    BUS_EDC_NOERR = 0x0,
+    #[doc = "Bus-EDC error/fault detected."]
+    BUS_EDC_ERR = 0x01,
+}
+impl BusEdc {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> BusEdc {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for BusEdc {
+    #[inline(always)]
+    fn from(val: u8) -> BusEdc {
+        BusEdc::from_bits(val)
+    }
+}
+impl From<BusEdc> for u8 {
+    #[inline(always)]
+    fn from(val: BusEdc) -> u8 {
+        BusEdc::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum BusEdcClr {
+    #[doc = "No effect, ignored."]
+    BUS_EDC_NOEFFECT = 0x0,
+    #[doc = "Clears the CSER\\[BUS_EDC\\] bit."]
+    BUS_EDC_CLEAR = 0x01,
+}
+impl BusEdcClr {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> BusEdcClr {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for BusEdcClr {
+    #[inline(always)]
+    fn from(val: u8) -> BusEdcClr {
+        BusEdcClr::from_bits(val)
+    }
+}
+impl From<BusEdcClr> for u8 {
+    #[inline(always)]
+    fn from(val: BusEdcClr) -> u8 {
+        BusEdcClr::to_bits(val)
     }
 }
 #[repr(transparent)]
@@ -1994,6 +3408,68 @@ impl From<IpId> for u16 {
         IpId::to_bits(val)
     }
 }
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum LocalEdc {
+    #[doc = "No Local-EDC error/fault detected."]
+    LOCAL_EDC_NOERR = 0x0,
+    #[doc = "Local-EDC error/fault detected."]
+    LOCAL_EDC_ERR = 0x01,
+}
+impl LocalEdc {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> LocalEdc {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for LocalEdc {
+    #[inline(always)]
+    fn from(val: u8) -> LocalEdc {
+        LocalEdc::from_bits(val)
+    }
+}
+impl From<LocalEdc> for u8 {
+    #[inline(always)]
+    fn from(val: LocalEdc) -> u8 {
+        LocalEdc::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum LocalEdcClr {
+    #[doc = "No effect, ignored."]
+    LOCAL_EDC_NOEFFECT = 0x0,
+    #[doc = "Clears the CSER\\[LOCAL_EDC\\] bit."]
+    LOCAL_EDC_CLEAR = 0x01,
+}
+impl LocalEdcClr {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> LocalEdcClr {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for LocalEdcClr {
+    #[inline(always)]
+    fn from(val: u8) -> LocalEdcClr {
+        LocalEdcClr::from_bits(val)
+    }
+}
+impl From<LocalEdcClr> for u8 {
+    #[inline(always)]
+    fn from(val: LocalEdcClr) -> u8 {
+        LocalEdcClr::to_bits(val)
+    }
+}
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct MajRev(u8);
@@ -2216,6 +3692,130 @@ impl From<OscFailsafeLmt> for u8 {
     #[inline(always)]
     fn from(val: OscFailsafeLmt) -> u8 {
         OscFailsafeLmt::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum RedFsm {
+    #[doc = "No redundant FSM error/fault."]
+    RED_FSM_NOERR = 0x0,
+    #[doc = "Redundant FSM error/fault detected."]
+    RED_FSM_ERR = 0x01,
+}
+impl RedFsm {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> RedFsm {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for RedFsm {
+    #[inline(always)]
+    fn from(val: u8) -> RedFsm {
+        RedFsm::from_bits(val)
+    }
+}
+impl From<RedFsm> for u8 {
+    #[inline(always)]
+    fn from(val: RedFsm) -> u8 {
+        RedFsm::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum RedFsmClr {
+    #[doc = "No effect, ignored."]
+    RED_FSM_NOEFFECT = 0x0,
+    #[doc = "Clears the CSER\\[RED_FSM\\] bit."]
+    RED_FSM_CLEAR = 0x01,
+}
+impl RedFsmClr {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> RedFsmClr {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for RedFsmClr {
+    #[inline(always)]
+    fn from(val: u8) -> RedFsmClr {
+        RedFsmClr::from_bits(val)
+    }
+}
+impl From<RedFsmClr> for u8 {
+    #[inline(always)]
+    fn from(val: RedFsmClr) -> u8 {
+        RedFsmClr::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum RedSigs {
+    #[doc = "No redundant signal error/fault."]
+    RED_SIGS_NOERR = 0x0,
+    #[doc = "Redundant signal error/fault detected."]
+    RED_SIGS_ERR = 0x01,
+}
+impl RedSigs {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> RedSigs {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for RedSigs {
+    #[inline(always)]
+    fn from(val: u8) -> RedSigs {
+        RedSigs::from_bits(val)
+    }
+}
+impl From<RedSigs> for u8 {
+    #[inline(always)]
+    fn from(val: RedSigs) -> u8 {
+        RedSigs::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum RedSigsClr {
+    #[doc = "No effect, ignored."]
+    RED_SIGS_NOEFFECT = 0x0,
+    #[doc = "Clears the CSER\\[RED_SIGS\\] bit."]
+    RED_SIGS_CLEAR = 0x01,
+}
+impl RedSigsClr {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> RedSigsClr {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for RedSigsClr {
+    #[inline(always)]
+    fn from(val: u8) -> RedSigsClr {
+        RedSigsClr::from_bits(val)
+    }
+}
+impl From<RedSigsClr> for u8 {
+    #[inline(always)]
+    fn from(val: RedSigsClr) -> u8 {
+        RedSigsClr::to_bits(val)
     }
 }
 #[repr(u8)]
