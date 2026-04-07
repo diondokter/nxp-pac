@@ -3681,7 +3681,44 @@
     },
     {
       "name": "DBGMAILBOX",
-      "signals": []
+      "signals": [
+        {
+          "name": "TDI",
+          "pins": [
+            {
+              "pin": "P0_3",
+              "alt": 1
+            }
+          ]
+        },
+        {
+          "name": "TCLK/SWCLK",
+          "pins": [
+            {
+              "pin": "P0_1",
+              "alt": 1
+            }
+          ]
+        },
+        {
+          "name": "TDO/SWO",
+          "pins": [
+            {
+              "pin": "P0_2",
+              "alt": 1
+            }
+          ]
+        },
+        {
+          "name": "TMS/SWDIO",
+          "pins": [
+            {
+              "pin": "P0_0",
+              "alt": 1
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "DMA0",
@@ -8958,20 +8995,6 @@
       ]
     },
     {
-      "name": "TCLK/SWCLK",
-      "signals": [
-        {
-          "name": "IN",
-          "pins": [
-            {
-              "pin": "P0_1",
-              "alt": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "TDET0",
       "address": "0x400E9000",
       "signals": [
@@ -9044,48 +9067,6 @@
             {
               "pin": "P5_9",
               "alt": 3
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "TDI",
-      "signals": [
-        {
-          "name": "IN",
-          "pins": [
-            {
-              "pin": "P0_3",
-              "alt": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "TDO/SWO",
-      "signals": [
-        {
-          "name": "IN",
-          "pins": [
-            {
-              "pin": "P0_2",
-              "alt": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "TMS/SWDIO",
-      "signals": [
-        {
-          "name": "IN",
-          "pins": [
-            {
-              "pin": "P0_0",
-              "alt": 1
             }
           ]
         }
