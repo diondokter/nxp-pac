@@ -2,6 +2,7 @@
 #![allow(non_camel_case_types)]
 #![doc = include_str!("../README.md")]
 
+#[cfg(feature = "pac")]
 // IMXRT
 #[cfg_attr(feature = "mimxrt1011", path = "./chips/mimxrt1011/mod.rs")]
 #[cfg_attr(feature = "mimxrt1062", path = "./chips/mimxrt1062/mod.rs")]
@@ -30,6 +31,7 @@
     path = "./chips/lpc55s69_cm33_core1/mod.rs"
 )]
 mod pac;
+#[cfg(feature = "pac")]
 pub use pac::*;
 
 #[cfg(feature = "metadata")]

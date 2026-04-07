@@ -4117,7 +4117,44 @@ pub const PERIPHERALS: &[Peripheral] = &[
         name: "DBGMAILBOX",
         address: 0,
         driver_name: "",
-        signals: &[],
+        signals: &[
+            Signal {
+                name: "TDI",
+                pins: &[SignalPin {
+                    pin: "P0_3",
+                    alt: 1u8,
+                    iomuxc_daisy: None,
+                }],
+                iomuxc_daisy: None,
+            },
+            Signal {
+                name: "TCLK/SWCLK",
+                pins: &[SignalPin {
+                    pin: "P0_1",
+                    alt: 1u8,
+                    iomuxc_daisy: None,
+                }],
+                iomuxc_daisy: None,
+            },
+            Signal {
+                name: "TDO/SWO",
+                pins: &[SignalPin {
+                    pin: "P0_2",
+                    alt: 1u8,
+                    iomuxc_daisy: None,
+                }],
+                iomuxc_daisy: None,
+            },
+            Signal {
+                name: "TMS/SWDIO",
+                pins: &[SignalPin {
+                    pin: "P0_0",
+                    alt: 1u8,
+                    iomuxc_daisy: None,
+                }],
+                iomuxc_daisy: None,
+            },
+        ],
         flexcomm: None,
         dma_muxing: &[],
     },
@@ -10172,22 +10209,6 @@ pub const PERIPHERALS: &[Peripheral] = &[
         dma_muxing: &[],
     },
     Peripheral {
-        name: "TCLK/SWCLK",
-        address: 0,
-        driver_name: "",
-        signals: &[Signal {
-            name: "IN",
-            pins: &[SignalPin {
-                pin: "P0_1",
-                alt: 1u8,
-                iomuxc_daisy: None,
-            }],
-            iomuxc_daisy: None,
-        }],
-        flexcomm: None,
-        dma_muxing: &[],
-    },
-    Peripheral {
         name: "TDET0",
         address: 0x400E9000,
         driver_name: "",
@@ -10265,54 +10286,6 @@ pub const PERIPHERALS: &[Peripheral] = &[
                 iomuxc_daisy: None,
             },
         ],
-        flexcomm: None,
-        dma_muxing: &[],
-    },
-    Peripheral {
-        name: "TDI",
-        address: 0,
-        driver_name: "",
-        signals: &[Signal {
-            name: "IN",
-            pins: &[SignalPin {
-                pin: "P0_3",
-                alt: 1u8,
-                iomuxc_daisy: None,
-            }],
-            iomuxc_daisy: None,
-        }],
-        flexcomm: None,
-        dma_muxing: &[],
-    },
-    Peripheral {
-        name: "TDO/SWO",
-        address: 0,
-        driver_name: "",
-        signals: &[Signal {
-            name: "IN",
-            pins: &[SignalPin {
-                pin: "P0_2",
-                alt: 1u8,
-                iomuxc_daisy: None,
-            }],
-            iomuxc_daisy: None,
-        }],
-        flexcomm: None,
-        dma_muxing: &[],
-    },
-    Peripheral {
-        name: "TMS/SWDIO",
-        address: 0,
-        driver_name: "",
-        signals: &[Signal {
-            name: "IN",
-            pins: &[SignalPin {
-                pin: "P0_0",
-                alt: 1u8,
-                iomuxc_daisy: None,
-            }],
-            iomuxc_daisy: None,
-        }],
         flexcomm: None,
         dma_muxing: &[],
     },

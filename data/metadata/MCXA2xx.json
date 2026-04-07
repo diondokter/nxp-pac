@@ -133,7 +133,7 @@
       "supply": "VDD"
     },
     {
-      "name": "P2_0",
+      "name": "P2_1",
       "supply": "VDD"
     },
     {
@@ -3504,7 +3504,44 @@
       "name": "DBGMAILBOX",
       "address": "0x40101000",
       "block": "mcxa/DBGMAILBOX",
-      "signals": []
+      "signals": [
+        {
+          "name": "TCLK/SWCLK",
+          "pins": [
+            {
+              "pin": "P0_1",
+              "alt": 1
+            }
+          ]
+        },
+        {
+          "name": "TDI",
+          "pins": [
+            {
+              "pin": "P0_3",
+              "alt": 1
+            }
+          ]
+        },
+        {
+          "name": "TDO/SWO",
+          "pins": [
+            {
+              "pin": "P0_2",
+              "alt": 1
+            }
+          ]
+        },
+        {
+          "name": "TMS/SWDIO",
+          "pins": [
+            {
+              "pin": "P0_0",
+              "alt": 1
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "DMA0",
@@ -5402,9 +5439,14 @@
             {
               "pin": "P2_0",
               "alt": 0
-            },
+            }
+          ]
+        },
+        {
+          "name": "1",
+          "pins": [
             {
-              "pin": "P2_0",
+              "pin": "P2_1",
               "alt": 0
             }
           ]
@@ -8707,66 +8749,10 @@
       ]
     },
     {
-      "name": "TCLK/SWCLK",
-      "signals": [
-        {
-          "name": "IN",
-          "pins": [
-            {
-              "pin": "P0_1",
-              "alt": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "TDET0",
       "address": "0x400E9000",
       "block": "mcxa/TDET0",
       "signals": []
-    },
-    {
-      "name": "TDI",
-      "signals": [
-        {
-          "name": "IN",
-          "pins": [
-            {
-              "pin": "P0_3",
-              "alt": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "TDO/SWO",
-      "signals": [
-        {
-          "name": "IN",
-          "pins": [
-            {
-              "pin": "P0_2",
-              "alt": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "TMS/SWDIO",
-      "signals": [
-        {
-          "name": "IN",
-          "pins": [
-            {
-              "pin": "P0_0",
-              "alt": 1
-            }
-          ]
-        }
-      ]
     },
     {
       "name": "TRNG0",

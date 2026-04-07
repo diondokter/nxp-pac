@@ -103,7 +103,7 @@ pub const PINS: &[Pin] = &[
         iomuxc: None,
     },
     Pin {
-        name: "P2_0",
+        name: "P2_1",
         iomuxc: None,
     },
     Pin {
@@ -3900,7 +3900,44 @@ pub const PERIPHERALS: &[Peripheral] = &[
         name: "DBGMAILBOX",
         address: 0x40101000,
         driver_name: "mcxa/DBGMAILBOX",
-        signals: &[],
+        signals: &[
+            Signal {
+                name: "TCLK/SWCLK",
+                pins: &[SignalPin {
+                    pin: "P0_1",
+                    alt: 1u8,
+                    iomuxc_daisy: None,
+                }],
+                iomuxc_daisy: None,
+            },
+            Signal {
+                name: "TDI",
+                pins: &[SignalPin {
+                    pin: "P0_3",
+                    alt: 1u8,
+                    iomuxc_daisy: None,
+                }],
+                iomuxc_daisy: None,
+            },
+            Signal {
+                name: "TDO/SWO",
+                pins: &[SignalPin {
+                    pin: "P0_2",
+                    alt: 1u8,
+                    iomuxc_daisy: None,
+                }],
+                iomuxc_daisy: None,
+            },
+            Signal {
+                name: "TMS/SWDIO",
+                pins: &[SignalPin {
+                    pin: "P0_0",
+                    alt: 1u8,
+                    iomuxc_daisy: None,
+                }],
+                iomuxc_daisy: None,
+            },
+        ],
         flexcomm: None,
         dma_muxing: &[],
     },
@@ -6093,18 +6130,20 @@ pub const PERIPHERALS: &[Peripheral] = &[
         signals: &[
             Signal {
                 name: "0",
-                pins: &[
-                    SignalPin {
-                        pin: "P2_0",
-                        alt: 0u8,
-                        iomuxc_daisy: None,
-                    },
-                    SignalPin {
-                        pin: "P2_0",
-                        alt: 0u8,
-                        iomuxc_daisy: None,
-                    },
-                ],
+                pins: &[SignalPin {
+                    pin: "P2_0",
+                    alt: 0u8,
+                    iomuxc_daisy: None,
+                }],
+                iomuxc_daisy: None,
+            },
+            Signal {
+                name: "1",
+                pins: &[SignalPin {
+                    pin: "P2_1",
+                    alt: 0u8,
+                    iomuxc_daisy: None,
+                }],
                 iomuxc_daisy: None,
             },
             Signal {
@@ -9946,74 +9985,10 @@ pub const PERIPHERALS: &[Peripheral] = &[
         dma_muxing: &[],
     },
     Peripheral {
-        name: "TCLK/SWCLK",
-        address: 0,
-        driver_name: "",
-        signals: &[Signal {
-            name: "IN",
-            pins: &[SignalPin {
-                pin: "P0_1",
-                alt: 1u8,
-                iomuxc_daisy: None,
-            }],
-            iomuxc_daisy: None,
-        }],
-        flexcomm: None,
-        dma_muxing: &[],
-    },
-    Peripheral {
         name: "TDET0",
         address: 0x400E9000,
         driver_name: "mcxa/TDET0",
         signals: &[],
-        flexcomm: None,
-        dma_muxing: &[],
-    },
-    Peripheral {
-        name: "TDI",
-        address: 0,
-        driver_name: "",
-        signals: &[Signal {
-            name: "IN",
-            pins: &[SignalPin {
-                pin: "P0_3",
-                alt: 1u8,
-                iomuxc_daisy: None,
-            }],
-            iomuxc_daisy: None,
-        }],
-        flexcomm: None,
-        dma_muxing: &[],
-    },
-    Peripheral {
-        name: "TDO/SWO",
-        address: 0,
-        driver_name: "",
-        signals: &[Signal {
-            name: "IN",
-            pins: &[SignalPin {
-                pin: "P0_2",
-                alt: 1u8,
-                iomuxc_daisy: None,
-            }],
-            iomuxc_daisy: None,
-        }],
-        flexcomm: None,
-        dma_muxing: &[],
-    },
-    Peripheral {
-        name: "TMS/SWDIO",
-        address: 0,
-        driver_name: "",
-        signals: &[Signal {
-            name: "IN",
-            pins: &[SignalPin {
-                pin: "P0_0",
-                alt: 1u8,
-                iomuxc_daisy: None,
-            }],
-            iomuxc_daisy: None,
-        }],
         flexcomm: None,
         dma_muxing: &[],
     },
