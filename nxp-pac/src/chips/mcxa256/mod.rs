@@ -288,6 +288,8 @@ pub mod port;
 pub mod rtc2xx;
 #[path = "../../meta_peripherals/mcxa/SCG.rs"]
 pub mod scg;
+#[path = "../../meta_peripherals/mcxa/SGI.rs"]
+pub mod sgi;
 #[path = "../../meta_peripherals/mcxa/SPC.rs"]
 pub mod spc;
 #[path = "../../meta_peripherals/mcxa/SYSCON2xx.rs"]
