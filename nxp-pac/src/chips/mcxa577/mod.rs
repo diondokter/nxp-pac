@@ -273,6 +273,7 @@ pub const PORT4: port::Port = unsafe { port::Port::from_ptr(0x400C0000 as _) };
 pub const PORT5: port::Port = unsafe { port::Port::from_ptr(0x400E3000 as _) };
 pub const RTC0: rtc5xx::Rtc = unsafe { rtc5xx::Rtc::from_ptr(0x400EE000 as _) };
 pub const SCG0: scg::Scg = unsafe { scg::Scg::from_ptr(0x400CA000 as _) };
+pub const SGI0: sgi::Sgi = unsafe { sgi::Sgi::from_ptr(0x400EB000 as _) };
 pub const SPC0: spc::Spc = unsafe { spc::Spc::from_ptr(0x400CB000 as _) };
 pub const SYSCON: syscon::Syscon = unsafe { syscon::Syscon::from_ptr(0x40091000 as _) };
 pub const TRNG0: trng::Trng = unsafe { trng::Trng::from_ptr(0x400EC000 as _) };
