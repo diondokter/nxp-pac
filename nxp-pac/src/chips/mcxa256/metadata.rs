@@ -103,7 +103,7 @@ pub const PINS: &[Pin] = &[
         iomuxc: None,
     },
     Pin {
-        name: "P2_0",
+        name: "P2_1",
         iomuxc: None,
     },
     Pin {
