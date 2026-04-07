@@ -36,8 +36,9 @@ defmt = { version = "0.3.10", optional = true }
 cfg_aliases = "0.2.1"
 
 [features]
-default = []
+default = ["pac"]
 rt = ["cortex-m-rt/device"]
+pac = []
 defmt = ["dep:defmt"]
 
 metadata = []
