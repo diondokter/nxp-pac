@@ -6093,18 +6093,20 @@ pub const PERIPHERALS: &[Peripheral] = &[
         signals: &[
             Signal {
                 name: "0",
-                pins: &[
-                    SignalPin {
-                        pin: "P2_0",
-                        alt: 0u8,
-                        iomuxc_daisy: None,
-                    },
-                    SignalPin {
-                        pin: "P2_0",
-                        alt: 0u8,
-                        iomuxc_daisy: None,
-                    },
-                ],
+                pins: &[SignalPin {
+                    pin: "P2_0",
+                    alt: 0u8,
+                    iomuxc_daisy: None,
+                }],
+                iomuxc_daisy: None,
+            },
+            Signal {
+                name: "1",
+                pins: &[SignalPin {
+                    pin: "P2_1",
+                    alt: 0u8,
+                    iomuxc_daisy: None,
+                }],
                 iomuxc_daisy: None,
             },
             Signal {
