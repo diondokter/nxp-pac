@@ -17,6 +17,7 @@
 )]
 mod _generated;
 
+#[derive(Debug)]
 pub struct Metadata {
     pub name: &'static str,
     pub pins: &'static [Pin],
@@ -24,16 +25,19 @@ pub struct Metadata {
     pub interrupts: &'static [(&'static str, u32)],
 }
 
+#[derive(Debug)]
 pub struct Pin {
     pub name: &'static str,
     pub iomuxc: Option<PinIomuxc>,
 }
 
+#[derive(Debug)]
 pub struct PinIomuxc {
     pub mux: Option<u32>,
     pub pad: u32,
 }
 
+#[derive(Debug)]
 pub struct Peripheral {
     pub name: &'static str,
     pub address: u32,
@@ -43,18 +47,21 @@ pub struct Peripheral {
     pub dma_muxing: &'static [DmaMux],
 }
 
+#[derive(Debug)]
 pub struct Signal {
     pub name: &'static str,
     pub pins: &'static [SignalPin],
     pub iomuxc_daisy: Option<u32>,
 }
 
+#[derive(Debug)]
 pub struct SignalPin {
     pub pin: &'static str,
     pub alt: u8,
     pub iomuxc_daisy: Option<u8>,
 }
 
+#[derive(Debug)]
 pub struct DmaMux {
     pub signal: &'static str,
     pub mux: &'static str,
