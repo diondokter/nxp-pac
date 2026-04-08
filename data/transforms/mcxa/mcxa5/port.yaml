@@ -3,18 +3,18 @@ transforms:
   - !AddRegisters
     block: port0::Port0
     registers:
-    - name: pcr28
-      byte_offset: 0xf0
-      fieldset: port::regs::Pcr
+      - name: pcr28
+        byte_offset: 0xf0
+        fieldset: port::Pcr
 
-    - name: pcr29
-      byte_offset: 0xf4
-      fieldset: port::regs::Pcr
+      - name: pcr29
+        byte_offset: 0xf4
+        fieldset: port::Pcr
 
-    - name: pcr30
-      byte_offset: 0xf8
-      fieldset: port::regs::Pcr
+      - name: pcr30
+        byte_offset: 0xf8
+        fieldset: port::Pcr
 
-    - name: pcr31
-      byte_offset: 0xfc
-      fieldset: port::regs::Pcr
+      - name: pcr31
+        byte_offset: 0xfc
+        fieldset: port::Pcr

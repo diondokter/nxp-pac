@@ -1,3 +1,3 @@
 transforms:
   - !DeleteEnums
-    from: ostimer0::vals::OstimerIntena
+    from: ostimer0::OstimerIntena

@@ -4,9 +4,9 @@ transforms:
     from: ent0
 
   - !Rename
-    from: trng0::regs::Ent0
-    to: trng0::regs::Ent
+    from: trng0::Ent0
+    to: trng0::Ent
     type: Fieldset
 
   - !DeleteEnums
-    from: trng0::vals::(IntMaskHwErr|IntMaskIntgFlt|IntStatusFrqCtFail|IntStatusHwErr|IntStatusIntgFlt|LocalEdc|LocalEdcClr|NoPrgm|RedFsm|RedFsmClr|RedSigs|RedSigsClr|IntMaskFrqCtFail|IntMaskEntVal|IntCtrlIntgFlt|IntCtrlHwErr|IntCtrlFrqCtFail|IntCtrlEntVal|BusEdcClr|BusEdc)
+    from: trng0::(IntMaskHwErr|IntMaskIntgFlt|IntStatusFrqCtFail|IntStatusHwErr|IntStatusIntgFlt|LocalEdc|LocalEdcClr|NoPrgm|RedFsm|RedFsmClr|RedSigs|RedSigsClr|IntMaskFrqCtFail|IntMaskEntVal|IntCtrlIntgFlt|IntCtrlHwErr|IntCtrlFrqCtFail|IntCtrlEntVal|BusEdcClr|BusEdc)

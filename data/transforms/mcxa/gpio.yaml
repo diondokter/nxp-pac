@@ -11,44 +11,44 @@ transforms:
     type: All
 
   - !DeleteEnums
-    from: gpio::vals::(Ptto|Pdi|Pdo)(\d+)
+    from: gpio::(Ptto|Pdi|Pdo)(\d+)
 
   - !MergeEnums
-    from: gpio::vals::(Pdd|Pid|Ptso|Ptco)(\d+)
-    to: gpio::vals::$1
-  
+    from: gpio::(Pdd|Pid|Ptso|Ptco)(\d+)
+    to: gpio::$1
+
   - !MakeFieldArray
-    fieldsets: gpio::regs::Pddr
+    fieldsets: gpio::Pddr
     from: pdd(\d+)
     to: pdd
 
   - !MakeFieldArray
-    fieldsets: gpio::regs::Pidr
+    fieldsets: gpio::Pidr
     from: pid(\d+)
     to: pid
-  
+
   - !MakeFieldArray
-    fieldsets: gpio::regs::Psor
+    fieldsets: gpio::Psor
     from: ptso(\d+)
     to: ptso
 
   - !MakeFieldArray
-    fieldsets: gpio::regs::Pcor
+    fieldsets: gpio::Pcor
     from: ptco(\d+)
     to: ptco
-  
+
   - !MakeFieldArray
-    fieldsets: gpio::regs::Ptor
+    fieldsets: gpio::Ptor
     from: ptto(\d+)
     to: ptto
-  
+
   - !MakeFieldArray
-    fieldsets: gpio::regs::Pdir
+    fieldsets: gpio::Pdir
     from: pdi(\d+)
     to: pdi
 
   - !MakeFieldArray
-    fieldsets: gpio::regs::Pdor
+    fieldsets: gpio::Pdor
     from: pdo(\d+)
     to: pdo
 
@@ -58,5 +58,5 @@ transforms:
     to: isfr
 
   - !MergeFieldsets
-    from: gpio::regs::Isfr\d
-    to: gpio::regs::Isfr
+    from: gpio::Isfr\d
+    to: gpio::Isfr
