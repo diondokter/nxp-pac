@@ -23,6 +23,7 @@ read-dir-all = "1.0.0"
 indexmap = { version = "2.13.0", features = ["serde"] }
 inflections = "1.1"
 regex = "1.12"
+serde_yaml = "=0.9.34-deprecated"
 
-chiptool = { git = "https://github.com/embassy-rs/chiptool.git", rev = "fe4d3b069d778b9e1872759b78be6e569745464d" }
+chiptool = { git = "https://github.com/embassy-rs/chiptool.git", rev = "e32df6ff54b4520692452e6f4432039336be40a6" }
 

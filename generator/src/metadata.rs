@@ -1,12 +1,7 @@
-use std::{
-    fmt::Write,
-    fs,
-    path::{Path, PathBuf},
-    str::FromStr,
-};
+use std::{fmt::Write, fs, path::Path};
 
 use anyhow::{Context, anyhow, bail};
-use chiptool::commands::{ExtractShared, extract_all::ExtractAll, transform::Transform};
+use chiptool::commands::{ExtractShared, extract_all::ExtractAll};
 use indexmap::IndexMap;
 use proc_macro2::{Literal, TokenStream};
 use quote::quote;
@@ -374,12 +369,21 @@ pub fn extract_peripherals(
             .and_then(|c| c.get(1))
             .ok_or_else(|| anyhow!("Failed strip namespace from filename {:?}", &entry))?;
 
-        chiptool::commands::transform::transform(Transform {
-            input: entry.path(),
-            output: output_dir.join(format!("{}.yaml", name.as_str().to_uppercase())),
-            transform: PathBuf::from_str("data/transforms/remove-namespace.yaml")?,
-        })
-        .with_context(|| format!("Error generating peripheral yamls for {core}"))?;
+        let from: chiptool::transform::common::RegexSet = serde_yaml::from_str("(.*)::(.+)")?;
+
+        let mut ir: chiptool::ir::IR = serde_yaml::from_reader(fs::File::open(entry.path())?)?;
+        chiptool::transform::rename::Rename {
+            from,
+            to: "$2".to_string(),
+            r#type: chiptool::transform::rename::RenameType::All,
+        }
+        .run(&mut ir)?;
+
+        let data = serde_yaml::to_string(&ir)?;
+        fs::write(
+            output_dir.join(format!("{}.yaml", name.as_str().to_uppercase())),
+            data.as_bytes(),
+        )?;
     }
 
     let svd_contents = fs::read_to_string(svd).context("Read SVD")?;
