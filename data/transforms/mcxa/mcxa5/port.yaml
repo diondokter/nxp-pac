@@ -1,20 +1,5 @@
 transforms:
-  # Add missing PCR28 ~ PCR31
-  - !AddRegisters
-    block: port0::Port0
-    registers:
-      - name: pcr28
-        byte_offset: 0xf0
-        fieldset: port::Pcr
-
-      - name: pcr29
-        byte_offset: 0xf4
-        fieldset: port::Pcr
-
-      - name: pcr30
-        byte_offset: 0xf8
-        fieldset: port::Pcr
-
-      - name: pcr31
-        byte_offset: 0xfc
-        fieldset: port::Pcr
+  - !Rename
+    from: port::(.*)
+    to: port3::$1
+    type: All

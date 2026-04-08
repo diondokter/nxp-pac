@@ -6,16 +6,16 @@ transforms:
     to: port::Pcr
 
   - !ModifyRegisters
-    blocks: port(\d+)::Port(\d+)
-    registers: pcr(\d+)
+    blocks: port\d+::Port(\d+)
+    registers: pcr\d+
     fieldset: port::Pcr
 
   - !DeleteFieldsets
-    from: port(\d+)::Pcr(\d+)
+    from: port\d+::Pcr\d+
 
   # Roughly merge all port blocks together.
   - !MergeBlocks
-    from: port(\d+)::Port(\d+)
+    from: port\d*::Port\d*
     to: port0::Port0
     main: port0::Port0
     check: Layout
