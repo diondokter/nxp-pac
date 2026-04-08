@@ -82,10 +82,8 @@ fn generate_chip(current_dir: &Path, feature: &ChipDescription) -> anyhow::Resul
             )
             .context("Generating metadata")?;
 
-            if feature.metapac {
-                crate::metapac::generate_core(current_dir, core, metadata)
-                    .context(format!("Assembling metapac for {core}"))?
-            }
+            crate::metapac::generate_core(current_dir, core, metadata)
+                .context(format!("Assembling metapac for {core}"))?
         } else {
             let svd = chip_src_dir.join(core).with_extension("xml");
             debug!("svd path: {:?}", svd);

@@ -22,5 +22,7 @@ tracing-subscriber = { version = "0.3.22", features = ["env-filter"] }
 read-dir-all = "1.0.0"
 indexmap = { version = "2.13.0", features = ["serde"] }
 inflections = "1.1"
+regex = "1.12"
 
-chiptool = { git = "https://github.com/embassy-rs/chiptool.git", rev = "2fd28c5825998008a1a2ab8bab18555c2e314334" }
+chiptool = { git = "https://github.com/embassy-rs/chiptool.git", rev = "fe4d3b069d778b9e1872759b78be6e569745464d" }
+

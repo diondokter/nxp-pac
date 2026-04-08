@@ -5,7 +5,7 @@ use std::{
 };
 
 use anyhow::{Context, bail};
-use chiptool::commands::{GenShared, generate::Generate};
+use chiptool::commands::{GenerateShared, generate::Generate};
 use temp_dir::TempDir;
 
 /// Generates nxp-pac Rust code for non-metapac PACs.
@@ -40,7 +40,9 @@ pub fn generate_core(
     chiptool::commands::generate::generate(Generate {
         svd: svd.canonicalize()?,
         transform: vec![transform.canonicalize()?],
-        gen_shared: GenShared {
+        // Note: would rather use 'Block' but this is what the current (non-metapac) PACs use.
+        namespaces: chiptool::svd2ir::NamespaceMode::BlockWithRegsVals,
+        gen_shared: GenerateShared {
             common_module: None,
             defmt_feature: "defmt".to_string(),
             no_defmt: false,

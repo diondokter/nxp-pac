@@ -1,7 +1,12 @@
-use std::{fmt::Write, fs, path::Path};
+use std::{
+    fmt::Write,
+    fs,
+    path::{Path, PathBuf},
+    str::FromStr,
+};
 
-use anyhow::{Context, bail};
-use chiptool::commands::extract_all::ExtractAll;
+use anyhow::{Context, anyhow, bail};
+use chiptool::commands::{ExtractShared, extract_all::ExtractAll, transform::Transform};
 use indexmap::IndexMap;
 use proc_macro2::{Literal, TokenStream};
 use quote::quote;
@@ -268,7 +273,7 @@ fn generate_metadata(name: &str, metadata: &Metadata) -> TokenStream {
     }
 }
 
-/// Read the metadata, generate the Rust source files for it and return the metadata.
+/// Read the metadata, generate the Rust source files for the metadata file used in build.rs and return the metadata.
 pub fn generate(chips_dir: &Path, metadata: &Path, core: &str) -> anyhow::Result<Metadata> {
     let metadata = fs::read_to_string(metadata).context("Read metadata")?;
     let metadata = serde_json::from_str::<Metadata>(&metadata).context("Deserialize metadata")?;
@@ -301,41 +306,82 @@ pub struct BlockPath {
 pub fn extract_peripherals(
     svd: &Path,
     core: &str,
-    transforms_dir: &Path,
+    transforms_dir: Option<&Path>,
     output_dir: &Path,
 ) -> Result<(), anyhow::Error> {
     use std::fmt::Write;
 
-    let transform = transforms_dir
-        .join(core.to_lowercase())
-        .with_extension("yaml");
+    let transform_path =
+        transforms_dir.map(|path| path.join(core.to_lowercase()).with_extension("yaml"));
 
-    if !fs::exists(&transform).context("checking transform existance")? {
-        bail!(
-            "transform {} for core \"{}\" does not exist?",
-            transform.display(),
-            core.to_lowercase()
-        );
-    }
+    let transform = if let Some(transform_path) = transform_path {
+        if !fs::exists(&transform_path).context("checking transform existance")? {
+            bail!(
+                "transform {} for core \"{}\" does not exist?",
+                transform_path.display(),
+                core.to_lowercase()
+            );
+        }
+        vec![transform_path.canonicalize()?]
+    } else {
+        vec![]
+    };
 
     if !fs::exists(output_dir).context("checking output directory existance")? {
         fs::create_dir(output_dir)
             .with_context(|| format!("creating output directory {}", output_dir.display()))?;
     }
-    for file in fs::read_dir(output_dir).context("reading raw peripherals dir")? {
-        let file = file?;
-        if file.file_name().to_string_lossy() != ".gitignore" {
-            fs::remove_file(file.path())
-                .with_context(|| format!("removing {}", file.path().display()))?;
+
+    for entry in fs::read_dir(output_dir).context("reading raw peripherals dir")? {
+        let entry = entry?;
+        if entry.file_name().to_string_lossy() != ".gitignore" {
+            if entry.file_type()?.is_dir() {
+                fs::remove_dir_all(entry.path())
+                    .with_context(|| format!("removing {}", entry.path().display()))?;
+            } else {
+                fs::remove_file(entry.path())
+                    .with_context(|| format!("removing {}", entry.path().display()))?;
+            }
         }
     }
 
+    let original_dir = &output_dir.join("original");
+
+    if !fs::exists(original_dir).context("checking output original subdirectory existance")? {
+        fs::create_dir(original_dir).with_context(|| {
+            format!("creating original subdirectory {}", original_dir.display())
+        })?;
+    }
+
     chiptool::commands::extract_all::extract_all(ExtractAll {
-        svd: svd.canonicalize()?,
-        output: output_dir.canonicalize()?,
-        transform: Some(vec![transform.canonicalize()?]),
+        output: original_dir.canonicalize()?,
+        extract_shared: ExtractShared {
+            svd: svd.canonicalize()?,
+            transform,
+            namespaces: chiptool::svd2ir::NamespaceMode::Block,
+        },
+        mode: chiptool::commands::extract_all::ExtractionMode::Block,
     })
     .with_context(|| format!("Error generating peripheral yamls for {core}"))?;
+
+    let path_regex = regex::Regex::new("^(.+)::.+$")?;
+    for entry in fs::read_dir(original_dir).context("reading original subdir")? {
+        let entry = entry?;
+
+        let filename: String = entry.file_name().to_string_lossy().into_owned();
+        let name = path_regex
+            .captures(&filename)
+            .map(|c| c.get(1))
+            .flatten()
+            .ok_or_else(|| anyhow!("Failed strip namespace from filename {:?}", &entry))?;
+
+        chiptool::commands::transform::transform(Transform {
+            input: entry.path(),
+            output: output_dir.join(format!("{}.yaml", name.as_str().to_uppercase())),
+            transform: PathBuf::from_str("data/transforms/remove-namespace.yaml")?,
+        })
+        .with_context(|| format!("Error generating peripheral yamls for {core}"))?;
+    }
 
     let svd_contents = fs::read_to_string(svd).context("Read SVD")?;
     let svd = svd_parser::parse(&svd_contents).context("Parse SVD")?;

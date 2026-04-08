@@ -1,0 +1,5 @@
+transforms:
+  - !Rename
+    from: (.*)::(.+)
+    to: $2
+    type: All

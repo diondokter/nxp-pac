@@ -1,7 +1,7 @@
 use std::{collections::HashSet, fs, path::Path, str::FromStr};
 
 use anyhow::Context;
-use chiptool::commands::{GenShared, ModulePath, gen_block::GenBlock, gen_common::GenCommon};
+use chiptool::commands::{GenerateShared, ModulePath, gen_block::GenBlock, gen_common::GenCommon};
 use indexmap::IndexSet;
 use proc_macro2::{Ident, Literal, Span, TokenStream};
 use quote::quote;
@@ -54,7 +54,7 @@ pub fn generate_meta_peripherals(current: &Path) -> anyhow::Result<()> {
                     .canonicalize()
                     .context("Canonicalizing entry path")?,
                 output: output_path.clone(),
-                gen_shared: GenShared {
+                gen_shared: GenerateShared {
                     common_module: Some(ModulePath::from_str("crate::pac::common")?),
                     defmt_feature: "defmt".to_string(),
                     no_defmt: false,
