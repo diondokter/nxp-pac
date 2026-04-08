@@ -63,12 +63,7 @@ fn extract_chip(
                 .join(core)
         });
 
-        crate::metadata::extract_peripherals(
-            &svd,
-            core,
-            transforms_dir.as_ref().map(|path| path.as_path()),
-            &output_dir,
-        )?;
+        crate::metadata::extract_peripherals(&svd, core, transforms_dir.as_deref(), &output_dir)?;
     }
 
     Ok(())

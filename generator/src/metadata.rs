@@ -371,8 +371,7 @@ pub fn extract_peripherals(
         let filename: String = entry.file_name().to_string_lossy().into_owned();
         let name = path_regex
             .captures(&filename)
-            .map(|c| c.get(1))
-            .flatten()
+            .and_then(|c| c.get(1))
             .ok_or_else(|| anyhow!("Failed strip namespace from filename {:?}", &entry))?;
 
         chiptool::commands::transform::transform(Transform {
