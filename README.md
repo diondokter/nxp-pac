@@ -15,7 +15,19 @@ generate the nxp-pac crate. This data is used by the code generation tool.
 
 The `generator` directory contains the code generation tool for generating the code in the `nxp-pac` crate.
 If you want change the way the `nxp-pac` crate is generated please see this directory.
-Run it using `cargo run -p generator -- <CHIP>`.
+Run it using `cargo run -p generator -- -h`.
+
+```
+Usage: generator <COMMAND>
+
+Commands:
+  generate  Generate the nxp-pac Rust code for a single chip or all the chips
+  extract   Extract all metadata information from the SVD and apply any transforms
+  help      Print this message or the help of the given subcommand(s)
+
+Options:
+  -h, --help  Print help
+```
 
 The `nxp-pac` directory contains the nxp-pac crate. If you are looking for a peripheral access crate for
 an NXP microcontroller, please see this directory. You should never need to manually edit the source
