@@ -8410,6 +8410,7 @@
     {
       "name": "SGI0",
       "address": "0x400EB000",
+      "block": "mcxa/SGI",
       "signals": [],
       "dma_muxing": [
         {
