@@ -11,11 +11,12 @@ pub struct Extract {
     /// One of the encoded chip names.
     #[clap(required = true)]
     pub chip: String,
+    /// Do not run the configured transforms.
     #[clap(long)]
     pub skip_transforms: bool,
     /// Output directory of the metadata.
-    #[clap(short, long)]
-    pub output: Option<PathBuf>,
+    #[clap(short, long, default_value = "./data/metadata/peripherals/raw")]
+    pub output: PathBuf,
 }
 
 /// Command to extract all metadata information from a single SVD.
@@ -32,7 +33,7 @@ pub fn extract(extract: Extract) -> Result<()> {
 
 fn extract_chip(
     chip_description: &ChipDescription,
-    output: Option<PathBuf>,
+    output: PathBuf,
     skip_transforms: bool,
 ) -> Result<()> {
     let current_dir = env::current_dir()?;
@@ -54,16 +55,12 @@ fn extract_chip(
             Some(transforms_dir)
         };
 
-        let output_dir = output.clone().unwrap_or_else(|| {
-            current_dir
-                .join("data")
-                .join("metadata")
-                .join("peripherals")
-                .join("raw")
-                .join(core)
-        });
-
-        crate::metadata::extract_peripherals(&svd, core, transforms_dir.as_deref(), &output_dir)?;
+        crate::metadata::extract_peripherals(
+            &svd,
+            core,
+            transforms_dir.as_deref(),
+            &output.join(core).canonicalize()?,
+        )?;
     }
 
     Ok(())
