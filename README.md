@@ -8,28 +8,38 @@ If you want to regenerate the pac, you need to clone with `--recursive`.
 
 If you forgot this, you can use `git submodule update --checkout --init` to fetch the submodules.
 
+## PAC vs MetaPAC
+
+This crate is in transition from generating the PAC from the NXP provided SVD files, to a metapac approach where the SVD is only used to extract general peripheral definition files.
+A metapac definition file then specifies which peripherals are included in the chip.
+This is very useful when a vendor has used similar peripheral IPs across their portfolio.
+This allows HAL authors to write drivers for these peripheral IPs, instead of having to copy-paste them for each supported chipset.
+
+Because the crate is in transition, some of them use the PAC method, and some of them are part of the metapac.
+
+## Supported chips
+
+| Chip | Type |
+|------|------|
+| MIMXRT1011 | PAC |
+| MIMXRT1062 | PAC |
+| MIMXRT1064 | PAC |
+| MIMXRT685S | PAC |
+| LPC55S16 | PAC |
+| LPC55S69 | PAC |
+| MCXN947 | PAC |
+| MCXA256 | MetaPAC |
+| MCXA577 | MetaPAC |
+
 ## Tour
 
-The `data` directory contains the SVD files, board metadata, and chiptool transformations needed to
+The [`data`](/data) directory contains the SVD files, board metadata, and chiptool transformations needed to
 generate the nxp-pac crate. This data is used by the code generation tool.
 
-The `generator` directory contains the code generation tool for generating the code in the `nxp-pac` crate.
-If you want change the way the `nxp-pac` crate is generated please see this directory.
-Run it using `cargo run -p generator -- -h`.
+The [`generator`](/generator) directory contains the code generation tool for generating the code in the [`nxp-pac`](/nxp-pac) crate.
+If you want change the way the [`nxp-pac`](/nxp-pac) crate is generated please see this directory.
 
-```
-Usage: generator <COMMAND>
-
-Commands:
-  generate  Generate the nxp-pac Rust code for a single chip or all the chips
-  extract   Extract all metadata information from the SVD and apply any transforms
-  help      Print this message or the help of the given subcommand(s)
-
-Options:
-  -h, --help  Print help
-```
-
-The `nxp-pac` directory contains the nxp-pac crate. If you are looking for a peripheral access crate for
+The [`nxp-pac`](/nxp-pac) directory contains the nxp-pac crate. If you are looking for a peripheral access crate for
 an NXP microcontroller, please see this directory. You should never need to manually edit the source
 code in this directory. The metadata will need to be updated to support new microcontrollers.
 
