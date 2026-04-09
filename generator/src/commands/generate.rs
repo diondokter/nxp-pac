@@ -12,8 +12,7 @@ use crate::{CHIPS, ChipDescription};
 /// Will apply any transforms defined for the chips that are pre-metapac.
 #[derive(Parser)]
 pub struct Generate {
-    /// Select a single chip.
-    #[clap(long)]
+    /// Select a single chip, or all chips if not provided.
     pub chip: Option<String>,
 }
 
