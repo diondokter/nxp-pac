@@ -19,12 +19,7 @@ pub struct Generate {
 /// Command to generate the nxp-pac Rust code for one or all of the chips.
 pub fn generate(args: Generate) -> anyhow::Result<()> {
     let chips = if let Some(chip_name) = args.chip {
-        let chip = CHIPS
-            .iter()
-            .find(|feature| feature.chip == chip_name)
-            .context("selected chip does not exist in generate list")?;
-
-        vec![chip]
+        vec![crate::commands::select_chip(&chip_name)?]
     } else {
         CHIPS.iter().collect()
     };

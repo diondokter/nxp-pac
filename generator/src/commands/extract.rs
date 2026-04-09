@@ -1,14 +1,14 @@
-use anyhow::{Context, Result};
+use anyhow::Result;
 use clap::Parser;
 use std::{env, path::PathBuf};
 use tracing::*;
 
-use crate::ChipDescription;
+use crate::{ChipDescription, commands::select_chip};
 
 /// Extract all metadata information from the SVD and apply any transforms.
 #[derive(Parser)]
 pub struct Extract {
-    /// One of the encoded chip names.
+    /// Chip name to extract the SVD data for.
     #[clap(required = true)]
     pub chip: String,
     /// Do not run the configured transforms.
@@ -23,12 +23,11 @@ pub struct Extract {
 ///
 /// Applies any transforms automagically.
 pub fn extract(extract: Extract) -> Result<()> {
-    let chip = crate::CHIPS
-        .iter()
-        .find(|chip_description| chip_description.chip == extract.chip)
-        .context("selected chip does not exist in generate list")?;
-
-    extract_chip(chip, extract.output, extract.skip_transforms)
+    extract_chip(
+        select_chip(&extract.chip)?,
+        extract.output,
+        extract.skip_transforms,
+    )
 }
 
 fn extract_chip(
