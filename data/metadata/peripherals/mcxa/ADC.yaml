@@ -100,7 +100,7 @@ block/Adc:
   - name: cal_gar
     description: Calibration General A-Side Registers.
     array:
-      len: 34
+      len: 33
       stride: 4
     byte_offset: 1024
     fieldset: CalGar
@@ -108,6 +108,10 @@ block/Adc:
     description: Configuration 2 Register.
     byte_offset: 4088
     fieldset: Cfg2
+  - name: tst
+    description: ADC Test Register.
+    byte_offset: 4092
+    fieldset: Tst
 fieldset/CalGar:
   description: Calibration General A-Side Registers.
   fields:
@@ -157,6 +161,21 @@ fieldset/Cfg:
 fieldset/Cfg2:
   description: Configuration 2 Register.
   fields:
+  - name: as_settle
+    description: Async SAR settling delay.
+    bit_offset: 0
+    bit_size: 2
+    enum: AsSettle
+  - name: as_lto
+    description: Async SAR latch time out delay.
+    bit_offset: 2
+    bit_size: 2
+    enum: AsLto
+  - name: noise_cancel
+    description: Noise cancellation delay selection.
+    bit_offset: 4
+    bit_size: 2
+    enum: NoiseCancel
   - name: jleft
     description: Justified Left Enable register.
     bit_offset: 8
@@ -227,6 +246,15 @@ fieldset/Cmdl:
     bit_offset: 7
     bit_size: 1
     enum: Mode
+  - name: altb_adch
+    description: Alternate Channel B Input Channel Select.
+    bit_offset: 16
+    bit_size: 5
+    enum: AltbAdch
+  - name: altben
+    description: Alternate Channel B Select Enable.
+    bit_offset: 21
+    bit_size: 1
 fieldset/Ctrl:
   description: Control Register.
   fields:
@@ -494,6 +522,30 @@ fieldset/Tctrl:
     bit_offset: 24
     bit_size: 3
     enum: Tcmd
+fieldset/Tst:
+  description: ADC Test Register.
+  fields:
+  - name: cst_long
+    description: Calibration Sample Time Long.
+    bit_offset: 0
+    bit_size: 1
+    enum: CstLong
+  - name: foffp
+    description: Force P-side positive offset.
+    bit_offset: 9
+    bit_size: 1
+  - name: foffp2
+    description: Force P-side negative offset.
+    bit_offset: 11
+    bit_size: 1
+  - name: ipp_do_en
+    description: Enable FIFO Data out to Pin.
+    bit_offset: 22
+    bit_size: 1
+  - name: testen
+    description: Enable test configuration.
+    bit_offset: 23
+    bit_size: 1
 fieldset/Tstat:
   description: Trigger Status Register.
   fields:
@@ -572,6 +624,75 @@ enum/AdcActive:
   - name: BUSY
     description: The ADC is processing a conversion, running through the power up delay, or servicing a trigger.
     value: 1
+enum/AltbAdch:
+  bit_size: 5
+  variants:
+  - name: SELECT_CH0B
+    description: Select CH0B.
+    value: 0
+  - name: SELECT_CH1B
+    description: Select CH1B.
+    value: 1
+  - name: SELECT_CH2B
+    description: Select CH2B.
+    value: 2
+  - name: SELECT_CH3B
+    description: Select CH3B.
+    value: 3
+  - name: SELECT_CORRESPONDING_CHN_B_4
+    description: Select corresponding channel CHnB.
+    value: 4
+  - name: SELECT_CORRESPONDING_CHN_B_5
+    description: Select corresponding channel CHnB.
+    value: 5
+  - name: SELECT_CORRESPONDING_CHN_B_6
+    description: Select corresponding channel CHnB.
+    value: 6
+  - name: SELECT_CORRESPONDING_CHN_B_7
+    description: Select corresponding channel CHnB.
+    value: 7
+  - name: SELECT_CORRESPONDING_CHN_B_8
+    description: Select corresponding channel CHnB.
+    value: 8
+  - name: SELECT_CORRESPONDING_CHN_B_9
+    description: Select corresponding channel CHnB.
+    value: 9
+  - name: SELECT_CH30B
+    description: Select CH30B.
+    value: 30
+  - name: SELECT_CH31B
+    description: Select CH31B.
+    value: 31
+enum/AsLto:
+  bit_size: 2
+  variants:
+  - name: SHORTEST_DELAY
+    description: Shortest delay.
+    value: 0
+  - name: MID1_DELAY
+    description: Mid 1 delay.
+    value: 1
+  - name: MID2_DELAY
+    description: Mid 2 delay.
+    value: 2
+  - name: LONGEST_DELAY
+    description: Longest delay.
+    value: 3
+enum/AsSettle:
+  bit_size: 2
+  variants:
+  - name: SHORTEST_DELAY
+    description: Shortest delay.
+    value: 0
+  - name: MID1_DELAY
+    description: Mid 1 delay.
+    value: 1
+  - name: MID2_DELAY
+    description: Mid 2 delay.
+    value: 2
+  - name: LONGEST_DELAY
+    description: Longest delay.
+    value: 3
 enum/Avgs:
   bit_size: 4
   variants:
@@ -755,6 +876,15 @@ enum/Cmpen:
   - name: COMPARE_RESULT_KEEP_CONVERTING_UNTIL_TRUE_STORE_IF_TRUE
     description: Compare enabled. Repeat channel acquisition (sample/convert/compare) until true.
     value: 3
+enum/CstLong:
+  bit_size: 1
+  variants:
+  - name: SAMPLE_3P5
+    description: Normal sample time. Minimum sample time of 3.5 ADCK cycles.
+    value: 0
+  - name: SAMPLE_67P5
+    description: Increased sample time. 67.5 ADCK cycles total sample time.
+    value: 1
 enum/Csw:
   bit_size: 3
   variants:
@@ -843,10 +973,10 @@ enum/Hsextra:
   bit_size: 1
   variants:
   - name: HSEXTRA_0
-    description: No extra cycle added.
+    description: No extra cycle added. Allow 2 ADCK cycles for async SAR operation.
     value: 0
   - name: HSEXTRA_1
-    description: Extra cycle added.
+    description: Extra cycle added. Allow 3 ADCK cycles for async SAR operation.
     value: 1
 enum/Iadcki:
   bit_size: 1
@@ -974,6 +1104,21 @@ enum/Next:
   - name: DO_CMD7_NEXT
     description: Select CMD7 command buffer register as next command.
     value: 7
+enum/NoiseCancel:
+  bit_size: 2
+  variants:
+  - name: DISABLED
+    description: Noise cancelling disabled.
+    value: 0
+  - name: SHORT_DELAY
+    description: Shortest delay.
+    value: 1
+  - name: MID_DELAY
+    description: Mid delay.
+    value: 2
+  - name: LONGEST_DELAY
+    description: Longest delay.
+    value: 3
 enum/NumFifo:
   bit_size: 3
   variants:

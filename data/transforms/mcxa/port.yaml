@@ -47,20 +47,20 @@ transforms:
   - !AddEnumVariants
     enum: port::Mux
     variants:
-      - { name: MUX0, value: 0 }
-      - { name: MUX1, value: 1 }
-      - { name: MUX2, value: 2 }
-      - { name: MUX3, value: 3 }
-      - { name: MUX4, value: 4 }
-      - { name: MUX5, value: 5 }
-      - { name: MUX6, value: 6 }
-      - { name: MUX7, value: 7 }
-      - { name: MUX8, value: 8 }
-      - { name: MUX9, value: 9 }
-      - { name: MUX10, value: 10 }
-      - { name: MUX11, value: 11 }
-      - { name: MUX12, value: 12 }
-      - { name: MUX13, value: 13 }
+      - { name: Mux0, value: 0 }
+      - { name: Mux1, value: 1 }
+      - { name: Mux2, value: 2 }
+      - { name: Mux3, value: 3 }
+      - { name: Mux4, value: 4 }
+      - { name: Mux5, value: 5 }
+      - { name: Mux6, value: 6 }
+      - { name: Mux7, value: 7 }
+      - { name: Mux8, value: 8 }
+      - { name: Mux9, value: 9 }
+      - { name: Mux10, value: 10 }
+      - { name: Mux11, value: 11 }
+      - { name: Mux12, value: 12 }
+      - { name: Mux13, value: 13 }
 
   - !MergeEnums
     from: port::Gpwe\d+

@@ -35,4 +35,3 @@ includes:
   - remove-suffix.yaml
 transforms:
   - !Sort
-

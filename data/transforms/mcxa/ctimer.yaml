@@ -1,17 +1,17 @@
 transforms:
+  # Fix badly OCR'd typo
   - !RenameEnumVariants
-    enum: ctimer::([A-Za-z]+)(\d+)(.+)
-    from: ([A-Z]+)[0-9O]([A-Z]+)_([0-9])
-    to: $1$2$3
+    enum: ctimer::Mr[0-9](.+)
+    from: Mris([0-9])
+    to: Mr1S$1
 
   - !RenameEnumVariants
-    enum: ctimer::Mr[0-9]s
-    from: ([A-Z_]+)([0-9])
-    to: MRS$2
+    enum: ctimer::Mr[0-9](.+)
+    from: Mr[0-9]([A-Za-z_]+[0-9])
+    to: Mr$1
 
-  - !MergeEnums
-    from: ctimer::Cap(\d+)(.+)
-    to: ctimer::Cap$2
+  - !DeleteEnums
+    from: ctimer::Cap\d+(.+)
     skip_unmergeable: false
 
   - !MergeEnums
@@ -25,22 +25,22 @@ transforms:
     skip_unmergeable: false
 
   - !MergeEnums
-    from: ctimer::Mr(\d+)i
-    to: ctimer::Mri
+    from: ctimer::Mr(\d+)I
+    to: ctimer::MrI
     skip_unmergeable: false
 
   - !MergeEnums
-    from: ctimer::Mr(\d+)r
+    from: ctimer::Mr(\d+)R
     to: ctimer::Mrr
     skip_unmergeable: false
 
   - !MergeEnums
-    from: ctimer::Mr(\d+)rl
+    from: ctimer::Mr(\d+)Rl
     to: ctimer::Mrrl
     skip_unmergeable: false
 
   - !MergeEnums
-    from: ctimer::Mr(\d+)s
+    from: ctimer::Mr(\d+)S
     to: ctimer::Mrs
     skip_unmergeable: false
 
