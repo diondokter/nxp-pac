@@ -111,7 +111,7 @@ block/Trng:
     description: Statistical Check Run Length 6+ Count Register.
     byte_offset: 56
     access: Read
-    fieldset: SCr6pc
+    fieldset: Scr6pc
   - name: scr6pl
     description: Statistical Check Run Length 6+ Limit Register.
     byte_offset: 56
