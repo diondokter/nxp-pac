@@ -65,13 +65,13 @@ fn generate_chip(current_dir: &Path, feature: &ChipDescription) -> anyhow::Resul
         let chips_dir = pac_dir.join("src").join("chips");
 
         if feature.metapac {
-            if feature.metadata.is_empty() {
+            let Some(metadata_file) = feature.metadata else {
                 bail!("Metadata should not be empty when using metapac");
-            }
+            };
 
             let metadata = crate::metadata::generate(
                 &chips_dir,
-                &metadata_dir.join(feature.metadata).with_extension("json"),
+                &metadata_dir.join(metadata_file).with_extension("json"),
                 core,
             )
             .context("Generating metadata")?;
