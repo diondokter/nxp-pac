@@ -240,6 +240,7 @@ pub const PORT3: port::Port = unsafe { port::Port::from_ptr(0x400BF000 as _) };
 pub const PORT4: port::Port = unsafe { port::Port::from_ptr(0x400C0000 as _) };
 pub const RTC0: rtc2xx::Rtc = unsafe { rtc2xx::Rtc::from_ptr(0x400EE000 as _) };
 pub const SCG0: scg::Scg = unsafe { scg::Scg::from_ptr(0x4008F000 as _) };
+pub const SGI0: sgi::Sgi = unsafe { sgi::Sgi::from_ptr(0x400EB000 as _) };
 pub const SPC0: spc::Spc = unsafe { spc::Spc::from_ptr(0x40090000 as _) };
 pub const SYSCON: syscon::Syscon = unsafe { syscon::Syscon::from_ptr(0x40091000 as _) };
 pub const TRNG0: trng::Trng = unsafe { trng::Trng::from_ptr(0x400EC000 as _) };
@@ -288,6 +289,8 @@ pub mod port;
 pub mod rtc2xx;
 #[path = "../../meta_peripherals/mcxa/SCG.rs"]
 pub mod scg;
+#[path = "../../meta_peripherals/mcxa/SGI.rs"]
+pub mod sgi;
 #[path = "../../meta_peripherals/mcxa/SPC.rs"]
 pub mod spc;
 #[path = "../../meta_peripherals/mcxa/SYSCON2xx.rs"]

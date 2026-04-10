@@ -8412,7 +8412,7 @@ pub const PERIPHERALS: &[Peripheral] = &[
     Peripheral {
         name: "SGI0",
         address: 0x400EB000,
-        driver_name: "mcxa/SGI0",
+        driver_name: "mcxa/SGI",
         signals: &[],
         flexcomm: None,
         dma_muxing: &[
