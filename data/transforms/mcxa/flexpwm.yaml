@@ -1,12 +1,12 @@
 transforms:
   # Fix names of sm*sel(23|45) enum variants such that they overlap
   - !RenameEnumVariants
-    enum: flexpwm::Sm\d+Sel\d+
-    from: (.*)Sm\d+(Pwm|Out)\d+
+    enum: flexpwm::Sm\d+sel\d+
+    from: (.*)Sm\d+(pwm|out)\d+
     to: $1$2
 
   - !RenameEnumVariants
-    enum: flexpwm::Sm\d+Sel\d+
+    enum: flexpwm::Sm\d+sel\d+
     from: Pwm\d+Exta
     to: PwmExta
 
