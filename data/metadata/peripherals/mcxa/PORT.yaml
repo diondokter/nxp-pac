@@ -1,5 +1,5 @@
 block/Port:
-  description: PORT.
+  description: Port Control.
   items:
   - name: verid
     description: Version ID.
@@ -18,14 +18,6 @@ block/Port:
     description: Configuration.
     byte_offset: 32
     fieldset: Config
-  - name: calib0
-    description: Calibration 0.
-    byte_offset: 96
-    fieldset: Calib0
-  - name: calib1
-    description: Calibration 1.
-    byte_offset: 100
-    fieldset: Calib1
   - name: pcr
     description: Pin Control 0.
     array:
@@ -33,28 +25,6 @@ block/Port:
       stride: 4
     byte_offset: 128
     fieldset: Pcr
-fieldset/Calib0:
-  description: Calibration 0.
-  fields:
-  - name: ncal
-    description: Calibration of NMOS Output Driver.
-    bit_offset: 0
-    bit_size: 6
-  - name: pcal
-    description: Calibration of PMOS Output Driver.
-    bit_offset: 16
-    bit_size: 6
-fieldset/Calib1:
-  description: Calibration 1.
-  fields:
-  - name: ncal
-    description: Calibration of NMOS Output Driver.
-    bit_offset: 0
-    bit_size: 6
-  - name: pcal
-    description: Calibration of PMOS Output Driver.
-    bit_offset: 16
-    bit_size: 6
 fieldset/Config:
   description: Configuration.
   fields:
@@ -120,7 +90,6 @@ fieldset/Pcr:
     description: Drive Strength Enable.
     bit_offset: 6
     bit_size: 1
-    enum: Dse
   - name: mux
     description: Pin Multiplex Control.
     bit_offset: 8
@@ -157,130 +126,121 @@ fieldset/Verid:
     description: Major Version Number.
     bit_offset: 24
     bit_size: 8
-enum/Dse:
-  bit_size: 1
-  variants:
-  - name: DSE0
-    description: Low.
-    value: 0
-  - name: DSE1
-    description: High.
-    value: 1
 enum/Feature:
   bit_size: 16
   variants:
-  - name: FEATURE0
+  - name: Feature0
     description: Basic implementation.
     value: 0
 enum/Gpwe:
   bit_size: 1
   variants:
-  - name: GPWE0
+  - name: Gpwe0
     description: Not updated.
     value: 0
-  - name: GPWE1
+  - name: Gpwe1
     description: Updated.
     value: 1
 enum/Ibe:
   bit_size: 1
   variants:
-  - name: IBE0
+  - name: Ibe0
     description: Disables.
     value: 0
-  - name: IBE1
+  - name: Ibe1
     description: Enables.
     value: 1
 enum/Inv:
   bit_size: 1
   variants:
-  - name: INV0
+  - name: Inv0
     description: Does not invert.
     value: 0
-  - name: INV1
+  - name: Inv1
     description: Inverts.
     value: 1
 enum/Lk:
   bit_size: 1
   variants:
-  - name: LK0
+  - name: Lk0
     description: Does not lock.
     value: 0
-  - name: LK1
+  - name: Lk1
     description: Locks.
     value: 1
 enum/Mux:
   bit_size: 4
   variants:
-  - name: MUX0
+  - name: Mux0
     value: 0
-  - name: MUX1
+  - name: Mux1
     value: 1
-  - name: MUX2
+  - name: Mux2
     value: 2
-  - name: MUX3
+  - name: Mux3
     value: 3
-  - name: MUX4
+  - name: Mux4
     value: 4
-  - name: MUX5
+  - name: Mux5
     value: 5
-  - name: MUX6
+  - name: Mux6
     value: 6
-  - name: MUX7
+  - name: Mux7
     value: 7
-  - name: MUX8
+  - name: Mux8
     value: 8
-  - name: MUX9
+  - name: Mux9
     value: 9
-  - name: MUX10
+  - name: Mux10
     value: 10
-  - name: MUX11
+  - name: Mux11
     value: 11
-  - name: MUX12
+  - name: Mux12
     value: 12
-  - name: MUX13
+  - name: Mux13
     value: 13
 enum/Ode:
   bit_size: 1
   variants:
-  - name: ODE0
+  - name: Ode0
     description: Disables.
     value: 0
-  - name: ODE1
+  - name: Ode1
     description: Enables.
     value: 1
 enum/Pe:
   bit_size: 1
   variants:
-  - name: PE0
+  - name: Pe0
     description: Disables.
     value: 0
-  - name: PE1
+  - name: Pe1
     description: Enables.
     value: 1
 enum/Ps:
   bit_size: 1
   variants:
-  - name: PS0
+  - name: Ps0
     description: Enables internal pulldown resistor.
     value: 0
-  - name: PS1
+  - name: Ps1
     description: Enables internal pullup resistor.
     value: 1
 enum/Range:
   bit_size: 1
   variants:
-  - name: RANGE0
+  - name: Range0
     description: 1.71 V-3.6 V.
     value: 0
-  - name: RANGE1
+  - name: Range1
     description: 2.70 V-3.6 V.
     value: 1
 enum/Sre:
   bit_size: 1
   variants:
-  - name: SRE0
+  - name: Sre0
     description: Fast.
     value: 0
-  - name: SRE1
+  - name: Sre1
     description: Slow.
     value: 1

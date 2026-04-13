@@ -6,38 +6,26 @@ transforms:
     to: port::Pcr
 
   - !ModifyRegisters
-    blocks: port\d+::Port(\d+)
+    blocks: port\d+::Port\d*
     registers: pcr\d+
     fieldset: port::Pcr
 
   - !DeleteFieldsets
     from: port\d+::Pcr\d+
 
-  # Roughly merge all port blocks together.
-  - !MergeBlocks
-    from: port\d*::Port\d*
-    to: port0::Port0
-    main: port0::Port0
-    check: Layout
-
-  - !Rename
-    from: port0::(.*)
-    to: port::$1
-    type: All
-
-  - !Rename
-    from: port::Port0
-    to: port::Port
-    type: Block
-
   # Merge all Mux into the most capable variant of it with bitsize = 4.
-  # Pcr 0, 1 and 7 have a smaller Mux set for ports 0 and 4.
   # In the HAL we will enforce this constraint, but for the PAC this only makes the types more complex.
   - !DeleteEnums
-    from: port::Pcr(\d+)Mux
+    from: port\d+::Pcr(\d+)Mux
+    bit_size: 1
+  - !DeleteEnums
+    from: port\d+::Pcr(\d+)Mux
+    bit_size: 2
+  - !DeleteEnums
+    from: port\d+::Pcr(\d+)Mux
     bit_size: 3
   - !MergeEnums
-    from: port::Pcr(\d+)Mux
+    from: port\d+::Pcr(\d+)Mux
     to: port::Mux
 
   - !DeleteEnumVariants
@@ -63,6 +51,36 @@ transforms:
       - { name: Mux13, value: 13 }
 
   - !MergeEnums
+    from: port\d+::(.+)
+    to: port::$1
+  
+  - !MergeFieldsets
+    from: port\d+::(.+)
+    to: port::$1
+
+  # For now, delete half-supported drive-strength
+  - !DeleteRegisters
+    block: port\d+::Port\d*
+    from: calib\d+
+
+  # Roughly merge all port blocks together.
+  - !MergeBlocks
+    from: port\d*::Port\d*
+    to: port0::Port0
+    main: port0::Port0
+    check: Layout
+
+  - !Rename
+    from: port0::(.*)
+    to: port::$1
+    type: All
+
+  - !Rename
+    from: port::Port0
+    to: port::Port
+    type: Block
+
+  - !MergeEnums
     from: port::Gpwe\d+
     to: port::Gpwe
 
@@ -73,17 +91,13 @@ transforms:
     from: (dse1|pfe|pv)
 
   - !DeleteEnums
-    from: port::Pcr(\d+)(Dse1|Pfe)
+    from: port::Pcr(\d+)(Dse|Dse1|Pfe)
   - !DeleteEnums
     from: port::Pv
 
   - !MergeEnums
     from: port::Pcr(\d+)(.+)
     to: port::$2
-
-  - !MergeFieldsets
-    from: port::Pcr(\d+)
-    to: port::Pcr
 
   - !MakeRegisterArray
     blocks: port::Port
