@@ -6903,12 +6903,6 @@ pub const PERIPHERALS: &[Peripheral] = &[
                         alt: 10u8,
                         iomuxc_daisy: None,
                     },
-                ],
-                iomuxc_daisy: None,
-            },
-            Signal {
-                name: "SDA1",
-                pins: &[
                     SignalPin {
                         pin: "P1_14",
                         alt: 10u8,
@@ -6919,12 +6913,6 @@ pub const PERIPHERALS: &[Peripheral] = &[
                         alt: 10u8,
                         iomuxc_daisy: None,
                     },
-                ],
-                iomuxc_daisy: None,
-            },
-            Signal {
-                name: "SDA2",
-                pins: &[
                     SignalPin {
                         pin: "P1_19",
                         alt: 10u8,
@@ -6935,12 +6923,6 @@ pub const PERIPHERALS: &[Peripheral] = &[
                         alt: 10u8,
                         iomuxc_daisy: None,
                     },
-                ],
-                iomuxc_daisy: None,
-            },
-            Signal {
-                name: "SDA3",
-                pins: &[
                     SignalPin {
                         pin: "P1_18",
                         alt: 10u8,
