@@ -287,6 +287,22 @@ pub const PINS: &[Pin] = &[
         iomuxc: None,
     },
     Pin {
+        name: "P3_31",
+        iomuxc: None,
+    },
+    Pin {
+        name: "P3_30",
+        iomuxc: None,
+    },
+    Pin {
+        name: "P3_29",
+        iomuxc: None,
+    },
+    Pin {
+        name: "P3_28",
+        iomuxc: None,
+    },
+    Pin {
         name: "P3_27",
         iomuxc: None,
     },
@@ -553,7 +569,7 @@ pub const PERIPHERALS: &[Peripheral] = &[
         dma_muxing: &[],
     },
     Peripheral {
-        name: "10BASE-T1S0",
+        name: "_10BASE_T1S0",
         address: 0x4002D000,
         driver_name: "",
         signals: &[
@@ -6485,6 +6501,42 @@ pub const PERIPHERALS: &[Peripheral] = &[
                 name: "27",
                 pins: &[SignalPin {
                     pin: "P3_27",
+                    alt: 0u8,
+                    iomuxc_daisy: None,
+                }],
+                iomuxc_daisy: None,
+            },
+            Signal {
+                name: "28",
+                pins: &[SignalPin {
+                    pin: "P3_28",
+                    alt: 0u8,
+                    iomuxc_daisy: None,
+                }],
+                iomuxc_daisy: None,
+            },
+            Signal {
+                name: "29",
+                pins: &[SignalPin {
+                    pin: "P3_29",
+                    alt: 0u8,
+                    iomuxc_daisy: None,
+                }],
+                iomuxc_daisy: None,
+            },
+            Signal {
+                name: "30",
+                pins: &[SignalPin {
+                    pin: "P3_30",
+                    alt: 0u8,
+                    iomuxc_daisy: None,
+                }],
+                iomuxc_daisy: None,
+            },
+            Signal {
+                name: "31",
+                pins: &[SignalPin {
+                    pin: "P3_31",
                     alt: 0u8,
                     iomuxc_daisy: None,
                 }],

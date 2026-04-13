@@ -315,6 +315,22 @@
       "supply": "VDD_BAT"
     },
     {
+      "name": "P3_31",
+      "supply": "VDD_P3"
+    },
+    {
+      "name": "P3_30",
+      "supply": "VDD_P3"
+    },
+    {
+      "name": "P3_29",
+      "supply": "VDD_P3"
+    },
+    {
+      "name": "P3_28",
+      "supply": "VDD_P3"
+    },
+    {
       "name": "P3_27",
       "supply": "VDD_P3"
     },
@@ -684,7 +700,7 @@
       "signals": []
     },
     {
-      "name": "10BASE-T1S0",
+      "name": "_10BASE_T1S0",
       "address": "0x4002D000",
       "signals": [
         {
@@ -5856,6 +5872,42 @@
           "pins": [
             {
               "pin": "P3_27",
+              "alt": 0
+            }
+          ]
+        },
+        {
+          "name": "28",
+          "pins": [
+            {
+              "pin": "P3_28",
+              "alt": 0
+            }
+          ]
+        },
+        {
+          "name": "27",
+          "pins": [
+            {
+              "pin": "P3_29",
+              "alt": 0
+            }
+          ]
+        },
+        {
+          "name": "30",
+          "pins": [
+            {
+              "pin": "P3_30",
+              "alt": 0
+            }
+          ]
+        },
+        {
+          "name": "31",
+          "pins": [
+            {
+              "pin": "P3_31",
               "alt": 0
             }
           ]
