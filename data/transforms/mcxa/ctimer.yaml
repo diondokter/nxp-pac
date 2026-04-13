@@ -12,36 +12,16 @@ transforms:
 
   - !DeleteEnums
     from: ctimer::Cap\d+(.+)
-    skip_unmergeable: false
 
-  - !MergeEnums
-    from: ctimer::Em(\d+)
-    to: ctimer::Em
-    skip_unmergeable: false
+  - !DeleteEnums
+    from: ctimer::Mr.+
+    
+  - !DeleteEnums
+    from: ctimer::Em\d+
 
   - !MergeEnums
     from: ctimer::Emc(\d+)
     to: ctimer::Emc
-    skip_unmergeable: false
-
-  - !MergeEnums
-    from: ctimer::Mr(\d+)I
-    to: ctimer::MrI
-    skip_unmergeable: false
-
-  - !MergeEnums
-    from: ctimer::Mr(\d+)R
-    to: ctimer::Mrr
-    skip_unmergeable: false
-
-  - !MergeEnums
-    from: ctimer::Mr(\d+)Rl
-    to: ctimer::Mrrl
-    skip_unmergeable: false
-
-  - !MergeEnums
-    from: ctimer::Mr(\d+)S
-    to: ctimer::Mrs
     skip_unmergeable: false
 
   - !MergeEnums
