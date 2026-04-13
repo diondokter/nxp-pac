@@ -16,7 +16,7 @@ transforms:
     to: mbc0::$1
 
   - !MergeFieldsets
-    from: mbc0::Dom0Mem(\d+)BlkCfgW(\d+)
+    from: mbc0::Mem(\d+)BlkCfgW(\d+)
     to: mbc0::MemnBlkCfgW
 
   - !MakeRegisterArray
