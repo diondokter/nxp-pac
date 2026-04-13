@@ -58,7 +58,7 @@ fn extract_chip(
             &svd,
             core,
             transforms_dir.as_deref(),
-            &output.join(core).canonicalize()?,
+            &output.join(core),
         )?;
     }
 
