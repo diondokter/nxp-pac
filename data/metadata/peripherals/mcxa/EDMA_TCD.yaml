@@ -1,3 +1,5 @@
+# File not directly generated from transforms!
+
 block/Tcd8:
   description: DMA TCD.
   items:
