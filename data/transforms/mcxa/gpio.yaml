@@ -11,7 +11,10 @@ transforms:
     type: All
 
   - !DeleteEnums
-    from: gpio::(Ptto|Pdi|Pdo)(\d+)
+    from: gpio::(Ptto|Pdi|Pdo|Giwe|Isf)(\d+)
+
+  - !DeleteEnums
+    from: gpio::Feature
 
   - !MergeEnums
     from: gpio::(Pdd|Pid|Ptso|Ptco)(\d+)
@@ -60,3 +63,18 @@ transforms:
   - !MergeFieldsets
     from: gpio::Isfr\d
     to: gpio::Isfr
+  
+  - !MakeFieldArray
+    fieldsets: gpio::Pcnp
+    from: npe(\d+)
+    to: npe
+  
+  - !MakeFieldArray
+    fieldsets: gpio::Pcns
+    from: nse(\d+)
+    to: nse
+
+  - !MakeFieldArray
+    fieldsets: gpio::Gic(h|l)r
+    from: giwe(\d+)
+    to: giwe
