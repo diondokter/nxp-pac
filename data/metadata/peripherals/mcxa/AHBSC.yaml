@@ -1,6 +1,13 @@
 block/Ahbsc:
   description: AHBSC.
   items:
+  - name: ahb_slave_port_p0_slave_rule
+    description: AHB Slave Port 0 Rule.
+    array:
+      len: 4
+      stride: 4
+    byte_offset: 0
+    fieldset: AhbSlavePortP0SlaveRule
   - name: flash00_mem_rule
     description: Flash Memory Rule.
     array:
@@ -8,171 +15,177 @@ block/Ahbsc:
       stride: 4
     byte_offset: 16
     fieldset: Flash00MemRule
-  - name: flash01_mem_rule
+  - name: flash01_mem_rule0
     description: Flash Memory Rule.
+    byte_offset: 32
+    fieldset: Flash01MemRule0
+  - name: flash02_mem_rule0
+    description: Flash Memory Rule.
+    byte_offset: 48
+    fieldset: Flash02MemRule0
+  - name: ahb_slave_port_p1_slave_rule
+    description: AHB Slave Port 1 Rule.
     array:
       len: 4
       stride: 4
-    byte_offset: 32
-    fieldset: Flash01MemRule
-  - name: flash02_mem_rule
-    description: Flash IFR0 Rule register.
-    byte_offset: 48
-    fieldset: Flash02MemRule
-  - name: flash03_mem_rule
-    description: Flash Memory Rule.
     byte_offset: 64
-    fieldset: Flash03MemRule
+    fieldset: AhbSlavePortP1SlaveRule
   - name: rom_mem_rule
     description: ROM Memory Rule.
     array:
       len: 4
       stride: 4
-    byte_offset: 96
+    byte_offset: 80
     fieldset: RomMemRule
-  - name: ramx_mem_rule
+  - name: ahb_slave_port_p2_slave_rule
+    description: AHB Slave Port 2 Rule.
+    array:
+      len: 4
+      stride: 4
+    byte_offset: 96
+    fieldset: AhbSlavePortP2SlaveRule
+  - name: ramx_mem_rule0
     description: RAMX Memory Rule.
+    byte_offset: 112
+    fieldset: RamxMemRule0
+  - name: ahb_slave_port_p3_slave_rule
+    description: AHB Slave Port 3 Rule.
     array:
       len: 4
       stride: 4
     byte_offset: 128
-    fieldset: RamMemRule
+    fieldset: AhbSlavePortP3SlaveRule
   - name: rama_mem_rule
-    description: RAMA Memory Rule 0.
-    array:
-      len: 8
-      stride: 4
-    byte_offset: 160
-    fieldset: RamMemRule
-  - name: ramb_mem_rule
-    description: RAMB Memory Rule 0.
-    array:
-      len: 8
-      stride: 4
-    byte_offset: 208
-    fieldset: RamMemRule
-  - name: ahb_slave_port_p5_slave_rule0
-    description: AHB Slave Port 5 Rule Register.
-    byte_offset: 240
-    fieldset: AhbSlavePortP5SlaveRule0
-  - name: apb_peripheral_group0_mem_rule0
-    description: APB Bridge Group 0 Memory Rule Register 0.
-    byte_offset: 256
-    fieldset: ApbPeripheralGroup0MemRule0
-  - name: apb_peripheral_group0_mem_rule1
-    description: APB Bridge Group 0 Memory Rule Register 1.
-    byte_offset: 260
-    fieldset: ApbPeripheralGroup0MemRule1
-  - name: aips_bridge_group0_mem_rule0
-    description: AIPS Bridge Group 0 Memory Rule 0.
-    byte_offset: 272
-    fieldset: AipsBridgeGroup0MemRule0
-  - name: aips_bridge_group0_mem_rule1
-    description: AIPS Bridge Group 0 Memory Rule 1.
-    byte_offset: 276
-    fieldset: AipsBridgeGroup0MemRule1
-  - name: aips_bridge_group1_mem_rule0
-    description: AIPS Bridge Group 1 Memory Rule 0.
-    byte_offset: 288
-    fieldset: AipsBridgeGroup1MemRule0
-  - name: aips_bridge_group1_mem_rule1
-    description: AIPS Bridge Group 1 Memory Rule 1.
-    byte_offset: 292
-    fieldset: AipsBridgeGroup1MemRule1
-  - name: ahb_secure_ctrl_mem_rule0
-    description: AHB Secure Control Peripheral Rule.
-    byte_offset: 304
-    fieldset: AhbSecureCtrlMemRule0
-  - name: ahb_peripheral0_mem_rule1
-    description: AHB Peripheral 0 Memory Rule 1.
-    byte_offset: 320
-    fieldset: AhbPeripheral0MemRule1
-  - name: ahb_peripheral0_mem_rule2
-    description: AHB Peripheral 0 Memory Rule 2.
-    byte_offset: 336
-    fieldset: AhbPeripheral0MemRule2
-  - name: ahb_peripheral0_mem_rule3
-    description: AHB Peripheral 0 Memory Rule 3.
-    byte_offset: 352
-    fieldset: AhbPeripheral0MemRule3
-  - name: ahb_peripheral0_mem_rule4
-    description: AHB Peripheral 0 Memory Rule 4.
-    byte_offset: 368
-    fieldset: AhbPeripheral0MemRule4
-  - name: ahb_peripheral0_mem_rule5
-    description: AHB Peripheral 0 Memory Rule 5.
-    byte_offset: 384
-    fieldset: AhbPeripheral0MemRule5
-  - name: aips_bridge_group2_mem_rule0
-    description: AIPS Bridge Group 2 Rule 0.
-    byte_offset: 416
-    fieldset: AipsBridgeGroup2MemRule0
-  - name: aips_bridge_group2_mem_rule1
-    description: AIPS Bridge Group 2 Rule 1.
-    byte_offset: 420
-    fieldset: AipsBridgeGroup2MemRule1
-  - name: aips_bridge_group2_mem_rule2
-    description: AIPS Bridge Group 2 Rule 2.
-    byte_offset: 424
-    fieldset: AipsBridgeGroup2MemRule2
-  - name: aips_bridge_group2_mem_rule3
-    description: AIPS Bridge Group 2 Rule 3.
-    byte_offset: 428
-    fieldset: AipsBridgeGroup2MemRule3
-  - name: aips_bridge_group2_mem_rule4
-    description: AIPS Bridge Group 2 Rule 4.
-    byte_offset: 432
-    fieldset: AipsBridgeGroup2MemRule4
-  - name: aips_bridge_group2_mem_rule5
-    description: AIPS Bridge Group 2 Rule 5.
-    byte_offset: 436
-    fieldset: AipsBridgeGroup2MemRule5
-  - name: aips_bridge_group2_mem_rule6
-    description: AIPS Bridge Group 2 Rule 6.
-    byte_offset: 440
-    fieldset: AipsBridgeGroup2MemRule6
-  - name: aips_bridge_group2_mem_rule7
-    description: AIPS Bridge Group 2 Rule 7.
-    byte_offset: 444
-    fieldset: AipsBridgeGroup2MemRule7
-  - name: aips_bridge_group2_mem_rule8
-    description: AIPS Bridge Group 2 Rule 8.
-    byte_offset: 448
-    fieldset: AipsBridgeGroup2MemRule8
-  - name: aips_bridge_group2_mem_rule9
-    description: AIPS Bridge Group 2 Rule 9.
-    byte_offset: 452
-    fieldset: AipsBridgeGroup2MemRule9
-  - name: aips_bridge_group2_mem_rule10
-    description: AIPS Bridge Group 2 Rule 10.
-    byte_offset: 456
-    fieldset: AipsBridgeGroup2MemRule10
-  - name: aips_bridge_group2_mem_rule11
-    description: AIPS Bridge Group 2 Rule 11.
-    byte_offset: 460
-    fieldset: AipsBridgeGroup2MemRule11
-  - name: aips_bridge_group2_mem_rule12
-    description: AIPS Bridge Group 2 Rule 12.
-    byte_offset: 464
-    fieldset: AipsBridgeGroup2MemRule12
-  - name: aips_bridge_group2_mem_rule13
-    description: AIPS Bridge Group 2 Rule 13.
-    byte_offset: 468
-    fieldset: AipsBridgeGroup2MemRule13
-  - name: flexspi0_region0_mem_rule
-    description: FLEXSPI0 Region 0 Memory Rule.
+    description: RAMA Memory Rule.
     array:
       len: 4
       stride: 4
-    byte_offset: 496
-    fieldset: Flexspi0Region0MemRule
-  - name: flexspi0_region1_6_mem_rule
-    description: 'Array of registers: FLEXSPI0_REGION_MEM_RULE.'
+    byte_offset: 144
+    fieldset: RamMemRule
+  - name: ahb_slave_port_p4_slave_rule
+    description: AHB Slave Port 4 Rule.
     array:
-      len: 6
-      stride: 16
-    byte_offset: 512
-    block: Flexspi0Region16MemRule
+      len: 4
+      stride: 4
+    byte_offset: 160
+    fieldset: AhbSlavePortP4SlaveRule
+  - name: ramb_mem_rule
+    description: RAMB Memory Rule.
+    array:
+      len: 4
+      stride: 4
+    byte_offset: 176
+    fieldset: RamMemRule
+  - name: ahb_peripheral_slave_port_p5_slave_rule0
+    description: AHB Peripheral Slave Port 5 Slave Rule 0.
+    byte_offset: 192
+    fieldset: AhbPeripheralSlavePortP5SlaveRule0
+  - name: ahb_peripheral_slave_port_p5_slave_rule1
+    description: AHB Peripheral Slave Port 5 Slave Rule 1.
+    byte_offset: 196
+    fieldset: AhbPeripheralSlavePortP5SlaveRule1
+  - name: apb_peripheral_group0_mem_rule0
+    description: APB Bridge Group 0 Memory Rule 0.
+    byte_offset: 208
+    fieldset: ApbPeripheralGroup0MemRule0
+  - name: apb_peripheral_group0_mem_rule1
+    description: APB Bridge Group 0 Memory Rule 1.
+    byte_offset: 212
+    fieldset: ApbPeripheralGroup0MemRule1
+  - name: apb_peripheral_group0_mem_rule2
+    description: APB Bridge Group 0 Rule 2.
+    byte_offset: 216
+    access: Read
+  - name: apb_peripheral_group0_mem_rule3
+    description: APB Bridge Group 0 Memory Rule 3.
+    byte_offset: 220
+    access: Read
+  - name: aips_bridge_group0_mem_rule0
+    description: AIPS Bridge Group 0 Memory Rule 0.
+    byte_offset: 224
+    fieldset: AipsBridgeGroup0MemRule0
+  - name: aips_bridge_group0_mem_rule1
+    description: AIPS Bridge Group 0 Memory Rule 1.
+    byte_offset: 228
+    fieldset: AipsBridgeGroup0MemRule1
+  - name: aips_bridge_group0_mem_rule2
+    description: AIPS Bridge Group 0 Memory Rule 2.
+    byte_offset: 232
+    fieldset: AipsBridgeGroup0MemRule2
+  - name: aips_bridge_group0_mem_rule3
+    description: AIPS Bridge Group 0 Memory Rule 3.
+    byte_offset: 236
+    fieldset: AipsBridgeGroup0MemRule3
+  - name: aips_bridge_group2_mem_rule0
+    description: AIPS Bridge Group 2 Memory Rule 0.
+    byte_offset: 240
+    fieldset: AipsBridgeGroup2MemRule0
+  - name: aips_bridge_group2_mem_rule1
+    description: AIPS Bridge Group 2 Memory Rule 1.
+    byte_offset: 244
+    fieldset: AipsBridgeGroup2MemRule1
+  - name: aips_bridge_group2_mem_rule2
+    description: AIPS Bridge Group 2 Memory Rule 2.
+    byte_offset: 248
+    fieldset: AipsBridgeGroup2MemRule2
+  - name: aips_bridge_group2_mem_rule3
+    description: AIPS Bridge Group 2 Memory Rule 3.
+    byte_offset: 252
+    fieldset: AipsBridgeGroup2MemRule3
+  - name: aips_bridge_group3_mem_rule0
+    description: AIPS Bridge Group 3 Rule 0.
+    byte_offset: 256
+    fieldset: AipsBridgeGroup3MemRule0
+  - name: aips_bridge_group3_mem_rule1
+    description: AIPS Bridge Group 3 Memory Rule 1.
+    byte_offset: 260
+    access: Read
+  - name: aips_bridge_group3_mem_rule2
+    description: AIPS Bridge Group 3 Rule 2.
+    byte_offset: 264
+    fieldset: AipsBridgeGroup3MemRule2
+  - name: aips_bridge_group3_mem_rule3
+    description: AIPS Bridge Group 3 Rule 3.
+    byte_offset: 268
+    fieldset: AipsBridgeGroup3MemRule3
+  - name: ahb_secure_ctrl_peripheral_rule0
+    description: AHB Secure Control Peripheral Rule 0.
+    byte_offset: 272
+    fieldset: AhbSecureCtrlPeripheralRule0
+  - name: ahb_slave_port_p6_slave_rule
+    description: AHB Slave Port 6 Rule.
+    array:
+      len: 4
+      stride: 4
+    byte_offset: 288
+    fieldset: AhbSlavePortP6SlaveRule
+  - name: aon_domain_peripheral_mem_rule0
+    description: AON Domain Peripheral Rule 0.
+    byte_offset: 304
+    fieldset: AonDomainPeripheralMemRule0
+  - name: aon_domain_peripheral_mem_rule1
+    description: AON Domain Peripheral Rule 1.
+    byte_offset: 308
+    fieldset: AonDomainPeripheralMemRule1
+  - name: aon_domain_peripheral_mem_rule2
+    description: AON Domain Peripheral Rule 2.
+    byte_offset: 312
+    fieldset: AonDomainPeripheralMemRule2
+  - name: aon_domain_peripheral_mem_rule3
+    description: AON Domain Peripheral Rule 3.
+    byte_offset: 316
+    fieldset: AonDomainPeripheralMemRule3
+  - name: ahb_slave_port_p7_slave_rule
+    description: AHB Slave Port 6 Rule.
+    array:
+      len: 4
+      stride: 4
+    byte_offset: 320
+    fieldset: AhbSlavePortP7SlaveRule
+  - name: aon_domain_sram_mem_rule0
+    description: AON Domain SRAM Memory Rule.
+    byte_offset: 336
+    fieldset: AonDomainSramMemRule0
   - name: sec_vio_addr
     description: Security Violation Address.
     array:
@@ -220,445 +233,259 @@ block/Ahbsc:
     description: Secure Control.
     byte_offset: 4092
     fieldset: MiscCtrlReg
-block/Flexspi0Region16MemRule:
-  description: 'Array of registers: FLEXSPI0_REGION_MEM_RULE.'
-  items:
-  - name: flexspi0_region_mem_rule
-    description: FLEXSPI0 Region index Memory Rule.
-    byte_offset: 0
-    fieldset: Flexspi0RegionMemRule
-fieldset/AhbPeripheral0MemRule1:
-  description: AHB Peripheral 0 Memory Rule 1.
+fieldset/AhbPeripheralSlavePortP5SlaveRule0:
+  description: AHB Peripheral Slave Port 5 Slave Rule 0.
   fields:
-  - name: gpio0
-    description: GPIO0.
-    bit_offset: 0
+  - name: aips4_slaves
+    description: AIPS4 slaves.
+    bit_offset: 16
     bit_size: 2
     enum: Rule
-  - name: gpio0_alias
-    description: GPIO0 ALIAS.
-    bit_offset: 4
+  - name: cdog0
+    description: CDOG0.
+    bit_offset: 20
     bit_size: 2
     enum: Rule
-fieldset/AhbPeripheral0MemRule2:
-  description: AHB Peripheral 0 Memory Rule 2.
-  fields:
+  - name: debug_mailbox
+    description: DEBUG_MAILBOX.
+    bit_offset: 24
+    bit_size: 2
+    enum: Rule
   - name: gpio1
     description: GPIO1.
-    bit_offset: 0
+    bit_offset: 28
     bit_size: 2
     enum: Rule
-  - name: gpio1_alias
-    description: GPIO1 ALIAS.
-    bit_offset: 4
-    bit_size: 2
-    enum: Rule
-fieldset/AhbPeripheral0MemRule3:
-  description: AHB Peripheral 0 Memory Rule 3.
+fieldset/AhbPeripheralSlavePortP5SlaveRule1:
+  description: AHB Peripheral Slave Port 5 Slave Rule 1.
   fields:
   - name: gpio2
     description: GPIO2.
     bit_offset: 0
     bit_size: 2
     enum: Rule
-  - name: gpio2_alias
-    description: GPIO2 ALIAS.
-    bit_offset: 4
-    bit_size: 2
-    enum: Rule
-fieldset/AhbPeripheral0MemRule4:
-  description: AHB Peripheral 0 Memory Rule 4.
-  fields:
   - name: gpio3
     description: GPIO3.
-    bit_offset: 0
-    bit_size: 2
-    enum: Rule
-  - name: gpio3_alias
-    description: GPIO3 ALIAS.
     bit_offset: 4
     bit_size: 2
     enum: Rule
-fieldset/AhbPeripheral0MemRule5:
-  description: AHB Peripheral 0 Memory Rule 5.
-  fields:
-  - name: gpio4
-    description: GPIO4.
-    bit_offset: 0
+  - name: cdog1
+    description: CDOG1.
+    bit_offset: 8
     bit_size: 2
     enum: Rule
-  - name: gpio4_alias
-    description: GPIO4 ALIAS.
-    bit_offset: 4
-    bit_size: 2
-    enum: Rule
-fieldset/AhbSecureCtrlMemRule0:
-  description: AHB Secure Control Peripheral Rule.
+fieldset/AhbSecureCtrlPeripheralRule0:
+  description: AHB Secure Control Peripheral Rule 0.
   fields:
   - name: rule
-    description: AHBSC.
+    description: Rule 0.
     bit_offset: 0
     bit_size: 2
     array:
       len: 4
       stride: 4
     enum: Rule
-fieldset/AhbSlavePortP5SlaveRule0:
-  description: AHB Slave Port 5 Rule Register.
+fieldset/AhbSlavePortP0SlaveRule:
+  description: AHB Slave Port 0 Rule.
   fields:
-  - name: cdog0
-    description: CDOG0.
-    bit_offset: 12
+  - name: rule
+    description: Rule 0.
+    bit_offset: 0
     bit_size: 2
+    array:
+      len: 8
+      stride: 4
     enum: Rule
-  - name: cdog1
-    description: CDOG1.
-    bit_offset: 16
+fieldset/AhbSlavePortP1SlaveRule:
+  description: AHB Slave Port 1 Rule.
+  fields:
+  - name: rule
+    description: Rule 0.
+    bit_offset: 0
     bit_size: 2
+    array:
+      len: 8
+      stride: 4
     enum: Rule
-  - name: debug_mailbox
-    description: DEBUG_MAILBOX.
-    bit_offset: 20
+fieldset/AhbSlavePortP2SlaveRule:
+  description: AHB Slave Port 2 Rule.
+  fields:
+  - name: rule
+    description: Rule 0.
+    bit_offset: 0
     bit_size: 2
+    array:
+      len: 8
+      stride: 4
     enum: Rule
-  - name: mau0
-    description: Rule 6.
-    bit_offset: 24
+fieldset/AhbSlavePortP3SlaveRule:
+  description: AHB Slave Port 3 Rule.
+  fields:
+  - name: rule
+    description: Rule 0.
+    bit_offset: 0
     bit_size: 2
+    array:
+      len: 8
+      stride: 4
+    enum: Rule
+fieldset/AhbSlavePortP4SlaveRule:
+  description: AHB Slave Port 4 Rule.
+  fields:
+  - name: rule
+    description: Rule 0.
+    bit_offset: 0
+    bit_size: 2
+    array:
+      len: 8
+      stride: 4
+    enum: Rule
+fieldset/AhbSlavePortP6SlaveRule:
+  description: AHB Slave Port 6 Rule.
+  fields:
+  - name: rule
+    description: Rule 0.
+    bit_offset: 0
+    bit_size: 2
+    array:
+      len: 8
+      stride: 4
+    enum: Rule
+fieldset/AhbSlavePortP7SlaveRule:
+  description: AHB Slave Port 6 Rule.
+  fields:
+  - name: rule
+    description: Rule 0.
+    bit_offset: 0
+    bit_size: 2
+    array:
+      len: 8
+      stride: 4
     enum: Rule
 fieldset/AipsBridgeGroup0MemRule0:
   description: AIPS Bridge Group 0 Memory Rule 0.
   fields:
-  - name: ewm0
-    description: EWM0.
+  - name: e_dma_0_mp
+    description: eDMA_0_MP.
     bit_offset: 0
     bit_size: 2
     enum: Rule
-  - name: romcp
-    description: ROMCP.
+  - name: e_dma_0_tcd0
+    description: eDMA_0_TCD0.
     bit_offset: 4
     bit_size: 2
     enum: Rule
-  - name: pkc0
-    description: PKC0.
+  - name: e_dma_0_tcd1
+    description: eDMA_0_TCD1.
     bit_offset: 8
     bit_size: 2
     enum: Rule
-  - name: dma_1_mp
-    description: DMA_1_MP.
+  - name: e_dma_0_tcd2
+    description: eDMA_0_TCD2.
     bit_offset: 12
     bit_size: 2
     enum: Rule
-  - name: dma_1_ch0
-    description: DMA_1_CH0.
+  - name: e_dma_0_tcd3
+    description: FLEXSPI0 Registers.
     bit_offset: 16
     bit_size: 2
     enum: Rule
-  - name: dma_1_ch1
-    description: DMA_1_CH1.
+  - name: e_dma_0_tcd4
+    description: eDMA_0_TCD4 (Reserved).
     bit_offset: 20
     bit_size: 2
     enum: Rule
-  - name: dma_1_ch2
-    description: DMA_1_CH2.
+  - name: e_dma_0_tcd5
+    description: eDMA_0_TCD5 (Reserved).
     bit_offset: 24
     bit_size: 2
     enum: Rule
-  - name: dma_1_ch3
-    description: DMA_1_CH3.
+  - name: e_dma_0_tcd6
+    description: eDMA_0_TCD6 (Reserved).
     bit_offset: 28
     bit_size: 2
     enum: Rule
 fieldset/AipsBridgeGroup0MemRule1:
   description: AIPS Bridge Group 0 Memory Rule 1.
   fields:
-  - name: enet0_0
-    description: ENET0_0.
-    bit_offset: 16
-    bit_size: 2
-    enum: Rule
-  - name: enet0_1
-    description: ENET0_1.
-    bit_offset: 20
-    bit_size: 2
-    enum: Rule
-  - name: e_spi
-    description: eSPI.
-    bit_offset: 28
-    bit_size: 2
-    enum: Rule
-fieldset/AipsBridgeGroup1MemRule0:
-  description: AIPS Bridge Group 1 Memory Rule 0.
-  fields:
-  - name: flexspi0
-    description: FLEXSPI0.
+  - name: e_dma_0_tcd7
+    description: eDMA_0_TCD7 (Reserved).
     bit_offset: 0
     bit_size: 2
     enum: Rule
-  - name: lpspi2
-    description: LPSPI2.
+  - name: aoi0
+    description: AOI0.
     bit_offset: 4
     bit_size: 2
     enum: Rule
-  - name: lpspi3
-    description: LPSPI3.
+  - name: crc0
+    description: CRC0.
     bit_offset: 8
     bit_size: 2
     enum: Rule
-  - name: lpspi4
-    description: LPSPI4.
+  - name: cmc0
+    description: CMC0.
     bit_offset: 12
     bit_size: 2
     enum: Rule
-  - name: lpspi5
-    description: LPSPI5.
-    bit_offset: 16
-    bit_size: 2
-    enum: Rule
-fieldset/AipsBridgeGroup1MemRule1:
-  description: AIPS Bridge Group 1 Memory Rule 1.
-  fields:
-  - name: spi_fileter0
-    description: SPI_FILETER0.
-    bit_offset: 16
-    bit_size: 2
-    enum: Rule
-  - name: t1s0
-    description: 10BASE_T1S0.
+  - name: erm0
+    description: ERM0.
     bit_offset: 20
     bit_size: 2
     enum: Rule
-  - name: usb1
-    description: USB1.
+  - name: mbc0
+    description: MBC0.
     bit_offset: 24
     bit_size: 2
     enum: Rule
-  - name: usb1_phy
-    description: USB1_PHY.
+  - name: scg0
+    description: SCG0.
     bit_offset: 28
     bit_size: 2
     enum: Rule
-fieldset/AipsBridgeGroup2MemRule0:
-  description: AIPS Bridge Group 2 Rule 0.
-  fields:
-  - name: dma_0_mp
-    description: DMA_0_MP.
-    bit_offset: 0
-    bit_size: 2
-    enum: Rule
-  - name: dma_0_ch0
-    description: DMA_0_CH0.
-    bit_offset: 4
-    bit_size: 2
-    enum: Rule
-  - name: dma_0_ch1
-    description: DMA_0_CH1.
-    bit_offset: 8
-    bit_size: 2
-    enum: Rule
-  - name: dma_0_ch2
-    description: DMA_0_CH2.
-    bit_offset: 12
-    bit_size: 2
-    enum: Rule
-  - name: dma_0_ch3
-    description: DMA_0_CH3.
-    bit_offset: 16
-    bit_size: 2
-    enum: Rule
-  - name: dma_0_ch4
-    description: DMA_0_CH4.
-    bit_offset: 20
-    bit_size: 2
-    enum: Rule
-  - name: dma_0_ch5
-    description: DMA_0_CH5.
-    bit_offset: 24
-    bit_size: 2
-    enum: Rule
-  - name: dma_0_ch6
-    description: DMA_0_CH6.
-    bit_offset: 28
-    bit_size: 2
-    enum: Rule
-fieldset/AipsBridgeGroup2MemRule1:
-  description: AIPS Bridge Group 2 Rule 1.
-  fields:
-  - name: dma_0_ch7
-    description: DMA_0_CH7.
-    bit_offset: 0
-    bit_size: 2
-    enum: Rule
-  - name: dma_0_ch8
-    description: DMA_0_CH8.
-    bit_offset: 4
-    bit_size: 2
-    enum: Rule
-  - name: dma_0_ch9
-    description: DMA_0_CH9.
-    bit_offset: 8
-    bit_size: 2
-    enum: Rule
-  - name: dma_0_ch10
-    description: DMA_0_CH10.
-    bit_offset: 12
-    bit_size: 2
-    enum: Rule
-  - name: dma_0_ch11
-    description: DMA_0_CH11.
-    bit_offset: 16
-    bit_size: 2
-    enum: Rule
-fieldset/AipsBridgeGroup2MemRule10:
-  description: AIPS Bridge Group 2 Rule 10.
-  fields:
-  - name: can1_region0
-    description: CAN1 Region 0.
-    bit_offset: 0
-    bit_size: 2
-    enum: Rule
-  - name: can1_region1
-    description: CAN1 Region 1.
-    bit_offset: 4
-    bit_size: 2
-    enum: Rule
-  - name: can1_region2
-    description: CAN1 Region 2.
-    bit_offset: 8
-    bit_size: 2
-    enum: Rule
-  - name: can1_region3
-    description: CAN1 Region 3.
-    bit_offset: 12
-    bit_size: 2
-    enum: Rule
-  - name: lpi2c2
-    description: LPI2C2.
-    bit_offset: 16
-    bit_size: 2
-    enum: Rule
-  - name: lpi2c3
-    description: LPI2C3.
-    bit_offset: 20
-    bit_size: 2
-    enum: Rule
-  - name: lpi2c4
-    description: LPI2C4.
-    bit_offset: 24
-    bit_size: 2
-    enum: Rule
-fieldset/AipsBridgeGroup2MemRule11:
-  description: AIPS Bridge Group 2 Rule 11.
-  fields:
-  - name: lpuart5
-    description: LPUART5.
-    bit_offset: 8
-    bit_size: 2
-    enum: Rule
-  - name: i3c3
-    description: I3C3.
-    bit_offset: 24
-    bit_size: 2
-    enum: Rule
-  - name: gpio5
-    description: GPIO5.
-    bit_offset: 28
-    bit_size: 2
-    enum: Rule
-fieldset/AipsBridgeGroup2MemRule12:
-  description: AIPS Bridge Group 2 Rule 12.
-  fields:
-  - name: gpio5_alias
-    description: GPIO5_ALIAS.
-    bit_offset: 0
-    bit_size: 2
-    enum: Rule
-  - name: port5
-    description: PORT5.
-    bit_offset: 12
-    bit_size: 2
-    enum: Rule
-  - name: dgdet0
-    description: DGDET0.
-    bit_offset: 20
-    bit_size: 2
-    enum: Rule
-  - name: itrc0
-    description: ITRC0.
-    bit_offset: 28
-    bit_size: 2
-    enum: Rule
-fieldset/AipsBridgeGroup2MemRule13:
-  description: AIPS Bridge Group 2 Rule 13.
-  fields:
-  - name: glikey0
-    description: GLIKEY0.
-    bit_offset: 0
-    bit_size: 2
-    enum: Rule
-  - name: tdet0
-    description: TDET0.
-    bit_offset: 4
-    bit_size: 2
-    enum: Rule
-  - name: seccon
-    description: SECCON.
-    bit_offset: 8
-    bit_size: 2
-    enum: Rule
-  - name: sgi0
-    description: SGI0.
-    bit_offset: 12
-    bit_size: 2
-    enum: Rule
-  - name: trng0
-    description: TRNG0.
-    bit_offset: 16
-    bit_size: 2
-    enum: Rule
-  - name: udf0
-    description: UDF0.
-    bit_offset: 20
-    bit_size: 2
-    enum: Rule
-  - name: rtc0
-    description: RTC0.
-    bit_offset: 24
-    bit_size: 2
-    enum: Rule
-fieldset/AipsBridgeGroup2MemRule2:
-  description: AIPS Bridge Group 2 Rule 2.
+fieldset/AipsBridgeGroup0MemRule2:
+  description: AIPS Bridge Group 0 Memory Rule 2.
   fields:
   - name: syscon
     description: SYSCON.
     bit_offset: 4
     bit_size: 2
     enum: Rule
-  - name: wuu
-    description: WUU.
+  - name: wuu0
+    description: WUU0.
     bit_offset: 8
     bit_size: 2
     enum: Rule
-  - name: vbat
-    description: VBAT.
-    bit_offset: 12
-    bit_size: 2
-    enum: Rule
-  - name: fmc
-    description: FMC.
+  - name: fmc0
+    description: FMC0.
     bit_offset: 16
     bit_size: 2
     enum: Rule
-  - name: fmu
-    description: FMU.
+  - name: fmu0
+    description: FMU0.
     bit_offset: 20
     bit_size: 2
     enum: Rule
-fieldset/AipsBridgeGroup2MemRule3:
-  description: AIPS Bridge Group 2 Rule 3.
+  - name: fmu0_tst
+    description: FMU0_TST.
+    bit_offset: 24
+    bit_size: 2
+    enum: Rule
+  - name: bcanxl
+    description: BCANXL (Reserved).
+    bit_offset: 28
+    bit_size: 2
+    enum: Rule
+fieldset/AipsBridgeGroup0MemRule3:
+  description: AIPS Bridge Group 0 Memory Rule 3.
   fields:
+  - name: candma
+    description: CANDMA (Reserved).
+    bit_offset: 0
+    bit_size: 2
+    enum: Rule
   - name: flexio
-    description: FLEXIO.
+    description: FLEXIO (Reserved).
     bit_offset: 4
     bit_size: 2
     enum: Rule
@@ -682,8 +509,8 @@ fieldset/AipsBridgeGroup2MemRule3:
     bit_offset: 20
     bit_size: 2
     enum: Rule
-  - name: i3c2
-    description: I3C2.
+  - name: lpspi2
+    description: LPSPI2 (Reserved).
     bit_offset: 24
     bit_size: 2
     enum: Rule
@@ -692,8 +519,8 @@ fieldset/AipsBridgeGroup2MemRule3:
     bit_offset: 28
     bit_size: 2
     enum: Rule
-fieldset/AipsBridgeGroup2MemRule4:
-  description: AIPS Bridge Group 2 Rule 4.
+fieldset/AipsBridgeGroup2MemRule0:
+  description: AIPS Bridge Group 2 Memory Rule 0.
   fields:
   - name: lpuart1
     description: LPUART1.
@@ -701,48 +528,88 @@ fieldset/AipsBridgeGroup2MemRule4:
     bit_size: 2
     enum: Rule
   - name: lpuart2
-    description: LPUART2.
+    description: LPUART2 (Reserved).
     bit_offset: 4
     bit_size: 2
     enum: Rule
   - name: lpuart3
-    description: LPUART3.
+    description: LPUART3 (Reserved).
     bit_offset: 8
     bit_size: 2
     enum: Rule
   - name: lpuart4
-    description: LPUART4.
+    description: LPUART4 (Reserved).
     bit_offset: 12
     bit_size: 2
     enum: Rule
-fieldset/AipsBridgeGroup2MemRule5:
-  description: AIPS Bridge Group 2 Rule 5.
+  - name: usb_fs_otg
+    description: USB_FS_OTG (Reserved).
+    bit_offset: 16
+    bit_size: 2
+    enum: Rule
+  - name: usb_fs_dcd
+    description: USB_FS_DCD (Reserved).
+    bit_offset: 20
+    bit_size: 2
+    enum: Rule
+  - name: usb_typec_pd
+    description: USB_TYPEC_PD (Reserved).
+    bit_offset: 24
+    bit_size: 2
+    enum: Rule
+  - name: quad_decoder0
+    description: QUAD_DECODER0 (Reserved).
+    bit_offset: 28
+    bit_size: 2
+    enum: Rule
+fieldset/AipsBridgeGroup2MemRule1:
+  description: AIPS Bridge Group 2 Memory Rule 1.
   fields:
-  - name: lptmr
-    description: LPTMR.
+  - name: quad_decoder1
+    description: QUAD_DECODER1 (Reserved).
+    bit_offset: 0
+    bit_size: 2
+    enum: Rule
+  - name: flexpwm0
+    description: FLEXPWM0.
+    bit_offset: 4
+    bit_size: 2
+    enum: Rule
+  - name: flexpwm1
+    description: FLEXPWM1 (Reserved).
+    bit_offset: 8
+    bit_size: 2
+    enum: Rule
+  - name: lptmr0
+    description: LPTMR0 (Reserved).
     bit_offset: 12
     bit_size: 2
     enum: Rule
-  - name: ostimer
-    description: OSTIMER.
+  - name: lptmr1
+    description: LPTMR1 (Reserved).
+    bit_offset: 16
+    bit_size: 2
+    enum: Rule
+  - name: ostimer0
+    description: OSTIMER0.
     bit_offset: 20
     bit_size: 2
     enum: Rule
   - name: wake_timer
-    description: WAKE_TIMER.
+    description: WAKE_TIMER (Reserved).
     bit_offset: 24
     bit_size: 2
     enum: Rule
-  - name: adc0
-    description: ADC0.
+  - name: hsadc0
+    description: HSADC0.
     bit_offset: 28
     bit_size: 2
     enum: Rule
-fieldset/AipsBridgeGroup2MemRule6:
-  description: AIPS Bridge Group 2 Rule 6.
+fieldset/AipsBridgeGroup2MemRule2:
+  description: AIPS Bridge Group 2 Memory Rule 2.
   fields:
   - name: adc1
-    description: ADC1.
+    description: ADC1 (Reserved).
     bit_offset: 0
     bit_size: 2
     enum: Rule
@@ -751,136 +618,302 @@ fieldset/AipsBridgeGroup2MemRule6:
     bit_offset: 4
     bit_size: 2
     enum: Rule
+  - name: cmp1
+    description: CMP1 (Reserved).
+    bit_offset: 8
+    bit_size: 2
+    enum: Rule
+  - name: cmp2
+    description: CMP2 (Reserved).
+    bit_offset: 12
+    bit_size: 2
+    enum: Rule
   - name: dac0
-    description: DAC0.
+    description: DAC0 (Reserved).
     bit_offset: 16
     bit_size: 2
     enum: Rule
   - name: dac1
-    description: DAC1.
+    description: DAC1 (Reserved).
     bit_offset: 20
     bit_size: 2
     enum: Rule
-fieldset/AipsBridgeGroup2MemRule7:
-  description: AIPS Bridge Group 2 Rule 7.
-  fields:
-  - name: vref0
-    description: VREF0.
-    bit_offset: 12
+  - name: dac2
+    description: DAC2 (Reserved).
+    bit_offset: 24
     bit_size: 2
     enum: Rule
-  - name: port0
-    description: PORT0.
-    bit_offset: 16
+  - name: opamp0
+    description: OPAMP0 (Reserved).
+    bit_offset: 28
+    bit_size: 2
+    enum: Rule
+fieldset/AipsBridgeGroup2MemRule3:
+  description: AIPS Bridge Group 2 Memory Rule 3.
+  fields:
+  - name: opamp1
+    description: OPAMP1 (Reserved).
+    bit_offset: 0
+    bit_size: 2
+    enum: Rule
+  - name: opamp2
+    description: OPAMP2 (Reserved).
+    bit_offset: 4
+    bit_size: 2
+    enum: Rule
+  - name: sd_adc0
+    description: SD_ADC0 (Reserved).
+    bit_offset: 8
+    bit_size: 2
+    enum: Rule
+  - name: dgo_gpio1_3
+    description: DGO_GPIO1_3 (Reserved).
+    bit_offset: 12
     bit_size: 2
     enum: Rule
   - name: port1
     description: PORT1.
-    bit_offset: 20
+    bit_offset: 16
     bit_size: 2
     enum: Rule
   - name: port2
     description: PORT2.
-    bit_offset: 24
+    bit_offset: 20
     bit_size: 2
     enum: Rule
   - name: port3
     description: PORT3.
-    bit_offset: 28
-    bit_size: 2
-    enum: Rule
-fieldset/AipsBridgeGroup2MemRule8:
-  description: AIPS Bridge Group 2 Rule 8.
-  fields:
-  - name: port4
-    description: PORT4.
-    bit_offset: 0
-    bit_size: 2
-    enum: Rule
-  - name: tsi0
-    description: TSI0.
-    bit_offset: 12
-    bit_size: 2
-    enum: Rule
-  - name: aoi0
-    description: AOI0.
-    bit_offset: 16
-    bit_size: 2
-    enum: Rule
-  - name: crc0
-    description: CRC0.
-    bit_offset: 20
-    bit_size: 2
-    enum: Rule
-  - name: cmc
-    description: CMC.
     bit_offset: 24
     bit_size: 2
     enum: Rule
-  - name: eim
-    description: EIM.
+  - name: port4
+    description: PORT4 (Reserved).
     bit_offset: 28
     bit_size: 2
     enum: Rule
-fieldset/AipsBridgeGroup2MemRule9:
-  description: AIPS Bridge Group 2 Rule 9.
+fieldset/AipsBridgeGroup3MemRule0:
+  description: AIPS Bridge Group 3 Rule 0.
   fields:
-  - name: erm
-    description: ERM.
+  - name: port5
+    description: PORT5 (Reserved).
     bit_offset: 0
     bit_size: 2
     enum: Rule
-  - name: mbc
-    description: MBC.
+  - name: sai
+    description: SAI (Reserved).
     bit_offset: 4
     bit_size: 2
     enum: Rule
-  - name: scg
-    description: SCG.
+  - name: segment_lcd
+    description: SEGMENT_LCD (Reserved).
     bit_offset: 8
     bit_size: 2
     enum: Rule
-  - name: spc
-    description: SPC.
+  - name: tsi
+    description: TSI (Reserved).
     bit_offset: 12
     bit_size: 2
     enum: Rule
-  - name: can0_region0
-    description: CAN0 Region 0.
+  - name: mu0
+    description: MU0.
     bit_offset: 16
     bit_size: 2
     enum: Rule
-  - name: can0_region1
-    description: CAN0 Region 1.
+  - name: mu1
+    description: MU1 (Reserved).
     bit_offset: 20
     bit_size: 2
     enum: Rule
-  - name: can0_region2
-    description: CAN0 Region 2.
-    bit_offset: 24
+fieldset/AipsBridgeGroup3MemRule2:
+  description: AIPS Bridge Group 3 Rule 2.
+  fields:
+  - name: pkc0
+    description: PKC0.
+    bit_offset: 0
     bit_size: 2
     enum: Rule
-  - name: can0_region3
-    description: CAN0 Region 3.
+  - name: sgi0
+    description: SGI0.
+    bit_offset: 4
+    bit_size: 2
+    enum: Rule
+  - name: trng0
+    description: TRNG0.
+    bit_offset: 8
+    bit_size: 2
+    enum: Rule
+  - name: udf0
+    description: CAN0 RULE0.
+    bit_offset: 12
+    bit_size: 2
+    enum: Rule
+  - name: e_mda_1_mp
+    description: eDMA_1_MP.
     bit_offset: 28
     bit_size: 2
     enum: Rule
-fieldset/ApbPeripheralGroup0MemRule0:
-  description: APB Bridge Group 0 Memory Rule Register 0.
+fieldset/AipsBridgeGroup3MemRule3:
+  description: AIPS Bridge Group 3 Rule 3.
   fields:
+  - name: e_dma_1_tcd0
+    description: eDMA_1_TCD0.
+    bit_offset: 0
+    bit_size: 2
+    enum: Rule
+  - name: e_dma_1_tcd1
+    description: eDMA_1_TCD1.
+    bit_offset: 4
+    bit_size: 2
+    enum: Rule
+  - name: e_dma_1_tcd2
+    description: eDMA_1_TCD2.
+    bit_offset: 8
+    bit_size: 2
+    enum: Rule
+  - name: e_dma_1_tcd3
+    description: eDMA_1_TCD3.
+    bit_offset: 12
+    bit_size: 2
+    enum: Rule
+fieldset/AonDomainPeripheralMemRule0:
+  description: AON Domain Peripheral Rule 0.
+  fields:
+  - name: lpi2c
+    description: LPI2C.
+    bit_offset: 0
+    bit_size: 2
+    enum: Rule
+  - name: rule1
+    description: LPI2C (Reserved).
+    bit_offset: 4
+    bit_size: 2
+    enum: Rule
+  - name: lpuart
+    description: LPUART.
+    bit_offset: 8
+    bit_size: 2
+    enum: Rule
+  - name: rule3
+    description: LPUART (Reserved).
+    bit_offset: 12
+    bit_size: 2
+    enum: Rule
+  - name: mub
+    description: MUB.
+    bit_offset: 16
+    bit_size: 2
+    enum: Rule
+  - name: port0
+    description: PORT0.
+    bit_offset: 20
+    bit_size: 2
+    enum: Rule
+  - name: acmp
+    description: ACMP.
+    bit_offset: 24
+    bit_size: 2
+    enum: Rule
+  - name: rule7
+    description: ACMP (Reserved).
+    bit_offset: 28
+    bit_size: 2
+    enum: Rule
+fieldset/AonDomainPeripheralMemRule1:
+  description: AON Domain Peripheral Rule 1.
+  fields:
+  - name: lptimer
+    description: LPTIMER.
+    bit_offset: 0
+    bit_size: 2
+    enum: Rule
+  - name: qtmr32_0
+    description: QTMR32_0.
+    bit_offset: 24
+    bit_size: 2
+    enum: Rule
+  - name: qtmr32_1
+    description: QTMR32_1.
+    bit_offset: 28
+    bit_size: 2
+    enum: Rule
+fieldset/AonDomainPeripheralMemRule2:
+  description: AON Domain Peripheral Rule 2.
+  fields:
+  - name: gp_gpr
+    description: GP_GPR.
+    bit_offset: 0
+    bit_size: 2
+    enum: Rule
   - name: inputmux
     description: INPUTMUX.
     bit_offset: 4
     bit_size: 2
     enum: Rule
-  - name: i3c0
-    description: I3C0.
+  - name: lpadc
+    description: LPADC.
     bit_offset: 8
     bit_size: 2
     enum: Rule
-  - name: i3c1
-    description: I3C1.
+  - name: sglcd
+    description: SGLCD0.
+    bit_offset: 16
+    bit_size: 2
+    enum: Rule
+  - name: kpp
+    description: KPP.
+    bit_offset: 20
+    bit_size: 2
+    enum: Rule
+  - name: advc2
+    description: KPP.
+    bit_offset: 28
+    bit_size: 2
+    enum: Rule
+fieldset/AonDomainPeripheralMemRule3:
+  description: AON Domain Peripheral Rule 3.
+  fields:
+  - name: pmic_ctrl
+    description: PMIC_CTRL.
+    bit_offset: 0
+    bit_size: 2
+    enum: Rule
+  - name: cgu
+    description: CGU.
+    bit_offset: 4
+    bit_size: 2
+    enum: Rule
+  - name: smm
+    description: SMM.
+    bit_offset: 8
+    bit_size: 2
+    enum: Rule
+  - name: lpcmp
+    description: LPCMP.
     bit_offset: 12
+    bit_size: 2
+    enum: Rule
+  - name: aon_gpio
+    description: AON_GPIO.
+    bit_offset: 28
+    bit_size: 2
+    enum: Rule
+fieldset/AonDomainSramMemRule0:
+  description: AON Domain SRAM Memory Rule.
+  fields:
+  - name: rule
+    description: Rule 0.
+    bit_offset: 0
+    bit_size: 2
+    array:
+      len: 8
+      stride: 4
+    enum: Rule
+fieldset/ApbPeripheralGroup0MemRule0:
+  description: APB Bridge Group 0 Memory Rule 0.
+  fields:
+  - name: inputmux0
+    description: INPUTMUX0.
+    bit_offset: 4
     bit_size: 2
     enum: Rule
   - name: ctimer0
@@ -898,42 +931,22 @@ fieldset/ApbPeripheralGroup0MemRule0:
     bit_offset: 24
     bit_size: 2
     enum: Rule
-  - name: ctimer3
-    description: CTIMER3.
-    bit_offset: 28
-    bit_size: 2
-    enum: Rule
 fieldset/ApbPeripheralGroup0MemRule1:
-  description: APB Bridge Group 0 Memory Rule Register 1.
+  description: APB Bridge Group 0 Memory Rule 1.
   fields:
-  - name: ctimer4
-    description: CTIMER4.
-    bit_offset: 0
-    bit_size: 2
-    enum: Rule
-  - name: freqme
-    description: FREQME.
+  - name: freqme00
+    description: FREQME00.
     bit_offset: 4
     bit_size: 2
     enum: Rule
-  - name: utick
-    description: UTCIK0.
+  - name: utick0
+    description: UTICK0.
     bit_offset: 12
     bit_size: 2
     enum: Rule
   - name: wwdt0
     description: WWDT0.
     bit_offset: 16
-    bit_size: 2
-    enum: Rule
-  - name: wwdt1
-    description: WWDT1.
-    bit_offset: 20
-    bit_size: 2
-    enum: Rule
-  - name: smartdma
-    description: SmartDMA.
-    bit_offset: 24
     bit_size: 2
     enum: Rule
 fieldset/Cpu0LockReg:
@@ -975,29 +988,7 @@ fieldset/Flash00MemRule:
       len: 8
       stride: 4
     enum: Rule
-fieldset/Flash01MemRule:
-  description: Flash Memory Rule.
-  fields:
-  - name: rule
-    description: Rule 0.
-    bit_offset: 0
-    bit_size: 2
-    array:
-      len: 8
-      stride: 4
-    enum: Rule
-fieldset/Flash02MemRule:
-  description: Flash IFR0 Rule register.
-  fields:
-  - name: rule
-    description: Rule 0.
-    bit_offset: 0
-    bit_size: 2
-    array:
-      len: 4
-      stride: 4
-    enum: Rule
-fieldset/Flash03MemRule:
+fieldset/Flash01MemRule0:
   description: Flash Memory Rule.
   fields:
   - name: rule
@@ -1008,19 +999,8 @@ fieldset/Flash03MemRule:
       len: 4
       stride: 4
     enum: Rule
-fieldset/Flexspi0Region0MemRule:
-  description: FLEXSPI0 Region 0 Memory Rule.
-  fields:
-  - name: rule
-    description: Rule 0.
-    bit_offset: 0
-    bit_size: 2
-    array:
-      len: 8
-      stride: 4
-    enum: Rule
-fieldset/Flexspi0RegionMemRule:
-  description: FLEXSPI0 Region index Memory Rule.
+fieldset/Flash02MemRule0:
+  description: Flash Memory Rule.
   fields:
   - name: rule
     description: Rule 0.
@@ -1033,67 +1013,37 @@ fieldset/Flexspi0RegionMemRule:
 fieldset/MasterSecAntiPolReg:
   description: Master Secure Level.
   fields:
-  - name: smartdma
-    description: SMARTDMA Data.
-    bit_offset: 4
-    bit_size: 2
-    enum: MasterSec
   - name: dma0
-    description: eDMA0.
-    bit_offset: 6
-    bit_size: 2
-    enum: MasterSec
-  - name: dma1
-    description: eDMA1.
-    bit_offset: 8
+    description: DMA0.
+    bit_offset: 2
     bit_size: 2
     enum: MasterSec
   - name: pkc
     description: PKC.
-    bit_offset: 10
+    bit_offset: 4
     bit_size: 2
     enum: MasterSec
-  - name: enet0
-    description: ENET0.
-    bit_offset: 24
-    bit_size: 2
-    enum: MasterSec
-  - name: usb1
-    description: USB1.
-    bit_offset: 26
+  - name: dma1
+    description: DMA1.
+    bit_offset: 6
     bit_size: 2
     enum: MasterSec
 fieldset/MasterSecLevel:
   description: Master Secure Level.
   fields:
-  - name: smartdma
-    description: SMARTDMA Data.
-    bit_offset: 4
-    bit_size: 2
-    enum: MasterSec
   - name: dma0
-    description: eDMA0.
-    bit_offset: 6
-    bit_size: 2
-    enum: MasterSec
-  - name: dma1
-    description: eDMA1.
-    bit_offset: 8
+    description: DMA0.
+    bit_offset: 2
     bit_size: 2
     enum: MasterSec
   - name: pkc
     description: PKC.
-    bit_offset: 10
+    bit_offset: 4
     bit_size: 2
     enum: MasterSec
-  - name: enet0
-    description: ENET0.
-    bit_offset: 24
-    bit_size: 2
-    enum: MasterSec
-  - name: usb1
-    description: USB1.
-    bit_offset: 26
+  - name: dma1
+    description: DMA1.
+    bit_offset: 6
     bit_size: 2
     enum: MasterSec
 fieldset/MiscCtrlDpReg:
@@ -1173,7 +1123,18 @@ fieldset/MiscCtrlReg:
     bit_size: 2
     enum: MiscCtrlRegIdauAllNs
 fieldset/RamMemRule:
-  description: RAMA Memory Rule 0.
+  description: RAMA Memory Rule.
+  fields:
+  - name: rule
+    description: Rule 0.
+    bit_offset: 0
+    bit_size: 2
+    array:
+      len: 8
+      stride: 4
+    enum: Rule
+fieldset/RamxMemRule0:
+  description: RAMX Memory Rule.
   fields:
   - name: rule
     description: Rule 0.
@@ -1214,38 +1175,13 @@ fieldset/SecVioAddr:
 fieldset/SecVioInfoValid:
   description: Security Violation Info Validity for Address.
   fields:
-  - name: vio_info_valid0
+  - name: vio_info_valid
     description: Violation information valid flag for AHB port 0.
     bit_offset: 0
     bit_size: 1
-  - name: vio_info_valid1
-    description: Violation information valid flag for AHB port 1.
-    bit_offset: 1
-    bit_size: 1
-  - name: vio_info_valid2
-    description: Violation information valid flag for AHB port 2.
-    bit_offset: 2
-    bit_size: 1
-  - name: vio_info_valid3
-    description: Violation information valid flag for AHB port 3.
-    bit_offset: 3
-    bit_size: 1
-  - name: vio_info_valid4
-    description: Violation information valid flag for AHB port 4.
-    bit_offset: 4
-    bit_size: 1
-  - name: vio_info_valid5
-    description: Violation information valid flag for AHB port 5.
-    bit_offset: 5
-    bit_size: 1
-  - name: vio_info_valid6
-    description: Violation information valid flag for AHB port 6.
-    bit_offset: 6
-    bit_size: 1
-  - name: vio_info_valid7
-    description: Violation information valid flag for AHB port 7.
-    bit_offset: 7
-    bit_size: 1
+    array:
+      len: 8
+      stride: 1
 fieldset/SecVioMiscInfo:
   description: Security Violation Miscellaneous Information at Address.
   fields:
@@ -1271,171 +1207,156 @@ fieldset/SecVioMiscInfo:
 enum/LockNsMpu:
   bit_size: 2
   variants:
-  - name: LOCK_NS_MPU_EQ_1
+  - name: LockNsMpuEq1
     description: CM33 (CPU0) LOCK_NS_MPU is 1.
     value: 1
-  - name: LOCK_NS_MPU_EQ_0
+  - name: LockNsMpuEq0
     description: CM33 (CPU0) LOCK_NS_MPU is 0.
     value: 2
 enum/LockNsVtor:
   bit_size: 2
   variants:
-  - name: LOCK_NS_VTOR_EQ_1
+  - name: LockNsVtorEq1
     description: CM33 (CPU0) LOCKNSVTOR is 1.
     value: 1
-  - name: LOCK_NS_VTOR_EQ_0
+  - name: LockNsVtorEq0
     description: CM33 (CPU0) LOCKNSVTOR is 0.
     value: 2
 enum/LockSMpu:
   bit_size: 2
   variants:
-  - name: LOCK_S_MPU_EQ_1
+  - name: LockSMpuEq1
     description: CM33 (CPU0) LOCK_S_MPU is 1.
     value: 1
-  - name: LOCK_S_MPU_EQ_0
+  - name: LockSMpuEq0
     description: CM33 (CPU0) LOCK_S_MPU is 0.
     value: 2
 enum/LockSVtaircr:
   bit_size: 2
   variants:
-  - name: LOCK_S_VTAIRCR_EQ_1
+  - name: LockSVtaircrEq1
     description: CM33 (CPU0) LOCK_S_VTAIRCR is 1.
     value: 1
-  - name: LOCK_S_VTAIRCR_EQ_0
+  - name: LockSVtaircrEq0
     description: CM33 (CPU0) LOCK_S_VTAIRCR is 0.
     value: 2
 enum/LockSau:
   bit_size: 2
   variants:
-  - name: LOCK_SAU_EQ_1
+  - name: LockSauEq1
     description: CM33 (CPU0) LOCK_SAU is 1.
     value: 1
-  - name: LOCK_SAU_EQ_0
+  - name: LockSauEq0
     description: CM33 (CPU0) LOCK_SAU is 0.
     value: 2
 enum/MasterSec:
   bit_size: 2
   variants:
-  - name: NONSECURE_NONPRIV_MASTER
-    description: Non-secure and non-privileged Master.
-    value: 0
-  - name: NONSECURE_PRIV_MASTER
-    description: Non-secure and privileged Master.
-    value: 1
-  - name: SECURE_NONPRIV_MASTER
-    description: Secure and non-privileged Master.
-    value: 2
-  - name: SECURE_PRIV_MASTER
+  - name: NonsecureNonprivMaster
     description: Secure and privileged Master.
+    value: 0
+  - name: NonsecurePrivMaster
+    description: Secure and non-privileged Master.
+    value: 1
+  - name: SecureNonprivMaster
+    description: Non-secure and privileged Master.
+    value: 2
+  - name: SecurePrivMaster
+    description: Non-secure and non-privileged Master.
     value: 3
 enum/MiscCtrlEnable:
   bit_size: 2
   variants:
-  - name: ENABLED
+  - name: Enabled
     description: Enables the privilege checking of non-secure mode access.
     value: 1
-  - name: DISABLED
+  - name: Disabled
     description: Disables the privilege checking of non-secure mode access.
     value: 2
 enum/MiscCtrlRegDisableStrictMode:
   bit_size: 2
   variants:
-  - name: AHBTM
-    description: Master can access memories and peripherals at the same level or below that level.
+  - name: Ahbtm
+    description: Master strict mode is disabled and can access memories and peripherals at the same level or below that level.
     value: 1
-  - name: AHBSM1
-    description: Master can access memories and peripherals at same level only.
+  - name: Ahbsm1
+    description: Master strict mode is enabled and can access memories and peripherals at same level only.
     value: 2
 enum/MiscCtrlRegDisableViolationAbort:
   bit_size: 2
   variants:
-  - name: NO_ABORT
+  - name: NoAbort
     description: The violation detected by the secure checker will not cause an abort, but a secure_violation_irq (interrupt request) will still be asserted and serviced by ISR.
     value: 1
-  - name: ABORT
+  - name: Abort
     description: The violation detected by the secure checker will cause an abort.
     value: 2
 enum/MiscCtrlRegIdauAllNs:
   bit_size: 2
   variants:
-  - name: DISABLED
+  - name: Disabled
     description: IDAU is disabled, which means that all memories are attributed as non-secure memory.
     value: 1
-  - name: ENABLED
+  - name: Enabled
     description: IDAU is enabled (restrictive mode).
     value: 2
 enum/MiscCtrlRegWriteLock:
   bit_size: 2
   variants:
-  - name: LOCKED
+  - name: Locked
     description: Writes to this register and to the Memory and Peripheral RULE registers are not allowed.
     value: 1
-  - name: NOT_LOCKED
+  - name: NotLocked
     description: Writes to this register and to the Memory and Peripheral RULE registers are allowed.
     value: 2
 enum/Rule:
   bit_size: 2
   variants:
-  - name: NONSECURE_NONPRIV_USER_ALLOWED
+  - name: NonsecureNonprivUserAllowed
     description: Non-secure and non-privilege user access allowed.
     value: 0
-  - name: NONSECURE_PRIV_USER_ALLOWED
+  - name: NonsecurePrivUserAllowed
     description: Non-secure and privilege access allowed.
     value: 1
-  - name: SECURE_NONPRIV_USER_ALLOWED
+  - name: SecureNonprivUserAllowed
     description: Secure and non-privilege user access allowed.
     value: 2
-  - name: SECURE_PRIV_USER_ALLOWED
+  - name: SecurePrivUserAllowed
     description: Secure and privilege user access allowed.
     value: 3
 enum/SecVioInfoDataAccess:
   bit_size: 1
   variants:
-  - name: CODE
+  - name: Code
     description: Code.
     value: 0
-  - name: DATA
+  - name: Data
     description: Data.
     value: 1
 enum/SecVioInfoMaster:
   bit_size: 5
   variants:
-  - name: CPU0_CODE
-    description: CM33 Code.
+  - name: Cpu0Code
+    description: M33 Code.
     value: 0
-  - name: CPU0_SYS
-    description: CM33 System.
+  - name: Cpu0Sys
+    description: M33 System.
     value: 1
-  - name: SDMA_INSTR
-    description: SMARTDMA Instruction.
-    value: 2
-  - name: SDMA_DATA
-    description: SMARTDMA Data.
-    value: 3
-  - name: E_DMA1
-    description: eDMA1.
-    value: 4
-  - name: E_DMA0
-    description: eDMA0.
+  - name: Dma0
+    description: DMA0.
     value: 5
-  - name: USB_HS
-    description: USB HS.
-    value: 6
-  - name: ESPI
-    description: eSPI.
-    value: 10
-  - name: PKC
+  - name: Dma1
+    description: DMA1.
+    value: 7
+  - name: Pkc
     description: PKC.
     value: 12
-  - name: ENET
-    description: Ethernet.
-    value: 13
 enum/SecVioInfoWrite:
   bit_size: 1
   variants:
-  - name: READ
+  - name: Read
     description: Read access.
     value: 0
-  - name: WRITE
+  - name: Write
     description: Write access.
     value: 1

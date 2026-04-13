@@ -1,4 +1,12 @@
 transforms:
+  - !Rename
+    from: secure_ahb_ctrl::(.+)
+    to: ahbsc::$1
+
+  - !Rename
+    from: ahbsc::SecureAhbCtrl
+    to: ahbsc::Ahbsc
+
   # Temporarily move everything that is not a Rule someplace else
   - !Rename
     from: ahbsc::(Lock.+|Master.+|MiscCtrl.+|SecVio.+)
@@ -26,7 +34,7 @@ transforms:
     to: ahbsc::MiscCtrlEnable
 
   - !MakeFieldArray
-    fieldsets: ahbsc::(.+MemRule|AhbSecureCtrlMemRule0)
+    fieldsets: ahbsc::(.+MemRule|AhbSecureCtrlMemRule0|AhbSecureCtrlPeripheralRule0|AhbSlavePortP\d+SlaveRule|AonDomainSramMemRule0|Flash\d+MemRule0|RamxMemRule0)
     from: rule(\d+)
     to: rule
 
@@ -39,9 +47,27 @@ transforms:
     from: dma[01]_ipd_req_\d+
     to: dma_ipd_req
 
+  # sec_gp_reg8 is wrong; and 9 is missing from SVD
+  - !DeleteRegisters
+    block: ahbsc::Ahbsc
+    from: sec_gp_reg8
+  
+  - !DeleteFieldsets
+    from: ahbsc::SecGpReg8
+
   - !MergeFieldsets
     from: ahbsc::SecGpReg\d+
     to: ahbsc::SecGpReg
+
+  - !AddRegisters
+    block: ahbsc::Ahbsc
+    registers:
+    - name: sec_gp_reg8
+      byte_offset: 0xfa0
+      fieldset: ahbsc::SecGpReg
+    - name: sec_gp_reg9
+      byte_offset: 0xfa4
+      fieldset: ahbsc::SecGpReg
 
   - !MakeRegisterArray
     blocks: ahbsc::Ahbsc
