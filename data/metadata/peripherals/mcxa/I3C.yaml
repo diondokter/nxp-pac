@@ -38,6 +38,15 @@ block/I3c:
     description: Target DMA Control.
     byte_offset: 32
     fieldset: Sdmactrl
+  - name: shdrbtcfg
+    description: Target HDR-BT Configuration.
+    byte_offset: 36
+    fieldset: Shdrbtcfg
+  - name: shdrbtlast
+    description: Target HDR-Last.
+    byte_offset: 40
+    access: Read
+    fieldset: Shdrbtlast
   - name: sdatactrl
     description: Target Data Control.
     byte_offset: 44
@@ -77,11 +86,6 @@ block/I3c:
     byte_offset: 84
     access: Write
     fieldset: Swdatab1
-  - name: swdatah1
-    description: Target Write Data Halfword.
-    byte_offset: 84
-    access: Write
-    fieldset: Swdatah1
   - name: scapabilities2
     description: Target Capabilities 2.
     byte_offset: 92
@@ -92,10 +96,6 @@ block/I3c:
     byte_offset: 96
     access: Read
     fieldset: Scapabilities
-  - name: sdynaddr
-    description: Target Dynamic Address.
-    byte_offset: 100
-    fieldset: Sdynaddr
   - name: smaxlimits
     description: Target Maximum Limits.
     byte_offset: 104
@@ -158,6 +158,15 @@ block/I3c:
     description: Controller DMA Control.
     byte_offset: 160
     fieldset: Mdmactrl
+  - name: mhdrbtcfg
+    description: Controller HDR-BT Configuration.
+    byte_offset: 164
+    fieldset: Mhdrbtcfg
+  - name: mhdrbtlast
+    description: Controller HDR-Last.
+    byte_offset: 168
+    access: Read
+    fieldset: Mhdrbtlast
   - name: mdatactrl
     description: Controller Data Control.
     byte_offset: 172
@@ -197,11 +206,6 @@ block/I3c:
     byte_offset: 204
     access: Write
     fieldset: Mwdatab1
-  - name: mwdatah1
-    description: Controller Write Halfword Data (to Bus).
-    byte_offset: 204
-    access: Write
-    fieldset: Mwdatah1
   - name: mwmsg_sdr_control
     description: Controller Write Message Control in SDR mode.
     byte_offset: 208
@@ -241,11 +245,25 @@ block/I3c:
     description: Controller Dynamic Address.
     byte_offset: 228
     fieldset: Mdynaddr
+  - name: mwdataw
+    description: Write Word Data (to Bus).
+    byte_offset: 240
+    access: Write
+    fieldset: Mwdataw
+  - name: mrdataw
+    description: Read Word Data (from Bus).
+    byte_offset: 248
+    access: Read
+    fieldset: Mrdataw
   - name: smapctrl0
     description: Map Feature Control 0.
     byte_offset: 284
     access: Read
     fieldset: Smapctrl0
+  - name: smapctrl1
+    description: Map Feature Control 1.
+    byte_offset: 288
+    fieldset: Smapctrl1
   - name: ibiext1
     description: Extended IBI Data 1.
     byte_offset: 320
@@ -254,6 +272,16 @@ block/I3c:
     description: Extended IBI Data 2.
     byte_offset: 324
     fieldset: Ibiext2
+  - name: swdataw
+    description: Target Write Word Data (to Bus).
+    byte_offset: 336
+    access: Write
+    fieldset: Swdataw
+  - name: srdataw
+    description: Target Read Word Data (from Bus).
+    byte_offset: 344
+    access: Read
+    fieldset: Srdataw
   - name: sid
     description: Target Module ID.
     byte_offset: 4092
@@ -508,6 +536,34 @@ fieldset/Merrwarn:
     description: Timeout Error Flag.
     bit_offset: 20
     bit_size: 1
+fieldset/Mhdrbtcfg:
+  description: Controller HDR-BT Configuration.
+  fields:
+  - name: mlhdr
+    description: Multi-Lane HDR.
+    bit_offset: 0
+    bit_size: 2
+    enum: Mlhdr
+  - name: mldat
+    description: Multi-Lane Data.
+    bit_offset: 2
+    bit_size: 2
+    enum: Mldat
+  - name: crc32
+    description: CRC32.
+    bit_offset: 4
+    bit_size: 1
+  - name: datalen
+    description: Data Length.
+    bit_offset: 16
+    bit_size: 16
+fieldset/Mhdrbtlast:
+  description: Controller HDR-Last.
+  fields:
+  - name: datalen
+    description: Data Length.
+    bit_offset: 16
+    bit_size: 16
 fieldset/Mibirules:
   description: Controller In-band Interrupt Registry and Rules.
   fields:
@@ -663,6 +719,13 @@ fieldset/Mrdatah:
     description: High Byte.
     bit_offset: 8
     bit_size: 8
+fieldset/Mrdataw:
+  description: Read Word Data (from Bus).
+  fields:
+  - name: value
+    description: Value.
+    bit_offset: 0
+    bit_size: 32
 fieldset/MrmsgDdr:
   description: Controller Read Message in DDR mode.
   fields:
@@ -778,13 +841,6 @@ fieldset/Mwdatah:
     description: End of Message.
     bit_offset: 16
     bit_size: 1
-fieldset/Mwdatah1:
-  description: Controller Write Halfword Data (to Bus).
-  fields:
-  - name: value
-    description: Value.
-    bit_offset: 0
-    bit_size: 16
 fieldset/Mwdatahe:
   description: Controller Write Data Halfword End.
   fields:
@@ -796,6 +852,13 @@ fieldset/Mwdatahe:
     description: Data Byte 1.
     bit_offset: 8
     bit_size: 8
+fieldset/Mwdataw:
+  description: Write Word Data (to Bus).
+  fields:
+  - name: data
+    description: Data.
+    bit_offset: 0
+    bit_size: 32
 fieldset/MwmsgDdrControl:
   description: 'Controller Write Message in DDR mode: First Control Word.'
   fields:
@@ -984,8 +1047,8 @@ fieldset/Sconfig:
     description: Ignore TE0 or TE1 Errors.
     bit_offset: 3
     bit_size: 1
-  - name: hdrok
-    description: HDR OK.
+  - name: ddrok
+    description: Double Data Rate OK.
     bit_offset: 4
     bit_size: 1
   - name: offline
@@ -1011,6 +1074,10 @@ fieldset/Sctrl:
   - name: extdata
     description: Extended Data.
     bit_offset: 3
+    bit_size: 1
+  - name: mapidx
+    description: Map Index.
+    bit_offset: 4
     bit_size: 1
   - name: ibidata
     description: In-Band Interrupt Data.
@@ -1089,30 +1156,6 @@ fieldset/Sdmactrl:
     bit_offset: 4
     bit_size: 2
     enum: SdmactrlDmawidth
-fieldset/Sdynaddr:
-  description: Target Dynamic Address.
-  fields:
-  - name: davalid
-    description: Dynamic Address Valid.
-    bit_offset: 0
-    bit_size: 1
-    enum: SdynaddrDavalid
-  - name: daddr
-    description: Dynamic Address.
-    bit_offset: 1
-    bit_size: 7
-  - name: mapsa
-    description: Map a Static Address.
-    bit_offset: 12
-    bit_size: 1
-  - name: sa10b
-    description: 10-Bit Static Address.
-    bit_offset: 13
-    bit_size: 3
-  - name: key
-    description: Key.
-    bit_offset: 16
-    bit_size: 16
 fieldset/Serrwarn:
   description: Target Errors and Warnings.
   fields:
@@ -1152,6 +1195,10 @@ fieldset/Serrwarn:
     description: TE0 or TE1 Error Flag.
     bit_offset: 11
     bit_size: 1
+  - name: hinvreq
+    description: HDR-BT Invalid Request Flag.
+    bit_offset: 13
+    bit_size: 1
   - name: oread
     description: Over-Read Error Flag.
     bit_offset: 16
@@ -1160,6 +1207,29 @@ fieldset/Serrwarn:
     description: Over-Write Error Flag.
     bit_offset: 17
     bit_size: 1
+fieldset/Shdrbtcfg:
+  description: Target HDR-BT Configuration.
+  fields:
+  - name: crc32
+    description: CRC32 Select.
+    bit_offset: 2
+    bit_size: 1
+    enum: ShdrbtcfgCrc32
+  - name: wdatamax
+    description: Maximum Data.
+    bit_offset: 4
+    bit_size: 12
+  - name: datalen
+    description: Read Data Length.
+    bit_offset: 16
+    bit_size: 16
+fieldset/Shdrbtlast:
+  description: Target HDR-Last.
+  fields:
+  - name: datalen
+    description: Data Length.
+    bit_offset: 16
+    bit_size: 16
 fieldset/Sid:
   description: Target Module ID.
   fields:
@@ -1342,6 +1412,29 @@ fieldset/Smapctrl0:
     bit_offset: 8
     bit_size: 3
     enum: Cause
+fieldset/Smapctrl1:
+  description: Map Feature Control 1.
+  fields:
+  - name: ena
+    description: Enable.
+    bit_offset: 0
+    bit_size: 1
+  - name: addr
+    description: Address.
+    bit_offset: 1
+    bit_size: 7
+  - name: mapsa
+    description: MAP Static Address.
+    bit_offset: 8
+    bit_size: 1
+  - name: sa10b
+    description: Static Address 10-Bit Extension.
+    bit_offset: 9
+    bit_size: 3
+  - name: nack
+    description: Not Acknowledged.
+    bit_offset: 12
+    bit_size: 1
 fieldset/Smaxlimits:
   description: Target Maximum Limits.
   fields:
@@ -1391,6 +1484,13 @@ fieldset/Srdatah:
     description: High Byte.
     bit_offset: 8
     bit_size: 8
+fieldset/Srdataw:
+  description: Target Read Word Data (from Bus).
+  fields:
+  - name: value
+    description: Value.
+    bit_offset: 0
+    bit_size: 32
 fieldset/Sstatus:
   description: Target Status.
   fields:
@@ -1565,13 +1665,6 @@ fieldset/Swdatah:
     description: End of Message.
     bit_offset: 16
     bit_size: 1
-fieldset/Swdatah1:
-  description: Target Write Data Halfword.
-  fields:
-  - name: data
-    description: Data.
-    bit_offset: 0
-    bit_size: 16
 fieldset/Swdatahe:
   description: Target Write Data Halfword End.
   fields:
@@ -1583,696 +1676,727 @@ fieldset/Swdatahe:
     description: Data 1.
     bit_offset: 8
     bit_size: 8
+fieldset/Swdataw:
+  description: Target Write Word Data (to Bus).
+  fields:
+  - name: data
+    description: Data.
+    bit_offset: 0
+    bit_size: 32
 enum/Actstate:
   bit_size: 2
   variants:
-  - name: NO_LATENCY
+  - name: NoLatency
     description: NO_LATENCY (normal bus operations).
     value: 0
-  - name: LATENCY_1MS
+  - name: Latency1ms
     description: LATENCY_1MS (1 ms of latency).
     value: 1
-  - name: LATENCY_100MS
+  - name: Latency100ms
     description: LATENCY_100MS (100 ms of latency).
     value: 2
-  - name: LATENCY_10S
+  - name: Latency10s
     description: LATENCY_10S (10 seconds of latency).
     value: 3
 enum/Cause:
   bit_size: 3
   variants:
-  - name: NONE
+  - name: None
     description: No information (this value occurs when not configured to write DA).
     value: 0
-  - name: ENTDAA
+  - name: Entdaa
     description: Set using ENTDAA.
     value: 1
-  - name: SETDASA
+  - name: Setdasa
     description: Set using SETDASA, SETAASA, or SETNEWDA.
     value: 2
-  - name: RSTDAA
+  - name: Rstdaa
     description: Cleared using RSTDAA.
     value: 3
-  - name: AUTOMAP
+  - name: Automap
     description: Auto MAP change happened last.
     value: 4
 enum/Ccchandle:
   bit_size: 4
   variants:
-  - name: ALL_DISABLED
+  - name: AllDisabled
     description: All handling features disabled.
     value: 0
-  - name: BLOCK_HANDLE
+  - name: BlockHandle
     description: The I3C module manages events, activities, status, HDR, and if enabled for it, ID and static-address-related items.
     value: 1
 enum/Disto:
   bit_size: 1
   variants:
-  - name: ENABLE
+  - name: Enable
     description: Enabled.
     value: 0
-  - name: DISABLE
-    description: Disabled, if configured.
+  - name: Disable
+    description: Disabled.
     value: 1
 enum/Dma:
   bit_size: 1
   variants:
-  - name: DMANO
+  - name: Dmano
     description: Not supported.
     value: 0
-  - name: DMAYES
+  - name: Dmayes
     description: Supported.
     value: 1
 enum/Evdet:
   bit_size: 2
   variants:
-  - name: NONE
+  - name: None
     description: NONE (no event or no pending event).
     value: 0
-  - name: NO_REQUEST
+  - name: NoRequest
     description: NO_REQUEST (request is not sent yet; either there is no START condition yet, or is waiting for Bus-Available or Bus-Idle (HJ)).
     value: 1
-  - name: NACKED
+  - name: Nacked
     description: NACKed (not acknowledged, request sent and rejected); I3C tries again.
     value: 2
-  - name: ACKED
+  - name: Acked
     description: ACKed (acknowledged; request sent and accepted), so done (unless the time control data is still being sent).
     value: 3
 enum/Extfifo:
   bit_size: 3
   variants:
-  - name: NO_EXT_FIFO
+  - name: NoExtFifo
     description: No external FIFO available.
     value: 0
-  - name: STD_EXT_FIFO
+  - name: StdExtFifo
     description: Standard available or free external FIFO.
     value: 1
-  - name: REQUEST_EXT_FIFO
+  - name: RequestExtFifo
     description: Request track external FIFO.
     value: 2
 enum/Fiforx:
   bit_size: 2
   variants:
-  - name: FIFO_2BYTE
+  - name: Fifo2byte
     description: Two or three.
     value: 0
-  - name: FIFO_4BYTE
+  - name: Fifo4byte
     description: Four.
     value: 1
-  - name: FIFO_8BYTE
+  - name: Fifo8byte
     description: Eight.
     value: 2
-  - name: FIFO_16BYTE
+  - name: Fifo16byte
     description: 16 or larger.
     value: 3
 enum/Fifotx:
   bit_size: 2
   variants:
-  - name: FIFO_2BYTE
+  - name: Fifo2byte
     description: Two.
     value: 0
-  - name: FIFO_4BYTE
+  - name: Fifo4byte
     description: Four.
     value: 1
-  - name: FIFO_8BYTE
+  - name: Fifo8byte
     description: Eight.
     value: 2
-  - name: FIFO_16BYTE
+  - name: Fifo16byte
     description: 16 or larger.
     value: 3
 enum/Group:
   bit_size: 2
   variants:
-  - name: NOTSUPPORTED
+  - name: Notsupported
     description: v1.1 group addressing not supported.
     value: 0
-  - name: ONE
+  - name: One
     description: One group supported.
     value: 1
-  - name: TWO
+  - name: Two
     description: Two groups supported.
     value: 2
-  - name: THREE
+  - name: Three
     description: Three groups supported.
     value: 3
 enum/Hdrsupp:
   bit_size: 2
   variants:
-  - name: NO_HDR
+  - name: NoHdr
     description: No HDR modes supported.
     value: 0
-  - name: DDR
+  - name: Ddr
     description: DDR mode supported.
     value: 1
 enum/Hjdis:
   bit_size: 1
   variants:
-  - name: MR_ENABLED
+  - name: MrEnabled
     description: Enabled.
     value: 0
-  - name: MR_DISABLED
+  - name: MrDisabled
     description: Disabled.
     value: 1
 enum/Hkeep:
   bit_size: 2
   variants:
-  - name: NONE
+  - name: None
     description: None.
     value: 0
-  - name: WIRED_IN
+  - name: WiredIn
     description: WIRED_IN.
     value: 1
-  - name: PASSIVE_SDA
+  - name: PassiveSda
     description: PASSIVE_SDA (I2C mode, no clock stretches mode).
     value: 2
-  - name: PASSIVE_ON_SDA_SCL
+  - name: PassiveOnSdaScl
     description: PASSIVE_ON_SDA_SCL.
     value: 3
 enum/I2c:
   bit_size: 1
   variants:
-  - name: I3CMESSAGE
+  - name: I3cmessage
     description: I3C message.
     value: 0
-  - name: I2CMESSAGE
+  - name: I2cmessage
     description: I2C message.
     value: 1
 enum/I3cCasDel:
   bit_size: 2
   variants:
-  - name: NO_DELAY
+  - name: NoDelay
     description: No delay.
     value: 0
-  - name: ONE_HALF_CLK
+  - name: OneHalfClk
     description: Increases SCL clock period by 1/2.
     value: 1
-  - name: ONE_CLK
+  - name: OneClk
     description: Increases SCL clock period by 1.
     value: 2
-  - name: ONE_AND_ONE_HALF_CLK
+  - name: OneAndOneHalfClk
     description: Increases SCL clock period by 3/2.
     value: 3
 enum/I3cCasrDel:
   bit_size: 2
   variants:
-  - name: NO_DELAY
+  - name: NoDelay
     description: No delay.
     value: 0
-  - name: ONE_HALF_CLK
+  - name: OneHalfClk
     description: Increases SCL clock period by 1/2.
     value: 1
-  - name: ONE_CLK
+  - name: OneClk
     description: Increases SCL clock period by 1.
     value: 2
-  - name: ONE_AND_ONE_HALF_CLK
+  - name: OneAndOneHalfClk
     description: Increases SCL clock period by 1 1/2.
     value: 3
 enum/IbiMrHj:
   bit_size: 5
   variants:
-  - name: ALL_DISABLED
+  - name: AllDisabled
     description: Application cannot generate IBI, CR, or HJ.
     value: 0
-  - name: IBI
+  - name: Ibi
     description: Application can generate an IBI.
     value: 1
 enum/Ibidis:
   bit_size: 1
   variants:
-  - name: INTERRUPTS_ENABLED
+  - name: InterruptsEnabled
     description: Enabled.
     value: 0
-  - name: INTERRUPTS_DISABLED
+  - name: InterruptsDisabled
     description: Disabled.
     value: 1
 enum/Ibiresp:
   bit_size: 2
   variants:
-  - name: ACK
+  - name: Ack
     description: ACK (acknowledge).
     value: 0
-  - name: NACK
+  - name: Nack
     description: NACK (reject).
     value: 1
-  - name: ACK_WITH_MANDATORY
+  - name: AckWithMandatory
     description: Acknowledge with mandatory byte.
     value: 2
-  - name: MANUAL
+  - name: Manual
     description: Manual.
     value: 3
 enum/Ibitype:
   bit_size: 2
   variants:
-  - name: NONE
+  - name: None
     description: 'NONE (no IBI: this status occurs when MSTATUS[IBIWON] becomes 0).'
     value: 0
-  - name: IBI
+  - name: Ibi
     description: IBI.
     value: 1
-  - name: MR
+  - name: Mr
     description: CR.
     value: 2
-  - name: HJ
+  - name: Hj
     description: HJ.
     value: 3
 enum/Idena:
   bit_size: 2
   variants:
-  - name: APPLICATION
+  - name: Application
     description: Application.
     value: 0
-  - name: HW
+  - name: Hw
     description: Hardware.
     value: 1
-  - name: HW_BUT
+  - name: HwBut
     description: Hardware, but the I3C module instance handles ID 48b.
     value: 2
-  - name: PARTNO
+  - name: Partno
     description: A part number register (PARTNO).
     value: 3
 enum/Idreg:
   bit_size: 4
   variants:
-  - name: ALL_DISABLED
+  - name: AllDisabled
     description: All ID register features disabled.
     value: 0
-  - name: ID_INSTANCE
+  - name: IdInstance
     description: ID Instance is a register; used if there is no PARTNO register.
     value: 1
 enum/Int:
   bit_size: 1
   variants:
-  - name: INTERRUPTSNO
+  - name: Interruptsno
     description: Not supported.
     value: 0
-  - name: INTERRUPTSYES
+  - name: Interruptsyes
     description: Supported.
     value: 1
 enum/Laststatic:
   bit_size: 1
   variants:
-  - name: I3C
+  - name: I3c
     description: I3C dynamic address.
     value: 0
-  - name: I2C
+  - name: I2c
     description: I2C static address.
     value: 1
 enum/Master:
   bit_size: 1
   variants:
-  - name: MASTERNOTSUPPORTED
+  - name: Masternotsupported
     description: Not supported.
     value: 0
-  - name: MASTERSUPPORTED
+  - name: Mastersupported
     description: Supported.
     value: 1
 enum/MctrlDir:
   bit_size: 1
   variants:
-  - name: DIRWRITE
+  - name: Dirwrite
     description: Write.
     value: 0
-  - name: DIRREAD
+  - name: Dirread
     description: Read.
     value: 1
 enum/MdatactrlRxtrig:
   bit_size: 2
   variants:
-  - name: NOT_EMPTY
+  - name: NotEmpty
     description: Trigger when not empty (default).
     value: 0
-  - name: QUARTER_OR_MORE
+  - name: QuarterOrMore
     description: Trigger when 1/4 full or more.
     value: 1
-  - name: HALF_OR_MORE
+  - name: HalfOrMore
     description: Trigger when 1/2 full or more.
     value: 2
-  - name: THREE_QUARTER_OR_MORE
+  - name: ThreeQuarterOrMore
     description: Trigger when 3/4 full or more.
     value: 3
 enum/MdatactrlTxtrig:
   bit_size: 2
   variants:
-  - name: EMPTY
+  - name: Empty
     description: Trigger when empty.
     value: 0
-  - name: QUARTER_OR_LESS
+  - name: QuarterOrLess
     description: Trigger when 1/4 full or less.
     value: 1
-  - name: HALF_OR_LESS
+  - name: HalfOrLess
     description: Trigger when 1/2 full or less.
     value: 2
-  - name: FULL_OR_LESS
+  - name: FullOrLess
     description: Trigger when 1 less than full or less (default).
     value: 3
 enum/MdmactrlDmafb:
   bit_size: 2
   variants:
-  - name: NOT_USED
+  - name: NotUsed
     description: DMA not used.
     value: 0
-  - name: ENABLE_ONE_FRAME
+  - name: EnableOneFrame
     description: Enable DMA for one frame.
     value: 1
-  - name: ENABLE
+  - name: Enable
     description: Enable DMA until DMA is turned off.
     value: 2
 enum/MdmactrlDmatb:
   bit_size: 2
   variants:
-  - name: NOT_USED
+  - name: NotUsed
     description: DMA not used.
     value: 0
-  - name: ENABLE_ONE_FRAME
+  - name: EnableOneFrame
     description: Enable DMA for one frame (ended by DMA or terminated).
     value: 1
-  - name: ENABLE
+  - name: Enable
     description: Enable DMA until DMA is turned off.
     value: 2
 enum/MdmactrlDmawidth:
   bit_size: 2
   variants:
-  - name: BYTE_0
+  - name: Byte0
     description: Byte.
     value: 0
-  - name: BYTE_1
+  - name: Byte1
     description: Byte.
     value: 1
-  - name: HALF_WORD
+  - name: HalfWord
     description: Halfword (16 bits).
     value: 2
+enum/Mldat:
+  bit_size: 2
+  variants:
+  - name: Single
+    description: Single lane for data.
+    value: 0
+  - name: Dual
+    description: Dual lane for data.
+    value: 1
+  - name: Quad
+    description: Quad-lane data.
+    value: 3
+enum/Mlhdr:
+  bit_size: 2
+  variants:
+  - name: Single
+    description: Single lane for header.
+    value: 0
+  - name: Dual
+    description: Dual lane for header.
+    value: 1
+  - name: Quad
+    description: Quad-lane header.
+    value: 3
 enum/Mrdis:
   bit_size: 1
   variants:
-  - name: MR_ENABLED
+  - name: MrEnabled
     description: Enabled.
     value: 0
-  - name: MR_DISABLED
+  - name: MrDisabled
     description: Disabled.
     value: 1
 enum/Mstena:
   bit_size: 2
   variants:
-  - name: MASTER_OFF
+  - name: MasterOff
     description: CONTROLLER_OFF.
     value: 0
-  - name: MASTER_ON
+  - name: MasterOn
     description: CONTROLLER_ON.
     value: 1
-  - name: MASTER_CAPABLE
+  - name: MasterCapable
     description: CONTROLLER_CAPABLE.
     value: 2
-  - name: I2C_MASTER_MODE
+  - name: I2cMasterMode
     description: I2C_CONTROLLER_MODE.
     value: 3
 enum/MwmsgSdrControlDir:
   bit_size: 1
   variants:
-  - name: WRITE
+  - name: Write
     description: Write.
     value: 0
-  - name: READ
+  - name: Read
     description: Read.
     value: 1
 enum/Nobyte:
   bit_size: 1
   variants:
-  - name: IBIBYTE
+  - name: Ibibyte
     description: With mandatory IBI byte.
     value: 0
-  - name: NO_IBIBYTE
+  - name: NoIbibyte
     description: Without mandatory IBI byte.
     value: 1
 enum/Request:
   bit_size: 3
   variants:
-  - name: NONE
+  - name: None
     description: NONE.
     value: 0
-  - name: EMITSTARTADDR
+  - name: Emitstartaddr
     description: EMITSTARTADDR.
     value: 1
-  - name: EMITSTOP
+  - name: Emitstop
     description: EMITSTOP.
     value: 2
-  - name: IBIACKNACK
+  - name: Ibiacknack
     description: IBIACKNACK.
     value: 3
-  - name: PROCESSDAA
+  - name: Processdaa
     description: PROCESSDAA.
     value: 4
-  - name: FORCEEXIT
+  - name: Forceexit
     description: Force Exit and Target Reset.
     value: 6
-  - name: AUTOIBI
+  - name: Autoibi
     description: AUTOIBI.
     value: 7
 enum/Saddr:
   bit_size: 2
   variants:
-  - name: NO_STATIC
+  - name: NoStatic
     description: No static address.
     value: 0
-  - name: STATIC
+  - name: Static
     description: Static address is fixed in hardware.
     value: 1
-  - name: HW_CONTROL
+  - name: HwControl
     description: Hardware controls the static address dynamically (for example, from the pin strap).
     value: 2
-  - name: CONFIG
+  - name: Config
     description: SCONFIG register supplies the static address.
     value: 3
 enum/ScapabilitiesTimectrl:
   bit_size: 1
   variants:
-  - name: NO_TIME_CONTROL_TYPE
+  - name: NoTimeControlType
     description: No time control supported.
     value: 0
-  - name: ATLEAST1_TIME_CONTROL
+  - name: Atleast1TimeControl
     description: At least one time-control type supported.
     value: 1
 enum/SctrlEvent:
   bit_size: 2
   variants:
-  - name: NORMAL_MODE
+  - name: NormalMode
     description: NORMAL_MODE.
     value: 0
-  - name: IBI
+  - name: Ibi
     description: IBI.
     value: 1
-  - name: MASTER_REQUEST
+  - name: MasterRequest
     description: CONTROLLER_REQUEST.
     value: 2
-  - name: HOT_JOIN_REQUEST
+  - name: HotJoinRequest
     description: HOT_JOIN_REQUEST.
     value: 3
 enum/SdatactrlRxempty:
   bit_size: 1
   variants:
-  - name: RXISNOTEMPTY
+  - name: Rxisnotempty
     description: Not empty.
     value: 0
-  - name: RXISEMPTY
+  - name: Rxisempty
     description: Empty.
     value: 1
 enum/SdatactrlRxtrig:
   bit_size: 2
   variants:
-  - name: TRIGGRNOTEMPTY
+  - name: Triggrnotempty
     description: Trigger when not empty (default).
     value: 0
-  - name: TRIGGRONEFOURTH
+  - name: Triggronefourth
     description: Trigger when 1/4 or more full.
     value: 1
-  - name: TRIGGRONEHALF
+  - name: Triggronehalf
     description: Trigger when 1/2 or more full.
     value: 2
-  - name: TRIGGRTHREEFOURTHS
+  - name: Triggrthreefourths
     description: Trigger when 3/4 or more full.
     value: 3
 enum/SdatactrlTxfull:
   bit_size: 1
   variants:
-  - name: TXISNOTFULL
+  - name: Txisnotfull
     description: Not full.
     value: 0
-  - name: TXISFULL
+  - name: Txisfull
     description: Full.
     value: 1
 enum/SdatactrlTxtrig:
   bit_size: 2
   variants:
-  - name: TRIGGREMPTY
+  - name: Triggrempty
     description: Trigger when empty.
     value: 0
-  - name: TRIGGRONEFOURTH
+  - name: Triggronefourth
     description: Trigger when 1/4 full or less.
     value: 1
-  - name: TRIGGRONEHALF
+  - name: Triggronehalf
     description: Trigger when 1/2 full or less.
     value: 2
-  - name: TRIGGRONELESS
+  - name: Triggroneless
     description: Default (trigger when 1 less than full or less).
     value: 3
 enum/SdmactrlDmafb:
   bit_size: 2
   variants:
-  - name: NOT_USED
+  - name: NotUsed
     description: DMA not used.
     value: 0
-  - name: ENABLE_ONE_FRAME
+  - name: EnableOneFrame
     description: DMA enabled for one frame.
     value: 1
-  - name: ENABLE
+  - name: Enable
     description: DMA enabled until turned off.
     value: 2
 enum/SdmactrlDmatb:
   bit_size: 2
   variants:
-  - name: NOT_USED
+  - name: NotUsed
     description: DMA not used.
     value: 0
-  - name: ENABLE_ONE_FRAME
+  - name: EnableOneFrame
     description: DMA enabled for one frame.
     value: 1
-  - name: ENABLE
+  - name: Enable
     description: DMA enabled until turned off.
     value: 2
 enum/SdmactrlDmawidth:
   bit_size: 2
   variants:
-  - name: BYTE_0
+  - name: Byte0
     description: Byte.
     value: 0
-  - name: BYTE_1
+  - name: Byte1
     description: Byte.
     value: 1
-  - name: HALF_WORD
+  - name: HalfWord
     description: Halfword (16 bits) (this value ensures that two bytes are available in the FIFO).
     value: 2
-enum/SdynaddrDavalid:
+enum/ShdrbtcfgCrc32:
   bit_size: 1
   variants:
-  - name: DANOTASSIGNED
-    description: 'DANOTASSIGNED: a dynamic address is not assigned.'
+  - name: UseCrc16
+    description: CRC16.
     value: 0
-  - name: DAASSIGNED
-    description: 'DAASSIGNED: a dynamic address is assigned.'
+  - name: UseCrc32
+    description: CRC32.
     value: 1
 enum/SstatusStart:
   bit_size: 1
   variants:
-  - name: START_NOT_DETECTED
+  - name: StartNotDetected
     description: Not detected.
     value: 0
-  - name: START_DETECTED
+  - name: StartDetected
     description: Detected.
     value: 1
 enum/SstatusTimectrl:
   bit_size: 2
   variants:
-  - name: NO_TIME_CONTROL
+  - name: NoTimeControl
     description: NO_TIME_CONTROL (no time control is enabled).
     value: 0
-  - name: SYNC
+  - name: Sync
     description: SYNC_MODE (Synchronous mode is enabled).
     value: 1
-  - name: ASYNC_MODE
+  - name: AsyncMode
     description: ASYNC_MODE (Asynchronous standard mode (0 or 1) is enabled).
     value: 2
-  - name: BOTHSYNCASYNC
+  - name: Bothsyncasync
     description: BOTHSYNCASYNC (both Synchronous and Asynchronous modes are enabled).
     value: 3
 enum/SstatusTxnotfull:
   bit_size: 1
   variants:
-  - name: FULL
+  - name: Full
     description: Transmit buffer full.
     value: 0
-  - name: NOT_FULL
+  - name: NotFull
     description: Transmit buffer not full.
     value: 1
 enum/State:
   bit_size: 3
   variants:
-  - name: IDLE
+  - name: Idle
     description: IDLE (bus has stopped).
     value: 0
-  - name: SLVREQ
+  - name: Slvreq
     description: SLVREQ (target request).
     value: 1
-  - name: MSGSDR
+  - name: Msgsdr
     description: MSGSDR.
     value: 2
-  - name: NORMACT
+  - name: Normact
     description: NORMACT.
     value: 3
-  - name: DDR
+  - name: Ddr
     description: MSGDDR.
     value: 4
-  - name: DAA
+  - name: Daa
     description: DAA.
     value: 5
-  - name: IBIACK
+  - name: Ibiack
     description: IBIACK.
     value: 6
-  - name: IBIRCV
+  - name: Ibircv
     description: IBIRCV.
     value: 7
 enum/Stccch:
   bit_size: 1
   variants:
-  - name: IDLE
+  - name: Idle
     description: No CCC message handled.
     value: 0
-  - name: BUSY
+  - name: Busy
     description: Handled automatically.
     value: 1
 enum/Stmsg:
   bit_size: 1
   variants:
-  - name: IDLE
+  - name: Idle
     description: Idle.
     value: 0
-  - name: BUSY
+  - name: Busy
     description: Busy.
     value: 1
 enum/Stnotstop:
   bit_size: 1
   variants:
-  - name: STOPPED
+  - name: Stopped
     description: In STOP condition.
     value: 0
-  - name: BUSY
+  - name: Busy
     description: Busy.
     value: 1
 enum/Streqrd:
   bit_size: 1
   variants:
-  - name: IDLE
+  - name: Idle
     description: Not an SDR read.
     value: 0
-  - name: BUSY
+  - name: Busy
     description: SDR read from this target or an IBI is being pushed out.
     value: 1
 enum/Streqwr:
   bit_size: 1
   variants:
-  - name: IDLE
+  - name: Idle
     description: Not an SDR write.
     value: 0
-  - name: BUSY
+  - name: Busy
     description: SDR write data from the controller, but not in ENTDAA mode.
     value: 1
 enum/Type:
   bit_size: 2
   variants:
-  - name: I3C
+  - name: I3c
     description: I3C.
     value: 0
-  - name: I2C
+  - name: I2c
     description: I2C.
     value: 1
-  - name: DDR
+  - name: Ddr
     description: DDR.
     value: 2
