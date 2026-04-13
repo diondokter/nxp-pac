@@ -252,6 +252,10 @@ fieldset/Mcfgr1:
     bit_offset: 24
     bit_size: 3
     enum: Pincfg
+  - name: frchs
+    description: Force HS Mode.
+    bit_offset: 27
+    bit_size: 1
 fieldset/Mcfgr2:
   description: Controller Configuration 2.
   fields:
@@ -857,46 +861,46 @@ fieldset/Verid:
 enum/Addrcfg:
   bit_size: 3
   variants:
-  - name: ADDRESS_MATCH0_7_BIT
+  - name: AddressMatch07Bit
     description: Address match 0 (7-bit).
     value: 0
-  - name: ADDRESS_MATCH0_10_BIT
+  - name: AddressMatch010Bit
     description: Address match 0 (10-bit).
     value: 1
-  - name: ADDRESS_MATCH0_7_BIT_OR_ADDRESS_MATCH1_7_BIT
+  - name: AddressMatch07BitOrAddressMatch17Bit
     description: Address match 0 (7-bit) or address match 1 (7-bit).
     value: 2
-  - name: ADDRESS_MATCH0_10_BIT_OR_ADDRESS_MATCH1_10_BIT
+  - name: AddressMatch010BitOrAddressMatch110Bit
     description: Address match 0 (10-bit) or address match 1 (10-bit).
     value: 3
-  - name: ADDRESS_MATCH0_7_BIT_OR_ADDRESS_MATCH1_10_BIT
+  - name: AddressMatch07BitOrAddressMatch110Bit
     description: Address match 0 (7-bit) or address match 1 (10-bit).
     value: 4
-  - name: ADDRESS_MATCH0_10_BIT_OR_ADDRESS_MATCH1_7_BIT
+  - name: AddressMatch010BitOrAddressMatch17Bit
     description: Address match 0 (10-bit) or address match 1 (7-bit).
     value: 5
-  - name: FROM_ADDRESS_MATCH0_7_BIT_TO_ADDRESS_MATCH1_7_BIT
+  - name: FromAddressMatch07BitToAddressMatch17Bit
     description: From address match 0 (7-bit) to address match 1 (7-bit).
     value: 6
-  - name: FROM_ADDRESS_MATCH0_10_BIT_TO_ADDRESS_MATCH1_10_BIT
+  - name: FromAddressMatch010BitToAddressMatch110Bit
     description: From address match 0 (10-bit) to address match 1 (10-bit).
     value: 7
 enum/Alf:
   bit_size: 1
   variants:
-  - name: INT_NO
+  - name: IntNo
     description: Controller did not lose arbitration.
     value: 0
-  - name: INT_YES
+  - name: IntYes
     description: Controller lost arbitration.
     value: 1
 enum/Anv:
   bit_size: 1
   variants:
-  - name: VALID
+  - name: Valid
     description: Valid.
     value: 0
-  - name: NOT_VALID
+  - name: NotValid
     description: Not valid.
     value: 1
 enum/Cmd:
@@ -929,357 +933,357 @@ enum/Cmd:
 enum/Dmf:
   bit_size: 1
   variants:
-  - name: INT_NO
+  - name: IntNo
     description: Matching data not received.
     value: 0
-  - name: INT_YES
+  - name: IntYes
     description: Matching data received.
     value: 1
 enum/Dozen:
   bit_size: 1
   variants:
-  - name: ENABLED
+  - name: Enabled
     description: Enable.
     value: 0
-  - name: DISABLED
+  - name: Disabled
     description: Disable.
     value: 1
 enum/Epf:
   bit_size: 1
   variants:
-  - name: INT_NO
+  - name: IntNo
     description: No Stop or repeated Start generated.
     value: 0
-  - name: INT_YES
+  - name: IntYes
     description: Stop or repeated Start generated.
     value: 1
 enum/Feature:
   bit_size: 16
   variants:
-  - name: MASTER_ONLY
+  - name: MasterOnly
     description: Controller only, with standard feature set.
     value: 2
-  - name: MASTER_AND_SLAVE
+  - name: MasterAndSlave
     description: Controller and target, with standard feature set.
     value: 3
 enum/Filtdz:
   bit_size: 1
   variants:
-  - name: FILTER_ENABLED
+  - name: FilterEnabled
     description: Enable.
     value: 0
-  - name: FILTER_DISABLED
+  - name: FilterDisabled
     description: Disable.
     value: 1
 enum/Hrdir:
   bit_size: 1
   variants:
-  - name: INPUT
+  - name: Input
     description: HREQ pin is input (for LPI2C controller).
     value: 0
-  - name: OUTPUT
+  - name: Output
     description: HREQ pin is output (for LPI2C target).
     value: 1
 enum/Hrpol:
   bit_size: 1
   variants:
-  - name: ACTIVE_LOW
+  - name: ActiveLow
     description: Active low.
     value: 0
-  - name: ACTIVE_HIGH
+  - name: ActiveHigh
     description: Active high.
     value: 1
 enum/Matcfg:
   bit_size: 3
   variants:
-  - name: DISABLED
+  - name: Disabled
     description: Match is disabled.
     value: 0
-  - name: FIRST_DATA_WORD_EQUALS_MATCH0_OR_MATCH1
+  - name: FirstDataWordEqualsMatch0OrMatch1
     description: 'Match is enabled: first data word equals MDMR[MATCH0] OR MDMR[MATCH1].'
     value: 2
-  - name: ANY_DATA_WORD_EQUALS_MATCH0_OR_MATCH1
+  - name: AnyDataWordEqualsMatch0OrMatch1
     description: 'Match is enabled: any data word equals MDMR[MATCH0] OR MDMR[MATCH1].'
     value: 3
-  - name: FIRST_DATA_WORD_MATCH0_AND_SECOND_DATA_WORD_MATCH1
+  - name: FirstDataWordMatch0AndSecondDataWordMatch1
     description: 'Match is enabled: (first data word equals MDMR[MATCH0]) AND (second data word equals MDMR[MATCH1).'
     value: 4
-  - name: ANY_DATA_WORD_MATCH0_NEXT_DATA_WORD_MATCH1
+  - name: AnyDataWordMatch0NextDataWordMatch1
     description: 'Match is enabled: (any data word equals MDMR[MATCH0]) AND (next data word equals MDMR[MATCH1).'
     value: 5
-  - name: FIRST_DATA_WORD_AND_MATCH1_EQUALS_MATCH0_AND_MATCH1
+  - name: FirstDataWordAndMatch1EqualsMatch0AndMatch1
     description: 'Match is enabled: (first data word AND MDMR[MATCH1]) equals (MDMR[MATCH0] AND MDMR[MATCH1]).'
     value: 6
-  - name: ANY_DATA_WORD_AND_MATCH1_EQUALS_MATCH0_AND_MATCH1
+  - name: AnyDataWordAndMatch1EqualsMatch0AndMatch1
     description: 'Match is enabled: (any data word AND MDMR[MATCH1]) equals (MDMR[MATCH0] AND MDMR[MATCH1]).'
     value: 7
 enum/Mbf:
   bit_size: 1
   variants:
-  - name: IDLE
+  - name: Idle
     description: Idle.
     value: 0
-  - name: BUSY
+  - name: Busy
     description: Busy.
     value: 1
 enum/McrRrf:
   bit_size: 1
   variants:
-  - name: NO_EFFECT
+  - name: NoEffect
     description: No effect.
     value: 0
-  - name: RESET
+  - name: Reset
     description: Reset receive FIFO.
     value: 1
 enum/McrRtf:
   bit_size: 1
   variants:
-  - name: NO_EFFECT
+  - name: NoEffect
     description: No effect.
     value: 0
-  - name: RESET
+  - name: Reset
     description: Reset transmit FIFO.
     value: 1
 enum/MsrBbf:
   bit_size: 1
   variants:
-  - name: IDLE
+  - name: Idle
     description: Idle.
     value: 0
-  - name: BUSY
+  - name: Busy
     description: Busy.
     value: 1
 enum/MsrFef:
   bit_size: 1
   variants:
-  - name: INT_NO
+  - name: IntNo
     description: No FIFO error.
     value: 0
-  - name: INT_YES
+  - name: IntYes
     description: FIFO error.
     value: 1
 enum/MsrSdf:
   bit_size: 1
   variants:
-  - name: INT_NO
+  - name: IntNo
     description: No Stop condition generated.
     value: 0
-  - name: INT_YES
+  - name: IntYes
     description: Stop condition generated.
     value: 1
 enum/Ndf:
   bit_size: 1
   variants:
-  - name: INT_NO
+  - name: IntNo
     description: No unexpected NACK detected.
     value: 0
-  - name: INT_YES
+  - name: IntYes
     description: Unexpected NACK detected.
     value: 1
 enum/Pincfg:
   bit_size: 3
   variants:
-  - name: OPEN_DRAIN_2_PIN
+  - name: OpenDrain2Pin
     description: Two-pin open drain mode.
     value: 0
-  - name: OUTPUT_2_PIN_ONLY
+  - name: Output2PinOnly
     description: Two-pin output only mode (Ultra-Fast mode).
     value: 1
-  - name: PUSH_PULL_2_PIN
+  - name: PushPull2Pin
     description: Two-pin push-pull mode.
     value: 2
-  - name: PUSH_PULL_4_PIN
+  - name: PushPull4Pin
     description: Four-pin push-pull mode.
     value: 3
-  - name: OPEN_DRAIN_2_PIN_W_LPI2C_SLAVE
+  - name: OpenDrain2PinWLpi2cSlave
     description: Two-pin open-drain mode with separate LPI2C target.
     value: 4
-  - name: OUTPUT_2_PIN_ONLY_W_LPI2C_SLAVE
+  - name: Output2PinOnlyWLpi2cSlave
     description: Two-pin output only mode (Ultra-Fast mode) with separate LPI2C target.
     value: 5
-  - name: PUSH_PULL_2_PIN_W_LPI2C_SLAVE
+  - name: PushPull2PinWLpi2cSlave
     description: Two-pin push-pull mode with separate LPI2C target.
     value: 6
-  - name: PUSH_PULL_4_PIN_W_LPI2C_SLAVE
+  - name: PushPull4PinWLpi2cSlave
     description: Four-pin push-pull mode (inverted outputs).
     value: 7
 enum/Pltf:
   bit_size: 1
   variants:
-  - name: INT_NO
+  - name: IntNo
     description: Pin low timeout did not occur.
     value: 0
-  - name: INT_YES
+  - name: IntYes
     description: Pin low timeout occurred.
     value: 1
 enum/Prescale:
   bit_size: 3
   variants:
-  - name: DIVIDE_BY_1
+  - name: DivideBy1
     description: Divide by 1.
     value: 0
-  - name: DIVIDE_BY_2
+  - name: DivideBy2
     description: Divide by 2.
     value: 1
-  - name: DIVIDE_BY_4
+  - name: DivideBy4
     description: Divide by 4.
     value: 2
-  - name: DIVIDE_BY_8
+  - name: DivideBy8
     description: Divide by 8.
     value: 3
-  - name: DIVIDE_BY_16
+  - name: DivideBy16
     description: Divide by 16.
     value: 4
-  - name: DIVIDE_BY_32
+  - name: DivideBy32
     description: Divide by 32.
     value: 5
-  - name: DIVIDE_BY_64
+  - name: DivideBy64
     description: Divide by 64.
     value: 6
-  - name: DIVIDE_BY_128
+  - name: DivideBy128
     description: Divide by 128.
     value: 7
 enum/Relax:
   bit_size: 1
   variants:
-  - name: NORMAL_TRANSFER
+  - name: NormalTransfer
     description: Normal transfer.
     value: 0
-  - name: RELAXED_TRANSFER
+  - name: RelaxedTransfer
     description: Relaxed transfer.
     value: 1
 enum/Rscfg:
   bit_size: 1
   variants:
-  - name: ANY_REPEATED_START_AFTER_ADDRESS_MATCH
+  - name: AnyRepeatedStartAfterAddressMatch
     description: Any repeated Start condition following an address match.
     value: 0
-  - name: ANY_REPEATED_START
+  - name: AnyRepeatedStart
     description: Any repeated Start condition.
     value: 1
 enum/Rxcfg:
   bit_size: 1
   variants:
-  - name: RETURNS_RECEIVED_DATA_AND_CLEARS_RX_DATA_FLAG
-    description: Return received data, clear MSR[RDF].
+  - name: ReturnsReceivedDataAndClearsRxDataFlag
+    description: Return received data, clear SSR[RDF].
     value: 0
-  - name: WHEN_ADDRESS_VALID_FLAG_SET_RETURNS_ADDRESS_STATUS_AND_CLEARS_ADDRESS_VALID_FLAG
-    description: Return SASR and clear SSR[AVF] when SSR[AVF] is set, return received data and clear MSR[RDF] when SSR[AFV] is not set.
+  - name: WhenAddressValidFlagSetReturnsAddressStatusAndClearsAddressValidFlag
+    description: Return SASR and clear SSR[AVF] when SSR[AVF] is set, return received data and clear SSR[RDF] when SSR[AFV] is not set.
     value: 1
 enum/Rxnack:
   bit_size: 1
   variants:
-  - name: SET_BY_TXNACK
+  - name: SetByTxnack
     description: ACK or NACK always determined by STAR[TXNACK].
     value: 0
-  - name: ALWAYS_GENERATED_ON_ADDRESS_OR_RECEIVE_DATA_OVERRUN
+  - name: AlwaysGeneratedOnAddressOrReceiveDataOverrun
     description: NACK always generated on address overrun or receive data overrun, otherwise ACK or NACK is determined by STAR[TXNACK].
     value: 1
 enum/Sbf:
   bit_size: 1
   variants:
-  - name: IDLE
+  - name: Idle
     description: Idle.
     value: 0
-  - name: BUSY
+  - name: Busy
     description: Busy.
     value: 1
 enum/Scfgr1Ignack:
   bit_size: 1
   variants:
-  - name: ENDS_TRANSFER_ON_NACK
+  - name: EndsTransferOnNack
     description: End transfer on NACK.
     value: 0
-  - name: DOES_NOT_END_TRANSFER_ON_NACK
+  - name: DoesNotEndTransferOnNack
     description: Do not end transfer on NACK.
     value: 1
 enum/ScrRrf:
   bit_size: 1
   variants:
-  - name: NO_EFFECT
+  - name: NoEffect
     description: No effect.
     value: 0
-  - name: NOW_EMPTY
+  - name: NowEmpty
     description: SRDR is now empty.
     value: 1
 enum/ScrRtf:
   bit_size: 1
   variants:
-  - name: NO_EFFECT
+  - name: NoEffect
     description: No effect.
     value: 0
-  - name: NOW_EMPTY
+  - name: NowEmpty
     description: STDR is now empty.
     value: 1
 enum/Sdcfg:
   bit_size: 1
   variants:
-  - name: ANY_STOP_AFTER_ADDRESS_MATCH
+  - name: AnyStopAfterAddressMatch
     description: Any Stop condition following an address match.
     value: 0
-  - name: ANY_STOP
+  - name: AnyStop
     description: Any Stop condition.
     value: 1
 enum/SsrBbf:
   bit_size: 1
   variants:
-  - name: IDLE
+  - name: Idle
     description: Idle.
     value: 0
-  - name: BUSY
+  - name: Busy
     description: Busy.
     value: 1
 enum/Startcfg:
   bit_size: 1
   variants:
-  - name: BOTH_I2C_AND_LPI2C_IDLE
+  - name: BothI2cAndLpi2cIdle
     description: Sets when both I2C bus and LPI2C controller are idle.
     value: 0
-  - name: I2C_IDLE
+  - name: I2cIdle
     description: Sets when I2C bus is idle.
     value: 1
 enum/Stf:
   bit_size: 1
   variants:
-  - name: INT_NO
+  - name: IntNo
     description: Start condition not detected.
     value: 0
-  - name: INT_YES
+  - name: IntYes
     description: Start condition detected.
     value: 1
 enum/Stopcfg:
   bit_size: 1
   variants:
-  - name: ANY_STOP
+  - name: AnyStop
     description: Any Stop condition.
     value: 0
-  - name: LAST_STOP
+  - name: LastStop
     description: Last Stop condition.
     value: 1
 enum/Timecfg:
   bit_size: 1
   variants:
-  - name: IF_SCL_LOW
+  - name: IfSclLow
     description: SCL.
     value: 0
-  - name: IF_SCL_OR_SDA_LOW
+  - name: IfSclOrSdaLow
     description: SCL or SDA.
     value: 1
 enum/Txcfg:
   bit_size: 1
   variants:
-  - name: ASSERTS_DURING_SLAVE_TRANSMIT_TRANSFER_WHEN_TX_DATA_EMPTY
-    description: MSR[TDF] is set only during a target-transmit transfer when STDR is empty.
+  - name: AssertsDuringSlaveTransmitTransferWhenTxDataEmpty
+    description: SSR[TDF] is set only during a target-transmit transfer when STDR is empty.
     value: 0
-  - name: ASSERTS_WHEN_TX_DATA_EMPTY
-    description: MSR[TDF] is set whenever STDR is empty.
+  - name: AssertsWhenTxDataEmpty
+    description: SSR[TDF] is set whenever STDR is empty.
     value: 1
 enum/Txnack:
   bit_size: 1
   variants:
-  - name: TRANSMIT_ACK
+  - name: TransmitAck
     description: Transmit ACK.
     value: 0
-  - name: TRANSMIT_NACK
+  - name: TransmitNack
     description: Transmit NACK.
     value: 1
