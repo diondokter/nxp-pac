@@ -98,6 +98,11 @@ fieldset/Baud:
     description: Receiver Full DMA Enable.
     bit_offset: 21
     bit_size: 1
+  - name: hlfm
+    description: Reduced Oversample Mode Selection.
+    bit_offset: 22
+    bit_size: 1
+    enum: Hlfm
   - name: tdmae
     description: Transmitter DMA Enable.
     bit_offset: 23
@@ -175,6 +180,11 @@ fieldset/Ctrl:
     bit_offset: 12
     bit_size: 1
     enum: Swap
+  - name: erlsmp
+    description: Early Sample Selection.
+    bit_offset: 13
+    bit_size: 1
+    enum: Erlsmp
   - name: ma2ie
     description: Match 2 (MA2F) Interrupt Enable.
     bit_offset: 14
@@ -592,396 +602,414 @@ fieldset/Water:
 enum/Brk13:
   bit_size: 1
   variants:
-  - name: SHORT
+  - name: Short
     description: 9 to 13 bit times.
     value: 0
-  - name: LONG
+  - name: Long
     description: 12 to 15 bit times.
     value: 1
 enum/Dozeen:
   bit_size: 1
   variants:
-  - name: ENABLED
+  - name: Enabled
     description: Enable.
     value: 0
-  - name: DISABLED
+  - name: Disabled
     description: Disable.
+    value: 1
+enum/Erlsmp:
+  bit_size: 1
+  variants:
+  - name: Midpoint
+    description: Regular midpoint bit sampling.
+    value: 0
+  - name: Reduced
+    description: Early bit sampling at 1/2 duration of bit timing.
     value: 1
 enum/Feature:
   bit_size: 16
   variants:
-  - name: STANDARD
+  - name: Standard
     description: Standard feature set.
     value: 1
-  - name: MODEM
+  - name: Modem
     description: Standard feature set with MODEM and IrDA support.
     value: 3
+enum/Hlfm:
+  bit_size: 1
+  variants:
+  - name: Regular
+    description: Regular Oversampling.
+    value: 0
+  - name: Reduced
+    description: Reduced Oversampling by 0.5.
+    value: 1
 enum/Idlecfg:
   bit_size: 3
   variants:
-  - name: IDLE_1
+  - name: Idle1
     description: '1.'
     value: 0
-  - name: IDLE_2
+  - name: Idle2
     description: '2.'
     value: 1
-  - name: IDLE_4
+  - name: Idle4
     description: '4.'
     value: 2
-  - name: IDLE_8
+  - name: Idle8
     description: '8.'
     value: 3
-  - name: IDLE_16
+  - name: Idle16
     description: '16.'
     value: 4
-  - name: IDLE_32
+  - name: Idle32
     description: '32.'
     value: 5
-  - name: IDLE_64
+  - name: Idle64
     description: '64.'
     value: 6
-  - name: IDLE_128
+  - name: Idle128
     description: '128.'
     value: 7
 enum/Ilt:
   bit_size: 1
   variants:
-  - name: FROM_START
+  - name: FromStart
     description: After the start bit.
     value: 0
-  - name: FROM_STOP
+  - name: FromStop
     description: After the stop bit.
     value: 1
 enum/Loops:
   bit_size: 1
   variants:
-  - name: NOFFECT
+  - name: Noffect
     description: 'Normal operation: RXD and TXD use separate pins.'
     value: 0
-  - name: LOOPBACK
+  - name: Loopback
     description: Loop mode or Single-Wire mode.
     value: 1
 enum/M:
   bit_size: 1
   variants:
-  - name: DATA8
+  - name: Data8
     description: 8-bit.
     value: 0
-  - name: DATA9
+  - name: Data9
     description: 9-bit.
     value: 1
 enum/M7:
   bit_size: 1
   variants:
-  - name: NO_EFFECT
+  - name: NoEffect
     description: 8-bit to 10-bit.
     value: 0
-  - name: DATA7
+  - name: Data7
     description: 7-bit.
     value: 1
 enum/Matcfg:
   bit_size: 2
   variants:
-  - name: ADDR_MATCH
+  - name: AddrMatch
     description: Address match wake-up.
     value: 0
-  - name: IDLE_MATCH
+  - name: IdleMatch
     description: Idle match wake-up.
     value: 1
-  - name: ONOFF_MATCH
+  - name: OnoffMatch
     description: Match on and match off.
     value: 2
-  - name: RWU_MATCH
+  - name: RwuMatch
     description: Enables RWU on data match and match on or off for the transmitter CTS input.
     value: 3
 enum/Msbf:
   bit_size: 1
   variants:
-  - name: LSB_FIRST
+  - name: LsbFirst
     description: LSB.
     value: 0
-  - name: MSB_FIRST
+  - name: MsbFirst
     description: MSB.
     value: 1
 enum/Pt:
   bit_size: 1
   variants:
-  - name: EVEN
+  - name: Even
     description: Even parity.
     value: 0
-  - name: ODD
+  - name: Odd
     description: Odd parity.
     value: 1
 enum/Raf:
   bit_size: 1
   variants:
-  - name: IDLE
+  - name: Idle
     description: Idle, waiting for a start bit.
     value: 0
-  - name: ACTIVE
+  - name: Active
     description: Receiver active (RXD pin input not idle).
     value: 1
 enum/Resyncdis:
   bit_size: 1
   variants:
-  - name: RESYNC
+  - name: Resync
     description: Enable.
     value: 0
-  - name: NO_RESYNC
+  - name: NoResync
     description: Disable.
     value: 1
 enum/Rsrc:
   bit_size: 1
   variants:
-  - name: NO_EFFECT
+  - name: NoEffect
     description: Internal Loopback mode.
     value: 0
-  - name: ONEWIRE
+  - name: Onewire
     description: Single-wire mode.
     value: 1
 enum/Rst:
   bit_size: 1
   variants:
-  - name: NO_EFFECT
+  - name: NoEffect
     description: Not reset.
     value: 0
-  - name: RESET
+  - name: Reset
     description: Reset.
     value: 1
 enum/Rwu:
   bit_size: 1
   variants:
-  - name: NO_EFFECT
+  - name: NoEffect
     description: Normal receiver operation.
     value: 0
-  - name: RX_WAKEUP
+  - name: RxWakeup
     description: LPUART receiver in standby, waiting for a wake-up condition.
     value: 1
 enum/Rwuid:
   bit_size: 1
   variants:
-  - name: IDLE_NOTSET
+  - name: IdleNotset
     description: STAT[IDLE] does not become 1.
     value: 0
-  - name: IDLE_SET
+  - name: IdleSet
     description: STAT[IDLE] becomes 1.
     value: 1
 enum/Rxfifosize:
   bit_size: 3
   variants:
-  - name: FIFO_1
+  - name: Fifo1
     description: '1.'
     value: 0
-  - name: FIFO_4
+  - name: Fifo4
     description: '4.'
     value: 1
-  - name: FIFO_8
+  - name: Fifo8
     description: '8.'
     value: 2
-  - name: FIFO_16
+  - name: Fifo16
     description: '16.'
     value: 3
-  - name: FIFO_32
+  - name: Fifo32
     description: '32.'
     value: 4
-  - name: FIFO_64
+  - name: Fifo64
     description: '64.'
     value: 5
-  - name: FIFO_128
+  - name: Fifo128
     description: '128.'
     value: 6
-  - name: FIFO_256
+  - name: Fifo256
     description: '256.'
     value: 7
 enum/Rxflush:
   bit_size: 1
   variants:
-  - name: NO_EFFECT
+  - name: NoEffect
     description: No effect.
     value: 0
-  - name: RXFIFO_RST
+  - name: RxfifoRst
     description: All data flushed out.
     value: 1
 enum/Rxiden:
   bit_size: 3
   variants:
-  - name: DISABLED
+  - name: Disabled
     description: Disable STAT[RDRF] to become 1 because of partially filled FIFO when the receiver is idle.
     value: 0
-  - name: IDLE_1
+  - name: Idle1
     description: Enable STAT[RDRF] to become 1 because of partially filled FIFO when the receiver is idle for one character.
     value: 1
-  - name: IDLE_2
+  - name: Idle2
     description: Enable STAT[RDRF] to become 1 because of partially filled FIFO when the receiver is idle for two characters.
     value: 2
-  - name: IDLE_4
+  - name: Idle4
     description: Enable STAT[RDRF] to become 1 because of partially filled FIFO when the receiver is idle for four characters.
     value: 3
-  - name: IDLE_8
+  - name: Idle8
     description: Enable STAT[RDRF] to become 1 because of partially filled FIFO when the receiver is idle for eight characters.
     value: 4
-  - name: IDLE_16
+  - name: Idle16
     description: Enable STAT[RDRF] to become 1 because of partially filled FIFO when the receiver is idle for 16 characters.
     value: 5
-  - name: IDLE_32
+  - name: Idle32
     description: Enable STAT[RDRF] to become 1 because of partially filled FIFO when the receiver is idle for 32 characters.
     value: 6
-  - name: IDLE_64
+  - name: Idle64
     description: Enable STAT[RDRF] to become 1 because of partially filled FIFO when the receiver is idle for 64 characters.
     value: 7
 enum/Sbk:
   bit_size: 1
   variants:
-  - name: NO_EFFECT
+  - name: NoEffect
     description: Normal transmitter operation.
     value: 0
-  - name: TX_BREAK
+  - name: TxBreak
     description: Queue break character(s) to be sent.
     value: 1
 enum/Sbns:
   bit_size: 1
   variants:
-  - name: ONE
+  - name: One
     description: One stop bit.
     value: 0
-  - name: TWO
+  - name: Two
     description: Two stop bits.
     value: 1
 enum/Swap:
   bit_size: 1
   variants:
-  - name: STANDARD
+  - name: Standard
     description: Use the standard way.
     value: 0
-  - name: SWAP
+  - name: Swap
     description: Swap.
     value: 1
 enum/Tc:
   bit_size: 1
   variants:
-  - name: ACTIVE
+  - name: Active
     description: Transmitter active.
     value: 0
-  - name: COMPLETE
+  - name: Complete
     description: Transmitter idle.
     value: 1
 enum/Tdre:
   bit_size: 1
   variants:
-  - name: TXDATA
+  - name: Txdata
     description: Greater than watermark.
     value: 0
-  - name: NO_TXDATA
+  - name: NoTxdata
     description: Equal to or less than watermark.
     value: 1
 enum/Tnp:
   bit_size: 2
   variants:
-  - name: ONE_SAMPLE
+  - name: OneSample
     description: 1 / OSR.
     value: 0
-  - name: TWO_SAMPLE
+  - name: TwoSample
     description: 2 / OSR.
     value: 1
-  - name: THREE_SAMPLE
+  - name: ThreeSample
     description: 3 / OSR.
     value: 2
-  - name: FOUR_SAMPLE
+  - name: FourSample
     description: 4 / OSR.
     value: 3
 enum/Trgsel:
   bit_size: 2
   variants:
-  - name: DISABLED
+  - name: Disabled
     description: Input trigger disabled.
     value: 0
-  - name: TRG_RXD
+  - name: TrgRxd
     description: Input trigger used instead of the RXD pin input.
     value: 1
-  - name: TRG_CTS
+  - name: TrgCts
     description: Input trigger used instead of the CTS_B pin input.
     value: 2
-  - name: TRG_TXD
+  - name: TrgTxd
     description: Input trigger used to modulate the TXD pin output, which (after TXINV configuration) is internally ANDed with the input trigger.
     value: 3
 enum/Txctsc:
   bit_size: 1
   variants:
-  - name: START
+  - name: Start
     description: Sampled at the start of each character.
     value: 0
-  - name: IDLE
+  - name: Idle
     description: Sampled when the transmitter is idle.
     value: 1
 enum/Txctssrc:
   bit_size: 1
   variants:
-  - name: CTS
+  - name: Cts
     description: The CTS_B pin.
     value: 0
-  - name: MATCH
+  - name: Match
     description: An internal connection to the receiver address match result.
     value: 1
 enum/Txdir:
   bit_size: 1
   variants:
-  - name: TX_INPUT
+  - name: TxInput
     description: Input.
     value: 0
-  - name: TX_OUTPUT
+  - name: TxOutput
     description: Output.
     value: 1
 enum/Txfifosize:
   bit_size: 3
   variants:
-  - name: FIFO_1
+  - name: Fifo1
     description: '1.'
     value: 0
-  - name: FIFO_4
+  - name: Fifo4
     description: '4.'
     value: 1
-  - name: FIFO_8
+  - name: Fifo8
     description: '8.'
     value: 2
-  - name: FIFO_16
+  - name: Fifo16
     description: '16.'
     value: 3
-  - name: FIFO_32
+  - name: Fifo32
     description: '32.'
     value: 4
-  - name: FIFO_64
+  - name: Fifo64
     description: '64.'
     value: 5
-  - name: FIFO_128
+  - name: Fifo128
     description: '128.'
     value: 6
-  - name: FIFO_256
+  - name: Fifo256
     description: '256.'
     value: 7
 enum/Txflush:
   bit_size: 1
   variants:
-  - name: NO_EFFECT
+  - name: NoEffect
     description: No effect.
     value: 0
-  - name: TXFIFO_RST
+  - name: TxfifoRst
     description: All data flushed out.
     value: 1
 enum/Txrtspol:
   bit_size: 1
   variants:
-  - name: LOW
+  - name: Low
     description: Active low.
     value: 0
-  - name: HIGH
+  - name: High
     description: Active high.
     value: 1
 enum/Wake:
   bit_size: 1
   variants:
-  - name: IDLE
+  - name: Idle
     description: Idle.
     value: 0
-  - name: MARK
+  - name: Mark
     description: Mark.
     value: 1
