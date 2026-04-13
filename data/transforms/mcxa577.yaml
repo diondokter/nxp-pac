@@ -1,4 +1,6 @@
 includes:
+  - sanitize.yaml
+
   - cm33.yaml
   - useless.yaml
 
@@ -31,6 +33,6 @@ includes:
   - mcxa/wwdt.yaml
 
   - remove-suffix.yaml
-
 transforms:
   - !Sort
+

@@ -1,4 +1,4 @@
 transforms:
   - !MergeEnums
-    from: cdog::vals::(Timeout|Miscompare|Sequence|State|Address)Ctrl
-    to: cdog::vals::Ctrl
+    from: cdog::(Timeout|Miscompare|Sequence|State|Address)Ctrl
+    to: cdog::Ctrl

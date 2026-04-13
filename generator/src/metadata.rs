@@ -1,12 +1,13 @@
 use std::{fmt::Write, fs, path::Path};
 
-use anyhow::Context;
+use anyhow::{Context, anyhow, bail};
+use chiptool::commands::{ExtractShared, extract_all::ExtractAll};
 use indexmap::IndexMap;
 use proc_macro2::{Literal, TokenStream};
 use quote::quote;
 use serde::Deserialize;
 
-use crate::rustfmt;
+use crate::util::rustfmt;
 
 #[allow(unused)]
 #[derive(Debug, Clone, Deserialize)]
@@ -267,33 +268,10 @@ fn generate_metadata(name: &str, metadata: &Metadata) -> TokenStream {
     }
 }
 
-pub fn generate_core(
-    chips_dir: &Path,
-    svd: &Path,
-    metadata: &Path,
-    core: &str,
-) -> anyhow::Result<Metadata> {
+/// Read the metadata, generate the Rust source files for the metadata file used in build.rs and return the metadata.
+pub fn generate(chips_dir: &Path, metadata: &Path, core: &str) -> anyhow::Result<Metadata> {
     let metadata = fs::read_to_string(metadata).context("Read metadata")?;
-    let mut metadata =
-        serde_json::from_str::<Metadata>(&metadata).context("Deserialize metadata")?;
-
-    if metadata.interrupts.is_empty() {
-        // If the metadata doesn't define the interrupts, we'll get it from the SVD
-
-        let svd_contents = fs::read_to_string(svd).context("Read SVD")?;
-        let svd = svd_parser::parse(&svd_contents).context("Parse SVD")?;
-
-        for peripheral in svd.peripherals.iter() {
-            for interrupt in peripheral.interrupt.iter() {
-                // Rust uses fully capitalized interrupt names for singletons.
-                metadata
-                    .interrupts
-                    .insert(interrupt.name.clone().to_uppercase(), interrupt.value);
-            }
-        }
-
-        metadata.interrupts.sort_unstable_by_key(|_, val| *val);
-    }
+    let metadata = serde_json::from_str::<Metadata>(&metadata).context("Deserialize metadata")?;
 
     let mut metadata_out = String::new();
     write!(metadata_out, "{}", generate_metadata(core, &metadata))?;
@@ -317,4 +295,161 @@ pub struct BlockPath {
     pub path: String,
     pub rust_mod_name: String,
     pub rust_type_name: String,
+}
+
+/// Extract peripheral metadata definitions from a SVD and puts them in a .gitignored raw folder.
+pub fn extract_peripherals(
+    svd: &Path,
+    core: &str,
+    transforms_dir: Option<&Path>,
+    output_dir: &Path,
+) -> Result<(), anyhow::Error> {
+    use std::fmt::Write;
+
+    let transform_path =
+        transforms_dir.map(|path| path.join(core.to_lowercase()).with_extension("yaml"));
+
+    let transform = if let Some(transform_path) = transform_path {
+        if !fs::exists(&transform_path).context("checking transform existance")? {
+            bail!(
+                "transform {} for core \"{}\" does not exist?",
+                transform_path.display(),
+                core.to_lowercase()
+            );
+        }
+        vec![transform_path.canonicalize()?]
+    } else {
+        vec![]
+    };
+
+    if !fs::exists(output_dir).context("checking output directory existance")? {
+        fs::create_dir(output_dir)
+            .with_context(|| format!("creating output directory {}", output_dir.display()))?;
+    }
+
+    for entry in fs::read_dir(output_dir).context("reading raw peripherals dir")? {
+        let entry = entry?;
+        if entry.file_name().to_string_lossy() != ".gitignore" {
+            if entry.file_type()?.is_dir() {
+                fs::remove_dir_all(entry.path())
+                    .with_context(|| format!("removing {}", entry.path().display()))?;
+            } else {
+                fs::remove_file(entry.path())
+                    .with_context(|| format!("removing {}", entry.path().display()))?;
+            }
+        }
+    }
+
+    let original_dir = &output_dir.join("original");
+
+    if !fs::exists(original_dir).context("checking output original subdirectory existance")? {
+        fs::create_dir(original_dir).with_context(|| {
+            format!("creating original subdirectory {}", original_dir.display())
+        })?;
+    }
+
+    chiptool::commands::extract_all::extract_all(ExtractAll {
+        output: original_dir.canonicalize()?,
+        extract_shared: ExtractShared {
+            svd: svd.canonicalize()?,
+            transform,
+            namespaces: chiptool::svd2ir::NamespaceMode::Block,
+        },
+        mode: chiptool::commands::extract_all::ExtractionMode::Block,
+    })
+    .with_context(|| format!("Error generating peripheral yamls for {core}"))?;
+
+    let path_regex = regex::Regex::new("^(.+)::.+$")?;
+    for entry in fs::read_dir(original_dir).context("reading original subdir")? {
+        let entry = entry?;
+
+        let filename: String = entry.file_name().to_string_lossy().into_owned();
+        let name = path_regex
+            .captures(&filename)
+            .and_then(|c| c.get(1))
+            .ok_or_else(|| anyhow!("Failed strip namespace from filename {:?}", &entry))?;
+
+        let from: chiptool::transform::common::RegexSet = serde_yaml::from_str("(.*)::(.+)")?;
+
+        let mut ir: chiptool::ir::IR = serde_yaml::from_reader(fs::File::open(entry.path())?)?;
+        chiptool::transform::rename::Rename {
+            from,
+            to: "$2".to_string(),
+            r#type: chiptool::transform::rename::RenameType::All,
+        }
+        .run(&mut ir)?;
+
+        let data = serde_yaml::to_string(&ir)?;
+        fs::write(
+            output_dir.join(format!("{}.yaml", name.as_str().to_uppercase())),
+            data.as_bytes(),
+        )?;
+    }
+
+    let svd_contents = fs::read_to_string(svd).context("Read SVD")?;
+    let svd = svd_parser::parse(&svd_contents).context("Parse SVD")?;
+
+    let nvic_priority_bits = svd
+        .cpu
+        .map(|cpu| cpu.nvic_priority_bits)
+        .unwrap_or_default();
+
+    let mut interrupts = Vec::new();
+
+    for peripheral in svd.peripherals.iter() {
+        for interrupt in peripheral.interrupt.iter() {
+            // Rust uses fully capitalized interrupt names for singletons.
+            interrupts.push((interrupt.name.clone().to_uppercase(), interrupt.value));
+        }
+    }
+
+    interrupts.sort_unstable_by_key(|(_, val)| *val);
+    interrupts.dedup();
+
+    let mut interrupts_json = String::new();
+    writeln!(
+        &mut interrupts_json,
+        "{{\n  \"nvic_prio_bits\": {nvic_priority_bits},\n  \"interrupts\": {{"
+    )?;
+    for (i, (name, num)) in interrupts.iter().enumerate() {
+        writeln!(
+            &mut interrupts_json,
+            "    \"{name}\": {num}{}",
+            if i != interrupts.len() - 1 { "," } else { "" }
+        )?;
+    }
+    writeln!(&mut interrupts_json, "  }}\n}}")?;
+
+    fs::write(
+        output_dir.join("_interrupts.json"),
+        interrupts_json.as_bytes(),
+    )
+    .context("writing _interrupts.json")?;
+
+    let peripheral_addresses = svd
+        .peripherals
+        .iter()
+        .map(|p| (&p.name, p.base_address))
+        .collect::<Vec<_>>();
+    let mut addresses_json = String::new();
+    writeln!(&mut addresses_json, "{{")?;
+    for (i, (name, address)) in peripheral_addresses.iter().enumerate() {
+        writeln!(
+            &mut addresses_json,
+            "  \"{name}\": \"{address:#010X}\"{}",
+            if i != peripheral_addresses.len() - 1 {
+                ","
+            } else {
+                ""
+            }
+        )?;
+    }
+    writeln!(&mut addresses_json, "}}")?;
+    fs::write(
+        output_dir.join("_addresses.json"),
+        addresses_json.as_bytes(),
+    )
+    .context("writing _addresses.json")?;
+
+    Ok(())
 }

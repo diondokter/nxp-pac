@@ -3,19 +3,19 @@ transforms:
     from: hsadc::(.*)
     to: adc::$1
     type: All
-  
+
   - !Rename
     from: adc::Hsadc
     to: adc::Adc
     type: Block
 
   - !MergeEnums
-    from: adc::vals::Cmdl(\d+)(.+)
-    to: adc::vals::$2
+    from: adc::Cmdl(\d+)(.+)
+    to: adc::$2
 
   - !MergeFieldsets
-    from: adc::regs::Cmdl(\d+)
-    to: adc::regs::Cmdl
+    from: adc::Cmdl(\d+)
+    to: adc::Cmdl
 
   - !MakeRegisterArray
     blocks: adc::Adc
@@ -23,26 +23,26 @@ transforms:
     to: cmdl
 
   - !MergeEnums
-    from: adc::vals::Cmdh(\d+)(.+)
-    to: adc::vals::$2
+    from: adc::Cmdh(\d+)(.+)
+    to: adc::$2
 
   - !MergeFieldsets
-    from: adc::regs::Cmdh(\d+)
-    to: adc::regs::Cmdh
-  
+    from: adc::Cmdh(\d+)
+    to: adc::Cmdh
+
   - !MakeRegisterArray
     blocks: adc::Adc
     from: cmdh(\d+)
     to: cmdh
 
   - !DeleteEnums
-    from: adc::vals::Swt(\d+)
+    from: adc::Swt(\d+)
 
   # ADC channel select is not correct at all, better use bare u8.
   - !DeleteEnums
-    from: adc::vals::Adch
+    from: adc::Adch
 
   - !MakeFieldArray
-    fieldsets: adc::regs::Swtrig
+    fieldsets: adc::Swtrig
     from: swt(\d+)
     to: swt

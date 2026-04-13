@@ -1,6 +1,6 @@
 transforms:
   - !DeleteEnums
-    from: rtc0::vals::(InvalBit|ClkSel|Clkout|ClkoDis|Dow|MonCnt|AlmMatch|We)
+    from: rtc0::(InvalBit|ClkSel|Clkout|ClkoDis|Dow|MonCnt|AlmMatch|We)
 
   - !AddRegisters
     block: rtc0::Rtc0

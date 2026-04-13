@@ -1,4 +1,6 @@
 includes:
+  - sanitize.yaml
+
   - cm33.yaml
   - useless.yaml
 
