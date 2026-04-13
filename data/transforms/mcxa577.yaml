@@ -13,6 +13,7 @@ includes:
   - mcxa/adc.yaml
   - mcxa/can.yaml
   - mcxa/cdog.yaml
+  - mcxa/cmc.yaml
   - mcxa/crc.yaml
   - mcxa/ctimer.yaml
   - mcxa/dma.yaml

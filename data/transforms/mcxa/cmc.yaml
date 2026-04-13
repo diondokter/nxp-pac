@@ -1,0 +1,14 @@
+transforms:
+  - !MakeFieldArray
+    fieldsets: cmc::Sramdis0
+    from: dis\d+
+    to: dis
+  
+  - !MakeFieldArray
+    fieldsets: cmc::Sramret0
+    from: ret\d+
+    to: ret
+  
+  - !MergeEnums
+    from: cmc::.+Ckmode
+    to: cmc::Ckmode
