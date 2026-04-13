@@ -1,3 +1,5 @@
+# Note: MCXA5xx DMA instances differ quite a bit.
+
 transforms:
   - !RenamePeripherals
     from: EDMA0_TCD0
