@@ -77,7 +77,7 @@ unsafe extern "C" {
     fn EQDC1_HOME();
     fn EQDC1_WATCHDOG();
     fn EQDC1_INDEX();
-    fn RESERVED111();
+    fn LPUART5();
     fn MAU();
     fn SMARTDMA();
     fn CDOG1();
@@ -245,9 +245,7 @@ pub static __INTERRUPTS: [Vector; 122] = [
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
-    Vector {
-        _handler: RESERVED111,
-    },
+    Vector { _handler: LPUART5 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },

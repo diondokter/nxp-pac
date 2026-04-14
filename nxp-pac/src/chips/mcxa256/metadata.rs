@@ -8096,8 +8096,8 @@ pub const PERIPHERALS: &[Peripheral] = &[
     },
     Peripheral {
         name: "LPUART5",
-        address: 0,
-        driver_name: "",
+        address: 0x400DA000,
+        driver_name: "mcxa/LPUART",
         signals: &[
             Signal {
                 name: "CTS_B",
@@ -10523,7 +10523,7 @@ pub const INTERRUPTS: &[(&str, u32)] = &[
     ("EQDC1_HOME", 86u32),
     ("EQDC1_WATCHDOG", 87u32),
     ("EQDC1_INDEX", 88u32),
-    ("RESERVED111", 95u32),
+    ("LPUART5", 95u32),
     ("MAU", 107u32),
     ("SMARTDMA", 108u32),
     ("CDOG1", 109u32),

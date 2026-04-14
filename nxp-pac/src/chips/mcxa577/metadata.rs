@@ -6489,7 +6489,7 @@ pub const PERIPHERALS: &[Peripheral] = &[
                     iomuxc_daisy: None,
                 }],
                 iomuxc_daisy: None,
-            }
+            },
         ],
         flexcomm: None,
         dma_muxing: &[DmaMux {
