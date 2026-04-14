@@ -1,7 +1,7 @@
 includes:
-- cm33.yaml
-- useless.yaml
-- mcx/gpio.yaml
-- mcx/port.yaml
+  - sanitize.yaml
+  - cm33.yaml
+  - useless.yaml
+  - mcx/gpio.yaml
 transforms:
   - !Sort
