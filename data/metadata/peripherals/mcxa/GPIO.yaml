@@ -305,22 +305,18 @@ fieldset/Lock:
     description: Lock PCNS.
     bit_offset: 0
     bit_size: 1
-    enum: Pcns
   - name: icns
     description: Lock ICNS.
     bit_offset: 1
     bit_size: 1
-    enum: Icns
   - name: pcnp
     description: Lock PCNP.
     bit_offset: 2
     bit_size: 1
-    enum: Pcnp
   - name: icnp
     description: Lock ICNP.
     bit_offset: 3
     bit_size: 1
-    enum: Icnp
 fieldset/Param:
   description: Parameter.
   fields:
@@ -448,15 +444,6 @@ fieldset/Verid:
     description: Major Version Number.
     bit_offset: 24
     bit_size: 8
-enum/Icnp:
-  bit_size: 1
-  variants:
-  - name: Icnp0
-    description: Writable in Secure-Privilege state.
-    value: 0
-  - name: Icnp1
-    description: Not writable until the next reset.
-    value: 1
 enum/IcnpNpe0:
   bit_size: 1
   variants:
@@ -474,15 +461,6 @@ enum/IcnpNpe1:
     value: 0
   - name: Npe1
     description: Nonprivilege access.
-    value: 1
-enum/Icns:
-  bit_size: 1
-  variants:
-  - name: Icns0
-    description: Writable in Secure-Privilege state.
-    value: 0
-  - name: Icns1
-    description: Not writable until the next reset.
     value: 1
 enum/IcnsNse0:
   bit_size: 1
@@ -574,15 +552,6 @@ enum/Lk:
   - name: Lk1
     description: Locked.
     value: 1
-enum/Pcnp:
-  bit_size: 1
-  variants:
-  - name: Pcnp0
-    description: Writable in Secure-Privilege state.
-    value: 0
-  - name: Pcnp1
-    description: Not writable until the next reset.
-    value: 1
 enum/PcnpNpe0:
   bit_size: 1
   variants:
@@ -591,15 +560,6 @@ enum/PcnpNpe0:
     value: 0
   - name: Npe1
     description: Nonprivilege access.
-    value: 1
-enum/Pcns:
-  bit_size: 1
-  variants:
-  - name: Pcns0
-    description: Writable in Secure-Privilege state.
-    value: 0
-  - name: Pcns1
-    description: Not writable until the next reset.
     value: 1
 enum/PcnsNse0:
   bit_size: 1
