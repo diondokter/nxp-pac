@@ -486,6 +486,24 @@ enum/Halt:
   - name: Stall
     description: Stall the start of any new channels.
     value: 1
+enum/MpCsrEcx:
+  bit_size: 1
+  variants:
+  - name: NORMAL_OPERATION
+    description: Normal operation.
+    value: 0
+  - name: CANCEL
+    description: Cancel the remaining data transfer.
+    value: 1
+enum/MpEsEcx:
+  bit_size: 1
+  variants:
+  - name: NO_CANCELED_TRANSFERS
+    description: No canceled transfers.
+    value: 0
+  - name: CANCELED_TRANSFER
+    description: Last recorded entry was a canceled transfer by the error cancel transfer input.
+    value: 1
 enum/Nce:
   bit_size: 1
   variants:
