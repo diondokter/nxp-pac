@@ -1,19 +1,20 @@
 includes:
-- useless.yaml
-- cm7.yaml
-# Must perform renames before fixing adc::hc/r due to ADC1 -> ADC
-- imxrt1011/renames.yaml
-- imxrt/adc_hc_r.yaml
-- imxrt/iomuxc.yaml
-- imxrt/gpio.yaml
-- imxrt/dma.yaml
-- imxrt/pit.yaml
-- imxrt1011/pwm.yaml
-- imxrt/lpuart.yaml
+  - sanitize.yaml
+  - useless.yaml
+  - cm7.yaml
+  # Must perform renames before fixing adc::hc/r due to ADC1 -> ADC
+  - imxrt1011/renames.yaml
+  - imxrt/adc_hc_r.yaml
+  - imxrt/iomuxc.yaml
+  - imxrt/gpio.yaml
+  - imxrt/dma.yaml
+  - imxrt/pit.yaml
+  - imxrt1011/pwm.yaml
+  - imxrt/lpuart.yaml
 transforms:
   #! ADC HS::COCO is array
   - !MakeFieldArray
-    fieldsets: adc::regs::Hs
+    fieldsets: adc::Hs
     from: coco\d+
     to: coco
 
@@ -36,13 +37,13 @@ transforms:
     from: sai3::.*
 
   - !Rename
-      from: sai1::(.*)
-      to: sai::$1
-      type: All
+    from: sai1::(.*)
+    to: sai::$1
+    type: All
 
   - !Rename
-      from: sai::Sai1
-      to: sai::Sai
-      type: Block
+    from: sai::Sai1
+    to: sai::Sai
+    type: Block
 
   - !Sort

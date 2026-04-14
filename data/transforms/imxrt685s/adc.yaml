@@ -1,19 +1,30 @@
 transforms:
-  - !Rename
-      from: adc::regs::Cmd([hl])1
-      to: adc::regs::Cmd$1
+    - !MergeEnums
+      from: adc::vals::Cmd([hl])\d+
+      to: adc::vals::Cmd$1
 
-  - !Rename
-      from: adc::vals::Cmd([hl])1([a-zA-Z]+)
+    - !MergeEnums
+      from: adc::vals::Cmd([hl])\d+([a-zA-Z]+)
       to: adc::vals::Cmd$1$2
 
-  - !Delete
-      from: adc::regs::Cmd[hl]\d+
+    # Select Cmdh1 as reference
+    - !Rename
+      from: adc::regs::Cmdh1
+      to: adc::regs::Cmdh
 
-  - !Delete
-      from: adc::vals::Cmd[hl]\d+[a-zA-Z]+
+    - !Delete
+      from: adc::regs::Cmdh\d+
 
-  - !MakeRegisterArray
+    - !ModifyRegisters
+      blocks: adc::Adc
+      registers: cmdh\d+
+      fieldset: adc::regs::Cmdh
+
+    - !MergeFieldsets
+      from: adc::regs::Cmdl\d+
+      to: adc::regs::Cmdl
+
+    - !MakeRegisterArray
       blocks: adc::Adc
       from: (cmdl|cmdh)\d+
       to: $1
