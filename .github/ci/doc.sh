@@ -11,15 +11,12 @@ export CARGO_HOME=/ci/cache/cargo
 export CARGO_TARGET_DIR=/ci/cache/target
 export BUILDER_THREADS=4
 export BUILDER_COMPRESS=true
+export RUST_TOOLCHAIN=nightly-2025-09-26
 
 # SUBMODULES!!!
 git submodule update --init --recursive --checkout
 
-# force rustup to download the toolchain before starting building.
-# Otherwise, the docs builder is running multiple instances of cargo rustdoc concurrently.
-# They all see the toolchain is not installed and try to install it in parallel
-# which makes rustup very sad
-rustc --version > /dev/null
+rustup toolchain install ${RUST_TOOLCHAIN}
 
 cd nxp-pac
 docserver build -i . -o webroot/crates/nxp-pac/git.zup
