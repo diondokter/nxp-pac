@@ -11,6 +11,10 @@ transforms:
     enum: scg0::FreqSel
     from: .*
 
+  - !ResizeEnums
+    enum: scg0::FreqSel
+    bit_size: 4
+
   - !AddEnumVariants
     enum: scg0::FreqSel
     variants:

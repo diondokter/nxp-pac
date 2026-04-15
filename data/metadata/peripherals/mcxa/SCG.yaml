@@ -478,7 +478,7 @@ fieldset/Firccfg:
   - name: freq_sel
     description: Frequency Range.
     bit_offset: 0
-    bit_size: 1
+    bit_size: 4
     enum: FreqSel
 fieldset/Firccsr:
   description: FIRC Control Status Register.
@@ -1443,7 +1443,7 @@ enum/FlipBufIn:
     description: Flip Buffer Inputs enabled.
     value: 1
 enum/FreqSel:
-  bit_size: 1
+  bit_size: 4
   variants:
   - name: Firc45_48mhz
     value: 1
