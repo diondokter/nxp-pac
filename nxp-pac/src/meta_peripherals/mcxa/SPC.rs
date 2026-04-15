@@ -1,6 +1,7 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
-#![doc = "Peripheral access API (generated using chiptool v0.1.0 (2fd28c5 2026-04-02))"]
+#![allow(non_upper_case_globals)]
+#![doc = "Peripheral access API (generated using chiptool v0.1.0 (be1bff3 2026-04-12))"]
 #[doc = "SPC."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Spc {
@@ -112,7 +113,7 @@ impl Spc {
     }
     #[doc = "LDO_CORE Configuration."]
     #[inline(always)]
-    pub const fn coreldo_cfg(self) -> crate::pac::common::Reg<CoreldoCfg, crate::pac::common::RW> {
+    pub const fn coreldo_cfg(self) -> crate::pac::common::Reg<u32, crate::pac::common::R> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0300usize) as _) }
     }
 }
@@ -316,47 +317,6 @@ impl defmt::Format for ActiveVdelay {
             f,
             "ActiveVdelay {{ active_vdelay: {=u16:?} }}",
             self.active_vdelay()
-        )
-    }
-}
-#[doc = "LDO_CORE Configuration."]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct CoreldoCfg(pub u32);
-impl CoreldoCfg {
-    #[doc = "CORELDO SPARE0."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn coreldo_spare0(&self) -> bool {
-        let val = (self.0 >> 16usize) & 0x01;
-        val != 0
-    }
-    #[doc = "CORELDO SPARE0."]
-    #[inline(always)]
-    pub const fn set_coreldo_spare0(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
-    }
-}
-impl Default for CoreldoCfg {
-    #[inline(always)]
-    fn default() -> CoreldoCfg {
-        CoreldoCfg(0)
-    }
-}
-impl core::fmt::Debug for CoreldoCfg {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("CoreldoCfg")
-            .field("coreldo_spare0", &self.coreldo_spare0())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for CoreldoCfg {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "CoreldoCfg {{ coreldo_spare0: {=bool:?} }}",
-            self.coreldo_spare0()
         )
     }
 }
@@ -1341,11 +1301,11 @@ impl defmt::Format for Verid {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ActiveCfgBgmode {
     #[doc = "Bandgap disabled."]
-    BGMODE0 = 0x0,
+    Bgmode0 = 0x0,
     #[doc = "Bandgap enabled, buffer disabled."]
-    BGMODE01 = 0x01,
+    Bgmode01 = 0x01,
     #[doc = "Bandgap enabled, buffer enabled."]
-    BGMODE10 = 0x02,
+    Bgmode10 = 0x02,
     _RESERVED_3 = 0x03,
 }
 impl ActiveCfgBgmode {
@@ -1375,9 +1335,9 @@ impl From<ActiveCfgBgmode> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ActiveCfgCoreldoVddDs {
     #[doc = "Low."]
-    LOW = 0x0,
+    Low = 0x0,
     #[doc = "Normal."]
-    NORMAL = 0x01,
+    Normal = 0x01,
 }
 impl ActiveCfgCoreldoVddDs {
     #[inline(always)]
@@ -1407,11 +1367,11 @@ impl From<ActiveCfgCoreldoVddDs> for u8 {
 pub enum ActiveCfgCoreldoVddLvl {
     _RESERVED_0 = 0x0,
     #[doc = "Regulate to mid voltage (1.0 V)."]
-    MID = 0x01,
+    Mid = 0x01,
     #[doc = "Regulate to normal voltage (1.1 V)."]
-    NORMAL = 0x02,
+    Normal = 0x02,
     #[doc = "Regulate to overdrive voltage (1.15 V)."]
-    OVER = 0x03,
+    Over = 0x03,
 }
 impl ActiveCfgCoreldoVddLvl {
     #[inline(always)]
@@ -1440,9 +1400,9 @@ impl From<ActiveCfgCoreldoVddLvl> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CorevddLvdf {
     #[doc = "Event not detected."]
-    EVENT_NO = 0x0,
+    EventNo = 0x0,
     #[doc = "Event detected."]
-    EVENT_YES = 0x01,
+    EventYes = 0x01,
 }
 impl CorevddLvdf {
     #[inline(always)]
@@ -1471,7 +1431,7 @@ impl From<CorevddLvdf> for u8 {
 pub struct Feature(u16);
 impl Feature {
     #[doc = "Standard features."]
-    pub const STANDARD: Self = Self(0x0);
+    pub const Standard: Self = Self(0x0);
 }
 impl Feature {
     pub const fn from_bits(val: u16) -> Feature {
@@ -1484,7 +1444,7 @@ impl Feature {
 impl core::fmt::Debug for Feature {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
-            0x0 => f.write_str("STANDARD"),
+            0x0 => f.write_str("Standard"),
             other => core::write!(f, "0x{:02X}", other),
         }
     }
@@ -1493,7 +1453,7 @@ impl core::fmt::Debug for Feature {
 impl defmt::Format for Feature {
     fn format(&self, f: defmt::Formatter) {
         match self.0 {
-            0x0 => defmt::write!(f, "STANDARD"),
+            0x0 => defmt::write!(f, "Standard"),
             other => defmt::write!(f, "0x{:02X}", other),
         }
     }
@@ -1515,11 +1475,11 @@ impl From<Feature> for u16 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpCfgBgmode {
     #[doc = "Bandgap disabled."]
-    BGMODE0 = 0x0,
+    Bgmode0 = 0x0,
     #[doc = "Bandgap enabled, buffer disabled."]
-    BGMODE01 = 0x01,
+    Bgmode01 = 0x01,
     #[doc = "Bandgap enabled, buffer enabled."]
-    BGMODE10 = 0x02,
+    Bgmode10 = 0x02,
     _RESERVED_3 = 0x03,
 }
 impl LpCfgBgmode {
@@ -1549,9 +1509,9 @@ impl From<LpCfgBgmode> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpCfgCoreldoVddDs {
     #[doc = "Low."]
-    LOW = 0x0,
+    Low = 0x0,
     #[doc = "Normal."]
-    NORMAL = 0x01,
+    Normal = 0x01,
 }
 impl LpCfgCoreldoVddDs {
     #[inline(always)]
@@ -1581,11 +1541,11 @@ impl From<LpCfgCoreldoVddDs> for u8 {
 pub enum LpCfgCoreldoVddLvl {
     _RESERVED_0 = 0x0,
     #[doc = "Mid voltage (1.0 V)."]
-    MID = 0x01,
+    Mid = 0x01,
     #[doc = "Normal voltage (1.1 V)."]
-    NORMAL = 0x02,
+    Normal = 0x02,
     #[doc = "Overdrive voltage (1.15 V)."]
-    OVER = 0x03,
+    Over = 0x03,
 }
 impl LpCfgCoreldoVddLvl {
     #[inline(always)]
@@ -1614,18 +1574,18 @@ impl From<LpCfgCoreldoVddLvl> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LpMode {
     #[doc = "SLEEP with system clock running."]
-    MODE0 = 0x0,
+    Mode0 = 0x0,
     #[doc = "DSLEEP with system clock off."]
-    MODE1 = 0x01,
+    Mode1 = 0x01,
     #[doc = "PDOWN with system clock off."]
-    MODE2 = 0x02,
+    Mode2 = 0x02,
     _RESERVED_3 = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
     #[doc = "DPDOWN with system clock off."]
-    MODE8 = 0x08,
+    Mode8 = 0x08,
     _RESERVED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -1661,12 +1621,12 @@ impl From<LpMode> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpreqov {
     #[doc = "Not forced."]
-    FORCE_NO = 0x0,
+    ForceNo = 0x0,
     _RESERVED_1 = 0x01,
     #[doc = "Forced low (ignore LPREQPOL settings)."]
-    FORCE_LOW = 0x02,
+    ForceLow = 0x02,
     #[doc = "Forced high (ignore LPREQPOL settings)."]
-    FORCE_HIGH = 0x03,
+    ForceHigh = 0x03,
 }
 impl Lpreqov {
     #[inline(always)]
@@ -1695,9 +1655,9 @@ impl From<Lpreqov> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lpreqpol {
     #[doc = "High."]
-    HIGH = 0x0,
+    High = 0x0,
     #[doc = "Low."]
-    LOW = 0x01,
+    Low = 0x01,
 }
 impl Lpreqpol {
     #[inline(always)]
@@ -1726,9 +1686,9 @@ impl From<Lpreqpol> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PdLpReq {
     #[doc = "Did not request."]
-    REQ_NO = 0x0,
+    ReqNo = 0x0,
     #[doc = "Requested."]
-    REQ_YES = 0x01,
+    ReqYes = 0x01,
 }
 impl PdLpReq {
     #[inline(always)]
@@ -1757,9 +1717,9 @@ impl From<PdLpReq> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PwrReqStatus {
     #[doc = "Did not request."]
-    REQ_NO = 0x0,
+    ReqNo = 0x0,
     #[doc = "Requested."]
-    REQ_YES = 0x01,
+    ReqYes = 0x01,
 }
 impl PwrReqStatus {
     #[inline(always)]
@@ -1788,18 +1748,18 @@ impl From<PwrReqStatus> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SpcLpMode {
     #[doc = "Sleep mode with system clock running."]
-    MODE0 = 0x0,
+    Mode0 = 0x0,
     #[doc = "DSLEEP with system clock off."]
-    MODE1 = 0x01,
+    Mode1 = 0x01,
     #[doc = "PDOWN with system clock off."]
-    MODE2 = 0x02,
+    Mode2 = 0x02,
     _RESERVED_3 = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
     #[doc = "DPDOWN with system clock off."]
-    MODE8 = 0x08,
+    Mode8 = 0x08,
     _RESERVED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -1835,9 +1795,9 @@ impl From<SpcLpMode> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SpcLpReq {
     #[doc = "SPC is in Active mode; the ACTIVE_CFG register has control."]
-    ACTIVE = 0x0,
+    Active = 0x0,
     #[doc = "All power domains requested low-power mode; SPC entered a low-power state; power-mode configuration based on the LP_CFG register."]
-    LOW_POWER = 0x01,
+    LowPower = 0x01,
 }
 impl SpcLpReq {
     #[inline(always)]
@@ -1866,9 +1826,9 @@ impl From<SpcLpReq> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SysvddHvdf {
     #[doc = "Event not detected."]
-    EVENT_NO = 0x0,
+    EventNo = 0x0,
     #[doc = "Event detected."]
-    EVENT_YES = 0x01,
+    EventYes = 0x01,
 }
 impl SysvddHvdf {
     #[inline(always)]
@@ -1897,9 +1857,9 @@ impl From<SysvddHvdf> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SysvddLvdf {
     #[doc = "Event not detected."]
-    EVENT_NO = 0x0,
+    EventNo = 0x0,
     #[doc = "Event detected."]
-    EVENT_YES = 0x01,
+    EventYes = 0x01,
 }
 impl SysvddLvdf {
     #[inline(always)]
@@ -1928,9 +1888,9 @@ impl From<SysvddLvdf> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum VdCoreCfgLock {
     #[doc = "Allow."]
-    ALLOW = 0x0,
+    Allow = 0x0,
     #[doc = "Deny."]
-    DENY = 0x01,
+    Deny = 0x01,
 }
 impl VdCoreCfgLock {
     #[inline(always)]
@@ -1959,9 +1919,9 @@ impl From<VdCoreCfgLock> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum VdSysCfgLock {
     #[doc = "Allow."]
-    ALLOW = 0x0,
+    Allow = 0x0,
     #[doc = "Deny."]
-    DENY = 0x01,
+    Deny = 0x01,
 }
 impl VdSysCfgLock {
     #[inline(always)]
@@ -1990,9 +1950,9 @@ impl From<VdSysCfgLock> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum VddVdDisable {
     #[doc = "Enable."]
-    ENABLE = 0x0,
+    Enable = 0x0,
     #[doc = "Disable."]
-    DISABLE = 0x01,
+    Disable = 0x01,
 }
 impl VddVdDisable {
     #[inline(always)]
@@ -2022,10 +1982,11 @@ impl From<VddVdDisable> for u8 {
 pub enum Vsm {
     _RESERVED_0 = 0x0,
     #[doc = "SRAM configured for 1.0V"]
-    SRAM1V0 = 0x01,
-    _RESERVED_2 = 0x02,
+    Sram1v0 = 0x01,
+    #[doc = "SRAM configured for 1.1V"]
+    Sram1v1 = 0x02,
     #[doc = "SRAM configured for 1.2V"]
-    SRAM1V2 = 0x03,
+    Sram1v2 = 0x03,
 }
 impl Vsm {
     #[inline(always)]

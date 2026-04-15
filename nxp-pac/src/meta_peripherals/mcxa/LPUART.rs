@@ -1,6 +1,7 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
-#![doc = "Peripheral access API (generated using chiptool v0.1.0 (2fd28c5 2026-04-02))"]
+#![allow(non_upper_case_globals)]
+#![doc = "Peripheral access API (generated using chiptool v0.1.0 (be1bff3 2026-04-12))"]
 #[doc = "LPUART."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Lpuart {
@@ -196,6 +197,18 @@ impl Baud {
     pub const fn set_rdmae(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
     }
+    #[doc = "Reduced Oversample Mode Selection."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn hlfm(&self) -> Hlfm {
+        let val = (self.0 >> 22usize) & 0x01;
+        Hlfm::from_bits(val as u8)
+    }
+    #[doc = "Reduced Oversample Mode Selection."]
+    #[inline(always)]
+    pub const fn set_hlfm(&mut self, val: Hlfm) {
+        self.0 = (self.0 & !(0x01 << 22usize)) | (((val.to_bits() as u32) & 0x01) << 22usize);
+    }
     #[doc = "Transmitter DMA Enable."]
     #[must_use]
     #[inline(always)]
@@ -275,6 +288,7 @@ impl core::fmt::Debug for Baud {
             .field("matcfg", &self.matcfg())
             .field("ridmae", &self.ridmae())
             .field("rdmae", &self.rdmae())
+            .field("hlfm", &self.hlfm())
             .field("tdmae", &self.tdmae())
             .field("osr", &self.osr())
             .field("m10", &self.m10())
@@ -288,7 +302,7 @@ impl defmt::Format for Baud {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Baud {{ sbr: {=u16:?}, sbns: {:?}, rxedgie: {=bool:?}, lbkdie: {=bool:?}, resyncdis: {:?}, bothedge: {=bool:?}, matcfg: {:?}, ridmae: {=bool:?}, rdmae: {=bool:?}, tdmae: {=bool:?}, osr: {=u8:?}, m10: {=bool:?}, maen2: {=bool:?}, maen1: {=bool:?} }}",
+            "Baud {{ sbr: {=u16:?}, sbns: {:?}, rxedgie: {=bool:?}, lbkdie: {=bool:?}, resyncdis: {:?}, bothedge: {=bool:?}, matcfg: {:?}, ridmae: {=bool:?}, rdmae: {=bool:?}, hlfm: {:?}, tdmae: {=bool:?}, osr: {=u8:?}, m10: {=bool:?}, maen2: {=bool:?}, maen1: {=bool:?} }}",
             self.sbr(),
             self.sbns(),
             self.rxedgie(),
@@ -298,6 +312,7 @@ impl defmt::Format for Baud {
             self.matcfg(),
             self.ridmae(),
             self.rdmae(),
+            self.hlfm(),
             self.tdmae(),
             self.osr(),
             self.m10(),
@@ -442,6 +457,18 @@ impl Ctrl {
     #[inline(always)]
     pub const fn set_swap(&mut self, val: Swap) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val.to_bits() as u32) & 0x01) << 12usize);
+    }
+    #[doc = "Early Sample Selection."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn erlsmp(&self) -> Erlsmp {
+        let val = (self.0 >> 13usize) & 0x01;
+        Erlsmp::from_bits(val as u8)
+    }
+    #[doc = "Early Sample Selection."]
+    #[inline(always)]
+    pub const fn set_erlsmp(&mut self, val: Erlsmp) {
+        self.0 = (self.0 & !(0x01 << 13usize)) | (((val.to_bits() as u32) & 0x01) << 13usize);
     }
     #[doc = "Match 2 (MA2F) Interrupt Enable."]
     #[must_use]
@@ -680,6 +707,7 @@ impl core::fmt::Debug for Ctrl {
             .field("idlecfg", &self.idlecfg())
             .field("m7", &self.m7())
             .field("swap", &self.swap())
+            .field("erlsmp", &self.erlsmp())
             .field("ma2ie", &self.ma2ie())
             .field("ma1ie", &self.ma1ie())
             .field("sbk", &self.sbk())
@@ -706,7 +734,7 @@ impl defmt::Format for Ctrl {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Ctrl {{ pt: {:?}, pe: {=bool:?}, ilt: {:?}, wake: {:?}, m: {:?}, rsrc: {:?}, dozeen: {:?}, loops: {:?}, idlecfg: {:?}, m7: {:?}, swap: {:?}, ma2ie: {=bool:?}, ma1ie: {=bool:?}, sbk: {:?}, rwu: {:?}, re: {=bool:?}, te: {=bool:?}, ilie: {=bool:?}, rie: {=bool:?}, tcie: {=bool:?}, tie: {=bool:?}, peie: {=bool:?}, feie: {=bool:?}, neie: {=bool:?}, orie: {=bool:?}, txinv: {=bool:?}, txdir: {:?}, r9t8: {=bool:?}, r8t9: {=bool:?} }}",
+            "Ctrl {{ pt: {:?}, pe: {=bool:?}, ilt: {:?}, wake: {:?}, m: {:?}, rsrc: {:?}, dozeen: {:?}, loops: {:?}, idlecfg: {:?}, m7: {:?}, swap: {:?}, erlsmp: {:?}, ma2ie: {=bool:?}, ma1ie: {=bool:?}, sbk: {:?}, rwu: {:?}, re: {=bool:?}, te: {=bool:?}, ilie: {=bool:?}, rie: {=bool:?}, tcie: {=bool:?}, tie: {=bool:?}, peie: {=bool:?}, feie: {=bool:?}, neie: {=bool:?}, orie: {=bool:?}, txinv: {=bool:?}, txdir: {:?}, r9t8: {=bool:?}, r8t9: {=bool:?} }}",
             self.pt(),
             self.pe(),
             self.ilt(),
@@ -718,6 +746,7 @@ impl defmt::Format for Ctrl {
             self.idlecfg(),
             self.m7(),
             self.swap(),
+            self.erlsmp(),
             self.ma2ie(),
             self.ma1ie(),
             self.sbk(),
@@ -2035,9 +2064,9 @@ impl defmt::Format for Water {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Brk13 {
     #[doc = "9 to 13 bit times."]
-    SHORT = 0x0,
+    Short = 0x0,
     #[doc = "12 to 15 bit times."]
-    LONG = 0x01,
+    Long = 0x01,
 }
 impl Brk13 {
     #[inline(always)]
@@ -2066,9 +2095,9 @@ impl From<Brk13> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dozeen {
     #[doc = "Enable."]
-    ENABLED = 0x0,
+    Enabled = 0x0,
     #[doc = "Disable."]
-    DISABLED = 0x01,
+    Disabled = 0x01,
 }
 impl Dozeen {
     #[inline(always)]
@@ -2092,14 +2121,45 @@ impl From<Dozeen> for u8 {
         Dozeen::to_bits(val)
     }
 }
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Erlsmp {
+    #[doc = "Regular midpoint bit sampling."]
+    Midpoint = 0x0,
+    #[doc = "Early bit sampling at 1/2 duration of bit timing."]
+    Reduced = 0x01,
+}
+impl Erlsmp {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Erlsmp {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Erlsmp {
+    #[inline(always)]
+    fn from(val: u8) -> Erlsmp {
+        Erlsmp::from_bits(val)
+    }
+}
+impl From<Erlsmp> for u8 {
+    #[inline(always)]
+    fn from(val: Erlsmp) -> u8 {
+        Erlsmp::to_bits(val)
+    }
+}
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct Feature(u16);
 impl Feature {
     #[doc = "Standard feature set."]
-    pub const STANDARD: Self = Self(0x01);
+    pub const Standard: Self = Self(0x01);
     #[doc = "Standard feature set with MODEM and IrDA support."]
-    pub const MODEM: Self = Self(0x03);
+    pub const Modem: Self = Self(0x03);
 }
 impl Feature {
     pub const fn from_bits(val: u16) -> Feature {
@@ -2112,8 +2172,8 @@ impl Feature {
 impl core::fmt::Debug for Feature {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
-            0x01 => f.write_str("STANDARD"),
-            0x03 => f.write_str("MODEM"),
+            0x01 => f.write_str("Standard"),
+            0x03 => f.write_str("Modem"),
             other => core::write!(f, "0x{:02X}", other),
         }
     }
@@ -2122,8 +2182,8 @@ impl core::fmt::Debug for Feature {
 impl defmt::Format for Feature {
     fn format(&self, f: defmt::Formatter) {
         match self.0 {
-            0x01 => defmt::write!(f, "STANDARD"),
-            0x03 => defmt::write!(f, "MODEM"),
+            0x01 => defmt::write!(f, "Standard"),
+            0x03 => defmt::write!(f, "Modem"),
             other => defmt::write!(f, "0x{:02X}", other),
         }
     }
@@ -2143,23 +2203,54 @@ impl From<Feature> for u16 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Hlfm {
+    #[doc = "Regular Oversampling."]
+    Regular = 0x0,
+    #[doc = "Reduced Oversampling by 0.5."]
+    Reduced = 0x01,
+}
+impl Hlfm {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Hlfm {
+        unsafe { core::mem::transmute(val & 0x01) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Hlfm {
+    #[inline(always)]
+    fn from(val: u8) -> Hlfm {
+        Hlfm::from_bits(val)
+    }
+}
+impl From<Hlfm> for u8 {
+    #[inline(always)]
+    fn from(val: Hlfm) -> u8 {
+        Hlfm::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Idlecfg {
     #[doc = "1."]
-    IDLE_1 = 0x0,
+    Idle1 = 0x0,
     #[doc = "2."]
-    IDLE_2 = 0x01,
+    Idle2 = 0x01,
     #[doc = "4."]
-    IDLE_4 = 0x02,
+    Idle4 = 0x02,
     #[doc = "8."]
-    IDLE_8 = 0x03,
+    Idle8 = 0x03,
     #[doc = "16."]
-    IDLE_16 = 0x04,
+    Idle16 = 0x04,
     #[doc = "32."]
-    IDLE_32 = 0x05,
+    Idle32 = 0x05,
     #[doc = "64."]
-    IDLE_64 = 0x06,
+    Idle64 = 0x06,
     #[doc = "128."]
-    IDLE_128 = 0x07,
+    Idle128 = 0x07,
 }
 impl Idlecfg {
     #[inline(always)]
@@ -2188,9 +2279,9 @@ impl From<Idlecfg> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ilt {
     #[doc = "After the start bit."]
-    FROM_START = 0x0,
+    FromStart = 0x0,
     #[doc = "After the stop bit."]
-    FROM_STOP = 0x01,
+    FromStop = 0x01,
 }
 impl Ilt {
     #[inline(always)]
@@ -2219,9 +2310,9 @@ impl From<Ilt> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Loops {
     #[doc = "Normal operation: RXD and TXD use separate pins."]
-    NOFFECT = 0x0,
+    Noffect = 0x0,
     #[doc = "Loop mode or Single-Wire mode."]
-    LOOPBACK = 0x01,
+    Loopback = 0x01,
 }
 impl Loops {
     #[inline(always)]
@@ -2250,9 +2341,9 @@ impl From<Loops> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum M {
     #[doc = "8-bit."]
-    DATA8 = 0x0,
+    Data8 = 0x0,
     #[doc = "9-bit."]
-    DATA9 = 0x01,
+    Data9 = 0x01,
 }
 impl M {
     #[inline(always)]
@@ -2281,9 +2372,9 @@ impl From<M> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum M7 {
     #[doc = "8-bit to 10-bit."]
-    NO_EFFECT = 0x0,
+    NoEffect = 0x0,
     #[doc = "7-bit."]
-    DATA7 = 0x01,
+    Data7 = 0x01,
 }
 impl M7 {
     #[inline(always)]
@@ -2312,13 +2403,13 @@ impl From<M7> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Matcfg {
     #[doc = "Address match wake-up."]
-    ADDR_MATCH = 0x0,
+    AddrMatch = 0x0,
     #[doc = "Idle match wake-up."]
-    IDLE_MATCH = 0x01,
+    IdleMatch = 0x01,
     #[doc = "Match on and match off."]
-    ONOFF_MATCH = 0x02,
+    OnoffMatch = 0x02,
     #[doc = "Enables RWU on data match and match on or off for the transmitter CTS input."]
-    RWU_MATCH = 0x03,
+    RwuMatch = 0x03,
 }
 impl Matcfg {
     #[inline(always)]
@@ -2347,9 +2438,9 @@ impl From<Matcfg> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Msbf {
     #[doc = "LSB."]
-    LSB_FIRST = 0x0,
+    LsbFirst = 0x0,
     #[doc = "MSB."]
-    MSB_FIRST = 0x01,
+    MsbFirst = 0x01,
 }
 impl Msbf {
     #[inline(always)]
@@ -2378,9 +2469,9 @@ impl From<Msbf> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pt {
     #[doc = "Even parity."]
-    EVEN = 0x0,
+    Even = 0x0,
     #[doc = "Odd parity."]
-    ODD = 0x01,
+    Odd = 0x01,
 }
 impl Pt {
     #[inline(always)]
@@ -2409,9 +2500,9 @@ impl From<Pt> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Raf {
     #[doc = "Idle, waiting for a start bit."]
-    IDLE = 0x0,
+    Idle = 0x0,
     #[doc = "Receiver active (RXD pin input not idle)."]
-    ACTIVE = 0x01,
+    Active = 0x01,
 }
 impl Raf {
     #[inline(always)]
@@ -2440,9 +2531,9 @@ impl From<Raf> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Resyncdis {
     #[doc = "Enable."]
-    RESYNC = 0x0,
+    Resync = 0x0,
     #[doc = "Disable."]
-    NO_RESYNC = 0x01,
+    NoResync = 0x01,
 }
 impl Resyncdis {
     #[inline(always)]
@@ -2471,9 +2562,9 @@ impl From<Resyncdis> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rsrc {
     #[doc = "Internal Loopback mode."]
-    NO_EFFECT = 0x0,
+    NoEffect = 0x0,
     #[doc = "Single-wire mode."]
-    ONEWIRE = 0x01,
+    Onewire = 0x01,
 }
 impl Rsrc {
     #[inline(always)]
@@ -2502,9 +2593,9 @@ impl From<Rsrc> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rst {
     #[doc = "Not reset."]
-    NO_EFFECT = 0x0,
+    NoEffect = 0x0,
     #[doc = "Reset."]
-    RESET = 0x01,
+    Reset = 0x01,
 }
 impl Rst {
     #[inline(always)]
@@ -2533,9 +2624,9 @@ impl From<Rst> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rwu {
     #[doc = "Normal receiver operation."]
-    NO_EFFECT = 0x0,
+    NoEffect = 0x0,
     #[doc = "LPUART receiver in standby, waiting for a wake-up condition."]
-    RX_WAKEUP = 0x01,
+    RxWakeup = 0x01,
 }
 impl Rwu {
     #[inline(always)]
@@ -2564,9 +2655,9 @@ impl From<Rwu> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rwuid {
     #[doc = "STAT\\[IDLE\\] does not become 1."]
-    IDLE_NOTSET = 0x0,
+    IdleNotset = 0x0,
     #[doc = "STAT\\[IDLE\\] becomes 1."]
-    IDLE_SET = 0x01,
+    IdleSet = 0x01,
 }
 impl Rwuid {
     #[inline(always)]
@@ -2595,21 +2686,21 @@ impl From<Rwuid> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rxfifosize {
     #[doc = "1."]
-    FIFO_1 = 0x0,
+    Fifo1 = 0x0,
     #[doc = "4."]
-    FIFO_4 = 0x01,
+    Fifo4 = 0x01,
     #[doc = "8."]
-    FIFO_8 = 0x02,
+    Fifo8 = 0x02,
     #[doc = "16."]
-    FIFO_16 = 0x03,
+    Fifo16 = 0x03,
     #[doc = "32."]
-    FIFO_32 = 0x04,
+    Fifo32 = 0x04,
     #[doc = "64."]
-    FIFO_64 = 0x05,
+    Fifo64 = 0x05,
     #[doc = "128."]
-    FIFO_128 = 0x06,
+    Fifo128 = 0x06,
     #[doc = "256."]
-    FIFO_256 = 0x07,
+    Fifo256 = 0x07,
 }
 impl Rxfifosize {
     #[inline(always)]
@@ -2638,9 +2729,9 @@ impl From<Rxfifosize> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rxflush {
     #[doc = "No effect."]
-    NO_EFFECT = 0x0,
+    NoEffect = 0x0,
     #[doc = "All data flushed out."]
-    RXFIFO_RST = 0x01,
+    RxfifoRst = 0x01,
 }
 impl Rxflush {
     #[inline(always)]
@@ -2669,21 +2760,21 @@ impl From<Rxflush> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Rxiden {
     #[doc = "Disable STAT\\[RDRF\\] to become 1 because of partially filled FIFO when the receiver is idle."]
-    DISABLED = 0x0,
+    Disabled = 0x0,
     #[doc = "Enable STAT\\[RDRF\\] to become 1 because of partially filled FIFO when the receiver is idle for one character."]
-    IDLE_1 = 0x01,
+    Idle1 = 0x01,
     #[doc = "Enable STAT\\[RDRF\\] to become 1 because of partially filled FIFO when the receiver is idle for two characters."]
-    IDLE_2 = 0x02,
+    Idle2 = 0x02,
     #[doc = "Enable STAT\\[RDRF\\] to become 1 because of partially filled FIFO when the receiver is idle for four characters."]
-    IDLE_4 = 0x03,
+    Idle4 = 0x03,
     #[doc = "Enable STAT\\[RDRF\\] to become 1 because of partially filled FIFO when the receiver is idle for eight characters."]
-    IDLE_8 = 0x04,
+    Idle8 = 0x04,
     #[doc = "Enable STAT\\[RDRF\\] to become 1 because of partially filled FIFO when the receiver is idle for 16 characters."]
-    IDLE_16 = 0x05,
+    Idle16 = 0x05,
     #[doc = "Enable STAT\\[RDRF\\] to become 1 because of partially filled FIFO when the receiver is idle for 32 characters."]
-    IDLE_32 = 0x06,
+    Idle32 = 0x06,
     #[doc = "Enable STAT\\[RDRF\\] to become 1 because of partially filled FIFO when the receiver is idle for 64 characters."]
-    IDLE_64 = 0x07,
+    Idle64 = 0x07,
 }
 impl Rxiden {
     #[inline(always)]
@@ -2712,9 +2803,9 @@ impl From<Rxiden> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sbk {
     #[doc = "Normal transmitter operation."]
-    NO_EFFECT = 0x0,
+    NoEffect = 0x0,
     #[doc = "Queue break character(s) to be sent."]
-    TX_BREAK = 0x01,
+    TxBreak = 0x01,
 }
 impl Sbk {
     #[inline(always)]
@@ -2743,9 +2834,9 @@ impl From<Sbk> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sbns {
     #[doc = "One stop bit."]
-    ONE = 0x0,
+    One = 0x0,
     #[doc = "Two stop bits."]
-    TWO = 0x01,
+    Two = 0x01,
 }
 impl Sbns {
     #[inline(always)]
@@ -2774,9 +2865,9 @@ impl From<Sbns> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Swap {
     #[doc = "Use the standard way."]
-    STANDARD = 0x0,
+    Standard = 0x0,
     #[doc = "Swap."]
-    SWAP = 0x01,
+    Swap = 0x01,
 }
 impl Swap {
     #[inline(always)]
@@ -2805,9 +2896,9 @@ impl From<Swap> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tc {
     #[doc = "Transmitter active."]
-    ACTIVE = 0x0,
+    Active = 0x0,
     #[doc = "Transmitter idle."]
-    COMPLETE = 0x01,
+    Complete = 0x01,
 }
 impl Tc {
     #[inline(always)]
@@ -2836,9 +2927,9 @@ impl From<Tc> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tdre {
     #[doc = "Greater than watermark."]
-    TXDATA = 0x0,
+    Txdata = 0x0,
     #[doc = "Equal to or less than watermark."]
-    NO_TXDATA = 0x01,
+    NoTxdata = 0x01,
 }
 impl Tdre {
     #[inline(always)]
@@ -2867,13 +2958,13 @@ impl From<Tdre> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Tnp {
     #[doc = "1 / OSR."]
-    ONE_SAMPLE = 0x0,
+    OneSample = 0x0,
     #[doc = "2 / OSR."]
-    TWO_SAMPLE = 0x01,
+    TwoSample = 0x01,
     #[doc = "3 / OSR."]
-    THREE_SAMPLE = 0x02,
+    ThreeSample = 0x02,
     #[doc = "4 / OSR."]
-    FOUR_SAMPLE = 0x03,
+    FourSample = 0x03,
 }
 impl Tnp {
     #[inline(always)]
@@ -2902,13 +2993,13 @@ impl From<Tnp> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Trgsel {
     #[doc = "Input trigger disabled."]
-    DISABLED = 0x0,
+    Disabled = 0x0,
     #[doc = "Input trigger used instead of the RXD pin input."]
-    TRG_RXD = 0x01,
+    TrgRxd = 0x01,
     #[doc = "Input trigger used instead of the CTS_B pin input."]
-    TRG_CTS = 0x02,
+    TrgCts = 0x02,
     #[doc = "Input trigger used to modulate the TXD pin output, which (after TXINV configuration) is internally ANDed with the input trigger."]
-    TRG_TXD = 0x03,
+    TrgTxd = 0x03,
 }
 impl Trgsel {
     #[inline(always)]
@@ -2937,9 +3028,9 @@ impl From<Trgsel> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Txctsc {
     #[doc = "Sampled at the start of each character."]
-    START = 0x0,
+    Start = 0x0,
     #[doc = "Sampled when the transmitter is idle."]
-    IDLE = 0x01,
+    Idle = 0x01,
 }
 impl Txctsc {
     #[inline(always)]
@@ -2968,9 +3059,9 @@ impl From<Txctsc> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Txctssrc {
     #[doc = "The CTS_B pin."]
-    CTS = 0x0,
+    Cts = 0x0,
     #[doc = "An internal connection to the receiver address match result."]
-    MATCH = 0x01,
+    Match = 0x01,
 }
 impl Txctssrc {
     #[inline(always)]
@@ -2999,9 +3090,9 @@ impl From<Txctssrc> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Txdir {
     #[doc = "Input."]
-    TX_INPUT = 0x0,
+    TxInput = 0x0,
     #[doc = "Output."]
-    TX_OUTPUT = 0x01,
+    TxOutput = 0x01,
 }
 impl Txdir {
     #[inline(always)]
@@ -3030,21 +3121,21 @@ impl From<Txdir> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Txfifosize {
     #[doc = "1."]
-    FIFO_1 = 0x0,
+    Fifo1 = 0x0,
     #[doc = "4."]
-    FIFO_4 = 0x01,
+    Fifo4 = 0x01,
     #[doc = "8."]
-    FIFO_8 = 0x02,
+    Fifo8 = 0x02,
     #[doc = "16."]
-    FIFO_16 = 0x03,
+    Fifo16 = 0x03,
     #[doc = "32."]
-    FIFO_32 = 0x04,
+    Fifo32 = 0x04,
     #[doc = "64."]
-    FIFO_64 = 0x05,
+    Fifo64 = 0x05,
     #[doc = "128."]
-    FIFO_128 = 0x06,
+    Fifo128 = 0x06,
     #[doc = "256."]
-    FIFO_256 = 0x07,
+    Fifo256 = 0x07,
 }
 impl Txfifosize {
     #[inline(always)]
@@ -3073,9 +3164,9 @@ impl From<Txfifosize> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Txflush {
     #[doc = "No effect."]
-    NO_EFFECT = 0x0,
+    NoEffect = 0x0,
     #[doc = "All data flushed out."]
-    TXFIFO_RST = 0x01,
+    TxfifoRst = 0x01,
 }
 impl Txflush {
     #[inline(always)]
@@ -3104,9 +3195,9 @@ impl From<Txflush> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Txrtspol {
     #[doc = "Active low."]
-    LOW = 0x0,
+    Low = 0x0,
     #[doc = "Active high."]
-    HIGH = 0x01,
+    High = 0x01,
 }
 impl Txrtspol {
     #[inline(always)]
@@ -3135,9 +3226,9 @@ impl From<Txrtspol> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wake {
     #[doc = "Idle."]
-    IDLE = 0x0,
+    Idle = 0x0,
     #[doc = "Mark."]
-    MARK = 0x01,
+    Mark = 0x01,
 }
 impl Wake {
     #[inline(always)]

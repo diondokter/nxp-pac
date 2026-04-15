@@ -1,6 +1,7 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
-#![doc = "Peripheral access API (generated using chiptool v0.1.0 (2fd28c5 2026-04-02))"]
+#![allow(non_upper_case_globals)]
+#![doc = "Peripheral access API (generated using chiptool v0.1.0 (be1bff3 2026-04-12))"]
 #[doc = "Real Time Clock."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Rtc {

@@ -1,6 +1,7 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
-#![doc = "Peripheral access API (generated using chiptool v0.1.0 (2fd28c5 2026-04-02))"]
+#![allow(non_upper_case_globals)]
+#![doc = "Peripheral access API (generated using chiptool v0.1.0 (be1bff3 2026-04-12))"]
 #[doc = "VBAT."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Vbat {
@@ -382,14 +383,14 @@ impl Irqena {
     #[doc = "POR Detect."]
     #[must_use]
     #[inline(always)]
-    pub const fn por_det(&self) -> IrqenaPorDet {
+    pub const fn por_det(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
-        IrqenaPorDet::from_bits(val as u8)
+        val != 0
     }
     #[doc = "POR Detect."]
     #[inline(always)]
-    pub const fn set_por_det(&mut self, val: IrqenaPorDet) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    pub const fn set_por_det(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
     #[doc = "Wakeup Pin Flag."]
     #[must_use]
@@ -406,50 +407,50 @@ impl Irqena {
     #[doc = "Bandgap Timer 0."]
     #[must_use]
     #[inline(always)]
-    pub const fn timer0_flag(&self) -> IrqenaTimer0Flag {
+    pub const fn timer0_flag(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
-        IrqenaTimer0Flag::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Bandgap Timer 0."]
     #[inline(always)]
-    pub const fn set_timer0_flag(&mut self, val: IrqenaTimer0Flag) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
+    pub const fn set_timer0_flag(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
     #[doc = "Bandgap Timer 2."]
     #[must_use]
     #[inline(always)]
-    pub const fn timer1_flag(&self) -> IrqenaTimer1Flag {
+    pub const fn timer1_flag(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
-        IrqenaTimer1Flag::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Bandgap Timer 2."]
     #[inline(always)]
-    pub const fn set_timer1_flag(&mut self, val: IrqenaTimer1Flag) {
-        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
+    pub const fn set_timer1_flag(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
     #[doc = "LDO Ready."]
     #[must_use]
     #[inline(always)]
-    pub const fn ldo_rdy(&self) -> IrqenaLdoRdy {
+    pub const fn ldo_rdy(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
-        IrqenaLdoRdy::from_bits(val as u8)
+        val != 0
     }
     #[doc = "LDO Ready."]
     #[inline(always)]
-    pub const fn set_ldo_rdy(&mut self, val: IrqenaLdoRdy) {
-        self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
+    pub const fn set_ldo_rdy(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
     #[doc = "OSC32k Ready."]
     #[must_use]
     #[inline(always)]
-    pub const fn osc_rdy(&self) -> IrqenaOscRdy {
+    pub const fn osc_rdy(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
-        IrqenaOscRdy::from_bits(val as u8)
+        val != 0
     }
     #[doc = "OSC32k Ready."]
     #[inline(always)]
-    pub const fn set_osc_rdy(&mut self, val: IrqenaOscRdy) {
-        self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
+    pub const fn set_osc_rdy(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
 }
 impl Default for Irqena {
@@ -475,7 +476,7 @@ impl defmt::Format for Irqena {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Irqena {{ por_det: {:?}, wakeup_flag: {:?}, timer0_flag: {:?}, timer1_flag: {:?}, ldo_rdy: {:?}, osc_rdy: {:?} }}",
+            "Irqena {{ por_det: {=bool:?}, wakeup_flag: {:?}, timer0_flag: {=bool:?}, timer1_flag: {=bool:?}, ldo_rdy: {=bool:?}, osc_rdy: {=bool:?} }}",
             self.por_det(),
             self.wakeup_flag(),
             self.timer0_flag(),
@@ -682,74 +683,74 @@ impl Ldoramc {
     #[doc = "Isolate SRAM."]
     #[must_use]
     #[inline(always)]
-    pub const fn iso(&self) -> Iso {
+    pub const fn iso(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
-        Iso::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Isolate SRAM."]
     #[inline(always)]
-    pub const fn set_iso(&mut self, val: Iso) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    pub const fn set_iso(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
     #[doc = "Switch SRAM."]
     #[must_use]
     #[inline(always)]
-    pub const fn swi(&self) -> Swi {
+    pub const fn swi(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
-        Swi::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Switch SRAM."]
     #[inline(always)]
-    pub const fn set_swi(&mut self, val: Swi) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
+    pub const fn set_swi(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
     #[doc = "Retention."]
     #[must_use]
     #[inline(always)]
-    pub const fn ret0(&self) -> Ret0 {
+    pub const fn ret0(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
-        Ret0::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Retention."]
     #[inline(always)]
-    pub const fn set_ret0(&mut self, val: Ret0) {
-        self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
+    pub const fn set_ret0(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
     #[doc = "Retention."]
     #[must_use]
     #[inline(always)]
-    pub const fn ret1(&self) -> Ret1 {
+    pub const fn ret1(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
-        Ret1::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Retention."]
     #[inline(always)]
-    pub const fn set_ret1(&mut self, val: Ret1) {
-        self.0 = (self.0 & !(0x01 << 9usize)) | (((val.to_bits() as u32) & 0x01) << 9usize);
+    pub const fn set_ret1(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
     }
     #[doc = "Retention."]
     #[must_use]
     #[inline(always)]
-    pub const fn ret2(&self) -> Ret2 {
+    pub const fn ret2(&self) -> bool {
         let val = (self.0 >> 10usize) & 0x01;
-        Ret2::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Retention."]
     #[inline(always)]
-    pub const fn set_ret2(&mut self, val: Ret2) {
-        self.0 = (self.0 & !(0x01 << 10usize)) | (((val.to_bits() as u32) & 0x01) << 10usize);
+    pub const fn set_ret2(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
     #[doc = "Retention."]
     #[must_use]
     #[inline(always)]
-    pub const fn ret3(&self) -> Ret3 {
+    pub const fn ret3(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
-        Ret3::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Retention."]
     #[inline(always)]
-    pub const fn set_ret3(&mut self, val: Ret3) {
-        self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
+    pub const fn set_ret3(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
 }
 impl Default for Ldoramc {
@@ -775,7 +776,7 @@ impl defmt::Format for Ldoramc {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Ldoramc {{ iso: {:?}, swi: {:?}, ret0: {:?}, ret1: {:?}, ret2: {:?}, ret3: {:?} }}",
+            "Ldoramc {{ iso: {=bool:?}, swi: {=bool:?}, ret0: {=bool:?}, ret1: {=bool:?}, ret2: {=bool:?}, ret3: {=bool:?} }}",
             self.iso(),
             self.swi(),
             self.ret0(),
@@ -805,14 +806,14 @@ impl Ldotimer0 {
     #[doc = "Bandgap Timeout Period Enable."]
     #[must_use]
     #[inline(always)]
-    pub const fn timen(&self) -> Ldotimer0Timen {
+    pub const fn timen(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
-        Ldotimer0Timen::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Bandgap Timeout Period Enable."]
     #[inline(always)]
-    pub const fn set_timen(&mut self, val: Ldotimer0Timen) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
+    pub const fn set_timen(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
     }
 }
 impl Default for Ldotimer0 {
@@ -834,7 +835,7 @@ impl defmt::Format for Ldotimer0 {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Ldotimer0 {{ timcfg: {:?}, timen: {:?} }}",
+            "Ldotimer0 {{ timcfg: {:?}, timen: {=bool:?} }}",
             self.timcfg(),
             self.timen()
         )
@@ -860,14 +861,14 @@ impl Ldotimer1 {
     #[doc = "Bandgap Timeout Period Enable."]
     #[must_use]
     #[inline(always)]
-    pub const fn timen(&self) -> Ldotimer1Timen {
+    pub const fn timen(&self) -> bool {
         let val = (self.0 >> 31usize) & 0x01;
-        Ldotimer1Timen::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Bandgap Timeout Period Enable."]
     #[inline(always)]
-    pub const fn set_timen(&mut self, val: Ldotimer1Timen) {
-        self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
+    pub const fn set_timen(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
     }
 }
 impl Default for Ldotimer1 {
@@ -889,7 +890,7 @@ impl defmt::Format for Ldotimer1 {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Ldotimer1 {{ timcfg: {=u32:?}, timen: {:?} }}",
+            "Ldotimer1 {{ timcfg: {=u32:?}, timen: {=bool:?} }}",
             self.timcfg(),
             self.timen()
         )
@@ -1132,14 +1133,14 @@ impl Oscctla {
     #[doc = "Crystal Oscillator Bypass Enable."]
     #[must_use]
     #[inline(always)]
-    pub const fn osc_byp_en(&self) -> OscBypEn {
+    pub const fn osc_byp_en(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
-        OscBypEn::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Crystal Oscillator Bypass Enable."]
     #[inline(always)]
-    pub const fn set_osc_byp_en(&mut self, val: OscBypEn) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
+    pub const fn set_osc_byp_en(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
     #[doc = "Amplifier Gain Coarse Adjustment."]
     #[must_use]
@@ -1168,14 +1169,14 @@ impl Oscctla {
     #[doc = "Output Hysteresis Select."]
     #[must_use]
     #[inline(always)]
-    pub const fn hyst_sel(&self) -> HystSel {
+    pub const fn hyst_sel(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
-        HystSel::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Output Hysteresis Select."]
     #[inline(always)]
-    pub const fn set_hyst_sel(&mut self, val: HystSel) {
-        self.0 = (self.0 & !(0x01 << 6usize)) | (((val.to_bits() as u32) & 0x01) << 6usize);
+    pub const fn set_hyst_sel(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
     #[doc = "Crystal Load Capacitance Selection Enable."]
     #[must_use]
@@ -1265,7 +1266,7 @@ impl defmt::Format for Oscctla {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Oscctla {{ osc_en: {=bool:?}, osc_byp_en: {:?}, coarse_amp_gain: {:?}, fine_amp_gain: {:?}, hyst_sel: {:?}, cap_sel_en: {=bool:?}, extal_cap_sel: {:?}, xtal_cap_sel: {:?}, mode_en: {:?}, supply_det: {:?} }}",
+            "Oscctla {{ osc_en: {=bool:?}, osc_byp_en: {=bool:?}, coarse_amp_gain: {:?}, fine_amp_gain: {:?}, hyst_sel: {=bool:?}, cap_sel_en: {=bool:?}, extal_cap_sel: {:?}, xtal_cap_sel: {:?}, mode_en: {:?}, supply_det: {:?} }}",
             self.osc_en(),
             self.osc_byp_en(),
             self.coarse_amp_gain(),
@@ -1504,26 +1505,26 @@ impl Swictla {
     #[doc = "Switch Enable."]
     #[must_use]
     #[inline(always)]
-    pub const fn swi_en(&self) -> SwiEn {
+    pub const fn swi_en(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
-        SwiEn::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Switch Enable."]
     #[inline(always)]
-    pub const fn set_swi_en(&mut self, val: SwiEn) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    pub const fn set_swi_en(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
     #[doc = "Low Power Enable."]
     #[must_use]
     #[inline(always)]
-    pub const fn lp_en(&self) -> LpEn {
+    pub const fn lp_en(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
-        LpEn::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Low Power Enable."]
     #[inline(always)]
-    pub const fn set_lp_en(&mut self, val: LpEn) {
-        self.0 = (self.0 & !(0x01 << 1usize)) | (((val.to_bits() as u32) & 0x01) << 1usize);
+    pub const fn set_lp_en(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
 }
 impl Default for Swictla {
@@ -1545,7 +1546,7 @@ impl defmt::Format for Swictla {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Swictla {{ swi_en: {:?}, lp_en: {:?} }}",
+            "Swictla {{ swi_en: {=bool:?}, lp_en: {=bool:?} }}",
             self.swi_en(),
             self.lp_en()
         )
@@ -1559,14 +1560,14 @@ impl Swilcka {
     #[doc = "Lock."]
     #[must_use]
     #[inline(always)]
-    pub const fn lock(&self) -> SwilckaLock {
+    pub const fn lock(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
-        SwilckaLock::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Lock."]
     #[inline(always)]
-    pub const fn set_lock(&mut self, val: SwilckaLock) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    pub const fn set_lock(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
 }
 impl Default for Swilcka {
@@ -1585,7 +1586,7 @@ impl core::fmt::Debug for Swilcka {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Swilcka {
     fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Swilcka {{ lock: {:?} }}", self.lock())
+        defmt::write!(f, "Swilcka {{ lock: {=bool:?} }}", self.lock())
     }
 }
 #[doc = "Version ID."]
@@ -1700,14 +1701,14 @@ impl Wakena {
     #[doc = "POR Detect."]
     #[must_use]
     #[inline(always)]
-    pub const fn por_det(&self) -> WakenaPorDet {
+    pub const fn por_det(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
-        WakenaPorDet::from_bits(val as u8)
+        val != 0
     }
     #[doc = "POR Detect."]
     #[inline(always)]
-    pub const fn set_por_det(&mut self, val: WakenaPorDet) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    pub const fn set_por_det(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
     #[doc = "Wake-up Pin Flag."]
     #[must_use]
@@ -1724,50 +1725,50 @@ impl Wakena {
     #[doc = "Bandgap Timer 0."]
     #[must_use]
     #[inline(always)]
-    pub const fn timer0_flag(&self) -> WakenaTimer0Flag {
+    pub const fn timer0_flag(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
-        WakenaTimer0Flag::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Bandgap Timer 0."]
     #[inline(always)]
-    pub const fn set_timer0_flag(&mut self, val: WakenaTimer0Flag) {
-        self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
+    pub const fn set_timer0_flag(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
     #[doc = "Bandgap Timer 2."]
     #[must_use]
     #[inline(always)]
-    pub const fn timer1_flag(&self) -> WakenaTimer1Flag {
+    pub const fn timer1_flag(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
-        WakenaTimer1Flag::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Bandgap Timer 2."]
     #[inline(always)]
-    pub const fn set_timer1_flag(&mut self, val: WakenaTimer1Flag) {
-        self.0 = (self.0 & !(0x01 << 3usize)) | (((val.to_bits() as u32) & 0x01) << 3usize);
+    pub const fn set_timer1_flag(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
     #[doc = "LDO Ready."]
     #[must_use]
     #[inline(always)]
-    pub const fn ldo_rdy(&self) -> WakenaLdoRdy {
+    pub const fn ldo_rdy(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
-        WakenaLdoRdy::from_bits(val as u8)
+        val != 0
     }
     #[doc = "LDO Ready."]
     #[inline(always)]
-    pub const fn set_ldo_rdy(&mut self, val: WakenaLdoRdy) {
-        self.0 = (self.0 & !(0x01 << 4usize)) | (((val.to_bits() as u32) & 0x01) << 4usize);
+    pub const fn set_ldo_rdy(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
     #[doc = "OSC32K Ready."]
     #[must_use]
     #[inline(always)]
-    pub const fn osc_rdy(&self) -> WakenaOscRdy {
+    pub const fn osc_rdy(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
-        WakenaOscRdy::from_bits(val as u8)
+        val != 0
     }
     #[doc = "OSC32K Ready."]
     #[inline(always)]
-    pub const fn set_osc_rdy(&mut self, val: WakenaOscRdy) {
-        self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
+    pub const fn set_osc_rdy(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
 }
 impl Default for Wakena {
@@ -1793,7 +1794,7 @@ impl defmt::Format for Wakena {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Wakena {{ por_det: {:?}, wakeup_flag: {:?}, timer0_flag: {:?}, timer1_flag: {:?}, ldo_rdy: {:?}, osc_rdy: {:?} }}",
+            "Wakena {{ por_det: {=bool:?}, wakeup_flag: {:?}, timer0_flag: {=bool:?}, timer1_flag: {=bool:?}, ldo_rdy: {=bool:?}, osc_rdy: {=bool:?} }}",
             self.por_det(),
             self.wakeup_flag(),
             self.timer0_flag(),
@@ -1846,14 +1847,14 @@ impl Waklcka {
     #[doc = "Lock."]
     #[must_use]
     #[inline(always)]
-    pub const fn lock(&self) -> WaklckaLock {
+    pub const fn lock(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
-        WaklckaLock::from_bits(val as u8)
+        val != 0
     }
     #[doc = "Lock."]
     #[inline(always)]
-    pub const fn set_lock(&mut self, val: WaklckaLock) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
+    pub const fn set_lock(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
 }
 impl Default for Waklcka {
@@ -1872,7 +1873,7 @@ impl core::fmt::Debug for Waklcka {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Waklcka {
     fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Waklcka {{ lock: {:?} }}", self.lock())
+        defmt::write!(f, "Waklcka {{ lock: {=bool:?} }}", self.lock())
     }
 }
 #[repr(u8)]
@@ -1880,13 +1881,13 @@ impl defmt::Format for Waklcka {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CapTrim {
     #[doc = "Default (when CAP2_TRIM = 0 and CAP_TRIM\\[1:0\\] = 00 )."]
-    VAL0 = 0x0,
+    Val0 = 0x0,
     #[doc = "-1us (when CAP2_TRIM = 0 and CAP_TRIM\\[1:0\\] = 01)."]
-    VAL1 = 0x01,
+    Val1 = 0x01,
     #[doc = "-2us (when CAP2_TRIM = 0 and CAP_TRIM\\[1:0\\] = 10) or or +3.5us (when CAP2_TRIM = 1 and CAP_TRIM\\[1:0\\] = 10)."]
-    VAL2 = 0x02,
+    Val2 = 0x02,
     #[doc = "-2.5us (when CAP2_TRIM = 0 and CAP_TRIM\\[1:0\\] = 11) or +1us (when CAP2_TRIM = 1 and CAP_TRIM\\[1:0\\] = 11)."]
-    VAL3 = 0x03,
+    Val3 = 0x03,
 }
 impl CapTrim {
     #[inline(always)]
@@ -1915,12 +1916,12 @@ impl From<CapTrim> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CmpTrim {
     #[doc = "760 mV."]
-    CMP_760 = 0x0,
+    Cmp760 = 0x0,
     #[doc = "770 mV."]
-    CMP_770 = 0x01,
+    Cmp770 = 0x01,
     _RESERVED_2 = 0x02,
     #[doc = "740 mV."]
-    CMP_740 = 0x03,
+    Cmp740 = 0x03,
 }
 impl CmpTrim {
     #[inline(always)]
@@ -1949,13 +1950,13 @@ impl From<CmpTrim> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum CoarseAmpGain {
     #[doc = "ESR Range 0."]
-    GAIN05 = 0x0,
+    Gain05 = 0x0,
     #[doc = "ESR Range 1."]
-    GAIN10 = 0x01,
+    Gain10 = 0x01,
     #[doc = "ESR Range 2."]
-    GAIN18 = 0x02,
+    Gain18 = 0x02,
     #[doc = "ESR Range 3."]
-    GAIN33 = 0x03,
+    Gain33 = 0x03,
 }
 impl CoarseAmpGain {
     #[inline(always)]
@@ -1984,26 +1985,26 @@ impl From<CoarseAmpGain> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DlyTrim {
     #[doc = "P current 9(nA) and N Current 6(nA)."]
-    DLY_9_6 = 0x0,
+    Dly96 = 0x0,
     #[doc = "P current 13(nA) and N Current 6(nA)."]
-    DLY_13_6 = 0x01,
+    Dly136 = 0x01,
     _RESERVED_2 = 0x02,
     #[doc = "P current 4(nA) and N Current 6(nA)."]
-    DLY_4_6 = 0x03,
+    Dly46 = 0x03,
     #[doc = "P current 9(nA) and N Current 4(nA)."]
-    DLY_9_4 = 0x04,
+    Dly94 = 0x04,
     #[doc = "P current 13(nA) and N Current 4(nA)."]
-    DLY_13_4 = 0x05,
+    Dly134 = 0x05,
     _RESERVED_6 = 0x06,
     #[doc = "P current 4(nA) and N Current 4(nA)."]
-    DLY_4_4 = 0x07,
+    Dly44 = 0x07,
     #[doc = "P current 9(nA) and N Current 2(nA)."]
-    DLY_9_2 = 0x08,
+    Dly92 = 0x08,
     #[doc = "P current 13(nA) and N Current 2(nA)."]
-    DLY_13_2 = 0x09,
+    Dly132 = 0x09,
     _RESERVED_a = 0x0a,
     #[doc = "P current 4(nA) and N Current 2(nA)."]
-    DLY_4_2 = 0x0b,
+    Dly42 = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
@@ -2036,37 +2037,37 @@ impl From<DlyTrim> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ExtalCapSel {
     #[doc = "0 pF."]
-    SEL0 = 0x0,
+    Sel0 = 0x0,
     #[doc = "2 pF."]
-    SEL2 = 0x01,
+    Sel2 = 0x01,
     #[doc = "4 pF."]
-    SEL4 = 0x02,
+    Sel4 = 0x02,
     #[doc = "6 pF."]
-    SEL6 = 0x03,
+    Sel6 = 0x03,
     #[doc = "8 pF."]
-    SEL8 = 0x04,
+    Sel8 = 0x04,
     #[doc = "10 pF."]
-    SEL10 = 0x05,
+    Sel10 = 0x05,
     #[doc = "12 pF."]
-    SEL12 = 0x06,
+    Sel12 = 0x06,
     #[doc = "14 pF."]
-    SEL14 = 0x07,
+    Sel14 = 0x07,
     #[doc = "16 pF."]
-    SEL16 = 0x08,
+    Sel16 = 0x08,
     #[doc = "18 pF."]
-    SEL18 = 0x09,
+    Sel18 = 0x09,
     #[doc = "20 pF."]
-    SEL20 = 0x0a,
+    Sel20 = 0x0a,
     #[doc = "22 pF."]
-    SEL22 = 0x0b,
+    Sel22 = 0x0b,
     #[doc = "24 pF."]
-    SEL24 = 0x0c,
+    Sel24 = 0x0c,
     #[doc = "26 pF."]
-    SEL26 = 0x0d,
+    Sel26 = 0x0d,
     #[doc = "28 pF."]
-    SEL28 = 0x0e,
+    Sel28 = 0x0e,
     #[doc = "30 pF."]
-    SEL30 = 0x0f,
+    Sel30 = 0x0f,
 }
 impl ExtalCapSel {
     #[inline(always)]
@@ -2095,7 +2096,7 @@ impl From<ExtalCapSel> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FineAmpGain {
     #[doc = "200 mV."]
-    AGC200 = 0x0,
+    Agc200 = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -2125,54 +2126,23 @@ impl From<FineAmpGain> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum HystSel {
-    #[doc = "Disable."]
-    DISABLE = 0x0,
-    #[doc = "Enable."]
-    ENABLE = 0x01,
-}
-impl HystSel {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> HystSel {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for HystSel {
-    #[inline(always)]
-    fn from(val: u8) -> HystSel {
-        HystSel::from_bits(val)
-    }
-}
-impl From<HystSel> for u8 {
-    #[inline(always)]
-    fn from(val: HystSel) -> u8 {
-        HystSel::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum InitTrim {
     #[doc = "8 s."]
-    SEL0 = 0x0,
+    Sel0 = 0x0,
     #[doc = "4 s."]
-    SEL1 = 0x01,
+    Sel1 = 0x01,
     #[doc = "2 s."]
-    SEL2 = 0x02,
+    Sel2 = 0x02,
     #[doc = "1 s."]
-    SEL3 = 0x03,
+    Sel3 = 0x03,
     #[doc = "0.5 s."]
-    SEL4 = 0x04,
+    Sel4 = 0x04,
     #[doc = "0.25 s."]
-    SEL5 = 0x05,
+    Sel5 = 0x05,
     #[doc = "0.125 s."]
-    SEL6 = 0x06,
+    Sel6 = 0x06,
     #[doc = "0.5 ms."]
-    SEL7 = 0x07,
+    Sel7 = 0x07,
 }
 impl InitTrim {
     #[inline(always)]
@@ -2199,166 +2169,11 @@ impl From<InitTrim> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum IrqenaLdoRdy {
-    #[doc = "Disable."]
-    DISABLE = 0x0,
-    #[doc = "Enable."]
-    ENABLE = 0x01,
-}
-impl IrqenaLdoRdy {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> IrqenaLdoRdy {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for IrqenaLdoRdy {
-    #[inline(always)]
-    fn from(val: u8) -> IrqenaLdoRdy {
-        IrqenaLdoRdy::from_bits(val)
-    }
-}
-impl From<IrqenaLdoRdy> for u8 {
-    #[inline(always)]
-    fn from(val: IrqenaLdoRdy) -> u8 {
-        IrqenaLdoRdy::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum IrqenaOscRdy {
-    #[doc = "Disable."]
-    DISABLE = 0x0,
-    #[doc = "Enable."]
-    ENABLE = 0x01,
-}
-impl IrqenaOscRdy {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> IrqenaOscRdy {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for IrqenaOscRdy {
-    #[inline(always)]
-    fn from(val: u8) -> IrqenaOscRdy {
-        IrqenaOscRdy::from_bits(val)
-    }
-}
-impl From<IrqenaOscRdy> for u8 {
-    #[inline(always)]
-    fn from(val: IrqenaOscRdy) -> u8 {
-        IrqenaOscRdy::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum IrqenaPorDet {
-    #[doc = "Disable."]
-    DISABLE = 0x0,
-    #[doc = "Enable."]
-    ENABLE = 0x01,
-}
-impl IrqenaPorDet {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> IrqenaPorDet {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for IrqenaPorDet {
-    #[inline(always)]
-    fn from(val: u8) -> IrqenaPorDet {
-        IrqenaPorDet::from_bits(val)
-    }
-}
-impl From<IrqenaPorDet> for u8 {
-    #[inline(always)]
-    fn from(val: IrqenaPorDet) -> u8 {
-        IrqenaPorDet::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum IrqenaTimer0Flag {
-    #[doc = "Disable."]
-    DISABLE = 0x0,
-    #[doc = "Enable."]
-    ENABLE = 0x01,
-}
-impl IrqenaTimer0Flag {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> IrqenaTimer0Flag {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for IrqenaTimer0Flag {
-    #[inline(always)]
-    fn from(val: u8) -> IrqenaTimer0Flag {
-        IrqenaTimer0Flag::from_bits(val)
-    }
-}
-impl From<IrqenaTimer0Flag> for u8 {
-    #[inline(always)]
-    fn from(val: IrqenaTimer0Flag) -> u8 {
-        IrqenaTimer0Flag::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum IrqenaTimer1Flag {
-    #[doc = "Disable."]
-    DISABLE = 0x0,
-    #[doc = "Enable."]
-    ENABLE = 0x01,
-}
-impl IrqenaTimer1Flag {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> IrqenaTimer1Flag {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for IrqenaTimer1Flag {
-    #[inline(always)]
-    fn from(val: u8) -> IrqenaTimer1Flag {
-        IrqenaTimer1Flag::from_bits(val)
-    }
-}
-impl From<IrqenaTimer1Flag> for u8 {
-    #[inline(always)]
-    fn from(val: IrqenaTimer1Flag) -> u8 {
-        IrqenaTimer1Flag::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IrqenaWakeupFlag {
     #[doc = "Disable."]
-    CLR = 0x0,
+    Clr = 0x0,
     #[doc = "Enable."]
-    SET = 0x01,
+    Set = 0x01,
 }
 impl IrqenaWakeupFlag {
     #[inline(always)]
@@ -2385,138 +2200,14 @@ impl From<IrqenaWakeupFlag> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Iso {
-    #[doc = "State follows the chip power modes."]
-    DISABLE = 0x0,
-    #[doc = "Isolates SRAM and places it in Low-Power Retention mode."]
-    ENABLE = 0x01,
-}
-impl Iso {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Iso {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Iso {
-    #[inline(always)]
-    fn from(val: u8) -> Iso {
-        Iso::from_bits(val)
-    }
-}
-impl From<Iso> for u8 {
-    #[inline(always)]
-    fn from(val: Iso) -> u8 {
-        Iso::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Ldotimer0Timen {
-    #[doc = "Disable."]
-    DISABLE = 0x0,
-    #[doc = "Enable."]
-    ENABLE = 0x01,
-}
-impl Ldotimer0Timen {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Ldotimer0Timen {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Ldotimer0Timen {
-    #[inline(always)]
-    fn from(val: u8) -> Ldotimer0Timen {
-        Ldotimer0Timen::from_bits(val)
-    }
-}
-impl From<Ldotimer0Timen> for u8 {
-    #[inline(always)]
-    fn from(val: Ldotimer0Timen) -> u8 {
-        Ldotimer0Timen::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Ldotimer1Timen {
-    #[doc = "Disable."]
-    DISABLE = 0x0,
-    #[doc = "Enable."]
-    ENABLE = 0x01,
-}
-impl Ldotimer1Timen {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Ldotimer1Timen {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Ldotimer1Timen {
-    #[inline(always)]
-    fn from(val: u8) -> Ldotimer1Timen {
-        Ldotimer1Timen::from_bits(val)
-    }
-}
-impl From<Ldotimer1Timen> for u8 {
-    #[inline(always)]
-    fn from(val: Ldotimer1Timen) -> u8 {
-        Ldotimer1Timen::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum LpEn {
-    #[doc = "VDD_BAT always supplies VBAT modules in low-power modes."]
-    DISABLE = 0x0,
-    #[doc = "VDD_SYS always supplies VBAT modules if SWI_EN is also 1."]
-    ENABLE = 0x01,
-}
-impl LpEn {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> LpEn {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for LpEn {
-    #[inline(always)]
-    fn from(val: u8) -> LpEn {
-        LpEn::from_bits(val)
-    }
-}
-impl From<LpEn> for u8 {
-    #[inline(always)]
-    fn from(val: LpEn) -> u8 {
-        LpEn::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ModeEn {
     #[doc = "Normal mode."]
-    HP = 0x0,
+    Hp = 0x0,
     #[doc = "Startup mode."]
-    LP = 0x01,
+    Lp = 0x01,
     _RESERVED_2 = 0x02,
     #[doc = "Low power mode."]
-    SW = 0x03,
+    Sw = 0x03,
 }
 impl ModeEn {
     #[inline(always)]
@@ -2543,42 +2234,11 @@ impl From<ModeEn> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum OscBypEn {
-    #[doc = "Does not bypass."]
-    DISABLE = 0x0,
-    #[doc = "Bypass."]
-    ENABLE = 0x01,
-}
-impl OscBypEn {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> OscBypEn {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for OscBypEn {
-    #[inline(always)]
-    fn from(val: u8) -> OscBypEn {
-        OscBypEn::from_bits(val)
-    }
-}
-impl From<OscBypEn> for u8 {
-    #[inline(always)]
-    fn from(val: OscBypEn) -> u8 {
-        OscBypEn::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Out {
     #[doc = "Logic zero (asserted)."]
-    ON = 0x0,
+    On = 0x0,
     #[doc = "Logic one."]
-    OFF = 0x01,
+    Off = 0x01,
 }
 impl Out {
     #[inline(always)]
@@ -2607,13 +2267,13 @@ impl From<Out> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RefreshTrim {
     #[doc = "Refresh every 7.8125 ms."]
-    SEL7 = 0x0,
+    Sel7 = 0x0,
     #[doc = "Refresh every 15.625 ms."]
-    SEL15 = 0x01,
+    Sel15 = 0x01,
     #[doc = "Refresh every 31.25 ms."]
-    SEL31 = 0x02,
+    Sel31 = 0x02,
     #[doc = "Refresh every 62.5 ms."]
-    SEL62 = 0x03,
+    Sel62 = 0x03,
 }
 impl RefreshTrim {
     #[inline(always)]
@@ -2640,135 +2300,11 @@ impl From<RefreshTrim> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Ret0 {
-    #[doc = "Corresponding SRAM array is retained in low-power modes."]
-    DISABLE = 0x0,
-    #[doc = "Corresponding SRAM array is not retained in low-power modes."]
-    ENABLE = 0x01,
-}
-impl Ret0 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Ret0 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Ret0 {
-    #[inline(always)]
-    fn from(val: u8) -> Ret0 {
-        Ret0::from_bits(val)
-    }
-}
-impl From<Ret0> for u8 {
-    #[inline(always)]
-    fn from(val: Ret0) -> u8 {
-        Ret0::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Ret1 {
-    #[doc = "Corresponding SRAM array is retained in low-power modes."]
-    DISABLE = 0x0,
-    #[doc = "Corresponding SRAM array is not retained in low-power modes."]
-    ENABLE = 0x01,
-}
-impl Ret1 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Ret1 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Ret1 {
-    #[inline(always)]
-    fn from(val: u8) -> Ret1 {
-        Ret1::from_bits(val)
-    }
-}
-impl From<Ret1> for u8 {
-    #[inline(always)]
-    fn from(val: Ret1) -> u8 {
-        Ret1::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Ret2 {
-    #[doc = "Corresponding SRAM array is retained in low-power modes."]
-    DISABLE = 0x0,
-    #[doc = "Corresponding SRAM array is not retained in low-power modes."]
-    ENABLE = 0x01,
-}
-impl Ret2 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Ret2 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Ret2 {
-    #[inline(always)]
-    fn from(val: u8) -> Ret2 {
-        Ret2::from_bits(val)
-    }
-}
-impl From<Ret2> for u8 {
-    #[inline(always)]
-    fn from(val: Ret2) -> u8 {
-        Ret2::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Ret3 {
-    #[doc = "Corresponding SRAM array is retained in low-power modes."]
-    DISABLE = 0x0,
-    #[doc = "Corresponding SRAM array is not retained in low-power modes."]
-    ENABLE = 0x01,
-}
-impl Ret3 {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Ret3 {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Ret3 {
-    #[inline(always)]
-    fn from(val: u8) -> Ret3 {
-        Ret3::from_bits(val)
-    }
-}
-impl From<Ret3> for u8 {
-    #[inline(always)]
-    fn from(val: Ret3) -> u8 {
-        Ret3::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatusaLdoRdy {
     #[doc = "Disabled (not ready)."]
-    CLR = 0x0,
+    Clr = 0x0,
     #[doc = "Enabled (ready)."]
-    SET = 0x01,
+    Set = 0x01,
 }
 impl StatusaLdoRdy {
     #[inline(always)]
@@ -2797,9 +2333,9 @@ impl From<StatusaLdoRdy> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatusaOscRdy {
     #[doc = "Disabled (clock not ready)."]
-    CLR = 0x0,
+    Clr = 0x0,
     #[doc = "Enabled (clock ready)."]
-    SET = 0x01,
+    Set = 0x01,
 }
 impl StatusaOscRdy {
     #[inline(always)]
@@ -2828,9 +2364,9 @@ impl From<StatusaOscRdy> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatusaPorDet {
     #[doc = "Not reset."]
-    CLR = 0x0,
+    Clr = 0x0,
     #[doc = "Reset."]
-    SET = 0x01,
+    Set = 0x01,
 }
 impl StatusaPorDet {
     #[inline(always)]
@@ -2859,9 +2395,9 @@ impl From<StatusaPorDet> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatusaTimer0Flag {
     #[doc = "Not reached."]
-    CLR = 0x0,
+    Clr = 0x0,
     #[doc = "Reached."]
-    SET = 0x01,
+    Set = 0x01,
 }
 impl StatusaTimer0Flag {
     #[inline(always)]
@@ -2890,9 +2426,9 @@ impl From<StatusaTimer0Flag> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatusaTimer1Flag {
     #[doc = "Not reached."]
-    CLR = 0x0,
+    Clr = 0x0,
     #[doc = "Reached."]
-    SET = 0x01,
+    Set = 0x01,
 }
 impl StatusaTimer1Flag {
     #[inline(always)]
@@ -2921,9 +2457,9 @@ impl From<StatusaTimer1Flag> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum StatusaWakeupFlag {
     #[doc = "Not asserted."]
-    CLR = 0x0,
+    Clr = 0x0,
     #[doc = "Asserted."]
-    SET = 0x01,
+    Set = 0x01,
 }
 impl StatusaWakeupFlag {
     #[inline(always)]
@@ -2952,9 +2488,9 @@ impl From<StatusaWakeupFlag> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SupplyDet {
     #[doc = "VBAT supply is less than 3V."]
-    L3VSUPPLY = 0x0,
+    L3vsupply = 0x0,
     #[doc = "VBAT supply is greater than 3V."]
-    G3VSUPPLY = 0x01,
+    G3vsupply = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -2983,116 +2519,23 @@ impl From<SupplyDet> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Swi {
-    #[doc = "Supply follows the chip power modes."]
-    DISABLE = 0x0,
-    #[doc = "LDO_RAM powers the array."]
-    ENABLE = 0x01,
-}
-impl Swi {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> Swi {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for Swi {
-    #[inline(always)]
-    fn from(val: u8) -> Swi {
-        Swi::from_bits(val)
-    }
-}
-impl From<Swi> for u8 {
-    #[inline(always)]
-    fn from(val: Swi) -> u8 {
-        Swi::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum SwiEn {
-    #[doc = "VDD_BAT."]
-    DISABLE = 0x0,
-    #[doc = "VDD_SYS."]
-    ENABLE = 0x01,
-}
-impl SwiEn {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> SwiEn {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for SwiEn {
-    #[inline(always)]
-    fn from(val: u8) -> SwiEn {
-        SwiEn::from_bits(val)
-    }
-}
-impl From<SwiEn> for u8 {
-    #[inline(always)]
-    fn from(val: SwiEn) -> u8 {
-        SwiEn::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum SwilckaLock {
-    #[doc = "Do not block."]
-    DISABLE = 0x0,
-    #[doc = "Block."]
-    ENABLE = 0x01,
-}
-impl SwilckaLock {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> SwilckaLock {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for SwilckaLock {
-    #[inline(always)]
-    fn from(val: u8) -> SwilckaLock {
-        SwilckaLock::from_bits(val)
-    }
-}
-impl From<SwilckaLock> for u8 {
-    #[inline(always)]
-    fn from(val: SwilckaLock) -> u8 {
-        SwilckaLock::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Timcfg {
     #[doc = "1 s."]
-    CFG1000 = 0x0,
+    Cfg1000 = 0x0,
     #[doc = "500 ms."]
-    CFG500 = 0x01,
+    Cfg500 = 0x01,
     #[doc = "250 ms."]
-    CFG250 = 0x02,
+    Cfg250 = 0x02,
     #[doc = "125 ms."]
-    CFG125 = 0x03,
+    Cfg125 = 0x03,
     #[doc = "62.5 ms."]
-    CFG62 = 0x04,
+    Cfg62 = 0x04,
     #[doc = "31.25 ms."]
-    CFG31 = 0x05,
+    Cfg31 = 0x05,
     #[doc = "15.625 ms."]
-    CFG15 = 0x06,
+    Cfg15 = 0x06,
     #[doc = "7.8125 ms."]
-    CFG7 = 0x07,
+    Cfg7 = 0x07,
 }
 impl Timcfg {
     #[inline(always)]
@@ -3119,166 +2562,11 @@ impl From<Timcfg> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum WakenaLdoRdy {
-    #[doc = "Disable."]
-    DISABLE = 0x0,
-    #[doc = "Enable."]
-    ENABLE = 0x01,
-}
-impl WakenaLdoRdy {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> WakenaLdoRdy {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for WakenaLdoRdy {
-    #[inline(always)]
-    fn from(val: u8) -> WakenaLdoRdy {
-        WakenaLdoRdy::from_bits(val)
-    }
-}
-impl From<WakenaLdoRdy> for u8 {
-    #[inline(always)]
-    fn from(val: WakenaLdoRdy) -> u8 {
-        WakenaLdoRdy::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum WakenaOscRdy {
-    #[doc = "Disable."]
-    DISABLE = 0x0,
-    #[doc = "Enable."]
-    ENABLE = 0x01,
-}
-impl WakenaOscRdy {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> WakenaOscRdy {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for WakenaOscRdy {
-    #[inline(always)]
-    fn from(val: u8) -> WakenaOscRdy {
-        WakenaOscRdy::from_bits(val)
-    }
-}
-impl From<WakenaOscRdy> for u8 {
-    #[inline(always)]
-    fn from(val: WakenaOscRdy) -> u8 {
-        WakenaOscRdy::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum WakenaPorDet {
-    #[doc = "Disable."]
-    DISABLE = 0x0,
-    #[doc = "Enable."]
-    ENABLE = 0x01,
-}
-impl WakenaPorDet {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> WakenaPorDet {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for WakenaPorDet {
-    #[inline(always)]
-    fn from(val: u8) -> WakenaPorDet {
-        WakenaPorDet::from_bits(val)
-    }
-}
-impl From<WakenaPorDet> for u8 {
-    #[inline(always)]
-    fn from(val: WakenaPorDet) -> u8 {
-        WakenaPorDet::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum WakenaTimer0Flag {
-    #[doc = "Disable."]
-    DISABLE = 0x0,
-    #[doc = "Enable."]
-    ENABLE = 0x01,
-}
-impl WakenaTimer0Flag {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> WakenaTimer0Flag {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for WakenaTimer0Flag {
-    #[inline(always)]
-    fn from(val: u8) -> WakenaTimer0Flag {
-        WakenaTimer0Flag::from_bits(val)
-    }
-}
-impl From<WakenaTimer0Flag> for u8 {
-    #[inline(always)]
-    fn from(val: WakenaTimer0Flag) -> u8 {
-        WakenaTimer0Flag::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum WakenaTimer1Flag {
-    #[doc = "Disable."]
-    DISABLE = 0x0,
-    #[doc = "Enable."]
-    ENABLE = 0x01,
-}
-impl WakenaTimer1Flag {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> WakenaTimer1Flag {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for WakenaTimer1Flag {
-    #[inline(always)]
-    fn from(val: u8) -> WakenaTimer1Flag {
-        WakenaTimer1Flag::from_bits(val)
-    }
-}
-impl From<WakenaTimer1Flag> for u8 {
-    #[inline(always)]
-    fn from(val: WakenaTimer1Flag) -> u8 {
-        WakenaTimer1Flag::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum WakenaWakeupFlag {
     #[doc = "Disable."]
-    CLR = 0x0,
+    Clr = 0x0,
     #[doc = "Enable."]
-    SET = 0x01,
+    Set = 0x01,
 }
 impl WakenaWakeupFlag {
     #[inline(always)]
@@ -3305,70 +2593,39 @@ impl From<WakenaWakeupFlag> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum WaklckaLock {
-    #[doc = "Lock is disabled."]
-    DISABLE = 0x0,
-    #[doc = "Lock is enabled."]
-    ENABLE = 0x01,
-}
-impl WaklckaLock {
-    #[inline(always)]
-    pub const fn from_bits(val: u8) -> WaklckaLock {
-        unsafe { core::mem::transmute(val & 0x01) }
-    }
-    #[inline(always)]
-    pub const fn to_bits(self) -> u8 {
-        unsafe { core::mem::transmute(self) }
-    }
-}
-impl From<u8> for WaklckaLock {
-    #[inline(always)]
-    fn from(val: u8) -> WaklckaLock {
-        WaklckaLock::from_bits(val)
-    }
-}
-impl From<WaklckaLock> for u8 {
-    #[inline(always)]
-    fn from(val: WaklckaLock) -> u8 {
-        WaklckaLock::to_bits(val)
-    }
-}
-#[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum XtalCapSel {
     #[doc = "0 pF."]
-    SEL0 = 0x0,
+    Sel0 = 0x0,
     #[doc = "2 pF."]
-    SEL2 = 0x01,
+    Sel2 = 0x01,
     #[doc = "4 pF."]
-    SEL4 = 0x02,
+    Sel4 = 0x02,
     #[doc = "6 pF."]
-    SEL6 = 0x03,
+    Sel6 = 0x03,
     #[doc = "8 pF."]
-    SEL8 = 0x04,
+    Sel8 = 0x04,
     #[doc = "10 pF."]
-    SEL10 = 0x05,
+    Sel10 = 0x05,
     #[doc = "12 pF."]
-    SEL12 = 0x06,
+    Sel12 = 0x06,
     #[doc = "14 pF."]
-    SEL14 = 0x07,
+    Sel14 = 0x07,
     #[doc = "16 pF."]
-    SEL16 = 0x08,
+    Sel16 = 0x08,
     #[doc = "18 pF."]
-    SEL18 = 0x09,
+    Sel18 = 0x09,
     #[doc = "20 pF."]
-    SEL20 = 0x0a,
+    Sel20 = 0x0a,
     #[doc = "22 pF."]
-    SEL22 = 0x0b,
+    Sel22 = 0x0b,
     #[doc = "24 pF."]
-    SEL24 = 0x0c,
+    Sel24 = 0x0c,
     #[doc = "26 pF."]
-    SEL26 = 0x0d,
+    Sel26 = 0x0d,
     #[doc = "28 pF."]
-    SEL28 = 0x0e,
+    Sel28 = 0x0e,
     #[doc = "30 pF."]
-    SEL30 = 0x0f,
+    Sel30 = 0x0f,
 }
 impl XtalCapSel {
     #[inline(always)]

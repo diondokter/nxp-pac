@@ -1,7 +1,8 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
-#![doc = "Peripheral access API (generated using chiptool v0.1.0 (2fd28c5 2026-04-02))"]
-#[doc = "PORT."]
+#![allow(non_upper_case_globals)]
+#![doc = "Peripheral access API (generated using chiptool v0.1.0 (be1bff3 2026-04-12))"]
+#[doc = "Port Control."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Port {
     ptr: *mut u8,
@@ -37,16 +38,6 @@ impl Port {
     pub const fn config(self) -> crate::pac::common::Reg<Config, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x20usize) as _) }
     }
-    #[doc = "Calibration 0."]
-    #[inline(always)]
-    pub const fn calib0(self) -> crate::pac::common::Reg<Calib0, crate::pac::common::RW> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x60usize) as _) }
-    }
-    #[doc = "Calibration 1."]
-    #[inline(always)]
-    pub const fn calib1(self) -> crate::pac::common::Reg<Calib1, crate::pac::common::RW> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x64usize) as _) }
-    }
     #[doc = "Pin Control 0."]
     #[inline(always)]
     pub const fn pcr(self, n: usize) -> crate::pac::common::Reg<Pcr, crate::pac::common::RW> {
@@ -54,116 +45,6 @@ impl Port {
         unsafe {
             crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x80usize + n * 4usize) as _)
         }
-    }
-}
-#[doc = "Calibration 0."]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Calib0(pub u32);
-impl Calib0 {
-    #[doc = "Calibration of NMOS Output Driver."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ncal(&self) -> u8 {
-        let val = (self.0 >> 0usize) & 0x3f;
-        val as u8
-    }
-    #[doc = "Calibration of NMOS Output Driver."]
-    #[inline(always)]
-    pub const fn set_ncal(&mut self, val: u8) {
-        self.0 = (self.0 & !(0x3f << 0usize)) | (((val as u32) & 0x3f) << 0usize);
-    }
-    #[doc = "Calibration of PMOS Output Driver."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pcal(&self) -> u8 {
-        let val = (self.0 >> 16usize) & 0x3f;
-        val as u8
-    }
-    #[doc = "Calibration of PMOS Output Driver."]
-    #[inline(always)]
-    pub const fn set_pcal(&mut self, val: u8) {
-        self.0 = (self.0 & !(0x3f << 16usize)) | (((val as u32) & 0x3f) << 16usize);
-    }
-}
-impl Default for Calib0 {
-    #[inline(always)]
-    fn default() -> Calib0 {
-        Calib0(0)
-    }
-}
-impl core::fmt::Debug for Calib0 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Calib0")
-            .field("ncal", &self.ncal())
-            .field("pcal", &self.pcal())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Calib0 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "Calib0 {{ ncal: {=u8:?}, pcal: {=u8:?} }}",
-            self.ncal(),
-            self.pcal()
-        )
-    }
-}
-#[doc = "Calibration 1."]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Calib1(pub u32);
-impl Calib1 {
-    #[doc = "Calibration of NMOS Output Driver."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ncal(&self) -> u8 {
-        let val = (self.0 >> 0usize) & 0x3f;
-        val as u8
-    }
-    #[doc = "Calibration of NMOS Output Driver."]
-    #[inline(always)]
-    pub const fn set_ncal(&mut self, val: u8) {
-        self.0 = (self.0 & !(0x3f << 0usize)) | (((val as u32) & 0x3f) << 0usize);
-    }
-    #[doc = "Calibration of PMOS Output Driver."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn pcal(&self) -> u8 {
-        let val = (self.0 >> 16usize) & 0x3f;
-        val as u8
-    }
-    #[doc = "Calibration of PMOS Output Driver."]
-    #[inline(always)]
-    pub const fn set_pcal(&mut self, val: u8) {
-        self.0 = (self.0 & !(0x3f << 16usize)) | (((val as u32) & 0x3f) << 16usize);
-    }
-}
-impl Default for Calib1 {
-    #[inline(always)]
-    fn default() -> Calib1 {
-        Calib1(0)
-    }
-}
-impl core::fmt::Debug for Calib1 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Calib1")
-            .field("ncal", &self.ncal())
-            .field("pcal", &self.pcal())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Calib1 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "Calib1 {{ ncal: {=u8:?}, pcal: {=u8:?} }}",
-            self.ncal(),
-            self.pcal()
-        )
     }
 }
 #[doc = "Configuration."]
@@ -608,9 +489,9 @@ impl defmt::Format for Verid {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dse {
     #[doc = "Low."]
-    DSE0 = 0x0,
+    Dse0 = 0x0,
     #[doc = "High."]
-    DSE1 = 0x01,
+    Dse1 = 0x01,
 }
 impl Dse {
     #[inline(always)]
@@ -639,7 +520,7 @@ impl From<Dse> for u8 {
 pub struct Feature(u16);
 impl Feature {
     #[doc = "Basic implementation."]
-    pub const FEATURE0: Self = Self(0x0);
+    pub const Feature0: Self = Self(0x0);
 }
 impl Feature {
     pub const fn from_bits(val: u16) -> Feature {
@@ -652,7 +533,7 @@ impl Feature {
 impl core::fmt::Debug for Feature {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
-            0x0 => f.write_str("FEATURE0"),
+            0x0 => f.write_str("Feature0"),
             other => core::write!(f, "0x{:02X}", other),
         }
     }
@@ -661,7 +542,7 @@ impl core::fmt::Debug for Feature {
 impl defmt::Format for Feature {
     fn format(&self, f: defmt::Formatter) {
         match self.0 {
-            0x0 => defmt::write!(f, "FEATURE0"),
+            0x0 => defmt::write!(f, "Feature0"),
             other => defmt::write!(f, "0x{:02X}", other),
         }
     }
@@ -683,9 +564,9 @@ impl From<Feature> for u16 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Gpwe {
     #[doc = "Not updated."]
-    GPWE0 = 0x0,
+    Gpwe0 = 0x0,
     #[doc = "Updated."]
-    GPWE1 = 0x01,
+    Gpwe1 = 0x01,
 }
 impl Gpwe {
     #[inline(always)]
@@ -714,9 +595,9 @@ impl From<Gpwe> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ibe {
     #[doc = "Disables."]
-    IBE0 = 0x0,
+    Ibe0 = 0x0,
     #[doc = "Enables."]
-    IBE1 = 0x01,
+    Ibe1 = 0x01,
 }
 impl Ibe {
     #[inline(always)]
@@ -745,9 +626,9 @@ impl From<Ibe> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Inv {
     #[doc = "Does not invert."]
-    INV0 = 0x0,
+    Inv0 = 0x0,
     #[doc = "Inverts."]
-    INV1 = 0x01,
+    Inv1 = 0x01,
 }
 impl Inv {
     #[inline(always)]
@@ -776,9 +657,9 @@ impl From<Inv> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Lk {
     #[doc = "Does not lock."]
-    LK0 = 0x0,
+    Lk0 = 0x0,
     #[doc = "Locks."]
-    LK1 = 0x01,
+    Lk1 = 0x01,
 }
 impl Lk {
     #[inline(always)]
@@ -806,20 +687,20 @@ impl From<Lk> for u8 {
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mux {
-    MUX0 = 0x0,
-    MUX1 = 0x01,
-    MUX2 = 0x02,
-    MUX3 = 0x03,
-    MUX4 = 0x04,
-    MUX5 = 0x05,
-    MUX6 = 0x06,
-    MUX7 = 0x07,
-    MUX8 = 0x08,
-    MUX9 = 0x09,
-    MUX10 = 0x0a,
-    MUX11 = 0x0b,
-    MUX12 = 0x0c,
-    MUX13 = 0x0d,
+    Mux0 = 0x0,
+    Mux1 = 0x01,
+    Mux2 = 0x02,
+    Mux3 = 0x03,
+    Mux4 = 0x04,
+    Mux5 = 0x05,
+    Mux6 = 0x06,
+    Mux7 = 0x07,
+    Mux8 = 0x08,
+    Mux9 = 0x09,
+    Mux10 = 0x0a,
+    Mux11 = 0x0b,
+    Mux12 = 0x0c,
+    Mux13 = 0x0d,
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
 }
@@ -850,9 +731,9 @@ impl From<Mux> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ode {
     #[doc = "Disables."]
-    ODE0 = 0x0,
+    Ode0 = 0x0,
     #[doc = "Enables."]
-    ODE1 = 0x01,
+    Ode1 = 0x01,
 }
 impl Ode {
     #[inline(always)]
@@ -881,9 +762,9 @@ impl From<Ode> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pe {
     #[doc = "Disables."]
-    PE0 = 0x0,
+    Pe0 = 0x0,
     #[doc = "Enables."]
-    PE1 = 0x01,
+    Pe1 = 0x01,
 }
 impl Pe {
     #[inline(always)]
@@ -912,9 +793,9 @@ impl From<Pe> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ps {
     #[doc = "Enables internal pulldown resistor."]
-    PS0 = 0x0,
+    Ps0 = 0x0,
     #[doc = "Enables internal pullup resistor."]
-    PS1 = 0x01,
+    Ps1 = 0x01,
 }
 impl Ps {
     #[inline(always)]
@@ -943,9 +824,9 @@ impl From<Ps> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Range {
     #[doc = "1.71 V-3.6 V."]
-    RANGE0 = 0x0,
+    Range0 = 0x0,
     #[doc = "2.70 V-3.6 V."]
-    RANGE1 = 0x01,
+    Range1 = 0x01,
 }
 impl Range {
     #[inline(always)]
@@ -974,9 +855,9 @@ impl From<Range> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Sre {
     #[doc = "Fast."]
-    SRE0 = 0x0,
+    Sre0 = 0x0,
     #[doc = "Slow."]
-    SRE1 = 0x01,
+    Sre1 = 0x01,
 }
 impl Sre {
     #[inline(always)]

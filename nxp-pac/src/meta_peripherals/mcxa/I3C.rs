@@ -1,6 +1,7 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
-#![doc = "Peripheral access API (generated using chiptool v0.1.0 (2fd28c5 2026-04-02))"]
+#![allow(non_upper_case_globals)]
+#![doc = "Peripheral access API (generated using chiptool v0.1.0 (be1bff3 2026-04-12))"]
 #[doc = "Improved Inter-Integrated Circuit."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct I3c {
@@ -62,6 +63,16 @@ impl I3c {
     pub const fn sdmactrl(self) -> crate::pac::common::Reg<Sdmactrl, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x20usize) as _) }
     }
+    #[doc = "Target HDR-BT Configuration."]
+    #[inline(always)]
+    pub const fn shdrbtcfg(self) -> crate::pac::common::Reg<Shdrbtcfg, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x24usize) as _) }
+    }
+    #[doc = "Target HDR-Last."]
+    #[inline(always)]
+    pub const fn shdrbtlast(self) -> crate::pac::common::Reg<Shdrbtlast, crate::pac::common::R> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x28usize) as _) }
+    }
     #[doc = "Target Data Control."]
     #[inline(always)]
     pub const fn sdatactrl(self) -> crate::pac::common::Reg<Sdatactrl, crate::pac::common::RW> {
@@ -102,11 +113,6 @@ impl I3c {
     pub const fn swdatab1(self) -> crate::pac::common::Reg<Swdatab1, crate::pac::common::W> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x54usize) as _) }
     }
-    #[doc = "Target Write Data Halfword."]
-    #[inline(always)]
-    pub const fn swdatah1(self) -> crate::pac::common::Reg<Swdatah1, crate::pac::common::W> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x54usize) as _) }
-    }
     #[doc = "Target Capabilities 2."]
     #[inline(always)]
     pub const fn scapabilities2(
@@ -120,11 +126,6 @@ impl I3c {
         self,
     ) -> crate::pac::common::Reg<Scapabilities, crate::pac::common::R> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x60usize) as _) }
-    }
-    #[doc = "Target Dynamic Address."]
-    #[inline(always)]
-    pub const fn sdynaddr(self) -> crate::pac::common::Reg<Sdynaddr, crate::pac::common::RW> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x64usize) as _) }
     }
     #[doc = "Target Maximum Limits."]
     #[inline(always)]
@@ -201,6 +202,16 @@ impl I3c {
     pub const fn mdmactrl(self) -> crate::pac::common::Reg<Mdmactrl, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xa0usize) as _) }
     }
+    #[doc = "Controller HDR-BT Configuration."]
+    #[inline(always)]
+    pub const fn mhdrbtcfg(self) -> crate::pac::common::Reg<Mhdrbtcfg, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xa4usize) as _) }
+    }
+    #[doc = "Controller HDR-Last."]
+    #[inline(always)]
+    pub const fn mhdrbtlast(self) -> crate::pac::common::Reg<Mhdrbtlast, crate::pac::common::R> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xa8usize) as _) }
+    }
     #[doc = "Controller Data Control."]
     #[inline(always)]
     pub const fn mdatactrl(self) -> crate::pac::common::Reg<Mdatactrl, crate::pac::common::RW> {
@@ -239,11 +250,6 @@ impl I3c {
     #[doc = "Controller Write Byte Data 1 (to Bus)."]
     #[inline(always)]
     pub const fn mwdatab1(self) -> crate::pac::common::Reg<Mwdatab1, crate::pac::common::W> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xccusize) as _) }
-    }
-    #[doc = "Controller Write Halfword Data (to Bus)."]
-    #[inline(always)]
-    pub const fn mwdatah1(self) -> crate::pac::common::Reg<Mwdatah1, crate::pac::common::W> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xccusize) as _) }
     }
     #[doc = "Controller Write Message Control in SDR mode."]
@@ -296,10 +302,25 @@ impl I3c {
     pub const fn mdynaddr(self) -> crate::pac::common::Reg<Mdynaddr, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xe4usize) as _) }
     }
+    #[doc = "Write Word Data (to Bus)."]
+    #[inline(always)]
+    pub const fn mwdataw(self) -> crate::pac::common::Reg<Mwdataw, crate::pac::common::W> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xf0usize) as _) }
+    }
+    #[doc = "Read Word Data (from Bus)."]
+    #[inline(always)]
+    pub const fn mrdataw(self) -> crate::pac::common::Reg<Mrdataw, crate::pac::common::R> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0xf8usize) as _) }
+    }
     #[doc = "Map Feature Control 0."]
     #[inline(always)]
     pub const fn smapctrl0(self) -> crate::pac::common::Reg<Smapctrl0, crate::pac::common::R> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x011cusize) as _) }
+    }
+    #[doc = "Map Feature Control 1."]
+    #[inline(always)]
+    pub const fn smapctrl1(self) -> crate::pac::common::Reg<Smapctrl1, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0120usize) as _) }
     }
     #[doc = "Extended IBI Data 1."]
     #[inline(always)]
@@ -310,6 +331,16 @@ impl I3c {
     #[inline(always)]
     pub const fn ibiext2(self) -> crate::pac::common::Reg<Ibiext2, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0144usize) as _) }
+    }
+    #[doc = "Target Write Word Data (to Bus)."]
+    #[inline(always)]
+    pub const fn swdataw(self) -> crate::pac::common::Reg<Swdataw, crate::pac::common::W> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0150usize) as _) }
+    }
+    #[doc = "Target Read Word Data (from Bus)."]
+    #[inline(always)]
+    pub const fn srdataw(self) -> crate::pac::common::Reg<Srdataw, crate::pac::common::R> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0158usize) as _) }
     }
     #[doc = "Target Module ID."]
     #[inline(always)]
@@ -1288,6 +1319,126 @@ impl defmt::Format for Merrwarn {
         )
     }
 }
+#[doc = "Controller HDR-BT Configuration."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Mhdrbtcfg(pub u32);
+impl Mhdrbtcfg {
+    #[doc = "Multi-Lane HDR."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn mlhdr(&self) -> Mlhdr {
+        let val = (self.0 >> 0usize) & 0x03;
+        Mlhdr::from_bits(val as u8)
+    }
+    #[doc = "Multi-Lane HDR."]
+    #[inline(always)]
+    pub const fn set_mlhdr(&mut self, val: Mlhdr) {
+        self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
+    }
+    #[doc = "Multi-Lane Data."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn mldat(&self) -> Mldat {
+        let val = (self.0 >> 2usize) & 0x03;
+        Mldat::from_bits(val as u8)
+    }
+    #[doc = "Multi-Lane Data."]
+    #[inline(always)]
+    pub const fn set_mldat(&mut self, val: Mldat) {
+        self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
+    }
+    #[doc = "CRC32."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn crc32(&self) -> bool {
+        let val = (self.0 >> 4usize) & 0x01;
+        val != 0
+    }
+    #[doc = "CRC32."]
+    #[inline(always)]
+    pub const fn set_crc32(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
+    }
+    #[doc = "Data Length."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn datalen(&self) -> u16 {
+        let val = (self.0 >> 16usize) & 0xffff;
+        val as u16
+    }
+    #[doc = "Data Length."]
+    #[inline(always)]
+    pub const fn set_datalen(&mut self, val: u16) {
+        self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
+    }
+}
+impl Default for Mhdrbtcfg {
+    #[inline(always)]
+    fn default() -> Mhdrbtcfg {
+        Mhdrbtcfg(0)
+    }
+}
+impl core::fmt::Debug for Mhdrbtcfg {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Mhdrbtcfg")
+            .field("mlhdr", &self.mlhdr())
+            .field("mldat", &self.mldat())
+            .field("crc32", &self.crc32())
+            .field("datalen", &self.datalen())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Mhdrbtcfg {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Mhdrbtcfg {{ mlhdr: {:?}, mldat: {:?}, crc32: {=bool:?}, datalen: {=u16:?} }}",
+            self.mlhdr(),
+            self.mldat(),
+            self.crc32(),
+            self.datalen()
+        )
+    }
+}
+#[doc = "Controller HDR-Last."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Mhdrbtlast(pub u32);
+impl Mhdrbtlast {
+    #[doc = "Data Length."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn datalen(&self) -> u16 {
+        let val = (self.0 >> 16usize) & 0xffff;
+        val as u16
+    }
+    #[doc = "Data Length."]
+    #[inline(always)]
+    pub const fn set_datalen(&mut self, val: u16) {
+        self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
+    }
+}
+impl Default for Mhdrbtlast {
+    #[inline(always)]
+    fn default() -> Mhdrbtlast {
+        Mhdrbtlast(0)
+    }
+}
+impl core::fmt::Debug for Mhdrbtlast {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Mhdrbtlast")
+            .field("datalen", &self.datalen())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Mhdrbtlast {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "Mhdrbtlast {{ datalen: {=u16:?} }}", self.datalen())
+    }
+}
 #[doc = "Controller In-band Interrupt Registry and Rules."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
@@ -1922,6 +2073,43 @@ impl defmt::Format for Mrdatah {
         )
     }
 }
+#[doc = "Read Word Data (from Bus)."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Mrdataw(pub u32);
+impl Mrdataw {
+    #[doc = "Value."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn value(&self) -> u32 {
+        let val = (self.0 >> 0usize) & 0xffff_ffff;
+        val as u32
+    }
+    #[doc = "Value."]
+    #[inline(always)]
+    pub const fn set_value(&mut self, val: u32) {
+        self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+    }
+}
+impl Default for Mrdataw {
+    #[inline(always)]
+    fn default() -> Mrdataw {
+        Mrdataw(0)
+    }
+}
+impl core::fmt::Debug for Mrdataw {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Mrdataw")
+            .field("value", &self.value())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Mrdataw {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "Mrdataw {{ value: {=u32:?} }}", self.value())
+    }
+}
 #[doc = "Controller Read Message in DDR mode."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
@@ -2417,43 +2605,6 @@ impl defmt::Format for Mwdatah {
         )
     }
 }
-#[doc = "Controller Write Halfword Data (to Bus)."]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Mwdatah1(pub u32);
-impl Mwdatah1 {
-    #[doc = "Value."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn value(&self) -> u16 {
-        let val = (self.0 >> 0usize) & 0xffff;
-        val as u16
-    }
-    #[doc = "Value."]
-    #[inline(always)]
-    pub const fn set_value(&mut self, val: u16) {
-        self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
-    }
-}
-impl Default for Mwdatah1 {
-    #[inline(always)]
-    fn default() -> Mwdatah1 {
-        Mwdatah1(0)
-    }
-}
-impl core::fmt::Debug for Mwdatah1 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Mwdatah1")
-            .field("value", &self.value())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Mwdatah1 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Mwdatah1 {{ value: {=u16:?} }}", self.value())
-    }
-}
 #[doc = "Controller Write Data Halfword End."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
@@ -2507,6 +2658,43 @@ impl defmt::Format for Mwdatahe {
             self.data0(),
             self.data1()
         )
+    }
+}
+#[doc = "Write Word Data (to Bus)."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Mwdataw(pub u32);
+impl Mwdataw {
+    #[doc = "Data."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn data(&self) -> u32 {
+        let val = (self.0 >> 0usize) & 0xffff_ffff;
+        val as u32
+    }
+    #[doc = "Data."]
+    #[inline(always)]
+    pub const fn set_data(&mut self, val: u32) {
+        self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+    }
+}
+impl Default for Mwdataw {
+    #[inline(always)]
+    fn default() -> Mwdataw {
+        Mwdataw(0)
+    }
+}
+impl core::fmt::Debug for Mwdataw {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Mwdataw")
+            .field("data", &self.data())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Mwdataw {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "Mwdataw {{ data: {=u32:?} }}", self.data())
     }
 }
 #[doc = "Controller Write Message in DDR mode: First Control Word."]
@@ -3201,16 +3389,16 @@ impl Sconfig {
     pub const fn set_s0ignore(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "HDR OK."]
+    #[doc = "Double Data Rate OK."]
     #[must_use]
     #[inline(always)]
-    pub const fn hdrok(&self) -> bool {
+    pub const fn ddrok(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "HDR OK."]
+    #[doc = "Double Data Rate OK."]
     #[inline(always)]
-    pub const fn set_hdrok(&mut self, val: bool) {
+    pub const fn set_ddrok(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
     #[doc = "Offline."]
@@ -3263,7 +3451,7 @@ impl core::fmt::Debug for Sconfig {
             .field("nack", &self.nack())
             .field("matchss", &self.matchss())
             .field("s0ignore", &self.s0ignore())
-            .field("hdrok", &self.hdrok())
+            .field("ddrok", &self.ddrok())
             .field("offline", &self.offline())
             .field("bamatch", &self.bamatch())
             .field("saddr", &self.saddr())
@@ -3275,12 +3463,12 @@ impl defmt::Format for Sconfig {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Sconfig {{ slvena: {=bool:?}, nack: {=bool:?}, matchss: {=bool:?}, s0ignore: {=bool:?}, hdrok: {=bool:?}, offline: {=bool:?}, bamatch: {=u8:?}, saddr: {=u8:?} }}",
+            "Sconfig {{ slvena: {=bool:?}, nack: {=bool:?}, matchss: {=bool:?}, s0ignore: {=bool:?}, ddrok: {=bool:?}, offline: {=bool:?}, bamatch: {=u8:?}, saddr: {=u8:?} }}",
             self.slvena(),
             self.nack(),
             self.matchss(),
             self.s0ignore(),
-            self.hdrok(),
+            self.ddrok(),
             self.offline(),
             self.bamatch(),
             self.saddr()
@@ -3315,6 +3503,18 @@ impl Sctrl {
     #[inline(always)]
     pub const fn set_extdata(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
+    }
+    #[doc = "Map Index."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn mapidx(&self) -> bool {
+        let val = (self.0 >> 4usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Map Index."]
+    #[inline(always)]
+    pub const fn set_mapidx(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
     #[doc = "In-Band Interrupt Data."]
     #[must_use]
@@ -3376,6 +3576,7 @@ impl core::fmt::Debug for Sctrl {
         f.debug_struct("Sctrl")
             .field("event", &self.event())
             .field("extdata", &self.extdata())
+            .field("mapidx", &self.mapidx())
             .field("ibidata", &self.ibidata())
             .field("pendint", &self.pendint())
             .field("actstate", &self.actstate())
@@ -3388,9 +3589,10 @@ impl defmt::Format for Sctrl {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Sctrl {{ event: {:?}, extdata: {=bool:?}, ibidata: {=u8:?}, pendint: {=u8:?}, actstate: {=u8:?}, vendinfo: {=u8:?} }}",
+            "Sctrl {{ event: {:?}, extdata: {=bool:?}, mapidx: {=bool:?}, ibidata: {=u8:?}, pendint: {=u8:?}, actstate: {=u8:?}, vendinfo: {=u8:?} }}",
             self.event(),
             self.extdata(),
+            self.mapidx(),
             self.ibidata(),
             self.pendint(),
             self.actstate(),
@@ -3620,103 +3822,6 @@ impl defmt::Format for Sdmactrl {
         )
     }
 }
-#[doc = "Target Dynamic Address."]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Sdynaddr(pub u32);
-impl Sdynaddr {
-    #[doc = "Dynamic Address Valid."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn davalid(&self) -> SdynaddrDavalid {
-        let val = (self.0 >> 0usize) & 0x01;
-        SdynaddrDavalid::from_bits(val as u8)
-    }
-    #[doc = "Dynamic Address Valid."]
-    #[inline(always)]
-    pub const fn set_davalid(&mut self, val: SdynaddrDavalid) {
-        self.0 = (self.0 & !(0x01 << 0usize)) | (((val.to_bits() as u32) & 0x01) << 0usize);
-    }
-    #[doc = "Dynamic Address."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn daddr(&self) -> u8 {
-        let val = (self.0 >> 1usize) & 0x7f;
-        val as u8
-    }
-    #[doc = "Dynamic Address."]
-    #[inline(always)]
-    pub const fn set_daddr(&mut self, val: u8) {
-        self.0 = (self.0 & !(0x7f << 1usize)) | (((val as u32) & 0x7f) << 1usize);
-    }
-    #[doc = "Map a Static Address."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mapsa(&self) -> bool {
-        let val = (self.0 >> 12usize) & 0x01;
-        val != 0
-    }
-    #[doc = "Map a Static Address."]
-    #[inline(always)]
-    pub const fn set_mapsa(&mut self, val: bool) {
-        self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
-    }
-    #[doc = "10-Bit Static Address."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn sa10b(&self) -> u8 {
-        let val = (self.0 >> 13usize) & 0x07;
-        val as u8
-    }
-    #[doc = "10-Bit Static Address."]
-    #[inline(always)]
-    pub const fn set_sa10b(&mut self, val: u8) {
-        self.0 = (self.0 & !(0x07 << 13usize)) | (((val as u32) & 0x07) << 13usize);
-    }
-    #[doc = "Key."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn key(&self) -> u16 {
-        let val = (self.0 >> 16usize) & 0xffff;
-        val as u16
-    }
-    #[doc = "Key."]
-    #[inline(always)]
-    pub const fn set_key(&mut self, val: u16) {
-        self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
-    }
-}
-impl Default for Sdynaddr {
-    #[inline(always)]
-    fn default() -> Sdynaddr {
-        Sdynaddr(0)
-    }
-}
-impl core::fmt::Debug for Sdynaddr {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Sdynaddr")
-            .field("davalid", &self.davalid())
-            .field("daddr", &self.daddr())
-            .field("mapsa", &self.mapsa())
-            .field("sa10b", &self.sa10b())
-            .field("key", &self.key())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Sdynaddr {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(
-            f,
-            "Sdynaddr {{ davalid: {:?}, daddr: {=u8:?}, mapsa: {=bool:?}, sa10b: {=u8:?}, key: {=u16:?} }}",
-            self.davalid(),
-            self.daddr(),
-            self.mapsa(),
-            self.sa10b(),
-            self.key()
-        )
-    }
-}
 #[doc = "Target Errors and Warnings."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
@@ -3830,6 +3935,18 @@ impl Serrwarn {
     pub const fn set_s0s1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
+    #[doc = "HDR-BT Invalid Request Flag."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn hinvreq(&self) -> bool {
+        let val = (self.0 >> 13usize) & 0x01;
+        val != 0
+    }
+    #[doc = "HDR-BT Invalid Request Flag."]
+    #[inline(always)]
+    pub const fn set_hinvreq(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
+    }
     #[doc = "Over-Read Error Flag."]
     #[must_use]
     #[inline(always)]
@@ -3873,6 +3990,7 @@ impl core::fmt::Debug for Serrwarn {
             .field("hpar", &self.hpar())
             .field("hcrc", &self.hcrc())
             .field("s0s1", &self.s0s1())
+            .field("hinvreq", &self.hinvreq())
             .field("oread", &self.oread())
             .field("owrite", &self.owrite())
             .finish()
@@ -3883,7 +4001,7 @@ impl defmt::Format for Serrwarn {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Serrwarn {{ orun: {=bool:?}, urun: {=bool:?}, urunnack: {=bool:?}, term: {=bool:?}, invstart: {=bool:?}, spar: {=bool:?}, hpar: {=bool:?}, hcrc: {=bool:?}, s0s1: {=bool:?}, oread: {=bool:?}, owrite: {=bool:?} }}",
+            "Serrwarn {{ orun: {=bool:?}, urun: {=bool:?}, urunnack: {=bool:?}, term: {=bool:?}, invstart: {=bool:?}, spar: {=bool:?}, hpar: {=bool:?}, hcrc: {=bool:?}, s0s1: {=bool:?}, hinvreq: {=bool:?}, oread: {=bool:?}, owrite: {=bool:?} }}",
             self.orun(),
             self.urun(),
             self.urunnack(),
@@ -3893,9 +4011,116 @@ impl defmt::Format for Serrwarn {
             self.hpar(),
             self.hcrc(),
             self.s0s1(),
+            self.hinvreq(),
             self.oread(),
             self.owrite()
         )
+    }
+}
+#[doc = "Target HDR-BT Configuration."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Shdrbtcfg(pub u32);
+impl Shdrbtcfg {
+    #[doc = "CRC32 Select."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn crc32(&self) -> ShdrbtcfgCrc32 {
+        let val = (self.0 >> 2usize) & 0x01;
+        ShdrbtcfgCrc32::from_bits(val as u8)
+    }
+    #[doc = "CRC32 Select."]
+    #[inline(always)]
+    pub const fn set_crc32(&mut self, val: ShdrbtcfgCrc32) {
+        self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
+    }
+    #[doc = "Maximum Data."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn wdatamax(&self) -> u16 {
+        let val = (self.0 >> 4usize) & 0x0fff;
+        val as u16
+    }
+    #[doc = "Maximum Data."]
+    #[inline(always)]
+    pub const fn set_wdatamax(&mut self, val: u16) {
+        self.0 = (self.0 & !(0x0fff << 4usize)) | (((val as u32) & 0x0fff) << 4usize);
+    }
+    #[doc = "Read Data Length."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn datalen(&self) -> u16 {
+        let val = (self.0 >> 16usize) & 0xffff;
+        val as u16
+    }
+    #[doc = "Read Data Length."]
+    #[inline(always)]
+    pub const fn set_datalen(&mut self, val: u16) {
+        self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
+    }
+}
+impl Default for Shdrbtcfg {
+    #[inline(always)]
+    fn default() -> Shdrbtcfg {
+        Shdrbtcfg(0)
+    }
+}
+impl core::fmt::Debug for Shdrbtcfg {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Shdrbtcfg")
+            .field("crc32", &self.crc32())
+            .field("wdatamax", &self.wdatamax())
+            .field("datalen", &self.datalen())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Shdrbtcfg {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Shdrbtcfg {{ crc32: {:?}, wdatamax: {=u16:?}, datalen: {=u16:?} }}",
+            self.crc32(),
+            self.wdatamax(),
+            self.datalen()
+        )
+    }
+}
+#[doc = "Target HDR-Last."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Shdrbtlast(pub u32);
+impl Shdrbtlast {
+    #[doc = "Data Length."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn datalen(&self) -> u16 {
+        let val = (self.0 >> 16usize) & 0xffff;
+        val as u16
+    }
+    #[doc = "Data Length."]
+    #[inline(always)]
+    pub const fn set_datalen(&mut self, val: u16) {
+        self.0 = (self.0 & !(0xffff << 16usize)) | (((val as u32) & 0xffff) << 16usize);
+    }
+}
+impl Default for Shdrbtlast {
+    #[inline(always)]
+    fn default() -> Shdrbtlast {
+        Shdrbtlast(0)
+    }
+}
+impl core::fmt::Debug for Shdrbtlast {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Shdrbtlast")
+            .field("datalen", &self.datalen())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Shdrbtlast {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "Shdrbtlast {{ datalen: {=u16:?} }}", self.datalen())
     }
 }
 #[doc = "Target Module ID."]
@@ -4637,6 +4862,103 @@ impl defmt::Format for Smapctrl0 {
         )
     }
 }
+#[doc = "Map Feature Control 1."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Smapctrl1(pub u32);
+impl Smapctrl1 {
+    #[doc = "Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn ena(&self) -> bool {
+        let val = (self.0 >> 0usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Enable."]
+    #[inline(always)]
+    pub const fn set_ena(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
+    }
+    #[doc = "Address."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn addr(&self) -> u8 {
+        let val = (self.0 >> 1usize) & 0x7f;
+        val as u8
+    }
+    #[doc = "Address."]
+    #[inline(always)]
+    pub const fn set_addr(&mut self, val: u8) {
+        self.0 = (self.0 & !(0x7f << 1usize)) | (((val as u32) & 0x7f) << 1usize);
+    }
+    #[doc = "MAP Static Address."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn mapsa(&self) -> bool {
+        let val = (self.0 >> 8usize) & 0x01;
+        val != 0
+    }
+    #[doc = "MAP Static Address."]
+    #[inline(always)]
+    pub const fn set_mapsa(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
+    }
+    #[doc = "Static Address 10-Bit Extension."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn sa10b(&self) -> u8 {
+        let val = (self.0 >> 9usize) & 0x07;
+        val as u8
+    }
+    #[doc = "Static Address 10-Bit Extension."]
+    #[inline(always)]
+    pub const fn set_sa10b(&mut self, val: u8) {
+        self.0 = (self.0 & !(0x07 << 9usize)) | (((val as u32) & 0x07) << 9usize);
+    }
+    #[doc = "Not Acknowledged."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn nack(&self) -> bool {
+        let val = (self.0 >> 12usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Not Acknowledged."]
+    #[inline(always)]
+    pub const fn set_nack(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
+    }
+}
+impl Default for Smapctrl1 {
+    #[inline(always)]
+    fn default() -> Smapctrl1 {
+        Smapctrl1(0)
+    }
+}
+impl core::fmt::Debug for Smapctrl1 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Smapctrl1")
+            .field("ena", &self.ena())
+            .field("addr", &self.addr())
+            .field("mapsa", &self.mapsa())
+            .field("sa10b", &self.sa10b())
+            .field("nack", &self.nack())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Smapctrl1 {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "Smapctrl1 {{ ena: {=bool:?}, addr: {=u8:?}, mapsa: {=bool:?}, sa10b: {=u8:?}, nack: {=bool:?} }}",
+            self.ena(),
+            self.addr(),
+            self.mapsa(),
+            self.sa10b(),
+            self.nack()
+        )
+    }
+}
 #[doc = "Target Maximum Limits."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
@@ -4865,6 +5187,43 @@ impl defmt::Format for Srdatah {
             self.lsb(),
             self.msb()
         )
+    }
+}
+#[doc = "Target Read Word Data (from Bus)."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Srdataw(pub u32);
+impl Srdataw {
+    #[doc = "Value."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn value(&self) -> u32 {
+        let val = (self.0 >> 0usize) & 0xffff_ffff;
+        val as u32
+    }
+    #[doc = "Value."]
+    #[inline(always)]
+    pub const fn set_value(&mut self, val: u32) {
+        self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+    }
+}
+impl Default for Srdataw {
+    #[inline(always)]
+    fn default() -> Srdataw {
+        Srdataw(0)
+    }
+}
+impl core::fmt::Debug for Srdataw {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Srdataw")
+            .field("value", &self.value())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Srdataw {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "Srdataw {{ value: {=u32:?} }}", self.value())
     }
 }
 #[doc = "Target Status."]
@@ -5534,43 +5893,6 @@ impl defmt::Format for Swdatah {
         )
     }
 }
-#[doc = "Target Write Data Halfword."]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Swdatah1(pub u32);
-impl Swdatah1 {
-    #[doc = "Data."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn data(&self) -> u16 {
-        let val = (self.0 >> 0usize) & 0xffff;
-        val as u16
-    }
-    #[doc = "Data."]
-    #[inline(always)]
-    pub const fn set_data(&mut self, val: u16) {
-        self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
-    }
-}
-impl Default for Swdatah1 {
-    #[inline(always)]
-    fn default() -> Swdatah1 {
-        Swdatah1(0)
-    }
-}
-impl core::fmt::Debug for Swdatah1 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Swdatah1")
-            .field("data", &self.data())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Swdatah1 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Swdatah1 {{ data: {=u16:?} }}", self.data())
-    }
-}
 #[doc = "Target Write Data Halfword End."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
@@ -5626,18 +5948,55 @@ impl defmt::Format for Swdatahe {
         )
     }
 }
+#[doc = "Target Write Word Data (to Bus)."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Swdataw(pub u32);
+impl Swdataw {
+    #[doc = "Data."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn data(&self) -> u32 {
+        let val = (self.0 >> 0usize) & 0xffff_ffff;
+        val as u32
+    }
+    #[doc = "Data."]
+    #[inline(always)]
+    pub const fn set_data(&mut self, val: u32) {
+        self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+    }
+}
+impl Default for Swdataw {
+    #[inline(always)]
+    fn default() -> Swdataw {
+        Swdataw(0)
+    }
+}
+impl core::fmt::Debug for Swdataw {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Swdataw")
+            .field("data", &self.data())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for Swdataw {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "Swdataw {{ data: {=u32:?} }}", self.data())
+    }
+}
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Actstate {
     #[doc = "NO_LATENCY (normal bus operations)."]
-    NO_LATENCY = 0x0,
+    NoLatency = 0x0,
     #[doc = "LATENCY_1MS (1 ms of latency)."]
-    LATENCY_1MS = 0x01,
+    Latency1ms = 0x01,
     #[doc = "LATENCY_100MS (100 ms of latency)."]
-    LATENCY_100MS = 0x02,
+    Latency100ms = 0x02,
     #[doc = "LATENCY_10S (10 seconds of latency)."]
-    LATENCY_10S = 0x03,
+    Latency10s = 0x03,
 }
 impl Actstate {
     #[inline(always)]
@@ -5666,15 +6025,15 @@ impl From<Actstate> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cause {
     #[doc = "No information (this value occurs when not configured to write DA)."]
-    NONE = 0x0,
+    None = 0x0,
     #[doc = "Set using ENTDAA."]
-    ENTDAA = 0x01,
+    Entdaa = 0x01,
     #[doc = "Set using SETDASA, SETAASA, or SETNEWDA."]
-    SETDASA = 0x02,
+    Setdasa = 0x02,
     #[doc = "Cleared using RSTDAA."]
-    RSTDAA = 0x03,
+    Rstdaa = 0x03,
     #[doc = "Auto MAP change happened last."]
-    AUTOMAP = 0x04,
+    Automap = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -5706,9 +6065,9 @@ impl From<Cause> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ccchandle {
     #[doc = "All handling features disabled."]
-    ALL_DISABLED = 0x0,
+    AllDisabled = 0x0,
     #[doc = "The I3C module manages events, activities, status, HDR, and if enabled for it, ID and static-address-related items."]
-    BLOCK_HANDLE = 0x01,
+    BlockHandle = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
     _RESERVED_4 = 0x04,
@@ -5751,9 +6110,9 @@ impl From<Ccchandle> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Disto {
     #[doc = "Enabled."]
-    ENABLE = 0x0,
-    #[doc = "Disabled, if configured."]
-    DISABLE = 0x01,
+    Enable = 0x0,
+    #[doc = "Disabled."]
+    Disable = 0x01,
 }
 impl Disto {
     #[inline(always)]
@@ -5782,9 +6141,9 @@ impl From<Disto> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Dma {
     #[doc = "Not supported."]
-    DMANO = 0x0,
+    Dmano = 0x0,
     #[doc = "Supported."]
-    DMAYES = 0x01,
+    Dmayes = 0x01,
 }
 impl Dma {
     #[inline(always)]
@@ -5813,13 +6172,13 @@ impl From<Dma> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Evdet {
     #[doc = "NONE (no event or no pending event)."]
-    NONE = 0x0,
+    None = 0x0,
     #[doc = "NO_REQUEST (request is not sent yet; either there is no START condition yet, or is waiting for Bus-Available or Bus-Idle (HJ))."]
-    NO_REQUEST = 0x01,
+    NoRequest = 0x01,
     #[doc = "NACKed (not acknowledged, request sent and rejected); I3C tries again."]
-    NACKED = 0x02,
+    Nacked = 0x02,
     #[doc = "ACKed (acknowledged; request sent and accepted), so done (unless the time control data is still being sent)."]
-    ACKED = 0x03,
+    Acked = 0x03,
 }
 impl Evdet {
     #[inline(always)]
@@ -5848,11 +6207,11 @@ impl From<Evdet> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Extfifo {
     #[doc = "No external FIFO available."]
-    NO_EXT_FIFO = 0x0,
+    NoExtFifo = 0x0,
     #[doc = "Standard available or free external FIFO."]
-    STD_EXT_FIFO = 0x01,
+    StdExtFifo = 0x01,
     #[doc = "Request track external FIFO."]
-    REQUEST_EXT_FIFO = 0x02,
+    RequestExtFifo = 0x02,
     _RESERVED_3 = 0x03,
     _RESERVED_4 = 0x04,
     _RESERVED_5 = 0x05,
@@ -5886,13 +6245,13 @@ impl From<Extfifo> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fiforx {
     #[doc = "Two or three."]
-    FIFO_2BYTE = 0x0,
+    Fifo2byte = 0x0,
     #[doc = "Four."]
-    FIFO_4BYTE = 0x01,
+    Fifo4byte = 0x01,
     #[doc = "Eight."]
-    FIFO_8BYTE = 0x02,
+    Fifo8byte = 0x02,
     #[doc = "16 or larger."]
-    FIFO_16BYTE = 0x03,
+    Fifo16byte = 0x03,
 }
 impl Fiforx {
     #[inline(always)]
@@ -5921,13 +6280,13 @@ impl From<Fiforx> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Fifotx {
     #[doc = "Two."]
-    FIFO_2BYTE = 0x0,
+    Fifo2byte = 0x0,
     #[doc = "Four."]
-    FIFO_4BYTE = 0x01,
+    Fifo4byte = 0x01,
     #[doc = "Eight."]
-    FIFO_8BYTE = 0x02,
+    Fifo8byte = 0x02,
     #[doc = "16 or larger."]
-    FIFO_16BYTE = 0x03,
+    Fifo16byte = 0x03,
 }
 impl Fifotx {
     #[inline(always)]
@@ -5956,13 +6315,13 @@ impl From<Fifotx> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Group {
     #[doc = "v1.1 group addressing not supported."]
-    NOTSUPPORTED = 0x0,
+    Notsupported = 0x0,
     #[doc = "One group supported."]
-    ONE = 0x01,
+    One = 0x01,
     #[doc = "Two groups supported."]
-    TWO = 0x02,
+    Two = 0x02,
     #[doc = "Three groups supported."]
-    THREE = 0x03,
+    Three = 0x03,
 }
 impl Group {
     #[inline(always)]
@@ -5991,9 +6350,9 @@ impl From<Group> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Hdrsupp {
     #[doc = "No HDR modes supported."]
-    NO_HDR = 0x0,
+    NoHdr = 0x0,
     #[doc = "DDR mode supported."]
-    DDR = 0x01,
+    Ddr = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -6024,9 +6383,9 @@ impl From<Hdrsupp> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Hjdis {
     #[doc = "Enabled."]
-    MR_ENABLED = 0x0,
+    MrEnabled = 0x0,
     #[doc = "Disabled."]
-    MR_DISABLED = 0x01,
+    MrDisabled = 0x01,
 }
 impl Hjdis {
     #[inline(always)]
@@ -6055,13 +6414,13 @@ impl From<Hjdis> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Hkeep {
     #[doc = "None."]
-    NONE = 0x0,
+    None = 0x0,
     #[doc = "WIRED_IN."]
-    WIRED_IN = 0x01,
+    WiredIn = 0x01,
     #[doc = "PASSIVE_SDA (I2C mode, no clock stretches mode)."]
-    PASSIVE_SDA = 0x02,
+    PassiveSda = 0x02,
     #[doc = "PASSIVE_ON_SDA_SCL."]
-    PASSIVE_ON_SDA_SCL = 0x03,
+    PassiveOnSdaScl = 0x03,
 }
 impl Hkeep {
     #[inline(always)]
@@ -6090,9 +6449,9 @@ impl From<Hkeep> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum I2c {
     #[doc = "I3C message."]
-    I3CMESSAGE = 0x0,
+    I3cmessage = 0x0,
     #[doc = "I2C message."]
-    I2CMESSAGE = 0x01,
+    I2cmessage = 0x01,
 }
 impl I2c {
     #[inline(always)]
@@ -6121,13 +6480,13 @@ impl From<I2c> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum I3cCasDel {
     #[doc = "No delay."]
-    NO_DELAY = 0x0,
+    NoDelay = 0x0,
     #[doc = "Increases SCL clock period by 1/2."]
-    ONE_HALF_CLK = 0x01,
+    OneHalfClk = 0x01,
     #[doc = "Increases SCL clock period by 1."]
-    ONE_CLK = 0x02,
+    OneClk = 0x02,
     #[doc = "Increases SCL clock period by 3/2."]
-    ONE_AND_ONE_HALF_CLK = 0x03,
+    OneAndOneHalfClk = 0x03,
 }
 impl I3cCasDel {
     #[inline(always)]
@@ -6156,13 +6515,13 @@ impl From<I3cCasDel> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum I3cCasrDel {
     #[doc = "No delay."]
-    NO_DELAY = 0x0,
+    NoDelay = 0x0,
     #[doc = "Increases SCL clock period by 1/2."]
-    ONE_HALF_CLK = 0x01,
+    OneHalfClk = 0x01,
     #[doc = "Increases SCL clock period by 1."]
-    ONE_CLK = 0x02,
+    OneClk = 0x02,
     #[doc = "Increases SCL clock period by 1 1/2."]
-    ONE_AND_ONE_HALF_CLK = 0x03,
+    OneAndOneHalfClk = 0x03,
 }
 impl I3cCasrDel {
     #[inline(always)]
@@ -6191,9 +6550,9 @@ impl From<I3cCasrDel> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IbiMrHj {
     #[doc = "Application cannot generate IBI, CR, or HJ."]
-    ALL_DISABLED = 0x0,
+    AllDisabled = 0x0,
     #[doc = "Application can generate an IBI."]
-    IBI = 0x01,
+    Ibi = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
     _RESERVED_4 = 0x04,
@@ -6252,9 +6611,9 @@ impl From<IbiMrHj> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ibidis {
     #[doc = "Enabled."]
-    INTERRUPTS_ENABLED = 0x0,
+    InterruptsEnabled = 0x0,
     #[doc = "Disabled."]
-    INTERRUPTS_DISABLED = 0x01,
+    InterruptsDisabled = 0x01,
 }
 impl Ibidis {
     #[inline(always)]
@@ -6283,13 +6642,13 @@ impl From<Ibidis> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ibiresp {
     #[doc = "ACK (acknowledge)."]
-    ACK = 0x0,
+    Ack = 0x0,
     #[doc = "NACK (reject)."]
-    NACK = 0x01,
+    Nack = 0x01,
     #[doc = "Acknowledge with mandatory byte."]
-    ACK_WITH_MANDATORY = 0x02,
+    AckWithMandatory = 0x02,
     #[doc = "Manual."]
-    MANUAL = 0x03,
+    Manual = 0x03,
 }
 impl Ibiresp {
     #[inline(always)]
@@ -6318,13 +6677,13 @@ impl From<Ibiresp> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Ibitype {
     #[doc = "NONE (no IBI: this status occurs when MSTATUS\\[IBIWON\\] becomes 0)."]
-    NONE = 0x0,
+    None = 0x0,
     #[doc = "IBI."]
-    IBI = 0x01,
+    Ibi = 0x01,
     #[doc = "CR."]
-    MR = 0x02,
+    Mr = 0x02,
     #[doc = "HJ."]
-    HJ = 0x03,
+    Hj = 0x03,
 }
 impl Ibitype {
     #[inline(always)]
@@ -6353,13 +6712,13 @@ impl From<Ibitype> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Idena {
     #[doc = "Application."]
-    APPLICATION = 0x0,
+    Application = 0x0,
     #[doc = "Hardware."]
-    HW = 0x01,
+    Hw = 0x01,
     #[doc = "Hardware, but the I3C module instance handles ID 48b."]
-    HW_BUT = 0x02,
+    HwBut = 0x02,
     #[doc = "A part number register (PARTNO)."]
-    PARTNO = 0x03,
+    Partno = 0x03,
 }
 impl Idena {
     #[inline(always)]
@@ -6388,9 +6747,9 @@ impl From<Idena> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Idreg {
     #[doc = "All ID register features disabled."]
-    ALL_DISABLED = 0x0,
+    AllDisabled = 0x0,
     #[doc = "ID Instance is a register; used if there is no PARTNO register."]
-    ID_INSTANCE = 0x01,
+    IdInstance = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
     _RESERVED_4 = 0x04,
@@ -6433,9 +6792,9 @@ impl From<Idreg> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Int {
     #[doc = "Not supported."]
-    INTERRUPTSNO = 0x0,
+    Interruptsno = 0x0,
     #[doc = "Supported."]
-    INTERRUPTSYES = 0x01,
+    Interruptsyes = 0x01,
 }
 impl Int {
     #[inline(always)]
@@ -6464,9 +6823,9 @@ impl From<Int> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Laststatic {
     #[doc = "I3C dynamic address."]
-    I3C = 0x0,
+    I3c = 0x0,
     #[doc = "I2C static address."]
-    I2C = 0x01,
+    I2c = 0x01,
 }
 impl Laststatic {
     #[inline(always)]
@@ -6495,9 +6854,9 @@ impl From<Laststatic> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Master {
     #[doc = "Not supported."]
-    MASTERNOTSUPPORTED = 0x0,
+    Masternotsupported = 0x0,
     #[doc = "Supported."]
-    MASTERSUPPORTED = 0x01,
+    Mastersupported = 0x01,
 }
 impl Master {
     #[inline(always)]
@@ -6526,9 +6885,9 @@ impl From<Master> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MctrlDir {
     #[doc = "Write."]
-    DIRWRITE = 0x0,
+    Dirwrite = 0x0,
     #[doc = "Read."]
-    DIRREAD = 0x01,
+    Dirread = 0x01,
 }
 impl MctrlDir {
     #[inline(always)]
@@ -6557,13 +6916,13 @@ impl From<MctrlDir> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MdatactrlRxtrig {
     #[doc = "Trigger when not empty (default)."]
-    NOT_EMPTY = 0x0,
+    NotEmpty = 0x0,
     #[doc = "Trigger when 1/4 full or more."]
-    QUARTER_OR_MORE = 0x01,
+    QuarterOrMore = 0x01,
     #[doc = "Trigger when 1/2 full or more."]
-    HALF_OR_MORE = 0x02,
+    HalfOrMore = 0x02,
     #[doc = "Trigger when 3/4 full or more."]
-    THREE_QUARTER_OR_MORE = 0x03,
+    ThreeQuarterOrMore = 0x03,
 }
 impl MdatactrlRxtrig {
     #[inline(always)]
@@ -6592,13 +6951,13 @@ impl From<MdatactrlRxtrig> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MdatactrlTxtrig {
     #[doc = "Trigger when empty."]
-    EMPTY = 0x0,
+    Empty = 0x0,
     #[doc = "Trigger when 1/4 full or less."]
-    QUARTER_OR_LESS = 0x01,
+    QuarterOrLess = 0x01,
     #[doc = "Trigger when 1/2 full or less."]
-    HALF_OR_LESS = 0x02,
+    HalfOrLess = 0x02,
     #[doc = "Trigger when 1 less than full or less (default)."]
-    FULL_OR_LESS = 0x03,
+    FullOrLess = 0x03,
 }
 impl MdatactrlTxtrig {
     #[inline(always)]
@@ -6627,11 +6986,11 @@ impl From<MdatactrlTxtrig> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MdmactrlDmafb {
     #[doc = "DMA not used."]
-    NOT_USED = 0x0,
+    NotUsed = 0x0,
     #[doc = "Enable DMA for one frame."]
-    ENABLE_ONE_FRAME = 0x01,
+    EnableOneFrame = 0x01,
     #[doc = "Enable DMA until DMA is turned off."]
-    ENABLE = 0x02,
+    Enable = 0x02,
     _RESERVED_3 = 0x03,
 }
 impl MdmactrlDmafb {
@@ -6661,11 +7020,11 @@ impl From<MdmactrlDmafb> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MdmactrlDmatb {
     #[doc = "DMA not used."]
-    NOT_USED = 0x0,
+    NotUsed = 0x0,
     #[doc = "Enable DMA for one frame (ended by DMA or terminated)."]
-    ENABLE_ONE_FRAME = 0x01,
+    EnableOneFrame = 0x01,
     #[doc = "Enable DMA until DMA is turned off."]
-    ENABLE = 0x02,
+    Enable = 0x02,
     _RESERVED_3 = 0x03,
 }
 impl MdmactrlDmatb {
@@ -6695,11 +7054,11 @@ impl From<MdmactrlDmatb> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MdmactrlDmawidth {
     #[doc = "Byte."]
-    BYTE_0 = 0x0,
+    Byte0 = 0x0,
     #[doc = "Byte."]
-    BYTE_1 = 0x01,
+    Byte1 = 0x01,
     #[doc = "Halfword (16 bits)."]
-    HALF_WORD = 0x02,
+    HalfWord = 0x02,
     _RESERVED_3 = 0x03,
 }
 impl MdmactrlDmawidth {
@@ -6727,11 +7086,79 @@ impl From<MdmactrlDmawidth> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Mldat {
+    #[doc = "Single lane for data."]
+    Single = 0x0,
+    #[doc = "Dual lane for data."]
+    Dual = 0x01,
+    _RESERVED_2 = 0x02,
+    #[doc = "Quad-lane data."]
+    Quad = 0x03,
+}
+impl Mldat {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Mldat {
+        unsafe { core::mem::transmute(val & 0x03) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Mldat {
+    #[inline(always)]
+    fn from(val: u8) -> Mldat {
+        Mldat::from_bits(val)
+    }
+}
+impl From<Mldat> for u8 {
+    #[inline(always)]
+    fn from(val: Mldat) -> u8 {
+        Mldat::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum Mlhdr {
+    #[doc = "Single lane for header."]
+    Single = 0x0,
+    #[doc = "Dual lane for header."]
+    Dual = 0x01,
+    _RESERVED_2 = 0x02,
+    #[doc = "Quad-lane header."]
+    Quad = 0x03,
+}
+impl Mlhdr {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> Mlhdr {
+        unsafe { core::mem::transmute(val & 0x03) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for Mlhdr {
+    #[inline(always)]
+    fn from(val: u8) -> Mlhdr {
+        Mlhdr::from_bits(val)
+    }
+}
+impl From<Mlhdr> for u8 {
+    #[inline(always)]
+    fn from(val: Mlhdr) -> u8 {
+        Mlhdr::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mrdis {
     #[doc = "Enabled."]
-    MR_ENABLED = 0x0,
+    MrEnabled = 0x0,
     #[doc = "Disabled."]
-    MR_DISABLED = 0x01,
+    MrDisabled = 0x01,
 }
 impl Mrdis {
     #[inline(always)]
@@ -6760,13 +7187,13 @@ impl From<Mrdis> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Mstena {
     #[doc = "CONTROLLER_OFF."]
-    MASTER_OFF = 0x0,
+    MasterOff = 0x0,
     #[doc = "CONTROLLER_ON."]
-    MASTER_ON = 0x01,
+    MasterOn = 0x01,
     #[doc = "CONTROLLER_CAPABLE."]
-    MASTER_CAPABLE = 0x02,
+    MasterCapable = 0x02,
     #[doc = "I2C_CONTROLLER_MODE."]
-    I2C_MASTER_MODE = 0x03,
+    I2cMasterMode = 0x03,
 }
 impl Mstena {
     #[inline(always)]
@@ -6795,9 +7222,9 @@ impl From<Mstena> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MwmsgSdrControlDir {
     #[doc = "Write."]
-    WRITE = 0x0,
+    Write = 0x0,
     #[doc = "Read."]
-    READ = 0x01,
+    Read = 0x01,
 }
 impl MwmsgSdrControlDir {
     #[inline(always)]
@@ -6826,9 +7253,9 @@ impl From<MwmsgSdrControlDir> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Nobyte {
     #[doc = "With mandatory IBI byte."]
-    IBIBYTE = 0x0,
+    Ibibyte = 0x0,
     #[doc = "Without mandatory IBI byte."]
-    NO_IBIBYTE = 0x01,
+    NoIbibyte = 0x01,
 }
 impl Nobyte {
     #[inline(always)]
@@ -6857,20 +7284,20 @@ impl From<Nobyte> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Request {
     #[doc = "NONE."]
-    NONE = 0x0,
+    None = 0x0,
     #[doc = "EMITSTARTADDR."]
-    EMITSTARTADDR = 0x01,
+    Emitstartaddr = 0x01,
     #[doc = "EMITSTOP."]
-    EMITSTOP = 0x02,
+    Emitstop = 0x02,
     #[doc = "IBIACKNACK."]
-    IBIACKNACK = 0x03,
+    Ibiacknack = 0x03,
     #[doc = "PROCESSDAA."]
-    PROCESSDAA = 0x04,
+    Processdaa = 0x04,
     _RESERVED_5 = 0x05,
     #[doc = "Force Exit and Target Reset."]
-    FORCEEXIT = 0x06,
+    Forceexit = 0x06,
     #[doc = "AUTOIBI."]
-    AUTOIBI = 0x07,
+    Autoibi = 0x07,
 }
 impl Request {
     #[inline(always)]
@@ -6899,13 +7326,13 @@ impl From<Request> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Saddr {
     #[doc = "No static address."]
-    NO_STATIC = 0x0,
+    NoStatic = 0x0,
     #[doc = "Static address is fixed in hardware."]
-    STATIC = 0x01,
+    Static = 0x01,
     #[doc = "Hardware controls the static address dynamically (for example, from the pin strap)."]
-    HW_CONTROL = 0x02,
+    HwControl = 0x02,
     #[doc = "SCONFIG register supplies the static address."]
-    CONFIG = 0x03,
+    Config = 0x03,
 }
 impl Saddr {
     #[inline(always)]
@@ -6934,9 +7361,9 @@ impl From<Saddr> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ScapabilitiesTimectrl {
     #[doc = "No time control supported."]
-    NO_TIME_CONTROL_TYPE = 0x0,
+    NoTimeControlType = 0x0,
     #[doc = "At least one time-control type supported."]
-    ATLEAST1_TIME_CONTROL = 0x01,
+    Atleast1TimeControl = 0x01,
 }
 impl ScapabilitiesTimectrl {
     #[inline(always)]
@@ -6965,13 +7392,13 @@ impl From<ScapabilitiesTimectrl> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SctrlEvent {
     #[doc = "NORMAL_MODE."]
-    NORMAL_MODE = 0x0,
+    NormalMode = 0x0,
     #[doc = "IBI."]
-    IBI = 0x01,
+    Ibi = 0x01,
     #[doc = "CONTROLLER_REQUEST."]
-    MASTER_REQUEST = 0x02,
+    MasterRequest = 0x02,
     #[doc = "HOT_JOIN_REQUEST."]
-    HOT_JOIN_REQUEST = 0x03,
+    HotJoinRequest = 0x03,
 }
 impl SctrlEvent {
     #[inline(always)]
@@ -7000,9 +7427,9 @@ impl From<SctrlEvent> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SdatactrlRxempty {
     #[doc = "Not empty."]
-    RXISNOTEMPTY = 0x0,
+    Rxisnotempty = 0x0,
     #[doc = "Empty."]
-    RXISEMPTY = 0x01,
+    Rxisempty = 0x01,
 }
 impl SdatactrlRxempty {
     #[inline(always)]
@@ -7031,13 +7458,13 @@ impl From<SdatactrlRxempty> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SdatactrlRxtrig {
     #[doc = "Trigger when not empty (default)."]
-    TRIGGRNOTEMPTY = 0x0,
+    Triggrnotempty = 0x0,
     #[doc = "Trigger when 1/4 or more full."]
-    TRIGGRONEFOURTH = 0x01,
+    Triggronefourth = 0x01,
     #[doc = "Trigger when 1/2 or more full."]
-    TRIGGRONEHALF = 0x02,
+    Triggronehalf = 0x02,
     #[doc = "Trigger when 3/4 or more full."]
-    TRIGGRTHREEFOURTHS = 0x03,
+    Triggrthreefourths = 0x03,
 }
 impl SdatactrlRxtrig {
     #[inline(always)]
@@ -7066,9 +7493,9 @@ impl From<SdatactrlRxtrig> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SdatactrlTxfull {
     #[doc = "Not full."]
-    TXISNOTFULL = 0x0,
+    Txisnotfull = 0x0,
     #[doc = "Full."]
-    TXISFULL = 0x01,
+    Txisfull = 0x01,
 }
 impl SdatactrlTxfull {
     #[inline(always)]
@@ -7097,13 +7524,13 @@ impl From<SdatactrlTxfull> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SdatactrlTxtrig {
     #[doc = "Trigger when empty."]
-    TRIGGREMPTY = 0x0,
+    Triggrempty = 0x0,
     #[doc = "Trigger when 1/4 full or less."]
-    TRIGGRONEFOURTH = 0x01,
+    Triggronefourth = 0x01,
     #[doc = "Trigger when 1/2 full or less."]
-    TRIGGRONEHALF = 0x02,
+    Triggronehalf = 0x02,
     #[doc = "Default (trigger when 1 less than full or less)."]
-    TRIGGRONELESS = 0x03,
+    Triggroneless = 0x03,
 }
 impl SdatactrlTxtrig {
     #[inline(always)]
@@ -7132,11 +7559,11 @@ impl From<SdatactrlTxtrig> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SdmactrlDmafb {
     #[doc = "DMA not used."]
-    NOT_USED = 0x0,
+    NotUsed = 0x0,
     #[doc = "DMA enabled for one frame."]
-    ENABLE_ONE_FRAME = 0x01,
+    EnableOneFrame = 0x01,
     #[doc = "DMA enabled until turned off."]
-    ENABLE = 0x02,
+    Enable = 0x02,
     _RESERVED_3 = 0x03,
 }
 impl SdmactrlDmafb {
@@ -7166,11 +7593,11 @@ impl From<SdmactrlDmafb> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SdmactrlDmatb {
     #[doc = "DMA not used."]
-    NOT_USED = 0x0,
+    NotUsed = 0x0,
     #[doc = "DMA enabled for one frame."]
-    ENABLE_ONE_FRAME = 0x01,
+    EnableOneFrame = 0x01,
     #[doc = "DMA enabled until turned off."]
-    ENABLE = 0x02,
+    Enable = 0x02,
     _RESERVED_3 = 0x03,
 }
 impl SdmactrlDmatb {
@@ -7200,11 +7627,11 @@ impl From<SdmactrlDmatb> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SdmactrlDmawidth {
     #[doc = "Byte."]
-    BYTE_0 = 0x0,
+    Byte0 = 0x0,
     #[doc = "Byte."]
-    BYTE_1 = 0x01,
+    Byte1 = 0x01,
     #[doc = "Halfword (16 bits) (this value ensures that two bytes are available in the FIFO)."]
-    HALF_WORD = 0x02,
+    HalfWord = 0x02,
     _RESERVED_3 = 0x03,
 }
 impl SdmactrlDmawidth {
@@ -7232,15 +7659,15 @@ impl From<SdmactrlDmawidth> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum SdynaddrDavalid {
-    #[doc = "DANOTASSIGNED: a dynamic address is not assigned."]
-    DANOTASSIGNED = 0x0,
-    #[doc = "DAASSIGNED: a dynamic address is assigned."]
-    DAASSIGNED = 0x01,
+pub enum ShdrbtcfgCrc32 {
+    #[doc = "CRC16."]
+    UseCrc16 = 0x0,
+    #[doc = "CRC32."]
+    UseCrc32 = 0x01,
 }
-impl SdynaddrDavalid {
+impl ShdrbtcfgCrc32 {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> SdynaddrDavalid {
+    pub const fn from_bits(val: u8) -> ShdrbtcfgCrc32 {
         unsafe { core::mem::transmute(val & 0x01) }
     }
     #[inline(always)]
@@ -7248,16 +7675,16 @@ impl SdynaddrDavalid {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for SdynaddrDavalid {
+impl From<u8> for ShdrbtcfgCrc32 {
     #[inline(always)]
-    fn from(val: u8) -> SdynaddrDavalid {
-        SdynaddrDavalid::from_bits(val)
+    fn from(val: u8) -> ShdrbtcfgCrc32 {
+        ShdrbtcfgCrc32::from_bits(val)
     }
 }
-impl From<SdynaddrDavalid> for u8 {
+impl From<ShdrbtcfgCrc32> for u8 {
     #[inline(always)]
-    fn from(val: SdynaddrDavalid) -> u8 {
-        SdynaddrDavalid::to_bits(val)
+    fn from(val: ShdrbtcfgCrc32) -> u8 {
+        ShdrbtcfgCrc32::to_bits(val)
     }
 }
 #[repr(u8)]
@@ -7265,9 +7692,9 @@ impl From<SdynaddrDavalid> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SstatusStart {
     #[doc = "Not detected."]
-    START_NOT_DETECTED = 0x0,
+    StartNotDetected = 0x0,
     #[doc = "Detected."]
-    START_DETECTED = 0x01,
+    StartDetected = 0x01,
 }
 impl SstatusStart {
     #[inline(always)]
@@ -7296,13 +7723,13 @@ impl From<SstatusStart> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SstatusTimectrl {
     #[doc = "NO_TIME_CONTROL (no time control is enabled)."]
-    NO_TIME_CONTROL = 0x0,
+    NoTimeControl = 0x0,
     #[doc = "SYNC_MODE (Synchronous mode is enabled)."]
-    SYNC = 0x01,
+    Sync = 0x01,
     #[doc = "ASYNC_MODE (Asynchronous standard mode (0 or 1) is enabled)."]
-    ASYNC_MODE = 0x02,
+    AsyncMode = 0x02,
     #[doc = "BOTHSYNCASYNC (both Synchronous and Asynchronous modes are enabled)."]
-    BOTHSYNCASYNC = 0x03,
+    Bothsyncasync = 0x03,
 }
 impl SstatusTimectrl {
     #[inline(always)]
@@ -7331,9 +7758,9 @@ impl From<SstatusTimectrl> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SstatusTxnotfull {
     #[doc = "Transmit buffer full."]
-    FULL = 0x0,
+    Full = 0x0,
     #[doc = "Transmit buffer not full."]
-    NOT_FULL = 0x01,
+    NotFull = 0x01,
 }
 impl SstatusTxnotfull {
     #[inline(always)]
@@ -7362,21 +7789,21 @@ impl From<SstatusTxnotfull> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum State {
     #[doc = "IDLE (bus has stopped)."]
-    IDLE = 0x0,
+    Idle = 0x0,
     #[doc = "SLVREQ (target request)."]
-    SLVREQ = 0x01,
+    Slvreq = 0x01,
     #[doc = "MSGSDR."]
-    MSGSDR = 0x02,
+    Msgsdr = 0x02,
     #[doc = "NORMACT."]
-    NORMACT = 0x03,
+    Normact = 0x03,
     #[doc = "MSGDDR."]
-    DDR = 0x04,
+    Ddr = 0x04,
     #[doc = "DAA."]
-    DAA = 0x05,
+    Daa = 0x05,
     #[doc = "IBIACK."]
-    IBIACK = 0x06,
+    Ibiack = 0x06,
     #[doc = "IBIRCV."]
-    IBIRCV = 0x07,
+    Ibircv = 0x07,
 }
 impl State {
     #[inline(always)]
@@ -7405,9 +7832,9 @@ impl From<State> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Stccch {
     #[doc = "No CCC message handled."]
-    IDLE = 0x0,
+    Idle = 0x0,
     #[doc = "Handled automatically."]
-    BUSY = 0x01,
+    Busy = 0x01,
 }
 impl Stccch {
     #[inline(always)]
@@ -7436,9 +7863,9 @@ impl From<Stccch> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Stmsg {
     #[doc = "Idle."]
-    IDLE = 0x0,
+    Idle = 0x0,
     #[doc = "Busy."]
-    BUSY = 0x01,
+    Busy = 0x01,
 }
 impl Stmsg {
     #[inline(always)]
@@ -7467,9 +7894,9 @@ impl From<Stmsg> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Stnotstop {
     #[doc = "In STOP condition."]
-    STOPPED = 0x0,
+    Stopped = 0x0,
     #[doc = "Busy."]
-    BUSY = 0x01,
+    Busy = 0x01,
 }
 impl Stnotstop {
     #[inline(always)]
@@ -7498,9 +7925,9 @@ impl From<Stnotstop> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Streqrd {
     #[doc = "Not an SDR read."]
-    IDLE = 0x0,
+    Idle = 0x0,
     #[doc = "SDR read from this target or an IBI is being pushed out."]
-    BUSY = 0x01,
+    Busy = 0x01,
 }
 impl Streqrd {
     #[inline(always)]
@@ -7529,9 +7956,9 @@ impl From<Streqrd> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Streqwr {
     #[doc = "Not an SDR write."]
-    IDLE = 0x0,
+    Idle = 0x0,
     #[doc = "SDR write data from the controller, but not in ENTDAA mode."]
-    BUSY = 0x01,
+    Busy = 0x01,
 }
 impl Streqwr {
     #[inline(always)]
@@ -7560,11 +7987,11 @@ impl From<Streqwr> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Type {
     #[doc = "I3C."]
-    I3C = 0x0,
+    I3c = 0x0,
     #[doc = "I2C."]
-    I2C = 0x01,
+    I2c = 0x01,
     #[doc = "DDR."]
-    DDR = 0x02,
+    Ddr = 0x02,
     _RESERVED_3 = 0x03,
 }
 impl Type {

@@ -1,7 +1,8 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
-#![doc = "Peripheral access API (generated using chiptool v0.1.0 (2fd28c5 2026-04-02))"]
-#[doc = "CDOG."]
+#![allow(non_upper_case_globals)]
+#![doc = "Peripheral access API (generated using chiptool v0.1.0 (be1bff3 2026-04-12))"]
+#[doc = "Code Watchdog Timer."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Cdog {
     ptr: *mut u8,
@@ -33,6 +34,13 @@ impl Cdog {
         self,
     ) -> crate::pac::common::Reg<InstructionTimer, crate::pac::common::R> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
+    }
+    #[doc = "Secure Counter Register."]
+    #[inline(always)]
+    pub const fn secure_counter(
+        self,
+    ) -> crate::pac::common::Reg<SecureCounter, crate::pac::common::R> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }
     }
     #[doc = "Status 1 Register."]
     #[inline(always)]
@@ -108,11 +116,6 @@ impl Cdog {
     #[inline(always)]
     pub const fn sub256(self) -> crate::pac::common::Reg<Sub256, crate::pac::common::W> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x48usize) as _) }
-    }
-    #[doc = "ASSERT16 Command Register."]
-    #[inline(always)]
-    pub const fn assert16(self) -> crate::pac::common::Reg<Assert16, crate::pac::common::W> {
-        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x4cusize) as _) }
     }
 }
 #[doc = "ADD Command Register."]
@@ -255,43 +258,6 @@ impl core::fmt::Debug for Add256 {
 impl defmt::Format for Add256 {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(f, "Add256 {{ ad256: {=u32:?} }}", self.ad256())
-    }
-}
-#[doc = "ASSERT16 Command Register."]
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Assert16(pub u32);
-impl Assert16 {
-    #[doc = "ASSERT16 Command."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn ast16(&self) -> u32 {
-        let val = (self.0 >> 0usize) & 0xffff_ffff;
-        val as u32
-    }
-    #[doc = "ASSERT16 Command."]
-    #[inline(always)]
-    pub const fn set_ast16(&mut self, val: u32) {
-        self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
-    }
-}
-impl Default for Assert16 {
-    #[inline(always)]
-    fn default() -> Assert16 {
-        Assert16(0)
-    }
-}
-impl core::fmt::Debug for Assert16 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Assert16")
-            .field("ast16", &self.ast16())
-            .finish()
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Assert16 {
-    fn format(&self, f: defmt::Formatter) {
-        defmt::write!(f, "Assert16 {{ ast16: {=u32:?} }}", self.ast16())
     }
 }
 #[doc = "Control Register."]
@@ -706,6 +672,43 @@ impl defmt::Format for Restart {
         defmt::write!(f, "Restart {{ rstrt: {=u32:?} }}", self.rstrt())
     }
 }
+#[doc = "Secure Counter Register."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct SecureCounter(pub u32);
+impl SecureCounter {
+    #[doc = "Secure Counter."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn seccnt(&self) -> u32 {
+        let val = (self.0 >> 0usize) & 0xffff_ffff;
+        val as u32
+    }
+    #[doc = "Secure Counter."]
+    #[inline(always)]
+    pub const fn set_seccnt(&mut self, val: u32) {
+        self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+    }
+}
+impl Default for SecureCounter {
+    #[inline(always)]
+    fn default() -> SecureCounter {
+        SecureCounter(0)
+    }
+}
+impl core::fmt::Debug for SecureCounter {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SecureCounter")
+            .field("seccnt", &self.seccnt())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for SecureCounter {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "SecureCounter {{ seccnt: {=u32:?} }}", self.seccnt())
+    }
+}
 #[doc = "START Command Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
@@ -1076,12 +1079,12 @@ impl defmt::Format for Sub256 {
 pub enum Ctrl {
     _RESERVED_0 = 0x0,
     #[doc = "Enable reset."]
-    ENABLE_RESET = 0x01,
+    EnableReset = 0x01,
     #[doc = "Enable interrupt."]
-    ENABLE_INTERRUPT = 0x02,
+    EnableInterrupt = 0x02,
     _RESERVED_3 = 0x03,
     #[doc = "Disable both reset and interrupt."]
-    DISABLE_BOTH = 0x04,
+    DisableBoth = 0x04,
     _RESERVED_5 = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
@@ -1114,9 +1117,9 @@ impl From<Ctrl> for u8 {
 pub enum DebugHaltCtrl {
     _RESERVED_0 = 0x0,
     #[doc = "Keep the timer running."]
-    RUN_TIMER = 0x01,
+    RunTimer = 0x01,
     #[doc = "Stop the timer."]
-    PAUSE_TIMER = 0x02,
+    PauseTimer = 0x02,
     _RESERVED_3 = 0x03,
 }
 impl DebugHaltCtrl {
@@ -1147,9 +1150,9 @@ impl From<DebugHaltCtrl> for u8 {
 pub enum IrqPause {
     _RESERVED_0 = 0x0,
     #[doc = "Keep the timer running."]
-    RUN_TIMER = 0x01,
+    RunTimer = 0x01,
     #[doc = "Stop the timer."]
-    PAUSE_TIMER = 0x02,
+    PauseTimer = 0x02,
     _RESERVED_3 = 0x03,
 }
 impl IrqPause {
@@ -1180,9 +1183,9 @@ impl From<IrqPause> for u8 {
 pub enum LockCtrl {
     _RESERVED_0 = 0x0,
     #[doc = "Locked."]
-    LOCKED = 0x01,
+    Locked = 0x01,
     #[doc = "Unlocked."]
-    UNLOCKED = 0x02,
+    Unlocked = 0x02,
     _RESERVED_3 = 0x03,
 }
 impl LockCtrl {

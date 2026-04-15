@@ -1,6 +1,7 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
-#![doc = "Peripheral access API (generated using chiptool v0.1.0 (2fd28c5 2026-04-02))"]
+#![allow(non_upper_case_globals)]
+#![doc = "Peripheral access API (generated using chiptool v0.1.0 (be1bff3 2026-04-12))"]
 #[doc = "Windowed Watchdog Timer."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Wwdt {
@@ -160,6 +161,18 @@ impl Mod {
     pub const fn set_lock(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
+    #[doc = "Debug Enable."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn debug_en(&self) -> bool {
+        let val = (self.0 >> 6usize) & 0x01;
+        val != 0
+    }
+    #[doc = "Debug Enable."]
+    #[inline(always)]
+    pub const fn set_debug_en(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
+    }
 }
 impl Default for Mod {
     #[inline(always)]
@@ -176,6 +189,7 @@ impl core::fmt::Debug for Mod {
             .field("wdint", &self.wdint())
             .field("wdprotect", &self.wdprotect())
             .field("lock", &self.lock())
+            .field("debug_en", &self.debug_en())
             .finish()
     }
 }
@@ -184,13 +198,14 @@ impl defmt::Format for Mod {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Mod {{ wden: {:?}, wdreset: {:?}, wdtof: {=bool:?}, wdint: {=bool:?}, wdprotect: {:?}, lock: {=bool:?} }}",
+            "Mod {{ wden: {:?}, wdreset: {:?}, wdtof: {=bool:?}, wdint: {=bool:?}, wdprotect: {:?}, lock: {=bool:?}, debug_en: {=bool:?} }}",
             self.wden(),
             self.wdreset(),
             self.wdtof(),
             self.wdint(),
             self.wdprotect(),
-            self.lock()
+            self.lock(),
+            self.debug_en()
         )
     }
 }
@@ -343,9 +358,9 @@ impl defmt::Format for Window {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wden {
     #[doc = "Timer stopped."]
-    STOP = 0x0,
+    Stop = 0x0,
     #[doc = "Timer running."]
-    RUN = 0x01,
+    Run = 0x01,
 }
 impl Wden {
     #[inline(always)]
@@ -374,9 +389,9 @@ impl From<Wden> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wdprotect {
     #[doc = "Flexible."]
-    FLEXIBLE = 0x0,
+    Flexible = 0x0,
     #[doc = "Threshold."]
-    THRESHOLD = 0x01,
+    Threshold = 0x01,
 }
 impl Wdprotect {
     #[inline(always)]
@@ -405,9 +420,9 @@ impl From<Wdprotect> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Wdreset {
     #[doc = "Interrupt."]
-    INTERRUPT = 0x0,
+    Interrupt = 0x0,
     #[doc = "Reset."]
-    RESET = 0x01,
+    Reset = 0x01,
 }
 impl Wdreset {
     #[inline(always)]

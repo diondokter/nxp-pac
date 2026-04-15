@@ -1,6 +1,7 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
-#![doc = "Peripheral access API (generated using chiptool v0.1.0 (2fd28c5 2026-04-02))"]
+#![allow(non_upper_case_globals)]
+#![doc = "Peripheral access API (generated using chiptool v0.1.0 (be1bff3 2026-04-12))"]
 #[doc = "SYSCON."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Syscon {
@@ -158,10 +159,26 @@ impl Syscon {
     ) -> crate::pac::common::Reg<BinaryCodeMsb, crate::pac::common::R> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0b6cusize) as _) }
     }
+    #[doc = "UDF Control."]
+    #[inline(always)]
+    pub const fn els_udf(self) -> crate::pac::common::Reg<ElsUdf, crate::pac::common::RW> {
+        unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0e10usize) as _) }
+    }
     #[doc = "MSF Configuration."]
     #[inline(always)]
     pub const fn msfcfg(self) -> crate::pac::common::Reg<Msfcfg, crate::pac::common::RW> {
         unsafe { crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0e1cusize) as _) }
+    }
+    #[doc = "Device UID n."]
+    #[inline(always)]
+    pub const fn els_uid(
+        self,
+        n: usize,
+    ) -> crate::pac::common::Reg<ElsUid, crate::pac::common::RW> {
+        assert!(n < 4usize);
+        unsafe {
+            crate::pac::common::Reg::from_ptr(self.ptr.wrapping_add(0x0e20usize + n * 4usize) as _)
+        }
     }
     #[doc = "ROP State Register."]
     #[inline(always)]
@@ -1352,6 +1369,112 @@ impl defmt::Format for ElsOtpLcStateDp {
         )
     }
 }
+#[doc = "UDF Control."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct ElsUdf(pub u32);
+impl ElsUdf {
+    #[doc = "UDF KEY Select."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn key_sel(&self) -> KeySel {
+        let val = (self.0 >> 0usize) & 0x03;
+        KeySel::from_bits(val as u8)
+    }
+    #[doc = "UDF KEY Select."]
+    #[inline(always)]
+    pub const fn set_key_sel(&mut self, val: KeySel) {
+        self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
+    }
+    #[doc = "UID register hidden control. Write values other than 1010b, locked the write of UID_HIDDEN until a system reset."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn uid_hidden(&self) -> UidHidden {
+        let val = (self.0 >> 24usize) & 0x0f;
+        UidHidden::from_bits(val as u8)
+    }
+    #[doc = "UID register hidden control. Write values other than 1010b, locked the write of UID_HIDDEN until a system reset."]
+    #[inline(always)]
+    pub const fn set_uid_hidden(&mut self, val: UidHidden) {
+        self.0 = (self.0 & !(0x0f << 24usize)) | (((val.to_bits() as u32) & 0x0f) << 24usize);
+    }
+    #[doc = "UDF register hidden control. Write values other than 1010b, locked the write of UDF_HIDDEN until a system reset."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn udf_hidden(&self) -> UdfHidden {
+        let val = (self.0 >> 28usize) & 0x0f;
+        UdfHidden::from_bits(val as u8)
+    }
+    #[doc = "UDF register hidden control. Write values other than 1010b, locked the write of UDF_HIDDEN until a system reset."]
+    #[inline(always)]
+    pub const fn set_udf_hidden(&mut self, val: UdfHidden) {
+        self.0 = (self.0 & !(0x0f << 28usize)) | (((val.to_bits() as u32) & 0x0f) << 28usize);
+    }
+}
+impl Default for ElsUdf {
+    #[inline(always)]
+    fn default() -> ElsUdf {
+        ElsUdf(0)
+    }
+}
+impl core::fmt::Debug for ElsUdf {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ElsUdf")
+            .field("key_sel", &self.key_sel())
+            .field("uid_hidden", &self.uid_hidden())
+            .field("udf_hidden", &self.udf_hidden())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for ElsUdf {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(
+            f,
+            "ElsUdf {{ key_sel: {:?}, uid_hidden: {:?}, udf_hidden: {:?} }}",
+            self.key_sel(),
+            self.uid_hidden(),
+            self.udf_hidden()
+        )
+    }
+}
+#[doc = "Device UID n."]
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct ElsUid(pub u32);
+impl ElsUid {
+    #[doc = "UID."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn uid0(&self) -> u32 {
+        let val = (self.0 >> 0usize) & 0xffff_ffff;
+        val as u32
+    }
+    #[doc = "UID."]
+    #[inline(always)]
+    pub const fn set_uid0(&mut self, val: u32) {
+        self.0 = (self.0 & !(0xffff_ffff << 0usize)) | (((val as u32) & 0xffff_ffff) << 0usize);
+    }
+}
+impl Default for ElsUid {
+    #[inline(always)]
+    fn default() -> ElsUid {
+        ElsUid(0)
+    }
+}
+impl core::fmt::Debug for ElsUid {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ElsUid")
+            .field("uid0", &self.uid0())
+            .finish()
+    }
+}
+#[cfg(feature = "defmt")]
+impl defmt::Format for ElsUid {
+    fn format(&self, f: defmt::Formatter) {
+        defmt::write!(f, "ElsUid {{ uid0: {=u32:?} }}", self.uid0())
+    }
+}
 #[doc = "FRO_HF_DIV Clock Divider."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
@@ -2123,14 +2246,14 @@ impl Protlvl {
     pub const fn set_locknsmpu(&mut self, val: Locknsmpu) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val.to_bits() as u32) & 0x01) << 16usize);
     }
-    #[doc = "This 1-bit field provides a mechanism to limit writes to this register to protect its contents. Once set, this bit remains asserted until a system reset."]
+    #[doc = "This 1-bit field provides a mechanism to limit writes to the this register to protect its contents. Once set, this bit remains asserted until a system reset."]
     #[must_use]
     #[inline(always)]
     pub const fn lock(&self) -> ProtlvlLock {
         let val = (self.0 >> 31usize) & 0x01;
         ProtlvlLock::from_bits(val as u8)
     }
-    #[doc = "This 1-bit field provides a mechanism to limit writes to this register to protect its contents. Once set, this bit remains asserted until a system reset."]
+    #[doc = "This 1-bit field provides a mechanism to limit writes to the this register to protect its contents. Once set, this bit remains asserted until a system reset."]
     #[inline(always)]
     pub const fn set_lock(&mut self, val: ProtlvlLock) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -2480,28 +2603,28 @@ impl Remap {
     pub const fn set_cpu0_sbus(&mut self, val: RemapCpu0Sbus) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
-    #[doc = "RAMX0 address remap for SmartDMA I-BUS."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn smart_dma_i(&self) -> SmartDmaI {
-        let val = (self.0 >> 4usize) & 0x03;
-        SmartDmaI::from_bits(val as u8)
-    }
-    #[doc = "RAMX0 address remap for SmartDMA I-BUS."]
-    #[inline(always)]
-    pub const fn set_smart_dma_i(&mut self, val: SmartDmaI) {
-        self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
-    }
     #[doc = "RAMX0 address remap for SmartDMA D-BUS."]
     #[must_use]
     #[inline(always)]
     pub const fn smart_dma_d(&self) -> SmartDmaD {
-        let val = (self.0 >> 6usize) & 0x03;
+        let val = (self.0 >> 4usize) & 0x03;
         SmartDmaD::from_bits(val as u8)
     }
     #[doc = "RAMX0 address remap for SmartDMA D-BUS."]
     #[inline(always)]
     pub const fn set_smart_dma_d(&mut self, val: SmartDmaD) {
+        self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
+    }
+    #[doc = "RAMX0 address remap for SmartDMA I-BUS."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn smart_dma_i(&self) -> SmartDmaI {
+        let val = (self.0 >> 6usize) & 0x03;
+        SmartDmaI::from_bits(val as u8)
+    }
+    #[doc = "RAMX0 address remap for SmartDMA I-BUS."]
+    #[inline(always)]
+    pub const fn set_smart_dma_i(&mut self, val: SmartDmaI) {
         self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u32) & 0x03) << 6usize);
     }
     #[doc = "RAMX0 address remap for DMA0."]
@@ -2540,14 +2663,14 @@ impl Remap {
     pub const fn set_usb0(&mut self, val: Usb0) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
     }
-    #[doc = "This 1-bit field provides a mechanism to limit writes to this register to protect its contents. Once set, this bit remains asserted until a system reset."]
+    #[doc = "This 1-bit field provides a mechanism to limit writes to the this register to protect its contents. Once set, this bit remains asserted until a system reset."]
     #[must_use]
     #[inline(always)]
     pub const fn lock(&self) -> RemapLock {
         let val = (self.0 >> 31usize) & 0x01;
         RemapLock::from_bits(val as u8)
     }
-    #[doc = "This 1-bit field provides a mechanism to limit writes to this register to protect its contents. Once set, this bit remains asserted until a system reset."]
+    #[doc = "This 1-bit field provides a mechanism to limit writes to the this register to protect its contents. Once set, this bit remains asserted until a system reset."]
     #[inline(always)]
     pub const fn set_lock(&mut self, val: RemapLock) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -2563,8 +2686,8 @@ impl core::fmt::Debug for Remap {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Remap")
             .field("cpu0_sbus", &self.cpu0_sbus())
-            .field("smart_dma_i", &self.smart_dma_i())
             .field("smart_dma_d", &self.smart_dma_d())
+            .field("smart_dma_i", &self.smart_dma_i())
             .field("dma0", &self.dma0())
             .field("pkc", &self.pkc())
             .field("usb0", &self.usb0())
@@ -2577,10 +2700,10 @@ impl defmt::Format for Remap {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Remap {{ cpu0_sbus: {:?}, smart_dma_i: {:?}, smart_dma_d: {:?}, dma0: {:?}, pkc: {:?}, usb0: {:?}, lock: {:?} }}",
+            "Remap {{ cpu0_sbus: {:?}, smart_dma_d: {:?}, smart_dma_i: {:?}, dma0: {:?}, pkc: {:?}, usb0: {:?}, lock: {:?} }}",
             self.cpu0_sbus(),
-            self.smart_dma_i(),
             self.smart_dma_d(),
+            self.smart_dma_i(),
             self.dma0(),
             self.pkc(),
             self.usb0(),
@@ -2713,122 +2836,122 @@ impl defmt::Format for Slowclkdiv {
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct SmartDmaint(pub u32);
 impl SmartDmaint {
-    #[doc = "SmartDMA hijack NVIC IRQ2."]
+    #[doc = "SmartDMA hijack NVIC IRQ1."]
     #[must_use]
     #[inline(always)]
     pub const fn int0(&self) -> bool {
         let val = (self.0 >> 0usize) & 0x01;
         val != 0
     }
-    #[doc = "SmartDMA hijack NVIC IRQ2."]
+    #[doc = "SmartDMA hijack NVIC IRQ1."]
     #[inline(always)]
     pub const fn set_int0(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
     }
-    #[doc = "SmartDMA hijack NVIC IRQ23."]
+    #[doc = "SmartDMA hijack NVIC IRQ17."]
     #[must_use]
     #[inline(always)]
     pub const fn int1(&self) -> bool {
         let val = (self.0 >> 1usize) & 0x01;
         val != 0
     }
-    #[doc = "SmartDMA hijack NVIC IRQ23."]
+    #[doc = "SmartDMA hijack NVIC IRQ17."]
     #[inline(always)]
     pub const fn set_int1(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
     }
-    #[doc = "SmartDMA hijack NVIC IRQ26."]
+    #[doc = "SmartDMA hijack NVIC IRQ18."]
     #[must_use]
     #[inline(always)]
     pub const fn int2(&self) -> bool {
         let val = (self.0 >> 2usize) & 0x01;
         val != 0
     }
-    #[doc = "SmartDMA hijack NVIC IRQ26."]
+    #[doc = "SmartDMA hijack NVIC IRQ18."]
     #[inline(always)]
     pub const fn set_int2(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
     }
-    #[doc = "SmartDMA hijack NVIC IRQ27."]
+    #[doc = "SmartDMA hijack NVIC IRQ29."]
     #[must_use]
     #[inline(always)]
     pub const fn int3(&self) -> bool {
         let val = (self.0 >> 3usize) & 0x01;
         val != 0
     }
-    #[doc = "SmartDMA hijack NVIC IRQ27."]
+    #[doc = "SmartDMA hijack NVIC IRQ29."]
     #[inline(always)]
     pub const fn set_int3(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
     }
-    #[doc = "SmartDMA hijack NVIC IRQ28."]
+    #[doc = "SmartDMA hijack NVIC IRQ30."]
     #[must_use]
     #[inline(always)]
     pub const fn int4(&self) -> bool {
         let val = (self.0 >> 4usize) & 0x01;
         val != 0
     }
-    #[doc = "SmartDMA hijack NVIC IRQ28."]
+    #[doc = "SmartDMA hijack NVIC IRQ30."]
     #[inline(always)]
     pub const fn set_int4(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
     }
-    #[doc = "SmartDMA hijack NVIC IRQ29."]
+    #[doc = "SmartDMA hijack NVIC IRQ31."]
     #[must_use]
     #[inline(always)]
     pub const fn int5(&self) -> bool {
         let val = (self.0 >> 5usize) & 0x01;
         val != 0
     }
-    #[doc = "SmartDMA hijack NVIC IRQ29."]
+    #[doc = "SmartDMA hijack NVIC IRQ31."]
     #[inline(always)]
     pub const fn set_int5(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "SmartDMA hijack NVIC IRQ31."]
+    #[doc = "SmartDMA hijack NVIC IRQ32."]
     #[must_use]
     #[inline(always)]
     pub const fn int6(&self) -> bool {
         let val = (self.0 >> 6usize) & 0x01;
         val != 0
     }
-    #[doc = "SmartDMA hijack NVIC IRQ31."]
+    #[doc = "SmartDMA hijack NVIC IRQ32."]
     #[inline(always)]
     pub const fn set_int6(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 6usize)) | (((val as u32) & 0x01) << 6usize);
     }
-    #[doc = "SmartDMA hijack NVIC IRQ32."]
+    #[doc = "SmartDMA hijack NVIC IRQ33."]
     #[must_use]
     #[inline(always)]
     pub const fn int7(&self) -> bool {
         let val = (self.0 >> 7usize) & 0x01;
         val != 0
     }
-    #[doc = "SmartDMA hijack NVIC IRQ32."]
+    #[doc = "SmartDMA hijack NVIC IRQ33."]
     #[inline(always)]
     pub const fn set_int7(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
     }
-    #[doc = "SmartDMA hijack NVIC IRQ33."]
+    #[doc = "SmartDMA hijack NVIC IRQ34."]
     #[must_use]
     #[inline(always)]
     pub const fn int8(&self) -> bool {
         let val = (self.0 >> 8usize) & 0x01;
         val != 0
     }
-    #[doc = "SmartDMA hijack NVIC IRQ33."]
+    #[doc = "SmartDMA hijack NVIC IRQ34."]
     #[inline(always)]
     pub const fn set_int8(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
     }
-    #[doc = "SmartDMA hijack NVIC IRQ34."]
+    #[doc = "SmartDMA hijack NVIC IRQ35."]
     #[must_use]
     #[inline(always)]
     pub const fn int9(&self) -> bool {
         let val = (self.0 >> 9usize) & 0x01;
         val != 0
     }
-    #[doc = "SmartDMA hijack NVIC IRQ34."]
+    #[doc = "SmartDMA hijack NVIC IRQ35."]
     #[inline(always)]
     pub const fn set_int9(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
@@ -2845,137 +2968,161 @@ impl SmartDmaint {
     pub const fn set_int10(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
     }
-    #[doc = "SmartDMA hijack NVIC IRQ39."]
+    #[doc = "SmartDMA hijack NVIC IRQ37."]
     #[must_use]
     #[inline(always)]
     pub const fn int11(&self) -> bool {
         let val = (self.0 >> 11usize) & 0x01;
         val != 0
     }
-    #[doc = "SmartDMA hijack NVIC IRQ39."]
+    #[doc = "SmartDMA hijack NVIC IRQ37."]
     #[inline(always)]
     pub const fn set_int11(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
     }
-    #[doc = "SmartDMA hijack NVIC IRQ40."]
+    #[doc = "SmartDMA hijack NVIC IRQ38."]
     #[must_use]
     #[inline(always)]
     pub const fn int12(&self) -> bool {
         let val = (self.0 >> 12usize) & 0x01;
         val != 0
     }
-    #[doc = "SmartDMA hijack NVIC IRQ40."]
+    #[doc = "SmartDMA hijack NVIC IRQ38."]
     #[inline(always)]
     pub const fn set_int12(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
-    #[doc = "SmartDMA hijack NVIC IRQ41."]
+    #[doc = "SmartDMA hijack NVIC IRQ39."]
     #[must_use]
     #[inline(always)]
     pub const fn int13(&self) -> bool {
         let val = (self.0 >> 13usize) & 0x01;
         val != 0
     }
-    #[doc = "SmartDMA hijack NVIC IRQ41."]
+    #[doc = "SmartDMA hijack NVIC IRQ39."]
     #[inline(always)]
     pub const fn set_int13(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 13usize)) | (((val as u32) & 0x01) << 13usize);
     }
-    #[doc = "SmartDMA hijack NVIC IRQ59."]
+    #[doc = "SmartDMA hijack NVIC IRQ40."]
     #[must_use]
     #[inline(always)]
     pub const fn int14(&self) -> bool {
         let val = (self.0 >> 14usize) & 0x01;
         val != 0
     }
-    #[doc = "SmartDMA hijack NVIC IRQ59."]
+    #[doc = "SmartDMA hijack NVIC IRQ40."]
     #[inline(always)]
     pub const fn set_int14(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
     }
-    #[doc = "SmartDMA hijack NVIC IRQ62."]
+    #[doc = "SmartDMA hijack NVIC IRQ41."]
     #[must_use]
     #[inline(always)]
     pub const fn int15(&self) -> bool {
         let val = (self.0 >> 15usize) & 0x01;
         val != 0
     }
-    #[doc = "SmartDMA hijack NVIC IRQ62."]
+    #[doc = "SmartDMA hijack NVIC IRQ41."]
     #[inline(always)]
     pub const fn set_int15(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 15usize)) | (((val as u32) & 0x01) << 15usize);
     }
-    #[doc = "SmartDMA hijack NVIC IRQ64."]
+    #[doc = "SmartDMA hijack NVIC IRQ42."]
     #[must_use]
     #[inline(always)]
     pub const fn int16(&self) -> bool {
         let val = (self.0 >> 16usize) & 0x01;
         val != 0
     }
-    #[doc = "SmartDMA hijack NVIC IRQ64."]
+    #[doc = "SmartDMA hijack NVIC IRQ42."]
     #[inline(always)]
     pub const fn set_int16(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 16usize)) | (((val as u32) & 0x01) << 16usize);
     }
-    #[doc = "SmartDMA hijack NVIC IRQ71."]
+    #[doc = "SmartDMA hijack NVIC IRQ45."]
     #[must_use]
     #[inline(always)]
     pub const fn int17(&self) -> bool {
         let val = (self.0 >> 17usize) & 0x01;
         val != 0
     }
-    #[doc = "SmartDMA hijack NVIC IRQ71."]
+    #[doc = "SmartDMA hijack NVIC IRQ45."]
     #[inline(always)]
     pub const fn set_int17(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
-    #[doc = "SmartDMA hijack NVIC IRQ72."]
+    #[doc = "SmartDMA hijack NVIC IRQ47."]
     #[must_use]
     #[inline(always)]
     pub const fn int18(&self) -> bool {
         let val = (self.0 >> 18usize) & 0x01;
         val != 0
     }
-    #[doc = "SmartDMA hijack NVIC IRQ72."]
+    #[doc = "SmartDMA hijack NVIC IRQ47."]
     #[inline(always)]
     pub const fn set_int18(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
     }
-    #[doc = "SmartDMA hijack NVIC IRQ73."]
+    #[doc = "SmartDMA hijack NVIC IRQ50."]
     #[must_use]
     #[inline(always)]
     pub const fn int19(&self) -> bool {
         let val = (self.0 >> 19usize) & 0x01;
         val != 0
     }
-    #[doc = "SmartDMA hijack NVIC IRQ73."]
+    #[doc = "SmartDMA hijack NVIC IRQ50."]
     #[inline(always)]
     pub const fn set_int19(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 19usize)) | (((val as u32) & 0x01) << 19usize);
     }
-    #[doc = "SmartDMA hijack NVIC IRQ74."]
+    #[doc = "SmartDMA hijack NVIC IRQ51."]
     #[must_use]
     #[inline(always)]
     pub const fn int20(&self) -> bool {
         let val = (self.0 >> 20usize) & 0x01;
         val != 0
     }
-    #[doc = "SmartDMA hijack NVIC IRQ74."]
+    #[doc = "SmartDMA hijack NVIC IRQ51."]
     #[inline(always)]
     pub const fn set_int20(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 20usize)) | (((val as u32) & 0x01) << 20usize);
     }
-    #[doc = "SmartDMA hijack NVIC IRQ75."]
+    #[doc = "SmartDMA hijack NVIC IRQ66."]
     #[must_use]
     #[inline(always)]
     pub const fn int21(&self) -> bool {
         let val = (self.0 >> 21usize) & 0x01;
         val != 0
     }
-    #[doc = "SmartDMA hijack NVIC IRQ75."]
+    #[doc = "SmartDMA hijack NVIC IRQ66."]
     #[inline(always)]
     pub const fn set_int21(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 21usize)) | (((val as u32) & 0x01) << 21usize);
+    }
+    #[doc = "SmartDMA hijack NVIC IRQ67."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn int22(&self) -> bool {
+        let val = (self.0 >> 22usize) & 0x01;
+        val != 0
+    }
+    #[doc = "SmartDMA hijack NVIC IRQ67."]
+    #[inline(always)]
+    pub const fn set_int22(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 22usize)) | (((val as u32) & 0x01) << 22usize);
+    }
+    #[doc = "SmartDMA hijack NVIC IRQ77."]
+    #[must_use]
+    #[inline(always)]
+    pub const fn int23(&self) -> bool {
+        let val = (self.0 >> 23usize) & 0x01;
+        val != 0
+    }
+    #[doc = "SmartDMA hijack NVIC IRQ77."]
+    #[inline(always)]
+    pub const fn set_int23(&mut self, val: bool) {
+        self.0 = (self.0 & !(0x01 << 23usize)) | (((val as u32) & 0x01) << 23usize);
     }
 }
 impl Default for SmartDmaint {
@@ -3009,6 +3156,8 @@ impl core::fmt::Debug for SmartDmaint {
             .field("int19", &self.int19())
             .field("int20", &self.int20())
             .field("int21", &self.int21())
+            .field("int22", &self.int22())
+            .field("int23", &self.int23())
             .finish()
     }
 }
@@ -3017,7 +3166,7 @@ impl defmt::Format for SmartDmaint {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "SmartDmaint {{ int0: {=bool:?}, int1: {=bool:?}, int2: {=bool:?}, int3: {=bool:?}, int4: {=bool:?}, int5: {=bool:?}, int6: {=bool:?}, int7: {=bool:?}, int8: {=bool:?}, int9: {=bool:?}, int10: {=bool:?}, int11: {=bool:?}, int12: {=bool:?}, int13: {=bool:?}, int14: {=bool:?}, int15: {=bool:?}, int16: {=bool:?}, int17: {=bool:?}, int18: {=bool:?}, int19: {=bool:?}, int20: {=bool:?}, int21: {=bool:?} }}",
+            "SmartDmaint {{ int0: {=bool:?}, int1: {=bool:?}, int2: {=bool:?}, int3: {=bool:?}, int4: {=bool:?}, int5: {=bool:?}, int6: {=bool:?}, int7: {=bool:?}, int8: {=bool:?}, int9: {=bool:?}, int10: {=bool:?}, int11: {=bool:?}, int12: {=bool:?}, int13: {=bool:?}, int14: {=bool:?}, int15: {=bool:?}, int16: {=bool:?}, int17: {=bool:?}, int18: {=bool:?}, int19: {=bool:?}, int20: {=bool:?}, int21: {=bool:?}, int22: {=bool:?}, int23: {=bool:?} }}",
             self.int0(),
             self.int1(),
             self.int2(),
@@ -3039,7 +3188,9 @@ impl defmt::Format for SmartDmaint {
             self.int18(),
             self.int19(),
             self.int20(),
-            self.int21()
+            self.int21(),
+            self.int22(),
+            self.int23()
         )
     }
 }
@@ -3120,14 +3271,14 @@ impl SramXen {
     pub const fn set_ramc_xen(&mut self, val: bool) {
         self.0 = (self.0 & !(0x01 << 5usize)) | (((val as u32) & 0x01) << 5usize);
     }
-    #[doc = "This 1-bit field provides a mechanism to limit writes to this register (and SRAM_XEN_DP) to protect its contents. Once set, this bit remains asserted until a system reset."]
+    #[doc = "This 1-bit field provides a mechanism to limit writes to the this register (and SRAM_XEN_DP) to protect its contents. Once set, this bit remains asserted until a system reset."]
     #[must_use]
     #[inline(always)]
     pub const fn lock(&self) -> SramXenLock {
         let val = (self.0 >> 31usize) & 0x01;
         SramXenLock::from_bits(val as u8)
     }
-    #[doc = "This 1-bit field provides a mechanism to limit writes to this register (and SRAM_XEN_DP) to protect its contents. Once set, this bit remains asserted until a system reset."]
+    #[doc = "This 1-bit field provides a mechanism to limit writes to the this register (and SRAM_XEN_DP) to protect its contents. Once set, this bit remains asserted until a system reset."]
     #[inline(always)]
     pub const fn set_lock(&mut self, val: SramXenLock) {
         self.0 = (self.0 & !(0x01 << 31usize)) | (((val.to_bits() as u32) & 0x01) << 31usize);
@@ -3322,9 +3473,9 @@ impl defmt::Format for SwdAccessCpu0 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbclkdivUnstab {
     #[doc = "Divider clock is stable."]
-    STABLE = 0x0,
+    Stable = 0x0,
     #[doc = "Clock frequency is not stable."]
-    ONGOING = 0x01,
+    Ongoing = 0x01,
 }
 impl AhbclkdivUnstab {
     #[inline(always)]
@@ -3353,13 +3504,13 @@ impl From<AhbclkdivUnstab> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbmatprioCpu0Sbus {
     #[doc = "level 0."]
-    LEVEL0 = 0x0,
+    Level0 = 0x0,
     #[doc = "level 1."]
-    LEVEL1 = 0x01,
+    Level1 = 0x01,
     #[doc = "level 2."]
-    LEVEL2 = 0x02,
+    Level2 = 0x02,
     #[doc = "level 3."]
-    LEVEL3 = 0x03,
+    Level3 = 0x03,
 }
 impl AhbmatprioCpu0Sbus {
     #[inline(always)]
@@ -3388,13 +3539,13 @@ impl From<AhbmatprioCpu0Sbus> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum AhbmatprioDma0 {
     #[doc = "level 0."]
-    LEVEL0 = 0x0,
+    Level0 = 0x0,
     #[doc = "level 1."]
-    LEVEL1 = 0x01,
+    Level1 = 0x01,
     #[doc = "level 2."]
-    LEVEL2 = 0x02,
+    Level2 = 0x02,
     #[doc = "level 3."]
-    LEVEL3 = 0x03,
+    Level3 = 0x03,
 }
 impl AhbmatprioDma0 {
     #[inline(always)]
@@ -3423,9 +3574,9 @@ impl From<AhbmatprioDma0> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum BusclkdivHalt {
     #[doc = "Divider clock is running."]
-    RUN = 0x0,
+    Run = 0x0,
     #[doc = "Divider clock is stopped."]
-    HALT = 0x01,
+    Halt = 0x01,
 }
 impl BusclkdivHalt {
     #[inline(always)]
@@ -3454,9 +3605,9 @@ impl From<BusclkdivHalt> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum BusclkdivReset {
     #[doc = "Divider is not reset."]
-    RELEASED = 0x0,
+    Released = 0x0,
     #[doc = "Divider is reset."]
-    ASSERTED = 0x01,
+    Asserted = 0x01,
 }
 impl BusclkdivReset {
     #[inline(always)]
@@ -3485,9 +3636,9 @@ impl From<BusclkdivReset> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum BusclkdivUnstab {
     #[doc = "Divider clock is stable."]
-    STABLE = 0x0,
+    Stable = 0x0,
     #[doc = "Clock frequency is not stable."]
-    ONGOING = 0x01,
+    Ongoing = 0x01,
 }
 impl BusclkdivUnstab {
     #[inline(always)]
@@ -3516,9 +3667,9 @@ impl From<BusclkdivUnstab> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ClrLpcac {
     #[doc = "Unclears the cache."]
-    ENABLE = 0x0,
+    Enable = 0x0,
     #[doc = "Clears the cache."]
-    DISABLE = 0x01,
+    Disable = 0x01,
 }
 impl ClrLpcac {
     #[inline(always)]
@@ -3547,13 +3698,13 @@ impl From<ClrLpcac> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cpu0Cbus {
     #[doc = "level 0."]
-    LEVEL0 = 0x0,
+    Level0 = 0x0,
     #[doc = "level 1."]
-    LEVEL1 = 0x01,
+    Level1 = 0x01,
     #[doc = "level 2."]
-    LEVEL2 = 0x02,
+    Level2 = 0x02,
     #[doc = "level 3."]
-    LEVEL3 = 0x03,
+    Level3 = 0x03,
 }
 impl Cpu0Cbus {
     #[inline(always)]
@@ -3582,9 +3733,9 @@ impl From<Cpu0Cbus> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cpu0lockup {
     #[doc = "CPU is not in lockup."]
-    AWAKE = 0x0,
+    Awake = 0x0,
     #[doc = "CPU is in lockup."]
-    SLEEPING = 0x01,
+    Sleeping = 0x01,
 }
 impl Cpu0lockup {
     #[inline(always)]
@@ -3613,9 +3764,9 @@ impl From<Cpu0lockup> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cpu0sleeping {
     #[doc = "CPU is not sleeping."]
-    AWAKE = 0x0,
+    Awake = 0x0,
     #[doc = "CPU is sleeping."]
-    SLEEPING = 0x01,
+    Sleeping = 0x01,
 }
 impl Cpu0sleeping {
     #[inline(always)]
@@ -3644,13 +3795,13 @@ impl From<Cpu0sleeping> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cpu1CbusSmartDmaI {
     #[doc = "level 0."]
-    LEVEL0 = 0x0,
+    Level0 = 0x0,
     #[doc = "level 1."]
-    LEVEL1 = 0x01,
+    Level1 = 0x01,
     #[doc = "level 2."]
-    LEVEL2 = 0x02,
+    Level2 = 0x02,
     #[doc = "level 3."]
-    LEVEL3 = 0x03,
+    Level3 = 0x03,
 }
 impl Cpu1CbusSmartDmaI {
     #[inline(always)]
@@ -3679,13 +3830,13 @@ impl From<Cpu1CbusSmartDmaI> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Cpu1SbusSmartDmaD {
     #[doc = "level 0."]
-    LEVEL0 = 0x0,
+    Level0 = 0x0,
     #[doc = "level 1."]
-    LEVEL1 = 0x01,
+    Level1 = 0x01,
     #[doc = "level 2."]
-    LEVEL2 = 0x02,
+    Level2 = 0x02,
     #[doc = "level 3."]
-    LEVEL3 = 0x03,
+    Level3 = 0x03,
 }
 impl Cpu1SbusSmartDmaD {
     #[inline(always)]
@@ -3715,9 +3866,9 @@ impl From<Cpu1SbusSmartDmaD> for u8 {
 pub enum DebugFeaturesCpu0Dbgen {
     _RESERVED_0 = 0x0,
     #[doc = "Disables debug."]
-    DISABLE = 0x01,
+    Disable = 0x01,
     #[doc = "Enables debug."]
-    ENABLE = 0x02,
+    Enable = 0x02,
     _RESERVED_3 = 0x03,
 }
 impl DebugFeaturesCpu0Dbgen {
@@ -3748,9 +3899,9 @@ impl From<DebugFeaturesCpu0Dbgen> for u8 {
 pub enum DebugFeaturesCpu0Niden {
     _RESERVED_0 = 0x0,
     #[doc = "Disables debug."]
-    DISABLE = 0x01,
+    Disable = 0x01,
     #[doc = "Enables debug."]
-    ENABLE = 0x02,
+    Enable = 0x02,
     _RESERVED_3 = 0x03,
 }
 impl DebugFeaturesCpu0Niden {
@@ -3781,9 +3932,9 @@ impl From<DebugFeaturesCpu0Niden> for u8 {
 pub enum DebugFeaturesDpCpu0Dbgen {
     _RESERVED_0 = 0x0,
     #[doc = "Disables debug."]
-    DISABLE = 0x01,
+    Disable = 0x01,
     #[doc = "Enables debug."]
-    ENABLE = 0x02,
+    Enable = 0x02,
     _RESERVED_3 = 0x03,
 }
 impl DebugFeaturesDpCpu0Dbgen {
@@ -3814,9 +3965,9 @@ impl From<DebugFeaturesDpCpu0Dbgen> for u8 {
 pub enum DebugFeaturesDpCpu0Niden {
     _RESERVED_0 = 0x0,
     #[doc = "Disables debug."]
-    DISABLE = 0x01,
+    Disable = 0x01,
     #[doc = "Enables debug."]
-    ENABLE = 0x02,
+    Enable = 0x02,
     _RESERVED_3 = 0x03,
 }
 impl DebugFeaturesDpCpu0Niden {
@@ -3846,19 +3997,19 @@ impl From<DebugFeaturesDpCpu0Niden> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DeviceTypePkg {
     #[doc = "HLQFP."]
-    HLQFP = 0x0,
+    Hlqfp = 0x0,
     #[doc = "HTQFP."]
-    HTQFP = 0x01,
+    Htqfp = 0x01,
     #[doc = "BGA."]
-    BGA = 0x02,
+    Bga = 0x02,
     #[doc = "HDQFP."]
-    HDQFP = 0x03,
+    Hdqfp = 0x03,
     #[doc = "QFN."]
-    QFN = 0x04,
+    Qfn = 0x04,
     #[doc = "CSP."]
-    CSP = 0x05,
+    Csp = 0x05,
     #[doc = "LQFP."]
-    LQFP = 0x06,
+    Lqfp = 0x06,
     _RESERVED_7 = 0x07,
     _RESERVED_8 = 0x08,
     _RESERVED_9 = 0x09,
@@ -3896,9 +4047,9 @@ impl From<DeviceTypePkg> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DeviceTypeSec {
     #[doc = "Non Secure."]
-    NON_SEC = 0x0,
+    NonSec = 0x0,
     #[doc = "Secure."]
-    SEC = 0x01,
+    Sec = 0x01,
 }
 impl DeviceTypeSec {
     #[inline(always)]
@@ -3927,9 +4078,9 @@ impl From<DeviceTypeSec> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DisDataSpec {
     #[doc = "Enables data speculation."]
-    ENABLE = 0x0,
+    Enable = 0x0,
     #[doc = "Disables data speculation."]
-    DISABLE = 0x01,
+    Disable = 0x01,
 }
 impl DisDataSpec {
     #[inline(always)]
@@ -3958,9 +4109,9 @@ impl From<DisDataSpec> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DisFlashSpec {
     #[doc = "Enables flash speculation."]
-    ENABLE = 0x0,
+    Enable = 0x0,
     #[doc = "Disables flash speculation."]
-    DISABLE = 0x01,
+    Disable = 0x01,
 }
 impl DisFlashSpec {
     #[inline(always)]
@@ -3989,9 +4140,9 @@ impl From<DisFlashSpec> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DisLpcac {
     #[doc = "Enabled."]
-    ENABLE = 0x0,
+    Enable = 0x0,
     #[doc = "Disabled."]
-    DISABLE = 0x01,
+    Disable = 0x01,
 }
 impl DisLpcac {
     #[inline(always)]
@@ -4020,9 +4171,9 @@ impl From<DisLpcac> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DisMbeccErrData {
     #[doc = "Enables bus error on multi-bit ECC error for data."]
-    ENABLE = 0x0,
+    Enable = 0x0,
     #[doc = "Disables bus error on multi-bit ECC error for data."]
-    DISABLE = 0x01,
+    Disable = 0x01,
 }
 impl DisMbeccErrData {
     #[inline(always)]
@@ -4051,9 +4202,9 @@ impl From<DisMbeccErrData> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum DisMbeccErrInst {
     #[doc = "Enables bus error on multi-bit ECC error for instruction."]
-    ENABLE = 0x0,
+    Enable = 0x0,
     #[doc = "Disables bus error on multi-bit ECC error for instruction."]
-    DISABLE = 0x01,
+    Disable = 0x01,
 }
 impl DisMbeccErrInst {
     #[inline(always)]
@@ -4082,23 +4233,23 @@ impl From<DisMbeccErrInst> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlashSize {
     #[doc = "32KB."]
-    SIZE_32KB = 0x0,
+    Size32kb = 0x0,
     #[doc = "64KB."]
-    SIZE_64KB = 0x01,
+    Size64kb = 0x01,
     #[doc = "128KB."]
-    SIZE_128KB = 0x02,
+    Size128kb = 0x02,
     #[doc = "256KB."]
-    SIZE_256KB = 0x03,
+    Size256kb = 0x03,
     #[doc = "512KB."]
-    SIZE_512KB = 0x04,
+    Size512kb = 0x04,
     #[doc = "768KB."]
-    SIZE_768KB = 0x05,
+    Size768kb = 0x05,
     #[doc = "1MB."]
-    SIZE_1MB = 0x06,
+    Size1mb = 0x06,
     #[doc = "1.5MB."]
-    SIZE_1P5MB = 0x07,
+    Size1p5mb = 0x07,
     #[doc = "2MB."]
-    SIZE_2MB = 0x08,
+    Size2mb = 0x08,
     _RESERVED_9 = 0x09,
     _RESERVED_a = 0x0a,
     _RESERVED_b = 0x0b,
@@ -4134,9 +4285,9 @@ impl From<FlashSize> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FlashStallEn {
     #[doc = "No stall on FLASH busy."]
-    ENABLE = 0x0,
+    Enable = 0x0,
     #[doc = "Stall on FLASH busy."]
-    DISABLE = 0x01,
+    Disable = 0x01,
 }
 impl FlashStallEn {
     #[inline(always)]
@@ -4165,9 +4316,9 @@ impl From<FlashStallEn> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FrcNoAlloc {
     #[doc = "Forces allocation."]
-    ENABLE = 0x0,
+    Enable = 0x0,
     #[doc = "Forces no allocation."]
-    DISABLE = 0x01,
+    Disable = 0x01,
 }
 impl FrcNoAlloc {
     #[inline(always)]
@@ -4196,9 +4347,9 @@ impl From<FrcNoAlloc> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FrohfdivHalt {
     #[doc = "Divider clock is running."]
-    RUN = 0x0,
+    Run = 0x0,
     #[doc = "Divider clock is stopped."]
-    HALT = 0x01,
+    Halt = 0x01,
 }
 impl FrohfdivHalt {
     #[inline(always)]
@@ -4227,9 +4378,9 @@ impl From<FrohfdivHalt> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FrohfdivReset {
     #[doc = "Divider is not reset."]
-    RELEASED = 0x0,
+    Released = 0x0,
     #[doc = "Divider is reset."]
-    ASSERTED = 0x01,
+    Asserted = 0x01,
 }
 impl FrohfdivReset {
     #[inline(always)]
@@ -4258,9 +4409,9 @@ impl From<FrohfdivReset> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FrohfdivUnstab {
     #[doc = "Divider clock is stable."]
-    STABLE = 0x0,
+    Stable = 0x0,
     #[doc = "Clock frequency is not stable."]
-    ONGOING = 0x01,
+    Ongoing = 0x01,
 }
 impl FrohfdivUnstab {
     #[inline(always)]
@@ -4289,9 +4440,9 @@ impl From<FrohfdivUnstab> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FrolfdivHalt {
     #[doc = "Divider clock is running."]
-    RUN = 0x0,
+    Run = 0x0,
     #[doc = "Divider clock is stopped."]
-    HALT = 0x01,
+    Halt = 0x01,
 }
 impl FrolfdivHalt {
     #[inline(always)]
@@ -4320,9 +4471,9 @@ impl From<FrolfdivHalt> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FrolfdivReset {
     #[doc = "Divider is not reset."]
-    RELEASED = 0x0,
+    Released = 0x0,
     #[doc = "Divider is reset."]
-    ASSERTED = 0x01,
+    Asserted = 0x01,
 }
 impl FrolfdivReset {
     #[inline(always)]
@@ -4351,9 +4502,9 @@ impl From<FrolfdivReset> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum FrolfdivUnstab {
     #[doc = "Divider clock is stable."]
-    STABLE = 0x0,
+    Stable = 0x0,
     #[doc = "Clock frequency is not stable."]
-    ONGOING = 0x01,
+    Ongoing = 0x01,
 }
 impl FrolfdivUnstab {
     #[inline(always)]
@@ -4382,9 +4533,9 @@ impl From<FrolfdivUnstab> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IfrEraseDis0 {
     #[doc = "Enable IFR sector erase."]
-    ENABLE = 0x0,
+    Enable = 0x0,
     #[doc = "Disable IFR sector erase, write one lock until a system reset."]
-    DISABLE = 0x01,
+    Disable = 0x01,
 }
 impl IfrEraseDis0 {
     #[inline(always)]
@@ -4413,9 +4564,9 @@ impl From<IfrEraseDis0> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IfrEraseDis1 {
     #[doc = "Enable IFR sector erase."]
-    ENABLE = 0x0,
+    Enable = 0x0,
     #[doc = "Disable IFR sector erase, write one lock until a system reset."]
-    DISABLE = 0x01,
+    Disable = 0x01,
 }
 impl IfrEraseDis1 {
     #[inline(always)]
@@ -4444,9 +4595,9 @@ impl From<IfrEraseDis1> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IfrEraseDis2 {
     #[doc = "Enable IFR sector erase."]
-    ENABLE = 0x0,
+    Enable = 0x0,
     #[doc = "Disable IFR sector erase, write one lock until a system reset."]
-    DISABLE = 0x01,
+    Disable = 0x01,
 }
 impl IfrEraseDis2 {
     #[inline(always)]
@@ -4475,9 +4626,9 @@ impl From<IfrEraseDis2> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum IfrEraseDis3 {
     #[doc = "Enable IFR sector erase."]
-    ENABLE = 0x0,
+    Enable = 0x0,
     #[doc = "Disable IFR sector erase, write one lock until a system reset."]
-    DISABLE = 0x01,
+    Disable = 0x01,
 }
 impl IfrEraseDis3 {
     #[inline(always)]
@@ -4506,9 +4657,9 @@ impl From<IfrEraseDis3> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Interleave {
     #[doc = "RAM access is consecutive."]
-    NORMAL = 0x0,
+    Normal = 0x0,
     #[doc = "RAM access is interleaved. This setting is need for PKC L0 memory access."]
-    INTERLEAVE = 0x01,
+    Interleave = 0x01,
 }
 impl Interleave {
     #[inline(always)]
@@ -4535,9 +4686,44 @@ impl From<Interleave> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum KeySel {
+    #[doc = "DUK: UID\\[127:0\\]^RTL_CONST1\\[127:0\\]."]
+    Duk0 = 0x0,
+    #[doc = "DUK: UID\\[127:0\\]^RTL_CONST1\\[127:0\\]."]
+    Duk1 = 0x01,
+    #[doc = "DeviceHSM."]
+    DeviceHsm = 0x02,
+    #[doc = "NXP_mRoT."]
+    NxpMRoT = 0x03,
+}
+impl KeySel {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> KeySel {
+        unsafe { core::mem::transmute(val & 0x03) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for KeySel {
+    #[inline(always)]
+    fn from(val: u8) -> KeySel {
+        KeySel::from_bits(val)
+    }
+}
+impl From<KeySel> for u8 {
+    #[inline(always)]
+    fn from(val: KeySel) -> u8 {
+        KeySel::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum LockAll {
     #[doc = "Any other value than b1010: disables write access to all registers."]
-    DISABLE = 0x0,
+    Disable = 0x0,
     _RESERVED_1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
@@ -4548,7 +4734,7 @@ pub enum LockAll {
     _RESERVED_8 = 0x08,
     _RESERVED_9 = 0x09,
     #[doc = "Enables write access to all registers."]
-    ENABLE = 0x0a,
+    Enable = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
@@ -4582,9 +4768,9 @@ impl From<LockAll> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Locknsmpu {
     #[doc = "Unlock these registers. privileged access to Nonsecure MPU memory regions is allowed."]
-    ENABLE = 0x0,
+    Enable = 0x0,
     #[doc = "Disable writes to the MPU_CTRL_NS, MPU_RNR_NS, MPU_RBAR_NS, MPU_RLAR_NS, MPU_RBAR_A_NSn and MPU_RLAR_A_NSn. All writes to the registers are ignored."]
-    DISABLE = 0x01,
+    Disable = 0x01,
 }
 impl Locknsmpu {
     #[inline(always)]
@@ -4613,9 +4799,9 @@ impl From<Locknsmpu> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MassEraseDis {
     #[doc = "Enables mass erase."]
-    ENABLE = 0x0,
+    Enable = 0x0,
     #[doc = "Disables mass erase, write one lock until a system reset."]
-    DISABLE = 0x01,
+    Disable = 0x01,
 }
 impl MassEraseDis {
     #[inline(always)]
@@ -4644,9 +4830,9 @@ impl From<MassEraseDis> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Noref {
     #[doc = "Reference clock is provided."]
-    YES_REF = 0x0,
+    YesRef = 0x0,
     #[doc = "No reference clock is provided."]
-    NO_REF = 0x01,
+    NoRef = 0x01,
 }
 impl Noref {
     #[inline(always)]
@@ -4675,9 +4861,9 @@ impl From<Noref> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pkc {
     #[doc = "RAMX0: alias space is disabled."]
-    PKC_0 = 0x0,
+    Pkc0 = 0x0,
     #[doc = "RAMX0: same alias space as CPU0_SBUS."]
-    PKC_1 = 0x01,
+    Pkc1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -4708,13 +4894,13 @@ impl From<Pkc> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PkcEls {
     #[doc = "level 0."]
-    LEVEL0 = 0x0,
+    Level0 = 0x0,
     #[doc = "level 1."]
-    LEVEL1 = 0x01,
+    Level1 = 0x01,
     #[doc = "level 2."]
-    LEVEL2 = 0x02,
+    Level2 = 0x02,
     #[doc = "level 3."]
-    LEVEL3 = 0x03,
+    Level3 = 0x03,
 }
 impl PkcEls {
     #[inline(always)]
@@ -4743,9 +4929,9 @@ impl From<PkcEls> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pll1clkdivHalt {
     #[doc = "Divider clock is running."]
-    RUN = 0x0,
+    Run = 0x0,
     #[doc = "Divider clock is stopped."]
-    HALT = 0x01,
+    Halt = 0x01,
 }
 impl Pll1clkdivHalt {
     #[inline(always)]
@@ -4774,9 +4960,9 @@ impl From<Pll1clkdivHalt> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pll1clkdivReset {
     #[doc = "Divider is not reset."]
-    RELEASED = 0x0,
+    Released = 0x0,
     #[doc = "Divider is reset."]
-    ASSERTED = 0x01,
+    Asserted = 0x01,
 }
 impl Pll1clkdivReset {
     #[inline(always)]
@@ -4805,9 +4991,9 @@ impl From<Pll1clkdivReset> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Pll1clkdivUnstab {
     #[doc = "Divider clock is stable."]
-    STABLE = 0x0,
+    Stable = 0x0,
     #[doc = "Clock frequency is not stable."]
-    ONGOING = 0x01,
+    Ongoing = 0x01,
 }
 impl Pll1clkdivUnstab {
     #[inline(always)]
@@ -4836,9 +5022,9 @@ impl From<Pll1clkdivUnstab> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum ProtlvlLock {
     #[doc = "This register is not locked and can be altered."]
-    LOCK_0 = 0x0,
+    Lock0 = 0x0,
     #[doc = "This register is locked and cannot be altered until a system reset."]
-    LOCK_1 = 0x01,
+    Lock1 = 0x01,
 }
 impl ProtlvlLock {
     #[inline(always)]
@@ -4867,29 +5053,29 @@ impl From<ProtlvlLock> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RamSize {
     #[doc = "8KB."]
-    SIZE_8KB = 0x0,
+    Size8kb = 0x0,
     #[doc = "16KB."]
-    SIZE_16KB = 0x01,
+    Size16kb = 0x01,
     #[doc = "32KB."]
-    SIZE_32KB = 0x02,
+    Size32kb = 0x02,
     #[doc = "64KB."]
-    SIZE_64KB = 0x03,
+    Size64kb = 0x03,
     #[doc = "96KB."]
-    SIZE_96KB = 0x04,
+    Size96kb = 0x04,
     #[doc = "128KB."]
-    SIZE_128KB = 0x05,
+    Size128kb = 0x05,
     #[doc = "160KB."]
-    SIZE_160KB = 0x06,
+    Size160kb = 0x06,
     #[doc = "192KB."]
-    SIZE_192KB = 0x07,
+    Size192kb = 0x07,
     #[doc = "256KB."]
-    SIZE_256KB = 0x08,
+    Size256kb = 0x08,
     #[doc = "288KB."]
-    SIZE_288KB = 0x09,
+    Size288kb = 0x09,
     #[doc = "352KB."]
-    SIZE_352KB = 0x0a,
+    Size352kb = 0x0a,
     #[doc = "512KB."]
-    SIZE_512KB = 0x0b,
+    Size512kb = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
     _RESERVED_e = 0x0e,
@@ -4922,9 +5108,9 @@ impl From<RamSize> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RemapCpu0Sbus {
     #[doc = "RAMX0: alias space is disabled."]
-    CPU0_SBUS_0 = 0x0,
+    Cpu0Sbus0 = 0x0,
     #[doc = "RAMX0: alias space is enabled. It's linear address space from bottom of system ram. The start address is 0x20000000 + (system ram size - RAMX size)*1024."]
-    CPU0_SBUS_1 = 0x01,
+    Cpu0Sbus1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -4955,9 +5141,9 @@ impl From<RemapCpu0Sbus> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RemapDma0 {
     #[doc = "RAMX0: alias space is disabled."]
-    DMA0_0 = 0x0,
+    Dma00 = 0x0,
     #[doc = "RAMX0: same alias space as CPU0_SBUS."]
-    DMA0_1 = 0x01,
+    Dma01 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -4988,9 +5174,9 @@ impl From<RemapDma0> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum RemapLock {
     #[doc = "This register is not locked and can be altered."]
-    LOCK_0 = 0x0,
+    Lock0 = 0x0,
     #[doc = "This register is locked and cannot be altered until a system reset."]
-    LOCK_1 = 0x01,
+    Lock1 = 0x01,
 }
 impl RemapLock {
     #[inline(always)]
@@ -5019,9 +5205,9 @@ impl From<RemapLock> for u8 {
 pub struct SecCode(u32);
 impl SecCode {
     #[doc = "CPU0 DAP is not allowed. Reading back register is read as 0x5."]
-    pub const DISABLE: Self = Self(0x0);
+    pub const Disable: Self = Self(0x0);
     #[doc = "Value to write to enable CPU0 SWD access. Reading back register is read as 0xA."]
-    pub const ENABLE: Self = Self(0x1234_5678);
+    pub const Enable: Self = Self(0x1234_5678);
 }
 impl SecCode {
     pub const fn from_bits(val: u32) -> SecCode {
@@ -5034,8 +5220,8 @@ impl SecCode {
 impl core::fmt::Debug for SecCode {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         match self.0 {
-            0x0 => f.write_str("DISABLE"),
-            0x1234_5678 => f.write_str("ENABLE"),
+            0x0 => f.write_str("Disable"),
+            0x1234_5678 => f.write_str("Enable"),
             other => core::write!(f, "0x{:02X}", other),
         }
     }
@@ -5044,8 +5230,8 @@ impl core::fmt::Debug for SecCode {
 impl defmt::Format for SecCode {
     fn format(&self, f: defmt::Formatter) {
         match self.0 {
-            0x0 => defmt::write!(f, "DISABLE"),
-            0x1234_5678 => defmt::write!(f, "ENABLE"),
+            0x0 => defmt::write!(f, "Disable"),
+            0x1234_5678 => defmt::write!(f, "Enable"),
             other => defmt::write!(f, "0x{:02X}", other),
         }
     }
@@ -5072,13 +5258,13 @@ pub enum Security {
     _RESERVED_3 = 0x03,
     _RESERVED_4 = 0x04,
     #[doc = "Secure version."]
-    NON_SEC = 0x05,
+    NonSec = 0x05,
     _RESERVED_6 = 0x06,
     _RESERVED_7 = 0x07,
     _RESERVED_8 = 0x08,
     _RESERVED_9 = 0x09,
     #[doc = "Non secure version."]
-    SECURITY_10 = 0x0a,
+    Security10 = 0x0a,
     _RESERVED_b = 0x0b,
     _RESERVED_c = 0x0c,
     _RESERVED_d = 0x0d,
@@ -5112,9 +5298,9 @@ impl From<Security> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Skew {
     #[doc = "TENMS value is exact."]
-    EXACT = 0x0,
+    Exact = 0x0,
     #[doc = "TENMS value is not exact or not given."]
-    INEXACT = 0x01,
+    Inexact = 0x01,
 }
 impl Skew {
     #[inline(always)]
@@ -5143,9 +5329,9 @@ impl From<Skew> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SlowclkdivHalt {
     #[doc = "Divider clock is running."]
-    RUN = 0x0,
+    Run = 0x0,
     #[doc = "Divider clock is stopped."]
-    HALT = 0x01,
+    Halt = 0x01,
 }
 impl SlowclkdivHalt {
     #[inline(always)]
@@ -5174,9 +5360,9 @@ impl From<SlowclkdivHalt> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SlowclkdivReset {
     #[doc = "Divider is not reset."]
-    RELEASED = 0x0,
+    Released = 0x0,
     #[doc = "Divider is reset."]
-    ASSERTED = 0x01,
+    Asserted = 0x01,
 }
 impl SlowclkdivReset {
     #[inline(always)]
@@ -5205,9 +5391,9 @@ impl From<SlowclkdivReset> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SlowclkdivUnstab {
     #[doc = "Divider clock is stable."]
-    STABLE = 0x0,
+    Stable = 0x0,
     #[doc = "Clock frequency is not stable."]
-    ONGOING = 0x01,
+    Ongoing = 0x01,
 }
 impl SlowclkdivUnstab {
     #[inline(always)]
@@ -5236,9 +5422,9 @@ impl From<SlowclkdivUnstab> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SmartDmaD {
     #[doc = "RAMX0: alias space is disabled."]
-    SMART_DMA_D_0 = 0x0,
+    SmartDmaD0 = 0x0,
     #[doc = "RAMX0: same alias space as CPU0_SBUS."]
-    SMART_DMA_D_1 = 0x01,
+    SmartDmaD1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -5269,9 +5455,9 @@ impl From<SmartDmaD> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SmartDmaI {
     #[doc = "RAMX0: alias space is disabled."]
-    SMART_DMA_I_0 = 0x0,
+    SmartDmaI0 = 0x0,
     #[doc = "RAMX0: same alias space as CPU0_SBUS."]
-    SMART_DMA_I_1 = 0x01,
+    SmartDmaI1 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -5302,9 +5488,9 @@ impl From<SmartDmaI> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum SramXenLock {
     #[doc = "This register is not locked and can be altered."]
-    LOCK_0 = 0x0,
+    Lock0 = 0x0,
     #[doc = "This register is locked and cannot be altered."]
-    LOCK_1 = 0x01,
+    Lock1 = 0x01,
 }
 impl SramXenLock {
     #[inline(always)]
@@ -5331,11 +5517,99 @@ impl From<SramXenLock> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum UdfHidden {
+    _RESERVED_0 = 0x0,
+    _RESERVED_1 = 0x01,
+    _RESERVED_2 = 0x02,
+    _RESERVED_3 = 0x03,
+    _RESERVED_4 = 0x04,
+    _RESERVED_5 = 0x05,
+    _RESERVED_6 = 0x06,
+    _RESERVED_7 = 0x07,
+    _RESERVED_8 = 0x08,
+    _RESERVED_9 = 0x09,
+    #[doc = "Enable the access of UDF register from APB bus. All other value, disable the read/write of UDF register from UDF APB bus."]
+    UdfHidden = 0x0a,
+    _RESERVED_b = 0x0b,
+    _RESERVED_c = 0x0c,
+    _RESERVED_d = 0x0d,
+    _RESERVED_e = 0x0e,
+    _RESERVED_f = 0x0f,
+}
+impl UdfHidden {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> UdfHidden {
+        unsafe { core::mem::transmute(val & 0x0f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for UdfHidden {
+    #[inline(always)]
+    fn from(val: u8) -> UdfHidden {
+        UdfHidden::from_bits(val)
+    }
+}
+impl From<UdfHidden> for u8 {
+    #[inline(always)]
+    fn from(val: UdfHidden) -> u8 {
+        UdfHidden::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+pub enum UidHidden {
+    _RESERVED_0 = 0x0,
+    _RESERVED_1 = 0x01,
+    _RESERVED_2 = 0x02,
+    _RESERVED_3 = 0x03,
+    _RESERVED_4 = 0x04,
+    _RESERVED_5 = 0x05,
+    _RESERVED_6 = 0x06,
+    _RESERVED_7 = 0x07,
+    _RESERVED_8 = 0x08,
+    _RESERVED_9 = 0x09,
+    #[doc = "Enable the access of UID\\[127:0\\] register. All other value, disable the read/write of UID\\[127:0\\] register."]
+    UidHidden = 0x0a,
+    _RESERVED_b = 0x0b,
+    _RESERVED_c = 0x0c,
+    _RESERVED_d = 0x0d,
+    _RESERVED_e = 0x0e,
+    _RESERVED_f = 0x0f,
+}
+impl UidHidden {
+    #[inline(always)]
+    pub const fn from_bits(val: u8) -> UidHidden {
+        unsafe { core::mem::transmute(val & 0x0f) }
+    }
+    #[inline(always)]
+    pub const fn to_bits(self) -> u8 {
+        unsafe { core::mem::transmute(self) }
+    }
+}
+impl From<u8> for UidHidden {
+    #[inline(always)]
+    fn from(val: u8) -> UidHidden {
+        UidHidden::from_bits(val)
+    }
+}
+impl From<UidHidden> for u8 {
+    #[inline(always)]
+    fn from(val: UidHidden) -> u8 {
+        UidHidden::to_bits(val)
+    }
+}
+#[repr(u8)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Unlock {
     #[doc = "Updates are allowed to all clock configuration registers."]
-    ENABLE = 0x0,
+    Enable = 0x0,
     #[doc = "Freezes all clock configuration registers update."]
-    FREEZE = 0x01,
+    Freeze = 0x01,
 }
 impl Unlock {
     #[inline(always)]
@@ -5364,9 +5638,9 @@ impl From<Unlock> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Usb0 {
     #[doc = "RAMX0: alias space is disabled."]
-    USB0_0 = 0x0,
+    Usb00 = 0x0,
     #[doc = "RAMX0: same alias space as CPU0_SBUS."]
-    USB0_1 = 0x01,
+    Usb01 = 0x01,
     _RESERVED_2 = 0x02,
     _RESERVED_3 = 0x03,
 }
@@ -5397,13 +5671,13 @@ impl From<Usb0> for u8 {
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum UsbFsEnet {
     #[doc = "level 0."]
-    LEVEL0 = 0x0,
+    Level0 = 0x0,
     #[doc = "level 1."]
-    LEVEL1 = 0x01,
+    Level1 = 0x01,
     #[doc = "level 2."]
-    LEVEL2 = 0x02,
+    Level2 = 0x02,
     #[doc = "level 3."]
-    LEVEL3 = 0x03,
+    Level3 = 0x03,
 }
 impl UsbFsEnet {
     #[inline(always)]
