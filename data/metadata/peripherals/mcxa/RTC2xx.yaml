@@ -131,7 +131,6 @@ fieldset/Tcr:
     description: Time Compensation Register.
     bit_offset: 0
     bit_size: 8
-    enum: Tcr
   - name: cir
     description: Compensation Interval Register.
     bit_offset: 8
@@ -212,30 +211,6 @@ enum/Tcl:
   - name: Tcl1
     description: Time Compensation Register is not locked and writes complete as normal.
     value: 1
-enum/Tcr:
-  bit_size: 8
-  variants:
-  - name: Tcr0
-    description: Time Prescaler Register overflows every 32768 clock cycles.
-    value: 0
-  - name: Tcr1
-    description: Time Prescaler Register overflows every 32767 clock cycles.
-    value: 1
-  - name: Tcr126
-    description: Time Prescaler Register overflows every 32642 clock cycles.
-    value: 126
-  - name: Tcr127
-    description: Time Prescaler Register overflows every 32641 clock cycles.
-    value: 127
-  - name: Tcr128
-    description: Time Prescaler Register overflows every 32896 clock cycles.
-    value: 128
-  - name: Tcr129
-    description: Time Prescaler Register overflows every 32895 clock cycles.
-    value: 129
-  - name: Tcr255
-    description: Time Prescaler Register overflows every 32769 clock cycles.
-    value: 255
 enum/Tsic:
   bit_size: 3
   variants:

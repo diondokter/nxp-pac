@@ -434,14 +434,14 @@ impl Tcr {
     #[doc = "Time Compensation Register."]
     #[must_use]
     #[inline(always)]
-    pub const fn tcr(&self) -> Tcr {
+    pub const fn tcr(&self) -> u8 {
         let val = (self.0 >> 0usize) & 0xff;
-        Tcr::from_bits(val as u8)
+        val as u8
     }
     #[doc = "Time Compensation Register."]
     #[inline(always)]
-    pub const fn set_tcr(&mut self, val: Tcr) {
-        self.0 = (self.0 & !(0xff << 0usize)) | (((val.to_bits() as u32) & 0xff) << 0usize);
+    pub const fn set_tcr(&mut self, val: u8) {
+        self.0 = (self.0 & !(0xff << 0usize)) | (((val as u32) & 0xff) << 0usize);
     }
     #[doc = "Compensation Interval Register."]
     #[must_use]
@@ -501,7 +501,7 @@ impl defmt::Format for Tcr {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Tcr {{ tcr: {:?}, cir: {=u8:?}, tcv: {=u8:?}, cic: {=u8:?} }}",
+            "Tcr {{ tcr: {=u8:?}, cir: {=u8:?}, tcv: {=u8:?}, cic: {=u8:?} }}",
             self.tcr(),
             self.cir(),
             self.tcv(),
@@ -763,74 +763,6 @@ impl From<Tcl> for u8 {
     #[inline(always)]
     fn from(val: Tcl) -> u8 {
         Tcl::to_bits(val)
-    }
-}
-#[repr(transparent)]
-#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
-pub struct Tcr(u8);
-impl Tcr {
-    #[doc = "Time Prescaler Register overflows every 32768 clock cycles."]
-    pub const Tcr0: Self = Self(0x0);
-    #[doc = "Time Prescaler Register overflows every 32767 clock cycles."]
-    pub const Tcr1: Self = Self(0x01);
-    #[doc = "Time Prescaler Register overflows every 32642 clock cycles."]
-    pub const Tcr126: Self = Self(0x7e);
-    #[doc = "Time Prescaler Register overflows every 32641 clock cycles."]
-    pub const Tcr127: Self = Self(0x7f);
-    #[doc = "Time Prescaler Register overflows every 32896 clock cycles."]
-    pub const Tcr128: Self = Self(0x80);
-    #[doc = "Time Prescaler Register overflows every 32895 clock cycles."]
-    pub const Tcr129: Self = Self(0x81);
-    #[doc = "Time Prescaler Register overflows every 32769 clock cycles."]
-    pub const Tcr255: Self = Self(0xff);
-}
-impl Tcr {
-    pub const fn from_bits(val: u8) -> Tcr {
-        Self(val & 0xff)
-    }
-    pub const fn to_bits(self) -> u8 {
-        self.0
-    }
-}
-impl core::fmt::Debug for Tcr {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        match self.0 {
-            0x0 => f.write_str("Tcr0"),
-            0x01 => f.write_str("Tcr1"),
-            0x7e => f.write_str("Tcr126"),
-            0x7f => f.write_str("Tcr127"),
-            0x80 => f.write_str("Tcr128"),
-            0x81 => f.write_str("Tcr129"),
-            0xff => f.write_str("Tcr255"),
-            other => core::write!(f, "0x{:02X}", other),
-        }
-    }
-}
-#[cfg(feature = "defmt")]
-impl defmt::Format for Tcr {
-    fn format(&self, f: defmt::Formatter) {
-        match self.0 {
-            0x0 => defmt::write!(f, "Tcr0"),
-            0x01 => defmt::write!(f, "Tcr1"),
-            0x7e => defmt::write!(f, "Tcr126"),
-            0x7f => defmt::write!(f, "Tcr127"),
-            0x80 => defmt::write!(f, "Tcr128"),
-            0x81 => defmt::write!(f, "Tcr129"),
-            0xff => defmt::write!(f, "Tcr255"),
-            other => defmt::write!(f, "0x{:02X}", other),
-        }
-    }
-}
-impl From<u8> for Tcr {
-    #[inline(always)]
-    fn from(val: u8) -> Tcr {
-        Tcr::from_bits(val)
-    }
-}
-impl From<Tcr> for u8 {
-    #[inline(always)]
-    fn from(val: Tcr) -> u8 {
-        Tcr::to_bits(val)
     }
 }
 #[repr(u8)]
