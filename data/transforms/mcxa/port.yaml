@@ -53,7 +53,7 @@ transforms:
   - !MergeEnums
     from: port\d+::(.+)
     to: port::$1
-  
+
   - !MergeFieldsets
     from: port\d+::(.+)
     to: port::$1
@@ -91,7 +91,7 @@ transforms:
     from: (dse1|pfe|pv)
 
   - !DeleteEnums
-    from: port::Pcr(\d+)(Dse|Dse1|Pfe)
+    from: port::Pcr(\d+)(Dse1|Pfe)
   - !DeleteEnums
     from: port::Pv
 

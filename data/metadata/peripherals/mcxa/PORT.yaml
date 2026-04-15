@@ -90,6 +90,7 @@ fieldset/Pcr:
     description: Drive Strength Enable.
     bit_offset: 6
     bit_size: 1
+    enum: Dse
   - name: mux
     description: Pin Multiplex Control.
     bit_offset: 8
@@ -126,6 +127,15 @@ fieldset/Verid:
     description: Major Version Number.
     bit_offset: 24
     bit_size: 8
+enum/Dse:
+  bit_size: 1
+  variants:
+  - name: Dse0
+    description: Low.
+    value: 0
+  - name: Dse1
+    description: High.
+    value: 1
 enum/Feature:
   bit_size: 16
   variants:
