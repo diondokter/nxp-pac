@@ -1,0 +1,5 @@
+transforms:
+  - !RenameFields
+    fieldset: scg0::Firccfg
+    from: range
+    to: freq_sel

@@ -475,7 +475,7 @@ fieldset/Csr:
 fieldset/Firccfg:
   description: FIRC Configuration Register.
   fields:
-  - name: range
+  - name: freq_sel
     description: Frequency Range.
     bit_offset: 0
     bit_size: 1
