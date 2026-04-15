@@ -862,7 +862,7 @@ fieldset/Sosccfg:
     description: SOSC Range Select(connect to analog pin gm_lv[1:0]).
     bit_offset: 4
     bit_size: 2
-    enum: SosccfgRange
+    enum: Range
 fieldset/Sosccsr:
   description: SOSC Control Status Register.
   fields:
@@ -1020,7 +1020,7 @@ fieldset/Spllctrl:
     description: Clock Source.
     bit_offset: 25
     bit_size: 2
-    enum: SpllctrlSource
+    enum: Source
 fieldset/SplllockCnfg:
   description: SPLL LOCK Configuration Register.
   fields:
@@ -1469,6 +1469,21 @@ enum/Overstress:
   - name: OverstressEn
     description: Over stress test is enabled.
     value: 1
+enum/Range:
+  bit_size: 2
+  variants:
+  - name: Freq16to20mhz
+    description: Frequency range select of 16-20 MHz.
+    value: 0
+  - name: LowFreq
+    description: Frequency range select of 20-30 MHz.
+    value: 1
+  - name: MediumFreq
+    description: Frequency range select of 30-50 MHz.
+    value: 2
+  - name: HighFreq
+    description: Frequency range select of 50-66 MHz.
+    value: 3
 enum/Rosccmre:
   bit_size: 1
   variants:
@@ -1598,21 +1613,6 @@ enum/Sircvld:
   - name: EnabledAndValid
     description: SIRC is enabled and output clock is valid.
     value: 1
-enum/SosccfgRange:
-  bit_size: 2
-  variants:
-  - name: Freq16to20mhz
-    description: Frequency range select of 16-20 MHz.
-    value: 0
-  - name: LowFreq
-    description: Frequency range select of 20-30 MHz.
-    value: 1
-  - name: MediumFreq
-    description: Frequency range select of 30-50 MHz.
-    value: 2
-  - name: HighFreq
-    description: Frequency range select of 50-66 MHz.
-    value: 3
 enum/Sosccmre:
   bit_size: 1
   variants:
@@ -1640,6 +1640,21 @@ enum/Soscerr:
   - name: EnabledAndError
     description: SOSC Clock Monitor is enabled and detected an error.
     value: 1
+enum/Source:
+  bit_size: 2
+  variants:
+  - name: Sosc
+    description: SOSC
+    value: 0
+  - name: Firc
+    description: FIRC 45 MHz clock. FIRC_SCLK_PERIPH_EN needs to be set to use FIRC 45 MHz clock.
+    value: 1
+  - name: Rosc
+    description: ROSC
+    value: 2
+  - name: Sirc
+    description: SIRC 12 MHz clock
+    value: 3
 enum/SpllLock:
   bit_size: 1
   variants:
@@ -1667,18 +1682,6 @@ enum/SpllcsrLk:
   - name: WriteDisabled
     description: Control Status Register cannot be written.
     value: 1
-enum/SpllctrlSource:
-  bit_size: 2
-  variants:
-  - name: Sosc
-    description: SOSC.
-    value: 0
-  - name: Firc
-    description: FIRC 48 MHz clock. FIRC_SCLK_PERIPH_EN must be set to use FIRC 48 MHz clock.
-    value: 1
-  - name: Rsvd
-    description: No clock.
-    value: 3
 enum/Spllerr:
   bit_size: 1
   variants:
