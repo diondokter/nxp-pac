@@ -43,6 +43,10 @@ block/Tcd:
       description: Channel Priority.
       byte_offset: 16
       fieldset: ChPri
+    - name: ch_mux
+      description: Channel Multiplexor Configuration.
+      byte_offset: 20
+      fieldset: ChMux
     - name: tcd_saddr
       description: TCD Source Address.
       byte_offset: 32
@@ -180,6 +184,13 @@ fieldset/ChInt:
       description: Interrupt Request.
       bit_offset: 0
       bit_size: 1
+fieldset/ChMux:
+  description: Channel Multiplexor Configuration.
+  fields:
+    - name: src
+      description: Service Request Source.
+      bit_offset: 0
+      bit_size: 7
 fieldset/ChPri:
   description: Channel Priority.
   fields:
