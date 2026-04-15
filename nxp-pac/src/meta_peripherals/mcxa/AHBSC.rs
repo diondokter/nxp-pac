@@ -1,7 +1,7 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
 #![allow(non_upper_case_globals)]
-#![doc = "Peripheral access API (generated using chiptool v0.1.0 (be1bff3 2026-04-12))"]
+#![doc = "Peripheral access API (generated using chiptool v0.1.0 (859f02b 2026-04-15))"]
 #[doc = "AHBSC."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Ahbsc {
