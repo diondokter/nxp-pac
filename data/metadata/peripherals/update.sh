@@ -9,10 +9,14 @@ set -euxo pipefail
 # but this script allows for easy updating / checking if anything relevant has changed
 # when updating the SVDs.
 
-pushd ../../../
+CURRENT_DIR="$( dirname -- "${BASH_SOURCE[0]}" )"
+
+pushd $CURRENT_DIR/../../../
 cargo run -p generator -- extract MCXA256
 cargo run -p generator -- extract MCXA577
 popd
+
+pushd $CURRENT_DIR
 
 # Manually curated, do not change
 # cp raw/MCXA577/DMA.yaml mcxa/DMA.yaml
