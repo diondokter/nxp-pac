@@ -479,7 +479,7 @@ fieldset/Firccfg:
     description: Frequency Range.
     bit_offset: 0
     bit_size: 1
-    enum: FirccfgRange
+    enum: FreqSel
 fieldset/Firccsr:
   description: FIRC Control Status Register.
   fields:
@@ -1367,15 +1367,6 @@ enum/FircaccIe:
   - name: Fircaccyes
     description: FIRCACC interrupt is enabled.
     value: 1
-enum/FirccfgRange:
-  bit_size: 1
-  variants:
-  - name: Firc48mhz
-    description: 48 MHz FIRC clock selected.
-    value: 0
-  - name: Firc144mhz
-    description: 144 MHz FIRC clock selected.
-    value: 1
 enum/FirccsrLk:
   bit_size: 1
   variants:
@@ -1451,6 +1442,17 @@ enum/FlipBufIn:
   - name: FlipBufInEnabled
     description: Flip Buffer Inputs enabled.
     value: 1
+enum/FreqSel:
+  bit_size: 1
+  variants:
+  - name: Firc45_48mhz
+    value: 1
+  - name: Firc60_64mhz
+    value: 3
+  - name: Firc90_96mhz
+    value: 5
+  - name: Firc180_192mhz
+    value: 7
 enum/IfrDisable:
   bit_size: 1
   variants:

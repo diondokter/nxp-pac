@@ -2,3 +2,19 @@ transforms:
   - !MergeEnums
     from: scg0::(Rccr|Csr)Scs
     to: scg0::Scs
+
+  # MCXA256 uses different ranges than MCXA577
+  # Furthermore, MCXA577 SVD does not match data sheet
+  # For now, fill variants with both frequency sets
+  # TODO: use metapac clock tree to generate this
+  - !DeleteEnumVariants
+    enum: scg0::FreqSel
+    from: .*
+
+  - !AddEnumVariants
+    enum: scg0::FreqSel
+    variants:
+      - { name: Firc45_48mhz, value: 1 }
+      - { name: Firc60_64mhz, value: 3 }
+      - { name: Firc90_96mhz, value: 5 }
+      - { name: Firc180_192mhz, value: 7 }
