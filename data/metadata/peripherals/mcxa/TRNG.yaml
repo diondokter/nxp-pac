@@ -121,6 +121,13 @@ block/Trng:
     byte_offset: 60
     access: Read
     fieldset: Status
+  - name: ent
+    description: Entropy Read Register
+    array:
+      len: 8
+      stride: 4
+    byte_offset: 64
+    fieldset: Ent
   - name: pkrcnt10
     description: Statistical Check Poker Count 1 and 0 Register.
     byte_offset: 128
@@ -197,6 +204,13 @@ block/Trng:
     byte_offset: 248
     access: Read
     fieldset: OscInvChainLen
+fieldset/Ent:
+  description: Entropy Read Register.
+  fields:
+  - name: ent
+    description: Entropy Value.
+    bit_offset: 0
+    bit_size: 32
 fieldset/Frqcnt:
   description: Frequency Count Register.
   fields:
@@ -233,6 +247,10 @@ fieldset/IntCtrl:
     description: Clear the FRQ_CT_FAIL interrupt.
     bit_offset: 2
     bit_size: 1
+  - name: intg_flt
+    description: Clear the INTG_FLT interrupt
+    bit_offset: 3
+    bit_size: 1
 fieldset/IntMask:
   description: Mask Register.
   fields:
@@ -248,6 +266,10 @@ fieldset/IntMask:
     description: Mask the FRQ_CT_FAIL interrupt.
     bit_offset: 2
     bit_size: 1
+  - name: intg_flt
+    description: Mask the INTG_FLT interrupt
+    bit_offset: 3
+    bit_size: 1
 fieldset/IntStatus:
   description: Interrupt Status Register.
   fields:
@@ -259,10 +281,13 @@ fieldset/IntStatus:
     description: Entropy Valid.
     bit_offset: 1
     bit_size: 1
-    enum: IntStatusEntVal
   - name: frq_ct_fail
     description: Frequency Count Fail.
     bit_offset: 2
+    bit_size: 1
+  - name: intg_flt
+    description: Integrity Fault. An internal fault has occurred.
+    bit_offset: 3
     bit_size: 1
 fieldset/Mctl:
   description: Miscellaneous Control Register.
@@ -804,15 +829,6 @@ enum/Era:
   - name: EraVal
     description: ERA of the TRNG.
     value: 12
-enum/IntStatusEntVal:
-  bit_size: 1
-  variants:
-  - name: EntValInvalid
-    description: Busy generating entropy. Any value read from the Entropy registers is invalid.
-    value: 0
-  - name: EntValValid
-    description: Values read from the Entropy registers are valid.
-    value: 1
 enum/IntgOpt:
   bit_size: 8
   variants:
