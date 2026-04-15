@@ -10,8 +10,6 @@ Even though they are assembled by hand, they are derived from the SVD files prov
 This derivation ideally happens through chiptool transforms, but manual changes to these files are also allowed.
 When adding manual changes, please note them with appropriate comments in the YAML files.
 
-
-
 ## Updating
 The generator when using the `extract` command will put transformed SVD data into the `raw` folder.
 Anything in this folder is not used directly, but can be used by you as a start to define metapac peripherals and chips.
@@ -31,3 +29,5 @@ Thus the workflow to add or change a peripheral is as follows: (change MCXA577 t
 * It is also allowed to change the file by hand at this point, but please use comments to denote what and why you changed (and why you didn't use a transform).
 * Generate the new nxp-pac code by running `cargo run -p generator -- generate MCXA577`
 * Check the code changes and commit both the nxp-pac code and the metadata definitions.
+
+This process has been partially captured in the `update.sh` script in this directory.

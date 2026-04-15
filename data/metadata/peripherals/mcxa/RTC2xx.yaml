@@ -131,7 +131,7 @@ fieldset/Tcr:
     description: Time Compensation Register.
     bit_offset: 0
     bit_size: 8
-    enum: TcrVal
+    enum: Tcr
   - name: cir
     description: Compensation Interval Register.
     bit_offset: 8
@@ -161,114 +161,114 @@ fieldset/Tsr:
 enum/Crl:
   bit_size: 1
   variants:
-  - name: CRL_0
+  - name: Crl0
     description: Control Register is locked and writes are ignored.
     value: 0
-  - name: CRL_1
+  - name: Crl1
     description: Control Register is not locked and writes complete as normal.
     value: 1
 enum/Lpos:
   bit_size: 1
   variants:
-  - name: LPOS_0
+  - name: Lpos0
     description: RTC prescaler increments using 32.768 kHz clock.
     value: 0
-  - name: LPOS_1
+  - name: Lpos1
     description: RTC prescaler increments using 1 kHz LPO, bits [4:0] of the prescaler are ignored.
     value: 1
 enum/Lrl:
   bit_size: 1
   variants:
-  - name: LRL_0
+  - name: Lrl0
     description: Lock Register is locked and writes are ignored.
     value: 0
-  - name: LRL_1
+  - name: Lrl1
     description: Lock Register is not locked and writes complete as normal.
     value: 1
 enum/Srl:
   bit_size: 1
   variants:
-  - name: SRL_0
+  - name: Srl0
     description: Status Register is locked and writes are ignored.
     value: 0
-  - name: SRL_1
+  - name: Srl1
     description: Status Register is not locked and writes complete as normal.
     value: 1
 enum/Swr:
   bit_size: 1
   variants:
-  - name: SWR_0
+  - name: Swr0
     description: No effect.
     value: 0
-  - name: SWR_1
+  - name: Swr1
     description: Resets all RTC registers except for the SWR bit . The SWR bit is cleared by POR and by software explicitly clearing it.
     value: 1
 enum/Tcl:
   bit_size: 1
   variants:
-  - name: TCL_0
+  - name: Tcl0
     description: Time Compensation Register is locked and writes are ignored.
     value: 0
-  - name: TCL_1
+  - name: Tcl1
     description: Time Compensation Register is not locked and writes complete as normal.
     value: 1
-enum/TcrVal:
+enum/Tcr:
   bit_size: 8
   variants:
-  - name: TCR_0
+  - name: Tcr0
     description: Time Prescaler Register overflows every 32768 clock cycles.
     value: 0
-  - name: TCR_1
+  - name: Tcr1
     description: Time Prescaler Register overflows every 32767 clock cycles.
     value: 1
-  - name: TCR_126
+  - name: Tcr126
     description: Time Prescaler Register overflows every 32642 clock cycles.
     value: 126
-  - name: TCR_127
+  - name: Tcr127
     description: Time Prescaler Register overflows every 32641 clock cycles.
     value: 127
-  - name: TCR_128
+  - name: Tcr128
     description: Time Prescaler Register overflows every 32896 clock cycles.
     value: 128
-  - name: TCR_129
+  - name: Tcr129
     description: Time Prescaler Register overflows every 32895 clock cycles.
     value: 129
-  - name: TCR_255
+  - name: Tcr255
     description: Time Prescaler Register overflows every 32769 clock cycles.
     value: 255
 enum/Tsic:
   bit_size: 3
   variants:
-  - name: TSIC_0
+  - name: Tsic0
     description: 1 Hz.
     value: 0
-  - name: TSIC_1
+  - name: Tsic1
     description: 2 Hz.
     value: 1
-  - name: TSIC_2
+  - name: Tsic2
     description: 4 Hz.
     value: 2
-  - name: TSIC_3
+  - name: Tsic3
     description: 8 Hz.
     value: 3
-  - name: TSIC_4
+  - name: Tsic4
     description: 16 Hz.
     value: 4
-  - name: TSIC_5
+  - name: Tsic5
     description: 32 Hz.
     value: 5
-  - name: TSIC_6
+  - name: Tsic6
     description: 64 Hz.
     value: 6
-  - name: TSIC_7
+  - name: Tsic7
     description: 128 Hz.
     value: 7
 enum/Um:
   bit_size: 1
   variants:
-  - name: UM_0
+  - name: Um0
     description: Registers cannot be written when locked.
     value: 0
-  - name: UM_1
+  - name: Um1
     description: Registers can be written when locked under limited conditions.
     value: 1
