@@ -24,9 +24,9 @@ pub fn generate_meta_peripherals(current: &Path) -> anyhow::Result<()> {
         let _ = fs::remove_file(file.path());
     }
 
-    read_dir_all::read_dir_all(&yaml_peri_dir)?
+    let drivers = read_dir_all::read_dir_all(&yaml_peri_dir)?
         .par_bridge()
-        .try_for_each(|entry| {
+        .map(|entry| {
             let entry = entry?;
             let entry_path = entry.path().to_path_buf();
 
@@ -35,10 +35,15 @@ pub fn generate_meta_peripherals(current: &Path) -> anyhow::Result<()> {
                 || entry_path.is_dir()
                 || entry_path.extension().map(|e| e.to_string_lossy()) != Some("yaml".into())
             {
-                return Ok(());
+                return Ok(None);
             }
 
             tracing::info!("{}", relative_entry_path.display());
+            let driver_name = {
+                let mut path = relative_entry_path.to_path_buf();
+                path.set_extension(""); // Remove extension
+                path.to_string_lossy().to_string()
+            };
 
             let mut output_path = pac_peri_dir.join(relative_entry_path);
             output_path.set_extension("rs");
@@ -66,8 +71,42 @@ pub fn generate_meta_peripherals(current: &Path) -> anyhow::Result<()> {
 
             crate::util::rustfmt(&output_path).with_context(|| {
                 format!("Error formatting block {}", relative_entry_path.display())
-            })
-        })?;
+            })?;
+
+            Ok(Some(driver_name))
+        })
+        .filter_map(|x| x.transpose())
+        .collect::<Result<Vec<String>, anyhow::Error>>()?;
+
+    generate_meta_peripherals_mod(current, drivers)?;
+
+    Ok(())
+}
+
+/// Generate a file in meta_peripherals listing all peripherals.
+///
+/// Lists all peripherals regardless of whether it is in use,
+/// used for declaring `#cfg(driver)` attributes.
+fn generate_meta_peripherals_mod(current: &Path, mut drivers: Vec<String>) -> anyhow::Result<()> {
+    use std::fmt::Write;
+
+    // Ensure a consistent ordering, regardless of directory iteration order.
+    drivers.sort();
+
+    let mut contents = String::new();
+
+    writeln!(
+        &mut contents,
+        "{}",
+        quote! {
+            /// List of all nxp-pac peripherals, whether they are used or not.
+            pub const META_PERIPHERALS: &[&str] = &[#(#drivers),*];
+        }
+    )?;
+
+    let path = current.join("nxp-pac/src/meta_peripherals/_peripherals.rs");
+    fs::write(&path, contents.as_bytes()).context("writing contents to file")?;
+    crate::util::rustfmt(&path)?;
 
     Ok(())
 }
