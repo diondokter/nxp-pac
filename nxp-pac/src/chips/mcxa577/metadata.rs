@@ -9,554 +9,692 @@ pub const PINS: &[Pin] = &[
     Pin {
         name: "P1_8",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P1_9",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P1_10",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P1_11",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P1_12",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P1_13",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P1_14",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P1_15",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P1_16",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P1_17",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P1_18",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P1_19",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P1_29",
         iomuxc: None,
+        feature: Some("dangerous-reset-as-gpio"),
     },
     Pin {
         name: "P1_30",
         iomuxc: None,
+        feature: Some("sosc-as-gpio"),
     },
     Pin {
         name: "P1_31",
         iomuxc: None,
+        feature: Some("sosc-as-gpio"),
     },
     Pin {
         name: "P4_0",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P4_1",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P4_2",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P4_3",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P4_4",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P4_5",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P4_12",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P4_13",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P4_6",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P4_7",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P4_8",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P4_9",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P4_10",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P4_11",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P2_0",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P2_8",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P2_9",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P2_1",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P2_2",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P2_3",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P2_4",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P2_10",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P2_11",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P2_5",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P2_28",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P2_6",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P2_7",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P2_12",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P2_13",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P2_29",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P2_14",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P2_15",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P2_16",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P2_17",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P2_30",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P2_18",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P2_19",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P2_20",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P2_21",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P2_31",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P2_22",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P2_23",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P2_24",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P2_25",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P2_26",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P5_0",
         iomuxc: None,
+        feature: Some("rosc-32k-as-gpio"),
     },
     Pin {
         name: "P5_1",
         iomuxc: None,
+        feature: Some("rosc-32k-as-gpio"),
     },
     Pin {
         name: "P5_2",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P5_3",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P5_4",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P5_5",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P5_6",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P5_7",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P5_8",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P5_9",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P3_31",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P3_30",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P3_29",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P3_28",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P3_27",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P3_26",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P3_25",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P3_24",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P3_23",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P3_22",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P3_21",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P3_20",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P3_19",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P3_18",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P3_17",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P3_16",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P3_15",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P3_14",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P3_13",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P3_12",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P3_11",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P3_10",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P3_9",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P3_8",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P3_7",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P3_6",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P3_5",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P3_4",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P3_3",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P3_2",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P3_1",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P3_0",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P0_0",
         iomuxc: None,
+        feature: Some("swd-as-gpio"),
     },
     Pin {
         name: "P0_1",
         iomuxc: None,
+        feature: Some("swd-as-gpio"),
     },
     Pin {
         name: "P0_2",
         iomuxc: None,
+        feature: Some("swd-swo-as-gpio"),
     },
     Pin {
         name: "P0_3",
         iomuxc: None,
+        feature: Some("jtag-extras-as-gpio"),
     },
     Pin {
         name: "P0_4",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P0_5",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P0_6",
         iomuxc: None,
+        feature: Some("jtag-extras-as-gpio"),
     },
     Pin {
         name: "P0_7",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P0_8",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P0_9",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P0_10",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P0_11",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P0_12",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P0_13",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P0_14",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P0_15",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P0_16",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P0_17",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P0_18",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P0_19",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P0_20",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P0_21",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P0_22",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P0_23",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P0_24",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P0_25",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P0_26",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P0_27",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P1_0",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P1_1",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P1_2",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P1_3",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P1_4",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P1_5",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P1_6",
         iomuxc: None,
+        feature: None,
     },
     Pin {
         name: "P1_7",
         iomuxc: None,
+        feature: None,
     },
 ];
 pub const PERIPHERALS: &[Peripheral] = &[
@@ -6516,7 +6654,7 @@ pub const PERIPHERALS: &[Peripheral] = &[
                 iomuxc_daisy: None,
             },
             Signal {
-                name: "29",
+                name: "27",
                 pins: &[SignalPin {
                     pin: "P3_29",
                     alt: 0u8,

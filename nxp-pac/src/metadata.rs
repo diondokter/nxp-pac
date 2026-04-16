@@ -30,6 +30,7 @@ pub struct Metadata {
 pub struct Pin {
     pub name: &'static str,
     pub iomuxc: Option<PinIomuxc>,
+    pub feature: Option<&'static str>,
 }
 
 #[derive(Debug)]
