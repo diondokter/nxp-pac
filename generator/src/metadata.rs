@@ -156,11 +156,17 @@ fn generate_metadata(name: &str, metadata: &Metadata) -> TokenStream {
                 }
             })
             .unwrap_or_else(|| quote! { None });
+        let feature = pin
+            .feature
+            .as_ref()
+            .map(|feature| quote! { Some(#feature) })
+            .unwrap_or_else(|| quote! { None });
 
         quote! {
             Pin {
                 name: #name,
                 iomuxc: #iomuxc,
+                feature: #feature
             }
         }
     });
