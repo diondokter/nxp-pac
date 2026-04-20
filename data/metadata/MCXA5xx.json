@@ -84,15 +84,18 @@
     },
     {
       "name": "P1_29",
-      "supply": "VDD"
+      "supply": "VDD",
+      "feature": "dangerous-reset-as-gpio"
     },
     {
       "name": "P1_30",
-      "supply": "VDD"
+      "supply": "VDD",
+      "feature": "sosc-as-gpio"
     },
     {
       "name": "P1_31",
-      "supply": "VDD"
+      "supply": "VDD",
+      "feature": "sosc-as-gpio"
     },
     {
       "name": "P4_0",
@@ -276,11 +279,13 @@
     },
     {
       "name": "P5_0",
-      "supply": "VDD_BAT"
+      "supply": "VDD_BAT",
+      "feature": "rosc-32k-as-gpio"
     },
     {
       "name": "P5_1",
-      "supply": "VDD_BAT"
+      "supply": "VDD_BAT",
+      "feature": "rosc-32k-as-gpio"
     },
     {
       "name": "P5_2",
@@ -428,19 +433,23 @@
     },
     {
       "name": "P0_0",
-      "supply": "VDD"
+      "supply": "VDD",
+      "feature": "swd-as-gpio"
     },
     {
       "name": "P0_1",
-      "supply": "VDD"
+      "supply": "VDD",
+      "feature": "swd-as-gpio"
     },
     {
       "name": "P0_2",
-      "supply": "VDD"
+      "supply": "VDD",
+      "feature": "swd-swo-as-gpio"
     },
     {
       "name": "P0_3",
-      "supply": "VDD"
+      "supply": "VDD",
+      "feature": "jtag-extras-as-gpio"
     },
     {
       "name": "P0_4",
@@ -452,7 +461,8 @@
     },
     {
       "name": "P0_6",
-      "supply": "VDD"
+      "supply": "VDD",
+      "feature": "jtag-extras-as-gpio"
     },
     {
       "name": "P0_7",

@@ -1,4 +1,5 @@
 includes:
+ - sanitize.yaml
  - useless.yaml
  - cm7.yaml
  - imxrt1064/renames.yaml

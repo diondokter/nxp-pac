@@ -55,6 +55,10 @@
         "iomuxc": {
           "description": "IOMUXC metadata for the pin. Not allowed if the chip isn't an RT1xxx family device",
           "$ref": "#/$defs/iomuxc"
+        },
+        "feature": {
+          "description": "Rust Feature required to \"unlock\" the pin.",
+          "type": "string"
         }
       },
       "required": [

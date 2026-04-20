@@ -1,13 +1,7 @@
-use std::{
-    collections::HashSet,
-    fs,
-    path::Path,
-    process::{Command, Stdio},
-    str::FromStr,
-};
+use std::{collections::HashSet, fs, path::Path, str::FromStr};
 
-use anyhow::{Context, bail};
-use chiptool::commands::{GenShared, ModulePath, gen_block::GenBlock, gen_common::GenCommon};
+use anyhow::Context;
+use chiptool::commands::{GenerateShared, ModulePath, gen_block::GenBlock, gen_common::GenCommon};
 use indexmap::IndexSet;
 use proc_macro2::{Ident, Literal, Span, TokenStream};
 use quote::quote;
@@ -16,7 +10,7 @@ use rayon::iter::{ParallelBridge, ParallelIterator};
 use crate::metadata::{BlockPath, Metadata};
 
 /// Take all yamls and export them to the pac after being transformed to Rust code using chiptool
-pub fn export_meta_peripherals(current: &Path) -> anyhow::Result<()> {
+pub fn generate_meta_peripherals(current: &Path) -> anyhow::Result<()> {
     let pac_peri_dir = current.join("nxp-pac/src/meta_peripherals");
     let yaml_peri_dir = current.join("data/metadata/peripherals");
 
@@ -30,9 +24,9 @@ pub fn export_meta_peripherals(current: &Path) -> anyhow::Result<()> {
         let _ = fs::remove_file(file.path());
     }
 
-    read_dir_all::read_dir_all(&yaml_peri_dir)?
+    let drivers = read_dir_all::read_dir_all(&yaml_peri_dir)?
         .par_bridge()
-        .try_for_each(|entry| {
+        .map(|entry| {
             let entry = entry?;
             let entry_path = entry.path().to_path_buf();
 
@@ -41,10 +35,15 @@ pub fn export_meta_peripherals(current: &Path) -> anyhow::Result<()> {
                 || entry_path.is_dir()
                 || entry_path.extension().map(|e| e.to_string_lossy()) != Some("yaml".into())
             {
-                return Ok(());
+                return Ok(None);
             }
 
             tracing::info!("{}", relative_entry_path.display());
+            let driver_name = {
+                let mut path = relative_entry_path.to_path_buf();
+                path.set_extension(""); // Remove extension
+                path.to_string_lossy().to_string()
+            };
 
             let mut output_path = pac_peri_dir.join(relative_entry_path);
             output_path.set_extension("rs");
@@ -60,7 +59,7 @@ pub fn export_meta_peripherals(current: &Path) -> anyhow::Result<()> {
                     .canonicalize()
                     .context("Canonicalizing entry path")?,
                 output: output_path.clone(),
-                gen_shared: GenShared {
+                gen_shared: GenerateShared {
                     common_module: Some(ModulePath::from_str("crate::pac::common")?),
                     defmt_feature: "defmt".to_string(),
                     no_defmt: false,
@@ -70,35 +69,56 @@ pub fn export_meta_peripherals(current: &Path) -> anyhow::Result<()> {
             })
             .with_context(|| format!("Error generating block {}", relative_entry_path.display()))?;
 
-            let output = Command::new("rustfmt")
-                .arg("--edition")
-                .arg("2024")
-                .arg(output_path)
-                .stdout(Stdio::inherit())
-                .stderr(Stdio::inherit())
-                .output()?;
+            crate::util::rustfmt(&output_path).with_context(|| {
+                format!("Error formatting block {}", relative_entry_path.display())
+            })?;
 
-            if !output.status.success() {
-                bail!(
-                    "Error formatting block {}:\nSTDERR:\n{}",
-                    relative_entry_path.display(),
-                    String::from_utf8_lossy(&output.stderr)
-                );
-            }
+            Ok(Some(driver_name))
+        })
+        .filter_map(|x| x.transpose())
+        .collect::<Result<Vec<String>, anyhow::Error>>()?;
 
-            Ok(())
-        })?;
+    generate_meta_peripherals_mod(current, drivers)?;
 
     Ok(())
 }
 
-pub fn assemble_metapac(current: &Path, core: &str, mut metadata: Metadata) -> anyhow::Result<()> {
-    let chip_dir = current.join("nxp-pac/src/chips").join(core.to_lowercase());
-    if !chip_dir.exists() {
-        fs::create_dir_all(&chip_dir).context("creating chip dir")?;
+/// Generate a file in meta_peripherals listing all peripherals.
+///
+/// Lists all peripherals regardless of whether it is in use,
+/// used for declaring `#cfg(driver)` attributes.
+fn generate_meta_peripherals_mod(current: &Path, mut drivers: Vec<String>) -> anyhow::Result<()> {
+    use std::fmt::Write;
+
+    // Ensure a consistent ordering, regardless of directory iteration order.
+    drivers.sort();
+
+    let mut contents = String::new();
+
+    writeln!(
+        &mut contents,
+        "{}",
+        quote! {
+            /// List of all nxp-pac peripherals, whether they are used or not.
+            pub const META_PERIPHERALS: &[&str] = &[#(#drivers),*];
+        }
+    )?;
+
+    let path = current.join("nxp-pac/src/meta_peripherals/_peripherals.rs");
+    fs::write(&path, contents.as_bytes()).context("writing contents to file")?;
+    crate::util::rustfmt(&path)?;
+
+    Ok(())
+}
+
+/// Generates all core-specific code for a metapac PAC, including any peripherals that have been mapped.
+pub fn generate_core(current: &Path, core: &str, mut metadata: Metadata) -> anyhow::Result<()> {
+    let core_dir = current.join("nxp-pac/src/chips").join(core.to_lowercase());
+    if !core_dir.exists() {
+        fs::create_dir_all(&core_dir).context("creating chip dir")?;
     }
 
-    // Remove all peripherals that are defined, but don't have a driver
+    // Remove all peripherals that are defined, but don't have a metaperipheral mapped.
     let yaml_peri_dir = current.join("data/metadata/peripherals");
     metadata.peripherals.retain(|p| {
         let peripheral_block = match p.parse_block_path() {
@@ -135,10 +155,10 @@ pub fn assemble_metapac(current: &Path, core: &str, mut metadata: Metadata) -> a
         }
     });
 
-    export_device_x(&chip_dir, &metadata).context("exporting device.x")?;
-    export_mod_rs(&chip_dir, &metadata).context("exporting mod.rs")?;
-    export_vectors_rs(&chip_dir, &metadata).context("exporting _vectors.rs")?;
-    export_common_rs(&chip_dir).context("exporting common.rs")?;
+    export_device_x(&core_dir, &metadata).context("exporting device.x")?;
+    export_mod_rs(&core_dir, &metadata).context("exporting mod.rs")?;
+    export_vectors_rs(&core_dir, &metadata).context("exporting _vectors.rs")?;
+    export_common_rs(&core_dir).context("exporting common.rs")?;
 
     Ok(())
 }
@@ -230,7 +250,9 @@ fn export_mod_rs(chip_dir: &Path, metadata: &Metadata) -> anyhow::Result<()> {
 
     writeln!(&mut contents, "pub mod common;")?;
 
-    fs::write(chip_dir.join("mod.rs"), contents.as_bytes()).context("writing contents to file")?;
+    let path = chip_dir.join("mod.rs");
+    fs::write(&path, contents.as_bytes()).context("writing contents to file")?;
+    crate::util::rustfmt(&path)?;
 
     Ok(())
 }
@@ -331,8 +353,9 @@ fn export_vectors_rs(chip_dir: &Path, metadata: &Metadata) -> anyhow::Result<()>
     writeln!(&mut contents, "{}", extern_functions_tokens)?;
     writeln!(&mut contents, "{}", interrupt_vector_table)?;
 
-    fs::write(chip_dir.join("_vectors.rs"), contents.as_bytes())
-        .context("writing contents to file")?;
+    let path = chip_dir.join("_vectors.rs");
+    fs::write(&path, contents.as_bytes()).context("writing contents to file")?;
+    crate::util::rustfmt(&path)?;
 
     Ok(())
 }

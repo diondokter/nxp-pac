@@ -21,6 +21,23 @@ jobs:
         run: |
           cargo clippy -p generator -- -D warnings
 
+  # Check if we can still generate code for all PACs (do not commit changes)
+  run-generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Checkout submodules
+        run: |
+          git submodule update --init --force --depth=1 --checkout
+      - name: Cache Dependencies
+        uses: Swatinem/rust-cache@v2.9.1
+      - name: Install Dependencies
+        run: |
+          cargo install form
+      - name: Run generate on all chips
+        run: |
+          cargo run -p generator -- generate
+
   check:
     runs-on: ubuntu-latest
     strategy:

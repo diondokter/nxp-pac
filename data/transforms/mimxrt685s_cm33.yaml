@@ -1,4 +1,5 @@
 includes:
+- sanitize.yaml
 - useless.yaml
 - cm33.yaml
 # Must perform renames first

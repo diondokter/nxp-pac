@@ -1,15 +1,27 @@
 transforms:
-# MCX parts duplicate GPIO peripherals... Merge them all
+  # MCX parts duplicate GPIO peripherals... Merge them all
+  - !MergeEnums
+    from: gpio\d+(_alias\d+)?::(.+)
+    to: gpio::$2
+
+  - !MergeFieldsets
+    from: gpio\d+(_alias\d+)?::(.+)
+    to: gpio::$2
+
+  - !MergeFieldsets
+    from: gpio\d+::(.+)
+    to: gpio::$1
+
   - !MergeBlocks
     from: gpio(\d+)::Gpio(\d+)
-    to: gpio0::Gpio0
-    main: gpio0::Gpio0
+    to: gpio::Gpio
+    main: gpio::Gpio
     check: Layout
 
   - !MergeBlocks
     from: gpio(\d+)_alias(\d+)::Gpio(\d+)Alias(\d+)
-    to: gpio0::Gpio0
-    main: gpio0::Gpio0
+    to: gpio::Gpio
+    main: gpio::Gpio
     check: Layout
 
   - !Rename
@@ -24,13 +36,3 @@ transforms:
 
   - !Delete
     from: gpio(\d+)(_alias(\d+))?::(.*)
-
-#  - !Rename
-#      from: sai1::(.*)
-#      to: sai::$1
-#      type: All
-#
-#  - !Rename
-#      from: sai::Sai1
-#      to: sai::Sai
-#      type: Block
